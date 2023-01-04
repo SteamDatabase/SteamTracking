@@ -933,7 +933,9 @@ ${STORE_BASE_URL}sale/${}
 ${STORE_BASE_URL}sale/clorthax_quest
 ${STORE_BASE_URL}sale/summersaletradingcards
 ${STORE_BASE_URL}saleaction/
+${STORE_BASE_URL}saleaction/ajaxbeginfileupload
 ${STORE_BASE_URL}saleaction/ajaxclosealldoor
+${STORE_BASE_URL}saleaction/ajaxcommitfileupload
 ${STORE_BASE_URL}saleaction/ajaxforceupdatefeaturedapptags
 ${STORE_BASE_URL}saleaction/ajaxgetallitemsforsale
 ${STORE_BASE_URL}saleaction/ajaxgetdeckappcompatibilityreport

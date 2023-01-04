@@ -1396,6 +1396,32 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
 .loyaltyrewarditemembed_Ctn_2di0m {
   width: 100px;
 }
+.VODPlayer_BroadcastCtn_KL2t9 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 940px;
+}
+.VODPlayer_BroadcastCtn_KL2t9 .videoContainer {
+  height: unset;
+  width: unset;
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.VODPlayer_BroadcastCtn_KL2t9 .BroadcastPlaceholderImg {
+  position: absolute;
+  width: 100%;
+}
+.VODPlayer_BroadcastCtn_KL2t9 .videoSrc {
+  width: 100%;
+  height: auto;
+  border-left: none;
+  border-right: none;
+  background-color: unset;
+}
+.cloudfileuploadbutton_Ctn_MKp7i {
+  position: relative;
+}
 .partnereventdialog_ErrorStyles_2TszC,
 .partnereventdialog_ErrorStylesWithIcon_1mcSA {
   color: #c44848;
@@ -1454,28 +1480,112 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   > form {
   padding-right: 8px;
 }
-.VODPlayer_BroadcastCtn_KL2t9 {
-  position: relative;
-  margin: 0 auto;
-  max-width: 940px;
-}
-.VODPlayer_BroadcastCtn_KL2t9 .videoContainer {
-  height: unset;
-  width: unset;
-  display: block;
-  position: relative;
-  padding-bottom: 56.25%;
-}
-.VODPlayer_BroadcastCtn_KL2t9 .BroadcastPlaceholderImg {
+.cloudfileuploadprogress_uploadPreviewContainer_2jodv {
   position: absolute;
+  bottom: 72px;
+  left: 16px;
+  min-width: 260px;
+  background: #2c3036;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cloudfileuploadprogress_uploadPreviewContainer_2jodv img {
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px #000;
+  margin-right: auto;
+  margin-left: auto;
+}
+.cloudfileuploadprogress_uploadPreviewContainer_2jodv
+  .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
+  fill: #788a92;
+  background-color: #0004;
+  border-radius: 4px;
+  height: 150px;
   width: 100%;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .videoSrc {
+.cloudfileuploadprogress_uploadPreviewContainer_2jodv
+  .cloudfileuploadprogress_SVGIcon_Video_2TqYK
+  path {
+  transform: scale(0.85);
+  transform-origin: 50% 50%;
+}
+.cloudfileuploadprogress_uploadPreview_1Hk8G {
+  max-height: 200px;
+  max-width: 250px;
+}
+.cloudfileuploadprogress_fileUploadFileName_3-_sj {
+  flex: 1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  user-select: none;
+  text-align: center;
+  max-width: 250px;
+}
+.cloudfileuploadprogress_fileUploadCancel_3qwin {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: rgba(67, 73, 83, 0.9);
+  padding: 4px;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  box-shadow: 0 0 4px 1px #00000088;
+}
+.cloudfileuploadprogress_fileUploadCancel_3qwin
+  .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
+  line {
+  stroke: #fff;
+}
+.cloudfileuploadprogress_fileUploadCancel_3qwin:hover {
+  background-color: rgba(92, 100, 114, 0.9);
+}
+.cloudfileuploadprogress_fileUploadBtn_1OQr6 {
+  user-select: none;
+  margin-top: 5px;
+  background: #ccc;
+  color: #000;
+  border-radius: 10px;
+  padding: 3px;
+  line-height: 8px;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+.cloudfileuploadprogress_fileUploadBtn_1OQr6:hover {
+  background: #fff;
+}
+.cloudfileuploadprogress_fileUploadProgressContainer_2sKxN {
+  position: absolute;
+  width: 250px;
+  bottom: 55px;
+  background: #2c3036;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.cloudfileuploadprogress_fileUploadProgressBarContainer_xsoqX {
   width: 100%;
-  height: auto;
-  border-left: none;
-  border-right: none;
-  background-color: unset;
+  height: 10px;
+}
+.cloudfileuploadprogress_fileUploadProgressName_1dx-F {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  user-select: none;
+  text-align: center;
+  width: 100%;
 }
 .claimitemshared_CheckMark_3HeHP {
   height: 32px;

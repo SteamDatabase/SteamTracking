@@ -6,7 +6,7 @@
 	html.responsive #app_agegate select {
 		appearance: none;
 		-webkit-appearance: none;
-		background-image: url( '/store/public/images/v6/btn_arrow_down_padded.png' );
+		background-image: url( '/public/images/v6/btn_arrow_down_padded.png' );
 		background-repeat: no-repeat;
 		background-position: right;
 		padding-right: 30px;
@@ -23,7 +23,7 @@
 	html.responsive.rn_mobile_app #app_agegate select {
 		appearance: none;
 		-webkit-appearance: none;
-		background-image: url( '/store/public/images/v6/btn_arrow_down_padded.png' );
+		background-image: url( '/public/images/v6/btn_arrow_down_padded.png' );
 		background-repeat: no-repeat;
 		background-position: right;
 		padding-right: 30px;
@@ -807,8 +807,13 @@
 	html.responsive .game_description_column .block .block_content a {
 		background: unset !important;
 		padding: 10px;
+		height: 112px;
 	}
-
+	/* hide the browser provided scrollbar on safari. we already include a scrollbar */ 
+	html.responsive .game_description_column .block .block_responsive_horizontal_scroll::-webkit-scrollbar {
+		display: none;
+	}
+	
 	/* Curators section uses the banner format on mobile and needs extra margin on top and bottom because it's by itself */
 	html.responsive #bannerCurators.responsive_banner_link {
 		margin-top: 10px;
@@ -1084,7 +1089,7 @@
 	#app_agegate select {
 		appearance: none;
 		-webkit-appearance: none;
-		background-image: url( '/store/public/images/v6/btn_arrow_down_padded.png' );
+		background-image: url( '/public/images/v6/btn_arrow_down_padded.png' );
 		background-repeat: no-repeat;
 		background-position: right;
 		padding-right: 30px;
@@ -1117,14 +1122,14 @@
 
 	/* apply a right chevron to the right side of the element's background  */
 	html.responsive .responsive_chevron_right {
-		background-image: url('/store/public/images//v6/chevron_right.png');
+		background-image: url('/public/images//v6/chevron_right.png');
 		background-repeat: no-repeat;
 		background-position: calc(100% - 7px);
 	}
 
 	/* a plus image that changes to minus when section is expanded*/
 	html.responsive .expand_section {
-		background-image: url('/store/public/shared/images//v6/icon_plus.svg');
+		background-image: url('/public/shared/images//v6/icon_plus.svg');
 		background-repeat: no-repeat;
 		background-position: center;
 		width: 16px;
@@ -1132,7 +1137,7 @@
 		padding-right: 20px;
 	}
 	html.responsive .expand_section.expanded {
-		background-image: url('/store/public/shared/images//v6/icon_minus.svg');
+		background-image: url('/public/shared/images//v6/icon_minus.svg');
 	}
 
 	/* show summary of supported languages and expand it when clicked */

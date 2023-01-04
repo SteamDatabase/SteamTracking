@@ -1331,6 +1331,10 @@ body.v6 .game_description_column h2.gradientbg {
     margin-right: 2px;
     border: 1px solid rgba( 0, 0, 0, 0 );
 }
+.game_description_column .block .discount_block .discount_prices {
+	display: flex;
+	flex-direction: row;
+}
 .game_description_column .block .block_content a:hover {
     text-decoration: none;
     border: 1px solid rgba( 103, 193, 245, 0.5 );

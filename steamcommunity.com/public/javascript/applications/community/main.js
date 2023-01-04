@@ -14976,80 +14976,81 @@
     95598: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $06: () => X,
+        $06: () => $,
         $gZ: () => u,
-        BKy: () => L,
-        BNo: () => ge,
-        Bh5: () => ce,
-        Ehc: () => I,
+        BKy: () => A,
+        BNo: () => _e,
+        Bh5: () => ue,
+        Ehc: () => O,
         GhU: () => w,
-        I8b: () => re,
-        IWH: () => j,
+        I8b: () => oe,
+        IWH: () => z,
         JrY: () => D,
-        KJh: () => pe,
-        KKY: () => Me,
-        Lao: () => F,
-        Lk$: () => J,
-        MrB: () => Y,
-        NP6: () => x,
-        P9w: () => H,
+        KJh: () => ge,
+        KKY: () => Te,
+        Lao: () => P,
+        Lk$: () => ee,
+        MrB: () => q,
+        NP6: () => L,
+        P9w: () => U,
         SUY: () => m,
-        Ucz: () => Z,
-        Uos: () => R,
-        V7n: () => G,
-        VR: () => q,
-        Vgm: () => te,
-        WNf: () => se,
-        WWB: () => he,
+        Ucz: () => Y,
+        Uos: () => I,
+        V7n: () => V,
+        VR: () => Q,
+        Vgm: () => ne,
+        WNf: () => ae,
+        WWB: () => me,
         X: () => f,
-        XBH: () => z,
-        YVI: () => De,
-        YVR: () => V,
-        YqJ: () => A,
+        XBH: () => K,
+        YVI: () => Me,
+        YVR: () => H,
+        YqJ: () => B,
         YtI: () => h,
         Zrf: () => c,
-        _GE: () => ne,
-        c7E: () => Se,
-        chI: () => $,
-        dLw: () => de,
-        daM: () => oe,
-        doA: () => _e,
+        _GE: () => ie,
+        c7E: () => ye,
+        chI: () => Z,
+        dLw: () => he,
+        daM: () => se,
+        doA: () => fe,
         dzL: () => S,
         faS: () => M,
         ffh: () => b,
-        gR: () => B,
+        gR: () => N,
         iS8: () => y,
-        j7C: () => ye,
+        j7C: () => De,
         k4K: () => g,
-        lsH: () => W,
-        mBz: () => Ee,
+        lsH: () => j,
+        mBz: () => Se,
         mKE: () => T,
-        mKt: () => ae,
-        miF: () => we,
-        opd: () => fe,
+        mKt: () => le,
+        miF: () => Ee,
+        nkn: () => R,
+        opd: () => ve,
         pVO: () => v,
         pkz: () => C,
-        r6F: () => N,
-        rFk: () => P,
+        r6F: () => F,
+        rFk: () => G,
         ret: () => d,
         shV: () => E,
-        sqQ: () => ve,
-        tEX: () => K,
-        tLe: () => Q,
-        thP: () => k,
+        sqQ: () => Ce,
+        tEX: () => X,
+        tLe: () => J,
+        thP: () => x,
         tkI: () => p,
-        uZu: () => le,
-        ui7: () => U,
-        vJ$: () => ue,
-        vyu: () => Te,
-        wn$: () => ie,
-        wx$: () => O,
-        x0L: () => be,
-        xg: () => me,
+        uZu: () => ce,
+        ui7: () => W,
+        vJ$: () => de,
+        vyu: () => Re,
+        wn$: () => re,
+        wx$: () => k,
+        x0L: () => we,
+        xg: () => pe,
         yRy: () => _,
-        yTr: () => Ce,
-        yVt: () => ee,
-        z5E: () => Re,
+        yTr: () => be,
+        yVt: () => te,
+        z5E: () => Ie,
       });
       var i = n(70655),
         r = n(67294),
@@ -15643,7 +15644,30 @@
           })
         );
       }
-      function R(e) {
+      function R() {
+        return r.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Video",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          r.createElement("path", {
+            className: "videoPlayButton",
+            d: "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z",
+          }),
+          r.createElement("path", {
+            d: "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z",
+          })
+        );
+      }
+      function I(e) {
         return (0, l.id)()
           ? r.createElement(
               "svg",
@@ -15681,7 +15705,7 @@
               })
             );
       }
-      function I(e) {
+      function O(e) {
         return r.createElement(
           "svg",
           {
@@ -15716,7 +15740,7 @@
           })
         );
       }
-      function O(e) {
+      function k(e) {
         const { direction: t } = e,
           n = (0, i._T)(e, ["direction"]);
         switch (t) {
@@ -15794,7 +15818,7 @@
             );
         }
       }
-      function k() {
+      function x() {
         return r.createElement(
           "svg",
           {
@@ -15814,7 +15838,7 @@
           })
         );
       }
-      function x(e) {
+      function L(e) {
         return r.createElement(
           "svg",
           {
@@ -15850,7 +15874,7 @@
             })
         );
       }
-      function L(e) {
+      function A(e) {
         const { angle: t } = e,
           n = (0, i._T)(e, ["angle"]);
         return r.createElement(
@@ -15872,7 +15896,7 @@
           })
         );
       }
-      function A() {
+      function B() {
         return r.createElement(
           "svg",
           {
@@ -15908,7 +15932,7 @@
           })
         );
       }
-      function B() {
+      function N() {
         return r.createElement(
           "svg",
           {
@@ -15934,7 +15958,7 @@
           })
         );
       }
-      function N() {
+      function F() {
         return r.createElement(
           "svg",
           {
@@ -15967,7 +15991,7 @@
           })
         );
       }
-      function F() {
+      function P() {
         return r.createElement(
           "svg",
           {
@@ -15994,7 +16018,7 @@
           })
         );
       }
-      function P() {
+      function G() {
         return r.createElement(
           "svg",
           {
@@ -16071,7 +16095,7 @@
           )
         );
       }
-      function G(e) {
+      function V(e) {
         return r.createElement(
           "svg",
           {
@@ -16092,7 +16116,7 @@
           })
         );
       }
-      function V() {
+      function H() {
         return r.createElement(
           "svg",
           {
@@ -16127,7 +16151,7 @@
           })
         );
       }
-      function H(e) {
+      function U(e) {
         return r.createElement(
           "svg",
           {
@@ -16165,7 +16189,7 @@
           })
         );
       }
-      function U(e) {
+      function W(e) {
         const t = (0, o.Z)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -16197,7 +16221,7 @@
           })
         );
       }
-      function W() {
+      function j() {
         return r.createElement(
           "svg",
           {
@@ -16223,7 +16247,7 @@
           })
         );
       }
-      function j() {
+      function z() {
         return r.createElement(
           "svg",
           {
@@ -16244,7 +16268,7 @@
           )
         );
       }
-      function z() {
+      function K() {
         return r.createElement(
           "svg",
           {
@@ -16264,7 +16288,7 @@
           )
         );
       }
-      function K() {
+      function X() {
         return r.createElement(
           "svg",
           {
@@ -16301,7 +16325,7 @@
           )
         );
       }
-      function X() {
+      function $() {
         return r.createElement(
           "svg",
           {
@@ -16329,7 +16353,7 @@
           })
         );
       }
-      function $() {
+      function Z() {
         return r.createElement(
           "svg",
           {
@@ -16395,7 +16419,7 @@
           })
         );
       }
-      function Z() {
+      function Y() {
         return r.createElement(
           "svg",
           {
@@ -16415,7 +16439,7 @@
           })
         );
       }
-      function Y(e) {
+      function q(e) {
         const { className: t } = e;
         return r.createElement(
           "svg",
@@ -16435,7 +16459,7 @@
           })
         );
       }
-      function q() {
+      function Q() {
         return r.createElement(
           "svg",
           {
@@ -16457,7 +16481,7 @@
           })
         );
       }
-      function Q() {
+      function J() {
         return r.createElement(
           "svg",
           {
@@ -16476,7 +16500,7 @@
           })
         );
       }
-      function J() {
+      function ee() {
         return r.createElement(
           "svg",
           {
@@ -16495,7 +16519,7 @@
           })
         );
       }
-      function ee() {
+      function te() {
         return r.createElement(
           "svg",
           {
@@ -16516,7 +16540,7 @@
           })
         );
       }
-      function te() {
+      function ne() {
         return r.createElement(
           "svg",
           {
@@ -16547,7 +16571,7 @@
           })
         );
       }
-      function ne() {
+      function ie() {
         return r.createElement(
           "svg",
           {
@@ -16613,7 +16637,7 @@
           })
         );
       }
-      function ie() {
+      function re() {
         return r.createElement(
           "svg",
           {
@@ -16632,7 +16656,7 @@
           })
         );
       }
-      function re() {
+      function oe() {
         return r.createElement(
           "svg",
           {
@@ -16670,7 +16694,7 @@
           })
         );
       }
-      function oe() {
+      function se() {
         return r.createElement(
           "svg",
           {
@@ -16706,7 +16730,7 @@
           })
         );
       }
-      function se() {
+      function ae() {
         return r.createElement(
           "svg",
           {
@@ -16725,7 +16749,7 @@
           })
         );
       }
-      function ae() {
+      function le() {
         return r.createElement(
           "svg",
           {
@@ -16750,7 +16774,7 @@
           })
         );
       }
-      function le() {
+      function ce() {
         return r.createElement(
           "svg",
           {
@@ -16772,7 +16796,7 @@
           })
         );
       }
-      function ce() {
+      function ue() {
         return r.createElement(
           "svg",
           {
@@ -16812,7 +16836,7 @@
           })
         );
       }
-      function ue() {
+      function de() {
         return r.createElement(
           "svg",
           {
@@ -16828,7 +16852,7 @@
           r.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function de() {
+      function he() {
         return r.createElement(
           "svg",
           {
@@ -16847,7 +16871,7 @@
           })
         );
       }
-      function he() {
+      function me() {
         return r.createElement(
           "svg",
           {
@@ -16867,7 +16891,7 @@
           })
         );
       }
-      function me(e, t) {
+      function pe(e, t) {
         return (0, l.id)()
           ? r.createElement(
               "svg",
@@ -16904,7 +16928,7 @@
               })
             );
       }
-      function pe(e) {
+      function ge(e) {
         return r.createElement(
           "svg",
           {
@@ -16923,7 +16947,7 @@
           })
         );
       }
-      function ge(e) {
+      function _e(e) {
         return r.createElement(
           "svg",
           {
@@ -16959,7 +16983,7 @@
           )
         );
       }
-      function _e(e) {
+      function fe(e) {
         const { className: t } = e;
         (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -17137,7 +17161,7 @@
           )
         );
       }
-      function fe() {
+      function ve() {
         return r.createElement(
           "svg",
           {
@@ -17168,7 +17192,7 @@
           )
         );
       }
-      function ve(e) {
+      function Ce(e) {
         return r.createElement(
           "svg",
           Object.assign({}, e, {
@@ -17184,7 +17208,7 @@
           })
         );
       }
-      function Ce() {
+      function be() {
         return r.createElement(
           "svg",
           {
@@ -17202,7 +17226,7 @@
           })
         );
       }
-      function be() {
+      function we() {
         return r.createElement(
           "svg",
           {
@@ -17224,7 +17248,7 @@
           )
         );
       }
-      function we() {
+      function Ee() {
         return r.createElement(
           "svg",
           {
@@ -17262,7 +17286,7 @@
           )
         );
       }
-      function Ee(e) {
+      function Se(e) {
         return r.createElement(
           "svg",
           Object.assign({}, e, {
@@ -17280,7 +17304,7 @@
           })
         );
       }
-      function Se() {
+      function ye() {
         return r.createElement(
           "svg",
           {
@@ -17314,7 +17338,7 @@
           )
         );
       }
-      function ye(e) {
+      function De(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -17337,7 +17361,7 @@
           })
         );
       }
-      function De(e) {
+      function Me(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -17365,7 +17389,7 @@
           })
         );
       }
-      function Me(e) {
+      function Te(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -17393,7 +17417,7 @@
           })
         );
       }
-      function Te(e) {
+      function Re(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -17421,7 +17445,7 @@
           })
         );
       }
-      function Re(e) {
+      function Ie(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
