@@ -383,9 +383,12 @@
  SDL_GameControllerGetBindForButton
  SDL_GameControllerGetButtonFromString
  SDL_GameControllerGetJoystick
+ SDL_GameControllerGetStringForAxis
+ SDL_GameControllerGetStringForButton
  SDL_GameControllerMappingForDeviceIndex
  SDL_GameControllerMappingForGUID
  SDL_GameControllerOpen
+ SDL_GameControllerTypeForIndex
  SDL_GetAudioDeviceName
  SDL_GetAudioDeviceSpec
  SDL_GetDisplayBounds
@@ -405,8 +408,11 @@
  SDL_IntersectRect
  SDL_IsGameController
  SDL_JoystickClose
+ SDL_JoystickGetAxisInitialState
  SDL_JoystickGetDeviceGUID
+ SDL_JoystickGetDeviceInstanceID
  SDL_JoystickGetDeviceProduct
+ SDL_JoystickGetDeviceType
  SDL_JoystickGetDeviceVendor
  SDL_JoystickGetGUID
  SDL_JoystickGetGUIDFromString
@@ -414,6 +420,7 @@
  SDL_JoystickInstanceID
  SDL_JoystickName
  SDL_JoystickNameForIndex
+ SDL_JoystickNumAxes
  SDL_JoystickOpen
  SDL_LockJoysticks
  SDL_NumJoysticks
@@ -429,6 +436,7 @@
  SDL_UnlockJoysticks
  SDL_WarpMouseGlobal
  SDL_WasInit
+ SDL_abs
  SDL_free
  SDL_memset
  SameProcess
@@ -1451,7 +1459,6 @@
  log10
  longjmp
  lrintf
- lroundf
  lseek
  lstat$INODE64
  mach_absolute_time

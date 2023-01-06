@@ -80,7 +80,7 @@ message CContentServerDirectory_GetCDNAuthToken_Response {
 
 message CContentServerDirectory_RequestPeerContentServer_Request {
 	optional uint64 remote_client_id = 1;
-	optional uint64 server_steam_id = 2;
+	optional uint64 steamid = 2;
 	optional uint64 server_remote_client_id = 3;
 	optional uint32 app_id = 4;
 }

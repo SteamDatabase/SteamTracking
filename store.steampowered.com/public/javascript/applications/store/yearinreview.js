@@ -4126,10 +4126,7 @@
               "sale_feature_webapi_token",
               "application_config"
             );
-            (0, ue.X)(
-              e,
-              "CPromotionPlanningStore: promotion operation token is missing"
-            ),
+            (0, ue.X)(e, "CYearInReviewStore: sale feature token is missing"),
               (this.m_SteamInterface = new _e.J(de.De.WEBAPI_BASE_URL, e)),
               (this.m_DynamicUserStore = yield Se.jg.Get().HintLoad());
           });
@@ -6336,7 +6333,7 @@
           );
           (0, ue.X)(
             e,
-            "CPromotionPlanningStore: promotion operation token is missing"
+            "CYearInReviewSocialShareStore: sale feature token is missing"
           ),
             (this.m_SteamInterface = new _e.J(de.De.WEBAPI_BASE_URL, e));
         }

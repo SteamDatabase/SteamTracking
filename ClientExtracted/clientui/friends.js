@@ -63502,6 +63502,8 @@ object-assign
           /* harmony export */ ELoginUIStyle: () => /* binding */ ELoginUIStyle,
           /* harmony export */ ENetFakeLocalSystemState: () =>
             /* binding */ ENetFakeLocalSystemState,
+          /* harmony export */ ENotificationPosition: () =>
+            /* binding */ ENotificationPosition,
           /* harmony export */ EOverlayToStoreFlag: () =>
             /* binding */ EOverlayToStoreFlag,
           /* harmony export */ EPersonaState: () => /* binding */ EPersonaState,
@@ -64122,11 +64124,7 @@ object-assign
           ] = "k_ELoginState_WaitingForLibraryReady";
           ELoginState[(ELoginState["k_ELoginState_Success"] = 7)] =
             "k_ELoginState_Success";
-          ELoginState[(ELoginState["k_ELoginState_WaitingForSteamGuard"] = 8)] =
-            "k_ELoginState_WaitingForSteamGuard";
-          ELoginState[(ELoginState["k_ELoginState_WaitingForTwoFactor"] = 9)] =
-            "k_ELoginState_WaitingForTwoFactor";
-          ELoginState[(ELoginState["k_ELoginState_Quit"] = 10)] =
+          ELoginState[(ELoginState["k_ELoginState_Quit"] = 8)] =
             "k_ELoginState_Quit";
         })(ELoginState || (ELoginState = {}));
         var ELoginProgressType;
@@ -64875,7 +64873,7 @@ object-assign
             case ELanguage.k_Lang_Latam_Spanish:
               return "es-419";
             case ELanguage.k_Lang_Vietnamese:
-              return "vn";
+              return "vi";
             case ELanguage.k_Lang_SteamChina_SChinese:
               return "sc-sc";
             default:
@@ -66016,6 +66014,24 @@ object-assign
             (ERaiseGameWindowResult["k_ERaiseGameWindowResult_Failure"] = 3)
           ] = "k_ERaiseGameWindowResult_Failure";
         })(ERaiseGameWindowResult || (ERaiseGameWindowResult = {}));
+        var ENotificationPosition;
+        (function (ENotificationPosition) {
+          ENotificationPosition[
+            (ENotificationPosition["k_EPositionInvalid"] = -1)
+          ] = "k_EPositionInvalid";
+          ENotificationPosition[
+            (ENotificationPosition["k_EPositionTopLeft"] = 0)
+          ] = "k_EPositionTopLeft";
+          ENotificationPosition[
+            (ENotificationPosition["k_EPositionTopRight"] = 1)
+          ] = "k_EPositionTopRight";
+          ENotificationPosition[
+            (ENotificationPosition["k_EPositionBottomLeft"] = 2)
+          ] = "k_EPositionBottomLeft";
+          ENotificationPosition[
+            (ENotificationPosition["k_EPositionBottomRight"] = 3)
+          ] = "k_EPositionBottomRight";
+        })(ENotificationPosition || (ENotificationPosition = {}));
 
         /***/
       },
@@ -66979,7 +66995,10 @@ object-assign
             (EControllerType["k_eControllerType_XBoxEliteController"] = 46)
           ] = "k_eControllerType_XBoxEliteController";
           EControllerType[
-            (EControllerType["k_eControllerType_LastController"] = 47)
+            (EControllerType["k_eControllerType_XInputPS4Controller"] = 47)
+          ] = "k_eControllerType_XInputPS4Controller";
+          EControllerType[
+            (EControllerType["k_eControllerType_LastController"] = 48)
           ] = "k_eControllerType_LastController";
           // Keyboards and Mice
           EControllerType[
@@ -67465,6 +67484,8 @@ object-assign
             this.throttling_suspended = false;
             /** Set if we are downloading from LAN peer content server */
             this.lan_peer_hostname = "";
+            /** True if the client is running in peer content server mode serving other peers */
+            this.update_is_upload = false;
           }
         }
         var EValidationPhase;
@@ -67904,6 +67925,8 @@ object-assign
             /* reexport safe */ _networktypes__WEBPACK_IMPORTED_MODULE_15__.ENetworkDeviceState,
           /* harmony export */ ENetworkDeviceType: () =>
             /* reexport safe */ _networktypes__WEBPACK_IMPORTED_MODULE_15__.ENetworkDeviceType,
+          /* harmony export */ ENotificationPosition: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ENotificationPosition,
           /* harmony export */ EOverlayToStoreFlag: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EOverlayToStoreFlag,
           /* harmony export */ EParentalFeature: () =>
@@ -68247,6 +68270,8 @@ object-assign
             this.bIsLimited = false;
             this.bCanInviteFriends = true;
             this.bIsOfflineMode = true;
+            this.strClientInstanceID = "";
+            this.bPromptToChangePassword = false;
           }
         }
         class LoginUser {}
@@ -70822,16 +70847,32 @@ object-assign
             /* binding */ BSteamClientHasInterface,
           /* harmony export */ BSteamClientHasMethod: () =>
             /* binding */ BSteamClientHasMethod,
+          /* harmony export */ BWindowHasSteamClientInterface: () =>
+            /* binding */ BWindowHasSteamClientInterface,
+          /* harmony export */ BWindowHasSteamClientMethod: () =>
+            /* binding */ BWindowHasSteamClientMethod,
           /* harmony export */ InstrumentSteamClientAPIPerformance: () =>
             /* binding */ InstrumentSteamClientAPIPerformance,
           /* harmony export */
         });
+        /** Returns true if SteamClient exists on the given window and has the given interface */
+        function BWindowHasSteamClientInterface(ownerWindow, strInterface) {
+          if (!ownerWindow) return false;
+          return (
+            typeof ownerWindow.SteamClient === "object" &&
+            strInterface in ownerWindow.SteamClient
+          );
+        }
         /** Returns true if SteamClient exists and has the given interface */
         function BSteamClientHasInterface(strInterface) {
-          return typeof SteamClient === "object" && strInterface in SteamClient;
+          return BWindowHasSteamClientInterface(window, strInterface);
         }
-        /** Returns true if SteamClient exists and has the given method (passed as 'Interface.MethodName') */
-        function BSteamClientHasMethod(strInterfaceFunction) {
+        /** Returns true if SteamClient exists on the given window and has the given method (passed as 'Interface.MethodName') */
+        function BWindowHasSteamClientMethod(
+          ownerWindow,
+          strInterfaceFunction
+        ) {
+          if (!ownerWindow) return false;
           const [strInterface, strFunction] = strInterfaceFunction.split(
             ".",
             2
@@ -70839,9 +70880,13 @@ object-assign
           return (
             strInterface &&
             strFunction &&
-            BSteamClientHasInterface(strInterface) &&
-            strFunction in SteamClient[strInterface]
+            BWindowHasSteamClientInterface(ownerWindow, strInterface) &&
+            strFunction in ownerWindow.SteamClient[strInterface]
           );
+        }
+        /** Returns true if SteamClient exists and has the given method (passed as 'Interface.MethodName') */
+        function BSteamClientHasMethod(strInterfaceFunction) {
+          return BWindowHasSteamClientMethod(window, strInterfaceFunction);
         }
         /**
          * Helper to wrap SteamClient invocations in performance metrics; reports how often they are called, when
@@ -70975,6 +71020,10 @@ object-assign
             /* binding */ EControllerSourceModeToString,
           /* harmony export */ EControllerSourceToString: () =>
             /* binding */ EControllerSourceToString,
+          /* harmony export */ EDeviceSupportFlowState: () =>
+            /* binding */ EDeviceSupportFlowState,
+          /* harmony export */ EDeviceSupportFlowStateToString: () =>
+            /* binding */ EDeviceSupportFlowStateToString,
           /* harmony export */ EDeviceSupportTestingStep: () =>
             /* binding */ EDeviceSupportTestingStep,
           /* harmony export */ EDeviceSupportTestingStepToString: () =>
@@ -73883,77 +73932,251 @@ object-assign
           }
           return "unknown EControllerSetting ( " + eControllerSetting + " )";
         }
+        var EDeviceSupportFlowState;
+        (function (EDeviceSupportFlowState) {
+          EDeviceSupportFlowState[
+            (EDeviceSupportFlowState["k_EDeviceSupportFlowStateIdle"] = 0)
+          ] = "k_EDeviceSupportFlowStateIdle";
+          EDeviceSupportFlowState[
+            (EDeviceSupportFlowState["k_EDeviceSupportFlowStateBinding"] = 1)
+          ] = "k_EDeviceSupportFlowStateBinding";
+          EDeviceSupportFlowState[
+            (EDeviceSupportFlowState["k_EDeviceSupportFlowStateTesting"] = 2)
+          ] = "k_EDeviceSupportFlowStateTesting";
+        })(EDeviceSupportFlowState || (EDeviceSupportFlowState = {}));
+        function EDeviceSupportFlowStateToString(eDeviceSupportFlowState) {
+          if (true) {
+            switch (eDeviceSupportFlowState) {
+              case 0:
+                return "k_EDeviceSupportFlowStateIdle";
+              case 1:
+                return "k_EDeviceSupportFlowStateBinding";
+              case 2:
+                return "k_EDeviceSupportFlowStateTesting";
+            }
+          }
+          return (
+            "unknown EDeviceSupportFlowState ( " +
+            eDeviceSupportFlowState +
+            " )"
+          );
+        }
         var EDeviceSupportTestingStep;
         (function (EDeviceSupportTestingStep) {
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftTrigger"] = 0)
+            (EDeviceSupportTestingStep["k_TestingStarted"] = 0)
+          ] = "k_TestingStarted";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingFreeMode"] = 1)
+          ] = "k_TestingFreeMode";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindAButton"] = 2)
+          ] = "k_TestingBindAButton";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindBButton"] = 3)
+          ] = "k_TestingBindBButton";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindXButton"] = 4)
+          ] = "k_TestingBindXButton";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindYButton"] = 5)
+          ] = "k_TestingBindYButton";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindDPadLeft"] = 6)
+          ] = "k_TestingBindDPadLeft";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindDPadRight"] = 7)
+          ] = "k_TestingBindDPadRight";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindDPadUp"] = 8)
+          ] = "k_TestingBindDPadUp";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindDPadDown"] = 9)
+          ] = "k_TestingBindDPadDown";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindLeftStickLeft"] = 10)
+          ] = "k_TestingBindLeftStickLeft";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindLeftStickRight"] = 11)
+          ] = "k_TestingBindLeftStickRight";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindLeftStickUp"] = 12)
+          ] = "k_TestingBindLeftStickUp";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindLeftStickDown"] = 13)
+          ] = "k_TestingBindLeftStickDown";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindLeftStickButton"] = 14)
+          ] = "k_TestingBindLeftStickButton";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindRightStickLeft"] = 15)
+          ] = "k_TestingBindRightStickLeft";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindRightStickRight"] = 16)
+          ] = "k_TestingBindRightStickRight";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindRightStickUp"] = 17)
+          ] = "k_TestingBindRightStickUp";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindRightStickDown"] = 18)
+          ] = "k_TestingBindRightStickDown";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindRightStickButton"] = 19)
+          ] = "k_TestingBindRightStickButton";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindLeftShoulder"] = 20)
+          ] = "k_TestingBindLeftShoulder";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindLeftTrigger"] = 21)
+          ] = "k_TestingBindLeftTrigger";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindRightShoulder"] = 22)
+          ] = "k_TestingBindRightShoulder";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindRightTrigger"] = 23)
+          ] = "k_TestingBindRightTrigger";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindSelect"] = 24)
+          ] = "k_TestingBindSelect";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindStart"] = 25)
+          ] = "k_TestingBindStart";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindGuide"] = 26)
+          ] = "k_TestingBindGuide";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindShare"] = 27)
+          ] = "k_TestingBindShare";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindingComplete"] = 28)
+          ] = "k_TestingBindingComplete";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingLeftTrigger"] = 29)
           ] = "k_TestingLeftTrigger";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightTrigger"] = 1)
+            (EDeviceSupportTestingStep["k_TestingRightTrigger"] = 30)
           ] = "k_TestingRightTrigger";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftTrackpad"] = 2)
+            (EDeviceSupportTestingStep["k_TestingLeftTrackpad"] = 31)
           ] = "k_TestingLeftTrackpad";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftTrackpadPressure"] = 3)
+            (EDeviceSupportTestingStep["k_TestingLeftTrackpadPressure"] = 32)
           ] = "k_TestingLeftTrackpadPressure";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightTrackpad"] = 4)
+            (EDeviceSupportTestingStep["k_TestingRightTrackpad"] = 33)
           ] = "k_TestingRightTrackpad";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightTrackpadPressure"] = 5)
+            (EDeviceSupportTestingStep["k_TestingRightTrackpadPressure"] = 34)
           ] = "k_TestingRightTrackpadPressure";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftJoystick"] = 6)
+            (EDeviceSupportTestingStep["k_TestingLeftJoystick"] = 35)
           ] = "k_TestingLeftJoystick";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightJoystick"] = 7)
+            (EDeviceSupportTestingStep["k_TestingRightJoystick"] = 36)
           ] = "k_TestingRightJoystick";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingButtons"] = 8)
+            (EDeviceSupportTestingStep["k_TestingButtons"] = 37)
           ] = "k_TestingButtons";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftHaptics"] = 9)
+            (EDeviceSupportTestingStep["k_TestingLeftHaptics"] = 38)
           ] = "k_TestingLeftHaptics";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightHaptics"] = 10)
+            (EDeviceSupportTestingStep["k_TestingRightHaptics"] = 39)
           ] = "k_TestingRightHaptics";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingComplete"] = 11)
+            (EDeviceSupportTestingStep["k_TestingComplete"] = 40)
           ] = "k_TestingComplete";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingStarted"] = 12)
-          ] = "k_TestingStarted";
+            (EDeviceSupportTestingStep["k_TestingAborted"] = 41)
+          ] = "k_TestingAborted";
         })(EDeviceSupportTestingStep || (EDeviceSupportTestingStep = {}));
         function EDeviceSupportTestingStepToString(eDeviceSupportTestingStep) {
           if (true) {
             switch (eDeviceSupportTestingStep) {
               case 0:
-                return "k_TestingLeftTrigger";
-              case 1:
-                return "k_TestingRightTrigger";
-              case 2:
-                return "k_TestingLeftTrackpad";
-              case 3:
-                return "k_TestingLeftTrackpadPressure";
-              case 4:
-                return "k_TestingRightTrackpad";
-              case 5:
-                return "k_TestingRightTrackpadPressure";
-              case 6:
-                return "k_TestingLeftJoystick";
-              case 7:
-                return "k_TestingRightJoystick";
-              case 8:
-                return "k_TestingButtons";
-              case 9:
-                return "k_TestingLeftHaptics";
-              case 10:
-                return "k_TestingRightHaptics";
-              case 11:
-                return "k_TestingComplete";
-              case 12:
                 return "k_TestingStarted";
+              case 1:
+                return "k_TestingFreeMode";
+              case 2:
+                return "k_TestingBindAButton";
+              case 3:
+                return "k_TestingBindBButton";
+              case 4:
+                return "k_TestingBindXButton";
+              case 5:
+                return "k_TestingBindYButton";
+              case 6:
+                return "k_TestingBindDPadLeft";
+              case 7:
+                return "k_TestingBindDPadRight";
+              case 8:
+                return "k_TestingBindDPadUp";
+              case 9:
+                return "k_TestingBindDPadDown";
+              case 10:
+                return "k_TestingBindLeftStickLeft";
+              case 11:
+                return "k_TestingBindLeftStickRight";
+              case 12:
+                return "k_TestingBindLeftStickUp";
+              case 13:
+                return "k_TestingBindLeftStickDown";
+              case 14:
+                return "k_TestingBindLeftStickButton";
+              case 15:
+                return "k_TestingBindRightStickLeft";
+              case 16:
+                return "k_TestingBindRightStickRight";
+              case 17:
+                return "k_TestingBindRightStickUp";
+              case 18:
+                return "k_TestingBindRightStickDown";
+              case 19:
+                return "k_TestingBindRightStickButton";
+              case 20:
+                return "k_TestingBindLeftShoulder";
+              case 21:
+                return "k_TestingBindLeftTrigger";
+              case 22:
+                return "k_TestingBindRightShoulder";
+              case 23:
+                return "k_TestingBindRightTrigger";
+              case 24:
+                return "k_TestingBindSelect";
+              case 25:
+                return "k_TestingBindStart";
+              case 26:
+                return "k_TestingBindGuide";
+              case 27:
+                return "k_TestingBindShare";
+              case 28:
+                return "k_TestingBindingComplete";
+              case 29:
+                return "k_TestingLeftTrigger";
+              case 30:
+                return "k_TestingRightTrigger";
+              case 31:
+                return "k_TestingLeftTrackpad";
+              case 32:
+                return "k_TestingLeftTrackpadPressure";
+              case 33:
+                return "k_TestingRightTrackpad";
+              case 34:
+                return "k_TestingRightTrackpadPressure";
+              case 35:
+                return "k_TestingLeftJoystick";
+              case 36:
+                return "k_TestingRightJoystick";
+              case 37:
+                return "k_TestingButtons";
+              case 38:
+                return "k_TestingLeftHaptics";
+              case 39:
+                return "k_TestingRightHaptics";
+              case 40:
+                return "k_TestingComplete";
+              case 41:
+                return "k_TestingAborted";
             }
           }
           return (
@@ -74523,6 +74746,7 @@ object-assign
           /* harmony export */ Check: () => /* binding */ Check,
           /* harmony export */ Clock: () => /* binding */ Clock,
           /* harmony export */ ClosedCaption: () => /* binding */ ClosedCaption,
+          /* harmony export */ CloudDownload: () => /* binding */ CloudDownload,
           /* harmony export */ Collapse: () => /* binding */ Collapse,
           /* harmony export */ CommentThread: () => /* binding */ CommentThread,
           /* harmony export */ CopyToClipboard: () =>
@@ -77348,6 +77572,7 @@ object-assign
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
             {
+              className: "SVGIcon_Button SVGIcon_Calendar",
               width: "25",
               height: "24",
               viewBox: "0 0 25 24",
@@ -79005,21 +79230,22 @@ object-assign
               version: "1.1",
               id: "Layer_1",
               xmlns: "http://www.w3.org/2000/svg",
+              fill: "#FFFFFF",
               className: className,
               x: "0px",
               y: "0px",
               viewBox: "0 0 256 256",
             },
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
-              fill: "#ffffff",
+              fill: "#currentColor",
               d: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
             }),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
-              fill: "#ffffff",
+              fill: "#currentColor",
               d: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
             }),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
-              fill: "#ffffff",
+              fill: "#currentColor",
               d: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
             })
           );
@@ -80189,6 +80415,25 @@ object-assign
             )
           );
         }
+        function CloudDownload(props) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                width: "25",
+                height: "15",
+                viewBox: "0 0 25 15",
+                fill: "black",
+                xmlns: "http://www.w3.org/2000/svg",
+              },
+              props
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M20.4983 14.9998H5.50068C4.77794 15.0049 4.05853 14.901 3.36635 14.6914C2.73245 14.5017 2.13941 14.1939 1.6178 13.7838C1.09666 13.3667 0.67927 12.8325 0.398748 12.2237C0.118225 11.615 -0.0177451 10.9486 0.00185477 10.2775C-0.0054678 9.70509 0.0977818 9.13666 0.305747 8.60408C0.498657 8.12872 0.785143 7.69778 1.14794 7.33745C1.81398 6.67001 2.78944 6.15547 4.04731 5.80829C4.10841 4.25269 4.75842 2.77984 5.86348 1.69365C6.96903 0.60364 8.45437 -0.00449463 9.99987 2.50132e-05C11.0001 0.00807229 11.9825 0.267715 12.8582 0.7555C13.7339 1.24329 14.4753 1.9437 15.0152 2.79335C15.4947 2.6343 15.994 2.54414 16.4984 2.52541C17.9193 2.52443 19.2832 3.08972 20.2932 4.09833C21.3094 5.10022 21.9038 6.45906 21.9527 7.89189C22.9609 8.23234 23.6526 8.60787 24.1302 9.07289C24.7185 9.65279 25.0339 10.4583 24.9971 11.2875C25.0059 11.8527 24.8841 12.4122 24.6414 12.9216C24.4147 13.3796 24.0837 13.7769 23.6754 14.0808C22.8776 14.6823 21.7794 14.9998 20.4983 14.9998ZM10.6373 8.62986L9.91893 9.35485L12.1391 11.6L12.4984 11.9464L12.8573 11.6L15.0793 9.35506L14.361 8.63007L12.9987 10.005V5.55515H11.9997V10.005L10.6373 8.62986Z",
+              fill: "currentColor",
+            })
+          );
+        }
         function Installed() {
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
@@ -80492,27 +80737,33 @@ object-assign
           );
         }
         function ProgressCircle(props) {
+          const { percentComplete, startOffset } = props;
           let nDashOffset =
             shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_2__.RemapVal(
-              props.percentComplete,
+              percentComplete,
               0,
               100,
               800,
               0
             );
+          let nStartOffset = startOffset ? startOffset + 270 : 270;
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
             {
               version: "1.1",
               id: "Layer_4",
               xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_ProgressCircle",
+              className: (0,
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
+                props.className,
+                "SVGIcon_Button SVGIcon_ProgressCircle"
+              ),
               x: "0px",
               y: "0px",
               width: "256px",
               height: "256px",
               viewBox: "0 0 256 256",
-              style: { transform: "rotateZ(-90deg)" },
+              style: { transform: `rotate(${nStartOffset}deg)` },
             },
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "circle",
@@ -85980,7 +86231,7 @@ object-assign
           bulgarian: "bg",
           greek: "el",
           ukrainian: "uk",
-          vietnamese: "vn",
+          vietnamese: "vi",
           //These alias to other languages to allow them to be used on the back end, but still map to meaningful locales
           sc_schinese: "zh-cn",
           koreana: "ko",
@@ -87146,6 +87397,8 @@ function TestLocalizeCalendarTime()
             /* reexport safe */ _useresizeobserver__WEBPACK_IMPORTED_MODULE_2__.useForceUpdateOnResizeObserved,
           /* harmony export */ useGlobalEventListener: () =>
             /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useGlobalEventListener,
+          /* harmony export */ useId: () =>
+            /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useId,
           /* harmony export */ useIntersectionObserver: () =>
             /* reexport safe */ _useresizeobserver__WEBPACK_IMPORTED_MODULE_2__.useIntersectionObserver,
           /* harmony export */ useInterval: () =>
@@ -87247,6 +87500,7 @@ function TestLocalizeCalendarTime()
             /* binding */ useForceUpdate,
           /* harmony export */ useGlobalEventListener: () =>
             /* binding */ useGlobalEventListener,
+          /* harmony export */ useId: () => /* binding */ useId,
           /* harmony export */ useInterval: () => /* binding */ useInterval,
           /* harmony export */ useIsUnmounted: () =>
             /* binding */ useIsUnmounted,
@@ -87840,6 +88094,21 @@ function TestLocalizeCalendarTime()
             []
           );
           return [bModalVisible, showModal, closeModal];
+        }
+        let g_unIdCounter = 0;
+        /**
+         * Semi-polyfill for React 18's useId. This doesn't handle SSR hydration matching,
+         * so it should not be relied upon in contexts where SSR is used -- if that's necessary,
+         * React 18 upgrade should happen and this should be replaced with the native useId.
+         *
+         * @returns a globally unique string that will remain the same for the lifetime of the component
+         */
+        function useId() {
+          const [strID] = react__WEBPACK_IMPORTED_MODULE_0__.useState(() => {
+            const id = g_unIdCounter++;
+            return `:valve${id.toString(32)}:`;
+          });
+          return strID;
         }
 
         /***/
@@ -88439,6 +88708,7 @@ function TestLocalizeCalendarTime()
           MEDIA_CDN_URL: "",
           COMMUNITY_CDN_URL: "",
           COMMUNITY_CDN_ASSET_URL: "",
+          BASE_URL_SHARED_CDN: "",
           STORE_CDN_URL: "",
           PUBLIC_SHARED_URL: "",
           COMMUNITY_BASE_URL: "",
@@ -90126,4 +90396,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=c2dd95ceb1c77a59be61
+//# sourceMappingURL=friends.js.map?contenthash=3abb7ed5032707861c8d

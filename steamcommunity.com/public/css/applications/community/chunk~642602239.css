@@ -1500,7 +1500,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .cloudfileuploadbutton_Ctn_MKp7i {
   position: relative;
 }
-.cloudfileuploadprogress_uploadPreviewContainer_2jodv {
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM {
   position: absolute;
   bottom: 72px;
   left: 16px;
@@ -1514,13 +1514,13 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   flex-direction: column;
   align-items: center;
 }
-.cloudfileuploadprogress_uploadPreviewContainer_2jodv img {
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM img {
   border-radius: 4px;
   box-shadow: 0 0 4px 1px #000;
   margin-right: auto;
   margin-left: auto;
 }
-.cloudfileuploadprogress_uploadPreviewContainer_2jodv
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM
   .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
   fill: #788a92;
   background-color: #0004;
@@ -1528,17 +1528,17 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   height: 150px;
   width: 100%;
 }
-.cloudfileuploadprogress_uploadPreviewContainer_2jodv
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM
   .cloudfileuploadprogress_SVGIcon_Video_2TqYK
   path {
   transform: scale(0.85);
   transform-origin: 50% 50%;
 }
-.cloudfileuploadprogress_uploadPreview_1Hk8G {
+.cloudfileuploadprogress_UploadPreview_120Qu {
   max-height: 200px;
   max-width: 250px;
 }
-.cloudfileuploadprogress_fileUploadFileName_3-_sj {
+.cloudfileuploadprogress_FileUploadFileName_2bbAV {
   flex: 1;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1547,7 +1547,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   text-align: center;
   max-width: 250px;
 }
-.cloudfileuploadprogress_fileUploadCancel_3qwin {
+.cloudfileuploadprogress_FileUploadCancel_2MPbU {
   position: absolute;
   top: 4px;
   right: 4px;
@@ -1560,15 +1560,15 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   vertical-align: middle;
   box-shadow: 0 0 4px 1px #00000088;
 }
-.cloudfileuploadprogress_fileUploadCancel_3qwin
+.cloudfileuploadprogress_FileUploadCancel_2MPbU
   .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
   line {
   stroke: #fff;
 }
-.cloudfileuploadprogress_fileUploadCancel_3qwin:hover {
+.cloudfileuploadprogress_FileUploadCancel_2MPbU:hover {
   background-color: rgba(92, 100, 114, 0.9);
 }
-.cloudfileuploadprogress_fileUploadBtn_1OQr6 {
+.cloudfileuploadprogress_FileUploadBtn_3gPV- {
   user-select: none;
   margin-top: 5px;
   background: #ccc;
@@ -1580,10 +1580,10 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   vertical-align: middle;
   text-align: center;
 }
-.cloudfileuploadprogress_fileUploadBtn_1OQr6:hover {
+.cloudfileuploadprogress_FileUploadBtn_3gPV-:hover {
   background: #fff;
 }
-.cloudfileuploadprogress_fileUploadProgressContainer_2sKxN {
+.cloudfileuploadprogress_FileUploadProgressContainer_ZZt3E {
   position: absolute;
   width: 250px;
   bottom: 55px;
@@ -1595,11 +1595,11 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   display: flex;
   flex-direction: column;
 }
-.cloudfileuploadprogress_fileUploadProgressBarContainer_xsoqX {
+.cloudfileuploadprogress_FileUploadProgressBarContainer_1J8k7 {
   width: 100%;
   height: 10px;
 }
-.cloudfileuploadprogress_fileUploadProgressName_1dx-F {
+.cloudfileuploadprogress_FileUploadProgressName_1c12o {
   padding-top: 4px;
   padding-bottom: 4px;
   font-size: 12px;

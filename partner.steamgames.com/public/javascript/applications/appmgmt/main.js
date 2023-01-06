@@ -491,7 +491,7 @@
           case 27:
             return "es-419";
           case 28:
-            return "vn";
+            return "vi";
           case 29:
             return "sc-sc";
           default:
@@ -2333,14 +2333,14 @@
             !{ NODE_ENV: "production", STEAM_BUILD: "buildbot" }.MOBILE_BUILD)
           ) {
             window.addEventListener("beforeunload", (e) => {
-              var t, n;
+              var t, n, i, r;
               this.m_bShuttingDown = !0;
               for (let e of this.m_rgShutdownCallbacks) e();
-              let i = [];
+              let o = [];
               this.m_mapPopups.forEach((e) => {
-                e.BIsValid() && !e.BIsClosed() && i.push(e);
+                e.BIsValid() && !e.BIsClosed() && o.push(e);
               });
-              for (let e of i)
+              for (let e of o)
                 (null ===
                   (n =
                     null === (t = e.window) || void 0 === t
@@ -2351,6 +2351,12 @@
                   e.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                     !1
                   ),
+                  (null === (i = e.window) || void 0 === i
+                    ? void 0
+                    : i.SteamClient.Window.SetHideOnClose) &&
+                    (null === (r = e.window) ||
+                      void 0 === r ||
+                      r.SteamClient.Window.SetHideOnClose(!1)),
                   e.Close();
               this.m_bSaveRequired && this.SaveSavedDimensionStore(),
                 this.m_mapPopups.clear();
@@ -2694,7 +2700,7 @@
         const R = (0, a.BE)(T, t);
         return r.createElement(
           "div",
-          Object.assign({}, b, { "data-react-nav-root": g, ref: R }),
+          Object.assign({}, b, { id: g, "data-react-nav-root": g, ref: R }),
           r.createElement(o.ET.Provider, { value: D.Root }, _)
         );
       });
@@ -9199,7 +9205,7 @@
         uT: () => D,
         Ac: () => y,
         zx: () => x,
-        ji: () => U,
+        ji: () => H,
         sg: () => M,
         VY: () => k,
         oX: () => L,
@@ -9215,7 +9221,7 @@
         KM: () => B,
         EU: () => se,
         SY: () => oe,
-        BQ: () => H,
+        BQ: () => U,
         DS: () => ee,
         bU: () => E,
         gE: () => V,
@@ -9618,7 +9624,9 @@
                   r.createElement(
                     "div",
                     { className: "DialogToggle_Label" },
-                    r.createElement("span", null, this.props.label),
+                    "string" == typeof this.props.label &&
+                      r.createElement("span", null, this.props.label),
+                    "string" != typeof this.props.label && this.props.label,
                     this.props.tooltip &&
                       r.createElement(
                         "span",
@@ -9642,7 +9650,7 @@
           );
         }
       }
-      class U extends P {
+      class H extends P {
         render() {
           return r.createElement(
             h.T,
@@ -9650,8 +9658,8 @@
           );
         }
       }
-      U.contextType = d;
-      class H extends P {
+      H.contextType = d;
+      class U extends P {
         render() {
           let e = this.checked ? " Active" : "";
           return r.createElement(
@@ -10810,7 +10818,7 @@
           let e = [];
           return (
             e.push(
-              r.createElement(Ue, {
+              r.createElement(He, {
                 coordinator: this.m_coordinator,
                 key: "dropregion_top",
                 fnBAcceptDraggable: (e) => 0 != e.props.data,
@@ -10828,7 +10836,7 @@
                 )
               ),
                 e.push(
-                  r.createElement(Ue, {
+                  r.createElement(He, {
                     coordinator: this.m_coordinator,
                     key: "dropregion_" + i,
                     fnBAcceptDraggable: (e) => e.props.data != o,
@@ -11404,7 +11412,7 @@
           );
         }
       }
-      class Ue extends Ge {
+      class He extends Ge {
         BDraggableInRegion(e, t, n) {
           let i = this.GetClientRect();
           return (
@@ -11417,7 +11425,7 @@
         }
       }
       n(23816);
-      var He = n(23200),
+      var Ue = n(23200),
         Ve = (n(17010), n(10089)),
         We = n(32548),
         je = n(48626),
@@ -11539,7 +11547,7 @@
                 navRef: f,
                 onButtonDown: (e) => {
                   var t;
-                  e.detail.button == He.eV.OK &&
+                  e.detail.button == Ue.eV.OK &&
                     (null === (t = E.current) ||
                       void 0 === t ||
                       t.TakeFocus(e.detail.button));
@@ -12292,9 +12300,9 @@
           var t, n;
           if (this.props.disabled) return !1;
           let i = 0;
-          if (e.detail.button == He.eV.DIR_LEFT) i = -1;
+          if (e.detail.button == Ue.eV.DIR_LEFT) i = -1;
           else {
-            if (e.detail.button != He.eV.DIR_RIGHT) return !1;
+            if (e.detail.button != Ue.eV.DIR_RIGHT) return !1;
             i = 1;
           }
           e.detail.is_repeat
@@ -12529,7 +12537,7 @@
             u = null != s,
             d = {};
           this.CanResetToDefault &&
-            (d[He.eV.SECONDARY] = (0, c.Xx)("#ResetToDefault"));
+            (d[Ue.eV.SECONDARY] = (0, c.Xx)("#ResetToDefault"));
           let m = ct().SliderHandle,
             h = ct().SliderHandleContainer;
           return (
@@ -14128,14 +14136,61 @@
             (this.OnButtonUp(this.m_lastButtonDown),
             (this.m_lastButtonDown = p.eV.INVALID));
         }
+        BShouldSwallowEventForTextInputWorkaround(e) {
+          if (
+            !(
+              E.GB(e.target) &&
+              ("INPUT" === e.target.nodeName ||
+                "TEXTAREA" === e.target.nodeName)
+            )
+          )
+            return !1;
+          const t = e.code;
+          let n = e.target;
+          switch (t) {
+            case "ArrowUp": {
+              let t = null == n ? void 0 : n.value.indexOf("\n");
+              return (
+                "TEXTAREA" === e.target.nodeName &&
+                t >= 0 &&
+                t < (null == n ? void 0 : n.selectionStart)
+              );
+            }
+            case "ArrowDown": {
+              let t = null == n ? void 0 : n.value.lastIndexOf("\n");
+              return (
+                "TEXTAREA" === e.target.nodeName &&
+                t >= 0 &&
+                t >= (null == n ? void 0 : n.selectionStart) &&
+                (null == n ? void 0 : n.selectionEnd) <
+                  (null == n ? void 0 : n.value.length)
+              );
+            }
+            case "ArrowLeft":
+              return (
+                (null == n ? void 0 : n.selectionStart) > 0 &&
+                (null == n ? void 0 : n.selectionEnd) > 0
+              );
+            case "ArrowRight":
+              return (
+                (null == n ? void 0 : n.selectionStart) <
+                  (null == n ? void 0 : n.value.length) &&
+                (null == n ? void 0 : n.selectionEnd) <
+                  (null == n ? void 0 : n.value.length)
+              );
+            case "Enter":
+            case "Backspace":
+              return !0;
+            default:
+              return !1;
+          }
+        }
         TranslateKey(e) {
           const t = e.code,
             n = e.ctrlKey,
-            i = e.shiftKey,
-            r =
-              E.GB(e.target) &&
-              ("INPUT" === e.target.nodeName ||
-                "TEXTAREA" === e.target.nodeName);
+            i = e.shiftKey;
+          if (this.BShouldSwallowEventForTextInputWorkaround(e))
+            return p.eV.INVALID;
           if (n && i)
             switch (t) {
               case "Digit4":
@@ -14171,17 +14226,17 @@
             case "Escape":
               return p.eV.CANCEL;
             case "Enter":
-              return r ? p.eV.INVALID : p.eV.OK;
+              return p.eV.OK;
             case "Backspace":
-              return r ? p.eV.INVALID : p.eV.SECONDARY;
+              return p.eV.SECONDARY;
             case "ArrowUp":
-              return r ? p.eV.INVALID : p.eV.DIR_UP;
+              return p.eV.DIR_UP;
             case "ArrowDown":
-              return r ? p.eV.INVALID : p.eV.DIR_DOWN;
+              return p.eV.DIR_DOWN;
             case "ArrowLeft":
-              return r ? p.eV.INVALID : p.eV.DIR_LEFT;
+              return p.eV.DIR_LEFT;
             case "ArrowRight":
-              return r ? p.eV.INVALID : p.eV.DIR_RIGHT;
+              return p.eV.DIR_RIGHT;
           }
           return p.eV.INVALID;
         }
@@ -15059,61 +15114,62 @@
       n.d(t, {
         $06: () => U,
         $gZ: () => u,
-        Bh5: () => q,
-        Ehc: () => T,
-        I8b: () => X,
-        IWH: () => F,
+        Bh5: () => Q,
+        Ehc: () => R,
+        I8b: () => Z,
+        IWH: () => P,
         JrY: () => S,
-        KJh: () => te,
-        KKY: () => ce,
-        Lao: () => L,
-        Lk$: () => W,
-        P9w: () => B,
+        KJh: () => ne,
+        KKY: () => ue,
+        Lao: () => A,
+        Lk$: () => j,
+        P9w: () => x,
         SUY: () => h,
-        Uos: () => D,
-        V7n: () => A,
-        VR: () => H,
-        Vgm: () => z,
-        WPl: () => O,
-        WWB: () => ee,
+        Uos: () => T,
+        V7n: () => B,
+        VR: () => V,
+        Vgm: () => K,
+        WPl: () => L,
+        WWB: () => te,
         X: () => _,
-        XBH: () => P,
-        YVI: () => le,
-        YqJ: () => M,
+        XBH: () => G,
+        YVI: () => ce,
+        YqJ: () => k,
         YtI: () => m,
         Zrf: () => c,
-        dLw: () => J,
-        daM: () => Z,
+        dLw: () => ee,
+        daM: () => Y,
         dzL: () => E,
         ffh: () => C,
-        gR: () => k,
+        gR: () => I,
         ge: () => y,
         k4K: () => g,
-        lsH: () => N,
-        mBz: () => ae,
+        lsH: () => F,
+        mBz: () => le,
         mKE: () => w,
-        mKt: () => Y,
-        miF: () => se,
-        opd: () => ne,
+        mKt: () => $,
+        miF: () => ae,
+        nkn: () => D,
+        opd: () => ie,
         pVO: () => v,
         pkz: () => f,
-        r6F: () => I,
+        r6F: () => O,
         ret: () => d,
         shV: () => b,
-        sqQ: () => ie,
-        tEX: () => G,
-        tLe: () => V,
-        thP: () => R,
+        sqQ: () => re,
+        tEX: () => H,
+        tLe: () => W,
+        thP: () => M,
         tkI: () => p,
-        uZu: () => $,
-        ui7: () => x,
-        vJ$: () => Q,
-        vyu: () => ue,
-        wn$: () => K,
-        x0L: () => oe,
-        yTr: () => re,
-        yVt: () => j,
-        z5E: () => de,
+        uZu: () => q,
+        ui7: () => N,
+        vJ$: () => J,
+        vyu: () => de,
+        wn$: () => X,
+        x0L: () => se,
+        yTr: () => oe,
+        yVt: () => z,
+        z5E: () => me,
       });
       var i = n(70655),
         r = n(67294),
@@ -15684,7 +15740,30 @@
           )
         );
       }
-      function D(e) {
+      function D() {
+        return r.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Video",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          r.createElement("path", {
+            className: "videoPlayButton",
+            d: "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z",
+          }),
+          r.createElement("path", {
+            d: "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z",
+          })
+        );
+      }
+      function T(e) {
         return (0, l.id)()
           ? r.createElement(
               "svg",
@@ -15722,7 +15801,7 @@
               })
             );
       }
-      function T(e) {
+      function R(e) {
         return r.createElement(
           "svg",
           {
@@ -15757,7 +15836,7 @@
           })
         );
       }
-      function R() {
+      function M() {
         return r.createElement(
           "svg",
           {
@@ -15777,7 +15856,7 @@
           })
         );
       }
-      function M() {
+      function k() {
         return r.createElement(
           "svg",
           {
@@ -15813,7 +15892,7 @@
           })
         );
       }
-      function k() {
+      function I() {
         return r.createElement(
           "svg",
           {
@@ -15839,7 +15918,7 @@
           })
         );
       }
-      function I() {
+      function O() {
         return r.createElement(
           "svg",
           {
@@ -15872,7 +15951,7 @@
           })
         );
       }
-      function O() {
+      function L() {
         return r.createElement(
           "svg",
           {
@@ -15894,7 +15973,7 @@
           )
         );
       }
-      function L() {
+      function A() {
         return r.createElement(
           "svg",
           {
@@ -15921,7 +16000,7 @@
           })
         );
       }
-      function A(e) {
+      function B(e) {
         return r.createElement(
           "svg",
           {
@@ -15942,7 +16021,7 @@
           })
         );
       }
-      function B(e) {
+      function x(e) {
         return r.createElement(
           "svg",
           {
@@ -15980,7 +16059,7 @@
           })
         );
       }
-      function x(e) {
+      function N(e) {
         const t = (0, o.Z)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -16012,7 +16091,7 @@
           })
         );
       }
-      function N() {
+      function F() {
         return r.createElement(
           "svg",
           {
@@ -16038,7 +16117,7 @@
           })
         );
       }
-      function F() {
+      function P() {
         return r.createElement(
           "svg",
           {
@@ -16059,7 +16138,7 @@
           )
         );
       }
-      function P() {
+      function G() {
         return r.createElement(
           "svg",
           {
@@ -16079,7 +16158,7 @@
           )
         );
       }
-      function G() {
+      function H() {
         return r.createElement(
           "svg",
           {
@@ -16144,7 +16223,7 @@
           })
         );
       }
-      function H() {
+      function V() {
         return r.createElement(
           "svg",
           {
@@ -16166,7 +16245,7 @@
           })
         );
       }
-      function V() {
+      function W() {
         return r.createElement(
           "svg",
           {
@@ -16185,7 +16264,7 @@
           })
         );
       }
-      function W() {
+      function j() {
         return r.createElement(
           "svg",
           {
@@ -16204,7 +16283,7 @@
           })
         );
       }
-      function j() {
+      function z() {
         return r.createElement(
           "svg",
           {
@@ -16225,7 +16304,7 @@
           })
         );
       }
-      function z() {
+      function K() {
         return r.createElement(
           "svg",
           {
@@ -16256,7 +16335,7 @@
           })
         );
       }
-      function K() {
+      function X() {
         return r.createElement(
           "svg",
           {
@@ -16275,7 +16354,7 @@
           })
         );
       }
-      function X() {
+      function Z() {
         return r.createElement(
           "svg",
           {
@@ -16313,7 +16392,7 @@
           })
         );
       }
-      function Z() {
+      function Y() {
         return r.createElement(
           "svg",
           {
@@ -16349,7 +16428,7 @@
           })
         );
       }
-      function Y() {
+      function $() {
         return r.createElement(
           "svg",
           {
@@ -16374,7 +16453,7 @@
           })
         );
       }
-      function $() {
+      function q() {
         return r.createElement(
           "svg",
           {
@@ -16396,7 +16475,7 @@
           })
         );
       }
-      function q() {
+      function Q() {
         return r.createElement(
           "svg",
           {
@@ -16436,7 +16515,7 @@
           })
         );
       }
-      function Q() {
+      function J() {
         return r.createElement(
           "svg",
           {
@@ -16452,7 +16531,7 @@
           r.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function J() {
+      function ee() {
         return r.createElement(
           "svg",
           {
@@ -16471,7 +16550,7 @@
           })
         );
       }
-      function ee() {
+      function te() {
         return r.createElement(
           "svg",
           {
@@ -16491,7 +16570,7 @@
           })
         );
       }
-      function te(e) {
+      function ne(e) {
         return r.createElement(
           "svg",
           {
@@ -16510,7 +16589,7 @@
           })
         );
       }
-      function ne() {
+      function ie() {
         return r.createElement(
           "svg",
           {
@@ -16541,7 +16620,7 @@
           )
         );
       }
-      function ie(e) {
+      function re(e) {
         return r.createElement(
           "svg",
           Object.assign({}, e, {
@@ -16557,7 +16636,7 @@
           })
         );
       }
-      function re() {
+      function oe() {
         return r.createElement(
           "svg",
           {
@@ -16575,7 +16654,7 @@
           })
         );
       }
-      function oe() {
+      function se() {
         return r.createElement(
           "svg",
           {
@@ -16597,7 +16676,7 @@
           )
         );
       }
-      function se() {
+      function ae() {
         return r.createElement(
           "svg",
           {
@@ -16635,7 +16714,7 @@
           )
         );
       }
-      function ae(e) {
+      function le(e) {
         return r.createElement(
           "svg",
           Object.assign({}, e, {
@@ -16653,7 +16732,7 @@
           })
         );
       }
-      function le(e) {
+      function ce(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -16681,7 +16760,7 @@
           })
         );
       }
-      function ce(e) {
+      function ue(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -16709,7 +16788,7 @@
           })
         );
       }
-      function ue(e) {
+      function de(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -16737,7 +16816,7 @@
           })
         );
       }
-      function de(e) {
+      function me(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -18226,7 +18305,7 @@
           bulgarian: "bg",
           greek: "el",
           ukrainian: "uk",
-          vietnamese: "vn",
+          vietnamese: "vi",
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
@@ -19932,8 +20011,8 @@
         F = n(92244),
         P = n(94184),
         G = n.n(P),
-        U = n(67373);
-      const H = a.lazy(() =>
+        H = n(67373);
+      const U = a.lazy(() =>
           Promise.all([n.e(477), n.e(5888), n.e(4535)]).then(n.bind(n, 49686))
         ),
         V = a.lazy(() =>
@@ -20042,7 +20121,7 @@
       }
       function ee(e) {
         let { children: t } = e,
-          n = (0, U.H7)(r.Z.PricingTools());
+          n = (0, H.H7)(r.Z.PricingTools());
         return a.createElement(
           "div",
           { className: G()(s().App, n && s().FillBrowserVertically) },
@@ -20065,7 +20144,7 @@
                 a.createElement(
                   L.rs,
                   null,
-                  a.createElement(L.AW, { exact: !0, path: "/", component: H }),
+                  a.createElement(L.AW, { exact: !0, path: "/", component: U }),
                   a.createElement(L.AW, {
                     exact: !0,
                     path: r.Z.DiagData(),

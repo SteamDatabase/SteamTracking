@@ -280,6 +280,7 @@
   height: 100%;
   cursor: pointer;
   -webkit-transform: translate3d(0, 0, 0);
+  position: relative;
   z-index: 6;
 }
 @media screen and (max-width: 1750px) {
@@ -1331,6 +1332,7 @@ div#global_header .content {
   height: 100%;
   cursor: pointer;
   -webkit-transform: translate3d(0, 0, 0);
+  position: relative;
   z-index: 6;
 }
 @media screen and (max-width: 1750px) {

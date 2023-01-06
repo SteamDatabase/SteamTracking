@@ -210,8 +210,6 @@ message CStore_UserPreferences {
 	optional bool platform_windows = 3;
 	optional bool platform_mac = 4;
 	optional bool platform_linux = 5;
-	optional bool hide_adult_content_violence = 6;
-	optional bool hide_adult_content_sex = 7;
 	optional uint32 timestamp_updated = 8;
 	optional bool hide_store_broadcast = 9;
 	optional .EUserReviewScorePreference review_score_preference = 10 [default = k_EUserReviewScorePreference_Unset];

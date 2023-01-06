@@ -71,6 +71,8 @@ public:
     virtual unknown_ret SetOverlayBrowserInfo(void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret ClearOverlayBrowserInfo(void*) = 0;
     virtual unknown_ret GetOverlayBrowserInfo(void*,void*,void*) = 0;
+    virtual unknown_ret SetOverlayNotificationPosition(void*,void*) = 0;
+    virtual unknown_ret SetOverlayNotificationInset(void*,void*,void*) = 0;
     virtual unknown_ret DispatchClientUINotification(void*,void*,void*) = 0;
     virtual unknown_ret RespondToClientUINotification(void*,void*,void*) = 0;
     virtual unknown_ret DispatchClientUICommand(void*,void*) = 0;

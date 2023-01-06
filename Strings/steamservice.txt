@@ -1,10 +1,10 @@
 __TEXT
-*
-*
+@*
+@*
 __text
 __TEXT
-@
-@
+p
+p
 __stubs
 __TEXT
 __stub_helper
@@ -18,22 +18,22 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-dp
+\p
 __DATA
-*
-*
+@*
+@*
 __nl_symbol_ptr
 __DATA
-*
-*
+@*
+@*
 __got
 __DATA
-*
-*
 __la_symbol_ptr
 __DATA
 __mod_init_func
 __DATA
+`I*
+`I*
 __const
 __DATA
 __objc_imageinfo__DATA
@@ -55,15 +55,20 @@ __bss
 __DATA
 __common
 __DATA
-61
+@v1
 H
 __LINKEDIT
-2
+@2
+-
 
 8
 @loader_path/steamservice.dylib
 "
-`:-
+-
+8%-
+p(-
+`B-
+`z-
 P
 
 *
@@ -90,18 +95,15 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-X5-
-+g},
-Hc5Mv,
+Xu-
+1
 0
 0
 '
 Hi
+|&
 H=
-"
-"
-Y&
-&
+e&
 Hc
 Hc
 Hc
@@ -111,14 +113,13 @@ AT=
 AT5
 AT5
 AT=
+F!
 ?
 D
 @
 @
-8!
 !
-A%
-&(
+6(
 @
 Hc
 Hc
@@ -150,14 +151,12 @@ IcE
 IcE
 @
 @
-f
-'
+]
+i
+$
 V
-+$
 =
 #
-&
-=
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -1348,17 +1347,19 @@ D
 8
 4
 @
-<
-=
->
-?
 (
 0
-D
-E
+L
+M
+N
+O
+8
 @
-F
-G
+T
+U
+P
+V
+W
 
 
 !
@@ -1448,7 +1449,7 @@ k
 l
 y
 H
-H
+X
 0
 `
 (
@@ -1782,6 +1783,8 @@ CHECK failed: size > chunk_size:
 CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
 CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
 CHECK failed: (size) > (0):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 ./google/protobuf/repeated_field.h
 CHECK failed: (index) >= (0):
@@ -8297,8 +8300,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Dec 19 2022
-13:55:52
+Jan  5 2023
+11:16:14
 Jan
 Feb
 Mar
@@ -8875,17 +8878,14 @@ CWorkThread -- OnWorkItemCompleted - unordered
 CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
-+g},
-Hc5Mv,
+1
 0
 0
 '
 Hi
+|&
 H=
-"
-"
-Y&
-&
+e&
 Hc
 Hc
 Hc
@@ -8895,14 +8895,13 @@ AT=
 AT5
 AT5
 AT=
+F!
 ?
 D
 @
 @
-8!
 !
-A%
-&(
+6(
 @
 Hc
 Hc
@@ -8934,28 +8933,22 @@ IcE
 IcE
 @
 @
-f
-'
-V
-+$
-=
-#
-&
-=
-"
-k"
-%$
-"
-"
-"
-"
-!
+]
+i
 $
-C!
+V
+=
+#
+#
+#
+=
+)$
+%
+%
+!
 @
 @
 &
-#
 @
 M9e
 @
@@ -9343,7 +9336,9 @@ RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
 $
+o
 $
+X
 
 
 SHA1 multi-block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -9360,19 +9355,17 @@ H=
 =
 @
 =*.*
-l
+@
+@
+M
 @
 @
 @
 @
 @
 @
-@
-@
-9
 0
 *
-#
 0
 0
 0

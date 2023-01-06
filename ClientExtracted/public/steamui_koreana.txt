@@ -2396,7 +2396,7 @@
 "Steam_Uninstall_Games_Dialog_Text" "%game%  제거 중..."
 
 "Steam_Shutdown_Dialog_Title"	"Steam - 종료"
-"Steam_Shutdown_Dialog_Text" "Steam을 종료하는 중..."
+"Steam_Shutdown_Dialog_Text" "Steam 종료 중..."
 "Steam_Shutdown_Waiting_For_Game" "%game% 게임이 종료되기를 기다리는 중..."
 "Steam_Shutdown_Finishing_Download" "대기열에 있는 다운로드 대기 중..."
 "Steam_Shutdown_Waiting_For_Download" "%game% 다운로드를 중지하는 중..."

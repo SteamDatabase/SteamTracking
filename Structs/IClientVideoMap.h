@@ -2,7 +2,7 @@ class IClientVideoMap
 {
 public:
     virtual unknown_ret BGetUserVideoFolder(void*,void*) = 0;
-    virtual unknown_ret UnlockH264() = 0;
+    virtual unknown_ret UnlockH264(void*) = 0;
     virtual unknown_ret EGetBroadcastReady() = 0;
     virtual unknown_ret BeginBroadcastSession() = 0;
     virtual unknown_ret EndBroadcastSession() = 0;
@@ -14,7 +14,7 @@ public:
     virtual unknown_ret MuteBroadcastChatUser(void*,void*,void*,void*) = 0;
     virtual unknown_ret InitBroadcastVideo(void*,void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret InitBroadcastAudio(void*,void*,void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret Unknown_5994832() = 0;
+    virtual unknown_ret Unknown_6021392() = 0;
     virtual unknown_ret UploadBroadcastThumbnail(void*,void*,void*,void*) = 0;
     virtual unknown_ret DroppedVideoFrames(void*) = 0;
     virtual unknown_ret SetCurrentVideoEncodingRate(void*) = 0;

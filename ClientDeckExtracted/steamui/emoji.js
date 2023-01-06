@@ -1826,4 +1826,3 @@
     },
   },
 ]);
-//# sourceMappingURL=emoji.js.map

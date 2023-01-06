@@ -9417,7 +9417,7 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   .nominationandvote_SteamAwardHeader_2TvWH
   .nominationandvote_SteamAwardHeaderImage_3dsTJ {
   position: absolute;
-  bottom: -15px;
+  bottom: 10%;
   right: -10px;
   max-width: 100%;
 }
@@ -9522,7 +9522,6 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   font-size: 15px;
   text-align: center;
   margin: auto 0;
-  width: 100%;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -9566,6 +9565,15 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   padding: 5px 10px;
   color: #fff;
 }
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+    .nominationandvote_SteamAwardVoteButton_kTsuK
+    .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+    padding: 5px;
+  }
+}
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
   .nominationandvote_SteamAwardVoteButtonArea_2gvv6
@@ -9599,6 +9607,15 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   font-weight: 600;
   padding: 5px 10px;
   color: #355a5f;
+}
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+    .nominationandvote_SteamAwardVoteButtonSubmitted_39ziF
+    .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+    padding: 5px;
+  }
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -9695,7 +9712,12 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 95%;
+  max-width: 85%;
+}
+@media screen and (max-width: 620px) {
+  .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_GCwk0 {
+    max-width: 100%;
+  }
 }
 .steam_awards_vote_section
   .nominationandvote_AwardCategoriesCtn_GCwk0
@@ -13118,213 +13140,136 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   width: 100%;
   overflow: hidden;
 }
-.networkdiagnosticsdialog_NetworkDialog_6yT3E {
-  height: 800px;
-  width: 1200px;
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Regular")
+    format("truetype");
 }
-.networkdiagnosticsdialog_ActiveHeader_2H7Xi {
-  font-weight: bold;
-  padding-top: 30px;
-  padding-bottom: 5px;
-  padding-left: 2px;
-  color: #dcdedf;
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-RegularItalic")
+    format("truetype");
+  font-style: italic;
 }
-.networkdiagnosticsdialog_ClosedHeader_3NRKz {
-  font-weight: bold;
-  padding-top: 30px;
-  padding-bottom: 5px;
-  padding-left: 2px;
-  color: #dcdedf;
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Thin") format("truetype");
+  font-weight: 100;
 }
-.networkdiagnosticsdialog_BetaText_Hn0jl {
-  float: right;
-  color: #d39922;
-  font-size: 14px;
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Light") format("truetype");
+  font-weight: 300;
 }
-.networkdiagnosticsdialog_SubHeader_1x9WN {
-  font-size: 10px;
-  color: #a9a9a9;
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-LightItalic")
+    format("truetype");
+  font-weight: 300;
+  font-style: italic;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb {
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Medium") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Bold") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-BoldItalic")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-ExtraBold")
+    format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Black") format("truetype");
+  font-weight: 900;
+}
+body {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.supportalerts_BrowserWrapper_14nHy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI.DialogContent {
+  padding: 32px 8px 8px 8px;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI .htmlpopupdialog_DialogHeader_2Da2G {
+  flex: 1;
+  font-size: medium;
   width: 100%;
-  color: #fff;
-  text-align: left;
-  table-layout: fixed;
-  vertical-align: middle;
-  line-height: 20px;
-  height: 20px;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb tbody td {
-  font-size: 14px;
-  background-color: #67707b;
-  width: 140px;
-  text-align: left;
-  padding: 2px;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI .htmlpopupdialog_DialogBodyText_2gL3o {
+  flex: 1;
+  margin-top: 20px;
+  font-size: small;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnLogo_1qnXE {
-  padding-left: 4px;
-  width: 40px;
-  height: 100%;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI .htmlpopupdialog_BrowserViewHost_Hfu72 {
+  flex: 1;
+  background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnAvatar_2ZSFU {
-  width: 40px;
-  height: 40px;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar {
+  width: 12px;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnDisplayName_3ffkR {
-  width: 450px;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-thumb {
+  width: 4px;
+  border: 3px solid transparent;
+  background-image: none;
+  background-color: #606774;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnActiveStatus_3dGKN {
-  width: 100px;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-track,
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-button {
+  display: none;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnDurationValue_ZqfiR {
-  width: 100px;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-thumb:hover {
+  background-color: #7b8392;
+  background-clip: padding-box;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnPingLabel_2vhai,
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnQualityLabel_rGe0R {
-  display: inline-block;
-  width: 60px;
-  text-align: right;
-  padding-right: 4px;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-thumb:active {
+  background-color: #7b8392;
+  border: 2px solid transparent;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnPingValue_2YNFR,
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnQualityValue_2fWG2 {
-  display: inline-block;
-  width: 50px;
-  text-align: right;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-corner {
+  background-color: #434953;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnInOutLabel_KUDhl {
-  padding-left: 20px;
-  text-align: right;
-  width: 50px;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI .htmlpopupdialog_FooterControls_1kdZn {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 4px 2px 8px;
+  align-items: center;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnKBValue_w0k4Y {
-  width: 90px;
-  text-align: right;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_FooterControls_1kdZn
+  .htmlpopupdialog_ButtonWrapper_2marT {
+  height: fit-content;
 }
-.networkdiagnosticsdialog_StatsTable_2odAb
-  .networkdiagnosticsdialog_ColumnPktsValue_BZKDp {
-  width: 90px;
-  text-align: right;
-}
-.networkdiagnosticsdialog_Histogram_ohBIL td {
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-.networkdiagnosticsdialog_Histogram_ohBIL
-  tr
-  .networkdiagnosticsdialog_Pct_16zum {
-  text-align: right;
-  width: 4em;
-}
-.networkdiagnosticsdialog_Histogram_ohBIL
-  tr
-  .networkdiagnosticsdialog_Bar_1Wwgx {
-  background-color: blue;
-  height: 1em;
-  vertical-align: middle;
-  display: inline-block;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-.networkdiagnosticsdialog_Distribution_2vvBi
-  .networkdiagnosticsdialog_NTile_2t6Dh {
-  text-align: right;
-}
-.networkdiagnosticsdialog_PingBreakdown_30rjo {
-  font-size: 10px;
-  width: 270px;
-}
-.networkdiagnosticsdialog_PingBreakdown_30rjo
-  .networkdiagnosticsdialog_PingSection_3s7NT,
-.networkdiagnosticsdialog_PingBreakdown_30rjo
-  .networkdiagnosticsdialog_JitterSection_1y6tW {
-  width: 100%;
-  display: block;
-}
-.networkdiagnosticsdialog_PingBreakdown_30rjo
-  .networkdiagnosticsdialog_JitterSection_1y6tW {
-  margin-top: 1em;
-}
-.networkdiagnosticsdialog_SectionTitle_2XBSi {
-  font-size: 12px;
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-}
-.networkdiagnosticsdialog_NumSamples_2qc7- {
-  text-align: center;
-  margin-bottom: 0.5ex;
-}
-.networkdiagnosticsdialog_RoutingToolTip_21nyP {
-  width: 450px;
-}
-.networkdiagnosticsdialog_RoutingToolTip_21nyP
-  .networkdiagnosticsdialog_RouteItem_1W1Pp {
-  margin-top: 0.75ex;
-}
-.networkdiagnosticsdialog_LifetimeQualityStats_3DAza {
-  font-size: 10px;
-  width: 270px;
-}
-.networkdiagnosticsdialog_LifetimeQualityStats_3DAza
-  .networkdiagnosticsdialog_PacketBreakdown_BCSwF {
-  margin-bottom: 1em;
-}
-.networkdiagnosticsdialog_LifetimeQualityStats_3DAza
-  .networkdiagnosticsdialog_PacketBreakdown_BCSwF
-  .networkdiagnosticsdialog_Num_2w2ER,
-.networkdiagnosticsdialog_LifetimeQualityStats_3DAza
-  .networkdiagnosticsdialog_PacketBreakdown_BCSwF
-  .networkdiagnosticsdialog_Pct_16zum {
-  text-align: right;
-  padding-left: 1em;
-}
-.networkdiagnosticsdialog_PingOrQualityToolTip_3dBPI,
-.networkdiagnosticsdialog_RoutingToolTip_21nyP,
-.networkdiagnosticsdialog_CloseReasonToolTip_1r2rQ {
-  box-sizing: border-box;
-  background-color: #696773;
-  border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
-  user-select: none;
-}
-.networkdiagnosticsdialog_PingOrQualityToolTip_3dBPI
-  .networkdiagnosticsdialog_ToolTipTitle_3oRa7,
-.networkdiagnosticsdialog_RoutingToolTip_21nyP
-  .networkdiagnosticsdialog_ToolTipTitle_3oRa7,
-.networkdiagnosticsdialog_CloseReasonToolTip_1r2rQ
-  .networkdiagnosticsdialog_ToolTipTitle_3oRa7 {
-  color: #e0e1e6;
-}
-.networkdiagnosticsdialog_PingOrQualityToolTip_3dBPI
-  .networkdiagnosticsdialog_ToolTipTitle_3oRa7.networkdiagnosticsdialog_Center_mNluX,
-.networkdiagnosticsdialog_RoutingToolTip_21nyP
-  .networkdiagnosticsdialog_ToolTipTitle_3oRa7.networkdiagnosticsdialog_Center_mNluX,
-.networkdiagnosticsdialog_CloseReasonToolTip_1r2rQ
-  .networkdiagnosticsdialog_ToolTipTitle_3oRa7.networkdiagnosticsdialog_Center_mNluX {
-  text-align: center;
-}
-.networkdiagnosticsdialog_PingOrQualityToolTip_3dBPI
-  .networkdiagnosticsdialog_ToolTipInsetContent_1j0hK,
-.networkdiagnosticsdialog_RoutingToolTip_21nyP
-  .networkdiagnosticsdialog_ToolTipInsetContent_1j0hK,
-.networkdiagnosticsdialog_CloseReasonToolTip_1r2rQ
-  .networkdiagnosticsdialog_ToolTipInsetContent_1j0hK {
-  color: #aaacb6;
-  margin: 6px 4px;
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_FooterControls_1kdZn
+  .htmlpopupdialog_ButtonWrapper_2marT
+  button.DialogButton {
+  padding: 0 12px;
+  box-sizing: content-box;
+  width: auto;
 }
 @keyframes contentmanagement_ItemFocusAnim-darkerGrey-nocolor_21J2a {
   from {
@@ -14139,6 +14084,214 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .BasicUI .contentmanagement_AppActionBar_35T-O {
   display: none;
 }
+.networkdiagnosticsdialog_NetworkDialog_6yT3E {
+  height: 800px;
+  width: 1200px;
+}
+.networkdiagnosticsdialog_ActiveHeader_2H7Xi {
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-left: 2px;
+  color: #dcdedf;
+}
+.networkdiagnosticsdialog_ClosedHeader_3NRKz {
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-left: 2px;
+  color: #dcdedf;
+}
+.networkdiagnosticsdialog_BetaText_Hn0jl {
+  float: right;
+  color: #d39922;
+  font-size: 14px;
+}
+.networkdiagnosticsdialog_SubHeader_1x9WN {
+  font-size: 10px;
+  color: #a9a9a9;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb {
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  table-layout: fixed;
+  vertical-align: middle;
+  line-height: 20px;
+  height: 20px;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb tbody td {
+  font-size: 14px;
+  background-color: #67707b;
+  width: 140px;
+  text-align: left;
+  padding: 2px;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnLogo_1qnXE {
+  padding-left: 4px;
+  width: 40px;
+  height: 100%;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnAvatar_2ZSFU {
+  width: 40px;
+  height: 40px;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnDisplayName_3ffkR {
+  width: 450px;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnActiveStatus_3dGKN {
+  width: 100px;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnDurationValue_ZqfiR {
+  width: 100px;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnPingLabel_2vhai,
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnQualityLabel_rGe0R {
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+  padding-right: 4px;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnPingValue_2YNFR,
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnQualityValue_2fWG2 {
+  display: inline-block;
+  width: 50px;
+  text-align: right;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnInOutLabel_KUDhl {
+  padding-left: 20px;
+  text-align: right;
+  width: 50px;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnKBValue_w0k4Y {
+  width: 90px;
+  text-align: right;
+}
+.networkdiagnosticsdialog_StatsTable_2odAb
+  .networkdiagnosticsdialog_ColumnPktsValue_BZKDp {
+  width: 90px;
+  text-align: right;
+}
+.networkdiagnosticsdialog_Histogram_ohBIL td {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.networkdiagnosticsdialog_Histogram_ohBIL
+  tr
+  .networkdiagnosticsdialog_Pct_16zum {
+  text-align: right;
+  width: 4em;
+}
+.networkdiagnosticsdialog_Histogram_ohBIL
+  tr
+  .networkdiagnosticsdialog_Bar_1Wwgx {
+  background-color: blue;
+  height: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.networkdiagnosticsdialog_Distribution_2vvBi
+  .networkdiagnosticsdialog_NTile_2t6Dh {
+  text-align: right;
+}
+.networkdiagnosticsdialog_PingBreakdown_30rjo {
+  font-size: 10px;
+  width: 270px;
+}
+.networkdiagnosticsdialog_PingBreakdown_30rjo
+  .networkdiagnosticsdialog_PingSection_3s7NT,
+.networkdiagnosticsdialog_PingBreakdown_30rjo
+  .networkdiagnosticsdialog_JitterSection_1y6tW {
+  width: 100%;
+  display: block;
+}
+.networkdiagnosticsdialog_PingBreakdown_30rjo
+  .networkdiagnosticsdialog_JitterSection_1y6tW {
+  margin-top: 1em;
+}
+.networkdiagnosticsdialog_SectionTitle_2XBSi {
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.networkdiagnosticsdialog_NumSamples_2qc7- {
+  text-align: center;
+  margin-bottom: 0.5ex;
+}
+.networkdiagnosticsdialog_RoutingToolTip_21nyP {
+  width: 450px;
+}
+.networkdiagnosticsdialog_RoutingToolTip_21nyP
+  .networkdiagnosticsdialog_RouteItem_1W1Pp {
+  margin-top: 0.75ex;
+}
+.networkdiagnosticsdialog_LifetimeQualityStats_3DAza {
+  font-size: 10px;
+  width: 270px;
+}
+.networkdiagnosticsdialog_LifetimeQualityStats_3DAza
+  .networkdiagnosticsdialog_PacketBreakdown_BCSwF {
+  margin-bottom: 1em;
+}
+.networkdiagnosticsdialog_LifetimeQualityStats_3DAza
+  .networkdiagnosticsdialog_PacketBreakdown_BCSwF
+  .networkdiagnosticsdialog_Num_2w2ER,
+.networkdiagnosticsdialog_LifetimeQualityStats_3DAza
+  .networkdiagnosticsdialog_PacketBreakdown_BCSwF
+  .networkdiagnosticsdialog_Pct_16zum {
+  text-align: right;
+  padding-left: 1em;
+}
+.networkdiagnosticsdialog_PingOrQualityToolTip_3dBPI,
+.networkdiagnosticsdialog_RoutingToolTip_21nyP,
+.networkdiagnosticsdialog_CloseReasonToolTip_1r2rQ {
+  box-sizing: border-box;
+  background-color: #696773;
+  border-radius: 2px;
+  color: #e0e1e6;
+  padding: 6px 8px;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  user-select: none;
+}
+.networkdiagnosticsdialog_PingOrQualityToolTip_3dBPI
+  .networkdiagnosticsdialog_ToolTipTitle_3oRa7,
+.networkdiagnosticsdialog_RoutingToolTip_21nyP
+  .networkdiagnosticsdialog_ToolTipTitle_3oRa7,
+.networkdiagnosticsdialog_CloseReasonToolTip_1r2rQ
+  .networkdiagnosticsdialog_ToolTipTitle_3oRa7 {
+  color: #e0e1e6;
+}
+.networkdiagnosticsdialog_PingOrQualityToolTip_3dBPI
+  .networkdiagnosticsdialog_ToolTipTitle_3oRa7.networkdiagnosticsdialog_Center_mNluX,
+.networkdiagnosticsdialog_RoutingToolTip_21nyP
+  .networkdiagnosticsdialog_ToolTipTitle_3oRa7.networkdiagnosticsdialog_Center_mNluX,
+.networkdiagnosticsdialog_CloseReasonToolTip_1r2rQ
+  .networkdiagnosticsdialog_ToolTipTitle_3oRa7.networkdiagnosticsdialog_Center_mNluX {
+  text-align: center;
+}
+.networkdiagnosticsdialog_PingOrQualityToolTip_3dBPI
+  .networkdiagnosticsdialog_ToolTipInsetContent_1j0hK,
+.networkdiagnosticsdialog_RoutingToolTip_21nyP
+  .networkdiagnosticsdialog_ToolTipInsetContent_1j0hK,
+.networkdiagnosticsdialog_CloseReasonToolTip_1r2rQ
+  .networkdiagnosticsdialog_ToolTipInsetContent_1j0hK {
+  color: #aaacb6;
+  margin: 6px 4px;
+}
 .marketingmessagesdialog_BrowserViewHost_2JQwV {
   flex: 1;
   background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
@@ -14331,6 +14484,213 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 :root {
   --basicui-header-height: 0px;
 }
+@keyframes hardwaresurveydialog_ItemFocusAnim-darkerGrey-nocolor_32hdK {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes hardwaresurveydialog_ItemFocusAnim-darkerGrey_1_XGy {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes hardwaresurveydialog_ItemFocusAnim-darkGrey_1s9Ek {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes hardwaresurveydialog_ItemFocusAnim-grey_XSPiF {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes hardwaresurveydialog_ItemFocusAnimBorder-darkGrey_1OOqa {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes hardwaresurveydialog_ItemFocusAnim-green_1TK5S {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes hardwaresurveydialog_focusAnimation_5qZLW {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes hardwaresurveydialog_hoverAnimation_3gQeK {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg {
+  white-space: pre-line;
+}
+.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg.hardwaresurveydialog_Desktop_hYVp3 {
+  height: 100%;
+}
+.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg.hardwaresurveydialog_Desktop_hYVp3
+  .DialogBodyText {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
+  .hardwaresurveydialog_Prompt_2TaU1 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 800;
+  padding-top: 10px;
+}
+.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
+  .hardwaresurveydialog_HardwareSurveySections_3f3VJ {
+  margin-top: 10px;
+  height: 35vh;
+  background-color: #3d4450;
+  border: 1px solid #67707b;
+  padding: 0px 20px;
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
+  .hardwaresurveydialog_HardwareSurveySections_3f3VJ.gpfocus {
+  border-color: #fff;
+  background-color: #67707b;
+}
+.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
+  .hardwaresurveydialog_HardwareSurveySections_3f3VJ.gpfocuswithin:not(.gpfocus) {
+  background-color: #fff;
+  color: #3d4450;
+}
+.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
+  .hardwaresurveydialog_HardwareSurveySections_3f3VJ
+  .hardwaresurveydialog_HardwareSurveySection_RRhNQ {
+  padding-bottom: 5px;
+}
+.checkforupdatesdialog_CheckForUpdatesDialog_34HrK {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.checkforupdatesdialog_DialogHeader_8ymvV {
+  flex: 1;
+  font-size: medium;
+  width: 100%;
+}
+.checkforupdatesdialog_DialogBodyText_3IDmW {
+  flex: 1;
+  margin-top: 20px;
+  font-size: small;
+}
+.checkforupdatesdialog_ActionButtonStrip_2wwBJ {
+  width: 100%;
+  align-items: flex-end;
+}
+.checkforupdatesdialog_BrowserViewHost_37vmq {
+  flex: 1;
+  width: 850px;
+  height: 600px;
+  background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
+}
+.checkforupdatesdialog_Button_14apZ {
+  width: 100px;
+  color: green;
+}
+.checkforupdatesdialog_Error_P4Vza {
+  color: red;
+  font-size: medium;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+.login_Login_VZ6x_ {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
+}
+.login_WithTitle_2WCTN {
+  padding-top: 40px;
+}
+.login_TitleBar_1C4of {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  z-index: 9000;
+  -webkit-app-region: drag;
+}
+.login_TitleBar_1C4of .login_CloseButton_1mcCj {
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.errorconditiondesktop_RefreshLoginDialogModal_2V79Z {
+  padding: 0;
+  margin: 0;
+}
+.errorconditiondesktop_RefreshLoginDialogModal_2V79Z
+  .errorconditiondesktop_RefreshLoginDialog_3P2uS {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --basicui-header-height: 0px;
+}
 .menu_MenuWrapper_2Lu3d {
   height: fit-content;
 }
@@ -14437,6 +14797,16 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   align-items: center;
   padding-left: 14px;
   gap: 6px;
+}
+.rootmenu_StatusEntry_1GNJU {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.rootmenu_StatusEntry_1GNJU .rootmenu_Icon_32b_a {
+  width: 14px;
+  height: 14px;
 }
 :root {
   --basicui-header-height: 0px;
@@ -14545,10 +14915,29 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   color: #212124;
 }
 .titlebarcontrols_VRToggle_3lRfT.titlebarcontrols_Running_1oMrx {
-  background-color: #236c39;
+  background-color: #5c7e10;
 }
 .titlebarcontrols_VRToggle_3lRfT.titlebarcontrols_Running_1oMrx:hover {
-  background-color: #59bf40;
+  background-color: #7ea64b;
+}
+.titlebarcontrols_ParentalToggleButton_13vrq {
+  min-width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #9a3130;
+}
+.titlebarcontrols_ParentalToggleButton_13vrq:hover {
+  background-color: #d75a5a;
+}
+.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_Locked_2lStU {
+  background-color: #5c7e10;
+}
+.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_Locked_2lStU:hover {
+  background-color: #7ea64b;
+}
+.titlebarcontrols_ParentalToggleButton_13vrq .titlebarcontrols_Icon_34bQc {
+  color: #fff;
 }
 :root {
   --basicui-header-height: 0px;
@@ -14734,6 +15123,19 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   width: 150px;
   height: 40px;
 }
+.toastmanager_ToastPlaceholder_QLAG-.toastmanager_PositionTop_1bLZ8 {
+  top: 50px;
+  bottom: unset;
+}
+.toastmanager_ToastPlaceholder_QLAG-.toastmanager_PositionTop_1bLZ8.toastmanager_InGame_c8Wr9 {
+  top: 10px;
+}
+.toastmanager_ToastPlaceholder_QLAG-.toastmanager_PositionLeft_1t1fw {
+  left: 0px;
+  right: unset;
+  padding-left: 0px;
+  padding-right: 20px;
+}
 .toastmanager_ToastContainerDesktop_zydYp {
   width: 300px;
   height: 40px;
@@ -14754,6 +15156,13 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   animation-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
   animation-delay: 0s, var(--toast-duration);
   animation-fill-mode: forwards;
+}
+.toastmanager_ToastPopup_1qv_I.toastmanager_PositionTop_1bLZ8 {
+  top: 0;
+}
+.toastmanager_ToastPopup_1qv_I.toastmanager_PositionLeft_1t1fw {
+  left: 0;
+  right: 20px;
 }
 @keyframes toastmanager_toastEnter_2vgBB {
   0% {
@@ -15504,186 +15913,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 :root {
   --basicui-header-height: 0px;
 }
-@keyframes hardwaresurveydialog_ItemFocusAnim-darkerGrey-nocolor_32hdK {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes hardwaresurveydialog_ItemFocusAnim-darkerGrey_1_XGy {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes hardwaresurveydialog_ItemFocusAnim-darkGrey_1s9Ek {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes hardwaresurveydialog_ItemFocusAnim-grey_XSPiF {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes hardwaresurveydialog_ItemFocusAnimBorder-darkGrey_1OOqa {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes hardwaresurveydialog_ItemFocusAnim-green_1TK5S {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes hardwaresurveydialog_focusAnimation_5qZLW {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes hardwaresurveydialog_hoverAnimation_3gQeK {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg {
-  white-space: pre-line;
-}
-.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
-  .hardwaresurveydialog_Prompt_2TaU1 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 800;
-  padding-top: 10px;
-}
-.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
-  .hardwaresurveydialog_HardwareSurveySections_3f3VJ {
-  margin-top: 10px;
-  height: 35vh;
-  background-color: #3d4450;
-  border: 1px solid #67707b;
-  padding: 0px 20px;
-  overflow-y: scroll;
-}
-.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
-  .hardwaresurveydialog_HardwareSurveySections_3f3VJ.gpfocus {
-  border-color: #fff;
-  background-color: #67707b;
-}
-.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
-  .hardwaresurveydialog_HardwareSurveySections_3f3VJ.gpfocuswithin:not(.gpfocus) {
-  background-color: #fff;
-  color: #3d4450;
-}
-.hardwaresurveydialog_HardwareSurveyDialog_3v2Gg
-  .hardwaresurveydialog_HardwareSurveySections_3f3VJ
-  .hardwaresurveydialog_HardwareSurveySection_RRhNQ {
-  padding-bottom: 5px;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Regular")
-    format("truetype");
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-RegularItalic")
-    format("truetype");
-  font-style: italic;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Thin") format("truetype");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Light") format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-LightItalic")
-    format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Medium") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Bold") format("truetype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-BoldItalic")
-    format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-ExtraBold")
-    format("truetype");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Black") format("truetype");
-  font-weight: 900;
-}
-body {
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-}
-:root {
-  --basicui-header-height: 0px;
-}
 .steamdesktop_Wrapper_1ENHE {
   width: 100%;
   height: 100%;
@@ -15920,5 +16149,3 @@ img {
   width: 16px;
   height: 16px;
 }
-
-/*# sourceMappingURL=css\241.css.map*/

@@ -693,7 +693,7 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 	"Settings_Done"					"OK"
 
 	"SettingsControllerCfg_Intro"			"Quando não estiver jogando, o seu Controle Steam usará as seguintes configurações padrão."
-	"SettingsControllerCfg_ConfigDesktop"	"Configuração para área de trabalho"
+	"SettingsControllerCfg_ConfigDesktop"	"Configuração para a área de trabalho"
 	"SettingsControllerCfg_ConfigDesktop_Desc" "Configuração padrão para controle da área de trabalho criada pela Valve, para uso com o Controle Steam."
 	"SettingsControllerCfg_ConfigBP"		"Configuração do Big Picture"
 	"SettingsControllerCfg_ConfigBP_Desc"	"Configuração padrão do Big Picture criada pela Valve, para uso com o Controle Steam."
@@ -2727,7 +2727,7 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 	"Library_UploadScreenshotCancel"	"CANCELAR"
 	"Library_Details_RemoveFromFavorites"	"Remover dos favoritos"
 	"Library_Details_AddToFavorites"	"Adicionar aos favoritos"
-	"Library_Details_AllowDesktopConfig"	"Usar configuração para área de trabalho no inicializador"
+	"Library_Details_AllowDesktopConfig"	"Usar a configuração para a área de trabalho no inicializador"
 	"Library_Details_ChangeXInputOrderButton"	"Alterar ordem dos controles em jogos XInput"
 	"Library_CDKeyTitle"			"Códigos de produto de {s:gamename}"
 	"Library_CDKey_Description"		"Pode ser necessário inserir um código no jogo. Selecione um dos códigos para copiá-lo e use o teclado virtual do Steam para colá–lo no jogo."

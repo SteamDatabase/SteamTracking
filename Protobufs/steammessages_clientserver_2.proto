@@ -499,7 +499,6 @@ message CMsgClientEmailAddrInfo {
 	optional bool email_validation_changed = 3;
 	optional bool credential_change_requires_code = 4;
 	optional bool password_or_secretqa_change_requires_code = 5;
-	optional bool remind_user_about_email = 6;
 }
 
 message CMsgCREItemVoteSummary {
@@ -733,6 +732,7 @@ message CMsgClientServiceCallResponse {
 }
 
 message CMsgAMUnlockStreaming {
+	optional uint32 appid = 1;
 }
 
 message CMsgAMUnlockStreamingResponse {
@@ -741,6 +741,7 @@ message CMsgAMUnlockStreamingResponse {
 }
 
 message CMsgAMUnlockHEVC {
+	optional uint32 appid = 1;
 }
 
 message CMsgAMUnlockHEVCResponse {

@@ -2610,7 +2610,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Country_GY"		"Guiana"
 "Steam_Country_HT"		"Haiti"
 "Steam_Country_HM"		"Ilha Heard e Ilhas McDonald"
-"Steam_Country_VA"		"Santa Sé (Vaticano)"
+"Steam_Country_VA"		"Santa Sé (Estado da Cidade do Vaticano)"
 "Steam_Country_HN"		"Honduras"
 "Steam_Country_HK"		"Hong Kong"
 "Steam_Country_HU"		"Hungria"
@@ -4099,7 +4099,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_InstallUnder" "Instalar em %s1"
 "SteamUI_CreateNewDrive" "Criar nova Biblioteca Steam no disco %s1"
 
-"Steam_GamePropertiesOpenFolder" "Navegar pelos arquivos locais..."
+"Steam_GamePropertiesOpenFolder" "Explorar arquivos locais..."
 "Steam_GamePropertiesMoveFolder" "Mover pasta de instalação..."
 "SteamUI_ChooseInstallFolder" "Escolha o local de instalação:"
 
@@ -4544,7 +4544,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_SettingsControllerGeneralSettings"	"Configurações gerais"
 "Steam_SettingsControllerBindingDescription"		"As configurações base permitem que configure o funcionamento do controle em certos contextos."
 "Steam_SettingsControllerBigPictureConfig"	"Configuração do Big Picture"
-"Steam_SettingsControllerDesktopConfig"		"Configuração para área de trabalho"
+"Steam_SettingsControllerDesktopConfig"		"Configuração para a área de trabalho"
 "Steam_SettingsControllerGuideConfig"		"Config. de atalhos do botão central"
 "Steam_SteamInputDisableNotifications"		"Não exibir notificações de controle conectado fora do modo Big Picture."
 "Steam_SteamInputDisableDualSenseUpdates"	"Não exibir notificações de atualizações de firmware para DualSense fora do modo Big Picture."

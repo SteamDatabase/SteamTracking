@@ -3460,7 +3460,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Downloads_Status_uninstalling"	"A desinstalar"
 	"Downloads_Status_running"	"Em execução"
 	"Downloads_Status_updating"	"A atualizar {s:downloadpercent}"
-	"Downloads_Status_downloading"	"A transferir {s:downloadpercent}"
+	"Downloads_Status_downloading"	"A transferir {s:downloadpercent}"
 	"Downloads_Status_preloading"	"A pré-carregar {s:downloadpercent}"
 	"Downloads_Status_unpacking"	"A extrair {s:downloadpercent}"
 	"Downloads_Status_patching"	"A aplicar atualização {s:downloadpercent}"

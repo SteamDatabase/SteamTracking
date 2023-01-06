@@ -98,7 +98,7 @@
 "Overlay_Friends_ViewAchievements"	"Mostra tutti gli achievement"
 "Overlay_Friends_ViewNews"	"Mostra tutte le notizie"
 
-"Overlay_Achievement_Title"		"Achievement: %percent%%"
+"Overlay_Achievement_Title"		"Achievement: %percent%"
 "Overlay_Achievement_Progress"	"Hai ottenuto %earned% achievement su %total%"
 "Overlay_Achievement_Recent"	"Più recente"
 "Overlay_Achievement_Soon"		"Quasi!"

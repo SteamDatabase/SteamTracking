@@ -3969,7 +3969,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "steam_voice_remote_no_answer"		"A távoli vég nem válaszolt a hívásra; kapcsolat bontva."
 
 "SteamUI_ValveSurvey_Summary_Software"	"Telepített szoftver:"
-"steam_systeminfo_info"			"A Steam a következő hardvert és szoftvert észlelte a rendszeredben:"
+"steam_systeminfo_info"			"A Steam a következő hardvereket és szoftvereket észlelte a rendszeredben:"
 "SteamUI_ValveSurvey_OverviewTitle" 	"Kérjük, szánj egy percet a következő rövid felmérés kitöltésére. A Steam minden hónapban adatot gyűjt arról, hogy a felhasználók milyen hardvert és szoftvert használnak. A felmérés eredményei rendkívül hasznosak annak biztosítására, hogy jó döntéseket hozzunk a végrehajtandó technológiai fejlesztésekkel és termékkínálattal kapcsolatban.\nA gyűjtött adatok névtelenek és nem köthetők a fiókodhoz."
 
 "steam_statuslabel"	"Állapot"

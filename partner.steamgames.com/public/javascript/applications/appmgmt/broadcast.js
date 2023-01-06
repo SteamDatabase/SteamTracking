@@ -4452,7 +4452,7 @@
         (0, a.gn)([we.a], Oe.prototype, "FetchChatModerators", null),
         (0, a.gn)([we.a], Oe.prototype, "RequestLoop", null),
         (0, a.gn)([we.a], Oe.prototype, "MuteUserForSession", null);
-      r(17292), r(51527);
+      r(74412), r(51527);
       var xe = r(5525),
         ze = r(38530);
       class Pe {

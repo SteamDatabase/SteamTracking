@@ -567,13 +567,15 @@ button.faqeditor_EditorSaveButton_22iwd.faqeditor_EditorSaveButton_22iwd:disable
 .faqtoolbar_EditorInternalName_3A9ci img {
   margin-left: 8px;
 }
+body.help_faqs {
+  background: #1b2838;
+}
 .faqsharedviewpage_FAQViewPage_2c-Zv {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 400px);
   align-items: center;
   padding: 12px 16px;
-  background-color: #1b2838;
 }
 .faqsharedviewpage_FAQViewPage_2c-Zv .faqsharedviewpage_SupportTitle_3nR_5 {
   width: 100%;

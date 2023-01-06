@@ -4882,8 +4882,22 @@ div.creatorhomeembed_SocialContainer_1MvXz {
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
-    min-width: 320px;
     scroll-snap-align: start;
+  }
+  .salepreviewwidgets_OuterCapsuleContainer_Btar9
+    .salepreviewwidgets_BottomBarPriceInfo_2F4qi {
+    max-width: 100%;
+  }
+  .salepreviewwidgets_OuterCapsuleContainer_Btar9
+    .salepreviewwidgets_BottomBarPriceInfo_2F4qi
+    .salepreviewwidgets_Discounted_35-Ub {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .salepreviewwidgets_OuterCapsuleContainer_Btar9
+    .salepreviewwidgets_CapsuleBottomBar_6IVLn
+    .salepreviewwidgets_CapsulePlatform_3vzWb {
+    display: none;
   }
 }
 .BasicUI .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
@@ -8544,6 +8558,116 @@ html.responsive.touch
   border-right: none;
   background-color: unset;
 }
+.cloudfileuploadbutton_Ctn_MKp7i {
+  position: relative;
+}
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM {
+  position: absolute;
+  bottom: 72px;
+  left: 16px;
+  min-width: 260px;
+  background: #2c3036;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM img {
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px #000;
+  margin-right: auto;
+  margin-left: auto;
+}
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM
+  .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
+  fill: #788a92;
+  background-color: #0004;
+  border-radius: 4px;
+  height: 150px;
+  width: 100%;
+}
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM
+  .cloudfileuploadprogress_SVGIcon_Video_2TqYK
+  path {
+  transform: scale(0.85);
+  transform-origin: 50% 50%;
+}
+.cloudfileuploadprogress_UploadPreview_120Qu {
+  max-height: 200px;
+  max-width: 250px;
+}
+.cloudfileuploadprogress_FileUploadFileName_2bbAV {
+  flex: 1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  user-select: none;
+  text-align: center;
+  max-width: 250px;
+}
+.cloudfileuploadprogress_FileUploadCancel_2MPbU {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: rgba(67, 73, 83, 0.9);
+  padding: 4px;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  box-shadow: 0 0 4px 1px #00000088;
+}
+.cloudfileuploadprogress_FileUploadCancel_2MPbU
+  .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
+  line {
+  stroke: #fff;
+}
+.cloudfileuploadprogress_FileUploadCancel_2MPbU:hover {
+  background-color: rgba(92, 100, 114, 0.9);
+}
+.cloudfileuploadprogress_FileUploadBtn_3gPV- {
+  user-select: none;
+  margin-top: 5px;
+  background: #ccc;
+  color: #000;
+  border-radius: 10px;
+  padding: 3px;
+  line-height: 8px;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+.cloudfileuploadprogress_FileUploadBtn_3gPV-:hover {
+  background: #fff;
+}
+.cloudfileuploadprogress_FileUploadProgressContainer_ZZt3E {
+  position: absolute;
+  width: 250px;
+  bottom: 55px;
+  background: #2c3036;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.cloudfileuploadprogress_FileUploadProgressBarContainer_1J8k7 {
+  width: 100%;
+  height: 10px;
+}
+.cloudfileuploadprogress_FileUploadProgressName_1c12o {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  user-select: none;
+  text-align: center;
+  width: 100%;
+}
 .partnereventdialog_ErrorStyles_2TszC,
 .partnereventdialog_ErrorStylesWithIcon_1mcSA {
   color: #c44848;
@@ -8656,7 +8780,7 @@ html.responsive.touch
   .nominationandvote_SteamAwardHeader_2TvWH
   .nominationandvote_SteamAwardHeaderImage_3dsTJ {
   position: absolute;
-  bottom: -15px;
+  bottom: 10%;
   right: -10px;
   max-width: 100%;
 }
@@ -8761,7 +8885,6 @@ html.responsive.touch
   font-size: 15px;
   text-align: center;
   margin: auto 0;
-  width: 100%;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -8805,6 +8928,15 @@ html.responsive.touch
   padding: 5px 10px;
   color: #fff;
 }
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+    .nominationandvote_SteamAwardVoteButton_kTsuK
+    .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+    padding: 5px;
+  }
+}
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
   .nominationandvote_SteamAwardVoteButtonArea_2gvv6
@@ -8838,6 +8970,15 @@ html.responsive.touch
   font-weight: 600;
   padding: 5px 10px;
   color: #355a5f;
+}
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+    .nominationandvote_SteamAwardVoteButtonSubmitted_39ziF
+    .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+    padding: 5px;
+  }
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -8934,7 +9075,12 @@ html.responsive.touch
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 95%;
+  max-width: 85%;
+}
+@media screen and (max-width: 620px) {
+  .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_GCwk0 {
+    max-width: 100%;
+  }
 }
 .steam_awards_vote_section
   .nominationandvote_AwardCategoriesCtn_GCwk0
@@ -14238,10 +14384,9 @@ button.rbc-input::-moz-focus-inner {
 }
 .optin_admin_editor_EditorInputPaneContents_1EuN8 {
   width: 100%;
-  max-width: 1294px;
-  margin: 0 auto;
+  padding: 20px 2% 0;
+  box-sizing: border-box;
   flex-grow: 2;
-  padding-top: 20px;
 }
 .optin_admin_editor_Section_2yL7J {
   background: #2c2e35;
@@ -14258,6 +14403,10 @@ button.rbc-input::-moz-focus-inner {
 }
 .optin_admin_editor_Section_2yL7J hr {
   border-bottom: 1px solid #bfc8cd;
+}
+.optin_admin_editor_Section_2yL7J.optin_admin_editor_ManageTable_2afWv {
+  height: calc(100vh - 421px);
+  min-height: 900px;
 }
 .optin_admin_editor_RightSection_3NiRT {
   padding: 16px;
@@ -14287,6 +14436,24 @@ button.rbc-input::-moz-focus-inner {
 }
 .optin_admin_editor_InvitedAppRow_2tiXs td {
   padding: 2px 6px;
+}
+.optin_admin_editor_StatsCtn_3R21M {
+  background: #303238;
+  border-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.optin_admin_editor_StatsCtn_3R21M th {
+  padding: 2px 12px 2px 0px;
+  background: #3e424c;
+}
+.optin_admin_editor_StatsCtn_3R21M tr {
+  background-color: #23262b;
+}
+.optin_admin_editor_StatsCtn_3R21M td {
+  padding: 4px 6px 4px 4px;
 }
 :root {
   --basicui-header-height: 0px;

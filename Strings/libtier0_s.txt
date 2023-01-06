@@ -425,8 +425,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Dec 19 2022
-13:56:14
+Jan  5 2023
+11:16:38
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1870,8 +1870,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221219215618Z0/
-:n	I
+230105191641Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1879,37 +1878,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		fiq9VwruH2O4pKz0u2Qcby8LQIo=
+		ty4zjRh2PogieJ1FBKAhiLVvr4E=
 		</data>
 		<data>
-		PBv8SmNlF05oMxa2fqwL986bYts=
+		MblAEYfbUMYy7+TB1+snpX/pdNY=
 		</data>
 	</array>
 </dict>
 </plist>
-_0Rf
-}1:+
-20221219215647Z0
+~G$w
+%}-~
+^*@E;
+,;}	#Ix
+rVF5
+20230105191850Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221122161003Z
-230103161002Z0B1
+221220160504Z
+230131160503Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-v-3D^
-g:}q
-ZvD|
-Hd?J
+\F:"Aa
+*y:X0
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-^:>UZo
-\7B,
-[#('1Z
-fw9I
+FJ?0
+j#}m
+y9r\
+*o@'
+s`i]
+Om}=
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1948,9 +1950,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-/~0	
-221219215647Z0#
-G1#6
+C!0	
+230105191850Z0#
+'(hU
+)wwc
 __TEXT
 __text
 __TEXT
@@ -1986,7 +1989,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-(N_>
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -2680,8 +2682,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Dec 19 2022
-13:56:14
+Jan  5 2023
+11:16:38
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4035,12 +4037,13 @@ com.valvesoftware.steam
 MXGJJ98X76
 _c4j
 +|}%
+41Sn
 )PG:V
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-b3;]~
+LTj7
 hC}{
 tLi 
 :Va6~
@@ -4050,8 +4053,7 @@ wcV9
 G)X.O
 3}WX
 hdz*S
-k2vJ
-wHF#
+<<+\
 ]QGC
 o:Sh1s
 .:(81a\
@@ -4115,8 +4117,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221219215618Z0/
-!!0-
+230105191641Z0/
+FXYh
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4124,41 +4126,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		vAWjyNgUMfH5u/K5UPFyaXwTISE=
+		PDcSpVRmboEPb+wvZkwDWdLT09w=
 		</data>
 		<data>
-		1G6sR/rA6qs3FMXAbpaWMjpS8/g=
+		dHzpVORf68ogfWC0etycJMPkRlg=
 		</data>
 	</array>
 </dict>
 </plist>
-<4ag
-u~&~ok
-ptg+
-(3G(
-ENAR0
-ZH!v
-20221219215647Z0
+CHYp
+)Pnz
+20230105191850Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221122161003Z
-230103161002Z0B1
+221220160504Z
+230131160503Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-v-3D^
-g:}q
-ZvD|
-Hd?J
+\F:"Aa
+*y:X0
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-^:>UZo
-\7B,
-[#('1Z
-fw9I
+FJ?0
+j#}m
+y9r\
+*o@'
+s`i]
+Om}=
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4197,15 +4195,16 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-/~0	
-221219215647Z0#
-,q0+
-}#+j
-	Ak?
-WE3v
-IZLAO
-^CIE_
-&	_~
+C!0	
+230105191850Z0#
+o~NI0+
+]9Gk
+g5> }
+<0'Y
+XKlT
+X;"p
+S9w4
+a4fu
 __TEXT
 __text
 __TEXT
@@ -4432,8 +4431,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Dec 19 2022
-13:56:14
+Jan  5 2023
+11:16:38
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5782,7 +5781,6 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-M	13
 4	fN}
 n;1r
 !;"Z
@@ -5791,7 +5789,6 @@ cfl,q
 >JSU
 p0'S%
 usnbu
-Uu.'
 L },
 t0bll
 ,rs@
@@ -5801,11 +5798,14 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+SR[xP 
+^6Zb
 [6w7p
 ye\MZo@
 `^3|
 4 UJ:
 8]d&
+7VJ7
 AB&m
 sfh3
 2ZGT
@@ -5865,10 +5865,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221219215618Z0/
-c/;mjN`
-/,tCu
-X}"0-
+230105191641Z0/
+y5<"
+[g3m
+dv0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5876,33 +5876,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		BuJsMy/+Lbnhhi8sdEN19qNYfSI=
+		FK/rUeVQKZG6dkOD9l/J8gQfZHY=
 		</data>
 		<data>
-		5gN2tJcaava1UHBKFrYy08zA96Q=
+		d9SFVCjr3yfvPP9oqcZuzWk5sOw=
 		</data>
 	</array>
 </dict>
 </plist>
-!zrv
-qGdgn
-thImI
-#!ik{
-uFLk
-20221219215647Z0
+,c40
+VsXT<['
+20230105191850Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221122162003Z
-230103162002Z0B1
+221220161503Z
+230131161502Z0B1
 Timestamp Signer NWK11
 Apple Inc.1
-2gc9
+T1(&tcN}
+Z+]S
+p5(L
+^J/:
+f$9ue
+w$zCD
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+.&#"
+!^*&
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5941,8 +5945,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221219215647Z0#
-gl+%:
-RgMO
-7L G
-i|^BW
+230105191850Z0#
+8b%d
+:QYR
+=StYF
+8<gB

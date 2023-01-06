@@ -669,7 +669,7 @@
 "SteamUI_CreateAccount_SuggestedNames" "Nombres de cuenta sugeridos:"
 "SteamUI_CreateAccount_Names" "Nombres"
 "Steam_ForgottenPassword_MarketRestriction" "Nota: Si restableces tu contraseña, no podrás intercambiar o utilizar el Mercado de la Comunidad temporalmente."
-"Steam_ForgottenPassword_FAQ" "Ver el FAQ sobre restricciones en el intercambio y en el Mercado de la Comunidad"
+"Steam_ForgottenPassword_FAQ" "Ver las preguntas frecuentes sobre restricciones en el intercambio y en el Mercado de la Comunidad"
 "Steam_ForgottenPassword_VerificationCode" "Código de verificación"
 
 "Steam_RecoverAuthenticator_Title"					"Recuperar autenticador de Steam"

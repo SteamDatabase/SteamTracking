@@ -33,7 +33,7 @@ public:
     virtual unknown_ret RemoveProperty(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret SetProperty(void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret SetProperty(void*,void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret Unknown_5967152() = 0;
+    virtual unknown_ret Unknown_5993680() = 0;
     virtual unknown_ret SetProperty(void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret SubmitUpdateProperties(void*,void*,void*) = 0;
     virtual unknown_ret InspectItem(void*,void*) = 0;

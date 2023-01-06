@@ -4614,7 +4614,7 @@
 	"Country_MA"		"Maroko"
 	"Country_MC"		"Monako"
 	"Country_MD"		"Moldavsko"
-	"Country_ME"		"Černá hora"
+	"Country_ME"		"Černá Hora"
 	"Country_MF"		"Svatý Martin (francouzská část)"
 	"Country_MG"		"Madagaskar"
 	"Country_MH"		"Marshallovy ostrovy"

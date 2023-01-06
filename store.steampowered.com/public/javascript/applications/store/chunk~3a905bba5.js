@@ -2635,8 +2635,8 @@
                   r = a
                     ? m.De.STORE_BASE_URL + "actions/ajaxgetmyannouncementvote"
                     : m.De.COMMUNITY_BASE_URL +
-                      "ogg/" +
-                      e.appid +
+                      "gid/" +
+                      e.clanSteamID.ConvertTo64BitString() +
                       "/announcements/ajaxgetmyvote/" +
                       e.AnnouncementGID,
                   s = { gid: a ? e.AnnouncementGID : void 0 },
@@ -3015,7 +3015,7 @@
             (e.k_eReddit = "reddit");
         })(r || (r = {}));
       const m =
-        /(?:steampowered\.com|valve\.org\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community)\/(\w+)(\/|$)/i;
+        /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
       function u(e, t) {
         const n = "store" === (0, d.Zv)(),
           r = (function (e) {

@@ -650,6 +650,12 @@ SteamClientBetaNewsPage
 	method		"internal"
 }
 
+SteamClientBetaNewsPageFancy
+{
+	url			"http://steamcommunity.com/groups/SteamClientBeta/announcements"
+	method		"internal"
+}
+
 SteamClientBetaBugReports
 {
 	url			"http://steamcommunity.com/groups/SteamClientBeta/discussions/0/"

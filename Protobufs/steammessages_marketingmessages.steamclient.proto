@@ -192,6 +192,10 @@ service MarketingMessages {
 		option (method_description) = "Get a single marketing message, cacheable.";
 	}
 
+	rpc GetDisplayMarketingMessageAdmin (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response) {
+		option (method_description) = "Get a single marketing message, cacheable.";
+	}
+
 	rpc MarkMessageSeen (.CMarketingMessages_MarkMessageSeen_Notification) returns (.NoResponse) {
 		option (method_description) = "Mark that a user has viewed a message (so we won't show it again)'.";
 	}

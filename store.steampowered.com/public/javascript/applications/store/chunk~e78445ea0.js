@@ -1128,7 +1128,7 @@
               "UserReviews.GetIndividualRecommendations#1",
               t,
               _,
-              { bConstMethod: !0, ePrivilege: 1 }
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
             );
           });
       })(h || (h = {}));
@@ -1177,7 +1177,13 @@
           });
         }
         static BIsLoaded() {
-          return Boolean(A.Get().m_transport);
+          var e;
+          return Boolean(
+            A.Get().m_transport &&
+              (null === (e = A.Get().m_DynamicUserStore) || void 0 === e
+                ? void 0
+                : e.BIsLoaded())
+          );
         }
         static Get() {
           return (

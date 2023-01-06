@@ -1,7 +1,7 @@
 class IClientUserMap
 {
 public:
-    virtual unknown_ret Unknown_5333920() = 0;
+    virtual unknown_ret Unknown_5360080() = 0;
     virtual unknown_ret LogOn(void*,void*) = 0;
     virtual unknown_ret InvalidateCredentials() = 0;
     virtual unknown_ret LogOff() = 0;
@@ -166,7 +166,6 @@ public:
     virtual unknown_ret GetAppLastPlayedTime(void*) = 0;
     virtual unknown_ret GetAppUpdateDisabledSecondsRemaining(void*) = 0;
     virtual unknown_ret BGetGuideURL(void*,void*,void*) = 0;
-    virtual unknown_ret BPromptToVerifyEmail() = 0;
     virtual unknown_ret BPromptToChangePassword() = 0;
     virtual unknown_ret BAccountExtraSecurity() = 0;
     virtual unknown_ret BAccountShouldShowLockUI() = 0;

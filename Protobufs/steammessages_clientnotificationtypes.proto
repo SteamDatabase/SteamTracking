@@ -27,6 +27,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_LowDiskSpace = 22;
 	k_EClientNotificationType_BatteryTemperature = 23;
 	k_EClientNotificationType_DockUnsupportedFirmware = 24;
+	k_EClientNotificationType_PeerContentUpload = 25;
 }
 
 enum ESystemUpdateNotificationType {
@@ -162,4 +163,9 @@ message CClientNotificationBatteryTemperature {
 }
 
 message CClientNotificationDockUnsupportedFirmware {
+}
+
+message CClientNotificationPeerContentUpload {
+	optional uint32 appid = 1;
+	optional string peer_name = 2;
 }

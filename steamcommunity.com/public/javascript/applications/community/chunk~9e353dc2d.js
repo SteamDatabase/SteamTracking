@@ -521,25 +521,24 @@
     },
     23211: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => p });
+      n.d(t, { X: () => _ });
       var r = n(67294),
         a = n(41414),
         s = n(41311),
         o = n(90666),
         i = n(69959),
         l = (n(88514), n(65902)),
-        d = n(92742),
-        v = n(92398);
-      function _(e) {
+        d = n(92742);
+      function v(e) {
         return r.createElement(
           a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(u, { redirectURL: e.redirectURL })
+          r.createElement(p, { redirectURL: e.redirectURL })
         );
       }
-      function p() {
+      function _() {
         (0, a.AM)(
-          r.createElement(_, {
+          r.createElement(v, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -547,7 +546,7 @@
           { strTitle: (0, s.Xx)("#Login_SignIn") }
         );
       }
-      function u(e) {
+      function p(e) {
         const { redirectURL: t } = e,
           [n] = (0, r.useState)(
             new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
@@ -569,7 +568,6 @@
                 },
                 redirectUrl: t,
                 theme: "modal",
-                disableQR: o.De.EREALM === v.IN.k_ESteamRealmChina,
               })
         );
       }

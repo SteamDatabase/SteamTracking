@@ -12,7 +12,7 @@
 "ServerBrowser_Europe"				"Evropa"
 "ServerBrowser_Asia"				"Asie"
 "ServerBrowser_Australia"			"Austrálie"
-"ServerBrowser_MiddleEast"			"Střední východ"
+"ServerBrowser_MiddleEast"			"Blízký východ"
 "ServerBrowser_Africa"				"Afrika"
 "ServerBrowser_LessThan50"			"< 50"
 "ServerBrowser_LessThan100"			"< 100"

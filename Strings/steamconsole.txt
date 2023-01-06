@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-pn
-pn
 __stubs
 __TEXT
 __stub_helper
@@ -12,7 +10,6 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-l"
 __objc_methname
 __TEXT
 __unwind_info
@@ -45,7 +42,6 @@ __DATA
 y6
 __common
 __DATA
-PC
 H
 __LINKEDIT
 
@@ -101,20 +97,16 @@ N12CAppLauncher29CCallback_OnAppLifetimeNoticeE
 10CSteamUser
 N10CSteamUser36CCallbackInternal_OnShutdownLauncherE
 13CCallbackImplILi2EE
-N10CSteamUser22CCallback_OnSteamLogonE
-9CCallbackI10CSteamUser23SteamServersConnected_tLb0EE
+N10CSteamUser30CCallbackInternal_OnSteamLogonE
 13CCallbackImplILi1EE
-N10CSteamUser21CCallback_OnLoggedOffE
-9CCallbackI10CSteamUser26SteamServersDisconnected_tLb0EE
+N10CSteamUser29CCallbackInternal_OnLoggedOffE
 13CCallbackImplILi4EE
-N10CSteamUser24CCallback_OnLogonFailureE
-9CCallbackI10CSteamUser27SteamServerConnectFailure_tLb0EE
+N10CSteamUser32CCallbackInternal_OnLogonFailureE
 13CCallbackImplILi8EE
-N10CSteamUser26CCallback_OnPostLogonStateE
-9CCallbackI10CSteamUser16PostLogonState_tLb0EE
+N10CSteamUser34CCallbackInternal_OnPostLogonStateE
 13CCallbackImplILi10EE
-N10CSteamUser33CCallback_OnSteamGuardFileCreatedE
-9CCallbackI10CSteamUser23SteamGuardFileCreated_tLb0EE
+N10CSteamUser41CCallbackInternal_OnSteamGuardFileCreatedE
+N10CSteamUser43CCallbackInternal_OnPeerContentServerChangeE
 10CUtlString
 9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
 13CCallbackImplILi40EE
@@ -382,6 +374,8 @@ CSteamUser::OnLoggedOff
 CSteamUser::OnLogonFailure
 CSteamUser::OnPostLogonState
 CSteamUser::OnSteamGuardFileCreated
+CSteamUser::OnPeerContentServerChange
+Peer Content Server uploading AppID %u to "%s"
 m_strAccountName
 Logging in user '%s' to Steam %s...
 This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and enter the Steam Guard code from that message.You can also enter this code at any time using 'set_steam_guard_code' at the console.Steam Guard code:
@@ -414,6 +408,7 @@ CellID: %u
 FAILED (invalid cached credentials)
 This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and usethe command 'set_steam_guard_code' to enter the code here.
 Retrying. . .
+Peer Content Server stopped
 FAILED (No cached credentials and @NoPromptForPassword is set)
 FAILED (Timed out)
 @DepotBuilderConfigRoot

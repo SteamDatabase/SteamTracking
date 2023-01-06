@@ -4449,7 +4449,7 @@
         (0, a.gn)([we.a], Oe.prototype, "FetchChatModerators", null),
         (0, a.gn)([we.a], Oe.prototype, "RequestLoop", null),
         (0, a.gn)([we.a], Oe.prototype, "MuteUserForSession", null);
-      r(874), r(93300);
+      r(58130), r(93300);
       var xe = r(48062),
         Pe = r(86037);
       class ze {
@@ -5935,12 +5935,22 @@
       function dr(e) {
         const { steamid: t } = e,
           r = l.createRef(),
-          [a, i] = l.useState(!1),
+          [a, i] = l.useState(""),
           s = l.createRef(),
           n = l.useCallback(
             (e) => {
               r.current &&
-                (r.current.select(), document.execCommand("copy"), i(!0));
+                r.current.ownerDocument.defaultView.navigator.clipboard
+                  .writeText(r.current.value)
+                  .then((e) => {
+                    i((0, Ce.Xx)("#EventDisplay_Share_CopiedToClipboard"));
+                  })
+                  .catch((e) => {
+                    i(
+                      (0, Ce.Xx)("#EventDisplay_Share_FailedToCopyToClipboard")
+                    ),
+                      console.error("Failed to copy link to clipboard:", e);
+                  });
             },
             [r]
           ),
@@ -5985,11 +5995,7 @@
                 )
               )
           ),
-          l.createElement(
-            "div",
-            { ref: s, className: or().ClipboardText },
-            a ? (0, Ce.Xx)("#EventDisplay_Share_CopiedToClipboard") : ""
-          )
+          l.createElement("div", { ref: s, className: or().ClipboardText }, a)
         );
       }
       function mr(e, t) {
@@ -9038,4 +9044,3 @@
     },
   },
 ]);
-//# sourceMappingURL=broadcast.js.map

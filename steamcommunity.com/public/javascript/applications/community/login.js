@@ -8,35 +8,34 @@
     },
     93071: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { default: () => c });
+      t.r(n), t.d(n, { default: () => l });
       var r = t(67294),
-        a = t(69959),
-        o = (t(88514), t(65902)),
+        o = t(69959),
+        a = (t(88514), t(65902)),
         i = t(90666),
         s = t(92742),
-        l = t(59469);
-      function c(e) {
-        const { redirectUrl: n = i.De.COMMUNITY_BASE_URL, disableQR: t } = e,
-          [c] = (0, r.useState)(
-            new o.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+        c = t(59469);
+      function l(e) {
+        const { redirectUrl: n = i.De.COMMUNITY_BASE_URL } = e,
+          [t] = (0, r.useState)(
+            new a.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
           ),
-          [u, m] = (0, r.useState)(!1);
+          [l, u] = (0, r.useState)(!1);
         return r.createElement(
           "div",
-          { className: l.LoginContainer },
-          u
-            ? r.createElement(a.pT, null)
-            : r.createElement(a.wK, {
+          { className: c.LoginContainer },
+          l
+            ? r.createElement(o.pT, null)
+            : r.createElement(o.wK, {
                 autoFocus: !0,
-                transport: c,
+                transport: t,
                 platform: 2,
                 onComplete: (e) => {
                   e == s.TG.k_PrimaryDomainFail
-                    ? m(!0)
+                    ? u(!0)
                     : window.location.assign(n);
                 },
                 redirectUrl: n,
-                disableQR: t,
               })
         );
       }

@@ -3672,6 +3672,11 @@ steam.styles
 	{
 		textcolor="white"
 	}
+	
+	"PeerContentClientName"
+	{
+		textcolor="white"
+	}
 
   }
 }

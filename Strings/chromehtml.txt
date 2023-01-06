@@ -1074,8 +1074,9 @@ Disable GPU usage in CEF (force software rendering/compositing)
 -cef-force-gpu
 Force enable GPU acceleration
 -cef-delaypageload
-Disable early-out for known page loads
+Enable early-out for known page loads
 -cef-disable-delaypageload
+Disable early-out for known page loads
 -cef-enable-samesite-by-default-cookies
 Treat unspecified samesite as samesite=lax
 -cef-disable-renderer-restart
@@ -2362,6 +2363,7 @@ b
 D
 
 
+_
 
 
 
@@ -2383,6 +2385,8 @@ D
 @
 @
 
+
+X
 @
 Hc
 Hc

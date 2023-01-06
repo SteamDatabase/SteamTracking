@@ -195,6 +195,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/appfilter.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/controllerconfig.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/controllerconfig.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/controllerdevicesupport.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/controllerfirmwareupdater.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/customimagemanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/d2l_rootdialog.cpp

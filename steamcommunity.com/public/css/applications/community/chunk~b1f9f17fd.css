@@ -1790,18 +1790,6 @@ html.responsive.touch
     padding-right: 1em;
   }
 }
-.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu {
-  margin-bottom: 10px;
-}
-.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu > div {
-  display: inline;
-}
-.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu > span {
-  display: block;
-}
-.eventmoderationaudit_ExpandModActions_2alYM {
-  cursor: pointer;
-}
 .salebadgeprogressdisplay_OuterCtn_3yY4b {
   display: flex;
   flex-direction: row;
@@ -1926,6 +1914,42 @@ html.responsive.touch
   border-width: 20px;
   margin-left: -20px;
 }
+.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu {
+  margin-bottom: 10px;
+}
+.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu > div {
+  display: inline;
+}
+.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu > span {
+  display: block;
+}
+.eventmoderationaudit_ExpandModActions_2alYM {
+  cursor: pointer;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.saledisplaylogo_SalePageLogoCtn_2kLRR {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.BasicUI .saledisplaylogo_SalePageLogoCtn_2kLRR {
+  max-height: 230px;
+  margin-bottom: 0px;
+}
+.saledisplaylogo_SalePageLogoCtn_2kLRR img {
+  width: 100%;
+}
+.BasicUI .saledisplaylogo_SalePageLogoCtn_2kLRR img {
+  max-height: 230px;
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  .saledisplaylogo_SalePageLogoCtn_2kLRR {
+    margin-bottom: 0px;
+  }
+}
 .tabbar_GraphicalAssetsTabs_36r8g {
   display: flex;
   margin-bottom: 16px;
@@ -1978,29 +2002,34 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .tabbar_StatusCaution_31Lxu {
   color: #e76e34;
 }
-:root {
-  --basicui-header-height: 0px;
+.salequestdisplay_description_22ryq {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0em;
+  color: #fff;
 }
-.saledisplaylogo_SalePageLogoCtn_2kLRR {
-  max-width: 940px;
-  margin: 0 auto;
-  margin-bottom: 32px;
+.salequestdisplay_description2_xidiW {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.BasicUI .saledisplaylogo_SalePageLogoCtn_2kLRR {
-  max-height: 230px;
-  margin-bottom: 0px;
+.salequestdisplay_questCtn_14UQz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 2em 1em 2em;
+  color: #fff;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.saledisplaylogo_SalePageLogoCtn_2kLRR img {
-  width: 100%;
-}
-.BasicUI .saledisplaylogo_SalePageLogoCtn_2kLRR img {
-  max-height: 230px;
-  width: auto;
-}
-@media screen and (max-width: 768px) {
-  .saledisplaylogo_SalePageLogoCtn_2kLRR {
-    margin-bottom: 0px;
-  }
+.salequestdisplay_questCtn_14UQz img {
+  max-width: 100%;
 }
 :root {
   --basicui-header-height: 0px;
@@ -2251,146 +2280,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     margin-top: 10px;
   }
 }
-.salequestdisplay_description_22ryq {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 2em;
-  padding-top: 0em;
-  color: #fff;
-}
-.salequestdisplay_description2_xidiW {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 3em;
-  padding-top: 3em;
-  max-width: 670px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.salequestdisplay_questCtn_14UQz {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em 2em 1em 2em;
-  color: #fff;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.salequestdisplay_questCtn_14UQz img {
-  max-width: 100%;
-}
-.partnereventbroadcast_AddTitleButton_XKHg8 {
-  width: 100px;
-}
-.partnereventbroadcast_CustomTitleCtn_1qoSQ {
-  padding-top: 8px;
-  padding-bottom: 4px;
-}
-.partnereventbroadcast_LanguageContainer_3WmqO {
-  width: 300px;
-}
-.partnereventbroadcast_LanguageContainer_3WmqO > div {
-  margin-bottom: 0px;
-}
-.partnereventbroadcast_customTitleOptionsCtn_zhH_V {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  padding-left: 20px;
-  border-left: #399aec 1px solid;
-}
-.partnereventbroadcast_customTitleOptionsCtn_zhH_V
-  .partnereventbroadcast_TitleRowCtn_96im4 {
-  background: rgba(59, 63, 72, 0.5);
-  color: #dfe3e6;
-  font-size: 14px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  margin-bottom: 4px;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
-}
-.partnereventbroadcast_customTitleOptionsCtn_zhH_V
-  .partnereventbroadcast_TitleRowCtn_96im4:hover {
-  background: rgba(67, 73, 83, 0.6);
-}
-.partnereventbroadcast_AccountRow_2uIyv {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.partnereventdates_EventTimeSection_O7lDS:first-child {
-  margin-bottom: 12px;
-}
-.partnereventdates_EventTimeSection_O7lDS:last-child {
-  margin-bottom: 0px;
-}
-.partnereventdates_EventTimeTitle_1-4F8 {
-  font-size: 11px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 3px;
-}
-.partnereventdates_EventVisibilityItem_Z5DNw {
-  line-height: 24px;
-}
-.partnereventdates_EventEditorInputPaneContainer_3Fhef
-  input.partnereventdates_TimeWidth_3_7ku {
-  font-size: 15px;
-}
-.partnereventdates_EventPublishTimeCtn_3mtSl {
-  margin-left: 20px;
-  margin-top: 8px;
-}
-.partnereventdates_TimeWidth_3_7ku {
-  max-width: 200px;
-}
-.partnereventdates_InputBorder_2-wu6.partnereventdates_TimeBlock_9q9ZA {
-  margin-right: 8px;
-}
-.partnereventdates_TimeRowContainer_2cnMo {
-  justify-content: flex-start;
-  padding: 10px;
-  border-radius: 3px;
-  background-color: rgba(57, 61, 71, 0.5);
-}
-.partnereventdates_TimeRowDropDown_VlpIL {
-  margin-top: 5px;
-  padding-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  padding-left: 20px;
-  border-left: #399aec 1px solid;
-}
-.partnereventdates_TimeRowDropDown_VlpIL
-  > .partnereventdates_EndDateAmountCtn_1Xbr7 {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 8px;
-  width: 50%;
-}
-.partnereventdates_TimeRowDropDown_VlpIL
-  > .partnereventdates_EndRound_1ppi6
-  > span {
-  margin-bottom: 0px;
-}
-.partnereventdates_VisibilityItemList_1Cnd3 {
-  display: flex;
-  flex-direction: column;
-}
-.partnereventdates_VisibilityItems_1m6k3 {
-  padding: 10px;
-  border-radius: 3px;
-  background: rgba(57, 61, 71, 0.5);
-}
-.partnereventdates_EventEditorVisibilityCtn_3hqZR {
-  margin-top: 12px;
-}
 .salequiz_description_5YDkS {
   display: flex;
   flex-direction: column;
@@ -2552,6 +2441,134 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     padding-left: 0em;
     padding-right: 0em;
   }
+}
+.partnereventbroadcast_AddTitleButton_XKHg8 {
+  width: 100px;
+}
+.partnereventbroadcast_CustomTitleCtn_1qoSQ {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+.partnereventbroadcast_LanguageContainer_3WmqO {
+  width: 300px;
+}
+.partnereventbroadcast_LanguageContainer_3WmqO > div {
+  margin-bottom: 0px;
+}
+.partnereventbroadcast_customTitleOptionsCtn_zhH_V {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid;
+}
+.partnereventbroadcast_customTitleOptionsCtn_zhH_V
+  .partnereventbroadcast_TitleRowCtn_96im4 {
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 14px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
+  transition: all 0.2s ease-in-out;
+}
+.partnereventbroadcast_customTitleOptionsCtn_zhH_V
+  .partnereventbroadcast_TitleRowCtn_96im4:hover {
+  background: rgba(67, 73, 83, 0.6);
+}
+.partnereventbroadcast_AccountRow_2uIyv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.partnereventdates_EventTimeSection_O7lDS:first-child {
+  margin-bottom: 12px;
+}
+.partnereventdates_EventTimeSection_O7lDS:last-child {
+  margin-bottom: 0px;
+}
+.partnereventdates_EventTimeTitle_1-4F8 {
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.partnereventdates_EventVisibilityItem_Z5DNw {
+  line-height: 24px;
+}
+.partnereventdates_EventEditorInputPaneContainer_3Fhef
+  input.partnereventdates_TimeWidth_3_7ku {
+  font-size: 15px;
+}
+.partnereventdates_EventPublishTimeCtn_3mtSl {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.partnereventdates_TimeWidth_3_7ku {
+  max-width: 200px;
+}
+.partnereventdates_InputBorder_2-wu6.partnereventdates_TimeBlock_9q9ZA {
+  margin-right: 8px;
+}
+.partnereventdates_TimeRowContainer_2cnMo {
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(57, 61, 71, 0.5);
+}
+.partnereventdates_TimeRowDropDown_VlpIL {
+  margin-top: 5px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid;
+}
+.partnereventdates_TimeRowDropDown_VlpIL
+  > .partnereventdates_EndDateAmountCtn_1Xbr7 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  width: 50%;
+}
+.partnereventdates_TimeRowDropDown_VlpIL
+  > .partnereventdates_EndRound_1ppi6
+  > span {
+  margin-bottom: 0px;
+}
+.partnereventdates_VisibilityItemList_1Cnd3 {
+  display: flex;
+  flex-direction: column;
+}
+.partnereventdates_VisibilityItems_1m6k3 {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(57, 61, 71, 0.5);
+}
+.partnereventdates_EventEditorVisibilityCtn_3hqZR {
+  margin-top: 12px;
+}
+.salerewardshelfdisplay_RewardContainer_10sVo {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.salerewardshelfdisplay_RewardShelfCtn_2u8Xp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+.salerewardshelfdisplay_RewardShelfCtn_2u8Xp img {
+  max-width: 100%;
+}
+.salerewardshelfdisplay_RewardShelfCtn_2u8Xp video {
+  max-width: 100%;
 }
 .storesuggest_SuggestContainer_2n5ab ._DialogLayout {
   margin-bottom: 2px;
@@ -4953,17 +4970,71 @@ button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
   background-color: rgba(80, 84, 90, 0.35);
   color: #9f9396;
 }
+:root {
+  --basicui-header-height: 0px;
+}
+.saleclaimitem_ClaimCtn_d5PCH {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  gap: 5px;
+}
+.saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9 {
+  background: linear-gradient(180deg, #a12080, #6c0c53);
+  border-radius: 50px;
+  border: 2px solid #a12080;
+  width: fit-content;
+  padding: 6px 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9:hover {
+  background: linear-gradient(180deg, #bf2698, #961072);
+  border: 2px solid #bf2698;
+}
+.saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9:enabled:active {
+  background: linear-gradient(0deg, #a12080, #6c0c53);
+}
+.saleclaimitem_ClaimCtn_d5PCH
+  .saleclaimitem_ClaimButton_2jLt9:enabled:active:hover {
+  background: linear-gradient(0deg, #a12080, #6c0c53);
+}
+.saleclaimitem_ClaimCtn_d5PCH
+  .saleclaimitem_ClaimButton_2jLt9:enabled:active.saleclaimitem_gpfocus_dF9GZ {
+  background: linear-gradient(0deg, #a12080, #6c0c53);
+}
+.saleclaimitem_ClaimTitle_33gpG {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0px 2px 2px #350128;
+}
+.saleclaimitem_ClaimSaleSection_39VLx {
+  padding: 0px;
+}
+.BasicUI .saleclaimitem_ClaimSaleSection_39VLx {
+  padding: 0px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 940px;
+}
 .saleclaimitem_NextStop_35VNz {
   font-size: 20px;
   padding-top: 10px;
   color: #fff;
+  text-shadow: 0px 2px 2px #350128;
 }
 .saleclaimitem_NextStop_35VNz .saleclaimitem_Title_2QEv4 {
   padding-right: 8px;
-}
-.saleclaimitem_NextStop_35VNz .saleclaimitem_Title_2QEv4,
-.saleclaimitem_NextStop_35VNz .saleclaimitem_Timer_2zqp4 {
   color: #fff;
+  font-weight: 600;
+}
+.saleclaimitem_NextStop_35VNz .saleclaimitem_Timer_2zqp4 {
+  color: #94f6c3;
   font-weight: 600;
 }
 .tableofcontents_TableOfContentsContainer_2VyHw {

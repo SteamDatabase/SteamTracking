@@ -524,6 +524,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "has finished downloading"
 
+"Friends_PeerUploadNotification_Info" "Transferring game files to"
+
 "Friends_SteamInputActionSetChangedTitle"	"Controller Action Set"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Controller Switched Slots"

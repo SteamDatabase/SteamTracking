@@ -431,6 +431,9 @@ strong {
 .LongURL {
   overflow-wrap: anywhere;
 }
+.LongURL.Note {
+  margin: 8px 0;
+}
 .partnereventsale_SectionOverrideCtn_1jCl_ {
   margin-top: 8px;
 }
@@ -7256,6 +7259,28 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 100%;
   height: 100%;
 }
+.screenshotpopout_ButtonCtn_1Wwsx {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+.screenshotpopout_ButtonIcon_2gBfU {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border-radius: 50%;
+  margin: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.screenshotpopout_ButtonIcon_2gBfU:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.screenshotpopout_ButtonIcon_2gBfU.screenshotpopout_Disabled_1M3_p {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .salepointshopsmartdisplay_RewardCtn_2iyxZ {
   display: flex;
   flex-direction: column;
@@ -7302,23 +7327,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .salepointshopsmartdisplay_RewardCtn_2iyxZ .AppCapsuleCtn {
     top: 0px;
   }
-}
-.salerewardshelfdisplay_RewardContainer_10sVo {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-}
-.salerewardshelfdisplay_RewardShelfCtn_2u8Xp {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 1em;
-}
-.salerewardshelfdisplay_RewardShelfCtn_2u8Xp img {
-  max-width: 100%;
-}
-.salerewardshelfdisplay_RewardShelfCtn_2u8Xp video {
-  max-width: 100%;
 }
 .partnereventshared_ErrorPage_1HZBl {
   padding: 24px;
@@ -7425,9 +7433,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .salepointshopwidgeteditor_DropDown_u_cLt {
   width: 500px;
-}
-.saleclaimitemwidgeteditor_Dummy_1ddLz {
-  background-color: hotpink;
 }
 .partnereventsavebutton_SavedImage_1y3QV {
   height: 12px;

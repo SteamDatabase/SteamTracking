@@ -467,7 +467,7 @@
           case 27:
             return "es-419";
           case 28:
-            return "vn";
+            return "vi";
           case 29:
             return "sc-sc";
           default:
@@ -2320,14 +2320,14 @@
             !{ NODE_ENV: "production", STEAM_BUILD: "buildbot" }.MOBILE_BUILD)
           ) {
             window.addEventListener("beforeunload", (e) => {
-              var t, n;
+              var t, n, i, r;
               this.m_bShuttingDown = !0;
               for (let e of this.m_rgShutdownCallbacks) e();
-              let i = [];
+              let o = [];
               this.m_mapPopups.forEach((e) => {
-                e.BIsValid() && !e.BIsClosed() && i.push(e);
+                e.BIsValid() && !e.BIsClosed() && o.push(e);
               });
-              for (let e of i)
+              for (let e of o)
                 (null ===
                   (n =
                     null === (t = e.window) || void 0 === t
@@ -2338,6 +2338,12 @@
                   e.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                     !1
                   ),
+                  (null === (i = e.window) || void 0 === i
+                    ? void 0
+                    : i.SteamClient.Window.SetHideOnClose) &&
+                    (null === (r = e.window) ||
+                      void 0 === r ||
+                      r.SteamClient.Window.SetHideOnClose(!1)),
                   e.Close();
               this.m_bSaveRequired && this.SaveSavedDimensionStore(),
                 this.m_mapPopups.clear();
@@ -2682,7 +2688,7 @@
           const T = (0, a.BE)(M, t);
           return r.createElement(
             "div",
-            Object.assign({}, b, { "data-react-nav-root": g, ref: T }),
+            Object.assign({}, b, { id: g, "data-react-nav-root": g, ref: T }),
             r.createElement(o.ET.Provider, { value: D.Root }, _)
           );
         }),
@@ -8009,14 +8015,61 @@
             (this.OnButtonUp(this.m_lastButtonDown),
             (this.m_lastButtonDown = r.eV.INVALID));
         }
+        BShouldSwallowEventForTextInputWorkaround(e) {
+          if (
+            !(
+              h.GB(e.target) &&
+              ("INPUT" === e.target.nodeName ||
+                "TEXTAREA" === e.target.nodeName)
+            )
+          )
+            return !1;
+          const t = e.code;
+          let n = e.target;
+          switch (t) {
+            case "ArrowUp": {
+              let t = null == n ? void 0 : n.value.indexOf("\n");
+              return (
+                "TEXTAREA" === e.target.nodeName &&
+                t >= 0 &&
+                t < (null == n ? void 0 : n.selectionStart)
+              );
+            }
+            case "ArrowDown": {
+              let t = null == n ? void 0 : n.value.lastIndexOf("\n");
+              return (
+                "TEXTAREA" === e.target.nodeName &&
+                t >= 0 &&
+                t >= (null == n ? void 0 : n.selectionStart) &&
+                (null == n ? void 0 : n.selectionEnd) <
+                  (null == n ? void 0 : n.value.length)
+              );
+            }
+            case "ArrowLeft":
+              return (
+                (null == n ? void 0 : n.selectionStart) > 0 &&
+                (null == n ? void 0 : n.selectionEnd) > 0
+              );
+            case "ArrowRight":
+              return (
+                (null == n ? void 0 : n.selectionStart) <
+                  (null == n ? void 0 : n.value.length) &&
+                (null == n ? void 0 : n.selectionEnd) <
+                  (null == n ? void 0 : n.value.length)
+              );
+            case "Enter":
+            case "Backspace":
+              return !0;
+            default:
+              return !1;
+          }
+        }
         TranslateKey(e) {
           const t = e.code,
             n = e.ctrlKey,
-            i = e.shiftKey,
-            o =
-              h.GB(e.target) &&
-              ("INPUT" === e.target.nodeName ||
-                "TEXTAREA" === e.target.nodeName);
+            i = e.shiftKey;
+          if (this.BShouldSwallowEventForTextInputWorkaround(e))
+            return r.eV.INVALID;
           if (n && i)
             switch (t) {
               case "Digit4":
@@ -8052,17 +8105,17 @@
             case "Escape":
               return r.eV.CANCEL;
             case "Enter":
-              return o ? r.eV.INVALID : r.eV.OK;
+              return r.eV.OK;
             case "Backspace":
-              return o ? r.eV.INVALID : r.eV.SECONDARY;
+              return r.eV.SECONDARY;
             case "ArrowUp":
-              return o ? r.eV.INVALID : r.eV.DIR_UP;
+              return r.eV.DIR_UP;
             case "ArrowDown":
-              return o ? r.eV.INVALID : r.eV.DIR_DOWN;
+              return r.eV.DIR_DOWN;
             case "ArrowLeft":
-              return o ? r.eV.INVALID : r.eV.DIR_LEFT;
+              return r.eV.DIR_LEFT;
             case "ArrowRight":
-              return o ? r.eV.INVALID : r.eV.DIR_RIGHT;
+              return r.eV.DIR_RIGHT;
           }
           return r.eV.INVALID;
         }
@@ -10080,7 +10133,9 @@
                   r.createElement(
                     "div",
                     { className: "DialogToggle_Label" },
-                    r.createElement("span", null, this.props.label),
+                    "string" == typeof this.props.label &&
+                      r.createElement("span", null, this.props.label),
+                    "string" != typeof this.props.label && this.props.label,
                     this.props.tooltip &&
                       r.createElement(
                         "span",
@@ -13428,11 +13483,20 @@
     },
     32548: (e, t, n) => {
       "use strict";
-      n.d(t, { S: () => s });
+      n.d(t, { A: () => s, S: () => a });
       var i = n(70655),
         r = n(67294),
         o = n(64839);
-      class s extends r.Component {
+      function s(e) {
+        return function (t) {
+          return r.createElement(
+            a,
+            null,
+            r.createElement(e, Object.assign({}, t))
+          );
+        };
+      }
+      class a extends r.Component {
         constructor(e) {
           super(e), (this.state = {}), (this.state.lastErrorKey = e.errorKey);
         }
@@ -13440,7 +13504,7 @@
           this.sm_ErrorReportingStore = e;
         }
         componentDidCatch(e, t) {
-          const n = s.sm_ErrorReportingStore;
+          const n = a.sm_ErrorReportingStore;
           n
             ? n
                 .ReportError(e)
@@ -13461,33 +13525,33 @@
         }
         render() {
           const { children: e, fallback: t, errorKey: n } = this.props,
-            { error: i, identifierHash: o, lastErrorKey: c } = this.state;
-          return i && n == c
+            { error: i, identifierHash: o, lastErrorKey: s } = this.state;
+          return i && n == s
             ? void 0 !== t
               ? "function" == typeof t
                 ? t(i.error)
                 : t
-              : s.sm_ErrorReportingStore &&
-                s.sm_ErrorReportingStore.reporting_enabled
-              ? r.createElement(l, {
+              : a.sm_ErrorReportingStore &&
+                a.sm_ErrorReportingStore.reporting_enabled
+              ? r.createElement(c, {
                   error: i,
                   identifierHash: o,
-                  store: s.sm_ErrorReportingStore,
+                  store: a.sm_ErrorReportingStore,
                   onRefresh: this.Reset,
                 })
-              : r.createElement(a, { error: i, onDismiss: this.Reset })
+              : r.createElement(l, { error: i, onDismiss: this.Reset })
             : e || null;
         }
       }
-      (0, i.gn)([o.ak], s.prototype, "Reset", null);
-      const a = ({ error: e, onDismiss: t }) => {
+      (0, i.gn)([o.ak], a.prototype, "Reset", null);
+      const l = ({ error: e, onDismiss: t }) => {
           let n = e.error ? e.error.stack : "Stack missing",
             i = e.info ? e.info.componentStack : "",
             o = (e.error && e.error.message) || "unknown error";
           return r.createElement(
-            c,
+            u,
             null,
-            r.createElement(u, null, 'Error: "', o, '"'),
+            r.createElement(d, null, 'Error: "', o, '"'),
             "   ",
             r.createElement(
               "span",
@@ -13498,19 +13562,19 @@
               "(x) Dismiss"
             ),
             r.createElement("br", null),
-            r.createElement(d, null, n),
-            r.createElement(d, null, "The error occurred while rendering:", i)
+            r.createElement(h, null, n),
+            r.createElement(h, null, "The error occurred while rendering:", i)
           );
         },
-        l = (e) => {
+        c = (e) => {
           const { error: t, onRefresh: n, identifierHash: i, store: o } = e,
             s = (t.error && t.error.message) || "unknown error",
             a = `${o.product}_${o.version}_${i}`;
           return r.createElement(
-            c,
+            u,
             null,
             r.createElement(
-              u,
+              d,
               null,
               "Something went wrong while displaying this content. ",
               r.createElement(
@@ -13522,11 +13586,11 @@
                 "Refresh"
               )
             ),
-            r.createElement(d, null, "Error Reference: ", a),
-            r.createElement(d, null, s)
+            r.createElement(h, null, "Error Reference: ", a),
+            r.createElement(h, null, s)
           );
         },
-        c = ({ children: e }) =>
+        u = ({ children: e }) =>
           r.createElement(
             "div",
             {
@@ -13541,7 +13605,7 @@
             },
             e
           ),
-        u = ({ children: e }) =>
+        d = ({ children: e }) =>
           r.createElement(
             "h1",
             {
@@ -13554,7 +13618,7 @@
             },
             e
           ),
-        d = ({ children: e }) =>
+        h = ({ children: e }) =>
           r.createElement(
             "pre",
             { style: { marginTop: "15px", opacity: 0.7, userSelect: "auto" } },
@@ -15549,6 +15613,7 @@
         return r.createElement(
           "svg",
           {
+            className: "SVGIcon_Button SVGIcon_Calendar",
             width: "25",
             height: "24",
             viewBox: "0 0 25 24",
@@ -18867,7 +18932,7 @@
           bulgarian: "bg",
           greek: "el",
           ukrainian: "uk",
-          vietnamese: "vn",
+          vietnamese: "vi",
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
@@ -19568,15 +19633,16 @@
       "use strict";
       n.d(t, {
         KM: () => i.KM,
-        Gt: () => u,
-        it: () => c,
+        Gt: () => d,
+        it: () => u,
         dn: () => r.dn,
-        ak: () => d.a,
+        ak: () => h.a,
         B8: () => i.B8,
         k$: () => r.k$,
         Qg: () => i.Qg,
         NW: () => i.NW,
         JI: () => i.JI,
+        S1: () => c,
         BE: () => r.BE,
         ww: () => r.ww,
         xK: () => r.xK,
@@ -19616,15 +19682,21 @@
           )
         );
       }
-      function c(e, ...t) {
+      function c(e, t) {
+        return a(
+          e,
+          o.useCallback((e, n) => new e.IntersectionObserver(n, t), [t])
+        );
+      }
+      function u(e, ...t) {
         const n = new e.ownerDocument.defaultView.ResizeObserver(...t);
         return n.observe(e), n;
       }
-      function u(e, ...t) {
+      function d(e, ...t) {
         const n = new e.ownerDocument.defaultView.IntersectionObserver(...t);
         return n.observe(e), n;
       }
-      var d = n(81130);
+      var h = n(81130);
     },
     53477: (e, t, n) => {
       "use strict";
@@ -20139,7 +20211,6 @@
             n.e(7948),
             n.e(4264),
             n.e(483),
-            n.e(2829),
             n.e(2468),
             n.e(2530),
             n.e(1338),
@@ -20162,7 +20233,6 @@
             n.e(7948),
             n.e(4264),
             n.e(483),
-            n.e(2829),
             n.e(2468),
             n.e(2530),
             n.e(1338),
@@ -20185,7 +20255,6 @@
             n.e(7948),
             n.e(4264),
             n.e(483),
-            n.e(2829),
             n.e(2468),
             n.e(2530),
             n.e(1338),
@@ -20233,7 +20302,6 @@
             n.e(7948),
             n.e(4264),
             n.e(483),
-            n.e(2829),
             n.e(2468),
             n.e(543),
             n.e(2530),
@@ -20291,13 +20359,12 @@
             n.e(6588),
             n.e(7948),
             n.e(483),
-            n.e(2829),
             n.e(2530),
             n.e(1338),
             n.e(9949),
             n.e(8931),
             n.e(3903),
-          ]).then(n.bind(n, 13872))
+          ]).then(n.bind(n, 17999))
         ),
         I = r.lazy(() =>
           Promise.all([n.e(1338), n.e(312)]).then(n.bind(n, 2840))

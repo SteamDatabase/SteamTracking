@@ -3166,7 +3166,7 @@
 "Steam_GameProperties_LanguageTab" "Мова"
 
 "Steam_GameProperties_BetasTab" "Тестування"
-"Steam_ChooseGameBeta"	"Оберіть бета-тест, до якого ви бажаєте долучитися:"
+"Steam_ChooseGameBeta"	"Оберіть бета-тестування, до якого ви бажаєте долучитися:"
 "Steam_ContentBetaUnlockPrivate" "Уведіть код бета-доступу, аби долучитися до закритого тестування:"
 "Steam_ContentBetaCheckPassword"	"Перевірити код"
 "Steam_ContentBetaResultsPasswordSuccessful"	"Код доступу прийнято, закрита бета-версія «%betaname%» доступна для користування."

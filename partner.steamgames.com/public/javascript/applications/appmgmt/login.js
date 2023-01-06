@@ -370,32 +370,27 @@
         );
       }
       function h(e) {
-        const {
-            redirectUrl: r = s.De.PARTNER_BASE_URL,
-            disableQR: t,
-            closeModal: c,
-          } = e,
-          a = (0, o.useRef)(
+        const { redirectUrl: r = s.De.PARTNER_BASE_URL, closeModal: t } = e,
+          c = (0, o.useRef)(
             new n.J(s.De.WEBAPI_BASE_URL).GetServiceTransport()
           ).current,
-          [h, f] = (0, o.useState)(!1);
+          [a, h] = (0, o.useState)(!1);
         return o.createElement(
           b.e1,
-          { onEscKeypress: c, hideTopBar: !0, bDisableBackgroundDismiss: !0 },
-          h
+          { onEscKeypress: t, hideTopBar: !0, bDisableBackgroundDismiss: !0 },
+          a
             ? o.createElement(l.pT, null)
             : o.createElement(l.wK, {
                 platform: 2,
-                transport: a,
+                transport: c,
                 onComplete: (e) => {
                   e == i.TG.k_PrimaryDomainFail
-                    ? f(!0)
+                    ? h(!0)
                     : window.location.assign(r);
                 },
                 autoFocus: !0,
                 theme: "modal",
                 redirectUrl: r,
-                disableQR: t,
               })
         );
       }

@@ -617,7 +617,7 @@
     },
     33883: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => T });
+      r.r(t), r.d(t, { default: () => S });
       var o = r(70655),
         s = r(9669),
         a = r.n(s),
@@ -646,8 +646,9 @@
           var e;
           return (0, o.mG)(this, void 0, void 0, function* () {
             const t =
-                l.De.STORE_BASE_URL + "contenthub/ajaxgetcontenthubcategories",
-              r = { origin: self.origin };
+                l.De.PARTNER_BASE_URL +
+                "admin/store/contenthub/ajaxgetcontenthubcategories",
+              r = { origin: self.origin, sessionid: l.De.SESSIONID };
             let o = null;
             try {
               const s = yield a().get(t, { params: r });
@@ -738,9 +739,13 @@
           var e;
           return (0, o.mG)(this, void 0, void 0, function* () {
             const t =
-                l.De.STORE_BASE_URL +
-                "contenthub/ajaxgetstoretagsandcategories",
-              r = { origin: self.origin, l: l.De.LANGUAGE };
+                l.De.PARTNER_BASE_URL +
+                "admin/store/contenthub/ajaxgetstoretagsandcategories",
+              r = {
+                origin: self.origin,
+                sessionid: l.De.SESSIONID,
+                l: l.De.LANGUAGE,
+              };
             let o = null;
             try {
               const s = yield a().get(t, { params: r });
@@ -779,7 +784,7 @@
         v = r(64839),
         A = r(3912),
         k = r.n(A);
-      function T() {
+      function S() {
         const [e, t] = n.useState(),
           [r, s] = n.useState(!1),
           [c, m] = n.useState(!1),
@@ -790,9 +795,9 @@
               var e;
               return (0, o.mG)(this, void 0, void 0, function* () {
                 const t =
-                    l.De.STORE_BASE_URL +
-                    "contenthub/ajaxgetcontenthubcategorieskv",
-                  r = { origin: self.origin };
+                    l.De.PARTNER_BASE_URL +
+                    "admin/store/contenthub/ajaxgetcontenthubcategorieskv",
+                  r = { origin: self.origin, sessionid: l.De.SESSIONID };
                 let o = null;
                 try {
                   const s = yield a().get(t, {
@@ -854,7 +859,7 @@
                     { className: k().UnpublishedChangesNotice },
                     "You have unpublished changes. Click Publish below to publish and make them available to users."
                   ),
-                n.createElement(S, { categories: e, onUpdate: () => m(!0) }),
+                n.createElement(T, { categories: e, onUpdate: () => m(!0) }),
                 n.createElement(
                   "div",
                   { className: k().ActionButtonCtn },
@@ -863,7 +868,7 @@
                     {
                       onClick: () =>
                         (0, _.AM)(
-                          n.createElement(L, {
+                          n.createElement(N, {
                             onImport: (e) => {
                               t(e), m(!1);
                             },
@@ -878,7 +883,7 @@
                     {
                       onClick: () =>
                         (0, _.AM)(
-                          n.createElement(N, {
+                          n.createElement(L, {
                             categories: e,
                             onSave: () => {
                               m(!1), h(!0);
@@ -912,7 +917,7 @@
             : n.createElement(C.V, { size: "medium", position: "center" })
         );
       }
-      function S(e) {
+      function T(e) {
         const { categories: t, onUpdate: r } = e;
         if (!t) return n.createElement("div", null, "No categories defined.");
         return n.createElement(
@@ -1126,7 +1131,7 @@
           )
         );
       }
-      function L(e) {
+      function N(e) {
         const { onImport: t, closeModal: r } = e;
         return (
           n.useEffect(() => {
@@ -1148,7 +1153,7 @@
           )
         );
       }
-      function N(e) {
+      function L(e) {
         const { categories: t, onSave: r, closeModal: s } = e,
           [c, d] = n.useState();
         return (
@@ -1185,8 +1190,8 @@
                         : c.length) &&
                       (o[a.handle].mustnot = o[a.handle].mustnot[0]);
                 const m =
-                    l.De.STORE_BASE_URL +
-                    "contenthub/ajaxsavecontenthubcategorieskv",
+                    l.De.PARTNER_BASE_URL +
+                    "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
                   u = new FormData();
                 u.append("sessionid", l.De.SESSIONID),
                   u.append("origin", self.origin),
@@ -1241,9 +1246,9 @@
                 var e;
                 return (0, o.mG)(this, void 0, void 0, function* () {
                   const t =
-                      l.De.STORE_BASE_URL +
-                      "contenthub/ajaxpublishcontenthubcategorieskv",
-                    r = { origin: self.origin };
+                      l.De.PARTNER_BASE_URL +
+                      "admin/store/contenthub/ajaxpublishcontenthubcategorieskv",
+                    r = { origin: self.origin, sessionid: l.De.SESSIONID };
                   let o = null;
                   try {
                     const s = yield a().get(t, {

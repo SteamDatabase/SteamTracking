@@ -693,7 +693,7 @@
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Μετάδοση Steam"
 "Broadcast_FirstTime_OK" "OK"
-"Broadcast_FirstTime_Cancel" "Άκυρο"
+"Broadcast_FirstTime_Cancel" "Ακύρωση"
 "Broadcast_FirstTime_ViewerRequest" "Ο %friend% θα ήθελε να σας παρακολουθήσει να παίζετε %gamename%"
 "Broadcast_FirstTime_CompleteText" "Σας ευχαριστούμε που επιλέξατε τα δικαιώματα της μετάδοσής σας."
 "Broadcast_FirstTime_Configuration" "Για περισσότερες επιλογές όπως ηχογράφηση μικροφώνου και αναλύσεις βίντεο, επισκεφθείτε το:"

@@ -387,7 +387,12 @@
             null,
             a.createElement(
               "div",
-              { className: s().GraphicalAssetsTabs },
+              {
+                className: (0, l.Z)(
+                  s().GraphicalAssetsTabs,
+                  this.props.classNameCtn
+                ),
+              },
               this.props.tabs.map((t) => {
                 if (!t.hidden) {
                   let n = "";
@@ -413,9 +418,14 @@
                         "div",
                         {
                           key: t.key,
-                          className: `${s().GraphicalAssetsTab} ${
-                            t.key === e.key ? s().Active : ""
-                          }`,
+                          className: (0, l.Z)(
+                            `${s().GraphicalAssetsTab} ${
+                              t.key === e.key
+                                ? (0, l.Z)(s().Active, "ActiveTab")
+                                : ""
+                            }`,
+                            this.props.classNameTab
+                          ),
                           onClick: () => this.OnTabClick(t),
                         },
                         Boolean(t.vo_warning) &&
@@ -658,8 +668,8 @@
           return O.m_singleton || (O.m_singleton = new O()), O.m_singleton;
         }
       }
-      var U = n(80315),
-        Z = (n(68002), n(81503)),
+      var Z = n(80315),
+        U = (n(68002), n(81503)),
         W = n(49186),
         X = n(7200),
         Y = n(48341),
@@ -771,7 +781,7 @@
           if (
             (s.BIsGlobalCalendar() &&
               (l &&
-                l & U.ZT.k_eLibrary &&
+                l & Z.ZT.k_eLibrary &&
                 (this.GetVisibilityStore().BIsGameSourceAllowed(
                   ee.Gf.k_ERecent
                 ) && n.appInfo
@@ -795,23 +805,23 @@
                     this.AddContextMenuForSource(o, ee.Gf.k_ERecent, r, !1))
                   : this.AddContextMenuForSource(o, ee.Gf.k_ELibrary, r)),
               l &&
-                l & U.ZT.k_eWishlist &&
+                l & Z.ZT.k_eWishlist &&
                 this.AddContextMenuForSource(o, ee.Gf.k_EWishlist, r),
               l &&
-                l & U.ZT.k_eFollowing &&
+                l & Z.ZT.k_eFollowing &&
                 this.AddContextMenuForSource(o, ee.Gf.k_EFollowing, r),
               !i &&
                 l &&
-                l & U.ZT.k_eCurator &&
+                l & Z.ZT.k_eCurator &&
                 this.AddContextMenuForSource(o, ee.Gf.k_ECurator, r),
               l &&
-                l & U.ZT.k_eRecommended &&
+                l & Z.ZT.k_eRecommended &&
                 this.AddContextMenuForSource(o, ee.Gf.k_ERecommended, r),
               l &&
-                l & U.ZT.k_eSteam &&
+                l & Z.ZT.k_eSteam &&
                 this.AddContextMenuForSource(o, ee.Gf.k_ESteam, r),
               l &&
-                l & U.ZT.k_eFeatured &&
+                l & Z.ZT.k_eFeatured &&
                 this.AddContextMenuForSource(o, ee.Gf.k_EFeatured, r)),
             o.push(
               a.createElement(
@@ -1433,40 +1443,40 @@
           const t = e.calendarEvent.GetSource(),
             n = [],
             o = (0, H.vY)().m_visibilityStore;
-          t & U.ZT.k_eLibrary && o.BIsGameSourceAllowed(ee.Gf.k_ELibrary)
+          t & Z.ZT.k_eLibrary && o.BIsGameSourceAllowed(ee.Gf.k_ELibrary)
             ? n.push({
-                id: U.ZT.k_eLibrary,
+                id: Z.ZT.k_eLibrary,
                 name: "#EventCalendar_GameSource_inLibrary",
                 ttip: "#EventCalendar_GameSource_EventExplanation_ttip_library",
                 styles: ve().LibrarySource,
               })
-            : t & U.ZT.k_eWishlist && o.BIsGameSourceAllowed(ee.Gf.k_EWishlist)
+            : t & Z.ZT.k_eWishlist && o.BIsGameSourceAllowed(ee.Gf.k_EWishlist)
             ? n.push({
-                id: U.ZT.k_eWishlist,
+                id: Z.ZT.k_eWishlist,
                 name: "#EventCalendar_GameSource_onWishlist",
                 ttip: "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
                 styles: ve().WishlistSource,
               })
-            : t & U.ZT.k_eRecommended &&
+            : t & Z.ZT.k_eRecommended &&
               o.BIsGameSourceAllowed(ee.Gf.k_ERecommended)
             ? n.push({
-                id: U.ZT.k_eRecommended,
+                id: Z.ZT.k_eRecommended,
                 name: "#EventCalendar_GameSource_recommended_Verbose",
                 ttip: "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
                 styles: ve().RecommendedSource,
               })
-            : t & U.ZT.k_eFeatured &&
+            : t & Z.ZT.k_eFeatured &&
               o.BIsGameSourceAllowed(ee.Gf.k_EFeatured) &&
               n.push({
-                id: U.ZT.k_eFeatured,
+                id: Z.ZT.k_eFeatured,
                 name: "#EventCalendar_GameSource_featured",
                 ttip: "#EventCalendar_GameSource_ttip_featured",
                 styles: ve().FeaturedSource,
               }),
-            t & U.ZT.k_eFollowing &&
+            t & Z.ZT.k_eFollowing &&
               o.BIsGameSourceAllowed(ee.Gf.k_EFollowing) &&
               n.push({
-                id: U.ZT.k_eFollowing,
+                id: Z.ZT.k_eFollowing,
                 name: "#EventCalendar_GameSource_followed",
                 ttip: "#EventCalendar_GameSource_EventExplanation_ttip_following",
                 styles: ve().FollowingSource,
@@ -1615,8 +1625,8 @@
         He = n(13596),
         Ve = n(74163),
         Oe = n(74891),
-        Ue = n(75532);
-      function Ze(e) {
+        Ze = n(75532);
+      function Ue(e) {
         const t = (0, H.vY)(),
           n = (0, p.F_)(10),
           o = t.GetActiveEventsAt(n) || [],
@@ -1633,7 +1643,7 @@
             )
           : a.createElement(
               "div",
-              { className: Ue.EventsScheduleCtn },
+              { className: Ze.EventsScheduleCtn },
               a.createElement(Re, {
                 displayLocation: 6,
                 fnChangeModalEvent: l,
@@ -1663,7 +1673,7 @@
         return a.createElement(
           Ke,
           Object.assign({}, e),
-          a.createElement(Ze, Object.assign({}, e))
+          a.createElement(Ue, Object.assign({}, e))
         );
       }
       function Xe(e) {
@@ -1680,15 +1690,15 @@
             )
           : a.createElement(
               "div",
-              { className: Ue.UpcomingEventsCtn },
+              { className: Ze.UpcomingEventsCtn },
               a.createElement(
                 "div",
-                { className: Ue.SectionTitle },
+                { className: Ze.SectionTitle },
                 (0, h.Xx)("#Conference_ScheduleNext")
               ),
               a.createElement(
                 "div",
-                { className: Ue.EventSchedCtn },
+                { className: Ze.EventSchedCtn },
                 o.map((o, l) =>
                   a.createElement(Ye, {
                     key: o.unique_id,
@@ -1715,17 +1725,17 @@
         return a.createElement(
           "div",
           {
-            className: Ue.EventItemCtn,
+            className: Ze.EventItemCtn,
             onClick: () => o(r.GID, r.clanSteamID.GetAccountID()),
           },
           a.createElement(
             "div",
-            { className: Ue.Title },
+            { className: Ze.Title },
             r.GetNameWithFallback(c)
           ),
           a.createElement(
             "div",
-            { className: Ue.SessionTime },
+            { className: Ze.SessionTime },
             !m && a.createElement("div", null, (0, h.$1)(s, !0)),
             a.createElement(
               "div",
@@ -1743,7 +1753,7 @@
           ),
           a.createElement(
             "div",
-            { className: (0, I.Z)(Ue.ReminderContainer, Ue.OnlyIcon) },
+            { className: (0, I.Z)(Ze.ReminderContainer, Ze.OnlyIcon) },
             a.createElement(ge.m, {
               eventModel: r,
               lang: c,
@@ -1759,19 +1769,19 @@
         if (!t || 0 == t.length) return null;
         const o = t[0],
           l = (0, i.jM)(u.De.LANGUAGE),
-          r = Z.R.ParseEventModelPresenters(o, l);
+          r = U.R.ParseEventModelPresenters(o, l);
         return a.createElement(
           "div",
-          { className: Ue.ActiveEventCtn },
+          { className: Ze.ActiveEventCtn },
           a.createElement(
             "div",
-            { className: Ue.LiveNote },
-            a.createElement("div", { className: Ue.LiveIcon }),
+            { className: Ze.LiveNote },
+            a.createElement("div", { className: Ze.LiveIcon }),
             "Live Now!"
           ),
           a.createElement(
             "div",
-            { className: Ue.Title },
+            { className: Ze.Title },
             o.GetNameWithFallback(l)
           ),
           Boolean(r) &&
@@ -1791,13 +1801,13 @@
             ),
           a.createElement(
             "div",
-            { className: Ue.EventDescription },
+            { className: Ze.EventDescription },
             o.GetSummaryWithFallback(l)
           ),
           a.createElement(
             "div",
             {
-              className: Ue.ReadMoreBtn,
+              className: Ze.ReadMoreBtn,
               onClick: () => n(o.GID, o.clanSteamID.GetAccountID()),
             },
             (0, h.Xx)("#EventEmail_Button_ClickForMoreDetails")
@@ -1820,7 +1830,7 @@
           ? a.createElement("div", null, (0, h.Xx)("#Conference_NoPastEvents"))
           : a.createElement(
               "div",
-              { className: Ue.PastEventsCtn },
+              { className: Ze.PastEventsCtn },
               a.createElement(Re, {
                 displayLocation: 6,
                 fnChangeModalEvent: r,
@@ -1880,7 +1890,7 @@
             null,
             a.createElement(
               "div",
-              { className: Ue.HelpDialogDetailsCtn },
+              { className: Ze.HelpDialogDetailsCtn },
               a.createElement(
                 "div",
                 null,
@@ -1888,7 +1898,7 @@
               ),
               a.createElement(
                 "ul",
-                { className: Ue.HelpRequirements },
+                { className: Ze.HelpRequirements },
                 a.createElement(
                   "li",
                   null,
@@ -1912,7 +1922,7 @@
             ),
             a.createElement(
               "div",
-              { className: Ue.HelpDialogDetailsCtn },
+              { className: Ze.HelpDialogDetailsCtn },
               a.createElement(
                 "div",
                 null,
@@ -1930,7 +1940,7 @@
             ),
             a.createElement(
               "div",
-              { className: Ue.HelpDialogDetailsCtn },
+              { className: Ze.HelpDialogDetailsCtn },
               a.createElement(
                 "span",
                 null,

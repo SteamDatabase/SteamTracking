@@ -484,7 +484,7 @@
 "Friends_BlockCommunicationWarning_Title"	"Блокиране на всякаква комуникация с %username%"
 "Friends_BlockCommunicationWarning_Info"	"На път сте да блокирате всякаква комуникация с %username%.\n\nТова също ще попречи на двама Ви да влизате в една и съща игра, използваща Steamworks търсенето на мачове."
 "Friends_BlockCommunicationWarning_Info2"	"На път сте да блокирате всякаква комуникация с %username%.\n\nВече ще сте неспособни да изпращате и получавате съобщения или покани от този играч.\n\nМожете да го деблокирате като посетите Steam профила му или чрез списъка Ви с приятели."
-"Friends_BlockCommunicationWarning_LinkInfo"	"Повече информация относно Steamworks игри."
+"Friends_BlockCommunicationWarning_LinkInfo"	"Още информация относно Steamworks игри."
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"Не ми показвайте това отново."
 "Friends_BlockCommunicationWarning_Block"	"Блокиране на играч"
 "Friends_BlockCommunicationWArning_Cancel"	"Отказ"

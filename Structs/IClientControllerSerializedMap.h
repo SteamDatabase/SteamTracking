@@ -1,8 +1,8 @@
 class IClientControllerSerializedMap
 {
 public:
-    virtual unknown_ret Unknown_5333888() = 0;
-    virtual unknown_ret Unknown_6137744() = 0;
+    virtual unknown_ret Unknown_5360048() = 0;
+    virtual unknown_ret Unknown_6165136() = 0;
     virtual unknown_ret ShowBindingPanel(void*,void*,void*) = 0;
     virtual unknown_ret GetControllerTypeForHandle(void*,void*) = 0;
     virtual unknown_ret GetGamepadIndexForHandle(void*,void*) = 0;
@@ -42,6 +42,8 @@ public:
     virtual unknown_ret SetUserLedColor(void*,void*,void*,void*) = 0;
     virtual unknown_ret SetRumble(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret SetRumbleExtended(void*,void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret SetGyroAutoCalibrate(void*,void*) = 0;
+    virtual unknown_ret SetGyroCalibrating(void*,void*) = 0;
     virtual unknown_ret LoadConfigFromVDFString(void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret InvalidateBindingCache() = 0;
     virtual unknown_ret ActivateConfig(void*,void*) = 0;
@@ -184,7 +186,7 @@ public:
     virtual unknown_ret CompleteControllerRegistrationToAccount(void*,void*) = 0;
     virtual unknown_ret AutoRegisterControllerRegistrationToAccount(void*,void*) = 0;
     virtual unknown_ret GetConfigForAppAndController(void*,void*,void*,void*) = 0;
-    virtual unknown_ret SetControllerPersonalization(void*,void*,void*) = 0;
+    virtual unknown_ret SetControllerPersonalization(void*,void*,void*,void*) = 0;
     virtual unknown_ret SetPersonalizationFile(void*,void*,void*,void*) = 0;
     virtual unknown_ret SetGameWindowPos(void*,void*,void*,void*) = 0;
     virtual unknown_ret GetGameWindowPos(void*,void*,void*,void*) = 0;
@@ -198,7 +200,7 @@ public:
     virtual unknown_ret GetLastActiveControllerVID() = 0;
     virtual unknown_ret GetLastActiveControllerPID() = 0;
     virtual unknown_ret LoadControllerPersonalizationFile(void*,void*,void*,void*) = 0;
-    virtual unknown_ret SaveControllerPersonalizationFile(void*,void*,void*) = 0;
+    virtual unknown_ret SaveControllerPersonalizationFile(void*,void*,void*,void*) = 0;
     virtual unknown_ret LoadRemotePlayControllerPersonalizationVDF(void*,void*) = 0;
     virtual unknown_ret FindControllerByPath(void*) = 0;
     virtual unknown_ret GetControllerPath(void*,void*) = 0;

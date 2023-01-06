@@ -59,4 +59,3 @@
     },
   },
 ]);
-//# sourceMappingURL=awardicon.js.map

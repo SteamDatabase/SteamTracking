@@ -530,25 +530,24 @@
         (0, r.gn)([o.aD], l.prototype, "UpdateAppIgnore", null);
     },
     23211: (e, t, s) => {
-      s.d(t, { X: () => u, _: () => c });
+      s.d(t, { X: () => l, _: () => u });
       var r = s(67294),
         a = s(41414),
         n = s(41311),
         o = s(90666),
         i = s(51167),
         d = (s(88514), s(65902)),
-        m = s(92742),
-        p = s(92398);
-      function l(e) {
+        m = s(92742);
+      function p(e) {
         return r.createElement(
           a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(g, { redirectURL: e.redirectURL })
+          r.createElement(c, { redirectURL: e.redirectURL })
         );
       }
-      function u() {
+      function l() {
         (0, a.AM)(
-          r.createElement(l, {
+          r.createElement(p, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -556,14 +555,14 @@
           { strTitle: (0, n.Xx)("#Login_SignIn") }
         );
       }
-      function c(e) {
+      function u(e) {
         (0, a.AM)(
-          r.createElement(l, { ownerWin: window, redirectURL: e }),
+          r.createElement(p, { ownerWin: window, redirectURL: e }),
           window,
           { strTitle: (0, n.Xx)("#Login_SignIn") }
         );
       }
-      function g(e) {
+      function c(e) {
         const { redirectURL: t } = e,
           [s] = (0, r.useState)(
             new d.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
@@ -585,7 +584,6 @@
                 },
                 redirectUrl: t,
                 theme: "modal",
-                disableQR: o.De.EREALM === p.IN.k_ESteamRealmChina,
               })
         );
       }

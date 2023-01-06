@@ -689,7 +689,7 @@
 "Broadcast_FirstTime_Header" "¡Bienvenido a la Retransmisión de Steam! Ahora puedes ver a otros jugadores o retransmitir tus propias partidas con Steam."
 "Broadcast_FirstTime_PermissionHeader" "Tómate un minuto para configurar tus preferencias..."
 "Broadcast_FirstTime_DesktopOnly" "Por defecto, solo puede retransmitirse el contenido de tu juego. El escritorio no puede ser retransmitido."
-"Broadcast_FirstTime_FAQ" "Leer el FAQ sobre la Retransmisión de Steam"
+"Broadcast_FirstTime_FAQ" "Leer las preguntas frecuentes sobre las retransmisiones de Steam"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Retransmisión de Steam"
 "Broadcast_FirstTime_OK" "Aceptar"

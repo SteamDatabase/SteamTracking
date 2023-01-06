@@ -2,6 +2,7 @@ import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 import "enums_productinfo.proto";
 import "enums.proto";
+import "contenthubs.proto";
 
 option cc_generic_services = true;
 
@@ -312,6 +313,34 @@ message CStoreBrowse_GetStoreCategories_Response {
 	repeated .CStoreBrowse_GetStoreCategories_Response.Category categories = 1;
 }
 
+message CStoreBrowse_GetDLCForApps_Request {
+	optional .StoreBrowseContext context = 1;
+	optional .CStorePageFilter store_page_filter = 2;
+	repeated .StoreItemID appids = 3 [(description) = "Apps for which we want DLC information."];
+	optional uint64 steamid = 4 [(description) = "If specified, we want DLC information for all apps owned by this user."];
+}
+
+message CStoreBrowse_GetDLCForApps_Response {
+	message DLCData {
+		optional uint32 appid = 1;
+		optional uint32 parentappid = 2;
+		optional uint32 release_date = 3;
+		optional bool coming_soon = 4;
+		optional int64 price = 5;
+		optional uint32 discount = 6;
+		optional bool free = 7;
+	}
+
+	message PlaytimeForApp {
+		optional uint32 appid = 1;
+		optional uint32 playtime = 2 [(description) = "Total time played over all time."];
+		optional uint32 last_played = 3 [(description) = "Time last played on any platform."];
+	}
+
+	repeated .CStoreBrowse_GetDLCForApps_Response.DLCData dlc_data = 1;
+	repeated .CStoreBrowse_GetDLCForApps_Response.PlaytimeForApp playtime = 2;
+}
+
 service StoreBrowse {
 	option (service_description) = "APIs for accessing store item data";
 
@@ -321,5 +350,9 @@ service StoreBrowse {
 
 	rpc GetStoreCategories (.CStoreBrowse_GetStoreCategories_Request) returns (.CStoreBrowse_GetStoreCategories_Response) {
 		option (method_description) = "Get category definitions for store.  This is a public-facing API (as compared to StoreCatalog.GetCategories, which is intended for PHP)";
+	}
+
+	rpc GetDLCForApps (.CStoreBrowse_GetDLCForApps_Request) returns (.CStoreBrowse_GetDLCForApps_Response) {
+		option (method_description) = "Returns all DLC appids for games owned by the user.";
 	}
 }

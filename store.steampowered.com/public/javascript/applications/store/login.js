@@ -10,33 +10,32 @@
       "use strict";
       n.r(t), n.d(t, { default: () => c });
       var r = n(67294),
-        a = n(51167),
-        o = (n(88514), n(65902)),
+        o = n(51167),
+        a = (n(88514), n(65902)),
         i = n(90666),
         s = n(92742),
         l = n(11003);
       function c(e) {
-        const { redirectUrl: t = i.De.STORE_BASE_URL, disableQR: n } = e,
-          [c] = (0, r.useState)(
-            new o.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+        const { redirectUrl: t = i.De.STORE_BASE_URL } = e,
+          [n] = (0, r.useState)(
+            new a.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
           ),
-          [u, m] = (0, r.useState)(!1);
+          [c, u] = (0, r.useState)(!1);
         return r.createElement(
           "div",
           { className: l.LoginContainer },
-          u
-            ? r.createElement(a.pT, null)
-            : r.createElement(a.wK, {
+          c
+            ? r.createElement(o.pT, null)
+            : r.createElement(o.wK, {
                 autoFocus: !0,
-                transport: c,
+                transport: n,
                 platform: 2,
                 onComplete: (e) => {
                   e == s.TG.k_PrimaryDomainFail
-                    ? m(!0)
+                    ? u(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
-                disableQR: n,
               })
         );
       }

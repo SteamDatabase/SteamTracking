@@ -9701,32 +9701,35 @@
               var t, a, o, s;
               return (0, i.mG)(this, void 0, void 0, function* () {
                 if (!e || 0 == e.length) return [];
+                const i =
+                  "community" == (0, m.Zv)()
+                    ? m.De.COMMUNITY_BASE_URL
+                    : m.De.STORE_BASE_URL;
                 if (1 == e.length) {
                   const o = { accountid: e[0], origin: self.origin },
-                    i = yield lt().get(
-                      `${m.De.COMMUNITY_BASE_URL}actions/ajaxgetavatarpersona`,
-                      { params: o }
-                    );
+                    s = yield lt().get(`${i}actions/ajaxgetavatarpersona`, {
+                      params: o,
+                    });
                   if (
-                    !i ||
-                    200 != i.status ||
+                    !s ||
+                    200 != s.status ||
                     1 !=
-                      (null === (t = i.data) || void 0 === t
+                      (null === (t = s.data) || void 0 === t
                         ? void 0
                         : t.success) ||
-                    !(null === (a = i.data) || void 0 === a
+                    !(null === (a = s.data) || void 0 === a
                       ? void 0
                       : a.userinfo)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, b.l)(i).strErrorMsg
+                      (0, b.l)(s).strErrorMsg
                     }`;
-                  return [i.data.userinfo];
+                  return [s.data.userinfo];
                 }
                 {
                   const t = { accountids: e.join(","), origin: self.origin },
                     a = yield lt().get(
-                      `${m.De.COMMUNITY_BASE_URL}actions/ajaxgetmultiavatarpersona`,
+                      `${i}actions/ajaxgetmultiavatarpersona`,
                       { params: t }
                     );
                   if (
@@ -9743,12 +9746,12 @@
                     throw `Load single avatar/persona failed ${
                       (0, b.l)(a).strErrorMsg
                     }`;
-                  const i = new Map();
+                  const n = new Map();
                   return (
                     a.data.userinfos.forEach((e) =>
-                      i.set(new L.K(e.steamid).GetAccountID(), e)
+                      n.set(new L.K(e.steamid).GetAccountID(), e)
                     ),
-                    e.map((e) => i.get(e))
+                    e.map((e) => n.get(e))
                   );
                 }
               });
@@ -9759,11 +9762,11 @@
       var mt = a(44586);
       function ft(e) {
         const { accountID: t, bHideWhenNotAvailable: a } = e,
-          o = (function (e) {
+          [o] = (function (e) {
             const { data: t, isLoading: a } = (0, ht.useQuery)([ut, e], () =>
               ct.load(e)
             );
-            return a ? null : t;
+            return [t, a];
           })(t),
           i = n.useMemo(() => L.K.InitFromAccountID(t), [t]);
         return n.createElement(

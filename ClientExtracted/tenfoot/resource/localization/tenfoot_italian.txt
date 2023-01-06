@@ -174,8 +174,8 @@
 	"Panorama_Selection_Russian"		"Русский (Russo)"
 	"Panorama_Selection_Thai"			"ไทย (Tailandese)"
 	"Panorama_Selection_Japanese"		"日本語 (Giapponese)"
-	"Panorama_Selection_Portuguese"		"Português (Portoghese-Portogallo)"
-	"Panorama_Selection_Brazilian"	 "Português-Brasil (Portoghese brasiliano)"
+	"Panorama_Selection_Portuguese"		"Português (portoghese - Portogallo)"
+	"Panorama_Selection_Brazilian"	 "Português - Brasil (portoghese brasiliano)"
 	"Panorama_Selection_Polish"		"Polski (Polacco)"
 	"Panorama_Selection_Danish"		"Dansk (Danese)"
 	"Panorama_Selection_Dutch"			"Nederlands (Olandese)"
@@ -188,9 +188,9 @@
 	"Panorama_Selection_Bulgarian"			"Български (Bulgaro)"
 	"Panorama_Selection_Turkish"			"Türkçe (Turco)"
 	"Panorama_Selection_Arabic"			"العربية (Arabo)"
-	"Panorama_Selection_Ukrainian"			"Українська (Ucraino)"
+	"Panorama_Selection_Ukrainian"			"Українська (ucraino)"
 	"Panorama_Selection_Latam_Spanish"		"Español-Latinoamérica (Spagnolo latinoamericano)"
-	"Panorama_Selection_Vietnamese"			"Tiếng Việt (Vietnamita)"
+	"Panorama_Selection_Vietnamese"			"Tiếng Việt (vietnamita)"
 
 	"Panorama_MoviePlaybackError"		"Si è verificato un errore durante la riproduzione"
 
@@ -270,7 +270,7 @@
 	"MainMenu_Welcome_Controller_Header"	"Il tuo Steam Controller"
 	"MainMenu_Welcome_Security_Header"	"Sicurezza del tuo account"
 	"MainMenu_Welcome_Sub_BigPicture_H"	"Steam, dal tuo divano"
-	"MainMenu_Welcome_Sub_BigPicture_D"	"Le cose che più ti piacciono di Steam, a tua completa disposizione sulla tua televisione senza neanche doverti alzare dal divano. La libreria dei tuoi giochi, i tuoi amici, i mod preferiti e le offerte eccezionali sui titoli più recenti, tutto sulla tua TV. In più, scegli come preferisci giocare: usa uno Steam Controller, il tuo vecchio controller preferito o la tua tastiera e il tuo mouse fidati."
+	"MainMenu_Welcome_Sub_BigPicture_D"	"Le cose che più ti piacciono di Steam, a tua completa disposizione sulla tua televisione senza neanche doverti alzare dal divano. La Libreria dei tuoi giochi, i tuoi amici, i mod preferiti e le offerte eccezionali sui titoli più recenti, tutto sulla tua TV. In più, scegli come preferisci giocare: usa uno Steam Controller, il tuo vecchio controller preferito o la tua tastiera e il tuo mouse fidati."
 	"MainMenu_Welcome_Sub_BigPicture_New_H"	"Giochi per PC, dal tuo divano"
 	"MainMenu_Welcome_Sub_BigPicture_New_D"	"Steam rende semplice scoprire nuovi giochi disponibili per il download e accedere ad amici, mod popolari e a offerte eccezionali sui titoli più recenti, tutto restando comodamente seduto sul tuo divano. Puoi usare uno Steam Controller, il tuo vecchio controller preferito o la tua tastiera e il tuo mouse fidati."
 
@@ -304,7 +304,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"MainMenu_Welcome_Controller_Update_HomeTheaterPC_Description2" "Apri la tastiera a schermo ogni volta che desideri digitare un testo."
 
 	"MainMenu_Welcome_Controller_Update_Shortcut_Header" "Assistenza su giochi non di Steam"
-	"MainMenu_Welcome_Controller_Update_Shortcut_Description" "Un'altra richiesta arrivata dalla Comunità è stata la possibilità di condividere le configurazioni per i giochi non acquistati su Steam. L'aggiornamento odierno aggiunge anche questa funzione, quindi per i giochi preferiti non di Steam che aggiungi alla tua libreria cercheremo automaticamente le configurazioni pubblicate da altri utenti."
+	"MainMenu_Welcome_Controller_Update_Shortcut_Description" "Un'altra richiesta arrivata dalla Comunità è stata la possibilità di condividere le configurazioni per i giochi non acquistati su Steam. L'aggiornamento odierno aggiunge anche questa funzione, quindi per i giochi preferiti non di Steam che aggiungi alla tua Libreria cercheremo automaticamente le configurazioni pubblicate da altri utenti."
 
 	"MainMenu_Welcome_Controller_Update_ControllerHUD_Header" "Controller HUD"
 	"MainMenu_Welcome_Controller_Update_ControllerHUD_Description" "La Comunità crea e condivide costantemente nuovi modi per usare lo Steam Controller, e per questo vogliamo semplificare l'apprendimento del suo funzionamento da parte degli utenti: la nuova HUD del controller consente di identificare facilmente l'input esatto generato dal tuo controller."
@@ -686,7 +686,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Settings_SteamPlay"		"Steam Play"
 
 	"Settings_Network_Wizard"		"Configurazione di rete"
-	"Settings_AuthorizeLocalDevice"	"Condivisione familiare della libreria"
+	"Settings_AuthorizeLocalDevice"	"Condivisione familiare della Libreria"
 
 	"Settings_Select"				"SELEZIONA"
 	"Settings_Back"					"INDIETRO"
@@ -923,9 +923,9 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"SettingsNetwork_Finished"				"FINITO"
 
 	// Settings, Steam Play
-	"SettingsSteamPlay_Enable_Label"		"Steam Play installerà automaticamente gli strumenti di compatibilità che ti permetteranno di giocare ai giochi presenti nella tua libreria che sono stati progettati per altri sistemi operativi."
+	"SettingsSteamPlay_Enable_Label"		"Steam Play installerà automaticamente gli strumenti di compatibilità che ti permetteranno di giocare ai giochi presenti nella tua Libreria che sono stati progettati per altri sistemi operativi."
 	"SettingsSteamPlay_Enable"			"Attiva Steam Play per i titoli supportati"
-	"SettingsSteamPlay_EnableTool_Label"		"Puoi utilizzare Steam Play per testare giochi nella tua libreria che non sono stati verificati con uno strumento di compatibilità supportato."
+	"SettingsSteamPlay_EnableTool_Label"		"Puoi utilizzare Steam Play per testare giochi nella tua Libreria che non sono stati verificati con uno strumento di compatibilità supportato."
 	"SettingsSteamPlay_EnableTool"			"Attiva Steam Play per tutti gli altri titoli"
 	"SettingsSteamPlay_Tool"			"Esegui gli altri titoli con:"
 	"SettingsSteamPlay_RestartNow"			"Vuoi riavviare ora Steam per applicare le tue impostazioni di Steam Play?"
@@ -1295,8 +1295,8 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Store_AppPurchaseSection_PurchaseDLC"		"Contenuti scaricabili disponibili ({i:purchase_dlc_count})"
 	"Store_AppPurchaseSection_Demo"				"Scarica la demo gratuita"
 	"Store_AppPurchaseSection_AddToWishlist"	"Aggiungi alla Lista dei desideri"
-	"Store_AppPurchaseSection_AddingToWishlist"	"Aggiunta alla lista dei desideri"
-	"Store_AppPurchaseSection_ViewWishlist"		"Mostra nella lista dei desideri"
+	"Store_AppPurchaseSection_AddingToWishlist"	"Aggiunta alla Lista dei desideri"
+	"Store_AppPurchaseSection_ViewWishlist"		"Mostra nella Lista dei desideri"
 	"Store_AppPurchaseSection_DLC"				"Contenuto scaricabile"
 	"Store_AppPurchaseSection_RequiresBase"		"Richiede il gioco di base {s:base_game} su Steam per poter essere utilizzato."
 	"Store_AppPurchaseSection_ViewBaseGame"		"Mostra il gioco di base"
@@ -1656,7 +1656,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Library_Details_Settings"			"Gestisci {s:apptype}"
 	"Library_Details_SetCategory"		"Imposta categorie..."
 	"Library_Details_SetLanguage"		"Scegli la lingua..."
-	"Library_Details_IncludeInVR"		"Includi nella libreria VR"
+	"Library_Details_IncludeInVR"		"Includi nella Libreria VR"
 	"Library_Details_DeleteLocalContent"	"Disinstalla..."
 	"Library_Details_DeleteShortcut"	"Elimina la scorciatoia..."
 	"Library_Details_ChooseIcon"	"Cambia l'icona..."
@@ -2659,7 +2659,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Library_FilterActive"		"(FILTRATO)"
 
 	"Library_ListView"			"MODALITÀ AD ELENCO"
-	"Library_GridView"			"MODALITÀ A GRIGLIA"
+	"Library_GridView"			"GRIGLIA"
 	"Library_AddContent"			"+"
 	"Library_AddContent_Activate"	"Attiva un prodotto..."
 	"Library_AddShortcut"           "Aggiungi una scorciatoia..."
@@ -3096,7 +3096,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Steam_AppUpdateError_30"		"filesystem non supportato"
 	"Steam_AppUpdateError_31"		"file dell'aggiornamento danneggiati"
 	"Steam_AppUpdateError_32"		"download disabilitati"
-	"Steam_AppUpdateError_33"		"libreria condivisa bloccata"
+	"Steam_AppUpdateError_33"		"Libreria condivisa bloccata"
 	"Steam_AppUpdateError_34"		"licenza mancante"
 	"Steam_AppUpdateError_35"		"altra sessione in corso"
 	"Steam_AppUpdateError_36"		"dati scaricati danneggiati"
@@ -3266,7 +3266,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Community_Friends_ActivityFeed_MoreOnA"		"Altro su {s:subject_a}"
 	"Community_Friends_ActivityFeed_ViewFriendsListA"	"Mostra amici di {s:subject_a}"
 	"Community_Friends_ActivityFeed_ViewGroupsListA"	"Mostra la lista dei gruppi di {s:subject_a}"
-	"Community_Friends_ActivityFeed_ViewWishListA"	"Mostra la lista dei desideri di {s:subject_a}"
+	"Community_Friends_ActivityFeed_ViewWishListA"	"Mostra la Lista dei desideri di {s:subject_a}"
 	"Community_Friends_ActivityFeed_ViewGameStore"	"Mostra la pagina del Negozio"
 	"Community_Friends_ActivityFeed_ViewGameHub"	"Mostra l'hub del gioco"
 	"Community_Friends_ActivityFeed_ViewGroupProfile"	"Mostra il profilo di Steam del gruppo"
@@ -3489,7 +3489,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Quit_MinimizeBigPicture"	"Riduci a icona"
 	"Quit_QuitBigPicture"		"Esci da Big Picture"
 	"Quit_ExitBigPicture"		"Torna al desktop"
-	"Quit_EnterSteamOSDesktop"	"Passa alla modalità Desktop"
+	"Quit_EnterSteamOSDesktop"	"Passa alla modalità desktop"
 	"Quit_ExitSteam"			"Esci da Steam"
 	"Quit_ExitGame"				"Chiudi l'applicazione..."
 	"Quit_ChangeUser"			"Cambia utente"
@@ -3539,7 +3539,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 
 	"DeviceAuth_Authorized_Notification" "Ora i giochi di {s:owner} sono utilizzabili da parte tua su questo computer."
 	"DeviceAuth_Deauthorized_Notification" "{s:owner} ha revocato la condivisione per questo dispositivo. Alcuni giochi potrebbero non essere disponibili."
-	"DeviceAuth_StopPlaying_Notification" "Ehi, {s:owner} rivuole la sua libreria! Minuti di gioco rimanenti: {s:minutes}."
+	"DeviceAuth_StopPlaying_Notification" "Ehi, {s:owner} rivuole questo gioco nella sua Libreria! Minuti di gioco rimanenti: {s:minutes}."
 	"DeviceAuth_SharedLibraryAvaliable_Notification" "Urrà, i giochi condivisi di {s:owner} ora sono disponibili!"
 
 	"DeviceAuth_StoppedSharedGame_Title" "Libreria condivisa in uso"
@@ -3562,7 +3562,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Settings_ManageDevices_Get_Devices_Failed" "Impossibile caricare i dispositivi autorizzati ({s:reason})"
 	"Settings_ManageDevices"		"Gestisci dispositivi"
 
-	"SettingsAccount_ManageDeviceAuth" "Gestisci la Condivisione familiare della libreria"
+	"SettingsAccount_ManageDeviceAuth" "Gestisci la Condivisione familiare della Libreria"
 
 	"Settings_Family_Sharing_Title" "Condivisione familiare della Libreria"
 	"Settings_Family_Sharing_ManageSharing" "Gestisci gli altri computer..."
@@ -3806,7 +3806,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Settings_Interface"	"Interfaccia"
 	"SettingsSteamOS_EnableDesktop" "Abilita l'accesso al desktop di Linux"
 	"SettingsSteamOS_DesktopWarningTitle" "Attenzione"
-	"SettingsSteamOS_DesktopWarningBody" "Abilitare la Modalità Desktop ti permette di avere un controllo totale della tua macchina e cambiare il comportamento del sistema in modi non supportati.\n\nnSei sicuro di voler procedere?"
+	"SettingsSteamOS_DesktopWarningBody" "Abilitare la modalità desktop ti permette di avere un controllo totale della tua macchina e cambiare il comportamento del sistema in modi non supportati.\n\nnConfermi di voler procedere?"
 	"SettingsInterface_SteamClientCheckForUpdates" "Ricerca aggiornamenti"
 	"SettingsInterface_SteamClientChecking"		"Verifica"
 	"SettingsInterface_SteamClientUpdatePending"	"Riavvia per aggiornare"
@@ -4052,7 +4052,7 @@ La modalità \"Joystick simile a mouse\" ti permetterà di giocare con un gamepa
 	"Music_Settings_Database_Header"	"Database"
 	"Music_Settings_Crawl_At_Startup"	"Scansione all'avvio"
 	"Music_Settings_CrawlSteamInstallFolders" "Cerca nelle cartelle di Steam"
-	"Music_Settings_Building_MusicLibrary"	"Composizione della tua Libreria musicale"
+	"Music_Settings_Building_MusicLibrary"	"Composizione della tua libreria musicale"
 	"Music_Settings_No_Album_Available" "Nessun album disponibile."
 	"Music_Settings_One_Album_Available" "1 album disponibile con {i:TrackCount} tracce"
 	"Music_Settings_X_Albums_With_Y_Tracks"	"{i:AlbumCount} album disponibili con {i:TrackCount} tracce"

@@ -137,7 +137,7 @@
 
 "Overlay_FriendChangeConfirmation_Title"					"Επιβεβαίωση αλλαγής φίλου"
 "Overlay_FriendChangeConfirmation_Confirm"					"Επιβεβαίωση αλλαγής"
-"Overlay_FriendChangeConfirmation_Cancel"					"Άκυρο"
+"Overlay_FriendChangeConfirmation_Cancel"					"Ακύρωση"
 "Overlay_FriendChangeConfirmation_Reason_Add"				"Θα θέλατε να προσθέσετε τον χρήστη %persona% στη λίστα φίλων σας;"
 "Overlay_FriendChangeConfirmation_Button_Add"				"Προσθήκη φίλου"
 "Overlay_FriendChangeConfirmation_Reason_Remove"			"Θα θέλατε να αφαιρέσετε τον χρήστη %persona% από τη λίστα φίλων σας;"
