@@ -425,7 +425,7 @@
   .chartscommon_TableRow_1e_nc
   .chartscommon_CapsuleCell_GdWJO {
   padding: 6px 16px 6px 0px;
-  width: 50%;
+  min-width: 50%;
 }
 .chartscommon_ChartTable_37mz_
   .chartscommon_TableRow_1e_nc
@@ -1477,7 +1477,7 @@ div#global_header .content {
   .weeklytopsellers_TableRow_2-RN6
   .weeklytopsellers_CapsuleCell_18kGH {
   padding: 6px 16px 6px 0px;
-  width: 50%;
+  min-width: 50%;
 }
 .weeklytopsellers_ChartTable_3arZn
   .weeklytopsellers_TableRow_2-RN6
@@ -1718,7 +1718,6 @@ div#global_header .content {
   width: 100%;
 }
 .topreleasespage_TopReleasesContainer_2ZjmC {
-  margin-top: -95px;
   width: 100%;
 }
 .supportstats_HelpRequestChartContainer_1dbAl {

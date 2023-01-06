@@ -787,6 +787,8 @@
         schedule_track_art: { width: 196, height: 92 },
         tab_bar_background: { width: 1500, height: 100 },
         sale_logo: { width: 940, height: 460 },
+        bestofyear_banner: { width: 1100, height: 160 },
+        bestofyear_banner_mobile: { width: 500, height: 160 },
       };
       function i(e, t, r) {
         const i = a[r];
