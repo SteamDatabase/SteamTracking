@@ -3312,7 +3312,7 @@ div .cdkey_request_details_row
 	color: #fff;
 }
 
-#requestkeys_table td,th {
+#requestkeys_table td, #requestkeys_table th {
 	padding: 4px 6px 4px 6px;
 }
 

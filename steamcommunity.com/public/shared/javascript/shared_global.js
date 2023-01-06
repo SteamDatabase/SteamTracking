@@ -5053,7 +5053,7 @@ function GPNavUpdateActionDescriptions( element, actionDescriptions )
 
 var SetGPFocusRestoreTimeout = function(){}; // no op unless InitializeGPFocusRestoreTimeout is called
 var nGPFocusRestoreTimeoutID = -1;
-function InitializeGPFocusRestoreTimeout()
+function InitializeGPFocusRestoreTimeout( bUseWindowOnload = true )
 {
 	window.history.replaceState( $J.extend( {}, window.history.state, { notify_focus_restore_ready: true } ), "" );
 	SetGPFocusRestoreTimeout = function( delay = 200 )
@@ -5069,5 +5069,8 @@ function InitializeGPFocusRestoreTimeout()
 			dispatchEvent( new Event( 'focus_restore_ready' ) );
 		}, delay );
 	}
+
+	if ( bUseWindowOnload )
+		window.addEventListener( "load", function(){ SetGPFocusRestoreTimeout(); } );
 }
 

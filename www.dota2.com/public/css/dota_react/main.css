@@ -31032,6 +31032,308 @@ a {
     display: none;
   }
 }
+.dpcroot_DPCHeaderWinter2023League_1nTj9 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9 .dpcroot_W23BannerContainer_j4-b6 {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23EventPhaseBox_D4usl {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23EventPhaseBox_D4usl
+  .dpcroot_W23EventStartTitle_3foG9,
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23EventPhaseBox_D4usl
+  .dpcroot_W23EventEndTitle_2ZokW {
+  margin-top: 25px;
+  margin-left: 150px;
+  font-family: "Radiance", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderWinter2023League_1nTj9
+    .dpcroot_W23BannerContainer_j4-b6
+    .dpcroot_W23BannerContent_2HMLp
+    .dpcroot_W23EventPhaseBox_D4usl
+    .dpcroot_W23EventStartTitle_3foG9,
+  .dpcroot_DPCHeaderWinter2023League_1nTj9
+    .dpcroot_W23BannerContainer_j4-b6
+    .dpcroot_W23BannerContent_2HMLp
+    .dpcroot_W23EventPhaseBox_D4usl
+    .dpcroot_W23EventEndTitle_2ZokW {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23EventPhaseBox_D4usl
+  .dpcroot_W23EventStartDate_2OT6W,
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23EventPhaseBox_D4usl
+  .dpcroot_W23EventEndDate_3yL_0 {
+  margin-top: 3px;
+  margin-left: 150px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderWinter2023League_1nTj9
+    .dpcroot_W23BannerContainer_j4-b6
+    .dpcroot_W23BannerContent_2HMLp
+    .dpcroot_W23EventPhaseBox_D4usl
+    .dpcroot_W23EventStartDate_2OT6W,
+  .dpcroot_DPCHeaderWinter2023League_1nTj9
+    .dpcroot_W23BannerContainer_j4-b6
+    .dpcroot_W23BannerContent_2HMLp
+    .dpcroot_W23EventPhaseBox_D4usl
+    .dpcroot_W23EventEndDate_3yL_0 {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23EventPhaseBox_D4usl
+  .dpcroot_W23EventStartDate_2OT6W
+  time,
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23EventPhaseBox_D4usl
+  .dpcroot_W23EventEndDate_3yL_0
+  time {
+  font-family: "Radiance", sans-serif;
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23CenterBox_1O1A8 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23CenterBox_1O1A8
+  .dpcroot_W23EventTitle_1mNZ2 {
+  font-size: 40px;
+  font-family: "Reaver", serif;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23CenterBox_1O1A8
+  .dpcroot_W23EventSegment_3FHY3 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23CenterBox_1O1A8
+  .dpcroot_W23Season_2I1HL {
+  margin-top: 5px;
+  font-size: 18px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23PrizePoolBox_2QyYg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23PrizePoolBox_2QyYg
+  .dpcroot_W23PrizePoolTitle_28S9- {
+  margin-right: 120px;
+  margin-left: 50px;
+  font-family: "Radiance", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderWinter2023League_1nTj9
+    .dpcroot_W23BannerContainer_j4-b6
+    .dpcroot_W23BannerContent_2HMLp
+    .dpcroot_W23PrizePoolBox_2QyYg
+    .dpcroot_W23PrizePoolTitle_28S9- {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23PrizePoolBox_2QyYg
+  .dpcroot_W23PrizePoolValue_2f76g {
+  margin-right: 120px;
+  margin-left: 50px;
+  margin-top: 3px;
+  color: #fff;
+  font-family: "Reaver", serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderWinter2023League_1nTj9
+    .dpcroot_W23BannerContainer_j4-b6
+    .dpcroot_W23BannerContent_2HMLp
+    .dpcroot_W23PrizePoolBox_2QyYg
+    .dpcroot_W23PrizePoolValue_2f76g {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23PrizePoolBox_2QyYg
+  .dpcroot_W23EventResultsTitle_ikHHC {
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-right: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Radiance", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: left;
+  filter: drop-shadow(0px 3px 3px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderWinter2023League_1nTj9
+    .dpcroot_W23BannerContainer_j4-b6
+    .dpcroot_W23BannerContent_2HMLp
+    .dpcroot_W23PrizePoolBox_2QyYg
+    .dpcroot_W23EventResultsTitle_ikHHC {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23PrizePoolBox_2QyYg
+  .dpcroot_W23EventResultsButton_2i2YM {
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 280px;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(90deg, #30de9f 0%, #1fbd84 100%);
+  box-shadow: 0px 6px 10px #00000057;
+  border-top: 2px solid #7cffd0;
+  border-radius: 4px;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.dpcroot_DPCHeaderWinter2023League_1nTj9
+  .dpcroot_W23BannerContainer_j4-b6
+  .dpcroot_W23BannerContent_2HMLp
+  .dpcroot_W23PrizePoolBox_2QyYg
+  .dpcroot_W23EventResultsButton_2i2YM:hover {
+  box-shadow: 0px 0px 10px #00ffa28c;
+  transform: translateY(-2px);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderWinter2023League_1nTj9
+    .dpcroot_W23BannerContainer_j4-b6
+    .dpcroot_W23BannerContent_2HMLp
+    .dpcroot_W23PrizePoolBox_2QyYg
+    .dpcroot_W23EventResultsButton_2i2YM {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Radiance", "Noto Sans", sans-serif;

@@ -3937,7 +3937,7 @@ img.category_icon {
 #achievementTable tbody tr:nth-of-type(2n) {
     background: #212121;
 }
-#achievementTable tbody tr td {
+#achievementTable tbody tr td, #achievementTable th {
     padding: 6px 4px;
 }
 
