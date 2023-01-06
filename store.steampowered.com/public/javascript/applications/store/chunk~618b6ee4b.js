@@ -16353,7 +16353,9 @@
           o =
             "saleitembrowser_" +
             t.unique_id +
-            (r.BIsTabFilteringEnabled() ? "_" + r.GetActiveTabUniqueID() : "");
+            ((null == r ? void 0 : r.BIsTabFilteringEnabled())
+              ? "_" + r.GetActiveTabUniqueID()
+              : "");
         return a.createElement(
           y.Y,
           {
@@ -20283,7 +20285,7 @@
         t.GetSaleSections().forEach((r, i) => {
           var o;
           const l = S[S.length - 1].activeTab;
-          if (!l.ShouldShowSection(r) || r.hide_section) return;
+          if (l && (!l.ShouldShowSection(r) || r.hide_section)) return;
           const d = "tabs" != r.section_type,
             m = c.g6
               .Get()
