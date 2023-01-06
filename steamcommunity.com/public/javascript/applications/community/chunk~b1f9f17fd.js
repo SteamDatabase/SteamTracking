@@ -29816,6 +29816,18 @@
                 description:
                   "Add the 'steam_top_releases' tag to this post. This allows the Steam Top Release Charts to pull the official top releases events into those pages.",
               }),
+            Boolean(
+              t.GetClanAccountID() == se.sq ||
+                ((2 == S.De.EUNIVERSE || 4 == S.De.EUNIVERSE) &&
+                  t.GetClanAccountID() == se.$Y)
+            ) &&
+              d.createElement(_.gE, {
+                onChange: (e) => t.SetTag("steam_best_of_year", e),
+                label: "(VO) Is Best of Year?",
+                checked: t.GetEventModel().BHasTag("steam_best_of_year"),
+                description:
+                  "Add the 'steam_best_of_year' tag to this post. This allows the Steam Best of Year to pull the official best of year events into those pages.",
+              }),
             Boolean(t.GetAppID() == se.QK) &&
               d.createElement(
                 "div",
@@ -35197,6 +35209,8 @@
           a = ["background", "capsule"];
         return (
           Boolean(S.JA.IS_OGG) && 34 != t.GetEventType() && a.push("spotlight"),
+          Boolean(t.GetEventModel().BHasTag("steam_best_of_year")) &&
+            a.push("bestofyear_banner", "bestofyear_banner_mobile"),
           d.createElement(
             L.S,
             null,
@@ -35330,7 +35344,26 @@
                 clanSteamID: t.GetClanSteamID(),
                 title: (0, E.Xx)("#EventEditor_ArtworkType_hero"),
                 artworkType: "hero",
-              })
+              }),
+            Boolean(t.GetEventModel().BHasTag("steam_best_of_year")) &&
+              d.createElement(
+                d.Fragment,
+                null,
+                d.createElement($.Yo, {
+                  clanSteamID: t.GetClanSteamID(),
+                  title: (0, E.Xx)(
+                    "#EventEditor_ArtworkType_bestofyear_banner"
+                  ),
+                  artworkType: "bestofyear_banner",
+                }),
+                d.createElement($.Yo, {
+                  clanSteamID: t.GetClanSteamID(),
+                  title: (0, E.Xx)(
+                    "#EventEditor_ArtworkType_bestofyear_banner_mobile"
+                  ),
+                  artworkType: "bestofyear_banner_mobile",
+                })
+              )
           )
         );
       }

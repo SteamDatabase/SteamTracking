@@ -442,6 +442,8 @@
     "EventEditor_ArtworkType_capsule": "Cover Image",
     "EventEditor_ArtworkType_background": "Header Image",
     "EventEditor_ArtworkType_spotlight": "Library Spotlight Banner",
+    "EventEditor_ArtworkType_bestofyear_banner": "Best of Year Banner",
+    "EventEditor_ArtworkType_bestofyear_banner_mobile": "Best of Year Mobile Banner",
     "EventEditor_ArtworkType_hero": "Library Hero Image",
     "EventEdtior_ArtworkType_hero_warning": "Your library assets are out of date. Please take a moment to update these assets, which are visible to all of your customers.",
     "EventEditor_ArtworkType_email_full": "Email Full Image",
