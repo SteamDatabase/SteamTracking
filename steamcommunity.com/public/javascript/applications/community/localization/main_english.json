@@ -1016,6 +1016,7 @@
     "selectimage_tip_optional_title": "Optional",
     "selectimage_tip_capsule_1": "This image usually contains artwork and branding that represents your event, plus any brief message you want to call out. Steam will automatically include your game's name and icon next to this image in some contexts, but you may want to include your game logo in the cover image as well since this image is used when your event is shared on social media.",
     "selectimage_tip_capsule_2": "It will appear on your store page in recent announcements, in lists of events and announcements, and on your library detail page. This image will be used to represent the event when it is shared on social media. It's used to link to your event/announcement and may be displayed alongside content from multiple games, so the image should be clear and recognizable.",
+    "selectimage_tip_bestofyear": "Banner image for best of year link on steam charts",
     "selectimage_see_documentation": "See documentation",
     "selectimage_preview": "Image Preview",
     "selectimage_upload_image": "Upload Image",

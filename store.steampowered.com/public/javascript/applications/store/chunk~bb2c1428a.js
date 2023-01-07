@@ -2146,8 +2146,12 @@
                 ))
               : "product_banner" === e
               ? (t = this.jsondata.localized_sale_product_banner)
-              : "product_mobile_banner" === e &&
-                (t = this.jsondata.localized_sale_product_mobile_banner);
+              : "product_mobile_banner" === e
+              ? (t = this.jsondata.localized_sale_product_mobile_banner)
+              : "bestofyear_banner" === e
+              ? (t = this.jsondata.localized_bestofyear_banner)
+              : "bestofyear_banner_mobile" === e &&
+                (t = this.jsondata.localized_bestofyear_banner_mobile);
           return t;
         }
         GetImageURL(e, t = 0, r = d.FN.full) {
