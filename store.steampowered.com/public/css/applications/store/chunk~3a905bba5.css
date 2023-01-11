@@ -3340,6 +3340,10 @@ html.touch
 .salepreviewwidgets_LocalizationSpan_3WrJ4 {
   white-space: pre-wrap;
 }
+.salepreviewwidgets_CapsuleName_3SHK9 {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+}
 .gameactions_GotSteamDialog_3omvM .gameactions_DownloadSteamUrl_Glr7k {
   color: #fff;
 }

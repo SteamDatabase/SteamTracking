@@ -11,6 +11,10 @@
   max-width: 936px;
   margin: auto;
 }
+.gameslistapp_Gameslistapp_2nl8H.GamepadMode {
+  padding-left: 24px;
+  padding-right: 24px;
+}
 .gameslistapp_DisplayControls_2_BHL {
   display: grid;
   grid-template-areas: "search bothOwned sort";
@@ -273,6 +277,10 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   background-repeat: no-repeat;
   animation: progressbar_loadingBarAnim_BX2Tm 2s linear infinite forwards;
 }
+.progressbar_ProgressBar_yZ55N.progressbar_AnimateProgress_1Ccdv.progressbar_Indeterminate_1sxT4::after {
+  width: 100%;
+  background-color: transparent;
+}
 @keyframes progressbar_loadingBarAnim_BX2Tm {
   0% {
     background-position-x: calc(0% - 250px);
@@ -305,10 +313,36 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .gameslistitems_GamesListItem_2-pQF.gameslistitems_Changing_2virZ {
-  background-color: #1f3748;
+  background-color: #3d4450;
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortait_x-YXr {
   grid-area: image;
+}
+.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortait_x-YXr img {
+  aspect-ratio: 92/43;
+}
+.gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_GameItemPortait_x-YXr
+  .gameslistitems_FallbackTitle_MHfYK {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  text-align: center;
+  word-break: break-word;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #b9c2cc;
+  background: linear-gradient(to bottom, #ffffff 0%, #b1b7ca 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+.gameslistitems_GamesListItem_2-pQF .gameslistitems_PortaitContainer_1xbFT {
+  position: relative;
 }
 .gameslistitems_HasAdultContent_2jXu5
   .gameslistitems_GamesListItem_2-pQF
@@ -392,6 +426,13 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   top: 12px;
   right: 12px;
 }
+.GamepadMode
+  .gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_GameLinks_35fxd {
+  position: unset;
+  top: unset;
+  left: unset;
+}
 @media (max-width: 51rem) {
   .gameslistitems_GamesListItem_2-pQF {
     grid-template-areas: "image title title" "image playtime playtime" "links playtime playtime";
@@ -413,8 +454,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     .gameslistitems_Hours2weeks_1_mJZ {
     display: none;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_StatLinks_1sruH {
+  .gameslistitems_GamesListItem_2-pQF .gameslistitems_ContentLinks_1yvGN {
     width: 100%;
+  }
+  .gameslistitems_GamesListItem_2-pQF .gameslistitems_StatLinks_1sruH {
+    display: none;
   }
 }
 @media (max-width: 30rem) {
@@ -430,8 +474,10 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     padding-right: var(--padding);
     background-color: rgba(58, 64, 74, 0.2);
   }
-  .gameslistitems_GamesListItem_2-pQF picture {
-    aspect-ratio: 2/1;
+  .gameslistitems_GamesListItem_2-pQF
+    .gameslistitems_GameItemPortait_x-YXr
+    img {
+    aspect-ratio: 2/3;
   }
   .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
     gap: 4px;
@@ -715,15 +761,17 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .gameslistitems_NavButton_3aNUl svg {
   width: 12px;
 }
-.gameslistitems_NavDropdownMenu_1Hvmx {
-  background: #373c44;
-  box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
-  padding: 0;
-  margin: 0;
-  min-width: 124px;
+.GamepadMode .gameslistitems_NavButton_3aNUl {
+  opacity: 0;
+  transition: opacity 200ms ease 100ms;
 }
-.gameslistitems_NavDropdownMenu_1Hvmx .gameslistitems_NavDropdownLoading_3MMER {
-  min-height: 200px;
+.GamepadMode
+  .gpfocuswithin.gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_NavButton_3aNUl {
+  opacity: 1;
+}
+.gameslistitems_NavDropdownMenu_1Hvmx {
+  min-width: 124px;
 }
 .gameslistitems_AchievementContainer_38RhR {
   display: grid;
@@ -880,6 +928,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-weight: 700;
   font-size: var(--typography-font-size-medium);
   margin-right: 8px;
+  color: inherit;
 }
 .gameslistitems_AchievementsProgress_3L-qR
   .gameslistitems_AchievementsFraction_1YRRM {

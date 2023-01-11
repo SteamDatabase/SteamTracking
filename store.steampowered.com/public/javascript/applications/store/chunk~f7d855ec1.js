@@ -782,144 +782,6 @@
       (0, i.gn)([u.ak], h.prototype, "TEST_OverrideClaimState", null),
         (0, i.gn)([u.ak], h.prototype, "UserClaimItem", null);
     },
-    13871: (e, t, r) => {
-      "use strict";
-      r.d(t, { mn: () => u });
-      var i = r(70655),
-        n = r(9669),
-        a = r.n(n),
-        s = r(67294),
-        o = (r(92398), r(82946), r(93976)),
-        l = r(99533),
-        c = r(64839),
-        m = r(90666);
-      class d {
-        constructor() {
-          (this.m_mapAppToDefs = new Map()),
-            (this.m_mapPromises = new Map()),
-            (this.m_listChangeCallback = new Map());
-        }
-        GetItemDefForAppID(e) {
-          return this.m_mapAppToDefs.get(e);
-        }
-        GetItemDefsChangeForEventID(e) {
-          return (
-            this.m_listChangeCallback.has(e) ||
-              this.m_listChangeCallback.set(e, new l.pB()),
-            this.m_listChangeCallback.get(e)
-          );
-        }
-        BHasLoadedDef(e) {
-          return this.m_mapPromises.has(e);
-        }
-        SetTestItemDefs(e, t) {
-          this.m_mapAppToDefs.set(e, t),
-            this.GetItemDefsChangeForEventID(e).Dispatch(t),
-            this.m_mapPromises.set(e, Promise.resolve(1));
-        }
-        LoadAppCommunityItems(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            return e
-              ? (this.m_mapPromises.has(e) ||
-                  this.m_mapPromises.set(
-                    e,
-                    this.InternalLoadAppCommunityItems(e, t)
-                  ),
-                this.m_mapPromises.get(e))
-              : 2;
-          });
-        }
-        InternalLoadAppCommunityItems(e, t) {
-          var r, n;
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let i = null;
-            try {
-              const s =
-                  m.De.COMMUNITY_BASE_URL +
-                  (t
-                    ? "minigame/ajaxgetgameitemdefsforeditor"
-                    : "minigame/ajaxgetgameitemdefs"),
-                l = {
-                  appid: e,
-                  origin: self.origin,
-                  l: m.De.LANGUAGE,
-                  sessionid: t ? m.De.SESSIONID : void 0,
-                },
-                c = yield a().get(s, { params: l, withCredentials: t });
-              if (
-                200 == (null == c ? void 0 : c.status) &&
-                1 ==
-                  (null === (r = null == c ? void 0 : c.data) || void 0 === r
-                    ? void 0
-                    : r.success) &&
-                (null === (n = null == c ? void 0 : c.data) || void 0 === n
-                  ? void 0
-                  : n.item_definitions)
-              )
-                return (
-                  this.m_mapAppToDefs.set(e, c.data.item_definitions),
-                  this.GetItemDefsChangeForEventID(e).Dispatch(
-                    c.data.item_definitions
-                  ),
-                  1
-                );
-              i = (0, o.l)(c);
-            } catch (e) {
-              i = (0, o.l)(e);
-            }
-            return (
-              console.error(
-                "CSaleMiniGameItemDefStore.InternalLoadAppCommunityItems failed: on appid " +
-                  e +
-                  " edit? " +
-                  t +
-                  " error: " +
-                  (null == i ? void 0 : i.strErrorMsg),
-                i
-              ),
-              2
-            );
-          });
-        }
-        static Get() {
-          return (
-            d.s_Singleton ||
-              ((d.s_Singleton = new d()),
-              d.s_Singleton.Init(),
-              "dev" == m.De.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = d.s_Singleton)),
-            d.s_Singleton
-          );
-        }
-        Init() {}
-      }
-      function u(e, t, r) {
-        const i = (function (e, t) {
-            const [r, i] = (0, s.useState)(d.Get().GetItemDefForAppID(e));
-            return (
-              (0, s.useEffect)(() => {
-                e &&
-                  !d.Get().BHasLoadedDef(e) &&
-                  d.Get().LoadAppCommunityItems(e, t);
-              }, [e, t]),
-              (0, c.Qg)(d.Get().GetItemDefsChangeForEventID(e), i),
-              r
-            );
-          })(e, r),
-          [n, a] = (0, s.useState)(null);
-        return (
-          (0, s.useEffect)(() => {
-            if (e && i && null == n) {
-              const r = i.find(
-                (r) => r.active && r.appid == e && r.item_type == t
-              );
-              r && a(r);
-            }
-          }, [n, i, e, t]),
-          n
-        );
-      }
-    },
     60419: (e, t, r) => {
       "use strict";
       r.d(t, { NT: () => c, tx: () => l });
@@ -976,7 +838,7 @@
                 p || (0, s.Xx)("#Error_ErrorCommunicatingWithNetwork")
               )
             )
-          : u || h
+          : u || h || g
           ? i.createElement(
               n.uH,
               {
@@ -5282,7 +5144,7 @@
         p = r(41311),
         h = r(90666),
         g = r(79438),
-        _ = r(82942);
+        _ = r(86770);
       function f(e) {
         const t = (0, a.Ax)(),
           { bLoading: r } = t,
@@ -5368,41 +5230,172 @@
         );
       }
     },
-    82942: (e, t, r) => {
+    86770: (e, t, r) => {
       "use strict";
-      r.d(t, { v: () => m, x: () => c });
+      r.d(t, { v: () => f, x: () => _ });
       var i = r(13271),
         n = r(67294),
-        a = (r(26149), r(92398), r(37662), r(85121), r(21205), r(13871)),
-        s = r(13596),
-        o = r(41311),
-        l = r(90666);
-      function c(e) {
+        a = (r(26149), r(92398), r(37662), r(85121), r(21205), r(70655)),
+        s = r(9669),
+        o = r.n(s),
+        l = (r(82946), r(93976)),
+        c = r(99533),
+        m = r(64839),
+        d = r(90666);
+      class u {
+        constructor() {
+          (this.m_mapAppToDefs = new Map()),
+            (this.m_mapPromises = new Map()),
+            (this.m_listChangeCallback = new Map());
+        }
+        GetItemDefForAppID(e) {
+          return this.m_mapAppToDefs.get(e);
+        }
+        GetItemDefsChangeForEventID(e) {
+          return (
+            this.m_listChangeCallback.has(e) ||
+              this.m_listChangeCallback.set(e, new c.pB()),
+            this.m_listChangeCallback.get(e)
+          );
+        }
+        BHasLoadedDef(e) {
+          return this.m_mapPromises.has(e);
+        }
+        SetTestItemDefs(e, t) {
+          this.m_mapAppToDefs.set(e, t),
+            this.GetItemDefsChangeForEventID(e).Dispatch(t),
+            this.m_mapPromises.set(e, Promise.resolve(1));
+        }
+        LoadAppCommunityItems(e, t) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            return e
+              ? (this.m_mapPromises.has(e) ||
+                  this.m_mapPromises.set(
+                    e,
+                    this.InternalLoadAppCommunityItems(e, t)
+                  ),
+                this.m_mapPromises.get(e))
+              : 2;
+          });
+        }
+        InternalLoadAppCommunityItems(e, t) {
+          var r, i;
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let n = null;
+            try {
+              const a =
+                  d.De.COMMUNITY_BASE_URL +
+                  (t
+                    ? "minigame/ajaxgetgameitemdefsforeditor"
+                    : "minigame/ajaxgetgameitemdefs"),
+                s = {
+                  appid: e,
+                  origin: self.origin,
+                  l: d.De.LANGUAGE,
+                  sessionid: t ? d.De.SESSIONID : void 0,
+                },
+                c = yield o().get(a, { params: s, withCredentials: t });
+              if (
+                200 == (null == c ? void 0 : c.status) &&
+                1 ==
+                  (null === (r = null == c ? void 0 : c.data) || void 0 === r
+                    ? void 0
+                    : r.success) &&
+                (null === (i = null == c ? void 0 : c.data) || void 0 === i
+                  ? void 0
+                  : i.item_definitions)
+              )
+                return (
+                  this.m_mapAppToDefs.set(e, c.data.item_definitions),
+                  this.GetItemDefsChangeForEventID(e).Dispatch(
+                    c.data.item_definitions
+                  ),
+                  1
+                );
+              n = (0, l.l)(c);
+            } catch (e) {
+              n = (0, l.l)(e);
+            }
+            return (
+              console.error(
+                "CSaleMiniGameItemDefStore.InternalLoadAppCommunityItems failed: on appid " +
+                  e +
+                  " edit? " +
+                  t +
+                  " error: " +
+                  (null == n ? void 0 : n.strErrorMsg),
+                n
+              ),
+              2
+            );
+          });
+        }
+        static Get() {
+          return (
+            u.s_Singleton ||
+              ((u.s_Singleton = new u()),
+              u.s_Singleton.Init(),
+              "dev" == d.De.WEB_UNIVERSE &&
+                (window.g_SaleMiniGameItemDefStore = u.s_Singleton)),
+            u.s_Singleton
+          );
+        }
+        Init() {}
+      }
+      function p(e, t, r) {
+        const i = (function (e, t) {
+            const [r, i] = (0, n.useState)(u.Get().GetItemDefForAppID(e));
+            return (
+              (0, n.useEffect)(() => {
+                e &&
+                  !u.Get().BHasLoadedDef(e) &&
+                  u.Get().LoadAppCommunityItems(e, t);
+              }, [e, t]),
+              (0, m.Qg)(u.Get().GetItemDefsChangeForEventID(e), i),
+              r
+            );
+          })(e, r),
+          [a, s] = (0, n.useState)(null);
+        return (
+          (0, n.useEffect)(() => {
+            if (e && i && null == a) {
+              const r = i.find(
+                (r) => r.active && r.appid == e && r.item_type == t
+              );
+              r && s(r);
+            }
+          }, [a, i, e, t]),
+          a
+        );
+      }
+      var h = r(13596),
+        g = r(41311);
+      function _(e) {
         const { appid: t, community_item_type: r } = e,
-          i = (0, a.mn)(t, r);
+          i = p(t, r);
         if (
           (null == i ? void 0 : i.item_movie_mp4) &&
           (null == i ? void 0 : i.item_movie_webm)
         ) {
-          const e = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+          const e = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
               null == i ? void 0 : i.item_image_large
             }`,
-            r = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+            r = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
               null == i ? void 0 : i.item_movie_webm
             }`,
-            a = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+            a = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
               null == i ? void 0 : i.item_movie_mp4
             }`;
           return n.createElement(
             "video",
             { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
             n.createElement("source", { src: r, type: "video/webm" }),
-            Boolean(!l.De.IN_CLIENT) &&
+            Boolean(!d.De.IN_CLIENT) &&
               n.createElement("source", { src: a, type: "video/mp4" })
           );
         }
         if (i) {
-          const r = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+          const r = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
             (null == i ? void 0 : i.item_image_small) ||
             (null == i ? void 0 : i.item_image_large)
           }`;
@@ -5412,15 +5405,15 @@
             alt: null == i ? void 0 : i.item_name,
           });
         }
-        return n.createElement(s.V, {
+        return n.createElement(h.V, {
           size: "small",
-          string: (0, o.Xx)("#Loading"),
+          string: (0, g.Xx)("#Loading"),
         });
       }
-      function m(e) {
-        const { section: t, rewardDef: r, language: s } = e,
-          o = (0, a.mn)(r.appid, r.community_item_type),
-          [m] = (0, i.SZ)(() => {
+      function f(e) {
+        const { section: t, rewardDef: r, language: a } = e,
+          s = p(r.appid, r.community_item_type),
+          [o] = (0, i.SZ)(() => {
             var e;
             return [
               Boolean(
@@ -5430,34 +5423,34 @@
               ),
             ];
           });
-        let d;
+        let l;
         switch (r.community_class) {
           case 14:
           case 15:
-            d = `${l.De.COMMUNITY_BASE_URL}my/edit/avatar`;
+            l = `${d.De.COMMUNITY_BASE_URL}my/edit/avatar`;
             break;
           case 1:
-            d = `${l.De.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
+            l = `${d.De.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
             break;
           case 3:
           case 8:
-            d = `${l.De.COMMUNITY_BASE_URL}my/edit/background`;
+            l = `${d.De.COMMUNITY_BASE_URL}my/edit/background`;
             break;
           case 13:
-            d = `${l.De.COMMUNITY_BASE_URL}my/edit/miniprofile`;
+            l = `${d.De.COMMUNITY_BASE_URL}my/edit/miniprofile`;
             break;
           case 11:
-            d = `${l.De.COMMUNITY_BASE_URL}chat`;
+            l = `${d.De.COMMUNITY_BASE_URL}chat`;
         }
         return n.createElement(
           "a",
-          { href: d },
-          n.createElement(c, {
+          { href: l },
+          n.createElement(_, {
             appid: null == r ? void 0 : r.appid,
             community_item_type: null == r ? void 0 : r.community_item_type,
           }),
-          Boolean(m) &&
-            n.createElement("span", null, null == o ? void 0 : o.item_name)
+          Boolean(o) &&
+            n.createElement("span", null, null == s ? void 0 : s.item_name)
         );
       }
     },

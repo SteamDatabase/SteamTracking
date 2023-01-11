@@ -3705,13 +3705,14 @@
         })(d || (d = {})),
         (function (e) {
           (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
-            (e[(e.Overlay = 1)] = "Overlay"),
+            (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
             (e[(e.Keyboard = 2)] = "Keyboard"),
             (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
             (e[(e.VR = 4)] = "VR"),
             (e[(e.SteamLibrary = 5)] = "SteamLibrary"),
             (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
-            (e[(e.DesktopLogin = 7)] = "DesktopLogin");
+            (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
+            (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI");
         })(u || (u = {}));
       class m {}
       var h;
@@ -4803,6 +4804,7 @@
               "ApplyBrowserScaleToDimensions"),
             (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
             (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (e[(e.NoMinimize = 32768)] = "NoMinimize"),
             (e[(e.Overlay = 8712)] = "Overlay"),
             (e[(e.Notification = 25096)] = "Notification");
         })(i || (i = {}));
@@ -6862,7 +6864,7 @@
         }
         GetActiveContext() {
           var e;
-          if (!this.m_ActiveContext) {
+          if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
             console.warn("No active context; finding one");
             for (const e of this.m_rgAllContexts) {
               const t = e.FindNavTreeInFocusedWindow();
@@ -6879,7 +6881,8 @@
             }
           }
           return (
-            this.m_ActiveContext ||
+            !this.m_ActiveContext &&
+              this.m_LastActiveContext &&
               ((0, o.X)(
                 !1,
                 `Failed to find an active context, will fall back to ${
@@ -8919,6 +8922,9 @@
             (this.m_controller = e),
             (this.m_rootWindow = t),
             (this.m_activeWindow = t);
+        }
+        get RootWindow() {
+          return this.m_rootWindow;
         }
         get ActiveWindow() {
           return this.m_activeWindow;
@@ -18192,6 +18198,7 @@
                   h.E_.Provider,
                   {
                     value: {
+                      IN_DESKTOPUI: null == u ? void 0 : u.IN_DESKTOPUI,
                       IN_GAMEPADUI:
                         null !== (n = null == u ? void 0 : u.IN_GAMEPADUI) &&
                         void 0 !== n &&
@@ -23608,41 +23615,55 @@
     90666: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => d,
+        De: () => m,
         E_: () => l,
-        Ek: () => C,
-        JA: () => h,
-        Kc: () => D,
-        L7: () => u,
-        Wj: () => p,
-        Zv: () => T,
-        dk: () => m,
-        id: () => c,
-        ip: () => E,
-        kQ: () => w,
-        x: () => S,
-        y9: () => v,
+        Ek: () => b,
+        JA: () => g,
+        Kc: () => M,
+        L7: () => h,
+        Wj: () => _,
+        Zv: () => k,
+        dk: () => p,
+        fI: () => d,
+        id: () => u,
+        ip: () => D,
+        kQ: () => y,
+        x: () => w,
+        y9: () => S,
       });
       var i = n(70655),
         r = n(48899),
         s = n(61939),
         o = (n(26149), n(67294)),
         a = n(77520);
-      const l = o.createContext({});
-      function c() {
-        const e = (() => {
+      const l = o.createContext({}),
+        c = () => {
           let e = o.useContext(l);
           return (
             (0, a.X)(
               void 0 !== e.IN_GAMEPADUI,
-              "Trying to use ConfigContext without a provider!"
+              "Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application."
             ),
             e
           );
-        })();
+        };
+      function d(e) {
+        const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: r } = e,
+          s = o.useMemo(
+            () => ({
+              IN_GAMEPADUI: null != t ? t : m.IN_GAMEPADUI,
+              IN_DESKTOPUI: null != n && n,
+              IN_VR: null != i && i,
+            }),
+            [t, n, i]
+          );
+        return o.createElement(l.Provider, { value: s }, r);
+      }
+      function u() {
+        const e = c();
         return null == e ? void 0 : e.IN_GAMEPADUI;
       }
-      const d = {
+      const m = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -23690,9 +23711,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, s.t$)()) return _ || (_ = f()), _;
+              if (!(0, s.t$)()) return v || (v = C()), v;
               let e = (0, s.bG)("sessionid");
-              e || (e = f());
+              e || (e = C());
               return e;
             })();
           },
@@ -23709,7 +23730,7 @@
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
         },
-        u = {
+        h = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -23724,8 +23745,8 @@
           short_url: "",
           country_code: "",
         },
-        m = { steamid: "", clanid: 0, listid: 0 },
-        h = {
+        p = { steamid: "", clanid: 0, listid: 0 },
+        g = {
           CLANSTEAMID: "",
           CLANACCOUNTID: 0,
           APPID: 0,
@@ -23742,10 +23763,10 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        p = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
-        g = "webui_config";
-      let _;
-      function f() {
+        _ = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
+        f = "webui_config";
+      let v;
+      function C() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, r.LO)(0, 35).toString(36);
@@ -23753,44 +23774,44 @@
         })();
         return (0, s.I1)("sessionid", e, 0), e;
       }
-      function v() {
+      function S() {
         let e = null;
         return (
           (0, s.t$)() && (e = (0, s.bG)("presentation_mode")),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function C(e = g) {
+      function b(e = f) {
         const t = {},
-          n = w("config", e);
-        n && (delete n.SESSIONID, Object.assign(d, n), (t.config = !0));
-        const i = w("userinfo", e);
+          n = y("config", e);
+        n && (delete n.SESSIONID, Object.assign(m, n), (t.config = !0));
+        const i = y("userinfo", e);
         i &&
-          (Object.assign(u, i),
+          (Object.assign(h, i),
           (t.userConfig = !0),
-          u.is_support && v() && (u.is_support = !1));
-        const r = w("broadcast", e);
-        r && (Object.assign(m, r), (t.broadcastConfig = !0));
-        const s = w("community", e);
-        s && (Object.assign(h, s), (t.communityConfig = !0));
-        const o = w("event", e);
-        return o && (Object.assign(p, o), (t.eventConfig = !0)), t;
+          h.is_support && S() && (h.is_support = !1));
+        const r = y("broadcast", e);
+        r && (Object.assign(p, r), (t.broadcastConfig = !0));
+        const s = y("community", e);
+        s && (Object.assign(g, s), (t.communityConfig = !0));
+        const o = y("event", e);
+        return o && (Object.assign(_, o), (t.eventConfig = !0)), t;
       }
-      function S(e, t, n) {
+      function w(e, t, n) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           if (n.config) {
             const n = (yield e.get(t + "ajaxgetconfig")).data;
-            n && (delete n.SESSIONID, Object.assign(d, n));
+            n && (delete n.SESSIONID, Object.assign(m, n));
           }
           if (n.userConfig) {
             const n = (yield e.get(t + "ajaxgetuserconfig", {
               withCredentials: !0,
             })).data;
-            n && Object.assign(u, n);
+            n && Object.assign(h, n);
           }
         });
       }
-      function b(e, t = g, n) {
+      function E(e, t = f, n) {
         let i;
         if (
           ((i =
@@ -23810,54 +23831,54 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function w(e, t = g) {
-        return b(e, t, !0);
+      function y(e, t = f) {
+        return E(e, t, !0);
       }
-      function E(e, t = g) {
-        return b(e, t, !1);
+      function D(e, t = f) {
+        return E(e, t, !1);
       }
-      function y(e, t) {
+      function T(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function D() {
+      function M() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return y(e, d.STORE_BASE_URL)
-          ? d.STORE_BASE_URL
-          : y(e, d.COMMUNITY_BASE_URL)
-          ? d.COMMUNITY_BASE_URL
-          : y(e, d.CHAT_BASE_URL)
-          ? d.CHAT_BASE_URL
-          : y(e, d.PARTNER_BASE_URL)
-          ? d.PARTNER_BASE_URL
-          : y(e, d.HELP_BASE_URL)
-          ? d.HELP_BASE_URL
-          : y(e, d.STEAMTV_BASE_URL)
-          ? d.STEAMTV_BASE_URL
-          : y(e, d.STATS_BASE_URL)
-          ? d.STATS_BASE_URL
-          : y(e, d.INTERNAL_STATS_BASE_URL)
-          ? d.INTERNAL_STATS_BASE_URL
-          : y(e, d.STORE_CHECKOUT_BASE_URL)
-          ? d.STORE_CHECKOUT_BASE_URL
-          : y(e, "https://steamloopback.host")
+        return T(e, m.STORE_BASE_URL)
+          ? m.STORE_BASE_URL
+          : T(e, m.COMMUNITY_BASE_URL)
+          ? m.COMMUNITY_BASE_URL
+          : T(e, m.CHAT_BASE_URL)
+          ? m.CHAT_BASE_URL
+          : T(e, m.PARTNER_BASE_URL)
+          ? m.PARTNER_BASE_URL
+          : T(e, m.HELP_BASE_URL)
+          ? m.HELP_BASE_URL
+          : T(e, m.STEAMTV_BASE_URL)
+          ? m.STEAMTV_BASE_URL
+          : T(e, m.STATS_BASE_URL)
+          ? m.STATS_BASE_URL
+          : T(e, m.INTERNAL_STATS_BASE_URL)
+          ? m.INTERNAL_STATS_BASE_URL
+          : T(e, m.STORE_CHECKOUT_BASE_URL)
+          ? m.STORE_CHECKOUT_BASE_URL
+          : T(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function T() {
+      function k() {
         const e = window.location.href;
-        return y(e, d.STORE_BASE_URL) || y(e, d.STORE_CHECKOUT_BASE_URL)
+        return T(e, m.STORE_BASE_URL) || T(e, m.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : y(e, d.COMMUNITY_BASE_URL)
+          : T(e, m.COMMUNITY_BASE_URL)
           ? "community"
-          : y(e, d.PARTNER_BASE_URL)
+          : T(e, m.PARTNER_BASE_URL)
           ? "partnerweb"
-          : y(e, d.HELP_BASE_URL)
+          : T(e, m.HELP_BASE_URL)
           ? "help"
-          : y(e, d.STEAMTV_BASE_URL)
+          : T(e, m.STEAMTV_BASE_URL)
           ? "steamtv"
-          : y(e, d.STATS_BASE_URL) || y(e, d.INTERNAL_STATS_BASE_URL)
+          : T(e, m.STATS_BASE_URL) || T(e, m.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -24699,7 +24720,7 @@
             n.e(1614),
             n.e(4193),
             n.e(5331),
-          ]).then(n.bind(n, 77073))
+          ]).then(n.bind(n, 95133))
         ),
         oe = s.lazy(() =>
           Promise.all([
@@ -25482,8 +25503,8 @@
           v.u.Provider,
           { value: { bCanUseLink: !0 } },
           s.createElement(
-            l.E_.Provider,
-            { value: { IN_GAMEPADUI: l.De.IN_GAMEPADUI, IN_VR: !1 } },
+            l.fI,
+            null,
             s.createElement(
               J,
               null,

@@ -40,7 +40,7 @@
     13354: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Bo: () => b,
+        Bo: () => L,
         FG: () => D,
         N: () => I,
         P4: () => y,
@@ -74,7 +74,7 @@
             (t.list_jsondata = {}));
       }
       const C = "0";
-      function L(t, e) {
+      function b(t, e) {
         (e.localized_flat_title = (0, m.LG)([], 30, null)),
           (e.localized_flat_blurb = (0, m.LG)([], 30, null)),
           (e.localized_flat_link = (0, m.LG)([], 30, null)),
@@ -103,7 +103,7 @@
               (e.localized_flat_link[t.language] = t.localized_string);
           });
       }
-      class b {
+      class L {
         constructor() {
           (this.m_mapList = new Map()),
             (this.m_mapEventGIDToLists = new Map()),
@@ -121,7 +121,7 @@
                 t.forEach((t) => {
                   t.multi_detail_lists.forEach((e) => {
                     h(e),
-                      L(t.curation_language, e),
+                      b(t.curation_language, e),
                       this.m_mapList.set(e.listid, e);
                   });
                 });
@@ -164,7 +164,7 @@
                     "Wanted" + e + "but got" + (null == n ? void 0 : n.listid)
                   ),
                   h(n),
-                  L(l.data.curation_language, n),
+                  b(l.data.curation_language, n),
                   this.m_mapList.set(e, n),
                   this.m_mapListIDToClanAccount.set(e, t.GetAccountID()),
                   n
@@ -254,7 +254,7 @@
                             e.clan_account_id
                           ),
                             h(n),
-                            L(e.curation_language, n),
+                            b(e.curation_language, n),
                             this.m_mapList.set(n.listid, n),
                             t.push(n);
                         });
@@ -272,7 +272,7 @@
           });
         }
         static Get() {
-          return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
+          return L.s_Singleton || (L.s_Singleton = new L()), L.s_Singleton;
         }
         ValidateStoreDefault(t) {
           const e = t;
@@ -293,13 +293,13 @@
         const n = (0, E.NW)();
         return (
           (0, l.useEffect)(() => {
-            if (b.Get().GetListDetails(e) || !t) return;
+            if (L.Get().GetListDetails(e) || !t) return;
             const o = i().CancelToken.source();
             return (
               (() => {
                 (0, a.mG)(this, void 0, void 0, function* () {
                   var a, i;
-                  const r = yield b.Get().LoadListDetails(t, e);
+                  const r = yield L.Get().LoadListDetails(t, e);
                   if (!o.token.reason)
                     if (
                       null === (a = null == r ? void 0 : r.apps) || void 0 === a
@@ -331,7 +331,7 @@
               () => o.cancel("unmounting CuratorList")
             );
           }, [t, e, n]),
-          b.Get().GetListDetails(e)
+          L.Get().GetListDetails(e)
         );
       }
       function y(t) {
@@ -381,11 +381,11 @@
           o
         );
       }
-      (0, a.gn)([r.LO], b.prototype, "m_mapList", void 0);
+      (0, a.gn)([r.LO], L.prototype, "m_mapList", void 0);
     },
     87541: (t, e, n) => {
       "use strict";
-      n.d(e, { B: () => w, O: () => G });
+      n.d(e, { B: () => G, O: () => w });
       var a = n(67294),
         o = n(77442),
         i = n(7707),
@@ -404,15 +404,15 @@
         f = n(9487),
         h = (n(45031), n(75896)),
         C = n(72062),
-        L = n(72842),
-        b = n(5146),
+        b = n(72842),
+        L = n(5146),
         I = n(65160),
         y = n(65924),
         D = n(7573),
         S = n(41311),
         A = n(90666);
-      const G = "capsule_index_";
-      function w(t) {
+      const w = "capsule_index_";
+      function G(t) {
         const {
             capsule: e,
             bShowParentApp: n,
@@ -422,17 +422,17 @@
           } = t,
           [v, E] = a.useState(!1),
           [f] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
-          [L] = (0, d.vs)(n && (null == f ? void 0 : f.GetParentAppID()), o.bk),
+          [b] = (0, d.vs)(n && (null == f ? void 0 : f.GetParentAppID()), o.bk),
           I = (0, y.bJ)(),
-          w = (0, A.id)();
+          G = (0, A.id)();
         if (!f) return null;
-        const O = Boolean(L);
+        const O = Boolean(b);
         return a.createElement(
           r.s,
           {
             className: (0, D.Z)({
               [g().OuterCapsuleContainer]: !0,
-              [G + m]: 0 == m,
+              [w + m]: 0 == m,
             }),
             navEntryPreferPosition: l.c4.PREFERRED_CHILD,
           },
@@ -450,7 +450,7 @@
                 bHidePrice: t.bHidePrice,
                 bUseSubscriptionLayout: t.bUseSubscriptionLayout,
                 strExtraParams: t.strExtraParams,
-                fnOnHoverStateChange: !w && E,
+                fnOnHoverStateChange: !G && E,
                 nCreatorAccountID: t.creatorAccountID,
               },
               a.createElement(
@@ -469,11 +469,11 @@
               i.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, h.h)(L, I, w, t.strExtraParams)
+                (0, h.h)(b, I, G, t.strExtraParams)
               ),
               a.createElement(
                 C.zw,
-                { appid: L.GetAppID() },
+                { appid: b.GetAppID() },
                 a.createElement(
                   "div",
                   { className: g().ParentType },
@@ -484,10 +484,10 @@
                   )
                 ),
                 a.createElement(
-                  b._,
+                  L._,
                   {
                     type: "app",
-                    id: L.GetAppID(),
+                    id: b.GetAppID(),
                     strExtraParams: t.strExtraParams,
                   },
                   a.createElement(
@@ -496,8 +496,8 @@
                       {
                         loading: "lazy",
                         className: _.AppCapsuleImage,
-                        alt: L.GetName(),
-                        src: L.GetAssets().GetSmallCapsuleURL(),
+                        alt: b.GetName(),
+                        src: b.GetAssets().GetSmallCapsuleURL(),
                       },
                       (0, o.fn)()
                     )
@@ -518,44 +518,45 @@
             bHasParentAppToDisplay: v,
             bUseSubscriptionLayout: g,
             elElementToAppendToHover: h,
-            bHidePrice: b,
+            bHidePrice: L,
             bHidePlatforms: D,
             creatorAccountID: S,
             bIsHovered: A,
           } = t,
-          [G] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
-          w = (0, y.bJ)(),
+          [w] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
+          G = (0, y.bJ)(),
           T =
             ((0, C.Dt)(n.type),
             (0, a.useMemo)(
-              () => (null == G ? void 0 : G.GetIncludedAppIDsOrSelf()),
-              [G]
+              () => (null == w ? void 0 : w.GetIncludedAppIDsOrSelf()),
+              [w]
             )),
           O =
-            G &&
-            (null == G
+            w &&
+            (null == w
               ? void 0
-              : G.GetIncludedAppIDsOrSelf().every((t) =>
-                  c.jg.Get().BOwnsApp(t)
-                ));
-        if (!G) return null;
+              : w
+                  .GetIncludedAppIDsOrSelf()
+                  .every((t) => c.jg.Get().BOwnsApp(t)));
+        if (!w) return null;
         const P = O && !r,
-          z = (0, s.Hf)(`${G.GetStorePageURL()}${l || ""}`, w);
+          z = (0, s.Hf)(`${w.GetStorePageURL()}${l || ""}`, G);
         let H,
           j = null;
-        if (g && 0 == (null == G ? void 0 : G.GetStoreItemType()))
-          j = a.createElement(L.r, { appid: G.GetAppID(), bIsMuted: A });
+        if (g && 0 == (null == w ? void 0 : w.GetStoreItemType()))
+          j = a.createElement(b.r, { appid: w.GetAppID(), bIsMuted: A });
         else if (h);
         else {
-          const t = O && o,
-            e = P;
+          const e = O && o,
+            i = P;
           j = a.createElement(m.Hl, {
             info: n,
-            bShowAsMuted: e,
-            bHidePrice: b,
-            bShowInLibraryInsteadOfPrice: t,
+            bShowAsMuted: i,
+            bHidePrice: L,
+            bShowInLibraryInsteadOfPrice: e,
             bHidePlatforms: D,
             creatorAccountID: S,
+            bShowName: t.bShowName,
           });
         }
         return (
@@ -578,7 +579,7 @@
             a.createElement(m.a4, { imageType: _, info: n }),
             a.createElement(I.y, {
               eDeckCompatibilityCategory:
-                null === (e = null == G ? void 0 : G.GetPlatforms()) ||
+                null === (e = null == w ? void 0 : w.GetPlatforms()) ||
                 void 0 === e
                   ? void 0
                   : e.steam_deck_compat_category,

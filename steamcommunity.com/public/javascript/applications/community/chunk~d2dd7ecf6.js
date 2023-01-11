@@ -7861,15 +7861,16 @@
           O = n.createElement(b.r, { appid: x.GetAppID(), bIsMuted: w });
         else if (E);
         else {
-          const e = M && i,
-            t = G;
+          const t = M && i,
+            r = G;
           O = n.createElement(p.Hl, {
             info: a,
-            bShowAsMuted: t,
+            bShowAsMuted: r,
             bHidePrice: C,
-            bShowInLibraryInsteadOfPrice: e,
+            bShowInLibraryInsteadOfPrice: t,
             bHidePlatforms: I,
             creatorAccountID: D,
+            bShowName: e.bShowName,
           });
         }
         return (

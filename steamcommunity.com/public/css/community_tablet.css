@@ -73,11 +73,6 @@ html.tablet .profile_small_header_bg {
 	max-width: unset;
 }
 
-html.tablet .profile_small_header_text {
-	padding-left: calc( 60px + 3% );
-	bottom: 36px;
-}
-
 html.tablet .profile_small_header_texture {
 	background: none;
 	height: unset;
@@ -96,6 +91,13 @@ html.tablet .profile_small_header_text {
 	flex-direction: row;
 	align-items: baseline;
 	column-gap: 6px;
+	max-height: unset;
+}
+html.tablet .profile_small_header_text h1 {
+	padding-bottom: unset;
+}
+html.tablet .profile_small_header_text h2 {
+	padding-top: unset;
 }
 
 html.tablet .profile_small_header_avatar {
@@ -143,6 +145,7 @@ html.tablet .maincontent {
 }
 
 html.tablet #mainContents {
+	width: 100%;
 	max-width: unset;
 }
 

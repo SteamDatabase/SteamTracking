@@ -914,13 +914,14 @@
         })(u || (u = {})),
         (function (e) {
           (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
-            (e[(e.Overlay = 1)] = "Overlay"),
+            (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
             (e[(e.Keyboard = 2)] = "Keyboard"),
             (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
             (e[(e.VR = 4)] = "VR"),
             (e[(e.SteamLibrary = 5)] = "SteamLibrary"),
             (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
-            (e[(e.DesktopLogin = 7)] = "DesktopLogin");
+            (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
+            (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI");
         })(d || (d = {}));
       class m {}
       var h;
@@ -2012,6 +2013,7 @@
               "ApplyBrowserScaleToDimensions"),
             (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
             (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (e[(e.NoMinimize = 32768)] = "NoMinimize"),
             (e[(e.Overlay = 8712)] = "Overlay"),
             (e[(e.Notification = 25096)] = "Notification");
         })(i || (i = {}));
@@ -4069,7 +4071,7 @@
         }
         GetActiveContext() {
           var e;
-          if (!this.m_ActiveContext) {
+          if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
             console.warn("No active context; finding one");
             for (const e of this.m_rgAllContexts) {
               const t = e.FindNavTreeInFocusedWindow();
@@ -4086,7 +4088,8 @@
             }
           }
           return (
-            this.m_ActiveContext ||
+            !this.m_ActiveContext &&
+              this.m_LastActiveContext &&
               ((0, s.X)(
                 !1,
                 `Failed to find an active context, will fall back to ${
@@ -6216,6 +6219,9 @@
             (this.m_controller = e),
             (this.m_rootWindow = t),
             (this.m_activeWindow = t);
+        }
+        get RootWindow() {
+          return this.m_rootWindow;
         }
         get ActiveWindow() {
           return this.m_activeWindow;
@@ -15076,6 +15082,7 @@
                   h.E_.Provider,
                   {
                     value: {
+                      IN_DESKTOPUI: null == d ? void 0 : d.IN_DESKTOPUI,
                       IN_GAMEPADUI:
                         null !== (n = null == d ? void 0 : d.IN_GAMEPADUI) &&
                         void 0 !== n &&
@@ -19259,38 +19266,52 @@
     90666: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => c,
+        De: () => d,
         E_: () => a,
-        Ek: () => f,
-        JA: () => m,
-        Kc: () => w,
-        L7: () => u,
-        Wj: () => h,
-        Zv: () => y,
-        id: () => l,
-        ip: () => E,
-        kQ: () => b,
-        y9: () => v,
+        Ek: () => b,
+        JA: () => p,
+        Kc: () => D,
+        L7: () => m,
+        Wj: () => g,
+        Zv: () => T,
+        fI: () => c,
+        id: () => u,
+        ip: () => w,
+        kQ: () => S,
+        y9: () => C,
       });
       var i = n(48899),
         r = n(61939),
         o = (n(26149), n(67294)),
         s = n(77520);
-      const a = o.createContext({});
-      function l() {
-        const e = (() => {
+      const a = o.createContext({}),
+        l = () => {
           let e = o.useContext(a);
           return (
             (0, s.X)(
               void 0 !== e.IN_GAMEPADUI,
-              "Trying to use ConfigContext without a provider!"
+              "Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application."
             ),
             e
           );
-        })();
+        };
+      function c(e) {
+        const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: r } = e,
+          s = o.useMemo(
+            () => ({
+              IN_GAMEPADUI: null != t ? t : d.IN_GAMEPADUI,
+              IN_DESKTOPUI: null != n && n,
+              IN_VR: null != i && i,
+            }),
+            [t, n, i]
+          );
+        return o.createElement(a.Provider, { value: s }, r);
+      }
+      function u() {
+        const e = l();
         return null == e ? void 0 : e.IN_GAMEPADUI;
       }
-      const c = {
+      const d = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -19338,9 +19359,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, r.t$)()) return g || (g = _()), g;
+              if (!(0, r.t$)()) return v || (v = f()), v;
               let e = (0, r.bG)("sessionid");
-              e || (e = _());
+              e || (e = f());
               return e;
             })();
           },
@@ -19357,7 +19378,7 @@
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
         },
-        u = {
+        m = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -19372,8 +19393,8 @@
           short_url: "",
           country_code: "",
         },
-        d = { steamid: "", clanid: 0, listid: 0 },
-        m = {
+        h = { steamid: "", clanid: 0, listid: 0 },
+        p = {
           CLANSTEAMID: "",
           CLANACCOUNTID: 0,
           APPID: 0,
@@ -19390,10 +19411,10 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        h = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
-        p = "webui_config";
-      let g;
-      function _() {
+        g = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
+        _ = "webui_config";
+      let v;
+      function f() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, i.LO)(0, 35).toString(36);
@@ -19401,30 +19422,30 @@
         })();
         return (0, r.I1)("sessionid", e, 0), e;
       }
-      function v() {
+      function C() {
         let e = null;
         return (
           (0, r.t$)() && (e = (0, r.bG)("presentation_mode")),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function f(e = p) {
+      function b(e = _) {
         const t = {},
-          n = b("config", e);
-        n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
-        const i = b("userinfo", e);
+          n = S("config", e);
+        n && (delete n.SESSIONID, Object.assign(d, n), (t.config = !0));
+        const i = S("userinfo", e);
         i &&
-          (Object.assign(u, i),
+          (Object.assign(m, i),
           (t.userConfig = !0),
-          u.is_support && v() && (u.is_support = !1));
-        const r = b("broadcast", e);
-        r && (Object.assign(d, r), (t.broadcastConfig = !0));
-        const o = b("community", e);
-        o && (Object.assign(m, o), (t.communityConfig = !0));
-        const s = b("event", e);
-        return s && (Object.assign(h, s), (t.eventConfig = !0)), t;
+          m.is_support && C() && (m.is_support = !1));
+        const r = S("broadcast", e);
+        r && (Object.assign(h, r), (t.broadcastConfig = !0));
+        const o = S("community", e);
+        o && (Object.assign(p, o), (t.communityConfig = !0));
+        const s = S("event", e);
+        return s && (Object.assign(g, s), (t.eventConfig = !0)), t;
       }
-      function C(e, t = p, n) {
+      function E(e, t = _, n) {
         let i;
         if (
           ((i =
@@ -19444,54 +19465,54 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function b(e, t = p) {
-        return C(e, t, !0);
+      function S(e, t = _) {
+        return E(e, t, !0);
       }
-      function E(e, t = p) {
-        return C(e, t, !1);
+      function w(e, t = _) {
+        return E(e, t, !1);
       }
-      function S(e, t) {
+      function y(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function w() {
+      function D() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return S(e, c.STORE_BASE_URL)
-          ? c.STORE_BASE_URL
-          : S(e, c.COMMUNITY_BASE_URL)
-          ? c.COMMUNITY_BASE_URL
-          : S(e, c.CHAT_BASE_URL)
-          ? c.CHAT_BASE_URL
-          : S(e, c.PARTNER_BASE_URL)
-          ? c.PARTNER_BASE_URL
-          : S(e, c.HELP_BASE_URL)
-          ? c.HELP_BASE_URL
-          : S(e, c.STEAMTV_BASE_URL)
-          ? c.STEAMTV_BASE_URL
-          : S(e, c.STATS_BASE_URL)
-          ? c.STATS_BASE_URL
-          : S(e, c.INTERNAL_STATS_BASE_URL)
-          ? c.INTERNAL_STATS_BASE_URL
-          : S(e, c.STORE_CHECKOUT_BASE_URL)
-          ? c.STORE_CHECKOUT_BASE_URL
-          : S(e, "https://steamloopback.host")
+        return y(e, d.STORE_BASE_URL)
+          ? d.STORE_BASE_URL
+          : y(e, d.COMMUNITY_BASE_URL)
+          ? d.COMMUNITY_BASE_URL
+          : y(e, d.CHAT_BASE_URL)
+          ? d.CHAT_BASE_URL
+          : y(e, d.PARTNER_BASE_URL)
+          ? d.PARTNER_BASE_URL
+          : y(e, d.HELP_BASE_URL)
+          ? d.HELP_BASE_URL
+          : y(e, d.STEAMTV_BASE_URL)
+          ? d.STEAMTV_BASE_URL
+          : y(e, d.STATS_BASE_URL)
+          ? d.STATS_BASE_URL
+          : y(e, d.INTERNAL_STATS_BASE_URL)
+          ? d.INTERNAL_STATS_BASE_URL
+          : y(e, d.STORE_CHECKOUT_BASE_URL)
+          ? d.STORE_CHECKOUT_BASE_URL
+          : y(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function y() {
+      function T() {
         const e = window.location.href;
-        return S(e, c.STORE_BASE_URL) || S(e, c.STORE_CHECKOUT_BASE_URL)
+        return y(e, d.STORE_BASE_URL) || y(e, d.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : S(e, c.COMMUNITY_BASE_URL)
+          : y(e, d.COMMUNITY_BASE_URL)
           ? "community"
-          : S(e, c.PARTNER_BASE_URL)
+          : y(e, d.PARTNER_BASE_URL)
           ? "partnerweb"
-          : S(e, c.HELP_BASE_URL)
+          : y(e, d.HELP_BASE_URL)
           ? "help"
-          : S(e, c.STEAMTV_BASE_URL)
+          : y(e, d.STEAMTV_BASE_URL)
           ? "steamtv"
-          : S(e, c.STATS_BASE_URL) || S(e, c.INTERNAL_STATS_BASE_URL)
+          : y(e, d.STATS_BASE_URL) || y(e, d.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -19543,27 +19564,29 @@
     43311: (e, t, n) => {
       "use strict";
       var i = n(70655),
-        r = (n(56084), n(9355)),
-        o = n(71969),
-        s = n.n(o),
-        a = n(67294),
-        l = n(7573),
-        c = n(28777),
-        u = n(35921),
-        d = n(95598);
-      var m = n(39853),
-        h = n(15396),
-        p = n(54452),
-        g = n(90666),
-        _ = n(18547);
-      function v(e) {
+        r = (n(56084), n(94184)),
+        o = n.n(r),
+        s = n(9355),
+        a = n(71969),
+        l = n.n(a),
+        c = n(67294),
+        u = n(7573),
+        d = n(28777),
+        m = n(35921),
+        h = n(95598);
+      var p = n(39853),
+        g = n(15396),
+        _ = n(54452),
+        v = n(90666),
+        f = n(18547);
+      function C(e) {
         const { padded: t, gap: n, children: i } = e;
-        return a.createElement(
+        return c.createElement(
           "div",
           {
             style: { gap: n ? n + "px" : "unset" },
-            className: (0, l.Z)({
-              [_.ScrollSnapCarousel]: !0,
+            className: (0, u.Z)({
+              [f.ScrollSnapCarousel]: !0,
               SaleSectionCarousel: !0,
               SaleSectionCarouselPadding: t,
               [e.className]: !0,
@@ -19572,7 +19595,7 @@
           i
         );
       }
-      class f extends a.Component {
+      class b extends c.Component {
         render() {
           const { showArrows: e } = this.props,
             t = this.props.visibleSlides,
@@ -19582,130 +19605,130 @@
           const r = (100 * i) / n,
             o = 100 * (1 - Math.min(i + t, n) / n),
             s = r + (50 * t) / n,
-            u = 100 - s;
-          return a.createElement(
+            a = 100 - s;
+          return c.createElement(
             "div",
-            { className: m.pipScrollerContainer },
+            { className: p.pipScrollerContainer },
             e &&
-              a.createElement(
-                c.jp,
+              c.createElement(
+                d.jp,
                 {
-                  className: (0, l.Z)(
-                    m.pipScrollButton,
-                    m.left,
-                    m.carouselNavButton
+                  className: (0, u.Z)(
+                    p.pipScrollButton,
+                    p.left,
+                    p.carouselNavButton
                   ),
                 },
-                a.createElement(d.thP, null)
+                c.createElement(h.thP, null)
               ),
-            a.createElement(
+            c.createElement(
               "div",
-              { className: m.pipScroller },
-              a.createElement("div", { className: m.scrollBackground }),
-              a.createElement("div", {
-                className: m.scrollForeground,
+              { className: p.pipScroller },
+              c.createElement("div", { className: p.scrollBackground }),
+              c.createElement("div", {
+                className: p.scrollForeground,
                 style: { left: r + "%", right: o + "%" },
               }),
-              a.createElement(
+              c.createElement(
                 "div",
                 {
-                  className: m.scrollNavDiv,
+                  className: p.scrollNavDiv,
                   style: { left: "0%", width: s + "%" },
                 },
-                a.createElement(
-                  c.jp,
+                c.createElement(
+                  d.jp,
                   {
-                    className: (0, l.Z)(m.carouselNavButton, m.scrollNavButton),
+                    className: (0, u.Z)(p.carouselNavButton, p.scrollNavButton),
                   },
-                  a.createElement("div", null)
+                  c.createElement("div", null)
                 )
               ),
-              a.createElement(
+              c.createElement(
                 "div",
                 {
-                  className: m.scrollNavDiv,
-                  style: { right: "0%", width: u + "%" },
+                  className: p.scrollNavDiv,
+                  style: { right: "0%", width: a + "%" },
                 },
-                a.createElement(
-                  c.P1,
+                c.createElement(
+                  d.P1,
                   {
-                    className: (0, l.Z)(m.carouselNavButton, m.scrollNavButton),
+                    className: (0, u.Z)(p.carouselNavButton, p.scrollNavButton),
                   },
-                  a.createElement("div", null)
+                  c.createElement("div", null)
                 )
               )
             ),
             e &&
-              a.createElement(
-                c.P1,
+              c.createElement(
+                d.P1,
                 {
-                  className: (0, l.Z)(
-                    m.pipScrollButton,
-                    m.right,
-                    m.carouselNavButton
+                  className: (0, u.Z)(
+                    p.pipScrollButton,
+                    p.right,
+                    p.carouselNavButton
                   ),
                 },
-                a.createElement(d.thP, null)
+                c.createElement(h.thP, null)
               )
           );
         }
       }
-      const C = (0, c.Rq)(f, (e) => ({
+      const E = (0, d.Rq)(b, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function b(e) {
-        const t = (0, g.id)();
+      function S(e) {
+        const t = (0, v.id)();
         return e.screenIsWide || t
-          ? a.createElement(E, Object.assign({}, e), e.children)
-          : a.createElement(v, Object.assign({}, e), e.children);
+          ? c.createElement(w, Object.assign({}, e), e.children)
+          : c.createElement(C, Object.assign({}, e), e.children);
       }
-      function E(e) {
-        const t = (0, g.id)(),
-          n = () => a.Children.count(e.children),
+      function w(e) {
+        const t = (0, v.id)(),
+          n = () => c.Children.count(e.children),
           i = n(),
           r = Math.min(n(), e.visibleElements);
         if (!i || !r) return null;
         const o = r < i,
           s = e.hideArrows || !o,
-          d = !o || e.hidePips;
-        let p = 4 / 3,
-          _ = !0;
-        e.slideAspectRatio && ((p = e.slideAspectRatio), (_ = !1));
-        const v = `items_in_row_${e.visibleElements}`;
-        return a.createElement(
-          u.s,
+          a = !o || e.hidePips;
+        let l = 4 / 3,
+          h = !0;
+        e.slideAspectRatio && ((l = e.slideAspectRatio), (h = !1));
+        const _ = `items_in_row_${e.visibleElements}`;
+        return c.createElement(
+          m.s,
           {
             "flow-children": "row",
-            className: (0, l.Z)(m.carouselBody, e.className, v),
+            className: (0, u.Z)(p.carouselBody, e.className, _),
           },
-          a.createElement(
-            c.sj,
+          c.createElement(
+            d.sj,
             {
               visibleSlides: e.visibleElements,
               totalSlides: n(),
-              naturalSlideWidth: 100 * p,
+              naturalSlideWidth: 100 * l,
               naturalSlideHeight: 100,
               step: e.visibleElements,
               infinite: !e.disableEdgeWrap,
-              isIntrinsicHeight: _,
+              isIntrinsicHeight: h,
               touchEnabled: !0,
               lockOnWindowScroll: !0,
               orientation: "horizontal",
               disableKeyboard: !0,
             },
-            a.createElement(
-              w,
+            c.createElement(
+              D,
               {
                 bHideArrows: s,
                 bAutoAdvance: e.bAutoAdvance && !t,
                 onSlide: e.onSlide,
               },
-              a.Children.map(e.children, (t, n) => {
+              c.Children.map(e.children, (t, n) => {
                 const i = e.bLazyRenderChildren
-                  ? a.createElement(
-                      h.Y,
+                  ? c.createElement(
+                      g.Y,
                       {
                         rootMargin: "0px 100% 0px 100%",
                         bHorizontal: !0,
@@ -19715,27 +19738,27 @@
                       t
                     )
                   : t;
-                return a.createElement(
-                  c.Mi,
-                  { className: m.innerSlide, key: "slide_" + n, index: n },
+                return c.createElement(
+                  d.Mi,
+                  { className: p.innerSlide, key: "slide_" + n, index: n },
                   i
                 );
               })
             ),
-            !d &&
+            !a &&
               (e.useTestScrollbar
-                ? a.createElement(C, { showArrows: s, carouselStore: null })
-                : a.createElement(
+                ? c.createElement(E, { showArrows: s, carouselStore: null })
+                : c.createElement(
                     "div",
-                    { className: m.breadcrumbContainer },
+                    { className: p.breadcrumbContainer },
                     ((t) =>
-                      a.Children.map(e.children, (e, n) =>
+                      c.Children.map(e.children, (e, n) =>
                         n % t != 0
                           ? null
-                          : a.createElement(
-                              c.oT,
-                              { slide: n, className: m.pip },
-                              a.createElement("img", {
+                          : c.createElement(
+                              d.oT,
+                              { slide: n, className: p.pip },
+                              c.createElement("img", {
                                 src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC",
                               })
                             )
@@ -19744,287 +19767,285 @@
           )
         );
       }
-      function S(e) {
+      function y(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function w(e) {
+      function D(e) {
         const { bHideArrows: t, bAutoAdvance: n, children: i, onSlide: r } = e,
-          o = a.useContext(c.ro),
-          s = a.useRef(o.state.currentSlide),
-          [u, h] = a.useState(null),
-          [g, _] = a.useState(!!n),
-          v = a.useRef(null),
-          f = a.useRef(null);
-        a.useEffect(() => {
+          o = c.useContext(d.ro),
+          s = c.useRef(o.state.currentSlide),
+          [a, l] = c.useState(null),
+          [m, g] = c.useState(!!n),
+          v = c.useRef(null),
+          f = c.useRef(null);
+        c.useEffect(() => {
           const e = () => {
             v.current = window.setTimeout(() => {
               if (v.current) {
-                S(v);
+                y(v);
                 const e = (o.state.currentSlide + 1) % o.state.totalSlides;
                 o.setStoreState({ currentSlide: e });
               }
             }, 8e3);
           };
-          g && e();
+          m && e();
           const t = () => {
             const t = s.current,
               n = o.state.currentSlide;
-            r && r(n), h(n > t ? "Right" : n < t ? "Left" : null), S(f);
+            r && r(n), l(n > t ? "Right" : n < t ? "Left" : null), y(f);
             (f.current = window.setTimeout(() => {
-              f.current && (h(null), S(f));
+              f.current && (l(null), y(f));
             }, 1e3)),
               (s.current = n),
-              v.current ? (S(v), _(!1)) : g && e();
+              v.current ? (y(v), g(!1)) : m && e();
           };
           return (
             o.subscribe(t),
             () => {
-              o.unsubscribe(t), S(v), S(f);
+              o.unsubscribe(t), y(v), y(f);
             }
           );
-        }, [o, g]);
-        const C = !!u && "CarouselSliding" + u;
-        return a.createElement(
+        }, [o, m]);
+        const C = !!a && "CarouselSliding" + a;
+        return c.createElement(
           "div",
-          { className: (0, l.Z)(m.sliderBody, "SliderBody", C) },
+          { className: (0, u.Z)(p.sliderBody, "SliderBody", C) },
           !t &&
-            a.createElement(
-              c.jp,
+            c.createElement(
+              d.jp,
               {
-                className: (0, l.Z)(
-                  m.carouselBtnCtn,
-                  m.left,
-                  m.carouselNavButton,
+                className: (0, u.Z)(
+                  p.carouselBtnCtn,
+                  p.left,
+                  p.carouselNavButton,
                   "CarouselBtnLeft"
                 ),
               },
-              a.createElement(d.thP, null)
+              c.createElement(h.thP, null)
             ),
-          a.createElement(
-            c.iR,
+          c.createElement(
+            d.iR,
             {
-              className: p.U.GetScrollableClassname(),
-              classNameTray: m.slideTrayCustomize,
-              classNameAnimation: m.DisableSliderMotion,
+              className: _.U.GetScrollableClassname(),
+              classNameTray: p.slideTrayCustomize,
+              classNameAnimation: p.DisableSliderMotion,
             },
             i
           ),
           !t &&
-            a.createElement(
-              c.P1,
+            c.createElement(
+              d.P1,
               {
-                className: (0, l.Z)(
-                  m.carouselBtnCtn,
-                  m.right,
-                  m.carouselNavButton,
+                className: (0, u.Z)(
+                  p.carouselBtnCtn,
+                  p.right,
+                  p.carouselNavButton,
                   "CarouselBtnRight"
                 ),
               },
-              a.createElement(d.thP, null)
+              c.createElement(h.thP, null)
             )
         );
       }
-      var y = n(52454),
-        D = n(41311);
-      const T = (e) =>
-          a.createElement(
-            a.Fragment,
+      var T = n(52454),
+        R = n(41311);
+      const M = (e) =>
+          c.createElement(
+            c.Fragment,
             null,
-            a.createElement(M, null),
-            a.createElement(
+            c.createElement(I, null),
+            c.createElement(
               "div",
               { className: "agenda_title" },
-              (0, D.Xx)("#SteamworksEvents_BuildingCommunity_Speakers")
+              (0, R.Xx)("#SteamworksEvents_BuildingCommunity_Speakers")
             ),
-            a.createElement(I, null)
+            c.createElement(L, null)
           ),
-        R = (e) =>
-          a.createElement(
+        k = (e) =>
+          c.createElement(
             "div",
-            { className: y.Container },
-            a.createElement(
+            { className: T.Container },
+            c.createElement(
               "div",
-              { className: y.AgendaImageCtn },
-              a.createElement("img", {
-                className: y.AgendaScreenshot,
-                src: g.De.COMMUNITY_CDN_ASSET_URL + e.screenshot,
+              { className: T.AgendaImageCtn },
+              c.createElement("img", {
+                className: T.AgendaScreenshot,
+                src: v.De.COMMUNITY_CDN_ASSET_URL + e.screenshot,
               })
             ),
-            a.createElement(
+            c.createElement(
               "div",
-              { className: y.RightColumn },
-              a.createElement(
+              { className: T.RightColumn },
+              c.createElement(
                 "div",
-                { className: y.BubbleCtn },
-                a.createElement(
+                { className: T.BubbleCtn },
+                c.createElement(
                   "div",
-                  { className: y.BubbleTopLine },
+                  { className: T.BubbleTopLine },
                   e.strSpeakers
                 ),
-                a.createElement("div", { className: y.BubbleTime }, e.strTime),
-                a.createElement("div", { className: y.BubbleTitle }, e.strTitle)
+                c.createElement("div", { className: T.BubbleTime }, e.strTime),
+                c.createElement("div", { className: T.BubbleTitle }, e.strTitle)
               ),
-              a.createElement("div", { className: y.AgendaDescCtn }, e.strDesc)
+              c.createElement("div", { className: T.AgendaDescCtn }, e.strDesc)
             )
           ),
-        M = (e) =>
-          a.createElement(
+        I = (e) =>
+          c.createElement(
             "div",
-            { className: y.CarouselContainer },
-            a.createElement(
-              b,
+            { className: T.CarouselContainer },
+            c.createElement(
+              S,
               {
                 hideArrows: !1,
                 visibleElements: 1,
                 useTestScrollbar: !1,
                 bLazyRenderChildren: !1,
                 disableEdgeWrap: !1,
-                className: (0, l.Z)(y.CarouselItems),
+                className: (0, u.Z)(T.CarouselItems),
               },
-              a.createElement(R, {
+              c.createElement(k, {
                 key: 1,
-                strDesc: (0, D.Xx)(
+                strDesc: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session1_Desc"
                 ),
                 screenshot: "steamworksevents/screenshot_gautam.png",
-                strTime: (0, D.Xx)(
+                strTime: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session1_Time"
                 ),
-                strTitle: (0, D.Xx)(
+                strTitle: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session1_Title"
                 ),
-                strSpeakers: (0, D.Xx)(
+                strSpeakers: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session1_Speakers"
                 ),
               }),
-              a.createElement(R, {
+              c.createElement(k, {
                 key: 2,
-                strDesc: (0, D.Xx)(
+                strDesc: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session2_Desc"
                 ),
                 screenshot: "steamworksevents/screenshot_alden_and_adil.png",
-                strTime: (0, D.Xx)(
+                strTime: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session2_Time"
                 ),
-                strTitle: (0, D.Xx)(
+                strTitle: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session2_Title"
                 ),
-                strSpeakers: (0, D.Xx)(
+                strSpeakers: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session2_Speakers"
                 ),
               }),
-              a.createElement(R, {
+              c.createElement(k, {
                 key: 3,
-                strDesc: (0, D.Xx)(
+                strDesc: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session3_Desc"
                 ),
                 screenshot: "steamworksevents/screenshot_jenny.png",
-                strTime: (0, D.Xx)(
+                strTime: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session3_Time"
                 ),
-                strTitle: (0, D.Xx)(
+                strTitle: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session3_Title"
                 ),
-                strSpeakers: (0, D.Xx)(
+                strSpeakers: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session3_Speakers"
                 ),
               }),
-              a.createElement(R, {
+              c.createElement(k, {
                 key: 4,
-                strDesc: (0, D.Xx)(
+                strDesc: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session4_Desc"
                 ),
                 screenshot: "steamworksevents/screenshot_joe.png",
-                strTime: (0, D.Xx)(
+                strTime: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session4_Time"
                 ),
-                strTitle: (0, D.Xx)(
+                strTitle: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session4_Title"
                 ),
-                strSpeakers: (0, D.Xx)(
+                strSpeakers: (0, R.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session4_Speakers"
                 ),
               })
             )
           ),
-        k = (e) =>
-          a.createElement(
+        O = (e) =>
+          c.createElement(
             "div",
-            { className: y.SpeakerContainer },
-            a.createElement("img", {
+            { className: T.SpeakerContainer },
+            c.createElement("img", {
               title: e.strTitle,
-              src: g.De.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
+              src: v.De.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
             }),
-            a.createElement(
+            c.createElement(
               "div",
-              { className: y.SpeakerBio },
-              a.createElement("div", { className: y.SpeakerTitle }, e.strTitle),
+              { className: T.SpeakerBio },
+              c.createElement("div", { className: T.SpeakerTitle }, e.strTitle),
               e.strBio
             )
           ),
-        I = (e) =>
-          a.createElement(
+        L = (e) =>
+          c.createElement(
             "div",
-            { className: y.SpeakersListContainer },
-            a.createElement(k, {
+            { className: T.SpeakersListContainer },
+            c.createElement(O, {
               imgHeadshot: "steamworksevents/gautam_headshot.png",
-              strTitle: (0, D.Xx)(
+              strTitle: (0, R.Xx)(
                 "#SteamworksEvents_BuildingCommunity_GautamTitle"
               ),
-              strBio: (0, D.Xx)("#SteamworksEvents_BuildingCommunity_Gautam"),
+              strBio: (0, R.Xx)("#SteamworksEvents_BuildingCommunity_Gautam"),
             }),
-            a.createElement(k, {
+            c.createElement(O, {
               imgHeadshot: "steamworksevents/alden_headshot.png",
-              strTitle: (0, D.Xx)(
+              strTitle: (0, R.Xx)(
                 "#SteamworksEvents_BuildingCommunity_AldenTitle"
               ),
-              strBio: (0, D.Xx)("#SteamworksEvents_BuildingCommunity_Alden"),
+              strBio: (0, R.Xx)("#SteamworksEvents_BuildingCommunity_Alden"),
             }),
-            a.createElement(k, {
+            c.createElement(O, {
               imgHeadshot: "steamworksevents/adil_headshot.png",
-              strTitle: (0, D.Xx)(
+              strTitle: (0, R.Xx)(
                 "#SteamworksEvents_BuildingCommunity_AdilTitle"
               ),
-              strBio: (0, D.Xx)("#SteamworksEvents_BuildingCommunity_Adil"),
+              strBio: (0, R.Xx)("#SteamworksEvents_BuildingCommunity_Adil"),
             }),
-            a.createElement(k, {
+            c.createElement(O, {
               imgHeadshot: "steamworksevents/jenny_headshot.png",
-              strTitle: (0, D.Xx)(
+              strTitle: (0, R.Xx)(
                 "#SteamworksEvents_BuildingCommunity_JennyTitle"
               ),
-              strBio: (0, D.Xx)("#SteamworksEvents_BuildingCommunity_Jenny"),
+              strBio: (0, R.Xx)("#SteamworksEvents_BuildingCommunity_Jenny"),
             }),
-            a.createElement(k, {
+            c.createElement(O, {
               imgHeadshot: "steamworksevents/joe_headshot.png",
-              strTitle: (0, D.Xx)(
+              strTitle: (0, R.Xx)(
                 "#SteamworksEvents_BuildingCommunity_JoeTitle"
               ),
-              strBio: (0, D.Xx)("#SteamworksEvents_BuildingCommunity_Joe"),
+              strBio: (0, R.Xx)("#SteamworksEvents_BuildingCommunity_Joe"),
             })
           );
-      var O = n(73727),
-        L = n(5977),
-        A = n(88254),
-        B = n(39811),
-        x = n(74091),
-        N = n(23989),
-        F = n(92244),
-        P = n(94184),
-        G = n.n(P),
+      var A = n(73727),
+        B = n(5977),
+        x = n(88254),
+        N = n(39811),
+        F = n(74091),
+        P = n(92244),
+        G = n(23989),
         H = n(67373);
-      const U = a.lazy(() =>
+      const U = c.lazy(() =>
           Promise.all([n.e(477), n.e(5888), n.e(4535)]).then(n.bind(n, 49686))
         ),
-        V = a.lazy(() =>
+        V = c.lazy(() =>
           Promise.all([n.e(907), n.e(7762)]).then(n.bind(n, 46488))
         ),
-        W = a.lazy(() =>
+        W = c.lazy(() =>
           Promise.all([n.e(3784), n.e(6117), n.e(6699)]).then(n.bind(n, 78507))
         ),
-        j = a.lazy(() =>
+        j = c.lazy(() =>
           Promise.all([n.e(3784), n.e(6117), n.e(6699)]).then(n.bind(n, 99752))
         ),
-        z = a.lazy(() =>
+        z = c.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -20033,7 +20054,7 @@
             n.e(2529),
           ]).then(n.bind(n, 76083))
         ),
-        K = a.lazy(() =>
+        K = c.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -20049,7 +20070,7 @@
             n.e(2136),
           ]).then(n.bind(n, 73922))
         ),
-        X = a.lazy(() =>
+        X = c.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -20063,9 +20084,9 @@
             n.e(6117),
             n.e(9060),
             n.e(2136),
-          ]).then(n.bind(n, 19059))
+          ]).then(n.bind(n, 92264))
         ),
-        Z = a.lazy(() =>
+        Z = c.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -20081,7 +20102,7 @@
             n.e(2136),
           ]).then(n.bind(n, 84820))
         ),
-        Y = a.lazy(() =>
+        Y = c.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -20097,10 +20118,10 @@
             n.e(2136),
           ]).then(n.bind(n, 17398))
         ),
-        $ = a.lazy(() =>
+        $ = c.lazy(() =>
           Promise.all([n.e(5117), n.e(907), n.e(5676)]).then(n.bind(n, 82385))
         ),
-        q = a.lazy(() =>
+        q = c.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(3069),
@@ -20109,113 +20130,113 @@
             n.e(8974),
           ]).then(n.bind(n, 48366))
         ),
-        Q = a.lazy(() =>
+        Q = c.lazy(() =>
           Promise.all([n.e(614), n.e(9035)]).then(n.bind(n, 33883))
         );
       function J(e) {
-        return a.createElement(
-          N.R,
+        return c.createElement(
+          v.fI,
           null,
-          a.createElement(B.Y0, null, e.children)
+          c.createElement(G.R, null, c.createElement(N.Y0, null, e.children))
         );
       }
       function ee(e) {
         let { children: t } = e,
-          n = (0, H.H7)(r.Z.PricingTools());
-        return a.createElement(
+          n = (0, H.H7)(s.Z.PricingTools());
+        return c.createElement(
           "div",
-          { className: G()(s().App, n && s().FillBrowserVertically) },
+          { className: o()(l().App, n && l().FillBrowserVertically) },
           t
         );
       }
       function te(e) {
-        return a.createElement(
-          O.VK,
-          { basename: (0, r.l)() },
-          a.createElement(
+        return c.createElement(
+          A.VK,
+          { basename: (0, s.l)() },
+          c.createElement(
             J,
             null,
-            a.createElement(
+            c.createElement(
               ee,
               null,
-              a.createElement(
-                a.Suspense,
-                { fallback: a.createElement("div", null) },
-                a.createElement(
-                  L.rs,
+              c.createElement(
+                c.Suspense,
+                { fallback: c.createElement("div", null) },
+                c.createElement(
+                  B.rs,
                   null,
-                  a.createElement(L.AW, { exact: !0, path: "/", component: U }),
-                  a.createElement(L.AW, {
+                  c.createElement(B.AW, { exact: !0, path: "/", component: U }),
+                  c.createElement(B.AW, {
                     exact: !0,
-                    path: r.Z.DiagData(),
+                    path: s.Z.DiagData(),
                     render: (e) =>
-                      a.createElement(
-                        A.m,
+                      c.createElement(
+                        x.m,
                         Object.assign({}, e, {
                           key: e.match.params.gid,
                           strConfigID: "application_config",
                         })
                       ),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.SalePages(),
+                  c.createElement(B.AW, {
+                    path: s.Z.SalePages(),
                     component: Z,
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.OptInPages(),
+                  c.createElement(B.AW, {
+                    path: s.Z.OptInPages(),
                     component: Y,
                   }),
-                  a.createElement(L.AW, {
+                  c.createElement(B.AW, {
                     exact: !0,
-                    path: r.Z.ContentHubCategories(),
-                    render: () => a.createElement(Q, null),
+                    path: s.Z.ContentHubCategories(),
+                    render: () => c.createElement(Q, null),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.StoreGameAdminRoot(),
+                  c.createElement(B.AW, {
+                    path: s.Z.StoreGameAdminRoot(),
                     component: q,
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.AppLandingPage(),
+                  c.createElement(B.AW, {
+                    path: s.Z.AppLandingPage(),
                     component: q,
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.AppCommunityItems(),
+                  c.createElement(B.AW, {
+                    path: s.Z.AppCommunityItems(),
                     component: q,
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.SteamML(),
-                    render: () => a.createElement(V, null),
+                  c.createElement(B.AW, {
+                    path: s.Z.SteamML(),
+                    render: () => c.createElement(V, null),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.SteamLearn(),
-                    render: () => a.createElement($, null),
+                  c.createElement(B.AW, {
+                    path: s.Z.SteamLearn(),
+                    render: () => c.createElement($, null),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.BuildPatchNotes(),
+                  c.createElement(B.AW, {
+                    path: s.Z.BuildPatchNotes(),
                     render: (e) =>
-                      a.createElement(K, { appId: e.match.params.appid }),
+                      c.createElement(K, { appId: e.match.params.appid }),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.SteamworksEvents(),
-                    render: () => a.createElement(T, null),
+                  c.createElement(B.AW, {
+                    path: s.Z.SteamworksEvents(),
+                    render: () => c.createElement(M, null),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.PromotionTools(),
+                  c.createElement(B.AW, {
+                    path: s.Z.PromotionTools(),
                     component: X,
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.PricingTools(),
+                  c.createElement(B.AW, {
+                    path: s.Z.PricingTools(),
                     component: z,
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.DeckVerifiedAdmin(),
+                  c.createElement(B.AW, {
+                    path: s.Z.DeckVerifiedAdmin(),
                     render: () =>
-                      a.createElement(x.d, {
+                      c.createElement(F.d, {
                         config: {
                           "deck-verified-results": (e) =>
-                            a.createElement(j, {
+                            c.createElement(j, {
                               dataprops: e,
-                              results: (0, g.kQ)(
+                              results: (0, v.kQ)(
                                 "deckcompatibility",
                                 "application_config"
                               ),
@@ -20223,31 +20244,31 @@
                         },
                       }),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.DeckCompatTestingDashboard(),
+                  c.createElement(B.AW, {
+                    path: s.Z.DeckCompatTestingDashboard(),
                     render: () =>
-                      a.createElement(x.d, {
+                      c.createElement(F.d, {
                         config: {
                           "deck-verified-results-inflight": (e) =>
-                            a.createElement(j, {
+                            c.createElement(j, {
                               dataprops: e,
-                              results: (0, g.kQ)(
+                              results: (0, v.kQ)(
                                 "deckcompatibility_inflight",
                                 "application_config"
                               ),
                             }),
                           "deck-verified-results-submitted": (e) =>
-                            a.createElement(j, {
+                            c.createElement(j, {
                               dataprops: e,
-                              results: (0, g.kQ)(
+                              results: (0, v.kQ)(
                                 "deckcompatibility_submitted",
                                 "application_config"
                               ),
                             }),
                           "deck-verified-results-published": (e) =>
-                            a.createElement(j, {
+                            c.createElement(j, {
                               dataprops: e,
-                              results: (0, g.kQ)(
+                              results: (0, v.kQ)(
                                 "deckcompatibility_published",
                                 "application_config"
                               ),
@@ -20255,15 +20276,15 @@
                         },
                       }),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.DeckCompatTestingAppHistory(),
+                  c.createElement(B.AW, {
+                    path: s.Z.DeckCompatTestingAppHistory(),
                     render: () =>
-                      a.createElement(x.d, {
+                      c.createElement(F.d, {
                         config: {
                           "deck-verified-results-reports": (e) =>
-                            a.createElement(j, {
+                            c.createElement(j, {
                               dataprops: e,
-                              results: (0, g.kQ)(
+                              results: (0, v.kQ)(
                                 "deckcompatibility_reports",
                                 "application_config"
                               ),
@@ -20271,14 +20292,14 @@
                         },
                       }),
                   }),
-                  a.createElement(L.AW, {
-                    path: r.Z.DeckVerified(),
+                  c.createElement(B.AW, {
+                    path: s.Z.DeckVerified(),
                     render: () =>
-                      a.createElement(x.d, {
+                      c.createElement(F.d, {
                         config: {
                           "deck-verified-results": () =>
-                            a.createElement(W, {
-                              results: (0, g.kQ)(
+                            c.createElement(W, {
+                              results: (0, v.kQ)(
                                 "deckcompatibility",
                                 "application_config"
                               ),
@@ -20286,7 +20307,7 @@
                         },
                       }),
                   }),
-                  a.createElement(L.AW, null, a.createElement(F.R, null))
+                  c.createElement(B.AW, null, c.createElement(P.R, null))
                 )
               )
             )
@@ -20306,10 +20327,10 @@
               n(89705)(`./main_${e}.json`),
             ]),
             o = Object.assign({}, r.default),
-            s = D.LJ.GetLanguageFallback(e);
+            s = R.LJ.GetLanguageFallback(e);
           if (e === s)
-            D.Yt.InitFromObjects(o, null, t.default, null),
-              D.Yt.AddTokens(i, null);
+            R.Yt.InitFromObjects(o, null, t.default, null),
+              R.Yt.AddTokens(i, null);
           else {
             const [e, r, a] = yield Promise.all([
                 n(64050)(`./shared_${s}.json`),
@@ -20317,32 +20338,32 @@
                 n(29790)(`./main_${s}.json`),
               ]),
               l = Object.assign({}, a.default);
-            D.Yt.InitFromObjects(o, l, t.default, e.default),
-              D.Yt.AddTokens(i, r);
+            R.Yt.InitFromObjects(o, l, t.default, e.default),
+              R.Yt.AddTokens(i, r);
           }
         });
       }
       document.addEventListener("DOMContentLoaded", function () {
         return (0, i.mG)(this, void 0, void 0, function* () {
           document.getElementById("application_root")
-            ? ((0, g.Ek)("application_config"),
+            ? ((0, v.Ek)("application_config"),
               (0, oe.Uh)().Init(
                 "Partner",
                 CLSTAMP,
-                new re.J(g.De.WEBAPI_BASE_URL).GetServiceTransport()
+                new re.J(v.De.WEBAPI_BASE_URL).GetServiceTransport()
               ),
-              yield se(g.De.LANGUAGE),
+              yield se(v.De.LANGUAGE),
               ne.render(
-                a.createElement(te, {}),
+                c.createElement(te, {}),
                 document.getElementById("application_root")
               ))
-            : ((0, g.Ek)(),
+            : ((0, v.Ek)(),
               (0, oe.Uh)().Init(
                 "Partner",
                 CLSTAMP,
-                new re.J(g.De.WEBAPI_BASE_URL).GetServiceTransport()
+                new re.J(v.De.WEBAPI_BASE_URL).GetServiceTransport()
               ),
-              yield se(g.De.LANGUAGE),
+              yield se(v.De.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".StoreAdminReactRoot");
                 for (let t = 0; t < e.length; t++) {
@@ -20366,7 +20387,7 @@
       }),
         (window.LocalizationManifestReady = function (e, t, n) {
           (0, ie.X)("manifest" === t, `Expected manifest not "${t}"`),
-            D.Yt.InitDirect(n);
+            R.Yt.InitDirect(n);
         });
     },
     78832: (e, t, n) => {

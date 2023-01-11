@@ -15,14 +15,14 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    660: (t, e, n) => {
+    947: (t, e, n) => {
       "use strict";
       n.r(e), n.d(e, { InitializeGamepadNavigation: () => oe });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(12);
+        a = n(63);
       !(function (t) {
         (t[(t.GAMEPAD = 0)] = "GAMEPAD"),
           (t[(t.KEYBOARD = 1)] = "KEYBOARD"),
@@ -91,8 +91,8 @@
             : console.assert(!!t, e, ...n)
           : t || console.warn(e, ...n);
       }
-      var _ = n(93),
-        p = n(132);
+      var _ = n(296),
+        p = n(194);
       class f extends class {
         GetObject(t) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -440,7 +440,7 @@
       function S(t) {
         return N.SerializeNavState(t, !0, !1);
       }
-      class D extends N {
+      class R extends N {
         constructor() {
           super(...arguments), (this.m_rgHistory = []);
         }
@@ -452,7 +452,7 @@
             N.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), t);
         }
       }
-      class R extends N {
+      class D extends N {
         constructor() {
           super(...arguments), (this.m_mapHistory = new Map());
         }
@@ -469,7 +469,7 @@
           );
         }
       }
-      var I = n(514);
+      var I = n(647);
       function T(t) {
         return null != t && void 0 !== t.focus;
       }
@@ -538,6 +538,9 @@
             (this.m_controller = t),
             (this.m_rootWindow = e),
             (this.m_activeWindow = e);
+        }
+        get RootWindow() {
+          return this.m_rootWindow;
         }
         get ActiveWindow() {
           return this.m_activeWindow;
@@ -1010,7 +1013,7 @@
         }
         GetActiveContext() {
           var t;
-          if (!this.m_ActiveContext) {
+          if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
             console.warn("No active context; finding one");
             for (const t of this.m_rgAllContexts) {
               const e = t.FindNavTreeInFocusedWindow();
@@ -1027,7 +1030,8 @@
             }
           }
           return (
-            this.m_ActiveContext ||
+            !this.m_ActiveContext &&
+              this.m_LastActiveContext &&
               (v(
                 !1,
                 `Failed to find an active context, will fall back to ${
@@ -1334,14 +1338,14 @@
           return this.m_node.NavKey;
         }
         PushState() {
-          this.m_History || (this.m_History = new D(this.m_node)),
+          this.m_History || (this.m_History = new R(this.m_node)),
             this.m_History.PushState();
         }
         PopState(t = 0) {
           this.m_History && this.m_History.PopState(t);
         }
         SaveState(t) {
-          this.m_StateHistory || (this.m_StateHistory = new R(this.m_node)),
+          this.m_StateHistory || (this.m_StateHistory = new D(this.m_node)),
             this.m_StateHistory.SaveState(t);
         }
         RestoreState(t, e = 0) {
@@ -2817,8 +2821,8 @@
       (0, o.gn)([_.a], St.prototype, "OnDOMFocus", null),
         (0, o.gn)([_.a], St.prototype, "OnDOMBlur", null),
         (0, o.gn)([_.a], St.prototype, "OnNavigationEvent", null);
-      const Dt = "GamepadInput";
-      var Rt;
+      const Rt = "GamepadInput";
+      var Dt;
       function It(t, e) {
         return !!t && "object" == typeof t.SteamClient && e in t.SteamClient;
       }
@@ -2835,7 +2839,7 @@
           (t[(t.None = 2)] = "None"),
           (t[(t.Basic = 3)] = "Basic"),
           (t[(t.Full = 4)] = "Full");
-      })(Rt || (Rt = {}));
+      })(Dt || (Dt = {}));
       class yt {
         constructor(t) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -2891,8 +2895,8 @@
           }
         }
         SendGameInputState(t) {
-          let e = Rt.Basic;
-          window.bSupportsGamepadUI && (e = Rt.Full),
+          let e = Dt.Basic;
+          window.bSupportsGamepadUI && (e = Dt.Full),
             this.m_postMessage.PostMessage({
               type: "GameInputState",
               data: { source: t, support: e },
@@ -2924,11 +2928,11 @@
         }
         PostMessage(t) {
           let e = JSON.stringify(t);
-          this.m_postWindow.postMessage({ gamepadMessage: Dt, args: e }, "*");
+          this.m_postWindow.postMessage({ gamepadMessage: Rt, args: e }, "*");
         }
         OnMessage(t) {
           let e = null == t ? void 0 : t.data;
-          if (e && e.gamepadMessage == Dt && e.args) {
+          if (e && e.gamepadMessage == Rt && e.args) {
             const t = JSON.parse(e.args);
             this.m_fnCallback(t);
           }
@@ -2944,10 +2948,10 @@
         }
         PostMessage(t) {
           let e = JSON.stringify(t);
-          SteamClient.BrowserView.PostMessageToParent(Dt, e);
+          SteamClient.BrowserView.PostMessageToParent(Rt, e);
         }
         OnMessage(t, e) {
-          if (t == Dt) {
+          if (t == Rt) {
             const t = JSON.parse(e);
             this.m_fnCallback(t);
           } else if ("Checkout" == t) {
@@ -2964,7 +2968,7 @@
         }
       }
       (0, o.gn)([_.a], Et.prototype, "OnMessage", null);
-      n(258);
+      n(913);
       class Lt extends a.oH {
         constructor(t) {
           super(),
@@ -3592,8 +3596,8 @@
             maintainX: F,
             maintainY: N,
             enableVirtualKeyboard: S,
-            preferredChild: D,
-            onOKActionDescription: R,
+            preferredChild: R,
+            onOKActionDescription: D,
             onCancelActionDescription: I,
             onSecondaryActionDescription: T,
             onOptionsActionDescription: y,
@@ -3748,7 +3752,7 @@
             ? ($.navEntryPreferPosition = wt.MAINTAIN_X)
             : N
             ? ($.navEntryPreferPosition = wt.MAINTAIN_Y)
-            : D && ($.navEntryPreferPosition = wt.PREFERRED_CHILD),
+            : R && ($.navEntryPreferPosition = wt.PREFERRED_CHILD),
           w &&
             (!1 !== $.focusable && ($.focusable = !0),
             _.on("vgp_onok", "firstChild" === w ? Yt : jt),
@@ -3777,7 +3781,7 @@
             ((C.m_FocusRing = Vt(_)),
             "static" == _.css("position") && _.css("position", "relative"));
         const tt = m({
-            onOKActionDescription: R,
+            onOKActionDescription: D,
             onCancelActionDescription: I,
             onSecondaryActionDescription: T,
             onOptionsActionDescription: y,

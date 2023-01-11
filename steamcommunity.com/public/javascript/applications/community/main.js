@@ -886,13 +886,14 @@
         })(u || (u = {})),
         (function (e) {
           (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
-            (e[(e.Overlay = 1)] = "Overlay"),
+            (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
             (e[(e.Keyboard = 2)] = "Keyboard"),
             (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
             (e[(e.VR = 4)] = "VR"),
             (e[(e.SteamLibrary = 5)] = "SteamLibrary"),
             (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
-            (e[(e.DesktopLogin = 7)] = "DesktopLogin");
+            (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
+            (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI");
         })(d || (d = {}));
       class h {}
       var m;
@@ -1999,6 +2000,7 @@
               "ApplyBrowserScaleToDimensions"),
             (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
             (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (e[(e.NoMinimize = 32768)] = "NoMinimize"),
             (e[(e.Overlay = 8712)] = "Overlay"),
             (e[(e.Notification = 25096)] = "Notification");
         })(i || (i = {}));
@@ -3958,7 +3960,7 @@
         }
         GetActiveContext() {
           var e;
-          if (!this.m_ActiveContext) {
+          if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
             console.warn("No active context; finding one");
             for (const e of this.m_rgAllContexts) {
               const t = e.FindNavTreeInFocusedWindow();
@@ -3975,7 +3977,8 @@
             }
           }
           return (
-            this.m_ActiveContext ||
+            !this.m_ActiveContext &&
+              this.m_LastActiveContext &&
               ((0, s.X)(
                 !1,
                 `Failed to find an active context, will fall back to ${
@@ -6107,6 +6110,9 @@
             (this.m_controller = e),
             (this.m_rootWindow = t),
             (this.m_activeWindow = t);
+        }
+        get RootWindow() {
+          return this.m_rootWindow;
         }
         get ActiveWindow() {
           return this.m_activeWindow;
@@ -15004,6 +15010,7 @@
                   m.E_.Provider,
                   {
                     value: {
+                      IN_DESKTOPUI: null == d ? void 0 : d.IN_DESKTOPUI,
                       IN_GAMEPADUI:
                         null !== (n = null == d ? void 0 : d.IN_GAMEPADUI) &&
                         void 0 !== n &&
@@ -19904,38 +19911,39 @@
     90666: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => c,
+        De: () => u,
         E_: () => a,
-        Ek: () => v,
-        JA: () => h,
-        Kc: () => S,
-        L7: () => u,
-        Wj: () => m,
-        Zv: () => y,
-        id: () => l,
-        ip: () => w,
-        kQ: () => b,
-        y9: () => f,
+        Ek: () => C,
+        JA: () => m,
+        Kc: () => y,
+        L7: () => d,
+        Wj: () => p,
+        Zv: () => D,
+        id: () => c,
+        ip: () => E,
+        kQ: () => w,
+        y9: () => v,
       });
       var i = n(48899),
         r = n(61939),
         o = (n(26149), n(67294)),
         s = n(77520);
-      const a = o.createContext({});
-      function l() {
-        const e = (() => {
+      const a = o.createContext({}),
+        l = () => {
           let e = o.useContext(a);
           return (
             (0, s.X)(
               void 0 !== e.IN_GAMEPADUI,
-              "Trying to use ConfigContext without a provider!"
+              "Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application."
             ),
             e
           );
-        })();
+        };
+      function c() {
+        const e = l();
         return null == e ? void 0 : e.IN_GAMEPADUI;
       }
-      const c = {
+      const u = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -19983,9 +19991,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, r.t$)()) return g || (g = _()), g;
+              if (!(0, r.t$)()) return _ || (_ = f()), _;
               let e = (0, r.bG)("sessionid");
-              e || (e = _());
+              e || (e = f());
               return e;
             })();
           },
@@ -20002,7 +20010,7 @@
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
         },
-        u = {
+        d = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -20017,8 +20025,8 @@
           short_url: "",
           country_code: "",
         },
-        d = { steamid: "", clanid: 0, listid: 0 },
-        h = {
+        h = { steamid: "", clanid: 0, listid: 0 },
+        m = {
           CLANSTEAMID: "",
           CLANACCOUNTID: 0,
           APPID: 0,
@@ -20035,10 +20043,10 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        m = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
-        p = "webui_config";
-      let g;
-      function _() {
+        p = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
+        g = "webui_config";
+      let _;
+      function f() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, i.LO)(0, 35).toString(36);
@@ -20046,30 +20054,30 @@
         })();
         return (0, r.I1)("sessionid", e, 0), e;
       }
-      function f() {
+      function v() {
         let e = null;
         return (
           (0, r.t$)() && (e = (0, r.bG)("presentation_mode")),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function v(e = p) {
+      function C(e = g) {
         const t = {},
-          n = b("config", e);
-        n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
-        const i = b("userinfo", e);
+          n = w("config", e);
+        n && (delete n.SESSIONID, Object.assign(u, n), (t.config = !0));
+        const i = w("userinfo", e);
         i &&
-          (Object.assign(u, i),
+          (Object.assign(d, i),
           (t.userConfig = !0),
-          u.is_support && f() && (u.is_support = !1));
-        const r = b("broadcast", e);
-        r && (Object.assign(d, r), (t.broadcastConfig = !0));
-        const o = b("community", e);
-        o && (Object.assign(h, o), (t.communityConfig = !0));
-        const s = b("event", e);
-        return s && (Object.assign(m, s), (t.eventConfig = !0)), t;
+          d.is_support && v() && (d.is_support = !1));
+        const r = w("broadcast", e);
+        r && (Object.assign(h, r), (t.broadcastConfig = !0));
+        const o = w("community", e);
+        o && (Object.assign(m, o), (t.communityConfig = !0));
+        const s = w("event", e);
+        return s && (Object.assign(p, s), (t.eventConfig = !0)), t;
       }
-      function C(e, t = p, n) {
+      function b(e, t = g, n) {
         let i;
         if (
           ((i =
@@ -20089,54 +20097,54 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function b(e, t = p) {
-        return C(e, t, !0);
+      function w(e, t = g) {
+        return b(e, t, !0);
       }
-      function w(e, t = p) {
-        return C(e, t, !1);
+      function E(e, t = g) {
+        return b(e, t, !1);
       }
-      function E(e, t) {
+      function S(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function S() {
+      function y() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return E(e, c.STORE_BASE_URL)
-          ? c.STORE_BASE_URL
-          : E(e, c.COMMUNITY_BASE_URL)
-          ? c.COMMUNITY_BASE_URL
-          : E(e, c.CHAT_BASE_URL)
-          ? c.CHAT_BASE_URL
-          : E(e, c.PARTNER_BASE_URL)
-          ? c.PARTNER_BASE_URL
-          : E(e, c.HELP_BASE_URL)
-          ? c.HELP_BASE_URL
-          : E(e, c.STEAMTV_BASE_URL)
-          ? c.STEAMTV_BASE_URL
-          : E(e, c.STATS_BASE_URL)
-          ? c.STATS_BASE_URL
-          : E(e, c.INTERNAL_STATS_BASE_URL)
-          ? c.INTERNAL_STATS_BASE_URL
-          : E(e, c.STORE_CHECKOUT_BASE_URL)
-          ? c.STORE_CHECKOUT_BASE_URL
-          : E(e, "https://steamloopback.host")
+        return S(e, u.STORE_BASE_URL)
+          ? u.STORE_BASE_URL
+          : S(e, u.COMMUNITY_BASE_URL)
+          ? u.COMMUNITY_BASE_URL
+          : S(e, u.CHAT_BASE_URL)
+          ? u.CHAT_BASE_URL
+          : S(e, u.PARTNER_BASE_URL)
+          ? u.PARTNER_BASE_URL
+          : S(e, u.HELP_BASE_URL)
+          ? u.HELP_BASE_URL
+          : S(e, u.STEAMTV_BASE_URL)
+          ? u.STEAMTV_BASE_URL
+          : S(e, u.STATS_BASE_URL)
+          ? u.STATS_BASE_URL
+          : S(e, u.INTERNAL_STATS_BASE_URL)
+          ? u.INTERNAL_STATS_BASE_URL
+          : S(e, u.STORE_CHECKOUT_BASE_URL)
+          ? u.STORE_CHECKOUT_BASE_URL
+          : S(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function y() {
+      function D() {
         const e = window.location.href;
-        return E(e, c.STORE_BASE_URL) || E(e, c.STORE_CHECKOUT_BASE_URL)
+        return S(e, u.STORE_BASE_URL) || S(e, u.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : E(e, c.COMMUNITY_BASE_URL)
+          : S(e, u.COMMUNITY_BASE_URL)
           ? "community"
-          : E(e, c.PARTNER_BASE_URL)
+          : S(e, u.PARTNER_BASE_URL)
           ? "partnerweb"
-          : E(e, c.HELP_BASE_URL)
+          : S(e, u.HELP_BASE_URL)
           ? "help"
-          : E(e, c.STEAMTV_BASE_URL)
+          : S(e, u.STEAMTV_BASE_URL)
           ? "steamtv"
-          : E(e, c.STATS_BASE_URL) || E(e, c.INTERNAL_STATS_BASE_URL)
+          : S(e, u.STATS_BASE_URL) || S(e, u.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -20364,7 +20372,7 @@
             n.e(9949),
             n.e(8931),
             n.e(3903),
-          ]).then(n.bind(n, 17999))
+          ]).then(n.bind(n, 47734))
         ),
         I = r.lazy(() =>
           Promise.all([n.e(1338), n.e(312)]).then(n.bind(n, 2840))
@@ -20564,7 +20572,13 @@
       function L(e) {
         return r.createElement(
           _.E_.Provider,
-          { value: { IN_GAMEPADUI: _.De.IN_GAMEPADUI, IN_VR: !1 } },
+          {
+            value: {
+              IN_GAMEPADUI: _.De.IN_GAMEPADUI,
+              IN_DESKTOPUI: !1,
+              IN_VR: !1,
+            },
+          },
           r.createElement(
             p,
             null,

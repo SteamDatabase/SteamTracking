@@ -120,6 +120,9 @@ b {
 .partnereventshared_RadioOption_2Ubig label {
   margin-left: 8px;
 }
+.partnereventshared_FlexGrow_IQIYv {
+  flex-grow: 1;
+}
 .partnereventshared_EventEditorTextTitleCtn_2Zzv2 {
   padding-bottom: 3px;
   padding-top: 20px;
@@ -4599,6 +4602,10 @@ html.touch
 }
 .salepreviewwidgets_LocalizationSpan_3WrJ4 {
   white-space: pre-wrap;
+}
+.salepreviewwidgets_CapsuleName_3SHK9 {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
 }
 .gameactions_GotSteamDialog_3omvM .gameactions_DownloadSteamUrl_Glr7k {
   color: #fff;

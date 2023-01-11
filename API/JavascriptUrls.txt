@@ -555,6 +555,7 @@ ${PARTNER_BASE_URL}
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
+${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
@@ -600,6 +601,7 @@ ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
 ${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
+${PARTNER_BASE_URL}doc/store/assets/promo
 ${PARTNER_BASE_URL}doc/store/broadcast
 ${PARTNER_BASE_URL}doc/store/coming_soon
 ${PARTNER_BASE_URL}doc/store/discounting/csv
@@ -612,6 +614,7 @@ ${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
+${PARTNER_BASE_URL}marketing/messagepreview/${gid}/
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}?tab=manage
@@ -806,7 +809,6 @@ ${STORE_BASE_URL}contenthub/ajaxgetcontenthubjson
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubs
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubsections
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubspecials
-${STORE_BASE_URL}contenthub/ajaxgetdlcforyouforgames
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyoumaincapsule
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyouplaytime
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyoupopular
@@ -1207,6 +1209,7 @@ ${last_revealed_footer_img_url}${_ ? _ : _}
 ${linkURL}${id}${ownerAppend}/?${linkAppend}
 ${linkURL}${nextid}${prevAppend}/?${linkAppend}
 ${linkURL}${previd}${nextAppend}/?${linkAppend}
+${linkurl}${}
 ${m_creatorURL}list/${listid}
 ${m_strActionURL}${action}/
 ${m_strBaseURL}${}
@@ -1693,6 +1696,7 @@ https://community.cloudflare.steamstatic.com/public/shared/images/responsive/you
 https://community.cloudflare.steamstatic.com/public/shared/javascript/crypto/jsbn.js
 https://community.cloudflare.steamstatic.com/public/shared/javascript/crypto/rsa.js
 https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta
+https://confluence.valve.org/display/STEAM/IM+Channel+Guidelines
 https://confluence.valve.org/display/STEAM/Opt-In+Tech+Custom+Event+type
 https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event
 https://confluence.valve.org/display/SteamBiz/New+Sales+Page+Feature+-+How+to+invite+partners

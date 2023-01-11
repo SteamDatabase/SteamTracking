@@ -6930,6 +6930,10 @@ html.touch
 .salepreviewwidgets_LocalizationSpan_3WrJ4 {
   white-space: pre-wrap;
 }
+.salepreviewwidgets_CapsuleName_3SHK9 {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+}
 .gameactions_GotSteamDialog_3omvM .gameactions_DownloadSteamUrl_Glr7k {
   color: #fff;
 }
@@ -14228,7 +14232,16 @@ button.rbc-input::-moz-focus-inner {
   color: gray;
   font-size: 10px;
 }
+.marketingmessagecreatedialog_DateCtn_1mrqJ {
+  min-height: 200px;
+}
+.marketingmessagedashboard_HeaderButtons_1Q4Pq {
+  float: right;
+}
 
+.marketingmessagefiltersedit_Dummy_3glD2 {
+  background-color: hotpink;
+}
 .optin_admin_dashboard_DashboardCtn_24Fut {
   max-width: 1280px;
   margin: 40px auto 0 auto;

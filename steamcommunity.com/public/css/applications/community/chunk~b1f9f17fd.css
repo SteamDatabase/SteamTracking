@@ -4867,8 +4867,100 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   margin-right: 12px;
   cursor: pointer;
 }
+.dlcforyou_GameCtn_OQaNt {
+  position: relative;
+  background: linear-gradient(140deg, rgba(0, 0, 0, 0) 1.25%, black 97.55%),
+    linear-gradient(
+      119.08deg,
+      rgba(205, 59, 218, 0.5) 1.25%,
+      rgba(219, 43, 31, 0.4) 97.55%
+    );
+}
+.dlcforyou_GameCtn_OQaNt > div {
+  position: relative;
+}
+.dlcforyou_GameCtn_OQaNt .dlcforyou_BackgroundImage_1EB7U {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: saturate(0.4) opacity(0.3);
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    0% 20%,
+    0% 100%,
+    from(#0e1014),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+.dlcforyou_GameCtn_OQaNt:nth-child(even) {
+  background: linear-gradient(140deg, rgba(0, 0, 0, 0) 1.25%, black 97.55%),
+    linear-gradient(
+      119.08deg,
+      rgba(218, 145, 59, 0.5) 1.25%,
+      rgba(69, 219, 31, 0.4) 97.55%
+    );
+}
+.dlcforyou_DLCSectionTitle_3xJah {
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 500px) {
+  .dlcforyou_DLCSectionTitle_3xJah {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title title" "ignore button";
+  }
+  .dlcforyou_DLCSectionTitle_3xJah .SaleSectionLabelCtn {
+    grid-area: title;
+  }
+  .dlcforyou_DLCSectionTitle_3xJah .dlcforyou_Ignore_3Vqvq {
+    grid-area: ignore;
+    padding-left: 8px;
+    padding-bottom: 8px;
+  }
+  .dlcforyou_DLCSectionTitle_3xJah .dlcforyou_SectionTitle_22Ren {
+    grid-area: button;
+    padding-bottom: 8px;
+  }
+}
 .dlcforyou_DLCSectionTitle_3xJah .SaleSectionHeader {
-  text-decoration: underline;
+  text-transform: unset;
+  font-size: 26px;
+  line-height: 29px;
+  letter-spacing: 0;
+  font-weight: 500;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.dlcforyou_ParentAppSortTabsCtn_HLysW {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+}
+.dlcforyou_ParentAppSortTabsCtn_HLysW .dlcforyou_ParentAppSortTabHeader_2UAG8 {
+  margin: 0 4px;
+  padding: 4px 8px;
+  margin-left: 0;
+  padding-left: 0;
+}
+.dlcforyou_ParentAppSortTabsCtn_HLysW .dlcforyou_ParentAppSortTab_3z9ZE {
+  margin: 0 4px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+.dlcforyou_ParentAppSortTabsCtn_HLysW .dlcforyou_ParentAppSortTabActive_3O8Ab {
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.9);
 }
 .partnereventrevisionhistory_VersionListCtn_32hnY {
   max-height: 500px;

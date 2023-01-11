@@ -3608,6 +3608,10 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 		padding: 0 1%;
 	}
 
+	html.responsive body.migrated_profile_page .profile_subpage_column #mainContents {
+		width: auto;
+	}
+
 	html.responsive .profile_subpage_general .maincontent {
 		width: auto;
 		padding-left: 1%;
