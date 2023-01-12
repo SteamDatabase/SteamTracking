@@ -9465,20 +9465,20 @@
               });
         }),
         rn = (0, iA.Pi)(function (A) {
-          var e, t, o, r, c, s;
-          const u = (0, dA.k6)(),
-            d = (0, T.df)(),
+          var e, t, o, r, c, s, u;
+          const d = (0, dA.k6)(),
+            m = (0, T.df)(),
             {
-              input: m,
-              eControllerMode: E,
-              eControllerSource: I,
-              baseActionSet: B,
-              layerActionSet: p,
-              modeid: v,
-              modeShift: h,
-              indentLevel: f,
+              input: E,
+              eControllerMode: I,
+              eControllerSource: B,
+              baseActionSet: p,
+              layerActionSet: v,
+              modeid: h,
+              modeShift: f,
+              indentLevel: b,
             } = A,
-            b = (0, n._T)(A, [
+            w = (0, n._T)(A, [
               "input",
               "eControllerMode",
               "eControllerSource",
@@ -9488,11 +9488,11 @@
               "modeShift",
               "indentLevel",
             ]),
-            w = A.input.activators,
-            Q = w.length > 1,
-            y = (null != f ? f : 0) + (Q ? 1 : 0),
-            N = 16 == E && 67 == m.key;
-          if (0 == w.length)
+            Q = A.input.activators,
+            y = Q.length > 1,
+            N = (null != b ? b : 0) + (y ? 1 : 0),
+            S = 16 == I && 67 == E.key;
+          if (0 == Q.length)
             return a.createElement(
               ln,
               Object.assign({ key: -1 }, A, {
@@ -9501,25 +9501,25 @@
                 modeShift: A.modeShift,
               })
             );
-          const S = a.createElement(pA.$r, {
+          const G = a.createElement(pA.$r, {
               eControllerType:
                 null === (e = IA._A.EditingConfiguration) || void 0 === e
                   ? void 0
                   : e.controller_type,
-              eInput: (0, pA.pW)(m.key),
-              eMode: E,
-              eSource: I,
+              eInput: (0, pA.pW)(E.key),
+              eMode: I,
+              eSource: B,
             }),
-            G = (A) => {
+            k = (A) => {
               const e = a.createElement(
                   "div",
                   { className: CA().FlexFlowRow },
-                  S
+                  G
                 ),
                 t = a.createElement(
                   DA.xV,
                   { label: e },
-                  !N &&
+                  !S &&
                     a.createElement(
                       a.Fragment,
                       null,
@@ -9528,65 +9528,65 @@
                         {
                           onSelected: () => {
                             var A, e, t;
-                            let n = w[0];
-                            if (m.inherited_from_parentset) {
+                            let n = Q[0];
+                            if (E.inherited_from_parentset) {
                               const e = (A, e) =>
                                 (0, Y.z)(() => {
                                   const t = {
-                                    action_set_key: B.key,
+                                    action_set_key: p.key,
                                     action_set_layer_key:
-                                      null == p ? void 0 : p.key,
-                                    source_binding_key: I,
-                                    input_key: m.key,
+                                      null == v ? void 0 : v.key,
+                                    source_binding_key: B,
+                                    input_key: E.key,
                                     activator_index: 0,
                                     binding_index: A,
-                                    modeid: v,
-                                    mode_shift: h,
+                                    modeid: h,
+                                    mode_shift: f,
                                   };
                                   null != e && (t.new_binding = e),
-                                    IA._A.SetControllerInputBinding(d, t),
-                                    IA._A.SaveEditingConfiguration(d),
+                                    IA._A.SetControllerInputBinding(m, t),
+                                    IA._A.SaveEditingConfiguration(m),
                                     IA._A.EnsureEditingConfiguration();
                                 });
                               null === (A = null == n ? void 0 : n.bindings) ||
                                 void 0 === A ||
                                 A.forEach((A) => e(-1, A));
                             }
-                            mn(d, I, m, B, p, -1, void 0, v, h);
+                            mn(m, B, E, p, v, -1, void 0, h, f);
                             const o = {
                                 type: D.tg
                                   .k_EControllerBindingType_ControllerAction,
                                 controller_action: { action: 40 },
                               },
                               r = {
-                                action_set_key: B.key,
+                                action_set_key: p.key,
                                 action_set_layer_key:
-                                  null == p ? void 0 : p.key,
-                                source_binding_key: I,
-                                input_key: m.key,
+                                  null == v ? void 0 : v.key,
+                                source_binding_key: B,
+                                input_key: E.key,
                                 activator_index:
                                   null !==
                                     (t =
-                                      null === (e = m.activators) ||
+                                      null === (e = E.activators) ||
                                       void 0 === e
                                         ? void 0
                                         : e.length) && void 0 !== t
                                     ? t
                                     : 0,
                                 binding_index: 0,
-                                modeid: v,
-                                mode_shift: h,
+                                modeid: h,
+                                mode_shift: f,
                                 new_binding: o,
-                                source_mode: E,
+                                source_mode: I,
                               };
-                            IA._A.SetControllerInputBinding(d, r),
-                              IA._A.SaveEditingConfiguration(d),
+                            IA._A.SetControllerInputBinding(m, r),
+                              IA._A.SaveEditingConfiguration(m),
                               IA._A.EnsureEditingConfiguration(),
                               IA._A.SetEditedInputBinding(o),
                               IA._A.SetActiveInputBinding(r),
-                              u.push(
+                              d.push(
                                 T.Z5.GamepadUI.ControllerConfigurator.ChooseBinding(
-                                  d
+                                  m
                                 )
                               );
                           },
@@ -9616,7 +9616,7 @@
                                   IA._A.SetControllerInputActivator(A, r);
                                 }
                               });
-                            })(d, I, m, B, p, w.length, v, h);
+                            })(m, B, E, p, v, Q.length, h, f);
                           },
                         },
                         (0, l.Xx)(
@@ -9627,46 +9627,52 @@
                 );
               (0, fA.yV)(t, A);
             },
-            k = a.createElement(
+            M = a.createElement(
               "div",
               { className: (0, _.Z)(CA().FlexFlowRow) },
-              S,
+              G,
               a.createElement(
                 "div",
                 { className: CA().ActivatorDesc },
-                (0, l.Xx)("#ControllerConfigurator_Activators_Desc", w.length)
+                (0, l.Xx)("#ControllerConfigurator_Activators_Desc", Q.length)
               )
             ),
-            M = w[0],
-            R =
-              (null === (t = M.bindings) || void 0 === t ? void 0 : t.length) >
+            R = Q[0],
+            F =
+              (null === (t = R.bindings) || void 0 === t ? void 0 : t.length) >
               0
-                ? M.bindings[0]
+                ? R.bindings[0]
                 : null,
-            F = (0, pA.XY)(E),
-            L = F && (0, pA.tJ)(m.key),
-            O =
+            L = (0, pA.XY)(I),
+            O = L && (0, pA.tJ)(E.key),
+            x =
               "" !=
               (null ===
                 (r =
-                  null === (o = null == R ? void 0 : R.key_binding_data) ||
+                  null === (o = null == F ? void 0 : F.key_binding_data) ||
                   void 0 === o
                     ? void 0
                     : o.icon_data) || void 0 === r
                 ? void 0
                 : r.icon_filename),
-            x =
+            H =
               40 ==
-              (null === (c = null == R ? void 0 : R.controller_action) ||
+              (null === (c = null == F ? void 0 : F.controller_action) ||
               void 0 === c
                 ? void 0
                 : c.action),
-            H = !x,
-            Z = H || (x && F),
-            X = (H || Z) && O ? R.key_binding_data.icon_data : void 0,
-            U = (A, e) => {
+            Z = !H,
+            X = Z || (H && L),
+            U =
+              (Z || X) && x
+                ? null === (s = null == F ? void 0 : F.key_binding_data) ||
+                  void 0 === s
+                  ? void 0
+                  : s.icon_data
+                : void 0,
+            V = (A, e) => {
               var t;
-              const n = null == M ? void 0 : M.bindings[A],
+              const n = null == R ? void 0 : R.bindings[A],
                 o = Object.assign(Object.assign({}, null != n ? n : {}), {
                   key_binding_data: Object.assign(
                     Object.assign(
@@ -9689,58 +9695,58 @@
                   ),
                 }),
                 r = {
-                  action_set_key: B.key,
-                  action_set_layer_key: null == p ? void 0 : p.key,
-                  source_binding_key: I,
-                  input_key: m.key,
+                  action_set_key: p.key,
+                  action_set_layer_key: null == v ? void 0 : v.key,
+                  source_binding_key: B,
+                  input_key: E.key,
                   activator_index: 0,
                   binding_index: A,
-                  modeid: v,
-                  mode_shift: h,
+                  modeid: h,
+                  mode_shift: f,
                   new_binding: o,
                 };
-              IA._A.SetControllerInputBinding(d, r),
-                IA._A.SaveEditingConfiguration(d),
+              IA._A.SetControllerInputBinding(m, r),
+                IA._A.SaveEditingConfiguration(m),
                 IA._A.EnsureEditingConfiguration();
             };
           return a.createElement(
             a.Fragment,
             null,
-            Q &&
+            y &&
               a.createElement(
                 i.gN,
                 {
-                  label: k,
+                  label: M,
                   inlineWrap: "keep-inline",
                   onContextMenu: IA._A.IsUpdatingEditingConfiguration
                     ? void 0
-                    : (A) => G(A),
-                  indentLevel: f,
+                    : (A) => k(A),
+                  indentLevel: b,
                 },
                 a.createElement(
                   sA.s,
                   {
                     className: (0, _.Z)(
                       CA().BindingButtons,
-                      L && CA().HasIcons
+                      O && CA().HasIcons
                     ),
                     retainFocus: !0,
                     navEntryPreferPosition: QA.c4.PREFERRED_CHILD,
                   },
-                  L &&
+                  O &&
                     a.createElement(
                       i.zx,
                       {
                         onClick: (A) => {
                           return (
                             (e = 0),
-                            (t = d),
-                            (n = X),
+                            (t = m),
+                            (n = U),
                             (o = (0, C.RA)(A)),
                             void (0, g.AM)(
                               a.createElement(be, {
-                                onOK: (A) => U(e, A),
-                                onRemove: () => U(e, void 0),
+                                onOK: (A) => V(e, A),
+                                onRemove: () => V(e, void 0),
                                 appID: t,
                                 selectedIcon: n,
                               }),
@@ -9753,51 +9759,51 @@
                           CA().BindingButton,
                           CA().BindingIconButton
                         ),
-                        disabled: !H && !Z,
+                        disabled: !Z && !X,
                         noFocusRing: !1,
                       },
                       a.createElement(Ge, {
                         filenameOrURI:
-                          null !== (s = null == X ? void 0 : X.icon_url) &&
-                          void 0 !== s
-                            ? s
-                            : null == X
+                          null !== (u = null == U ? void 0 : U.icon_url) &&
+                          void 0 !== u
+                            ? u
+                            : null == U
                             ? void 0
-                            : X.icon_filename,
-                        background: null == X ? void 0 : X.color_background,
-                        foreground: null == X ? void 0 : X.color_foreground,
+                            : U.icon_filename,
+                        background: null == U ? void 0 : U.color_background,
+                        foreground: null == U ? void 0 : U.color_foreground,
                       })
                     ),
                   a.createElement(
                     i.zx,
                     {
                       className: CA().BindingOptionsButton,
-                      onClick: (A) => G(A),
+                      onClick: (A) => k(A),
                     },
                     a.createElement(P.Zrf, null)
                   )
                 )
               ),
-            w.map((e, t) =>
+            Q.map((e, t) =>
               a.createElement(
                 ln,
                 Object.assign(
                   {
                     key: t,
-                    input: m,
-                    indentLevel: y,
-                    eControllerMode: E,
-                    eControllerSource: I,
-                    baseActionSet: B,
-                    layerActionSet: p,
+                    input: E,
+                    indentLevel: N,
+                    eControllerMode: I,
+                    eControllerSource: B,
+                    baseActionSet: p,
+                    layerActionSet: v,
                     activatorIndex: t,
                     activator: e,
                     bModeInherited: A.bModeInherited,
-                    modeid: v,
-                    modeShift: h,
-                    bActivatorsGrouped: Q,
+                    modeid: h,
+                    modeShift: f,
+                    bActivatorsGrouped: y,
                   },
-                  b
+                  w
                 )
               )
             )
@@ -26100,7 +26106,7 @@
           c = null == r ? void 0 : r.find((A) => A.timezoneID == o),
           s = c ? (0, ts.Ni)(c) : "",
           u = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          m = parseInt(1673497616),
+          m = parseInt(1673506498),
           C = m && (0, Gc._o)(m, n, s),
           E = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           I = (0, Sc.l)(1024 * e.nSystemRAMSizeMB * 1024),
