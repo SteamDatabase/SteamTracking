@@ -1,9 +1,7 @@
-8
+0
 __TEXT
 __text
 __TEXT
-h
-h
 __stubs
 __TEXT
 __stub_helper
@@ -41,24 +39,25 @@ __DATA
 0
 __thread_data
 __DATA
+M'
 @
+M'
 __thread_bss
 __DATA
-M'
+@M'
 __bss
 __DATA
-Q'
+@Q'
 j.
 __common
 __DATA
-p'
 H
 __LINKEDIT
 
 @
 @loader_path/serverbrowser.dylib
 "
-8!
+P!
 P
 
 
@@ -67,7 +66,8 @@ P
 @loader_path/libtier0_s.dylib
 8
 @loader_path/libvstdlib_s.dylib
-@
+8
+@loader_path/libSDL3.dylib
 h
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 X
@@ -89,7 +89,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-?(
+@?(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -3843,7 +3843,7 @@ j
 j
 j
 j
-H&
+&
 p
 0
 p
@@ -3947,6 +3947,8 @@ M9e
 ?
 @
 @
+4
+>
 
 
 d
@@ -3998,10 +4000,9 @@ d
 d
 0
 A+4$A+u
-~m=
 =
 =
-=
+C
 @
 j
 j
@@ -4195,10 +4196,8 @@ d
 =*.*
 =
 @
-{
 @
 @
-V
 @
 @
 @

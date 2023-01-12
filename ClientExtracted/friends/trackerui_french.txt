@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "a fini de télécharger"
 
+"Friends_PeerUploadNotification_Info" "Transfert des fichiers du jeu vers"
+
 "Friends_SteamInputActionSetChangedTitle"	"Groupe d'actions du contrôleur"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Numéros de joueurs échangés"

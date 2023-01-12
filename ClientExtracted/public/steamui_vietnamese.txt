@@ -427,6 +427,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_Status_ItemsComplete"	"%numcompl% trên %numtotal% đã hoàn thành"
 "Steam_Status_DownloadsTitle"		"Tải xuống"
 "Steam_Status_GoToDownloadsPage"		"Quản lý"
+"Steam_Status_PeerContentServer"		"Đang chuyển"
 
 "Steam_Time_ShowMostRecent"			"Hiển thị những mục mới nhất"
 "Steam_Time_5Minutes"				"5 phút"
@@ -1502,6 +1503,13 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_ThrottleDownloadsWhileStreaming"	"Điều chỉnh tốc độ tải xuống khi đang phát sóng"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Nếu chọn mục này, Steam sẽ giới hạn tốc độ tải xuống nhằm duy trì trải nghiệm tốt nhất cho Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Hiển thị tốc độ tải xuống ở dạng bit trên giây"
+
+"Steam_PeerContentTitle"			"Chuyển file trò chơi trên mạng nội bộ"
+"Steam_PeerContentInfo"			"Tính năng này cho phép máy PC của bạn chuyển file trò chơi tới/từ máy PC khác hoặc Steam Deck trên mạng nội bộ, giảm lưu lượng dùng Internet khi đang tải xuống/lên một trò chơi"
+"Steam_PeerContentOff"			"Tắt - không cho phép chuyển"
+"Steam_PeerContentSameUser"		"Cho phép chuyển tới/từ thiết bị của tôi"
+"Steam_PeerContentFriends"		"Cho phép chuyển tới/từ bạn bè tôi trên Steam"
+"Steam_PeerContentAnyUser"		"Cho phép chuyển tới/từ người dùng bất kỳ"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud lưu trữ thông tin dữ liệu, giúp cho trải nghiệm của bạn đồng nhất xuyên suốt các máy tính khác nhau."
@@ -4119,20 +4127,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_MoveAppFolder_NoStart" "Không thể chuyển các tệp tới thư mục thư viện mới (%error%)."
 
 "Steam_HelpUsTranslate" "Thành thạo ngôn ngữ khác? Hãy giúp chúng tôi dịch Steam."
-
-"steam_emailaddress_query" "Đây là địa chỉ email hiện tại của bạn?"
-"steam_emailaddress_query_yes" "Có"
-"steam_emailaddress_query_no" "Không, cập nhật mới"
-"steam_emailaddress_query_info" "Địa chỉ email của bạn sẽ được sử dụng để xác nhận việc mua hàng và giúp bạn quản lý truy cập vào tài khoản Steam của mình."
-"steam_emailaddress_query_info_link" "Tìm hiểu thêm"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Bạn không có số điện thoại nào liên kết với tài khoản này."
-"steam_phoneaddress_query_info" "Số điện thoại có thể được dùng để xác minh chủ sở hữu của tài khoản này, trong trường hợp bạn không truy cập được địa chỉ email hoặc mật khẩu."
-
-"steam_phoneaddress_query_yes" "Thêm số điện thoại"
-"steam_phoneaddress_query_no" "Không phải bây giờ"
-
 
 "steam_nav_workshop"	"Workshop"
 "steam_nav_greenlight"	"Greenlight"

@@ -431,6 +431,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Status_ItemsComplete"	"%numcompl%／%numtotal% アイテム完了"
 "Steam_Status_DownloadsTitle"		"ダウンロード"
 "Steam_Status_GoToDownloadsPage"		"管理"
+"Steam_Status_PeerContentServer"		"転送中"
 
 "Steam_Time_ShowMostRecent"			"確認する範囲"
 "Steam_Time_5Minutes"				"5分"
@@ -1501,6 +1502,13 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ThrottleDownloadsWhileStreaming"	"ストリーミング中はダウンロードを制限する"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"ここをチェックすると、Steamは高品質のSteam Remote Play体験を保つためにダウンロード速度を制限します。"
 "Steam_DownloadRatesInBits"			"ダウンロード速度をビット／秒の単位で表示"
+
+"Steam_PeerContentTitle"			"ゲームファイルをローカルネットワーク経由で転送"
+"Steam_PeerContentInfo"			"この機能により、お使いのPCで、ローカルネットワーク上の他のPCやSteam Deckとの間でゲームファイルを転送できるようになり、ゲームのダウンロードやアップデート時のインターネットトラフィックを削減することができます。"
+"Steam_PeerContentOff"			"オフ－転送を一切許可しない"
+"Steam_PeerContentSameUser"		"自分のデバイス間での転送を許可する"
+"Steam_PeerContentFriends"		"Steamフレンドとの転送を許可する"
+"Steam_PeerContentAnyUser"		"すべてユーザーとの転送を許可する"
 
 "Steam_CloudLabel"					"Steamクラウド"
 "Steam_CloudInfo"					"Steamクラウドに情報を保存することで、すべてのPC上であなたの製品体験を共有することができます。"
@@ -4120,20 +4128,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_MoveAppFolder_NoStart" "ファイルを新しいライブラリフォルダーへ移動できません（%error%）。"
 
 "Steam_HelpUsTranslate" "他の言語に精通していますか？ Steam の翻訳にご協力ください。"
-
-"steam_emailaddress_query" "これは現在使用しているメールアドレスですか？"
-"steam_emailaddress_query_yes" "はい"
-"steam_emailaddress_query_no" "いいえ、アップデートします。"
-"steam_emailaddress_query_info" "あなたのEメールアドレスは、購入の確認や、Steamアカウントへのアクセスを管理する為に使用されます。"
-"steam_emailaddress_query_info_link" "詳細"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "このアカウントに携帯番号を登録していません。"
-"steam_phoneaddress_query_info" "メールアドレスもしくはパスワードを紛失した場合、このアカウントの所有権を証明するのに携帯番号を使用することができます。"
-
-"steam_phoneaddress_query_yes" "携帯番号を追加"
-"steam_phoneaddress_query_no" "今は追加しない"
-
 
 "steam_nav_workshop"	"ワークショップ"
 "steam_nav_greenlight"	"Greenlight"

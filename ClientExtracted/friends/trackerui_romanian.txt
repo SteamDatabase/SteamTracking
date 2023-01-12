@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "a terminat descărcarea"
 
+"Friends_PeerUploadNotification_Info" "Se transferă fișierele jocului către"
+
 "Friends_SteamInputActionSetChangedTitle"	"Setul de acțiuni ale controlerului"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Controlerul a schimbat numărul de jucător"

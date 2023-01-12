@@ -430,6 +430,7 @@ Tato operace zabere jenom okamžik."
 "Steam_Status_ItemsComplete"	"Dokončeno %numcompl% z %numtotal% položek"
 "Steam_Status_DownloadsTitle"		"Stahování"
 "Steam_Status_GoToDownloadsPage"		"Spravovat"
+"Steam_Status_PeerContentServer"		"Přenášení"
 
 "Steam_Time_ShowMostRecent"			"Zobrazit nejnovější"
 "Steam_Time_5Minutes"				"5 minut"
@@ -1504,6 +1505,13 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_ThrottleDownloadsWhileStreaming"	"Omezit stahování během streamování"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Pokud je tato možnost zaškrtnuta, omezí klient služby Steam rychlost stahování tak, aby byla zajištěna vysoká kvalita streamování."
 "Steam_DownloadRatesInBits"			"Zobrazit rychlost stahování v bitech za sekundu"
+
+"Steam_PeerContentTitle"			"Přenášení souborů her po místní síti"
+"Steam_PeerContentInfo"			"Tato funkce Vám umožňuje přenášet soubory her na nebo z jiných počítačů či zařízení Steam Deck po místní síti, což při stahování nebo aktualizování sníží využití Vašeho připojení k internetu."
+"Steam_PeerContentOff"			"Vypnuto – zakázat všechny přenosy"
+"Steam_PeerContentSameUser"		"Povolit přenosy na/z mých vlastních zařízení"
+"Steam_PeerContentFriends"		"Povolit přenosy pro/od mých přátel"
+"Steam_PeerContentAnyUser"		"Povolit přenosy pro/od libovolných uživatelů"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Funkce Steam Cloud uchovává všechny Vaše informace a nastavení, aby byl Váš zážitek stejný, ať už se přihlásíte odkudkoli."
@@ -4125,20 +4133,6 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 
 "Steam_HelpUsTranslate" "Mluvíte dobře cizím jazykem? Pomozte nám s překládáním služby Steam."
 
-"steam_emailaddress_query" "Je toto Vaše aktuální e-mailová adresa?"
-"steam_emailaddress_query_yes" "Ano"
-"steam_emailaddress_query_no" "Ne, aktualizovat"
-"steam_emailaddress_query_info" "E-mailová adresa je používána pro potvrzování nákupů a správu přístupu k účtu služby Steam."
-"steam_emailaddress_query_info_link" "Více informací"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "K tomuto účtu není přiřazené telefonní číslo."
-"steam_phoneaddress_query_info" "Telefonní číslo lze použít pro ověření vlastnictví účtu v případě, kdy k němu zapomenete heslo nebo přijdete o přístup ke svojí e-mailové adrese."
-
-"steam_phoneaddress_query_yes" "Přiřadit telefonní číslo"
-"steam_phoneaddress_query_no" "Nyní ne"
-
-
 "steam_nav_workshop"	"Workshop"
 "steam_nav_greenlight"	"Greenlight"
 "steam_nav_marketplace"	"Komunitní trh"
@@ -4589,7 +4583,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_Settings_Streaming_Description" "Streamujte hry z tohoto počítače na jiná zařízení. Pro připojení k danému zařízení se na něm jednoduše přihlaste pod stejným účtem služby Steam jako zde nebo v aplikaci Steam Link vyberte možnost „Jiný počítač“."
 "Steam_Settings_Streaming_DeviceName" "NÁZEV ZAŘÍZENÍ"
 "Steam_Settings_Streaming_Status" "STAV"
-"Steam_Settings_Streaming_EnableStreaming" "Povolit Remote Play"
+"Steam_Settings_Streaming_EnableStreaming" "Povolit funkci Remote Play"
 "Steam_Settings_Streaming_Pair" "Spárovat se Steam Link"
 "Steam_Settings_Streaming_Unpair" "Zrušit spárování"
 "Steam_Settings_Streaming_UnpairConfirmation" "Opravdu chcete zrušit spárování všech zařízení?"

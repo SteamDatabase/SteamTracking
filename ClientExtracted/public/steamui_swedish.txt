@@ -429,6 +429,7 @@ Felkod (%error%)"
 "Steam_Status_ItemsComplete"	"%numcompl% av %numtotal% artiklar klara"
 "Steam_Status_DownloadsTitle"		"Nedladdningar"
 "Steam_Status_GoToDownloadsPage"		"Hantera"
+"Steam_Status_PeerContentServer"		"Överför"
 
 "Steam_Time_ShowMostRecent"			"Visa senaste"
 "Steam_Time_5Minutes"				"5 minuter"
@@ -1509,6 +1510,13 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "Steam_ThrottleDownloadsWhileStreaming"	"Begränsa nedladdning vid strömning"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Om detta är aktivt kommer Steam begränsa nedladdningshastigheten för att upprätthålla en hög kvalitet på din Steam Remote Play-upplevelse."
 "Steam_DownloadRatesInBits"			"Visa nedladdningshastighet i bitar per sekund"
+
+"Steam_PeerContentTitle"			"Överföring av spelfiler via lokalt nätverk"
+"Steam_PeerContentInfo"			"Den här funktionen gör att din pc kan överföra spelfiler till och från andra datorer eller Steam Deck via ditt lokala nätverk, vilket minskar din internettrafik när du laddar ned eller uppdaterar ett spel."
+"Steam_PeerContentOff"			"Av – tillåt inga överföringar"
+"Steam_PeerContentSameUser"		"Tillåt överföringar till/från mina egna enheter"
+"Steam_PeerContentFriends"		"Tillåt överföringar till/från mina Steam-vänner"
+"Steam_PeerContentAnyUser"		"Tillåt överföringar till/från alla användare"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud lagrar information så att din upplevelse är konsekvent över flera datorer."
@@ -4123,20 +4131,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_MoveAppFolder_NoStart" "Filer kan ej flyttas till ny biblioteksmapp (%error%)."
 
 "Steam_HelpUsTranslate" "Talar du ett annat språk flytande? Hjälp oss att översätta Steam."
-
-"steam_emailaddress_query" "Är detta din nuvarande e-postadress?"
-"steam_emailaddress_query_yes" "Ja"
-"steam_emailaddress_query_no" "Nej, uppdatera"
-"steam_emailaddress_query_info" "Din e-postadress används till att bekräfta inköp samt att hantera tillgången till ditt Steam-konto."
-"steam_emailaddress_query_info_link" "Läs mer"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Du har inget telefonnummer som associeras med detta konto."
-"steam_phoneaddress_query_info" "Ett telefonnummer kan användas till att verifiera din äganderätt till detta konto, ifall du förlorar tillgång till din e-postadress eller lösenord."
-
-"steam_phoneaddress_query_yes" "Lägg till telefonnummer"
-"steam_phoneaddress_query_no" "Inte nu"
-
 
 "steam_nav_workshop"	"Workshop"
 "steam_nav_greenlight"	"Greenlight"

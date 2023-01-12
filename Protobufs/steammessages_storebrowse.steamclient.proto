@@ -341,6 +341,23 @@ message CStoreBrowse_GetDLCForApps_Response {
 	repeated .CStoreBrowse_GetDLCForApps_Response.PlaytimeForApp playtime = 2;
 }
 
+message CStoreBrowse_GetDLCForAppsSolr_Request {
+	optional .StoreBrowseContext context = 1;
+	repeated uint32 appids = 2;
+	optional string flavor = 3;
+	optional uint32 count = 4;
+	optional .CStorePageFilter store_page_filter = 5;
+}
+
+message CStoreBrowse_GetDLCForAppsSolr_Response {
+	message DLCList {
+		optional uint32 parent_appid = 1;
+		repeated uint32 dlc_appids = 2;
+	}
+
+	repeated .CStoreBrowse_GetDLCForAppsSolr_Response.DLCList dlc_lists = 1;
+}
+
 service StoreBrowse {
 	option (service_description) = "APIs for accessing store item data";
 
@@ -354,5 +371,9 @@ service StoreBrowse {
 
 	rpc GetDLCForApps (.CStoreBrowse_GetDLCForApps_Request) returns (.CStoreBrowse_GetDLCForApps_Response) {
 		option (method_description) = "Returns all DLC appids for games owned by the user.";
+	}
+
+	rpc GetDLCForAppsSolr (.CStoreBrowse_GetDLCForAppsSolr_Request) returns (.CStoreBrowse_GetDLCForAppsSolr_Response) {
+		option (method_description) = "Returns all DLC appids for the specified games.";
 	}
 }

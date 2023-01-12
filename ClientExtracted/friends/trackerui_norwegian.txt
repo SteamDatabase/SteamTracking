@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "er ferdig med å laste ned"
 
+"Friends_PeerUploadNotification_Info" "Overfører spillfiler til"
+
 "Friends_SteamInputActionSetChangedTitle"	"Kontrollerhandlingssett"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Kontroller byttet plass"

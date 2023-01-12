@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" " "
 
+"Friends_PeerUploadNotification_Info" "Oyun dosyaları şuna aktarılıyor:"
+
 "Friends_SteamInputActionSetChangedTitle"	"Kontrolcü Eylem Seti"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Kontrolcünün Bölmesi Değişti"

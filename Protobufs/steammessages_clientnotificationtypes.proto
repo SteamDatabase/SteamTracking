@@ -148,6 +148,7 @@ message CClientNotificationItemAnnouncement {
 message CClientNotificationInboxStats {
 	optional uint32 friend_invite_count = 1;
 	optional uint32 new_comment_count = 2;
+	optional uint32 new_gift_count = 3;
 }
 
 message CClientNotificationHardwareSurveyPending {

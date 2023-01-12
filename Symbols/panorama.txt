@@ -93,6 +93,7 @@
  OBJC_CLASS_$_NSURL
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSWindow
+ OBJC_CLASS_$_NSWorkspace
  OBJC_METACLASS_$_NSObject
  Plat_FloatTime
  Plat_GetExecutablePath
@@ -116,11 +117,13 @@
  RealGetCallStack
  RealPrintCallStack
  SDL_AddEventWatch
+ SDL_CloseGamepad
+ SDL_CloseJoystick
  SDL_CreateSystemCursor
  SDL_CreateWindow
  SDL_DelEventWatch
+ SDL_DestroyCursor
  SDL_DestroyWindow
- SDL_FreeCursor
  SDL_GL_CreateContext
  SDL_GL_DeleteContext
  SDL_GL_GetDrawableSize
@@ -129,16 +132,26 @@
  SDL_GL_SetAttribute
  SDL_GL_SetSwapInterval
  SDL_GL_SwapWindow
- SDL_GameControllerClose
- SDL_GameControllerGetAxis
- SDL_GameControllerGetButton
- SDL_GameControllerGetJoystick
- SDL_GameControllerName
- SDL_GameControllerRumble
  SDL_GetClipboardText
  SDL_GetDisplayBounds
+ SDL_GetGamepadAxis
+ SDL_GetGamepadButton
+ SDL_GetGamepadJoystick
+ SDL_GetGamepadName
+ SDL_GetJoystickAxis
+ SDL_GetJoystickButton
+ SDL_GetJoystickInstanceID
+ SDL_GetJoystickInstanceName
+ SDL_GetJoystickInstanceProduct
+ SDL_GetJoystickInstanceType
+ SDL_GetJoystickInstanceVendor
+ SDL_GetJoystickName
+ SDL_GetJoystickPowerLevel
+ SDL_GetJoysticks
  SDL_GetModState
  SDL_GetMouseState
+ SDL_GetNumJoystickAxes
+ SDL_GetNumJoystickButtons
  SDL_GetTicks
  SDL_GetVersion
  SDL_GetWindowFlags
@@ -146,31 +159,19 @@
  SDL_GetWindowPosition
  SDL_GetWindowSize
  SDL_GetWindowWMInfo
+ SDL_HideCursor
  SDL_HideWindow
  SDL_Init
  SDL_InitSubSystem
- SDL_IsGameController
- SDL_JoystickClose
- SDL_JoystickCurrentPowerLevel
- SDL_JoystickGetAxis
- SDL_JoystickGetButton
- SDL_JoystickGetDeviceProduct
- SDL_JoystickGetDeviceType
- SDL_JoystickGetDeviceVendor
- SDL_JoystickInstanceID
- SDL_JoystickName
- SDL_JoystickNameForIndex
- SDL_JoystickNumAxes
- SDL_JoystickNumButtons
- SDL_JoystickOpen
- SDL_LockJoysticks
+ SDL_IsGamepad
  SDL_MinimizeWindow
- SDL_NumJoysticks
+ SDL_OpenJoystick
  SDL_PollEvent
  SDL_PumpEvents
  SDL_QuitSubSystem
  SDL_RaiseWindow
  SDL_RestoreWindow
+ SDL_RumbleGamepad
  SDL_SetClipboardText
  SDL_SetCursor
  SDL_SetHint
@@ -178,7 +179,6 @@
  SDL_SetWindowPosition
  SDL_ShowCursor
  SDL_ShowWindow
- SDL_UnlockJoysticks
  SDL_free
  SDL_getenv
  SDL_setenv

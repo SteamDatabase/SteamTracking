@@ -429,6 +429,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "Steam_Status_ItemsComplete"	"%numcompl% von %numtotal% Download(s) abgeschlossen"
 "Steam_Status_DownloadsTitle"		"Downloads"
 "Steam_Status_GoToDownloadsPage"		"Verwalten"
+"Steam_Status_PeerContentServer"		"Wird transferiert"
 
 "Steam_Time_ShowMostRecent"			"Aktuellste anzeigen"
 "Steam_Time_5Minutes"				"5 Minuten"
@@ -1502,6 +1503,13 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 "Steam_ThrottleDownloadsWhileStreaming"	"Downloads während des Streamens drosseln"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Wenn diese Option ausgewählt ist, begrenzt Steam die Downloadgeschwindigkeit, um hochqualitatives Steam Remote Play zu gewährleisten."
 "Steam_DownloadRatesInBits"			"Downloadrate in Bits pro Sekunde anzeigen"
+
+"Steam_PeerContentTitle"			"Spieldateitransfer über das lokale Netzwerk"
+"Steam_PeerContentInfo"			"Diese Funktion ermöglicht es Ihrem Computer, Spieldateien zu und von anderen PCs oder Steam Decks in Ihrem lokalen Netzwerk zu transferieren und somit Ihren Internet-Datenverkehr beim Herunterladen oder Hochladen eines Spiels zu reduzieren."
+"Steam_PeerContentOff"			"Aus: keinen Transfer gestatten"
+"Steam_PeerContentSameUser"		"Transfers zu/von meinen eigenen Geräten gestatten"
+"Steam_PeerContentFriends"		"Transfers zu/von meinen Freunden gestatten"
+"Steam_PeerContentAnyUser"		"Transfers zu/von anderen Nutzern gestatten"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud speichert Ihre Einstellungen, sodass Ihre Produkterfahrung computerübergreifend einheitlich ist."
@@ -4119,20 +4127,6 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_MoveAppFolder_NoStart" "Dateien konnten nicht ins neue Bibliotheksverzeichnis verschoben werden (%error%)."
 
 "Steam_HelpUsTranslate" "Sprechen Sie fließend Englisch? Helfen Sie uns, Steam zu übersetzen."
-
-"steam_emailaddress_query" "Ist dies Ihre derzeitige E-Mail-Adresse?"
-"steam_emailaddress_query_yes" "Ja"
-"steam_emailaddress_query_no" "Nein, aktualisieren"
-"steam_emailaddress_query_info" "Ihre E-Mail-Adresse wird verwendet, um Käufe zu bestätigen, und hilft Ihnen bei der Verwaltung Ihres Steam-Accounts."
-"steam_emailaddress_query_info_link" "Mehr erfahren"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Mit Ihrem Account ist keine Telefonnummer verknüpft."
-"steam_phoneaddress_query_info" "Mit einer Telefonnummer können Sie den Besitz dieses Accounts nachweisen, falls Sie den Zugriff auf Ihre E-Mail-Adresse oder Ihr Passwort verlieren."
-
-"steam_phoneaddress_query_yes" "Telefonnummer hinzufügen"
-"steam_phoneaddress_query_no" "Nicht jetzt"
-
 
 "steam_nav_workshop"	"Workshop"
 "steam_nav_greenlight"	"Greenlight"

@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "har laddat ner"
 
+"Friends_PeerUploadNotification_Info" "Överför spelfiler till"
+
 "Friends_SteamInputActionSetChangedTitle"	"Kontrollhandlingsset"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Handkontrollen har bytt uttag"

@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "ha completato il download di"
 
+"Friends_PeerUploadNotification_Info" "Trasferimento dei file di gioco a"
+
 "Friends_SteamInputActionSetChangedTitle"	"Set di azioni controller"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Il controller ha cambiato slot"

@@ -429,6 +429,7 @@
 "Steam_Status_ItemsComplete"	"已完成 %numcompl% / %numtotal% 个项目 "
 "Steam_Status_DownloadsTitle"		"下载"
 "Steam_Status_GoToDownloadsPage"		"管理"
+"Steam_Status_PeerContentServer"		"正在转移"
 
 "Steam_Time_ShowMostRecent"			"显示最新的"
 "Steam_Time_5Minutes"				"5 分钟"
@@ -1503,6 +1504,13 @@
 "Steam_ThrottleDownloadsWhileStreaming"	"流式传输时限制下载"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"如果勾选此选项，Steam 会限制下载速度，以保持 Steam 远程畅玩的高质量体验。"
 "Steam_DownloadRatesInBits"			"以 bit/s 的形式显示下载速率"
+
+"Steam_PeerContentTitle"			"通过本地网络转移游戏文件"
+"Steam_PeerContentInfo"			"此功能允许您的 PC 通过本地网络将游戏文件转出或转入其他 PC 或 Steam Deck，以便在下载或更新游戏时降低互联网流量。"
+"Steam_PeerContentOff"			"关闭 - 不允许任何转移"
+"Steam_PeerContentSameUser"		"允许转入/出我自己的设备"
+"Steam_PeerContentFriends"		"允许转入/出我 Steam 好友的设备"
+"Steam_PeerContentAnyUser"		"允许转入/出任何用户"
 
 "Steam_CloudLabel"					"Steam 云"
 "Steam_CloudInfo"					"Steam 云会储存您的信息，以便您在不同的计算机也能享受到一致的产品体验。"
@@ -4117,20 +4125,6 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_MoveAppFolder_NoStart" "文件无法移动至新库文件夹（%error%）。"
 
 "Steam_HelpUsTranslate" "可以很流利地使用另一门语言？帮助我们翻译 Steam 吧。"
-
-"steam_emailaddress_query" "这是您当前的电子邮件地址吗？"
-"steam_emailaddress_query_yes" "是"
-"steam_emailaddress_query_no" "否，更新"
-"steam_emailaddress_query_info" "您的电子邮件地址已被用于确认购买以及帮助管理您对 Steam 帐户的访问。"
-"steam_emailaddress_query_info_link" "了解更多"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "您没有与帐户相关联的手机号码。"
-"steam_phoneaddress_query_info" "手机号码可以在您无法访问电子邮件地址或密码的情况下验证您对该帐户的所有权。"
-
-"steam_phoneaddress_query_yes" "添加手机号码"
-"steam_phoneaddress_query_no" "以后再说"
-
 
 "steam_nav_workshop"	"创意工坊"
 "steam_nav_greenlight"	"青睐之光"

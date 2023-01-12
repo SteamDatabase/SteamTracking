@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "приключи свалянето на"
 
+"Friends_PeerUploadNotification_Info" "Прехвърляне на игрални файлове към"
+
 "Friends_SteamInputActionSetChangedTitle"	"Набор от действия за контролера"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Контролерът размени слотове"

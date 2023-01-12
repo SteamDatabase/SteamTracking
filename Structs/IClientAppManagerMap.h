@@ -106,4 +106,6 @@ public:
     virtual unknown_ret GetPeerContentServerMode() = 0;
     virtual unknown_ret GetPeerContentClientMode() = 0;
     virtual unknown_ret GetPeerContentServerStats(void*) = 0;
+    virtual unknown_ret SuspendPeerContentClient(void*) = 0;
+    virtual unknown_ret SuspendPeerContentServer(void*) = 0;
 };

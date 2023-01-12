@@ -425,6 +425,7 @@
 "Steam_Status_ItemsComplete"	"%numcompl% από %numtotal% αντικείμενα ολοκληρώθηκαν"
 "Steam_Status_DownloadsTitle"		"ΛΗΨΕΙΣ"
 "Steam_Status_GoToDownloadsPage"		"Διαχείριση"
+"Steam_Status_PeerContentServer"		"Γίνεται μεταφορά"
 
 "Steam_Time_ShowMostRecent"			"Εμφάνιση πιο πρόσφατου"
 "Steam_Time_5Minutes"				"5 λεπτά"
@@ -1499,6 +1500,13 @@
 "Steam_ThrottleDownloadsWhileStreaming"	"Περιορισμός των λήψεων κατά τη μετάδοση"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Εάν αυτό επιλεχθεί, το Steam θα περιορίζει την ταχύτητα λήψης για να διατηρήσει μια υψηλή ποιότητα εμπειρίας Remote Play."
 "Steam_DownloadRatesInBits"			"Εμφάνιση ρυθμών λήψης σε bits ανά δευτερόλεπτο"
+
+"Steam_PeerContentTitle"			"Μεταφορά αρχείου παιχνιδιού μέσω τοπικού δικτύου"
+"Steam_PeerContentInfo"			"Αυτή η λειτουργία επιτρέπει στον υπολογιστή σας να μεταφέρει αρχεία παιχνιδιού σε άλλους και από άλλους υπολογιστές ή Steam Deck στο τοπικό δίκτυό σας, μειώνοντας τη διαδικτυακή κίνηση κατά τη λήψη ή ενημέρωση ενός παιχνιδιού."
+"Steam_PeerContentOff"			"Ανενεργή – Να μην επιτρέπεται καμία μεταφορά"
+"Steam_PeerContentSameUser"		"Να επιτρέπονται μεταφορές σε/από συσκευές μου"
+"Steam_PeerContentFriends"		"Να επιτρέπονται μεταφορές σε/από φίλους Steam μου"
+"Steam_PeerContentAnyUser"		"Να επιτρέπονται μεταφορές σε/από οποιονδήποτε χρήστη"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Το Steam Cloud αποθηκεύει πληροφορίες ώστε η εμπειρία των προϊόντων σας να είναι συνεπής σε όλους τους υπολογιστές."
@@ -4114,20 +4122,6 @@
 "Steam_MoveAppFolder_NoStart" "Αδύνατη η μετακίνηση αρχείων στο νέο φάκελο συλλογής (%error%)."
 
 "Steam_HelpUsTranslate" "Μιλάτε με ευχέρεια κάποια άλλη γλώσσα; Βοηθήστε μας να μεταφράσουμε το Steam."
-
-"steam_emailaddress_query" "Είναι αυτή η τρέχουσα διεύθυνση email σας;"
-"steam_emailaddress_query_yes" "ΝΑΙ"
-"steam_emailaddress_query_no" "ΟΧΙ, ΑΛΛΑΓΗ"
-"steam_emailaddress_query_info" "Η διεύθυνση ηλεκτρονικού ταχυδρομείου χρησιμοποιείται για να επιβεβαιωθούν αγορές και για να σας βοηθήσει να διαχειριστείτε την πρόσβαση στο λογαριασμό Steam σας."
-"steam_emailaddress_query_info_link" "Μάθετε περισσότερα"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Δεν έχετε αριθμό τηλεφώνου συσχετισμένο με αυτό τον λογαριασμό."
-"steam_phoneaddress_query_info" "Ο τηλεφωνικός αριθμός χρησιμοποιείται για να επιβεβαιώσει την κυριότητα αυτού του λογαριασμού, σε περίπτωση που χάσετε την πρόσβαση στη διεύθυνση email σας ή στον κωδικό σας."
-
-"steam_phoneaddress_query_yes" "Προσθήκη αριθμού τηλεφώνου"
-"steam_phoneaddress_query_no" "Όχι τώρα"
-
 
 "steam_nav_workshop"	"ΕΡΓΑΣΤΗΡΙ"
 "steam_nav_greenlight"	"GREENLIGHT"

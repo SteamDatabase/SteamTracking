@@ -71,6 +71,7 @@
  SDL_GetWindowFromID
  SDL_GetWindowSize
  SDL_GetWindowWMInfo
+ SDL_HideCursor
  SDL_InitSubSystem
  SDL_RaiseWindow
  SDL_SetHint

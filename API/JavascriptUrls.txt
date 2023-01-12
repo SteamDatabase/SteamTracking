@@ -243,6 +243,7 @@ ${COMMUNITY_BASE_URL}profiles/${steamid}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
 ${COMMUNITY_BASE_URL}profiles/${}/commentnotifications
+${COMMUNITY_BASE_URL}profiles/${}/friends/pending
 ${COMMUNITY_BASE_URL}profiles/${}/home
 ${COMMUNITY_BASE_URL}profiles/${}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}/previewsingleshowcase/?customization_type=${}&level=${}
@@ -1007,6 +1008,7 @@ ${STORE_ICON_BASE_URL}${}
 ${STORE_ICON_BASE_URL}/${appid}/${}
 ${URL}${URL}
 ${URL}${_ ? _ : _}
+${URL}${}
 ${VIDEO_URL}international2020/bp_aegis_header.mp4
 ${VIDEO_URL}international2020/bp_aegis_header2.webm
 ${VIDEO_URL}international2022/aegis_loop.mp4
@@ -2533,9 +2535,11 @@ https://www.youtube.com/watch?v=MZhBVH9UeAA
 https://youtu.be/
 https://youtube.com/user/dota2
 steam://
+steam://AddNonSteamGame
 steam://appnews/
 steam://broadcast/watch/
 steam://broadcast/watch/${steamid64}
+steam://cdkeys/
 steam://cdkeys/${appid}
 steam://checkout_return/paypal_cancel/
 steam://checkout_return/paypal_success/

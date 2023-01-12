@@ -431,6 +431,7 @@
 "Steam_Status_ItemsComplete"	"항목 %numtotal%개 중 %numcompl%개 완료됨"
 "Steam_Status_DownloadsTitle"		"다운로드"
 "Steam_Status_GoToDownloadsPage"		"관리"
+"Steam_Status_PeerContentServer"		"전송 중"
 
 "Steam_Time_ShowMostRecent"			"표시 기간"
 "Steam_Time_5Minutes"				"5분"
@@ -1485,7 +1486,7 @@
 "Steam_SubscribeShippingInfo"	"현재 배송 주소를 알려주세요."
 
 "Steam_ChangeUser" "다른 사용자로 로그인..."
-"Steam_NoSavePersonalInfoCheck" "이 컴퓨터에 계정 개인 정보 저장 안 함"
+"Steam_NoSavePersonalInfoCheck" "이 컴퓨터에 계정 로그인 정보 저장 안 함"
 "Steam_NoSavePersonalInfoCheckDescription" "공용 컴퓨터를 사용하는 경우 이 옵션이 권장됩니다.\n\n이 옵션을 설정할 경우 '오프라인 모드'를 사용할 수 없습니다."
 
 "Steam_PurchaseZipCodeInfoInvalid"    "5자리 수의 유효한 우편 번호를 입력하세요."
@@ -1505,6 +1506,13 @@
 "Steam_ThrottleDownloadsWhileStreaming"	"스트리밍 중 다운로드 속도 제한하기"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"이 옵션을 선택하면, Steam이 고품질의 Steam Remote Play 환경을 유지하기 위해 다운로드 속도를 제한합니다."
 "Steam_DownloadRatesInBits"			"다운로드 속도를 초당 비트 수로 표시"
+
+"Steam_PeerContentTitle"			"로컬 네트워크를 통한 게임 파일 전송"
+"Steam_PeerContentInfo"			"이 기능은 주로 사용하는 PC와 로컬 네트워크에 있는 다른 PC 또는 Steam Deck 사이에 게임 파일 전송을 가능하게 하는 기능으로, 게임을 다운로드 또는 업데이트하는 동안 인터넷 트래픽을 줄입니다."
+"Steam_PeerContentOff"			"끄기 - 허용 안 함"
+"Steam_PeerContentSameUser"		"내 기기만 허용"
+"Steam_PeerContentFriends"		"Steam 친구만 허용"
+"Steam_PeerContentAnyUser"		"모든 사용자 허용"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud는 여러 컴퓨터에서 동일한 제품 사용 환경을 제공하기 위해 정보를 저장합니다."
@@ -4121,20 +4129,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_MoveAppFolder_NoStart" "새로운 라이브러리 폴더로 파일을 옮길 수 없습니다(%error%)."
 
 "Steam_HelpUsTranslate" "다른 언어를 능수능란하게 사용하시나요? Steam 번역에 참여하세요."
-
-"steam_emailaddress_query" "본 주소가 현재 사용하고 계시는 이메일 주소입니까?"
-"steam_emailaddress_query_yes" "예"
-"steam_emailaddress_query_no" "아니요, 갱신이 필요합니다"
-"steam_emailaddress_query_info" "귀하의 이메일 주소는 구매 확인, 그리고 Steam 계정으로의 접근을 관리하는 데 사용됩니다."
-"steam_emailaddress_query_info_link" "더 알아보기"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "이 계정에 연결된 전화번호가 없습니다."
-"steam_phoneaddress_query_info" "전화번호는 귀하가 이메일 주소나 암호를 잃어버렸을 경우 이 계정에 대한 소유권을 확인하는 데 쓰일 수 있습니다."
-
-"steam_phoneaddress_query_yes" "전화번호 추가"
-"steam_phoneaddress_query_no" "나중에"
-
 
 "steam_nav_workshop"	"창작마당"
 "steam_nav_greenlight"	"Greenlight"

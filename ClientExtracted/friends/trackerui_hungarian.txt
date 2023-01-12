@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "A Steam"
 "Friends_DownloadNotification_Info" "befejezte a letöltést:"
 
+"Friends_PeerUploadNotification_Info" "Játékfájlok továbbítása ide:"
+
 "Friends_SteamInputActionSetChangedTitle"	"Játékvezérlő-műveletkészlet"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"A játékvezérlő száma felcserélve"

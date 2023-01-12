@@ -363,7 +363,10 @@
  RealPrintCallStack
  RescaleBase
  SDL_AddEventWatch
+ SDL_AddGamepadMapping
  SDL_CloseAudioDevice
+ SDL_CloseGamepad
+ SDL_CloseJoystick
  SDL_CreateWindow
  SDL_DelEventWatch
  SDL_DestroyWindow
@@ -376,63 +379,61 @@
  SDL_GL_MakeCurrent
  SDL_GL_SetAttribute
  SDL_GL_SwapWindow
- SDL_GameControllerAddMapping
- SDL_GameControllerClose
- SDL_GameControllerGetAxisFromString
- SDL_GameControllerGetBindForAxis
- SDL_GameControllerGetBindForButton
- SDL_GameControllerGetButtonFromString
- SDL_GameControllerGetJoystick
- SDL_GameControllerGetStringForAxis
- SDL_GameControllerGetStringForButton
- SDL_GameControllerMappingForDeviceIndex
- SDL_GameControllerMappingForGUID
- SDL_GameControllerOpen
- SDL_GameControllerTypeForIndex
  SDL_GetAudioDeviceName
  SDL_GetAudioDeviceSpec
  SDL_GetDisplayBounds
  SDL_GetError
+ SDL_GetGamepadAxisFromString
+ SDL_GetGamepadBindForAxis
+ SDL_GetGamepadBindForButton
+ SDL_GetGamepadButtonFromString
+ SDL_GetGamepadInstanceGUID
+ SDL_GetGamepadInstanceMapping
+ SDL_GetGamepadInstanceProduct
+ SDL_GetGamepadInstanceType
+ SDL_GetGamepadInstanceVendor
+ SDL_GetGamepadJoystick
+ SDL_GetGamepadMappingForGUID
+ SDL_GetGamepadStringForAxis
+ SDL_GetGamepadStringForButton
+ SDL_GetGamepads
  SDL_GetGlobalMouseState
  SDL_GetHint
+ SDL_GetJoystickAxisInitialState
+ SDL_GetJoystickGUID
+ SDL_GetJoystickGUIDFromString
  SDL_GetJoystickGUIDInfo
+ SDL_GetJoystickGUIDString
+ SDL_GetJoystickInstanceGUID
+ SDL_GetJoystickInstanceName
+ SDL_GetJoystickInstanceType
+ SDL_GetJoystickName
+ SDL_GetJoysticks
  SDL_GetNumAudioDevices
+ SDL_GetNumJoystickAxes
  SDL_GetNumVideoDisplays
  SDL_GetPlatform
  SDL_GetQueuedAudioSize
+ SDL_GetRectIntersection
+ SDL_GetRectUnion
  SDL_GetRevision
  SDL_GetWindowFromID
  SDL_GetWindowSize
  SDL_GetWindowWMInfo
+ SDL_HideCursor
  SDL_InitSubSystem
- SDL_IntersectRect
- SDL_IsGameController
- SDL_JoystickClose
- SDL_JoystickGetAxisInitialState
- SDL_JoystickGetDeviceGUID
- SDL_JoystickGetDeviceInstanceID
- SDL_JoystickGetDeviceProduct
- SDL_JoystickGetDeviceType
- SDL_JoystickGetDeviceVendor
- SDL_JoystickGetGUID
- SDL_JoystickGetGUIDFromString
- SDL_JoystickGetGUIDString
- SDL_JoystickInstanceID
- SDL_JoystickName
- SDL_JoystickNameForIndex
- SDL_JoystickNumAxes
- SDL_JoystickOpen
+ SDL_IsGamepad
  SDL_LockJoysticks
- SDL_NumJoysticks
  SDL_OpenAudioDevice
- SDL_PauseAudioDevice
+ SDL_OpenGamepad
+ SDL_OpenJoystick
+ SDL_PlayAudioDevice
  SDL_QueueAudio
  SDL_QuitSubSystem
  SDL_RaiseWindow
  SDL_SetHint
  SDL_ShowCursor
  SDL_ShowSimpleMessageBox
- SDL_UnionRect
  SDL_UnlockJoysticks
  SDL_WarpMouseGlobal
  SDL_WasInit

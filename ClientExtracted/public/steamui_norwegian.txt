@@ -429,6 +429,7 @@ Dette bør ta under ett minutt."
 "Steam_Status_ItemsComplete"	"%numcompl% av %numtotal% nedlastinger fullført "
 "Steam_Status_DownloadsTitle"		"Nedlastinger"
 "Steam_Status_GoToDownloadsPage"		"Behandle"
+"Steam_Status_PeerContentServer"		"Overfører"
 
 "Steam_Time_ShowMostRecent"			"Vis seneste"
 "Steam_Time_5Minutes"				"5 minutter"
@@ -1508,6 +1509,13 @@ Du må logge av macOS for at endringen skal tre i kraft."
 "Steam_ThrottleDownloadsWhileStreaming"	"Begrens nedlasting mens du strømmer"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Hvis dette er krysset av, begrenser Steam nedlastingshastigheter for å opprettholde en høy kvalitet på strømmeopplevelsen."
 "Steam_DownloadRatesInBits"			"Vis nedlastingshastighet i bit per sekund"
+
+"Steam_PeerContentTitle"			"Overføring av spillfil over lokalt nettverk"
+"Steam_PeerContentInfo"			"Denne funksjonen tillater filoverføringer fra PC-en din til og fra andre PC-er eller Steam Deck på det lokale nettverket ditt, noe som reduserer trafikken på internett under nedlasting eller oppdatering av et spill."
+"Steam_PeerContentOff"			"Av. Ingen overføringer tillatt."
+"Steam_PeerContentSameUser"		"Tillat overføringer til/fra egne enheter."
+"Steam_PeerContentFriends"		"Tillat overføringer til/fra Steam-venner."
+"Steam_PeerContentAnyUser"		"Tillat overføringer til/fra alle brukere."
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud oppbevarer informasjon slik at du kan ha en konsekvent produktopplevelse selv om du bruker flere datamaskiner."
@@ -4123,20 +4131,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_MoveAppFolder_NoStart" "Filene kan ikke flyttes til ny bibliotekmappe (%error%)."
 
 "Steam_HelpUsTranslate" "Snakker du et av språkene flytende? Hjelp oss med å oversette Steam."
-
-"steam_emailaddress_query" "Er dette den nåværende e-postadressen din?"
-"steam_emailaddress_query_yes" "Ja"
-"steam_emailaddress_query_no" "Nei, oppdater"
-"steam_emailaddress_query_info" "E-postadressen brukes til å bekrefte kjøp og hjelpe deg med å håndtere tilgang til Steam-kontoen."
-"steam_emailaddress_query_info_link" "Les mer"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Du har ikke noe telefonnummer knyttet til denne kontoen."
-"steam_phoneaddress_query_info" "Et telefonnummer kan brukes til å bekrefte at du er eier av denne kontoen, i tilfelle du mister tilgangen til e-postadressen eller passordet ditt."
-
-"steam_phoneaddress_query_yes" "Legg til telefonnummer"
-"steam_phoneaddress_query_no" "Ikke nå"
-
 
 "steam_nav_workshop"	"Workshop"
 "steam_nav_greenlight"	"Greenlight"

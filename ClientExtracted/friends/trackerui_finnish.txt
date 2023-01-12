@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "suoritti latauksen:"
 
+"Friends_PeerUploadNotification_Info" "Siirretään pelitiedostoja kohteeseen"
+
 "Friends_SteamInputActionSetChangedTitle"	"Ohjaimen toimintosarja"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Ohjain on vaihtanut paikkaa"

@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "dokončil stahování"
 
+"Friends_PeerUploadNotification_Info" "Přenášení souborů hry na"
+
 "Friends_SteamInputActionSetChangedTitle"	"Rozvržení ovladače"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Byl změněn slot ovladače"

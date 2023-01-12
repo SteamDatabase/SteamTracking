@@ -428,6 +428,7 @@ Steam，請在其圖示上按右鍵。"
 "Steam_Status_ItemsComplete"	"%numcompl%／%numtotal% 個項目已完成"
 "Steam_Status_DownloadsTitle"		"下載"
 "Steam_Status_GoToDownloadsPage"		"管理"
+"Steam_Status_PeerContentServer"		"正在轉移"
 
 "Steam_Time_ShowMostRecent"			"顯示最近項目"
 "Steam_Time_5Minutes"				"5 分鐘"
@@ -1501,7 +1502,14 @@ Steam，請在其圖示上按右鍵。"
 "Steam_AllowDownloadsDuringGameplayDetails"	"選取此選項後，Steam 可能會在您執行遊戲或其他 Steam 應用程式時開始下載\n或繼續下載更新。您也可以在每款遊戲的「內容」頁面個別修改此項設定。"
 "Steam_ThrottleDownloadsWhileStreaming"	"串流時限制下載"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"選取此選項後，Steam 將會限制下載速率以維持高品質的 Steam 遠端暢玩體驗。"
-"Steam_DownloadRatesInBits"			"以位元 / 秒顯示下載速率"
+"Steam_DownloadRatesInBits"			"以每秒位元率之格式顯示下載速率"
+
+"Steam_PeerContentTitle"			"透過區域網路轉移遊戲檔案"
+"Steam_PeerContentInfo"			"此功能讓您的電腦能夠透過區域網路，將遊戲檔案轉移至其它電腦或 Steam Deck 上，或從這些地方轉移檔案過來，降低下載或更新遊戲時的網路流量"
+"Steam_PeerContentOff"			"關閉 - 不允許轉移"
+"Steam_PeerContentSameUser"		"允許轉移至 / 出我自己的裝置"
+"Steam_PeerContentFriends"		"允許轉移至 / 出我的 Steam 好友的裝置"
+"Steam_PeerContentAnyUser"		"允許轉移至 / 出任何使用者的裝置"
 
 "Steam_CloudLabel"					"Steam 雲端"
 "Steam_CloudInfo"					"Steam 雲端系統會儲存資訊，讓您在所有電腦上的產品體驗都能一致。"
@@ -4117,20 +4125,6 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_MoveAppFolder_NoStart" "檔案無法移動至新收藏庫資料夾（%error%）。"
 
 "Steam_HelpUsTranslate" "您非常精通其他語言？那來幫助我們翻譯 Steam 吧。"
-
-"steam_emailaddress_query" "這仍然是您目前的電子信箱嗎？"
-"steam_emailaddress_query_yes" "是"
-"steam_emailaddress_query_no" "否，更新"
-"steam_emailaddress_query_info" "您的電子信箱將用來確認購買交易，並協助您管理 Steam 帳戶存取權限。"
-"steam_emailaddress_query_info_link" "深入了解"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "您在此帳戶上並未登記手機號碼。"
-"steam_phoneaddress_query_info" "在您無法存取電子信箱或忘記密碼的狀況下，手機號碼可用來驗證您的帳戶擁有者身分。"
-
-"steam_phoneaddress_query_yes" "新增手機號碼"
-"steam_phoneaddress_query_no" "不是現在"
-
 
 "steam_nav_workshop"	"工作坊"
 "steam_nav_greenlight"	"Greenlight"

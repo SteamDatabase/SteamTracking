@@ -1,0 +1,1238 @@
+.appdetailsbroadcastsection_TheaterMode_19yL9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  background-color: #000;
+}
+.appdetailsbroadcastsection_TheaterMode_19yL9 > div {
+  border: none;
+  margin: 0;
+}
+.appdetailsbroadcastsection_TheaterMode_19yL9
+  .appdetailsbroadcastsection_Body_CFp7F {
+  padding: 0px;
+  width: 100%;
+}
+.appdetailsbroadcastsection_BroadcastPlayer_2lAf2,
+.appdetailsbroadcastsection_BroadcastThumbnail_2l1gE {
+  width: 100%;
+  padding-top: 56.25%;
+  height: 0px;
+  border: 1px solid #41464f;
+  background-color: #18191d;
+  position: relative;
+}
+.appdetailsbroadcastsection_TheaterMode_19yL9
+  .appdetailsbroadcastsection_BroadcastPlayer_2lAf2 {
+  z-index: 100;
+  border: none;
+}
+.appdetailsbroadcastsection_BroadcastThumbnail_2l1gE img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.appdetailsbroadcastsection_BroadcastThumbnail_2l1gE
+  .appdetailsbroadcastsection_PlayButtonWrapper__-Sx3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+.appdetailsbroadcastsection_BroadcastThumbnail_2l1gE .SVGIcon_Play {
+  width: 64px;
+  height: 64px;
+}
+.appdetailsbroadcastsection_BroadcastBox_9nwsC {
+  width: 100%;
+  height: 100%;
+}
+a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
+  box-sizing: border-box;
+  background: transparent;
+  color: #8c9193;
+  font-size: 13px;
+  font-family: "Motiva Sans", Arial, Helvetica, Sans-serif;
+  padding: 4px 12px;
+  line-height: initial;
+  align-self: flex-end;
+  text-align: left;
+  width: initial;
+  margin-bottom: 0;
+  border-radius: 2px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  float: right;
+  margin-top: 8px;
+}
+a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4:hover {
+  background-color: rgba(101, 113, 128, 0.356);
+  color: #fff;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.chatentry_chatEntryControls_2gP0D {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: #1b1c20;
+  box-shadow: inset 0px 0px 4px #000;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  padding-right: 2px;
+}
+.chatentry_chatTextarea_pewyB {
+  resize: none;
+  margin-right: 4px;
+  height: 42px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 4px transparent;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 4px 4px 4px 8px;
+  flex-shrink: 1;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.chatentry_chatTextarea_pewyB.GamepadMode,
+.GamepadMode .chatentry_chatTextarea_pewyB {
+  box-shadow: none;
+  font-size: 16px;
+  padding: 10px 0 0 8px;
+  margin-right: 0;
+  max-height: 34px;
+  height: 34px;
+  transition: none;
+}
+.chatentry_chatTextarea_pewyB.GamepadMode.gpfocus,
+.GamepadMode .chatentry_chatTextarea_pewyB.gpfocus {
+  color: #fff;
+}
+.chatentry_chatEntryActionsGroup_3grea {
+  padding: 2px;
+  box-shadow: #000 0px 0px 4px inset;
+  background-color: #1b1c20;
+  margin-left: 8px;
+}
+.chatentry_chatEntryActionsContainer_1X1-n,
+.chatentry_chatEntryActionsGroup_3grea {
+  display: flex;
+  flex-direction: row;
+}
+.chatentry_chatEntryActionsContainer_1X1-n {
+  max-height: 50px;
+  align-self: flex-end;
+}
+.chatentry_minHeightZero_1IsiN {
+  min-height: 0;
+}
+.compactView .chatentry_chatTextarea_pewyB {
+  height: 24px;
+  line-height: 18px;
+}
+.chatentry_chatSubmitButton_1IEiK {
+  position: relative;
+  background-color: #3d424b;
+  border: 1px solid #1b1c20;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 2px;
+  max-width: 46px;
+  max-height: 46px;
+  padding: 0;
+  background-image: none;
+  background-size: 22px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 46px;
+  cursor: pointer;
+}
+.chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx,
+.chatentry_chatSubmitButton_1IEiK.chatentry_EmoticonPickerButton_K-lPM {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #898989;
+  background-color: #2c3036;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 46px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx {
+  max-width: 46px;
+  max-height: 46px;
+}
+.chatentry_chatSubmitButton_1IEiK:focus {
+  outline: none;
+}
+.chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx:hover,
+.chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx:focus {
+  background-color: #3d424b;
+}
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus {
+  background: #fff;
+}
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k)
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #fff;
+}
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #fff;
+  stroke: #fff;
+}
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #000;
+}
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_Button,
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_Button {
+  fill: #f5ffd7;
+}
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_Button.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_Button,
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_Button.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_Button {
+  fill: #000;
+}
+.chatentry_chatSubmitButton_1IEiK.chatentry_Inactive_34suB
+  .SVGIcon_Microphone_Off {
+  opacity: 1;
+}
+.chatentry_chatSubmitButton_1IEiK.chatentry_disabled_2GM2k {
+  color: #898989;
+  cursor: default;
+  background-color: #2c3036;
+}
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_VoiceRoom,
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_VoiceRoom {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #f5ffd7;
+}
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1Hw30,
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1Hw30 {
+  fill: #f5ffd7;
+}
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_VoiceRoom,
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_VoiceRoom {
+  fill: #fff;
+  stroke: #000;
+}
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1Hw30,
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_VoiceRoom
+  .chatentry_AudioLines_1Hw30 {
+  fill: #000;
+}
+.chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit {
+  width: 24px;
+  height: 24px;
+  margin-top: 6px;
+}
+.chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit path {
+  fill: #8592a5;
+  stroke-width: 2px;
+}
+.chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit path.GamepadMode,
+.GamepadMode .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit path {
+  stroke-width: 0px;
+  fill: #67707b;
+}
+.chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit.GamepadMode,
+.GamepadMode .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit {
+  margin-top: 4px;
+  margin-left: 2px;
+}
+.chatentry_EmbedButton_24xNx {
+  background-image: none;
+  margin-right: 2px;
+  font-size: 28px;
+  text-align: center;
+  color: #8492a4;
+  padding: 0px;
+}
+.chatentry_EmbedButton_24xNx .SVGIcon_Paperclip {
+  width: 26px;
+  height: 26px;
+}
+.chatentry_EmbedButton_24xNx .SVGIcon_Paperclip path {
+  stroke: #8492a4;
+  stroke-width: 12px;
+}
+.chatentry_EmbedButton_24xNx:focus .SVGIcon_Paperclip path,
+.chatentry_EmbedButton_24xNx:hover .SVGIcon_Paperclip path,
+.SVGIcon_Paperclip {
+  stroke: #fff;
+}
+.chatentry_EmoticonPickerButton_K-lPM {
+  margin-right: 1px;
+}
+.chatentry_EmoticonPickerButton_K-lPM:hover,
+.chatentry_EmoticonPickerButton_K-lPM:focus {
+  background-color: #3d424b;
+}
+.chatentry_EmoticonPickerButton_K-lPM .SVGIcon_Emoticon {
+  width: 26px;
+  height: 26px;
+}
+.chatentry_EmoticonPickerButton_K-lPM .SVGIcon_CSGO {
+  width: 32px;
+  height: 32px;
+  fill: #dfc408;
+  margin-left: 1px;
+  margin-top: 4px;
+}
+.chatentry_EmoticonPickerButton_K-lPM .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_K-lPM .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_K-lPM .SVGIcon_Emoticon path {
+  stroke: #8492a4;
+  stroke-width: 10px;
+}
+.chatentry_EmoticonPickerButton_K-lPM .SVGIcon_Emoticon line {
+  stroke-width: 16px;
+}
+.chatentry_EmoticonPickerButton_K-lPM:hover .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_K-lPM:focus .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_K-lPM:hover .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_K-lPM:focus .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_K-lPM:hover .SVGIcon_Emoticon path,
+.chatentry_EmoticonPickerButton_K-lPM:focus .SVGIcon_Emoticon path {
+  stroke: #fff;
+}
+.chatentry_chatEntryControls_2gP0D .chatentry_chatSubmitButton_1IEiK {
+  align-self: flex-end;
+  min-height: 46px;
+  margin-bottom: 2px;
+}
+.chatentry_chatEntryControls_2gP0D
+  .chatentry_chatSubmitButton_1IEiK.GamepadMode,
+.GamepadMode
+  .chatentry_chatEntryControls_2gP0D
+  .chatentry_chatSubmitButton_1IEiK {
+  min-height: 0px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: 0px solid transparent;
+  background-color: transparent;
+  max-width: 44px;
+  min-width: 0;
+}
+.chatentry_chatEntryControls_2gP0D
+  .chatentry_chatSubmitButton_1IEiK.GamepadMode:not(.chatentry_disabled_2GM2k),
+.GamepadMode
+  .chatentry_chatEntryControls_2gP0D
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k) {
+  background-color: #67707b;
+  color: #fff;
+}
+.chatentry_chatEntryControls_2gP0D
+  .chatentry_chatSubmitButton_1IEiK.GamepadMode:not(.chatentry_disabled_2GM2k).gpfocus,
+.GamepadMode
+  .chatentry_chatEntryControls_2gP0D
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k).gpfocus {
+  background-color: #fff;
+}
+.compactView
+  .chatentry_chatEntryControls_2gP0D
+  .chatentry_chatSubmitButton_1IEiK {
+  height: 28px;
+  min-height: 28px;
+  margin-bottom: 2px;
+}
+.compactView .chatentry_chatSubmitButton_1IEiK {
+  min-width: 32px;
+}
+.chatEntry.compactView .chatentry_chatSubmitButton_1IEiK svg {
+  width: 20px;
+  height: 20px;
+}
+.ChatMessageEntryVoice {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 50px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  box-shadow: #000 0px 0px 4px inset;
+  transition-property: width, max-width, min-width, border-radius,
+    background-position;
+  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
+  background: radial-gradient(
+    128px 128px at 20% 50%,
+    #1da834 0%,
+    rgba(27, 28, 32, 0) 100%
+  );
+  background-position: -190px 0px;
+  background-color: #1b1c20;
+  background-repeat: no-repeat;
+  background-size: 256px 128px;
+}
+.friendListHeaderContainer .activeVoicePushToTalk,
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  font-size: 11px;
+  margin-top: 12px;
+  margin-bottom: -18px;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+  white-space: nowrap;
+  user-select: none;
+}
+.ChatMessageEntryVoice.Disabled {
+  opacity: 0.2;
+  border: 1px dashed #000;
+  outline: 2px solid #0007;
+}
+.ChatMessageEntryVoice.Active {
+  min-width: 136px;
+  max-width: 136px;
+  width: 136px;
+  background-position: 0px 0px;
+}
+.ChatMessageEntryVoice .buttonsContainer {
+  display: flex;
+}
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  position: absolute;
+  top: 33px;
+  left: 49px;
+  width: 87px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0005;
+  font-size: 10px;
+  margin-top: 0px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons {
+  margin-top: -8px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.ChatMessageEntryVoice .activeVoiceButtons {
+  min-width: 0px;
+  width: 84px;
+}
+.ChatMessageEntryVoice .activeVoiceControls {
+  min-width: 0px;
+  width: 84px;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  background: none;
+}
+.ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
+  pointer-events: none;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
+  background-color: rgba(197, 23, 11, 0.5);
+  transition-duration: 0s;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
+  transform: translateX(-64px) scale(0.7);
+  transition-property: transform, opacity;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
+  transform: translateX(-32px) scale(0.5);
+  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleVoiceOutputButton,
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
+  opacity: 1;
+  transform: translateX(0px) scale(1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    background-color 0.1s ease-in-out;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
+  display: none;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton:active,
+.VoiceControlPanelButton:active {
+  background-color: rgba(97, 253, 151, 0.5);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: rgba(200, 241, 194, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: rgba(0, 0, 0, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: #000;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: #c8f1c2;
+}
+.chatEntry.compactView .VoiceToggle {
+  height: 28px;
+}
+.chatEntry.compactView .VoiceToggleIconCtn {
+  height: 24px;
+  top: 3px;
+}
+.chatEntry.compactView .activeVoiceFlexBox {
+  height: 28px;
+}
+.chatEntry.compactView .activeVoiceButtons button {
+  max-width: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-height: 28px;
+  margin-top: 2px;
+}
+.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow {
+  top: 6px;
+  left: 10px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Headphones.SVGIcon_Shadow {
+  top: 3px;
+  left: 7px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleVoiceOutputButton
+  .SVGIcon_Headphones,
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  padding-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+.VoiceToggle.Inactive:hover {
+  background-color: #3d424b;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice.Active {
+  min-width: 114px;
+  max-width: 114px;
+  width: 114px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons {
+  margin-top: -2px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk {
+  top: 18px;
+  right: 0px;
+  width: 66px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0000;
+}
+.discussionwidget_Container_3BVe_ {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+  background-image: radial-gradient(
+    ellipse at top center,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+@media screen and (max-width: 600px) {
+  .discussionwidget_Container_3BVe_ {
+    padding: 4px;
+  }
+}
+.discussionwidget_VoteContainer_1uhQY,
+.discussionwidget_DiscussContainer_3tXYJ,
+.discussionwidget_ShareContainer_cLK_F,
+.discussionwidget_InnerContainer_3kQsD {
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  margin-right: 10px;
+}
+.discussionwidget_VoteContainer_1uhQY,
+.discussionwidget_ShareContainer_cLK_F,
+.discussionwidget_DiscussContainer_3tXYJ {
+  padding: 10px;
+  background-color: rgba(30, 33, 38, 0.5);
+}
+@media screen and (max-width: 910px) {
+  .discussionwidget_VoteContainer_1uhQY,
+  .discussionwidget_ShareContainer_cLK_F,
+  .discussionwidget_DiscussContainer_3tXYJ {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 910px) {
+  .discussionwidget_VoteContainer_1uhQY
+    .discussionwidget_DiscussionButton_wnKan {
+    margin-left: 0px;
+  }
+}
+.discussionwidget_DiscussContainer_3tXYJ {
+  margin-right: 0px;
+}
+@media screen and (max-width: 910px) {
+  .discussionwidget_DiscussContainer_3tXYJ
+    .discussionwidget_DiscussionButton_wnKan {
+    padding: 6px 11px 8px 11px;
+    margin-left: 0px;
+  }
+}
+.discussionwidget_ShareContainer_cLK_F {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  margin-right: 0px;
+}
+.discussionwidget_DiscussIcon_3-isH {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 910px) {
+  .discussionwidget_DiscussIcon_3-isH {
+    margin-right: 0px;
+    margin-left: 0px;
+    left: 15px;
+  }
+}
+.discussionwidget_linkField_1mRpV {
+  font-size: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+.discussionwidget_linkField_1mRpV span {
+  padding-right: 10px;
+  padding-left: 2px;
+}
+.discussionwidget_ShareButtonContainer_3tMDZ {
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_LinkInputLabel_Gaizo {
+    display: none;
+  }
+  .discussionwidget_ShareButtonContainer_3tMDZ {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .discussionwidget_LinkButton_q5-pg {
+    display: none !important;
+  }
+}
+.discussionwidget_ShareSteamBtn_3Gc7y {
+  height: 33px;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_ShareSteamBtn_3Gc7y {
+    height: 30px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 2px;
+  }
+}
+.discussionwidget_ClipboardText_3iQp- {
+  text-align: center;
+  min-height: 30px;
+  padding-top: 10px;
+}
+.discussionwidget_LinkInput_2IeAw {
+  flex-grow: 10;
+  width: 485px;
+  height: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+  outline: none;
+  font-family: "Motiva Sans", Sans-serif;
+  resize: none;
+  line-height: 14px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_LinkInput_2IeAw {
+    min-width: 250px;
+    min-height: 80px;
+  }
+}
+.discussionwidget_ShareIcon_1kFSv {
+  width: 19px;
+  height: 19px;
+  margin-right: 12px;
+  margin-top: 1px;
+  margin-left: -10px;
+  fill: rgba(255, 255, 255, 0.66);
+}
+@media screen and (max-width: 500px) {
+  .discussionwidget_ShareIcon_1kFSv {
+    margin-right: -7px;
+  }
+}
+.discussionwidget_ClipboardIcon_sEXEi {
+  height: 18px;
+  margin-top: 0px;
+}
+.discussionwidget_SteamIcon_3ZAOL {
+  height: 30px;
+  margin-top: 1px;
+  margin-left: -10px;
+  margin-bottom: -8px;
+  margin-right: 4px;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_SteamIcon_3ZAOL {
+    height: 26px !important;
+    padding-top: 0px;
+    margin: 0px;
+  }
+}
+.discussionwidget_share_controls_ctn_1PRQm {
+  background-color: rgba(59, 63, 72, 0.5);
+  border-radius: 3px;
+  padding: 10px;
+  text-align: left;
+  margin-top: 16px;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_share_controls_ctn_1PRQm {
+    margin-top: 2px;
+    padding: 0px;
+    background: none;
+  }
+}
+.discussionwidget_ShareLanguagePicker_c-WS8 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px 8px;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_ShareLanguagePicker_c-WS8 {
+    flex-direction: column;
+  }
+}
+.discussionwidget_ShareLanguagePicker_c-WS8
+  .discussionwidget_LanguageLabel_GHNBo {
+  padding: 0px 8px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+.discussionwidget_ShareBtn_1qDAn:not(:first-child) {
+  margin-left: 8px;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_ShareBtn_1qDAn:not(:first-child) {
+    margin-left: 2px;
+  }
+}
+.discussionwidget_ShareBtn_1qDAn > img {
+  height: 33px;
+  padding-bottom: 8px;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_ShareBtn_1qDAn > img {
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+  }
+}
+.discussionwidget_ShareBtn_1qDAn > span {
+  line-height: 33px;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_ShareBtn_1qDAn > span {
+    display: none;
+  }
+}
+.discussionwidget_VoteCount_2dVe4,
+.discussionwidget_DiscussionCount_1GFRK {
+  color: #399aec;
+  font-size: 17px;
+  font-weight: 800;
+  padding-top: 7px;
+  margin-right: 12px;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  height: 20px;
+  position: relative;
+  display: flex;
+}
+@media screen and (max-width: 910px) {
+  .discussionwidget_VoteCount_2dVe4,
+  .discussionwidget_DiscussionCount_1GFRK {
+    margin-right: 6px;
+  }
+}
+.discussionwidget_DiscussionCount_1GFRK {
+  display: flex;
+}
+.discussionwidget_DiscussionCount_1GFRK > svg {
+  margin-left: -1px;
+  margin-right: 5px;
+  margin-top: -1px;
+  width: 26px;
+  height: 26px;
+  fill: #399aec;
+}
+@media screen and (max-width: 500px) {
+  .discussionwidget_DiscussionCount_1GFRK > svg {
+    display: none;
+  }
+}
+.discussionwidget_DiscussionButton_wnKan {
+  display: flex;
+  white-space: nowrap;
+  margin: 5px;
+}
+.discussionwidget_DiscussionButton_wnKan .SVGIcon_ChatBubble {
+  width: 21px;
+  height: 21px;
+  fill: rgba(255, 255, 255, 0.66);
+  display: none;
+}
+.discussionwidget_DiscussionButton_wnKan
+  .discussionwidget_DiscussionButtonText_1qE1y {
+  line-height: 22px;
+}
+@media screen and (max-width: 500px) {
+  .discussionwidget_DiscussionButton_wnKan
+    .discussionwidget_DiscussionButtonText_1qE1y {
+    display: none;
+  }
+  .discussionwidget_DiscussionButton_wnKan .SVGIcon_ChatBubble {
+    display: block;
+  }
+}
+.discussionwidget_VoteDownIcon_3QPkc,
+.discussionwidget_VoteDownSelectedIcon_3SLkg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: -4px;
+  bottom: 3px;
+  left: 9px;
+  position: absolute;
+  transform: scaleY(-1);
+}
+@media screen and (max-width: 500px) {
+  .discussionwidget_VoteDownIcon_3QPkc,
+  .discussionwidget_VoteDownSelectedIcon_3SLkg {
+    margin-bottom: -2px;
+  }
+}
+.discussionwidget_VoteDownIcon_3QPkc {
+  fill: rgba(255, 255, 255, 0.66);
+}
+.discussionwidget_VoteDownSelectedIcon_3SLkg {
+  fill: #9cccf5;
+}
+.discussionwidget_VoteUpIcon_vRT1W,
+.discussionwidget_VoteUpSelectedIcon_8WczG {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  margin-bottom: -4px;
+  margin-top: -6px;
+  margin-left: -20px;
+}
+@media screen and (max-width: 500px) {
+  .discussionwidget_VoteUpIcon_vRT1W,
+  .discussionwidget_VoteUpSelectedIcon_8WczG {
+    margin-top: initial;
+    margin-left: initial;
+    margin-bottom: -1px;
+    bottom: 3px;
+    left: 9px;
+    position: absolute;
+  }
+}
+.discussionwidget_VoteUpIcon_vRT1W {
+  fill: rgba(255, 255, 255, 0.66);
+}
+.discussionwidget_VoteUpSelectedIcon_8WczG {
+  fill: #9cccf5;
+}
+.discussionwidget_VoteUpStaticIcon_1g-En {
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+  margin-bottom: -4px;
+  margin-top: -6px;
+  margin-left: -5px;
+  fill: #399aec;
+}
+@media screen and (max-width: 500px) {
+  .discussionwidget_VoteUpStaticIcon_1g-En {
+    display: none;
+  }
+}
+.discussionwidget_VoteButtonSelected_2c_5V {
+  background-color: #399aec;
+}
+.linkregionbox_LinkRegionDragBox_3riG1 {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  -webkit-app-region: no-drag;
+  z-index: 50;
+}
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_EdgeDown_x0k8J {
+  z-index: 52;
+}
+.linkregionbox_LinkRegionGridBox_WNpt6 {
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-rows: 16px auto 16px;
+  grid-gap: 0;
+  grid-row-gap: 0;
+  margin-left: -16px;
+  margin-top: -16px;
+  -webkit-app-region: no-drag;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8 {
+  background-color: rgba(92, 191, 230, 0.192);
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: no-drag;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_TopLeft_3Or-w {
+  border-right: 2px dotted #008ada;
+  border-bottom: 2px dotted #008ada;
+  cursor: nwse-resize;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Top_3Flcs {
+  border-bottom: 2px dotted #008ada;
+  background: linear-gradient(
+    to top,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ns-resize;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_TopRight_3nljJ {
+  border-left: 2px dotted #008ada;
+  border-bottom: 2px dotted #008ada;
+  cursor: nesw-resize;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Left_2P2d4 {
+  border-right: 2px dotted #008ada;
+  background: linear-gradient(
+    to left,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ew-resize;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb {
+  cursor: move;
+  background-color: rgba(191, 202, 250, 0.133);
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb
+  .linkregionbox_LinkRegionDelete_1MGOz {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  transition: all 0.21s ease-in-out;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb
+  .linkregionbox_LinkRegionSettings_1Ko6I {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  transition: all 0.21s ease-in-out;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb
+  .linkregionbox_LinkRegionDelete_1MGOz
+  line,
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb
+  .linkregionbox_LinkRegionSettings_1Ko6I
+  line {
+  stroke-width: 26px;
+  stroke: #008ada;
+  transition: all 0.21s ease-in-out;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb:hover
+  .linkregionbox_LinkRegionDelete_1MGOz:hover
+  line,
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb:hover
+  .linkregionbox_LinkRegionSettings_1Ko6I:hover
+  line {
+  stroke: #cce0ff;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb:hover
+  .linkregionbox_LinkRegionDelete_1MGOz,
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb:hover
+  .linkregionbox_LinkRegionSettings_1Ko6I {
+  opacity: 1;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Right_1F5bN {
+  border-left: 2px dotted #008ada;
+  background: linear-gradient(
+    to right,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ew-resize;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_BottomLeft_lZCSb {
+  border-right: 2px dotted #008ada;
+  border-top: 2px dotted #008ada;
+  cursor: nesw-resize;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Bottom_1SsR1 {
+  border-top: 2px dotted #008ada;
+  background: linear-gradient(
+    to bottom,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ns-resize;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_BottomRight_234Xs {
+  border-left: 2px dotted #008ada;
+  border-top: 2px dotted #008ada;
+  cursor: nwse-resize;
+}
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_topleft_2M_mJ
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_TopLeft_3Or-w,
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_top_3ILUb
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Top_3Flcs,
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_topright_e-0z6
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_TopRight_3nljJ,
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_left_2heDA
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Left_2P2d4,
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_right_3zE2w
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Right_1F5bN,
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_bottomleft_bKyXt
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_BottomLeft_lZCSb,
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_bottom__wmyV
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Bottom_1SsR1,
+.linkregionbox_LinkRegionDragBox_3riG1.linkregionbox_bottomright_2SGw-
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_BottomRight_234Xs {
+  border-color: #fff;
+}
+.linkregionbox_LinkRegionEdge_Cl8g8:hover {
+  border-color: #7eadf8;
+}
+.linkregionbox_EdgeDown_x0k8J.linkregionbox_middle_AlgGp
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb,
+.linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb:hover {
+  z-index: 10;
+  background-color: rgba(133, 156, 255, 0.171);
+}
+.linkregionbox_EdgeDown_x0k8J.linkregionbox_middle_AlgGp
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Right_1F5bN,
+.linkregionbox_EdgeDown_x0k8J.linkregionbox_middle_AlgGp
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Bottom_1SsR1,
+.linkregionbox_EdgeDown_x0k8J.linkregionbox_middle_AlgGp
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Top_3Flcs,
+.linkregionbox_EdgeDown_x0k8J.linkregionbox_middle_AlgGp
+  .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Left_2P2d4 {
+  border-color: #fff;
+}
+.linkregionbox_LinkRegionButtonContainer_3a5Ll
+  .linkregionbox_DialogButton_3c_7t {
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px;
+}
+.linkregionbox_LinkRegionInfo_5q1Dz {
+  background-color: #000;
+  padding: 10px;
+}
+.linkregionbox_LinkText_27FTj {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+.salebanner_Link_26cHo {
+  display: block;
+  margin-bottom: 16px;
+}
+.salebanner_Banner_2df4N {
+  object-fit: contain;
+  display: block;
+  width: 100%;
+  top: 0;
+  max-width: 100%;
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  transform: scale(1);
+  filter: saturate(0.85);
+  transition: transform 0.21s ease-in-out, filter 0.21s ease-in-out;
+}
+.salebanner_Banner_2df4N:hover {
+  filter: saturate(1);
+  transform: scale(1.03);
+}
+.salebanner_Big_1m7WT {
+  width: 1053px;
+}
+.salebanner_Mobile_2w3oX {
+  display: none;
+}
+@media screen and (max-width: 940px) {
+  .salebanner_Link_26cHo {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .salebanner_Big_1m7WT {
+    display: none;
+  }
+  .salebanner_Mobile_2w3oX {
+    display: block;
+    margin-bottom: 10px;
+  }
+}

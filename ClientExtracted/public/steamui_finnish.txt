@@ -429,6 +429,7 @@ Tämä kestää alle minuutin."
 "Steam_Status_ItemsComplete"	"%numcompl% / %numtotal% tuotetta valmiina"
 "Steam_Status_DownloadsTitle"		"Lataukset"
 "Steam_Status_GoToDownloadsPage"		"Hallitse"
+"Steam_Status_PeerContentServer"		"Siirretään"
 
 "Steam_Time_ShowMostRecent"			"Näytä viimeisin"
 "Steam_Time_5Minutes"				"5 minuuttia"
@@ -1502,6 +1503,13 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_ThrottleDownloadsWhileStreaming"	"Rajoita latausnopeutta suoralähetyksen aikana"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Jos toiminto on valittu, Steam rajoittaa latausnopeutta ylläpitääkseen korkealaatuista Steam Remote Play -kokemusta."
 "Steam_DownloadRatesInBits"			"Näytä latausnopeus bitteinä sekunnissa"
+
+"Steam_PeerContentTitle"			"Pelitiedostojen siirtäminen lähiverkossa"
+"Steam_PeerContentInfo"			"Tämä ominaisuus mahdollistaa pelitiedostojen siirtämisen lähiverkossa muihin tietokoneisiin ja Steam Deckeihin, tai niistä nykyiseen laitteeseen. Tuloksena verkkoliikennettä vähennetään peliä ladattaessa tai päivittäessä."
+"Steam_PeerContentOff"			"Pois käytöstä – älä salli tiedostojen siirtämistä"
+"Steam_PeerContentSameUser"		"Salli tiedostojen siirtäminen laitteelta/laitteelle"
+"Steam_PeerContentFriends"		"Salli tiedostojen siirtäminen Steam-kavereille/-kavereilta"
+"Steam_PeerContentAnyUser"		"Salli tiedostojen siirtäminen kenelle/keneltä tahansa"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud tallentaa tietoja, jotta käyttökokemuksesi säilyy yhtenäisenä eri tietokoneilla."
@@ -4119,20 +4127,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_MoveAppFolder_NoStart" "Tiedostoja ei voida siirtää uuteen kirjastokansioon (%error%)."
 
 "Steam_HelpUsTranslate" "Onko kielioppisi kunnossa? Auta meitä kääntämään Steamiä."
-
-"steam_emailaddress_query" "Onko tämä nykyinen sähköpostiosoitteesi?"
-"steam_emailaddress_query_yes" "Kyllä"
-"steam_emailaddress_query_no" "Ei, muuta se"
-"steam_emailaddress_query_info" "Sähköpostiosoitettasi käytetään ostotapahtumien varmentamiseen ja auttaa sinua hallinnoimaan Steam-tilisi käyttöä."
-"steam_emailaddress_query_info_link" "Lisätietoja"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Et ole lisännyt tilillesi vielä puhelinnumeroa."
-"steam_phoneaddress_query_info" "Voit käyttää puhelinnumeroasi vahvistamaan tilisi omistajuuden siinä tapauksessa, jos menetät sähköpostiosoitteesi tai salasanasi."
-
-"steam_phoneaddress_query_yes" "Lisää puhelinnumero"
-"steam_phoneaddress_query_no" "Ei nyt"
-
 
 "steam_nav_workshop"	"Workshop"
 "steam_nav_greenlight"	"Greenlight"

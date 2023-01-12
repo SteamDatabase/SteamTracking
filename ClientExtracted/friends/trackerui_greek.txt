@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "Ολοκληρώθηκε η λήψη του"
 
+"Friends_PeerUploadNotification_Info" "Γίνεται μεταφορά αρχείων παιχνιδιού σε"
+
 "Friends_SteamInputActionSetChangedTitle"	"Σετ ενεργειών χειριστηρίου"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Χειριστήριο άλλαξε θέσεις"

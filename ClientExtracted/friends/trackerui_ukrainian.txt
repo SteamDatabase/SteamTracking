@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "завершив завантаження"
 
+"Friends_PeerUploadNotification_Info" "Перенесення файлів гри на"
+
 "Friends_SteamInputActionSetChangedTitle"	"Набір дій контролера"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Змінений номер контролера"

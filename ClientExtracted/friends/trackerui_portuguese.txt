@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "terminou de transferir"
 
+"Friends_PeerUploadNotification_Info" "A transferir ficheiros do jogo para"
+
 "Friends_SteamInputActionSetChangedTitle"	"Conjunto de ações do comando"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Jogadores trocados"

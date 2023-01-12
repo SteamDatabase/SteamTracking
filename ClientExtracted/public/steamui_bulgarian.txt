@@ -433,6 +433,7 @@
 "Steam_Status_ItemsComplete"	"%numcompl% от %numtotal% артикула са завършени"
 "Steam_Status_DownloadsTitle"		"Сваляния"
 "Steam_Status_GoToDownloadsPage"		"Управление"
+"Steam_Status_PeerContentServer"		"Прехвърляне"
 
 "Steam_Time_ShowMostRecent"			"Показване на най-скорошните"
 "Steam_Time_5Minutes"				"5 минути"
@@ -677,7 +678,6 @@
 "SteamUI_CreateAccount_DifferentNames" "Кликнете върху „Назад“, за да опитате с друго име. Или изберете едно\nот предложените имена по-долу и кликнете върху „Напред“."
 "SteamUI_CreateAccount_SuggestedNames" "Предлагани имена за акаунта:"
 "SteamUI_CreateAccount_Names" "Имена"
-"Steam_ForgottenPassword_MarketRestriction" "Забележка: Ако подновите паролата си, временно ще бъдете ограничени от търгуване и обществения пазар."
 "Steam_ForgottenPassword_FAQ" "Преглед на ЧЗВ относно ограниченията за търговия и пазара"
 "Steam_ForgottenPassword_VerificationCode" "Потвърдителен код"
 
@@ -1157,7 +1157,6 @@
 "SteamUI_CCWarning" "Steam — предупреждение"
 
 "SteamUI_ForgottenPasswordResetType" "С цел да възвърнем информацията за вход на Steam акаунта Ви, трябва да започнем с името му."
-"SteamUI_ForgottenPasswordResetType2" "Какво Ви е нужно да възстановите? Можете да подновите паролата си тук или, ако сте загубили достъп до Вашето Steam Guard приложение за удостоверяване, можете да го премахнете от профила си."
 "SteamUI_ForgottenPasswordGetAccountName" "Не знам името на акаунта си."
 "SteamUI_ForgottenPasswordResetPassword" "Знам името на акаунта си."
 "SteamUI_ForgottenPasswordForgotPassword" "Забравих паролата си."
@@ -1171,7 +1170,6 @@
 "SteamUI_ForgottenPasswordEnterCDKey" "С цел да възвърнете потребителското си име, моля, въведете продуктовия код, който сте активирали към своя Steam акаунт."
 "SteamUI_ForgottenPasswordOtherText" "С цел да възвърнете своя Steam акаунт, трябва да знаете е-пощата си или продуктовия код на игра, която някога сте активирали към него."
 "SteamUI_ForgottenPasswordSentEmailEmail" "Е-писмо, съдържащо името на Steam акаунта Ви, беше изпратено до Вас.\n\nСлед като получите е-писмото, можете отново да използвате бутона „Възвръщане на загубен акаунт“, така ще нулирате паролата си."
-"SteamUI_ForgottenPasswordSentEmailCDKey" "Е-писмо е изпратено до собственика на продуктовия код, който сте въвели. След като получите името на акаунта, можете отново да използвате бутона „Възвръщане на загубен акаунт“, така ще подновите паролата си."
 "Steam_ForgottenPassword_RequestFailed" "Операцията е неуспешна. Моля, опитайте отново."
 
 "Steam_CreateNewAccount_EmailAddrAlreadyInUse" "Вече съществува Steam акаунт с такава е-поща за връзка. Ако преди това сте създали Steam акаунт, можете да използвате съществуващия си профил, а не да създавате нов."
@@ -1507,6 +1505,13 @@
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Ако това е избрано, Steam ще ограничи скоростта за сваляне, така че да поддържа висококачествено преживяване със Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Показване на скоростта за сваляне като битове в секунда"
 
+"Steam_PeerContentTitle"			"Прехвърляне на игрални файлове през локална мрежа"
+"Steam_PeerContentInfo"			"Тази характеристика позволява на компютъра Ви да прехвърля игрални файлове към и от други компютри или Steam Deck у-ва във Вашата локална мрежа, намалявайки интернет трафика, докато сваляте или обновявате игра."
+"Steam_PeerContentOff"			"Изкл. — да не се позволява никакво прехвърляне"
+"Steam_PeerContentSameUser"		"Позволяване на прехвърляне към/от собствените ми у-ва"
+"Steam_PeerContentFriends"		"Позволяване на прехвърляне към/от Steam приятелите ми"
+"Steam_PeerContentAnyUser"		"Позволяване на прехвърляне към/от всеки потребител"
+
 "Steam_CloudLabel"					"Steam облак"
 "Steam_CloudInfo"					"Steam облакът запазва информация, така че преживяването от продуктите Ви е съгласувано между различните компютри."
 "Steam_EnableCloud"					"Вкл. синхронизацията на Steam облака за приложения, които го поддържат"
@@ -1571,7 +1576,7 @@
 "Steam_TotalBackupProgress"	"Оставащо време:"
 "Steam_complete"		"завършено"
 
-"Steam_ChooseRestoreDirectory_Info"	"Намерете директорията, съдържаща архивираните файлове. Ако сте записали резервните си копия на местоположението по подразбиране на Steam, то това ще бъде Вашата папка с име „Backups“."
+"Steam_ChooseRestoreDirectory_Info"	"Намерете директорията, съдържаща архивираните файлове. Ако сте записали резервните си копия на местонахождението по подразбиране на Steam, то това ще бъде Вашата папка с име „Backups“."
 "Steam_RestoreDirectory"		"Възстановяване на програма от папка:"
 "Steam_RestoreGameFound"		"Резервни копия:"
 "Steam_RestoreNoneFound"		"няма"
@@ -1842,7 +1847,7 @@
 
 "Steam_RightClick_OpenCloudFile"		"Отваряне на файла"
 "Steam_RightClick_OpenWithCloudFile"		"Отваряне с"
-"Steam_RightClick_ExploreCloudFile"		"Отваряне местоположението на файла"
+"Steam_RightClick_ExploreCloudFile"		"Отваряне местонахождението на файла"
 "Steam_RightClick_PublishCloudFile" "Публикуване на „%filename%“"
 "Steam_RightClick_DeleteCloudFile"	"Изтриване…"
 "Steam_CloudFile_SyncState_Synced"	"Синхронизиран"
@@ -3999,6 +4004,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_voice_remote_no_answer"		"Дистанционната цел не откликна на повикването — затваряне."
 
 "SteamUI_ValveSurvey_Summary_Software"	"Инсталиран софтуер:"
+"steam_systeminfo_info"			"Steam засече следния хардуер и софтуер в системата Ви:"
 "SteamUI_ValveSurvey_OverviewTitle" 	"Моля, отделете малко време да завършите следното кратко проучване. Всеки месец Steam събира данни относно какъв компютърен хардуер и софтуер ползват нашите клиенти. Данните от проучването са изключително полезни за нас, гарантирайки, че ние правим добри решения за инвестиране в технологии и за произвеждане на продукти за предлагане.\nДанните са анонимни и няма да са свързани с акаунта Ви."
 
 "steam_statuslabel"	"Статус"
@@ -4111,7 +4117,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "Steam_GamePropertiesOpenFolder" "Преглед на локални файлове…"
 "Steam_GamePropertiesMoveFolder" "Преместване на инсталационната папка…"
-"SteamUI_ChooseInstallFolder" "Избиране на местоположение за инсталиране:"
+"SteamUI_ChooseInstallFolder" "Избиране на местонахождение за инсталиране:"
 
 "Steam_MoveAppFolder_Title" "Преместване на инсталационната папка"
 "Steam_MoveAppFolder_SelectFolder" "Изберете папка за Steam библиотеката, към която да преместите файловете:"
@@ -4125,20 +4131,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_MoveAppFolder_NoStart" "Файловете не могат да бъдат преместени към новата папка за библиотеката (%error%)."
 
 "Steam_HelpUsTranslate" "Компетентен сте в друг език? Помогнете ни да преведем Steam."
-
-"steam_emailaddress_query" "Това все още ли е текуща Ви е-поща?"
-"steam_emailaddress_query_yes" "Да"
-"steam_emailaddress_query_no" "Не, обновете я"
-"steam_emailaddress_query_info" "Е-пощата Ви се използва за потвърждаване на покупки и улеснено управление на достъпа до Вашия Steam акаунт."
-"steam_emailaddress_query_info_link" "Научете още"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Нямате телефонен номер, асоцииран с този акаунт."
-"steam_phoneaddress_query_info" "Телефонният номер може да бъде използван при потвърждаване на притежанието за този акаунт, в случай че загубите достъпа до е-пощата или паролата си."
-
-"steam_phoneaddress_query_yes" "Добавяне на телефонен номер"
-"steam_phoneaddress_query_no" "Не сега"
-
 
 "steam_nav_workshop"	"Работилница"
 "steam_nav_greenlight"	"Зелена светлина"

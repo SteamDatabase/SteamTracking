@@ -431,7 +431,6 @@ Dette burde vare mindre end et minut."
 "Steam_Status_ItemsComplete"	"%numcompl% af %numtotal% emner færdige"
 "Steam_Status_DownloadsTitle"		"Downloads"
 "Steam_Status_GoToDownloadsPage"		"Administrer"
-
 "Steam_Time_ShowMostRecent"			"Vis seneste"
 "Steam_Time_5Minutes"				"5 minutter"
 "Steam_Time_1Hour"				"1 time"
@@ -2350,7 +2349,7 @@ Du skal logge ud af OSX før ændringerne træder i kraft."
 "Steam_Install_AutoLaunchGameStart"		"Start nu"
 "Steam_Install_DontShowPageAgain"		"Vis ikke denne side igen"
 
-"Steam_InstallComplete_DownloadInfo"		"Steam downloader nu %game%. Du kan følge status for overførslen i Steams overførselsvindue.\n\nDu kan uden problemer lukke og genstarte Steam, hvorefter overførslen automatisk genoptages."
+"Steam_InstallComplete_DownloadInfo"		"Steam downloader nu %game%. Du kan følge status for overførslen i Steams overførselsvindue.\n\nDu kan frit lukke og genstarte Steam, hvorefter overførslen automatisk genoptages."
 "Steam_InstallComplete_DownloadInfo_Queued"		"Steam har sat %game% i kø til download. Det vil begynde at downloade, når de andre downloads foran den i køen er færdige. Du kan administrere køen i Steams overførselsvindue."
 "Steam_InstallComplete_DownloadInfo_Queued_Multiple"		"Steam har sat dine spil i kø til download. De vil begynde at downloade, når de andre downloads foran dem i køen er færdige. Du kan administrere køen i Steams overførselsvindue."
 "Steam_InstallComplete_DownloadInfo_Media"		"Dine valgte mediefiler er nu tilgængelige i dit Steam-\nspilbibliotek."
@@ -4115,20 +4114,6 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 "Steam_MoveAppFolder_NoStart" "Filer kan ikke flyttes til ny biblioteksmappe (%error%)."
 
 "Steam_HelpUsTranslate" "Taler du et andet sprog flydende? Hjælp os med at oversætte Steam."
-
-"steam_emailaddress_query" "Er dette stadig din nuværende e-mailadresse?"
-"steam_emailaddress_query_yes" "Ja"
-"steam_emailaddress_query_no" "Nej, opdater"
-"steam_emailaddress_query_info" "Din e-mailadresse bruges til at bekræfte køb og hjælpe dig med at administrere adgang til din Steam-konto."
-"steam_emailaddress_query_info_link" "Lær mere"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Du har ikke tilføjet et telefonnummer til denne konto."
-"steam_phoneaddress_query_info" "Et telefonnummer kan bruges til at bekræfte dit ejerskab af denne konto, hvis du mister adgang til din e-mailadresse eller adgangskode."
-
-"steam_phoneaddress_query_yes" "Tilføj telefonnummer"
-"steam_phoneaddress_query_no" "Ikke nu"
-
 
 "steam_nav_workshop"	"Værksted"
 "steam_nav_greenlight"	"Greenlight"

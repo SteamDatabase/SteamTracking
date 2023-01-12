@@ -424,6 +424,7 @@
 "Steam_Status_ItemsComplete"	"(%numcompl% din %numtotal% transferuri încheiate)"
 "Steam_Status_DownloadsTitle"		"Descărcări"
 "Steam_Status_GoToDownloadsPage"		"Gestionează"
+"Steam_Status_PeerContentServer"		"Se transferă"
 
 "Steam_Time_ShowMostRecent"			"Afișează cel mai recent"
 "Steam_Time_5Minutes"				"5 minute"
@@ -1496,6 +1497,13 @@ Te rugăm să reintroduci parola dorită."
 "Steam_ThrottleDownloadsWhileStreaming"	"Regulează descărcările în timpul transmisiunii"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Dacă este bifat, Steam va limita viteza de descărcare pentru a menține o experiență de calitate înaltă pentru Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Afișează viteza de descărcare în biți pe secundă"
+
+"Steam_PeerContentTitle"			"Transferul fișierelor de joc prin rețeaua locală"
+"Steam_PeerContentInfo"			"Această funcționalitate permite calculatorului tău să transfere fișierele jocului de la sau către un alt calculator sau dispozitiv Steam Deck prin rețeaua ta locală, reducând traficul de internet la descărcarea sau actualizarea unui joc."
+"Steam_PeerContentOff"			"Dezactivat – nu permite niciun transfer"
+"Steam_PeerContentSameUser"		"Permite transfer către/de pe dispozitivele mele"
+"Steam_PeerContentFriends"		"Permite transfer către/de la prietenii mei de pe Steam"
+"Steam_PeerContentAnyUser"		"Permite transfer către/de la orice utilizator"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud stochează informații pentru ca utilizarea să rămână consistentă de pe un PC pe altul."
@@ -4110,20 +4118,6 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "Steam_MoveAppFolder_NoStart" "Fișierele nu pot fi mutate în noul folder (%error%) al bibliotecii."
 
 "Steam_HelpUsTranslate" "Vorbești fluent o altă limbă? Ajută-ne să traducem Steam."
-
-"steam_emailaddress_query" "Aceasta e adresa ta actuală de e-mail?"
-"steam_emailaddress_query_yes" "Da"
-"steam_emailaddress_query_no" "Nu, am schimbat-o"
-"steam_emailaddress_query_info" "Adresa de e-mail este folosită pentru confirmarea comenzilor și administrare accesului pe contul Steam."
-"steam_emailaddress_query_info_link" "Află mai multe"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Nu ai niciun număr de telefon asociat cu acest cont."
-"steam_phoneaddress_query_info" "Un număr de telefon poate fi folosit pentru a verifica faptul că ești deținătorul acestui cont în cazul în care ți-ai pierdut accesul la adresa de e-mail sau parola."
-
-"steam_phoneaddress_query_yes" "Adaugă număr de telefon"
-"steam_phoneaddress_query_no" "Nu acum"
-
 
 "steam_nav_workshop"	"Atelier"
 "steam_nav_greenlight"	"Undă Verde"

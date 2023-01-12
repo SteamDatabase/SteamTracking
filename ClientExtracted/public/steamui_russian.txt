@@ -425,6 +425,7 @@
 "Steam_Status_ItemsComplete"	"Загружено: %numcompl% из %numtotal%"
 "Steam_Status_DownloadsTitle"		"Загрузки"
 "Steam_Status_GoToDownloadsPage"		"Управление"
+"Steam_Status_PeerContentServer"		"Перенос"
 
 "Steam_Time_ShowMostRecent"			"Показать последнее"
 "Steam_Time_5Minutes"				"5 минут"
@@ -1498,6 +1499,13 @@
 "Steam_ThrottleDownloadsWhileStreaming"	"Замедлять загрузку во время трансляции"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Если эта настройка включена, Steam ограничит скорость загрузки, чтобы поддерживать высокое качество трансляции Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Отображать скорость в битах в секунду"
+
+"Steam_PeerContentTitle"			"Передача игровых файлов по локальной сети"
+"Steam_PeerContentInfo"			"Эта функция позволяет передавать игровые файлы между ПК и Steam Deck в вашей локальной сети, чтобы не использовать интернет для скачивания или обновления игры"
+"Steam_PeerContentOff"			"Выключено — не позволять передачу"
+"Steam_PeerContentSameUser"		"Позволять передачу только между своими устройствами"
+"Steam_PeerContentFriends"		"Позволять передачу только между моими друзьями из Steam"
+"Steam_PeerContentAnyUser"		"Позволять передачу между всеми пользователями"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud хранит ваши данные продукта, чтобы они совпадали на любом ПК."
@@ -4113,20 +4121,6 @@
 "Steam_MoveAppFolder_NoStart" "Невозможно переместить файлы в новую папку библиотеки (%error%)."
 
 "Steam_HelpUsTranslate" "Владеете английским языком? Помогите нам с переводом Steam."
-
-"steam_emailaddress_query" "Это ваш текущий адрес электронной почты?"
-"steam_emailaddress_query_yes" "Да"
-"steam_emailaddress_query_no" "Нет, изменить"
-"steam_emailaddress_query_info" "Адрес вашей эл. почты используется для того, чтобы подтверждать покупки и управлять доступом к вашему аккаунту Steam."
-"steam_emailaddress_query_info_link" "Узнать больше"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "К этому аккаунту не привязан номер телефона."
-"steam_phoneaddress_query_info" "Если вы потеряете доступ к электронной почте или забудете пароль, можно будет подтвердить владение аккаунтом с помощью СМС."
-
-"steam_phoneaddress_query_yes" "Добавить номер телефона"
-"steam_phoneaddress_query_no" "Позже"
-
 
 "steam_nav_workshop"	"Мастерская"
 "steam_nav_greenlight"	"Greenlight"

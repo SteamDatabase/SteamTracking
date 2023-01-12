@@ -431,6 +431,7 @@ Dit duurt niet langer dan een minuut."
 "Steam_Status_ItemsComplete"	"%numcompl% van %numtotal% items voltooid "
 "Steam_Status_DownloadsTitle"		"Downloads"
 "Steam_Status_GoToDownloadsPage"		"Beheren"
+"Steam_Status_PeerContentServer"		"Wordt overgedragen"
 
 "Steam_Time_ShowMostRecent"			"Recentste weergeven"
 "Steam_Time_5Minutes"				"5 minuten"
@@ -1505,6 +1506,13 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_ThrottleDownloadsWhileStreaming"	"Downloads beperken tijdens het streamen"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Als dit is aangevinkt zal Steam de downloadsnelheid beperken om een hoge kwaliteit van Remote Play te behouden."
 "Steam_DownloadRatesInBits"			"Downloadsnelheden in bits per seconde weergeven"
+
+"Steam_PeerContentTitle"			"Overdracht van spelbestanden via lokale netwerk"
+"Steam_PeerContentInfo"			"Met deze functie sta je toe dat spelbestanden van en naar andere pc's of Steam Decks worden overgedragen via je lokale netwerk, waardoor je minder internetverkeer hebt tijdens het downloaden of bijwerken van een spel."
+"Steam_PeerContentOff"			"Uit: geen overdracht toestaan"
+"Steam_PeerContentSameUser"		"Overdracht van/naar mijn eigen apparaten toestaan"
+"Steam_PeerContentFriends"		"Overdracht van/naar mijn Steam-vrienden toestaan"
+"Steam_PeerContentAnyUser"		"Overdracht van/naar elke gebruiker toestaan"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"De Steam Cloud bewaart informatie, zodat je beleving op verschillende computers gelijk blijft."
@@ -4124,20 +4132,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_MoveAppFolder_NoStart" "Bestanden kunnen niet naar nieuwe bibliotheekmap worden verplaatst \n(%error%)."
 
 "Steam_HelpUsTranslate" "Spreek je vloeiend Nederlands? Help ons Steam te vertalen."
-
-"steam_emailaddress_query" "Is dit je huidige e-mailadres?"
-"steam_emailaddress_query_yes" "Ja"
-"steam_emailaddress_query_no" "Nee, aanpassen"
-"steam_emailaddress_query_info" "Je e-mailadres wordt gebruikt om betalingen te bevestigen en toegang tot je Steam-account te beheren."
-"steam_emailaddress_query_info_link" "Meer informatie"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Er is geen telefoonnummer aan dit account gekoppeld."
-"steam_phoneaddress_query_info" "Een telefoonnummer kan worden gebruikt om het eigendom van dit account te verifiëren, indien je de toegang tot je e-mailadres of wachtwoord kwijt bent."
-
-"steam_phoneaddress_query_yes" "Telefoonnummer toevoegen"
-"steam_phoneaddress_query_no" "Niet nu"
-
 
 "steam_nav_workshop"	"Workshop"
 "steam_nav_greenlight"	"Greenlight"

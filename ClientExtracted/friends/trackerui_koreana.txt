@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam에서"
 "Friends_DownloadNotification_Info" "다운로드를 마쳤습니다."
 
+"Friends_PeerUploadNotification_Info" "게임 파일 전송 위치:"
+
 "Friends_SteamInputActionSetChangedTitle"	"컨트롤러 동작 세트"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"컨트롤러 교체 슬롯"

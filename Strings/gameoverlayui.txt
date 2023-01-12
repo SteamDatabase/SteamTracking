@@ -4,33 +4,31 @@ __text
 __TEXT
 __stubs
 __TEXT
-@'
-@'
 __stub_helper
 __TEXT
-J'
-J'
 __cstring
 __TEXT
+`Z'
+`Z'
 __gcc_except_tab__TEXT
 __const
 __TEXT
 __objc_methname
 __TEXT
-sq-
-sq-
+Sq-
+Sq-
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 (
 __unwind_info
 __TEXT
-,x-
-,x-
+Dx-
+Dx-
 __eh_frame
 __TEXT
-0p.
-0p.
+Pp.
+Pp.
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -38,7 +36,7 @@ __got
 __DATA
 __la_symbol_ptr
 __DATA
-H
+P
 __mod_init_func
 __DATA
 __const
@@ -56,8 +54,8 @@ __DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
-(QC
-(QC
+@QC
+@QC
 __objc_superrefs__DATA
 __objc_ivar
 __DATA
@@ -66,8 +64,8 @@ __DATA
 P
 __data
 __DATA
-0RC
-0RC
+PRC
+PRC
 __thread_vars
 __DATA
 0
@@ -87,9 +85,6 @@ __LINKEDIT
 @
 @loader_path/gameoverlayui.dylib
 "
-h0
-x+D
-`C
 P
 k
 l
@@ -99,7 +94,8 @@ l
 @loader_path/libtier0_s.dylib
 8
 @loader_path/libvstdlib_s.dylib
-@
+8
+@loader_path/libSDL3.dylib
 8
 @loader_path/vgui2_s.dylib
 8
@@ -9886,8 +9882,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jan  5 2023
-11:18:18
+Jan 11 2023
+20:29:33
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13771,22 +13767,19 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-{&
-s&
 Ic
-E&
 p
 0
 0
 p
 0
-e-
-3B
-&
--
+I&
+'
 &
 &
 &
+&
+/.
 j
 j
 j
@@ -13796,18 +13789,17 @@ j
 j
 j
 j
-c%
-R.
--
+]%
+M%
+r$
 $
 $
+A%
 0
-z%
-f%
-i%
+],
+I,
 p
 0
-%
 %
 j
 j
@@ -13815,14 +13807,15 @@ j
 j
 j
 j
-N%
-$
-<%
 j
 j
+}#
+)%
+x(
+[#
 %
-W#
-w$
+'#
+&#
 j
 j
 j
@@ -13871,14 +13864,17 @@ j
 j
 j
 j
+-%
+j
+j
+j
+j
+Q.
 #
-j
-j
-j
-j
-}$
-]$
-[$
+#
+#
+#
+#
 j
 j
 j
@@ -13899,9 +13895,16 @@ j
 j
 j
 +
+$
+$
+$
 0
 A9]
+P#
 d
+.#
+j
+7?
 j
 j
 j
@@ -13913,20 +13916,17 @@ j
 j
 j
 j
-j
-'?
-$
+)
 
 
 
 
 
-#
 @
 
 0
-*
-G#
+X#
+I#
 p
 0
 p
@@ -13941,7 +13941,6 @@ p
 0
 p
 0
-C#
 p
 0
 p
@@ -13949,16 +13948,18 @@ p
 p
 p
 p
++*
 @
-C"
 
 "
-"
-0
 !
+0
 d
 0
+`"
 \
+)
+i"
 j
 j
 j
@@ -13988,14 +13989,10 @@ j
 j
 j
 j
-/"
--"
-e!
-r=
-J!
-I!
-"
-?!
+a.
+0
+0
+;!
 Hi
 !
 !
@@ -14019,14 +14016,12 @@ j
 j
 j
 0
-Y!
 p
 0
+]
 #
 #
 #
-!
-!
 j
 j
 j
@@ -14063,8 +14058,8 @@ AT=
 D
 @
 @
-j#
-=
+i#
+<
 @
 Hc
 Hc
@@ -14097,13 +14092,14 @@ IcE
 @
 @
 V
+%
 =
 =
 !
+-
+n,
 @
-7,
 &
-
 @
 M9e
 @
@@ -14299,25 +14295,22 @@ P
 |
 @
 @
-!
-!
-)
-)
+u!
+*!
 )
 d
-b(
-fD9%m;(
-fD9%;(
-fD9-V5(
-k
+
+
+
+
+fD9%*:(
+fD9-v4(
+j
 
 
 
 A+M
-
-
-a
-%'
+`
 j
 j
 j
@@ -14326,7 +14319,6 @@ j
 j
 =
 0
-o
 j
 j
 j
@@ -14342,6 +14334,7 @@ j
 
 
 
+
 j
 j
 j
@@ -14360,15 +14353,13 @@ j
 j
 j
 
-(
+'
 d
 &
 &
 d
 0
 A+4$A+u
-~m=
-=
 =
 =
 @
@@ -14439,6 +14430,9 @@ E
 "
 "
 "
+"
+"
+"
 j
 j
 j
@@ -14576,7 +14570,6 @@ j
 j
 j
 j
-$
 .
 d
 =
@@ -14607,9 +14600,7 @@ Hc
 0
 E
 0
-w
+z
 0
-Q
 0
-M
 p

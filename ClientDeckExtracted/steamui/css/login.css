@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Regular")
+    format("truetype");
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-RegularItalic")
+    format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Thin") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Light") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-LightItalic")
+    format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Medium") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Bold") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-BoldItalic")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-ExtraBold")
+    format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Black") format("truetype");
+  font-weight: 900;
+}
+body {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+.login_Login_VZ6x_ {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
+}
+.login_TitleContainer_37ANM {
+  height: 40px;
+  position: relative;
+}
+.login_TitleBar_1C4of {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  z-index: 9000;
+  -webkit-app-region: drag;
+}
+.login_TitleBar_1C4of .login_CloseButton_1mcCj {
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI.DialogContent {
+  padding-top: 32px;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI .htmlpopupdialog_DialogHeader_2Da2G {
+  flex: 1;
+  font-size: medium;
+  width: 100%;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI .htmlpopupdialog_DialogBodyText_2gL3o {
+  flex: 1;
+  margin-top: 20px;
+  font-size: small;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI .htmlpopupdialog_BrowserViewHost_Hfu72 {
+  flex: 1;
+  background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar {
+  width: 12px;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-thumb {
+  width: 4px;
+  border: 3px solid transparent;
+  background-image: none;
+  background-color: #606774;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-track,
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-button {
+  display: none;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-thumb:hover {
+  background-color: #7b8392;
+  background-clip: padding-box;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-thumb:active {
+  background-color: #7b8392;
+  border: 2px solid transparent;
+}
+.htmlpopupdialog_HTMLPopupDialog_oHNgI
+  .htmlpopupdialog_BrowserViewHost_Hfu72::-webkit-scrollbar-corner {
+  background-color: #434953;
+}

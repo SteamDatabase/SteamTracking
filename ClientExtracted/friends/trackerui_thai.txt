@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "เสร็จสิ้นการดาวน์โหลด"
 
+"Friends_PeerUploadNotification_Info" "กำลังถ่ายโอนไฟล์เกมไปยัง"
+
 "Friends_SteamInputActionSetChangedTitle"	"ชุดคำสั่งคอนโทรลเลอร์"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"ช่องคอนโทรลเลอร์ถูกสลับแล้ว"

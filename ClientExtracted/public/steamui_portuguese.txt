@@ -424,6 +424,7 @@
 "Steam_Status_ItemsComplete"	"Downloads concluídos: %numcompl% de %numtotal% "
 "Steam_Status_DownloadsTitle"		"Downloads"
 "Steam_Status_GoToDownloadsPage"		"Gerir"
+"Steam_Status_PeerContentServer"		"A transferir"
 
 "Steam_Time_ShowMostRecent"			"Mostrar último(s)"
 "Steam_Time_5Minutes"				"5 minutos"
@@ -1498,6 +1499,13 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Com esta opção selecionada, o Steam irá limitar a velocidade de download para manter uma experiência de Steam Remote Play de alta qualidade."
 "Steam_DownloadRatesInBits"			"Mostrar velocidade de download em bits/seg."
 
+"Steam_PeerContentTitle"			"Transferência de ficheiros de jogos pela rede local"
+"Steam_PeerContentInfo"			"Esta funcionalidade permite ao teu PC transferir ficheiros para e a partir de outros PCs ou Steam Decks na tua rede local, reduzindo o teu tráfego na internet enquanto fazes o download ou a atualização de um jogo."
+"Steam_PeerContentOff"			"Off - Impedir transferências"
+"Steam_PeerContentSameUser"		"Permitir transferências para/a partir dos meus dispositivos"
+"Steam_PeerContentFriends"		"Permitir transferências para/a partir dos meus amigos no Steam"
+"Steam_PeerContentAnyUser"		"Permitir transferências para/a partir de qualquer utilizador"
+
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"A Steam Cloud armazena informações para que a tua experiência seja consistente entre computadores diferentes."
 "Steam_EnableCloud"					"Ativar a sincronização com a Steam Cloud nas aplicações que a suportam"
@@ -1585,7 +1593,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_BackupSize_DVD"			"DVD [4,7 GB]"
 "Steam_BackupFileName"			"Nome do ficheiro de cópia de segurança"
 "Steam_SelectBackupDirectory_Title"	"Seleciona a pasta da cópia de segurança"
-"Steam_DisksRequiredApprox"		"Número aproximado de ficheiros comprimidos\nque serão gravados:"
+"Steam_DisksRequiredApprox"		"Número aproximado de ficheiros\ncomprimidos que serão gravados:"
 "Steam_BackupWizard_OpenFolder"	"Abrir pasta da cópia"
 
 "Steam_BackupComplete_Info"	"A cópia de segurança está concluída. Se tens uma unidade de CD-R ou DVD-R, podes utilizá-la para guardar o(s) teu(s) ficheiro(s) de cópia de segurança.\nPara restaurar as cópias de segurança dos teus jogos, faz duplo clique no primeiro ficheiro de cópia de segurança e segue as instruções ou utiliza o assistente de Fazer Cópia de Segurança e Restaurar Jogos."
@@ -4111,20 +4119,6 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "Steam_MoveAppFolder_NoStart" "Os ficheiros não podem ser movidos para a nova pasta (%error%)."
 
 "Steam_HelpUsTranslate" "Fluente em inglês? Podes ajudar-nos a traduzir o Steam para a tua língua."
-
-"steam_emailaddress_query" "É este o teu endereço de e-mail atual?"
-"steam_emailaddress_query_yes" "Sim"
-"steam_emailaddress_query_no" "Não, atualizar"
-"steam_emailaddress_query_info" "O teu endereço de e-mail é usado para confirmar compras e ajudar-te a gerir o acesso da tua conta Steam."
-"steam_emailaddress_query_info_link" "Saber mais"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Não tens um n.º de telemóvel associado a esta conta."
-"steam_phoneaddress_query_info" "Um n.º de telemóvel pode ser usado para confirmar a tua posse desta conta, caso percas acesso ao teu endereço de e-mail ou palavra-passe."
-
-"steam_phoneaddress_query_yes" "Adicionar n.º de telemóvel"
-"steam_phoneaddress_query_no" "Agora não"
-
 
 "steam_nav_workshop"	"Workshop"
 "steam_nav_greenlight"	"Greenlight"

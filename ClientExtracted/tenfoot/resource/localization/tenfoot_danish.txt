@@ -1107,7 +1107,6 @@
 	"SettingsController_Accounts_DeregAYSDesc"			"Hvis du afregistrerer denne konto, vil dine konfigurationer ikke længere følge med din controller, når du logger på kontoen."
 	"SettingsController_Deregister"						"AFREGISTRER KONTO"
 	"SettingsController_SwitchControllerAccount"		"SKIFT TIL DENNE KONTO"
-	"SettingsController_AutoCalibrateDuringUse"			"KALIBRER GYRO AUTOMATISK UNDER BRUG"
 	"Controller_Registration_TurnOnSound"				"Lyd ved opstart:"
 	"Controller_Registration_TurnOffSound"				"Lyd ved nedlukning:"
 	"Controller_Registration_PlayerSlotLED"				"LED-lys for spillernummer:"

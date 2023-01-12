@@ -549,6 +549,7 @@ message CMsgSystemUpdateState {
 	optional .CMsgSystemUpdateProgress progress = 2;
 	repeated .CMsgSystemUpdateCheckResult update_check_results = 3;
 	repeated .CMsgSystemUpdateApplyResult update_apply_results = 4;
+	optional bool supports_os_updates = 5;
 }
 
 message CMsgAchievementChange {

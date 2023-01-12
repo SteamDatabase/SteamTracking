@@ -524,6 +524,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "は次のゲームのダウンロードを完了しました"
 
+"Friends_PeerUploadNotification_Info" "ゲームファイル転送先："
+
 "Friends_SteamInputActionSetChangedTitle"	"コントローラアクションセット"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"コントローラ切り替えスロット"

@@ -67,6 +67,8 @@ message CMarketingMessageProto {
 	optional string template_vars = 21;
 	optional uint32 flags = 22;
 	optional string creator_name = 23;
+	optional string template_vars_json = 24;
+	optional string additional_restrictions_json = 25;
 }
 
 message CMarketingMessages_GetActiveMarketingMessages_Response {
@@ -140,6 +142,7 @@ message CMarketingMessages_GetMarketingMessage_Response {
 
 message CMarketingMessages_CreateMarketingMessage_Request {
 	optional .CMarketingMessageProto message = 1;
+	optional bool from_json = 2 [(description) = "If set, then overwrite the template_vars and additional_restrictions keyvalues from json"];
 }
 
 message CMarketingMessages_CreateMarketingMessage_Response {
@@ -149,6 +152,7 @@ message CMarketingMessages_CreateMarketingMessage_Response {
 message CMarketingMessages_UpdateMarketingMessage_Request {
 	optional fixed64 gid = 1;
 	optional .CMarketingMessageProto message = 2;
+	optional bool from_json = 3 [(description) = "If set, then overwrite the template_vars and additional_restrictions keyvalues from json"];
 }
 
 message CMarketingMessages_UpdateMarketingMessage_Response {

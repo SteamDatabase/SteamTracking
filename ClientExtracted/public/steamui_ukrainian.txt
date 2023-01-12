@@ -429,6 +429,7 @@
 "Steam_Status_ItemsComplete"	"Готово %numcompl% із %numtotal%"
 "Steam_Status_DownloadsTitle"		"Завантаження"
 "Steam_Status_GoToDownloadsPage"		"Управління"
+"Steam_Status_PeerContentServer"		"Перенесення"
 
 "Steam_Time_ShowMostRecent"			"Показати останні"
 "Steam_Time_5Minutes"				"5 хвилин"
@@ -1502,6 +1503,13 @@
 "Steam_ThrottleDownloadsWhileStreaming"	"Обмежити завантаження під час транслювання"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Якщо ввімкнено, Steam обмежить швидкість завантаження, щоби зберегти найвищу якість Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Відображати швидкість завантаження у бітах за секунду"
+
+"Steam_PeerContentTitle"			"Перенесення файлів гри через локальну мережу"
+"Steam_PeerContentInfo"			"Ця функція дозволяє переносити файли гри з вашого ПК на інші ПК чи Steam Deck у локальній мережі (і навпаки), зменшуючи Інтернет-трафік під час завантаження або оновлення гри"
+"Steam_PeerContentOff"			"Вимкнути: заборонити перенесення файлів"
+"Steam_PeerContentSameUser"		"Дозволити перенесення файлів між моїми пристроями"
+"Steam_PeerContentFriends"		"Дозволити перенесення файлів між моїми друзями в Steam"
+"Steam_PeerContentAnyUser"		"Дозволити перенесення файлів між всіма користувачами"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud зберігає інформацію для того, щоби ваша взаємодія з тим чи іншим продуктом була узгодженою на всіх комп’ютерах."
@@ -4116,20 +4124,6 @@
 "Steam_MoveAppFolder_NoStart" "Файли не можуть бути переміщеними до нової теки бібліотеки (%error%)."
 
 "Steam_HelpUsTranslate" "Добре знаєте англійську? Допоможіть нам з перекладом Steam."
-
-"steam_emailaddress_query" "Ви все ще користуєтеся цією адресою електронної пошти?"
-"steam_emailaddress_query_yes" "Так"
-"steam_emailaddress_query_no" "Ні, оновити"
-"steam_emailaddress_query_info" "Ваша адреса електронної пошти використовується для підтвердження придбань та допомоги в керуванні доступом до акаунта Steam."
-"steam_emailaddress_query_info_link" "Докладніше"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "У вас немає пов’язаного із цим акаунтом номера телефону."
-"steam_phoneaddress_query_info" "Номер телефону може використовуватися для перевірки власника цього акаунта, у разі якщо ви втратите доступ до своєї електронної пошти або загубите пароль."
-
-"steam_phoneaddress_query_yes" "Додати номер телефону"
-"steam_phoneaddress_query_no" "Не зараз"
-
 
 "steam_nav_workshop"	"Майстерня"
 "steam_nav_greenlight"	"Greenlight"

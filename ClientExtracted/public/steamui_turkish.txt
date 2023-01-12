@@ -431,6 +431,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_Status_ItemsComplete"	"%numcompl%/%numtotal% Öğe Tamamlandı "
 "Steam_Status_DownloadsTitle"		"İNDİRMELER"
 "Steam_Status_GoToDownloadsPage"		"Yönet"
+"Steam_Status_PeerContentServer"		"Aktarılıyor..."
 
 "Steam_Time_ShowMostRecent"			"En yeniyi göster"
 "Steam_Time_5Minutes"				"5 dakika"
@@ -1505,6 +1506,13 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_ThrottleDownloadsWhileStreaming"	"Yayın sırasında indirmeleri sınırla"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Seçili ise, Steam Remote Play deneyiminin yüksek kalitesini korumak için indirme hızınız Steam tarafından sınırlanır."
 "Steam_DownloadRatesInBits"			"İndirme hızını saniyede bit cinsinden göster"
+
+"Steam_PeerContentTitle"			"Yerel ağ üzerinden oyun dosyalarının aktarılması"
+"Steam_PeerContentInfo"			"Bu özellik, yerel ağınızda bulunan bilgisayarların veya Steam Deck'lerin kendi aralarında oyun dosyalarını aktarabilmesine olanak tanır, böylece bir oyunu güncellerken veya indirirken internet trafiğiniz de azalmış olur."
+"Steam_PeerContentOff"			"Kapalı - Aktarıma izin verme"
+"Steam_PeerContentSameUser"		"Aygıtlarım arasında dosya aktarımlarına izin ver"
+"Steam_PeerContentFriends"		"Steam arkadaşlarım arasında dosya aktarımlarına izin ver"
+"Steam_PeerContentAnyUser"		"Tüm kullanıcılar arasında dosya aktarımlarına izin ver"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud, farklı bilgisayarlarda aynı ürün deneyimini yaşamanız için bilgilerinizi saklar."
@@ -4122,20 +4130,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_MoveAppFolder_NoStart" "Dosyalar yeni kütüphane klasörüne taşınamıyor (%error%)."
 
 "Steam_HelpUsTranslate" "Başka bir dil mi biliyorsunuz? Steam'i çevirmemize yardım edin."
-
-"steam_emailaddress_query" "Bu, şu anda kullandığınız e-posta adresi mi?"
-"steam_emailaddress_query_yes" "Evet"
-"steam_emailaddress_query_no" "Hayır, güncelle"
-"steam_emailaddress_query_info" "E-posta adresiniz satın alma işlemlerini doğrulamak ve Steam hesabınıza erişim sağlamak için kullanılır."
-"steam_emailaddress_query_info_link" "Daha fazlasını öğrenin"
-"steam_emailaddress_query_info_url" "https://support.steampowered.com/kb_article.php?ref=5151-RUAS-1543"
-
-"steam_phoneaddress_query" "Bu hesap ile ilişkilendirilmiş bir telefon numaranız bulunmamaktadır."
-"steam_phoneaddress_query_info" "E-posta hesabınıza veya parolanıza erişiminizi kaybettiğiniz durumlarda bir telefon numarası bu hesabın mülkiyetini doğrulamak için kullanılabilir."
-
-"steam_phoneaddress_query_yes" "Telefon Numarası Ekle"
-"steam_phoneaddress_query_no" "Şimdi Değil"
-
 
 "steam_nav_workshop"	"Atölye"
 "steam_nav_greenlight"	"Greenlight"

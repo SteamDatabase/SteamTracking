@@ -66778,7 +66778,8 @@ object-assign
         (function (ESteamUIWindowType) {
           ESteamUIWindowType[(ESteamUIWindowType["MainGamepadUI"] = 0)] =
             "MainGamepadUI";
-          ESteamUIWindowType[(ESteamUIWindowType["Overlay"] = 1)] = "Overlay";
+          ESteamUIWindowType[(ESteamUIWindowType["OverlayGamepadUI"] = 1)] =
+            "OverlayGamepadUI";
           ESteamUIWindowType[(ESteamUIWindowType["Keyboard"] = 2)] = "Keyboard";
           ESteamUIWindowType[
             (ESteamUIWindowType["ControllerConfigurator"] = 3)
@@ -66790,6 +66791,8 @@ object-assign
             "MainDesktopUI";
           ESteamUIWindowType[(ESteamUIWindowType["DesktopLogin"] = 7)] =
             "DesktopLogin";
+          ESteamUIWindowType[(ESteamUIWindowType["OverlayDesktopUI"] = 8)] =
+            "OverlayDesktopUI";
         })(ESteamUIWindowType || (ESteamUIWindowType = {}));
         class SteamUIBrowserWindow_t {}
 
@@ -67931,6 +67934,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EOverlayToStoreFlag,
           /* harmony export */ EParentalFeature: () =>
             /* reexport safe */ _parentaltypes__WEBPACK_IMPORTED_MODULE_17__.EParentalFeature,
+          /* harmony export */ EPeerContentServerMode: () =>
+            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.EPeerContentServerMode,
           /* harmony export */ EPerfDisplayCorner: () =>
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.EPerfDisplayCorner,
           /* harmony export */ EPersonaState: () =>
@@ -68067,10 +68072,6 @@ object-assign
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.SettingsKeyBinding,
           /* harmony export */ SettingsState: () =>
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.SettingsState,
-          /* harmony export */ ShortcutScanData: () =>
-            /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.ShortcutScanData,
-          /* harmony export */ ShortcutScanResults: () =>
-            /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.ShortcutScanResults,
           /* harmony export */ SteamUIBrowserWindow_t: () =>
             /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.SteamUIBrowserWindow_t,
           /* harmony export */ StorePreferences: () =>
@@ -68640,6 +68641,8 @@ object-assign
             /* binding */ EGraphicsPerfOverlayState,
           /* harmony export */ ELibraryDisplaySize: () =>
             /* binding */ ELibraryDisplaySize,
+          /* harmony export */ EPeerContentServerMode: () =>
+            /* binding */ EPeerContentServerMode,
           /* harmony export */ EPerfDisplayCorner: () =>
             /* binding */ EPerfDisplayCorner,
           /* harmony export */ ESteamDeviceFormFactor: () =>
@@ -68699,6 +68702,21 @@ object-assign
             (ELibraryDisplaySize["ELibraryDisplaySize_Large"] = 3)
           ] = "ELibraryDisplaySize_Large";
         })(ELibraryDisplaySize || (ELibraryDisplaySize = {}));
+        var EPeerContentServerMode;
+        (function (EPeerContentServerMode) {
+          EPeerContentServerMode[
+            (EPeerContentServerMode["EPeerContentServerMode_Off"] = 0)
+          ] = "EPeerContentServerMode_Off";
+          EPeerContentServerMode[
+            (EPeerContentServerMode["EPeerContentServerMode_SameUser"] = 1)
+          ] = "EPeerContentServerMode_SameUser";
+          EPeerContentServerMode[
+            (EPeerContentServerMode["EPeerContentServerMode_Friends"] = 2)
+          ] = "EPeerContentServerMode_Friends";
+          EPeerContentServerMode[
+            (EPeerContentServerMode["EPeerContentServerMode_AnyUser"] = 3)
+          ] = "EPeerContentServerMode_AnyUser";
+        })(EPeerContentServerMode || (EPeerContentServerMode = {}));
         /**
          * Matches EGraphicsPerfOverlayState enum declared in src/clientdll/applicationmanager.h
          */
@@ -68891,10 +68909,6 @@ object-assign
             /* binding */ IterateDrivesItem,
           /* harmony export */ IterateFolderItem: () =>
             /* binding */ IterateFolderItem,
-          /* harmony export */ ShortcutScanData: () =>
-            /* binding */ ShortcutScanData,
-          /* harmony export */ ShortcutScanResults: () =>
-            /* binding */ ShortcutScanResults,
           /* harmony export */ SurveyEntry: () => /* binding */ SurveyEntry,
           /* harmony export */ SurveySection: () => /* binding */ SurveySection,
           /* harmony export */ SystemInfo: () => /* binding */ SystemInfo,
@@ -68910,8 +68924,6 @@ object-assign
         class SurveyEntry {}
         class SurveySection {}
         class GameLaunchOption {}
-        class ShortcutScanData {}
-        class ShortcutScanResults {}
         class InstallAppAndCreateShortcutData {}
         class FlatpakApp {}
         class BatteryState_t {}
@@ -70385,7 +70397,7 @@ object-assign
             // TODO: popup manager doesn't do much in mobile
             if (!{ NODE_ENV: "development", STEAM_BUILD: "dev" }.MOBILE_BUILD) {
               window.addEventListener("beforeunload", (event) => {
-                var _a, _b;
+                var _a, _b, _c, _d;
                 this.m_bShuttingDown = true;
                 for (let fnCallback of this.m_rgShutdownCallbacks) fnCallback();
                 // popups will remove themselves from the map as they close, put them in a separate array to avoid any wonkiness.
@@ -70406,6 +70418,14 @@ object-assign
                     popup.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                       false
                     );
+                  if (
+                    (_c = popup.window) === null || _c === void 0
+                      ? void 0
+                      : _c.SteamClient.Window.SetHideOnClose
+                  )
+                    (_d = popup.window) === null || _d === void 0
+                      ? void 0
+                      : _d.SteamClient.Window.SetHideOnClose(false);
                   popup.Close();
                 }
                 if (this.m_bSaveRequired) {
@@ -88615,6 +88635,8 @@ function TestLocalizeCalendarTime()
             /* binding */ CommunityConfig,
           /* harmony export */ Config: () => /* binding */ Config,
           /* harmony export */ ConfigContext: () => /* binding */ ConfigContext,
+          /* harmony export */ ConfigContextRoot: () =>
+            /* binding */ ConfigContextRoot,
           /* harmony export */ EventConfig: () => /* binding */ EventConfig,
           /* harmony export */ GET_BASE_URL: () => /* binding */ GET_BASE_URL,
           /* harmony export */ GET_BASE_WEB_PROPERTY: () =>
@@ -88630,6 +88652,8 @@ function TestLocalizeCalendarTime()
           /* harmony export */ UserConfig: () => /* binding */ UserConfig,
           /* harmony export */ useConfigContext: () =>
             /* binding */ useConfigContext,
+          /* harmony export */ useInDesktopUI: () =>
+            /* binding */ useInDesktopUI,
           /* harmony export */ useInGamepadUI: () =>
             /* binding */ useInGamepadUI,
           /* harmony export */ useOnDeck: () => /* binding */ useOnDeck,
@@ -88669,10 +88693,35 @@ function TestLocalizeCalendarTime()
             );
           (0, shared_utils_assert__WEBPACK_IMPORTED_MODULE_4__.AssertMsg)(
             context.IN_GAMEPADUI !== undefined,
-            "Trying to use ConfigContext without a provider!"
+            "Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application."
           );
           return context;
         };
+        /**
+         * Config context with default values
+         */
+        function ConfigContextRoot(props) {
+          const { IN_GAMEPADUI, IN_DESKTOPUI, IN_VR, children } = props;
+          const value = react__WEBPACK_IMPORTED_MODULE_3___default().useMemo(
+            () => ({
+              IN_GAMEPADUI:
+                IN_GAMEPADUI !== null && IN_GAMEPADUI !== void 0
+                  ? IN_GAMEPADUI
+                  : Config.IN_GAMEPADUI,
+              IN_DESKTOPUI:
+                IN_DESKTOPUI !== null && IN_DESKTOPUI !== void 0
+                  ? IN_DESKTOPUI
+                  : false,
+              IN_VR: IN_VR !== null && IN_VR !== void 0 ? IN_VR : false,
+            }),
+            [IN_GAMEPADUI, IN_DESKTOPUI, IN_VR]
+          );
+          return react__WEBPACK_IMPORTED_MODULE_3___default().createElement(
+            ConfigContext.Provider,
+            { value },
+            children
+          );
+        }
         /**
          * Helper function to determine whether we are in the gamepadui context
          * @returns boolean
@@ -88682,6 +88731,17 @@ function TestLocalizeCalendarTime()
           return configContext === null || configContext === void 0
             ? void 0
             : configContext.IN_GAMEPADUI;
+        }
+        /**
+         * Helper function to determine whether we are in the desktopui context
+         * This can go away once we ship DesktopUI and sunset VGUI
+         * @returns boolean
+         */
+        function useInDesktopUI() {
+          const configContext = useConfigContext();
+          return configContext === null || configContext === void 0
+            ? void 0
+            : configContext.IN_DESKTOPUI;
         }
         /**
          * Helper function to determine whether we are running on Deck
@@ -90396,4 +90456,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=3abb7ed5032707861c8d
+//# sourceMappingURL=friends.js.map?contenthash=a257abde285e1163aa33

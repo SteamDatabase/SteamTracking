@@ -580,8 +580,6 @@
 	"ForgotAccountName_Fail_TryAgain"		"Опитайте отново"
 
 	"ForgotAccountName_Success_Title"		"Проверете е-пощата си"
-	"ForgotAccountName_Success_Description"	"Е-писмо, съдържащо името на Steam акаунта Ви, беше изпратено до Вас.\n\nСлед като получите името на акаунта, може отново да отидете до „Помощ при влизане“, където ще подновите паролата си."
-
 	"ChangeEmail_NewEmail_Title"			"Смяна на е-поща"
 	"ChangeEmail_NewEmail_Description"		"Е-пощата Ви за връзка се използва при потвърждаване на покупки и спомага за управлението на достъп до Вашия Steam акаунт. За да го промените, моля, въведете информацията по-долу."
 	"ChangeEmail_NewEmail_Password"			"Текущата Ви парола"
@@ -972,6 +970,7 @@
 	"ControllerCalibration_Joystick"		"Калибриране на джойстика…"
 	"ControllerCalibration_IMU"				"Калибриране на инерционно измервателен блок (IMU)…"
 	"ControllerCalibration_Complete"		"Калибрирането е завършено"
+	"ControllerCalibration_Failed"			"Неуспешно калибриране: Повърхността е прекалено нестабилна."
 	"ControllerCalibration_Left"			"Ляво"
 	"ControllerCalibration_Right"			"Дясно"
 	"ControllerCalibration_Left_Deadzone"	"Ляв стик — мъртва зона"
@@ -1107,7 +1106,7 @@
 	"SettingsController_Accounts_DeregAYSDesc"			"Дерегистрирайки този акаунт, ще спрете придвижването на конфигурациите с контролера Ви, когато влезете в него."
 	"SettingsController_Deregister"						"ДЕРЕГИСТРИРАНЕ НА АКАУНТ"
 	"SettingsController_SwitchControllerAccount"		"ПРЕВКЛЮЧВАНЕ КЪМ ТОЗИ АКАУНТ"
-	"SettingsController_AutoCalibrateDuringUse"			"АВТОМАТИЧНО КАЛИБРИРАНЕ НА ЖИРОСКОП ПО ВРЕМЕ НА ПОЛЗВАНЕ"
+	"SettingsController_AutoCalibrateDuringUse"			"АВТ. КАЛИБРИРАНЕ НА ЖИРОСКОПА, КОГАТО Е СТАЦИОНАРЕН"
 	"Controller_Registration_TurnOnSound"				"Звук при включване:"
 	"Controller_Registration_TurnOffSound"				"Звук при изключване:"
 	"Controller_Registration_PlayerSlotLED"				"Светодиоден индикатор за слот на играч:"
@@ -1366,7 +1365,7 @@
 	"Checkout_Failed_InitTransaction_CannotGift"				"Покупката Ви не беше завършена успешно, защото кошницата съдържа артикули, които не могат да се дадат като подарък."
 	"Checkout_Failed_InitTransaction_CannotShipInternationally"	"Покупката Ви не беше завършена успешно, защото кошницата съдържа артикули, които не могат да бъдат изпратени извън САЩ."
 	"Checkout_Failed_InitTransaction_OutOfInventory"			"Поръчката Ви не може да бъде завършена, защото един или повече артикула във Вашата кошницата по настоящем не са в наличност. Моля, опитайте отново по-късно."
-	"Checkout_Failed_InitTransaction_CannotShipToCountry"	"Покупката Ви не беше завършена успешно, защото кошницата съдържа артикули, които не могат да бъдат изпратени до Вашето местоположение."
+	"Checkout_Failed_InitTransaction_CannotShipToCountry"	"Покупката Ви не беше завършена успешно, защото кошницата съдържа артикули, които не могат да бъдат изпратени до Вашето местонахождение."
 	"Checkout_Failed_InitTransaction_PendingTransactions"		"Предупреждение: Вашата скорошна транзакция с нас все още е в очакване. Завършихте ли плащането с Вашата банка? Ние не сме сигурни все още и очакваме отговор от тях.\n\nАко продължите и закупите каквото и да е втори път, рискувате да бъдете таксувани два пъти."
 	"Checkout_Failed_InitTransaction_AccountLocked"				"Покупката Ви не беше завършена. Понастоящем акаунтът Ви е заключен за покупки. Моля, свържете се със Steam поддръжката за подробности."
 	"Checkout_Failed_SteamLimitExceeded"						"С цел защитата на титуляря по сметката, тази покупка беше отхвърлена. По-нататъшните покупки ще бъдат временно ограничени. Моля, свържете се със Steam поддръжката, за да решите този проблем."
@@ -1982,7 +1981,6 @@
 	"Library_Details_ControllerBindingsGordon_Switch"	"ПРЕВКЛЮЧВАНЕ НА КОНТРОЛЕР"
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOn"	"ВКЛ. ПРЕВКЛЮЧВАНЕ НА МНОГОСТРАНЕН БУТОН"
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOff"	"ИЗКЛ. ПРЕВКЛЮЧВАНЕ НА МНОГОСТРАНЕН БУТОН"
-	"Library_Details_ControllerBindingsGordon_ResetToDefault"	"ПО ПОДРАЗБИРАНЕ"
 	"Library_Details_ControllerBindingsGordon_CopySettings"	"КОПИРАНЕ НА НАСТРОЙКИ"
 	"Library_Details_ControllerBindingsGordon_PasteSettings"	"ПОСТАВЯНЕ НА НАСТРОЙКИ"
 	"Library_Details_ControllerBindingsGordon_ToggleLegacyOn"	"КЛАСИЧЕСКИ КЛАВИШИ"
@@ -4416,7 +4414,6 @@
 	"LostAuthenticator_Title"					"Нулиране на удостоверителя"
 	"LostAuthenticator_SendingSms_Description"	"Тъй като към акаунта си имате прикачен телефон, ще Ви изпратим потвърдителен SMS код на него."
 
-	"LostAuthenticator_Password_Description"	"Преди да възстановим удостоверителя за акаунта Ви, първо ни трябва паролата на Вашия акаунт. Моля, въведете го по-долу."
 	"LostAuthenticator_Password"				"Парола"
 	"LostAuthenticator_ShowPassword"			"Показване на паролата"
 	"LostAuthenticator_SmsOrRecoveryCode"		"Ако помните кода, който Ви е бил даден, когато сте се регистрирали за Steam Guard удостоверител (изглежда като „R“, последвано от няколко цифри), можете да го използвате за възстановяване на удостоверителя.\n\nВ противен случай можем да Ви изпратим SMS на телефона, регистриран към Вашия акаунт."
@@ -4428,7 +4425,6 @@
 	"LostAuthenticator_SmsCode"					"SMS код"
 	"LostAuthenticator_Working"					"Моля, изчакайте…"
 	"LostAuthenticator_Success_Description"		"Успешно! Премахнахте Steam Guard удостоверителя от акаунта си.\n\nВече би следвало да сте способни да влезете без удостоверителя."
-	"LostAuthenticator_Error_Description"		"Съжаляваме, но имаше грешка при възстановяването на удостоверителя Ви."
 	"LostAuthenticator_IncorrectPassword"		"Съжаляваме, но паролата беше неправилна. Моля, опитайте отново."
 
 	"AccountRecovery_SmsError_Title"			"Опа!"
@@ -6810,7 +6806,7 @@
 
 	//MouseRegion
 	"ControllerBinding_ModeDropDown_MouseRegion" "Стил на въвеждане — Регион на мишката"
-	"ControllerBinding_ModeDropDown_MouseRegion_Description" "Това въвеждане ще действа като регион на мишката. Регионът на мишката изпраща въвеждане от мишката към играта, но третира пада като съпоставяне 1:1 спрямо площта на екрана. По този начин докосването на определено място върху пада винаги ще поставя курсора на съответното местоположение на екрана. Освен че работят страхотно в игри с изглед от горе надолу, регионите могат да бъдат ограничени до определени екранни площи, оразмерени и разтеглени. Те позволяват и промяна на режима, за да изберете мини карти, ленти с инструменти, инвентар и т.н."
+	"ControllerBinding_ModeDropDown_MouseRegion_Description" "Това въвеждане ще действа като регион на мишката. Регионът на мишката изпраща въвеждане от мишката към играта, но третира пада като съпоставяне 1:1 спрямо площта на екрана. По този начин докосването на определено място върху пада винаги ще поставя курсора на съответното местонахождение на екрана. Освен че работят страхотно в игри с изглед от горе надолу, регионите могат да бъдат ограничени до определени екранни площи, оразмерени и разтеглени. Те позволяват и промяна на режима, за да изберете мини карти, ленти с инструменти, инвентар и т.н."
 	"ControllerBinding_MouseRegionClick" "Действие при кликване"
 	"ControllerBinding_MouseRegionClick_Description" "Това действие ще бъде изпълнено, когато кликнете върху пада или стика."
 	"ControllerBinding_ScaleMouseRegion" "Размер на региона"
