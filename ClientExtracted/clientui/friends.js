@@ -69925,6 +69925,8 @@ object-assign
             "AlwaysOnTop";
           EPopupCreationFlags[(EPopupCreationFlags["NoWindowShadow"] = 16384)] =
             "NoWindowShadow";
+          EPopupCreationFlags[(EPopupCreationFlags["NoMinimize"] = 32768)] =
+            "NoMinimize";
           EPopupCreationFlags[(EPopupCreationFlags["Overlay"] = 8712)] =
             "Overlay";
           EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 25096)] =
@@ -86022,7 +86024,11 @@ object-assign
           if (number === 1 || number === "1") {
             return LocalizeReact(strToken, number, ...args);
           } else {
-            return LocalizeReact(strToken + "_Plural", number, ...args);
+            return LocalizeReact(
+              strToken + "_Plural",
+              number.toLocaleString(),
+              ...args
+            );
           }
         }
         /**
@@ -90456,4 +90462,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=a257abde285e1163aa33
+//# sourceMappingURL=friends.js.map?contenthash=a81f497c68b952bca480

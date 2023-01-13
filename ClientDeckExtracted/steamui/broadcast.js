@@ -3745,9 +3745,6 @@
         (0, a.gn)([c.aD], Fe.prototype, "UpdateCommunityPreferences", null),
         (0, a.gn)([c.aD], Fe.prototype, "BRebuildFilter", null);
       class Ie {
-        constructor() {
-          this.m_mapChats = new Map();
-        }
         GetChat(e, t) {
           return this.m_mapChats.get(e) || this.m_mapChats.get(t);
         }
@@ -3763,6 +3760,9 @@
                 (window.g_BroadcastChatStore = Ie.s_Singleton)),
             Ie.s_Singleton
           );
+        }
+        constructor() {
+          this.m_mapChats = new Map();
         }
       }
       (0, a.gn)([c.LO], Ie.prototype, "m_mapChats", void 0);

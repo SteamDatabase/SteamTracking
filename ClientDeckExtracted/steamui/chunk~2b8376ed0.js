@@ -483,6 +483,9 @@
           (t.bottomright = "bottomright");
       })(o || (o = {}));
       let m = class extends n.Component {
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
         constructor(t) {
           super(t),
             (this.m_fnMouseUp = null),
@@ -509,9 +512,6 @@
               this.props.heightPct > 0 && this.props.widthPct > 0
                 ? this.props.widthPct / this.props.heightPct
                 : 1);
-        }
-        componentWillUnmount() {
-          this.m_listeners.Unregister();
         }
         LinkRegionBoxRef(t) {
           this.m_elLinkRegionBox = t;

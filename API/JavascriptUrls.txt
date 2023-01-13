@@ -242,7 +242,6 @@ ${COMMUNITY_BASE_URL}profiles/${steamid}/friendscommon
 ${COMMUNITY_BASE_URL}profiles/${steamid}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
-${COMMUNITY_BASE_URL}profiles/${}/commentnotifications
 ${COMMUNITY_BASE_URL}profiles/${}/friends/pending
 ${COMMUNITY_BASE_URL}profiles/${}/home
 ${COMMUNITY_BASE_URL}profiles/${}/inventory

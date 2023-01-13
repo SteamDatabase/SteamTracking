@@ -19053,7 +19053,7 @@ body {
 .titlebarcontrols_ParentalToggleButton_13vrq .titlebarcontrols_Icon_34bQc {
   color: #fff;
 }
-@keyframes notificationcontent_ItemFocusAnim-darkerGrey-nocolor_V4Msf {
+@keyframes notificationcontent_ItemFocusAnim-darkerGrey-nocolor_1B1pw {
   from {
     background: #3d4450;
   }
@@ -19061,7 +19061,7 @@ body {
     background: #23262e;
   }
 }
-@keyframes notificationcontent_ItemFocusAnim-darkerGrey_3_1qy {
+@keyframes notificationcontent_ItemFocusAnim-darkerGrey_OjFFd {
   from {
     background: #3d4450;
     color: #8b929a;
@@ -19071,7 +19071,7 @@ body {
     color: #fff;
   }
 }
-@keyframes notificationcontent_ItemFocusAnim-darkGrey_2Y7xQ {
+@keyframes notificationcontent_ItemFocusAnim-darkGrey_1Mzw6 {
   from {
     background: #67707b;
     color: #8b929a;
@@ -19081,7 +19081,7 @@ body {
     color: #fff;
   }
 }
-@keyframes notificationcontent_ItemFocusAnim-grey_295OY {
+@keyframes notificationcontent_ItemFocusAnim-grey_2LMCW {
   from {
     background: #8b929a;
     color: #fff;
@@ -19091,7 +19091,7 @@ body {
     color: #fff;
   }
 }
-@keyframes notificationcontent_ItemFocusAnimBorder-darkGrey_3NBLW {
+@keyframes notificationcontent_ItemFocusAnimBorder-darkGrey_1nn5D {
   from {
     border-color: #67707b;
   }
@@ -19099,7 +19099,7 @@ body {
     border-color: #3d4450;
   }
 }
-@keyframes notificationcontent_ItemFocusAnim-green_1Sdq4 {
+@keyframes notificationcontent_ItemFocusAnim-green_1b7iq {
   from {
     background: #c9ffc9;
     color: #8b929a;
@@ -19109,7 +19109,7 @@ body {
     color: #fff;
   }
 }
-@keyframes notificationcontent_focusAnimation_2x0zW {
+@keyframes notificationcontent_focusAnimation_29Yin {
   0% {
     background-position: 0% 0%;
     opacity: 1;
@@ -19119,7 +19119,7 @@ body {
     opacity: 0.8;
   }
 }
-@keyframes notificationcontent_hoverAnimation_IuNUx {
+@keyframes notificationcontent_hoverAnimation_1SRvb {
   0% {
     background-position: 0% 0%;
   }
@@ -19130,9 +19130,9 @@ body {
 :root {
   --basicui-header-height: 0px;
 }
-.notificationcontent_StandardTemplate_1B_uv,
-.notificationcontent_PinnedTemplateDesktop_1IoYV,
-.notificationcontent_PinnedTemplate_H_NPi {
+.notificationcontent_StandardTemplate_5HZT7,
+.notificationcontent_PinnedTemplateDesktop_1-8YO,
+.notificationcontent_PinnedTemplate_1X-O1 {
   padding: 13px 13px;
   display: flex;
   flex-direction: row;
@@ -19147,31 +19147,31 @@ body {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-.notificationcontent_StandardTemplate_1B_uv.gpfocus,
-.notificationcontent_PinnedTemplateDesktop_1IoYV.gpfocus,
-.notificationcontent_PinnedTemplate_H_NPi.gpfocus {
+.notificationcontent_StandardTemplate_5HZT7.gpfocus,
+.notificationcontent_PinnedTemplateDesktop_1-8YO.gpfocus,
+.notificationcontent_PinnedTemplate_1X-O1.gpfocus {
   background-color: #3d4450;
-  animation-name: notificationcontent_ItemFocusAnim-darkerGrey_3_1qy;
+  animation-name: notificationcontent_ItemFocusAnim-darkerGrey_OjFFd;
   z-index: 1;
 }
-.notificationcontent_StandardTemplate_1B_uv:not(:focus)
-  + .notificationcontent_StandardTemplate_1B_uv:not(:focus):before,
-.notificationcontent_StandardTemplate_1B_uv:not(:focus)
-  + .notificationcontent_PinnedTemplateDesktop_1IoYV:not(:focus):before,
-.notificationcontent_StandardTemplate_1B_uv:not(:focus)
-  + .notificationcontent_PinnedTemplate_H_NPi:not(:focus):before,
-.notificationcontent_PinnedTemplateDesktop_1IoYV:not(:focus)
-  + .notificationcontent_StandardTemplate_1B_uv:not(:focus):before,
-.notificationcontent_PinnedTemplateDesktop_1IoYV:not(:focus)
-  + .notificationcontent_PinnedTemplateDesktop_1IoYV:not(:focus):before,
-.notificationcontent_PinnedTemplateDesktop_1IoYV:not(:focus)
-  + .notificationcontent_PinnedTemplate_H_NPi:not(:focus):before,
-.notificationcontent_PinnedTemplate_H_NPi:not(:focus)
-  + .notificationcontent_StandardTemplate_1B_uv:not(:focus):before,
-.notificationcontent_PinnedTemplate_H_NPi:not(:focus)
-  + .notificationcontent_PinnedTemplateDesktop_1IoYV:not(:focus):before,
-.notificationcontent_PinnedTemplate_H_NPi:not(:focus)
-  + .notificationcontent_PinnedTemplate_H_NPi:not(:focus):before {
+.notificationcontent_StandardTemplate_5HZT7:not(:focus)
+  + .notificationcontent_StandardTemplate_5HZT7:not(:focus):before,
+.notificationcontent_StandardTemplate_5HZT7:not(:focus)
+  + .notificationcontent_PinnedTemplateDesktop_1-8YO:not(:focus):before,
+.notificationcontent_StandardTemplate_5HZT7:not(:focus)
+  + .notificationcontent_PinnedTemplate_1X-O1:not(:focus):before,
+.notificationcontent_PinnedTemplateDesktop_1-8YO:not(:focus)
+  + .notificationcontent_StandardTemplate_5HZT7:not(:focus):before,
+.notificationcontent_PinnedTemplateDesktop_1-8YO:not(:focus)
+  + .notificationcontent_PinnedTemplateDesktop_1-8YO:not(:focus):before,
+.notificationcontent_PinnedTemplateDesktop_1-8YO:not(:focus)
+  + .notificationcontent_PinnedTemplate_1X-O1:not(:focus):before,
+.notificationcontent_PinnedTemplate_1X-O1:not(:focus)
+  + .notificationcontent_StandardTemplate_5HZT7:not(:focus):before,
+.notificationcontent_PinnedTemplate_1X-O1:not(:focus)
+  + .notificationcontent_PinnedTemplateDesktop_1-8YO:not(:focus):before,
+.notificationcontent_PinnedTemplate_1X-O1:not(:focus)
+  + .notificationcontent_PinnedTemplate_1X-O1:not(:focus):before {
   content: "";
   position: absolute;
   top: 0;
@@ -19180,57 +19180,57 @@ body {
   height: 1px;
   border-bottom: 1px solid #3d4450;
 }
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardLogoDimensions_2PHgs,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardLogoDimensions_2PHgs,
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardLogoDimensions_2PHgs {
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardLogoDimensions_32niV,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardLogoDimensions_32niV,
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardLogoDimensions_32niV {
   height: 44px;
   width: 44px;
   flex-shrink: 0;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Content_22NY9,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Content_22NY9,
-.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Content_22NY9 {
+.notificationcontent_StandardTemplate_5HZT7 .notificationcontent_Content_2TTnY,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Content_2TTnY,
+.notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Content_2TTnY {
   margin-left: 12px;
   min-width: 0;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Header__Gv0f,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Header__Gv0f,
-.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Header__Gv0f {
+.notificationcontent_StandardTemplate_5HZT7 .notificationcontent_Header_1KnyC,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Header_1KnyC,
+.notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Header_1KnyC {
   display: flex;
   flex-direction: row;
   height: 14px;
   line-height: 14px;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Icon_2eliP,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Icon_2eliP,
-.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Icon_2eliP {
+.notificationcontent_StandardTemplate_5HZT7 .notificationcontent_Icon_opgc6,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Icon_opgc6,
+.notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Icon_opgc6 {
   width: 13px;
   height: 13px;
   margin-right: 8px;
   color: #fff;
 }
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_Icon_2eliP
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_Icon_opgc6
   > svg,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Icon_2eliP
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Icon_opgc6
   > svg,
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_Icon_2eliP
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_Icon_opgc6
   > svg {
   width: 13px;
   height: 13px;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Title_3CsWl,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Title_3CsWl,
-.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Title_3CsWl {
+.notificationcontent_StandardTemplate_5HZT7 .notificationcontent_Title_3qzN6,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Title_3qzN6,
+.notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Title_3qzN6 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -19241,24 +19241,24 @@ body {
   text-overflow: ellipsis;
   color: #fff;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Body_1F3-u,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Body_1F3-u,
-.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Body_1F3-u {
+.notificationcontent_StandardTemplate_5HZT7 .notificationcontent_Body_2RpDR,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Body_2RpDR,
+.notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Body_2RpDR {
   overflow: hidden;
 }
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardNotificationDescription_kVqEa,
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardNotificationSubText_3iYf4,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardNotificationDescription_kVqEa,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardNotificationSubText_3iYf4,
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardNotificationDescription_kVqEa,
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardNotificationSubText_3iYf4 {
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardNotificationDescription_zB56A,
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardNotificationSubText_EVwRp,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardNotificationDescription_zB56A,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardNotificationSubText_EVwRp,
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardNotificationDescription_zB56A,
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardNotificationSubText_EVwRp {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19274,59 +19274,59 @@ body {
   font-size: 12px;
   line-height: 16px;
 }
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardNotificationDescription_kVqEa:not(.notificationcontent_Multiline_3ddJI),
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardNotificationSubText_3iYf4:not(.notificationcontent_Multiline_3ddJI),
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardNotificationDescription_kVqEa:not(.notificationcontent_Multiline_3ddJI),
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardNotificationSubText_3iYf4:not(.notificationcontent_Multiline_3ddJI),
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardNotificationDescription_kVqEa:not(.notificationcontent_Multiline_3ddJI),
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardNotificationSubText_3iYf4:not(.notificationcontent_Multiline_3ddJI) {
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardNotificationDescription_zB56A:not(.notificationcontent_Multiline_37nzP),
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardNotificationSubText_EVwRp:not(.notificationcontent_Multiline_37nzP),
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardNotificationDescription_zB56A:not(.notificationcontent_Multiline_37nzP),
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardNotificationSubText_EVwRp:not(.notificationcontent_Multiline_37nzP),
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardNotificationDescription_zB56A:not(.notificationcontent_Multiline_37nzP),
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardNotificationSubText_EVwRp:not(.notificationcontent_Multiline_37nzP) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardNotificationDescription_kVqEa.notificationcontent_Multiline_3ddJI,
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardNotificationSubText_3iYf4.notificationcontent_Multiline_3ddJI,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardNotificationDescription_kVqEa.notificationcontent_Multiline_3ddJI,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardNotificationSubText_3iYf4.notificationcontent_Multiline_3ddJI,
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardNotificationDescription_kVqEa.notificationcontent_Multiline_3ddJI,
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardNotificationSubText_3iYf4.notificationcontent_Multiline_3ddJI {
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardNotificationDescription_zB56A.notificationcontent_Multiline_37nzP,
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardNotificationSubText_EVwRp.notificationcontent_Multiline_37nzP,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardNotificationDescription_zB56A.notificationcontent_Multiline_37nzP,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardNotificationSubText_EVwRp.notificationcontent_Multiline_37nzP,
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardNotificationDescription_zB56A.notificationcontent_Multiline_37nzP,
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardNotificationSubText_EVwRp.notificationcontent_Multiline_37nzP {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardNotificationDescription_kVqEa,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardNotificationDescription_kVqEa,
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardNotificationDescription_kVqEa {
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardNotificationDescription_zB56A,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardNotificationDescription_zB56A,
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardNotificationDescription_zB56A {
   color: #b8bcbf;
 }
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_StandardNotificationSubText_3iYf4,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_StandardNotificationSubText_3iYf4,
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_StandardNotificationSubText_3iYf4 {
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_StandardNotificationSubText_EVwRp,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_StandardNotificationSubText_EVwRp,
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_StandardNotificationSubText_EVwRp {
   color: #67707b;
 }
-.notificationcontent_StandardTemplate_1B_uv .notificationcontent_Count_1qsxM,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Count_1qsxM,
-.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Count_1qsxM {
+.notificationcontent_StandardTemplate_5HZT7 .notificationcontent_Count_Mw9um,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Count_Mw9um,
+.notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Count_Mw9um {
   background-color: #1a9fff;
   color: #fff;
   border-radius: 26px;
@@ -19338,11 +19338,11 @@ body {
   margin-left: 8px;
   margin-right: -8px;
 }
-.notificationcontent_StandardTemplate_1B_uv
-  .notificationcontent_Timestamp_1dWDB,
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Timestamp_1dWDB,
-.notificationcontent_PinnedTemplate_H_NPi .notificationcontent_Timestamp_1dWDB {
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_Timestamp_3q7nN,
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Timestamp_3q7nN,
+.notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Timestamp_3q7nN {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -19355,19 +19355,19 @@ body {
   flex-shrink: 0;
   margin-left: 0.5em;
 }
-.notificationcontent_StandardTemplate_1B_uv.gpfocus
-  .notificationcontent_Timestamp_1dWDB,
-.notificationcontent_PinnedTemplateDesktop_1IoYV.gpfocus
-  .notificationcontent_Timestamp_1dWDB,
-.notificationcontent_PinnedTemplate_H_NPi.gpfocus
-  .notificationcontent_Timestamp_1dWDB {
+.notificationcontent_StandardTemplate_5HZT7.gpfocus
+  .notificationcontent_Timestamp_3q7nN,
+.notificationcontent_PinnedTemplateDesktop_1-8YO.gpfocus
+  .notificationcontent_Timestamp_3q7nN,
+.notificationcontent_PinnedTemplate_1X-O1.gpfocus
+  .notificationcontent_Timestamp_3q7nN {
   color: #67707b;
 }
-.notificationcontent_PinnedTemplate_H_NPi {
+.notificationcontent_PinnedTemplate_1X-O1 {
   height: 16px;
 }
-.notificationcontent_PinnedTemplate_H_NPi
-  .notificationcontent_PinnedBody_3DeeK {
+.notificationcontent_PinnedTemplate_1X-O1
+  .notificationcontent_PinnedBody_3V6Rp {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19390,13 +19390,13 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.notificationcontent_PinnedTemplateDesktop_1IoYV {
+.notificationcontent_PinnedTemplateDesktop_1-8YO {
   height: 16px;
   padding: 8px 0px;
   position: relative;
   background-color: #454953;
 }
-.notificationcontent_PinnedTemplateDesktop_1IoYV:not(:first-child):not(:nth-child(2)):after {
+.notificationcontent_PinnedTemplateDesktop_1-8YO:not(:first-child):not(:nth-child(2)):after {
   content: "";
   position: absolute;
   top: 0;
@@ -19405,8 +19405,8 @@ body {
   height: 1px;
   border-bottom: 1px solid #000;
 }
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Icon_2eliP {
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Icon_opgc6 {
   width: 16px;
   height: 16px;
   margin-right: 10px;
@@ -19414,14 +19414,14 @@ body {
   color: #fff;
   flex: 1;
 }
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_Icon_2eliP
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_Icon_opgc6
   > svg {
   width: 16px;
   height: 16px;
 }
-.notificationcontent_PinnedTemplateDesktop_1IoYV
-  .notificationcontent_PinnedBody_3DeeK {
+.notificationcontent_PinnedTemplateDesktop_1-8YO
+  .notificationcontent_PinnedBody_3V6Rp {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19444,11 +19444,11 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.notificationcontent_PinnedTemplateDesktop_1IoYV.gpfocus
-  .notificationcontent_Timestamp_1dWDB {
+.notificationcontent_PinnedTemplateDesktop_1-8YO.gpfocus
+  .notificationcontent_Timestamp_3q7nN {
   color: #67707b;
 }
-.notificationcontent_ShortTemplate_2w-Eq {
+.notificationcontent_ShortTemplate_nwer8 {
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -19458,7 +19458,7 @@ body {
   width: 300px;
   height: 40px;
 }
-.notificationcontent_ShortTemplate_2w-Eq.notificationcontent_IncomingCallToast_ZsWgX {
+.notificationcontent_ShortTemplate_nwer8.notificationcontent_IncomingCallToast_33I9T {
   background: radial-gradient(
     ellipse 80px 80px at 60px 12px,
     #59bf40 0%,
@@ -19466,37 +19466,37 @@ body {
   );
   border-left: 1px solid #000;
 }
-.notificationcontent_ShortTemplate_2w-Eq.notificationcontent_IncomingCallToast_ZsWgX
-  .notificationcontent_Body_1F3-u {
+.notificationcontent_ShortTemplate_nwer8.notificationcontent_IncomingCallToast_33I9T
+  .notificationcontent_Body_2RpDR {
   color: #fff;
 }
-.notificationcontent_ShortTemplate_2w-Eq
-  .notificationcontent_ShortLogoDimensions_2ydvY {
+.notificationcontent_ShortTemplate_nwer8
+  .notificationcontent_ShortLogoDimensions_1lmV2 {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
 }
-.notificationcontent_ShortTemplate_2w-Eq .notificationcontent_Content_22NY9 {
+.notificationcontent_ShortTemplate_nwer8 .notificationcontent_Content_2TTnY {
   margin: 0px 12px;
   min-width: 0;
 }
-.notificationcontent_ShortTemplate_2w-Eq .notificationcontent_Header__Gv0f {
+.notificationcontent_ShortTemplate_nwer8 .notificationcontent_Header_1KnyC {
   display: flex;
   flex-direction: row;
   height: 14px;
   line-height: 14px;
 }
-.notificationcontent_ShortTemplate_2w-Eq .notificationcontent_Icon_2eliP {
+.notificationcontent_ShortTemplate_nwer8 .notificationcontent_Icon_opgc6 {
   width: 13px;
   height: 13px;
   margin-right: 8px;
   color: #fff;
 }
-.notificationcontent_ShortTemplate_2w-Eq .notificationcontent_Icon_2eliP > svg {
+.notificationcontent_ShortTemplate_nwer8 .notificationcontent_Icon_opgc6 > svg {
   width: 13px;
   height: 13px;
 }
-.notificationcontent_ShortTemplate_2w-Eq .notificationcontent_Title_3CsWl {
+.notificationcontent_ShortTemplate_nwer8 .notificationcontent_Title_3qzN6 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -19507,7 +19507,7 @@ body {
   text-overflow: ellipsis;
   color: #fff;
 }
-.notificationcontent_ShortTemplate_2w-Eq .notificationcontent_Body_1F3-u {
+.notificationcontent_ShortTemplate_nwer8 .notificationcontent_Body_2RpDR {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19528,7 +19528,7 @@ body {
   color: #b8bcbf;
   height: 16px;
 }
-.notificationcontent_ShortTemplate_2w-Eq .notificationcontent_Count_1qsxM {
+.notificationcontent_ShortTemplate_nwer8 .notificationcontent_Count_Mw9um {
   background-color: #1a9fff;
   color: #fff;
   border-radius: 26px;
@@ -19540,9 +19540,9 @@ body {
   margin-left: 8px;
   margin-right: -8px;
 }
-.notificationcontent_DownloadCompleteText_1jOam,
-.notificationcontent_SystemUpdateText_Pfjmd,
-.notificationcontent_FriendInviteRollupText_1RA1B {
+.notificationcontent_DownloadCompleteText_GiuEz,
+.notificationcontent_SystemUpdateText_1ToC5,
+.notificationcontent_FriendInviteRollupText_3XcF9 {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19558,13 +19558,13 @@ body {
   font-size: 12px;
   line-height: 16px;
 }
-.gpfocus .notificationcontent_DownloadCompleteText_1jOam,
-.gpfocus .notificationcontent_SystemUpdateText_Pfjmd,
-.gpfocus .notificationcontent_FriendInviteRollupText_1RA1B {
+.gpfocus .notificationcontent_DownloadCompleteText_GiuEz,
+.gpfocus .notificationcontent_SystemUpdateText_1ToC5,
+.gpfocus .notificationcontent_FriendInviteRollupText_3XcF9 {
   color: #0e141b;
 }
-.notificationcontent_CloudSyncFailureText_1j1U9,
-.notificationcontent_CloudSyncConflictText_31O4R {
+.notificationcontent_CloudSyncFailureText_1k3O2,
+.notificationcontent_CloudSyncConflictText_COL7_ {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19580,26 +19580,26 @@ body {
   font-size: 12px;
   line-height: 16px;
 }
-.gpfocus .notificationcontent_CloudSyncFailureText_1j1U9,
-.gpfocus .notificationcontent_CloudSyncConflictText_31O4R {
+.gpfocus .notificationcontent_CloudSyncFailureText_1k3O2,
+.gpfocus .notificationcontent_CloudSyncConflictText_COL7_ {
   color: #0e141b;
 }
-.notificationcontent_SystemUpdateIcon_1a0x2 {
+.notificationcontent_SystemUpdateIcon_1fYkL {
   width: 24px;
   height: 24px;
 }
-.notificationcontent_FriendInviteBody_HvU7h {
+.notificationcontent_FriendInviteBody_3xvZr {
   display: flex;
   align-items: center;
 }
-.notificationcontent_FriendInviteBody_HvU7h
-  .notificationcontent_FriendInviteAvatar_2-ljJ {
+.notificationcontent_FriendInviteBody_3xvZr
+  .notificationcontent_FriendInviteAvatar_10gW5 {
   width: 18px;
   height: 18px;
   margin-right: 8px;
 }
-.notificationcontent_FriendInviteBody_HvU7h
-  .notificationcontent_FriendInviteName_1IBqD {
+.notificationcontent_FriendInviteBody_3xvZr
+  .notificationcontent_FriendInviteName_1UA4g {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19618,31 +19618,31 @@ body {
   white-space: nowrap;
 }
 .gpfocus
-  .notificationcontent_FriendInviteBody_HvU7h
-  .notificationcontent_FriendInviteName_1IBqD {
+  .notificationcontent_FriendInviteBody_3xvZr
+  .notificationcontent_FriendInviteName_1UA4g {
   color: #000;
 }
-.notificationcontent_FriendName_39UtQ {
+.notificationcontent_FriendName_3BGvp {
   color: #fff;
 }
-.notificationcontent_FriendGame_TzIVT {
+.notificationcontent_FriendGame_1a87l {
   color: #c2ffb3;
 }
-.notificationcontent_FriendInGameAppColor_1XS5S {
+.notificationcontent_FriendInGameAppColor_3uw_G {
   color: #59bf40;
 }
-.notificationcontent_AchievementBody_1re5Q {
+.notificationcontent_AchievementBody_2iHCs {
   display: flex;
   align-items: center;
 }
-.notificationcontent_AchievementBody_1re5Q
-  .notificationcontent_FriendInviteAvatar_2-ljJ {
+.notificationcontent_AchievementBody_2iHCs
+  .notificationcontent_FriendInviteAvatar_10gW5 {
   width: 18px;
   height: 18px;
   margin-right: 8px;
 }
-.notificationcontent_AchievementBody_1re5Q
-  .notificationcontent_FriendInviteName_1IBqD {
+.notificationcontent_AchievementBody_2iHCs
+  .notificationcontent_FriendInviteName_1UA4g {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19661,11 +19661,11 @@ body {
   white-space: nowrap;
 }
 .gpfocus
-  .notificationcontent_AchievementBody_1re5Q
-  .notificationcontent_FriendInviteName_1IBqD {
+  .notificationcontent_AchievementBody_2iHCs
+  .notificationcontent_FriendInviteName_1UA4g {
   color: #000;
 }
-.notificationcontent_LowDiskSpace_1baXF {
+.notificationcontent_LowDiskSpace_GzaAD {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19689,16 +19689,16 @@ body {
   height: 100%;
   padding: 0px 8px;
 }
-.notificationcontent_LowDiskSpace_1baXF .notificationcontent_Text_3sn1o {
+.notificationcontent_LowDiskSpace_GzaAD .notificationcontent_Text_93B8s {
   flex-shrink: 0;
 }
-.notificationcontent_LowDiskSpace_1baXF .notificationcontent_HardDrive_3DGL0 {
+.notificationcontent_LowDiskSpace_GzaAD .notificationcontent_HardDrive_2-tX8 {
   width: 16px;
   height: 16px;
   margin-right: 8px;
   flex-shrink: 0;
 }
-.notificationcontent_LowBattery_2Ssqr {
+.notificationcontent_LowBattery_2D1nU {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19722,25 +19722,25 @@ body {
   height: 100%;
   padding: 0px 8px;
 }
-.notificationcontent_LowBattery_2Ssqr.notificationcontent_ReallyLow_3Z1Vm {
+.notificationcontent_LowBattery_2D1nU.notificationcontent_ReallyLow_2YXlg {
   background-color: #de3618;
   color: #fff;
 }
-.notificationcontent_LowBattery_2Ssqr
-  .notificationcontent_LowBatteryGauge_28Z_C {
+.notificationcontent_LowBattery_2D1nU
+  .notificationcontent_LowBatteryGauge_2SEgy {
   width: 16px;
   height: 16px;
   margin-right: 8px;
   flex-shrink: 0;
 }
-.notificationcontent_LowBattery_2Ssqr .notificationcontent_Text_3sn1o {
+.notificationcontent_LowBattery_2D1nU .notificationcontent_Text_93B8s {
   flex-shrink: 0;
 }
-.notificationcontent_LowBattery_2Ssqr .notificationcontent_Remaining_23D8L {
+.notificationcontent_LowBattery_2D1nU .notificationcontent_Remaining_25tpR {
   flex-grow: 1;
   text-align: right;
 }
-.notificationcontent_BatteryTemperature_3sU3N {
+.notificationcontent_BatteryTemperature_5IhQT {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19762,38 +19762,38 @@ body {
   flex-direction: row;
   padding: 4px 8px;
 }
-.notificationcontent_BatteryTemperature_3sU3N.notificationcontent_Warning_xTukS {
+.notificationcontent_BatteryTemperature_5IhQT.notificationcontent_Warning_3nxUX {
   background-color: #ffc82c;
   color: #000;
 }
-.notificationcontent_BatteryTemperature_3sU3N.notificationcontent_Warning_xTukS
-  .notificationcontent_Title_3CsWl {
+.notificationcontent_BatteryTemperature_5IhQT.notificationcontent_Warning_3nxUX
+  .notificationcontent_Title_3qzN6 {
   color: #000;
 }
-.notificationcontent_BatteryTemperature_3sU3N .notificationcontent_Icon_2eliP {
+.notificationcontent_BatteryTemperature_5IhQT .notificationcontent_Icon_opgc6 {
   width: 16px;
   height: 16px;
   margin-right: 8px;
   margin-top: 2px;
   flex-shrink: 0;
 }
-.notificationcontent_BatteryTemperature_3sU3N
-  .notificationcontent_Content_22NY9 {
+.notificationcontent_BatteryTemperature_5IhQT
+  .notificationcontent_Content_2TTnY {
   display: flex;
   flex-direction: column;
 }
-.notificationcontent_BatteryTemperature_3sU3N .notificationcontent_Title_3CsWl {
+.notificationcontent_BatteryTemperature_5IhQT .notificationcontent_Title_3qzN6 {
   flex-shrink: 0;
 }
-.notificationcontent_BatteryTemperature_3sU3N
-  .notificationcontent_Description_fZ5QH {
+.notificationcontent_BatteryTemperature_5IhQT
+  .notificationcontent_Description_2aiVL {
   text-transform: none;
   white-space: normal;
   text-overflow: clip;
   min-height: 0px;
   line-height: 14px;
 }
-.notificationcontent_MessageBody_2LUgM {
+.notificationcontent_MessageBody_289EA {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -19814,35 +19814,35 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.notificationcontent_MessageBody_2LUgM .notificationcontent_Sender_214zs {
+.notificationcontent_MessageBody_289EA .notificationcontent_Sender_19K6y {
   color: #b8bcbf;
 }
-.notificationcontent_MessageBody_2LUgM .notificationcontent_Dash_2cGi_,
-.notificationcontent_MessageBody_2LUgM .notificationcontent_Body_1F3-u {
+.notificationcontent_MessageBody_289EA .notificationcontent_Dash_1ETCz,
+.notificationcontent_MessageBody_289EA .notificationcontent_Body_2RpDR {
   color: #67707b;
 }
-.notificationcontent_ScreenshotThumbnail_1WEaQ {
+.notificationcontent_ScreenshotThumbnail_H6z6z {
   height: 100%;
   background-size: 250% auto;
   background-position: 50% 50%;
 }
-.notificationcontent_AvatarStatus_2I2zk {
+.notificationcontent_AvatarStatus_1d4A6 {
   width: 3px;
   height: 100%;
   flex-shrink: 0;
   box-shadow: -1px 0px 1px #000a;
 }
-.notificationcontent_IncomingCallToast_ZsWgX
-  .notificationcontent_AvatarStatus_2I2zk {
+.notificationcontent_IncomingCallToast_33I9T
+  .notificationcontent_AvatarStatus_1d4A6 {
   border-right: 1px solid #236c39;
 }
-.notificationcontent_AvatarStatus_2I2zk.online {
+.notificationcontent_AvatarStatus_1d4A6.online {
   background-color: #4cb4ff;
 }
-.notificationcontent_AvatarStatus_2I2zk.ingame {
+.notificationcontent_AvatarStatus_1d4A6.ingame {
   background-color: #59bf40;
 }
-.notificationcontent_AvatarStatus_2I2zk.awayOrSnooze {
+.notificationcontent_AvatarStatus_1d4A6.awayOrSnooze {
   -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
     repeat-y;
   -webkit-mask-size: 6px 6px;
@@ -19851,16 +19851,16 @@ body {
   mask-size: 6px 6px;
   opacity: 1;
 }
-.notificationcontent_AvatarStatus_2I2zk.offline {
+.notificationcontent_AvatarStatus_1d4A6.offline {
   background-color: #67707b;
 }
-.notificationcontent_ShortNotificationSteamLogo_Rm2zU {
+.notificationcontent_ShortNotificationSteamLogo_1jNC4 {
   width: 36px;
   height: 36px;
   padding: 2px;
   transform: translateX(4px);
 }
-.notificationcontent_AppLogo_2cKDX {
+.notificationcontent_AppLogo_3qFX5 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19869,8 +19869,8 @@ body {
   position: relative;
   overflow: hidden;
 }
-.notificationcontent_AppLogo_2cKDX
-  .notificationcontent_AppLogoBackgroundImage_KGIqz {
+.notificationcontent_AppLogo_3qFX5
+  .notificationcontent_AppLogoBackgroundImage_3Xtkz {
   content: "";
   display: block;
   position: absolute;
@@ -19881,7 +19881,7 @@ body {
   top: 6px;
   filter: contrast(1) saturate(7) brightness(2) blur(3px);
 }
-.notificationcontent_AppLogo_2cKDX > img {
+.notificationcontent_AppLogo_3qFX5 > img {
   position: relative;
   width: 32px;
   height: 31px;
@@ -19977,7 +19977,7 @@ body {
   height: 3px;
   background-color: #000;
 }
-@keyframes toastmanager_ItemFocusAnim-darkerGrey-nocolor_3FSWe {
+@keyframes toastmanager_ItemFocusAnim-darkerGrey-nocolor_eoB_- {
   from {
     background: #3d4450;
   }
@@ -19985,7 +19985,7 @@ body {
     background: #23262e;
   }
 }
-@keyframes toastmanager_ItemFocusAnim-darkerGrey_1peTU {
+@keyframes toastmanager_ItemFocusAnim-darkerGrey_uBErD {
   from {
     background: #3d4450;
     color: #8b929a;
@@ -19995,7 +19995,7 @@ body {
     color: #fff;
   }
 }
-@keyframes toastmanager_ItemFocusAnim-darkGrey_1Sadv {
+@keyframes toastmanager_ItemFocusAnim-darkGrey_1dEaO {
   from {
     background: #67707b;
     color: #8b929a;
@@ -20005,7 +20005,7 @@ body {
     color: #fff;
   }
 }
-@keyframes toastmanager_ItemFocusAnim-grey_crub9 {
+@keyframes toastmanager_ItemFocusAnim-grey_3zlmy {
   from {
     background: #8b929a;
     color: #fff;
@@ -20015,7 +20015,7 @@ body {
     color: #fff;
   }
 }
-@keyframes toastmanager_ItemFocusAnimBorder-darkGrey_3HJVE {
+@keyframes toastmanager_ItemFocusAnimBorder-darkGrey_2a_0F {
   from {
     border-color: #67707b;
   }
@@ -20023,7 +20023,7 @@ body {
     border-color: #3d4450;
   }
 }
-@keyframes toastmanager_ItemFocusAnim-green_1eeen {
+@keyframes toastmanager_ItemFocusAnim-green_YTsjD {
   from {
     background: #c9ffc9;
     color: #8b929a;
@@ -20033,7 +20033,7 @@ body {
     color: #fff;
   }
 }
-@keyframes toastmanager_focusAnimation_2T_Cw {
+@keyframes toastmanager_focusAnimation_5b5pB {
   0% {
     background-position: 0% 0%;
     opacity: 1;
@@ -20043,7 +20043,7 @@ body {
     opacity: 0.8;
   }
 }
-@keyframes toastmanager_hoverAnimation_24eTS {
+@keyframes toastmanager_hoverAnimation_1SQkR {
   0% {
     background-position: 0% 0%;
   }
@@ -20054,7 +20054,7 @@ body {
 :root {
   --basicui-header-height: 0px;
 }
-.toastmanager_ToastPlaceholder_QLAG- {
+.toastmanager_ToastPlaceholder_3aN-b {
   position: fixed;
   bottom: 30px;
   right: 0px;
@@ -20063,59 +20063,59 @@ body {
   padding: 20px 0px 20px 20px;
   background-color: transparent;
 }
-.toastmanager_ToastPlaceholder_QLAG-.toastmanager_InGame_c8Wr9 {
+.toastmanager_ToastPlaceholder_3aN-b.toastmanager_InGame_1TfNM {
   bottom: -10px;
 }
-.toastmanager_ToastPlaceholder_QLAG-.toastmanager_Warning_16CYn {
+.toastmanager_ToastPlaceholder_3aN-b.toastmanager_Warning_1gUd6 {
   width: 150px;
   height: 28px;
 }
-.toastmanager_ToastPlaceholder_QLAG-.toastmanager_TinyToast_3gv5Y {
+.toastmanager_ToastPlaceholder_3aN-b.toastmanager_TinyToast_2J5Cv {
   width: 150px;
   height: 40px;
 }
-.toastmanager_ToastPlaceholder_QLAG-.toastmanager_PositionTop_1bLZ8 {
+.toastmanager_ToastPlaceholder_3aN-b.toastmanager_PositionTop_12TIz {
   top: 50px;
   bottom: unset;
 }
-.toastmanager_ToastPlaceholder_QLAG-.toastmanager_PositionTop_1bLZ8.toastmanager_InGame_c8Wr9 {
+.toastmanager_ToastPlaceholder_3aN-b.toastmanager_PositionTop_12TIz.toastmanager_InGame_1TfNM {
   top: 10px;
 }
-.toastmanager_ToastPlaceholder_QLAG-.toastmanager_PositionLeft_1t1fw {
+.toastmanager_ToastPlaceholder_3aN-b.toastmanager_PositionLeft_syt5p {
   left: 0px;
   right: unset;
   padding-left: 0px;
   padding-right: 20px;
 }
-.toastmanager_ToastContainerDesktop_zydYp {
+.toastmanager_ToastContainerDesktop_1kw7m {
   width: 300px;
   height: 40px;
   padding: 20px 0px 20px 20px;
   overflow: hidden;
   background-color: transparent;
 }
-.toastmanager_ToastPopup_1qv_I {
+.toastmanager_ToastPopup_2eQka {
   position: absolute;
   top: 20px;
   right: 0;
   bottom: 20px;
   left: 20px;
 }
-.toastmanager_ToastPopup_1qv_I > * {
-  animation-name: toastmanager_toastEnter_2vgBB, toastmanager_toastExit_11TD0;
+.toastmanager_ToastPopup_2eQka > * {
+  animation-name: toastmanager_toastEnter_1KJR9, toastmanager_toastExit_2HL7p;
   animation-duration: 300ms, 300ms;
   animation-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
   animation-delay: 0s, var(--toast-duration);
   animation-fill-mode: forwards;
 }
-.toastmanager_ToastPopup_1qv_I.toastmanager_PositionTop_1bLZ8 {
+.toastmanager_ToastPopup_2eQka.toastmanager_PositionTop_12TIz {
   top: 0;
 }
-.toastmanager_ToastPopup_1qv_I.toastmanager_PositionLeft_1t1fw {
+.toastmanager_ToastPopup_2eQka.toastmanager_PositionLeft_syt5p {
   left: 0;
   right: 20px;
 }
-@keyframes toastmanager_toastEnter_2vgBB {
+@keyframes toastmanager_toastEnter_1KJR9 {
   0% {
     transform: translateX(300px);
   }
@@ -20123,7 +20123,7 @@ body {
     transform: translateX(0);
   }
 }
-@keyframes toastmanager_toastExit_11TD0 {
+@keyframes toastmanager_toastExit_2HL7p {
   0% {
     opacity: 1;
   }

@@ -1168,8 +1168,25 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 .controllerconfiguratormapping_FlexFlowRow_2_Bof.controllerconfiguratormapping_RightLabelAlignment_2UPqK {
   margin-left: auto;
 }
+.controllerconfiguratormapping_FlexFlowRow_2_Bof.controllerconfiguratormapping_GroupedActivators_1mcLD {
+  max-width: 250px;
+}
 .controllerconfiguratormapping_FlexFlowRow_2_Bof
   .controllerconfiguratormapping_ActivatorDesc_1y8wF {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
   padding-left: 10px;
 }
 .controllerconfiguratormapping_ExtraBindingForCycle_39pEZ svg {
@@ -1315,6 +1332,10 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   margin-left: 0px;
   color: #8b929a;
 }
+.controllerconfiguratormapping_BindingDisplayName_rDprC {
+  flex-grow: 1;
+  max-width: 200px;
+}
 .controllerconfiguratormapping_BindingDisplayName_rDprC
   .controllerconfiguratormapping_FriendlyName_QJYtd {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -1343,6 +1364,17 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   .controllerconfiguratormapping_BindingDisplayName_rDprC
   .controllerconfiguratormapping_FriendlyName_QJYtd {
   color: #23262e;
+}
+.controllerconfiguratormapping_BindingDisplayName_rDprC
+  .controllerconfiguratormapping_FriendlyName_QJYtd.controllerconfiguratormapping_GroupedActivators_1mcLD {
+  flex-grow: 1;
+  line-height: 20px;
+  font-size: 16px;
+  padding: 10px 0px;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .controllerconfiguratormapping_BindingDisplayName_rDprC
   .controllerconfiguratormapping_Binding_jOz-f {
