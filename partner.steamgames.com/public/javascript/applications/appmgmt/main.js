@@ -18363,6 +18363,7 @@
         Np: () => y,
         Sc: () => d,
         XG: () => E,
+        jA: () => R,
         jr: () => g,
         m9: () => p,
         vX: () => c,
@@ -18691,6 +18692,39 @@
           default:
             return (0, o.Xx)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
         }
+      }
+      function R(e) {
+        const t = Math.floor(e / s._H.PerYear),
+          n = Math.floor(e / s._H.PerMonth),
+          i = Math.floor((e % s._H.PerMonth) / s._H.PerDay),
+          r = Math.floor((e % s._H.PerDay) / s._H.PerHour),
+          a = Math.floor((e % s._H.PerHour) / s._H.PerMinute);
+        return (
+          (e %= s._H.PerMinute),
+          t > 0
+            ? (0, o.Xx)("#TimeRemaining_MoreThanOneYear")
+            : n > 0
+            ? (0, o.Xx)("#TimeRemaining_MonthsDays", n, i)
+            : i > 0
+            ? (0, o.Xx)(
+                "#TimeRemaining_DaysHoursMinutes",
+                i,
+                r.toString().padStart(2, "0"),
+                a.toString().padStart(2, "0")
+              )
+            : r > 0
+            ? (0, o.Xx)(
+                "#TimeRemaining_HoursMinutesSeconds",
+                r.toString().padStart(2, "0"),
+                a.toString().padStart(2, "0"),
+                e.toString().padStart(2, "0")
+              )
+            : (0, o.Xx)(
+                "#TimeRemaining_MinutesSeconds",
+                a.toString().padStart(2, "0"),
+                e.toString().padStart(2, "0")
+              )
+        );
       }
     },
     30543: (e, t, n) => {
@@ -19553,6 +19587,7 @@
         StoreAdminRoot: () => "/admin/store/",
         AppLandingPage: (e = ":appid") => `/apps/landing/${e}`,
         AppCommunityItems: (e = ":appid") => `/apps/communityitems/${e}`,
+        SDRConnections: () => "/sdr/connections/:appid(\\d+)",
       };
       function o() {
         let e = document.createElement("a");
@@ -20067,6 +20102,7 @@
             n.e(5888),
             n.e(6117),
             n.e(9060),
+            n.e(3353),
             n.e(2136),
           ]).then(n.bind(n, 73922))
         ),
@@ -20083,6 +20119,7 @@
             n.e(5888),
             n.e(6117),
             n.e(9060),
+            n.e(3353),
             n.e(2136),
           ]).then(n.bind(n, 92264))
         ),
@@ -20099,6 +20136,7 @@
             n.e(5888),
             n.e(6117),
             n.e(9060),
+            n.e(3353),
             n.e(2136),
           ]).then(n.bind(n, 84820))
         ),
@@ -20115,6 +20153,7 @@
             n.e(5888),
             n.e(6117),
             n.e(9060),
+            n.e(3353),
             n.e(2136),
           ]).then(n.bind(n, 17398))
         ),
@@ -20132,15 +20171,18 @@
         ),
         Q = c.lazy(() =>
           Promise.all([n.e(614), n.e(9035)]).then(n.bind(n, 33883))
+        ),
+        J = c.lazy(() =>
+          Promise.all([n.e(3353), n.e(4935)]).then(n.bind(n, 40297))
         );
-      function J(e) {
+      function ee(e) {
         return c.createElement(
           v.fI,
           null,
           c.createElement(G.R, null, c.createElement(N.Y0, null, e.children))
         );
       }
-      function ee(e) {
+      function te(e) {
         let { children: t } = e,
           n = (0, H.H7)(s.Z.PricingTools());
         return c.createElement(
@@ -20149,15 +20191,15 @@
           t
         );
       }
-      function te(e) {
+      function ne(e) {
         return c.createElement(
           A.VK,
           { basename: (0, s.l)() },
           c.createElement(
-            J,
+            ee,
             null,
             c.createElement(
-              ee,
+              te,
               null,
               c.createElement(
                 c.Suspense,
@@ -20307,6 +20349,11 @@
                         },
                       }),
                   }),
+                  c.createElement(B.AW, {
+                    path: s.Z.SDRConnections(),
+                    render: (e) =>
+                      c.createElement(J, { appId: e.match.params.appid }),
+                  }),
                   c.createElement(B.AW, null, c.createElement(P.R, null))
                 )
               )
@@ -20314,12 +20361,12 @@
           )
         );
       }
-      var ne = n(73935),
-        ie = n(77520);
+      var ie = n(73935),
+        re = n(77520);
       n(9669);
-      var re = n(65902),
-        oe = n(75362);
-      function se(e) {
+      var oe = n(65902),
+        se = n(75362);
+      function ae(e) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           const [t, i, r] = yield Promise.all([
               n(11580)(`./shared_${e}.json`),
@@ -20347,23 +20394,23 @@
         return (0, i.mG)(this, void 0, void 0, function* () {
           document.getElementById("application_root")
             ? ((0, v.Ek)("application_config"),
-              (0, oe.Uh)().Init(
+              (0, se.Uh)().Init(
                 "Partner",
                 CLSTAMP,
-                new re.J(v.De.WEBAPI_BASE_URL).GetServiceTransport()
+                new oe.J(v.De.WEBAPI_BASE_URL).GetServiceTransport()
               ),
-              yield se(v.De.LANGUAGE),
-              ne.render(
-                c.createElement(te, {}),
+              yield ae(v.De.LANGUAGE),
+              ie.render(
+                c.createElement(ne, {}),
                 document.getElementById("application_root")
               ))
             : ((0, v.Ek)(),
-              (0, oe.Uh)().Init(
+              (0, se.Uh)().Init(
                 "Partner",
                 CLSTAMP,
-                new re.J(v.De.WEBAPI_BASE_URL).GetServiceTransport()
+                new oe.J(v.De.WEBAPI_BASE_URL).GetServiceTransport()
               ),
-              yield se(v.De.LANGUAGE),
+              yield ae(v.De.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".StoreAdminReactRoot");
                 for (let t = 0; t < e.length; t++) {
@@ -20379,14 +20426,14 @@
                         );
                       break;
                     default:
-                      (0, ie.X)(!1, `unknown component: "${r}"`);
+                      (0, re.X)(!1, `unknown component: "${r}"`);
                   }
                 }
               })());
         });
       }),
         (window.LocalizationManifestReady = function (e, t, n) {
-          (0, ie.X)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, re.X)("manifest" === t, `Expected manifest not "${t}"`),
             R.Yt.InitDirect(n);
         });
     },
