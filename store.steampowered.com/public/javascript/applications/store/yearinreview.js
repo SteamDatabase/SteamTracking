@@ -3803,16 +3803,18 @@
                                 : 0)
                             );
                           })
-                      ).forEach((e, t) => {
-                        const { appid: a } = e,
-                          n = e.total_playtime_percentagex100,
-                          m = e.relative_playtime_percentagex100;
-                        t < 6 && m > 100 && s.has(a)
-                          ? ((i[a] = n), (l[a] = m), (d += n), (u += m))
-                          : (o[a] = m);
-                        const _ = r.get(a).total_playtime_percentagex100;
-                        c[a] = (n / _) * 1e4;
-                      }),
+                      )
+                        .filter((e) => r.has(e.appid))
+                        .forEach((e, t) => {
+                          const { appid: a } = e,
+                            n = e.total_playtime_percentagex100,
+                            m = e.relative_playtime_percentagex100;
+                          t < 6 && m > 100 && s.has(a)
+                            ? ((i[a] = n), (l[a] = m), (d += n), (u += m))
+                            : (o[a] = m);
+                          const _ = r.get(a).total_playtime_percentagex100;
+                          c[a] = (n / _) * 1e4;
+                        }),
                         (i[ee] = m);
                       const _ = m - d;
                       i[te] = _;
