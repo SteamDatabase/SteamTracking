@@ -278,7 +278,8 @@
 	font-size:11px;
 }
 .lbentry, .lbentrySelf {
-	width:900px;
+	display: flex;
+	width: 100%;
 	margin-bottom:4px;
 }
 
@@ -301,7 +302,6 @@
 }
 
 .score, .scoreh {
-	float:left;
 	text-align:right;
 	width:250px;
 	padding-top:12px;
@@ -315,7 +315,7 @@
 }
 
 .player,.playerh {
-	float:left;
+	display: flex;
 	width:350px;
 	padding:4px 0px 4px 4px;
 	height:40px;
@@ -340,7 +340,7 @@
 }
 
 .relativeRank {
-	float:left;
+	display: flex;
 	margin-right:10px;
 }
 
@@ -373,7 +373,7 @@
 }
 
 #leaderHeader {
-	width:894px;
+	width: 100%;
 	font-size:22px;
 	margin:0px 0px 10px 0px;
 }

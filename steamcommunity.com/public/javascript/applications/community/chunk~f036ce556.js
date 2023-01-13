@@ -3787,9 +3787,14 @@
               "" === t.value &&
                 r &&
                 ((r.value = ""), r.focus(), e.preventDefault(), f());
-            } else if ("ArrowLeft" === e.key || "ArrowRight" === e.key) {
+            } else if (
+              "ArrowLeft" === e.key ||
+              "ArrowRight" === e.key ||
+              "ArrowUp" === e.key ||
+              "ArrowDown" === e.key
+            ) {
               const r =
-                "ArrowLeft" === e.key
+                "ArrowLeft" === e.key || "ArrowUp" === e.key
                   ? t.previousElementSibling
                   : t.nextElementSibling;
               r && (r.focus(), e.preventDefault());

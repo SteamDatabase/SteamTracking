@@ -6438,6 +6438,10 @@
                       ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
                       : "ArrowRight" == e
                       ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
+                      : "ArrowUp" == e
+                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
+                      : "ArrowDown" == e
+                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
                       : (SteamClient.Input.ControllerKeyboardSendText(e), !0);
                   })(e)
                 )

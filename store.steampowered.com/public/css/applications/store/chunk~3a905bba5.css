@@ -1292,6 +1292,7 @@
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
+    min-width: 320px;
     scroll-snap-align: start;
   }
   .salepreviewwidgets_OuterCapsuleContainer_Btar9
