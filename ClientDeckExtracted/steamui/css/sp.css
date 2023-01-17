@@ -19273,6 +19273,20 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   color: #ffffff;
   background-color: #146e4880;
 }
+.Spectrum .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowUp {
+  color: #ffffff;
+  background-color: #146e48;
+}
+.Spectrum
+  .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowUp.virtualkeyboard_Focused_21EoN {
+  color: #146e48;
+  background-color: #ffffff;
+}
+.Spectrum
+  .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowUp.virtualkeyboard_Touched_3UFQq {
+  color: #ffffff;
+  background-color: #146e4880;
+}
 .Spectrum .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_SwitchKeys_Food {
   color: #ffffff;
   background-color: #146e48;
@@ -19382,6 +19396,20 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .Spectrum
   .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowRight.virtualkeyboard_Touched_3UFQq {
+  color: #ffffff;
+  background-color: #1b6e1480;
+}
+.Spectrum .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowDown {
+  color: #ffffff;
+  background-color: #1b6e14;
+}
+.Spectrum
+  .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowDown.virtualkeyboard_Focused_21EoN {
+  color: #1b6e14;
+  background-color: #ffffff;
+}
+.Spectrum
+  .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowDown.virtualkeyboard_Touched_3UFQq {
   color: #ffffff;
   background-color: #1b6e1480;
 }
@@ -41219,6 +41247,20 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   color: #ffffff;
   background-color: #0099d1;
 }
+.TestChamber .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowUp {
+  color: #ffffff;
+  background-color: #f37d07;
+}
+.TestChamber
+  .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowUp.virtualkeyboard_Focused_21EoN {
+  color: #f37d07;
+  background-color: #ffffff;
+}
+.TestChamber
+  .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowUp.virtualkeyboard_Touched_3UFQq {
+  color: #ffffff;
+  background-color: #0099d1;
+}
 .TestChamber .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowRight {
   color: #ffffff;
   background-color: #f37d07;
@@ -41230,6 +41272,20 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .TestChamber
   .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowRight.virtualkeyboard_Touched_3UFQq {
+  color: #ffffff;
+  background-color: #0099d1;
+}
+.TestChamber .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowDown {
+  color: #ffffff;
+  background-color: #f37d07;
+}
+.TestChamber
+  .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowDown.virtualkeyboard_Focused_21EoN {
+  color: #f37d07;
+  background-color: #ffffff;
+}
+.TestChamber
+  .virtualkeyboard_KeyboardKey_2KhPX.KeyTheme_ArrowDown.virtualkeyboard_Touched_3UFQq {
   color: #ffffff;
   background-color: #0099d1;
 }
@@ -41837,6 +41893,12 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .virtualkeyboard_KeyboardMetaKey_1WbIj span {
   margin: 0px 8px 6px;
+}
+.virtualkeyboard_KeyboardMetaKey_1WbIj .virtualkeyboard_ShiftedLabel_3FZuk {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  margin: auto;
 }
 .virtualkeyboard_KeyboardMetaKey_1WbIj span {
   margin: 0px;

@@ -8369,7 +8369,7 @@
         y = n(12496),
         f = n(93337),
         w = (n(69144), n(5529)),
-        I = n(55877);
+        I = n(49687);
       function b(e) {
         const t = (0, s.Zb)();
         if (!t.bHasBattery || t.flLevel > 0.1) return null;
@@ -8445,7 +8445,7 @@
         const e = (0, i.NX)();
         return a.createElement(G, {
           count: null == e ? void 0 : e.async_game_updates,
-          icon: a.createElement(l.Oxy, null),
+          icon: a.createElement(l.ydL, null),
           strSteamURL: "AsyncGames",
           strLocToken: "#Notification_NewAsyncGamePinned_Body",
         });
@@ -8454,7 +8454,7 @@
         const e = (0, i.NX)();
         return a.createElement(G, {
           count: null == e ? void 0 : e.moderator_messages,
-          icon: a.createElement(l.svY, null),
+          icon: a.createElement(l.dqu, null),
           strSteamURL: "ModeratorMessages",
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
         });
@@ -8463,7 +8463,7 @@
         const e = (0, i.NX)();
         return a.createElement(G, {
           count: null == e ? void 0 : e.help_request_replies,
-          icon: a.createElement(l.svY, null),
+          icon: a.createElement(l.dqu, null),
           strSteamURL: "MyHelpRequests",
           strLocToken: "#Notification_NewHelpRequestRepliesPinned_Body",
         });
@@ -8488,16 +8488,18 @@
       }
       function O() {
         const e = (0, i.NX)(),
-          t = (0, I.n)(),
-          n = (0, f.BN)("steam://open/friends"),
-          r = 4 == u.nm.UIMode ? t : n;
+          t = (0, I.Q2)();
         if (!e.offline_messages) return null;
-        const s = a.createElement(l.enk, null),
-          c = (0, m.Xx)(
+        const n = a.createElement(l.enk, null),
+          r = (0, m.Xx)(
             "#Notification_NewOfflineMessagesPinned_Body",
             e.offline_messages
           );
-        return a.createElement(o.kg, { icon: s, body: c, onActivate: r });
+        return a.createElement(o.kg, {
+          icon: n,
+          body: r,
+          onActivate: () => t.Chat(),
+        });
       }
       function M() {
         const e = (0, i.NX)(),
@@ -8526,8 +8528,7 @@
       function G(e) {
         const { count: t, icon: n, strSteamURL: r, strLocToken: i } = e,
           s = (0, f.an)(r);
-        if (!t) return null;
-        const l = (0, m.kb)(i, t);
+        const l = (0, m.kb)(i, t || 100);
         return a.createElement(o.kg, { icon: n, body: l, onActivate: s });
       }
       function F() {
@@ -16075,7 +16076,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, G.Xx)("#Settings_System_SteamLocalBuild"),
-          l = parseInt(1673571414),
+          l = parseInt(1673899468),
           c = l && (0, xa._o)(l, e, o),
           m = i.sSteamBuildDate,
           p = "linux" == O.De.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -29716,15 +29717,15 @@
         H = n.n(U),
         X = n(55346),
         W = n(44462),
-        V = (n(46269), n(72368)),
-        z = (n(4796), n(55877)),
-        Z = n(83893),
-        j = n(19342),
-        Q = n(49687);
+        V = n(72368),
+        z = n(83893),
+        Z = n(19342),
+        j = n(49687),
+        Q = n(5529);
       function K(e) {
         var t;
-        const n = (0, z.S$)(),
-          a = (0, Z.Wy)();
+        const n = (0, Q.y)(),
+          a = (0, z.Wy)();
         let o = r.createElement(p.uH, {
           strTitle: (0, d.Xx)("#ContentManagement_LowDiskSpaceDialog_Title"),
           strDescription: (0, d.Xx)(
@@ -29733,7 +29734,7 @@
             (0, d.Xx)("#Settings_Page_Storage")
           ),
           strOKButtonText: (0, d.Xx)("#Installer_ManageStorage"),
-          onOK: n,
+          onOK: () => n.Settings("Storage"),
         });
         (0, c.AM)(o, null !== (t = a.ownerWindow) && void 0 !== t ? t : window);
       }
@@ -29754,7 +29755,7 @@
           return null;
         const a = (0, d.Xx)("#ContentManagement_Title");
         return r.createElement(
-          j.p,
+          Z.p,
           { popupWidth: 960, popupHeight: 720, strName: a, onDismiss: n },
           r.createElement(oe, { closeModal: n })
         );
@@ -30152,7 +30153,7 @@
         (0, a.gn)([o.ak], ne.prototype, "RefreshFolder", null),
         (0, a.gn)([o.ak], ne.prototype, "ShowContextMenu", null);
       const ae = r.forwardRef((e, t) => {
-        const n = (0, Q.Q2)();
+        const n = (0, j.Q2)();
         return r.createElement(
           re,
           Object.assign({}, e, { ref: t, navigator: n })
@@ -39305,61 +39306,59 @@
     69125: (e, t, n) => {
       "use strict";
       n.d(t, {
-        D_: () => Z,
+        D_: () => V,
         IS: () => a,
-        gd: () => j,
-        kg: () => Q,
-        nd: () => pe,
-        ur: () => q,
-        y: () => de,
+        gd: () => z,
+        kg: () => Z,
+        nd: () => ce,
+        ur: () => Y,
+        y: () => me,
       });
       var a,
         r = n(70655),
         o = n(67294),
-        i = n(16550),
-        s = n(27661),
-        l = n(13271),
-        c = n(29323),
-        m = (n(96794), n(32186)),
-        p = n(60471),
-        d = n(93337),
-        u = (n(45651), n(27194)),
-        h = n(28912),
-        g = n(69144),
-        _ = (n(86666), n(48330)),
-        v = n(79571),
-        C = n(14132),
-        E = n(46269),
-        S = n(46089),
-        A = n(45520),
-        y = n(8411),
-        f = n(24815),
-        w = n(8178),
-        I = n(93518),
-        b = n(32588),
-        D = n(95684),
-        N = n(97086),
-        k = n(77892),
-        x = n(78869),
-        T = n(79530),
-        R = n(59583),
-        B = n(33099),
-        L = n(54009),
-        P = n(5848),
-        O = n(40331),
-        M = n(55877),
-        G = n(42010),
-        F = n(12496),
-        U = n(5529),
-        H = n(49687),
-        X = n(93547),
-        W = n.n(X);
-      function V(e) {
+        i = n(27661),
+        s = n(13271),
+        l = n(29323),
+        c = (n(96794), n(32186)),
+        m = n(60471),
+        p = n(93337),
+        d = (n(45651), n(27194)),
+        u = n(28912),
+        h = n(69144),
+        g = (n(86666), n(48330)),
+        _ = n(79571),
+        v = n(14132),
+        C = n(46269),
+        E = n(46089),
+        S = n(45520),
+        A = n(8411),
+        y = n(24815),
+        f = n(8178),
+        w = n(93518),
+        I = n(32588),
+        b = n(95684),
+        D = n(97086),
+        N = n(77892),
+        k = n(78869),
+        x = n(79530),
+        T = n(59583),
+        R = n(33099),
+        B = n(54009),
+        L = n(5848),
+        P = n(40331),
+        O = n(42010),
+        M = n(12496),
+        G = n(5529),
+        F = n(49687),
+        U = n(93547),
+        H = n.n(U);
+      function X(e) {
         return o.useCallback(() => {
-          y.Pp.ShowFriendChatDialog(e);
+          A.Pp.ShowFriendChatDialog(e);
         }, [e]);
       }
-      function z(e, t) {
+      function W(e, t) {
         return o.useCallback(
           (n) => {
             e && e(n), t && t();
@@ -39367,118 +39366,118 @@
           [e, t]
         );
       }
-      function Z(e) {
+      function V(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]),
-          a = me[e.group.eType];
+          a = le[e.group.eType];
         return a
           ? o.createElement(a, Object.assign({ className: t }, n))
           : null;
       }
-      function j(e) {
+      function z(e) {
         let t = e.onActivate;
         t || (t = () => console.log("Missing activate function"));
         let n = !!e.timestamp;
         return o.createElement(
-          C.s,
+          v.s,
           {
-            className: W().StandardTemplate,
+            className: H().StandardTemplate,
             onActivate: t,
             onOptionsButton: e.onOptionsButton,
             onOptionsActionDescription: e.onOptionsButtonDesc,
           },
           o.createElement(
             "div",
-            { className: W().StandardLogoDimensions },
+            { className: H().StandardLogoDimensions },
             e.logo
           ),
           e.personaStatus &&
             o.createElement("div", {
-              className: (0, A.Z)(W().AvatarStatus, e.personaStatus),
+              className: (0, S.Z)(H().AvatarStatus, e.personaStatus),
             }),
           o.createElement(
             "div",
-            { className: W().Content },
+            { className: H().Content },
             o.createElement(
               "div",
-              { className: W().Header },
-              o.createElement("div", { className: W().Icon }, e.icon),
-              o.createElement("div", { className: W().Title }, e.title),
-              n && o.createElement(K, { timestamp: e.timestamp })
+              { className: H().Header },
+              o.createElement("div", { className: H().Icon }, e.icon),
+              o.createElement("div", { className: H().Title }, e.title),
+              n && o.createElement(j, { timestamp: e.timestamp })
             ),
-            o.createElement("div", { className: W().Body }, e.children)
+            o.createElement("div", { className: H().Body }, e.children)
           )
         );
       }
-      function Q(e) {
+      function Z(e) {
         let { onActivate: t, icon: n, body: a, className: r } = e,
-          i = z(t, () => {});
+          i = W(t, () => {});
         const s =
-          7 == E.nm.UIMode ? W().PinnedTemplateDesktop : W().PinnedTemplate;
+          7 == C.nm.UIMode ? H().PinnedTemplateDesktop : H().PinnedTemplate;
         return o.createElement(
-          C.s,
-          { className: (0, A.Z)(s, r), onActivate: i },
+          v.s,
+          { className: (0, S.Z)(s, r), onActivate: i },
           o.createElement(
             "div",
-            { className: W().Content },
+            { className: H().Content },
             o.createElement(
               "div",
-              { className: W().PinnedBody },
-              o.createElement("span", { className: W().Icon }, n),
+              { className: H().PinnedBody },
+              o.createElement("span", { className: H().Icon }, n),
               a
             )
           )
         );
       }
-      function K(e) {
-        const [t] = (0, I.bT)("b24HourClock");
-        (0, l.SZ)(() => {
-          (0, s.zO)(new Date().setHours(24, 0, 0, 0) - new Date().getTime());
+      function j(e) {
+        const [t] = (0, w.bT)("b24HourClock");
+        (0, s.SZ)(() => {
+          (0, i.zO)(new Date().setHours(24, 0, 0, 0) - new Date().getTime());
         });
         let n = new Date(),
           a = new Date(1e3 * e.timestamp),
-          r = (0, w.yK)(n, a)
-            ? (0, b.Sc)(e.timestamp, { bForce24HourClock: t })
-            : (0, u.m9)(e.timestamp, !1, !1, !1);
-        return o.createElement("div", { className: W().Timestamp }, r);
+          r = (0, f.yK)(n, a)
+            ? (0, I.Sc)(e.timestamp, { bForce24HourClock: t })
+            : (0, d.m9)(e.timestamp, !1, !1, !1);
+        return o.createElement("div", { className: H().Timestamp }, r);
       }
-      function Y(e) {
+      function Q(e) {
         let { steamID: t, children: n } = e,
           a = (0, r._T)(e, ["steamID", "children"]),
-          i = _.i8.GetFriendState(t),
+          i = g.i8.GetFriendState(t),
           s = o.createElement("img", {
-            className: W().StandardLogoDimensions,
+            className: H().StandardLogoDimensions,
             src: i.persona.avatar_url_medium,
           }),
-          l = (0, f.sB)(null == i ? void 0 : i.persona),
-          c = V(t);
+          l = (0, y.sB)(null == i ? void 0 : i.persona),
+          c = X(t);
         return o.createElement(
-          j,
+          z,
           Object.assign({ logo: s, personaStatus: l, onActivate: c }, a),
           n
         );
       }
-      function J(e) {
+      function K(e) {
         let { overview: t, children: n } = e,
           a = (0, r._T)(e, ["overview", "children"]),
-          i = o.createElement(ae, { overview: t, type: "standard" });
-        return o.createElement(j, Object.assign({ logo: i }, a), n);
+          i = o.createElement(te, { overview: t, type: "standard" });
+        return o.createElement(z, Object.assign({ logo: i }, a), n);
+      }
+      function Y(e) {
+        let t = (0, S.Z)(
+          H().StandardNotificationDescription,
+          e.multiline && H().Multiline
+        );
+        return o.createElement("div", { className: t }, e.children);
+      }
+      function J(e) {
+        let t = (0, S.Z)(
+          H().StandardNotificationSubText,
+          e.multiline && H().Multiline
+        );
+        return o.createElement("div", { className: t }, e.children);
       }
       function q(e) {
-        let t = (0, A.Z)(
-          W().StandardNotificationDescription,
-          e.multiline && W().Multiline
-        );
-        return o.createElement("div", { className: t }, e.children);
-      }
-      function $(e) {
-        let t = (0, A.Z)(
-          W().StandardNotificationSubText,
-          e.multiline && W().Multiline
-        );
-        return o.createElement("div", { className: t }, e.children);
-      }
-      function ee(e) {
         let {
             onActivate: t,
             onDismiss: n,
@@ -39489,29 +39488,29 @@
             personaStatus: l,
             className: c,
           } = e,
-          m = z(t, n);
+          m = W(t, n);
         return o.createElement(
-          C.s,
-          { className: (0, A.Z)(W().ShortTemplate, c), onActivate: m },
-          o.createElement("div", { className: W().ShortLogoDimensions }, a),
+          v.s,
+          { className: (0, S.Z)(H().ShortTemplate, c), onActivate: m },
+          o.createElement("div", { className: H().ShortLogoDimensions }, a),
           e.personaStatus &&
             o.createElement("div", {
-              className: (0, A.Z)(W().AvatarStatus, l),
+              className: (0, S.Z)(H().AvatarStatus, l),
             }),
           o.createElement(
             "div",
-            { className: W().Content },
+            { className: H().Content },
             o.createElement(
               "div",
-              { className: W().Header },
-              o.createElement("div", { className: W().Icon }, r),
-              o.createElement("div", { className: W().Title }, i)
+              { className: H().Header },
+              o.createElement("div", { className: H().Icon }, r),
+              o.createElement("div", { className: H().Title }, i)
             ),
-            o.createElement("div", { className: W().Body }, s)
+            o.createElement("div", { className: H().Body }, s)
           )
         );
       }
-      function te(e) {
+      function $(e) {
         let {
             steamID: t,
             icon: n,
@@ -39520,14 +39519,14 @@
             onActivate: i,
             className: s,
           } = e,
-          l = _.i8.GetFriendState(t),
+          l = g.i8.GetFriendState(t),
           c = o.createElement("img", {
-            className: W().ShortLogoDimensions,
+            className: H().ShortLogoDimensions,
             src: l.persona.avatar_url_medium,
           }),
           m = o.createElement("span", null, l.displayName),
-          p = (0, f.sB)(null == l ? void 0 : l.persona);
-        return o.createElement(ee, {
+          p = (0, y.sB)(null == l ? void 0 : l.persona);
+        return o.createElement(q, {
           className: s,
           onDismiss: r,
           logo: c,
@@ -39538,11 +39537,11 @@
           onActivate: i,
         });
       }
-      function ne(e) {
+      function ee(e) {
         let { overview: t, icon: n, title: a, onActivate: r, onDismiss: i } = e,
-          s = o.createElement(ae, { overview: t, type: "short" }),
-          l = ie(t);
-        return o.createElement(ee, {
+          s = o.createElement(te, { overview: t, type: "short" }),
+          l = re(t);
+        return o.createElement(q, {
           logo: s,
           icon: n,
           title: a,
@@ -39551,33 +39550,33 @@
           onDismiss: i,
         });
       }
-      function ae(e) {
-        let t = (e.overview && h.dk.GetIconURLForApp(e.overview)) || D.Z;
+      function te(e) {
+        let t = (e.overview && u.dk.GetIconURLForApp(e.overview)) || b.Z;
         return o.createElement(
           "div",
-          { className: W().AppLogo },
+          { className: H().AppLogo },
           o.createElement("img", {
-            className: W().AppLogoBackgroundImage,
+            className: H().AppLogoBackgroundImage,
             src: t,
           }),
           o.createElement("img", { src: t })
         );
       }
-      function re(e) {
+      function ne(e) {
         let t = { backgroundImage: `url(${e.url})` };
         return o.createElement("div", {
           style: t,
-          className: W().ScreenshotThumbnail,
+          className: H().ScreenshotThumbnail,
         });
       }
-      function oe(e) {
+      function ae(e) {
         return e.location == a.Toast
-          ? o.createElement(m.ui7, {
-              className: W().ShortNotificationSteamLogo,
+          ? o.createElement(c.ui7, {
+              className: H().ShortNotificationSteamLogo,
             })
-          : o.createElement(m.ui7, null);
+          : o.createElement(c.ui7, null);
       }
-      function ie(e) {
+      function re(e) {
         return e ? e.display_name : "Unknown";
       }
       !(function (e) {
@@ -39585,16 +39584,16 @@
           (e[(e.Toast = 1)] = "Toast"),
           (e[(e.Tray = 2)] = "Tray");
       })(a || (a = {}));
-      const se = (0, c.Pi)((e) => {
-          let t = (0, F.p)(),
-            n = ue(e.group),
-            r = new v.K(n.data.steamid()),
-            i = _.i8.GetFriendState(r),
-            s = o.createElement(m.yBp, null);
-          const l = o.useCallback(() => y.Pp.ShowInvitesDialog(t), [t]);
+      const oe = (0, l.Pi)((e) => {
+          let t = (0, M.p)(),
+            n = pe(e.group),
+            r = new _.K(n.data.steamid()),
+            i = g.i8.GetFriendState(r),
+            s = o.createElement(c.yBp, null);
+          const l = o.useCallback(() => A.Pp.ShowInvitesDialog(t), [t]);
           if (e.location == a.Toast) {
-            let t = (0, u.Xx)("#Notification_FriendInvite_Short");
-            return o.createElement(te, {
+            let t = (0, d.Xx)("#Notification_FriendInvite_Short");
+            return o.createElement($, {
               steamID: r,
               icon: s,
               body: t,
@@ -39603,120 +39602,120 @@
             });
           }
           return o.createElement(
-            Y,
+            Q,
             {
               steamID: r,
               icon: s,
-              title: (0, u.Xx)("#Notification_FriendInvite_Title"),
+              title: (0, d.Xx)("#Notification_FriendInvite_Title"),
               timestamp: n.rtCreated,
               onActivate: l,
             },
-            o.createElement(q, null, i.displayName),
+            o.createElement(Y, null, i.displayName),
             o.createElement(
-              $,
+              J,
               null,
-              (0, u.Xx)("#Notification_FriendInvite_Description")
+              (0, d.Xx)("#Notification_FriendInvite_Description")
             )
           );
         }),
-        le = (0, c.Pi)((e) =>
+        ie = (0, l.Pi)((e) =>
           o.createElement(
             "span",
-            { className: W().FriendName },
+            { className: H().FriendName },
             e.friend.displayName
           )
         );
-      function ce(e) {
-        let t = _.i8.GetFriendState(e.steamID);
+      function se(e) {
+        let t = g.i8.GetFriendState(e.steamID);
         return o.createElement(
           "div",
-          { className: (0, A.Z)(W().MessageBody) },
-          o.createElement("span", { className: W().Sender }, t.displayName),
-          o.createElement("span", { className: W().Dash }, " - "),
-          o.createElement("span", { className: W().Body }, e.message)
+          { className: (0, S.Z)(H().MessageBody) },
+          o.createElement("span", { className: H().Sender }, t.displayName),
+          o.createElement("span", { className: H().Dash }, " - "),
+          o.createElement("span", { className: H().Body }, e.message)
         );
       }
-      const me = {
+      const le = {
         1: function (e) {
           let t = e.group.notifications[0],
-            n = h.dk.GetAppOverviewByAppID(t.data.appid()),
-            r = o.createElement(m.UWx, null),
-            i = (0, u.Xx)("#Notification_DownloadComplete_Title"),
-            s = ie(n);
-          const l = (0, H.Q2)();
-          let c = () => l.App(t.data.appid());
+            n = u.dk.GetAppOverviewByAppID(t.data.appid()),
+            r = o.createElement(c.UWx, null),
+            i = (0, d.Xx)("#Notification_DownloadComplete_Title"),
+            s = re(n);
+          const l = (0, F.Q2)();
+          let m = () => l.App(t.data.appid());
           return e.location == a.Toast
-            ? o.createElement(ne, {
+            ? o.createElement(ee, {
                 overview: n,
                 icon: r,
                 title: i,
-                onActivate: c,
+                onActivate: m,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                J,
+                K,
                 {
                   overview: n,
                   icon: r,
                   title: i,
                   timestamp: t.rtCreated,
-                  onActivate: c,
+                  onActivate: m,
                 },
-                o.createElement(q, null, s),
+                o.createElement(Y, null, s),
                 o.createElement(
-                  $,
+                  J,
                   null,
-                  (0, u.Xx)("#Notification_DownloadComplete_Description")
+                  (0, d.Xx)("#Notification_DownloadComplete_Description")
                 )
               );
         },
-        2: se,
+        2: oe,
         3: function (e) {
-          let t = ue(e.group),
-            n = new v.K(t.data.steamid()),
-            r = _.i8.GetFriendState(n),
-            i = o.createElement(m.Qrh, { type: "generic" }),
+          let t = pe(e.group),
+            n = new _.K(t.data.steamid()),
+            r = g.i8.GetFriendState(n),
+            i = o.createElement(c.Qrh, { type: "generic" }),
             s = o.createElement(
               "span",
-              { className: W().FriendInGameAppColor },
+              { className: H().FriendInGameAppColor },
               t.data.game_name()
             ),
-            l = V(n),
-            c = (0, u.kQ)("#Notification_FriendInGame_Body_Short", s);
+            l = X(n),
+            m = (0, d.kQ)("#Notification_FriendInGame_Body_Short", s);
           return e.location == a.Toast
-            ? o.createElement(te, {
+            ? o.createElement($, {
                 steamID: n,
                 icon: i,
-                body: c,
+                body: m,
                 onActivate: l,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                Y,
+                Q,
                 {
                   steamID: n,
                   icon: i,
-                  title: (0, u.Xx)("#Notification_FriendStatus_Title"),
+                  title: (0, d.Xx)("#Notification_FriendStatus_Title"),
                   timestamp: t.rtCreated,
                   onActivate: l,
                 },
-                o.createElement(q, null, r.displayName),
+                o.createElement(Y, null, r.displayName),
                 o.createElement(
                   "div",
-                  { className: W().StandardNotificationSubText },
-                  c
+                  { className: H().StandardNotificationSubText },
+                  m
                 )
               );
         },
         4: function (e) {
-          let t = ue(e.group),
-            n = new v.K(t.data.steamid()),
-            r = _.i8.GetFriendState(n),
-            i = o.createElement(m._Oo, null),
-            s = V(n);
+          let t = pe(e.group),
+            n = new _.K(t.data.steamid()),
+            r = g.i8.GetFriendState(n),
+            i = o.createElement(c._Oo, null),
+            s = X(n);
           if (e.location == a.Toast) {
-            let t = (0, u.Xx)("#Notification_FriendOnline_Body_Short");
-            return o.createElement(te, {
+            let t = (0, d.Xx)("#Notification_FriendOnline_Body_Short");
+            return o.createElement($, {
               steamID: n,
               icon: i,
               body: t,
@@ -39725,24 +39724,24 @@
             });
           }
           return o.createElement(
-            Y,
+            Q,
             {
               steamID: n,
               icon: i,
-              title: (0, u.Xx)("#Notification_FriendStatus_Title"),
+              title: (0, d.Xx)("#Notification_FriendStatus_Title"),
               timestamp: t.rtCreated,
               onActivate: s,
             },
-            o.createElement(q, null, r.displayName),
+            o.createElement(Y, null, r.displayName),
             o.createElement(
-              $,
+              J,
               null,
-              (0, u.Xx)("#Notification_FriendOnline_Body_Short")
+              (0, d.Xx)("#Notification_FriendOnline_Body_Short")
             )
           );
         },
         5: function (e) {
-          let t = ue(e.group),
+          let t = pe(e.group),
             n = t.data.appid(),
             r = {
               strID: t.data.achievement_id(),
@@ -39757,18 +39756,18 @@
               flCurrentProgress: t.data.current_progress(),
               flMaxProgress: t.data.max_progress(),
             },
-            i = (0, d.an)("SteamIDAchievementsPage", n);
+            i = (0, p.an)("SteamIDAchievementsPage", n);
           if (e.location == a.Toast) {
-            let t = o.createElement(S.KR, {
-                className: W().ShortLogoDimensions,
+            let t = o.createElement(E.KR, {
+                className: H().ShortLogoDimensions,
                 achievement: r,
                 hidden: !1,
                 canGlow: !1,
               }),
-              n = o.createElement(m.Gue, null),
+              n = o.createElement(c.Gue, null),
               a = r.strName,
               s = r.strDescription;
-            return o.createElement(ee, {
+            return o.createElement(q, {
               logo: t,
               icon: n,
               title: a,
@@ -39778,14 +39777,14 @@
             });
           }
           return o.createElement(
-            C.s,
-            { className: W().StandardTemplate, onActivate: i },
+            v.s,
+            { className: H().StandardTemplate, onActivate: i },
             o.createElement(
               "div",
-              { className: W().AchievementBody },
-              o.createElement(S.SJ, {
+              { className: H().AchievementBody },
+              o.createElement(E.SJ, {
                 key: r.strID,
-                className: W().SummaryAchievement,
+                className: H().SummaryAchievement,
                 appid: n,
                 achievement: r,
                 featured: !0,
@@ -39795,89 +39794,90 @@
           );
         },
         6: function (e) {
-          let t = ue(e.group).data.pct_remaining(),
+          let t = pe(e.group).data.pct_remaining(),
             n = Math.round(100 * t),
             a = n < 4,
-            r = z(void 0, e.onDismiss),
-            i = (0, A.Z)(W().LowBattery, a && W().ReallyLow);
+            r = W(void 0, e.onDismiss),
+            i = (0, S.Z)(H().LowBattery, a && H().ReallyLow);
           return o.createElement(
-            C.s,
+            v.s,
             { className: i, onActivate: r },
-            o.createElement(m.ks1, { className: W().LowBatteryGauge }),
+            o.createElement(c.ks1, { className: H().LowBatteryGauge }),
             o.createElement(
               "div",
-              { className: W().Text },
-              (0, u.Xx)("#QuickAccess_Tab_Notifications_BatteryLow")
+              { className: H().Text },
+              (0, d.Xx)("#QuickAccess_Tab_Notifications_BatteryLow")
             ),
-            o.createElement("div", { className: W().Remaining }, `${n}%`)
+            o.createElement("div", { className: H().Remaining }, `${n}%`)
           );
         },
         7: function (e) {
-          let t = ue(e.group),
+          let t = pe(e.group),
             n = 2 == t.data.type(),
             r = n
-              ? (0, u.Xx)("#Notification_SystemUpdateRestart_Title")
-              : (0, u.Xx)("#Notification_SystemUpdateAvailable_Title"),
-            s = o.createElement(oe, { location: e.location }),
-            l = o.createElement(m.ccg, { className: W().SystemUpdateIcon }),
-            c = ((0, i.k6)(), (0, M.Gi)("System"));
+              ? (0, d.Xx)("#Notification_SystemUpdateRestart_Title")
+              : (0, d.Xx)("#Notification_SystemUpdateAvailable_Title"),
+            i = o.createElement(ae, { location: e.location }),
+            s = o.createElement(c.ccg, { className: H().SystemUpdateIcon }),
+            l = (0, G.y)(),
+            m = () => l.Settings("System");
           if (e.location == a.Toast) {
             let t = n
-              ? (0, u.Xx)("#Notification_SystemUpdateRestart_Body_Short")
-              : (0, u.Xx)("#Notification_SystemUpdateAvailable_Body_Short");
-            return o.createElement(ee, {
-              logo: s,
-              icon: l,
+              ? (0, d.Xx)("#Notification_SystemUpdateRestart_Body_Short")
+              : (0, d.Xx)("#Notification_SystemUpdateAvailable_Body_Short");
+            return o.createElement(q, {
+              logo: i,
+              icon: s,
               title: r,
               body: t,
-              onActivate: c,
+              onActivate: m,
               onDismiss: e.onDismiss,
             });
           }
           let p = n
-            ? (0, u.Xx)("#Notification_SystemUpdateRestart_Body")
-            : (0, u.Xx)("#Notification_SystemUpdateAvailable_Body");
+            ? (0, d.Xx)("#Notification_SystemUpdateRestart_Body")
+            : (0, d.Xx)("#Notification_SystemUpdateAvailable_Body");
           return o.createElement(
-            j,
+            z,
             {
-              logo: s,
-              icon: l,
+              logo: i,
+              icon: s,
               title: r,
               timestamp: t.rtCreated,
-              onActivate: c,
+              onActivate: m,
             },
-            o.createElement(q, { multiline: !0 }, p)
+            o.createElement(Y, { multiline: !0 }, p)
           );
         },
         8: function (e) {
-          let t = ue(e.group),
+          let t = pe(e.group),
             n = t.data.steamid(),
             r = e.group.notifications.length,
-            i = o.useMemo(() => new v.K(n), [n]),
+            i = o.useMemo(() => new _.K(n), [n]),
             s = o.useCallback(() => {
-              y.Pp.ShowFriendChatDialog(i);
+              A.Pp.ShowFriendChatDialog(i);
             }, [i]),
-            l = o.createElement(m.enk, null),
-            c = t.data.response_steamurl();
+            l = o.createElement(c.enk, null),
+            m = t.data.response_steamurl();
           const p =
-              c && c.length > 0
-                ? () => SteamClient.WebChat.OpenURLInClient(c, 0, !1)
+              m && m.length > 0
+                ? () => SteamClient.WebChat.OpenURLInClient(m, 0, !1)
                 : void 0,
-            d =
-              c && c.length > 0
-                ? (0, u.Xx)("#Overlay_FriendInviteToGame_Accept")
+            u =
+              m && m.length > 0
+                ? (0, d.Xx)("#Overlay_FriendInviteToGame_Accept")
                 : void 0;
           if (e.location == a.Toast)
-            return o.createElement(te, {
+            return o.createElement($, {
               steamID: i,
               icon: l,
               body: t.data.body(),
               onActivate: s,
               onDismiss: e.onDismiss,
             });
-          let h = _.i8.GetFriendState(i);
+          let h = g.i8.GetFriendState(i);
           return o.createElement(
-            Y,
+            Q,
             {
               steamID: i,
               icon: l,
@@ -39886,380 +39886,380 @@
               onActivate: s,
               count: r,
               onOptionsButton: p,
-              onOptionsButtonDesc: d,
+              onOptionsButtonDesc: u,
             },
-            o.createElement(q, { multiline: !0 }, t.data.body())
+            o.createElement(Y, { multiline: !0 }, t.data.body())
           );
         },
         9: function (e) {
-          let t = ue(e.group),
+          let t = pe(e.group),
             n = e.group.notifications.length,
-            r = new v.K(t.data.steamid_sender()),
+            r = new _.K(t.data.steamid_sender()),
             i = t.data.chat_group_id(),
             s = t.data.chat_id(),
             l = t.data.body(),
-            c = o.createElement(m.enk, null),
+            m = o.createElement(c.enk, null),
             p = o.useCallback(() => {
-              y.Pp.ShowChatRoomGroupDialog(i, s);
+              A.Pp.ShowChatRoomGroupDialog(i, s);
             }, [i, s]);
           return e.location == a.Toast
-            ? o.createElement(te, {
+            ? o.createElement($, {
                 steamID: r,
-                icon: c,
+                icon: m,
                 body: l,
                 onActivate: p,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                Y,
+                Q,
                 {
                   steamID: r,
-                  icon: c,
-                  title: (0, u.Xx)("#Notification_GroupMessage_Title"),
+                  icon: m,
+                  title: (0, d.Xx)("#Notification_GroupMessage_Title"),
                   timestamp: t.rtCreated,
                   onActivate: p,
                   count: n,
                 },
-                o.createElement(ce, { steamID: r, message: t.data.body() })
+                o.createElement(se, { steamID: r, message: t.data.body() })
               );
         },
         10: function (e) {
-          let t = (0, F.p)(),
-            n = ue(e.group).data.new_invite_count(),
-            r = (0, u.Xx)(
+          let t = (0, M.p)(),
+            n = pe(e.group).data.new_invite_count(),
+            r = (0, d.Xx)(
               "#Notification_FriendInviteRollup_Body",
               n.toLocaleString()
             ),
-            i = o.createElement(m.yBp, null),
-            s = o.createElement(oe, { location: e.location }),
-            l = (0, u.Xx)("#Notification_FriendInviteRollup_Title");
-          const c = o.useCallback(() => y.Pp.ShowInvitesDialog(t), [t]);
+            i = o.createElement(c.yBp, null),
+            s = o.createElement(ae, { location: e.location }),
+            l = (0, d.Xx)("#Notification_FriendInviteRollup_Title");
+          const m = o.useCallback(() => A.Pp.ShowInvitesDialog(t), [t]);
           return e.location == a.Toast
-            ? o.createElement(ee, {
+            ? o.createElement(q, {
                 logo: s,
                 icon: i,
                 title: l,
                 body: r,
-                onActivate: c,
+                onActivate: m,
                 onDismiss: e.onDismiss,
               })
             : null;
         },
         11: function (e) {
-          const t = ue(e.group),
-            n = _.i8.GetFriendState(t.data.accountid_owner()),
-            r = o.createElement(m.qt5, null),
-            i = o.createElement(le, { friend: n }),
-            s = (0, u.Xx)("#Notification_FamilySharing_Title"),
-            l = (0, u.kQ)(
+          const t = pe(e.group),
+            n = g.i8.GetFriendState(t.data.accountid_owner()),
+            r = o.createElement(c.qt5, null),
+            i = o.createElement(ie, { friend: n }),
+            s = (0, d.Xx)("#Notification_FamilySharing_Title"),
+            l = (0, d.kQ)(
               t.data.authorized()
                 ? "#Notification_FamilySharingAuthorization_Authorized"
                 : "#Notification_FamilySharingAuthorization_Deuthorized",
               i
             ),
-            c = o.createElement(oe, { location: e.location });
+            m = o.createElement(ae, { location: e.location });
           return e.location == a.Toast
-            ? o.createElement(ee, {
-                logo: c,
+            ? o.createElement(q, {
+                logo: m,
                 icon: r,
                 title: s,
                 body: l,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
-                { logo: c, icon: r, title: s, timestamp: t.rtCreated },
-                o.createElement(q, { multiline: !0 }, l)
+                z,
+                { logo: m, icon: r, title: s, timestamp: t.rtCreated },
+                o.createElement(Y, { multiline: !0 }, l)
               );
         },
         12: function (e) {
-          const t = ue(e.group),
-            n = _.i8.GetFriendState(t.data.accountid_owner()),
-            r = o.createElement(m.qt5, null),
-            i = o.createElement(le, { friend: n }),
+          const t = pe(e.group),
+            n = g.i8.GetFriendState(t.data.accountid_owner()),
+            r = o.createElement(c.qt5, null),
+            i = o.createElement(ie, { friend: n }),
             s = Math.floor(t.data.seconds_remaining() / 60),
-            l = (0, u.Xx)("#Notification_FamilySharing_Title"),
-            c = o.createElement(oe, { location: e.location }),
-            p = (0, u.kQ)(
+            l = (0, d.Xx)("#Notification_FamilySharing_Title"),
+            m = o.createElement(ae, { location: e.location }),
+            p = (0, d.kQ)(
               "#Notification_FamilySharingAuthorization_StopPlaying",
               i,
               s
             );
           return e.location == a.Toast
-            ? o.createElement(ee, {
-                logo: c,
+            ? o.createElement(q, {
+                logo: m,
                 icon: r,
                 title: l,
                 body: p,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
-                { logo: c, icon: r, title: l, timestamp: t.rtCreated },
-                o.createElement(q, { multiline: !0 }, p)
+                z,
+                { logo: m, icon: r, title: l, timestamp: t.rtCreated },
+                o.createElement(Y, { multiline: !0 }, p)
               );
         },
         13: function (e) {
-          const t = ue(e.group),
-            n = _.i8.GetFriendState(t.data.accountid_owner()),
-            r = o.createElement(m.qt5, null),
-            i = o.createElement(le, { friend: n }),
-            s = (0, u.Xx)("#Notification_FamilySharing_Title"),
-            l = o.createElement(oe, { location: e.location }),
-            c = (0, u.kQ)(
+          const t = pe(e.group),
+            n = g.i8.GetFriendState(t.data.accountid_owner()),
+            r = o.createElement(c.qt5, null),
+            i = o.createElement(ie, { friend: n }),
+            s = (0, d.Xx)("#Notification_FamilySharing_Title"),
+            l = o.createElement(ae, { location: e.location }),
+            m = (0, d.kQ)(
               "#Notification_FamilySharingAuthorization_LibraryAvailable",
               i
             );
           return e.location == a.Toast
-            ? o.createElement(ee, {
+            ? o.createElement(q, {
                 logo: l,
                 icon: r,
                 title: s,
-                body: c,
+                body: m,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
+                z,
                 { logo: l, icon: r, title: s, timestamp: t.rtCreated },
-                o.createElement(q, { multiline: !0 }, c)
+                o.createElement(Y, { multiline: !0 }, m)
               );
         },
         14: function (e) {
-          let t = ue(e.group),
+          let t = pe(e.group),
             n = t.data.screenshot_handle();
-          const r = (0, U.y)(),
+          const r = (0, G.y)(),
             i = (0, o.useCallback)(
               () => r.Media({ state: { strScreenshotHandle: n } }),
               [r, n]
             ),
-            s = (0, p.g_)(n);
+            s = (0, m.g_)(n);
           if (!s.isSuccess || !s.data) return null;
-          let l = h.dk.GetAppOverviewByAppID(s.data.nAppID),
-            c = o.createElement(re, { url: s.data.strUrl }),
-            d = o.createElement(m.w_C, null),
-            g = (0, u.Xx)(t.data.description()),
+          let l = u.dk.GetAppOverviewByAppID(s.data.nAppID),
+            p = o.createElement(ne, { url: s.data.strUrl }),
+            h = o.createElement(c.w_C, null),
+            g = (0, d.Xx)(t.data.description()),
             _ = l ? l.display_name : "";
           return e.location == a.Toast
-            ? o.createElement(ee, {
-                logo: c,
-                icon: d,
+            ? o.createElement(q, {
+                logo: p,
+                icon: h,
                 title: g,
                 body: _,
                 onActivate: i,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
+                z,
                 {
-                  logo: c,
-                  icon: d,
+                  logo: p,
+                  icon: h,
                   title: g,
                   timestamp: t.rtCreated,
                   onActivate: i,
                 },
-                o.createElement(q, null, _)
+                o.createElement(Y, null, _)
               );
         },
         15: function (e) {
           let t = e.group.notifications[0],
-            n = h.dk.GetAppOverviewByAppID(t.data.appid()),
-            r = o.createElement(m.SWB, { error: !0 }),
-            i = (0, u.Xx)("#Notification_CloudSyncFailure_Title"),
-            s = ie(n);
-          const l = (0, H.Q2)();
-          let c = () => l.App(t.data.appid());
+            n = u.dk.GetAppOverviewByAppID(t.data.appid()),
+            r = o.createElement(c.SWB, { error: !0 }),
+            i = (0, d.Xx)("#Notification_CloudSyncFailure_Title"),
+            s = re(n);
+          const l = (0, F.Q2)();
+          let m = () => l.App(t.data.appid());
           return e.location == a.Toast
-            ? o.createElement(ne, {
+            ? o.createElement(ee, {
                 overview: n,
                 icon: r,
                 title: i,
-                onActivate: c,
+                onActivate: m,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                J,
+                K,
                 {
                   overview: n,
                   icon: r,
                   title: i,
                   timestamp: t.rtCreated,
-                  onActivate: c,
+                  onActivate: m,
                 },
-                o.createElement(q, null, s)
+                o.createElement(Y, null, s)
               );
         },
         16: function (e) {
           let t = e.group.notifications[0],
-            n = h.dk.GetAppOverviewByAppID(t.data.appid()),
-            r = o.createElement(m.SWB, { error: !0 }),
-            i = (0, u.Xx)("#Notification_CloudSyncConflict_Title"),
-            s = ie(n);
-          const l = (0, H.Q2)();
-          let c = () => l.App(t.data.appid());
+            n = u.dk.GetAppOverviewByAppID(t.data.appid()),
+            r = o.createElement(c.SWB, { error: !0 }),
+            i = (0, d.Xx)("#Notification_CloudSyncConflict_Title"),
+            s = re(n);
+          const l = (0, F.Q2)();
+          let m = () => l.App(t.data.appid());
           return e.location == a.Toast
-            ? o.createElement(ne, {
+            ? o.createElement(ee, {
                 overview: n,
                 icon: r,
                 title: i,
-                onActivate: c,
+                onActivate: m,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                J,
+                K,
                 {
                   overview: n,
                   icon: r,
                   title: i,
                   timestamp: t.rtCreated,
-                  onActivate: c,
+                  onActivate: m,
                 },
-                o.createElement(q, null, s)
+                o.createElement(Y, null, s)
               );
         },
         17: function (e) {
-          let t = ue(e.group),
-            n = new v.K(t.data.steamid()),
-            r = _.i8.GetFriendState(n),
-            i = o.createElement(m.NBO, null),
-            s = (0, G.ik)(G.hG.VoiceChat);
+          let t = pe(e.group),
+            n = new _.K(t.data.steamid()),
+            r = g.i8.GetFriendState(n),
+            i = o.createElement(c.NBO, null),
+            s = (0, O.ik)(O.hG.VoiceChat);
           if (e.location == a.Toast) {
-            let t = (0, u.Xx)("#Notification_IncomingVoiceChat");
-            return o.createElement(te, {
+            let t = (0, d.Xx)("#Notification_IncomingVoiceChat");
+            return o.createElement($, {
               steamID: n,
               icon: i,
               body: t,
               onActivate: s,
               onDismiss: e.onDismiss,
-              className: W().IncomingCallToast,
+              className: H().IncomingCallToast,
             });
           }
           return o.createElement(
-            Y,
+            Q,
             {
               steamID: n,
               icon: i,
-              title: (0, u.Xx)("#Notification_IncomingVoiceChat"),
+              title: (0, d.Xx)("#Notification_IncomingVoiceChat"),
               timestamp: t.rtCreated,
               onActivate: s,
             },
-            o.createElement(q, null, r.displayName)
+            o.createElement(Y, null, r.displayName)
           );
         },
         18: function (e) {
-          const t = (0, l.SZ)(() => N.tH.Get().GetControllers()).find(
+          const t = (0, s.SZ)(() => D.tH.Get().GetControllers()).find(
               (e) => 4 == e.eControllerType
             ),
-            n = (0, k.he)(null == t ? void 0 : t.strSerialNumber),
-            r = (0, U.y)(),
-            i = z(
+            n = (0, N.he)(null == t ? void 0 : t.strSerialNumber),
+            r = (0, G.y)(),
+            i = W(
               (0, o.useCallback)(() => r.Account(), [r]),
               e.onDismiss
             );
           if (!t || n) return null;
-          const s = (0, u.Xx)("#Notification_SteamDeckRewards_Title"),
-            c = (0, u.Xx)("#Notification_SteamDeckRewards_Body"),
-            p = o.createElement(m.vrg, null),
-            d = o.createElement(m.daM, null);
+          const l = (0, d.Xx)("#Notification_SteamDeckRewards_Title"),
+            m = (0, d.Xx)("#Notification_SteamDeckRewards_Body"),
+            p = o.createElement(c.vrg, null),
+            u = o.createElement(c.daM, null);
           return e.location == a.Toast
-            ? o.createElement(ee, {
+            ? o.createElement(q, {
                 logo: p,
-                icon: d,
-                title: s,
-                body: c,
+                icon: u,
+                title: l,
+                body: m,
                 onActivate: i,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
-                { logo: p, icon: d, title: s, onActivate: i },
-                o.createElement(q, { multiline: !0 }, c)
+                z,
+                { logo: p, icon: u, title: l, onActivate: i },
+                o.createElement(Y, { multiline: !0 }, m)
               );
         },
         19: function (e) {
-          const t = ue(e.group),
+          const t = pe(e.group),
             n = t.data.sender_name(),
-            r = (0, u.Xx)("#Notification_GiftReceived_Body"),
-            i = (0, u.Xx)("#Notification_GiftReceived_Description", n),
-            s = (0, u.Xx)("#Notification_GiftReceived_Title"),
-            l = o.createElement(m.ncs, null),
-            c = o.createElement(oe, { location: e.location }),
-            p = g.de.ResolveURL("PendingGift"),
-            h = (0, d.BN)(p);
+            r = (0, d.Xx)("#Notification_GiftReceived_Body"),
+            i = (0, d.Xx)("#Notification_GiftReceived_Description", n),
+            s = (0, d.Xx)("#Notification_GiftReceived_Title"),
+            l = o.createElement(c.ncs, null),
+            m = o.createElement(ae, { location: e.location }),
+            u = h.de.ResolveURL("PendingGift"),
+            g = (0, p.BN)(u);
           return e.location == a.Toast
-            ? o.createElement(ee, {
-                logo: c,
+            ? o.createElement(q, {
+                logo: m,
                 icon: l,
                 title: s,
                 body: r,
-                onActivate: h,
+                onActivate: g,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
+                z,
                 {
-                  logo: c,
+                  logo: m,
                   icon: l,
                   title: s,
-                  onActivate: h,
+                  onActivate: g,
                   timestamp: t.rtCreated,
                 },
-                o.createElement(q, null, r),
-                o.createElement($, null, i)
+                o.createElement(Y, null, r),
+                o.createElement(J, null, i)
               );
         },
         20: function (e) {
-          const t = ue(e.group),
+          const t = pe(e.group),
             n = t.data.new_item_count(),
             r =
               n > 1
-                ? (0, u.Xx)("#Notification_ItemAnnouncement_Body_Plural", n)
-                : (0, u.Xx)("#Notification_ItemAnnouncement_Body"),
-            i = (0, u.Xx)("#Notification_ItemAnnouncement_Title"),
-            s = o.createElement(m.F8F, null),
-            c = o.createElement(oe, { location: e.location }),
-            p = (0, l.SZ)(() => (0, R.gV)().GetCurrentUser()),
-            h = new v.K(p.strSteamID),
+                ? (0, d.Xx)("#Notification_ItemAnnouncement_Body_Plural", n)
+                : (0, d.Xx)("#Notification_ItemAnnouncement_Body"),
+            i = (0, d.Xx)("#Notification_ItemAnnouncement_Title"),
+            l = o.createElement(c.F8F, null),
+            m = o.createElement(ae, { location: e.location }),
+            u = (0, s.SZ)(() => (0, T.gV)().GetCurrentUser()),
+            h = new _.K(u.strSteamID),
             g = `${
-              x.De.COMMUNITY_BASE_URL
+              k.De.COMMUNITY_BASE_URL
             }profiles/${h.ConvertTo64BitString()}/inventory`,
-            _ = z((0, d.BN)(g), e.onDismiss);
+            v = W((0, p.BN)(g), e.onDismiss);
           return e.location == a.Toast
-            ? o.createElement(ee, {
-                logo: c,
-                icon: s,
+            ? o.createElement(q, {
+                logo: m,
+                icon: l,
                 title: i,
                 body: r,
-                onActivate: _,
+                onActivate: v,
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
+                z,
                 {
-                  logo: c,
-                  icon: s,
+                  logo: m,
+                  icon: l,
                   title: i,
-                  onActivate: _,
+                  onActivate: v,
                   timestamp: t.rtCreated,
                 },
-                o.createElement(q, null, r)
+                o.createElement(Y, null, r)
               );
         },
         21: function (e) {
-          let t = ue(e.group),
-            n = (0, u.Xx)("#Notification_HardwareSurveyPending_Title"),
-            r = (0, u.Xx)("#Notification_HardwareSurveyPending_Body"),
-            i = o.createElement(oe, { location: e.location });
-          const s = o.createElement(m.daM, null),
-            l = z(
+          let t = pe(e.group),
+            n = (0, d.Xx)("#Notification_HardwareSurveyPending_Title"),
+            r = (0, d.Xx)("#Notification_HardwareSurveyPending_Body"),
+            i = o.createElement(ae, { location: e.location });
+          const s = o.createElement(c.daM, null),
+            l = W(
               o.useCallback((e) => {
-                (0, R.gV)().BHardwareSurveyPending()
-                  ? (0, T.ZS)((0, O.RA)(e))
-                  : (0, T.iG)((0, O.RA)(e));
+                (0, T.gV)().BHardwareSurveyPending()
+                  ? (0, x.ZS)((0, P.RA)(e))
+                  : (0, x.iG)((0, P.RA)(e));
               }, []),
               e.onDismiss
             );
           return e.location == a.Toast
-            ? o.createElement(ee, {
+            ? o.createElement(q, {
                 logo: i,
                 icon: s,
                 title: n,
@@ -40268,7 +40268,7 @@
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
+                z,
                 {
                   logo: i,
                   icon: s,
@@ -40276,33 +40276,33 @@
                   timestamp: t.rtCreated,
                   onActivate: l,
                 },
-                o.createElement(q, { multiline: !0 }, r)
+                o.createElement(Y, { multiline: !0 }, r)
               );
         },
         22: function (e) {
-          let t = (0, l.SZ)(() => B.J.BSteamDeckHasLowDiskSpace()),
-            n = z(() => (0, L.SM)(0), e.onDismiss);
+          let t = (0, s.SZ)(() => R.J.BSteamDeckHasLowDiskSpace()),
+            n = W(() => (0, B.SM)(0), e.onDismiss);
           return t
             ? o.createElement(
-                C.s,
-                { className: W().LowDiskSpace, onActivate: n },
-                o.createElement(m.OOJ, { className: W().HardDrive }),
+                v.s,
+                { className: H().LowDiskSpace, onActivate: n },
+                o.createElement(c.OOJ, { className: H().HardDrive }),
                 o.createElement(
                   "div",
-                  { className: W().Text },
-                  (0, u.Xx)("#QuickAccess_Tab_Notifications_LowDiskSpace")
+                  { className: H().Text },
+                  (0, d.Xx)("#QuickAccess_Tab_Notifications_LowDiskSpace")
                 )
               )
             : null;
         },
         23: function (e) {
-          const t = ue(e.group).data.notification_type();
-          let n = z(void 0, e.onDismiss);
-          const a = (0, A.Z)(
-              W().BatteryTemperature,
-              "normal" != t && W().Warning
+          const t = pe(e.group).data.notification_type();
+          let n = W(void 0, e.onDismiss);
+          const a = (0, S.Z)(
+              H().BatteryTemperature,
+              "normal" != t && H().Warning
             ),
-            r = o.createElement(m.Zpg, { className: W().Icon });
+            r = o.createElement(c.Zpg, { className: H().Icon });
           let i = "#Notification_BatteryTemperature_Normal",
             s = "#Notification_BatteryTemperature_Normal_Desc";
           switch (t) {
@@ -40319,35 +40319,35 @@
                 (s = "#Notification_BatteryTemperature_Normal_Desc");
           }
           return o.createElement(
-            C.s,
+            v.s,
             { className: a, onActivate: n },
             r,
             o.createElement(
               "div",
-              { className: W().Content },
-              o.createElement("div", { className: W().Title }, (0, u.Xx)(i)),
+              { className: H().Content },
+              o.createElement("div", { className: H().Title }, (0, d.Xx)(i)),
               o.createElement(
                 "div",
-                { className: W().Description },
-                (0, u.Xx)(s)
+                { className: H().Description },
+                (0, d.Xx)(s)
               )
             )
           );
         },
         24: function (e) {
-          const t = ue(e.group),
-            n = (0, u.Xx)("#Notification_DockUnsupportedFirmware_Title"),
-            r = (0, u.Xx)("#Notification_DockUnsupportedFirmware_Body"),
-            i = o.createElement(m.rY6, null),
-            s = o.createElement(m.daM, null),
-            l = z(
+          const t = pe(e.group),
+            n = (0, d.Xx)("#Notification_DockUnsupportedFirmware_Title"),
+            r = (0, d.Xx)("#Notification_DockUnsupportedFirmware_Body"),
+            i = o.createElement(c.rY6, null),
+            s = o.createElement(c.daM, null),
+            l = W(
               o.useCallback(() => {
-                (0, P.t)();
+                (0, L.t)();
               }, []),
               e.onDismiss
             );
           return e.location == a.Toast
-            ? o.createElement(ee, {
+            ? o.createElement(q, {
                 logo: i,
                 icon: s,
                 title: n,
@@ -40356,7 +40356,7 @@
                 onDismiss: e.onDismiss,
               })
             : o.createElement(
-                j,
+                z,
                 {
                   logo: i,
                   icon: s,
@@ -40364,17 +40364,17 @@
                   timestamp: t.rtCreated,
                   onActivate: l,
                 },
-                o.createElement(q, { multiline: !0 }, r)
+                o.createElement(Y, { multiline: !0 }, r)
               );
         },
       };
-      function pe(e) {
+      function ce(e) {
         return !!e && 6 === e.eType;
       }
-      function de(e) {
+      function me(e) {
         return !1;
       }
-      function ue(e) {
+      function pe(e) {
         return e.notifications[e.notifications.length - 1];
       }
     },

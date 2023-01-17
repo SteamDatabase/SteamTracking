@@ -2536,6 +2536,7 @@ https://www.youtube.com/watch?v=MZhBVH9UeAA
 https://youtu.be/
 https://youtube.com/user/dota2
 steam://
+steam://${path}
 steam://AddNonSteamGame
 steam://appnews/
 steam://broadcast/watch/

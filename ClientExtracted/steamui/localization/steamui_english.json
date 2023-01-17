@@ -6697,5 +6697,8 @@
     "SignIn_Title": "Sign in to Steam",
     "AccountCreation_Title": "Create Steam Account",
     "SignInHelp_Title": "Help signing in",
+    "SP_WindowTitle_Configurator": "%1$s Controller Layout",
+    "SP_WindowTitle_BigPicture": "Steam Big Picture Mode",
+    "SP_WindowTitle_Keyboard": "Steam Input On-screen Keyboard",
     "steamui_dummy": "DO NOT USE ME"
 }

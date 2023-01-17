@@ -11018,7 +11018,6 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   height: auto;
   max-width: 25px;
   max-height: 25px;
-  padding-top: 4px;
 }
 .controllerconfiguratorsummary_ControllerInputDisplay_27Q1T
   .controllerconfiguratorsummary_ChordControlActivation_1LP2I {
@@ -11058,10 +11057,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   padding-top: 4px;
   position: relative;
 }
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV.controllerconfiguratorsummary_Fullscreen_2s0MP {
-  zoom: 1.5;
-}
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV.controllerconfiguratorsummary_Fullscreen_2s0MP.controllerconfiguratorsummary_StandaloneConfigurator_SAcFI {
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV.controllerconfiguratorsummary_StandaloneConfigurator_SAcFI {
   zoom: 2;
 }
 .controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV.controllerconfiguratorsummary_Overlay_1iLR- {
@@ -11275,6 +11271,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   margin-right: 5px;
   width: 18px;
   height: 18px;
+  padding-top: 4px;
 }
 .controllerconfiguratorsummary_ChordSummary_2j2eu
   .controllerconfiguratorsummary_PlusSign_wkeTZ {
@@ -11292,11 +11289,13 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   height: auto;
   max-width: 15px;
   max-height: 20px;
+  padding-top: 4px;
 }
 .controllerconfiguratorsummary_InputGlyph_3Fz8o
   .controllerconfiguratorsummary_MediumGlyphIcon_2nNX3 {
   max-width: 15px;
   max-height: 20px;
+  padding-top: 2px;
 }
 .controllerconfiguratorsummary_InputGlyph_3Fz8o
   .controllerconfiguratorsummary_SmallGlyphIcon_nwQ1Q {
@@ -11420,6 +11419,54 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .controller_switch_pro
   .controllerconfiguratorsummary_BackgroundController_rlz-U {
   background-image: url(/images/controller/controller_config_controller_switch_pro.png);
+}
+.controller_switch_joycon_left
+  .controllerconfiguratorsummary_BackgroundController_rlz-U {
+  background-image: url(/images/controller/controller_config_controller_switch_joycon_left.png);
+}
+.controller_switch_joycon_right
+  .controllerconfiguratorsummary_BackgroundController_rlz-U {
+  background-image: url(/images/controller/controller_config_controller_switch_joycon_right.png);
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_BackgroundController_rlz-U {
+  background-image: url(/images/controller/controller_config_controller_switch_joycons.png);
+  transform: translate(0px, -15%);
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_FloatingControlsContainer_1xufc.controllerconfiguratorsummary_LeftAuxButtons_3VNmu {
+  top: 140px;
+  right: 75%;
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_FloatingControlsContainer_1xufc.controllerconfiguratorsummary_RightAuxButtons_2I6Bc {
+  top: 140px;
+  left: 75%;
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_FloatingControlsContainer_1xufc.controllerconfiguratorsummary_LeftGripButtonsUpper_30sIR {
+  top: 180px;
+  right: 75%;
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_FloatingControlsContainer_1xufc.controllerconfiguratorsummary_RightGripButtonsUpper_2VVUW {
+  top: 180px;
+  left: 75%;
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_FloatingControlsContainer_1xufc.controllerconfiguratorsummary_LeftGripButtons_3eORn {
+  top: 210px;
+  right: 75%;
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_FloatingControlsContainer_1xufc.controllerconfiguratorsummary_RightGripButtons_11oba {
+  top: 210px;
+  left: 75%;
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_FloatingControlsContainer_1xufc.controllerconfiguratorsummary_LeftCaptureButton_3p7_D {
+  top: 250px;
+  right: 75%;
 }
 .controller_mobile_touch
   .controllerconfiguratorsummary_BackgroundController_rlz-U {
@@ -20836,6 +20883,13 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   right: 2%;
   opacity: 0;
 }
+.appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf {
+  width: 20%;
+  max-width: 34px;
+}
+.appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf img {
+  width: 100%;
+}
 .appportrait_LibraryItemBox_WYgDg.appportrait_InLibraryManager_6vZ6m
   .appportrait_SteamDeckCompatIcon_3kDT9 {
   display: none;
@@ -20878,15 +20932,6 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   transition-property: opacity;
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
-}
-.appportrait_HoversEnabled_54PuC
-  .appportrait_LibraryItemBox_WYgDg:hover
-  .appportrait_ControllerSupportIcon_1TaKf
-  > img,
-.appportrait_LibraryItemBox_WYgDg.gpfocus
-  .appportrait_ControllerSupportIcon_1TaKf
-  > img {
-  width: 40px;
 }
 .appportrait_HoversEnabled_54PuC
   .appportrait_LibraryItemBox_WYgDg:hover:not(.appportrait_Landscape_3VOR2) {

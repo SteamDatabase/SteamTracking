@@ -66616,7 +66616,9 @@ object-assign
           SendTextSpecialKeys["SENDTEXT_SPECIALKEY_BACKSPACE"] = "\u0002";
           SendTextSpecialKeys["SENDTEXT_SPECIALKEY_ARROW_LEFT"] = "\u0003";
           SendTextSpecialKeys["SENDTEXT_SPECIALKEY_ARROW_RIGHT"] = "\u0004";
-          SendTextSpecialKeys["SENDTEXT_SPECIALKEY_LAST"] = "\u0005";
+          SendTextSpecialKeys["SENDTEXT_SPECIALKEY_ARROW_UP"] = "\u0005";
+          SendTextSpecialKeys["SENDTEXT_SPECIALKEY_ARROW_DOWN"] = "\u0006";
+          SendTextSpecialKeys["SENDTEXT_SPECIALKEY_LAST"] = "\u0007";
         })(SendTextSpecialKeys || (SendTextSpecialKeys = {}));
         // Scan codes for HID keyboards - taken from controller_constants.h
         var HIDKeyboardKeys;
@@ -90462,4 +90464,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=a81f497c68b952bca480
+//# sourceMappingURL=friends.js.map?contenthash=43c3c2a6c897440edfea

@@ -104,4 +104,6 @@ public:
     virtual unknown_ret FloatingGamepadTextInputDismissed() = 0;
     virtual unknown_ret SetGameLauncherMode(void*,void*) = 0;
     virtual unknown_ret ClearAllHTTPCaches() = 0;
+    virtual unknown_ret GetFocusedGameID(void*) = 0;
+    virtual unknown_ret GetFocusedWindowPID() = 0;
 };
