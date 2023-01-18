@@ -1156,6 +1156,7 @@ background-color: transparent;
 
 .profile_customization_block.replay_showcase_block img {
 	width: 100%;
+    display: block;
 }
 
 .myart .profile_customization_block {
