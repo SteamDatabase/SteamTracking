@@ -2555,6 +2555,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
+    min-width: 320px;
     scroll-snap-align: start;
   }
   .salepreviewwidgets_OuterCapsuleContainer_Btar9

@@ -1253,6 +1253,7 @@ html.responsive.touch .contenthubmaincarousel_ContentHubTitle_9tb4j {
 .contenthubmaincarousel_ContentHubSubtitle_rMw9E {
   font-size: 18px;
   font-weight: 300;
+  font-style: italic;
   opacity: 75%;
   margin-left: 8px;
   margin-top: -5px;
@@ -4896,6 +4897,13 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     from(#0e1014),
     to(rgba(0, 0, 0, 0))
   );
+  mask-image: -webkit-gradient(
+    linear,
+    0% 20%,
+    0% 100%,
+    from(#0e1014),
+    to(rgba(0, 0, 0, 0))
+  );
 }
 .dlcforyou_GameCtn_OQaNt:nth-child(even) {
   background: linear-gradient(140deg, rgba(0, 0, 0, 0) 1.25%, black 97.55%),
@@ -4904,6 +4912,9 @@ a.storywidget_BadgeFooter_3kBeS:hover {
       rgba(218, 145, 59, 0.5) 1.25%,
       rgba(69, 219, 31, 0.4) 97.55%
     );
+}
+.dlcforyou_GameCtn_OQaNt.dlcforyou_GameCtnNoBackground_2Fr2p {
+  background: unset;
 }
 .dlcforyou_DLCSectionTitle_3xJah {
   padding-top: 12px;
@@ -4939,6 +4950,14 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   font-weight: 500;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
+.dlcforyou_DLCSectionTitle_3xJah .dlcforyou_FullGameArtwork_2lq4q {
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 64px;
+}
+.dlcforyou_FullGameHover_i1RBc {
+  width: 300px;
+}
 .dlcforyou_ParentAppSortTabsCtn_HLysW {
   display: flex;
   text-transform: uppercase;
@@ -4961,6 +4980,33 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .dlcforyou_ParentAppSortTabsCtn_HLysW .dlcforyou_ParentAppSortTabActive_3O8Ab {
   color: rgba(0, 0, 0, 0.8);
   background: rgba(255, 255, 255, 0.9);
+}
+.dlcforyou_DLCStatsCtn_2K4LF {
+  margin-top: 28px;
+  height: 105px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent);
+}
+.dlcforyou_DLCStatsCtn_2K4LF .dlcforyou_DLCStatsInnerCtn_2btx8 {
+  display: flex;
+}
+.dlcforyou_DLCStatsCtn_2K4LF
+  .dlcforyou_DLCStatsInnerCtn_2btx8
+  .dlcforyou_DLCStatColumn_257MX {
+  margin-right: 24px;
+}
+.dlcforyou_DLCStatsCtn_2K4LF
+  .dlcforyou_DLCStatsInnerCtn_2btx8
+  .dlcforyou_DLCStatColumn_257MX
+  .dlcforyou_DLCStatNumber_2bPU5 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.dlcforyou_DLCStatsCtn_2K4LF
+  .dlcforyou_DLCStatsInnerCtn_2btx8
+  .dlcforyou_DLCStatColumn_257MX
+  .dlcforyou_DLCStatDesc_2FVzA {
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
 }
 .partnereventrevisionhistory_VersionListCtn_32hnY {
   max-height: 500px;

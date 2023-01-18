@@ -1677,7 +1677,7 @@
             n.e(72),
             n.e(1979),
             n.e(4601),
-          ]).then(n.bind(n, 54189))
+          ]).then(n.bind(n, 86823))
         ),
         ue = (0, m.Pi)((e) => {
           const {
@@ -1720,7 +1720,7 @@
             lang: n,
             titleBar: m,
             body: r.createElement(
-              E.S,
+              E.SV,
               null,
               r.createElement(
                 "div",
@@ -1777,7 +1777,7 @@
                   "div",
                   { className: X().EventDetailsDescription },
                   r.createElement(
-                    E.S,
+                    E.SV,
                     null,
                     t.BHasTag("steam_award_nomination_request") &&
                       r.createElement(U.EventDisplaySteamAwardNomination, {
@@ -1793,7 +1793,7 @@
                       })
                   ),
                   r.createElement(
-                    E.S,
+                    E.SV,
                     null,
                     r.createElement(
                       "div",
@@ -1829,7 +1829,7 @@
                     )
                   ),
                   r.createElement(
-                    E.S,
+                    E.SV,
                     null,
                     r.createElement(Z.D, { event: t })
                   ),
@@ -1848,13 +1848,13 @@
                     ),
                   r.createElement("span", { className: Y().Clear }),
                   r.createElement(
-                    E.S,
+                    E.SV,
                     null,
                     r.createElement(W.HQ, { appid: t.appid })
                   )
                 ),
                 r.createElement(
-                  E.S,
+                  E.SV,
                   null,
                   r.createElement(ge, {
                     event: t,
@@ -1870,9 +1870,9 @@
                 partnerEventStore: a,
               })
             ),
-            postbody: r.createElement(E.S, null, i, d),
+            postbody: r.createElement(E.SV, null, i, d),
             footer: r.createElement(
-              E.S,
+              E.SV,
               null,
               r.createElement(
                 "div",
@@ -1943,7 +1943,7 @@
             a,
             r.createElement(_e, { strImageURL: i }),
             r.createElement(ve, { strImageURL: i, body: l, postbody: o }),
-            Boolean(s) && r.createElement(E.S, null, s)
+            Boolean(s) && r.createElement(E.SV, null, s)
           );
         }),
         _e = (e) => {
@@ -1994,9 +1994,9 @@
                     className: X().EventBackgroundBlur,
                     style: { backgroundImage: `url(${a})` },
                   }),
-                r.createElement(E.S, null, t)
+                r.createElement(E.SV, null, t)
               ),
-              Boolean(n) && r.createElement(E.S, null, n)
+              Boolean(n) && r.createElement(E.SV, null, n)
             )
           );
         };
@@ -2221,7 +2221,7 @@
             e.BIsVisibleEvent() &&
             k.GetStatsFor(e.clanSteamID, e.GID);
           return r.createElement(
-            E.S,
+            E.SV,
             null,
             r.createElement(
               "div",
@@ -2638,7 +2638,7 @@
           }
           return t
             ? r.createElement(
-                E.S,
+                E.SV,
                 null,
                 r.createElement(S.x, {
                   appid: s.appid,
@@ -2654,7 +2654,7 @@
                 })
               )
             : r.createElement(
-                E.S,
+                E.SV,
                 null,
                 r.createElement(ue, {
                   lang: (0, u.jM)(N.De.LANGUAGE),
@@ -3070,7 +3070,7 @@
             we.e1,
             { onEscKeypress: e.closeModal },
             r.createElement(
-              E.S,
+              E.SV,
               null,
               r.createElement(
                 Xe.VY,
@@ -3239,7 +3239,7 @@
             { className: (0, z.Z)(Y().FlexRowWrapSpaceBetweenContainer, s) },
             t
               ? r.createElement(
-                  E.S,
+                  E.SV,
                   null,
                   r.createElement(S.x, {
                     onEventNotFound: a,
@@ -4840,7 +4840,7 @@
               n ? Zt().DisableHovers : Zt().EnableHovers
             );
           return r.createElement(
-            E.S,
+            E.SV,
             null,
             r.createElement(
               "div",
@@ -5247,7 +5247,7 @@
               .slice(0, this.state.nNumToDisplay)
               .map((e) => this.GenerateCurator(e))),
             r.createElement(
-              E.S,
+              E.SV,
               null,
               r.createElement(
                 "div",
@@ -6104,7 +6104,7 @@
               "div",
               { className: mt().EventCalendarContainer },
               r.createElement(
-                E.S,
+                E.SV,
                 null,
                 this.state.modalEvent
                   ? r.createElement(S.x, {
@@ -6120,7 +6120,7 @@
                   : null
               ),
               r.createElement(
-                E.S,
+                E.SV,
                 null,
                 r.createElement(Gt, {
                   ref: this.m_refControlBar,
@@ -6134,7 +6134,7 @@
                 })
               ),
               r.createElement(
-                E.S,
+                E.SV,
                 null,
                 r.createElement(
                   "div",
@@ -6145,7 +6145,7 @@
                     ),
                   },
                   r.createElement(
-                    E.S,
+                    E.SV,
                     null,
                     this.state.nLogInBannerHeight > 0 &&
                       r.createElement(Jn, {
@@ -6154,7 +6154,7 @@
                       })
                   ),
                   r.createElement(
-                    E.S,
+                    E.SV,
                     null,
                     this.state.nMobileNavBannerHeight > 0 &&
                       r.createElement(Ht, {
@@ -6168,7 +6168,7 @@
                     })
                   ),
                   r.createElement(
-                    E.S,
+                    E.SV,
                     null,
                     r.createElement(Wn, {
                       bShowFutureViewOnly: this.BShowFutureView(),

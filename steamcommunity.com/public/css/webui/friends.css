@@ -892,6 +892,14 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Primary {
   background: #23262e;
 }
+button.gamepaddialog_Button_cXzBZ.DialogButton.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:hover.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.BarButton {
+  background: #0000001a;
+  color: #fff;
+}
 button.gamepaddialog_Button_cXzBZ.DialogButton.gamepaddialog_ActiveAndUnfocused_28cXJ,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.gamepaddialog_ActiveAndUnfocused_28cXJ,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.gamepaddialog_ActiveAndUnfocused_28cXJ,
@@ -938,6 +946,19 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.gpfocus.Dest
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:active.Destructive {
   background: #de3618;
   color: #fff;
+}
+button.gamepaddialog_Button_cXzBZ.DialogButton.gpfocus.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.gpfocus.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active.gpfocus.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active:active.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:hover.gpfocus.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:hover:active.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.gpfocus.BarButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:active.BarButton {
+  background: #fff;
+  color: #000;
 }
 .gamepaddialog_Field_eKmEX
   button.gamepaddialog_Button_cXzBZ.DialogButton.gpfocus,
@@ -9095,6 +9116,26 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .newlogindialog_Login_lat0M .newlogindialog_HeaderLogo_3v6Wn {
   height: 46px;
   width: 153px;
+}
+.newlogindialog_Login_lat0M .newlogindialog_LogoContainer_14exB {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+.newlogindialog_Login_lat0M
+  .newlogindialog_LogoContainer_14exB
+  .newlogindialog_BackArrowContainer_2Jkgs {
+  width: 40px;
+}
+.newlogindialog_Login_lat0M
+  .newlogindialog_LogoContainer_14exB
+  .newlogindialog_BackArrow_3NHpq {
+  color: #dcdedf;
+}
+.newlogindialog_Login_lat0M
+  .newlogindialog_LogoContainer_14exB
+  .newlogindialog_BackArrow_3NHpq:hover {
+  opacity: 90%;
 }
 .newlogindialog_Login_lat0M .newlogindialog_EmbeddedRoot_2v9dC {
   background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);

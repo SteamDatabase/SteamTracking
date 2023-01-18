@@ -1132,6 +1132,41 @@ div#global_header .content {
 .overviewpage_OverviewChartPlaceholder_rGp5A {
   min-height: 494px;
 }
+.overviewpage_BestOfYearButton_3Qf-X {
+  background-color: #1e2834;
+  width: auto;
+  text-align: center;
+  display: block;
+  padding: 16px;
+}
+.overviewpage_BestOfYearButton_3Qf-X:hover {
+  background-color: #3a4d64;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.overviewpage_BestOfYearButton_3Qf-X .overviewpage_BackupBestOfYearText_12TR9 {
+  font-size: 32px;
+  color: #fff;
+}
+.overviewpage_BestOfYearBanner_1ad0u {
+  max-width: 940px;
+  width: 100%;
+  object-fit: contain;
+}
+.overviewpage_BestOfYearBanner_1ad0u.overviewpage_Big_2bwzB {
+  display: block;
+}
+.overviewpage_BestOfYearBanner_1ad0u.overviewpage_Mobile_1cKll {
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  .overviewpage_BestOfYearBanner_1ad0u.overviewpage_Big_2bwzB {
+    display: none;
+  }
+  .overviewpage_BestOfYearBanner_1ad0u.overviewpage_Mobile_1cKll {
+    display: block;
+  }
+}
 .weeklytopsellers_PageSection_2zGFB {
   margin-bottom: 48px;
 }

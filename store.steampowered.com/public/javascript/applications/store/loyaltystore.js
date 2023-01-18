@@ -10642,7 +10642,7 @@
             s = (0, c.Z)(r, o && l.OwnedItem);
           if (5 == e.definition.type || 6 == e.definition.type)
             return i.createElement(
-              h.S,
+              h.SV,
               { fallback: null },
               i.createElement(
                 y.u,
@@ -10657,7 +10657,7 @@
                 : t.length)
           )
             return i.createElement(
-              h.S,
+              h.SV,
               { fallback: null },
               i.createElement(
                 w.Z,
@@ -10667,7 +10667,7 @@
           const m = H[e.definition.community_item_class];
           return m
             ? i.createElement(
-                h.S,
+                h.SV,
                 { fallback: null },
                 i.createElement(
                   m,
@@ -10675,7 +10675,7 @@
                 )
               )
             : i.createElement(
-                h.S,
+                h.SV,
                 { fallback: null },
                 i.createElement(
                   v,

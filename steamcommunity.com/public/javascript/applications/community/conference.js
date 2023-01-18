@@ -560,7 +560,7 @@
         const { conferenceInfo: t } = e,
           n = t.broadcastSteamID.ConvertTo64BitString();
         return a.createElement(
-          _.S,
+          _.SV,
           null,
           a.createElement(b.default, {
             steamIDBroadcast: n,
@@ -581,7 +581,7 @@
             ),
           },
           a.createElement(
-            _.S,
+            _.SV,
             null,
             a.createElement(S.c, {
               emoticonStore: T.D$,
@@ -1362,7 +1362,7 @@
               n ? ve().DisableHovers : ve().EnableHovers
             );
           return a.createElement(
-            _.S,
+            _.SV,
             null,
             a.createElement(
               "div",
@@ -2176,7 +2176,7 @@
           n = v.Get().GetConferenceInfo(t);
         return n
           ? a.createElement(
-              _.S,
+              _.SV,
               null,
               a.createElement(
                 "div",
@@ -2201,7 +2201,7 @@
               name: (0, h.Xx)("#Conference_tab_Home"),
               key: "live",
               contents: a.createElement(
-                _.S,
+                _.SV,
                 null,
                 a.createElement(tt, {
                   bShowYouTube: !!t.youtubeVideoID,
@@ -2214,7 +2214,7 @@
             name: (0, h.Xx)("#Conference_tab_Past"),
             key: "past",
             contents: a.createElement(
-              _.S,
+              _.SV,
               null,
               a.createElement(ot, { conferenceInfo: t }),
               !t.youtubeVideoID &&
@@ -2227,7 +2227,7 @@
             name: (0, h.Xx)("#Conference_tab_Info"),
             key: "about",
             contents: a.createElement(
-              _.S,
+              _.SV,
               null,
               a.createElement(at, { conferenceInfo: t }),
               !t.youtubeVideoID &&
@@ -2241,7 +2241,7 @@
             key: "debug",
             hidden: "dev" != u.De.WEB_UNIVERSE,
             contents: a.createElement(
-              _.S,
+              _.SV,
               null,
               a.createElement(M, { conferenceInfo: t })
             ),

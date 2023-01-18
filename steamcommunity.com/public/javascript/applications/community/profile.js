@@ -2978,7 +2978,7 @@
                 (0, v.Xx)("#Profile_Edit_Avatar_YourFrames")
               ),
               d.createElement(
-                Be.S,
+                Be.SV,
                 null,
                 d.createElement(be, {
                   rgFrames: this.m_rgFrames,
@@ -3016,7 +3016,7 @@
                   }),
                   d.createElement("div", { className: ve.AvatarRowSpacer }),
                   d.createElement(
-                    Be.S,
+                    Be.SV,
                     null,
                     e.map((e) =>
                       d.createElement(
@@ -3143,7 +3143,7 @@
             d.createElement(
               "div",
               { className: Le.ProfileBoxContent },
-              d.createElement(Be.S, null, r)
+              d.createElement(Be.SV, null, r)
             )
           ),
         De = ({ onSave: e, onCancel: t, disabled: r }) =>
@@ -3214,14 +3214,14 @@
               d.createElement(
                 "div",
                 { className: Le.PickerPreview },
-                d.createElement(Be.S, null, o(s))
+                d.createElement(Be.SV, null, o(s))
               ),
               t && d.createElement(ue.h4, null, t),
               d.createElement(
                 "div",
                 { className: Le.PickerPreviewItems },
                 d.createElement(
-                  Be.S,
+                  Be.SV,
                   null,
                   d.createElement(
                     Te,
@@ -3370,7 +3370,7 @@
                     ? null
                     : r.item
                     ? d.createElement(
-                        Be.S,
+                        Be.SV,
                         { key: r.key },
                         d.createElement(e, {
                           Item: r.item,
@@ -3379,7 +3379,7 @@
                         })
                       )
                     : d.createElement(
-                        Be.S,
+                        Be.SV,
                         { key: r.key },
                         t({ onSelected: r.OnSelected, active: !i })
                       )
@@ -4359,7 +4359,7 @@
             { bSaving: t, strHTMLError: r } = this.state;
           let a = e.FavoriteBadge;
           return d.createElement(
-            Be.S,
+            Be.SV,
             null,
             d.createElement(me.NL, {
               when: e.BFavoriteBadgeUncomitted(),
@@ -5837,7 +5837,7 @@
               d.createElement(
                 "div",
                 { className: vr.PageContent },
-                d.createElement(Be.S, null, i)
+                d.createElement(Be.SV, null, i)
               )
             )
           );

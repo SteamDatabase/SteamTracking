@@ -162,7 +162,7 @@
         l = (r(69765), r(4344)),
         c = r(81503),
         d = (r(29139), r(21927)),
-        m = (r(80404), r(89608)),
+        m = (r(76920), r(89608)),
         u = r.n(m),
         h = r(10847),
         _ = r(48341),
@@ -6421,7 +6421,7 @@
         be = r(99533),
         Be = r(41311),
         ye = r(90666),
-        Se = r(80404);
+        Se = r(76920);
       class we {
         constructor() {
           this.m_mapChats = new Map();
@@ -7351,9 +7351,9 @@
         (0, i.gn)([c.a], p.prototype, "SetupRefreshDataInterval", null),
         (0, i.gn)([c.a], p.prototype, "SetupCountDown", null);
     },
-    80404: (e, t, r) => {
+    76920: (e, t, r) => {
       "use strict";
-      r.d(t, { l: () => p, V: () => b });
+      r.d(t, { V: () => g, l: () => _ });
       var i = r(70655),
         a = r(9669),
         s = r.n(a),
@@ -7362,13 +7362,10 @@
         l = r(92398),
         c = r(58114),
         d = r(3389),
-        m = r(33019);
-      r(40110);
-      m.Message;
-      var u = r(18330),
-        h = (r(82946), r(90666)),
-        _ = r(75362);
-      class p {
+        m = (r(54612), r(18330)),
+        u = (r(82946), r(90666)),
+        h = r(83779);
+      class _ {
         constructor(e) {
           (this.m_mapPlayerCache = new Map()),
             (this.m_strBannedWords = ""),
@@ -7381,13 +7378,13 @@
             (this.m_bShownFilterTip = !1),
             (this.m_TextFilterPreferences = new l.t$());
           {
-            let e = new u.n8();
+            let e = new m.n8();
             (this.m_TextFilterPreferences.eTextFilterSetting =
               e.text_filter_setting()),
               (this.m_TextFilterPreferences.bIgnoreFriends =
                 e.text_filter_ignore_friends());
           }
-          (this.m_TextFilterWords = new u.No()), (this.m_DataAccess = e);
+          (this.m_TextFilterWords = new m.No()), (this.m_DataAccess = e);
         }
         Init(e = 0, t = null, r = null) {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -7401,8 +7398,8 @@
               yield this.LoadTextFilterPreferences(),
               yield this.LoadTextFilterWords(),
               yield this.RequestUpdatedSettings(),
-              yield this.LoadLanguage(h.De.LANGUAGE),
-              "english" !== h.De.LANGUAGE &&
+              yield this.LoadLanguage(u.De.LANGUAGE),
+              "english" !== u.De.LANGUAGE &&
                 (yield this.LoadLanguage("english")),
               this.OnFilterDataChanged();
           });
@@ -7430,7 +7427,7 @@
               let e = yield this.m_Storage.GetObject(
                 "CTextFilterStore_TextFilterWords"
               );
-              e && (this.m_TextFilterWords = u.No.fromObject(e));
+              e && (this.m_TextFilterWords = m.No.fromObject(e));
             }
           });
         }
@@ -7467,22 +7464,22 @@
         }
         RequestUpdatedSettings() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = new u.n8();
+            let e = new m.n8();
             if (0 !== this.m_unAccountID)
               try {
                 if (this.m_Transport) {
-                  let t = c.gA.Init(u.AP);
-                  e = (yield u.lk.GetCommunityPreferences(this.m_Transport, t))
+                  let t = c.gA.Init(m.AP);
+                  e = (yield m.lk.GetCommunityPreferences(this.m_Transport, t))
                     .Body()
                     .preferences();
                 } else {
-                  let t = { sessionid: h.De.SESSIONID, origin: (0, h.Kc)() };
+                  let t = { sessionid: u.De.SESSIONID, origin: (0, u.Kc)() };
                   const r = yield s().get(
-                    h.De.COMMUNITY_BASE_URL +
+                    u.De.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgetcommunitypreferences",
                     { params: t, withCredentials: !0 }
                   );
-                  e = u.n8.fromObject(r.data.preferences);
+                  e = m.n8.fromObject(r.data.preferences);
                 }
               } catch (e) {}
             if (
@@ -7490,22 +7487,22 @@
               e.text_filter_words_revision() !==
                 this.m_TextFilterWords.text_filter_words_revision())
             ) {
-              let t = new u.No();
+              let t = new m.No();
               if (0 !== e.text_filter_words_revision())
                 try {
                   if (this.m_Transport) {
-                    let e = c.gA.Init(u.Oz);
-                    t = (yield u.lk.GetTextFilterWords(this.m_Transport, e))
+                    let e = c.gA.Init(m.Oz);
+                    t = (yield m.lk.GetTextFilterWords(this.m_Transport, e))
                       .Body()
                       .words();
                   } else {
-                    let e = { sessionid: h.De.SESSIONID, origin: (0, h.Kc)() };
+                    let e = { sessionid: u.De.SESSIONID, origin: (0, u.Kc)() };
                     const r = yield s().get(
-                      h.De.COMMUNITY_BASE_URL +
+                      u.De.COMMUNITY_BASE_URL +
                         "textfilter/ajaxgettextfiltercustomwords",
                       { params: e, withCredentials: !0 }
                     );
-                    t = u.No.fromObject(r.data.words);
+                    t = m.No.fromObject(r.data.words);
                   }
                 } catch (e) {}
               this.UpdateTextFilterWords(t);
@@ -7535,9 +7532,9 @@
         LoadLanguage(e) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             let t = `${
-              h.De.COMMUNITY_CDN_URL
+              u.De.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${(0,
-            h.Kc)()}`;
+            u.Kc)()}`;
             try {
               const e = yield s().get(t);
               this.m_strBannedWords += e.data;
@@ -7545,9 +7542,9 @@
               console.error("Failed to load filter dictionary " + t, e);
             }
             t = `${
-              h.De.COMMUNITY_CDN_URL
+              u.De.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${(0,
-            h.Kc)()}`;
+            u.Kc)()}`;
             try {
               const e = yield s().get(t);
               this.m_strProfanityWords += e.data;
@@ -7555,9 +7552,9 @@
               console.error("Failed to load filter dictionary " + t, e);
             }
             t = `${
-              h.De.COMMUNITY_CDN_URL
+              u.De.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${(0,
-            h.Kc)()}`;
+            u.Kc)()}`;
             try {
               const e = yield s().get(t);
               this.m_strCleanWords += e.data;
@@ -7612,7 +7609,7 @@
               this.m_regexBannedWords = new RegExp(e, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter bannedwords regex"),
-                (0, _.Uh)().ReportError(
+                (0, h.Uh)().ReportError(
                   new Error(
                     `Couldn't compile textfilter bannedwords regex: ${e}`
                   )
@@ -7623,7 +7620,7 @@
               this.m_regexCleanWords = new RegExp(t, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter cleanwords regex"),
-                (0, _.Uh)().ReportError(
+                (0, h.Uh)().ReportError(
                   new Error(
                     `Couldn't compile textfilter cleanwords regex: ${e}`
                   )
@@ -7663,13 +7660,13 @@
               );
         }
       }
-      let g;
-      function b() {
-        if (!g) {
+      let p;
+      function g() {
+        if (!p) {
           const e = new Set();
-          let t = { sessionid: h.De.SESSIONID, origin: (0, h.Kc)() };
+          let t = { sessionid: u.De.SESSIONID, origin: (0, u.Kc)() };
           s()
-            .get(h.De.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
+            .get(u.De.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
               params: t,
               withCredentials: !0,
             })
@@ -7678,16 +7675,16 @@
                 (0, o.my)(r.efriendrelationship) &&
                   e.add(new d.K(r.ulfriendid).GetAccountID());
             }),
-            (g = (t) => e.has(t));
+            (p = (t) => e.has(t));
         }
-        return g;
+        return p;
       }
-      (0, i.gn)([n.LO], p.prototype, "m_TextFilterPreferences", void 0),
-        (0, i.gn)([n.LO], p.prototype, "m_mapPlayerCache", void 0),
-        (0, i.gn)([n.LO], p.prototype, "m_regexBannedWords", void 0),
-        (0, i.gn)([n.LO], p.prototype, "m_regexCleanWords", void 0),
-        (0, i.gn)([n.aD], p.prototype, "UpdateCommunityPreferences", null),
-        (0, i.gn)([n.aD], p.prototype, "BRebuildFilter", null);
+      (0, i.gn)([n.LO], _.prototype, "m_TextFilterPreferences", void 0),
+        (0, i.gn)([n.LO], _.prototype, "m_mapPlayerCache", void 0),
+        (0, i.gn)([n.LO], _.prototype, "m_regexBannedWords", void 0),
+        (0, i.gn)([n.LO], _.prototype, "m_regexCleanWords", void 0),
+        (0, i.gn)([n.aD], _.prototype, "UpdateCommunityPreferences", null),
+        (0, i.gn)([n.aD], _.prototype, "BRebuildFilter", null);
     },
   },
 ]);

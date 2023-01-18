@@ -733,6 +733,26 @@
   height: 46px;
   width: 153px;
 }
+.newlogindialog_Login_ZOBYq .newlogindialog_LogoContainer_vnUiF {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_LogoContainer_vnUiF
+  .newlogindialog_BackArrowContainer_1N7RY {
+  width: 40px;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_LogoContainer_vnUiF
+  .newlogindialog_BackArrow_1FGqv {
+  color: #dcdedf;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_LogoContainer_vnUiF
+  .newlogindialog_BackArrow_1FGqv:hover {
+  opacity: 90%;
+}
 .newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf {
   background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
   padding: 34px 40px 15px 40px;

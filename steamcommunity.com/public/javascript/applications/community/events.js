@@ -94,7 +94,7 @@
               t = (0, i.jM)(r.De.LANGUAGE);
             return e.BHasSaleEnabled()
               ? o.createElement(
-                  E.S,
+                  E.SV,
                   null,
                   o.createElement(_.o, {
                     eventModel: e,

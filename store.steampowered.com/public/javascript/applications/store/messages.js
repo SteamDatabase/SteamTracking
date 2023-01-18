@@ -195,9 +195,11 @@
         GetLegalHTML() {
           return this.GetTemplateVars().use_custom_legal_text
             ? this.GetTemplateVars().custom_legal_text
-            : `© ${new Date().getFullYear()} Valve Corporation and ${
-                this.GetTemplateVars().partner
-              }. <br/>All trademarks are property of their respective owners in the US and other countries.`;
+            : ((e = this.GetTemplateVars().partner),
+              `© ${new Date().getFullYear()} Valve Corporation${
+                e ? " and " + e : ""
+              }. <br/>All trademarks are property of their respective owners in the US and other countries.`);
+          var e;
         }
         get associated_item() {
           return this.m_item;
@@ -414,7 +416,7 @@
               },
               n
             ),
-            a.createElement(l.S, null, a.createElement(v, null))
+            a.createElement(l.SV, null, a.createElement(v, null))
           ),
           a.createElement(S, null)
         );

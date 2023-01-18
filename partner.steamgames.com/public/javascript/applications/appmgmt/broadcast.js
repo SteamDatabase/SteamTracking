@@ -165,7 +165,7 @@
           "insetshadow_FriendListInsetShadowBottom_2hL6s",
       };
     },
-    85803: (e, t, r) => {
+    13022: (e, t, r) => {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -3421,10 +3421,9 @@
       var we = r(81130),
         fe = r(99533),
         Ce = r(41311),
-        Me = r(90666);
-      S.Message;
-      var Ee = r(18330),
-        Te = r(75362);
+        Me = r(90666),
+        Ee = (r(54612), r(18330)),
+        Te = r(83779);
       class Fe {
         constructor(e) {
           (this.m_mapPlayerCache = new Map()),

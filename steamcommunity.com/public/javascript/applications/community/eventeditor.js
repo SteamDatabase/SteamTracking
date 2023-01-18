@@ -343,7 +343,7 @@
               t = (0, o.jM)(l.De.LANGUAGE);
             return e.BHasSaleEnabled()
               ? i.createElement(
-                  E.S,
+                  E.SV,
                   null,
                   i.createElement(h.o, {
                     eventModel: e,
@@ -543,8 +543,8 @@
         );
       }
       var R = n(72710),
-        W = n(78587),
-        V = n(5525),
+        V = n(78587),
+        W = n(5525),
         j = n(159),
         F = n(32548),
         H = n(6205),
@@ -587,7 +587,7 @@
           if (this.state.redirectTarget && !this.bRedirectUsed)
             switch (((this.bRedirectUsed = !0), this.state.redirectTarget)) {
               case "clone":
-                return d.createElement(W.l_, {
+                return d.createElement(V.l_, {
                   push: !0,
                   to: a.rQ.Edit(n, ""),
                 });
@@ -637,7 +637,7 @@
                     )),
             !D && b)
           ) {
-            let e = V.JW.GetTimeNowWithOverride();
+            let e = W.JW.GetTimeNowWithOverride();
             t.GetStartTimeAndDateUnixSeconds() > e
               ? (m = d.createElement(
                   "span",
@@ -676,7 +676,7 @@
                 y.clanAccountID != t.announcementClanSteamID.GetAccountID()
             );
           return d.createElement(
-            F.S,
+            F.SV,
             null,
             d.createElement(
               "div",
@@ -1095,7 +1095,7 @@
           [a, i] = d.useState(!0),
           [r, o] = d.useState(!0),
           c = 1063339200,
-          m = V.JW.GetTimeNowWithOverride(),
+          m = W.JW.GetTimeNowWithOverride(),
           [u, v] = d.useState(m - de._H.PerMonth),
           [_, E] = d.useState(m),
           [h, g] = d.useState(-1),
@@ -1836,8 +1836,8 @@
         Xe = n(23211),
         Ue = n(72905),
         Re = n(15986),
-        We = n(46713),
-        Ve = n(1329),
+        Ve = n(46713),
+        We = n(1329),
         je = n(6843);
       function Fe(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
@@ -1878,7 +1878,7 @@
             return (null == e ? void 0 : e.length) > 0 ? e[0] : null;
           }, [t]),
           { storePageFilter: r, eStoreDiscoveryQueueType: l } = d.useMemo(
-            () => (0, Ve.N)(t, i),
+            () => (0, We.N)(t, i),
             [t, i]
           ),
           o = (0, je.GD)(l, r),
@@ -1937,7 +1937,7 @@
           ? d.createElement(qe, { nDoorIndex: t }, e.children)
           : null;
       }
-      const Qe = (0, W.EN)(Ue.C);
+      const Qe = (0, V.EN)(Ue.C);
       function Ze(e) {
         var t, n;
         const a = Number.parseInt((0, Ce.im)(e.args)),
@@ -1956,7 +1956,7 @@
             return d.createElement(Qe, {
               event: i,
               section: i.jsondata.sale_sections[l],
-              activeTab: new We.u(null, t),
+              activeTab: new Ve.u(null, t),
               language: e.language,
               bIsPreview: r,
               nSaleDayIndex: t,
@@ -2167,24 +2167,24 @@
                 { value: { bCanUseLink: !0 } },
                 d.createElement(N.bE, null),
                 d.createElement(
-                  W.rs,
+                  V.rs,
                   null,
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.Home(":appid_or_vanity_str"),
                     component: Ee,
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.List(":appid_or_vanity_str"),
                     component: Ee,
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.Create(":appid_or_vanity_str"),
                     component: r.k,
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.Category(":appid_or_vanity_str", ":gid(\\d+)?"),
                     render: (e) =>
@@ -2193,12 +2193,12 @@
                         Object.assign({}, e, { key: e.match.params.gid })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.EditRedirectToCategory(":appid_or_vanity_str"),
                     render: (e) => d.createElement(ge.Kz, Object.assign({}, e)),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.Edit(":appid_or_vanity_str", ":gid(\\d+)?"),
                     render: (e) =>
@@ -2207,7 +2207,7 @@
                         Object.assign({}, e, { key: e.match.params.gid })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.Publish(":appid_or_vanity_str", ":gid(\\d+)?"),
                     render: (e) =>
@@ -2219,7 +2219,7 @@
                         })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.PreviewSale(
                       ":appid_or_vanity_str",
@@ -2234,7 +2234,7 @@
                         })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.Preview(":appid_or_vanity_str", ":gid(\\d+)?"),
                     render: (e) =>
@@ -2246,7 +2246,7 @@
                         })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.View(":appid_or_vanity_str", ":gid(\\d+)"),
                     render: (e) =>
@@ -2258,7 +2258,7 @@
                         })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.Migrate(
                       ":appid_or_vanity_str",
@@ -2272,7 +2272,7 @@
                         })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.MigrateCategory(
                       ":appid_or_vanity_str",
@@ -2286,7 +2286,7 @@
                         })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.ViewOldAnnouncement(
                       ":appid_or_vanity_str",
@@ -2302,7 +2302,7 @@
                         })
                       ),
                   }),
-                  d.createElement(W.AW, {
+                  d.createElement(V.AW, {
                     exact: !0,
                     path: a.rQ.PreviewOldAnnouncement(
                       ":appid_or_vanity_str",
@@ -2318,7 +2318,7 @@
                         })
                       ),
                   }),
-                  d.createElement(W.AW, { component: dt.R })
+                  d.createElement(V.AW, { component: dt.R })
                 )
               )
         );

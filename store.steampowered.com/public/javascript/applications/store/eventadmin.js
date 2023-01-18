@@ -2597,7 +2597,7 @@
           return this.state.bIsLoading
             ? null
             : r.createElement(
-                l.S,
+                l.SV,
                 null,
                 r.createElement(
                   i.rs,
@@ -2748,7 +2748,7 @@
             "div",
             null,
             p.createElement(
-              S.S,
+              S.SV,
               null,
               p.createElement("h1", null, (0, T.Xx)("#RSSModeration_Title")),
               p.createElement(F, null),
@@ -4365,7 +4365,7 @@
               null,
               p.createElement("h2", null, (0, T.Xx)("#EventModeration_Title")),
               p.createElement(
-                S.S,
+                S.SV,
                 null,
                 p.createElement(
                   "div",
@@ -4380,7 +4380,7 @@
                 )
               )
             ),
-            p.createElement(S.S, null, e),
+            p.createElement(S.SV, null, e),
             this.state.bInfiniteScrollLoading &&
               p.createElement(R.V, {
                 position: "center",
@@ -4835,7 +4835,7 @@
             g = Boolean(i && i.BHasTag("adult_only_content")),
             v = Boolean(i && i.BHasTag("halloween"));
           return p.createElement(
-            S.S,
+            S.SV,
             null,
             l,
             p.createElement(
@@ -5807,7 +5807,7 @@
               1 != (null == t ? void 0 : t.GetAppType()) && (c += 1);
             }),
             p.createElement(
-              S.S,
+              S.SV,
               null,
               p.createElement(
                 "h1",

@@ -935,6 +935,14 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary {
   background: #23262e;
 }
+button.gamepaddialog_Button_1kn70.DialogButton.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:active.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:hover.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.BarButton {
+  background: #0000001a;
+  color: #fff;
+}
 button.gamepaddialog_Button_1kn70.DialogButton.gamepaddialog_ActiveAndUnfocused_11tOP,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.gamepaddialog_ActiveAndUnfocused_11tOP,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gamepaddialog_ActiveAndUnfocused_11tOP,
@@ -981,6 +989,19 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.Dest
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.Destructive {
   background: #de3618;
   color: #fff;
+}
+button.gamepaddialog_Button_1kn70.DialogButton.gpfocus.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:active.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:active:active.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:hover:active.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.BarButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.BarButton {
+  background: #fff;
+  color: #000;
 }
 .gamepaddialog_Field_S-_La
   button.gamepaddialog_Button_1kn70.DialogButton.gpfocus,

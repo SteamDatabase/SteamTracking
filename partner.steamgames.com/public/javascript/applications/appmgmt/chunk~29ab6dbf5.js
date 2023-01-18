@@ -8698,7 +8698,7 @@
         s = i(12900),
         a = i(22188),
         o = i(26149),
-        l = (i(48966), i(78468)),
+        l = (i(92398), i(48966), i(78468)),
         c = i(77520),
         u = i(64839);
       const d = "email_",
@@ -8985,6 +8985,9 @@
         GetRecordedQASessionLink() {
           return this.m_email.recorded_qa_session_link;
         }
+        GetCustomAppTargetList() {
+          return this.m_email.custom_app_list || [];
+        }
         GetSubject(e) {
           var t;
           return null !== (t = (0, n.pM)(this.m_email.subject, e, "")) &&
@@ -9138,6 +9141,11 @@
               s.On.Get().SetDirty(!0);
           }
         }
+        AddAppToCustomList(e) {
+          this.m_email.custom_app_list || (this.m_email.custom_app_list = []),
+            this.m_email.custom_app_list.includes(e) ||
+              (this.m_email.custom_app_list.push(e), s.On.Get().SetDirty(!0));
+        }
       }
       (0, r.gn)([a.LO], f.prototype, "m_email", void 0),
         (0, r.gn)([a.LO], f.prototype, "m_sections", void 0),
@@ -9167,7 +9175,8 @@
         (0, r.gn)([a.aD.bound], f.prototype, "SetQASessionDate", null),
         (0, r.gn)([a.aD.bound], f.prototype, "SetQASessionLink", null),
         (0, r.gn)([a.aD.bound], f.prototype, "SetRecordedQASessionLink", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetSubject", null);
+        (0, r.gn)([a.aD.bound], f.prototype, "SetSubject", null),
+        (0, r.gn)([a.aD.bound], f.prototype, "AddAppToCustomList", null);
       class B {
         constructor(e) {
           (this.m_bReadOnly = !1), (this.m_section = e);

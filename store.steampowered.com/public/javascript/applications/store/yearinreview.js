@@ -4752,7 +4752,7 @@
               name: (0, Ne.Xx)("#YIR_FirstTime_Tab_Grid"),
               key: "firsttimegrid",
               contents: r.createElement(
-                He.S,
+                He.SV,
                 null,
                 r.createElement(Gt, { rgGamesInOrderOfPlaytime: i, nYear: a })
               ),
@@ -4762,7 +4762,7 @@
               name: (0, Ne.Xx)("#YIR_FirstTime_Tab_MonthlyGrid"),
               key: "firsttimebymonth",
               contents: r.createElement(
-                He.S,
+                He.SV,
                 null,
                 r.createElement(
                   "div",
@@ -8770,7 +8770,7 @@
           r.createElement(cn, { viewAsUser: c, setViewAsUser: m }),
           r.createElement(on, { avatarAndPersona: n, userYearInReview: a }),
           r.createElement(
-            He.S,
+            He.SV,
             null,
             r.createElement(
               Ft,
@@ -8780,7 +8780,7 @@
             )
           ),
           r.createElement(
-            He.S,
+            He.SV,
             null,
             r.createElement(qt, { userYearInReview: a })
           ),
@@ -8793,7 +8793,7 @@
                 "div",
                 { className: Me().TimeRelatedCtn },
                 r.createElement(
-                  He.S,
+                  He.SV,
                   null,
                   r.createElement(Gr, { userYearInReview: a })
                 )
@@ -8803,24 +8803,24 @@
             "div",
             { className: Me().GraphRelatedCtn },
             r.createElement(
-              He.S,
+              He.SV,
               null,
               r.createElement(wa, { userYearInReview: a })
             )
           ),
           r.createElement(
-            He.S,
+            He.SV,
             null,
             r.createElement(Ga, { userYearInReview: a })
           ),
           Boolean(d > 5) &&
             r.createElement(
-              He.S,
+              He.SV,
               null,
               r.createElement(ft, { userYearInReview: a, nYear: s })
             ),
           r.createElement(
-            He.S,
+            He.SV,
             null,
             r.createElement(
               "div",
@@ -8836,16 +8836,16 @@
             )
           ),
           r.createElement(
-            He.S,
+            He.SV,
             null,
             r.createElement(Xa, { userYearInReview: a, steamId: i, nYear: s })
           ),
           r.createElement(
-            He.S,
+            He.SV,
             null,
             r.createElement(da, { userYearInReview: a })
           ),
-          r.createElement(He.S, null, r.createElement(un, null)),
+          r.createElement(He.SV, null, r.createElement(un, null)),
           r.createElement(Kr, { userYearInReview: a })
         );
       }
@@ -8893,7 +8893,7 @@
               "div",
               { className: Me().HeaderShareCtn },
               r.createElement(
-                He.S,
+                He.SV,
                 null,
                 r.createElement(Xa, {
                   userYearInReview: a,
@@ -9059,7 +9059,7 @@
                     s.ZP,
                     { method: "yearinreview" },
                     r.createElement(
-                      He.S,
+                      He.SV,
                       null,
                       r.createElement(tn, {
                         steamId: e.match.params.steamId,

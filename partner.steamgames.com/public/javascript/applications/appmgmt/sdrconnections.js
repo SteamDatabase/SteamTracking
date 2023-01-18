@@ -1289,7 +1289,7 @@
         const I = "ded" == S ? "Gameserver" : "Peer",
           R = !1;
         return s.createElement(
-          m.S,
+          m.SV,
           null,
           s.createElement(
             "div",

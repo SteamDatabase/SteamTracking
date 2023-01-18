@@ -7310,7 +7310,7 @@
                   "div",
                   { className: yt.BroadcastCtn },
                   i.createElement(
-                    bt.S,
+                    bt.SV,
                     null,
                     i.createElement(
                       i.Suspense,

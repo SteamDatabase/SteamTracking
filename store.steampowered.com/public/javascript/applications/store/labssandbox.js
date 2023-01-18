@@ -1799,15 +1799,15 @@
       })(X || (X = {}));
       var Q = a(32367),
         $ = (a(14146), a(159));
-      class K {
+      class V {
         constructor(e) {
           this.m_SteamInterface = e;
         }
         LoadPlaytimeClusters(e, t, a, s) {
-          return new V(this.m_SteamInterface, e, t, a, s);
+          return new K(this.m_SteamInterface, e, t, a, s);
         }
       }
-      class V {
+      class K {
         constructor(e, t, a, s, r) {
           this.m_callbacksLoaded = new N.pB();
           const i = M.gA.Init(H);
@@ -1861,7 +1861,7 @@
         const { SteamInterface: t } = e,
           a = _.useRef();
         return (
-          a.current || (a.current = new K(t)),
+          a.current || (a.current = new V(t)),
           _.createElement(
             _.Fragment,
             null,
@@ -1974,7 +1974,7 @@
           null,
           t.map((e) =>
             _.createElement(
-              ae.S,
+              ae.SV,
               { key: e.nClusterID },
               _.createElement(oe, { cluster: e })
             )
@@ -1998,7 +1998,7 @@
               { className: Y.ClusterInfo },
               _.createElement("h1", null, "Cluster ", t.nClusterID),
               _.createElement(
-                ae.S,
+                ae.SV,
                 null,
                 _.createElement(
                   "div",
@@ -2059,7 +2059,7 @@
               { className: Y.ClusterMembers },
               _.createElement("h3", null, "Similar titles:"),
               _.createElement(
-                ae.S,
+                ae.SV,
                 null,
                 _.createElement(
                   "ul",
@@ -2703,7 +2703,7 @@
               "div",
               { className: S.SandboxSection },
               _.createElement(
-                ae.S,
+                ae.SV,
                 null,
                 _.createElement(
                   b.rs,

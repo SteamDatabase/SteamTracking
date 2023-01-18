@@ -243,7 +243,7 @@
     },
     70350: (e, t, a) => {
       "use strict";
-      a.d(t, { KE: () => H, T4: () => U, _G: () => L, zY: () => F });
+      a.d(t, { KE: () => V, T4: () => U, _G: () => L, zY: () => F });
       var n = a(70655),
         r = a(9669),
         o = a.n(r),
@@ -361,7 +361,7 @@
         if (0 == _.length) return i.createElement("div", null);
         const D = E.sV.GetClanInfoByClanAccountID(t);
         return i.createElement(
-          w.S,
+          w.SV,
           null,
           i.createElement(
             "div",
@@ -598,7 +598,7 @@
             )
         );
       }
-      function H(e) {
+      function V(e) {
         const { event: t, imageURLOverride: a, onClick: n } = e,
           r = (0, c.jM)(T.De.LANGUAGE),
           [o, s, d] = (0, l.SZ)(() =>
@@ -910,7 +910,7 @@
               []
             ),
             n.createElement(
-              b.S,
+              b.SV,
               null,
               n.createElement(
                 "div",
@@ -932,7 +932,7 @@
                     "(VO) Load Debug Info"
                   )
                 ),
-                n.createElement(b.S, null, n.createElement(F, { info: a }))
+                n.createElement(b.SV, null, n.createElement(F, { info: a }))
               )
             )
           );
@@ -1294,15 +1294,15 @@
               )
           );
         };
-      var H = a(63103),
-        V = a(93981),
+      var V = a(63103),
+        H = a(93981),
         z = a(44298),
         X = a(2388),
         W = a(83147);
       function q(e) {
         const t = X.y$.GetProfileByAccountID(e.GetAccountID());
         if (t) {
-          let a = new V.Pv(e);
+          let a = new H.Pv(e);
           return (
             (a.m_strPlayerName = t.persona_name),
             (a.m_strAvatarHash = t.avatar_hash),
@@ -1379,7 +1379,7 @@
         let l = null == s ? void 0 : s.GetAssets().GetMainCapsuleURL(),
           i = l && l.length > 0;
         return n.createElement(
-          b.S,
+          b.SV,
           null,
           n.createElement(
             "div",
@@ -1583,7 +1583,7 @@
           );
           const E = () => e.closeModal && e.closeModal();
           return n.createElement(
-            b.S,
+            b.SV,
             null,
             n.createElement(
               T.e1,
@@ -1688,7 +1688,7 @@
           );
           const m = () => e.closeModal && e.closeModal();
           return n.createElement(
-            b.S,
+            b.SV,
             null,
             n.createElement(
               T.e1,
@@ -1776,13 +1776,13 @@
             null,
             n.createElement(
               "div",
-              { className: (0, O.Z)(H.BroadcastPage) },
+              { className: (0, O.Z)(V.BroadcastPage) },
               n.createElement(
                 "div",
                 { className: (0, O.Z)(C().BroadcastAndChat) },
                 Boolean(!v.Get().BShowOnlyChat()) &&
                   n.createElement(
-                    b.S,
+                    b.SV,
                     null,
                     n.createElement(
                       "div",
@@ -1800,7 +1800,7 @@
                           "div",
                           { className: C().BroadcastPlayerContainer },
                           n.createElement(
-                            b.S,
+                            b.SV,
                             null,
                             n.createElement(S.default, {
                               steamIDBroadcast: a,
@@ -1820,7 +1820,7 @@
                       "div",
                       { className: C().ChatContainer },
                       n.createElement(
-                        b.S,
+                        b.SV,
                         null,
                         n.createElement(E.c, {
                           emoticonStore: f.D$,
@@ -1862,7 +1862,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, O.Z)(A().ValveOnlyBackground, H.DebugCtn),
+                      className: (0, O.Z)(A().ValveOnlyBackground, V.DebugCtn),
                     },
                     n.createElement(U, null)
                   )
@@ -1870,13 +1870,13 @@
               Boolean(a.m_strAppId && Number.parseInt(a.m_strAppId) > 7) &&
                 n.createElement(
                   "div",
-                  { className: H.GameInfoCtn },
+                  { className: V.GameInfoCtn },
                   n.createElement(
                     "div",
-                    { className: H.GameAboutTitleCtn },
+                    { className: V.GameAboutTitleCtn },
                     n.createElement(
                       "div",
-                      { className: H.GameAboutTitle },
+                      { className: V.GameAboutTitle },
                       " ",
                       (0, x.Xx)("#Broadcast_About_Game"),
                       " "
@@ -1889,7 +1889,7 @@
                   ),
                   n.createElement(
                     "div",
-                    { className: H.GameInfo },
+                    { className: V.GameInfo },
                     n.createElement(N.ju, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
@@ -1899,7 +1899,7 @@
               Boolean(r) &&
                 n.createElement(
                   "div",
-                  { className: H.RelatedEvents },
+                  { className: V.RelatedEvents },
                   n.createElement(D._G, {
                     clanAccountID: r.clanAccountID,
                     trackingLocation: 6,
@@ -1933,18 +1933,18 @@
             return null;
           return n.createElement(
             "div",
-            { className: H.ControlCtn },
+            { className: V.ControlCtn },
             n.createElement(
               "div",
-              { className: H.ControlsTitle },
+              { className: V.ControlsTitle },
               (0, x.Xx)("#Broadcaster_Control_title")
             ),
             n.createElement(
               "div",
-              { className: H.TitleInput },
+              { className: V.TitleInput },
               n.createElement(
                 "div",
-                { className: H.Options },
+                { className: V.Options },
                 n.createElement(g.II, {
                   type: "text",
                   label: (0, x.Xx)("#Broadcast_title_title"),
@@ -1985,7 +1985,7 @@
               ),
               n.createElement(
                 "div",
-                { className: H.StopCtn },
+                { className: V.StopCtn },
                 n.createElement(
                   g.zx,
                   {

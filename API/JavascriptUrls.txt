@@ -525,6 +525,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1c
 ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/${}_${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${clanAccountID}/${}
+${MEDIA_CDN_COMMUNITY_URL}images/clans/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/${}${}${}
@@ -803,7 +804,6 @@ ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
 ${STORE_BASE_URL}category/${category}
 ${STORE_BASE_URL}category/${}
-${STORE_BASE_URL}charts/topnewreleases/${}
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
@@ -814,6 +814,7 @@ ${STORE_BASE_URL}contenthub/ajaxgetcontenthubspecials
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyoumaincapsule
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyouplaytime
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyoupopular
+${STORE_BASE_URL}contenthub/ajaxgetdlcstatsforuser
 ${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
@@ -1996,8 +1997,6 @@ https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/${appid}/${}
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/646570/85b510e2e164070a59947395ff91d250c010a5c9.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/SalePageTemplates.zip
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_1.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_2.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_3.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_4.jpg
 https://steamcommunity-a.akamaihd.net/economy/image/IzMF03bk9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdA3g5gMEPvUZZEaiHLrVJRsl8vGuCUY7Cjc9ehDNVzDMAfnStiiQrcex4NM6b9Az2pKmoHWDyenHNIiDeGQNqGeZZN23bqzWk7bmXFGmYROl-QFpXL6ZQoGVKOMCOP0A00YUCqTe52U5tGVAqfddCdR2Ew3kSNrh4n3gRJpsAzCamJJSLhlsxPhNuU7rvXr7DbIPzkionWRNgTKRPYtqcvDuspsDnLPqHrcIm1Wk

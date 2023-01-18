@@ -4882,6 +4882,7 @@ div.creatorhomeembed_SocialContainer_1MvXz {
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
+    min-width: 320px;
     scroll-snap-align: start;
   }
   .salepreviewwidgets_OuterCapsuleContainer_Btar9
@@ -14239,9 +14240,6 @@ button.rbc-input::-moz-focus-inner {
   float: right;
 }
 
-.marketingmessagefiltersedit_Dummy_3glD2 {
-  background-color: hotpink;
-}
 .optin_admin_dashboard_DashboardCtn_24Fut {
   max-width: 1280px;
   margin: 40px auto 0 auto;

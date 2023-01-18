@@ -8660,7 +8660,7 @@
                   )
                 )),
             n.createElement(
-              Ce.S,
+              Ce.SV,
               null,
               n.createElement(
                 T.e1,
@@ -8821,7 +8821,7 @@
               string: (0, z.Xx)("#FAQPublish_PublishWait"),
             });
           return n.createElement(
-            Ce.S,
+            Ce.SV,
             null,
             n.createElement(
               T.e1,
@@ -8937,7 +8937,7 @@
                   )
                 )),
             n.createElement(
-              Ce.S,
+              Ce.SV,
               null,
               n.createElement(
                 T.e1,
@@ -9030,7 +9030,7 @@
                     })
                   );
           return n.createElement(
-            Ce.S,
+            Ce.SV,
             null,
             n.createElement(
               "div",
@@ -9306,7 +9306,7 @@
           const { draft: t, bPreview: a } = e,
             i = t.BHasPublished();
           return n.createElement(
-            Ce.S,
+            Ce.SV,
             null,
             n.createElement(
               "div",
@@ -9467,7 +9467,7 @@
                   i.visible_in_china_realm)) &&
               !!(null == r ? void 0 : r.last_publish_timestamp);
           return n.createElement(
-            Ce.S,
+            Ce.SV,
             null,
             n.createElement(
               "div",
@@ -9556,7 +9556,7 @@
           const t = new L.K(m.JA.CLANSTEAMID),
             { draft: a, bbcodeEditorRef: o } = e;
           return n.createElement(
-            Ce.S,
+            Ce.SV,
             null,
             n.createElement(
               "div",

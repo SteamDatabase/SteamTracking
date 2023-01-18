@@ -1142,6 +1142,14 @@ background-color: transparent;
 	overflow: hidden;
 }
 
+.profile_customization_block.replay_showcase {
+	padding: 0;
+}
+
+.profile_customization_block.replay_showcase img {
+	width: 100%;
+}
+
 .myart .profile_customization_block {
 	position: relative;
 	border-radius: 5px;

@@ -15,14 +15,14 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    415: (t, e, n) => {
+    296: (t, e, n) => {
       "use strict";
       n.r(e), n.d(e, { InitializeGamepadNavigation: () => oe });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(666);
+        a = n(473);
       !(function (t) {
         (t[(t.GAMEPAD = 0)] = "GAMEPAD"),
           (t[(t.KEYBOARD = 1)] = "KEYBOARD"),
@@ -91,8 +91,8 @@
             : console.assert(!!t, e, ...n)
           : t || console.warn(e, ...n);
       }
-      var _ = n(561),
-        p = n(507);
+      var _ = n(410),
+        p = n(370);
       class f extends class {
         GetObject(t) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -440,7 +440,7 @@
       function S(t) {
         return N.SerializeNavState(t, !0, !1);
       }
-      class R extends N {
+      class D extends N {
         constructor() {
           super(...arguments), (this.m_rgHistory = []);
         }
@@ -452,7 +452,7 @@
             N.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), t);
         }
       }
-      class D extends N {
+      class R extends N {
         constructor() {
           super(...arguments), (this.m_mapHistory = new Map());
         }
@@ -469,7 +469,7 @@
           );
         }
       }
-      var I = n(446);
+      var I = n(510);
       function T(t) {
         return null != t && void 0 !== t.focus;
       }
@@ -1338,14 +1338,14 @@
           return this.m_node.NavKey;
         }
         PushState() {
-          this.m_History || (this.m_History = new R(this.m_node)),
+          this.m_History || (this.m_History = new D(this.m_node)),
             this.m_History.PushState();
         }
         PopState(t = 0) {
           this.m_History && this.m_History.PopState(t);
         }
         SaveState(t) {
-          this.m_StateHistory || (this.m_StateHistory = new D(this.m_node)),
+          this.m_StateHistory || (this.m_StateHistory = new R(this.m_node)),
             this.m_StateHistory.SaveState(t);
         }
         RestoreState(t, e = 0) {
@@ -2821,8 +2821,8 @@
       (0, o.gn)([_.a], St.prototype, "OnDOMFocus", null),
         (0, o.gn)([_.a], St.prototype, "OnDOMBlur", null),
         (0, o.gn)([_.a], St.prototype, "OnNavigationEvent", null);
-      const Rt = "GamepadInput";
-      var Dt;
+      const Dt = "GamepadInput";
+      var Rt;
       function It(t, e) {
         return !!t && "object" == typeof t.SteamClient && e in t.SteamClient;
       }
@@ -2839,7 +2839,7 @@
           (t[(t.None = 2)] = "None"),
           (t[(t.Basic = 3)] = "Basic"),
           (t[(t.Full = 4)] = "Full");
-      })(Dt || (Dt = {}));
+      })(Rt || (Rt = {}));
       class yt {
         constructor(t) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -2895,8 +2895,8 @@
           }
         }
         SendGameInputState(t) {
-          let e = Dt.Basic;
-          window.bSupportsGamepadUI && (e = Dt.Full),
+          let e = Rt.Basic;
+          window.bSupportsGamepadUI && (e = Rt.Full),
             this.m_postMessage.PostMessage({
               type: "GameInputState",
               data: { source: t, support: e },
@@ -2928,11 +2928,11 @@
         }
         PostMessage(t) {
           let e = JSON.stringify(t);
-          this.m_postWindow.postMessage({ gamepadMessage: Rt, args: e }, "*");
+          this.m_postWindow.postMessage({ gamepadMessage: Dt, args: e }, "*");
         }
         OnMessage(t) {
           let e = null == t ? void 0 : t.data;
-          if (e && e.gamepadMessage == Rt && e.args) {
+          if (e && e.gamepadMessage == Dt && e.args) {
             const t = JSON.parse(e.args);
             this.m_fnCallback(t);
           }
@@ -2948,10 +2948,10 @@
         }
         PostMessage(t) {
           let e = JSON.stringify(t);
-          SteamClient.BrowserView.PostMessageToParent(Rt, e);
+          SteamClient.BrowserView.PostMessageToParent(Dt, e);
         }
         OnMessage(t, e) {
-          if (t == Rt) {
+          if (t == Dt) {
             const t = JSON.parse(e);
             this.m_fnCallback(t);
           } else if ("Checkout" == t) {
@@ -2968,7 +2968,7 @@
         }
       }
       (0, o.gn)([_.a], Et.prototype, "OnMessage", null);
-      n(745);
+      n(389);
       class Lt extends a.oH {
         constructor(t) {
           super(),
@@ -3010,8 +3010,14 @@
             return !1;
           const e = t.code;
           let n = t.target;
+          const i = Array.from(
+            n.ownerDocument.getElementsByClassName("gpfocus")
+          ).some((t) =>
+            Array.from(t.classList).some((t) => t.includes("virtualkeyboard"))
+          );
           switch (e) {
             case "ArrowUp": {
+              if (i) return !0;
               let e = null == n ? void 0 : n.value.indexOf("\n");
               return (
                 "TEXTAREA" === t.target.nodeName &&
@@ -3020,6 +3026,7 @@
               );
             }
             case "ArrowDown": {
+              if (i) return !0;
               let e = null == n ? void 0 : n.value.lastIndexOf("\n");
               return (
                 "TEXTAREA" === t.target.nodeName &&
@@ -3031,15 +3038,17 @@
             }
             case "ArrowLeft":
               return (
-                (null == n ? void 0 : n.selectionStart) > 0 &&
-                (null == n ? void 0 : n.selectionEnd) > 0
+                !!i ||
+                ((null == n ? void 0 : n.selectionStart) > 0 &&
+                  (null == n ? void 0 : n.selectionEnd) > 0)
               );
             case "ArrowRight":
               return (
-                (null == n ? void 0 : n.selectionStart) <
+                !!i ||
+                ((null == n ? void 0 : n.selectionStart) <
                   (null == n ? void 0 : n.value.length) &&
-                (null == n ? void 0 : n.selectionEnd) <
-                  (null == n ? void 0 : n.value.length)
+                  (null == n ? void 0 : n.selectionEnd) <
+                    (null == n ? void 0 : n.value.length))
               );
             case "Enter":
             case "Backspace":
@@ -3596,8 +3605,8 @@
             maintainX: F,
             maintainY: N,
             enableVirtualKeyboard: S,
-            preferredChild: R,
-            onOKActionDescription: D,
+            preferredChild: D,
+            onOKActionDescription: R,
             onCancelActionDescription: I,
             onSecondaryActionDescription: T,
             onOptionsActionDescription: y,
@@ -3752,7 +3761,7 @@
             ? ($.navEntryPreferPosition = wt.MAINTAIN_X)
             : N
             ? ($.navEntryPreferPosition = wt.MAINTAIN_Y)
-            : R && ($.navEntryPreferPosition = wt.PREFERRED_CHILD),
+            : D && ($.navEntryPreferPosition = wt.PREFERRED_CHILD),
           w &&
             (!1 !== $.focusable && ($.focusable = !0),
             _.on("vgp_onok", "firstChild" === w ? Yt : jt),
@@ -3781,7 +3790,7 @@
             ((C.m_FocusRing = Vt(_)),
             "static" == _.css("position") && _.css("position", "relative"));
         const tt = m({
-            onOKActionDescription: D,
+            onOKActionDescription: R,
             onCancelActionDescription: I,
             onSecondaryActionDescription: T,
             onOptionsActionDescription: y,

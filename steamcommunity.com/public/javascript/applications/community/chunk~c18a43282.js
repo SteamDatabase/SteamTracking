@@ -34764,7 +34764,7 @@
                     hoverProps: d,
                     fnClose: this.ClosePopup,
                   },
-                  l.createElement(w.S, null, t)
+                  l.createElement(w.SV, null, t)
                 ),
                 m
               ),
@@ -34810,7 +34810,7 @@
                 },
               }
             ),
-            l.createElement(w.S, null, s)
+            l.createElement(w.SV, null, s)
           );
         }
       }

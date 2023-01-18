@@ -120,7 +120,7 @@
             [n, r]
           );
           return d.createElement(
-            D.S,
+            D.SV,
             null,
             d.createElement(g.II, {
               type: "text",

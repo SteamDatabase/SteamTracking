@@ -1495,7 +1495,7 @@
               "div",
               { className: (0, v.Z)(x().PricingGrid, t && "CompactMode") },
               a.createElement(
-                T.S,
+                T.SV,
                 null,
                 a.createElement(S.ReactTabulator, {
                   ref: o,
