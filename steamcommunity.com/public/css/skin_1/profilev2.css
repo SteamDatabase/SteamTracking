@@ -1132,6 +1132,9 @@ background-color: transparent;
 	overflow: hidden;
 }
 
+.profile_customization.pointer {
+	cursor: pointer;
+}
 
 .profile_customization_block {
 	position: relative;
@@ -1142,11 +1145,16 @@ background-color: transparent;
 	overflow: hidden;
 }
 
-.profile_customization_block.replay_showcase {
+.profile_customization_block.replay_showcase_block {
 	padding: 0;
+	border-radius: 0;
 }
 
-.profile_customization_block.replay_showcase img {
+.profile_customization_block.replay_showcase_block.preview {
+	filter: blur(5px) grayscale(.7);
+}
+
+.profile_customization_block.replay_showcase_block img {
 	width: 100%;
 }
 
