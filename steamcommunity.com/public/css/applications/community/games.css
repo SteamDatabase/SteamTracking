@@ -365,6 +365,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   height: calc(2.1 * var(--typography-font-size-large));
   margin-right: 32px;
 }
@@ -425,6 +426,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   position: absolute;
   top: 12px;
   right: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameLinks_35fxd svg {
+  width: 18px;
 }
 .GamepadMode
   .gameslistitems_GamesListItem_2-pQF
@@ -756,6 +762,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
   gap: 15px;
 }
 .gameslistitems_NavButton_3aNUl svg {

@@ -7355,7 +7355,7 @@
                   t.ownerDocument.defaultView.removeEventListener("scroll", e);
               }
             );
-          }, [e.length, r, a, t, l]),
+          }, [e.length, e, r, a, t, l]),
           n.createElement(
             n.Fragment,
             null,
@@ -7605,8 +7605,7 @@
               n.createElement(Pe.V, {
                 string: (0, ge.Xx)("#Loading"),
                 position: "center",
-              }),
-              ";"
+              })
             )
           : n.createElement(
               Ge.p,

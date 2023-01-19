@@ -3439,6 +3439,12 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 	background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
 }
 
+.new_wishlist_tab_position .sectionTab.wishlist {
+	position: absolute;
+	right: 0;
+	margin-bottom: 6px;
+    top: -3px;
+}
 
 .profile_paging {
 	background-color: rgba( 0, 0, 0, 0.2 );
