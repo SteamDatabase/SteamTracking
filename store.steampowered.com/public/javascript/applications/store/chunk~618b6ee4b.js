@@ -19697,9 +19697,11 @@
                 : n.parent_app_sort),
           I = a.useMemo(() => {
             var e;
-            return null === (e = T.Z.Get().GetApp(_[0].id)) || void 0 === e
-              ? void 0
-              : e.GetParentAppID();
+            return _ && _.length > 0
+              ? null === (e = T.Z.Get().GetApp(_[0].id)) || void 0 === e
+                ? void 0
+                : e.GetParentAppID()
+              : 0;
           }, [_]),
           A = a.useMemo(() => {
             var e;
