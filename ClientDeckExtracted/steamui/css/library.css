@@ -11560,6 +11560,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   height: 32px;
   padding: 6px 0px;
   opacity: 0.5;
+  color: #fff;
 }
 .appdetailsfeatureicon_Container_1SIa8 .appdetailsfeatureicon_Label_1VoVz {
   color: #919191;
@@ -20886,8 +20887,17 @@ div.creatorhomeembed_SocialContainer_1MvXz {
 .appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf {
   width: 20%;
   max-width: 34px;
+  max-height: 21px;
+  display: flex;
+  background-color: #0e141b;
+  padding: 2px;
+  border-radius: 10px;
 }
 .appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf img {
+  width: 100%;
+}
+.appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf svg {
+  max-height: 23px;
   width: 100%;
 }
 .appportrait_LibraryItemBox_WYgDg.appportrait_InLibraryManager_6vZ6m

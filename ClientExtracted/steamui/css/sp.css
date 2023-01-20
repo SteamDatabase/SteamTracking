@@ -5026,6 +5026,15 @@ button.controllerconfigurator_SmallTopButtons_1J8Xc.DialogButton {
 .controllerconfiguratorchoosebinding_KeyboardContainer_3-Br0 {
   margin-top: 16px;
 }
+.controllerconfiguratorchoosebinding_CombinedKeyboardContainer_1TVSY {
+  display: flex;
+  align-items: center;
+  transform: scale(0.75);
+}
+.controllerconfiguratorchoosebinding_CombinedKeyboardContainer_1TVSY
+  .controllerconfiguratorchoosebinding_NumpadPageContainer_2lZkU {
+  margin-top: 16px;
+}
 .controllerconfiguratorchoosebinding_NumpadPageContainer_2lZkU {
   margin-left: 33px;
   flex-direction: row;
@@ -14388,6 +14397,13 @@ button.keyboardsettings_ShowKeyboardButton_3vbFn svg {
   right: 0;
   background-color: #0e141b;
 }
+.customizationsettings_Checkmark_2XRQA {
+  color: #59bf40;
+  visibility: hidden;
+}
+.customizationsettings_Checkmark_2XRQA.customizationsettings_Selected_29Wnh {
+  visibility: visible;
+}
 @keyframes steamdeckbootupthrobber_ItemFocusAnim-darkerGrey-nocolor_p-Xec {
   from {
     background: #3d4450;
@@ -15887,11 +15903,6 @@ div.LowPerfMode
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  background-color: transparent;
-  transition: background-color 300ms cubic-bezier(0.16, 0.86, 0.43, 0.99);
-}
-.mainmenu_Container_3vzvO.mainmenu_Open_3apLK {
-  background-color: rgba(7, 9, 13, 0.85);
 }
 .mainmenu_ExitAnchor_3TqAn {
   position: absolute;

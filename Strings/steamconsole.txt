@@ -39,7 +39,7 @@ __thread_bss
 __DATA
 __bss
 __DATA
-y6
+y5
 __common
 __DATA
 H
@@ -795,6 +795,7 @@ ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed.
 resizeNumBits >= 0
 !m_pInt
 GetInts()
+{}()'
 {}()':
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 pName
@@ -1304,7 +1305,7 @@ j
 @
 0
 Ic
-0
+J
 0
 
 =

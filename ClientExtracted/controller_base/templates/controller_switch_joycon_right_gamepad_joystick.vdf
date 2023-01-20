@@ -189,7 +189,7 @@
 	}
 	"group"
 	{
-		"id"		"3"
+		"id"		"1"
 		"mode"		"joystick_move"
 		"inputs"
 		{
@@ -212,67 +212,10 @@
 			}
 		}
 	}
+
 	"group"
 	{
-		"id"		"4"
-		"mode"		"trigger"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button TRIGGER_LEFT"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
-		}
-		"settings"
-		{
-			"output_trigger"		"1"
-		}
-	}
-	"group"
-	{
-		"id"		"5"
-		"mode"		"trigger"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button TRIGGER_RIGHT"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
-					}
-				}
-			}
-		}
-		"settings"
-		{
-			"output_trigger"		"2"
-		}
-	}
-	"group"
-	{
-		"id"		"7"
+		"id"		"2"
 		"mode"		"switches"
 		"inputs"
 		{
@@ -285,19 +228,6 @@
 						"bindings"
 						{
 							"binding"		"xinput_button start"
-						}
-					}
-				}
-			}
-			"button_menu"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button select"
 						}
 					}
 				}
@@ -336,11 +266,9 @@
 		"name"		"Default"
 		"group_source_bindings"
 		{
-			"7"		"switch active"
+			"2"		"switch active"
 			"0"		"button_diamond active"
-			"3"		"joystick active"
-			"4"		"left_trigger active"
-			"5"		"right_trigger active"
+			"1"		"joystick active"
 		}
 	}
 	"settings"

@@ -83,6 +83,7 @@ message CContentServerDirectory_RequestPeerContentServer_Request {
 	optional uint64 steamid = 2;
 	optional uint64 server_remote_client_id = 3;
 	optional uint32 app_id = 4;
+	optional uint32 current_build_id = 5;
 }
 
 message CContentServerDirectory_RequestPeerContentServer_Response {

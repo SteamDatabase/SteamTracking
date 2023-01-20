@@ -130,7 +130,7 @@
     },
     87964: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { FullLogin: () => f, default: () => v });
+      n.r(t), n.d(t, { FullLogin: () => L, default: () => f });
       var o = n(67294),
         l = n(8199),
         i = n.n(l),
@@ -139,13 +139,16 @@
         a = (n(36378), n(67862)),
         u = (n(38440), n(70655)),
         c = n(27194),
-        d = n(86487);
-      n(29669);
-      let p = !1;
-      function m() {
+        d = n(86487),
+        p = n(29669);
+      let m = !1;
+      function w() {
         return (0, u.mG)(this, void 0, void 0, function* () {
-          if (p) return;
-          p = !0;
+          if (m) return;
+          if (((m = !0), r.De.USE_LONGEST_LOC_STRING)) {
+            let e = (e) => (0, d.I2)(e);
+            return void (yield (0, p.p)(e));
+          }
           const e = r.De.LANGUAGE,
             t = c.LJ.GetLanguageFallback(e),
             n = e === t,
@@ -154,22 +157,22 @@
         });
       }
       n(96794), n(10708);
-      var w = n(63709),
-        S = n(30946),
-        g = n(45520),
-        C = n(83893),
-        h = (n(46269), n(69144), n(42608));
+      var S = n(63709),
+        g = n(30946),
+        C = n(45520),
+        h = n(83893),
+        v = (n(46269), n(69144), n(42608));
       n(7874);
-      function v(e) {
-        return f(e);
-      }
       function f(e) {
+        return L(e);
+      }
+      function L(e) {
         const [t, n] = (0, o.useState)(!0),
           l = (function () {
             const [e, t] = o.useState(!1);
             return (
               o.useEffect(() => {
-                Promise.all([m()]).then(() => {
+                Promise.all([w()]).then(() => {
                   t(!0);
                 });
               }, []),
@@ -178,7 +181,7 @@
           })();
         return t
           ? l
-            ? o.createElement(L, Object.assign({}, e))
+            ? o.createElement(E, Object.assign({}, e))
             : null
           : o.createElement(
               "div",
@@ -191,18 +194,18 @@
               "Initiate"
             );
       }
-      function L(e) {
+      function E(e) {
         const t = (0, r.eL)();
         let [n, l] = (0, o.useState)(null);
         const [u, d] = (0, o.useState)(!1),
-          p = (0, C.Wy)(),
-          [m, v] = (0, o.useState)(!1),
+          p = (0, h.Wy)(),
+          [m, w] = (0, o.useState)(!1),
           [f, L] = (0, o.useState)(!1);
         let E = new a.zn(),
           _ = E.GetServiceTransport();
         !(function (e) {
           (0, o.useEffect)(() => {
-            (0, w.Uh)().Init("Client Login", CLSTAMP, e);
+            (0, S.Uh)().Init("Client Login", CLSTAMP, e);
           }, [e]);
         })(_);
         const T = !!e.refreshLogin;
@@ -227,14 +230,14 @@
         return o.createElement(
           "div",
           {
-            className: (0, g.Z)(i().Login, e.includeTitleBar && i().WithTitle),
+            className: (0, C.Z)(i().Login, e.includeTitleBar && i().WithTitle),
           },
           e.includeTitleBar &&
             e.popup &&
             o.createElement(
               "div",
               { className: i().TitleContainer },
-              o.createElement(S.T, { popup: e.popup, hideMinMax: !0 })
+              o.createElement(g.T, { popup: e.popup, hideMinMax: !0 })
             ),
           o.createElement(s.i9, {
             key: N,
@@ -281,7 +284,7 @@
             joinLinkStyle: () => {
               var e;
               t
-                ? (v(!0),
+                ? (w(!0),
                   null === (e = null == p ? void 0 : p.ownerWindow) ||
                     void 0 === e ||
                     e.SteamClient.Window.HideWindow())
@@ -298,7 +301,7 @@
             },
           }),
           m &&
-            o.createElement(h.w, {
+            o.createElement(v.w, {
               strName: (0, c.Xx)("#AccountCreation_Title"),
               strURL: `${r.De.STORE_BASE_URL}join/`,
               popupWidth: 900,
@@ -306,7 +309,7 @@
               showFooter: !1,
               onClose: () => {
                 var e, t;
-                v(!1),
+                w(!1),
                   null === (e = null == p ? void 0 : p.ownerWindow) ||
                     void 0 === e ||
                     e.SteamClient.Window.ShowWindow(),
@@ -316,7 +319,7 @@
               },
             }),
           f &&
-            o.createElement(h.w, {
+            o.createElement(v.w, {
               strName: (0, c.Xx)("#SignInHelpTitle"),
               strURL: `${r.De.HELP_BASE_URL}wizard/HelpWithLogin`,
               popupWidth: 1024,

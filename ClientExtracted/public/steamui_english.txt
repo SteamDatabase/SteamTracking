@@ -3997,6 +3997,7 @@ Set a category for these games to help you find them quickly and organize your L
 "steam_menu_minimode"		"Small Mode"
 "steam_menu_largemode"	"Large Mode"
 "steam_menu_bigpicturemode"	"Big Picture Mode"
+"steam_menu_close_bigpicturemode"	"Exit Big Picture Mode"
 "steam_menu_startvr"		"Start SteamVR (BETA)"
 "steam_menu_exitvr"		"Exit SteamVR (BETA)"
 

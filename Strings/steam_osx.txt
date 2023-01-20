@@ -15,22 +15,14 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-027
-027
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
-8;7
 0
-8;7
 __cstring
 __TEXT
-p;7
-p;7
 __unwind_info
 __TEXT
-hS;
-hS;
 __DATA
 <
 <
@@ -80,7 +72,6 @@ __bss
 __DATA
 __common
 __DATA
-~D
 H
 __LINKEDIT
 @E
@@ -135,24 +126,25 @@ h
 &(
 $(
 $(
-0
 7
+0
 !(
 (
 9
 0
 @
 @
-h9
 @
 @
 @
 @
 ]&
 $
+w6
 Hi
 Hi
 Hi
+$9
 ?
 ?
 ?
@@ -166,8 +158,6 @@ Hi
 1
 1
 1
-16
-9
 &
 &
 2
@@ -182,7 +172,6 @@ w0
 '
 &
 &
->8
 \(
 &
 0
@@ -252,6 +241,10 @@ IcE
 @
 8
 .
+4
+4
+\3
++3
 V
 15CBaseFileSystem
 11IFileSystem
@@ -1611,6 +1604,7 @@ N16CCookieContainer11CCookieInfoE
 17CHTTPRequestParam
 10CUtlVectorI17CHTTPRequestParam10CUtlMemoryIS0_EE
 10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE
+<html><body>Fake captive portal</body></html>
 33CHTTPDefaultRedirectEnableHandler
 20IHTTPRedirectHandler
 18CHTTPClientRequest
@@ -2323,7 +2317,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Jan 16 2023 12:03:03
+Startup - updater built Jan 19 2023 17:34:46
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2610,8 +2604,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jan 16 2023
-12:03:03
+Jan 19 2023
+17:34:46
 crashhandler004
 steam
 Steam Executable Crash
@@ -2708,7 +2702,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-12:03:01
+17:34:44
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10473,7 +10467,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-12:01:19
+17:32:52
 Jan
 Feb
 Mar
@@ -12128,12 +12122,10 @@ k_EMsgRemoteClientStartStream
 k_EMsgRemoteClientStartStreamResponse
 k_EMsgRemoteClientPing
 k_EMsgRemoteClientPingResponse
-k_EMsgClientUnlockStreaming
-k_EMsgClientUnlockStreamingResponse
+k_EMsgClientUnlockH264
+k_EMsgClientUnlockH264Response
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
-k_EMsgClientUnlockHEVC
-k_EMsgClientUnlockHEVCResponse
 k_EMsgClientPlayingSessionState
 k_EMsgClientKickPlayingSession
 k_EMsgClientBroadcastInit
@@ -12864,32 +12856,36 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-cc7
+#>7
 
-~c7
+e7
+ve7
+~e7
+4_7
 
 0
 &(
 $(
 $(
-0
 7
+0
 !(
 (
 9
 0
 @
 @
-h9
 @
 @
 @
 @
 ]&
 $
+w6
 Hi
 Hi
 Hi
+$9
 ?
 ?
 ?
@@ -12903,8 +12899,6 @@ Hi
 1
 1
 1
-16
-9
 &
 &
 2
@@ -12919,7 +12913,6 @@ w0
 '
 &
 &
->8
 \(
 &
 0
@@ -12989,31 +12982,38 @@ IcE
 @
 8
 .
+4
+4
+\3
++3
 V
 7
 -
 -
 =
 t,
-.2
 =
 ,
+G1
 5
 5
 +
 +
 +
+}0
 !
 @
+%0
 "
 7
 @
-v/
-9/
 &
+/
+/
 )
-k.
-f.
+u.
+.
+.
 .
 .
 .
@@ -13021,11 +13021,12 @@ f.
 .
 (
 2
-`-
+g5
 c'
 ['
 S1
 1
+-
 '
 '
 '
@@ -13063,14 +13064,11 @@ d.
 `
 `
 @
-C*
 
 j
 j
 ,
 Pj
-*
-*
 *
 *
 *
@@ -13081,16 +13079,13 @@ j
 IcU
 E;e
 M)u
-)
 9
 =
 =
 @
 =
-d(
 "
-(
-(
+"(
 (
 =
 %
@@ -13387,7 +13382,6 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 '
 '
-'
 &
 =
 @
@@ -13402,6 +13396,8 @@ j
 j
 j
 j
+&&
+&
 &
 j
 j
@@ -13412,18 +13408,9 @@ o!
 t$I;M
 $
 $
-$
-$
-$
-$
 e
 W
 ,7~5d
-#-k,
-#^,
-#[,
-#-N,
-#K,
 H
 0
 
@@ -13442,6 +13429,7 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @8
 `$
+v(
 @
 ,
 *
@@ -13452,7 +13440,6 @@ Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 !
 0
 0
-$#
 N
 N
 N
@@ -13708,7 +13695,6 @@ H=
 &
 E
 0
-
 Hi
 E
 0
@@ -13728,13 +13714,18 @@ E
 @
 0
 0
-z
 
 
 Hc
-0
+w
+,
 0
 
+
+
+
+4
+0
 @
 @
 @
@@ -13755,11 +13746,12 @@ P
 @
 @
 0
-s
 =a
-4
-/
 0
+
+
+
+
 
 Hi
 $

@@ -52,7 +52,7 @@ __data
 __DATA
 __bss
 __DATA
-P9
+P8
 __common
 __DATA
 H
@@ -1842,6 +1842,7 @@ resizeNumBits >= 0
 !m_pInt
 GetInts()
 CVariableBitStringBase
+{}()'
 {}()':
 Convars
 Bad expression token: %c at %d in %s

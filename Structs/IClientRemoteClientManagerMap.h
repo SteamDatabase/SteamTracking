@@ -75,7 +75,6 @@ public:
     virtual unknown_ret SetStreamingDriversInstalled(void*) = 0;
     virtual unknown_ret SetStreamingPIN(void*) = 0;
     virtual unknown_ret GetStreamingPINSize(void*) = 0;
-    virtual unknown_ret UnlockHEVC() = 0;
     virtual unknown_ret UsedVideoX264() = 0;
     virtual unknown_ret UsedVideoH264() = 0;
     virtual unknown_ret UsedVideoHEVC() = 0;

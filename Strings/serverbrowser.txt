@@ -48,7 +48,7 @@ __DATA
 __bss
 __DATA
 @Q'
-j.
+j-
 __common
 __DATA
 H
@@ -3685,6 +3685,7 @@ resizeNumBits >= 0
 !m_pInt
 GetInts()
 CVariableBitStringBase
+{}()'
 {}()':
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
@@ -3835,6 +3836,7 @@ s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
 0
+2&
 j
 j
 j
@@ -3843,7 +3845,6 @@ j
 j
 j
 j
-&
 p
 0
 p
@@ -3878,6 +3879,7 @@ j
 j
 j
 j
+J%
 0
 0
 AT=
@@ -3923,7 +3925,6 @@ V
 =
 =
 !
-!
 @
 &
 @
@@ -3947,12 +3948,13 @@ M9e
 ?
 @
 @
-4
->
+I
+*
+
 
 
 d
-W
+a
 A+M
 j
 j
@@ -4191,6 +4193,7 @@ j
 j
 .
 d
+Y
 =
 @
 =*.*

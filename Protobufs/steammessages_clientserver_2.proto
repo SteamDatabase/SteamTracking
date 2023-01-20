@@ -731,21 +731,15 @@ message CMsgClientServiceCallResponse {
 	optional uint32 last_callcomplete_delta = 21;
 }
 
-message CMsgAMUnlockStreaming {
+message CMsgAMUnlockH264 {
 	optional uint32 appid = 1;
+	optional int32 platform = 2;
+	optional int32 reason = 3;
 }
 
-message CMsgAMUnlockStreamingResponse {
+message CMsgAMUnlockH264Response {
 	optional int32 eresult = 1 [default = 2];
 	optional bytes encryption_key = 2;
-}
-
-message CMsgAMUnlockHEVC {
-	optional uint32 appid = 1;
-}
-
-message CMsgAMUnlockHEVCResponse {
-	optional int32 eresult = 1 [default = 2];
 }
 
 message CMsgClientPlayingSessionState {
@@ -780,6 +774,7 @@ message CMsgClientStartPeerContentServer {
 	optional fixed64 steamid = 1;
 	optional fixed64 client_remote_id = 2;
 	optional uint32 app_id = 3;
+	optional uint32 current_build_id = 4;
 }
 
 message CMsgClientStartPeerContentServerResponse {

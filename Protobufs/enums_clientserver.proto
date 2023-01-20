@@ -1438,14 +1438,14 @@ enum EMsg {
 	k_EMsgRemoteClientStartStreamResponse = 9504;
 	k_EMsgRemoteClientPing = 9505;
 	k_EMsgRemoteClientPingResponse = 9506;
-	k_EMsgClientUnlockStreaming = 9507;
-	k_EMsgClientUnlockStreamingResponse = 9508;
+	k_EMsgClientUnlockH264 = 9507;
+	k_EMsgClientUnlockH264Response = 9508;
 	k_EMsgRemoteClientAcceptEULA = 9509;
 	k_EMsgRemoteClientGetControllerConfig = 9510;
 	k_EMsgRemoteClientGetControllerConfigResponse = 9511;
 	k_EMsgRemoteClientStreamingEnabled = 9512;
-	k_EMsgClientUnlockHEVC = 9513;
-	k_EMsgClientUnlockHEVCResponse = 9514;
+	k_EMsgClientUnlockHEVC_OBSOLETE = 9513;
+	k_EMsgClientUnlockHEVCResponse_OBSOLETE = 9514;
 	k_EMsgRemoteClientStatusRequest = 9515;
 	k_EMsgRemoteClientStatusResponse = 9516;
 	k_EMsgClientConcurrentSessionsBase = 9600;
@@ -1525,4 +1525,19 @@ enum ESteamReviewScore {
 	k_ESteamReviewScore_VeryNegative = 2;
 	k_ESteamReviewScore_OverwhelminglyNegative = 1;
 	k_ESteamReviewScore_None = 0;
+}
+
+enum ECodecUsagePlatform {
+	k_ECodecUsagePlatformUnknown = 0;
+	k_ECodecUsagePlatformWindows = 1;
+	k_ECodecUsagePlatformMacOS = 2;
+	k_ECodecUsagePlatformLinux = 3;
+	k_ECodecUsagePlatformSteamDeck = 4;
+}
+
+enum ECodecUsageReason {
+	k_ECodecUsageReasonUnknown = 0;
+	k_ECodecUsageReasonRemotePlay = 1;
+	k_ECodecUsageReasonBroadcasting = 2;
+	k_ECodecUsageReasonGameVideo = 3;
 }

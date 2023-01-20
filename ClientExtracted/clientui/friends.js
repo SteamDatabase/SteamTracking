@@ -74853,6 +74853,7 @@ object-assign
             /* binding */ MicrophoneGamepadUI,
           /* harmony export */ Minimize: () => /* binding */ Minimize,
           /* harmony export */ MobilePhone: () => /* binding */ MobilePhone,
+          /* harmony export */ MouseAndKB: () => /* binding */ MouseAndKB,
           /* harmony export */ MultiPlayer: () => /* binding */ MultiPlayer,
           /* harmony export */ NavArrow: () => /* binding */ NavArrow,
           /* harmony export */ NewChatGroup: () => /* binding */ NewChatGroup,
@@ -79701,25 +79702,55 @@ object-assign
             })
           );
         }
-        function VR() {
+        function VR(props) {
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_VR",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
+            Object.assign(
+              {
+                width: "36",
+                height: "36",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button",
+              },
+              props
+            ),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
-              d: "M224.389,62.411H31.613c-10.147,0-18.36,8.214-18.36,18.36v94.453c0,10.147,8.215,18.359,18.36,18.359h192.775 c10.146,0.241,18.358-7.968,18.358-18.116V80.771C242.747,70.625,234.534,62.411,224.389,62.411z M92.317,175.026H71.646 L35.472,79.832h21.895l25.022,72.484l24.343-72.484h21.895L92.317,175.026z M195.264,175.026l-19.175-32.095h-2.176h-14.279 v32.095h-19.991V79.832h35.63c13.056,0,22.664,2.607,28.831,7.819c6.164,5.215,9.247,12.49,9.247,21.827 c0,7.343-1.61,13.463-4.828,18.359c-3.219,4.896-7.729,8.614-13.531,11.151l22.575,36.038H195.264z",
+              d: "M11.45 26.5H7.625L1 9H5.025L9.625 22.325L14.1 9H18.125L11.45 26.5Z",
+              fill: "white",
             }),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
-              d: "M187.784,100.298c-2.812-2.312-7.391-3.468-13.735-3.468h-14.415v28.966h15.639c5.257,0,9.36-1.336,12.308-4.012 c2.945-2.673,4.42-6.368,4.42-11.083C192,106.078,190.593,102.61,187.784,100.298z",
+              d: "M34.552 26.5H30.477L26.952 20.6H26.527H23.927V26.5H20.252V9H26.802C29.202 9 30.9686 9.48333 32.102 10.45C33.2353 11.4 33.802 12.7333 33.802 14.45C33.802 15.8 33.502 16.925 32.902 17.825C32.3186 18.725 31.4936 19.4083 30.427 19.875L34.552 26.5ZM23.927 12.125V17.45H26.802C27.7686 17.45 28.5186 17.2083 29.052 16.725C29.602 16.225 29.877 15.5417 29.877 14.675C29.877 13.825 29.6103 13.1917 29.077 12.775C28.5603 12.3417 27.727 12.125 26.577 12.125H23.927Z",
+              fill: "white",
+            })
+          );
+        }
+        function MouseAndKB(props) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                width: "36",
+                height: "36",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button",
+              },
+              props
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M31.4096 7H1V23.5601H21.9066V19.8801H7.65209V18.0401H21.9066V17.7641C21.9066 17.2208 21.9876 16.6959 22.1387 16.2001H20.9563V14.36H22.8569V14.7117C23.7116 13.4671 25.0741 12.5776 26.6581 12.3204V10.68H28.5587V12.244H31.4096V7ZM5.75149 10.68H3.8509V12.52H5.75149V10.68ZM3.8509 18.0401H5.75149V19.8801H3.8509V18.0401ZM7.65209 14.36H3.8509V16.2001H7.65209V14.36ZM7.65209 10.68H9.55269V12.52H7.65209V10.68ZM11.4533 10.68H13.3539V12.52H11.4533V10.68ZM11.4533 14.36H9.55269V16.2001H11.4533V14.36ZM15.2545 10.68H17.1551V12.52H15.2545V10.68ZM15.2545 14.36H13.3539V16.2001H15.2545V14.36ZM17.1551 14.36H19.0557V16.2001H17.1551V14.36ZM20.9563 10.68H19.0557V12.52H20.9563V10.68ZM24.7575 10.68H22.8569V12.52H24.7575V10.68Z",
+              fill: "white",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M27.9783 15.4332C26.3164 15.4332 24.9691 16.7376 24.9691 18.3466V25.1444C24.9691 27.8261 27.2146 30 29.9845 30C32.7545 30 35 27.8261 35 25.1444V18.3466C35 16.7376 33.6527 15.4332 31.9907 15.4332H27.9783ZM29.9845 17.861C29.4305 17.861 28.9814 18.2958 28.9814 18.8321V20.7744C28.9814 21.3107 29.4305 21.7455 29.9845 21.7455C30.5385 21.7455 30.9876 21.3107 30.9876 20.7744V18.8321C30.9876 18.2958 30.5385 17.861 29.9845 17.861Z",
+              fill: "white",
             })
           );
         }
@@ -88850,6 +88881,7 @@ function TestLocalizeCalendarTime()
           IN_GAMESCOPE: false,
           IN_LOGIN: false,
           IN_LOGIN_REFRESH: false,
+          USE_LONGEST_LOC_STRING: false,
         };
         /** User info, mostly populated by GetWebUICurrentUserInfo and GetWebUICurrentUserInfoForStore */
         const UserConfig = {
@@ -90464,4 +90496,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=43c3c2a6c897440edfea
+//# sourceMappingURL=friends.js.map?contenthash=1c50bcb7a89f02f9547a

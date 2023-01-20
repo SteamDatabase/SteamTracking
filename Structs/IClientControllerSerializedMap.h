@@ -1,8 +1,8 @@
 class IClientControllerSerializedMap
 {
 public:
-    virtual unknown_ret Unknown_5360800() = 0;
-    virtual unknown_ret Unknown_6167312() = 0;
+    virtual unknown_ret Unknown_5360096() = 0;
+    virtual unknown_ret Unknown_6166320() = 0;
     virtual unknown_ret ShowBindingPanel(void*,void*,void*) = 0;
     virtual unknown_ret GetControllerTypeForHandle(void*,void*) = 0;
     virtual unknown_ret GetGamepadIndexForHandle(void*,void*) = 0;

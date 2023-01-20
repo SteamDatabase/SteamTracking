@@ -32,7 +32,7 @@
 		Divider							{}
 		MiniMode			[!$OSX]		{	text="#steam_menu_minimode"				shellcmd="steam://open/minigameslist" }
 		LargeMode			[!$OSX]		{	text="#steam_menu_largemode"			shellcmd="steam://open/largegameslist" }
-		BigPictureMode					{ text="#steam_menu_bigpicturemode" 		shellcmd="steam://open/bigpicture" } 
+		BigPictureMode		[!$OSX]		{	text="#steam_menu_bigpicturemode" 		shellcmd="steam://open/bigpicture" } 
 		Divider							{}
 		StartVR							{	text="#steam_menu_startvr"				shellcmd="steam://run/250820" }
 		Divider							{}
@@ -95,6 +95,8 @@
 		Divider							{}
 		MiniMode						{	text="#steam_menu_minimode"				shellcmd="steam://open/minigameslist" }
 		LargeMode						{	text="#steam_menu_largemode"			shellcmd="steam://open/largegameslist" }
+		BigPictureMode					{	text="#steam_menu_bigpicturemode" 		shellcmd="steam://open/bigpicture" } 
+		CloseBigPictureMode				{	text="#steam_menu_close_bigpicturemode"	shellcmd="steam://close/bigpicture" } 
 	}
 	
 	Help
