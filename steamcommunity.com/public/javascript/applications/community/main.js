@@ -22229,6 +22229,7 @@
           DiagData: () => "/:anything*/diagdata",
           Login: () => "/login/home",
           OAuthLogin: () => "/oauth/loginform",
+          OpenidLogin: () => "/openid/loginform",
           EventsInternal: () => "/(migrateevents|migrate)",
           EventEditor: (e) => `/${O()}/${e}/partnerevents`,
           EventReaders: (e) => `/${O()}/${e}/(events|announcements)`,
@@ -22284,6 +22285,15 @@
                   r.createElement(
                     a.AW,
                     { path: [k.Login(), k.OAuthLogin()] },
+                    r.createElement(d.d, {
+                      config: {
+                        login: (e) => r.createElement(R, Object.assign({}, e)),
+                      },
+                    })
+                  ),
+                  r.createElement(
+                    a.AW,
+                    { path: [k.Login(), k.OpenidLogin()] },
                     r.createElement(d.d, {
                       config: {
                         login: (e) => r.createElement(R, Object.assign({}, e)),
