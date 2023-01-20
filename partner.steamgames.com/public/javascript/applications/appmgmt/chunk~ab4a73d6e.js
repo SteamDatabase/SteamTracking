@@ -1820,7 +1820,7 @@
                     else {
                       const e = n.Body().agreement_session_url(),
                         t = document.location.href;
-                      window.location.href = `${e}?redir=${encodeURIComponent(
+                      window.location.href = `${e}&redir=${encodeURIComponent(
                         t
                       )}`;
                     }
