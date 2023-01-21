@@ -164,6 +164,7 @@ function OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot )
 
 	var nShowcaseSlot = $Select.data( 'slot' );
 	var parent = $Select.parent();
+    var targetClass = parent.parent();
 	var elemPurchaseID = parent.find( '#showcase_' + nShowcaseSlot + '_purchaseid' );
 	elemPurchaseID.val( nShowcasePurchaseID );
 
@@ -183,13 +184,13 @@ function OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot )
 
 		if ( eShowcase == 0 )
 		{
-			parent.removeClass( "has_showcase" );
+            targetClass.removeClass( "has_showcase" );
 			$PreviewsNone.show();
 			$Previews.hide();
 		}
 		else
 		{
-			parent.addClass( "has_showcase" );
+            targetClass.addClass( "has_showcase" );
 			$Previews.append( g_rgShowcasePreviews[ eShowcase + '_' + nShowcasePurchaseID ] );
 			$StyleCtn.append( g_rgShowcaseStyles[ eShowcase + '_' + nShowcasePurchaseID ] );
 

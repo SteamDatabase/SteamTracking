@@ -27,7 +27,7 @@
 
 .profile_showcase_sort_controls {
 	position: absolute;
-	right: 4px;
+	right: 19px;
 	top: calc( 50% - 9px );
 	display: none;
 }
@@ -44,14 +44,14 @@
 	height: 0px;
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
-	border-bottom: 10px solid #737373;
+	border-bottom: 10px solid #657081;
 }
 .profile_showcase_sort_down {
 	width: 0px;
 	height: 0px;
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
-	border-top: 10px solid #737373;
+	border-top: 10px solid #657081;
 }
 .profile_showcase_sort_up:hover {
 	border-bottom: 10px solid #c8c8c8;
