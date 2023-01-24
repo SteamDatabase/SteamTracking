@@ -1300,6 +1300,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  align-self: center;
 }
 .controllerconfiguratormapping_SettingsSource_2qxNZ {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -1389,6 +1390,115 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .controllerconfiguratormapping_GroupSectionHeaderField_28XRn:not(:first-child) {
   margin-top: 24px;
+}
+.controllerconfiguratormapping_PageListColumn_2oua5 {
+  background: #23262e;
+  flex: 1;
+  min-width: 240px;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-right: 1px solid #0e141b;
+  padding-top: calc(0px + var(--basicui-header-height));
+}
+.controllerconfiguratormapping_PageList_3Bvxh {
+  min-width: 240px;
+  max-width: 40%;
+  line-height: 16px;
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 16px 0px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 36px 0px;
+}
+.controllerconfiguratormapping_RightColumnContainer_3zXJC {
+  overflow-y: scroll;
+  padding-left: 4%;
+  scroll-margin-top: 200px;
+  scroll-margin-bottom: 400px;
+  height: calc(100vh - var(--basicui-header-height) - 40px);
+}
+.controllerconfiguratormapping_PageListItem_3glxw {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  padding: 10px calc(12px + 1.4vw);
+  color: #b8bcbf;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  transform: scale(1) rotateX(1deg);
+  line-height: 22px;
+  scroll-margin: 2.5em 0;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(1deg);
+}
+.controllerconfiguratormapping_PageListItem_3glxw.controllerconfiguratormapping_DisabledItem_37iIm,
+.controllerconfiguratormapping_PageListItem_3glxw.controllerconfiguratormapping_DisabledItem_37iIm:hover,
+.controllerconfiguratormapping_PageListItem_3glxw.controllerconfiguratormapping_DisabledItem_37iIm:not(.controllerconfiguratormapping_Active_38i-4):hover {
+  color: #414141;
+  cursor: default;
+}
+.controllerconfiguratormapping_PageListItem_3glxw.controllerconfiguratormapping_Active_38i-4 {
+  color: #fff;
+  cursor: default;
+  background: #3d4450;
+  transform: scale(1.1) rotateX(1deg);
+}
+.controllerconfiguratormapping_PageListItem_3glxw:focus {
+  outline: none;
+  background: #3d4450;
+  color: #fff;
+  animation-name: controllerconfiguratormapping_ItemFocusAnim-darkerGrey_NuxqQ;
+  transform: scale(1.1);
+  z-index: 1;
+  animation-name: controllerconfiguratormapping_ItemFocusAnim-darkGrey_14t35;
+}
+.controllerconfiguratormapping_PageListItem_Icon_25GY_ {
+  height: 20px;
+  width: 20px;
+  margin: auto 0;
+  margin-right: 16px;
+}
+.controllerconfiguratormapping_PageListItem_Icon_25GY_ svg {
+  width: 100%;
+  height: 100%;
+}
+.controllerconfiguratormapping_PageListItem_Title_f1ZpM {
+  flex-grow: 1;
+  margin: auto 0;
+}
+.controllerconfiguratormapping_PagedSettingsDialog_3FPsT {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-grow: 1;
+  margin-top: var(--basicui-header-height);
+}
+.controllerconfiguratormapping_PageContainer_3y7Oi {
+  margin-top: 16px;
 }
 :root {
   --basicui-header-height: 0px;
@@ -2903,7 +3013,7 @@ button.controllerconfiguratorvirtualmenus_MainOptionsButton_1OVab svg {
   --basicui-header-height: 0px;
 }
 .controllerconfiguratorvisualizer_deadzones_VisualizerContainer_2_weT {
-  width: 100%;
+  width: 970px;
 }
 .controllerconfiguratorvisualizer_deadzones_FlexRow_27TU0 {
   display: flex;

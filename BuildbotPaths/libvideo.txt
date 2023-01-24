@@ -48,6 +48,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayermanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videortmp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoutilsclient.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp

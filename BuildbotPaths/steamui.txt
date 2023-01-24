@@ -491,6 +491,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/welcome_nocontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/welcometosteam.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/welcometosteam.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/threadedpromiseresolver.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/ui/popups/ui_popup_generic.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/ui/ui_custom_layout.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/ui/ui_page.h

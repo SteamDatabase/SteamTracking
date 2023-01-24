@@ -1,9 +1,4 @@
 {
-    "84": {
-        "reqid": 84,
-        "name": "Acoustic Systems Engineer",
-        "description": "<div class=\"job_description_intro\"><p> We are looking for Acoustic Engineers to join a multi-disciplinary group of electrical, mechanical, software engineers and designers who are busily defining new entertainment experiences through both hardware and software. We're hoping to add your deep technical expertise in acoustic systems to our team!</p><p> Valve is an entertainment and technology company driven to design and deliver extraordinary entertainment experiences to customers. We hire great people with broad skill sets who also exhibit deep expertise. Acoustic Systems engineers at Valve contribute in a variety of ways: we own the sound quality and reliability performance of consumer audio devices. We design and develop innovative audio architectures including: acoustic elements, playback transducer, microphones, power-systems, signal processing. We qualify design through meticulous testing. We build tests plans and performance qualification to ensure best-in-class performance. We work multi-functionally with the broader design team, communicating goals and driving specifications to ensure system level performance. We work with factory/manufacturing teams to ensure design for manufacturing, and we build automated, on-line quality control tests.</p><p>Do you prefer to collaborate with peers to define the work that you pursue, rather than simply follow a vision that's been set for you? If you're seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can't wait to see where you'll take us!</p>Learn more about our <a href=\"https://valvesoftware.github.io/steam-audio/\">ground-breaking work in audio solutions for games and VR</a> on github.</div>"
-    },
     "30": {
         "reqid": 30,
         "name": "Animator",

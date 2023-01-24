@@ -8038,18 +8038,18 @@
         c = n(48699),
         m = n(84656),
         p = n(14132),
-        d = n(53084),
-        u = n(74143),
-        h = n(32186),
-        g = n(7952),
-        _ = n(27194),
-        v = n(46269),
-        C = n(7874),
-        E = n(83711),
-        S = n(3080),
-        A = n(27961),
-        y = n(49479),
-        f = n(78869);
+        d = (n(53084), n(74143)),
+        u = n(32186),
+        h = n(7952),
+        g = n(27194),
+        _ = n(46269),
+        v = n(7874),
+        C = n(83711),
+        E = n(3080),
+        S = n(27961),
+        A = n(49479),
+        y = n(78869),
+        f = n(23217);
       const w = 20,
         I = "Deck_GuidedTourVersionSeen";
       function b() {
@@ -8078,7 +8078,7 @@
           })().then((e) => i(!e));
         }, []);
         return {
-          bShowTour: (!f.De.TESLA && f.De.ON_DECK && n) || e,
+          bShowTour: (!y.De.TESLA && n) || e,
           onComplete: () => {
             i(!1), t();
           },
@@ -8088,7 +8088,7 @@
         const { bShowTour: e, onComplete: t } = b();
         return e
           ? r.createElement(
-              C.Yy,
+              v.Yy,
               { active: !0 },
               r.createElement(N, { onComplete: t })
             )
@@ -8097,9 +8097,9 @@
       function N(e) {
         const { onComplete: t } = e,
           [n, a] = (0, r.useState)(0);
-        (0, v.Vg)(),
-          (0, A.Q4)(),
-          (0, S.NF)(),
+        (0, _.Vg)(),
+          (0, S.Q4)(),
+          (0, E.NF)(),
           (0, r.useEffect)(() => {
             new m.E().StoreString(I, (1).toString());
           }, []);
@@ -8107,7 +8107,10 @@
         (0, r.useEffect)(() => {
           window.setTimeout(() => o.current.focus(), 100);
         }, []);
-        const s = [k, P, O, M, G, F, x],
+        const s = (function () {
+            if ((0, y.gF)()) return [k, P, O, M, G, F, x];
+            return [k, P, O, x];
+          })(),
           l = s[n];
         if (!l) return null;
         const d = (e) => {
@@ -8156,10 +8159,10 @@
             )
           ),
           r.createElement(
-            E.Cv,
+            C.Cv,
             {
               childrenKey: n.toString(),
-              childrenClasses: (0, E.qh)(c, c.ActiveTourPage),
+              childrenClasses: (0, C.qh)(c, c.ActiveTourPage),
               direction: "none",
             },
             r.createElement(l, null)
@@ -8167,35 +8170,49 @@
         );
       }
       function k() {
+        const e = (0, y.gF)();
         return r.createElement(
           T,
           null,
           r.createElement(
             "div",
             { className: c.WelcomeTitle },
-            (0, _.Xx)("#GuidedTour_Welcome_Title")
+            (0, g.Xx)(
+              e ? "#GuidedTour_Welcome_Title" : "#GuidedTour_BPM_Welcome_Title"
+            )
           ),
           r.createElement(
             R,
             { className: c.WelcomeDescription },
-            (0, _.Xx)("#GuidedTour_Welcome_Description")
+            (0, g.Xx)(
+              e
+                ? "#GuidedTour_Welcome_Description"
+                : "#GuidedTour_BPM_Welcome_Description"
+            )
           ),
           r.createElement(B, null)
         );
       }
       function x() {
+        const e = (0, y.gF)();
         return r.createElement(
           T,
           null,
           r.createElement(
             "div",
             { className: c.WelcomeTitle },
-            (0, _.Xx)("#GuidedTour_SendOff_Title")
+            (0, g.Xx)(
+              e ? "#GuidedTour_SendOff_Title" : "#GuidedTour_BPM_SendOff_Title"
+            )
           ),
           r.createElement(
             R,
             { className: c.WelcomeDescription },
-            (0, _.Xx)("#GuidedTour_SendOff_Description")
+            (0, g.Xx)(
+              e
+                ? "#GuidedTour_SendOff_Description"
+                : "#GuidedTour_BPM_SendOff_Description"
+            )
           ),
           r.createElement(B, null)
         );
@@ -8219,17 +8236,17 @@
         return r.createElement(
           "div",
           { className: c.ContinueMessage },
-          (0, _.kQ)(
+          (0, g.kQ)(
             "#GuidedTour_ContinueMessage_Template",
             r.createElement(
               L,
               null,
-              (0, _.Xx)("#GuidedTour_ContinueMessage_ActionPress")
+              (0, g.Xx)("#GuidedTour_ContinueMessage_ActionPress")
             ),
             r.createElement(
               L,
               null,
-              (0, _.Xx)("#GuidedTour_ContinueMessage_ActionTap")
+              (0, g.Xx)("#GuidedTour_ContinueMessage_ActionTap")
             )
           )
         );
@@ -8242,21 +8259,50 @@
         );
       }
       function P() {
+        const e = (0, y.gF)(),
+          t = e ? r.createElement(f.m, { button: d.FX.HomeMenu }) : null;
         return r.createElement(X, {
           position: { bottom: 90, left: -10 },
           targetDirection: "left",
-          title: (0, _.Xx)("#GuidedTour_SteamButton_Title"),
-          description: (0, _.Xx)("#GuidedTour_SteamButton_Description"),
-          icon: r.createElement(d.VC, { button: u.FX.HomeMenu }),
+          title: (0, g.Xx)(
+            e
+              ? "#GuidedTour_SteamButton_Title"
+              : "#GuidedTour_BPM_SteamButton_Title"
+          ),
+          description: (0, g.kQ)(
+            e
+              ? "#GuidedTour_SteamButton_Description"
+              : "#GuidedTour_BPM_SteamButton_Description",
+            r.createElement(f.m, { button: d.FX.HomeMenu })
+          ),
+          icon: t,
         });
       }
       function O() {
+        const e = (0, y.gF)(),
+          t = e ? r.createElement(f.m, { button: d.FX.QuickMenu }) : null,
+          n = r.createElement(
+            r.Fragment,
+            null,
+            r.createElement(f.m, { button: d.FX.HomeMenu }),
+            "+",
+            r.createElement(f.m, { button: d.FX.A })
+          );
         return r.createElement(X, {
           position: { bottom: 90, right: -10 },
           targetDirection: "right",
-          title: (0, _.Xx)("#GuidedTour_QuickAccessButton_Title"),
-          description: (0, _.Xx)("#GuidedTour_QuickAccessButton_Description"),
-          icon: r.createElement(d.VC, { button: u.FX.QuickMenu }),
+          title: (0, g.Xx)(
+            e
+              ? "#GuidedTour_QuickAccessButton_Title"
+              : "#GuidedTour_BPM_QuickAccessButton_Title"
+          ),
+          description: (0, g.kQ)(
+            e
+              ? "#GuidedTour_QuickAccessButton_Description"
+              : "#GuidedTour_BPM_QuickAccessButton_Description",
+            n
+          ),
+          icon: t,
         });
       }
       function M() {
@@ -8264,9 +8310,9 @@
           position: { top: -10, right: 10 },
           targetDirection: "top",
           align: "right",
-          title: (0, _.Xx)("#GuidedTour_PowerButton_Title"),
-          description: (0, _.Xx)("#GuidedTour_PowerButton_Description"),
-          icon: r.createElement(h.cbb, { className: c.Icon }),
+          title: (0, g.Xx)("#GuidedTour_PowerButton_Title"),
+          description: (0, g.Xx)("#GuidedTour_PowerButton_Description"),
+          icon: r.createElement(u.cbb, { className: c.Icon }),
         });
       }
       function G() {
@@ -8274,9 +8320,9 @@
           position: { top: -10, left: w },
           targetDirection: "top",
           align: "left",
-          title: (0, _.Xx)("#GuidedTour_VolumeButtons_Title"),
-          description: (0, _.Xx)("#GuidedTour_VolumeButtons_Description"),
-          icon: r.createElement(g.ffh, { className: c.Icon }),
+          title: (0, g.Xx)("#GuidedTour_VolumeButtons_Title"),
+          description: (0, g.Xx)("#GuidedTour_VolumeButtons_Description"),
+          icon: r.createElement(h.ffh, { className: c.Icon }),
         });
       }
       function F() {
@@ -8284,9 +8330,9 @@
           position: { bottom: -10, right: 10 },
           targetDirection: "bottom",
           align: "right",
-          title: (0, _.Xx)("#GuidedTour_SDCard_Title"),
-          description: (0, _.Xx)("#GuidedTour_SDCard_Description"),
-          icon: r.createElement(h.hA$, { className: c.Icon }),
+          title: (0, g.Xx)("#GuidedTour_SDCard_Title"),
+          description: (0, g.Xx)("#GuidedTour_SDCard_Description"),
+          icon: r.createElement(u.hA$, { className: c.Icon }),
         });
       }
       const U = { bottom: "column", top: "column", left: "row", right: "row" },
@@ -8308,7 +8354,7 @@
         (l.flexDirection = U[i]),
           (l.alignItems = s ? H[s] : void 0),
           (l.textAlign = s);
-        const p = r.createElement(y.i8, null),
+        const p = r.createElement(A.i8, null),
           d = r.createElement(
             "div",
             {
@@ -16077,7 +16123,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, G.Xx)("#Settings_System_SteamLocalBuild"),
-          l = parseInt(1674181736),
+          l = parseInt(1674525768),
           c = l && (0, xa._o)(l, e, o),
           m = i.sSteamBuildDate,
           p = "linux" == O.De.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -40384,83 +40430,82 @@
     },
     97334: (e, t, n) => {
       "use strict";
-      n.d(t, { Mo: () => N, yg: () => w });
+      n.d(t, { Mo: () => D, yg: () => f });
       var a = n(70655),
         r = n(67294),
         o = n(73935),
         i = n(11016),
         s = n.n(i),
         l = n(31535),
-        c = (n(25970), n(87253)),
-        m = n(46269),
-        p = n(28208),
-        d = n(86666),
-        u = n(69125),
-        h = n(45520),
-        g = n(93725),
-        _ = n(16550),
-        v = n(93337),
-        C = (n(36274), n(12496)),
-        E = n(36609),
-        S = n(96794),
-        A = n(83893),
-        y = n(13271);
-      const f =
+        c = n(46269),
+        m = n(28208),
+        p = n(86666),
+        d = n(69125),
+        u = n(45520),
+        h = n(93725),
+        g = n(16550),
+        _ = n(93337),
+        v = (n(36274), n(12496)),
+        C = n(36609),
+        E = n(96794),
+        S = n(83893),
+        A = n(13271);
+      const y =
         parseInt(s().toastAnimateInMS) + parseInt(s().toastAnimateOutMS);
-      function w(e) {
+      function f(e) {
         console.log("Creating ToastManager");
         const t = r.useCallback(
-          (e) => m.nm.NavigationManager.RegisterInputSource(e),
+          (e) => c.nm.NavigationManager.RegisterInputSource(e),
           []
         );
-        let n = (0, p.Hm)(t, { name: "notificationtoasts" });
-        const a = R(),
-          i = (0, C.p)(),
-          c = (0, y.SZ)(() => i.NotificationPosition);
-        let d = (0, l.e1)(a.CurrentToast);
-        const g = null == d ? void 0 : d.nNotificationID;
-        let E = null != d,
-          A = (0, _.$B)(v.Z5.GamepadUI.AppRunning());
+        let n = (0, m.Hm)(t, { name: "notificationtoasts" });
+        const a = T(),
+          i = (0, v.p)(),
+          p = (0, A.SZ)(() => i.NotificationPosition);
+        let h = (0, l.e1)(a.CurrentToast);
+        const C = null == h ? void 0 : h.nNotificationID;
+        let S = null != h,
+          y = (0, g.$B)(_.Z5.GamepadUI.AppRunning());
         const f = r.useCallback(() => {
-          a.OnShowComplete(g);
-        }, [a, g]);
+          a.OnShowComplete(C);
+        }, [a, C]);
         if ((console.log("checking for popup"), !n)) return null;
-        let w = (0, h.Z)(
+        let w = (0, u.Z)(
             s().ToastPlaceholder,
-            (c.position == S.OT.k_EPositionTopLeft ||
-              c.position == S.OT.k_EPositionTopRight) &&
+            (p.position == E.OT.k_EPositionTopLeft ||
+              p.position == E.OT.k_EPositionTopRight) &&
               s().PositionTop,
-            (c.position == S.OT.k_EPositionTopLeft ||
-              c.position == S.OT.k_EPositionBottomLeft) &&
+            (p.position == E.OT.k_EPositionTopLeft ||
+              p.position == E.OT.k_EPositionBottomLeft) &&
               s().PositionLeft,
-            (0, u.nd)(d) && s().Warning,
-            (0, u.y)(d) && s().TinyToast,
-            A && s().InGame
+            (0, d.nd)(h) && s().Warning,
+            (0, d.y)(h) && s().TinyToast,
+            y && s().InGame
           ),
-          I = (0, h.Z)(
-            (c.position == S.OT.k_EPositionTopLeft ||
-              c.position == S.OT.k_EPositionTopRight) &&
+          I = (0, u.Z)(
+            (p.position == E.OT.k_EPositionTopLeft ||
+              p.position == E.OT.k_EPositionTopRight) &&
               s().PositionTop,
-            (c.position == S.OT.k_EPositionTopLeft ||
-              c.position == S.OT.k_EPositionBottomLeft) &&
+            (p.position == E.OT.k_EPositionTopLeft ||
+              p.position == E.OT.k_EPositionBottomLeft) &&
               s().PositionLeft
           ),
-          b = { margin: `${c.verticalInset}px ${c.horizontalInset}px` };
+          b = { margin: `${p.verticalInset}px ${p.horizontalInset}px` };
         return (
           console.log("Rendering the browserviewhost toast"),
           r.createElement(
             r.Fragment,
             null,
-            r.createElement(p.z4, {
+            r.createElement(m.z4, {
               className: w,
               browser: n.GetBrowserView(),
-              visible: E,
+              visible: S,
               style: b,
             }),
             o.createPortal(
-              r.createElement(k, {
+              r.createElement(N, {
                 className: I,
-                notification: d,
+                notification: h,
                 onDismiss: f,
               }),
               n.GetRenderElement()
@@ -40468,28 +40513,28 @@
           )
         );
       }
-      const I = 320,
-        b = 80,
-        D = A.eL.BackgroundTransparent | A.eL.Hidden | A.eL.Notification;
-      function N(e) {
+      const w = 320,
+        I = 80,
+        b = S.eL.BackgroundTransparent | S.eL.Hidden | S.eL.Notification;
+      function D(e) {
         console.log("ToastManagerDesktop");
-        const t = R(),
-          n = (0, C.p)(),
-          a = (0, y.SZ)(() => n.NotificationPosition),
+        const t = T(),
+          n = (0, v.p)(),
+          a = (0, A.SZ)(() => n.NotificationPosition),
           i = (0, l.e1)(t.CurrentToast),
-          c = null == i ? void 0 : i.nNotificationID,
+          m = null == i ? void 0 : i.nNotificationID,
           p = null != i,
           d =
-            (m.nm.MainRunningApp,
+            (c.nm.MainRunningApp,
             r.useCallback(() => {
-              t.OnShowComplete(c);
-            }, [t, c])),
-          { popup: u, element: h } = (0, E.B)("notificationtoasts", {
+              t.OnShowComplete(m);
+            }, [t, m])),
+          { popup: u, element: h } = (0, C.B)("notificationtoasts", {
             title: "notificationtoasts",
-            dimensions: { width: I, height: b },
+            dimensions: { width: w, height: I },
             body_class: s().ToastContainerDesktop,
-            browserType: S.i_.EBrowserType_DirectHWND_Borderless,
-            eCreationFlags: D,
+            browserType: E.i_.EBrowserType_DirectHWND_Borderless,
+            eCreationFlags: b,
             replace_existing_popup: !0,
           }),
           g = (function (e, t, n, a, o) {
@@ -40508,16 +40553,16 @@
                 let h = l,
                   g = c;
                 switch (n) {
-                  case S.OT.k_EPositionTopLeft:
+                  case E.OT.k_EPositionTopLeft:
                     break;
-                  case S.OT.k_EPositionTopRight:
-                    h = m - I;
+                  case E.OT.k_EPositionTopRight:
+                    h = m - w;
                     break;
-                  case S.OT.k_EPositionBottomLeft:
-                    g = p - b;
+                  case E.OT.k_EPositionBottomLeft:
+                    g = p - I;
                     break;
-                  case S.OT.k_EPositionBottomRight:
-                    (h = m - I), (g = p - b);
+                  case E.OT.k_EPositionBottomRight:
+                    (h = m - w), (g = p - I);
                 }
                 e.SteamClient.Window.MoveTo(h, g);
               }
@@ -40536,51 +40581,43 @@
           h
             ? (console.log("Creating TOAST POPUP"),
               o.createPortal(
-                r.createElement(k, { notification: i, onDismiss: d }),
+                r.createElement(N, { notification: i, onDismiss: d }),
                 h
               ))
             : null
         );
       }
-      function k(e) {
-        const t = r.useRef();
-        let n,
-          a = (0, h.Z)(
+      function N(e) {
+        let t,
+          n = (0, u.Z)(
             e.className,
             s().ToastPopup,
-            (0, u.nd)(e.notification) && s().Warning
+            (0, d.nd)(e.notification) && s().Warning
           );
         return (
           e.notification &&
-            (n = {
+            (t = {
               eType: e.notification.eType,
               notifications: [e.notification],
             }),
           r.createElement(
-            c.Fe,
-            {
-              style: x(e.notification),
-              navID: "ToastContainer",
-              className: a,
-              NavigationManager: m.nm.NavigationManager,
-              secondary: !0,
-              navTreeRef: t,
-            },
+            "div",
+            { style: k(e.notification), className: n },
             e.notification &&
-              r.createElement(u.D_, {
-                location: u.IS.Toast,
-                group: n,
+              r.createElement(d.D_, {
+                location: d.IS.Toast,
+                group: t,
                 onDismiss: e.onDismiss,
               })
           )
         );
       }
-      function x(e) {
+      function k(e) {
         return e ? { "--toast-duration": `${e.nToastDurationMS}ms` } : {};
       }
-      class T {
+      class x {
         constructor(e) {
-          (this.m_currentToast = (0, g.vq)(null)),
+          (this.m_currentToast = (0, h.vq)(null)),
             (this.m_hTimer = 0),
             (this.m_instance = e);
         }
@@ -40589,7 +40626,7 @@
           const t = [];
           return (
             t.push(
-              d.Xo.ToastNotificationCallback.Register(this.Update).Unregister
+              p.Xo.ToastNotificationCallback.Register(this.Update).Unregister
             ),
             (null === (e = this.m_instance) || void 0 === e
               ? void 0
@@ -40605,7 +40642,7 @@
         }
         Update() {
           var e;
-          let t = d.Xo.GetCurrentToastNotification();
+          let t = p.Xo.GetCurrentToastNotification();
           this.m_currentToast.Value && t != this.m_currentToast.Value
             ? this.OnShowComplete(this.m_currentToast.Value.nNotificationID)
             : this.m_hTimer ||
@@ -40615,13 +40652,13 @@
                 : e.VirtualKeyboardManager.IsShowingVirtualKeyboard.Value) ||
               (t &&
                 (this.m_currentToast.Set(t),
-                d.Xo.PlayNotificationSound(t),
+                p.Xo.PlayNotificationSound(t),
                 (this.m_hTimer = window.setTimeout(
                   () =>
                     this.OnShowComplete(
                       this.m_currentToast.Value.nNotificationID
                     ),
-                  t.nToastDurationMS + f
+                  t.nToastDurationMS + y
                 ))));
         }
         OnShowComplete(e) {
@@ -40640,7 +40677,7 @@
             let e = this.m_currentToast.Value;
             this.m_currentToast.Set(null),
               (this.m_hTimer = window.setTimeout(this.OnTimerComplete, 1e3)),
-              d.Xo.ExpireToast(e);
+              p.Xo.ExpireToast(e);
           }
         }
         OnTimerComplete() {
@@ -40650,18 +40687,18 @@
           return this.m_currentToast;
         }
       }
-      function R() {
-        const e = (0, C.p)(),
+      function T() {
+        const e = (0, v.p)(),
           t = r.useRef();
         return (
-          t.current || (t.current = new T(e)),
+          t.current || (t.current = new x(e)),
           r.useEffect(() => t.current.Init(), []),
           t.current
         );
       }
-      (0, a.gn)([l.ak], T.prototype, "Update", null),
-        (0, a.gn)([l.ak], T.prototype, "OnShowComplete", null),
-        (0, a.gn)([l.ak], T.prototype, "OnTimerComplete", null);
+      (0, a.gn)([l.ak], x.prototype, "Update", null),
+        (0, a.gn)([l.ak], x.prototype, "OnShowComplete", null),
+        (0, a.gn)([l.ak], x.prototype, "OnTimerComplete", null);
     },
     48186: (e, t, n) => {
       "use strict";

@@ -661,6 +661,9 @@
 .guidedtour_TourText_3bd-0 {
   font-size: 16px;
 }
+.guidedtour_TourText_3bd-0 img {
+  vertical-align: middle;
+}
 .guidedtour_TourStopContent_3awTl {
   display: flex;
   position: absolute;

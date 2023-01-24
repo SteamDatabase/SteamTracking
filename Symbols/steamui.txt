@@ -36,6 +36,7 @@
  B pcre_callout
  B pcre_stack_guard
  B pcrecpp::RE::no_arg
+ BConvertYUVtoRGB
  BGetLocalFQDN
  CFAbsoluteTimeGetCurrent
  CFArrayAppendValue
@@ -227,6 +228,7 @@
  FSRefMakePath
  Gestalt
  GetCPUInformation()
+ GetFrameFromVideo
  GetFrontProcess
  GetInstalledRAM
  GetLocalHostname
@@ -1153,6 +1155,7 @@
  V_StrTrim
  V_StripAndPreserveHTML
  V_StripAndPreserveHTMLCore
+ V_StripExtension
  V_StripFilename
  V_StripLastDir
  V_StripPrecedingAndTrailingWhitespace

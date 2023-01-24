@@ -416,6 +416,7 @@
  T GaussRow_C
  T GaussRow_F32_C
  T GetARGBBlend
+ T GetFrameFromVideo
  T GetXCR0
  T H010ToAB30
  T H010ToABGR
@@ -1383,6 +1384,8 @@
  avcodec_free_context
  avcodec_open2
  avcodec_parameters_to_context
+ avcodec_receive_frame
+ avcodec_send_packet
  avformat_alloc_context
  avformat_alloc_output_context2
  avformat_close_input
