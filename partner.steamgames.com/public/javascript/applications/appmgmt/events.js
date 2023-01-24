@@ -62541,7 +62541,7 @@
                   " to check your eligible games and enter your discounts",
                   d.createElement("br", null),
                   d.createElement("br", null),
-                  "Remember, all discounts are subject to the same cooldown between discounts, with the only exceptions being for major Steam seasonal sales. For more details on the discounting rule changes, please see the ",
+                  "Remember, all discounts are subject to the same cooldown between discounts, with the only exceptions being for major Steam seasonal sales. For more details on the discounting, please see the ",
                   d.createElement(
                     "a",
                     {
@@ -62742,6 +62742,59 @@
                     "div",
                     { className: En().SectionBody },
                     (0, b.Xx)("#OptIn_EmailSection_NextFest_ThankYou_Body")
+                  )
+                ));
+              break;
+            case M.rg.k_MediaPermissionReminder:
+              (i = (0, b.Xx)(
+                "#OptIn_EmailSection_TrailerDemoPermission_Reminder1_Title"
+              )),
+                (r = d.createElement(
+                  d.Fragment,
+                  null,
+                  d.createElement(
+                    "div",
+                    { className: En().SectionBody },
+                    (0, b.Xx)(
+                      "#OptIn_EmailSection_TrailerDemoPermission_Reminder1_Body"
+                    ),
+                    d.createElement("br", null),
+                    d.createElement("br", null),
+                    t.GetDemoTrailerRegLink() || ""
+                  ),
+                  d.createElement(
+                    "div",
+                    { className: En().SectionTitle },
+                    (0, b.Xx)(
+                      "#OptIn_EmailSection_TrailerDemoPermission_Reminder2_Title"
+                    )
+                  ),
+                  d.createElement(
+                    "div",
+                    { className: En().SectionBody },
+                    (0, b.Xx)(
+                      "#OptIn_EmailSection_TrailerDemoPermission_Reminder2_Body",
+                      (0, b.$1)(t.GetTrailerDemoDeadlineDate() || 0)
+                    )
+                  ),
+                  d.createElement(
+                    "div",
+                    { className: En().SectionBody },
+                    (0, b.Xx)(
+                      "#OptIn_EmailSection_TrailerDemoPermission_Reminder2_Body2"
+                    )
+                  )
+                ));
+              break;
+            case M.rg.k_SaleThankYou:
+              (i = (0, b.Xx)("#OptIn_EmailSection_ThankYou_Title")),
+                (r = d.createElement(
+                  d.Fragment,
+                  null,
+                  d.createElement(
+                    "div",
+                    { className: En().SectionBody },
+                    (0, b.Xx)("#OptIn_EmailSection_ThankYou_Body")
                   )
                 ));
               break;
@@ -63271,6 +63324,22 @@
                       bShowTimeZone: !0,
                     })
                   ),
+                n.bNeedTrailerDemoDeadlineDate &&
+                  d.createElement(
+                    "div",
+                    { className: vn.MetaDataRow },
+                    d.createElement(Ie.A, {
+                      strDescription:
+                        "Deadline for Demo Approved And Permission Granted",
+                      disabled: t.BIsReadOnly(),
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () =>
+                        t.GetTrailerDemoDeadlineDate() || 0,
+                      fnSetTimeToUpdate: t.SetTrailerDemoDeadlineDate,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    })
+                  ),
                 n.bNeedQASessionLink &&
                   d.createElement(
                     "div",
@@ -63287,6 +63356,25 @@
                       placeholder: "https://<url to zoom>",
                       onChange: (e) =>
                         t.SetQASessionLink(e.currentTarget.value),
+                      maxLength: 240,
+                    })
+                  ),
+                n.bNeedDemoTrailerRegLink &&
+                  d.createElement(
+                    "div",
+                    { className: vn.MetaDataRow },
+                    d.createElement(
+                      "div",
+                      { className: vn.MetaDataRowTitle },
+                      "Permission Registration URL:"
+                    ),
+                    d.createElement("input", {
+                      type: "text",
+                      disabled: t.BIsReadOnly(),
+                      value: t.GetDemoTrailerRegLink() || "",
+                      placeholder: "typically same full url as base event",
+                      onChange: (e) =>
+                        t.SetDemoTrailerRegLink(e.currentTarget.value),
                       maxLength: 240,
                     })
                   ),
@@ -63447,6 +63535,10 @@
                 break;
               case M.rg.k_NextFestTips:
                 t.bNeedRecordedQASessionLink = !0;
+                break;
+              case M.rg.k_MediaPermissionReminder:
+                (t.bNeedDemoTrailerRegLink = !0),
+                  (t.bNeedTrailerDemoDeadlineDate = !0);
             }
           }),
           t
@@ -63454,28 +63546,65 @@
       }
       function Rn(e) {
         const t = Tn(e),
-          n = Object.values(t).length;
-        let a = 0;
+          n = Object.values(t).length,
+          a = [];
+        let i = 0;
         return (
-          t.bNeedAssetKit && e.GetAssetKitURL() && (a += 1),
+          t.bNeedDemoTrailerRegLink &&
+            (e.GetDemoTrailerRegLink()
+              ? (i += 1)
+              : a.push("Missing Demo Trailer Reg Link")),
+          t.bNeedAssetKit &&
+            (e.GetAssetKitURL() ? (i += 1) : a.push("Missing Asset Kit")),
           t.bNeedDemoPressPreviewDate &&
-            e.GetDemoPressPreviewDate() &&
-            (a += 1),
-          t.bNeedMaxItems && e.GetScheduleMaxItems() && (a += 1),
-          t.bNeedSalePreview && e.GetSalePreviewPage() && (a += 1),
-          t.bNeedNextEditionDate && e.GetNextEditionDate() && (a += 1),
-          t.bNeedQASessionDate && e.GetQASessionDate() && (a += 1),
-          t.bNeedQASessionLink && e.GetQASessionLink() && (a += 1),
-          t.bNeedQASessionLink && e.GetRecordedQASessionLink() && (a += 1),
-          t.bNeedCancelDate && e.GetCancelDate() && (a += 1),
-          t.bNeedPreviewDate && e.GetPreviewDate() && (a += 1),
-          t.bNeedPermissionDate && e.GetPermissionDate() && (a += 1),
-          t.bNeedWikiDocumentation && e.GetWikiDocURL() && (a += 1),
-          t.bNeedSurveyLink && e.GetSurveyLinkURL() && (a += 1),
+            (e.GetDemoPressPreviewDate()
+              ? (i += 1)
+              : a.push("Missing Demo Preview Date")),
+          t.bNeedMaxItems &&
+            (e.GetScheduleMaxItems()
+              ? (i += 1)
+              : a.push("Missing Max Scheduled Events")),
+          t.bNeedSalePreview &&
+            (e.GetSalePreviewPage()
+              ? (i += 1)
+              : a.push("Missing Sale Preview Page")),
+          t.bNeedNextEditionDate &&
+            (e.GetNextEditionDate()
+              ? (i += 1)
+              : a.push("Missing Next Edition Date")),
+          t.bNeedQASessionDate &&
+            (e.GetQASessionDate()
+              ? (i += 1)
+              : a.push("Missing QA Session Date")),
+          t.bNeedQASessionLink &&
+            (e.GetQASessionLink()
+              ? (i += 1)
+              : a.push("Missing QA Session Link")),
+          t.bNeedRecordedQASessionLink &&
+            (e.GetRecordedQASessionLink()
+              ? (i += 1)
+              : a.push("Missing QA Recorded Session Link")),
+          t.bNeedCancelDate &&
+            (e.GetCancelDate() ? (i += 1) : a.push("Missing Cancel Date")),
+          t.bNeedPreviewDate &&
+            (e.GetPreviewDate() ? (i += 1) : a.push("Missing Preview Date")),
+          t.bNeedPermissionDate &&
+            (e.GetPermissionDate()
+              ? (i += 1)
+              : a.push("Missing Permissions Date")),
+          t.bNeedWikiDocumentation &&
+            (e.GetWikiDocURL() ? (i += 1) : a.push("Missing Wiki Doc Link")),
+          t.bNeedSurveyLink &&
+            (e.GetSurveyLinkURL() ? (i += 1) : a.push("Missing Survey Link")),
           t.bNeedPressPreviewVisibleDate &&
-            e.GetPressPreviewVisibleDate() &&
-            (a += 1),
-          { cNeeded: n, cCompleted: a }
+            (e.GetPressPreviewVisibleDate()
+              ? (i += 1)
+              : a.push("Missing Press Preview Visible Date")),
+          t.bNeedTrailerDemoDeadlineDate &&
+            (e.GetTrailerDemoDeadlineDate()
+              ? (i += 1)
+              : a.push("Missing Trailer Demo Deadline Date")),
+          { cNeeded: n, cCompleted: i, vecMissing: a }
         );
       }
       const An = (e) => {
@@ -63656,13 +63785,13 @@
                 { className: K.ErrorStylesBackground },
                 a.map((e) => d.createElement("span", { key: "" + e.length }, e))
               ),
-            r &&
+            Boolean(r) &&
               d.createElement(V.V, {
                 size: "medium",
                 position: "center",
                 string: (0, b.Xx)("#Saving"),
               }),
-            c &&
+            Boolean(c) &&
               d.createElement(
                 "div",
                 null,
@@ -63723,9 +63852,10 @@
         const r = Rn(e);
         return (
           r.cCompleted != r.cNeeded &&
-            i.push(
-              "Error: Not all metadata for the email is provided for the non-custom email sections"
+            (i.push(
+              `Error: Not all metadata for the email is provided for the non-custom email sections (${r.cCompleted}/${r.cNeeded}):`
             ),
+            r.vecMissing.forEach((e, t) => i.push(`${t}. ${e}`))),
           0 ==
             (null === (n = l.On.Get().GetEventTitle(0)) || void 0 === n
               ? void 0
