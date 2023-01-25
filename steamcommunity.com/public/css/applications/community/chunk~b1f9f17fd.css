@@ -4877,6 +4877,9 @@ a.storywidget_BadgeFooter_3kBeS:hover {
       rgba(219, 43, 31, 0.4) 97.55%
     );
 }
+.dlcforyou_GameCtn_OQaNt .SaleSectionCarousel .carousel__slider {
+  margin: -10px -8px 0px -8px;
+}
 .dlcforyou_GameCtn_OQaNt > div {
   position: relative;
 }
@@ -4917,7 +4920,6 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   background: unset;
 }
 .dlcforyou_DLCSectionTitle_3xJah {
-  padding-top: 12px;
   padding-bottom: 20px;
 }
 @media screen and (max-width: 500px) {
@@ -4942,6 +4944,9 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     padding-bottom: 8px;
   }
 }
+.dlcforyou_DLCSectionTitle_3xJah .dlcforyou_BaseGameCapsuleCtn_2-6Wb {
+  margin-right: 8px;
+}
 .dlcforyou_DLCSectionTitle_3xJah .SaleSectionHeader {
   text-transform: unset;
   font-size: 26px;
@@ -4951,9 +4956,8 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 .dlcforyou_DLCSectionTitle_3xJah .dlcforyou_FullGameArtwork_2lq4q {
-  padding-left: 8px;
-  padding-right: 8px;
   width: 64px;
+  box-shadow: 2px 2px 10px #000;
 }
 .dlcforyou_FullGameHover_i1RBc {
   width: 300px;
@@ -4983,8 +4987,8 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .dlcforyou_DLCStatsCtn_2K4LF {
   margin-top: 28px;
-  height: 105px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(to right, #272d38, transparent);
+  border-radius: 5px;
 }
 .dlcforyou_DLCStatsCtn_2K4LF .dlcforyou_DLCStatsInnerCtn_2btx8 {
   display: flex;
@@ -4992,21 +4996,26 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .dlcforyou_DLCStatsCtn_2K4LF
   .dlcforyou_DLCStatsInnerCtn_2btx8
   .dlcforyou_DLCStatColumn_257MX {
-  margin-right: 24px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .dlcforyou_DLCStatsCtn_2K4LF
   .dlcforyou_DLCStatsInnerCtn_2btx8
   .dlcforyou_DLCStatColumn_257MX
   .dlcforyou_DLCStatNumber_2bPU5 {
-  font-size: 32px;
+  font-size: 42px;
+  line-height: 45px;
   font-weight: bold;
+  color: #fff;
 }
 .dlcforyou_DLCStatsCtn_2K4LF
   .dlcforyou_DLCStatsInnerCtn_2btx8
   .dlcforyou_DLCStatColumn_257MX
   .dlcforyou_DLCStatDesc_2FVzA {
-  text-transform: uppercase;
-  letter-spacing: 0.1ch;
+  font-size: 13px;
+  color: #fff;
 }
 .partnereventrevisionhistory_VersionListCtn_32hnY {
   max-height: 500px;

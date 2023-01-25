@@ -62,11 +62,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-self: start;
-  margin-left: 14px;
+  justify-self: end;
+  margin: 6px 14px 0 0;
 }
 .gameslistapp_PrivacySettingsLink_mRoic svg {
-  width: 13px;
+  width: 16px;
 }
 @media (max-width: 51rem) {
   .gameslistapp_DisplayControls_2_BHL {
@@ -309,20 +309,27 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   grid-template-rows: auto auto 1fr;
   gap: var(--padding);
   padding: var(--padding);
-  padding-bottom: 0;
+  row-gap: 4px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 .gameslistitems_GamesListItem_2-pQF.gameslistitems_Changing_2virZ {
   background-color: #3d4450;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortait_x-YXr {
-  grid-area: image;
+.gameslistitems_GamesListItem_2-pQF.gameslistitems_Changing_2virZ
+  .gameslistitems_NavButton_3aNUl {
+  background-color: rgba(103, 112, 123, 0.5);
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortait_x-YXr img {
-  aspect-ratio: 92/43;
+.gameslistitems_GamesListItem_2-pQF.gameslistitems_Changing_2virZ
+  .gameslistitems_NavButton_3aNUl:hover {
+  background-color: #67707b;
+}
+.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortrait_1bAC6 {
+  grid-area: image;
+  width: 259px;
+  height: 121px;
 }
 .gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GameItemPortait_x-YXr
+  .gameslistitems_GameItemPortrait_1bAC6
   .gameslistitems_FallbackTitle_MHfYK {
   position: absolute;
   top: 10%;
@@ -341,12 +348,14 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   z-index: 3;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_PortaitContainer_1xbFT {
+.gameslistitems_GamesListItem_2-pQF .gameslistitems_PortraitContainer_1CHM8 {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 .gameslistitems_HasAdultContent_2jXu5
   .gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GameItemPortait_x-YXr
+  .gameslistitems_GameItemPortrait_1bAC6
   img {
   filter: blur(30px);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -359,6 +368,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .gameslistitems_GamesListItem_2-pQF picture img {
   width: 100%;
+  height: 100%;
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameNameContainer_w6q9p {
   grid-area: title;
@@ -370,7 +380,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   margin-right: 32px;
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameName_22awl {
-  font-weight: bold;
+  font-weight: 400;
   font-size: var(--typography-font-size-large);
   color: var(--typography-color-primary);
   line-height: var(--typography-font-size-large);
@@ -401,11 +411,14 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   display: inline-flex;
   flex-direction: column;
   font-size: var(--typography-font-size-medium);
+  color: rgba(184, 188, 191, 0.8);
 }
 .gameslistitems_GamesListItem_2-pQF
   .gameslistitems_Playtime_2Eeyh
   .gameslistitems_FactLabel_2L1rk {
   font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--typography-color-neutral);
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_AchievementContainer_38RhR {
   grid-area: achievements;
@@ -414,7 +427,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_Buttons_1uRB5 {
   grid-area: links;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 10px;
 }
 .gameslistitems_GamesListItem_2-pQF
@@ -424,8 +437,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameLinks_35fxd {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 10px;
+  right: 10px;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -446,6 +459,10 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     grid-template-rows: auto auto 1fr;
     row-gap: 5px;
   }
+  .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortrait_1bAC6 {
+    width: 184px;
+    height: 86px;
+  }
   .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
     display: grid;
     grid-template-areas: "total lastPlayed empty" "achievements achievements achievements";
@@ -453,7 +470,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     grid-template-rows: auto auto;
     align-content: space-between;
     gap: 8px;
-    padding-bottom: 6px;
   }
   .gameslistitems_GamesListItem_2-pQF
     .gameslistitems_Playtime_2Eeyh
@@ -480,10 +496,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     padding-right: var(--padding);
     background-color: rgba(58, 64, 74, 0.2);
   }
-  .gameslistitems_GamesListItem_2-pQF
-    .gameslistitems_GameItemPortait_x-YXr
-    img {
-    aspect-ratio: 2/3;
+  .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortrait_1bAC6 {
+    width: 93px;
+    height: 140px;
   }
   .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
     gap: 4px;
@@ -755,7 +770,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .gameslistitems_NavButton_3aNUl {
   background: rgba(58, 64, 74, 0.5);
   border-radius: 2px;
-  font-size: var(--typography-font-size-medium);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
   color: var(--typography-color-primary);
   border: none;
   display: flex;
@@ -767,6 +784,10 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .gameslistitems_NavButton_3aNUl svg {
   width: 12px;
+}
+.gameslistitems_NavButton_3aNUl:hover {
+  background: #67707b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 .GamepadMode .gameslistitems_NavButton_3aNUl {
   opacity: 0;
@@ -780,9 +801,18 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .gameslistitems_NavDropdownMenu_1Hvmx {
   min-width: 124px;
 }
+.gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem {
+  padding: 0;
+}
+.gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 4px 6px;
+}
 .gameslistitems_AchievementContainer_38RhR {
   display: grid;
-  grid-template-columns: max-content 3fr;
+  grid-template-columns: 1fr minmax(0, 232px);
   grid-template-rows: 1fr;
   flex-grow: 1;
   gap: 16px;
@@ -797,9 +827,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .gameslistitems_AchievementContainer_38RhR
   .gameslistitems_AchievementIcons_6o-Nn
   .gameslistitems_AchievementIcon_2J4HY {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1;
+  width: 32px;
+  height: 32px;
 }
 .gameslistitems_AchievementContainer_38RhR
   .gameslistitems_AchievementIcons_6o-Nn
@@ -936,6 +965,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-size: var(--typography-font-size-medium);
   margin-right: 8px;
   color: inherit;
+  letter-spacing: 0.03em;
 }
 .gameslistitems_AchievementsProgress_3L-qR
   .gameslistitems_AchievementsFraction_1YRRM {
@@ -943,7 +973,15 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-size: var(--typography-font-size-medium);
   margin-right: 8px;
   justify-self: flex-end;
+  text-align: end;
   min-width: 2.5rem;
+}
+.gameslistitems_emptyDescription_3oj8b {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  font-size: var(--typography-font-size-body);
+  font-weight: 400;
+  text-align: center;
 }
 .gameslistremote_ClientSelectDropdown_2Z6JL {
   background: rgba(255, 255, 255, 0.2);
@@ -982,7 +1020,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .gameslistremote_RemoteDownloadClientBar_hQ4Q9
   .gameslistremote_RemoteDownloadHeader_UVZ1r {
-  font-size: var(--typography-font-size-medium);
+  font-size: 14px;
   font-weight: 700;
   gap: 16px;
   display: flex;
@@ -1068,7 +1106,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     position: sticky;
     top: 62px;
   }
-  .GamepadMode .gameslistremote_RemoteDownloadClientBar_hQ4Q9 {
+  .no_header .gameslistremote_RemoteDownloadClientBar_hQ4Q9 {
     top: 0;
   }
 }
@@ -1111,6 +1149,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   color: var(--color-info);
   font-size: var(--typography-font-size-medium);
   font-weight: 700;
+  letter-spacing: 0.03em;
 }
 .gameslistremote_DownloadBarWithLabel_14YOd
   .gameslistremote_DownloadProgress_2b6Qy {
@@ -1167,6 +1206,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 0 12px;
   gap: 8px;
   background-color: var(--color-info);
   color: var(--typography-color-primary);
@@ -1179,6 +1219,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 1rem;
   color: var(--typography-color-primary);
   fill: var(--typography-color-primary);
+}
+.gameslistremote_DownloadIconButton_2P659:hover {
+  background: #0bf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 .gameslisttabs_WishlistTab_1BZR3 {
   position: absolute;

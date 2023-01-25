@@ -790,6 +790,7 @@
         sale_logo: { width: 940, height: 460 },
         bestofyear_banner: { width: 1100, height: 160 },
         bestofyear_banner_mobile: { width: 500, height: 160 },
+        localized_marketing_message: { width: 570, height: 600 },
       };
       function i(e, t, r) {
         const i = a[r];
@@ -8913,624 +8914,22 @@
       const j = new z();
       window.uiBroadcastWatchStore = j;
     },
-    24399: (e, t, r) => {
+    53570: (e, t, r) => {
       "use strict";
-      r.d(t, {
-        FN: () => v,
-        Mr: () => S,
-        SV: () => I,
-        U8: () => w,
-        aN: () => B,
-      });
+      r.d(t, { S: () => p });
       var a = r(70655),
         i = r(9669),
         n = r.n(i),
         s = r(22188),
-        o = r(26149),
-        l = (r(92398), r(92685)),
-        d = r(3389),
-        c = (r(68002), r(82946), r(48780)),
-        u = r(77520),
-        m = r(99533),
-        _ = r(53622),
-        h = r(41311),
-        p = r(93976),
-        g = r(81130),
-        f = r(30600),
-        b = r(90666);
-      r(67294), r(64839);
-      var v;
-      function y(e, t, r, a = !1) {
-        if (r)
-          for (let i of r) {
-            if (a ? (0, l.$N)(e, t, i) : (0, l.FR)(e, t, i)) return i;
-          }
-      }
-      !(function (e) {
-        (e.full = ""),
-          (e.background_main = "_960x311"),
-          (e.background_mini = "_480x156"),
-          (e.capsule_main = "_400x225"),
-          (e.spotlight_main = "_1054x230");
-      })(v || (v = {}));
-      class B {
-        constructor() {
-          (this.m_mapClanToImages = new Map()),
-            (this.m_imageListChangeCallback = new Map()),
-            (this.m_mapClanImageLoadState = new Map()),
-            (this.m_mapImageIDToResolution = new Map()),
-            (this.m_curLocImageGroup = null),
-            (this.m_curLocImageGroupType = null),
-            (this.m_vecClanImageDragListener = new Array());
-        }
-        BHasImageResolution(e) {
-          return this.m_mapImageIDToResolution.has(e.imageid);
-        }
-        GetImageResolution(e) {
-          return this.m_mapImageIDToResolution.get(e.imageid);
-        }
-        SetImageResolution(e, t) {
-          this.m_mapImageIDToResolution.set(e.imageid, t);
-        }
-        GetImageListCallbackForClanAccountID(e) {
-          return (
-            this.m_imageListChangeCallback.has(e) ||
-              this.m_imageListChangeCallback.set(e, new m.pB()),
-            this.m_imageListChangeCallback.get(e)
-          );
-        }
-        static GetExtensionStringForFileType(e) {
-          switch (e) {
-            case 1:
-              return ".jpg";
-            case 2:
-              return ".gif";
-            case 3:
-              return ".png";
-          }
-        }
-        static GetExtensionString(e) {
-          return B.GetExtensionStringForFileType(e.file_type) || ".jpg";
-        }
-        static GetExtensionTypeFromURL(e) {
-          return e.endsWith(".jpg")
-            ? 1
-            : e.endsWith(".png")
-            ? 3
-            : e.endsWith(".gif")
-            ? 2
-            : void 0;
-        }
-        static GetHashAndExt(e) {
-          return e.image_hash + B.GetExtensionString(e);
-        }
-        static GetThumbHashAndExt(e) {
-          return e.thumbnail_hash + B.GetExtensionString(e);
-        }
-        AddClanImageDragListener(e) {
-          -1 == this.m_vecClanImageDragListener.indexOf(e) &&
-            this.m_vecClanImageDragListener.push(e);
-        }
-        RemoveClanImageDragListener(e) {
-          let t = this.m_vecClanImageDragListener.indexOf(e);
-          -1 != t && this.m_vecClanImageDragListener.splice(t, 1);
-        }
-        GetClanImageDragListener() {
-          return this.m_vecClanImageDragListener;
-        }
-        BHasLoadedClanImages(e) {
-          return this.m_mapClanToImages.has(e.GetAccountID());
-        }
-        LoadClanImages(e, t, r) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let a = e.GetAccountID();
-            if (
-              ((0, u.X)(e && 0 != a, "ClanSteamID missing:" + e),
-              e && (!this.m_mapClanToImages.has(a) || t))
-            ) {
-              let t = {},
-                i = null;
-              const o =
-                b.De.COMMUNITY_BASE_URL +
-                "/gid/" +
-                e.ConvertTo64BitString() +
-                "/getimages/";
-              i = yield n().get(o, {
-                params: t,
-                withCredentials: !0,
-                cancelToken: r ? r.token : null,
-              });
-              for (let e of i.data.images) e.clanAccountID = a;
-              (0, s.z)(() => {
-                this.m_mapClanImageLoadState.set(a, { loaded: !0 }),
-                  this.m_mapClanToImages.set(a, i.data.images),
-                  this.GetImageListCallbackForClanAccountID(a).Dispatch(
-                    i.data.images
-                  );
-              });
-            }
-            return this.m_mapClanToImages.get(a);
-          });
-        }
-        GetLoadState(e) {
-          return this.m_mapClanImageLoadState.get(e.GetAccountID());
-        }
-        GetClanImages(e) {
-          return this.GetClanImagesByAccount(e.GetAccountID());
-        }
-        GetClanImagesByAccount(e) {
-          let t = this.m_mapClanToImages.get(e);
-          return t || new Array();
-        }
-        GetFilteredClanImages(e, t) {
-          let r = w.GetClanImages(e);
-          return this.GetFilteredClanImagesList(r, t);
-        }
-        GetFilteredClanImagesList(e, t) {
-          if (t && t.trim().length > 0) {
-            t = t.trim().toLowerCase();
-            let r = new Array();
-            for (let a of e)
-              a.file_name &&
-                a.file_name.toLowerCase().indexOf(t) >= 0 &&
-                r.push(a);
-            return r;
-          }
-          return e;
-        }
-        GetClanImageByID(e, t) {
-          let r = e.GetAccountID(),
-            a = this.m_mapClanToImages.get(r);
-          return a ? a.find((e) => e.imageid == t) : null;
-        }
-        GetClanImageByURL(e, t) {
-          let r = e.GetAccountID(),
-            a = this.m_mapClanToImages.get(r);
-          return a ? a.find((e) => e.thumb_url == t || e.url == t) : null;
-        }
-        GetClanImageByFile(e, t) {
-          let r = e.GetAccountID(),
-            a = this.m_mapClanToImages.get(r);
-          return a ? a.find((e) => e.file_name == t.name) : null;
-        }
-        GetClanImageByImageHash(e, t) {
-          let r = e.GetAccountID(),
-            a = this.m_mapClanToImages.get(r);
-          return a ? a.find((e) => e.image_hash == t) : null;
-        }
-        DeleteClanImageByID(e, t) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let r = { sessionid: b.De.SESSIONID, imageid: t },
-              a = e.GetAccountID(),
-              i = yield n().get(
-                b.De.COMMUNITY_BASE_URL +
-                  "/gid/" +
-                  e.ConvertTo64BitString() +
-                  "/deleteimage/",
-                { params: r }
-              );
-            if (!i || 200 != i.status || 1 != i.data.success) return i.data;
-            let s = this.m_mapClanToImages.get(a),
-              o = s.findIndex((e, r, a) => e.imageid == t);
-            return (
-              o >= 0 &&
-                (s.splice(o, 1),
-                this.GetImageListCallbackForClanAccountID(a).Dispatch([...s])),
-              i.data
-            );
-          });
-        }
-        DeleteClanImage(e, t) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            return this.DeleteClanImageByID(e, t.imageid);
-          });
-        }
-        DetectLanguageFromURL(e, t) {
-          let r = this.GetClanImageByURL(e, t);
-          return r ? this.DetectLanguageFromFilename(r.file_name) : null;
-        }
-        DetectLangageFromClanImage(e) {
-          return this.DetectLanguageFromFilename(e.file_name);
-        }
-        DetectLanguageFromFilename(e) {
-          let t = e.lastIndexOf(".");
-          -1 != t && (e = e.slice(0, t).toLowerCase());
-          let r = null,
-            a = 0;
-          e.endsWith("korean") && ((r = 4), (a = "korean".length));
-          for (let t = 0; t < 30; ++t) {
-            const i = (0, o.j_)(t);
-            i.length <= a || (e.endsWith(i) && ((r = t), (a = i.length)));
-          }
-          return r;
-        }
-        static GetHashFromHashAndExt(e) {
-          let t = e.substring(e.lastIndexOf("."));
-          return e.substring(0, e.length - t.length);
-        }
-        static GetExtensionStringFromHashAndExt(e) {
-          return e.substring(e.lastIndexOf("."));
-        }
-        static GenerateArtworkURLFromHashAndExtensions(e, t, r = v.full, a, i) {
-          if (r != v.full || a) {
-            let n = t.substring(t.lastIndexOf(".")),
-              s = t.substring(0, t.length - n.length);
-            return a && "localized_image_group" == i
-              ? b.De.MEDIA_CDN_COMMUNITY_URL +
-                  "images/clans/" +
-                  e.GetAccountID() +
-                  "/" +
-                  s +
-                  "/" +
-                  (0, o.eV)((0, o.j_)(a)) +
-                  n
-              : b.De.MEDIA_CDN_COMMUNITY_URL +
-                  "images/clans/" +
-                  e.GetAccountID() +
-                  "/" +
-                  s +
-                  r +
-                  n;
-          }
-          return (
-            b.De.MEDIA_CDN_COMMUNITY_URL +
-            "images/clans/" +
-            e.GetAccountID() +
-            "/" +
-            t
-          );
-        }
-        static GenerateEditableArtworkURLFromHashAndExtension(e, t, r) {
-          let a =
-            b.De.COMMUNITY_BASE_URL +
-            "gid/" +
-            e.ConvertTo64BitString() +
-            "/showclanimage/?image_hash_and_ext=" +
-            t;
-          return r && (a += "&lang=" + r), a;
-        }
-        static GetMimeType(e) {
-          let t = e.substr(e.length - 3);
-          switch (t) {
-            case "jpg":
-              return "image/jpeg";
-            case "gif":
-              return "image/gif";
-            case "png":
-              return "image/png";
-          }
-          return "image/" + t;
-        }
-        AsyncGetImageResolution(e, t, r, i, n) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            const a = t + B.GetExtensionString({ file_type: r }),
-              s = B.GenerateEditableArtworkURLFromHashAndExtension(e, a);
-            return yield this.AsyncGetImageResolutionInternal(s, i, n);
-          });
-        }
-        AsyncGetImageResolutionInternal(e, t, r) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let a = { success: void 0 },
-              i = new Image();
-            (i.crossOrigin = "anonymous"),
-              (i.onerror = (t) => {
-                r ||
-                  ((a.err_msg =
-                    "Load fail on url " +
-                    e +
-                    " with error: " +
-                    (0, p.l)(t).strErrorMsg),
-                  console.error(a.err_msg)),
-                  (a.success = 2);
-              }),
-              (i.onload = () => {
-                (a.width = i.width),
-                  (a.height = i.height),
-                  (0, u.X)(
-                    a.width > 0 && a.height > 0,
-                    "unexpected image resolution discovered for strURL: " + e
-                  ),
-                  (a.success = 1);
-              }),
-              (i.src = e),
-              t.token.promise.catch((e) => {
-                (i.onload = () => {}), (a.success = 52);
-              });
-            let n = 0;
-            for (; void 0 === a.success && n < 100; )
-              yield (0, f._R)(100), (n += 1);
-            return (
-              n >= 100 &&
-                ((a.success = 16),
-                (a.err_msg = "We timed out processing images")),
-              a
-            );
-          });
-        }
-        AsyncOverlay(e, t, r, i, n, s) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let a,
-              o,
-              l = new Image();
-            (l.crossOrigin = "anonymous"),
-              (l.onerror = (e) => {
-                (a =
-                  "Load fail on url " +
-                  r +
-                  " with error: " +
-                  (0, p.l)(e).strErrorMsg),
-                  console.error(a);
-              }),
-              (l.onload = () => {
-                let e = new Image();
-                (e.crossOrigin = "anonymous"),
-                  (e.onerror = (e) => {
-                    (a =
-                      "Load fail on url " +
-                      t +
-                      " with error: " +
-                      (0, p.l)(e).strErrorMsg),
-                      console.error(a);
-                  }),
-                  (e.onload = () => {
-                    try {
-                      let t = document.createElement("canvas"),
-                        r = t.getContext("2d");
-                      (t.width = n), (t.height = s), r.drawImage(e, 0, 0, n, s);
-                      let a = (n - l.width) / 2,
-                        i = (s - l.height) / 2;
-                      r.drawImage(l, a, i),
-                        t.toBlob((e) => (o = e), "image/jpeg");
-                    } catch (e) {
-                      a =
-                        "Failed during image processing for " +
-                        i +
-                        " with " +
-                        e;
-                    }
-                  }),
-                  (e.src = t);
-              }),
-              (l.src = r);
-            let d = 0;
-            for (; void 0 === o && d < 100; ) yield (0, f._R)(100), (d += 1);
-            if (
-              (d >= 100 &&
-                void 0 === o &&
-                (a = "AsyncOverlay - We timed out processing images"),
-              a)
-            )
-              throw (console.log(a), { success: 2, err_msg: a });
-            let c = new I(e),
-              u = yield c.UploadFile(o, i);
-            return u.image_hash + B.GetExtensionString(u);
-          });
-        }
-        BDoesClanImageFileExistsOnCDNOrOrigin(e, t, r, i) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let a =
-                b.De.COMMUNITY_BASE_URL +
-                "gid/" +
-                t.ConvertTo64BitString() +
-                "/hasclanimagefile",
-              s = { image_hash_and_ext: r, lang: "" + i };
-            return (
-              1 ==
-              (yield n().get(a, { params: s, cancelToken: e && e.token })).data
-                .success
-            );
-          });
-        }
-        SetPrimaryImageForImageGroup(e, t) {
-          (this.m_curLocImageGroup &&
-            this.m_curLocImageGroup.primaryImage.imageid == e.imageid &&
-            t == this.m_curLocImageGroupType) ||
-            ((this.m_curLocImageGroup = {
-              primaryImage: e,
-              localized_images: [],
-            }),
-            (this.m_curLocImageGroupType = t),
-            (this.m_curLocImageGroup.localized_images = (0, c.LG)(
-              this.m_curLocImageGroup.localized_images,
-              30,
-              null
-            )));
-        }
-        ClearImageGroup() {
-          (this.m_curLocImageGroup = null),
-            (this.m_curLocImageGroupType = null);
-        }
-        GetLocalizedImageGroupForEdit() {
-          return this.m_curLocImageGroup;
-        }
-        GetLocalizedImageGroupForEditAsURL(e, t) {
-          let r = this.m_curLocImageGroup.primaryImage;
-          return this.m_curLocImageGroup.localized_images[t]
-            ? this.m_curLocImageGroup.localized_images[t]
-            : B.GenerateArtworkURLFromHashAndExtensions(e, B.GetHashAndExt(r));
-        }
-        GetLocalizedImageGroupForEditAsImgArray(e) {
-          return this.GetAllLocalizedGroupImages();
-        }
-        DetermineAvailableLocalizationForGroup(e) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let t = this.m_curLocImageGroup.primaryImage,
-              r = d.K.InitFromClanID(t.clanAccountID),
-              a = B.GetHashAndExt(t),
-              i = [];
-            for (let t = 0; t < 30; ++t)
-              i.push(this.BDoesClanImageFileExistsOnCDNOrOrigin(e, r, a, t));
-            let n = yield Promise.all(i);
-            (0, s.z)(() => {
-              for (let e = 0; e < 30; ++e)
-                n[e] &&
-                  (this.m_curLocImageGroup.localized_images[e] =
-                    B.GenerateArtworkURLFromHashAndExtensions(
-                      r,
-                      a,
-                      v.full,
-                      e,
-                      this.m_curLocImageGroupType
-                    ));
-            });
-          });
-        }
-        SetLocalizedImageGroupAtLang(e, t, r) {
-          this.m_curLocImageGroup &&
-            (this.m_curLocImageGroup.localized_images[e] = r
-              ? B.GenerateArtworkURLFromHashAndExtensions(
-                  t,
-                  r,
-                  v.full,
-                  e,
-                  this.m_curLocImageGroupType
-                )
-              : null);
-        }
-        AddLocalizeImageUploaded(e, t) {
-          let r = this.m_curLocImageGroup.primaryImage;
-          if (r.image_hash == e) {
-            let e = d.K.InitFromClanID(r.clanAccountID),
-              a = B.GetHashAndExt(r);
-            this.m_curLocImageGroup.localized_images[t] =
-              B.GenerateArtworkURLFromHashAndExtensions(
-                e,
-                a,
-                v.full,
-                t,
-                this.m_curLocImageGroupType
-              );
-          }
-        }
-        GetAllLocalizedGroupImages() {
-          return (
-            (this.m_curLocImageGroup &&
-              this.m_curLocImageGroup.localized_images) ||
-            []
-          );
-        }
-      }
-      (0, a.gn)([s.LO], B.prototype, "m_mapClanToImages", void 0),
-        (0, a.gn)([s.LO], B.prototype, "m_mapClanImageLoadState", void 0),
-        (0, a.gn)([s.LO], B.prototype, "m_curLocImageGroup", void 0);
-      class S {
-        constructor(e, t, r, a, i) {
-          if (
-            ((this.fileType = 0),
-            (this.bCropped = !1),
-            (this.file = e),
-            (this.fileType = B.GetExtensionTypeFromURL(e.name)),
-            (this.language = t),
-            (this.uploadTime = Date.now()),
-            (this.img = r),
-            (this.localizedImageGroupPrimaryImage = i),
-            a)
-          ) {
-            let e = y(r.width, r.height, a, !1);
-            void 0 === e && (e = y(r.width, r.height, a, !0)),
-              (this.type = e || a[0]);
-          }
-          (this.status = "pending"), this.ResetImage();
-        }
-        ResetImage() {
-          (this.height = this.img.height),
-            (this.width = this.img.width),
-            (this.dataUrl = this.img.src);
-        }
-        static GetCropFormatDataURLType(e) {
-          switch (e) {
-            case 3:
-              return "image/png";
-            case 1:
-              return "image/jpeg";
-          }
-        }
-        CropImage(e, t, r, i, n, s, o) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            return new Promise((a, l) => {
-              const d = S.GetCropFormatDataURLType(o);
-              if (!d) return void l("Invalid format provided");
-              const c = document.createElement("canvas");
-              (c.width = n), (c.height = s);
-              c.getContext("2d").drawImage(this.img, e, t, r, i, 0, 0, n, s),
-                c.toBlob((e) => {
-                  const t = c.toDataURL(d);
-                  3 !== o && t.startsWith("data:image/png")
-                    ? l("Unable to encode into the requested file format")
-                    : ((this.file = (0, _.Lh)(e, this.file.name)),
-                      (this.width = n),
-                      (this.height = s),
-                      (this.dataUrl = t),
-                      (this.uploadTime = Date.now()),
-                      (this.bCropped = !0),
-                      a());
-                });
-            });
-          });
-        }
-        IsValidImage(e, t, r) {
-          let a = 0,
-            i = 0,
-            n = !1,
-            s = !e || 0 === e.length || e.includes(this.type);
-          if (t) (a = t.width), (i = t.height), (n = !0);
-          else {
-            const e = l.h1[this.type];
-            e &&
-              ((a = e.width),
-              (i = e.height),
-              (n = !e.bDisableEnforceDimensions));
-          }
-          const o = this.width >= a && this.height >= i,
-            d = n ? this.width === a && this.height === i : o,
-            c = r && r != this.fileType,
-            u = Boolean(S.GetCropFormatDataURLType(this.fileType));
-          let m = "",
-            _ = !1;
-          return (
-            s
-              ? c
-                ? (m = (0, h.Xx)(
-                    "#ImageUpload_InvalidFormat",
-                    B.GetExtensionStringForFileType(r)
-                  ))
-                : d || u
-                ? o
-                  ? !d &&
-                    u &&
-                    ((m = (0, h.Xx)("#ImageUpload_InvalidDimensions", a, i)),
-                    (_ = !0))
-                  : (m = (0, h.Xx)("#ImageUpload_TooSmall", a, i))
-                : (m = (0, h.Xx)("#ImageUpload_InvalidResolution", a, i))
-              : (m = (0, h.Xx)("#ImageUpload_InvalidFormatSelected")),
-            { error: m, needsCrop: _ }
-          );
-        }
-        BIsOriginalMinimumDimensions(e) {
-          return (0, l.$N)(this.img.width, this.img.height, e);
-        }
-        GetResizeDimension() {
-          return S.GetResizeDimension(this.type);
-        }
-        static GetResizeDimension(e) {
-          return "background" === e
-            ? [
-                { width: 960, height: 311 },
-                { width: 480, height: 156 },
-              ]
-            : "capsule" === e || "spotlight" === e
-            ? [{ width: l.h1[e].width / 2, height: l.h1[e].height / 2 }]
-            : void 0;
-        }
-      }
-      (0, a.gn)([s.LO], S.prototype, "dataUrl", void 0),
-        (0, a.gn)([s.LO], S.prototype, "width", void 0),
-        (0, a.gn)([s.LO], S.prototype, "height", void 0),
-        (0, a.gn)([s.LO], S.prototype, "type", void 0),
-        (0, a.gn)([s.LO], S.prototype, "status", void 0),
-        (0, a.gn)([s.LO], S.prototype, "message", void 0),
-        (0, a.gn)([s.LO], S.prototype, "bCropped", void 0);
-      class I {
+        o = (r(26149), r(92685), r(3389), r(68002), r(99533)),
+        l = r(53622),
+        d = r(41311),
+        c = r(93976),
+        u = r(81130),
+        m = r(90666),
+        _ = r(24399),
+        h = (r(82946), r(54746));
+      class p {
         constructor(e) {
           (this.m_filesToUpload = []),
             (this.m_filesCompleted = []),
@@ -9542,7 +8941,7 @@
         }
         AddImage(e, t = 0, r, i) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            const a = w.DetectLanguageFromFilename(e.name) || t;
+            const a = _.U8.DetectLanguageFromFilename(e.name) || t;
             return this.AddImageForLanguage(e, a, r, i);
           });
         }
@@ -9555,7 +8954,7 @@
                 (s.onload = () => {
                   const o = new Image();
                   (o.onload = () => {
-                    const s = new S(e, t, o, r, i);
+                    const s = new h.M(e, t, o, r, i);
                     this.m_filesToUpload.push(s), (a = !0), n();
                   }),
                     (o.onerror = (e) => {
@@ -9576,14 +8975,14 @@
         }
         AddExistingClanImage(e, t = 0, r, i) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            let a = B.GetHashAndExt(e),
-              s = B.GenerateEditableArtworkURLFromHashAndExtension(
+            let a = _.aN.GetHashAndExt(e),
+              s = _.aN.GenerateEditableArtworkURLFromHashAndExtension(
                 this.m_clanSteamID,
                 a
               ),
               o = yield n()({ url: s, method: "GET", responseType: "blob" }),
-              l = (0, _.Lh)(o.data, e.file_name);
-            return yield this.AddImage(l, t, r, i);
+              d = (0, l.Lh)(o.data, e.file_name);
+            return yield this.AddImage(d, t, r, i);
           });
         }
         DeleteUploadImageByIndex(e) {
@@ -9645,12 +9044,12 @@
                   );
                 }
               }
-            return yield (0, m.bX)(a);
+            return yield (0, o.bX)(a);
           });
         }
         CancelAllUploads() {
           for (let e of this.m_allCancelTokens)
-            e.cancel((0, h.Xx)("#ImageUpload_CancelRequest"));
+            e.cancel((0, d.Xx)("#ImageUpload_CancelRequest"));
           this.m_allCancelTokens = new Array();
         }
         RetryAllFailedUploads() {
@@ -9658,7 +9057,7 @@
         }
         handleUploadRefresh(e) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            yield w.LoadClanImages(this.m_clanSteamID, !0, e);
+            yield _.U8.LoadClanImages(this.m_clanSteamID, !0, e);
           });
         }
         UploadFile(e, t, r, i, s) {
@@ -9666,7 +9065,7 @@
             let a = null,
               o = new FormData();
             o.append("clanimage", e, t),
-              o.append("sessionid", b.De.SESSIONID),
+              o.append("sessionid", m.De.SESSIONID),
               r &&
                 r.length > 0 &&
                 o.append(
@@ -9682,23 +9081,23 @@
               o.append("language", "" + s));
             const d = n().CancelToken.source();
             this.m_allCancelTokens.push(d);
-            let c =
-                b.De.COMMUNITY_BASE_URL +
+            let u =
+                m.De.COMMUNITY_BASE_URL +
                 "/gid/" +
                 this.m_clanSteamID.ConvertTo64BitString() +
                 l,
-              u = {
+              _ = {
                 cancelToken: d.token,
                 withCredentials: !0,
                 headers: { "Content-Type": "multipart/form-data" },
               };
             try {
-              (a = yield n().post(c, o, u)), this.m_filesCompleted.push(e);
+              (a = yield n().post(u, o, _)), this.m_filesCompleted.push(e);
             } catch (t) {
               (this.m_lastError = {
                 file: e,
                 status: t.response ? t.response.status : 500,
-                message: (0, p.l)(t).strErrorMsg,
+                message: (0, c.l)(t).strErrorMsg,
               }),
                 (a = t.response);
             }
@@ -9708,7 +9107,7 @@
         static SendResizeRequest(e, t, r, i, s) {
           return (0, a.mG)(this, void 0, void 0, function* () {
             let a =
-                b.De.COMMUNITY_BASE_URL +
+                m.De.COMMUNITY_BASE_URL +
                 "/gid/" +
                 t.ConvertTo64BitString() +
                 "/resizeimage/",
@@ -9720,21 +9119,641 @@
                 "resize",
                 s.map((e) => e.width + "x" + e.height).join(",")
               ),
-              o.append("sessionid", b.De.SESSIONID),
+              o.append("sessionid", m.De.SESSIONID),
               (yield n().post(a, o, { cancelToken: e.token })).data.count
             );
           });
         }
       }
-      (0, a.gn)([s.LO], I.prototype, "m_filesToUpload", void 0),
-        (0, a.gn)([s.LO], I.prototype, "m_filesCompleted", void 0),
-        (0, a.gn)([s.LO], I.prototype, "m_lastError", void 0),
-        (0, a.gn)([g.a], I.prototype, "AddImage", null),
-        (0, a.gn)([g.a], I.prototype, "AddExistingClanImage", null),
-        (0, a.gn)([g.a], I.prototype, "DeleteUploadImageByIndex", null),
-        (0, a.gn)([g.a], I.prototype, "DeleteUploadImage", null),
-        (0, a.gn)([g.a], I.prototype, "ClearImages", null);
-      const w = new B();
+      (0, a.gn)([s.LO], p.prototype, "m_filesToUpload", void 0),
+        (0, a.gn)([s.LO], p.prototype, "m_filesCompleted", void 0),
+        (0, a.gn)([s.LO], p.prototype, "m_lastError", void 0),
+        (0, a.gn)([u.a], p.prototype, "AddImage", null),
+        (0, a.gn)([u.a], p.prototype, "AddExistingClanImage", null),
+        (0, a.gn)([u.a], p.prototype, "DeleteUploadImageByIndex", null),
+        (0, a.gn)([u.a], p.prototype, "DeleteUploadImage", null),
+        (0, a.gn)([u.a], p.prototype, "ClearImages", null);
+    },
+    54746: (e, t, r) => {
+      "use strict";
+      r.d(t, { M: () => d });
+      var a = r(70655),
+        i = r(22188),
+        n = (r(26149), r(92685)),
+        s = (r(68002), r(53622)),
+        o = r(41311),
+        l = r(24399);
+      r(53570);
+      class d {
+        constructor(e, t, r, a, i) {
+          if (
+            ((this.fileType = 0),
+            (this.bCropped = !1),
+            (this.file = e),
+            (this.fileType = l.aN.GetExtensionTypeFromURL(e.name)),
+            (this.language = t),
+            (this.uploadTime = Date.now()),
+            (this.img = r),
+            (this.localizedImageGroupPrimaryImage = i),
+            a)
+          ) {
+            let e = (0, l.S6)(r.width, r.height, a, !1);
+            void 0 === e && (e = (0, l.S6)(r.width, r.height, a, !0)),
+              (this.type = e || a[0]);
+          }
+          (this.status = "pending"), this.ResetImage();
+        }
+        ResetImage() {
+          (this.height = this.img.height),
+            (this.width = this.img.width),
+            (this.dataUrl = this.img.src);
+        }
+        static GetCropFormatDataURLType(e) {
+          switch (e) {
+            case 3:
+              return "image/png";
+            case 1:
+              return "image/jpeg";
+          }
+        }
+        CropImage(e, t, r, i, n, o, l) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            return new Promise((a, c) => {
+              const u = d.GetCropFormatDataURLType(l);
+              if (!u) return void c("Invalid format provided");
+              const m = document.createElement("canvas");
+              (m.width = n), (m.height = o);
+              m.getContext("2d").drawImage(this.img, e, t, r, i, 0, 0, n, o),
+                m.toBlob((e) => {
+                  const t = m.toDataURL(u);
+                  3 !== l && t.startsWith("data:image/png")
+                    ? c("Unable to encode into the requested file format")
+                    : ((this.file = (0, s.Lh)(e, this.file.name)),
+                      (this.width = n),
+                      (this.height = o),
+                      (this.dataUrl = t),
+                      (this.uploadTime = Date.now()),
+                      (this.bCropped = !0),
+                      a());
+                });
+            });
+          });
+        }
+        IsValidImage(e, t, r) {
+          let a = 0,
+            i = 0,
+            s = !1,
+            c = !e || 0 === e.length || e.includes(this.type);
+          if (t) (a = t.width), (i = t.height), (s = !0);
+          else {
+            const e = n.h1[this.type];
+            e &&
+              ((a = e.width),
+              (i = e.height),
+              (s = !e.bDisableEnforceDimensions));
+          }
+          const u = this.width >= a && this.height >= i,
+            m = s ? this.width === a && this.height === i : u,
+            _ = r && r != this.fileType,
+            h = Boolean(d.GetCropFormatDataURLType(this.fileType));
+          let p = "",
+            g = !1;
+          return (
+            c
+              ? _
+                ? (p = (0, o.Xx)(
+                    "#ImageUpload_InvalidFormat",
+                    l.aN.GetExtensionStringForFileType(r)
+                  ))
+                : m || h
+                ? u
+                  ? !m &&
+                    h &&
+                    ((p = (0, o.Xx)("#ImageUpload_InvalidDimensions", a, i)),
+                    (g = !0))
+                  : (p = (0, o.Xx)("#ImageUpload_TooSmall", a, i))
+                : (p = (0, o.Xx)("#ImageUpload_InvalidResolution", a, i))
+              : (p = (0, o.Xx)("#ImageUpload_InvalidFormatSelected")),
+            { error: p, needsCrop: g }
+          );
+        }
+        BIsOriginalMinimumDimensions(e) {
+          return (0, n.$N)(this.img.width, this.img.height, e);
+        }
+        GetResizeDimension() {
+          return d.GetResizeDimension(this.type);
+        }
+        static GetResizeDimension(e) {
+          return "background" === e
+            ? [
+                { width: 960, height: 311 },
+                { width: 480, height: 156 },
+              ]
+            : "capsule" === e || "spotlight" === e
+            ? [{ width: n.h1[e].width / 2, height: n.h1[e].height / 2 }]
+            : void 0;
+        }
+      }
+      (0, a.gn)([i.LO], d.prototype, "dataUrl", void 0),
+        (0, a.gn)([i.LO], d.prototype, "width", void 0),
+        (0, a.gn)([i.LO], d.prototype, "height", void 0),
+        (0, a.gn)([i.LO], d.prototype, "type", void 0),
+        (0, a.gn)([i.LO], d.prototype, "status", void 0),
+        (0, a.gn)([i.LO], d.prototype, "message", void 0),
+        (0, a.gn)([i.LO], d.prototype, "bCropped", void 0);
+    },
+    24399: (e, t, r) => {
+      "use strict";
+      r.d(t, { FN: () => f, S6: () => b, U8: () => y, aN: () => v });
+      var a = r(70655),
+        i = r(9669),
+        n = r.n(i),
+        s = r(22188),
+        o = r(26149),
+        l = (r(92398), r(92685)),
+        d = r(3389),
+        c = (r(68002), r(82946), r(48780)),
+        u = r(77520),
+        m = r(99533),
+        _ = r(93976),
+        h = r(30600),
+        p = r(90666),
+        g = (r(67294), r(64839), r(53570));
+      var f;
+      function b(e, t, r, a = !1) {
+        if (r)
+          for (let i of r) {
+            if (a ? (0, l.$N)(e, t, i) : (0, l.FR)(e, t, i)) return i;
+          }
+      }
+      !(function (e) {
+        (e.full = ""),
+          (e.background_main = "_960x311"),
+          (e.background_mini = "_480x156"),
+          (e.capsule_main = "_400x225"),
+          (e.spotlight_main = "_1054x230");
+      })(f || (f = {}));
+      class v {
+        constructor() {
+          (this.m_mapClanToImages = new Map()),
+            (this.m_imageListChangeCallback = new Map()),
+            (this.m_mapClanImageLoadState = new Map()),
+            (this.m_mapImageIDToResolution = new Map()),
+            (this.m_curLocImageGroup = null),
+            (this.m_curLocImageGroupType = null),
+            (this.m_vecClanImageDragListener = new Array());
+        }
+        BHasImageResolution(e) {
+          return this.m_mapImageIDToResolution.has(e.imageid);
+        }
+        GetImageResolution(e) {
+          return this.m_mapImageIDToResolution.get(e.imageid);
+        }
+        SetImageResolution(e, t) {
+          this.m_mapImageIDToResolution.set(e.imageid, t);
+        }
+        GetImageListCallbackForClanAccountID(e) {
+          return (
+            this.m_imageListChangeCallback.has(e) ||
+              this.m_imageListChangeCallback.set(e, new m.pB()),
+            this.m_imageListChangeCallback.get(e)
+          );
+        }
+        static GetExtensionStringForFileType(e) {
+          switch (e) {
+            case 1:
+              return ".jpg";
+            case 2:
+              return ".gif";
+            case 3:
+              return ".png";
+          }
+        }
+        static GetExtensionString(e) {
+          return v.GetExtensionStringForFileType(e.file_type) || ".jpg";
+        }
+        static GetExtensionTypeFromURL(e) {
+          return e.endsWith(".jpg")
+            ? 1
+            : e.endsWith(".png")
+            ? 3
+            : e.endsWith(".gif")
+            ? 2
+            : void 0;
+        }
+        static GetHashAndExt(e) {
+          return e.image_hash + v.GetExtensionString(e);
+        }
+        static GetThumbHashAndExt(e) {
+          return e.thumbnail_hash + v.GetExtensionString(e);
+        }
+        AddClanImageDragListener(e) {
+          -1 == this.m_vecClanImageDragListener.indexOf(e) &&
+            this.m_vecClanImageDragListener.push(e);
+        }
+        RemoveClanImageDragListener(e) {
+          let t = this.m_vecClanImageDragListener.indexOf(e);
+          -1 != t && this.m_vecClanImageDragListener.splice(t, 1);
+        }
+        GetClanImageDragListener() {
+          return this.m_vecClanImageDragListener;
+        }
+        BHasLoadedClanImages(e) {
+          return this.m_mapClanToImages.has(e.GetAccountID());
+        }
+        LoadClanImages(e, t, r) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let a = e.GetAccountID();
+            if (
+              ((0, u.X)(e && 0 != a, "ClanSteamID missing:" + e),
+              e && (!this.m_mapClanToImages.has(a) || t))
+            ) {
+              let t = {},
+                i = null;
+              const o =
+                p.De.COMMUNITY_BASE_URL +
+                "/gid/" +
+                e.ConvertTo64BitString() +
+                "/getimages/";
+              i = yield n().get(o, {
+                params: t,
+                withCredentials: !0,
+                cancelToken: r ? r.token : null,
+              });
+              for (let e of i.data.images) e.clanAccountID = a;
+              (0, s.z)(() => {
+                this.m_mapClanImageLoadState.set(a, { loaded: !0 }),
+                  this.m_mapClanToImages.set(a, i.data.images),
+                  this.GetImageListCallbackForClanAccountID(a).Dispatch(
+                    i.data.images
+                  );
+              });
+            }
+            return this.m_mapClanToImages.get(a);
+          });
+        }
+        GetLoadState(e) {
+          return this.m_mapClanImageLoadState.get(e.GetAccountID());
+        }
+        GetClanImages(e) {
+          return this.GetClanImagesByAccount(e.GetAccountID());
+        }
+        GetClanImagesByAccount(e) {
+          let t = this.m_mapClanToImages.get(e);
+          return t || new Array();
+        }
+        GetFilteredClanImages(e, t) {
+          let r = y.GetClanImages(e);
+          return this.GetFilteredClanImagesList(r, t);
+        }
+        GetFilteredClanImagesList(e, t) {
+          if (t && t.trim().length > 0) {
+            t = t.trim().toLowerCase();
+            let r = new Array();
+            for (let a of e)
+              a.file_name &&
+                a.file_name.toLowerCase().indexOf(t) >= 0 &&
+                r.push(a);
+            return r;
+          }
+          return e;
+        }
+        GetClanImageByID(e, t) {
+          let r = e.GetAccountID(),
+            a = this.m_mapClanToImages.get(r);
+          return a ? a.find((e) => e.imageid == t) : null;
+        }
+        GetClanImageByURL(e, t) {
+          let r = e.GetAccountID(),
+            a = this.m_mapClanToImages.get(r);
+          return a ? a.find((e) => e.thumb_url == t || e.url == t) : null;
+        }
+        GetClanImageByFile(e, t) {
+          let r = e.GetAccountID(),
+            a = this.m_mapClanToImages.get(r);
+          return a ? a.find((e) => e.file_name == t.name) : null;
+        }
+        GetClanImageByImageHash(e, t) {
+          let r = e.GetAccountID(),
+            a = this.m_mapClanToImages.get(r);
+          return a ? a.find((e) => e.image_hash == t) : null;
+        }
+        DeleteClanImageByID(e, t) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let r = { sessionid: p.De.SESSIONID, imageid: t },
+              a = e.GetAccountID(),
+              i = yield n().get(
+                p.De.COMMUNITY_BASE_URL +
+                  "/gid/" +
+                  e.ConvertTo64BitString() +
+                  "/deleteimage/",
+                { params: r }
+              );
+            if (!i || 200 != i.status || 1 != i.data.success) return i.data;
+            let s = this.m_mapClanToImages.get(a),
+              o = s.findIndex((e, r, a) => e.imageid == t);
+            return (
+              o >= 0 &&
+                (s.splice(o, 1),
+                this.GetImageListCallbackForClanAccountID(a).Dispatch([...s])),
+              i.data
+            );
+          });
+        }
+        DeleteClanImage(e, t) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            return this.DeleteClanImageByID(e, t.imageid);
+          });
+        }
+        DetectLanguageFromURL(e, t) {
+          let r = this.GetClanImageByURL(e, t);
+          return r ? this.DetectLanguageFromFilename(r.file_name) : null;
+        }
+        DetectLangageFromClanImage(e) {
+          return this.DetectLanguageFromFilename(e.file_name);
+        }
+        DetectLanguageFromFilename(e) {
+          let t = e.lastIndexOf(".");
+          -1 != t && (e = e.slice(0, t).toLowerCase());
+          let r = null,
+            a = 0;
+          e.endsWith("korean") && ((r = 4), (a = "korean".length));
+          for (let t = 0; t < 30; ++t) {
+            const i = (0, o.j_)(t);
+            i.length <= a || (e.endsWith(i) && ((r = t), (a = i.length)));
+          }
+          return r;
+        }
+        static GetHashFromHashAndExt(e) {
+          let t = e.substring(e.lastIndexOf("."));
+          return e.substring(0, e.length - t.length);
+        }
+        static GetExtensionStringFromHashAndExt(e) {
+          return e.substring(e.lastIndexOf("."));
+        }
+        static GenerateArtworkURLFromHashAndExtensions(e, t, r = f.full, a, i) {
+          if (r != f.full || a) {
+            let n = t.substring(t.lastIndexOf(".")),
+              s = t.substring(0, t.length - n.length);
+            return a && "localized_image_group" == i
+              ? p.De.MEDIA_CDN_COMMUNITY_URL +
+                  "images/clans/" +
+                  e.GetAccountID() +
+                  "/" +
+                  s +
+                  "/" +
+                  (0, o.eV)((0, o.j_)(a)) +
+                  n
+              : p.De.MEDIA_CDN_COMMUNITY_URL +
+                  "images/clans/" +
+                  e.GetAccountID() +
+                  "/" +
+                  s +
+                  r +
+                  n;
+          }
+          return (
+            p.De.MEDIA_CDN_COMMUNITY_URL +
+            "images/clans/" +
+            e.GetAccountID() +
+            "/" +
+            t
+          );
+        }
+        static GenerateEditableArtworkURLFromHashAndExtension(e, t, r) {
+          let a =
+            p.De.COMMUNITY_BASE_URL +
+            "gid/" +
+            e.ConvertTo64BitString() +
+            "/showclanimage/?image_hash_and_ext=" +
+            t;
+          return r && (a += "&lang=" + r), a;
+        }
+        static GetMimeType(e) {
+          let t = e.substr(e.length - 3);
+          switch (t) {
+            case "jpg":
+              return "image/jpeg";
+            case "gif":
+              return "image/gif";
+            case "png":
+              return "image/png";
+          }
+          return "image/" + t;
+        }
+        AsyncGetImageResolution(e, t, r, i, n) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            const a = t + v.GetExtensionString({ file_type: r }),
+              s = v.GenerateEditableArtworkURLFromHashAndExtension(e, a);
+            return yield this.AsyncGetImageResolutionInternal(s, i, n);
+          });
+        }
+        AsyncGetImageResolutionInternal(e, t, r) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let a = { success: void 0 },
+              i = new Image();
+            (i.crossOrigin = "anonymous"),
+              (i.onerror = (t) => {
+                r ||
+                  ((a.err_msg =
+                    "Load fail on url " +
+                    e +
+                    " with error: " +
+                    (0, _.l)(t).strErrorMsg),
+                  console.error(a.err_msg)),
+                  (a.success = 2);
+              }),
+              (i.onload = () => {
+                (a.width = i.width),
+                  (a.height = i.height),
+                  (0, u.X)(
+                    a.width > 0 && a.height > 0,
+                    "unexpected image resolution discovered for strURL: " + e
+                  ),
+                  (a.success = 1);
+              }),
+              (i.src = e),
+              t.token.promise.catch((e) => {
+                (i.onload = () => {}), (a.success = 52);
+              });
+            let n = 0;
+            for (; void 0 === a.success && n < 100; )
+              yield (0, h._R)(100), (n += 1);
+            return (
+              n >= 100 &&
+                ((a.success = 16),
+                (a.err_msg = "We timed out processing images")),
+              a
+            );
+          });
+        }
+        AsyncOverlay(e, t, r, i, n, s) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let a,
+              o,
+              l = new Image();
+            (l.crossOrigin = "anonymous"),
+              (l.onerror = (e) => {
+                (a =
+                  "Load fail on url " +
+                  r +
+                  " with error: " +
+                  (0, _.l)(e).strErrorMsg),
+                  console.error(a);
+              }),
+              (l.onload = () => {
+                let e = new Image();
+                (e.crossOrigin = "anonymous"),
+                  (e.onerror = (e) => {
+                    (a =
+                      "Load fail on url " +
+                      t +
+                      " with error: " +
+                      (0, _.l)(e).strErrorMsg),
+                      console.error(a);
+                  }),
+                  (e.onload = () => {
+                    try {
+                      let t = document.createElement("canvas"),
+                        r = t.getContext("2d");
+                      (t.width = n), (t.height = s), r.drawImage(e, 0, 0, n, s);
+                      let a = (n - l.width) / 2,
+                        i = (s - l.height) / 2;
+                      r.drawImage(l, a, i),
+                        t.toBlob((e) => (o = e), "image/jpeg");
+                    } catch (e) {
+                      a =
+                        "Failed during image processing for " +
+                        i +
+                        " with " +
+                        e;
+                    }
+                  }),
+                  (e.src = t);
+              }),
+              (l.src = r);
+            let d = 0;
+            for (; void 0 === o && d < 100; ) yield (0, h._R)(100), (d += 1);
+            if (
+              (d >= 100 &&
+                void 0 === o &&
+                (a = "AsyncOverlay - We timed out processing images"),
+              a)
+            )
+              throw (console.log(a), { success: 2, err_msg: a });
+            let c = new g.S(e),
+              u = yield c.UploadFile(o, i);
+            return u.image_hash + v.GetExtensionString(u);
+          });
+        }
+        BDoesClanImageFileExistsOnCDNOrOrigin(e, t, r, i) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let a =
+                p.De.COMMUNITY_BASE_URL +
+                "gid/" +
+                t.ConvertTo64BitString() +
+                "/hasclanimagefile",
+              s = { image_hash_and_ext: r, lang: "" + i };
+            return (
+              1 ==
+              (yield n().get(a, { params: s, cancelToken: e && e.token })).data
+                .success
+            );
+          });
+        }
+        SetPrimaryImageForImageGroup(e, t) {
+          (this.m_curLocImageGroup &&
+            this.m_curLocImageGroup.primaryImage.imageid == e.imageid &&
+            t == this.m_curLocImageGroupType) ||
+            ((this.m_curLocImageGroup = {
+              primaryImage: e,
+              localized_images: [],
+            }),
+            (this.m_curLocImageGroupType = t),
+            (this.m_curLocImageGroup.localized_images = (0, c.LG)(
+              this.m_curLocImageGroup.localized_images,
+              30,
+              null
+            )));
+        }
+        ClearImageGroup() {
+          (this.m_curLocImageGroup = null),
+            (this.m_curLocImageGroupType = null);
+        }
+        GetLocalizedImageGroupForEdit() {
+          return this.m_curLocImageGroup;
+        }
+        GetLocalizedImageGroupForEditAsURL(e, t) {
+          let r = this.m_curLocImageGroup.primaryImage;
+          return this.m_curLocImageGroup.localized_images[t]
+            ? this.m_curLocImageGroup.localized_images[t]
+            : v.GenerateArtworkURLFromHashAndExtensions(e, v.GetHashAndExt(r));
+        }
+        GetLocalizedImageGroupForEditAsImgArray(e) {
+          return this.GetAllLocalizedGroupImages();
+        }
+        DetermineAvailableLocalizationForGroup(e) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let t = this.m_curLocImageGroup.primaryImage,
+              r = d.K.InitFromClanID(t.clanAccountID),
+              a = v.GetHashAndExt(t),
+              i = [];
+            for (let t = 0; t < 30; ++t)
+              i.push(this.BDoesClanImageFileExistsOnCDNOrOrigin(e, r, a, t));
+            let n = yield Promise.all(i);
+            (0, s.z)(() => {
+              for (let e = 0; e < 30; ++e)
+                n[e] &&
+                  (this.m_curLocImageGroup.localized_images[e] =
+                    v.GenerateArtworkURLFromHashAndExtensions(
+                      r,
+                      a,
+                      f.full,
+                      e,
+                      this.m_curLocImageGroupType
+                    ));
+            });
+          });
+        }
+        SetLocalizedImageGroupAtLang(e, t, r) {
+          this.m_curLocImageGroup &&
+            (this.m_curLocImageGroup.localized_images[e] = r
+              ? v.GenerateArtworkURLFromHashAndExtensions(
+                  t,
+                  r,
+                  f.full,
+                  e,
+                  this.m_curLocImageGroupType
+                )
+              : null);
+        }
+        AddLocalizeImageUploaded(e, t) {
+          let r = this.m_curLocImageGroup.primaryImage;
+          if (r.image_hash == e) {
+            let e = d.K.InitFromClanID(r.clanAccountID),
+              a = v.GetHashAndExt(r);
+            this.m_curLocImageGroup.localized_images[t] =
+              v.GenerateArtworkURLFromHashAndExtensions(
+                e,
+                a,
+                f.full,
+                t,
+                this.m_curLocImageGroupType
+              );
+          }
+        }
+        GetAllLocalizedGroupImages() {
+          return (
+            (this.m_curLocImageGroup &&
+              this.m_curLocImageGroup.localized_images) ||
+            []
+          );
+        }
+      }
+      (0, a.gn)([s.LO], v.prototype, "m_mapClanToImages", void 0),
+        (0, a.gn)([s.LO], v.prototype, "m_mapClanImageLoadState", void 0),
+        (0, a.gn)([s.LO], v.prototype, "m_curLocImageGroup", void 0);
+      const y = new v();
     },
     76776: (e, t, r) => {
       "use strict";
@@ -14019,16 +14038,16 @@
     89673: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A$: () => v,
-        K$: () => u,
-        MN: () => y,
-        NC: () => f,
-        Ot: () => m,
-        TR: () => b,
-        dw: () => g,
-        kD: () => _,
-        ph: () => h,
-        qr: () => p,
+        A$: () => y,
+        K$: () => m,
+        MN: () => B,
+        NC: () => b,
+        Ot: () => _,
+        TR: () => v,
+        dw: () => f,
+        kD: () => h,
+        ph: () => p,
+        qr: () => g,
       });
       var a = r(70655),
         i = r(77442),
@@ -14037,11 +14056,12 @@
         o = (r(37662), r(990), r(77636)),
         l = (r(14146), r(159)),
         d = r(37694),
-        c = r(90666);
-      function u(e) {
+        c = r(90666),
+        u = r(28875);
+      function m(e) {
         return l.Z.Get().BIsStoreItemMissing(e.id, (0, n.TM)(e.type));
       }
-      function m(e, t, r) {
+      function _(e, t, r) {
         const a = new Array();
         return (
           null == e || e.forEach((e) => a.push({ id: e, type: "game" })),
@@ -14050,7 +14070,7 @@
           a
         );
       }
-      function _(e) {
+      function h(e) {
         var t;
         const r = l.Z.Get().GetStoreItem(e.id, (0, n.TM)(e.type));
         return (
@@ -14060,13 +14080,20 @@
             : t.discount_pct) > 0
         );
       }
-      function h(e) {
-        const t = l.Z.Get().GetStoreItem(e.id, (0, n.TM)(e.type));
+      function p(e) {
+        var t;
+        if (
+          !(null === (t = u.Q.Get().GetHomeView()) || void 0 === t
+            ? void 0
+            : t.localized)
+        )
+          return !0;
+        const r = l.Z.Get().GetStoreItem(e.id, (0, n.TM)(e.type));
         return o.jg
           .Get()
-          .BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport());
+          .BIsAnyLanguageEnabled(r.GetAllLanguagesWithSomeSupport());
       }
-      function p(e, t, r) {
+      function g(e, t, r) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           if (!e || 0 == e.length) return [];
           const a = e.filter((e) => (0, s.mU)(e.type)).map((e) => e.id),
@@ -14109,7 +14136,7 @@
           });
         });
       }
-      function g(e) {
+      function f(e) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           const t = new Set();
           e
@@ -14121,35 +14148,41 @@
             yield d.OT.Get().QueueMultipleTagLoads(Array.from(t));
         });
       }
-      const f = {
+      const b = {
         include_tag_count: 20,
         include_basic_info: !0,
         include_supported_languages: !0,
       };
-      function b(e) {
-        const t = o.jg.Get(),
-          r = (null == e ? void 0 : e.GetAllLanguagesWithSomeSupport()) || [];
+      function v(e) {
+        var t;
+        const r = o.jg.Get(),
+          a = (null == e ? void 0 : e.GetAllLanguagesWithSomeSupport()) || [],
+          i =
+            null === (t = u.Q.Get().GetHomeView()) || void 0 === t
+              ? void 0
+              : t.localized;
         return (
           !e ||
           (0 == e.GetStoreItemType() &&
-            (t.BIsGameIgnored(e.GetAppID()) ||
-              t.BIsGameIgnored(e.GetParentAppID()))) ||
-          t.BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
-          t.BExcludeTagIDs(e.GetTagIDs()) ||
-          e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e)) ||
-          !(
-            0 == r.length ||
-            e.BHasSomeLanguageSupport(0) ||
-            t.BIsAnyLanguageEnabled(r)
-          )
+            (r.BIsGameIgnored(e.GetAppID()) ||
+              r.BIsGameIgnored(e.GetParentAppID()))) ||
+          r.BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
+          r.BExcludeTagIDs(e.GetTagIDs()) ||
+          e.GetAllCreatorClanIDs().some((e) => r.BIsIgnoringCurator(e)) ||
+          (i &&
+            !(
+              0 == a.length ||
+              e.BHasSomeLanguageSupport(0) ||
+              r.BIsAnyLanguageEnabled(a)
+            ))
         );
       }
-      function v(e, t, r, s) {
+      function y(e, t, r, s) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           let a = 0,
             o = 0;
           const d = [];
-          yield p(e, i.bk, t);
+          yield g(e, i.bk, t);
           for (const i of e) {
             const e = l.Z.Get().GetStoreItem(i.id, (0, n.TM)(i.type));
             if (!e) {
@@ -14169,7 +14202,7 @@
                   .filter(Boolean);
               t && c.push(...t);
             }
-            c.some(s || b) ? (o++, r && r.push(i)) : d.push(i);
+            c.some(s || v) ? (o++, r && r.push(i)) : d.push(i);
           }
           return (
             "dev" === c.De.WEB_UNIVERSE &&
@@ -14185,9 +14218,9 @@
           );
         });
       }
-      function y(e, t, r, i, s, d, c) {
+      function B(e, t, r, i, s, d, c) {
         return (0, a.mG)(this, void 0, void 0, function* () {
-          let a = yield v(
+          let a = yield y(
             e,
             t,
             c,
@@ -14198,7 +14231,7 @@
                     .Get()
                     .BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
                   o.jg.Get().BExcludeTagIDs(e.GetTagIDs())
-              : b
+              : v
           );
           const u = [];
           for (const e of a) {
@@ -14296,6 +14329,38 @@
         }
         BIsDefaultTab() {
           return this.m_bDefaultTab;
+        }
+        BFilterRequiresFeatureDemo() {
+          var e, t, r, a, i;
+          if (
+            1 ==
+            (null ===
+              (r =
+                null ===
+                  (t =
+                    null === (e = this.m_activeTab) || void 0 === e
+                      ? void 0
+                      : e.sale_tag_filter) || void 0 === t
+                  ? void 0
+                  : t.clauses) || void 0 === r
+              ? void 0
+              : r.length)
+          ) {
+            const e =
+              null ===
+                (i =
+                  null === (a = this.m_activeTab) || void 0 === a
+                    ? void 0
+                    : a.sale_tag_filter) || void 0 === i
+                ? void 0
+                : i.clauses[0];
+            return (
+              "Must have" === e.type &&
+              1 === e.or_tags.length &&
+              "[Feature] Has Demo" === e.or_tags[0]
+            );
+          }
+          return !1;
         }
         BIsTabFilteringEnabled() {
           return Boolean(this.m_capsuleFilter);

@@ -113,32 +113,32 @@
           string: o,
           position: l,
           static: m,
-          msDelayAppear: u,
+          msDelayAppear: d,
         } = e;
-        let d = [s().LoadingWrapper, "SteamLogoThrobber", a(r)];
-        const [b, _] = n.useState(!u);
+        let u = [s().LoadingWrapper, "SteamLogoThrobber", a(r)];
+        const [b, _] = n.useState(!d);
         return (
           (0, n.useEffect)(() => {
             if (b) return;
-            const e = setTimeout(() => _(!0), u);
+            const e = setTimeout(() => _(!0), d);
             return () => clearTimeout(e);
-          }, [u, b]),
-          void 0 === o && d.push(s().noString),
-          t && d.push(t),
-          m && d.push(s().Static),
+          }, [d, b]),
+          void 0 === o && u.push(s().noString),
+          t && u.push(t),
+          m && u.push(s().Static),
           n.createElement(
             "div",
             {
               className: (0, c.Z)(
                 "center" == l && s().throbber_center_wrapper,
-                u && s().ThrobberDelayAppear,
+                d && s().ThrobberDelayAppear,
                 b && s().Visible
               ),
             },
             b &&
               n.createElement(
                 "div",
-                { className: d.join(" ") },
+                { className: u.join(" ") },
                 n.createElement(
                   "div",
                   { className: s().Throbber },
@@ -473,8 +473,8 @@
         a = (r(26149), r(92398), r(5977)),
         i = r(22453),
         m = r(32548),
-        u = (r(82946), r(41311), r(93976)),
-        d = r(90666),
+        d = (r(82946), r(41311), r(93976)),
+        u = r(90666),
         b = r(73046),
         _ = r(13596),
         p = r(74891),
@@ -513,7 +513,7 @@
               )
             ));
         else if (t.steam_persona) {
-          const e = d.De.COMMUNITY_BASE_URL + "/profiles/" + t.id;
+          const e = u.De.COMMUNITY_BASE_URL + "/profiles/" + t.id;
           c = s.createElement(
             s.Fragment,
             null,
@@ -888,7 +888,7 @@
                   }
                   if (!t && !c && !l) return null;
                   const m = g(n) + " samples",
-                    u = g(a) + " samples";
+                    d = g(a) + " samples";
                   return s.createElement(
                     "div",
                     { className: b.PingBreakdown },
@@ -912,7 +912,7 @@
                         { className: b.FlowSectionTitle },
                         "Jitter"
                       ),
-                      s.createElement("div", { className: b.NumSamples }, u),
+                      s.createElement("div", { className: b.NumSamples }, d),
                       l
                     )
                   );
@@ -925,26 +925,29 @@
               )
         );
       }
-      function M(e) {
-        const t = e.sess;
-        let r = null,
-          n = null;
+      function x(e) {
+        const t = e.sess,
+          r = e.cxn;
+        let n = null,
+          c = null;
+        if (t.client_front || t.router_front) {
+          const e =
+            "ded" == r.kind
+              ? "End-to-end statistics reported by client"
+              : "End-to-end statistics reported by player";
+          n = s.createElement(
+            "div",
+            { className: b.QualityFlowPairCtr },
+            s.createElement(y, { title: e, flow: t.client_front }),
+            s.createElement(y, {
+              title: "Front side statistics reported by relay",
+              flow: t.router_front,
+            })
+          );
+        }
         return (
-          (t.client_front || t.router_front) &&
-            (r = s.createElement(
-              "div",
-              { className: b.QualityFlowPairCtr },
-              s.createElement(y, {
-                title: "Front side statistics reported by relay",
-                flow: t.router_front,
-              }),
-              s.createElement(y, {
-                title: "Front side statistics reported by player",
-                flow: t.client_front,
-              })
-            )),
           (t.router_back || t.gameserver_back) &&
-            (n = s.createElement(
+            (c = s.createElement(
               "div",
               { className: b.QualityFlowPairCtr },
               s.createElement(y, {
@@ -974,12 +977,12 @@
               ),
               s.createElement(h, { label: "Active" }, (0, p.jA)(t.active_time))
             ),
-            r,
-            n
+            n,
+            c
           )
         );
       }
-      function x(e) {
+      function M(e) {
         const t = e.cxn,
           r = t.client,
           n = t.peer,
@@ -997,8 +1000,8 @@
             }
             return t;
           })(t.client_sessions);
-        let u = null,
-          d = null,
+        let d = null,
+          u = null,
           _ = null,
           f = null,
           g = null,
@@ -1033,7 +1036,7 @@
                 timeZoneName: "short",
               }),
               l = (0, p.jA)(m.duration);
-            u = s.createElement(
+            d = s.createElement(
               "span",
               { className: b.CxnTimeAndDuration },
               s.createElement(h, { label: "Time" }, n, " ", c, "--", o),
@@ -1042,7 +1045,7 @@
           }
           if (
             (m.close_code &&
-              (d = s.createElement(
+              (u = s.createElement(
                 h,
                 { label: "Closed", className: b.CxnCloseInfo },
                 m.close_type,
@@ -1086,40 +1089,42 @@
           }
         }
         if (c || o) {
-          const [e, t] = C(c),
-            [r, n] = C(o),
-            a = Math.min(e, r),
-            i = Math.max(t, n);
-          if (a <= i) {
+          const [e, r] = C(c),
+            [n, a] = C(o),
+            i = Math.min(e, n),
+            m = Math.max(r, a);
+          if (i <= m) {
             const e =
-              0.03 * a + 2 < i
-                ? `${a}--${i}ms`
-                : Math.floor((a + i) / 2 + 0.5) + "ms";
+              0.03 * i + 2 < m
+                ? `${i}--${m}ms`
+                : Math.floor((i + m) / 2 + 0.5) + "ms";
             g = s.createElement(h, { label: "Ping" }, e);
           }
-          const m = k(c),
+          const d = k(c),
             u = k(o),
-            d = Math.min(m, u);
-          d >= 0 &&
-            d <= 100 &&
-            (v = s.createElement(
-              h,
-              { label: "Packet delivery" },
-              `${d.toFixed(2)}%`
-            )),
-            l &&
-              (N = s.createElement(
-                "div",
-                { className: b.QualityFlowPairCtr },
-                s.createElement(y, {
-                  title: "End-to-end statistics reported by client",
-                  flow: c,
-                }),
-                s.createElement(y, {
-                  title: "End-to-end statistics reported by peer",
-                  flow: o,
-                })
-              ));
+            _ = Math.min(d, u);
+          if (
+            (_ >= 0 &&
+              _ <= 100 &&
+              (v = s.createElement(
+                h,
+                { label: "Packet delivery" },
+                `${_.toFixed(2)}%`
+              )),
+            l)
+          ) {
+            const e = "End-to-end statistics reported by client",
+              r =
+                "ded" == t.kind
+                  ? "End-to-end statistics reported by gameserver"
+                  : "End-to-end statistics reported by peer";
+            N = s.createElement(
+              "div",
+              { className: b.QualityFlowPairCtr },
+              s.createElement(y, { title: e, flow: c }),
+              s.createElement(y, { title: r, flow: o })
+            );
+          }
         }
         if (l) {
           const e = function (e) {
@@ -1148,7 +1153,7 @@
                 );
             for (const r of e(t.client_sessions))
               S.push(
-                s.createElement(M, { cxn: t, sess: r, host_role: "client" })
+                s.createElement(x, { cxn: t, sess: r, host_role: "client" })
               );
           }
           if (n) {
@@ -1161,7 +1166,7 @@
             );
             for (const r of e(t.peer_sessions))
               S.push(
-                s.createElement(M, { cxn: t, sess: r, host_role: "peer" })
+                s.createElement(x, { cxn: t, sess: r, host_role: "peer" })
               );
           }
         }
@@ -1174,12 +1179,12 @@
             s.createElement(
               "div",
               { className: b.CxnSummary },
-              u,
+              d,
               g,
               v,
               _,
               f,
-              d
+              u
             ),
             s.createElement(i.ji, {
               className: b.ExpandDetailsCheckbox,
@@ -1207,7 +1212,7 @@
           [C, k] = s.useState(""),
           [v, N] = s.useState(""),
           [S, T] = s.useState(""),
-          [y, M] = s.useState(0),
+          [y, x] = s.useState(0),
           [L, w] = s.useState(""),
           [F, P] = s.useState("");
         s.useEffect(() => {
@@ -1220,7 +1225,7 @@
           if ((k(c), N(s), T(l), w(a), P(i), !e.toString() && 0 == y)) return;
           p(!0), h(""), e.set("appid", "" + r);
           const m =
-            d.De.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
+            u.De.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
           (() => {
             (0, n.mG)(this, void 0, void 0, function* () {
               var e, t, r, n, c;
@@ -1255,7 +1260,7 @@
                           : c.msg)
                     ));
               } catch (e) {
-                const t = (0, u.l)(e);
+                const t = (0, d.l)(e);
                 console.error(
                   "sdrsessionsearch: OnPerformSearch " + t.strErrorMsg,
                   t
@@ -1271,7 +1276,7 @@
           for (const t of E) {
             const r =
               (t.client.id || "") + "-" + (t.client.connection_id || "");
-            e.push(s.createElement(x, { key: r, cxn: t }));
+            e.push(s.createElement(M, { key: r, cxn: t }));
           }
           D = s.createElement(
             "div",
@@ -1379,7 +1384,7 @@
                       let r = Object.assign({}, t.location);
                       (r.search = e.toString()),
                         r != t.location && t.push(r),
-                        M(y + 1);
+                        x(y + 1);
                     },
                     disabled: c,
                   },

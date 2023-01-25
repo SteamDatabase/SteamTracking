@@ -1531,7 +1531,7 @@
         o = n(93981),
         l = n(22188),
         c = (n(92398), n(3389));
-      n(65902);
+      n(73812);
       class u {
         constructor() {
           (this.m_webAPIInterface = null),
@@ -2485,7 +2485,7 @@
         f = (n(990), n(10767), n(39388)),
         S = n(77636),
         b = (n(26149), n(58114)),
-        C = n(65902),
+        C = n(73812),
         w = n(65497);
       class I {
         constructor() {
@@ -4012,7 +4012,7 @@
         s = n(6843),
         o = n(40057),
         l = n(82416),
-        c = n(65902),
+        c = n(73812),
         u = n(27991);
       function d() {
         const [e, t] = (0, a.useState)(!1),

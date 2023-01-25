@@ -1351,6 +1351,9 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 .gamehover_GameHoverCapsuleCtn_2li11 .gamehover_DemoButton_3c60u {
   margin: 4px 0;
   background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .gamehover_WishlistButton_1l89v {
   position: absolute;
@@ -1917,7 +1920,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 }
 .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3sBHX {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   width: fit-content;
 }
 .salepreviewwidgets_Bundle_1k4up
@@ -4701,8 +4704,8 @@ html.touch
   filter: saturate(0);
 }
 .demobutton_DemoButton_1GAs9:not(.demobutton_DisabledButton_2TQ4l):hover {
-  background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
-  color: #fff;
+  background: linear-gradient(to right, #b6da83 5%, #99cf57 95%);
+  color: #000;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 :root {

@@ -6299,7 +6299,7 @@
       var r = i(70655),
         n = i(37694),
         s = i(67294),
-        a = i(65902),
+        a = i(73812),
         o = i(159),
         l = i(74163),
         c = i(77520),
@@ -7293,7 +7293,7 @@
       var r = i(70655),
         n = i(22188),
         s = (i(26149), i(92398), i(58114)),
-        a = i(65902),
+        a = i(73812),
         o = (i(46321), i(33019)),
         l = i(40110),
         c = i(990);
@@ -8890,7 +8890,10 @@
           (this.m_bReadOnly = !1),
             (this.m_strOptInName = e),
             (this.m_email = t),
-            (this.m_sections = this.m_email.sections.map((e) => new B(e)));
+            (this.m_sections = this.m_email.sections.map((e) => new B(e))),
+            (this.m_email.custom_app_list = (
+              this.m_email.custom_app_list || []
+            ).map((e) => ("string" == typeof e ? Number.parseInt(e) : e)));
         }
         GetOwningOptInName() {
           return this.m_strOptInName;

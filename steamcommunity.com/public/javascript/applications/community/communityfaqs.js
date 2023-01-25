@@ -9562,7 +9562,7 @@
               "div",
               { className: e.className },
               n.createElement("div", null, (0, z.Xx)("#FAQEditor_ImageTitle")),
-              n.createElement(Te.MH, {
+              n.createElement(Te.M, {
                 bShowLightBox: !1,
                 clanSteamID: t,
                 imageInsertCallBack: (e, t) =>

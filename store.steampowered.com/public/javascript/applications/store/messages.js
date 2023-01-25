@@ -246,7 +246,7 @@
       }
       function o(e) {
         const [t, s] = a.useState(),
-          i = (0, n.U)("BrowserView.RegisterForMessageFromParent"),
+          i = (0, n.U5)("BrowserView.RegisterForMessageFromParent"),
           l = a.useMemo(() => ({ setLegalText: i ? s : void 0 }), [i, s]);
         return a.createElement(
           r.Provider,
@@ -737,7 +737,7 @@
         );
       }
       var C = s(70695),
-        L = s(65902),
+        L = s(73812),
         x = s(90666),
         B = s(29866);
       const y = a.createContext({});

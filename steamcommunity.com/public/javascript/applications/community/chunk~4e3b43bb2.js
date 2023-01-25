@@ -78,132 +78,11 @@
         LinkText: "linkregionbox_LinkText_27FTj",
       };
     },
-    2388: (t, e, i) => {
-      "use strict";
-      i.d(e, { Gr: () => L, Jq: () => p, y$: () => m });
-      var o = i(70655),
-        n = i(9669),
-        s = i.n(n),
-        c = i(22188),
-        a = i(67294),
-        r = (i(26149), i(92398), i(43359)),
-        l = i(3389),
-        g = (i(82946), i(77520)),
-        u = i(93976),
-        h = i(90666);
-      class d {
-        constructor() {
-          (this.m_mapProfiles = new Map()),
-            (this.m_mapProfilesLoading = new Map());
-        }
-        LoadProfiles(t, e) {
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            (0,
-            g.X)(t.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
-            let i = t.filter(
-              (t) =>
-                !this.m_mapProfiles.has(t) && !this.m_mapProfilesLoading.has(t)
-            );
-            if (0 == i.length) return this.m_mapProfilesLoading.get(t[0]);
-            let o = h.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              n = s().get(o, {
-                params: { steamids: i.join(",") },
-                withCredentials: !0,
-                cancelToken: null == e ? void 0 : e.token,
-              });
-            i.forEach((t) => this.m_mapProfilesLoading.set(t, n));
-            let c = yield n;
-            c.data &&
-              200 == c.status &&
-              c.data.forEach((t) => {
-                (t.avatar_hash = t.avatar_url),
-                  (t.avatar_url_medium = (0, r.U)(t.avatar_url, "medium")),
-                  (t.avatar_url_full = (0, r.U)(t.avatar_url, "full")),
-                  (t.avatar_url = (0, r.U)(t.avatar_url)),
-                  this.m_mapProfiles.set(t.steamid, t),
-                  this.m_mapProfilesLoading.delete(t.steamid);
-              });
-          });
-        }
-        GetProfile(t) {
-          return this.m_mapProfiles.get(t);
-        }
-        GetProfileByAccountID(t) {
-          return this.m_mapProfiles.get(
-            l.K.InitFromAccountID(t).ConvertTo64BitString()
-          );
-        }
-        GetProfileBySteamID(t) {
-          return this.m_mapProfiles.get(t.ConvertTo64BitString());
-        }
-        BHasProfile(t) {
-          return this.m_mapProfiles.has(t);
-        }
-        BHasProfileByAccountID(t) {
-          return this.m_mapProfiles.has(
-            l.K.InitFromAccountID(t).ConvertTo64BitString()
-          );
-        }
-        BHasProfileBySteamID(t) {
-          return this.m_mapProfiles.has(t.ConvertTo64BitString());
-        }
-        BHasAllProfilesBySteamID(t) {
-          return !t.some((t) => !this.BHasProfileBySteamID(t));
-        }
-        GetProfileURLBySteamID(t) {
-          const e = this.GetProfileBySteamID(t);
-          return e && e.profile_url
-            ? h.De.COMMUNITY_BASE_URL + "id/" + e.profile_url
-            : h.De.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString();
-        }
-        GetPersonaNameBySteamID(t) {
-          const e = this.GetProfileBySteamID(t);
-          return e && e.persona_name ? e.persona_name : "";
-        }
-      }
-      (0, o.gn)([c.LO], d.prototype, "m_mapProfiles", void 0);
-      const m = new d();
-      function L(t) {
-        const e = a.useMemo(
-            () => (t ? ("string" == typeof t ? new l.K(t) : t) : null),
-            [t]
-          ),
-          [i, o] = (0, a.useState)(!!e && !m.BHasProfileBySteamID(e));
-        (0, a.useEffect)(() => {
-          const t = s().CancelToken.source();
-          return (
-            e &&
-              !m.BHasProfileBySteamID(e) &&
-              m
-                .LoadProfiles([e.ConvertTo64BitString()])
-                .catch((t) => {
-                  const i = (0, u.l)(t);
-                  console.error(
-                    "useUserProfile failed to load profile for " +
-                      e.ConvertTo64BitString() +
-                      ": " +
-                      i.strErrorMsg,
-                    i
-                  );
-                })
-                .finally(() => {
-                  t.token.reason || o(!1);
-                }),
-            () => t.cancel("unmounting useUserProfile")
-          );
-        }, [t]);
-        return [i, !!e && m.GetProfileBySteamID(e)];
-      }
-      function p(t) {
-        return L(a.useMemo(() => l.K.InitFromAccountID(t), [t]));
-      }
-      window.g_ProfileStore = m;
-    },
     27991: (t, e, i) => {
       "use strict";
       i.d(e, { nf: () => c });
       var o = i(37694),
-        n = (i(67294), i(65902)),
+        n = (i(67294), i(73812)),
         s = (i(159), i(74163), i(90666));
       function c(t) {
         o.OT.BIsInitialized() ||
@@ -218,8 +97,8 @@
         s = i(50153),
         c = i(7573),
         a = i(41311),
-        r = i(35092),
-        l = i(90666),
+        l = i(35092),
+        r = i(90666),
         g = i(77723);
       function u(t) {
         const { gidEvent: e } = t,
@@ -242,7 +121,7 @@
                 ? void 0
                 : s.length) > 0
             ) {
-              const t = (0, n.jM)(l.De.LANGUAGE),
+              const t = (0, n.jM)(r.De.LANGUAGE),
                 e = a.LZ.GetWithFallback(
                   i.jsondata.localized_sale_product_banner,
                   t
@@ -257,8 +136,8 @@
               ) {
                 const t = i.clanSteamID.GetAccountID();
                 return [
-                  l.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${t}/${e}`,
-                  l.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${t}/${o}`,
+                  r.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${t}/${e}`,
+                  r.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${t}/${o}`,
                 ];
               }
             }
@@ -268,7 +147,7 @@
           (null == h ? void 0 : h.length) > 0
           ? o.createElement(
               "a",
-              { href: (0, r.OL)(i.GetSaleURL()), className: g.Link },
+              { href: (0, l.OL)(i.GetSaleURL()), className: g.Link },
               o.createElement("img", {
                 src: u,
                 className: (0, c.Z)(g.Banner, g.Big),
@@ -283,19 +162,19 @@
     },
     57148: (t, e, i) => {
       "use strict";
-      i.d(e, { l: () => L });
+      i.d(e, { l: () => p });
       var o,
         n = i(70655),
         s = i(67294),
         c = i(64839),
         a = i(29323),
-        r = i(99533),
-        l = i(41311),
+        l = i(99533),
+        r = i(41311),
         g = i(48341),
         u = i(95598),
         h = i(35944),
         d = i.n(h),
-        m = i(48899);
+        L = i(48899);
       !(function (t) {
         (t.topleft = "topleft"),
           (t.top = "top"),
@@ -307,12 +186,12 @@
           (t.bottom = "bottom"),
           (t.bottomright = "bottomright");
       })(o || (o = {}));
-      let L = class extends s.Component {
+      let p = class extends s.Component {
         constructor(t) {
           super(t),
             (this.m_fnMouseUp = null),
             (this.m_fnMouseMove = null),
-            (this.m_listeners = new r.G_()),
+            (this.m_listeners = new l.G_()),
             (this.m_strDescription = ""),
             (this.m_aspectRatio = 1),
             (this.state = {
@@ -420,13 +299,13 @@
                 });
                 break;
               case o.middle: {
-                const e = (0, m.Lh)(
+                const e = (0, L.Lh)(
                     this.CalcLeftEdge(t.clientX),
                     0,
                     100 - this.state.curWidthPct
                   ),
                   i = 100 - (e + this.state.curWidthPct),
-                  o = (0, m.Lh)(
+                  o = (0, L.Lh)(
                     this.CalcTopEdge(t.clientY),
                     0,
                     100 - this.state.curHeightPct
@@ -464,12 +343,12 @@
               void 0 !== t.curRightPosPct
                 ? t.curRightPosPct
                 : this.state.curRightPosPct,
-            s = (0, m.Lh)(
+            s = (0, L.Lh)(
               100 - n - o,
               this.props.widthMinPct || 0,
               this.props.widthMaxPct || 100
             ),
-            c = (0, m.Lh)(
+            c = (0, L.Lh)(
               100 - i - e,
               this.props.heightMinPct || 0,
               this.props.heightMaxPct || 100
@@ -483,13 +362,13 @@
               : (n = 100 - (o + s)),
             void 0 !== t.curTopPosPct ? (e = 100 - i - c) : (i = 100 - (e + c));
           const a = 100 - n - o,
-            r = 100 - i - e;
+            l = 100 - i - e;
           this.IsValidPct(o) &&
             this.IsValidPct(n) &&
             this.IsValidPct(e) &&
             this.IsValidPct(i) &&
             this.IsValidPct(a) &&
-            this.IsValidPct(r) &&
+            this.IsValidPct(l) &&
             this.setState({
               curLeftPosPct: o,
               curRightPosPct: n,
@@ -514,20 +393,20 @@
           );
         }
         CalcLeftEdge(t) {
-          return (0, m.Lh)(this.GetXPercent(t), 0, 100);
+          return (0, L.Lh)(this.GetXPercent(t), 0, 100);
         }
         CalcRightEdge(t) {
-          return (0, m.Lh)(
+          return (0, L.Lh)(
             100 - (this.GetXPercent(t) + this.state.curWidthPct),
             0,
             100
           );
         }
         CalcTopEdge(t) {
-          return (0, m.Lh)(this.GetYPercent(t), 0, 100);
+          return (0, L.Lh)(this.GetYPercent(t), 0, 100);
         }
         CalcBottomEdge(t) {
-          return (0, m.Lh)(
+          return (0, L.Lh)(
             100 - (this.GetYPercent(t) + this.state.curHeightPct),
             0,
             100
@@ -709,7 +588,7 @@
                     type: "text",
                     name: "link_url",
                     value: this.state.text_link_url,
-                    label: (0, l.Xx)("#SteamTV_LinkURL"),
+                    label: (0, r.Xx)("#SteamTV_LinkURL"),
                     placeholder: "https://www.example.com",
                     onChange: this.OnSetLinkURLChange,
                     mustBeURL: !0,
@@ -719,8 +598,8 @@
                     type: "text",
                     name: "link_description",
                     value: this.state.text_link_description,
-                    label: (0, l.Xx)("#SteamTV_LinkDescription"),
-                    placeholder: (0, l.Xx)(
+                    label: (0, r.Xx)("#SteamTV_LinkDescription"),
+                    placeholder: (0, r.Xx)(
                       "#SteamTV_LinkDescription_Placeholder"
                     ),
                     onChange: this.OnSetLinkDescriptionChange,
@@ -735,14 +614,14 @@
                         onClick: this.OnSaveLink,
                       },
                       " ",
-                      (0, l.Xx)("#Button_OK"),
+                      (0, r.Xx)("#Button_OK"),
                       " "
                     ),
                     s.createElement(
                       g.zx,
                       { onClick: this.OnEditLink },
                       " ",
-                      (0, l.Xx)("#Button_Cancel")
+                      (0, r.Xx)("#Button_Cancel")
                     )
                   )
                 )
@@ -750,16 +629,16 @@
           );
         }
       };
-      (0, n.gn)([c.ak], L.prototype, "LinkRegionBoxRef", null),
-        (0, n.gn)([c.ak], L.prototype, "OnMouseDown", null),
-        (0, n.gn)([c.ak], L.prototype, "OnMouseMove", null),
-        (0, n.gn)([c.ak], L.prototype, "OnMouseUp", null),
-        (0, n.gn)([c.ak], L.prototype, "HandleDelete", null),
-        (0, n.gn)([c.ak], L.prototype, "OnSetLinkURLChange", null),
-        (0, n.gn)([c.ak], L.prototype, "OnSetLinkDescriptionChange", null),
-        (0, n.gn)([c.ak], L.prototype, "OnSaveLink", null),
-        (0, n.gn)([c.ak], L.prototype, "OnEditLink", null),
-        (L = (0, n.gn)([a.Pi], L));
+      (0, n.gn)([c.ak], p.prototype, "LinkRegionBoxRef", null),
+        (0, n.gn)([c.ak], p.prototype, "OnMouseDown", null),
+        (0, n.gn)([c.ak], p.prototype, "OnMouseMove", null),
+        (0, n.gn)([c.ak], p.prototype, "OnMouseUp", null),
+        (0, n.gn)([c.ak], p.prototype, "HandleDelete", null),
+        (0, n.gn)([c.ak], p.prototype, "OnSetLinkURLChange", null),
+        (0, n.gn)([c.ak], p.prototype, "OnSetLinkDescriptionChange", null),
+        (0, n.gn)([c.ak], p.prototype, "OnSaveLink", null),
+        (0, n.gn)([c.ak], p.prototype, "OnEditLink", null),
+        (p = (0, n.gn)([a.Pi], p));
     },
     9495: (t, e, i) => {
       "use strict";

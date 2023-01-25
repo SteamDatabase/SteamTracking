@@ -3990,7 +3990,7 @@
       (0, l.gn)([le.LO], me.prototype, "m_privacyState", void 0);
       var de = a(90666),
         ue = a(77520),
-        _e = a(65902),
+        _e = a(73812),
         ye = (a(46321), a(58114)),
         ge = a(88767),
         pe = a(159),
@@ -7967,38 +7967,42 @@
         xr = a(56160),
         Pr = a.n(xr);
       const Yr = r.forwardRef(
-        ({ imgURL: e, glow: t, hidden: a, alt: n, className: i }, s) =>
-          a
-            ? r.createElement("div", { className: Pr().HiddenLabel }, "?")
-            : r.createElement(
+        ({ imgURL: e, glow: t, hidden: a, alt: n, className: i }, s) => {
+          const [l, o] = r.useState(!1);
+          if (a)
+            return r.createElement("div", { className: Pr().HiddenLabel }, "?");
+          const c = l && t;
+          return r.createElement(
+            "div",
+            {
+              ref: s,
+              className: (0, Ke.Z)(
+                Pr().AchievementIconWrapper,
+                i,
+                !t && Pr().RareAchievementNoAnimation
+              ),
+            },
+            c &&
+              r.createElement(
                 "div",
-                {
-                  ref: s,
-                  className: (0, Ke.Z)(
-                    Pr().AchievementIconWrapper,
-                    i,
-                    !t && Pr().RareAchievementNoAnimation
-                  ),
-                },
-                t &&
-                  r.createElement(
-                    "div",
-                    { className: Pr().RareAchievementIconGlowContainerRoot },
-                    r.createElement(
-                      "div",
-                      { className: Pr().RareAchievementIconGlowContainer },
-                      r.createElement("div", {
-                        className: Pr().RareAchievementIconGlow,
-                      })
-                    )
-                  ),
-                r.createElement("img", {
-                  className: (0, Ke.Z)(Pr().Icon, t && Pr().IconGlow),
-                  src: e,
-                  loading: "lazy",
-                  alt: n,
-                })
-              )
+                { className: Pr().RareAchievementIconGlowContainerRoot },
+                r.createElement(
+                  "div",
+                  { className: Pr().RareAchievementIconGlowContainer },
+                  r.createElement("div", {
+                    className: Pr().RareAchievementIconGlow,
+                  })
+                )
+              ),
+            r.createElement("img", {
+              className: (0, Ke.Z)(Pr().Icon, c && Pr().IconGlow),
+              src: e,
+              loading: "lazy",
+              alt: n,
+              onLoad: () => o(!0),
+            })
+          );
+        }
       );
       var Lr = a(48037),
         zr = a.n(Lr),

@@ -1791,7 +1791,7 @@
         return t;
       }
       var K = r(55989),
-        J = r(65902),
+        J = r(73812),
         ee = (r(87931), r(77636)),
         te = r(37694),
         re = r(70695),
@@ -1819,7 +1819,7 @@
                 .map((e, t) => ({
                   strName: e.name(),
                   strUrlPath: e.url_path(),
-                  rtStartDate: 0 === t ? 1643702400 : 1612166400,
+                  rtStartDate: e.start_date(),
                   bannerUrlPath: this.GetBannerUrlsOrBackup(e.banner_url()),
                   mobileBannerUrlPath: this.GetBannerUrlsOrBackup(
                     e.banner_url_mobile()

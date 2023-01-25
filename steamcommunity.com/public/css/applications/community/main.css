@@ -552,6 +552,8 @@ body.modals_BodyNoScrollDialog_3lrlA {
   flex-direction: column;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn {
+  display: flex;
+  align-items: center;
   white-space: normal;
   max-width: 180px;
   text-overflow: ellipsis;
@@ -562,6 +564,12 @@ body.modals_BodyNoScrollDialog_3lrlA {
   cursor: pointer;
   margin-bottom: 14px;
   user-select: none;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn
+  .pagedsettings_PageListItem_Icon_U6HcK {
+  height: 20px;
+  width: 20px;
+  margin-right: 16px;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9,
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9:hover,
@@ -577,6 +585,13 @@ body.modals_BodyNoScrollDialog_3lrlA {
 }
 .pagedsettings_PageListSpacer_33lCZ {
   flex-grow: 1;
+}
+.pagedsettings_PageListSeparator_1UEEm {
+  height: 1px;
+  background: #3d4450;
+  margin-bottom: 14px;
+  margin-right: 24px;
+  flex-shrink: 0;
 }
 :root {
   --basicui-header-height: 0px;
