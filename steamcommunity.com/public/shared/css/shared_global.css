@@ -2669,6 +2669,17 @@ body.v6 #footer_nav .popup_menu .hr{
     font-size: 14px;
     color: white;
 }
+.shared_game_rating .game_rating_title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin-bottom: 5px;
+	font-size: 14px;
+	color: white;
+}
+.shared_game_rating .game_rating_title .game_rating_banned {
+	color: red;
+}
 .shared_game_rating .game_rating_details {
 	display: flex;
 }

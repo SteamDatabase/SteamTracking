@@ -346,7 +346,7 @@ function UserReview_ShowContentCheckResultsDialog( recommendationID, baseURL )
 					reportDiv.append( divClear );
 				container.append( reportDiv );
 			}
-			var dialog = ShowAlertDialog( 'Automatic Content Check Results', container );
+			var dialog = ShowAlertDialog( 'Suspicious Content Check Results', container );
 		}
 	} );
 }
@@ -361,7 +361,7 @@ function UserReview_ShowClearReportsDialog( recommendationID, baseURL, callback 
 
 function UserReview_ShowVoteBanUsersDialog( recommendationID, baseURL, callback )
 {
-	var dialog = ShowConfirmDialog( 'Vote Ban Users', 'Are you sure you want to vote ban users who upvoted this review? This cannot be undone!<br><br>This should only be done if this review is attempting to scam/phish other users.' );
+	var dialog = ShowConfirmDialog( 'Vote Ban Users', 'Are you sure you want to vote ban users who upvoted this review? This cannot be undone!<br><br>This should only be done if this review qualifies as suspicious content.' );
 	dialog.done( function() {
 		UserReview_Moderate_VoteBanUsers( recommendationID, baseURL, callback);
 	});

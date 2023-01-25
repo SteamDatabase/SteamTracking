@@ -16,7 +16,7 @@ a, a:hover {
 	padding: 10px 15px;
 	position: relative;
 	margin: 0 auto;
-	background-image: url(/store/public/images/v6/steam_ico.png);
+	background-image: url(/public/images/v6/steam_ico.png);
 	background-repeat: no-repeat;
     background-position-x: 99%;
     background-position-y: 5px;
@@ -64,6 +64,8 @@ a, a:hover {
 		}
 
 #widget .capsule {
+    height: 69px;
+    width: 184px;
 	float: left;
 	margin: 2px 10px 10px 0;
 }
@@ -108,6 +110,30 @@ background: -webkit-linear-gradient( 30deg, #395021 5%,#283e18 95%);
 #widget .game_purchase_action_bg.coming_soon  h1 {
 	font-size: 20px;
 	line-height: 34px;
+}
+
+@media screen and (max-width: 500px)
+{
+    body #widget .game_purchase_action_bg.coming_soon  h1 {
+        font-size: 14px;
+        line-height: 29px;
+    }
+
+    body #widget .btn_addtocart {
+        height: 29px;
+    }
+
+    body #widget .btn_addtocart .btn_addtocart_content {
+        height: 28px;
+        line-height: 29px;
+    }
+
+    body #widget .capsule {
+        width: 50%;
+        height: auto;
+        display: block;
+        margin-bottom: 4px;
+    }
 }
 
 #widget .coming_soon_date {

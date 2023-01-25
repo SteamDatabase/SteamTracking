@@ -728,7 +728,7 @@ function SetGroupState( groupid, clan_type )
 
 function UpdateProfileTextContentCheckResult( steamID, ban )
 {
-	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the automated text content check result for this group profile text?  This cannot be undone.' : 'Are you sure you want to mark this group\'s profile text containing harmful content? This cannot be undone.' );
+	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the suspicious content result for this group profile text?  This cannot be undone.' : 'Are you sure you want to mark this group\'s profile text containing suspicious content? This cannot be undone.' );
 	dialog.done( function() {
 		$J.post( 'https://steamcommunity.com/moderation/ajaxupdateprofiletextcontentcheckresult/', { sessionid: g_sessionID, steamid: steamID, ban: ban ? 1 : 0 } )
 			.done( function( data ) {

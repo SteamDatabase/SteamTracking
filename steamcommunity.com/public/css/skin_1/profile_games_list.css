@@ -42,6 +42,13 @@
 	padding-left:17px;
 	padding-top:10px;
 }
+.emptyMessage {
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 32px;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
 
 .gameListLogo {
 	float:left;

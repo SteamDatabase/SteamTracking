@@ -60,7 +60,7 @@ function GetTagSuggestFunc( rgTagList )
 	};
 }
 
-function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTagSNR, bShowBanOption )
+function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTagSNR, bShowBanOption, bIsDLC )
 {
 	var $AppTagModal = $J('#app_tagging_modal');
 	var $AppTagForm = $J('#app_tag_form');
@@ -84,6 +84,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	var bYourPopularTagsRequested = false;
 	var bBannedTag = false;
 	var bAppliedTag = false;
+	var bAppliedTagToChildren = false;
 
 	// setup "advanced" admin mode - internal functions
 	var $AdvCheckbox = $J('#app_tagging_show_advanced');
@@ -160,19 +161,33 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			// only if logged in
 			if ( $YourTags.length )
 			{
-
 				if ( bShowBanOption )
 				{
 					var $Ban = $J('<div/>', {'class': 'app_tag_ban'} );
 					$Ban.data('tooltip-text', 'Click here to remove this tag from this product.  This option is limited to developers and Steam staff.' );
 
 					$Tag.append( $Ban );
+					var content = $J( '<div/>' );
+					content.append( $J( '<div/>', { 'class': 'app_tag_ban_prompt' } ).text( 'Are you sure you want to remove the "%s" tag from this product?'.replace( /%s/, tag ) ) );
+					if ( !bIsDLC ) {
+						content.append( $J( '<div/>', { 'class': 'app_tag_ban_checkbox' } ).append( $J( '<input/>', {'type': 'checkbox', 'name':'ban_child_tags', 'checked': 1, 'id': 'ban_child_tags' } ) ) );
+						content.append( $J( '<div/>', { 'class': 'app_tag_ban_label' } ).append( $J( '<label/>', {'for': 'ban_child_tags' } ).text( 'Ban the tag for child DLCs as well' ) ) );
+						content.append( $J( '<div/>', { 'class': 'app_tag_ban_note' } ).text( 'Note: this will impact all DLCs related to this game, even DLCs you create or release in the future. You can still unban the tag for individual DLCs.' ) );
+					}
 
 					$Ban.click( function() {
-						ShowConfirmDialog( 'Ban Tag', 'Are you sure you want to remove the "%s" tag from this product?'.replace( /%s/, tag )).done( function()
+						ShowConfirmDialog( 'Ban Tag', content ).done( function()
 						{
 							$Ban.trigger('mouseleave');	// to clear the tooltip
-							fnApplyTag( tag, false, true, -1 );
+							var checkbox = content.find( '.app_tag_ban_checkbox > input' );
+							var bApplyToChildren = false;
+
+							if ( checkbox.is( ':checked' ) )
+							{
+								// Ban all children
+								bApplyToChildren = true;
+							}
+							fnApplyTag( tag, false, true, -1, 0 /* no tag id */, 0 /* no weight */, bApplyToChildren );
 						});
 					});
 				}
@@ -392,7 +407,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		return false;
 	};
 
-	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType, unTagID, nWeight )
+	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType, unTagID, nWeight, bApplyToChildren )
 	{
 		var rgParams = {
 			appid: appid,
@@ -413,9 +428,13 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		else if ( eReportType )
 			rgParams['reporttype'] = eReportType;
 
+		if ( bApplyToChildren )
+			rgParams['applytochildren'] = bApplyToChildren;
+
 		$J.post( 'https://store.steampowered.com/tagdata/tagapp', rgParams ).done( function( data ) {
 
 			bAppliedTag = true;
+			bAppliedTagToChildren = bAppliedTagToChildren || bApplyToChildren;
 
 			var strControlSelector = '.app_tag_control[data-tagid=' + data.tagid + ']';
 			var $AppTag = $PopularTags.find( strControlSelector );
@@ -575,7 +594,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			fnUpdateUserTagsOnPage();
 
 			if ( bAppliedTag && bShowBanOption && typeof FlushApp != 'undefined' )
-				FlushApp( appid );
+				FlushApp( appid, bAppliedTagToChildren );
 			else if ( bBannedTag )
 				window.location.reload();
 			
@@ -1049,13 +1068,16 @@ function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 		fnSelectOption( 'global' );
 }
 
-function InitBannedTagModal( appid, $BanModal )
+function InitBannedTagModal( appid, $BanModal, bIsDLC )
 {
 	var bBansChanged = false;
+	var bAppliedToChildren = false;
 	window.ShowAppTagBanModal = function() {
 		$BanModal.show();
 		ShowAlertDialog( 'Banned Tags', $BanModal).always( function() {
-			if ( bBansChanged )
+			if ( bBansChanged && typeof FlushApp != 'undefined' )
+				FlushApp( appid, bAppliedToChildren );
+			else if ( bBansChanged )
 				window.location.reload();
 		} );
 
@@ -1063,16 +1085,34 @@ function InitBannedTagModal( appid, $BanModal )
 			var $Flag = $J(this);
 			var $Row = $Flag.parent( '.app_tag_control' );
 			var tag = $Row.data('tag');
+
+			var content = $J( '<div/>' );
+			content.append( $J( '<div/>', { 'class': 'app_tag_ban_prompt' } ).text( 'Are you sure you want to unban the "%s" tag?'.replace( /%s/, tag ) ) );
+			if ( !bIsDLC ) {
+				content.append( $J( '<div/>', { 'class': 'app_tag_ban_checkbox' } ).append( $J( '<input/>', {'type': 'checkbox', 'name':'unban_child_tags', 'checked': 1, 'id': 'unban_child_tags' } ) ) );
+				content.append( $J( '<div/>', { 'class': 'app_tag_ban_label' } ).append( $J( '<label/>', {'for': 'unban_child_tags' } ).text( 'Unban the tag for child DLCs as well' ) ) );
+			}
+
 			ShowConfirmDialog( 'Unban Tag',
-				'Are you sure you want to unban the "%s" tag?'.replace( /%s/, tag ),
+				content,
 				'Unban Tag')
 				.done( function() {
+					var checkbox = content.find( '.app_tag_ban_checkbox > input' );
+					var bApplyToChildren = false;
+
+					if ( checkbox.is( ':checked' ) )
+					{
+						// unban all children DLCs as well
+						bApplyToChildren = true;
+					}
+
 					var rgParams = {
 						appid: appid,
 						sessionid: g_sessionID,
 						tag: tag,
 						reporttype: -1,
-						unban: 1
+						unban: 1,
+						applytochildren: bApplyToChildren
 					};
 					$J.post( 'https://store.steampowered.com/tagdata/tagapp', rgParams ).done( function( data ) {
 						$Row.hide( 'fast' );
@@ -1080,6 +1120,7 @@ function InitBannedTagModal( appid, $BanModal )
 						ShowAlertDialog( 'Unban Tag', 'There was a problem banning or unbanning this tag.  Please try again later.' );
 					});
 					bBansChanged = true;
+					bAppliedToChildren = bAppliedToChildren || bApplyToChildren;
 				});
 		});
 	};

@@ -3835,6 +3835,25 @@ h2.bb_tag + br {
 	cursor: pointer;
 }
 
+.app_tag_ban_prompt {
+	margin-bottom: 12px;
+	line-height: 20px;
+}
+.app_tag_ban_checkbox {
+	margin-top: 2px;
+	float: left;
+}
+.app_tag_ban_label {
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+.app_tag_ban_note {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	max-width: 600px;
+	font-style: italic;
+}
+
 .app_tag_count
 {
 	float: right;

@@ -729,7 +729,7 @@ function AddTradeOfferBanner( tradeOfferID, strCompletedBanner, bAccepted )
 
 function UpdateProfileTextContentCheckResult( steamID, ban )
 {
-	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the automated text content check result for this user\'s profile text?  This cannot be undone.' : 'Are you sure you want to mark this user\'s profile text containing harmful content? This cannot be undone.' );
+	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the suspicious content result for this user\'s profile text?  This cannot be undone.' : 'Are you sure you want to mark this user\'s profile text containing suspicious content? This cannot be undone.' );
 	dialog.done( function() {
 		$J.post( 'https://steamcommunity.com/moderation/ajaxupdateprofiletextcontentcheckresult/', { sessionid: g_sessionID, steamid: steamID, ban: ban ? 1 : 0 } )
 		.done( function( data ) {
@@ -740,7 +740,7 @@ function UpdateProfileTextContentCheckResult( steamID, ban )
 
 function UpdateProfileShowcaseContentCheckResult( steamID, type, slot, purchaseid, ban )
 {
-	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the automated text content check result for this user\'s profile showcase?  This cannot be undone.' : 'Are you sure you want to mark this user\'s profile showcase containing harmful content? This cannot be undone.' );
+	var dialog = ShowConfirmDialog( 'Update Automated Text Content Check Result?', !ban ? 'Are you sure you want to reset the suspicious content result for this user\'s profile showcase?  This cannot be undone.' : 'Are you sure you want to mark this user\'s profile showcase containing suspicious content? This cannot be undone.' );
 	dialog.done( function() {
 		$J.post( 'https://steamcommunity.com/moderation/ajaxupdateprofileshowcasecontentcheckresult/', { sessionid: g_sessionID, steamid: steamID, type: type, slot: slot, purchaseid: purchaseid, ban: ban ? 1 : 0 } )
 		.done( function( data ) {
