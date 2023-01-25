@@ -346,6 +346,7 @@
  typeinfo for unsigned int
  typeinfo for unsigned long long
  usleep
+ vasprintf
  virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
  vsnprintf
  vstdlib_wcsicmp

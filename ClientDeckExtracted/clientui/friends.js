@@ -67279,6 +67279,16 @@ object-assign
               "ATTRIBCAP_CENTER_TRACKPAD"
             ] = 33554432)
           ] = "ATTRIBCAP_CENTER_TRACKPAD";
+          EControllerAttribCapabilityBits[
+            (EControllerAttribCapabilityBits[
+              "ATTRIBCAP_NINTENDO_LAYOUT"
+            ] = 67108864)
+          ] = "ATTRIBCAP_NINTENDO_LAYOUT";
+          EControllerAttribCapabilityBits[
+            (EControllerAttribCapabilityBits[
+              "ATTRIBCAP_CANT_READ_GUIDEBUTTON"
+            ] = 134217728)
+          ] = "ATTRIBCAP_CANT_READ_GUIDEBUTTON";
         })(
           EControllerAttribCapabilityBits ||
             (EControllerAttribCapabilityBits = {})
@@ -90496,4 +90506,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=75659e5befe364381e6b
+//# sourceMappingURL=friends.js.map?contenthash=a200ab777e707eb79087

@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+e
+e
 __stubs
 __TEXT
 __stub_helper
@@ -57,7 +59,7 @@ __LINKEDIT
 @
 @loader_path/serverbrowser.dylib
 "
-P!
+h!
 P
 
 
@@ -89,7 +91,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-@?(
+p?(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -1353,6 +1355,9 @@ empty
 full
 napp
 %d
+All
+%llu
+/VGUI/ServerBrowser/%s/%s
 ;
 #ServerBrowser_FilterDescSecureOnly
 #ServerBrowser_FilterDescInsecureOnly
@@ -3799,7 +3804,6 @@ offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 %u
-%llu
 %lld
 %f
 v
@@ -3819,6 +3823,7 @@ num > 0
 num >= 0
 CUtlString::SetValue
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
 CUtlString::ReplaceInternal
 pstrNew + nNewLength == pstrDestination + 1
 cActualReplacements == cReplacements
@@ -3835,8 +3840,6 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-0
-2&
 j
 j
 j
@@ -3869,9 +3872,6 @@ j
 j
 j
 j
-&
-&
-&
 0
 p
 0
@@ -3879,7 +3879,6 @@ j
 j
 j
 j
-J%
 0
 0
 AT=
@@ -3924,6 +3923,10 @@ IcE
 V
 =
 =
+"
+"
+"
+"
 !
 @
 &
@@ -3946,15 +3949,15 @@ M9e
 ?
 ?
 ?
+0
 @
 @
-I
-*
+
+\
 
 
 
 d
-a
 A+M
 j
 j
@@ -4062,6 +4065,7 @@ j
 j
 j
 j
+P
 j
 j
 j
@@ -4209,3 +4213,5 @@ Y
 @
 @
 @
+@
+0

@@ -28,6 +28,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_BatteryTemperature = 23;
 	k_EClientNotificationType_DockUnsupportedFirmware = 24;
 	k_EClientNotificationType_PeerContentUpload = 25;
+	k_EClientNotificationType_CannotReadControllerGuideButton = 26;
 }
 
 enum ESystemUpdateNotificationType {
@@ -163,4 +164,8 @@ message CClientNotificationDockUnsupportedFirmware {
 message CClientNotificationPeerContentUpload {
 	optional uint32 appid = 1;
 	optional string peer_name = 2;
+}
+
+message CClientNotificationCannotReadControllerGuideButton {
+	optional int32 controller_index = 1;
 }

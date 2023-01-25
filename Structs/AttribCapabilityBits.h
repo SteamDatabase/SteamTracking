@@ -26,4 +26,6 @@ typedef enum AttribCapabilityBits
     k_AttribCapabilityBitsCap_capture_button = 8388608,
     k_AttribCapabilityBitsCap_capstick = 16777216,
     k_AttribCapabilityBitsCap_center_trackpad = 33554432,
+    k_AttribCapabilityBitsCap_nintendo_layout = 67108864,
+    k_AttribCapabilityBitsCap_cant_read_guidebutton = 134217728,
 } AttribCapabilityBits;

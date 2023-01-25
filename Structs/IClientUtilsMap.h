@@ -106,4 +106,5 @@ public:
     virtual unknown_ret ClearAllHTTPCaches() = 0;
     virtual unknown_ret GetFocusedGameID(void*) = 0;
     virtual unknown_ret GetFocusedWindowPID() = 0;
+    virtual unknown_ret RecordFakeReactRouteMetric(void*) = 0;
 };

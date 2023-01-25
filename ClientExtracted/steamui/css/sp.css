@@ -41761,6 +41761,32 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   padding: 3px 3px 1px 1px;
   overflow: hidden;
 }
+.virtualkeyboard_Keyboard_45rH7.virtualkeyboard_Modal_3ZEJw {
+  position: absolute;
+  width: 100%;
+}
+.virtualkeyboard_Keyboard_45rH7.virtualkeyboard_Modal_3ZEJw.upper-left {
+  left: 0;
+}
+.virtualkeyboard_Keyboard_45rH7.virtualkeyboard_Modal_3ZEJw.upper-right {
+  right: 0;
+}
+.virtualkeyboard_Keyboard_45rH7.virtualkeyboard_Modal_3ZEJw.lower-right {
+  right: 0;
+  bottom: 0;
+}
+.virtualkeyboard_Keyboard_45rH7.virtualkeyboard_Modal_3ZEJw.lower-left {
+  bottom: 0;
+}
+.virtualkeyboard_Keyboard_45rH7.virtualkeyboard_Modal_3ZEJw.center-top {
+  left: 50%;
+  transform: translate(-50%);
+}
+.virtualkeyboard_Keyboard_45rH7.virtualkeyboard_Modal_3ZEJw.center-bottom {
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+}
 .virtualkeyboard_NumericKeypad__gv6b {
   display: flex;
   justify-content: space-between;
@@ -46345,6 +46371,13 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   overflow: hidden;
   animation: virtualkeyboardcontainer_keyboard_appear_R1YiV;
   animation-duration: 300ms;
+}
+.virtualkeyboardcontainer_ModalVirtualKeyboardContainer_afuO5 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 @keyframes virtualkeyboardcontainer_keyboard_appear_R1YiV {
   0% {
