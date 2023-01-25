@@ -26739,7 +26739,7 @@
           c = null == r ? void 0 : r.find((A) => A.timezoneID == o),
           s = c ? (0, us.Ni)(c) : "",
           u = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          m = parseInt(1674613628),
+          m = parseInt(1674666559),
           C = m && (0, xc._o)(m, n, s),
           E = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           I = (0, Oc.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -54577,11 +54577,11 @@
                   T.R,
                   { initialPath: T.Z5.Library.Home() },
                   a.createElement(
-                    Qw.s,
-                    null,
+                    Q._9.Provider,
+                    { value: c },
                     a.createElement(
-                      Q._9.Provider,
-                      { value: c },
+                      Qw.s,
+                      null,
                       a.createElement(
                         To.S.Provider,
                         { value: t },

@@ -8923,7 +8923,7 @@
     },
     2841: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => ao });
+      n.r(t), n.d(t, { default: () => ro });
       var a = n(70655),
         r = n(67294),
         o = n(21613),
@@ -16127,7 +16127,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, G.Xx)("#Settings_System_SteamLocalBuild"),
-          l = parseInt(1674613628),
+          l = parseInt(1674666559),
           c = l && (0, xa._o)(l, e, o),
           m = i.sSteamBuildDate,
           p = "linux" == O.De.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -17224,10 +17224,11 @@
       });
       n(15443);
       n(30946), n(97334);
-      var qr = n(34871),
-        $r = n.n(qr),
-        eo = n(72026),
-        to = n.n(eo);
+      var qr = n(71364),
+        $r = n(34871),
+        eo = n.n($r),
+        to = n(72026),
+        no = n.n(to);
       n(10449);
       !(function () {
         (0, a.mG)(this, void 0, void 0, function* () {
@@ -17237,18 +17238,18 @@
           }
         });
       })();
-      const no = (e) => {
+      const ao = (e) => {
         (0, Pr.p)();
         const { location: t, bActive: n } = Zr(),
           a = !1,
           o = (0, O.id)();
         return r.createElement(
           "div",
-          { className: $r().OuterFrame },
+          { className: eo().OuterFrame },
           a,
           r.createElement(
             "div",
-            { className: $r().ContentFrame },
+            { className: eo().ContentFrame },
             r.createElement(
               "div",
               { style: { width: "100%", height: "100%" } },
@@ -17273,7 +17274,7 @@
           a
         );
       };
-      function ao(e) {
+      function ro(e) {
         const t = (0, ua.gl)(),
           n = (0, O.eL)(),
           s = (0, Pr.p)(),
@@ -17364,45 +17365,56 @@
           }, []);
         return t
           ? r.createElement(
-              oo,
+              io,
               { cm: e.cm },
               r.createElement(je.S, null, r.createElement(Lr, null)),
               r.createElement(je.S, null, !1),
               r.createElement(
                 "div",
-                { className: $r().Wrapper, ref: A, onContextMenu: v },
-                p && r.createElement(no, { cm: e.cm }),
-                !p && r.createElement(ro, { onContextMenu: v }),
+                { className: eo().Wrapper, ref: A, onContextMenu: v },
+                p && r.createElement(ao, { cm: e.cm }),
+                !p && r.createElement(oo, { onContextMenu: v }),
                 !1
               )
             )
           : null;
       }
-      function ro(e) {
+      function oo(e) {
         return r.createElement(
           "div",
           {
-            className: (0, s.Z)(to().Container, to().PreloadThrobber),
+            className: (0, s.Z)(no().Container, no().PreloadThrobber),
             onContextMenu: e.onContextMenu,
           },
           r.createElement(at.V, { size: "xlarge", static: !0 }),
           r.createElement(
             "div",
-            { className: to().ThreeDots },
+            { className: no().ThreeDots },
             r.createElement("div", {
-              className: (0, s.Z)(to().Dot, to().Dot1),
+              className: (0, s.Z)(no().Dot, no().Dot1),
             }),
             r.createElement("div", {
-              className: (0, s.Z)(to().Dot, to().Dot2),
+              className: (0, s.Z)(no().Dot, no().Dot2),
             }),
-            r.createElement("div", { className: (0, s.Z)(to().Dot, to().Dot3) })
+            r.createElement("div", { className: (0, s.Z)(no().Dot, no().Dot3) })
           )
         );
       }
-      function oo(e) {
+      function io(e) {
+        const t = (0, O.eL)(),
+          n = (0, F.xK)(
+            (e) => {
+              if (!t && e)
+                return (
+                  qr.Zp.RegisterModalManager(e, window),
+                  () => qr.Zp.UnregisterModalManager(window)
+                );
+            },
+            [t]
+          );
         return r.createElement(
           Sa.Y0,
-          null,
+          { refModalManager: n },
           r.createElement(
             zr,
             null,
@@ -21022,11 +21034,11 @@
             ? t
             : Object.assign(Object.assign({}, t), { iActiveScreenshot: 0 });
         }
-        ChangeScreenshot(e) {
-          e != this.state.iActiveScreenshot &&
-            (this.setState({ iActiveScreenshot: e }),
+        ChangeScreenshot(e, t) {
+          t != this.state.iActiveScreenshot &&
+            (this.setState({ iActiveScreenshot: t }),
             this.props.onScreenshotChanged &&
-              this.props.onScreenshotChanged(e));
+              this.props.onScreenshotChanged(t));
         }
         FullScreenImage(e, t) {
           let n = this.props.screenshots[t].file;
@@ -21109,9 +21121,9 @@
                   r.createElement(B.fu, {
                     src: a.file_url,
                     width: 640,
-                    onClick: () =>
+                    onClick: (e) =>
                       this.FullScreenImage(
-                        window,
+                        (0, k.RA)(e),
                         this.state.iActiveScreenshot
                       ),
                     onContextMenu: this.ShowContextMenu,
@@ -21145,7 +21157,7 @@
                   ? void 0
                   : t.IN_GAMEPADUI
               )
-                ? (e) => this.FullScreenImage(window, e)
+                ? (e, t) => this.FullScreenImage((0, k.RA)(e), t)
                 : this.ChangeScreenshot,
             })
           );
@@ -21168,7 +21180,7 @@
                   {
                     focusable: !0,
                     key: e.file.publishedfileid,
-                    onActivate: () => a(t),
+                    onActivate: (e) => a(e, t),
                     onOKActionDescription: (0, I.Xx)(
                       "#AppDetailsActions_ViewScreenshot"
                     ),
