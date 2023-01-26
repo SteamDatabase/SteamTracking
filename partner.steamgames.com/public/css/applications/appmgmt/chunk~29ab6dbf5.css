@@ -683,24 +683,24 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 20px 40px;
+  padding: 40px 0px 0px 0px;
   box-sizing: border-box;
   position: relative;
+  flex-grow: 1;
 }
 .discountdashboard_DashTitleBar_2m-_V {
   font-size: 32px;
   color: #fff;
   font-weight: 200;
-  margin-bottom: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 0px 40px 8px 40px;
 }
 .discountdashboard_DashTitle_1FK58 {
   flex-grow: 1;
 }
 .discountdashboard_ConfidentialBanner_2H9Kz {
-  width: 100%;
   position: relative;
   background: #662b18;
   color: #ed8d8d;
@@ -708,6 +708,7 @@
   font-weight: 200;
   padding: 6px 8px;
   box-sizing: border-box;
+  margin: 0px 40px;
 }
 .discountdashboard_Throbber_21Esx {
   margin-top: 24px;

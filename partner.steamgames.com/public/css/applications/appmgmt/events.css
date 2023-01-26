@@ -10627,7 +10627,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
-  max-height: 80vh;
+  flex-grow: 1;
 }
 .discountgrid_DiscountGridCtn_3THze .discountgrid_Title_ieZ0L {
   font-size: 18px;
@@ -10642,6 +10642,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   font-size: 14px;
   font-weight: 300;
   color: #dfe3e6;
+  margin: 0px 40px;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountsFilterBar_1Rr15
@@ -10686,6 +10687,10 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   margin: 8px 20px 0;
   color: #1b97ff;
 }
+.discountgrid_DiscountGridCtn_3THze .discountgrid_DiscountGridWrapper_6SeSQ {
+  flex-grow: 1;
+  position: relative;
+}
 .discountgrid_DiscountGridCtn_3THze .discountgrid_DiscountGrid_39Ize {
   background: #303238;
   padding: 16px;
@@ -10694,6 +10699,11 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   flex-shrink: 1;
   min-height: 200px;
   display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
@@ -10949,29 +10959,12 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   color: #fff;
   font-weight: 500;
 }
-.savetoolbar_ToolbarCtn_Kfoep {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px;
-  background-color: #9297a5;
-  transform: translateY(94px);
-  transition: transform 0.3s ease-in;
-}
-.savetoolbar_ToolbarCtn_Kfoep.savetoolbar_Visible_3O9re {
-  transform: translateY(0);
-}
-.savetoolbar_ToolbarPlaceHolder_1Z5kE {
-  height: 0px;
-}
-.savetoolbar_ToolbarPlaceHolder_1Z5kE.savetoolbar_Visible_3O9re {
-  height: 70px;
-}
 .savetoolbar_ToolbarInfo_5a6kg {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
   padding: 8px 24px;
   max-width: 800px;
-  margin: auto;
   background-color: #303238;
   border: 1px dashed;
   box-shadow: 0 0 10px #000;
@@ -10980,6 +10973,11 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   align-items: center;
   font-size: 14px;
   font-weight: 500;
+  transform: translate(-50%, 120px);
+  transition: transform 0.3s ease-in;
+}
+.savetoolbar_ToolbarInfo_5a6kg.savetoolbar_Visible_3O9re {
+  transform: translate(-50%, 0);
 }
 .savetoolbar_ChangeCount_zPEyH {
   color: #cfbf61;
