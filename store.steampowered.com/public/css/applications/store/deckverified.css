@@ -54,11 +54,17 @@
 }
 .deckverified_LearnMoreCtn_EEiwn {
   width: 100%;
+  padding: 4px 10px;
+  box-sizing: border-box;
   height: 28px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.deckverified_LearnMoreCtn_EEiwn .deckverified_LearnMorePC_3OSxY {
+  background-color: #7f919f;
+  font-size: 12px;
 }
 .deckverified_LearnMoreCtn_EEiwn a:hover {
   cursor: pointer;

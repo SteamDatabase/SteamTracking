@@ -1543,8 +1543,8 @@
         bN: () => D,
         dn: () => E,
         $Y: () => R,
-        sq: () => T,
-        RQ: () => F,
+        sq: () => F,
+        RQ: () => T,
         _L: () => G,
         z5: () => V,
         Vv: () => te,
@@ -1609,8 +1609,8 @@
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const E = 593110,
         D = [E, 766, 221410],
-        T = 39049601,
-        F = 41316928,
+        F = 39049601,
+        T = 41316928,
         G = 4,
         R = 20,
         A = [12, 34];
@@ -3120,7 +3120,7 @@
     69765: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $m: () => T,
+        $m: () => F,
         Mr: () => ae,
         Q3: () => w,
         kY: () => E,
@@ -4609,17 +4609,17 @@
           return "CBroadcast_UpdateChatMessageFlair_Response";
         }
       }
-      class T extends n {
+      class F extends n {
         constructor(e = null) {
           super(),
-            T.prototype.chat_id || i.aR(T.M()),
+            F.prototype.chat_id || i.aR(F.M()),
             n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            T.sm_m ||
-              (T.sm_m = {
-                proto: T,
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
                 fields: {
                   chat_id: {
                     n: 1,
@@ -4634,56 +4634,20 @@
                   muted: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
-            T.sm_m
+            F.sm_m
           );
         }
         static MBF() {
-          return T.sm_mbf || (T.sm_mbf = i.Bh(T.M())), T.sm_mbf;
-        }
-        toObject(e = !1) {
-          return T.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(T.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(T.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new a.BinaryReader(e),
-            r = new T();
-          return T.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(T.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(T.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_MuteBroadcastChatUser_Request";
-        }
-      }
-      class F extends n {
-        constructor(e = null) {
-          super(), n.initialize(this, e, 0, -1, void 0, null);
+          return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
         }
         toObject(e = !1) {
           return F.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return i.TA(F.M(), e, t);
         }
         static fromObject(e) {
-          return new F();
+          return i.aD(F.M(), e);
         }
         static deserializeBinary(e) {
           let t = new a.BinaryReader(e),
@@ -4691,16 +4655,52 @@
           return F.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return i.F(F.MBF(), e, t);
         }
         serializeBinary() {
           var e = new a.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          i.l2(F.M(), e, t);
+        }
         serializeBase64String() {
           var e = new a.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_MuteBroadcastChatUser_Request";
+        }
+      }
+      class T extends n {
+        constructor(e = null) {
+          super(), n.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return T.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new T();
+        }
+        static deserializeBinary(e) {
+          let t = new a.BinaryReader(e),
+            r = new T();
+          return T.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_MuteBroadcastChatUser_Response";
@@ -6335,7 +6335,7 @@
             });
           }),
           (e.MuteBroadcastChatUser = function (e, t) {
-            return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, F, {
+            return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, T, {
               ePrivilege: 3,
             });
           }),
@@ -7325,7 +7325,7 @@
     },
     29757: (e, t, r) => {
       "use strict";
-      r.d(t, { c9: () => j, _d: () => T, QO: () => F, id: () => D });
+      r.d(t, { c9: () => j, _d: () => F, QO: () => T, id: () => D });
       var a = r(70655),
         i = r(9669),
         n = r.n(i),
@@ -7822,21 +7822,21 @@
         C = r(99386),
         E = r(67119);
       const D = 7;
-      var T, F;
+      var F, T;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Unlocking = 1)] = "Unlocking"),
           (e[(e.Loading = 2)] = "Loading"),
           (e[(e.Ready = 3)] = "Ready"),
           (e[(e.Error = 4)] = "Error");
-      })(T || (T = {}));
+      })(F || (F = {}));
       class G {
         constructor() {
           (this.m_rtUnlockTime = 0), (this.m_schUnlockTimeout = new b.Ar());
         }
         UnlockH264(e, t) {
           (0, E.U5)("RemotePlay.UnlockH264")
-            ? (e.SetState(T.Unlocking, ""),
+            ? (e.SetState(F.Unlocking, ""),
               console.log("Unlocking H.264 for broadcast video playback"),
               SteamClient.RemotePlay.UnlockH264(),
               (this.m_broadcast = e),
@@ -7845,14 +7845,14 @@
               this.m_schUnlockTimeout.Schedule(100, () =>
                 this.CheckUnlockState()
               ))
-            : e.SetState(T.Error, (0, S.Xx)("#BroadcastWatch_MinBrowser"));
+            : e.SetState(F.Error, (0, S.Xx)("#BroadcastWatch_MinBrowser"));
         }
         CheckUnlockState() {
-          if (this.m_broadcast.m_eWatchState != T.Unlocking) return;
+          if (this.m_broadcast.m_eWatchState != F.Unlocking) return;
           if ((0, m.c8)() || (0, m.Pw)())
             return (
               console.log("Unlocking H.264 successful"),
-              this.m_broadcast.SetState(T.None, ""),
+              this.m_broadcast.SetState(F.None, ""),
               void this.m_video.Restart()
             );
           Date.now() - this.m_rtUnlockTime > 6e3
@@ -7860,7 +7860,7 @@
                 "Unlocking H.264 timed out (Steam client or servers offline?)"
               ),
               this.m_broadcast.SetState(
-                T.Error,
+                F.Error,
                 (0, S.Xx)("#BroadcastWatch_MinBrowser")
               ))
             : this.m_schUnlockTimeout.Schedule(100, () =>
@@ -7875,7 +7875,7 @@
             (this.m_ulViewerToken = ""),
             (this.m_strCDNAuthUrlParameters = void 0),
             (this.m_bWebRTC = !1),
-            (this.m_eWatchState = T.None),
+            (this.m_eWatchState = F.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []),
             (this.m_schManifestTimeout = new b.Ar()),
@@ -7884,7 +7884,7 @@
         SetState(e, t = "") {
           (this.m_eWatchState = e),
             (this.m_strStateDescription = t),
-            e == T.Error && console.log(this.m_strStateDescription);
+            e == F.Error && console.log(this.m_strStateDescription);
         }
       }
       (0, a.gn)([s.LO], R.prototype, "m_ulBroadcastID", void 0),
@@ -7917,14 +7917,14 @@
         (0, a.gn)([s.LO], A.prototype, "m_bIsOnline", void 0);
       class L {
         constructor() {
-          (this.m_eWatchState = T.None),
+          (this.m_eWatchState = F.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []);
         }
         SetState(e, t = "") {
           (this.m_eWatchState = e),
             (this.m_strStateDescription = t),
-            e == T.Error && console.log(this.m_strStateDescription);
+            e == F.Error && console.log(this.m_strStateDescription);
         }
       }
       (0, a.gn)([s.LO], L.prototype, "m_eWatchState", void 0),
@@ -7950,15 +7950,15 @@
         GetBroadcastState(e) {
           if (e.IsBroadcastClip()) {
             let t = this.m_mapClips.get(e.GetBroadcastClipID());
-            return t ? t.m_eWatchState : T.None;
+            return t ? t.m_eWatchState : F.None;
           }
           if (e.IsBroadcastVOD()) {
             const t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
-            return t ? t.m_eWatchState : T.None;
+            return t ? t.m_eWatchState : F.None;
           }
           {
             let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-            return t ? t.m_eWatchState : T.None;
+            return t ? t.m_eWatchState : F.None;
           }
         }
         GetBroadcastStateDescription(e) {
@@ -8021,24 +8021,24 @@
             let t = this.m_mapClips.get(e.GetBroadcastClipID());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == T.None
+              t.m_eWatchState == F.None
                 ? this.GetClipManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == T.Ready && e.StartClip(t);
+                : t.m_eWatchState == F.Ready && e.StartClip(t);
           } else if (e.IsBroadcastVOD()) {
             console.log(`Starting VOD for ${e.GetBroadcastAppIDVOD()}`);
             let t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == T.None
+              t.m_eWatchState == F.None
                 ? this.GetVODManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == T.Ready && e.StartVOD(t);
+                : t.m_eWatchState == F.Ready && e.StartVOD(t);
           } else {
             let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == T.None
+              t.m_eWatchState == F.None
                 ? this.GetBroadcastManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == T.Ready && e.StartBroadcast(t);
+                : t.m_eWatchState == F.Ready && e.StartBroadcast(t);
           }
         }
         SetActiveVideo(e) {
@@ -8114,7 +8114,7 @@
             t ||
             ((t = new R()),
             (t.m_steamIDBroadcast = e),
-            (t.m_eWatchState = T.None),
+            (t.m_eWatchState = F.None),
             this.m_mapBroadcasts.set(e, t),
             t)
           );
@@ -8140,7 +8140,7 @@
             t ||
             ((t = new O()),
             (t.m_clipID = e),
-            (t.m_eWatchState = T.None),
+            (t.m_eWatchState = F.None),
             this.m_mapClips.set(e, t),
             t)
           );
@@ -8151,7 +8151,7 @@
             t ||
             ((t = new M()),
             (t.m_nAppIDVOD = e),
-            (t.m_eWatchState = T.None),
+            (t.m_eWatchState = F.None),
             this.m_mapVODs.set(e, t),
             t)
           );
@@ -8210,7 +8210,7 @@
         }
         GetBroadcastManifest(e, t, r = Date.now()) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            e.SetState(T.Loading, "");
+            e.SetState(F.Loading, "");
             let a = {
                 steamid: e.m_steamIDBroadcast,
                 broadcastid: 0,
@@ -8234,14 +8234,14 @@
             }
             if (!i || 200 != i.status)
               return void e.SetState(
-                T.Error,
+                F.Error,
                 (0, S.Xx)("#BroadcastWatch_RequestFailed")
               );
             let s = i.data;
             s.viewertoken && this.SetViewerToken(s.viewertoken);
             let o = s.success;
             if ("ready" == o)
-              e.SetState(T.Ready),
+              e.SetState(F.Ready),
                 (e.m_ulBroadcastID = s.broadcastid),
                 (e.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
                 (e.m_strCDNAuthUrlParameters = s.cdn_auth_url_parameters),
@@ -8256,13 +8256,13 @@
                 }, 3e4 * Math.random());
             else if ("waiting" == o) {
               e.SetState(
-                T.Loading,
+                F.Loading,
                 (0, S.Xx)("#BroadcastWatch_WaitingForResponse")
               );
               let a = Date.now() - r;
               if (a > 6e4)
                 return void e.SetState(
-                  T.Error,
+                  F.Error,
                   (0, S.Xx)("#BroadcastWatch_NotAvailable")
                 );
               let i = a > 3e4 ? s.retry : 5e3;
@@ -8272,7 +8272,7 @@
             } else
               "waiting_for_start" == o
                 ? (e.SetState(
-                    T.Loading,
+                    F.Loading,
                     (0, S.Xx)("#BroadcastWatch_WaitingForStart")
                   ),
                   e.m_schManifestTimeout.Schedule(s.retry, () =>
@@ -8280,45 +8280,45 @@
                   ))
                 : "waiting_for_reconnect" == o
                 ? (e.SetState(
-                    T.Loading,
+                    F.Loading,
                     (0, S.Xx)("#BroadcastWatch_WaitingForReconnect")
                   ),
                   e.m_schManifestTimeout.Schedule(s.retry, () =>
                     this.GetBroadcastManifest(e, t, r)
                   ))
                 : "end" == o
-                ? e.SetState(T.Error, (0, S.Xx)("#BroadcastWatch_NotAvailable"))
+                ? e.SetState(F.Error, (0, S.Xx)("#BroadcastWatch_NotAvailable"))
                 : "noservers" == o
-                ? e.SetState(T.Error, (0, S.Xx)("#BroadcastWatch_ServerLoad"))
+                ? e.SetState(F.Error, (0, S.Xx)("#BroadcastWatch_ServerLoad"))
                 : "system_not_supported" == o
                 ? e.SetState(
-                    T.Error,
+                    F.Error,
                     (0, S.Xx)("#BroadcastWatch_SystemNotSupported")
                   )
                 : "user_restricted" == o
                 ? e.SetState(
-                    T.Error,
+                    F.Error,
                     (0, S.Xx)("#BroadcastWatch_UserRestricted")
                   )
                 : "poor_upload_quality" == o
                 ? e.SetState(
-                    T.Error,
+                    F.Error,
                     (0, S.Xx)("#BroadcastWatch_PoorUploadQuality")
                   )
                 : "request_failed" == o
                 ? e.SetState(
-                    T.Error,
+                    F.Error,
                     (0, S.Xx)("#BroadcastWatch_RequestFailed")
                   )
                 : e.SetState(
-                    T.Error,
+                    F.Error,
                     (0, S.Xx)("#BroadcastWatch_NotAvailable")
                   );
           });
         }
         GetClipManifest(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            e.SetState(T.Loading, "");
+            e.SetState(F.Loading, "");
             let r = {
                 clipid: e.m_clipID,
                 watchlocation: t,
@@ -8335,24 +8335,24 @@
             }
             if (!a || 200 != a.status)
               return void e.SetState(
-                T.Error,
+                F.Error,
                 (0, S.Xx)("#BroadcastWatch_RequestFailed")
               );
             let i = a.data;
             1 == i.success
-              ? (e.SetState(T.Ready), (e.m_data = i), this.LoadClip(e))
-              : e.SetState(T.Error, (0, S.Xx)("#BroadcastWatch_RequestFailed"));
+              ? (e.SetState(F.Ready), (e.m_data = i), this.LoadClip(e))
+              : e.SetState(F.Error, (0, S.Xx)("#BroadcastWatch_RequestFailed"));
           });
         }
         GetVODManifest(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            e.SetState(T.Loading, "");
+            e.SetState(F.Loading, "");
             let t = yield w.D.Get().LoadVODForAppID(e.m_nAppIDVOD);
             t
-              ? (e.SetState(T.Ready),
+              ? (e.SetState(F.Ready),
                 (e.m_manifestURL = t.video_url),
                 this.LoadVOD(e))
-              : e.SetState(T.Error, (0, S.Xx)("#BroadcastWatch_RequestFailed"));
+              : e.SetState(F.Error, (0, S.Xx)("#BroadcastWatch_RequestFailed"));
           });
         }
         HeartbeatBroadcast(e) {
@@ -8384,7 +8384,7 @@
           e.Stop();
           let a = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
           a &&
-            a.m_eWatchState != T.Loading &&
+            a.m_eWatchState != F.Loading &&
             (a.m_bWebRTC && t && (a.m_bWebRTC = !1),
             r == _.N1.StreamGone
               ? this.DelayedGetBroadcastManifest(a, e.GetWatchLocation())
@@ -8444,7 +8444,7 @@
       (0, a.gn)([s.LO], z.prototype, "m_mapBroadcasts", void 0),
         (function (e) {
           (e[(e.Timeline = 1)] = "Timeline"), (e[(e.Minimap = 2)] = "Minimap");
-        })(F || (F = {}));
+        })(T || (T = {}));
       class k {
         constructor(e, t, r, a) {
           (this.m_elVideo = null),
@@ -8705,9 +8705,9 @@
         }
         Play() {
           const e = this.GetBroadcastState();
-          e == T.None || this.IsBroadcastClip()
+          e == F.None || this.IsBroadcastClip()
             ? j.StartVideo(this)
-            : e == T.Ready &&
+            : e == F.Ready &&
               (j.SetActiveVideo(this),
               this.m_player
                 ? this.m_player.Play()
@@ -8859,7 +8859,7 @@
           let r = 0,
             a = 0;
           return (
-            t == F.Timeline
+            t == T.Timeline
               ? ((a = this.m_nVideoEndPos), (r = a - this.m_nTimelineDuration))
               : ((r = 0), (a = 0)),
             h.r4(e, r, a, 0, 100)
@@ -12384,8 +12384,8 @@
       r.d(t, {
         EJ: () => U,
         Et: () => H,
-        PI: () => T,
-        hj: () => F,
+        PI: () => F,
+        hj: () => T,
         j: () => W,
         mR: () => V,
         ow: () => N,
@@ -12447,7 +12447,7 @@
         }
         return !0;
       }
-      function T(e) {
+      function F(e) {
         const t = Object.assign({}, e);
         if (!t) return t;
         if (
@@ -12457,7 +12457,7 @@
           if (!t.rgSubexpressions || 0 === t.rgSubexpressions.length)
             return null;
           if (
-            ((t.rgSubexpressions = t.rgSubexpressions.map((e) => T(e))),
+            ((t.rgSubexpressions = t.rgSubexpressions.map((e) => F(e))),
             !t.bNegated && 1 === t.rgSubexpressions.length)
           )
             return t.rgSubexpressions[0];
@@ -12472,7 +12472,7 @@
         }
         return t;
       }
-      class F {
+      class T {
         constructor(e, t, r, a, i, n) {
           (this.m_bServerSideFiltering = !1),
             (this.m_bUnboundedScope = !1),
@@ -12691,7 +12691,7 @@
             rgSubexpressions: new Array(),
           };
           this.m_facets.forEach((t) => {
-            if (F.BFacetHasEnabledOptTags(t)) return;
+            if (T.BFacetHasEnabledOptTags(t)) return;
             const r = {
               type: t.facet.logical_and
                 ? m.PJ.k_EStoreFilterClauseTypeAnd
@@ -12713,7 +12713,7 @@
             }),
               0 !== r.rgSubexpressions.length && e.rgSubexpressions.push(r);
           }),
-            (e = T(e)),
+            (e = F(e)),
             (this.m_strQuery = Boolean(e) ? JSON.stringify(e) : "");
         }
         UpdateURLParam() {
@@ -12842,8 +12842,8 @@
               C = "401",
               E = "9",
               D = "28",
-              T = "18",
-              F = "41",
+              F = "18",
+              T = "41",
               G = "42",
               R = "43",
               A = "44",
@@ -12910,7 +12910,7 @@
                           (c = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === c
                           ? void 0
-                          : c.get(T))
+                          : c.get(F))
                       );
                     case "remote play":
                       return Math.max(
@@ -12918,7 +12918,7 @@
                           (_ = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === _
                           ? void 0
-                          : _.get(F),
+                          : _.get(T),
                         null ===
                           (h = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === h
@@ -13145,7 +13145,7 @@
           if (this.m_bUnboundedScope) return e;
           let t;
           for (const e of this.m_facets)
-            F.BFacetHasEnabledOptTags(e) &&
+            T.BFacetHasEnabledOptTags(e) &&
               (t = null == t ? e.matchingCapsules : C(t, e.matchingCapsules));
           if (null == t) return e;
           const r = [];
@@ -13255,17 +13255,17 @@
             this.SortFacets();
         }
       }
-      (0, a.gn)([s.LO], F.prototype, "m_facets", void 0),
-        (0, a.gn)([s.LO], F.prototype, "m_priceStopInfo", void 0),
-        (0, a.gn)([s.LO], F.prototype, "m_sortedFacets", void 0),
-        (0, a.gn)([s.aD], F.prototype, "Reset", null),
-        (0, a.gn)([s.aD], F.prototype, "SetFromURLParam", null),
-        (0, a.gn)([s.aD], F.prototype, "SetPotentiallyVisibleCapsules", null),
-        (0, a.gn)([s.aD], F.prototype, "SetFacetCounts", null),
-        (0, a.gn)([s.aD], F.prototype, "SetMultiFacetCounts", null),
-        (0, a.gn)([s.aD], F.prototype, "SetSolrMatchCount", null),
-        (0, a.gn)([s.aD], F.prototype, "SetFacetValueSearchString", null),
-        (0, a.gn)([s.aD], F.prototype, "UpdateMatchCount", null);
+      (0, a.gn)([s.LO], T.prototype, "m_facets", void 0),
+        (0, a.gn)([s.LO], T.prototype, "m_priceStopInfo", void 0),
+        (0, a.gn)([s.LO], T.prototype, "m_sortedFacets", void 0),
+        (0, a.gn)([s.aD], T.prototype, "Reset", null),
+        (0, a.gn)([s.aD], T.prototype, "SetFromURLParam", null),
+        (0, a.gn)([s.aD], T.prototype, "SetPotentiallyVisibleCapsules", null),
+        (0, a.gn)([s.aD], T.prototype, "SetFacetCounts", null),
+        (0, a.gn)([s.aD], T.prototype, "SetMultiFacetCounts", null),
+        (0, a.gn)([s.aD], T.prototype, "SetSolrMatchCount", null),
+        (0, a.gn)([s.aD], T.prototype, "SetFacetValueSearchString", null),
+        (0, a.gn)([s.aD], T.prototype, "UpdateMatchCount", null);
       const G = (0, o.Pi)((e) => {
           var t, r;
           const {
@@ -14358,6 +14358,41 @@
               "Must have" === e.type &&
               1 === e.or_tags.length &&
               "[Feature] Has Demo" === e.or_tags[0]
+            );
+          }
+          return !1;
+        }
+        BFilterRequiresSteamDeckVerifiedOrPlayable() {
+          var e, t, r, a, i;
+          if (
+            1 ==
+            (null ===
+              (r =
+                null ===
+                  (t =
+                    null === (e = this.m_activeTab) || void 0 === e
+                      ? void 0
+                      : e.sale_tag_filter) || void 0 === t
+                  ? void 0
+                  : t.clauses) || void 0 === r
+              ? void 0
+              : r.length)
+          ) {
+            const e =
+              null ===
+                (i =
+                  null === (a = this.m_activeTab) || void 0 === a
+                    ? void 0
+                    : a.sale_tag_filter) || void 0 === i
+                ? void 0
+                : i.clauses[0];
+            return (
+              "Must have" === e.type &&
+              e.or_tags.some(
+                (e) =>
+                  "[Feature] Steam Deck Playable" == e ||
+                  "[Feature] Steam Deck Verified" == e
+              )
             );
           }
           return !1;

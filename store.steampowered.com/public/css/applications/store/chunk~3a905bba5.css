@@ -54,11 +54,17 @@
 }
 .deckverified_LearnMoreCtn_EEiwn {
   width: 100%;
+  padding: 4px 10px;
+  box-sizing: border-box;
   height: 28px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.deckverified_LearnMoreCtn_EEiwn .deckverified_LearnMorePC_3OSxY {
+  background-color: #7f919f;
+  font-size: 12px;
 }
 .deckverified_LearnMoreCtn_EEiwn a:hover {
   cursor: pointer;
@@ -2546,6 +2552,14 @@ html.touch
   .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk
   .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
   .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
+  .LearnMoreCtn {
+  display: none;
+}
+.salepreviewwidgets_SaleItemBrowserRow_y9MSd
+  .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
+  .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk
+  .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
+  .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
   .salepreviewwidgets_StoreSalePriceActionWidgetContainer_ztiNw
   .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0 {
   margin-top: 0;
@@ -2939,6 +2953,15 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
     .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
     .salepreviewwidgets_Action_3Af0S {
+    display: flex;
+  }
+  html:not(.BasicUI)
+    .salepreviewwidgets_SaleItemBrowserRow_y9MSd
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
+    .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
+    .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
+    .LearnMoreCtn {
     display: flex;
   }
 }
