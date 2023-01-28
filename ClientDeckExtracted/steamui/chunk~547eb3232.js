@@ -7603,7 +7603,7 @@
     },
     79530: (e, t, n) => {
       "use strict";
-      n.d(t, { ZS: () => C, iG: () => S, kE: () => w, lm: () => y });
+      n.d(t, { ZS: () => E, iG: () => A, kE: () => b, lm: () => f });
       var a,
         r = n(67294),
         o = (n(96794), n(7874)),
@@ -7618,8 +7618,9 @@
         h = n(15283),
         g = n(93337),
         _ = n(27715),
-        v = n(45520);
-      function C(e) {
+        v = n(45520),
+        C = n(78869);
+      function E(e) {
         let t = r.createElement(
           r.Fragment,
           null,
@@ -7636,7 +7637,7 @@
             strTitle: (0, l.Xx)("#SteamUI_ValveSurvey_Title"),
             strDescription: t,
             onOK: () => {
-              (0, m.AM)(r.createElement(f, { owningWindow: e }), e);
+              (0, m.AM)(r.createElement(w, { owningWindow: e }), e);
             },
             onCancel: () => {
               (0, c.gV)().OptOutOfSurvey();
@@ -7647,7 +7648,7 @@
           e
         );
       }
-      function E(e) {
+      function S(e) {
         const t = (0, g.an)("HardwareSurvey");
         return r.createElement(o.uH, {
           closeModal: e.closeModal,
@@ -7659,10 +7660,10 @@
           strCancelButtonText: (0, l.Xx)("#SteamUI_ValveSurvey_FinishButton"),
         });
       }
-      function S(e) {
-        (0, m.AM)(r.createElement(E, null), e);
-      }
       function A(e) {
+        (0, m.AM)(r.createElement(S, null), e);
+      }
+      function y(e) {
         let { surveyEntry: t } = e;
         if ("string" == typeof t)
           return r.createElement("div", null, (0, l.Xx)("#" + t));
@@ -7671,24 +7672,24 @@
           return r.createElement("div", null, (0, l.Xx)("#" + t.strName, ...e));
         }
       }
-      function y(e) {
+      function f(e) {
         let { surveyData: t } = e;
         return r.createElement(
           s.s,
           { className: d.HardwareSurveySection, focusable: !0 },
           r.createElement("h3", null, (0, l.Xx)("#" + t.strSectionName), " "),
           t.vecEntries.map((e, t) =>
-            r.createElement(A, { key: t, surveyEntry: e })
+            r.createElement(y, { key: t, surveyEntry: e })
           )
         );
       }
-      function f(e) {
+      function w(e) {
         let [t, n] = r.useState([]);
         const a = r.useCallback((e) => {
             n(e);
           }, []),
           i = r.useCallback(() => {
-            (0, c.gV)().SendSurvey(), e.closeModal(), S(e.owningWindow);
+            (0, c.gV)().SendSurvey(), e.closeModal(), A(e.owningWindow);
           }, [e]);
         return (
           r.useEffect(() => {
@@ -7716,7 +7717,7 @@
                 r.createElement(
                   h.e,
                   null,
-                  t.map((e, t) => r.createElement(y, { key: t, surveyData: e }))
+                  t.map((e, t) => r.createElement(f, { key: t, surveyData: e }))
                 )
               )
           )
@@ -7728,48 +7729,49 @@
           (e[(e.k_GatheringData = 2)] = "k_GatheringData"),
           (e[(e.k_SentResults = 3)] = "k_SentResults");
       })(a || (a = {}));
-      const w = (0, _.A)(function () {
+      const b = (0, _.A)(function () {
         const [e, t] = r.useState(a.k_NotVisible),
           [n, i] = r.useState(),
-          s = r.useCallback(() => {
+          s = (0, C.eL)(),
+          c = r.useCallback(() => {
             t(a.k_Prompt);
           }, []);
         r.useEffect(() => {
-          let e = SteamClient.User.RegisterForShowHardwareSurvey(s);
+          let e = SteamClient.User.RegisterForShowHardwareSurvey(c);
           return () => {
             t(a.k_NotVisible), e.unregister();
           };
-        }, [s]);
-        const c = r.useCallback(() => {
+        }, [c]);
+        const m = r.useCallback(() => {
             t(a.k_NotVisible);
-          }, []),
-          m = r.useCallback(() => {
-            t(a.k_GatheringData);
           }, []),
           p = r.useCallback(() => {
-            t(a.k_SentResults);
+            t(a.k_GatheringData);
           }, []),
           u = r.useCallback(() => {
+            t(a.k_SentResults);
+          }, []),
+          h = r.useCallback(() => {
             t(a.k_NotVisible);
           }, []);
-        return e == a.k_NotVisible
-          ? null
-          : r.createElement(
+        return e != a.k_NotVisible && s
+          ? r.createElement(
               o.tb,
               {
                 strName: (0, l.Xx)("#SteamUI_ValveSurvey_Title"),
-                onDismiss: c,
+                onDismiss: m,
                 popupWidth: 600,
                 popupHeight: 500,
                 refPopup: i,
                 className: d.MarketingMessagesDialog,
               },
-              r.createElement(b, { state: e, onClose: c, onContinue: m }),
-              r.createElement(I, { state: e, onClose: c, onContinue: p }),
-              r.createElement(D, { state: e, onClose: c, onContinue: u })
-            );
+              r.createElement(I, { state: e, onClose: m, onContinue: p }),
+              r.createElement(D, { state: e, onClose: m, onContinue: u }),
+              r.createElement(N, { state: e, onClose: m, onContinue: h })
+            )
+          : null;
       });
-      function b(e) {
+      function I(e) {
         return e.state != a.k_Prompt
           ? null
           : r.createElement(
@@ -7806,7 +7808,7 @@
               )
             );
       }
-      function I(e) {
+      function D(e) {
         let { state: t, onClose: n, onContinue: o } = e,
           [s, m] = r.useState([]);
         const g = r.useCallback((e) => {
@@ -7854,7 +7856,7 @@
                           h.e,
                           null,
                           s.map((e, t) =>
-                            r.createElement(y, { key: t, surveyData: e })
+                            r.createElement(f, { key: t, surveyData: e })
                           )
                         )
                       )
@@ -7872,7 +7874,7 @@
               )
         );
       }
-      function D(e) {
+      function N(e) {
         let { state: t, onClose: n, onContinue: o } = e;
         const s = (0, g.an)("HardwareSurvey"),
           c = r.useCallback(() => {
@@ -16127,7 +16129,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, G.Xx)("#Settings_System_SteamLocalBuild"),
-          l = parseInt(1674666559),
+          l = parseInt(1674859060),
           c = l && (0, xa._o)(l, e, o),
           m = i.sSteamBuildDate,
           p = "linux" == O.De.PLATFORM ? " GMT+0000" : " GMT-0800",

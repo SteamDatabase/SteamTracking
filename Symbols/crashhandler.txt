@@ -63,6 +63,7 @@
  dlopen
  dlsym
  dyld_stub_binder
+ execv
  fclose
  fflush
  fgets
@@ -160,6 +161,7 @@
  strcpy
  strlen
  strncasecmp
+ strncat
  strncpy
  strrchr
  sysctl

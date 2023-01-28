@@ -66913,6 +66913,8 @@ object-assign
             /* binding */ EControllerType,
           /* harmony export */ EControllerVirtualMenuType: () =>
             /* binding */ EControllerVirtualMenuType,
+          /* harmony export */ ESWGyroCalibrationWizardState: () =>
+            /* binding */ ESWGyroCalibrationWizardState,
           /* harmony export */
         });
         /* harmony import */ var shared_steammessages_steammessages_controllerconfiguration_enums_pb__WEBPACK_IMPORTED_MODULE_0__ =
@@ -67292,6 +67294,34 @@ object-assign
         })(
           EControllerAttribCapabilityBits ||
             (EControllerAttribCapabilityBits = {})
+        );
+        var ESWGyroCalibrationWizardState;
+        (function (ESWGyroCalibrationWizardState) {
+          ESWGyroCalibrationWizardState[
+            (ESWGyroCalibrationWizardState["AutoCalibrating"] = 0)
+          ] = "AutoCalibrating";
+          ESWGyroCalibrationWizardState[
+            (ESWGyroCalibrationWizardState[
+              "CalibratingStationaryTolerances"
+            ] = 1)
+          ] = "CalibratingStationaryTolerances";
+          ESWGyroCalibrationWizardState[
+            (ESWGyroCalibrationWizardState["CalibratingAntidrift"] = 2)
+          ] = "CalibratingAntidrift";
+          ESWGyroCalibrationWizardState[
+            (ESWGyroCalibrationWizardState["CalibrationComplete"] = 3)
+          ] = "CalibrationComplete";
+          ESWGyroCalibrationWizardState[
+            (ESWGyroCalibrationWizardState["CalibrationFailed"] = 4)
+          ] = "CalibrationFailed";
+          ESWGyroCalibrationWizardState[
+            (ESWGyroCalibrationWizardState["CalibrationPrompt"] = 5)
+          ] = "CalibrationPrompt";
+          ESWGyroCalibrationWizardState[
+            (ESWGyroCalibrationWizardState["CalibrationCountDown"] = 6)
+          ] = "CalibrationCountDown";
+        })(
+          ESWGyroCalibrationWizardState || (ESWGyroCalibrationWizardState = {})
         );
         var EControllerPad;
         (function (EControllerPad) {
@@ -67966,6 +67996,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ERemoteStoragePublishedFileVisibility,
           /* harmony export */ EResult: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EResult,
+          /* harmony export */ ESWGyroCalibrationWizardState: () =>
+            /* reexport safe */ _controllertypes__WEBPACK_IMPORTED_MODULE_9__.ESWGyroCalibrationWizardState,
           /* harmony export */ EServerType: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EServerType,
           /* harmony export */ EShutdownStep: () =>
@@ -87401,8 +87433,8 @@ function TestLocalizeCalendarTime()
         function RemapValClamped(value, min1, max1, min2, max2) {
           return Clamp(
             min2 + ((max2 - min2) * (value - min1)) / (max1 - min1),
-            min2,
-            max2
+            Math.min(min2, max2),
+            Math.max(min2, max2)
           );
         }
         //-----------------------------------------------------------------------------
@@ -88679,26 +88711,29 @@ function TestLocalizeCalendarTime()
           /* harmony export */ BIsInPresentationMode: () =>
             /* binding */ BIsInPresentationMode,
           /* harmony export */ BroadcastConfig: () =>
-            /* binding */ BroadcastConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.BroadcastConfig,
           /* harmony export */ CommunityConfig: () =>
-            /* binding */ CommunityConfig,
-          /* harmony export */ Config: () => /* binding */ Config,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.CommunityConfig,
+          /* harmony export */ Config: () =>
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config,
           /* harmony export */ ConfigContext: () => /* binding */ ConfigContext,
           /* harmony export */ ConfigContextRoot: () =>
             /* binding */ ConfigContextRoot,
-          /* harmony export */ EventConfig: () => /* binding */ EventConfig,
+          /* harmony export */ EventConfig: () =>
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.EventConfig,
           /* harmony export */ GET_BASE_URL: () => /* binding */ GET_BASE_URL,
           /* harmony export */ GET_BASE_WEB_PROPERTY: () =>
             /* binding */ GET_BASE_WEB_PROPERTY,
           /* harmony export */ GenerateNewSessionID: () =>
-            /* binding */ GenerateNewSessionID,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.GenerateNewSessionID,
           /* harmony export */ GetConfigJSON: () => /* binding */ GetConfigJSON,
           /* harmony export */ GetOptionalConfigJSON: () =>
             /* binding */ GetOptionalConfigJSON,
           /* harmony export */ InitConfig: () => /* binding */ InitConfig,
           /* harmony export */ InitConfigAsync: () =>
             /* binding */ InitConfigAsync,
-          /* harmony export */ UserConfig: () => /* binding */ UserConfig,
+          /* harmony export */ UserConfig: () =>
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig,
           /* harmony export */ useConfigContext: () =>
             /* binding */ useConfigContext,
           /* harmony export */ useInDesktopUI: () =>
@@ -88708,39 +88743,35 @@ function TestLocalizeCalendarTime()
           /* harmony export */ useOnDeck: () => /* binding */ useOnDeck,
           /* harmony export */
         });
-        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ =
+        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ =
           __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-        /* harmony import */ var shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_0__ =
-          __webpack_require__(
-            /*! shared/utils/mathutils */ "../../../web_src/shared/js/utils/mathutils.ts"
-          );
-        /* harmony import */ var shared_utils_cookies__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! shared/utils/cookies */ "../../../web_src/shared/js/utils/cookies.ts"
-          );
-        /* harmony import */ var shared_clientenums__WEBPACK_IMPORTED_MODULE_2__ =
-          __webpack_require__(
-            /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
-          );
-        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ =
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(/*! react */ "./node_modules/react/index.js");
-        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default =
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default =
           /*#__PURE__*/ __webpack_require__.n(
-            react__WEBPACK_IMPORTED_MODULE_3__
+            react__WEBPACK_IMPORTED_MODULE_0__
           );
-        /* harmony import */ var shared_utils_assert__WEBPACK_IMPORTED_MODULE_4__ =
+        /* harmony import */ var shared_utils_assert__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
             /*! shared/utils/assert */ "../../../web_src/shared/js/utils/assert.ts"
           );
+        /* harmony import */ var shared_utils_cookies__WEBPACK_IMPORTED_MODULE_2__ =
+          __webpack_require__(
+            /*! shared/utils/cookies */ "../../../web_src/shared/js/utils/cookies.ts"
+          );
+        /* harmony import */ var shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__ =
+          __webpack_require__(
+            /*! shared/webui/configconstants */ "../../../web_src/shared/js/webui/configconstants.ts"
+          );
 
         const ConfigContext =
-          react__WEBPACK_IMPORTED_MODULE_3___default().createContext({});
+          react__WEBPACK_IMPORTED_MODULE_0___default().createContext({});
         const useConfigContext = () => {
           let context =
-            react__WEBPACK_IMPORTED_MODULE_3___default().useContext(
+            react__WEBPACK_IMPORTED_MODULE_0___default().useContext(
               ConfigContext
             );
-          (0, shared_utils_assert__WEBPACK_IMPORTED_MODULE_4__.AssertMsg)(
+          (0, shared_utils_assert__WEBPACK_IMPORTED_MODULE_1__.AssertMsg)(
             context.IN_GAMEPADUI !== undefined,
             "Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application."
           );
@@ -88751,12 +88782,13 @@ function TestLocalizeCalendarTime()
          */
         function ConfigContextRoot(props) {
           const { IN_GAMEPADUI, IN_DESKTOPUI, IN_VR, children } = props;
-          const value = react__WEBPACK_IMPORTED_MODULE_3___default().useMemo(
+          const value = react__WEBPACK_IMPORTED_MODULE_0___default().useMemo(
             () => ({
               IN_GAMEPADUI:
                 IN_GAMEPADUI !== null && IN_GAMEPADUI !== void 0
                   ? IN_GAMEPADUI
-                  : Config.IN_GAMEPADUI,
+                  : shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+                      .Config.IN_GAMEPADUI,
               IN_DESKTOPUI:
                 IN_DESKTOPUI !== null && IN_DESKTOPUI !== void 0
                   ? IN_DESKTOPUI
@@ -88765,7 +88797,7 @@ function TestLocalizeCalendarTime()
             }),
             [IN_GAMEPADUI, IN_DESKTOPUI, IN_VR]
           );
-          return react__WEBPACK_IMPORTED_MODULE_3___default().createElement(
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             ConfigContext.Provider,
             { value },
             children
@@ -88797,8 +88829,367 @@ function TestLocalizeCalendarTime()
          * @returns boolean
          */
         function useOnDeck() {
-          return Config.ON_DECK;
+          return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            .Config.ON_DECK;
         }
+        const CONFIG_ELEMENT_ID = "webui_config";
+        // Helper method to determine if we are in presentation mode. Only supported where we can read a cookie.
+        const k_PresentationModeCookie = "presentation_mode";
+        function BIsInPresentationMode() {
+          let strPresentationMode = null;
+          if (
+            (0,
+            shared_utils_cookies__WEBPACK_IMPORTED_MODULE_2__.BCanAccessCookies)()
+          ) {
+            strPresentationMode = (0,
+            shared_utils_cookies__WEBPACK_IMPORTED_MODULE_2__.GetCookie)(
+              k_PresentationModeCookie
+            );
+          }
+          return Boolean(
+            strPresentationMode && Number.parseInt(strPresentationMode) === 1
+          );
+        }
+        /**
+         * Initialize global & webpack config with data from PHP
+         */
+        function InitConfig(strConfigElement = CONFIG_ELEMENT_ID) {
+          const rgConfigsLoaded = {};
+          const rgConfig = GetConfigJSON("config", strConfigElement);
+          if (rgConfig) {
+            delete rgConfig.SESSIONID; // no longer read from page
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config,
+              rgConfig
+            );
+            rgConfigsLoaded.config = true;
+          }
+          const rgUserConfig = GetConfigJSON("userinfo", strConfigElement);
+          if (rgUserConfig) {
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig,
+              rgUserConfig
+            );
+            rgConfigsLoaded.userConfig = true;
+            // Presentation Mode: Remove our support user status so that we can present a feature for a recording
+            // or screen capture as if we are regular users and prevent the various react widgets from showing support
+            // or valve only features.
+            if (
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+                .UserConfig.is_support &&
+              BIsInPresentationMode()
+            ) {
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig.is_support = false;
+            }
+          }
+          const rgBroadcastConfig = GetConfigJSON(
+            "broadcast",
+            strConfigElement
+          );
+          if (rgBroadcastConfig) {
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.BroadcastConfig,
+              rgBroadcastConfig
+            );
+            rgConfigsLoaded.broadcastConfig = true;
+          }
+          const rgCommunityConfig = GetConfigJSON(
+            "community",
+            strConfigElement
+          );
+          if (rgCommunityConfig) {
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.CommunityConfig,
+              rgCommunityConfig
+            );
+            rgConfigsLoaded.communityConfig = true;
+          }
+          const rgEventConfig = GetConfigJSON("event", strConfigElement);
+          if (rgEventConfig) {
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.EventConfig,
+              rgEventConfig
+            );
+            rgConfigsLoaded.eventConfig = true;
+          }
+          return rgConfigsLoaded;
+        }
+        function InitConfigAsync(axios, baseUrl, options) {
+          return (0, tslib__WEBPACK_IMPORTED_MODULE_4__.__awaiter)(
+            this,
+            void 0,
+            void 0,
+            function* () {
+              if (options.config) {
+                const response = yield axios.get(baseUrl + "ajaxgetconfig");
+                const rgConfig = response.data;
+                if (rgConfig) {
+                  delete rgConfig.SESSIONID; // no longer read from page
+                  Object.assign(
+                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config,
+                    rgConfig
+                  );
+                }
+              }
+              if (options.userConfig) {
+                const userResponse = yield axios.get(
+                  baseUrl + "ajaxgetuserconfig",
+                  { withCredentials: true }
+                );
+                const rgUserConfig = userResponse.data;
+                if (rgUserConfig) {
+                  Object.assign(
+                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig,
+                    rgUserConfig
+                  );
+                }
+              }
+            }
+          );
+        }
+        function GetConfigJSONInternal(
+          attr,
+          IdOrElement = CONFIG_ELEMENT_ID,
+          bLogOnMissingConfigElement
+        ) {
+          let elConfig;
+          if (typeof IdOrElement === "string")
+            elConfig =
+              !{ NODE_ENV: "development", STEAM_BUILD: "dev" }.MOBILE_BUILD &&
+              document.getElementById(IdOrElement);
+          else elConfig = IdOrElement;
+          if (elConfig) {
+            try {
+              if (elConfig.hasAttribute("data-" + attr)) {
+                let rgConfig = JSON.parse(
+                  elConfig.getAttribute("data-" + attr)
+                );
+                return rgConfig;
+              }
+              return null;
+            } catch (e) {
+              console.error("Failed to parse config", e);
+            }
+          } else {
+            if (bLogOnMissingConfigElement)
+              console.error("Missing config element #", IdOrElement);
+          }
+          return undefined;
+        }
+        function GetConfigJSON(attr, IdOrElement = CONFIG_ELEMENT_ID) {
+          return GetConfigJSONInternal(attr, IdOrElement, true);
+        }
+        /**
+         * Read a blob of JSON out of a data attribute on the web page. Returns undefined and does
+         * not log an error if the attribute is not found. Use this version if your code is supposed
+         * to run on the client, and then handle the error case.
+         * @param attr The name of the data attribute on CONFIG_ELEMENT_ID
+         */
+        function GetOptionalConfigJSON(attr, IdOrElement = CONFIG_ELEMENT_ID) {
+          return GetConfigJSONInternal(attr, IdOrElement, false);
+        }
+        function BBaseURLMatches(currentURL, strBaseURL) {
+          return strBaseURL.length != 0 && currentURL.startsWith(strBaseURL);
+        }
+        // Returns the web property you are connected to. If this is hokey, we can specify it in the config itself.
+        // DO NOT PUT this into the Config object as it will break mobile. Native code does not have window.location.href
+        function GET_BASE_URL() {
+          if (!window || !window.location || !window.location.href) {
+            console.warn("Unable to determine base url!");
+            return "unknown";
+          }
+          const currentURL = window.location.href;
+          if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .STORE_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.STORE_BASE_URL;
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .COMMUNITY_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.COMMUNITY_BASE_URL;
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .CHAT_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.CHAT_BASE_URL;
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .PARTNER_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.PARTNER_BASE_URL;
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .HELP_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.HELP_BASE_URL;
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .STEAMTV_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.STEAMTV_BASE_URL;
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .STATS_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.STATS_BASE_URL;
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .INTERNAL_STATS_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.INTERNAL_STATS_BASE_URL;
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .STORE_CHECKOUT_BASE_URL
+            )
+          ) {
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+              .Config.STORE_CHECKOUT_BASE_URL;
+          } else if (
+            BBaseURLMatches(currentURL, "https://steamloopback.host")
+          ) {
+            return "https://steamloopback.host";
+          }
+          return "";
+        }
+        function GET_BASE_WEB_PROPERTY() {
+          const currentURL = window.location.href;
+          if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .STORE_BASE_URL
+            ) ||
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .STORE_CHECKOUT_BASE_URL
+            )
+          ) {
+            return "store";
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .COMMUNITY_BASE_URL
+            )
+          ) {
+            return "community";
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .PARTNER_BASE_URL
+            )
+          ) {
+            return "partnerweb";
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .HELP_BASE_URL
+            )
+          ) {
+            return "help";
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .STEAMTV_BASE_URL
+            )
+          ) {
+            return "steamtv";
+          } else if (
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .STATS_BASE_URL
+            ) ||
+            BBaseURLMatches(
+              currentURL,
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+                .INTERNAL_STATS_BASE_URL
+            )
+          ) {
+            return "stats";
+          }
+          return "";
+        }
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/webui/configconstants.ts":
+      /*!***********************************************************!*\
+  !*** ../../../web_src/shared/js/webui/configconstants.ts ***!
+  \***********************************************************/
+      /***/ (
+        __unused_webpack_module,
+        __webpack_exports__,
+        __webpack_require__
+      ) => {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ BroadcastConfig: () =>
+            /* binding */ BroadcastConfig,
+          /* harmony export */ CommunityConfig: () =>
+            /* binding */ CommunityConfig,
+          /* harmony export */ Config: () => /* binding */ Config,
+          /* harmony export */ EventConfig: () => /* binding */ EventConfig,
+          /* harmony export */ GenerateNewSessionID: () =>
+            /* binding */ GenerateNewSessionID,
+          /* harmony export */ UserConfig: () => /* binding */ UserConfig,
+          /* harmony export */
+        });
+        /* harmony import */ var shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            /*! shared/utils/mathutils */ "../../../web_src/shared/js/utils/mathutils.ts"
+          );
+        /* harmony import */ var shared_utils_cookies__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            /*! shared/utils/cookies */ "../../../web_src/shared/js/utils/cookies.ts"
+          );
+        /* harmony import */ var shared_clientenums__WEBPACK_IMPORTED_MODULE_2__ =
+          __webpack_require__(
+            /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
+          );
+
         /**
          * Global configuration constants.
          * Populated by GetWebUIConfig on websites.
@@ -88944,7 +89335,6 @@ function TestLocalizeCalendarTime()
           ANNOUNCEMENT_GID: "",
           TAKEOVER_ANNOUNCEMENT_GID: "", // used by content hubs page that for a limited time override the default hub (think theme for sale event)
         };
-        const CONFIG_ELEMENT_ID = "webui_config";
         let g_fallbackSessionID;
         /**
          * Read sessionid value from cookie.
@@ -88994,199 +89384,6 @@ function TestLocalizeCalendarTime()
             0
           );
           return strSessionID;
-        }
-        // Helper method to determine if we are in presentation mode. Only supported where we can read a cookie.
-        const k_PresentationModeCookie = "presentation_mode";
-        function BIsInPresentationMode() {
-          let strPresentationMode = null;
-          if (
-            (0,
-            shared_utils_cookies__WEBPACK_IMPORTED_MODULE_1__.BCanAccessCookies)()
-          ) {
-            strPresentationMode = (0,
-            shared_utils_cookies__WEBPACK_IMPORTED_MODULE_1__.GetCookie)(
-              k_PresentationModeCookie
-            );
-          }
-          return Boolean(
-            strPresentationMode && Number.parseInt(strPresentationMode) === 1
-          );
-        }
-        /**
-         * Initialize global & webpack config with data from PHP
-         */
-        function InitConfig(strConfigElement = CONFIG_ELEMENT_ID) {
-          const rgConfigsLoaded = {};
-          const rgConfig = GetConfigJSON("config", strConfigElement);
-          if (rgConfig) {
-            delete rgConfig.SESSIONID; // no longer read from page
-            Object.assign(Config, rgConfig);
-            rgConfigsLoaded.config = true;
-          }
-          const rgUserConfig = GetConfigJSON("userinfo", strConfigElement);
-          if (rgUserConfig) {
-            Object.assign(UserConfig, rgUserConfig);
-            rgConfigsLoaded.userConfig = true;
-            // Presentation Mode: Remove our support user status so that we can present a feature for a recording
-            // or screen capture as if we are regular users and prevent the various react widgets from showing support
-            // or valve only features.
-            if (UserConfig.is_support && BIsInPresentationMode()) {
-              UserConfig.is_support = false;
-            }
-          }
-          const rgBroadcastConfig = GetConfigJSON(
-            "broadcast",
-            strConfigElement
-          );
-          if (rgBroadcastConfig) {
-            Object.assign(BroadcastConfig, rgBroadcastConfig);
-            rgConfigsLoaded.broadcastConfig = true;
-          }
-          const rgCommunityConfig = GetConfigJSON(
-            "community",
-            strConfigElement
-          );
-          if (rgCommunityConfig) {
-            Object.assign(CommunityConfig, rgCommunityConfig);
-            rgConfigsLoaded.communityConfig = true;
-          }
-          const rgEventConfig = GetConfigJSON("event", strConfigElement);
-          if (rgEventConfig) {
-            Object.assign(EventConfig, rgEventConfig);
-            rgConfigsLoaded.eventConfig = true;
-          }
-          return rgConfigsLoaded;
-        }
-        function InitConfigAsync(axios, baseUrl, options) {
-          return (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__awaiter)(
-            this,
-            void 0,
-            void 0,
-            function* () {
-              if (options.config) {
-                const response = yield axios.get(baseUrl + "ajaxgetconfig");
-                const rgConfig = response.data;
-                if (rgConfig) {
-                  delete rgConfig.SESSIONID; // no longer read from page
-                  Object.assign(Config, rgConfig);
-                }
-              }
-              if (options.userConfig) {
-                const userResponse = yield axios.get(
-                  baseUrl + "ajaxgetuserconfig",
-                  { withCredentials: true }
-                );
-                const rgUserConfig = userResponse.data;
-                if (rgUserConfig) {
-                  Object.assign(UserConfig, rgUserConfig);
-                }
-              }
-            }
-          );
-        }
-        function GetConfigJSONInternal(
-          attr,
-          IdOrElement = CONFIG_ELEMENT_ID,
-          bLogOnMissingConfigElement
-        ) {
-          let elConfig;
-          if (typeof IdOrElement === "string")
-            elConfig =
-              !{ NODE_ENV: "development", STEAM_BUILD: "dev" }.MOBILE_BUILD &&
-              document.getElementById(IdOrElement);
-          else elConfig = IdOrElement;
-          if (elConfig) {
-            try {
-              if (elConfig.hasAttribute("data-" + attr)) {
-                let rgConfig = JSON.parse(
-                  elConfig.getAttribute("data-" + attr)
-                );
-                return rgConfig;
-              }
-              return null;
-            } catch (e) {
-              console.error("Failed to parse config", e);
-            }
-          } else {
-            if (bLogOnMissingConfigElement)
-              console.error("Missing config element #", IdOrElement);
-          }
-          return undefined;
-        }
-        function GetConfigJSON(attr, IdOrElement = CONFIG_ELEMENT_ID) {
-          return GetConfigJSONInternal(attr, IdOrElement, true);
-        }
-        /**
-         * Read a blob of JSON out of a data attribute on the web page. Returns undefined and does
-         * not log an error if the attribute is not found. Use this version if your code is supposed
-         * to run on the client, and then handle the error case.
-         * @param attr The name of the data attribute on CONFIG_ELEMENT_ID
-         */
-        function GetOptionalConfigJSON(attr, IdOrElement = CONFIG_ELEMENT_ID) {
-          return GetConfigJSONInternal(attr, IdOrElement, false);
-        }
-        function BBaseURLMatches(currentURL, strBaseURL) {
-          return strBaseURL.length != 0 && currentURL.startsWith(strBaseURL);
-        }
-        // Returns the web property you are connected to. If this is hokey, we can specify it in the config itself.
-        // DO NOT PUT this into the Config object as it will break mobile. Native code does not have window.location.href
-        function GET_BASE_URL() {
-          if (!window || !window.location || !window.location.href) {
-            console.warn("Unable to determine base url!");
-            return "unknown";
-          }
-          const currentURL = window.location.href;
-          if (BBaseURLMatches(currentURL, Config.STORE_BASE_URL)) {
-            return Config.STORE_BASE_URL;
-          } else if (BBaseURLMatches(currentURL, Config.COMMUNITY_BASE_URL)) {
-            return Config.COMMUNITY_BASE_URL;
-          } else if (BBaseURLMatches(currentURL, Config.CHAT_BASE_URL)) {
-            return Config.CHAT_BASE_URL;
-          } else if (BBaseURLMatches(currentURL, Config.PARTNER_BASE_URL)) {
-            return Config.PARTNER_BASE_URL;
-          } else if (BBaseURLMatches(currentURL, Config.HELP_BASE_URL)) {
-            return Config.HELP_BASE_URL;
-          } else if (BBaseURLMatches(currentURL, Config.STEAMTV_BASE_URL)) {
-            return Config.STEAMTV_BASE_URL;
-          } else if (BBaseURLMatches(currentURL, Config.STATS_BASE_URL)) {
-            return Config.STATS_BASE_URL;
-          } else if (
-            BBaseURLMatches(currentURL, Config.INTERNAL_STATS_BASE_URL)
-          ) {
-            return Config.INTERNAL_STATS_BASE_URL;
-          } else if (
-            BBaseURLMatches(currentURL, Config.STORE_CHECKOUT_BASE_URL)
-          ) {
-            return Config.STORE_CHECKOUT_BASE_URL;
-          } else if (
-            BBaseURLMatches(currentURL, "https://steamloopback.host")
-          ) {
-            return "https://steamloopback.host";
-          }
-          return "";
-        }
-        function GET_BASE_WEB_PROPERTY() {
-          const currentURL = window.location.href;
-          if (
-            BBaseURLMatches(currentURL, Config.STORE_BASE_URL) ||
-            BBaseURLMatches(currentURL, Config.STORE_CHECKOUT_BASE_URL)
-          ) {
-            return "store";
-          } else if (BBaseURLMatches(currentURL, Config.COMMUNITY_BASE_URL)) {
-            return "community";
-          } else if (BBaseURLMatches(currentURL, Config.PARTNER_BASE_URL)) {
-            return "partnerweb";
-          } else if (BBaseURLMatches(currentURL, Config.HELP_BASE_URL)) {
-            return "help";
-          } else if (BBaseURLMatches(currentURL, Config.STEAMTV_BASE_URL)) {
-            return "steamtv";
-          } else if (
-            BBaseURLMatches(currentURL, Config.STATS_BASE_URL) ||
-            BBaseURLMatches(currentURL, Config.INTERNAL_STATS_BASE_URL)
-          ) {
-            return "stats";
-          }
-          return "";
         }
 
         /***/
@@ -90506,4 +90703,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=a200ab777e707eb79087
+//# sourceMappingURL=friends.js.map?contenthash=1289d42c89029ae0cbcd

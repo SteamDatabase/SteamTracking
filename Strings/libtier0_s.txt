@@ -33,6 +33,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+RhY/7v:
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -240,7 +241,8 @@ Wh@B
  ^_]
 ^_[]
 ,^_[]
-xQuQ
+x\u\
+,^_[]
 j%PWj
 L^_[]
 ^_[]
@@ -256,7 +258,7 @@ FX;E
 <^_[]
 ^_[]
 l^_[]
-PQhL	
+PQhZ	
 ^_[]
 8#t#
 ^_[]
@@ -425,8 +427,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Jan 24 2023
-18:26:38
+Jan 27 2023
+17:33:19
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -459,6 +461,8 @@ Warning: failed to set thread priority: set failed for priority %d
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings
 MainThrd
 pthread_setname_np
+exec 
+/bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 %s: no such process %d
 ThreadGetProcessExitCode
@@ -700,6 +704,7 @@ A`?Ap
 @_dlclose
 @_dlopen
 @_dlsym
+@_execv
 @_fflush
 @_fgets
 @_fork
@@ -787,6 +792,7 @@ A`?Ap
 @_strerror$UNIX2003
 @_strlen
 @_strncasecmp
+@_strncat
 @_strncpy
 @_strrchr
 @_strstr
@@ -971,7 +977,7 @@ Terminate
 "FindProcessByName
 leep
 pinWaitForValue
-!uspendProcess
+ uspendProcess
 "hellExecute
 mplOneTimeInit
 terlocked
@@ -1032,7 +1038,7 @@ Semaphore
 *LocalBase
 )7ReleaseEl
 2Ell
-*1Ell
+)1Ell
 *7ReleaseEv
 2EbPKcbb
 *1EbPKcbb
@@ -1219,7 +1225,7 @@ RO""@DF
 Y@@@E88
 ]W m(
 iF=+
-E5'$u	
+E5'$
 	   rt
 	5/)*D
 Qg	z""
@@ -1684,6 +1690,7 @@ _dladdr
 _dlclose
 _dlopen
 _dlsym
+_execv
 _fflush
 _fgets
 _fork
@@ -1772,6 +1779,7 @@ _strcpy
 _strerror$UNIX2003
 _strlen
 _strncasecmp
+_strncat
 _strncpy
 _strrchr
 _strstr
@@ -1791,32 +1799,33 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-y[hx
-Qv1Y+
-;n~G
-JZ8>
-SOv>
-EVkp
-QN|483
-n0-,
-=)G6
-:RX/Z
-^8J:
+Bez 
+RP=R
+Y z{QXf
+mX^!
+u*N&
+I!ge
+v>ms
+!e=}
+xeC(
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-_Cd@
-_lsP
-8Qr=
-Ka(M5N
-;1 U
-fxO0
-w%2q
-$gfU
-x6 P
-m	Q7
-ppA<
+YPoU
+gaZ!)
+5ceX
+3/ez
+S=6m
+d5{@
+O45m	`"7
+&V}gD
+	8AH
+H5--+&?b9
+x{)^
+'h`{{c)
+~{z;
+c(nx
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1872,9 +1881,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022642Z0/
-#1{BmCn
-Jb0[
+230128013323Z0/
+O;[<\<
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1882,36 +1890,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		p+IM66YzqsfKljaAsbTctMofjms=
+		9a/v1pL0TztbPFw8BswtFgfOpvA=
 		</data>
 		<data>
-		9IUWNV7v2rtr8sY+6IQK6l2kQPg=
+		hlmbkVDyE5UP/vguF3IKFPumCcI=
 		</data>
 	</array>
 </dict>
 </plist>
-9"b8
-~l+W
-HpB6p
-20230125022759Z0
+?I74x9
+%;KXM@
+Mko6
+c8yH
+:v`ZF-/
+v6=:>?
+20230128013335Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230117161002Z
-230228161001Z0B1
-Timestamp Signer NWK11
+230117160003Z
+230228160002Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-l2Dv
-2|:o
-$9`O
+$tp$
+9v$n
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-R'8'
-30ML
-xfwr
+*v[=
+YwOE
+u%P_
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1950,9 +1960,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022759Z0#
-rKXq
-3/`r
+230128013335Z0#
+z>tVIk-
 __TEXT
 __text
 __TEXT
@@ -2329,9 +2338,10 @@ AWAVSP
 [A^A_]
 AWAVAUATSPA
 [A\A]A^A_]
-AVSH
-x>u>
-[A^]
+AWAVSH
+xKuK
+	H;M
+8[A^A_]
 AVSH
 [A^]
 AWAVSP
@@ -2443,7 +2453,7 @@ D$@H
 d$ M
 X[A\A]A^A_]
 AWAVSH
-Lc5+
+Lc5k
 x(Hc
 VUUUH
 X[A^A_]
@@ -2681,8 +2691,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Jan 24 2023
-18:26:39
+Jan 27 2023
+17:33:19
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -2715,6 +2725,8 @@ Warning: failed to set thread priority: set failed for priority %d
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings
 MainThrd
 pthread_setname_np
+exec 
+/bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 %s: no such process %d
 ThreadGetProcessExitCode
@@ -2952,6 +2964,7 @@ RA\ATASAp
 @_dlclose
 @_dlopen
 @_dlsym
+@_execv
 @_fflush
 @_fgets
 @_fork
@@ -3039,6 +3052,7 @@ RA\ATASAp
 @_strerror
 @_strlen
 @_strncasecmp
+@_strncat
 @_strncpy
 @_strrchr
 @_strstr
@@ -3467,7 +3481,7 @@ LAA~{
 GG>.1i1
 qJ33398:
 UHD!
-**v8
+**r8
 ,*,3D	EP
 fXd6zBBB
 6-G*
@@ -3927,6 +3941,7 @@ _dladdr
 _dlclose
 _dlopen
 _dlsym
+_execv
 _fflush
 _fgets
 _fork
@@ -4015,6 +4030,7 @@ _strcpy
 _strerror
 _strlen
 _strncasecmp
+_strncat
 _strncpy
 _strrchr
 _strstr
@@ -4034,31 +4050,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-_c4j
-+|}%
-)PG:V
+#]Z(@
+od;c
+'q-<
+PI(8uH
+tWmu,
+%7[@
+58Y?
+|_ L
+H}zSv
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-hC}{
-tLi 
-:Va6~
-rA{3
-9QcMw$
-wcV9
-G)X.O
-3}WX
-hdz*S
-CatZn
-]QGC
-o:Sh1s
-.:(81a\
-z3S>5^Mf #6G
-H&8)
-P]5I
-luGd
-!j(_>
+WMF/
+snY"
+xPWb
+OJWj
+}&B}
+1+Nz~
+YAk5)
+UxS=F
+!!wsZAnM
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4114,8 +4127,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022642Z0/
-&P0[
+230128013323Z0/
+T2n0[
+U,O6_4
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4123,35 +4137,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		ZFJiGUiwDPUZeop4PdvAAX0RiGk=
+		T/JsDzerG4BVLE82XzQUpWjQ290=
 		</data>
 		<data>
-		UEWujkSinQmaRaYU63uop8s8Qio=
+		tKoX4qSLMZsXfaDrOu+wvdu1Kfk=
 		</data>
 	</array>
 </dict>
 </plist>
-!nN/
-|yRQ
-20230125022759Z0
+"g"!C
+o7A2x
++b9K&
+q2~mv
+&8S1
+20230128013335Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230117161002Z
-230228161001Z0B1
-Timestamp Signer NWK11
+230117160003Z
+230228160002Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-l2Dv
-2|:o
-$9`O
+$tp$
+9v$n
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-R'8'
-30ML
-xfwr
+*v[=
+YwOE
+u%P_
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4190,11 +4206,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022759Z0#
-a>5k
-}x+x
-J&S4U
-%""J
+230128013335Z0#
+kXx^e
+<cX/
+_B8H
+C;p%
 __TEXT
 __text
 __TEXT
@@ -4236,23 +4252,23 @@ __LINKEDIT
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-@#	0
+@)	0
 #8)@
+"U9(
+"U9(
 T		@9?
 5'qHs
 	(B)J
-(!W9 !
-#W9H
-#W9h
+(aW9 a
+cW9H
+cW9h
 ?i(8
 kjh8k
 ?i(8
 i+8,
 (a@9
 5(	@
-H}	X
-I|	X)
-Ir	X)
+x	X)
 ThZ@
 ThZ@
 TiZ@
@@ -4271,34 +4287,32 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-!p9h
-	)p9
-R	)09
-%09h
-(!09
-	-p9
-R	-09@
-bG9H
-5@s	
-r	Xh
+ap9h
+	ip9
+R	i09
+e09h
+(a09
+	mp9
+R	m09@	
+5`z	
+y	Xh
 @9?q
 @9_q
-V	XH
-U	XH
-@U	X
-T	XH
-S	Xi
-Q	XH
-hQ	Xi
-O	XH
-N	\ 
-!L	\
-H	\ 
-)E	X
+]	XH
+\	XH
+`\	X
+([	XH
+Z	Xi
+X	XH
+X	Xi
+(V	XH
+V	\ 
+AS	\
+!O	\ 
+IL	X
 jt8 
-	9``
-	9`]
-5 		
+	9`f
+	9`c
 C9uR
 RHk88Z
 b2@9
@@ -4313,7 +4327,6 @@ y	4@9)M
  @9h
  @9h
 5hrA
-Ba9t
 RhR@y?
 4hJP
 hh8(
@@ -4346,6 +4359,7 @@ T		@
 hf@9
 hj@9
 4aJ@
+a^w+
 o( `
 3IYi
 SHYh
@@ -4421,8 +4435,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Jan 24 2023
-18:26:39
+Jan 27 2023
+17:33:19
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4455,6 +4469,8 @@ Warning: failed to set thread priority: set failed for priority %d
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings
 MainThrd
 pthread_setname_np
+exec 
+/bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 %s: no such process %d
 ThreadGetProcessExitCode
@@ -4622,7 +4638,7 @@ N10SteamVProf13CVProfManagerE
 Mb@?
 !pYA`?Ap
 ^ATASAp
-D`~Ap S
+Ap S
 @__ZNSt12length_errorD1Ev
 @__ZTISt12length_error
 @__ZTIi
@@ -4692,6 +4708,7 @@ D`~Ap S
 @_dlclose
 @_dlopen
 @_dlsym
+@_execv
 @_fflush
 @_fgets
 @_fork
@@ -4779,6 +4796,7 @@ D`~Ap S
 @_strerror
 @_strlen
 @_strncasecmp
+@_strncat
 @_strncpy
 @_strrchr
 @_strstr
@@ -4971,7 +4989,7 @@ Assign
 Increment
 +Decrement
 +Exchange
-,CompareExchange
++CompareExchange
 PointerIf
 ,128
 Current
@@ -4993,7 +5011,7 @@ Handle
 IdActive
 "Active
 NoWindow
-&4WaitEj
+%4WaitEj
 #1Ev
 #1Ev
 2CloseSemaphoreInternalEibPKc
@@ -5014,7 +5032,7 @@ Event
 '3SetEv
 'PKcbb
 3CreateAnonymousSyncObjectInternalEbb
-(PKcbb
+'PKcbb
 SignalThreadSyncObjectInternalEv
 (EnsureSemaphoreClearedInternalEi
 ResetEv
@@ -5665,6 +5683,7 @@ _dladdr
 _dlclose
 _dlopen
 _dlsym
+_execv
 _fflush
 _fgets
 _fork
@@ -5753,6 +5772,7 @@ _strcpy
 _strerror
 _strlen
 _strncasecmp
+_strncat
 _strncpy
 _strrchr
 _strstr
@@ -5771,34 +5791,32 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-}0A5
-4	fN}
-n;1r
-!;"Z
-cfl,q
-/c0v
->JSU
-p0'S%
-usnbu
-L },
-t0bll
-,rs@
-;E,Js
-XsN\
+IzKSa>
+G{!I
+QjI:
+]<'p[5
+huf[
+44nG
+"5%v
+%@##
+|"8X
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-2n6+e
-[6w7p
-ye\MZo@
-`^3|
-4 UJ:
-8]d&
-AB&m
-sfh3
-2ZGT
-s7]*
+"8((tSAE
+94mw
+CC3{
+sj|H
+rR5^
+5!kP
+a:%r
+`Tf5
+S+@5
+!~ZA[
+>-/DLJ
+ b%Db
+5?_%QP
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -5854,7 +5872,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022642Z0/
+230128013323Z0/
+o@Bpi/M
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5862,20 +5881,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		CuWrO9C3riFSYM2rKNA5c7PLexc=
+		VhNr/G9AQnBpL00ZFITIBh4Rgtc=
 		</data>
 		<data>
-		l6WO2qb4YzrNK73YQHjikjd/EXk=
+		Jfsekibyba87sTxoRLF9TyMStt4=
 		</data>
 	</array>
 </dict>
 </plist>
-Yk2u
-O)&=
-fm\;H*
-YqUz
- SE0/.(
-20230125022759Z0
+"b'uO
+HN\<
+B0*t
+ {R<c^
+(Qm[
+20230128013335Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5932,5 +5951,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022759Z0#
-JbQ)
+230128013335Z0#
+EKZW
+ 10+
+`lc	
+_rop%:=

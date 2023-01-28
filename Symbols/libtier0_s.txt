@@ -423,6 +423,7 @@
  dlopen
  dlsym
  dyld_stub_binder
+ execv
  fflush
  fgets
  fork
@@ -537,6 +538,7 @@
  strerror$UNIX2003
  strlen
  strncasecmp
+ strncat
  strncpy
  strrchr
  strstr

@@ -13586,6 +13586,136 @@ button.controllerconfigurator_SmallTopButtons_1J8Xc.DialogButton {
   margin-left: 82px;
   margin-top: 48px;
 }
+.gyroscopenoisebar_GyroBarField_2OnwI {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  align-items: center;
+  margin: 7px;
+  perspective: 1000px;
+}
+.gyroscopenoisebar_GyroBarField_2OnwI.gyroscopenoisebar_StandardMargin_g7cxS {
+  margin: 15px 15px;
+}
+.gyroscopenoisebar_GyroBarField_2OnwI .gyroscopenoisebar_Icon_DABlx {
+  height: 32px;
+  width: 32px;
+  margin-right: 16px;
+  transform-origin: center center;
+}
+.gyroscopenoisebar_GyroBarField_2OnwI .gyroscopenoisebar_ProgressBar_2VCd- {
+  border-radius: 10px;
+  height: 8px;
+  width: 100%;
+  display: flex;
+  background: #3d4450;
+  overflow: hidden;
+}
+.gyroscopenoisebar_GyroBarField_2OnwI
+  .gyroscopenoisebar_ProgressBar_2VCd-
+  .gyroscopenoisebar_ZeroLine_2pprI {
+  height: 100%;
+  overflow: visible;
+  background: #fff;
+  position: relative;
+  left: 50%;
+  width: 2px;
+  border-radius: 1px;
+}
+.gyroscopenoisebar_GyroBarField_2OnwI
+  .gyroscopenoisebar_ProgressBar_2VCd-
+  .gyroscopenoisebar_Percent_2kHca {
+  height: 100%;
+  background: #1a9fff;
+  position: relative;
+  width: 8px;
+  border-radius: 10px;
+  transform: translateX(-4px);
+}
+.gyroscopenoisebar_GyroBarField_2OnwI .gyroscopenoisebar_LabelText_M9tOt {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8b929a;
+  min-width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.gyroscopenoisebar_GyroNoiseMonitor_1tdwK {
+  margin-top: 15px;
+}
+.gyroscopenoisebar_NoiseMeterBase_4EsG0 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+.gyroscopenoisebar_NoiseMeterBase_4EsG0.gyroscopenoisebar_StandardMargin_g7cxS {
+  margin: 15px 15px;
+}
+.gyroscopenoisebar_NoiseMeterBase_4EsG0 .gyroscopenoisebar_Icon_DABlx {
+  height: 32px;
+  width: 32px;
+  margin: 0px;
+  margin-right: 16px;
+}
+.gyroscopenoisebar_NoiseMeterBase_4EsG0 .gyroscopenoisebar_Row_3EvK- {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.gyroscopenoisebar_NoiseMeterBase_4EsG0
+  .gyroscopenoisebar_Row_3EvK-
+  .gyroscopenoisebar_NoiseMeter_2HnZm {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  align-items: baseline;
+  margin-bottom: 7px;
+}
+.gyroscopenoisebar_NoiseMeterBase_4EsG0
+  .gyroscopenoisebar_Row_3EvK-
+  .gyroscopenoisebar_NoiseMeter_2HnZm
+  .gyroscopenoisebar_NoisePip_1horS {
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 0;
+  flex-direction: row;
+  margin: 2px;
+  background: #3d4450;
+  height: 100%;
+  border-radius: 10px;
+}
 :root {
   --basicui-header-height: 0px;
 }

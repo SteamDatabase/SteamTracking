@@ -1328,3 +1328,8 @@ Mobile
 	method		"internal"
 	filter		"store"
 }
+ClaimEntitlements
+{
+	url			"%store%/account/claimentitlements"
+	method		"internal"
+}

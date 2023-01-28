@@ -300,7 +300,8 @@ PQRW
 Ph@B
 ^_[]
 ^_[]
-xQuQ
+x\u\
+,^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -533,12 +534,14 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jan 24 2023
-18:26:15
+Jan 27 2023
+17:32:56
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
+exec 
+/bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 Out of thread local storage!
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
@@ -672,6 +675,7 @@ RIQ"
 @_dlclose
 @_dlopen
 @_dlsym
+@_execv
 @_fclose
 @_fflush
 @_fgets
@@ -746,6 +750,7 @@ RIQ"
 @_strcpy
 @_strlen
 @_strncasecmp
+@_strncat
 @_strncpy
 @_strrchr
 @_sysctl
@@ -769,7 +774,7 @@ Dzll
 ){c$V
 `m(w
 !	'J+
-uZ."&
+Z."&
 Qg	~
 |`n>>
 _Breakpad_SetSteamID
@@ -841,6 +846,7 @@ _dladdr
 _dlclose
 _dlopen
 _dlsym
+_execv
 _fclose
 _fflush
 _fgets
@@ -919,6 +925,7 @@ _strcmp
 _strcpy
 _strlen
 _strncasecmp
+_strncat
 _strncpy
 _strrchr
 _sysctl
@@ -934,25 +941,24 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-2;BQ}
-XTqc
-h$nE
- kTD"
-_~<$
-S<m.
-gASqF
-z)jK%.27
-DCT:
+^R"0
+:}-]KK
+8*tSiz
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-q2V>
-q~J-
-,vvE
-r|vK
-di;aB
-w9{m
+}G	Ro
+S.\"
+*9+G
+ST6\>
+3CU)
+<-rW
+,kg[
+z?c7f
+O93E
+M6q(
+o$a&
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1008,8 +1014,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022637Z0/
-KL4H
+230128013318Z0/
+ Lnf
+ `2!,
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1017,42 +1024,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		tMn9keubviIndfH6wXHA1VfJAUQ=
+		PoND5P4/P/INUBfuFgacuDAVEiY=
 		</data>
 		<data>
-		9BTnIOWu9fORnnHtUHGQFJJDmM8=
+		YDIhLPXReM1FKGiMXdyFwS/gyM0=
 		</data>
 	</array>
 </dict>
 </plist>
-_DnM
-L\j1+
-N`&V
-02YQ
-Xk!#
-R3qS
-)RlY
-+\-||'
-QST=
-20230125022754Z0
+fxnP
+nSJF
+G<YD
+mcG.
+}(p+
+20230128013330Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230117161002Z
-230228161001Z0B1
-Timestamp Signer NWK11
+230117160003Z
+230228160002Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-l2Dv
-2|:o
-$9`O
+$tp$
+9v$n
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-R'8'
-30ML
-xfwr
+*v[=
+YwOE
+u%P_
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1091,12 +1093,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022754Z0#
-_#I_%
-<Prt
-/5#a
-GjZ]U5
-2=!Op
+230128013330Z0#
+#v!~7x
+'`bi
+oHx^hKB
+cVHr
+Qx3V0d
 __TEXT
 __text
 __TEXT
@@ -1590,9 +1592,10 @@ AWAVSPH
 [A^A_]
 AVSL
 [A^]
-AVSH
-x>u>
-[A^]
+AWAVSH
+xKuK
+	H;M
+8[A^A_]
 AWAVSP
 [A^A_]
 AVSI
@@ -1819,12 +1822,14 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jan 24 2023
-18:26:15
+Jan 27 2023
+17:32:58
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
+exec 
+/bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 Out of thread local storage!
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
@@ -1997,6 +2002,7 @@ HpHp
 @_dlclose
 @_dlopen
 @_dlsym
+@_execv
 @_fclose
 @_fflush
 @_fgets
@@ -2071,6 +2077,7 @@ HpHp
 @_strcpy
 @_strlen
 @_strncasecmp
+@_strncat
 @_strncpy
 @_strrchr
 @_sysctl
@@ -2159,6 +2166,7 @@ _dladdr
 _dlclose
 _dlopen
 _dlsym
+_execv
 _fclose
 _fflush
 _fgets
@@ -2239,6 +2247,7 @@ _strcmp
 _strcpy
 _strlen
 _strncasecmp
+_strncat
 _strncpy
 _strrchr
 _sysctl
@@ -2254,21 +2263,21 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-a-alo
-pKb"j
-Uh0L)
-)+IC
+,<TW
+m[|KISw
+2cq(I
+0V*`
+ZV l
+2&Cd'
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-wu##
-wi+m
-5}$DS
-PzyCK
-5	xd
-jX-,B
-Na~?
+<&6|k
+G$x0
+l,`^
+6	ph
+?r5A
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2324,9 +2333,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022637Z0/
-s| dx_&
-=b0-
+230128013318Z0/
+P'h$
+'m.R
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2334,20 +2343,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		bRMuQeapc3wgZHhfJpHUZCOiPWI=
+		AltGRPZzmQgnbS5S8hUHT0E+Evs=
 		</data>
 		<data>
-		UhgKV8QKCJ3pD4UODiHXdRltLn8=
+		stcGxxus3V6ofoUkYBUkAAq1rHs=
 		</data>
 	</array>
 </dict>
 </plist>
-dow:L
-8{-z3(
-j]<R_d9I
-$_#w
-Cqw'
-20230125022754Z0
+y%<s
+w]O	
+e0bB[?
+87Oo
+lZ`r
+20230128013330Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2403,8 +2412,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022754Z0#
-7BB7
+230128013330Z0#
+kN%a
+REL<%"
+?hFO[
+Cyq.F
 __TEXT
 __text
 __TEXT
@@ -2451,6 +2463,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
+/1>w
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -2470,11 +2483,18 @@ Q)Ij8?
 h&B)
 Lii8k	
 +ih8J	
-		n9
-R		.9
+	In9
+R	I.9(
+(M.9
 ii8J	
-T`SE
-7Z	X
+T`cE
+*En9
+R*E.9
+*An9
+R*A.9
+Wa	X
+ R	X
+@9$+
 jv8(
 h(8*
 ij`8
@@ -2496,6 +2516,8 @@ T		@9?
 5'qHs
 (a@9
 5(	@
+1)9@
+1i9h
 ThZ@
 ThZ@
 TiZ@
@@ -2514,8 +2536,14 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-<9@Q
-"T9H
+!}9h
+	)}9
+R	)=9
+%=9h
+(!=9
+	-}9
+R	-=9@W
+bT9H
 @9_q
 jt8 
  @9h
@@ -2701,12 +2729,14 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jan 24 2023
-18:26:15
+Jan 27 2023
+17:33:00
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
+exec 
+/bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 Out of thread local storage!
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
@@ -2874,6 +2904,7 @@ RARARA`?Ap
 @_dlclose
 @_dlopen
 @_dlsym
+@_execv
 @_fclose
 @_fflush
 @_fgets
@@ -2950,6 +2981,7 @@ RARARA`?Ap
 @_strcpy
 @_strlen
 @_strncasecmp
+@_strncat
 @_strncpy
 @_strrchr
 @_sysctl
@@ -3035,6 +3067,7 @@ _dladdr
 _dlclose
 _dlopen
 _dlsym
+_execv
 _fclose
 _fflush
 _fgets
@@ -3115,6 +3148,7 @@ _strcmp
 _strcpy
 _strlen
 _strncasecmp
+_strncat
 _strncpy
 _strrchr
 _sysctl
@@ -3130,27 +3164,21 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Ts@6
-?8p)
-7d,K
-1DB:
-?g4K
-3~4VvfE
+<5K,
+Hs;]K?Sl
+p#(n
+B%<0]
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Q3 \D
-~`	]
-b_:S
-#xy/C
-$~CB[Eqq]P
-)\}#
-w'Wa
-$'&9C
-`HP| 
-B}1[[,I
-eF1]
+w?K)V
+'>(S<
+3';j
+H>N 
+W},FJA
+t,r[q<w
+gXIe
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -3206,10 +3234,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022637Z0/
-EH\<0[
-~FH3.
-1=90
+230128013318Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3217,17 +3242,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		9CAuX7k0v9UCtv3u78SCFzVGByA=
+		Ob5MKdV0t3xe9gXc6+z+aBMJpKs=
 		</data>
 		<data>
-		WTKTChHxZDGOCCWFua17yk/f1Ps=
+		oclE6VhkxypRPahilQwK8jg78jQ=
 		</data>
 	</array>
 </dict>
 </plist>
-ydJK
-}``s
-20230125022754Z0
+nCw4
+5bR:
+20230128013330Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3284,7 +3309,5 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230125022754Z0#
-\EmT?
-=1S4
-i1li
+230128013330Z0#
+UHF%

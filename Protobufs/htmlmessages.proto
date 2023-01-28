@@ -393,6 +393,7 @@ message CMsgPopupHTMLWindow {
 	optional uint32 popup_index = 7;
 	optional bool trusted_creator = 8;
 	optional string name = 9;
+	optional uint64 hwnd = 10;
 }
 
 message CMsgPopupHTMLWindowResponse {
