@@ -21214,7 +21214,7 @@
         return (
           !n &&
           (null == e ? void 0 : e.bSkipReservation) &&
-          !e.bOutOfStock &&
+          !(null == e ? void 0 : e.bOutOfStock) &&
           (null == t ? void 0 : t.oReservationStatus) !=
             r.F.k_EPurchaseReservationState_Allocated &&
           (null == t ? void 0 : t.oReservationStatus) !=
@@ -21231,7 +21231,7 @@
         } = e;
         return C(n, r, i)
           ? a.createElement(B, { oReservationInfo: n, disabled: i })
-          : n.bOutOfStock
+          : (null == n ? void 0 : n.bOutOfStock)
           ? a.createElement(
               "div",
               { className: (0, p.Z)(y.reserverow, "ReservationUnavailable") },
