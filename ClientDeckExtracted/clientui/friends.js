@@ -89278,6 +89278,8 @@ function TestLocalizeCalendarTime()
           DECK_DISPLAY_MODE: false,
           /** Whether we are running on the Steam Deck device (in gamepadui mode or not).  Can be emulated with -steamdeck. */
           ON_DECK: false,
+          /** Whether we are running in SteamOS (with -steamos[3] on Linux). */
+          ON_STEAMOS: false,
           /** Whether Gamescope is running (with gamepadui) or not */
           IN_GAMESCOPE: false,
           IN_LOGIN: false,
@@ -90703,4 +90705,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=1289d42c89029ae0cbcd
+//# sourceMappingURL=friends.js.map?contenthash=9421100ac5c37e9c8d6c

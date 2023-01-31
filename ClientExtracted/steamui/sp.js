@@ -13149,53 +13149,54 @@
         var e, t, n, o;
         const { accessPoint: r } = A;
         (0, xo.F)(r);
-        const c = (null == r ? void 0 : r.type) == D.e9.Wireless,
-          s = () => {
+        const c = (0, Do.o8)(),
+          s = (null == r ? void 0 : r.type) == D.e9.Wireless,
+          g = () => {
             Ho(r);
           },
-          g = () => {
+          d = () => {
             r.Disconnect(), A.closeModal && A.closeModal();
           },
-          d = () => {
+          m = () => {
             r.Forget(), A.closeModal && A.closeModal();
           },
-          m =
+          C =
             null !== (e = null == r ? void 0 : r.isConnectable) &&
             void 0 !== e &&
             e,
-          C =
+          E =
             null !== (t = null == r ? void 0 : r.isDisconnectable) &&
             void 0 !== t &&
             t,
-          E = [];
+          I = [];
         null !== (n = null == r ? void 0 : r.isForgettable) &&
           void 0 !== n &&
           n &&
-          E.push(
+          I.push(
             a.createElement(
               i.zx,
-              { onClick: d },
+              { onClick: m },
               (0, l.Xx)("#Settings_Internet_Forget")
             )
           ),
-          m &&
-            E.push(
-              a.createElement(
-                i.KM,
-                { onClick: s },
-                (0, l.Xx)("#Settings_Internet_Connect")
-              )
-            ),
           C &&
-            E.push(
+            I.push(
               a.createElement(
                 i.KM,
                 { onClick: g },
+                (0, l.Xx)("#Settings_Internet_Connect")
+              )
+            ),
+          E &&
+            I.push(
+              a.createElement(
+                i.KM,
+                { onClick: d },
                 (0, l.Xx)("#Settings_Internet_Disconnect")
               )
             );
-        const I = (0, b.CA)(),
-          B = 1 == E.length;
+        const B = (0, b.CA)(),
+          p = 1 == I.length;
         return a.createElement(
           u.RG,
           { onCancel: A.closeModal },
@@ -13208,20 +13209,20 @@
                 label: a.createElement(
                   i.h4,
                   {
-                    className: (0, _.Z)($o().Header, !B && $o().CenteredHeader),
+                    className: (0, _.Z)($o().Header, !p && $o().CenteredHeader),
                   },
                   null !== (o = null == r ? void 0 : r.displayName) &&
                     void 0 !== o
                     ? o
                     : (0, l.Xx)("#Internet_Network_Type_Unknown")
                 ),
-                childrenLayout: B ? "inline" : "below",
+                childrenLayout: p ? "inline" : "below",
                 childrenContainerWidth: "fixed",
                 alignItems: "right",
                 spacing: "extra",
                 highlightOnFocus: !1,
               },
-              E
+              I
             ),
             null == r &&
               a.createElement(
@@ -13236,7 +13237,8 @@
               a.createElement(
                 a.Fragment,
                 null,
-                c &&
+                s &&
+                  c &&
                   a.createElement(i.fp, {
                     disabled: !r.isForgettable,
                     label: (0, l.Xx)("#Settings_Internet_Autoconnect_Toggle"),
@@ -13282,8 +13284,25 @@
                 ),
                 a.createElement(tr, { accessPoint: r }),
                 a.createElement(nr, { accessPoint: r }),
-                I && a.createElement(or, { accessPoint: r })
+                B && a.createElement(or, { accessPoint: r })
               )
+          ),
+          a.createElement(
+            i.$_,
+            null,
+            a.createElement(
+              i.aV,
+              {
+                alignItems: "center",
+                highlightOnFocus: !1,
+                bottomSeparator: "none",
+              },
+              a.createElement(
+                i.KM,
+                { autoFocus: !c, onClick: A.closeModal },
+                (0, l.Xx)("#Button_OK")
+              )
+            )
           )
         );
       };
@@ -13686,63 +13705,90 @@
         );
       }
       function dr(A) {
-        const e = ur(),
-          t = (0, Do.er)(),
-          n = (0, Do.CX)();
+        const e = (0, Do.o8)(),
+          t = ur(),
+          n = (0, Do.er)(),
+          o = (0, Do.CX)();
         (0, Do.NH)();
-        const [o, r, c] = (0, F.SZ)(() => [
-            e.filter((A) => cr(A)),
-            e.filter((A) => !cr(A) && !1),
-            e.filter((A) => !cr(A) && !0),
+        const [r, c, s] = (0, F.SZ)(() => [
+            t.filter((A) => cr(A)),
+            t.filter((A) => !cr(A) && !1),
+            t.filter((A) => !cr(A) && !0),
           ]),
-          s = t && n;
+          g = n && o;
         return a.createElement(
           i.V5,
           null,
           a.createElement(Er, null),
           a.createElement(Cr, null),
-          a.createElement(
-            i.Aw,
-            null,
-            a.createElement(i.gE, {
-              checked: t,
-              onChange: (A) => Do.$u.Get().SetWifiEnabled(A),
-              label: (0, l.Xx)("#Settings_Internet_Wifi_Enabled"),
-            }),
-            o.map((A) => a.createElement(gr, { key: A.key, accessPoint: A }))
-          ),
-          r.length > 0 &&
+          !e &&
             a.createElement(
               i.Aw,
               null,
               a.createElement(
                 i.dQ,
                 null,
-                (0, l.Xx)("#Settings_Internet_Known_Networks")
+                (0, l.Xx)("#Settings_Internet_Active_Networks")
               ),
               r.map((A) => a.createElement(gr, { key: A.key, accessPoint: A }))
             ),
-          a.createElement(
-            i.Aw,
-            null,
+          e &&
             a.createElement(
-              i.dQ,
+              a.Fragment,
               null,
-              (0, l.Xx)("#Settings_Internet_Networks_Found")
+              a.createElement(
+                i.Aw,
+                null,
+                a.createElement(i.gE, {
+                  checked: n,
+                  onChange: (A) => Do.$u.Get().SetWifiEnabled(A),
+                  label: (0, l.Xx)("#Settings_Internet_Wifi_Enabled"),
+                }),
+                r.map((A) =>
+                  a.createElement(gr, { key: A.key, accessPoint: A })
+                )
+              ),
+              c.length > 0 &&
+                a.createElement(
+                  i.Aw,
+                  null,
+                  a.createElement(
+                    i.dQ,
+                    null,
+                    (0, l.Xx)("#Settings_Internet_Known_Networks")
+                  ),
+                  c.map((A) =>
+                    a.createElement(gr, { key: A.key, accessPoint: A })
+                  )
+                ),
+              a.createElement(
+                i.Aw,
+                null,
+                a.createElement(
+                  i.dQ,
+                  null,
+                  (0, l.Xx)("#Settings_Internet_Networks_Found")
+                ),
+                s.map((A) =>
+                  a.createElement(gr, { key: A.key, accessPoint: A })
+                ),
+                0 == s.length &&
+                  a.createElement(i.gN, {
+                    disabled: !0,
+                    bottomSeparator: g ? "standard" : "none",
+                    label: (0, l.Xx)(
+                      "#Settings_Internet_No_Other_Networks_Found"
+                    ),
+                  }),
+                g &&
+                  a.createElement(i.gN, {
+                    label: (0, l.Xx)(
+                      "#Settings_Internet_Custom_Network_Button"
+                    ),
+                    onActivate: () => Ho(),
+                  })
+              )
             ),
-            c.map((A) => a.createElement(gr, { key: A.key, accessPoint: A })),
-            0 == c.length &&
-              a.createElement(i.gN, {
-                disabled: !0,
-                bottomSeparator: s ? "standard" : "none",
-                label: (0, l.Xx)("#Settings_Internet_No_Other_Networks_Found"),
-              }),
-            s &&
-              a.createElement(i.gN, {
-                label: (0, l.Xx)("#Settings_Internet_Custom_Network_Button"),
-                onActivate: () => Ho(),
-              })
-          ),
           a.createElement(
             i.Aw,
             null,
@@ -26755,7 +26801,7 @@
           c = null == r ? void 0 : r.find((A) => A.timezoneID == o),
           s = c ? (0, us.Ni)(c) : "",
           u = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          m = parseInt(1674859060),
+          m = parseInt(1675126478),
           C = m && (0, xc._o)(m, n, s),
           E = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           I = (0, Oc.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -33387,7 +33433,9 @@
           ),
           i = (0, F.SZ)(() =>
             r.filter(
-              (e) => A.ignoreFiltering || ya.OX.collectionsAppFilter.Matches(e)
+              (e) =>
+                A.ignoreFiltering ||
+                ya.OX.collectionsAppFilterGamepad.Matches(e)
             )
           ),
           c = r.length - i.length,
@@ -39713,10 +39761,7 @@
               hideTitle: !0,
             },
             {
-              visible:
-                0 !=
-                (2 == t.eControllerType ||
-                  (4 == t.eControllerType && 2048 & t.unCapabilities)),
+              visible: 2 == t.eControllerType,
               title: (0, l.Xx)("#Settings_ControllerCalibration_Sensors"),
               route: T.Z5.GamepadUI.ControllerDeviceCalibration.Sensors(e),
               content: a.createElement(vB, {
@@ -40487,48 +40532,45 @@
           );
         }),
         vB = (0, iA.Pi)(function (A) {
-          const e = (0, T.SN)(),
-            t = uA.tH.Get().GetController(e);
-          if (!t) return a.createElement(a.Fragment, null);
-          const n = 2 == t.eControllerType;
-          return a.createElement(
-            a.Fragment,
-            null,
-            a.createElement(
-              i.Aw,
-              null,
-              a.createElement(
-                sA.s,
-                { "flow-children": "column" },
-                n &&
+          const e = (0, T.SN)();
+          return uA.tH.Get().GetController(e)
+            ? a.createElement(
+                a.Fragment,
+                null,
+                a.createElement(
+                  i.Aw,
+                  null,
                   a.createElement(
-                    i.sT,
-                    {
-                      label: (0, l.Xx)(
-                        "#Settings_ControllerCalibration_CalibrateTrackpad"
-                      ),
-                      onClick: () => {
-                        SteamClient.Input.CalibrateControllerTrackpads(e);
+                    sA.s,
+                    { "flow-children": "column" },
+                    a.createElement(
+                      i.sT,
+                      {
+                        label: (0, l.Xx)(
+                          "#Settings_ControllerCalibration_CalibrateTrackpad"
+                        ),
+                        onClick: () => {
+                          SteamClient.Input.CalibrateControllerTrackpads(e);
+                        },
                       },
-                    },
-                    (0, l.Xx)("#Settings_ControllerCalibration_Start")
-                  ),
-                n &&
-                  a.createElement(
-                    i.sT,
-                    {
-                      label: (0, l.Xx)(
-                        "#Settings_ControllerCalibration_CalibrateJoystick"
-                      ),
-                      onClick: () => {
-                        SteamClient.Input.CalibrateControllerJoystick(e);
+                      (0, l.Xx)("#Settings_ControllerCalibration_Start")
+                    ),
+                    a.createElement(
+                      i.sT,
+                      {
+                        label: (0, l.Xx)(
+                          "#Settings_ControllerCalibration_CalibrateJoystick"
+                        ),
+                        onClick: () => {
+                          SteamClient.Input.CalibrateControllerJoystick(e);
+                        },
                       },
-                    },
-                    (0, l.Xx)("#Settings_ControllerCalibration_Start")
+                      (0, l.Xx)("#Settings_ControllerCalibration_Start")
+                    )
                   )
+                )
               )
-            )
-          );
+            : a.createElement(a.Fragment, null);
         }),
         hB = (0, iA.Pi)(function (A) {
           const { controllerSettings: e, setControllerSettings: t } = A,
@@ -47303,7 +47345,7 @@
         Of = (0, iA.Pi)(function (A) {
           const { onShowLaunchingDetails: e, overview: t } = A,
             n = t.appid,
-            o = xf("a"),
+            o = xf("a") && !1,
             r =
               (function (A) {
                 const e = (0, d.fJ)(
@@ -47335,7 +47377,7 @@
                 if (((0, d.Yz)(s, 50, [s]), null == e)) return !1;
                 return t ? o && r == n : null != n;
               })(n) || o,
-            i = xf("c"),
+            i = xf("c") && !1,
             l = (function (A) {
               var e;
               const t = (0, b.Y4)(),
@@ -50110,10 +50152,11 @@
           t = (0, a.useCallback)(() => {
             A.push(T.Z5.Library.Home(), { bShowGuidedTour: !0 }), e();
           }, [A, e]),
-          n = (0, F.SZ)(() => (0, o.gV)().GetServicesInitialized()),
-          r = (0, T.Zc)(),
-          c = (0, T.aY)(),
-          s = (0, T.gJ)();
+          n = G.De.ON_DECK,
+          r = (0, F.SZ)(() => (0, o.gV)().GetServicesInitialized()),
+          c = (0, T.Zc)(),
+          s = (0, T.aY)(),
+          g = (0, T.gJ)();
         return a.createElement(
           FD.cw,
           null,
@@ -50122,29 +50165,30 @@
             null,
             a.createElement(
               i.sT,
-              { layout: "below", bottomSeparator: "none", onClick: r },
+              { layout: "below", bottomSeparator: "none", onClick: c },
               (0, l.Xx)("#QuickAccess_Tab_Help_HelpSite")
             )
           ),
+          n &&
+            a.createElement(
+              FD.Jc,
+              null,
+              a.createElement(
+                i.sT,
+                { layout: "below", bottomSeparator: "none", onClick: s },
+                (0, l.Xx)("#QuickAccess_Tab_Help_ViewManual")
+              )
+            ),
           a.createElement(
             FD.Jc,
             null,
             a.createElement(
               i.sT,
-              { layout: "below", bottomSeparator: "none", onClick: c },
-              (0, l.Xx)("#QuickAccess_Tab_Help_ViewManual")
-            )
-          ),
-          a.createElement(
-            FD.Jc,
-            null,
-            a.createElement(
-              i.sT,
-              { layout: "below", bottomSeparator: "none", onClick: s },
+              { layout: "below", bottomSeparator: "none", onClick: g },
               (0, l.Xx)("#QuickAccess_Tab_Help_ReportABug")
             )
           ),
-          n &&
+          r &&
             G.De.ON_DECK &&
             a.createElement(
               FD.Jc,
@@ -50227,8 +50271,10 @@
           g = _p(),
           u = V(),
           d = (0, c.fB)(),
-          m = qB(),
-          C = (0, w.Wy)();
+          m = (0, Do.o8)(),
+          C = qB(),
+          E = m || C || t || d,
+          I = (0, w.Wy)();
         return a.createElement(
           a.Fragment,
           null,
@@ -50271,67 +50317,72 @@
                 })
               )
             ),
-          a.createElement(
-            FD.cw,
-            {
-              title: (0, l.Xx)("#QuickAccess_Tab_Settings_Section_Other_Title"),
-            },
-            t &&
-              a.createElement(
-                FD.Jc,
-                null,
+          E &&
+            a.createElement(
+              FD.cw,
+              {
+                title: (0, l.Xx)(
+                  "#QuickAccess_Tab_Settings_Section_Other_Title"
+                ),
+              },
+              t &&
                 a.createElement(
-                  i.sT,
-                  {
-                    onClick: () => tc(C),
-                    layout: "below",
-                    bottomSeparator: "none",
-                  },
-                  (0, l.Xx)("#QuickAccess_ReorderControllers_Button")
+                  FD.Jc,
+                  null,
+                  a.createElement(
+                    i.sT,
+                    {
+                      onClick: () => tc(I),
+                      layout: "below",
+                      bottomSeparator: "none",
+                    },
+                    (0, l.Xx)("#QuickAccess_ReorderControllers_Button")
+                  )
+                ),
+              (m || C) &&
+                a.createElement(
+                  FD.Jc,
+                  null,
+                  a.createElement(i.fp, {
+                    checked: o,
+                    onChange: (A) => Xc.Mj.Get().SetAirplaneMode(A),
+                    label: (0, l.Xx)(
+                      "#QuickAccess_Tab_Settings_Section_Shortcuts_AirplaneMode"
+                    ),
+                    icon: a.createElement(P.$Yc, null),
+                    padding: "compact",
+                  })
+                ),
+              m &&
+                a.createElement(
+                  FD.Jc,
+                  null,
+                  a.createElement(i.fp, {
+                    checked: A,
+                    onChange: (A) => Do.$u.Get().SetWifiEnabled(A),
+                    label: (0, l.Xx)(
+                      "#QuickAccess_Tab_Settings_Section_Shortcuts_Wifi"
+                    ),
+                    icon: a.createElement(P.ySi, null),
+                    padding: "compact",
+                  })
+                ),
+              C && a.createElement(VD, null),
+              d &&
+                a.createElement(
+                  FD.Jc,
+                  null,
+                  a.createElement(i.fp, {
+                    checked: r,
+                    onChange: (A) => Xc.Mj.Get().SetNightModeEnabled(A),
+                    label: (0, l.Xx)(
+                      "#QuickAccess_Tab_Settings_Section_Shortcuts_NightMode"
+                    ),
+                    icon: a.createElement(P.KfV, null),
+                    padding: "compact",
+                  })
                 )
-              ),
-            a.createElement(
-              FD.Jc,
-              null,
-              a.createElement(i.fp, {
-                checked: o,
-                onChange: (A) => Xc.Mj.Get().SetAirplaneMode(A),
-                label: (0, l.Xx)(
-                  "#QuickAccess_Tab_Settings_Section_Shortcuts_AirplaneMode"
-                ),
-                icon: a.createElement(P.$Yc, null),
-                padding: "compact",
-              })
             ),
-            a.createElement(
-              FD.Jc,
-              null,
-              a.createElement(i.fp, {
-                checked: A,
-                onChange: (A) => Do.$u.Get().SetWifiEnabled(A),
-                label: (0, l.Xx)(
-                  "#QuickAccess_Tab_Settings_Section_Shortcuts_Wifi"
-                ),
-                icon: a.createElement(P.ySi, null),
-                padding: "compact",
-              })
-            ),
-            m && a.createElement(VD, null),
-            d &&
-              a.createElement(
-                FD.Jc,
-                null,
-                a.createElement(i.fp, {
-                  checked: r,
-                  onChange: (A) => Xc.Mj.Get().SetNightModeEnabled(A),
-                  label: (0, l.Xx)(
-                    "#QuickAccess_Tab_Settings_Section_Shortcuts_NightMode"
-                  ),
-                  icon: a.createElement(P.KfV, null),
-                  padding: "compact",
-                })
-              )
-          ),
           n && a.createElement(ZD, null),
           s &&
             a.createElement(

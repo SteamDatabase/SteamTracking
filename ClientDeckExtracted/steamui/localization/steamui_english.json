@@ -2500,6 +2500,7 @@
     "Internet_Network_State_Retrying": "Retrying",
     "Settings_Internet_Wifi_Enabled": "Enable Wi-Fi",
     "Settings_Internet_Networks_Found": "Networks Found",
+    "Settings_Internet_Active_Networks": "Active Networks",
     "Settings_Internet_Known_Networks": "Known Networks",
     "Settings_Internet_Hidden_Network": "Hidden Network",
     "Settings_Internet_Wired_Network": "Wired Network",

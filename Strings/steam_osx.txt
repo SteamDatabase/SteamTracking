@@ -2317,7 +2317,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Jan 27 2023 17:34:46
+Startup - updater built Jan 30 2023 14:31:40
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2604,8 +2604,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jan 27 2023
-17:34:46
+Jan 30 2023
+14:31:41
 crashhandler004
 steam
 Steam Executable Crash
@@ -2702,7 +2702,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-17:34:44
+14:31:39
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10467,7 +10467,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-17:32:58
+14:29:46
 Jan
 Feb
 Mar
