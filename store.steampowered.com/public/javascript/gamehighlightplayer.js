@@ -1038,20 +1038,24 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 
 				if( !isFullscreen )
 				{
-					if( eleContainer.requestFullscreen )
-						eleContainer.requestFullscreen();
-					else if( eleContainer.webkitRequestFullScreen )
-						eleContainer.webkitRequestFullScreen();
-					else if( eleContainer.mozRequestFullScreen )
-						eleContainer.mozRequestFullScreen();
-					else if ( videoControl.webkitSupportsFullscreen )
-						videoControl.webkitEnterFullscreen();
-					else if ( eleContainer.msRequestFullscreen )
-						eleContainer.msRequestFullscreen();
+					function requestFullscreen()
+					{
+						if( eleContainer.requestFullscreen )
+							eleContainer.requestFullscreen();
+						else if( eleContainer.webkitRequestFullScreen )
+							eleContainer.webkitRequestFullScreen();
+						else if( eleContainer.mozRequestFullScreen )
+							eleContainer.mozRequestFullScreen();
+						else if ( videoControl.webkitSupportsFullscreen )
+							videoControl.webkitEnterFullscreen();
+						else if ( eleContainer.msRequestFullscreen )
+							eleContainer.msRequestFullscreen();
+					}
 
 					if( !bIsHD )
 					{
-						// Switch to HD video
+						// Switch to HD video. Do this before fullscreening, otherwise some platforms
+						// will attempt to fullscreen the old SD src, leading to an empty video
 						var videoPosition = videoControl.currentTime;
 						videoControl.pause();
 						videoControl.preload = "metadata";
@@ -1060,13 +1064,19 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 							console.log("loadedmetadata");
 							this.currentTime = videoPosition;
 							videoControl.play();
-							$(videoControl).unbind('loadedmetadata')
+							$(videoControl).unbind('loadedmetadata');
+							requestFullscreen();
 						});
 
 						videoControl.src = $(videoControl).data('hd-src');
 						videoControl.load();
 						bIsHD = true;
 					}
+					else
+					{
+						requestFullscreen();
+					}
+
 
 				} else {
 					if( document.cancelFullscreen )
