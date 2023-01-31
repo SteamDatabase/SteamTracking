@@ -26801,7 +26801,7 @@
           c = null == r ? void 0 : r.find((A) => A.timezoneID == o),
           s = c ? (0, us.Ni)(c) : "",
           u = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          m = parseInt(1675126478),
+          m = parseInt(1675191774),
           C = m && (0, xc._o)(m, n, s),
           E = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           I = (0, Oc.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -55214,23 +55214,19 @@
             a.createElement(
               T.Br,
               { basename: (0, T.bo)() },
-              a.createElement(
-                hr.Z,
-                null,
-                a.createElement(Oh, {
-                  bPlayingMovie: C,
-                  strOverrideStartupMovie: N.data.strUrl,
-                  bFullscreenVideo: S,
-                  onVideoComplete: I,
-                  onVideoError: I,
-                }),
-                a.createElement(wQ, {
-                  cm: e,
-                  mode: so.iZ.Full,
-                  bPlayingStartupMovie: C,
-                  fnCancelStartupMove: I,
-                })
-              )
+              a.createElement(Oh, {
+                bPlayingMovie: C,
+                strOverrideStartupMovie: N.data.strUrl,
+                bFullscreenVideo: S,
+                onVideoComplete: I,
+                onVideoError: I,
+              }),
+              a.createElement(wQ, {
+                cm: e,
+                mode: so.iZ.Full,
+                bPlayingStartupMovie: C,
+                fnCancelStartupMove: I,
+              })
             )
           ),
           y
@@ -55494,15 +55490,11 @@
                 a.createElement(
                   T.PU,
                   { initialEntries: u, initialIndex: 1 },
-                  a.createElement(
-                    hr.Z,
-                    null,
-                    a.createElement(wQ, {
-                      cm: e,
-                      mode: so.iZ.ControllerConfigurator,
-                      forcedAppID: n,
-                    })
-                  )
+                  a.createElement(wQ, {
+                    cm: e,
+                    mode: so.iZ.ControllerConfigurator,
+                    forcedAppID: n,
+                  })
                 )
               ),
               g
@@ -55585,15 +55577,11 @@
                   a.createElement(
                     jQ,
                     null,
-                    a.createElement(
-                      hr.Z,
-                      null,
-                      a.createElement(wQ, {
-                        cm: e,
-                        mode: so.iZ.Overlay,
-                        forcedAppID: n.appid,
-                      })
-                    )
+                    a.createElement(wQ, {
+                      cm: e,
+                      mode: so.iZ.Overlay,
+                      forcedAppID: n.appid,
+                    })
                   )
                 ),
                 s
