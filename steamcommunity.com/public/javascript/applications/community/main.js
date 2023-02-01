@@ -2154,7 +2154,9 @@
                 this.RenderInternal(this.m_popup, this.m_element, e)
               )),
             S.AddTrackedPopup(this),
-            o && e && this.Focus());
+            o
+              ? e && this.Focus()
+              : d.De.STEAM_INITS_POPUPS || this.OnCreateInternal());
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -2188,10 +2190,11 @@
             : (this.m_onCreateRender = () => this.RenderInternal(e, t, n));
         }
         OnCreateInternal() {
-          (this.m_bCreated = !0),
+          this.m_bCreated ||
+            ((this.m_bCreated = !0),
             this.OnCreate(),
             this.m_onCreateRender &&
-              (this.m_onCreateRender(), (this.m_onCreateRender = null));
+              (this.m_onCreateRender(), (this.m_onCreateRender = null)));
         }
         OnCreate() {}
         OnResizeEvent() {
@@ -22368,6 +22371,7 @@
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
           USE_LONGEST_LOC_STRING: !1,
+          STEAM_INITS_POPUPS: !1,
         },
         s = {
           logged_in: !1,

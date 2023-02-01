@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7811260";
+var CLSTAMP = "7812017";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7811260";
     i,
     s,
     o = {
-      43281: (e, t, n) => {
+      33094: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7811260";
         }
         Object.create;
         Object.create;
-        n(39108);
+        n(28310);
         var o = n(87363),
           r = n.n(o),
           a = n(61533);
@@ -142,7 +142,7 @@ var CLSTAMP = "7811260";
               return t;
           }
         }
-        var d, h, m, p, f, E, k, g, C, v, I, S, y;
+        var d, h, m, p, f, E, k, g, C, I, v, S, y;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -270,7 +270,7 @@ var CLSTAMP = "7811260";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(v || (v = {})),
+          })(I || (I = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -278,7 +278,7 @@ var CLSTAMP = "7811260";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(I || (I = {})),
+          })(v || (v = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
@@ -368,6 +368,7 @@ var CLSTAMP = "7811260";
             IN_LOGIN: !1,
             IN_LOGIN_REFRESH: !1,
             USE_LONGEST_LOC_STRING: !1,
+            STEAM_INITS_POPUPS: !1,
           },
           T = {
             logged_in: !1,
@@ -438,12 +439,12 @@ var CLSTAMP = "7811260";
           );
         }
         r().createContext({});
-        const D = "webui_config";
-        function M(e = D) {
+        const M = "webui_config";
+        function D(e = M) {
           const t = {},
-            n = w("config", e);
+            n = P("config", e);
           n && (delete n.SESSIONID, Object.assign(b, n), (t.config = !0));
-          const i = w("userinfo", e);
+          const i = P("userinfo", e);
           i &&
             (Object.assign(T, i),
             (t.userConfig = !0),
@@ -456,14 +457,14 @@ var CLSTAMP = "7811260";
                 );
               })() &&
               (T.is_support = !1));
-          const s = w("broadcast", e);
+          const s = P("broadcast", e);
           s && (Object.assign(R, s), (t.broadcastConfig = !0));
-          const o = w("community", e);
+          const o = P("community", e);
           o && (Object.assign(L, o), (t.communityConfig = !0));
-          const r = w("event", e);
+          const r = P("event", e);
           return r && (Object.assign(A, r), (t.eventConfig = !0)), t;
         }
-        function N(e, t = D, n) {
+        function N(e, t = M, n) {
           let i;
           if (
             ((i =
@@ -486,10 +487,10 @@ var CLSTAMP = "7811260";
             }
           else n && console.error("Missing config element #", t);
         }
-        function w(e, t = D) {
+        function P(e, t = M) {
           return N(e, t, !0);
         }
-        let P = { success: !0, result: 1 };
+        let w = { success: !0, result: 1 };
         class U {
           constructor() {
             (this.m_connection = new G()),
@@ -514,7 +515,7 @@ var CLSTAMP = "7811260";
           }
           BClientConnected() {
             return this.m_connection.Connect().then(
-              () => P,
+              () => w,
               () => this.FailureResult()
             );
           }
@@ -574,7 +575,7 @@ var CLSTAMP = "7811260";
                   ? this.m_connection
                       .SendMsgAndAwaitResponse(e)
                       .then((e) =>
-                        1 === e.success ? P : this.FailureResult(e.success)
+                        1 === e.success ? w : this.FailureResult(e.success)
                       )
                   : { success: !1, result: 19, account_mismatch: !0 }
               )
@@ -798,7 +799,7 @@ var CLSTAMP = "7811260";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(K || (K = {}));
         var Y, J, X;
-        n(76895);
+        n(64445);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1393,10 +1394,10 @@ var CLSTAMP = "7811260";
           }
         }
         var Ce = n(42238);
-        n(72210);
-        class ve extends fe {
+        n(16877);
+        class Ie extends fe {
           BIsExpired() {
-            return Ie.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return ve.sm_rtTimeCur >= this.m_rtTimeExpires;
           }
           InitFromPHPInviteLinkInfo(e) {
             this.m_ulChatID = e.chat_id;
@@ -1412,11 +1413,11 @@ var CLSTAMP = "7811260";
               (this.m_bReady = !0);
           }
         }
-        i([me.aD], ve.prototype, "InitFromPHPInviteLinkInfo", null);
-        class Ie {
+        i([me.aD], Ie.prototype, "InitFromPHPInviteLinkInfo", null);
+        class ve {
           constructor(e) {
             (this.m_bConnectingToClient = !1),
-              (this.m_invite = new ve(e.strInviteCode)),
+              (this.m_invite = new Ie(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
                 : this.m_invite.InitInvalid(),
@@ -1493,8 +1494,8 @@ var CLSTAMP = "7811260";
               ));
           }
         }
-        i([me.LO], Ie.prototype, "m_bConnectingToClient", void 0),
-          i([me.LO], Ie.prototype, "m_connectResult", void 0);
+        i([me.LO], ve.prototype, "m_bConnectingToClient", void 0),
+          i([me.LO], ve.prototype, "m_connectResult", void 0);
         let Se = class extends o.Component {
           render() {
             return o.createElement(
@@ -1724,14 +1725,14 @@ var CLSTAMP = "7811260";
           try {
             t = JSON.parse(e.getAttribute("data-inviteinfo"));
           } catch (e) {}
-          Ie.sm_rtTimeCur = t.rtTimeCur;
-          let n = new Ie(t);
+          ve.sm_rtTimeCur = t.rtTimeCur;
+          let n = new ve(t);
           a.render(o.createElement(Se, { controller: n }), e);
         }
         (window.ClientConnectionAPI = Re),
           document.addEventListener("DOMContentLoaded", function () {
             return s(this, void 0, void 0, function* () {
-              M(),
+              D(),
                 yield (function (e) {
                   return s(this, void 0, void 0, function* () {
                     const t = ce.GetLanguageFallback(e),
@@ -1761,7 +1762,7 @@ var CLSTAMP = "7811260";
             });
           });
       },
-      27736: (e, t, n) => {
+      45092: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => r,
@@ -1928,7 +1929,7 @@ var CLSTAMP = "7811260";
               };
         }
       },
-      39108: (e, t, n) => {
+      28310: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2448,6 +2449,6 @@ var CLSTAMP = "7811260";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(43281));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(33094));
   c = a.O(c);
 })();

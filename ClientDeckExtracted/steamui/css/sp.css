@@ -13586,13 +13586,42 @@ button.controllerconfigurator_SmallTopButtons_1J8Xc.DialogButton {
   margin-left: 82px;
   margin-top: 48px;
 }
+.gyroscopenoisebar_GyroRotationAxisIcon_g7noT {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+.gyroscopenoisebar_GyroRotationAxisIcon_g7noT
+  .gyroscopenoisebar_RotateChilden_2UVaM {
+  transform-origin: center center;
+  perspective: 1000px;
+  color: #8b929a;
+  padding: 7px;
+}
+.gyroscopenoisebar_GyroRotationAxisIcon_g7noT
+  .gyroscopenoisebar_RotateChilden_2UVaM
+  .gyroscopenoisebar_Rotatable_1vcj4 {
+  height: 36px;
+  width: 36px;
+  transform-origin: center center;
+}
+.gyroscopenoisebar_GyroRotationAxisIcon_g7noT
+  .gyroscopenoisebar_AxisIcon_1hz8e {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+}
 .gyroscopenoisebar_GyroBarField_2OnwI {
   display: flex;
   flex-direction: row;
   vertical-align: middle;
   align-items: center;
   margin: 7px;
-  perspective: 1000px;
 }
 .gyroscopenoisebar_GyroBarField_2OnwI.gyroscopenoisebar_StandardMargin_g7cxS {
   margin: 15px 15px;
@@ -13601,7 +13630,6 @@ button.controllerconfigurator_SmallTopButtons_1J8Xc.DialogButton {
   height: 32px;
   width: 32px;
   margin-right: 16px;
-  transform-origin: center center;
 }
 .gyroscopenoisebar_GyroBarField_2OnwI .gyroscopenoisebar_ProgressBar_2VCd- {
   border-radius: 10px;
