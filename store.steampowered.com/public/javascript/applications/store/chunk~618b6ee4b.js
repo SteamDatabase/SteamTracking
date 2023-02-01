@@ -19160,7 +19160,7 @@
                       Oo,
                       Object.assign(
                         {
-                          key: "capsules_for_app_" + n,
+                          key: "capsules_for_app_" + t[0].id,
                           capsules: t,
                           title: _.GetName(),
                           subtitle: "last_played" === p ? C : k,
