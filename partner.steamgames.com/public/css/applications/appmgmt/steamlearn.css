@@ -1327,6 +1327,22 @@ a {
   border: 1px solid #fff;
   font-size: 10px;
 }
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DebugToggle_zsiFr {
+  flex-grow: 1;
+  text-align: right;
+  color: #a9a9a9;
+  cursor: pointer;
+  user-select: none;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DebugToggle_zsiFr.projectmodel_Enabled_tWQvN {
+  color: #fff;
+}
 .projectmodel_EditOptions_3TQl6 {
   border: 2px solid #000;
   background-color: #333;
@@ -1414,6 +1430,7 @@ a {
   flex-grow: 1;
 }
 .nodes_FlowNode_3Eq1x .nodes_Title_meAbe .nodes_NodeID_2vVi7 {
+  display: none;
   font-size: 12px;
   color: #ff0;
   margin-right: 4px;
@@ -1521,6 +1538,9 @@ a {
   .nodes_Value_3rXiS {
   font-size: 13px;
   color: #fff;
+}
+.DebugEnabled .nodes_FlowNode_3Eq1x .nodes_NodeID_2vVi7 {
+  display: block;
 }
 .nodes_TrainNode_2Z5Sy {
   min-width: 400px;
@@ -1659,8 +1679,12 @@ a {
   max-width: 800px;
 }
 .nodes_ConnectorID_1xOlw {
+  display: none;
   color: aqua;
   text-shadow: 0px 0px 8px #000;
+}
+.DebugEnabled .nodes_ConnectorID_1xOlw {
+  display: block;
 }
 div.react-flow__handle {
   color: #000;
@@ -1685,6 +1709,712 @@ div.react-flow__handle-top {
 div.react-flow__handle-right {
   border-left-color: #000;
   right: -11px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+#application_root {
+  min-height: inherit;
+}
+.projecttrainsettings_TextButton_2_0va {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projecttrainsettings_TextButton_2_0va:hover {
+  color: #fff;
+}
+.projecttrainsettings_SteamLearnButton_P4V_S {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projecttrainsettings_SteamLearnButton_P4V_S.projecttrainsettings_Hidden_JMdN2 {
+  opacity: 0;
+}
+.projecttrainsettings_SteamLearnButton_P4V_S.projecttrainsettings_Large_2lDvg {
+  font-size: 14px;
+}
+.projecttrainsettings_SteamLearnButton_P4V_S.projecttrainsettings_Medium_bxNJ- {
+  font-size: 13px;
+}
+.projecttrainsettings_SteamLearnButton_P4V_S.projecttrainsettings_Blue_17CWD {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.projecttrainsettings_SteamLearnButton_P4V_S.projecttrainsettings_Red_Gt8Uc {
+  background-color: #c64444;
+  color: #000;
+}
+.projecttrainsettings_SteamLearnButton_P4V_S:hover.projecttrainsettings_Blue_17CWD {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.projecttrainsettings_SteamLearnButton_P4V_S:hover.projecttrainsettings_Red_Gt8Uc {
+  background-color: #f93d3d;
+  color: #000;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb {
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  padding: 20px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb
+  .projecttrainsettings_Separator_14Ln1 {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0px;
+  background-color: #444;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb
+  .projecttrainsettings_OptionHeader_3TfFK {
+  font-size: 18px;
+  color: #67c1f5;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb
+  .projecttrainsettings_OptionDesc_3r6c2 {
+  font-size: 15px;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb
+  .projecttrainsettings_OptionBlock_2YkQA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb
+  .projecttrainsettings_OptionBlock_2YkQA
+  .projecttrainsettings_OptionDetails_1noWK {
+  font-size: 14px;
+  color: #ac966a;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb
+  .projecttrainsettings_OptionBlock_2YkQA
+  .projecttrainsettings_ValueInput_121zx {
+  width: 70px;
+  height: 20px;
+  text-align: right;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb
+  .projecttrainsettings_OptionBlock_2YkQA
+  .projecttrainsettings_ValueInput_121zx
+  .projecttrainsettings_Wide_3a-QX {
+  width: 100px;
+}
+.projecttrainsettings_ProjectTrainSettingsPage_3K9vg
+  .projecttrainsettings_ProjectTrainSettingsBody_t-dKb
+  .projecttrainsettings_OptionBlock_2YkQA
+  .projecttrainsettings_ValueInput_121zx.projecttrainsettings_Invalid_xnCGX {
+  color: red;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+#application_root {
+  min-height: inherit;
+}
+.projectmanualtrain_TextButton_3t2Zo {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectmanualtrain_TextButton_3t2Zo:hover {
+  color: #fff;
+}
+.projectmanualtrain_SteamLearnButton_3To1N {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projectmanualtrain_SteamLearnButton_3To1N.projectmanualtrain_Hidden_1-W3z {
+  opacity: 0;
+}
+.projectmanualtrain_SteamLearnButton_3To1N.projectmanualtrain_Large_3eDOk {
+  font-size: 14px;
+}
+.projectmanualtrain_SteamLearnButton_3To1N.projectmanualtrain_Medium_3Gb_A {
+  font-size: 13px;
+}
+.projectmanualtrain_SteamLearnButton_3To1N.projectmanualtrain_Blue_3SXgJ {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.projectmanualtrain_SteamLearnButton_3To1N.projectmanualtrain_Red_1LAYW {
+  background-color: #c64444;
+  color: #000;
+}
+.projectmanualtrain_SteamLearnButton_3To1N:hover.projectmanualtrain_Blue_3SXgJ {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.projectmanualtrain_SteamLearnButton_3To1N:hover.projectmanualtrain_Red_1LAYW {
+  background-color: #f93d3d;
+  color: #000;
+}
+.projectmanualtrain_ProjectManualTrainPage_3izYO {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+#application_root {
+  min-height: inherit;
+}
+.projectscheduledtrain_TextButton_6gEa9 {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectscheduledtrain_TextButton_6gEa9:hover {
+  color: #fff;
+}
+.projectscheduledtrain_SteamLearnButton_32ivM {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projectscheduledtrain_SteamLearnButton_32ivM.projectscheduledtrain_Hidden_2XOUQ {
+  opacity: 0;
+}
+.projectscheduledtrain_SteamLearnButton_32ivM.projectscheduledtrain_Large_1k1kU {
+  font-size: 14px;
+}
+.projectscheduledtrain_SteamLearnButton_32ivM.projectscheduledtrain_Medium_2eS-3 {
+  font-size: 13px;
+}
+.projectscheduledtrain_SteamLearnButton_32ivM.projectscheduledtrain_Blue_2yq0t {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.projectscheduledtrain_SteamLearnButton_32ivM.projectscheduledtrain_Red_xqg1g {
+  background-color: #c64444;
+  color: #000;
+}
+.projectscheduledtrain_SteamLearnButton_32ivM:hover.projectscheduledtrain_Blue_2yq0t {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.projectscheduledtrain_SteamLearnButton_32ivM:hover.projectscheduledtrain_Red_xqg1g {
+  background-color: #f93d3d;
+  color: #000;
+}
+.projectscheduledtrain_ProjectScheduledTrainPage_30fEb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+#application_root {
+  min-height: inherit;
+}
+.projecttrainstatus_TextButton_3JVbF {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projecttrainstatus_TextButton_3JVbF:hover {
+  color: #fff;
+}
+.projecttrainstatus_SteamLearnButton_1eKJ4 {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projecttrainstatus_SteamLearnButton_1eKJ4.projecttrainstatus_Hidden_1AuVm {
+  opacity: 0;
+}
+.projecttrainstatus_SteamLearnButton_1eKJ4.projecttrainstatus_Large_c8gky {
+  font-size: 14px;
+}
+.projecttrainstatus_SteamLearnButton_1eKJ4.projecttrainstatus_Medium_dYGW3 {
+  font-size: 13px;
+}
+.projecttrainstatus_SteamLearnButton_1eKJ4.projecttrainstatus_Blue_2sM8Q {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.projecttrainstatus_SteamLearnButton_1eKJ4.projecttrainstatus_Red_2jKXY {
+  background-color: #c64444;
+  color: #000;
+}
+.projecttrainstatus_SteamLearnButton_1eKJ4:hover.projecttrainstatus_Blue_2sM8Q {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.projecttrainstatus_SteamLearnButton_1eKJ4:hover.projecttrainstatus_Red_2jKXY {
+  background-color: #f93d3d;
+  color: #000;
+}
+.projecttrainstatus_ProjectTrainStatusPage_32ydn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_ProjectTrainStatusPage_32ydn
+  .projecttrainstatus_ProjectTrainStatusBody_2as9M {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-left: 30px;
+}
+.projecttrainstatus_ProjectTrainStatusPage_32ydn
+  .projecttrainstatus_ProjectTrainStatusBody_2as9M
+  .projecttrainstatus_Separator_2BerN {
+  width: 100%;
+  height: 1px;
+  margin: 30px 0px;
+  background-color: #444;
+}
+.projecttrainstatus_FetchStatusPanel_1_188 {
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo {
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_OverallStatus_2f7nt {
+  font-size: 24px;
+  font-weight: bold;
+  color: #67c1f5;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_Unknown_3ZX3h {
+  color: gray;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_Unstarted_tgiSl {
+  color: gray;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_InProgress_j3V3- {
+  color: #7aa383;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_Complete_2Qp75 {
+  color: #b1f3bf;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_Error_1vQlP {
+  color: #8a2525;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopRight_kr6zM {
+  color: red;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_StatusProgress_330b2 {
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_StatusProgress_330b2
+  .projecttrainstatus_RowProgress_1ZH7S {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_StatusProgress_330b2
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_RowCurrent_3nCub {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_StatusProgress_330b2
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_RowSlash_16F4J {
+  font-size: 14px;
+  color: gray;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_StatusProgress_330b2
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_RowTotal_4wyui {
+  font-size: 14px;
+  color: #d3d3d3;
+  margin-right: 10px;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_StatusProgress_330b2
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_ProgressBar_3t51f {
+  border: 1px solid #9b9b9b;
+  width: 300px;
+  height: 10px;
+  margin-right: 5px;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_StatusProgress_330b2
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_ProgressBar_3t51f
+  .projecttrainstatus_ProgressBarInner_3ASjU {
+  height: 100%;
+  background-color: #686868;
+  transition-property: width;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_StatusProgress_330b2
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_ProgressPct_1SBOv {
+  font-size: 16px;
+  color: #ac966a;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_ShowWorkers_3yfLa {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_ShowWorkers_3yfLa
+  .projecttrainstatus_WorkersContainer_tTO2P {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  padding-left: 30px;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_ShowWorkers_3yfLa
+  .projecttrainstatus_WorkersContainer_tTO2P
+  .projecttrainstatus_Worker_f9kQ7 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_ShowWorkers_3yfLa
+  .projecttrainstatus_WorkersContainer_tTO2P
+  .projecttrainstatus_Worker_f9kQ7
+  .projecttrainstatus_WorkerNumber_1wKjW {
+  font-size: 14px;
+  color: #ddd;
+  width: 20px;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_ShowWorkers_3yfLa
+  .projecttrainstatus_WorkersContainer_tTO2P
+  .projecttrainstatus_Worker_f9kQ7
+  .projecttrainstatus_ProgressBar_3t51f {
+  width: 270px;
+  height: 5px;
+  border: 1px solid #6c6c6c;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_ShowWorkers_3yfLa
+  .projecttrainstatus_WorkersContainer_tTO2P
+  .projecttrainstatus_Worker_f9kQ7
+  .projecttrainstatus_ProgressBar_3t51f
+  .projecttrainstatus_ProgressBarInner_3ASjU {
+  height: 100%;
+  background-color: #535353;
+  transition-property: width;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_ShowWorkers_3yfLa
+  .projecttrainstatus_ShowWorkersTextButton_3cmDG {
+  font-size: 14px;
+  color: #666;
+  user-select: none;
+  cursor: pointer;
+}
+.projecttrainstatus_FetchStatusPanel_1_188
+  .projecttrainstatus_ShowWorkers_3yfLa
+  .projecttrainstatus_ShowWorkersTextButton_3cmDG:hover {
+  color: #999;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt {
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo {
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_OverallStatus_2f7nt {
+  font-size: 24px;
+  font-weight: bold;
+  color: #67c1f5;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_Unknown_3ZX3h {
+  color: gray;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_Unstarted_tgiSl {
+  color: gray;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_InProgress_j3V3- {
+  color: #7aa383;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_Complete_2Qp75 {
+  color: #b1f3bf;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_TopSection_2bD-7
+  .projecttrainstatus_TopLeft_2_woo
+  .projecttrainstatus_StatusString_2jqJc.projecttrainstatus_Error_1vQlP {
+  color: #8a2525;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_EpochSelectorSection_duyKv {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px 0px;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_EpochSelectorSection_duyKv
+  .projecttrainstatus_EpochOption_2FOCh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #2c4858;
+  border-radius: 2px;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_EpochSelectorSection_duyKv
+  .projecttrainstatus_EpochOption_2FOCh:hover {
+  background-color: #335568;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_EpochSelectorSection_duyKv
+  .projecttrainstatus_EpochOption_2FOCh.projecttrainstatus_Selected_3-01t {
+  background-color: #417a9b;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_BatchStatus_3ReQo {
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_BatchStatus_3ReQo
+  .projecttrainstatus_BatchStatusRow_3depk {
+  color: #999;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_CurrentEpoch_1YeRP {
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_CurrentEpoch_1YeRP
+  .projecttrainstatus_RowProgress_1ZH7S {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_CurrentEpoch_1YeRP
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_RowCurrent_3nCub {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_CurrentEpoch_1YeRP
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_RowSlash_16F4J {
+  font-size: 14px;
+  color: gray;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_CurrentEpoch_1YeRP
+  .projecttrainstatus_RowProgress_1ZH7S
+  .projecttrainstatus_RowTotal_4wyui {
+  font-size: 14px;
+  color: #d3d3d3;
+  margin-right: 10px;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_CurrentEpoch_1YeRP
+  .projecttrainstatus_GraphPair_3_XEa {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.projecttrainstatus_TrainGraph_1KZ1T {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projecttrainstatus_TrainGraph_1KZ1T .projecttrainstatus_GraphTitle_3cZuU {
+  font-size: 18px;
+  font-weight: bold;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.projecttrainstatus_TrainGraph_1KZ1T .projecttrainstatus_LineValues_1Lo07 {
+  display: flex;
+  flex-direction: column;
+}
+.projecttrainstatus_TrainGraph_1KZ1T
+  .projecttrainstatus_LineValues_1Lo07
+  .projecttrainstatus_Value_28cVs {
+  font-weight: bold;
 }
 * {
   box-sizing: border-box;

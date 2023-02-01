@@ -87,7 +87,7 @@
     },
     33423: (e, t, r) => {
       "use strict";
-      r.d(t, { Rd: () => M, _R: () => N, Ws: () => b });
+      r.d(t, { Rd: () => N, _R: () => R, Ws: () => _ });
       var l = r(67294),
         n = (r(92398), r(7707)),
         o = (r(21205), r(44396), r(70655)),
@@ -201,37 +201,38 @@
       var d = r(91340),
         p = r(41311),
         g = r(35921),
-        f = (r(27745), r(12505), r(98610), r(23816), r(62639)),
-        H = r.n(f),
-        v = r(41414),
-        w = r(53622),
-        h = r(73604),
-        L = r(22453),
-        V = r(13596),
-        k = r(95598),
-        E = (r(10767), r(1245), r(78507));
-      function b(e) {
+        f = (r(27745), r(12505), r(98610), r(23816), r(7573)),
+        H = r(62639),
+        v = r.n(H),
+        w = r(41414),
+        h = r(53622),
+        L = r(73604),
+        V = r(22453),
+        k = r(13596),
+        E = r(95598),
+        b = (r(10767), r(1245), r(78507));
+      function _(e) {
         const { nAppID: t } = e;
         return l.createElement(
           "div",
-          { className: H().LearnMoreCtn },
+          { className: (0, f.Z)(v().LearnMoreCtn, "LearnMoreCtn") },
           l.createElement(
             n.IS,
             {
               onClick: (e) =>
                 (function (e, t) {
-                  (0, v.AM)(l.createElement(_, { nAppID: t }), e);
-                })((0, w.RA)(e), t),
+                  (0, w.AM)(l.createElement(M, { nAppID: t }), e);
+                })((0, h.RA)(e), t),
             },
             l.createElement(
               "span",
-              { className: H().LearnMorePC },
+              { className: v().LearnMorePC },
               (0, p.Xx)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop")
             )
           )
         );
       }
-      function _(e) {
+      function M(e) {
         const { nAppID: t, closeModal: r } = e,
           n = (function (e) {
             const [t, r] = l.useState(m.Get().GetCompatabilityResultForApp(e));
@@ -255,14 +256,14 @@
             onCancel: r,
           },
           l.createElement(
-            L.uT,
+            V.uT,
             null,
             l.createElement(
               g.s,
               { focusable: !1, "flow-children": "column" },
               Boolean(n)
-                ? l.createElement(E.default, { results: n })
-                : l.createElement(V.V, {
+                ? l.createElement(b.default, { results: n })
+                : l.createElement(k.V, {
                     size: "medium",
                     position: "center",
                     string: (0, p.Xx)("#Loading"),
@@ -271,29 +272,29 @@
           )
         );
       }
-      function M(e) {
+      function N(e) {
         const { category: t } = e;
         switch (t) {
           case 3:
-            return l.createElement(k.YVI, { className: H().CategoryIcon });
+            return l.createElement(E.YVI, { className: v().CategoryIcon });
           case 2:
-            return l.createElement(k.KKY, { className: H().CategoryIcon });
+            return l.createElement(E.KKY, { className: v().CategoryIcon });
           case 1:
-            return l.createElement(k.vyu, { className: H().CategoryIcon });
+            return l.createElement(E.vyu, { className: v().CategoryIcon });
           case 0:
-            return l.createElement(k.z5E, { className: H().CategoryIcon });
+            return l.createElement(E.z5E, { className: v().CategoryIcon });
         }
       }
-      function N(e) {
+      function R(e) {
         const { category: t, appName: r, descriptionToken: n } = e;
         if (0 == t)
           return l.createElement(
             "div",
-            { className: H().CompatibilityDetailRatingSummary },
+            { className: v().CompatibilityDetailRatingSummary },
             r
               ? (0, p.kQ)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                  l.createElement("b", null, (0, h.HA)(r))
+                  l.createElement("b", null, (0, L.HA)(r))
                 )
               : (0, p.Xx)("#SteamDeckVerified_DescriptionHeader_Unknown")
           );
@@ -302,37 +303,37 @@
         switch (t) {
           case 3:
             (o = "#SteamDeckVerified_DescriptionHeader_Verified"),
-              (a = H().Verified);
+              (a = v().Verified);
             break;
           case 2:
             (o = "#SteamDeckVerified_DescriptionHeader_Playable"),
-              (a = H().Playable);
+              (a = v().Playable);
             break;
           case 1:
             (o = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
-              (a = H().Unsupported);
+              (a = v().Unsupported);
         }
-        const i = l.createElement("span", { className: a }, (0, p.Xx)(R(t))),
+        const i = l.createElement("span", { className: a }, (0, p.Xx)(y(t))),
           c = l.createElement(
             "span",
-            { className: H().CompatibilityDetailRatingSummary },
+            { className: v().CompatibilityDetailRatingSummary },
             (0, p.Xx)(n || o)
           ),
           s = r
             ? (0, p.kQ)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                l.createElement("b", null, (0, h.HA)(r)),
+                l.createElement("b", null, (0, L.HA)(r)),
                 i,
                 c
               )
             : (0, p.kQ)("#SteamDeckVerified_DescriptionHeader", i, c);
         return l.createElement(
           "div",
-          { className: H().CompatibilityDetailRatingSummary },
+          { className: v().CompatibilityDetailRatingSummary },
           s
         );
       }
-      function R(e) {
+      function y(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";

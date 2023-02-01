@@ -154,194 +154,6 @@
         EscapeLink: "faqviewpage_EscapeLink_19Bjj",
       };
     },
-    15396: (e, t, a) => {
-      "use strict";
-      a.d(t, { Y: () => r });
-      var o = a(70655),
-        i = a(67294),
-        s = a(64839),
-        n = a(54452);
-      class r extends i.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              bRenderChildren: !1,
-              nPrevRenderWidth: 0,
-              nPrevRenderHeight: 0,
-            }),
-            (this.m_refContainer = i.createRef());
-        }
-        BLoadAndUnload() {
-          return "LoadAndUnload" == (this.props.mode || "JustLoad");
-        }
-        OnVisibilityChange(e) {
-          let t = this.state.bRenderChildren;
-          if (t == e) return;
-          if (t && !this.BLoadAndUnload()) return;
-          let a = 0,
-            o = 0;
-          if (this.m_refContainer.current) {
-            const e = this.m_refContainer.current.GetBoundingClientRect();
-            e && ((a = e.width), (o = e.height));
-          }
-          this.setState({
-            bRenderChildren: e,
-            nPrevRenderWidth: a,
-            nPrevRenderHeight: o,
-          }),
-            e && this.props.onRender && this.props.onRender();
-        }
-        render() {
-          const e = this.props,
-            {
-              placeholderWidth: t,
-              placeholderHeight: a,
-              onRender: s,
-              style: r,
-              mode: l,
-            } = e,
-            p = (0, o._T)(e, [
-              "placeholderWidth",
-              "placeholderHeight",
-              "onRender",
-              "style",
-              "mode",
-            ]),
-            d = this.state.bRenderChildren;
-          let h = r;
-          if (!d) {
-            const e = this.state.nPrevRenderWidth || t,
-              o = this.state.nPrevRenderHeight || a;
-            (void 0 === o && void 0 === e) ||
-              (h = Object.assign(Object.assign({}, r), {
-                minHeight: o,
-                minWidth: e,
-              }));
-          }
-          const c = this.BLoadAndUnload() ? "repeated" : "once";
-          return i.createElement(
-            n.U,
-            Object.assign({ ref: this.m_refContainer, style: h }, p, {
-              onVisibilityChange: this.OnVisibilityChange,
-              trigger: c,
-            }),
-            d && this.props.children
-          );
-        }
-      }
-      (0, o.gn)([s.ak], r.prototype, "OnVisibilityChange", null);
-    },
-    54452: (e, t, a) => {
-      "use strict";
-      a.d(t, { U: () => r });
-      var o = a(70655),
-        i = a(67294),
-        s = a(53622),
-        n = a(64839);
-      class r extends i.Component {
-        constructor() {
-          super(...arguments),
-            (this.m_observer = null),
-            (this.m_refElement = i.createRef()),
-            (this.m_elTracked = null),
-            (this.m_bPreviouslyIntersecting = !1);
-        }
-        static GetScrollableClassname() {
-          return "vt-scrollable";
-        }
-        BTriggerOnce() {
-          return "once" == (this.props.trigger || "once");
-        }
-        GetBoundingClientRect() {
-          return this.m_refElement.current
-            ? this.m_refElement.current.getBoundingClientRect()
-            : null;
-        }
-        DestroyObserver() {
-          this.m_observer &&
-            (this.m_observer.disconnect(),
-            (this.m_observer = null),
-            (this.m_elTracked = null));
-        }
-        componentWillUnmount() {
-          this.DestroyObserver();
-        }
-        componentDidMount() {
-          this.UpdateObserver(null);
-        }
-        componentDidUpdate(e) {
-          this.UpdateObserver(e);
-        }
-        UpdateObserver(e) {
-          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
-          this.m_observer &&
-            e &&
-            e.rootMargin != this.m_observer.rootMargin &&
-            this.DestroyObserver();
-          let t = this.m_refElement.current;
-          if (
-            (this.m_observer &&
-              t != this.m_elTracked &&
-              (this.m_observer.unobserve(this.m_elTracked),
-              (this.m_elTracked = null)),
-            !this.m_observer && t)
-          ) {
-            let e = { root: this.FindScrollableAncestor(t) };
-            this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
-              (this.m_observer = (0, n.Gt)(t, this.OnIntersection, e));
-          }
-          this.m_observer &&
-            t &&
-            t != this.m_elTracked &&
-            (this.m_observer.observe(t), (this.m_elTracked = t));
-        }
-        FindScrollableAncestor(e) {
-          return s.Jk(e, (e) => {
-            const t = this.props.bHorizontal
-              ? window.getComputedStyle(e).overflowX
-              : window.getComputedStyle(e).overflowY;
-            return (
-              "scroll" == t ||
-              "auto" == t ||
-              !!e.classList.contains(r.GetScrollableClassname())
-            );
-          });
-        }
-        OnIntersection(e, t) {
-          let a = !1;
-          for (const t of e)
-            if (t.isIntersecting) {
-              a = !0;
-              break;
-            }
-          this.m_bPreviouslyIntersecting != a &&
-            ((this.m_bPreviouslyIntersecting = a),
-            this.props.onVisibilityChange && this.props.onVisibilityChange(a),
-            a && this.BTriggerOnce() && this.DestroyObserver());
-        }
-        render() {
-          let e = this.props,
-            {
-              onVisibilityChange: t,
-              rootMargin: a,
-              trigger: s,
-              bHorizontal: n,
-            } = e,
-            r = (0, o._T)(e, [
-              "onVisibilityChange",
-              "rootMargin",
-              "trigger",
-              "bHorizontal",
-            ]);
-          return i.createElement(
-            "div",
-            Object.assign({ ref: this.m_refElement }, r),
-            this.props.children
-          );
-        }
-      }
-      (0, o.gn)([n.ak], r.prototype, "OnIntersection", null);
-    },
     16236: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { FAQRoutes: () => Pt, default: () => Dt });
@@ -7740,8 +7552,8 @@
         M = a(28268),
         z = a(41311),
         E = a(73604),
-        W = a(93320),
-        F = a.n(W),
+        F = a(93320),
+        W = a.n(F),
         R = a(22188),
         O = (a(27394), a(13679)),
         N = a.n(O),
@@ -8298,10 +8110,10 @@
             }, []),
             n.createElement(
               "div",
-              { className: F().FAQDashboardPage },
+              { className: W().FAQDashboardPage },
               n.createElement(
                 "div",
-                { className: F().FAQDashboard },
+                { className: W().FAQDashboard },
                 n.createElement(ge, null),
                 n.createElement(be, {
                   eCurrentSortColumn: o,
@@ -8310,7 +8122,7 @@
                 0 == t.length &&
                   n.createElement(
                     "div",
-                    { className: F().ErrorMsg },
+                    { className: W().ErrorMsg },
                     (0, z.Xx)("#FAQDashboard_Empty")
                   ),
                 s.map((e) => n.createElement(ke, { key: e[0], rgColumns: e })),
@@ -8339,15 +8151,15 @@
             );
           return n.createElement(
             "div",
-            { className: F().DashboardHeader },
+            { className: W().DashboardHeader },
             n.createElement(
               "div",
-              { className: F().DashboardHeaderTitle },
+              { className: W().DashboardHeaderTitle },
               (0, z.Xx)("#FAQDashboard_Header")
             ),
             n.createElement(
               "div",
-              { className: F().DashboardHeaderButtonCtn },
+              { className: W().DashboardHeaderButtonCtn },
               n.createElement(
                 C.zx,
                 { onClick: a },
@@ -8371,7 +8183,7 @@
               },
               bOKDisabled: 0 == t.length,
               closeModal: e.closeModal,
-              className: F().CreateFAQDialog,
+              className: W().CreateFAQDialog,
             },
             n.createElement(
               C.h4,
@@ -8387,7 +8199,7 @@
                 (0, z.Xx)("#FAQDashboard_CreateFAQInstructions"),
                 n.createElement("input", {
                   type: "text",
-                  className: F().NameInput,
+                  className: W().NameInput,
                   value: t,
                   placeholder: (0, z.Xx)("#FAQDashboard_NamePlaceHolder"),
                   onFocus: (e) => e.target.select(),
@@ -8401,7 +8213,7 @@
         be = (e) =>
           n.createElement(
             "div",
-            { className: F().DashboardListHeaderRow },
+            { className: W().DashboardListHeaderRow },
             n.createElement(
               we,
               Object.assign(
@@ -8493,10 +8305,10 @@
               SetSortColumn: s,
             } = e,
             r = (0, y.Z)(
-              F().EntryColumn,
-              F().ClickableHeader,
-              a ? F().NameCol : F().DataCol,
-              i == o && F().Selected
+              W().EntryColumn,
+              W().ClickableHeader,
+              a ? W().NameCol : W().DataCol,
+              i == o && W().Selected
             );
           return n.createElement(
             M.HP,
@@ -8509,7 +8321,7 @@
             (0, z.Xx)(t),
             n.createElement(
               "div",
-              { className: F().DownArrow },
+              { className: W().DownArrow },
               n.createElement(D.$gZ, null)
             )
           );
@@ -8518,7 +8330,7 @@
           const { nCount: t, nTotal: a, nGoal: o } = e;
           return n.createElement(
             "div",
-            { className: t == o ? F().GoodCount : F().BadCount },
+            { className: t == o ? W().GoodCount : W().BadCount },
             t + " / " + a
           );
         },
@@ -8526,7 +8338,7 @@
           const { bIsVisible: t } = e;
           return n.createElement(
             "div",
-            { className: t ? F().Visible : F().Hidden },
+            { className: t ? W().Visible : W().Hidden },
             (0, z.Xx)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible")
           );
         },
@@ -8539,46 +8351,46 @@
             {
               route: o.k_eCommunityEdit,
               faqid: t,
-              className: F().DashboardEntry,
+              className: W().DashboardEntry,
             },
             n.createElement(
               "div",
-              { className: (0, y.Z)(F().EntryColumn, F().NameCol) },
-              n.createElement("div", { className: F().EntryInternalName }, a)
+              { className: (0, y.Z)(W().EntryColumn, W().NameCol) },
+              n.createElement("div", { className: W().EntryInternalName }, a)
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(me, { rtTimestamp: i })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(ve, { nCount: s, nTotal: u, nGoal: u })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(ve, { nCount: r, nTotal: u, nGoal: 0 })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(ve, { nCount: l, nTotal: c, nGoal: c })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(ve, { nCount: p, nTotal: c, nGoal: 0 })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(Se, { bIsVisible: d })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(Se, { bIsVisible: h })
             )
           );
@@ -8866,7 +8678,7 @@
             )
           );
         },
-        We = (e) =>
+        Fe = (e) =>
           n.createElement(
             M.HP,
             { toolTipContent: (0, z.Xx)("#FAQEditor_ChangeVisible_ttip") },
@@ -8876,7 +8688,7 @@
                 className: V.EditPreviewButton,
                 onClick: (t) => {
                   (0, P.AM)(
-                    n.createElement(Fe, { draft: e.draft }),
+                    n.createElement(We, { draft: e.draft }),
                     (0, j.RA)(t)
                   );
                 },
@@ -8884,7 +8696,7 @@
               (0, z.Xx)("#FAQEditor_EditVisible")
             )
           ),
-        Fe = (e) => {
+        We = (e) => {
           const { draft: t } = e,
             a = () => e.closeModal && e.closeModal(),
             [o, s] = n.useState(!1),
@@ -9071,7 +8883,7 @@
                     n.createElement(
                       "div",
                       { className: Re.StatusBtnCtn },
-                      n.createElement(We, { draft: r })
+                      n.createElement(Fe, { draft: r })
                     )
                   ),
                   n.createElement(

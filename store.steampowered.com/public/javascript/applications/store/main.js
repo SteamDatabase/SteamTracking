@@ -4623,7 +4623,8 @@
       class a {
         constructor() {
           (this.m_callbacksMenusChanged = new s.pB()),
-            (this.m_rgActiveSubmenus = []);
+            (this.m_rgActiveSubmenus = []),
+            (this.m_setHiddenMenus = new Set());
         }
         CreateContextMenuInstance(e, t, n, r, s) {
           return new i.$Y(this, e, t, n, r, s);
@@ -4632,8 +4633,10 @@
           return this.m_callbacksMenusChanged;
         }
         HideActiveMenu() {
-          (this.m_ActiveMenu = void 0),
-            this.m_rgActiveSubmenus.length && (this.m_rgActiveSubmenus = []);
+          this.m_ActiveMenu.options.bRetainOnHide
+            ? this.m_setHiddenMenus.add(this.m_ActiveMenu)
+            : this.m_rgActiveSubmenus.length && (this.m_rgActiveSubmenus = []),
+            (this.m_ActiveMenu = void 0);
         }
         get ActiveMenu() {
           return this.m_ActiveMenu;
@@ -4643,17 +4646,42 @@
             ? [this.m_ActiveMenu, ...this.m_rgActiveSubmenus]
             : [];
         }
+        GetHiddenMenus() {
+          return Array.from(this.m_setHiddenMenus);
+        }
+        GetAllMenus() {
+          let e;
+          return (
+            (e = this.m_ActiveMenu
+              ? [
+                  this.m_ActiveMenu,
+                  ...this.m_rgActiveSubmenus,
+                  ...Array.from(this.m_setHiddenMenus),
+                ]
+              : [
+                  ...this.m_rgActiveSubmenus,
+                  ...Array.from(this.m_setHiddenMenus),
+                ]),
+            e.sort((e, t) => e.key - t.key)
+          );
+        }
         BShouldRenderMouseOverlay() {
           return (
             this.m_ActiveMenu && !this.m_ActiveMenu.options.bDisableMouseOverlay
           );
         }
         ShowMenu(e) {
-          e.BIsSubMenu()
-            ? this.m_rgActiveSubmenus.push(e)
-            : (this.m_ActiveMenu && this.m_ActiveMenu.Hide(),
-              (this.m_ActiveMenu = e)),
-            this.m_callbacksMenusChanged.Dispatch();
+          if (e.BIsSubMenu()) this.m_rgActiveSubmenus.push(e);
+          else {
+            if (e == this.m_ActiveMenu) return;
+            this.m_ActiveMenu &&
+              (this.m_ActiveMenu.options.bRetainOnHide &&
+                this.m_setHiddenMenus.add(this.m_ActiveMenu),
+              this.m_ActiveMenu.Hide()),
+              (this.m_ActiveMenu = e),
+              this.m_setHiddenMenus.delete(e);
+          }
+          this.m_callbacksMenusChanged.Dispatch();
         }
         HideMenu(e) {
           e.BIsSubMenu()
@@ -4663,6 +4691,9 @@
               e == this.m_ActiveMenu &&
                 (this.HideActiveMenu(),
                 this.m_callbacksMenusChanged.Dispatch()));
+        }
+        ReleaseHiddenMenu(e) {
+          this.m_setHiddenMenus.delete(e);
         }
       }
     },
@@ -4838,7 +4869,9 @@
       }
       class b {
         constructor(e, t) {
-          (this.m_bFocused = !1),
+          (this.m_bCreated = !1),
+            (this.m_onCreateRender = null),
+            (this.m_bFocused = !1),
             (0, m.X)(
               e,
               "Name is required.  This is an internal name, different from title."
@@ -4848,6 +4881,7 @@
             this.m_rgParams.target_browser &&
               (this.m_strName +=
                 "_uid" + this.m_rgParams.target_browser.m_unPID),
+            (this.m_bCreateHidden = !!(t.eCreationFlags & g.Hidden)),
             (this.m_strTitle = t.title),
             delete this.m_rgParams.title;
         }
@@ -4869,7 +4903,7 @@
         }
         OnMessage(e) {
           "window_moved" == e.data && this.OnResize(),
-            "popup-created" == e.data && this.OnCreate();
+            "popup-created" == e.data && this.OnCreateInternal();
         }
         Show(e = !0, t = !1) {
           window.SteamClient && (this.m_rgParams.eCreationFlags |= g.Hidden),
@@ -4941,17 +4975,27 @@
         }
         RenderInternal(e, t, n) {
           var i;
-          this.browser_info &&
-            ((i = this.browser_info).m_eBrowserType ==
-              c.i_.EBrowserType_OpenVROverlay ||
-              i.m_eBrowserType == c.i_.EBrowserType_OpenVROverlay_Dashboard) &&
-            (t.ownerDocument.body.className += " VR"),
-            this.Render(e, t),
-            this.OnLoad(),
-            e.SteamClient &&
-              (n
-                ? e.SteamClient.Window.BringToFront()
-                : e.SteamClient.Window.ShowWindow());
+          this.m_bCreated
+            ? (this.browser_info &&
+                ((i = this.browser_info).m_eBrowserType ==
+                  c.i_.EBrowserType_OpenVROverlay ||
+                  i.m_eBrowserType ==
+                    c.i_.EBrowserType_OpenVROverlay_Dashboard) &&
+                (t.ownerDocument.body.className += " VR"),
+              this.Render(e, t),
+              this.OnLoad(),
+              e.SteamClient &&
+                !this.m_bCreateHidden &&
+                (n
+                  ? e.SteamClient.Window.BringToFront()
+                  : e.SteamClient.Window.ShowWindow()))
+            : (this.m_onCreateRender = () => this.RenderInternal(e, t, n));
+        }
+        OnCreateInternal() {
+          (this.m_bCreated = !0),
+            this.OnCreate(),
+            this.m_onCreateRender &&
+              (this.m_onCreateRender(), (this.m_onCreateRender = null));
         }
         OnCreate() {}
         OnResizeEvent() {
@@ -5055,6 +5099,8 @@
       }
       (0, i.gn)([r.LO], b.prototype, "m_bFocused", void 0),
         (0, i.gn)([l.a], b.prototype, "OnMessage", null),
+        (0, i.gn)([l.a], b.prototype, "RenderInternal", null),
+        (0, i.gn)([l.a], b.prototype, "OnCreateInternal", null),
         (0, i.gn)([l.a], b.prototype, "OnResizeEvent", null),
         (0, i.gn)([l.a], b.prototype, "OnBeforeUnloadEvent", null),
         (0, i.gn)([l.a], b.prototype, "OnUnload", null),
@@ -10856,6 +10902,7 @@
           ? e.CreateVirtualKeyboardRef(t)
           : {
               ShowVirtualKeyboard: () => {},
+              ShowModalKeyboard: () => {},
               SetAsCurrentVirtualKeyboardTarget: () => {},
               HideVirtualKeyboard: () => {},
               DelayHideVirtualKeyboard: () => {},
@@ -13118,7 +13165,7 @@
     },
     71174: (e, t, n) => {
       "use strict";
-      n.d(t, { L: () => C });
+      n.d(t, { L: () => b });
       var i = n(70655),
         r = n(23200),
         s = n(81130);
@@ -13296,8 +13343,9 @@
         (0, i.gn)([s.a], u.prototype, "HandleSystemKeyEvents", null),
         (0, i.gn)([s.a], u.prototype, "EnableAnalogInputMessages", null),
         (0, i.gn)([s.a], u.prototype, "HandleControllerInputMessages", null);
-      var m = n(53622);
-      class h extends r.oH {
+      var m = n(53622),
+        h = n(64782);
+      class p extends r.oH {
         constructor(e) {
           super(),
             (this.m_lastButtonDown = r.eV.INVALID),
@@ -13336,7 +13384,7 @@
             )
           )
             return !1;
-          const t = e.code;
+          const t = ("linux" === h.De.PLATFORM && e.key) || e.code;
           let n = e.target;
           const i = Array.from(
             n.ownerDocument.getElementsByClassName("gpfocus")
@@ -13386,7 +13434,7 @@
           }
         }
         TranslateKey(e) {
-          const t = e.code,
+          const t = ("linux" === h.De.PLATFORM && e.key) || e.code,
             n = e.ctrlKey,
             i = e.shiftKey;
           if (this.BShouldSwallowEventForTextInputWorkaround(e))
@@ -13441,10 +13489,10 @@
           return r.eV.INVALID;
         }
       }
-      (0, i.gn)([s.a], h.prototype, "OnKeyDown", null),
-        (0, i.gn)([s.a], h.prototype, "OnKeyUp", null),
-        (0, i.gn)([s.a], h.prototype, "Reset", null);
-      class p extends r.oH {
+      (0, i.gn)([s.a], p.prototype, "OnKeyDown", null),
+        (0, i.gn)([s.a], p.prototype, "OnKeyUp", null),
+        (0, i.gn)([s.a], p.prototype, "Reset", null);
+      class g extends r.oH {
         constructor(e) {
           super(),
             (this.m_nAccumulatedMouseMovement = 0),
@@ -13477,24 +13525,24 @@
             (this.m_bFirstMouseUpdate = !0);
         }
       }
-      (0, i.gn)([s.a], p.prototype, "OnMouseDown", null),
-        (0, i.gn)([s.a], p.prototype, "OnMouseMove", null),
-        (0, i.gn)([s.a], p.prototype, "Reset", null);
-      var g = n(37464),
-        _ = n(90666),
-        f = n(73935);
-      class v {
+      (0, i.gn)([s.a], g.prototype, "OnMouseDown", null),
+        (0, i.gn)([s.a], g.prototype, "OnMouseMove", null),
+        (0, i.gn)([s.a], g.prototype, "Reset", null);
+      var _ = n(37464),
+        f = n(90666),
+        v = n(73935);
+      class C {
         constructor(e) {
-          (this.m_GamepadNavigationController = new g.ZT()),
+          (this.m_GamepadNavigationController = new _.ZT()),
             e &&
               (this.m_GamepadNavigationController.RegisterInputSource(new u()),
               this.m_GamepadNavigationController.RegisterInputSource(new a())),
-            "dev" == _.De.WEB_UNIVERSE &&
+            "dev" == f.De.WEB_UNIVERSE &&
               (this.m_GamepadNavigationController.RegisterInputSource(
-                new h(window)
+                new p(window)
               ),
               this.m_GamepadNavigationController.RegisterInputSource(
-                new p(window)
+                new g(window)
               ));
         }
         GetNavigationController() {
@@ -13502,20 +13550,20 @@
         }
         static Get(e) {
           return e
-            ? (v.s_SingletonGamepaUI ||
-                ((v.s_SingletonGamepaUI = new v(!0)),
-                "dev" == _.De.WEB_UNIVERSE &&
-                  (window.g_StoreWebNavStoreGamepadUI = v.s_Singleton)),
-              v.s_SingletonGamepaUI)
-            : (v.s_Singleton || (v.s_Singleton = new v(!1)), v.s_Singleton);
+            ? (C.s_SingletonGamepaUI ||
+                ((C.s_SingletonGamepaUI = new C(!0)),
+                "dev" == f.De.WEB_UNIVERSE &&
+                  (window.g_StoreWebNavStoreGamepadUI = C.s_Singleton)),
+              C.s_SingletonGamepaUI)
+            : (C.s_Singleton || (C.s_Singleton = new C(!1)), C.s_Singleton);
         }
       }
-      function C() {
+      function b() {
         let e = window.legacyWebFocusNavController,
-          t = (0, _.id)();
+          t = (0, f.id)();
         return (
-          e || (e = v.Get(t).GetNavigationController()),
-          e.SetGamepadEventUpdateBatcher(f.unstable_batchedUpdates),
+          e || (e = C.Get(t).GetNavigationController()),
+          e.SetGamepadEventUpdateBatcher(v.unstable_batchedUpdates),
           e
         );
       }
@@ -14573,6 +14621,18 @@
               this.OnMenuMutation
             ));
         }
+        componentDidMount() {
+          this.props.element.ownerDocument.defaultView.addEventListener(
+            "message",
+            this.OnMessage
+          );
+        }
+        componentWillUnmount() {
+          this.props.element.ownerDocument.defaultView.removeEventListener(
+            "message",
+            this.OnMessage
+          );
+        }
         BindMenuElement(e) {
           this.props.instance.SetElement(e),
             this.m_elMenu &&
@@ -14608,6 +14668,12 @@
           this.PositionMenu();
         }
         OnWindowResize() {
+          this.PositionMenu();
+        }
+        OnMessage(e) {
+          "window_moved" == e.data && this.DebouncedPositionMenu();
+        }
+        DebouncedPositionMenu() {
           this.PositionMenu();
         }
         OnBlur(e) {
@@ -14807,8 +14873,8 @@
                 (e.minWidth = this.state.menuMinWidth));
           let t = this.props.options.strClassName || y().contextMenu;
           return (
-            this.props.instance.visible &&
-              this.state.ready &&
+            (this.props.options.bCreateHidden ||
+              (this.props.instance.visible && this.state.ready)) &&
               (t += " visible"),
             (t += " " + y().ContextMenuFocusContainer),
             s.createElement(
@@ -14949,6 +15015,8 @@
       (0, i.gn)([b.ak], B.prototype, "BindMenuElement", null),
         (0, i.gn)([b.ak, (0, f.D)(100)], B.prototype, "OnMenuMutation", null),
         (0, i.gn)([b.ak], B.prototype, "OnWindowResize", null),
+        (0, i.gn)([b.ak], B.prototype, "OnMessage", null),
+        (0, i.gn)([(0, f.D)(100)], B.prototype, "DebouncedPositionMenu", null),
         (0, i.gn)([b.ak], B.prototype, "OnBlur", null),
         (0, i.gn)([b.ak], B.prototype, "OnKeyDown", null),
         (B = (0, i.gn)([r.Pi], B));
@@ -18927,7 +18995,7 @@
       });
       var i = n(70655),
         r = n(67294);
-      n(92398), n(98379), n(21205);
+      n(92398), n(21205), n(98379);
       function s(e) {
         return r.createElement(
           "svg",
@@ -19843,7 +19911,7 @@
           a = n.document.body;
         (0, v.Qg)(t.OnMenusChanged, o);
         const l = t.BShouldRenderMouseOverlay(),
-          c = t.GetVisibleMenus();
+          c = t.GetAllMenus();
         return r.createElement(
           r.Fragment,
           null,
@@ -19931,11 +19999,22 @@
               body_class: "ContextMenuPopupBody",
               replace_existing_popup: !1,
               target_browser: n,
-              eCreationFlags: u.eL.NoTaskbarIcon,
+              bHideOnClose: !0,
+              eCreationFlags:
+                u.eL.NoTaskbarIcon |
+                (t.options.bCreateHidden ? u.eL.Hidden : 0),
             },
             { updateParamsBeforeShow: i }
           );
         return (
+          (0, r.useEffect)(() => {
+            t.options.bRetainOnHide &&
+              o &&
+              (t.visible
+                ? (o.window.SteamClient.Window.SetForegroundWindow(),
+                  t.TakeFocus())
+                : o.window.SteamClient.Window.HideWindow());
+          }, [o, t, t.visible]),
           r.useLayoutEffect(() => {
             t.SetPopup(o);
           }, [t, o]),
@@ -25363,7 +25442,11 @@
         return i + ((r - i) * (e - t)) / (n - t);
       }
       function o(e, t, n, i, s) {
-        return r(i + ((s - i) * (e - t)) / (n - t), i, s);
+        return r(
+          i + ((s - i) * (e - t)) / (n - t),
+          Math.min(i, s),
+          Math.max(i, s)
+        );
       }
       n.d(t, { LO: () => i, Lh: () => r, bU: () => o, r4: () => s });
     },
@@ -25711,32 +25794,32 @@
     90666: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => m,
+        De: () => a.De,
         E_: () => l,
-        Ek: () => S,
-        JA: () => g,
-        Kc: () => T,
-        L7: () => h,
-        Wj: () => _,
-        Zv: () => k,
-        dk: () => p,
+        Ek: () => p,
+        JA: () => a.JA,
+        Kc: () => b,
+        L7: () => a.L7,
+        Wj: () => a.Wj,
+        Zv: () => S,
+        dk: () => a.dk,
         fI: () => d,
         id: () => u,
-        ip: () => D,
-        kQ: () => E,
-        x: () => w,
-        y9: () => b,
+        ip: () => v,
+        kQ: () => f,
+        x: () => g,
+        y9: () => h,
       });
       var i = n(70655),
-        r = n(48899),
-        s = n(61939),
-        o = (n(26149), n(67294)),
-        a = n(77520);
-      const l = o.createContext({}),
+        r = n(67294),
+        s = n(77520),
+        o = n(61939),
+        a = n(64782);
+      const l = r.createContext({}),
         c = () => {
-          let e = o.useContext(l);
+          let e = r.useContext(l);
           return (
-            (0, a.X)(
+            (0, s.X)(
               void 0 !== e.IN_GAMEPADUI,
               "Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application."
             ),
@@ -25744,22 +25827,144 @@
           );
         };
       function d(e) {
-        const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: r } = e,
-          s = o.useMemo(
+        const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: s } = e,
+          o = r.useMemo(
             () => ({
-              IN_GAMEPADUI: null != t ? t : m.IN_GAMEPADUI,
+              IN_GAMEPADUI: null != t ? t : a.De.IN_GAMEPADUI,
               IN_DESKTOPUI: null != n && n,
               IN_VR: null != i && i,
             }),
             [t, n, i]
           );
-        return o.createElement(l.Provider, { value: s }, r);
+        return r.createElement(l.Provider, { value: o }, s);
       }
       function u() {
         const e = c();
         return null == e ? void 0 : e.IN_GAMEPADUI;
       }
-      const m = {
+      const m = "webui_config";
+      function h() {
+        let e = null;
+        return (
+          (0, o.t$)() && (e = (0, o.bG)("presentation_mode")),
+          Boolean(e && 1 === Number.parseInt(e))
+        );
+      }
+      function p(e = m) {
+        const t = {},
+          n = f("config", e);
+        n && (delete n.SESSIONID, Object.assign(a.De, n), (t.config = !0));
+        const i = f("userinfo", e);
+        i &&
+          (Object.assign(a.L7, i),
+          (t.userConfig = !0),
+          a.L7.is_support && h() && (a.L7.is_support = !1));
+        const r = f("broadcast", e);
+        r && (Object.assign(a.dk, r), (t.broadcastConfig = !0));
+        const s = f("community", e);
+        s && (Object.assign(a.JA, s), (t.communityConfig = !0));
+        const o = f("event", e);
+        return o && (Object.assign(a.Wj, o), (t.eventConfig = !0)), t;
+      }
+      function g(e, t, n) {
+        return (0, i.mG)(this, void 0, void 0, function* () {
+          if (n.config) {
+            const n = (yield e.get(t + "ajaxgetconfig")).data;
+            n && (delete n.SESSIONID, Object.assign(a.De, n));
+          }
+          if (n.userConfig) {
+            const n = (yield e.get(t + "ajaxgetuserconfig", {
+              withCredentials: !0,
+            })).data;
+            n && Object.assign(a.L7, n);
+          }
+        });
+      }
+      function _(e, t = m, n) {
+        let i;
+        if (
+          ((i =
+            "string" == typeof t
+              ? !{ NODE_ENV: "production", STEAM_BUILD: "buildbot" }
+                  .MOBILE_BUILD && document.getElementById(t)
+              : t),
+          i)
+        )
+          try {
+            if (i.hasAttribute("data-" + e)) {
+              return JSON.parse(i.getAttribute("data-" + e));
+            }
+            return null;
+          } catch (e) {
+            console.error("Failed to parse config", e);
+          }
+        else n && console.error("Missing config element #", t);
+      }
+      function f(e, t = m) {
+        return _(e, t, !0);
+      }
+      function v(e, t = m) {
+        return _(e, t, !1);
+      }
+      function C(e, t) {
+        return 0 != t.length && e.startsWith(t);
+      }
+      function b() {
+        if (!window || !window.location || !window.location.href)
+          return console.warn("Unable to determine base url!"), "unknown";
+        const e = window.location.href;
+        return C(e, a.De.STORE_BASE_URL)
+          ? a.De.STORE_BASE_URL
+          : C(e, a.De.COMMUNITY_BASE_URL)
+          ? a.De.COMMUNITY_BASE_URL
+          : C(e, a.De.CHAT_BASE_URL)
+          ? a.De.CHAT_BASE_URL
+          : C(e, a.De.PARTNER_BASE_URL)
+          ? a.De.PARTNER_BASE_URL
+          : C(e, a.De.HELP_BASE_URL)
+          ? a.De.HELP_BASE_URL
+          : C(e, a.De.STEAMTV_BASE_URL)
+          ? a.De.STEAMTV_BASE_URL
+          : C(e, a.De.STATS_BASE_URL)
+          ? a.De.STATS_BASE_URL
+          : C(e, a.De.INTERNAL_STATS_BASE_URL)
+          ? a.De.INTERNAL_STATS_BASE_URL
+          : C(e, a.De.STORE_CHECKOUT_BASE_URL)
+          ? a.De.STORE_CHECKOUT_BASE_URL
+          : C(e, "https://steamloopback.host")
+          ? "https://steamloopback.host"
+          : "";
+      }
+      function S() {
+        const e = window.location.href;
+        return C(e, a.De.STORE_BASE_URL) || C(e, a.De.STORE_CHECKOUT_BASE_URL)
+          ? "store"
+          : C(e, a.De.COMMUNITY_BASE_URL)
+          ? "community"
+          : C(e, a.De.PARTNER_BASE_URL)
+          ? "partnerweb"
+          : C(e, a.De.HELP_BASE_URL)
+          ? "help"
+          : C(e, a.De.STEAMTV_BASE_URL)
+          ? "steamtv"
+          : C(e, a.De.STATS_BASE_URL) || C(e, a.De.INTERNAL_STATS_BASE_URL)
+          ? "stats"
+          : "";
+      }
+    },
+    64782: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        De: () => s,
+        JA: () => l,
+        L7: () => o,
+        Wj: () => c,
+        dk: () => a,
+      });
+      var i = n(48899),
+        r = n(61939);
+      n(26149);
+      const s = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -25807,9 +26012,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, s.t$)()) return v || (v = C()), v;
-              let e = (0, s.bG)("sessionid");
-              e || (e = C());
+              if (!(0, r.t$)()) return d || (d = u()), d;
+              let e = (0, r.bG)("sessionid");
+              e || (e = u());
               return e;
             })();
           },
@@ -25822,12 +26027,13 @@
           ONE_STEAMUI_SHARED_CONTEXT: !1,
           DECK_DISPLAY_MODE: !1,
           ON_DECK: !1,
+          ON_STEAMOS: !1,
           IN_GAMESCOPE: !1,
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
           USE_LONGEST_LOC_STRING: !1,
         },
-        h = {
+        o = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -25842,8 +26048,8 @@
           short_url: "",
           country_code: "",
         },
-        p = { steamid: "", clanid: 0, listid: 0 },
-        g = {
+        a = { steamid: "", clanid: 0, listid: 0 },
+        l = {
           CLANSTEAMID: "",
           CLANACCOUNTID: 0,
           APPID: 0,
@@ -25860,124 +26066,15 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        _ = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
-        f = "webui_config";
-      let v;
-      function C() {
+        c = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+      let d;
+      function u() {
         let e = (function () {
           let e = "";
-          for (let t = 0; t < 24; t++) e += (0, r.LO)(0, 35).toString(36);
+          for (let t = 0; t < 24; t++) e += (0, i.LO)(0, 35).toString(36);
           return e;
         })();
-        return (0, s.I1)("sessionid", e, 0), e;
-      }
-      function b() {
-        let e = null;
-        return (
-          (0, s.t$)() && (e = (0, s.bG)("presentation_mode")),
-          Boolean(e && 1 === Number.parseInt(e))
-        );
-      }
-      function S(e = f) {
-        const t = {},
-          n = E("config", e);
-        n && (delete n.SESSIONID, Object.assign(m, n), (t.config = !0));
-        const i = E("userinfo", e);
-        i &&
-          (Object.assign(h, i),
-          (t.userConfig = !0),
-          h.is_support && b() && (h.is_support = !1));
-        const r = E("broadcast", e);
-        r && (Object.assign(p, r), (t.broadcastConfig = !0));
-        const s = E("community", e);
-        s && (Object.assign(g, s), (t.communityConfig = !0));
-        const o = E("event", e);
-        return o && (Object.assign(_, o), (t.eventConfig = !0)), t;
-      }
-      function w(e, t, n) {
-        return (0, i.mG)(this, void 0, void 0, function* () {
-          if (n.config) {
-            const n = (yield e.get(t + "ajaxgetconfig")).data;
-            n && (delete n.SESSIONID, Object.assign(m, n));
-          }
-          if (n.userConfig) {
-            const n = (yield e.get(t + "ajaxgetuserconfig", {
-              withCredentials: !0,
-            })).data;
-            n && Object.assign(h, n);
-          }
-        });
-      }
-      function y(e, t = f, n) {
-        let i;
-        if (
-          ((i =
-            "string" == typeof t
-              ? !{ NODE_ENV: "production", STEAM_BUILD: "buildbot" }
-                  .MOBILE_BUILD && document.getElementById(t)
-              : t),
-          i)
-        )
-          try {
-            if (i.hasAttribute("data-" + e)) {
-              return JSON.parse(i.getAttribute("data-" + e));
-            }
-            return null;
-          } catch (e) {
-            console.error("Failed to parse config", e);
-          }
-        else n && console.error("Missing config element #", t);
-      }
-      function E(e, t = f) {
-        return y(e, t, !0);
-      }
-      function D(e, t = f) {
-        return y(e, t, !1);
-      }
-      function M(e, t) {
-        return 0 != t.length && e.startsWith(t);
-      }
-      function T() {
-        if (!window || !window.location || !window.location.href)
-          return console.warn("Unable to determine base url!"), "unknown";
-        const e = window.location.href;
-        return M(e, m.STORE_BASE_URL)
-          ? m.STORE_BASE_URL
-          : M(e, m.COMMUNITY_BASE_URL)
-          ? m.COMMUNITY_BASE_URL
-          : M(e, m.CHAT_BASE_URL)
-          ? m.CHAT_BASE_URL
-          : M(e, m.PARTNER_BASE_URL)
-          ? m.PARTNER_BASE_URL
-          : M(e, m.HELP_BASE_URL)
-          ? m.HELP_BASE_URL
-          : M(e, m.STEAMTV_BASE_URL)
-          ? m.STEAMTV_BASE_URL
-          : M(e, m.STATS_BASE_URL)
-          ? m.STATS_BASE_URL
-          : M(e, m.INTERNAL_STATS_BASE_URL)
-          ? m.INTERNAL_STATS_BASE_URL
-          : M(e, m.STORE_CHECKOUT_BASE_URL)
-          ? m.STORE_CHECKOUT_BASE_URL
-          : M(e, "https://steamloopback.host")
-          ? "https://steamloopback.host"
-          : "";
-      }
-      function k() {
-        const e = window.location.href;
-        return M(e, m.STORE_BASE_URL) || M(e, m.STORE_CHECKOUT_BASE_URL)
-          ? "store"
-          : M(e, m.COMMUNITY_BASE_URL)
-          ? "community"
-          : M(e, m.PARTNER_BASE_URL)
-          ? "partnerweb"
-          : M(e, m.HELP_BASE_URL)
-          ? "help"
-          : M(e, m.STEAMTV_BASE_URL)
-          ? "steamtv"
-          : M(e, m.STATS_BASE_URL) || M(e, m.INTERNAL_STATS_BASE_URL)
-          ? "stats"
-          : "";
+        return (0, r.I1)("sessionid", e, 0), e;
       }
     },
     56084: (e, t, n) => {
@@ -26760,9 +26857,8 @@
             i ||
             (Promise.all([
               n.e(6499),
-              n.e(3388),
+              n.e(2189),
               n.e(731),
-              n.e(2880),
               n.e(9177),
               n.e(3661),
               n.e(6364),
@@ -26773,20 +26869,18 @@
               n.e(2529),
               n.e(5300),
               n.e(8878),
-              n.e(990),
               n.e(5938),
               n.e(1614),
               n.e(4193),
               n.e(6108),
-              n.e(1289),
               n.e(6633),
-              n.e(72),
               n.e(6720),
               n.e(8489),
               n.e(3238),
               n.e(2420),
               n.e(1979),
               n.e(9211),
+              n.e(477),
               n.e(691),
               n.e(2136),
             ])
@@ -26803,7 +26897,7 @@
         se = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
             n.e(3807),
             n.e(6364),
@@ -26814,7 +26908,6 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
@@ -26824,7 +26917,7 @@
         oe = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(7200),
             n.e(6364),
             n.e(4134),
@@ -26842,7 +26935,6 @@
             n.e(9886),
             n.e(4881),
             n.e(8878),
-            n.e(990),
             n.e(6108),
             n.e(6633),
             n.e(6720),
@@ -26858,9 +26950,8 @@
         ce = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
-            n.e(2880),
             n.e(6364),
             n.e(4134),
             n.e(4605),
@@ -26869,29 +26960,26 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
-            n.e(1289),
-            n.e(72),
             n.e(1979),
             n.e(4601),
           ]).then(n.bind(n, 86823))
         ),
         de = s.lazy(() =>
           Promise.all([
-            n.e(3388),
+            n.e(2189),
             n.e(6364),
             n.e(9886),
             n.e(2529),
-            n.e(990),
             n.e(2814),
           ]).then(n.bind(n, 26554))
         ),
         ue = s.lazy(() =>
           Promise.all([
             n.e(6499),
+            n.e(2189),
             n.e(731),
             n.e(6364),
             n.e(4134),
@@ -26907,14 +26995,13 @@
         ),
         me = s.lazy(() => n.e(5821).then(n.bind(n, 86531))),
         he = s.lazy(() =>
-          Promise.all([n.e(4605), n.e(1918)]).then(n.bind(n, 23879))
+          Promise.all([n.e(4605), n.e(477), n.e(1918)]).then(n.bind(n, 23879))
         ),
         pe = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
-            n.e(2880),
             n.e(6364),
             n.e(4134),
             n.e(4605),
@@ -26923,11 +27010,9 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
-            n.e(1289),
             n.e(9211),
             n.e(3207),
           ]).then(n.bind(n, 53881))
@@ -26938,9 +27023,8 @@
         _e = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
-            n.e(2880),
             n.e(9177),
             n.e(3661),
             n.e(6364),
@@ -26951,20 +27035,18 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
             n.e(6108),
-            n.e(1289),
             n.e(6633),
-            n.e(72),
             n.e(6720),
             n.e(8489),
             n.e(3238),
             n.e(2420),
             n.e(1979),
             n.e(9211),
+            n.e(477),
             n.e(691),
             n.e(2136),
           ]).then(n.bind(n, 60693))
@@ -26972,9 +27054,8 @@
         fe = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
-            n.e(2880),
             n.e(9177),
             n.e(3661),
             n.e(3321),
@@ -26986,20 +27067,18 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
             n.e(6108),
-            n.e(1289),
             n.e(6633),
-            n.e(72),
             n.e(6720),
             n.e(8489),
             n.e(3238),
             n.e(2420),
             n.e(1979),
             n.e(9211),
+            n.e(477),
             n.e(691),
             n.e(9788),
           ]).then(n.bind(n, 66480))
@@ -27007,9 +27086,8 @@
         ve = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
-            n.e(2880),
             n.e(9177),
             n.e(3661),
             n.e(3321),
@@ -27021,20 +27099,18 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
             n.e(6108),
-            n.e(1289),
             n.e(6633),
-            n.e(72),
             n.e(6720),
             n.e(8489),
             n.e(3238),
             n.e(2420),
             n.e(1979),
             n.e(9211),
+            n.e(477),
             n.e(691),
             n.e(9788),
           ]).then(n.bind(n, 52008))
@@ -27042,9 +27118,8 @@
         Ce = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
-            n.e(2880),
             n.e(9177),
             n.e(3661),
             n.e(6364),
@@ -27055,20 +27130,18 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
             n.e(6108),
-            n.e(1289),
             n.e(6633),
-            n.e(72),
             n.e(6720),
             n.e(8489),
             n.e(3238),
             n.e(2420),
             n.e(1979),
             n.e(9211),
+            n.e(477),
             n.e(691),
             n.e(680),
           ]).then(n.bind(n, 41135))
@@ -27076,9 +27149,8 @@
         be = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
-            n.e(2880),
             n.e(9177),
             n.e(3661),
             n.e(6364),
@@ -27089,20 +27161,18 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
             n.e(6108),
-            n.e(1289),
             n.e(6633),
-            n.e(72),
             n.e(6720),
             n.e(8489),
             n.e(3238),
             n.e(2420),
             n.e(1979),
             n.e(9211),
+            n.e(477),
             n.e(691),
             n.e(680),
           ]).then(n.bind(n, 31970))
@@ -27115,7 +27185,7 @@
         we = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
             n.e(9177),
             n.e(6364),
@@ -27126,7 +27196,6 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
@@ -27139,7 +27208,7 @@
         ye = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
             n.e(9177),
             n.e(6364),
@@ -27150,7 +27219,6 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
@@ -27163,7 +27231,7 @@
         Ee = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
             n.e(6364),
             n.e(4134),
@@ -27173,7 +27241,6 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
@@ -27183,9 +27250,8 @@
         De = s.lazy(() =>
           Promise.all([
             n.e(6499),
-            n.e(3388),
+            n.e(2189),
             n.e(731),
-            n.e(2880),
             n.e(3807),
             n.e(3143),
             n.e(6364),
@@ -27196,14 +27262,11 @@
             n.e(2529),
             n.e(5300),
             n.e(8878),
-            n.e(990),
             n.e(5938),
             n.e(1614),
             n.e(4193),
             n.e(6108),
-            n.e(1289),
             n.e(6633),
-            n.e(72),
             n.e(8489),
             n.e(8087),
           ]).then(n.bind(n, 30306))

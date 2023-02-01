@@ -305,7 +305,10 @@
               onChange: (e) => {
                 const r = e.target.value.replace(/[^0-9]/g, "");
                 let t = Number(r || 0);
-                Number.isNaN(t) || (m.bWholeUnitsOnly && (t *= 100), l(t));
+                if (Number.isNaN(t)) return;
+                m.bWholeUnitsOnly && (t *= 100);
+                const n = 2147483647;
+                t > n && (t = n), l(t);
               },
               onFocus: (e) => {
                 e.target.select(),

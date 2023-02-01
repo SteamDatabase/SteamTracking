@@ -1343,6 +1343,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   width: 38px;
   height: 22px;
   position: relative;
+  margin-right: 4px;
 }
 .gamepaddialog_Toggle_24G4g.gpfocus {
   outline: none;

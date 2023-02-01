@@ -457,7 +457,7 @@
     "EquippedProfile_NotAvailable": "Unavailable For Purchase",
     "EquippedProfile_NotAvailable_Desc": "This item may have been available for a limited time or was given away as part of a promotion.",
     "EquippedProfile_NotAvailable_Desc_Plural": "These items may have been available for a limited time or were given away as part of a promotion.",
-    "EquippedProfile_Error_Generic": "We are unable to retreive this user's equipped items at this time. Please try again later.",
+    "EquippedProfile_Error_Generic": "We are unable to retrieve this user's equipped items at this time. Please try again later.",
     "EquippedProfile_Error_AccessDenied": "You cannot view this user's items due to their profile privacy settings.",
     "EquippedProfile_Error_NoItems": "This user has no profile items equipped.",
     "EquippedProfile_RelatedAppsCarousel_Title": "Popular Items From These Games"

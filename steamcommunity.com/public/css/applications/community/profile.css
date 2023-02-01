@@ -1567,6 +1567,284 @@ input.DialogTextInputBase:focus {
   opacity: 0.5;
   pointer-events: none;
 }
+.eventbbcodesketchfab_sketchfab_play_overlay_image_3MwaE {
+  position: absolute;
+  left: 83px;
+  margin-left: -25px;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  background-image: url("https://community.cloudflare.steamstatic.com/public/shared/images/sharedfiles/sketchfab_play.png");
+  background-size: 100%;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+}
+.eventbbcodesketchfab_sketchfabmodelembedded_2_Smm {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 20px;
+}
+.eventbbcodesketchfab_sketchfabmodelembedded_2_Smm iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.eventbbcodesketchfab_dynamiclink_box_2-x_d {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  background: -webkit-linear-gradient(
+    60deg,
+    rgba(87, 92, 104, 0.3) 5%,
+    rgba(255, 255, 255, 0.05) 95%
+  );
+  background: linear-gradient(
+    60deg,
+    rgba(87, 92, 104, 0.3) 5%,
+    rgba(255, 255, 255, 0.05) 95%
+  );
+  border-radius: 6px;
+  padding: 8px;
+  margin: 10px 0px 10px 0px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.eventbbcodesketchfab_dynamiclink_preview_3d1cc {
+  float: left;
+  margin-right: 14px;
+  max-height: 88px;
+  max-width: 75%;
+}
+.eventbbcodesketchfab_dynamiclink_content_1HFFK {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px #000;
+  font-size: 13px;
+  line-height: normal;
+  text-align: left;
+  display: flow-root;
+}
+.eventbbcodesketchfab_dynamiclink_name_2NgPQ {
+  font-size: 15px;
+  color: #aad8ec;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+  padding-bottom: 0px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.eventbbcodesketchfab_dynamiclink_type_t-mzc {
+  color: #c6d4df;
+}
+.eventbbcodesketchfab_dynamiclink_author_e66Tt {
+  height: 16px;
+  font-size: 12px;
+  color: #95a6b2;
+  margin-bottom: 4px;
+}
+.loyaltyrewarditemembed_Ctn_2di0m {
+  width: 100px;
+}
+.VODPlayer_BroadcastCtn_KL2t9 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 940px;
+}
+.VODPlayer_BroadcastCtn_KL2t9 .videoContainer {
+  height: unset;
+  width: unset;
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.VODPlayer_BroadcastCtn_KL2t9 .BroadcastPlaceholderImg {
+  position: absolute;
+  width: 100%;
+}
+.VODPlayer_BroadcastCtn_KL2t9 .videoSrc {
+  width: 100%;
+  height: auto;
+  border-left: none;
+  border-right: none;
+  background-color: unset;
+}
+.cloudfileuploadbutton_Ctn_MKp7i {
+  position: relative;
+}
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM {
+  position: absolute;
+  bottom: 72px;
+  left: 16px;
+  min-width: 260px;
+  background: #2c3036;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM img {
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px #000;
+  margin-right: auto;
+  margin-left: auto;
+}
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM
+  .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
+  fill: #788a92;
+  background-color: #0004;
+  border-radius: 4px;
+  height: 150px;
+  width: 100%;
+}
+.cloudfileuploadprogress_UploadPreviewContainer_2IhGM
+  .cloudfileuploadprogress_SVGIcon_Video_2TqYK
+  path {
+  transform: scale(0.85);
+  transform-origin: 50% 50%;
+}
+.cloudfileuploadprogress_UploadPreview_120Qu {
+  max-height: 200px;
+  max-width: 250px;
+}
+.cloudfileuploadprogress_FileUploadFileName_2bbAV {
+  flex: 1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  user-select: none;
+  text-align: center;
+  max-width: 250px;
+}
+.cloudfileuploadprogress_FileUploadCancel_2MPbU {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: rgba(67, 73, 83, 0.9);
+  padding: 4px;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  box-shadow: 0 0 4px 1px #00000088;
+}
+.cloudfileuploadprogress_FileUploadCancel_2MPbU
+  .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
+  line {
+  stroke: #fff;
+}
+.cloudfileuploadprogress_FileUploadCancel_2MPbU:hover {
+  background-color: rgba(92, 100, 114, 0.9);
+}
+.cloudfileuploadprogress_FileUploadBtn_3gPV- {
+  user-select: none;
+  margin-top: 5px;
+  background: #ccc;
+  color: #000;
+  border-radius: 10px;
+  padding: 3px;
+  line-height: 8px;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+.cloudfileuploadprogress_FileUploadBtn_3gPV-:hover {
+  background: #fff;
+}
+.cloudfileuploadprogress_FileUploadProgressContainer_ZZt3E {
+  position: absolute;
+  width: 250px;
+  bottom: 55px;
+  background: #2c3036;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.cloudfileuploadprogress_FileUploadProgressBarContainer_1J8k7 {
+  width: 100%;
+  height: 10px;
+}
+.cloudfileuploadprogress_FileUploadProgressName_1c12o {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  user-select: none;
+  text-align: center;
+  width: 100%;
+}
+.partnereventdialog_ErrorStyles_2TszC,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA {
+  color: #c44848;
+}
+.partnereventdialog_ErrorIconLayout_15HwA,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA,
+.partnereventdialog_ErrorStylesBackground_3Ht2e {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_ErrorStylesBackground_3Ht2e {
+  background-color: #472025;
+}
+.partnereventdialog_ErrorStyles_2TszC > div,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA > div {
+  display: inline;
+  color: #d78484;
+}
+.partnereventdialog_WarningStyles_1C_Im,
+.partnereventdialog_WarningStylesWithIcon_3p5KO {
+  color: #b8860b;
+}
+.partnereventdialog_WarningIconLayout_3POKG,
+.partnereventdialog_WarningStylesWithIcon_3p5KO,
+.partnereventdialog_WarningStylesBackground_2MAql {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_WarningStylesBackground_2MAql {
+  background-color: #b8860b;
+  color: #fff;
+}
+.partnereventdialog_WarningStylesBackground_2MAql
+  .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.partnereventdialog_Padding_2oWai {
+  padding-top: 10px;
+}
+.ModalPosition_Content .partnereventdialog_NotTooWideModal_3P6Se.DialogContent {
+  width: initial;
+}
+.ModalPosition_Content
+  .partnereventdialog_NotTooWideModal_3P6Se.DialogContent
+  .DialogContent_InnerWidth
+  > form {
+  padding-right: 8px;
+}
+.claimitemshared_CheckMark_3HeHP {
+  height: 32px;
+}
 .summary_formattingButtons_2T2D7 {
   display: flex;
   flex-direction: row-reverse;

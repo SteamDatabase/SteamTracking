@@ -1154,15 +1154,24 @@ function OnAuthenticationComplete( gidTransID )
 		if ( gidTransID && g_LastFinalizedTransactionID != gidTransID )
 		return;
     
-	$('receipt_area').style.display = 'block';
-	$('credit_card_authentication_area').style.display = 'none';    
-
 	if ( g_timeoutPoll )
 	{
 		clearTimeout( g_timeoutPoll );
 	}
 
 	g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, 120, 15 ), 1*1000 );
+	return true;
+}
+
+function OnAuthenticationFail()
+{
+	if ( g_timeoutPoll )
+	{
+		clearTimeout( g_timeoutPoll );
+	}
+
+	// Show a generic error
+	HandleFinalizeTransactionFailure( 2, 7, false, '' );
 	return true;
 }
 
@@ -5359,6 +5368,13 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 		{
 			DisplayErrorMessage( error_text );
 		}
+
+    		$('credit_card_authentication_area').style.display = 'none';    
+		$('cart_area').style.display = 'block';
+		$('receipt_area').style.display = 'none';
+		$('col_right_payment_info').style.display = 'block';
+		$('pending_receipt_area').style.display = 'none';
+		$('col_right_review').style.display = 'block';		
 
 				$J('#purchase_button_bottom').hide();
 		$J('#purchase_button_inprogress_bottom').hide();

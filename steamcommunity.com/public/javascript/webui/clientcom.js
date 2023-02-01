@@ -1,29 +1,32 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7805670";
+var CLSTAMP = "7811260";
 (() => {
   "use strict";
-  var e = {};
-  function t(e) {
-    if (!n() || !window.document.cookie) return null;
-    let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
-    return t && t[2] ? decodeURIComponent(t[2]) : null;
-  }
-  function n() {
-    return !!window.document;
-  }
-  (e.n = (t) => {
-    var n = t && t.__esModule ? () => t.default : () => t;
-    return e.d(n, { a: n }), n;
-  }),
-    (e.d = (t, n) => {
+  var e = {
+    n: (t) => {
+      var n = t && t.__esModule ? () => t.default : () => t;
+      return e.d(n, { a: n }), n;
+    },
+    d: (t, n) => {
       for (var o in n)
         e.o(n, o) &&
           !e.o(t, o) &&
           Object.defineProperty(t, o, { enumerable: !0, get: n[o] });
-    }),
-    (e.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t));
-  var o, i, _, s, a, r, l, c, m, E, u, p, d;
+    },
+    o: (e, t) => Object.prototype.hasOwnProperty.call(e, t),
+  };
+  const t = React;
+  var n = e.n(t);
+  function o(e) {
+    if (!i() || !window.document.cookie) return null;
+    let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+    return t && t[2] ? decodeURIComponent(t[2]) : null;
+  }
+  function i() {
+    return !!window.document;
+  }
+  var _, s, a, r, l, c, m, E, u, p, d, S, k;
   !(function (e) {
     (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
       "k_EConnectivityTestResult_Unknown"),
@@ -39,7 +42,7 @@ var CLSTAMP = "7805670";
         "k_EConnectivityTestResult_WifiDisabled"),
       (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
         "k_EConnectivityTestResult_NoLAN");
-  })(o || (o = {})),
+  })(_ || (_ = {})),
     (function (e) {
       (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
         "k_ENetFakeLocalSystemState_Normal"),
@@ -53,7 +56,7 @@ var CLSTAMP = "7805670";
           "k_ENetFakeLocalSystemState_NoInternet"),
         (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
           "k_ENetFakeLocalSystemState_NoSteam");
-    })(i || (i = {})),
+    })(s || (s = {})),
     (function (e) {
       (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
         "k_ESuspendResumeProgressState_Invalid"),
@@ -67,7 +70,7 @@ var CLSTAMP = "7805670";
           "k_ESuspendResumeProgressState_WaitingForApp"),
         (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
           "k_ESuspendResumeProgressState_Working");
-    })(_ || (_ = {})),
+    })(a || (a = {})),
     (function (e) {
       (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
         "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -77,7 +80,7 @@ var CLSTAMP = "7805670";
           "k_EFloatingGamepadTextInputModeModeEmail"),
         (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
           "k_EFloatingGamepadTextInputModeModeNumeric");
-    })(s || (s = {})),
+    })(r || (r = {})),
     (function (e) {
       (e[(e.k_EAppUpdateContentType_Content = 0)] =
         "k_EAppUpdateContentType_Content"),
@@ -87,20 +90,20 @@ var CLSTAMP = "7805670";
           "k_EAppUpdateContentType_Shader"),
         (e[(e.k_EAppUpdateContentType_Max = 3)] =
           "k_EAppUpdateContentType_Max");
-    })(a || (a = {})),
+    })(l || (l = {})),
     (function (e) {
       (e[(e.k_EOverlayToStoreFlag_None = 0)] = "k_EOverlayToStoreFlag_None"),
         (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
           "k_EOverlayToStoreFlag_AddToCart"),
         (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
           "k_EOverlayToStoreFlag_AddToCartAndShow");
-    })(r || (r = {})),
+    })(c || (c = {})),
     (function (e) {
       (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
         "k_EActivateGameOverlayToWebPageMode_Default"),
         (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
           "k_EActivateGameOverlayToWebPageMode_Modal");
-    })(l || (l = {})),
+    })(m || (m = {})),
     (function (e) {
       (e[(e.k_EGamingDeviceType_Unknown = 0)] = "k_EGamingDeviceType_Unknown"),
         (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
@@ -115,13 +118,13 @@ var CLSTAMP = "7805670";
         (e[(e.k_EGamingDeviceType_Phone = 528)] = "k_EGamingDeviceType_Phone"),
         (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
           "k_EGamingDeviceType_SteamDeck");
-    })(c || (c = {})),
+    })(E || (E = {})),
     (function (e) {
       (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
         (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
           "k_ELoginUIStyleNewWithoutQRCode"),
         (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-    })(m || (m = {})),
+    })(u || (u = {})),
     (function (e) {
       (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
         "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -147,7 +150,7 @@ var CLSTAMP = "7805670";
           "k_ECommunityProfileItemProperty_MovieWebMSmall"),
         (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
           "k_ECommunityProfileItemProperty_MovieMP4Small");
-    })(E || (E = {})),
+    })(p || (p = {})),
     (function (e) {
       (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
         "k_ERaiseGameWindowResult_NotRunning"),
@@ -155,14 +158,14 @@ var CLSTAMP = "7805670";
           "k_ERaiseGameWindowResult_Success"),
         (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
           "k_ERaiseGameWindowResult_Failure");
-    })(u || (u = {})),
+    })(d || (d = {})),
     (function (e) {
       (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
         (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
         (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
         (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
         (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-    })(p || (p = {})),
+    })(S || (S = {})),
     (function (e) {
       (e[(e.k_EAppReleaseState_Unknown = 0)] = "k_EAppReleaseState_Unknown"),
         (e[(e.k_EAppReleaseState_Unavailable = 1)] =
@@ -175,10 +178,8 @@ var CLSTAMP = "7805670";
           "k_EAppReleaseState_Released"),
         (e[(e.k_EAppReleaseState_Disabled = 5)] =
           "k_EAppReleaseState_Disabled");
-    })(d || (d = {}));
-  const S = React;
-  e.n(S)().createContext({});
-  const k = {
+    })(k || (k = {}));
+  const C = {
       EUNIVERSE: 0,
       WEB_UNIVERSE: "",
       LANGUAGE: "english",
@@ -226,8 +227,8 @@ var CLSTAMP = "7805670";
       WEBSITE_ID: "Unknown",
       get SESSIONID() {
         return (function () {
-          if (!n()) return y || (y = T()), y;
-          let e = t("sessionid");
+          if (!i()) return y || (y = T()), y;
+          let e = o("sessionid");
           e || (e = T());
           return e;
         })();
@@ -241,12 +242,13 @@ var CLSTAMP = "7805670";
       ONE_STEAMUI_SHARED_CONTEXT: !1,
       DECK_DISPLAY_MODE: !1,
       ON_DECK: !1,
+      ON_STEAMOS: !1,
       IN_GAMESCOPE: !1,
       IN_LOGIN: !1,
       IN_LOGIN_REFRESH: !1,
       USE_LONGEST_LOC_STRING: !1,
     },
-    C = {
+    I = {
       logged_in: !1,
       steamid: "",
       accountid: 0,
@@ -261,7 +263,7 @@ var CLSTAMP = "7805670";
       short_url: "",
       country_code: "",
     },
-    I = { steamid: "", clanid: 0, listid: 0 },
+    A = { steamid: "", clanid: 0, listid: 0 },
     g = {
       CLANSTEAMID: "",
       CLANACCOUNTID: 0,
@@ -279,8 +281,7 @@ var CLSTAMP = "7805670";
       IS_VALVE_GROUP: !1,
       IS_ALLOWED_SC: !1,
     },
-    A = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
-    R = "webui_config";
+    R = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
   let y;
   function T() {
     let e = (function () {
@@ -295,13 +296,13 @@ var CLSTAMP = "7805670";
       return e;
     })();
     return (
-      (function (e, t, o, i) {
-        if (!n()) return;
-        i || (i = "/");
+      (function (e, t, n, o) {
+        if (!i()) return;
+        o || (o = "/");
         let _ = "";
-        if (void 0 !== o && o) {
+        if (void 0 !== n && n) {
           let e = new Date();
-          e.setTime(e.getTime() + 864e5 * o),
+          e.setTime(e.getTime() + 864e5 * n),
             (_ = "; expires=" + e.toUTCString());
         }
         document.cookie =
@@ -310,36 +311,38 @@ var CLSTAMP = "7805670";
           encodeURIComponent(t) +
           _ +
           ";path=" +
-          i;
+          o;
       })("sessionid", e, 0),
       e
     );
   }
-  function h(e = R) {
-    const o = {},
-      i = N("config", e);
-    i && (delete i.SESSIONID, Object.assign(k, i), (o.config = !0));
-    const _ = N("userinfo", e);
+  n().createContext({});
+  const h = "webui_config";
+  function P(e = h) {
+    const t = {},
+      n = M("config", e);
+    n && (delete n.SESSIONID, Object.assign(C, n), (t.config = !0));
+    const _ = M("userinfo", e);
     _ &&
-      (Object.assign(C, _),
-      (o.userConfig = !0),
-      C.is_support &&
+      (Object.assign(I, _),
+      (t.userConfig = !0),
+      I.is_support &&
         (function () {
           let e = null;
           return (
-            n() && (e = t("presentation_mode")),
+            i() && (e = o("presentation_mode")),
             Boolean(e && 1 === Number.parseInt(e))
           );
         })() &&
-        (C.is_support = !1));
-    const s = N("broadcast", e);
-    s && (Object.assign(I, s), (o.broadcastConfig = !0));
-    const a = N("community", e);
-    a && (Object.assign(g, a), (o.communityConfig = !0));
-    const r = N("event", e);
-    return r && (Object.assign(A, r), (o.eventConfig = !0)), o;
+        (I.is_support = !1));
+    const s = M("broadcast", e);
+    s && (Object.assign(A, s), (t.broadcastConfig = !0));
+    const a = M("community", e);
+    a && (Object.assign(g, a), (t.communityConfig = !0));
+    const r = M("event", e);
+    return r && (Object.assign(R, r), (t.eventConfig = !0)), t;
   }
-  function P(e, t = R, n) {
+  function N(e, t = h, n) {
     let o;
     if (
       ((o =
@@ -362,11 +365,11 @@ var CLSTAMP = "7805670";
       }
     else n && console.error("Missing config element #", t);
   }
-  function N(e, t = R) {
-    return P(e, t, !0);
+  function M(e, t = h) {
+    return N(e, t, !0);
   }
-  let M = { success: !0, result: 1 };
-  class f {
+  let f = { success: !0, result: 1 };
+  class O {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -408,8 +411,8 @@ var CLSTAMP = "7805670";
       if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
         return !1;
       let n = Object.assign({}, e, {
-        universe: k.EUNIVERSE,
-        accountid: C.accountid,
+        universe: C.EUNIVERSE,
+        accountid: I.accountid,
       });
       void 0 !== t && (n.sequenceid = t);
       try {
@@ -479,7 +482,7 @@ var CLSTAMP = "7805670";
   }
   let L = new (class {
     constructor() {
-      (this.m_connection = new f()),
+      (this.m_connection = new O()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -501,7 +504,7 @@ var CLSTAMP = "7805670";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => M,
+        () => f,
         () => this.FailureResult()
       );
     }
@@ -546,7 +549,7 @@ var CLSTAMP = "7805670";
     }
     BClientAccountMatches() {
       return (
-        !C.logged_in || C.accountid == this.m_connection.ClientInfo.unAccountID
+        !I.logged_in || I.accountid == this.m_connection.ClientInfo.unAccountID
       );
     }
     GenericEResultCall(e) {
@@ -557,7 +560,7 @@ var CLSTAMP = "7805670";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? M : this.FailureResult(e.success)
+                  1 === e.success ? f : this.FailureResult(e.success)
                 )
             : { success: !1, result: 19, account_mismatch: !0 }
         )
@@ -566,6 +569,6 @@ var CLSTAMP = "7805670";
   })();
   (window.ClientConnectionAPI = L),
     document.addEventListener("DOMContentLoaded", function () {
-      h(), (window.ClientConnectionAPI = L);
+      P(), (window.ClientConnectionAPI = L);
     });
 })();

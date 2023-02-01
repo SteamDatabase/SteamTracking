@@ -15,24 +15,24 @@
     86605: (e, t, a) => {
       "use strict";
       a.d(t, { Q8: () => g });
-      var n = a(70655),
-        s = a(22188),
-        r = a(26149),
-        i = a(58114),
+      var s = a(70655),
+        n = a(22188),
+        i = a(26149),
+        r = a(58114),
         o = a(40252),
         m = a(22154),
         p = (a(64010), a(68002)),
-        l = a(77520),
-        c = a(99533),
+        c = a(77520),
+        l = a(99533),
         h = a(90666);
       class A {
         constructor() {
-          (this.m_mapAppInfo = s.LO.map()),
-            (this.m_mapRichPresenceLoc = s.LO.map()),
+          (this.m_mapAppInfo = n.LO.map()),
+            (this.m_mapRichPresenceLoc = n.LO.map()),
             (this.m_cAppInfoRequestsInFlight = 0),
             (this.m_setPendingAppInfo = new Set()),
             (this.m_CacheStorage = null),
-            (this.m_fnCallbackOnAppInfoLoaded = new c.pB());
+            (this.m_fnCallbackOnAppInfoLoaded = new l.pB());
         }
         Init(e) {
           this.m_CMInterface = e;
@@ -49,7 +49,7 @@
         RegisterCallbackOnLoad(e) {
           if (!this.BHavePendingAppInfoRequests())
             return (
-              (0, l.X)(
+              (0, c.X)(
                 !1,
                 "Registering for callback on appinfo load, but nothing queued"
               ),
@@ -62,7 +62,7 @@
         }
         GetAppInfo(e) {
           if (
-            ((0, l.X)(
+            ((0, c.X)(
               this.m_CMInterface,
               "CAppInfoStore.GetAppInfo called before Init"
             ),
@@ -85,7 +85,7 @@
             : Promise.resolve();
         }
         FlushPendingAppInfo() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, s.mG)(this, void 0, void 0, function* () {
             const e = this.m_PendingAppInfoResolve,
               t = Array.from(this.m_setPendingAppInfo);
             (this.m_PendingAppInfoPromise = void 0),
@@ -96,28 +96,28 @@
           });
         }
         LoadAppInfoBatch(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, s.mG)(this, void 0, void 0, function* () {
             this.m_cAppInfoRequestsInFlight++;
             let t = yield this.LoadAppInfoBatchFromLocalCache(e);
             if (t.length) {
               console.log("Loading batch of App Info from Steam: ", t),
                 yield this.m_CMInterface.WaitUntilLoggedOn();
-              let e = i.gA.Init(p.Fi);
-              e.Body().set_language((0, r.jM)(h.De.LANGUAGE));
+              let e = r.gA.Init(p.Fi);
+              e.Body().set_language((0, i.jM)(h.De.LANGUAGE));
               const a = 50;
               for (; t.length > 0; ) {
-                const n = Math.min(a, t.length),
-                  s = t.slice(0, n);
-                (t = t.slice(n)), e.Body().set_appids(s);
-                const r = yield p.AE.GetApps(
+                const s = Math.min(a, t.length),
+                  n = t.slice(0, s);
+                (t = t.slice(s)), e.Body().set_appids(n);
+                const i = yield p.AE.GetApps(
                   this.m_CMInterface.GetServiceTransport(),
                   e
                 );
-                1 == r.GetEResult()
-                  ? this.OnGetAppsResponse(r)
+                1 == i.GetEResult()
+                  ? this.OnGetAppsResponse(i)
                   : console.error(
-                      `Error when calling CommunityService.GetApps: EResult=${r.GetEResult()}, AppIDs:`,
-                      s
+                      `Error when calling CommunityService.GetApps: EResult=${i.GetEResult()}, AppIDs:`,
+                      n
                     );
               }
             }
@@ -131,7 +131,7 @@
           let t = [];
           for (let a of e.Body().apps()) {
             let e = this.m_mapAppInfo.get(a.appid());
-            (0, l.X)(
+            (0, c.X)(
               e,
               `Got AppInfo response for unrequested AppID: ${a.appid()}`
             ),
@@ -151,7 +151,7 @@
           }
         }
         EnsureAppInfoForAppIDs(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, s.mG)(this, void 0, void 0, function* () {
             let t = !1;
             return (
               e.forEach((e) => {
@@ -176,28 +176,28 @@
           return "APPINFO_" + e;
         }
         LoadAppInfoBatchFromLocalCache(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, s.mG)(this, void 0, void 0, function* () {
             if (!this.m_CacheStorage) return e;
             console.log("Loading batch of App Info from Local Cache: ", e);
             const t = new Date(new Date().getTime() - 12096e5),
               a = (e) =>
-                (0, n.mG)(this, void 0, void 0, function* () {
+                (0, s.mG)(this, void 0, void 0, function* () {
                   const a = yield this.m_CacheStorage.GetObject(
                     this.GetCacheKeyForAppID(e)
                   );
                   if (!a) return e;
-                  let n = this.m_mapAppInfo.get(e);
+                  let s = this.m_mapAppInfo.get(e);
                   return (
-                    (0, l.X)(
-                      n,
+                    (0, c.X)(
+                      s,
                       "Didn't find AppInfo in our map when loading from cache but it should've been there?"
                     ),
-                    n
-                      ? ((n = new o.Am(e)),
-                        n.DeserializeFromCacheObject(a),
-                        n.is_initialized
-                          ? (this.m_mapAppInfo.set(e, n),
-                            n.time_updated_from_server < t ? e : null)
+                    s
+                      ? ((s = new o.Am(e)),
+                        s.DeserializeFromCacheObject(a),
+                        s.is_initialized
+                          ? (this.m_mapAppInfo.set(e, s),
+                            s.time_updated_from_server < t ? e : null)
                           : (console.warn(
                               "Failed to deserialize cached App Info: ",
                               e,
@@ -207,12 +207,12 @@
                       : e
                   );
                 });
-            let s = e.map((e) => a(e));
-            return (yield Promise.all(s)).filter((e) => null !== e);
+            let n = e.map((e) => a(e));
+            return (yield Promise.all(n)).filter((e) => null !== e);
           });
         }
         SaveAppInfoBatchToLocalCache(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, s.mG)(this, void 0, void 0, function* () {
             if (this.m_CacheStorage) {
               console.log(
                 "Saving batch of App Info to Local Cache: ",
@@ -230,9 +230,9 @@
           });
         }
         Localize(e, t, a) {
-          const n = this.GetRichPresenceLoc(e);
-          return n
-            ? n.Localize(t, a)
+          const s = this.GetRichPresenceLoc(e);
+          return s
+            ? s.Localize(t, a)
             : 1 != h.De.EUNIVERSE
             ? (console.log(
                 `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`
@@ -264,12 +264,12 @@
           e.m_nLastUpdated = Date.now();
           for (let a of t) {
             let t = a.language(),
-              n = e.m_mapLanguages.get(t);
-            n
-              ? n.clear()
+              s = e.m_mapLanguages.get(t);
+            s
+              ? s.clear()
               : (e.m_mapLanguages.set(t, new Map()),
-                (n = e.m_mapLanguages.get(t)));
-            for (let e of a.tokens()) n.set(e.name().toLowerCase(), e.value());
+                (s = e.m_mapLanguages.get(t)));
+            for (let e of a.tokens()) s.set(e.name().toLowerCase(), e.value());
           }
         }
         QueueRichPresenceLocRequest(e) {
@@ -278,7 +278,7 @@
               ((e.m_fetching = this.m_CMInterface
                 .WaitUntilLoggedOn()
                 .then(() => {
-                  let t = i.gA.Init(p.tj);
+                  let t = r.gA.Init(p.tj);
                   return (
                     t.Body().set_appid(e.GetAppID()),
                     t.Body().set_language(h.De.LANGUAGE),
@@ -307,21 +307,21 @@
           );
         }
       }
-      (0, n.gn)([s.aD], A.prototype, "OnGetAppsResponse", null),
-        (0, n.gn)([s.aD], A.prototype, "OnRichPresenceLocUpdate", null);
+      (0, s.gn)([n.aD], A.prototype, "OnGetAppsResponse", null),
+        (0, s.gn)([n.aD], A.prototype, "OnRichPresenceLocUpdate", null);
       const g = new A();
     },
     93981: (e, t, a) => {
       "use strict";
-      a.d(t, { Pv: () => c, sB: () => l });
-      var n = a(70655),
-        s = a(22188),
-        r = a(27661),
-        i = a(86605),
+      a.d(t, { Pv: () => l, sB: () => c });
+      var s = a(70655),
+        n = a(22188),
+        i = a(27661),
+        r = a(86605),
         o = a(41311),
         m = (a(92398), a(21205), a(90666)),
         p = (a(3389), a(43359));
-      function l(e) {
+      function c(e) {
         let t = "offline";
         return (
           e &&
@@ -334,7 +334,7 @@
           t
         );
       }
-      class c {
+      class l {
         constructor(e) {
           (this.m_bInitialized = !1),
             (this.m_ePersonaState = 0),
@@ -351,7 +351,7 @@
             (this.m_game_lobby_id = ""),
             (this.m_bPlayerNamePending = !1),
             (this.m_bAvatarPending = !1),
-            (this.m_mapRichPresence = s.LO.map()),
+            (this.m_mapRichPresence = n.LO.map()),
             (this.m_bNameInitialized = !1),
             (this.m_bStatusInitialized = !1),
             (this.m_steamid = e);
@@ -427,28 +427,28 @@
           return this.m_strGameExtraInfo
             ? this.m_strGameExtraInfo
             : this.m_unGamePlayedAppID
-            ? i.Q8.GetAppInfo(this.m_unGamePlayedAppID).name
+            ? r.Q8.GetAppInfo(this.m_unGamePlayedAppID).name
             : "";
         }
         GetCurrentGameIconURL() {
           return this.m_unGamePlayedAppID
-            ? i.Q8.GetAppInfo(this.m_unGamePlayedAppID).icon_url
+            ? r.Q8.GetAppInfo(this.m_unGamePlayedAppID).icon_url
             : "";
         }
         GetCurrentGameLogoURL() {
           return this.m_unGamePlayedAppID
-            ? i.Q8.GetAppInfo(this.m_unGamePlayedAppID).logo_url
+            ? r.Q8.GetAppInfo(this.m_unGamePlayedAppID).logo_url
             : "";
         }
         GetBroadcastGameLogoURL() {
           return this.m_broadcastAppId
-            ? i.Q8.GetAppInfo(this.m_broadcastAppId).logo_url
+            ? r.Q8.GetAppInfo(this.m_broadcastAppId).logo_url
             : "";
         }
         BIsAppInfoReady() {
           return (
             !this.m_unGamePlayedAppID ||
-            i.Q8.GetAppInfo(this.m_unGamePlayedAppID).is_initialized
+            r.Q8.GetAppInfo(this.m_unGamePlayedAppID).is_initialized
           );
         }
         HasCurrentGameRichPresence() {
@@ -463,7 +463,7 @@
         }
         GetCurrentGameRichPresence() {
           if (this.HasCurrentGameRichPresence()) {
-            let e = i.Q8.GetRichPresenceLoc(this.m_unGamePlayedAppID);
+            let e = r.Q8.GetRichPresenceLoc(this.m_unGamePlayedAppID);
             if (e) {
               let t = this.m_mapRichPresence.get("steam_display");
               return e.Localize(t, this.m_mapRichPresence);
@@ -476,15 +476,15 @@
           if (0 == this.last_seen_online) return 3e4;
           const e = 3600;
           let t = 1e3;
-          const a = i.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
+          const a = r.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
           return (t *= a > 86400 ? e : a > 7200 ? 60 : 15), t;
         }
         GetOfflineStatusTime() {
           if (0 == this.last_seen_online)
             return (0, o.Xx)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!m.De.IN_MOBILE || e <= 60) && (0, r.zO)(e);
-          let t = i.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
+          (!m.De.IN_MOBILE || e <= 60) && (0, i.zO)(e);
+          let t = r.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? (0, o.Xx)("#PersonaStateLastSeen_JustNow")
             : (0, o.Xx)("#PersonaStateLastSeen", (0, o.yW)(t));
@@ -569,55 +569,55 @@
           return 0;
         }
       }
-      (0, n.gn)([s.LO], c.prototype, "m_bInitialized", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_ePersonaState", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_unGamePlayedAppID", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_gameid", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_unPersonaStateFlags", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_strPlayerName", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_strAvatarHash", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_strAccountName", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_rtLastSeenOnline", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_strGameExtraInfo", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_unGameServerIP", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_unGameServerPort", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_game_lobby_id", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_bPlayerNamePending", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_bAvatarPending", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_broadcastId", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_broadcastAccountId", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_broadcastAppId", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_broadcastViewerCount", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_strBroadcastTitle", void 0),
-        (0, n.gn)([s.LO], c.prototype, "m_bCommunityBanned", void 0);
+      (0, s.gn)([n.LO], l.prototype, "m_bInitialized", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_ePersonaState", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_unGamePlayedAppID", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_gameid", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_unPersonaStateFlags", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_strPlayerName", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_strAvatarHash", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_strAccountName", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_rtLastSeenOnline", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_strGameExtraInfo", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_unGameServerIP", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_unGameServerPort", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_game_lobby_id", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_bPlayerNamePending", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_bAvatarPending", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_broadcastId", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_broadcastAccountId", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_broadcastAppId", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_broadcastViewerCount", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_strBroadcastTitle", void 0),
+        (0, s.gn)([n.LO], l.prototype, "m_bCommunityBanned", void 0);
     },
     44298: (e, t, a) => {
       "use strict";
       a.d(t, { o: () => A, _1: () => u, DY: () => _, vV: () => g });
-      var n = a(70655),
-        s = a(67294),
-        r = a(29323),
-        i = a(93981),
+      var s = a(70655),
+        n = a(67294),
+        i = a(29323),
+        r = a(93981),
         o = a(7573),
         m = (a(18330), a(90666)),
         p = a(60501);
-      const l =
+      const c =
         a.p +
         "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var c = a(25130),
-        h = a.n(c);
-      class A extends s.Component {
+      var l = a(25130),
+        h = a.n(l);
+      class A extends n.Component {
         render() {
           const e = this.props,
             {
               strAvatarURL: t,
               size: a,
-              className: r,
-              statusStyle: i,
+              className: i,
+              statusStyle: r,
               statusPosition: m,
-              children: c,
+              children: l,
             } = e,
-            A = (0, n._T)(e, [
+            A = (0, s._T)(e, [
               "strAvatarURL",
               "size",
               "className",
@@ -640,11 +640,11 @@
                   case "Large":
                   case "X-Large":
                   case "FillArea":
-                    return l;
+                    return c;
                 }
               })(a)
             ),
-            s.createElement(
+            n.createElement(
               "div",
               Object.assign(
                 {
@@ -653,80 +653,80 @@
                     "avatarHolder",
                     "no-drag",
                     a || "Medium",
-                    r
+                    i
                   ),
                 },
                 A
               ),
-              s.createElement("div", {
+              n.createElement("div", {
                 className: (0, o.Z)(h().avatarStatus, "avatarStatus", m),
-                style: i,
+                style: r,
               }),
-              s.createElement(p.j, {
+              n.createElement(p.j, {
                 className: (0, o.Z)(h().avatar, "avatar"),
                 rgSources: g,
                 draggable: !1,
               }),
-              c
+              l
             )
           );
         }
       }
-      let g = class extends s.Component {
+      let g = class extends n.Component {
         render() {
           const e = this.props,
-            { persona: t, size: a, animatedAvatar: r, className: p } = e,
-            l = (0, n._T)(e, [
+            { persona: t, size: a, animatedAvatar: i, className: p } = e,
+            c = (0, s._T)(e, [
               "persona",
               "size",
               "animatedAvatar",
               "className",
             ]);
-          let c = "";
+          let l = "";
           return (
-            r && r.image_small && 0 != r.image_small.length
-              ? (c = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small)
+            i && i.image_small && 0 != i.image_small.length
+              ? (l = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + i.image_small)
               : t &&
-                ((c = t.avatar_url_medium),
+                ((l = t.avatar_url_medium),
                 "Small" == a || "X-Small" == a
-                  ? (c = t.avatar_url)
+                  ? (l = t.avatar_url)
                   : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
-                    (c = t.avatar_url_full)),
-            s.createElement(
+                    (l = t.avatar_url_full)),
+            n.createElement(
               A,
               Object.assign(
                 {
-                  strAvatarURL: c,
+                  strAvatarURL: l,
                   size: a,
-                  className: (0, o.Z)((0, i.sB)(t), p),
+                  className: (0, o.Z)((0, r.sB)(t), p),
                 },
-                l
+                c
               )
             )
           );
         }
       };
-      g = (0, n.gn)([r.Pi], g);
-      const _ = (0, r.Pi)((e) => {
-        const { profileItem: t, className: a, bDisableAnimation: r } = e,
-          i = (0, n._T)(e, ["profileItem", "className", "bDisableAnimation"]);
+      g = (0, s.gn)([i.Pi], g);
+      const _ = (0, i.Pi)((e) => {
+        const { profileItem: t, className: a, bDisableAnimation: i } = e,
+          r = (0, s._T)(e, ["profileItem", "className", "bDisableAnimation"]);
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
-        let p = r ? t.image_large : t.image_small;
+        let p = i ? t.image_large : t.image_small;
         return (
           p || (p = t.image_small),
           p.startsWith("https://") ||
             (p = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + p),
-          s.createElement(
+          n.createElement(
             "div",
             Object.assign(
               { className: (0, o.Z)(h().avatarFrame, a, "avatarFrame") },
-              i
+              r
             ),
-            s.createElement("img", { className: h().avatarFrameImg, src: p })
+            n.createElement("img", { className: h().avatarFrameImg, src: p })
           )
         );
       });
-      let u = class extends s.Component {
+      let u = class extends n.Component {
         constructor(e) {
           super(e),
             (this.state = { bAnimate: "None" != this.props.loopDuration }),
@@ -772,11 +772,11 @@
             {
               loopDuration: t,
               animatedAvatar: a,
-              avatarFrame: r,
-              children: i,
+              avatarFrame: i,
+              children: r,
               style: o,
             } = e,
-            m = (0, n._T)(e, [
+            m = (0, s._T)(e, [
               "loopDuration",
               "animatedAvatar",
               "avatarFrame",
@@ -787,46 +787,30 @@
             m.onClick &&
               (o = Object.assign(Object.assign({}, o), { cursor: "pointer" })),
             this.state.bAnimate || (a = null),
-            s.createElement(
+            n.createElement(
               g,
               Object.assign({ animatedAvatar: a }, m),
-              i,
-              s.createElement(_, {
-                profileItem: r,
+              r,
+              n.createElement(_, {
+                profileItem: i,
                 bDisableAnimation: "None" === this.props.loopDuration,
               })
             )
           );
         }
       };
-      u = (0, n.gn)([r.Pi], u);
-    },
-    5827: (e, t, a) => {
-      "use strict";
-      a.d(t, { Mr: () => o, tk: () => m });
-      var n = a(67294),
-        s = a(95598),
-        r = a(57376),
-        i = a(90666);
-      function o() {
-        return (0, i.id)(), n.createElement(s.MrB, null);
-      }
-      function m() {
-        return (0, i.id)()
-          ? n.createElement(r.tkI, null)
-          : n.createElement(s.tkI, null);
-      }
+      u = (0, s.gn)([i.Pi], u);
     },
     60501: (e, t, a) => {
       "use strict";
-      a.d(t, { j: () => i });
-      var n = a(70655),
-        s = a(67294),
-        r = a(64839);
-      class i extends s.Component {
+      a.d(t, { j: () => r });
+      var s = a(70655),
+        n = a(67294),
+        i = a(64839);
+      class r extends n.Component {
         constructor(e) {
           super(e),
-            (this.m_refImage = s.createRef()),
+            (this.m_refImage = n.createRef()),
             (this.state = { nImage: 0 });
         }
         componentDidUpdate(e) {
@@ -868,15 +852,15 @@
         }
         render() {
           const e = this.props,
-            { src: t, rgSources: a, onIncrementalError: r, onError: i } = e,
-            o = (0, n._T)(e, [
+            { src: t, rgSources: a, onIncrementalError: i, onError: r } = e,
+            o = (0, s._T)(e, [
               "src",
               "rgSources",
               "onIncrementalError",
               "onError",
             ]),
             m = this.src;
-          return s.createElement(
+          return n.createElement(
             "img",
             Object.assign({ src: m, ref: this.m_refImage }, o, {
               onError: this.OnImageError,
@@ -884,7 +868,7 @@
           );
         }
       }
-      (0, n.gn)([r.ak], i.prototype, "OnImageError", null);
+      (0, s.gn)([i.ak], r.prototype, "OnImageError", null);
     },
   },
 ]);

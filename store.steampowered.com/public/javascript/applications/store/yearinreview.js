@@ -6286,7 +6286,7 @@
         Ma = a(95598),
         Fa = a(41414),
         Aa = a(38600),
-        ka = a(26789),
+        ka = a(79281),
         xa = a(26149),
         Pa = a(56175),
         Ya = a(47077),
@@ -6340,7 +6340,7 @@
             (this.m_SteamInterface = new _e.J(de.De.WEBAPI_BASE_URL, e));
         }
       }
-      var Ua = a(73879),
+      var Ua = a(12264),
         Wa = a(22745);
       function Xa(e) {
         const { userYearInReview: t, steamId: a, nYear: n } = e,

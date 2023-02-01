@@ -19,79 +19,239 @@
     },
     34425: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => d });
+      n.d(t, { p: () => c });
       var a = n(70655),
         o = n(67294),
-        s = n(7707),
-        r = n(27745),
+        r = n(7707),
+        s = n(27745),
         i = n(64839),
         l = n(90666),
-        c = n(9198);
-      function d(e) {
+        d = n(9198);
+      function c(e) {
         const { children: t, navTreeRef: n } = e,
-          d = (0, a._T)(e, ["children", "navTreeRef"]),
-          p = o.useRef(),
-          m = (0, i.BE)(p, n),
+          c = (0, a._T)(e, ["children", "navTreeRef"]),
+          m = o.useRef(),
+          p = (0, i.BE)(m, n),
           u = (0, l.id)(),
           v = window.__virtual_keyboard_client;
         if (
           ((0, o.useEffect)(() => {
-            c.Wz.SetHookFactory(() => v);
+            d.Wz.SetHookFactory(() => v);
           }, [v]),
           u)
         ) {
           const e = window.__nav_tree_root;
           return o.createElement(
-            s.Fe,
-            Object.assign({}, d, {
-              navTreeRef: m,
+            r.Fe,
+            Object.assign({}, c, {
+              navTreeRef: p,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            o.createElement(r.O, null, t)
+            o.createElement(s.O, null, t)
           );
         }
         return o.createElement(o.Fragment, null, t);
       }
     },
+    81503: (e, t, n) => {
+      "use strict";
+      n.d(t, { C: () => d, R: () => l });
+      var a = n(70655),
+        o = n(22188),
+        r = (n(26149), n(49186), n(92398), n(3389)),
+        s = (n(55546), n(5525)),
+        i = n(7200);
+      class l {
+        constructor() {
+          (this.m_mapBroadcasterSteamIDToEvents = new Map()),
+            (this.m_mapBroadcasterSteamIDData = new Map());
+        }
+        static GetBBCodeParam(e, t, n = "") {
+          const a = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
+          return a ? a[1] : n;
+        }
+        static ParseCalendarEventPresentersFromText(e) {
+          const t = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
+            n = new Array();
+          for (;;) {
+            const a = t.exec(e);
+            if (null === a) break;
+            const o = a[1],
+              s = a[2],
+              i = l.GetBBCodeParam(o, "steamid"),
+              d = {
+                steamID: i ? new r.K(i) : void 0,
+                name: l.GetBBCodeParam(o, "name"),
+                title: l.GetBBCodeParam(o, "title"),
+                company: l.GetBBCodeParam(o, "company"),
+                photo: l.GetBBCodeParam(o, "photo"),
+                bio: s,
+              };
+            n.push(d);
+          }
+          return n;
+        }
+        static ParseEventModelPresenters(e, t) {
+          const n = e.GetDescriptionWithFallback(t);
+          return l.ParseCalendarEventPresentersFromText(n);
+        }
+        static ParseEventAppReferencesFromText(e) {
+          const t = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
+            n = new Set();
+          for (;;) {
+            const a = t.exec(e);
+            if (null === a) break;
+            const o = a[1];
+            n.add(Number(o));
+          }
+          return n;
+        }
+        static ParseEventModelAppReferences(e, t) {
+          var n;
+          const a = e.GetDescriptionWithFallback(t),
+            o = l.ParseEventAppReferencesFromText(a);
+          if (
+            null === (n = e.jsondata) || void 0 === n
+              ? void 0
+              : n.referenced_appids
+          )
+            for (const t of e.jsondata.referenced_appids) o.add(t);
+          return o;
+        }
+        BuildBroadcasterSteamIDToActiveEventMap(e) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            const t = s.JW.GetTimeNowWithOverride(),
+              n = e.GetCalendarItemsInTimeRange(t - 3600, t);
+            for (const e of n.rgCalendarItems)
+              i.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+            const a = n.rgCalendarItems.map((e) =>
+                i.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                  r.K.InitFromClanID(e.clanid),
+                  e.unique_id,
+                  0
+                )
+              ),
+              o = yield Promise.all(a),
+              l = new Map();
+            for (const e of o)
+              if (e && !(e.endTime && e.endTime < t))
+                for (const t of e.GetBroadcastWhitelistAsSteamIDs())
+                  l.has(t) ? l.get(t).push(e) : l.set(t, [e]);
+            return l;
+          });
+        }
+        IsBroadcasterAlreadyBound(e, t) {
+          const n = this.m_mapBroadcasterSteamIDToEvents.get(e),
+            a = n ? n.length : 0;
+          if ((t ? t.length : 0) != a) return !1;
+          for (let e = 0; e < a; e++) if (n[e] != t[e].GID) return !1;
+          return !0;
+        }
+        static BuildSteamIDToPresenterMapFromEventList(e, t) {
+          let n = new Map();
+          for (const a of e) {
+            if (!a) continue;
+            const e = l.ParseEventModelPresenters(a, t);
+            for (const t of e)
+              t.steamID && n.set(t.steamID.ConvertTo64BitString(), t);
+          }
+          return n;
+        }
+        RemoveCachedDataIfNotInMap(e) {
+          const t = new Array();
+          this.m_mapBroadcasterSteamIDToEvents.forEach((n, a) => {
+            e.has(a) || t.push(a);
+          }),
+            t.forEach((e) => {
+              this.m_mapBroadcasterSteamIDData.delete(e),
+                this.m_mapBroadcasterSteamIDToEvents.delete(e);
+            });
+        }
+        static BuildAppIDRefsForEventList(e, t) {
+          const n = new Set();
+          for (const a of e) {
+            l.ParseEventModelAppReferences(a, t).forEach((e) => n.add(e));
+          }
+          return Array.from(n);
+        }
+        UpdateCachedDataFromEvents(e, t) {
+          e.forEach((e, n) => {
+            if (this.IsBroadcasterAlreadyBound(n, e)) return;
+            const a = {
+              m_mapPresenters: l.BuildSteamIDToPresenterMapFromEventList(e, t),
+              m_rgAppIDs: l.BuildAppIDRefsForEventList(e, t),
+            };
+            this.m_mapBroadcasterSteamIDData.set(n, a),
+              this.m_mapBroadcasterSteamIDToEvents.set(
+                n,
+                e.map((e) => e.GID)
+              );
+          });
+        }
+        SynchronizeEventsWithBroadcasts(e, t) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            const n = yield this.BuildBroadcasterSteamIDToActiveEventMap(e);
+            this.RemoveCachedDataIfNotInMap(n),
+              this.UpdateCachedDataFromEvents(n, t);
+          });
+        }
+        GetPresenterMapForBroadcasterSteamID(e) {
+          var t;
+          return null === (t = this.m_mapBroadcasterSteamIDData.get(e)) ||
+            void 0 === t
+            ? void 0
+            : t.m_mapPresenters;
+        }
+        GetAppIDListForBroadcasterSteamID(e) {
+          var t;
+          return null === (t = this.m_mapBroadcasterSteamIDData.get(e)) ||
+            void 0 === t
+            ? void 0
+            : t.m_rgAppIDs;
+        }
+      }
+      (0, a.gn)([o.LO], l.prototype, "m_mapBroadcasterSteamIDData", void 0);
+      const d = new l();
+    },
     91799: (e, t, n) => {
       "use strict";
-      n.d(t, { M: () => I, q: () => b });
+      n.d(t, { M: () => w, q: () => D });
       var a = n(70655),
         o = n(67294),
-        s = n(29323),
-        r = n(90666),
+        r = n(29323),
+        s = n(90666),
         i = n(26149),
         l = n(3389),
-        c = (n(9355), n(14627)),
-        d = n(10669),
-        p = n(72327),
-        m = n(36067),
+        d = (n(9355), n(14627)),
+        c = n(10669),
+        m = n(72327),
+        p = n(36067),
         u = n(67754),
         v = n(70350),
         h = n(89694),
         E = (n(68002), n(32548)),
         _ = n(72905),
-        w = n(70882);
-      let S = class extends o.Component {
+        S = n(70882);
+      let I = class extends o.Component {
         constructor() {
-          super(...arguments), (this.m_clanSteamID = new l.K(r.JA.CLANSTEAMID));
+          super(...arguments), (this.m_clanSteamID = new l.K(s.JA.CLANSTEAMID));
         }
         componentDidMount() {
-          d.wk.GetEditModel() &&
+          c.wk.GetEditModel() &&
             "view" === this.props.mode &&
-            d.wk.GetEditModel().ClearDirty();
+            c.wk.GetEditModel().ClearDirty();
         }
         componentDidUpdate(e) {
-          d.wk.GetEditModel() &&
+          c.wk.GetEditModel() &&
             "view" === this.props.mode &&
-            d.wk.GetEditModel().ClearDirty();
+            c.wk.GetEditModel().ClearDirty();
         }
         render() {
           const { mode: e } = this.props;
           if ("view" === e) {
-            let e = d.wk.GetEditModel().GetEventModel(),
-              t = (0, i.jM)(r.De.LANGUAGE);
+            let e = c.wk.GetEditModel().GetEventModel(),
+              t = (0, i.jM)(s.De.LANGUAGE);
             return e.BHasSaleEnabled()
               ? o.createElement(
                   E.SV,
@@ -105,38 +265,38 @@
               : o.createElement(
                   o.Fragment,
                   null,
-                  o.createElement(c.TY, {
+                  o.createElement(d.TY, {
                     event: e,
                     lang: t,
-                    partnerEventStore: d.wk,
+                    partnerEventStore: c.wk,
                     emoticonStore: h.F,
                     adminPanel: o.createElement(u.H, {
                       eventModel: e,
-                      partnerEventStore: d.wk,
+                      partnerEventStore: c.wk,
                     }),
                     otherEventRow: o.createElement(v._G, {
                       clanAccountID: e.clanSteamID.GetAccountID(),
                       trackingLocation: 6,
                       gidAnnouncement: e.AnnouncementGID,
-                      partnerEventStore: d.wk,
+                      partnerEventStore: c.wk,
                       bViewAllShowInfiniteScroll: !e.BIsOGGEvent(),
                     }),
                   })
                 );
           }
-          return o.createElement(p.H, {
-            editModel: d.wk.GetEditModel(),
+          return o.createElement(m.H, {
+            editModel: c.wk.GetEditModel(),
             appid_or_vanity_str: this.props.match.params.appid_or_vanity_str,
             gid: this.props.match.params.gid,
             bDisplaySale: "previewsale" === e,
           });
         }
       };
-      S = (0, a.gn)([s.Pi], S);
-      const b = (0, m.M)(S),
-        I = (e) =>
+      I = (0, a.gn)([r.Pi], I);
+      const D = (0, p.M)(I),
+        w = (e) =>
           o.createElement(
-            w.R0,
+            S.R0,
             Object.assign({}, e, {
               key: e.match.params.oldAnnouncementGID,
               bClearDirty: !0,
@@ -147,30 +307,30 @@
     },
     2218: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => F });
+      n.r(t), n.d(t, { default: () => j });
       var a = n(9355),
         o = n(91799),
-        s = n(67294),
-        r = n(78587),
+        r = n(67294),
+        s = n(78587),
         i = n(73812),
         l = n(86605),
-        c = (n(68002), n(9915)),
-        d = n(7200),
-        p = n(27991),
-        m = n(23937),
+        d = (n(68002), n(9915)),
+        c = n(7200),
+        m = n(27991),
+        p = n(23937),
         u = n(69491),
         v = n.n(u),
         h = n(13596),
         E = n(74163),
         _ = n(41311),
-        w = n(90666),
-        S = n(70655),
-        b = n(29323),
-        I = (n(92398), n(64839)),
-        D = n(3044),
-        L = n(76776),
-        g = (n(49186), n(3389), n(22188));
-      let G = class extends s.Component {
+        S = n(90666),
+        I = n(70655),
+        D = n(29323),
+        w = (n(92398), n(64839)),
+        f = n(3044),
+        b = n(76776),
+        B = (n(49186), n(3389), n(22188));
+      let g = class extends r.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -187,26 +347,26 @@
         }
         LoadAppAndFirstEvent() {
           var e;
-          return (0, S.mG)(this, void 0, void 0, function* () {
-            const t = (0, w.kQ)(
+          return (0, I.mG)(this, void 0, void 0, function* () {
+            const t = (0, S.kQ)(
               "eventinfinitescrolllanding",
               "application_config"
             );
             let n;
             t && "string" == typeof t && (n = t);
             const a = window.location.href.startsWith(
-                w.De.COMMUNITY_BASE_URL + "groups"
+                S.De.COMMUNITY_BASE_URL + "groups"
               ),
               o = a
-                ? yield L.sV.LoadOGGClanInfoForGroupVanity(
+                ? yield b.sV.LoadOGGClanInfoForGroupVanity(
                     this.props.match.params.appid_or_vanity_str
                   )
-                : yield L.sV.LoadOGGClanInfoForIdentifier(
+                : yield b.sV.LoadOGGClanInfoForIdentifier(
                     this.props.match.params.appid_or_vanity_str
                   );
-            if ((console.log("output: ", (0, g.ZN)(o), a), o))
+            if ((console.log("output: ", (0, B.ZN)(o), a), o))
               if (o.partner_events_enabled) {
-                const t = yield d.j1.LoadAdjacentPartnerEventsByAnnouncement(
+                const t = yield c.j1.LoadAdjacentPartnerEventsByAnnouncement(
                   n,
                   o.clanSteamID,
                   o.appid,
@@ -238,32 +398,32 @@
         render() {
           const { bPreventDismiss: e } = this.props;
           return this.state.bShowModal
-            ? s.createElement(D.x, {
+            ? r.createElement(f.x, {
                 appid: this.state.appid,
                 announcementGID: this.state.announcementGID,
                 clanSteamID: this.state.clanSteamID,
                 closeModal: this.HideModal,
-                partnerEventStore: d.j1,
+                partnerEventStore: c.j1,
                 trackingLocation: this.props.trackingLocation,
                 showAppHeader: !0,
                 bPrimaryPageFeature: e,
               })
             : this.state.bLoadedLandingState
-            ? s.createElement(h.V, { string: (0, _.Xx)("#Loading") })
-            : s.createElement("div", null);
+            ? r.createElement(h.V, { string: (0, _.Xx)("#Loading") })
+            : r.createElement("div", null);
         }
       };
-      (0, S.gn)([I.ak], G.prototype, "HideModal", null),
-        (G = (0, S.gn)([b.Pi], G));
+      (0, I.gn)([w.ak], g.prototype, "HideModal", null),
+        (g = (0, I.gn)([D.Pi], g));
       n(34425);
-      var M = n(7707),
-        f = n(35921),
-        k = n(39746),
+      var G = n(7707),
+        L = n(35921),
+        M = n(39746),
         A = (n(12505), n(71174), n(24020)),
         C = n(70350),
-        B = n(95598),
-        y = n(13045);
-      class U extends s.Component {
+        k = n(95598),
+        P = n(13045);
+      class y extends r.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -281,12 +441,12 @@
             (this.state.last_update_event = t.last_update_event),
             (this.state.events = []),
             this.state.announcementGIDList.forEach((e) => {
-              const t = d.j1.GetClanEventFromAnnouncementGID(e);
+              const t = c.j1.GetClanEventFromAnnouncementGID(e);
               t && this.state.events.push(t);
             }));
         }
         componentDidMount() {
-          return (0, S.mG)(this, void 0, void 0, function* () {
+          return (0, I.mG)(this, void 0, void 0, function* () {
             const {
               appid: e,
               event_customization: t,
@@ -303,7 +463,7 @@
                 t
               );
               if ((this.setState({ events: o }), a && o && o.length > 0)) {
-                const e = c.cb.Get().GetTracker();
+                const e = d.cb.Get().GetTracker();
                 this.state.events
                   .filter((e) => e.BIsPartnerEvent())
                   .forEach((t) =>
@@ -337,7 +497,7 @@
             modalInitialEvent: e,
             announcementGID: void 0,
           });
-          const n = c.cb.Get().GetTracker();
+          const n = d.cb.Get().GetTracker();
           e &&
             e.BIsPartnerEvent() &&
             n.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
@@ -355,7 +515,7 @@
             modalInitialEvent: void 0,
             announcementGID: t,
           });
-          const o = c.cb.Get().GetTracker();
+          const o = d.cb.Get().GetTracker();
           e && o.MarkEventRead(e, n, a) && o.Flush();
         }
         CloseModal() {
@@ -382,24 +542,24 @@
           var e, t, n;
           const a = this.state.events;
           if (!a)
-            return s.createElement(
+            return r.createElement(
               "div",
               { className: v().FlexCenter },
-              s.createElement(h.V, { size: "medium", position: "center" })
+              r.createElement(h.V, { size: "medium", position: "center" })
             );
           const o = window.screen.width <= 500 ? 1 : 2,
-            r = Boolean(null == a ? void 0 : a.length),
+            s = Boolean(null == a ? void 0 : a.length),
             i = this.BHasLastUpdateEvent(),
             l = this.BShouldShowLastUpdateEvent()
               ? this.state.last_update_event.announcement_gid
               : void 0,
-            { strClassName: c } = this.props;
-          return s.createElement(
-            M.Ks,
-            { className: c },
+            { strClassName: d } = this.props;
+          return r.createElement(
+            G.Ks,
+            { className: d },
             this.state.bShowModal &&
-              s.createElement(
-                P,
+              r.createElement(
+                T,
                 Object.assign({}, this.props, {
                   announcementGID:
                     this.state.announcementGID ||
@@ -410,11 +570,11 @@
                   closeModal: this.CloseModal,
                 })
               ),
-            r &&
-              s.createElement(
+            s &&
+              r.createElement(
                 "div",
                 null,
-                s.createElement(
+                r.createElement(
                   "h2",
                   null,
                   (0, _.Xx)("#EventBrowse_RecentEvents")
@@ -422,35 +582,35 @@
                 !(null === (t = this.context) || void 0 === t
                   ? void 0
                   : t.IN_GAMEPADUI) &&
-                  s.createElement(
+                  r.createElement(
                     "div",
-                    { className: y.SectionButtonCtn },
+                    { className: P.SectionButtonCtn },
                     this.props.bViewAllShowInfiniteScroll
-                      ? s.createElement(
-                          M.Ks,
+                      ? r.createElement(
+                          G.Ks,
                           {
-                            className: y.SectionButton,
+                            className: P.SectionButton,
                             onClick: () => this.ShowModal(a[0]),
                           },
                           (0, _.Xx)("#EventBrowse_MoreEventsBtn")
                         )
-                      : s.createElement(
-                          m.JW,
+                      : r.createElement(
+                          p.JW,
                           {
                             eventModel: a[0],
-                            route: m.Ue.k_eViewWebSiteHub,
-                            className: y.SectionButton,
+                            route: p.Ue.k_eViewWebSiteHub,
+                            className: P.SectionButton,
                           },
                           (0, _.Xx)("#EventBrowse_MoreEventsBtn")
                         )
                   ),
-                s.createElement(
+                r.createElement(
                   "div",
-                  { className: y.EventsSummariesCtn },
+                  { className: P.EventsSummariesCtn },
                   a.slice(0, o).map((e) => {
                     const t =
                       1 === a.length && window.screen.width > 500 ? C.KE : C.T4;
-                    return s.createElement(t, {
+                    return r.createElement(t, {
                       key: e.GID,
                       event: e,
                       onClick: (t) => {
@@ -463,7 +623,7 @@
                 )
               ),
             Boolean(i && l) &&
-              s.createElement(x, {
+              r.createElement(F, {
                 nUpdateTime: this.state.last_update_event.rtime,
                 announcementGID: l,
                 onClick: this.ShowLatestUpdateModal,
@@ -475,46 +635,46 @@
                   ? void 0
                   : n.IN_GAMEPADUI)
             ) &&
-              s.createElement(N, {
+              r.createElement(U, {
                 nUpdateTime: this.state.last_update_event.rtime,
                 onClick: this.ShowLatestUpdateModal,
               })
           );
         }
       }
-      function P(e) {
+      function T(e) {
         const {
             appid: t,
             partnerEventStore: n,
             trackingLocation: a,
             announcementGID: o,
-            eventModel: r,
+            eventModel: s,
             closeModal: i,
           } = e,
-          l = (0, w.id)();
-        return s.createElement(D.x, {
-          className: l ? void 0 : y.StoreHeaderAdjust,
-          eventClassName: l ? y.GamePadUIWidthAdjust : void 0,
+          l = (0, S.id)();
+        return r.createElement(f.x, {
+          className: l ? void 0 : P.StoreHeaderAdjust,
+          eventClassName: l ? P.GamePadUIWidthAdjust : void 0,
           appid: t,
           trackingLocation: a,
           announcementGID: o,
           partnerEventStore: n,
-          eventModel: r,
+          eventModel: s,
           closeModal: i,
         });
       }
-      function N(e) {
-        return s.createElement(
+      function U(e) {
+        return r.createElement(
           "div",
-          { className: y.LatestUpdateButtonCtn },
-          s.createElement(
+          { className: P.LatestUpdateButtonCtn },
+          r.createElement(
             "div",
-            { className: y.LatestUpdateIcon },
-            s.createElement(B.BNo, null)
+            { className: P.LatestUpdateIcon },
+            r.createElement(k.BNo, null)
           ),
-          s.createElement(
-            M.Ks,
-            { className: y.LatestUpdateButton, onClick: e.onClick },
+          r.createElement(
+            G.Ks,
+            { className: P.LatestUpdateButton, onClick: e.onClick },
             (0, _.Xx)(
               "#EventBrowse_LatestUpdateTime_Button",
               (0, _.m9)(e.nUpdateTime)
@@ -522,112 +682,112 @@
           )
         );
       }
-      function x(e) {
+      function F(e) {
         const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
-          o = n ? d.j1.GetClanEventFromAnnouncementGID(n) : null,
-          r = (e) => {
+          o = n ? c.j1.GetClanEventFromAnnouncementGID(n) : null,
+          s = (e) => {
             null == a || a(), e.stopPropagation(), e.preventDefault();
           };
-        return s.createElement(
+        return r.createElement(
           "div",
           null,
-          s.createElement(
+          r.createElement(
             "h2",
             null,
             (0, _.Xx)("#EventBrowse_LastUpdateDate", (0, _.m9)(t))
           ),
-          s.createElement(
+          r.createElement(
             "div",
-            { className: y.SectionButtonCtn },
-            s.createElement(
+            { className: P.SectionButtonCtn },
+            r.createElement(
               "div",
-              { className: y.SectionButton, onClick: r },
+              { className: P.SectionButton, onClick: s },
               (0, _.Xx)("#EventBrowse_ViewLatestUpdate")
             )
           ),
           Boolean(o) &&
-            s.createElement(
-              f.s,
+            r.createElement(
+              L.s,
               {
-                className: y.EventsSummariesCtn,
+                className: P.EventsSummariesCtn,
                 "flow-children": "column",
-                navEntryPreferPosition: k.c4.PREFERRED_CHILD,
+                navEntryPreferPosition: M.c4.PREFERRED_CHILD,
               },
-              s.createElement(C.KE, { event: o, onClick: r })
+              r.createElement(C.KE, { event: o, onClick: s })
             )
         );
       }
-      (U.contextType = w.E_),
-        (0, S.gn)([I.ak], U.prototype, "ShowModal", null),
-        (0, S.gn)([I.ak], U.prototype, "ShowLatestUpdateModal", null),
-        (0, S.gn)([I.ak], U.prototype, "CloseModal", null);
-      var T = n(10669),
-        H = n(5525);
-      class W extends s.Component {
+      (y.contextType = S.E_),
+        (0, I.gn)([w.ak], y.prototype, "ShowModal", null),
+        (0, I.gn)([w.ak], y.prototype, "ShowLatestUpdateModal", null),
+        (0, I.gn)([w.ak], y.prototype, "CloseModal", null);
+      var W = n(10669),
+        x = n(5525);
+      class N extends r.Component {
         render() {
           const { appid: e } = this.props;
-          let t = H.JW.GetTimeNowWithOverrideAsDate(),
+          let t = x.JW.GetTimeNowWithOverrideAsDate(),
             n = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
             a = Math.floor(n.getTime() / 1e3);
-          return s.createElement(
+          return r.createElement(
             "div",
             {
               className:
                 "detailBox altFooter greenlight_home_box section announcements_row",
             },
-            s.createElement(U, {
+            r.createElement(y, {
               appid: e,
-              partnerEventStore: T.wk,
+              partnerEventStore: W.wk,
               event_customization: {
                 require_tags: ["workshop"],
                 rtime_oldestevent: a,
               },
-              strClassName: y.Container,
+              strClassName: P.Container,
               trackingLocation: 6,
               bViewAllShowInfiniteScroll: !0,
             })
           );
         }
       }
-      var j = n(92244);
-      function F(e) {
-        const [t, n] = s.useState(!0),
+      var R = n(92244);
+      function j(e) {
+        const [t, n] = r.useState(!0),
           u = (0, E.T)();
         return (
-          s.useEffect(() => {
-            l.Q8.Init(new i.J(w.De.WEBAPI_BASE_URL)),
-              d.j1.Init(),
-              (0, p.nf)(null),
-              Promise.all([c.cb.InitGlobal()]).then(() => {
+          r.useEffect(() => {
+            l.Q8.Init(new i.J(S.De.WEBAPI_BASE_URL)),
+              c.j1.Init(),
+              (0, m.nf)(null),
+              Promise.all([d.cb.InitGlobal()]).then(() => {
                 u.token.reason || n(!1);
               });
           }, []),
           t
-            ? s.createElement(h.V, {
+            ? r.createElement(h.V, {
                 position: "center",
                 size: "medium",
                 string: (0, _.Xx)("#Loading"),
               })
-            : s.createElement(
-                m.uX.Provider,
+            : r.createElement(
+                p.uX.Provider,
                 { value: { bCanUseLink: !0 } },
-                s.createElement(
-                  r.rs,
+                r.createElement(
+                  s.rs,
                   null,
-                  s.createElement(r.AW, {
+                  r.createElement(s.AW, {
                     exact: !0,
                     path: a.W3.ViewEventDetails(
                       ":appid_or_vanity_str",
                       ":oldAnnouncementGID(\\d+)"
                     ),
-                    render: (e) => s.createElement(o.M, Object.assign({}, e)),
+                    render: (e) => r.createElement(o.M, Object.assign({}, e)),
                   }),
-                  s.createElement(r.AW, {
+                  r.createElement(s.AW, {
                     exact: !0,
                     path: a.W3.Listing(":appid_or_vanity_str"),
                     render: (e) =>
-                      s.createElement(
-                        G,
+                      r.createElement(
+                        g,
                         Object.assign(
                           {
                             key:
@@ -638,41 +798,41 @@
                         )
                       ),
                   }),
-                  s.createElement(r.AW, {
+                  r.createElement(s.AW, {
                     exact: !0,
                     path: a.W3.WorkshopHub(":appid(\\d+)"),
                     render: (e) =>
-                      s.createElement(
-                        W,
+                      r.createElement(
+                        N,
                         Object.assign({}, e, {
                           appid: +e.match.params.appid,
                           key: "Workshop" + e.match.params.appid,
                         })
                       ),
                   }),
-                  s.createElement(r.AW, {
+                  r.createElement(s.AW, {
                     path: a.W3.AppHub(":appid"),
                     render: (e) =>
-                      s.createElement(
-                        G,
+                      r.createElement(
+                        g,
                         Object.assign({}, e, {
                           key: "InfScroll_App_" + e.match.params.appid,
                           trackingLocation: 6,
                         })
                       ),
                   }),
-                  s.createElement(r.AW, {
+                  r.createElement(s.AW, {
                     path: a.W3.GroupHub(":group_vanity"),
                     render: (e) =>
-                      s.createElement(
-                        G,
+                      r.createElement(
+                        g,
                         Object.assign({}, e, {
                           key: "InfScroll_App_" + e.match.params.group_vanity,
                           trackingLocation: 6,
                         })
                       ),
                   }),
-                  s.createElement(r.AW, { component: j.R })
+                  r.createElement(s.AW, { component: R.R })
                 )
               )
         );

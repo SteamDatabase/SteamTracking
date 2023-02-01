@@ -197,71 +197,6 @@
         TopReleasesContainer: "weeklytopsellers_TopReleasesContainer_HVGCL",
       };
     },
-    50153: (e, t, r) => {
-      "use strict";
-      r.d(t, { Me: () => o, Mx: () => m, XC: () => c });
-      var a = r(67294),
-        n = (r(92398), r(37662), r(7200)),
-        s = r(74163),
-        l = r(3389),
-        i = r(90666);
-      r(40252);
-      function o(e, t = 0, r) {
-        const [o, c] = (0, a.useState)(n.j1.GetClanEventFromAnnouncementGID(e)),
-          m = (0, s.T)("usePartnerEventByAnnouncementGID");
-        return (
-          (0, a.useEffect)(() => {
-            if ((null == o ? void 0 : o.AnnouncementGID) != e) {
-              n.j1.Init();
-              const a = new l.K(i.JA.CLANSTEAMID);
-              n.j1
-                .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(a, e, t, r)
-                .then((e) => {
-                  e && !m.token.reason && c(e);
-                });
-            }
-          }, [e, t, r, o, m]),
-          o
-        );
-      }
-      function c(e) {
-        const [t, r] = (0, a.useState)(n.j1.GetClanEventModel(e)),
-          l = (0, s.T)("usePartnerEventByEventGID");
-        return (
-          (0, a.useEffect)(() => {
-            (null == t ? void 0 : t.GID) != e &&
-              (n.j1.Init(),
-              n.j1
-                .LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs([e], [], l)
-                .then((t) => {
-                  1 != (null == t ? void 0 : t.length) ||
-                    t[0].GID != e ||
-                    l.token.reason ||
-                    r(t[0]);
-                }));
-          }, [e, t, l]),
-          t
-        );
-      }
-      function m(e, t, r) {
-        const [i, o] = (0, a.useState)(n.j1.GetClanEventModel(t)),
-          c = (0, s.T)("usePartnerEventByClanAccountAndEventGID");
-        return (
-          (0, a.useEffect)(() => {
-            if ((null == i ? void 0 : i.GID) != t) {
-              n.j1.Init();
-              const a = l.K.InitFromClanID(e);
-              n.j1
-                .LoadPartnerEventFromClanEventGIDAndClanSteamID(a, t, 0, r)
-                .then((e) => {
-                  c.token.reason || o(e);
-                });
-            }
-          }, [e, t, i, r, c]),
-          i
-        );
-      }
-    },
     7751: (e, t, r) => {
       "use strict";
       r.d(t, { C: () => s });
@@ -1111,7 +1046,7 @@
                     br: p.FE.readUint32,
                     bw: p.Xc.writeUint32,
                   },
-                  ranks: { n: 2, c: D, r: !0, q: !0 },
+                  ranks: { n: 2, c: L, r: !0, q: !0 },
                 },
               }),
             O.sm_m
@@ -1152,17 +1087,17 @@
           return "CSteamCharts_GetMostPlayedGames_Response";
         }
       }
-      class D extends G {
+      class L extends G {
         constructor(e = null) {
           super(),
-            D.prototype.rank || p.aR(D.M()),
+            L.prototype.rank || p.aR(L.M()),
             G.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
+            L.sm_m ||
+              (L.sm_m = {
+                proto: L,
                 fields: {
                   rank: { n: 1, br: p.FE.readInt32, bw: p.Xc.writeInt32 },
                   appid: { n: 2, br: p.FE.readUint32, bw: p.Xc.writeUint32 },
@@ -1182,64 +1117,6 @@
                     br: p.FE.readUint32,
                     bw: p.Xc.writeUint32,
                   },
-                },
-              }),
-            D.sm_m
-          );
-        }
-        static MBF() {
-          return D.sm_mbf || (D.sm_mbf = p.Bh(D.M())), D.sm_mbf;
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return p.TA(D.M(), e, t);
-        }
-        static fromObject(e) {
-          return p.aD(D.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new _.BinaryReader(e),
-            r = new D();
-          return D.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return p.F(D.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new _.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          p.l2(D.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new _.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetMostPlayedGames_Response_MostPlayedRank";
-        }
-      }
-      class L extends G {
-        constructor(e = null) {
-          super(),
-            L.prototype.last_update || p.aR(L.M()),
-            G.initialize(this, e, 0, -1, [2], null);
-        }
-        static M() {
-          return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
-                fields: {
-                  last_update: {
-                    n: 1,
-                    br: p.FE.readUint32,
-                    bw: p.Xc.writeUint32,
-                  },
-                  ranks: { n: 2, c: A, r: !0, q: !0 },
                 },
               }),
             L.sm_m
@@ -1277,20 +1154,78 @@
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CSteamCharts_GetMostPlayedGames_Response_MostPlayedRank";
+        }
+      }
+      class D extends G {
+        constructor(e = null) {
+          super(),
+            D.prototype.last_update || p.aR(D.M()),
+            G.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
+                fields: {
+                  last_update: {
+                    n: 1,
+                    br: p.FE.readUint32,
+                    bw: p.Xc.writeUint32,
+                  },
+                  ranks: { n: 2, c: x, r: !0, q: !0 },
+                },
+              }),
+            D.sm_m
+          );
+        }
+        static MBF() {
+          return D.sm_mbf || (D.sm_mbf = p.Bh(D.M())), D.sm_mbf;
+        }
+        toObject(e = !1) {
+          return D.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return p.TA(D.M(), e, t);
+        }
+        static fromObject(e) {
+          return p.aD(D.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new _.BinaryReader(e),
+            r = new D();
+          return D.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return p.F(D.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new _.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          p.l2(D.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new _.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CSteamCharts_GetGamesByConcurrentPlayers_Response";
         }
       }
-      class A extends G {
+      class x extends G {
         constructor(e = null) {
           super(),
-            A.prototype.rank || p.aR(A.M()),
+            x.prototype.rank || p.aR(x.M()),
             G.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
                 fields: {
                   rank: { n: 1, br: p.FE.readInt32, bw: p.Xc.writeInt32 },
                   appid: { n: 2, br: p.FE.readUint32, bw: p.Xc.writeUint32 },
@@ -1307,56 +1242,20 @@
                   },
                 },
               }),
-            A.sm_m
+            x.sm_m
           );
         }
         static MBF() {
-          return A.sm_mbf || (A.sm_mbf = p.Bh(A.M())), A.sm_mbf;
-        }
-        toObject(e = !1) {
-          return A.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return p.TA(A.M(), e, t);
-        }
-        static fromObject(e) {
-          return p.aD(A.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new _.BinaryReader(e),
-            r = new A();
-          return A.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return p.F(A.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new _.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          p.l2(A.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new _.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetGamesByConcurrentPlayers_Response_MostPlayedRank";
-        }
-      }
-      class x extends G {
-        constructor(e = null) {
-          super(), G.initialize(this, e, 0, -1, void 0, null);
+          return x.sm_mbf || (x.sm_mbf = p.Bh(x.M())), x.sm_mbf;
         }
         toObject(e = !1) {
           return x.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return p.TA(x.M(), e, t);
         }
         static fromObject(e) {
-          return new x();
+          return p.aD(x.M(), e);
         }
         static deserializeBinary(e) {
           let t = new _.BinaryReader(e),
@@ -1364,16 +1263,52 @@
           return x.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return p.F(x.MBF(), e, t);
         }
         serializeBinary() {
           var e = new _.BinaryWriter();
           return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          p.l2(x.M(), e, t);
+        }
         serializeBase64String() {
           var e = new _.BinaryWriter();
           return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamCharts_GetGamesByConcurrentPlayers_Response_MostPlayedRank";
+        }
+      }
+      class A extends G {
+        constructor(e = null) {
+          super(), G.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return A.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new A();
+        }
+        static deserializeBinary(e) {
+          let t = new _.BinaryReader(e),
+            r = new A();
+          return A.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new _.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new _.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamCharts_GetTopReleasesPages_Request";
@@ -1661,7 +1596,7 @@
             return e.SendMsg(
               "SteamCharts.GetGamesByConcurrentPlayers#1",
               t,
-              L,
+              D,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
             );
           }),
@@ -1762,7 +1697,7 @@
         }
         LoadTopReleases() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            let e = u.gA.Init(x),
+            let e = u.gA.Init(A),
               t = yield Z.GetTopReleasesPages(
                 this.m_WebAPI.GetAnonymousServiceTransport(),
                 e
@@ -1830,8 +1765,8 @@
         GetBannerUrlsOrBackup(e) {
           if (e && e.length) {
             const t = ae.Yt.GetELanguageFallbackOrder();
-            for (const r in t)
-              if (parseInt(r) < e.length) {
+            for (const r of t)
+              if (r < e.length) {
                 const t = e[r];
                 if (t) return t;
               }
@@ -2154,10 +2089,10 @@
         }
         return null;
       }
-      var De = r(73727),
-        Le = r(80533),
-        Ae = r(67833),
-        xe = r(17888),
+      var Le = r(73727),
+        De = r(80533),
+        xe = r(67833),
+        Ae = r(17888),
         ze = r(65924);
       function Fe(e) {
         const { item: t, feature: r, depth: n, children: s } = e,
@@ -2167,7 +2102,7 @@
           m = (0, ze.bJ)(),
           u = o.useMemo(
             () =>
-              Ae.ZP.GetLinkParam(
+              xe.ZP.GetLinkParam(
                 Object.assign(Object.assign({}, m), {
                   feature: r || m.feature,
                 }),
@@ -2176,14 +2111,14 @@
             [m, r, n]
           ),
           d = o.useMemo(
-            () => Ae.ZP.AddNavParamToURL(t.GetStorePageURL(), u),
+            () => xe.ZP.AddNavParamToURL(t.GetStorePageURL(), u),
             [t, u]
           ),
           _ = o.useCallback(() => {
-            c && i.current != c && (xe.E.AddImpression(c, u), (i.current = c));
+            c && i.current != c && (Ae.E.AddImpression(c, u), (i.current = c));
           }, [c, u, i]),
           p = o.createElement("a", Object.assign({}, l, { href: d }), s);
-        return c ? o.createElement(Le.h, { onEnter: _ }, p) : p;
+        return c ? o.createElement(De.h, { onEnter: _ }, p) : p;
       }
       var Ue = r(57649),
         Xe = r(72033),
@@ -2251,7 +2186,7 @@
                         ),
                       },
                       o.createElement(
-                        De.OL,
+                        Le.OL,
                         {
                           className: He().ChartMoreBtn,
                           to: dr.TopSelling(k.De.COUNTRY),
@@ -2285,7 +2220,7 @@
                         ),
                       },
                       o.createElement(
-                        De.OL,
+                        Le.OL,
                         { className: He().ChartMoreBtn, to: dr.MostPlayed() },
                         (0, ae.Xx)(
                           "#SteamCharts_OverviewGraph_Button_MostPlayed"
@@ -2491,7 +2426,7 @@
           rgItems: null == r ? void 0 : r.rgRanks.map((e) => e.Item),
           renderLink: () =>
             o.createElement(
-              De.OL,
+              Le.OL,
               {
                 className: He().ImageButtonLink,
                 to: dr.TopSellers(pe(k.De.COUNTRY), _e(t.GetCurrentWeek())),
@@ -2693,7 +2628,7 @@
                       "div",
                       { className: je().MenuLinks },
                       o.createElement(
-                        De.OL,
+                        Le.OL,
                         {
                           to: dr.Overview(),
                           exact: !0,
@@ -2753,7 +2688,7 @@
             "div",
             { className: je().MenuLinks },
             o.createElement(
-              De.OL,
+              Le.OL,
               {
                 className: je().MenuItemIcon,
                 to: dr.TopSelling(k.De.COUNTRY),
@@ -2763,7 +2698,7 @@
               (0, ae.Xx)("#SteamCharts_Menu_TopSelling")
             ),
             o.createElement(
-              De.OL,
+              Le.OL,
               {
                 className: je().MenuItemIcon,
                 to: dr.MostPlayed(),
@@ -2791,7 +2726,7 @@
           const t = n - 60 * e * 60 * 24 * 7;
           i.push(
             o.createElement(
-              De.OL,
+              Le.OL,
               {
                 to: dr.TopSellers(l, _e(t)),
                 key: t,
@@ -3109,7 +3044,7 @@
           { direction: l, symbol: i } = Ce(n, r),
           c = (0, ge.AV)(s),
           m = (0, ze.bJ)(),
-          u = (0, Ae.Hf)(a.GetStorePageURL(), m);
+          u = (0, xe.Hf)(a.GetStorePageURL(), m);
         return o.createElement(
           "tr",
           {
@@ -3151,7 +3086,7 @@
           l = (0, ge.AV)(n),
           i = (0, ge.AV)(s),
           c = (0, ze.bJ)(),
-          m = (0, Ae.Hf)(a.GetStorePageURL(), c);
+          m = (0, xe.Hf)(a.GetStorePageURL(), c);
         return o.createElement(
           "tr",
           {
@@ -3434,7 +3369,7 @@
           { nRank: r, Item: a, nRankLastWeek: n, nConsecutiveWeeks: s } = t,
           l = (0, _t.C)(a),
           i = (0, ze.bJ)(),
-          c = (0, Ae.Hf)(a.GetStorePageURL(), i),
+          c = (0, xe.Hf)(a.GetStorePageURL(), i),
           m = a.GetBestPurchaseOption();
         let u = "";
         a.BIsFree()
@@ -3632,7 +3567,7 @@
                 null,
                 l &&
                   c &&
-                  o.createElement(Dt, {
+                  o.createElement(Lt, {
                     TopSellersStore: t,
                     overrideCountry: a,
                   })
@@ -3641,7 +3576,7 @@
           )
         );
       }
-      function Dt(e) {
+      function Lt(e) {
         var t, r;
         const { TopSellersStore: a, overrideCountry: n } = e,
           { TopSellers: s, status: l } = I(a, a.GetPreviousWeek(), n, 100),
@@ -3721,8 +3656,8 @@
           )
         );
       }
-      var Lt = r(67373);
-      function At(e) {
+      var Dt = r(67373);
+      function xt(e) {
         const { TopSellersStore: t, week: r, country: a } = e;
         let n = (function (e) {
             if (e) {
@@ -3799,7 +3734,7 @@
                   o.createElement(
                     Me.SV,
                     null,
-                    o.createElement(xt, {
+                    o.createElement(At, {
                       rtWeekStart: n,
                       strCountryCode: s,
                       rtMaxWeekStart: t.GetCurrentWeek(),
@@ -3823,7 +3758,7 @@
             : null
         );
       }
-      function xt(e) {
+      function At(e) {
         const { rtWeekStart: t, strCountryCode: r, rtMaxWeekStart: a } = e,
           n = 604800;
         let s, l;
@@ -3867,7 +3802,7 @@
           "div",
           { className: (0, Se.Z)(je().ChartNavCtn, t ? "" : je().Disabled) },
           o.createElement(
-            De.rU,
+            Le.rU,
             {
               to: null != t ? t : dr.Overview(),
               onClick: t ? void 0 : (e) => e.preventDefault(),
@@ -3917,7 +3852,7 @@
       function Ut(e) {
         var t;
         const { TopSellersStore: r, rtWeekStart: a, strCountryCode: n } = e,
-          [s, l] = (0, Lt.i4)("TopSellersExpanded", !1),
+          [s, l] = (0, Dt.i4)("TopSellersExpanded", !1),
           { TopSellers: i, status: c } = I(r, a, n, s ? 100 : 20),
           m = o.useCallback(() => l(!0), [l]);
         return "error" === c
@@ -3991,9 +3926,8 @@
       const Vt = o.lazy(() =>
         Promise.all([
           r.e(6499),
-          r.e(3388),
+          r.e(2189),
           r.e(731),
-          r.e(2880),
           r.e(9177),
           r.e(3661),
           r.e(6364),
@@ -4004,20 +3938,18 @@
           r.e(2529),
           r.e(5300),
           r.e(8878),
-          r.e(990),
           r.e(5938),
           r.e(1614),
           r.e(4193),
           r.e(6108),
-          r.e(1289),
           r.e(6633),
-          r.e(72),
           r.e(6720),
           r.e(8489),
           r.e(3238),
           r.e(2420),
           r.e(1979),
           r.e(9211),
+          r.e(477),
           r.e(691),
           r.e(680),
         ]).then(r.bind(r, 41135))
@@ -4443,7 +4375,7 @@
                     o.createElement(
                       Me.SV,
                       null,
-                      o.createElement(At, {
+                      o.createElement(xt, {
                         TopSellersStore: i,
                         week: e.match.params.week,
                         country: e.match.params.country,
