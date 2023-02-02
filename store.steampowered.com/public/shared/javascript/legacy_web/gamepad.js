@@ -15,14 +15,14 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    249: (e, t, n) => {
+    666: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => Vt });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(21);
+        a = n(697);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -90,8 +90,8 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var g = n(285),
-        v = n(104);
+      var g = n(977),
+        v = n(418);
       class f extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -897,7 +897,7 @@
             (e[(e.k_EClientUsedInputTypeMax = 3)] =
               "k_EClientUsedInputTypeMax");
         })(ce || (ce = {}));
-      var ue = n(865);
+      var ue = n(528);
       function de(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -3390,7 +3390,7 @@
         }
       }
       (0, o.gn)([g.a], ht.prototype, "OnMessage", null);
-      n(543);
+      n(382);
       function mt() {
         return !!window.document;
       }

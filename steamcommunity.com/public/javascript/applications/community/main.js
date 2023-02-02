@@ -21953,6 +21953,32 @@
       }
       var m = n(81130);
     },
+    23989: (e, t, n) => {
+      "use strict";
+      n.d(t, { R: () => o, U: () => s });
+      var i = n(67294),
+        r = n(88767);
+      n(20938);
+      function o(e) {
+        const t = i.useRef(s),
+          n = function (e, t, ...n) {
+            console.log(`React-Query ${e}`, t, ...n);
+          };
+        (0, r.setLogger)({
+          log: (e, ...t) => n("LOG", e, ...t),
+          warn: (e, ...t) => n("WARN", e, ...t),
+          error: (e, ...t) => n("ERROR", e, ...t),
+        });
+        let o = e.children;
+        return (
+          e.debug,
+          i.createElement(r.QueryClientProvider, { client: t.current }, o)
+        );
+      }
+      const s = new r.QueryClient({
+        defaultOptions: { queries: { staleTime: 1 / 0 } },
+      });
+    },
     53477: (e, t, n) => {
       "use strict";
       n.d(t, {
@@ -22484,7 +22510,7 @@
           "Should not include prototypejs."
         );
     },
-    84248: (e, t, n) => {
+    60941: (e, t, n) => {
       "use strict";
       var i = n(70655),
         r = (n(56084), n(66337), n(67294)),
@@ -22496,29 +22522,9 @@
         u = (n(37699), n(39811)),
         d = n(74091),
         m = n(92244),
-        h = n(88767);
-      n(20938);
-      function p(e) {
-        const t = r.useRef(g),
-          n = function (e, t, ...n) {
-            console.log(`React-Query ${e}`, t, ...n);
-          };
-        (0, h.setLogger)({
-          log: (e, ...t) => n("LOG", e, ...t),
-          warn: (e, ...t) => n("WARN", e, ...t),
-          error: (e, ...t) => n("ERROR", e, ...t),
-        });
-        let i = e.children;
-        return (
-          e.debug,
-          r.createElement(h.QueryClientProvider, { client: t.current }, i)
-        );
-      }
-      const g = new h.QueryClient({
-        defaultOptions: { queries: { staleTime: 1 / 0 } },
-      });
-      var _ = n(90666);
-      const f = r.lazy(() =>
+        h = n(23989),
+        p = n(90666);
+      const g = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22535,7 +22541,7 @@
             n.e(6845),
           ]).then(n.bind(n, 68161))
         ),
-        v = r.lazy(() =>
+        _ = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22555,7 +22561,7 @@
             n.e(2136),
           ]).then(n.bind(n, 2218))
         ),
-        C = r.lazy(() =>
+        f = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22576,7 +22582,7 @@
             n.e(9349),
           ]).then(n.bind(n, 1196))
         ),
-        b = r.lazy(() =>
+        v = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22596,12 +22602,12 @@
             n.e(3352),
           ]).then(n.bind(n, 93871))
         ),
-        w = r.lazy(() =>
+        C = r.lazy(() =>
           Promise.all([n.e(6148), n.e(3742), n.e(2805), n.e(238)]).then(
             n.bind(n, 21668)
           )
         ),
-        S = r.lazy(() =>
+        b = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22619,8 +22625,8 @@
             n.e(5436),
           ]).then(n.bind(n, 5265))
         ),
-        E = r.lazy(() => n.e(8647).then(n.bind(n, 28064))),
-        y = r.lazy(() =>
+        w = r.lazy(() => n.e(8647).then(n.bind(n, 28064))),
+        S = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22641,7 +22647,7 @@
             n.e(3499),
           ]).then(n.bind(n, 16236))
         ),
-        D = r.lazy(() =>
+        E = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22661,7 +22667,7 @@
             n.e(6272),
           ]).then(n.bind(n, 35020))
         ),
-        M = r.lazy(() =>
+        y = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22671,10 +22677,10 @@
             n.e(908),
           ]).then(n.bind(n, 69761))
         ),
-        R = r.lazy(() =>
+        D = r.lazy(() =>
           Promise.all([n.e(6588), n.e(2530), n.e(4535)]).then(n.bind(n, 93071))
         ),
-        T = r.lazy(() =>
+        M = r.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -22687,12 +22693,12 @@
             n.e(3903),
           ]).then(n.bind(n, 47734))
         ),
-        k = r.lazy(() =>
+        R = r.lazy(() =>
           Promise.all([n.e(1338), n.e(312)]).then(n.bind(n, 2840))
         ),
-        O = () => (_.JA.IS_OGG ? "games" : "groups"),
-        I = {},
-        L = Object.assign(
+        T = () => (p.JA.IS_OGG ? "games" : "groups"),
+        k = {},
+        O = Object.assign(
           Object.assign(
             {
               DiagData: () => "/:anything*/diagdata",
@@ -22700,14 +22706,14 @@
               OAuthLogin: () => "/oauth/loginform",
               OpenidLogin: () => "/openid/loginform",
               EventsInternal: () => "/(migrateevents|migrate)",
-              EventEditor: (e) => `/${O()}/${e}/partnerevents`,
-              EventReaders: (e) => `/${O()}/${e}/(events|announcements)`,
+              EventEditor: (e) => `/${T()}/${e}/partnerevents`,
+              EventReaders: (e) => `/${T()}/${e}/(events|announcements)`,
               HubRoot: (e) => `/app/${e}(/workshop/)?`,
               GroupRoot: (e) => `/groups/${e}/`,
               ProfileVanity: (e) => `/id/${e}`,
               ProfileSteamID: (e) => `/profiles/${e}`,
-              ProfileVanityGamesList: (e) => `${L.ProfileVanity(e)}/games`,
-              ProfileSteamIDGamesLIst: (e) => `${L.ProfileSteamID(e)}/games`,
+              ProfileVanityGamesList: (e) => `${O.ProfileVanity(e)}/games`,
+              ProfileSteamIDGamesLIst: (e) => `${O.ProfileSteamID(e)}/games`,
               UGCRewardApp: () => "/:anything/filedetails",
               UserReviewRewardAppVanity: () =>
                 "/id/:vanity_url/recommended/:appid/",
@@ -22725,17 +22731,17 @@
               QuestionsApp: () => "/questions/",
               ConferenceApp: () => "/(conference|steamworksvirtualconference)/",
             },
-            I
+            k
           ),
           { CommunityHomeRoot: () => "/" }
         );
-      class B extends r.Component {
+      class I extends r.Component {
         render() {
           return r.createElement(
             s.VK,
-            { basename: A() },
+            { basename: B() },
             r.createElement(
-              x,
+              L,
               null,
               r.createElement(
                 r.Suspense,
@@ -22745,7 +22751,7 @@
                   null,
                   r.createElement(a.AW, {
                     exact: !0,
-                    path: L.DiagData(),
+                    path: O.DiagData(),
                     render: (e) =>
                       r.createElement(
                         c.m,
@@ -22757,139 +22763,139 @@
                   }),
                   r.createElement(
                     a.AW,
-                    { path: [L.Login(), L.OAuthLogin()] },
+                    { path: [O.Login(), O.OAuthLogin()] },
                     r.createElement(d.d, {
                       config: {
-                        login: (e) => r.createElement(R, Object.assign({}, e)),
+                        login: (e) => r.createElement(D, Object.assign({}, e)),
                       },
                     })
                   ),
                   r.createElement(
                     a.AW,
-                    { path: [L.Login(), L.OpenidLogin()] },
+                    { path: [O.Login(), O.OpenidLogin()] },
                     r.createElement(d.d, {
                       config: {
-                        login: (e) => r.createElement(R, Object.assign({}, e)),
+                        login: (e) => r.createElement(D, Object.assign({}, e)),
                       },
                     })
                   ),
                   r.createElement(a.AW, {
-                    path: L.EventEditor(":appid_or_vanity_str"),
-                    component: C,
+                    path: O.EventEditor(":appid_or_vanity_str"),
+                    component: f,
                   }),
                   r.createElement(a.AW, {
-                    path: L.EventsInternal(),
-                    component: b,
-                  }),
-                  r.createElement(a.AW, {
-                    path: L.EventReaders(":appid_or_vanity_str"),
+                    path: O.EventsInternal(),
                     component: v,
                   }),
                   r.createElement(a.AW, {
-                    path: L.BroadcastApp(),
-                    component: S,
+                    path: O.EventReaders(":appid_or_vanity_str"),
+                    component: _,
                   }),
                   r.createElement(a.AW, {
-                    path: L.HubRoot(":appid"),
+                    path: O.BroadcastApp(),
+                    component: b,
+                  }),
+                  r.createElement(a.AW, {
+                    path: O.HubRoot(":appid"),
                     render: (e) =>
                       r.createElement(d.d, {
                         config: {
-                          "apphub-events": () => r.createElement(v, null),
+                          "apphub-events": () => r.createElement(_, null),
                           "apphub-ugcrewards": () =>
-                            r.createElement(w, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                           "community-awards": () =>
-                            r.createElement(w, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                         },
                       }),
                   }),
                   r.createElement(a.AW, {
-                    path: L.GroupRoot(":groupid_or_vanity_str"),
+                    path: O.GroupRoot(":groupid_or_vanity_str"),
                     render: (e) =>
                       r.createElement(d.d, {
                         config: {
-                          "apphub-events": () => r.createElement(v, null),
+                          "apphub-events": () => r.createElement(_, null),
                           "community-awards": () =>
-                            r.createElement(w, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                         },
                       }),
                   }),
                   r.createElement(a.AW, {
-                    path: L.UserReviewRewardAppVanity(),
-                    render: (e) => r.createElement(w, Object.assign({}, e)),
+                    path: O.UserReviewRewardAppVanity(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
                   r.createElement(a.AW, {
-                    path: L.UserReviewRewardApp(),
-                    render: (e) => r.createElement(w, Object.assign({}, e)),
+                    path: O.UserReviewRewardApp(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
                   r.createElement(a.AW, {
-                    path: L.UserReviewsRewardVanity(),
-                    render: (e) => r.createElement(w, Object.assign({}, e)),
+                    path: O.UserReviewsRewardVanity(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
                   r.createElement(a.AW, {
-                    path: L.UserReviewsReward(),
-                    render: (e) => r.createElement(w, Object.assign({}, e)),
+                    path: O.UserReviewsReward(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
                   r.createElement(a.AW, {
                     path: [
-                      L.DiscussionsAppGeneral(),
-                      L.DiscussionsAppWorkshop(),
-                      L.DiscussionsAppUGC(),
+                      O.DiscussionsAppGeneral(),
+                      O.DiscussionsAppWorkshop(),
+                      O.DiscussionsAppUGC(),
                     ],
                     render: (e) =>
                       r.createElement(d.d, {
                         config: {
                           "community-awards": () =>
-                            r.createElement(w, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                         },
                       }),
                   }),
                   r.createElement(
                     a.AW,
                     {
-                      path: [L.ManageFriendsApp(), L.ManageFriendsProfileApp()],
+                      path: [O.ManageFriendsApp(), O.ManageFriendsProfileApp()],
                     },
-                    r.createElement(E, null)
+                    r.createElement(w, null)
                   ),
                   r.createElement(a.AW, {
-                    path: L.ProfileVanityGamesList(":vanity_url"),
-                    render: (e) => r.createElement(T, Object.assign({}, e)),
+                    path: O.ProfileVanityGamesList(":vanity_url"),
+                    render: (e) => r.createElement(M, Object.assign({}, e)),
                   }),
                   r.createElement(a.AW, {
-                    path: L.ProfileSteamIDGamesLIst(":steamid"),
-                    render: (e) => r.createElement(T, Object.assign({}, e)),
+                    path: O.ProfileSteamIDGamesLIst(":steamid"),
+                    render: (e) => r.createElement(M, Object.assign({}, e)),
                   }),
                   r.createElement(a.AW, {
-                    path: L.ProfileVanity(":vanity_url"),
-                    render: (e) => r.createElement(f, Object.assign({}, e)),
+                    path: O.ProfileVanity(":vanity_url"),
+                    render: (e) => r.createElement(g, Object.assign({}, e)),
                   }),
                   r.createElement(a.AW, {
-                    path: L.ProfileSteamID(":steamid"),
-                    render: (e) => r.createElement(f, Object.assign({}, e)),
+                    path: O.ProfileSteamID(":steamid"),
+                    render: (e) => r.createElement(g, Object.assign({}, e)),
                   }),
                   r.createElement(a.AW, {
-                    path: L.UGCRewardApp(),
-                    render: (e) => r.createElement(w, Object.assign({}, e)),
+                    path: O.UGCRewardApp(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
-                  r.createElement(a.AW, { path: L.FAQApp(), component: y }),
+                  r.createElement(a.AW, { path: O.FAQApp(), component: S }),
                   r.createElement(a.AW, {
-                    path: L.QuestionsApp(),
-                    component: M,
+                    path: O.QuestionsApp(),
+                    component: y,
                   }),
                   r.createElement(a.AW, {
-                    path: L.ConferenceApp(),
-                    component: D,
+                    path: O.ConferenceApp(),
+                    component: E,
                   }),
                   !1,
                   r.createElement(a.AW, {
-                    path: L.CommunityHomeRoot(),
+                    path: O.CommunityHomeRoot(),
                     render: (e) =>
                       r.createElement(d.d, {
                         config: {
-                          "apphub-events": () => r.createElement(v, null),
+                          "apphub-events": () => r.createElement(_, null),
                           "apphub-ugcrewards": () =>
-                            r.createElement(w, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                           "community-home-header-v2": () =>
-                            r.createElement(k, null),
+                            r.createElement(R, null),
                         },
                       }),
                   }),
@@ -22900,60 +22906,60 @@
           );
         }
       }
-      function x(e) {
+      function L(e) {
         return r.createElement(
-          _.E_.Provider,
+          p.E_.Provider,
           {
             value: {
-              IN_GAMEPADUI: _.De.IN_GAMEPADUI,
+              IN_GAMEPADUI: p.De.IN_GAMEPADUI,
               IN_DESKTOPUI: !1,
               IN_VR: !1,
             },
           },
           r.createElement(
-            p,
+            h.R,
             null,
             r.createElement(
               u.Y0,
               null,
               r.createElement(
                 l.B,
-                { value: { useActiveAccount: () => _.L7.steamid } },
+                { value: { useActiveAccount: () => p.L7.steamid } },
                 e.children
               )
             )
           )
         );
       }
-      function A() {
+      function B() {
         let e = document.createElement("a");
-        e.href = _.De.COMMUNITY_BASE_URL;
+        e.href = p.De.COMMUNITY_BASE_URL;
         let t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
       n(55038);
-      var F = n(41311);
+      var x = n(41311);
       n(26149);
-      var N = n(77520),
-        P = n(73812),
-        G = n(83779),
-        H = n(53622);
+      var A = n(77520),
+        F = n(73812),
+        N = n(83779),
+        P = n(53622);
       n(48341), n(95598), n(30543), n(41414), n(15935), n(53477);
       n(69491);
-      (0, H.Dj)(() =>
+      (0, P.Dj)(() =>
         (0, i.mG)(void 0, void 0, void 0, function* () {
           document.getElementById("application_config")
-            ? (0, _.Ek)("application_config")
-            : (0, _.Ek)(),
-            (0, G.Uh)().Init(
+            ? (0, p.Ek)("application_config")
+            : (0, p.Ek)(),
+            (0, N.Uh)().Init(
               "Community",
               CLSTAMP,
-              new P.J(_.De.WEBAPI_BASE_URL).GetServiceTransport()
+              new F.J(p.De.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return (0, i.mG)(this, void 0, void 0, function* () {
                 {
-                  const t = F.LJ.GetLanguageFallback(e),
+                  const t = x.LJ.GetLanguageFallback(e),
                     i = e === t,
                     [r, o, s, a, l, c] = yield Promise.all([
                       n(71574)(`./shared_${e}.json`).then((e) => e.default),
@@ -22969,26 +22975,26 @@
                         ? {}
                         : n(29790)(`./main_${t}.json`).then((e) => e.default),
                     ]);
-                  F.Yt.AddTokens(
+                  x.Yt.AddTokens(
                     Object.assign(Object.assign(Object.assign({}, o), r), s),
                     Object.assign(Object.assign(Object.assign({}, l), a), c)
                   );
                 }
-                for (const e of U) F.Yt.AddTokens(e);
-                U = void 0;
+                for (const e of G) x.Yt.AddTokens(e);
+                G = void 0;
               });
-            })(_.De.LANGUAGE),
+            })(p.De.LANGUAGE),
             document.getElementById("application_root") &&
               o.render(
-                r.createElement(B, {}),
+                r.createElement(I, {}),
                 document.getElementById("application_root")
               );
         })
       );
-      let U = [];
+      let G = [];
       window.LocalizationManifestReady = function (e, t, n) {
-        (0, N.X)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== U ? U.push(n) : F.Yt.AddTokens(n);
+        (0, A.X)("manifest" === t, `Expected manifest not "${t}"`),
+          void 0 !== G ? G.push(n) : x.Yt.AddTokens(n);
       };
     },
     76430: (e, t, n) => {
@@ -23260,7 +23266,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 84248), e((e.s = t));
+      return (t = 60941), e((e.s = t));
       var t;
     });
     e.O();

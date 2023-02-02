@@ -18571,8 +18571,9 @@
             let a = [],
               i = null;
             try {
-              yield this.LoadPlaytime(),
-                (a = Array.from(this.m_mapPlaytime.keys()));
+              yield Promise.all([this.LoadPlaytime(), j.jg.Get().HintLoad()]),
+                (a = Array.from(this.m_mapPlaytime.keys())),
+                (a = a.filter((e) => j.jg.Get().BIsGameOwned(e)));
               let i = [],
                 o = [];
               t &&
