@@ -9673,20 +9673,20 @@
               });
         }),
         sn = (0, iA.Pi)(function (A) {
-          var e, t, o, r, c, s, u, d, m, E, I;
-          const B = (0, dA.k6)(),
-            p = (0, T.df)(),
+          var e, t, o, r, c, s, u, d, m, E, I, B, p;
+          const v = (0, dA.k6)(),
+            h = (0, T.df)(),
             {
-              input: v,
-              eControllerMode: h,
-              eControllerSource: f,
-              baseActionSet: b,
-              layerActionSet: w,
-              modeid: Q,
-              modeShift: y,
-              indentLevel: N,
+              input: f,
+              eControllerMode: b,
+              eControllerSource: w,
+              baseActionSet: Q,
+              layerActionSet: y,
+              modeid: N,
+              modeShift: S,
+              indentLevel: G,
             } = A,
-            S = (0, n._T)(A, [
+            k = (0, n._T)(A, [
               "input",
               "eControllerMode",
               "eControllerSource",
@@ -9696,11 +9696,16 @@
               "modeShift",
               "indentLevel",
             ]),
-            G = A.input.activators,
-            k = G.length > 1,
-            M = (null != N ? N : 0) + (k ? 1 : 0),
-            R = 16 == h && 67 == v.key;
-          if (0 == G.length)
+            M = A.input.activators,
+            R =
+              M.length > 1 ||
+              43 ==
+                (null === (e = IA._A.EditingConfiguration) || void 0 === e
+                  ? void 0
+                  : e.controller_type),
+            F = (null != G ? G : 0) + (R ? 1 : 0),
+            L = 16 == b && 67 == f.key;
+          if (0 == M.length)
             return a.createElement(
               un,
               Object.assign({ key: -1 }, A, {
@@ -9709,82 +9714,87 @@
                 modeShift: A.modeShift,
               })
             );
-          const F = G[0],
-            L =
-              (null === (e = F.bindings) || void 0 === e ? void 0 : e.length) >
+          const O = M[0],
+            x =
+              (null === (t = O.bindings) || void 0 === t ? void 0 : t.length) >
               0
-                ? F.bindings[0]
+                ? O.bindings[0]
                 : null,
-            O = (0, pA.XY)(h),
-            x = O && (0, pA.tJ)(v.key),
-            H = null == L ? void 0 : L.mode_shift,
+            H = (0, pA.XY)(b),
             X =
-              null === (t = null == L ? void 0 : L.game_action) || void 0 === t
+              (H && (0, pA.tJ)(f.key)) ||
+              43 ==
+                (null === (o = IA._A.EditingConfiguration) || void 0 === o
+                  ? void 0
+                  : o.controller_type),
+            Z = null == x ? void 0 : x.mode_shift,
+            U =
+              null === (r = null == x ? void 0 : x.game_action) || void 0 === r
                 ? void 0
-                : t.action_key,
-            Z =
+                : r.action_key,
+            V =
               "" !=
               (null ===
-                (r =
-                  null === (o = null == L ? void 0 : L.key_binding_data) ||
-                  void 0 === o
+                (s =
+                  null === (c = null == x ? void 0 : x.key_binding_data) ||
+                  void 0 === c
                     ? void 0
-                    : o.icon_data) || void 0 === r
+                    : c.icon_data) || void 0 === s
                 ? void 0
-                : r.icon_filename),
-            U =
+                : s.icon_filename),
+            z =
               40 ==
-              (null === (c = null == L ? void 0 : L.controller_action) ||
-              void 0 === c
+              (null === (u = null == x ? void 0 : x.controller_action) ||
+              void 0 === u
                 ? void 0
-                : c.action),
-            V = !U,
-            z = V || (U && O),
-            j =
-              (V || z) && Z
-                ? null === (s = null == L ? void 0 : L.key_binding_data) ||
-                  void 0 === s
+                : u.action),
+            j = !z,
+            W = j || (z && H),
+            J =
+              (j || W) && V
+                ? null === (d = null == x ? void 0 : x.key_binding_data) ||
+                  void 0 === d
                   ? void 0
-                  : s.icon_data
+                  : d.icon_data
                 : void 0,
-            W = a.createElement(pA.$r, {
+            K = a.createElement(pA.$r, {
               eControllerType:
-                null === (u = IA._A.EditingConfiguration) || void 0 === u
+                null === (m = IA._A.EditingConfiguration) || void 0 === m
                   ? void 0
-                  : u.controller_type,
-              eInput: (0, pA.pW)(v.key),
-              eMode: h,
-              eSource: f,
+                  : m.controller_type,
+              eInput: (0, pA.pW)(f.key),
+              eMode: b,
+              eSource: w,
             }),
-            J = (A) => {
-              const e = null == F ? void 0 : F.bindings[0];
+            q = (A) => {
+              const e = null == O ? void 0 : O.bindings[0];
               e.key_binding_data.friendly_name_utf8 = A;
               const t = {
-                action_set_key: b.key,
-                action_set_layer_key: null == w ? void 0 : w.key,
-                source_binding_key: f,
-                input_key: v.key,
+                action_set_key: Q.key,
+                action_set_layer_key: null == y ? void 0 : y.key,
+                source_binding_key: w,
+                input_key: f.key,
                 activator_index: 0,
                 binding_index: 0,
-                modeid: Q,
-                mode_shift: y,
+                modeid: N,
+                mode_shift: S,
               };
               null != e && (t.new_binding = e),
-                IA._A.SetControllerInputBinding(p, t),
-                IA._A.SaveEditingConfiguration(p),
+                IA._A.SetControllerInputBinding(h, t),
+                IA._A.SaveEditingConfiguration(h),
                 IA._A.EnsureEditingConfiguration();
             },
-            K = (A) => {
+            $ = (A) => {
               var e, t;
               const n = a.createElement(
                   "div",
                   { className: CA().FlexFlowRow },
-                  W
+                  K
                 ),
                 o = a.createElement(
                   DA.xV,
                   { label: n },
-                  !R &&
+                  !L &&
                     a.createElement(
                       a.Fragment,
                       null,
@@ -9793,65 +9803,65 @@
                         {
                           onSelected: () => {
                             var A, e, t;
-                            let n = G[0];
-                            if (v.inherited_from_parentset) {
+                            let n = M[0];
+                            if (f.inherited_from_parentset) {
                               const e = (A, e) =>
                                 (0, Y.z)(() => {
                                   const t = {
-                                    action_set_key: b.key,
+                                    action_set_key: Q.key,
                                     action_set_layer_key:
-                                      null == w ? void 0 : w.key,
-                                    source_binding_key: f,
-                                    input_key: v.key,
+                                      null == y ? void 0 : y.key,
+                                    source_binding_key: w,
+                                    input_key: f.key,
                                     activator_index: 0,
                                     binding_index: A,
-                                    modeid: Q,
-                                    mode_shift: y,
+                                    modeid: N,
+                                    mode_shift: S,
                                   };
                                   null != e && (t.new_binding = e),
-                                    IA._A.SetControllerInputBinding(p, t),
-                                    IA._A.SaveEditingConfiguration(p),
+                                    IA._A.SetControllerInputBinding(h, t),
+                                    IA._A.SaveEditingConfiguration(h),
                                     IA._A.EnsureEditingConfiguration();
                                 });
                               null === (A = null == n ? void 0 : n.bindings) ||
                                 void 0 === A ||
                                 A.forEach((A) => e(-1, A));
                             }
-                            Bn(p, f, v, b, w, -1, void 0, Q, y);
+                            Bn(h, w, f, Q, y, -1, void 0, N, S);
                             const o = {
                                 type: D.tg
                                   .k_EControllerBindingType_ControllerAction,
                                 controller_action: { action: 40 },
                               },
                               r = {
-                                action_set_key: b.key,
+                                action_set_key: Q.key,
                                 action_set_layer_key:
-                                  null == w ? void 0 : w.key,
-                                source_binding_key: f,
-                                input_key: v.key,
+                                  null == y ? void 0 : y.key,
+                                source_binding_key: w,
+                                input_key: f.key,
                                 activator_index:
                                   null !==
                                     (t =
-                                      null === (e = v.activators) ||
+                                      null === (e = f.activators) ||
                                       void 0 === e
                                         ? void 0
                                         : e.length) && void 0 !== t
                                     ? t
                                     : 0,
                                 binding_index: 0,
-                                modeid: Q,
-                                mode_shift: y,
+                                modeid: N,
+                                mode_shift: S,
                                 new_binding: o,
-                                source_mode: h,
+                                source_mode: b,
                               };
-                            IA._A.SetControllerInputBinding(p, r),
-                              IA._A.SaveEditingConfiguration(p),
+                            IA._A.SetControllerInputBinding(h, r),
+                              IA._A.SaveEditingConfiguration(h),
                               IA._A.EnsureEditingConfiguration(),
                               IA._A.SetEditedInputBinding(o),
                               IA._A.SetActiveInputBinding(r),
-                              B.push(
+                              v.push(
                                 T.Z5.GamepadUI.ControllerConfigurator.ChooseBinding(
-                                  p
+                                  h
                                 )
                               );
                           },
@@ -9881,7 +9891,7 @@
                                   IA._A.SetControllerInputActivator(A, r);
                                 }
                               });
-                            })(p, f, v, b, w, G.length, Q, y);
+                            })(h, w, f, Q, y, M.length, N, S);
                           },
                         },
                         (0, l.Xx)(
@@ -9889,21 +9899,21 @@
                         )
                       )
                     ),
-                  !X &&
-                    !H &&
+                  !U &&
+                    !Z &&
                     a.createElement(
                       ae.nQ,
                       {
                         title: (0, l.Xx)(
                           "#ControllerConfigurator_Activator_ContextMenuItem_RenameGrouped_Activators_Title"
                         ),
-                        onResult: J,
+                        onResult: q,
                       },
                       a.createElement(ae.J1, {
                         title: (0, l.Xx)(
                           "#ControllerConfigurator_ActionSets_RenameVirtualMenuDialog_Title_1",
                           null ===
-                            (e = null == L ? void 0 : L.key_binding_data) ||
+                            (e = null == x ? void 0 : x.key_binding_data) ||
                             void 0 === e
                             ? void 0
                             : e.friendly_name_utf8
@@ -9913,7 +9923,7 @@
                         initialText: (0, l.Xx)(
                           "#ControllerConfigurator_ActionSets_RenameBaseSetDialog_InitialText_1",
                           null ===
-                            (t = null == L ? void 0 : L.key_binding_data) ||
+                            (t = null == x ? void 0 : x.key_binding_data) ||
                             void 0 === t
                             ? void 0
                             : t.friendly_name_utf8
@@ -9923,19 +9933,19 @@
                 );
               (0, fA.yV)(o, A);
             },
-            q = a.createElement(
+            AA = a.createElement(
               "div",
               { className: (0, _.Z)(CA().FlexFlowRow, CA().GroupedActivators) },
-              W,
+              K,
               a.createElement(
                 "div",
                 { className: CA().ActivatorDesc },
-                (0, l.Xx)("#ControllerConfigurator_Activators_Desc", G.length)
+                (0, l.Xx)("#ControllerConfigurator_Activators_Desc", M.length)
               )
             ),
-            $ = (A, e) => {
+            eA = (A, e) => {
               var t;
-              const n = null == F ? void 0 : F.bindings[A],
+              const n = null == O ? void 0 : O.bindings[A],
                 o = Object.assign(Object.assign({}, null != n ? n : {}), {
                   key_binding_data: Object.assign(
                     Object.assign(
@@ -9958,36 +9968,36 @@
                   ),
                 }),
                 r = {
-                  action_set_key: b.key,
-                  action_set_layer_key: null == w ? void 0 : w.key,
-                  source_binding_key: f,
-                  input_key: v.key,
+                  action_set_key: Q.key,
+                  action_set_layer_key: null == y ? void 0 : y.key,
+                  source_binding_key: w,
+                  input_key: f.key,
                   activator_index: 0,
                   binding_index: A,
-                  modeid: Q,
-                  mode_shift: y,
+                  modeid: N,
+                  mode_shift: S,
                   new_binding: o,
                 };
-              IA._A.SetControllerInputBinding(p, r),
-                IA._A.SaveEditingConfiguration(p),
+              IA._A.SetControllerInputBinding(h, r),
+                IA._A.SaveEditingConfiguration(h),
                 IA._A.EnsureEditingConfiguration();
             };
           return a.createElement(
             a.Fragment,
             null,
-            k &&
+            R &&
               a.createElement(
                 i.gN,
                 {
-                  label: q,
+                  label: AA,
                   inlineWrap: "keep-inline",
                   onContextMenu: IA._A.IsUpdatingEditingConfiguration
                     ? void 0
-                    : (A) => K(A),
-                  indentLevel: N,
+                    : (A) => $(A),
+                  indentLevel: G,
                   childrenContainerWidth:
-                    null !== (d = A.childrenContainerWidth) && void 0 !== d
-                      ? d
+                    null !== (E = A.childrenContainerWidth) && void 0 !== E
+                      ? E
                       : "fixed",
                 },
                 a.createElement(
@@ -9995,12 +10005,12 @@
                   {
                     className: (0, _.Z)(
                       CA().BindingButtons,
-                      x && CA().HasIcons
+                      X && CA().HasIcons
                     ),
                     retainFocus: !0,
                     navEntryPreferPosition: QA.c4.PREFERRED_CHILD,
                   },
-                  x &&
+                  X &&
                     a.createElement(
                       i.zx,
                       {
@@ -10008,37 +10018,37 @@
                           ((A, e, t, n) => {
                             (0, g.AM)(
                               a.createElement(be, {
-                                onOK: (e) => $(A, e),
-                                onRemove: () => $(A, void 0),
+                                onOK: (e) => eA(A, e),
+                                onRemove: () => eA(A, void 0),
                                 appID: e,
                                 selectedIcon: t,
                               }),
                               n
                             );
-                          })(0, p, j, (0, C.RA)(A)),
+                          })(0, h, J, (0, C.RA)(A)),
                         className: (0, _.Z)(
                           CA().BindingButton,
                           CA().BindingIconButton
                         ),
-                        disabled: !V && !z,
+                        disabled: !j && !W,
                         noFocusRing: !1,
                       },
                       a.createElement(Ge, {
                         filenameOrURI:
-                          null !== (m = null == j ? void 0 : j.icon_url) &&
-                          void 0 !== m
-                            ? m
-                            : null == j
+                          null !== (I = null == J ? void 0 : J.icon_url) &&
+                          void 0 !== I
+                            ? I
+                            : null == J
                             ? void 0
-                            : j.icon_filename,
-                        background: null == j ? void 0 : j.color_background,
-                        foreground: null == j ? void 0 : j.color_foreground,
+                            : J.icon_filename,
+                        background: null == J ? void 0 : J.color_background,
+                        foreground: null == J ? void 0 : J.color_foreground,
                       })
                     ),
-                  (null === (E = null == L ? void 0 : L.key_binding_data) ||
-                  void 0 === E
+                  (null === (B = null == x ? void 0 : x.key_binding_data) ||
+                  void 0 === B
                     ? void 0
-                    : E.friendly_name_utf8) &&
+                    : B.friendly_name_utf8) &&
                     a.createElement(
                       "div",
                       { className: CA().BindingDisplayName },
@@ -10051,42 +10061,42 @@
                           ),
                         },
                         null ===
-                          (I = null == L ? void 0 : L.key_binding_data) ||
-                          void 0 === I
+                          (p = null == x ? void 0 : x.key_binding_data) ||
+                          void 0 === p
                           ? void 0
-                          : I.friendly_name_utf8
+                          : p.friendly_name_utf8
                       )
                     ),
                   a.createElement(
                     i.zx,
                     {
                       className: CA().BindingOptionsButton,
-                      onClick: (A) => K(A),
+                      onClick: (A) => $(A),
                     },
                     a.createElement(P.Zrf, null)
                   )
                 )
               ),
-            G.map((e, t) =>
+            M.map((e, t) =>
               a.createElement(
                 un,
                 Object.assign(
                   {
                     key: t,
-                    input: v,
-                    indentLevel: M,
-                    eControllerMode: h,
-                    eControllerSource: f,
-                    baseActionSet: b,
-                    layerActionSet: w,
+                    input: f,
+                    indentLevel: F,
+                    eControllerMode: b,
+                    eControllerSource: w,
+                    baseActionSet: Q,
+                    layerActionSet: y,
                     activatorIndex: t,
                     activator: e,
                     bModeInherited: A.bModeInherited,
-                    modeid: Q,
-                    modeShift: y,
-                    bActivatorsGrouped: k,
+                    modeid: N,
+                    modeShift: S,
+                    bActivatorsGrouped: R,
                   },
-                  S
+                  k
                 )
               )
             )
@@ -14702,7 +14712,8 @@
           r = a.useRef(),
           i = a.useRef(!0),
           l = (0, F.SZ)(
-            () => 0 == hA.cS.storePreferences.provide_deck_feedback
+            () =>
+              G.De.ON_DECK && 0 == hA.cS.storePreferences.provide_deck_feedback
           ),
           c = (0, F.SZ)(() =>
             oa.xP.BShouldPromptForDeckCompatibilityFeedback(A.overview.appid)
@@ -26805,7 +26816,7 @@
           c = null == r ? void 0 : r.find((A) => A.timezoneID == o),
           s = c ? (0, us.Ni)(c) : "",
           u = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          m = parseInt(1675213783),
+          m = parseInt(1675392650),
           C = m && (0, xc._o)(m, n, s),
           E = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           I = (0, Oc.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -49857,7 +49868,7 @@
           ),
           l = (0, Jn.iR)();
         if (!t) return null;
-        let c = (0, _.Z)(Cb().ViewPlaceholder, Cb().Fullscreen);
+        let c = (0, _.Z)(Cb().ViewPlaceholder, n && Cb().Fullscreen);
         return a.createElement(
           wn,
           {
@@ -51639,7 +51650,6 @@
         );
       }
       var Ow;
-      t(77797);
       const xw = {
           ㄱ: "ᄀ",
           ㄲ: "ᄁ",
@@ -52251,17 +52261,6 @@
               lastElement: void 0,
             }),
             (this.m_mapTouched = new Set()),
-            (this.m_rgKeyboardLocations = G.De.ON_DECK
-              ? ["center-bottom", "center-top"]
-              : [
-                  "center-bottom",
-                  "lower-left",
-                  "upper-left",
-                  "center-top",
-                  "upper-right",
-                  "lower-right",
-                ]),
-            (this.m_iNextKeyboardLocation = 0),
             (this.state = {
               toggleStates: {
                 Shift: Vw.Off,
@@ -53192,16 +53191,12 @@
             ? (null === (A = this.props.windowInstance.BrowserWindow) ||
                 void 0 === A ||
                 A.SteamClient.Window.MoveToLocation(
-                  this.m_rgKeyboardLocations[this.m_iNextKeyboardLocation],
+                  this.props.VirtualKeyboardManager.KeyboardLocation,
                   10
                 ),
-              (this.m_iNextKeyboardLocation =
-                (this.m_iNextKeyboardLocation + 1) %
-                this.m_rgKeyboardLocations.length))
+              this.props.VirtualKeyboardManager.RotateKeyboardLocation())
             : this.props.bModal &&
-              (this.m_iNextKeyboardLocation =
-                (this.m_iNextKeyboardLocation + 1) %
-                this.m_rgKeyboardLocations.length);
+              this.props.VirtualKeyboardManager.RotateKeyboardLocation();
         }
         BIsKeyEnabled(A) {
           switch (A) {
@@ -53486,7 +53481,7 @@
             o = (0, n._T)(A, ["className", "children"]),
             r = (0, F.SZ)(() => this.GetKeyboardThemeClassName()),
             i = (0, F.SZ)(
-              () => this.m_rgKeyboardLocations[this.m_iNextKeyboardLocation]
+              () => this.props.VirtualKeyboardManager.KeyboardLocation
             );
           return a.createElement(
             sA.s,
@@ -54274,7 +54269,6 @@
         (nQ.s_EmojiKeyWidth = 58),
         (nQ.s_longPressThreshold = 450),
         (nQ.s_longPressRepeatThreshold = 200),
-        (0, n.gn)([Y.LO], nQ.prototype, "m_iNextKeyboardLocation", void 0),
         (0, n.gn)([d.ak], nQ.prototype, "OnLayoutChanged", null),
         (0, n.gn)([d.ak], nQ.prototype, "OnForwardKeyEvent", null),
         (0, n.gn)([d.ak], nQ.prototype, "OnDeleteSurroundingText", null),
@@ -54473,30 +54467,44 @@
       }
       var mQ = t(97334);
       const CQ = (0, iA.Pi)(function (A) {
-          const { bPlayingStartupMovie: e } = A,
-            [t, n] = a.useState(),
-            [o, r] = a.useState(),
-            i = Xn.mg.IsLockScreenActive(),
-            l = (0, To.p)();
+          var e;
+          const { bPlayingStartupMovie: t } = A,
+            [n, o] = a.useState(),
+            [r, i] = a.useState(),
+            l = Xn.mg.IsLockScreenActive(),
+            c = (0, To.p)();
           a.useLayoutEffect(() => {
-            if (o) return l.InitGamepadApplicationUI(o);
-          }, [l, o]);
-          const c = (0, dA.k6)(),
-            s = a.useCallback(() => {
-              t
-                ? t.Activate()
+            if (r) return c.InitGamepadApplicationUI(r);
+          }, [c, r]);
+          const s = (0, dA.k6)(),
+            g = a.useCallback(() => {
+              n
+                ? n.Activate()
                 : console.warn(
                     "FocusApplicationRoot called before root mounted"
                   );
-            }, [t]);
+            }, [n]);
+          a.useLayoutEffect(() => c.InitNavigation(s, g), [c, s, g]);
+          const u =
+              (null === (e = (0, w.Wy)()) || void 0 === e
+                ? void 0
+                : e.ownerWindow) || window,
+            m = a.useCallback((A) => {
+              "Enter" == A.key &&
+                A.altKey &&
+                (A.preventDefault(),
+                A.stopPropagation(),
+                b.nm.WindowStore.GamepadUIMainWindowInstance.BrowserWindow.SteamClient.Window.Minimize(),
+                SteamClient.UI.ExitBigPictureMode());
+            }, []);
           return (
-            a.useLayoutEffect(() => l.InitNavigation(c, s), [l, c, s]),
+            (0, d.JI)(u, "keydown", m, { capture: !0 }),
             a.createElement(
               Vn.sE,
               null,
               a.createElement(
                 Jn.Fs,
-                { fnFocusNavigationRoot: s },
+                { fnFocusNavigationRoot: g },
                 a.createElement(
                   "div",
                   {
@@ -54504,19 +54512,19 @@
                     "flow-children": "row",
                     className: M().MainNavMenuMainSplit,
                   },
-                  l.BHasMenus() && a.createElement(EQ, { ModalManager: o }),
+                  c.BHasMenus() && a.createElement(EQ, { ModalManager: r }),
                   a.createElement(IQ, {
-                    refNavTreeRoot: n,
-                    refModalManager: r,
+                    refNavTreeRoot: o,
+                    refModalManager: i,
                   }),
-                  l.BIsGamepadApplicationUIInitialized() &&
+                  c.BIsGamepadApplicationUIInitialized() &&
                     a.createElement(sb, { bQuickAccessFooter: !1 }),
                   a.createElement(iQ, null)
                 ),
                 a.createElement(
                   Lt.S,
                   null,
-                  !e && !i && a.createElement(mQ.yg, null)
+                  !t && !l && a.createElement(mQ.yg, null)
                 )
               )
             )

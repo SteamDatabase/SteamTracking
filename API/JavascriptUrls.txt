@@ -194,6 +194,7 @@ ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/14/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/15/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/17/
+${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
 ${COMMUNITY_BASE_URL}invites/ajaxcreate
