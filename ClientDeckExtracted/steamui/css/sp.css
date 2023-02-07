@@ -42201,9 +42201,10 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .virtualkeyboard_KeyboardMetaKey_1WbIj .virtualkeyboard_ShiftedLabel_3FZuk {
   width: 20px;
-  height: 20px;
+  height: 18px;
   display: flex;
   margin: auto;
+  margin-top: -6px;
 }
 .virtualkeyboard_KeyboardMetaKey_1WbIj span {
   margin: 0px;

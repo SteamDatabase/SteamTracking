@@ -16129,7 +16129,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, G.Xx)("#Settings_System_SteamLocalBuild"),
-          l = parseInt(1675392650),
+          l = parseInt(1675742243),
           c = l && (0, xa._o)(l, e, o),
           m = i.sSteamBuildDate,
           p = "linux" == O.De.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -29053,8 +29053,9 @@
               strFastScrollTo: p,
               navRefPlaceholder: d,
               bindNavRef: u,
+              FastScrollTo: g,
             } = (0, L.Q)(t, n, o),
-            g = (function (e) {
+            _ = (function (e) {
               const {
                   childSections: t,
                   strCollectionId: n,
@@ -29089,15 +29090,37 @@
               bindNavRef: u,
             }),
             {
-              onFocusWithinContainer: _,
-              fastScrollOverlay: v,
-              onGamepadDirectionGridContainer: C,
-            } = (0, G.t)(c, p, d);
-          return r.createElement(
-            A.s,
-            { onButtonDown: s, onButtonUp: l, onFocusWithin: _ },
-            r.createElement(A.s, { onGamepadDirection: C }, g),
-            v
+              onFocusWithinContainer: v,
+              fastScrollOverlay: C,
+              onGamepadDirectionGridContainer: E,
+            } = (0, G.t)(c, p, d),
+            S = r.useCallback(
+              (e) => {
+                if (1 == n) {
+                  let t = e.key.toLowerCase();
+                  t >= "0" && t <= "9" && (t = "#"),
+                    1 == t.length &&
+                      ((t >= "a" && t <= "z") || "#" == t) &&
+                      (g(t), e.preventDefault(), e.stopPropagation());
+                }
+              },
+              [g, n]
+            );
+          return (
+            r.useEffect(
+              () =>
+                o
+                  ? (o.addEventListener("keydown", S),
+                    () => o.removeEventListener("keydown", S))
+                  : () => {},
+              [o, S]
+            ),
+            r.createElement(
+              A.s,
+              { onButtonDown: s, onButtonUp: l, onFocusWithin: v },
+              r.createElement(A.s, { onGamepadDirection: E }, _),
+              C
+            )
           );
         },
         J = (e) => {
@@ -29198,39 +29221,39 @@
         const t = e[0].toLowerCase();
         return t < "a" ? "#" : t;
       }
-      function h(e, t, n, a) {
-        let r,
-          o = "",
-          i = !1;
-        const s = e.children[t],
-          l = (e, t) => {
+      function h(e, t, n, a, r) {
+        let o,
+          i = "",
+          s = !1;
+        const l = e.children[t],
+          c = (e, t) => {
             if (e <= "a" && t == d.Up) return "#";
             if (e < "a" && t == d.Down) return "a";
             const n = String.fromCharCode(e.charCodeAt(0) + t);
             return n < "a" || n > "z" ? e : n;
           },
-          c = u(s.sort_as);
-        let m, p;
-        do {
-          if (((m = p), (p = l(p || c, n)), m == p)) break;
-          r = e.children.findIndex((e) => {
-            return (
-              (t = e.sort_as),
-              ("#" == (n = p)
-                ? t[0] < "a"
-                : (null === (r = t[0]) || void 0 === r
-                    ? void 0
-                    : r.toLowerCase()) == n) &&
-                (!a || a(e))
-            );
-            var t, n, r;
-          });
-        } while (-1 == r);
-        return (
-          (-1 != r && p != c) || (i = !0),
-          (o = p),
-          { nextItem: r, nextTargetName: o, bFinished: i }
-        );
+          m = (e, t) => {
+            var n;
+            return "#" == t
+              ? e[0] < "a"
+              : (null === (n = e[0]) || void 0 === n
+                  ? void 0
+                  : n.toLowerCase()) == t;
+          };
+        if (r)
+          (o = e.children.findIndex((e) => m(e.sort_as, r) && (!a || a(e)))),
+            -1 == o && (s = !0),
+            (i = r);
+        else {
+          const t = u(l.sort_as);
+          let r, p;
+          do {
+            if (((r = p), (p = c(p || t, n)), r == p)) break;
+            o = e.children.findIndex((e) => m(e.sort_as, p) && (!a || a(e)));
+          } while (-1 == o);
+          (-1 != o && p != t) || (s = !0), (i = p);
+        }
+        return { nextItem: o, nextTargetName: i, bFinished: s };
       }
       function g(e, t, n) {
         let a,
@@ -29319,37 +29342,45 @@
             [S, f]
           ),
           b = a.useCallback(
-            (t, a) => {
-              var r;
+            (t, a, r) => {
+              var s;
               if (f()) return !0;
               p("Focus placeholder", C.current.current),
-                null === (r = C.current.current) ||
-                  void 0 === r ||
-                  r.TakeFocus(),
+                null === (s = C.current.current) ||
+                  void 0 === s ||
+                  s.TakeFocus(),
                 (t = (0, o.Lh)(t, 0, e.length));
-              const s = e[t];
-              a = (0, o.Lh)(a, 0, s.children.length - 1);
-              let m = s.refSection.current.offsetTop;
-              const d = Math.floor(a / s.refItemsPerRow.current);
-              m += d * (s.childHeight + s.nGridRowGap);
-              const u = window.getComputedStyle(n),
-                h = parseInt(u.getPropertyValue("scroll-padding-top")) || 0;
+              const m = e[t];
+              a = (0, o.Lh)(a, 0, m.children.length - 1);
+              let d = m.refSection.current.offsetTop;
+              const u = Math.floor(a / m.refItemsPerRow.current);
+              d += u * (m.childHeight + m.nGridRowGap);
+              const h = window.getComputedStyle(n),
+                g = parseInt(h.getPropertyValue("scroll-padding-top")) || 0;
               return (
-                (m = m - h + 8),
-                new Promise((e, r) => {
-                  const o = {
-                    msDuration: 350,
-                    timing: "cubic-in-out",
-                    onComplete: () => {
-                      (i.current = t),
-                        (c.current = a),
-                        p("Scrolled to", n.scrollTop),
-                        (y.current = void 0),
-                        e();
-                    },
+                (d = d - g + 8),
+                new Promise((e, o) => {
+                  const s = () => {
+                    (i.current = t),
+                      (c.current = a),
+                      p("Scrolled to", n.scrollTop),
+                      (y.current = void 0),
+                      e();
                   };
-                  (y.current = new l.jg(n, { scrollTop: m }, o)),
-                    y.current.Start();
+                  if (r)
+                    n.scrollTo({ top: d }),
+                      window.setTimeout(() => {
+                        s();
+                      }, 100);
+                  else {
+                    const e = {
+                      msDuration: 350,
+                      timing: "cubic-in-out",
+                      onComplete: s,
+                    };
+                    (y.current = new l.jg(n, { scrollTop: d }, e)),
+                      y.current.Start();
+                  }
                 })
               );
             },
@@ -29380,7 +29411,27 @@
             },
             [f, E, b, e, t]
           ),
-          D = a.useRef(0);
+          D = a.useCallback(
+            (n) => {
+              if (1 != t || 1 != e.length) return !1;
+              const a = h(e[0], 0, d.Down, void 0, n);
+              if (!a.bFinished) {
+                v(a.nextTargetName);
+                const e = b(0, a.nextItem, !0);
+                return (
+                  !1 !== e &&
+                  (!0 !== e &&
+                    e.then(() => {
+                      S(), v("");
+                    }),
+                  !0)
+                );
+              }
+              return !0;
+            },
+            [t, e, b, S]
+          ),
+          N = a.useRef(0);
         return {
           onItemFocused: (e, t) => {
             p("Focused", e, t, E(e, t).display_name),
@@ -29417,7 +29468,7 @@
               if (
                 (e.detail.button == r.eV.DIR_UP ||
                   e.detail.button == r.eV.DIR_DOWN) &&
-                (e.detail.is_repeat && D.current++, D.current >= 5)
+                (e.detail.is_repeat && N.current++, N.current >= 5)
               ) {
                 let t;
                 e.detail.button == r.eV.DIR_DOWN
@@ -29430,8 +29481,8 @@
                   e.preventDefault(),
                   !0 !== n &&
                     n.then(() => {
-                      p("Fast scroll complete, repeats", D.current),
-                        D.current < 5 &&
+                      p("Fast scroll complete, repeats", N.current),
+                        N.current < 5 &&
                           (p("Fast scroll complete, taking focus"), S(), v(""));
                     }),
                   !0)
@@ -29443,14 +29494,14 @@
           ),
           onGamepadButtonUp: a.useCallback(
             (e) => {
-              p(e.detail.button, D.current),
+              p(e.detail.button, N.current),
                 (e.detail.button != r.eV.DIR_UP &&
                   e.detail.button != r.eV.DIR_DOWN) ||
-                  (D.current > 4 &&
+                  (N.current > 4 &&
                     (p("Exiting fast scroll"),
                     void 0 === y.current && S(),
                     v(""))),
-                (D.current = 0);
+                (N.current = 0);
             },
             [S]
           ),
@@ -29459,6 +29510,7 @@
           strFastScrollTo: u,
           bindNavRef: w,
           navRefPlaceholder: C,
+          FastScrollTo: D,
         };
       }
       !(function (e) {
