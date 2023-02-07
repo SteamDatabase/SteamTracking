@@ -17548,7 +17548,7 @@
               null == t ? void 0 : t.GetShortDescription()
             )
           ),
-          a.createElement(Fi.O, { info: n })
+          a.createElement(Fi.O, { info: n, bPopOutTrailerPlayback: !0 })
         );
       }
       const ro = (e) => {

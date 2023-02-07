@@ -27680,7 +27680,11 @@
             s.createElement(
               J,
               null,
-              s.createElement(C.Y0, { bRenderOverlayAtRoot: !0 }, t)
+              s.createElement(
+                C.Y0,
+                { bRenderOverlayAtRoot: !0, bUsePopups: !1 },
+                t
+              )
             )
           )
         );
