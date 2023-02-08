@@ -10360,6 +10360,22 @@
         SetHelpText(e, t) {
           this.SetKVLang(this.m_model.help_text, e, t);
         }
+        GetCurAppealsText() {
+          return this.GetAppealsText(d.U.Get().GetCurEditLanguage());
+        }
+        GetAppealsText(e) {
+          var t;
+          return null !== (t = this.GetKVLang(this.m_model.appeals_text, e)) &&
+            void 0 !== t
+            ? t
+            : "";
+        }
+        SetCurAppealsText(e) {
+          this.SetAppealsText(d.U.Get().GetCurEditLanguage(), e);
+        }
+        SetAppealsText(e, t) {
+          this.SetKVLang(this.m_model.appeals_text, e, t);
+        }
         BIsCategoriesEnabled() {
           return this.m_model.categories.enabled;
         }
@@ -10718,6 +10734,9 @@
             (this.m_model.help_text &&
               this.m_model.help_text[t] &&
               this.m_model.help_text[t].length > 0) ||
+            (this.m_model.appeals_text &&
+              this.m_model.appeals_text[t] &&
+              this.m_model.appeals_text[t].length > 0) ||
             (this.m_model.special_event_name &&
               this.m_model.special_event_name[t] &&
               this.m_model.special_event_name[t].length > 0) ||
@@ -10781,6 +10800,9 @@
               (this.m_model.help_text &&
                 !Array.isArray(this.m_model.help_text)) ||
                 (this.m_model.help_text = {}),
+              (this.m_model.appeals_text &&
+                !Array.isArray(this.m_model.appeals_text)) ||
+                (this.m_model.appeals_text = {}),
               (this.m_model.special_event_description &&
                 !Array.isArray(this.m_model.special_event_description)) ||
                 (this.m_model.special_event_description = {}),
@@ -11132,6 +11154,10 @@
         (0, r.gn)([g.ak], B.prototype, "GetHelpText", null),
         (0, r.gn)([g.ak], B.prototype, "SetCurHelpText", null),
         (0, r.gn)([l.aD.bound], B.prototype, "SetHelpText", null),
+        (0, r.gn)([g.ak], B.prototype, "GetCurAppealsText", null),
+        (0, r.gn)([g.ak], B.prototype, "GetAppealsText", null),
+        (0, r.gn)([g.ak], B.prototype, "SetCurAppealsText", null),
+        (0, r.gn)([l.aD.bound], B.prototype, "SetAppealsText", null),
         (0, r.gn)([g.ak], B.prototype, "BIsCategoriesEnabled", null),
         (0, r.gn)([l.aD.bound], B.prototype, "SetCategoriesEnabled", null),
         (0, r.gn)([g.ak], B.prototype, "GetCategoriesRequired", null),
