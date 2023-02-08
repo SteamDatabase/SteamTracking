@@ -135,9 +135,9 @@
       r.d(t, {
         NZ: () => i,
         TG: () => n,
-        io: () => h,
-        qO: () => B,
-        tY: () => _,
+        io: () => B,
+        qO: () => b,
+        tY: () => h,
       });
       var i,
         n,
@@ -149,8 +149,9 @@
         u = r(81130),
         m = (r(26149), r(36039), r(90666)),
         d = r(88514),
-        g = (r(99925), r(79742));
-      function _(e) {
+        g = (r(99925), r(79742)),
+        _ = r(26682);
+      function h(e) {
         const {
             shared_secret: t,
             identity_secret: r,
@@ -189,7 +190,7 @@
             (e[(e.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
             (e[(e.k_SecondaryDomainFail = 2)] = "k_SecondaryDomainFail");
         })(n || (n = {}));
-      class h {
+      class B {
         constructor(e, t, r) {
           (this.m_bRemoteInteraction = !1),
             (this.m_eFailureState = i.None),
@@ -240,18 +241,27 @@
                       1
                     );
                 }
-                return (
-                  9 === r || 27 === r
-                    ? (this.m_eFailureState = i.Expired)
-                    : 84 === r
-                    ? (this.m_eFailureState = i.RateLimitExceeded)
-                    : (console.error(
-                        `Failed to poll auth session. Result: ${r}`
-                      ),
-                      (this.m_eFailureState = i.Generic)),
-                  this.m_onCompleteCallback({ bSuccess: !1 }),
-                  r
-                );
+                if (9 === r || 27 === r) this.m_eFailureState = i.Expired;
+                else if (84 === r) this.m_eFailureState = i.RateLimitExceeded;
+                else {
+                  if (118 == r) {
+                    if ((0, _.U5)("LoginUI.ShowAgreementPopup"))
+                      SteamClient.LoginUI.ShowAgreementPopup(
+                        t.Body().agreement_session_url()
+                      );
+                    else {
+                      const e = t.Body().agreement_session_url(),
+                        r = document.location.href;
+                      window.location.href = `${e}&redir=${encodeURIComponent(
+                        r
+                      )}`;
+                    }
+                    return this.m_onCompleteCallback({ bSuccess: !1 }), r;
+                  }
+                  console.error(`Failed to poll auth session. Result: ${r}`),
+                    (this.m_eFailureState = i.Generic);
+                }
+                return this.m_onCompleteCallback({ bSuccess: !1 }), r;
               }
               const {
                 new_challenge_url: n,
@@ -310,10 +320,10 @@
           });
         }
       }
-      function B(e) {
+      function b(e) {
         const t = new FormData();
         t.append("nonce", e), t.append("sessionid", m.De.SESSIONID);
-        var r = new URL(document.location.href);
+        let r = new URL(document.location.href);
         const i = new URLSearchParams(r.search);
         i.has("need_password") &&
           (i.delete("need_password"), (r.search = i.toString())),
@@ -396,12 +406,12 @@
             )
           );
       }
-      (0, a.gn)([s.LO], h.prototype, "m_strChallengeURL", void 0),
-        (0, a.gn)([s.LO], h.prototype, "m_bRemoteInteraction", void 0),
-        (0, a.gn)([s.LO], h.prototype, "m_eFailureState", void 0),
-        (0, a.gn)([s.LO], h.prototype, "m_strExtendedErrorMessage", void 0),
-        (0, a.gn)([u.a], h.prototype, "PollForUpdate", null),
-        (0, a.gn)([u.a], h.prototype, "SetTokenToRevoke", null);
+      (0, a.gn)([s.LO], B.prototype, "m_strChallengeURL", void 0),
+        (0, a.gn)([s.LO], B.prototype, "m_bRemoteInteraction", void 0),
+        (0, a.gn)([s.LO], B.prototype, "m_eFailureState", void 0),
+        (0, a.gn)([s.LO], B.prototype, "m_strExtendedErrorMessage", void 0),
+        (0, a.gn)([u.a], B.prototype, "PollForUpdate", null),
+        (0, a.gn)([u.a], B.prototype, "SetTokenToRevoke", null);
     },
     51167: (e, t, r) => {
       "use strict";
@@ -1158,9 +1168,9 @@
           f = 4 === c,
           w = 3 === c,
           y = w
-            ? n.createElement(U, null)
+            ? n.createElement(D, null)
             : f
-            ? n.createElement(D, { reset: _ })
+            ? n.createElement(U, { reset: _ })
             : b
             ? n.createElement(X, { size: "small" })
             : null,
@@ -1217,7 +1227,7 @@
           ),
         });
       }
-      function D(e) {
+      function U(e) {
         return n.createElement(
           "svg",
           {
@@ -1246,7 +1256,7 @@
           })
         );
       }
-      function U() {
+      function D() {
         return n.createElement(
           "svg",
           {
@@ -1742,7 +1752,7 @@
           case 6:
           case 4:
             const t = 6 === f;
-            return n.createElement(Ue, {
+            return n.createElement(De, {
               type: t ? "mobile" : "email",
               accountName: h.password.strAccountName,
               onUseCodeOverride: h.password.useCodeOverride,
@@ -2490,7 +2500,7 @@
               )
             )
           ),
-          n.createElement(De, { className: z().AwaitingEmailConfIcon })
+          n.createElement(Ue, { className: z().AwaitingEmailConfIcon })
         );
       }
       function je(e) {
@@ -2566,7 +2576,7 @@
           })
         );
       }
-      function De(e) {
+      function Ue(e) {
         return n.createElement(
           "svg",
           { viewBox: "0 0 58 56", fill: "none", className: e.className },
@@ -2576,7 +2586,7 @@
           })
         );
       }
-      function Ue(e) {
+      function De(e) {
         const { type: t, accountName: r, onUseCodeOverride: i } = e,
           a = J(),
           s = n.createElement(Ne, { type: "mobile" }),
@@ -3667,6 +3677,11 @@
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
                   },
+                  agreement_session_url: {
+                    n: 8,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
                 },
               }),
             B.sm_m
@@ -4594,7 +4609,14 @@
             A.sm_m ||
               (A.sm_m = {
                 proto: A,
-                fields: { refresh_tokens: { n: 1, c: M, r: !0, q: !0 } },
+                fields: {
+                  refresh_tokens: { n: 1, c: M, r: !0, q: !0 },
+                  last_token_reset: {
+                    n: 2,
+                    br: n.FE.readInt32,
+                    bw: n.Xc.writeInt32,
+                  },
+                },
               }),
             A.sm_m
           );

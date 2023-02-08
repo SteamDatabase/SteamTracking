@@ -1229,9 +1229,9 @@
       r.d(t, {
         NZ: () => i,
         TG: () => n,
-        io: () => f,
-        qO: () => _,
-        tY: () => g,
+        io: () => _,
+        qO: () => b,
+        tY: () => f,
       });
       var i,
         n,
@@ -1243,8 +1243,9 @@
         u = r(81130),
         m = (r(26149), r(36039), r(90666)),
         d = r(88514),
-        h = (r(99925), r(79742));
-      function g(e) {
+        h = (r(99925), r(79742)),
+        g = r(26682);
+      function f(e) {
         const {
             shared_secret: t,
             identity_secret: r,
@@ -1283,7 +1284,7 @@
             (e[(e.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
             (e[(e.k_SecondaryDomainFail = 2)] = "k_SecondaryDomainFail");
         })(n || (n = {}));
-      class f {
+      class _ {
         constructor(e, t, r) {
           (this.m_bRemoteInteraction = !1),
             (this.m_eFailureState = i.None),
@@ -1334,18 +1335,27 @@
                       1
                     );
                 }
-                return (
-                  9 === r || 27 === r
-                    ? (this.m_eFailureState = i.Expired)
-                    : 84 === r
-                    ? (this.m_eFailureState = i.RateLimitExceeded)
-                    : (console.error(
-                        `Failed to poll auth session. Result: ${r}`
-                      ),
-                      (this.m_eFailureState = i.Generic)),
-                  this.m_onCompleteCallback({ bSuccess: !1 }),
-                  r
-                );
+                if (9 === r || 27 === r) this.m_eFailureState = i.Expired;
+                else if (84 === r) this.m_eFailureState = i.RateLimitExceeded;
+                else {
+                  if (118 == r) {
+                    if ((0, g.U5)("LoginUI.ShowAgreementPopup"))
+                      SteamClient.LoginUI.ShowAgreementPopup(
+                        t.Body().agreement_session_url()
+                      );
+                    else {
+                      const e = t.Body().agreement_session_url(),
+                        r = document.location.href;
+                      window.location.href = `${e}&redir=${encodeURIComponent(
+                        r
+                      )}`;
+                    }
+                    return this.m_onCompleteCallback({ bSuccess: !1 }), r;
+                  }
+                  console.error(`Failed to poll auth session. Result: ${r}`),
+                    (this.m_eFailureState = i.Generic);
+                }
+                return this.m_onCompleteCallback({ bSuccess: !1 }), r;
               }
               const {
                 new_challenge_url: n,
@@ -1404,10 +1414,10 @@
           });
         }
       }
-      function _(e) {
+      function b(e) {
         const t = new FormData();
         t.append("nonce", e), t.append("sessionid", m.De.SESSIONID);
-        var r = new URL(document.location.href);
+        let r = new URL(document.location.href);
         const i = new URLSearchParams(r.search);
         i.has("need_password") &&
           (i.delete("need_password"), (r.search = i.toString())),
@@ -1490,12 +1500,12 @@
             )
           );
       }
-      (0, a.gn)([s.LO], f.prototype, "m_strChallengeURL", void 0),
-        (0, a.gn)([s.LO], f.prototype, "m_bRemoteInteraction", void 0),
-        (0, a.gn)([s.LO], f.prototype, "m_eFailureState", void 0),
-        (0, a.gn)([s.LO], f.prototype, "m_strExtendedErrorMessage", void 0),
-        (0, a.gn)([u.a], f.prototype, "PollForUpdate", null),
-        (0, a.gn)([u.a], f.prototype, "SetTokenToRevoke", null);
+      (0, a.gn)([s.LO], _.prototype, "m_strChallengeURL", void 0),
+        (0, a.gn)([s.LO], _.prototype, "m_bRemoteInteraction", void 0),
+        (0, a.gn)([s.LO], _.prototype, "m_eFailureState", void 0),
+        (0, a.gn)([s.LO], _.prototype, "m_strExtendedErrorMessage", void 0),
+        (0, a.gn)([u.a], _.prototype, "PollForUpdate", null),
+        (0, a.gn)([u.a], _.prototype, "SetTokenToRevoke", null);
     },
     94486: (e, t, r) => {
       "use strict";
@@ -4766,6 +4776,11 @@
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
                   },
+                  agreement_session_url: {
+                    n: 8,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -5693,7 +5708,14 @@
             k.sm_m ||
               (k.sm_m = {
                 proto: k,
-                fields: { refresh_tokens: { n: 1, c: T, r: !0, q: !0 } },
+                fields: {
+                  refresh_tokens: { n: 1, c: T, r: !0, q: !0 },
+                  last_token_reset: {
+                    n: 2,
+                    br: n.FE.readInt32,
+                    bw: n.Xc.writeInt32,
+                  },
+                },
               }),
             k.sm_m
           );

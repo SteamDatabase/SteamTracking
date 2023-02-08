@@ -63304,6 +63304,11 @@
                     br: ge.readString,
                     bw: fe.writeString,
                   },
+                  agreement_session_url: {
+                    n: 8,
+                    br: ge.readString,
+                    bw: fe.writeString,
+                  },
                 },
               }),
             RS.sm_m
@@ -64183,7 +64188,14 @@
             US.sm_m ||
               (US.sm_m = {
                 proto: US,
-                fields: { refresh_tokens: { n: 1, c: NS, r: !0, q: !0 } },
+                fields: {
+                  refresh_tokens: { n: 1, c: NS, r: !0, q: !0 },
+                  last_token_reset: {
+                    n: 2,
+                    br: ge.readInt32,
+                    bw: fe.writeInt32,
+                  },
+                },
               }),
             US.sm_m
           );
@@ -65590,18 +65602,27 @@
                       1
                     );
                 }
-                return (
-                  9 === r || 27 === r
-                    ? (this.m_eFailureState = pw.Expired)
-                    : 84 === r
-                    ? (this.m_eFailureState = pw.RateLimitExceeded)
-                    : (console.error(
-                        `Failed to poll auth session. Result: ${r}`
-                      ),
-                      (this.m_eFailureState = pw.Generic)),
-                  this.m_onCompleteCallback({ bSuccess: !1 }),
-                  r
-                );
+                if (9 === r || 27 === r) this.m_eFailureState = pw.Expired;
+                else if (84 === r) this.m_eFailureState = pw.RateLimitExceeded;
+                else {
+                  if (118 == r) {
+                    if (Ri("LoginUI.ShowAgreementPopup"))
+                      SteamClient.LoginUI.ShowAgreementPopup(
+                        t.Body().agreement_session_url()
+                      );
+                    else {
+                      const e = t.Body().agreement_session_url(),
+                        r = document.location.href;
+                      window.location.href = `${e}&redir=${encodeURIComponent(
+                        r
+                      )}`;
+                    }
+                    return this.m_onCompleteCallback({ bSuccess: !1 }), r;
+                  }
+                  console.error(`Failed to poll auth session. Result: ${r}`),
+                    (this.m_eFailureState = pw.Generic);
+                }
+                return this.m_onCompleteCallback({ bSuccess: !1 }), r;
               }
               const {
                 new_challenge_url: i,
@@ -65663,7 +65684,7 @@
       function fw(e) {
         const t = new FormData();
         t.append("nonce", e), t.append("sessionid", I.SESSIONID);
-        var r = new URL(document.location.href);
+        let r = new URL(document.location.href);
         const n = new URLSearchParams(r.search);
         n.has("need_password") &&
           (n.delete("need_password"), (r.search = n.toString())),
