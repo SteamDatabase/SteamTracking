@@ -518,7 +518,9 @@ a:link {
   padding-bottom: 0px;
   margin-bottom: 4px;
   position: absolute;
-  transition: all 0.1s ease-in-out, top 0.3s ease-in-out;
+  transition-property: top, background-color, box-shadow, height, width, margin;
+  transition-duration: 0.3s, 0.1s, 0.1s, 0.1s, 0.1s, 0.1s;
+  transition-timing-function: ease-in-out;
 }
 .interactiverecommender_RecommendationEntry_3opuX
   .interactiverecommender_BottomEntrySection_2U08C {
@@ -528,7 +530,9 @@ a:link {
   height: 0px;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.1s ease-in-out;
+  transition-property: height, opacity;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 .interactiverecommender_RecommendationEntry_3opuX
   .interactiverecommender_BottomEntrySection_2U08C
@@ -638,7 +642,9 @@ a:link {
   padding: 4px;
   margin-left: 210px;
   line-height: 135%;
-  transition: all 0.1s ease-in-out;
+  transition-property: margin-left;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 @media screen and (max-width: 777px) {
   .interactiverecommender_RecommendationEntry_3opuX

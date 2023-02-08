@@ -3108,6 +3108,7 @@
           {
             "flow-children": "row",
             className: (0, r.Z)(c.carouselBody, e.className, E),
+            navKey: e.navKey,
           },
           i.createElement(
             a.sj,
@@ -8878,35 +8879,35 @@
       };
       function ue(e) {
         const { mapSectionLists: t, section: n, event: i, saleSection: o } = e,
-          { bIsScreenWide: s, nCarouselCapsules: r } = X(),
-          c = Math.min(e.nCapsulesPerPage, r),
-          d = (0, G.id)(),
-          u = t.get(n.id);
-        if (!u || 0 == u.length) return null;
-        let m = null;
+          { bIsScreenWide: r, nCarouselCapsules: c } = X(),
+          d = Math.min(e.nCapsulesPerPage, c),
+          u = (0, G.id)(),
+          m = t.get(n.id);
+        if (!m || 0 == m.length) return null;
+        let p = null;
         switch (n.type) {
           case "4wide":
-            m = a.createElement(
+            p = a.createElement(
               me,
               Object.assign({}, e, {
-                capsuleList: u,
-                nCapsulesPerPage: c,
-                bIsScreenWide: s,
+                capsuleList: m,
+                nCapsulesPerPage: d,
+                bIsScreenWide: r,
               })
             );
             break;
           case "creator4wide":
-            m = a.createElement(
+            p = a.createElement(
               pe,
               Object.assign({}, e, {
-                capsuleList: u,
-                nCapsulesPerPage: c,
-                bIsScreenWide: s,
+                capsuleList: m,
+                nCapsulesPerPage: d,
+                bIsScreenWide: r,
               })
             );
             break;
           default:
-            m = a.createElement("div", null, "Unknown: ", n.type);
+            p = a.createElement("div", null, "Unknown: ", n.type);
         }
         return a.createElement(
           D.ZP,
@@ -8919,15 +8920,16 @@
               onRender: () => le._.Get().AddInteraction(o.unique_id, 0),
             },
             a.createElement(
-              "div",
+              s.s,
               {
+                navKey: n.id,
                 className: (0, w.Z)(
                   S.SaleSection,
                   S.CarouselDisplay,
                   g.SaleSectionCtn,
                   "SaleSectionForCustomCSS"
                 ),
-                style: (0, h.V)(o, i, d),
+                style: (0, h.V)(o, i, u),
               },
               a.createElement(
                 "div",
@@ -8941,7 +8943,7 @@
                   })
                 )
               ),
-              m
+              p
             )
           )
         );
@@ -8966,12 +8968,15 @@
             null == r
               ? void 0
               : r.map((e) => ({
-                  Render: (t) =>
-                    a.createElement(ce.B, {
-                      key: e.type + "_" + e.id,
+                  Render: (t) => {
+                    const n = e.type + "_" + e.id;
+                    return a.createElement(ce.B, {
+                      key: n,
+                      navKey: n,
                       capsule: e,
                       imageType: "header",
-                    }),
+                    });
+                  },
                 })),
           m = [n];
         return (0, f.Pe)(
@@ -9027,13 +9032,16 @@
             null == c
               ? void 0
               : c.map((e) => ({
-                  Render: (t) =>
-                    a.createElement(ce.B, {
-                      key: e.type + "_" + e.id,
+                  Render: (t) => {
+                    const n = e.type + "_" + e.id;
+                    return a.createElement(ce.B, {
+                      key: n,
+                      navKey: n,
                       capsule: e,
                       imageType: "header",
                       creatorAccountID: null == m ? void 0 : m.get(e.id),
-                    }),
+                    });
+                  },
                 })),
           g = [n];
         return r
@@ -9890,6 +9898,7 @@
                       padded: !0,
                       gap: 12,
                       screenIsWide: y,
+                      navKey: "large_cluster_" + t,
                     },
                     w.map((e, t) =>
                       a.createElement(ze, {
@@ -20212,21 +20221,21 @@
         let h = !1;
         const S = [{ elements: [], activeTab: new Z.u(null, o) }];
         t.GetSaleSections().forEach((i, o) => {
-          var s;
-          const l = S[S.length - 1].activeTab;
-          if (l && (!l.ShouldShowSection(i) || i.hide_section)) return;
-          const d = "tabs" != i.section_type,
-            m = c.g6
+          var l;
+          const d = S[S.length - 1].activeTab;
+          if (d && (!d.ShouldShowSection(i) || i.hide_section)) return;
+          const m = "tabs" != i.section_type,
+            p = c.g6
               .Get()
               .BIsPartnerTakeoverActive(
                 t.GetContentHubType(),
                 t.GetContentHubCategory(),
                 t.GetContentHubTag()
               ),
-            p = r && !m && !Boolean(t.jsondata.content_hub_restricted_width);
-          let _ = null;
+            _ = r && !p && !Boolean(t.jsondata.content_hub_restricted_width);
+          let E = null;
           if (i.disable_section)
-            _ = a.createElement(Ya, { section: i, event: t, language: n });
+            E = a.createElement(Ya, { section: i, event: t, language: n });
           else if (
             (function (e) {
               return (
@@ -20251,17 +20260,17 @@
             !G.L7.logged_in
           )
             h ||
-              ((_ = a.createElement(Bn, { section: i, event: t, language: n })),
+              ((E = a.createElement(Bn, { section: i, event: t, language: n })),
               (h = !0));
           else {
             const t = i.diable_tab_id_filtering
-              ? new Z.u(null, l.GetSaleDay())
-              : l;
+              ? new Z.u(null, d.GetSaleDay())
+              : d;
             if ("tabs" == i.section_type) {
               const e = v.get(i);
               S.push({ activeTab: e, elements: [] });
             }
-            _ = a.createElement(
+            E = a.createElement(
               ts,
               Object.assign({}, e, {
                 section: i,
@@ -20269,10 +20278,11 @@
                 appVisibilityTracker: u,
                 selectedTabs: v,
                 setTabUniqueIDQueryParam: g,
-                expanded: p,
+                expanded: _,
               })
             );
           }
+          const f = "SaleSection_" + (i.unique_id || o);
           S[S.length - 1].elements.push(
             a.createElement(
               Ze.SV,
@@ -20284,25 +20294,26 @@
                     i.visibility_by_door_index_state,
                   door_index_visibility: i.door_index_visibility,
                 },
-                d
+                m
                   ? a.createElement(
-                      "div",
+                      s.s,
                       {
-                        id: "SaleSection_" + (i.unique_id || o),
+                        navKey: f,
+                        id: f,
                         className: (0, w.Z)({
                           SaleSectionCtn: !0,
                           [i.section_type]: !0,
-                          [(null === (s = i.internal_section_data) ||
-                          void 0 === s
+                          [(null === (l = i.internal_section_data) ||
+                          void 0 === l
                             ? void 0
-                            : s.internal_type) || ""]: !0,
-                          expanded: p,
+                            : l.internal_type) || ""]: !0,
+                          expanded: _,
                           [i.single_item_style || ""]: !0,
                         }),
                       },
-                      _
+                      E
                     )
-                  : _
+                  : E
               )
             )
           );
@@ -20519,6 +20530,7 @@
                         return a.createElement(_.B, {
                           imageType: o,
                           key: h,
+                          navKey: h,
                           capsule: e,
                           bShowParentApp: p,
                           bUseSubscriptionLayout: v,
@@ -20667,6 +20679,7 @@
                 w._.Get().AddInteraction(e, Math.floor(t / B) * B),
               padded: !Boolean(v),
               screenIsWide: E,
+              navKey: e,
             },
             b(n, 0, n.length, B, L)
           );

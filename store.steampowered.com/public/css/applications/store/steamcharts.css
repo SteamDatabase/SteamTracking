@@ -1091,7 +1091,9 @@ div#global_header .content {
   width: 304%;
   transform: scale(0.55) rotate(337deg) translateX(-44%) translateY(1%);
   transform-origin: top left;
-  transition: all 0.3s ease-in;
+  transition-property: transform, filter;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
   filter: saturate(0.8) contrast(0.8) brightness(0.6) sepia(0.3)
     hue-rotate(0deg) saturate(1) blur(4px);
 }

@@ -70,7 +70,9 @@
   padding: 6px;
   padding-bottom: 8px;
   background-color: #22252b;
-  transition: all 0.21s ease-in-out;
+  transition-property: padding;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -502,8 +504,9 @@
   display: flex;
   flex-direction: column;
   opacity: 1;
-  transition: all 0.3s ease-in-out;
+  transition-property: opacity, bottom;
   transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
   user-select: none;
   pointer-events: none;
 }
@@ -614,7 +617,9 @@
   stroke-width: 6px;
   stroke-dasharray: 0 576;
   stroke-linecap: butt;
-  transition: all 0.12s ease-in-out;
+  transition-property: stroke-dasharray, fill;
+  transition-duration: 0.12s;
+  transition-timing-function: ease-in-out;
   transform: translateX(20px);
 }
 .BroadcastVideoUserInputNeeded:hover .SVGIcon_Play path {
@@ -736,7 +741,9 @@
   margin: 8px;
   cursor: pointer;
   position: relative;
-  transition: all 0.12s ease-in-out;
+  transition-property: filter, width, height, margin;
+  transition-duration: 0.12s;
+  transition-timing-function: ease-in-out;
 }
 .videoControlButton:hover {
   filter: brightness(1.3);
@@ -879,7 +886,9 @@
   text-align: center;
   border-radius: 2px;
   margin-left: -6px;
-  transition: all 0.12s ease-in-out;
+  transition-property: background-color, color;
+  transition-duration: 0.12s;
+  transition-timing-function: ease-in-out;
   margin-right: -60px;
   text-transform: uppercase;
 }
@@ -982,7 +991,9 @@
 .BroadcastVolumeControl .videoControlButton .SoundWavesHighest,
 .BroadcastVolumeControl .videoControlButton .SoundWavesHigh,
 .BroadcastVolumeControl .videoControlButton .SoundWavesMed {
-  transition: all 0.32s ease-in-out;
+  transition-property: opacity;
+  transition-duration: 0.32s;
+  transition-timing-function: ease-in-out;
 }
 .BroadcastVolumeControl .videoControlButton.HighVolume .SoundWavesHighest,
 .BroadcastVolumeControl .videoControlButton.MedVolume .SoundWavesHighest,
@@ -1060,7 +1071,9 @@
   fill: #5dc2fe;
   stroke: #000;
   stroke-width: 10px;
-  transition: all 0.16s ease-in-out;
+  transition-property: transform, opacity, fill, stroke;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
 }
 .STV_timelineContainer:not(.grabberDown)
   .STV_timelineGrabber.grabberOffScreenRight
@@ -1073,7 +1086,9 @@
   fill: #5dc2fe;
   stroke: #000;
   stroke-width: 10px;
-  transition: all 0.16s ease-in-out;
+  transition-property: transform, opacity, fill, stroke;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
 }
 .STV_timelineGrabberArrow {
   width: 24px;
@@ -1138,7 +1153,9 @@
   fill: #886b48;
   transform: scale(0.6) translateY(26px);
   transform-origin: 50% 50%;
-  transition: all 0.16s ease-in-out;
+  transition-property: transform, fill;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
 }
 .timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer {
   transform: scale(1) translateY(0px);
@@ -1250,7 +1267,9 @@
   background-color: #216c91;
   position: absolute;
   top: 7px;
-  transition: all 0.2s ease-in-out;
+  transition-property: background, background-color, top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .STV_timelineMapWindow {
   height: 100%;
@@ -1371,7 +1390,9 @@
 }
 .ToggleBroadcastChat .SVGIcon_DoubleArrow {
   transform: rotateZ(180deg);
-  transition: all 0.16s ease-in-out;
+  transition-property: transform;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
 }
 .ChatCollapsed .ToggleBroadcastChat .SVGIcon_DoubleArrow {
   transform: rotateZ(0deg);
@@ -1678,7 +1699,9 @@
   font-size: 20px;
   text-shadow: 0px 0px 2px #000, 1px 1px 3px 4px #000, 1px 1px 8px 6px #000;
   display: none;
-  transition: all 0.3s ease-in-out;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 .videoContainer.HidePlayerControls .BroadcastDetails {
   transform: translateY(-24px);
@@ -1699,7 +1722,9 @@
   padding-bottom: 56.25%;
 }
 .videoSrc {
-  transition: all 0.06s ease-in-out;
+  transition-property: filter;
+  transition-duration: 0.06s;
+  transition-timing-function: ease-in-out;
   z-index: 2;
   max-width: 100%;
   height: 100%;

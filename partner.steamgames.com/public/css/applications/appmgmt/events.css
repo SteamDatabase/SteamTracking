@@ -287,7 +287,9 @@ img.emoticon_emoticon_316r8 {
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  transition: all 0.1s ease-in-out;
+  transition-property: width, height, margin-top, margin-bottom;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   width: 32px;
@@ -504,7 +506,6 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   padding: 4px 4px 4px 8px;
   flex-shrink: 1;
   width: 100%;
-  transition: all 0.2s ease-in-out;
 }
 .chatentry_chatTextarea_pewyB.GamepadMode,
 .GamepadMode .chatentry_chatTextarea_pewyB {
@@ -2399,7 +2400,9 @@ a.bbcodes_LinkButton_lMVeY:hover {
   cursor: default;
   opacity: 0;
   -webkit-app-region: no-drag;
-  transition: all 0.21s ease-in-out;
+  transition-property: opacity;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
 }
 .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb
   .linkregionbox_LinkRegionSettings_1Ko6I {
@@ -2413,7 +2416,9 @@ a.bbcodes_LinkButton_lMVeY:hover {
   cursor: default;
   opacity: 0;
   -webkit-app-region: no-drag;
-  transition: all 0.21s ease-in-out;
+  transition-property: opacity;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
 }
 .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb
   .linkregionbox_LinkRegionDelete_1MGOz
@@ -2423,7 +2428,9 @@ a.bbcodes_LinkButton_lMVeY:hover {
   line {
   stroke-width: 26px;
   stroke: #008ada;
-  transition: all 0.21s ease-in-out;
+  transition-property: stroke, stroke-width;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
 }
 .linkregionbox_LinkRegionEdge_Cl8g8.linkregionbox_Middle_2Hdpb:hover
   .linkregionbox_LinkRegionDelete_1MGOz:hover
@@ -2704,7 +2711,9 @@ a.bbcodes_LinkButton_lMVeY:hover {
 }
 .imagedraganddroptarget_SelectImageButton_39lgc {
   color: #dfe3e6;
-  transition: all 0.2s ease-out;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 25%;
   background-size: 330% 100%;
@@ -3034,7 +3043,6 @@ html:not(.client)
   margin-top: 60px;
 }
 .apppartnereventspage_AppPartnerEventsPage_1m-hJ {
-  transition: all 0.32s ease-in-out;
   position: absolute;
   top: 0;
   right: 0;
@@ -3453,10 +3461,14 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   animation-duration: 0.32s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
-  transition: all 0.21s ease-out;
+  transition-property: transform, background-color, box-shadow;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-out;
 }
 .apppartnereventspage_AnimIn_bIoyq svg {
-  transition: all 0.21s ease-out;
+  transition-property: transform;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-out;
 }
 .apppartnereventspage_AnimIn_bIoyq:active {
   background-color: #000;
@@ -3838,7 +3850,9 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   background-color: #1a9fff;
   border-radius: 2px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
-  transition: all 0.1s ease;
+  transition-property: color, background-color, border-radius;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
   display: flex;
 }
 .deckverified_LearnMorePC_3OSxY:hover,
@@ -5704,7 +5718,9 @@ html.touch
   right: 0;
   bottom: 0;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition-property: background, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 @media screen and (max-width: 768px) {
   .salepreviewwidgets_SaleItemBrowserRow_y9MSd
@@ -6301,7 +6317,6 @@ html.touch
   order: -1;
   margin-left: 4px;
   display: none;
-  transition: all 0.23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_y9MSd
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
@@ -11448,7 +11463,8 @@ div.savetoolbar_HoverToolTip_gba9O {
   padding: 4px 12px;
   cursor: pointer;
   border-bottom: 4px solid transparent;
-  transition: all 0.25s;
+  transition-property: border-bottom-color;
+  transition-duration: 0.25s;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;
@@ -12215,7 +12231,9 @@ html.responsive.touch
   border-radius: var(--gpCorner-Medium);
   margin: unset;
   height: fit-content;
-  transition: all 0.2s ease;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 .BasicUI
   .saleitembrowser_SaleItemBrowserContainer_2wLns
@@ -12783,6 +12801,7 @@ html.responsive.touch
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
   .adminshared_SectionCtn_3la4r {
+  position: relative;
   background: #2c2e35;
   padding: 24px;
   margin-bottom: 1px;
@@ -12819,6 +12838,35 @@ html.responsive.touch
 .adminshared_DashLink_2y93_ svg {
   height: 34px;
   width: 53px;
+}
+.adminshared_FlexRow_2OkCw {
+  display: flex;
+  flex-direction: row;
+}
+.adminshared_MarginBottom_1qVJS {
+  margin-bottom: 20px;
+}
+select {
+  font-size: 14px;
+  padding: 12px 10px;
+}
+.adminshared_StatusLineItemCtn_jtOdk {
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  margin-bottom: 4px;
+}
+.adminshared_StatusLineItemCtn_jtOdk .adminshared_StatusIcon_gwjXH {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+.adminshared_StatusLineItemCtn_jtOdk
+  .adminshared_StatusIcon_gwjXH.adminshared_StatusIconDone_20lWe
+  svg {
+  fill: #8bc53f;
+  stroke: #8bc53f;
 }
 .collapseablesection_SectionTitleHeader_1K5gA {
   display: flex;
@@ -13272,7 +13320,9 @@ html.responsive.touch
   text-decoration: none;
   font-size: 17px;
   line-height: 19px;
-  transition: all 0.3s ease;
+  transition-property: box-shadow, background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
   position: relative;
 }
@@ -13670,18 +13720,6 @@ ul li {
   color: #dedfe3;
 }
 .promotionplaneditor_PreviewLinksCtn_298xI
-  .promotionplaneditor_FeatureSelectCtn_FRWr1 {
-  width: 100%;
-  min-height: 30px;
-  position: relative;
-}
-.promotionplaneditor_PreviewLinksCtn_298xI
-  .promotionplaneditor_FeatureSelectCtn_FRWr1
-  .promotionplaneditor_FeatureSelectBtn_KdmlA {
-  position: absolute;
-  right: 0px;
-}
-.promotionplaneditor_PreviewLinksCtn_298xI
   .promotionplaneditor_PreviewLinkCtn_RacQW {
   position: relative;
   background: #3d4450;
@@ -13698,6 +13736,16 @@ ul li {
   a {
   text-decoration: none;
   color: #fff;
+}
+.promotionplaneditor_FeatureSelectCtn_FRWr1 {
+  width: 100%;
+  min-height: 30px;
+  position: relative;
+}
+.promotionplaneditor_FeatureSelectCtn_FRWr1
+  .promotionplaneditor_FeatureSelectBtn_KdmlA {
+  position: absolute;
+  right: 0px;
 }
 .promotionplaneditor_CreationDialogCtn_2LmdQ {
   max-width: 600px;
@@ -14430,6 +14478,27 @@ button.rbc-input::-moz-focus-inner {
   float: right;
 }
 
+.marketingmessageeditor_Dummy_3x7rO {
+  background-color: hotpink;
+}
+select {
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 12px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
+}
+.marketingmessageeditor_CountryInOut_219uC {
+  width: 30%;
+  margin-right: 8px;
+}
+.marketingmessageeditor_CountryText_YvodB {
+  flex-grow: 1;
+}
 .artworkuploader_ArtworkDimensionTooSmall_8JWUN {
   color: #999;
 }
@@ -14500,6 +14569,64 @@ button.rbc-input::-moz-focus-inner {
   width: 342px;
   height: 360px;
   border-style: dotted;
+}
+.marketingmessagefiltersedit_Dummy_3glD2 {
+  background-color: hotpink;
+}
+.marketingmessagefiltersedit_ConditionContainer_26iQ5 {
+  background: #222329;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.marketingmessagefiltersedit_AddConditionBtnCtn_2jPjO {
+  width: 25%;
+}
+.marketingmessagefiltersedit_CaseContainer_S7-lN {
+  background: #2c2d35;
+  padding: 16px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.marketingmessagefiltersedit_CaseTypeSelect_2c8Z6 {
+  width: 30%;
+}
+.marketingmessagefiltersedit_AddCaseBtnCtn_6Trpe {
+  width: 22%;
+  margin-left: 16px;
+}
+.marketingmessagefiltersedit_AddProductBtnCtn_1cTJt {
+  width: 25%;
+}
+.marketingmessagefiltersedit_SelectedProductList_B1AM6 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+}
+.marketingmessagefiltersedit_SelectedProduct_3qEa8 {
+  width: 20%;
+  margin-right: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 7px 12px;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+.marketingmessagefiltersedit_ConditionTitle_3b-fO {
+  font-size: 15px;
+  color: #fff;
+  font-style: italic;
+}
+.marketingmessagefiltersedit_ConditionTitleOr_2CvHf {
+  font-weight: 600;
+  color: #a667f5;
+}
+.marketingmessagefiltersedit_ConditionTitleAnd_yF0yE {
+  font-weight: 600;
+  color: #52f376;
+  display: inline-block;
+  margin-right: 6px;
+}
+.themefestplanning_Dummy_wW1AV {
+  background: hotpink;
 }
 .optin_admin_dashboard_DashboardCtn_24Fut {
   max-width: 1280px;

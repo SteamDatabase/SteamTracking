@@ -40,8 +40,6 @@ CVideoWatch.k_InBrowser = 1;
 CVideoWatch.k_InClient = 2;
 CVideoWatch.k_InOverlay = 3;
 CVideoWatch.k_InOldClient = 4;
-CVideoWatch.k_InHTML5AppWrapper = 5;
-CVideoWatch.k_InHTML5AppWrapperTenFoot = 6;
 
 CVideoWatch.k_MaximumVideoRestarts = 3;
 
@@ -151,7 +149,7 @@ CVideoWatch.prototype.Start = function()
 
 	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
 	this.m_player.SetUniqueId( this.m_nAppId + '/' + this.m_strVideoId );
-	this.m_eUIMode = ( this.m_eClientType == CVideoWatch.k_InHTML5AppWrapperTenFoot ) ? CDASHPlayerUI.eUIModeTenFoot : CDASHPlayerUI.eUIModeDesktop;
+	this.m_eUIMode = CDASHPlayerUI.eUIModeDesktop;
 	this.m_player.SetEMECapableHost( this.m_bEMECapableHost );
 
 	this.m_playerUI = new CDASHPlayerUI( this.m_player, this.m_eUIMode );

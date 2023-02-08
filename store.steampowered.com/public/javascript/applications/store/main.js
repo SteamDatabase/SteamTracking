@@ -3706,7 +3706,10 @@
             "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
           (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
             "EBrowserType_Offscreen_FriendsUI"),
-          (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+          (e[(e.EBrowserType_Offscreen_SteamUI = 12)] =
+            "EBrowserType_Offscreen_SteamUI"),
+          (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
+            "EBrowserType_OpenVROverlay_Subview");
       })(l || (l = {})),
         (function (e) {
           (e[(e.SystemKey0 = 0)] = "SystemKey0"),
@@ -4906,6 +4909,7 @@
             "popup-created" == e.data && this.OnCreateInternal();
         }
         Show(e = !0, t = !1) {
+          var n, i;
           window.SteamClient && (this.m_rgParams.eCreationFlags |= g.Hidden),
             this.m_rgParams.eCreationFlags & (g.NotFocusable | g.Tooltip) &&
               (e = !1),
@@ -4913,52 +4917,60 @@
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
                 : e && this.Focus(t));
-          let n,
-            i,
-            r,
-            s = w.GetExistingPopup(this.m_strName);
-          (s && !this.m_rgParams.replace_existing_popup) ||
+          let r,
+            s,
+            o,
+            a = w.GetExistingPopup(this.m_strName);
+          (a && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-            s
-              ? ((i = s.m_element),
-                (n = s.m_popup),
-                s.ReleasePopup(),
-                (r = s.m_renderWhenReady),
-                w.RemoveTrackedPopup(s),
-                n.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
-                n.removeEventListener("unload", s.OnUnload),
-                n.removeEventListener("resize", s.OnResizeEvent),
-                n.removeEventListener("focus", this.OnFocusInternal),
-                n.removeEventListener("blur", this.OnBlurInternal),
-                n.removeEventListener("drop", s.OnDrop),
-                n.removeEventListener("dragover", s.OnDragOver),
-                n.removeEventListener("message", this.OnMessage))
-              : (({ popup: n, element: i } = S.CreatePopup(
+            a
+              ? ((s = a.m_element),
+                (r = a.m_popup),
+                a.ReleasePopup(),
+                (o = a.m_renderWhenReady),
+                w.RemoveTrackedPopup(a),
+                r.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
+                r.removeEventListener("unload", a.OnUnload),
+                r.removeEventListener("resize", a.OnResizeEvent),
+                r.removeEventListener("focus", this.OnFocusInternal),
+                r.removeEventListener("blur", this.OnBlurInternal),
+                r.removeEventListener("drop", a.OnDrop),
+                r.removeEventListener("dragover", a.OnDragOver),
+                r.removeEventListener("message", this.OnMessage))
+              : (({ popup: r, element: s } = S.CreatePopup(
                   this.m_strName,
                   this.m_rgParams
                 )),
-                (r = new p(n.document, i))),
-            n &&
-              i &&
-              ((n.document.title = this.m_strTitle),
-              n.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-              n.addEventListener("unload", this.OnUnload),
-              n.addEventListener("resize", this.OnResizeEvent),
-              n.addEventListener("focus", this.OnFocusInternal),
-              n.addEventListener("blur", this.OnBlurInternal),
-              n.addEventListener("drop", this.OnDrop),
-              n.addEventListener("dragover", this.OnDragOver),
-              n.addEventListener("message", this.OnMessage),
+                (o = new p(r.document, s))),
+            r &&
+              s &&
+              ((r.document.title = this.m_strTitle),
+              r.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+              r.addEventListener("unload", this.OnUnload),
+              r.addEventListener("resize", this.OnResizeEvent),
+              r.addEventListener("focus", this.OnFocusInternal),
+              r.addEventListener("blur", this.OnBlurInternal),
+              r.addEventListener("drop", this.OnDrop),
+              r.addEventListener("dragover", this.OnDragOver),
+              r.addEventListener("message", this.OnMessage),
               u.De.LANGUAGE &&
-                n.document.documentElement.setAttribute("lang", (0, d.CE)()),
-              (this.m_popup = n),
-              (this.m_element = i),
-              (this.m_renderWhenReady = r),
+                r.document.documentElement.setAttribute("lang", (0, d.CE)()),
+              (this.m_popup = r),
+              (this.m_element = s),
+              (this.m_renderWhenReady = o),
               this.m_renderWhenReady.SetTarget(() =>
                 this.RenderInternal(this.m_popup, this.m_element, e)
               )),
             w.AddTrackedPopup(this),
-            s && e && this.Focus());
+            a
+              ? e && this.Focus()
+              : (null ===
+                  (i =
+                    null === (n = SteamClient.Features) || void 0 === n
+                      ? void 0
+                      : n.SteamInitsPopups) || void 0 === i
+                  ? void 0
+                  : i.call(n)) || this.OnCreateInternal());
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -4992,10 +5004,11 @@
             : (this.m_onCreateRender = () => this.RenderInternal(e, t, n));
         }
         OnCreateInternal() {
-          (this.m_bCreated = !0),
+          this.m_bCreated ||
+            ((this.m_bCreated = !0),
             this.OnCreate(),
             this.m_onCreateRender &&
-              (this.m_onCreateRender(), (this.m_onCreateRender = null));
+              (this.m_onCreateRender(), (this.m_onCreateRender = null)));
         }
         OnCreate() {}
         OnResizeEvent() {
@@ -5188,7 +5201,7 @@
         constructor() {
           if (
             ((this.m_bShuttingDown = !1),
-            (this.m_mapPopups = new Map()),
+            (this.m_mapPopups = r.LO.map([], { deep: !1 })),
             (this.m_rgShutdownCallbacks = []),
             (this.m_rgPopupCreatedCallbacks = []),
             (this.m_unCurrentAccountID = 0),
@@ -5239,6 +5252,10 @@
                 this.m_DynamicCSSObserver.observe(e, { childList: !0 }));
           }
         }
+        BAnyPopupHasFocus() {
+          for (const e of this.m_mapPopups.values()) if (e.focused) return !0;
+          return !1;
+        }
         SetCurrentLoggedInAccountID(e) {
           this.m_unCurrentAccountID != e &&
             ((this.m_unCurrentAccountID = e),
@@ -5277,8 +5294,13 @@
           let n = t.dimensions || {},
             i = n.width || 300,
             r = n.height || 300,
-            s = t.title,
-            a = "width=" + i + ",height=" + r;
+            s = t.title;
+          if (t.center_on_window && void 0 === n.left && void 0 === n.top) {
+            const e = t.center_on_window;
+            (n.left = e.innerWidth / 2 + e.screenLeft - i / 2),
+              (n.top = e.innerHeight / 2 + e.screenTop - r / 2);
+          }
+          let a = "width=" + i + ",height=" + r;
           void 0 !== n.left && (a += ",left=" + n.left),
             void 0 !== n.top && (a += ",top=" + n.top),
             (a += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
@@ -8398,7 +8420,7 @@
     },
     60664: (e, t, n) => {
       "use strict";
-      n.d(t, { VA: () => o, Y0: () => a });
+      n.d(t, { $y: () => a, Sp: () => o, VA: () => l, Y0: () => c });
       var i = n(77520),
         r = n(23816);
       n(39746);
@@ -8466,7 +8488,13 @@
           }
         }
       }
-      class o extends s {
+      function o(e) {
+        return s.SerializeNavState(e, !0, !1);
+      }
+      function a(e, t, n = 0) {
+        return s.RestoreSerializedNavState(e, t, n);
+      }
+      class l extends s {
         constructor() {
           super(...arguments), (this.m_rgHistory = []);
         }
@@ -8478,7 +8506,7 @@
             s.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), e);
         }
       }
-      class a extends s {
+      class c extends s {
         constructor() {
           super(...arguments), (this.m_mapHistory = new Map());
         }
@@ -10537,7 +10565,7 @@
           return this.m_target && this.m_target.node == e;
         }
         SuppressFocus() {
-          this.m_bSuppressed = !0;
+          (this.m_bSuppressed = !0), this.ClearInterval();
         }
         Reset() {
           (this.m_bSuppressed = !1),
@@ -10587,22 +10615,22 @@
     },
     56109: (e, t, n) => {
       "use strict";
-      n.d(t, { x: () => l });
-      var i = n(23816),
-        r = n(48780),
-        s = n(77520),
-        o = n(99533);
-      const a = new (n(30543).s)("FocusNavigation").Debug;
-      class l {
+      n.d(t, { x: () => a });
+      n(23816);
+      var i = n(48780),
+        r = n(77520),
+        s = n(99533);
+      const o = new (n(30543).s)("FocusNavigation").Debug;
+      class a {
         constructor(e, t) {
           (this.m_bActive = !1),
             (this.m_rgGamepadNavigationTrees = []),
             (this.m_LastActiveNavTree = null),
             (this.m_LastActiveFocusNavTree = null),
             (this.m_bMounted = !0),
-            (this.m_schDeferredActivate = new o.Ar()),
-            (this.m_FocusChangedCallbacks = new o.pB()),
-            (this.m_ActiveCallbacks = new o.pB()),
+            (this.m_schDeferredActivate = new s.Ar()),
+            (this.m_FocusChangedCallbacks = new s.pB()),
+            (this.m_ActiveCallbacks = new s.pB()),
             (this.m_iFocusChangeStack = 0),
             (this.m_controller = e),
             (this.m_rootWindow = t),
@@ -10626,11 +10654,11 @@
         }
         Destroy(e) {
           e == this.m_rootWindow
-            ? (a(`${this.LogName(e)} Destroying context for window`),
+            ? (o(`${this.LogName(e)} Destroying context for window`),
               (this.m_bMounted = !1),
               this.m_schDeferredActivate.Cancel(),
               this.SetActive(!1, e))
-            : a(`${this.LogName(e)} Child window destroyed`);
+            : o(`${this.LogName(e)} Child window destroyed`);
         }
         SetActive(e, t, n) {
           e
@@ -10643,7 +10671,7 @@
               ((this.m_bActive = e), this.m_ActiveCallbacks.Dispatch(e));
         }
         OnActivate(e) {
-          a(
+          o(
             `${this.LogName(e)} Activating context, there are ${
               this.m_rgGamepadNavigationTrees.length
             } trees in this context`
@@ -10651,21 +10679,21 @@
             this.SetActive(!0, e);
         }
         OnActivateBrowserView(e, t) {
-          a(`${this.LogName(e)} Browser View "${t}" activated in context`),
+          o(`${this.LogName(e)} Browser View "${t}" activated in context`),
             this.SetActive(!0, e, t);
         }
         OnDeactivate(e) {
           this.m_activeWindow == e
-            ? (a(`${this.LogName(e)} Deactivate context for window`),
+            ? (o(`${this.LogName(e)} Deactivate context for window`),
               this.SetActive(!1, e))
-            : a(
+            : o(
                 `${this.LogName(e)} Blurred, but not deactivating because (${
                   this.m_activeWindow.name
                 }) has focus.`
               );
         }
         OnDeactivateBrowserView(e, t) {
-          a(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
+          o(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
             this.m_activeBrowserView == t && this.SetActive(!1, e, t);
         }
         BIsActive() {
@@ -10688,18 +10716,18 @@
         SetActiveNavTree(e, t = !1) {
           if (e && this.m_LastActiveNavTree == e) return;
           const n = this.m_LastActiveNavTree;
-          n && r.Zf(this.m_rgGamepadNavigationTrees, n),
+          n && i.Zf(this.m_rgGamepadNavigationTrees, n),
             e ||
               (this.m_rgGamepadNavigationTrees.length &&
                 (e =
                   this.m_rgGamepadNavigationTrees[
                     this.m_rgGamepadNavigationTrees.length - 1
                   ]));
-          const s = this.m_LastActiveFocusNavTree == e;
-          e && r.Zf(this.m_rgGamepadNavigationTrees, e),
+          const r = this.m_LastActiveFocusNavTree == e;
+          e && i.Zf(this.m_rgGamepadNavigationTrees, e),
             (this.m_LastActiveNavTree = e),
             (e && e.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = e),
-            a(
+            o(
               `${this.LogName(e.Window)} Move from nav tree ${
                 null == n ? void 0 : n.id
               } to nav tree ${null == e ? void 0 : e.id} ${
@@ -10709,18 +10737,21 @@
             n && this.m_rgGamepadNavigationTrees.push(n),
             e &&
               (this.m_rgGamepadNavigationTrees.push(e),
-              !s && t && e.TakeFocus(i.uS.APPLICATION)),
+              r ||
+                !t ||
+                e.DeferredFocus.BHasQueuedFocusNode() ||
+                e.DeferredFocus.RequestFocus(e.Root)),
             n && n != this.m_LastActiveFocusNavTree && n.OnDeactivate(e),
-            e && !s && e.OnActivate(n);
+            e && !r && e.OnActivate(n);
         }
         BlurNavTree(e) {
           this.m_LastActiveNavTree == e && this.SetActiveNavTree(null, !0),
-            r.Zf(this.m_rgGamepadNavigationTrees, e),
+            i.Zf(this.m_rgGamepadNavigationTrees, e),
             this.m_rgGamepadNavigationTrees.unshift(e);
         }
         UnregisterGamepadNavigationTree(e) {
-          r.Zf(this.m_rgGamepadNavigationTrees, e),
-            a(
+          i.Zf(this.m_rgGamepadNavigationTrees, e),
+            o(
               `(${this.m_rootWindow.name}) Unregister tree ${
                 null == e ? void 0 : e.id
               } ${
@@ -10752,7 +10783,7 @@
         OnFocusChangeComplete(e) {
           if (
             (this.m_iFocusChangeStack--,
-            (0, s.X)(e == this.m_iFocusChangeStack, "out of order focus pop"),
+            (0, r.X)(e == this.m_iFocusChangeStack, "out of order focus pop"),
             0 == this.m_iFocusChangeStack)
           ) {
             const { source: e, from: t, to: n } = this.m_ActiveFocusChange;
@@ -11483,6 +11514,9 @@
               p > this.props.nAllowOffscreenPx)
             )
               return (
+                console.log(
+                  "Not showing hover because it didn't fit in the main or alt direction"
+                ),
                 e.setAttribute("style", "display: none;"),
                 (this.m_bNoSpace = !0),
                 void (this.props.onNoSpace && this.props.onNoSpace())
@@ -11747,7 +11781,7 @@
     },
     26682: (e, t, n) => {
       "use strict";
-      n.d(t, { U5: () => r.U5 });
+      n.d(t, { U5: () => r.U5, w3: () => r.w3 });
       var i,
         r = n(67119);
       !(function (e) {
@@ -11775,14 +11809,15 @@
       function i(e, t) {
         return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
       }
-      function r(e) {
-        return (function (e, t) {
-          if (!e) return !1;
-          const [n, r] = t.split(".", 2);
-          return n && r && i(e, n) && r in e.SteamClient[n];
-        })(window, e);
+      function r(e, t) {
+        if (!e) return !1;
+        const [n, r] = t.split(".", 2);
+        return n && r && i(e, n) && r in e.SteamClient[n];
       }
-      n.d(t, { U5: () => r });
+      function s(e) {
+        return r(window, e);
+      }
+      n.d(t, { U5: () => s, w3: () => r });
     },
     16792: (e, t, n) => {
       "use strict";
@@ -19750,50 +19785,51 @@
             },
             {
               updateParamsBeforeShow: (e) =>
-                (function (e, t, n) {
-                  var i, r, s, o;
-                  let a,
-                    l,
+                (function (e, t, n, i) {
+                  var r, s, o, a;
+                  let l,
                     c,
-                    d = t.popupWidth || 500,
-                    m = t.popupHeight || 400;
+                    d,
+                    m = t.popupWidth || 500,
+                    h = t.popupHeight || 400;
                   if (
                     u.De.IN_CLIENT &&
                     (null ===
-                      (r =
-                        null === (i = null == n ? void 0 : n.SteamClient) ||
-                        void 0 === i
+                      (s =
+                        null === (r = null == i ? void 0 : i.SteamClient) ||
+                        void 0 === r
                           ? void 0
-                          : i.Window) || void 0 === r
+                          : r.Window) || void 0 === s
                       ? void 0
-                      : r.GetBrowserID)
+                      : s.GetBrowserID)
                   )
-                    c = n.SteamClient.Window.GetBrowserID();
+                    d = i.SteamClient.Window.GetBrowserID();
                   else if (
                     u.De.IN_CLIENT &&
                     (null ===
-                      (o =
-                        null === (s = null == n ? void 0 : n.SteamClient) ||
-                        void 0 === s
+                      (a =
+                        null === (o = null == i ? void 0 : i.SteamClient) ||
+                        void 0 === o
                           ? void 0
-                          : s.Browser) || void 0 === o
+                          : o.Browser) || void 0 === a
                       ? void 0
-                      : o.GetBrowserID)
+                      : a.GetBrowserID)
                   )
-                    c = n.SteamClient.Browser.GetBrowserID();
+                    d = i.SteamClient.Browser.GetBrowserID();
                   else {
-                    let e = n.screen;
-                    (a = (e.availWidth - d) / 2), (l = (e.availHeight - m) / 2);
+                    let e = i.screen;
+                    (l = (e.availWidth - m) / 2), (c = (e.availHeight - h) / 2);
                     let t = e;
                     void 0 !== t.availLeft &&
                       void 0 !== t.availTop &&
-                      ((a += t.availLeft), (l += t.availTop));
+                      ((l += t.availLeft), (c += t.availTop));
                   }
                   return Object.assign(Object.assign({}, e), {
-                    dimensions: { width: d, height: m, left: a, top: l },
-                    window_opener_id: c,
+                    dimensions: { width: m, height: h, left: l, top: c },
+                    center_on_window: n.bCenterOnWindow ? i : void 0,
+                    window_opener_id: d,
                   });
-                })(e, l, h),
+                })(e, l, m, h),
               onClose: () => l.fnOnClose && l.fnOnClose(),
             }
           ),
@@ -19818,7 +19854,10 @@
                   }),
                   i.createElement(
                     c.Y0,
-                    { browserInfo: l.browserContext },
+                    {
+                      browserInfo: l.browserContext,
+                      bCenterPopupsOnWindow: m.bCenterOnWindow,
+                    },
                     t.element
                   )
                 )
@@ -19888,7 +19927,7 @@
     },
     39811: (e, t, n) => {
       "use strict";
-      n.d(t, { Y0: () => M, eR: () => k, $C: () => T });
+      n.d(t, { Y0: () => M, Yu: () => R, eR: () => k, $C: () => T });
       var i = n(70655),
         r = n(67294),
         s = n(73935),
@@ -20015,6 +20054,7 @@
                   t.TakeFocus())
                 : o.window.SteamClient.Window.HideWindow());
           }, [o, t, t.visible]),
+          R(o.window),
           r.useLayoutEffect(() => {
             t.SetPopup(o);
           }, [t, o]),
@@ -20076,8 +20116,9 @@
               refContextMenuManager: m,
               browserInfo: h,
               bUsePopups: p,
+              bCenterPopupsOnWindow: g,
             } = e,
-            g = (0, i._T)(e, [
+            _ = (0, i._T)(e, [
               "children",
               "bRenderOverlayAtRoot",
               "refModalManager",
@@ -20086,28 +20127,30 @@
               "refContextMenuManager",
               "browserInfo",
               "bUsePopups",
+              "bCenterPopupsOnWindow",
             ]),
-            _ = r.useRef();
-          _.current || (_.current = new l.pG());
-          let f = r.createElement(
+            f = r.useRef();
+          f.current || (f.current = new l.pG());
+          let v = r.createElement(
             a.t,
-            Object.assign({}, g, { DialogWrapper: d, ModalManager: _.current })
+            Object.assign({}, _, { DialogWrapper: d, ModalManager: f.current })
           );
-          e.bRenderOverlayAtRoot && (f = s.createPortal(f, document.body)),
+          e.bRenderOverlayAtRoot && (v = s.createPortal(v, document.body)),
             r.useEffect(
-              () => ((0, o.k$)(c, _.current), () => (0, o.k$)(c, null)),
+              () => ((0, o.k$)(c, f.current), () => (0, o.k$)(c, null)),
               [c]
             ),
             r.useEffect(() => {
-              void 0 !== p && _.current.SetUsePopups(p);
-            }, [p]);
-          const v = r.useMemo(
-            () => ({ ModalManager: _.current, DialogWrapper: d }),
+              void 0 !== p && f.current.SetUsePopups(p),
+                void 0 !== g && f.current.SetCenterPopupsOnWindow(g);
+            }, [p, g]);
+          const C = r.useMemo(
+            () => ({ ModalManager: f.current, DialogWrapper: d }),
             [d]
           );
           return r.createElement(
             D.Provider,
-            { value: v },
+            { value: C },
             r.createElement(
               E,
               {
@@ -20115,7 +20158,7 @@
                 refContextMenuManager: m,
                 browserInfo: h,
               },
-              f,
+              v,
               e.children
             )
           );
@@ -20125,6 +20168,16 @@
       }
       function k() {
         return r.useContext(D).DialogWrapper;
+      }
+      function R(e) {
+        const t = T();
+        r.useEffect(() => {
+          if (e)
+            return (
+              l.Zp.RegisterModalManager(t, e),
+              () => l.Zp.UnregisterModalManager(e)
+            );
+        }, [e, t]);
       }
     },
     2957: (e, t, n) => {
@@ -20140,6 +20193,7 @@
       class l {
         constructor() {
           (this.m_bUsePopups = !0),
+            (this.m_bCenterPopupsOnWindow = !1),
             (this.m_rgModals = []),
             (this.m_OnModalCountChangedCallbacks = new o.pB()),
             (this.m_OnModalShownCallbacks = new o.pB()),
@@ -20248,6 +20302,12 @@
         BUsePopups() {
           return this.m_bUsePopups;
         }
+        SetCenterPopupsOnWindow(e) {
+          this.m_bCenterPopupsOnWindow = e;
+        }
+        BCenterPopupsOnWindow() {
+          return this.m_bCenterPopupsOnWindow;
+        }
         RequestModalMeasure(e, t, n) {
           this.m_rgMeasureModalRequests.push({
             rctToMeasure: e,
@@ -20260,7 +20320,12 @@
           return this.m_rgLegacyPopupModals;
         }
         ShowLegacyPopupModal(e, t, n, i) {
-          const s = new r.lc(e, t, n, i);
+          const s = new r.lc(
+            e,
+            t,
+            n,
+            Object.assign({ bCenterOnWindow: this.m_bCenterPopupsOnWindow }, i)
+          );
           return (
             this.m_rgLegacyPopupModals.push(s),
             this.m_OnLegacyPopupModalCountChanged.Dispatch(
@@ -23258,14 +23323,15 @@
     },
     28609: (e, t, n) => {
       "use strict";
-      n.d(t, { T: () => a });
+      n.d(t, { T: () => l });
       var i = n(70655),
         r = n(67294),
-        s = n(95598),
-        o = n(64839);
-      class a extends r.Component {
+        s = n(26682),
+        o = n(95598),
+        a = n(64839);
+      class l extends r.Component {
         constructor(e) {
-          super(e), (this.state = { maximized: this.BIsMaximized() });
+          super(e), (this.state = { maximized: void 0 });
         }
         BIsMaximized() {
           let e =
@@ -23276,7 +23342,11 @@
           return 0 === e && 0 === t;
         }
         componentDidMount() {
-          this.props.popup.addEventListener("resize", this.UpdateMaximizeState);
+          this.UpdateMaximizeState(),
+            this.props.popup.addEventListener(
+              "resize",
+              this.UpdateMaximizeState
+            );
         }
         componentWillUnmount() {
           this.props.popup.removeEventListener(
@@ -23285,8 +23355,14 @@
           );
         }
         UpdateMaximizeState() {
-          let e = this.BIsMaximized();
-          e != this.state.maximized && this.setState({ maximized: e });
+          if ((0, s.w3)(this.props.popup, "Window.IsWindowMaximized"))
+            this.props.popup.SteamClient.Window.IsWindowMaximized((e) => {
+              e != this.state.maximized && this.setState({ maximized: e });
+            });
+          else {
+            let e = this.BIsMaximized();
+            e != this.state.maximized && this.setState({ maximized: e });
+          }
         }
         render() {
           let e = this.props.popup,
@@ -23318,7 +23394,7 @@
                         e && e.close();
                       },
                     },
-                    r.createElement(s.pVO, null)
+                    r.createElement(o.pVO, null)
                   ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -23329,8 +23405,8 @@
                           e.SteamClient.Window.ToggleMaximize();
                         },
                       },
-                      this.state.maximized && r.createElement(s.r6F, null),
-                      !this.state.maximized && r.createElement(s.YqJ, null)
+                      this.state.maximized && r.createElement(o.r6F, null),
+                      !this.state.maximized && r.createElement(o.YqJ, null)
                     ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -23341,14 +23417,14 @@
                           e.SteamClient.Window.Minimize();
                         },
                       },
-                      r.createElement(s.gR, null)
+                      r.createElement(o.gR, null)
                     )
                 )
             )
           );
         }
       }
-      (0, i.gn)([o.ak], a.prototype, "UpdateMaximizeState", null);
+      (0, i.gn)([a.ak], l.prototype, "UpdateMaximizeState", null);
     },
     28268: (e, t, n) => {
       "use strict";
@@ -26142,7 +26218,7 @@
                                                 BundleStorePage: () =>
                                                   "/bundle/:bundleid(\\d+)/:bundlename?",
                                                 SaleLandingPage: () =>
-                                                  "/sale/:salePageName",
+                                                  "/:prefix(sale|deckverified)/:salePageName",
                                                 RemotePlay: () =>
                                                   "/remoteplay_hub/",
                                                 VRHardware: () =>
@@ -26940,7 +27016,7 @@
             n.e(6720),
             n.e(6571),
             n.e(8986),
-          ]).then(n.bind(n, 17446))
+          ]).then(n.bind(n, 18424))
         ),
         le = s.lazy(() =>
           Promise.all([n.e(7400), n.e(6108), n.e(6571), n.e(988)]).then(

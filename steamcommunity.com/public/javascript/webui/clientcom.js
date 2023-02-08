@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7817670";
+var CLSTAMP = "7827167";
 (() => {
   "use strict";
   var e = {
@@ -247,9 +247,8 @@ var CLSTAMP = "7817670";
       IN_LOGIN: !1,
       IN_LOGIN_REFRESH: !1,
       USE_LONGEST_LOC_STRING: !1,
-      STEAM_INITS_POPUPS: !1,
     },
-    I = {
+    A = {
       logged_in: !1,
       steamid: "",
       accountid: 0,
@@ -264,7 +263,7 @@ var CLSTAMP = "7817670";
       short_url: "",
       country_code: "",
     },
-    A = { steamid: "", clanid: 0, listid: 0 },
+    I = { steamid: "", clanid: 0, listid: 0 },
     g = {
       CLANSTEAMID: "",
       CLANACCOUNTID: 0,
@@ -318,32 +317,30 @@ var CLSTAMP = "7817670";
     );
   }
   n().createContext({});
-  const h = "webui_config";
-  function P(e = h) {
+  const h = "webui_config",
+    P = "presentation_mode";
+  function N(e = h) {
     const t = {},
-      n = M("config", e);
+      n = f("config", e);
     n && (delete n.SESSIONID, Object.assign(C, n), (t.config = !0));
-    const _ = M("userinfo", e);
+    const _ = f("userinfo", e);
     _ &&
-      (Object.assign(I, _),
+      (Object.assign(A, _),
       (t.userConfig = !0),
-      I.is_support &&
+      A.is_support &&
         (function () {
           let e = null;
-          return (
-            i() && (e = o("presentation_mode")),
-            Boolean(e && 1 === Number.parseInt(e))
-          );
+          return i() && (e = o(P)), Boolean(e && 1 === Number.parseInt(e));
         })() &&
-        (I.is_support = !1));
-    const s = M("broadcast", e);
-    s && (Object.assign(A, s), (t.broadcastConfig = !0));
-    const a = M("community", e);
+        (A.is_support = !1));
+    const s = f("broadcast", e);
+    s && (Object.assign(I, s), (t.broadcastConfig = !0));
+    const a = f("community", e);
     a && (Object.assign(g, a), (t.communityConfig = !0));
-    const r = M("event", e);
+    const r = f("event", e);
     return r && (Object.assign(R, r), (t.eventConfig = !0)), t;
   }
-  function N(e, t = h, n) {
+  function M(e, t = h, n) {
     let o;
     if (
       ((o =
@@ -366,11 +363,11 @@ var CLSTAMP = "7817670";
       }
     else n && console.error("Missing config element #", t);
   }
-  function M(e, t = h) {
-    return N(e, t, !0);
+  function f(e, t = h) {
+    return M(e, t, !0);
   }
-  let f = { success: !0, result: 1 };
-  class O {
+  let O = { success: !0, result: 1 };
+  class L {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -413,7 +410,7 @@ var CLSTAMP = "7817670";
         return !1;
       let n = Object.assign({}, e, {
         universe: C.EUNIVERSE,
-        accountid: I.accountid,
+        accountid: A.accountid,
       });
       void 0 !== t && (n.sequenceid = t);
       try {
@@ -481,9 +478,9 @@ var CLSTAMP = "7817670";
       );
     }
   }
-  let L = new (class {
+  let v = new (class {
     constructor() {
-      (this.m_connection = new O()),
+      (this.m_connection = new L()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -505,7 +502,7 @@ var CLSTAMP = "7817670";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => f,
+        () => O,
         () => this.FailureResult()
       );
     }
@@ -527,10 +524,6 @@ var CLSTAMP = "7817670";
       let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
       return this.GenericEResultCall(t);
     }
-    OpenJoinGameDialog(e) {
-      let t = { message: "ShowJoinGameDialog", friend_id: e };
-      return this.GenericEResultCall(t);
-    }
     BIsSubscribedApp(e) {
       if (this.m_mapCacheSubscribedApp.has(e))
         return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
@@ -541,16 +534,12 @@ var CLSTAMP = "7817670";
         return this.m_mapCacheSubscribedApp.set(e, n), n;
       });
     }
-    ViewGameInfoForSteamID(e) {
-      let t = { message: "ViewGameInfoForSteamID", steamid: e };
-      return this.GenericEResultCall(t);
-    }
     OpenFriendsDialog() {
       return this.GenericEResultCall({ message: "OpenFriendsDialog" });
     }
     BClientAccountMatches() {
       return (
-        !I.logged_in || I.accountid == this.m_connection.ClientInfo.unAccountID
+        !A.logged_in || A.accountid == this.m_connection.ClientInfo.unAccountID
       );
     }
     GenericEResultCall(e) {
@@ -561,15 +550,15 @@ var CLSTAMP = "7817670";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? f : this.FailureResult(e.success)
+                  1 === e.success ? O : this.FailureResult(e.success)
                 )
             : { success: !1, result: 19, account_mismatch: !0 }
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = L),
+  (window.ClientConnectionAPI = v),
     document.addEventListener("DOMContentLoaded", function () {
-      P(), (window.ClientConnectionAPI = L);
+      N(), (window.ClientConnectionAPI = v);
     });
 })();

@@ -10,7 +10,8 @@
   padding: 4px 12px;
   cursor: pointer;
   border-bottom: 4px solid transparent;
-  transition: all 0.25s;
+  transition-property: border-bottom-color;
+  transition-duration: 0.25s;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;

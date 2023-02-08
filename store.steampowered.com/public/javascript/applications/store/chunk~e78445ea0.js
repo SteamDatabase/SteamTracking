@@ -1391,6 +1391,8 @@
               a.Body().set_country_code(m.De.COUNTRY || "US"),
               a.Body().set_rebuild_queue(t),
               a.Body().set_rebuild_queue_if_stale(!0),
+              (1 !== e && 9 !== e) ||
+                a.Body().settings().set_include_coming_soon(!0),
               (Boolean(null == n ? void 0 : n.nSaleTagID) ||
                 Boolean(null == n ? void 0 : n.strContentHubType)) &&
                 a.Body().set_store_page_filter(_(n));

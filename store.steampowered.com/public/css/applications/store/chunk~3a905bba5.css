@@ -82,7 +82,9 @@
   background-color: #1a9fff;
   border-radius: 2px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
-  transition: all 0.1s ease;
+  transition-property: color, background-color, border-radius;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
   display: flex;
 }
 .deckverified_LearnMorePC_3OSxY:hover,
@@ -1948,7 +1950,9 @@ html.touch
   right: 0;
   bottom: 0;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition-property: background, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 @media screen and (max-width: 768px) {
   .salepreviewwidgets_SaleItemBrowserRow_y9MSd
@@ -2545,7 +2549,6 @@ html.touch
   order: -1;
   margin-left: 4px;
   display: none;
-  transition: all 0.23s ease-in-out;
 }
 .salepreviewwidgets_SaleItemBrowserRow_y9MSd
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR

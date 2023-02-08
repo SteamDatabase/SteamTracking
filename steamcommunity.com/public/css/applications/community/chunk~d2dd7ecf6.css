@@ -1342,7 +1342,7 @@ strong {
   position: absolute;
   top: calc(50% - 8px);
   right: 13px;
-  transition: all 0.2s ease-out;
+  transition: top 0.2s ease-out;
 }
 .partnereventeditor_CategoryTitles_Ctn_21Aec {
   display: flex;
@@ -1367,7 +1367,7 @@ strong {
   width: 64px;
   height: 64px;
   flex-shrink: 0;
-  transition: all 0.2s ease-out;
+  transition: transform 0.2s ease-out;
 }
 .partnereventeditor_EventSubCategory_Title_2OocG {
   font-size: 16px;
@@ -1397,7 +1397,9 @@ strong {
   user-select: none;
   border-radius: 4px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-out;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 }
 .partnereventeditor_EventCategory_1rJ2O:hover {
   background-color: rgba(70, 75, 88, 0.6);
@@ -1662,7 +1664,9 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   margin-left: 10px;
   margin-top: 10px;
   border-radius: 3px;
-  transition: all 0.2s ease-out;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 }
 .partnereventeditor_EventSubCategory_2Q82B:hover {
   background-color: rgba(70, 75, 88, 0.6);
@@ -1751,7 +1755,7 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   background-color: #3c4049;
   margin: 0px 0px 8px 12px;
   padding: 4px;
-  transition: all 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
 }
 .partnereventeditor_ArtworkTipsCtn_36oQU
   .partnereventeditor_ArtworkDocs_R7tUA
@@ -1774,7 +1778,7 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   .partnereventeditor_ArtworkDocs_R7tUA
   .partnereventeditor_ArtworkExampleCtn_1-LYQ
   img {
-  transition: all 0.2s ease-out;
+  transition: transform 0.2s ease-out;
   display: block;
 }
 .partnereventeditor_ArtworkTipsCtn_36oQU
@@ -6997,7 +7001,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   height: 158px;
   position: relative;
   cursor: pointer;
-  transition: all 0.21s ease-in-out;
+  transition-property: transform, opacity;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-out;
   margin-bottom: 0;
   background: #000;
 }
@@ -7015,7 +7021,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background-color: #0006;
   border: 1px solid #aaa3;
   opacity: 0.75;
-  transition: all 0.16s ease-in-out;
+  transition-property: opacity;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
 }
 .salehilightplayerembed_VideoThumbnail_1FttB:hover
   .salehilightplayerembed_VideoPlayButton_3hAfy {
@@ -7032,7 +7040,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   height: 50%;
   margin-left: 18px;
   margin-top: 15px;
-  transition: all 0.16s ease-in-out;
+  transition-property: fill;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
 }
 .salehilightplayerembed_VideoLargeContainer_2nPVw {
   position: absolute;
@@ -7048,7 +7058,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.26s ease-in-out;
+  transition-property: opacity;
+  transition-duration: 0.26s;
+  transition-timing-function: ease-in-out;
 }
 .salehilightplayerembed_VideoLargeContainer_2nPVw.salehilightplayerembed_videoPlaying_FACmL {
   opacity: 1;
@@ -7078,7 +7090,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.26s ease-in-out;
+  transition-property: width;
+  transition-duration: 0.26s;
+  transition-timing-function: ease-in-out;
 }
 .PopupFullWindow .salehilightplayerembed_VideoPopupContainers_1MNC_ {
   width: calc(100vw - 48px);

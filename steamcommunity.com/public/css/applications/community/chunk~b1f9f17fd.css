@@ -1963,7 +1963,8 @@ html.responsive.touch
   padding: 4px 12px;
   cursor: pointer;
   border-bottom: 4px solid transparent;
-  transition: all 0.25s;
+  transition-property: border-bottom-color;
+  transition-duration: 0.25s;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;
@@ -2475,7 +2476,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 .partnereventbroadcast_customTitleOptionsCtn_zhH_V
   .partnereventbroadcast_TitleRowCtn_96im4:hover {
@@ -3486,7 +3487,9 @@ html.responsive.touch
   border-radius: var(--gpCorner-Medium);
   margin: unset;
   height: fit-content;
-  transition: all 0.2s ease;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 .BasicUI
   .saleitembrowser_SaleItemBrowserContainer_2wLns

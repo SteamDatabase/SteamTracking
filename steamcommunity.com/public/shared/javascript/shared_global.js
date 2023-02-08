@@ -340,7 +340,7 @@ function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButto
 /**
  * @returns CModal
  */
-function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, strCancelButton, textAreaMaxLength )
+function ShowPromptWithTextAreaDialog( strTitle, strInitialText, strOKButton, strCancelButton, textAreaMaxLength, strDescription )
 {
 	if ( !strOKButton )
 		strOKButton = 'OK';
@@ -349,7 +349,7 @@ function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, st
 
 	var $Body = $J('<form/>');
 	var $TextArea = $J('<textarea/>', { 'class': 'newmodal_prompt_textarea' } );
-	$TextArea.text( strDescription );
+	$TextArea.text( strInitialText );
 	if ( textAreaMaxLength )
 	{
 		$TextArea.attr( 'maxlength', textAreaMaxLength );
@@ -366,12 +366,17 @@ function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, st
 			}
 		);
 	}
-	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_with_textarea gray_bevel fullwidth ' } ).append( $TextArea ) );
+
+	if ( strDescription )
+	{
+		$Body.append( $J('<div/>', {'class': 'newmodal_prompt_with_textarea newmodal_prompt_description' } ).text( strDescription ) );
+	}
+
+	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_with_textarea gray_bevel fullwidth' } ).append( $TextArea ) );
 
 	var deferred = new jQuery.Deferred();
 	var fnOK = function() { deferred.resolve( $TextArea.val() ); };
 	var fnCancel = function() { deferred.reject(); };
-
 
 	$Body.submit( function( event ) { event.preventDefault(); fnOK(); } );
 

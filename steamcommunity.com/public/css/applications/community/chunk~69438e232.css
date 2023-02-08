@@ -40,7 +40,6 @@ html:not(.client)
   margin-top: 60px;
 }
 .apppartnereventspage_AppPartnerEventsPage_1m-hJ {
-  transition: all 0.32s ease-in-out;
   position: absolute;
   top: 0;
   right: 0;
@@ -459,10 +458,14 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   animation-duration: 0.32s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
-  transition: all 0.21s ease-out;
+  transition-property: transform, background-color, box-shadow;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-out;
 }
 .apppartnereventspage_AnimIn_bIoyq svg {
-  transition: all 0.21s ease-out;
+  transition-property: transform;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-out;
 }
 .apppartnereventspage_AnimIn_bIoyq:active {
   background-color: #000;

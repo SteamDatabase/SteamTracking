@@ -915,7 +915,10 @@
             "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
           (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
             "EBrowserType_Offscreen_FriendsUI"),
-          (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+          (e[(e.EBrowserType_Offscreen_SteamUI = 12)] =
+            "EBrowserType_Offscreen_SteamUI"),
+          (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
+            "EBrowserType_OpenVROverlay_Subview");
       })(l || (l = {})),
         (function (e) {
           (e[(e.SystemKey0 = 0)] = "SystemKey0"),
@@ -2115,6 +2118,7 @@
             "popup-created" == e.data && this.OnCreateInternal();
         }
         Show(e = !0, t = !1) {
+          var n, i;
           window.SteamClient && (this.m_rgParams.eCreationFlags |= g.Hidden),
             this.m_rgParams.eCreationFlags & (g.NotFocusable | g.Tooltip) &&
               (e = !1),
@@ -2122,52 +2126,60 @@
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
                 : e && this.Focus(t));
-          let n,
-            i,
-            r,
-            o = w.GetExistingPopup(this.m_strName);
-          (o && !this.m_rgParams.replace_existing_popup) ||
+          let r,
+            o,
+            s,
+            a = w.GetExistingPopup(this.m_strName);
+          (a && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-            o
-              ? ((i = o.m_element),
-                (n = o.m_popup),
-                o.ReleasePopup(),
-                (r = o.m_renderWhenReady),
-                w.RemoveTrackedPopup(o),
-                n.removeEventListener("beforeunload", o.OnBeforeUnloadEvent),
-                n.removeEventListener("unload", o.OnUnload),
-                n.removeEventListener("resize", o.OnResizeEvent),
-                n.removeEventListener("focus", this.OnFocusInternal),
-                n.removeEventListener("blur", this.OnBlurInternal),
-                n.removeEventListener("drop", o.OnDrop),
-                n.removeEventListener("dragover", o.OnDragOver),
-                n.removeEventListener("message", this.OnMessage))
-              : (({ popup: n, element: i } = S.CreatePopup(
+            a
+              ? ((o = a.m_element),
+                (r = a.m_popup),
+                a.ReleasePopup(),
+                (s = a.m_renderWhenReady),
+                w.RemoveTrackedPopup(a),
+                r.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
+                r.removeEventListener("unload", a.OnUnload),
+                r.removeEventListener("resize", a.OnResizeEvent),
+                r.removeEventListener("focus", this.OnFocusInternal),
+                r.removeEventListener("blur", this.OnBlurInternal),
+                r.removeEventListener("drop", a.OnDrop),
+                r.removeEventListener("dragover", a.OnDragOver),
+                r.removeEventListener("message", this.OnMessage))
+              : (({ popup: r, element: o } = S.CreatePopup(
                   this.m_strName,
                   this.m_rgParams
                 )),
-                (r = new p(n.document, i))),
-            n &&
-              i &&
-              ((n.document.title = this.m_strTitle),
-              n.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-              n.addEventListener("unload", this.OnUnload),
-              n.addEventListener("resize", this.OnResizeEvent),
-              n.addEventListener("focus", this.OnFocusInternal),
-              n.addEventListener("blur", this.OnBlurInternal),
-              n.addEventListener("drop", this.OnDrop),
-              n.addEventListener("dragover", this.OnDragOver),
-              n.addEventListener("message", this.OnMessage),
+                (s = new p(r.document, o))),
+            r &&
+              o &&
+              ((r.document.title = this.m_strTitle),
+              r.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+              r.addEventListener("unload", this.OnUnload),
+              r.addEventListener("resize", this.OnResizeEvent),
+              r.addEventListener("focus", this.OnFocusInternal),
+              r.addEventListener("blur", this.OnBlurInternal),
+              r.addEventListener("drop", this.OnDrop),
+              r.addEventListener("dragover", this.OnDragOver),
+              r.addEventListener("message", this.OnMessage),
               d.De.LANGUAGE &&
-                n.document.documentElement.setAttribute("lang", (0, u.CE)()),
-              (this.m_popup = n),
-              (this.m_element = i),
-              (this.m_renderWhenReady = r),
+                r.document.documentElement.setAttribute("lang", (0, u.CE)()),
+              (this.m_popup = r),
+              (this.m_element = o),
+              (this.m_renderWhenReady = s),
               this.m_renderWhenReady.SetTarget(() =>
                 this.RenderInternal(this.m_popup, this.m_element, e)
               )),
             w.AddTrackedPopup(this),
-            o && e && this.Focus());
+            a
+              ? e && this.Focus()
+              : (null ===
+                  (i =
+                    null === (n = SteamClient.Features) || void 0 === n
+                      ? void 0
+                      : n.SteamInitsPopups) || void 0 === i
+                  ? void 0
+                  : i.call(n)) || this.OnCreateInternal());
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -2201,10 +2213,11 @@
             : (this.m_onCreateRender = () => this.RenderInternal(e, t, n));
         }
         OnCreateInternal() {
-          (this.m_bCreated = !0),
+          this.m_bCreated ||
+            ((this.m_bCreated = !0),
             this.OnCreate(),
             this.m_onCreateRender &&
-              (this.m_onCreateRender(), (this.m_onCreateRender = null));
+              (this.m_onCreateRender(), (this.m_onCreateRender = null)));
         }
         OnCreate() {}
         OnResizeEvent() {
@@ -2397,7 +2410,7 @@
         constructor() {
           if (
             ((this.m_bShuttingDown = !1),
-            (this.m_mapPopups = new Map()),
+            (this.m_mapPopups = r.LO.map([], { deep: !1 })),
             (this.m_rgShutdownCallbacks = []),
             (this.m_rgPopupCreatedCallbacks = []),
             (this.m_unCurrentAccountID = 0),
@@ -2448,6 +2461,10 @@
                 this.m_DynamicCSSObserver.observe(e, { childList: !0 }));
           }
         }
+        BAnyPopupHasFocus() {
+          for (const e of this.m_mapPopups.values()) if (e.focused) return !0;
+          return !1;
+        }
         SetCurrentLoggedInAccountID(e) {
           this.m_unCurrentAccountID != e &&
             ((this.m_unCurrentAccountID = e),
@@ -2486,8 +2503,13 @@
           let n = t.dimensions || {},
             i = n.width || 300,
             r = n.height || 300,
-            o = t.title,
-            a = "width=" + i + ",height=" + r;
+            o = t.title;
+          if (t.center_on_window && void 0 === n.left && void 0 === n.top) {
+            const e = t.center_on_window;
+            (n.left = e.innerWidth / 2 + e.screenLeft - i / 2),
+              (n.top = e.innerHeight / 2 + e.screenTop - r / 2);
+          }
+          let a = "width=" + i + ",height=" + r;
           void 0 !== n.left && (a += ",left=" + n.left),
             void 0 !== n.top && (a += ",top=" + n.top),
             (a += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
@@ -3207,7 +3229,7 @@
       var R = n(99533),
         k = n(77520);
       n(46321);
-      class I {
+      class O {
         constructor(e = !1) {
           (this.m_bRunOnce = !1),
             (this.m_ClientConnectionCallbacks = new R.pB()),
@@ -3238,7 +3260,7 @@
           );
         }
       }
-      function O(e, t) {
+      function I(e, t) {
         return () => {
           try {
             e();
@@ -3258,9 +3280,9 @@
             (this.m_bConnected = !1),
             (this.m_bConnectionFailed = !1),
             (this.m_setConnectedServers = new Set()),
-            (this.m_callbacksOnConnectOneTime = new I(!0)),
-            (this.m_callbacksOnConnect = new I()),
-            (this.m_callbacksOnDisconnect = new I()),
+            (this.m_callbacksOnConnectOneTime = new O(!0)),
+            (this.m_callbacksOnConnect = new O()),
+            (this.m_callbacksOnDisconnect = new O()),
             (this.m_bForceDisconnect = !1),
             (this.m_bPerformedInitialClockAdjustment = !1),
             (this.m_nWallClockDriftMS = 0),
@@ -3341,7 +3363,7 @@
           return SteamClient.User.Connect();
         }
         RunWhenLoggedOn(e, t) {
-          let n = O(e, "RunWhenLoggedOn");
+          let n = I(e, "RunWhenLoggedOn");
           this.BConnectedToServer(t)
             ? n()
             : this.m_callbacksOnConnectOneTime.AddCallback(n, t);
@@ -3350,7 +3372,7 @@
           return new Promise((e) => this.RunWhenLoggedOn(e));
         }
         AddOnLogonCallback(e, t) {
-          let n = O(e, "AddOnLogonCallback");
+          let n = I(e, "AddOnLogonCallback");
           return (
             this.BConnectedToServer(t) && n(),
             this.m_callbacksOnConnect.AddCallback(n, t)
@@ -6590,7 +6612,7 @@
               ));
         }
       }
-      class I {
+      class O {
         constructor(e) {
           (this.m_scrollTopTarget = void 0),
             (this.m_scrollLeftTarget = void 0),
@@ -6705,14 +6727,14 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, i.gn)([a.a], I.prototype, "ResetScrollState", null);
-      const O = new WeakMap();
+      (0, i.gn)([a.a], O.prototype, "ResetScrollState", null);
+      const I = new WeakMap();
       function B(e) {
-        let t = O.get(e);
-        return t || ((t = new I(e)), O.set(e, t)), t;
+        let t = I.get(e);
+        return t || ((t = new O(e)), I.set(e, t)), t;
       }
       function L(e) {
-        const t = O.get(e);
+        const t = I.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -7839,7 +7861,7 @@
           return this.m_target && this.m_target.node == e;
         }
         SuppressFocus() {
-          this.m_bSuppressed = !0;
+          (this.m_bSuppressed = !0), this.ClearInterval();
         }
         Reset() {
           (this.m_bSuppressed = !1),
@@ -7889,22 +7911,22 @@
     },
     56109: (e, t, n) => {
       "use strict";
-      n.d(t, { x: () => l });
-      var i = n(23816),
-        r = n(48780),
-        o = n(77520),
-        s = n(99533);
-      const a = new (n(30543).s)("FocusNavigation").Debug;
-      class l {
+      n.d(t, { x: () => a });
+      n(23816);
+      var i = n(48780),
+        r = n(77520),
+        o = n(99533);
+      const s = new (n(30543).s)("FocusNavigation").Debug;
+      class a {
         constructor(e, t) {
           (this.m_bActive = !1),
             (this.m_rgGamepadNavigationTrees = []),
             (this.m_LastActiveNavTree = null),
             (this.m_LastActiveFocusNavTree = null),
             (this.m_bMounted = !0),
-            (this.m_schDeferredActivate = new s.Ar()),
-            (this.m_FocusChangedCallbacks = new s.pB()),
-            (this.m_ActiveCallbacks = new s.pB()),
+            (this.m_schDeferredActivate = new o.Ar()),
+            (this.m_FocusChangedCallbacks = new o.pB()),
+            (this.m_ActiveCallbacks = new o.pB()),
             (this.m_iFocusChangeStack = 0),
             (this.m_controller = e),
             (this.m_rootWindow = t),
@@ -7928,11 +7950,11 @@
         }
         Destroy(e) {
           e == this.m_rootWindow
-            ? (a(`${this.LogName(e)} Destroying context for window`),
+            ? (s(`${this.LogName(e)} Destroying context for window`),
               (this.m_bMounted = !1),
               this.m_schDeferredActivate.Cancel(),
               this.SetActive(!1, e))
-            : a(`${this.LogName(e)} Child window destroyed`);
+            : s(`${this.LogName(e)} Child window destroyed`);
         }
         SetActive(e, t, n) {
           e
@@ -7945,7 +7967,7 @@
               ((this.m_bActive = e), this.m_ActiveCallbacks.Dispatch(e));
         }
         OnActivate(e) {
-          a(
+          s(
             `${this.LogName(e)} Activating context, there are ${
               this.m_rgGamepadNavigationTrees.length
             } trees in this context`
@@ -7953,21 +7975,21 @@
             this.SetActive(!0, e);
         }
         OnActivateBrowserView(e, t) {
-          a(`${this.LogName(e)} Browser View "${t}" activated in context`),
+          s(`${this.LogName(e)} Browser View "${t}" activated in context`),
             this.SetActive(!0, e, t);
         }
         OnDeactivate(e) {
           this.m_activeWindow == e
-            ? (a(`${this.LogName(e)} Deactivate context for window`),
+            ? (s(`${this.LogName(e)} Deactivate context for window`),
               this.SetActive(!1, e))
-            : a(
+            : s(
                 `${this.LogName(e)} Blurred, but not deactivating because (${
                   this.m_activeWindow.name
                 }) has focus.`
               );
         }
         OnDeactivateBrowserView(e, t) {
-          a(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
+          s(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
             this.m_activeBrowserView == t && this.SetActive(!1, e, t);
         }
         BIsActive() {
@@ -7990,18 +8012,18 @@
         SetActiveNavTree(e, t = !1) {
           if (e && this.m_LastActiveNavTree == e) return;
           const n = this.m_LastActiveNavTree;
-          n && r.Zf(this.m_rgGamepadNavigationTrees, n),
+          n && i.Zf(this.m_rgGamepadNavigationTrees, n),
             e ||
               (this.m_rgGamepadNavigationTrees.length &&
                 (e =
                   this.m_rgGamepadNavigationTrees[
                     this.m_rgGamepadNavigationTrees.length - 1
                   ]));
-          const o = this.m_LastActiveFocusNavTree == e;
-          e && r.Zf(this.m_rgGamepadNavigationTrees, e),
+          const r = this.m_LastActiveFocusNavTree == e;
+          e && i.Zf(this.m_rgGamepadNavigationTrees, e),
             (this.m_LastActiveNavTree = e),
             (e && e.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = e),
-            a(
+            s(
               `${this.LogName(e.Window)} Move from nav tree ${
                 null == n ? void 0 : n.id
               } to nav tree ${null == e ? void 0 : e.id} ${
@@ -8011,18 +8033,21 @@
             n && this.m_rgGamepadNavigationTrees.push(n),
             e &&
               (this.m_rgGamepadNavigationTrees.push(e),
-              !o && t && e.TakeFocus(i.uS.APPLICATION)),
+              r ||
+                !t ||
+                e.DeferredFocus.BHasQueuedFocusNode() ||
+                e.DeferredFocus.RequestFocus(e.Root)),
             n && n != this.m_LastActiveFocusNavTree && n.OnDeactivate(e),
-            e && !o && e.OnActivate(n);
+            e && !r && e.OnActivate(n);
         }
         BlurNavTree(e) {
           this.m_LastActiveNavTree == e && this.SetActiveNavTree(null, !0),
-            r.Zf(this.m_rgGamepadNavigationTrees, e),
+            i.Zf(this.m_rgGamepadNavigationTrees, e),
             this.m_rgGamepadNavigationTrees.unshift(e);
         }
         UnregisterGamepadNavigationTree(e) {
-          r.Zf(this.m_rgGamepadNavigationTrees, e),
-            a(
+          i.Zf(this.m_rgGamepadNavigationTrees, e),
+            s(
               `(${this.m_rootWindow.name}) Unregister tree ${
                 null == e ? void 0 : e.id
               } ${
@@ -8054,7 +8079,7 @@
         OnFocusChangeComplete(e) {
           if (
             (this.m_iFocusChangeStack--,
-            (0, o.X)(e == this.m_iFocusChangeStack, "out of order focus pop"),
+            (0, r.X)(e == this.m_iFocusChangeStack, "out of order focus pop"),
             0 == this.m_iFocusChangeStack)
           ) {
             const { source: e, from: t, to: n } = this.m_ActiveFocusChange;
@@ -8562,6 +8587,9 @@
               p > this.props.nAllowOffscreenPx)
             )
               return (
+                console.log(
+                  "Not showing hover because it didn't fit in the main or alt direction"
+                ),
                 e.setAttribute("style", "display: none;"),
                 (this.m_bNoSpace = !0),
                 void (this.props.onNoSpace && this.props.onNoSpace())
@@ -8826,7 +8854,7 @@
     },
     26682: (e, t, n) => {
       "use strict";
-      n.d(t, { U5: () => r.U5 });
+      n.d(t, { U5: () => r.U5, w3: () => r.w3 });
       var i,
         r = n(67119);
       !(function (e) {
@@ -8854,14 +8882,15 @@
       function i(e, t) {
         return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
       }
-      function r(e) {
-        return (function (e, t) {
-          if (!e) return !1;
-          const [n, r] = t.split(".", 2);
-          return n && r && i(e, n) && r in e.SteamClient[n];
-        })(window, e);
+      function r(e, t) {
+        if (!e) return !1;
+        const [n, r] = t.split(".", 2);
+        return n && r && i(e, n) && r in e.SteamClient[n];
       }
-      n.d(t, { U5: () => r });
+      function o(e) {
+        return r(window, e);
+      }
+      n.d(t, { U5: () => o, w3: () => r });
     },
     16792: (e, t, n) => {
       "use strict";
@@ -10134,7 +10163,7 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: yield I(o),
+                            identifierHash: yield O(o),
                             message: s,
                           };
                         });
@@ -10164,7 +10193,7 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: yield I(o),
+                            identifierHash: yield O(o),
                             message: [e.message, ...s],
                           };
                         });
@@ -10198,7 +10227,7 @@
                             .filter((e) => !!e);
                           return {
                             identifier: a,
-                            identifierHash: yield I(a),
+                            identifierHash: yield O(a),
                             message: [e.message, ...l],
                           };
                         });
@@ -10312,7 +10341,7 @@
             m.LJ.InstallErrorReportingStore(D),
             h.pu.InstallErrorReportingStore(D);
         };
-      function I(e) {
+      function O(e) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           try {
             const n = yield window.crypto.subtle.digest(
@@ -10384,7 +10413,7 @@
         Yr: () => D,
         Zo: () => T,
         Vc: () => B,
-        Wn: () => O,
+        Wn: () => I,
         T: () => L,
       });
       var i = n(70655),
@@ -10669,7 +10698,7 @@
           null !== (t = o.useContext(D).styles) && void 0 !== t ? t : E();
         return o.createElement("div", { className: n.ContextMenuSeparator });
       }
-      class I extends o.PureComponent {
+      class O extends o.PureComponent {
         constructor(e) {
           super(e),
             (this.m_refItem = o.createRef()),
@@ -10755,14 +10784,14 @@
           );
         }
       }
-      (I.contextType = D),
-        (0, i.gn)([b.ak], I.prototype, "OnSubMenuMouseEnter", null),
-        (0, i.gn)([b.ak], I.prototype, "OnSubMenuHidden", null),
-        (0, i.gn)([b.ak], I.prototype, "ShowSubMenu", null),
-        (0, i.gn)([b.ak], I.prototype, "RenderSubMenu", null),
-        (0, i.gn)([b.ak], I.prototype, "OnMouseEnter", null),
-        (0, i.gn)([b.ak], I.prototype, "OnClick", null);
-      let O = class extends o.Component {
+      (O.contextType = D),
+        (0, i.gn)([b.ak], O.prototype, "OnSubMenuMouseEnter", null),
+        (0, i.gn)([b.ak], O.prototype, "OnSubMenuHidden", null),
+        (0, i.gn)([b.ak], O.prototype, "ShowSubMenu", null),
+        (0, i.gn)([b.ak], O.prototype, "RenderSubMenu", null),
+        (0, i.gn)([b.ak], O.prototype, "OnMouseEnter", null),
+        (0, i.gn)([b.ak], O.prototype, "OnClick", null);
+      let I = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_elMenu = void 0),
@@ -11172,14 +11201,14 @@
           e.preventDefault(), e.stopPropagation();
         }
       }
-      (0, i.gn)([b.ak], O.prototype, "BindMenuElement", null),
-        (0, i.gn)([b.ak, (0, v.D)(100)], O.prototype, "OnMenuMutation", null),
-        (0, i.gn)([b.ak], O.prototype, "OnWindowResize", null),
-        (0, i.gn)([b.ak], O.prototype, "OnMessage", null),
-        (0, i.gn)([(0, v.D)(100)], O.prototype, "DebouncedPositionMenu", null),
-        (0, i.gn)([b.ak], O.prototype, "OnBlur", null),
-        (0, i.gn)([b.ak], O.prototype, "OnKeyDown", null),
-        (O = (0, i.gn)([r.Pi], O));
+      (0, i.gn)([b.ak], I.prototype, "BindMenuElement", null),
+        (0, i.gn)([b.ak, (0, v.D)(100)], I.prototype, "OnMenuMutation", null),
+        (0, i.gn)([b.ak], I.prototype, "OnWindowResize", null),
+        (0, i.gn)([b.ak], I.prototype, "OnMessage", null),
+        (0, i.gn)([(0, v.D)(100)], I.prototype, "DebouncedPositionMenu", null),
+        (0, i.gn)([b.ak], I.prototype, "OnBlur", null),
+        (0, i.gn)([b.ak], I.prototype, "OnKeyDown", null),
+        (I = (0, i.gn)([r.Pi], I));
     },
     989: (e, t, n) => {
       "use strict";
@@ -11334,10 +11363,10 @@
         const t = m();
         return r.createElement(
           h.T,
-          Object.assign({ component: t.Content, fallback: I }, e)
+          Object.assign({ component: t.Content, fallback: O }, e)
         );
       }
-      function I(e) {
+      function O(e) {
         let {
             children: t,
             bCenterVertically: n,
@@ -11372,7 +11401,7 @@
           )
         );
       }
-      class O extends r.Component {
+      class I extends r.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
         }
@@ -11389,10 +11418,10 @@
         return r.createElement(
           k,
           { className: t, bCenterVertically: n },
-          r.createElement(O, Object.assign({}, o))
+          r.createElement(I, Object.assign({}, o))
         );
       }
-      (0, i.gn)([u.a], O.prototype, "OnSubmit", null);
+      (0, i.gn)([u.a], I.prototype, "OnSubmit", null);
       const L = r.forwardRef(function (e, t) {
           const n = m(),
             { svgicon: s } = e,
@@ -12823,8 +12852,8 @@
       n(67345);
       var Re = n(22188),
         ke = n(79822),
-        Ie = n(48780),
-        Oe = n(48899);
+        Oe = n(48780),
+        Ie = n(48899);
       const Be = new (n(30543).s)("DragDrop").Debug;
       class Le extends r.Component {
         constructor() {
@@ -12889,8 +12918,8 @@
               this.m_rgActiveDropRegions.push(e));
         }
         UnregisterDropRegion(e) {
-          Ie.Zf(this.m_rgDropRegions, e),
-            Ie.Zf(this.m_rgActiveDropRegions, e),
+          Oe.Zf(this.m_rgDropRegions, e),
+            Oe.Zf(this.m_rgActiveDropRegions, e),
             this.m_activeDropRegion == e &&
               ((this.m_activeDropRegion = void 0),
               this.m_activeDraggable && this.ShowDragGhost());
@@ -13012,8 +13041,8 @@
               n = r + s,
               a = e.GetDragDocument().body.getBoundingClientRect();
             if (Ae(i, r, a) && !Ae(t, n, a, !0)) {
-              const i = Oe.r4(t, a.left, a.right, a.left - 200, a.right + 200),
-                r = Oe.r4(n, a.top, a.bottom, a.top - 100, a.bottom + 100),
+              const i = Ie.r4(t, a.left, a.right, a.left - 200, a.right + 200),
+                r = Ie.r4(n, a.top, a.bottom, a.top - 100, a.bottom + 100),
                 o = 50;
               this.m_dragOffWindowTimer = window.setTimeout(() => {
                 e == this.m_activeDraggable && this.OnDrag(e, i, r);
@@ -13323,7 +13352,7 @@
               height: this.props.height || "auto",
               perspective: "600px",
             },
-            t = Oe.r4(
+            t = Ie.r4(
               this.CalculateRotationDegrees(this.state.clientYDelta),
               -90,
               90,
@@ -13776,8 +13805,8 @@
           T = !!(w.onClick || w.onActivate || w.focusable),
           R = null != a || null != n || (y && null != c),
           k = null != m ? m : "min",
-          I = null != h ? h : "standard",
-          O = null != p ? p : "standard",
+          O = null != h ? h : "standard",
+          I = null != p ? p : "standard",
           B = null != _ ? _ : "standard",
           L = null == f || f,
           A = null != C ? C : 0,
@@ -13821,9 +13850,9 @@
                 "thick" == B && tt().WithBottomSeparatorThick,
                 "fixed" == k && tt().ChildrenWidthFixed,
                 "max" == k && tt().ChildrenWidthGrow,
-                "standard" == I && tt().ExtraPaddingOnChildrenBelow,
-                "standard" == O && tt().StandardPadding,
-                "compact" == O && tt().CompactPadding,
+                "standard" == O && tt().ExtraPaddingOnChildrenBelow,
+                "standard" == I && tt().StandardPadding,
+                "compact" == I && tt().CompactPadding,
                 T && tt().Clickable,
                 L && tt().HighlightOnFocus
               ),
@@ -14221,7 +14250,7 @@
           const e =
             null == this.props.value || isNaN(this.props.value)
               ? this.props.min
-              : (0, Oe.Lh)(this.props.value, this.props.min, this.props.max);
+              : (0, Ie.Lh)(this.props.value, this.props.min, this.props.max);
           return Ct(this.props.min, this.props.max, e);
         }
         get normalizedDefaultValue() {
@@ -14232,7 +14261,7 @@
             return Ct(this.props.min, this.props.max, e);
         }
         get normalizedSliderOrigin() {
-          const e = (0, Oe.Lh)(0, this.props.min, this.props.max);
+          const e = (0, Ie.Lh)(0, this.props.min, this.props.max);
           return Ct(this.props.min, this.props.max, e);
         }
         get CanResetToDefault() {
@@ -14340,9 +14369,9 @@
             ? this.m_nRepeatCount++
             : (this.m_nRepeatCount = 0);
           const r = 1 / this.normalizedDpadStep,
-            o = Math.floor((0, Oe.bU)(r, 8, 25, 10, 30)),
+            o = Math.floor((0, Ie.bU)(r, 8, 25, 10, 30)),
             s = Math.max(1, o / 2),
-            a = (0, Oe.Lh)((this.m_nRepeatCount - s) / (o - s), 0, 1),
+            a = (0, Ie.Lh)((this.m_nRepeatCount - s) / (o - s), 0, 1),
             l =
               a * a * (0.05 - this.normalizedDpadStep) +
               this.normalizedDpadStep,
@@ -14355,7 +14384,7 @@
             d = vt(this.normalizedStep, this.normalizedClampedValue + u);
           let m = ft(this.props.min, this.props.max, d);
           if (
-            ((m = (0, Oe.Lh)(
+            ((m = (0, Ie.Lh)(
               m,
               null !== (t = this.props.clampMin) && void 0 !== t
                 ? t
@@ -14390,7 +14419,7 @@
             n = vt(this.normalizedStep, t);
           let i = ft(this.props.min, this.props.max, n);
           if (
-            ((i = (0, Oe.Lh)(
+            ((i = (0, Ie.Lh)(
               i,
               this.props.clampMin ? this.props.clampMin : this.props.min,
               this.props.clampMax ? this.props.clampMax : this.props.max
@@ -14892,7 +14921,7 @@
         Tt = n.n(Mt),
         Rt = n(94537),
         kt = n(29697);
-      function It(e) {
+      function Ot(e) {
         let {
             childrenKey: t,
             childrenClasses: n,
@@ -14903,10 +14932,10 @@
         return r.createElement(
           Rt.Z,
           { className: s, appear: !1, enter: !0, exit: !0 },
-          r.createElement(Ot, { key: t, childrenClasses: n }, i)
+          r.createElement(It, { key: t, childrenClasses: n }, i)
         );
       }
-      function Ot(e) {
+      function It(e) {
         const { sizeClass: t, children: n, childrenClasses: o } = e,
           a = (0, i._T)(e, ["sizeClass", "children", "childrenClasses"]),
           [c, u, d, m] = (function () {
@@ -15075,7 +15104,7 @@
             : "");
         var i, o;
         return r.createElement(
-          It,
+          Ot,
           {
             childrenKey: e.activePage.identifier,
             childrenClasses: Bt(At(), At().ContentTransition),
@@ -16458,50 +16487,51 @@
             },
             {
               updateParamsBeforeShow: (e) =>
-                (function (e, t, n) {
-                  var i, r, o, s;
-                  let a,
-                    l,
+                (function (e, t, n, i) {
+                  var r, o, s, a;
+                  let l,
                     c,
-                    u = t.popupWidth || 500,
-                    m = t.popupHeight || 400;
+                    u,
+                    m = t.popupWidth || 500,
+                    h = t.popupHeight || 400;
                   if (
                     d.De.IN_CLIENT &&
                     (null ===
-                      (r =
-                        null === (i = null == n ? void 0 : n.SteamClient) ||
-                        void 0 === i
+                      (o =
+                        null === (r = null == i ? void 0 : i.SteamClient) ||
+                        void 0 === r
                           ? void 0
-                          : i.Window) || void 0 === r
+                          : r.Window) || void 0 === o
                       ? void 0
-                      : r.GetBrowserID)
+                      : o.GetBrowserID)
                   )
-                    c = n.SteamClient.Window.GetBrowserID();
+                    u = i.SteamClient.Window.GetBrowserID();
                   else if (
                     d.De.IN_CLIENT &&
                     (null ===
-                      (s =
-                        null === (o = null == n ? void 0 : n.SteamClient) ||
-                        void 0 === o
+                      (a =
+                        null === (s = null == i ? void 0 : i.SteamClient) ||
+                        void 0 === s
                           ? void 0
-                          : o.Browser) || void 0 === s
+                          : s.Browser) || void 0 === a
                       ? void 0
-                      : s.GetBrowserID)
+                      : a.GetBrowserID)
                   )
-                    c = n.SteamClient.Browser.GetBrowserID();
+                    u = i.SteamClient.Browser.GetBrowserID();
                   else {
-                    let e = n.screen;
-                    (a = (e.availWidth - u) / 2), (l = (e.availHeight - m) / 2);
+                    let e = i.screen;
+                    (l = (e.availWidth - m) / 2), (c = (e.availHeight - h) / 2);
                     let t = e;
                     void 0 !== t.availLeft &&
                       void 0 !== t.availTop &&
-                      ((a += t.availLeft), (l += t.availTop));
+                      ((l += t.availLeft), (c += t.availTop));
                   }
                   return Object.assign(Object.assign({}, e), {
-                    dimensions: { width: u, height: m, left: a, top: l },
-                    window_opener_id: c,
+                    dimensions: { width: m, height: h, left: l, top: c },
+                    center_on_window: n.bCenterOnWindow ? i : void 0,
+                    window_opener_id: u,
                   });
-                })(e, l, h),
+                })(e, l, m, h),
               onClose: () => l.fnOnClose && l.fnOnClose(),
             }
           ),
@@ -16526,7 +16556,10 @@
                   }),
                   i.createElement(
                     c.Y0,
-                    { browserInfo: l.browserContext },
+                    {
+                      browserInfo: l.browserContext,
+                      bCenterPopupsOnWindow: m.bCenterOnWindow,
+                    },
                     t.element
                   )
                 )
@@ -16596,7 +16629,7 @@
     },
     39811: (e, t, n) => {
       "use strict";
-      n.d(t, { Y0: () => M, eR: () => R, $C: () => T });
+      n.d(t, { Y0: () => M, Yu: () => k, eR: () => R, $C: () => T });
       var i = n(70655),
         r = n(67294),
         o = n(73935),
@@ -16723,6 +16756,7 @@
                   t.TakeFocus())
                 : s.window.SteamClient.Window.HideWindow());
           }, [s, t, t.visible]),
+          k(s.window),
           r.useLayoutEffect(() => {
             t.SetPopup(s);
           }, [t, s]),
@@ -16784,8 +16818,9 @@
               refContextMenuManager: m,
               browserInfo: h,
               bUsePopups: p,
+              bCenterPopupsOnWindow: g,
             } = e,
-            g = (0, i._T)(e, [
+            _ = (0, i._T)(e, [
               "children",
               "bRenderOverlayAtRoot",
               "refModalManager",
@@ -16794,28 +16829,30 @@
               "refContextMenuManager",
               "browserInfo",
               "bUsePopups",
+              "bCenterPopupsOnWindow",
             ]),
-            _ = r.useRef();
-          _.current || (_.current = new l.pG());
-          let v = r.createElement(
+            v = r.useRef();
+          v.current || (v.current = new l.pG());
+          let f = r.createElement(
             a.t,
-            Object.assign({}, g, { DialogWrapper: u, ModalManager: _.current })
+            Object.assign({}, _, { DialogWrapper: u, ModalManager: v.current })
           );
-          e.bRenderOverlayAtRoot && (v = o.createPortal(v, document.body)),
+          e.bRenderOverlayAtRoot && (f = o.createPortal(f, document.body)),
             r.useEffect(
-              () => ((0, s.k$)(c, _.current), () => (0, s.k$)(c, null)),
+              () => ((0, s.k$)(c, v.current), () => (0, s.k$)(c, null)),
               [c]
             ),
             r.useEffect(() => {
-              void 0 !== p && _.current.SetUsePopups(p);
-            }, [p]);
-          const f = r.useMemo(
-            () => ({ ModalManager: _.current, DialogWrapper: u }),
+              void 0 !== p && v.current.SetUsePopups(p),
+                void 0 !== g && v.current.SetCenterPopupsOnWindow(g);
+            }, [p, g]);
+          const C = r.useMemo(
+            () => ({ ModalManager: v.current, DialogWrapper: u }),
             [u]
           );
           return r.createElement(
             D.Provider,
-            { value: f },
+            { value: C },
             r.createElement(
               y,
               {
@@ -16823,7 +16860,7 @@
                 refContextMenuManager: m,
                 browserInfo: h,
               },
-              v,
+              f,
               e.children
             )
           );
@@ -16833,6 +16870,16 @@
       }
       function R() {
         return r.useContext(D).DialogWrapper;
+      }
+      function k(e) {
+        const t = T();
+        r.useEffect(() => {
+          if (e)
+            return (
+              l.Zp.RegisterModalManager(t, e),
+              () => l.Zp.UnregisterModalManager(e)
+            );
+        }, [e, t]);
       }
     },
     2957: (e, t, n) => {
@@ -16848,6 +16895,7 @@
       class l {
         constructor() {
           (this.m_bUsePopups = !0),
+            (this.m_bCenterPopupsOnWindow = !1),
             (this.m_rgModals = []),
             (this.m_OnModalCountChangedCallbacks = new s.pB()),
             (this.m_OnModalShownCallbacks = new s.pB()),
@@ -16956,6 +17004,12 @@
         BUsePopups() {
           return this.m_bUsePopups;
         }
+        SetCenterPopupsOnWindow(e) {
+          this.m_bCenterPopupsOnWindow = e;
+        }
+        BCenterPopupsOnWindow() {
+          return this.m_bCenterPopupsOnWindow;
+        }
         RequestModalMeasure(e, t, n) {
           this.m_rgMeasureModalRequests.push({
             rctToMeasure: e,
@@ -16968,7 +17022,12 @@
           return this.m_rgLegacyPopupModals;
         }
         ShowLegacyPopupModal(e, t, n, i) {
-          const o = new r.lc(e, t, n, i);
+          const o = new r.lc(
+            e,
+            t,
+            n,
+            Object.assign({ bCenterOnWindow: this.m_bCenterPopupsOnWindow }, i)
+          );
           return (
             this.m_rgLegacyPopupModals.push(o),
             this.m_OnLegacyPopupModalCountChanged.Dispatch(
@@ -17327,14 +17386,14 @@
         X: () => _,
         XBH: () => H,
         YVI: () => ue,
-        YqJ: () => I,
+        YqJ: () => O,
         YtI: () => m,
         Zrf: () => c,
         dLw: () => te,
         daM: () => $,
         dzL: () => S,
         ffh: () => C,
-        gR: () => O,
+        gR: () => I,
         ge: () => y,
         k4K: () => g,
         lsH: () => P,
@@ -18071,7 +18130,7 @@
           })
         );
       }
-      function I() {
+      function O() {
         return r.createElement(
           "svg",
           {
@@ -18107,7 +18166,7 @@
           })
         );
       }
-      function O() {
+      function I() {
         return r.createElement(
           "svg",
           {
@@ -19064,14 +19123,15 @@
     },
     28609: (e, t, n) => {
       "use strict";
-      n.d(t, { T: () => a });
+      n.d(t, { T: () => l });
       var i = n(70655),
         r = n(67294),
-        o = n(95598),
-        s = n(64839);
-      class a extends r.Component {
+        o = n(26682),
+        s = n(95598),
+        a = n(64839);
+      class l extends r.Component {
         constructor(e) {
-          super(e), (this.state = { maximized: this.BIsMaximized() });
+          super(e), (this.state = { maximized: void 0 });
         }
         BIsMaximized() {
           let e =
@@ -19082,7 +19142,11 @@
           return 0 === e && 0 === t;
         }
         componentDidMount() {
-          this.props.popup.addEventListener("resize", this.UpdateMaximizeState);
+          this.UpdateMaximizeState(),
+            this.props.popup.addEventListener(
+              "resize",
+              this.UpdateMaximizeState
+            );
         }
         componentWillUnmount() {
           this.props.popup.removeEventListener(
@@ -19091,8 +19155,14 @@
           );
         }
         UpdateMaximizeState() {
-          let e = this.BIsMaximized();
-          e != this.state.maximized && this.setState({ maximized: e });
+          if ((0, o.w3)(this.props.popup, "Window.IsWindowMaximized"))
+            this.props.popup.SteamClient.Window.IsWindowMaximized((e) => {
+              e != this.state.maximized && this.setState({ maximized: e });
+            });
+          else {
+            let e = this.BIsMaximized();
+            e != this.state.maximized && this.setState({ maximized: e });
+          }
         }
         render() {
           let e = this.props.popup,
@@ -19124,7 +19194,7 @@
                         e && e.close();
                       },
                     },
-                    r.createElement(o.pVO, null)
+                    r.createElement(s.pVO, null)
                   ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -19135,8 +19205,8 @@
                           e.SteamClient.Window.ToggleMaximize();
                         },
                       },
-                      this.state.maximized && r.createElement(o.r6F, null),
-                      !this.state.maximized && r.createElement(o.YqJ, null)
+                      this.state.maximized && r.createElement(s.r6F, null),
+                      !this.state.maximized && r.createElement(s.YqJ, null)
                     ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -19147,14 +19217,14 @@
                           e.SteamClient.Window.Minimize();
                         },
                       },
-                      r.createElement(o.gR, null)
+                      r.createElement(s.gR, null)
                     )
                 )
             )
           );
         }
       }
-      (0, i.gn)([s.ak], a.prototype, "UpdateMaximizeState", null);
+      (0, i.gn)([a.ak], l.prototype, "UpdateMaximizeState", null);
     },
     28268: (e, t, n) => {
       "use strict";
@@ -22038,6 +22108,7 @@
           {
             "flow-children": "row",
             className: (0, u.Z)(p.carouselBody, e.className, _),
+            navKey: e.navKey,
           },
           c.createElement(
             d.sj,
@@ -22189,7 +22260,7 @@
           c.createElement(
             c.Fragment,
             null,
-            c.createElement(I, null),
+            c.createElement(O, null),
             c.createElement(
               "div",
               { className: "agenda_title" },
@@ -22226,7 +22297,7 @@
               c.createElement("div", { className: M.AgendaDescCtn }, e.strDesc)
             )
           ),
-        I = (e) =>
+        O = (e) =>
           c.createElement(
             "div",
             { className: M.CarouselContainer },
@@ -22306,7 +22377,7 @@
               })
             )
           ),
-        O = (e) =>
+        I = (e) =>
           c.createElement(
             "div",
             { className: M.SpeakerContainer },
@@ -22325,35 +22396,35 @@
           c.createElement(
             "div",
             { className: M.SpeakersListContainer },
-            c.createElement(O, {
+            c.createElement(I, {
               imgHeadshot: "steamworksevents/gautam_headshot.png",
               strTitle: (0, T.Xx)(
                 "#SteamworksEvents_BuildingCommunity_GautamTitle"
               ),
               strBio: (0, T.Xx)("#SteamworksEvents_BuildingCommunity_Gautam"),
             }),
-            c.createElement(O, {
+            c.createElement(I, {
               imgHeadshot: "steamworksevents/alden_headshot.png",
               strTitle: (0, T.Xx)(
                 "#SteamworksEvents_BuildingCommunity_AldenTitle"
               ),
               strBio: (0, T.Xx)("#SteamworksEvents_BuildingCommunity_Alden"),
             }),
-            c.createElement(O, {
+            c.createElement(I, {
               imgHeadshot: "steamworksevents/adil_headshot.png",
               strTitle: (0, T.Xx)(
                 "#SteamworksEvents_BuildingCommunity_AdilTitle"
               ),
               strBio: (0, T.Xx)("#SteamworksEvents_BuildingCommunity_Adil"),
             }),
-            c.createElement(O, {
+            c.createElement(I, {
               imgHeadshot: "steamworksevents/jenny_headshot.png",
               strTitle: (0, T.Xx)(
                 "#SteamworksEvents_BuildingCommunity_JennyTitle"
               ),
               strBio: (0, T.Xx)("#SteamworksEvents_BuildingCommunity_Jenny"),
             }),
-            c.createElement(O, {
+            c.createElement(I, {
               imgHeadshot: "steamworksevents/joe_headshot.png",
               strTitle: (0, T.Xx)(
                 "#SteamworksEvents_BuildingCommunity_JoeTitle"
@@ -22404,6 +22475,7 @@
             n.e(6117),
             n.e(9060),
             n.e(3353),
+            n.e(3504),
             n.e(2136),
           ]).then(n.bind(n, 73922))
         ),
@@ -22421,8 +22493,9 @@
             n.e(6117),
             n.e(9060),
             n.e(3353),
+            n.e(3504),
             n.e(2136),
-          ]).then(n.bind(n, 76310))
+          ]).then(n.bind(n, 33099))
         ),
         Z = c.lazy(() =>
           Promise.all([
@@ -22438,6 +22511,7 @@
             n.e(6117),
             n.e(9060),
             n.e(3353),
+            n.e(3504),
             n.e(2136),
           ]).then(n.bind(n, 84820))
         ),
@@ -22455,6 +22529,7 @@
             n.e(6117),
             n.e(9060),
             n.e(3353),
+            n.e(3504),
             n.e(2136),
           ]).then(n.bind(n, 17398))
         ),
@@ -22474,7 +22549,7 @@
           ]).then(n.bind(n, 48366))
         ),
         Q = c.lazy(() =>
-          Promise.all([n.e(614), n.e(9035)]).then(n.bind(n, 33883))
+          Promise.all([n.e(614), n.e(3504), n.e(9035)]).then(n.bind(n, 49279))
         ),
         J = c.lazy(() =>
           Promise.all([n.e(3353), n.e(4935)]).then(n.bind(n, 40297))

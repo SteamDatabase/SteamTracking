@@ -280,7 +280,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .styles_ActionButton_2ZQed:hover {
   color: #fff;
@@ -952,7 +952,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .rewarditemsection_ActionButton_2c38-:hover {
   color: #fff;
@@ -1040,7 +1040,7 @@ body.v6.rewards .ModalPosition_Content {
   margin-left: 8px;
 }
 .rewarditemsection_ActionButton_2c38- {
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .rewarditemsection_ActionButton_2c38-:hover {
   color: #fff;
@@ -1317,7 +1317,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .loyaltypoints_ActionButton_lz5Rm:hover {
   color: #fff;
@@ -1614,7 +1614,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .rewarditem_ActionButton_2Urhg:hover {
   color: #fff;
@@ -1892,7 +1892,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .rewarditem_ActionButton_2Urhg:hover {
   color: #fff;
@@ -2220,7 +2220,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .rewarditem_ActionButton_2Urhg:hover {
   color: #fff;
@@ -3492,7 +3492,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .itembox_ActionButton_1CFwh:hover {
   color: #fff;
@@ -3832,7 +3832,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .bundle_ActionButton_IcoSk:hover {
   color: #fff;
@@ -4196,7 +4196,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .profilebundle_ActionButton_2dADy:hover {
   color: #fff;
@@ -4573,7 +4573,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .fadedbackground_ActionButton_3tpEm:hover {
   color: #fff;
@@ -5275,7 +5275,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .herogroup_ActionButton_2SB-6:hover {
   color: #fff;
@@ -5578,7 +5578,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .redeempointsmodal_ActionButton_PquU_:hover {
   color: #fff;
@@ -5621,7 +5621,6 @@ body.v6.rewards .ModalPosition_Content {
 }
 .redeempointsmodal_ModalContainer_Y6hHM
   .redeempointsmodal_ErrorContainer_2ArAm {
-  transition: all 300ms ease-in;
   margin: 10px 0 20px 0;
   padding: 5px;
   border: 1px solid #c44848;
@@ -5746,7 +5745,6 @@ body.v6.rewards .ModalPosition_Content {
 .redeempointsmodal_ItemPreviewContainer_11o78 {
   width: 100%;
   position: relative;
-  transition: all ease-in 3s;
   margin: 0 auto;
 }
 .redeempointsmodal_ItemPreviewContainer_11o78
@@ -6923,7 +6921,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .page_ActionButton_3mPNs:hover {
   color: #fff;
@@ -10859,7 +10857,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .banner_Banner_ECzA2 .banner_Link_185F6:hover {
   color: #fff;
@@ -11130,7 +11128,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .globals_ActionButton_FgTBs:hover {
   color: #fff;
@@ -11408,7 +11406,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .appfilterpopup_ActionButton_2XFxd:hover {
   color: #fff;
@@ -11889,7 +11887,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .loyaltyprimarynav_ActionButton_9ZGFy:hover {
   color: #fff;
@@ -12378,7 +12376,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .salerewarditemhero_ActionButton_xPimr:hover {
   color: #fff;
@@ -12760,7 +12758,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .index_ActionButton_2F_4Q:hover {
   color: #fff;
@@ -13477,7 +13475,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .index_ActionButton_3Gv1-:hover {
   color: #fff;

@@ -7593,35 +7593,35 @@
       };
       function me(e) {
         const { mapSectionLists: t, section: a, event: i, saleSection: r } = e,
-          { bIsScreenWide: o, nCarouselCapsules: s } = q(),
-          c = Math.min(e.nCapsulesPerPage, s),
-          d = (0, I.id)(),
-          m = t.get(a.id);
-        if (!m || 0 == m.length) return null;
-        let u = null;
+          { bIsScreenWide: s, nCarouselCapsules: c } = q(),
+          d = Math.min(e.nCapsulesPerPage, c),
+          m = (0, I.id)(),
+          u = t.get(a.id);
+        if (!u || 0 == u.length) return null;
+        let _ = null;
         switch (a.type) {
           case "4wide":
-            u = n.createElement(
+            _ = n.createElement(
               ue,
               Object.assign({}, e, {
-                capsuleList: m,
-                nCapsulesPerPage: c,
-                bIsScreenWide: o,
+                capsuleList: u,
+                nCapsulesPerPage: d,
+                bIsScreenWide: s,
               })
             );
             break;
           case "creator4wide":
-            u = n.createElement(
+            _ = n.createElement(
               _e,
               Object.assign({}, e, {
-                capsuleList: m,
-                nCapsulesPerPage: c,
-                bIsScreenWide: o,
+                capsuleList: u,
+                nCapsulesPerPage: d,
+                bIsScreenWide: s,
               })
             );
             break;
           default:
-            u = n.createElement("div", null, "Unknown: ", a.type);
+            _ = n.createElement("div", null, "Unknown: ", a.type);
         }
         return n.createElement(
           D.ZP,
@@ -7634,15 +7634,16 @@
               onRender: () => le._.Get().AddInteraction(r.unique_id, 0),
             },
             n.createElement(
-              "div",
+              o.s,
               {
+                navKey: a.id,
                 className: (0, w.Z)(
                   h.SaleSection,
                   h.CarouselDisplay,
                   g.SaleSectionCtn,
                   "SaleSectionForCustomCSS"
                 ),
-                style: (0, E.V)(r, i, d),
+                style: (0, E.V)(r, i, m),
               },
               n.createElement(
                 "div",
@@ -7656,7 +7657,7 @@
                   })
                 )
               ),
-              u
+              _
             )
           )
         );
@@ -7681,12 +7682,15 @@
             null == s
               ? void 0
               : s.map((e) => ({
-                  Render: (t) =>
-                    n.createElement(ce.B, {
-                      key: e.type + "_" + e.id,
+                  Render: (t) => {
+                    const a = e.type + "_" + e.id;
+                    return n.createElement(ce.B, {
+                      key: a,
+                      navKey: a,
                       capsule: e,
                       imageType: "header",
-                    }),
+                    });
+                  },
                 })),
           u = [a];
         return (0, b.Pe)(
@@ -7742,13 +7746,16 @@
             null == c
               ? void 0
               : c.map((e) => ({
-                  Render: (t) =>
-                    n.createElement(ce.B, {
-                      key: e.type + "_" + e.id,
+                  Render: (t) => {
+                    const a = e.type + "_" + e.id;
+                    return n.createElement(ce.B, {
+                      key: a,
+                      navKey: a,
                       capsule: e,
                       imageType: "header",
                       creatorAccountID: null == u ? void 0 : u.get(e.id),
-                    }),
+                    });
+                  },
                 })),
           g = [a];
         return s
@@ -8605,6 +8612,7 @@
                       padded: !0,
                       gap: 12,
                       screenIsWide: C,
+                      navKey: "large_cluster_" + t,
                     },
                     w.map((e, t) =>
                       n.createElement(Ue, {
@@ -15189,7 +15197,7 @@
               null == t ? void 0 : t.GetShortDescription()
             )
           ),
-          n.createElement(ii.O, { info: a })
+          n.createElement(ii.O, { info: a, bPopOutTrailerPlayback: !0 })
         );
       }
       const Ii = (e) => {
@@ -16587,8 +16595,9 @@
             let n = [],
               i = null;
             try {
-              yield this.LoadPlaytime(),
-                (n = Array.from(this.m_mapPlaytime.keys()));
+              yield Promise.all([this.LoadPlaytime(), H.jg.Get().HintLoad()]),
+                (n = Array.from(this.m_mapPlaytime.keys())),
+                (n = n.filter((e) => H.jg.Get().BIsGameOwned(e)));
               let i = [],
                 r = [];
               t &&
@@ -17167,7 +17176,7 @@
                       sr,
                       Object.assign(
                         {
-                          key: "capsules_for_app_" + a,
+                          key: "capsules_for_app_" + t[0].id,
                           capsules: t,
                           title: p.GetName(),
                           subtitle: "last_played" === _ ? f : T,
@@ -18221,21 +18230,21 @@
         let E = !1;
         const h = [{ elements: [], activeTab: new z.u(null, r) }];
         t.GetSaleSections().forEach((i, r) => {
-          var o;
-          const l = h[h.length - 1].activeTab;
-          if (l && (!l.ShouldShowSection(i) || i.hide_section)) return;
-          const d = "tabs" != i.section_type,
-            u = c.g6
+          var l;
+          const d = h[h.length - 1].activeTab;
+          if (d && (!d.ShouldShowSection(i) || i.hide_section)) return;
+          const u = "tabs" != i.section_type,
+            _ = c.g6
               .Get()
               .BIsPartnerTakeoverActive(
                 t.GetContentHubType(),
                 t.GetContentHubCategory(),
                 t.GetContentHubTag()
               ),
-            _ = s && !u && !Boolean(t.jsondata.content_hub_restricted_width);
-          let p = null;
+            p = s && !_ && !Boolean(t.jsondata.content_hub_restricted_width);
+          let S = null;
           if (i.disable_section)
-            p = n.createElement(vn, { section: i, event: t, language: a });
+            S = n.createElement(vn, { section: i, event: t, language: a });
           else if (
             (function (e) {
               return (
@@ -18260,17 +18269,17 @@
             !I.L7.logged_in
           )
             E ||
-              ((p = n.createElement(zt, { section: i, event: t, language: a })),
+              ((S = n.createElement(zt, { section: i, event: t, language: a })),
               (E = !0));
           else {
             const t = i.diable_tab_id_filtering
-              ? new z.u(null, l.GetSaleDay())
-              : l;
+              ? new z.u(null, d.GetSaleDay())
+              : d;
             if ("tabs" == i.section_type) {
               const e = v.get(i);
               h.push({ activeTab: e, elements: [] });
             }
-            p = n.createElement(
+            S = n.createElement(
               Dr,
               Object.assign({}, e, {
                 section: i,
@@ -18278,10 +18287,11 @@
                 appVisibilityTracker: m,
                 selectedTabs: v,
                 setTabUniqueIDQueryParam: g,
-                expanded: _,
+                expanded: p,
               })
             );
           }
+          const b = "SaleSection_" + (i.unique_id || r);
           h[h.length - 1].elements.push(
             n.createElement(
               ze.SV,
@@ -18293,25 +18303,26 @@
                     i.visibility_by_door_index_state,
                   door_index_visibility: i.door_index_visibility,
                 },
-                d
+                u
                   ? n.createElement(
-                      "div",
+                      o.s,
                       {
-                        id: "SaleSection_" + (i.unique_id || r),
+                        navKey: b,
+                        id: b,
                         className: (0, w.Z)({
                           SaleSectionCtn: !0,
                           [i.section_type]: !0,
-                          [(null === (o = i.internal_section_data) ||
-                          void 0 === o
+                          [(null === (l = i.internal_section_data) ||
+                          void 0 === l
                             ? void 0
-                            : o.internal_type) || ""]: !0,
-                          expanded: _,
+                            : l.internal_type) || ""]: !0,
+                          expanded: p,
                           [i.single_item_style || ""]: !0,
                         }),
                       },
-                      p
+                      S
                     )
-                  : p
+                  : S
               )
             )
           );

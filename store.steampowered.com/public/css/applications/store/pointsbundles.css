@@ -273,7 +273,7 @@ body.v6.rewards .ModalPosition_Content {
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .bundle_ActionButton_1YLE2:hover {
   color: #fff;

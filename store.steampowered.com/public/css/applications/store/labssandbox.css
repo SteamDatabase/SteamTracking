@@ -920,7 +920,9 @@
   font-size: 12px;
   text-decoration: underline;
   text-decoration-color: #4b4b4b;
-  transition: all 0.21s ease-in-out;
+  transition-property: color, text-decoration-color;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
 }
 .login_NeedHelpLink_3nqR4.login_NeedHelpHighlight_25N0C {
   color: #ff7300;

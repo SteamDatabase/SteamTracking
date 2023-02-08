@@ -1231,8 +1231,12 @@
 .avatarcollection_AvatarPreview_29CGQ {
   width: 64px;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .avatarcollection_AvatarPreview_29CGQ img {
   display: block;
@@ -1258,8 +1262,12 @@
   width: 64px;
   height: 64px;
   position: relative;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .avatarcollection_FramePreview_16w1D img {
   display: block;
@@ -1853,8 +1861,12 @@ input.DialogTextInputBase:focus {
   flex: 0;
   margin-top: 5px;
   padding: 3px 10px 3px 10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .summary_formattingButtons_2T2D7:hover .summary_formattingButton_LhNoI {
   -webkit-transform: scale(1.01);
@@ -1888,8 +1900,12 @@ input.DialogTextInputBase:focus {
   width: 54px;
   height: 54px;
   align-self: center;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .favoritebadge_Badge_2ODUB .favoritebadge_BadgeDetails_3Y40H {
   flex: 1;
@@ -1942,8 +1958,12 @@ input.DialogTextInputBase:focus {
   width: 64px;
   height: 64px;
   align-self: center;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .favoritegroup_Group_1yHxt .favoritegroup_GroupDetails_aUFBJ {
   flex: 1;
@@ -2003,8 +2023,12 @@ input.DialogTextInputBase:focus {
 .miniprofilepreview_MiniProfileBackgroundOption_1kB6_
   .miniprofilepreview_Preview_1JFlR {
   padding: 0px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .miniprofilepreview_MiniProfileBackgroundOption_1kB6_
   .miniprofilepreview_Preview_1JFlR.miniprofilepreview_BlankBackground_19sKX {
@@ -2099,8 +2123,12 @@ input.DialogTextInputBase:focus {
 .profilebackground_BackgroundOption_189ER .profilebackground_Preview_2Zegg {
   padding: 0;
   background: #000;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .profilebackground_BackgroundOption_189ER
   .profilebackground_Preview_2Zegg
@@ -2707,7 +2735,9 @@ body.profilethemecolors_SteamDeckTheme_3TBj7 {
   background-position: 100% 0;
   background-size: 200% 100%;
   border-radius: 3px;
-  transition: all 0.15s ease-in;
+  transition-property: background-position, color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
   white-space: nowrap;
 }
 .profileeditshell_Shell_2kqKZ
@@ -2807,8 +2837,12 @@ body.profilethemecolors_SteamDeckTheme_3TBj7 {
 }
 .profilemodifier_ProfileModifierOption_3NIiY .profilemodifier_Preview_2GvFU {
   padding: 0px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .profilemodifier_ProfileModifierOption_3NIiY
   .profilemodifier_Preview_2GvFU.profilemodifier_BlankBackground_Gd3-p {
@@ -2902,8 +2936,12 @@ body.profilethemecolors_SteamDeckTheme_3TBj7 {
   border-radius: 50%;
   border: solid 4px rgba(58, 62, 71, 0.5);
   display: inline-block;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: -webkit-transform, filter;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: transform, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .profiletheme_ProfileTheme_39ksj
   .profiletheme_PreviewCtn_33SnK

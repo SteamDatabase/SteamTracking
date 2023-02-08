@@ -41763,6 +41763,7 @@
               "flow-children": "grid",
               navEntryPreferPosition: o.c4.PREFERRED_CHILD,
               autoFocus: H,
+              navKey: "preview_widget_" + d.GetID(),
             },
             n.createElement(
               a.Ks,

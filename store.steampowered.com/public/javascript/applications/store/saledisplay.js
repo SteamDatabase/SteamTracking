@@ -19,31 +19,31 @@
     },
     34425: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => u });
+      n.d(t, { p: () => l });
       var a = n(70655),
         r = n(67294),
         o = n(7707),
         c = n(27745),
         s = n(64839),
         i = n(90666),
-        l = n(9198);
-      function u(e) {
+        u = n(9198);
+      function l(e) {
         const { children: t, navTreeRef: n } = e,
-          u = (0, a._T)(e, ["children", "navTreeRef"]),
+          l = (0, a._T)(e, ["children", "navTreeRef"]),
           m = r.useRef(),
           g = (0, s.BE)(m, n),
-          E = (0, i.id)(),
-          p = window.__virtual_keyboard_client;
+          d = (0, i.id)(),
+          _ = window.__virtual_keyboard_client;
         if (
           ((0, r.useEffect)(() => {
-            l.Wz.SetHookFactory(() => p);
-          }, [p]),
-          E)
+            u.Wz.SetHookFactory(() => _);
+          }, [_]),
+          d)
         ) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
-            Object.assign({}, u, {
+            Object.assign({}, l, {
               navTreeRef: g,
               secondary: !0,
               parentEmbeddedNavTree: e,
@@ -54,101 +54,212 @@
         return r.createElement(r.Fragment, null, t);
       }
     },
+    41147: (e, t, n) => {
+      "use strict";
+      n.d(t, { g: () => v });
+      var a = n(70655),
+        r = n(67294),
+        o = n(78587),
+        c = (n(64839), n(60664)),
+        s = (n(37464), n(35921));
+      let i = !1,
+        u = !1,
+        l = !1,
+        m = !1;
+      function g() {
+        return i || _(), u || l;
+      }
+      function d(e, t) {
+        return (
+          !!window.location.href.match("[?&]" + t + "=") ||
+          !(
+            "undefined" == typeof navigator ||
+            !navigator.userAgent ||
+            -1 == navigator.userAgent.indexOf(e)
+          )
+        );
+      }
+      function _() {
+        (m = d("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+          (l = d("Valve Steam GameOverlay", "force_overlay_view")),
+          (u = m || d("Valve Steam Client", "force_client_view")),
+          (i = !0);
+      }
+      const f = "FocusNavHistoryID";
+      function v(e) {
+        const { children: t, timeoutMS: n } = e,
+          i = (0, a._T)(e, ["children", "timeoutMS"]),
+          u = (function (e = 2) {
+            const t = (0, o.k6)(),
+              n = r.useRef(),
+              a = (0, o.TH)(),
+              s = g(),
+              i = a.state && a.state[f],
+              u = r.useRef();
+            return (
+              r.useLayoutEffect(() => {
+                if (!n.current) return;
+                const e = n.current;
+                return e
+                  .Node()
+                  .Tree.WindowContext.FocusChangedCallbacks.Register(
+                    (n, a, r) => {
+                      const o = t.location;
+                      let i = o.state && o.state[f];
+                      i ||
+                        ((i = s
+                          ? `State_${o.key}`
+                          : `State_${e.Node().Tree.id}`),
+                        (u.current = i),
+                        t.replace(
+                          o.pathname,
+                          Object.assign(Object.assign({}, o.state), { [f]: i })
+                        )),
+                        u.current == i &&
+                          (s
+                            ? e.SaveState(i)
+                            : window.history.replaceState(
+                                Object.assign(
+                                  Object.assign({}, window.history.state),
+                                  { [i]: (0, c.Sp)(e.Node()) }
+                                ),
+                                null
+                              ));
+                    }
+                  ).Unregister;
+              }, [t, s]),
+              r.useEffect(() => {
+                var t;
+                if (n.current && u.current != i) {
+                  const a = n.current.NavTree().DeferredFocus;
+                  a.SuppressFocus();
+                  const r = s
+                      ? null
+                      : null === (t = window.history.state) || void 0 === t
+                      ? void 0
+                      : t[i],
+                    o = window.setTimeout(() => {
+                      let e = !1;
+                      s
+                        ? (e = n.current.RestoreState(i, 1))
+                        : r && ((0, c.$y)(n.current.Node(), r, 0), (e = !0)),
+                        e ? a.Reset() : a.ExecuteQueuedFocus(),
+                        (u.current = i);
+                    }, e);
+                  return () => {
+                    window.clearTimeout(o), a.ExecuteQueuedFocus();
+                  };
+                }
+              }, [i, t, s, e]),
+              n
+            );
+          })(n);
+        return r.createElement(
+          s.s,
+          Object.assign(Object.assign({}, i), { navRef: u }),
+          t
+        );
+      }
+    },
     31970: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => N });
+      n.r(t), n.d(t, { default: () => y });
       var a = n(67294),
         r = n(7707),
         o = n(34425),
         c = n(35921),
         s = n(88272),
         i = n(39746),
-        l = (n(12505), n(71174)),
-        u = n(15396),
-        m = n(7573),
-        g = n(90666),
-        E = n(66472);
+        u = (n(12505), n(41147)),
+        l = n(71174),
+        m = n(15396),
+        g = n(7573),
+        d = n(90666),
+        _ = n(66472);
       n(37662);
-      class p {
+      class f {
         constructor() {
-          this.m_rgSections = (0, g.kQ)("categories", "application_config");
+          this.m_rgSections = (0, d.kQ)("categories", "application_config");
         }
         GetSections() {
           return this.m_rgSections;
         }
         static Get() {
-          return p.s_singleton || (p.s_singleton = new p()), p.s_singleton;
+          return f.s_singleton || (f.s_singleton = new f()), f.s_singleton;
         }
       }
-      function _(e) {
-        const { section: t, autoFocus: n } = e;
-        return a.createElement(
-          u.Y,
-          { placeholderHeight: "150px" },
-          a.createElement(
+      function v(e) {
+        const { section: t, autoFocus: n } = e,
+          r = (0, d.id)(),
+          o = a.createElement(
             "div",
-            { className: E.CategorySection },
+            { className: _.CategorySection },
             a.createElement(
               "span",
-              { className: E.CategorySectionName },
+              { className: _.CategorySectionName },
               t.name
             ),
             a.createElement(
               s.P8,
               {
-                className: E.CategoriesCtn,
+                className: _.CategoriesCtn,
                 scrollDirection: "x",
                 navEntryPreferPosition: i.c4.MAINTAIN_X,
+                navKey: "cat_section" + t.name,
               },
               t.categories.map((t, n) =>
-                a.createElement(d, {
+                a.createElement(p, {
                   key: "category" + t.name,
                   category: t,
                   autoFocus: e.autoFocus && 0 === n,
                 })
               )
             )
-          )
-        );
+          );
+        return r ? o : a.createElement(m.Y, { placeholderHeight: "150px" }, o);
       }
-      function d(e) {
+      function p(e) {
         const { category: t } = e;
         return a.createElement(
           c.s,
-          { focusableIfNoChildren: !0, autoFocus: e.autoFocus },
+          {
+            focusableIfNoChildren: !0,
+            autoFocus: e.autoFocus,
+            navKey: "cat_panel" + t.name,
+          },
           a.createElement(
             r.IS,
             {
-              href: g.De.STORE_BASE_URL + t.url,
-              className: (0, m.Z)({
-                [E.Category]: !0,
-                [E.TopLevelCategory]: t.is_toplevel_genre,
+              href: d.De.STORE_BASE_URL + t.url,
+              className: (0, g.Z)({
+                [_.Category]: !0,
+                [_.TopLevelCategory]: t.is_toplevel_genre,
               }),
             },
             a.createElement(
               "span",
-              { className: E.CategoryName },
+              { className: _.CategoryName },
               a.createElement("span", null, t.name)
             ),
-            a.createElement(C, Object.assign({}, e))
+            a.createElement(E, Object.assign({}, e))
           )
         );
       }
-      function C(e) {
+      function E(e) {
         let { category: t } = e;
         return a.createElement(
           "div",
-          { className: E.GridOuter },
+          { className: _.GridOuter },
           a.createElement(
             "div",
-            { className: E.Grid },
-            a.createElement("img", { src: g.De.STORE_BASE_URL + t.image_url })
+            { className: _.Grid },
+            a.createElement("img", { src: d.De.STORE_BASE_URL + t.image_url })
           )
         );
       }
-      const N = function () {
+      const y = function () {
         const { sections: e } = (function () {
-            const e = p.Get(),
+            const e = f.Get(),
               [t, n] = (0, a.useState)(e.GetSections());
             return { sections: t };
           })(),
@@ -165,14 +276,18 @@
             o.p,
             { navID: "CategoriesApp", NavigationManager: t, navTreeRef: n },
             a.createElement(
-              "div",
-              { className: E.CategorySectionsCtn },
-              e.map((e, t) =>
-                a.createElement(_, {
-                  key: "section" + e.name,
-                  section: e,
-                  autoFocus: 0 == t,
-                })
+              u.g,
+              { timeoutMS: 1e3 },
+              a.createElement(
+                "div",
+                { className: _.CategorySectionsCtn },
+                e.map((e, t) =>
+                  a.createElement(v, {
+                    key: "section" + e.name,
+                    section: e,
+                    autoFocus: 0 == t,
+                  })
+                )
               )
             )
           )
@@ -181,70 +296,75 @@
     },
     41135: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => C });
+      n.r(t), n.d(t, { default: () => E });
       var a = n(67294),
         r = (n(26149), n(34425)),
-        o = n(37662),
-        c = n(3389),
-        s = n(71174),
-        i = n(7200),
+        o = n(41147),
+        c = n(37662),
+        s = n(3389),
+        i = n(71174),
+        u = n(7200),
         l = n(27991),
-        u = n(34845),
-        m = n(69491),
-        g = n.n(m),
-        E = n(13596),
-        p = n(41311),
-        _ = n(90666),
-        d = n(51449);
-      function C(e) {
+        m = n(34845),
+        g = n(69491),
+        d = n.n(g),
+        _ = n(13596),
+        f = n(41311),
+        v = n(90666),
+        p = n(51449);
+      function E(e) {
         return a.createElement(
-          d.n,
+          p.n,
           { bSalePage: !0 },
-          a.createElement(N, Object.assign({}, e))
+          a.createElement(y, Object.assign({}, e))
         );
       }
-      function N(e) {
+      function y(e) {
         const { promotionName: t, language: n } = e,
-          [m, d] = a.useState(
-            i.j1.GetClanEventFromAnnouncementGID(_.Wj.ANNOUNCEMENT_GID)
+          [g, p] = a.useState(
+            u.j1.GetClanEventFromAnnouncementGID(v.Wj.ANNOUNCEMENT_GID)
           ),
-          C = (0, s.L)();
+          E = (0, i.L)();
         if (
           (a.useEffect(() => {
             if (
-              (null == m ? void 0 : m.AnnouncementGID) != _.Wj.ANNOUNCEMENT_GID
+              (null == g ? void 0 : g.AnnouncementGID) != v.Wj.ANNOUNCEMENT_GID
             ) {
-              const e = new c.K(_.JA.CLANSTEAMID);
-              i.j1
+              const e = new s.K(v.JA.CLANSTEAMID);
+              u.j1
                 .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                   e,
-                  _.Wj.ANNOUNCEMENT_GID,
+                  v.Wj.ANNOUNCEMENT_GID,
                   null
                 )
-                .then(d);
+                .then(p);
             }
             (0, l.nf)(null);
-          }, [m]),
-          !m)
+          }, [g]),
+          !g)
         )
           return a.createElement(
             "div",
-            { className: g().FlexCenter, style: { height: "500px" } },
-            a.createElement(E.V, {
+            { className: d().FlexCenter, style: { height: "500px" } },
+            a.createElement(_.V, {
               size: "medium",
-              string: (0, p.Xx)("#Loading"),
+              string: (0, f.Xx)("#Loading"),
             })
           );
-        const N = m.visibility_state !== o.ac.k_EEventStateVisible;
+        const y = g.visibility_state !== c.ac.k_EEventStateVisible;
         return a.createElement(
           r.p,
-          { navID: "StoreSalePageRoot", NavigationManager: C },
-          a.createElement(u.o, {
-            promotionName: t,
-            language: n,
-            eventModel: m,
-            bIsPreview: N,
-          })
+          { navID: "StoreSalePageRoot", NavigationManager: E },
+          a.createElement(
+            o.g,
+            { timeoutMS: 1e3 },
+            a.createElement(m.o, {
+              promotionName: t,
+              language: n,
+              eventModel: g,
+              bIsPreview: y,
+            })
+          )
         );
       }
     },

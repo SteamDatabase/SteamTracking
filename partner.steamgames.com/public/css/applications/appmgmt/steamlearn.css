@@ -2349,7 +2349,29 @@ a {
 .projecttrainstatus_TrainStatusPanel_BbjEt
   .projecttrainstatus_BatchStatus_3ReQo
   .projecttrainstatus_BatchStatusRow_3depk {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  font-size: 15px;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_BatchStatus_3ReQo
+  .projecttrainstatus_BatchStatusRow_3depk
+  .projecttrainstatus_PhaseLabel_Dh04R {
   color: #999;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_BatchStatus_3ReQo
+  .projecttrainstatus_BatchStatusRow_3depk
+  .projecttrainstatus_PhaseValues_3k0j2 {
+  color: #aaa;
+}
+.projecttrainstatus_TrainStatusPanel_BbjEt
+  .projecttrainstatus_BatchStatus_3ReQo
+  .projecttrainstatus_BatchStatusRow_3depk
+  .projecttrainstatus_PhaseValues_3k0j2
+  .projecttrainstatus_Total_37a21 {
+  color: #ddd;
 }
 .projecttrainstatus_TrainStatusPanel_BbjEt
   .projecttrainstatus_CurrentEpoch_1YeRP {

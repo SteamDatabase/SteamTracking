@@ -533,6 +533,11 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni {
   flex: 3;
+  background: radial-gradient(
+    201.11% 137.71% at 0.9% -3.76%,
+    #343941 0%,
+    #0e141b 40%
+  );
 }
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader {
   margin-right: 0;
@@ -2751,7 +2756,9 @@ img {
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
+  transition-property: background, box-shadow, padding-left;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .shared_common_SummaryTextArea_2xqdR:focus {
   background: rgba(67, 73, 83, 0.6);
@@ -2785,7 +2792,9 @@ button.DialogButton {
   border-radius: 2px;
   cursor: pointer;
   width: 100%;
-  transition: all 0.2s ease-out;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   background: #3d4450;
   background-position: 99% 1%;
   background-size: 300% 300%;
@@ -2977,6 +2986,12 @@ button.DialogButton::-moz-focus-inner {
     ),
     #25282e;
   user-select: none;
+}
+.DialogContent .DialogControlsSection:not(:first-child),
+.DialogContent .DialogControlsSectionHeader:not(:first-child),
+.DialogContent .DialogHeader:not(:first-child),
+.DialogContent .DialogSubHeader:not(:first-child) {
+  margin-top: 24px;
 }
 .DialogContentTransition {
   display: flex;
@@ -3232,7 +3247,6 @@ button.DialogButton::-moz-focus-inner {
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
 }
 .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
@@ -3441,7 +3455,7 @@ button.TextButton {
   border-bottom: 1px dotted #0000;
 }
 button.TextButton .SVGIcon_Button {
-  transition: all 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   margin-right: 2px;
 }
 button.TextButton:hover,
@@ -3663,7 +3677,7 @@ button.TextButton.gpfocus {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 0px;
-  transition: all 0.2s linear;
+  transition: width 0.2s linear;
 }
 .DialogListBuilderInput_List {
   display: flex;
@@ -3758,7 +3772,7 @@ button.TextButton.gpfocus {
 }
 .DialogCheckbox .SVGIcon_DialogCheck {
   opacity: 0;
-  transition: all 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
   width: 18px;
   height: 18px;
   margin-top: 9%;
@@ -3767,7 +3781,8 @@ button.TextButton.gpfocus {
 .DialogCheckbox .SVGIcon_DialogCheck path {
   stroke-width: 40px;
   stroke-dashoffset: -270;
-  transition: all 0.18s ease-out;
+  transition-property: stroke-dashoffset;
+  transition-duration: 0.18s;
   transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
   transition-delay: 0.3s;
 }
@@ -3854,7 +3869,9 @@ button.TextButton.gpfocus {
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
   transform: scale(0);
   opacity: 0;
-  transition: all 0.1s ease-in-out;
+  transition-property: opacity, scale, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 .DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -3871,7 +3888,9 @@ button.TextButton.gpfocus {
   letter-spacing: 1px;
   text-align: center;
   color: #1b98ff;
-  transition: all 0s ease-out;
+  transition-property: transform, opacity;
+  transition-duration: 0s;
+  transition-timing-function: ease-out;
   z-index: 0;
   pointer-events: none;
   user-select: none;

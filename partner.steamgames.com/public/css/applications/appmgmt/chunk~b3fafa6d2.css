@@ -342,7 +342,9 @@ b {
 }
 .partnereventshared_Button_3P0Tm {
   color: #dfe3e6;
-  transition: all 0.2s ease-out;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
   border-radius: 2px;
@@ -361,7 +363,9 @@ b {
   flex-direction: row;
   align-items: center;
   color: #dfe3e6;
-  transition: all 0.2s ease-out;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
   border-radius: 2px;

@@ -42,6 +42,7 @@
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
   .adminshared_SectionCtn_3la4r {
+  position: relative;
   background: #2c2e35;
   padding: 24px;
   margin-bottom: 1px;
@@ -78,6 +79,35 @@
 .adminshared_DashLink_2y93_ svg {
   height: 34px;
   width: 53px;
+}
+.adminshared_FlexRow_2OkCw {
+  display: flex;
+  flex-direction: row;
+}
+.adminshared_MarginBottom_1qVJS {
+  margin-bottom: 20px;
+}
+select {
+  font-size: 14px;
+  padding: 12px 10px;
+}
+.adminshared_StatusLineItemCtn_jtOdk {
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  margin-bottom: 4px;
+}
+.adminshared_StatusLineItemCtn_jtOdk .adminshared_StatusIcon_gwjXH {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+.adminshared_StatusLineItemCtn_jtOdk
+  .adminshared_StatusIcon_gwjXH.adminshared_StatusIconDone_20lWe
+  svg {
+  fill: #8bc53f;
+  stroke: #8bc53f;
 }
 .reorderablelist_WhitelistNumber_1ZU2Q {
   width: 30px;
@@ -257,7 +287,9 @@ img {
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
+  transition-property: background, box-shadow, padding-left;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .shared_common_SummaryTextArea_2xqdR:focus {
   background: rgba(67, 73, 83, 0.6);

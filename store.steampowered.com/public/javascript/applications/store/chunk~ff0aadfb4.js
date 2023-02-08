@@ -419,14 +419,15 @@
             strExtraParams: s,
             elElementToAppendToHover: c,
             index: m,
+            navKey: v,
           } = t,
-          [v, E] = a.useState(!1),
-          [f] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
-          [b] = (0, d.vs)(n && (null == f ? void 0 : f.GetParentAppID()), o.bk),
-          I = (0, y.bJ)(),
-          G = (0, A.id)();
-        if (!f) return null;
-        const O = Boolean(b);
+          [E, f] = a.useState(!1),
+          [b] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
+          [I] = (0, d.vs)(n && (null == b ? void 0 : b.GetParentAppID()), o.bk),
+          G = (0, y.bJ)(),
+          O = (0, A.id)();
+        if (!b) return null;
+        const P = Boolean(I);
         return a.createElement(
           r.s,
           {
@@ -435,10 +436,11 @@
               [w + m]: 0 == m,
             }),
             navEntryPreferPosition: l.c4.PREFERRED_CHILD,
+            navKey: v,
           },
           a.createElement(
             C.zw,
-            { appid: f.GetAppID() },
+            { appid: b.GetAppID() },
             a.createElement(
               p.ll,
               {
@@ -450,35 +452,35 @@
                 bHidePrice: t.bHidePrice,
                 bUseSubscriptionLayout: t.bUseSubscriptionLayout,
                 strExtraParams: t.strExtraParams,
-                fnOnHoverStateChange: !G && E,
+                fnOnHoverStateChange: !O && f,
                 nCreatorAccountID: t.creatorAccountID,
               },
               a.createElement(
                 T,
                 Object.assign({}, t, {
                   info: e,
-                  bIsHovered: v,
-                  bHasParentAppToDisplay: O,
+                  bIsHovered: E,
+                  bHasParentAppToDisplay: P,
                 })
               )
             ),
             Boolean(c) && a.createElement("div", null, c)
           ),
-          O &&
+          P &&
             a.createElement(
               i.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, h.h)(b, I, G, t.strExtraParams)
+                (0, h.h)(I, G, O, t.strExtraParams)
               ),
               a.createElement(
                 C.zw,
-                { appid: b.GetAppID() },
+                { appid: I.GetAppID() },
                 a.createElement(
                   "div",
                   { className: g().ParentType },
                   (0, S.Xx)(
-                    11 == f.GetAppType()
+                    11 == b.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC"
                   )
@@ -487,7 +489,7 @@
                   L._,
                   {
                     type: "app",
-                    id: b.GetAppID(),
+                    id: I.GetAppID(),
                     strExtraParams: t.strExtraParams,
                   },
                   a.createElement(
@@ -496,8 +498,8 @@
                       {
                         loading: "lazy",
                         className: _.AppCapsuleImage,
-                        alt: b.GetName(),
-                        src: b.GetAssets().GetSmallCapsuleURL(),
+                        alt: I.GetName(),
+                        src: I.GetAssets().GetSmallCapsuleURL(),
                       },
                       (0, o.fn)()
                     )

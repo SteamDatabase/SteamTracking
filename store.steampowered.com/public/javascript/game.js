@@ -60,9 +60,9 @@ function CreateWidget( nAppId )
 
 	var strWidgetURL;
 	if( nSubId )
-		strWidgetURL = 'https://store.steampowered.com/store/widget/' + nAppId + '/' + nSubId + '/';
+		strWidgetURL = 'https://store.steampowered.com/widget/' + nAppId + '/' + nSubId + '/';
 	else
-		strWidgetURL = 'https://store.steampowered.com/store/widget/' + nAppId + '/';
+		strWidgetURL = 'https://store.steampowered.com/widget/' + nAppId + '/';
 
 	if( strDesc )
 		strWidgetURL = strWidgetURL + '?t=' + encodeURIComponent( strDesc );
@@ -111,7 +111,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 	funcUpdateIgnoredReasonClasses();
 
 	var funcIgnoreGame = function( ignore_reason ) {
-		$J.post( 'https://store.steampowered.com/store/recommended/ignorerecommendation/', {
+		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
 			appid: store_appid,
 			snr: snr,
@@ -141,7 +141,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 	} );
 
 	$UnIgnoreBtn.click( function() {
-		$J.post( 'https://store.steampowered.com/store/recommended/ignorerecommendation/', {
+		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
 			appid: store_appid,
 			snr: snr,
@@ -159,7 +159,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 	});
 
 	$FollowBtn.click( function() {
-		$J.post( 'https://store.steampowered.com/store/explore/followgame/', {
+		$J.post( 'https://store.steampowered.com/explore/followgame/', {
 			sessionid: g_sessionID,
 			appid: steamworks_appid
 		}).done( function() {
@@ -171,7 +171,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 	});
 
 	$UnFollowBtn.click( function() {
-		$J.post( 'https://store.steampowered.com/store/explore/followgame/', {
+		$J.post( 'https://store.steampowered.com/explore/followgame/', {
 			sessionid: g_sessionID,
 			appid: steamworks_appid,
 			unfollow: 1
@@ -191,7 +191,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 		if ( bQueueIsValid )
 			$J('#next_in_queue_form').submit();
 		else
-			window.location = 'https://store.steampowered.com/store/explore/startnew';
+			window.location = 'https://store.steampowered.com/explore/startnew';
 	});
 
 	$J('a.dq_settings_link').click( function() {
@@ -202,7 +202,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 				ShowConfirmDialog( 'Customize Your Discovery Queue', 'We\'ve built you a new Discovery Queue by applying your customizations.  What would you like to do?',
 					'Start exploring the new Queue','Stay here'
 				).done( function() {
-					window.location = 'https://store.steampowered.com/store/explore/startnew/' + g_eDiscoveryQueueType + '/';
+					window.location = 'https://store.steampowered.com/explore/startnew/' + g_eDiscoveryQueueType + '/';
 				});
 				bQueueIsValid = false;
 			}
@@ -544,7 +544,7 @@ function RequestCurrentUserRecommendationVotes( recommendationIDs )
 		return;
 	}
 
-	$J.post( 'https://store.steampowered.com/store//userreviews/ajaxgetvotes/', {
+	$J.post( 'https://store.steampowered.com//userreviews/ajaxgetvotes/', {
 			'recommendationids' : recommendationIDs
 		}
 	).done( function( response ) {
@@ -582,7 +582,7 @@ function UserReviewVoteUp( bLoggedIn, strLoginURL, id )
 		return;
 	}
 
-	UserReview_Rate( id, true, 'https://store.steampowered.com/store/',
+	UserReview_Rate( id, true, 'https://store.steampowered.com/',
 		function( rgResults ) {
 			if ( rgResults.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark a Review as Helpful ... or not');}
 			OnRecommendationVotedUp( id );
@@ -601,7 +601,7 @@ function UserReviewVoteDown( bLoggedIn, strLoginURL, id )
 		return;
 	}
 
-	UserReview_Rate( id, false, 'https://store.steampowered.com/store/',
+	UserReview_Rate( id, false, 'https://store.steampowered.com/',
 		function( rgResults ) {
 			if ( rgResults.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark a Review as Helpful ... or not');}
 			OnRecommendationVotedDown( id );
@@ -622,7 +622,7 @@ function UserReviewVoteTag( bLoggedIn, strLoginURL, id, tagID, elemID )
 
 	var elem = $J( '#' + elemID );
 	var bRateUp = !elem.hasClass( 'btn_active' );
-	UserReview_VoteTag( id, tagID, bRateUp, 'https://store.steampowered.com/store/',
+	UserReview_VoteTag( id, tagID, bRateUp, 'https://store.steampowered.com/',
 		function( rgResults ) {
 			OnRecommendationVotedTag( id, tagID, bRateUp );
 		}
@@ -632,7 +632,7 @@ function UserReviewVoteTag( bLoggedIn, strLoginURL, id, tagID, elemID )
 function UserReviewSetQuality( id )
 {
 	var quality = $J( "#ReviewQuality" + id ).val();
-	UserReview_Moderate_SetQuality( id, quality, 'https://store.steampowered.com/store/',
+	UserReview_Moderate_SetQuality( id, quality, 'https://store.steampowered.com/',
 		function( rgResults ) {
 		}
 	);
@@ -665,7 +665,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
 
-	$J.get( 'https://store.steampowered.com/store/appreviews/' + appid,{
+	$J.get( 'https://store.steampowered.com/appreviews/' + appid,{
 		'cursor' : cursor,
 		'day_range' : dayRange,
 		'start_date' : startDate,
@@ -868,7 +868,7 @@ function EditUserReviewScorePreference()
 	}
 	
 	$J.post(
-		'https://store.steampowered.com/store/account/edituserreviewscorepreference/', { sessionid: g_sessionID }
+		'https://store.steampowered.com/account/edituserreviewscorepreference/', { sessionid: g_sessionID }
 	).done( function( response ) {
 		var dialogContent = $J( response.html );
 		var dialog = ShowAlertDialog( 'Review Score Settings', dialogContent, 'Cancel' );
@@ -887,7 +887,7 @@ function SetUserReviewScorePreference( pref )
 		preference: pref,
 		sessionid : g_sessionID
 	};
-	$J.post( 'https://store.steampowered.com/store/account/saveuserreviewscorepreference', rgData ).done(
+	$J.post( 'https://store.steampowered.com/account/saveuserreviewscorepreference', rgData ).done(
 		function( json )
 		{
 			var h = window.location.href.substr( 0, window.location.href.indexOf('#') );
@@ -987,7 +987,7 @@ function BuildReviewHistogram()
 		review_score_preference = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 	}
 
-	$J.get( 'https://store.steampowered.com/store/appreviewhistogram/' + appid, { l: 'english', review_score_preference: review_score_preference }
+	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, { l: 'english', review_score_preference: review_score_preference }
 	).done( function( data ) {
 
 		$J( "#review_histograms_container" ).addClass( "has_data" );
@@ -1781,7 +1781,7 @@ function ShowReportDialog( nAppId )
 		if ( eReportTypeSelected )
 		{
 			$J.post(
-				'https://store.steampowered.com/store/appreport/' + nAppId + '/report/',
+				'https://store.steampowered.com/appreport/' + nAppId + '/report/',
 				{
 					'report_type' : eReportTypeSelected,
 					'report_reason' : content.find( 'textarea' ).val(),
@@ -1815,7 +1815,7 @@ function ShowReportDialog( nAppId )
 
 function ShowGotSteamModal( strSteamURL, strAppName, strPlayLaunchVerb )
 {
-		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>Got Steam?<\/h1>\r\n\t\t<p>You need to have the <a href=\"https:\/\/store.steampowered.com\/store\/about\/\">Steam desktop application<\/a> installed before you can install and launch <strong class=\"gotSteam_AppName\"><\/strong>. Do you have Steam installed on this computer?<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>Yes, Steam is installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"https:\/\/store.steampowered.com\/store\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>No, I need Steam<\/h3>\r\n\t\t\t\t<h5>Read about and download Steam<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\tSteam is the premiere desktop gaming platform. It's free to join and easy to use. <a href=\"https:\/\/store.steampowered.com\/store\/about\/\">Learn more about Steam.<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
+		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>Got Steam?<\/h1>\r\n\t\t<p>You need to have the <a href=\"https:\/\/store.steampowered.com\/about\/\">Steam desktop application<\/a> installed before you can install and launch <strong class=\"gotSteam_AppName\"><\/strong>. Do you have Steam installed on this computer?<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>Yes, Steam is installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"https:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>No, I need Steam<\/h3>\r\n\t\t\t\t<h5>Read about and download Steam<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\tSteam is the premiere desktop gaming platform. It's free to join and easy to use. <a href=\"https:\/\/store.steampowered.com\/about\/\">Learn more about Steam.<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
 	$ModalContent.find('.gotSteam_AppName').text( strAppName );
 	$ModalContent.find('.gotsteam_action').text( strPlayLaunchVerb );
 	$ModalContent.find( '.gotSteam_SteamURL').attr( 'href', strSteamURL );
@@ -1843,7 +1843,7 @@ function ChangeSeason( el, season )
 
 function ShowRecommendedMoreInfoModal()
 {
-	var strTemplate = "<div class=\"recommended_more_info_modal\">\r\n\t\t\t\t\t\t\t\t<p class=\"intro\">You've found something that doesn't look like other things you've used in the past. Steam will learn about your preferences from the games you play, movies you watch, and software you use on Steam. We will use this activity to tailor your recommendations to your tastes.<\/p>\r\n\t\t\t\t\t\t\t\t<h2>Like this item?<\/h2>\r\n\t\t\t\t\t\t\t\t<p>If you like this item and go on to purchase and play it, we'll take that into account when making future recommendations<\/p>\r\n\t\t\t\t\t\t\t\t<h2>Not interested in things like this?<\/h2>\r\n\t\t\t\t\t\t\t\t<p>You can also configure your store preferences to tell Steam about tags or types of products that you aren't interested in. <a href=\"https:\/\/store.steampowered.com\/store\/account\/preferences\/\">Visit store preferences<\/a>.<\/p>\r\n\t\t\t\t\t\t\t<\/div>";
+	var strTemplate = "<div class=\"recommended_more_info_modal\">\r\n\t\t\t\t\t\t\t\t<p class=\"intro\">You've found something that doesn't look like other things you've used in the past. Steam will learn about your preferences from the games you play, movies you watch, and software you use on Steam. We will use this activity to tailor your recommendations to your tastes.<\/p>\r\n\t\t\t\t\t\t\t\t<h2>Like this item?<\/h2>\r\n\t\t\t\t\t\t\t\t<p>If you like this item and go on to purchase and play it, we'll take that into account when making future recommendations<\/p>\r\n\t\t\t\t\t\t\t\t<h2>Not interested in things like this?<\/h2>\r\n\t\t\t\t\t\t\t\t<p>You can also configure your store preferences to tell Steam about tags or types of products that you aren't interested in. <a href=\"https:\/\/store.steampowered.com\/account\/preferences\/\">Visit store preferences<\/a>.<\/p>\r\n\t\t\t\t\t\t\t<\/div>";
 	ShowAlertDialog( "More about recommendations", strTemplate);
 
 }
@@ -1874,7 +1874,7 @@ function CollapseLongStrings( strSelector )
 
 function JSReportProductAction( appId, pageAction, snr )
 {
-	$J.post( 'https://store.steampowered.com/store//ajaxreportproductaction/' + appId + '/', {
+	$J.post( 'https://store.steampowered.com//ajaxreportproductaction/' + appId + '/', {
 			'page_action' : pageAction,
 			'snr' : snr
 		}
@@ -2098,6 +2098,25 @@ function ReparentAppLandingPageForSmallScreens()
 		$J('#languageTable').css('display', bUseNewUX ? 'none' : defaultLanguageTableDisplay );
 	});
 	$J(window).trigger( msgWatch );
+
+	// the vertical space available to display purchase options can change when the page scrolls.  Check if we need to update the height.
+	if ( bUseTabletScreenMode )
+		$J(window).on( 'scroll', UpdateTabletPurchaseOptionsHeight );
+}
+
+// Update the height of the sticky, scrollable purchase options container.
+function UpdateTabletPurchaseOptionsHeight()
+{
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	{
+		let $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) - parseInt( $J('#purchaseOptionsContentTablet')[0].getBoundingClientRect().top );
+		$purchaseContentHeight += 'px';
+		let $stickyDiv = $J('#purchaseOptionsContentTablet');
+		if ( $stickyDiv && $stickyDiv.css( 'height') != $purchaseContentHeight )
+		{
+			$stickyDiv.css( 'height', $purchaseContentHeight );
+		}
+	}
 }
 
 function ReparentPurchaseOptionsForTablet( idPurchaseOptions )
@@ -2107,10 +2126,9 @@ function ReparentPurchaseOptionsForTablet( idPurchaseOptions )
 	{
 		Responsive_ReparentItemsInTabletMode( idPurchaseOptions, $J('#purchaseOptionsContentTablet') );
 
-		var $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() );
-		$J('#purchaseOptionsContentTablet').css('height', $purchaseContentHeight + 'px');
 		$J('#purchaseOptionsContentTablet').css('top', parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) + 'px' );
 		$J('#purchaseOptionsContentTablet').css('scrollTop', 0);
+		UpdateTabletPurchaseOptionsHeight();
 	}
 }
 

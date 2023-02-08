@@ -337,7 +337,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   right: 32px;
   bottom: 32px;
   -webkit-app-region: no-drag;
-  transition: all 0.16s ease-in-out;
+  transition-property: left, top, right, bottom;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
   z-index: 50;
 }
 .sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_EdgeDown_2GhIW {
@@ -421,7 +423,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   cursor: default;
   opacity: 0;
   -webkit-app-region: no-drag;
-  transition: all 0.21s ease-in-out;
+  transition-property: opacity;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
 }
 .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0
   .sharedappdetailsheader_BoxSizerSettings_1A8eE {
@@ -435,7 +439,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   cursor: default;
   opacity: 0;
   -webkit-app-region: no-drag;
-  transition: all 0.21s ease-in-out;
+  transition-property: opacity;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
 }
 .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0
   .sharedappdetailsheader_BoxSizerDelete_1PkXP
@@ -445,7 +451,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   line {
   stroke-width: 26px;
   stroke: #008ada;
-  transition: all 0.21s ease-in-out;
+  transition-property: stroke;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
 }
 .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0:hover
   .sharedappdetailsheader_BoxSizerDelete_1PkXP:hover
@@ -802,7 +810,8 @@ html {
   font-size: 14px;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s;
+  transition-property: color, max-height, margin-bottom;
+  transition-duration: 0.5s;
 }
 .logoeditor_LogoEditorPopup_3h6ed
   .logoeditor_LogoEditorSaveActions_tWdDs
@@ -867,7 +876,7 @@ html {
   box-sizing: border-box;
   background: linear-gradient(to top, #24282f 18px, rgba(0, 0, 0, 0) 100%),
     rgba(29, 34, 39, 0.75);
-  transition: all 0.3s;
+  transition: border-bottom 0.3s;
   border-bottom: 0px solid #6a6a6a00;
   position: relative;
   top: 0;

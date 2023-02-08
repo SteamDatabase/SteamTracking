@@ -1938,7 +1938,9 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   min-width: 100px;
   margin-right: 4px;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
-  transition: all 0.2s ease-in-out;
+  transition-property: filter, transform, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
   padding-bottom: 9px;
 }
 @media screen and (max-width: 620px) {
@@ -2079,7 +2081,8 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   padding: 4px 12px;
   cursor: pointer;
   border-bottom: 4px solid transparent;
-  transition: all 0.25s;
+  transition-property: border-bottom-color;
+  transition-duration: 0.25s;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;
@@ -2177,7 +2180,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   flex-shrink: 0;
   cursor: pointer;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
-  transition: all 0.2s ease-in-out;
+  transition-property: filter, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 @media screen and (max-width: 500px) {
   .yirallgames_GameCtn_1ctBs {
@@ -3233,7 +3238,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   padding: 8px;
   font-size: 14px;
   filter: drop-shadow(2px 4px 6px #021b23e8);
-  transition: all 0.2s;
+  transition-property: filter, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
 }
 .yirfriends_FriendCtn_1dEBr:hover {
   filter: brightness(1.5);
@@ -3507,7 +3514,9 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   display: flex;
   justify-content: center;
   color: #dfe3e6;
-  transition: all 0.2s ease-out;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
   background: #3d4450;
   padding: 12px 25px 12px 25px;
   margin: 12px 0px;
@@ -3538,7 +3547,9 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   display: flex;
   justify-content: center;
   color: #dfe3e6;
-  transition: all 0.2s ease-out;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   background: #2d73ff;
   padding: 6px 25px 6px 25px;
   margin: 8px 0px;
@@ -4127,7 +4138,9 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   padding: 6px 25px 6px 25px;
   border-radius: 2px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-out;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   position: relative;
   text-decoration: none;
   box-sizing: border-box;
@@ -4745,7 +4758,9 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   z-index: 2;
   transform: translateX(-1px);
   filter: drop-shadow(0px 0px 8px black) brightness(1.1);
-  transition: all 0.16s ease-in-out;
+  transition-property: filter, transform, stroke, stroke-width;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
 }
 .yirtimelinecontainer_Section_389gB
   .yirtimelinecontainer_ChartContainer_3X3Ad

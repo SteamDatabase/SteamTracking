@@ -1132,7 +1132,9 @@ img {
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
+  transition-property: background, box-shadow, padding-left;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .shared_common_SummaryTextArea_2xqdR:focus {
   background: rgba(67, 73, 83, 0.6);
