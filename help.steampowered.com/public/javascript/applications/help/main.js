@@ -65892,14 +65892,18 @@
                             t
                           );
                         case 118:
-                          return (
-                            Ri("LoginUI.ShowAgreementPopup") &&
-                              SteamClient.LoginUI.ShowAgreementPopup(
-                                l.Body().agreement_session_url()
-                              ),
-                            this.m_onCompleteCallback({ bSuccess: !1 }),
-                            t
-                          );
+                          if (Ri("LoginUI.ShowAgreementPopup"))
+                            SteamClient.LoginUI.ShowAgreementPopup(
+                              l.Body().agreement_session_url()
+                            );
+                          else {
+                            const e = l.Body().agreement_session_url(),
+                              t = document.location.href;
+                            window.location.href = `${e}&redir=${encodeURIComponent(
+                              t
+                            )}`;
+                          }
+                          return this.m_onCompleteCallback({ bSuccess: !1 }), t;
                         default:
                           return (
                             console.error(
