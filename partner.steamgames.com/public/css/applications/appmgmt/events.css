@@ -14628,6 +14628,120 @@ select {
 .themefestplanning_Dummy_wW1AV {
   background: hotpink;
 }
+.themefestplanning_ThemeRow_1iI4q {
+  display: flex;
+  flex-direction: row;
+  background: #2c2e35;
+  padding: 8px 16px;
+  margin: 0 8px 16px 8px;
+}
+.themefestplanning_ThemeRow_1iI4q .themefestplanning_ThemeSize_w1hcR {
+  font-size: 14px;
+  font-size: 500;
+}
+.themefestplanning_SizeColorSweet_1hc3z {
+  color: #52f376;
+}
+.themefestplanning_SizeColorBig_2wjO9 {
+  color: #cb5542;
+}
+.themefestplanning_SizeColorSmall_2if7k {
+  color: gray;
+}
+.themefestplanning_ThemeDefinitionCtn_NH6z7 {
+  width: 25%;
+  flex-shrink: 0;
+}
+.themefestplanning_ThemeDefinitionCtn_NH6z7
+  .themefestplanning_ThemeRevenueCtn_isMda {
+  width: 100%;
+  margin-top: 8px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+.themefestplanning_ThemeDefinitionCtn_NH6z7
+  .themefestplanning_ThemeRevenueCtn_isMda
+  table {
+  width: 100%;
+}
+.themefestplanning_ThemeDefinitionCtn_NH6z7
+  .themefestplanning_ThemeRevenueCtn_isMda
+  table
+  td:last-child {
+  text-align: right;
+}
+.themefestplanning_TopGamesCtn_1Ta3H {
+  width: 50%;
+  flex-shrink: 0;
+}
+.themefestplanning_ThemeDetails_2KbZZ {
+  width: 25%;
+  flex-shrink: 0;
+}
+.themefestplanning_GamesRow_1uO2E {
+  display: flex;
+  flex-direction: row;
+}
+.themefestplanning_GameItem_3Kk39 {
+  width: 23%;
+  height: auto;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.themefestplanning_GameItem_3Kk39 a {
+  display: block;
+}
+.themefestplanning_GameItem_3Kk39 img {
+  width: 100%;
+  height: auto;
+}
+.themefestplanning_ThemeTitle_2iHxO {
+  font-size: 21px;
+  color: #fff;
+  text-decoration: none;
+}
+.themefestplanning_ThemeTags_2PNlt .themefestplanning_TagsMustTitle_3Ttwd {
+  color: #52f376;
+  font-weight: 500;
+  font-style: italic;
+}
+.themefestplanning_ThemeTags_2PNlt .themefestplanning_TagsOrTitle_2QGX0 {
+  color: #a667f5;
+  font-weight: 500;
+  font-style: italic;
+}
+.themefestplanning_ThemeTags_2PNlt .themefestplanning_TagsNotTitle_18G4m {
+  color: #ff4500;
+  font-weight: 500;
+  font-style: italic;
+}
+.themefestplanning_ShowStatsBtn_3Ep6v {
+  max-width: 25%;
+}
+.themefestplanning_DashTitleBar_11xa2 {
+  width: 100%;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 8px 40px;
+  box-sizing: border-box;
+}
+.themefestplanning_DashTitleBar_11xa2 .themefestplanning_ButtonGroup_31Lp_ {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 25%;
+}
+.themefestplanning_DashDescription_16bPP {
+  margin: 0px 40px 8px 40px;
+  font-size: 15px;
+}
 .optin_admin_dashboard_DashboardCtn_24Fut {
   max-width: 1280px;
   margin: 40px auto 0 auto;

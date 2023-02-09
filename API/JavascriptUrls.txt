@@ -571,6 +571,7 @@ ${PARTNER_BASE_URL}admin/store/contenthub/ajaxgetcontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxgetstoretagsandcategories
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxpublishcontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxsavecontenthubcategorieskv
+${PARTNER_BASE_URL}admin/store/contenthub/categories
 ${PARTNER_BASE_URL}admin/store/dailydeal/${id}
 ${PARTNER_BASE_URL}admin/store/page/${}?activetab=tab_publish
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/${cluster_name}/${id}?activetab=tab_capsules
@@ -676,6 +677,11 @@ ${PARTNER_BASE_URL}promotion/discounts/ajaxupdatediscountevent
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
+${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist
+${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubdetail
+${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats
+${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary
+${PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxuserwithreceivecommunications
 ${PARTNER_BASE_URL}promotion/planning/dashboard
 ${PARTNER_BASE_URL}promotion/planning/themes
@@ -807,6 +813,7 @@ ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
 ${STORE_BASE_URL}category/${category}
+${STORE_BASE_URL}category/${handle}
 ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub

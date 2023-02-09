@@ -449,7 +449,7 @@
     },
     49279: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { default: () => _ });
+      t.r(r), t.d(r, { default: () => p });
       var o = t(62642),
         a = t(67294),
         c = t(79756),
@@ -462,9 +462,10 @@
         d = t(95598),
         u = t(13596),
         h = t(64839),
-        f = t(3912),
-        g = t.n(f);
-      function _() {
+        f = t(64782),
+        g = t(3912),
+        _ = t.n(g);
+      function p() {
         const [e, r] = a.useState(),
           [t, c] = a.useState(!1),
           [s, i] = a.useState(!1),
@@ -484,7 +485,19 @@
                   { className: n().PageTitle },
                   "Content Hub Categories"
                 ),
-                a.createElement("hr", { className: g().TitleHR }),
+                a.createElement("hr", { className: _().TitleHR }),
+                a.createElement(
+                  "p",
+                  null,
+                  "This page lets you review and edit existing categories. Click on their titles.  At the bottom there is controls to create a new category. To see the hubs performance related to making a theme sale ",
+                  a.createElement(
+                    "a",
+                    {
+                      href: `${f.De.PARTNER_BASE_URL}promotion/planning/themes`,
+                    },
+                    "here."
+                  )
+                ),
                 a.createElement(
                   "div",
                   { className: n().PageSubTitle },
@@ -493,19 +506,19 @@
                 m &&
                   a.createElement(
                     "div",
-                    { className: g().UnpublishedChangesNotice },
+                    { className: _().UnpublishedChangesNotice },
                     "You have unpublished changes. Click Publish below to publish and make them available to users."
                   ),
-                a.createElement(p, { categories: e, onUpdate: () => i(!0) }),
+                a.createElement(E, { categories: e, onUpdate: () => i(!0) }),
                 a.createElement(
                   "div",
-                  { className: g().ActionButtonCtn },
+                  { className: _().ActionButtonCtn },
                   a.createElement(
                     l.zx,
                     {
                       onClick: () =>
                         (0, b.AM)(
-                          a.createElement(k, {
+                          a.createElement(T, {
                             onImport: (e) => {
                               r(e), i(!0);
                             },
@@ -520,7 +533,7 @@
                     {
                       onClick: () =>
                         (0, b.AM)(
-                          a.createElement(T, {
+                          a.createElement(M, {
                             categories: e,
                             onSave: () => {
                               i(!1), h(!0);
@@ -543,7 +556,7 @@
                     {
                       onClick: () =>
                         (0, b.AM)(
-                          a.createElement(M, { onPublish: () => h(!1) }),
+                          a.createElement(S, { onPublish: () => h(!1) }),
                           window
                         ),
                     },
@@ -554,12 +567,12 @@
             : a.createElement(u.V, { size: "medium", position: "center" })
         );
       }
-      function p(e) {
+      function E(e) {
         const { categories: r, onUpdate: t } = e;
         if (!r) return a.createElement("div", null, "No categories defined.");
         return a.createElement(
           "div",
-          { className: g().CategoriesList },
+          { className: _().CategoriesList },
           a.createElement(m.R, {
             bDisabled: !0,
             items: r,
@@ -569,10 +582,10 @@
             render: (e) =>
               a.createElement(
                 "div",
-                { className: g().CategoryCtn },
+                { className: _().CategoryCtn },
                 a.createElement(
                   "div",
-                  { className: g().Category },
+                  { className: _().Category },
                   a.createElement(
                     "a",
                     {
@@ -581,7 +594,7 @@
                           e.preventDefault(),
                             e.stopPropagation(),
                             (0, b.AM)(
-                              a.createElement(E, { category: r, onUpdate: t }),
+                              a.createElement(C, { category: r, onUpdate: t }),
                               window
                             );
                         })(r, e),
@@ -595,14 +608,14 @@
             l.zx,
             {
               onClick: () => {
-                r.push({}), t();
+                r.push({ handle: "new_category_" + r.length }), t();
               },
             },
             "Add Category"
           )
         );
       }
-      function E(e) {
+      function C(e) {
         const { category: r, onUpdate: t, closeModal: o } = e,
           c = (0, h.NW)();
         return a.createElement(
@@ -614,7 +627,7 @@
             null,
             a.createElement(
               "div",
-              { className: g().CategoryEditor },
+              { className: _().CategoryEditor },
               a.createElement(l.II, {
                 label: "Handle",
                 value: r.handle,
@@ -651,18 +664,18 @@
               ("tagids" === r.type || "category" === r.type) &&
                 a.createElement(
                   "div",
-                  { className: g().Category },
-                  a.createElement(C, {
+                  { className: _().Category },
+                  a.createElement(k, {
                     category: r,
                     list: "must",
                     title: "Must have all of",
                   }),
-                  a.createElement(C, {
+                  a.createElement(k, {
                     category: r,
                     list: "any",
                     title: "Must have any of",
                   }),
-                  a.createElement(C, {
+                  a.createElement(k, {
                     category: r,
                     list: "mustnot",
                     title: "Must not have any of",
@@ -685,7 +698,7 @@
           )
         );
       }
-      function C(e) {
+      function k(e) {
         const { category: r, list: t, title: s } = e,
           { rgTags: n, rgCategories: i } = (0, o.bA)(),
           b = (0, h.NW)(),
@@ -705,7 +718,7 @@
                 }))) || [];
         return a.createElement(
           "div",
-          { className: g().TagOrCategoryList },
+          { className: _().TagOrCategoryList },
           a.createElement(l.__, null, s),
           a.createElement(m.R, {
             bDisabled: !0,
@@ -717,7 +730,7 @@
               "tagids" === r.type
                 ? a.createElement(
                     "div",
-                    { className: g().IDSelector },
+                    { className: _().IDSelector },
                     a.createElement(l.II, {
                       value: e.id,
                       onChange: (r) => {
@@ -736,7 +749,7 @@
                 : "category" === r.type
                 ? a.createElement(
                     "div",
-                    { className: g().IDSelector },
+                    { className: _().IDSelector },
                     a.createElement(c.ZP, {
                       isSearchable: !0,
                       options: u,
@@ -759,7 +772,7 @@
           )
         );
       }
-      function k(e) {
+      function T(e) {
         const { onImport: r, closeModal: t } = e;
         return (
           a.useEffect(() => {
@@ -782,7 +795,7 @@
           )
         );
       }
-      function T(e) {
+      function M(e) {
         const { categories: r, onSave: t, closeModal: c } = e,
           [s, n] = a.useState();
         return (
@@ -806,7 +819,7 @@
           )
         );
       }
-      function M(e) {
+      function S(e) {
         const { onPublish: r, closeModal: t } = e,
           [c, s] = a.useState(!1),
           [n, l] = a.useState();

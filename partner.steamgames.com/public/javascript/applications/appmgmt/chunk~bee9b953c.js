@@ -47,8 +47,8 @@
         l = s(48780),
         d = s(4821),
         h = s.n(d),
-        u = s(69491),
-        m = s.n(u),
+        m = s(69491),
+        u = s.n(m),
         c = s(95598),
         g = s(9669),
         p = s.n(g),
@@ -155,14 +155,14 @@
                       n.createElement(
                         "div",
                         {
-                          className: m().RemoveIcon,
+                          className: u().RemoveIcon,
                           onClick: (t) => this.props.onEdit(s, t),
                         },
                         n.createElement(c.I8b, null)
                       ),
                     Boolean(this.props.onDelete) &&
                       n.createElement("img", {
-                        className: m().RemoveIcon,
+                        className: u().RemoveIcon,
                         src: r.Z,
                         onClick: (t) => this.props.onDelete(s, t),
                       })
@@ -182,10 +182,11 @@
       s.d(e, {
         C1: () => g,
         HD: () => c,
+        Sz: () => v,
         X_: () => h,
         bA: () => _,
         ee: () => d,
-        ky: () => m,
+        ky: () => u,
       });
       var i = s(70655),
         n = s(9669),
@@ -285,12 +286,12 @@
               const t = { rgCategories: [], bHasUnpublishedChanges: !1 };
               return (
                 n.data.in_progress
-                  ? ((t.rgCategories = u(
+                  ? ((t.rgCategories = m(
                       JSON.parse(n.data.in_progress).categories
                     )),
                     (t.bHasUnpublishedChanges = !0))
                   : n.data.active &&
-                    (t.rgCategories = u(JSON.parse(n.data.active).categories)),
+                    (t.rgCategories = m(JSON.parse(n.data.active).categories)),
                 t
               );
             }
@@ -304,7 +305,7 @@
           );
         });
       }
-      function u(t) {
+      function m(t) {
         const e = [];
         for (const s of Object.keys(t)) {
           const i = t[s],
@@ -325,7 +326,7 @@
         }
         return e;
       }
-      function m() {
+      function u() {
         const [t, e] = (0, o.useState)(null);
         return (
           (0, o.useEffect)(() => {
@@ -367,16 +368,16 @@
                 (null === (d = i[a.handle].mustnot) || void 0 === d
                   ? void 0
                   : d.length) && (i[a.handle].mustnot = i[a.handle].mustnot[0]);
-          const u =
+          const m =
               l.De.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
-            m = new FormData();
-          m.append("sessionid", l.De.SESSIONID),
-            m.append("origin", self.origin),
-            m.append("json", JSON.stringify(i));
+            u = new FormData();
+          u.append("sessionid", l.De.SESSIONID),
+            u.append("origin", self.origin),
+            u.append("json", JSON.stringify(i));
           let c = null;
           try {
-            const t = yield a().post(u, m, { withCredentials: !0 });
+            const t = yield a().post(m, u, { withCredentials: !0 });
             if (
               200 === t.status &&
               1 === (null === (h = t.data) || void 0 === h ? void 0 : h.success)
@@ -428,6 +429,12 @@
         GetCategories() {
           return this.m_rgCategories;
         }
+        GetStoreTagMap() {
+          return this.m_mapStoreTags;
+        }
+        GetStoreCategoryMap() {
+          return this.m_mapStoreCategories;
+        }
         HintLoad() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             return (
@@ -456,7 +463,15 @@
               )
                 return (
                   (this.m_rgTags = n.data.tags),
-                  void (this.m_rgCategories = n.data.categories)
+                  (this.m_rgCategories = n.data.categories),
+                  (this.m_mapStoreTags = new Map()),
+                  this.m_rgTags.forEach((t) =>
+                    this.m_mapStoreTags.set(t.tagid, t)
+                  ),
+                  (this.m_mapStoreCategories = new Map()),
+                  void this.m_rgCategories.forEach((t) =>
+                    this.m_mapStoreCategories.set(t.categoryid, t)
+                  )
                 );
               (this.m_promise = null), (i = (0, r.l)(n));
             } catch (t) {
@@ -473,20 +488,35 @@
         }
       }
       function _() {
-        const [t, e] = o.useState([]),
-          [s, i] = o.useState([]);
+        const [t, e] = o.useState(p.Get().GetTags()),
+          [s, i] = o.useState(p.Get().GetCategories());
         return (
           o.useEffect(() => {
-            e(void 0),
-              i(void 0),
+            (void 0 !== t && void 0 !== s) ||
               p
                 .Get()
                 .HintLoad()
                 .then(() => {
                   e(p.Get().GetTags()), i(p.Get().GetCategories());
                 });
-          }, []),
+          }, [s, t]),
           { rgTags: t, rgCategories: s }
+        );
+      }
+      function v() {
+        const [t, e] = o.useState(p.Get().GetStoreTagMap()),
+          [s, i] = o.useState(p.Get().GetStoreCategoryMap());
+        return (
+          o.useEffect(() => {
+            (void 0 !== t && void 0 !== s) ||
+              p
+                .Get()
+                .HintLoad()
+                .then(() => {
+                  e(p.Get().GetStoreTagMap()), i(p.Get().GetStoreCategoryMap());
+                });
+          }, [s, t]),
+          { mapStoreTags: t, mapStoreCategories: s }
         );
       }
     },
