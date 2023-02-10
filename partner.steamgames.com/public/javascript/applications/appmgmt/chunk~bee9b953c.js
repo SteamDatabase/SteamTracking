@@ -309,7 +309,12 @@
         const e = [];
         for (const s of Object.keys(t)) {
           const i = t[s],
-            n = { handle: i.handle, type: i.type, loc_token: i.loc_token };
+            n = {
+              handle: i.handle,
+              type: i.type,
+              loc_token: i.loc_token,
+              heading: i.heading,
+            };
           i.must &&
             (Array.isArray(i.must)
               ? (n.must = i.must.map((t) => ({ id: Number(t) })))
