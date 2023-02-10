@@ -2405,5 +2405,17 @@
     "GameInfoDialog_GameName": "Game",
     "GameInfoDialog_Status": "Status",
     "GameInfoDialog_JoinGame": "Join Game",
+    "GameInfoDialog_ServerIPText": "IP Address",
+    "GameInfoDialog_ServerName": "Name",
+    "GameInfoDialog_Map": "Map",
+    "GameInfoDialog_Players": "Players",
+    "GameInfoDialog_BotPlayers": "Bot Players",
+    "GameInfoDialog_ValveAntiCheat": "Valve Anti-Cheat",
+    "GameInfoDialog_ValveAntiCheat_Secure": "Secure",
+    "GameInfoDialog_ValveAntiCheat_NotSecure": "Not Secure",
+    "GameInfoDialog_ValveAntiCheat_Latency": "Latency",
+    "GameInfoDialog_PlayerName": "Player Name",
+    "GameInfoDialog_PlayerScore": "Score",
+    "GameInfoDialog_PlayerTime": "Time",
     "shared_dummy": "dont translate"
 }
