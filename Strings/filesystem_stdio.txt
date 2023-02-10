@@ -102,7 +102,7 @@ echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!
 ---FS:  %s %s
 open
 ---FS:  close %s %p %i
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/filesystem/BaseFileSystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/filesystem/BaseFileSystem.cpp
 Tried to close unknown file pointer %p
 ---FS:  read %s %llu %p
 Tried to read %llu bytes from unknown file pointer %p
@@ -198,17 +198,17 @@ m_PathIDInfos
 m_OpenedFiles
 m_OpenedFileHandles
 m_FileNames
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/dbg.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/dbg.h
 static_cast<_in>( ret ) == i
 ( i < 0 ) == ( ret < 0 )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 (unsigned)elem <= (unsigned)m_Size
 IsValidIndex(elem)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
 m_Memory
 CUtlDict
 m_Elements
@@ -216,7 +216,7 @@ m_Tree
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
 !m_bMounted
 !strchr(filename, '\n') && !strchr(filename, '\r')
 VFileSystem014
@@ -228,7 +228,7 @@ g_FileSystem_Stdio
 g_PathIDTable
 CUtlSymbol::ValidateGlobals
 .
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 %s%c%s
 /
@@ -236,7 +236,7 @@ V_RemoveDotSlashes failed for "%s".
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s
@@ -244,7 +244,7 @@ g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 CreateInterface
 "
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 n
 t
@@ -255,13 +255,13 @@ f
 a
 ?
 '
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
@@ -278,3 +278,4 @@ V
 @
 =*.*
 Ic
+O

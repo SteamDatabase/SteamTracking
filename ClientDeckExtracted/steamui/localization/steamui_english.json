@@ -3005,6 +3005,8 @@
     "Audio_No_Output_Devices_Detected": "No output devices detected",
     "Audio_No_Input_Devices_Detected": "No input devices detected",
     "Audio_Header_Voice": "Voice",
+    "Audio_Header_Output": "Output",
+    "Audio_Header_General": "General",
     "Audio_Volume": "Volume",
     "Audio_OutputDevice": "Output Device",
     "Audio_InputDevice": "Input Device",

@@ -4087,6 +4087,154 @@
         goog.object.getSuperClass = function (a) {
           return (a = Object.getPrototypeOf(a.prototype)) && a.constructor;
         };
+        var jspb = { asserts: {} };
+        jspb.asserts.doAssertFailure = function (a, b, c, d) {
+          var e = "Assertion failed";
+          if (c) {
+            e += ": " + c;
+            var f = d;
+          } else a && ((e += ": " + a), (f = b));
+          throw Error("" + e, f || []);
+        };
+        jspb.asserts.assert = function (a, b, c) {
+          for (var d = [], e = 2; e < arguments.length; ++e)
+            d[e - 2] = arguments[e];
+          a || jspb.asserts.doAssertFailure("", null, b, d);
+          return a;
+        };
+        jspb.asserts.assertString = function (a, b, c) {
+          for (var d = [], e = 2; e < arguments.length; ++e)
+            d[e - 2] = arguments[e];
+          "string" !== typeof a &&
+            jspb.asserts.doAssertFailure(
+              "Expected string but got %s: %s.",
+              [goog.typeOf(a), a],
+              b,
+              d
+            );
+          return a;
+        };
+        jspb.asserts.assertArray = function (a, b, c) {
+          for (var d = [], e = 2; e < arguments.length; ++e)
+            d[e - 2] = arguments[e];
+          Array.isArray(a) ||
+            jspb.asserts.doAssertFailure(
+              "Expected array but got %s: %s.",
+              [goog.typeOf(a), a],
+              b,
+              d
+            );
+          return a;
+        };
+        jspb.asserts.fail = function (a, b) {
+          for (var c = [], d = 1; d < arguments.length; ++d)
+            c[d - 1] = arguments[d];
+          throw Error("Failure" + (a ? ": " + a : ""), c);
+        };
+        jspb.asserts.assertInstanceof = function (a, b, c, d) {
+          for (var e = [], f = 3; f < arguments.length; ++f)
+            e[f - 3] = arguments[f];
+          a instanceof b ||
+            jspb.asserts.doAssertFailure(
+              "Expected instanceof %s but got %s.",
+              [jspb.asserts.getType(b), jspb.asserts.getType(a)],
+              c,
+              e
+            );
+          return a;
+        };
+        jspb.asserts.getType = function (a) {
+          return a instanceof Function
+            ? a.displayName || a.name || "unknown type name"
+            : a instanceof Object
+            ? a.constructor.displayName ||
+              a.constructor.name ||
+              Object.prototype.toString.call(a)
+            : null === a
+            ? "null"
+            : typeof a;
+        };
+        jspb.BinaryConstants = {};
+        jspb.ConstBinaryMessage = function () {};
+        jspb.BinaryMessage = function () {};
+        jspb.BinaryConstants.FieldType = {
+          INVALID: -1,
+          DOUBLE: 1,
+          FLOAT: 2,
+          INT64: 3,
+          UINT64: 4,
+          INT32: 5,
+          FIXED64: 6,
+          FIXED32: 7,
+          BOOL: 8,
+          STRING: 9,
+          GROUP: 10,
+          MESSAGE: 11,
+          BYTES: 12,
+          UINT32: 13,
+          ENUM: 14,
+          SFIXED32: 15,
+          SFIXED64: 16,
+          SINT32: 17,
+          SINT64: 18,
+          FHASH64: 30,
+          VHASH64: 31,
+        };
+        jspb.BinaryConstants.WireType = {
+          INVALID: -1,
+          VARINT: 0,
+          FIXED64: 1,
+          DELIMITED: 2,
+          START_GROUP: 3,
+          END_GROUP: 4,
+          FIXED32: 5,
+        };
+        jspb.BinaryConstants.FieldTypeToWireType = function (a) {
+          var b = jspb.BinaryConstants.FieldType,
+            c = jspb.BinaryConstants.WireType;
+          switch (a) {
+            case b.INT32:
+            case b.INT64:
+            case b.UINT32:
+            case b.UINT64:
+            case b.SINT32:
+            case b.SINT64:
+            case b.BOOL:
+            case b.ENUM:
+            case b.VHASH64:
+              return c.VARINT;
+            case b.DOUBLE:
+            case b.FIXED64:
+            case b.SFIXED64:
+            case b.FHASH64:
+              return c.FIXED64;
+            case b.STRING:
+            case b.MESSAGE:
+            case b.BYTES:
+              return c.DELIMITED;
+            case b.FLOAT:
+            case b.FIXED32:
+            case b.SFIXED32:
+              return c.FIXED32;
+            default:
+              return c.INVALID;
+          }
+        };
+        jspb.BinaryConstants.INVALID_FIELD_NUMBER = -1;
+        jspb.BinaryConstants.FLOAT32_EPS = 1.401298464324817e-45;
+        jspb.BinaryConstants.FLOAT32_MIN = 1.1754943508222875e-38;
+        jspb.BinaryConstants.FLOAT32_MAX = 3.4028234663852886e38;
+        jspb.BinaryConstants.FLOAT64_EPS = 4.9e-324;
+        jspb.BinaryConstants.FLOAT64_MIN = 2.2250738585072014e-308;
+        jspb.BinaryConstants.FLOAT64_MAX = 1.7976931348623157e308;
+        jspb.BinaryConstants.TWO_TO_20 = 1048576;
+        jspb.BinaryConstants.TWO_TO_23 = 8388608;
+        jspb.BinaryConstants.TWO_TO_31 = 2147483648;
+        jspb.BinaryConstants.TWO_TO_32 = 4294967296;
+        jspb.BinaryConstants.TWO_TO_52 = 4503599627370496;
+        jspb.BinaryConstants.TWO_TO_63 = 0x7fffffffffffffff;
+        jspb.BinaryConstants.TWO_TO_64 = 1.8446744073709552e19;
+        jspb.BinaryConstants.ZERO_HASH = "\x00\x00\x00\x00\x00\x00\x00\x00";
         goog.debug = {};
         goog.debug.Error = function (a) {
           if (Error.captureStackTrace)
@@ -4292,89 +4440,6 @@
             ? "null"
             : typeof a;
         };
-        var jspb = {
-          BinaryConstants: {},
-          ConstBinaryMessage: function () {},
-          BinaryMessage: function () {},
-        };
-        jspb.BinaryConstants.FieldType = {
-          INVALID: -1,
-          DOUBLE: 1,
-          FLOAT: 2,
-          INT64: 3,
-          UINT64: 4,
-          INT32: 5,
-          FIXED64: 6,
-          FIXED32: 7,
-          BOOL: 8,
-          STRING: 9,
-          GROUP: 10,
-          MESSAGE: 11,
-          BYTES: 12,
-          UINT32: 13,
-          ENUM: 14,
-          SFIXED32: 15,
-          SFIXED64: 16,
-          SINT32: 17,
-          SINT64: 18,
-          FHASH64: 30,
-          VHASH64: 31,
-        };
-        jspb.BinaryConstants.WireType = {
-          INVALID: -1,
-          VARINT: 0,
-          FIXED64: 1,
-          DELIMITED: 2,
-          START_GROUP: 3,
-          END_GROUP: 4,
-          FIXED32: 5,
-        };
-        jspb.BinaryConstants.FieldTypeToWireType = function (a) {
-          var b = jspb.BinaryConstants.FieldType,
-            c = jspb.BinaryConstants.WireType;
-          switch (a) {
-            case b.INT32:
-            case b.INT64:
-            case b.UINT32:
-            case b.UINT64:
-            case b.SINT32:
-            case b.SINT64:
-            case b.BOOL:
-            case b.ENUM:
-            case b.VHASH64:
-              return c.VARINT;
-            case b.DOUBLE:
-            case b.FIXED64:
-            case b.SFIXED64:
-            case b.FHASH64:
-              return c.FIXED64;
-            case b.STRING:
-            case b.MESSAGE:
-            case b.BYTES:
-              return c.DELIMITED;
-            case b.FLOAT:
-            case b.FIXED32:
-            case b.SFIXED32:
-              return c.FIXED32;
-            default:
-              return c.INVALID;
-          }
-        };
-        jspb.BinaryConstants.INVALID_FIELD_NUMBER = -1;
-        jspb.BinaryConstants.FLOAT32_EPS = 1.401298464324817e-45;
-        jspb.BinaryConstants.FLOAT32_MIN = 1.1754943508222875e-38;
-        jspb.BinaryConstants.FLOAT32_MAX = 3.4028234663852886e38;
-        jspb.BinaryConstants.FLOAT64_EPS = 4.9e-324;
-        jspb.BinaryConstants.FLOAT64_MIN = 2.2250738585072014e-308;
-        jspb.BinaryConstants.FLOAT64_MAX = 1.7976931348623157e308;
-        jspb.BinaryConstants.TWO_TO_20 = 1048576;
-        jspb.BinaryConstants.TWO_TO_23 = 8388608;
-        jspb.BinaryConstants.TWO_TO_31 = 2147483648;
-        jspb.BinaryConstants.TWO_TO_32 = 4294967296;
-        jspb.BinaryConstants.TWO_TO_52 = 4503599627370496;
-        jspb.BinaryConstants.TWO_TO_63 = 0x7fffffffffffffff;
-        jspb.BinaryConstants.TWO_TO_64 = 1.8446744073709552e19;
-        jspb.BinaryConstants.ZERO_HASH = "\x00\x00\x00\x00\x00\x00\x00\x00";
         goog.array = {};
         goog.NATIVE_ARRAY_PROTOTYPES = goog.TRUSTED_SITE;
         goog.array.ASSUME_NATIVE_FUNCTIONS = 2012 < goog.FEATURESET_YEAR;
@@ -8768,7 +8833,7 @@
           function c() {
             for (var a = 0; 8 > a; a++) e[a] = ~e[a] & 255;
           }
-          goog.asserts.assert(0 < a.length);
+          jspb.asserts.assert(0 < a.length);
           var d = !1;
           "-" === a[0] && ((d = !0), (a = a.slice(1)));
           for (var e = [0, 0, 0, 0, 0, 0, 0, 0], f = 0; f < a.length; f++)
@@ -8804,9 +8869,9 @@
         };
         jspb.utils.hexStringToHash64 = function (a) {
           a = a.toLowerCase();
-          goog.asserts.assert(18 == a.length);
-          goog.asserts.assert("0" == a[0]);
-          goog.asserts.assert("x" == a[1]);
+          jspb.asserts.assert(18 == a.length);
+          jspb.asserts.assert("0" == a[0]);
+          jspb.asserts.assert("x" == a[1]);
           for (var b = "", c = 0; 8 > c; c++) {
             var d = jspb.utils.fromHexCharCode_(a.charCodeAt(2 * c + 2)),
               e = jspb.utils.fromHexCharCode_(a.charCodeAt(2 * c + 3));
@@ -8934,7 +8999,7 @@
             return goog.crypt.base64.decodeStringToUint8Array(a);
           if (a instanceof Uint8Array)
             return new Uint8Array(a.buffer, a.byteOffset, a.byteLength);
-          goog.asserts.fail("Type not convertible to Uint8Array.");
+          jspb.asserts.fail("Type not convertible to Uint8Array.");
           return new Uint8Array(0);
         };
         jspb.BinaryDecoder = function (a, b, c) {
@@ -8995,7 +9060,7 @@
         };
         jspb.BinaryDecoder.prototype.advance = function (a) {
           this.cursor_ += a;
-          goog.asserts.assert(this.cursor_ <= this.end_);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
         };
         jspb.BinaryDecoder.prototype.atEnd = function () {
           return this.cursor_ == this.end_;
@@ -9018,7 +9083,7 @@
               (b = this.bytes_[this.cursor_++]),
                 (d |= (b & 127) << (7 * e + 3));
           if (128 > b) return a(c >>> 0, d >>> 0);
-          goog.asserts.fail("Failed to read varint, encoding is invalid.");
+          jspb.asserts.fail("Failed to read varint, encoding is invalid.");
           this.error_ = !0;
         };
         jspb.BinaryDecoder.prototype.readSplitZigzagVarint64 = function (a) {
@@ -9049,7 +9114,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 1),
-              goog.asserts.assert(this.cursor_ <= this.end_),
+              jspb.asserts.assert(this.cursor_ <= this.end_),
               c
             );
           b = a[this.cursor_ + 1];
@@ -9057,7 +9122,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 2),
-              goog.asserts.assert(this.cursor_ <= this.end_),
+              jspb.asserts.assert(this.cursor_ <= this.end_),
               c
             );
           b = a[this.cursor_ + 2];
@@ -9065,7 +9130,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 3),
-              goog.asserts.assert(this.cursor_ <= this.end_),
+              jspb.asserts.assert(this.cursor_ <= this.end_),
               c
             );
           b = a[this.cursor_ + 3];
@@ -9073,7 +9138,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 4),
-              goog.asserts.assert(this.cursor_ <= this.end_),
+              jspb.asserts.assert(this.cursor_ <= this.end_),
               c
             );
           b = a[this.cursor_ + 4];
@@ -9081,7 +9146,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 5),
-              goog.asserts.assert(this.cursor_ <= this.end_),
+              jspb.asserts.assert(this.cursor_ <= this.end_),
               c >>> 0
             );
           this.cursor_ += 5;
@@ -9090,12 +9155,13 @@
             128 <= a[this.cursor_++] &&
             128 <= a[this.cursor_++] &&
             128 <= a[this.cursor_++] &&
-            goog.asserts.assert(!1);
-          goog.asserts.assert(this.cursor_ <= this.end_);
+            jspb.asserts.assert(!1);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
           return c;
         };
-        jspb.BinaryDecoder.prototype.readSignedVarint32 =
-          jspb.BinaryDecoder.prototype.readUnsignedVarint32;
+        jspb.BinaryDecoder.prototype.readSignedVarint32 = function () {
+          return ~~this.readUnsignedVarint32();
+        };
         jspb.BinaryDecoder.prototype.readUnsignedVarint32String = function () {
           return this.readUnsignedVarint32().toString();
         };
@@ -9132,14 +9198,14 @@
         jspb.BinaryDecoder.prototype.readUint8 = function () {
           var a = this.bytes_[this.cursor_ + 0];
           this.cursor_ += 1;
-          goog.asserts.assert(this.cursor_ <= this.end_);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
           return a;
         };
         jspb.BinaryDecoder.prototype.readUint16 = function () {
           var a = this.bytes_[this.cursor_ + 0],
             b = this.bytes_[this.cursor_ + 1];
           this.cursor_ += 2;
-          goog.asserts.assert(this.cursor_ <= this.end_);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
           return (a << 0) | (b << 8);
         };
         jspb.BinaryDecoder.prototype.readUint32 = function () {
@@ -9148,7 +9214,7 @@
             c = this.bytes_[this.cursor_ + 2],
             d = this.bytes_[this.cursor_ + 3];
           this.cursor_ += 4;
-          goog.asserts.assert(this.cursor_ <= this.end_);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
           return ((a << 0) | (b << 8) | (c << 16) | (d << 24)) >>> 0;
         };
         jspb.BinaryDecoder.prototype.readUint64 = function () {
@@ -9164,14 +9230,14 @@
         jspb.BinaryDecoder.prototype.readInt8 = function () {
           var a = this.bytes_[this.cursor_ + 0];
           this.cursor_ += 1;
-          goog.asserts.assert(this.cursor_ <= this.end_);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
           return (a << 24) >> 24;
         };
         jspb.BinaryDecoder.prototype.readInt16 = function () {
           var a = this.bytes_[this.cursor_ + 0],
             b = this.bytes_[this.cursor_ + 1];
           this.cursor_ += 2;
-          goog.asserts.assert(this.cursor_ <= this.end_);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
           return (((a << 0) | (b << 8)) << 16) >> 16;
         };
         jspb.BinaryDecoder.prototype.readInt32 = function () {
@@ -9180,7 +9246,7 @@
             c = this.bytes_[this.cursor_ + 2],
             d = this.bytes_[this.cursor_ + 3];
           this.cursor_ += 4;
-          goog.asserts.assert(this.cursor_ <= this.end_);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
           return (a << 0) | (b << 8) | (c << 16) | (d << 24);
         };
         jspb.BinaryDecoder.prototype.readInt64 = function () {
@@ -9247,12 +9313,12 @@
           if (0 > a || this.cursor_ + a > this.bytes_.length)
             return (
               (this.error_ = !0),
-              goog.asserts.fail("Invalid byte length!"),
+              jspb.asserts.fail("Invalid byte length!"),
               new Uint8Array(0)
             );
           var b = this.bytes_.subarray(this.cursor_, this.cursor_ + a);
           this.cursor_ += a;
-          goog.asserts.assert(this.cursor_ <= this.end_);
+          jspb.asserts.assert(this.cursor_ <= this.end_);
           return b;
         };
         jspb.BinaryDecoder.prototype.readVarintHash64 = function () {
@@ -9311,15 +9377,30 @@
         jspb.BinaryReader.prototype.getFieldNumber = function () {
           return this.nextField_;
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "getFieldNumber",
+          jspb.BinaryReader.prototype.getFieldNumber
+        );
         jspb.BinaryReader.prototype.getWireType = function () {
           return this.nextWireType_;
         };
         jspb.BinaryReader.prototype.isDelimited = function () {
           return this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED;
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "isDelimited",
+          jspb.BinaryReader.prototype.isDelimited
+        );
         jspb.BinaryReader.prototype.isEndGroup = function () {
           return this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP;
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "isEndGroup",
+          jspb.BinaryReader.prototype.isEndGroup
+        );
         jspb.BinaryReader.prototype.getError = function () {
           return this.error_ || this.decoder_.getError();
         };
@@ -9339,7 +9420,7 @@
         jspb.BinaryReader.prototype.nextField = function () {
           if (this.decoder_.atEnd()) return !1;
           if (this.getError())
-            return goog.asserts.fail("Decoder hit an error"), !1;
+            return jspb.asserts.fail("Decoder hit an error"), !1;
           this.fieldCursor_ = this.decoder_.getCursor();
           var a = this.decoder_.readUnsignedVarint32(),
             b = a >>> 3;
@@ -9353,7 +9434,7 @@
             a != jspb.BinaryConstants.WireType.END_GROUP
           )
             return (
-              goog.asserts.fail(
+              jspb.asserts.fail(
                 "Invalid wire type: %s (at position %s)",
                 a,
                 this.fieldCursor_
@@ -9365,6 +9446,11 @@
           this.nextWireType_ = a;
           return !0;
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "nextField",
+          jspb.BinaryReader.prototype.nextField
+        );
         jspb.BinaryReader.prototype.unskipHeader = function () {
           this.decoder_.unskipVarint(
             (this.nextField_ << 3) | this.nextWireType_
@@ -9382,13 +9468,13 @@
         };
         jspb.BinaryReader.prototype.skipVarintField = function () {
           this.nextWireType_ != jspb.BinaryConstants.WireType.VARINT
-            ? (goog.asserts.fail("Invalid wire type for skipVarintField"),
+            ? (jspb.asserts.fail("Invalid wire type for skipVarintField"),
               this.skipField())
             : this.decoder_.skipVarint();
         };
         jspb.BinaryReader.prototype.skipDelimitedField = function () {
           if (this.nextWireType_ != jspb.BinaryConstants.WireType.DELIMITED)
-            goog.asserts.fail("Invalid wire type for skipDelimitedField"),
+            jspb.asserts.fail("Invalid wire type for skipDelimitedField"),
               this.skipField();
           else {
             var a = this.decoder_.readUnsignedVarint32();
@@ -9397,13 +9483,13 @@
         };
         jspb.BinaryReader.prototype.skipFixed32Field = function () {
           this.nextWireType_ != jspb.BinaryConstants.WireType.FIXED32
-            ? (goog.asserts.fail("Invalid wire type for skipFixed32Field"),
+            ? (jspb.asserts.fail("Invalid wire type for skipFixed32Field"),
               this.skipField())
             : this.decoder_.advance(4);
         };
         jspb.BinaryReader.prototype.skipFixed64Field = function () {
           this.nextWireType_ != jspb.BinaryConstants.WireType.FIXED64
-            ? (goog.asserts.fail("Invalid wire type for skipFixed64Field"),
+            ? (jspb.asserts.fail("Invalid wire type for skipFixed64Field"),
               this.skipField())
             : this.decoder_.advance(8);
         };
@@ -9411,13 +9497,13 @@
           var a = this.nextField_;
           do {
             if (!this.nextField()) {
-              goog.asserts.fail("Unmatched start-group tag: stream EOF");
+              jspb.asserts.fail("Unmatched start-group tag: stream EOF");
               this.error_ = !0;
               break;
             }
             if (this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP) {
               this.nextField_ != a &&
-                (goog.asserts.fail("Unmatched end-group tag"),
+                (jspb.asserts.fail("Unmatched end-group tag"),
                 (this.error_ = !0));
               break;
             }
@@ -9442,18 +9528,18 @@
               this.skipGroup();
               break;
             default:
-              goog.asserts.fail("Invalid wire encoding for field.");
+              jspb.asserts.fail("Invalid wire encoding for field.");
           }
         };
         jspb.BinaryReader.prototype.registerReadCallback = function (a, b) {
           null === this.readCallbacks_ && (this.readCallbacks_ = {});
-          goog.asserts.assert(!this.readCallbacks_[a]);
+          jspb.asserts.assert(!this.readCallbacks_[a]);
           this.readCallbacks_[a] = b;
         };
         jspb.BinaryReader.prototype.runReadCallback = function (a) {
-          goog.asserts.assert(null !== this.readCallbacks_);
+          jspb.asserts.assert(null !== this.readCallbacks_);
           a = this.readCallbacks_[a];
-          goog.asserts.assert(a);
+          jspb.asserts.assert(a);
           return a(this);
         };
         jspb.BinaryReader.prototype.readAny = function (a) {
@@ -9479,9 +9565,9 @@
             case b.STRING:
               return this.readString();
             case b.GROUP:
-              goog.asserts.fail("Group field type not supported in readAny()");
+              jspb.asserts.fail("Group field type not supported in readAny()");
             case b.MESSAGE:
-              goog.asserts.fail(
+              jspb.asserts.fail(
                 "Message field type not supported in readAny()"
               );
             case b.BYTES:
@@ -9503,12 +9589,12 @@
             case b.VHASH64:
               return this.readVarintHash64();
             default:
-              goog.asserts.fail("Invalid field type in readAny()");
+              jspb.asserts.fail("Invalid field type in readAny()");
           }
           return 0;
         };
         jspb.BinaryReader.prototype.readMessage = function (a, b) {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var c = this.decoder_.getEnd(),
@@ -9519,21 +9605,31 @@
           this.decoder_.setCursor(d);
           this.decoder_.setEnd(c);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readMessage",
+          jspb.BinaryReader.prototype.readMessage
+        );
         jspb.BinaryReader.prototype.readGroup = function (a, b, c) {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.START_GROUP
           );
-          goog.asserts.assert(this.nextField_ == a);
+          jspb.asserts.assert(this.nextField_ == a);
           c(b, this);
           this.error_ ||
             this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP ||
-            (goog.asserts.fail(
+            (jspb.asserts.fail(
               "Group submessage did not end with an END_GROUP tag"
             ),
             (this.error_ = !0));
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readGroup",
+          jspb.BinaryReader.prototype.readGroup
+        );
         jspb.BinaryReader.prototype.getFieldDecoder = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var a = this.decoder_.readUnsignedVarint32(),
@@ -9544,171 +9640,251 @@
           return a;
         };
         jspb.BinaryReader.prototype.readInt32 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint32();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readInt32",
+          jspb.BinaryReader.prototype.readInt32
+        );
         jspb.BinaryReader.prototype.readInt32String = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint32String();
         };
         jspb.BinaryReader.prototype.readInt64 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint64();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readInt64",
+          jspb.BinaryReader.prototype.readInt64
+        );
         jspb.BinaryReader.prototype.readInt64String = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint64String();
         };
         jspb.BinaryReader.prototype.readUint32 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readUnsignedVarint32();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readUint32",
+          jspb.BinaryReader.prototype.readUint32
+        );
         jspb.BinaryReader.prototype.readUint32String = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readUnsignedVarint32String();
         };
         jspb.BinaryReader.prototype.readUint64 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readUnsignedVarint64();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readUint64",
+          jspb.BinaryReader.prototype.readUint64
+        );
         jspb.BinaryReader.prototype.readUint64String = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readUnsignedVarint64String();
         };
         jspb.BinaryReader.prototype.readSint32 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readZigzagVarint32();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readSint32",
+          jspb.BinaryReader.prototype.readSint32
+        );
         jspb.BinaryReader.prototype.readSint64 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readZigzagVarint64();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readSint64",
+          jspb.BinaryReader.prototype.readSint64
+        );
         jspb.BinaryReader.prototype.readSint64String = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readZigzagVarint64String();
         };
         jspb.BinaryReader.prototype.readFixed32 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED32
           );
           return this.decoder_.readUint32();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readFixed32",
+          jspb.BinaryReader.prototype.readFixed32
+        );
         jspb.BinaryReader.prototype.readFixed64 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readUint64();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readFixed64",
+          jspb.BinaryReader.prototype.readFixed64
+        );
         jspb.BinaryReader.prototype.readFixed64String = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readUint64String();
         };
         jspb.BinaryReader.prototype.readSfixed32 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED32
           );
           return this.decoder_.readInt32();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readSfixed32",
+          jspb.BinaryReader.prototype.readSfixed32
+        );
         jspb.BinaryReader.prototype.readSfixed32String = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED32
           );
           return this.decoder_.readInt32().toString();
         };
         jspb.BinaryReader.prototype.readSfixed64 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readInt64();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readSfixed64",
+          jspb.BinaryReader.prototype.readSfixed64
+        );
         jspb.BinaryReader.prototype.readSfixed64String = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readInt64String();
         };
         jspb.BinaryReader.prototype.readFloat = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED32
           );
           return this.decoder_.readFloat();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readFloat",
+          jspb.BinaryReader.prototype.readFloat
+        );
         jspb.BinaryReader.prototype.readDouble = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readDouble();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readDouble",
+          jspb.BinaryReader.prototype.readDouble
+        );
         jspb.BinaryReader.prototype.readBool = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return !!this.decoder_.readUnsignedVarint32();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readBool",
+          jspb.BinaryReader.prototype.readBool
+        );
         jspb.BinaryReader.prototype.readEnum = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint64();
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readEnum",
+          jspb.BinaryReader.prototype.readEnum
+        );
         jspb.BinaryReader.prototype.readString = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var a = this.decoder_.readUnsignedVarint32();
           return this.decoder_.readString(a);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readString",
+          jspb.BinaryReader.prototype.readString
+        );
         jspb.BinaryReader.prototype.readBytes = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var a = this.decoder_.readUnsignedVarint32();
           return this.decoder_.readBytes(a);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readBytes",
+          jspb.BinaryReader.prototype.readBytes
+        );
         jspb.BinaryReader.prototype.readVarintHash64 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readVarintHash64();
         };
         jspb.BinaryReader.prototype.readSintHash64 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readZigzagVarintHash64();
         };
         jspb.BinaryReader.prototype.readSplitVarint64 = function (a) {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSplitVarint64(a);
         };
         jspb.BinaryReader.prototype.readSplitZigzagVarint64 = function (a) {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSplitVarint64(function (b, c) {
@@ -9716,19 +9892,19 @@
           });
         };
         jspb.BinaryReader.prototype.readFixedHash64 = function () {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readFixedHash64();
         };
         jspb.BinaryReader.prototype.readSplitFixed64 = function (a) {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readSplitFixed64(a);
         };
         jspb.BinaryReader.prototype.readPackedField_ = function (a) {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var b = this.decoder_.readUnsignedVarint32();
@@ -9740,18 +9916,33 @@
         jspb.BinaryReader.prototype.readPackedInt32 = function () {
           return this.readPackedField_(this.decoder_.readSignedVarint32);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedInt32",
+          jspb.BinaryReader.prototype.readPackedInt32
+        );
         jspb.BinaryReader.prototype.readPackedInt32String = function () {
           return this.readPackedField_(this.decoder_.readSignedVarint32String);
         };
         jspb.BinaryReader.prototype.readPackedInt64 = function () {
           return this.readPackedField_(this.decoder_.readSignedVarint64);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedInt64",
+          jspb.BinaryReader.prototype.readPackedInt64
+        );
         jspb.BinaryReader.prototype.readPackedInt64String = function () {
           return this.readPackedField_(this.decoder_.readSignedVarint64String);
         };
         jspb.BinaryReader.prototype.readPackedUint32 = function () {
           return this.readPackedField_(this.decoder_.readUnsignedVarint32);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedUint32",
+          jspb.BinaryReader.prototype.readPackedUint32
+        );
         jspb.BinaryReader.prototype.readPackedUint32String = function () {
           return this.readPackedField_(
             this.decoder_.readUnsignedVarint32String
@@ -9760,6 +9951,11 @@
         jspb.BinaryReader.prototype.readPackedUint64 = function () {
           return this.readPackedField_(this.decoder_.readUnsignedVarint64);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedUint64",
+          jspb.BinaryReader.prototype.readPackedUint64
+        );
         jspb.BinaryReader.prototype.readPackedUint64String = function () {
           return this.readPackedField_(
             this.decoder_.readUnsignedVarint64String
@@ -9768,42 +9964,92 @@
         jspb.BinaryReader.prototype.readPackedSint32 = function () {
           return this.readPackedField_(this.decoder_.readZigzagVarint32);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedSint32",
+          jspb.BinaryReader.prototype.readPackedSint32
+        );
         jspb.BinaryReader.prototype.readPackedSint64 = function () {
           return this.readPackedField_(this.decoder_.readZigzagVarint64);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedSint64",
+          jspb.BinaryReader.prototype.readPackedSint64
+        );
         jspb.BinaryReader.prototype.readPackedSint64String = function () {
           return this.readPackedField_(this.decoder_.readZigzagVarint64String);
         };
         jspb.BinaryReader.prototype.readPackedFixed32 = function () {
           return this.readPackedField_(this.decoder_.readUint32);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedFixed32",
+          jspb.BinaryReader.prototype.readPackedFixed32
+        );
         jspb.BinaryReader.prototype.readPackedFixed64 = function () {
           return this.readPackedField_(this.decoder_.readUint64);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedFixed64",
+          jspb.BinaryReader.prototype.readPackedFixed64
+        );
         jspb.BinaryReader.prototype.readPackedFixed64String = function () {
           return this.readPackedField_(this.decoder_.readUint64String);
         };
         jspb.BinaryReader.prototype.readPackedSfixed32 = function () {
           return this.readPackedField_(this.decoder_.readInt32);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedSfixed32",
+          jspb.BinaryReader.prototype.readPackedSfixed32
+        );
         jspb.BinaryReader.prototype.readPackedSfixed64 = function () {
           return this.readPackedField_(this.decoder_.readInt64);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedSfixed64",
+          jspb.BinaryReader.prototype.readPackedSfixed64
+        );
         jspb.BinaryReader.prototype.readPackedSfixed64String = function () {
           return this.readPackedField_(this.decoder_.readInt64String);
         };
         jspb.BinaryReader.prototype.readPackedFloat = function () {
           return this.readPackedField_(this.decoder_.readFloat);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedFloat",
+          jspb.BinaryReader.prototype.readPackedFloat
+        );
         jspb.BinaryReader.prototype.readPackedDouble = function () {
           return this.readPackedField_(this.decoder_.readDouble);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedDouble",
+          jspb.BinaryReader.prototype.readPackedDouble
+        );
         jspb.BinaryReader.prototype.readPackedBool = function () {
           return this.readPackedField_(this.decoder_.readBool);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedBool",
+          jspb.BinaryReader.prototype.readPackedBool
+        );
         jspb.BinaryReader.prototype.readPackedEnum = function () {
           return this.readPackedField_(this.decoder_.readEnum);
         };
+        goog.exportProperty(
+          jspb.BinaryReader.prototype,
+          "readPackedEnum",
+          jspb.BinaryReader.prototype.readPackedEnum
+        );
         jspb.BinaryReader.prototype.readPackedVarintHash64 = function () {
           return this.readPackedField_(this.decoder_.readVarintHash64);
         };
@@ -9822,11 +10068,11 @@
           return a;
         };
         jspb.BinaryEncoder.prototype.writeSplitVarint64 = function (a, b) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(b == Math.floor(b));
-          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(b == Math.floor(b));
+          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
           for (
-            goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32);
+            jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32);
             0 < b || 127 < a;
 
           )
@@ -9836,17 +10082,17 @@
           this.buffer_.push(a);
         };
         jspb.BinaryEncoder.prototype.writeSplitFixed64 = function (a, b) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(b == Math.floor(b));
-          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
-          goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(b == Math.floor(b));
+          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
+          jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32);
           this.writeUint32(a);
           this.writeUint32(b);
         };
         jspb.BinaryEncoder.prototype.writeUnsignedVarint32 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(a == Math.floor(a));
           for (
-            goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
+            jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
             127 < a;
 
           )
@@ -9854,8 +10100,8 @@
           this.buffer_.push(a);
         };
         jspb.BinaryEncoder.prototype.writeSignedVarint32 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_31 &&
               a < jspb.BinaryConstants.TWO_TO_31
           );
@@ -9867,8 +10113,8 @@
           }
         };
         jspb.BinaryEncoder.prototype.writeUnsignedVarint64 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_64);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_64);
           jspb.utils.splitInt64(a);
           this.writeSplitVarint64(
             jspb.utils.split64Low,
@@ -9876,8 +10122,8 @@
           );
         };
         jspb.BinaryEncoder.prototype.writeSignedVarint64 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_63 &&
               a < jspb.BinaryConstants.TWO_TO_63
           );
@@ -9888,16 +10134,16 @@
           );
         };
         jspb.BinaryEncoder.prototype.writeZigzagVarint32 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_31 &&
               a < jspb.BinaryConstants.TWO_TO_31
           );
           this.writeUnsignedVarint32(((a << 1) ^ (a >> 31)) >>> 0);
         };
         jspb.BinaryEncoder.prototype.writeZigzagVarint64 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_63 &&
               a < jspb.BinaryConstants.TWO_TO_63
           );
@@ -9922,45 +10168,45 @@
           );
         };
         jspb.BinaryEncoder.prototype.writeUint8 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(0 <= a && 256 > a);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(0 <= a && 256 > a);
           this.buffer_.push((a >>> 0) & 255);
         };
         jspb.BinaryEncoder.prototype.writeUint16 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(0 <= a && 65536 > a);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(0 <= a && 65536 > a);
           this.buffer_.push((a >>> 0) & 255);
           this.buffer_.push((a >>> 8) & 255);
         };
         jspb.BinaryEncoder.prototype.writeUint32 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
           this.buffer_.push((a >>> 0) & 255);
           this.buffer_.push((a >>> 8) & 255);
           this.buffer_.push((a >>> 16) & 255);
           this.buffer_.push((a >>> 24) & 255);
         };
         jspb.BinaryEncoder.prototype.writeUint64 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_64);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_64);
           jspb.utils.splitUint64(a);
           this.writeUint32(jspb.utils.split64Low);
           this.writeUint32(jspb.utils.split64High);
         };
         jspb.BinaryEncoder.prototype.writeInt8 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(-128 <= a && 128 > a);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(-128 <= a && 128 > a);
           this.buffer_.push((a >>> 0) & 255);
         };
         jspb.BinaryEncoder.prototype.writeInt16 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(-32768 <= a && 32768 > a);
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(-32768 <= a && 32768 > a);
           this.buffer_.push((a >>> 0) & 255);
           this.buffer_.push((a >>> 8) & 255);
         };
         jspb.BinaryEncoder.prototype.writeInt32 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_31 &&
               a < jspb.BinaryConstants.TWO_TO_31
           );
@@ -9970,8 +10216,8 @@
           this.buffer_.push((a >>> 24) & 255);
         };
         jspb.BinaryEncoder.prototype.writeInt64 = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_63 &&
               a < jspb.BinaryConstants.TWO_TO_63
           );
@@ -9979,8 +10225,8 @@
           this.writeSplitFixed64(jspb.utils.split64Low, jspb.utils.split64High);
         };
         jspb.BinaryEncoder.prototype.writeInt64String = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(
             +a >= -jspb.BinaryConstants.TWO_TO_63 &&
               +a < jspb.BinaryConstants.TWO_TO_63
           );
@@ -9988,7 +10234,7 @@
           this.writeSplitFixed64(jspb.utils.split64Low, jspb.utils.split64High);
         };
         jspb.BinaryEncoder.prototype.writeFloat = function (a) {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             Infinity === a ||
               -Infinity === a ||
               isNaN(a) ||
@@ -9999,7 +10245,7 @@
           this.writeUint32(jspb.utils.split64Low);
         };
         jspb.BinaryEncoder.prototype.writeDouble = function (a) {
-          goog.asserts.assert(
+          jspb.asserts.assert(
             Infinity === a ||
               -Infinity === a ||
               isNaN(a) ||
@@ -10011,12 +10257,12 @@
           this.writeUint32(jspb.utils.split64High);
         };
         jspb.BinaryEncoder.prototype.writeBool = function (a) {
-          goog.asserts.assert("boolean" === typeof a || "number" === typeof a);
+          jspb.asserts.assert("boolean" === typeof a || "number" === typeof a);
           this.buffer_.push(a ? 1 : 0);
         };
         jspb.BinaryEncoder.prototype.writeEnum = function (a) {
-          goog.asserts.assert(a == Math.floor(a));
-          goog.asserts.assert(
+          jspb.asserts.assert(a == Math.floor(a));
+          jspb.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_31 &&
               a < jspb.BinaryConstants.TWO_TO_31
           );
@@ -10039,7 +10285,7 @@
         };
         jspb.BinaryEncoder.prototype.writeString = function (a) {
           var b = this.buffer_.length;
-          goog.asserts.assertString(a);
+          jspb.asserts.assertString(a);
           for (var c = 0; c < a.length; c++) {
             var d = a.charCodeAt(c);
             if (128 > d) this.buffer_.push(d);
@@ -10235,7 +10481,7 @@
         jspb.BinaryWriter.prototype.endDelimited_ = function (a) {
           var b = a.pop();
           b = this.totalLength_ + this.encoder_.length() - b;
-          for (goog.asserts.assert(0 <= b); 127 < b; )
+          for (jspb.asserts.assert(0 <= b); 127 < b; )
             a.push((b & 127) | 128), (b >>>= 7), this.totalLength_++;
           a.push(b);
           this.totalLength_++;
@@ -10264,7 +10510,7 @@
           this.bookmarks_ = [];
         };
         jspb.BinaryWriter.prototype.getResultBuffer = function () {
-          goog.asserts.assert(0 == this.bookmarks_.length);
+          jspb.asserts.assert(0 == this.bookmarks_.length);
           for (
             var a = new Uint8Array(this.totalLength_ + this.encoder_.length()),
               b = this.blocks_,
@@ -10281,10 +10527,15 @@
           b = this.encoder_.end();
           a.set(b, d);
           d += b.length;
-          goog.asserts.assert(d == a.length);
+          jspb.asserts.assert(d == a.length);
           this.blocks_ = [a];
           return a;
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "getResultBuffer",
+          jspb.BinaryWriter.prototype.getResultBuffer
+        );
         jspb.BinaryWriter.prototype.getResultBase64String = function (a) {
           return goog.crypt.base64.encodeByteArray(this.getResultBuffer(), a);
         };
@@ -10292,11 +10543,11 @@
           this.bookmarks_.push(this.beginDelimited_(a));
         };
         jspb.BinaryWriter.prototype.endSubMessage = function () {
-          goog.asserts.assert(0 <= this.bookmarks_.length);
+          jspb.asserts.assert(0 <= this.bookmarks_.length);
           this.endDelimited_(this.bookmarks_.pop());
         };
         jspb.BinaryWriter.prototype.writeFieldHeader_ = function (a, b) {
-          goog.asserts.assert(1 <= a && a == Math.floor(a));
+          jspb.asserts.assert(1 <= a && a == Math.floor(a));
           this.encoder_.writeUnsignedVarint32(8 * a + b);
         };
         jspb.BinaryWriter.prototype.writeAny = function (a, b, c) {
@@ -10330,10 +10581,10 @@
               this.writeString(b, c);
               break;
             case d.GROUP:
-              goog.asserts.fail("Group field type not supported in writeAny()");
+              jspb.asserts.fail("Group field type not supported in writeAny()");
               break;
             case d.MESSAGE:
-              goog.asserts.fail(
+              jspb.asserts.fail(
                 "Message field type not supported in writeAny()"
               );
               break;
@@ -10365,7 +10616,7 @@
               this.writeVarintHash64(b, c);
               break;
             default:
-              goog.asserts.fail("Invalid field type in writeAny()");
+              jspb.asserts.fail("Invalid field type in writeAny()");
           }
         };
         jspb.BinaryWriter.prototype.writeUnsignedVarint32_ = function (a, b) {
@@ -10413,16 +10664,21 @@
         };
         jspb.BinaryWriter.prototype.writeInt32 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(
+            (jspb.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
             this.writeSignedVarint32_(a, b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeInt32",
+          jspb.BinaryWriter.prototype.writeInt32
+        );
         jspb.BinaryWriter.prototype.writeInt32String = function (a, b) {
           null != b &&
             ((b = parseInt(b, 10)),
-            goog.asserts.assert(
+            jspb.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
@@ -10430,12 +10686,17 @@
         };
         jspb.BinaryWriter.prototype.writeInt64 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(
+            (jspb.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_63 &&
                 b < jspb.BinaryConstants.TWO_TO_63
             ),
             this.writeSignedVarint64_(a, b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeInt64",
+          jspb.BinaryWriter.prototype.writeInt64
+        );
         jspb.BinaryWriter.prototype.writeInt64String = function (a, b) {
           null != b &&
             ((b = jspb.arith.Int64.fromString(b)),
@@ -10444,20 +10705,30 @@
         };
         jspb.BinaryWriter.prototype.writeUint32 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
+            (jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
             this.writeUnsignedVarint32_(a, b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeUint32",
+          jspb.BinaryWriter.prototype.writeUint32
+        );
         jspb.BinaryWriter.prototype.writeUint32String = function (a, b) {
           null != b &&
             ((b = parseInt(b, 10)),
-            goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
+            jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
             this.writeUnsignedVarint32_(a, b));
         };
         jspb.BinaryWriter.prototype.writeUint64 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_64),
+            (jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_64),
             this.writeUnsignedVarint64_(a, b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeUint64",
+          jspb.BinaryWriter.prototype.writeUint64
+        );
         jspb.BinaryWriter.prototype.writeUint64String = function (a, b) {
           null != b &&
             ((b = jspb.arith.UInt64.fromString(b)),
@@ -10466,20 +10737,30 @@
         };
         jspb.BinaryWriter.prototype.writeSint32 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(
+            (jspb.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
             this.writeZigzagVarint32_(a, b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeSint32",
+          jspb.BinaryWriter.prototype.writeSint32
+        );
         jspb.BinaryWriter.prototype.writeSint64 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(
+            (jspb.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_63 &&
                 b < jspb.BinaryConstants.TWO_TO_63
             ),
             this.writeZigzagVarint64_(a, b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeSint64",
+          jspb.BinaryWriter.prototype.writeSint64
+        );
         jspb.BinaryWriter.prototype.writeSintHash64 = function (a, b) {
           null != b && this.writeZigzagVarintHash64_(a, b);
         };
@@ -10488,16 +10769,26 @@
         };
         jspb.BinaryWriter.prototype.writeFixed32 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
+            (jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED32),
             this.encoder_.writeUint32(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeFixed32",
+          jspb.BinaryWriter.prototype.writeFixed32
+        );
         jspb.BinaryWriter.prototype.writeFixed64 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_64),
+            (jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_64),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED64),
             this.encoder_.writeUint64(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeFixed64",
+          jspb.BinaryWriter.prototype.writeFixed64
+        );
         jspb.BinaryWriter.prototype.writeFixed64String = function (a, b) {
           null != b &&
             ((b = jspb.arith.UInt64.fromString(b)),
@@ -10506,22 +10797,32 @@
         };
         jspb.BinaryWriter.prototype.writeSfixed32 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(
+            (jspb.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED32),
             this.encoder_.writeInt32(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeSfixed32",
+          jspb.BinaryWriter.prototype.writeSfixed32
+        );
         jspb.BinaryWriter.prototype.writeSfixed64 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(
+            (jspb.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_63 &&
                 b < jspb.BinaryConstants.TWO_TO_63
             ),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED64),
             this.encoder_.writeInt64(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeSfixed64",
+          jspb.BinaryWriter.prototype.writeSfixed64
+        );
         jspb.BinaryWriter.prototype.writeSfixed64String = function (a, b) {
           null != b &&
             ((b = jspb.arith.Int64.fromString(b)),
@@ -10533,34 +10834,59 @@
             (this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED32),
             this.encoder_.writeFloat(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeFloat",
+          jspb.BinaryWriter.prototype.writeFloat
+        );
         jspb.BinaryWriter.prototype.writeDouble = function (a, b) {
           null != b &&
             (this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED64),
             this.encoder_.writeDouble(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeDouble",
+          jspb.BinaryWriter.prototype.writeDouble
+        );
         jspb.BinaryWriter.prototype.writeBool = function (a, b) {
           null != b &&
-            (goog.asserts.assert(
+            (jspb.asserts.assert(
               "boolean" === typeof b || "number" === typeof b
             ),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.VARINT),
             this.encoder_.writeBool(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeBool",
+          jspb.BinaryWriter.prototype.writeBool
+        );
         jspb.BinaryWriter.prototype.writeEnum = function (a, b) {
           null != b &&
-            (goog.asserts.assert(
+            (jspb.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.VARINT),
             this.encoder_.writeSignedVarint32(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeEnum",
+          jspb.BinaryWriter.prototype.writeEnum
+        );
         jspb.BinaryWriter.prototype.writeString = function (a, b) {
           null != b &&
             ((a = this.beginDelimited_(a)),
             this.encoder_.writeString(b),
             this.endDelimited_(a));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeString",
+          jspb.BinaryWriter.prototype.writeString
+        );
         jspb.BinaryWriter.prototype.writeBytes = function (a, b) {
           null != b &&
             ((b = jspb.utils.byteSourceToUint8Array(b)),
@@ -10568,10 +10894,20 @@
             this.encoder_.writeUnsignedVarint32(b.length),
             this.appendUint8Array_(b));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeBytes",
+          jspb.BinaryWriter.prototype.writeBytes
+        );
         jspb.BinaryWriter.prototype.writeMessage = function (a, b, c) {
           null != b &&
             ((a = this.beginDelimited_(a)), c(b, this), this.endDelimited_(a));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeMessage",
+          jspb.BinaryWriter.prototype.writeMessage
+        );
         jspb.BinaryWriter.prototype.writeMessageSet = function (a, b, c) {
           null != b &&
             (this.writeFieldHeader_(
@@ -10594,15 +10930,20 @@
             c(b, this),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.END_GROUP));
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeGroup",
+          jspb.BinaryWriter.prototype.writeGroup
+        );
         jspb.BinaryWriter.prototype.writeFixedHash64 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(8 == b.length),
+            (jspb.asserts.assert(8 == b.length),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED64),
             this.encoder_.writeFixedHash64(b));
         };
         jspb.BinaryWriter.prototype.writeVarintHash64 = function (a, b) {
           null != b &&
-            (goog.asserts.assert(8 == b.length),
+            (jspb.asserts.assert(8 == b.length),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.VARINT),
             this.encoder_.writeVarintHash64(b));
         };
@@ -10630,6 +10971,11 @@
             for (var c = 0; c < b.length; c++)
               this.writeSignedVarint32_(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedInt32",
+          jspb.BinaryWriter.prototype.writeRepeatedInt32
+        );
         jspb.BinaryWriter.prototype.writeRepeatedInt32String = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeInt32String(a, b[c]);
@@ -10639,6 +10985,11 @@
             for (var c = 0; c < b.length; c++)
               this.writeSignedVarint64_(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedInt64",
+          jspb.BinaryWriter.prototype.writeRepeatedInt64
+        );
         jspb.BinaryWriter.prototype.writeRepeatedSplitFixed64 = function (
           a,
           b,
@@ -10674,6 +11025,11 @@
             for (var c = 0; c < b.length; c++)
               this.writeUnsignedVarint32_(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedUint32",
+          jspb.BinaryWriter.prototype.writeRepeatedUint32
+        );
         jspb.BinaryWriter.prototype.writeRepeatedUint32String = function (
           a,
           b
@@ -10686,6 +11042,11 @@
             for (var c = 0; c < b.length; c++)
               this.writeUnsignedVarint64_(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedUint64",
+          jspb.BinaryWriter.prototype.writeRepeatedUint64
+        );
         jspb.BinaryWriter.prototype.writeRepeatedUint64String = function (
           a,
           b
@@ -10698,11 +11059,21 @@
             for (var c = 0; c < b.length; c++)
               this.writeZigzagVarint32_(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedSint32",
+          jspb.BinaryWriter.prototype.writeRepeatedSint32
+        );
         jspb.BinaryWriter.prototype.writeRepeatedSint64 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++)
               this.writeZigzagVarint64_(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedSint64",
+          jspb.BinaryWriter.prototype.writeRepeatedSint64
+        );
         jspb.BinaryWriter.prototype.writeRepeatedSint64String = function (
           a,
           b
@@ -10720,10 +11091,20 @@
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFixed32(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedFixed32",
+          jspb.BinaryWriter.prototype.writeRepeatedFixed32
+        );
         jspb.BinaryWriter.prototype.writeRepeatedFixed64 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFixed64(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedFixed64",
+          jspb.BinaryWriter.prototype.writeRepeatedFixed64
+        );
         jspb.BinaryWriter.prototype.writeRepeatedFixed64String = function (
           a,
           b
@@ -10731,14 +11112,29 @@
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFixed64String(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedFixed64String",
+          jspb.BinaryWriter.prototype.writeRepeatedFixed64String
+        );
         jspb.BinaryWriter.prototype.writeRepeatedSfixed32 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeSfixed32(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedSfixed32",
+          jspb.BinaryWriter.prototype.writeRepeatedSfixed32
+        );
         jspb.BinaryWriter.prototype.writeRepeatedSfixed64 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeSfixed64(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedSfixed64",
+          jspb.BinaryWriter.prototype.writeRepeatedSfixed64
+        );
         jspb.BinaryWriter.prototype.writeRepeatedSfixed64String = function (
           a,
           b
@@ -10751,26 +11147,56 @@
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFloat(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedFloat",
+          jspb.BinaryWriter.prototype.writeRepeatedFloat
+        );
         jspb.BinaryWriter.prototype.writeRepeatedDouble = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeDouble(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedDouble",
+          jspb.BinaryWriter.prototype.writeRepeatedDouble
+        );
         jspb.BinaryWriter.prototype.writeRepeatedBool = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeBool(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedBool",
+          jspb.BinaryWriter.prototype.writeRepeatedBool
+        );
         jspb.BinaryWriter.prototype.writeRepeatedEnum = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeEnum(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedEnum",
+          jspb.BinaryWriter.prototype.writeRepeatedEnum
+        );
         jspb.BinaryWriter.prototype.writeRepeatedString = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeString(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedString",
+          jspb.BinaryWriter.prototype.writeRepeatedString
+        );
         jspb.BinaryWriter.prototype.writeRepeatedBytes = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeBytes(a, b[c]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedBytes",
+          jspb.BinaryWriter.prototype.writeRepeatedBytes
+        );
         jspb.BinaryWriter.prototype.writeRepeatedMessage = function (a, b, c) {
           if (null != b)
             for (var d = 0; d < b.length; d++) {
@@ -10779,6 +11205,11 @@
               this.endDelimited_(e);
             }
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedMessage",
+          jspb.BinaryWriter.prototype.writeRepeatedMessage
+        );
         jspb.BinaryWriter.prototype.writeRepeatedGroup = function (a, b, c) {
           if (null != b)
             for (var d = 0; d < b.length; d++)
@@ -10792,6 +11223,11 @@
                   jspb.BinaryConstants.WireType.END_GROUP
                 );
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writeRepeatedGroup",
+          jspb.BinaryWriter.prototype.writeRepeatedGroup
+        );
         jspb.BinaryWriter.prototype.writeRepeatedFixedHash64 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFixedHash64(a, b[c]);
@@ -10811,6 +11247,11 @@
             this.endDelimited_(a);
           }
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedInt32",
+          jspb.BinaryWriter.prototype.writePackedInt32
+        );
         jspb.BinaryWriter.prototype.writePackedInt32String = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -10827,6 +11268,11 @@
             this.endDelimited_(a);
           }
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedInt64",
+          jspb.BinaryWriter.prototype.writePackedInt64
+        );
         jspb.BinaryWriter.prototype.writePackedSplitFixed64 = function (
           a,
           b,
@@ -10886,6 +11332,11 @@
             this.endDelimited_(a);
           }
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedUint32",
+          jspb.BinaryWriter.prototype.writePackedUint32
+        );
         jspb.BinaryWriter.prototype.writePackedUint32String = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -10902,6 +11353,11 @@
             this.endDelimited_(a);
           }
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedUint64",
+          jspb.BinaryWriter.prototype.writePackedUint64
+        );
         jspb.BinaryWriter.prototype.writePackedUint64String = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -10920,6 +11376,11 @@
             this.endDelimited_(a);
           }
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedSint32",
+          jspb.BinaryWriter.prototype.writePackedSint32
+        );
         jspb.BinaryWriter.prototype.writePackedSint64 = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -10928,6 +11389,11 @@
             this.endDelimited_(a);
           }
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedSint64",
+          jspb.BinaryWriter.prototype.writePackedSint64
+        );
         jspb.BinaryWriter.prototype.writePackedSint64String = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -10960,6 +11426,11 @@
             )
               this.encoder_.writeUint32(b[a]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedFixed32",
+          jspb.BinaryWriter.prototype.writePackedFixed32
+        );
         jspb.BinaryWriter.prototype.writePackedFixed64 = function (a, b) {
           if (null != b && b.length)
             for (
@@ -10974,6 +11445,11 @@
             )
               this.encoder_.writeUint64(b[a]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedFixed64",
+          jspb.BinaryWriter.prototype.writePackedFixed64
+        );
         jspb.BinaryWriter.prototype.writePackedFixed64String = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11004,6 +11480,11 @@
             )
               this.encoder_.writeInt32(b[a]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedSfixed32",
+          jspb.BinaryWriter.prototype.writePackedSfixed32
+        );
         jspb.BinaryWriter.prototype.writePackedSfixed64 = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11018,6 +11499,11 @@
             )
               this.encoder_.writeInt64(b[a]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedSfixed64",
+          jspb.BinaryWriter.prototype.writePackedSfixed64
+        );
         jspb.BinaryWriter.prototype.writePackedSfixed64String = function (
           a,
           b
@@ -11049,6 +11535,11 @@
             )
               this.encoder_.writeFloat(b[a]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedFloat",
+          jspb.BinaryWriter.prototype.writePackedFloat
+        );
         jspb.BinaryWriter.prototype.writePackedDouble = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11063,6 +11554,11 @@
             )
               this.encoder_.writeDouble(b[a]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedDouble",
+          jspb.BinaryWriter.prototype.writePackedDouble
+        );
         jspb.BinaryWriter.prototype.writePackedBool = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11077,6 +11573,11 @@
             )
               this.encoder_.writeBool(b[a]);
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedBool",
+          jspb.BinaryWriter.prototype.writePackedBool
+        );
         jspb.BinaryWriter.prototype.writePackedEnum = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -11084,6 +11585,11 @@
             this.endDelimited_(a);
           }
         };
+        goog.exportProperty(
+          jspb.BinaryWriter.prototype,
+          "writePackedEnum",
+          jspb.BinaryWriter.prototype.writePackedEnum
+        );
         jspb.BinaryWriter.prototype.writePackedFixedHash64 = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11113,6 +11619,7 @@
           this.arrClean = !0;
           0 < this.arr_.length && this.loadFromArray_();
         };
+        goog.exportSymbol("jspb.Map", jspb.Map);
         jspb.Map.prototype.loadFromArray_ = function () {
           for (var a = 0; a < this.arr_.length; a++) {
             var b = this.arr_[a],
@@ -11145,17 +11652,27 @@
           }
           return this.arr_;
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "toArray",
+          jspb.Map.prototype.toArray
+        );
         jspb.Map.prototype.toObject = function (a, b) {
           for (var c = this.toArray(), d = [], e = 0; e < c.length; e++) {
             var f = this.map_[c[e][0].toString()];
             this.wrapEntry_(f);
             var g = f.valueWrapper;
             g
-              ? (goog.asserts.assert(b), d.push([f.key, b(a, g)]))
+              ? (jspb.asserts.assert(b), d.push([f.key, b(a, g)]))
               : d.push([f.key, f.value]);
           }
           return d;
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "toObject",
+          jspb.Map.prototype.toObject
+        );
         jspb.Map.fromObject = function (a, b, c) {
           b = new jspb.Map([], b);
           for (var d = 0; d < a.length; d++) {
@@ -11165,6 +11682,7 @@
           }
           return b;
         };
+        goog.exportProperty(jspb.Map, "fromObject", jspb.Map.fromObject);
         jspb.Map.ArrayIteratorIterable_ = function (a) {
           this.idx_ = 0;
           this.arr_ = a;
@@ -11182,10 +11700,20 @@
         jspb.Map.prototype.getLength = function () {
           return this.stringKeys_().length;
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "getLength",
+          jspb.Map.prototype.getLength
+        );
         jspb.Map.prototype.clear = function () {
           this.map_ = {};
           this.arrClean = !1;
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "clear",
+          jspb.Map.prototype.clear
+        );
         jspb.Map.prototype.del = function (a) {
           a = a.toString();
           var b = this.map_.hasOwnProperty(a);
@@ -11193,6 +11721,7 @@
           this.arrClean = !1;
           return b;
         };
+        goog.exportProperty(jspb.Map.prototype, "del", jspb.Map.prototype.del);
         jspb.Map.prototype.getEntryList = function () {
           var a = [],
             b = this.stringKeys_();
@@ -11203,6 +11732,11 @@
           }
           return a;
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "getEntryList",
+          jspb.Map.prototype.getEntryList
+        );
         jspb.Map.prototype.entries = function () {
           var a = [],
             b = this.stringKeys_();
@@ -11213,6 +11747,11 @@
           }
           return new jspb.Map.ArrayIteratorIterable_(a);
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "entries",
+          jspb.Map.prototype.entries
+        );
         jspb.Map.prototype.keys = function () {
           var a = [],
             b = this.stringKeys_();
@@ -11220,6 +11759,11 @@
           for (var c = 0; c < b.length; c++) a.push(this.map_[b[c]].key);
           return new jspb.Map.ArrayIteratorIterable_(a);
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "keys",
+          jspb.Map.prototype.keys
+        );
         jspb.Map.prototype.values = function () {
           var a = [],
             b = this.stringKeys_();
@@ -11228,6 +11772,11 @@
             a.push(this.wrapEntry_(this.map_[b[c]]));
           return new jspb.Map.ArrayIteratorIterable_(a);
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "values",
+          jspb.Map.prototype.values
+        );
         jspb.Map.prototype.forEach = function (a, b) {
           var c = this.stringKeys_();
           c.sort();
@@ -11236,6 +11785,11 @@
             a.call(b, this.wrapEntry_(e), e.key, this);
           }
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "forEach",
+          jspb.Map.prototype.forEach
+        );
         jspb.Map.prototype.set = function (a, b) {
           var c = new jspb.Map.Entry_(a);
           this.valueCtor_
@@ -11245,6 +11799,7 @@
           this.arrClean = !1;
           return this;
         };
+        goog.exportProperty(jspb.Map.prototype, "set", jspb.Map.prototype.set);
         jspb.Map.prototype.wrapEntry_ = function (a) {
           return this.valueCtor_
             ? (a.valueWrapper ||
@@ -11255,9 +11810,11 @@
         jspb.Map.prototype.get = function (a) {
           if ((a = this.map_[a.toString()])) return this.wrapEntry_(a);
         };
+        goog.exportProperty(jspb.Map.prototype, "get", jspb.Map.prototype.get);
         jspb.Map.prototype.has = function (a) {
           return a.toString() in this.map_;
         };
+        goog.exportProperty(jspb.Map.prototype, "has", jspb.Map.prototype.has);
         jspb.Map.prototype.serializeBinary = function (a, b, c, d, e) {
           var f = this.stringKeys_();
           f.sort();
@@ -11271,6 +11828,11 @@
             b.endSubMessage();
           }
         };
+        goog.exportProperty(
+          jspb.Map.prototype,
+          "serializeBinary",
+          jspb.Map.prototype.serializeBinary
+        );
         jspb.Map.deserializeBinary = function (a, b, c, d, e, f, g) {
           for (; b.nextField() && !b.isEndGroup(); ) {
             var h = b.getFieldNumber();
@@ -11278,15 +11840,20 @@
               ? (f = c.call(b))
               : 2 == h &&
                 (a.valueCtor_
-                  ? (goog.asserts.assert(e),
+                  ? (jspb.asserts.assert(e),
                     g || (g = new a.valueCtor_()),
                     d.call(b, g, e))
                   : (g = d.call(b)));
           }
-          goog.asserts.assert(void 0 != f);
-          goog.asserts.assert(void 0 != g);
+          jspb.asserts.assert(void 0 != f);
+          jspb.asserts.assert(void 0 != g);
           a.set(f, g);
         };
+        goog.exportProperty(
+          jspb.Map,
+          "deserializeBinary",
+          jspb.Map.deserializeBinary
+        );
         jspb.Map.prototype.stringKeys_ = function () {
           var a = this.map_,
             b = [],
@@ -11306,6 +11873,7 @@
           this.toObjectFn = d;
           this.isRepeated = e;
         };
+        goog.exportSymbol("jspb.ExtensionFieldInfo", jspb.ExtensionFieldInfo);
         jspb.ExtensionFieldBinaryInfo = function (a, b, c, d, e, f) {
           this.fieldInfo = a;
           this.binaryReaderFn = b;
@@ -11314,12 +11882,32 @@
           this.binaryMessageDeserializeFn = e;
           this.isPacked = f;
         };
+        goog.exportSymbol(
+          "jspb.ExtensionFieldBinaryInfo",
+          jspb.ExtensionFieldBinaryInfo
+        );
         jspb.ExtensionFieldInfo.prototype.isMessageType = function () {
           return !!this.ctor;
         };
+        goog.exportProperty(
+          jspb.ExtensionFieldInfo.prototype,
+          "isMessageType",
+          jspb.ExtensionFieldInfo.prototype.isMessageType
+        );
         jspb.Message = function () {};
+        goog.exportSymbol("jspb.Message", jspb.Message);
         jspb.Message.GENERATE_TO_OBJECT = !0;
+        goog.exportProperty(
+          jspb.Message,
+          "GENERATE_TO_OBJECT",
+          jspb.Message.GENERATE_TO_OBJECT
+        );
         jspb.Message.GENERATE_FROM_OBJECT = !goog.DISALLOW_TEST_ONLY_CODE;
+        goog.exportProperty(
+          jspb.Message,
+          "GENERATE_FROM_OBJECT",
+          jspb.Message.GENERATE_FROM_OBJECT
+        );
         jspb.Message.GENERATE_TO_STRING = !0;
         jspb.Message.ASSUME_LOCAL_ARRAYS = !1;
         jspb.Message.SERIALIZE_EMPTY_TRAILING_FIELDS = !0;
@@ -11327,6 +11915,11 @@
         jspb.Message.prototype.getJsPbMessageId = function () {
           return this.messageId_;
         };
+        goog.exportProperty(
+          jspb.Message.prototype,
+          "getJsPbMessageId",
+          jspb.Message.prototype.getJsPbMessageId
+        );
         jspb.Message.getIndex_ = function (a, b) {
           return b + a.arrayIndexOffset_;
         };
@@ -11359,6 +11952,11 @@
             for (b = 0; b < f.length; b++)
               jspb.Message.computeOneofCase(a, f[b]);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "initialize",
+          jspb.Message.initialize
+        );
         jspb.Message.EMPTY_LIST_SENTINEL_ =
           goog.DEBUG && Object.freeze ? Object.freeze([]) : [];
         jspb.Message.isArray_ = function (a) {
@@ -11399,6 +11997,11 @@
             d[e] = b.call(a[e], c, a[e]);
           return d;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "toObjectList",
+          jspb.Message.toObjectList
+        );
         jspb.Message.toObjectExtension = function (a, b, c, d, e) {
           for (var f in c) {
             var g = c[f],
@@ -11414,6 +12017,11 @@
             }
           }
         };
+        goog.exportProperty(
+          jspb.Message,
+          "toObjectExtension",
+          jspb.Message.toObjectExtension
+        );
         jspb.Message.serializeBinaryExtensions = function (a, b, c, d) {
           for (var e in c) {
             var f = c[e],
@@ -11439,6 +12047,11 @@
               else f.binaryWriterFn.call(b, g.fieldIndex, h);
           }
         };
+        goog.exportProperty(
+          jspb.Message,
+          "serializeBinaryExtensions",
+          jspb.Message.serializeBinaryExtensions
+        );
         jspb.Message.readBinaryExtension = function (a, b, c, d, e) {
           var f = c[b.getFieldNumber()];
           if (f) {
@@ -11458,6 +12071,11 @@
               : e.call(a, c, g);
           } else b.skipField();
         };
+        goog.exportProperty(
+          jspb.Message,
+          "readBinaryExtension",
+          jspb.Message.readBinaryExtension
+        );
         jspb.Message.getField = function (a, b) {
           if (b < a.pivot_) {
             b = jspb.Message.getIndex_(a, b);
@@ -11474,17 +12092,33 @@
                 : c
             );
         };
+        goog.exportProperty(jspb.Message, "getField", jspb.Message.getField);
         jspb.Message.getRepeatedField = function (a, b) {
           return jspb.Message.getField(a, b);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getRepeatedField",
+          jspb.Message.getRepeatedField
+        );
         jspb.Message.getOptionalFloatingPointField = function (a, b) {
           a = jspb.Message.getField(a, b);
           return null == a ? a : +a;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getOptionalFloatingPointField",
+          jspb.Message.getOptionalFloatingPointField
+        );
         jspb.Message.getBooleanField = function (a, b) {
           a = jspb.Message.getField(a, b);
           return null == a ? a : !!a;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getBooleanField",
+          jspb.Message.getBooleanField
+        );
         jspb.Message.getRepeatedFloatingPointField = function (a, b) {
           var c = jspb.Message.getRepeatedField(a, b);
           a.convertedPrimitiveFields_ || (a.convertedPrimitiveFields_ = {});
@@ -11494,6 +12128,11 @@
           }
           return c;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getRepeatedFloatingPointField",
+          jspb.Message.getRepeatedFloatingPointField
+        );
         jspb.Message.getRepeatedBooleanField = function (a, b) {
           var c = jspb.Message.getRepeatedField(a, b);
           a.convertedPrimitiveFields_ || (a.convertedPrimitiveFields_ = {});
@@ -11503,38 +12142,59 @@
           }
           return c;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getRepeatedBooleanField",
+          jspb.Message.getRepeatedBooleanField
+        );
         jspb.Message.bytesAsB64 = function (a) {
           if (null == a || "string" === typeof a) return a;
           if (jspb.Message.SUPPORTS_UINT8ARRAY_ && a instanceof Uint8Array)
             return goog.crypt.base64.encodeByteArray(a);
-          goog.asserts.fail("Cannot coerce to b64 string: " + goog.typeOf(a));
+          jspb.asserts.fail("Cannot coerce to b64 string: " + goog.typeOf(a));
           return null;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "bytesAsB64",
+          jspb.Message.bytesAsB64
+        );
         jspb.Message.bytesAsU8 = function (a) {
           if (null == a || a instanceof Uint8Array) return a;
           if ("string" === typeof a)
             return goog.crypt.base64.decodeStringToUint8Array(a);
-          goog.asserts.fail("Cannot coerce to Uint8Array: " + goog.typeOf(a));
+          jspb.asserts.fail("Cannot coerce to Uint8Array: " + goog.typeOf(a));
           return null;
         };
+        goog.exportProperty(jspb.Message, "bytesAsU8", jspb.Message.bytesAsU8);
         jspb.Message.bytesListAsB64 = function (a) {
           jspb.Message.assertConsistentTypes_(a);
           return a.length && "string" !== typeof a[0]
             ? goog.array.map(a, jspb.Message.bytesAsB64)
             : a;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "bytesListAsB64",
+          jspb.Message.bytesListAsB64
+        );
         jspb.Message.bytesListAsU8 = function (a) {
           jspb.Message.assertConsistentTypes_(a);
           return !a.length || a[0] instanceof Uint8Array
             ? a
             : goog.array.map(a, jspb.Message.bytesAsU8);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "bytesListAsU8",
+          jspb.Message.bytesListAsU8
+        );
         jspb.Message.assertConsistentTypes_ = function (a) {
           if (goog.DEBUG && a && 1 < a.length) {
             var b = goog.typeOf(a[0]);
             goog.array.forEach(a, function (a) {
               goog.typeOf(a) != b &&
-                goog.asserts.fail(
+                jspb.asserts.fail(
                   "Inconsistent type in JSPB repeated field array. Got " +
                     goog.typeOf(a) +
                     " expected " +
@@ -11547,15 +12207,35 @@
           a = jspb.Message.getField(a, b);
           return null == a ? c : a;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getFieldWithDefault",
+          jspb.Message.getFieldWithDefault
+        );
         jspb.Message.getBooleanFieldWithDefault = function (a, b, c) {
           a = jspb.Message.getBooleanField(a, b);
           return null == a ? c : a;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getBooleanFieldWithDefault",
+          jspb.Message.getBooleanFieldWithDefault
+        );
         jspb.Message.getFloatingPointFieldWithDefault = function (a, b, c) {
           a = jspb.Message.getOptionalFloatingPointField(a, b);
           return null == a ? c : a;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getFloatingPointFieldWithDefault",
+          jspb.Message.getFloatingPointFieldWithDefault
+        );
         jspb.Message.getFieldProto3 = jspb.Message.getFieldWithDefault;
+        goog.exportProperty(
+          jspb.Message,
+          "getFieldProto3",
+          jspb.Message.getFieldProto3
+        );
         jspb.Message.getMapField = function (a, b, c, d) {
           a.wrappers_ || (a.wrappers_ = {});
           if (b in a.wrappers_) return a.wrappers_[b];
@@ -11567,37 +12247,78 @@
           }
           return (a.wrappers_[b] = new jspb.Map(e, d));
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getMapField",
+          jspb.Message.getMapField
+        );
         jspb.Message.setField = function (a, b, c) {
-          goog.asserts.assertInstanceof(a, jspb.Message);
+          jspb.asserts.assertInstanceof(a, jspb.Message);
           b < a.pivot_
             ? (a.array[jspb.Message.getIndex_(a, b)] = c)
             : (jspb.Message.maybeInitEmptyExtensionObject_(a),
               (a.extensionObject_[b] = c));
           return a;
         };
+        goog.exportProperty(jspb.Message, "setField", jspb.Message.setField);
         jspb.Message.setProto3IntField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, 0);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setProto3IntField",
+          jspb.Message.setProto3IntField
+        );
         jspb.Message.setProto3FloatField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, 0);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setProto3FloatField",
+          jspb.Message.setProto3FloatField
+        );
         jspb.Message.setProto3BooleanField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, !1);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setProto3BooleanField",
+          jspb.Message.setProto3BooleanField
+        );
         jspb.Message.setProto3StringField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, "");
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setProto3StringField",
+          jspb.Message.setProto3StringField
+        );
         jspb.Message.setProto3BytesField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, "");
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setProto3BytesField",
+          jspb.Message.setProto3BytesField
+        );
         jspb.Message.setProto3EnumField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, 0);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setProto3EnumField",
+          jspb.Message.setProto3EnumField
+        );
         jspb.Message.setProto3StringIntField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, "0");
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setProto3StringIntField",
+          jspb.Message.setProto3StringIntField
+        );
         jspb.Message.setFieldIgnoringDefault_ = function (a, b, c, d) {
-          goog.asserts.assertInstanceof(a, jspb.Message);
+          jspb.asserts.assertInstanceof(a, jspb.Message);
           c !== d
             ? jspb.Message.setField(a, b, c)
             : b < a.pivot_
@@ -11607,13 +12328,18 @@
           return a;
         };
         jspb.Message.addToRepeatedField = function (a, b, c, d) {
-          goog.asserts.assertInstanceof(a, jspb.Message);
+          jspb.asserts.assertInstanceof(a, jspb.Message);
           b = jspb.Message.getRepeatedField(a, b);
           void 0 != d ? b.splice(d, 0, c) : b.push(c);
           return a;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "addToRepeatedField",
+          jspb.Message.addToRepeatedField
+        );
         jspb.Message.setOneofField = function (a, b, c, d) {
-          goog.asserts.assertInstanceof(a, jspb.Message);
+          jspb.asserts.assertInstanceof(a, jspb.Message);
           (c = jspb.Message.computeOneofCase(a, c)) &&
             c !== b &&
             void 0 !== d &&
@@ -11621,6 +12347,11 @@
             jspb.Message.setField(a, c, void 0));
           return jspb.Message.setField(a, b, d);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setOneofField",
+          jspb.Message.setOneofField
+        );
         jspb.Message.computeOneofCase = function (a, b) {
           for (var c, d, e = 0; e < b.length; e++) {
             var f = b[e],
@@ -11630,6 +12361,11 @@
           }
           return c ? (jspb.Message.setField(a, c, d), c) : 0;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "computeOneofCase",
+          jspb.Message.computeOneofCase
+        );
         jspb.Message.getWrapperField = function (a, b, c, d) {
           a.wrappers_ || (a.wrappers_ = {});
           if (!a.wrappers_[c]) {
@@ -11638,12 +12374,22 @@
           }
           return a.wrappers_[c];
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getWrapperField",
+          jspb.Message.getWrapperField
+        );
         jspb.Message.getRepeatedWrapperField = function (a, b, c) {
           jspb.Message.wrapRepeatedField_(a, b, c);
           b = a.wrappers_[c];
           b == jspb.Message.EMPTY_LIST_SENTINEL_ && (b = a.wrappers_[c] = []);
           return b;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "getRepeatedWrapperField",
+          jspb.Message.getRepeatedWrapperField
+        );
         jspb.Message.wrapRepeatedField_ = function (a, b, c) {
           a.wrappers_ || (a.wrappers_ = {});
           if (!a.wrappers_[c]) {
@@ -11657,27 +12403,42 @@
           }
         };
         jspb.Message.setWrapperField = function (a, b, c) {
-          goog.asserts.assertInstanceof(a, jspb.Message);
+          jspb.asserts.assertInstanceof(a, jspb.Message);
           a.wrappers_ || (a.wrappers_ = {});
           var d = c ? c.toArray() : c;
           a.wrappers_[b] = c;
           return jspb.Message.setField(a, b, d);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setWrapperField",
+          jspb.Message.setWrapperField
+        );
         jspb.Message.setOneofWrapperField = function (a, b, c, d) {
-          goog.asserts.assertInstanceof(a, jspb.Message);
+          jspb.asserts.assertInstanceof(a, jspb.Message);
           a.wrappers_ || (a.wrappers_ = {});
           var e = d ? d.toArray() : d;
           a.wrappers_[b] = d;
           return jspb.Message.setOneofField(a, b, c, e);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setOneofWrapperField",
+          jspb.Message.setOneofWrapperField
+        );
         jspb.Message.setRepeatedWrapperField = function (a, b, c) {
-          goog.asserts.assertInstanceof(a, jspb.Message);
+          jspb.asserts.assertInstanceof(a, jspb.Message);
           a.wrappers_ || (a.wrappers_ = {});
           c = c || [];
           for (var d = [], e = 0; e < c.length; e++) d[e] = c[e].toArray();
           a.wrappers_[b] = c;
           return jspb.Message.setField(a, b, d);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "setRepeatedWrapperField",
+          jspb.Message.setRepeatedWrapperField
+        );
         jspb.Message.addToRepeatedWrapperField = function (a, b, c, d, e) {
           jspb.Message.wrapRepeatedField_(a, d, b);
           var f = a.wrappers_[b];
@@ -11689,11 +12450,17 @@
             : (f.push(c), a.push(c.toArray()));
           return c;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "addToRepeatedWrapperField",
+          jspb.Message.addToRepeatedWrapperField
+        );
         jspb.Message.toMap = function (a, b, c, d) {
           for (var e = {}, f = 0; f < a.length; f++)
             e[b.call(a[f])] = c ? c.call(a[f], d, a[f]) : a[f];
           return e;
         };
+        goog.exportProperty(jspb.Message, "toMap", jspb.Message.toMap);
         jspb.Message.prototype.syncMapFields_ = function () {
           if (this.wrappers_)
             for (var a in this.wrappers_) {
@@ -11707,6 +12474,11 @@
           this.syncMapFields_();
           return this.array;
         };
+        goog.exportProperty(
+          jspb.Message.prototype,
+          "toArray",
+          jspb.Message.prototype.toArray
+        );
         jspb.Message.GENERATE_TO_STRING &&
           (jspb.Message.prototype.toString = function () {
             this.syncMapFields_();
@@ -11738,6 +12510,11 @@
             return this.extensionObject_[b];
           }
         };
+        goog.exportProperty(
+          jspb.Message.prototype,
+          "getExtension",
+          jspb.Message.prototype.getExtension
+        );
         jspb.Message.prototype.setExtension = function (a, b) {
           this.wrappers_ || (this.wrappers_ = {});
           jspb.Message.maybeInitEmptyExtensionObject_(this);
@@ -11756,6 +12533,11 @@
             : (this.extensionObject_[c] = b);
           return this;
         };
+        goog.exportProperty(
+          jspb.Message.prototype,
+          "setExtension",
+          jspb.Message.prototype.setExtension
+        );
         jspb.Message.difference = function (a, b) {
           if (!(a instanceof b.constructor))
             throw Error("Messages have different types.");
@@ -11769,6 +12551,11 @@
             jspb.Message.compareFields(c[e], b[e]) || (d[e] = b[e]);
           return new a.constructor(d);
         };
+        goog.exportProperty(
+          jspb.Message,
+          "difference",
+          jspb.Message.difference
+        );
         jspb.Message.equals = function (a, b) {
           return (
             a == b ||
@@ -11777,6 +12564,7 @@
               jspb.Message.compareFields(a.toArray(), b.toArray()))
           );
         };
+        goog.exportProperty(jspb.Message, "equals", jspb.Message.equals);
         jspb.Message.compareExtensions = function (a, b) {
           a = a || {};
           b = b || {};
@@ -11787,6 +12575,11 @@
           for (d in c) if (!jspb.Message.compareFields(a[d], b[d])) return !1;
           return !0;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "compareExtensions",
+          jspb.Message.compareExtensions
+        );
         jspb.Message.compareFields = function (a, b) {
           if (a == b) return !0;
           if (!goog.isObject(a) || !goog.isObject(b))
@@ -11812,14 +12605,14 @@
                 h = b[c];
               g &&
                 g.constructor == Object &&
-                (goog.asserts.assert(void 0 === d),
-                goog.asserts.assert(c === a.length - 1),
+                (jspb.asserts.assert(void 0 === d),
+                jspb.asserts.assert(c === a.length - 1),
                 (d = g),
                 (g = void 0));
               h &&
                 h.constructor == Object &&
-                (goog.asserts.assert(void 0 === e),
-                goog.asserts.assert(c === b.length - 1),
+                (jspb.asserts.assert(void 0 === e),
+                jspb.asserts.assert(c === b.length - 1),
                 (e = h),
                 (h = void 0));
               if (!jspb.Message.compareFields(g, h)) return !1;
@@ -11834,22 +12627,38 @@
             return jspb.Message.compareExtensions(a, b);
           throw Error("Invalid type in JSPB array");
         };
+        goog.exportProperty(
+          jspb.Message,
+          "compareFields",
+          jspb.Message.compareFields
+        );
         jspb.Message.prototype.cloneMessage = function () {
           return jspb.Message.cloneMessage(this);
         };
+        goog.exportProperty(
+          jspb.Message.prototype,
+          "cloneMessage",
+          jspb.Message.prototype.cloneMessage
+        );
         jspb.Message.prototype.clone = function () {
           return jspb.Message.cloneMessage(this);
         };
+        goog.exportProperty(
+          jspb.Message.prototype,
+          "clone",
+          jspb.Message.prototype.clone
+        );
         jspb.Message.clone = function (a) {
           return jspb.Message.cloneMessage(a);
         };
+        goog.exportProperty(jspb.Message, "clone", jspb.Message.clone);
         jspb.Message.cloneMessage = function (a) {
           return new a.constructor(jspb.Message.clone_(a.toArray()));
         };
         jspb.Message.copyInto = function (a, b) {
-          goog.asserts.assertInstanceof(a, jspb.Message);
-          goog.asserts.assertInstanceof(b, jspb.Message);
-          goog.asserts.assert(
+          jspb.asserts.assertInstanceof(a, jspb.Message);
+          jspb.asserts.assertInstanceof(b, jspb.Message);
+          jspb.asserts.assert(
             a.constructor == b.constructor,
             "Copy source and target message should have the same type."
           );
@@ -11863,6 +12672,7 @@
           b.wrappers_ = a.wrappers_;
           b.extensionObject_ = a.extensionObject_;
         };
+        goog.exportProperty(jspb.Message, "copyInto", jspb.Message.copyInto);
         jspb.Message.clone_ = function (a) {
           if (Array.isArray(a)) {
             for (var b = Array(a.length), c = 0; c < a.length; c++) {
@@ -11870,7 +12680,7 @@
               null != d &&
                 (b[c] =
                   "object" == typeof d
-                    ? jspb.Message.clone_(goog.asserts.assert(d))
+                    ? jspb.Message.clone_(jspb.asserts.assert(d))
                     : d);
             }
             return b;
@@ -11883,13 +12693,18 @@
               null != d &&
                 (b[c] =
                   "object" == typeof d
-                    ? jspb.Message.clone_(goog.asserts.assert(d))
+                    ? jspb.Message.clone_(jspb.asserts.assert(d))
                     : d);
           return b;
         };
         jspb.Message.registerMessageType = function (a, b) {
           b.messageId = a;
         };
+        goog.exportProperty(
+          jspb.Message,
+          "registerMessageType",
+          jspb.Message.registerMessageType
+        );
         jspb.Message.messageSetExtensions = {};
         jspb.Message.messageSetExtensionsBinary = {};
         jspb.Export = {};
@@ -89420,6 +90235,7 @@ function TestLocalizeCalendarTime()
           /* harmony export */ __createBinding: () =>
             /* binding */ __createBinding,
           /* harmony export */ __decorate: () => /* binding */ __decorate,
+          /* harmony export */ __esDecorate: () => /* binding */ __esDecorate,
           /* harmony export */ __exportStar: () => /* binding */ __exportStar,
           /* harmony export */ __extends: () => /* binding */ __extends,
           /* harmony export */ __generator: () => /* binding */ __generator,
@@ -89430,8 +90246,13 @@ function TestLocalizeCalendarTime()
             /* binding */ __makeTemplateObject,
           /* harmony export */ __metadata: () => /* binding */ __metadata,
           /* harmony export */ __param: () => /* binding */ __param,
+          /* harmony export */ __propKey: () => /* binding */ __propKey,
           /* harmony export */ __read: () => /* binding */ __read,
           /* harmony export */ __rest: () => /* binding */ __rest,
+          /* harmony export */ __runInitializers: () =>
+            /* binding */ __runInitializers,
+          /* harmony export */ __setFunctionName: () =>
+            /* binding */ __setFunctionName,
           /* harmony export */ __spread: () => /* binding */ __spread,
           /* harmony export */ __spreadArray: () => /* binding */ __spreadArray,
           /* harmony export */ __spreadArrays: () =>
@@ -89549,6 +90370,93 @@ PERFORMANCE OF THIS SOFTWARE.
           };
         }
 
+        function __esDecorate(
+          ctor,
+          descriptorIn,
+          decorators,
+          contextIn,
+          initializers,
+          extraInitializers
+        ) {
+          function accept(f) {
+            if (f !== void 0 && typeof f !== "function")
+              throw new TypeError("Function expected");
+            return f;
+          }
+          var kind = contextIn.kind,
+            key =
+              kind === "getter" ? "get" : kind === "setter" ? "set" : "value";
+          var target =
+            !descriptorIn && ctor
+              ? contextIn["static"]
+                ? ctor
+                : ctor.prototype
+              : null;
+          var descriptor =
+            descriptorIn ||
+            (target
+              ? Object.getOwnPropertyDescriptor(target, contextIn.name)
+              : {});
+          var _,
+            done = false;
+          for (var i = decorators.length - 1; i >= 0; i--) {
+            var context = {};
+            for (var p in contextIn)
+              context[p] = p === "access" ? {} : contextIn[p];
+            for (var p in contextIn.access)
+              context.access[p] = contextIn.access[p];
+            context.addInitializer = function (f) {
+              if (done)
+                throw new TypeError(
+                  "Cannot add initializers after decoration has completed"
+                );
+              extraInitializers.push(accept(f || null));
+            };
+            var result = (0, decorators[i])(
+              kind === "accessor"
+                ? { get: descriptor.get, set: descriptor.set }
+                : descriptor[key],
+              context
+            );
+            if (kind === "accessor") {
+              if (result === void 0) continue;
+              if (result === null || typeof result !== "object")
+                throw new TypeError("Object expected");
+              if ((_ = accept(result.get))) descriptor.get = _;
+              if ((_ = accept(result.set))) descriptor.set = _;
+              if ((_ = accept(result.init))) initializers.push(_);
+            } else if ((_ = accept(result))) {
+              if (kind === "field") initializers.push(_);
+              else descriptor[key] = _;
+            }
+          }
+          if (target) Object.defineProperty(target, contextIn.name, descriptor);
+          done = true;
+        }
+
+        function __runInitializers(thisArg, initializers, value) {
+          var useValue = arguments.length > 2;
+          for (var i = 0; i < initializers.length; i++) {
+            value = useValue
+              ? initializers[i].call(thisArg, value)
+              : initializers[i].call(thisArg);
+          }
+          return useValue ? value : void 0;
+        }
+
+        function __propKey(x) {
+          return typeof x === "symbol" ? x : "".concat(x);
+        }
+
+        function __setFunctionName(f, name, prefix) {
+          if (typeof name === "symbol")
+            name = name.description ? "[".concat(name.description, "]") : "";
+          return Object.defineProperty(f, "name", {
+            configurable: true,
+            value: prefix ? "".concat(prefix, " ", name) : name,
+          });
+        }
+
         function __metadata(metadataKey, metadataValue) {
           if (
             typeof Reflect === "object" &&
@@ -89620,7 +90528,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }
           function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while (_)
+            while ((g && ((g = 0), op[0] && (_ = 0)), _))
               try {
                 if (
                   ((f = 1),
@@ -89858,7 +90766,7 @@ PERFORMANCE OF THIS SOFTWARE.
             i[n] = o[n]
               ? function (v) {
                   return (p = !p)
-                    ? { value: __await(o[n](v)), done: n === "return" }
+                    ? { value: __await(o[n](v)), done: false }
                     : f
                     ? f(v)
                     : v;
@@ -90705,4 +91613,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=9421100ac5c37e9c8d6c
+//# sourceMappingURL=friends.js.map?contenthash=bcc304c9a6284b6a3cdb

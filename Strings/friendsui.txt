@@ -1,23 +1,21 @@
 __TEXT
 __text
 __TEXT
+p
+p
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __cstring
 __TEXT
-+;
-+;
 __gcc_except_tab__TEXT
 __const
 __TEXT
-e@
-e@
+@W@
+@W@
 __objc_methname
 __TEXT
-@uD
-@uD
 __unwind_info
 __TEXT
 __eh_frame
@@ -43,12 +41,12 @@ __data
 __DATA
 __thread_vars
 __DATA
+Q\
 0
+Q\
 __thread_data
 __DATA
-@Q\
 @
-@Q\
 __thread_bss
 __DATA
 __bss
@@ -63,7 +61,6 @@ __LINKEDIT
 @loader_path/friendsui.dylib
 "
 `=
-q]
 P
 
 
@@ -98,7 +95,7 @@ h
 &
 (c
 )
-Ph]
+`h]
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -3457,17 +3454,17 @@ kvsign2
 none
 -friendsui
 -nofriendsui
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
 resolve
 reject
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_iRefs > 0 && m_iRefs < 0x1000000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/smartptr.h
 m_pObj == NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 bool
 int
@@ -3487,14 +3484,14 @@ message
 reply
 %lld
 %llu
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jpegloader.cpp
 libjpeg asking to skip more bytes than exist, and we can't further fill buffer - was a crash before 12/29/21
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 row_stride_out >= row_stride
 row_stride == (int)( nImageWidth * jpegInfo.output_components )
 nImageHeight == nOutputHeight
 BResizeImageRGBA
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jpegloader_common.cpp
 pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
 1.5.26
 PNG load error %s
@@ -3504,7 +3501,7 @@ PNG load warning %s
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
 [S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
 CLIENTENGINE_INTERFACE_VERSION005
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steam/client_api.cpp
 ClientAPI_Init: InternalAPI_Init_Internal failed.
 ClientAPI_Init: Cannot create pipe.  Steam not running?
 ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
@@ -3578,7 +3575,7 @@ common/name
 #Friends_lookingtotrade
 #Friends_lookingtoplay
 #Friends_invisible
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/Image.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vgui_controls/Image.h
 Invalid image panel position %d %d
 Invalid image panel size %d %d
 m_mapSteamImageToRGBAImage
@@ -3612,7 +3609,7 @@ m_strLanguage
 InsertString
 EmoticonMenuItemStyle
 economy/emoticonhover/%s?client=1&l=%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
 Menu
 MenuButton
@@ -3621,7 +3618,7 @@ Button
 Label
 Panel
 CEmoticonButton
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
 m_Memory
 CUtlDict
 -quicklogin
@@ -3635,7 +3632,7 @@ Set the help/support URL
 /
 http://
 https://
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/urlhelper.cpp
 eRet != k_ESteamRealmUnknown
 /usr/bin/open
 HOME
@@ -3721,7 +3718,7 @@ steamchinabeta://
 Open Chrome devtools on launch
 -openoverlaydevtools
 Open Chrome devtools on creation of any overlay browsers
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/htmlwindow/htmlwindow.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/htmlwindow/htmlwindow.cpp
 m_pHTMLController
 Browser.BIsVROverlayBrowser
 Browser.BIsDirectHWNDBrowser
@@ -3748,13 +3745,13 @@ BGameOverlayBrowser( m_eBrowserType )
 BGameOverlayBrowser( m_eBrowserType)
 %s requires %d arguments; only %d given
 %s call had invalid argument (arg %d)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 clientui_overlay_fps
 60
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/htmlwindow/htmlwindowcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/htmlwindow/htmlwindowcontroller.cpp
 nPosX == INT_MIN && nPosY == INT_MIN
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
@@ -3782,7 +3779,7 @@ featuresEnabled
 feature
 bEnabled
 m_vecSettingsChangedCallbacks
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
 IsText()
 bNotifications_ShowIngame
 Notifications_ShowIngame
@@ -3821,7 +3818,7 @@ bKeyboardEnabled
 bMouseEnabled
 bControllerEnabled
 RemotePlayTogetherVolume
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/remoteplaycontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/remoteplaycontroller.cpp
 pCallback->m_gameID == m_ActiveGameID
 m_vecActiveSessions
 m_vecControllerSlots
@@ -3955,7 +3952,7 @@ Screenshots.UploadLocalScreenshot
 Screenshots.DeleteLocalScreenshot
 Failed: IO failure
 Failed: invalid callback parameter
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/sharedconnectioncontroller.cpp
 pConnection->m_mapWaitingCalls.IsValidIndex( iMap )
 Remote call failed
 eUniverse
@@ -3974,7 +3971,7 @@ CSharedConnectionController::OnMessageReady
 CSharedConnectionController::OnServersConnected
 CSharedConnectionController::OnServersDisconnected
 CSharedConnectionController::OnPostLogonState
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/sharedconnectioncontroller.h
 m_eConnectedUniverse > k_EUniverseInvalid && m_eConnectedUniverse < k_EUniverseMax
 SharedConnection.AllocateSharedConnection
 SharedConnection.RegisterOnLogonInfoChanged
@@ -3986,7 +3983,7 @@ SharedConnection.SendMsg
 SharedConnection.SendMsgAndAwaitResponse
 SharedConnection.SendMsgAndAwaitBinaryResponse
 SharedConnection.Close
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -4040,7 +4037,7 @@ Steam_FreeLastCallback
 Steam_GetAPICallResult
 common/icon
 %simages/apps/%d/%s.jpg
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/AppDownloadNotification.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/AppDownloadNotification.cpp
 bufRGBA.TellPut() == width*height*4
 public/AppDownloadNotification.res
 AppDownloadNotification
@@ -4129,7 +4126,7 @@ friends/message.wav
 steam://viewfriendsgame/%llu
 GameInviteNotification
 ChatMsgNotification
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendsdialog.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/friendsdialog.cpp
 steamIDUserVerify == steamIDUser
 steamIDChat
 steamIDPatron
@@ -4554,7 +4551,7 @@ PropertyPage
 Page
 PropertyPageControls
 CFriendsGroupsPage
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/DialogManager.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vgui_controls/DialogManager.h
 m_pVGUIParentPanel
 ChatIntroductionDialog
 AcceptButton
@@ -4637,7 +4634,7 @@ PersonaNameChat
 ChatRoomDlgState
 ChatRoomDlg
 set
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/ChatRoomDlg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/ChatRoomDlg.cpp
 m_EChatRoomType == k_EChatRoomTypeMUC
 m_EChatRoomType == k_EChatRoomTypeFriend
 Invalid steamID type for chat room creation!
@@ -4935,7 +4932,7 @@ ToolPanel
 TabbedUserChat
 #Friends_Chat_Title
 #Friends_Chat_Group_Title
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 AvatarImage
@@ -5010,7 +5007,7 @@ UpdateTimestamps
 CFriendPanel
 steam://url/GroupMembersPage/%llu
 #Friends_ViewGroupMembersLink
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendpanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/friendpanel.cpp
 m_SteamID.BClanAccount()
 CFriendPanel::OnPersonaStateChange
 CFriendPanel::OnChatRoomVoiceStateChanged
@@ -5031,7 +5028,7 @@ guests
 #Friends_FriendList_Guests
 #Friends_FriendList_Chat
 CFriendsListSubPanel::OnThink()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/FriendsListSubPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/FriendsListSubPanel.cpp
 m_treeCachedFriendPanels.Count() == 0
 CFriendsListSubPanel::RebuildFriendsList corruption
 clan_collapsed/%d
@@ -5073,7 +5070,7 @@ downarrow
 SectionedListPanel
 VGuiModuleTracker001
 FriendsUIInterfaceV001
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendsUI.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/friendsUI.cpp
 CFriendsUIModule::Initialize: ClientAPI_Init() returned false.
 FriendsUI
 CFriendsUIModule::Initialize: VGuiControls_Init() returned false.
@@ -5129,7 +5126,7 @@ developer
 -fasthtml
 -desktopui
 Start in desktopui mode
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendswebchat.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/friendswebchat.cpp
 Unsupported friends ui mode
 %s/index_friends.html
 clientui
@@ -5172,6 +5169,7 @@ rungame/
 rungameid/
 store/
 joinparty/
+viewfriendsgame
 broadcast/watch/
 controllerconfig/
 openexternalforpid/
@@ -12049,7 +12047,7 @@ ssl3-md5
 ssl3-sha1
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/html/htmlprotobuf.cpp
 unSize < 128 * 1024 * 1024
 eCmd > 0 && eCmd < eHTMLCommands_None
 pBuffer->TellPut() == 0
@@ -12103,7 +12101,7 @@ SetFont
 SetTexture
 SetString
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/AnimationController.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/AnimationController.cpp
 panel != NULL
 AnimationController
 m_Sequences
@@ -12118,7 +12116,7 @@ vgui::CPanelAnimationDictionary
 m_AnimationMaps
 m_AnimationMaps[ iAnimationMap ].map->entries
 m_PanelAnimationMapPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 CUtlSymbolTable
@@ -12132,10 +12130,10 @@ filtered
 , string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 BitmapImagePanel
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
 func
 className
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildGroup.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/BuildGroup.cpp
 m_pkvSettings
 [%s] applying key '%s', has changed from '%s' to '%s'
 controlKeys
@@ -12173,7 +12171,7 @@ ComboBtn
 ButtonClicked
 ComboBoxButton
 ActivateItem
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/controls.cpp
 s_pFileSystemInterface
 en_US.UTF-8
 VGUI_ivgui007
@@ -12194,7 +12192,7 @@ SetText
 SetState
 GetState
 GetText
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/EditablePanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/EditablePanel.cpp
 m_nSuppressDialogVariablesMessages >= 1
 DialogVariables
 ListPanel
@@ -12258,7 +12256,7 @@ NewFolder
 filter
 filterinfo
 %s %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/FileOpenDialog.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/FileOpenDialog.cpp
 Couldn't format time value %llu
 *.*
 curFilter[0] == '*' && curFilter[1] == '.'
@@ -12307,7 +12305,7 @@ frame_close
 CloseFrameButtonPressed
 frame_menu
 BgColor
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Frame.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Frame.cpp
 Frame::SetTitle - vgui::localize not initialized
 BaseControls
 FrameTitleBar.SmallFont
@@ -12420,7 +12418,7 @@ HTML.SearchAnimationTime
 DeletePanel
 custom_
 FindBar
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/HTML.cpp
 ulPlatformParentWindow == 0
 FindEntry
 FindCount
@@ -12507,7 +12505,7 @@ data:image/
 HTMLComboBoxHost
 CHTMLFindBar
 TextNewLine
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/html/htmlpaintbuffer.h
 m_nLockedIdx >= 0
 m_nLockedIdx == -1
 iNewReadIndex != 3
@@ -12580,7 +12578,7 @@ WebReload
 PopupHTML
 vgui::HTML
 m_Images
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ImagePanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ImagePanel.cpp
 image
 fillcolor
 gradientStart
@@ -12625,7 +12623,7 @@ InputDialog
 LabelDull
 LabelBright
 Label::Paint()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Label.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Label.cpp
 _imageDar.IsValidIndex( index )
 labelText
 north-west
@@ -12660,7 +12658,7 @@ VertScrollBar
 ListImage
 ListPanelInterior
 ColumnSelectButton
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ListPanel.cpp
 minWidth <= width
 maxWidth >= width
 Check
@@ -12736,13 +12734,13 @@ ListPanelCheckBox::OnThink()
 different KV data types in a single list column
 ListPanelCollapserBase::OnAppearanceChanged()
 ListViewPanel
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListViewPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ListViewPanel.cpp
 font
 ListViewItemSelected
 ListPanel.BgColor
 ListViewItem
 ListPanel.TextBgColor
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Menu.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Menu.cpp
 m_SeparatorPanels.Count() == 0
 m_MenuItems.IsValidIndex(itemID)
 child
@@ -12766,7 +12764,7 @@ m_VisibleSortedItems
 CloseMenu
 CursorEnteredMenuItem
 CursorExitedMenuItem
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vgui_controls/MenuItem.h
 m_bCheckable
 menubar
 Failed to load menu file %s
@@ -12785,7 +12783,7 @@ VPanel
 showDownArrow
 , int showDownArrow
 MenuItem
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/MenuItem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/MenuItem.cpp
 !(cascadeMenu && checkable)
 rightarrow
 Menu.TextInset
@@ -12799,7 +12797,7 @@ MessageBoxText
 #MessageBox_OK
 MessageBox.ButtonHeight
 Command
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Panel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Panel.cpp
 OnScreenSizeChanged
 oldwide
 oldtall
@@ -12970,7 +12968,7 @@ CPanelKeyBindingMapDictionary
 m_MessageMaps[ iMessageMap ].map->defaultkeys
 m_MessageMaps[ iMessageMap ].map->boundkeys
 m_PanelKeyBindingMapPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhandletable.h
 nIndex < ( unsigned int )m_list.Count()
 ProgressBar
 progress
@@ -12995,7 +12993,7 @@ PageHide
 PageTabActivated
 AddTabButton
 TabMenuButton
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/PropertySheet.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/PropertySheet.cpp
 tab
 TabMenuButtonFlash
 FindDefaultButton
@@ -13049,7 +13047,7 @@ ScrollBar
 RichText.InsetX
 RichText.InsetY
 RichText::DrawString
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/RichText.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/RichText.cpp
 startIndex < m_TextStream.Count()
 RichText::OnThink()
 RichText::RecalculateLineBreaks
@@ -13117,7 +13115,7 @@ SliderHoriz
 SectionedScrollBar
 SectionedListPanelInterior
 SectionedListPanel::ReSortList()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/SectionedListPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/SectionedListPanel.cpp
 pItem
 SectionedListPanel::PerformLayout()
 SectionedListPanel::LayoutPanels()
@@ -13160,7 +13158,7 @@ vgui::SectionedListPanelItem
 TextEntry.IMEBGColor
 TextEntry.IMEFGColor
 TextKillFocus
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextEntry.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TextEntry.cpp
 TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
 #TextEntry_Cut
 DoDeleteThenPaste
@@ -13204,7 +13202,7 @@ IMESentenceModes
 TextEntryClearButton
 (elem == Count()) || IsValidIndex(elem)
 TextImage::Paint()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TextImage.cpp
 echar >= schar
 wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
 wordStartIndex >= _utext
@@ -13228,7 +13226,7 @@ ToolWindowSheet
 InsertTabImage
 steam/cached/icon_tab_placement_arrow
 resource/layout/toolwindow.layout
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ToolWindow.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ToolWindow.cpp
 page->m_pToolWindow == this
 tabtitle
 pToolWindow
@@ -13238,7 +13236,7 @@ PageCountChanged
 TreeNode
 TreeImage
 TreeNodeText
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeView.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TreeView.cpp
 m_pTreeView->IsLabelEditingAllowed()
 original
 changed
@@ -13271,7 +13269,7 @@ m_pkvData
 m_pChildren
 m_List
 CTreeViewListControl
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeViewListControl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TreeViewListControl.cpp
 m_vecJumpWChars
 URLLabel
 URLText
@@ -13285,14 +13283,14 @@ VGUI Controls Global
 ToolWindow::s_ToolWindows
 g_ButtonSoundNames
 BuildGroup::ValidateGlobals
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
 CVariableBitStringBase
 {}()'
 {}()':
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
 pName
 Convars
 m_vecCallbacks.Count() == 0 || !callback
@@ -13315,7 +13313,7 @@ Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -13344,7 +13342,7 @@ cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
@@ -13352,7 +13350,7 @@ g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 port
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
 filesystem
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
@@ -13426,16 +13424,16 @@ KeyValues Error: %s in file %s [offset: %d]
 context.m_vecStack.Count() <= 1
 %.18g
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
 CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
 %d.%d.%d.%d:%d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 CUtlBuffer::GetStringFast: binary buffers only
 Expected %lld but got %lld!
@@ -13452,7 +13450,7 @@ r
 a
 ?
 '
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -13461,7 +13459,7 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 CUtlString::ReplaceInternal
@@ -13481,19 +13479,19 @@ PrepareBuffer( nNewLength ) == pstrNew
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
 !m_data.HasError()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 pOutDigest
 SHA1_Init( &c )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_rsa_openssl.cpp
 pubData
 rsaKey.IsValid()
 pubSignature
 CCrypto::RSAVerifySignature
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
 CCrypto::HexDecode
 pchData
 pDecodedData
@@ -13510,7 +13508,7 @@ NULL output buffer with non-zero size passed to Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
 BEGIN
 END
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keypair.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/keypair.cpp
 Key type %d doesn't know how to load from buffer
 PRIVATE KEY
 eKeyType == k_ECryptoKeyTypeRSAPublic
@@ -13523,7 +13521,7 @@ Ctrl
 Alt
 Shift
 Win
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/commonkeycode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/commonkeycode.cpp
 KEY_NONE
 KEY_0
 KEY_1
@@ -13749,7 +13747,7 @@ KEY_SCROLLLOCKTOGGLE
 Scroll Lock Toggle
 ( pDesc->macKeyCode & 0xff ) == 0xff || s_pVirtualKeyToKeyCode[pDesc->macKeyCode] == 0 || pDesc->keyCode == KEY_LSHIFT || pDesc->macKeyCode == 1 || pDesc->keyCode == KEY_LALT || pDesc->keyCode == KEY_LCONTROL || pDesc->keyCode == KEY_PAD_ENTER
 s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
 Missing String for %s (%d)
 unknown
 EControllerType
@@ -13793,65 +13791,65 @@ controller_ps5
 controller_xboxelite
 optional
 Windows
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/filesystem_helpers.cpp
 LoadFileIntoBuffer: NULL parameters
 VALVE_CRYPTO_dbg_malloc
 VALVE_CRYPTO_dbg_realloc
 VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslwrapper.cpp
 OpenSSL random number system reports not enough entropy
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamid.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steamid.cpp
 steamIDClan.GetEAccountType() == k_EAccountTypeClan
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 30819D300D06092A864886F70D010101050003818B0030818702818100B1260881BDFE84463D88C6AB8DB914A2E593893C10508B8A5ABDF692E9A5419A3EDBAE86A052849983B75E3B425C18178B260003D857DF0B6505C6CF9C84F5859FCE3B63F1FB2D4818501F6C5FA4AD1430EEB081A74ABD74CD1F4AA1FCCA3B88DD0548AED34443CEB52444EAE9099AA4FE66B2E6224D02381C248025C7044079020111
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
-mQ>
-KM>
-cM>
+c>>
+{>>
 u:
-x:
 0
+E
+E
 v
 e.
 @
 79
 x
+FM
 8
 8
 8
-C
 T
-C
+M
 W
 @
 q7
 x
-'B
+7B
+Y
+Y
+ZX
 p
 Ic
-,X
 p
 0
 0
 p
 0
-7
-{A
 U6
-B
+8
 6
 C6
-W7
 p
 0
 p
 0
 p
 0
-aA
+xA
+6
 6
 6
 6
@@ -13871,7 +13869,9 @@ p
 0
 ^5
 Z5
-@
+A
+A
+v5
 E8u
 E8u
 0
@@ -13902,6 +13902,8 @@ AWj
 
 
 
+@
+@
 0
 0
 0
@@ -13909,7 +13911,7 @@ p
 0
 p
 0
-+4
+A
 p
 0
 p
@@ -13921,9 +13923,6 @@ p
 4
 p
 0
-4
-4
-4
 p
 p
 0
@@ -13937,7 +13936,6 @@ p
 p
 0
 F3
-B
 j
 j
 j
@@ -13979,6 +13977,7 @@ j
 j
 j
 j
+b3
 j
 j
 j
@@ -14035,17 +14034,21 @@ j
 j
 j
 j
+43
 j
 j
 j
 j
-X3
 j
 j
 j
 j
+Q3
 p
 AWj
+3
+3
+3
 3
 r2
 (
@@ -14057,7 +14060,7 @@ p
 0
 p
 0
-eB
+uB
 p
 0
 p
@@ -14079,6 +14082,8 @@ p
 0
 0
 0
+8
+8
 p
 0
 p
@@ -14090,6 +14095,7 @@ p
 2
 p
 0
+l2
 >*
 j
 j
@@ -14107,6 +14113,7 @@ j
 j
 j
 j
+jR
 j
 j
 j
@@ -14122,12 +14129,11 @@ j
 j
 p
 0
+ZR
 p
 0
-2
 2
 k1
-%R
 p
 0
 p
@@ -14137,7 +14143,6 @@ p
 p
 0
 51
-C
 -1
 p
 p
@@ -14170,33 +14175,30 @@ p
 p
 0
 2
+0C
 E
 a-
 p
 0
 &
 =
+:R
 p
 &
 &
 +
 +
+&Q
 r
 /
 "0
-D
-D
-D
 0
 0
 0
 p
-C
-C
-C
-r:
+~0
 E8}
-Z0
+^P
 p
 0
 p
@@ -14210,10 +14212,11 @@ p
 /
 p
 p
-/0
 p
 0
 D
+D
++D
 '/
 0
 0
@@ -14226,8 +14229,6 @@ D
 @
 @
 /
-5
-\/
 @
 Hc
 Hc
@@ -14259,46 +14260,49 @@ IcE
 IcE
 @
 @
+/
+/
+4
+4
 V
 .
 -
 =
-7
+:0
+60
 =
+#-
 -
 ,
+w,
 +
 +
 +
 +
 +
+,
 !
 +
 @
 &
-b*
-$>
+C>
 *
 *
 *
 *
 )
 )
-9/
-3/
-)
-)
-)
+k)
 (
 (
 (
 (
++)
 )
 _'
 '
 '
 '
-(
 w&
 @
 M9e
@@ -14332,6 +14336,10 @@ ARj
 j
 0
 0
+*
+>%
+.
+.
 =
 =
 @
@@ -14339,6 +14347,7 @@ j
 #
 9
 =
+)
 %
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -14639,6 +14648,7 @@ O!
 @
 @
 0
+I"
 H=
 Ic]
 j
@@ -14646,28 +14656,24 @@ j
 j
 j
 
-"
-"
+6
+6
 "
 "
 j
 j
 
-T
-I
+*
+*
+*
+{
+54
 t$I;M
-%
-%
 e
 W
 ,7~5d
 H
 0
-;
-;
-;
-;
-;
 
 
 
@@ -14679,6 +14685,11 @@ H
 
 *
 Hc
+.
+9
+9
+9
+9
 9
 9
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -14686,7 +14697,6 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @8
 `$
--8
 @
 ,
 *
@@ -14699,6 +14709,7 @@ Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 N
 N
 N
+8
 rc4(8x,int)
 rc4(8x,char)
 rc4(16x,int)
@@ -14819,15 +14830,24 @@ P
 |
 @
 @
-&
-&
-P-
+$
+#
+%
+1!
+#
+#
+#
+#
+#
+#
+#
 d
+#
+#
 Q
 A+M
 &
 b
-t7f9:z,
 .
 j
 j
@@ -14838,11 +14858,9 @@ j
 \
 =
 0
-U
 
 
 
-g
 j
 j
 j
@@ -14854,17 +14872,7 @@ j
 j
 j
 j
-+
-+
-+
-+
-+
-+
-+
-+
-+
-
-
+#
 
 j
 j
@@ -14888,7 +14896,6 @@ d
 &
 &
 d
-t
 0
 A+4$A+u
 =
@@ -14921,7 +14928,6 @@ j
 j
 j
 j
-Y"
 j
 j
 j
@@ -14944,10 +14950,6 @@ j
 j
 j
 =
-u
-
-
-
 
 
 
@@ -15029,17 +15031,18 @@ j
 j
 j
 @
-j
-j
-j
-j
-j
-j
-j
-j
-j
 "
-l%
+j
+j
+j
+j
+j
+j
+j
+j
+j
+`$
+x%
 @
 @
 &
@@ -15062,7 +15065,8 @@ j
 j
 j
 j
-1$
+P"
+>$
 0
 @
 @
@@ -15104,12 +15108,11 @@ j
 j
 j
 j
+
 .
 d
-;#
+n#
 =
-#
-#
 
 =
 @

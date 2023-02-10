@@ -181,7 +181,7 @@
           })();
         return t
           ? l
-            ? o.createElement(E, Object.assign({}, e))
+            ? o.createElement(W, Object.assign({}, e))
             : null
           : o.createElement(
               "div",
@@ -194,39 +194,43 @@
               "Initiate"
             );
       }
-      function E(e) {
+      const E = 900,
+        _ = 800,
+        T = 1024,
+        B = 768;
+      function W(e) {
         const t = (0, r.eL)();
         let [n, l] = (0, o.useState)(null);
         const [u, d] = (0, o.useState)(!1),
           p = (0, h.Wy)(),
           [m, w] = (0, o.useState)(!1),
           [f, L] = (0, o.useState)(!1);
-        let E = new a.zn(),
-          _ = E.GetServiceTransport();
+        let W = new a.zn(),
+          H = W.GetServiceTransport();
         !(function (e) {
           (0, o.useEffect)(() => {
             (0, S.Uh)().Init("Client Login", CLSTAMP, e);
           }, [e]);
-        })(_);
-        const T = !!e.refreshLogin;
+        })(H);
+        const D = !!e.refreshLogin;
         (0, o.useEffect)(() => {
-          (T || r.De.IN_LOGIN_REFRESH) &&
+          (D || r.De.IN_LOGIN_REFRESH) &&
             SteamClient.Auth.GetRefreshInfo().then((e) => {
               1 !== e.reason ? l(e) : l(null);
             });
-        }, [T]);
-        const [B, W] = (0, o.useState)(void 0),
-          [H, D] = (0, o.useState)(0);
+        }, [D]);
+        const [N, I] = (0, o.useState)(void 0),
+          [R, k] = (0, o.useState)(0);
         if (
-          (E.Connect().then(() => {
+          (W.Connect().then(() => {
             d(!0);
           }),
           !u)
         )
           return null;
-        const N = `${null == n ? void 0 : n.account_name}${
+        const A = `${null == n ? void 0 : n.account_name}${
           null == n ? void 0 : n.reason
-        }${H.toString()}`;
+        }${R.toString()}`;
         return o.createElement(
           "div",
           {
@@ -240,15 +244,15 @@
               o.createElement(g.T, { popup: e.popup, hideMinMax: !0 })
             ),
           o.createElement(s.i9, {
-            key: N,
+            key: A,
             autoFocus: !0,
-            transport: _,
+            transport: H,
             onSuccess: (t) => {
               var n, o, l, i;
               console.log(
                 "received authentication token, using it to sign in to Steam"
               ),
-                W(null),
+                I(null),
                 SteamClient.Auth.SetLoginToken(
                   t.strRefreshToken,
                   t.strAccountName
@@ -257,9 +261,9 @@
                   const o = t.result,
                     l = t.message;
                   console.log(`client login returned ${o} (${l})`),
-                    W(o),
+                    I(o),
                     1 != o
-                      ? D(H + 1)
+                      ? k(R + 1)
                       : null === (n = e.onLoginComplete) ||
                         void 0 === n ||
                         n.call(e);
@@ -280,7 +284,7 @@
             platform: 1,
             embedded: !0,
             refreshInfo: n,
-            lastResult: B,
+            lastResult: N,
             joinLinkStyle: () => {
               var e;
               t
@@ -304,8 +308,8 @@
             o.createElement(v.w, {
               strName: (0, c.Xx)("#AccountCreation_Title"),
               strURL: `${r.De.STORE_BASE_URL}join/`,
-              popupWidth: 900,
-              popupHeight: 800,
+              popupWidth: E,
+              popupHeight: _,
               showFooter: !1,
               onClose: () => {
                 var e, t;
@@ -322,8 +326,8 @@
             o.createElement(v.w, {
               strName: (0, c.Xx)("#SignInHelpTitle"),
               strURL: `${r.De.HELP_BASE_URL}wizard/HelpWithLogin`,
-              popupWidth: 1024,
-              popupHeight: 768,
+              popupWidth: T,
+              popupHeight: B,
               showFooter: !1,
               onClose: () => {
                 var e, t;

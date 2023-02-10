@@ -375,7 +375,7 @@ Unable to determine CPU Frequency. Try defining CPU_MHZ.
 %s (%d) : 
 console
 Exiting on SPEW_ABORT
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/dbg.cpp
 pGroupName
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 IsSpewActive
@@ -390,13 +390,13 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to generate callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
 ppFrames[iFrame] != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -409,11 +409,11 @@ OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
 false
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -426,8 +426,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Feb  6 2023
-10:56:19
+Feb  9 2023
+18:37:09
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -447,10 +447,10 @@ GAMESCOPE_WAYLAND_DISPLAY
 ProductBuildVersion
 com.valvesoftware.steam
 /dev/urandom
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/testthread.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/testthread.cpp
 !m_bTestThreadRunning
 ret == 0
 pthread_self() == m_ulMainThreadID
@@ -462,7 +462,7 @@ MainThrd
 pthread_setname_np
 exec 
 /bin/sh
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
 %s: no such process %d
 ThreadGetProcessExitCode
 /bin/ps -x -o pid=,ppid=
@@ -490,7 +490,7 @@ Thread failed to initialize
 Thread cannot be joined with self
 Only thread can stop self: Use a higher-level protocol
 Probably deadlock or failure waiting for thread to initialize.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/threadtools.h
 Only NULL allowed on integer assign
 CTSListBase: Misaligned list
 CTSQueue bad tail pointer
@@ -499,7 +499,7 @@ CTSQueue bad peek pointer when empty
 CTSQueue m_HeadTailPair mismatch when empty
 CTSQueue bad node count
 CTSQueue freelist depth mismatch
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
 m_pValObjects != NULL
 m_iThreadMutexValidationLock == 0
 CValidator : too many memory nodes to store, try again with a higher threshold value
@@ -555,9 +555,9 @@ m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeo
  KiB
 %i%s
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
 m_nRecursions > 0
@@ -617,7 +617,7 @@ m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_pParent
 m_pszName
 0C12CStdMemAlloc
@@ -1063,7 +1063,7 @@ WaitForReadEv
 /7IsAliveEv
 7BHasValidThreadIDEv
 /5IsThreadRunningEv
-21GetPriorityEv
+11GetPriorityEv
 GetNameEv
 7GetCurrentCThreadEv
 01SetPriorityEi
@@ -1123,7 +1123,7 @@ TrackedKeyEP11CTrackItemsPvPm
 FinalizeEv
 :ValidateERS_PKc
 ;9CVProfile
-=20CVProfileThreadEntry
+<20CVProfileThreadEntry
 3CVProfManager
 ;4CVProfileArrayD
 @0CVProfNode
@@ -1205,7 +1205,7 @@ P0SteamVProf13CVProfManagerE
 ClockSpeed
 QpMemAllocSteam
 QbInException
-RVProf
+QVProf
 QSecondsMultiplier
 crosecondsMultiplier
 QllisecondsMultiplier
@@ -1798,32 +1798,30 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-RP=R
-Y z{QXf
-mX^!
-u*N&
-I!ge
-v>ms
-!e=}
-xeC(
+&/|&
+NxNg
+=^z 
+w;p]
+Rft]
+0R$_
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-/';|
-gaZ!)
-5ceX
-3/ez
-S=6m
-d5{@
-O45m	`"7
-&V}gD
-	8AH
-H5--+&?b9
-x{)^
-'h`{{c)
-~{z;
-c(nx
+b4w1|
+kZz*
+$uP;
+5QO=
+!0Un3
+Qt>x-
+6$p-
+Y~?@f	
+cjgLR9
+?*')
+)x5u
+]1c+
+QXNq
+(sP/v
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1879,9 +1877,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230206185622Z0/
->3%v
-<|0-
+230210023713Z0/
+C90[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1889,42 +1886,36 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		YEHBGXylr413cokTOT8mms+dPHw=
+		WK88EOnErg19glOmALg9g80JY9Y=
 		</data>
 		<data>
-		N9izkFN+m9ziJZNGde9cIrUNupw=
+		nHzgLCUji8Z86xIAoM6X2A26VRE=
 		</data>
 	</array>
 </dict>
 </plist>
-:X.Y
-07].
-IS^D:
-BBw/
-dP9@
->1.>
-g s*
-&L\Xq
-y|w]F
-*#>I
-20230206185732Z0
+1|qe
+M-~f
+/70h<w
+20230210023714Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230117160003Z
-230228160002Z0B1
-Timestamp Signer NWK21
+230117161002Z
+230228161001Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-$tp$
-9v$n
+l2Dv
+2|:o
+$9`O
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-*v[=
-YwOE
-u%P_
+R'8'
+30ML
+xfwr
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1963,9 +1954,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230206185732Z0#
-IoT=
-F6Ss
+230210023714Z0#
+yDin+
+5>1ATe
+Np^X
+~;W8
+%bF)
 __TEXT
 __text
 __TEXT
@@ -2457,7 +2451,6 @@ D$@H
 d$ M
 X[A\A]A^A_]
 AWAVSH
-Lc5k
 x(Hc
 VUUUH
 X[A^A_]
@@ -2644,7 +2637,7 @@ hw.logicalcpu
 Unable to determine CPU Frequency. Try defining CPU_MHZ.
 %s (%d) : 
 Exiting on SPEW_ABORT
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/dbg.cpp
 pGroupName
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 IsSpewActive
@@ -2659,13 +2652,13 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to generate callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
 ppFrames[iFrame] != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -2678,11 +2671,11 @@ OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
 false
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -2695,8 +2688,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Feb  6 2023
-10:56:19
+Feb  9 2023
+18:37:09
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -2716,10 +2709,10 @@ GAMESCOPE_WAYLAND_DISPLAY
 ProductBuildVersion
 com.valvesoftware.steam
 /dev/urandom
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/testthread.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/testthread.cpp
 !m_bTestThreadRunning
 ret == 0
 pthread_self() == m_ulMainThreadID
@@ -2731,7 +2724,7 @@ MainThrd
 pthread_setname_np
 exec 
 /bin/sh
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
 %s: no such process %d
 ThreadGetProcessExitCode
 /bin/ps -x -o pid=,ppid=
@@ -2766,7 +2759,7 @@ CTSQueue bad peek pointer when empty
 CTSQueue m_HeadTailPair mismatch when empty
 CTSQueue bad node count
 CTSQueue freelist depth mismatch
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
 m_pValObjects != NULL
 m_iThreadMutexValidationLock == 0
 CValidator : too many memory nodes to store, try again with a higher threshold value
@@ -2823,9 +2816,9 @@ m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeo
  KiB
 %i%s
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
 m_nRecursions > 0
@@ -2885,7 +2878,7 @@ m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_pParent
 m_pszName
 _12CStdMemAlloc
@@ -4054,26 +4047,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-#]Z(@
-od;c
-'q-<
-PI(8uH
-tWmu,
-%7[@
-58Y?
-|_ L
-H}zSv
+\?<8
+K&8P
+58Y?|
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-WMF/
-snY"
-xPWb
-OJWj
-}&B}
-1+Nz~
-YAk5)
+xZ; 
+MOtBF
+a=')er=(
+64OO
+wCBu
+%k\SG
+T[Q<}{t
+U~lQ
+H"HN
+&Zge
+#C1n
+Lp,gv$I
+\X_v
 UxS=F
 !!wsZAnM
 Apple Inc.1&0$
@@ -4131,7 +4124,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230206185622Z0/
+230210023713Z0/
+H7tf
+xy!KV
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4139,37 +4134,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		mjL3BlhNeIeqvkjA6s0OJvRf9eA=
+		y6hIN3RmgdqIsm3Q0CKpTLm/hag=
 		</data>
 		<data>
-		BLdul402a7bG8D6DL/asN546FLY=
+		QC6pkvhVK+VRGXh5IUtWuS6XeNw=
 		</data>
 	</array>
 </dict>
 </plist>
-Ai,a?
-w~DAhEDl
-*$S0*d
-i:iO
- Mbi|
-20230206185732Z0
+}kYr
+lQWO
+1NdE"
+I=85
+20230210023714Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230117160003Z
-230228160002Z0B1
-Timestamp Signer NWK21
+230117161002Z
+230228161001Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-$tp$
-9v$n
+l2Dv
+2|:o
+$9`O
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-*v[=
-YwOE
-u%P_
+R'8'
+30ML
+xfwr
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4208,7 +4203,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230206185732Z0#
+230210023714Z0#
+p%M%P
+&eTF
 __TEXT
 __text
 __TEXT
@@ -4266,7 +4263,7 @@ kjh8k
 i+8,
 (a@9
 5(	@
-x	X)
+{	X)
 ThZ@
 ThZ@
 TiZ@
@@ -4291,26 +4288,21 @@ R	i09
 e09h
 (a09
 	mp9
-R	m09@	
-5`z	
-y	Xh
+R	m09 
+H|	Xh
 @9?q
 @9_q
+H`	XH
+H_	XH
 ]	XH
-\	XH
-`\	X
-([	XH
-Z	Xi
+]	Xi
+h[	XH
+([	Xi
 X	XH
-X	Xi
-(V	XH
-V	\ 
-AS	\
-!O	\ 
-IL	X
+X	\ 
+iS	X
+Q	\ 
 jt8 
-	9`f
-	9`c
 C9uR
 RHk88Z
 b2@9
@@ -4356,8 +4348,8 @@ T		@
 `@9(
 hf@9
 hj@9
+a^)|
 4aJ@
-a^w+
 o( `
 3IYi
 SHYh
@@ -4382,7 +4374,7 @@ Unable to determine CPU Frequency. Try defining CPU_MHZ.
 %s (%d) : 
 console
 Exiting on SPEW_ABORT
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/dbg.cpp
 pGroupName
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 IsSpewActive
@@ -4397,13 +4389,13 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to generate callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
 ppFrames[iFrame] != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -4416,11 +4408,11 @@ OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
 false
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -4433,8 +4425,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Feb  6 2023
-10:56:19
+Feb  9 2023
+18:37:09
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4454,10 +4446,10 @@ GAMESCOPE_WAYLAND_DISPLAY
 ProductBuildVersion
 com.valvesoftware.steam
 /dev/urandom
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/testthread.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/testthread.cpp
 !m_bTestThreadRunning
 ret == 0
 pthread_self() == m_ulMainThreadID
@@ -4469,7 +4461,7 @@ MainThrd
 pthread_setname_np
 exec 
 /bin/sh
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
 %s: no such process %d
 ThreadGetProcessExitCode
 /bin/ps -x -o pid=,ppid=
@@ -4504,7 +4496,7 @@ CTSQueue bad peek pointer when empty
 CTSQueue m_HeadTailPair mismatch when empty
 CTSQueue bad node count
 CTSQueue freelist depth mismatch
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
 m_pValObjects != NULL
 m_iThreadMutexValidationLock == 0
 CValidator : too many memory nodes to store, try again with a higher threshold value
@@ -4560,9 +4552,9 @@ m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeo
  KiB
 %i%s
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
 m_nRecursions > 0
@@ -4622,7 +4614,7 @@ m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_pParent
 m_pszName
 EP\VV
@@ -5789,30 +5781,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-IzKSa>
-G{!I
-QjI:
-]<'p[5
-huf[
-44nG
-"5%v
-%@##
+c`R5Y
+!,9k
+/^	j@
+zT7q
+?guI
+VQz]mM
+G?#(eD
 |"8X
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-"8((tSAE
-94mw
-CC3{
-sj|H
-rR5^
-5!kP
-a:%r
-`Tf5
-S+@5
-!~ZA[
->-/DLJ
+L"qs
+WO0a
+ |e^
+"({C'J
+x<9k
++XH0
+?R,e
+)DeK
+N}]`
+/DLJ
  b%Db
 5?_%QP
 Apple Inc.1&0$
@@ -5870,9 +5860,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230206185622Z0/
-CkPI
- l=(
+230210023713Z0/
+g,9`
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5880,16 +5869,22 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Zslf+3KweSITBNK1usBGP+D8h0s=
+		GijA9X1F3z84MrxtIw0mQ0iAqMo=
 		</data>
 		<data>
-		bD0ooADHeB/SAJhWcavb2F6aJfc=
+		objHPBQeQPpnLDlgkzVAxve6y7U=
 		</data>
 	</array>
 </dict>
 </plist>
-ex1B
-20230206185732Z0
+uvz LX
+R1EE
+Q's8UN
+OM\7
+1^%4
+{(-,
+7GZo
+20230210023714Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5946,9 +5941,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230206185732Z0#
-*<h0+
-;RQw
-/Q|P
-O-m6j
-]X/H
+230210023714Z0#
+Z&0+
+NmK,k
+FsKnJd
+E**Qx
+$?N\7
+=T[K
