@@ -31,6 +31,34 @@ function OnLocationChange ( elIgnored, hash )
 	}
 }
 
+// Apply verified and playable totals to the filter checkbox text
+function PopulateDeckCompatFacetData( rgCompatFacetData, bIncludeParens )
+{
+	let $Container = $J('#deck_compatibility_search_filter');
+	let $Verified = $Container.find( '.tab_filter_control_row[data-value=' + 3 + ']');
+	let $Playable = $Container.find( '.tab_filter_control_row[data-value=' + 2 + ']');
+	let nVerified = -1;
+	let nPlayable = -1;
+
+	for ( var i = 0; i < rgCompatFacetData.length; i++ )
+	{
+		if ( rgCompatFacetData[i][0] == 3 )
+			nVerified = rgCompatFacetData[i][1];
+		else if ( rgCompatFacetData[i][0] == 2 )
+			nPlayable = rgCompatFacetData[i][1];
+	}
+
+	if ( nVerified == -1 )
+		$Verified.find('.tab_filter_control_count').css( {display: 'none' } );
+	else 
+		$Verified.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nVerified ) + ")" : v_numberformat( nVerified ) ).css( {display: '' } ); 
+
+	if ( nPlayable == -1 )
+		$Playable.find('.tab_filter_control_count').css( {display: 'none' } );
+	else 
+		$Playable.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nPlayable ) + ")" : v_numberformat( nPlayable ) ).css( {display: '' } ); 
+}
+
 // This sorts our tags by frequency (tag facet) or explicitly (forced top)
 g_TagMap = null;
 function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
