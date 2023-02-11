@@ -1,0 +1,29 @@
+{
+    "name": "IClientStorageDeviceManagerMap",
+    "functions": [ 
+        {
+            "name": "IsInterfaceValid",
+            "argc": "1"
+        },
+        {
+            "name": "GetStorageDevicesData",
+            "argc": "2"
+        },
+        {
+            "name": "Eject",
+            "argc": "2"
+        },
+        {
+            "name": "Format",
+            "argc": "2"
+        },
+        {
+            "name": "Unmount",
+            "argc": "2"
+        },
+        {
+            "name": "TrimAll",
+            "argc": "1"
+        }
+    ]
+}

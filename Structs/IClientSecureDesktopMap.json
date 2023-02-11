@@ -1,0 +1,17 @@
+{
+    "name": "IClientSecureDesktopMap",
+    "functions": [ 
+        {
+            "name": "BStartStreaming",
+            "argc": "1"
+        },
+        {
+            "name": "StopStreaming",
+            "argc": "1"
+        },
+        {
+            "name": "SendSAS",
+            "argc": "1"
+        }
+    ]
+}

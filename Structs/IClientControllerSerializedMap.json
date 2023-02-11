@@ -1,0 +1,853 @@
+{
+    "name": "IClientControllerSerializedMap",
+    "functions": [ 
+        {
+            "name": "Unknown_5359632",
+            "argc": "0"
+        },
+        {
+            "name": "Unknown_6166192",
+            "argc": "0"
+        },
+        {
+            "name": "ShowBindingPanel",
+            "argc": "4"
+        },
+        {
+            "name": "GetControllerTypeForHandle",
+            "argc": "3"
+        },
+        {
+            "name": "GetGamepadIndexForHandle",
+            "argc": "3"
+        },
+        {
+            "name": "GetHandleForGamepadIndex",
+            "argc": "2"
+        },
+        {
+            "name": "GetActionSetHandle",
+            "argc": "3"
+        },
+        {
+            "name": "GetActionSetHandleByTitle",
+            "argc": "3"
+        },
+        {
+            "name": "ActivateActionSet",
+            "argc": "6"
+        },
+        {
+            "name": "ActivateActionSetLayer",
+            "argc": "6"
+        },
+        {
+            "name": "DeactivateActionSetLayer",
+            "argc": "6"
+        },
+        {
+            "name": "DeactivateAllActionSetLayers",
+            "argc": "4"
+        },
+        {
+            "name": "GetActiveActionSetLayers",
+            "argc": "5"
+        },
+        {
+            "name": "GetDigitalActionHandle",
+            "argc": "4"
+        },
+        {
+            "name": "GetAnalogActionHandle",
+            "argc": "4"
+        },
+        {
+            "name": "StopAnalogActionMomentum",
+            "argc": "5"
+        },
+        {
+            "name": "EnableDeviceCallbacks",
+            "argc": "2"
+        },
+        {
+            "name": "GetStringForDigitalActionName",
+            "argc": "6"
+        },
+        {
+            "name": "GetStringForAnalogActionName",
+            "argc": "6"
+        },
+        {
+            "name": "BCheckGameDirectoryAndReloadConfigIfNecessary",
+            "argc": "4"
+        },
+        {
+            "name": "GetActionManifestPath",
+            "argc": "2"
+        },
+        {
+            "name": "GetActionManifestPath",
+            "argc": "3"
+        },
+        {
+            "name": "DumpConfigurationToDisk",
+            "argc": "2"
+        },
+        {
+            "name": "FlushCloudedConfigFilesToDisk",
+            "argc": "1"
+        },
+        {
+            "name": "StartBindingVisualization",
+            "argc": "4"
+        },
+        {
+            "name": "StopBindingVisualization",
+            "argc": "3"
+        },
+        {
+            "name": "GetNumConnectedControllers",
+            "argc": "1"
+        },
+        {
+            "name": "GetAllControllersStatus",
+            "argc": "2"
+        },
+        {
+            "name": "GetControllerDetails",
+            "argc": "2"
+        },
+        {
+            "name": "FactoryReset",
+            "argc": "2"
+        },
+        {
+            "name": "SetDefaultConfig",
+            "argc": "2"
+        },
+        {
+            "name": "CalibrateTrackpads",
+            "argc": "2"
+        },
+        {
+            "name": "CalibrateJoystick",
+            "argc": "2"
+        },
+        {
+            "name": "CalibrateIMU",
+            "argc": "2"
+        },
+        {
+            "name": "SetAudioMapping",
+            "argc": "3"
+        },
+        {
+            "name": "PlayAudio",
+            "argc": "3"
+        },
+        {
+            "name": "ResetStickExtents",
+            "argc": "2"
+        },
+        {
+            "name": "BIsStreamingController",
+            "argc": "2"
+        },
+        {
+            "name": "SetUserLedColor",
+            "argc": "5"
+        },
+        {
+            "name": "SetRumble",
+            "argc": "6"
+        },
+        {
+            "name": "SetRumbleExtended",
+            "argc": "8"
+        },
+        {
+            "name": "SetGyroAutoCalibrate",
+            "argc": "3"
+        },
+        {
+            "name": "SetGyroCalibrating",
+            "argc": "3"
+        },
+        {
+            "name": "LoadConfigFromVDFString",
+            "argc": "8"
+        },
+        {
+            "name": "InvalidateBindingCache",
+            "argc": "1"
+        },
+        {
+            "name": "ActivateConfig",
+            "argc": "3"
+        },
+        {
+            "name": "WarmOptInStatus",
+            "argc": "3"
+        },
+        {
+            "name": "GetCurrentActionSetHandleForRunningApp",
+            "argc": "3"
+        },
+        {
+            "name": "BAnyControllerOptedInAndAvailable",
+            "argc": "2"
+        },
+        {
+            "name": "GetGamepadIndexForControllerIndex",
+            "argc": "2"
+        },
+        {
+            "name": "CreateBindingInstanceFromVDFString",
+            "argc": "2"
+        },
+        {
+            "name": "FreeBindingInstance",
+            "argc": "2"
+        },
+        {
+            "name": "GetControllerConfiguration",
+            "argc": "3"
+        },
+        {
+            "name": "SetControllerActionSet",
+            "argc": "4"
+        },
+        {
+            "name": "SetControllerSourceMode",
+            "argc": "4"
+        },
+        {
+            "name": "DuplicateControllerSourceMode",
+            "argc": "4"
+        },
+        {
+            "name": "SetControllerInputActivator",
+            "argc": "4"
+        },
+        {
+            "name": "SetControllerInputBinding",
+            "argc": "4"
+        },
+        {
+            "name": "SetControllerInputActivatorEnabled",
+            "argc": "4"
+        },
+        {
+            "name": "SetControllerMiscMappingSettings",
+            "argc": "4"
+        },
+        {
+            "name": "SwapControllerModeInputBindings",
+            "argc": "4"
+        },
+        {
+            "name": "SetControllerModeShiftBinding",
+            "argc": "4"
+        },
+        {
+            "name": "IsModified",
+            "argc": "2"
+        },
+        {
+            "name": "ClearModified",
+            "argc": "2"
+        },
+        {
+            "name": "GetLocalizationTokenCount",
+            "argc": "2"
+        },
+        {
+            "name": "GetLocalizationToken",
+            "argc": "4"
+        },
+        {
+            "name": "GetLocalizedString",
+            "argc": "3"
+        },
+        {
+            "name": "GetBindingSetting",
+            "argc": "4"
+        },
+        {
+            "name": "SetBindingSetting",
+            "argc": "4"
+        },
+        {
+            "name": "GetBindingVDFString",
+            "argc": "2"
+        },
+        {
+            "name": "GetSourceGroupBindingCount",
+            "argc": "3"
+        },
+        {
+            "name": "GetSourceGroupBindingInfo",
+            "argc": "6"
+        },
+        {
+            "name": "SetSourceGroupBindingActive",
+            "argc": "6"
+        },
+        {
+            "name": "CreateSourceGroupBinding",
+            "argc": "7"
+        },
+        {
+            "name": "BAreLayerAndParentModesEquivalent",
+            "argc": "4"
+        },
+        {
+            "name": "GetGroupSetting",
+            "argc": "5"
+        },
+        {
+            "name": "SetGroupSetting",
+            "argc": "5"
+        },
+        {
+            "name": "GetGroupSettingDefault",
+            "argc": "5"
+        },
+        {
+            "name": "GetGroupSettingUIRange",
+            "argc": "6"
+        },
+        {
+            "name": "GetActivatorSetting",
+            "argc": "7"
+        },
+        {
+            "name": "SetActivatorSetting",
+            "argc": "7"
+        },
+        {
+            "name": "GetActivatorSettingDefault",
+            "argc": "7"
+        },
+        {
+            "name": "SetGroupBinding",
+            "argc": "8"
+        },
+        {
+            "name": "GetGroupBinding",
+            "argc": "8"
+        },
+        {
+            "name": "RemoveGroupBinding",
+            "argc": "5"
+        },
+        {
+            "name": "GetParentGroupForLayerGroup",
+            "argc": "4"
+        },
+        {
+            "name": "GetParentPresetForLayerPreset",
+            "argc": "4"
+        },
+        {
+            "name": "GetGroupActivatorsForInput",
+            "argc": "5"
+        },
+        {
+            "name": "ReplaceActivator",
+            "argc": "6"
+        },
+        {
+            "name": "AddActivator",
+            "argc": "4"
+        },
+        {
+            "name": "RemoveActivator",
+            "argc": "5"
+        },
+        {
+            "name": "CopyActivator",
+            "argc": "6"
+        },
+        {
+            "name": "IsActivatorSettingsDefault",
+            "argc": "5"
+        },
+        {
+            "name": "SetModeShiftBinding",
+            "argc": "6"
+        },
+        {
+            "name": "GetModeShiftBinding",
+            "argc": "7"
+        },
+        {
+            "name": "AddActionSet",
+            "argc": "3"
+        },
+        {
+            "name": "RenameActionSet",
+            "argc": "3"
+        },
+        {
+            "name": "DeleteActionSet",
+            "argc": "3"
+        },
+        {
+            "name": "GetBindingTitle",
+            "argc": "3"
+        },
+        {
+            "name": "SetBindingTitle",
+            "argc": "3"
+        },
+        {
+            "name": "GetBindingDescription",
+            "argc": "3"
+        },
+        {
+            "name": "GetBindingRevision",
+            "argc": "4"
+        },
+        {
+            "name": "BBindingMajorRevisionMismatch",
+            "argc": "2"
+        },
+        {
+            "name": "SetBindingDescription",
+            "argc": "3"
+        },
+        {
+            "name": "GetBindingTitleForIndex",
+            "argc": "5"
+        },
+        {
+            "name": "GetBindingDescForIndex",
+            "argc": "5"
+        },
+        {
+            "name": "GetBindingTypeForIndex",
+            "argc": "3"
+        },
+        {
+            "name": "GetConfigBindingInfo",
+            "argc": "3"
+        },
+        {
+            "name": "SetBindingControllerType",
+            "argc": "3"
+        },
+        {
+            "name": "GetBindingControllerType",
+            "argc": "2"
+        },
+        {
+            "name": "SetBindingCreator",
+            "argc": "4"
+        },
+        {
+            "name": "GetBindingCreator",
+            "argc": "2"
+        },
+        {
+            "name": "GetBindingProgenitor",
+            "argc": "2"
+        },
+        {
+            "name": "SetBindingProgenitor",
+            "argc": "3"
+        },
+        {
+            "name": "GetBindingURL",
+            "argc": "2"
+        },
+        {
+            "name": "SetBindingURL",
+            "argc": "3"
+        },
+        {
+            "name": "GetBindingExportType",
+            "argc": "2"
+        },
+        {
+            "name": "SetBindingExportType",
+            "argc": "3"
+        },
+        {
+            "name": "GetConfigFeatures",
+            "argc": "3"
+        },
+        {
+            "name": "GetAllBindings",
+            "argc": "4"
+        },
+        {
+            "name": "BIsXInputActiveForController",
+            "argc": "2"
+        },
+        {
+            "name": "PS4SettingsChanged",
+            "argc": "2"
+        },
+        {
+            "name": "SwitchSettingsChanged",
+            "argc": "2"
+        },
+        {
+            "name": "ControllerSettingsChanged",
+            "argc": "2"
+        },
+        {
+            "name": "SetTrackpadPressureCurve",
+            "argc": "4"
+        },
+        {
+            "name": "SetDefaultNintendoButtonLayout",
+            "argc": "2"
+        },
+        {
+            "name": "IsControllerConnected",
+            "argc": "3"
+        },
+        {
+            "name": "GetControllerState",
+            "argc": "3"
+        },
+        {
+            "name": "TriggerHapticPulse",
+            "argc": "7"
+        },
+        {
+            "name": "TriggerSimpleHapticEvent",
+            "argc": "6"
+        },
+        {
+            "name": "TriggerVibration",
+            "argc": "4"
+        },
+        {
+            "name": "TriggerVibrationExtended",
+            "argc": "6"
+        },
+        {
+            "name": "SetLEDColor",
+            "argc": "6"
+        },
+        {
+            "name": "SetDonglePairingMode",
+            "argc": "3"
+        },
+        {
+            "name": "ReserveSteamController",
+            "argc": "1"
+        },
+        {
+            "name": "CancelSteamControllerReservations",
+            "argc": "1"
+        },
+        {
+            "name": "OpenStreamingSession",
+            "argc": "3"
+        },
+        {
+            "name": "CloseStreamingSession",
+            "argc": "3"
+        },
+        {
+            "name": "UpdateStreamingSessionInputPermissions",
+            "argc": "2"
+        },
+        {
+            "name": "InitiateISPFirmwareUpdate",
+            "argc": "2"
+        },
+        {
+            "name": "InitiateBootloaderFirmwareUpdate",
+            "argc": "2"
+        },
+        {
+            "name": "FlashControllerFirmware",
+            "argc": "5"
+        },
+        {
+            "name": "TurnOffController",
+            "argc": "2"
+        },
+        {
+            "name": "EnumerateControllers",
+            "argc": "1"
+        },
+        {
+            "name": "GetControllerStatusEvent",
+            "argc": "3"
+        },
+        {
+            "name": "GetActualControllerDetails",
+            "argc": "3"
+        },
+        {
+            "name": "GetControllerIdentity",
+            "argc": "3"
+        },
+        {
+            "name": "GetControllerPersonalization",
+            "argc": "3"
+        },
+        {
+            "name": "GetControllerReverseDiamondLayout",
+            "argc": "2"
+        },
+        {
+            "name": "BRumbleEnabledByUser",
+            "argc": "2"
+        },
+        {
+            "name": "BHapticsEnabledByUser",
+            "argc": "2"
+        },
+        {
+            "name": "GetControllerSerialNumber",
+            "argc": "4"
+        },
+        {
+            "name": "GetControllerChipID",
+            "argc": "4"
+        },
+        {
+            "name": "BSupportsControllerLEDBrightness",
+            "argc": "2"
+        },
+        {
+            "name": "BSupportsControllerLEDColor",
+            "argc": "2"
+        },
+        {
+            "name": "BSupportsControllerRumble",
+            "argc": "2"
+        },
+        {
+            "name": "BSupportsControllerHaptics",
+            "argc": "2"
+        },
+        {
+            "name": "SetControllerPairingConnectionState",
+            "argc": "3"
+        },
+        {
+            "name": "SetControllerKeyboardMouseState",
+            "argc": "3"
+        },
+        {
+            "name": "GetTouchKeysForPopupMenu",
+            "argc": "5"
+        },
+        {
+            "name": "PopupMenuTouchKeyClicked",
+            "argc": "4"
+        },
+        {
+            "name": "AccessControllerInputGeneratorMouseButton",
+            "argc": "4"
+        },
+        {
+            "name": "GetGameActionSets",
+            "argc": "3"
+        },
+        {
+            "name": "GetBaseGameActionSets",
+            "argc": "3"
+        },
+        {
+            "name": "GetLayerGameActionSets",
+            "argc": "3"
+        },
+        {
+            "name": "GetGameActionSetById",
+            "argc": "3"
+        },
+        {
+            "name": "SetControllerSetting",
+            "argc": "3"
+        },
+        {
+            "name": "GetEmulatedOutputState",
+            "argc": "1"
+        },
+        {
+            "name": "SetSelectedConfigForApp",
+            "argc": "8"
+        },
+        {
+            "name": "BControllerHasUniqueConfigForAppID",
+            "argc": "3"
+        },
+        {
+            "name": "DeRegisterController",
+            "argc": "3"
+        },
+        {
+            "name": "SendOSKeyboardEvent",
+            "argc": "2"
+        },
+        {
+            "name": "SetOSKeyboardKey",
+            "argc": "3"
+        },
+        {
+            "name": "SetMousePosition",
+            "argc": "3"
+        },
+        {
+            "name": "GetGamepadIndexChangeCounter",
+            "argc": "1"
+        },
+        {
+            "name": "BSwapGamepadIndex",
+            "argc": "4"
+        },
+        {
+            "name": "GetGamepadIndexForXInputIndex",
+            "argc": "2"
+        },
+        {
+            "name": "GetControllerIndexForGamepadIndex",
+            "argc": "2"
+        },
+        {
+            "name": "GetNumControllersWithDetails",
+            "argc": "1"
+        },
+        {
+            "name": "ConvertBindingToNewControllerType",
+            "argc": "3"
+        },
+        {
+            "name": "SetControllerActiveAccount",
+            "argc": "3"
+        },
+        {
+            "name": "StartControllerRegistrationToAccount",
+            "argc": "3"
+        },
+        {
+            "name": "CompleteControllerRegistrationToAccount",
+            "argc": "3"
+        },
+        {
+            "name": "AutoRegisterControllerRegistrationToAccount",
+            "argc": "3"
+        },
+        {
+            "name": "GetConfigForAppAndController",
+            "argc": "5"
+        },
+        {
+            "name": "SetControllerPersonalization",
+            "argc": "5"
+        },
+        {
+            "name": "SetPersonalizationFile",
+            "argc": "5"
+        },
+        {
+            "name": "SetGameWindowPos",
+            "argc": "5"
+        },
+        {
+            "name": "GetGameWindowPos",
+            "argc": "5"
+        },
+        {
+            "name": "HasGameMapping",
+            "argc": "2"
+        },
+        {
+            "name": "GetControllerUsageData",
+            "argc": "3"
+        },
+        {
+            "name": "BAllowAppConfigForController",
+            "argc": "3"
+        },
+        {
+            "name": "ResetControllerEnableCache",
+            "argc": "1"
+        },
+        {
+            "name": "GetControllerEnableSupport",
+            "argc": "2"
+        },
+        {
+            "name": "BInputGenerated",
+            "argc": "1"
+        },
+        {
+            "name": "GetControllerActivityByType",
+            "argc": "2"
+        },
+        {
+            "name": "GetLastActiveControllerVID",
+            "argc": "1"
+        },
+        {
+            "name": "GetLastActiveControllerPID",
+            "argc": "1"
+        },
+        {
+            "name": "LoadControllerPersonalizationFile",
+            "argc": "5"
+        },
+        {
+            "name": "SaveControllerPersonalizationFile",
+            "argc": "5"
+        },
+        {
+            "name": "LoadRemotePlayControllerPersonalizationVDF",
+            "argc": "3"
+        },
+        {
+            "name": "FindControllerByPath",
+            "argc": "2"
+        },
+        {
+            "name": "GetControllerPath",
+            "argc": "3"
+        },
+        {
+            "name": "GetControllerProductName",
+            "argc": "3"
+        },
+        {
+            "name": "SetControllerHapticsSetting",
+            "argc": "3"
+        },
+        {
+            "name": "SetControllerRumbleSetting",
+            "argc": "3"
+        },
+        {
+            "name": "SetControllerNintendoLayoutSetting",
+            "argc": "3"
+        },
+        {
+            "name": "BGetTouchConfigData",
+            "argc": "7"
+        },
+        {
+            "name": "BSaveTouchConfigLayout",
+            "argc": "4"
+        },
+        {
+            "name": "SetGyroOn",
+            "argc": "4"
+        },
+        {
+            "name": "CursorVisibilityChanged",
+            "argc": "2"
+        },
+        {
+            "name": "ForceSimpleHapticEvent",
+            "argc": "6"
+        }
+    ]
+}

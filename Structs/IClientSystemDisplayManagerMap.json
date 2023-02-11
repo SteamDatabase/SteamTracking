@@ -1,0 +1,25 @@
+{
+    "name": "IClientSystemDisplayManagerMap",
+    "functions": [ 
+        {
+            "name": "IsInterfaceValid",
+            "argc": "1"
+        },
+        {
+            "name": "GetState",
+            "argc": "2"
+        },
+        {
+            "name": "SetMode",
+            "argc": "2"
+        },
+        {
+            "name": "ClearModeOverride",
+            "argc": "2"
+        },
+        {
+            "name": "SetCompatibilityMode",
+            "argc": "2"
+        }
+    ]
+}

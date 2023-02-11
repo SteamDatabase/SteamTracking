@@ -1,0 +1,13 @@
+{
+    "name": "IClientGameServerPacketHandlerMap",
+    "functions": [ 
+        {
+            "name": "HandleIncomingPacket",
+            "argc": "5"
+        },
+        {
+            "name": "GetNextOutgoingPacket",
+            "argc": "5"
+        }
+    ]
+}

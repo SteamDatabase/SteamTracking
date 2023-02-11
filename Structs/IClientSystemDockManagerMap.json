@@ -1,0 +1,21 @@
+{
+    "name": "IClientSystemDockManagerMap",
+    "functions": [ 
+        {
+            "name": "IsInterfaceValid",
+            "argc": "1"
+        },
+        {
+            "name": "GetState",
+            "argc": "2"
+        },
+        {
+            "name": "UpdateFirmware",
+            "argc": "2"
+        },
+        {
+            "name": "DisarmSafetyNet",
+            "argc": "1"
+        }
+    ]
+}

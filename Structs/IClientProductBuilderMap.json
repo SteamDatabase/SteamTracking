@@ -1,0 +1,17 @@
+{
+    "name": "IClientProductBuilderMap",
+    "functions": [ 
+        {
+            "name": "SignInstallScript",
+            "argc": "4"
+        },
+        {
+            "name": "DRMWrap",
+            "argc": "6"
+        },
+        {
+            "name": "CEGWrap",
+            "argc": "5"
+        }
+    ]
+}
