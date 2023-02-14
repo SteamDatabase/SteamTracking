@@ -539,6 +539,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_movie_webm}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${_ ? _ : _}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${hero_carousel_image}
+${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
 ${MEDIA_CDN_URL}${}
@@ -1390,6 +1391,7 @@ http://www.dota2.com/thebetaisover/
 http://www.dota2.com/threespirits/
 http://www.dota2.com/winter2016
 http://www.dota2.com/wraithnight/
+http://www.facebook.com/sharer.php?
 http://www.w3.org/1998/Math/MathML
 http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xhtml${}
@@ -2478,6 +2480,7 @@ https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202
 https://twitter.com/Steam
 https://twitter.com/dota2ti
+https://twitter.com/intent/tweet/?
 https://twitter.com/steam_games
 https://underlords.com/download/androidarm32
 https://underlords.com/download/androidarm64

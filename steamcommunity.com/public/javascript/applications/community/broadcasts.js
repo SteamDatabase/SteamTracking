@@ -83,7 +83,7 @@
     },
     70350: (e, t, a) => {
       "use strict";
-      a.d(t, { KE: () => H, T4: () => P, _G: () => L, zY: () => V });
+      a.d(t, { KE: () => z, T4: () => V, _G: () => L, zY: () => H });
       var n = a(70655),
         r = a(9669),
         o = a.n(r),
@@ -120,153 +120,155 @@
         R = a(88335),
         U = a.n(R);
       const L = (0, l.Pi)((e) => {
-        const {
-            clanAccountID: t,
-            gidAnnouncement: a,
-            partnerEventStore: r,
-            trackingLocation: l,
-            bViewAllShowInfiniteScroll: s,
-          } = e,
-          c = v.K.InitFromClanID(t),
-          d = (0, i.useRef)(null),
-          [_, p] = (0, i.useState)(null),
-          [S, h] = (0, i.useState)(!0),
-          [f, I] = (0, i.useState)(!1);
-        if (
-          ((0, i.useEffect)(
-            () => (
-              (0, n.mG)(void 0, void 0, void 0, function* () {
-                d.current && d.current("PartnerEventRow Initializng new mount");
-                const e = o().CancelToken.source();
-                d.current = e.cancel;
-                const n = v.K.InitFromClanID(t);
-                yield E.sV.LoadClanInfoForClanSteamID(n);
-                let s = yield r.LoadAdjacentPartnerEventsByAnnouncement(
-                  a,
-                  n,
-                  null,
-                  4,
-                  4,
-                  void 0,
-                  e
-                );
-                if (!e.token.reason) {
-                  s = s || [];
-                  let e = s
-                    .filter((e) => e.GetAnnouncementGID() != a)
-                    .map((e) => e.AnnouncementGID);
-                  D.LQ(e);
-                  const t = e
-                    .slice(0, 3)
-                    .map((e) => r.GetClanEventFromAnnouncementGID(e));
-                  if ((p(t), h(!1), l)) {
-                    let e = C.cb.Get().GetTracker(),
-                      n = !1;
-                    if (r.BHasClanAnnouncementGID(a)) {
-                      let t = r.GetClanEventFromAnnouncementGID(a);
-                      t &&
-                        t.BIsPartnerEvent() &&
-                        t.BIsVisibleEvent() &&
-                        (e.MarkEventRead(
-                          t.GID,
-                          t.clanSteamID.GetAccountID(),
-                          l
-                        ),
-                        (n = !0));
-                    }
-                    t.length > 0 &&
-                      (s
-                        .filter((e) => e.BIsPartnerEvent())
-                        .forEach((t) =>
-                          e.MarkEventShown(
+          const {
+              clanAccountID: t,
+              gidAnnouncement: a,
+              partnerEventStore: r,
+              trackingLocation: l,
+              bViewAllShowInfiniteScroll: s,
+            } = e,
+            c = v.K.InitFromClanID(t),
+            d = (0, i.useRef)(null),
+            [_, p] = (0, i.useState)(null),
+            [S, h] = (0, i.useState)(!0),
+            [f, I] = (0, i.useState)(!1);
+          if (
+            ((0, i.useEffect)(
+              () => (
+                (0, n.mG)(void 0, void 0, void 0, function* () {
+                  d.current &&
+                    d.current("PartnerEventRow Initializng new mount");
+                  const e = o().CancelToken.source();
+                  d.current = e.cancel;
+                  const n = v.K.InitFromClanID(t);
+                  yield E.sV.LoadClanInfoForClanSteamID(n);
+                  let s = yield r.LoadAdjacentPartnerEventsByAnnouncement(
+                    a,
+                    n,
+                    null,
+                    4,
+                    4,
+                    void 0,
+                    e
+                  );
+                  if (!e.token.reason) {
+                    s = s || [];
+                    let e = s
+                      .filter((e) => e.GetAnnouncementGID() != a)
+                      .map((e) => e.AnnouncementGID);
+                    D.LQ(e);
+                    const t = e
+                      .slice(0, 3)
+                      .map((e) => r.GetClanEventFromAnnouncementGID(e));
+                    if ((p(t), h(!1), l)) {
+                      let e = C.cb.Get().GetTracker(),
+                        n = !1;
+                      if (r.BHasClanAnnouncementGID(a)) {
+                        let t = r.GetClanEventFromAnnouncementGID(a);
+                        t &&
+                          t.BIsPartnerEvent() &&
+                          t.BIsVisibleEvent() &&
+                          (e.MarkEventRead(
                             t.GID,
                             t.clanSteamID.GetAccountID(),
                             l
-                          )
-                        ),
-                      (n = !0)),
-                      n && e.Flush();
+                          ),
+                          (n = !0));
+                      }
+                      t.length > 0 &&
+                        (s
+                          .filter((e) => e.BIsPartnerEvent())
+                          .forEach((t) =>
+                            e.MarkEventShown(
+                              t.GID,
+                              t.clanSteamID.GetAccountID(),
+                              l
+                            )
+                          ),
+                        (n = !0)),
+                        n && e.Flush();
+                    }
                   }
+                }),
+                () => {
+                  d.current && d.current("PartnerEventRow: unmounting");
                 }
-              }),
-              () => {
-                d.current && d.current("PartnerEventRow: unmounting");
-              }
+              ),
+              [t, a, r, l]
             ),
-            [t, a, r, l]
-          ),
-          S)
-        )
-          return i.createElement(O.V, { position: "center", size: "medium" });
-        if (0 == _.length) return i.createElement("div", null);
-        const y = E.sV.GetClanInfoByClanAccountID(t);
-        return i.createElement(
-          T.SV,
-          null,
-          i.createElement(
-            "div",
-            { className: (0, A.Z)(x().OtherEventsCtn, "OtherEventsCtn") },
+            S)
+          )
+            return i.createElement(O.V, { position: "center", size: "medium" });
+          if (0 == _.length) return i.createElement("div", null);
+          const y = E.sV.GetClanInfoByClanAccountID(t);
+          return i.createElement(
+            T.SV,
+            null,
             i.createElement(
               "div",
-              { className: B().EventSectionTitleCtn },
+              { className: (0, A.Z)(x().OtherEventsCtn, "OtherEventsCtn") },
               i.createElement(
                 "div",
+                { className: B().EventSectionTitleCtn },
+                i.createElement(
+                  "div",
+                  {
+                    className: (0, A.Z)(
+                      B().EventSectionTitle,
+                      "EventSectionTitle"
+                    ),
+                  },
+                  (0, N.kQ)("#EventBrowse_MoreEventsTitle", y.group_name),
+                  " "
+                ),
+                i.createElement(
+                  "div",
+                  { className: B().EventSectionSpacer },
+                  " "
+                ),
+                s
+                  ? i.createElement(
+                      "div",
+                      {
+                        className: B().EventSectionMoreBtn,
+                        onClick: () => I(!0),
+                      },
+                      (0, N.Xx)("#EventBrowse_MoreEventsBtn")
+                    )
+                  : i.createElement(
+                      g.JW,
+                      {
+                        eventModel: _[0],
+                        route: g.Ue.k_eViewWebSiteHub,
+                        className: B().EventSectionMoreBtn,
+                      },
+                      (0, N.Xx)("#EventBrowse_MoreEventsBtn")
+                    )
+              ),
+              i.createElement(
+                m.s,
                 {
-                  className: (0, A.Z)(
-                    B().EventSectionTitle,
-                    "EventSectionTitle"
-                  ),
+                  className: x().OtherEvents,
+                  "flow-children": "column",
+                  navEntryPreferPosition: u.c4.PREFERRED_CHILD,
                 },
-                (0, N.kQ)("#EventBrowse_MoreEventsTitle", y.group_name),
-                " "
+                _.map((e) =>
+                  i.createElement(V, { key: e.AnnouncementGID, event: e })
+                )
               ),
-              i.createElement(
-                "div",
-                { className: B().EventSectionSpacer },
-                " "
-              ),
-              s
-                ? i.createElement(
-                    "div",
-                    {
-                      className: B().EventSectionMoreBtn,
-                      onClick: () => I(!0),
-                    },
-                    (0, N.Xx)("#EventBrowse_MoreEventsBtn")
-                  )
-                : i.createElement(
-                    g.JW,
-                    {
-                      eventModel: _[0],
-                      route: g.Ue.k_eViewWebSiteHub,
-                      className: B().EventSectionMoreBtn,
-                    },
-                    (0, N.Xx)("#EventBrowse_MoreEventsBtn")
-                  )
-            ),
-            i.createElement(
-              m.s,
-              {
-                className: x().OtherEvents,
-                "flow-children": "column",
-                navEntryPreferPosition: u.c4.PREFERRED_CHILD,
-              },
-              _.map((e) =>
-                i.createElement(P, { key: e.AnnouncementGID, event: e })
-              )
-            ),
-            Boolean(f) &&
-              i.createElement(b.x, {
-                appid: _[0].appid,
-                clanSteamID: c,
-                announcementGID: _[0].AnnouncementGID,
-                closeModal: () => I(!1),
-                partnerEventStore: r,
-              })
-          )
-        );
-      });
-      function P(e) {
+              Boolean(f) &&
+                i.createElement(b.x, {
+                  appid: _[0].appid,
+                  clanSteamID: c,
+                  announcementGID: _[0].AnnouncementGID,
+                  closeModal: () => I(!1),
+                  partnerEventStore: r,
+                })
+            )
+          );
+        }),
+        P = 30;
+      function V(e) {
         const {
             event: t,
             imageURLOverride: a,
@@ -310,7 +312,7 @@
           D = t ? t.GetStartTimeAndDateUnixSeconds() : "";
         let T = b;
         return (
-          b && (b.length > 30 || u.length > 30) && (T = void 0),
+          b && (b.length > P || u.length > P) && (T = void 0),
           i.createElement(
             i.Fragment,
             null,
@@ -381,11 +383,11 @@
                 )
               )
             ),
-            Boolean(n && t.appid) && i.createElement(V, { appid: t.appid })
+            Boolean(n && t.appid) && i.createElement(H, { appid: t.appid })
           )
         );
       }
-      function V(e) {
+      function H(e) {
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, h.vs)(t, d.bk),
           r = (0, G.bJ)(),
@@ -438,7 +440,7 @@
             )
         );
       }
-      function H(e) {
+      function z(e) {
         const { event: t, imageURLOverride: a, onClick: n } = e,
           r = (0, c.jM)(w.De.LANGUAGE),
           [o, l, d] = (0, s.SZ)(() =>
@@ -504,7 +506,7 @@
       a.r(t), a.d(t, { default: () => Ee });
       a(69491);
       var n = a(67294),
-        r = a(78587),
+        r = a(16550),
         o = a(92244),
         l = a(70655),
         s = a(9669),
@@ -1138,8 +1140,8 @@
         z = a(93981),
         F = a(44298),
         X = a(2388),
-        Z = a(83147);
-      function q(e) {
+        W = a(83147);
+      function Z(e) {
         const t = X.y$.GetProfileByAccountID(e.GetAccountID());
         if (t) {
           let a = new z.Pv(e);
@@ -1152,9 +1154,9 @@
         }
         return null;
       }
-      const W = (e) => {
+      const q = (e) => {
         e.steamid.GetAccountID();
-        const [t, a] = (0, n.useState)(q(e.steamid)),
+        const [t, a] = (0, n.useState)(Z(e.steamid)),
           [r, o] = (0, n.useState)(X.y$.GetProfileURLBySteamID(e.steamid)),
           [s, i] = (0, n.useState)(X.y$.GetPersonaNameBySteamID(e.steamid));
         return (
@@ -1163,7 +1165,7 @@
               (() =>
                 (0, l.mG)(void 0, void 0, void 0, function* () {
                   yield X.y$.LoadProfiles([e.steamid.ConvertTo64BitString()]),
-                    a(q(e.steamid)),
+                    a(Z(e.steamid)),
                     o(X.y$.GetProfileURLBySteamID(e.steamid)),
                     i(X.y$.GetPersonaNameBySteamID(e.steamid));
                 }))();
@@ -1171,7 +1173,7 @@
           }, [e.steamid, t]),
           n.createElement(
             "div",
-            { className: Z.AvatarCtn },
+            { className: W.AvatarCtn },
             n.createElement(
               "a",
               {
@@ -1186,7 +1188,7 @@
             ),
             n.createElement(
               "div",
-              { className: Z.NameAndProps },
+              { className: W.NameAndProps },
               Boolean(e.bShowName) &&
                 n.createElement(
                   "a",
@@ -1254,7 +1256,7 @@
                 ),
                 n.createElement(ne, { broadcasterSteamID: t })
               ),
-              n.createElement(W, { steamid: t, size: "Medium", bShowName: !0 })
+              n.createElement(q, { steamid: t, size: "Medium", bShowName: !0 })
             )
           )
         );
@@ -1867,7 +1869,7 @@
         });
       var _e = a(9915),
         ve = a(27991);
-      let pe = (e) => `/broadcast/(watch|watchnew)/${e}`;
+      let pe = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
       function Ee(e) {
         const [t, a] = n.useState(!0);
         return (
@@ -1887,7 +1889,7 @@
                   r.rs,
                   null,
                   n.createElement(r.AW, {
-                    path: pe(":steamid_or_user_vanity"),
+                    path: pe.BroadcastWatch(":steamid_or_user_vanity"),
                     render: (e) =>
                       n.createElement(de, {
                         strSteamID: e.match.params.steamid_or_user_vanity,

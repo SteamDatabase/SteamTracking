@@ -13,7 +13,7 @@
     },
     70844: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => u });
+      a.r(t), a.d(t, { default: () => v });
       var r = a(70655),
         n = a(67294),
         o = a(33129),
@@ -22,86 +22,89 @@
         s = a(41311),
         l = a(7273),
         d = a(84238);
-      const u = n.forwardRef(function (e, t) {
-        const {
-          isLoading: a,
-          imageRef: r,
-          loaderRef: o,
-          getBlob: c,
-        } = (function (e) {
-          const [t, a] = n.useState(!0),
-            r = n.useRef(),
-            o = n.useRef(),
-            c = n.useRef(null);
+      const u = 184,
+        m = 5,
+        g = 1048576,
+        v = n.forwardRef(function (e, t) {
+          const {
+            isLoading: a,
+            imageRef: r,
+            loaderRef: o,
+            getBlob: c,
+          } = (function (e) {
+            const [t, a] = n.useState(!0),
+              r = n.useRef(),
+              o = n.useRef(),
+              c = n.useRef(null);
+            return (
+              n.useEffect(() => {
+                a(!0),
+                  o.current &&
+                    o.current.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    }),
+                  f(r.current, e).then(() => {
+                    a(!1),
+                      (c.current = new (i())(r.current, {
+                        viewMode: 1,
+                        background: !1,
+                        dragMode: "move",
+                        aspectRatio: 1,
+                        preview: `.${l.AvatarCropPreview}`,
+                        rotatable: !1,
+                        checkOrientation: !1,
+                        toggleDragModeOnDblclick: !1,
+                        ready: () => {
+                          const e = c.current,
+                            t = e.getData(),
+                            a = Math.min(t.x, t.y);
+                          a > 0 &&
+                            e.setData({
+                              x: t.x - a,
+                              y: t.y - a,
+                              width: t.width + a + a,
+                              height: t.height + a + a,
+                            });
+                        },
+                      }));
+                  });
+                const t = r.current;
+                return () => {
+                  c.current.destroy(), URL.revokeObjectURL(t.src), (t.src = "");
+                };
+              }, [e]),
+              {
+                isLoading: t,
+                imageRef: r,
+                loaderRef: o,
+                getBlob: () => h(c.current, r.current),
+              }
+            );
+          })(e.imageData);
           return (
-            n.useEffect(() => {
-              a(!0),
-                o.current &&
-                  o.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                  }),
-                m(r.current, e).then(() => {
-                  a(!1),
-                    (c.current = new (i())(r.current, {
-                      viewMode: 1,
-                      background: !1,
-                      dragMode: "move",
-                      aspectRatio: 1,
-                      preview: `.${l.AvatarCropPreview}`,
-                      rotatable: !1,
-                      checkOrientation: !1,
-                      toggleDragModeOnDblclick: !1,
-                      ready: () => {
-                        const e = c.current,
-                          t = e.getData(),
-                          a = Math.min(t.x, t.y);
-                        a > 0 &&
-                          e.setData({
-                            x: t.x - a,
-                            y: t.y - a,
-                            width: t.width + a + a,
-                            height: t.height + a + a,
-                          });
-                      },
-                    }));
-                });
-              const t = r.current;
-              return () => {
-                c.current.destroy(), URL.revokeObjectURL(t.src), (t.src = "");
-              };
-            }, [e]),
-            {
-              isLoading: t,
-              imageRef: r,
-              loaderRef: o,
-              getBlob: () => g(c.current, r.current),
-            }
-          );
-        })(e.imageData);
-        return (
-          n.useImperativeHandle(t, () => ({ getBlob: c })),
-          n.createElement(
-            "div",
-            { className: d.AvatarCrop },
+            n.useImperativeHandle(t, () => ({ getBlob: c })),
             n.createElement(
               "div",
-              { className: d.AvatarCropBound },
-              n.createElement("img", { ref: r, className: d.AvatarCropImg }),
+              { className: d.AvatarCrop },
               n.createElement(
                 "div",
-                {
-                  ref: o,
-                  className: d.AvatarLoading,
-                  style: { display: a ? "" : "none" },
-                },
-                (0, s.Xx)("#Loading")
+                { className: d.AvatarCropBound },
+                n.createElement("img", { ref: r, className: d.AvatarCropImg }),
+                n.createElement(
+                  "div",
+                  {
+                    ref: o,
+                    className: d.AvatarLoading,
+                    style: { display: a ? "" : "none" },
+                  },
+                  (0, s.Xx)("#Loading")
+                )
               )
             )
-          )
-        );
-      });
-      function m(e, t) {
+          );
+        });
+      function f(e, t) {
         return (0, r.mG)(this, void 0, void 0, function* () {
           const a = new Image(),
             r = (0, c.f4)(a, "load");
@@ -115,24 +118,24 @@
             o.drawImage(a, 0, 0),
             URL.revokeObjectURL(a.src);
           const i = (0, c.f4)(e, "load");
-          (e.src = URL.createObjectURL(yield f(n))), yield i;
+          (e.src = URL.createObjectURL(yield w(n))), yield i;
         });
       }
-      function g(e, t) {
+      function h(e, t) {
         return (0, r.mG)(this, void 0, void 0, function* () {
           const a = e.getData();
-          let r = 5;
+          let r = m;
           for (;;) {
-            const e = yield f(
-              v(t, { left: a.x, top: a.y, size: a.width, maxSize: 184 * r })
+            const e = yield w(
+              p(t, { left: a.x, top: a.y, size: a.width, maxSize: u * r })
             );
-            if (1 === r || e.size < 1048576) return e;
+            if (1 === r || e.size < g) return e;
             r--;
           }
         });
       }
-      function v(e, t) {
-        const a = Math.min(Math.max(184, t.size), t.maxSize),
+      function p(e, t) {
+        const a = Math.min(Math.max(u, t.size), t.maxSize),
           r = document.createElement("canvas");
         (r.width = a), (r.height = a);
         const n = r.getContext("2d");
@@ -146,7 +149,7 @@
           r
         );
       }
-      function f(e, t, a) {
+      function w(e, t, a) {
         return (0, r.mG)(this, void 0, void 0, function* () {
           return new Promise((r) => e.toBlob(r, t, a));
         });

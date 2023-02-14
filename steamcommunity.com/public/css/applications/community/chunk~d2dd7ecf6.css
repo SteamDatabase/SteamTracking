@@ -3664,6 +3664,7 @@ td.rdtYear:hover {
 .horizontalSlider___281Ls {
   position: relative;
   overflow: hidden;
+  touch-action: pan-y pinch-zoom;
 }
 [dir="rtl"] .horizontalSlider___281Ls {
   direction: ltr;

@@ -2621,7 +2621,7 @@
         (0, i.gn)([s.aD], le.prototype, "RevertBasicInfoChanges", null),
         (0, i.gn)([s.aD], le.prototype, "SetAvatarHash", null),
         (0, i.gn)([s.aD], le.prototype, "RevertToComittedAvatarHash", null);
-      var me = r(78587),
+      var me = r(16550),
         ce = r(92398),
         de = (r(69491), r(73935)),
         pe = r(7273),
@@ -6511,7 +6511,11 @@
       r(14974);
       var Ur = r(77817),
         Hr = r(74091);
-      const qr = () => "edit",
+      const qr = {
+          ProfileEdit: () => "edit",
+          ProfilePrivacy: () => "edit/settings",
+          Games: () => "games",
+        },
         Xr = {
           Info: () => "/info",
           Avatar: () => "/avatar",
@@ -6537,7 +6541,7 @@
           me.rs,
           null,
           d.createElement(me.AW, {
-            path: `${t}/${qr()}`,
+            path: `${t}/${qr.ProfileEdit()}`,
             render: (e) => d.createElement(Fr, Object.assign({}, e)),
           }),
           d.createElement(me.AW, {

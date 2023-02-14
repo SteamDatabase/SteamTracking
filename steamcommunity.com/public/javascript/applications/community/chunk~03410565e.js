@@ -162,7 +162,7 @@
     },
     69382: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => P, EI: () => Z, kF: () => J });
+      n.d(t, { A: () => P, EI: () => K, kF: () => W });
       var s = n(70655),
         o = n(67294),
         i = (n(92398), n(3389)),
@@ -1107,13 +1107,13 @@
               (0, L.Xx)("#QAndA_Column_DeleteButtons")
             )
           ),
-          t.map((e) => o.createElement(O, { key: e.gidSession, qanda: e }))
+          t.map((e) => o.createElement(y, { key: e.gidSession, qanda: e }))
         );
       }
       function R(e) {
         const t = o.useCallback(
           () =>
-            (0, w.x1)(o.createElement(H, null), window, {
+            (0, w.x1)(o.createElement(O, null), window, {
               strTitle: (0, L.Xx)("#QAndA_CreateQAndA_Title"),
             }),
           []
@@ -1137,7 +1137,8 @@
           )
         );
       }
-      function H(e) {
+      const H = 120;
+      function O(e) {
         const t = (function () {
             const e = (0, p.T)("useCreateQAndAFn");
             return o.useCallback((t) => C.Get().CreateNewSession(t, e), [e]);
@@ -1161,11 +1162,11 @@
             placeholder: (0, L.Xx)("#QAndA_EnterNamePrompt"),
             onFocus: (e) => e.target.select(),
             onChange: (e) => s(e.currentTarget.value),
-            maxLength: 120,
+            maxLength: H,
           })
         );
       }
-      function O(e) {
+      function y(e) {
         const { qanda: t } = e,
           n =
             d.De.COMMUNITY_BASE_URL +
@@ -1177,7 +1178,7 @@
             (e) => {
               e.stopPropagation(),
                 e.preventDefault(),
-                (0, w.x1)(o.createElement(X, { qanda: t }), window, {
+                (0, w.x1)(o.createElement(F, { qanda: t }), window, {
                   strTitle: (0, L.Xx)("#QAndA_CreateQAndA_Title"),
                 });
             },
@@ -1186,7 +1187,7 @@
         return o.createElement(
           "a",
           { className: B().DashboardRow, href: n },
-          o.createElement(y, { qanda: t }),
+          o.createElement(X, { qanda: t }),
           o.createElement("div", { className: B().GIDSession }, t.gidSession),
           o.createElement(
             "div",
@@ -1204,7 +1205,7 @@
           )
         );
       }
-      function y(e) {
+      function X(e) {
         const { qanda: t } = e,
           [n, s] = o.useState(!1),
           [i, a] = o.useState(t.strName),
@@ -1230,7 +1231,7 @@
               placeholder: (0, L.Xx)("#QAndA_EnterNamePrompt"),
               onFocus: (e) => e.target.select(),
               onChange: (e) => a(e.currentTarget.value),
-              maxLength: 120,
+              maxLength: H,
             }),
             o.createElement(
               b.KM,
@@ -1258,7 +1259,7 @@
           n ? u : l
         );
       }
-      function X(e) {
+      function F(e) {
         const { qanda: t } = e,
           n = (function () {
             const e = (0, p.T)("useDeleteQAndAFn");
@@ -1287,7 +1288,7 @@
           )
         );
       }
-      function F(e) {
+      function z(e) {
         const {
             gidSession: t,
             gidQuestion: n,
@@ -1324,7 +1325,7 @@
           o.createElement(
             "div",
             { className: (0, M.Z)(B().QuestionCtn, "questionCtn") },
-            o.createElement(Y, { accountID: l.posterAccountID }),
+            o.createElement(j, { accountID: l.posterAccountID }),
             o.createElement(
               "div",
               { className: B().QuestionText },
@@ -1376,16 +1377,16 @@
               )
             )
           ),
-          l.rtAnswerTime && o.createElement(z, { question: l, rtNow: r }),
+          l.rtAnswerTime && o.createElement(Y, { question: l, rtNow: r }),
           s &&
-            o.createElement(j, {
+            o.createElement(Z, {
               gidSession: t,
               gidQuestion: n,
               eState: null == l ? void 0 : l.eState,
             })
         );
       }
-      function z(e) {
+      function Y(e) {
         const { question: t, rtNow: n } = e,
           s = t.rtAnswerTime && n - t.rtAnswerTime,
           i =
@@ -1437,7 +1438,7 @@
               (0, L.Xx)("#QAndA_AlreadyAnsweredTitle")
             );
       }
-      function Y(e) {
+      function j(e) {
         var t;
         const n = i.K.InitFromAccountID(e.accountID),
           s = n.ConvertTo64BitString(),
@@ -1456,7 +1457,7 @@
                 : s
             );
       }
-      function j(e) {
+      function Z(e) {
         const { gidSession: t, gidQuestion: n, eState: s } = e,
           { fnAnswerQuestion: i, fnModerateQuestion: a } = N(t),
           r = 0 == s || 3 == s,
@@ -1469,7 +1470,7 @@
           o.createElement(
             "div",
             { className: B().ToolRow },
-            o.createElement($, {
+            o.createElement(ee, {
               strPrompt: (0, L.Xx)("#QAndA_AnswerPrompt"),
               fnSubmit: (e) => i(n, e),
             })
@@ -1522,7 +1523,7 @@
           )
         );
       }
-      function Z(e) {
+      function K(e) {
         const { gidSession: t } = e;
         A();
         const { strName: n, bUserCanModerate: s } = h(t);
@@ -1538,12 +1539,12 @@
           o.createElement(
             "div",
             { className: B().QAColumns },
-            o.createElement(J, { gidSession: t, bHalfOfFullPage: s }),
-            s && o.createElement(K, { gidSession: t })
+            o.createElement(W, { gidSession: t, bHalfOfFullPage: s }),
+            s && o.createElement(J, { gidSession: t })
           )
         );
       }
-      function K(e) {
+      function J(e) {
         const { gidSession: t } = e,
           {
             bUserCanModerate: n,
@@ -1567,7 +1568,7 @@
                   "div",
                   { className: B().QuestionList },
                   s.map((e) =>
-                    o.createElement(F, {
+                    o.createElement(z, {
                       key: e,
                       gidSession: t,
                       gidQuestion: e,
@@ -1589,7 +1590,7 @@
                   "div",
                   { className: B().QuestionList },
                   i.map((e) =>
-                    o.createElement(F, {
+                    o.createElement(z, {
                       key: e,
                       gidSession: t,
                       gidQuestion: e,
@@ -1603,7 +1604,7 @@
             )
           : null;
       }
-      function J(e) {
+      function W(e) {
         const { gidSession: t, bHalfOfFullPage: n } = e;
         A();
         const {
@@ -1670,8 +1671,8 @@
                   )
                 )
               : r
-              ? o.createElement(W, { fnAskQuestion: u })
-              : i && o.createElement(ee, null)
+              ? o.createElement($, { fnAskQuestion: u })
+              : i && o.createElement(te, null)
           ),
           c.length + m.length == 0
             ? o.createElement(
@@ -1692,7 +1693,7 @@
                   { className: B().QuestionList },
                   i
                     ? c.map((e) =>
-                        o.createElement(F, {
+                        o.createElement(z, {
                           key: e,
                           gidSession: t,
                           gidQuestion: e,
@@ -1717,7 +1718,7 @@
                       "div",
                       { className: B().QuestionList },
                       m.map((e) =>
-                        o.createElement(F, {
+                        o.createElement(z, {
                           key: e,
                           gidSession: t,
                           gidQuestion: e,
@@ -1732,7 +1733,7 @@
               )
         );
       }
-      function W(e) {
+      function $(e) {
         const [t, n] = o.useState(!1),
           i = (0, p.T)("QuestionBox");
         return o.createElement(
@@ -1743,7 +1744,7 @@
             { className: B().Description },
             (0, L.Xx)("#QAndA_HeaderDescription")
           ),
-          o.createElement($, {
+          o.createElement(ee, {
             strPrompt: (0, L.Xx)("#QAndA_QuestionPrompt"),
             fnSubmit: (t) =>
               (0, s.mG)(this, void 0, void 0, function* () {
@@ -1766,7 +1767,7 @@
           )
         );
       }
-      function $(e) {
+      function ee(e) {
         const { strPrompt: t, fnSubmit: n } = e,
           [i, a] = o.useState(""),
           [r, l] = o.useState(!1);
@@ -1809,7 +1810,7 @@
           )
         );
       }
-      function ee(e) {
+      function te(e) {
         return o.createElement(
           "div",
           { className: B().Description },

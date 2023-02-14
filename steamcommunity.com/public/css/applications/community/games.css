@@ -509,6 +509,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   }
   .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
     gap: 4px;
+    align-content: start;
   }
   .gameslistitems_GamesListItem_2-pQF
     .gameslistitems_Playtime_2Eeyh
@@ -522,6 +523,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     gap: 8px;
+    padding-bottom: var(--padding);
   }
   .gameslistitems_GamesListItem_2-pQF
     .gameslistitems_Playtime_2Eeyh
