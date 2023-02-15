@@ -21963,7 +21963,7 @@
             "h3",
             null,
             "Localized Branding Artwork: ",
-            d.createElement("span", null, "(1000 x 150)")
+            d.createElement("span", null, "(736 x 160)")
           ),
           d.createElement(
             "p",
@@ -49519,7 +49519,7 @@
       }
       n(55038);
       var Bs = n(62642);
-      const Ts = 45,
+      const Ts = 120,
         Ns = 10;
       class ks {
         constructor() {
@@ -49610,7 +49610,7 @@
                   !this.m_mapAppToLoadPromises.has(e) ||
                   (r.push(this.m_mapAppToLoadPromises.get(e)), !1)
               );
-              const e = i.splice(0, 100),
+              const e = i.splice(0, 5e3),
                 t = this.InternalLoadAppBatch(e);
               r.push(t),
                 l.push(t),
