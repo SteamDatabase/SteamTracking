@@ -3428,3 +3428,16 @@ html.tablet .agegate_content_descriptors_notes {
 	font: var(--gpText-BodyMedium);
 }
 
+html.tablet .modal_media_carousel {
+	display: none;
+	height: 100vh;
+	position: fixed;
+	vertical-align: middle;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 80% );
+}
+
+html.tablet #modalMediaCarouselContainer {
+	display: flex;
+}

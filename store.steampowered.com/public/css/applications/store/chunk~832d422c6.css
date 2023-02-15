@@ -353,9 +353,6 @@
   .nominationandvote_SteamAwardCategoryTitle_3hZED {
   padding-left: 8px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 body.v6.partner_events {
   background: #24282e;
 }

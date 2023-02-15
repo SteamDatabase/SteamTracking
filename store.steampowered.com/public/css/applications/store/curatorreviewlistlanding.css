@@ -93,9 +93,6 @@
   width: 100%;
   display: block;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .eventrow_OtherEventsCtn_1qNsZ {
   margin-top: 8vw;
 }
@@ -449,9 +446,6 @@
   padding-bottom: unset;
 }
 
-:root {
-  --basicui-header-height: 0px;
-}
 .curatorlist_CuratorListCtn_2gWFd {
   display: flex;
   flex-direction: column;

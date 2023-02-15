@@ -63,7 +63,11 @@
                 }
                 return r;
               })(t)),
-              (this._batch = null);
+              (this._batch = null),
+              (this.name = (function (e) {
+                if (e && e.name) return e.name;
+                return null;
+              })(t));
           }
           var t = e.prototype;
           return (
@@ -79,8 +83,7 @@
                   if (
                     null !== t &&
                     !t.hasDispatched &&
-                    t.keys.length < e._maxBatchSize &&
-                    (!t.cacheHits || t.cacheHits.length < e._maxBatchSize)
+                    t.keys.length < e._maxBatchSize
                   )
                     return t;
                   var r = { hasDispatched: !1, keys: [], callbacks: [] };
@@ -90,7 +93,20 @@
                       !(function (e, t) {
                         if (((t.hasDispatched = !0), 0 === t.keys.length))
                           return void c(t);
-                        var r = e._batchLoadFn(t.keys);
+                        var r;
+                        try {
+                          r = e._batchLoadFn(t.keys);
+                        } catch (r) {
+                          return a(
+                            e,
+                            t,
+                            new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function errored synchronously: " +
+                                String(r) +
+                                "."
+                            )
+                          );
+                        }
                         if (!r || "function" != typeof r.then)
                           return a(
                             e,
@@ -254,7 +270,7 @@
         i = r.n(o),
         l = r(67294),
         s = r(88767),
-        u = (r(92398), r(3389)),
+        u = (r(76796), r(3389)),
         C = (r(82946), r(93976)),
         h = r(90666);
       const f = new (i())(

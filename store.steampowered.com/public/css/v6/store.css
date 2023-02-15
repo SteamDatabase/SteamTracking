@@ -767,8 +767,17 @@ a#store_search_link img {
 	height: 44px;
 	overflow: hidden;
 	border-top: 1px solid #13242e;
+	margin-left: 3px;
+	margin-right: 3px;
 }
 
+.search_suggest .match_v2 {
+	background-color: #666666;
+}
+
+.search_suggest .match_category_top {
+	margin-top: 6px;
+}
 
 .search_suggest .match:hover,
 .search_suggest .match:focus,
@@ -778,22 +787,33 @@ a#store_search_link img {
 	background-color: #212d3d;
 }
 
-.search_suggest .match .match_img {
+.search_suggest .match_app .match_img img {
 	position: absolute;
 	left: 4px;
 	top: 4px;
+	width: 120px;
+	height: 45px;
 }
 
-.search_suggest .match .match_img img {
-	width: 120px;
+.search_suggest .match_creator .match_img img {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 53px;
+	height: 53px;
+}
+
+.search_suggest .match_tag .match_img img {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	width: 45px;
 	height: 45px;
 }
 
 .search_suggest .match .match_name {
 	position: absolute;
-	left: 128px;
 	top: 8px;
-	width: 258px;
 
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -801,6 +821,21 @@ a#store_search_link img {
 
 	font-size: 14px;
 	color: #ffffff;
+}
+
+.search_suggest .match_app .match_name {
+	left: 128px;
+	width: 258px;
+}
+
+.search_suggest .match_creator .match_name {
+	left: 53px;
+	width: 333px;
+}
+
+.search_suggest .match_tag .match_name {
+	left: 53px;
+	width: 333px;
 }
 
 .search_suggest .match .debug_spell_corrected {

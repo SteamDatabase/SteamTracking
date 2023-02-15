@@ -623,6 +623,7 @@ ${PARTNER_BASE_URL}marketing/message/${}
 ${PARTNER_BASE_URL}marketing/messagepreview/${gid}/
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
+${PARTNER_BASE_URL}optin/admin/edit/${pageid}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}?tab=manage
 ${PARTNER_BASE_URL}optin/admin/edit/${}
 ${PARTNER_BASE_URL}optin/ajaxadminupdate
@@ -645,6 +646,7 @@ ${PARTNER_BASE_URL}optin/ajaxupdateadditionalfeaturingapps
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistrationpayload/${}
+${PARTNER_BASE_URL}optin/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}optin/appreview/${}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
@@ -990,7 +992,7 @@ ${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}stats/support/
 ${STORE_BASE_URL}stats/support?json=1
 ${STORE_BASE_URL}stats/supportdata.json
-${STORE_BASE_URL}stats/userdata.json?days_back=3
+${STORE_BASE_URL}stats/userdata.json?days_back=${}
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steamaccount/addfunds
 ${STORE_BASE_URL}steamawards/
@@ -1905,8 +1907,10 @@ https://partner.steamgames.com/doc/marketing/event_tools/import
 https://partner.steamgames.com/doc/marketing/event_tools/stats
 https://partner.steamgames.com/doc/marketing/event_tools/visibility
 https://partner.steamgames.com/doc/marketing/pointsshopitems#gameprofile
+https://partner.steamgames.com/doc/marketing/upcoming_events
 https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/tips
 https://partner.steamgames.com/doc/marketing/upcoming_events/steam_scream
+https://partner.steamgames.com/doc/marketing/upcoming_events/themed_sales
 https://partner.steamgames.com/doc/resources/Sales_Feature_Beta
 https://partner.steamgames.com/doc/sitelicense/licensees/gettingstarted/licensemodelpc
 https://partner.steamgames.com/doc/sitelicense/licensees/signup

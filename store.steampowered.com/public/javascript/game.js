@@ -2179,11 +2179,79 @@ function BindFocusVideoOnTablet()
     } );
 }
 
+/* Shows a full screen version of the media carousel using a clone of the existing carousel's content */
+var modalMediaCarousel = null;
+const k_id_modal_media = '_lg';
+
+function GamepadShowModalMediaCarousel( elementID )
+{
+	// If carousel is up, dismiss it
+	if ( modalMediaCarousel && modalMediaCarousel.BIsActiveModal() )
+	{
+		modalMediaCarousel.Dismiss();
+
+		// Set focus in the small carousel to match position in the large carousel
+		document.getElementById( elementID ).focus();
+		return;
+	}
+
+	// Fill the modal carousel with content if it's empty
+	var $ModalCarouselContents = $J( '#modalMediaCarouselContents' );
+	if ( 0 == $ModalCarouselContents.length )
+	{
+		// clone the media carousel
+		$ModalCarouselContents = $J( '#carouselContainer' ).clone();
+
+		// set unique id's
+		$ModalCarouselContents.attr( 'id', 'modalMediaCarouselContents' );
+		$ModalCarouselContents.find( '#carouselItems' ).attr( 'id', 'modalMediaCarouselItems' );
+		$ModalCarouselContents.find( 'img,video' ).each( function(){
+			this.id += k_id_modal_media;
+		});
+
+		// remove any other divs such as the existing focusing ring
+		$ModalCarouselContents.find( '#modalMediaCarouselItems' ).find( 'div' ).each( function(){
+			this.remove();
+		});
+
+		// add the cloned content to the DOM
+		$ModalCarouselContents.appendTo( '#modalMediaCarousel' );
+	}
+
+	var $Content= $J( '#modalMediaCarousel' );
+	$Content.detach();
+	$Content.css( 'display', 'flex' );
+
+	// scroll to the selected image after the dialog is shown
+	window.setTimeout( function () {
+		var image = document.getElementById( elementID + k_id_modal_media );
+		if ( image )
+			image.focus();
+	}, 0 );
+
+	modalMediaCarousel = GPShowFullScreenModal( $Content ).always(
+		function() {
+			// save it away again for later
+			$Content.hide();
+			$J( document.body ).append( $Content );
+		}
+	);
+}
+
+// returns the ID for the element in the modal carousel if that is up, otherwise no change
+function GamepadVideoGetID( videoID )
+{
+	if ( modalMediaCarousel && modalMediaCarousel.BIsActiveModal() )
+		return videoID + k_id_modal_media;
+
+	return videoID;
+}
+
 // enable seeking via dpad
 function GamepadVideoOnDirection( event /* GamepadEvent */, videoID )
 {
 	// focus should be on a video element
-	var video = $J( '#' + videoID )[0];
+	var video = $J( '#' + GamepadVideoGetID( videoID ) )[0];
 
 	// only handle the navigation if we're in fullscreen
 	if ( video && ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement ) )
@@ -2226,7 +2294,7 @@ function GamepadVideoOnCancel( videoID )
 function GamepadVideoSetFullscreen( videoID, bFullscreen )
 {
 	// focus should be on a video element
-	var video = $J( '#' + videoID )[0];
+	var video = $J( '#' + GamepadVideoGetID( videoID ) )[0];
 	if ( !video )
 		return;
 
@@ -2264,14 +2332,14 @@ function GamepadVideoSetFullscreen( videoID, bFullscreen )
 
 function GamepadVideoPause( videoID )
 {
-	var video = $J( '#' + videoID )[0];
+	var video = $J( '#' + GamepadVideoGetID( videoID ) )[0];
 	if ( video && !video.paused )
 		video.pause(); 
 }
 
 function GamepadVideoTogglePlay( videoID )
 {
-	var video = $J( '#' + videoID )[0];
+	var video = $J( '#' + GamepadVideoGetID( videoID ) )[0];
 	if ( !video )
 		return;
 
@@ -2287,7 +2355,7 @@ function GamepadVideoTogglePlay( videoID )
 }
 function GamepadVideoToggleMute( videoID )
 {
-	var video = $J( '#' + videoID )[0];
+	var video = $J( '#' + GamepadVideoGetID( videoID ) )[0];
 	if ( video )
 		video.muted = !video.muted;
 }

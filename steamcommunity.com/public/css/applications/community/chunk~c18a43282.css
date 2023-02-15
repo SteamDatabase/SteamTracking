@@ -1,6 +1,3 @@
-:root {
-  --basicui-header-height: 0px;
-}
 .suggestdialog_mentionDialogPosition_1bkUR {
   position: absolute;
   left: 0;
@@ -76,9 +73,6 @@
 }
 span.suggestdialog_mentionSearchMatch_mBrO4 {
   color: #dfe3e6;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .addonpicker_Picker_3acyH {
   border-radius: 6px;
@@ -475,9 +469,6 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   display: inline-block;
   margin-right: 8px;
   padding: 0 4px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .chatentry_chatEntryControls_2gP0D {
   position: relative;
@@ -2416,9 +2407,6 @@ input.imageseachinput_SearchInput_1MoNl {
 .imageseachinput_PickerTitle_2GOa_ {
   padding: 3px 0px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 @media only screen and (max-width: 768px) {
   .facetedbrowse_FacetedBrowseInnerCtn_hWbTI {
     display: grid;
@@ -2936,9 +2924,6 @@ a.bbcodes_LinkButton_lMVeY:hover {
   color: #fff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .deckverified_BannerContainer_2b4eh {
   padding: 12px 0px;
 }
@@ -3238,9 +3223,6 @@ a.bbcodes_LinkButton_lMVeY:hover {
 }
 .footericons_ChordSummary_2sFpI.footericons_SizeSmall_3sify {
   margin-right: 20px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .gamehover_HoverContentTransition_bHRhS {
   height: 100%;
@@ -3584,9 +3566,6 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 .gamehover_GameHoverCreatorFollowButtonCtn_O8IT4 a > img {
   height: 24px;
   margin-right: 8px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk {
   display: flex;
@@ -6751,9 +6730,6 @@ html.touch
   background: linear-gradient(to right, #b6da83 5%, #99cf57 95%);
   color: #000;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .BasicUI .salepg_storenav {
   z-index: 5;

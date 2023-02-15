@@ -2224,7 +2224,7 @@
       })(T || (T = {}));
       var x = r(1105),
         W = r.n(x),
-        D = r(92398);
+        D = r(76796);
       function I(e) {
         const {
             transport: t,
@@ -2647,7 +2647,8 @@
             onGetMachineAuth: e.onGetMachineAuth,
           }),
           [c, m] = (0, n.useState)(0),
-          [d, g] = (0, n.useState)(
+          d = "Login_RememberMeSetting",
+          [g, f] = (0, n.useState)(
             null !==
               (i =
                 null !==
@@ -2660,53 +2661,55 @@
               ? i
               : ""
           ),
-          [f, _] = (0, n.useState)(""),
-          [b, p] = (0, n.useState)(s),
-          [y, B] = (0, n.useState)(!u.De.IN_STEAMUI),
-          S = !(0 === l.eStatus || 1 === l.eStatus || 2 === l.eStatus);
+          [_, b] = (0, n.useState)(""),
+          [p, y] = (0, n.useState)(s && "0" != localStorage.getItem(d)),
+          [B, S] = (0, n.useState)(!u.De.IN_STEAMUI),
+          E = !(0 === l.eStatus || 1 === l.eStatus || 2 === l.eStatus);
+        (0, n.useEffect)(() => {
+          var t;
+          (null === (t = e.refreshInfo) || void 0 === t
+            ? void 0
+            : t.login_token_id) &&
+            l.setTokenToRevoke(e.refreshInfo.login_token_id);
+        }, [e.refreshInfo]);
         return (
-          (0, n.useEffect)(() => {
-            var t;
-            (null === (t = e.refreshInfo) || void 0 === t
-              ? void 0
-              : t.login_token_id) &&
-              l.setTokenToRevoke(e.refreshInfo.login_token_id);
-          }, [e.refreshInfo]),
           u.De.IN_STEAMUI &&
             (0, n.useEffect)(() => {
               !e.refreshInfo && SteamClient.Auth.GetCommandLineCredentials
                 ? SteamClient.Auth.GetCommandLineCredentials().then(
                     (e) => {
-                      if ((e.username && g(e.username), e.password)) {
+                      if ((e.username && f(e.username), e.password)) {
                         const t = !1;
                         l.start(e.username, e.password, t);
                       }
-                      B(!0);
+                      S(!0);
                     },
                     () => {
-                      B(!0);
+                      S(!0);
                     }
                   )
-                : B(!0);
+                : S(!0);
             }, []),
           {
             password: l,
             onComplete: o,
             eQRStatus: c,
             onQRStatusChange: m,
-            strAccountName: d,
-            onAccountNameChange: g,
-            strPassword: f,
-            onPasswordChange: _,
-            bRememberMe: b,
-            onRememberMeChange: p,
-            bHaveLastCreds: y,
+            strAccountName: g,
+            onAccountNameChange: f,
+            strPassword: _,
+            onPasswordChange: b,
+            bRememberMe: p,
+            onRememberMeChange: (e) => {
+              y(e), localStorage.setItem(d, e ? "1" : "0");
+            },
+            bHaveLastCreds: B,
             onPasswordSubmit: () =>
-              d && f ? l.start(d, f, b) : Promise.resolve(0),
-            bInPasswordFlow: S,
+              g && _ ? l.start(g, _, p) : Promise.resolve(0),
+            bInPasswordFlow: E,
             onTryOffline: () => {
-              console.log(`Logging in offline with username ${d}`),
-                SteamClient.User.SetLoginCredentials(d, f, b);
+              console.log(`Logging in offline with username ${g}`),
+                SteamClient.User.SetLoginCredentials(g, _, p);
               SteamClient.User.StartOffline(!0);
             },
           }

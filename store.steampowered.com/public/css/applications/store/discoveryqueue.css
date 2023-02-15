@@ -42,9 +42,6 @@
   color: #fff;
   display: none;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 {
   flex-direction: column;
   display: flex;
@@ -794,9 +791,6 @@
   letter-spacing: 0.1ch;
   font-weight: bold;
   opacity: 80%;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .discoveryqueueappwidget_DiscoveryQueueWidgetCtn_1LXqx {
   display: flex;

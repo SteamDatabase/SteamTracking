@@ -561,6 +561,41 @@ function _BuildDialogButton( strText, bActive, rgOptions )
 	return elButton;
 }
 
+/**	Implemented for Gamepad: show content in a fullscreen, borderless, modal which gets navigation support.  
+ *  Used on the app details page to show screenshots in full screen.
+ *  Closing the dialog resolves deferred with done().
+ *
+ * @returns CModal
+ */
+function GPShowFullScreenModal( content )
+{
+	var deferred = new jQuery.Deferred();
+	var fnOK = function() { deferred.resolve(); };
+
+	var Modal = _BuilGPFullScreenModal( content, fnOK );
+	deferred.always( function() { Modal.Dismiss(); } );
+	Modal.Show();
+
+	// attach the deferred's events to the modal
+	deferred.promise( Modal );
+
+	return Modal;
+}
+
+function _BuilGPFullScreenModal( content, fnOnCancel )
+{
+		var $Dialog = $J('<div/>').append( $J('<div/>', {'style': 'display:flex'} ).append( content ) );
+	var Modal = new CModal( $Dialog );
+
+	Modal.SetRemoveContentOnDismissal( true );
+	if ( fnOnCancel )
+	{
+		Modal.OnDismiss( fnOnCancel );
+	}
+
+	return Modal;
+}
+
 /* modal params:
 	bExplicitDismissalOnly - by default, clicking outside of the modal dismisses it.  Set this to true to override that behavior
 	bIgnoreResizeEvents - don't resize the modal when the window resizes

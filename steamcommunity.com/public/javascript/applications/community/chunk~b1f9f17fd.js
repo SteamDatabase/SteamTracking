@@ -766,7 +766,7 @@
       "use strict";
       a.d(t, { F: () => n });
       var n;
-      a(92398);
+      a(76796);
       !(function (e) {
         (e[(e.k_EPurchaseReservationState_NotReserved = 0)] =
           "k_EPurchaseReservationState_NotReserved"),
@@ -791,7 +791,7 @@
         i = (a(49186), a(9669)),
         r = a.n(i),
         o = a(67294),
-        s = (a(26149), a(92398), a(82946), a(93976)),
+        s = (a(26149), a(76796), a(82946), a(93976)),
         l = a(99533),
         c = a(64839),
         d = a(90666);
@@ -1105,7 +1105,7 @@
         i = a(9669),
         r = a.n(i),
         o = a(67294),
-        s = (a(26149), a(92398), a(52841)),
+        s = (a(26149), a(76796), a(52841)),
         l = (a(82946), a(93976)),
         c = a(99533),
         d = a(64839),
@@ -1756,7 +1756,7 @@
     11910: (e, t, a) => {
       "use strict";
       a.d(t, { ZP: () => D, Su: () => G });
-      a(67294), a(26149), a(92398), a(49186);
+      a(67294), a(26149), a(76796), a(49186);
       var n = a(33019),
         i = a(40110);
       const r = n.Message;
@@ -2946,7 +2946,7 @@
       var n = a(70655),
         i = a(9669),
         r = a.n(i),
-        o = (a(92398), a(90666)),
+        o = (a(76796), a(90666)),
         s = a(22188),
         l = (a(82946), a(93976)),
         c = a(3389);
@@ -3165,7 +3165,7 @@
       var n,
         i = a(70655),
         r = a(22188),
-        o = (a(67294), a(92398), a(49186), a(77520)),
+        o = (a(67294), a(76796), a(49186), a(77520)),
         s = a(99533),
         l = a(64839),
         c = a(90666),
@@ -3411,7 +3411,7 @@
       a.d(t, { Hy: () => g, mo: () => p });
       var n = a(70655),
         i = a(67294),
-        r = (a(92398), a(58114)),
+        r = (a(76796), a(58114)),
         o = a(73812),
         s = (a(46321), a(65497)),
         l = a(77520),
@@ -3557,7 +3557,7 @@
         m = a(13596),
         u = (a(49186), a(90666)),
         _ = a(93976),
-        p = (a(92398), a(3389), a(22188), a(9669)),
+        p = (a(76796), a(3389), a(22188), a(9669)),
         g = a.n(p);
       a(82946);
       const v = new (class {
@@ -4300,7 +4300,7 @@
       a.d(t, { x: () => C, K: () => b });
       var n,
         i = a(67294),
-        r = (a(92398), a(49186), a(3389)),
+        r = (a(76796), a(49186), a(3389)),
         o = a(70655),
         s = a(9669),
         l = a.n(s),
@@ -4713,7 +4713,7 @@
         s = a(13271),
         l = a(67294),
         c = a(26149),
-        d = (a(92398), a(84070)),
+        d = (a(76796), a(84070)),
         m = a(49186),
         u = (a(3389), a(76776)),
         _ = (a(29139), a(5525)),
@@ -5901,7 +5901,7 @@
         l = a(26273),
         c = (a(3356), a(73998)),
         d = a(99646),
-        m = a(92398),
+        m = a(76796),
         u = a(77442),
         _ = a(67833),
         p = a(52114),
@@ -16518,6 +16518,8 @@
             (this.m_mapDLCPromise = new Map()),
             (this.m_mapDLCForApp = new Map()),
             (this.m_mapDLCForAppPromise = new Map()),
+            (this.m_mapPopularDLCByApp = new Map()),
+            (this.m_mapPopularDLCByAppPromise = new Map()),
             !this.m_serviceTransport)
           ) {
             const e = (0, I.kQ)("loyalty_webapi_token", "application_config");
@@ -16951,6 +16953,61 @@
             return { rgDLC: r, bMoreAvailable: o };
           });
         }
+        BIsPopularDLCByAppLoaded(e) {
+          return this.m_mapPopularDLCByApp.has(JSON.stringify(e));
+        }
+        GetPopularDLCByApp(e) {
+          return this.m_mapPopularDLCByApp.get(JSON.stringify(e));
+        }
+        LoadPopularDLCByApp(e, t, a) {
+          return (0, T.mG)(this, void 0, void 0, function* () {
+            const n = JSON.stringify(e);
+            return (
+              this.m_mapPopularDLCByAppPromise.has(n) ||
+                this.m_mapPopularDLCByAppPromise.set(
+                  n,
+                  this.InternalLoadPopularDLCByApp(e, t, a)
+                ),
+              this.m_mapPopularDLCByAppPromise.get(n)
+            );
+          });
+        }
+        InternalLoadPopularDLCByApp(e, t, a) {
+          return (0, T.mG)(this, void 0, void 0, function* () {
+            let t = [],
+              a = null;
+            try {
+              yield H.jg.Get().HintLoad();
+              const e = `${I.De.STORE_BASE_URL}contenthub/ajaxgetdlcforyoumaincapsule`,
+                n = {
+                  origin: self.origin,
+                  count: 5e3,
+                  forsteamid: (0, I.kQ)(
+                    "dlcforyou_forsteamid",
+                    "application_config"
+                  ),
+                },
+                i = yield A().get(e, { params: n, withCredentials: !0 });
+              if (200 === i.status && 1 === i.data.success) {
+                if (i.data.dlc_appids && i.data.parent_appids)
+                  for (const e of i.data.parent_appids) {
+                    const a = Number(e);
+                    H.jg.Get().BIsGameOwned(a) &&
+                      t.push(i.data.dlc_appids[a].map((e) => Number(e)));
+                  }
+              } else a = (0, V.l)(i);
+            } catch (e) {
+              a = (0, V.l)(e);
+            }
+            this.m_mapPopularDLCByApp.set(JSON.stringify(e), t),
+              a &&
+                console.error(
+                  "CDLCForYouStore.InternalLoadPopularDLCByApp failed: " +
+                    a.strErrorMsg,
+                  a
+                );
+          });
+        }
         BIsDLCStatsLoaded() {
           return Boolean(this.m_dlcStats);
         }
@@ -17056,21 +17113,35 @@
                     ? void 0
                     : c.group_by_parent_app
                 )
-                  ? sr
-                      .Get()
-                      .LoadDLCForAppsFiltered(
-                        m,
-                        Object.assign(Object.assign({}, t.dlc_for_you_data), {
-                          parent_app_sort: i,
-                        }),
-                        r
-                      )
-                      .then((e) => {
-                        u(sr.Get().GetPlaytime()),
-                          p(e.rgDLC),
-                          v(e.bMoreAvailable),
-                          d(!1);
-                      })
+                  ? "popular" === i
+                    ? sr
+                        .Get()
+                        .LoadPopularDLCByApp(
+                          m,
+                          Object.assign(Object.assign({}, t.dlc_for_you_data), {
+                            parent_app_sort: i,
+                          }),
+                          r
+                        )
+                        .then(() => {
+                          const e = sr.Get().GetPopularDLCByApp(m);
+                          p(e.slice(0, r)), v(e.length > r), d(!1);
+                        })
+                    : sr
+                        .Get()
+                        .LoadDLCForAppsFiltered(
+                          m,
+                          Object.assign(Object.assign({}, t.dlc_for_you_data), {
+                            parent_app_sort: i,
+                          }),
+                          r
+                        )
+                        .then((e) => {
+                          u(sr.Get().GetPlaytime()),
+                            p(e.rgDLC),
+                            v(e.bMoreAvailable),
+                            d(!1);
+                        })
                   : sr
                       .Get()
                       .LoadDLC(m)
@@ -18615,7 +18686,7 @@
       "use strict";
       a.d(t, { E: () => G, T: () => D });
       var n = a(67294),
-        i = (a(92398), a(49186), a(52841)),
+        i = (a(76796), a(49186), a(52841)),
         r = a(67833),
         o = a(77636),
         s = a(73737),
@@ -19127,7 +19198,7 @@
       "use strict";
       a.d(t, { C: () => m, Y: () => d });
       var n = a(67294),
-        i = (a(92398), a(49186), a(52841), a(73737)),
+        i = (a(76796), a(49186), a(52841), a(73737)),
         r = a(41311),
         o = a(32548),
         s = a(13596),
@@ -19360,7 +19431,7 @@
         o = a(29323),
         s = a(67294),
         l = a(26149),
-        c = a(92398),
+        c = a(76796),
         d = (a(49186), a(3389)),
         m = a(67833),
         u = a(76776),
@@ -20723,7 +20794,7 @@
         i = a(9669),
         r = a.n(i),
         o = a(67294),
-        s = (a(26149), a(92398), a(49186), a(3389)),
+        s = (a(26149), a(76796), a(49186), a(3389)),
         l = (a(82946), a(93976)),
         c = a(90666);
       class d {
@@ -23174,7 +23245,7 @@
         o = a(50153);
       var s = a(29323),
         l = a(67294),
-        c = (a(26149), a(92398), a(49186), a(48341)),
+        c = (a(26149), a(76796), a(49186), a(48341)),
         d = a(32548),
         m = a(34133),
         u = a.n(m),
@@ -24608,7 +24679,7 @@
         b = a(50153),
         y = a(65659),
         C = a(3389),
-        f = a(92398),
+        f = a(76796),
         D = a(98300);
       function G(e, t, a, n) {
         const i = JSON.parse(JSON.stringify(e)),
@@ -31527,8 +31598,7 @@
           }),
           i && d.createElement(Oa, Object.assign({}, e)),
           d.createElement(_.ji, {
-            label:
-              "This is a limted time sale event that overrides an individual hub",
+            label: "This is a limited time sale event",
             tooltip:
               "If checked, this sale page will be used when rendering content hubs only during the time period specified in the Options tab of the sale editor. Check this if you are defining a takeover for a seasonal sale, or if you're defining a theme sale.",
             checked: r,
@@ -35755,7 +35825,7 @@
         l = a(9355),
         c = a(97914),
         d = (a(49186), a(13596)),
-        m = (a(92398), a(7200), a(14767)),
+        m = (a(76796), a(7200), a(14767)),
         u = a(29323),
         _ = a(14627),
         p = a(13748),
@@ -36944,7 +37014,7 @@
         s = a(59301),
         l = a(67294),
         c = a(26149),
-        d = a(92398),
+        d = a(76796),
         m = (a(92685), a(5525)),
         u = a(11910),
         _ = a(21735),

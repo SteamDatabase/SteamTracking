@@ -1850,6 +1850,137 @@ a {
 #application_root {
   min-height: inherit;
 }
+.projectdatasettings_TextButton_3p1VO {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectdatasettings_TextButton_3p1VO:hover {
+  color: #fff;
+}
+.projectdatasettings_SteamLearnButton_17FIU {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projectdatasettings_SteamLearnButton_17FIU.projectdatasettings_Hidden_3OO4t {
+  opacity: 0;
+}
+.projectdatasettings_SteamLearnButton_17FIU.projectdatasettings_Large_j-VIP {
+  font-size: 14px;
+}
+.projectdatasettings_SteamLearnButton_17FIU.projectdatasettings_Medium_3TgJQ {
+  font-size: 13px;
+}
+.projectdatasettings_SteamLearnButton_17FIU.projectdatasettings_Blue_2J_3S {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.projectdatasettings_SteamLearnButton_17FIU.projectdatasettings_Red_2S7YS {
+  background-color: #c64444;
+  color: #000;
+}
+.projectdatasettings_SteamLearnButton_17FIU:hover.projectdatasettings_Blue_2J_3S {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.projectdatasettings_SteamLearnButton_17FIU:hover.projectdatasettings_Red_2S7YS {
+  background-color: #f93d3d;
+  color: #000;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s {
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  padding: 20px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s
+  .projectdatasettings_Separator_3q6kg {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0px;
+  background-color: #444;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s
+  .projectdatasettings_OptionHeader_32ipv {
+  font-size: 18px;
+  color: #67c1f5;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s
+  .projectdatasettings_OptionDesc_Ye-6h {
+  font-size: 15px;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s
+  .projectdatasettings_OptionBlock_E8-ta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s
+  .projectdatasettings_OptionBlock_E8-ta
+  .projectdatasettings_OptionDetails_2xT8R {
+  font-size: 14px;
+  color: #ac966a;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s
+  .projectdatasettings_OptionBlock_E8-ta
+  .projectdatasettings_ValueInput_MziGJ {
+  width: 70px;
+  height: 20px;
+  text-align: right;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s
+  .projectdatasettings_OptionBlock_E8-ta
+  .projectdatasettings_ValueInput_MziGJ
+  .projectdatasettings_Wide_UXj_O {
+  width: 100px;
+}
+.projectdatasettings_ProjectDataSettingsPage_3bCMu
+  .projectdatasettings_ProjectDataSettingsBody_3PJ1s
+  .projectdatasettings_OptionBlock_E8-ta
+  .projectdatasettings_ValueInput_MziGJ.projectdatasettings_Invalid_10M0u {
+  color: red;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+#application_root {
+  min-height: inherit;
+}
 .projectmanualtrain_TextButton_3t2Zo {
   width: fit-content;
   cursor: pointer;

@@ -391,6 +391,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   background: #373c44;
   box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
   margin-top: 2px;
+  margin-bottom: 2px;
 }
 .hoverposition_HoverPosition_3XUAN {
   position: fixed;
@@ -539,6 +540,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
     #0e141b 40%
   );
 }
+.pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.pagedsettings_NoPadding_1iWhH {
+  padding: 0;
+}
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader {
   margin-right: 0;
 }
@@ -611,9 +615,6 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   margin-bottom: 14px;
   margin-right: 24px;
   flex-shrink: 0;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_20uOg {
   from {
@@ -1140,6 +1141,11 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_S-_La .Focusable {
   scroll-margin: 20px 0 55px 0;
 }
+.gamepaddialog_Field_S-_La.DesktopUI .DialogButton,
+.DesktopUI .gamepaddialog_Field_S-_La .DialogButton {
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
 .gamepaddialog_FieldClickTarget_TN6vN {
   position: absolute;
   left: 0;
@@ -1260,7 +1266,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   position: absolute;
   left: 0;
   right: 0;
-  top: var(--basicui-header-height);
+  top: var(--basicui-header-height, 0px);
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -1447,6 +1453,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_ControlsListOuterPanel_2Mvpu {
   --controls-list-spacing: 0px;
+  --controls-child-max-width: $gamepadFieldControlMinWidth;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1457,6 +1464,9 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_ControlsListOuterPanel_2Mvpu.gamepaddialog_ExtraSpacing_3YMmG {
   --controls-list-spacing: 16px;
+}
+.gamepaddialog_ControlsListOuterPanel_2Mvpu.gamepaddialog_ItemMaxSizeDesktop_LFWdf {
+  --controls-child-max-width: 200px;
 }
 .gamepaddialog_ControlsListOuterPanel_2Mvpu.gamepaddialog_AlignRight_4eBGA {
   margin-right: calc(-1 * var(--controls-list-spacing));
@@ -1472,7 +1482,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_ControlsListOuterPanel_2Mvpu
   .gamepaddialog_ControlsListChild_XvRso {
-  max-width: 250px;
+  max-width: var(--controls-child-max-width);
   flex-grow: 1;
   margin-bottom: var(--controls-list-spacing);
 }
@@ -1497,11 +1507,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   .gamepaddialog_ControlsListChild_XvRso {
   margin-left: calc(0.5 * var(--controls-list-spacing));
   margin-right: calc(0.5 * var(--controls-list-spacing));
-}
-.gamepaddialog_BigButtons_3XsWM {
-  max-width: 250px;
-  flex-grow: 1;
-  margin-bottom: var(--controls-list-spacing);
 }
 .gamepaddialog_BottomButtons_3_Evp.gamepaddialog_StandardPadding_XRBFu {
   padding-top: 40px;
@@ -1631,9 +1636,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepadui_svg_library_GenericGamepadHighlight_1zfyD {
   fill: #4897d2;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 button.gamepaddropdown_DropDownControlButton_28bny.DialogButton {
   padding: 10px 16px;
@@ -2240,9 +2242,6 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
     color: #fff;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_3M5nC {
   from {
     background: #3d4450;
@@ -2333,11 +2332,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   overflow-y: auto;
   scroll-padding: 56px 0px;
   flex-direction: column;
-  padding-top: calc(24px + var(--basicui-header-height));
+  padding-top: calc(24px + var(--basicui-header-height, 0px));
 }
 .DialogContent.gamepadpagedsettings_PagedSettingsDialog_PageContent_wIOLO.gamepadpagedsettings_NoPadding_2BpB- {
   padding: 0;
-  padding-top: calc(0px + var(--basicui-header-height));
+  padding-top: calc(0px + var(--basicui-header-height, 0px));
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListColumn_2EZ3o {
   background: #23262e;
@@ -2348,7 +2347,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   flex-direction: column;
   position: relative;
   border-right: 1px solid #0e141b;
-  padding-top: calc(0px + var(--basicui-header-height));
+  padding-top: calc(0px + var(--basicui-header-height, 0px));
 }
 .gamepadpagedsettings_PagedSettingsDialog_Title_1Px9u {
   color: #67707b;
@@ -2649,7 +2648,7 @@ img {
   min-width: 32px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4e5157;
+  background-color: #4e5157;
 }
 ::-webkit-scrollbar-corner {
   background: #202020;
@@ -2907,6 +2906,9 @@ button.DialogButton::-moz-focus-inner {
 .ModalDialogPopup .ModalPosition_Dismiss {
   display: none;
 }
+.ModalDialogPopup .FullModalOverlay .ModalPosition_Dismiss {
+  display: block;
+}
 .ModalPosition_Dismiss {
   position: absolute;
   right: 4px;
@@ -3111,7 +3113,8 @@ button.DialogButton::-moz-focus-inner {
   color: #4297f8;
 }
 .DialogFooter {
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
   flex-shrink: 0;
 }
 .DialogBodyText {

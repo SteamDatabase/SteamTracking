@@ -275,9 +275,6 @@
     transform: translateY(0px);
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .personastatusicons_PersonaStatusIcon_1YsWj {
   width: 16px;
   height: 16px;
@@ -360,12 +357,6 @@
   .SVGIcon_BigPicture
   path {
   fill: #4cb4ff;
-}
-:root {
-  --basicui-header-height: 0px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .personanameandstatus_statusAndName_3n8q8 {
   display: flex;

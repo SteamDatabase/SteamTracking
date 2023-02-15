@@ -4,6 +4,18 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [9035],
   {
+    4821: (e) => {
+      e.exports = {
+        WhitelistNumber: "reorderablelist_WhitelistNumber_1ZU2Q",
+        WhitelistCtn: "reorderablelist_WhitelistCtn_7i0GR",
+        WhitelistRow: "reorderablelist_WhitelistRow_3m2mx",
+        Grabbable: "reorderablelist_Grabbable_1_TyG",
+        Grabbing: "reorderablelist_Grabbing_2Ir2N",
+        DisabledGrab: "reorderablelist_DisabledGrab_2VzwU",
+        WhitelistAvatar: "reorderablelist_WhitelistAvatar_29uaB",
+        ButtonCtn: "reorderablelist_ButtonCtn_27xG1",
+      };
+    },
     69491: (e) => {
       e.exports = {
         v6: "shared_common_v6_3r3Le",
@@ -89,18 +101,18 @@
       t.d(r, { V: () => n });
       var o = t(67294),
         a = t(7573),
-        c = t(50732),
-        s = t.n(c);
+        s = t(50732),
+        c = t.n(s);
       const n = o.memo(function (e) {
         const {
           className: r,
           size: t,
-          string: c,
+          string: s,
           position: n,
           static: b,
           msDelayAppear: m,
         } = e;
-        let d = [s().LoadingWrapper, "SteamLogoThrobber", l(t)];
+        let d = [c().LoadingWrapper, "SteamLogoThrobber", l(t)];
         const [u, h] = o.useState(!m);
         return (
           (0, o.useEffect)(() => {
@@ -108,16 +120,16 @@
             const e = setTimeout(() => h(!0), m);
             return () => clearTimeout(e);
           }, [m, u]),
-          void 0 === c && d.push(s().noString),
+          void 0 === s && d.push(c().noString),
           r && d.push(r),
-          b && d.push(s().Static),
+          b && d.push(c().Static),
           o.createElement(
             "div",
             {
               className: (0, a.Z)(
-                "center" == n && s().throbber_center_wrapper,
-                m && s().ThrobberDelayAppear,
-                u && s().Visible
+                "center" == n && c().throbber_center_wrapper,
+                m && c().ThrobberDelayAppear,
+                u && c().Visible
               ),
             },
             u &&
@@ -126,28 +138,28 @@
                 { className: d.join(" ") },
                 o.createElement(
                   "div",
-                  { className: s().Throbber },
-                  o.createElement(i, { className: s().base }),
-                  o.createElement(i, { className: s().blur })
+                  { className: c().Throbber },
+                  o.createElement(i, { className: c().base }),
+                  o.createElement(i, { className: c().blur })
                 )
               ),
-            Boolean(c) &&
-              o.createElement("div", { className: s().ThrobberText }, c)
+            Boolean(s) &&
+              o.createElement("div", { className: c().ThrobberText }, s)
           )
         );
       });
       function l(e) {
         switch (e) {
           case "small":
-            return s().throbber_small;
+            return c().throbber_small;
           case "medium":
-            return s().throbber_medium;
+            return c().throbber_medium;
           case "xlarge":
-            return s().throbber_xlarge;
+            return c().throbber_xlarge;
           case "xxlarge":
-            return s().throbber_xxlarge;
+            return c().throbber_xxlarge;
           default:
-            return s().throbber_large;
+            return c().throbber_large;
         }
       }
       function i(e) {
@@ -169,9 +181,9 @@
             },
             o.createElement(
               "g",
-              { className: s().partCircle },
+              { className: c().partCircle },
               o.createElement("path", {
-                className: s().roundOuter,
+                className: c().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -179,7 +191,7 @@
                 d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               o.createElement("path", {
-                className: s().roundOuter,
+                className: c().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -187,7 +199,7 @@
                 d: "M201.432,101.166",
               }),
               o.createElement("path", {
-                className: s().roundOuter,
+                className: c().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -197,9 +209,9 @@
             ),
             o.createElement(
               "g",
-              { className: s().mainOutline },
+              { className: c().mainOutline },
               o.createElement("path", {
-                className: s().roundFill,
+                className: c().roundFill,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -207,7 +219,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundOuterOutline,
+                className: c().roundOuterOutline,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -216,7 +228,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber01,
+                className: c().roundThrobber01,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -225,7 +237,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber02,
+                className: c().roundThrobber02,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -234,7 +246,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber03,
+                className: c().roundThrobber03,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -243,7 +255,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber04,
+                className: c().roundThrobber04,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -252,7 +264,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber05,
+                className: c().roundThrobber05,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -261,7 +273,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber06,
+                className: c().roundThrobber06,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -270,7 +282,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber07,
+                className: c().roundThrobber07,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -279,7 +291,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber08,
+                className: c().roundThrobber08,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -288,7 +300,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber09,
+                className: c().roundThrobber09,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -297,7 +309,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber10,
+                className: c().roundThrobber10,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -306,7 +318,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber11,
+                className: c().roundThrobber11,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -315,7 +327,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber12,
+                className: c().roundThrobber12,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -324,7 +336,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber13,
+                className: c().roundThrobber13,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -333,7 +345,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber14,
+                className: c().roundThrobber14,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -342,7 +354,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: s().roundThrobber15,
+                className: c().roundThrobber15,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -353,7 +365,7 @@
             ),
             o.createElement(
               "g",
-              { className: s().bottomCircle },
+              { className: c().bottomCircle },
               o.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -361,7 +373,7 @@
             ),
             o.createElement(
               "g",
-              { className: s().topCircle },
+              { className: c().topCircle },
               o.createElement("circle", {
                 fill: "none",
                 stroke: "#ffffff",
@@ -382,12 +394,12 @@
     },
     93976: (e, r, t) => {
       "use strict";
-      t.d(r, { l: () => s });
+      t.d(r, { l: () => c });
       t(26149);
       var o = t(9669),
         a = t.n(o),
-        c = t(58114);
-      function s(e) {
+        s = t(58114);
+      function c(e) {
         if (a().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
@@ -431,7 +443,7 @@
               console.error(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof c.gA)
+            if ("object" == typeof e && e instanceof s.gA)
               return {
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
@@ -452,9 +464,9 @@
       t.r(r), t.d(r, { default: () => p });
       var o = t(62642),
         a = t(67294),
-        c = t(79756),
-        s = t(95018),
-        n = t.n(s),
+        s = t(24762),
+        c = t(95018),
+        n = t.n(c),
         l = t(22453),
         i = t(91340),
         b = t(41414),
@@ -463,17 +475,17 @@
         u = t(13596),
         h = t(64839),
         f = t(64782),
-        g = t(3912),
-        _ = t.n(g);
+        _ = t(3912),
+        g = t.n(_);
       function p() {
         const [e, r] = a.useState(),
-          [t, c] = a.useState(!1),
-          [s, i] = a.useState(!1),
+          [t, s] = a.useState(!1),
+          [c, i] = a.useState(!1),
           [m, h] = a.useState(!1);
         return (
           a.useEffect(() => {
             (0, o.X_)().then((e) => {
-              r(e.rgCategories), h(e.bHasUnpublishedChanges), c(!0);
+              r(e.rgCategories), h(e.bHasUnpublishedChanges), s(!0);
             });
           }, []),
           t
@@ -485,7 +497,7 @@
                   { className: n().PageTitle },
                   "Content Hub Categories"
                 ),
-                a.createElement("hr", { className: _().TitleHR }),
+                a.createElement("hr", { className: g().TitleHR }),
                 a.createElement(
                   "p",
                   null,
@@ -506,13 +518,13 @@
                 m &&
                   a.createElement(
                     "div",
-                    { className: _().UnpublishedChangesNotice },
+                    { className: g().UnpublishedChangesNotice },
                     "You have unpublished changes. Click Publish below to publish and make them available to users."
                   ),
                 a.createElement(E, { categories: e, onUpdate: () => i(!0) }),
                 a.createElement(
                   "div",
-                  { className: _().ActionButtonCtn },
+                  { className: g().ActionButtonCtn },
                   a.createElement(
                     l.zx,
                     {
@@ -533,7 +545,7 @@
                     {
                       onClick: () =>
                         (0, b.AM)(
-                          a.createElement(M, {
+                          a.createElement(v, {
                             categories: e,
                             onSave: () => {
                               i(!1), h(!0);
@@ -542,7 +554,7 @@
                           window
                         ),
                     },
-                    s
+                    c
                       ? a.createElement(a.Fragment, null, "Save")
                       : a.createElement(
                           a.Fragment,
@@ -556,7 +568,7 @@
                     {
                       onClick: () =>
                         (0, b.AM)(
-                          a.createElement(S, { onPublish: () => h(!1) }),
+                          a.createElement(M, { onPublish: () => h(!1) }),
                           window
                         ),
                     },
@@ -572,7 +584,7 @@
         if (!r) return a.createElement("div", null, "No categories defined.");
         return a.createElement(
           "div",
-          { className: _().CategoriesList },
+          { className: g().CategoriesList },
           a.createElement(m.R, {
             bDisabled: !0,
             items: r,
@@ -582,10 +594,10 @@
             render: (e) =>
               a.createElement(
                 "div",
-                { className: _().CategoryCtn },
+                { className: g().CategoryCtn },
                 a.createElement(
                   "div",
-                  { className: _().Category },
+                  { className: g().Category },
                   a.createElement(
                     "a",
                     {
@@ -617,7 +629,7 @@
       }
       function C(e) {
         const { category: r, onUpdate: t, closeModal: o } = e,
-          c = (0, h.NW)();
+          s = (0, h.NW)();
         return a.createElement(
           i.RG,
           { bAllowFullSize: !0, onCancel: o, closeModal: o },
@@ -627,44 +639,49 @@
             null,
             a.createElement(
               "div",
-              { className: _().CategoryEditor },
+              { className: g().CategoryEditor },
               a.createElement(l.II, {
                 label: "Handle",
+                tooltip: "Must be unique",
                 value: r.handle,
                 onChange: (e) => {
-                  (r.handle = e.target.value), c();
+                  (r.handle = e.target.value), s();
                 },
               }),
               a.createElement(l.II, {
                 label: "Loc Token",
+                tooltip:
+                  "Token only needed if we wish to expose this hub to customers",
                 value: r.loc_token,
                 onChange: (e) => {
-                  (r.loc_token = e.target.value), c();
+                  (r.loc_token = e.target.value), s();
                 },
               }),
               a.createElement(l.ji, {
                 label: "Heading",
+                tooltip:
+                  "Only used for establishing headings used on the main store drop-down menu",
                 checked: r.heading,
                 onChange: (e) => {
-                  (r.heading = e), c();
+                  (r.heading = e), s();
                 },
               }),
               a.createElement(l.ry, {
                 label: "Type",
                 rgOptions: [
-                  { data: "tagids", label: "Tags" },
+                  { data: "tagids", label: "Tag Hub" },
                   { data: "category", label: "Categories" },
-                  { data: "contenthub", label: "Content Hub" },
+                  { data: "contenthub", label: "Very Special AO Content Hub" },
                 ],
                 selectedOption: r.type,
                 onChange: (e) => {
-                  (r.type = e.data), c();
+                  (r.type = e.data), s();
                 },
               }),
               ("tagids" === r.type || "category" === r.type) &&
                 a.createElement(
                   "div",
-                  { className: _().Category },
+                  { className: g().Category },
                   a.createElement(k, {
                     category: r,
                     list: "must",
@@ -699,7 +716,7 @@
         );
       }
       function k(e) {
-        const { category: r, list: t, title: s } = e,
+        const { category: r, list: t, title: c } = e,
           { rgTags: n, rgCategories: i } = (0, o.bA)(),
           b = (0, h.NW)(),
           d =
@@ -718,8 +735,8 @@
                 }))) || [];
         return a.createElement(
           "div",
-          { className: _().TagOrCategoryList },
-          a.createElement(l.__, null, s),
+          { className: g().TagOrCategoryList },
+          a.createElement(l.__, null, c),
           a.createElement(m.R, {
             bDisabled: !0,
             items: r[t] || [],
@@ -730,14 +747,14 @@
               "tagids" === r.type
                 ? a.createElement(
                     "div",
-                    { className: _().IDSelector },
+                    { className: g().IDSelector },
                     a.createElement(l.II, {
                       value: e.id,
                       onChange: (r) => {
                         (e.id = Number(r.target.value)), b();
                       },
                     }),
-                    a.createElement(c.ZP, {
+                    a.createElement(s.ZP, {
                       isSearchable: !0,
                       options: d,
                       value: d.find((r) => r.value === e.id),
@@ -749,8 +766,8 @@
                 : "category" === r.type
                 ? a.createElement(
                     "div",
-                    { className: _().IDSelector },
-                    a.createElement(c.ZP, {
+                    { className: g().IDSelector },
+                    a.createElement(s.ZP, {
                       isSearchable: !0,
                       options: u,
                       value: u.find((r) => r.value === e.id),
@@ -795,15 +812,15 @@
           )
         );
       }
-      function M(e) {
-        const { categories: r, onSave: t, closeModal: c } = e,
-          [s, n] = a.useState();
+      function v(e) {
+        const { categories: r, onSave: t, closeModal: s } = e,
+          [c, n] = a.useState();
         return (
           a.useEffect(() => {
             (0, o.HD)(r).then((e) => {
-              e ? n(e.strErrorMsg) : (t(), c && c());
+              e ? n(e.strErrorMsg) : (t(), s && s());
             });
-          }, [r, c, t]),
+          }, [r, s, t]),
           a.createElement(
             i.uH,
             {
@@ -811,43 +828,43 @@
               bAlertDialog: !0,
               bDisableBackgroundDismiss: !0,
               bHideCloseIcon: !0,
-              closeModal: c,
+              closeModal: s,
             },
-            Boolean(s)
-              ? a.createElement("div", null, "Error: ", s)
+            Boolean(c)
+              ? a.createElement("div", null, "Error: ", c)
               : a.createElement(u.V, { size: "medium", position: "center" })
           )
         );
       }
-      function S(e) {
+      function M(e) {
         const { onPublish: r, closeModal: t } = e,
-          [c, s] = a.useState(!1),
+          [s, c] = a.useState(!1),
           [n, l] = a.useState();
         return (
           a.useEffect(() => {
-            c &&
+            s &&
               (0, o.C1)().then((e) => {
-                e ? l(e.strErrorMsg) : (r(), s(!1), t && t());
+                e ? l(e.strErrorMsg) : (r(), c(!1), t && t());
               });
-          }, [c, t, r]),
+          }, [s, t, r]),
           a.createElement(
             i.uH,
             {
-              strTitle: c ? "Publishing" : "Really Publish?",
+              strTitle: s ? "Publishing" : "Really Publish?",
               strDescription:
-                !c &&
+                !s &&
                 "Publishing will make your changes immediately visible to users.",
-              bAlertDialog: c,
-              bDisableBackgroundDismiss: c,
-              bHideCloseIcon: c,
+              bAlertDialog: s,
+              bDisableBackgroundDismiss: s,
+              bHideCloseIcon: s,
               onOK: () => {
-                c ? t && t() : s(!0);
+                s ? t && t() : c(!0);
               },
               onCancel: () => {
                 t && t();
               },
             },
-            c &&
+            s &&
               a.createElement(
                 a.Fragment,
                 null,
@@ -858,12 +875,6 @@
           )
         );
       }
-    },
-    33547: (e, r, t) => {
-      "use strict";
-      t.d(r, { Z: () => o });
-      const o =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);

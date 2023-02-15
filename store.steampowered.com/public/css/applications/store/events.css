@@ -3974,9 +3974,6 @@ html:not(.touch)
   font-size: 12px;
   font-weight: normal;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .partnereventwebrowembed_Container_3DZHU {
   padding-top: 5px;
 }

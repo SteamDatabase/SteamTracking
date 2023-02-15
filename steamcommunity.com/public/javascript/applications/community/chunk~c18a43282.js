@@ -799,7 +799,7 @@
       var i = r(70655),
         n = r(67294),
         a = r(26149),
-        s = r(92398),
+        s = r(76796),
         o = r(7707),
         l = r(35921),
         c = r(4224),
@@ -3261,7 +3261,7 @@
         ml: () => u,
         q2: () => d,
       });
-      var i = r(92398),
+      var i = r(76796),
         n = (r(990), r(28875), r(77636)),
         a = (r(14146), r(159)),
         s = r(73285),
@@ -3545,6 +3545,7 @@
         bestofyear_banner: { width: 1100, height: 160 },
         bestofyear_banner_mobile: { width: 500, height: 160 },
         localized_marketing_message: { width: 570, height: 600 },
+        localized_optin_banner: { width: 736, height: 160 },
       };
       function n(e, t, r) {
         const n = i[r];
@@ -3565,7 +3566,7 @@
       r.d(t, { W: () => l });
       var i = r(70655),
         n = (r(3389), r(22188)),
-        a = (r(92398), r(91891), r(461), r(90666)),
+        a = (r(76796), r(91891), r(461), r(90666)),
         s = (r(45343), r(9669)),
         o = r.n(s);
       r(82946), r(26149);
@@ -3721,7 +3722,7 @@
       r.d(t, { Gk: () => c, LH: () => l, ZT: () => i, xM: () => o });
       var i,
         n = r(159),
-        a = (r(26149), r(92398), r(76776)),
+        a = (r(26149), r(76796), r(76776)),
         s = r(41311);
       !(function (e) {
         (e[(e.k_eLibrary = 1)] = "k_eLibrary"),
@@ -3861,7 +3862,7 @@
       "use strict";
       r.d(t, { Sn: () => a });
       var i = r(70655),
-        n = (r(92398), r(81130));
+        n = (r(76796), r(81130));
       const a = { bScheduleEnabled: !1, scheduleEntries: [] };
       (0, i.gn)(
         [n.a],
@@ -3891,7 +3892,7 @@
     15528: (e, t, r) => {
       "use strict";
       r.d(t, { Y: () => n, l: () => i });
-      r(92398), r(26149);
+      r(76796), r(26149);
       const i = ["show", "hide", "remove"],
         n = {
           bBroadcastEnabled: !1,
@@ -3917,7 +3918,7 @@
       var i,
         n = r(70655),
         a = r(22188),
-        s = (r(26149), r(92398), r(4224)),
+        s = (r(26149), r(76796), r(4224)),
         o = (r(3389), r(24399)),
         l = r(41311),
         c = r(81130);
@@ -4298,7 +4299,7 @@
       var i = r(70655),
         n = r(22188),
         a = r(49727),
-        s = (r(26149), r(92398)),
+        s = (r(26149), r(76796)),
         o = (r(92685), r(15528)),
         l = r(3389),
         c = (r(21205), r(65497), r(12453), r(24399)),
@@ -5647,7 +5648,7 @@
       r.d(t, { XC: () => l, ai: () => o });
       var i = r(13271),
         n = r(67294),
-        a = (r(92398), r(49186), r(7200)),
+        a = (r(76796), r(49186), r(7200)),
         s = r(74163);
       r(3389), r(90666), r(40252);
       function o(e) {
@@ -5740,7 +5741,7 @@
     85121: (e, t, r) => {
       "use strict";
       r.d(t, { k: () => n, m: () => i });
-      r(22220), r(26273), r(21205), r(92398);
+      r(22220), r(26273), r(21205), r(76796);
       const i = "terminal",
         n = "questdoor_";
     },
@@ -5849,7 +5850,7 @@
       "use strict";
       var i = r(70655),
         n = r(22188),
-        a = (r(26149), r(92398), r(21205), r(83090), r(77636), r(35092)),
+        a = (r(26149), r(76796), r(21205), r(83090), r(77636), r(35092)),
         s = r(90666);
       class o {
         InitFrom(e) {
@@ -5978,7 +5979,7 @@
       r.d(t, { v: () => _ });
       var i = r(70655),
         n = r(67294),
-        a = (r(92398), r(159)),
+        a = (r(76796), r(159)),
         s = r(48341),
         o = r(37699),
         l = r(41414),
@@ -25084,7 +25085,7 @@
         (0, i.gn)([s.aD.bound], D.prototype, "CaptureStatsForDisplay", null),
         (0, i.gn)([y.a], D.prototype, "OnVideoPause", null),
         (0, i.gn)([y.a], D.prototype, "OnVideoResize", null);
-      r(92398), r(69765);
+      r(76796), r(69765);
       var A = r(93976),
         k = r(50498),
         z = r(67119);
@@ -26188,7 +26189,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398)),
+        o = (r(26149), r(76796)),
         l = (r(92685), r(3389), r(68002), r(60059), r(82946), r(93976)),
         c = r(81130),
         d = r(99533),
@@ -26569,7 +26570,7 @@
       "use strict";
       r.d(t, { C: () => s, Z: () => o });
       var i = r(26149),
-        n = r(92398),
+        n = r(76796),
         a = (r(92685), r(68002), r(53570), r(41311));
       r(24399), r(54746);
       function s(e, t, r) {
@@ -26606,7 +26607,7 @@
         a = r.n(n),
         s = r(22188),
         o = r(26149),
-        l = (r(92398), r(92685)),
+        l = (r(76796), r(92685)),
         c = r(3389),
         d = (r(68002), r(82946), r(48780)),
         m = r(77520),
@@ -27086,7 +27087,7 @@
         a = r.n(n),
         s = r(22188),
         o = r(67294),
-        l = (r(26149), r(92398), r(3389)),
+        l = (r(26149), r(76796), r(3389)),
         c = (r(82946), r(77520)),
         d = r(90666),
         m = r(461);
@@ -27484,7 +27485,7 @@
         s = r.n(a),
         o = r(22188),
         l = r(67294),
-        c = (r(92398), r(19663)),
+        c = (r(76796), r(19663)),
         d = (r(91891), r(3389)),
         m = (r(82946), r(90666));
       class u {
@@ -27676,7 +27677,7 @@
         a = r.n(n),
         s = r(22188),
         o = r(67294),
-        l = (r(26149), r(92398), r(40252), r(82946), r(90666));
+        l = (r(26149), r(76796), r(40252), r(82946), r(90666));
       class c {
         constructor(e) {
           (this.appid = e.appid),
@@ -27847,7 +27848,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398), r(3389), r(82946), r(93976)),
+        o = (r(26149), r(76796), r(3389), r(82946), r(93976)),
         l = r(90666),
         c = r(67294);
       const d = "unUserdataVersion";
@@ -28705,7 +28706,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(67294),
-        o = (r(26149), r(92398), r(82946), r(93976)),
+        o = (r(26149), r(76796), r(82946), r(93976)),
         l = r(99533),
         c = r(64839),
         d = r(90666);
@@ -29026,7 +29027,7 @@
         s = r.n(a),
         o = r(22188),
         l = r(30381),
-        c = (r(26149), r(92398), r(80315)),
+        c = (r(26149), r(76796), r(80315)),
         d = (r(49186), r(3389)),
         m = r(9915),
         u = r(7200),
@@ -29824,7 +29825,7 @@
         n = r(9669),
         a = r.n(n),
         s = (r(58185), r(90666)),
-        o = (r(92398), r(55546), r(80315), r(99533)),
+        o = (r(76796), r(55546), r(80315), r(99533)),
         l = r(75007);
       !(function (e) {
         (e[(e.k_eDiscussions = 0)] = "k_eDiscussions"),
@@ -29966,7 +29967,7 @@
       var i,
         n = r(70655),
         a = r(22188),
-        s = (r(26149), r(92398)),
+        s = (r(26149), r(76796)),
         o = r(80315),
         l = r(77520),
         c = r(90666),
@@ -30212,7 +30213,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398), r(58114)),
+        o = (r(26149), r(76796), r(58114)),
         l = (r(49186), r(68002)),
         c = r(99533),
         d = r(81130),
@@ -30798,7 +30799,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398), r(80315), r(82946), r(77520)),
+        o = (r(26149), r(76796), r(80315), r(82946), r(77520)),
         l = r(93976),
         c = r(90666);
       class d {
@@ -30911,7 +30912,7 @@
         s = r(22188),
         o = r(27661),
         l = r(26149),
-        c = (r(92398), r(52411), r(49186)),
+        c = (r(76796), r(52411), r(49186)),
         d = r(3389),
         m = (r(39799), r(24020)),
         u = (r(82946), r(48780)),
@@ -32091,7 +32092,7 @@
       r.d(t, { Eq: () => h, OT: () => u, wj: () => p });
       var i = r(70655),
         n = r(67294),
-        a = (r(92398), r(58114)),
+        a = (r(76796), r(58114)),
         s = (r(46321), r(10767)),
         o = r(74163),
         l = r(77520),
@@ -32414,7 +32415,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398), r(78913), r(93976)),
+        o = (r(26149), r(76796), r(78913), r(93976)),
         l = r(90666),
         c = r(99386);
       class d {
@@ -32480,7 +32481,7 @@
       var i = r(70655),
         n = r(9669),
         a = r.n(n),
-        s = (r(22188), r(26149), r(92398), r(58114)),
+        s = (r(22188), r(26149), r(76796), r(58114)),
         o = r(73812),
         l = r(78913),
         c = (r(82946), r(93976)),
@@ -33389,7 +33390,7 @@
         ee = r(76236),
         te = (r(54746), r(53570)),
         re = r(78468),
-        ie = r(92398);
+        ie = r(76796);
       const ne = (0, o.Pi)((e) => {
         const {
             clanSteamID: t,
@@ -35113,7 +35114,7 @@
       "use strict";
       r.d(t, { Rd: () => z, _R: () => L, Ws: () => A });
       var i = r(67294),
-        n = (r(92398), r(7707)),
+        n = (r(76796), r(7707)),
         a = (r(21205), r(33019));
       r(40110);
       a.Message;
@@ -37021,7 +37022,7 @@
       "use strict";
       r.d(t, { a: () => _ });
       var i = r(67294),
-        n = (r(92398), r(67833)),
+        n = (r(76796), r(67833)),
         a = (r(990), r(77636)),
         s = r(73285),
         o = r(52114),
@@ -37280,7 +37281,7 @@
       "use strict";
       r.d(t, { f: () => h });
       var i = r(67294),
-        n = (r(92398), r(97079)),
+        n = (r(76796), r(97079)),
         a = (r(990), r(39388)),
         s = r(73285),
         o = r(52114),
@@ -37600,7 +37601,7 @@
         a = r(30381),
         s = r(67294),
         o = r(26149),
-        l = (r(92398), r(57287)),
+        l = (r(76796), r(57287)),
         c = r(80315),
         d = r(50153),
         m = (r(49186), r(76776)),
@@ -38152,7 +38153,7 @@
         l = r(13271),
         c = r(67294),
         d = r(26149),
-        m = r(92398),
+        m = r(76796),
         u = r(49186),
         p = r(77636),
         h = r(159),
@@ -39728,7 +39729,7 @@
       var i = r(70655),
         n = r(29323),
         a = r(67294),
-        s = (r(92398), r(19663), r(3389)),
+        s = (r(76796), r(19663), r(3389)),
         o = r(461),
         l = r(77636),
         c = r(55546),
@@ -39963,7 +39964,7 @@
         o = r(29323),
         l = r(67294),
         c = r(19670),
-        d = (r(92398), r(79822)),
+        d = (r(76796), r(79822)),
         m = (r(49186), r(23153)),
         u = r(43359),
         p = r(67833),
@@ -40752,7 +40753,7 @@
       var i = r(70655),
         n = r(67294),
         a = r(70752),
-        s = (r(26149), r(92398), r(92685), r(3389)),
+        s = (r(26149), r(76796), r(92685), r(3389)),
         o = r(24399),
         l = r(9915),
         c = r(11002),
@@ -41467,7 +41468,7 @@
       var i = r(70655),
         n = r(77442),
         a = r(73285),
-        s = r(92398),
+        s = r(76796),
         o = (r(49186), r(990), r(77636)),
         l = (r(14146), r(159)),
         c = r(37694),
@@ -41668,7 +41669,7 @@
       r.d(t, { Hl: () => W, S$: () => H, a4: () => V, ju: () => P });
       var i = r(29323),
         n = r(67294),
-        a = (r(26149), r(92398), r(7707)),
+        a = (r(26149), r(76796), r(7707)),
         s = r(35921),
         o = r(39746),
         l = (r(49186), r(43359)),
@@ -42212,7 +42213,7 @@
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC",
         a =
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTM3OEVDNTUyMUM0MTFFNDgxN0ZEN0MzNjYzNzcxOTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTM3OEVDNTYyMUM0MTFFNDgxN0ZEN0MzNjYzNzcxOTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMzc4RUM1MzIxQzQxMUU0ODE3RkQ3QzM2NjM3NzE5NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMzc4RUM1NDIxQzQxMUU0ODE3RkQ3QzM2NjM3NzE5NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps9jzFQAAACPSURBVHjaYvz//z+DkJDQdQYGhpsMCMAKxMZAHPXu3bt9cFGQYkFBwQ0gGoaBfAEgzgfibUDsBxNnYsAOfgKxJBBvAeIZMEEWZBVA52xA5gOdUAEUc8NQDBTkBEoGMOAByCYLAjUsRzM5AKtioMQzIEW0ydjcHIBTMSE3M0Ij5RKQfQ6HGiOgIXogBkCAAQDGVT+0v+n6EQAAAABJRU5ErkJggg==";
-      r(92398);
+      r(76796);
       var s = r(28976),
         o = r(77636),
         l = r(159),
@@ -42365,7 +42366,7 @@
         a = r.n(n),
         s = r(67294),
         o = r(19670),
-        l = r(92398),
+        l = r(76796),
         c = (r(91891), r(990), r(39388)),
         d = (r(14146), r(73285)),
         m = r(52114),
@@ -42705,7 +42706,7 @@
     46713: (e, t, r) => {
       "use strict";
       r.d(t, { K: () => n, u: () => a });
-      r(92398), r(49186);
+      r(76796), r(49186);
       var i = r(63466);
       function n(e, t) {
         return e.filter(
@@ -42920,7 +42921,7 @@
       r.d(t, { zw: () => h, Dt: () => u, $N: () => p });
       r(990);
       var i = r(67294),
-        n = r(92398),
+        n = r(76796),
         a = r(67833),
         s = r(70655),
         o = r(17888),
@@ -42974,7 +42975,7 @@
       var i = r(70655),
         n = r(13271),
         a = r(67294),
-        s = (r(92398), r(67833)),
+        s = (r(76796), r(67833)),
         o = r(77636),
         l = r(88335),
         c = r.n(l),
@@ -43119,7 +43120,7 @@
       r.d(t, { r: () => m });
       var i = r(29323),
         n = r(67294),
-        a = (r(92398), r(97079)),
+        a = (r(76796), r(97079)),
         s = r(77636),
         o = r(7573),
         l = r(41311),
@@ -43278,47 +43279,47 @@
       "use strict";
       r.d(t, { W: () => c, _: () => d });
       var i = r(67294),
-        n = r(67833),
-        a = (r(64839), r(90666)),
+        n = r(7707),
+        a = r(67833),
         s = r(65924),
-        o = r(7707),
-        l = r(77520);
+        o = r(77520),
+        l = r(90666);
       function c(e) {
         const {
             type: t,
             id: r,
             hoverClassName: n,
-            fnGetIDOverride: s,
-            fnHoverState: o,
+            fnGetIDOverride: a,
+            fnHoverState: s,
             children: c,
           } = e,
           d = i.useRef(null),
           m = i.useCallback(
             (e) => {
               "clan" != t &&
-                (o && o(!0),
+                (s && s(!0),
                 window.GameHover &&
-                  window.GameHover(s ? s() : d.current, e, "global_hover", {
+                  window.GameHover(a ? a() : d.current, e, "global_hover", {
                     type: t,
                     id: r,
                     v6: 1,
                   }));
             },
-            [t, o, s, r]
+            [t, s, a, r]
           ),
           u = i.useCallback(
             (e) => {
               "clan" != t &&
-                (o && e.relatedTarget && o(!1),
+                (s && e.relatedTarget && s(!1),
                 window.HideGameHover &&
-                  window.HideGameHover(s ? s() : d.current, e, "global_hover"));
+                  window.HideGameHover(a ? a() : d.current, e, "global_hover"));
             },
-            [t, o, s]
+            [t, s, a]
           );
         return (
-          "dev" == a.De.WEB_UNIVERSE &&
-            (0, l.X)(
-              "store" == (0, a.Zv)(),
+          "dev" == l.De.WEB_UNIVERSE &&
+            (0, o.X)(
+              "store" == (0, l.Zv)(),
               "StoreGameHoverAnchorSource only works on Store web properties"
             ),
           i.createElement(
@@ -43336,27 +43337,27 @@
         );
       }
       function d(e) {
-        const { id: t, type: r, strExtraParams: l } = e,
+        const { id: t, type: r, strExtraParams: o } = e,
           d = (0, s.bJ)(),
           m =
             "clan" == r
-              ? (0, n.Hf)(
-                  `${a.De.STORE_BASE_URL}curator/${t}${l ? `?${l}` : ""}`,
+              ? (0, a.Hf)(
+                  `${l.De.STORE_BASE_URL}curator/${t}${o ? `?${o}` : ""}`,
                   d
                 )
-              : (0, n.Hf)(
-                  `${a.De.STORE_BASE_URL}${r}/${t}${l ? `?${l}` : ""}`,
+              : (0, a.Hf)(
+                  `${l.De.STORE_BASE_URL}${r}/${t}${o ? `?${o}` : ""}`,
                   d
                 );
         return i.createElement(
           c,
           Object.assign({}, e),
           i.createElement(
-            o.IS,
+            n.IS,
             {
               className: e.className,
               href: m,
-              target: a.De.IN_CLIENT ? void 0 : "_blank",
+              target: l.De.IN_CLIENT ? void 0 : "_blank",
               rel: "noopener noreferrer",
             },
             e.children
@@ -43370,7 +43371,7 @@
       var i = r(70655),
         n = r(67294),
         a = r(26149),
-        s = r(92398),
+        s = r(76796),
         o = r(41311),
         l = r(35092),
         c = r(90666),
@@ -46431,7 +46432,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(67294),
-        o = (r(26149), r(92398), r(82946), r(93976)),
+        o = (r(26149), r(76796), r(82946), r(93976)),
         l = r(90666);
       const c = (e) => {
         const [t, r] = (0, s.useState)(!!e && void 0);
@@ -46509,7 +46510,7 @@
         md: () => p,
       });
       var i = r(90666);
-      r(92398), r(41311);
+      r(76796), r(41311);
       function n(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",

@@ -1,6 +1,3 @@
-:root {
-  --basicui-header-height: 0px;
-}
 .sharedappdetailsheader_TopCapsule_2meE3 {
   --header-height: 24vw;
   height: var(--header-height);
@@ -668,9 +665,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   );
   pointer-events: none;
 }
-:root {
-  --basicui-header-height: 0px;
-}
+
 .logoeditor_LogoEditorContainer_3G8aW {
   overflow: hidden;
   display: flex;

@@ -1,4 +1,10 @@
 
+function ImportAndSaveSurvey( appid )
+{
+	$J( "#bImportRatingsQuestionnaire" ).val( 1 );
+	SaveSurvey( appid );
+}
+
 function SaveSurvey( appid )
 {
 	if ( !$J("input:radio[name='maturecontent_radio']").is(":checked") )

@@ -817,7 +817,7 @@
       var n = r(70655),
         i = r(67294),
         a = r(26149),
-        s = r(92398),
+        s = r(76796),
         o = r(7707),
         l = r(35921),
         c = (r(37662), r(67833)),
@@ -1555,7 +1555,7 @@
         ml: () => u,
         q2: () => d,
       });
-      var n = r(92398),
+      var n = r(76796),
         i = (r(990), r(28875), r(77636)),
         a = (r(14146), r(159)),
         s = r(48116),
@@ -1839,6 +1839,7 @@
         bestofyear_banner: { width: 1100, height: 160 },
         bestofyear_banner_mobile: { width: 500, height: 160 },
         localized_marketing_message: { width: 570, height: 600 },
+        localized_optin_banner: { width: 736, height: 160 },
       };
       function i(e, t, r) {
         const i = n[r];
@@ -1866,7 +1867,7 @@
       r.d(t, { W: () => _ });
       var n = r(70655),
         i = (r(3389), r(22188)),
-        a = (r(92398), r(91891), r(461), r(90666)),
+        a = (r(76796), r(91891), r(461), r(90666)),
         s = r(33019),
         o = r(40110);
       const l = s.Message;
@@ -2202,7 +2203,7 @@
       r.d(t, { Gk: () => c, LH: () => l, ZT: () => n, xM: () => o });
       var n,
         i = r(159),
-        a = (r(26149), r(92398), r(76776)),
+        a = (r(26149), r(76796), r(76776)),
         s = r(41311);
       !(function (e) {
         (e[(e.k_eLibrary = 1)] = "k_eLibrary"),
@@ -2288,32 +2289,33 @@
     },
     4224: (e, t, r) => {
       "use strict";
-      r.d(t, { HO: () => l, S6: () => d, a6: () => c });
-      const n = /^.*youtube[^v]+v=(.{11}).*/,
-        i = /^.*youtu\.be\/(.{11}).*/,
-        a = /^.*youtube.*\/embed\/(.{11}).*/,
-        s = /^.*[?&]t=([^&]+)(?:&|$)/,
-        o = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
-      function l(e) {
-        return !!c(e);
-      }
+      r.d(t, { HO: () => c, S6: () => m, a6: () => d });
+      const n = 20,
+        i = /^.*youtube[^v]+v=(.{11}).*/,
+        a = /^.*youtu\.be\/(.{11}).*/,
+        s = /^.*youtube.*\/embed\/(.{11}).*/,
+        o = /^.*[?&]t=([^&]+)(?:&|$)/,
+        l = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
       function c(e) {
-        const t =
-          (null == e ? void 0 : e.length) < 20
-            ? void 0
-            : n.exec(e) || i.exec(e) || a.exec(e);
-        return null == t ? void 0 : t[1];
+        return !!d(e);
       }
       function d(e) {
-        const t = c(e);
+        const t =
+          (null == e ? void 0 : e.length) < n
+            ? void 0
+            : i.exec(e) || a.exec(e) || s.exec(e);
+        return null == t ? void 0 : t[1];
+      }
+      function m(e) {
+        const t = d(e);
         if (!t) return;
         const r = (function (e) {
-            const t = s.exec(e);
+            const t = o.exec(e);
             return null == t ? void 0 : t[1];
           })(e),
           n = r
             ? (function (e) {
-                const t = o.exec(e);
+                const t = l.exec(e);
                 if (
                   !(
                     (null == t ? void 0 : t[1]) ||
@@ -2346,7 +2348,7 @@
       var n,
         i = r(70655),
         a = r(22188),
-        s = (r(26149), r(92398), r(4224)),
+        s = (r(26149), r(76796), r(4224)),
         o = (r(3389), r(24399)),
         l = r(41311),
         c = r(81130);
@@ -2689,7 +2691,7 @@
       var n = r(70655),
         i = r(22188),
         a = r(49727),
-        s = (r(26149), r(92398));
+        s = (r(26149), r(76796));
       r(92685);
       const o = {
         bBroadcastEnabled: !1,
@@ -4061,7 +4063,7 @@
       "use strict";
       r.d(t, { Me: () => l, Mx: () => d, XC: () => c });
       var n = r(67294),
-        i = (r(92398), r(37662), r(7200)),
+        i = (r(76796), r(37662), r(7200)),
         a = r(74163),
         s = r(3389),
         o = r(90666);
@@ -4126,21 +4128,22 @@
       "use strict";
       r.d(t, {
         HG: () => a,
-        LJ: () => d,
-        Zh: () => l,
-        _: () => o,
+        LJ: () => m,
+        Zh: () => c,
+        _: () => l,
         ml: () => s,
-        zs: () => c,
+        zs: () => d,
       });
       r(26149);
       var n = r(37662),
         i = (r(3356), r(46713), r(67294));
       const a = "0px 0px 100% 0px",
-        s = "tab";
-      function o() {
-        return window.innerWidth >= 940;
+        s = "tab",
+        o = 940;
+      function l() {
+        return window.innerWidth >= o;
       }
-      function l(e = 940) {
+      function c(e = o) {
         return (
           (function () {
             const [e, t] = (0, i.useState)(window.innerWidth);
@@ -4159,8 +4162,8 @@
           })() >= e
         );
       }
-      function c(e) {
-        const t = l(940),
+      function d(e) {
+        const t = c(o),
           r = (0, n.fD)(e);
         return t
           ? { nMaxCapsulesPerRow: r.nMaxItemsPerRow, bScreenIsWide: t }
@@ -4175,9 +4178,9 @@
               bScreenIsWide: t,
             };
       }
-      function d(e) {
+      function m(e) {
         const t = (0, n.fD)(e);
-        return o()
+        return l()
           ? t.nMaxItemsPerRow
           : Math.min(
               Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
@@ -4188,14 +4191,14 @@
     85121: (e, t, r) => {
       "use strict";
       r.d(t, { m: () => n });
-      r(22220), r(26273), r(21205), r(92398);
+      r(22220), r(26273), r(21205), r(76796);
       const n = "terminal";
     },
     91891: (e, t, r) => {
       "use strict";
       var n = r(70655),
         i = r(22188),
-        a = (r(26149), r(92398), r(21205), r(83090), r(77636), r(35092)),
+        a = (r(26149), r(76796), r(21205), r(83090), r(77636), r(35092)),
         s = r(90666);
       class o {
         InitFrom(e) {
@@ -9097,7 +9100,7 @@
         (0, n.gn)([s.aD.bound], b.prototype, "CaptureStatsForDisplay", null),
         (0, n.gn)([g.a], b.prototype, "OnVideoPause", null),
         (0, n.gn)([g.a], b.prototype, "OnVideoResize", null);
-      r(92398), r(69765);
+      r(76796), r(69765);
       var S = r(48780),
         y = r(77520),
         E = r(41311),
@@ -10207,7 +10210,7 @@
         s = r.n(a),
         o = r(22188),
         l = r(26149),
-        c = r(92398),
+        c = r(76796),
         d = (r(92685), r(3389)),
         m = (r(68002), r(67294)),
         u = r(24399);
@@ -10828,7 +10831,7 @@
         a = r.n(i),
         s = r(22188),
         o = r(26149),
-        l = (r(92398), r(92685)),
+        l = (r(76796), r(92685)),
         c = r(3389),
         d = (r(68002), r(82946), r(48780)),
         m = r(77520),
@@ -11302,7 +11305,7 @@
         a = r.n(i),
         s = r(22188),
         o = r(67294),
-        l = (r(26149), r(92398), r(3389)),
+        l = (r(26149), r(76796), r(3389)),
         c = (r(82946), r(77520)),
         d = r(90666),
         m = r(461);
@@ -11691,7 +11694,7 @@
         s = r.n(a),
         o = r(22188),
         l = r(67294),
-        c = (r(92398), r(65323)),
+        c = (r(76796), r(65323)),
         d = (r(91891), r(3389)),
         m = (r(82946), r(90666));
       class u {
@@ -12213,7 +12216,7 @@
         i = r(9669),
         a = r.n(i),
         s = r(67294),
-        o = (r(26149), r(92398), r(82946), r(93976)),
+        o = (r(26149), r(76796), r(82946), r(93976)),
         l = r(99533),
         c = r(64839),
         d = r(90666);
@@ -12456,13 +12459,13 @@
     },
     35118: (e, t, r) => {
       "use strict";
-      r.d(t, { EV: () => R, PC: () => L, vY: () => A });
+      r.d(t, { EV: () => G, PC: () => A, vY: () => R });
       var n = r(70655),
         i = r(9669),
         a = r.n(i),
         s = r(22188),
         o = r(30381),
-        l = (r(26149), r(92398), r(80315)),
+        l = (r(26149), r(76796), r(80315)),
         c = (r(37662), r(3389)),
         d = r(9915),
         m = r(7200),
@@ -12479,18 +12482,19 @@
         E = r(20562),
         I = r(5525),
         B = r(35017);
-      function C(e, t, r, n) {
+      const C = 2500;
+      function w(e, t, r, n) {
         return {
           strId: "section-" + t,
           strSectionLabel: t,
           rtSectionStart: r,
           rtSectionEnd: n,
           bIsFutureSection: r >= e,
-          nRenderedHeight: 2500,
+          nRenderedHeight: C,
           nTopOffset: 0,
         };
       }
-      class w {
+      class D {
         constructor(e) {
           (this.m_nForwardStuckCount = 0),
             (this.m_nBackwardStuckCount = 0),
@@ -12606,7 +12610,7 @@
           const r = this.m_currentView.get();
           r && r.dispose();
           const n = this.BIsSingleSourceMuted(),
-            i = new D(
+            i = new T(
               () => this.m_rgSortedCalendarEvents,
               this.LoadAdditionalEvents,
               this.BHitEventHorizon,
@@ -12663,15 +12667,15 @@
           const e = this.GetStoreInitializationTimestamp(),
             t = [],
             r = e.getTime() / 1e3;
-          t.push(C(r, (0, v.Xx)("#EventCalendar_FutureEventsHeader"), r));
+          t.push(w(r, (0, v.Xx)("#EventCalendar_FutureEventsHeader"), r));
           const n = new Date(e);
           n.setHours(0, 0, 0, 1);
           let i = n.getTime() / 1e3;
-          t.push(C(r, (0, v.Xx)("#Time_Today"), i, r)),
+          t.push(w(r, (0, v.Xx)("#Time_Today"), i, r)),
             n.setDate(n.getDate() - 1);
           let a = i;
           (i = n.getTime() / 1e3),
-            t.push(C(r, (0, v.Xx)("#Time_Yesterday"), i, a));
+            t.push(w(r, (0, v.Xx)("#Time_Yesterday"), i, a));
           const s =
               this.m_rgSortedCalendarEvents[
                 this.m_rgSortedCalendarEvents.length - 1
@@ -12682,14 +12686,14 @@
             n.setDate(n.getDate() - 1),
               (a = i),
               (i = n.getTime() / 1e3),
-              t.push(C(r, (0, v.Mh)(n), i, a)),
+              t.push(w(r, (0, v.Mh)(n), i, a)),
               (l = o > i);
           const c = new Date(n);
           let d = i;
           for (; c.getMonth() == e.getMonth() && 1 != c.getDate() && !l; ) {
             c.setDate(c.getDate() - 7);
             const e = c.getTime() / 1e3;
-            t.push(C(r, (0, v.jr)(d - 1), e, d)), (l = o > e), (d = e);
+            t.push(w(r, (0, v.jr)(d - 1), e, d)), (l = o > e), (d = e);
           }
           const m = new Date(e);
           m.setHours(0, 0, 0, 1), m.setDate(1);
@@ -12698,7 +12702,7 @@
             const i = new Date(m);
             i.setMonth(e.getMonth() - n, 1);
             const a = i.getTime() / 1e3;
-            t.push(C(r, (0, v.jr)(a), a, u)), (l = o > a), (u = a);
+            t.push(w(r, (0, v.jr)(a), a, u)), (l = o > a), (u = a);
           }
           this.m_rgCalendarSections.length > t.length
             ? this.m_rgCalendarSections.splice(
@@ -12723,7 +12727,7 @@
           a.setHours(24, 0, 0, 0);
           let s = a.getTime() / 1e3;
           t.push(
-            C(
+            w(
               i,
               (0, v.Xx)(
                 this.m_key.bSectionByDay ? "#Time_UpNext" : "#Time_Today"
@@ -12736,7 +12740,7 @@
             c = s;
           a.setDate(a.getDate() + 1),
             (s = a.getTime() / 1e3),
-            l || t.push(C(i, (0, v.Xx)("#Time_Tomorrow"), c, s)),
+            l || t.push(w(i, (0, v.Xx)("#Time_Tomorrow"), c, s)),
             (l = r <= s);
           const d = 6 - o(e).weekday();
           for (let e = 2; e <= d && !l; e++) {
@@ -12744,7 +12748,7 @@
             const e = (0, v.Mh)(a);
             a.setDate(a.getDate() + 1),
               (s = a.getTime() / 1e3),
-              t.push(C(i, e, c, s)),
+              t.push(w(i, e, c, s)),
               (l = r <= s);
           }
           if (this.m_key.bSectionByDay)
@@ -12753,7 +12757,7 @@
               const e = (0, v.XG)(a);
               a.setDate(a.getDate() + 1),
                 (s = a.getTime() / 1e3),
-                t.push(C(i, e, c, s)),
+                t.push(w(i, e, c, s)),
                 (l = r <= s);
             }
           else {
@@ -12763,7 +12767,7 @@
             if (n.getMonth() == e.getMonth() && n.getDate() != d && !l) {
               n.setDate(n.getDate() + 7);
               const e = n.getTime() / 1e3;
-              t.push(C(i, (0, v.Xx)("#EventCalendar_NextWeek"), c, e)),
+              t.push(w(i, (0, v.Xx)("#EventCalendar_NextWeek"), c, e)),
                 (l = r <= e),
                 (c = e);
             }
@@ -12776,7 +12780,7 @@
               n < m && !l)
             ) {
               const e = m.getTime() / 1e3;
-              t.push(C(i, (0, v.Xx)("#EventCalendar_LaterThisMonth"), c, e)),
+              t.push(w(i, (0, v.Xx)("#EventCalendar_LaterThisMonth"), c, e)),
                 (l = r <= e),
                 (u = e);
             } else u = c;
@@ -12784,7 +12788,7 @@
               const a = new Date(m);
               a.setMonth(e.getMonth() + n);
               const s = a.getTime() / 1e3;
-              t.push(C(i, (0, v.jr)(u), u, s)), (l = r <= s), (u = s);
+              t.push(w(i, (0, v.jr)(u), u, s)), (l = r <= s), (u = s);
             }
           }
           this.m_rgFutureSections.length > t.length
@@ -13053,30 +13057,30 @@
           });
         }
       }
-      (0, n.gn)([s.LO], w.prototype, "m_mapCalendarEventsByGid", void 0),
-        (0, n.gn)([s.LO], w.prototype, "m_rgSortedCalendarEvents", void 0),
-        (0, n.gn)([s.LO], w.prototype, "m_bFinishedSearchingForward", void 0),
-        (0, n.gn)([s.LO], w.prototype, "m_bFinishedSearchingBackward", void 0),
-        (0, n.gn)([s.LO], w.prototype, "m_rgCalendarSections", void 0),
-        (0, n.gn)([s.LO], w.prototype, "m_rgFutureSections", void 0),
-        (0, n.gn)([s.LO], w.prototype, "m_collectionMetaData", void 0),
-        (0, n.gn)([s.aD], w.prototype, "InitCalendarSections", null),
-        (0, n.gn)([s.aD], w.prototype, "InitFutureCalendarSections", null),
-        (0, n.gn)([s.aD], w.prototype, "RegisterCalendarEventsAndModels", null),
-        (0, n.gn)([s.aD], w.prototype, "RegisterCalendarApps", null),
-        (0, n.gn)([s.aD], w.prototype, "RegisterCalendarClans", null),
-        (0, n.gn)([s.aD], w.prototype, "RegisterReadEvents", null),
-        (0, n.gn)([s.aD], w.prototype, "RegisterEventVotes", null),
-        (0, n.gn)([s.aD], w.prototype, "RegisterCalendarEvents", null),
-        (0, n.gn)([g.a], w.prototype, "BHitEventHorizon", null),
-        (0, n.gn)([s.aD.bound], w.prototype, "LoadAdditionalEvents", null),
+      (0, n.gn)([s.LO], D.prototype, "m_mapCalendarEventsByGid", void 0),
+        (0, n.gn)([s.LO], D.prototype, "m_rgSortedCalendarEvents", void 0),
+        (0, n.gn)([s.LO], D.prototype, "m_bFinishedSearchingForward", void 0),
+        (0, n.gn)([s.LO], D.prototype, "m_bFinishedSearchingBackward", void 0),
+        (0, n.gn)([s.LO], D.prototype, "m_rgCalendarSections", void 0),
+        (0, n.gn)([s.LO], D.prototype, "m_rgFutureSections", void 0),
+        (0, n.gn)([s.LO], D.prototype, "m_collectionMetaData", void 0),
+        (0, n.gn)([s.aD], D.prototype, "InitCalendarSections", null),
+        (0, n.gn)([s.aD], D.prototype, "InitFutureCalendarSections", null),
+        (0, n.gn)([s.aD], D.prototype, "RegisterCalendarEventsAndModels", null),
+        (0, n.gn)([s.aD], D.prototype, "RegisterCalendarApps", null),
+        (0, n.gn)([s.aD], D.prototype, "RegisterCalendarClans", null),
+        (0, n.gn)([s.aD], D.prototype, "RegisterReadEvents", null),
+        (0, n.gn)([s.aD], D.prototype, "RegisterEventVotes", null),
+        (0, n.gn)([s.aD], D.prototype, "RegisterCalendarEvents", null),
+        (0, n.gn)([g.a], D.prototype, "BHitEventHorizon", null),
+        (0, n.gn)([s.aD.bound], D.prototype, "LoadAdditionalEvents", null),
         (0, n.gn)(
           [s.aD],
-          w.prototype,
+          D.prototype,
           "UpdateEventBlockFromCalendarEvent",
           null
         );
-      class D {
+      class T {
         constructor(e, t, r, i, a, o) {
           (this.m_rgLoadedEventsBox = s.LO.box([])),
             (this.m_lastLoadLatch = null),
@@ -13200,11 +13204,11 @@
             });
         }
       }
-      (0, n.gn)([s.Fl.struct], D.prototype, "viewFilteredEvents", null),
-        (0, n.gn)([s.Fl.struct], D.prototype, "filteredAndCheckedEvents", null);
-      const T = s.LO.box(null),
-        k = new Map();
-      function L(e) {
+      (0, n.gn)([s.Fl.struct], T.prototype, "viewFilteredEvents", null),
+        (0, n.gn)([s.Fl.struct], T.prototype, "filteredAndCheckedEvents", null);
+      const k = s.LO.box(null),
+        L = new Map();
+      function A(e) {
         let t = "";
         return (
           e.appids &&
@@ -13228,17 +13232,17 @@
               e.category_or_language +
               "_" +
               e.tag_name),
-          T.get() !== t && (T.set(t), k.has(t) || k.set(t, new w(e))),
+          k.get() !== t && (k.set(t), L.has(t) || L.set(t, new D(e))),
           t
         );
       }
-      function A() {
-        return null == T.get() && L({}), k.get(T.get());
-      }
       function R() {
-        return null !== T;
+        return null == k.get() && A({}), L.get(k.get());
       }
-      window.g_EventCalendarMap = k;
+      function G() {
+        return null !== k;
+      }
+      window.g_EventCalendarMap = L;
     },
     51391: (e, t, r) => {
       "use strict";
@@ -13247,7 +13251,7 @@
         i = r(9669),
         a = r.n(i),
         s = (r(58185), r(90666)),
-        o = (r(92398), r(35118), r(80315), r(99533)),
+        o = (r(76796), r(35118), r(80315), r(99533)),
         l = r(75007);
       !(function (e) {
         (e[(e.k_eDiscussions = 0)] = "k_eDiscussions"),
@@ -13389,7 +13393,7 @@
       var n,
         i = r(70655),
         a = r(22188),
-        s = (r(26149), r(92398)),
+        s = (r(26149), r(76796)),
         o = r(80315),
         l = r(77520),
         c = r(90666),
@@ -13755,7 +13759,7 @@
         a = r(30381),
         s = r.n(a),
         o = r(67294),
-        l = r(92398),
+        l = r(76796),
         c = (r(74163), r(90666));
       class d {
         constructor() {
@@ -13827,7 +13831,7 @@
         i = r(9669),
         a = r.n(i),
         s = r(22188),
-        o = (r(26149), r(92398), r(58114)),
+        o = (r(26149), r(76796), r(58114)),
         l = (r(37662), r(68002)),
         c = r(99533),
         d = r(81130),
@@ -14413,7 +14417,7 @@
         i = r(9669),
         a = r.n(i),
         s = r(22188),
-        o = (r(26149), r(92398), r(80315), r(82946), r(77520)),
+        o = (r(26149), r(76796), r(80315), r(82946), r(77520)),
         l = r(93976),
         c = r(90666);
       class d {
@@ -14526,7 +14530,7 @@
         s = r(22188),
         o = r(27661),
         l = r(26149),
-        c = (r(92398), r(52411), r(37662)),
+        c = (r(76796), r(52411), r(37662)),
         d = r(3389),
         m = (r(39799), r(24020)),
         u = (r(82946), r(48780)),
@@ -15709,7 +15713,7 @@
         a = r.n(i),
         s = r(22188),
         o = r(67294),
-        l = (r(26149), r(92398), r(43359)),
+        l = (r(26149), r(76796), r(43359)),
         c = r(3389),
         d = (r(82946), r(77520)),
         m = r(93976),
@@ -15824,7 +15828,7 @@
       r.d(t, { Eq: () => h, OT: () => u, wj: () => p });
       var n = r(70655),
         i = r(67294),
-        a = (r(92398), r(58114)),
+        a = (r(76796), r(58114)),
         s = (r(46321), r(10767)),
         o = r(74163),
         l = r(77520),
@@ -16070,7 +16074,7 @@
         i = r(9669),
         a = r.n(i),
         s = r(22188),
-        o = (r(26149), r(92398), r(78913), r(93976)),
+        o = (r(26149), r(76796), r(78913), r(93976)),
         l = r(90666),
         c = r(99386);
       class d {
@@ -16904,7 +16908,7 @@
         ie = r(76236),
         ae = r(13600),
         se = r(78468),
-        oe = r(92398);
+        oe = r(76796);
       const le = (0, d.Pi)((e) => {
         const {
             clanSteamID: t,
@@ -20463,7 +20467,7 @@
         a = r(30381),
         s = r(67294),
         o = r(26149),
-        l = (r(92398), r(57287)),
+        l = (r(76796), r(57287)),
         c = r(80315),
         d = r(50153),
         m = (r(37662), r(76776)),
@@ -21083,7 +21087,7 @@
         l = r(13271),
         c = r(67294),
         d = r(26149),
-        m = r(92398),
+        m = r(76796),
         u = r(37662),
         p = r(77636),
         h = r(159),
@@ -22911,7 +22915,7 @@
       var n = r(70655),
         i = r(77442),
         a = r(48116),
-        s = r(92398),
+        s = r(76796),
         o = (r(37662), r(990), r(77636)),
         l = (r(14146), r(159)),
         c = r(37694),
@@ -23134,7 +23138,7 @@
     46713: (e, t, r) => {
       "use strict";
       r.d(t, { K: () => i, u: () => a });
-      r(92398), r(37662);
+      r(76796), r(37662);
       var n = r(63466);
       function i(e, t) {
         return e.filter(
@@ -23288,7 +23292,7 @@
       var n = r(70655),
         i = r(67294),
         a = r(26149),
-        s = r(92398),
+        s = r(76796),
         o = r(41311),
         l = r(35092),
         c = r(90666),

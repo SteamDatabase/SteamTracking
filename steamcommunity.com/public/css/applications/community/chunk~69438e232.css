@@ -1,6 +1,3 @@
-:root {
-  --basicui-header-height: 0px;
-}
 html:not(.client)
   .events_listing
   .apppartnereventspage_AppPartnerEventsPage_1m-hJ
@@ -1543,9 +1540,6 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   .nominationandvote_SteamAwardVoteButtonArea_2gvv6
   .nominationandvote_SteamAwardCategoryTitle_3hZED {
   padding-left: 8px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 body.v6.partner_events {
   background: #24282e;

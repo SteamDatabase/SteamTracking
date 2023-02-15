@@ -1,6 +1,3 @@
-:root {
-  --basicui-header-height: 0px;
-}
 html:not(.client)
   .events_listing
   .apppartnereventspage_AppPartnerEventsPage_1m-hJ
@@ -1309,6 +1306,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .horizontalSlider___281Ls {
   position: relative;
   overflow: hidden;
+  touch-action: pan-y pinch-zoom;
 }
 [dir="rtl"] .horizontalSlider___281Ls {
   direction: ltr;
@@ -1392,9 +1390,6 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
     display: block;
     margin-bottom: 10px;
   }
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .eventrow_OtherEventsCtn_1qNsZ {
   margin-top: 8vw;
@@ -1747,9 +1742,6 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 }
 .BasicUI .eventrow_AppCapsulePrice_Jq75m span:last-child {
   padding-bottom: unset;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .carousel_carouselNavButton_1KK5N {
   border: none;
@@ -2105,9 +2097,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
     U+FEFF, U+FFFD;
 }
 
-:root {
-  --basicui-header-height: 0px;
-}
 .animated_featured_capsule_FeatureCtn_1No48 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
@@ -2754,9 +2743,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 {
   flex-direction: column;
@@ -3670,9 +3656,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .discoveryqueuewidget_Placeholder_3rUZ- {
   height: 200px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .salehilightplayerembed_MediaContainer_1o87v {
   flex: 1;
   min-width: 284px;
@@ -3998,9 +3981,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   a.saleitemdefdisplay_ItemActionBtn_3GaOl:hover {
   background: #000;
   color: #fff;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 Body.v6.tag_page.contenthub_page {
   background-color: #202327;
@@ -5024,9 +5004,6 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
   right: 40px;
   float: right;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .maincapsule_DummyValue_3dnfO {
   display: flex;
 }
@@ -5051,9 +5028,6 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
 }
 .maincapsule_PlaceholderCompact_12-VZ .maincapsule_ThrobberCtn_1l4x_ {
   padding-top: 180px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .contenthubmaincarousel_ContentHubTitleCtn_61ECB {
   max-width: 940px;
@@ -5242,9 +5216,6 @@ html.responsive.touch
 }
 .contenthubmaincarousel_ReducedMotionToggleCtn_2Ykob {
   background-color: rgba(0, 0, 0, 0.5);
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .salecuratorrecommendations_CuratorCtn_1NvS6 {
   position: relative;
@@ -5778,9 +5749,6 @@ html.responsive.touch
   border-width: 20px;
   margin-left: -20px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .saledisplaylogo_SalePageLogoCtn_2kLRR {
   max-width: 940px;
   margin: 0 auto;
@@ -6010,9 +5978,6 @@ html.responsive.touch
 .salerewardshelfdisplay_RewardShelfCtn_2u8Xp video {
   max-width: 100%;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .salesection_ShowContentsContainer_14g7C {
   display: flex;
   justify-content: center;
@@ -6155,9 +6120,6 @@ html.responsive.touch
   background: #2be742;
   box-shadow: 4px 4px 0px #0097c9;
   color: #0097c9;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .saleitembrowser_SaleItemBrowserContainer_2wLns {
   display: flex;
@@ -6770,14 +6732,14 @@ html.responsive.touch
 }
 .salesectioneventschedule_SaleAppWideCtn_3jute
   .salesectioneventschedule_SaleAppCapsule_1igBr {
-  flex-basis: 196px;
+  flex-basis: 165px;
   flex-shrink: 1;
 }
 .salesectioneventschedule_SaleAppWideCtn_3jute
   .salesectioneventschedule_WideHeader_1KMNy {
   height: auto;
   width: 100%;
-  max-width: 196px;
+  max-width: 165px;
   display: block;
 }
 .salesectioneventschedule_SaleAppWideCtn_3jute
@@ -7685,9 +7647,6 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   font-size: 13px;
   color: #fff;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
   position: absolute;
   width: 100%;
@@ -7813,9 +7772,6 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerText_2s2hb {
   display: inline;
   margin-left: 8px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .saleclaimitem_ClaimCtn_d5PCH {
   display: flex;

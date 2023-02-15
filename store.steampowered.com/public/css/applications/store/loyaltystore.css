@@ -331,32 +331,32 @@ body.v6.rewards .ModalPosition_Content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-200px);
+  transform: translateY(-175px);
 }
 .styles_PageHomeBannerChicken_3WLxH {
-  transform: scale3d(0.65, 0.65, 1) translateX(-260px) translateY(20px);
+  transform: scale3d(0.45, 0.45, 1) translateX(-265px) translateY(30px);
   position: absolute;
 }
 .styles_PageHomeBannerBored_15Y6g {
-  transform: scale3d(0.7, 0.7, 1) translateX(-180px);
+  transform: scale3d(0.5, 0.5, 1) translateX(-180px);
   position: absolute;
 }
 .styles_PageHomeBannerHugs_32Y-3 {
-  transform: scale3d(0.8, 0.8, 1) translateX(-100px);
+  transform: scale3d(0.6, 0.6, 1) translateX(-100px) translateY(7px);
   position: absolute;
 }
 .styles_PageHomeBannerHappy_2oI2k {
-  transform: scale3d(1, 1, 1) translateX(0px) translateY(-20px);
+  transform: scale3d(0.8, 0.8, 1) translateX(0px) translateY(-20px);
   position: absolute;
   z-index: 3;
 }
 .styles_PageHomeBannerBoombox_2hiX2 {
-  transform: scale3d(0.75, 0.75, 1) translateX(110px) translateY(-20px);
+  transform: scale3d(0.55, 0.55, 1) translateX(110px) translateY(-10px);
   position: absolute;
   z-index: 2;
 }
 .styles_PageHomeBannerDance_3o5Od {
-  transform: scale3d(0.7, 0.7, 1) translateX(220px) translateY(-10px);
+  transform: scale3d(0.5, 0.5, 1) translateX(220px) translateY(5px);
   position: absolute;
   z-index: 1;
 }
@@ -364,15 +364,15 @@ body.v6.rewards .ModalPosition_Content {
   display: flex;
   margin: 0px auto 0px auto;
   max-width: 512px;
-  width: 100%;
+  width: 75%;
   opacity: 0.8;
 }
 .styles_HomeRewardsPointsIcon_2MaAJ {
-  width: 256px;
-  height: 256px;
+  width: 128px;
+  height: 128px;
   display: flex;
   align-items: center;
-  margin: 50px auto 0px auto;
+  margin: 25px auto 0px auto;
   -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2) 70%);
   mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2) 70%);
 }

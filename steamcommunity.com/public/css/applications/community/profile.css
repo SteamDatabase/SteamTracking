@@ -275,9 +275,6 @@
 .steamavatar_avatarHolder_1YGAH .steamavatar_avatarFrame_3atbN {
   transform: scale(1.2);
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .personastatusicons_PersonaStatusIcon_1YsWj {
   width: 16px;
   height: 16px;
@@ -2974,9 +2971,6 @@ body.profilethemecolors_SteamDeckTheme_3TBj7 {
   padding: 10px 0px 10px 0px;
   font-size: 16px;
   font-weight: 500;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .BasicUI .DialogContent_InnerWidth {
   overflow: visible;

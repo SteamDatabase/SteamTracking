@@ -1971,6 +1971,8 @@
     "Sale_DLCForYou_ParentAppSort_Playtime_ttip": "Sorts parent apps by all-time playtime, with most played first.",
     "Sale_DLCForYou_ParentAppSort_LastPlayed": "Last Played",
     "Sale_DLCForYou_ParentAppSort_LastPlayed_ttip": "Sorts parent apps by the time last played, with most recently played first.",
+    "Sale_DLCForYou_ParentAppSort_Popular": "Popular",
+    "Sale_DLCForYou_ParentAppSort_Popular_ttip": "Sorts parent apps with the most popular DLC first. Popularity is defined by sales rank, so DLC with low sales rank may not be shown.",
     "Sale_DLCForYou_MaxLastPlayed": "Max Time Last Played (months)",
     "Sale_DLCForYou_MaxLastPlayed_ttip": "Only show DLC for games played by the user up to this many months ago.",
     "Sale_DLCForYou_MinPlaytime": "Min Play Time (hours)",

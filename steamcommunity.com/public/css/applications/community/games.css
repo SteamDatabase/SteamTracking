@@ -125,9 +125,6 @@
   right: 4px;
   pointer-events: none;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .achievementiconbase_Icon_2bzHb {
   width: 100%;
   height: 100%;
