@@ -27797,9 +27797,11 @@
           }),
           s = (0, c.SZ)(() => {
             var e;
-            return null === (e = t.dlc_for_you_data) || void 0 === e
-              ? void 0
-              : e.parent_app_sort;
+            return (
+              (null === (e = t.dlc_for_you_data) || void 0 === e
+                ? void 0
+                : e.parent_app_sorts) || []
+            );
           }),
           _ = (0, c.SZ)(() => {
             var e;
@@ -27855,19 +27857,44 @@
                   a.SetDirty(r.jB.jsondata_sales);
               },
             }),
-            d.createElement(m.ry, {
-              label: (0, u.Xx)("#Sale_DLCForYou_ParentAppSort"),
-              rgOptions: i,
-              selectedOption: s,
-              disabled: !o,
-              onChange: (e) => {
-                (t.dlc_for_you_data = Object.assign(
-                  Object.assign({}, t.dlc_for_you_data),
-                  { parent_app_sort: e.data }
-                )),
-                  a.SetDirty(r.jB.jsondata_sales);
-              },
-            }),
+            o &&
+              d.createElement(
+                d.Fragment,
+                null,
+                d.createElement(P.R, {
+                  items: s,
+                  onDelete: (e) => {
+                    t.dlc_for_you_data.parent_app_sorts.splice(e, 1),
+                      a.SetDirty(r.jB.jsondata_sales);
+                  },
+                  onReorder: () => {
+                    a.SetDirty(r.jB.jsondata_sales);
+                  },
+                  render: (e) =>
+                    d.createElement(m.ry, {
+                      label: (0, u.Xx)("#Sale_DLCForYou_ParentAppSort"),
+                      rgOptions: i,
+                      selectedOption: e.value,
+                      onChange: (t) => {
+                        (e.value = t.data), a.SetDirty(r.jB.jsondata_sales);
+                      },
+                    }),
+                }),
+                d.createElement(
+                  m.zx,
+                  {
+                    onClick: () => {
+                      t.dlc_for_you_data.parent_app_sorts ||
+                        (t.dlc_for_you_data.parent_app_sorts = []),
+                        t.dlc_for_you_data.parent_app_sorts.push({
+                          value: "last_played",
+                        }),
+                        a.SetDirty(r.jB.jsondata_sales);
+                    },
+                  },
+                  "Add Sort Order Tab"
+                )
+              ),
             d.createElement(m.II, {
               label: (0, u.Xx)("#Sale_DLCForYou_MaxLastPlayed"),
               tooltip: (0, u.Xx)("#Sale_DLCForYou_MaxLastPlayed_ttip"),
