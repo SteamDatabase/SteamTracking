@@ -676,6 +676,7 @@
   width: fit-content;
   justify-content: end;
   align-items: center;
+  flex-shrink: 0;
 }
 .BasicUI .salepreviewwidgets_WidgetReleaseDateAndPlatformCtn_2vdJg {
   margin-bottom: 4px;
@@ -1294,7 +1295,6 @@
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
-    min-width: 320px;
     scroll-snap-align: start;
   }
   .salepreviewwidgets_OuterCapsuleContainer_Btar9
