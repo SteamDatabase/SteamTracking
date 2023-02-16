@@ -3441,3 +3441,16 @@ html.tablet .modal_media_carousel {
 html.tablet #modalMediaCarouselContainer {
 	display: flex;
 }
+
+html.tablet #modalMediaCarouselContents {
+	display: flex;
+	align-items: center;
+}
+
+html.tablet #modalMediaCarouselItems {
+	margin-left: 0;
+}
+
+html.tablet #modalMediaCarouselItems img {
+	object-fit: scale-down;
+}
