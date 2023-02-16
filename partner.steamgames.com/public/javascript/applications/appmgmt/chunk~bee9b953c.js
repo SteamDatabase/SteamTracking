@@ -15,8 +15,10 @@
         ColumnCtn: "adminshared_ColumnCtn_1Mnmn",
         LeftCol: "adminshared_LeftCol_1neFt",
         ColHeader: "adminshared_ColHeader_uP0hv",
+        ColHeaderImg: "adminshared_ColHeaderImg_3OYqx",
         SectionCtn: "adminshared_SectionCtn_3la4r",
         RightCol: "adminshared_RightCol_p8nGm",
+        SmallText: "adminshared_SmallText_1YUYd",
         TitleSmall: "adminshared_TitleSmall_oEKks",
         DashLink: "adminshared_DashLink_2y93_",
         FlexRow: "adminshared_FlexRow_2OkCw",
@@ -25,11 +27,13 @@
         StatusIcon: "adminshared_StatusIcon_gwjXH",
         StatusIconDone: "adminshared_StatusIconDone_20lWe",
         UploadedImageDisplayCtn: "adminshared_UploadedImageDisplayCtn_suH0c",
+        UploaderLeftCol: "adminshared_UploaderLeftCol_1lUkC",
+        UploaderRightCol: "adminshared_UploaderRightCol_1qxnk",
       };
     },
     14809: (t, e, s) => {
       "use strict";
-      s.d(e, { R: () => S });
+      s.d(e, { R: () => _ });
       var n = s(70655),
         i = s(67294),
         a = s(29323),
@@ -44,7 +48,7 @@
         c = s(9669),
         p = s.n(c),
         A = s(48899);
-      let S = class extends i.Component {
+      let _ = class extends i.Component {
         constructor(t) {
           super(t),
             (this.state = {
@@ -163,17 +167,17 @@
           );
         }
       };
-      (0, n.gn)([o.ak], S.prototype, "OnWhitelistGrab", null),
-        (0, n.gn)([o.ak], S.prototype, "OnWhitelistRelease", null),
-        (0, n.gn)([o.ak], S.prototype, "OnWhitelistMove", null),
-        (S = (0, n.gn)([a.Pi], S));
+      (0, n.gn)([o.ak], _.prototype, "OnWhitelistGrab", null),
+        (0, n.gn)([o.ak], _.prototype, "OnWhitelistRelease", null),
+        (0, n.gn)([o.ak], _.prototype, "OnWhitelistMove", null),
+        (_ = (0, n.gn)([a.Pi], _));
     },
     62642: (t, e, s) => {
       "use strict";
       s.d(e, {
         C1: () => c,
         HD: () => g,
-        Sz: () => S,
+        Sz: () => _,
         X_: () => m,
         bA: () => A,
         ee: () => d,
@@ -499,7 +503,7 @@
           { rgTags: t, rgCategories: s }
         );
       }
-      function S() {
+      function _() {
         const [t, e] = o.useState(p.Get().GetStoreTagMap()),
           [s, n] = o.useState(p.Get().GetStoreCategoryMap());
         return (

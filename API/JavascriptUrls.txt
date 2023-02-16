@@ -542,6 +542,8 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${hero_carousel_image}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
+${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
+${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
 ${MEDIA_CDN_URL}${}
 ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/capsule_231x87.jpg
@@ -647,6 +649,7 @@ ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistrationpayload/${}
 ${PARTNER_BASE_URL}optin/ajaxuploadasset/${}
+${PARTNER_BASE_URL}optin/appeal/${pageid}/${_ ? _ : _}
 ${PARTNER_BASE_URL}optin/appreview/${}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
@@ -678,6 +681,7 @@ ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventbyid
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetpackagediscounts/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxupdatediscountevent
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/
+${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist

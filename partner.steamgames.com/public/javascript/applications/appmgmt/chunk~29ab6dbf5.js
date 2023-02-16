@@ -529,6 +529,8 @@
           "claimitem",
           "packagepurchaseable",
           "actiondialog",
+          "uploadfilebutton",
+          "docimg",
         ],
         l = [
           "h1",
@@ -551,6 +553,7 @@
           "vod",
           "trailer",
           "youtubeorvideo",
+          "docimg",
         ],
         d = (o.filter((e) => -1 == c.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
         u = "{STEAM_CLAN_LOC_IMAGE}";
@@ -3402,7 +3405,7 @@
         bestofyear_banner: { width: 1100, height: 160 },
         bestofyear_banner_mobile: { width: 500, height: 160 },
         localized_marketing_message: { width: 570, height: 600 },
-        localized_optin_banner: { width: 736, height: 160 },
+        localized_optin_banner: { width: 1e3, height: 150 },
       };
       function n(e, t, r) {
         const n = i[r];
@@ -19234,6 +19237,7 @@
                     br: n.FE.readFixed64String,
                     bw: n.Xc.writeFixed64String,
                   },
+                  force_resend: { n: 2, br: n.FE.readBool, bw: n.Xc.writeBool },
                 },
               }),
             u.sm_m

@@ -1438,6 +1438,7 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   width: fit-content;
   justify-content: end;
   align-items: center;
+  flex-shrink: 0;
 }
 .BasicUI .salepreviewwidgets_WidgetReleaseDateAndPlatformCtn_2vdJg {
   margin-bottom: 4px;
@@ -2056,7 +2057,6 @@ div.creatorhomeembed_SocialContainer_1MvXz {
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
-    min-width: 320px;
     scroll-snap-align: start;
   }
   .salepreviewwidgets_OuterCapsuleContainer_Btar9
@@ -9873,7 +9873,8 @@ html.responsive.touch
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
   .adminshared_ColHeader_uP0hv {
-  height: 130px;
+  position: relative;
+  height: 122px;
   padding: 24px;
   box-sizing: border-box;
   font-size: 24px;
@@ -9886,14 +9887,31 @@ html.responsive.touch
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
+  .adminshared_ColHeaderImg_3OYqx {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
   .adminshared_SectionCtn_3la4r {
   position: relative;
   background: #2c2e35;
   padding: 24px;
+  box-sizing: border-box;
   margin-bottom: 1px;
   font-size: 14px;
   font-weight: 300;
   color: #dfe3e6;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r
+  img {
+  max-width: 100%;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
@@ -9935,7 +9953,8 @@ html.responsive.touch
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_RightCol_p8nGm
   .adminshared_ColHeader_uP0hv {
-  height: 130px;
+  position: relative;
+  height: 122px;
   padding: 16px 16px 16px 28px;
   box-sizing: border-box;
   color: #fff;
@@ -9945,6 +9964,30 @@ html.responsive.touch
   flex-direction: column;
   justify-content: center;
   background: linear-gradient(to bottom right, #1e4fa9, #2460d0);
+  overflow: hidden;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_RightCol_p8nGm
+  .adminshared_ColHeader_uP0hv
+  .adminshared_SmallText_1YUYd {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 300;
+  z-index: 1;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_RightCol_p8nGm
+  .adminshared_ColHeader_uP0hv
+  .adminshared_ColHeaderImg_3OYqx {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  transform: scale(1.7);
+  filter: blur(20px) brightness(0.5);
+  z-index: 0;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_RightCol_p8nGm
@@ -10023,14 +10066,14 @@ select {
   display: flex;
   flex-direction: row;
 }
-.adminshared_UploadedImageDisplayCtn_suH0c .adminshared_LeftCol_1neFt {
+.adminshared_UploadedImageDisplayCtn_suH0c .adminshared_UploaderLeftCol_1lUkC {
   width: 70%;
 }
-.adminshared_UploadedImageDisplayCtn_suH0c .adminshared_RightCol_p8nGm {
+.adminshared_UploadedImageDisplayCtn_suH0c .adminshared_UploaderRightCol_1qxnk {
   width: 30%;
 }
 .adminshared_UploadedImageDisplayCtn_suH0c
-  .adminshared_RightCol_p8nGm
+  .adminshared_UploaderRightCol_1qxnk
   .adminshared_SectionCtn_3la4r {
   margin-left: 8px;
   width: 100%;
@@ -10050,6 +10093,9 @@ select {
 }
 .collapseablesection_required_title_29VCz {
   display: flex;
+}
+.collapseablesection_required_title_29VCz:not(:first-child) {
+  margin-top: 60px;
 }
 .collapseablesection_SectionTitleHeader_1K5gA .EventEditorTextTitle {
   padding-top: 6px;
@@ -12076,9 +12122,17 @@ select {
   padding: 12px;
   margin-bottom: 30px;
 }
-.optin_admin_editor_Section_2yL7J .optin_admin_editor_Section_2yL7J {
-  background: #34373e;
-  border-radius: 5px;
+.optin_admin_editor_Section_2yL7J h3 {
+  font-size: 14px;
+  color: #67c1f5;
+  font-weight: 500;
+}
+.optin_admin_editor_Section_2yL7J h3:not(:first-child) {
+  margin-top: 16px;
+}
+.optin_admin_editor_Section_2yL7J p {
+  font-size: 14px;
+  color: #dfe3e6;
 }
 .optin_admin_editor_Section_2yL7J .optin_admin_editor_SectionDesc_33_oC {
   font-size: 14px;
@@ -12090,6 +12144,18 @@ select {
 .optin_admin_editor_Section_2yL7J.optin_admin_editor_ManageTable_2afWv {
   height: calc(100vh - 421px);
   min-height: 900px;
+}
+.optin_admin_editor_IndentedSubSection_3zYTc {
+  margin-left: 16px;
+  margin-top: 12px;
+}
+.optin_admin_editor_IndentedSubSection_3zYTc.optin_admin_editor_Disabled_2rKAB {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
 }
 .optin_admin_editor_RightSection_3NiRT {
   padding: 16px;
@@ -12137,6 +12203,19 @@ select {
 }
 .optin_admin_editor_StatsCtn_3R21M td {
   padding: 4px 6px 4px 4px;
+}
+table.optin_admin_editor_EligibleGamesTable_3sBXw {
+  border-spacing: 0;
+  width: 100%;
+  font-size: 14px;
+}
+table.optin_admin_editor_EligibleGamesTable_3sBXw th {
+  background: #33353d;
+  padding: 6px 6px 6px 6px;
+}
+table.optin_admin_editor_EligibleGamesTable_3sBXw td {
+  padding: 6px 6px 6px 6px;
+  background: #000;
 }
 .optin_admin_editor_artwork_BannerPreview_-u3i1 {
   width: 342px;
@@ -12934,6 +13013,25 @@ select {
 .optin_app_review_TagFilterBar_sNv3- {
   margin-bottom: 30px;
 }
+.optin_display_appeal_Dummy_XMLkP {
+  background-color: hotpink;
+}
+.optin_display_appeal_ButtonCtn_3QVsd {
+  margin-top: 16px;
+  width: 30%;
+}
+.optin_display_appeal_AppealResults_3RoeY {
+  background: #3c3f48;
+  padding: 16px;
+  margin-top: 16px;
+}
+.optin_display_appeal_AppealResults_3RoeY h2 {
+  color: #fff;
+}
+.optin_display_appeal_AppealResults_3RoeY.optin_display_appeal_Declined_3fgI8
+  h2 {
+  color: #ebce39;
+}
 .optin_display_appeal_dialog_Dummy_2ezUj {
   background-color: hotpink;
 }
@@ -12953,23 +13051,4 @@ select {
   margin-top: 22px;
   color: #fff;
   font-weight: 500;
-}
-.optin_display_appeal_Dummy_XMLkP {
-  background-color: hotpink;
-}
-.optin_display_appeal_ButtonCtn_3QVsd {
-  margin-top: 16px;
-  width: 30%;
-}
-.optin_display_appeal_AppealResults_3RoeY {
-  background: #3c3f48;
-  padding: 16px;
-  margin-top: 16px;
-}
-.optin_display_appeal_AppealResults_3RoeY h2 {
-  color: #fff;
-}
-.optin_display_appeal_AppealResults_3RoeY.optin_display_appeal_Declined_3fgI8
-  h2 {
-  color: #ebce39;
 }
