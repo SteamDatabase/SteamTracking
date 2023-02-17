@@ -13029,6 +13029,30 @@ table.optin_admin_editor_EligibleGamesTable_3sBXw td {
 .optin_app_review_Row_2db7m .optin_app_review_CapsuleImg_8kkOB {
   width: 300px;
 }
+.optin_app_review_Column_1r2iO {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.optin_app_review_TopSection_2nKNy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.optin_app_review_TopSection_2nKNy .optin_app_review_ActionsCtn_2jqGL {
+  flex-shrink: 0;
+}
+.optin_app_review_AppealWordsCtn_3B_85 {
+  background: #17181c;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.optin_app_review_AppealWordsCtn_3B_85 p {
+  font-size: 14px;
+  color: #ccc;
+}
 .optin_app_review_GameInfo_3FTQ3 {
   display: flex;
   flex-direction: column;
@@ -13088,6 +13112,11 @@ table.optin_admin_editor_EligibleGamesTable_3sBXw td {
 .optin_display_appeal_AppealResults_3RoeY.optin_display_appeal_Declined_3fgI8
   h2 {
   color: #ebce39;
+}
+.optin_display_appeal_AppealTitle_X7wqW {
+  background: #c9793f;
+  padding: 4px 8px;
+  border-radius: 2px;
 }
 .optin_display_appeal_dialog_Dummy_2ezUj {
   background-color: hotpink;
