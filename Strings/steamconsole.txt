@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-o
-o
 __stubs
 __TEXT
 __stub_helper
@@ -41,9 +39,9 @@ __thread_bss
 __DATA
 __bss
 __DATA
-y5
 __common
 __DATA
+E
 H
 __LINKEDIT
 
@@ -194,13 +192,14 @@ controller
 controller_ui
 metrics
 china
+html
 Invalid spew group
 [S_API FAIL] SteamAPI_Init() failed; steam path (%s) missing directory separator
 [S_API FAIL] SteamAPI_Init() failed; steam found, but process is dead.
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
 [S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
 CLIENTENGINE_INTERFACE_VERSION005
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steam/client_api.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.dylib (the Steam client is a 32-bit app).
 ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
@@ -267,7 +266,7 @@ Set the store URL
 Set the help/support URL
 /
 %s/
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Missing String for %s (%d)
 Unknown
 OK
@@ -280,7 +279,7 @@ Unknown version %d for vpk %s
 .vpk
 %s_%03d.vpk
 /../
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vpklib/packedstore.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vpklib/packedstore.cpp
 fread() failed
 nRead == nNumBytes
 rb
@@ -288,7 +287,7 @@ Exceeded limit of number of vpk files supported (%d)!
 .%s
 %s%s%s crc=0x%x metadatasz=%d
 fnumber=%d ofs=0x%x sz=%d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 count >= 0
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
@@ -337,7 +336,7 @@ app_license_request
 <AppID> - Requests a free licenses for this app if not already owned.
 app_install_script
 <AppID> [uninstall:0|1]- Runs app install script.
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamconsole/appupdater.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamconsole/appupdater.cpp
 m_eAppInfoResult != k_EResultPending
 CAppInfoUpdater::OnAppInfoUpdate
 ERROR! AppInfo request for AppId %d returned error %s.
@@ -383,7 +382,7 @@ Logging in user '%s' to Steam %s...
 This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and enter the Steam Guard code from that message.You can also enter this code at any time using 'set_steam_guard_code' at the console.Steam Guard code:
 Enter the current code from your Steam Guard Mobile Authenticator appTwo-factor code:
 FAILED (%s)
-Logging of current session...
+Logging off current session...
 password:
 Waiting for client config...
 Extended
@@ -495,7 +494,7 @@ localcspath
 deltabranch
 ERROR! No valid depot specified for AppID %u
 Starting AppID %u build (flags 0x%x).
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamconsole/depotbuilder.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamconsole/depotbuilder.cpp
 m_vecDepotConfigKVs.Count() == m_vecDepotIDs.Count()
 Building depot %u...
 Successfully finished AppID %u build preview.
@@ -637,7 +636,7 @@ ceg_wrap
 ceg_wrap <appid> <orig filename> <stripped filename> <strips filename> : upload executable to back end for CEG wrapping
 Install script signing completed; output is in %s
 Install script signing failed with EResult %d (%s)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -793,13 +792,13 @@ ERROR! Missing parameters.
 ERROR! Failed to create new workshop item.
 ERROR! ClientRemoteStorage()->FileShare() failed.
 ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed.
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
 {}()'
 {}()':
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 pName
 m_fnCompletionCallback
 m_vecCallbacks.Count() == 0 || !callback
@@ -824,7 +823,7 @@ m_p
 Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -851,9 +850,9 @@ Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 %s%c%s
 ..
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 CFileWriterThread
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
@@ -877,7 +876,7 @@ m_Tree
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
@@ -885,7 +884,7 @@ strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 %%%d
 ]:%u
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 "
 {
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
@@ -934,12 +933,12 @@ KeyValues Error: %s in file %s [offset: %d]
 ,
 (*
 *),
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 "
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 CUtlBuffer::GetStringFast: binary buffers only
 Expected %lld but got %lld!
@@ -962,19 +961,19 @@ a
 ?
 '
 %.18g
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -989,7 +988,7 @@ CUtlStringBuilder::Data::MoveToHeap
 %02d/%02d/%02d
 00:00:00
 01/01/00
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/rtime.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/rtime.cpp
 V_strlen( pchTime ) == 25
 Infinite time value
 Nil time value
@@ -1000,7 +999,7 @@ NIL
 %04u%02u%02u%02u%02u%02u
 %04u-%02u-%02u %02u:%02u:%02u
 steamclient.dylib
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 EResult
 EUniverse
 false
@@ -1209,7 +1208,7 @@ broadcast
 PS3
 @bEnableSpewThrottle
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
 pLogInstance == sm_pLogInstance
 sm_cRef > 0
 sm_bShuttingDown
@@ -1262,10 +1261,10 @@ CLogInstance::EmitEventNow
 ...
 Last Message Repeated %d times.%s
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
 CIPAndPort::GetIPv4 called on IPv6 address
 nBytes
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 @nSpewThrottlePeriodMs
 @nSpewThrottleTriggerThreshold
@@ -1290,7 +1289,7 @@ bitNum >= 0 && bitNum < this->Size()
 [U:%u:%u]
 [a:%u:%u]
 [i:%u:%u]
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/string_misc.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 0
 
@@ -1307,12 +1306,13 @@ j
 @
 0
 Ic
-J
 0
 
 =
+=
 @
 =*.*
+t
 @
 @
 0

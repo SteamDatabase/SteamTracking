@@ -3,7 +3,6 @@
  B pcre_callout
  B pcre_stack_guard
  B pcrecpp::RE::no_arg
- BGetLocalFQDN
  CFArrayCreate
  CFBooleanGetTypeID
  CFBooleanGetValue

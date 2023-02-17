@@ -4,8 +4,8 @@
 "Tokens" 
 { 
 "TrackerUI_ConnectionSpeed"				"인터넷 연결 속도"
-"TrackerUI_FavoriteWindowLabel_Windows"	"프로그램을 시작할 때와 알림 영역의 아이콘을 두 번 클릭했을 때 표시할 Steam 창을 선택하세요."
-"TrackerUI_FavoriteWindowLabel"			"프로그램을 시작할 때와 알림 영역의 아이콘을 두 번 클릭했을 때 표시할 Steam 창을 선택하세요."
+"TrackerUI_FavoriteWindowLabel_Windows"	"Steam을 시작했을 때와 알림 영역의 아이콘을 두 번 클릭했을 때 표시할 창을 선택하세요."
+"TrackerUI_FavoriteWindowLabel"			"Steam을 시작했을 때와 알림 영역의 아이콘을 두 번 클릭했을 때 표시할 창을 선택하세요."
 "TrackerUI_FavoriteWindow"			"윈도우 설정"
 
 
@@ -763,7 +763,7 @@
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "이 장비에서 Steam 방송을 시작할 수 없습니다.\n\nWindows에서 Steam이 호환성 모드로 실행되고 있어 Steam 방송이 정상적으로 작동할 수 없습니다. 장비가 Windows 7 이상의 버전이라면 아래의 지원 페이지를 참조하여 호환성 모드를 해제해 주시기 바랍니다."
 "Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_Settings_Broadcast_WindowsCompatSupportText" "호환성 모드를 끄려면 어떻게 해야하나요?"
-"Steam_Settings_Broadcast_RequiresRestart" "* 적용 전에 게임 재시작 필요"
+"Steam_Settings_Broadcast_RequiresRestart" "* 적용 전에 게임 다시 시작 필요"
 
 "Broadcast_RecordingError_NoAudio" "Steam에서 이 방송의 소리를 녹음할 수 없었습니다"
 "Broadcast_RecordingError_LowVideo" "Steam이 방송 품질을 \"최고 성능\"으로 변경했습니다"

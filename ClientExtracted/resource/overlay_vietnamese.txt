@@ -36,7 +36,7 @@
 "Steam_Settings_Library_Size_Title" "Kích cỡ cho các thành phần giao diện của thư viện người dùng"
 "Steam_Settings_Library_Size_Automatic_Label" "(Kích cỡ các thành phần được quyết định bởi chiều rộng của cửa sổ)"
 "Steam_Settings_Library_LowBandwidth_Title" "Chế độ băng thông thấp"
-"Steam_Settings_Library_LowBandwidth_Desc" "Giảm băng thông bằng cách tắt các tính năng như tự động tải nội dung cộng đồng."
+"Steam_Settings_Library_LowBandwidth_Desc" "Giảm mức sử dụng băng thông bằng cách tắt các tính năng như tự động tải nội dung cộng đồng."
 "Steam_Settings_Library_LowPerf_Title" "Chế độ hiệu năng thấp"
 "Steam_Settings_Library_LowPerf_Desc" "Cải thiện hiệu năng bằng cách tắt một số cải thiện đồ họa hoặc chuyển cảnh."
 "Steam_Settings_Library_DisableCommunityContent_Title" "Tắt nội dung cộng đồng"

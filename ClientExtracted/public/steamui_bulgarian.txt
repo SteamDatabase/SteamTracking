@@ -22,7 +22,7 @@
 "SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Предварително зареждане на файловете на %s1 от диск."
 "SteamUI_ConvertExistingStatus2" "Предварително зареждане на файловете на %s1 от диск.."
-"SteamUI_ConvertExistingStatus3" "Предварително зареждане на файловете на %s1 от диск..."
+"SteamUI_ConvertExistingStatus3" "Предварително зареждане на файловете на %s1 от диск…"
 
 "WelcomeToSteamNameLabel" "Име"
 "WelcomeToSteamEmailLabel1" "Е-поща"
@@ -248,7 +248,7 @@
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Неуспешно стартиране на %game% като ограничен пробен период. (Грешка: %error%)"
 
-"SteamUI_JoinDialog_SyncingCloud_Text" "Синхронизиране на Steam облака..."
+"SteamUI_JoinDialog_SyncingCloud_Text" "Синхронизиране на Steam облака…"
 "SteamUI_JoinDialog_Connecting_Text" "Свързване към Steam…"
 
 "SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes% минути"
@@ -515,7 +515,7 @@
 "Steam_ShowOnlineStatusOptions"	"Изберете опциите за показване на линия"
 "Steam_ShowDestinationOptions"	"Изберете дестинация за показване"
 "Steam_MustRestartToTakeEffect"			"Тази настройка няма да влезе в сила, докато\nне рестартирате Steam."
-"Steam_LanguageSelect"				"Избиране на предпочитан език (изисква рестартиране на Steam)"
+"Steam_LanguageSelect"				"Изберете езика, който желаете да използва Steam (изисква рестартиране на Steam)"
 "Steam_SteamChinaLanguageSelect"	"Steam може да бъде използван само на опростен китайски"
 "Steam_SelectSkinToUse"				"Изберете предпочитания от Вас облик (изисква рестартиране на Steam)"
 "Steam_CreateShortcut_Title"			"Steam — създаване на пряк път"
@@ -678,6 +678,7 @@
 "SteamUI_CreateAccount_DifferentNames" "Кликнете върху „Назад“, за да опитате с друго име. Или изберете едно\nот предложените имена по-долу и кликнете върху „Напред“."
 "SteamUI_CreateAccount_SuggestedNames" "Предлагани имена за акаунта:"
 "SteamUI_CreateAccount_Names" "Имена"
+"Steam_ForgottenPassword_MarketRestriction" "Забележка: Ако нулирате паролата си, временно ще бъдете ограничени от търгуване и обществения пазар."
 "Steam_ForgottenPassword_FAQ" "Преглед на ЧЗВ относно ограниченията за търговия и пазара"
 "Steam_ForgottenPassword_VerificationCode" "Потвърдителен код"
 
@@ -1157,6 +1158,7 @@
 "SteamUI_CCWarning" "Steam — предупреждение"
 
 "SteamUI_ForgottenPasswordResetType" "С цел да възвърнем информацията за вход на Steam акаунта Ви, трябва да започнем с името му."
+"SteamUI_ForgottenPasswordResetType2" "Какво Ви е нужно да възстановите? Можете да нулирате паролата си тук или, ако сте загубили достъп до Вашето Steam Guard приложение за удостоверяване, можете да го премахнете от профила си."
 "SteamUI_ForgottenPasswordGetAccountName" "Не знам името на акаунта си."
 "SteamUI_ForgottenPasswordResetPassword" "Знам името на акаунта си."
 "SteamUI_ForgottenPasswordForgotPassword" "Забравих паролата си."
@@ -1170,6 +1172,7 @@
 "SteamUI_ForgottenPasswordEnterCDKey" "С цел да възвърнете потребителското си име, моля, въведете продуктовия код, който сте активирали към своя Steam акаунт."
 "SteamUI_ForgottenPasswordOtherText" "С цел да възвърнете своя Steam акаунт, трябва да знаете е-пощата си или продуктовия код на игра, която някога сте активирали към него."
 "SteamUI_ForgottenPasswordSentEmailEmail" "Е-писмо, съдържащо името на Steam акаунта Ви, беше изпратено до Вас.\n\nСлед като получите е-писмото, можете отново да използвате бутона „Възвръщане на загубен акаунт“, така ще нулирате паролата си."
+"SteamUI_ForgottenPasswordSentEmailCDKey" "Е-писмо е изпратено до собственика на продуктовия код, който сте въвели. След като получите името на акаунта, можете отново да използвате бутона „Възвръщане на загубен акаунт“, така ще нулирате паролата си."
 "Steam_ForgottenPassword_RequestFailed" "Операцията е неуспешна. Моля, опитайте отново."
 
 "Steam_CreateNewAccount_EmailAddrAlreadyInUse" "Вече съществува Steam акаунт с такава е-поща за връзка. Ако преди това сте създали Steam акаунт, можете да използвате съществуващия си профил, а не да създавате нов."
@@ -1300,7 +1303,7 @@
 
 "Steam_PreloadAppStatus1"	"Файловете на %s1 се приготвят за инсталиране."
 "Steam_PreloadAppStatus2"	"Файловете на %s1 се приготвят за инсталиране.."
-"Steam_PreloadAppStatus3"	"Файловете на %s1 се приготвят за инсталиране..."
+"Steam_PreloadAppStatus3"	"Файловете на %s1 се приготвят за инсталиране…"
 
 "Steam_PreallocateAppStatus"	"Разпределяне на дисковото пространство за %s1 …"
 "Steam_ValidateAppStatus"	"Откриване съществуващи файлове за %s1 …"
@@ -1398,7 +1401,7 @@
 "SteamUI_Install_Candidate_VideoDriver_Button" "Инсталиране"
 
 "SteamUI_VideoDriver_Recommendation_None_Title" "Проверка на видео драйверите"
-"SteamUI_VideoDriver_Recommendation_None_Info" "Вашият пакет видео драйвери няма нужда от обновяване."
+"SteamUI_VideoDriver_Recommendation_None_Info" "Пакетът с видео драйверите Ви е актуален."
 
 "SteamUI_No_VideoDrivers_Detected_Info" "Steam не успя да намери препоръчани пакети с видео драйвери на системата Ви."
 "SteamUI_VideoDriver_Detection_Disabled_Info" "Steam няма възможност да извърши засичане на видео драйверите в системата Ви."
@@ -1503,7 +1506,7 @@
 "Steam_AllowDownloadsDuringGameplayDetails"	"Ако това е избрано, Steam може да инициира или продължи свалянето на обновления, докато е пусната игра или друго \nSteam приложение. Можете да отмените това за всяка игра поотделно в свойствата ѝ."
 "Steam_ThrottleDownloadsWhileStreaming"	"Потискане на свалянията, докато се излъчва"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Ако това е избрано, Steam ще ограничи скоростта за сваляне, така че да поддържа висококачествено преживяване със Steam Remote Play."
-"Steam_DownloadRatesInBits"			"Показване на скоростта за сваляне като битове в секунда"
+"Steam_DownloadRatesInBits"			"Изобразяване на скоростта за сваляне като битове в секунда"
 
 "Steam_PeerContentTitle"			"Прехвърляне на игрални файлове през локална мрежа"
 "Steam_PeerContentInfo"			"Тази характеристика позволява на компютъра Ви да прехвърля игрални файлове към и от други компютри или Steam Deck у-ва във Вашата локална мрежа, намалявайки интернет трафика, докато сваляте или обновявате игра."
@@ -1732,7 +1735,7 @@
 "steam_menu_downloads"	"Сваляния"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Прозорец"
-"steam_menu_preferences"	"Предпочитания..."
+"steam_menu_preferences"	"Предпочитания…"
 "steam_menu_services"	"Услуги"
 "steam_menu_hidesteam"	"Скриване на Steam"
 "steam_menu_hideothers"	"Скриване на други"
@@ -1838,7 +1841,7 @@
 "Steam_MiniGamesList_Synchronizing"		"(синхронизиране)"
 
 "Steam_RightClick_PauseUpdating"		"Пауза на обновяването"
-"Steam_RightClick_ResumeUpdating"		"Продължаване на обновяването"
+"Steam_RightClick_ResumeUpdating"		"Възобновяване на обновяването"
 "Steam_RightClick_DeleteLocalContent"		"Деинсталиране…"
 "Steam_RightClick_PausePreloading"		"Пауза на предварителното зареждане"
 "Steam_RightClick_ResumePreloading"		"Възобновяване на предварителното зареждане"
@@ -2043,13 +2046,13 @@
 "Steam_DeleteMediaCacheConfirmation_Text"		"Това ще изтрие цялото съдържание на %s1\nот този компютър.\n\nЗа да гледате тази медия в бъдеще, първо ще трябва\nда свалите съдържанието ѝ отново."
 "Steam_DeleteMediaCache_Button"			"Изтриване"
 
-"Steam_AlwaysKeepThisGameUpToDate$appType=application"		"Винаги поддържайте това приложение обновено"
-"Steam_AlwaysKeepThisGameUpToDate$appType=game"		"Винаги поддържайте тази игра обновена"
-"Steam_AlwaysKeepThisGameUpToDate$appType=demo"		"Винаги поддържайте това демо обновено"
-"Steam_AlwaysKeepThisGameUpToDate$appType=media"	"Винаги поддържайте тази медия обновена"
-"Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Винаги поддържайте този саундтрак обновен"
-"Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Винаги поддържайте този инструмент обновен"
-"Steam_AlwaysKeepThisGameUpToDate$appType"          "Поддържане на това приложение винаги обновено"
+"Steam_AlwaysKeepThisGameUpToDate$appType=application"		"Винаги поддържайте това приложение актуално"
+"Steam_AlwaysKeepThisGameUpToDate$appType=game"		"Винаги поддържайте тази игра актуална"
+"Steam_AlwaysKeepThisGameUpToDate$appType=demo"		"Винаги поддържайте това демо актуално"
+"Steam_AlwaysKeepThisGameUpToDate$appType=media"	"Винаги поддържайте тази медия актуална"
+"Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Винаги поддържайте този саундтрак актуален"
+"Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Винаги поддържайте този инструмент актуален"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "Винаги поддържайте това актуално"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Обновяване на това приложение, само когато го пусна"
 "Steam_DoNotUpdateThisGame$appType=game"			"Обновяване на тази игра, само когато я пусна"
@@ -2150,7 +2153,7 @@
 "Steam_BackupGameFiles$appType=media"			"Архивиране на файловете за медията…"
 "Steam_BackupGameFiles$appType=music"			"Архивиране на файловете за саундтрака…"
 "Steam_BackupGameFiles$appType=tool"			"Архивиране на файловете за инструментите…"
-"Steam_BackupGameFiles$appType"                 "Архивиране на съдържанието..."
+"Steam_BackupGameFiles$appType"                 "Архивиране на съдържанието…"
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"Вече всички файлове за това приложение ще бъдат свалени посредством Steam."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"Вече всички файлове за тази игра ще бъдат свалени посредством Steam."
@@ -2309,7 +2312,7 @@
 "Steam_P2P_OfflineWithoutAllData_Title"	"Режим „Извън линия“"
 "Steam_P2P_OfflineWithoutAllData_Message" "Не може да играете „%game%”, не всички данни са изтеглени преди излизането"
 "Steam_RightClick_StopSharing"		"Спиране на споделянето"
-"Steam_RightClick_ResumeSharing"	"Продължаване на споделянето"
+"Steam_RightClick_ResumeSharing"	"Възобновяване на споделянето"
 "Steam_RightClick_StopChecking"		"Спиране на проверката"
 
 "Steam_AllAppsInstalled_Title"		"Инсталация на Steam"
@@ -2417,7 +2420,7 @@
 
 "Steam_status_installing"			"Инсталиране"
 "Steam_status_decrypting"			"Декодиране: "
-"Steam_status_validating"			"Валидиране:"
+"Steam_status_validating"			"Потвърждаване:"
 "Steam_status_verifying"			"Потвърждаване: "
 
 "steam_status_launching"				"Пускане"
@@ -2995,7 +2998,7 @@
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Премахване от семейни игри"
 
 "steam_menu_checkforupdates"						"Проверка за обновления на Steam клиента…"
-"steam_menu_checkforupdates_osx"					"Проверяване за обновления..."
+"steam_menu_checkforupdates_osx"					"Проверяване за обновления…"
 "steam_checkforupdates_title"						"Steam — Автоматично обновяване"
 "steam_ClientUpdateAvailableDownloading"			"Достъпно е обновление на Steam, което в момента се сваля."
 "steam_ClientUpdateAvailableDownloaded"			"Свалено е обновлението на Steam клиента."
@@ -3437,7 +3440,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_InstallAborted_InfoAppNoDemo"		"%game% не може да бъде инсталирана, защото това е демо и Вие притежавате пълната версия на продукта. Моля, инсталирайте пълната версия на играта."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Изисква се „Steam China“ („Steam | Китай“)"
-"Steam_Startup_GetSteamChina"						"%gamename% сега трябва да бъде пусната през новия клиент „Steam China“ („Steam | Китай“).\n\nМожете да се впишете в своя акаунт в %gamename% и да прехвърлите игралния си прогрес, артикули, ниво на персонаж и точки.\n\n"
+"Steam_Startup_GetSteamChina"						"%gamename% сега трябва да бъде пусната през новия клиент „Steam China“ („Steam | Китай“).\n\nМожете да се впишете в своя акаунт в %gamename% и да прехвърлите игралния си напредък, артикули, ниво на персонаж и точки.\n\n"
 "Steam_Startup_RunSteamChina"						"%gamename% вече е достъпна в „Steam China“ („Steam | Китай“). Моля, стартирайте „Steam China“ („Steam | Китай“), за да внесете Вашата игра."
 "Steam_Startup_SteamChinaImportedUninstall"			"%gamename% е внесена в „Steam China“ („Steam | Китай“). Вече можете безопасно да деинсталирате тази стартова програма."
 "Steam_Startup_LauncherDeprecated"					"%gamename% вече се пуска през „Steam China“ („Steam | Китай“). Тази инсталация вече не се поддържа и ще бъде затворена."
@@ -3988,6 +3991,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_menu_minimode"		"Компактен режим"
 "steam_menu_largemode"	"Уголемен режим"
 "steam_menu_bigpicturemode"	"Режим „Голям екран“"
+"steam_menu_close_bigpicturemode"	"Изход от режим „Голям екран“"
 "steam_menu_startvr"		"Стартиране на SteamVR (БЕТА)"
 "steam_menu_exitvr"		"Изход от SteamVR (БЕТА)"
 
@@ -4070,8 +4074,8 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_inbox_gifts"	"%gifts% нови подаръка"
 "steam_inbox_commentnotification"	"1 нов коментар"
 "steam_inbox_commentnotifications"	"%comments% нови коментара"
-"steam_inbox_offlinemessage"	"1 непрочетено съобщение"
-"steam_inbox_offlinemessages"	"%offlinemessages% непрочетени съобщения"
+"steam_inbox_offlinemessage"	"1 непрочетено чат съобщение"
+"steam_inbox_offlinemessages"	"%offlinemessages% непрочетени чат съобщения"
 
 "SteamUI_ContentMgr_ManageInstalledApps" "Папки на Steam библиотеката"
 "SteamUI_ContentMgr_ManageInstalledAppsInfo" "Управляване на местонахождението за съдържание в множество дискове"
@@ -4837,7 +4841,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "Steam_XboxDriverInstall_Title"		"Инсталиране на Xbox драйвер"
 "Steam_XboxDriverInstall_Success"	"Драйверът е успешно обновен и ще бъде активен след рестартиране на компютъра Ви."
-"Steam_XboxDriverInstall_ServiceFailure"	"Неуспешно обновяване на драйвер. Моля, уверете се, че Steam е включен в режим „Нормален потребител“ и че Steam услугата е включена и обновена."
+"Steam_XboxDriverInstall_ServiceFailure"	"Неуспешно обновяване на драйвер. Моля, уверете се, че Steam е включен в режим „Нормален потребител“, както и че Steam услугата е включена и актуална."
 "Steam_XboxDriverInstall_Failure"	"Неуспешно обновяване на драйвер. Грешка: %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Достъпен е нов фърмуер за контролера"

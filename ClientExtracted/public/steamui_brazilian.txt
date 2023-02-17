@@ -3980,6 +3980,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_menu_minimode"		"Modo compacto"
 "steam_menu_largemode"	"Modo expandido"
 "steam_menu_bigpicturemode"	"Modo Big Picture"
+"steam_menu_close_bigpicturemode"	"Sair do modo Big Picture"
 "steam_menu_startvr"		"Iniciar SteamVR (BETA)"
 "steam_menu_exitvr"		"Sair do SteamVR (BETA)"
 

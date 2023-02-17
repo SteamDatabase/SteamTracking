@@ -3983,6 +3983,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "steam_menu_minimode"		"โหมดขนาดเล็ก"
 "steam_menu_largemode"	"โหมดขนาดใหญ่"
 "steam_menu_bigpicturemode"	"โหมด Big Picture"
+"steam_menu_close_bigpicturemode"	"ออกจากโหมด Big Picture"
 "steam_menu_startvr"		"เริ่ม SteamVR (เบต้า)"
 "steam_menu_exitvr"		"ออกจาก SteamVR (เบต้า)"
 

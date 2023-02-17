@@ -568,7 +568,9 @@ button.DialogButton {
   /*margin-bottom: 22px;*/
   cursor: pointer;
   width: 100%;
-  transition: all 0.2s ease-out;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   background: #3d4450;
   background-position: 99% 1%;
   background-size: 300% 300%;
@@ -712,6 +714,10 @@ button.DialogButton::-moz-focus-inner {
   display: none;
 }
 
+.ModalDialogPopup .FullModalOverlay .ModalPosition_Dismiss {
+  display: block;
+}
+
 .ModalPosition_Dismiss {
   position: absolute;
   right: 4px;
@@ -806,6 +812,13 @@ button.DialogButton::-moz-focus-inner {
     ),
     #25282e;
   user-select: none;
+}
+
+.DialogContent .DialogControlsSection:not(:first-child),
+.DialogContent .DialogControlsSectionHeader:not(:first-child),
+.DialogContent .DialogHeader:not(:first-child),
+.DialogContent .DialogSubHeader:not(:first-child) {
+  margin-top: 24px;
 }
 
 .DialogContentTransition {
@@ -955,7 +968,8 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .DialogFooter {
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
   flex-shrink: 0;
 }
 
@@ -1122,7 +1136,6 @@ button.DialogButton::-moz-focus-inner {
   border: none;
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
 }
 
 .DialogTextInputBase:focus,
@@ -1382,7 +1395,7 @@ button.TextButton {
 }
 
 button.TextButton .SVGIcon_Button {
-  transition: all 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   margin-right: 2px;
 }
 
@@ -1651,7 +1664,7 @@ button.TextButton.gpfocus {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 0px;
-  transition: all 0.2s linear;
+  transition: width 0.2s linear;
 }
 
 .DialogListBuilderInput_List {
@@ -1769,7 +1782,7 @@ button.TextButton.gpfocus {
 
 .DialogCheckbox .SVGIcon_DialogCheck {
   opacity: 0;
-  transition: all 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
   width: 18px;
   height: 18px;
   margin-top: 9%;
@@ -1779,7 +1792,8 @@ button.TextButton.gpfocus {
 .DialogCheckbox .SVGIcon_DialogCheck path {
   stroke-width: 40px;
   stroke-dashoffset: -270;
-  transition: all 0.18s ease-out;
+  transition-property: stroke-dashoffset;
+  transition-duration: 0.18s;
   transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
   transition-delay: 0.3s;
 }
@@ -1882,7 +1896,9 @@ button.TextButton.gpfocus {
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
   transform: scale(0);
   opacity: 0;
-  transition: all 0.1s ease-in-out;
+  transition-property: opacity, scale, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 
 .DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
@@ -1902,7 +1918,9 @@ button.TextButton.gpfocus {
   letter-spacing: 1px;
   text-align: center;
   color: #1b98ff;
-  transition: all 0s ease-out;
+  transition-property: transform, opacity;
+  transition-duration: 0s;
+  transition-timing-function: ease-out;
   z-index: 0;
   pointer-events: none;
   user-select: none;
@@ -2653,4 +2671,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=b824bb468d6d793d8c26*/
+/*# sourceMappingURL=friends.css.map?contenthash=385aacbf0ee5bb258a8a*/

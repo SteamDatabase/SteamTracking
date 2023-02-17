@@ -38,7 +38,7 @@
 "Steam_Settings_Library_LowBandwidth_Title" "Режим низької пропускної здатності"
 "Steam_Settings_Library_LowBandwidth_Desc" "Зменшується використання мережі шляхом вимкнення функцій на кшталт автоматичного завантаження вмісту від спільноти."
 "Steam_Settings_Library_LowPerf_Title" "Режим низької швидкодії"
-"Steam_Settings_Library_LowPerf_Desc" "Покращує швидкодію бібліотеки шляхом вимкнення певних графічних покращень і переходів."
+"Steam_Settings_Library_LowPerf_Desc" "Покращує роботу бібліотеки шляхом вимкнення певних графічних покращень і переходів."
 "Steam_Settings_Library_DisableCommunityContent_Title" "Вимкнути вміст від спільноти"
 "Steam_Settings_Library_DisableCommunityContent_Desc" "Запобігає автоматичному завантаженню вмісту від спільноти під час перегляду ігрових подробиць."
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "Увімкнено режимом низької пропускної здатності.\n\nЗапобігає автоматичному завантаженню вмісту від спільноти під час перегляду ігрових подробиць."

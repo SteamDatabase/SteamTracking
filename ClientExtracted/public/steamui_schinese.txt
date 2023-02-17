@@ -466,7 +466,7 @@
 
 "Steam_DPIScaling_Option_Windows"		"缩放文本与图标以匹配显示器设置（需要重启）"
 "Steam_DPIScaling_Option"				"按照显示器大小放大文本和图标（需要重启）"
-"Steam_LaunchSteamOnStartup_Option"		"在电脑开机时运行 Steam"
+"Steam_LaunchSteamOnStartup_Option"		"在计算机开机时运行 Steam"
 "Steam_BPMOnStartup_Option"				"以大屏幕模式启动 Steam"
 "Steam_ShowUrlBar_Option"				"当可用时显示网站地址栏"
 "Steam_UseDirectWrite_Option"			"启用 DirectWrite 以改进字体平滑和间距"
@@ -1540,7 +1540,7 @@
 "Steam_PhoneNumber"		"手机号码"
 
 "Steam_GamePurchaseableWhenReleased"	" *"
-"Steam_ShippingGoods"		"半条命 2 商品"
+"Steam_ShippingGoods"		"《半衰期 2》周边产品"
 "Steam_ShippingAndHandling"	"运费和手续费"
 "Steam_DutyNote"	"商品将从美国发运。 您需要支付所有适用的关税费用。"
 
@@ -3185,7 +3185,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_ContentBetaOptOutOK"	"已成功退出内容测试活动。"
 "Steam_ContentBetaOptOutProblem"	"在退出测试活动时出现错误。"
 
-"Steam_Settings_NotifyMeWithSteamInstantMessages"	"通知关于我的游戏任何变动、新发布及即将面市的有关信息。"
+"Steam_Settings_NotifyMeWithSteamInstantMessages"	"就我游戏新添加的内容或变更、新品和即将推出的游戏通知我。"
 "Steam_Settings_DownloadsTitle"	"下载"
 "Steam_Settings_CloudTitle"	"云服务"
 "Steam_Settings_FamilyTitle" "家庭"
@@ -3982,6 +3982,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "steam_menu_minimode"		"小模式"
 "steam_menu_largemode"	"大模式"
 "steam_menu_bigpicturemode"	"大屏幕模式"
+"steam_menu_close_bigpicturemode"	"退出大屏幕模式"
 "steam_menu_startvr"		"启动 SteamVR（测试）"
 "steam_menu_exitvr"		"退出 SteamVR（测试版）"
 

@@ -368,6 +368,14 @@
         {
             "name": "GetDownloadedItems",
             "argc": "4"
+        },
+        {
+            "name": "GetFullQueryUGCResponse",
+            "argc": "4"
+        },
+        {
+            "name": "GetSerializedQueryUGCResponse",
+            "argc": "4"
         }
     ]
 }

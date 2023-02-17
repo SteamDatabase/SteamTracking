@@ -137,4 +137,5 @@ typedef enum EControllerSetting
     k_EControllerSettingFlickstick_depression_speed = 136,
     k_EControllerSettingFlickstick_rotation_sensitivity = 137,
     k_EControllerSettingFlickstick_command_binding_radius = 138,
+    k_EControllerSettingFlickstick_haptic_bump_per_angle = 139,
 } EControllerSetting;

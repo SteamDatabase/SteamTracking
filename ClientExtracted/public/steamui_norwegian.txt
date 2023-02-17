@@ -3988,6 +3988,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "steam_menu_minimode"		"Kompakt-modus"
 "steam_menu_largemode"	"Stor modus"
 "steam_menu_bigpicturemode"	"Big Picture-modus"
+"steam_menu_close_bigpicturemode"	"Avslutt Big Picture"
 "steam_menu_startvr"		"Start SteamVR (BETA)"
 "steam_menu_exitvr"		"Avslutt SteamVR (BETA)"
 
@@ -4344,7 +4345,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_Parental_Manage"					"Behandle familievisning"
 
 "steam_inbox_asyncgame"			"1 ny tur venter"
-"steam_inbox_asyncgames"		"%count% nye runder venter"
+"steam_inbox_asyncgames"		"%count% nye turer venter"
 
 "steam_inbox_asyncgameinvite"	"1 ny spillinvitasjon"
 "steam_inbox_asyncgameinvites"	"%count% nye spillinvitasjoner"

@@ -396,6 +396,7 @@ message ProfileCustomizationSlot {
 	optional uint64 item_classid = 11;
 	optional uint64 item_instanceid = 12;
 	optional .EBanContentCheckResult ban_check_result = 13 [default = k_EBanContentCheckResult_NotScanned];
+	optional uint32 replay_year = 14;
 }
 
 message ProfileCustomization {
@@ -707,6 +708,20 @@ message CPlayer_GetDurationControl_Response {
 	optional bool block_minors = 8;
 }
 
+message CPlayer_RecordDisconnectedPlaytime_Request {
+	message PlayHistory {
+		optional uint32 appid = 1;
+		optional uint32 session_time_start = 2;
+		optional uint32 seconds = 3;
+		optional bool offline = 4;
+	}
+
+	repeated .CPlayer_RecordDisconnectedPlaytime_Request.PlayHistory play_sessions = 3;
+}
+
+message CPlayer_RecordDisconnectedPlaytime_Response {
+}
+
 message CPlayer_LastPlayedTimes_Notification {
 	repeated .CPlayer_GetLastPlayedTimes_Response.Game games = 1;
 }
@@ -943,6 +958,10 @@ service Player {
 
 	rpc GetDurationControl (.CPlayer_GetDurationControl_Request) returns (.CPlayer_GetDurationControl_Response) {
 		option (method_description) = "Get gameplay duration control settings.";
+	}
+
+	rpc RecordDisconnectedPlaytime (.CPlayer_RecordDisconnectedPlaytime_Request) returns (.CPlayer_RecordDisconnectedPlaytime_Response) {
+		option (method_description) = "Submit playtime records that happened while the client was disconnected from steam (whether marked offline or not)";
 	}
 }
 

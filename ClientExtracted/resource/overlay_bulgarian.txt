@@ -33,7 +33,7 @@
 "Steam_Settings_Library_Size_Medium" "Среден"
 "Steam_Settings_Library_Size_Large" "Голям"
 "Steam_Settings_Library" "Настройки за библиотеката"
-"Steam_Settings_Library_Size_Title" "Размер за изобразяваните елементите на потребителския интерфейс в библиотеката"
+"Steam_Settings_Library_Size_Title" "Размер за изобразяваните елементи на потребителския интерфейс в библиотеката"
 "Steam_Settings_Library_Size_Automatic_Label" "(размерът на елементите се определя от ширината на прозореца)"
 "Steam_Settings_Library_LowBandwidth_Title" "Режим за ниско капацитетни връзки"
 "Steam_Settings_Library_LowBandwidth_Desc" "Намалява използвания трафик, преустановявайки характеристики, като авт. зареждане на обществено съдържание."

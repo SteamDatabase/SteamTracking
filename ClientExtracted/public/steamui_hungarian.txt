@@ -1495,12 +1495,12 @@
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Ha ez be van jelölve, a Steam korlátozni fogja a letöltési sebességet, hogy magas minőségű Steam Remote Play élményt biztosítson."
 "Steam_DownloadRatesInBits"			"Letöltési sebesség bit/másodpercben mutatása"
 
-"Steam_PeerContentTitle"			"Játékfájl-továbbítás helyi hálózaton keresztül"
+"Steam_PeerContentTitle"			"Játékfájl-átvitel helyi hálózaton keresztül"
 "Steam_PeerContentInfo"			"E funkció lehetővé teszi, hogy a PC-d játékfájlokat cseréljen a helyi hálózatodon levő más PC-kkel vagy Steam Deckekkel, csökkentve az internetforgalmat játékok letöltésekor vagy frissítésekor."
-"Steam_PeerContentOff"			"Kikapcsolva – ne engedélyezzen továbbítást"
-"Steam_PeerContentSameUser"		"Engedélyezze a továbbítást a saját eszközeim között"
-"Steam_PeerContentFriends"		"Engedélyezze a továbbítást a Steames barátaimmal"
-"Steam_PeerContentAnyUser"		"Engedélyezze a továbbítást bármely felhasználónál"
+"Steam_PeerContentOff"			"Kikapcsolva – Ne engedélyezzen átvitelt"
+"Steam_PeerContentSameUser"		"Átvitel engedélyezése a saját eszközeim között"
+"Steam_PeerContentFriends"		"Átvitel engedélyezése a Steames barátaimmal"
+"Steam_PeerContentAnyUser"		"Átvitel engedélyezése bármely felhasználóval"
 
 "Steam_CloudLabel"					"Steam Felhő"
 "Steam_CloudInfo"					"A Steam Felhő információkat tárol, melyekkel a termék használata különböző PC-ken ugyanolyan lesz."
@@ -3961,6 +3961,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "steam_menu_minimode"		"Kis nézet"
 "steam_menu_largemode"	"Normál nézet"
 "steam_menu_bigpicturemode"	"Nagy Kép mód"
+"steam_menu_close_bigpicturemode"	"Kilépés a Nagy Kép módból"
 "steam_menu_startvr"		"SteamVR indítása (BÉTA)"
 "steam_menu_exitvr"		"Kilépés a SteamVR-ből (BÉTA)"
 
@@ -4257,7 +4258,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_Settings_Family_Show_Notifications" "Értesítsen, amikor a megosztott könyvtárak ismét elérhetővé válnak"
 
 "Steam_Settings_Family_Options_Title" "Családi Nézet"
-"Steam_Settings_Family_Options_Text" "A Családi Nézettel korlátozható a hozzáférés bizonyos tartalmakhoz és funkciókhoz PIN-kóddal védett Családi Nézetben."
+"Steam_Settings_Family_Options_Text" "A Családi Nézet használható a tartalomhoz és funkciókhoz való hozzáférés korlátozására PIN-nel védett Családi Nézetben."
 
 "Steam_Game_Family_Sharing_Unsupported" "Ez a termék jelenleg nem támogatja a Steam Családi Megosztást."
 

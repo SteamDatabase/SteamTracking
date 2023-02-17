@@ -3984,6 +3984,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "steam_menu_minimode"		"Modalità piccola"
 "steam_menu_largemode"	"Modalità grande"
 "steam_menu_bigpicturemode"	"Modalità Big Picture"
+"steam_menu_close_bigpicturemode"	"Esci dalla modalità Big Picture"
 "steam_menu_startvr"		"Avvia SteamVR (BETA)"
 "steam_menu_exitvr"		"Esci da SteamVR (BETA)"
 
@@ -4543,15 +4544,15 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_SettingsControllerBindingDescription"		"Le configurazioni permettono ad un controller di avere determinate impostazioni in contesti specifici al di fuori di un gioco."
 "Steam_SettingsControllerBigPictureConfig"	"Configurazione di Big Picture"
 "Steam_SettingsControllerDesktopConfig"		"Configurazione del desktop"
-"Steam_SettingsControllerGuideConfig"		"Config. del pulsante Guide"
+"Steam_SettingsControllerGuideConfig"		"Config. del pulsante Guida"
 "Steam_SteamInputDisableNotifications"		"Disabilita le notifiche del controller collegato nel client desktop."
 "Steam_SteamInputDisableDualSenseUpdates"	"Disabilita le notifiche dell'aggiornamento del firmware DualSense nel client desktop."
 
 "Steam_Settings_ShaderCache"			"Download degli shader"
-"Steam_Settings_ShaderCache_Info"		"Il pre-caricamento degli shader permette a Steam di scaricare degli shader pre-compilati per la GPU in base alla tua configurazione di sistema. Questa opzione consente ai giochi Vulkan e OpenGL di caricarsi più velocemente, migliorando inoltre la stabilità del framerate durante l'esecuzione.\n\nAttivando questa opzione, Steam caricherà gli shader dal tuo sistema quando necessario. Questa funzionalità potrebbe aumentare leggermente l'utilizzo del disco e della banda larga."
+"Steam_Settings_ShaderCache_Info"		"Il pre-caricamento degli shader permette a Steam di scaricare degli shader pre-compilati per la GPU in base alla tua configurazione di sistema. Questa opzione consente ai giochi Vulkan e OpenGL di caricarsi più velocemente, migliorando inoltre la stabilità del framerate durante l'esecuzione.\n\nAttivando questa opzione, Steam caricherà gli shader dal tuo sistema quando necessario. Questa funzionalità potrebbe aumentare leggermente l'utilizzo del disco e della banda."
 "Steam_Settings_ShaderCache_Enable"		"Abilita il pre-caricamento degli shader (%shaderdiskusagemb% MB pre-caricati)
 	"
-"Steam_Settings_ShaderCache_BGProcessing_Enable"		"Consenti l'elaborazione nel background degli shader Vulkan"
+"Steam_Settings_ShaderCache_BGProcessing_Enable"		"Consenti l'elaborazione in background degli shader Vulkan"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Elaborazione in corso di %shaderapp%... (%shaderpercent%%)"
 
 "Steam_Settings_Compat"				        "Steam Play"
@@ -4581,7 +4582,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Settings_Streaming_Status" "STATO"
 "Steam_Settings_Streaming_EnableStreaming" "Attiva Remote Play"
 "Steam_Settings_Streaming_Pair" "Associa Steam Link"
-"Steam_Settings_Streaming_Unpair" "Disassocia dispositivi"
+"Steam_Settings_Streaming_Unpair" "Dissocia dispositivi"
 "Steam_Settings_Streaming_UnpairConfirmation" "Sei sicuro di voler annullare l'associazione di tutti i dispositivi?"
 "Steam_Settings_Streaming_SetPIN" "Imposta codice di sicurezza"
 "Steam_Settings_Streaming_UnsupportedPlatform" "L'hosting su questa piattaforma non è supportato al momento"

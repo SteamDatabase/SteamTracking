@@ -1,44 +1,40 @@
 .
 __TEXT
-@;
-@;
 __text
 __TEXT
-S41
+n;1
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __cstring
 __TEXT
-2
-2
 __const
 __TEXT
 __gcc_except_tab__TEXT
+B8
+B8
 __objc_methname
 __TEXT
 __objc_classname__TEXT
+QD:
+QD:
 __objc_methtype
 __TEXT
+\D:
 (
+\D:
 __unwind_info
 __TEXT
 __eh_frame
 __TEXT
 __DATA
-@;
-@;
 __nl_symbol_ptr
 __DATA
-@;
-@;
 __got
 __DATA
 __la_symbol_ptr
 __DATA
-HB;
-HB;
 __mod_init_func
 __DATA
 __const
@@ -60,31 +56,34 @@ __DATA
 P
 __data
 __DATA
+(U
 __thread_vars
 __DATA
 0
 __thread_data
 __DATA
+/>
 @
+/>
 __thread_bss
 __DATA
+@/>
 __bss
 __DATA
+@3>
 __common
 __DATA
 H
 __LINKEDIT
->
+A
+@>
 
 8
 @loader_path/panorama.dylib
 "
->
-h'>
-8:?
-Y
+@>
+@l>
 P
-H"?
 
 *
 8
@@ -155,36 +154,14 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-xW
 )
 HB
-N=
-?
-F1
+W=
+M1
 1
 1
 0
 =
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
 
 
 
@@ -193,16 +170,8 @@ F1
 @
 
 1
-1
-1
-1
 @
 @
-4
-Z0
-:
-p'
-
 @
 8
 HC
@@ -667,7 +636,8 @@ P
 24CMsgSetProtocolBlockList
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+16CMsgPopupCreated
+NSt3__121__basic_string_commonILb1EEE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -1995,7 +1965,6 @@ I
 27WeightedMovingAverageFilter
 9CUtlQueueI8Vector2DE
 10CUtlVectorIf10CUtlMemoryIfEE
-N8panorama9CUIEvent1IjEE
 N8panorama9CUIEvent2IjyEE
 N8panorama9CUIEvent1IN2vr8EVRStateEEE
 N8panorama9CUIEvent1IyEE
@@ -2010,6 +1979,7 @@ N8panorama9CUIEvent1IPNS_9IUIWindowEEE
 N8panorama9CUIEvent2IPNS_9IUIWindowEbEE
 7CUtlMapIP10SDL_WindowPN8panorama18CTopLevelWindowSDLEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIP10SDL_WindowPN8panorama18CTopLevelWindowSDLEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+N8panorama9CUIEvent1IjEE
 N2vr8EVRStateE
 PN2vr9VREvent_tE
 N6google8protobuf14FatalExceptionE
@@ -2019,6 +1989,7 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -2167,7 +2138,6 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
-NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -2567,11 +2537,33 @@ l
 14CUtlMemoryBase
 10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_004EEE
+N5vrapi33CVRSteamPrivateAdapter_003_as_004E
+N2vr19IVRSteamPrivate_004E
+12CDynamicFuncIPFPN2vr9IVRSystemEPNS0_12EVRInitErrorENS0_18EVRApplicationTypeEEE
 12CDynamicFuncIPFjPN2vr12EVRInitErrorENS0_18EVRApplicationTypeEEE
 12CDynamicFuncIPFvvEE
 12CDynamicFuncIPFbvEE
 12CDynamicFuncIPFPKcN2vr12EVRInitErrorEEE
 12CDynamicFuncIPFPvPKcPN2vr12EVRInitErrorEEE
+N5vrapi16COpenVRInterfaceIN2vr9IVRSystemEEE
+N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
+N5vrapi16COpenVRInterfaceIN2vr12IVRChaperoneEEE
+N5vrapi16IOpenVRInterfaceIN2vr12IVRChaperoneEEE
+N5vrapi16COpenVRInterfaceIN2vr13IVRCompositorEEE
+N5vrapi16IOpenVRInterfaceIN2vr13IVRCompositorEEE
+N5vrapi16COpenVRInterfaceIN2vr10IVROverlayEEE
+N5vrapi16IOpenVRInterfaceIN2vr10IVROverlayEEE
+N5vrapi16COpenVRInterfaceIN2vr15IVRRenderModelsEEE
+N5vrapi16IOpenVRInterfaceIN2vr15IVRRenderModelsEEE
+N5vrapi16COpenVRInterfaceIN2vr15IVRApplicationsEEE
+N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
+N5vrapi16COpenVRInterfaceIN2vr16IVRNotificationsEEE
+N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
+N5vrapi16COpenVRInterfaceIN2vr11IVRSettingsEEE
+N5vrapi16IOpenVRInterfaceIN2vr11IVRSettingsEEE
+N5vrapi16COpenVRInterfaceIN2vr22IVRExternalEventSourceEEE
+N5vrapi16IOpenVRInterfaceIN2vr22IVRExternalEventSourceEEE
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
 NSt3__119basic_ostringstreamIwNS_11char_traitsIwEENS_9allocatorIwEEEE
@@ -2809,7 +2801,7 @@ sc_kalman_slowq
 0
 sc_kalman_fastq
 IsValid()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/mathlib/vector4d.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
 src.IsValid() && IsValid()
 v.IsValid()
 a.IsValid() && b.IsValid()
@@ -2876,13 +2868,13 @@ PowerA Spectra Infinity Controller
 PowerA Xbox One Controller
 Xbox One Elite Controller
 Xbox One Elite 2 Controller
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jpegloader.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
 libjpeg asking to skip more bytes than exist, and we can't further fill buffer - was a crash before 12/29/21
 row_stride_out >= row_stride
 row_stride == (int)( nImageWidth * jpegInfo.output_components )
 nImageHeight == nOutputHeight
 BResizeImageRGBA
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jpegloader_common.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
 pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
 arrURLs
 T@"NSArray",R,N,V_arrURLs
@@ -2915,7 +2907,7 @@ PNG load warning %s
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
 [S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
 CLIENTENGINE_INTERFACE_VERSION005
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steam/client_api.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 ClientAPI_Init: InternalAPI_Init_Internal failed.
 ClientAPI_Init: Cannot create pipe.  Steam not running?
 ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
@@ -2967,7 +2959,7 @@ ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
 LoadTGA: Only type 2 and 10 targa RGB images supported
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/uifontfile.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/uifontfile.cpp
 m_pFontPackagePB->package_version() == 1
 m_pFontPackagePB
 iIndex >= 0 && iIndex < m_pFontPackagePB->encrypted_font_files_size()
@@ -3017,7 +3009,7 @@ Failed creating read event %s
 %s_mem
 Failed creating file mapping %s
 Failed creating view of file for %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/overlay/common/shmemstream.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 CSharedMemStream::Clear()
@@ -3047,7 +3039,7 @@ CImageDecodeThread::Run
 CImageDecodeThread::Run - sleep
 CImageDecodeThread::Run - run item
 ImageUnreferenced
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/data/imageloader.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/data/imageloader.cpp
 m_cRef > 0
 nWide && nTall
 CImageData::SetImageDataR8G8B8A8
@@ -3076,7 +3068,7 @@ m_mapImagesByURL[iIndex] != NULL
 !"Unsupported file resource type"
 CImageResourceManager::LoadLocalFileSynchronous
 !pNewImage->BIsGif()
-file://
+s2r://
 CImageResourceManager::LoadImageFromMemory
 0 == m_cRef
 GetWidth
@@ -3095,7 +3087,6 @@ m_vecLoaderTasksToStart[i]
 m_treeLoadTasks
 m_treeLoadTasks.Element( i )
 m_pImageDecodePool
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 m_FileResource.BIsLocalPath()
@@ -3114,22 +3105,25 @@ m_pVideoPlayer.Get()
 IImageSource
 m_pImageData
 m_vecPanelsForOnLoadEvents
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 Invalid index %u
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsInList(before)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/parseuieventparam.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/parseuieventparam.h
 ParseUIEventParam not implemented for type
-symbol.IsValid()
-callbackArray->Length() >= 3
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+m_iRefs >= 0 && m_iRefs < 0x0ffffff
+Underlying object is deleted!
+(int)callbackArray->Length() >= iOffset + 3
 m_Tree
 m_llAsyncIORequests
 m_llAsyncIOResults
 VideoPlayerInitAudio
 VideoPlayerFreeAudio
 DispatchVideoPlayerEvent
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/data/panoramavideoplayer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/data/panoramavideoplayer.cpp
 !m_pAudioStream
 m_pAudioStream
 Video player already has specified delegate
@@ -3139,7 +3133,7 @@ m_vecCallbacks
 m_videoCallback
 m_audioCallback
 m_eventCallback
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/uievent.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uievent.h
 PanoramaTypeToV8Param not implemented for pointer type
 int32
 @panorama_joystick_axis_repeat_interval_start
@@ -3163,14 +3157,14 @@ XInput Controller
 m_XDevices
 m_XDevices[i].sMappingString
 m_RemoteGamepadInput
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 a.IsValid() && IsFinite(b)
 file://{images}/cursors/arrow.png
 file://{images}/cursors/ibeam.png
 file://{images}/cursors/hand.png
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/input/mousecursor.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/input/mousecursor.cpp
 pptHotspot != NULL
 @panorama_steampad_button_repeat_interval_start
 .7
@@ -3187,7 +3181,7 @@ steamcontroller_haptic_intensity
 320
 CSteamGameController::GotWindowFocus
 Default
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/input/steamcontroller_new.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/input/steamcontroller_new.cpp
 m_mapNameToActionSetData.Find( pchActionSet ) == m_mapNameToActionSetData.InvalidIndex()
 Keyboard
 PINPad
@@ -3249,7 +3243,7 @@ LEFTSTICK_LEFT
 LEFTSTICK_ANALOG
 LTRIGGER_ANALOG
 RTRIGGER_ANALOG
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 m_vecHashBuckets
 m_memNodes
@@ -3269,7 +3263,7 @@ Minimum mouse movement in pixels before a move is treated as a drag scroll in VR
 @panorama_dragscroll_mintime_vr
 Minimum time that the mouse button must be down before a move is treated as a drag scroll in VR
 @panorama_dragscroll_velocitymultiplier_vr
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/input/uiinput.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/input/uiinput.cpp
 EAttachedHardwareDevice
 mod_shift
 mod_alt
@@ -3339,13 +3333,14 @@ DummyHardware
 None
 vecDevices.Count() <= k_AttachedHardwareDeviceCount
 ControllerPresent
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/input/iuiinput.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/input/iuiinput.h
 Unknown input type to ActionInput_t( InputMessage_t )
 DragCallbacks
 displayPanel
 offsetX
 offsetY
 removePositionBeforeDrop
+callbackArray->Length() >= 6
 pad_up
 pad_down
 pad_left
@@ -3544,11 +3539,13 @@ key_media_next_track
 key_media_prev_track
 key_media_stop
 key_media_play_pause
+!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+count >= 0
 focus_change
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/backgroundimage.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/backgroundimage.cpp
 m_position.GetHorizontalAlignment() != k_EHorizontalAlignmentUnset
 m_position.GetVeriticalAlignment() != k_EVerticalAlignmentUnset
 m_position.GetHorizontalLength().IsSet()
@@ -3560,9 +3557,8 @@ unset
 contain
 %s %s
 m_sURLPath
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/layout/uilength.h
-m_eType == k_EUILengthLength
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/csshelpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/layout/uilength.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/csshelpers.cpp
 EFontWeight
 EFontStyle
 ETextAlign
@@ -3821,13 +3817,13 @@ repeat
 space
 round
 no-repeat
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlmemory.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 %f
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/layout/fillbrush.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/layout/fillbrush.h
 m_eType == k_EStrokeTypeLinearGradient
 m_eType == k_EStrokeTypeRadialGradient
 m_eType == k_EStrokeTypeLinearGradient || m_eType == k_EStrokeTypeRadialGradient
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/fillbrush.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/fillbrush.cpp
 m_eType == k_EStrokeTypeFillColor
 Can't decrease number of stops!
 Invalid type on fillbrush
@@ -3838,15 +3834,10 @@ RetryStyleReload
 AutoReloadFailedLayoutReloads
 m_Buffer
 m_strOriginalPath
-/community/
-/store/
-http
-https
-%s://%s.valve.org%s
-%s://%s%s
-%s://127.0.0.1%s
-%s://localhost%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/layoutfile.cpp
+community
+store
+https://%s.local.steam.dev/
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/layoutfile.cpp
 pchFilePath
 ?
 %spublic/shared/
@@ -3945,7 +3936,7 @@ src
 iMap != m_mapHTTPIncludeRequests.InvalidIndex()
 l
 File type for %s is not supported in CLoadLayoutFileAsync
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlptrarray.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlptrarray.h
 i < m_cElements
 UTF-8
 m_bPartial
@@ -3997,12 +3988,12 @@ Snippet '%s' is missing its contents. line %d, col %d
 m_vecCurrentPanelStack.Count() == 0
 m_mapProperties
 m_mapProperties[i]
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/panel2dfactory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/panel2dfactory.cpp
 CPanel2DFactory::CreatePanelInternal called on panel w/o a creation function
 GetMapLocalPanel2DFactory()
 ***** Parsing error on %s(%u):
 Error parsing layout and style files
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/stylefile.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/stylefile.cpp
 buffer.IsText()
 #%s
 .%s
@@ -4066,7 +4057,7 @@ m_mapAnimations
 m_mapAnimations[iMap]
 m_treeStyles
 m_treeStyles[i]
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/renderer/styleproperties.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/renderer/styleproperties.h
 Only 16 @import files per CSS can be displayed properly in the debugger.
 Only 8 levels deep of @import file nesting can be displayed properly in the debugger.
 m_strValue
@@ -4082,9 +4073,9 @@ m_classes
 m_pNotSelector
 CUtlPtrArray
 pIPreviousLayoutFile != nullptr
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 CUtlDict
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/stylepropertyfactory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/stylepropertyfactory.cpp
 CStyleSymbol must become larger, cannot fit all style properties in uint8 anymore
 Need to increase size of static g_StylePropertyRegistrations (MAX_PANORAMA_STYLE_SYMBOLS) before registering more styles, failed on %s
 V_strlen( pStr ) < sizeof( g_StylePropertyRegistrations[m_Id].rgchStylePropertyString )
@@ -4103,9 +4094,10 @@ s_vecSortedPropertyAndAliasNames[i]
 GetStyleSymbolMap()
 === %s ===
 %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/uilength.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/uilength.cpp
 start.GetType() == end.GetType() && ( start.GetType() == CUILength::k_EUILengthLength || start.GetType() == CUILength::k_EUILengthPercent || start.GetType() == CUILength::k_EUILengthWidthPercentage || start.GetType() == CUILength::k_EUILengthHeightPercentage || start.GetType() == CUILength::k_EUILengthFillParentFlow )
 m_eType == k_EUILengthPercent || m_eType == k_EUILengthUnset
+m_eType == k_EUILengthLength || m_eType == k_EUILengthUnset
 -all_languages
 show longest loc string from any language
 {localization}
@@ -4115,7 +4107,7 @@ schinese
 Failed to load localization file for language %s, ignoring
 tenfoot_%s.txt
 %s/%s_%s.txt
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/localization/localize.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/localization/localize.cpp
 Custom Dialog Variable Handler already installed! '%s'
 Attempt to remove unknown custom Dialog Variable Handler! '%s'
 Localization
@@ -4186,12 +4178,11 @@ m_mapLocStringDialogVariables
 m_mapLocStringDialogVariables.Key(i)
 m_mapLocStringDialogVariables[i]
 m_hashLanguagesCheckedForDupes
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/dbg.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/dbg.h
 static_cast<_in>( ret ) == i
 ( i < 0 ) == ( ret < 0 )
 %llu
-%d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/localization/localize.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/localization/localize.h
 m_eType == k_ePanelVartype_Money
 m_symKey
 m_sValue
@@ -4212,7 +4203,7 @@ glGetProgramBinary
 glProgramParameteri
 glProgramBinary
 <unnamed>
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/renderer/opengllazyshaders.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/renderer/opengllazyshaders.cpp
 Attempted to add source to compiled shader '%s'
 {shaders}
 Failed to read fragment file %s
@@ -4288,7 +4279,7 @@ CCompositionLayer::~CCompositionLayer() FBO
 CCompositionLayer::~CCompositionLayer() Texture
 CCompositionLayer::ActivateRenderTarget
 CCompositionLayer::PushCliplayersAndBeginDraw
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/renderer/sdlopenglsurface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/renderer/sdlopenglsurface.cpp
 !m_bIsDrawing
 m_pVecClipLayers->Count() == 0
 CCompositionLayer::DrawInsetShadowIntoLayer
@@ -4448,14 +4439,14 @@ m_stackCompositionLayers[i]
 m_ReservedLayers
 m_ShadowLayers
 m_tsQueueTextureDeletes
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/renderer/sdlopenglsurface.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/renderer/sdlopenglsurface.h
 !"needs implementation"
 ALLOW_DUPES || iMap == m_Layers.InvalidIndex()
 m_Layers
 m_LRU
 m_Layers[i].m_pLayer
 @panorama_transform_parents_no_layer_if_no_perspective
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/renderer/styleproperties.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/renderer/styleproperties.cpp
 EStyleFlags
 :%s
 pData && pData->Count() > 0 && pData->Element( 0 ).m_pStyleProperty
@@ -4598,7 +4589,6 @@ Mismatched types to CStylePropertyFillColor::Interpolate
 hover
 focus
 active
-disabled
 enabled
 inspect
 selected
@@ -4760,7 +4750,7 @@ GetPropertyMemPool_CStylePropertyEntranceSound()
 Specifies a sound name to play when this selector is removed.<br><br><b>Example:</b><pre>sound-out: "whoosh_out";</pre>
 GetPropertyMemPool_CStylePropertyExitSound()
 Mismatched types to %s::MergeTo
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/layout/backgroundimage.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/layout/backgroundimage.h
 eConstant != k_EBackgroundSizeConstantNone
 &lt;Needs a description&gt;
 !m_bInterpolated
@@ -4826,7 +4816,7 @@ Specifies border-radius for bottom-left corner which rounds off border and clips
 @panorama_transition_time_factor
 A float representing a scale factor for transitions. 1.0 is normal, 2.0 would be twice as fast as normal, 0.5 half as fast
 CPanelStyle::CleanupTransitionsAndAnimations
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/renderer/styles.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/renderer/styles.cpp
 Need to add bitflag space for new properties
 ppProperty
 Invalid transition time set for %s
@@ -4866,16 +4856,16 @@ m_pvecActiveAnimations
 vec[i]
 m_pVecElementProperties
 m_ScheduledTransitionCleanup
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/layout/../renderer/styles.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/layout/../renderer/styles.h
 Copy shouldn't be called on CStylePropertySearch
 Interpolate shouldn't be called on CStylePropertySearch
 SEARCH!!!!
 m_eType == k_EStrokeTypeParticleSystem
 m_sName
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/renderer/rendercommands.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/renderer/rendercommands.h
 m_pLastNode == nullptr
 m_pLastNode->pNext == nullptr
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/renderer/uianimationengine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine.cpp
 pVec->Count() == 0
 CUIAnimationEngine::BeginFrame
 m_vecRenderOperations.Count() == 0
@@ -4949,10 +4939,10 @@ m_treePanelsThatNeededLayersThisFrame
 m_vecLayersToFree
 m_vecParticles
 CAnimationParticleSystem::RunSystem
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/mathlib/vector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/mathlib/vector.h
 IsFinite(b)
 m_bHasRadialClip
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/../../panorama/renderer/uianimationengine.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/uianimationengine.h
 m_bHasExplicitClipRect
 IsFinite( m_flPosX )
 IsFinite( m_flPosY )
@@ -4960,15 +4950,13 @@ IsFinite( m_flPosZ )
 CAnimationParticleSystem::SerializeParticles
 m_pVecChildOperations
 (*m_pVecChildOperations)[i]
-m_pTListFreeObjects
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/uipbmsgbase.h
 @panorama_2d_translate_no_comp_layer
 @panorama_might_scroll_no_comp_layer
 @panorama_box_shadow_no_comp_layer
 @panorama_simple_borders_no_comp_layer
 @panorama_transforms_no_comp_layer
 @panorama_transform_parents_no_layer_for_perspective
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/renderer/uianimationengine_new.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/renderer/uianimationengine_new.cpp
 CUIAnimationEngineNew::BeginFrame
 CUIAnimationEngineNew::SortAndSerializeRenderOperationsRecursive - Sort
 CUIAnimationEngineNew::SortAndSerializeRenderOperationsRecursive - Occlusion
@@ -5022,7 +5010,7 @@ pPreviousFrame != nullptr && pCurrentFrame != nullptr
 UIEngineAnimationThread
 UIEngineRenderThread
 CUIRenderEngine::BeginFrame
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/renderer/uirenderengine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.cpp
 m_pCurrentPaintList->m_pCommandList->GetFirstCommand() == nullptr
 CUIRenderEngine::EndFrame
 CUIRenderEngine::PushAnimationAndTransformContext
@@ -5073,10 +5061,10 @@ m_tslUnusedBuffers
 pNode->elem
 pMsgLiteRef
 m_pAnimationEngine
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/../../panorama/renderer/iui3dsurface.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/../../panorama/renderer/uirenderengine.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/iui3dsurface.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/uirenderengine.h
 *ppRenderData == nullptr
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/text/textlayoutdrawcache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/text/textlayoutdrawcache.cpp
 m_pTextServices == NULL
 m_pTextureStorage == NULL
 GetCachedTextOpacityMask - Key Creation
@@ -5085,7 +5073,7 @@ CTextLayoutDrawCache::GetTextOpacityMask - miss
 pTextLayout
 CTextLayoutDrawCache::GetTextOpacityMask - render line
 m_listTextOpacityMaskLRU.Count() > 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/text/texttexturecache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/text/texttexturecache.cpp
 m_pTextureProvider == NULL
 m_pTextureProvider != NULL
 CTextTextureCache::GetTextureRegion - search free space
@@ -5097,12 +5085,12 @@ FT_New_Face
 *.*
 ttf
 otf
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/text/uifontfileloaderlinux.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/text/uifontfileloaderlinux.cpp
 bSuccess == FcTrue
 uifont
 %s:%d
 FONTCONFIG_PATH
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/text/uitextlayoutpango.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/text/uitextlayoutpango.cpp
 Unable to create Pango font map
 Unable to create Pango context
 CUITextLayoutPango::BInitialize
@@ -5142,7 +5130,7 @@ console_history_size
 4.0f
 -gl
 Use the SDL/OpenGL rendering pipeline
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uiengine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uiengine.cpp
 Fatal V8 Error: %s - %s
 UIEngine Main Thread
 CSteamAsyncIoThread - run
@@ -5263,6 +5251,7 @@ Gateway Time-out
 HTTP Version not supported
 Unknown HTTP 5xx
 Unknown HTTP error
+https
 pParam->m_hRequest == m_hRequest
 notmodified
 success
@@ -5408,8 +5397,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Feb  9 2023
-18:40:50
+Feb 16 2023
+19:22:51
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -5525,7 +5514,7 @@ PoolName                                       Count   Est. Size    Hit Rate
 Total: %s
 TSList for CMsgLiteRef size: %s
 Library/Application Support/Steam
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/../common/clientdirectories.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/../common/clientdirectories.h
 Unable to get home directory
 SteamUniverse
 SteamRealm
@@ -5538,7 +5527,6 @@ m_vecMsgPools
 m_vecMsgPools[i]
 m_pTSListMsgLiteRefCount
 uint32
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/uievents.h
 (unsigned)elem <= (unsigned)m_Size
 elem >= 0 && num >= 0 && INT_MAX - elem >= num
 elem + num <= Count()
@@ -5546,7 +5534,7 @@ m_heap
 Yes
 No
 CTopLevelWindowSDL::ValidateStatics
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uievent.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uievent.cpp
 p
 \
 \\
@@ -5794,21 +5782,26 @@ http://
 https://
 //
 }
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uifileresource.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uifileresource.cpp
 unPathSubLen > 0 && unPathSubLen < 256
 http://%s%s
 http:%s
 connectedDevices=
+%d
 playArea=%0.1f,%0.1f
 vractive=1
 smb://
+file://
 unPathSubLen > 7 && unPathSubLen - 7 < 256
-s2r://
 raw://
 Unsupported resource type %s
 m_eRefType == eHTTPURL
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+(elem == Count()) || IsValidIndex(elem)
 @panorama_reload_animations
 1
 @panorama_debug_overlay_opacity
@@ -5841,7 +5834,7 @@ onpanelevent
 focus_change_fastscroll
 CUIPanel::CUIPanel
 CUIPanel::Initialize
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uipanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uipanel.cpp
 m_pWindow
 You are creating a panel in the middle of a layout pass.  Find comments next to this assert for more info.
 m_pLayoutFile.Get()
@@ -5883,6 +5876,7 @@ tabindex
 selectionpos
 selectionposboundary
 defaultfocus
+disabled
 mousecanactivate
 focusonhover
 childfocusonhover
@@ -6005,30 +5999,24 @@ m_pMapProperties->Element( i )
 m_pVecChildrenInHiding
 m_pVecChildrenInHiding->Element( i )
 s_vecApplyStylesTemp
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/mathlib/vector2d.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 m_iRefs > 0 && m_iRefs < 0x1000000
-m_eType == k_EUILengthLength || m_eType == k_EUILengthUnset
-m_iRefs >= 0 && m_iRefs < 0x0ffffff
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/smartptr.h
+m_eType == k_EUILengthLength
 m_pObj == NULL
 %u
 %.18g
 vOther.IsValid()
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uipanel.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uipanel.h
 BStylesDirty()
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
-count >= 0
+symbol.IsValid()
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 IsValidIndex(elem)
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-(elem == Count()) || IsValidIndex(elem)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/uijsregistration.h
-Underlying object is deleted!
-(int)callbackArray->Length() >= iOffset + 3
-callbackArray->Length() >= 6
+m_pTListFreeObjects
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uipbmsgbase.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uijsregistration.h
+callbackArray->Length() >= 3
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uievents.h
 m_Memory
 m_Elements
 StopAudioSample
@@ -6038,7 +6026,7 @@ StopAudioSample
 0.48f
 @panorama_volume_effects
 @panorama_volume_movies
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uisoundsystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uisoundsystem.cpp
 unknown sound type %d
 cannot set volume for passthrough
 .wav
@@ -6048,7 +6036,7 @@ PlaySound attempted to play a sound that doesn't exist: %s
 CUISoundSystem::ServiceAudio
 Plat_IsSteamOS()
 failed to set default audio output device
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uisoundsystem.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uisoundsystem.h
 @panorama_show_fps
 @panorama_clear_frames_on_device_restore
 2
@@ -6061,7 +6049,7 @@ Layout FPS:
 %c
 Animate FPS:
 Render FPS:
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uitoplevelwindow.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uitoplevelwindow.cpp
 Should not add panels in paint traverse
 Should not add panels in layout traverse
 Should not remove panels in paint traverse
@@ -6079,31 +6067,31 @@ m_listInvisiblePanels
 m_listInvisiblePanels[i]
 m_pImageResourceManager
 TextEntryUpdate
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uitoplevelwindowopenvroverlay.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uitoplevelwindowopenvroverlay.cpp
 vecPos.IsValid()
 m_bFixedSurfaceSize
 (COpenGLSurface *)m_p3DSurface
 m_vecSampleQueue
 m_vecWeightVec
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlqueue.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
 a.IsValid()
 b != 0.0f
 IsValid() && v.IsValid()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/uitoplevelwindowopenvroverlay.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindowopenvroverlay.h
 SetVisible not implemented on CTopLevelWindowOverlay
 -720p
 Run tenfoot in 720p rather than 1080p
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uitoplevelwindowoverlay.cpp
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/panorama/uitoplevelwindowoverlay.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uitoplevelwindowoverlay.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindowoverlay.h
 CTopLevelWindowSDL::PumpMessageLoop
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uitoplevelwindowsdl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.cpp
 m_eRenderTarget != IUIEngine::k_ERenderFullScreen
 Compiled against SDL version %d.%d.%d and linked against SDL version %d.%d.%d
 CTopLevelWindowSDL::SetMouseCursor
 CTopLevelWindowSDL
 s_MapWindowInstances
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/panorama/uitoplevelwindowsdl.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.h
 SetVisible not implemented on CTopLevelWindowSDL
 VRDashboardRequested
 VRDashboardThumbSelected
@@ -7463,14 +7451,14 @@ terminated_
 task_queue_.empty()
 !terminated_
 V8 WorkerThread
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
 CVariableBitStringBase
 {}()'
 {}()':
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 pName
 m_fnCompletionCallback
 m_vecCallbacks.Count() == 0 || !callback
@@ -7490,7 +7478,7 @@ m_p
 Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -7515,12 +7503,12 @@ Seeking to a position which is not sector aligned will break unbuffered io
 !"Failed to CFStringCreateWithCString watcher path"
 m_listChangedFiles
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 static_cast<Node_t*>(pNode)->elem
 Element( i )
 CPathString
 .dylib
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
@@ -7530,7 +7518,7 @@ g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 %%%d
 ]:%u
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 "
 "
 {
@@ -7578,7 +7566,7 @@ KeyValues Error: %s in file %s [offset: %d]
 0123456789ABCDEF
 context.m_vecStack.Count() <= 1
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -7586,12 +7574,12 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/netadr.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 Expected %lld but got %lld!
 pConv && pConv->GetDelimiterLength() > 0
@@ -7605,7 +7593,7 @@ n
 v
 b
 a
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -7615,12 +7603,12 @@ numElements >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::ReplaceInternal
 pstrNew + nNewLength == pstrDestination + 1
@@ -7633,17 +7621,17 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 CCrypto::SymmetricDecrypt
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_aescbc_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
 pubEncryptedData
 cubEncryptedData
 pubPlaintextData
@@ -7653,7 +7641,7 @@ pubKey
 k_nSymmetricKeyLen256 == cubKey || k_nSymmetricKeyLen128 == cubKey
 pubIV == NULL || cubIV == k_nSymmetricBlockSize
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 CCrypto::Base64Decode
 NULL output buffer with non-zero size passed to Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
@@ -7664,17 +7652,18 @@ VR_ShutdownInternal
 VR_IsHmdPresent
 VR_GetStringForHmdError
 VR_GetGenericInterface
-IVRSystem_021
-IVRChaperone_003
-IVRCompositor_026
-IVROverlay_024
+IVRSystem_022
+IVRChaperone_004
+IVRCompositor_027
+IVROverlay_026
 IVRRenderModels_006
-IVRSteamPrivate_002
 IVRApplications_007
 IVRNotifications_002
 IVRSettings_003
 IVRExternalEventSource_001
 libopenvr_api.dylib
+IVRSteamPrivate_004
+IVRSteamPrivate_003
 %02d:%02d:%02d
 %02d/%02d/%02d
 00:00:00
@@ -7714,7 +7703,7 @@ $U
 kn
 Ft
 lei
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/amount.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.cpp
 Unknown currency code %d
 amount != INT64_MIN
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
@@ -7722,12 +7711,12 @@ steamclient.dylib
 libaudio.dylib
 @nIOCPThreadCount
 Accept
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 DispatchCompletedItem
 DispatchCompletedItem - error
 ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 BStarted()
 !m_bDispatchStopped
 pCompletionData->pNext == NULL && pCompletionData->nPollFlags != 0
@@ -7739,7 +7728,7 @@ Closing closed handle %d
 Finalization timeout waiting for processing of %d to complete
 Pipe write failed
 enums_clientserver.proto
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 EUniverse
 china
 Public
@@ -7759,7 +7748,7 @@ optional
 PS3
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/framefunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
 eFrameType < k_EFrameTypeMax
 CFrameFunctionMgr::Deregister: function to deregister not found
 publish
@@ -7798,6 +7787,7 @@ streaming
 controller
 controller_ui
 metrics
+html
 Invalid spew group
 RequestHeaders
 @bHttpClientRecordHostnameDimension
@@ -7822,7 +7812,7 @@ user-agent
 Transfer-Encoding
 Range
 Set-Cookie
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/iopollinghelpers_osx.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 Unexpected thread race for CIOPollingHelper construction
 KQ: Error Unregistering read event KQ:%s
 KQ: Error Unregistering write event KQ:%s
@@ -7837,7 +7827,7 @@ m_vecIPFilterRangesV6
 15000
 @cMinimumJobTimeoutsToCheckPerFrame
 @bEnableNetworkJobsOwnStartList
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/language.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 zh_CN
 English
@@ -8041,7 +8031,7 @@ vi
 SteamChina_SChinese
 @bEnableSpewThrottle
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
 pLogInstance == sm_pLogInstance
 sm_cRef > 0
 sm_bShuttingDown
@@ -8099,9 +8089,6 @@ Comma separated list of metrics operations that are disabled.  This setting has 
 Comma separated list of metrics operations.  Overrides disabled catalogs
 @metricsDisabledCatalogs
 Comma separated list of metrics catalogs to disable.  This is the last check.
-@metricsLegacyJobMetrics
-UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
-Comma separated list of Operation names that predate preaggregated job metrics.
 @bMsgErrorDump
 @nCallerDeadlineHopLatencyMS
 10
@@ -8118,7 +8105,7 @@ We we first discover the protobuf class used for a particular EMsg, log it
 @nSpewThrottleNagFrequencyMs
 @nTCPLargeSendBufSizeMB
 16
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/net.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
 CNet::BFrameFuncHandleCompletedWorkItems
 CNet
 CNet Globals
@@ -8133,7 +8120,7 @@ CUDPConnection
 0 != hSocketOwner
 pvCallbackUDPCur || pvCallbackTCPCur
 *pvRecord
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/thash.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/thash.h
 m_pMemoryPoolRecord
 pvRemove
 @cNetEncryptionHandshakeWorkMax_LowPri
@@ -8161,7 +8148,7 @@ ENOPROTOOPT
 ECONNRESET
 [no name available]
 CIPAndPort::GetIPv4 called on IPv6 address
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 nBufferCount > %d not supported in %s
 AsyncSocketWrite
 pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
@@ -8171,10 +8158,10 @@ SDL_GetHint
 SDL_SetHint
 SDL_GL_GetAttribute
 SDL_GL_SetAttribute
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/sdlhelpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/sdlhelpers.cpp
 pchName && pchValue
 libSDL3.dylib
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/interface.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/interface.h
 m_pModule
 [A:%u:%u:%u]
 [G:%u:%u]
@@ -8190,7 +8177,7 @@ m_pModule
 [a:%u:%u]
 [i:%u:%u]
 steammessages_base.proto
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/string_misc.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 @net_loopback
 @net_backlog_time_allowed_sec
 @net_backlog_bytes_allowed
@@ -8219,7 +8206,7 @@ CTCPHost Globals
 @nClientCMUDPPingTimeGoodEnoughThresholdMS
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
 250
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.cpp
 *ppUDPConnection
 sm_pMemPoolReceivedPkt
 sm_pMemPoolPendingMsg
@@ -8243,7 +8230,7 @@ uifontfile_format.proto
 CWebSocketConnection
 CWebSocketConnection Globals
 sm_mapWebSocketConnection
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 Thread "%s" (ID %d) failed to shut down
 pWorkThread->m_bFinished is false but thread is not running
 m_WorkThreads.Count() == 0 && m_cThreadsRunning == (uint32) 0
@@ -8263,7 +8250,7 @@ m_StatExecutionTime
 m_StatWaitTime
 m_cCurrentDepth > 0
 nBytes
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -8274,9 +8261,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
 console
@@ -8289,9 +8276,9 @@ KiB
 KB
 %i%s
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/mathlib/mathlib_base.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/mathlib/mathlib_base.cpp
 s_bMathlibInitialized
 &qt != &q
 qt.IsValid()
@@ -8299,35 +8286,15 @@ q.IsValid()
 angles.IsValid()
 SSE is required.
 src.IsValid()
+jM2
 
 HB
-N=
-?
-F1
+W=
+M1
 1
 1
 0
 =
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
-=
 
 
 
@@ -8336,43 +8303,39 @@ F1
 @
 
 1
-1
-1
-1
 @
 @
-4
-Z0
-:
-p'
-
-c/
-4&
-'
+X0
+0
+4/
 /
-V/
-8
-k9
+@$
+t&
+9
+%
 .
-.
-V"
-
-8,
+&
+%
+,9
+$
+-
 7
 7
 7
 7
-s,
 ,
 ,
 ,
 ,
 ,
+,
+,
+,
+,
+u,
+d,
 .
-.
-,
-,
-,
+:
 ,
 ,
 ,
@@ -8380,56 +8343,27 @@ s,
 ,
 ,
 j
-+,
 "
 "
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
 ?
 )
 >
 ;
 F
 ,
--
 /
+/
+-
 +
 !
 &
-W+
--
+A+
+c-
 +
-(
-(
-(
+:+
 j
-Ic
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-8'
-@
+}*
+z'
 @
 @
 @
@@ -8446,6 +8380,7 @@ Ic
 @
 @
 @
+**
 @
 @
 @
@@ -8463,17 +8398,37 @@ Ic
 @
 @
 @
-*
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 d
+96
 Uk/
 K
-.6
+86
+76
+66
+*
+*
 @
 @
 @
 @
 @
 @
+*
 @
 @
 @
@@ -8499,12 +8454,12 @@ K
 0
 @
 @
-d)
-g)
-A)
-:)
-7
-#&
+-
+-
+:+
+&
+&
+&
 @
 @
 @
@@ -8513,65 +8468,55 @@ A)
 @
 @
 @
-D)
-:)
 0
 @
 @
 0
 0
+t(
+)
+)
+)
 =
-Q%
+Q(
 @
 @
+(
 H=
 1
+1
+1
+'
+'
+'
+'
+'
 $
-s$
-(
 $
 &
 @
-t&
+1
+2
 =
+&
 @
 @
-&%
+%
 $
 @
 @
 ?
-#
+$
+./
 .
 .
 .
-/
-/
-/
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
 1
 @
-#
-#
-#
-#
+/
+/
 #
 P
-!
 (
 (
 P
@@ -8581,64 +8526,58 @@ A
 A
 A
 (
-,
-,
-W&
-#
-@
-E9u
-E9u
-"
-"
-"
-"
-%
-%
-%
-@
-&
-&
-&
-A
-A
-A
-A
-A
-A
-A
-A
-B.
-=,
-z"
-!
-!
-l#
-f#
-R"
-Z
-"
 -
+/
+/
 @
+#
+E9u
+E9u
+@
+&
+&
+&
+&
+&
+&
+A
+A
+A
+A
+A
+A
+A
+A
+Ic
+_"
+k"
+>.
+i%
+"
+C%
+k.
+@
+!
 )
-#
-+-
+/-
++
++
 -
-v
+z(
+(
+"
+[
+,
 
 }
-H
 "
-!
 @
+%(
 '
-%
 $
-7%
-#
+(
 Hi
 (
-#
-#
 @
 @
 0
@@ -8649,15 +8588,14 @@ Hi
 0
 
 
-!
 0
-$
-$
+%
+%
+%
 %
 IcE
 @
 @
-"!
 @
 @
 @
@@ -8666,6 +8604,7 @@ IcE
 @
 @
 @
+0
 @
 @
 @
@@ -8776,7 +8715,7 @@ IcE
 @
 @
 @
-;#
+@#
 @
 @
 @
@@ -8861,6 +8800,7 @@ IcE
 @
 @
 @
+#
 @
 @
 @
@@ -8947,6 +8887,10 @@ IcE
 @
 @
 @
+^!
+!
+!
+!
 @
 j
 @
@@ -9043,12 +8987,21 @@ IcE
 V
 =
 =
-s
 !
+2
 
 @
 &
-2
+}
+J
+(
+
+
+
+
+
+
+1
 
 @
 M9e
@@ -9108,13 +9061,14 @@ I;E
 I;E
 B
 ?
-o
-n
 `
 `
 !
 A
 @
+
+
+
 @
 @
 P
@@ -9165,7 +9119,6 @@ E
 0
 0
 0
-0
 @
 @
 @
@@ -9177,5 +9130,4 @@ E
 @
 @
 0
-[
-L
+Lc5s\

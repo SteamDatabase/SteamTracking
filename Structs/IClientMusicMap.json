@@ -600,6 +600,10 @@
         {
             "name": "ReplacePlaylistWithSoundtrackAlbum",
             "argc": "2"
+        },
+        {
+            "name": "GetQueueSoundtrackAppID",
+            "argc": "1"
         }
     ]
 }

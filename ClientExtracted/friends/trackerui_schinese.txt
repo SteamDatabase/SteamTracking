@@ -248,7 +248,7 @@
 "Friends_Chat_ActionResultInviteSuccess"  "%user_name% 被邀请加入聊天。\n"
 "Friends_Chat_ActionResultKickSuccess"    "%user_name% 已被踢出。\n"
 "Friends_Chat_ActionResultBanSuccess"     "%user_name% 已被禁止。\n"
-"Friends_Chat_ActionResultUnBanSuccess"   "%user_name% 不再被禁止。\n"
+"Friends_Chat_ActionResultUnBanSuccess"   "%user_name% 的封禁已经结束。\n"
 
 "Friends_Chat_ActionResultLockChatSuccess"	"聊天已锁闭（仅有组成员或受邀用户可加入）。\n"
 "Friends_Chat_ActionResultUnlockChatSuccess"	"聊天已取消锁闭（对所有用户开放）。\n"
@@ -256,7 +256,7 @@
 "Friends_Chat_ActionResultTitleFailed"    "操作失败"
 "Friends_Chat_ActionResultInviteFailed"   "尝试邀请用户 %user_name% 加入 %chat% 聊天失败。\n%action_result%"
 "Friends_Chat_ActionResultKickFailed"     "尝试从 %chat% 聊天中踢出用户 %user_name% 失败。\n%action_result%"
-"Friends_Chat_ActionResultUnBanFailed"    "尝试从 %chat% 聊天中取消封禁用户 %user_name% 失败。\n%action_result%"
+"Friends_Chat_ActionResultUnBanFailed"    "尝试从 %chat% 聊天中解除对用户 %user_name% 的封禁失败。\n%action_result%"
 "Friends_Chat_ActionResultLockChatFailed"	"尝试锁闭聊天 %chat% 失败\n%action_result%."
 "Friends_Chat_ActionResultUnlockChatFailed"	"尝试取消锁闭（开放）聊天 %chat% 失败\n%action_result%."
 "Friends_Chat_ActionResultCloseFailed"	"尝试关闭聊天 %chat% 失败\n%action_result%."

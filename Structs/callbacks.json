@@ -795,11 +795,6 @@
         "size": 16
     },
     {
-        "id": 1010051,
-        "name": "Unknown",
-        "size": 8
-    },
-    {
         "id": 1010052,
         "name": "25ShowChatRoomGroupInvite_t",
         "size": 32
@@ -807,11 +802,6 @@
     {
         "id": 1010053,
         "name": "25OpenInviteToTradeDialog_t",
-        "size": 8
-    },
-    {
-        "id": 1010054,
-        "name": "Unknown",
         "size": 8
     },
     {
@@ -918,11 +908,6 @@
         "id": 1020030,
         "name": "19AppLifetimeNotice_t",
         "size": 16
-    },
-    {
-        "id": 1020037,
-        "name": "30ClientMarketingMessageUpdate_t",
-        "size": 1
     },
     {
         "id": 1020038,

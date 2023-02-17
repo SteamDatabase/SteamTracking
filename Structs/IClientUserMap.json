@@ -2,7 +2,7 @@
     "name": "IClientUserMap",
     "functions": [ 
         {
-            "name": "Unknown_5359664",
+            "name": "Unknown_5399568",
             "argc": "0"
         },
         {
@@ -276,10 +276,6 @@
         {
             "name": "TrackSteamUsageEvent",
             "argc": "4"
-        },
-        {
-            "name": "TrackSteamGUIUsage",
-            "argc": "2"
         },
         {
             "name": "SetComputerInUse",
@@ -756,10 +752,6 @@
         {
             "name": "GetSubscribedApps",
             "argc": "4"
-        },
-        {
-            "name": "RegisterActivationCode",
-            "argc": "2"
         },
         {
             "name": "AckSystemIM",

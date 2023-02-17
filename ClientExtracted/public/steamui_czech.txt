@@ -3989,6 +3989,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "steam_menu_minimode"		"Kompaktní režim"
 "steam_menu_largemode"	"Standardní režim"
 "steam_menu_bigpicturemode"	"Režim Big Picture"
+"steam_menu_close_bigpicturemode"	"Ukončit Big Picture"
 "steam_menu_startvr"		"Režim SteamVR (BETA)"
 "steam_menu_exitvr"		"Ukončit režim SteamVR (BETA)"
 

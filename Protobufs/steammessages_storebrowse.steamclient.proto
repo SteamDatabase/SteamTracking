@@ -12,6 +12,8 @@ enum EStoreItemType {
 	k_EStoreItemType_Package = 1;
 	k_EStoreItemType_Bundle = 2;
 	k_EStoreItemType_Mtx = 3;
+	k_EStoreItemType_Tag = 4;
+	k_EStoreItemType_Creator = 5;
 }
 
 enum EStoreAppType {
@@ -58,6 +60,8 @@ message StoreItemID {
 	optional uint32 appid = 1;
 	optional uint32 packageid = 2;
 	optional uint32 bundleid = 3;
+	optional uint32 tagid = 4;
+	optional uint32 creatorid = 5;
 }
 
 message StoreBrowseContext {
@@ -289,6 +293,7 @@ message StoreItem {
 	repeated .StoreItem.SupportedLanguage supported_languages = 52;
 	optional string store_url_path_override = 53 [(description) = "Navigate to this URL (relative to store home) when the store capsule for this item is clicked, instead of the default /app/... URL. Used by advertising apps that point to a sale page."];
 	optional .StoreItem.FreeWeekend free_weekend = 54 [(description) = "Information about a free weekend offer."];
+	optional bool unlisted = 55 [(description) = "If true, item is only accessible on store via a direct link"];
 }
 
 message CStoreBrowse_GetItems_Response {

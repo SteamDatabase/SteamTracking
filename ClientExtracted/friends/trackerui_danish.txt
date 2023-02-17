@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "er færdig med at downloade"
 
+"Friends_PeerUploadNotification_Info" "Overfører spilfiler til"
+
 "Friends_SteamInputActionSetChangedTitle"	"Controllerhandlingssæt"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Controller har skiftet plads"

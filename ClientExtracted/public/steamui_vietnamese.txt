@@ -1504,12 +1504,12 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Nếu chọn mục này, Steam sẽ giới hạn tốc độ tải xuống nhằm duy trì trải nghiệm tốt nhất cho Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Hiển thị tốc độ tải xuống ở dạng bit trên giây"
 
-"Steam_PeerContentTitle"			"Chuyển file trò chơi trên mạng nội bộ"
-"Steam_PeerContentInfo"			"Tính năng này cho phép máy PC của bạn chuyển file trò chơi tới/từ máy PC khác hoặc Steam Deck trên mạng nội bộ, giảm lưu lượng dùng Internet khi đang tải xuống/lên một trò chơi"
-"Steam_PeerContentOff"			"Tắt - không cho phép chuyển"
-"Steam_PeerContentSameUser"		"Cho phép chuyển tới/từ thiết bị của tôi"
-"Steam_PeerContentFriends"		"Cho phép chuyển tới/từ bạn bè tôi trên Steam"
-"Steam_PeerContentAnyUser"		"Cho phép chuyển tới/từ người dùng bất kỳ"
+"Steam_PeerContentTitle"			"Truyền file trò chơi trên mạng nội bộ"
+"Steam_PeerContentInfo"			"Tính năng này cho phép máy PC của bạn truyền file trò chơi tới/từ máy PC khác hoặc Steam Deck trên mạng nội bộ, giảm lưu lượng dùng Internet khi đang tải xuống/lên một trò chơi"
+"Steam_PeerContentOff"			"Tắt - không cho phép truyền dữ liệu"
+"Steam_PeerContentSameUser"		"Cho phép truyền tới/từ thiết bị của tôi"
+"Steam_PeerContentFriends"		"Cho phép truyền tới/từ bạn bè tôi trên Steam"
+"Steam_PeerContentAnyUser"		"Cho phép truyền tới/từ người dùng bất kỳ"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud lưu trữ thông tin dữ liệu, giúp cho trải nghiệm của bạn đồng nhất xuyên suốt các máy tính khác nhau."
@@ -1544,7 +1544,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_DutyNote"	"Sản phẩm sẽ được giao hàng từ Hoa Kỳ. Bạn phải chịu trách nhiệm cho mọi khoản phí thuế."
 
 "Steam_AgreeToTheTerms"		"Tôi đồng ý với các điều khoản của"
-"Steam_SteamSubscriberAgreement"	    "Điều khoản người đăng ký Steam"
+"Steam_SteamSubscriberAgreement"	    "Thỏa thuận người đăng ký Steam"
 "Steam_SteamSubscriberAgreement_china"	"Thỏa thuận giấy phép Steam China"
 "Steam_ComplianceRequired_Title"	"Steam - Cảnh báo"
 "Steam_ComplianceRequired_Info"		"Bạn phải đồng ý với điều khoản người đăng ký Steam để tiếp tục"
@@ -1883,7 +1883,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 
 "Steam_DeveloperUnknownThirdParty"		"Bên thứ ba"
 
-"Steam_SteamSubscriberAgreement_Title"		"Điều khoản người đăng ký Steam"
+"Steam_SteamSubscriberAgreement_Title"		"Thỏa thuận người đăng ký Steam"
 "Steam_CybercafeSubscriberAgreement_Title"	"Steam - Tạo tài khoản Cybercafe"
 
 "Steam_LaunchOptions_Title"		"Tùy chọn khởi động - %game%"
@@ -1949,7 +1949,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 
 "steam_menu_PrivacyPolicy"		"Chính sách bảo mật"
 "steam_menu_LegalInformation"		"Thông tin pháp lý"
-"steam_menu_SteamSubscriberAgreement"	"Điều khoản người đăng ký Steam"
+"steam_menu_SteamSubscriberAgreement"	"Thỏa thuận người đăng ký Steam"
 
 "steam_menu_bandwidthmonitor"		"Kiểm soát băng thông"
 "Steam_BandwidthMonitor_Title"		"Steam - Kiểm soát băng thông"
@@ -3984,6 +3984,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_menu_minimode"		"Chế độ nhỏ"
 "steam_menu_largemode"	"Chế độ lớn"
 "steam_menu_bigpicturemode"	"Chế độ Big Picture"
+"steam_menu_close_bigpicturemode"	"Thoát chế độ Big Picture"
 "steam_menu_startvr"		"Chạy SteamVR (Thử nghiệm)"
 "steam_menu_exitvr"		"Thoát SteamVR (THỬ NGHIỆM)"
 

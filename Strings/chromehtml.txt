@@ -19,6 +19,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
+(f
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -557,7 +558,10 @@ P
 24CMsgSetProtocolBlockList
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+16CMsgPopupCreated
+NSt3__121__basic_string_commonILb1EEE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 15CHTMLController
 21IHTMLChromeController
 10CUtlString
@@ -571,6 +575,7 @@ NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 16CHTMLProtoBufMsgI25CMsgBrowserCreateResponseE
 16CHTMLProtoBufMsgI19CMsgPopupHTMLWindowE
 16CHTMLProtoBufMsgI16CMsgBrowserReadyE
+16CHTMLProtoBufMsgI16CMsgPopupCreatedE
 16CHTMLProtoBufMsgI19CMsgComboNeedsPaintE
 16CHTMLProtoBufMsgI16CMsgStartRequestE
 16CHTMLProtoBufMsgI14CMsgURLChangedE
@@ -642,8 +647,7 @@ NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 10CUtlRBTreeIN7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 N@
 $@
->@
-../Frameworks/Steam Helper.app/Contents/MacOS/Steam Helper
+>@../Frameworks/Steam Helper.app/Contents/MacOS/Steam Helper
 19HTMLCommandBuffer_t
 23COSXChromeIPCWakeThread
 N6google8protobuf14FatalExceptionE
@@ -653,6 +657,7 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -800,9 +805,6 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
-NSt3__121__basic_string_commonILb1EEE
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -858,7 +860,7 @@ pid %d != %d, clearing client_port = %d, server_port = %d
 pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
 pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
 Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
@@ -890,7 +892,7 @@ Failed creating read event %s
 %s_mem
 Failed creating file mapping %s
 Failed creating view of file for %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/overlay/common/shmemstream.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 CSharedMemStream::Clear()
@@ -914,7 +916,7 @@ m_pDataWritten
 m_pMapFile
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/html/htmlprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
 unSize < 128 * 1024 * 1024
 eCmd > 0 && eCmd < eHTMLCommands_None
 pBuffer->TellPut() == 0
@@ -923,7 +925,7 @@ CUIProtoBufMsg::BDeserialize
 -toggle-overlay-html-mode
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
 ChromeHTML_Controller_003
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/html/chromewrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chromewrapper.cpp
 BOffScreenRendererBrowser( eBrowserType )
 BDirectRendererBrowser( eBrowserType )
 pchVROverlayKey && pchVROverlayKey[0]
@@ -1006,16 +1008,16 @@ m_mapBrowsers[i].m_sCustomCSS
 m_mapBrowsers[i].m_sUserAgent
 m_tsQueuedCommands
 HTMLController Commands
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 pCmd->m_eCmd == eHTMLCommands_SetSharedPaintBuffers
 -pid
 Pid that we should be watching for
 pCmd->m_eCmd > 0 && pCmd->m_eCmd < eHTMLCommands_None
 m_bExit
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -1086,7 +1088,7 @@ Disable auto-restart of renderer process for existing browsers
 -community
 -clientui
 -gamepadui
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/html/chrome_ipc_client.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
 GetCPUInformation().m_bSSE2 || IsARM()
 !"Failed to kill existing helper process"
 m_hCEFHandle == INVALID_PROCESS_HANDLE
@@ -1198,7 +1200,7 @@ logs
 %s.previous.txt
 %s_server
 %s_client
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/html/chrome_ipc_shared.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_shared.cpp
 unHostPid != 0
 SteamChrome_MasterStream_uid%d_spid%u
 SteamChrome_MasterStream_Event_uid%d_spid%u
@@ -2016,8 +2018,6 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2092,7 +2092,7 @@ Tokenizer::ParseFloat() passed text that could not have been tokenized as a floa
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 \U%08x
 .
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -2102,7 +2102,7 @@ fcntl failed to set F_NOCACHE
 ret != 0
 /
 CPathString
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 Expected %lld but got %lld!
 pFmt
@@ -2120,7 +2120,7 @@ a
 \
 ?
 '
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -2129,7 +2129,7 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
@@ -2139,7 +2139,7 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/language.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 zh_CN
 None
@@ -2355,18 +2355,20 @@ sc_schinese
 
 @
 @
-;
-}
 
 @
-i
+=
+Ic
+m
 
-
-
-
+9
+r
 
 0
 0
+
+
+
 Hi
 `
 0
@@ -2381,7 +2383,9 @@ D
 @
 
 
-Y
+
+
+]
 @
 Hc
 Hc
@@ -2439,7 +2443,6 @@ M9e
 ?
 ?
 
-Ic
 @
 @
 @
@@ -2450,3 +2453,4 @@ Ic
 0
 0
 0
+V

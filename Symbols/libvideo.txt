@@ -1256,6 +1256,142 @@
  T gcm_init_avx
  T gcm_init_clmul
  T md5_block_asm_data_order
+ T nghttp2_check_authority
+ T nghttp2_check_header_name
+ T nghttp2_check_header_value
+ T nghttp2_hd_deflate_bound
+ T nghttp2_hd_deflate_change_table_size
+ T nghttp2_hd_deflate_del
+ T nghttp2_hd_deflate_get_dynamic_table_size
+ T nghttp2_hd_deflate_get_max_dynamic_table_size
+ T nghttp2_hd_deflate_get_num_table_entries
+ T nghttp2_hd_deflate_get_table_entry
+ T nghttp2_hd_deflate_hd
+ T nghttp2_hd_deflate_hd_vec
+ T nghttp2_hd_deflate_new
+ T nghttp2_hd_deflate_new2
+ T nghttp2_hd_inflate_change_table_size
+ T nghttp2_hd_inflate_del
+ T nghttp2_hd_inflate_end_headers
+ T nghttp2_hd_inflate_get_dynamic_table_size
+ T nghttp2_hd_inflate_get_max_dynamic_table_size
+ T nghttp2_hd_inflate_get_num_table_entries
+ T nghttp2_hd_inflate_get_table_entry
+ T nghttp2_hd_inflate_hd
+ T nghttp2_hd_inflate_hd2
+ T nghttp2_hd_inflate_new
+ T nghttp2_hd_inflate_new2
+ T nghttp2_http2_strerror
+ T nghttp2_is_fatal
+ T nghttp2_nv_compare_name
+ T nghttp2_pack_settings_payload
+ T nghttp2_priority_spec_check_default
+ T nghttp2_priority_spec_default_init
+ T nghttp2_priority_spec_init
+ T nghttp2_rcbuf_decref
+ T nghttp2_rcbuf_get_buf
+ T nghttp2_rcbuf_incref
+ T nghttp2_rcbuf_is_static
+ T nghttp2_select_next_protocol
+ T nghttp2_session_callbacks_del
+ T nghttp2_session_callbacks_new
+ T nghttp2_session_callbacks_set_before_frame_send_callback
+ T nghttp2_session_callbacks_set_data_source_read_length_callback
+ T nghttp2_session_callbacks_set_error_callback
+ T nghttp2_session_callbacks_set_error_callback2
+ T nghttp2_session_callbacks_set_on_begin_frame_callback
+ T nghttp2_session_callbacks_set_on_begin_headers_callback
+ T nghttp2_session_callbacks_set_on_data_chunk_recv_callback
+ T nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
+ T nghttp2_session_callbacks_set_on_frame_not_send_callback
+ T nghttp2_session_callbacks_set_on_frame_recv_callback
+ T nghttp2_session_callbacks_set_on_frame_send_callback
+ T nghttp2_session_callbacks_set_on_header_callback
+ T nghttp2_session_callbacks_set_on_header_callback2
+ T nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
+ T nghttp2_session_callbacks_set_on_invalid_header_callback
+ T nghttp2_session_callbacks_set_on_invalid_header_callback2
+ T nghttp2_session_callbacks_set_on_stream_close_callback
+ T nghttp2_session_callbacks_set_pack_extension_callback
+ T nghttp2_session_callbacks_set_recv_callback
+ T nghttp2_session_callbacks_set_select_padding_callback
+ T nghttp2_session_callbacks_set_send_callback
+ T nghttp2_session_callbacks_set_send_data_callback
+ T nghttp2_session_callbacks_set_unpack_extension_callback
+ T nghttp2_session_change_stream_priority
+ T nghttp2_session_check_request_allowed
+ T nghttp2_session_check_server_session
+ T nghttp2_session_client_new
+ T nghttp2_session_client_new2
+ T nghttp2_session_client_new3
+ T nghttp2_session_consume
+ T nghttp2_session_consume_connection
+ T nghttp2_session_consume_stream
+ T nghttp2_session_create_idle_stream
+ T nghttp2_session_del
+ T nghttp2_session_find_stream
+ T nghttp2_session_get_effective_local_window_size
+ T nghttp2_session_get_effective_recv_data_length
+ T nghttp2_session_get_hd_deflate_dynamic_table_size
+ T nghttp2_session_get_hd_inflate_dynamic_table_size
+ T nghttp2_session_get_last_proc_stream_id
+ T nghttp2_session_get_local_settings
+ T nghttp2_session_get_local_window_size
+ T nghttp2_session_get_next_stream_id
+ T nghttp2_session_get_outbound_queue_size
+ T nghttp2_session_get_remote_settings
+ T nghttp2_session_get_remote_window_size
+ T nghttp2_session_get_root_stream
+ T nghttp2_session_get_stream_effective_local_window_size
+ T nghttp2_session_get_stream_effective_recv_data_length
+ T nghttp2_session_get_stream_local_close
+ T nghttp2_session_get_stream_local_window_size
+ T nghttp2_session_get_stream_remote_close
+ T nghttp2_session_get_stream_remote_window_size
+ T nghttp2_session_get_stream_user_data
+ T nghttp2_session_mem_recv
+ T nghttp2_session_mem_send
+ T nghttp2_session_recv
+ T nghttp2_session_resume_data
+ T nghttp2_session_send
+ T nghttp2_session_server_new
+ T nghttp2_session_server_new2
+ T nghttp2_session_server_new3
+ T nghttp2_session_set_local_window_size
+ T nghttp2_session_set_next_stream_id
+ T nghttp2_session_set_stream_user_data
+ T nghttp2_session_set_user_data
+ T nghttp2_session_terminate_session
+ T nghttp2_session_terminate_session2
+ T nghttp2_session_upgrade
+ T nghttp2_session_upgrade2
+ T nghttp2_session_want_read
+ T nghttp2_session_want_write
+ T nghttp2_stream_get_first_child
+ T nghttp2_stream_get_next_sibling
+ T nghttp2_stream_get_parent
+ T nghttp2_stream_get_previous_sibling
+ T nghttp2_stream_get_state
+ T nghttp2_stream_get_stream_id
+ T nghttp2_stream_get_sum_dependency_weight
+ T nghttp2_stream_get_weight
+ T nghttp2_strerror
+ T nghttp2_submit_altsvc
+ T nghttp2_submit_data
+ T nghttp2_submit_extension
+ T nghttp2_submit_goaway
+ T nghttp2_submit_headers
+ T nghttp2_submit_origin
+ T nghttp2_submit_ping
+ T nghttp2_submit_priority
+ T nghttp2_submit_push_promise
+ T nghttp2_submit_request
+ T nghttp2_submit_response
+ T nghttp2_submit_rst_stream
+ T nghttp2_submit_settings
+ T nghttp2_submit_shutdown_notice
+ T nghttp2_submit_trailer
+ T nghttp2_submit_window_update
  T poly1305_blocks
  T poly1305_emit
  T poly1305_init
@@ -1408,6 +1544,7 @@
  backtrace_symbols
  bind
  bind$UNIX2003
+ calloc
  ceil
  ceilf
  chmod

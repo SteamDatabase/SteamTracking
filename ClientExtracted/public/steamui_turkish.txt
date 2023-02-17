@@ -3987,6 +3987,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "steam_menu_minimode"		"Basit Görünüm"
 "steam_menu_largemode"	"Gelişmiş Görünüm"
 "steam_menu_bigpicturemode"	"Geniş Ekran"
+"steam_menu_close_bigpicturemode"	"Geniş Ekran Modundan Çık"
 "steam_menu_startvr"		"SteamVR'ı başlat (BETA)"
 "steam_menu_exitvr"		"SteamVR'dan çık (BETA)"
 

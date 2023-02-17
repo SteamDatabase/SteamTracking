@@ -37,7 +37,6 @@
  B pcre_stack_guard
  B pcrecpp::RE::no_arg
  BConvertYUVtoRGB
- BGetLocalFQDN
  CFAbsoluteTimeGetCurrent
  CFArrayAppendValue
  CFArrayApplyFunction
@@ -932,6 +931,7 @@
  T CARingBuffer::~CARingBuffer()
  T CRYPTO_memcmp
  T CreateInterface
+ T JoiningSecureServerCall
  T OPENSSL_atomic_add
  T OPENSSL_cleanse
  T OPENSSL_ia32_cpuid

@@ -2888,7 +2888,7 @@
 	"Tenfoot_InstallServiceOk" "INSTALLERA TJÄNST"
 	"Tenfoot_InstallServiceCancel" "AVBRYT"
 
-	"Profile_Loading" "Laddar"
+	"Profile_Loading" "Läser in"
 	"Profile_Offline" "Det verkar dessvärre som att vi inte kan prata med Steams gemenskap just nu!"
 	"Profile_OpenFriendActivity" "VÄNAKTIVITET"
 	"Profile_OpenMyProfile"	     "PROFIL"

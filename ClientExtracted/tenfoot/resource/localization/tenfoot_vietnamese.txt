@@ -470,7 +470,7 @@
 	"CreateAccount_Agreements_ViewSSA" "XEM THỎA THUẬN ĐĂNG KÝ"
 	"CreateAccount_Agreements_ViewPPA" "XEM CHÍNH SÁCH BẢO MẬT"
 
-	"CreateAccount_SSA_Title"		"Điều khoản người đăng ký Steam"
+	"CreateAccount_SSA_Title"		"Thỏa thuận người đăng ký Steam"
 	"CreateAccount_SSA_ViewPPA"		"XEM CHÍNH SÁCH BẢO MẬT"
 
 	"CreateAccount_PPA_Title"		"Chính sách bảo mật của Steam"

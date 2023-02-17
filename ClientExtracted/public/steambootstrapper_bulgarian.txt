@@ -19,7 +19,7 @@
 "SteamBootstrapper_UpdateCleanup"				"Разчистване…"
 "SteamBootstrapper_UpdateCleanupFail"			"Неуспешно разчистване след обновяването, продължаване…"
 "SteamBootstrapper_UpdateFinalizeFail"		"Неуспешно записване на манифеста за инсталацията."
-"SteamBootstrapper_UpdateComplete"			"Обновяването е завършено, пускане на %appname%..."
+"SteamBootstrapper_UpdateComplete"			"Обновяването е завършено, пускане на %appname%…"
 "SteamBootstrapper_UpdateChecking"			"Проверяване за достъпни обновления…"
 "SteamBootstrapper_UpdatePrepare"				"Подготвяне за обновяване…"
 "SteamBootstrapper_UpdateDownload"			"Сваляне на обновление…"

@@ -3985,6 +3985,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_menu_minimode"		"スモールモード"
 "steam_menu_largemode"	"ラージモード"
 "steam_menu_bigpicturemode"	"Big Picture モード"
+"steam_menu_close_bigpicturemode"	"Big Pictureモードを終了"
 "steam_menu_startvr"		"SteamVR を起動 (ベータ)"
 "steam_menu_exitvr"		"SteamVR (ベータ) を終了"
 

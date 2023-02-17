@@ -123,6 +123,7 @@ message CAuthentication_PollAuthSessionStatus_Response {
 	optional bool had_remote_interaction = 5 [(description) = "whether or not the auth session appears to have had remote interaction from a potential confirmer"];
 	optional string account_name = 6 [(description) = "account name of authenticating account, for use by UI layer"];
 	optional string new_guard_data = 7 [(description) = "if login has been confirmed, may contain remembered machine ID for future login"];
+	optional string agreement_session_url = 8 [(description) = "agreement the user needs to agree to"];
 }
 
 message CAuthentication_GetAuthSessionInfo_Request {
@@ -265,6 +266,7 @@ message CSupportRefreshTokenDescription {
 
 message CAuthenticationSupport_QueryRefreshTokensByAccount_Response {
 	repeated .CSupportRefreshTokenDescription refresh_tokens = 1;
+	optional int32 last_token_reset = 2;
 }
 
 message CAuthenticationSupport_QueryRefreshTokenByID_Request {

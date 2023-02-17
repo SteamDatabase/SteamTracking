@@ -425,7 +425,7 @@
 "Steam_Status_ItemsComplete"	"Загружено: %numcompl% из %numtotal%"
 "Steam_Status_DownloadsTitle"		"Загрузки"
 "Steam_Status_GoToDownloadsPage"		"Управление"
-"Steam_Status_PeerContentServer"		"Перенос"
+"Steam_Status_PeerContentServer"		"Передача"
 
 "Steam_Time_ShowMostRecent"			"Показать последнее"
 "Steam_Time_5Minutes"				"5 минут"
@@ -718,7 +718,7 @@
 "SteamUI_OfflineMode_CouldNotConnect" "Не удалось подключиться к сети Steam."
 "SteamUI_OfflineMode_AppearOffline" "Либо вы не подключены к Интернету, либо ваше подключение не настроено для работы со Steam."
 "SteamUI_OfflineMode_SteamOffline" "В настоящее время Steam недоступен.\n\n\nПожалуйста, повторите попытку позже, нажав «Повторить», или запустите Steam в автономном режиме.\n"
-"SteamUI_OfflineMode_ChosenOffline" "В настоящий момент Steam работает в автономном режиме. Многие функции, такие как \"Друзья\" или \"Браузер сервера\", в автономном режиме будут недоступны."
+"SteamUI_OfflineMode_ChosenOffline" "В настоящий момент Steam работает в автономном режиме. Многие функции, такие как список друзей или браузер серверов, в автономном режиме будут недоступны."
 "SteamUI_OfflineMode_Choose" "Проверьте подключение и нажмите «Повторить попытку» либо запустите Steam в автономном режиме."
 "SteamUI_OfflineMode_ChooseConnectionOnly" "Пожалуйста, проверьте ваше соединение с сетью и нажмите «Повторить»"
 "SteamUI_OfflineMode_GoOnlineButton" "Войти в сеть"
@@ -3978,6 +3978,7 @@
 "steam_menu_minimode"		"Компактный режим"
 "steam_menu_largemode"	"Обычный режим"
 "steam_menu_bigpicturemode"	"Режим Big Picture"
+"steam_menu_close_bigpicturemode"	"Выйти из режима Big Picture"
 "steam_menu_startvr"		"Запустить SteamVR (БЕТА)"
 "steam_menu_exitvr"		"Выйти из SteamVR (БЕТА)"
 

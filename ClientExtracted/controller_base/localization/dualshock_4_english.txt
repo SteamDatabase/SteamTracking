@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"D-Pad Movement"
 	"origin_ps5_button_create"					"Create Button"
 	"origin_ps5_button_mute"					"Mute Button"
+	"origin_PS5_leftgrip"						"Left Rear Button"
+	"origin_PS5_rightgrip"						"Right Rear Button"
+	"origin_PS5_leftfn"							"Left Fn Button"
+	"origin_PS5_rightfn"						"Right Fn Button"
 }

@@ -60,7 +60,7 @@
 
 "SteamGuardBanner"				"Steam Guard с Intel® технологията за защита на самоличността"
 "LoginIPTNotDetected"			"Не е засечен Intel® Core™ процесор от второ поколение.\nТози акаунт не може да се използва на дадения компютър."
-"LoginIPTDetected"				"Засечен е Intel® Core™\nпроцесор от второ поколение..."
+"LoginIPTDetected"				"Засечен е Intel® Core™\nпроцесор от второ поколение…"
 "LoginIPTNotEnabledOnAccount"	"IPT не е включено за този акаунт…"
 "LoginIPTAuthenticatingWithSteam" "Удостоверяване на IPT със Steam…"
 "LoginIPTConfirmed"				"Удостоверяването е потвърдено, влизане…"

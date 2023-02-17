@@ -243,7 +243,7 @@
 "Overlay_AsyncNotificatoinsRequestedDialog_Title" "Εμφάνιση ειδοποιήσεων;"
 "Overlay_AsyncNotificatoinsRequestedDialog_Allow" "Να επιτρέπονται"
 "Overlay_AsyncNotificatoinsRequestedDialog_Disallow" "Απόρριψη"
-"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "Αυτό ο τίτλος υποστηρίζει ασύγχρονο παιχνίδι, που σας επιτρέπει να τερματίζετε το παιχνίδι ενώ περιμένετε τη σειρά σας. Θέλετε να λαμβάνετε ειδοποιήσεις στο Steam για όταν είναι η σειρά σας;"
+"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "Αυτό ο τίτλος υποστηρίζει ασύγχρονο παιχνίδι, που σας επιτρέπει να τερματίζετε το παιχνίδι ενώ περιμένετε το γύρο σας. Θέλετε να λαμβάνετε ειδοποιήσεις στο Steam όταν είναι ο γύρος σας;"
 
 "Overlay_Broadcast_Panel_Title" "Μετάδοση"
 "Overlay_Broadcast_Panel_Text" "Αυτή η μετάδοση ακολουθείται αυτή τη στιγμή από %numviewers% θεατές"

@@ -94,6 +94,8 @@ enum EMsg {
 	k_EMsgExpectShellRestart = 336;
 	k_EMsgHotFixProgress = 337;
 	k_EMsgGMStatsForwardToAdminConnections = 338;
+	k_EMsgGMGetModifiedConVars = 339;
+	k_EMsgGMGetModifiedConVarsResponse = 340;
 	k_EMsgBaseAIS = 400;
 	k_EMsgAISRequestContentDescription = 402;
 	k_EMsgAISUpdateAppInfo = 403;
@@ -502,11 +504,8 @@ enum EMsg {
 	k_EMsgClientDPSendSpecialSurveyResponse = 1622;
 	k_EMsgClientDPSendSpecialSurveyResponseReply = 1623;
 	k_EMsgDPStoreSaleStatistics = 1624;
-	k_EMsgClientDPUpdateAppJobReport = 1625;
-	k_EMsgClientDPUnsignedInstallScript = 1627;
 	k_EMsgDPPartnerMicroTxns = 1628;
 	k_EMsgDPPartnerMicroTxnsResponse = 1629;
-	k_EMsgClientDPContentStatsReport = 1630;
 	k_EMsgDPVRUniquePlayersStat = 1631;
 	k_EMsgBaseCM = 1700;
 	k_EMsgCMSetAllowState = 1701;
@@ -554,6 +553,7 @@ enum EMsg {
 	k_EMsgGCHAppCheersGetAllowedTypesResponse = 2244;
 	k_EMsgGCHRoutingRulesFromGCHtoGM = 2245;
 	k_EMsgGCHRoutingRulesToGCHfromGM = 2246;
+	k_EMsgUpdateCMMessageRateRules = 2247;
 	k_EMsgBaseP2P = 2500;
 	k_EMsgP2PIntroducerMessage = 2502;
 	k_EMsgBaseSM = 2900;
@@ -727,7 +727,6 @@ enum EMsg {
 	k_EMsgAMSupportIsAccountEnabledResponse = 4210;
 	k_EMsgUGSGetUserStats = 4211;
 	k_EMsgAMGSSearch = 4213;
-	k_EMsgMarketingMessageUpdate = 4216;
 	k_EMsgChatServerRouteFriendMsg = 4219;
 	k_EMsgAMTicketAuthRequestOrResponse = 4220;
 	k_EMsgAMAddFreeLicense = 4224;
@@ -1025,7 +1024,6 @@ enum EMsg {
 	k_EMsgClientMicroTxnAuthorizeResponse = 5506;
 	k_EMsgClientGetMicroTxnInfo = 5508;
 	k_EMsgClientGetMicroTxnInfoResponse = 5509;
-	k_EMsgClientMarketingMessageUpdate2 = 5510;
 	k_EMsgClientDeregisterWithServer = 5511;
 	k_EMsgClientSubscribeToPersonaFeed = 5512;
 	k_EMsgClientLogon = 5514;

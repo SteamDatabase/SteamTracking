@@ -4087,154 +4087,6 @@
         goog.object.getSuperClass = function (a) {
           return (a = Object.getPrototypeOf(a.prototype)) && a.constructor;
         };
-        var jspb = { asserts: {} };
-        jspb.asserts.doAssertFailure = function (a, b, c, d) {
-          var e = "Assertion failed";
-          if (c) {
-            e += ": " + c;
-            var f = d;
-          } else a && ((e += ": " + a), (f = b));
-          throw Error("" + e, f || []);
-        };
-        jspb.asserts.assert = function (a, b, c) {
-          for (var d = [], e = 2; e < arguments.length; ++e)
-            d[e - 2] = arguments[e];
-          a || jspb.asserts.doAssertFailure("", null, b, d);
-          return a;
-        };
-        jspb.asserts.assertString = function (a, b, c) {
-          for (var d = [], e = 2; e < arguments.length; ++e)
-            d[e - 2] = arguments[e];
-          "string" !== typeof a &&
-            jspb.asserts.doAssertFailure(
-              "Expected string but got %s: %s.",
-              [goog.typeOf(a), a],
-              b,
-              d
-            );
-          return a;
-        };
-        jspb.asserts.assertArray = function (a, b, c) {
-          for (var d = [], e = 2; e < arguments.length; ++e)
-            d[e - 2] = arguments[e];
-          Array.isArray(a) ||
-            jspb.asserts.doAssertFailure(
-              "Expected array but got %s: %s.",
-              [goog.typeOf(a), a],
-              b,
-              d
-            );
-          return a;
-        };
-        jspb.asserts.fail = function (a, b) {
-          for (var c = [], d = 1; d < arguments.length; ++d)
-            c[d - 1] = arguments[d];
-          throw Error("Failure" + (a ? ": " + a : ""), c);
-        };
-        jspb.asserts.assertInstanceof = function (a, b, c, d) {
-          for (var e = [], f = 3; f < arguments.length; ++f)
-            e[f - 3] = arguments[f];
-          a instanceof b ||
-            jspb.asserts.doAssertFailure(
-              "Expected instanceof %s but got %s.",
-              [jspb.asserts.getType(b), jspb.asserts.getType(a)],
-              c,
-              e
-            );
-          return a;
-        };
-        jspb.asserts.getType = function (a) {
-          return a instanceof Function
-            ? a.displayName || a.name || "unknown type name"
-            : a instanceof Object
-            ? a.constructor.displayName ||
-              a.constructor.name ||
-              Object.prototype.toString.call(a)
-            : null === a
-            ? "null"
-            : typeof a;
-        };
-        jspb.BinaryConstants = {};
-        jspb.ConstBinaryMessage = function () {};
-        jspb.BinaryMessage = function () {};
-        jspb.BinaryConstants.FieldType = {
-          INVALID: -1,
-          DOUBLE: 1,
-          FLOAT: 2,
-          INT64: 3,
-          UINT64: 4,
-          INT32: 5,
-          FIXED64: 6,
-          FIXED32: 7,
-          BOOL: 8,
-          STRING: 9,
-          GROUP: 10,
-          MESSAGE: 11,
-          BYTES: 12,
-          UINT32: 13,
-          ENUM: 14,
-          SFIXED32: 15,
-          SFIXED64: 16,
-          SINT32: 17,
-          SINT64: 18,
-          FHASH64: 30,
-          VHASH64: 31,
-        };
-        jspb.BinaryConstants.WireType = {
-          INVALID: -1,
-          VARINT: 0,
-          FIXED64: 1,
-          DELIMITED: 2,
-          START_GROUP: 3,
-          END_GROUP: 4,
-          FIXED32: 5,
-        };
-        jspb.BinaryConstants.FieldTypeToWireType = function (a) {
-          var b = jspb.BinaryConstants.FieldType,
-            c = jspb.BinaryConstants.WireType;
-          switch (a) {
-            case b.INT32:
-            case b.INT64:
-            case b.UINT32:
-            case b.UINT64:
-            case b.SINT32:
-            case b.SINT64:
-            case b.BOOL:
-            case b.ENUM:
-            case b.VHASH64:
-              return c.VARINT;
-            case b.DOUBLE:
-            case b.FIXED64:
-            case b.SFIXED64:
-            case b.FHASH64:
-              return c.FIXED64;
-            case b.STRING:
-            case b.MESSAGE:
-            case b.BYTES:
-              return c.DELIMITED;
-            case b.FLOAT:
-            case b.FIXED32:
-            case b.SFIXED32:
-              return c.FIXED32;
-            default:
-              return c.INVALID;
-          }
-        };
-        jspb.BinaryConstants.INVALID_FIELD_NUMBER = -1;
-        jspb.BinaryConstants.FLOAT32_EPS = 1.401298464324817e-45;
-        jspb.BinaryConstants.FLOAT32_MIN = 1.1754943508222875e-38;
-        jspb.BinaryConstants.FLOAT32_MAX = 3.4028234663852886e38;
-        jspb.BinaryConstants.FLOAT64_EPS = 4.9e-324;
-        jspb.BinaryConstants.FLOAT64_MIN = 2.2250738585072014e-308;
-        jspb.BinaryConstants.FLOAT64_MAX = 1.7976931348623157e308;
-        jspb.BinaryConstants.TWO_TO_20 = 1048576;
-        jspb.BinaryConstants.TWO_TO_23 = 8388608;
-        jspb.BinaryConstants.TWO_TO_31 = 2147483648;
-        jspb.BinaryConstants.TWO_TO_32 = 4294967296;
-        jspb.BinaryConstants.TWO_TO_52 = 4503599627370496;
-        jspb.BinaryConstants.TWO_TO_63 = 0x7fffffffffffffff;
-        jspb.BinaryConstants.TWO_TO_64 = 1.8446744073709552e19;
-        jspb.BinaryConstants.ZERO_HASH = "\x00\x00\x00\x00\x00\x00\x00\x00";
         goog.debug = {};
         goog.debug.Error = function (a) {
           if (Error.captureStackTrace)
@@ -4440,6 +4292,89 @@
             ? "null"
             : typeof a;
         };
+        var jspb = {
+          BinaryConstants: {},
+          ConstBinaryMessage: function () {},
+          BinaryMessage: function () {},
+        };
+        jspb.BinaryConstants.FieldType = {
+          INVALID: -1,
+          DOUBLE: 1,
+          FLOAT: 2,
+          INT64: 3,
+          UINT64: 4,
+          INT32: 5,
+          FIXED64: 6,
+          FIXED32: 7,
+          BOOL: 8,
+          STRING: 9,
+          GROUP: 10,
+          MESSAGE: 11,
+          BYTES: 12,
+          UINT32: 13,
+          ENUM: 14,
+          SFIXED32: 15,
+          SFIXED64: 16,
+          SINT32: 17,
+          SINT64: 18,
+          FHASH64: 30,
+          VHASH64: 31,
+        };
+        jspb.BinaryConstants.WireType = {
+          INVALID: -1,
+          VARINT: 0,
+          FIXED64: 1,
+          DELIMITED: 2,
+          START_GROUP: 3,
+          END_GROUP: 4,
+          FIXED32: 5,
+        };
+        jspb.BinaryConstants.FieldTypeToWireType = function (a) {
+          var b = jspb.BinaryConstants.FieldType,
+            c = jspb.BinaryConstants.WireType;
+          switch (a) {
+            case b.INT32:
+            case b.INT64:
+            case b.UINT32:
+            case b.UINT64:
+            case b.SINT32:
+            case b.SINT64:
+            case b.BOOL:
+            case b.ENUM:
+            case b.VHASH64:
+              return c.VARINT;
+            case b.DOUBLE:
+            case b.FIXED64:
+            case b.SFIXED64:
+            case b.FHASH64:
+              return c.FIXED64;
+            case b.STRING:
+            case b.MESSAGE:
+            case b.BYTES:
+              return c.DELIMITED;
+            case b.FLOAT:
+            case b.FIXED32:
+            case b.SFIXED32:
+              return c.FIXED32;
+            default:
+              return c.INVALID;
+          }
+        };
+        jspb.BinaryConstants.INVALID_FIELD_NUMBER = -1;
+        jspb.BinaryConstants.FLOAT32_EPS = 1.401298464324817e-45;
+        jspb.BinaryConstants.FLOAT32_MIN = 1.1754943508222875e-38;
+        jspb.BinaryConstants.FLOAT32_MAX = 3.4028234663852886e38;
+        jspb.BinaryConstants.FLOAT64_EPS = 4.9e-324;
+        jspb.BinaryConstants.FLOAT64_MIN = 2.2250738585072014e-308;
+        jspb.BinaryConstants.FLOAT64_MAX = 1.7976931348623157e308;
+        jspb.BinaryConstants.TWO_TO_20 = 1048576;
+        jspb.BinaryConstants.TWO_TO_23 = 8388608;
+        jspb.BinaryConstants.TWO_TO_31 = 2147483648;
+        jspb.BinaryConstants.TWO_TO_32 = 4294967296;
+        jspb.BinaryConstants.TWO_TO_52 = 4503599627370496;
+        jspb.BinaryConstants.TWO_TO_63 = 0x7fffffffffffffff;
+        jspb.BinaryConstants.TWO_TO_64 = 1.8446744073709552e19;
+        jspb.BinaryConstants.ZERO_HASH = "\x00\x00\x00\x00\x00\x00\x00\x00";
         goog.array = {};
         goog.NATIVE_ARRAY_PROTOTYPES = goog.TRUSTED_SITE;
         goog.array.ASSUME_NATIVE_FUNCTIONS = 2012 < goog.FEATURESET_YEAR;
@@ -8833,7 +8768,7 @@
           function c() {
             for (var a = 0; 8 > a; a++) e[a] = ~e[a] & 255;
           }
-          jspb.asserts.assert(0 < a.length);
+          goog.asserts.assert(0 < a.length);
           var d = !1;
           "-" === a[0] && ((d = !0), (a = a.slice(1)));
           for (var e = [0, 0, 0, 0, 0, 0, 0, 0], f = 0; f < a.length; f++)
@@ -8869,9 +8804,9 @@
         };
         jspb.utils.hexStringToHash64 = function (a) {
           a = a.toLowerCase();
-          jspb.asserts.assert(18 == a.length);
-          jspb.asserts.assert("0" == a[0]);
-          jspb.asserts.assert("x" == a[1]);
+          goog.asserts.assert(18 == a.length);
+          goog.asserts.assert("0" == a[0]);
+          goog.asserts.assert("x" == a[1]);
           for (var b = "", c = 0; 8 > c; c++) {
             var d = jspb.utils.fromHexCharCode_(a.charCodeAt(2 * c + 2)),
               e = jspb.utils.fromHexCharCode_(a.charCodeAt(2 * c + 3));
@@ -8999,7 +8934,7 @@
             return goog.crypt.base64.decodeStringToUint8Array(a);
           if (a instanceof Uint8Array)
             return new Uint8Array(a.buffer, a.byteOffset, a.byteLength);
-          jspb.asserts.fail("Type not convertible to Uint8Array.");
+          goog.asserts.fail("Type not convertible to Uint8Array.");
           return new Uint8Array(0);
         };
         jspb.BinaryDecoder = function (a, b, c) {
@@ -9060,7 +8995,7 @@
         };
         jspb.BinaryDecoder.prototype.advance = function (a) {
           this.cursor_ += a;
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+          goog.asserts.assert(this.cursor_ <= this.end_);
         };
         jspb.BinaryDecoder.prototype.atEnd = function () {
           return this.cursor_ == this.end_;
@@ -9083,7 +9018,7 @@
               (b = this.bytes_[this.cursor_++]),
                 (d |= (b & 127) << (7 * e + 3));
           if (128 > b) return a(c >>> 0, d >>> 0);
-          jspb.asserts.fail("Failed to read varint, encoding is invalid.");
+          goog.asserts.fail("Failed to read varint, encoding is invalid.");
           this.error_ = !0;
         };
         jspb.BinaryDecoder.prototype.readSplitZigzagVarint64 = function (a) {
@@ -9114,7 +9049,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 1),
-              jspb.asserts.assert(this.cursor_ <= this.end_),
+              goog.asserts.assert(this.cursor_ <= this.end_),
               c
             );
           b = a[this.cursor_ + 1];
@@ -9122,7 +9057,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 2),
-              jspb.asserts.assert(this.cursor_ <= this.end_),
+              goog.asserts.assert(this.cursor_ <= this.end_),
               c
             );
           b = a[this.cursor_ + 2];
@@ -9130,7 +9065,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 3),
-              jspb.asserts.assert(this.cursor_ <= this.end_),
+              goog.asserts.assert(this.cursor_ <= this.end_),
               c
             );
           b = a[this.cursor_ + 3];
@@ -9138,7 +9073,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 4),
-              jspb.asserts.assert(this.cursor_ <= this.end_),
+              goog.asserts.assert(this.cursor_ <= this.end_),
               c
             );
           b = a[this.cursor_ + 4];
@@ -9146,7 +9081,7 @@
           if (128 > b)
             return (
               (this.cursor_ += 5),
-              jspb.asserts.assert(this.cursor_ <= this.end_),
+              goog.asserts.assert(this.cursor_ <= this.end_),
               c >>> 0
             );
           this.cursor_ += 5;
@@ -9155,13 +9090,12 @@
             128 <= a[this.cursor_++] &&
             128 <= a[this.cursor_++] &&
             128 <= a[this.cursor_++] &&
-            jspb.asserts.assert(!1);
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+            goog.asserts.assert(!1);
+          goog.asserts.assert(this.cursor_ <= this.end_);
           return c;
         };
-        jspb.BinaryDecoder.prototype.readSignedVarint32 = function () {
-          return ~~this.readUnsignedVarint32();
-        };
+        jspb.BinaryDecoder.prototype.readSignedVarint32 =
+          jspb.BinaryDecoder.prototype.readUnsignedVarint32;
         jspb.BinaryDecoder.prototype.readUnsignedVarint32String = function () {
           return this.readUnsignedVarint32().toString();
         };
@@ -9198,14 +9132,14 @@
         jspb.BinaryDecoder.prototype.readUint8 = function () {
           var a = this.bytes_[this.cursor_ + 0];
           this.cursor_ += 1;
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+          goog.asserts.assert(this.cursor_ <= this.end_);
           return a;
         };
         jspb.BinaryDecoder.prototype.readUint16 = function () {
           var a = this.bytes_[this.cursor_ + 0],
             b = this.bytes_[this.cursor_ + 1];
           this.cursor_ += 2;
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+          goog.asserts.assert(this.cursor_ <= this.end_);
           return (a << 0) | (b << 8);
         };
         jspb.BinaryDecoder.prototype.readUint32 = function () {
@@ -9214,7 +9148,7 @@
             c = this.bytes_[this.cursor_ + 2],
             d = this.bytes_[this.cursor_ + 3];
           this.cursor_ += 4;
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+          goog.asserts.assert(this.cursor_ <= this.end_);
           return ((a << 0) | (b << 8) | (c << 16) | (d << 24)) >>> 0;
         };
         jspb.BinaryDecoder.prototype.readUint64 = function () {
@@ -9230,14 +9164,14 @@
         jspb.BinaryDecoder.prototype.readInt8 = function () {
           var a = this.bytes_[this.cursor_ + 0];
           this.cursor_ += 1;
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+          goog.asserts.assert(this.cursor_ <= this.end_);
           return (a << 24) >> 24;
         };
         jspb.BinaryDecoder.prototype.readInt16 = function () {
           var a = this.bytes_[this.cursor_ + 0],
             b = this.bytes_[this.cursor_ + 1];
           this.cursor_ += 2;
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+          goog.asserts.assert(this.cursor_ <= this.end_);
           return (((a << 0) | (b << 8)) << 16) >> 16;
         };
         jspb.BinaryDecoder.prototype.readInt32 = function () {
@@ -9246,7 +9180,7 @@
             c = this.bytes_[this.cursor_ + 2],
             d = this.bytes_[this.cursor_ + 3];
           this.cursor_ += 4;
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+          goog.asserts.assert(this.cursor_ <= this.end_);
           return (a << 0) | (b << 8) | (c << 16) | (d << 24);
         };
         jspb.BinaryDecoder.prototype.readInt64 = function () {
@@ -9313,12 +9247,12 @@
           if (0 > a || this.cursor_ + a > this.bytes_.length)
             return (
               (this.error_ = !0),
-              jspb.asserts.fail("Invalid byte length!"),
+              goog.asserts.fail("Invalid byte length!"),
               new Uint8Array(0)
             );
           var b = this.bytes_.subarray(this.cursor_, this.cursor_ + a);
           this.cursor_ += a;
-          jspb.asserts.assert(this.cursor_ <= this.end_);
+          goog.asserts.assert(this.cursor_ <= this.end_);
           return b;
         };
         jspb.BinaryDecoder.prototype.readVarintHash64 = function () {
@@ -9377,30 +9311,15 @@
         jspb.BinaryReader.prototype.getFieldNumber = function () {
           return this.nextField_;
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "getFieldNumber",
-          jspb.BinaryReader.prototype.getFieldNumber
-        );
         jspb.BinaryReader.prototype.getWireType = function () {
           return this.nextWireType_;
         };
         jspb.BinaryReader.prototype.isDelimited = function () {
           return this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED;
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "isDelimited",
-          jspb.BinaryReader.prototype.isDelimited
-        );
         jspb.BinaryReader.prototype.isEndGroup = function () {
           return this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP;
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "isEndGroup",
-          jspb.BinaryReader.prototype.isEndGroup
-        );
         jspb.BinaryReader.prototype.getError = function () {
           return this.error_ || this.decoder_.getError();
         };
@@ -9420,7 +9339,7 @@
         jspb.BinaryReader.prototype.nextField = function () {
           if (this.decoder_.atEnd()) return !1;
           if (this.getError())
-            return jspb.asserts.fail("Decoder hit an error"), !1;
+            return goog.asserts.fail("Decoder hit an error"), !1;
           this.fieldCursor_ = this.decoder_.getCursor();
           var a = this.decoder_.readUnsignedVarint32(),
             b = a >>> 3;
@@ -9434,7 +9353,7 @@
             a != jspb.BinaryConstants.WireType.END_GROUP
           )
             return (
-              jspb.asserts.fail(
+              goog.asserts.fail(
                 "Invalid wire type: %s (at position %s)",
                 a,
                 this.fieldCursor_
@@ -9446,11 +9365,6 @@
           this.nextWireType_ = a;
           return !0;
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "nextField",
-          jspb.BinaryReader.prototype.nextField
-        );
         jspb.BinaryReader.prototype.unskipHeader = function () {
           this.decoder_.unskipVarint(
             (this.nextField_ << 3) | this.nextWireType_
@@ -9468,13 +9382,13 @@
         };
         jspb.BinaryReader.prototype.skipVarintField = function () {
           this.nextWireType_ != jspb.BinaryConstants.WireType.VARINT
-            ? (jspb.asserts.fail("Invalid wire type for skipVarintField"),
+            ? (goog.asserts.fail("Invalid wire type for skipVarintField"),
               this.skipField())
             : this.decoder_.skipVarint();
         };
         jspb.BinaryReader.prototype.skipDelimitedField = function () {
           if (this.nextWireType_ != jspb.BinaryConstants.WireType.DELIMITED)
-            jspb.asserts.fail("Invalid wire type for skipDelimitedField"),
+            goog.asserts.fail("Invalid wire type for skipDelimitedField"),
               this.skipField();
           else {
             var a = this.decoder_.readUnsignedVarint32();
@@ -9483,13 +9397,13 @@
         };
         jspb.BinaryReader.prototype.skipFixed32Field = function () {
           this.nextWireType_ != jspb.BinaryConstants.WireType.FIXED32
-            ? (jspb.asserts.fail("Invalid wire type for skipFixed32Field"),
+            ? (goog.asserts.fail("Invalid wire type for skipFixed32Field"),
               this.skipField())
             : this.decoder_.advance(4);
         };
         jspb.BinaryReader.prototype.skipFixed64Field = function () {
           this.nextWireType_ != jspb.BinaryConstants.WireType.FIXED64
-            ? (jspb.asserts.fail("Invalid wire type for skipFixed64Field"),
+            ? (goog.asserts.fail("Invalid wire type for skipFixed64Field"),
               this.skipField())
             : this.decoder_.advance(8);
         };
@@ -9497,13 +9411,13 @@
           var a = this.nextField_;
           do {
             if (!this.nextField()) {
-              jspb.asserts.fail("Unmatched start-group tag: stream EOF");
+              goog.asserts.fail("Unmatched start-group tag: stream EOF");
               this.error_ = !0;
               break;
             }
             if (this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP) {
               this.nextField_ != a &&
-                (jspb.asserts.fail("Unmatched end-group tag"),
+                (goog.asserts.fail("Unmatched end-group tag"),
                 (this.error_ = !0));
               break;
             }
@@ -9528,18 +9442,18 @@
               this.skipGroup();
               break;
             default:
-              jspb.asserts.fail("Invalid wire encoding for field.");
+              goog.asserts.fail("Invalid wire encoding for field.");
           }
         };
         jspb.BinaryReader.prototype.registerReadCallback = function (a, b) {
           null === this.readCallbacks_ && (this.readCallbacks_ = {});
-          jspb.asserts.assert(!this.readCallbacks_[a]);
+          goog.asserts.assert(!this.readCallbacks_[a]);
           this.readCallbacks_[a] = b;
         };
         jspb.BinaryReader.prototype.runReadCallback = function (a) {
-          jspb.asserts.assert(null !== this.readCallbacks_);
+          goog.asserts.assert(null !== this.readCallbacks_);
           a = this.readCallbacks_[a];
-          jspb.asserts.assert(a);
+          goog.asserts.assert(a);
           return a(this);
         };
         jspb.BinaryReader.prototype.readAny = function (a) {
@@ -9565,9 +9479,9 @@
             case b.STRING:
               return this.readString();
             case b.GROUP:
-              jspb.asserts.fail("Group field type not supported in readAny()");
+              goog.asserts.fail("Group field type not supported in readAny()");
             case b.MESSAGE:
-              jspb.asserts.fail(
+              goog.asserts.fail(
                 "Message field type not supported in readAny()"
               );
             case b.BYTES:
@@ -9589,12 +9503,12 @@
             case b.VHASH64:
               return this.readVarintHash64();
             default:
-              jspb.asserts.fail("Invalid field type in readAny()");
+              goog.asserts.fail("Invalid field type in readAny()");
           }
           return 0;
         };
         jspb.BinaryReader.prototype.readMessage = function (a, b) {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var c = this.decoder_.getEnd(),
@@ -9605,31 +9519,21 @@
           this.decoder_.setCursor(d);
           this.decoder_.setEnd(c);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readMessage",
-          jspb.BinaryReader.prototype.readMessage
-        );
         jspb.BinaryReader.prototype.readGroup = function (a, b, c) {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.START_GROUP
           );
-          jspb.asserts.assert(this.nextField_ == a);
+          goog.asserts.assert(this.nextField_ == a);
           c(b, this);
           this.error_ ||
             this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP ||
-            (jspb.asserts.fail(
+            (goog.asserts.fail(
               "Group submessage did not end with an END_GROUP tag"
             ),
             (this.error_ = !0));
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readGroup",
-          jspb.BinaryReader.prototype.readGroup
-        );
         jspb.BinaryReader.prototype.getFieldDecoder = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var a = this.decoder_.readUnsignedVarint32(),
@@ -9640,251 +9544,171 @@
           return a;
         };
         jspb.BinaryReader.prototype.readInt32 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint32();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readInt32",
-          jspb.BinaryReader.prototype.readInt32
-        );
         jspb.BinaryReader.prototype.readInt32String = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint32String();
         };
         jspb.BinaryReader.prototype.readInt64 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint64();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readInt64",
-          jspb.BinaryReader.prototype.readInt64
-        );
         jspb.BinaryReader.prototype.readInt64String = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint64String();
         };
         jspb.BinaryReader.prototype.readUint32 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readUnsignedVarint32();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readUint32",
-          jspb.BinaryReader.prototype.readUint32
-        );
         jspb.BinaryReader.prototype.readUint32String = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readUnsignedVarint32String();
         };
         jspb.BinaryReader.prototype.readUint64 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readUnsignedVarint64();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readUint64",
-          jspb.BinaryReader.prototype.readUint64
-        );
         jspb.BinaryReader.prototype.readUint64String = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readUnsignedVarint64String();
         };
         jspb.BinaryReader.prototype.readSint32 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readZigzagVarint32();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readSint32",
-          jspb.BinaryReader.prototype.readSint32
-        );
         jspb.BinaryReader.prototype.readSint64 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readZigzagVarint64();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readSint64",
-          jspb.BinaryReader.prototype.readSint64
-        );
         jspb.BinaryReader.prototype.readSint64String = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readZigzagVarint64String();
         };
         jspb.BinaryReader.prototype.readFixed32 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED32
           );
           return this.decoder_.readUint32();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readFixed32",
-          jspb.BinaryReader.prototype.readFixed32
-        );
         jspb.BinaryReader.prototype.readFixed64 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readUint64();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readFixed64",
-          jspb.BinaryReader.prototype.readFixed64
-        );
         jspb.BinaryReader.prototype.readFixed64String = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readUint64String();
         };
         jspb.BinaryReader.prototype.readSfixed32 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED32
           );
           return this.decoder_.readInt32();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readSfixed32",
-          jspb.BinaryReader.prototype.readSfixed32
-        );
         jspb.BinaryReader.prototype.readSfixed32String = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED32
           );
           return this.decoder_.readInt32().toString();
         };
         jspb.BinaryReader.prototype.readSfixed64 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readInt64();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readSfixed64",
-          jspb.BinaryReader.prototype.readSfixed64
-        );
         jspb.BinaryReader.prototype.readSfixed64String = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readInt64String();
         };
         jspb.BinaryReader.prototype.readFloat = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED32
           );
           return this.decoder_.readFloat();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readFloat",
-          jspb.BinaryReader.prototype.readFloat
-        );
         jspb.BinaryReader.prototype.readDouble = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readDouble();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readDouble",
-          jspb.BinaryReader.prototype.readDouble
-        );
         jspb.BinaryReader.prototype.readBool = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return !!this.decoder_.readUnsignedVarint32();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readBool",
-          jspb.BinaryReader.prototype.readBool
-        );
         jspb.BinaryReader.prototype.readEnum = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSignedVarint64();
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readEnum",
-          jspb.BinaryReader.prototype.readEnum
-        );
         jspb.BinaryReader.prototype.readString = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var a = this.decoder_.readUnsignedVarint32();
           return this.decoder_.readString(a);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readString",
-          jspb.BinaryReader.prototype.readString
-        );
         jspb.BinaryReader.prototype.readBytes = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var a = this.decoder_.readUnsignedVarint32();
           return this.decoder_.readBytes(a);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readBytes",
-          jspb.BinaryReader.prototype.readBytes
-        );
         jspb.BinaryReader.prototype.readVarintHash64 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readVarintHash64();
         };
         jspb.BinaryReader.prototype.readSintHash64 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readZigzagVarintHash64();
         };
         jspb.BinaryReader.prototype.readSplitVarint64 = function (a) {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSplitVarint64(a);
         };
         jspb.BinaryReader.prototype.readSplitZigzagVarint64 = function (a) {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
           );
           return this.decoder_.readSplitVarint64(function (b, c) {
@@ -9892,19 +9716,19 @@
           });
         };
         jspb.BinaryReader.prototype.readFixedHash64 = function () {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readFixedHash64();
         };
         jspb.BinaryReader.prototype.readSplitFixed64 = function (a) {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.FIXED64
           );
           return this.decoder_.readSplitFixed64(a);
         };
         jspb.BinaryReader.prototype.readPackedField_ = function (a) {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
           );
           var b = this.decoder_.readUnsignedVarint32();
@@ -9916,33 +9740,18 @@
         jspb.BinaryReader.prototype.readPackedInt32 = function () {
           return this.readPackedField_(this.decoder_.readSignedVarint32);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedInt32",
-          jspb.BinaryReader.prototype.readPackedInt32
-        );
         jspb.BinaryReader.prototype.readPackedInt32String = function () {
           return this.readPackedField_(this.decoder_.readSignedVarint32String);
         };
         jspb.BinaryReader.prototype.readPackedInt64 = function () {
           return this.readPackedField_(this.decoder_.readSignedVarint64);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedInt64",
-          jspb.BinaryReader.prototype.readPackedInt64
-        );
         jspb.BinaryReader.prototype.readPackedInt64String = function () {
           return this.readPackedField_(this.decoder_.readSignedVarint64String);
         };
         jspb.BinaryReader.prototype.readPackedUint32 = function () {
           return this.readPackedField_(this.decoder_.readUnsignedVarint32);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedUint32",
-          jspb.BinaryReader.prototype.readPackedUint32
-        );
         jspb.BinaryReader.prototype.readPackedUint32String = function () {
           return this.readPackedField_(
             this.decoder_.readUnsignedVarint32String
@@ -9951,11 +9760,6 @@
         jspb.BinaryReader.prototype.readPackedUint64 = function () {
           return this.readPackedField_(this.decoder_.readUnsignedVarint64);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedUint64",
-          jspb.BinaryReader.prototype.readPackedUint64
-        );
         jspb.BinaryReader.prototype.readPackedUint64String = function () {
           return this.readPackedField_(
             this.decoder_.readUnsignedVarint64String
@@ -9964,92 +9768,42 @@
         jspb.BinaryReader.prototype.readPackedSint32 = function () {
           return this.readPackedField_(this.decoder_.readZigzagVarint32);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedSint32",
-          jspb.BinaryReader.prototype.readPackedSint32
-        );
         jspb.BinaryReader.prototype.readPackedSint64 = function () {
           return this.readPackedField_(this.decoder_.readZigzagVarint64);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedSint64",
-          jspb.BinaryReader.prototype.readPackedSint64
-        );
         jspb.BinaryReader.prototype.readPackedSint64String = function () {
           return this.readPackedField_(this.decoder_.readZigzagVarint64String);
         };
         jspb.BinaryReader.prototype.readPackedFixed32 = function () {
           return this.readPackedField_(this.decoder_.readUint32);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedFixed32",
-          jspb.BinaryReader.prototype.readPackedFixed32
-        );
         jspb.BinaryReader.prototype.readPackedFixed64 = function () {
           return this.readPackedField_(this.decoder_.readUint64);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedFixed64",
-          jspb.BinaryReader.prototype.readPackedFixed64
-        );
         jspb.BinaryReader.prototype.readPackedFixed64String = function () {
           return this.readPackedField_(this.decoder_.readUint64String);
         };
         jspb.BinaryReader.prototype.readPackedSfixed32 = function () {
           return this.readPackedField_(this.decoder_.readInt32);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedSfixed32",
-          jspb.BinaryReader.prototype.readPackedSfixed32
-        );
         jspb.BinaryReader.prototype.readPackedSfixed64 = function () {
           return this.readPackedField_(this.decoder_.readInt64);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedSfixed64",
-          jspb.BinaryReader.prototype.readPackedSfixed64
-        );
         jspb.BinaryReader.prototype.readPackedSfixed64String = function () {
           return this.readPackedField_(this.decoder_.readInt64String);
         };
         jspb.BinaryReader.prototype.readPackedFloat = function () {
           return this.readPackedField_(this.decoder_.readFloat);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedFloat",
-          jspb.BinaryReader.prototype.readPackedFloat
-        );
         jspb.BinaryReader.prototype.readPackedDouble = function () {
           return this.readPackedField_(this.decoder_.readDouble);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedDouble",
-          jspb.BinaryReader.prototype.readPackedDouble
-        );
         jspb.BinaryReader.prototype.readPackedBool = function () {
           return this.readPackedField_(this.decoder_.readBool);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedBool",
-          jspb.BinaryReader.prototype.readPackedBool
-        );
         jspb.BinaryReader.prototype.readPackedEnum = function () {
           return this.readPackedField_(this.decoder_.readEnum);
         };
-        goog.exportProperty(
-          jspb.BinaryReader.prototype,
-          "readPackedEnum",
-          jspb.BinaryReader.prototype.readPackedEnum
-        );
         jspb.BinaryReader.prototype.readPackedVarintHash64 = function () {
           return this.readPackedField_(this.decoder_.readVarintHash64);
         };
@@ -10068,11 +9822,11 @@
           return a;
         };
         jspb.BinaryEncoder.prototype.writeSplitVarint64 = function (a, b) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(b == Math.floor(b));
-          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(b == Math.floor(b));
+          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
           for (
-            jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32);
+            goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32);
             0 < b || 127 < a;
 
           )
@@ -10082,17 +9836,17 @@
           this.buffer_.push(a);
         };
         jspb.BinaryEncoder.prototype.writeSplitFixed64 = function (a, b) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(b == Math.floor(b));
-          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
-          jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(b == Math.floor(b));
+          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
+          goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32);
           this.writeUint32(a);
           this.writeUint32(b);
         };
         jspb.BinaryEncoder.prototype.writeUnsignedVarint32 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(a == Math.floor(a));
           for (
-            jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
+            goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
             127 < a;
 
           )
@@ -10100,8 +9854,8 @@
           this.buffer_.push(a);
         };
         jspb.BinaryEncoder.prototype.writeSignedVarint32 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_31 &&
               a < jspb.BinaryConstants.TWO_TO_31
           );
@@ -10113,8 +9867,8 @@
           }
         };
         jspb.BinaryEncoder.prototype.writeUnsignedVarint64 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_64);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_64);
           jspb.utils.splitInt64(a);
           this.writeSplitVarint64(
             jspb.utils.split64Low,
@@ -10122,8 +9876,8 @@
           );
         };
         jspb.BinaryEncoder.prototype.writeSignedVarint64 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_63 &&
               a < jspb.BinaryConstants.TWO_TO_63
           );
@@ -10134,16 +9888,16 @@
           );
         };
         jspb.BinaryEncoder.prototype.writeZigzagVarint32 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_31 &&
               a < jspb.BinaryConstants.TWO_TO_31
           );
           this.writeUnsignedVarint32(((a << 1) ^ (a >> 31)) >>> 0);
         };
         jspb.BinaryEncoder.prototype.writeZigzagVarint64 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_63 &&
               a < jspb.BinaryConstants.TWO_TO_63
           );
@@ -10168,45 +9922,45 @@
           );
         };
         jspb.BinaryEncoder.prototype.writeUint8 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(0 <= a && 256 > a);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(0 <= a && 256 > a);
           this.buffer_.push((a >>> 0) & 255);
         };
         jspb.BinaryEncoder.prototype.writeUint16 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(0 <= a && 65536 > a);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(0 <= a && 65536 > a);
           this.buffer_.push((a >>> 0) & 255);
           this.buffer_.push((a >>> 8) & 255);
         };
         jspb.BinaryEncoder.prototype.writeUint32 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_32);
           this.buffer_.push((a >>> 0) & 255);
           this.buffer_.push((a >>> 8) & 255);
           this.buffer_.push((a >>> 16) & 255);
           this.buffer_.push((a >>> 24) & 255);
         };
         jspb.BinaryEncoder.prototype.writeUint64 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_64);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(0 <= a && a < jspb.BinaryConstants.TWO_TO_64);
           jspb.utils.splitUint64(a);
           this.writeUint32(jspb.utils.split64Low);
           this.writeUint32(jspb.utils.split64High);
         };
         jspb.BinaryEncoder.prototype.writeInt8 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(-128 <= a && 128 > a);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(-128 <= a && 128 > a);
           this.buffer_.push((a >>> 0) & 255);
         };
         jspb.BinaryEncoder.prototype.writeInt16 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(-32768 <= a && 32768 > a);
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(-32768 <= a && 32768 > a);
           this.buffer_.push((a >>> 0) & 255);
           this.buffer_.push((a >>> 8) & 255);
         };
         jspb.BinaryEncoder.prototype.writeInt32 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_31 &&
               a < jspb.BinaryConstants.TWO_TO_31
           );
@@ -10216,8 +9970,8 @@
           this.buffer_.push((a >>> 24) & 255);
         };
         jspb.BinaryEncoder.prototype.writeInt64 = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_63 &&
               a < jspb.BinaryConstants.TWO_TO_63
           );
@@ -10225,8 +9979,8 @@
           this.writeSplitFixed64(jspb.utils.split64Low, jspb.utils.split64High);
         };
         jspb.BinaryEncoder.prototype.writeInt64String = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(
             +a >= -jspb.BinaryConstants.TWO_TO_63 &&
               +a < jspb.BinaryConstants.TWO_TO_63
           );
@@ -10234,7 +9988,7 @@
           this.writeSplitFixed64(jspb.utils.split64Low, jspb.utils.split64High);
         };
         jspb.BinaryEncoder.prototype.writeFloat = function (a) {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             Infinity === a ||
               -Infinity === a ||
               isNaN(a) ||
@@ -10245,7 +9999,7 @@
           this.writeUint32(jspb.utils.split64Low);
         };
         jspb.BinaryEncoder.prototype.writeDouble = function (a) {
-          jspb.asserts.assert(
+          goog.asserts.assert(
             Infinity === a ||
               -Infinity === a ||
               isNaN(a) ||
@@ -10257,12 +10011,12 @@
           this.writeUint32(jspb.utils.split64High);
         };
         jspb.BinaryEncoder.prototype.writeBool = function (a) {
-          jspb.asserts.assert("boolean" === typeof a || "number" === typeof a);
+          goog.asserts.assert("boolean" === typeof a || "number" === typeof a);
           this.buffer_.push(a ? 1 : 0);
         };
         jspb.BinaryEncoder.prototype.writeEnum = function (a) {
-          jspb.asserts.assert(a == Math.floor(a));
-          jspb.asserts.assert(
+          goog.asserts.assert(a == Math.floor(a));
+          goog.asserts.assert(
             a >= -jspb.BinaryConstants.TWO_TO_31 &&
               a < jspb.BinaryConstants.TWO_TO_31
           );
@@ -10285,7 +10039,7 @@
         };
         jspb.BinaryEncoder.prototype.writeString = function (a) {
           var b = this.buffer_.length;
-          jspb.asserts.assertString(a);
+          goog.asserts.assertString(a);
           for (var c = 0; c < a.length; c++) {
             var d = a.charCodeAt(c);
             if (128 > d) this.buffer_.push(d);
@@ -10481,7 +10235,7 @@
         jspb.BinaryWriter.prototype.endDelimited_ = function (a) {
           var b = a.pop();
           b = this.totalLength_ + this.encoder_.length() - b;
-          for (jspb.asserts.assert(0 <= b); 127 < b; )
+          for (goog.asserts.assert(0 <= b); 127 < b; )
             a.push((b & 127) | 128), (b >>>= 7), this.totalLength_++;
           a.push(b);
           this.totalLength_++;
@@ -10510,7 +10264,7 @@
           this.bookmarks_ = [];
         };
         jspb.BinaryWriter.prototype.getResultBuffer = function () {
-          jspb.asserts.assert(0 == this.bookmarks_.length);
+          goog.asserts.assert(0 == this.bookmarks_.length);
           for (
             var a = new Uint8Array(this.totalLength_ + this.encoder_.length()),
               b = this.blocks_,
@@ -10527,15 +10281,10 @@
           b = this.encoder_.end();
           a.set(b, d);
           d += b.length;
-          jspb.asserts.assert(d == a.length);
+          goog.asserts.assert(d == a.length);
           this.blocks_ = [a];
           return a;
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "getResultBuffer",
-          jspb.BinaryWriter.prototype.getResultBuffer
-        );
         jspb.BinaryWriter.prototype.getResultBase64String = function (a) {
           return goog.crypt.base64.encodeByteArray(this.getResultBuffer(), a);
         };
@@ -10543,11 +10292,11 @@
           this.bookmarks_.push(this.beginDelimited_(a));
         };
         jspb.BinaryWriter.prototype.endSubMessage = function () {
-          jspb.asserts.assert(0 <= this.bookmarks_.length);
+          goog.asserts.assert(0 <= this.bookmarks_.length);
           this.endDelimited_(this.bookmarks_.pop());
         };
         jspb.BinaryWriter.prototype.writeFieldHeader_ = function (a, b) {
-          jspb.asserts.assert(1 <= a && a == Math.floor(a));
+          goog.asserts.assert(1 <= a && a == Math.floor(a));
           this.encoder_.writeUnsignedVarint32(8 * a + b);
         };
         jspb.BinaryWriter.prototype.writeAny = function (a, b, c) {
@@ -10581,10 +10330,10 @@
               this.writeString(b, c);
               break;
             case d.GROUP:
-              jspb.asserts.fail("Group field type not supported in writeAny()");
+              goog.asserts.fail("Group field type not supported in writeAny()");
               break;
             case d.MESSAGE:
-              jspb.asserts.fail(
+              goog.asserts.fail(
                 "Message field type not supported in writeAny()"
               );
               break;
@@ -10616,7 +10365,7 @@
               this.writeVarintHash64(b, c);
               break;
             default:
-              jspb.asserts.fail("Invalid field type in writeAny()");
+              goog.asserts.fail("Invalid field type in writeAny()");
           }
         };
         jspb.BinaryWriter.prototype.writeUnsignedVarint32_ = function (a, b) {
@@ -10664,21 +10413,16 @@
         };
         jspb.BinaryWriter.prototype.writeInt32 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(
+            (goog.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
             this.writeSignedVarint32_(a, b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeInt32",
-          jspb.BinaryWriter.prototype.writeInt32
-        );
         jspb.BinaryWriter.prototype.writeInt32String = function (a, b) {
           null != b &&
             ((b = parseInt(b, 10)),
-            jspb.asserts.assert(
+            goog.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
@@ -10686,17 +10430,12 @@
         };
         jspb.BinaryWriter.prototype.writeInt64 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(
+            (goog.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_63 &&
                 b < jspb.BinaryConstants.TWO_TO_63
             ),
             this.writeSignedVarint64_(a, b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeInt64",
-          jspb.BinaryWriter.prototype.writeInt64
-        );
         jspb.BinaryWriter.prototype.writeInt64String = function (a, b) {
           null != b &&
             ((b = jspb.arith.Int64.fromString(b)),
@@ -10705,30 +10444,20 @@
         };
         jspb.BinaryWriter.prototype.writeUint32 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
+            (goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
             this.writeUnsignedVarint32_(a, b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeUint32",
-          jspb.BinaryWriter.prototype.writeUint32
-        );
         jspb.BinaryWriter.prototype.writeUint32String = function (a, b) {
           null != b &&
             ((b = parseInt(b, 10)),
-            jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
+            goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
             this.writeUnsignedVarint32_(a, b));
         };
         jspb.BinaryWriter.prototype.writeUint64 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_64),
+            (goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_64),
             this.writeUnsignedVarint64_(a, b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeUint64",
-          jspb.BinaryWriter.prototype.writeUint64
-        );
         jspb.BinaryWriter.prototype.writeUint64String = function (a, b) {
           null != b &&
             ((b = jspb.arith.UInt64.fromString(b)),
@@ -10737,30 +10466,20 @@
         };
         jspb.BinaryWriter.prototype.writeSint32 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(
+            (goog.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
             this.writeZigzagVarint32_(a, b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeSint32",
-          jspb.BinaryWriter.prototype.writeSint32
-        );
         jspb.BinaryWriter.prototype.writeSint64 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(
+            (goog.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_63 &&
                 b < jspb.BinaryConstants.TWO_TO_63
             ),
             this.writeZigzagVarint64_(a, b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeSint64",
-          jspb.BinaryWriter.prototype.writeSint64
-        );
         jspb.BinaryWriter.prototype.writeSintHash64 = function (a, b) {
           null != b && this.writeZigzagVarintHash64_(a, b);
         };
@@ -10769,26 +10488,16 @@
         };
         jspb.BinaryWriter.prototype.writeFixed32 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
+            (goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_32),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED32),
             this.encoder_.writeUint32(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeFixed32",
-          jspb.BinaryWriter.prototype.writeFixed32
-        );
         jspb.BinaryWriter.prototype.writeFixed64 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_64),
+            (goog.asserts.assert(0 <= b && b < jspb.BinaryConstants.TWO_TO_64),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED64),
             this.encoder_.writeUint64(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeFixed64",
-          jspb.BinaryWriter.prototype.writeFixed64
-        );
         jspb.BinaryWriter.prototype.writeFixed64String = function (a, b) {
           null != b &&
             ((b = jspb.arith.UInt64.fromString(b)),
@@ -10797,32 +10506,22 @@
         };
         jspb.BinaryWriter.prototype.writeSfixed32 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(
+            (goog.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED32),
             this.encoder_.writeInt32(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeSfixed32",
-          jspb.BinaryWriter.prototype.writeSfixed32
-        );
         jspb.BinaryWriter.prototype.writeSfixed64 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(
+            (goog.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_63 &&
                 b < jspb.BinaryConstants.TWO_TO_63
             ),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED64),
             this.encoder_.writeInt64(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeSfixed64",
-          jspb.BinaryWriter.prototype.writeSfixed64
-        );
         jspb.BinaryWriter.prototype.writeSfixed64String = function (a, b) {
           null != b &&
             ((b = jspb.arith.Int64.fromString(b)),
@@ -10834,59 +10533,34 @@
             (this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED32),
             this.encoder_.writeFloat(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeFloat",
-          jspb.BinaryWriter.prototype.writeFloat
-        );
         jspb.BinaryWriter.prototype.writeDouble = function (a, b) {
           null != b &&
             (this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED64),
             this.encoder_.writeDouble(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeDouble",
-          jspb.BinaryWriter.prototype.writeDouble
-        );
         jspb.BinaryWriter.prototype.writeBool = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(
+            (goog.asserts.assert(
               "boolean" === typeof b || "number" === typeof b
             ),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.VARINT),
             this.encoder_.writeBool(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeBool",
-          jspb.BinaryWriter.prototype.writeBool
-        );
         jspb.BinaryWriter.prototype.writeEnum = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(
+            (goog.asserts.assert(
               b >= -jspb.BinaryConstants.TWO_TO_31 &&
                 b < jspb.BinaryConstants.TWO_TO_31
             ),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.VARINT),
             this.encoder_.writeSignedVarint32(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeEnum",
-          jspb.BinaryWriter.prototype.writeEnum
-        );
         jspb.BinaryWriter.prototype.writeString = function (a, b) {
           null != b &&
             ((a = this.beginDelimited_(a)),
             this.encoder_.writeString(b),
             this.endDelimited_(a));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeString",
-          jspb.BinaryWriter.prototype.writeString
-        );
         jspb.BinaryWriter.prototype.writeBytes = function (a, b) {
           null != b &&
             ((b = jspb.utils.byteSourceToUint8Array(b)),
@@ -10894,20 +10568,10 @@
             this.encoder_.writeUnsignedVarint32(b.length),
             this.appendUint8Array_(b));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeBytes",
-          jspb.BinaryWriter.prototype.writeBytes
-        );
         jspb.BinaryWriter.prototype.writeMessage = function (a, b, c) {
           null != b &&
             ((a = this.beginDelimited_(a)), c(b, this), this.endDelimited_(a));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeMessage",
-          jspb.BinaryWriter.prototype.writeMessage
-        );
         jspb.BinaryWriter.prototype.writeMessageSet = function (a, b, c) {
           null != b &&
             (this.writeFieldHeader_(
@@ -10930,20 +10594,15 @@
             c(b, this),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.END_GROUP));
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeGroup",
-          jspb.BinaryWriter.prototype.writeGroup
-        );
         jspb.BinaryWriter.prototype.writeFixedHash64 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(8 == b.length),
+            (goog.asserts.assert(8 == b.length),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.FIXED64),
             this.encoder_.writeFixedHash64(b));
         };
         jspb.BinaryWriter.prototype.writeVarintHash64 = function (a, b) {
           null != b &&
-            (jspb.asserts.assert(8 == b.length),
+            (goog.asserts.assert(8 == b.length),
             this.writeFieldHeader_(a, jspb.BinaryConstants.WireType.VARINT),
             this.encoder_.writeVarintHash64(b));
         };
@@ -10971,11 +10630,6 @@
             for (var c = 0; c < b.length; c++)
               this.writeSignedVarint32_(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedInt32",
-          jspb.BinaryWriter.prototype.writeRepeatedInt32
-        );
         jspb.BinaryWriter.prototype.writeRepeatedInt32String = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeInt32String(a, b[c]);
@@ -10985,11 +10639,6 @@
             for (var c = 0; c < b.length; c++)
               this.writeSignedVarint64_(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedInt64",
-          jspb.BinaryWriter.prototype.writeRepeatedInt64
-        );
         jspb.BinaryWriter.prototype.writeRepeatedSplitFixed64 = function (
           a,
           b,
@@ -11025,11 +10674,6 @@
             for (var c = 0; c < b.length; c++)
               this.writeUnsignedVarint32_(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedUint32",
-          jspb.BinaryWriter.prototype.writeRepeatedUint32
-        );
         jspb.BinaryWriter.prototype.writeRepeatedUint32String = function (
           a,
           b
@@ -11042,11 +10686,6 @@
             for (var c = 0; c < b.length; c++)
               this.writeUnsignedVarint64_(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedUint64",
-          jspb.BinaryWriter.prototype.writeRepeatedUint64
-        );
         jspb.BinaryWriter.prototype.writeRepeatedUint64String = function (
           a,
           b
@@ -11059,21 +10698,11 @@
             for (var c = 0; c < b.length; c++)
               this.writeZigzagVarint32_(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedSint32",
-          jspb.BinaryWriter.prototype.writeRepeatedSint32
-        );
         jspb.BinaryWriter.prototype.writeRepeatedSint64 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++)
               this.writeZigzagVarint64_(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedSint64",
-          jspb.BinaryWriter.prototype.writeRepeatedSint64
-        );
         jspb.BinaryWriter.prototype.writeRepeatedSint64String = function (
           a,
           b
@@ -11091,20 +10720,10 @@
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFixed32(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedFixed32",
-          jspb.BinaryWriter.prototype.writeRepeatedFixed32
-        );
         jspb.BinaryWriter.prototype.writeRepeatedFixed64 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFixed64(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedFixed64",
-          jspb.BinaryWriter.prototype.writeRepeatedFixed64
-        );
         jspb.BinaryWriter.prototype.writeRepeatedFixed64String = function (
           a,
           b
@@ -11112,29 +10731,14 @@
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFixed64String(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedFixed64String",
-          jspb.BinaryWriter.prototype.writeRepeatedFixed64String
-        );
         jspb.BinaryWriter.prototype.writeRepeatedSfixed32 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeSfixed32(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedSfixed32",
-          jspb.BinaryWriter.prototype.writeRepeatedSfixed32
-        );
         jspb.BinaryWriter.prototype.writeRepeatedSfixed64 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeSfixed64(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedSfixed64",
-          jspb.BinaryWriter.prototype.writeRepeatedSfixed64
-        );
         jspb.BinaryWriter.prototype.writeRepeatedSfixed64String = function (
           a,
           b
@@ -11147,56 +10751,26 @@
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFloat(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedFloat",
-          jspb.BinaryWriter.prototype.writeRepeatedFloat
-        );
         jspb.BinaryWriter.prototype.writeRepeatedDouble = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeDouble(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedDouble",
-          jspb.BinaryWriter.prototype.writeRepeatedDouble
-        );
         jspb.BinaryWriter.prototype.writeRepeatedBool = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeBool(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedBool",
-          jspb.BinaryWriter.prototype.writeRepeatedBool
-        );
         jspb.BinaryWriter.prototype.writeRepeatedEnum = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeEnum(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedEnum",
-          jspb.BinaryWriter.prototype.writeRepeatedEnum
-        );
         jspb.BinaryWriter.prototype.writeRepeatedString = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeString(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedString",
-          jspb.BinaryWriter.prototype.writeRepeatedString
-        );
         jspb.BinaryWriter.prototype.writeRepeatedBytes = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeBytes(a, b[c]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedBytes",
-          jspb.BinaryWriter.prototype.writeRepeatedBytes
-        );
         jspb.BinaryWriter.prototype.writeRepeatedMessage = function (a, b, c) {
           if (null != b)
             for (var d = 0; d < b.length; d++) {
@@ -11205,11 +10779,6 @@
               this.endDelimited_(e);
             }
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedMessage",
-          jspb.BinaryWriter.prototype.writeRepeatedMessage
-        );
         jspb.BinaryWriter.prototype.writeRepeatedGroup = function (a, b, c) {
           if (null != b)
             for (var d = 0; d < b.length; d++)
@@ -11223,11 +10792,6 @@
                   jspb.BinaryConstants.WireType.END_GROUP
                 );
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writeRepeatedGroup",
-          jspb.BinaryWriter.prototype.writeRepeatedGroup
-        );
         jspb.BinaryWriter.prototype.writeRepeatedFixedHash64 = function (a, b) {
           if (null != b)
             for (var c = 0; c < b.length; c++) this.writeFixedHash64(a, b[c]);
@@ -11247,11 +10811,6 @@
             this.endDelimited_(a);
           }
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedInt32",
-          jspb.BinaryWriter.prototype.writePackedInt32
-        );
         jspb.BinaryWriter.prototype.writePackedInt32String = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -11268,11 +10827,6 @@
             this.endDelimited_(a);
           }
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedInt64",
-          jspb.BinaryWriter.prototype.writePackedInt64
-        );
         jspb.BinaryWriter.prototype.writePackedSplitFixed64 = function (
           a,
           b,
@@ -11332,11 +10886,6 @@
             this.endDelimited_(a);
           }
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedUint32",
-          jspb.BinaryWriter.prototype.writePackedUint32
-        );
         jspb.BinaryWriter.prototype.writePackedUint32String = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -11353,11 +10902,6 @@
             this.endDelimited_(a);
           }
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedUint64",
-          jspb.BinaryWriter.prototype.writePackedUint64
-        );
         jspb.BinaryWriter.prototype.writePackedUint64String = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -11376,11 +10920,6 @@
             this.endDelimited_(a);
           }
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedSint32",
-          jspb.BinaryWriter.prototype.writePackedSint32
-        );
         jspb.BinaryWriter.prototype.writePackedSint64 = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -11389,11 +10928,6 @@
             this.endDelimited_(a);
           }
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedSint64",
-          jspb.BinaryWriter.prototype.writePackedSint64
-        );
         jspb.BinaryWriter.prototype.writePackedSint64String = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -11426,11 +10960,6 @@
             )
               this.encoder_.writeUint32(b[a]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedFixed32",
-          jspb.BinaryWriter.prototype.writePackedFixed32
-        );
         jspb.BinaryWriter.prototype.writePackedFixed64 = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11445,11 +10974,6 @@
             )
               this.encoder_.writeUint64(b[a]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedFixed64",
-          jspb.BinaryWriter.prototype.writePackedFixed64
-        );
         jspb.BinaryWriter.prototype.writePackedFixed64String = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11480,11 +11004,6 @@
             )
               this.encoder_.writeInt32(b[a]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedSfixed32",
-          jspb.BinaryWriter.prototype.writePackedSfixed32
-        );
         jspb.BinaryWriter.prototype.writePackedSfixed64 = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11499,11 +11018,6 @@
             )
               this.encoder_.writeInt64(b[a]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedSfixed64",
-          jspb.BinaryWriter.prototype.writePackedSfixed64
-        );
         jspb.BinaryWriter.prototype.writePackedSfixed64String = function (
           a,
           b
@@ -11535,11 +11049,6 @@
             )
               this.encoder_.writeFloat(b[a]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedFloat",
-          jspb.BinaryWriter.prototype.writePackedFloat
-        );
         jspb.BinaryWriter.prototype.writePackedDouble = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11554,11 +11063,6 @@
             )
               this.encoder_.writeDouble(b[a]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedDouble",
-          jspb.BinaryWriter.prototype.writePackedDouble
-        );
         jspb.BinaryWriter.prototype.writePackedBool = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11573,11 +11077,6 @@
             )
               this.encoder_.writeBool(b[a]);
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedBool",
-          jspb.BinaryWriter.prototype.writePackedBool
-        );
         jspb.BinaryWriter.prototype.writePackedEnum = function (a, b) {
           if (null != b && b.length) {
             a = this.beginDelimited_(a);
@@ -11585,11 +11084,6 @@
             this.endDelimited_(a);
           }
         };
-        goog.exportProperty(
-          jspb.BinaryWriter.prototype,
-          "writePackedEnum",
-          jspb.BinaryWriter.prototype.writePackedEnum
-        );
         jspb.BinaryWriter.prototype.writePackedFixedHash64 = function (a, b) {
           if (null != b && b.length)
             for (
@@ -11619,7 +11113,6 @@
           this.arrClean = !0;
           0 < this.arr_.length && this.loadFromArray_();
         };
-        goog.exportSymbol("jspb.Map", jspb.Map);
         jspb.Map.prototype.loadFromArray_ = function () {
           for (var a = 0; a < this.arr_.length; a++) {
             var b = this.arr_[a],
@@ -11652,27 +11145,17 @@
           }
           return this.arr_;
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "toArray",
-          jspb.Map.prototype.toArray
-        );
         jspb.Map.prototype.toObject = function (a, b) {
           for (var c = this.toArray(), d = [], e = 0; e < c.length; e++) {
             var f = this.map_[c[e][0].toString()];
             this.wrapEntry_(f);
             var g = f.valueWrapper;
             g
-              ? (jspb.asserts.assert(b), d.push([f.key, b(a, g)]))
+              ? (goog.asserts.assert(b), d.push([f.key, b(a, g)]))
               : d.push([f.key, f.value]);
           }
           return d;
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "toObject",
-          jspb.Map.prototype.toObject
-        );
         jspb.Map.fromObject = function (a, b, c) {
           b = new jspb.Map([], b);
           for (var d = 0; d < a.length; d++) {
@@ -11682,7 +11165,6 @@
           }
           return b;
         };
-        goog.exportProperty(jspb.Map, "fromObject", jspb.Map.fromObject);
         jspb.Map.ArrayIteratorIterable_ = function (a) {
           this.idx_ = 0;
           this.arr_ = a;
@@ -11700,20 +11182,10 @@
         jspb.Map.prototype.getLength = function () {
           return this.stringKeys_().length;
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "getLength",
-          jspb.Map.prototype.getLength
-        );
         jspb.Map.prototype.clear = function () {
           this.map_ = {};
           this.arrClean = !1;
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "clear",
-          jspb.Map.prototype.clear
-        );
         jspb.Map.prototype.del = function (a) {
           a = a.toString();
           var b = this.map_.hasOwnProperty(a);
@@ -11721,7 +11193,6 @@
           this.arrClean = !1;
           return b;
         };
-        goog.exportProperty(jspb.Map.prototype, "del", jspb.Map.prototype.del);
         jspb.Map.prototype.getEntryList = function () {
           var a = [],
             b = this.stringKeys_();
@@ -11732,11 +11203,6 @@
           }
           return a;
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "getEntryList",
-          jspb.Map.prototype.getEntryList
-        );
         jspb.Map.prototype.entries = function () {
           var a = [],
             b = this.stringKeys_();
@@ -11747,11 +11213,6 @@
           }
           return new jspb.Map.ArrayIteratorIterable_(a);
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "entries",
-          jspb.Map.prototype.entries
-        );
         jspb.Map.prototype.keys = function () {
           var a = [],
             b = this.stringKeys_();
@@ -11759,11 +11220,6 @@
           for (var c = 0; c < b.length; c++) a.push(this.map_[b[c]].key);
           return new jspb.Map.ArrayIteratorIterable_(a);
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "keys",
-          jspb.Map.prototype.keys
-        );
         jspb.Map.prototype.values = function () {
           var a = [],
             b = this.stringKeys_();
@@ -11772,11 +11228,6 @@
             a.push(this.wrapEntry_(this.map_[b[c]]));
           return new jspb.Map.ArrayIteratorIterable_(a);
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "values",
-          jspb.Map.prototype.values
-        );
         jspb.Map.prototype.forEach = function (a, b) {
           var c = this.stringKeys_();
           c.sort();
@@ -11785,11 +11236,6 @@
             a.call(b, this.wrapEntry_(e), e.key, this);
           }
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "forEach",
-          jspb.Map.prototype.forEach
-        );
         jspb.Map.prototype.set = function (a, b) {
           var c = new jspb.Map.Entry_(a);
           this.valueCtor_
@@ -11799,7 +11245,6 @@
           this.arrClean = !1;
           return this;
         };
-        goog.exportProperty(jspb.Map.prototype, "set", jspb.Map.prototype.set);
         jspb.Map.prototype.wrapEntry_ = function (a) {
           return this.valueCtor_
             ? (a.valueWrapper ||
@@ -11810,11 +11255,9 @@
         jspb.Map.prototype.get = function (a) {
           if ((a = this.map_[a.toString()])) return this.wrapEntry_(a);
         };
-        goog.exportProperty(jspb.Map.prototype, "get", jspb.Map.prototype.get);
         jspb.Map.prototype.has = function (a) {
           return a.toString() in this.map_;
         };
-        goog.exportProperty(jspb.Map.prototype, "has", jspb.Map.prototype.has);
         jspb.Map.prototype.serializeBinary = function (a, b, c, d, e) {
           var f = this.stringKeys_();
           f.sort();
@@ -11828,11 +11271,6 @@
             b.endSubMessage();
           }
         };
-        goog.exportProperty(
-          jspb.Map.prototype,
-          "serializeBinary",
-          jspb.Map.prototype.serializeBinary
-        );
         jspb.Map.deserializeBinary = function (a, b, c, d, e, f, g) {
           for (; b.nextField() && !b.isEndGroup(); ) {
             var h = b.getFieldNumber();
@@ -11840,20 +11278,15 @@
               ? (f = c.call(b))
               : 2 == h &&
                 (a.valueCtor_
-                  ? (jspb.asserts.assert(e),
+                  ? (goog.asserts.assert(e),
                     g || (g = new a.valueCtor_()),
                     d.call(b, g, e))
                   : (g = d.call(b)));
           }
-          jspb.asserts.assert(void 0 != f);
-          jspb.asserts.assert(void 0 != g);
+          goog.asserts.assert(void 0 != f);
+          goog.asserts.assert(void 0 != g);
           a.set(f, g);
         };
-        goog.exportProperty(
-          jspb.Map,
-          "deserializeBinary",
-          jspb.Map.deserializeBinary
-        );
         jspb.Map.prototype.stringKeys_ = function () {
           var a = this.map_,
             b = [],
@@ -11873,7 +11306,6 @@
           this.toObjectFn = d;
           this.isRepeated = e;
         };
-        goog.exportSymbol("jspb.ExtensionFieldInfo", jspb.ExtensionFieldInfo);
         jspb.ExtensionFieldBinaryInfo = function (a, b, c, d, e, f) {
           this.fieldInfo = a;
           this.binaryReaderFn = b;
@@ -11882,32 +11314,12 @@
           this.binaryMessageDeserializeFn = e;
           this.isPacked = f;
         };
-        goog.exportSymbol(
-          "jspb.ExtensionFieldBinaryInfo",
-          jspb.ExtensionFieldBinaryInfo
-        );
         jspb.ExtensionFieldInfo.prototype.isMessageType = function () {
           return !!this.ctor;
         };
-        goog.exportProperty(
-          jspb.ExtensionFieldInfo.prototype,
-          "isMessageType",
-          jspb.ExtensionFieldInfo.prototype.isMessageType
-        );
         jspb.Message = function () {};
-        goog.exportSymbol("jspb.Message", jspb.Message);
         jspb.Message.GENERATE_TO_OBJECT = !0;
-        goog.exportProperty(
-          jspb.Message,
-          "GENERATE_TO_OBJECT",
-          jspb.Message.GENERATE_TO_OBJECT
-        );
         jspb.Message.GENERATE_FROM_OBJECT = !goog.DISALLOW_TEST_ONLY_CODE;
-        goog.exportProperty(
-          jspb.Message,
-          "GENERATE_FROM_OBJECT",
-          jspb.Message.GENERATE_FROM_OBJECT
-        );
         jspb.Message.GENERATE_TO_STRING = !0;
         jspb.Message.ASSUME_LOCAL_ARRAYS = !1;
         jspb.Message.SERIALIZE_EMPTY_TRAILING_FIELDS = !0;
@@ -11915,11 +11327,6 @@
         jspb.Message.prototype.getJsPbMessageId = function () {
           return this.messageId_;
         };
-        goog.exportProperty(
-          jspb.Message.prototype,
-          "getJsPbMessageId",
-          jspb.Message.prototype.getJsPbMessageId
-        );
         jspb.Message.getIndex_ = function (a, b) {
           return b + a.arrayIndexOffset_;
         };
@@ -11952,11 +11359,6 @@
             for (b = 0; b < f.length; b++)
               jspb.Message.computeOneofCase(a, f[b]);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "initialize",
-          jspb.Message.initialize
-        );
         jspb.Message.EMPTY_LIST_SENTINEL_ =
           goog.DEBUG && Object.freeze ? Object.freeze([]) : [];
         jspb.Message.isArray_ = function (a) {
@@ -11997,11 +11399,6 @@
             d[e] = b.call(a[e], c, a[e]);
           return d;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "toObjectList",
-          jspb.Message.toObjectList
-        );
         jspb.Message.toObjectExtension = function (a, b, c, d, e) {
           for (var f in c) {
             var g = c[f],
@@ -12017,11 +11414,6 @@
             }
           }
         };
-        goog.exportProperty(
-          jspb.Message,
-          "toObjectExtension",
-          jspb.Message.toObjectExtension
-        );
         jspb.Message.serializeBinaryExtensions = function (a, b, c, d) {
           for (var e in c) {
             var f = c[e],
@@ -12047,11 +11439,6 @@
               else f.binaryWriterFn.call(b, g.fieldIndex, h);
           }
         };
-        goog.exportProperty(
-          jspb.Message,
-          "serializeBinaryExtensions",
-          jspb.Message.serializeBinaryExtensions
-        );
         jspb.Message.readBinaryExtension = function (a, b, c, d, e) {
           var f = c[b.getFieldNumber()];
           if (f) {
@@ -12071,11 +11458,6 @@
               : e.call(a, c, g);
           } else b.skipField();
         };
-        goog.exportProperty(
-          jspb.Message,
-          "readBinaryExtension",
-          jspb.Message.readBinaryExtension
-        );
         jspb.Message.getField = function (a, b) {
           if (b < a.pivot_) {
             b = jspb.Message.getIndex_(a, b);
@@ -12092,33 +11474,17 @@
                 : c
             );
         };
-        goog.exportProperty(jspb.Message, "getField", jspb.Message.getField);
         jspb.Message.getRepeatedField = function (a, b) {
           return jspb.Message.getField(a, b);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getRepeatedField",
-          jspb.Message.getRepeatedField
-        );
         jspb.Message.getOptionalFloatingPointField = function (a, b) {
           a = jspb.Message.getField(a, b);
           return null == a ? a : +a;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getOptionalFloatingPointField",
-          jspb.Message.getOptionalFloatingPointField
-        );
         jspb.Message.getBooleanField = function (a, b) {
           a = jspb.Message.getField(a, b);
           return null == a ? a : !!a;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getBooleanField",
-          jspb.Message.getBooleanField
-        );
         jspb.Message.getRepeatedFloatingPointField = function (a, b) {
           var c = jspb.Message.getRepeatedField(a, b);
           a.convertedPrimitiveFields_ || (a.convertedPrimitiveFields_ = {});
@@ -12128,11 +11494,6 @@
           }
           return c;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getRepeatedFloatingPointField",
-          jspb.Message.getRepeatedFloatingPointField
-        );
         jspb.Message.getRepeatedBooleanField = function (a, b) {
           var c = jspb.Message.getRepeatedField(a, b);
           a.convertedPrimitiveFields_ || (a.convertedPrimitiveFields_ = {});
@@ -12142,59 +11503,38 @@
           }
           return c;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getRepeatedBooleanField",
-          jspb.Message.getRepeatedBooleanField
-        );
         jspb.Message.bytesAsB64 = function (a) {
           if (null == a || "string" === typeof a) return a;
           if (jspb.Message.SUPPORTS_UINT8ARRAY_ && a instanceof Uint8Array)
             return goog.crypt.base64.encodeByteArray(a);
-          jspb.asserts.fail("Cannot coerce to b64 string: " + goog.typeOf(a));
+          goog.asserts.fail("Cannot coerce to b64 string: " + goog.typeOf(a));
           return null;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "bytesAsB64",
-          jspb.Message.bytesAsB64
-        );
         jspb.Message.bytesAsU8 = function (a) {
           if (null == a || a instanceof Uint8Array) return a;
           if ("string" === typeof a)
             return goog.crypt.base64.decodeStringToUint8Array(a);
-          jspb.asserts.fail("Cannot coerce to Uint8Array: " + goog.typeOf(a));
+          goog.asserts.fail("Cannot coerce to Uint8Array: " + goog.typeOf(a));
           return null;
         };
-        goog.exportProperty(jspb.Message, "bytesAsU8", jspb.Message.bytesAsU8);
         jspb.Message.bytesListAsB64 = function (a) {
           jspb.Message.assertConsistentTypes_(a);
           return a.length && "string" !== typeof a[0]
             ? goog.array.map(a, jspb.Message.bytesAsB64)
             : a;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "bytesListAsB64",
-          jspb.Message.bytesListAsB64
-        );
         jspb.Message.bytesListAsU8 = function (a) {
           jspb.Message.assertConsistentTypes_(a);
           return !a.length || a[0] instanceof Uint8Array
             ? a
             : goog.array.map(a, jspb.Message.bytesAsU8);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "bytesListAsU8",
-          jspb.Message.bytesListAsU8
-        );
         jspb.Message.assertConsistentTypes_ = function (a) {
           if (goog.DEBUG && a && 1 < a.length) {
             var b = goog.typeOf(a[0]);
             goog.array.forEach(a, function (a) {
               goog.typeOf(a) != b &&
-                jspb.asserts.fail(
+                goog.asserts.fail(
                   "Inconsistent type in JSPB repeated field array. Got " +
                     goog.typeOf(a) +
                     " expected " +
@@ -12207,35 +11547,15 @@
           a = jspb.Message.getField(a, b);
           return null == a ? c : a;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getFieldWithDefault",
-          jspb.Message.getFieldWithDefault
-        );
         jspb.Message.getBooleanFieldWithDefault = function (a, b, c) {
           a = jspb.Message.getBooleanField(a, b);
           return null == a ? c : a;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getBooleanFieldWithDefault",
-          jspb.Message.getBooleanFieldWithDefault
-        );
         jspb.Message.getFloatingPointFieldWithDefault = function (a, b, c) {
           a = jspb.Message.getOptionalFloatingPointField(a, b);
           return null == a ? c : a;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getFloatingPointFieldWithDefault",
-          jspb.Message.getFloatingPointFieldWithDefault
-        );
         jspb.Message.getFieldProto3 = jspb.Message.getFieldWithDefault;
-        goog.exportProperty(
-          jspb.Message,
-          "getFieldProto3",
-          jspb.Message.getFieldProto3
-        );
         jspb.Message.getMapField = function (a, b, c, d) {
           a.wrappers_ || (a.wrappers_ = {});
           if (b in a.wrappers_) return a.wrappers_[b];
@@ -12247,78 +11567,37 @@
           }
           return (a.wrappers_[b] = new jspb.Map(e, d));
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getMapField",
-          jspb.Message.getMapField
-        );
         jspb.Message.setField = function (a, b, c) {
-          jspb.asserts.assertInstanceof(a, jspb.Message);
+          goog.asserts.assertInstanceof(a, jspb.Message);
           b < a.pivot_
             ? (a.array[jspb.Message.getIndex_(a, b)] = c)
             : (jspb.Message.maybeInitEmptyExtensionObject_(a),
               (a.extensionObject_[b] = c));
           return a;
         };
-        goog.exportProperty(jspb.Message, "setField", jspb.Message.setField);
         jspb.Message.setProto3IntField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, 0);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setProto3IntField",
-          jspb.Message.setProto3IntField
-        );
         jspb.Message.setProto3FloatField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, 0);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setProto3FloatField",
-          jspb.Message.setProto3FloatField
-        );
         jspb.Message.setProto3BooleanField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, !1);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setProto3BooleanField",
-          jspb.Message.setProto3BooleanField
-        );
         jspb.Message.setProto3StringField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, "");
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setProto3StringField",
-          jspb.Message.setProto3StringField
-        );
         jspb.Message.setProto3BytesField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, "");
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setProto3BytesField",
-          jspb.Message.setProto3BytesField
-        );
         jspb.Message.setProto3EnumField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, 0);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setProto3EnumField",
-          jspb.Message.setProto3EnumField
-        );
         jspb.Message.setProto3StringIntField = function (a, b, c) {
           return jspb.Message.setFieldIgnoringDefault_(a, b, c, "0");
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setProto3StringIntField",
-          jspb.Message.setProto3StringIntField
-        );
         jspb.Message.setFieldIgnoringDefault_ = function (a, b, c, d) {
-          jspb.asserts.assertInstanceof(a, jspb.Message);
+          goog.asserts.assertInstanceof(a, jspb.Message);
           c !== d
             ? jspb.Message.setField(a, b, c)
             : b < a.pivot_
@@ -12328,18 +11607,13 @@
           return a;
         };
         jspb.Message.addToRepeatedField = function (a, b, c, d) {
-          jspb.asserts.assertInstanceof(a, jspb.Message);
+          goog.asserts.assertInstanceof(a, jspb.Message);
           b = jspb.Message.getRepeatedField(a, b);
           void 0 != d ? b.splice(d, 0, c) : b.push(c);
           return a;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "addToRepeatedField",
-          jspb.Message.addToRepeatedField
-        );
         jspb.Message.setOneofField = function (a, b, c, d) {
-          jspb.asserts.assertInstanceof(a, jspb.Message);
+          goog.asserts.assertInstanceof(a, jspb.Message);
           (c = jspb.Message.computeOneofCase(a, c)) &&
             c !== b &&
             void 0 !== d &&
@@ -12347,11 +11621,6 @@
             jspb.Message.setField(a, c, void 0));
           return jspb.Message.setField(a, b, d);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setOneofField",
-          jspb.Message.setOneofField
-        );
         jspb.Message.computeOneofCase = function (a, b) {
           for (var c, d, e = 0; e < b.length; e++) {
             var f = b[e],
@@ -12361,11 +11630,6 @@
           }
           return c ? (jspb.Message.setField(a, c, d), c) : 0;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "computeOneofCase",
-          jspb.Message.computeOneofCase
-        );
         jspb.Message.getWrapperField = function (a, b, c, d) {
           a.wrappers_ || (a.wrappers_ = {});
           if (!a.wrappers_[c]) {
@@ -12374,22 +11638,12 @@
           }
           return a.wrappers_[c];
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getWrapperField",
-          jspb.Message.getWrapperField
-        );
         jspb.Message.getRepeatedWrapperField = function (a, b, c) {
           jspb.Message.wrapRepeatedField_(a, b, c);
           b = a.wrappers_[c];
           b == jspb.Message.EMPTY_LIST_SENTINEL_ && (b = a.wrappers_[c] = []);
           return b;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "getRepeatedWrapperField",
-          jspb.Message.getRepeatedWrapperField
-        );
         jspb.Message.wrapRepeatedField_ = function (a, b, c) {
           a.wrappers_ || (a.wrappers_ = {});
           if (!a.wrappers_[c]) {
@@ -12403,42 +11657,27 @@
           }
         };
         jspb.Message.setWrapperField = function (a, b, c) {
-          jspb.asserts.assertInstanceof(a, jspb.Message);
+          goog.asserts.assertInstanceof(a, jspb.Message);
           a.wrappers_ || (a.wrappers_ = {});
           var d = c ? c.toArray() : c;
           a.wrappers_[b] = c;
           return jspb.Message.setField(a, b, d);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setWrapperField",
-          jspb.Message.setWrapperField
-        );
         jspb.Message.setOneofWrapperField = function (a, b, c, d) {
-          jspb.asserts.assertInstanceof(a, jspb.Message);
+          goog.asserts.assertInstanceof(a, jspb.Message);
           a.wrappers_ || (a.wrappers_ = {});
           var e = d ? d.toArray() : d;
           a.wrappers_[b] = d;
           return jspb.Message.setOneofField(a, b, c, e);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setOneofWrapperField",
-          jspb.Message.setOneofWrapperField
-        );
         jspb.Message.setRepeatedWrapperField = function (a, b, c) {
-          jspb.asserts.assertInstanceof(a, jspb.Message);
+          goog.asserts.assertInstanceof(a, jspb.Message);
           a.wrappers_ || (a.wrappers_ = {});
           c = c || [];
           for (var d = [], e = 0; e < c.length; e++) d[e] = c[e].toArray();
           a.wrappers_[b] = c;
           return jspb.Message.setField(a, b, d);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "setRepeatedWrapperField",
-          jspb.Message.setRepeatedWrapperField
-        );
         jspb.Message.addToRepeatedWrapperField = function (a, b, c, d, e) {
           jspb.Message.wrapRepeatedField_(a, d, b);
           var f = a.wrappers_[b];
@@ -12450,17 +11689,11 @@
             : (f.push(c), a.push(c.toArray()));
           return c;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "addToRepeatedWrapperField",
-          jspb.Message.addToRepeatedWrapperField
-        );
         jspb.Message.toMap = function (a, b, c, d) {
           for (var e = {}, f = 0; f < a.length; f++)
             e[b.call(a[f])] = c ? c.call(a[f], d, a[f]) : a[f];
           return e;
         };
-        goog.exportProperty(jspb.Message, "toMap", jspb.Message.toMap);
         jspb.Message.prototype.syncMapFields_ = function () {
           if (this.wrappers_)
             for (var a in this.wrappers_) {
@@ -12474,11 +11707,6 @@
           this.syncMapFields_();
           return this.array;
         };
-        goog.exportProperty(
-          jspb.Message.prototype,
-          "toArray",
-          jspb.Message.prototype.toArray
-        );
         jspb.Message.GENERATE_TO_STRING &&
           (jspb.Message.prototype.toString = function () {
             this.syncMapFields_();
@@ -12510,11 +11738,6 @@
             return this.extensionObject_[b];
           }
         };
-        goog.exportProperty(
-          jspb.Message.prototype,
-          "getExtension",
-          jspb.Message.prototype.getExtension
-        );
         jspb.Message.prototype.setExtension = function (a, b) {
           this.wrappers_ || (this.wrappers_ = {});
           jspb.Message.maybeInitEmptyExtensionObject_(this);
@@ -12533,11 +11756,6 @@
             : (this.extensionObject_[c] = b);
           return this;
         };
-        goog.exportProperty(
-          jspb.Message.prototype,
-          "setExtension",
-          jspb.Message.prototype.setExtension
-        );
         jspb.Message.difference = function (a, b) {
           if (!(a instanceof b.constructor))
             throw Error("Messages have different types.");
@@ -12551,11 +11769,6 @@
             jspb.Message.compareFields(c[e], b[e]) || (d[e] = b[e]);
           return new a.constructor(d);
         };
-        goog.exportProperty(
-          jspb.Message,
-          "difference",
-          jspb.Message.difference
-        );
         jspb.Message.equals = function (a, b) {
           return (
             a == b ||
@@ -12564,7 +11777,6 @@
               jspb.Message.compareFields(a.toArray(), b.toArray()))
           );
         };
-        goog.exportProperty(jspb.Message, "equals", jspb.Message.equals);
         jspb.Message.compareExtensions = function (a, b) {
           a = a || {};
           b = b || {};
@@ -12575,11 +11787,6 @@
           for (d in c) if (!jspb.Message.compareFields(a[d], b[d])) return !1;
           return !0;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "compareExtensions",
-          jspb.Message.compareExtensions
-        );
         jspb.Message.compareFields = function (a, b) {
           if (a == b) return !0;
           if (!goog.isObject(a) || !goog.isObject(b))
@@ -12605,14 +11812,14 @@
                 h = b[c];
               g &&
                 g.constructor == Object &&
-                (jspb.asserts.assert(void 0 === d),
-                jspb.asserts.assert(c === a.length - 1),
+                (goog.asserts.assert(void 0 === d),
+                goog.asserts.assert(c === a.length - 1),
                 (d = g),
                 (g = void 0));
               h &&
                 h.constructor == Object &&
-                (jspb.asserts.assert(void 0 === e),
-                jspb.asserts.assert(c === b.length - 1),
+                (goog.asserts.assert(void 0 === e),
+                goog.asserts.assert(c === b.length - 1),
                 (e = h),
                 (h = void 0));
               if (!jspb.Message.compareFields(g, h)) return !1;
@@ -12627,38 +11834,22 @@
             return jspb.Message.compareExtensions(a, b);
           throw Error("Invalid type in JSPB array");
         };
-        goog.exportProperty(
-          jspb.Message,
-          "compareFields",
-          jspb.Message.compareFields
-        );
         jspb.Message.prototype.cloneMessage = function () {
           return jspb.Message.cloneMessage(this);
         };
-        goog.exportProperty(
-          jspb.Message.prototype,
-          "cloneMessage",
-          jspb.Message.prototype.cloneMessage
-        );
         jspb.Message.prototype.clone = function () {
           return jspb.Message.cloneMessage(this);
         };
-        goog.exportProperty(
-          jspb.Message.prototype,
-          "clone",
-          jspb.Message.prototype.clone
-        );
         jspb.Message.clone = function (a) {
           return jspb.Message.cloneMessage(a);
         };
-        goog.exportProperty(jspb.Message, "clone", jspb.Message.clone);
         jspb.Message.cloneMessage = function (a) {
           return new a.constructor(jspb.Message.clone_(a.toArray()));
         };
         jspb.Message.copyInto = function (a, b) {
-          jspb.asserts.assertInstanceof(a, jspb.Message);
-          jspb.asserts.assertInstanceof(b, jspb.Message);
-          jspb.asserts.assert(
+          goog.asserts.assertInstanceof(a, jspb.Message);
+          goog.asserts.assertInstanceof(b, jspb.Message);
+          goog.asserts.assert(
             a.constructor == b.constructor,
             "Copy source and target message should have the same type."
           );
@@ -12672,7 +11863,6 @@
           b.wrappers_ = a.wrappers_;
           b.extensionObject_ = a.extensionObject_;
         };
-        goog.exportProperty(jspb.Message, "copyInto", jspb.Message.copyInto);
         jspb.Message.clone_ = function (a) {
           if (Array.isArray(a)) {
             for (var b = Array(a.length), c = 0; c < a.length; c++) {
@@ -12680,7 +11870,7 @@
               null != d &&
                 (b[c] =
                   "object" == typeof d
-                    ? jspb.Message.clone_(jspb.asserts.assert(d))
+                    ? jspb.Message.clone_(goog.asserts.assert(d))
                     : d);
             }
             return b;
@@ -12693,18 +11883,13 @@
               null != d &&
                 (b[c] =
                   "object" == typeof d
-                    ? jspb.Message.clone_(jspb.asserts.assert(d))
+                    ? jspb.Message.clone_(goog.asserts.assert(d))
                     : d);
           return b;
         };
         jspb.Message.registerMessageType = function (a, b) {
           b.messageId = a;
         };
-        goog.exportProperty(
-          jspb.Message,
-          "registerMessageType",
-          jspb.Message.registerMessageType
-        );
         jspb.Message.messageSetExtensions = {};
         jspb.Message.messageSetExtensionsBinary = {};
         jspb.Export = {};
@@ -64270,6 +63455,8 @@ object-assign
           /* harmony export */ EAccountType: () => /* binding */ EAccountType,
           /* harmony export */ EActivateGameOverlayToWebPageMode: () =>
             /* binding */ EActivateGameOverlayToWebPageMode,
+          /* harmony export */ EAppReleaseState: () =>
+            /* binding */ EAppReleaseState,
           /* harmony export */ EAppUpdateContentType: () =>
             /* binding */ EAppUpdateContentType,
           /* harmony export */ EAppUpdateError: () =>
@@ -64302,6 +63489,8 @@ object-assign
             /* binding */ EFriendRelationship,
           /* harmony export */ EGamingDeviceType: () =>
             /* binding */ EGamingDeviceType,
+          /* harmony export */ EInstallManagerState: () =>
+            /* binding */ EInstallManagerState,
           /* harmony export */ ELanguage: () => /* binding */ ELanguage,
           /* harmony export */ ELanguagePchLanguage: () =>
             /* binding */ ELanguagePchLanguage,
@@ -66847,6 +66036,81 @@ object-assign
             (ENotificationPosition["k_EPositionBottomRight"] = 3)
           ] = "k_EPositionBottomRight";
         })(ENotificationPosition || (ENotificationPosition = {}));
+        var EAppReleaseState;
+        (function (EAppReleaseState) {
+          EAppReleaseState[
+            (EAppReleaseState["k_EAppReleaseState_Unknown"] = 0)
+          ] = "k_EAppReleaseState_Unknown";
+          EAppReleaseState[
+            (EAppReleaseState["k_EAppReleaseState_Unavailable"] = 1)
+          ] = "k_EAppReleaseState_Unavailable";
+          EAppReleaseState[
+            (EAppReleaseState["k_EAppReleaseState_Prerelease"] = 2)
+          ] = "k_EAppReleaseState_Prerelease";
+          EAppReleaseState[
+            (EAppReleaseState["k_EAppReleaseState_PreloadOnly"] = 3)
+          ] = "k_EAppReleaseState_PreloadOnly";
+          EAppReleaseState[
+            (EAppReleaseState["k_EAppReleaseState_Released"] = 4)
+          ] = "k_EAppReleaseState_Released";
+          EAppReleaseState[
+            (EAppReleaseState["k_EAppReleaseState_Disabled"] = 5)
+          ] = "k_EAppReleaseState_Disabled";
+        })(EAppReleaseState || (EAppReleaseState = {}));
+        var EInstallManagerState;
+        (function (EInstallManagerState) {
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateNone"] = 0)
+          ] = "k_EInstallMgrStateNone";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateSetup"] = 1)
+          ] = "k_EInstallMgrStateSetup";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateWaitLicense"] = 2)
+          ] = "k_EInstallMgrStateWaitLicense";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateFreeLicense"] = 3)
+          ] = "k_EInstallMgrStateFreeLicense";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateShowCDKey"] = 4)
+          ] = "k_EInstallMgrStateShowCDKey";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateWaitAppInfo"] = 5)
+          ] = "k_EInstallMgrStateWaitAppInfo";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateShowPassword"] = 6)
+          ] = "k_EInstallMgrStateShowPassword";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateShowConfig"] = 7)
+          ] = "k_EInstallMgrStateShowConfig";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateShowEULAs"] = 8)
+          ] = "k_EInstallMgrStateShowEULAs";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateCreateApps"] = 9)
+          ] = "k_EInstallMgrStateCreateApps";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateReadFromMedia"] = 10)
+          ] = "k_EInstallMgrStateReadFromMedia";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateShowChangeMedia"] = 11)
+          ] = "k_EInstallMgrStateShowChangeMedia";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateWaitLegacyCDKeys"] = 12)
+          ] = "k_EInstallMgrStateWaitLegacyCDKeys";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateShowSignup"] = 13)
+          ] = "k_EInstallMgrStateShowSignup";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateComplete"] = 14)
+          ] = "k_EInstallMgrStateComplete";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateFailed"] = 15)
+          ] = "k_EInstallMgrStateFailed";
+          EInstallManagerState[
+            (EInstallManagerState["k_EInstallMgrStateCanceled"] = 16)
+          ] = "k_EInstallMgrStateCanceled";
+        })(EInstallManagerState || (EInstallManagerState = {}));
 
         /***/
       },
@@ -67303,6 +66567,8 @@ object-assign
           /* harmony export */ EBrowserType: () => /* binding */ EBrowserType,
           /* harmony export */ EClientBetaState: () =>
             /* binding */ EClientBetaState,
+          /* harmony export */ EJoinServerError: () =>
+            /* binding */ EJoinServerError,
           /* harmony export */ ESteamUIWindowType: () =>
             /* binding */ ESteamUIWindowType,
           /* harmony export */ ESystemUISystemKey: () =>
@@ -67370,8 +66636,11 @@ object-assign
           EBrowserType[
             (EBrowserType["EBrowserType_Offscreen_FriendsUI"] = 11)
           ] = "EBrowserType_Offscreen_FriendsUI";
-          EBrowserType[(EBrowserType["EBrowserType_MAX"] = 12)] =
-            "EBrowserType_MAX";
+          EBrowserType[(EBrowserType["EBrowserType_Offscreen_SteamUI"] = 12)] =
+            "EBrowserType_Offscreen_SteamUI";
+          EBrowserType[
+            (EBrowserType["EBrowserType_OpenVROverlay_Subview"] = 13)
+          ] = "EBrowserType_OpenVROverlay_Subview";
         })(EBrowserType || (EBrowserType = {}));
         function BOpenVROverlayBrowser(eType) {
           return (
@@ -67610,8 +66879,30 @@ object-assign
             "DesktopLogin";
           ESteamUIWindowType[(ESteamUIWindowType["OverlayDesktopUI"] = 8)] =
             "OverlayDesktopUI";
+          ESteamUIWindowType[(ESteamUIWindowType["SmallModeDesktopUI"] = 9)] =
+            "SmallModeDesktopUI";
         })(ESteamUIWindowType || (ESteamUIWindowType = {}));
         class SteamUIBrowserWindow_t {}
+        var EJoinServerError;
+        (function (EJoinServerError) {
+          EJoinServerError[(EJoinServerError["k_EJoinServerError_None"] = 0)] =
+            "k_EJoinServerError_None";
+          EJoinServerError[
+            (EJoinServerError["k_EJoinServerError_VACBanned"] = 1)
+          ] = "k_EJoinServerError_VACBanned";
+          EJoinServerError[
+            (EJoinServerError["k_EJoinServerError_ServerFull"] = 2)
+          ] = "k_EJoinServerError_ServerFull";
+          EJoinServerError[
+            (EJoinServerError["k_EJoinServerError_ModNotInstalled"] = 3)
+          ] = "k_EJoinServerError_ModNotInstalled";
+          EJoinServerError[
+            (EJoinServerError["k_EJoinServerError_AppNotFound"] = 4)
+          ] = "k_EJoinServerError_AppNotFound";
+          EJoinServerError[
+            (EJoinServerError["k_EJoinServerError_NotInitialized"] = 5)
+          ] = "k_EJoinServerError_NotInitialized";
+        })(EJoinServerError || (EJoinServerError = {}));
 
         /***/
       },
@@ -67820,7 +67111,10 @@ object-assign
             (EControllerType["k_eControllerType_XInputPS4Controller"] = 47)
           ] = "k_eControllerType_XInputPS4Controller";
           EControllerType[
-            (EControllerType["k_eControllerType_LastController"] = 48)
+            (EControllerType["k_eControllerType_PS5EdgeController"] = 48)
+          ] = "k_eControllerType_PS5EdgeController";
+          EControllerType[
+            (EControllerType["k_eControllerType_LastController"] = 49)
           ] = "k_eControllerType_LastController";
           // Keyboards and Mice
           EControllerType[
@@ -68575,6 +67869,8 @@ object-assign
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ AccountSettings: () =>
+            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.AccountSettings,
           /* harmony export */ AchievementNotification: () =>
             /* reexport safe */ _notificationtypes__WEBPACK_IMPORTED_MODULE_16__.AchievementNotification,
           /* harmony export */ AppDetails: () =>
@@ -68601,6 +67897,8 @@ object-assign
             /* reexport safe */ _audiotypes__WEBPACK_IMPORTED_MODULE_2__.AudioDevice,
           /* harmony export */ AudioDevices: () =>
             /* reexport safe */ _audiotypes__WEBPACK_IMPORTED_MODULE_2__.AudioDevices,
+          /* harmony export */ AudioPlayback_Status: () =>
+            /* reexport safe */ _musictypes__WEBPACK_IMPORTED_MODULE_14__.AudioPlayback_Status,
           /* harmony export */ BDoesSaleItemTypeHaveParent: () =>
             /* reexport safe */ _storetypes__WEBPACK_IMPORTED_MODULE_20__.BDoesSaleItemTypeHaveParent,
           /* harmony export */ BIsChinaLauncher: () =>
@@ -68667,6 +67965,8 @@ object-assign
             /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.EAppAutoUpdateBehavior,
           /* harmony export */ EAppOwnershipFlags: () =>
             /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.EAppOwnershipFlags,
+          /* harmony export */ EAppReleaseState: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EAppReleaseState,
           /* harmony export */ EAppUpdateContentType: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EAppUpdateContentType,
           /* harmony export */ EAppUpdateError: () =>
@@ -68703,6 +68003,8 @@ object-assign
             /* reexport safe */ _notificationtypes__WEBPACK_IMPORTED_MODULE_16__.EClientUINotificationType,
           /* harmony export */ EClientUsedInputType: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.EClientUsedInputType,
+          /* harmony export */ EClientVRError: () =>
+            /* reexport safe */ _vrtypes__WEBPACK_IMPORTED_MODULE_22__.EClientVRError,
           /* harmony export */ ECommunityPrivacyState: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ECommunityPrivacyState,
           /* harmony export */ ECommunityProfileItemProperty: () =>
@@ -68741,6 +68043,8 @@ object-assign
             /* reexport safe */ _controllertypes__WEBPACK_IMPORTED_MODULE_9__.EControllerType,
           /* harmony export */ EControllerVirtualMenuType: () =>
             /* reexport safe */ _controllertypes__WEBPACK_IMPORTED_MODULE_9__.EControllerVirtualMenuType,
+          /* harmony export */ EDisplayCorner: () =>
+            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.EDisplayCorner,
           /* harmony export */ EEconTradeResponse: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EEconTradeResponse,
           /* harmony export */ EFileIteratorType: () =>
@@ -68755,6 +68059,10 @@ object-assign
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.EGraphicsPerfOverlayState,
           /* harmony export */ EHTTPProxyMode: () =>
             /* reexport safe */ _networktypes__WEBPACK_IMPORTED_MODULE_15__.EHTTPProxyMode,
+          /* harmony export */ EInstallManagerState: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EInstallManagerState,
+          /* harmony export */ EJoinServerError: () =>
+            /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.EJoinServerError,
           /* harmony export */ ELanguage: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ELanguage,
           /* harmony export */ ELanguagePchLanguage: () =>
@@ -68793,8 +68101,6 @@ object-assign
             /* reexport safe */ _parentaltypes__WEBPACK_IMPORTED_MODULE_17__.EParentalFeature,
           /* harmony export */ EPeerContentServerMode: () =>
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.EPeerContentServerMode,
-          /* harmony export */ EPerfDisplayCorner: () =>
-            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.EPerfDisplayCorner,
           /* harmony export */ EPersonaState: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EPersonaState,
           /* harmony export */ EPostGameSummaryType: () =>
@@ -68821,6 +68127,8 @@ object-assign
             /* reexport safe */ _communitytypes__WEBPACK_IMPORTED_MODULE_8__.ESocialDropTypes,
           /* harmony export */ ESteamDeviceFormFactor: () =>
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.ESteamDeviceFormFactor,
+          /* harmony export */ ESteamGuardState: () =>
+            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.ESteamGuardState,
           /* harmony export */ ESteamRealm: () =>
             /* reexport safe */ _basetypes__WEBPACK_IMPORTED_MODULE_4__.ESteamRealm,
           /* harmony export */ ESteamUIWindowType: () =>
@@ -68845,6 +68153,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EUIMode,
           /* harmony export */ EUniverse: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EUniverse,
+          /* harmony export */ EVRInitError: () =>
+            /* reexport safe */ _vrtypes__WEBPACK_IMPORTED_MODULE_22__.EVRInitError,
           /* harmony export */ EValidationPhase: () =>
             /* reexport safe */ _downloadtypes__WEBPACK_IMPORTED_MODULE_10__.EValidationPhase,
           /* harmony export */ EWirelessEndpointStrength: () =>
@@ -68903,10 +68213,6 @@ object-assign
             /* reexport safe */ _storetypes__WEBPACK_IMPORTED_MODULE_20__.MarketingMessage,
           /* harmony export */ MoveContentProgress: () =>
             /* reexport safe */ _downloadtypes__WEBPACK_IMPORTED_MODULE_10__.MoveContentProgress,
-          /* harmony export */ MusicAlbumTrack: () =>
-            /* reexport safe */ _musictypes__WEBPACK_IMPORTED_MODULE_14__.MusicAlbumTrack,
-          /* harmony export */ MusicPlaybackState: () =>
-            /* reexport safe */ _musictypes__WEBPACK_IMPORTED_MODULE_14__.MusicPlaybackState,
           /* harmony export */ NotificationCounts: () =>
             /* reexport safe */ _notificationtypes__WEBPACK_IMPORTED_MODULE_16__.NotificationCounts,
           /* harmony export */ OverlayBrowserInfo: () =>
@@ -68957,6 +68263,10 @@ object-assign
             /* reexport safe */ _downloadtypes__WEBPACK_IMPORTED_MODULE_10__.ValidateProgress,
           /* harmony export */ WorkshopItem: () =>
             /* reexport safe */ _communitytypes__WEBPACK_IMPORTED_MODULE_8__.WorkshopItem,
+          /* harmony export */ k_EParentalBlockAlways: () =>
+            /* reexport safe */ _parentaltypes__WEBPACK_IMPORTED_MODULE_17__.k_EParentalBlockAlways,
+          /* harmony export */ k_EParentalBlockNever: () =>
+            /* reexport safe */ _parentaltypes__WEBPACK_IMPORTED_MODULE_17__.k_EParentalBlockNever,
           /* harmony export */ k_GIDNil: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.k_GIDNil,
           /* harmony export */ k_RTime32Infinite: () =>
@@ -69089,6 +68399,10 @@ object-assign
           __webpack_require__(
             /*! ./systemtypes */ "../../../web_src/shared/js/clienttypes/systemtypes.ts"
           );
+        /* harmony import */ var _vrtypes__WEBPACK_IMPORTED_MODULE_22__ =
+          __webpack_require__(
+            /*! ./vrtypes */ "../../../web_src/shared/js/clienttypes/vrtypes.ts"
+          );
         // re-export to higher namespace
 
         /***/
@@ -69128,7 +68442,6 @@ object-assign
             this.bSupportPopupMessage = false;
             this.bHWSurveyPending = false;
             this.bIsLimited = false;
-            this.bCanInviteFriends = true;
             this.bIsOfflineMode = true;
             this.strClientInstanceID = "";
             this.bPromptToChangePassword = false;
@@ -69153,23 +68466,13 @@ object-assign
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ AppDetailsMusicAlbum: () =>
             /* binding */ AppDetailsMusicAlbum,
+          /* harmony export */ AudioPlayback_Status: () =>
+            /* binding */ AudioPlayback_Status,
           /* harmony export */ EMusicPlayingRepeatStatus: () =>
             /* binding */ EMusicPlayingRepeatStatus,
-          /* harmony export */ MusicAlbumTrack: () =>
-            /* binding */ MusicAlbumTrack,
-          /* harmony export */ MusicPlaybackState: () =>
-            /* binding */ MusicPlaybackState,
           /* harmony export */
         });
         class AppDetailsMusicAlbum {}
-        class MusicAlbumTrack {
-          constructor() {
-            this.strTrackName = "";
-            this.strArtistName = "";
-            this.nDurationInMsec = 0;
-            this.nTrackNumber = -1;
-          }
-        }
         var EMusicPlayingRepeatStatus;
         (function (EMusicPlayingRepeatStatus) {
           EMusicPlayingRepeatStatus[
@@ -69185,18 +68488,21 @@ object-assign
             (EMusicPlayingRepeatStatus["PlayingRepeat_Max"] = 3)
           ] = "PlayingRepeat_Max";
         })(EMusicPlayingRepeatStatus || (EMusicPlayingRepeatStatus = {}));
-        class MusicPlaybackState {
-          constructor() {
-            this.bPlaying = false;
-            this.bPaused = false;
-            this.nRepeatStatus = EMusicPlayingRepeatStatus.PlayingRepeat_None;
-            this.bShuffle = false;
-            this.nVolume = 0; // [0..100] for now
-            this.nAlbumID = 0;
-            this.nPlaybackPosInMsec = 0; // within the active track
-            this.nActiveTrack = 0;
-          }
-        }
+        var AudioPlayback_Status;
+        (function (AudioPlayback_Status) {
+          AudioPlayback_Status[
+            (AudioPlayback_Status["AudioPlayback_Undefined"] = 0)
+          ] = "AudioPlayback_Undefined";
+          AudioPlayback_Status[
+            (AudioPlayback_Status["AudioPlayback_Playing"] = 1)
+          ] = "AudioPlayback_Playing";
+          AudioPlayback_Status[
+            (AudioPlayback_Status["AudioPlayback_Paused"] = 2)
+          ] = "AudioPlayback_Paused";
+          AudioPlayback_Status[
+            (AudioPlayback_Status["AudioPlayback_Idle"] = 3)
+          ] = "AudioPlayback_Idle";
+        })(AudioPlayback_Status || (AudioPlayback_Status = {}));
 
         /***/
       },
@@ -69362,6 +68668,7 @@ object-assign
             this.async_game_updates = 0;
             this.moderator_messages = 0;
             this.help_request_replies = 0;
+            this.general = 0;
           }
         }
         class AppLifetimeNotification {}
@@ -69403,6 +68710,10 @@ object-assign
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ EParentalFeature: () =>
             /* binding */ EParentalFeature,
+          /* harmony export */ k_EParentalBlockAlways: () =>
+            /* binding */ k_EParentalBlockAlways,
+          /* harmony export */ k_EParentalBlockNever: () =>
+            /* binding */ k_EParentalBlockNever,
           /* harmony export */
         });
         var EParentalFeature;
@@ -69440,6 +68751,8 @@ object-assign
           EParentalFeature[(EParentalFeature["k_EFeatureMax"] = 15)] =
             "k_EFeatureMax";
         })(EParentalFeature || (EParentalFeature = {}));
+        const k_EParentalBlockAlways = true;
+        const k_EParentalBlockNever = false;
 
         /***/
       },
@@ -69490,22 +68803,26 @@ object-assign
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ AccountSettings: () =>
+            /* binding */ AccountSettings,
           /* harmony export */ DefaultFriendsSettings: () =>
             /* binding */ DefaultFriendsSettings,
           /* harmony export */ EBrowserComposerMode: () =>
             /* binding */ EBrowserComposerMode,
           /* harmony export */ EChatFlashMode: () =>
             /* binding */ EChatFlashMode,
+          /* harmony export */ EDisplayCorner: () =>
+            /* binding */ EDisplayCorner,
           /* harmony export */ EGraphicsPerfOverlayState: () =>
             /* binding */ EGraphicsPerfOverlayState,
           /* harmony export */ ELibraryDisplaySize: () =>
             /* binding */ ELibraryDisplaySize,
           /* harmony export */ EPeerContentServerMode: () =>
             /* binding */ EPeerContentServerMode,
-          /* harmony export */ EPerfDisplayCorner: () =>
-            /* binding */ EPerfDisplayCorner,
           /* harmony export */ ESteamDeviceFormFactor: () =>
             /* binding */ ESteamDeviceFormFactor,
+          /* harmony export */ ESteamGuardState: () =>
+            /* binding */ ESteamGuardState,
           /* harmony export */ FamilySettings: () =>
             /* binding */ FamilySettings,
           /* harmony export */ FamilySharingUser: () =>
@@ -69612,6 +68929,32 @@ object-assign
             this.InGameOverlayShortcutKey = new SettingsKeyBinding();
           }
         }
+        var ESteamGuardState;
+        (function (ESteamGuardState) {
+          ESteamGuardState[(ESteamGuardState["k_ESteamGuardOffline"] = 0)] =
+            "k_ESteamGuardOffline";
+          ESteamGuardState[
+            (ESteamGuardState["k_ESteamGuardEmailUnverified"] = 1)
+          ] = "k_ESteamGuardEmailUnverified";
+          ESteamGuardState[(ESteamGuardState["k_ESteamGuardDisabled"] = 2)] =
+            "k_ESteamGuardDisabled";
+          ESteamGuardState[(ESteamGuardState["k_ESteamGuardEnabled"] = 3)] =
+            "k_ESteamGuardEnabled";
+          ESteamGuardState[(ESteamGuardState["k_ESteamGuardNotEnabled"] = 4)] =
+            "k_ESteamGuardNotEnabled";
+          ESteamGuardState[(ESteamGuardState["k_ESteamGuardInvalid"] = -1)] =
+            "k_ESteamGuardInvalid";
+        })(ESteamGuardState || (ESteamGuardState = {}));
+        class AccountSettings {
+          constructor() {
+            this.strEmail = "";
+            this.bEmailValidated = false;
+            this.bHasAnyVACBans = false;
+            this.bHasTwoFactor = false;
+            this.eSteamGuardState = ESteamGuardState.k_ESteamGuardInvalid;
+            this.rtSteamGuardEnableTime = 0;
+          }
+        }
         class FamilySettings {}
         var ESteamDeviceFormFactor;
         (function (ESteamDeviceFormFactor) {
@@ -69659,18 +69002,15 @@ object-assign
             featuresEnabled: {},
           };
         }
-        var EPerfDisplayCorner;
-        (function (EPerfDisplayCorner) {
-          EPerfDisplayCorner[(EPerfDisplayCorner["k_None"] = 0)] = "k_None";
-          EPerfDisplayCorner[(EPerfDisplayCorner["k_TopLeft"] = 1)] =
-            "k_TopLeft";
-          EPerfDisplayCorner[(EPerfDisplayCorner["k_TopRight"] = 2)] =
-            "k_TopRight";
-          EPerfDisplayCorner[(EPerfDisplayCorner["k_BottomRight"] = 3)] =
+        var EDisplayCorner;
+        (function (EDisplayCorner) {
+          EDisplayCorner[(EDisplayCorner["k_None"] = 0)] = "k_None";
+          EDisplayCorner[(EDisplayCorner["k_TopLeft"] = 1)] = "k_TopLeft";
+          EDisplayCorner[(EDisplayCorner["k_TopRight"] = 2)] = "k_TopRight";
+          EDisplayCorner[(EDisplayCorner["k_BottomRight"] = 3)] =
             "k_BottomRight";
-          EPerfDisplayCorner[(EPerfDisplayCorner["k_BottomLeft"] = 4)] =
-            "k_BottomLeft";
-        })(EPerfDisplayCorner || (EPerfDisplayCorner = {}));
+          EDisplayCorner[(EDisplayCorner["k_BottomLeft"] = 4)] = "k_BottomLeft";
+        })(EDisplayCorner || (EDisplayCorner = {}));
 
         /***/
       },
@@ -69847,6 +69187,847 @@ object-assign
             (ErrorCondition["k_ErrorCondition_UnhandledMailTo"] = 6)
           ] = "k_ErrorCondition_UnhandledMailTo";
         })(ErrorCondition || (ErrorCondition = {}));
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/clienttypes/vrtypes.ts":
+      /*!*********************************************************!*\
+  !*** ../../../web_src/shared/js/clienttypes/vrtypes.ts ***!
+  \*********************************************************/
+      /***/ (
+        __unused_webpack_module,
+        __webpack_exports__,
+        __webpack_require__
+      ) => {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ EClientVRError: () =>
+            /* binding */ EClientVRError,
+          /* harmony export */ EVRInitError: () => /* binding */ EVRInitError,
+          /* harmony export */
+        });
+        var EClientVRError;
+        (function (EClientVRError) {
+          EClientVRError[(EClientVRError["k_EVRError_None"] = 0)] =
+            "k_EVRError_None";
+          EClientVRError[(EClientVRError["k_EVRError_VRSkipParam"] = 1)] =
+            "k_EVRError_VRSkipParam";
+          EClientVRError[
+            (EClientVRError["k_EVRError_ComponentNotInstalled"] = 2)
+          ] = "k_EVRError_ComponentNotInstalled";
+          EClientVRError[(EClientVRError["k_EVRError_ComponentBusy"] = 3)] =
+            "k_EVRError_ComponentBusy";
+          EClientVRError[(EClientVRError["k_EVRError_CrashProtection"] = 4)] =
+            "k_EVRError_CrashProtection";
+          EClientVRError[(EClientVRError["k_EVRError_HmdError"] = 5)] =
+            "k_EVRError_HmdError";
+        })(EClientVRError || (EClientVRError = {}));
+        var EVRInitError;
+        (function (EVRInitError) {
+          EVRInitError[(EVRInitError["VRInitError_None"] = 0)] =
+            "VRInitError_None";
+          EVRInitError[(EVRInitError["VRInitError_Unknown"] = 1)] =
+            "VRInitError_Unknown";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_InstallationNotFound"] = 100)
+          ] = "VRInitError_Init_InstallationNotFound";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_InstallationCorrupt"] = 101)
+          ] = "VRInitError_Init_InstallationCorrupt";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRClientDLLNotFound"] = 102)
+          ] = "VRInitError_Init_VRClientDLLNotFound";
+          EVRInitError[(EVRInitError["VRInitError_Init_FileNotFound"] = 103)] =
+            "VRInitError_Init_FileNotFound";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_FactoryNotFound"] = 104)
+          ] = "VRInitError_Init_FactoryNotFound";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_InterfaceNotFound"] = 105)
+          ] = "VRInitError_Init_InterfaceNotFound";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_InvalidInterface"] = 106)
+          ] = "VRInitError_Init_InvalidInterface";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_UserConfigDirectoryInvalid"] = 107)
+          ] = "VRInitError_Init_UserConfigDirectoryInvalid";
+          EVRInitError[(EVRInitError["VRInitError_Init_HmdNotFound"] = 108)] =
+            "VRInitError_Init_HmdNotFound";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_NotInitialized"] = 109)
+          ] = "VRInitError_Init_NotInitialized";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_PathRegistryNotFound"] = 110)
+          ] = "VRInitError_Init_PathRegistryNotFound";
+          EVRInitError[(EVRInitError["VRInitError_Init_NoConfigPath"] = 111)] =
+            "VRInitError_Init_NoConfigPath";
+          EVRInitError[(EVRInitError["VRInitError_Init_NoLogPath"] = 112)] =
+            "VRInitError_Init_NoLogPath";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_PathRegistryNotWritable"] = 113)
+          ] = "VRInitError_Init_PathRegistryNotWritable";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_AppInfoInitFailed"] = 114)
+          ] = "VRInitError_Init_AppInfoInitFailed";
+          EVRInitError[(EVRInitError["VRInitError_Init_Retry"] = 115)] =
+            "VRInitError_Init_Retry";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_InitCanceledByUser"] = 116)
+          ] = "VRInitError_Init_InitCanceledByUser";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_AnotherAppLaunching"] = 117)
+          ] = "VRInitError_Init_AnotherAppLaunching";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_SettingsInitFailed"] = 118)
+          ] = "VRInitError_Init_SettingsInitFailed";
+          EVRInitError[(EVRInitError["VRInitError_Init_ShuttingDown"] = 119)] =
+            "VRInitError_Init_ShuttingDown";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_TooManyObjects"] = 120)
+          ] = "VRInitError_Init_TooManyObjects";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_NoServerForBackgroundApp"] = 121)
+          ] = "VRInitError_Init_NoServerForBackgroundApp";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_NotSupportedWithCompositor"] = 122)
+          ] = "VRInitError_Init_NotSupportedWithCompositor";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_NotAvailableToUtilityApps"] = 123)
+          ] = "VRInitError_Init_NotAvailableToUtilityApps";
+          EVRInitError[(EVRInitError["VRInitError_Init_Internal"] = 124)] =
+            "VRInitError_Init_Internal";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_HmdDriverIdIsNone"] = 125)
+          ] = "VRInitError_Init_HmdDriverIdIsNone";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_HmdNotFoundPresenceFailed"] = 126)
+          ] = "VRInitError_Init_HmdNotFoundPresenceFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRMonitorNotFound"] = 127)
+          ] = "VRInitError_Init_VRMonitorNotFound";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRMonitorStartupFailed"] = 128)
+          ] = "VRInitError_Init_VRMonitorStartupFailed";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Init_LowPowerWatchdogNotSupported"
+            ] = 129)
+          ] = "VRInitError_Init_LowPowerWatchdogNotSupported";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_InvalidApplicationType"] = 130)
+          ] = "VRInitError_Init_InvalidApplicationType";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_NotAvailableToWatchdogApps"] = 131)
+          ] = "VRInitError_Init_NotAvailableToWatchdogApps";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_WatchdogDisabledInSettings"] = 132)
+          ] = "VRInitError_Init_WatchdogDisabledInSettings";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardNotFound"] = 133)
+          ] = "VRInitError_Init_VRDashboardNotFound";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardStartupFailed"] = 134)
+          ] = "VRInitError_Init_VRDashboardStartupFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRHomeNotFound"] = 135)
+          ] = "VRInitError_Init_VRHomeNotFound";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRHomeStartupFailed"] = 136)
+          ] = "VRInitError_Init_VRHomeStartupFailed";
+          EVRInitError[(EVRInitError["VRInitError_Init_RebootingBusy"] = 137)] =
+            "VRInitError_Init_RebootingBusy";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_FirmwareUpdateBusy"] = 138)
+          ] = "VRInitError_Init_FirmwareUpdateBusy";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_FirmwareRecoveryBusy"] = 139)
+          ] = "VRInitError_Init_FirmwareRecoveryBusy";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_USBServiceBusy"] = 140)
+          ] = "VRInitError_Init_USBServiceBusy";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRWebHelperStartupFailed"] = 141)
+          ] = "VRInitError_Init_VRWebHelperStartupFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_TrackerManagerInitFailed"] = 142)
+          ] = "VRInitError_Init_TrackerManagerInitFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_AlreadyRunning"] = 143)
+          ] = "VRInitError_Init_AlreadyRunning";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_FailedForVrMonitor"] = 144)
+          ] = "VRInitError_Init_FailedForVrMonitor";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_PropertyManagerInitFailed"] = 145)
+          ] = "VRInitError_Init_PropertyManagerInitFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_WebServerFailed"] = 146)
+          ] = "VRInitError_Init_WebServerFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_IllegalTypeTransition"] = 147)
+          ] = "VRInitError_Init_IllegalTypeTransition";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_MismatchedRuntimes"] = 148)
+          ] = "VRInitError_Init_MismatchedRuntimes";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_InvalidProcessId"] = 149)
+          ] = "VRInitError_Init_InvalidProcessId";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRServiceStartupFailed"] = 150)
+          ] = "VRInitError_Init_VRServiceStartupFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_PrismNeedsNewDrivers"] = 151)
+          ] = "VRInitError_Init_PrismNeedsNewDrivers";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_PrismStartupTimedOut"] = 152)
+          ] = "VRInitError_Init_PrismStartupTimedOut";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_CouldNotStartPrism"] = 153)
+          ] = "VRInitError_Init_CouldNotStartPrism";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_PrismClientInitFailed"] = 154)
+          ] = "VRInitError_Init_PrismClientInitFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_PrismClientStartFailed"] = 155)
+          ] = "VRInitError_Init_PrismClientStartFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_PrismExitedUnexpectedly"] = 156)
+          ] = "VRInitError_Init_PrismExitedUnexpectedly";
+          EVRInitError[(EVRInitError["VRInitError_Init_BadLuid"] = 157)] =
+            "VRInitError_Init_BadLuid";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_NoServerForAppContainer"] = 158)
+          ] = "VRInitError_Init_NoServerForAppContainer";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_DuplicateBootstrapper"] = 159)
+          ] = "VRInitError_Init_DuplicateBootstrapper";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardServicePending"] = 160)
+          ] = "VRInitError_Init_VRDashboardServicePending";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardServiceTimeout"] = 161)
+          ] = "VRInitError_Init_VRDashboardServiceTimeout";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardServiceStopped"] = 162)
+          ] = "VRInitError_Init_VRDashboardServiceStopped";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardAlreadyStarted"] = 163)
+          ] = "VRInitError_Init_VRDashboardAlreadyStarted";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardCopyFailed"] = 164)
+          ] = "VRInitError_Init_VRDashboardCopyFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardTokenFailure"] = 165)
+          ] = "VRInitError_Init_VRDashboardTokenFailure";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Init_VRDashboardEnvironmentFailure"
+            ] = 166)
+          ] = "VRInitError_Init_VRDashboardEnvironmentFailure";
+          EVRInitError[
+            (EVRInitError["VRInitError_Init_VRDashboardPathFailure"] = 167)
+          ] = "VRInitError_Init_VRDashboardPathFailure";
+          EVRInitError[(EVRInitError["VRInitError_Driver_Failed"] = 200)] =
+            "VRInitError_Driver_Failed";
+          EVRInitError[(EVRInitError["VRInitError_Driver_Unknown"] = 201)] =
+            "VRInitError_Driver_Unknown";
+          EVRInitError[(EVRInitError["VRInitError_Driver_HmdUnknown"] = 202)] =
+            "VRInitError_Driver_HmdUnknown";
+          EVRInitError[(EVRInitError["VRInitError_Driver_NotLoaded"] = 203)] =
+            "VRInitError_Driver_NotLoaded";
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_RuntimeOutOfDate"] = 204)
+          ] = "VRInitError_Driver_RuntimeOutOfDate";
+          EVRInitError[(EVRInitError["VRInitError_Driver_HmdInUse"] = 205)] =
+            "VRInitError_Driver_HmdInUse";
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_NotCalibrated"] = 206)
+          ] = "VRInitError_Driver_NotCalibrated";
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_CalibrationInvalid"] = 207)
+          ] = "VRInitError_Driver_CalibrationInvalid";
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_HmdDisplayNotFound"] = 208)
+          ] = "VRInitError_Driver_HmdDisplayNotFound";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Driver_TrackedDeviceInterfaceUnknown"
+            ] = 209)
+          ] = "VRInitError_Driver_TrackedDeviceInterfaceUnknown";
+          // VRInitError_Driver_HmdDisplayNotFoundAfterFix = 210, // not needed: here for historic reasons
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_HmdDriverIdOutOfBounds"] = 211)
+          ] = "VRInitError_Driver_HmdDriverIdOutOfBounds";
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_HmdDisplayMirrored"] = 212)
+          ] = "VRInitError_Driver_HmdDisplayMirrored";
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_HmdDisplayNotFoundLaptop"] = 213)
+          ] = "VRInitError_Driver_HmdDisplayNotFoundLaptop";
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_PeerDriverNotInstalled"] = 214)
+          ] = "VRInitError_Driver_PeerDriverNotInstalled";
+          EVRInitError[
+            (EVRInitError["VRInitError_Driver_WirelessHmdNotConnected"] = 215)
+          ] = "VRInitError_Driver_WirelessHmdNotConnected";
+          // Never make error 259 because we return it from main and it would conflict with STILL_ACTIVE
+          EVRInitError[
+            (EVRInitError["VRInitError_IPC_ServerInitFailed"] = 300)
+          ] = "VRInitError_IPC_ServerInitFailed";
+          EVRInitError[(EVRInitError["VRInitError_IPC_ConnectFailed"] = 301)] =
+            "VRInitError_IPC_ConnectFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_IPC_SharedStateInitFailed"] = 302)
+          ] = "VRInitError_IPC_SharedStateInitFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_IPC_CompositorInitFailed"] = 303)
+          ] = "VRInitError_IPC_CompositorInitFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_IPC_MutexInitFailed"] = 304)
+          ] = "VRInitError_IPC_MutexInitFailed";
+          EVRInitError[(EVRInitError["VRInitError_IPC_Failed"] = 305)] =
+            "VRInitError_IPC_Failed";
+          EVRInitError[
+            (EVRInitError["VRInitError_IPC_CompositorConnectFailed"] = 306)
+          ] = "VRInitError_IPC_CompositorConnectFailed";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_IPC_CompositorInvalidConnectResponse"
+            ] = 307)
+          ] = "VRInitError_IPC_CompositorInvalidConnectResponse";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_IPC_ConnectFailedAfterMultipleAttempts"
+            ] = 308)
+          ] = "VRInitError_IPC_ConnectFailedAfterMultipleAttempts";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_IPC_ConnectFailedAfterTargetExited"
+            ] = 309)
+          ] = "VRInitError_IPC_ConnectFailedAfterTargetExited";
+          EVRInitError[
+            (EVRInitError["VRInitError_IPC_NamespaceUnavailable"] = 310)
+          ] = "VRInitError_IPC_NamespaceUnavailable";
+          EVRInitError[(EVRInitError["VRInitError_Compositor_Failed"] = 400)] =
+            "VRInitError_Compositor_Failed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_D3D11HardwareRequired"] = 401)
+          ] = "VRInitError_Compositor_D3D11HardwareRequired";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FirmwareRequiresUpdate"
+            ] = 402)
+          ] = "VRInitError_Compositor_FirmwareRequiresUpdate";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_OverlayInitFailed"] = 403)
+          ] = "VRInitError_Compositor_OverlayInitFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_ScreenshotsInitFailed"] = 404)
+          ] = "VRInitError_Compositor_ScreenshotsInitFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_UnableToCreateDevice"] = 405)
+          ] = "VRInitError_Compositor_UnableToCreateDevice";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_SharedStateIsNull"] = 406)
+          ] = "VRInitError_Compositor_SharedStateIsNull";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_NotificationManagerIsNull"
+            ] = 407)
+          ] = "VRInitError_Compositor_NotificationManagerIsNull";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_ResourceManagerClientIsNull"
+            ] = 408)
+          ] = "VRInitError_Compositor_ResourceManagerClientIsNull";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_MessageOverlaySharedStateInitFailure"
+            ] = 409)
+          ] = "VRInitError_Compositor_MessageOverlaySharedStateInitFailure";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_PropertiesInterfaceIsNull"
+            ] = 410)
+          ] = "VRInitError_Compositor_PropertiesInterfaceIsNull";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateFullscreenWindowFailed"
+            ] = 411)
+          ] = "VRInitError_Compositor_CreateFullscreenWindowFailed";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_SettingsInterfaceIsNull"
+            ] = 412)
+          ] = "VRInitError_Compositor_SettingsInterfaceIsNull";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_FailedToShowWindow"] = 413)
+          ] = "VRInitError_Compositor_FailedToShowWindow";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_DistortInterfaceIsNull"
+            ] = 414)
+          ] = "VRInitError_Compositor_DistortInterfaceIsNull";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_DisplayFrequencyFailure"
+            ] = 415)
+          ] = "VRInitError_Compositor_DisplayFrequencyFailure";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_RendererInitializationFailed"
+            ] = 416)
+          ] = "VRInitError_Compositor_RendererInitializationFailed";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_DXGIFactoryInterfaceIsNull"
+            ] = 417)
+          ] = "VRInitError_Compositor_DXGIFactoryInterfaceIsNull";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_DXGIFactoryCreateFailed"
+            ] = 418)
+          ] = "VRInitError_Compositor_DXGIFactoryCreateFailed";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_DXGIFactoryQueryFailed"
+            ] = 419)
+          ] = "VRInitError_Compositor_DXGIFactoryQueryFailed";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_InvalidAdapterDesktop"] = 420)
+          ] = "VRInitError_Compositor_InvalidAdapterDesktop";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_InvalidHmdAttachment"] = 421)
+          ] = "VRInitError_Compositor_InvalidHmdAttachment";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_InvalidOutputDesktop"] = 422)
+          ] = "VRInitError_Compositor_InvalidOutputDesktop";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_InvalidDeviceProvided"] = 423)
+          ] = "VRInitError_Compositor_InvalidDeviceProvided";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_D3D11RendererInitializationFailed"
+            ] = 424)
+          ] = "VRInitError_Compositor_D3D11RendererInitializationFailed";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToFindDisplayMode"
+            ] = 425)
+          ] = "VRInitError_Compositor_FailedToFindDisplayMode";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToCreateSwapChain"
+            ] = 426)
+          ] = "VRInitError_Compositor_FailedToCreateSwapChain";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_FailedToGetBackBuffer"] = 427)
+          ] = "VRInitError_Compositor_FailedToGetBackBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToCreateRenderTarget"
+            ] = 428)
+          ] = "VRInitError_Compositor_FailedToCreateRenderTarget";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToCreateDXGI2SwapChain"
+            ] = 429)
+          ] = "VRInitError_Compositor_FailedToCreateDXGI2SwapChain";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedtoGetDXGI2BackBuffer"
+            ] = 430)
+          ] = "VRInitError_Compositor_FailedtoGetDXGI2BackBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToCreateDXGI2RenderTarget"
+            ] = 431)
+          ] = "VRInitError_Compositor_FailedToCreateDXGI2RenderTarget";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToGetDXGIDeviceInterface"
+            ] = 432)
+          ] = "VRInitError_Compositor_FailedToGetDXGIDeviceInterface";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_SelectDisplayMode"] = 433)
+          ] = "VRInitError_Compositor_SelectDisplayMode";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToCreateNvAPIRenderTargets"
+            ] = 434)
+          ] = "VRInitError_Compositor_FailedToCreateNvAPIRenderTargets";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_NvAPISetDisplayMode"] = 435)
+          ] = "VRInitError_Compositor_NvAPISetDisplayMode";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToCreateDirectModeDisplay"
+            ] = 436)
+          ] = "VRInitError_Compositor_FailedToCreateDirectModeDisplay";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_InvalidHmdPropertyContainer"
+            ] = 437)
+          ] = "VRInitError_Compositor_InvalidHmdPropertyContainer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_UpdateDisplayFrequency"
+            ] = 438)
+          ] = "VRInitError_Compositor_UpdateDisplayFrequency";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateRasterizerState"] = 439)
+          ] = "VRInitError_Compositor_CreateRasterizerState";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateWireframeRasterizerState"
+            ] = 440)
+          ] = "VRInitError_Compositor_CreateWireframeRasterizerState";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateSamplerState"] = 441)
+          ] = "VRInitError_Compositor_CreateSamplerState";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateClampToBorderSamplerState"
+            ] = 442)
+          ] = "VRInitError_Compositor_CreateClampToBorderSamplerState";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateAnisoSamplerState"
+            ] = 443)
+          ] = "VRInitError_Compositor_CreateAnisoSamplerState";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateOverlaySamplerState"
+            ] = 444)
+          ] = "VRInitError_Compositor_CreateOverlaySamplerState";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreatePanoramaSamplerState"
+            ] = 445)
+          ] = "VRInitError_Compositor_CreatePanoramaSamplerState";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateFontSamplerState"
+            ] = 446)
+          ] = "VRInitError_Compositor_CreateFontSamplerState";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateNoBlendState"] = 447)
+          ] = "VRInitError_Compositor_CreateNoBlendState";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateBlendState"] = 448)
+          ] = "VRInitError_Compositor_CreateBlendState";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateAlphaBlendState"] = 449)
+          ] = "VRInitError_Compositor_CreateAlphaBlendState";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateBlendStateMaskR"] = 450)
+          ] = "VRInitError_Compositor_CreateBlendStateMaskR";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateBlendStateMaskG"] = 451)
+          ] = "VRInitError_Compositor_CreateBlendStateMaskG";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateBlendStateMaskB"] = 452)
+          ] = "VRInitError_Compositor_CreateBlendStateMaskB";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateDepthStencilState"
+            ] = 453)
+          ] = "VRInitError_Compositor_CreateDepthStencilState";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateDepthStencilStateNoWrite"
+            ] = 454)
+          ] = "VRInitError_Compositor_CreateDepthStencilStateNoWrite";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateDepthStencilStateNoDepth"
+            ] = 455)
+          ] = "VRInitError_Compositor_CreateDepthStencilStateNoDepth";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateFlushTexture"] = 456)
+          ] = "VRInitError_Compositor_CreateFlushTexture";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateDistortionSurfaces"
+            ] = 457)
+          ] = "VRInitError_Compositor_CreateDistortionSurfaces";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateConstantBuffer"] = 458)
+          ] = "VRInitError_Compositor_CreateConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateHmdPoseConstantBuffer"
+            ] = 459)
+          ] = "VRInitError_Compositor_CreateHmdPoseConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateHmdPoseStagingConstantBuffer"
+            ] = 460)
+          ] = "VRInitError_Compositor_CreateHmdPoseStagingConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateSharedFrameInfoConstantBuffer"
+            ] = 461)
+          ] = "VRInitError_Compositor_CreateSharedFrameInfoConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateOverlayConstantBuffer"
+            ] = 462)
+          ] = "VRInitError_Compositor_CreateOverlayConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateSceneTextureIndexConstantBuffer"
+            ] = 463)
+          ] = "VRInitError_Compositor_CreateSceneTextureIndexConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateReadableSceneTextureIndexConstantBuffer"
+            ] = 464)
+          ] =
+            "VRInitError_Compositor_CreateReadableSceneTextureIndexConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateLayerGraphicsTextureIndexConstantBuffer"
+            ] = 465)
+          ] =
+            "VRInitError_Compositor_CreateLayerGraphicsTextureIndexConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateLayerComputeTextureIndexConstantBuffer"
+            ] = 466)
+          ] =
+            "VRInitError_Compositor_CreateLayerComputeTextureIndexConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateLayerComputeSceneTextureIndexConstantBuffer"
+            ] = 467)
+          ] =
+            "VRInitError_Compositor_CreateLayerComputeSceneTextureIndexConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateComputeHmdPoseConstantBuffer"
+            ] = 468)
+          ] = "VRInitError_Compositor_CreateComputeHmdPoseConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateGeomConstantBuffer"
+            ] = 469)
+          ] = "VRInitError_Compositor_CreateGeomConstantBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreatePanelMaskConstantBuffer"
+            ] = 470)
+          ] = "VRInitError_Compositor_CreatePanelMaskConstantBuffer";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreatePixelSimUBO"] = 471)
+          ] = "VRInitError_Compositor_CreatePixelSimUBO";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateMSAARenderTextures"
+            ] = 472)
+          ] = "VRInitError_Compositor_CreateMSAARenderTextures";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateResolveRenderTextures"
+            ] = 473)
+          ] = "VRInitError_Compositor_CreateResolveRenderTextures";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateComputeResolveRenderTextures"
+            ] = 474)
+          ] = "VRInitError_Compositor_CreateComputeResolveRenderTextures";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateDriverDirectModeResolveTextures"
+            ] = 475)
+          ] = "VRInitError_Compositor_CreateDriverDirectModeResolveTextures";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_OpenDriverDirectModeResolveTextures"
+            ] = 476)
+          ] = "VRInitError_Compositor_OpenDriverDirectModeResolveTextures";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateFallbackSyncTexture"
+            ] = 477)
+          ] = "VRInitError_Compositor_CreateFallbackSyncTexture";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_ShareFallbackSyncTexture"
+            ] = 478)
+          ] = "VRInitError_Compositor_ShareFallbackSyncTexture";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateOverlayIndexBuffer"
+            ] = 479)
+          ] = "VRInitError_Compositor_CreateOverlayIndexBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateOverlayVertexBuffer"
+            ] = 480)
+          ] = "VRInitError_Compositor_CreateOverlayVertexBuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateTextVertexBuffer"
+            ] = 481)
+          ] = "VRInitError_Compositor_CreateTextVertexBuffer";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateTextIndexBuffer"] = 482)
+          ] = "VRInitError_Compositor_CreateTextIndexBuffer";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateMirrorTextures"] = 483)
+          ] = "VRInitError_Compositor_CreateMirrorTextures";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateLastFrameRenderTexture"
+            ] = 484)
+          ] = "VRInitError_Compositor_CreateLastFrameRenderTexture";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateMirrorOverlay"] = 485)
+          ] = "VRInitError_Compositor_CreateMirrorOverlay";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_FailedToCreateVirtualDisplayBackbuffer"
+            ] = 486)
+          ] = "VRInitError_Compositor_FailedToCreateVirtualDisplayBackbuffer";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_DisplayModeNotSupported"
+            ] = 487)
+          ] = "VRInitError_Compositor_DisplayModeNotSupported";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateOverlayInvalidCall"
+            ] = 488)
+          ] = "VRInitError_Compositor_CreateOverlayInvalidCall";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateOverlayAlreadyInitialized"
+            ] = 489)
+          ] = "VRInitError_Compositor_CreateOverlayAlreadyInitialized";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_FailedToCreateMailbox"] = 490)
+          ] = "VRInitError_Compositor_FailedToCreateMailbox";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_WindowInterfaceIsNull"] = 491)
+          ] = "VRInitError_Compositor_WindowInterfaceIsNull";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_SystemLayerCreateInstance"
+            ] = 492)
+          ] = "VRInitError_Compositor_SystemLayerCreateInstance";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_SystemLayerCreateSession"
+            ] = 493)
+          ] = "VRInitError_Compositor_SystemLayerCreateSession";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_Compositor_CreateInverseDistortUVs"
+            ] = 494)
+          ] = "VRInitError_Compositor_CreateInverseDistortUVs";
+          EVRInitError[
+            (EVRInitError["VRInitError_Compositor_CreateBackbufferDepth"] = 495)
+          ] = "VRInitError_Compositor_CreateBackbufferDepth";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_UnableToConnectToOculusRuntime"
+            ] = 1000)
+          ] = "VRInitError_VendorSpecific_UnableToConnectToOculusRuntime";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_WindowsNotInDevMode"
+            ] = 1001)
+          ] = "VRInitError_VendorSpecific_WindowsNotInDevMode";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_OculusLinkNotEnabled"
+            ] = 1002)
+          ] = "VRInitError_VendorSpecific_OculusLinkNotEnabled";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_CantOpenDevice"
+            ] = 1101)
+          ] = "VRInitError_VendorSpecific_HmdFound_CantOpenDevice";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_UnableToRequestConfigStart"
+            ] = 1102)
+          ] = "VRInitError_VendorSpecific_HmdFound_UnableToRequestConfigStart";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_NoStoredConfig"
+            ] = 1103)
+          ] = "VRInitError_VendorSpecific_HmdFound_NoStoredConfig";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_ConfigTooBig"
+            ] = 1104)
+          ] = "VRInitError_VendorSpecific_HmdFound_ConfigTooBig";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_ConfigTooSmall"
+            ] = 1105)
+          ] = "VRInitError_VendorSpecific_HmdFound_ConfigTooSmall";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_UnableToInitZLib"
+            ] = 1106)
+          ] = "VRInitError_VendorSpecific_HmdFound_UnableToInitZLib";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_CantReadFirmwareVersion"
+            ] = 1107)
+          ] = "VRInitError_VendorSpecific_HmdFound_CantReadFirmwareVersion";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_UnableToSendUserDataStart"
+            ] = 1108)
+          ] = "VRInitError_VendorSpecific_HmdFound_UnableToSendUserDataStart";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataStart"
+            ] = 1109)
+          ] = "VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataStart";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataNext"
+            ] = 1110)
+          ] = "VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataNext";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_UserDataAddressRange"
+            ] = 1111)
+          ] = "VRInitError_VendorSpecific_HmdFound_UserDataAddressRange";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_UserDataError"
+            ] = 1112)
+          ] = "VRInitError_VendorSpecific_HmdFound_UserDataError";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_ConfigFailedSanityCheck"
+            ] = 1113)
+          ] = "VRInitError_VendorSpecific_HmdFound_ConfigFailedSanityCheck";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_OculusRuntimeBadInstall"
+            ] = 1114)
+          ] = "VRInitError_VendorSpecific_OculusRuntimeBadInstall";
+          EVRInitError[
+            (EVRInitError[
+              "VRInitError_VendorSpecific_HmdFound_UnexpectedConfiguration_1"
+            ] = 1115)
+          ] = "VRInitError_VendorSpecific_HmdFound_UnexpectedConfiguration_1";
+          EVRInitError[
+            (EVRInitError["VRInitError_Steam_SteamInstallationNotFound"] = 2000)
+          ] = "VRInitError_Steam_SteamInstallationNotFound";
+          // Strictly a placeholder
+          EVRInitError[(EVRInitError["VRInitError_LastError"] = 2001)] =
+            "VRInitError_LastError";
+        })(EVRInitError || (EVRInitError = {}));
 
         /***/
       },
@@ -70706,7 +70887,7 @@ object-assign
             /* binding */ useBrowserContext,
           /* harmony export */
         });
-        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_10__ =
+        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_11__ =
           __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
         /* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
@@ -70749,6 +70930,10 @@ object-assign
         /* harmony import */ var _renderwhenlinksready__WEBPACK_IMPORTED_MODULE_9__ =
           __webpack_require__(
             /*! ./renderwhenlinksready */ "../../../web_src/shared/js/domutil/renderwhenlinksready.ts"
+          );
+        /* harmony import */ var shared_steam_friendsui_friendsuiexports__WEBPACK_IMPORTED_MODULE_10__ =
+          __webpack_require__(
+            /*! shared/steam/friendsui/friendsuiexports */ "../../../web_src/shared/js/steam/friendsui/friendsuiexports.ts"
           );
 
         var EPopupCreationFlags;
@@ -70823,6 +71008,8 @@ object-assign
          */
         class CPopup {
           constructor(strName, rgParams) {
+            this.m_bCreated = false;
+            this.m_onCreateRender = null;
             this.m_bFocused = false;
             (0, shared_utils_assert__WEBPACK_IMPORTED_MODULE_8__.AssertMsg)(
               strName,
@@ -70833,9 +71020,18 @@ object-assign
             // TODO: have popup manager track ids by browser?
             if (this.m_rgParams.target_browser)
               this.m_strName += "_uid" + this.m_rgParams.target_browser.m_unPID;
+            // We actually create _all_ popups as hidden and then show them when they're done loading.
+            // If we passed in the Hidden flag at initialization time, though, we'd like to not show
+            // it until explicitly shown, so we need to write this down here.
+            this.m_bCreateHidden = !!(
+              rgParams.eCreationFlags & EPopupCreationFlags.Hidden
+            );
             // save off title, we'll manage it from here
             this.m_strTitle = rgParams.title;
             delete this.m_rgParams.title;
+          }
+          SetClosedByUser(bClosedByUser) {
+            this.m_bClosedByUser = bClosedByUser;
           }
           UpdateParamsBeforeShow(rgParams) {
             // TODO: if this modifies target_browser, the name field will be incorrect
@@ -70859,8 +71055,12 @@ object-assign
             if (event.data == "window_moved") {
               this.OnResize();
             }
+            if (event.data == "popup-created") {
+              this.OnCreateInternal();
+            }
           }
           Show(bFocus = true, bForceToForeground = false) {
+            var _a, _b;
             // all popup windows are initially created hidden then set visible when rendering is complete to prevent initial black screen flash
             if (window.SteamClient)
               this.m_rgParams.eCreationFlags |= EPopupCreationFlags.Hidden;
@@ -70945,8 +71145,15 @@ object-assign
             g_PopupManager.AddTrackedPopup(this);
             if (existingPopup) {
               if (bFocus) this.Focus();
-            } else {
-              this.OnCreate();
+            } else if (
+              !((_b =
+                (_a = SteamClient.Features) === null || _a === void 0
+                  ? void 0
+                  : _a.SteamInitsPopups) === null || _b === void 0
+                ? void 0
+                : _b.call(_a))
+            ) {
+              this.OnCreateInternal();
             }
           }
           RemoveEventListeners() {
@@ -70963,16 +71170,31 @@ object-assign
             this.window.removeEventListener("message", this.OnMessage);
           }
           RenderInternal(popup, element, bFocus) {
+            if (!this.m_bCreated) {
+              this.m_onCreateRender = () =>
+                this.RenderInternal(popup, element, bFocus);
+              return;
+            }
             if (this.browser_info && BIsVRBrowserInfo(this.browser_info)) {
               element.ownerDocument.body.className += " VR";
             }
             this.Render(popup, element);
             this.OnLoad();
-            if (popup.SteamClient) {
+            if (popup.SteamClient && !this.m_bCreateHidden) {
               if (bFocus) {
                 popup.SteamClient.Window.BringToFront();
               } else {
                 popup.SteamClient.Window.ShowWindow();
+              }
+            }
+          }
+          OnCreateInternal() {
+            if (!this.m_bCreated) {
+              this.m_bCreated = true;
+              this.OnCreate();
+              if (this.m_onCreateRender) {
+                this.m_onCreateRender();
+                this.m_onCreateRender = null;
               }
             }
           }
@@ -71098,43 +71320,55 @@ object-assign
           OnFocus() {}
           OnBlur() {}
         }
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [mobx__WEBPACK_IMPORTED_MODULE_0__.observable],
           CPopup.prototype,
           "m_bFocused",
           void 0
         );
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
           CPopup.prototype,
           "OnMessage",
           null
         );
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
+          [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
+          CPopup.prototype,
+          "RenderInternal",
+          null
+        );
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
+          [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
+          CPopup.prototype,
+          "OnCreateInternal",
+          null
+        );
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
           CPopup.prototype,
           "OnResizeEvent",
           null
         );
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
           CPopup.prototype,
           "OnBeforeUnloadEvent",
           null
         );
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
           CPopup.prototype,
           "OnUnload",
           null
         );
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
           CPopup.prototype,
           "OnFocusInternal",
           null
         );
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
           CPopup.prototype,
           "OnBlurInternal",
@@ -71240,7 +71474,7 @@ object-assign
             this.m_rgParams.strRestoreDetails = strRestoreDetails;
           }
         }
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [_utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind],
           CSavedDimensionsPopup.prototype,
           "QueryAndStoreWindowPosition",
@@ -71249,7 +71483,10 @@ object-assign
         class CPopupManager {
           constructor() {
             this.m_bShuttingDown = false;
-            this.m_mapPopups = new Map();
+            this.m_mapPopups = mobx__WEBPACK_IMPORTED_MODULE_0__.observable.map(
+              [],
+              { deep: false }
+            );
             this.m_rgShutdownCallbacks = [];
             this.m_rgPopupCreatedCallbacks = [];
             this.m_unCurrentAccountID = 0;
@@ -71264,8 +71501,10 @@ object-assign
                 // popups will remove themselves from the map as they close, put them in a separate array to avoid any wonkiness.
                 let rgPopupsToClose = [];
                 this.m_mapPopups.forEach((popup) => {
-                  if (popup.BIsValid() && !popup.BIsClosed())
+                  if (popup.BIsValid() && !popup.BIsClosed()) {
                     rgPopupsToClose.push(popup);
+                    popup.SetClosedByUser(false);
+                  }
                 });
                 for (let popup of rgPopupsToClose) {
                   if (
@@ -71317,12 +71556,22 @@ object-assign
               }
             }
           }
+          BAnyPopupHasFocus() {
+            for (const popup of this.m_mapPopups.values()) {
+              if (popup.focused) {
+                return true;
+              }
+            }
+            return false;
+          }
           SetCurrentLoggedInAccountID(accountid) {
-            this.m_unCurrentAccountID = accountid;
-            if (accountid) {
-              this.LoadSavedDimensionStore();
-            } else {
-              this.ClearSavedDimensionStore();
+            if (this.m_unCurrentAccountID != accountid) {
+              this.m_unCurrentAccountID = accountid;
+              if (accountid) {
+                this.LoadSavedDimensionStore();
+              } else {
+                this.ClearSavedDimensionStore();
+              }
             }
           }
           AddShutdownCallback(fnCallback) {
@@ -71361,6 +71610,16 @@ object-assign
             let width = dimensions.width || 300;
             let height = dimensions.height || 300;
             let title = rgParams.title;
+            if (
+              rgParams.center_on_window &&
+              typeof dimensions.left == "undefined" &&
+              typeof dimensions.top == "undefined"
+            ) {
+              // Center this on the given window
+              const win = rgParams.center_on_window;
+              dimensions.left = win.innerWidth / 2 + win.screenLeft - width / 2;
+              dimensions.top = win.innerHeight / 2 + win.screenTop - height / 2;
+            }
             let strParams = "width=" + width + ",height=" + height;
             if (typeof dimensions.left != "undefined")
               strParams += ",left=" + dimensions.left;
@@ -71554,7 +71813,7 @@ object-assign
             }
           }
         }
-        (0, tslib__WEBPACK_IMPORTED_MODULE_10__.__decorate)(
+        (0, tslib__WEBPACK_IMPORTED_MODULE_11__.__decorate)(
           [
             _utils_bind__WEBPACK_IMPORTED_MODULE_4__.bind,
             (0, shared_utils_decorators__WEBPACK_IMPORTED_MODULE_3__.debounce)(
@@ -71565,7 +71824,11 @@ object-assign
           "DebouncedSaveSavedDimensionStore",
           null
         );
-        let g_PopupManager = new CPopupManager();
+        let g_PopupManager = (0,
+        shared_steam_friendsui_friendsuiexports__WEBPACK_IMPORTED_MODULE_10__.SharedFriendsUIGlobal)(
+          "PopupManager",
+          () => new CPopupManager()
+        );
         window.g_PopupManager = g_PopupManager;
 
         /***/
@@ -71675,6 +71938,63 @@ object-assign
         /***/
       },
 
+    /***/ "../../../web_src/shared/js/steam/friendsui/friendsuiexports.ts":
+      /*!**********************************************************************!*\
+  !*** ../../../web_src/shared/js/steam/friendsui/friendsuiexports.ts ***!
+  \**********************************************************************/
+      /***/ (
+        __unused_webpack_module,
+        __webpack_exports__,
+        __webpack_require__
+      ) => {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ SharedFriendsUIGlobal: () =>
+            /* binding */ SharedFriendsUIGlobal,
+          /* harmony export */ k_nFriendsUIExportsVersion: () =>
+            /* binding */ k_nFriendsUIExportsVersion,
+          /* harmony export */
+        });
+        /* harmony import */ var shared_utils_assert__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            /*! shared/utils/assert */ "../../../web_src/shared/js/utils/assert.ts"
+          );
+        /* harmony import */ var shared_clientenums__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
+          );
+
+        /**
+         * Roll this forward if there are breaking changes to the friendsui/pal interface.  This will cause the client
+         * to display a "you need to update" message.
+         */
+        const k_nFriendsUIExportsVersion = 5;
+        /**
+         * SteamPal and FriendsUI Share certain globals across the iframe boundary.  This code will simply return the object
+         * generated by the factory in all other cases.
+         *
+         * To share a global value with FriendsUI, simply replace a declaration like this:
+         *   export const GamepadNavigationContext = React.createContext<CFocusNavNode>( null );
+         * with
+         *   export const GamepadNavigationContext = SharedFriendsUIGlobal( 'GamepadNavigationContext', () => React.createContext<CFocusNavNode>( null ) );
+         *
+         * When friendsUI runs, it will grab the value of the global from the parent window.
+         *
+         * @param name A globally unique name for the object.
+         * @param fnCreate A factory method to instantiate the object if needed
+         * @returns the object created by fnCreate, or the existing instance from the parent window as appropriate
+         */
+        function SharedFriendsUIGlobal(name, fnCreate) {
+          if (false) {
+          } else {
+            return fnCreate();
+          }
+        }
+
+        /***/
+      },
+
     /***/ "../../../web_src/shared/js/steamclient.ts":
       /*!*************************************************!*\
   !*** ../../../web_src/shared/js/steamclient.ts ***!
@@ -71691,6 +72011,10 @@ object-assign
             /* reexport safe */ _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__.BSteamClientHasInterface,
           /* harmony export */ BSteamClientHasMethod: () =>
             /* reexport safe */ _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__.BSteamClientHasMethod,
+          /* harmony export */ BWindowHasSteamClientInterface: () =>
+            /* reexport safe */ _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__.BWindowHasSteamClientInterface,
+          /* harmony export */ BWindowHasSteamClientMethod: () =>
+            /* reexport safe */ _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__.BWindowHasSteamClientMethod,
           /* harmony export */
         });
         /* harmony import */ var _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__ =
@@ -74523,7 +74847,12 @@ object-assign
             ] = 138)
           ] = "k_EControllerSettingFlickStickEdgeBindingRadius";
           EControllerSetting[
-            (EControllerSetting["k_EControllerSettingCount"] = 139)
+            (EControllerSetting[
+              "k_EControllerSettingFlickStickHapticBumpPerAngle"
+            ] = 139)
+          ] = "k_EControllerSettingFlickStickHapticBumpPerAngle";
+          EControllerSetting[
+            (EControllerSetting["k_EControllerSettingCount"] = 140)
           ] = "k_EControllerSettingCount";
         })(EControllerSetting || (EControllerSetting = {}));
         function EControllerSettingToString(eControllerSetting) {
@@ -74808,6 +75137,8 @@ object-assign
               case 138:
                 return "k_EControllerSettingFlickStickEdgeBindingRadius";
               case 139:
+                return "k_EControllerSettingFlickStickHapticBumpPerAngle";
+              case 140:
                 return "k_EControllerSettingCount";
             }
           }
@@ -74929,46 +75260,49 @@ object-assign
             (EDeviceSupportTestingStep["k_TestingBindShare"] = 27)
           ] = "k_TestingBindShare";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingBindingComplete"] = 28)
+            (EDeviceSupportTestingStep["k_TestingBindTouchpad"] = 28)
+          ] = "k_TestingBindTouchpad";
+          EDeviceSupportTestingStep[
+            (EDeviceSupportTestingStep["k_TestingBindingComplete"] = 29)
           ] = "k_TestingBindingComplete";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftTrigger"] = 29)
+            (EDeviceSupportTestingStep["k_TestingLeftTrigger"] = 30)
           ] = "k_TestingLeftTrigger";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightTrigger"] = 30)
+            (EDeviceSupportTestingStep["k_TestingRightTrigger"] = 31)
           ] = "k_TestingRightTrigger";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftTrackpad"] = 31)
+            (EDeviceSupportTestingStep["k_TestingLeftTrackpad"] = 32)
           ] = "k_TestingLeftTrackpad";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftTrackpadPressure"] = 32)
+            (EDeviceSupportTestingStep["k_TestingLeftTrackpadPressure"] = 33)
           ] = "k_TestingLeftTrackpadPressure";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightTrackpad"] = 33)
+            (EDeviceSupportTestingStep["k_TestingRightTrackpad"] = 34)
           ] = "k_TestingRightTrackpad";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightTrackpadPressure"] = 34)
+            (EDeviceSupportTestingStep["k_TestingRightTrackpadPressure"] = 35)
           ] = "k_TestingRightTrackpadPressure";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftJoystick"] = 35)
+            (EDeviceSupportTestingStep["k_TestingLeftJoystick"] = 36)
           ] = "k_TestingLeftJoystick";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightJoystick"] = 36)
+            (EDeviceSupportTestingStep["k_TestingRightJoystick"] = 37)
           ] = "k_TestingRightJoystick";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingButtons"] = 37)
+            (EDeviceSupportTestingStep["k_TestingButtons"] = 38)
           ] = "k_TestingButtons";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingLeftHaptics"] = 38)
+            (EDeviceSupportTestingStep["k_TestingLeftHaptics"] = 39)
           ] = "k_TestingLeftHaptics";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingRightHaptics"] = 39)
+            (EDeviceSupportTestingStep["k_TestingRightHaptics"] = 40)
           ] = "k_TestingRightHaptics";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingComplete"] = 40)
+            (EDeviceSupportTestingStep["k_TestingComplete"] = 41)
           ] = "k_TestingComplete";
           EDeviceSupportTestingStep[
-            (EDeviceSupportTestingStep["k_TestingAborted"] = 41)
+            (EDeviceSupportTestingStep["k_TestingAborted"] = 42)
           ] = "k_TestingAborted";
         })(EDeviceSupportTestingStep || (EDeviceSupportTestingStep = {}));
         function EDeviceSupportTestingStepToString(eDeviceSupportTestingStep) {
@@ -75031,32 +75365,34 @@ object-assign
               case 27:
                 return "k_TestingBindShare";
               case 28:
-                return "k_TestingBindingComplete";
+                return "k_TestingBindTouchpad";
               case 29:
-                return "k_TestingLeftTrigger";
+                return "k_TestingBindingComplete";
               case 30:
-                return "k_TestingRightTrigger";
+                return "k_TestingLeftTrigger";
               case 31:
-                return "k_TestingLeftTrackpad";
+                return "k_TestingRightTrigger";
               case 32:
-                return "k_TestingLeftTrackpadPressure";
+                return "k_TestingLeftTrackpad";
               case 33:
-                return "k_TestingRightTrackpad";
+                return "k_TestingLeftTrackpadPressure";
               case 34:
-                return "k_TestingRightTrackpadPressure";
+                return "k_TestingRightTrackpad";
               case 35:
-                return "k_TestingLeftJoystick";
+                return "k_TestingRightTrackpadPressure";
               case 36:
-                return "k_TestingRightJoystick";
+                return "k_TestingLeftJoystick";
               case 37:
-                return "k_TestingButtons";
+                return "k_TestingRightJoystick";
               case 38:
-                return "k_TestingLeftHaptics";
+                return "k_TestingButtons";
               case 39:
-                return "k_TestingRightHaptics";
+                return "k_TestingLeftHaptics";
               case 40:
-                return "k_TestingComplete";
+                return "k_TestingRightHaptics";
               case 41:
+                return "k_TestingComplete";
+              case 42:
                 return "k_TestingAborted";
             }
           }
@@ -75625,6 +75961,8 @@ object-assign
           /* harmony export */ ChatSettings: () => /* binding */ ChatSettings,
           /* harmony export */ ChatSticker: () => /* binding */ ChatSticker,
           /* harmony export */ Check: () => /* binding */ Check,
+          /* harmony export */ ChevronNoPadding: () =>
+            /* binding */ ChevronNoPadding,
           /* harmony export */ Clock: () => /* binding */ Clock,
           /* harmony export */ ClosedCaption: () => /* binding */ ClosedCaption,
           /* harmony export */ CloudDownload: () => /* binding */ CloudDownload,
@@ -75664,6 +76002,7 @@ object-assign
           /* harmony export */ Flag: () => /* binding */ Flag,
           /* harmony export */ Flair: () => /* binding */ Flair,
           /* harmony export */ FlatArrow: () => /* binding */ FlatArrow,
+          /* harmony export */ FriendFilled: () => /* binding */ FriendFilled,
           /* harmony export */ FriendIcon: () => /* binding */ FriendIcon,
           /* harmony export */ FriendRequest: () => /* binding */ FriendRequest,
           /* harmony export */ Globe: () => /* binding */ Globe,
@@ -75730,6 +76069,7 @@ object-assign
           /* harmony export */ PlayTime: () => /* binding */ PlayTime,
           /* harmony export */ Plus: () => /* binding */ Plus,
           /* harmony export */ PlusCircle: () => /* binding */ PlusCircle,
+          /* harmony export */ PlusFilled: () => /* binding */ PlusFilled,
           /* harmony export */ Popout: () => /* binding */ Popout,
           /* harmony export */ Profile: () => /* binding */ Profile,
           /* harmony export */ ProgressCircle: () =>
@@ -75849,6 +76189,44 @@ object-assign
             /*! shared/webui/config */ "../../../web_src/shared/js/webui/config.ts"
           );
 
+        function ChevronNoPadding(props) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 15 23",
+                fill: "none",
+              },
+              props
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              "g",
+              { clipPath: "url(#clip0_3155_4178)" },
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z",
+                }
+              )
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              "defs",
+              null,
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "clipPath",
+                { id: "clip0_3155_4178" },
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                  "rect",
+                  { fill: "currentColor", width: "15", height: "23" }
+                )
+              )
+            )
+          );
+        }
         function Hyperlink(props) {
           const { className } = props;
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -76750,6 +77128,46 @@ object-assign
               y1: "73.335",
               x2: "128.333",
               y2: "183.333",
+            })
+          );
+        }
+        function PlusFilled(props) {
+          const { className } = props;
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 12 12",
+                fill: "none",
+              },
+              props
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H11C11.5523 12 12 11.5523 12 11V1C12 0.447715 11.5523 0 11 0H1ZM8.85703 6.95227H6.95227V8.85703H5.0475V6.95227H3.14274V5.0475H5.0475V3.14274H6.95227V5.0475H8.85703V6.95227Z",
+            })
+          );
+        }
+        function FriendFilled(props) {
+          const { className } = props;
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 13 12",
+                fill: "none",
+              },
+              props
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M1.68848 0C1.13619 0 0.688477 0.447715 0.688477 1V11C0.688477 11.5523 1.13619 12 1.68848 12H11.6885C12.2408 12 12.6885 11.5523 12.6885 11V1C12.6885 0.447715 12.2408 0 11.6885 0H1.68848ZM6.68857 9.14281V7.97879C6.68857 7.48484 6.49291 7.01112 6.14462 6.66185C5.79634 6.31258 5.32397 6.11636 4.83143 6.11636C4.33888 6.11636 3.86651 6.31258 3.51823 6.66185C3.16995 7.01112 2.97428 7.48484 2.97428 7.97879V9.14281H6.68857ZM5.4118 5.24139C5.24001 5.3565 5.03804 5.41794 4.83143 5.41794C4.69416 5.41825 4.55818 5.39136 4.4313 5.33882C4.30442 5.28628 4.18914 5.20913 4.09207 5.11179C3.99501 5.01445 3.91807 4.89884 3.86568 4.77159C3.81329 4.64435 3.78648 4.50799 3.78678 4.37032C3.78678 4.16313 3.84805 3.96058 3.96284 3.7883C4.07762 3.61602 4.24078 3.48174 4.43166 3.40245C4.62254 3.32316 4.83259 3.30241 5.03523 3.34283C5.23787 3.38326 5.424 3.48303 5.5701 3.62955C5.7162 3.77606 5.81569 3.96273 5.856 4.16594C5.8963 4.36916 5.87562 4.5798 5.79655 4.77123C5.71748 4.96266 5.58359 5.12627 5.4118 5.24139ZM9.20914 5.77217C9.45326 5.86581 9.67493 6.01006 9.85964 6.19551C10.032 6.3686 10.1688 6.57406 10.262 6.80015C10.3552 7.02624 10.403 7.26853 10.4029 7.51318V8.6772H7.61714V7.97879C7.61894 7.39391 7.4361 6.82346 7.09482 6.34916C7.25797 6.14438 7.46239 5.97645 7.6947 5.85634C7.92701 5.73622 8.18199 5.66664 8.44296 5.65214C8.70393 5.63764 8.96501 5.67854 9.20914 5.77217ZM9.12608 4.77578C8.95429 4.89089 8.75232 4.95233 8.54571 4.95233C8.40844 4.95264 8.27246 4.92575 8.14558 4.87321C8.0187 4.82068 7.90342 4.74352 7.80636 4.64618C7.70929 4.54884 7.63235 4.43323 7.57996 4.30598C7.52758 4.17874 7.50076 4.04238 7.50107 3.90472C7.50107 3.69752 7.56234 3.49497 7.67712 3.32269C7.79191 3.15041 7.95506 3.01613 8.14594 2.93684C8.33683 2.85755 8.54687 2.8368 8.74951 2.87723C8.95215 2.91765 9.13829 3.01743 9.28439 3.16394C9.43048 3.31045 9.52997 3.49712 9.57028 3.70034C9.61059 3.90355 9.5899 4.11419 9.51084 4.30562C9.43177 4.49705 9.29788 4.66067 9.12608 4.77578Z",
             })
           );
         }
@@ -84904,7 +85322,7 @@ object-assign
           /* harmony export */ TitleBar: () => /* binding */ TitleBar,
           /* harmony export */
         });
-        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ =
+        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ =
           __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
         /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -84912,11 +85330,15 @@ object-assign
           /*#__PURE__*/ __webpack_require__.n(
             react__WEBPACK_IMPORTED_MODULE_0__
           );
-        /* harmony import */ var shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_1__ =
+        /* harmony import */ var shared_steamclient__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            /*! shared/steamclient */ "../../../web_src/shared/js/steamclient.ts"
+          );
+        /* harmony import */ var shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__ =
           __webpack_require__(
             /*! shared/ui/shared_svg_library */ "../../../web_src/shared/js/ui/shared_svg_library.tsx"
           );
-        /* harmony import */ var shared_utils_reactutils__WEBPACK_IMPORTED_MODULE_2__ =
+        /* harmony import */ var shared_utils_reactutils__WEBPACK_IMPORTED_MODULE_3__ =
           __webpack_require__(
             /*! shared/utils/reactutils */ "../../../web_src/shared/js/utils/reactutils/index.ts"
           );
@@ -84924,7 +85346,7 @@ object-assign
         class TitleBar extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
           constructor(props) {
             super(props);
-            this.state = { maximized: this.BIsMaximized() };
+            this.state = { maximized: undefined };
           }
           BIsMaximized() {
             let xDiff =
@@ -84937,6 +85359,7 @@ object-assign
             return bMaximized;
           }
           componentDidMount() {
+            this.UpdateMaximizeState();
             this.props.popup.addEventListener(
               "resize",
               this.UpdateMaximizeState
@@ -84949,10 +85372,26 @@ object-assign
             );
           }
           UpdateMaximizeState() {
-            let bMaximized = this.BIsMaximized();
-            //console.log( "Currently " + (bMaximized?'true':'false') + ' ' + this.props.popup.screen.availWidth + ' ' + this.props.popup.innerWidth );
-            if (bMaximized != this.state.maximized) {
-              this.setState({ maximized: bMaximized });
+            if (
+              (0,
+              shared_steamclient__WEBPACK_IMPORTED_MODULE_1__.BWindowHasSteamClientMethod)(
+                this.props.popup,
+                "Window.IsWindowMaximized"
+              )
+            ) {
+              this.props.popup.SteamClient.Window.IsWindowMaximized(
+                (bMaximized) => {
+                  if (bMaximized != this.state.maximized) {
+                    this.setState({ maximized: bMaximized });
+                  }
+                }
+              );
+            } else {
+              let bMaximized = this.BIsMaximized();
+              //console.log( "Currently " + (bMaximized?'true':'false') + ' ' + this.props.popup.screen.availWidth + ' ' + this.props.popup.innerWidth );
+              if (bMaximized != this.state.maximized) {
+                this.setState({ maximized: bMaximized });
+              }
             }
           }
           render() {
@@ -84994,7 +85433,7 @@ object-assign
                       onClick: fnClose,
                     },
                     react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-                      shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_1__.X_Line,
+                      shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__.X_Line,
                       null
                     )
                   ),
@@ -85004,12 +85443,12 @@ object-assign
                       { className: maxRestoreClasses, onClick: fnMaximize },
                       this.state.maximized &&
                         react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-                          shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_1__.Restore,
+                          shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__.Restore,
                           null
                         ),
                       !this.state.maximized &&
                         react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-                          shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_1__.Maximize,
+                          shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__.Maximize,
                           null
                         )
                     ),
@@ -85021,7 +85460,7 @@ object-assign
                         onClick: fnMinimize,
                       },
                       react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-                        shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_1__.Minimize,
+                        shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__.Minimize,
                         null
                       )
                     )
@@ -85029,8 +85468,8 @@ object-assign
             );
           }
         }
-        (0, tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)(
-          [shared_utils_reactutils__WEBPACK_IMPORTED_MODULE_2__.bind],
+        (0, tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)(
+          [shared_utils_reactutils__WEBPACK_IMPORTED_MODULE_3__.bind],
           TitleBar.prototype,
           "UpdateMaximizeState",
           null
@@ -87328,12 +87767,16 @@ object-assign
             /* binding */ LocalizeRtime32ToShortDate,
           /* harmony export */ LocalizeRtime32ToShorterDate: () =>
             /* binding */ LocalizeRtime32ToShorterDate,
+          /* harmony export */ LocalizeRtime32ToYear: () =>
+            /* binding */ LocalizeRtime32ToYear,
           /* harmony export */ LocalizeShortCalendarMonth: () =>
             /* binding */ LocalizeShortCalendarMonth,
           /* harmony export */ LocalizeTimeRemaining: () =>
             /* binding */ LocalizeTimeRemaining,
           /* harmony export */ LocalizeTimeSince: () =>
             /* binding */ LocalizeTimeSince,
+          /* harmony export */ LocalizedRTtimeToDateRangeShort: () =>
+            /* binding */ LocalizedRTtimeToDateRangeShort,
           /* harmony export */
         });
         /* harmony import */ var mobx_utils__WEBPACK_IMPORTED_MODULE_2__ =
@@ -87603,6 +88046,55 @@ object-assign
           return strDate;
         }
         /**
+         * Purpose: Localize a date range (from to to). If they are the same month, we can shrink the message "June 23 - 27".
+         * If they are different months, then "June 23 - July 1"
+         */
+        function LocalizedRTtimeToDateRangeShort(rtimeStart, rtimeEnd) {
+          let startDate = new Date(rtimeStart * 1000);
+          let endDate = new Date(rtimeEnd * 1000);
+          const dtNow = new Date();
+          // If we cross year, then we need to include the year in both case
+          // If we aren't in the current year, then lets be super clear as well.
+          if (
+            startDate.getFullYear() != endDate.getFullYear() ||
+            dtNow.getFullYear() == startDate.getFullYear()
+          ) {
+            return `${LocalizeRtime32ToShortDate(
+              rtimeStart
+            )} - ${LocalizeRtime32ToShortDate(rtimeEnd)}`;
+          }
+          const dayMonthOptions = {
+            month: "short",
+            day: "numeric",
+          };
+          const startDayAndMonth =
+            startDate.toLocaleDateString(
+              _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
+              dayMonthOptions
+            ) + " - ";
+          // We can shorten it
+          if (startDate.getMonth() == endDate.getMonth()) {
+            const dayOptions = {
+              day: "numeric",
+            };
+            return (
+              startDayAndMonth +
+              endDate.toLocaleDateString(
+                _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
+                dayOptions
+              )
+            );
+          } else {
+            return (
+              startDayAndMonth +
+              endDate.toLocaleDateString(
+                _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
+                dayMonthOptions
+              )
+            );
+          }
+        }
+        /**
          * Purpose: Localize the date to a short form string, e.g. Oct 26, 2018 in English
          *  Input is unix time in seconds (or rtime32)
          */
@@ -87627,27 +88119,13 @@ object-assign
             g_mapCachedLocalizedShortDate.set(nKey, strDate);
           return strDate;
         }
-        const g_mapCachedRtime32LocalizedMonthYear = new Map();
-        /**
-         * Purpose: Localize the date and estract a month with year string, e.g. October, 2020 in English
-         *  Input is unix time in seconds (or rtime32)
-         */
         function LocalizeRtime32ToMonthYear(rtime) {
           let date = new Date(rtime * 1000);
-          // Canonicalize the date and check the cache.
-          const nKey = date.setHours(0, 0, 0, 0);
-          let strMonthYear = g_mapCachedRtime32LocalizedMonthYear.get(nKey);
-          if (strMonthYear) return strMonthYear;
-          const dateOptions = {
-            month: "long",
-            year: "numeric",
-          };
-          strMonthYear = date.toLocaleDateString(
-            _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
-            dateOptions
-          );
-          g_mapCachedRtime32LocalizedMonthYear.set(nKey, strMonthYear);
-          return strMonthYear;
+          return LocalizeCalendarMonthAndYear(date);
+        }
+        function LocalizeRtime32ToYear(rtime) {
+          let date = new Date(rtime * 1000);
+          return LocalizeCalendarYear(date);
         }
         const g_mapCachedLocaleUses24HourClock = new Map();
         /** @returns true if the specified local defaults to using 24-hour time (13:00 vs. 1:00pm) */
@@ -89635,9 +90113,7 @@ function TestLocalizeCalendarTime()
          */
         function useInDesktopUI() {
           const configContext = useConfigContext();
-          return configContext === null || configContext === void 0
-            ? void 0
-            : configContext.IN_DESKTOPUI;
+          return false && 0;
         }
         /**
          * Helper function to determine whether we are running on Deck
@@ -90235,7 +90711,6 @@ function TestLocalizeCalendarTime()
           /* harmony export */ __createBinding: () =>
             /* binding */ __createBinding,
           /* harmony export */ __decorate: () => /* binding */ __decorate,
-          /* harmony export */ __esDecorate: () => /* binding */ __esDecorate,
           /* harmony export */ __exportStar: () => /* binding */ __exportStar,
           /* harmony export */ __extends: () => /* binding */ __extends,
           /* harmony export */ __generator: () => /* binding */ __generator,
@@ -90246,13 +90721,8 @@ function TestLocalizeCalendarTime()
             /* binding */ __makeTemplateObject,
           /* harmony export */ __metadata: () => /* binding */ __metadata,
           /* harmony export */ __param: () => /* binding */ __param,
-          /* harmony export */ __propKey: () => /* binding */ __propKey,
           /* harmony export */ __read: () => /* binding */ __read,
           /* harmony export */ __rest: () => /* binding */ __rest,
-          /* harmony export */ __runInitializers: () =>
-            /* binding */ __runInitializers,
-          /* harmony export */ __setFunctionName: () =>
-            /* binding */ __setFunctionName,
           /* harmony export */ __spread: () => /* binding */ __spread,
           /* harmony export */ __spreadArray: () => /* binding */ __spreadArray,
           /* harmony export */ __spreadArrays: () =>
@@ -90370,93 +90840,6 @@ PERFORMANCE OF THIS SOFTWARE.
           };
         }
 
-        function __esDecorate(
-          ctor,
-          descriptorIn,
-          decorators,
-          contextIn,
-          initializers,
-          extraInitializers
-        ) {
-          function accept(f) {
-            if (f !== void 0 && typeof f !== "function")
-              throw new TypeError("Function expected");
-            return f;
-          }
-          var kind = contextIn.kind,
-            key =
-              kind === "getter" ? "get" : kind === "setter" ? "set" : "value";
-          var target =
-            !descriptorIn && ctor
-              ? contextIn["static"]
-                ? ctor
-                : ctor.prototype
-              : null;
-          var descriptor =
-            descriptorIn ||
-            (target
-              ? Object.getOwnPropertyDescriptor(target, contextIn.name)
-              : {});
-          var _,
-            done = false;
-          for (var i = decorators.length - 1; i >= 0; i--) {
-            var context = {};
-            for (var p in contextIn)
-              context[p] = p === "access" ? {} : contextIn[p];
-            for (var p in contextIn.access)
-              context.access[p] = contextIn.access[p];
-            context.addInitializer = function (f) {
-              if (done)
-                throw new TypeError(
-                  "Cannot add initializers after decoration has completed"
-                );
-              extraInitializers.push(accept(f || null));
-            };
-            var result = (0, decorators[i])(
-              kind === "accessor"
-                ? { get: descriptor.get, set: descriptor.set }
-                : descriptor[key],
-              context
-            );
-            if (kind === "accessor") {
-              if (result === void 0) continue;
-              if (result === null || typeof result !== "object")
-                throw new TypeError("Object expected");
-              if ((_ = accept(result.get))) descriptor.get = _;
-              if ((_ = accept(result.set))) descriptor.set = _;
-              if ((_ = accept(result.init))) initializers.push(_);
-            } else if ((_ = accept(result))) {
-              if (kind === "field") initializers.push(_);
-              else descriptor[key] = _;
-            }
-          }
-          if (target) Object.defineProperty(target, contextIn.name, descriptor);
-          done = true;
-        }
-
-        function __runInitializers(thisArg, initializers, value) {
-          var useValue = arguments.length > 2;
-          for (var i = 0; i < initializers.length; i++) {
-            value = useValue
-              ? initializers[i].call(thisArg, value)
-              : initializers[i].call(thisArg);
-          }
-          return useValue ? value : void 0;
-        }
-
-        function __propKey(x) {
-          return typeof x === "symbol" ? x : "".concat(x);
-        }
-
-        function __setFunctionName(f, name, prefix) {
-          if (typeof name === "symbol")
-            name = name.description ? "[".concat(name.description, "]") : "";
-          return Object.defineProperty(f, "name", {
-            configurable: true,
-            value: prefix ? "".concat(prefix, " ", name) : name,
-          });
-        }
-
         function __metadata(metadataKey, metadataValue) {
           if (
             typeof Reflect === "object" &&
@@ -90528,7 +90911,7 @@ PERFORMANCE OF THIS SOFTWARE.
           }
           function step(op) {
             if (f) throw new TypeError("Generator is already executing.");
-            while ((g && ((g = 0), op[0] && (_ = 0)), _))
+            while (_)
               try {
                 if (
                   ((f = 1),
@@ -90766,7 +91149,7 @@ PERFORMANCE OF THIS SOFTWARE.
             i[n] = o[n]
               ? function (v) {
                   return (p = !p)
-                    ? { value: __await(o[n](v)), done: false }
+                    ? { value: __await(o[n](v)), done: n === "return" }
                     : f
                     ? f(v)
                     : v;
@@ -91613,4 +91996,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=bcc304c9a6284b6a3cdb
+//# sourceMappingURL=friends.js.map?contenthash=38799b78225625765dcf

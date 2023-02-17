@@ -40,7 +40,6 @@
  FSEventStreamStop
  FSGetVolumeInfo
  GetCPUInformation()
- GetLocalHostname
  GetOSType
  KeyValuesSystemSteam
  Msg
@@ -88,8 +87,14 @@
  SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  SteamStdLib::CCommandLineParam::~CCommandLineParam()
  SteamStdLib::CommandLine()
+ SteamThreadTools::CThreadEvent::Set()
+ SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+ SteamThreadTools::CThreadLocalBase::Get() const
+ SteamThreadTools::CThreadLocalBase::Set(void*)
+ SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
+ SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  SteamVProf::CVProfManager::StartProfilingAllThreads()
  SteamVProf::CVProfManager::StopProfilingAllThreads()
@@ -211,10 +216,16 @@
  T x25519_fe64_tobytes
  T xor128_decrypt_n_pad
  T xor128_encrypt_n_pad
+ Test_IsActive
+ Test_SetFailed
+ ThreadGetCurrentId
  ThreadGetCurrentProcessId
  ThreadImplOneTimeInit
+ ThreadInMainThread
+ ThreadInterlockedAssignIf
  ThreadInterlockedCompareExchange
  ThreadInterlockedDecrement
+ ThreadInterlockedExchange
  ThreadInterlockedExchangeAdd64
  ThreadInterlockedIncrement
  ThreadShellExecute
@@ -238,6 +249,7 @@
  V_SetExtension
  V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StrSubstInPlace
+ V_StripFilename
  V_StripLastDir
  V_StripPrecedingAndTrailingWhitespace
  V_StripPrecedingAndTrailingWhitespaceW
@@ -285,8 +297,10 @@
  V_wcstoui64
  Warning
  WeakRandomFloat
+ WeakRandomInt
  _DMsg
  _DefaultRuneLocale
+ _SpewMessageType
  _Unwind_Resume
  __CFConstantStringClassReference
  __assert_rtn
@@ -344,6 +358,7 @@
  ferror
  fflush
  fgets
+ fileno
  flock
  floor
  floorf
@@ -423,6 +438,7 @@
  memmove
  memset
  memset_pattern16
+ mktime
  mmap
  munmap
  open
@@ -453,6 +469,8 @@
  readdir$INODE64
  realloc
  realpath$DARWIN_EXTSN
+ remove
+ rename
  rindex
  round
  roundf

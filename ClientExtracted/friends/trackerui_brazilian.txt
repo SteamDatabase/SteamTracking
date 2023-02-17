@@ -409,7 +409,7 @@
 "Friends_PlayersDialog_Title"				"Jogadores"
 "Friends_CurrentPlayers_TabTitle"			"Partida atual"
 "Friends_RecentPlayers_TabTitle"			"Partidas recentes"
-"Friends_AddPlayerAsFriend"				"Adicionar um amigo..."
+"Friends_AddPlayerAsFriend"				"Enviar pedido de amizade..."
 "Friends_NoRecentlyPlayedWithUsers"		"Você não jogou nenhum jogo Steam com alguém recentemente."
 "Friends_NoCurrentlyPlayedWithUsers"		"Nenhum usuário Steam listado pelo servidor."
 "Friends_PlayerName"						"Nome do perfil"
@@ -525,7 +525,7 @@
 
 "Friends_PeerUploadNotification_Info" "Transferindo arquivos do jogo para"
 
-"Friends_SteamInputActionSetChangedTitle"	"Conjunto de ação do controle"
+"Friends_SteamInputActionSetChangedTitle"	"Conjunto de ações do controle"
 "Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Jogadores trocados"
 "Friends_SteamInputControllerPlayerNumberChanged"	"agora é o jogador nº %player_number%"
@@ -549,7 +549,7 @@
 "controller_apple"									"Controle para dispositivos Apple"
 "controller_android"								"Controle para Android"
 "controller_switch_pro"								"Controle Pro do Nintendo Switch"
-"controller_switch_joycon_pair"						"Par de Joy-Con de Nintendo Switch"
+"controller_switch_joycon_pair"						"Par de Joy-Con do Nintendo Switch"
 "controller_mobile_touch"							"Controle por toque do Steam Link"
 
 "Friends_ScreenshotNotification_Info" "Tela capturada"

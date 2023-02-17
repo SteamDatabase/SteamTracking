@@ -60,6 +60,10 @@
         {
             "name": "ReleaseUpdateLock",
             "argc": "1"
+        },
+        {
+            "name": "GetLastChangeNumberReceived",
+            "argc": "1"
         }
     ]
 }

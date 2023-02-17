@@ -258,7 +258,7 @@
 	"MainMenu_OptIntoBeta_Message" "ไคลเอนต์ Steam เบต้ามอบประสบการณ์ที่ดีที่สุดสำหรับผู้ใช้ Steam Controller ในขณะนี้ \n\nการเข้าร่วมเบต้าจะรีสตาร์ทไคลเอนต์ Steam ของคุณ \n\nคุณต้องการจะเข้าร่วมหรือไม่?\n"
 
 	"MainMenu_RestartForClientUpdate_Title"	"Steam พร้อมอัปเดตใหม่แล้ว"
-	"MainMenu_RestartForClientUpdate"	"อัปเดตใหม่ของ Steam พร้อมใช้งานแล้ว คุณต้องการรีสตาร์ท Steam เพื่อติดตั้งหรือไม่?"
+	"MainMenu_RestartForClientUpdate"	"การอัปเดตใหม่ของ Steam พร้อมใช้งานแล้ว คุณต้องการรีสตาร์ท Steam เพื่อติดตั้งหรือไม่?"
 
 	"MainMenu_PersonaName" "ยินดีต้อนรับ {s:personaname}"
 	"MainMenu_Time" "{t:T:curtime}"

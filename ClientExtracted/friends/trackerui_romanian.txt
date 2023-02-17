@@ -620,7 +620,7 @@
 "friends_trade_you_need_verified_email"		"Trebuie să ai o adresă verificată de e-mail înainte de a putea participa la un schimb. Îți poți verifica adresa de e-mail din fereastra de Setări."
 "friends_trade_you_have_steam_guard_disabled"	"Trebuie să activezi Steam Guard înainte de a participa la un schimb. Activează Steam Guard din fereastra de Setări."
 "friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"Trebuie să fi avut Steam Guard activat timp de cel puțin %days% zile înainte de a participa la un schimb."
-"friends_trade_you_are_using_new_device"	"Te-ai autentificat de pe un nou dispozitiv. Pentru a-ți proteja obiectele din inventar, nu vei mai putea să schimbi de pe acest dispozitiv pentru %days% zile."
+"friends_trade_you_are_using_new_device"	"Te-ai conectat de pe un nou dispozitiv. Pentru a-ți proteja obiectele din inventar, nu vei mai putea realiza schimburi de pe acest dispozitiv timp de %days% zile."
 "friends_trade_you_recently_reset_password"	"Ți-ai uitat și ai resetat apoi recent parola de la contul Steam. Nu vei mai putea face schimburi decât după cinci zile de la cea mai recentă resetare de parolă."
 "friends_trade_you_recently_reset_password_long" "Ai uitat și resetat recent parola contului tău Steam după multiple luni de inactivitate a contului. Pentru a proteja obiectele din inventarul tău, nu vei mai putea efectua schimburi timp de încă %days% zile."
 "friends_trade_you_recently_reset_password_short" "Recent ți-ai uitat și apoi resetat parola contului Steam. Pentru a-ți proteja obiectele din inventar, nu vei putea face schimburi timp de încă %days% zile."

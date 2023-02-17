@@ -767,7 +767,7 @@ Por favor, inténtalo de nuevo más tarde."
 
 	"SettingsAccount_BetaParticipation"		"Participación en beta"
 	"SettingsAccount_NoBetaAvailable"		"(ninguna disponible en este momento)"
-	"SettingsAccount_NoBetaChosen"			"No participas ({i:numbetas} disponibles en este momento)"
+	"SettingsAccount_NoBetaChosen"			"No participas (disponibles en este momento: {i:numbetas})"
 	"SettingsAccount_NoBetaChosenNonAdmin"	"{i:numbetas} disponible(s) actualmente (solo el usuario que ha instalado Steam puede cambiar la participación en beta)."
 	"SettingsAccount_InBeta" 				"{s:electedbeta}"
 	"SettingsAccount_UserCantSetBeta" 		"{s:electedbeta} (solo el usuario que ha instalado Steam puede cambiar la participación en beta)."

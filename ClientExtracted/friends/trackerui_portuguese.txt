@@ -780,7 +780,7 @@
 "Broadcast_Upload_Result_1"  "OK"
 "Broadcast_Upload_Result_2"  "falha ao iniciar"
 "Broadcast_Upload_Result_3"  "erro de frame"
-"Broadcast_Upload_Result_4"  "time-out"
+"Broadcast_Upload_Result_4"  "tempo esgotado"
 "Broadcast_Upload_Result_5"  "demasiados dados"
 "Broadcast_Upload_Result_6"  "FPS baixos"
 "Broadcast_Upload_Result_7"  "key frames em falta"

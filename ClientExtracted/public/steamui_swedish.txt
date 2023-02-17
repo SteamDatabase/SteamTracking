@@ -3988,6 +3988,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "steam_menu_minimode"		"Litet fönster"
 "steam_menu_largemode"	"Stort fönster"
 "steam_menu_bigpicturemode"	"Storbildsläge"
+"steam_menu_close_bigpicturemode"	"Avsluta Big Picture-läge"
 "steam_menu_startvr"		"Starta SteamVR (BETA)"
 "steam_menu_exitvr"		"Avsluta SteamVR (BETA)"
 

@@ -673,8 +673,8 @@
 "Friends_BigPictureStatus_Tooltip"	"Tilkoblet via Big Picture"
 "Friends_VRStatusStatus_Tooltip" "Tilkoblet i VR"
 
-"friends_newturn_info" "1 ny runde venter på deg"
-"friends_newturns_info" "%turns% nye runder venter på deg"
+"friends_newturn_info" "1 ny tur venter på deg"
+"friends_newturns_info" "%turns% nye turer venter på deg"
 
 "Friends_FriendInvitedToBroadcast_Title" "INVITER - %friend%"
 "Friends_FriendInvitedToBroadcast_Info" "En invitasjon til å se på spillet ditt har blitt sendt til %friend%."

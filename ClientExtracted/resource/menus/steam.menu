@@ -6,6 +6,7 @@
 		text = [$OSX]	"#SteamRootAccount"	
 		
 		ChangeUser						{	text="#steam_menu_changeuser"			command="ChangeUser" }
+		SignOut							{	text="#steam_menu_signout"			command="SignOut" }
 		GoOnline						{	text="#SteamUI_OfflineMode_GoOnline"	command="goonline" }
 		GoOffline						{	text="#SteamUI_OfflineMode_GoOffline"	command="gooffline" }
 

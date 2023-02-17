@@ -336,6 +336,8 @@ ${HELP_BASE_URL}/wizard/HelpWithSteamIssue/?issueid=809
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${url_code}
+${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
+${HELP_BASE_URL}wizard/HelpRequest/${ticket}
 ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
 ${HELP_BASE_URL}wizard/HelpWithLogin
 ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
@@ -550,7 +552,6 @@ ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/capsule_231x87.jpg
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/header.jpg
 ${MEDIA_CDN_URL}steam/apps/${}/${}
 ${MEDIA_CDN_URL}steam/apps/${}/header.jpg
-${MEDIA_CDN_URL}steam/marketing/${id}/${}?t=${_ ? _ : _}
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}store/promo/autumn2020/event_nomination_banner_2020.png?v=2
 ${MEDIA_CDN_URL}store/promo/autumn2022/trophy.png?v=2
@@ -1320,7 +1321,6 @@ ${wiki_doc_url}${}
 ${wizard_url}
 ${wizard_url}Home
 ${}\n\n${COMMUNITY_BASE_URL}/sharedfiles/filedetails/?id=${}
-Navigating to ${}, which maps to ${m_strWebURL}
 http://
 http://${}
 http://cdn.steamcommunity.com//economy/emoticon/:cooldown:
@@ -2559,11 +2559,9 @@ https://youtu.be/
 https://youtube.com/user/dota2
 steam://
 steam://${path}
+steam://${}
 steam://AddNonSteamGame
-steam://appnews/
-steam://broadcast/watch/
 steam://broadcast/watch/${steamid64}
-steam://cdkeys/
 steam://cdkeys/${appid}
 steam://checkout_return/paypal_cancel/
 steam://checkout_return/paypal_success/
@@ -2589,7 +2587,6 @@ steam://open/goonline
 steam://open/library/
 steam://open/library/details/${id}
 steam://open/library/shared-apps/${}
-steam://open/screenshots
 steam://open/screenshots/${}
 steam://open/settings/audio
 steam://open/systeminfo
@@ -2601,8 +2598,9 @@ steam://openurl/${url}
 steam://openurl/${}
 steam://openurl_external/
 steam://openurl_external/${}
+steam://openurl_external/https://help.steampowered.com/en/faqs/view/1433-AD20-F11D-B71E
+steam://openurl_external/https://help.steampowered.com/en/faqs/view/548F-BC55-89EB-1BC8
 steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=${transID}
-steam://publisher/
 steam://remoteplay/connect
 steam://remoteplay/connect/${}?appid=${appID}&${remoteplayString}
 steam://remoteplay/connect/${}?appid=${}&${}
@@ -2610,7 +2608,6 @@ steam://run/${app_to_run}
 steam://run/${appid}
 steam://run/${}
 steam://run/%1$s
-steam://run/250820
 steam://rungame/${appID}/${}
 steam://rungame/${}/${}
 steam://rungameid/${}
@@ -2618,13 +2615,11 @@ steam://settings/account
 steam://settings/account${}
 steam://settings/downloads
 steam://settings/ingame
-steam://store/
+steam://settings/voice
 steam://store/${appid}
 steam://store/${appid}?snr=${g_SNR}
-steam://storeurl/
 steam://subscriptioninstall/${packageid}
 steam://unlockh264/
-steam://updatenews/
 steam://url/
 steam://url/${}/${}
 steam://url/EventAnnouncementPage/593110/2173495126269399731
@@ -2635,7 +2630,6 @@ steam://url/SteamPreferences
 steam://url/StoreAccount
 steam://url/StoreAddFundsPage
 steam://url/StoreCart
-steam://video/watch/
 url( '${thumb_url}' )
 url(${IMG_URL}yearinreview/2022/steamDeckBackground.jpg)
 url(${avatar_full_url})

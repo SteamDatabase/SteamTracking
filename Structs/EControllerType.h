@@ -25,6 +25,7 @@ typedef enum EControllerType
     k_EControllerTypeController_ps5 = 45,
     k_EControllerTypeController_xboxelite = 46,
     k_EControllerTypeController_ps4 = 47,
+    k_EControllerTypeController_ps5_edge = 48,
     k_EControllerTypeController_keyboard_generic = 400,
     k_EControllerTypeController_mouse_generic = 800,
 } EControllerType;

@@ -89,6 +89,7 @@ enum EProfileCustomizationType {
 	k_EProfileCustomizationTypeLoyaltyRewardReactions = 21;
 	k_EProfileCustomizationTypeSingleArtworkShowcase = 22;
 	k_EProfileCustomizationTypeAchievementsCompletionist = 23;
+	k_EProfileCustomizationTypeReplay = 24;
 }
 
 enum EPublishedFileStorageSystem {
@@ -221,6 +222,12 @@ enum ESplitScalingScaler {
 	k_ESplitScalingScaler_Fit = 3;
 	k_ESplitScalingScaler_Fill = 4;
 	k_ESplitScalingScaler_Stretch = 5;
+}
+
+enum EHDRToneMapOperator {
+	k_EHDRToneMapOperator_Invalid = 0;
+	k_EHDRToneMapOperator_Uncharted = 1;
+	k_EHDRToneMapOperator_Reinhard = 2;
 }
 
 enum ECPUGovernor {

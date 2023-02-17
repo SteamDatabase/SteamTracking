@@ -390,10 +390,6 @@
             "argc": "2"
         },
         {
-            "name": "GetSystemIconFile",
-            "argc": "5"
-        },
-        {
             "name": "SetUseHTTPSForDownloads",
             "argc": "2"
         },

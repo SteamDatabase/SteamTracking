@@ -59,7 +59,6 @@
  FcConfigAppFontAddFile
  GetCPUInformation()
  GetInstalledRAM
- GetLocalHostname
  GetOSType
  IOIteratorNext
  IOObjectRelease

@@ -504,6 +504,7 @@
  __toupper
  __udivdi3
  __umoddi3
+ __vsnprintf_chk
  _dispatch_source_type_read
  _dispatch_source_type_write
  _exit

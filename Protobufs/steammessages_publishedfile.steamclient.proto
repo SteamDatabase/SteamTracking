@@ -504,6 +504,26 @@ message CPublishedFile_GetAppRelationships_Response {
 	repeated .CPublishedFile_GetAppRelationships_Response.AppRelationship app_relationships = 3;
 }
 
+message CPublishedFile_GetAppRelationshipsBatched_Request {
+	repeated uint64 publishedfileids = 1;
+	optional uint32 filter_relationship = 2;
+}
+
+message CPublishedFile_GetAppRelationshipsBatched_Response {
+	message AppRelationship {
+		optional uint32 appid = 1;
+		optional uint32 relationship = 2;
+	}
+
+	message PublishedFileAppRelationship {
+		optional uint64 publishedfileid = 1;
+		optional uint32 result = 2;
+		repeated .CPublishedFile_GetAppRelationshipsBatched_Response.AppRelationship app_relationships = 3;
+	}
+
+	repeated .CPublishedFile_GetAppRelationshipsBatched_Response.PublishedFileAppRelationship relationships = 1;
+}
+
 message CPublishedFile_StartPlaytimeTracking_Request {
 	optional uint32 appid = 1;
 	repeated uint64 publishedfileids = 2;
@@ -696,6 +716,10 @@ service PublishedFile {
 
 	rpc GetAppRelationships (.CPublishedFile_GetAppRelationships_Request) returns (.CPublishedFile_GetAppRelationships_Response) {
 		option (method_description) = "Returns the list of app relationships for this published file";
+	}
+
+	rpc GetAppRelationshipsBatched (.CPublishedFile_GetAppRelationshipsBatched_Request) returns (.CPublishedFile_GetAppRelationshipsBatched_Response) {
+		option (method_description) = "Returns the list of app relationships for set of published files";
 	}
 
 	rpc StartPlaytimeTracking (.CPublishedFile_StartPlaytimeTracking_Request) returns (.CPublishedFile_StartPlaytimeTracking_Response) {
