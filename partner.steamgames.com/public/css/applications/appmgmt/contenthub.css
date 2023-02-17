@@ -239,18 +239,79 @@ select {
 .adminshared_UploadedImageDisplayCtn_suH0c .adminshared_UploaderLeftCol_1lUkC {
   width: 70%;
 }
+.adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderLeftCol_1lUkC
+  .adminshared_BannerPreview_1HJLo {
+  width: 100%;
+  height: auto;
+}
 .adminshared_UploadedImageDisplayCtn_suH0c .adminshared_UploaderRightCol_1qxnk {
   width: 30%;
 }
 .adminshared_UploadedImageDisplayCtn_suH0c
   .adminshared_UploaderRightCol_1qxnk
   .adminshared_SectionCtn_3la4r {
+  display: flex;
+  flex-direction: column;
   margin-left: 8px;
   width: 100%;
   box-sizing: border-box;
   background: #17181c;
-  padding: 14px;
+  padding: 14px 2px 14px 14px;
   color: #848f95;
+}
+.adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderRightCol_1qxnk
+  .adminshared_LangCountTitle_32cpl {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderRightCol_1qxnk
+  .adminshared_LangSelectCtn_1HRVR {
+  height: 300px;
+  overflow-y: scroll;
+}
+.adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderRightCol_1qxnk
+  .adminshared_UploaderImgLang_35KwL {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #3d434d;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-bottom: 1px;
+  font-size: 13px;
+}
+.adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderRightCol_1qxnk
+  .adminshared_UploaderImgLang_35KwL
+  a {
+  display: flex;
+  text-decoration: none;
+}
+.adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderRightCol_1qxnk
+  .adminshared_UploaderImgLang_35KwL
+  svg {
+  height: 16px;
+  width: 16px;
+}
+.adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderRightCol_1qxnk
+  .adminshared_UploaderImgLang_35KwL
+  .adminshared_LangSelected_362rk {
+  color: #fff;
+}
+.adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderRightCol_1qxnk
+  .adminshared_UploaderImgLang_35KwL
+  .adminshared_DeleteAll_2aArL {
+  align-self: end;
+  margin-right: 14px;
 }
 .reorderablelist_WhitelistNumber_1ZU2Q {
   width: 30px;
