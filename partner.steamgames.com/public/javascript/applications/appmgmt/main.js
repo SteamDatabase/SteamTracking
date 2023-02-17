@@ -8723,7 +8723,7 @@
               this.SetActive(!1, e))
             : s(`${this.LogName(e)} Child window destroyed`);
         }
-        SetActive(e, t, n) {
+        SetActive(e, t, n = undefined) {
           e
             ? ((this.m_activeWindow = t),
               (this.m_activeBrowserView = n),
@@ -8771,7 +8771,7 @@
             : (this.m_rgGamepadNavigationTrees.push(e),
               this.SetActiveNavTree(e, !0));
         }
-        LogName(e) {
+        LogName(e = undefined) {
           return e && this.m_rootWindow != e
             ? `(${this.m_rootWindow.name}) > (${e.name})`
             : `(${this.m_rootWindow.name})`;

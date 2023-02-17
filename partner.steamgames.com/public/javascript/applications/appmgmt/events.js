@@ -32052,6 +32052,9 @@
         }
         Reset(e) {
           (this.m_registration = JSON.parse(JSON.stringify(e))),
+            (this.m_registration.jsondata &&
+              "" !== this.m_registration.jsondata) ||
+              (this.m_registration.jsondata = {}),
             (this.m_bDirty = !1);
         }
         SetDirty(e) {
