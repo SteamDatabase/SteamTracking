@@ -29446,7 +29446,7 @@
             ? this.m_bFinishedSearchingForward
             : this.m_bFinishedSearchingBackward;
         }
-        GetTimeEdgeForDirection(e, t) {
+        GetTimeEdgeForDirection(e, t = undefined) {
           return "forward" === e
             ? this.m_rgSortedCalendarEvents.length > 0
               ? this.m_rgSortedCalendarEvents[0].start_time

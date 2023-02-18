@@ -1505,7 +1505,7 @@
                                     .SetBroadcasterRestrictions(a, r, e);
                                   e.token.reason || (t = !0);
                                 } finally {
-                                  c(!1), m(!0), _(t);
+                                  c(!1), m(!0), _(false);
                                 }
                               }),
                           },

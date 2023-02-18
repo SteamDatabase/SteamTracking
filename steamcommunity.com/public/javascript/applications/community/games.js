@@ -3695,6 +3695,7 @@
             ((null === (s = this.rgGameslistConfig) || void 0 === s
               ? void 0
               : s.rgGames) &&
+              (console.log(this.rgGameslistConfig.rgGames),
               we.U.setQueryData(
                 ["OwnedGames", o, he.De.LANGUAGE],
                 this.rgGameslistConfig.rgGames.map((e) =>
@@ -3702,11 +3703,12 @@
                     rtime_last_played: Re(e.rtime_last_played),
                   })
                 )
-              ),
+              )),
             null === (l = this.rgGameslistConfig) || void 0 === l
               ? void 0
               : l.achievement_progress)
           ) {
+            console.log(this.rgGameslistConfig.achievement_progress);
             const e = ["AchievementProgress", o, he.De.LANGUAGE];
             we.U.setQueryData(e, this.rgGameslistConfig.achievement_progress);
             for (const t of this.rgGameslistConfig.achievement_progress)
@@ -6622,7 +6624,8 @@
                 label: (0, xe.Xx)("#Community_GlobalLeaderboards"),
                 key: "global_leaderboards",
               })),
-            r &&
+            i &&
+              r &&
               n.push({
                 href: `${Fe._.ProfileURL}gcpd/${e.appid}/`,
                 label: (0, xe.Xx)("#Community_GamePersonalData", t),
@@ -7604,94 +7607,95 @@
               [r, a, i]
             );
           })(void 0, 100),
-          m = (0, n.useCallback)(
+          m = l === vr.RecentlyPlayed,
+          d = (0, n.useCallback)(
             (e) => {
               var t;
               return (
-                !c ||
+                !(c && !m) ||
                 (null === (t = e.name) || void 0 === t
                   ? void 0
                   : t.toLowerCase().includes(c))
               );
             },
-            [c]
+            [c, m]
           ),
-          d = Oe(t),
-          b = (0, n.useCallback)(
+          b = Oe(t),
+          _ = (0, n.useCallback)(
             (e) =>
-              !!d.data &&
-              d.data.some(
+              !!b.data &&
+              b.data.some(
                 (t) =>
                   t.appid === e.appid &&
                   0 !== t.unlocked &&
                   t.unlocked === t.total
               ),
-            [d.data]
+            [b.data]
           ),
-          [_] = (0, Ae.Ar)("games_in_common", !1),
-          p = _ && l === vr.All,
-          B = (function (e) {
+          [p] = (0, Ae.Ar)("games_in_common", !1),
+          B = p && l === vr.All,
+          g = (function (e) {
             const t = ze(he.L7.steamid, { enabled: e });
             return (0, n.useMemo)(
               () => ({ data: Mi(t.data), isLoading: t.isLoading }),
               [t.data, t.isLoading]
             );
-          })(p),
-          g = (0, n.useCallback)(
+          })(B),
+          y = (0, n.useCallback)(
             (e) => {
               var t;
               return (
-                !p ||
-                (null === (t = B.data) || void 0 === t
+                !B ||
+                (null === (t = g.data) || void 0 === t
                   ? void 0
                   : t.has(e.appid))
               );
             },
-            [p, B]
+            [B, g]
           ),
-          y = ze(t),
-          f = He(y, Ve),
-          w = He(y, b, d.isLoading);
+          f = ze(t),
+          w = He(f, Ve),
+          h = He(f, _, b.isLoading);
         (0, n.useEffect)(() => {
-          !a && f.data && 0 === f.data.length && s(vr.All);
-        }, [a, f.data, s]);
-        const h = Ce(),
-          F = (0, he.id)();
-        let v = y;
-        l === vr.RecentlyPlayed ? (v = f) : l === vr.Perfect && (v = w),
+          !a && w.data && 0 === w.data.length && s(vr.All);
+        }, [a, w.data, s]);
+        const F = Ce(),
+          v = (0, he.id)();
+        let R = f;
+        l === vr.RecentlyPlayed ? (R = w) : l === vr.Perfect && (R = h),
           (0, n.useEffect)(() => {
             _i.clear();
           }, [l]);
-        const R = zr(l, y, f, w),
-          E = (function (...e) {
+        const E = zr(l, f, w, h),
+          z = (function (...e) {
             return (0, n.useCallback)((t) => {
               for (const r of e) if (r && !r(t)) return !1;
               return !0;
             }, e);
-          })(c && m, p && g),
-          z = (0, Ie.Z)(De.Gameslistapp, F && "GamepadMode"),
-          S = (0, Xe.L)(),
-          M = r === yr.AchievementCompletion && d.isLoading,
-          C = y.isLoading || f.isLoading || w.isLoading || M;
+          })(c && d, B && y),
+          S = (0, Ie.Z)(De.Gameslistapp, v && "GamepadMode"),
+          M = (0, Xe.L)(),
+          C = r === yr.AchievementCompletion && b.isLoading,
+          T = f.isLoading || w.isLoading || h.isLoading || C;
         return n.createElement(
           je.p,
-          { navID: "Gamelist", NavigationManager: S },
+          { navID: "Gamelist", NavigationManager: M },
           n.createElement(
             ar,
             null,
             n.createElement(
               Pe.s,
-              { className: z },
-              C &&
+              { className: S },
+              T &&
                 n.createElement(Le.V, {
                   string: (0, xe.Xx)("#Loading"),
                   position: "center",
                 }),
-              !C &&
+              !T &&
                 n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(Sr, { tabs: R, strTab: l, setStrTab: s }),
+                  n.createElement(Sr, { tabs: E, strTab: l, setStrTab: s }),
                   l !== vr.RecentlyPlayed &&
                     n.createElement(
                       "div",
@@ -7701,17 +7705,17 @@
                         setStrNameFilter: u,
                         className: De.FilterInput,
                       }),
-                      h && n.createElement(Si, null),
-                      !h && l === vr.All && n.createElement(zi, null),
+                      F && n.createElement(Si, null),
+                      !F && l === vr.All && n.createElement(zi, null),
                       n.createElement(Ei, { strSort: r, setStrSort: i })
                     ),
-                  h && !he.De.IN_CLIENT && n.createElement(cr, null)
+                  F && !he.De.IN_CLIENT && n.createElement(cr, null)
                 ),
               n.createElement(vi, {
-                owned: v,
-                filter: E,
+                owned: R,
+                filter: z,
                 sort: l === vr.RecentlyPlayed ? yr.RecentlyPlayed : r,
-                dependencyLoading: C,
+                dependencyLoading: T,
                 tab: l,
               })
             )
