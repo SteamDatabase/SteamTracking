@@ -3671,7 +3671,7 @@
       }
       class Ee {
         constructor(e, t) {
-          var r, i, n, s, l;
+          var r, i, n, s, l, o, c;
           (this.rgGameslistConfig = t),
             (this.setExcludedContentDescriptorIds = new Set()),
             e && Object.assign(ve._, e),
@@ -3690,24 +3690,32 @@
                   e.content_descriptorid
                 );
               });
-          const o = this.GetProfileSteamId();
+          const u = this.GetProfileSteamId();
           if (
-            ((null === (s = this.rgGameslistConfig) || void 0 === s
+            ((null ===
+              (l =
+                null === (s = this.rgGameslistConfig) || void 0 === s
+                  ? void 0
+                  : s.rgGames) || void 0 === l
               ? void 0
-              : s.rgGames) &&
+              : l.length) > 0 &&
               we.U.setQueryData(
-                ["OwnedGames", o, he.De.LANGUAGE],
+                ["OwnedGames", u, he.De.LANGUAGE],
                 this.rgGameslistConfig.rgGames.map((e) =>
                   Object.assign(Object.assign({}, e), {
                     rtime_last_played: Re(e.rtime_last_played),
                   })
                 )
               ),
-            null === (l = this.rgGameslistConfig) || void 0 === l
+            (null ===
+              (c =
+                null === (o = this.rgGameslistConfig) || void 0 === o
+                  ? void 0
+                  : o.achievement_progress) || void 0 === c
               ? void 0
-              : l.achievement_progress)
+              : c.length) > 0)
           ) {
-            const e = ["AchievementProgress", o, he.De.LANGUAGE];
+            const e = ["AchievementProgress", u, he.De.LANGUAGE];
             we.U.setQueryData(e, this.rgGameslistConfig.achievement_progress);
             for (const t of this.rgGameslistConfig.achievement_progress)
               we.U.setQueryData([e, (0, a.hashQueryKey)([t.appid])], t);
