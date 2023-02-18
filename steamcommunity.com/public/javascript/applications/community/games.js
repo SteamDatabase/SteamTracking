@@ -3940,6 +3940,9 @@
         GetExcludedContentDescriptors() {
           return this.setExcludedContentDescriptorIds;
         }
+        GetPerfectUnownedGames() {
+          return this.rgGameslistConfig.rgPerfectUnownedGames;
+        }
       }
       function ze(e, t = {}) {
         const r = Ee.Get(),
@@ -7657,48 +7660,60 @@
             [B, g]
           ),
           f = ze(t),
-          w = He(f, Ve),
-          h = He(f, _, b.isLoading);
+          w = Ee.Get().GetPerfectUnownedGames(),
+          h = He(f, Ve),
+          v =
+            ((F = He(f, _, b.isLoading)),
+            (R = w),
+            (0, n.useMemo)(
+              () => ({
+                data: F.data.concat(R),
+                isLoading: F.isLoading,
+                error: F.error,
+              }),
+              [F.data, F.isLoading, F.error, R]
+            ));
+        var F, R;
         (0, n.useEffect)(() => {
-          !a && w.data && 0 === w.data.length && s(Fr.All);
-        }, [a, w.data, s]);
-        const v = Ce(),
-          F = (0, he.id)();
-        let R = f;
-        l === Fr.RecentlyPlayed ? (R = w) : l === Fr.Perfect && (R = h),
+          !a && h.data && 0 === h.data.length && s(Fr.All);
+        }, [a, h.data, s]);
+        const E = Ce(),
+          z = (0, he.id)();
+        let S = f;
+        l === Fr.RecentlyPlayed ? (S = h) : l === Fr.Perfect && (S = v),
           (0, n.useEffect)(() => {
             _i.clear();
           }, [l]);
-        const E = zr(l, f, w, h),
-          z = (function (...e) {
+        const M = zr(l, f, h, v),
+          C = (function (...e) {
             return (0, n.useCallback)((t) => {
               for (const r of e) if (r && !r(t)) return !1;
               return !0;
             }, e);
           })(c && d, B && y),
-          S = (0, Ie.Z)(De.Gameslistapp, F && "GamepadMode"),
-          M = (0, Xe.L)(),
-          C = r === yr.AchievementCompletion && b.isLoading,
-          T = f.isLoading || w.isLoading || h.isLoading || C;
+          T = (0, Ie.Z)(De.Gameslistapp, z && "GamepadMode"),
+          W = (0, Xe.L)(),
+          O = r === yr.AchievementCompletion && b.isLoading,
+          G = f.isLoading || h.isLoading || v.isLoading || O;
         return n.createElement(
           je.p,
-          { navID: "Gamelist", NavigationManager: M },
+          { navID: "Gamelist", NavigationManager: W },
           n.createElement(
             ar,
             null,
             n.createElement(
               Pe.s,
-              { className: S },
-              T &&
+              { className: T },
+              G &&
                 n.createElement(Le.V, {
                   string: (0, xe.Xx)("#Loading"),
                   position: "center",
                 }),
-              !T &&
+              !G &&
                 n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(Sr, { tabs: E, strTab: l, setStrTab: s }),
+                  n.createElement(Sr, { tabs: M, strTab: l, setStrTab: s }),
                   l !== Fr.RecentlyPlayed &&
                     n.createElement(
                       "div",
@@ -7708,17 +7723,17 @@
                         setStrNameFilter: u,
                         className: De.FilterInput,
                       }),
-                      v && n.createElement(Si, null),
-                      !v && l === Fr.All && n.createElement(zi, null),
+                      E && n.createElement(Si, null),
+                      !E && l === Fr.All && n.createElement(zi, null),
                       n.createElement(Ei, { strSort: r, setStrSort: i })
                     ),
-                  v && !he.De.IN_CLIENT && n.createElement(cr, null)
+                  E && !he.De.IN_CLIENT && n.createElement(cr, null)
                 ),
               n.createElement(Fi, {
-                owned: R,
-                filter: z,
+                owned: S,
+                filter: C,
                 sort: l === Fr.RecentlyPlayed ? yr.RecentlyPlayed : r,
-                dependencyLoading: T,
+                dependencyLoading: G,
                 tab: l,
               })
             )
