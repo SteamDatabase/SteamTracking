@@ -160,6 +160,7 @@
     72442: (e) => {
       e.exports = {
         WishlistTab: "gameslisttabs_WishlistTab_1BZR3",
+        tabList: "gameslisttabs_tabList_1sHAC",
         TabBaseline: "gameslisttabs_TabBaseline_2gC9I",
         SelectBaseline: "gameslisttabs_SelectBaseline_1qj0p",
       };
@@ -6364,11 +6365,6 @@
               }),
             n.push(
               {
-                href: `${ve._.ProfileURL}wishlist`,
-                label: (0, xe.Xx)("#GamesList_Tab_Wishlist"),
-                className: Rr.WishlistTab,
-              },
-              {
                 href: `${ve._.ProfileURL}followedgames`,
                 label: (0, xe.Xx)(
                   "#GamesList_Tab_Followed",
@@ -6381,6 +6377,11 @@
                   "#GamesList_Tab_Reviews",
                   s > 0 ? `(${s})` : ""
                 ),
+              },
+              {
+                href: `${ve._.ProfileURL}wishlist`,
+                label: (0, xe.Xx)("#GamesList_Tab_Wishlist"),
+                className: Rr.WishlistTab,
               }
             ),
             n
@@ -6393,7 +6394,12 @@
           null,
           n.createElement(
             "div",
-            { className: "sectionTabs item responsive_hidden" },
+            {
+              className: (0, Ie.Z)(
+                "sectionTabs item responsive_hidden",
+                Rr.tabList
+              ),
+            },
             e.map((e) =>
               e.href
                 ? n.createElement(

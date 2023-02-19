@@ -1236,11 +1236,15 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.gameslisttabs_WishlistTab_1BZR3 {
-  position: absolute;
-  right: 0;
-  margin-bottom: 6px;
-  top: -3px;
+.sectionTab.gameslisttabs_WishlistTab_1BZR3 {
+  transform: translateY(-6px);
+  margin-left: auto;
+}
+.gameslisttabs_tabList_1sHAC {
+  display: flex;
+}
+.gameslisttabs_tabList_1sHAC .sectionTab {
+  white-space: nowrap;
 }
 .GamepadMode .gameslisttabs_WishlistTab_1BZR3 {
   top: unset;
