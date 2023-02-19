@@ -7098,74 +7098,73 @@
             )
           : null;
       }
-      function si() {
-        const e = mi().openGame,
-          t = ui(),
-          r = (0, n.useRef)(null);
+      function si({ tab: e }) {
+        const t = mi().openGame,
+          r = ui(),
+          i = (0, n.useRef)(null);
         (0, n.useEffect)(() => {
           var e;
-          r.current &&
-            (null === (e = r.current.querySelector("summary")) ||
+          i.current &&
+            (null === (e = i.current.querySelector("summary")) ||
               void 0 === e ||
               e.focus());
-        }, [e]);
-        const i = We(e);
-        if (!e) return null;
-        const a =
+        }, [t]);
+        const a = We(t);
+        if (!t) return null;
+        const s =
           he.De.STORE_ICON_BASE_URL +
-          `/${e.appid}/${e.capsule_filename || "library_600x900.jpg"}`;
+          `/${t.appid}/${t.capsule_filename || "library_600x900.jpg"}`;
         return n.createElement(
           "div",
           {
             className: (0, Ie.Z)(
               Zt.BottomSheetContainer,
-              i && Zt.HasAdultContent
+              a && Zt.HasAdultContent
             ),
             role: "dialog",
             "aria-modal": "true",
             onKeyDown: (e) => {
-              "Escape" === e.key && t(void 0);
+              "Escape" === e.key && r(void 0);
             },
           },
           n.createElement("div", {
             className: Zt.BottomSheetOverlay,
             onClick: (e) => {
-              e.preventDefault(), e.stopPropagation(), t(void 0);
+              e.preventDefault(), e.stopPropagation(), r(void 0);
             },
           }),
           n.createElement(
             "div",
-            { className: Zt.BottomSheet, ref: r },
+            { className: Zt.BottomSheet, ref: i },
             n.createElement(
               "div",
               { className: Zt.GameInfo },
               n.createElement(
                 "div",
                 { className: Zt.BlurredBackground },
-                n.createElement("img", { src: a, alt: e.name })
+                n.createElement("img", { src: s, alt: t.name })
               ),
               n.createElement("img", {
-                src: a,
-                alt: e.name,
+                src: s,
+                alt: t.name,
                 className: Zt.Portrait,
               }),
               n.createElement(
                 "div",
                 { className: Zt.Facts },
-                n.createElement("span", { className: Zt.GameTitle }, e.name),
-                n.createElement(li, { game: e, visible: !0 })
+                n.createElement("span", { className: Zt.GameTitle }, t.name),
+                n.createElement(li, { game: t, visible: !0, tab: e })
               )
             ),
-            n.createElement(ii, { game: e }),
-            n.createElement(ri, { game: e }),
-            n.createElement(ni, { game: e }),
-            n.createElement(ai, { game: e })
+            n.createElement(ii, { game: t }),
+            n.createElement(ri, { game: t }),
+            n.createElement(ni, { game: t }),
+            n.createElement(ai, { game: t })
           )
         );
       }
-      function li({ game: e, visible: t }) {
-        const [r] = (0, Ae.Ar)("tab", Fr.All),
-          i = Ce(),
+      function li({ game: e, visible: t, tab: r }) {
+        const i = Ce(),
           a = We(e);
         return n.createElement(
           "div",
@@ -7240,52 +7239,52 @@
           !l && n.createElement(qr, { game: e, visible: t })
         );
       }
-      const ci = n.memo(function ({ game: e, top: t }) {
-        const r = `${he.De.STORE_BASE_URL}app/${e.appid}`,
-          i = Ce(),
-          a = Ur(),
-          s = ui(),
-          l = a ? "button" : at.eh,
-          o = a ? () => s(e) : void 0,
-          [c, u] = (0, n.useState)(!1),
-          m = (0, Vt.S1)(
+      const ci = n.memo(function ({ game: e, top: t, tab: r }) {
+        const i = `${he.De.STORE_BASE_URL}app/${e.appid}`,
+          a = Ce(),
+          s = Ur(),
+          l = ui(),
+          o = s ? "button" : at.eh,
+          c = s ? () => l(e) : void 0,
+          [u, m] = (0, n.useState)(!1),
+          d = (0, Vt.S1)(
             (0, n.useCallback)((e) => {
-              e.isIntersecting && u(!0);
+              e.isIntersecting && m(!0);
             }, []),
             { rootMargin: "600px" }
           ),
-          d = We(e),
-          b = (0, he.id)(),
-          _ = a ? "div" : nt.IS,
-          p = a ? "span" : "a";
+          b = We(e),
+          _ = (0, he.id)(),
+          p = s ? "div" : nt.IS,
+          B = s ? "span" : "a";
         return n.createElement(
           "div",
           {
             className: (0, Ie.Z)(
               Zt.GamesListItemContainer,
-              d && Zt.HasAdultContent
+              b && Zt.HasAdultContent
             ),
             style: { top: `${t}px` },
-            ref: m,
+            ref: d,
           },
           n.createElement(
-            l,
+            o,
             {
               className: (0, Ie.Z)(Zt.GamesListItem, e.changing && Zt.Changing),
-              onClick: o,
+              onClick: c,
             },
             n.createElement(
-              _,
-              { href: r, className: Zt.GameItemPortrait },
-              n.createElement(oi, { game: e, hasEverBeenVisible: c })
+              p,
+              { href: i, className: Zt.GameItemPortrait },
+              n.createElement(oi, { game: e, hasEverBeenVisible: u })
             ),
             n.createElement(
               "span",
               { className: Zt.GameNameContainer },
-              n.createElement(p, { href: r, className: Zt.GameName }, e.name)
+              n.createElement(B, { href: i, className: Zt.GameName }, e.name)
             ),
-            n.createElement(li, { game: e, visible: c }),
-            !a &&
+            n.createElement(li, { game: e, visible: u, tab: r }),
+            !s &&
               n.createElement(
                 n.Fragment,
                 null,
@@ -7294,13 +7293,13 @@
                   { className: Zt.Buttons },
                   n.createElement(Jr, { game: e }),
                   n.createElement(ei, { game: e }),
-                  b && n.createElement(Yr, { game: e })
+                  _ && n.createElement(Yr, { game: e })
                 ),
-                !b && n.createElement(Yr, { game: e })
+                !_ && n.createElement(Yr, { game: e })
               ),
-            a && n.createElement(qr, { game: e, visible: c })
+            s && n.createElement(qr, { game: e, visible: u })
           ),
-          i && n.createElement(gr, { game: e, visible: c })
+          a && n.createElement(gr, { game: e, visible: u })
         );
       });
       function ui() {
@@ -7328,8 +7327,8 @@
         _i.add(e);
       }
       const Bi = new Set();
-      function gi({ games: e, gameSize: t }) {
-        const r = e.length * t;
+      function gi({ games: e, gameSize: t, tab: r }) {
+        const i = e.length * t;
         !(function () {
           const e = (0, n.useRef)(!1);
           (0, n.useEffect)(() => {
@@ -7365,20 +7364,20 @@
               );
             }, []);
         })();
-        const i = (0, n.useRef)(null);
+        const a = (0, n.useRef)(null);
         return n.createElement(
           Pe.s,
-          { ref: i, className: Zt.List, style: { height: r }, autoFocus: !0 },
+          { ref: a, className: Zt.List, style: { height: i }, autoFocus: !0 },
           n.createElement(
             fi,
             {
               disableContinuousRender: e.length > 1024,
               batchSize: 16,
-              containerRef: i,
+              containerRef: a,
               childSize: t,
             },
-            e.map((e, r) =>
-              n.createElement(ci, { game: e, key: e.appid, top: r * t })
+            e.map((e, i) =>
+              n.createElement(ci, { game: e, key: e.appid, top: i * t, tab: r })
             )
           )
         );
@@ -7517,12 +7516,12 @@
             (0, xe.Xx)("#GamesList_PerfectGames_Description")
           );
         const o = Gr + (void 0 !== l ? Or : 0);
-        return n.createElement(gi, { games: s.data, gameSize: o });
+        return n.createElement(gi, { games: s.data, gameSize: o, tab: r });
       }
-      function vi({ query: e, isLoading: t }) {
+      function vi({ query: e, isLoading: t, tab: r }) {
         return void 0 === e.data || t
           ? null
-          : n.createElement(gi, { games: e.data, gameSize: Gr });
+          : n.createElement(gi, { games: e.data, gameSize: Gr, tab: r });
       }
       const Fi = (0, kt.AP)(
           ({ owned: e, filter: t, dependencyLoading: r, sort: i, tab: a }) => {
@@ -7533,10 +7532,10 @@
             return n.createElement(
               bi,
               null,
-              n.createElement(si, null),
+              n.createElement(si, { tab: a }),
               l
                 ? n.createElement(hi, { query: s, isLoading: o, tab: a })
-                : n.createElement(vi, { query: s, isLoading: o })
+                : n.createElement(vi, { query: s, isLoading: o, tab: a })
             );
           }
         ),
