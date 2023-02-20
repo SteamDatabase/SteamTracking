@@ -1287,7 +1287,7 @@
       const Z =
         r.p +
         "images/applications/store/login_mobile_auth.png?v=valveisgoodatcaching";
-      var q = r(78587),
+      var q = r(16550),
         Q = r(32548),
         V = r(53157),
         $ = r(28268);

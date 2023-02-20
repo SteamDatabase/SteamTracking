@@ -12872,7 +12872,7 @@
             ? this.m_bFinishedSearchingForward
             : this.m_bFinishedSearchingBackward;
         }
-        GetTimeEdgeForDirection(e, t) {
+        GetTimeEdgeForDirection(e, t = undefined) {
           return "forward" === e
             ? this.m_rgSortedCalendarEvents.length > 0
               ? this.m_rgSortedCalendarEvents[0].start_time
@@ -20218,7 +20218,7 @@
       var n,
         i,
         a = r(67294),
-        s = r(78587),
+        s = r(16550),
         o = (r(37662), r(3389), r(7707)),
         l = r(77520),
         c = r(90666),

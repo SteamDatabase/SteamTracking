@@ -396,6 +396,12 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   white-space: nowrap;
   color: var(--typography-color-neutral);
 }
+[lang="ru"] .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh,
+[lang="bg"] .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh,
+[lang="de"] .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh,
+[lang="fi"] .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
+  gap: 8px;
+}
 .gameslistitems_GamesListItem_2-pQF
   .gameslistitems_Playtime_2Eeyh
   .gameslistitems_Hours_26nl3,
@@ -420,6 +426,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_AchievementContainer_38RhR {
   grid-area: achievements;
   align-self: center;
+  overflow: hidden;
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_Buttons_1uRB5 {
   grid-area: links;

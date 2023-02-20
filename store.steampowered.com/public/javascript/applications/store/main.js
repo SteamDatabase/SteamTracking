@@ -11427,7 +11427,7 @@
               this.SetActive(!1, e))
             : s(`${this.LogName(e)} Child window destroyed`);
         }
-        SetActive(e, t, n) {
+        SetActive(e, t, n = undefined) {
           e
             ? ((this.m_activeWindow = t),
               (this.m_activeBrowserView = n),
@@ -11475,7 +11475,7 @@
             : (this.m_rgGamepadNavigationTrees.push(e),
               this.SetActiveNavTree(e, !0));
         }
-        LogName(e) {
+        LogName(e = undefined) {
           return e && this.m_rootWindow != e
             ? `(${this.m_rootWindow.name}) > (${e.name})`
             : `(${this.m_rootWindow.name})`;
@@ -26305,7 +26305,7 @@
       "use strict";
       n.d(t, { i4: () => o, lJ: () => s });
       var r = n(67294),
-        i = n(78587);
+        i = n(16550);
       function o(e, t) {
         var n;
         const o = `${e}_HistoryValue`,
@@ -27007,7 +27007,7 @@
         u = n(47214),
         m = n.n(u),
         h = n(73727),
-        p = n(78587),
+        p = n(16550),
         _ = n(76796);
       class g extends o.Component {
         render() {
