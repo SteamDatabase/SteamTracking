@@ -6365,6 +6365,7 @@
               }),
             n.push(
               {
+                tab: Fr.Followed,
                 href: `${ve._.ProfileURL}followedgames`,
                 label: (0, xe.Xx)(
                   "#GamesList_Tab_Followed",
@@ -6372,6 +6373,7 @@
                 ),
               },
               {
+                tab: Fr.Reviews,
                 href: `${ve._.ProfileURL}reviews`,
                 label: (0, xe.Xx)(
                   "#GamesList_Tab_Reviews",
@@ -6379,6 +6381,7 @@
                 ),
               },
               {
+                tab: Fr.Wishlist,
                 href: `${ve._.ProfileURL}wishlist`,
                 label: (0, xe.Xx)("#GamesList_Tab_Wishlist"),
                 className: Rr.WishlistTab,
@@ -6474,7 +6477,12 @@
         );
       }
       !(function (e) {
-        (e.All = "all"), (e.RecentlyPlayed = "recent"), (e.Perfect = "perfect");
+        (e.All = "all"),
+          (e.RecentlyPlayed = "recent"),
+          (e.Perfect = "perfect"),
+          (e.Followed = "followed"),
+          (e.Reviews = "reviews"),
+          (e.Wishlist = "wishlist");
       })(Fr || (Fr = {}));
       const Mr =
         r.p +
