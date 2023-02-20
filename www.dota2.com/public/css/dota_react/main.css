@@ -28672,7 +28672,8 @@ a {
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-position: top, center;
+  background-position: center;
+  background-size: cover;
 }
 .dpcroot_DPCHeaderGenericLeague_3VSU1 {
   width: 100%;
@@ -28858,6 +28859,135 @@ a {
   .dpcroot_TextContainer_1g0r7
   .dpcroot_EventResultsButton_3yzbY:hover {
   background-color: #ffffff1a;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV .dpcroot_BannerContainer_EvAlT {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderTitle_1z97N {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  margin: 4px 0px;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderTitle_1z97N.dpcroot_Large_fcIeM {
+  font-size: 56px;
+  line-height: 0.9;
+  margin: 12px 0px;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderTitle_1z97N.dpcroot_Medium_1g9H9 {
+  font-size: 24px;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderTitle_1z97N.dpcroot_Small_gverV {
+  font-size: 14px;
+  color: #f79b36;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderTitle_1z97N.dpcroot_VerticalCenter_3OuCp {
+  margin: auto;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderBody_29U4W {
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 4px 0px;
+  color: #faf8c7;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderBody_29U4W.dpcroot_Large_fcIeM {
+  font-size: 36px;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderBody_29U4W.dpcroot_Medium_1g9H9 {
+  font-size: 24px;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderBody_29U4W.dpcroot_Small_gverV {
+  font-size: 18px;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderBody_29U4W.dpcroot_VerticalCenter_3OuCp {
+  margin: auto;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_DPCHeaderBody_29U4W.dpcroot_Bold_2eCz8 {
+  font-weight: 900;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_Column_LcWha {
+  height: 100%;
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_Column_LcWha.dpcroot_Center_2ZZZS {
+  width: 150%;
+}
+.dpcroot_DPCHeaderWinter2023Major_14smV
+  .dpcroot_BannerContainer_EvAlT
+  .dpcroot_BannerContent_BLqTW
+  .dpcroot_Column_LcWha
+  .dpcroot_ColumnBlock_2OyXG {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0px;
 }
 .dpcroot_DPCHeaderSpring2021League_3DTMe {
   width: 100%;

@@ -1763,9 +1763,9 @@
         Visible: "throbber_Visible_2sPa3",
       };
     },
-    475: (e, a, t) => {
+    7336: (e, a, t) => {
       "use strict";
-      t.d(a, { v: () => tr, P: () => lr });
+      t.d(a, { v: () => rr, P: () => cr });
       var r = t(655),
         o = t(9669),
         n = t.n(o),
@@ -2016,29 +2016,10 @@
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
         })(S || (S = {}));
-      var T;
-      !(function (e) {
-        (e[(e.k_EControllerBindingType_None = 0)] =
-          "k_EControllerBindingType_None"),
-          (e[(e.k_EControllerBindingType_Key = 1)] =
-            "k_EControllerBindingType_Key"),
-          (e[(e.k_EControllerBindingType_MouseButton = 2)] =
-            "k_EControllerBindingType_MouseButton"),
-          (e[(e.k_EControllerBindingType_Gamepad = 3)] =
-            "k_EControllerBindingType_Gamepad"),
-          (e[(e.k_EControllerBindingType_Mousewheel = 4)] =
-            "k_EControllerBindingType_Mousewheel"),
-          (e[(e.k_EControllerBindingType_Modeshift = 5)] =
-            "k_EControllerBindingType_Modeshift"),
-          (e[(e.k_EControllerBindingType_GameAction = 6)] =
-            "k_EControllerBindingType_GameAction"),
-          (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
-            "k_EControllerBindingType_ControllerAction");
-      })(T || (T = {}));
-      var P, L;
+      var T, P;
       !(function (e) {
         (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-      })(P || (P = {})),
+      })(T || (T = {})),
         (function (e) {
           (e[(e.Input = 0)] = "Input"),
             (e[(e.AllOutput = 1)] = "AllOutput"),
@@ -2047,124 +2028,14 @@
             (e[(e.Sub = 4)] = "Sub"),
             (e[(e.BackLeft = 5)] = "BackLeft"),
             (e[(e.BackRight = 6)] = "BackRight");
-        })(L || (L = {}));
+        })(P || (P = {}));
+      var L;
+      !(function (e) {
+        (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+          (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+          (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+      })(L || (L = {}));
       var I;
-      !(function (e) {
-        (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
-          (e[(e.EBrowserType_OpenVROverlay = 1)] =
-            "EBrowserType_OpenVROverlay"),
-          (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
-            "EBrowserType_OpenVROverlay_Dashboard"),
-          (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-          (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
-            "EBrowserType_DirectHWND_Borderless"),
-          (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
-            "EBrowserType_DirectHWND_Hidden"),
-          (e[(e.EBrowserType_ChildHWNDNative = 6)] =
-            "EBrowserType_ChildHWNDNative"),
-          (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
-            "EBrowserType_Transparent_Toplevel"),
-          (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
-            "EBrowserType_OffScreen_SharedTexture"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
-            "EBrowserType_OffScreen_GameOverlay"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-            "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-          (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
-            "EBrowserType_Offscreen_FriendsUI"),
-          (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-      })(I || (I = {}));
-      var R, D;
-      !(function (e) {
-        (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
-          "k_EClientUINotificationGroupChatMessage"),
-          (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
-            "k_EClientUINotificationFriendChatMessage"),
-          (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
-            "k_EClientUINotificationFriendPersonaState");
-      })(R || (R = {})),
-        (function (e) {
-          (e[(e.k_EComputerActiveStateInvalid = 0)] =
-            "k_EComputerActiveStateInvalid"),
-            (e[(e.k_EComputerActiveStateActive = 1)] =
-              "k_EComputerActiveStateActive"),
-            (e[(e.k_EComputerActiveStateIdle = 2)] =
-              "k_EComputerActiveStateIdle");
-        })(D || (D = {}));
-      var G;
-      !(function (e) {
-        (e[(e.k_EPending = 0)] = "k_EPending"),
-          (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
-          (e[(e.k_ERejected = 2)] = "k_ERejected");
-      })(G || (G = {}));
-      var A, M;
-      !(function (e) {
-        (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
-          "k_EClientUsedInputTypeKeyboard"),
-          (e[(e.k_EClientUsedInputTypeMouse = 1)] =
-            "k_EClientUsedInputTypeMouse"),
-          (e[(e.k_EClientUsedInputTypeController = 2)] =
-            "k_EClientUsedInputTypeController"),
-          (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-      })(A || (A = {})),
-        (function (e) {
-          (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
-            (e[(e.k_ERemoteClientLaunchFail = 2)] =
-              "k_ERemoteClientLaunchFail"),
-            (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
-              "k_ERemoteClientLaunchRequiresUI"),
-            (e[(e.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
-              "k_ERemoteClientLaunchRequiresLaunchOption"),
-            (e[(e.k_ERemoteClientLaunchRequiresEULA = 5)] =
-              "k_ERemoteClientLaunchRequiresEULA"),
-            (e[(e.k_ERemoteClientLaunchTimeout = 6)] =
-              "k_ERemoteClientLaunchTimeout"),
-            (e[(e.k_ERemoteClientLaunchStreamTimeout = 7)] =
-              "k_ERemoteClientLaunchStreamTimeout"),
-            (e[(e.k_ERemoteClientLaunchStreamClientFail = 8)] =
-              "k_ERemoteClientLaunchStreamClientFail"),
-            (e[(e.k_ERemoteClientLaunchOtherGameRunning = 9)] =
-              "k_ERemoteClientLaunchOtherGameRunning"),
-            (e[(e.k_ERemoteClientLaunchDownloadStarted = 10)] =
-              "k_ERemoteClientLaunchDownloadStarted"),
-            (e[(e.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
-              "k_ERemoteClientLaunchDownloadNoSpace"),
-            (e[(e.k_ERemoteClientLaunchDownloadFiltered = 12)] =
-              "k_ERemoteClientLaunchDownloadFiltered"),
-            (e[(e.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
-              "k_ERemoteClientLaunchDownloadRequiresUI"),
-            (e[(e.k_ERemoteClientLaunchAccessDenied = 14)] =
-              "k_ERemoteClientLaunchAccessDenied"),
-            (e[(e.k_ERemoteClientLaunchNetworkError = 15)] =
-              "k_ERemoteClientLaunchNetworkError"),
-            (e[(e.k_ERemoteClientLaunchProgress = 16)] =
-              "k_ERemoteClientLaunchProgress"),
-            (e[(e.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
-              "k_ERemoteClientLaunchParentalUnlockFailed"),
-            (e[(e.k_ERemoteClientLaunchScreenLocked = 18)] =
-              "k_ERemoteClientLaunchScreenLocked"),
-            (e[(e.k_ERemoteClientLaunchUnsupported = 19)] =
-              "k_ERemoteClientLaunchUnsupported"),
-            (e[(e.k_ERemoteClientLaunchDisabledLocal = 20)] =
-              "k_ERemoteClientLaunchDisabledLocal"),
-            (e[(e.k_ERemoteClientLaunchDisabledRemote = 21)] =
-              "k_ERemoteClientLaunchDisabledRemote"),
-            (e[(e.k_ERemoteClientLaunchBroadcasting = 22)] =
-              "k_ERemoteClientLaunchBroadcasting"),
-            (e[(e.k_ERemoteClientLaunchBusy = 23)] =
-              "k_ERemoteClientLaunchBusy"),
-            (e[(e.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
-              "k_ERemoteClientLaunchDriversNotInstalled"),
-            (e[(e.k_ERemoteClientLaunchTransportUnavailable = 25)] =
-              "k_ERemoteClientLaunchTransportUnavailable"),
-            (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
-              "k_ERemoteClientLaunchCanceled"),
-            (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
-              "k_ERemoteClientLaunchInvisible"),
-            (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
-              "k_ERemoteClientLaunchRestrictedCountry");
-        })(M || (M = {}));
-      var w;
       !(function () {
         function e() {
           this.m_rgHandles = [];
@@ -2181,12 +2052,6 @@
             }
           });
       })();
-      !(function (e) {
-        (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-          (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-          (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-      })(w || (w = {}));
-      var O;
       !(function (e) {
         (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
           "k_BluetoothDeviceType_Invalid"),
@@ -2212,14 +2077,154 @@
             "k_BluetoothDeviceType_Gamepad"),
           (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
             "k_BluetoothDeviceType_Keyboard");
+      })(I || (I = {}));
+      var R, D, G, A;
+      !(function (e) {
+        (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
+          (e[(e.EBrowserType_OpenVROverlay = 1)] =
+            "EBrowserType_OpenVROverlay"),
+          (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+            "EBrowserType_OpenVROverlay_Dashboard"),
+          (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+          (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
+            "EBrowserType_DirectHWND_Borderless"),
+          (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
+            "EBrowserType_DirectHWND_Hidden"),
+          (e[(e.EBrowserType_ChildHWNDNative = 6)] =
+            "EBrowserType_ChildHWNDNative"),
+          (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
+            "EBrowserType_Transparent_Toplevel"),
+          (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
+            "EBrowserType_OffScreen_SharedTexture"),
+          (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
+            "EBrowserType_OffScreen_GameOverlay"),
+          (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+            "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+          (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
+            "EBrowserType_Offscreen_FriendsUI"),
+          (e[(e.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+      })(R || (R = {})),
+        (function (e) {
+          (e[(e.SystemKey0 = 0)] = "SystemKey0"),
+            (e[(e.SystemKey1 = 1)] = "SystemKey1");
+        })(D || (D = {})),
+        (function (e) {
+          (e[(e.Hidden = 0)] = "Hidden"),
+            (e[(e.Notification = 1)] = "Notification"),
+            (e[(e.Overlay = 2)] = "Overlay"),
+            (e[(e.Opaque = 3)] = "Opaque"),
+            (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
+        })(G || (G = {})),
+        (function (e) {
+          (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
+            (e[(e.Overlay = 1)] = "Overlay"),
+            (e[(e.Keyboard = 2)] = "Keyboard"),
+            (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
+            (e[(e.VR = 4)] = "VR"),
+            (e[(e.SteamLibrary = 5)] = "SteamLibrary");
+        })(A || (A = {}));
+      var M, w;
+      !(function (e) {
+        (e[(e.k_EPending = 0)] = "k_EPending"),
+          (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
+          (e[(e.k_ERejected = 2)] = "k_ERejected");
+      })(M || (M = {})),
+        (function (e) {
+          (e[(e.k_EControllerBindingType_None = 0)] =
+            "k_EControllerBindingType_None"),
+            (e[(e.k_EControllerBindingType_Key = 1)] =
+              "k_EControllerBindingType_Key"),
+            (e[(e.k_EControllerBindingType_MouseButton = 2)] =
+              "k_EControllerBindingType_MouseButton"),
+            (e[(e.k_EControllerBindingType_Gamepad = 3)] =
+              "k_EControllerBindingType_Gamepad"),
+            (e[(e.k_EControllerBindingType_Mousewheel = 4)] =
+              "k_EControllerBindingType_Mousewheel"),
+            (e[(e.k_EControllerBindingType_Modeshift = 5)] =
+              "k_EControllerBindingType_Modeshift"),
+            (e[(e.k_EControllerBindingType_GameAction = 6)] =
+              "k_EControllerBindingType_GameAction"),
+            (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
+              "k_EControllerBindingType_ControllerAction");
+        })(w || (w = {}));
+      var O;
+      !(function (e) {
+        (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
+          (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
+          (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
+            "k_ERemoteClientLaunchRequiresUI"),
+          (e[(e.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
+            "k_ERemoteClientLaunchRequiresLaunchOption"),
+          (e[(e.k_ERemoteClientLaunchRequiresEULA = 5)] =
+            "k_ERemoteClientLaunchRequiresEULA"),
+          (e[(e.k_ERemoteClientLaunchTimeout = 6)] =
+            "k_ERemoteClientLaunchTimeout"),
+          (e[(e.k_ERemoteClientLaunchStreamTimeout = 7)] =
+            "k_ERemoteClientLaunchStreamTimeout"),
+          (e[(e.k_ERemoteClientLaunchStreamClientFail = 8)] =
+            "k_ERemoteClientLaunchStreamClientFail"),
+          (e[(e.k_ERemoteClientLaunchOtherGameRunning = 9)] =
+            "k_ERemoteClientLaunchOtherGameRunning"),
+          (e[(e.k_ERemoteClientLaunchDownloadStarted = 10)] =
+            "k_ERemoteClientLaunchDownloadStarted"),
+          (e[(e.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
+            "k_ERemoteClientLaunchDownloadNoSpace"),
+          (e[(e.k_ERemoteClientLaunchDownloadFiltered = 12)] =
+            "k_ERemoteClientLaunchDownloadFiltered"),
+          (e[(e.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
+            "k_ERemoteClientLaunchDownloadRequiresUI"),
+          (e[(e.k_ERemoteClientLaunchAccessDenied = 14)] =
+            "k_ERemoteClientLaunchAccessDenied"),
+          (e[(e.k_ERemoteClientLaunchNetworkError = 15)] =
+            "k_ERemoteClientLaunchNetworkError"),
+          (e[(e.k_ERemoteClientLaunchProgress = 16)] =
+            "k_ERemoteClientLaunchProgress"),
+          (e[(e.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
+            "k_ERemoteClientLaunchParentalUnlockFailed"),
+          (e[(e.k_ERemoteClientLaunchScreenLocked = 18)] =
+            "k_ERemoteClientLaunchScreenLocked"),
+          (e[(e.k_ERemoteClientLaunchUnsupported = 19)] =
+            "k_ERemoteClientLaunchUnsupported"),
+          (e[(e.k_ERemoteClientLaunchDisabledLocal = 20)] =
+            "k_ERemoteClientLaunchDisabledLocal"),
+          (e[(e.k_ERemoteClientLaunchDisabledRemote = 21)] =
+            "k_ERemoteClientLaunchDisabledRemote"),
+          (e[(e.k_ERemoteClientLaunchBroadcasting = 22)] =
+            "k_ERemoteClientLaunchBroadcasting"),
+          (e[(e.k_ERemoteClientLaunchBusy = 23)] = "k_ERemoteClientLaunchBusy"),
+          (e[(e.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
+            "k_ERemoteClientLaunchDriversNotInstalled"),
+          (e[(e.k_ERemoteClientLaunchTransportUnavailable = 25)] =
+            "k_ERemoteClientLaunchTransportUnavailable"),
+          (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
+            "k_ERemoteClientLaunchCanceled"),
+          (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
+            "k_ERemoteClientLaunchInvisible"),
+          (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+            "k_ERemoteClientLaunchRestrictedCountry");
       })(O || (O = {}));
-      var F, U, H, W, x;
+      var F;
+      !(function (e) {
+        function a() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        (0, r.ZT)(a, e);
+      })(function () {});
+      !(function (e) {
+        (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
+          "k_EClientUINotificationGroupChatMessage"),
+          (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
+            "k_EClientUINotificationFriendChatMessage"),
+          (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
+            "k_EClientUINotificationFriendPersonaState");
+      })(F || (F = {}));
+      var U, H, W, x, Y;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
           (e[(e.Wireless = 2)] = "Wireless"),
           (e[(e.Virtual = 3)] = "Virtual");
-      })(F || (F = {})),
+      })(U || (U = {})),
         (function (e) {
           (e[(e.NotPresent = 0)] = "NotPresent"),
             (e[(e.Failed = 1)] = "Failed"),
@@ -2228,14 +2233,14 @@
             (e[(e.Connecting = 4)] = "Connecting"),
             (e[(e.Connected = 5)] = "Connected"),
             (e[(e.Retrying = 6)] = "Retrying");
-        })(U || (U = {})),
+        })(H || (H = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Weak = 1)] = "Weak"),
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(H || (H = {})),
+        })(W || (W = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -2245,32 +2250,39 @@
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(W || (W = {})),
+        })(x || (x = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(x || (x = {}));
-      var Y, q;
-      function V() {
+        })(Y || (Y = {}));
+      var q, V;
+      function z() {
         return !!window.document;
       }
       !(function (e) {
-        (e[(e.SystemKey0 = 0)] = "SystemKey0"),
-          (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(Y || (Y = {})),
+        (e[(e.k_EComputerActiveStateInvalid = 0)] =
+          "k_EComputerActiveStateInvalid"),
+          (e[(e.k_EComputerActiveStateActive = 1)] =
+            "k_EComputerActiveStateActive"),
+          (e[(e.k_EComputerActiveStateIdle = 2)] =
+            "k_EComputerActiveStateIdle");
+      })(q || (q = {})),
         (function (e) {
-          (e[(e.Hidden = 0)] = "Hidden"),
-            (e[(e.Notification = 1)] = "Notification"),
-            (e[(e.Overlay = 2)] = "Overlay"),
-            (e[(e.Opaque = 3)] = "Opaque"),
-            (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-        })(q || (q = {}));
+          (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
+            "k_EClientUsedInputTypeKeyboard"),
+            (e[(e.k_EClientUsedInputTypeMouse = 1)] =
+              "k_EClientUsedInputTypeMouse"),
+            (e[(e.k_EClientUsedInputTypeController = 2)] =
+              "k_EClientUsedInputTypeController"),
+            (e[(e.k_EClientUsedInputTypeMax = 3)] =
+              "k_EClientUsedInputTypeMax");
+        })(V || (V = {}));
       m.createContext({});
-      var z,
-        K = {
+      var K,
+        X = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -2316,13 +2328,13 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!V()) return z || (z = X()), z;
+              if (!z()) return K || (K = Z()), K;
               var e = (function (e) {
-                if (!V() || !window.document.cookie) return null;
+                if (!z() || !window.document.cookie) return null;
                 var a = document.cookie.match("(^|; )" + e + "=([^;]*)");
                 return a && a[2] ? decodeURIComponent(a[2]) : null;
               })("sessionid");
-              e || (e = X());
+              e || (e = Z());
               return e;
             })();
           },
@@ -2340,7 +2352,7 @@
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
         };
-      function X() {
+      function Z() {
         var e = (function () {
           for (var e, a, t = "", r = 0; r < 24; r++)
             t += ((e = 0),
@@ -2352,7 +2364,7 @@
         })();
         return (
           (function (e, a, t, r) {
-            if (V()) {
+            if (z()) {
               r || (r = "/");
               var o = "";
               if (void 0 !== t && t) {
@@ -2372,7 +2384,7 @@
           e
         );
       }
-      function Z(e, a, t) {
+      function J(e, a, t) {
         return {
           get: function () {
             var e = t.value.bind(this);
@@ -2384,7 +2396,7 @@
           },
         };
       }
-      var J = (function () {
+      var j = (function () {
         function e() {
           this.m_vecCallbacks = [];
         }
@@ -2414,8 +2426,7 @@
               t < r.length;
               t++
             ) {
-              var o = r[t];
-              o.apply(void 0, e);
+              r[t].apply(void 0, e);
             }
           }),
           (e.prototype.ClearAllCallbacks = function () {
@@ -2435,7 +2446,7 @@
       })(function () {}),
         (function () {
           function e(e) {
-            (this.m_callbacks = new J()), (this.m_currentValue = e);
+            (this.m_callbacks = new j()), (this.m_currentValue = e);
           }
           (e.prototype.Set = function (e) {
             (this.m_currentValue = e), this.m_callbacks.Dispatch(e);
@@ -2470,7 +2481,7 @@
             var e = this.m_fnCallback;
             (this.m_fnCallback = void 0), e();
           }),
-          (0, r.gn)([Z], e.prototype, "ScheduledInternal", null);
+          (0, r.gn)([J], e.prototype, "ScheduledInternal", null);
       })(),
         (function () {
           function e() {
@@ -2488,21 +2499,21 @@
               this.m_rgListeners = [];
             });
         })();
-      var j;
+      var Q;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Ago = 1)] = "Ago"),
           (e[(e.Remaining = 2)] = "Remaining");
-      })(j || (j = {}));
+      })(Q || (Q = {}));
       new Map();
       new Map();
       new Map(), new Map();
       new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
-      var Q = (function () {
+      var $ = (function () {
         function e() {
           (this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map()),
-            (this.m_cbkTokensChanged = new J());
+            (this.m_cbkTokensChanged = new j());
         }
         return (
           (e.InstallErrorReportingStore = function (e) {
@@ -2516,7 +2527,7 @@
           }),
           (e.IsELanguageValidInRealm = function (e, a) {
             return (
-              a === (29 === e ? w.k_ESteamRealmChina : w.k_ESteamRealmGlobal)
+              a === (29 === e ? L.k_ESteamRealmChina : L.k_ESteamRealmGlobal)
             );
           }),
           (e.GetLanguageListForRealms = function (e) {
@@ -2566,9 +2577,9 @@
           (e.prototype.GetELanguageFallbackOrder = function (a) {
             void 0 === a && (a = null);
             var t = new Array();
-            (t.push(u(K.LANGUAGE)),
-            (K.SUPPORTED_LANGUAGES || []).forEach(function (e) {
-              e.value != K.LANGUAGE && t.push(u(e.value));
+            (t.push(u(X.LANGUAGE)),
+            (X.SUPPORTED_LANGUAGES || []).forEach(function (e) {
+              e.value != X.LANGUAGE && t.push(u(e.value));
             }),
             a) &&
               e.GetLanguageListForRealms(a).forEach(function (e) {
@@ -2595,7 +2606,7 @@
                   new Error(
                     "Unable to find localization token '"
                       .concat(a, "' for language '")
-                      .concat(K.LANGUAGE, "', ")
+                      .concat(X.LANGUAGE, "', ")
                       .concat(this.m_mapTokens.size, " tokens in map")
                   ),
                   { bIncludeMessageInIdentifier: !0 }
@@ -2611,13 +2622,13 @@
           e
         );
       })();
-      function $(e) {
+      function ee(e) {
         for (var a = [], t = 1; t < arguments.length; t++)
           a[t - 1] = arguments[t];
-        var o = re.LocalizeString(e);
-        return void 0 === o ? e : ee.apply(void 0, (0, r.ev)([o], a, !1));
+        var o = oe.LocalizeString(e);
+        return void 0 === o ? e : ae.apply(void 0, (0, r.ev)([o], a, !1));
       }
-      function ee(e) {
+      function ae(e) {
         for (var a = [], t = 1; t < arguments.length; t++)
           a[t - 1] = arguments[t];
         return 0 == a.length
@@ -2651,14 +2662,14 @@
           }),
           (e.GetWithFallback = function (a, t) {
             return a
-              ? e.Get(a, t) || e.Get(a, Q.GetELanguageFallback(t))
+              ? e.Get(a, t) || e.Get(a, $.GetELanguageFallback(t))
               : null;
           });
       })();
-      var ae,
-        te,
-        re = new Q();
-      (window.LocalizationManager = re),
+      var te,
+        re,
+        oe = new $();
+      (window.LocalizationManager = oe),
         (function (e) {
           (e[(e.LeagueSelect = 0)] = "LeagueSelect"),
             (e[(e.RegionSelect = 1)] = "RegionSelect"),
@@ -2666,78 +2677,78 @@
             (e[(e.PlayerSelect = 3)] = "PlayerSelect"),
             (e[(e.Scores = 4)] = "Scores"),
             (e[(e.Leaderboard = 5)] = "Leaderboard");
-        })(ae || (ae = {})),
+        })(te || (te = {})),
         (function (e) {
           (e[(e.Teams = 0)] = "Teams"),
             (e[(e.Standings = 1)] = "Standings"),
             (e[(e.Matchups = 2)] = "Matchups");
-        })(te || (te = {}));
-      const oe = function () {
+        })(re || (re = {}));
+      const ne = function () {
           return "/feed";
         },
-        ne = function () {
+        ie = function () {
           return "/tournaments";
         },
-        ie = function (e, a) {
+        le = function (e, a) {
           return "/standings".concat(e ? "/" + e : "").concat(a ? "/" + a : "");
         },
-        le = function () {
+        ce = function () {
           return "/predictions";
         },
-        ce = function () {
+        se = function () {
           return "/search";
         },
-        se = function () {
+        me = function () {
           return "/profile";
         },
-        me = function (e) {
+        ge = function (e) {
           return "/team/".concat(e);
         },
-        ge = function (e) {
+        _e = function (e) {
           return "/player/".concat(e);
         },
-        _e = function (e, a) {
+        de = function (e, a) {
           return "/series/".concat(e, "/").concat(a);
         },
-        de = function (e, a) {
+        pe = function (e, a) {
           return "/upcomingseries/".concat(e, "/").concat(a);
         },
-        pe = function (e) {
+        ue = function (e) {
           return "/match/".concat(e);
         },
-        ue = function (e) {
+        he = function (e) {
           return "/livematch/".concat(e);
         },
-        he = function (e, a, t) {
+        ye = function (e, a, t) {
           var r = t || "results";
           switch (a) {
-            case te.Teams:
+            case re.Teams:
               return "/tournament/".concat(e, "/teams");
             default:
-            case te.Standings:
+            case re.Standings:
               return "/tournament/".concat(e, "/standings/").concat(r);
-            case te.Matchups:
+            case re.Matchups:
               return "/tournament/".concat(e, "/matchups");
           }
         },
-        ye = function (e, a, t, r) {
+        ke = function (e, a, t, r) {
           switch (e) {
-            case ae.Roster:
+            case te.Roster:
               return "/fantasy/".concat(a, "/roster");
-            case ae.PlayerSelect:
+            case te.PlayerSelect:
               return "/fantasy/".concat(a, "/playerselect/").concat(t);
-            case ae.Scores:
+            case te.Scores:
               return "/fantasy/".concat(a, "/scores/").concat(r);
-            case ae.Leaderboard:
+            case te.Leaderboard:
               return "/fantasy/".concat(a, "/leaderboard");
-            case ae.RegionSelect:
+            case te.RegionSelect:
               return "/fantasy/".concat(a, "/regionselect");
-            case ae.LeagueSelect:
+            case te.LeagueSelect:
             default:
               return "/fantasy/";
           }
         };
-      function ke() {
+      function be() {
         for (var e = [], a = 0; a < arguments.length; a++) e[a] = arguments[a];
         return e.reduce(function (e, a) {
           return a
@@ -2747,50 +2758,50 @@
                 : a
               : "object" == typeof a
               ? e
-                ? "".concat(e, " ").concat(be(a))
-                : be(a)
+                ? "".concat(e, " ").concat(Ee(a))
+                : Ee(a)
               : e
             : e;
         }, "");
       }
-      function be(e) {
+      function Ee(e) {
         return Object.keys(e).reduce(function (a, t) {
           return e[t] ? (a ? "".concat(a, " ").concat(t) : t) : a;
         }, "");
       }
-      var Ee = [
+      var ve = [
           {
-            strPath: oe(),
+            strPath: ne(),
             strToken: "#NavBar_Feed",
             strImage: "nav_feed",
             bEnabled: !0,
           },
           {
-            strPath: ne(),
+            strPath: ie(),
             strToken: "#NavBar_Tournaments",
             strImage: "nav_tournaments_new",
             bEnabled: !0,
           },
           {
-            strPath: ie("league", "na"),
+            strPath: le("league", "na"),
             strToken: "#NavBar_Standings",
             strImage: "nav_standings",
             bEnabled: !0,
           },
           {
-            strPath: le(),
+            strPath: ce(),
             strToken: "#NavBar_Predictions",
             strImage: "nav_predictions",
             bEnabled: !0,
           },
           {
-            strPath: ye(ae.LeagueSelect),
+            strPath: ke(te.LeagueSelect),
             strToken: "#NavBar_Fantasy",
             strImage: "nav_fantasy",
             bEnabled: !1,
           },
         ],
-        ve = (function (e) {
+        fe = (function (e) {
           function a() {
             var a = (null !== e && e.apply(this, arguments)) || this;
             return (a.state = { strActivePath: void 0 }), a;
@@ -2799,7 +2810,7 @@
             (0, r.ZT)(a, e),
             (a.getDerivedStateFromProps = function (e, a) {
               var t = e.location.pathname;
-              return Ee.some(function (e) {
+              return ve.some(function (e) {
                 var a = e.strPath;
                 return t === a;
               })
@@ -2813,15 +2824,15 @@
                 m.createElement(
                   "div",
                   { className: p().NavBar },
-                  Ee.map(function (a) {
+                  ve.map(function (a) {
                     var t = a.strPath,
                       r = a.strToken,
                       o = a.strImage,
                       n = a.bEnabled;
-                    return m.createElement(Ce, {
+                    return m.createElement(Ne, {
                       key: t,
                       to: t,
-                      label: $(r),
+                      label: ee(r),
                       image: i.IMG_URL + o,
                       active: t === e.state.strActivePath,
                       enabled: n,
@@ -2833,8 +2844,8 @@
             a
           );
         })(m.Component);
-      const fe = (0, _.EN)(ve);
-      var Ce = (function (e) {
+      const Ce = (0, _.EN)(fe);
+      var Ne = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2851,7 +2862,7 @@
                 g.OL,
                 {
                   to: n ? a : "#",
-                  className: ke(p().NavBarButton, !n && p().Disabled),
+                  className: be(p().NavBarButton, !n && p().Disabled),
                   activeClassName: p().Enabled,
                   isActive: function () {
                     return o;
@@ -2869,424 +2880,161 @@
             a
           );
         })(m.Component),
-        Ne = t(4242),
-        Be = t.n(Ne),
-        Se = t(798);
-      var Te = t(7948),
-        Pe = function (e) {
+        Be = t(4242),
+        Se = t.n(Be),
+        Te = t(798);
+      var Pe = t(7948),
+        Le = function (e) {
           return m.createElement(
-            Re,
+            De,
             { helpPage: e.helpPage },
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_main_news_feed.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpMain_NewsFeed")
+                  { className: Se().BottomHeader },
+                  ee("#HelpMain_NewsFeed")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#HelpMain_NewsFeedText")
+                  { className: Se().BottomText },
+                  ee("#HelpMain_NewsFeedText")
                 )
               )
             ),
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_main_tournament.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpMain_Tournaments")
+                  { className: Se().BottomHeader },
+                  ee("#HelpMain_Tournaments")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#HelpMain_TournamentsText")
+                  { className: Se().BottomText },
+                  ee("#HelpMain_TournamentsText")
                 )
               )
             ),
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_main_matches.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpMain_Matches")
+                  { className: Se().BottomHeader },
+                  ee("#HelpMain_Matches")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#HelpMain_MatchesText")
+                  { className: Se().BottomText },
+                  ee("#HelpMain_MatchesText")
                 )
               )
             ),
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_main_following.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpMain_Favorites")
+                  { className: Se().BottomHeader },
+                  ee("#HelpMain_Favorites")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#HelpMain_FavoritesText")
+                  { className: Se().BottomText },
+                  ee("#HelpMain_FavoritesText")
                 )
               )
             ),
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_main_predictions.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpMain_Predictions")
+                  { className: Se().BottomHeader },
+                  ee("#HelpMain_Predictions")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#HelpMain_PredictionsText")
+                  { className: Se().BottomText },
+                  ee("#HelpMain_PredictionsText")
                 )
               )
             ),
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_main_fantasy.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpMain_Fantasy")
+                  { className: Se().BottomHeader },
+                  ee("#HelpMain_Fantasy")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#HelpMain_FantasyText")
-                )
-              )
-            )
-          );
-        },
-        Le = function (e) {
-          return m.createElement(
-            Re,
-            { helpPage: e.helpPage, className: Be().FantasyHelp },
-            m.createElement(
-              "div",
-              { className: Be().FullHeightWidth },
-              m.createElement(
-                "div",
-                { className: Be().HelpTop },
-                m.createElement("img", {
-                  src: i.IMG_URL + "help_fantasy_tournament.png",
-                })
-              ),
-              m.createElement(
-                "div",
-                { className: Be().HelpBottom },
-                m.createElement(
-                  "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpFantasy_Page1_Header")
-                ),
-                m.createElement(
-                  "div",
-                  { className: Be().BottomText },
-                  $("#HelpFantasy_Page1_Body")
-                )
-              )
-            ),
-            m.createElement(
-              "div",
-              { className: Be().FullHeightWidth },
-              m.createElement(
-                "div",
-                { className: Be().HelpTop },
-                m.createElement("img", {
-                  src: i.IMG_URL + "help_fantasy_roster.png",
-                })
-              ),
-              m.createElement(
-                "div",
-                { className: Be().HelpBottom },
-                m.createElement(
-                  "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpFantasy_Page2_Header")
-                ),
-                m.createElement(
-                  "div",
-                  { className: Be().BottomText },
-                  $("#HelpFantasy_Page2_Body")
-                ),
-                m.createElement("div", { className: Be().Spacer }),
-                m.createElement(
-                  "div",
-                  { className: Be().BottomText },
-                  $("#HelpFantasy_Page2_Body2")
-                )
-              )
-            ),
-            m.createElement(
-              "div",
-              { className: Be().FullHeightWidth },
-              m.createElement(
-                "div",
-                { className: Be().HelpTop },
-                m.createElement("img", {
-                  src: i.IMG_URL + "help_fantasy_compare.png",
-                })
-              ),
-              m.createElement(
-                "div",
-                { className: Be().HelpBottom },
-                m.createElement(
-                  "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpFantasy_Page3_Header")
-                ),
-                m.createElement(
-                  "div",
-                  { className: Be().BottomText },
-                  $("#HelpFantasy_Page3_Body")
-                )
-              )
-            ),
-            m.createElement(
-              "div",
-              { className: Be().FullHeightWidth },
-              m.createElement(
-                "div",
-                { className: Be().HelpTop },
-                m.createElement("img", {
-                  src: i.IMG_URL + "help_fantasy_shards.png",
-                })
-              ),
-              m.createElement(
-                "div",
-                { className: Be().HelpBottom },
-                m.createElement(
-                  "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpFantasy_Page4_Header")
-                ),
-                m.createElement(
-                  "div",
-                  { className: Be().BottomText },
-                  $("#HelpFantasy_Page4_Body")
-                ),
-                m.createElement("div", { className: Be().Spacer }),
-                m.createElement(
-                  "div",
-                  { className: ke(Be().BottomText, Be().SubHeader) },
-                  $("#HelpFantasy_Page4_Qualifiers")
-                ),
-                m.createElement(
-                  "div",
-                  { className: ke(Be().BottomText, Be().Caps, Be().Gold) },
-                  $("#HelpFantasy_Page4_Details1")
-                ),
-                m.createElement(
-                  "div",
-                  { className: ke(Be().BottomText, Be().Caps, Be().Silver) },
-                  $("#HelpFantasy_Page4_Details2")
-                ),
-                m.createElement(
-                  "div",
-                  { className: ke(Be().BottomText, Be().Caps, Be().Bronze) },
-                  $("#HelpFantasy_Page4_Details3")
-                ),
-                m.createElement("div", { className: Be().Spacer }),
-                m.createElement(
-                  "div",
-                  { className: ke(Be().BottomText, Be().SubHeader) },
-                  $("#HelpFantasy_Page4_MainEvents")
-                ),
-                m.createElement(
-                  "div",
-                  { className: ke(Be().BottomText, Be().Caps, Be().Gold) },
-                  $("#HelpFantasy_Page4_Details1b")
-                ),
-                m.createElement(
-                  "div",
-                  { className: ke(Be().BottomText, Be().Caps, Be().Silver) },
-                  $("#HelpFantasy_Page4_Details2b")
-                ),
-                m.createElement(
-                  "div",
-                  { className: ke(Be().BottomText, Be().Caps, Be().Bronze) },
-                  $("#HelpFantasy_Page4_Details3b")
-                )
-              )
-            ),
-            m.createElement(
-              "div",
-              { className: Be().FullHeightWidth },
-              m.createElement(
-                "div",
-                { className: Be().HelpTop },
-                m.createElement("img", {
-                  src: i.IMG_URL + "help_fantasy_ranking.png",
-                })
-              ),
-              m.createElement(
-                "div",
-                { className: Be().HelpBottom },
-                m.createElement(
-                  "div",
-                  { className: Be().BottomHeader },
-                  $("#HelpFantasy_Page5_Header")
-                ),
-                m.createElement(
-                  "div",
-                  { className: Be().BottomText },
-                  $("#HelpFantasy_Page5_Body")
-                ),
-                m.createElement(
-                  "div",
-                  { className: Be().TwoColumn },
-                  m.createElement(
-                    "div",
-                    { className: Be().Column },
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details1")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details2")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details3")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details4")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details5")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details6")
-                    )
-                  ),
-                  m.createElement(
-                    "div",
-                    { className: Be().Column },
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details7")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details8")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details9")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details10")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details11")
-                    ),
-                    m.createElement("div", { className: Be().Spacer }),
-                    m.createElement(
-                      "div",
-                      { className: ke(Be().BottomText, Be().Small) },
-                      $("#HelpFantasy_Page5_Details12")
-                    )
-                  )
+                  { className: Se().BottomText },
+                  ee("#HelpMain_FantasyText")
                 )
               )
             )
@@ -3294,92 +3042,355 @@
         },
         Ie = function (e) {
           return m.createElement(
-            Re,
-            { helpPage: e.helpPage, className: Be().PredictionHelp },
+            De,
+            { helpPage: e.helpPage, className: Se().FantasyHelp },
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
+                m.createElement("img", {
+                  src: i.IMG_URL + "help_fantasy_tournament.png",
+                })
+              ),
+              m.createElement(
+                "div",
+                { className: Se().HelpBottom },
+                m.createElement(
+                  "div",
+                  { className: Se().BottomHeader },
+                  ee("#HelpFantasy_Page1_Header")
+                ),
+                m.createElement(
+                  "div",
+                  { className: Se().BottomText },
+                  ee("#HelpFantasy_Page1_Body")
+                )
+              )
+            ),
+            m.createElement(
+              "div",
+              { className: Se().FullHeightWidth },
+              m.createElement(
+                "div",
+                { className: Se().HelpTop },
+                m.createElement("img", {
+                  src: i.IMG_URL + "help_fantasy_roster.png",
+                })
+              ),
+              m.createElement(
+                "div",
+                { className: Se().HelpBottom },
+                m.createElement(
+                  "div",
+                  { className: Se().BottomHeader },
+                  ee("#HelpFantasy_Page2_Header")
+                ),
+                m.createElement(
+                  "div",
+                  { className: Se().BottomText },
+                  ee("#HelpFantasy_Page2_Body")
+                ),
+                m.createElement("div", { className: Se().Spacer }),
+                m.createElement(
+                  "div",
+                  { className: Se().BottomText },
+                  ee("#HelpFantasy_Page2_Body2")
+                )
+              )
+            ),
+            m.createElement(
+              "div",
+              { className: Se().FullHeightWidth },
+              m.createElement(
+                "div",
+                { className: Se().HelpTop },
+                m.createElement("img", {
+                  src: i.IMG_URL + "help_fantasy_compare.png",
+                })
+              ),
+              m.createElement(
+                "div",
+                { className: Se().HelpBottom },
+                m.createElement(
+                  "div",
+                  { className: Se().BottomHeader },
+                  ee("#HelpFantasy_Page3_Header")
+                ),
+                m.createElement(
+                  "div",
+                  { className: Se().BottomText },
+                  ee("#HelpFantasy_Page3_Body")
+                )
+              )
+            ),
+            m.createElement(
+              "div",
+              { className: Se().FullHeightWidth },
+              m.createElement(
+                "div",
+                { className: Se().HelpTop },
+                m.createElement("img", {
+                  src: i.IMG_URL + "help_fantasy_shards.png",
+                })
+              ),
+              m.createElement(
+                "div",
+                { className: Se().HelpBottom },
+                m.createElement(
+                  "div",
+                  { className: Se().BottomHeader },
+                  ee("#HelpFantasy_Page4_Header")
+                ),
+                m.createElement(
+                  "div",
+                  { className: Se().BottomText },
+                  ee("#HelpFantasy_Page4_Body")
+                ),
+                m.createElement("div", { className: Se().Spacer }),
+                m.createElement(
+                  "div",
+                  { className: be(Se().BottomText, Se().SubHeader) },
+                  ee("#HelpFantasy_Page4_Qualifiers")
+                ),
+                m.createElement(
+                  "div",
+                  { className: be(Se().BottomText, Se().Caps, Se().Gold) },
+                  ee("#HelpFantasy_Page4_Details1")
+                ),
+                m.createElement(
+                  "div",
+                  { className: be(Se().BottomText, Se().Caps, Se().Silver) },
+                  ee("#HelpFantasy_Page4_Details2")
+                ),
+                m.createElement(
+                  "div",
+                  { className: be(Se().BottomText, Se().Caps, Se().Bronze) },
+                  ee("#HelpFantasy_Page4_Details3")
+                ),
+                m.createElement("div", { className: Se().Spacer }),
+                m.createElement(
+                  "div",
+                  { className: be(Se().BottomText, Se().SubHeader) },
+                  ee("#HelpFantasy_Page4_MainEvents")
+                ),
+                m.createElement(
+                  "div",
+                  { className: be(Se().BottomText, Se().Caps, Se().Gold) },
+                  ee("#HelpFantasy_Page4_Details1b")
+                ),
+                m.createElement(
+                  "div",
+                  { className: be(Se().BottomText, Se().Caps, Se().Silver) },
+                  ee("#HelpFantasy_Page4_Details2b")
+                ),
+                m.createElement(
+                  "div",
+                  { className: be(Se().BottomText, Se().Caps, Se().Bronze) },
+                  ee("#HelpFantasy_Page4_Details3b")
+                )
+              )
+            ),
+            m.createElement(
+              "div",
+              { className: Se().FullHeightWidth },
+              m.createElement(
+                "div",
+                { className: Se().HelpTop },
+                m.createElement("img", {
+                  src: i.IMG_URL + "help_fantasy_ranking.png",
+                })
+              ),
+              m.createElement(
+                "div",
+                { className: Se().HelpBottom },
+                m.createElement(
+                  "div",
+                  { className: Se().BottomHeader },
+                  ee("#HelpFantasy_Page5_Header")
+                ),
+                m.createElement(
+                  "div",
+                  { className: Se().BottomText },
+                  ee("#HelpFantasy_Page5_Body")
+                ),
+                m.createElement(
+                  "div",
+                  { className: Se().TwoColumn },
+                  m.createElement(
+                    "div",
+                    { className: Se().Column },
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details1")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details2")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details3")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details4")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details5")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details6")
+                    )
+                  ),
+                  m.createElement(
+                    "div",
+                    { className: Se().Column },
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details7")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details8")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details9")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details10")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details11")
+                    ),
+                    m.createElement("div", { className: Se().Spacer }),
+                    m.createElement(
+                      "div",
+                      { className: be(Se().BottomText, Se().Small) },
+                      ee("#HelpFantasy_Page5_Details12")
+                    )
+                  )
+                )
+              )
+            )
+          );
+        },
+        Re = function (e) {
+          return m.createElement(
+            De,
+            { helpPage: e.helpPage, className: Se().PredictionHelp },
+            m.createElement(
+              "div",
+              { className: Se().FullHeightWidth },
+              m.createElement(
+                "div",
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_prediction_pick.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#PredictionsHelp_PickYourTeam")
+                  { className: Se().BottomHeader },
+                  ee("#PredictionsHelp_PickYourTeam")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#PredictionsHelp_PickYourTeamDetail")
+                  { className: Se().BottomText },
+                  ee("#PredictionsHelp_PickYourTeamDetail")
                 ),
-                m.createElement("div", { className: Be().Spacer }),
+                m.createElement("div", { className: Se().Spacer }),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#PredictionsHelp_PickYourTeamSubDetail")
+                  { className: Se().BottomText },
+                  ee("#PredictionsHelp_PickYourTeamSubDetail")
                 )
               )
             ),
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_prediction_wager.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#PredictionsHelp_WagerYourShards")
+                  { className: Se().BottomHeader },
+                  ee("#PredictionsHelp_WagerYourShards")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#PredictionsHelp_WagerYourShardsDetail")
+                  { className: Se().BottomText },
+                  ee("#PredictionsHelp_WagerYourShardsDetail")
                 )
               )
             ),
             m.createElement(
               "div",
-              { className: Be().FullHeightWidth },
+              { className: Se().FullHeightWidth },
               m.createElement(
                 "div",
-                { className: Be().HelpTop },
+                { className: Se().HelpTop },
                 m.createElement("img", {
                   src: i.IMG_URL + "help_prediction_win.png",
                 })
               ),
               m.createElement(
                 "div",
-                { className: Be().HelpBottom },
+                { className: Se().HelpBottom },
                 m.createElement(
                   "div",
-                  { className: Be().BottomHeader },
-                  $("#PredictionsHelp_WinOrLose")
+                  { className: Se().BottomHeader },
+                  ee("#PredictionsHelp_WinOrLose")
                 ),
                 m.createElement(
                   "div",
-                  { className: Be().BottomText },
-                  $("#PredictionsHelp_WinOrLoseDetail")
+                  { className: Se().BottomText },
+                  ee("#PredictionsHelp_WinOrLoseDetail")
                 )
               )
             )
           );
         },
-        Re = (function (e) {
+        De = (function (e) {
           function a(a) {
             var t = e.call(this, a) || this;
             return (
@@ -3394,7 +3405,7 @@
               this.setState({ touching: !0 }), e.stopPropagation();
             }),
             (a.prototype.onTouchEnd = function (e) {
-              if (Te.isIOS) {
+              if (Pe.isIOS) {
                 var a =
                     this.refHelpPages.current.scrollLeft +
                     10 * this.lastScrollDelta,
@@ -3408,7 +3419,7 @@
                 ((this.lastScrollDelta =
                   this.refHelpPages.current.scrollLeft - this.lastScrollPos),
                 (this.lastScrollPos = this.refHelpPages.current.scrollLeft),
-                !Te.isIOS)
+                !Pe.isIOS)
               ) {
                 var e = Math.round(
                   this.refHelpPages.current.scrollLeft /
@@ -3422,9 +3433,9 @@
               this.refHelpPages.current.addEventListener("scroll", function () {
                 e.updateScrollPos();
               }),
-                Te.isIOS &&
+                Pe.isIOS &&
                   (this.intervalHandle = setInterval(function () {
-                    if (lr.shouldShowHelp(e.props.helpPage)) {
+                    if (cr.shouldShowHelp(e.props.helpPage)) {
                       var a = Date.now(),
                         t = (a - e.lastScrollUpdate) / 1e3;
                       if (((e.lastScrollUpdate = a), !e.state.touching)) {
@@ -3442,7 +3453,7 @@
               clearInterval(this.intervalHandle);
             }),
             (a.prototype.onDismiss = function () {
-              lr.setHelpShown(this.props.helpPage);
+              cr.setHelpShown(this.props.helpPage);
             }),
             (a.prototype.scrollHelp = function (e) {
               this.refHelpPages.current.scrollTo({
@@ -3467,11 +3478,11 @@
                     "div",
                     {
                       key: "helppage_" + this.props.helpPage + "_" + o,
-                      className: ke(
-                        Be().HelpPage,
-                        o < a && Be().OffLeft,
-                        o == a && Be().OnScreen,
-                        o > a && Be().OffRight
+                      className: be(
+                        Se().HelpPage,
+                        o < a && Se().OffLeft,
+                        o == a && Se().OnScreen,
+                        o > a && Se().OffRight
                       ),
                     },
                     t[o]
@@ -3482,19 +3493,19 @@
                 n.push(
                   m.createElement("div", {
                     key: "helppip_" + this.props.helpPage + "_" + o,
-                    className: ke(Be().Pip, o == a && Be().Selected),
+                    className: be(Se().Pip, o == a && Se().Selected),
                   })
                 );
               var l = m.createElement("div", null),
                 c = m.createElement("div", null);
               return (
-                Te.isMobile ||
+                Pe.isMobile ||
                   ((l = m.createElement("img", {
                     onClick: function () {
                       return e.scrollHelp(-1);
                     },
                     src: i.IMG_URL + "back_arrow.png",
-                    className: Be().PageLeft,
+                    className: Se().PageLeft,
                   })),
                   (c = m.createElement(
                     "div",
@@ -3505,15 +3516,15 @@
                     },
                     m.createElement("img", {
                       src: i.IMG_URL + "forward_arrow.png",
-                      className: Be().PageRight,
+                      className: Se().PageRight,
                     })
                   ))),
                 m.createElement(
                   "div",
                   {
-                    className: ke(
-                      Be().HelpContainer,
-                      lr.shouldShowHelp(this.props.helpPage) && Be().Show
+                    className: be(
+                      Se().HelpContainer,
+                      cr.shouldShowHelp(this.props.helpPage) && Se().Show
                     ),
                     onTouchStart: this.onTouchStart,
                     onTouchEnd: this.onTouchEnd,
@@ -3521,7 +3532,7 @@
                   m.createElement(
                     "div",
                     {
-                      className: ke(Be().HelpPages, this.props.className),
+                      className: be(Se().HelpPages, this.props.className),
                       ref: this.refHelpPages,
                     },
                     r
@@ -3530,30 +3541,30 @@
                   c,
                   m.createElement(
                     "div",
-                    { className: Be().PageSelector },
+                    { className: Se().PageSelector },
                     m.createElement(
                       "div",
-                      { className: Be().PageSelectorBottom },
-                      m.createElement("div", { className: Be().DismissSpacer }),
-                      m.createElement("div", { className: Be().Pips }, n),
+                      { className: Se().PageSelectorBottom },
+                      m.createElement("div", { className: Se().DismissSpacer }),
+                      m.createElement("div", { className: Se().Pips }, n),
                       m.createElement(
                         "div",
-                        { className: Be().Dismiss, onClick: this.onDismiss },
-                        $(a < t.length - 1 ? "#Help_Skip" : "#Help_Dismiss")
+                        { className: Se().Dismiss, onClick: this.onDismiss },
+                        ee(a < t.length - 1 ? "#Help_Skip" : "#Help_Dismiss")
                       )
                     )
                   )
                 )
               );
             }),
-            (0, r.gn)([Z], a.prototype, "onTouchStart", null),
-            (0, r.gn)([Z], a.prototype, "onTouchEnd", null),
-            (0, r.gn)([Z], a.prototype, "onDismiss", null),
-            (0, r.gn)([Z], a.prototype, "scrollHelp", null),
-            (a = (0, r.gn)([Se.Pi], a))
+            (0, r.gn)([J], a.prototype, "onTouchStart", null),
+            (0, r.gn)([J], a.prototype, "onTouchEnd", null),
+            (0, r.gn)([J], a.prototype, "onDismiss", null),
+            (0, r.gn)([J], a.prototype, "scrollHelp", null),
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component);
-      const De = (function (e) {
+      const Ge = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -3561,25 +3572,25 @@
           (0, r.ZT)(a, e),
           (a.prototype.render = function () {
             var e =
-                lr.shouldShowHelp(Qt.Main) ||
-                lr.shouldShowHelp(Qt.Predictions) ||
-                lr.shouldShowHelp(Qt.Fantasy),
-              a = lr.shouldShowHelp(Qt.Main)
-                ? m.createElement(Pe, { helpPage: Qt.Main })
+                cr.shouldShowHelp($t.Main) ||
+                cr.shouldShowHelp($t.Predictions) ||
+                cr.shouldShowHelp($t.Fantasy),
+              a = cr.shouldShowHelp($t.Main)
+                ? m.createElement(Le, { helpPage: $t.Main })
                 : m.createElement("div", null),
-              t = lr.shouldShowHelp(Qt.Predictions)
-                ? m.createElement(Ie, { helpPage: Qt.Predictions })
+              t = cr.shouldShowHelp($t.Predictions)
+                ? m.createElement(Re, { helpPage: $t.Predictions })
                 : m.createElement("div", null),
-              r = lr.shouldShowHelp(Qt.Fantasy)
-                ? m.createElement(Le, { helpPage: Qt.Fantasy })
+              r = cr.shouldShowHelp($t.Fantasy)
+                ? m.createElement(Ie, { helpPage: $t.Fantasy })
                 : m.createElement("div", null),
               o = {};
             return (
-              Te.isAndroid && (o = { backgroundColor: "#0C2F42" }),
+              Pe.isAndroid && (o = { backgroundColor: "#0C2F42" }),
               m.createElement(
                 "div",
                 {
-                  className: ke(Be().HelpOverlay, e && Be().ShowBackground),
+                  className: be(Se().HelpOverlay, e && Se().ShowBackground),
                   style: o,
                 },
                 a,
@@ -3588,12 +3599,12 @@
               )
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Ge = t(6806),
-        Ae = t.n(Ge);
-      const Me = (function (e) {
+      var Ae = t(6806),
+        Me = t.n(Ae);
+      const we = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -3605,51 +3616,51 @@
           (a.prototype.render = function () {
             return m.createElement(
               "div",
-              { className: ke(Ae().GCDown, i.GC_DOWN && Ae().Display) },
+              { className: be(Me().GCDown, i.GC_DOWN && Me().Display) },
               m.createElement("img", {
                 src: i.IMG_URL + "error_artwork.png",
-                className: Ae().ErrorArt,
+                className: Me().ErrorArt,
               }),
               m.createElement(
                 "div",
-                { className: Ae().ErrorHeading },
-                $("#GCDown_Header")
+                { className: Me().ErrorHeading },
+                ee("#GCDown_Header")
               ),
               m.createElement(
                 "div",
-                { className: Ae().ErrorMessage },
-                $("#GCDown_Message")
+                { className: Me().ErrorMessage },
+                ee("#GCDown_Message")
               ),
               m.createElement(
                 "div",
-                { className: Ae().RetryButton, onClick: this.reload },
-                $("#GCDown_Retry")
+                { className: Me().RetryButton, onClick: this.reload },
+                ee("#GCDown_Retry")
               )
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var we = t(7214),
-        Oe = t.n(we),
-        Fe = t(2275),
-        Ue = t.n(Fe),
-        He = t(546),
-        We = t.n(He),
-        xe = t(8882),
-        Ye = t.n(xe),
-        qe = t(3859),
-        Ve = t.n(qe),
-        ze = t(7555),
-        Ke = t.n(ze),
-        Xe = m.memo(function (e) {
+      var Oe = t(7214),
+        Fe = t.n(Oe),
+        Ue = t(2275),
+        He = t.n(Ue),
+        We = t(546),
+        xe = t.n(We),
+        Ye = t(8882),
+        qe = t.n(Ye),
+        Ve = t(3859),
+        ze = t.n(Ve),
+        Ke = t(7555),
+        Xe = t.n(Ke),
+        Ze = m.memo(function (e) {
           var a = e.className,
             t = e.size,
             r = e.string,
             o = e.position,
             n = e.static,
             i = e.msDelayAppear,
-            l = [Ke().LoadingWrapper, "SteamLogoThrobber", Ze(t)],
+            l = [Xe().LoadingWrapper, "SteamLogoThrobber", Je(t)],
             c = m.useState(!i),
             s = c[0],
             g = c[1];
@@ -3667,16 +3678,16 @@
               },
               [i, s]
             ),
-            void 0 === r && l.push(Ke().noString),
+            void 0 === r && l.push(Xe().noString),
             a && l.push(a),
-            n && l.push(Ke().Static),
+            n && l.push(Xe().Static),
             m.createElement(
               "div",
               {
-                className: ke(
-                  "center" == o && Ke().throbber_center_wrapper,
-                  i && Ke().ThrobberDelayAppear,
-                  s && Ke().Visible
+                className: be(
+                  "center" == o && Xe().throbber_center_wrapper,
+                  i && Xe().ThrobberDelayAppear,
+                  s && Xe().Visible
                 ),
               },
               s &&
@@ -3685,31 +3696,31 @@
                   { className: l.join(" ") },
                   m.createElement(
                     "div",
-                    { className: Ke().Throbber },
-                    m.createElement(Je, { className: Ke().base }),
-                    m.createElement(Je, { className: Ke().blur })
+                    { className: Xe().Throbber },
+                    m.createElement(je, { className: Xe().base }),
+                    m.createElement(je, { className: Xe().blur })
                   )
                 ),
               Boolean(r) &&
-                m.createElement("div", { className: Ke().ThrobberText }, r)
+                m.createElement("div", { className: Xe().ThrobberText }, r)
             )
           );
         });
-      function Ze(e) {
+      function Je(e) {
         switch (e) {
           case "small":
-            return Ke().throbber_small;
+            return Xe().throbber_small;
           case "medium":
-            return Ke().throbber_medium;
+            return Xe().throbber_medium;
           case "xlarge":
-            return Ke().throbber_xlarge;
+            return Xe().throbber_xlarge;
           case "xxlarge":
-            return Ke().throbber_xxlarge;
+            return Xe().throbber_xxlarge;
           default:
-            return Ke().throbber_large;
+            return Xe().throbber_large;
         }
       }
-      function Je(e) {
+      function je(e) {
         var a = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (a += e.className),
@@ -3728,9 +3739,9 @@
             },
             m.createElement(
               "g",
-              { className: Ke().partCircle },
+              { className: Xe().partCircle },
               m.createElement("path", {
-                className: Ke().roundOuter,
+                className: Xe().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -3738,7 +3749,7 @@
                 d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               m.createElement("path", {
-                className: Ke().roundOuter,
+                className: Xe().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -3746,7 +3757,7 @@
                 d: "M201.432,101.166",
               }),
               m.createElement("path", {
-                className: Ke().roundOuter,
+                className: Xe().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -3756,9 +3767,9 @@
             ),
             m.createElement(
               "g",
-              { className: Ke().mainOutline },
+              { className: Xe().mainOutline },
               m.createElement("path", {
-                className: Ke().roundFill,
+                className: Xe().roundFill,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -3766,7 +3777,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundOuterOutline,
+                className: Xe().roundOuterOutline,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3775,7 +3786,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber01,
+                className: Xe().roundThrobber01,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3784,7 +3795,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber02,
+                className: Xe().roundThrobber02,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3793,7 +3804,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber03,
+                className: Xe().roundThrobber03,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3802,7 +3813,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber04,
+                className: Xe().roundThrobber04,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3811,7 +3822,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber05,
+                className: Xe().roundThrobber05,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3820,7 +3831,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber06,
+                className: Xe().roundThrobber06,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3829,7 +3840,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber07,
+                className: Xe().roundThrobber07,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3838,7 +3849,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber08,
+                className: Xe().roundThrobber08,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3847,7 +3858,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber09,
+                className: Xe().roundThrobber09,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3856,7 +3867,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber10,
+                className: Xe().roundThrobber10,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3865,7 +3876,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber11,
+                className: Xe().roundThrobber11,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3874,7 +3885,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber12,
+                className: Xe().roundThrobber12,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3883,7 +3894,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber13,
+                className: Xe().roundThrobber13,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3892,7 +3903,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber14,
+                className: Xe().roundThrobber14,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3901,7 +3912,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               m.createElement("path", {
-                className: Ke().roundThrobber15,
+                className: Xe().roundThrobber15,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -3912,7 +3923,7 @@
             ),
             m.createElement(
               "g",
-              { className: Ke().bottomCircle },
+              { className: Xe().bottomCircle },
               m.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -3920,7 +3931,7 @@
             ),
             m.createElement(
               "g",
-              { className: Ke().topCircle },
+              { className: Xe().topCircle },
               m.createElement("circle", {
                 fill: "none",
                 stroke: "#ffffff",
@@ -3934,17 +3945,17 @@
           )
         );
       }
-      var je,
-        Qe = t(3082),
-        $e = t.n(Qe),
-        ea = t(9538),
-        aa = t.n(ea);
+      var Qe,
+        $e = t(3082),
+        ea = t.n($e),
+        aa = t(9538),
+        ta = t.n(aa);
       !(function (e) {
         (e[(e.Large = 0)] = "Large"),
           (e[(e.Medium = 1)] = "Medium"),
           (e[(e.Small = 2)] = "Small");
-      })(je || (je = {}));
-      var ta = (function (e) {
+      })(Qe || (Qe = {}));
+      var ra = (function (e) {
         function a() {
           var a = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -3974,15 +3985,15 @@
                 return "".concat(i.IMG_URL_BASE, "teams/team_unknown.png");
             } else
               switch (this.props.size) {
-                case je.Large:
+                case Qe.Large:
                   return ""
                     .concat(i.IMG_URL_BASE, "teams/")
                     .concat(this.props.team_id, ".png");
-                case je.Medium:
+                case Qe.Medium:
                   return ""
                     .concat(i.IMG_URL_BASE, "teams/square_medium/")
                     .concat(this.props.team_id, ".png");
-                case je.Small:
+                case Qe.Small:
                   return ""
                     .concat(i.IMG_URL_BASE, "teams/square_small/")
                     .concat(this.props.team_id, ".png");
@@ -3999,27 +4010,27 @@
           (a.prototype.render = function () {
             var e = "";
             switch (this.props.size) {
-              case je.Large:
-                e = aa().TeamLogoLarge;
+              case Qe.Large:
+                e = ta().TeamLogoLarge;
                 break;
-              case je.Medium:
-                e = aa().TeamLogoMedium;
+              case Qe.Medium:
+                e = ta().TeamLogoMedium;
                 break;
-              case je.Small:
-                e = aa().TeamLogoSmall;
+              case Qe.Small:
+                e = ta().TeamLogoSmall;
             }
             return m.createElement("img", {
-              className: ke(e, this.props.className),
+              className: be(e, this.props.className),
               src: this.getImageURL(),
               onError: this.HandleError,
             });
           }),
-          (0, r.gn)([Z], a.prototype, "getImageURL", null),
-          (0, r.gn)([Z], a.prototype, "HandleError", null),
-          (a = (0, r.gn)([Se.Pi], a))
+          (0, r.gn)([J], a.prototype, "getImageURL", null),
+          (0, r.gn)([J], a.prototype, "HandleError", null),
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      const ra = (function (e) {
+      const oa = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { bVisible: !1 }), t;
@@ -4032,7 +4043,7 @@
           (a.prototype.getContents = function () {
             if (!this.state.bVisible)
               return m.createElement("div", { key: this.props.nSeriesID });
-            var e = lr.getSeriesData(
+            var e = cr.getSeriesData(
               this.props.nLeagueID,
               this.props.nSeriesID
             );
@@ -4040,12 +4051,12 @@
               return m.createElement(
                 "div",
                 {
-                  className: ke(Ve().ThrobberSpacing, We().FadeInDelay),
+                  className: be(ze().ThrobberSpacing, xe().FadeInDelay),
                   key: this.props.nSeriesID,
                 },
-                m.createElement(Xe, {
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("#Loading"),
+                  string: ee("#Loading"),
                   position: "center",
                 })
               );
@@ -4083,82 +4094,82 @@
                 (1 == e.series_type && 2 == d) ||
                 (2 == e.series_type && 3 == d) ||
                 (3 == e.series_type && 2 == p)) &&
-                (r = $("#Final")),
+                (r = ee("#Final")),
               (a = "" + (o[e.team_1.team_id] || 0)),
               (t = "" + (o[e.team_2.team_id] || 0)),
               m.createElement(
                 "div",
-                { className: We().FadeIn, key: this.props.nSeriesID },
+                { className: xe().FadeIn, key: this.props.nSeriesID },
                 m.createElement(
                   "div",
-                  { className: Ve().Columns },
+                  { className: ze().Columns },
                   m.createElement(
                     "div",
-                    { className: Ve().Team },
-                    m.createElement(ta, {
+                    { className: ze().Team },
+                    m.createElement(ra, {
                       team_id: e.team_1.team_id,
-                      size: je.Medium,
+                      size: Qe.Medium,
                     }),
                     m.createElement(
                       "div",
-                      { className: Ve().TeamName },
+                      { className: ze().TeamName },
                       e.team_1.team_name
                     )
                   ),
                   m.createElement(
                     "div",
-                    { className: Ve().Details },
-                    m.createElement("div", { className: Ve().GameOrFinal }, r),
+                    { className: ze().Details },
+                    m.createElement("div", { className: ze().GameOrFinal }, r),
                     m.createElement(
                       "div",
-                      { className: Ve().Score },
-                      m.createElement("div", { className: Ve().ScoreValue }, a),
+                      { className: ze().Score },
+                      m.createElement("div", { className: ze().ScoreValue }, a),
                       m.createElement(
                         "div",
-                        { className: Ve().ScoreSeparator },
+                        { className: ze().ScoreSeparator },
                         "-"
                       ),
-                      m.createElement("div", { className: Ve().ScoreValue }, t)
+                      m.createElement("div", { className: ze().ScoreValue }, t)
                     ),
-                    m.createElement("div", { className: Ve().Time }, "")
+                    m.createElement("div", { className: ze().Time }, "")
                   ),
                   m.createElement(
                     "div",
-                    { className: Ve().Team },
-                    m.createElement(ta, {
+                    { className: ze().Team },
+                    m.createElement(ra, {
                       team_id: e.team_2.team_id,
-                      size: je.Medium,
+                      size: Qe.Medium,
                     }),
                     m.createElement(
                       "div",
-                      { className: Ve().TeamName },
+                      { className: ze().TeamName },
                       e.team_2.team_name
                     )
                   )
                 ),
-                m.createElement("div", { className: Ve().Timestamp }, _)
+                m.createElement("div", { className: ze().Timestamp }, _)
               )
             );
           }),
           (a.prototype.render = function () {
             return m.createElement(
-              $e(),
+              ea(),
               { onChange: this.onChange },
               m.createElement(
                 g.rU,
                 {
-                  to: _e(this.props.nLeagueID, this.props.nSeriesID),
-                  className: Ve().SeriesCard,
+                  to: de(this.props.nLeagueID, this.props.nSeriesID),
+                  className: ze().SeriesCard,
                 },
                 this.getContents()
               )
             );
           }),
-          (0, r.gn)([Z], a.prototype, "onChange", null),
-          (a = (0, r.gn)([Se.Pi], a))
+          (0, r.gn)([J], a.prototype, "onChange", null),
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      const oa = (function (e) {
+      const na = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { bVisible: !1 }), t;
@@ -4171,17 +4182,17 @@
           (a.prototype.getContents = function () {
             if (!this.state.bVisible)
               return m.createElement("div", { key: this.props.matchID });
-            var e = lr.getMatchMinimal(this.props.leagueID, this.props.matchID);
+            var e = cr.getMatchMinimal(this.props.leagueID, this.props.matchID);
             if (!e)
               return m.createElement(
                 "div",
                 {
-                  className: ke(Ve().ThrobberSpacing, We().FadeInDelay),
+                  className: be(ze().ThrobberSpacing, xe().FadeInDelay),
                   key: this.props.matchID,
                 },
-                m.createElement(Xe, {
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("Loading"),
+                  string: ee("Loading"),
                   position: "center",
                 })
               );
@@ -4200,62 +4211,62 @@
                   : (t < 10 ? "0" : "") + t + ":" + (r < 10 ? "0" : "") + r;
             return m.createElement(
               "div",
-              { className: We().FadeIn, key: this.props.matchID },
+              { className: xe().FadeIn, key: this.props.matchID },
               m.createElement(
                 "div",
-                { className: Ve().Columns },
+                { className: ze().Columns },
                 m.createElement(
                   "div",
-                  { className: Ve().Team },
-                  m.createElement(ta, {
+                  { className: ze().Team },
+                  m.createElement(ra, {
                     team_id: e.tourney.radiant_team_id,
-                    size: je.Medium,
+                    size: Qe.Medium,
                   }),
                   m.createElement(
                     "div",
-                    { className: Ve().TeamName },
+                    { className: ze().TeamName },
                     e.tourney.radiant_team_name
                   )
                 ),
                 m.createElement(
                   "div",
-                  { className: Ve().Details },
+                  { className: ze().Details },
                   m.createElement(
                     "div",
-                    { className: Ve().Game },
-                    $("#Series_Game", e.tourney.series_game + 1)
+                    { className: ze().Game },
+                    ee("#Series_Game", e.tourney.series_game + 1)
                   ),
                   m.createElement(
                     "div",
-                    { className: Ve().Score },
+                    { className: ze().Score },
                     m.createElement(
                       "div",
-                      { className: Ve().ScoreValue },
+                      { className: ze().ScoreValue },
                       e.radiant_score
                     ),
                     m.createElement(
                       "div",
-                      { className: Ve().ScoreSeparator },
+                      { className: ze().ScoreSeparator },
                       "-"
                     ),
                     m.createElement(
                       "div",
-                      { className: Ve().ScoreValue },
+                      { className: ze().ScoreValue },
                       e.dire_score
                     )
                   ),
-                  m.createElement("div", { className: Ve().Time }, o)
+                  m.createElement("div", { className: ze().Time }, o)
                 ),
                 m.createElement(
                   "div",
-                  { className: Ve().Team },
-                  m.createElement(ta, {
+                  { className: ze().Team },
+                  m.createElement(ra, {
                     team_id: e.tourney.dire_team_id,
-                    size: je.Medium,
+                    size: Qe.Medium,
                   }),
                   m.createElement(
                     "div",
-                    { className: Ve().TeamName },
+                    { className: ze().TeamName },
                     e.tourney.dire_team_name
                   )
                 )
@@ -4264,26 +4275,26 @@
           }),
           (a.prototype.render = function () {
             return m.createElement(
-              $e(),
+              ea(),
               { onChange: this.onChange },
               m.createElement(
                 g.rU,
-                { to: pe(this.props.matchID), className: Ve().MatchCard },
+                { to: ue(this.props.matchID), className: ze().MatchCard },
                 this.getContents()
               )
             );
           }),
-          (0, r.gn)([Z], a.prototype, "onChange", null),
-          (a = (0, r.gn)([Se.Pi], a))
+          (0, r.gn)([J], a.prototype, "onChange", null),
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      const na = Object.assign(
+      const ia = Object.assign(
         function (e) {
           var a = e.children,
             t = (0, r._T)(e, ["children"]);
           return m.createElement(
             "div",
-            (0, r.pi)({}, t, { className: ke(Ve().card, t.className) }),
+            (0, r.pi)({}, t, { className: be(ze().card, t.className) }),
             a
           );
         },
@@ -4291,35 +4302,35 @@
           Image: function (e) {
             return m.createElement(
               "img",
-              (0, r.pi)({}, e, { className: ke(Ve().image, e.className) })
+              (0, r.pi)({}, e, { className: be(ze().image, e.className) })
             );
           },
           Content: function (e) {
             return m.createElement(
               "div",
-              (0, r.pi)({}, e, { className: ke(Ve().content, e.className) })
+              (0, r.pi)({}, e, { className: be(ze().content, e.className) })
             );
           },
         }
       );
-      function ia(e) {
+      function la(e) {
         var a = e % 100,
           t = "#LOC_Ordinal_Prefix_" + a,
-          r = $(t);
-        r === t && (r = $("#LOC_Ordinal_Prefix_Default")),
+          r = ee(t);
+        r === t && (r = ee("#LOC_Ordinal_Prefix_Default")),
           "<none>" === r && (r = "");
         var o = "#LOC_Ordinal_Suffix_" + a,
-          n = $(o);
+          n = ee(o);
         return (
-          n === o && (n = $("#LOC_Ordinal_Suffix_Default")),
+          n === o && (n = ee("#LOC_Ordinal_Suffix_Default")),
           "<none>" === n && (n = ""),
           r + e + n
         );
       }
-      function la(e) {
+      function ca(e) {
         return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       }
-      function ca(e) {
+      function sa(e) {
         var a;
         switch (e) {
           case 1:
@@ -4337,9 +4348,9 @@
           default:
             return null;
         }
-        return $(a);
+        return ee(a);
       }
-      const sa = (function (e) {
+      const ma = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { bVisible: !1 }), t;
@@ -4351,29 +4362,29 @@
           }),
           (a.prototype.getcontents = function () {
             if (!this.state.bVisible) return m.createElement("div", null);
-            var e = lr.getTeamData(this.props.teamID),
-              a = lr.getLeagueInfo(this.props.leagueID);
+            var e = cr.getTeamData(this.props.teamID),
+              a = cr.getLeagueInfo(this.props.leagueID);
             if (!e || !a)
               return m.createElement("div", {
-                className: ke(Ve().TopDown, Ve().Generic),
+                className: be(ze().TopDown, ze().Generic),
               });
             if (this.props.standing > 0) {
-              var t = ia(this.props.standing);
+              var t = la(this.props.standing);
               return m.createElement(
                 "div",
-                { className: Ve().TopDown },
+                { className: ze().TopDown },
                 m.createElement(
                   "div",
-                  { className: Ve().TeamInfo },
+                  { className: ze().TeamInfo },
                   m.createElement("img", {
                     key: "teamlogo_" + this.props.teamID,
                     src: e.url_logo,
-                    className: Ve().TeamLogo,
+                    className: ze().TeamLogo,
                   }),
                   m.createElement(
                     "div",
-                    { className: Ve().Text },
-                    $(
+                    { className: ze().Text },
+                    ee(
                       1 == this.props.standing
                         ? "#Feed_TournamentResult_Win"
                         : "#Feed_TournamentResult_Elimination",
@@ -4385,18 +4396,18 @@
                 ),
                 m.createElement(
                   "div",
-                  { className: Ve().Earnings },
+                  { className: ze().Earnings },
                   m.createElement(
                     "div",
-                    { className: Ve().Points },
-                    $("#Feed_TournamentResult_Points", this.props.points)
+                    { className: ze().Points },
+                    ee("#Feed_TournamentResult_Points", this.props.points)
                   ),
                   m.createElement(
                     "div",
-                    { className: Ve().Winnings },
-                    $(
+                    { className: ze().Winnings },
+                    ee(
                       "#Feed_TournamentResult_Winnings",
-                      la(this.props.winnings)
+                      ca(this.props.winnings)
                     )
                   )
                 )
@@ -4404,37 +4415,41 @@
             }
             return m.createElement(
               "div",
-              { className: ke(Ve().TopDown, Ve().Generic) },
+              { className: be(ze().TopDown, ze().Generic) },
               m.createElement(
                 "div",
-                { className: Ve().TeamInfo },
+                { className: ze().TeamInfo },
                 m.createElement("img", {
                   key: "teamlogo_" + this.props.teamID,
                   src: e.url_logo,
-                  className: Ve().TeamLogo,
+                  className: ze().TeamLogo,
                 }),
                 m.createElement(
                   "div",
-                  { className: Ve().Text },
-                  $("#Feed_TournamentResult_EliminationGeneric", e.name, a.name)
+                  { className: ze().Text },
+                  ee(
+                    "#Feed_TournamentResult_EliminationGeneric",
+                    e.name,
+                    a.name
+                  )
                 )
               )
             );
           }),
           (a.prototype.render = function () {
             return m.createElement(
-              $e(),
+              ea(),
               { onChange: this.onChange },
               m.createElement(
                 g.rU,
                 {
-                  to: he(this.props.leagueID, te.Standings, "results"),
-                  className: Ve().TournamentResultsCard,
+                  to: ye(this.props.leagueID, re.Standings, "results"),
+                  className: ze().TournamentResultsCard,
                 },
                 m.createElement(
-                  na,
+                  ia,
                   null,
-                  m.createElement(na.Image, {
+                  m.createElement(ia.Image, {
                     src:
                       i.CDN_URL +
                       "apps/dota2/images/leagues/" +
@@ -4443,18 +4458,18 @@
                   }),
                   m.createElement(
                     "div",
-                    { className: Ve().Content },
+                    { className: ze().Content },
                     this.getcontents()
                   )
                 )
               )
             );
           }),
-          (0, r.gn)([Z], a.prototype, "onChange", null),
-          (a = (0, r.gn)([Se.Pi], a))
+          (0, r.gn)([J], a.prototype, "onChange", null),
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      const ma = (function (e) {
+      const ga = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { bVisible: !1 }), t;
@@ -4467,42 +4482,42 @@
           (a.prototype.getContents = function () {
             if (!this.state.bVisible)
               return m.createElement("div", { key: this.props.nodeID });
-            var e = lr.getLeagueNodeData(
+            var e = cr.getLeagueNodeData(
                 this.props.leagueID,
                 this.props.nodeID
               ),
-              a = e ? lr.getTeamData(e.team_id_1) : void 0,
-              t = e ? lr.getTeamData(e.team_id_2) : void 0;
+              a = e ? cr.getTeamData(e.team_id_1) : void 0,
+              t = e ? cr.getTeamData(e.team_id_2) : void 0;
             if (!e)
               return m.createElement(
                 "div",
                 {
-                  className: ke(Ve().ThrobberSpacing, We().FadeInDelay),
+                  className: be(ze().ThrobberSpacing, xe().FadeInDelay),
                   key: this.props.nodeID,
                 },
-                m.createElement(Xe, {
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("Loading"),
+                  string: ee("Loading"),
                   position: "center",
                 })
               );
-            var r = lr.getLeagueNodeGroupData(
+            var r = cr.getLeagueNodeGroupData(
                 this.props.leagueID,
                 e.node_group_id
               ),
               o = "";
             switch (e.node_type) {
               case 1:
-                o = $("#BestOf_1");
+                o = ee("#BestOf_1");
                 break;
               case 2:
-                o = $("#BestOf_3");
+                o = ee("#BestOf_3");
                 break;
               case 3:
-                o = $("#BestOf_5");
+                o = ee("#BestOf_5");
                 break;
               case 4:
-                o = $("#BestOf_2");
+                o = ee("#BestOf_2");
             }
             var n = !1;
             if (r)
@@ -4520,13 +4535,13 @@
                 "/images/image_8.png"
             );
             var l = r && 7 == r.node_group_type,
-              c = m.createElement("div", { className: Ve().Details });
+              c = m.createElement("div", { className: ze().Details });
             return (
               l
                 ? (c = m.createElement(
                     "div",
-                    { className: Ve().Details },
-                    $("#MatchDetails_ShowMatch")
+                    { className: ze().Details },
+                    ee("#MatchDetails_ShowMatch")
                   ))
                 : 0 == e.losing_node_id &&
                   0 != e.winning_node_id &&
@@ -4535,8 +4550,8 @@
                   n
                 ? (c = m.createElement(
                     "div",
-                    { className: Ve().Details },
-                    $("#MatchDetails_Elimination")
+                    { className: ze().Details },
+                    ee("#MatchDetails_Elimination")
                   ))
                 : 0 == e.losing_node_id &&
                   0 == e.winning_node_id &&
@@ -4545,49 +4560,49 @@
                   n &&
                   (c = m.createElement(
                     "div",
-                    { className: Ve().Details },
-                    $("#MatchDetails_Championship")
+                    { className: ze().Details },
+                    ee("#MatchDetails_Championship")
                   )),
               m.createElement(
                 "div",
                 {
-                  className: We().FadeIn,
+                  className: xe().FadeIn,
                   key: this.props.leagueID + "_ " + this.props.nodeID,
                 },
                 c,
                 m.createElement(
                   "div",
-                  { className: Ve().Columns },
+                  { className: ze().Columns },
                   m.createElement(
                     "div",
-                    { className: Ve().Team },
-                    m.createElement(ta, {
+                    { className: ze().Team },
+                    m.createElement(ra, {
                       team_id: a && a.team_id,
-                      size: je.Medium,
+                      size: Qe.Medium,
                     }),
                     m.createElement(
                       "div",
-                      { className: Ve().TeamName },
-                      a ? a.name : $("#Feed_TBD")
+                      { className: ze().TeamName },
+                      a ? a.name : ee("#Feed_TBD")
                     )
                   ),
                   m.createElement(
                     "div",
-                    { className: Ve().Center },
-                    m.createElement("div", null, $("#VS")),
-                    m.createElement("div", { className: Ve().BestOf }, o)
+                    { className: ze().Center },
+                    m.createElement("div", null, ee("#VS")),
+                    m.createElement("div", { className: ze().BestOf }, o)
                   ),
                   m.createElement(
                     "div",
-                    { className: Ve().Team },
-                    m.createElement(ta, {
+                    { className: ze().Team },
+                    m.createElement(ra, {
                       team_id: t && t.team_id,
-                      size: je.Medium,
+                      size: Qe.Medium,
                     }),
                     m.createElement(
                       "div",
-                      { className: Ve().TeamName },
-                      t ? t.name : $("#Feed_TBD")
+                      { className: ze().TeamName },
+                      t ? t.name : ee("#Feed_TBD")
                     )
                   )
                 )
@@ -4596,16 +4611,16 @@
           }),
           (a.prototype.render = function () {
             return m.createElement(
-              $e(),
+              ea(),
               { onChange: this.onChange },
               m.createElement(
                 g.rU,
                 {
-                  to: de(this.props.leagueID, this.props.nodeID),
-                  className: Ve().UpcomingSeriesCard,
+                  to: pe(this.props.leagueID, this.props.nodeID),
+                  className: ze().UpcomingSeriesCard,
                 },
                 m.createElement("img", {
-                  className: Ve().LeagueLogo,
+                  className: ze().LeagueLogo,
                   src:
                     i.CDN_URL +
                     "apps/dota2/images/leagues/" +
@@ -4614,17 +4629,17 @@
                 }),
                 m.createElement(
                   "div",
-                  { className: Ve().Content },
+                  { className: ze().Content },
                   this.getContents()
                 )
               )
             );
           }),
-          (0, r.gn)([Z], a.prototype, "onChange", null),
-          (a = (0, r.gn)([Se.Pi], a))
+          (0, r.gn)([J], a.prototype, "onChange", null),
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      const ga = (function (e) {
+      const _a = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { bVisible: !1 }), t;
@@ -4637,14 +4652,14 @@
           (a.prototype.getContents = function () {
             if (!this.state.bVisible)
               return m.createElement("div", { key: this.props.serverSteamID });
-            var e = lr.getLeagueNodeData(
+            var e = cr.getLeagueNodeData(
                 this.props.leagueID,
                 this.props.nodeID
               ),
-              a = lr.getTeamData(this.props.radiantTeamID),
-              t = lr.getTeamData(this.props.direTeamID),
+              a = cr.getTeamData(this.props.radiantTeamID),
+              t = cr.getTeamData(this.props.direTeamID),
               r = e
-                ? lr.getLeagueNodeGroupData(
+                ? cr.getLeagueNodeGroupData(
                     this.props.leagueID,
                     e.node_group_id
                   )
@@ -4653,16 +4668,16 @@
             if (e)
               switch (e.node_type) {
                 case 1:
-                  o = $("#BestOf_1");
+                  o = ee("#BestOf_1");
                   break;
                 case 2:
-                  o = $("#BestOf_3");
+                  o = ee("#BestOf_3");
                   break;
                 case 3:
-                  o = $("#BestOf_5");
+                  o = ee("#BestOf_5");
                   break;
                 case 4:
-                  o = $("#BestOf_2");
+                  o = ee("#BestOf_2");
               }
             var n = !1;
             if (r)
@@ -4674,20 +4689,20 @@
                   n = !0;
               }
             var i = r && 7 == r.node_group_type,
-              l = m.createElement("div", { className: Ve().Details });
+              l = m.createElement("div", { className: ze().Details });
             return (
               e &&
                 (i
                   ? (l = m.createElement(
                       "div",
-                      { className: Ve().Details },
-                      $("#MatchDetails_ShowMatch")
+                      { className: ze().Details },
+                      ee("#MatchDetails_ShowMatch")
                     ))
                   : 0 == e.losing_node_id && 0 != e.winning_node_id && n
                   ? (l = m.createElement(
                       "div",
-                      { className: Ve().Details },
-                      $("#MatchDetails_Elimination")
+                      { className: ze().Details },
+                      ee("#MatchDetails_Elimination")
                     ))
                   : 0 == e.losing_node_id &&
                     0 == e.winning_node_id &&
@@ -4696,46 +4711,46 @@
                     n &&
                     (l = m.createElement(
                       "div",
-                      { className: Ve().Details },
-                      $("#MatchDetails_Championship")
+                      { className: ze().Details },
+                      ee("#MatchDetails_Championship")
                     ))),
               m.createElement(
                 "div",
-                { className: We().FadeIn, key: this.props.serverSteamID },
+                { className: xe().FadeIn, key: this.props.serverSteamID },
                 l,
                 m.createElement(
                   "div",
-                  { className: Ve().Columns },
+                  { className: ze().Columns },
                   m.createElement(
                     "div",
-                    { className: Ve().Team },
-                    m.createElement(ta, {
+                    { className: ze().Team },
+                    m.createElement(ra, {
                       team_id: a && a.team_id,
-                      size: je.Medium,
+                      size: Qe.Medium,
                     }),
                     m.createElement(
                       "div",
-                      { className: Ve().TeamName },
-                      a ? a.name : $("#Feed_TBD")
+                      { className: ze().TeamName },
+                      a ? a.name : ee("#Feed_TBD")
                     )
                   ),
                   m.createElement(
                     "div",
-                    { className: Ve().Center },
-                    m.createElement("div", null, $("#VS")),
-                    m.createElement("div", { className: Ve().BestOf }, o)
+                    { className: ze().Center },
+                    m.createElement("div", null, ee("#VS")),
+                    m.createElement("div", { className: ze().BestOf }, o)
                   ),
                   m.createElement(
                     "div",
-                    { className: Ve().Team },
-                    m.createElement(ta, {
+                    { className: ze().Team },
+                    m.createElement(ra, {
                       team_id: t && t.team_id,
-                      size: je.Medium,
+                      size: Qe.Medium,
                     }),
                     m.createElement(
                       "div",
-                      { className: Ve().TeamName },
-                      t ? t.name : $("#Feed_TBD")
+                      { className: ze().TeamName },
+                      t ? t.name : ee("#Feed_TBD")
                     )
                   )
                 )
@@ -4744,16 +4759,16 @@
           }),
           (a.prototype.render = function () {
             return m.createElement(
-              $e(),
+              ea(),
               { onChange: this.onChange },
               m.createElement(
                 g.rU,
                 {
-                  to: ue(this.props.serverSteamID),
-                  className: Ve().LiveMatchCard,
+                  to: he(this.props.serverSteamID),
+                  className: ze().LiveMatchCard,
                 },
                 m.createElement("img", {
-                  className: Ve().LeagueLogo,
+                  className: ze().LeagueLogo,
                   src:
                     i.CDN_URL +
                     "apps/dota2/images/leagues/" +
@@ -4762,23 +4777,23 @@
                 }),
                 m.createElement(
                   "div",
-                  { className: Ve().Content },
+                  { className: ze().Content },
                   this.getContents()
                 )
               )
             );
           }),
-          (0, r.gn)([Z], a.prototype, "onChange", null),
-          (a = (0, r.gn)([Se.Pi], a))
+          (0, r.gn)([J], a.prototype, "onChange", null),
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var _a;
+      var da;
       !(function (e) {
         (e[(e.Add = 0)] = "Add"),
           (e[(e.Remove = 1)] = "Remove"),
           (e[(e.Disband = 2)] = "Disband");
-      })(_a || (_a = {}));
-      var da = (function (e) {
+      })(da || (da = {}));
+      var pa = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { bVisible: !1 }), t;
@@ -4790,33 +4805,33 @@
           }),
           (a.prototype.getContents = function () {
             if (!this.state.bVisible) return m.createElement("div", null, " ");
-            var e = lr.getTeamData(this.props.teamID),
+            var e = cr.getTeamData(this.props.teamID),
               a =
-                this.props.accountID && lr.getPlayerData(this.props.accountID),
-              t = this.props.action == _a.Add || this.props.action == _a.Remove,
+                this.props.accountID && cr.getPlayerData(this.props.accountID),
+              t = this.props.action == da.Add || this.props.action == da.Remove,
               r = [];
             if (!e || (t && !a))
               r.push(m.createElement("div", { key: "empty" }));
             else {
               var o = "";
               switch (this.props.action) {
-                case _a.Add:
-                  o = $("#TeamRoster_Add", a.name, e.name);
+                case da.Add:
+                  o = ee("#TeamRoster_Add", a.name, e.name);
                   break;
-                case _a.Remove:
-                  o = $("#TeamRoster_Remove", a.name, e.name);
+                case da.Remove:
+                  o = ee("#TeamRoster_Remove", a.name, e.name);
                   break;
-                case _a.Disband:
-                  o = $("#TeamRoster_Disband", e.name);
+                case da.Disband:
+                  o = ee("#TeamRoster_Disband", e.name);
               }
               r.push(
                 m.createElement(
                   "div",
                   {
                     key: "teamlogo_" + this.props.teamID,
-                    className: Ve().TeamLogo,
+                    className: ze().TeamLogo,
                   },
-                  m.createElement(ta, { team_id: e.team_id, size: je.Small })
+                  m.createElement(ra, { team_id: e.team_id, size: Qe.Small })
                 )
               ),
                 r.push(
@@ -4824,7 +4839,7 @@
                     "div",
                     {
                       key: "teamcontent_" + this.props.accountID,
-                      className: Ve().Text,
+                      className: ze().Text,
                     },
                     o
                   )
@@ -4834,28 +4849,28 @@
           }),
           (a.prototype.render = function () {
             return m.createElement(
-              $e(),
+              ea(),
               { onChange: this.onChange },
               m.createElement(
                 g.rU,
-                { to: me(this.props.teamID), className: Ve().TeamRosterCard },
+                { to: ge(this.props.teamID), className: ze().TeamRosterCard },
                 m.createElement(
-                  na,
+                  ia,
                   null,
                   m.createElement(
                     "div",
-                    { className: Ve().Content },
+                    { className: ze().Content },
                     this.getContents()
                   )
                 )
               )
             );
           }),
-          (0, r.gn)([Z], a.prototype, "onChange", null),
-          (a = (0, r.gn)([Se.Pi], a))
+          (0, r.gn)([J], a.prototype, "onChange", null),
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      const pa = (function (e) {
+      const ua = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -4870,10 +4885,10 @@
               n = !1;
             switch (this.props.type) {
               case 1:
-                (a = Ye().backgroundColorOrange),
-                  (t = $("#Feed_SeriesResult")),
+                (a = qe().backgroundColorOrange),
+                  (t = ee("#Feed_SeriesResult")),
                   (r = "feed_dota.png"),
-                  (e = m.createElement(ra, {
+                  (e = m.createElement(oa, {
                     key:
                       this.props.type +
                       "_" +
@@ -4885,10 +4900,10 @@
                   }));
                 break;
               case 2:
-                (a = Ye().backgroundColorBrightBlue),
-                  (t = $("#Feed_PopularMatch")),
+                (a = qe().backgroundColorBrightBlue),
+                  (t = ee("#Feed_PopularMatch")),
                   (r = "feed_star.png"),
-                  (e = m.createElement(oa, {
+                  (e = m.createElement(na, {
                     key:
                       this.props.type +
                       "_" +
@@ -4900,10 +4915,10 @@
                   }));
                 break;
               case 3:
-                (a = Ye().backgroundColorOrange),
-                  (t = $("#Feed_UpcomingMatch")),
+                (a = qe().backgroundColorOrange),
+                  (t = ee("#Feed_UpcomingMatch")),
                   (r = "feed_dota.png"),
-                  (e = m.createElement(ma, {
+                  (e = m.createElement(ga, {
                     key:
                       this.props.type +
                       "_" +
@@ -4916,10 +4931,10 @@
                   (o = !0);
                 break;
               case 4:
-                (a = Ye().backgroundColorBrightPurple),
-                  (t = $("#Feed_TournamentResult")),
+                (a = qe().backgroundColorBrightPurple),
+                  (t = ee("#Feed_TournamentResult")),
                   (r = "feed_cup.png"),
-                  (e = m.createElement(sa, {
+                  (e = m.createElement(ma, {
                     key:
                       this.props.type +
                       "_" +
@@ -4934,10 +4949,10 @@
                   }));
                 break;
               case 5:
-                (a = Ye().backgroundColorBrightGreen),
-                  (t = $("#Feed_TeamRosterChange")),
+                (a = qe().backgroundColorBrightGreen),
+                  (t = ee("#Feed_TeamRosterChange")),
                   (r = "feed_news.png"),
-                  (e = m.createElement(da, {
+                  (e = m.createElement(pa, {
                     key:
                       this.props.type +
                       "_" +
@@ -4945,15 +4960,15 @@
                       "_" +
                       this.props.account_id,
                     teamID: this.props.team_id,
-                    action: _a.Add,
+                    action: da.Add,
                     accountID: this.props.account_id,
                   }));
                 break;
               case 6:
-                (a = Ye().backgroundColorBrightGreen),
-                  (t = $("#Feed_TeamRosterChange")),
+                (a = qe().backgroundColorBrightGreen),
+                  (t = ee("#Feed_TeamRosterChange")),
                   (r = "feed_news.png"),
-                  (e = m.createElement(da, {
+                  (e = m.createElement(pa, {
                     key:
                       this.props.type +
                       "_" +
@@ -4961,15 +4976,15 @@
                       "_" +
                       this.props.account_id,
                     teamID: this.props.team_id,
-                    action: _a.Remove,
+                    action: da.Remove,
                     accountID: this.props.account_id,
                   }));
                 break;
               case 7:
-                (a = Ye().backgroundColorBrightGreen),
-                  (t = $("#Feed_TeamDisband")),
+                (a = qe().backgroundColorBrightGreen),
+                  (t = ee("#Feed_TeamDisband")),
                   (r = "feed_news.png"),
-                  (e = m.createElement(da, {
+                  (e = m.createElement(pa, {
                     key:
                       this.props.type +
                       "_" +
@@ -4977,39 +4992,39 @@
                       "_" +
                       this.props.account_id,
                     teamID: this.props.team_id,
-                    action: _a.Disband,
+                    action: da.Disband,
                   }));
                 break;
               case 8:
-                (a = Ye().backgroundColorBrightPurple),
-                  (t = $("#Feed_LeagueUpcoming")),
+                (a = qe().backgroundColorBrightPurple),
+                  (t = ee("#Feed_LeagueUpcoming")),
                   (r = "feed_cup.png");
                 break;
               case 9:
-                (a = Ye().backgroundColorBrightPurple),
-                  (t = $("#Feed_LeagueConcluded")),
+                (a = qe().backgroundColorBrightPurple),
+                  (t = ee("#Feed_LeagueConcluded")),
                   (r = "feed_cup.png");
                 break;
               case 10:
-                (a = Ye().backgroundColorBrightOrange),
-                  (t = $("#Feed_DPCStandings")),
+                (a = qe().backgroundColorBrightOrange),
+                  (t = ee("#Feed_DPCStandings")),
                   (r = "feed_international.png");
                 break;
               case 11:
-                (a = Ye().backgroundColorBrightGreen),
-                  (t = $("#Feed_AlertPredictions")),
+                (a = qe().backgroundColorBrightGreen),
+                  (t = ee("#Feed_AlertPredictions")),
                   (r = "feed_news.png");
                 break;
               case 12:
-                (a = Ye().backgroundColorBrightGreen),
-                  (t = $("#Feed_AlertFantasy")),
+                (a = qe().backgroundColorBrightGreen),
+                  (t = ee("#Feed_AlertFantasy")),
                   (r = "feed_news.png");
                 break;
               case 13:
-                (a = Ye().backgroundColorOrange),
-                  (t = $("#Feed_LiveMatch")),
+                (a = qe().backgroundColorOrange),
+                  (t = ee("#Feed_LiveMatch")),
                   (r = "feed_dota.png"),
-                  (e = m.createElement(ga, {
+                  (e = m.createElement(_a, {
                     key:
                       this.props.type +
                       "_" +
@@ -5026,10 +5041,10 @@
                   (n = !0);
                 break;
               case 14:
-                (a = Ye().backgroundColorOrange),
-                  (t = $("#Feed_LiveSeries")),
+                (a = qe().backgroundColorOrange),
+                  (t = ee("#Feed_LiveSeries")),
                   (r = "feed_dota.png"),
-                  (e = m.createElement(ma, {
+                  (e = m.createElement(ga, {
                     key:
                       this.props.type +
                       "_" +
@@ -5051,22 +5066,22 @@
                   d = Math.floor(s / 604800);
                 l =
                   g < 1
-                    ? $("#Feed_Timestamp_Future_Shortly")
+                    ? ee("#Feed_Timestamp_Future_Shortly")
                     : _ < 1
-                    ? $(
+                    ? ee(
                         1 == g
                           ? "#Feed_Timestamp_Future_Hour"
                           : "#Feed_Timestamp_Future_Hours",
                         g
                       )
                     : d < 1
-                    ? $(
+                    ? ee(
                         1 == _
                           ? "#Feed_Timestamp_Future_Day"
                           : "#Feed_Timestamp_Future_Days",
                         _
                       )
-                    : $(
+                    : ee(
                         1 == d
                           ? "#Feed_Timestamp_Future_Week"
                           : "#Feed_Timestamp_Future_Weeks",
@@ -5080,27 +5095,27 @@
                   k = Math.floor(p / 604800);
                 l =
                   u < 1
-                    ? $("#Feed_Timestamp_JustNow")
+                    ? ee("#Feed_Timestamp_JustNow")
                     : h < 1
-                    ? $(
+                    ? ee(
                         1 == u
                           ? "#Feed_Timestamp_Minute"
                           : "#Feed_Timestamp_Minutes",
                         u
                       )
                     : y < 1
-                    ? $(
+                    ? ee(
                         1 == h
                           ? "#Feed_Timestamp_Hour"
                           : "#Feed_Timestamp_Hours",
                         h
                       )
                     : k < 1
-                    ? $(
+                    ? ee(
                         1 == y ? "#Feed_Timestamp_Day" : "#Feed_Timestamp_Days",
                         y
                       )
-                    : $(
+                    : ee(
                         1 == k
                           ? "#Feed_Timestamp_Week"
                           : "#Feed_Timestamp_Weeks",
@@ -5109,36 +5124,36 @@
               }
             return m.createElement(
               "div",
-              { className: Ye().FeedElement },
+              { className: qe().FeedElement },
               m.createElement(
                 "div",
-                { className: Ye().HeadlineRow },
+                { className: qe().HeadlineRow },
                 m.createElement("img", {
-                  className: Ye().Icon,
+                  className: qe().Icon,
                   src: i.IMG_URL + "/" + r,
                 }),
-                m.createElement("div", { className: Ye().Headline }, t),
-                m.createElement("div", { className: Ye().Timestamp }, l)
+                m.createElement("div", { className: qe().Headline }, t),
+                m.createElement("div", { className: qe().Timestamp }, l)
               ),
-              m.createElement("div", { className: ke(Ye().Underline, a) }),
+              m.createElement("div", { className: be(qe().Underline, a) }),
               e
             );
           }),
           a
         );
       })(m.Component);
-      var ua = t(2326),
-        ha = t.n(ua),
-        ya = t(9812),
-        ka = t.n(ya),
-        ba = (function (e) {
+      var ha = t(2326),
+        ya = t.n(ha),
+        ka = t(9812),
+        ba = t.n(ka),
+        Ea = (function (e) {
           function a(a) {
             return e.call(this, a) || this;
           }
           return (
             (0, r.ZT)(a, e),
             (a.prototype.toggle = function () {
-              lr.toggleFavorite(
+              cr.toggleFavorite(
                 this.props.type,
                 this.props.id,
                 this.props.name,
@@ -5146,24 +5161,24 @@
               );
             }),
             (a.prototype.render = function () {
-              var e = lr.isFavorite(this.props.type, this.props.id);
+              var e = cr.isFavorite(this.props.type, this.props.id);
               return m.createElement(
                 "div",
-                { className: ke(ka().FavoriteToggle, this.props.className) },
+                { className: be(ba().FavoriteToggle, this.props.className) },
                 m.createElement("img", {
                   src:
                     i.IMG_URL +
                     (e ? "favorite_star.png" : "favorite_star_empty.png"),
-                  className: ka().Favorite,
+                  className: ba().Favorite,
                   onClick: this.toggle,
                 })
               );
             }),
-            (0, r.gn)([Z], a.prototype, "toggle", null),
-            (a = (0, r.gn)([Se.Pi], a))
+            (0, r.gn)([J], a.prototype, "toggle", null),
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        Ea = (function (e) {
+        va = (function (e) {
           function a() {
             var a = (null !== e && e.apply(this, arguments)) || this;
             return (a.state = { bError: !1, bFallbackError: !1 }), a;
@@ -5203,12 +5218,12 @@
               this.setState({ bFallbackError: !0 }),
                 this.props.onError && this.props.onError(e);
             }),
-            (0, r.gn)([Z], a.prototype, "HandleError", null),
-            (0, r.gn)([Z], a.prototype, "HandleFallbackError", null),
+            (0, r.gn)([J], a.prototype, "HandleError", null),
+            (0, r.gn)([J], a.prototype, "HandleFallbackError", null),
             a
           );
         })(m.Component),
-        va = (function (e) {
+        fa = (function (e) {
           function a(a) {
             return e.call(this, a) || this;
           }
@@ -5218,15 +5233,15 @@
               var e,
                 a,
                 t = this,
-                r = this.props.location.pathname == oe(),
-                o = this.props.location.pathname == ne(),
-                n = this.props.location.pathname == le(),
-                l = this.props.location.pathname == ye(ae.LeagueSelect),
-                c = -1 != this.props.location.pathname.indexOf(ie()),
+                r = this.props.location.pathname == ne(),
+                o = this.props.location.pathname == ie(),
+                n = this.props.location.pathname == ce(),
+                l = this.props.location.pathname == ke(te.LeagueSelect),
+                c = -1 != this.props.location.pathname.indexOf(le()),
                 s = r || o || n || l || c,
                 _ = m.createElement("img", {
                   src: i.IMG_URL + "back_arrow.png",
-                  className: ke(ha().BackArrow, s && ha().Hidden),
+                  className: be(ya().BackArrow, s && ya().Hidden),
                   onClick: function () {
                     return window.history.back();
                   },
@@ -5234,7 +5249,7 @@
               this.props.text &&
                 (e = m.createElement(
                   "div",
-                  { className: ha().HeaderText },
+                  { className: ya().HeaderText },
                   this.props.text
                 ));
               var d,
@@ -5252,7 +5267,7 @@
                           { href: this.props.titleButtonDestination },
                           m.createElement("img", {
                             src: i.IMG_URL + this.props.titleButtonImage,
-                            className: ha().HeaderButton,
+                            className: ya().HeaderButton,
                           })
                         )
                       : m.createElement(
@@ -5260,7 +5275,7 @@
                           { to: this.props.titleButtonDestination },
                           m.createElement("img", {
                             src: i.IMG_URL + this.props.titleButtonImage,
-                            className: ha().HeaderButton,
+                            className: ya().HeaderButton,
                           })
                         ))
                   : this.props.titleButtonText &&
@@ -5271,8 +5286,8 @@
                           m.createElement(
                             "div",
                             {
-                              className: ke(
-                                ha().HeaderButtonText,
+                              className: be(
+                                ya().HeaderButtonText,
                                 this.props.titleButtonTextClass
                               ),
                             },
@@ -5285,8 +5300,8 @@
                           m.createElement(
                             "div",
                             {
-                              className: ke(
-                                ha().HeaderButtonText,
+                              className: be(
+                                ya().HeaderButtonText,
                                 this.props.titleButtonTextClass
                               ),
                             },
@@ -5295,14 +5310,14 @@
                         )),
                 this.props.profileAccountID)
               ) {
-                var k = lr.getSteamPlayerInfo(),
+                var k = cr.getSteamPlayerInfo(),
                   b = k && k.response ? k.response.players[0] : null,
                   E = b ? b.avatarfull : "";
                 d = m.createElement(
                   g.rU,
                   { to: this.props.titleButtonDestination },
-                  m.createElement(Ea, {
-                    className: ha().Avatar,
+                  m.createElement(va, {
+                    className: ya().Avatar,
                     src: E,
                     fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                   })
@@ -5312,20 +5327,20 @@
                 this.props.shards &&
                   (p = m.createElement(
                     "div",
-                    { className: ha().Shards },
+                    { className: ya().Shards },
                     m.createElement("img", {
                       src: i.IMG_URL + "currency_icon_small.png",
-                      className: ha().ShardsIcon,
+                      className: ya().ShardsIcon,
                     }),
                     m.createElement(
                       "div",
-                      { className: ha().Count },
-                      la(this.props.shards)
+                      { className: ya().Count },
+                      ca(this.props.shards)
                     )
                   )),
                 this.props.favoriteType &&
-                  (u = m.createElement(ba, {
-                    className: ha().Favorite,
+                  (u = m.createElement(Ea, {
+                    className: ya().Favorite,
                     type: this.props.favoriteType,
                     id: this.props.favoriteId,
                     name: this.props.favoriteName,
@@ -5334,17 +5349,17 @@
                 null != this.props.helpPageButton &&
                   (h = m.createElement("img", {
                     src: i.IMG_URL + "help.png",
-                    className: ha().HelpPage,
+                    className: ya().HelpPage,
                     onClick: function () {
-                      return lr.resetHelpShown(t.props.helpPageButton);
+                      return cr.resetHelpShown(t.props.helpPageButton);
                     },
                   })),
                 m.createElement(
                   "div",
-                  { className: ha().TitleHeader },
+                  { className: ya().TitleHeader },
                   m.createElement(
                     "div",
-                    { className: ha().TitleElements },
+                    { className: ya().TitleElements },
                     _,
                     e,
                     a,
@@ -5355,8 +5370,8 @@
                     h
                   ),
                   m.createElement("div", {
-                    className: ke(
-                      ha().Underline,
+                    className: be(
+                      ya().Underline,
                       this.props.underlineColorStyle
                         ? this.props.underlineColorStyle
                         : ""
@@ -5370,39 +5385,39 @@
                 )
               );
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component);
-      const fa = (0, _.EN)(va);
-      const Ca = (function (e) {
+      const Ca = (0, _.EN)(fa);
+      const Na = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           (0, r.ZT)(a, e),
           (a.prototype.componentDidMount = function () {
-            lr.triggerShowHelpPage(Qt.Main);
+            cr.triggerShowHelpPage($t.Main);
           }),
           (a.prototype.render = function () {
-            var e = lr.getFeed();
+            var e = cr.getFeed();
             if (!e)
               return m.createElement(
                 "div",
-                { className: Ue().FeedPage },
-                m.createElement(fa, {
-                  text: $("#Header_Feed"),
-                  underlineColorStyle: Ue().backgroundColorBrightRed,
-                  helpPageButton: Qt.Main,
+                { className: He().FeedPage },
+                m.createElement(Ca, {
+                  text: ee("#Header_Feed"),
+                  underlineColorStyle: He().backgroundColorBrightRed,
+                  helpPageButton: $t.Main,
                 }),
                 m.createElement(
                   "div",
-                  { className: ke(Ue().Contents, Ue().Loading) },
+                  { className: be(He().Contents, He().Loading) },
                   m.createElement(
                     "div",
-                    { className: We().FadeInDelay },
-                    m.createElement(Xe, {
+                    { className: xe().FadeInDelay },
+                    m.createElement(Ze, {
                       size: "medium",
-                      string: $("#Loading"),
+                      string: ee("#Loading"),
                       position: "center",
                     })
                   )
@@ -5426,7 +5441,7 @@
                   "_" +
                   o.server_steam_id;
               a.push(
-                m.createElement(pa, {
+                m.createElement(ua, {
                   key: n,
                   type: o.type,
                   timestamp: o.timestamp,
@@ -5446,21 +5461,21 @@
             }
             return m.createElement(
               "div",
-              { className: Ue().FeedPage },
-              m.createElement(fa, {
-                text: $("#Header_Feed"),
-                underlineColorStyle: Ue().backgroundColorBrightRed,
-                helpPageButton: Qt.Main,
+              { className: He().FeedPage },
+              m.createElement(Ca, {
+                text: ee("#Header_Feed"),
+                underlineColorStyle: He().backgroundColorBrightRed,
+                helpPageButton: $t.Main,
                 profileAccountID: i.ACCOUNT_ID,
-                titleButtonDestination: se(),
+                titleButtonDestination: me(),
               }),
-              m.createElement("div", { className: Ue().Contents }, a)
+              m.createElement("div", { className: He().Contents }, a)
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Na = function (e) {
+      var Ba = function (e) {
           var a = e.title,
             t = e.tier,
             o = e.leagueID,
@@ -5478,23 +5493,23 @@
             _ = "";
           switch (t) {
             case 3:
-              _ = $("#LeagueTier_3");
+              _ = ee("#LeagueTier_3");
               break;
             case 4:
-              _ = $("#LeagueTier_4");
+              _ = ee("#LeagueTier_4");
           }
           var d = new Date(1e3 * l),
             p = new Date(1e3 * c),
-            u = $("#DayMonth_" + d.getMonth(), d.getDate()),
-            h = $("#DayMonth_" + p.getMonth(), p.getDate()),
-            y = 0 == l || 0 == c ? $("#Fantasy_Upcoming") : u + " - " + h;
+            u = ee("#DayMonth_" + d.getMonth(), d.getDate()),
+            h = ee("#DayMonth_" + p.getMonth(), p.getDate()),
+            y = 0 == l || 0 == c ? ee("#Fantasy_Upcoming") : u + " - " + h;
           return m.createElement(
             g.rU,
-            { to: he(o, te.Standings) },
+            { to: ye(o, re.Standings) },
             m.createElement(
-              na,
+              ia,
               (0, r.pi)({}, s),
-              m.createElement(na.Image, {
+              m.createElement(ia.Image, {
                 src:
                   i.CDN_URL +
                   "apps/dota2/images/leagues/" +
@@ -5502,55 +5517,55 @@
                   "/images/image_8.png",
               }),
               m.createElement(
-                na.Content,
-                { className: Ve().tournament },
-                m.createElement("span", { className: Ve().type }, _),
-                m.createElement("div", { className: Ve().title }, a),
+                ia.Content,
+                { className: ze().tournament },
+                m.createElement("span", { className: ze().type }, _),
+                m.createElement("div", { className: ze().title }, a),
                 n > 0 &&
                   m.createElement(
                     "div",
-                    { className: Ve().details },
+                    { className: ze().details },
                     m.createElement(
                       "span",
-                      { className: Ve().prize },
+                      { className: ze().prize },
                       "$" + n.toLocaleString()
                     )
                   ),
-                m.createElement("div", { className: Ve().Dates }, y)
+                m.createElement("div", { className: ze().Dates }, y)
               )
             )
           );
         },
-        Ba = t(90),
-        Sa = t.n(Ba);
-      const Ta = (function (e) {
+        Sa = t(90),
+        Ta = t.n(Sa);
+      const Pa = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           (0, r.ZT)(a, e),
           (a.prototype.render = function () {
-            var e = lr.getLeagueInfoList();
+            var e = cr.getLeagueInfoList();
             return e
               ? m.createElement(
                   "div",
-                  { className: Sa().TournamentListPage },
-                  m.createElement(fa, {
-                    text: $("#Header_Tournaments"),
-                    underlineColorStyle: Sa().backgroundColorBrightOrange,
-                    titleButtonDestination: ce(),
+                  { className: Ta().TournamentListPage },
+                  m.createElement(Ca, {
+                    text: ee("#Header_Tournaments"),
+                    underlineColorStyle: Ta().backgroundColorBrightOrange,
+                    titleButtonDestination: se(),
                     titleButtonImage: "search.png",
                   }),
                   m.createElement(
                     "div",
-                    { className: Sa().Contents },
+                    { className: Ta().Contents },
                     e
                       .slice()
                       .sort(function (e, a) {
                         return a.start_timestamp - e.start_timestamp;
                       })
                       .map(function (e, a) {
-                        return m.createElement(Na, {
+                        return m.createElement(Ba, {
                           key: a,
                           title: "",
                           tier: e.tier,
@@ -5564,11 +5579,11 @@
                 )
               : m.createElement(
                   "div",
-                  { className: Sa().TournamentListPage },
+                  { className: Ta().TournamentListPage },
                   m.createElement(
                     "div",
-                    { className: We().FadeInDelay },
-                    m.createElement(Xe, {
+                    { className: xe().FadeInDelay },
+                    m.createElement(Ze, {
                       size: "medium",
                       string: "Loading...",
                       position: "center",
@@ -5576,16 +5591,16 @@
                   )
                 );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Pa = t(2699),
-        La = t.n(Pa),
-        Ia = t(6717),
-        Ra = t.n(Ia),
-        Da = t(9110),
-        Ga = t.n(Da),
-        Aa = (function (e) {
+      var La = t(2699),
+        Ia = t.n(La),
+        Ra = t(6717),
+        Da = t.n(Ra),
+        Ga = t(9110),
+        Aa = t.n(Ga),
+        Ma = (function (e) {
           function a(a) {
             var t = e.call(this, a) || this;
             return (
@@ -5644,7 +5659,7 @@
               return m.createElement(
                 "div",
                 {
-                  className: Ga().SliderContainer,
+                  className: Aa().SliderContainer,
                   onTouchStart: this.onTouchStart,
                   onTouchMove: this.onTouchMove,
                   onTouchEnd: this.onTouchEnd,
@@ -5652,23 +5667,23 @@
                 },
                 m.createElement(
                   "div",
-                  { className: Ga().Slider },
+                  { className: Aa().Slider },
                   m.createElement("div", {
-                    className: Ga().Pip,
+                    className: Aa().Pip,
                     ref: this.refPip,
                     style: { left: this.state.pipPosition },
                   })
                 )
               );
             }),
-            (0, r.gn)([Z], a.prototype, "onTouchStart", null),
-            (0, r.gn)([Z], a.prototype, "onTouchEnd", null),
-            (0, r.gn)([Z], a.prototype, "onTouchMove", null),
-            (0, r.gn)([Z], a.prototype, "OnChange", null),
-            (a = (0, r.gn)([Se.Pi], a))
+            (0, r.gn)([J], a.prototype, "onTouchStart", null),
+            (0, r.gn)([J], a.prototype, "onTouchEnd", null),
+            (0, r.gn)([J], a.prototype, "onTouchMove", null),
+            (0, r.gn)([J], a.prototype, "OnChange", null),
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        Ma = (function (e) {
+        wa = (function (e) {
           function a(a) {
             var t = e.call(this, a) || this;
             return (t.state = { selectedTeam: 0, wagerAmount: 0 }), t;
@@ -5677,7 +5692,7 @@
             (0, r.ZT)(a, e),
             (a.prototype.selectTeam1 = function () {
               null == this.props.demoMode &&
-                lr.selectProPredictionToMake(
+                cr.selectProPredictionToMake(
                   this.props.leagueId,
                   this.props.match.nodeId,
                   this.props.match.teams[0].teamId,
@@ -5687,7 +5702,7 @@
             }),
             (a.prototype.selectTeam2 = function () {
               null == this.props.demoMode &&
-                lr.selectProPredictionToMake(
+                cr.selectProPredictionToMake(
                   this.props.leagueId,
                   this.props.match.nodeId,
                   this.props.match.teams[1].teamId,
@@ -5697,17 +5712,17 @@
             }),
             (a.prototype.handleOnChange = function (e) {
               null == this.props.demoMode &&
-                lr.setSelectedPredictionWagerAmount(e);
+                cr.setSelectedPredictionWagerAmount(e);
             }),
             (a.prototype.OnCancelWager = function () {
-              null == this.props.demoMode && lr.clearProPredictionToMake();
+              null == this.props.demoMode && cr.clearProPredictionToMake();
             }),
             (a.prototype.OnMakeWager = function () {
-              null == this.props.demoMode && lr.makeSelectedProPrediction();
+              null == this.props.demoMode && cr.makeSelectedProPrediction();
             }),
             (a.prototype.clearError = function () {
               null == this.props.demoMode &&
-                lr.clearProPredictionError(
+                cr.clearProPredictionError(
                   this.props.leagueId,
                   this.props.match.nodeId
                 );
@@ -5737,7 +5752,7 @@
                           teamPicked: 0,
                           payout: 1.333,
                           payoutAmount: 0,
-                          state: er.STATE_INCOMPLETE,
+                          state: ar.STATE_INCOMPLETE,
                         }
                       : 3 == this.props.demoMode
                       ? {
@@ -5747,7 +5762,7 @@
                           teamPicked: 2586976,
                           payout: 1.333,
                           payoutAmount: 100,
-                          state: er.STATE_WON,
+                          state: ar.STATE_WON,
                         }
                       : {
                           leagueId: 0,
@@ -5756,7 +5771,7 @@
                           teamPicked: 2586976,
                           payout: 1.333,
                           payoutAmount: 0,
-                          state: er.STATE_LOST,
+                          state: ar.STATE_LOST,
                         }),
                   (r = {
                     nodeId: 1,
@@ -5767,14 +5782,14 @@
                         teamId: 2586976,
                         games_won: 0,
                         payout: 1.3333,
-                        name: $("#TeamName_OG"),
+                        name: ee("#TeamName_OG"),
                         url_logo: i.IMG_URL + "team_2586976.png",
                       },
                       {
                         teamId: 15,
                         games_won: 0,
                         payout: 4,
-                        name: $("#TeamName_LGD"),
+                        name: ee("#TeamName_LGD"),
                         url_logo: i.IMG_URL + "team_15.png",
                       },
                     ],
@@ -5795,57 +5810,61 @@
                     teamPicked: 2586976,
                     payout: 1.3333,
                     payoutAmount: 100,
-                    state: er.STATE_INCOMPLETE,
+                    state: ar.STATE_INCOMPLETE,
                   });
               } else
-                (e = lr.getProPrediction(
+                (e = cr.getProPrediction(
                   this.props.leagueId,
                   this.props.match.nodeId
                 )),
-                  (a = lr.getSelectedProPrediction()),
-                  (t = lr.getProPredictionError(
+                  (a = cr.getSelectedProPrediction()),
+                  (t = cr.getProPredictionError(
                     this.props.leagueId,
                     this.props.match.nodeId
                   ));
               if (!e) return m.createElement("div", null);
               var o = null;
               switch (e.state) {
-                case er.STATE_WON:
-                  o = Ra().WonPrediction;
+                case ar.STATE_WON:
+                  o = Da().WonPrediction;
                   break;
-                case er.STATE_LOST:
-                  o = Ra().LostPrediction;
+                case ar.STATE_LOST:
+                  o = Da().LostPrediction;
                   break;
-                case er.STATE_TIED:
-                  o = Ra().TiedPrediction;
+                case ar.STATE_TIED:
+                  o = Da().TiedPrediction;
               }
               var n = [];
-              n.push(m.createElement("div", { className: Ra().TeamStatus })),
-                n.push(m.createElement("div", { className: Ra().TeamStatus }));
+              n.push(m.createElement("div", { className: Da().TeamStatus })),
+                n.push(m.createElement("div", { className: Da().TeamStatus }));
               for (var l = 0; l < 2; ++l)
-                if (e.state == er.STATE_INCOMPLETE)
+                if (e.state == ar.STATE_INCOMPLETE)
                   a &&
                   a.leagueId == this.props.leagueId &&
                   a.leagueNodeId == r.nodeId
                     ? a.teamPicked == r.teams[l].teamId &&
                       (n[l] = m.createElement(
                         "div",
-                        { className: ke(Ra().TeamStatus, Ra().TeamSelected) },
-                        m.createElement("div", null, $("#Predictions_Selected"))
+                        { className: be(Da().TeamStatus, Da().TeamSelected) },
+                        m.createElement(
+                          "div",
+                          null,
+                          ee("#Predictions_Selected")
+                        )
                       ))
                     : r.teams[l].payout < 2 &&
                       (n[l] = m.createElement(
                         "div",
-                        { className: ke(Ra().TeamStatus, Ra().TeamFavored) },
-                        m.createElement("div", null, $("#Predictions_Favored"))
+                        { className: be(Da().TeamStatus, Da().TeamFavored) },
+                        m.createElement("div", null, ee("#Predictions_Favored"))
                       ));
                 else if (r.teams[l].games_won > r.teams[1 - l].games_won) {
                   var c = null;
-                  e.state == er.STATE_WON && (c = Ra().TeamWinner),
+                  e.state == ar.STATE_WON && (c = Da().TeamWinner),
                     (n[l] = m.createElement(
                       "div",
-                      { className: ke(Ra().TeamStatus, c) },
-                      m.createElement("div", null, $("#Predictions_Winner"))
+                      { className: be(Da().TeamStatus, c) },
+                      m.createElement("div", null, ee("#Predictions_Winner"))
                     ));
                 }
               var s,
@@ -5859,23 +5878,23 @@
                   0 != r.teams[1].games_won)
               )
                 return m.createElement("div", null);
-              if (e.state != er.STATE_INCOMPLETE)
+              if (e.state != ar.STATE_INCOMPLETE)
                 p = m.createElement(
                   "div",
-                  { className: Ra().PayoutContainer },
+                  { className: Da().PayoutContainer },
                   m.createElement(
                     "div",
-                    { className: Ra().Results },
+                    { className: Da().Results },
                     r.teams[0].games_won,
                     " : ",
                     r.teams[1].games_won
                   ),
                   m.createElement(
                     "div",
-                    { className: Ra().PayoutLabel },
-                    $("#Predictions_Result")
+                    { className: Da().PayoutLabel },
+                    ee("#Predictions_Result")
                   ),
-                  m.createElement("div", { className: Ra().BottomPadding })
+                  m.createElement("div", { className: Da().BottomPadding })
                 );
               else if (0 == e.wagerAmount) {
                 var u =
@@ -5885,44 +5904,44 @@
                 p = m.createElement(
                   "div",
                   {
-                    className: ke(
-                      Ra().PayoutContainer,
-                      this.props.staleOdds && u && Ra().StaleOdds
+                    className: be(
+                      Da().PayoutContainer,
+                      this.props.staleOdds && u && Da().StaleOdds
                     ),
                   },
                   m.createElement(
                     "div",
-                    { className: Ra().Payouts },
+                    { className: Da().Payouts },
                     this.OddsString(r.teams[0].payout)
                   ),
                   m.createElement(
                     "div",
-                    { className: Ra().PayoutLabel },
-                    $("#Predictions_Odds")
+                    { className: Da().PayoutLabel },
+                    ee("#Predictions_Odds")
                   ),
-                  m.createElement("div", { className: Ra().BottomPadding })
+                  m.createElement("div", { className: Da().BottomPadding })
                 );
               } else
                 p = m.createElement(
                   "div",
-                  { className: Ra().PayoutContainer },
+                  { className: Da().PayoutContainer },
                   m.createElement(
                     "div",
-                    { className: Ra().Payouts },
+                    { className: Da().Payouts },
                     this.OddsString(e.payout)
                   ),
                   m.createElement(
                     "div",
-                    { className: Ra().PayoutLabel },
-                    $("#Predictions_Odds")
+                    { className: Da().PayoutLabel },
+                    ee("#Predictions_Odds")
                   ),
-                  m.createElement("div", { className: Ra().BottomPadding })
+                  m.createElement("div", { className: Da().BottomPadding })
                 );
               (s =
                 0 == r.actualMatchTime
                   ? m.createElement(
                       "div",
-                      { className: ke(Ra().StartTime, Ra().StartTimePadding) },
+                      { className: be(Da().StartTime, Da().StartTimePadding) },
                       d.toLocaleString([], {
                         month: "numeric",
                         day: "numeric",
@@ -5930,39 +5949,39 @@
                         minute: "2-digit",
                       })
                     )
-                  : e.state == er.STATE_INCOMPLETE
+                  : e.state == ar.STATE_INCOMPLETE
                   ? m.createElement(
                       "div",
                       {
-                        className: ke(
-                          Ra().StartTime,
-                          Ra().StartTimePadding,
-                          Ra().InProgress
+                        className: be(
+                          Da().StartTime,
+                          Da().StartTimePadding,
+                          Da().InProgress
                         ),
                       },
-                      $("#Predictions_InProgress")
+                      ee("#Predictions_InProgress")
                     )
                   : m.createElement(
                       "div",
-                      { className: ke(Ra().StartTime, Ra().StartTimePadding) },
-                      $("#Predictions_Final")
+                      { className: be(Da().StartTime, Da().StartTimePadding) },
+                      ee("#Predictions_Final")
                     )),
                 (_ = m.createElement(
                   "div",
-                  { className: Ra().Columns },
+                  { className: Da().Columns },
                   m.createElement(
                     "div",
-                    { className: Ra().Team },
-                    m.createElement(Ea, {
+                    { className: Da().Team },
+                    m.createElement(va, {
                       src: r.teams[0].url_logo,
                       fallbackSrc: i.IMG_URL + "team_unknown.png",
                     }),
                     m.createElement(
                       "div",
-                      { className: Ra().TeamNameContainer },
+                      { className: Da().TeamNameContainer },
                       m.createElement(
                         "div",
-                        { className: Ra().TeamName },
+                        { className: Da().TeamName },
                         r.teams[0].name
                       )
                     ),
@@ -5971,17 +5990,17 @@
                   p,
                   m.createElement(
                     "div",
-                    { className: Ra().Team },
-                    m.createElement(Ea, {
+                    { className: Da().Team },
+                    m.createElement(va, {
                       src: r.teams[1].url_logo,
                       fallbackSrc: i.IMG_URL + "team_unknown.png",
                     }),
                     m.createElement(
                       "div",
-                      { className: Ra().TeamNameContainer },
+                      { className: Da().TeamNameContainer },
                       m.createElement(
                         "div",
-                        { className: Ra().TeamName },
+                        { className: Da().TeamName },
                         r.teams[1].name
                       )
                     ),
@@ -5989,81 +6008,81 @@
                   )
                 ));
               var h = null;
-              null == this.props.demoMode && (h = Ra().NotDemoMode);
+              null == this.props.demoMode && (h = Da().NotDemoMode);
               var y = null,
                 k = this.props.demoMode
                   ? 50
                   : Math.min(
                       this.props.maxWager,
-                      lr.getProPredictionWagerTokens()
+                      cr.getProPredictionWagerTokens()
                     );
               if (null != t) {
                 var b = "#Predictions_UnknownError";
                 switch (t) {
-                  case ar.MAKE_PREDICTION_RESULT_DOESNT_OWN_EVENT:
+                  case tr.MAKE_PREDICTION_RESULT_DOESNT_OWN_EVENT:
                     b = "#Predictions_DoesntOwnEvent";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_BAD_TOURNAMENT:
+                  case tr.MAKE_PREDICTION_RESULT_BAD_TOURNAMENT:
                     b = "#Predictions_BadTournament";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_ALREADY_MADE_PREDICTION:
+                  case tr.MAKE_PREDICTION_RESULT_ALREADY_MADE_PREDICTION:
                     b = "#Predictions_AlreadyPredicted";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_UNKNOWN_SERIES:
+                  case tr.MAKE_PREDICTION_RESULT_UNKNOWN_SERIES:
                     b = "#Predictions_UnknownSeries";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_SERIES_STARTED:
+                  case tr.MAKE_PREDICTION_RESULT_SERIES_STARTED:
                     b = "#Predictions_SeriesAlreadyStarted";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_INVALID_TEAM:
+                  case tr.MAKE_PREDICTION_RESULT_INVALID_TEAM:
                     b = "#Predictions_UnknownTeam";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_STALE_ODDS:
+                  case tr.MAKE_PREDICTION_RESULT_STALE_ODDS:
                     b = "#Predictions_StaleOdds";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_NOT_ENOUGH_FUNDS:
+                  case tr.MAKE_PREDICTION_RESULT_NOT_ENOUGH_FUNDS:
                     b = "#Predictions_NotEnoughFunds";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_BAD_ACCOUNT_ID:
+                  case tr.MAKE_PREDICTION_RESULT_BAD_ACCOUNT_ID:
                     b = "#Predictions_UnknownAccount";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_RATE_LIMITED:
+                  case tr.MAKE_PREDICTION_RESULT_RATE_LIMITED:
                     b = "#Predictions_RateLimited";
                     break;
-                  case ar.MAKE_PREDICTION_RESULT_UNKNOWN_WAGER_ODDS:
+                  case tr.MAKE_PREDICTION_RESULT_UNKNOWN_WAGER_ODDS:
                     b = "#Predictions_StaleOdds";
                 }
                 y = m.createElement(
                   "div",
                   {
-                    className: ke(
-                      Ra().PredictionBottomSection,
-                      Ra().ErrorSection
+                    className: be(
+                      Da().PredictionBottomSection,
+                      Da().ErrorSection
                     ),
                   },
-                  m.createElement("div", { className: Ra().ErrorBody }, $(b)),
+                  m.createElement("div", { className: Da().ErrorBody }, ee(b)),
                   m.createElement(
                     "div",
-                    { className: Ra().ErrorButton, onClick: this.clearError },
-                    $("#Predictions_Dismiss")
+                    { className: Da().ErrorButton, onClick: this.clearError },
+                    ee("#Predictions_Dismiss")
                   )
                 );
               } else if (
-                lr.isProPredictionInProgress(
+                cr.isProPredictionInProgress(
                   this.props.leagueId,
                   this.props.match.nodeId
                 )
               )
                 y = m.createElement(
                   "div",
-                  { className: Ra().PredictionBottomSection },
+                  { className: Da().PredictionBottomSection },
                   m.createElement(
                     "div",
-                    { className: Ra().SubmittingContainer },
+                    { className: Da().SubmittingContainer },
                     m.createElement(
                       "div",
-                      { className: Ra().SubmittingText },
-                      $("#Predictions_SubmittingPrediction")
+                      { className: Da().SubmittingText },
+                      ee("#Predictions_SubmittingPrediction")
                     )
                   )
                 );
@@ -6075,34 +6094,34 @@
                   0 != a.teamPicked
                     ? m.createElement(
                         "div",
-                        { className: Ra().PredictionBottomSection },
+                        { className: Da().PredictionBottomSection },
                         m.createElement(
                           "div",
-                          { className: Ra().WagerSelectionContainer },
+                          { className: Da().WagerSelectionContainer },
                           m.createElement(
                             "div",
-                            { className: Ra().WagerSelectionGroup },
+                            { className: Da().WagerSelectionGroup },
                             m.createElement(
                               "div",
-                              { className: Ra().WagerLabel },
-                              $("#Predictions_Wager")
+                              { className: Da().WagerLabel },
+                              ee("#Predictions_Wager")
                             ),
                             m.createElement("img", {
                               src: i.IMG_URL + "currency_icon_small.png",
                             }),
                             m.createElement(
                               "div",
-                              { className: Ra().WagerAmount },
+                              { className: Da().WagerAmount },
                               a ? a.wagerAmount : ""
                             )
                           ),
                           m.createElement(
                             "div",
-                            { className: Ra().WagerSelectionGroup },
+                            { className: Da().WagerSelectionGroup },
                             m.createElement(
                               "div",
-                              { className: Ra().WagerLabel },
-                              $("#Predictions_Pays")
+                              { className: Da().WagerLabel },
+                              ee("#Predictions_Pays")
                             ),
                             m.createElement("img", {
                               src: i.IMG_URL + "currency_icon_small.png",
@@ -6110,9 +6129,9 @@
                             m.createElement(
                               "div",
                               {
-                                className: ke(
-                                  Ra().WagerAmount,
-                                  this.props.staleOdds && Ra().StaleOdds
+                                className: be(
+                                  Da().WagerAmount,
+                                  this.props.staleOdds && Da().StaleOdds
                                 ),
                               },
                               a ? a.payoutAmount : ""
@@ -6121,15 +6140,15 @@
                         ),
                         m.createElement(
                           "div",
-                          { className: Ra().WagerSelectionContainer },
+                          { className: Da().WagerSelectionContainer },
                           m.createElement(
                             "div",
                             {
-                              className: ke(
+                              className: be(
                                 h,
-                                Ra().WagerShardsButton,
-                                Ra().Small,
-                                Ra().Close
+                                Da().WagerShardsButton,
+                                Da().Small,
+                                Da().Close
                               ),
                               onClick: this.OnCancelWager,
                             },
@@ -6139,8 +6158,8 @@
                           ),
                           m.createElement(
                             "div",
-                            { className: Ra().WagerSliderContainer },
-                            m.createElement(Aa, {
+                            { className: Da().WagerSliderContainer },
+                            m.createElement(Ma, {
                               startingValue: a ? a.wagerAmount : 0,
                               min: 0,
                               max: k,
@@ -6151,11 +6170,11 @@
                           m.createElement(
                             "div",
                             {
-                              className: ke(
+                              className: be(
                                 h,
-                                Ra().WagerShardsButton,
-                                Ra().Small,
-                                Ra().Check
+                                Da().WagerShardsButton,
+                                Da().Small,
+                                Da().Check
                               ),
                               onClick: this.OnMakeWager,
                             },
@@ -6168,18 +6187,18 @@
                     : m.createElement(
                         "div",
                         {
-                          className: ke(
-                            Ra().PredictionBottomSection,
-                            Ra().MakeWager
+                          className: be(
+                            Da().PredictionBottomSection,
+                            Da().MakeWager
                           ),
                         },
                         m.createElement(
                           "div",
-                          { className: Ra().WagerContainer },
+                          { className: Da().WagerContainer },
                           m.createElement(
                             "div",
                             {
-                              className: ke(h, Ra().WagerShardsButton),
+                              className: be(h, Da().WagerShardsButton),
                               onClick: this.selectTeam1,
                             },
                             m.createElement("img", {
@@ -6188,13 +6207,13 @@
                           ),
                           m.createElement(
                             "div",
-                            { className: Ra().SelectTeamLabel },
-                            $("#Predictions_SelectTeam")
+                            { className: Da().SelectTeamLabel },
+                            ee("#Predictions_SelectTeam")
                           ),
                           m.createElement(
                             "div",
                             {
-                              className: ke(h, Ra().WagerShardsButton),
+                              className: be(h, Da().WagerShardsButton),
                               onClick: this.selectTeam2,
                             },
                             m.createElement("img", {
@@ -6208,87 +6227,87 @@
                   v = null,
                   f = 0;
                 switch (e.state) {
-                  case er.STATE_INCOMPLETE:
+                  case ar.STATE_INCOMPLETE:
                     (v = "#Predictions_Pays"), (f = e.payoutAmount);
                     break;
-                  case er.STATE_WON:
+                  case ar.STATE_WON:
                     (v = "#Predictions_Won"),
                       (E = { color: "#76ca65" }),
                       (f = e.payoutAmount);
                     break;
-                  case er.STATE_LOST:
+                  case ar.STATE_LOST:
                     (v = "#Predictions_Lost"),
                       (E = { color: "#FF5050" }),
                       (f = e.wagerAmount);
                     break;
-                  case er.STATE_TIED:
+                  case ar.STATE_TIED:
                     (v = "#Predictions_Tied"), (E = { color: "cyan" }), (f = 0);
                 }
-                var C = $("#Predictions_InvalidTeam");
+                var C = ee("#Predictions_InvalidTeam");
                 e.teamPicked == r.teams[0].teamId
                   ? (C = r.teams[0].name)
                   : e.teamPicked == r.teams[1].teamId && (C = r.teams[1].name),
                   (y = m.createElement(
                     "div",
-                    { className: Ra().PredictionBottomSection },
+                    { className: Da().PredictionBottomSection },
                     m.createElement(
                       "div",
-                      { className: Ra().WagerSelectionContainer },
+                      { className: Da().WagerSelectionContainer },
                       m.createElement(
                         "div",
                         {
-                          className: ke(
-                            Ra().WagerSelectionGroup,
-                            Ra().TeamSelected
+                          className: be(
+                            Da().WagerSelectionGroup,
+                            Da().TeamSelected
                           ),
                         },
                         m.createElement(
                           "div",
-                          { className: Ra().WagerLabel },
-                          $("#Predictions_Predicted"),
+                          { className: Da().WagerLabel },
+                          ee("#Predictions_Predicted"),
                           ":"
                         ),
                         m.createElement(
                           "div",
-                          { className: Ra().WagerSelectionTeamName },
+                          { className: Da().WagerSelectionTeamName },
                           C
                         )
                       )
                     ),
                     m.createElement(
                       "div",
-                      { className: Ra().WagerSelectionContainer },
+                      { className: Da().WagerSelectionContainer },
                       m.createElement(
                         "div",
-                        { className: Ra().WagerSelectionGroup },
+                        { className: Da().WagerSelectionGroup },
                         m.createElement(
                           "div",
-                          { className: Ra().WagerLabel },
-                          $("#Predictions_Wager")
+                          { className: Da().WagerLabel },
+                          ee("#Predictions_Wager")
                         ),
                         m.createElement("img", {
                           src: i.IMG_URL + "currency_icon_small.png",
                         }),
                         m.createElement(
                           "div",
-                          { className: Ra().WagerAmount },
+                          { className: Da().WagerAmount },
                           e.wagerAmount
                         )
                       ),
                       m.createElement(
                         "div",
-                        { className: Ra().WagerSelectionGroup, style: E },
+                        { className: Da().WagerSelectionGroup, style: E },
                         m.createElement(
                           "div",
-                          { className: Ra().WagerLabel },
-                          $(v)
+                          { className: Da().WagerLabel },
+                          ee(v)
                         ),
                         m.createElement("img", {
                           src: i.IMG_URL + "currency_icon_small.png",
                         }),
                         m.createElement(
                           "div",
-                          { className: Ra().WagerAmount },
+                          { className: Da().WagerAmount },
                           f
                         )
                       )
@@ -6299,8 +6318,8 @@
                 ? m.createElement(
                     g.rU,
                     {
-                      to: _e(r.leagueID, r.seriesID),
-                      className: ke(We().FadeIn, Ra().PredictionCard, o),
+                      to: de(r.leagueID, r.seriesID),
+                      className: be(xe().FadeIn, Da().PredictionCard, o),
                     },
                     s,
                     _,
@@ -6308,23 +6327,23 @@
                   )
                 : m.createElement(
                     "div",
-                    { className: ke(We().FadeIn, Ra().PredictionCard, o) },
+                    { className: be(xe().FadeIn, Da().PredictionCard, o) },
                     s,
                     _,
                     y
                   );
             }),
-            (0, r.gn)([Z], a.prototype, "selectTeam1", null),
-            (0, r.gn)([Z], a.prototype, "selectTeam2", null),
-            (0, r.gn)([Z], a.prototype, "handleOnChange", null),
-            (0, r.gn)([Z], a.prototype, "OnCancelWager", null),
-            (0, r.gn)([Z], a.prototype, "OnMakeWager", null),
-            (0, r.gn)([Z], a.prototype, "clearError", null),
-            (a = (0, r.gn)([Se.Pi], a))
+            (0, r.gn)([J], a.prototype, "selectTeam1", null),
+            (0, r.gn)([J], a.prototype, "selectTeam2", null),
+            (0, r.gn)([J], a.prototype, "handleOnChange", null),
+            (0, r.gn)([J], a.prototype, "OnCancelWager", null),
+            (0, r.gn)([J], a.prototype, "OnMakeWager", null),
+            (0, r.gn)([J], a.prototype, "clearError", null),
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        wa = t(2188);
-      const Oa = (function (e) {
+        Oa = t(2188);
+      const Fa = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { isStaleOdds: !1, upcomingMatchData: null }), t;
@@ -6333,43 +6352,43 @@
           (0, r.ZT)(a, e),
           (a.prototype.componentDidMount = function () {
             var e = this,
-              a = 1e3 * lr.getRecentAndUpcomingMatchesRefreshInterval();
+              a = 1e3 * cr.getRecentAndUpcomingMatchesRefreshInterval();
             (this.intervalHandle = setInterval(function () {
               e.setState({ isStaleOdds: !0 });
               var a = e;
               setTimeout(function () {
                 a.setState({
-                  upcomingMatchData: lr.getRecentAndUpcomingMatches(),
+                  upcomingMatchData: cr.getRecentAndUpcomingMatches(),
                 }),
                   a.setState({ isStaleOdds: !1 });
               }, 3e3);
             }, a)),
-              lr.triggerShowHelpPage(Qt.Predictions);
+              cr.triggerShowHelpPage($t.Predictions);
           }),
           (a.prototype.componentWillUnmount = function () {
             clearInterval(this.intervalHandle);
           }),
           (a.prototype.render = function () {
-            var e = lr.getRecentAndUpcomingMatches();
+            var e = cr.getRecentAndUpcomingMatches();
             if (!e)
               return m.createElement(
                 "div",
-                { key: "Loading", className: La().Loading },
-                m.createElement(Xe, {
+                { key: "Loading", className: Ia().Loading },
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("#Loading"),
+                  string: ee("#Loading"),
                   position: "center",
                 })
               );
-            var a = lr.getProPredictionWagerTokens(),
-              t = lr.getProPredictionMaxWager();
-            console.log((0, wa.ZN)(e));
+            var a = cr.getProPredictionWagerTokens(),
+              t = cr.getProPredictionMaxWager();
+            console.log((0, Oa.ZN)(e));
             for (var r = [], o = 0; o < e.tournaments.length; ++o) {
               var n = e.tournaments[o];
               if (n.matches && n.id && 0 != n.matches.length) {
                 for (var l = !1, c = 0; c < n.matches.length; ++c) {
                   if ((_ = n.matches[c]).nodeId) {
-                    var s = lr.getProPrediction(n.id, _.nodeId);
+                    var s = cr.getProPrediction(n.id, _.nodeId);
                     if (
                       s &&
                       (0 != s.wagerAmount ||
@@ -6387,12 +6406,12 @@
                     m.createElement(
                       "div",
                       {
-                        className: La().TournamentHeader,
+                        className: Ia().TournamentHeader,
                         key: "header" + n.id,
                       },
                       m.createElement("img", {
                         src: i.IMG_URL + "nav_tournaments_white.png",
-                        className: La().ShardsIcon,
+                        className: Ia().ShardsIcon,
                       }),
                       m.createElement("div", null, n.name)
                     )
@@ -6408,7 +6427,7 @@
                     if ((_ = g[c]).nodeId) {
                       var d = n.id + "." + _.nodeId;
                       r.push(
-                        m.createElement(Ma, {
+                        m.createElement(wa, {
                           key: d,
                           leagueId: n.id,
                           maxWager: t,
@@ -6425,68 +6444,68 @@
             return e.tournaments && 0 != e.tournaments.length && 0 != r.length
               ? m.createElement(
                   "div",
-                  { className: La().PredictionsPage },
-                  m.createElement(fa, {
-                    text: $("#Header_Predictions"),
-                    underlineColorStyle: La().backgroundColorAqua,
-                    helpPageButton: Qt.Predictions,
+                  { className: Ia().PredictionsPage },
+                  m.createElement(Ca, {
+                    text: ee("#Header_Predictions"),
+                    underlineColorStyle: Ia().backgroundColorAqua,
+                    helpPageButton: $t.Predictions,
                     shards: a,
                   }),
                   m.createElement(
                     "div",
-                    { className: La().Contents },
+                    { className: Ia().Contents },
                     m.createElement(
                       "div",
-                      { className: La().PredictionList },
+                      { className: Ia().PredictionList },
                       r
                     )
                   )
                 )
               : m.createElement(
                   "div",
-                  { className: La().PredictionsPage },
-                  m.createElement(fa, {
-                    text: $("#Header_Predictions"),
-                    underlineColorStyle: La().backgroundColorAqua,
+                  { className: Ia().PredictionsPage },
+                  m.createElement(Ca, {
+                    text: ee("#Header_Predictions"),
+                    underlineColorStyle: Ia().backgroundColorAqua,
                     shards: a,
-                    helpPageButton: Qt.Predictions,
+                    helpPageButton: $t.Predictions,
                   }),
                   m.createElement(
                     "div",
-                    { className: La().NoPredictionsContainer },
+                    { className: Ia().NoPredictionsContainer },
                     m.createElement(
                       "div",
-                      { key: "NoPredictions", className: La().NoPredictions },
+                      { key: "NoPredictions", className: Ia().NoPredictions },
                       m.createElement(
                         "div",
-                        { className: La().NoPredictionsAlertContainer },
+                        { className: Ia().NoPredictionsAlertContainer },
                         m.createElement(
                           "div",
-                          { className: La().NoPredictionsIcon },
-                          $("#Predictions_NoPredictionsIcon")
+                          { className: Ia().NoPredictionsIcon },
+                          ee("#Predictions_NoPredictionsIcon")
                         )
                       ),
                       m.createElement(
                         "div",
-                        { className: La().NoPredictionsTitle },
-                        $("#Predictions_NoPredictions_Title")
+                        { className: Ia().NoPredictionsTitle },
+                        ee("#Predictions_NoPredictions_Title")
                       ),
                       m.createElement(
                         "div",
-                        { className: La().NoPredictionsDetail },
-                        $("#Predictions_NoPredictions")
+                        { className: Ia().NoPredictionsDetail },
+                        ee("#Predictions_NoPredictions")
                       )
                     )
                   )
                 );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Fa = t(1498),
-        Ua = t.n(Fa),
-        Ha = t(4317),
-        Wa = (function (e) {
+      var Ua = t(1498),
+        Ha = t.n(Ua),
+        Wa = t(4317),
+        xa = (function (e) {
           function a() {
             var a = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -6503,13 +6522,13 @@
             (a.prototype.GetLoadingThrobber = function () {
               return m.createElement(
                 "div",
-                { className: Ua().Loading, key: "loading_throbber" },
+                { className: Ha().Loading, key: "loading_throbber" },
                 m.createElement(
                   "div",
-                  { className: We().FadeInDelay },
-                  m.createElement(Xe, {
+                  { className: xe().FadeInDelay },
+                  m.createElement(Ze, {
                     size: "medium",
-                    string: $("#Loading"),
+                    string: ee("#Loading"),
                     position: "center",
                   })
                 )
@@ -6517,76 +6536,76 @@
             }),
             (a.prototype.GetLeagueList = function () {
               var e = [],
-                a = lr.getFantasyLeagueStatus();
+                a = cr.getFantasyLeagueStatus();
               if (!a) return e.push(this.GetLoadingThrobber()), e;
-              var t = this.props.section != ae.LeagueSelect;
+              var t = this.props.section != te.LeagueSelect;
               for (var r in (e.push(
                 m.createElement(
                   "div",
                   {
                     key: "leaguelist_header",
-                    className: ke(
-                      Ua().LeagueHeader,
-                      We().VerticalCollapseable,
-                      t && We().VerticalCollapse
+                    className: be(
+                      Ha().LeagueHeader,
+                      xe().VerticalCollapseable,
+                      t && xe().VerticalCollapse
                     ),
                   },
-                  $("#Fantasy_SelectLeague")
+                  ee("#Fantasy_SelectLeague")
                 )
               ),
               a.league_infos)) {
                 var o = a.league_infos[r],
                   n = new Date(1e3 * o.start_timestamp),
                   i = new Date(1e3 * o.end_timestamp),
-                  l = $("#DayMonth_" + n.getMonth(), n.getDate()),
-                  c = $("#DayMonth_" + i.getMonth(), i.getDate()),
+                  l = ee("#DayMonth_" + n.getMonth(), n.getDate()),
+                  c = ee("#DayMonth_" + i.getMonth(), i.getDate()),
                   s =
                     0 == o.start_timestamp || 0 == o.end_timestamp
-                      ? $("#Fantasy_Upcoming")
+                      ? ee("#Fantasy_Upcoming")
                       : l + " - " + c,
                   _ = o.league_id == this.props.match.params.leagueID,
                   d = t && !_,
                   p = void 0;
                 switch (o.status) {
                   case 0:
-                    p = Ua().StatusUnset;
+                    p = Ha().StatusUnset;
                     break;
                   case 1:
-                    p = Ua().StatusPartial;
+                    p = Ha().StatusPartial;
                     break;
                   case 2:
-                    p = Ua().StatusFull;
+                    p = Ha().StatusFull;
                     break;
                   case 3:
-                    p = Ua().StatusConcluded;
+                    p = Ha().StatusConcluded;
                 }
                 var u = void 0;
                 0 == o.status || 1 == o.status
-                  ? (u = ae.Roster)
-                  : (2 != o.status && 3 != o.status) || (u = ae.Scores),
+                  ? (u = te.Roster)
+                  : (2 != o.status && 3 != o.status) || (u = te.Scores),
                   _
                     ? e.push(
                         m.createElement(
                           "div",
                           {
                             key: "leaguelist_" + o.league_id,
-                            className: ke(
-                              Ua().League,
-                              We().VerticalCollapseable,
-                              d && We().VerticalCollapse,
-                              Ua().Selected
+                            className: be(
+                              Ha().League,
+                              xe().VerticalCollapseable,
+                              d && xe().VerticalCollapse,
+                              Ha().Selected
                             ),
                           },
-                          m.createElement("div", { className: Ua().Dates }, s),
+                          m.createElement("div", { className: Ha().Dates }, s),
                           m.createElement(
                             "div",
-                            { className: Ua().Name },
-                            $("#LeagueName_" + o.league_id)
+                            { className: Ha().Name },
+                            ee("#LeagueName_" + o.league_id)
                           ),
                           m.createElement(
                             "div",
-                            { className: ke(Ua().Status, p) },
-                            $("#Fantasy_LeagueStatus_" + o.status)
+                            { className: be(Ha().Status, p) },
+                            ee("#Fantasy_LeagueStatus_" + o.status)
                           )
                         )
                       )
@@ -6594,83 +6613,83 @@
                         m.createElement(
                           g.OL,
                           {
-                            to: ye(u, o.league_id, 0, 0),
+                            to: ke(u, o.league_id, 0, 0),
                             key: "leaguelist_" + o.league_id,
-                            className: ke(
-                              Ua().League,
-                              We().VerticalCollapseable,
-                              d && We().VerticalCollapse,
-                              _ && Ua().Selected
+                            className: be(
+                              Ha().League,
+                              xe().VerticalCollapseable,
+                              d && xe().VerticalCollapse,
+                              _ && Ha().Selected
                             ),
                           },
-                          m.createElement("div", { className: Ua().Dates }, s),
+                          m.createElement("div", { className: Ha().Dates }, s),
                           m.createElement(
                             "div",
-                            { className: Ua().Name },
-                            $("#LeagueName_" + o.league_id)
+                            { className: Ha().Name },
+                            ee("#LeagueName_" + o.league_id)
                           ),
                           m.createElement(
                             "div",
-                            { className: ke(Ua().Status, p) },
-                            $("#Fantasy_LeagueStatus_" + o.status)
+                            { className: be(Ha().Status, p) },
+                            ee("#Fantasy_LeagueStatus_" + o.status)
                           )
                         )
                       );
-                var h = this.props.section == ae.Roster,
-                  y = this.props.section == ae.Scores,
-                  k = this.props.section == ae.Leaderboard;
+                var h = this.props.section == te.Roster,
+                  y = this.props.section == te.Scores,
+                  k = this.props.section == te.Leaderboard;
                 e.push(
                   m.createElement(
                     "div",
                     {
                       key: "tabselector_" + o.league_id,
-                      className: ke(
-                        Ua().TabSelector,
-                        We().VerticalCollapseable,
-                        !_ && We().VerticalCollapse
+                      className: be(
+                        Ha().TabSelector,
+                        xe().VerticalCollapseable,
+                        !_ && xe().VerticalCollapse
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Ua().TextSelector },
+                      { className: Ha().TextSelector },
                       m.createElement(
                         g.OL,
                         {
-                          to: ye(ae.Roster, o.league_id, 0),
-                          className: ke(Ua().Entry, h && Ua().Selected),
+                          to: ke(te.Roster, o.league_id, 0),
+                          className: be(Ha().Entry, h && Ha().Selected),
                         },
-                        $("#Fantasy_Roster")
+                        ee("#Fantasy_Roster")
                       ),
                       m.createElement(
                         g.OL,
                         {
-                          to: ye(ae.Scores, o.league_id, 0, 0),
-                          className: ke(Ua().Entry, y && Ua().Selected),
+                          to: ke(te.Scores, o.league_id, 0, 0),
+                          className: be(Ha().Entry, y && Ha().Selected),
                         },
-                        $("#Fantasy_Scores")
+                        ee("#Fantasy_Scores")
                       ),
                       m.createElement(
                         g.OL,
                         {
-                          to: ye(ae.Leaderboard, o.league_id, 0),
-                          className: ke(Ua().Entry, k && Ua().Selected),
+                          to: ke(te.Leaderboard, o.league_id, 0),
+                          className: be(Ha().Entry, k && Ha().Selected),
                         },
-                        $("#Fantasy_Ranking")
+                        ee("#Fantasy_Ranking")
                       )
                     ),
                     m.createElement(
                       "div",
-                      { className: Ua().UnderlineSelector },
+                      { className: Ha().UnderlineSelector },
                       m.createElement("div", {
-                        className: ke(
-                          Ua().Underline,
-                          h && Ua().Roster,
-                          y && Ua().Scores,
-                          k && Ua().Leaderboard
+                        className: be(
+                          Ha().Underline,
+                          h && Ha().Roster,
+                          y && Ha().Scores,
+                          k && Ha().Leaderboard
                         ),
                       }),
                       m.createElement("div", {
-                        className: Ua().UnderlineSpacer,
+                        className: Ha().UnderlineSpacer,
                       })
                     )
                   )
@@ -6685,7 +6704,7 @@
                     case 0:
                       return [
                         4,
-                        lr.submitFantasyLineup(
+                        cr.submitFantasyLineup(
                           parseInt(this.props.match.params.leagueID)
                         ),
                       ];
@@ -6700,7 +6719,7 @@
                 a = [],
                 t = parseInt(this.props.match.params.leagueID),
                 r = parseInt(this.props.match.params.slot);
-              if (this.props.section == ae.PlayerSelect) {
+              if (this.props.section == te.PlayerSelect) {
                 var o = 0;
                 switch (r) {
                   case 0:
@@ -6719,8 +6738,8 @@
                   case 9:
                     o = 2;
                 }
-                var n = lr.getPlayersInRole(t, o),
-                  l = lr.getFantasyLineup(t);
+                var n = cr.getPlayersInRole(t, o),
+                  l = cr.getFantasyLineup(t);
                 if (void 0 === n || void 0 === l)
                   return e.push(this.GetLoadingThrobber()), e;
                 if (!n)
@@ -6730,17 +6749,17 @@
                         "div",
                         {
                           key: "players_none",
-                          className: Ua().NoRosterPlayers,
+                          className: Ha().NoRosterPlayers,
                         },
                         m.createElement(
                           "div",
-                          { className: Ua().Header },
-                          $("#Fantasy_NoPlayers")
+                          { className: Ha().Header },
+                          ee("#Fantasy_NoPlayers")
                         ),
                         m.createElement(
                           "div",
-                          { className: Ua().Sub },
-                          $("#Fantasy_NoPlayersSub")
+                          { className: Ha().Sub },
+                          ee("#Fantasy_NoPlayersSub")
                         )
                       )
                     ),
@@ -6760,34 +6779,34 @@
                         "div",
                         {
                           key: "player" + o.account_id,
-                          className: Ua().RosterSlot,
+                          className: Ha().RosterSlot,
                         },
-                        m.createElement(Ea, {
-                          className: ke(Ua().Icon, Ua().Player),
-                          src: lr.getPlayerImageURL(o.account_id),
+                        m.createElement(va, {
+                          className: be(Ha().Icon, Ha().Player),
+                          src: cr.getPlayerImageURL(o.account_id),
                           fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                         }),
-                        m.createElement(Ea, {
-                          className: ke(Ua().Icon, Ua().Team),
+                        m.createElement(va, {
+                          className: be(Ha().Icon, Ha().Team),
                           src: o.team_url_logo,
                           fallbackSrc: i.IMG_URL + "team_unknown.png",
                         }),
                         m.createElement(
                           "div",
-                          { className: Ua().Identity },
+                          { className: Ha().Identity },
                           m.createElement(
                             "div",
-                            { className: Ua().Name },
+                            { className: Ha().Name },
                             o.name
                           )
                         ),
                         m.createElement(
                           g.OL,
                           {
-                            to: ye(ae.Roster, s.props.match.params.leagueID, 0),
-                            className: Ua().SelectButton,
+                            to: ke(te.Roster, s.props.match.params.leagueID, 0),
+                            className: Ha().SelectButton,
                             onClick: function () {
-                              return lr.setFantasyRosterSlot(
+                              return cr.setFantasyRosterSlot(
                                 t,
                                 o.account_id,
                                 r,
@@ -6796,7 +6815,7 @@
                               );
                             },
                           },
-                          $("#Fantasy_Select")
+                          ee("#Fantasy_Select")
                         )
                       )
                     );
@@ -6808,11 +6827,11 @@
                     "div",
                     {
                       key: "player_select_elements",
-                      className: ke(
-                        Ua().PlayerSelect,
-                        We().VerticalCollapseable,
-                        this.props.section != ae.PlayerSelect &&
-                          We().VerticalCollapse
+                      className: be(
+                        Ha().PlayerSelect,
+                        xe().VerticalCollapseable,
+                        this.props.section != te.PlayerSelect &&
+                          xe().VerticalCollapse
                       ),
                     },
                     a
@@ -6826,9 +6845,9 @@
                 a = [],
                 t = [],
                 r = parseInt(this.props.match.params.leagueID),
-                o = this.props.section == ae.Roster;
+                o = this.props.section == te.Roster;
               if (o) {
-                var n = lr.getFantasyLeagueStatus();
+                var n = cr.getFantasyLeagueStatus();
                 if (n)
                   for (var l in n.league_infos) {
                     var c = n.league_infos[l];
@@ -6839,15 +6858,15 @@
                             a.push(
                               m.createElement(
                                 "div",
-                                { key: "Concluded", className: Ua().Concluded },
-                                $("#Fantasy_Concluded")
+                                { key: "Concluded", className: Ha().Concluded },
+                                ee("#Fantasy_Concluded")
                               )
                             ),
                             a
                           );
                   }
               }
-              if ((o && (e = lr.getFantasyLineup(r)), !e))
+              if ((o && (e = cr.getFantasyLineup(r)), !e))
                 return o && a.push(this.GetLoadingThrobber()), a;
               for (
                 var s = function (a) {
@@ -6855,15 +6874,15 @@
                       n = e.rgRosterSlots[a].bLocked,
                       l = e.rgRosterSlots[a].bNeedsSubmission,
                       c = o
-                        ? $("#Fantasy_SelectPlayer")
+                        ? ee("#Fantasy_SelectPlayer")
                         : e.rgRosterSlots[a].strName;
                     switch (a) {
                       case 0:
                         t.push(
                           m.createElement(
                             "div",
-                            { key: "role_" + a, className: Ua().RoleHeader },
-                            $("#Team_RoleCore")
+                            { key: "role_" + a, className: Ha().RoleHeader },
+                            ee("#Team_RoleCore")
                           )
                         );
                         break;
@@ -6871,8 +6890,8 @@
                         t.push(
                           m.createElement(
                             "div",
-                            { key: "role_" + a, className: Ua().RoleHeader },
-                            $("#Team_RoleMid")
+                            { key: "role_" + a, className: Ha().RoleHeader },
+                            ee("#Team_RoleMid")
                           )
                         );
                         break;
@@ -6880,8 +6899,8 @@
                         t.push(
                           m.createElement(
                             "div",
-                            { key: "role_" + a, className: Ua().RoleHeader },
-                            $("#Team_RoleSupport")
+                            { key: "role_" + a, className: Ha().RoleHeader },
+                            ee("#Team_RoleSupport")
                           )
                         );
                     }
@@ -6894,54 +6913,54 @@
                     d = n
                       ? m.createElement("img", {
                           src: i.IMG_URL + "locked.png",
-                          className: Ua().SelectArrow,
+                          className: Ha().SelectArrow,
                         })
                       : l
                       ? m.createElement("img", {
                           src: i.IMG_URL + "x_red.png",
-                          className: Ua().ClearX,
+                          className: Ha().ClearX,
                           onClick: function () {
-                            return lr.clearFantasyRosterSlot(r, a);
+                            return cr.clearFantasyRosterSlot(r, a);
                           },
                         })
                       : m.createElement("img", {
                           src: i.IMG_URL + "right_arrow.png",
-                          className: Ua().SelectArrow,
+                          className: Ha().SelectArrow,
                         });
                     var p =
                       n || l
-                        ? ye(ae.Roster, _.props.match.params.leagueID)
-                        : ye(ae.PlayerSelect, _.props.match.params.leagueID, a);
+                        ? ke(te.Roster, _.props.match.params.leagueID)
+                        : ke(te.PlayerSelect, _.props.match.params.leagueID, a);
                     t.push(
                       m.createElement(
                         g.OL,
                         {
                           to: p,
                           key: s,
-                          className: ke(
-                            Ua().RosterSlot,
-                            l && Ua().NeedsSubmit,
-                            n && Ua().Locked
+                          className: be(
+                            Ha().RosterSlot,
+                            l && Ha().NeedsSubmit,
+                            n && Ha().Locked
                           ),
                         },
-                        m.createElement(Ea, {
-                          className: ke(Ua().Icon, Ua().Player),
-                          src: lr.getPlayerImageURL(
+                        m.createElement(va, {
+                          className: be(Ha().Icon, Ha().Player),
+                          src: cr.getPlayerImageURL(
                             e.rgRosterSlots[a].nAccountID
                           ),
                           fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                         }),
-                        m.createElement(Ea, {
-                          className: ke(Ua().Icon, Ua().Team),
+                        m.createElement(va, {
+                          className: be(Ha().Icon, Ha().Team),
                           src: e.rgRosterSlots[a].strTeamLogoURL,
                           fallbackSrc: i.IMG_URL + "team_unknown.png",
                         }),
                         m.createElement(
                           "div",
-                          { className: Ua().Identity },
+                          { className: Ha().Identity },
                           m.createElement(
                             "div",
-                            { className: ke(Ua().Name, o && Ua().Empty) },
+                            { className: be(Ha().Name, o && Ha().Empty) },
                             c
                           )
                         ),
@@ -6961,31 +6980,31 @@
                     "div",
                     {
                       key: "roster_elements",
-                      className: ke(
-                        Ua().Roster,
-                        We().VerticalCollapseable,
-                        this.props.section != ae.Roster && We().VerticalCollapse
+                      className: be(
+                        Ha().Roster,
+                        xe().VerticalCollapseable,
+                        this.props.section != te.Roster && xe().VerticalCollapse
                       ),
                     },
                     m.createElement(
                       "div",
                       {
-                        className: ke(
-                          Ua().SubmitButton,
-                          e.bRosterNeedsSubmission && Ua().Enabled
+                        className: be(
+                          Ha().SubmitButton,
+                          e.bRosterNeedsSubmission && Ha().Enabled
                         ),
                         onClick: this.SubmitRosterSlots,
                       },
-                      $("#Fantasy_SubmitRoster")
+                      ee("#Fantasy_SubmitRoster")
                     ),
                     m.createElement(
                       "div",
                       {
-                        className: ke(
-                          Ua().RosterSlots,
-                          We().VerticalCollapseable,
-                          this.props.section != ae.Roster &&
-                            We().VerticalCollapse
+                        className: be(
+                          Ha().RosterSlots,
+                          xe().VerticalCollapseable,
+                          this.props.section != te.Roster &&
+                            xe().VerticalCollapse
                         ),
                       },
                       t
@@ -7003,13 +7022,13 @@
                 a = [],
                 t = [],
                 r = [],
-                o = this.props.section == ae.Scores,
+                o = this.props.section == te.Scores,
                 n = parseInt(this.props.match.params.leagueID),
                 l = parseInt(this.props.match.params.timestamp);
               if (!o) return a;
               var c = this.state.bSelectingDay,
-                s = lr.getFantasyDayScore(n, o ? l : 0, !o),
-                _ = lr.getFantasyLeagueStatus();
+                s = cr.getFantasyDayScore(n, o ? l : 0, !o),
+                _ = cr.getFantasyLeagueStatus();
               if (!_) return o && a.push(this.GetLoadingThrobber()), a;
               for (var d in _.league_infos) {
                 var p = _.league_infos[d];
@@ -7018,22 +7037,22 @@
                     m.createElement(
                       g.OL,
                       {
-                        to: ye(
-                          ae.Scores,
+                        to: ke(
+                          te.Scores,
                           this.props.match.params.leagueID,
                           0,
                           0
                         ),
                         key: "league_" + n + "_day_0",
-                        className: ke(
-                          Ua().DayOption,
-                          !this.state.bSelectingDay && 0 != l && Ua().Collapse
+                        className: be(
+                          Ha().DayOption,
+                          !this.state.bSelectingDay && 0 != l && Ha().Collapse
                         ),
                         onClick: function () {
                           return e.ToggleDaySelect(0);
                         },
                       },
-                      $("#Fantasy_Total")
+                      ee("#Fantasy_Total")
                     )
                   );
                   var u = function (a) {
@@ -7046,16 +7065,16 @@
                         m.createElement(
                           g.OL,
                           {
-                            to: ye(
-                              ae.Scores,
+                            to: ke(
+                              te.Scores,
                               h.props.match.params.leagueID,
                               0,
                               r
                             ),
                             key: "league_" + n + "_day_" + r,
-                            className: ke(
-                              Ua().DayOption,
-                              !h.state.bSelectingDay && l != r && Ua().Collapse
+                            className: be(
+                              Ha().DayOption,
+                              !h.state.bSelectingDay && l != r && Ha().Collapse
                             ),
                             onClick: function () {
                               return e.ToggleDaySelect(r);
@@ -7077,35 +7096,35 @@
                       "div",
                       {
                         key: "score_elements",
-                        className: ke(
-                          Ua().Scores,
-                          We().VerticalCollapseable,
-                          !o && We().VerticalCollapse
+                        className: be(
+                          Ha().Scores,
+                          xe().VerticalCollapseable,
+                          !o && xe().VerticalCollapse
                         ),
                       },
                       m.createElement(
                         "div",
-                        { className: Ua().ScoreSelector },
+                        { className: Ha().ScoreSelector },
                         m.createElement("div", {
-                          className: ke(Ua().VerticalLine, !c && Ua().Collapse),
+                          className: be(Ha().VerticalLine, !c && Ha().Collapse),
                         }),
                         m.createElement(
                           "div",
-                          { className: Ua().VerticalList },
+                          { className: Ha().VerticalList },
                           t,
                           m.createElement("div", {
-                            className: ke(
-                              Ua().HorizonalLine,
-                              c && Ua().Collapse
+                            className: be(
+                              Ha().HorizonalLine,
+                              c && Ha().Collapse
                             ),
                           })
                         ),
                         m.createElement("div", {
-                          className: ke(Ua().VerticalLine, !c && Ua().Collapse),
+                          className: be(Ha().VerticalLine, !c && Ha().Collapse),
                         })
                       ),
                       m.createElement("div", {
-                        className: ke(Ua().TotalScore, Ua().Collapsed),
+                        className: be(Ha().TotalScore, Ha().Collapsed),
                       })
                     )
                   ),
@@ -7115,51 +7134,51 @@
               for (var k in s.players) {
                 var b = s.players[k],
                   E = {
-                    appear: We().VerticalCollapse,
-                    appearActive: o ? "" : We().VerticalCollapse,
+                    appear: xe().VerticalCollapse,
+                    appearActive: o ? "" : xe().VerticalCollapse,
                   };
                 r.push(
                   m.createElement(
-                    Ha.TransitionGroup,
+                    Wa.TransitionGroup,
                     { key: "player_" + b.account_id + "_timestamp_" + l },
                     m.createElement(
-                      Ha.CSSTransition,
+                      Wa.CSSTransition,
                       {
                         appear: !0,
                         timeout: 0,
                         classNames: E,
-                        className: ke(Ua().Element, We().VerticalCollapseable),
+                        className: be(Ha().Element, xe().VerticalCollapseable),
                       },
                       m.createElement(
                         g.rU,
-                        { to: ge(b.account_id) },
-                        m.createElement(Ea, {
-                          className: ke(Ua().Icon, Ua().Player),
-                          src: lr.getPlayerImageURL(b.account_id),
+                        { to: _e(b.account_id) },
+                        m.createElement(va, {
+                          className: be(Ha().Icon, Ha().Player),
+                          src: cr.getPlayerImageURL(b.account_id),
                           fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                         }),
-                        m.createElement(Ea, {
-                          className: ke(Ua().Icon, Ua().Team),
+                        m.createElement(va, {
+                          className: be(Ha().Icon, Ha().Team),
                           src: b.team_logo_url,
                           fallbackSrc: i.IMG_URL + "team_unknown.png",
                         }),
                         m.createElement(
                           "div",
-                          { className: Ua().Identity },
+                          { className: Ha().Identity },
                           m.createElement(
                             "div",
-                            { className: Ua().Name },
+                            { className: Ha().Name },
                             b.name
                           ),
                           m.createElement(
                             "div",
-                            { className: Ua().Role },
-                            $("#Fantasy_Role_" + b.role)
+                            { className: Ha().Role },
+                            ee("#Fantasy_Role_" + b.role)
                           )
                         ),
                         m.createElement(
                           "div",
-                          { className: Ua().Score },
+                          { className: Ha().Score },
                           b.score.toFixed(2)
                         )
                       )
@@ -7173,33 +7192,33 @@
                     "div",
                     {
                       key: "score_elements",
-                      className: ke(
-                        Ua().Scores,
-                        We().VerticalCollapseable,
-                        this.props.section != ae.Scores && We().VerticalCollapse
+                      className: be(
+                        Ha().Scores,
+                        xe().VerticalCollapseable,
+                        this.props.section != te.Scores && xe().VerticalCollapse
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Ua().ScoreSelector },
+                      { className: Ha().ScoreSelector },
                       m.createElement("div", {
-                        className: ke(Ua().VerticalLine, !c && Ua().Collapse),
+                        className: be(Ha().VerticalLine, !c && Ha().Collapse),
                       }),
                       m.createElement(
                         "div",
-                        { className: Ua().VerticalList },
+                        { className: Ha().VerticalList },
                         t,
                         m.createElement("div", {
-                          className: ke(Ua().HorizonalLine, c && Ua().Collapse),
+                          className: be(Ha().HorizonalLine, c && Ha().Collapse),
                         })
                       ),
                       m.createElement("div", {
-                        className: ke(Ua().VerticalLine, !c && Ua().Collapse),
+                        className: be(Ha().VerticalLine, !c && Ha().Collapse),
                       })
                     ),
                     m.createElement(
                       "div",
-                      { className: Ua().TotalScore },
+                      { className: Ha().TotalScore },
                       s.total_score.toFixed(2)
                     ),
                     r
@@ -7216,12 +7235,12 @@
             (a.prototype.GetLeaderboards = function () {
               var e = [],
                 a = [],
-                t = this.props.section == ae.Leaderboard,
+                t = this.props.section == te.Leaderboard,
                 r = parseInt(this.props.match.params.leagueID);
               if (!t) return e;
               var o = this.state.bFriendLeaderboard
-                ? lr.getFantasyFriendLeaderboard(r, !t)
-                : lr.getFantasyGlobalLeaderboard(r, !t);
+                ? cr.getFantasyFriendLeaderboard(r, !t)
+                : cr.getFantasyGlobalLeaderboard(r, !t);
               if (o)
                 if (0 == o.entries.length)
                   a.push(
@@ -7229,17 +7248,17 @@
                       "div",
                       {
                         key: "leaderboard_empty",
-                        className: Ua().EmptyLeaderboard,
+                        className: Ha().EmptyLeaderboard,
                       },
                       m.createElement(
                         "div",
-                        { className: Ua().Heading },
-                        $("#Fantasy_EmptyLeaderboard")
+                        { className: Ha().Heading },
+                        ee("#Fantasy_EmptyLeaderboard")
                       ),
                       m.createElement(
                         "div",
-                        { className: Ua().SubHeading },
-                        $("#Fantasy_EmptyLeaderboard2")
+                        { className: Ha().SubHeading },
+                        ee("#Fantasy_EmptyLeaderboard2")
                       )
                     )
                   );
@@ -7251,16 +7270,16 @@
                         "div",
                         {
                           key: "leaderboard_player_" + n,
-                          className: Ua().Player,
+                          className: Ha().Player,
                         },
                         m.createElement(
                           "div",
-                          { className: Ua().Name },
+                          { className: Ha().Name },
                           i.name
                         ),
                         m.createElement(
                           "div",
-                          { className: Ua().Score },
+                          { className: Ha().Score },
                           i.score.toFixed(2)
                         )
                       )
@@ -7273,34 +7292,34 @@
                     "div",
                     {
                       key: "ranking_elements",
-                      className: ke(
-                        Ua().Leaderboards,
-                        We().VerticalCollapseable,
-                        !t && We().VerticalCollapse
+                      className: be(
+                        Ha().Leaderboards,
+                        xe().VerticalCollapseable,
+                        !t && xe().VerticalCollapse
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Ua().FriendSection },
+                      { className: Ha().FriendSection },
                       m.createElement(
                         "div",
-                        { className: Ua().Title },
-                        $("#Fantasy_SteamFriends")
+                        { className: Ha().Title },
+                        ee("#Fantasy_SteamFriends")
                       ),
                       m.createElement(
                         "div",
                         {
-                          className: ke(
-                            Ua().FriendSwitch,
-                            this.state.bFriendLeaderboard && Ua().Friend
+                          className: be(
+                            Ha().FriendSwitch,
+                            this.state.bFriendLeaderboard && Ha().Friend
                           ),
                           onClick: this.ToggleLeaderboard,
                         },
-                        m.createElement("div", { className: Ua().Background }),
-                        m.createElement("div", { className: Ua().Selector })
+                        m.createElement("div", { className: Ha().Background }),
+                        m.createElement("div", { className: Ha().Selector })
                       )
                     ),
-                    m.createElement("div", { className: Ua().PlayerList }, a)
+                    m.createElement("div", { className: Ha().PlayerList }, a)
                   )
                 ),
                 e
@@ -7312,22 +7331,22 @@
                 t = this.GetPlayerSelect(),
                 r = this.GetScores(),
                 o = this.GetLeaderboards();
-              if (this.props.section == ae.PlayerSelect) {
+              if (this.props.section == te.PlayerSelect) {
                 var n = parseInt(this.props.match.params.leagueID),
                   i = parseInt(this.props.match.params.slot),
-                  l = lr.getFantasyLineup(n);
-                console.log((0, wa.ZN)(l)),
+                  l = cr.getFantasyLineup(n);
+                console.log((0, Oa.ZN)(l)),
                   l &&
-                    lr.isFantasyRosterSlotLocked(n, i) &&
+                    cr.isFantasyRosterSlotLocked(n, i) &&
                     this.props.history.goBack();
               }
               return m.createElement(
                 "div",
-                { className: Ua().Contents },
+                { className: Ha().Contents },
                 e,
                 m.createElement(
                   "div",
-                  { className: Ua().SubContent },
+                  { className: Ha().SubContent },
                   a,
                   t,
                   r,
@@ -7335,88 +7354,88 @@
                 )
               );
             }),
-            (0, r.gn)([Z], a.prototype, "SubmitRosterSlots", null),
-            (0, r.gn)([Z], a.prototype, "ToggleDaySelect", null),
-            (0, r.gn)([Z], a.prototype, "ToggleLeaderboard", null),
-            (a = (0, r.gn)([Se.Pi], a))
+            (0, r.gn)([J], a.prototype, "SubmitRosterSlots", null),
+            (0, r.gn)([J], a.prototype, "ToggleDaySelect", null),
+            (0, r.gn)([J], a.prototype, "ToggleLeaderboard", null),
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component);
-      const xa = (function (e) {
+      const Ya = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           (0, r.ZT)(a, e),
           (a.prototype.componentDidMount = function () {
-            lr.triggerShowHelpPage(Qt.Fantasy);
+            cr.triggerShowHelpPage($t.Fantasy);
           }),
           (a.prototype.render = function () {
             return m.createElement(
               "div",
-              { className: Ua().FantasyPage },
-              m.createElement(fa, {
-                text: $("#Header_Fantasy"),
-                underlineColorStyle: Ua().backgroundColorBlue,
-                helpPageButton: Qt.Fantasy,
+              { className: Ha().FantasyPage },
+              m.createElement(Ca, {
+                text: ee("#Header_Fantasy"),
+                underlineColorStyle: Ha().backgroundColorBlue,
+                helpPageButton: $t.Fantasy,
               }),
               m.createElement(
                 "div",
-                { className: Ua().Contents },
+                { className: Ha().Contents },
                 m.createElement(
                   _.rs,
                   null,
                   m.createElement(_.AW, {
                     exact: !0,
-                    path: ye(ae.LeagueSelect),
+                    path: ke(te.LeagueSelect),
                     render: function (e) {
                       return m.createElement(
-                        Wa,
-                        (0, r.pi)({ section: ae.LeagueSelect }, e)
+                        xa,
+                        (0, r.pi)({ section: te.LeagueSelect }, e)
                       );
                     },
                   }),
                   m.createElement(_.AW, {
-                    path: ye(ae.RegionSelect, ":leagueID", 0),
+                    path: ke(te.RegionSelect, ":leagueID", 0),
                     render: function (e) {
                       return m.createElement(
-                        Wa,
-                        (0, r.pi)({ section: ae.RegionSelect }, e)
+                        xa,
+                        (0, r.pi)({ section: te.RegionSelect }, e)
                       );
                     },
                   }),
                   m.createElement(_.AW, {
-                    path: ye(ae.Roster, ":leagueID", 0),
+                    path: ke(te.Roster, ":leagueID", 0),
                     render: function (e) {
                       return m.createElement(
-                        Wa,
-                        (0, r.pi)({ section: ae.Roster }, e)
+                        xa,
+                        (0, r.pi)({ section: te.Roster }, e)
                       );
                     },
                   }),
                   m.createElement(_.AW, {
-                    path: ye(ae.PlayerSelect, ":leagueID", ":slot"),
+                    path: ke(te.PlayerSelect, ":leagueID", ":slot"),
                     render: function (e) {
                       return m.createElement(
-                        Wa,
-                        (0, r.pi)({ section: ae.PlayerSelect }, e)
+                        xa,
+                        (0, r.pi)({ section: te.PlayerSelect }, e)
                       );
                     },
                   }),
                   m.createElement(_.AW, {
-                    path: ye(ae.Scores, ":leagueID", 0, ":timestamp"),
+                    path: ke(te.Scores, ":leagueID", 0, ":timestamp"),
                     render: function (e) {
                       return m.createElement(
-                        Wa,
-                        (0, r.pi)({ section: ae.Scores }, e)
+                        xa,
+                        (0, r.pi)({ section: te.Scores }, e)
                       );
                     },
                   }),
                   m.createElement(_.AW, {
-                    path: ye(ae.Leaderboard, ":leagueID", 0),
+                    path: ke(te.Leaderboard, ":leagueID", 0),
                     render: function (e) {
                       return m.createElement(
-                        Wa,
-                        (0, r.pi)({ section: ae.Leaderboard }, e)
+                        xa,
+                        (0, r.pi)({ section: te.Leaderboard }, e)
                       );
                     },
                   })
@@ -7424,12 +7443,12 @@
               )
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Ya = t(2552),
-        qa = t.n(Ya);
-      const Va = (function (e) {
+      var qa = t(2552),
+        Va = t.n(qa);
+      const za = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -7437,18 +7456,18 @@
           (0, r.ZT)(a, e),
           (a.prototype.render = function () {
             var e = parseInt(this.props.match.params.teamID),
-              a = lr.getTeamData(e);
+              a = cr.getTeamData(e);
             if (!a)
               return m.createElement(
                 "div",
-                { key: "Loading", className: qa().Loading },
-                m.createElement(Xe, {
+                { key: "Loading", className: Va().Loading },
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("#Loading"),
+                  string: ee("#Loading"),
                   position: "center",
                 })
               );
-            var t = lr.getDPCStandings(),
+            var t = cr.getDPCStandings(),
               r = "0";
             if (t && t.results)
               for (var o = 0, n = t.results; o < n.length; o++) {
@@ -7461,8 +7480,8 @@
             if (!a.members)
               return m.createElement(
                 "div",
-                { key: "InvalidTeam", className: qa().InvalidTeam },
-                $("#Team_InvalidTeam")
+                { key: "InvalidTeam", className: Va().InvalidTeam },
+                ee("#Team_InvalidTeam")
               );
             var c = null,
               s = [];
@@ -7477,14 +7496,14 @@
                     m.createElement(
                       g.rU,
                       {
-                        to: he(u, te.Standings),
+                        to: ye(u, re.Standings),
                         key: u,
-                        className: qa().AchievementContainer,
+                        className: Va().AchievementContainer,
                       },
                       m.createElement(
                         "div",
-                        { className: qa().AchievementImageContainer },
-                        m.createElement(Ea, {
+                        { className: Va().AchievementImageContainer },
+                        m.createElement(va, {
                           src:
                             i.CDN_URL +
                             "apps/dota2/images/leagues/" +
@@ -7492,13 +7511,13 @@
                             "/images/image_9.png",
                           fallbackSrc:
                             i.IMG_URL + "nav_tournaments_standings.png",
-                          className: qa().LeagueImage,
+                          className: Va().LeagueImage,
                         })
                       ),
                       m.createElement(
                         "span",
-                        { className: qa().AchievementRank },
-                        ia(p.standing)
+                        { className: Va().AchievementRank },
+                        la(p.standing)
                       )
                     )
                   );
@@ -7522,7 +7541,7 @@
                       var N = parseInt(C);
                       if (
                         (y.push(N),
-                        (I = lr.getPlayerData(N)) &&
+                        (I = cr.getPlayerData(N)) &&
                           I.fantasy_role == E &&
                           (I.fantasy_role || 0 != E))
                       ) {
@@ -7531,41 +7550,41 @@
                           m.createElement(
                             g.rU,
                             {
-                              to: ge("") + N,
+                              to: _e("") + N,
                               key: N,
-                              className: qa().PlayerContainer,
+                              className: Va().PlayerContainer,
                             },
                             m.createElement(
                               "div",
-                              { className: qa().PlayerImageContainer },
-                              m.createElement(Ea, {
-                                src: lr.getPlayerImageURL(I.account_id),
+                              { className: Va().PlayerImageContainer },
+                              m.createElement(va, {
+                                src: cr.getPlayerImageURL(I.account_id),
                                 fallbackSrc:
                                   i.IMG_URL_BASE +
                                   "players/portrait_unknown.png",
-                                className: qa().PlayerImage,
+                                className: Va().PlayerImage,
                               })
                             ),
                             m.createElement(
                               "span",
-                              { className: qa().PlayerInfo },
+                              { className: Va().PlayerInfo },
                               m.createElement(
                                 "span",
-                                { className: qa().PlayerNickname },
+                                { className: Va().PlayerNickname },
                                 I.name
                               ),
                               m.createElement(
                                 "span",
-                                { className: qa().TeamRole },
-                                I.fantasy_role ? ca(I.fantasy_role) : ""
+                                { className: Va().TeamRole },
+                                I.fantasy_role ? sa(I.fantasy_role) : ""
                               )
                             ),
-                            m.createElement("span", { className: qa().Spacer }),
+                            m.createElement("span", { className: Va().Spacer }),
                             I.country_code &&
                               m.createElement(
                                 "span",
-                                { className: qa().PlayerCountry },
-                                $(
+                                { className: Va().PlayerCountry },
+                                ee(
                                   "#Steam_Country_" +
                                     I.country_code.toUpperCase()
                                 )
@@ -7577,7 +7596,7 @@
                                   "country_flags/" +
                                   I.country_code +
                                   ".png",
-                                className: qa().CountryFlag,
+                                className: Va().CountryFlag,
                               })
                           )
                         );
@@ -7593,45 +7612,45 @@
                   var L = parseInt(P.account_id);
                   if (-1 == y.indexOf(L)) {
                     var I;
-                    if (!(I = lr.getPlayerData(L))) continue;
+                    if (!(I = cr.getPlayerData(L))) continue;
                     B.push(
                       m.createElement(
                         g.rU,
                         {
-                          to: ge("") + L,
+                          to: _e("") + L,
                           key: "removed" + L,
-                          className: qa().PlayerContainer,
+                          className: Va().PlayerContainer,
                         },
                         m.createElement(
                           "div",
-                          { className: qa().PlayerImageContainer },
-                          m.createElement(Ea, {
-                            src: lr.getPlayerImageURL(I.account_id),
+                          { className: Va().PlayerImageContainer },
+                          m.createElement(va, {
+                            src: cr.getPlayerImageURL(I.account_id),
                             fallbackSrc:
                               i.IMG_URL_BASE + "players/portrait_unknown.png",
-                            className: qa().PlayerImage,
+                            className: Va().PlayerImage,
                           })
                         ),
                         m.createElement(
                           "span",
-                          { className: qa().PlayerInfo },
+                          { className: Va().PlayerInfo },
                           m.createElement(
                             "span",
-                            { className: qa().PlayerNickname },
+                            { className: Va().PlayerNickname },
                             I.name
                           ),
                           m.createElement(
                             "span",
-                            { className: qa().TeamRole },
-                            I.fantasy_role ? ca(I.fantasy_role) : ""
+                            { className: Va().TeamRole },
+                            I.fantasy_role ? sa(I.fantasy_role) : ""
                           )
                         ),
-                        m.createElement("span", { className: qa().Spacer }),
+                        m.createElement("span", { className: Va().Spacer }),
                         I.country_code &&
                           m.createElement(
                             "span",
-                            { className: qa().PlayerCountry },
-                            $("#Steam_Country_" + I.country_code.toUpperCase())
+                            { className: Va().PlayerCountry },
+                            ee("#Steam_Country_" + I.country_code.toUpperCase())
                           ),
                         I.country_code &&
                           m.createElement("img", {
@@ -7640,7 +7659,7 @@
                               "country_flags/" +
                               I.country_code +
                               ".png",
-                            className: qa().CountryFlag,
+                            className: Va().CountryFlag,
                           })
                       )
                     );
@@ -7649,41 +7668,41 @@
               }
             return m.createElement(
               "div",
-              { className: qa().TeamPage },
-              m.createElement(fa, {
-                favoriteType: tr.Team,
+              { className: Va().TeamPage },
+              m.createElement(Ca, {
+                favoriteType: rr.Team,
                 favoriteId: e,
                 favoriteName: a.name,
                 favoriteURL: a.url_logo,
               }),
               m.createElement(
                 "div",
-                { className: qa().Contents },
+                { className: Va().Contents },
                 m.createElement(
                   "div",
-                  { className: qa().TeamLogoContainer },
-                  m.createElement(ta, {
-                    className: qa().Logo,
+                  { className: Va().TeamLogoContainer },
+                  m.createElement(ra, {
+                    className: Va().Logo,
                     team_id: e,
-                    size: je.Large,
+                    size: Qe.Large,
                   })
                 ),
-                m.createElement("div", { className: qa().TeamName }, a.name),
+                m.createElement("div", { className: Va().TeamName }, a.name),
                 m.createElement(
                   "div",
-                  { className: qa().SubsectionHeader },
-                  $("#Team_TeamInformation")
+                  { className: Va().SubsectionHeader },
+                  ee("#Team_TeamInformation")
                 ),
                 a.country_code &&
                   m.createElement(
                     "div",
-                    { className: qa().InfoStat },
-                    m.createElement("span", null, $("#Team_Location")),
-                    m.createElement("span", { className: qa().Spacer }),
+                    { className: Va().InfoStat },
+                    m.createElement("span", null, ee("#Team_Location")),
+                    m.createElement("span", { className: Va().Spacer }),
                     m.createElement(
                       "span",
                       null,
-                      $("#Steam_Country_" + a.country_code.toUpperCase())
+                      ee("#Steam_Country_" + a.country_code.toUpperCase())
                     ),
                     m.createElement("img", {
                       src:
@@ -7691,92 +7710,92 @@
                         "country_flags/" +
                         a.country_code +
                         ".png",
-                      className: qa().CountryFlag,
+                      className: Va().CountryFlag,
                     })
                   ),
                 0 != a.region &&
                   m.createElement(
                     "div",
-                    { className: qa().InfoStat },
-                    m.createElement("span", null, $("#Team_Region")),
-                    m.createElement("span", { className: qa().Spacer }),
+                    { className: Va().InfoStat },
+                    m.createElement("span", null, ee("#Team_Region")),
+                    m.createElement("span", { className: Va().Spacer }),
                     m.createElement(
                       "span",
                       null,
-                      $("#LeagueRegion_" + a.region)
+                      ee("#LeagueRegion_" + a.region)
                     )
                   ),
                 a.url_sponsor_logo > 0 &&
                   m.createElement(
                     "div",
-                    { className: qa().InfoStat },
-                    m.createElement("span", null, $("#Team_Sponsor")),
-                    m.createElement("span", { className: qa().Spacer }),
+                    { className: Va().InfoStat },
+                    m.createElement("span", null, ee("#Team_Sponsor")),
+                    m.createElement("span", { className: Va().Spacer }),
                     m.createElement("img", {
                       src: a.url_sponsor_logo,
-                      className: qa().SponsorLogo,
+                      className: Va().SponsorLogo,
                     })
                   ),
                 c > 0 &&
                   m.createElement(
                     "div",
-                    { className: qa().InfoStat },
-                    m.createElement("span", null, $("#Team_Earnings")),
-                    m.createElement("span", { className: qa().Spacer }),
-                    m.createElement("span", null, "$", la(c))
+                    { className: Va().InfoStat },
+                    m.createElement("span", null, ee("#Team_Earnings")),
+                    m.createElement("span", { className: Va().Spacer }),
+                    m.createElement("span", null, "$", ca(c))
                   ),
                 m.createElement(
                   "div",
-                  { className: qa().InfoStat },
-                  m.createElement("span", null, $("#Team_DPCRank")),
-                  m.createElement("span", { className: qa().Spacer }),
+                  { className: Va().InfoStat },
+                  m.createElement("span", null, ee("#Team_DPCRank")),
+                  m.createElement("span", { className: Va().Spacer }),
                   a.dpc_rank &&
                     m.createElement(
                       "span",
-                      { className: qa().Rank },
+                      { className: Va().Rank },
                       "#",
                       a.dpc_rank,
                       m.createElement(
                         "span",
-                        { className: qa().RankDash },
+                        { className: Va().RankDash },
                         " -"
                       )
                     ),
                   m.createElement(
                     "span",
-                    { className: qa().DPCPoints },
-                    $("#Team_DPCRankValue", r)
+                    { className: Va().DPCPoints },
+                    ee("#Team_DPCRankValue", r)
                   )
                 ),
                 a.dpc_results &&
                   m.createElement(
                     "div",
-                    { className: qa().SubsectionHeader },
-                    $("#Team_TeamAchievements")
+                    { className: Va().SubsectionHeader },
+                    ee("#Team_TeamAchievements")
                   ),
-                m.createElement("div", { className: qa().AchievementsList }, s),
+                m.createElement("div", { className: Va().AchievementsList }, s),
                 m.createElement(
                   "div",
-                  { className: qa().SubsectionHeader },
-                  $("#Team_Roster")
+                  { className: Va().SubsectionHeader },
+                  ee("#Team_Roster")
                 ),
                 k,
                 B.length > 0 &&
                   m.createElement(
                     "div",
-                    { className: qa().SubsectionHeader },
-                    $("#Team_PreviousMembers")
+                    { className: Va().SubsectionHeader },
+                    ee("#Team_PreviousMembers")
                   ),
                 B
               )
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var za = t(2103),
-        Ka = t.n(za);
-      const Xa = (function (e) {
+      var Ka = t(2103),
+        Xa = t.n(Ka);
+      const Za = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -7784,25 +7803,25 @@
           (0, r.ZT)(a, e),
           (a.prototype.render = function () {
             var e = parseInt(this.props.match.params.playerID),
-              a = lr.getPlayerData(e);
+              a = cr.getPlayerData(e);
             if (!a)
               return m.createElement(
                 "div",
-                { key: "Loading", className: Ka().Loading },
-                m.createElement(Xe, {
+                { key: "Loading", className: Xa().Loading },
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("#Loading"),
+                  string: ee("#Loading"),
                   position: "center",
                 })
               );
             if (!a.name)
               return m.createElement(
                 "div",
-                { key: "InvalidPlayer", className: Ka().InvalidPlayer },
-                $("#Player_InvalidPlayer")
+                { key: "InvalidPlayer", className: Xa().InvalidPlayer },
+                ee("#Player_InvalidPlayer")
               );
             var t = null;
-            a.team_id && (t = lr.getTeamData(a.team_id));
+            a.team_id && (t = cr.getTeamData(a.team_id));
             var r = [];
             if (a.results)
               for (var o = 0; o < a.results.length; ++o)
@@ -7810,14 +7829,14 @@
                   m.createElement(
                     g.rU,
                     {
-                      to: he(a.results[o].league_id, te.Standings),
+                      to: ye(a.results[o].league_id, re.Standings),
                       key: a.results[o].league_id,
-                      className: Ka().AchievementContainer,
+                      className: Xa().AchievementContainer,
                     },
                     m.createElement(
                       "div",
-                      { className: Ka().AchievementImageContainer },
-                      m.createElement(Ea, {
+                      { className: Xa().AchievementImageContainer },
+                      m.createElement(va, {
                         src:
                           i.CDN_URL +
                           "apps/dota2/images/leagues/" +
@@ -7825,13 +7844,13 @@
                           "/images/image_9.png",
                         fallbackSrc:
                           i.IMG_URL + "nav_tournaments_standings.png",
-                        className: Ka().LeagueImage,
+                        className: Xa().LeagueImage,
                       })
                     ),
                     m.createElement(
                       "span",
-                      { className: Ka().AchievementRank },
-                      ia(a.results[o].placement)
+                      { className: Xa().AchievementRank },
+                      la(a.results[o].placement)
                     )
                   )
                 );
@@ -7846,25 +7865,25 @@
                     n.unshift(
                       m.createElement(
                         "div",
-                        { key: l.team_id, className: Ka().PrevTeamContainer },
+                        { key: l.team_id, className: Xa().PrevTeamContainer },
                         m.createElement(
                           "div",
-                          { className: Ka().PrevTeamLogoContainer },
-                          m.createElement(Ea, {
+                          { className: Xa().PrevTeamLogoContainer },
+                          m.createElement(va, {
                             src: l.team_url_logo,
                             fallbackSrc: i.IMG_URL + "team_unknown.png",
-                            className: Ka().PrevTeamLogo,
+                            className: Xa().PrevTeamLogo,
                           })
                         ),
                         m.createElement(
                           "div",
-                          { className: Ka().TeamName },
+                          { className: Xa().TeamName },
                           l.team_name
                         ),
-                        m.createElement("span", { className: Ka().Spacer }),
+                        m.createElement("span", { className: Xa().Spacer }),
                         m.createElement(
                           "span",
-                          { className: Ka().TeamDates },
+                          { className: Xa().TeamDates },
                           c.toLocaleString([], {
                             month: "numeric",
                             day: "numeric",
@@ -7875,7 +7894,7 @@
                         s &&
                           m.createElement(
                             "span",
-                            { className: Ka().TeamDates },
+                            { className: Xa().TeamDates },
                             s.toLocaleString([], {
                               month: "numeric",
                               day: "numeric",
@@ -7885,8 +7904,8 @@
                         !s &&
                           m.createElement(
                             "span",
-                            { className: Ka().TeamDates },
-                            $("#Player_PresentTime")
+                            { className: Xa().TeamDates },
+                            ee("#Player_PresentTime")
                           )
                       )
                     );
@@ -7894,62 +7913,62 @@
               }
             return m.createElement(
               "div",
-              { className: Ka().PlayerPage },
-              m.createElement(fa, {
-                favoriteType: tr.Player,
+              { className: Xa().PlayerPage },
+              m.createElement(Ca, {
+                favoriteType: rr.Player,
                 favoriteId: e,
                 favoriteName: a.name,
               }),
               m.createElement(
                 "div",
-                { className: Ka().Contents },
+                { className: Xa().Contents },
                 m.createElement(
                   "div",
-                  { className: Ka().ImageContainer },
+                  { className: Xa().ImageContainer },
                   m.createElement(
                     "div",
-                    { className: Ka().PlayerImageContainer },
-                    m.createElement(Ea, {
-                      src: lr.getPlayerImageURL(a.account_id),
+                    { className: Xa().PlayerImageContainer },
+                    m.createElement(va, {
+                      src: cr.getPlayerImageURL(a.account_id),
                       fallbackSrc:
                         i.IMG_URL_BASE + "players/portrait_unknown.png",
-                      className: Ka().PlayerImage,
+                      className: Xa().PlayerImage,
                     })
                   ),
                   t &&
                     m.createElement(
                       "div",
-                      { className: Ka().TeamLogoContainer },
-                      m.createElement(Ea, {
+                      { className: Xa().TeamLogoContainer },
+                      m.createElement(va, {
                         src: t.url_logo,
                         fallbackSrc: i.IMG_URL + "team_unknown.png",
                       })
                     )
                 ),
-                m.createElement("div", { className: Ka().PlayerName }, a.name),
+                m.createElement("div", { className: Xa().PlayerName }, a.name),
                 m.createElement(
                   "div",
-                  { className: Ka().SubsectionHeader },
-                  $("#Player_PlayerInformation")
+                  { className: Xa().SubsectionHeader },
+                  ee("#Player_PlayerInformation")
                 ),
                 a.real_name &&
                   m.createElement(
                     "div",
-                    { className: Ka().InfoStat },
-                    m.createElement("span", null, $("#Player_Name")),
-                    m.createElement("span", { className: Ka().Spacer }),
+                    { className: Xa().InfoStat },
+                    m.createElement("span", null, ee("#Player_Name")),
+                    m.createElement("span", { className: Xa().Spacer }),
                     m.createElement("span", null, a.real_name)
                   ),
                 a.country_code &&
                   m.createElement(
                     "div",
-                    { className: Ka().InfoStat },
-                    m.createElement("span", null, $("#Player_Location")),
-                    m.createElement("span", { className: Ka().Spacer }),
+                    { className: Xa().InfoStat },
+                    m.createElement("span", null, ee("#Player_Location")),
+                    m.createElement("span", { className: Xa().Spacer }),
                     m.createElement(
                       "span",
                       null,
-                      $("#Steam_Country_" + a.country_code.toUpperCase())
+                      ee("#Steam_Country_" + a.country_code.toUpperCase())
                     ),
                     m.createElement("img", {
                       src:
@@ -7957,15 +7976,15 @@
                         "country_flags/" +
                         a.country_code +
                         ".png",
-                      className: Ka().CountryFlag,
+                      className: Xa().CountryFlag,
                     })
                   ),
                 0 != a.birthdate &&
                   m.createElement(
                     "div",
-                    { className: Ka().InfoStat },
-                    m.createElement("span", null, $("#Player_Age")),
-                    m.createElement("span", { className: Ka().Spacer }),
+                    { className: Xa().InfoStat },
+                    m.createElement("span", null, ee("#Player_Age")),
+                    m.createElement("span", { className: Xa().Spacer }),
                     m.createElement(
                       "span",
                       null,
@@ -7974,87 +7993,87 @@
                   ),
                 m.createElement(
                   "div",
-                  { className: Ka().InfoStat },
-                  m.createElement("span", null, $("#Player_Team")),
-                  m.createElement("span", { className: Ka().Spacer }),
+                  { className: Xa().InfoStat },
+                  m.createElement("span", null, ee("#Player_Team")),
+                  m.createElement("span", { className: Xa().Spacer }),
                   m.createElement(
                     "span",
                     null,
-                    a.team_name ? a.team_name : $("#Player_TeamNone")
+                    a.team_name ? a.team_name : ee("#Player_TeamNone")
                   )
                 ),
                 a.fantasy_role &&
                   m.createElement(
                     "div",
-                    { className: Ka().InfoStat },
-                    m.createElement("span", null, $("#Player_Role")),
-                    m.createElement("span", { className: Ka().Spacer }),
+                    { className: Xa().InfoStat },
+                    m.createElement("span", null, ee("#Player_Role")),
+                    m.createElement("span", { className: Xa().Spacer }),
                     m.createElement(
                       "span",
-                      { className: Ka().TeamRole },
-                      ca(a.fantasy_role)
+                      { className: Xa().TeamRole },
+                      sa(a.fantasy_role)
                     )
                   ),
                 a.total_earnings &&
                   m.createElement(
                     "div",
-                    { className: Ka().InfoStat },
-                    m.createElement("span", null, $("#Team_Earnings")),
-                    m.createElement("span", { className: Ka().Spacer }),
-                    m.createElement("span", null, "~$", la(a.total_earnings))
+                    { className: Xa().InfoStat },
+                    m.createElement("span", null, ee("#Team_Earnings")),
+                    m.createElement("span", { className: Xa().Spacer }),
+                    m.createElement("span", null, "~$", ca(a.total_earnings))
                   ),
                 a.dpc_rank &&
                   m.createElement(
                     "div",
-                    { className: Ka().InfoStat },
-                    m.createElement("span", null, $("#Player_DPCRank")),
-                    m.createElement("span", { className: Ka().Spacer }),
+                    { className: Xa().InfoStat },
+                    m.createElement("span", null, ee("#Player_DPCRank")),
+                    m.createElement("span", { className: Xa().Spacer }),
                     m.createElement("span", null, "#", a.dpc_rank)
                   ),
                 a.results &&
                   m.createElement(
                     "div",
-                    { className: Ka().SubsectionHeader },
-                    $("#Player_PlayerAchievements")
+                    { className: Xa().SubsectionHeader },
+                    ee("#Player_PlayerAchievements")
                   ),
-                m.createElement("div", { className: Ka().AchievementsList }, r),
+                m.createElement("div", { className: Xa().AchievementsList }, r),
                 m.createElement(
                   "div",
-                  { className: Ka().SubsectionHeader },
-                  $("#Player_Teams")
+                  { className: Xa().SubsectionHeader },
+                  ee("#Player_Teams")
                 ),
                 n
               )
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Za = t(7789),
-        Ja = t.n(Za);
-      const ja = (function (e) {
+      var Ja = t(7789),
+        ja = t.n(Ja);
+      const Qa = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           (0, r.ZT)(a, e),
           (a.prototype.toggleNotificationDisabled = function (e) {
-            var a = lr.getProfileInfo().disabled_notifications.includes(e);
-            lr.setNotification(e, !a);
+            var a = cr.getProfileInfo().disabled_notifications.includes(e);
+            cr.setNotification(e, !a);
           }),
           (a.prototype.render = function () {
             var e = this,
-              a = lr.getSteamPlayerInfo(),
+              a = cr.getSteamPlayerInfo(),
               t = a ? a.response.players[0] : null,
-              r = lr.getProfileInfo(),
-              o = lr.getFavorites();
+              r = cr.getProfileInfo(),
+              o = cr.getFavorites();
             if (!r || !o)
               return m.createElement(
                 "div",
-                { className: ke(Ja().Loading, We().FadeInDelay) },
-                m.createElement(Xe, {
+                { className: be(ja().Loading, xe().FadeInDelay) },
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("#Loading"),
+                  string: ee("#Loading"),
                   position: "center",
                 })
               );
@@ -8077,17 +8096,17 @@
                             g.rU,
                             {
                               key: "fav_player_" + a.id,
-                              to: ge(a.id),
-                              className: Ja().PlayerFavorite,
+                              to: _e(a.id),
+                              className: ja().PlayerFavorite,
                             },
-                            m.createElement(Ea, {
-                              className: Ja().PlayerIcon,
-                              src: lr.getPlayerImageURL(a.id),
+                            m.createElement(va, {
+                              className: ja().PlayerIcon,
+                              src: cr.getPlayerImageURL(a.id),
                               fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                             }),
                             m.createElement(
                               "div",
-                              { className: Ja().Name },
+                              { className: ja().Name },
                               a.name
                             )
                           )
@@ -8099,17 +8118,17 @@
                             g.rU,
                             {
                               key: "fav_player_" + a.id,
-                              to: me(a.id),
-                              className: Ja().TeamFavorite,
+                              to: ge(a.id),
+                              className: ja().TeamFavorite,
                             },
-                            m.createElement(Ea, {
-                              className: Ja().TeamIcon,
+                            m.createElement(va, {
+                              className: ja().TeamIcon,
                               src: a.url,
                               fallbackSrc: i.IMG_URL + "team_unknown.png",
                             }),
                             m.createElement(
                               "div",
-                              { className: Ja().Name },
+                              { className: ja().Name },
                               a.name
                             )
                           )
@@ -8127,15 +8146,15 @@
               ? (p.push(
                   m.createElement(
                     "div",
-                    { key: "pred_percent", className: Ja().Entry },
+                    { key: "pred_percent", className: ja().Entry },
                     m.createElement(
                       "div",
-                      { className: Ja().Label },
-                      $("#Profile_PredictionPercent")
+                      { className: ja().Label },
+                      ee("#Profile_PredictionPercent")
                     ),
                     m.createElement(
                       "div",
-                      { className: Ja().Value },
+                      { className: ja().Value },
                       r.prediction_info.percent,
                       " %"
                     )
@@ -8144,15 +8163,15 @@
                 p.push(
                   m.createElement(
                     "div",
-                    { key: "pred_shards", className: Ja().Entry },
+                    { key: "pred_shards", className: ja().Entry },
                     m.createElement(
                       "div",
-                      { className: Ja().Label },
-                      $("#Profile_PredictionShards")
+                      { className: ja().Label },
+                      ee("#Profile_PredictionShards")
                     ),
                     m.createElement(
                       "div",
-                      { className: Ja().Value },
+                      { className: ja().Value },
                       r.prediction_info.shard_winnings
                     )
                   )
@@ -8160,8 +8179,8 @@
               : p.push(
                   m.createElement(
                     "div",
-                    { key: "pred_none", className: Ja().NoPredictionData },
-                    $("#Profile_NoPredictionData")
+                    { key: "pred_none", className: ja().NoPredictionData },
+                    ee("#Profile_NoPredictionData")
                   )
                 );
             var u = [];
@@ -8192,96 +8211,96 @@
                 u.push(
                   m.createElement(
                     "div",
-                    { key: "notification_" + a.id, className: Ja().Entry },
+                    { key: "notification_" + a.id, className: ja().Entry },
                     m.createElement(
                       "div",
-                      { className: Ja().Label },
-                      $(a.locstring)
+                      { className: ja().Label },
+                      ee(a.locstring)
                     ),
                     m.createElement(
                       "div",
                       {
-                        className: ke(
-                          Ja().Switch,
+                        className: be(
+                          ja().Switch,
                           -1 == r.disabled_notifications.indexOf(a.id) &&
-                            Ja().On
+                            ja().On
                         ),
                         onClick: function () {
                           return e.toggleNotificationDisabled(a.id);
                         },
                       },
-                      m.createElement("div", { className: Ja().Background }),
-                      m.createElement("div", { className: Ja().Selector })
+                      m.createElement("div", { className: ja().Background }),
+                      m.createElement("div", { className: ja().Selector })
                     )
                   )
                 );
               }),
               m.createElement(
                 "div",
-                { className: Ja().ProfilePage },
-                m.createElement(fa, {
-                  text: $("#Header_Profile"),
-                  underlineColorStyle: Ja().backgroundColorGrey,
-                  titleButtonText: $("#Logout"),
-                  titleButtonTextClass: Ja().LogoutText,
+                { className: ja().ProfilePage },
+                m.createElement(Ca, {
+                  text: ee("#Header_Profile"),
+                  underlineColorStyle: ja().backgroundColorGrey,
+                  titleButtonText: ee("#Logout"),
+                  titleButtonTextClass: ja().LogoutText,
                   titleButtonDestination:
                     i.BASE_URL + "applications/dpc_logout",
                 }),
                 m.createElement(
                   "div",
-                  { className: Ja().Scrollable },
+                  { className: ja().Scrollable },
                   m.createElement(
                     "div",
-                    { className: Ja().TopSection },
-                    m.createElement(Ea, {
-                      className: Ja().Avatar,
+                    { className: ja().TopSection },
+                    m.createElement(va, {
+                      className: ja().Avatar,
                       src: n,
                       fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                     }),
                     m.createElement(
                       "div",
-                      { className: Ja().NameInfo },
-                      m.createElement("div", { className: Ja().Name }, l),
-                      m.createElement("div", { className: Ja().RealName }, c)
+                      { className: ja().NameInfo },
+                      m.createElement("div", { className: ja().Name }, l),
+                      m.createElement("div", { className: ja().RealName }, c)
                     )
                   ),
                   m.createElement(
                     "div",
-                    { className: Ja().FavoritesSection },
+                    { className: ja().FavoritesSection },
                     m.createElement(
                       "div",
-                      { className: Ja().FavoritesHeader },
+                      { className: ja().FavoritesHeader },
                       m.createElement(
                         "div",
-                        { className: Ja().LeftLabel },
+                        { className: ja().LeftLabel },
                         m.createElement("img", {
-                          className: Ja().FavoritesHeart,
+                          className: ja().FavoritesHeart,
                           src: i.IMG_URL + "favorite_star.png",
                         }),
                         m.createElement(
                           "div",
-                          { className: Ja().FavoritesLabel },
-                          $("#Profile_YourFavorites")
+                          { className: ja().FavoritesLabel },
+                          ee("#Profile_YourFavorites")
                         )
                       ),
                       m.createElement(
                         g.rU,
-                        { to: ce(), className: Ja().ManageFavorites },
-                        $("#Profile_ManageFavorites")
+                        { to: se(), className: ja().ManageFavorites },
+                        ee("#Profile_ManageFavorites")
                       )
                     ),
                     s
                   ),
                   m.createElement(
                     "div",
-                    { className: Ja().NotificationsSection },
+                    { className: ja().NotificationsSection },
                     m.createElement(
                       "div",
-                      { className: Ja().NotificationsHeader },
+                      { className: ja().NotificationsHeader },
                       m.createElement(
                         "div",
-                        { className: Ja().NotificationsLabel },
-                        $("#Profile_Notifications")
+                        { className: ja().NotificationsLabel },
+                        ee("#Profile_Notifications")
                       )
                     ),
                     u
@@ -8290,13 +8309,13 @@
               )
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Qa = t(7047),
-        $a = t.n(Qa),
-        et = t(1094);
-      const at = (function (e) {
+      var $a = t(7047),
+        et = t.n($a),
+        at = t(1094);
+      const tt = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { strTeamColor1: "", strTeamColor2: "" }), t;
@@ -8316,14 +8335,14 @@
             var e = this,
               a = parseInt(this.props.match.params.leagueID),
               t = parseInt(this.props.match.params.seriesID),
-              r = lr.getSeriesData(a, t);
+              r = cr.getSeriesData(a, t);
             if (!r)
               return m.createElement(
                 "div",
-                { className: ke($a().Loading, We().FadeInDelay) },
-                m.createElement(Xe, {
+                { className: be(et().Loading, xe().FadeInDelay) },
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("#Loading"),
+                  string: ee("#Loading"),
                   position: "center",
                 })
               );
@@ -8336,49 +8355,49 @@
                 _ = c.toFixed(0) + "%";
               o = m.createElement(
                 "div",
-                { className: $a().Predictions },
+                { className: et().Predictions },
                 m.createElement(
                   "div",
-                  { className: $a().TopRow },
+                  { className: et().TopRow },
                   m.createElement(
                     "div",
-                    { className: $a().TeamInfo },
+                    { className: et().TeamInfo },
                     m.createElement("img", {
                       src: r.team_1.team_logo_url,
-                      className: $a().Logo,
+                      className: et().Logo,
                     }),
                     m.createElement(
                       "div",
-                      { className: ke($a().Name, $a().Left) },
+                      { className: be(et().Name, et().Left) },
                       r.team_1.team_name
                     )
                   ),
                   m.createElement(
                     "div",
-                    { className: $a().TeamInfo },
+                    { className: et().TeamInfo },
                     m.createElement(
                       "div",
-                      { className: ke($a().Name, $a().Right) },
+                      { className: be(et().Name, et().Right) },
                       r.team_2.team_name
                     ),
                     m.createElement("img", {
                       src: r.team_2.team_logo_url,
-                      className: $a().Logo,
+                      className: et().Logo,
                     })
                   )
                 ),
                 m.createElement(
                   "div",
-                  { className: $a().Bars },
+                  { className: et().Bars },
                   m.createElement("div", {
-                    className: $a().Bar,
+                    className: et().Bar,
                     style: {
                       flexGrow: l,
                       backgroundColor: this.state.strTeamColor1,
                     },
                   }),
                   m.createElement("div", {
-                    className: $a().Bar,
+                    className: et().Bar,
                     style: {
                       flexGrow: c,
                       backgroundColor: this.state.strTeamColor2,
@@ -8387,11 +8406,11 @@
                 ),
                 m.createElement(
                   "div",
-                  { className: $a().Percentages },
+                  { className: et().Percentages },
                   m.createElement(
                     "div",
                     {
-                      className: $a().Percentage,
+                      className: et().Percentage,
                       style: { color: this.state.strTeamColor1 },
                     },
                     s
@@ -8399,7 +8418,7 @@
                   m.createElement(
                     "div",
                     {
-                      className: $a().Percentage,
+                      className: et().Percentage,
                       style: { color: this.state.strTeamColor2 },
                     },
                     _
@@ -8436,14 +8455,14 @@
                   3 == h[r.team_2.team_id] && (d = r.team_2);
             }
             d &&
-              ((p = $("#Series_Winner", d.team_name)),
-              (u = $("#Series_Winner_Majority")));
+              ((p = ee("#Series_Winner", d.team_name)),
+              (u = ee("#Series_Winner_Majority")));
             var E = [];
             for (var y in r.match_minimal) {
               var v = r.match_minimal[y];
               E.push(
                 m.createElement(
-                  oa,
+                  na,
                   {
                     key: "match_" + v.match_id,
                     leagueID: v.tourney.league_id,
@@ -8490,48 +8509,48 @@
             O.push([]), O.push([]);
             for (var F = 0; F < 2; F++)
               for (var G in D[F]) {
-                var U = lr.getPlayerData(D[F][G]);
+                var U = cr.getPlayerData(D[F][G]);
                 U &&
                   O[F].push(
                     m.createElement(
                       g.rU,
                       {
-                        to: ge(U.account_id),
+                        to: _e(U.account_id),
                         key: "player_account_" + U.account_id,
-                        className: ke(
-                          $a().Player,
-                          0 == F && $a().Left,
-                          1 == F && $a().Right
+                        className: be(
+                          et().Player,
+                          0 == F && et().Left,
+                          1 == F && et().Right
                         ),
                       },
-                      m.createElement(Ea, {
-                        className: ke($a().Image, 1 == F && $a().Hide),
-                        src: lr.getPlayerImageURL(U.account_id),
+                      m.createElement(va, {
+                        className: be(et().Image, 1 == F && et().Hide),
+                        src: cr.getPlayerImageURL(U.account_id),
                         fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                       }),
                       m.createElement(
                         "div",
                         {
-                          className: ke(
-                            $a().Name,
-                            0 == F && $a().Left,
-                            1 == F && $a().Right
+                          className: be(
+                            et().Name,
+                            0 == F && et().Left,
+                            1 == F && et().Right
                           ),
                         },
                         m.createElement(
                           "div",
-                          { className: $a().ProName },
+                          { className: et().ProName },
                           U.name
                         ),
                         m.createElement(
                           "div",
-                          { className: $a().RealName },
+                          { className: et().RealName },
                           U.real_name
                         )
                       ),
-                      m.createElement(Ea, {
-                        className: ke($a().Image, 0 == F && $a().Hide),
-                        src: lr.getPlayerImageURL(U.account_id),
+                      m.createElement(va, {
+                        className: be(et().Image, 0 == F && et().Hide),
+                        src: cr.getPlayerImageURL(U.account_id),
                         fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                       })
                     )
@@ -8539,14 +8558,14 @@
               }
             return m.createElement(
               "div",
-              { className: $a().Body },
-              m.createElement(et.r, {
+              { className: et().Body },
+              m.createElement(at.r, {
                 src: r.team_1.team_logo_url,
                 getColors: function (a) {
                   return e.setTeamColor(1, String(a[0]));
                 },
               }),
-              m.createElement(et.r, {
+              m.createElement(at.r, {
                 src: r.team_2.team_logo_url,
                 getColors: function (a) {
                   return e.setTeamColor(2, String(a[0]));
@@ -8554,13 +8573,13 @@
               }),
               m.createElement(
                 "div",
-                { className: $a().Header },
+                { className: et().Header },
                 m.createElement(
                   "div",
-                  { className: $a().TopIcons },
+                  { className: et().TopIcons },
                   m.createElement("img", {
                     src: i.IMG_URL + "back_arrow.png",
-                    className: $a().BackArrow,
+                    className: et().BackArrow,
                     onClick: function () {
                       return window.history.back();
                     },
@@ -8568,37 +8587,37 @@
                 ),
                 m.createElement(
                   "div",
-                  { className: $a().SeriesInfo },
+                  { className: et().SeriesInfo },
                   m.createElement(
                     g.rU,
-                    { to: me(r.team_1.team_id), className: $a().Team },
+                    { to: ge(r.team_1.team_id), className: et().Team },
                     m.createElement("img", {
                       src: r.team_1.team_logo_url,
-                      className: $a().Logo,
+                      className: et().Logo,
                     }),
                     m.createElement(
                       "div",
-                      { className: $a().Name },
+                      { className: et().Name },
                       r.team_1.team_name
                     )
                   ),
                   m.createElement(
                     "div",
-                    { className: $a().Score },
+                    { className: et().Score },
                     f,
                     " : ",
                     C
                   ),
                   m.createElement(
                     g.rU,
-                    { to: me(r.team_2.team_id), className: $a().Team },
+                    { to: ge(r.team_2.team_id), className: et().Team },
                     m.createElement("img", {
                       src: r.team_2.team_logo_url,
-                      className: $a().Logo,
+                      className: et().Logo,
                     }),
                     m.createElement(
                       "div",
-                      { className: $a().Name },
+                      { className: et().Name },
                       r.team_2.team_name
                     )
                   )
@@ -8606,95 +8625,95 @@
               ),
               m.createElement(
                 "div",
-                { className: $a().Scrollable },
+                { className: et().Scrollable },
                 o,
                 m.createElement(
                   "div",
-                  { className: $a().Winner },
-                  m.createElement("div", { className: $a().WinString }, p),
-                  m.createElement("div", { className: $a().Predict }, u)
+                  { className: et().Winner },
+                  m.createElement("div", { className: et().WinString }, p),
+                  m.createElement("div", { className: et().Predict }, u)
                 ),
                 m.createElement(
                   "div",
-                  { className: $a().TopStats },
+                  { className: et().TopStats },
                   m.createElement(
                     "div",
-                    { className: ke($a().StatLine, $a().Kills) },
+                    { className: be(et().StatLine, et().Kills) },
                     m.createElement(
                       "div",
-                      { className: $a().Text },
-                      $("#Series_MostKills")
+                      { className: et().Text },
+                      ee("#Series_MostKills")
                     ),
                     m.createElement(
                       g.rU,
-                      { to: ge(N), className: $a().PlayerLink },
-                      m.createElement("div", { className: $a().PlayerName }, T),
-                      m.createElement(Ea, {
-                        className: ke($a().Icon, $a().Player),
-                        src: lr.getPlayerImageURL(N),
+                      { to: _e(N), className: et().PlayerLink },
+                      m.createElement("div", { className: et().PlayerName }, T),
+                      m.createElement(va, {
+                        className: be(et().Icon, et().Player),
+                        src: cr.getPlayerImageURL(N),
                         fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                       })
                     ),
-                    m.createElement(Ea, {
-                      className: ke($a().Icon, $a().Hero),
+                    m.createElement(va, {
+                      className: be(et().Icon, et().Hero),
                       src: i.IMG_URL_BASE + "heroes/num_wide/" + S + ".png",
                       fallbackSrc: i.IMG_URL + "team_unknown.png",
                     }),
-                    m.createElement("div", { className: $a().Value }, B)
+                    m.createElement("div", { className: et().Value }, B)
                   ),
                   m.createElement(
                     "div",
-                    { className: ke($a().StatLine, $a().Assists) },
+                    { className: be(et().StatLine, et().Assists) },
                     m.createElement(
                       "div",
-                      { className: $a().Text },
-                      $("#Series_MostAssists")
+                      { className: et().Text },
+                      ee("#Series_MostAssists")
                     ),
                     m.createElement(
                       g.rU,
-                      { to: ge(P), className: $a().PlayerLink },
-                      m.createElement("div", { className: $a().PlayerName }, R),
-                      m.createElement(Ea, {
-                        className: ke($a().Icon, $a().Player),
-                        src: lr.getPlayerImageURL(P),
+                      { to: _e(P), className: et().PlayerLink },
+                      m.createElement("div", { className: et().PlayerName }, R),
+                      m.createElement(va, {
+                        className: be(et().Icon, et().Player),
+                        src: cr.getPlayerImageURL(P),
                         fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                       })
                     ),
-                    m.createElement(Ea, {
-                      className: ke($a().Icon, $a().Hero),
+                    m.createElement(va, {
+                      className: be(et().Icon, et().Hero),
                       src: i.IMG_URL_BASE + "heroes/num_wide/" + I + ".png",
                       fallbackSrc: i.IMG_URL + "team_unknown.png",
                     }),
-                    m.createElement("div", { className: $a().Value }, L)
+                    m.createElement("div", { className: et().Value }, L)
                   )
                 ),
                 m.createElement(
                   "div",
-                  { className: $a().MatchList },
+                  { className: et().MatchList },
                   m.createElement(
                     "div",
-                    { className: $a().Title },
-                    $("#Series_Matches")
+                    { className: et().Title },
+                    ee("#Series_Matches")
                   ),
                   E
                 ),
                 m.createElement(
                   "div",
-                  { className: $a().TeamRosters },
+                  { className: et().TeamRosters },
                   m.createElement(
                     "div",
-                    { className: $a().Title },
-                    $("#Series_TeamRosters")
+                    { className: et().Title },
+                    ee("#Series_TeamRosters")
                   ),
                   m.createElement(
                     "div",
-                    { className: $a().TeamRosterTeams },
+                    { className: et().TeamRosterTeams },
                     m.createElement(
                       "div",
-                      { className: $a().TeamRoster },
+                      { className: et().TeamRoster },
                       O[0]
                     ),
-                    m.createElement("div", { className: $a().TeamRoster }, O[1])
+                    m.createElement("div", { className: et().TeamRoster }, O[1])
                   )
                 )
               )
@@ -8702,14 +8721,14 @@
           }),
           (a.prototype.render = function () {
             var e = this.getContents();
-            return m.createElement("div", { className: $a().SeriesPage }, e);
+            return m.createElement("div", { className: et().SeriesPage }, e);
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var tt = t(2866),
-        rt = t.n(tt);
-      const ot = (function (e) {
+      var rt = t(2866),
+        ot = t.n(rt);
+      const nt = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (t.state = { strTeamColor1: "", strTeamColor2: "" }), t;
@@ -8729,21 +8748,21 @@
             var e = this,
               a = parseInt(this.props.match.params.leagueID),
               t = parseInt(this.props.match.params.nodeID),
-              r = lr.getLeagueNodeData(a, t),
-              o = lr.getRecentAndUpcomingMatches(),
-              n = r ? lr.getTeamData(r.team_id_1) : void 0,
-              l = r ? lr.getTeamData(r.team_id_2) : void 0;
+              r = cr.getLeagueNodeData(a, t),
+              o = cr.getRecentAndUpcomingMatches(),
+              n = r ? cr.getTeamData(r.team_id_1) : void 0,
+              l = r ? cr.getTeamData(r.team_id_2) : void 0;
             if (!n || !l)
               return m.createElement(
                 "div",
-                { className: ke(rt().Loading, We().FadeInDelay) },
-                m.createElement(Xe, {
+                { className: be(ot().Loading, xe().FadeInDelay) },
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("#Loading"),
+                  string: ee("#Loading"),
                   position: "center",
                 })
               );
-            lr.getProPredictionMaxWager();
+            cr.getProPredictionMaxWager();
             if (o)
               for (var c = 0, s = o.tournaments; c < s.length; c++)
                 for (var _ = 0, d = s[c].matches; _ < d.length; _++) {
@@ -8757,31 +8776,31 @@
                 u++
               ) {
                 var y = h[u],
-                  k = lr.getPlayerData(y);
+                  k = cr.getPlayerData(y);
                 p[0].push(
                   m.createElement(
                     g.rU,
                     {
-                      to: ge(y),
+                      to: _e(y),
                       key: "player_account_" + y,
-                      className: ke(rt().Player, rt().Left),
+                      className: be(ot().Player, ot().Left),
                     },
-                    m.createElement(Ea, {
-                      className: rt().Image,
-                      src: lr.getPlayerImageURL(y),
+                    m.createElement(va, {
+                      className: ot().Image,
+                      src: cr.getPlayerImageURL(y),
                       fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                     }),
                     m.createElement(
                       "div",
-                      { className: ke(rt().Name, rt().Left) },
+                      { className: be(ot().Name, ot().Left) },
                       m.createElement(
                         "div",
-                        { className: rt().ProName },
+                        { className: ot().ProName },
                         k ? k.name : ""
                       ),
                       m.createElement(
                         "div",
-                        { className: rt().RealName },
+                        { className: ot().RealName },
                         k ? k.real_name : ""
                       )
                     )
@@ -8794,32 +8813,32 @@
                 b < E.length;
                 b++
               ) {
-                (y = E[b]), (k = lr.getPlayerData(y));
+                (y = E[b]), (k = cr.getPlayerData(y));
                 p[1].push(
                   m.createElement(
                     g.rU,
                     {
-                      to: ge(y),
+                      to: _e(y),
                       key: "player_account_" + y,
-                      className: ke(rt().Player, rt().Right),
+                      className: be(ot().Player, ot().Right),
                     },
                     m.createElement(
                       "div",
-                      { className: ke(rt().Name, rt().Right) },
+                      { className: be(ot().Name, ot().Right) },
                       m.createElement(
                         "div",
-                        { className: rt().ProName },
+                        { className: ot().ProName },
                         k ? k.name : ""
                       ),
                       m.createElement(
                         "div",
-                        { className: rt().RealName },
+                        { className: ot().RealName },
                         k ? k.real_name : ""
                       )
                     ),
-                    m.createElement(Ea, {
-                      className: rt().Image,
-                      src: lr.getPlayerImageURL(y),
+                    m.createElement(va, {
+                      className: ot().Image,
+                      src: cr.getPlayerImageURL(y),
                       fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                     })
                   )
@@ -8827,14 +8846,14 @@
               }
             return m.createElement(
               "div",
-              { className: rt().UpcomingSeriesPage },
-              m.createElement(et.r, {
+              { className: ot().UpcomingSeriesPage },
+              m.createElement(at.r, {
                 src: n.url_logo,
                 getColors: function (a) {
                   return e.setTeamColor(1, String(a[0]));
                 },
               }),
-              m.createElement(et.r, {
+              m.createElement(at.r, {
                 src: l.url_logo,
                 getColors: function (a) {
                   return e.setTeamColor(2, String(a[0]));
@@ -8842,13 +8861,13 @@
               }),
               m.createElement(
                 "div",
-                { className: rt().Header },
+                { className: ot().Header },
                 m.createElement(
                   "div",
-                  { className: rt().TopIcons },
+                  { className: ot().TopIcons },
                   m.createElement("img", {
                     src: i.IMG_URL + "back_arrow.png",
-                    className: rt().BackArrow,
+                    className: ot().BackArrow,
                     onClick: function () {
                       return window.history.back();
                     },
@@ -8856,63 +8875,63 @@
                 ),
                 m.createElement(
                   "div",
-                  { className: rt().SeriesInfo },
+                  { className: ot().SeriesInfo },
                   m.createElement(
                     g.rU,
-                    { to: me(n.team_id), className: rt().Team },
-                    m.createElement(ta, {
-                      className: rt().Logo,
+                    { to: ge(n.team_id), className: ot().Team },
+                    m.createElement(ra, {
+                      className: ot().Logo,
                       team_id: n.team_id,
-                      size: je.Medium,
+                      size: Qe.Medium,
                     }),
-                    m.createElement("div", { className: rt().Name }, n.name)
+                    m.createElement("div", { className: ot().Name }, n.name)
                   ),
-                  m.createElement("div", { className: rt().Score }, $("#VS")),
+                  m.createElement("div", { className: ot().Score }, ee("#VS")),
                   m.createElement(
                     g.rU,
-                    { to: me(l.team_id), className: rt().Team },
-                    m.createElement(ta, {
-                      className: rt().Logo,
+                    { to: ge(l.team_id), className: ot().Team },
+                    m.createElement(ra, {
+                      className: ot().Logo,
                       team_id: l.team_id,
-                      size: je.Medium,
+                      size: Qe.Medium,
                     }),
-                    m.createElement("div", { className: rt().Name }, l.name)
+                    m.createElement("div", { className: ot().Name }, l.name)
                   )
                 )
               ),
               m.createElement(
                 "div",
-                { className: rt().Scrollable },
+                { className: ot().Scrollable },
                 m.createElement(
                   "div",
-                  { className: rt().TeamRosters },
+                  { className: ot().TeamRosters },
                   m.createElement(
                     "div",
-                    { className: rt().Title },
-                    $("#Series_TeamRosters")
+                    { className: ot().Title },
+                    ee("#Series_TeamRosters")
                   ),
                   m.createElement(
                     "div",
-                    { className: rt().TeamRosterTeams },
+                    { className: ot().TeamRosterTeams },
                     m.createElement(
                       "div",
-                      { className: rt().TeamRoster },
+                      { className: ot().TeamRoster },
                       p[0]
                     ),
-                    m.createElement("div", { className: rt().TeamRoster }, p[1])
+                    m.createElement("div", { className: ot().TeamRoster }, p[1])
                   )
                 ),
                 undefined
               )
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var nt = t(8308),
-        it = t.n(nt),
-        lt = t(8345);
-      const ct = (function (e) {
+      var it = t(8308),
+        lt = t.n(it),
+        ct = t(8345);
+      const st = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -8921,14 +8940,14 @@
           (a.prototype.getContents = function () {
             var e,
               a = parseInt(this.props.match.params.matchID),
-              t = lr.getMatch(a);
+              t = cr.getMatch(a);
             if (!t)
               return m.createElement(
                 "div",
-                { className: ke(it().Loading, We().FadeInDelay) },
-                m.createElement(Xe, {
+                { className: be(lt().Loading, xe().FadeInDelay) },
+                m.createElement(Ze, {
                   size: "medium",
-                  string: $("#Loading"),
+                  string: ee("#Loading"),
                   position: "center",
                 })
               );
@@ -8997,23 +9016,23 @@
                 ).toFixed(0);
               e = m.createElement(
                 "div",
-                { className: it().GraphSection },
+                { className: lt().GraphSection },
                 m.createElement(
                   "div",
-                  { className: it().Title },
-                  $("#Match_NetWorth")
+                  { className: lt().Title },
+                  ee("#Match_NetWorth")
                 ),
                 m.createElement(
                   "div",
-                  { className: it().GraphContainer },
-                  m.createElement("div", { className: it().EdgeMask }),
+                  { className: lt().GraphContainer },
+                  m.createElement("div", { className: lt().EdgeMask }),
                   m.createElement(
-                    lt.h2,
+                    ct.h2,
                     { width: "100%", height: 200 },
                     m.createElement(
-                      lt.TH,
+                      ct.TH,
                       { data: r },
-                      m.createElement(lt.B2, {
+                      m.createElement(ct.B2, {
                         type: "number",
                         domain: [-N, N],
                         hide: !0,
@@ -9042,7 +9061,7 @@
                           })
                         )
                       ),
-                      m.createElement(lt.uN, {
+                      m.createElement(ct.uN, {
                         type: "monotone",
                         dataKey: "value",
                         stroke: "url(#splitColor)",
@@ -9052,13 +9071,13 @@
                   ),
                   m.createElement(
                     "div",
-                    { className: ke(it().Legend, C && it().DireGreater) },
+                    { className: be(lt().Legend, C && lt().DireGreater) },
                     B,
                     "K",
-                    m.createElement("div", { className: it().Arrow }, "▶")
+                    m.createElement("div", { className: lt().Arrow }, "▶")
                   )
                 ),
-                m.createElement("div", { className: it().Bottom }, _)
+                m.createElement("div", { className: lt().Bottom }, _)
               );
             }
             var S = [];
@@ -9071,40 +9090,40 @@
                     "div",
                     {
                       key: "hero_" + I + "_" + T,
-                      className: it().SingleHeroStats,
+                      className: lt().SingleHeroStats,
                     },
                     m.createElement(
                       "div",
-                      { className: it().TopBar },
+                      { className: lt().TopBar },
                       m.createElement("img", {
                         src:
                           i.IMG_URL_BASE +
                           "heroes/num_wide/" +
                           P.hero_id +
                           ".png",
-                        className: it().HeroImage,
+                        className: lt().HeroImage,
                       }),
                       m.createElement(
                         "div",
-                        { className: it().NameAndName },
+                        { className: lt().NameAndName },
                         m.createElement(
                           "div",
-                          { className: it().HeroName },
+                          { className: lt().HeroName },
                           P.pro_name.length > 0 ? P.pro_name : P.player_name
                         ),
                         m.createElement(
                           "div",
-                          { className: it().PlayerName },
-                          $("#Hero_" + P.hero_id)
+                          { className: lt().PlayerName },
+                          ee("#Hero_" + P.hero_id)
                         )
                       )
                     ),
                     m.createElement(
                       "div",
-                      { className: it().Stats },
+                      { className: lt().Stats },
                       m.createElement(
                         "div",
-                        { className: it().KDA },
+                        { className: lt().KDA },
                         P.kills,
                         " / ",
                         P.deaths,
@@ -9113,16 +9132,16 @@
                       ),
                       m.createElement(
                         "div",
-                        { className: it().NetWorth },
+                        { className: lt().NetWorth },
                         (P.net_worth / 1e3).toFixed(1),
                         "K"
                       )
                     ),
                     m.createElement(
                       "div",
-                      { className: it().Items },
+                      { className: lt().Items },
                       m.createElement("img", {
-                        className: it().Item,
+                        className: lt().Item,
                         src:
                           i.IMG_URL_BASE +
                           "items/num_small/" +
@@ -9130,7 +9149,7 @@
                           ".png",
                       }),
                       m.createElement("img", {
-                        className: it().Item,
+                        className: lt().Item,
                         src:
                           i.IMG_URL_BASE +
                           "items/num_small/" +
@@ -9138,7 +9157,7 @@
                           ".png",
                       }),
                       m.createElement("img", {
-                        className: it().Item,
+                        className: lt().Item,
                         src:
                           i.IMG_URL_BASE +
                           "items/num_small/" +
@@ -9146,7 +9165,7 @@
                           ".png",
                       }),
                       m.createElement("img", {
-                        className: it().Item,
+                        className: lt().Item,
                         src:
                           i.IMG_URL_BASE +
                           "items/num_small/" +
@@ -9154,7 +9173,7 @@
                           ".png",
                       }),
                       m.createElement("img", {
-                        className: it().Item,
+                        className: lt().Item,
                         src:
                           i.IMG_URL_BASE +
                           "items/num_small/" +
@@ -9162,7 +9181,7 @@
                           ".png",
                       }),
                       m.createElement("img", {
-                        className: it().Item,
+                        className: lt().Item,
                         src:
                           i.IMG_URL_BASE +
                           "items/num_small/" +
@@ -9183,42 +9202,42 @@
                   m.createElement(
                     g.rU,
                     {
-                      to: ge(P.account_id),
+                      to: _e(P.account_id),
                       key: "player_account_" + P.account_id,
-                      className: ke(
-                        it().Player,
-                        0 == I && it().Left,
-                        1 == I && it().Right
+                      className: be(
+                        lt().Player,
+                        0 == I && lt().Left,
+                        1 == I && lt().Right
                       ),
                     },
-                    m.createElement(Ea, {
-                      className: ke(it().Image, 1 == I && it().Hide),
-                      src: lr.getPlayerImageURL(P.account_id),
+                    m.createElement(va, {
+                      className: be(lt().Image, 1 == I && lt().Hide),
+                      src: cr.getPlayerImageURL(P.account_id),
                       fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                     }),
                     m.createElement(
                       "div",
                       {
-                        className: ke(
-                          it().Name,
-                          0 == I && it().Left,
-                          1 == I && it().Right
+                        className: be(
+                          lt().Name,
+                          0 == I && lt().Left,
+                          1 == I && lt().Right
                         ),
                       },
                       m.createElement(
                         "div",
-                        { className: it().ProName },
+                        { className: lt().ProName },
                         P.pro_name.length > 0 ? P.pro_name : P.player_name
                       ),
                       m.createElement(
                         "div",
-                        { className: it().RealName },
+                        { className: lt().RealName },
                         P.real_name
                       )
                     ),
-                    m.createElement(Ea, {
-                      className: ke(it().Image, 0 == I && it().Hide),
-                      src: lr.getPlayerImageURL(P.account_id),
+                    m.createElement(va, {
+                      className: be(lt().Image, 0 == I && lt().Hide),
+                      src: cr.getPlayerImageURL(P.account_id),
                       fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                     })
                   )
@@ -9235,9 +9254,9 @@
                         "div",
                         {
                           key: "pickban_label_" + A,
-                          className: ke(it().PickOrBanLabel, it().Pick),
+                          className: be(lt().PickOrBanLabel, lt().Pick),
                         },
-                        $("#Match_Pick")
+                        ee("#Match_Pick")
                       )
                     )
                   : G.push(
@@ -9245,9 +9264,9 @@
                         "div",
                         {
                           key: "pickban_label_" + A,
-                          className: ke(it().PickOrBanLabel, it().Ban),
+                          className: be(lt().PickOrBanLabel, lt().Ban),
                         },
-                        $("#Match_Ban")
+                        ee("#Match_Ban")
                       )
                     )),
                 R[M.team].push(
@@ -9255,15 +9274,15 @@
                     "div",
                     {
                       key: "pickban_" + M.team + "_" + A,
-                      className: ke(
-                        it().PickOrBan,
-                        M.is_pick && it().Pick,
-                        !M.is_pick && it().Ban
+                      className: be(
+                        lt().PickOrBan,
+                        M.is_pick && lt().Pick,
+                        !M.is_pick && lt().Ban
                       ),
                     },
-                    m.createElement("div", { className: it().Number }, A + 1),
+                    m.createElement("div", { className: lt().Number }, A + 1),
                     m.createElement("img", {
-                      className: it().HeroImage,
+                      className: lt().HeroImage,
                       src:
                         i.IMG_URL_BASE +
                         "heroes/num_wide/" +
@@ -9272,65 +9291,65 @@
                     }),
                     m.createElement(
                       "div",
-                      { className: it().HeroName },
-                      $("#Hero_" + M.hero_id)
+                      { className: lt().HeroName },
+                      ee("#Hero_" + M.hero_id)
                     )
                   )
                 );
             }
             return (
               2 == t.match.match_outcome
-                ? (D = $("#Match_Winner", t.match.radiant_team_name))
+                ? (D = ee("#Match_Winner", t.match.radiant_team_name))
                 : 3 == t.match.match_outcome &&
-                  (D = $("#Match_Winner", t.match.dire_team_name)),
+                  (D = ee("#Match_Winner", t.match.dire_team_name)),
               m.createElement(
                 "div",
-                { className: it().Body },
+                { className: lt().Body },
                 m.createElement(
                   "div",
-                  { className: it().Header },
+                  { className: lt().Header },
                   m.createElement("img", {
                     src: i.IMG_URL + "back_arrow.png",
-                    className: it().BackArrow,
+                    className: lt().BackArrow,
                     onClick: function () {
                       return window.history.back();
                     },
                   }),
                   m.createElement(
                     "div",
-                    { className: it().MatchInfo },
+                    { className: lt().MatchInfo },
                     m.createElement(
                       g.rU,
-                      { to: me(t.match.radiant_team_id), className: it().Team },
-                      m.createElement(ta, {
-                        className: it().Logo,
+                      { to: ge(t.match.radiant_team_id), className: lt().Team },
+                      m.createElement(ra, {
+                        className: lt().Logo,
                         team_id: t.match.radiant_team_id,
-                        size: je.Medium,
+                        size: Qe.Medium,
                       }),
                       m.createElement(
                         "div",
-                        { className: it().Name },
+                        { className: lt().Name },
                         t.match.radiant_team_name
                       )
                     ),
                     m.createElement(
                       "div",
-                      { className: it().Score },
+                      { className: lt().Score },
                       t.match.radiant_team_score,
                       " - ",
                       t.match.dire_team_score
                     ),
                     m.createElement(
                       g.rU,
-                      { to: me(t.match.dire_team_id), className: it().Team },
-                      m.createElement(ta, {
-                        className: it().Logo,
+                      { to: ge(t.match.dire_team_id), className: lt().Team },
+                      m.createElement(ra, {
+                        className: lt().Logo,
                         team_id: t.match.dire_team_id,
-                        size: je.Medium,
+                        size: Qe.Medium,
                       }),
                       m.createElement(
                         "div",
-                        { className: it().Name },
+                        { className: lt().Name },
                         t.match.dire_team_name
                       )
                     )
@@ -9338,85 +9357,85 @@
                 ),
                 m.createElement(
                   "div",
-                  { className: it().RadiantDireBar },
-                  m.createElement("div", { className: it().Radiant }),
-                  m.createElement("div", { className: it().Dire })
+                  { className: lt().RadiantDireBar },
+                  m.createElement("div", { className: lt().Radiant }),
+                  m.createElement("div", { className: lt().Dire })
                 ),
                 m.createElement(
                   "div",
-                  { className: it().Scrollable },
-                  m.createElement("div", { className: it().Winner }, D),
+                  { className: lt().Scrollable },
+                  m.createElement("div", { className: lt().Winner }, D),
                   e,
                   m.createElement(
                     "div",
-                    { className: it().HeroStatsSection },
+                    { className: lt().HeroStatsSection },
                     m.createElement(
                       "div",
-                      { className: it().Title },
-                      $("#Match_HeroStats")
+                      { className: lt().Title },
+                      ee("#Match_HeroStats")
                     ),
                     m.createElement(
                       "div",
-                      { className: it().HeroStats },
+                      { className: lt().HeroStats },
                       m.createElement(
                         "div",
-                        { className: ke(it().TeamHeroStats, it().Radiant) },
+                        { className: be(lt().TeamHeroStats, lt().Radiant) },
                         S[0]
                       ),
                       m.createElement(
                         "div",
-                        { className: ke(it().TeamHeroStats, it().Dire) },
+                        { className: be(lt().TeamHeroStats, lt().Dire) },
                         S[1]
                       )
                     )
                   ),
                   m.createElement(
                     "div",
-                    { className: it().TeamRosters },
+                    { className: lt().TeamRosters },
                     m.createElement(
                       "div",
-                      { className: it().Title },
-                      $("#Series_TeamRosters")
+                      { className: lt().Title },
+                      ee("#Series_TeamRosters")
                     ),
                     m.createElement(
                       "div",
-                      { className: it().TeamRosterTeams },
+                      { className: lt().TeamRosterTeams },
                       m.createElement(
                         "div",
-                        { className: it().TeamRoster },
+                        { className: lt().TeamRoster },
                         L[0]
                       ),
                       m.createElement(
                         "div",
-                        { className: it().TeamRoster },
+                        { className: lt().TeamRoster },
                         L[1]
                       )
                     )
                   ),
                   m.createElement(
                     "div",
-                    { className: it().PicksAndBansSection },
+                    { className: lt().PicksAndBansSection },
                     m.createElement(
                       "div",
-                      { className: it().Title },
-                      $("#Match_PicksAndBans")
+                      { className: lt().Title },
+                      ee("#Match_PicksAndBans")
                     ),
                     m.createElement(
                       "div",
-                      { className: it().PicksAndBans },
+                      { className: lt().PicksAndBans },
                       m.createElement(
                         "div",
-                        { className: ke(it().TeamPicksAndBans, it().Radiant) },
+                        { className: be(lt().TeamPicksAndBans, lt().Radiant) },
                         R[0]
                       ),
                       m.createElement(
                         "div",
-                        { className: it().PickAndBansLabel },
+                        { className: lt().PickAndBansLabel },
                         G
                       ),
                       m.createElement(
                         "div",
-                        { className: ke(it().TeamPicksAndBans, it().Dire) },
+                        { className: be(lt().TeamPicksAndBans, lt().Dire) },
                         R[1]
                       )
                     )
@@ -9427,42 +9446,42 @@
           }),
           (a.prototype.render = function () {
             var e = this.getContents();
-            return m.createElement("div", { className: it().MatchPage }, e);
+            return m.createElement("div", { className: lt().MatchPage }, e);
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var st = t(73),
-        mt = t.n(st),
-        gt = function (e) {
+      var mt = t(73),
+        gt = t.n(mt),
+        _t = function (e) {
           var a = e.teamID,
             t = (e.teamLogoURL, e.teamName);
           return m.createElement(
             g.rU,
-            { to: me(a), className: mt().Team },
-            m.createElement(ta, {
-              className: mt().Logo,
+            { to: ge(a), className: gt().Team },
+            m.createElement(ra, {
+              className: gt().Logo,
               team_id: a,
-              size: je.Medium,
+              size: Qe.Medium,
             }),
-            m.createElement("div", { className: mt().Name }, t)
+            m.createElement("div", { className: gt().Name }, t)
           );
         },
-        _t = function (e) {
+        dt = function (e) {
           var a = "";
           switch (e.gameState) {
             case 1:
-              a = $("#MatchStatus_WaitForPlayersToLoad");
+              a = ee("#MatchStatus_WaitForPlayersToLoad");
               break;
             case 2:
-              a = $("#MatchStatus_SelectingHeroes");
+              a = ee("#MatchStatus_SelectingHeroes");
               break;
             case 3:
-              a = $("#MatchStatus_StrategyTime");
+              a = ee("#MatchStatus_StrategyTime");
           }
-          return m.createElement("div", { className: mt().GameState }, a);
+          return m.createElement("div", { className: gt().GameState }, a);
         },
-        dt = function (e) {
+        pt = function (e) {
           var a = e.teamRadiant,
             t = e.teamDire,
             r = e.gameState,
@@ -9474,31 +9493,31 @@
           }
           return m.createElement(
             "div",
-            { className: mt().TopBar },
+            { className: gt().TopBar },
             m.createElement("img", {
               src: i.IMG_URL + "back_arrow.png",
-              className: mt().BackArrow,
+              className: gt().BackArrow,
               onClick: function () {
                 return window.history.back();
               },
             }),
             m.createElement(
               "div",
-              { className: mt().MatchInfo },
-              m.createElement(gt, {
+              { className: gt().MatchInfo },
+              m.createElement(_t, {
                 teamID: a.team_id,
                 teamLogoURL: a.team_logo_url,
                 teamName: a.team_name,
               }),
               m.createElement(
                 "div",
-                { className: mt().Score },
+                { className: gt().Score },
                 a.score,
                 " - ",
                 t.score,
-                m.createElement("div", { className: mt().GameTime }, n)
+                m.createElement("div", { className: gt().GameTime }, n)
               ),
-              m.createElement(gt, {
+              m.createElement(_t, {
                 teamID: t.team_id,
                 teamLogoURL: t.team_logo_url,
                 teamName: t.team_name,
@@ -9506,7 +9525,7 @@
             )
           );
         },
-        pt = function (e) {
+        ut = function (e) {
           var a = e.heroID,
             t = e.isRadiant,
             r = e.positionPercentX + "%",
@@ -9514,16 +9533,16 @@
           return m.createElement(
             "div",
             {
-              className: ke(mt().Hero, t && mt().Radiant, !t && mt().Dire),
+              className: be(gt().Hero, t && gt().Radiant, !t && gt().Dire),
               style: { left: r, bottom: o, zIndex: 1e3 },
             },
             m.createElement("img", {
-              className: mt().HeroIcon,
+              className: gt().HeroIcon,
               src: i.IMG_URL_BASE + "heroes/num_icons/" + a + ".png",
             })
           );
         },
-        ut = function (e) {
+        ht = function (e) {
           var a = e.gameState,
             t = e.playersRadiant,
             r = e.playersDire,
@@ -9540,7 +9559,7 @@
                 _ = 100 * (g.x + 0.5),
                 d = 100 * (g.y + 0.5);
               n.push(
-                m.createElement(pt, {
+                m.createElement(ut, {
                   key: "playericon_" + l + "_" + g.heroid,
                   heroID: g.heroid,
                   isRadiant: 0 == l,
@@ -9577,11 +9596,11 @@
                 key: "buildingicon_" + h,
                 src: k,
                 style: { left: b, bottom: E, zIndex: 100 * y.type + u },
-                className: ke(
-                  mt().BuildingIcon,
-                  2 == y.team && mt().Radiant,
-                  3 == y.team && mt().Dire,
-                  y.destroyed && mt().Destroyed
+                className: be(
+                  gt().BuildingIcon,
+                  2 == y.team && gt().Radiant,
+                  3 == y.team && gt().Dire,
+                  y.destroyed && gt().Destroyed
                 ),
               })
             ),
@@ -9590,14 +9609,14 @@
           return m.createElement(
             "div",
             {
-              className: mt().Map,
+              className: gt().Map,
               style: { backgroundImage: "url(" + i.IMG_URL + "minimap.png )" },
             },
             n,
             p
           );
         },
-        ht = function (e) {
+        yt = function (e) {
           var a = e.gameState,
             t = e.gameTime,
             r = e.netWorthValues;
@@ -9666,23 +9685,23 @@
             ).toFixed(0);
           return m.createElement(
             "div",
-            { className: mt().GraphSection },
+            { className: gt().GraphSection },
             m.createElement(
               "div",
-              { className: mt().Title },
-              $("#Match_NetWorth")
+              { className: gt().Title },
+              ee("#Match_NetWorth")
             ),
             m.createElement(
               "div",
-              { className: mt().GraphContainer },
-              m.createElement("div", { className: mt().EdgeMask }),
+              { className: gt().GraphContainer },
+              m.createElement("div", { className: gt().EdgeMask }),
               m.createElement(
-                lt.h2,
+                ct.h2,
                 { width: "100%", height: 200 },
                 m.createElement(
-                  lt.TH,
+                  ct.TH,
                   { data: o },
-                  m.createElement(lt.B2, {
+                  m.createElement(ct.B2, {
                     type: "number",
                     domain: [-f, f],
                     hide: !0,
@@ -9705,7 +9724,7 @@
                       })
                     )
                   ),
-                  m.createElement(lt.uN, {
+                  m.createElement(ct.uN, {
                     type: "monotone",
                     dataKey: "value",
                     stroke: "url(#splitColor)",
@@ -9715,16 +9734,16 @@
               ),
               m.createElement(
                 "div",
-                { className: ke(mt().Legend, v && mt().DireGreater) },
+                { className: be(gt().Legend, v && gt().DireGreater) },
                 C,
                 "K",
-                m.createElement("div", { className: mt().Arrow }, "▶")
+                m.createElement("div", { className: gt().Arrow }, "▶")
               )
             ),
-            m.createElement("div", { className: mt().Bottom }, s)
+            m.createElement("div", { className: gt().Bottom }, s)
           );
         },
-        yt = function (e) {
+        kt = function (e) {
           var a = e.playerName,
             t = e.heroID,
             r = e.kills,
@@ -9736,36 +9755,36 @@
           return m.createElement(
             "div",
             {
-              className: ke(
-                mt().SingleHeroStats,
-                !c && mt().Right,
-                s && mt().Recessed
+              className: be(
+                gt().SingleHeroStats,
+                !c && gt().Right,
+                s && gt().Recessed
               ),
             },
             m.createElement(
               "div",
-              { className: mt().TopBar },
+              { className: gt().TopBar },
               m.createElement("img", {
                 src: i.IMG_URL_BASE + "heroes/num_wide/" + t + ".png",
-                className: mt().HeroImage,
+                className: gt().HeroImage,
               }),
               m.createElement(
                 "div",
-                { className: mt().NameAndName },
-                m.createElement("div", { className: mt().PlayerName }, a),
+                { className: gt().NameAndName },
+                m.createElement("div", { className: gt().PlayerName }, a),
                 m.createElement(
                   "div",
-                  { className: mt().HeroName },
-                  $("#Hero_" + t)
+                  { className: gt().HeroName },
+                  ee("#Hero_" + t)
                 )
               )
             ),
             m.createElement(
               "div",
-              { className: mt().Stats },
+              { className: gt().Stats },
               m.createElement(
                 "div",
-                { className: mt().KDA },
+                { className: gt().KDA },
                 r,
                 " / ",
                 o,
@@ -9774,14 +9793,14 @@
               ),
               m.createElement(
                 "div",
-                { className: mt().NetWorth },
+                { className: gt().NetWorth },
                 (l / 1e3).toFixed(1),
                 "K"
               )
             )
           );
         },
-        kt = function (e) {
+        bt = function (e) {
           var a = e.gameState,
             t = e.playersRadiant,
             r = e.playersDire;
@@ -9797,9 +9816,9 @@
             for (var i = 0 == n ? t.players : r.players, l = 0; l < 5; l++)
               if (!(l >= i.length)) {
                 var c = i[l],
-                  s = lr.getPlayerData(c.accountid);
+                  s = cr.getPlayerData(c.accountid);
                 o[n].push(
-                  m.createElement(yt, {
+                  m.createElement(kt, {
                     key: "heroblock_" + n + "_" + l,
                     playerName: s && s.name.length > 0 ? s.name : c.name,
                     heroID: c.heroid,
@@ -9814,33 +9833,33 @@
               }
           return m.createElement(
             "div",
-            { className: mt().HeroStatsSection },
-            m.createElement("div", { className: mt().TeamHeroStats }, o[0]),
-            m.createElement("div", { className: mt().TeamHeroStats }, o[1])
+            { className: gt().HeroStatsSection },
+            m.createElement("div", { className: gt().TeamHeroStats }, o[0]),
+            m.createElement("div", { className: gt().TeamHeroStats }, o[1])
           );
         },
-        bt = function (e) {
+        Et = function (e) {
           var a = e.playerName,
             t = e.realName,
             r = e.accountID,
             o = e.isLeft;
           return m.createElement(
             g.rU,
-            { to: ge(r), className: ke(mt().Player, !o && mt().Right) },
-            m.createElement(Ea, {
-              className: mt().Image,
-              src: lr.getPlayerImageURL(r),
+            { to: _e(r), className: be(gt().Player, !o && gt().Right) },
+            m.createElement(va, {
+              className: gt().Image,
+              src: cr.getPlayerImageURL(r),
               fallbackSrc: i.IMG_URL + "portrait_unknown.png",
             }),
             m.createElement(
               "div",
-              { className: mt().Names },
-              m.createElement("div", { className: mt().ProName }, a),
-              m.createElement("div", { className: mt().RealName }, t)
+              { className: gt().Names },
+              m.createElement("div", { className: gt().ProName }, a),
+              m.createElement("div", { className: gt().RealName }, t)
             )
           );
         },
-        Et = function (e) {
+        vt = function (e) {
           var a = e.gameState,
             t = e.playersRadiant,
             r = e.playersDire;
@@ -9856,9 +9875,9 @@
             for (var i = 0 == n ? t.players : r.players, l = 0; l < 5; l++)
               if (!(l >= i.length)) {
                 var c = i[l],
-                  s = lr.getPlayerData(c.accountid);
+                  s = cr.getPlayerData(c.accountid);
                 o[n].push(
-                  m.createElement(bt, {
+                  m.createElement(Et, {
                     key: "rosterplayer_" + c.accountid,
                     playerName: s && s.name.length > 0 ? s.name : c.name,
                     realName: s ? s.real_name : "",
@@ -9869,21 +9888,21 @@
               }
           return m.createElement(
             "div",
-            { className: mt().TeamRosters },
+            { className: gt().TeamRosters },
             m.createElement(
               "div",
-              { className: mt().Title },
-              $("#Series_TeamRosters")
+              { className: gt().Title },
+              ee("#Series_TeamRosters")
             ),
             m.createElement(
               "div",
-              { className: mt().TeamRosterTeams },
-              m.createElement("div", { className: mt().TeamRoster }, o[0]),
-              m.createElement("div", { className: mt().TeamRoster }, o[1])
+              { className: gt().TeamRosterTeams },
+              m.createElement("div", { className: gt().TeamRoster }, o[0]),
+              m.createElement("div", { className: gt().TeamRoster }, o[1])
             )
           );
         },
-        vt = function (e) {
+        ft = function (e) {
           var a = e.gameState,
             t = e.picks,
             r = e.bans;
@@ -9908,9 +9927,9 @@
                   "div",
                   {
                     key: "pickban_label_ban_" + g,
-                    className: ke(mt().PickOrBanLabel, mt().Ban),
+                    className: be(gt().PickOrBanLabel, gt().Ban),
                   },
-                  $("#Match_Ban")
+                  ee("#Match_Ban")
                 )
               ),
                 (g += 1);
@@ -9922,18 +9941,18 @@
                       "div",
                       {
                         key: "pickban_" + u.team + "_" + l,
-                        className: ke(mt().PickOrBan, mt().Ban),
+                        className: be(gt().PickOrBan, gt().Ban),
                       },
-                      m.createElement("div", { className: mt().Number }, l),
+                      m.createElement("div", { className: gt().Number }, l),
                       m.createElement("img", {
-                        className: mt().HeroImage,
+                        className: gt().HeroImage,
                         src:
                           i.IMG_URL_BASE + "heroes/num_wide/" + u.hero + ".png",
                       }),
                       m.createElement(
                         "div",
-                        { className: mt().HeroName },
-                        $("#Hero_" + u.hero)
+                        { className: gt().HeroName },
+                        ee("#Hero_" + u.hero)
                       )
                     )
                   );
@@ -9946,9 +9965,9 @@
                   "div",
                   {
                     key: "pickban_label_pick_" + g,
-                    className: ke(mt().PickOrBanLabel, mt().Pick),
+                    className: be(gt().PickOrBanLabel, gt().Pick),
                   },
-                  $("#Match_Pick")
+                  ee("#Match_Pick")
                 )
               ),
                 (g += 1);
@@ -9960,18 +9979,18 @@
                       "div",
                       {
                         key: "pickban_" + h.team + "_" + l,
-                        className: ke(mt().PickOrBan, mt().Pick),
+                        className: be(gt().PickOrBan, gt().Pick),
                       },
-                      m.createElement("div", { className: mt().Number }, l),
+                      m.createElement("div", { className: gt().Number }, l),
                       m.createElement("img", {
-                        className: mt().HeroImage,
+                        className: gt().HeroImage,
                         src:
                           i.IMG_URL_BASE + "heroes/num_wide/" + h.hero + ".png",
                       }),
                       m.createElement(
                         "div",
-                        { className: mt().HeroName },
-                        $("#Hero_" + h.hero)
+                        { className: gt().HeroName },
+                        ee("#Hero_" + h.hero)
                       )
                     )
                   ),
@@ -9982,30 +10001,30 @@
           }
           return m.createElement(
             "div",
-            { className: mt().PicksAndBansSection },
+            { className: gt().PicksAndBansSection },
             m.createElement(
               "div",
-              { className: mt().Title },
-              $("#Match_PicksAndBans")
+              { className: gt().Title },
+              ee("#Match_PicksAndBans")
             ),
             m.createElement(
               "div",
-              { className: mt().PicksAndBans },
+              { className: gt().PicksAndBans },
               m.createElement(
                 "div",
-                { className: ke(mt().TeamPicksAndBans, mt().Radiant) },
+                { className: be(gt().TeamPicksAndBans, gt().Radiant) },
                 o[0]
               ),
-              m.createElement("div", { className: mt().PickAndBansLabel }, n),
+              m.createElement("div", { className: gt().PickAndBansLabel }, n),
               m.createElement(
                 "div",
-                { className: ke(mt().TeamPicksAndBans, mt().Dire) },
+                { className: be(gt().TeamPicksAndBans, gt().Dire) },
                 o[1]
               )
             )
           );
         };
-      const ft = (function (e) {
+      const Ct = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -10013,28 +10032,28 @@
           (0, r.ZT)(a, e),
           (a.prototype.componentDidMount = function () {
             var e = this;
-            lr.getRealtimeMatchStats(this.props.match.params.serverSteamID),
+            cr.getRealtimeMatchStats(this.props.match.params.serverSteamID),
               (this.intervalHandle = setInterval(function () {
-                lr.getRealtimeMatchStats(e.props.match.params.serverSteamID);
+                cr.getRealtimeMatchStats(e.props.match.params.serverSteamID);
               }, 2e3));
           }),
           (a.prototype.componentWillUnmount = function () {
             clearInterval(this.intervalHandle);
           }),
           (a.prototype.render = function () {
-            var e = lr.getRealtimeMatchStats(
+            var e = cr.getRealtimeMatchStats(
               this.props.match.params.serverSteamID
             );
             return e && 0 != e.match.game_state
               ? 6 == e.match.game_state
-                ? m.createElement(_.l_, { to: pe(e.match.matchid) })
+                ? m.createElement(_.l_, { to: ue(e.match.matchid) })
                 : m.createElement(
                     "div",
-                    { className: mt().LiveMatchPage },
+                    { className: gt().LiveMatchPage },
                     m.createElement(
                       "div",
-                      { className: mt().Header },
-                      m.createElement(dt, {
+                      { className: gt().Header },
+                      m.createElement(pt, {
                         teamRadiant: e.teams[0],
                         teamDire: e.teams[1],
                         gameState: e.match.game_state,
@@ -10043,36 +10062,36 @@
                     ),
                     m.createElement(
                       "div",
-                      { className: mt().RadiantDireBar },
-                      m.createElement("div", { className: mt().Radiant }),
-                      m.createElement("div", { className: mt().Dire })
+                      { className: gt().RadiantDireBar },
+                      m.createElement("div", { className: gt().Radiant }),
+                      m.createElement("div", { className: gt().Dire })
                     ),
                     m.createElement(
                       "div",
-                      { className: mt().Scrollable },
-                      m.createElement(_t, { gameState: e.match.game_state }),
-                      m.createElement(ut, {
+                      { className: gt().Scrollable },
+                      m.createElement(dt, { gameState: e.match.game_state }),
+                      m.createElement(ht, {
                         gameState: e.match.game_state,
                         playersRadiant: e.teams[0].players,
                         playersDire: e.teams[1].players,
                         buildings: e.buildings,
                       }),
-                      m.createElement(ht, {
+                      m.createElement(yt, {
                         gameState: e.match.game_state,
                         gameTime: e.match.game_time,
                         netWorthValues: e.graph_data.graph_gold,
                       }),
-                      m.createElement(kt, {
-                        gameState: e.match.game_state,
-                        playersRadiant: e.teams[0],
-                        playersDire: e.teams[1],
-                      }),
-                      m.createElement(Et, {
+                      m.createElement(bt, {
                         gameState: e.match.game_state,
                         playersRadiant: e.teams[0],
                         playersDire: e.teams[1],
                       }),
                       m.createElement(vt, {
+                        gameState: e.match.game_state,
+                        playersRadiant: e.teams[0],
+                        playersDire: e.teams[1],
+                      }),
+                      m.createElement(ft, {
                         gameState: e.match.game_state,
                         picks: e.match.picks,
                         bans: e.match.bans,
@@ -10081,24 +10100,24 @@
                   )
               : m.createElement(
                   "div",
-                  { className: mt().Loading, key: "loading_throbber" },
+                  { className: gt().Loading, key: "loading_throbber" },
                   m.createElement(
                     "div",
-                    { className: We().FadeInDelay },
-                    m.createElement(Xe, {
+                    { className: xe().FadeInDelay },
+                    m.createElement(Ze, {
                       size: "medium",
-                      string: $("#MatchStatus_NoData"),
+                      string: ee("#MatchStatus_NoData"),
                       position: "center",
                     })
                   )
                 );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Ct = t(6420),
-        Nt = t.n(Ct);
-      const Bt = (function (e) {
+      var Nt = t(6420),
+        Bt = t.n(Nt);
+      const St = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           (t.activeTouches = []),
@@ -10227,7 +10246,7 @@
           a
         );
       })(m.Component);
-      var St = function (e) {
+      var Tt = function (e) {
           var a = e.children,
             t = e.className,
             r = e.to;
@@ -10235,7 +10254,7 @@
             ? m.createElement(g.rU, { to: r, className: t }, a)
             : m.createElement("div", { className: t }, a);
         },
-        Tt = (function (e) {
+        Pt = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10243,14 +10262,14 @@
             (0, r.ZT)(a, e),
             (a.prototype.render = function () {
               var e = parseInt(this.props.match.params.leagueID),
-                a = lr.getLeagueData(e);
+                a = cr.getLeagueData(e);
               if (!a)
                 return m.createElement(
                   "div",
-                  { className: Nt().Loading },
-                  m.createElement(Xe, {
+                  { className: Bt().Loading },
+                  m.createElement(Ze, {
                     size: "medium",
-                    string: $("#Loading"),
+                    string: ee("#Loading"),
                     position: "center",
                   })
                 );
@@ -10315,21 +10334,21 @@
                       m.createElement(
                         g.rU,
                         {
-                          to: me(_.team_id),
+                          to: ge(_.team_id),
                           key:
                             "nodegroup_" +
                             o.node_group_id +
                             "_team_" +
                             _.team_id,
-                          className: Nt().Team,
+                          className: Bt().Team,
                         },
-                        m.createElement(Ea, {
+                        m.createElement(va, {
                           src: _.team_logo_url,
                           fallbackSrc: i.IMG_URL + "team_unknown.png",
                         }),
                         m.createElement(
                           "div",
-                          { className: Nt().TeamName },
+                          { className: Bt().TeamName },
                           _.team_name
                         )
                       )
@@ -10342,9 +10361,9 @@
                             "div",
                             {
                               key: "phase_header_" + o.node_group_id,
-                              className: Nt().PhaseHeader,
+                              className: Bt().PhaseHeader,
                             },
-                            $("#LeaguePhase_" + y + k + "Teams")
+                            ee("#LeaguePhase_" + y + k + "Teams")
                           )
                         ),
                         t.push(
@@ -10352,7 +10371,7 @@
                             "ul",
                             {
                               key: "phase_list_" + o.node_group_id,
-                              className: Nt().PhaseBlock,
+                              className: Bt().PhaseBlock,
                             },
                             b
                           )
@@ -10362,7 +10381,7 @@
                             "ul",
                             {
                               key: "phase_list_" + o.node_group_id,
-                              className: Nt().PhaseBlock,
+                              className: Bt().PhaseBlock,
                             },
                             b
                           )
@@ -10372,19 +10391,19 @@
                             "div",
                             {
                               key: "phase_header_" + o.node_group_id,
-                              className: Nt().PhaseHeader,
+                              className: Bt().PhaseHeader,
                             },
-                            $("#LeaguePhase_" + y + k + "Teams")
+                            ee("#LeaguePhase_" + y + k + "Teams")
                           )
                         )));
                 }
               }
-              return m.createElement("div", { className: Nt().Body }, t);
+              return m.createElement("div", { className: Bt().Body }, t);
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        Pt = function (e) {
+        Lt = function (e) {
           var a = e.teamName1,
             t = e.teamLogo1,
             r = e.teamWins1,
@@ -10413,39 +10432,39 @@
           return m.createElement(
             g.rU,
             {
-              to: _e(u, h),
-              className: ke(
-                Nt().BracketNode,
-                s && Nt().InProgress,
-                _ && Nt().IsCompleted
+              to: de(u, h),
+              className: be(
+                Bt().BracketNode,
+                s && Bt().InProgress,
+                _ && Bt().IsCompleted
               ),
               style: { left: d, top: p },
             },
             m.createElement(
               "div",
-              { className: ke(Nt().TeamRow, _ && y && Nt().Winner) },
-              m.createElement(Ea, {
-                className: Nt().TeamLogo,
+              { className: be(Bt().TeamRow, _ && y && Bt().Winner) },
+              m.createElement(va, {
+                className: Bt().TeamLogo,
                 src: t,
                 fallbackSrc: i.IMG_URL + "team_unknown.png",
               }),
-              m.createElement("div", { className: Nt().TeamName }, a),
-              m.createElement("div", { className: Nt().TeamWins }, r)
+              m.createElement("div", { className: Bt().TeamName }, a),
+              m.createElement("div", { className: Bt().TeamWins }, r)
             ),
             m.createElement(
               "div",
-              { className: ke(Nt().TeamRow, _ && !y && Nt().Winner) },
-              m.createElement(Ea, {
-                className: Nt().TeamLogo,
+              { className: be(Bt().TeamRow, _ && !y && Bt().Winner) },
+              m.createElement(va, {
+                className: Bt().TeamLogo,
                 src: n,
                 fallbackSrc: i.IMG_URL + "team_unknown.png",
               }),
-              m.createElement("div", { className: Nt().TeamName }, o),
-              m.createElement("div", { className: Nt().TeamWins }, l)
+              m.createElement("div", { className: Bt().TeamName }, o),
+              m.createElement("div", { className: Bt().TeamWins }, l)
             )
           );
         },
-        Lt = (function (e) {
+        It = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10474,53 +10493,53 @@
                         this.props.nodeGroup.node_group_id +
                         "_" +
                         r.team_id,
-                      className: ke(
-                        Nt().Team,
-                        n && Nt().Eliminated,
-                        l && Nt().Advancing
+                      className: be(
+                        Bt().Team,
+                        n && Bt().Eliminated,
+                        l && Bt().Advancing
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Nt().Standing },
+                      { className: Bt().Standing },
                       r.standing
                     ),
-                    m.createElement(Ea, {
+                    m.createElement(va, {
                       src: r.team_logo_url,
                       fallbackSrc: i.IMG_URL + "team_unknown.png",
                     }),
                     m.createElement(
                       "div",
-                      { className: Nt().TeamName },
+                      { className: Bt().TeamName },
                       r.team_name
                     ),
-                    m.createElement("div", { className: Nt().Score }, o)
+                    m.createElement("div", { className: Bt().Score }, o)
                   )
                 );
               }
               return m.createElement(
                 "div",
                 {
-                  className: ke(
-                    Nt().TournamentRoundRobin,
-                    this.props.nodeGroup.is_tiebreaker && Nt().Tiebreak
+                  className: be(
+                    Bt().TournamentRoundRobin,
+                    this.props.nodeGroup.is_tiebreaker && Bt().Tiebreak
                   ),
                 },
                 m.createElement(
                   "div",
-                  { className: Nt().Title },
+                  { className: Bt().Title },
                   this.props.nodeGroup.is_tiebreaker
-                    ? $("#Tiebreak")
+                    ? ee("#Tiebreak")
                     : this.props.nodeGroup.name
                 ),
-                m.createElement("div", { className: Nt().TitleUnderline }),
-                m.createElement("div", { className: Nt().PhaseBlock }, e)
+                m.createElement("div", { className: Bt().TitleUnderline }),
+                m.createElement("div", { className: Bt().PhaseBlock }, e)
               );
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        It = (function (e) {
+        Rt = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10561,12 +10580,12 @@
                     case 5:
                       (s = 316), (g = 352);
                   }
-                  var _ = lr.getTeamData(c.team_id_1),
-                    d = lr.getTeamData(c.team_id_2);
+                  var _ = cr.getTeamData(c.team_id_1),
+                    d = cr.getTeamData(c.team_id_2);
                   _ &&
                     d &&
                     o.push(
-                      m.createElement(Pt, {
+                      m.createElement(Lt, {
                         key: "node_" + n,
                         teamName1: _.name,
                         teamLogo1: _.url_logo,
@@ -10586,30 +10605,30 @@
                 }
               return m.createElement(
                 "div",
-                { className: Nt().TournamentBracketDouble },
+                { className: Bt().TournamentBracketDouble },
                 m.createElement(
                   "div",
-                  { className: Nt().Title, style: { width: t } },
+                  { className: Bt().Title, style: { width: t } },
                   this.props.nodeGroup.name
                 ),
                 m.createElement("div", {
-                  className: Nt().TitleUnderline,
+                  className: Bt().TitleUnderline,
                   style: { width: t },
                 }),
                 m.createElement(
                   "div",
                   {
-                    className: Nt().Background,
+                    className: Bt().Background,
                     style: { backgroundImage: a, minWidth: t, minHeight: r },
                   },
                   o
                 )
               );
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        Rt = (function (e) {
+        Dt = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10663,14 +10682,14 @@
                       case 9:
                         (s = 948), (g = 389);
                     }
-                    var _ = lr.getTeamData(c.team_id_1),
-                      d = lr.getTeamData(c.team_id_2),
-                      p = 0 == c.team_id_1 ? $("#Feed_TBD") : _ ? _.name : "",
-                      u = 0 == c.team_id_2 ? $("#Feed_TBD") : d ? d.name : "",
+                    var _ = cr.getTeamData(c.team_id_1),
+                      d = cr.getTeamData(c.team_id_2),
+                      p = 0 == c.team_id_1 ? ee("#Feed_TBD") : _ ? _.name : "",
+                      u = 0 == c.team_id_2 ? ee("#Feed_TBD") : d ? d.name : "",
                       h = _ ? _.url_logo : i.IMG_URL + "team_unkown.png",
                       y = d ? d.url_logo : i.IMG_URL + "team_unkown.png";
                     o.push(
-                      m.createElement(Pt, {
+                      m.createElement(Lt, {
                         key: "node_" + n,
                         teamName1: p,
                         teamLogo1: h,
@@ -10766,14 +10785,16 @@
                       case 21:
                         (s = 1582), (g = 852);
                     }
-                    (_ = lr.getTeamData(c.team_id_1)),
-                      (d = lr.getTeamData(c.team_id_2)),
-                      (p = 0 == c.team_id_1 ? $("#Feed_TBD") : _ ? _.name : ""),
-                      (u = 0 == c.team_id_2 ? $("#Feed_TBD") : d ? d.name : ""),
+                    (_ = cr.getTeamData(c.team_id_1)),
+                      (d = cr.getTeamData(c.team_id_2)),
+                      (p =
+                        0 == c.team_id_1 ? ee("#Feed_TBD") : _ ? _.name : ""),
+                      (u =
+                        0 == c.team_id_2 ? ee("#Feed_TBD") : d ? d.name : ""),
                       (h = _ ? _.url_logo : i.IMG_URL + "team_unkown.png"),
                       (y = d ? d.url_logo : i.IMG_URL + "team_unkown.png");
                     o.push(
-                      m.createElement(Pt, {
+                      m.createElement(Lt, {
                         key: "node_" + n,
                         teamName1: p,
                         teamLogo1: h,
@@ -10794,30 +10815,30 @@
               }
               return m.createElement(
                 "div",
-                { className: Nt().TournamentBracketDoublSeeded },
+                { className: Bt().TournamentBracketDoublSeeded },
                 m.createElement(
                   "div",
-                  { className: Nt().Title, style: { width: t } },
+                  { className: Bt().Title, style: { width: t } },
                   this.props.nodeGroup.name
                 ),
                 m.createElement("div", {
-                  className: Nt().TitleUnderline,
+                  className: Bt().TitleUnderline,
                   style: { width: t },
                 }),
                 m.createElement(
                   "div",
                   {
-                    className: Nt().Background,
+                    className: Bt().Background,
                     style: { backgroundImage: a, minWidth: t, minHeight: r },
                   },
                   o
                 )
               );
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        Dt = (function (e) {
+        Gt = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10849,14 +10870,14 @@
                     case 2:
                       (s = 316), (g = 74);
                   }
-                  var _ = lr.getTeamData(c.team_id_1),
-                    d = lr.getTeamData(c.team_id_2),
-                    p = 0 == c.team_id_1 ? $("#Feed_TBD") : _ ? _.name : "",
-                    u = 0 == c.team_id_2 ? $("#Feed_TBD") : d ? d.name : "",
+                  var _ = cr.getTeamData(c.team_id_1),
+                    d = cr.getTeamData(c.team_id_2),
+                    p = 0 == c.team_id_1 ? ee("#Feed_TBD") : _ ? _.name : "",
+                    u = 0 == c.team_id_2 ? ee("#Feed_TBD") : d ? d.name : "",
                     h = _ ? _.url_logo : i.IMG_URL + "team_unkown.png",
                     y = d ? d.url_logo : i.IMG_URL + "team_unkown.png";
                   o.push(
-                    m.createElement(Pt, {
+                    m.createElement(Lt, {
                       key: "node_" + n,
                       teamName1: p,
                       teamLogo1: h,
@@ -10876,30 +10897,30 @@
                 }
               return m.createElement(
                 "div",
-                { className: Nt().TournamentBracketSingle },
+                { className: Bt().TournamentBracketSingle },
                 m.createElement(
                   "div",
-                  { className: Nt().Title, style: { width: t } },
+                  { className: Bt().Title, style: { width: t } },
                   this.props.nodeGroup.name
                 ),
                 m.createElement("div", {
-                  className: Nt().TitleUnderline,
+                  className: Bt().TitleUnderline,
                   style: { width: t },
                 }),
                 m.createElement(
                   "div",
                   {
-                    className: Nt().Background,
+                    className: Bt().Background,
                     style: { backgroundImage: a, minWidth: t, minHeight: r },
                   },
                   o
                 )
               );
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        Gt = (function (e) {
+        At = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10929,14 +10950,14 @@
                   case 4:
                     (n = 316), (l = 323);
                 }
-                var c = lr.getTeamData(o.team_id_1),
-                  s = lr.getTeamData(o.team_id_2),
-                  g = 0 == o.team_id_1 ? $("#Feed_TBD") : c ? c.name : "",
-                  _ = 0 == o.team_id_2 ? $("#Feed_TBD") : s ? s.name : "",
+                var c = cr.getTeamData(o.team_id_1),
+                  s = cr.getTeamData(o.team_id_2),
+                  g = 0 == o.team_id_1 ? ee("#Feed_TBD") : c ? c.name : "",
+                  _ = 0 == o.team_id_2 ? ee("#Feed_TBD") : s ? s.name : "",
                   d = c ? c.url_logo : i.IMG_URL + "team_unkown.png",
                   p = s ? s.url_logo : i.IMG_URL + "team_unkown.png";
                 a.push(
-                  m.createElement(Pt, {
+                  m.createElement(Lt, {
                     key: "node_" + t,
                     teamName1: g,
                     teamLogo1: d,
@@ -10956,20 +10977,20 @@
               }
               return m.createElement(
                 "div",
-                { className: Nt().TournamentBracketGSL },
+                { className: Bt().TournamentBracketGSL },
                 m.createElement(
                   "div",
-                  { className: Nt().Title, style: { width: 600 } },
+                  { className: Bt().Title, style: { width: 600 } },
                   this.props.nodeGroup.name
                 ),
                 m.createElement("div", {
-                  className: Nt().TitleUnderline,
+                  className: Bt().TitleUnderline,
                   style: { width: 600 },
                 }),
                 m.createElement(
                   "div",
                   {
-                    className: Nt().Background,
+                    className: Bt().Background,
                     style: {
                       backgroundImage: e,
                       minWidth: 600,
@@ -10980,10 +11001,10 @@
                 )
               );
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        At = function (e) {
+        Mt = function (e) {
           var a = e.standing,
             t = e.name,
             r = e.url,
@@ -10993,62 +11014,62 @@
             c = n.toFixed(0).replace(/\d(?=(\d{3})+$)/g, "$&,"),
             s = o.toFixed(0).replace(/\d(?=(\d{3})+$)/g, "$&,");
           return m.createElement(
-            St,
-            { to: me(l), className: Nt().TournamentResult, condition: 0 != l },
+            Tt,
+            { to: ge(l), className: Bt().TournamentResult, condition: 0 != l },
             m.createElement(
               "div",
               {
-                className: ke(
-                  Nt().Standing,
-                  1 == a && Nt().First,
-                  2 == a && Nt().Second,
-                  3 == a && Nt().Third
+                className: be(
+                  Bt().Standing,
+                  1 == a && Bt().First,
+                  2 == a && Bt().Second,
+                  3 == a && Bt().Third
                 ),
               },
               a
             ),
             m.createElement(
               "div",
-              { className: Nt().TeamInfo },
+              { className: Bt().TeamInfo },
               m.createElement(
                 "div",
-                { className: Nt().Top },
-                m.createElement(Ea, {
-                  className: Nt().TeamLogo,
+                { className: Bt().Top },
+                m.createElement(va, {
+                  className: Bt().TeamLogo,
                   src: r,
                   fallbackSrc: i.IMG_URL + "team_unknown.png",
                 }),
-                m.createElement("div", { className: Nt().TeamName }, t)
+                m.createElement("div", { className: Bt().TeamName }, t)
               ),
               m.createElement(
                 "div",
-                { className: Nt().Bottom },
+                { className: Bt().Bottom },
                 m.createElement(
                   "div",
-                  { className: Nt().LabelAndValue },
+                  { className: Bt().LabelAndValue },
                   m.createElement(
                     "div",
-                    { className: Nt().Label },
-                    $("#Earnings")
+                    { className: Bt().Label },
+                    ee("#Earnings")
                   ),
-                  m.createElement("div", { className: Nt().Value }, "$", c)
+                  m.createElement("div", { className: Bt().Value }, "$", c)
                 ),
                 o > 0 &&
                   m.createElement(
                     "div",
-                    { className: Nt().LabelAndValue },
+                    { className: Bt().LabelAndValue },
                     m.createElement(
                       "div",
-                      { className: Nt().Label },
-                      $("#Points")
+                      { className: Bt().Label },
+                      ee("#Points")
                     ),
-                    m.createElement("div", { className: Nt().Value }, s)
+                    m.createElement("div", { className: Bt().Value }, s)
                   )
               )
             )
           );
         },
-        Mt = (function (e) {
+        wt = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -11056,22 +11077,22 @@
             (0, r.ZT)(a, e),
             (a.prototype.getResults = function () {
               var e = parseInt(this.props.match.params.leagueID),
-                a = lr.getLeagueResults(e),
-                t = lr.getLeagueData(e);
+                a = cr.getLeagueResults(e),
+                t = cr.getLeagueData(e);
               if (
-                (console.log("leagueResults", (0, wa.ZN)(a)),
-                console.log("leagueData", (0, wa.ZN)(t)),
+                (console.log("leagueResults", (0, Oa.ZN)(a)),
+                console.log("leagueData", (0, Oa.ZN)(t)),
                 !a || !t)
               )
                 return m.createElement(
                   "div",
-                  { className: We().FadeInDelay },
+                  { className: xe().FadeInDelay },
                   m.createElement(
                     "div",
-                    { key: "throbber", className: Nt().Loading },
-                    m.createElement(Xe, {
+                    { key: "throbber", className: Bt().Loading },
+                    m.createElement(Ze, {
                       size: "medium",
-                      string: $("#Loading"),
+                      string: ee("#Loading"),
                       position: "center",
                     })
                   )
@@ -11091,7 +11112,7 @@
                   if (s.standing <= i) {
                     var g = 5 == t.info.tier ? 0 : s.points;
                     r.push(
-                      m.createElement(At, {
+                      m.createElement(Mt, {
                         key: "team_" + s.teamid + "_" + i,
                         standing: s.standing,
                         name: s.team_name,
@@ -11109,10 +11130,10 @@
                 if (!l) {
                   g = 5 == t.info.tier ? 0 : a.points[i - 1];
                   r.push(
-                    m.createElement(At, {
+                    m.createElement(Mt, {
                       key: "team_0_" + i,
                       standing: i,
-                      name: $("#Feed_TBD"),
+                      name: ee("#Feed_TBD"),
                       url: "",
                       points: g,
                       earnings: a.dollars[i - 1],
@@ -11121,7 +11142,7 @@
                   );
                 }
               }
-              return m.createElement("div", { className: Nt().Results }, r);
+              return m.createElement("div", { className: Bt().Results }, r);
             }),
             (a.prototype.renderNodeGroups = function (e, a, t) {
               for (var r = 0, o = a.node_groups; r < o.length; r++) {
@@ -11129,7 +11150,7 @@
                 switch (n.node_group_type) {
                   case 2:
                     t.push(
-                      m.createElement(Lt, {
+                      m.createElement(It, {
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
@@ -11138,7 +11159,7 @@
                     break;
                   case 4:
                     t.push(
-                      m.createElement(Dt, {
+                      m.createElement(Gt, {
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
@@ -11147,7 +11168,7 @@
                     break;
                   case 5:
                     t.push(
-                      m.createElement(Rt, {
+                      m.createElement(Dt, {
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
@@ -11156,7 +11177,7 @@
                     break;
                   case 6:
                     t.push(
-                      m.createElement(It, {
+                      m.createElement(Rt, {
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
@@ -11167,7 +11188,7 @@
                     break;
                   case 8:
                     t.push(
-                      m.createElement(Gt, {
+                      m.createElement(At, {
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
@@ -11179,23 +11200,23 @@
             }),
             (a.prototype.onSelectPhaseOption = function (e) {
               this.props.history.push(
-                he(
+                ye(
                   this.props.match.params.leagueID,
-                  te.Standings,
+                  re.Standings,
                   e.target.value
                 )
               );
             }),
             (a.prototype.render = function () {
               var e = parseInt(this.props.match.params.leagueID),
-                a = lr.getLeagueData(e);
+                a = cr.getLeagueData(e);
               if (!a)
                 return m.createElement(
                   "div",
-                  { className: Nt().Loading },
-                  m.createElement(Xe, {
+                  { className: Bt().Loading },
+                  m.createElement(Ze, {
                     size: "medium",
-                    string: $("#Loading"),
+                    string: ee("#Loading"),
                     position: "center",
                   })
                 );
@@ -11206,7 +11227,7 @@
                   "option",
                   { key: "Results", value: "results" },
                   " ",
-                  $("#LeaguePhase_Results")
+                  ee("#LeaguePhase_Results")
                 )
               );
               for (var o = 0, n = a.node_groups; o < n.length; o++) {
@@ -11247,7 +11268,7 @@
                     "option",
                     { key: l, value: l },
                     " ",
-                    $("#LeaguePhase_" + c + "Teams")
+                    ee("#LeaguePhase_" + c + "Teams")
                   )
                 );
               }
@@ -11261,7 +11282,7 @@
                     this.renderNodeGroups(e, d, s);
                 }
                 t = m.createElement(
-                  Bt,
+                  St,
                   {
                     initialScale: 0.5,
                     minScale: 0.25,
@@ -11273,11 +11294,11 @@
               }
               return m.createElement(
                 "div",
-                { className: Nt().Standings },
+                { className: Bt().Standings },
                 m.createElement(
                   "select",
                   {
-                    className: Nt().PhaseDropdown,
+                    className: Bt().PhaseDropdown,
                     value: this.props.match.params.phase,
                     onChange: this.onSelectPhaseOption,
                     style: {
@@ -11289,11 +11310,11 @@
                 t
               );
             }),
-            (0, r.gn)([Z], a.prototype, "onSelectPhaseOption", null),
-            (a = (0, r.gn)([Se.Pi], a))
+            (0, r.gn)([J], a.prototype, "onSelectPhaseOption", null),
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        wt = (function (e) {
+        Ot = (function (e) {
           function a(a) {
             var t = e.call(this, a) || this;
             return (t.state = { liveMatches: null }), t;
@@ -11302,9 +11323,9 @@
             (0, r.ZT)(a, e),
             (a.prototype.componentDidMount = function () {
               var e = this;
-              lr.getLiveMatches(parseInt(this.props.match.params.leagueID)),
+              cr.getLiveMatches(parseInt(this.props.match.params.leagueID)),
                 (this.intervalHandle = setInterval(function () {
-                  lr.getLiveMatches(parseInt(e.props.match.params.leagueID));
+                  cr.getLiveMatches(parseInt(e.props.match.params.leagueID));
                 }, 3e4));
             }),
             (a.prototype.componentWillUnmount = function () {
@@ -11338,15 +11359,15 @@
             }),
             (a.prototype.render = function () {
               var e = parseInt(this.props.match.params.leagueID),
-                a = lr.getLeagueData(e),
-                t = lr.getLiveMatches(e);
+                a = cr.getLeagueData(e),
+                t = cr.getLiveMatches(e);
               if (!a)
                 return m.createElement(
                   "div",
-                  { className: Nt().Loading },
-                  m.createElement(Xe, {
+                  { className: Bt().Loading },
+                  m.createElement(Ze, {
                     size: "medium",
-                    string: $("#Loading"),
+                    string: ee("#Loading"),
                     position: "center",
                   })
                 );
@@ -11355,7 +11376,7 @@
                 for (var o = 0, n = t.games; o < n.length; o++) {
                   var i = n[o];
                   r.push(
-                    m.createElement(pa, {
+                    m.createElement(ua, {
                       key: "live_" + i.server_steam_id,
                       type: 13,
                       timestamp: 0,
@@ -11372,7 +11393,7 @@
               for (var c = 0, s = l; c < s.length; c++) {
                 var g = s[c];
                 r.push(
-                  m.createElement(pa, {
+                  m.createElement(ua, {
                     key: "active_" + g,
                     type: 14,
                     timestamp: 0,
@@ -11389,7 +11410,7 @@
               for (var d = 0, p = _; d < p.length; d++) {
                 var u = p[d];
                 r.push(
-                  m.createElement(pa, {
+                  m.createElement(ua, {
                     key: "upcoming_" + u[0],
                     type: 3,
                     timestamp: u[1],
@@ -11402,19 +11423,19 @@
               for (var h in a.series_infos) {
                 var y = a.series_infos[h];
                 r.push(
-                  m.createElement(ra, {
+                  m.createElement(oa, {
                     key: y.series_id,
                     nLeagueID: a.info.league_id,
                     nSeriesID: y.series_id,
                   })
                 );
               }
-              return m.createElement("div", { className: Nt().Matches }, r);
+              return m.createElement("div", { className: Bt().Matches }, r);
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component);
-      const Ot = (function (e) {
+      const Ft = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -11428,30 +11449,30 @@
                 "/images/image_8.png",
               a =
                 this.props.location.pathname ==
-                he(this.props.match.params.leagueID, te.Teams),
+                ye(this.props.match.params.leagueID, re.Teams),
               t =
                 this.props.location.pathname ==
-                he(
+                ye(
                   this.props.match.params.leagueID,
-                  te.Standings,
+                  re.Standings,
                   this.props.match.params.phase
                 ),
               r =
                 this.props.location.pathname ==
-                he(this.props.match.params.leagueID, te.Matchups);
+                ye(this.props.match.params.leagueID, re.Matchups);
             return m.createElement(
               "div",
-              { className: Nt().TournamentPage },
+              { className: Bt().TournamentPage },
               m.createElement(
                 "div",
-                { className: Nt().LeagueLogoContainer },
-                m.createElement("img", { className: Nt().LeagueLogo, src: e }),
+                { className: Bt().LeagueLogoContainer },
+                m.createElement("img", { className: Bt().LeagueLogo, src: e }),
                 m.createElement(
                   "div",
-                  { className: Nt().TopIcons },
+                  { className: Bt().TopIcons },
                   m.createElement("img", {
                     src: i.IMG_URL + "back_arrow.png",
-                    className: Nt().BackArrow,
+                    className: Bt().BackArrow,
                     onClick: function () {
                       return window.history.back();
                     },
@@ -11460,44 +11481,44 @@
               ),
               m.createElement(
                 "div",
-                { className: Nt().HeaderAndBody },
+                { className: Bt().HeaderAndBody },
                 m.createElement(
                   "div",
-                  { className: Nt().Header },
+                  { className: Bt().Header },
                   m.createElement(
                     g.OL,
                     {
-                      to: he(this.props.match.params.leagueID, te.Teams),
-                      className: ke(Nt().MenuLink, a && Nt().Enabled),
+                      to: ye(this.props.match.params.leagueID, re.Teams),
+                      className: be(Bt().MenuLink, a && Bt().Enabled),
                     },
-                    $("#Tournament_Teams")
+                    ee("#Tournament_Teams")
                   ),
                   m.createElement(
                     g.OL,
                     {
-                      to: he(this.props.match.params.leagueID, te.Standings),
-                      className: ke(Nt().MenuLink, t && Nt().Enabled),
+                      to: ye(this.props.match.params.leagueID, re.Standings),
+                      className: be(Bt().MenuLink, t && Bt().Enabled),
                     },
-                    $("#Tournament_Standings")
+                    ee("#Tournament_Standings")
                   ),
                   m.createElement(
                     g.OL,
                     {
-                      to: he(this.props.match.params.leagueID, te.Matchups),
-                      className: ke(Nt().MenuLink, r && Nt().Enabled),
+                      to: ye(this.props.match.params.leagueID, re.Matchups),
+                      className: be(Bt().MenuLink, r && Bt().Enabled),
                     },
-                    $("#Tournament_Matches")
+                    ee("#Tournament_Matches")
                   )
                 ),
                 m.createElement(
                   "div",
-                  { className: Nt().HeaderUnderline },
+                  { className: Bt().HeaderUnderline },
                   m.createElement("div", {
-                    className: ke(
-                      Nt().Underline,
-                      a && Nt().OnTeams,
-                      t && Nt().OnStandings,
-                      r && Nt().OnMatches
+                    className: be(
+                      Bt().Underline,
+                      a && Bt().OnTeams,
+                      t && Bt().OnStandings,
+                      r && Bt().OnMatches
                     ),
                   })
                 ),
@@ -11505,16 +11526,16 @@
                   _.rs,
                   null,
                   m.createElement(_.AW, {
-                    path: he(":leagueID", te.Teams, ":phase"),
-                    component: Tt,
+                    path: ye(":leagueID", re.Teams, ":phase"),
+                    component: Pt,
                   }),
                   m.createElement(_.AW, {
-                    path: he(":leagueID", te.Standings, ":phase"),
-                    component: Mt,
-                  }),
-                  m.createElement(_.AW, {
-                    path: he(":leagueID", te.Matchups, ":phase"),
+                    path: ye(":leagueID", re.Standings, ":phase"),
                     component: wt,
+                  }),
+                  m.createElement(_.AW, {
+                    path: ye(":leagueID", re.Matchups, ":phase"),
+                    component: Ot,
                   })
                 )
               )
@@ -11523,16 +11544,16 @@
           a
         );
       })(m.Component);
-      var Ft = t(4391),
-        Ut = t.n(Ft),
-        Ht = (function (e) {
+      var Ut = t(4391),
+        Ht = t.n(Ut),
+        Wt = (function (e) {
           function a(a) {
             return e.call(this, a) || this;
           }
           return (
             (0, r.ZT)(a, e),
             (a.prototype.toggle = function () {
-              lr.toggleFavorite(
+              cr.toggleFavorite(
                 this.props.type,
                 this.props.id,
                 this.props.name,
@@ -11542,34 +11563,34 @@
             (a.prototype.render = function () {
               var e, a;
               switch (this.props.type) {
-                case tr.Player:
-                  (e = m.createElement(Ea, {
-                    className: ke(Ut().Icon, Ut().Player),
-                    src: lr.getPlayerImageURL(this.props.id),
+                case rr.Player:
+                  (e = m.createElement(va, {
+                    className: be(Ht().Icon, Ht().Player),
+                    src: cr.getPlayerImageURL(this.props.id),
                     fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                   })),
-                    (a = ge(this.props.id));
+                    (a = _e(this.props.id));
                   break;
-                case tr.Team:
-                  (e = m.createElement(Ea, {
-                    className: ke(Ut().Icon, Ut().Team),
+                case rr.Team:
+                  (e = m.createElement(va, {
+                    className: be(Ht().Icon, Ht().Team),
                     src: this.props.url,
                     fallbackSrc: i.IMG_URL + "team_unknown.png",
                   })),
-                    (a = me(this.props.id));
-                case tr.League:
+                    (a = ge(this.props.id));
+                case rr.League:
               }
-              var t = lr.isFavorite(this.props.type, this.props.id);
+              var t = cr.isFavorite(this.props.type, this.props.id);
               return m.createElement(
                 "div",
-                { className: Ut().SearchElement },
+                { className: Ht().SearchElement },
                 m.createElement(
                   g.rU,
-                  { to: a, className: Ut().Link },
+                  { to: a, className: Ht().Link },
                   e,
                   m.createElement(
                     "div",
-                    { className: Ut().Name },
+                    { className: Ht().Name },
                     this.props.name
                   )
                 ),
@@ -11577,16 +11598,16 @@
                   src:
                     i.IMG_URL +
                     (t ? "favorite_star.png" : "favorite_star_empty.png"),
-                  className: Ut().Favorite,
+                  className: Ht().Favorite,
                   onClick: this.toggle,
                 })
               );
             }),
-            (0, r.gn)([Z], a.prototype, "toggle", null),
-            (a = (0, r.gn)([Se.Pi], a))
+            (0, r.gn)([J], a.prototype, "toggle", null),
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component);
-      const Wt = (function (e) {
+      const xt = (function (e) {
         function a(a) {
           var t = e.call(this, a) || this;
           return (
@@ -11604,7 +11625,7 @@
             this.setState({ sSearchString: e.target.value });
           }),
           (a.prototype.handleSubmit = function (e) {
-            lr.requestSearchResults(this.state.sSearchString),
+            cr.requestSearchResults(this.state.sSearchString),
               e.preventDefault(),
               this.setState({
                 bWasEmptySearch: 0 == this.state.sSearchString.length,
@@ -11613,19 +11634,19 @@
           }),
           (a.prototype.handleClear = function () {
             this.setState({ sSearchString: "", bWasEmptySearch: !0 }),
-              lr.requestSearchResults("");
+              cr.requestSearchResults("");
           }),
           (a.prototype.componentDidMount = function () {
             return (0, r.mG)(this, void 0, void 0, function () {
               return (0, r.Jh)(this, function (e) {
-                return lr.requestSearchResults(this.state.sSearchString), [2];
+                return cr.requestSearchResults(this.state.sSearchString), [2];
               });
             });
           }),
           (a.prototype.render = function () {
             var e = [],
-              a = lr.getSearchResults(this.state.sSearchString),
-              t = lr.getFavorites();
+              a = cr.getSearchResults(this.state.sSearchString),
+              t = cr.getFavorites();
             if (a && 0 != a.length && t) {
               var r = void 0,
                 o = [
@@ -11641,9 +11662,9 @@
                         "div",
                         {
                           key: "YourHeader_" + c.type,
-                          className: Ut().Category,
+                          className: Ht().Category,
                         },
-                        $("#Search_CategoryYour_" + c.name)
+                        ee("#Search_CategoryYour_" + c.name)
                       )
                     );
                     for (
@@ -11653,7 +11674,7 @@
                     ) {
                       var _ = g[s];
                       e.push(
-                        m.createElement(Ht, {
+                        m.createElement(Wt, {
                           key: c.type + "_" + _.id,
                           type: c.type,
                           id: _.id,
@@ -11669,7 +11690,7 @@
                   e.push(
                     m.createElement("div", {
                       key: "divider",
-                      className: Ut().Divider,
+                      className: Ht().Divider,
                     })
                   );
               }
@@ -11679,8 +11700,8 @@
                   for (var u in (e.push(
                     m.createElement(
                       "div",
-                      { key: "Header_" + c.type, className: Ut().Category },
-                      $(
+                      { key: "Header_" + c.type, className: Ht().Category },
+                      ee(
                         (this.state.bWasEmptySearch
                           ? "#Search_CategoryTop_"
                           : "#Search_Category_") + c.name
@@ -11689,9 +11710,9 @@
                   ),
                   p)) {
                     var h = p[u];
-                    lr.isFavorite(c.type, h.id) ||
+                    cr.isFavorite(c.type, h.id) ||
                       e.push(
-                        m.createElement(Ht, {
+                        m.createElement(Wt, {
                           key: c.type + "_" + h.id,
                           type: c.type,
                           id: h.id,
@@ -11705,8 +11726,8 @@
               e.push(
                 m.createElement(
                   "div",
-                  { key: "Throbber", className: We().FadeInDelay },
-                  m.createElement(Xe, {
+                  { key: "Throbber", className: xe().FadeInDelay },
+                  m.createElement(Ze, {
                     size: "medium",
                     string: "Loading...",
                     position: "center",
@@ -11715,46 +11736,46 @@
               );
             return m.createElement(
               "div",
-              { className: Ut().SearchPage },
+              { className: Ht().SearchPage },
               m.createElement(
-                fa,
+                Ca,
                 {
-                  text: $("#Header_TeamsAndPlayers"),
-                  underlineColorStyle: Ut().backgroundColorBrightOrange,
-                  childrenStyle: Ut().HeaderChildren,
+                  text: ee("#Header_TeamsAndPlayers"),
+                  underlineColorStyle: Ht().backgroundColorBrightOrange,
+                  childrenStyle: Ht().HeaderChildren,
                 },
                 m.createElement(
                   "form",
-                  { onSubmit: this.handleSubmit, className: Ut().SearchInput },
+                  { onSubmit: this.handleSubmit, className: Ht().SearchInput },
                   m.createElement("img", {
                     src: i.IMG_URL + "search.png",
-                    className: Ut().SearchIcon,
+                    className: Ht().SearchIcon,
                   }),
                   m.createElement("input", {
                     type: "text",
-                    placeholder: $("#Search_Placeholder"),
+                    placeholder: ee("#Search_Placeholder"),
                     value: this.state.sSearchString,
                     onChange: this.handleChange,
                   }),
                   m.createElement("img", {
-                    className: Ut().Close,
+                    className: Ht().Close,
                     src: i.IMG_URL + "x_close.png",
                     onClick: this.handleClear,
                   })
                 )
               ),
-              m.createElement("div", { className: Ut().Contents }, e)
+              m.createElement("div", { className: Ht().Contents }, e)
             );
           }),
-          (0, r.gn)([Z], a.prototype, "handleChange", null),
-          (0, r.gn)([Z], a.prototype, "handleSubmit", null),
-          (0, r.gn)([Z], a.prototype, "handleClear", null),
-          (a = (0, r.gn)([Se.Pi], a))
+          (0, r.gn)([J], a.prototype, "handleChange", null),
+          (0, r.gn)([J], a.prototype, "handleSubmit", null),
+          (0, r.gn)([J], a.prototype, "handleClear", null),
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var xt = t(6710),
-        Yt = t.n(xt);
-      const qt = (function (e) {
+      var Yt = t(6710),
+        qt = t.n(Yt);
+      const Vt = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -11765,53 +11786,53 @@
               a = "league" == this.props.match.params.category;
             return m.createElement(
               "div",
-              { className: Yt().StandingsPage },
-              m.createElement(fa, {
-                text: $("#Header_TournamentStandings"),
-                underlineColorStyle: Yt().backgroundColorOrange,
+              { className: qt().StandingsPage },
+              m.createElement(Ca, {
+                text: ee("#Header_TournamentStandings"),
+                underlineColorStyle: qt().backgroundColorOrange,
               }),
               m.createElement(
                 "div",
-                { className: Yt().LeagueOrTIHeader },
+                { className: qt().LeagueOrTIHeader },
                 m.createElement(
                   g.rU,
                   {
-                    to: ie("league", "na"),
-                    className: ke(
-                      Yt().CategoryOption,
-                      a && Yt().OptionSelected
+                    to: le("league", "na"),
+                    className: be(
+                      qt().CategoryOption,
+                      a && qt().OptionSelected
                     ),
                   },
-                  $("#Standings_DPCLeague")
+                  ee("#Standings_DPCLeague")
                 ),
                 m.createElement(
                   g.rU,
                   {
-                    to: ie("international", "global"),
-                    className: ke(
-                      Yt().CategoryOption,
-                      e && Yt().OptionSelected
+                    to: le("international", "global"),
+                    className: be(
+                      qt().CategoryOption,
+                      e && qt().OptionSelected
                     ),
                   },
-                  $("#Standings_International")
+                  ee("#Standings_International")
                 )
               ),
               a &&
-                m.createElement(Vt, { region: this.props.match.params.region }),
-              e && m.createElement(zt, null)
+                m.createElement(zt, { region: this.props.match.params.region }),
+              e && m.createElement(Kt, null)
             );
           }),
-          (a = (0, r.gn)([Se.Pi], a))
+          (a = (0, r.gn)([Te.Pi], a))
         );
       })(m.Component);
-      var Vt = (function (e) {
+      var zt = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             (0, r.ZT)(a, e),
             (a.prototype.render = function () {
-              var e = lr.getDPCStandings();
+              var e = cr.getDPCStandings();
               if (!e) return m.createElement("div", null);
               for (
                 var a = [],
@@ -11832,16 +11853,16 @@
               ) {
                 var i = n[o];
                 if (t[parseInt(i.region)] == this.props.region) {
-                  var l = $(r[parseInt(i.region)]),
+                  var l = ee(r[parseInt(i.region)]),
                     c =
                       0 == i.division
-                        ? $("#Standings_Division1")
-                        : $("#Standings_Division2");
+                        ? ee("#Standings_Division1")
+                        : ee("#Standings_Division2");
                   a.push(
                     m.createElement(
                       "div",
                       {
-                        className: Yt().Division,
+                        className: qt().Division,
                         key: "" + i.region + i.division,
                       },
                       l,
@@ -11854,21 +11875,21 @@
                     a.push(
                       m.createElement(
                         "div",
-                        { className: Yt().Entry, key: "" + d.team_id },
-                        m.createElement(ta, {
+                        { className: qt().Entry, key: "" + d.team_id },
+                        m.createElement(ra, {
                           team_id: d.team_id,
-                          size: je.Medium,
+                          size: Qe.Medium,
                           team_logo_url_fallback: d.team_logo_url,
-                          className: Yt().Logo,
+                          className: qt().Logo,
                         }),
                         m.createElement(
                           "div",
-                          { className: Yt().TeamName },
+                          { className: qt().TeamName },
                           d.team_name
                         ),
                         m.createElement(
                           "div",
-                          { className: Yt().WinLoss },
+                          { className: qt().WinLoss },
                           d.wins,
                           " - ",
                           d.losses
@@ -11880,119 +11901,119 @@
               }
               return m.createElement(
                 "div",
-                { className: Yt().LeagueStandingsPage },
+                { className: qt().LeagueStandingsPage },
                 m.createElement(
                   "div",
-                  { className: Yt().RegionSelector },
+                  { className: qt().RegionSelector },
                   m.createElement(
                     g.rU,
                     {
-                      to: ie("league", "na"),
-                      className: ke(
-                        Yt().Region,
-                        "na" == this.props.region && Yt().SelectedRegion
+                      to: le("league", "na"),
+                      className: be(
+                        qt().Region,
+                        "na" == this.props.region && qt().SelectedRegion
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Yt().RegionText },
-                      $("#Standings_RegionNA")
+                      { className: qt().RegionText },
+                      ee("#Standings_RegionNA")
                     )
                   ),
                   m.createElement(
                     g.rU,
                     {
-                      to: ie("league", "sa"),
-                      className: ke(
-                        Yt().Region,
-                        "sa" == this.props.region && Yt().SelectedRegion
+                      to: le("league", "sa"),
+                      className: be(
+                        qt().Region,
+                        "sa" == this.props.region && qt().SelectedRegion
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Yt().RegionText },
-                      $("#Standings_RegionSA")
+                      { className: qt().RegionText },
+                      ee("#Standings_RegionSA")
                     )
                   ),
                   m.createElement(
                     g.rU,
                     {
-                      to: ie("league", "eu"),
-                      className: ke(
-                        Yt().Region,
-                        "eu" == this.props.region && Yt().SelectedRegion
+                      to: le("league", "eu"),
+                      className: be(
+                        qt().Region,
+                        "eu" == this.props.region && qt().SelectedRegion
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Yt().RegionText },
-                      $("#Standings_RegionWEU")
+                      { className: qt().RegionText },
+                      ee("#Standings_RegionWEU")
                     )
                   ),
                   m.createElement(
                     g.rU,
                     {
-                      to: ie("league", "cis"),
-                      className: ke(
-                        Yt().Region,
-                        "cis" == this.props.region && Yt().SelectedRegion
+                      to: le("league", "cis"),
+                      className: be(
+                        qt().Region,
+                        "cis" == this.props.region && qt().SelectedRegion
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Yt().RegionText },
-                      $("#Standings_RegionEEU")
+                      { className: qt().RegionText },
+                      ee("#Standings_RegionEEU")
                     )
                   ),
                   m.createElement(
                     g.rU,
                     {
-                      to: ie("league", "cn"),
-                      className: ke(
-                        Yt().Region,
-                        "cn" == this.props.region && Yt().SelectedRegion
+                      to: le("league", "cn"),
+                      className: be(
+                        qt().Region,
+                        "cn" == this.props.region && qt().SelectedRegion
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Yt().RegionText },
-                      $("#Standings_RegionCN")
+                      { className: qt().RegionText },
+                      ee("#Standings_RegionCN")
                     )
                   ),
                   m.createElement(
                     g.rU,
                     {
-                      to: ie("league", "sea"),
-                      className: ke(
-                        Yt().Region,
-                        "sea" == this.props.region && Yt().SelectedRegion
+                      to: le("league", "sea"),
+                      className: be(
+                        qt().Region,
+                        "sea" == this.props.region && qt().SelectedRegion
                       ),
                     },
                     m.createElement(
                       "div",
-                      { className: Yt().RegionText },
-                      $("#Standings_RegionSEA")
+                      { className: qt().RegionText },
+                      ee("#Standings_RegionSEA")
                     )
                   )
                 ),
                 m.createElement(
                   "div",
-                  { className: Yt().ScrollableContents },
+                  { className: qt().ScrollableContents },
                   a
                 )
               );
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component),
-        zt = (function (e) {
+        Kt = (function (e) {
           function a() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             (0, r.ZT)(a, e),
             (a.prototype.render = function () {
-              var e = lr.getDPCStandings(),
+              var e = cr.getDPCStandings(),
                 a = [],
                 t = !1;
               if (e && e.results)
@@ -12000,11 +12021,11 @@
                   a.push(
                     m.createElement(
                       "div",
-                      { key: "NoPointsYet", className: Yt().NoPointsYet },
+                      { key: "NoPointsYet", className: qt().NoPointsYet },
                       m.createElement(
                         "span",
-                        { className: Yt().NoPointsDesc },
-                        $("#Standings_NoPointsYet")
+                        { className: qt().NoPointsDesc },
+                        ee("#Standings_NoPointsYet")
                       )
                     )
                   );
@@ -12012,47 +12033,47 @@
                   for (var r = 1, o = 0, n = e.results; o < n.length; o++) {
                     var i = n[o];
                     if (0 != i.total_points) {
-                      var l = Yt().DefaultStatus;
+                      var l = qt().DefaultStatus;
                       if (i.status)
                         switch (i.status) {
                           case 1:
-                            (l = Yt().ClinchedInvite), (t = !0);
+                            (l = qt().ClinchedInvite), (t = !0);
                             break;
                           case 2:
-                            (l = Yt().Eliminated), (t = !0);
+                            (l = qt().Eliminated), (t = !0);
                         }
                       a.push(
                         m.createElement(
                           g.rU,
                           {
-                            to: me(i.team_id),
+                            to: ge(i.team_id),
                             key: i.team_id,
-                            className: Yt().Team,
+                            className: qt().Team,
                           },
                           m.createElement(
                             "span",
-                            { className: ke(Yt().RankContainer, l) },
-                            m.createElement("span", { className: Yt().Rank }, r)
+                            { className: be(qt().RankContainer, l) },
+                            m.createElement("span", { className: qt().Rank }, r)
                           ),
                           m.createElement(
                             "span",
-                            { className: Yt().TeamLogoContainer },
-                            m.createElement(ta, {
+                            { className: qt().TeamLogoContainer },
+                            m.createElement(ra, {
                               team_id: i.team_id,
-                              size: je.Medium,
+                              size: Qe.Medium,
                               team_logo_url_fallback: i.team_logo_url,
-                              className: Yt().TeamLogo,
+                              className: qt().TeamLogo,
                             })
                           ),
                           m.createElement(
                             "span",
-                            { className: Yt().TeamName },
+                            { className: qt().TeamName },
                             i.team_name
                           ),
-                          m.createElement("span", { className: Yt().Spacer }),
+                          m.createElement("span", { className: qt().Spacer }),
                           m.createElement(
                             "span",
-                            { className: Yt().Points },
+                            { className: qt().Points },
                             i.total_points
                           )
                         )
@@ -12064,50 +12085,50 @@
                 a.push(
                   m.createElement(
                     "div",
-                    { key: "Loading", className: Yt().Loading },
-                    m.createElement(Xe, {
+                    { key: "Loading", className: qt().Loading },
+                    m.createElement(Ze, {
                       size: "medium",
-                      string: $("#Loading"),
+                      string: ee("#Loading"),
                       position: "center",
                     })
                   )
                 );
               return m.createElement(
                 "div",
-                { className: Yt().InternationalStandingsPage },
-                m.createElement("div", { className: Yt().Contents }, a),
+                { className: qt().InternationalStandingsPage },
+                m.createElement("div", { className: qt().Contents }, a),
                 t &&
                   m.createElement(
                     "div",
-                    { className: Yt().FooterContainer },
+                    { className: qt().FooterContainer },
                     m.createElement(
                       "div",
-                      { className: Yt().Footer },
+                      { className: qt().Footer },
                       m.createElement("span", {
-                        className: ke(Yt().RankContainer, Yt().ClinchedInvite),
+                        className: be(qt().RankContainer, qt().ClinchedInvite),
                       }),
                       m.createElement(
                         "span",
-                        { className: Yt().FooterText },
-                        $("#Standings_Footer_Clinched")
+                        { className: qt().FooterText },
+                        ee("#Standings_Footer_Clinched")
                       ),
-                      m.createElement("span", { className: Yt().FooterSpacer }),
+                      m.createElement("span", { className: qt().FooterSpacer }),
                       m.createElement("span", {
-                        className: ke(Yt().RankContainer, Yt().Eliminated),
+                        className: be(qt().RankContainer, qt().Eliminated),
                       }),
                       m.createElement(
                         "span",
-                        { className: Yt().FooterText },
-                        $("#Standings_Footer_Eliminated")
+                        { className: qt().FooterText },
+                        ee("#Standings_Footer_Eliminated")
                       )
                     )
                   )
               );
             }),
-            (a = (0, r.gn)([Se.Pi], a))
+            (a = (0, r.gn)([Te.Pi], a))
           );
         })(m.Component);
-      const Kt = (function (e) {
+      const Xt = (function (e) {
         function a() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -12115,18 +12136,18 @@
           (0, r.ZT)(a, e),
           (a.prototype.render = function () {
             return (
-              Te.isMobile || i.VALVE_IP || (window.location.href = i.BASE_URL),
+              Pe.isMobile || i.VALVE_IP || (window.location.href = i.BASE_URL),
               m.createElement(
                 g.VK,
                 { basename: s() },
                 m.createElement(
                   "div",
-                  { className: Oe().App },
+                  { className: Fe().App },
                   m.createElement(
                     "div",
-                    { className: Oe().NavContents },
-                    m.createElement(De, null),
-                    m.createElement(Me, null),
+                    { className: Fe().NavContents },
+                    m.createElement(Ge, null),
+                    m.createElement(we, null),
                     m.createElement(
                       _.rs,
                       null,
@@ -12137,58 +12158,58 @@
                           return m.createElement(_.l_, { to: "/feed" });
                         },
                       }),
-                      m.createElement(_.AW, { path: oe(), component: Ca }),
+                      m.createElement(_.AW, { path: ne(), component: Na }),
                       m.createElement(_.AW, {
-                        path: ie(":category", ":region"),
-                        component: qt,
+                        path: le(":category", ":region"),
+                        component: Vt,
                       }),
-                      m.createElement(_.AW, { path: ne(), component: Ta }),
-                      m.createElement(_.AW, { path: le(), component: Oa }),
+                      m.createElement(_.AW, { path: ie(), component: Pa }),
+                      m.createElement(_.AW, { path: ce(), component: Fa }),
                       m.createElement(_.AW, {
-                        path: ye(ae.LeagueSelect),
-                        component: xa,
-                      }),
-                      m.createElement(_.AW, {
-                        path: me(":teamID"),
-                        component: Va,
+                        path: ke(te.LeagueSelect),
+                        component: Ya,
                       }),
                       m.createElement(_.AW, {
-                        path: ge(":playerID"),
-                        component: Xa,
-                      }),
-                      m.createElement(_.AW, { path: se(), component: ja }),
-                      m.createElement(_.AW, {
-                        path: _e(":leagueID", ":seriesID"),
-                        component: at,
+                        path: ge(":teamID"),
+                        component: za,
                       }),
                       m.createElement(_.AW, {
-                        path: de(":leagueID", ":nodeID"),
-                        component: ot,
+                        path: _e(":playerID"),
+                        component: Za,
+                      }),
+                      m.createElement(_.AW, { path: me(), component: Qa }),
+                      m.createElement(_.AW, {
+                        path: de(":leagueID", ":seriesID"),
+                        component: tt,
                       }),
                       m.createElement(_.AW, {
-                        path: pe(":matchID"),
-                        component: ct,
+                        path: pe(":leagueID", ":nodeID"),
+                        component: nt,
                       }),
                       m.createElement(_.AW, {
-                        path: ue(":serverSteamID"),
-                        component: ft,
+                        path: ue(":matchID"),
+                        component: st,
                       }),
                       m.createElement(_.AW, {
-                        path: he(":leagueID", te.Teams, ":phase"),
-                        component: Ot,
+                        path: he(":serverSteamID"),
+                        component: Ct,
                       }),
                       m.createElement(_.AW, {
-                        path: he(":leagueID", te.Standings, ":phase"),
-                        component: Ot,
+                        path: ye(":leagueID", re.Teams, ":phase"),
+                        component: Ft,
                       }),
                       m.createElement(_.AW, {
-                        path: he(":leagueID", te.Matchups, ":phase"),
-                        component: Ot,
+                        path: ye(":leagueID", re.Standings, ":phase"),
+                        component: Ft,
                       }),
-                      m.createElement(_.AW, { path: ce(), component: Wt })
+                      m.createElement(_.AW, {
+                        path: ye(":leagueID", re.Matchups, ":phase"),
+                        component: Ft,
+                      }),
+                      m.createElement(_.AW, { path: se(), component: xt })
                     )
                   ),
-                  m.createElement(fe, null)
+                  m.createElement(Ce, null)
                 )
               )
             );
@@ -12196,50 +12217,50 @@
           a
         );
       })(m.Component);
-      var Xt,
-        Zt = t(3720),
-        Jt = t.n(Zt),
-        jt = t(3935);
+      var Zt,
+        Jt = t(3720),
+        jt = t.n(Jt),
+        Qt = t(3935);
       !(function (e) {
         (e[(e.Unrequested = 0)] = "Unrequested"),
           (e[(e.Pending = 1)] = "Pending"),
           (e[(e.Valid = 2)] = "Valid"),
           (e[(e.Failed = 3)] = "Failed"),
           (e[(e.Rerequest = 4)] = "Rerequest");
-      })(Xt || (Xt = {}));
-      var Qt,
-        $t = (function () {
+      })(Zt || (Zt = {}));
+      var $t,
+        er = (function () {
           function e() {
-            (this.eState = Xt.Unrequested), (this.nExpirationTime = 0);
+            (this.eState = Zt.Unrequested), (this.nExpirationTime = 0);
           }
           return (
             (e.prototype.getData = function (e, a, t) {
               var r = this,
                 o = Date.now() / 1e3,
-                n = this.eState == Xt.Pending || this.eState == Xt.Rerequest;
+                n = this.eState == Zt.Pending || this.eState == Zt.Rerequest;
               return (
                 o >= this.nExpirationTime &&
                   !n &&
-                  ((this.eState = Xt.Pending),
+                  ((this.eState = Zt.Pending),
                   a().then(function (n) {
-                    if (r.eState == Xt.Rerequest)
+                    if (r.eState == Zt.Rerequest)
                       return (
                         (r.nExpirationTime = 0),
-                        (r.eState = Xt.Unrequested),
+                        (r.eState = Zt.Unrequested),
                         void r.getData(e, a, t)
                       );
                     n.data
                       ? ((r.data = t ? t(n.data) : n.data),
                         (r.nExpirationTime = o + e),
-                        (r.eState = Xt.Valid))
-                      : ((i.GC_DOWN = !0), (r.eState = Xt.Failed));
+                        (r.eState = Zt.Valid))
+                      : ((i.GC_DOWN = !0), (r.eState = Zt.Failed));
                   })),
                 this.data
               );
             }),
             (e.prototype.clearData = function () {
               var e = Date.now() / 1e3;
-              (this.eState = Xt.Unrequested),
+              (this.eState = Zt.Unrequested),
                 (this.data = null),
                 (this.nExpirationTime = e);
             }),
@@ -12252,13 +12273,13 @@
               this.nExpirationTime = a + e;
             }),
             (e.prototype.rerequestDataIfPending = function () {
-              this.eState == Xt.Pending && (this.eState = Xt.Rerequest);
+              this.eState == Zt.Pending && (this.eState = Zt.Rerequest);
             }),
-            (0, r.gn)([wa.LO], e.prototype, "data", void 0),
+            (0, r.gn)([Oa.LO], e.prototype, "data", void 0),
             e
           );
         })(),
-        er = (function () {
+        ar = (function () {
           function e() {}
           return (
             (e.STATE_INCOMPLETE = 0),
@@ -12268,7 +12289,7 @@
             e
           );
         })(),
-        ar = (function () {
+        tr = (function () {
           function e() {}
           return (
             (e.MAKE_PREDICTION_RESULT_OK = 0),
@@ -12296,12 +12317,12 @@
         (e[(e.Main = 0)] = "Main"),
           (e[(e.Predictions = 1)] = "Predictions"),
           (e[(e.Fantasy = 2)] = "Fantasy");
-      })(Qt || (Qt = {}));
-      var tr,
-        rr = (function () {
+      })($t || ($t = {}));
+      var rr,
+        or = (function () {
           function e() {
-            (this.m_rgStandingsAsync = new $t()),
-              (this.m_rgLeagueInfoListAsync = new $t()),
+            (this.m_rgStandingsAsync = new er()),
+              (this.m_rgLeagueInfoListAsync = new er()),
               (this.m_mapLeagueDataAsync = new Map()),
               (this.m_mapLeagueNodeDataAsync = new Map()),
               (this.m_mapLeagueNodeGroupDataAsync = new Map()),
@@ -12311,12 +12332,12 @@
               (this.m_mapTeamDataAsync = new Map()),
               (this.m_mapPlayerDataAsync = new Map()),
               (this.m_mapPlayersInRoleDataAsync = new Map()),
-              (this.m_rgSearchResultsAsync = new $t()),
-              (this.m_rgFavoritesAsync = new $t()),
-              (this.m_rgFeedAsync = new $t()),
-              (this.m_rgUpcomingMatchesAsync = new $t()),
-              (this.m_rgProPredictionStatusAsync = new $t()),
-              (this.m_rgFantasyLeagueStatusAsync = new $t()),
+              (this.m_rgSearchResultsAsync = new er()),
+              (this.m_rgFavoritesAsync = new er()),
+              (this.m_rgFeedAsync = new er()),
+              (this.m_rgUpcomingMatchesAsync = new er()),
+              (this.m_rgProPredictionStatusAsync = new er()),
+              (this.m_rgFantasyLeagueStatusAsync = new er()),
               (this.m_rgFantasyLineupsAsync = new Map()),
               (this.m_mapFantasyDayScoreAsync = new Map()),
               (this.m_mapFantasyLeaderboardGlobalAsync = new Map()),
@@ -12325,9 +12346,9 @@
               (this.m_mapLeagueResultsAsync = new Map()),
               (this.m_mapProPredictionInProgress = new Map()),
               (this.m_mapProPredictionError = new Map()),
-              (this.m_steamPlayerInfo = new $t()),
-              (this.m_playerProfileInfo = new $t()),
-              (this.m_liveMatches = new $t()),
+              (this.m_steamPlayerInfo = new er()),
+              (this.m_playerProfileInfo = new er()),
+              (this.m_liveMatches = new er()),
               (this.m_mapHelpState = new Map()),
               (this.m_selectedPrediction = {
                 leagueId: 0,
@@ -12336,21 +12357,21 @@
                 teamPicked: 0,
                 payout: 2,
                 payoutAmount: 0,
-                state: er.STATE_INCOMPLETE,
+                state: ar.STATE_INCOMPLETE,
               }),
               (this.m_predictionTimestamp = 0),
               (this.m_rgLeagueInfoListAsync.data = {}),
               (this.m_rgLeagueInfoListAsync.data.rgLeagueList = null),
               (this.m_rgLeagueInfoListAsync.data.rgLeagueInfo = new Map()),
-              this.m_mapHelpState.set(Qt.Main, {
+              this.m_mapHelpState.set($t.Main, {
                 bHasAlreadyShown: !0,
                 sLocalStorage: "helpHasAlreadyShownMain",
               }),
-              this.m_mapHelpState.set(Qt.Predictions, {
+              this.m_mapHelpState.set($t.Predictions, {
                 bHasAlreadyShown: !0,
                 sLocalStorage: "helpHasAlreadyShownPredictions",
               }),
-              this.m_mapHelpState.set(Qt.Fantasy, {
+              this.m_mapHelpState.set($t.Fantasy, {
                 bHasAlreadyShown: !0,
                 sLocalStorage: "helpHasAlreadyShownFantasy",
               });
@@ -12440,7 +12461,7 @@
               });
             }),
             (e.prototype.getOrCreateFromMap = function (e, a) {
-              return e.has(a) || e.set(a, new $t()), e.get(a);
+              return e.has(a) || e.set(a, new er()), e.get(a);
             }),
             (e.prototype.getSteamPlayerInfo = function () {
               var e = this;
@@ -12677,7 +12698,7 @@
             (e.prototype.toggleFavorite = function (e, a, t, r) {
               var o = this;
               this.m_rgFavoritesAsync.delayNewData(2),
-                lr.doPost("ToggleDPCFavorite", {
+                cr.doPost("ToggleDPCFavorite", {
                   favorite_type: e,
                   favorite_id: a,
                 }),
@@ -12792,7 +12813,7 @@
                     teamPicked: 0,
                     payout: 1,
                     payoutAmount: 0,
-                    state: er.STATE_INCOMPLETE,
+                    state: ar.STATE_INCOMPLETE,
                   },
                   o = 0;
                 o < t.predictions.length;
@@ -12836,7 +12857,7 @@
                     wagerAmount: 0,
                     payout: r,
                     payoutAmount: 0,
-                    state: er.STATE_INCOMPLETE,
+                    state: ar.STATE_INCOMPLETE,
                   }),
                   (this.m_predictionTimestamp = o))
                 : ((this.m_selectedPrediction = {
@@ -12846,7 +12867,7 @@
                     wagerAmount: 0,
                     payout: 2,
                     payoutAmount: 0,
-                    state: er.STATE_INCOMPLETE,
+                    state: ar.STATE_INCOMPLETE,
                   }),
                   (this.m_predictionTimestamp = 0));
             }),
@@ -12915,7 +12936,7 @@
                                 tokensUsed: a.wagerAmount,
                                 payoutOdds: a.payout,
                                 payoutAmount: a.payoutAmount,
-                                state: er.STATE_INCOMPLETE,
+                                state: ar.STATE_INCOMPLETE,
                               }
                             ),
                             (this.m_rgProPredictionStatusAsync.data.TokensLeft =
@@ -12927,7 +12948,7 @@
                               a.leagueNodeId,
                               o.data
                                 ? o.data.errorCode
-                                : ar.MAKE_PREDICTION_RESULT_NETWORK_FAILURE
+                                : tr.MAKE_PREDICTION_RESULT_NETWORK_FAILURE
                             ),
                         this.m_mapProPredictionInProgress.set(e, !1),
                         this.clearProPredictionToMake(),
@@ -13169,10 +13190,10 @@
             }),
             (e.prototype.getFantasyDayScore = function (e, a, t) {
               var r = this,
-                o = Jt()
+                o = jt()
                   .fromInt(e)
                   .shiftLeft(48)
-                  .or(Jt().fromInt(a))
+                  .or(jt().fromInt(a))
                   .toString();
               return this.getOrCreateFromMap(
                 this.m_mapFantasyDayScoreAsync,
@@ -13207,21 +13228,21 @@
               });
             }),
             (e.prototype.Init = function () {
-              jt.render(
-                m.createElement(Kt, { app: this }),
+              Qt.render(
+                m.createElement(Xt, { app: this }),
                 document.getElementById("dpc_root")
               );
             }),
             (0, r.gn)(
-              [wa.LO],
+              [Oa.LO],
               e.prototype,
               "m_mapProPredictionInProgress",
               void 0
             ),
-            (0, r.gn)([wa.LO], e.prototype, "m_mapProPredictionError", void 0),
-            (0, r.gn)([wa.LO], e.prototype, "m_mapHelpState", void 0),
-            (0, r.gn)([wa.LO], e.prototype, "m_selectedPrediction", void 0),
-            (0, r.gn)([wa.LO], e.prototype, "m_predictionTimestamp", void 0),
+            (0, r.gn)([Oa.LO], e.prototype, "m_mapProPredictionError", void 0),
+            (0, r.gn)([Oa.LO], e.prototype, "m_mapHelpState", void 0),
+            (0, r.gn)([Oa.LO], e.prototype, "m_selectedPrediction", void 0),
+            (0, r.gn)([Oa.LO], e.prototype, "m_predictionTimestamp", void 0),
             e
           );
         })();
@@ -13230,40 +13251,40 @@
           (e[(e.Player = 1)] = "Player"),
           (e[(e.Team = 2)] = "Team"),
           (e[(e.League = 3)] = "League");
-      })(tr || (tr = {})),
+      })(rr || (rr = {})),
         (t.g.ClearBackgroundInterval = t.g.clearInterval),
         (t.g.ClearBackgroundTimeout = t.g.clearTimeout),
         (t.g.SetBackgroundInterval = t.g.setInterval),
         (t.g.SetBackgroundTimeout = t.g.setTimeout);
-      var or,
-        nr,
+      var nr,
         ir,
-        lr = new rr();
+        lr,
+        cr = new or();
       document.addEventListener("DOMContentLoaded", function () {
-        c(), lr.Init();
+        c(), cr.Init();
       }),
         (window.LocalizationReady = function (e, a, t) {
           if ("english" !== a)
-            "main" == e ? (or = t) : "shared" == e && (nr = t);
-          else if ("shared" == e) ir = t;
+            "main" == e ? (nr = t) : "shared" == e && (ir = t);
+          else if ("shared" == e) lr = t;
           else {
             var r = void 0,
               o = null,
               n = void 0,
               i = null;
-            void 0 !== or ? ((r = or), (o = t)) : (r = t),
-              void 0 !== nr ? ((n = nr), (i = ir)) : (n = ir),
-              re.InitFromObjects(r, o, n, i),
-              (or = void 0),
+            void 0 !== nr ? ((r = nr), (o = t)) : (r = t),
+              void 0 !== ir ? ((n = ir), (i = lr)) : (n = lr),
+              oe.InitFromObjects(r, o, n, i),
               (nr = void 0),
-              (ir = void 0);
+              (ir = void 0),
+              (lr = void 0);
           }
         });
     },
   },
   (e) => {
     e.O(0, [250], () => {
-      return (a = 475), e((e.s = a));
+      return (a = 7336), e((e.s = a));
       var a;
     });
     e.O();
