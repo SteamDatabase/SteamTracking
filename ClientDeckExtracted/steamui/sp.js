@@ -25954,6 +25954,7 @@
             )
           : null;
       }
+      o.Fragment;
       function dg(e) {
         const { cm: t, instance: n } = e;
         u.i_.EBrowserType_DirectHWND_Borderless;
@@ -26215,6 +26216,7 @@
             : null
         );
       }
+      o.Fragment;
       !(function () {
         (0, a.mG)(this, void 0, void 0, function* () {
           !(function () {
