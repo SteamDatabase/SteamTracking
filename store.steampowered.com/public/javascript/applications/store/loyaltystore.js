@@ -1561,8 +1561,11 @@
                           : `State_${e.Node().Tree.id}`),
                         (c.current = l),
                         t.replace(
-                          a.pathname,
-                          Object.assign(Object.assign({}, a.state), { [h]: l })
+                          Object.assign(Object.assign({}, t.location), {
+                            state: Object.assign(Object.assign({}, a.state), {
+                              [h]: l,
+                            }),
+                          })
                         )),
                         c.current == l &&
                           (s

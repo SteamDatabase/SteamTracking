@@ -30,8 +30,8 @@
       function l(e) {
         const { children: t, navTreeRef: n } = e,
           l = (0, a._T)(e, ["children", "navTreeRef"]),
-          m = r.useRef(),
-          g = (0, s.BE)(m, n),
+          g = r.useRef(),
+          m = (0, s.BE)(g, n),
           d = (0, i.id)(),
           _ = window.__virtual_keyboard_client;
         if (
@@ -44,7 +44,7 @@
           return r.createElement(
             o.Fe,
             Object.assign({}, l, {
-              navTreeRef: g,
+              navTreeRef: m,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
@@ -65,8 +65,8 @@
       let i = !1,
         u = !1,
         l = !1,
-        m = !1;
-      function g() {
+        g = !1;
+      function m() {
         return i || _(), u || l;
       }
       function d(e, t) {
@@ -80,9 +80,9 @@
         );
       }
       function _() {
-        (m = d("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+        (g = d("Valve Steam Tenfoot", "force_tenfoot_client_view")),
           (l = d("Valve Steam GameOverlay", "force_overlay_view")),
-          (u = m || d("Valve Steam Client", "force_client_view")),
+          (u = g || d("Valve Steam Client", "force_client_view")),
           (i = !0);
       }
       const f = "FocusNavHistoryID";
@@ -93,7 +93,7 @@
             const t = (0, o.k6)(),
               n = r.useRef(),
               a = (0, o.TH)(),
-              s = g(),
+              s = m(),
               i = a.state && a.state[f],
               u = r.useRef();
             return (
@@ -112,8 +112,11 @@
                           : `State_${e.Node().Tree.id}`),
                         (u.current = i),
                         t.replace(
-                          o.pathname,
-                          Object.assign(Object.assign({}, o.state), { [f]: i })
+                          Object.assign(Object.assign({}, t.location), {
+                            state: Object.assign(Object.assign({}, o.state), {
+                              [f]: i,
+                            }),
+                          })
                         )),
                         u.current == i &&
                           (s
@@ -172,8 +175,8 @@
         i = n(39746),
         u = (n(12505), n(41147)),
         l = n(71174),
-        m = n(15396),
-        g = n(7573),
+        g = n(15396),
+        m = n(7573),
         d = n(90666),
         _ = n(66472);
       n(37662);
@@ -208,7 +211,7 @@
                 navKey: "cat_section" + t.name,
               },
               t.categories.map((t, n) =>
-                a.createElement(p, {
+                a.createElement(E, {
                   key: "category" + t.name,
                   category: t,
                   autoFocus: e.autoFocus && 0 === n,
@@ -216,9 +219,9 @@
               )
             )
           );
-        return r ? o : a.createElement(m.Y, { placeholderHeight: "150px" }, o);
+        return r ? o : a.createElement(g.Y, { placeholderHeight: "150px" }, o);
       }
-      function p(e) {
+      function E(e) {
         const { category: t } = e;
         return a.createElement(
           c.s,
@@ -231,7 +234,7 @@
             r.IS,
             {
               href: d.De.STORE_BASE_URL + t.url,
-              className: (0, g.Z)({
+              className: (0, m.Z)({
                 [_.Category]: !0,
                 [_.TopLevelCategory]: t.is_toplevel_genre,
               }),
@@ -241,11 +244,11 @@
               { className: _.CategoryName },
               a.createElement("span", null, t.name)
             ),
-            a.createElement(E, Object.assign({}, e))
+            a.createElement(p, Object.assign({}, e))
           )
         );
       }
-      function E(e) {
+      function p(e) {
         let { category: t } = e;
         return a.createElement(
           "div",
@@ -296,7 +299,7 @@
     },
     41135: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => E });
+      n.r(t), n.d(t, { default: () => p });
       var a = n(67294),
         r = (n(26149), n(34425)),
         o = n(41147),
@@ -305,30 +308,30 @@
         i = n(71174),
         u = n(7200),
         l = n(27991),
-        m = n(34845),
-        g = n(69491),
-        d = n.n(g),
+        g = n(34845),
+        m = n(69491),
+        d = n.n(m),
         _ = n(13596),
         f = n(41311),
         v = n(90666),
-        p = n(51449);
-      function E(e) {
+        E = n(51449);
+      function p(e) {
         return a.createElement(
-          p.n,
+          E.n,
           { bSalePage: !0 },
           a.createElement(y, Object.assign({}, e))
         );
       }
       function y(e) {
         const { promotionName: t, language: n } = e,
-          [g, p] = a.useState(
+          [m, E] = a.useState(
             u.j1.GetClanEventFromAnnouncementGID(v.Wj.ANNOUNCEMENT_GID)
           ),
-          E = (0, i.L)();
+          p = (0, i.L)();
         if (
           (a.useEffect(() => {
             if (
-              (null == g ? void 0 : g.AnnouncementGID) != v.Wj.ANNOUNCEMENT_GID
+              (null == m ? void 0 : m.AnnouncementGID) != v.Wj.ANNOUNCEMENT_GID
             ) {
               const e = new s.K(v.JA.CLANSTEAMID);
               u.j1
@@ -337,11 +340,11 @@
                   v.Wj.ANNOUNCEMENT_GID,
                   null
                 )
-                .then(p);
+                .then(E);
             }
             (0, l.nf)(null);
-          }, [g]),
-          !g)
+          }, [m]),
+          !m)
         )
           return a.createElement(
             "div",
@@ -351,17 +354,17 @@
               string: (0, f.Xx)("#Loading"),
             })
           );
-        const y = g.visibility_state !== c.ac.k_EEventStateVisible;
+        const y = m.visibility_state !== c.ac.k_EEventStateVisible;
         return a.createElement(
           r.p,
-          { navID: "StoreSalePageRoot", NavigationManager: E },
+          { navID: "StoreSalePageRoot", NavigationManager: p },
           a.createElement(
             o.g,
             { timeoutMS: 1e3 },
-            a.createElement(m.o, {
+            a.createElement(g.o, {
               promotionName: t,
               language: n,
-              eventModel: g,
+              eventModel: m,
               bIsPreview: y,
             })
           )
