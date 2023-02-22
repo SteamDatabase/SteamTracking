@@ -1,31 +1,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
-body.v6.sale_winter2022 {
+body.v6.sale_spring2023 {
                 background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/summer_sale_2021_front_page_background_2.jpg?v=1') no-repeat center top, #E0CDA3;
             }
 
-body.v6.sale_winter2022 .responsive_page_template_content {
+body.v6.sale_spring2023 .responsive_page_template_content {
                 margin: 0 auto;
                 background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/summer_sale_2021_front_page_frame.jpg?v=1') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/summer_sale_2021_front_page_frame_tile.jpg?v=1') repeat-y center top;
             }
-body.v6.sale_winter2022 .page_background_holder {
+body.v6.sale_spring2023 .page_background_holder {
                 background-size: contain !important;
                 max-height: 400px;
                 margin-top: 30px;
             }
 
-body.v6.sale_winter2022 .home_page_takeover_sizer {
+body.v6.sale_spring2023 .home_page_takeover_sizer {
                 max-height: 350px;
                 min-height: 270px;
                 display: inline-block;
             }
 
-body.v6.sale_winter2022 .home_page_takeover_link {
+body.v6.sale_spring2023 .home_page_takeover_link {
                 z-index: 200;
             }
 
-body.v6.sale_winter2022 .fullscreen-bg {
+body.v6.sale_spring2023 .fullscreen-bg {
                 position: absolute;
                 z-index: 1;
                 width: 100%;
@@ -37,7 +37,7 @@ body.v6.sale_winter2022 .fullscreen-bg {
                 align-items: center;
             }
 
-body.v6.sale_winter2022 .home_header_textimage_ctn {
+body.v6.sale_spring2023 .home_header_textimage_ctn {
                 width: 940px;
                 max-width: 95vw;
                 z-index: 100;
@@ -52,7 +52,7 @@ body.v6.sale_winter2022 .home_header_textimage_ctn {
                 align-items: flex-end;
             }
 
-body.v6.sale_winter2022 .home_ctn.discovery_queue_ctn, body.v6.sale_winter2022 .home_ctn.top_new_releases {
+body.v6.sale_spring2023 .home_ctn.discovery_queue_ctn, body.v6.sale_spring2023 .home_ctn.top_new_releases {
                                                                          background: transparent;
                                                                      }
 
@@ -62,10 +62,10 @@ body.v6.sale_winter2022 .home_ctn.discovery_queue_ctn, body.v6.sale_winter2022 .
     max-width: 1800px;
 }
 
-body.v6.sale_winter2022.infinite_scrolling #footer.small_footer {
+body.v6.sale_spring2023.infinite_scrolling #footer.small_footer {
     background: transparent;
             }
-body.v6.sale_winter2022 .home_sticker_ctn.mobile {
+body.v6.sale_spring2023 .home_sticker_ctn.mobile {
     display: none;
 }
 .page_background_holder_mobile {
@@ -493,7 +493,7 @@ body.v6.sale_winter2022 .home_sticker_ctn.mobile {
 }
 
 
-body.v6.sale_winter2022 .ds_options {
+body.v6.sale_spring2023 .ds_options {
                 z-index: 100;
             }
 
@@ -971,7 +971,7 @@ body.forgeyourfate {
 
 @media screen and (min-width: 2300px )
 {
-    body.v6.sale_winter2022 {
+    body.v6.sale_spring2023 {
                     background-size: unset;
                 }
 }
@@ -1124,11 +1124,11 @@ body.forgeyourfate {
         margin-bottom: 0;
     }
 
-    body.v6.sale_winter2022 .home_sticker_ctn.desktop {
+    body.v6.sale_spring2023 .home_sticker_ctn.desktop {
         display: none;
     }
 
-    body.v6.sale_winter2022 .home_sticker_ctn.mobile {
+    body.v6.sale_spring2023 .home_sticker_ctn.mobile {
         display: block;
     }
 
@@ -1291,11 +1291,11 @@ body.forgeyourfate {
         width: 95vw;
     }
 
-    html.responsive  body.v6.sale_winter2022 .page_background_holder {
+    html.responsive  body.v6.sale_spring2023 .page_background_holder {
         margin: 0;
     }
 
-    html.responsive body.v6.sale_winter2022 .bookmark_stickers {
+    html.responsive body.v6.sale_spring2023 .bookmark_stickers {
         background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/dog_sticker.png?v=1');
         max-width: 160px;
         max-height: 160px;
@@ -1303,7 +1303,7 @@ body.forgeyourfate {
         left: -21%;
     }
 
-    html.responsive body.v6.sale_winter2022 .bookmarks_ctn {
+    html.responsive body.v6.sale_spring2023 .bookmarks_ctn {
         margin-bottom: 5%;
     }
 
@@ -1311,12 +1311,12 @@ body.forgeyourfate {
         justify-content: flex-start;
     }
 
-    body.v6.sale_winter2022 .home_page_takeover_sizer {
+    body.v6.sale_spring2023 .home_page_takeover_sizer {
                     min-height: unset;
                     height: 42vw !important;
                 }
 
-    html.responsive body.v6.sale_winter2022 .home_header_textimage_ctn {
+    html.responsive body.v6.sale_spring2023 .home_header_textimage_ctn {
 
                                 }
 
@@ -1389,7 +1389,7 @@ body.forgeyourfate {
     html.responsive .home_ctn.top_new_releases {
         display: none;
     }
-    html.responsive body.v6.sale_winter2022 .home_header_textimage_ctn .summer_points_ctn {
+    html.responsive body.v6.sale_spring2023 .home_header_textimage_ctn .summer_points_ctn {
                                     display: none;
                                 }
 
@@ -1398,23 +1398,23 @@ body.forgeyourfate {
 @media screen and (max-width: 540px )
 {
 
-    body.responsive_page.v6.sale_winter2022 {
+    body.responsive_page.v6.sale_spring2023 {
                                     background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/winter_sale_2020_header_alpha2b.png?v=2') no-repeat center top 12vw, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/winter_sale_folliage_tile_b.png?v=2') repeat center top, #101928;
                                     background-size: auto, contain;
                                 }
-    html.responsive body.v6.sale_winter2022 .home_header_textimage_ctn {
+    html.responsive body.v6.sale_spring2023 .home_header_textimage_ctn {
     display: none;
     }
 
-    html.responsive body.v6.sale_winter2022 .fullscreen-bg {
+    html.responsive body.v6.sale_spring2023 .fullscreen-bg {
     display: none;
     }
 
-    html.responsive body.v6.sale_winter2022 .tag_carousel .carousel_items:not(.no_paging) > * {
+    html.responsive body.v6.sale_spring2023 .tag_carousel .carousel_items:not(.no_paging) > * {
         width: auto;
     }
 
-    body.v6.sale_winter2022 .home_page_takeover_sizer {
+    body.v6.sale_spring2023 .home_page_takeover_sizer {
                     min-height: unset;
                     height: 75vw !important;
                 }
@@ -2033,7 +2033,7 @@ body.v6 .sale_capsule .discount_block_inline
         display: none;
     }
 
-    html.responsive body.v6.sale_winter2022 .fullscreen-bg {
+    html.responsive body.v6.sale_spring2023 .fullscreen-bg {
                                     align-items: flex-start;
                                 }
 
@@ -2169,7 +2169,7 @@ body.v6 .sale_capsule .discount_block_inline
         font-size: 10px;
     }
 
-    html.responsive body.v6.sale_winter2022 .tag_carousel .carousel_items:not(.no_paging) > * {
+    html.responsive body.v6.sale_spring2023 .tag_carousel .carousel_items:not(.no_paging) > * {
                                     width: auto;
                                 }
 

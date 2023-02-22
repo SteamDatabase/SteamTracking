@@ -132,6 +132,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .collapseablesection_required_title_29VCz {
   display: flex;
 }
+.collapseablesection_required_title_29VCz:not(:first-child) {
+  margin-top: 60px;
+}
 .collapseablesection_SectionTitleHeader_1K5gA .EventEditorTextTitle {
   padding-top: 6px;
 }

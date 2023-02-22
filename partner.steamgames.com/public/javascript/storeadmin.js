@@ -233,6 +233,48 @@ function AjaxPopulateClusterList( elemValue, elemListID, clusterName, clusterTyp
 	} );
 }
 
+function UpdateClusterCount( elemIncludedApps, clusterName )
+{
+	const nCapsules = $J( elemIncludedApps ).children( "div" ).length;
+
+	let strHeader = "Capsules in this cluster";
+	if ( nCapsules > 0 )
+	{
+		strHeader = "%d Capsules in this cluster".replace( "%d", nCapsules );
+	}
+
+	$J( '#cluster_' + clusterName + '_header' ).text( strHeader );
+}
+
+// Populates the included list with solr itemids given a list of appids
+function PopulateClusterViaAppIDs( elemAppIDTextArea, elIncludedList, clusterName )
+{
+	$J( '#appids_' + clusterName + '_area' ).slideUp();
+
+	const rgAppIDs = elemAppIDTextArea.val().split( '\n' );
+
+	if ( rgAppIDs.length < 1 || elemAppIDTextArea.val().length < 1 )
+		return;
+
+	$J( '#appids_' + clusterName + '_area' ).slideUp();
+	$J.post( 'https://partner.steamgames.com/admin/store/importappidsjson/', { 'sessionid': g_sessionID, 'appids': rgAppIDs } ).done( function( rgApps )
+	{
+		let rgAppRows = [];
+		for ( let i = 0; i < rgApps.length; ++i )
+		{
+			var option = rgApps[i];
+			var name = option['name'];
+
+			rgAppRows.push(  $J('<div/>', {id: clusterName + '_clusteritem_' + option['itemid'], 'class': option['cssClass'], text : name } ) );
+		}
+
+		elIncludedList.append( rgAppRows );
+		elIncludedList.trigger("change");
+		elemAppIDTextArea.val( "" );
+	} );
+
+}
+
 function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, elemIncludedList, clusterType )
 {
 	var elemAllApps = $(elemAvailableList);
@@ -252,6 +294,7 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 
 	$J(elemAllApps).on( 'dblclick', MoveClusterItem.bind( null, elemAllApps, elemIncludedApps, true ) )
 	$J(elemIncludedApps).on( 'dblclick', MoveClusterItem.bind( null, elemAllApps, elemIncludedApps, false ) )
+	$J(elemIncludedApps).change( UpdateClusterCount.bind( null, elemIncludedApps, clusterName ) );
 
 	Event.observe( elemAllApps.up('form'), 'submit', SerializeClusterToForm.bindAsEventListener( null, elemAllApps.up('form'), 'capsule_lists[' + clusterName + ']', elemIncludedApps ) );
 	
@@ -337,6 +380,7 @@ function CreateClusterSortable( elem )
 	Sortable.destroy( elem );
 	Position.includeScrollOffsets = true;
 	Sortable.create( elem, {tag: 'div', scroll: $(elem).up('.appselect_list_ctn') } );
+	$J( elem ).trigger("change");
 }
 
 function PreviewCapsules( strSize, elemIncluded )

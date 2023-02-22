@@ -5136,6 +5136,8 @@
         const { image: t, fnOnRemove: a, supported: n, languageRealms: i } = e,
           l = n.map((e) => {
             let a = (0, D.Xx)("#EventEditor_ArtworkType_" + e);
+            "spotlight" == e &&
+              (a = (0, D.Xx)("#EventEditor_ArtworkType_store_" + e));
             const n = c.h1[e];
             let i;
             n &&
@@ -11383,7 +11385,7 @@
               "div",
               {
                 className: (0, o.Z)(
-                  s.EventEditorTextTitle,
+                  s.CollapsableSectionTitle,
                   "EventEditorTextTitle"
                 ),
               },
@@ -14436,8 +14438,8 @@
       var n = a(70655),
         i = a(9669),
         l = a.n(i),
-        r = a(67294),
-        o = (a(59301), a(26149), a(82946), a(93976)),
+        r = (a(59301), a(67294)),
+        o = (a(26149), a(82946), a(93976)),
         s = a(90666);
       class c {
         constructor() {

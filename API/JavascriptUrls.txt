@@ -1867,6 +1867,7 @@ https://partner.steamgames.com/admin/game/save/${itemID}?activetab=tab_graphical
 https://partner.steamgames.com/admin/store/clusterarchiveajax/${pageid}
 https://partner.steamgames.com/admin/store/getitemdisplaydetailsjson/
 https://partner.steamgames.com/admin/store/gettaggedpackages/
+https://partner.steamgames.com/admin/store/importappidsjson/
 https://partner.steamgames.com/admin/store/package/${itemID}?activetab=tab_graphicalassets
 https://partner.steamgames.com/admin/store/packagesave/${itemID}?activetab=tab_graphicalassets&json=1
 https://partner.steamgames.com/admin/store/suggestclusteritemsjson/

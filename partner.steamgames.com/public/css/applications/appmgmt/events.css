@@ -8710,8 +8710,14 @@ hr.VO {
   justify-content: space-between;
 }
 .saledashboard_EventName_2ud6o {
-  font-size: 20px;
+  font-size: 26px;
   color: #fff;
+  font-weight: 500;
+}
+.saledashboard_EventName_2ud6o span {
+  font-weight: 200;
+  color: #e5e5e5;
+  font-size: 19px;
 }
 .saledashboard_FeaturedApps_2k6vv {
   background: #2e3138;
@@ -8734,6 +8740,10 @@ hr.VO {
 }
 .saledashboard_PendingChanges_3idx4 {
   color: #c7882b;
+}
+.saledashboard_DatesCtn_2ElSw {
+  line-height: 17px;
+  margin-bottom: 4px;
 }
 .saleghostsections_GhostCtn_3gdzT {
   width: 100%;
@@ -12029,10 +12039,13 @@ select {
   min-height: 160px;
   display: flex;
   flex-direction: column;
-  background: #262626;
+  background: #25272c;
   margin-bottom: 8px;
   box-sizing: border-box;
   padding: 12px;
+}
+.optin_admin_dashboard_OptInAdminRow_39siH.optin_admin_dashboard_OptinEnabled_2yTnl {
+  border-left: 3px solid #70ad21;
 }
 .optin_admin_dashboard_OptInAdminRow_39siH
   .optin_admin_dashboard_StatsCtn_3ZKx3 {

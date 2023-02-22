@@ -543,6 +543,14 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.pagedsettings_NoPadding_1iWhH {
   padding: 0;
 }
+.pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.DesktopUI,
+.DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni {
+  padding: 24px 0px 24px 24px;
+}
+.pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.DesktopUI .DialogBody,
+.DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogBody {
+  padding-right: 24px;
+}
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader {
   margin-right: 0;
 }

@@ -324,6 +324,7 @@
         SaveBackground: "partnereventshared_SaveBackground_dpb4w",
         SupportedGroupLabel: "partnereventshared_SupportedGroupLabel_2YjA1",
         LanguageWithContent: "partnereventshared_LanguageWithContent_1mZ9r",
+        LargeInput: "partnereventshared_LargeInput_PJvHC",
         InputBorder: "partnereventshared_InputBorder_udsJY",
         RadioOption: "partnereventshared_RadioOption_2Ubig",
         FlexGrow: "partnereventshared_FlexGrow_IQIYv",
@@ -335,6 +336,8 @@
         EventEditorTextTitle: "partnereventshared_EventEditorTextTitle_1q_7g",
         EventEditorTextTitleLengthInfo:
           "partnereventshared_EventEditorTextTitleLengthInfo_1eoiU",
+        CollapsableSectionTitle:
+          "partnereventshared_CollapsableSectionTitle_10FD9",
         EventSectionTitleCtn: "partnereventshared_EventSectionTitleCtn_1qQl6",
         EventSectionTitle: "partnereventshared_EventSectionTitle_YggHe",
         EventSectionSpacer: "partnereventshared_EventSectionSpacer_1Z2oL",
@@ -1839,7 +1842,7 @@
         bestofyear_banner: { width: 1100, height: 160 },
         bestofyear_banner_mobile: { width: 500, height: 160 },
         localized_marketing_message: { width: 570, height: 600 },
-        localized_optin_banner: { width: 736, height: 160 },
+        localized_optin_banner: { width: 1e3, height: 150 },
       };
       function i(e, t, r) {
         const i = n[r];
@@ -15203,23 +15206,32 @@
           });
         }
         GetBestEventsForCurrentUser(e, t, r) {
+          var i, o;
           return (0, n.mG)(this, void 0, void 0, function* () {
             let n = new Array(),
-              i = {
+              l = {
                 l: f.De.LANGUAGE,
                 include_steam_blog: !0,
                 filter_to_played_within_days: e,
                 include_only_game_updates: t,
               },
-              o = f.De.STORE_BASE_URL + "events/ajaxgetbesteventsforuser",
-              l = yield a().get(o, {
-                params: i,
+              c = f.De.STORE_BASE_URL + "events/ajaxgetbesteventsforuser",
+              m = yield a().get(c, {
+                params: l,
                 withCredentials: !0,
                 cancelToken: r ? r.token : void 0,
               });
+            if (!(null === (i = m.data) || void 0 === i ? void 0 : i.events)) {
+              let e =
+                (null === (o = m.data) || void 0 === o ? void 0 : o.err_msg) ||
+                "";
+              throw new Error(
+                `GetBestEventsForCurrentUser request failed (${e})`
+              );
+            }
             return (
               (0, s.z)(() => {
-                for (let e of l.data.events) {
+                for (let e of m.data.events) {
                   let t = this.GetEventLookupKey(e);
                   if (!this.m_mapExistingEvents.has(t)) {
                     let t = new d.K(e.clan_steamid);

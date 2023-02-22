@@ -105,6 +105,9 @@
 input::placeholder {
   font-style: italic;
 }
+input.DialogTextInputBase.partnereventshared_LargeInput_PJvHC {
+  font-size: 24px;
+}
 .partnereventshared_InputBorder_udsJY {
   padding: 0px;
 }
@@ -152,7 +155,9 @@ b {
 .partnereventshared_EventEditorTextTitle_1q_7g {
   padding-left: 0px;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
   display: flex;
   justify-content: start;
 }
@@ -165,6 +170,14 @@ b {
   text-transform: none;
   color: #868f98;
   vertical-align: middle;
+}
+.partnereventshared_CollapsableSectionTitle_10FD9 {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+  display: flex;
+  line-height: 36px;
 }
 .partnereventshared_EventEditorTextTitleLengthInfo_1eoiU {
   font-size: 11px;

@@ -5763,7 +5763,7 @@
                 ((this.m_DynamicCSSObserver = new MutationObserver(() => {
                   const e = s.Mv();
                   this.m_mapPopups.forEach((t) => {
-                    s.b$(t.window.document, e, !1);
+                    s.PN(t.window.document, e);
                   });
                 })),
                 this.m_DynamicCSSObserver.observe(e, { childList: !0 }));
@@ -7980,14 +7980,14 @@
     485: (e, t, n) => {
       "use strict";
       n.d(t, {
-        CO: () => g,
-        QH: () => f,
-        zQ: () => C,
-        Iy: () => p,
-        lP: () => b,
-        hi: () => E,
-        ET: () => h,
-        Pd: () => _,
+        CO: () => f,
+        QH: () => v,
+        zQ: () => S,
+        Iy: () => _,
+        lP: () => E,
+        hi: () => w,
+        ET: () => p,
+        Pd: () => g,
       });
       var r = n(70655),
         i = n(67294),
@@ -7998,17 +7998,18 @@
       var c = n(90067),
         d = n(10089),
         u = n(7573),
-        m = n(64839);
-      const h = (0, c.Y)("GamepadNavigationContext", () =>
+        m = n(64839),
+        h = n(90666);
+      const p = (0, c.Y)("GamepadNavigationContext", () =>
           i.createContext(null)
         ),
-        p = (0, c.Y)("FocusRingNavigationContext", () => i.createContext(a.U7));
-      function _(e) {
+        _ = (0, c.Y)("FocusRingNavigationContext", () => i.createContext(a.U7));
+      function g(e) {
         const { navRef: t } = e,
           n = (0, r._T)(e, ["navRef"]),
           o = i.useRef(),
-          s = (0, i.useContext)(h),
-          a = (0, i.useContext)(p),
+          s = (0, i.useContext)(p),
+          a = (0, i.useContext)(_),
           l = (function (e, t) {
             let n = i.useRef(null);
             return (
@@ -8036,7 +8037,7 @@
           { ref: o, node: l }
         );
       }
-      function g(e) {
+      function f(e) {
         const {
             onButtonDown: t,
             onButtonUp: n,
@@ -8097,7 +8098,7 @@
           props: C,
         };
       }
-      function f(e) {
+      function v(e) {
         const {
             autoFocus: t,
             preferredFocus: n,
@@ -8113,7 +8114,7 @@
             navRef: h,
             actionDescriptionMap: p,
             onMoveUp: _,
-            onMoveRight: f,
+            onMoveRight: g,
             onMoveDown: v,
             onMoveLeft: C,
             navEntryPreferPosition: S,
@@ -8146,7 +8147,7 @@
             "scrollIntoViewType",
             "resetNavOnEntry",
           ]),
-          { gamepadEvents: I, actionDescriptions: R, props: M } = g(D);
+          { gamepadEvents: I, actionDescriptions: R, props: M } = f(D);
         return {
           elemProps: M,
           navOptions: {
@@ -8163,7 +8164,7 @@
             focusableIfNoChildren: m,
             navRef: h,
             onMoveUp: _,
-            onMoveRight: f,
+            onMoveRight: g,
             onMoveDown: v,
             onMoveLeft: C,
             navEntryPreferPosition: S,
@@ -8176,7 +8177,7 @@
           gamepadEvents: I,
         };
       }
-      function v(e) {
+      function C(e) {
         return function (t) {
           const {
               focusClassName: n,
@@ -8187,7 +8188,7 @@
               tabIndex: c,
               children: d,
             } = t,
-            h = (0, r._T)(t, [
+            p = (0, r._T)(t, [
               "focusClassName",
               "focusWithinClassName",
               "className",
@@ -8196,18 +8197,23 @@
               "tabIndex",
               "children",
             ]),
-            [p, _] = i.useState(l.BHasFocus());
-          (0, m.Qg)(l.FocusCallbackList, _);
-          const [g, f] = i.useState(l.BFocusWithin());
-          (0, m.Qg)(l.FocusWithinCallbackList, f);
-          const [v, C] = i.useState(l.Tree.BIsActive());
+            _ = (0, m.NW)(),
+            g = (0, h.id)(),
+            f = l.BHasFocus(),
+            v = l.BFocusWithin(),
+            C = l.Tree.BIsActive();
           return (
-            (0, m.Qg)(l.Tree.OnActiveStateChangedCallbacks, C),
+            (0, m.Qg)(l.FocusCallbackList, _),
+            (0, m.Qg)(l.FocusWithinCallbackList, _),
+            (0, m.Qg)(
+              l.Tree.OnActiveStateChangedCallbacks,
+              f || v ? _ : void 0
+            ),
             i.createElement(
               e,
-              Object.assign(Object.assign({}, h), {
-                className: (0, u.Z)(s, p && v && n, g && v && o),
-                tabIndex: v ? c : -1,
+              Object.assign(Object.assign({}, p), {
+                className: (0, u.Z)(s, g && f && C && n, g && v && C && o),
+                tabIndex: C ? c : -1,
                 ref: a,
               }),
               d
@@ -8215,35 +8221,35 @@
           );
         };
       }
-      const C = v("div");
-      function S(e, t, n, r) {
-        const { elemProps: s, navOptions: a, gamepadEvents: l } = f(n);
+      const S = C("div");
+      function b(e, t, n, r) {
+        const { elemProps: s, navOptions: a, gamepadEvents: l } = v(n);
         void 0 !== a.focusable || s.disabled || (a.focusable = !0);
-        const { ref: c, node: p } = _(Object.assign({}, a)),
-          g = (0, i.useCallback)(
+        const { ref: c, node: h } = g(Object.assign({}, a)),
+          _ = (0, i.useCallback)(
             () => (d.LT.PlayNavSound(d.qr.DefaultOk), c.current.click(), !0),
             [c]
           );
         l.onOKButton ||
           ((s.onClick || ("button" == e && "submit" == s.type) || "a" == e) &&
-            (l.onOKButton = g)),
+            (l.onOKButton = _)),
           a.focusable && (s.tabIndex = s.tabIndex || 0),
           (0, o.pD)(l, c);
-        const v = (0, m.BE)(r, c),
+        const f = (0, m.BE)(r, c),
           C = s.children;
         delete s.children;
         const S = s.focusClassName;
         return (
           delete s.focusClassName,
           i.createElement(
-            h.Provider,
-            { value: p },
-            p
+            p.Provider,
+            { value: h },
+            h
               ? i.createElement(
                   t,
                   Object.assign(Object.assign({}, s), {
-                    divRef: v,
-                    node: p,
+                    divRef: f,
+                    node: h,
                     focusClassName: (0, u.Z)(S, "gpfocus"),
                     focusWithinClassName: "gpfocuswithin",
                     className: (0, u.Z)(s.className, "Focusable"),
@@ -8253,7 +8259,7 @@
               : i.createElement(
                   e,
                   Object.assign(Object.assign({}, s), {
-                    ref: v,
+                    ref: f,
                     className: (0, u.Z)(s.className, "Focusable"),
                   }),
                   C
@@ -8261,14 +8267,14 @@
           )
         );
       }
-      function b(e) {
-        const t = v(e);
+      function E(e) {
+        const t = C(e);
         return i.forwardRef(function (n, r) {
-          return S(e, t, n, r);
+          return b(e, t, n, r);
         });
       }
-      function E(e) {
-        const t = v(e);
+      function w(e) {
+        const t = C(e);
         return i.forwardRef(function (n, i) {
           const o = (function (e) {
               const {
@@ -8307,87 +8313,91 @@
             d = (0, r._T)(a, ["refKeyboardHandle"]),
             u = (0, l.k$)(s, c),
             h = (0, m.BE)(i, u);
-          return S(e, t, d, h);
+          return b(e, t, d, h);
         });
       }
     },
     27745: (e, t, n) => {
       "use strict";
-      n.d(t, { O: () => u });
+      n.d(t, { O: () => m });
       var r = n(67294),
         i = n(7573),
         o = n(30543),
         s = (n(23816), n(37464), n(39746), n(485)),
         a = n(48369),
         l = n.n(a),
-        c = n(64839);
-      const d = new o.s("FocusNavigation").Debug;
-      function u(e) {
+        c = n(64839),
+        d = n(90666);
+      const u = new o.s("FocusNavigation").Debug;
+      function m(e) {
         const {
             className: t,
             rootClassName: n,
             render: o,
             children: a,
-            NavigationManager: d,
+            NavigationManager: u,
           } = e,
-          u = r.useRef(),
-          [h, p] = r.useState({
+          m = (0, d.id)(),
+          p = r.useRef(),
+          [_, g] = r.useState({
             bFocusWithin: !1,
             navTarget: null,
             prevTarget: null,
           }),
-          _ = (0, c.e1)(null == d ? void 0 : d.GetShowDebugFocusRing()),
-          g = r.useRef(),
-          f = r.useMemo(
+          f = (0, c.e1)(null == u ? void 0 : u.GetShowDebugFocusRing()),
+          v = r.useRef(),
+          C = r.useMemo(
             () => ({
               OnBlur: (e, t, n) => {
-                p({ bFocusWithin: !1, navTarget: null, prevTarget: null });
+                g({ bFocusWithin: !1, navTarget: null, prevTarget: null });
               },
               OnFocus: (e, t, n) => {
-                p({ bFocusWithin: !0, navTarget: t, prevTarget: null });
+                g({ bFocusWithin: !0, navTarget: t, prevTarget: null });
               },
               OnFocusChange: (e, t, n) => {
-                p({ bFocusWithin: !0, navTarget: n, prevTarget: t });
+                g({ bFocusWithin: !0, navTarget: n, prevTarget: t });
               },
               OnForceMeasureFocusRing: () => {
                 var e;
-                null === (e = g.current) ||
+                null === (e = v.current) ||
                   void 0 === e ||
                   e.MeasureElementAndUpdate();
               },
             }),
-            [p]
+            [g]
           );
-        let { bFocusWithin: v, navTarget: C, prevTarget: S } = h;
-        return r.createElement(
-          r.Fragment,
-          null,
-          r.createElement(
-            "div",
-            { className: (0, i.Z)(l().FocusRingRoot, n), ref: u },
-            r.createElement(m, {
-              ref: g,
-              className: (0, i.Z)(t, _ && l().DebugFocusRing),
-              render: o,
-              bFocusWithin: v,
-              navTarget: C,
-              refContainer: u,
-              bDebug: _,
-            })
-          ),
-          r.createElement(s.Iy.Provider, { value: f }, a)
-        );
+        let { bFocusWithin: S, navTarget: b, prevTarget: E } = _;
+        return m
+          ? r.createElement(
+              r.Fragment,
+              null,
+              r.createElement(
+                "div",
+                { className: (0, i.Z)(l().FocusRingRoot, n), ref: p },
+                r.createElement(h, {
+                  ref: v,
+                  className: (0, i.Z)(t, f && l().DebugFocusRing),
+                  render: o,
+                  bFocusWithin: S,
+                  navTarget: b,
+                  refContainer: p,
+                  bDebug: f,
+                })
+              ),
+              r.createElement(s.Iy.Provider, { value: C }, a)
+            )
+          : r.createElement(r.Fragment, null, a);
       }
-      const m = r.forwardRef((e, t) => {
+      const h = r.forwardRef((e, t) => {
         const {
             className: n,
             render: o,
             bFocusWithin: s,
             navTarget: a,
             refContainer: c,
-            bDebug: u,
+            bDebug: d,
           } = e,
-          [m, p] = r.useState(a),
+          [m, h] = r.useState(a),
           [_, g] = r.useState(null),
           [f, v] = r.useState(!1),
           [C, S] = r.useState(!1),
@@ -8396,7 +8406,7 @@
             if (!a || !a.BWantsFocusRing()) return null != _ && (g(null), !0);
             let e = a.GetBoundingRect();
             const t = c.current.getBoundingClientRect();
-            if (u) {
+            if (d) {
               let t = a.Element;
               const n = t.ownerDocument.defaultView,
                 r = (t) =>
@@ -8408,7 +8418,7 @@
               i != C &&
                 (S(i),
                 i &&
-                  d(
+                  u(
                     "Focused on hidden item: ",
                     a.Element,
                     ". Closest visible ancestor: ",
@@ -8429,12 +8439,12 @@
                 n.width != _.width) &&
               (g(n), !0)
             );
-          }, [a, c, g, _, C, S, u]);
+          }, [a, c, g, _, C, S, d]);
         r.useImperativeHandle(t, () => ({ MeasureElementAndUpdate: E }), [E]);
         let w = s,
           y = _ || {};
         a && c.current && (a.BWantsFocusRing() || (w = !1)),
-          a != m && (p(a), (b.current = performance.now()), E(), f && v(!1)),
+          a != m && (h(a), (b.current = performance.now()), E(), f && v(!1)),
           r.useEffect(() => {
             if (!w || performance.now() - b.current > 500) return;
             let e;
@@ -8445,7 +8455,7 @@
             };
             return t(), () => cancelAnimationFrame(e);
           });
-        const D = o || h;
+        const D = o || p;
         return r.createElement(
           D,
           Object.assign({}, y, {
@@ -8457,7 +8467,7 @@
           })
         );
       });
-      function h(e) {
+      function p(e) {
         const {
           className: t,
           visible: n,
@@ -9338,7 +9348,7 @@
           );
         }
         GetActiveContext() {
-          var e;
+          var e, t;
           if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
             console.warn("No active context; finding one");
             for (const e of this.m_rgAllContexts) {
@@ -9350,7 +9360,7 @@
                   )} Found a focused window; setting this context as active.`
                 ),
                   (this.m_ActiveContext = e),
-                  e.SetActiveNavTree(t);
+                  this.m_ActiveContext.OnActivate(t.Window);
                 break;
               }
             }
@@ -9366,7 +9376,14 @@
                     : e.LogName()
                 }`
               ),
-              (this.m_ActiveContext = this.m_LastActiveContext)),
+              (this.m_ActiveContext = this.m_LastActiveContext),
+              this.m_ActiveContext.OnActivate(
+                null ===
+                  (t = this.m_LastActiveContext.m_LastActiveFocusNavTree) ||
+                  void 0 === t
+                  ? void 0
+                  : t.Window
+              )),
             this.m_ActiveContext
           );
         }
@@ -9380,10 +9397,20 @@
           return this.m_bShowDebugFocusRing;
         }
         RegisterInputSource(e) {
-          this.m_rgGamepadInputSources.push(e),
-            e.RegisterForGamepadButtonDown(this.OnButtonDown),
-            e.RegisterForGamepadButtonUp(this.OnButtonUp),
-            e.RegisterForNavigationTypeChange(this.OnNavigationTypeChange);
+          let t = new c.Hf();
+          return (
+            this.m_rgGamepadInputSources.push(e),
+            t.PushArrayRemove(this.m_rgGamepadInputSources, e),
+            t.Push(
+              e.RegisterForGamepadButtonDown(this.OnButtonDown).Unregister
+            ),
+            t.Push(e.RegisterForGamepadButtonUp(this.OnButtonUp).Unregister),
+            t.Push(
+              e.RegisterForNavigationTypeChange(this.OnNavigationTypeChange)
+                .Unregister
+            ),
+            t.GetUnregisterFunc()
+          );
         }
         SetGamepadEventUpdateBatcher(e) {
           this.m_fnGamepadEventUpdateBatcher = e;
@@ -9548,26 +9575,26 @@
         }
         IsActiveFocusNavTree(e) {
           var t;
-          return (
+          return Boolean(
             e &&
-            e ==
-              (null === (t = this.m_ActiveContext) || void 0 === t
-                ? void 0
-                : t.m_LastActiveFocusNavTree)
+              e ==
+                (null === (t = this.m_ActiveContext) || void 0 === t
+                  ? void 0
+                  : t.m_LastActiveFocusNavTree)
           );
         }
         IsActiveNavTree(e) {
           var t;
-          return (
+          return Boolean(
             e &&
-            e ==
-              (null === (t = this.m_ActiveContext) || void 0 === t
-                ? void 0
-                : t.m_LastActiveNavTree)
+              e ==
+                (null === (t = this.m_ActiveContext) || void 0 === t
+                  ? void 0
+                  : t.m_LastActiveNavTree)
           );
         }
         BIsInActiveContext(e) {
-          return e && e.WindowContext == this.m_ActiveContext;
+          return Boolean(e && e.WindowContext == this.m_ActiveContext);
         }
         BindGlobalEventHandlers() {
           this.m_bGlobalEventsInitialized ||
@@ -9686,6 +9713,12 @@
           return (
             !!this.m_StateHistory && this.m_StateHistory.RestoreState(e, t)
           );
+        }
+        GetFocusSnapshot() {
+          return (0, s.Sp)(this.m_node);
+        }
+        RestoreFocusSnapshot(e, t = 0) {
+          return (0, s.$y)(this.m_node, e, t);
         }
         NavTree() {
           return this.m_node.Tree;
@@ -11196,6 +11229,13 @@
             this.m_bIsMounted && this.m_Controller.IsActiveFocusNavTree(this)
           );
         }
+        BIsActiveWithinContext() {
+          return (
+            this.m_bIsMounted &&
+            (this.m_context.m_LastActiveNavTree == this ||
+              this.m_context.m_LastActiveFocusNavTree == this)
+          );
+        }
         SetIsMounted(e) {
           this.m_window = e;
           const t = this.m_Root.Element;
@@ -11428,14 +11468,24 @@
             : s(`${this.LogName(e)} Child window destroyed`);
         }
         SetActive(e, t, n = undefined) {
-          e
-            ? ((this.m_activeWindow = t),
-              (this.m_activeBrowserView = n),
-              this.m_controller.OnContextActivated(this))
-            : ((this.m_activeBrowserView = void 0),
-              this.m_controller.OnContextDeactivated(this, !1)),
-            this.m_bActive != e &&
-              ((this.m_bActive = e), this.m_ActiveCallbacks.Dispatch(e));
+          this.m_controller.BatchedUpdate(() => {
+            var r;
+            e
+              ? ((this.m_activeWindow = t),
+                (this.m_activeBrowserView = n),
+                this.m_controller.OnContextActivated(this))
+              : ((this.m_activeBrowserView = void 0),
+                this.m_controller.OnContextDeactivated(this, !1)),
+              this.m_bActive != e &&
+                ((this.m_bActive = e),
+                this.m_ActiveCallbacks.Dispatch(e),
+                null === (r = this.m_LastActiveFocusNavTree) ||
+                  void 0 === r ||
+                  r.OnActiveStateChangedCallbacks.Dispatch(
+                    e,
+                    this.m_LastActiveFocusNavTree
+                  ));
+          });
         }
         OnActivate(e) {
           s(
@@ -18343,8 +18393,9 @@
             bottomSeparator: l,
             highlightOnFocus: c,
             childrenContainerWidth: d,
+            padding: u,
           } = e,
-          u = (0, r._T)(e, [
+          m = (0, r._T)(e, [
             "label",
             "description",
             "icon",
@@ -18352,8 +18403,9 @@
             "bottomSeparator",
             "highlightOnFocus",
             "childrenContainerWidth",
+            "padding",
           ]),
-          { refWithValue: m, refForElement: h } = (0, j.ww)(t);
+          { refWithValue: h, refForElement: p } = (0, j.ww)(t);
         return i.createElement(
           nt,
           {
@@ -18366,11 +18418,12 @@
             childrenContainerWidth: null != d ? d : "min",
             onMouseDown: (e) => {
               var t;
-              null === (t = m.current) || void 0 === t || t.focus(),
+              null === (t = h.current) || void 0 === t || t.focus(),
                 e.preventDefault();
             },
+            padding: u,
           },
-          i.createElement(A, Object.assign({}, u, { ref: h }))
+          i.createElement(A, Object.assign({}, m, { ref: p }))
         );
       });
       const rt = i.forwardRef(function (e, t) {
@@ -19159,20 +19212,23 @@
         (0, r.gn)([j.ak], Ct.prototype, "ResetToDefault", null),
         (0, r.gn)([j.ak], Ct.prototype, "OnContextMenu", null);
       i.forwardRef((e, t) => {
-        const n = (0, r._T)(e, []);
+        const { className: n } = e,
+          o = (0, r._T)(e, ["className"]);
         return i.createElement(
           s.s,
-          { className: dt().SliderControlWithIcon },
+          { className: (0, l.Z)(dt().SliderControlWithIcon, n) },
           e.icon &&
             i.createElement(
               s.s,
               {
                 onTouchStart: (t) => e.onIconTouch && e.onIconTouch(t),
-                className: dt().Icon,
+                onClick: e.onIconClick,
+                focusable: !1,
+                className: (0, l.Z)(dt().Icon, "GamepadSliderIcon"),
               },
               e.icon
             ),
-          i.createElement(Ct, Object.assign({}, n, { ref: t }))
+          i.createElement(Ct, Object.assign({}, o, { ref: t }))
         );
       });
       i.forwardRef((e, t) => {
@@ -21095,90 +21151,91 @@
     95598: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $06: () => $,
-        $gZ: () => d,
-        BKy: () => F,
-        BNo: () => ve,
-        Bh5: () => ue,
-        Cts: () => we,
-        Ehc: () => B,
-        GhU: () => b,
-        IF0: () => se,
-        IWH: () => z,
-        JrY: () => D,
-        KJh: () => fe,
-        KKY: () => xe,
-        Lao: () => V,
-        LjF: () => De,
-        Lk$: () => te,
-        MrB: () => Y,
-        NP6: () => A,
-        P7E: () => g,
-        P9w: () => H,
-        Q1v: () => Se,
-        SK8: () => le,
-        SUY: () => h,
-        SjW: () => Ee,
-        Ucz: () => Z,
-        Uos: () => k,
-        V7n: () => G,
-        VR: () => q,
-        Vgm: () => re,
-        WWB: () => _e,
-        X: () => f,
-        XBH: () => K,
-        YVI: () => Fe,
-        YVR: () => U,
-        YqJ: () => x,
-        YtI: () => m,
-        ZJH: () => me,
-        Zrf: () => c,
-        _GE: () => ie,
-        c7E: () => Oe,
-        dLw: () => pe,
-        doA: () => Ie,
-        dzL: () => y,
-        faS: () => I,
-        ffh: () => S,
-        g0p: () => ye,
-        gR: () => P,
-        j7C: () => Ae,
-        k4K: () => _,
-        k6n: () => w,
-        kL2: () => R,
-        kqV: () => Ce,
-        ktE: () => be,
-        lsH: () => j,
-        mBz: () => Le,
-        mKE: () => M,
-        mKt: () => ce,
-        miF: () => Be,
-        nkn: () => T,
-        opd: () => Re,
-        pVO: () => v,
-        pkz: () => C,
-        r6F: () => N,
-        ret: () => u,
-        shV: () => E,
-        sqQ: () => Me,
-        tEX: () => X,
-        tLe: () => ee,
-        thP: () => O,
-        tkI: () => p,
-        u$$: () => oe,
-        uZu: () => de,
-        ui7: () => W,
-        vJ$: () => he,
-        vT2: () => Q,
-        vyu: () => Pe,
-        wn$: () => ae,
-        wr9: () => J,
-        wx$: () => L,
-        x0L: () => ke,
-        xg: () => ge,
-        yTr: () => Te,
-        yVt: () => ne,
-        z5E: () => Ne,
+        $06: () => Z,
+        $gZ: () => u,
+        BKy: () => x,
+        BNo: () => Ce,
+        Bh5: () => me,
+        Cts: () => ye,
+        Ehc: () => L,
+        GhU: () => E,
+        IF0: () => ae,
+        IWH: () => K,
+        JrY: () => I,
+        KJh: () => ve,
+        KKY: () => Pe,
+        Lao: () => G,
+        LjF: () => Ie,
+        Lk$: () => ne,
+        MrB: () => q,
+        NP6: () => F,
+        P7E: () => f,
+        P9w: () => W,
+        Q1v: () => be,
+        SK8: () => ce,
+        SUY: () => p,
+        SjW: () => we,
+        Ucz: () => Y,
+        Uos: () => B,
+        V7n: () => U,
+        VR: () => Q,
+        Vgm: () => ie,
+        WWB: () => ge,
+        X: () => v,
+        XBH: () => X,
+        YVI: () => xe,
+        YVR: () => H,
+        YqJ: () => P,
+        YtI: () => h,
+        ZJH: () => he,
+        Zrf: () => d,
+        _GE: () => oe,
+        c7E: () => Ae,
+        dLw: () => _e,
+        doA: () => Re,
+        dzL: () => D,
+        faS: () => R,
+        ffh: () => b,
+        g0p: () => De,
+        gR: () => N,
+        j7C: () => Fe,
+        k4K: () => g,
+        k6n: () => y,
+        kL2: () => M,
+        kqV: () => Se,
+        ktE: () => Ee,
+        lBf: () => c,
+        lsH: () => z,
+        mBz: () => Oe,
+        mKE: () => T,
+        mKt: () => de,
+        miF: () => Le,
+        nkn: () => k,
+        opd: () => Me,
+        pVO: () => C,
+        pkz: () => S,
+        r6F: () => V,
+        ret: () => m,
+        shV: () => w,
+        sqQ: () => Te,
+        tEX: () => $,
+        tLe: () => te,
+        thP: () => A,
+        tkI: () => _,
+        u$$: () => se,
+        uZu: () => ue,
+        ui7: () => j,
+        vJ$: () => pe,
+        vT2: () => J,
+        vyu: () => Ne,
+        wn$: () => le,
+        wr9: () => ee,
+        wx$: () => O,
+        x0L: () => Be,
+        xg: () => fe,
+        yTr: () => ke,
+        yVt: () => re,
+        z5E: () => Ve,
       });
       var r = n(70655),
         i = n(67294),
@@ -21186,7 +21243,43 @@
         s = n(58985),
         a = n.n(s),
         l = n(90666);
-      function c() {
+      function c(e) {
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 15 23",
+              fill: "none",
+            },
+            e
+          ),
+          i.createElement(
+            "g",
+            { clipPath: "url(#clip0_3155_4178)" },
+            i.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z",
+            })
+          ),
+          i.createElement(
+            "defs",
+            null,
+            i.createElement(
+              "clipPath",
+              { id: "clip0_3155_4178" },
+              i.createElement("rect", {
+                fill: "currentColor",
+                width: "15",
+                height: "23",
+              })
+            )
+          )
+        );
+      }
+      function d() {
         return i.createElement(
           "svg",
           {
@@ -21207,7 +21300,7 @@
           })
         );
       }
-      function d() {
+      function u() {
         return i.createElement(
           "svg",
           {
@@ -21224,7 +21317,7 @@
           })
         );
       }
-      function u(e) {
+      function m(e) {
         return i.createElement(
           "svg",
           {
@@ -21243,7 +21336,7 @@
           })
         );
       }
-      function m(e) {
+      function h(e) {
         let t = "SVGIcon_Button SVGIcon_MagnifyingGlass";
         return (
           e.className && (t += ` ${e.className}`),
@@ -21274,7 +21367,7 @@
           )
         );
       }
-      function h() {
+      function p() {
         return i.createElement(
           "svg",
           {
@@ -21291,7 +21384,7 @@
           })
         );
       }
-      function p() {
+      function _() {
         return i.createElement(
           "svg",
           {
@@ -21346,7 +21439,7 @@
           })
         );
       }
-      function _(e) {
+      function g(e) {
         return (0, l.id)()
           ? i.createElement(
               "svg",
@@ -21395,7 +21488,7 @@
               )
             );
       }
-      function g() {
+      function f() {
         return i.createElement(
           "svg",
           {
@@ -21419,7 +21512,7 @@
           )
         );
       }
-      function f(e) {
+      function v(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -21444,7 +21537,7 @@
           )
         );
       }
-      function v(e) {
+      function C(e) {
         const t = e.color || "#FFFFFF";
         return i.createElement(
           "svg",
@@ -21481,7 +21574,7 @@
           })
         );
       }
-      function C() {
+      function S() {
         return i.createElement(
           "svg",
           {
@@ -21504,7 +21597,7 @@
           })
         );
       }
-      function S(e) {
+      function b(e) {
         const { muted: t, className: n } = e;
         return i.createElement(
           "svg",
@@ -21572,7 +21665,7 @@
           )
         );
       }
-      function b() {
+      function E() {
         return i.createElement(
           "svg",
           { width: "50px", height: "25px", viewBox: "0 0 50 25" },
@@ -21581,7 +21674,7 @@
           })
         );
       }
-      function E() {
+      function w() {
         return i.createElement(
           "svg",
           {
@@ -21601,7 +21694,7 @@
           })
         );
       }
-      function w() {
+      function y() {
         return i.createElement(
           "svg",
           {
@@ -21621,7 +21714,7 @@
           })
         );
       }
-      function y() {
+      function D() {
         return i.createElement(
           "svg",
           {
@@ -21643,7 +21736,7 @@
           })
         );
       }
-      function D(e) {
+      function I(e) {
         var t;
         return i.createElement(
           "svg",
@@ -21672,7 +21765,7 @@
           })
         );
       }
-      function I() {
+      function R() {
         return i.createElement(
           "svg",
           {
@@ -21699,7 +21792,7 @@
           })
         );
       }
-      function R() {
+      function M() {
         return i.createElement(
           "svg",
           {
@@ -21715,7 +21808,7 @@
           })
         );
       }
-      function M(e) {
+      function T(e) {
         let t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         const [r] = (0, i.useState)(Math.random().toString());
@@ -21788,7 +21881,7 @@
           })
         );
       }
-      function T() {
+      function k() {
         return i.createElement(
           "svg",
           {
@@ -21811,7 +21904,7 @@
           })
         );
       }
-      function k(e) {
+      function B(e) {
         return (0, l.id)()
           ? i.createElement(
               "svg",
@@ -21849,7 +21942,7 @@
               })
             );
       }
-      function B(e) {
+      function L(e) {
         return i.createElement(
           "svg",
           {
@@ -21884,7 +21977,7 @@
           })
         );
       }
-      function L(e) {
+      function O(e) {
         const { direction: t } = e,
           n = (0, r._T)(e, ["direction"]);
         switch (t) {
@@ -21962,7 +22055,7 @@
             );
         }
       }
-      function O() {
+      function A() {
         return i.createElement(
           "svg",
           {
@@ -21982,7 +22075,7 @@
           })
         );
       }
-      function A(e) {
+      function F(e) {
         return i.createElement(
           "svg",
           {
@@ -22018,7 +22111,7 @@
             })
         );
       }
-      function F(e) {
+      function x(e) {
         const { angle: t } = e,
           n = (0, r._T)(e, ["angle"]);
         return i.createElement(
@@ -22040,7 +22133,7 @@
           })
         );
       }
-      function x() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -22076,7 +22169,7 @@
           })
         );
       }
-      function P() {
+      function N() {
         return i.createElement(
           "svg",
           {
@@ -22102,7 +22195,7 @@
           })
         );
       }
-      function N() {
+      function V() {
         return i.createElement(
           "svg",
           {
@@ -22135,7 +22228,7 @@
           })
         );
       }
-      function V() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -22162,7 +22255,7 @@
           })
         );
       }
-      function G(e) {
+      function U(e) {
         return i.createElement(
           "svg",
           {
@@ -22183,7 +22276,7 @@
           })
         );
       }
-      function U() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -22218,7 +22311,7 @@
           })
         );
       }
-      function H(e) {
+      function W(e) {
         return i.createElement(
           "svg",
           {
@@ -22256,7 +22349,7 @@
           })
         );
       }
-      function W(e) {
+      function j(e) {
         const t = (0, o.Z)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -22288,7 +22381,7 @@
           })
         );
       }
-      function j() {
+      function z() {
         return i.createElement(
           "svg",
           {
@@ -22314,7 +22407,7 @@
           })
         );
       }
-      function z() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -22335,7 +22428,7 @@
           )
         );
       }
-      function K() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -22355,7 +22448,7 @@
           )
         );
       }
-      function X() {
+      function $() {
         return i.createElement(
           "svg",
           {
@@ -22392,7 +22485,7 @@
           )
         );
       }
-      function $() {
+      function Z() {
         return i.createElement(
           "svg",
           {
@@ -22420,7 +22513,7 @@
           })
         );
       }
-      function Z() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -22440,7 +22533,7 @@
           })
         );
       }
-      function Y(e) {
+      function q(e) {
         const { className: t } = e;
         return i.createElement(
           "svg",
@@ -22460,7 +22553,7 @@
           })
         );
       }
-      function q(e) {
+      function Q(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -22484,7 +22577,7 @@
           })
         );
       }
-      function Q() {
+      function J() {
         return i.createElement(
           "svg",
           {
@@ -22529,7 +22622,7 @@
           })
         );
       }
-      function J() {
+      function ee() {
         return i.createElement(
           "svg",
           {
@@ -22562,7 +22655,7 @@
           })
         );
       }
-      function ee() {
+      function te() {
         return i.createElement(
           "svg",
           {
@@ -22581,7 +22674,7 @@
           })
         );
       }
-      function te() {
+      function ne() {
         return i.createElement(
           "svg",
           {
@@ -22600,7 +22693,7 @@
           })
         );
       }
-      function ne() {
+      function re() {
         return i.createElement(
           "svg",
           {
@@ -22621,7 +22714,7 @@
           })
         );
       }
-      function re() {
+      function ie() {
         return i.createElement(
           "svg",
           {
@@ -22652,7 +22745,7 @@
           })
         );
       }
-      function ie() {
+      function oe() {
         return i.createElement(
           "svg",
           {
@@ -22718,7 +22811,7 @@
           })
         );
       }
-      function oe(e) {
+      function se(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -22737,7 +22830,7 @@
           })
         );
       }
-      function se() {
+      function ae() {
         return i.createElement(
           "svg",
           {
@@ -22801,7 +22894,7 @@
           })
         );
       }
-      function ae() {
+      function le() {
         return i.createElement(
           "svg",
           {
@@ -22820,7 +22913,7 @@
           })
         );
       }
-      function le() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -22840,7 +22933,7 @@
           })
         );
       }
-      function ce() {
+      function de() {
         return i.createElement(
           "svg",
           {
@@ -22865,7 +22958,7 @@
           })
         );
       }
-      function de() {
+      function ue() {
         return i.createElement(
           "svg",
           {
@@ -22887,7 +22980,7 @@
           })
         );
       }
-      function ue() {
+      function me() {
         return i.createElement(
           "svg",
           {
@@ -22927,7 +23020,7 @@
           })
         );
       }
-      function me() {
+      function he() {
         return i.createElement(
           "svg",
           {
@@ -22955,7 +23048,7 @@
           )
         );
       }
-      function he() {
+      function pe() {
         return i.createElement(
           "svg",
           {
@@ -22971,7 +23064,7 @@
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function pe() {
+      function _e() {
         return i.createElement(
           "svg",
           {
@@ -22990,7 +23083,7 @@
           })
         );
       }
-      function _e() {
+      function ge() {
         return i.createElement(
           "svg",
           {
@@ -23010,7 +23103,7 @@
           })
         );
       }
-      function ge(e, t) {
+      function fe(e, t) {
         return (0, l.id)()
           ? i.createElement(
               "svg",
@@ -23047,7 +23140,7 @@
               })
             );
       }
-      function fe(e) {
+      function ve(e) {
         return i.createElement(
           "svg",
           {
@@ -23066,7 +23159,7 @@
           })
         );
       }
-      function ve(e) {
+      function Ce(e) {
         return i.createElement(
           "svg",
           {
@@ -23102,7 +23195,7 @@
           )
         );
       }
-      function Ce(e) {
+      function Se(e) {
         const { className: t } = e;
         (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23119,30 +23212,6 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M57.9907 30.2382L57.9932 30.1318L23.3635 58.4652L23.159 58.2152L23.0596 58.295C9.86456 55.3567 0 43.5804 0 29.5C0 13.2076 13.2076 0 29.5 0C45.7683 0 58.9609 13.1684 59 29.4275L57.9907 30.2382ZM57.9886 28.6833C52.956 26.4605 41.9077 24.7254 31.9404 33.2687C22.1502 41.6604 21.6264 52.0873 22.7598 57.1984C10.2728 54.1704 1 42.9181 1 29.5C1 13.7599 13.7599 1 29.5 1C44.967 1 57.5563 13.3209 57.9886 28.6833ZM57.2445 29.4523L23.7148 56.8857C22.676 52.0493 23.1845 42.0909 32.5912 34.028C41.9759 25.984 52.3311 27.4183 57.2445 29.4523Z",
-            fill: "",
-          })
-        );
-      }
-      function Se(e) {
-        const { className: t } = e,
-          n = (0, r._T)(e, ["className"]);
-        return i.createElement(
-          "svg",
-          Object.assign(
-            {
-              className: (0, o.Z)(t, "SVGIcon_Button"),
-              width: "60px",
-              height: "52px",
-              viewBox: "0 0 60 52",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            n
-          ),
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M0.5 5.5C0.5 2.46243 2.96243 0 6 0H54C57.0376 0 59.5 2.46243 59.5 5.5V35C59.5 38.0376 57.0376 40.5 54 40.5H52.5C51.6716 40.5 51 41.1716 51 42V50.0858C51 51.4221 49.3843 52.0914 48.4393 51.1464L37.7929 40.5H6C2.96243 40.5 0.5 38.0376 0.5 35V5.5ZM6 1C3.51472 1 1.5 3.01472 1.5 5.5V35C1.5 37.4853 3.51472 39.5 6 39.5H38H38.2071L38.3536 39.6464L49.1464 50.4393C49.4614 50.7543 50 50.5312 50 50.0858V42C50 40.6193 51.1193 39.5 52.5 39.5H54C56.4853 39.5 58.5 37.4853 58.5 35V5.5C58.5 3.01472 56.4853 1 54 1H6ZM30 32C36.6274 32 42 26.6274 42 20C42 13.3726 36.6274 8 30 8C23.3726 8 18 13.3726 18 20C18 26.6274 23.3726 32 30 32ZM30 33C37.1797 33 43 27.1797 43 20C43 12.8203 37.1797 7 30 7C22.8203 7 17 12.8203 17 20C17 27.1797 22.8203 33 30 33ZM26.5 18C27.3284 18 28 17.3284 28 16.5C28 15.6716 27.3284 15 26.5 15C25.6716 15 25 15.6716 25 16.5C25 17.3284 25.6716 18 26.5 18ZM35 16.5C35 17.3284 34.3284 18 33.5 18C32.6716 18 32 17.3284 32 16.5C32 15.6716 32.6716 15 33.5 15C34.3284 15 35 15.6716 35 16.5ZM24.5 22C24.5 24.4853 26.5147 26.5 29 26.5H31C33.4853 26.5 35.5 24.4853 35.5 22H34.5C34.5 23.933 32.933 25.5 31 25.5H29C27.067 25.5 25.5 23.933 25.5 22H24.5Z",
             fill: "",
           })
         );
@@ -23166,12 +23235,36 @@
           i.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d: "M6 0C2.96243 0 0.5 2.46243 0.5 5.5V35C0.5 38.0376 2.96243 40.5 6 40.5H37.7929L48.4393 51.1464C49.3843 52.0914 51 51.4221 51 50.0858V42C51 41.1716 51.6716 40.5 52.5 40.5H54C57.0376 40.5 59.5 38.0376 59.5 35V5.5C59.5 2.46243 57.0376 0 54 0H6ZM1.5 5.5C1.5 3.01472 3.51472 1 6 1H54C56.4853 1 58.5 3.01472 58.5 5.5V35C58.5 37.4853 56.4853 39.5 54 39.5H52.5C51.1193 39.5 50 40.6193 50 42V50.0858C50 50.5312 49.4614 50.7543 49.1464 50.4393L38.3536 39.6464L38.2071 39.5H38H6C3.51472 39.5 1.5 37.4853 1.5 35V5.5ZM16 8.88154L17.8736 13.9448C18.0761 14.4922 18.5078 14.9239 19.0552 15.1264L24.1185 17L19.0552 18.8736C18.5078 19.0761 18.0761 19.5078 17.8736 20.0552L16 25.1185L14.1264 20.0552C13.9239 19.5078 13.4922 19.0761 12.9448 18.8736L7.88154 17L12.9448 15.1264C13.4922 14.9239 13.9239 14.4922 14.1264 13.9448L16 8.88154ZM15.0621 8.53451C15.3843 7.66389 16.6157 7.66389 16.9379 8.5345L18.8114 13.5978C18.9127 13.8715 19.1285 14.0873 19.4022 14.1886L24.4655 16.0621C25.3361 16.3843 25.3361 17.6157 24.4655 17.9379L19.4022 19.8114C19.1285 19.9127 18.9127 20.1285 18.8114 20.4022L16.9379 25.4655C16.6157 26.3361 15.3843 26.3361 15.0621 25.4655L13.1886 20.4022C13.0873 20.1285 12.8715 19.9127 12.5978 19.8114L7.53451 17.9379C6.66389 17.6157 6.66389 16.3843 7.5345 16.0621L12.5978 14.1886C12.8715 14.0873 13.0873 13.8715 13.1886 13.5978L15.0621 8.53451ZM32.8736 23.9448L31 18.8815L29.1264 23.9448C28.9239 24.4922 28.4922 24.9239 27.9448 25.1264L22.8815 27L27.9448 28.8736C28.4922 29.0761 28.9239 29.5078 29.1264 30.0552L31 35.1185L32.8736 30.0552C33.0761 29.5078 33.5078 29.0761 34.0552 28.8736L39.1185 27L34.0552 25.1264C33.5078 24.9239 33.0761 24.4922 32.8736 23.9448ZM31.9379 18.5345C31.6157 17.6639 30.3843 17.6639 30.0621 18.5345L28.1886 23.5978C28.0873 23.8715 27.8715 24.0873 27.5978 24.1886L22.5345 26.0621C21.6639 26.3843 21.6639 27.6157 22.5345 27.9379L27.5978 29.8114C27.8715 29.9127 28.0873 30.1285 28.1886 30.4022L30.0621 35.4655C30.3843 36.3361 31.6157 36.3361 31.9379 35.4655L33.8114 30.4022C33.9127 30.1285 34.1285 29.9127 34.4022 29.8114L39.4655 27.9379C40.3361 27.6157 40.3361 26.3843 39.4655 26.0621L34.4022 24.1886C34.1285 24.0873 33.9127 23.8715 33.8114 23.5978L31.9379 18.5345ZM43 4.88154L44.8736 9.9448C45.0761 10.4922 45.5078 10.9239 46.0552 11.1264L51.1185 13L46.0552 14.8736C45.5078 15.0761 45.0761 15.5078 44.8736 16.0552L43 21.1185L41.1264 16.0552C40.9239 15.5078 40.4922 15.0761 39.9448 14.8736L34.8815 13L39.9448 11.1264C40.4922 10.9239 40.9239 10.4922 41.1264 9.9448L43 4.88154ZM42.0621 4.53451C42.3843 3.66389 43.6157 3.66389 43.9379 4.5345L45.8114 9.59776C45.9127 9.87148 46.1285 10.0873 46.4022 10.1886L51.4655 12.0621C52.3361 12.3843 52.3361 13.6157 51.4655 13.9379L46.4022 15.8114C46.1285 15.9127 45.9127 16.1285 45.8114 16.4022L43.9379 21.4655C43.6157 22.3361 42.3843 22.3361 42.0621 21.4655L40.1886 16.4022C40.0873 16.1285 39.8715 15.9127 39.5978 15.8114L34.5345 13.9379C33.6639 13.6157 33.6639 12.3843 34.5345 12.0621L39.5978 10.1886C39.8715 10.0873 40.0873 9.87148 40.1886 9.59776L42.0621 4.53451Z",
+            d: "M0.5 5.5C0.5 2.46243 2.96243 0 6 0H54C57.0376 0 59.5 2.46243 59.5 5.5V35C59.5 38.0376 57.0376 40.5 54 40.5H52.5C51.6716 40.5 51 41.1716 51 42V50.0858C51 51.4221 49.3843 52.0914 48.4393 51.1464L37.7929 40.5H6C2.96243 40.5 0.5 38.0376 0.5 35V5.5ZM6 1C3.51472 1 1.5 3.01472 1.5 5.5V35C1.5 37.4853 3.51472 39.5 6 39.5H38H38.2071L38.3536 39.6464L49.1464 50.4393C49.4614 50.7543 50 50.5312 50 50.0858V42C50 40.6193 51.1193 39.5 52.5 39.5H54C56.4853 39.5 58.5 37.4853 58.5 35V5.5C58.5 3.01472 56.4853 1 54 1H6ZM30 32C36.6274 32 42 26.6274 42 20C42 13.3726 36.6274 8 30 8C23.3726 8 18 13.3726 18 20C18 26.6274 23.3726 32 30 32ZM30 33C37.1797 33 43 27.1797 43 20C43 12.8203 37.1797 7 30 7C22.8203 7 17 12.8203 17 20C17 27.1797 22.8203 33 30 33ZM26.5 18C27.3284 18 28 17.3284 28 16.5C28 15.6716 27.3284 15 26.5 15C25.6716 15 25 15.6716 25 16.5C25 17.3284 25.6716 18 26.5 18ZM35 16.5C35 17.3284 34.3284 18 33.5 18C32.6716 18 32 17.3284 32 16.5C32 15.6716 32.6716 15 33.5 15C34.3284 15 35 15.6716 35 16.5ZM24.5 22C24.5 24.4853 26.5147 26.5 29 26.5H31C33.4853 26.5 35.5 24.4853 35.5 22H34.5C34.5 23.933 32.933 25.5 31 25.5H29C27.067 25.5 25.5 23.933 25.5 22H24.5Z",
             fill: "",
           })
         );
       }
       function Ee(e) {
+        const { className: t } = e,
+          n = (0, r._T)(e, ["className"]);
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              className: (0, o.Z)(t, "SVGIcon_Button"),
+              width: "60px",
+              height: "52px",
+              viewBox: "0 0 60 52",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            n
+          ),
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M6 0C2.96243 0 0.5 2.46243 0.5 5.5V35C0.5 38.0376 2.96243 40.5 6 40.5H37.7929L48.4393 51.1464C49.3843 52.0914 51 51.4221 51 50.0858V42C51 41.1716 51.6716 40.5 52.5 40.5H54C57.0376 40.5 59.5 38.0376 59.5 35V5.5C59.5 2.46243 57.0376 0 54 0H6ZM1.5 5.5C1.5 3.01472 3.51472 1 6 1H54C56.4853 1 58.5 3.01472 58.5 5.5V35C58.5 37.4853 56.4853 39.5 54 39.5H52.5C51.1193 39.5 50 40.6193 50 42V50.0858C50 50.5312 49.4614 50.7543 49.1464 50.4393L38.3536 39.6464L38.2071 39.5H38H6C3.51472 39.5 1.5 37.4853 1.5 35V5.5ZM16 8.88154L17.8736 13.9448C18.0761 14.4922 18.5078 14.9239 19.0552 15.1264L24.1185 17L19.0552 18.8736C18.5078 19.0761 18.0761 19.5078 17.8736 20.0552L16 25.1185L14.1264 20.0552C13.9239 19.5078 13.4922 19.0761 12.9448 18.8736L7.88154 17L12.9448 15.1264C13.4922 14.9239 13.9239 14.4922 14.1264 13.9448L16 8.88154ZM15.0621 8.53451C15.3843 7.66389 16.6157 7.66389 16.9379 8.5345L18.8114 13.5978C18.9127 13.8715 19.1285 14.0873 19.4022 14.1886L24.4655 16.0621C25.3361 16.3843 25.3361 17.6157 24.4655 17.9379L19.4022 19.8114C19.1285 19.9127 18.9127 20.1285 18.8114 20.4022L16.9379 25.4655C16.6157 26.3361 15.3843 26.3361 15.0621 25.4655L13.1886 20.4022C13.0873 20.1285 12.8715 19.9127 12.5978 19.8114L7.53451 17.9379C6.66389 17.6157 6.66389 16.3843 7.5345 16.0621L12.5978 14.1886C12.8715 14.0873 13.0873 13.8715 13.1886 13.5978L15.0621 8.53451ZM32.8736 23.9448L31 18.8815L29.1264 23.9448C28.9239 24.4922 28.4922 24.9239 27.9448 25.1264L22.8815 27L27.9448 28.8736C28.4922 29.0761 28.9239 29.5078 29.1264 30.0552L31 35.1185L32.8736 30.0552C33.0761 29.5078 33.5078 29.0761 34.0552 28.8736L39.1185 27L34.0552 25.1264C33.5078 24.9239 33.0761 24.4922 32.8736 23.9448ZM31.9379 18.5345C31.6157 17.6639 30.3843 17.6639 30.0621 18.5345L28.1886 23.5978C28.0873 23.8715 27.8715 24.0873 27.5978 24.1886L22.5345 26.0621C21.6639 26.3843 21.6639 27.6157 22.5345 27.9379L27.5978 29.8114C27.8715 29.9127 28.0873 30.1285 28.1886 30.4022L30.0621 35.4655C30.3843 36.3361 31.6157 36.3361 31.9379 35.4655L33.8114 30.4022C33.9127 30.1285 34.1285 29.9127 34.4022 29.8114L39.4655 27.9379C40.3361 27.6157 40.3361 26.3843 39.4655 26.0621L34.4022 24.1886C34.1285 24.0873 33.9127 23.8715 33.8114 23.5978L31.9379 18.5345ZM43 4.88154L44.8736 9.9448C45.0761 10.4922 45.5078 10.9239 46.0552 11.1264L51.1185 13L46.0552 14.8736C45.5078 15.0761 45.0761 15.5078 44.8736 16.0552L43 21.1185L41.1264 16.0552C40.9239 15.5078 40.4922 15.0761 39.9448 14.8736L34.8815 13L39.9448 11.1264C40.4922 10.9239 40.9239 10.4922 41.1264 9.9448L43 4.88154ZM42.0621 4.53451C42.3843 3.66389 43.6157 3.66389 43.9379 4.5345L45.8114 9.59776C45.9127 9.87148 46.1285 10.0873 46.4022 10.1886L51.4655 12.0621C52.3361 12.3843 52.3361 13.6157 51.4655 13.9379L46.4022 15.8114C46.1285 15.9127 45.9127 16.1285 45.8114 16.4022L43.9379 21.4655C43.6157 22.3361 42.3843 22.3361 42.0621 21.4655L40.1886 16.4022C40.0873 16.1285 39.8715 15.9127 39.5978 15.8114L34.5345 13.9379C33.6639 13.6157 33.6639 12.3843 34.5345 12.0621L39.5978 10.1886C39.8715 10.0873 40.0873 9.87148 40.1886 9.59776L42.0621 4.53451Z",
+            fill: "",
+          })
+        );
+      }
+      function we(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23195,7 +23288,7 @@
           })
         );
       }
-      function we(e) {
+      function ye(e) {
         const { className: t } = e;
         (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23215,7 +23308,7 @@
           })
         );
       }
-      function ye(e) {
+      function De(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -23238,7 +23331,7 @@
           })
         );
       }
-      function De(e) {
+      function Ie(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23444,7 +23537,7 @@
           )
         );
       }
-      function Ie(e) {
+      function Re(e) {
         const { className: t } = e;
         (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23622,7 +23715,7 @@
           )
         );
       }
-      function Re() {
+      function Me() {
         return i.createElement(
           "svg",
           {
@@ -23653,7 +23746,7 @@
           )
         );
       }
-      function Me(e) {
+      function Te(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -23669,7 +23762,7 @@
           })
         );
       }
-      function Te() {
+      function ke() {
         return i.createElement(
           "svg",
           {
@@ -23687,7 +23780,7 @@
           })
         );
       }
-      function ke() {
+      function Be() {
         return i.createElement(
           "svg",
           {
@@ -23709,7 +23802,7 @@
           )
         );
       }
-      function Be() {
+      function Le() {
         return i.createElement(
           "svg",
           {
@@ -23747,7 +23840,7 @@
           )
         );
       }
-      function Le(e) {
+      function Oe(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -23765,7 +23858,7 @@
           })
         );
       }
-      function Oe() {
+      function Ae() {
         return i.createElement(
           "svg",
           {
@@ -23799,7 +23892,7 @@
           )
         );
       }
-      function Ae(e) {
+      function Fe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23822,7 +23915,7 @@
           })
         );
       }
-      function Fe(e) {
+      function xe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23850,7 +23943,7 @@
           })
         );
       }
-      function xe(e) {
+      function Pe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23878,7 +23971,7 @@
           })
         );
       }
-      function Pe(e) {
+      function Ne(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23906,7 +23999,7 @@
           })
         );
       }
-      function Ne(e) {
+      function Ve(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -23963,10 +24056,10 @@
             );
         }
         componentWillUnmount() {
-          this.props.popup.removeEventListener(
-            "resize",
-            this.UpdateMaximizeState
-          );
+          var e;
+          null === (e = this.props.popup) ||
+            void 0 === e ||
+            e.removeEventListener("resize", this.UpdateMaximizeState);
         }
         UpdateMaximizeState() {
           if ((0, o.w3)(this.props.popup, "Window.IsWindowMaximized"))
@@ -24691,6 +24784,7 @@
       n.d(t, {
         Ar: () => c,
         G_: () => d,
+        Hf: () => m,
         bX: () => u,
         pB: () => s,
         vq: () => l,
@@ -24782,6 +24876,25 @@
           );
         });
       }
+      class m {
+        constructor() {
+          this.m_vecCallbacks = [];
+        }
+        Push(e) {
+          this.m_vecCallbacks.push(e);
+        }
+        PushArrayRemove(e, t) {
+          this.m_vecCallbacks.push(() => i.Zf(e, t));
+        }
+        Unregister() {
+          for (let e of this.m_vecCallbacks) e();
+          this.m_vecCallbacks = [];
+        }
+        GetUnregisterFunc() {
+          return this.Unregister;
+        }
+      }
+      (0, r.gn)([o.a], m.prototype, "Unregister", null);
     },
     7573: (e, t, n) => {
       "use strict";
@@ -25007,19 +25120,19 @@
       n.d(t, {
         Dj: () => g,
         Et: () => v,
-        Eu: () => y,
+        Eu: () => D,
         GB: () => r,
         J$: () => c,
         Jk: () => C,
         Lh: () => f,
         Mv: () => b,
+        PN: () => y,
         RA: () => a,
         RD: () => u,
         U0: () => S,
         V2: () => E,
         _J: () => _,
         __: () => p,
-        b$: () => w,
         dw: () => o,
         h9: () => d,
         kR: () => l,
@@ -25108,7 +25221,32 @@
         }
         return i.prepend(...a), a;
       }
-      function y(e, t, n) {
+      function y(e, t) {
+        const n = (e) => e.split("?")[0],
+          r = Object.keys(t).reduce((e, r) => ((e[n(r)] = [r, t[r]]), e), {}),
+          i = e.getElementsByTagName("head")[0].getElementsByTagName("link");
+        for (let e = 0; e < i.length; e++) {
+          const t = i[e],
+            o = r[n(t.href)];
+          if (o) {
+            const e = t,
+              [i, s] = o;
+            for (let t = 0; t < s.attributes.length; t++) {
+              let n = s.attributes.item(t);
+              e.setAttribute(n.name, n.value);
+            }
+            0, delete r[n(t.href)];
+          }
+        }
+        w(
+          e,
+          Object.keys(r).reduce((e, t) => {
+            const [n, i] = r[t];
+            return (e[n] = i), e;
+          }, {})
+        );
+      }
+      function D(e, t, n) {
         if ("childList" === e.type) {
           for (let n = 0; n < e.addedNodes.length; n++) {
             const r = e.addedNodes[n];

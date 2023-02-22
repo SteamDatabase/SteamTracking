@@ -732,20 +732,29 @@
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.IN_CLIENT {
   min-height: 448px;
+  padding-top: 0;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_HeaderLogo_1rtyT {
   height: 46px;
   width: 153px;
 }
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_InClient_2GR-7
+  .newlogindialog_LogoContainer_vnUiF {
+  margin-top: 10px;
+}
 .newlogindialog_Login_ZOBYq .newlogindialog_LogoContainer_vnUiF {
   display: flex;
   flex-direction: row;
   justify-items: center;
+  align-items: center;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_LogoContainer_vnUiF
   .newlogindialog_BackArrowContainer_1N7RY {
-  width: 40px;
+  width: 20px;
+  height: 32px;
+  margin-right: 12px;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_LogoContainer_vnUiF

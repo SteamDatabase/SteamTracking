@@ -27,6 +27,7 @@
         SaveBackground: "partnereventshared_SaveBackground_dpb4w",
         SupportedGroupLabel: "partnereventshared_SupportedGroupLabel_2YjA1",
         LanguageWithContent: "partnereventshared_LanguageWithContent_1mZ9r",
+        LargeInput: "partnereventshared_LargeInput_PJvHC",
         InputBorder: "partnereventshared_InputBorder_udsJY",
         RadioOption: "partnereventshared_RadioOption_2Ubig",
         FlexGrow: "partnereventshared_FlexGrow_IQIYv",
@@ -38,6 +39,8 @@
         EventEditorTextTitle: "partnereventshared_EventEditorTextTitle_1q_7g",
         EventEditorTextTitleLengthInfo:
           "partnereventshared_EventEditorTextTitleLengthInfo_1eoiU",
+        CollapsableSectionTitle:
+          "partnereventshared_CollapsableSectionTitle_10FD9",
         EventSectionTitleCtn: "partnereventshared_EventSectionTitleCtn_1qQl6",
         EventSectionTitle: "partnereventshared_EventSectionTitle_YggHe",
         EventSectionSpacer: "partnereventshared_EventSectionSpacer_1Z2oL",
@@ -712,7 +715,7 @@
         Ai: () => g,
         H6: () => h,
         Kj: () => _,
-        Sw: () => j,
+        Sw: () => T,
         Zg: () => E,
         uv: () => D,
         w$: () => p,
@@ -1045,7 +1048,7 @@
           return a.createElement("div", { className: r.ShortDateRange }, u, D);
         }
       };
-      function j(e) {
+      function T(e) {
         const {
           rtStartDate: t,
           rtEndDate: n,

@@ -6874,7 +6874,7 @@
         p = r(10847),
         g = r(989),
         b = r(94537),
-        B = r(29697),
+        B = r(61075),
         S = r(7573);
       class y extends l.Component {
         render() {

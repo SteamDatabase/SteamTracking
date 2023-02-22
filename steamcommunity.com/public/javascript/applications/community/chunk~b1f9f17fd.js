@@ -2447,6 +2447,16 @@
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
+                  appeal_state: {
+                    n: 21,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
+                  },
+                  accountid_appeal: {
+                    n: 22,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             v.sm_m

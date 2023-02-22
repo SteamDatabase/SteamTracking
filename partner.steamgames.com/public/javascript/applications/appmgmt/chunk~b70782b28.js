@@ -3719,7 +3719,7 @@
           { title: (0, P.Xx)("#Login_Title_SteamGuard"), compact: !0 },
           n.createElement(
             Ve,
-            { gap: 40 },
+            { gap: u.De.IN_STEAMUI ? 24 : 40 },
             n.createElement(je, { type: t, accountName: r }),
             n.createElement(Xe, null),
             n.createElement("div", { className: z().LinkContainer }, o, s)
@@ -3925,7 +3925,7 @@
         return n.createElement(
           Ve,
           {
-            gap: 32,
+            gap: u.De.IN_STEAMUI ? 0 : 32,
             className: (0, s.Z)(
               z().StandardLayout,
               a && z().Embedded,
@@ -3957,7 +3957,7 @@
           ? n.createElement(
               "div",
               { className: z().BackArrowContainer, onClick: e.onBack },
-              n.createElement(H.BKy, { angle: 180, className: z().BackArrow })
+              n.createElement(H.lBf, { className: z().BackArrow })
             )
           : null;
       }

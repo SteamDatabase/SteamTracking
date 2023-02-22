@@ -1,0 +1,233 @@
+{
+    "name": "IAuthenticationService",
+    "methods": [
+        {
+            "name": "PollAuthSessionStatus",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "poll during authentication process",
+            "parameters": [
+                {
+                    "name": "client_id",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "request_id",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "token_to_revoke",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "If this is set to a token owned by this user, that token will be retired"
+                }
+            ]
+        },
+        {
+            "name": "GetAuthSessionInfo",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "get metadata of specific auth session, this will also implicitly bind the calling account",
+            "parameters": [
+                {
+                    "name": "client_id",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "client ID from scanned QR Code, used for routing"
+                }
+            ]
+        },
+        {
+            "name": "GetPasswordRSAPublicKey",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Fetches RSA public key to use to encrypt passwords for a given account name",
+            "parameters": [
+                {
+                    "name": "account_name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "user-provided account name to get an RSA key for"
+                }
+            ]
+        },
+        {
+            "name": "BeginAuthSessionViaCredentials",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "start authentication process",
+            "parameters": [
+                {
+                    "name": "device_friendly_name",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "account_name",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "encrypted_password",
+                    "type": "string",
+                    "optional": false,
+                    "description": "password, RSA encrypted client side"
+                },
+                {
+                    "name": "encryption_timestamp",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "timestamp to map to a key - STime"
+                },
+                {
+                    "name": "remember_login",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "deprecated"
+                },
+                {
+                    "name": "platform_type",
+                    "type": "{enum}",
+                    "optional": false
+                },
+                {
+                    "name": "persistence",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "whether we are requesting a persistent or an ephemeral session"
+                },
+                {
+                    "name": "website_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": "(EMachineAuthWebDomain) identifier of client requesting auth"
+                },
+                {
+                    "name": "device_details",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "User-supplied details about the device attempting to sign in"
+                },
+                {
+                    "name": "guard_data",
+                    "type": "string",
+                    "optional": false,
+                    "description": "steam guard data for client login"
+                },
+                {
+                    "name": "language",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "UpdateAuthSessionWithSteamGuardCode",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "approve an authentication session via steam guard code",
+            "parameters": [
+                {
+                    "name": "client_id",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "pending client ID, from initialized session"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "user who wants to login"
+                },
+                {
+                    "name": "code",
+                    "type": "string",
+                    "optional": false,
+                    "description": "confirmation code"
+                },
+                {
+                    "name": "code_type",
+                    "type": "{enum}",
+                    "optional": false,
+                    "description": "type of confirmation code"
+                }
+            ]
+        },
+        {
+            "name": "BeginAuthSessionViaQR",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "start authentication process",
+            "parameters": [
+                {
+                    "name": "device_friendly_name",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "platform_type",
+                    "type": "{enum}",
+                    "optional": false
+                },
+                {
+                    "name": "device_details",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "User-supplied details about the device attempting to sign in"
+                },
+                {
+                    "name": "website_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": "(EMachineAuthWebDomain) identifier of client requesting auth"
+                }
+            ]
+        },
+        {
+            "name": "UpdateAuthSessionWithMobileConfirmation",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "approve an authentication session via mobile 2fa",
+            "parameters": [
+                {
+                    "name": "version",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "version field"
+                },
+                {
+                    "name": "client_id",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "pending client ID, from scanned QR Code"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "user who wants to login"
+                },
+                {
+                    "name": "signature",
+                    "type": "string",
+                    "optional": false,
+                    "description": "HMAC digest over {version,client_id,steamid} via user's private key"
+                },
+                {
+                    "name": "confirm",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Whether to confirm the login (true) or deny the login (false)"
+                },
+                {
+                    "name": "persistence",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "whether we are requesting a persistent or an ephemeral session"
+                }
+            ]
+        }
+    ]
+}

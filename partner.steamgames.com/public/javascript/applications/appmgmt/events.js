@@ -1011,6 +1011,7 @@
       e.exports = {
         DashboardCtn: "optin_admin_dashboard_DashboardCtn_24Fut",
         OptInAdminRow: "optin_admin_dashboard_OptInAdminRow_39siH",
+        OptinEnabled: "optin_admin_dashboard_OptinEnabled_2yTnl",
         StatsCtn: "optin_admin_dashboard_StatsCtn_3ZKx3",
         Button: "optin_admin_dashboard_Button_27cO9",
         ButtonCtn: "optin_admin_dashboard_ButtonCtn_2oOF5",
@@ -1450,6 +1451,7 @@
         Highlight: "saledashboard_Highlight_1XloL",
         StatusCtn: "saledashboard_StatusCtn_1tIk2",
         PendingChanges: "saledashboard_PendingChanges_3idx4",
+        DatesCtn: "saledashboard_DatesCtn_2ElSw",
       };
     },
     49122: (e) => {
@@ -3725,6 +3727,8 @@
         const { image: t, fnOnRemove: n, supported: i, languageRealms: r } = e,
           l = i.map((e) => {
             let n = (0, p.Xx)("#EventEditor_ArtworkType_" + e);
+            "spotlight" == e &&
+              (n = (0, p.Xx)("#EventEditor_ArtworkType_store_" + e));
             const a = c.h1[e];
             let i;
             a &&
@@ -11771,7 +11775,7 @@
         l = n(22188),
         s = n(29323),
         o = n(67294),
-        c = n(29697),
+        c = n(61075),
         m = (n(76796), n(79822)),
         d = (n(74412), n(23153)),
         u = n(43359),
@@ -21838,29 +21842,42 @@
           p =
             (null === (t = null == l ? void 0 : l[r.pageid]) || void 0 === t
               ? void 0
-              : t.time_updated) || 0;
+              : t.time_updated) || 0,
+          _ = r.sale_optin_enabled,
+          v = r.event_title.english;
         return m.createElement(
           "div",
           {
             key: r.pageid,
-            className: (0, D.Z)(A().OptInAdminRow, I().TileContainer),
+            className: (0, D.Z)(
+              A().OptInAdminRow,
+              I().TileContainer,
+              Boolean(_) ? A().OptinEnabled : ""
+            ),
           },
           m.createElement(
             "div",
             { className: I().EventNameCtn },
-            m.createElement("div", { className: I().EventName }, r.pageid),
+            m.createElement(
+              "div",
+              { className: I().EventName },
+              Boolean(v) && v,
+              " ",
+              m.createElement("span", null, "(", r.pageid, ")")
+            ),
             m.createElement(
               "div",
               { className: I().DatesCtn },
               m.createElement(
                 "span",
                 { className: I().DateAndTime },
-                "From ",
                 m.createElement(h.H6, {
                   dateAndTime: r.event_start_date,
                   bSingleLine: !0,
+                  bOnlyDate: !0,
                 })
               ),
+              " ",
               m.createElement(
                 "span",
                 { className: I().DateAndTime },
@@ -21868,6 +21885,7 @@
                 m.createElement(h.H6, {
                   dateAndTime: r.event_end_date,
                   bSingleLine: !0,
+                  bOnlyDate: !0,
                 })
               )
             )

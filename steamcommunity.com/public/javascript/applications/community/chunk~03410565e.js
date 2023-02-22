@@ -111,7 +111,7 @@
               "div",
               {
                 className: (0, r.Z)(
-                  l.EventEditorTextTitle,
+                  l.CollapsableSectionTitle,
                   "EventEditorTextTitle"
                 ),
               },

@@ -1125,7 +1125,7 @@
       var O = r(1105),
         W = r.n(O),
         x = r(76796);
-      function j(e) {
+      function I(e) {
         const {
             transport: t,
             onComplete: r,
@@ -1194,7 +1194,7 @@
                   borderWidth: 0,
                   activeBitColor: "#212328",
                   inactiveBitColor: "white",
-                  quality: I(b),
+                  quality: j(b),
                   className: (0, s.Z)(
                     W().LoginQR,
                     o && W().QRLoginDeck,
@@ -1213,7 +1213,7 @@
           )
         );
       }
-      function I(e) {
+      function j(e) {
         return e.length <= 90 ? v.Q : void 0;
       }
       function X(e) {
@@ -2030,7 +2030,7 @@
           n.createElement(
             "div",
             { className: z().QR },
-            n.createElement(j, {
+            n.createElement(I, {
               onStatusChange: t,
               transport: r,
               onComplete: i,
@@ -2369,7 +2369,7 @@
             : ((S =
                 "mobile" === t
                   ? n.createElement(xe, null)
-                  : n.createElement(je, { emailAddress: s })),
+                  : n.createElement(Ie, { emailAddress: s })),
               (p = "#Login_UseBackupCode")),
           n.createElement(
             Ke,
@@ -2384,7 +2384,7 @@
               n.createElement(
                 Ze,
                 { alignItems: "center", gap: 20 },
-                n.createElement(Ie, { type: t, accountName: a }),
+                n.createElement(je, { type: t, accountName: a }),
                 n.createElement(
                   Ze,
                   { alignItems: "center", gap: 2 },
@@ -2480,7 +2480,7 @@
           n.createElement(Ue, { className: z().AwaitingMobileConfIcon })
         );
       }
-      function je(e) {
+      function Ie(e) {
         return n.createElement(
           qe,
           {
@@ -2507,7 +2507,7 @@
           n.createElement(De, { className: z().AwaitingEmailConfIcon })
         );
       }
-      function Ie(e) {
+      function je(e) {
         const { accountName: t, type: r } = e,
           i =
             "mobile" === r
@@ -2618,8 +2618,8 @@
           { title: (0, G.Xx)("#Login_Title_SteamGuard"), compact: !0 },
           n.createElement(
             Ze,
-            { gap: 40 },
-            n.createElement(Ie, { type: t, accountName: r }),
+            { gap: u.De.IN_STEAMUI ? 24 : 40 },
+            n.createElement(je, { type: t, accountName: r }),
             n.createElement(Xe, null),
             n.createElement("div", { className: z().LinkContainer }, o, s)
           )
@@ -2824,7 +2824,7 @@
         return n.createElement(
           Ze,
           {
-            gap: 32,
+            gap: u.De.IN_STEAMUI ? 0 : 32,
             className: (0, s.Z)(
               z().StandardLayout,
               a && z().Embedded,
@@ -2856,7 +2856,7 @@
           ? n.createElement(
               "div",
               { className: z().BackArrowContainer, onClick: e.onBack },
-              n.createElement(H.BKy, { angle: 180, className: z().BackArrow })
+              n.createElement(H.lBf, { className: z().BackArrow })
             )
           : null;
       }
@@ -2985,7 +2985,7 @@
     88514: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $h: () => j,
+        $h: () => I,
         Am: () => y,
         Uy: () => h,
         _u: () => g,
@@ -4959,7 +4959,7 @@
           return "CCloudGaming_GetTimeRemaining_Response";
         }
       }
-      var j, I, X;
+      var I, j, X;
       !(function (e) {
         (e.GetPasswordRSAPublicKey = function (e, t) {
           return e.SendMsg("Authentication.GetPasswordRSAPublicKey#1", t, l, {
@@ -5042,7 +5042,7 @@
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(j || (j = {})),
+      })(I || (I = {})),
         (function (e) {
           (e.QueryRefreshTokensByAccount = function (e, t) {
             return e.SendMsg(
@@ -5073,7 +5073,7 @@
                 { bConstMethod: !0, ePrivilege: 5 }
               );
             });
-        })(I || (I = {})),
+        })(j || (j = {})),
         (function (e) {
           (e.CreateNonce = function (e, t) {
             return e.SendMsg("CloudGaming.CreateNonce#1", t, O, {
