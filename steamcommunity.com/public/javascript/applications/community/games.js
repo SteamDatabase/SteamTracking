@@ -7822,7 +7822,7 @@
                 !(c && !m) ||
                 (null === (t = e.name) || void 0 === t
                   ? void 0
-                  : t.toLowerCase().includes(c))
+                  : t.toLowerCase().includes(c.toLowerCase()))
               );
             },
             [c, m]
@@ -7866,14 +7866,15 @@
           F =
             ((v = Ze(f, B, b.isLoading)),
             (R = w),
-            (0, n.useMemo)(
-              () => ({
-                data: v.data.concat(R),
+            (0, n.useMemo)(() => {
+              var e;
+              return {
+                data:
+                  null === (e = v.data) || void 0 === e ? void 0 : e.concat(R),
                 isLoading: v.isLoading,
                 error: v.error,
-              }),
-              [v.data, v.isLoading, v.error, R]
-            ));
+              };
+            }, [v.data, v.isLoading, v.error, R]));
         var v, R;
         (0, n.useEffect)(() => {
           !a && h.data && 0 === h.data.length && s(Sr.All);
@@ -7895,7 +7896,7 @@
           W = (0, ke.Z)(qe.Gameslistapp, E && "GamepadMode"),
           T = (0, Ne.L)(),
           O = r === hr.AchievementCompletion && b.isLoading,
-          G = f.isLoading || h.isLoading || F.isLoading || O;
+          G = S.isLoading || O;
         return n.createElement(
           Xe.p,
           { navID: "Gamelist", NavigationManager: T },
