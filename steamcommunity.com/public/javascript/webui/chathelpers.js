@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7860612";
+var CLSTAMP = "7864661";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7860612";
     n,
     o,
     i = {
-      70887: (e, t, r) => {
+      58201: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "7860612";
         }
         Object.create;
         Object.create;
-        r(23041);
+        r(19163);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
@@ -827,7 +827,7 @@ var CLSTAMP = "7860612";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(Y || (Y = {}));
         var J, Q, Z, ee;
-        r(6462);
+        r(67237);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1940,7 +1940,7 @@ var CLSTAMP = "7860612";
           }
         }
         var ye = r(42238);
-        r(98452);
+        r(44854);
         class Te extends ke {
           BIsExpired() {
             return be.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -2284,7 +2284,7 @@ var CLSTAMP = "7860612";
                     const t = pe.GetLanguageFallback(e),
                       n = e === t,
                       [o, i, a, s] = yield Promise.all([
-                        r(48639)(`./shared_${e}.json`),
+                        r(41171)(`./shared_${e}.json`),
                         r(3119)(`./friendsui_${e}.json`),
                         n ? {} : r(91090)(`./shared_${t}.json`),
                         n ? {} : r(9014)(`./friendsui_${t}.json`),
@@ -2308,7 +2308,7 @@ var CLSTAMP = "7860612";
             });
           });
       },
-      92610: (e, t, r) => {
+      33472: (e, t, r) => {
         "use strict";
         r.d(t, {
           Bh: () => a,
@@ -2475,7 +2475,7 @@ var CLSTAMP = "7860612";
               };
         }
       },
-      23041: (e, t, r) => {
+      19163: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -2577,7 +2577,7 @@ var CLSTAMP = "7860612";
         }
         (o.keys = () => Object.keys(n)), (o.id = 9014), (e.exports = o);
       },
-      48639: (e, t, r) => {
+      41171: (e, t, r) => {
         var n = {
           "./shared_arabic.json": [91967, 2431],
           "./shared_brazilian.json": [34050, 8385],
@@ -2620,7 +2620,7 @@ var CLSTAMP = "7860612";
             o = t[0];
           return r.e(t[1]).then(() => r.t(o, 19));
         }
-        (o.keys = () => Object.keys(n)), (o.id = 48639), (e.exports = o);
+        (o.keys = () => Object.keys(n)), (o.id = 41171), (e.exports = o);
       },
       91090: (e, t, r) => {
         var n = {
@@ -2996,6 +2996,6 @@ var CLSTAMP = "7860612";
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [3817, 5140, 5968], () => s(70887));
+  var _ = s.O(void 0, [3817, 5140, 5968], () => s(58201));
   _ = s.O(_);
 })();
