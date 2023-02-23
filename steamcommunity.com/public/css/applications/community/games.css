@@ -301,8 +301,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   display: grid;
   box-sizing: border-box;
   height: 140px;
-  grid-template-areas: "image title title" "image playtime playtime" "image links links";
-  grid-template-columns: 259px 1fr auto;
+  grid-template-areas: "image title title" "image playtime playtime" "image links download";
+  grid-template-columns: 259px min-content auto;
   grid-template-rows: auto auto 1fr;
   gap: var(--padding);
   padding: var(--padding);
@@ -426,7 +426,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_AchievementContainer_38RhR {
   grid-area: achievements;
   align-self: center;
-  overflow: hidden;
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_Buttons_1uRB5 {
   grid-area: links;
@@ -456,6 +455,12 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   top: unset;
   left: unset;
 }
+.gameslistitems_GamesListItem_2-pQF .gameslistitems_DownloadStatus_bDhei {
+  grid-area: download;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_PerfectRibbon_1uKlf {
   position: absolute;
   left: -12px;
@@ -465,7 +470,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 @media (max-width: 51rem) {
   .gameslistitems_GamesListItem_2-pQF {
-    grid-template-areas: "image title title" "image playtime playtime" "links playtime playtime";
+    grid-template-areas: "image title title" "image playtime download" "links playtime download";
     grid-template-columns: 184px 1fr auto;
     grid-template-rows: auto auto 1fr;
     row-gap: 5px;
@@ -735,7 +740,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   .gameslistitems_BottomSheetSection_NZhfS
   .gameslistitems_SectionContent_1ynpS
   .gameslistitems_BottomSheetRemoteControls_2gji1 {
-  background: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
 }
 .gameslistitems_BottomSheet_2ywCP
   .gameslistitems_BottomSheetSection_NZhfS[open]
@@ -792,6 +799,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  white-space: nowrap;
   cursor: pointer;
   gap: 15px;
 }
@@ -1187,7 +1195,30 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   --color-progress-bar-background: var(--color-backdrop);
   --color-progress-bar-foreground: var(--color-info);
 }
-.gameslistremote_RemoteControls_1Fput {
+.gameslistremote_RemoteControls_1Fput .gameslistremote_ButtonContainer_2mckt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  box-sizing: border-box;
+  gap: 16px;
+}
+.gameslistremote_RemoteControls_1Fput .gameslistremote_NoRemoteControl_217Ei {
+  font-weight: 500;
+  font-size: var(--typography-font-size-medium);
+  letter-spacing: 0.5px;
+  color: var(--typography-color-neutral);
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  text-align: end;
+}
+.gameslistremote_RemoteControls_1Fput .gameslistremote_DownloadSize_2zfId {
+  font-weight: 700;
+  font-size: var(--typography-font-size-medium);
+  white-space: nowrap;
+}
+.gameslistremote_DownloadBarContainer_2Qx7n {
   height: 56px;
   display: flex;
   flex-direction: row;
@@ -1199,20 +1230,15 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   gap: 16px;
   white-space: nowrap;
 }
-.gameslistremote_RemoteControls_1Fput .gameslistremote_DownloadSize_2zfId {
+.gameslistremote_DownloadBarContainer_2Qx7n
+  .gameslistremote_DownloadSize_2zfId {
   font-weight: 700;
   font-size: var(--typography-font-size-medium);
 }
-.gameslistremote_RemoteControls_1Fput .gameslistremote_UpdateSchedule__nq0r {
+.gameslistremote_DownloadBarContainer_2Qx7n
+  .gameslistremote_UpdateSchedule__nq0r {
   font-weight: 700;
   font-size: var(--typography-font-size-medium);
-}
-.gameslistremote_RemoteControls_1Fput .gameslistremote_NoRemoteControl_217Ei {
-  font-weight: 500;
-  font-size: var(--typography-font-size-medium);
-  letter-spacing: 0.5px;
-  color: var(--typography-color-neutral);
-  margin-right: 10px;
 }
 .gameslistremote_DownloadIconButton_2P659 {
   height: 30px;

@@ -2228,7 +2228,7 @@
     "GamesList_RemoteDownload_ReadTheFAQ": "Read the FAQ",
     "GamesList_RemoteDownload_Info": "%1$s. %2$s",
     "GamesList_RemoteDownload_LearnMore": "Learn more",
-    "GamesList_RemoteDownload_NoRemoteControl": "THIS PRODUCT CANNOT BE CONTROLLED REMOTELY",
+    "GamesList_RemoteDownload_NoRemoteControl": "REMOTE DOWNLOAD UNAVAILABLE",
     "GamesList_RemoteDownload_UninstallConfirm": "Would you like to uninstall %1$s? It will remain in your Games Library, but to play it in the future you will first need to redownload all of its content.",
     "Library_DeviceType_PC": "PC Client",
     "Library_DeviceType_SteamDeck": "Steam Deck",
