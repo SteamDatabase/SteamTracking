@@ -21,7 +21,6 @@
       e.exports = {
         DashboardPage: "pricingdashboard_DashboardPage_fIACD",
         DashTitle: "pricingdashboard_DashTitle_3GHz1",
-        BetaTag: "pricingdashboard_BetaTag_2h5vP",
         FeedbackLinkCtn: "pricingdashboard_FeedbackLinkCtn_5ZCWm",
         FeedbackLink: "pricingdashboard_FeedbackLink_24sFT",
         Throbber: "pricingdashboard_Throbber_TigTT",
@@ -1854,11 +1853,6 @@
             "div",
             { className: u().DashTitle },
             (0, E.Xx)("#PricingDashboard_Title"),
-            a.createElement(
-              "div",
-              { className: u().BetaTag },
-              (0, E.Xx)("#NewToolTitleSuffix_Beta")
-            ),
             a.createElement(
               "div",
               { className: u().FeedbackLinkCtn },
