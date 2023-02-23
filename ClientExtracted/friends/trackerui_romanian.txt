@@ -743,7 +743,7 @@ Nu poți face schimburi cu %friend% pentru că ți-ai anulat recent toate oferte
 "Steam_Settings_Broadcast_ShowChat" "Afișează discuțiile spectatorilor în joc:"
 "Steam_Settings_Broadcast_StatusHeader" "Starea difuzării:"
 "Steam_Settings_Broadcast_HelpHeader" "Ai nevoie de ajutor?"
-"Steam_Settings_Broadcast_HelpURL_Desc" "Vezi paginile de asistență pentru transmisiune"
+"Steam_Settings_Broadcast_HelpURL_Desc" "Vezi paginile de asistență pentru difuzare"
 "Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Steam_Settings_Broadcast_PermissionsHeader" "Setări de confidențialitate:"
 "Steam_Settings_Broadcast_BitrateHeader" "Rată de biți maximă:"

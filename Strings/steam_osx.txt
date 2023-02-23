@@ -106,6 +106,7 @@ h
 &
 )
 O>
+^9
 0
 *
 9
@@ -132,7 +133,6 @@ F)
 )
 
 %
-8
 '
 2
 2
@@ -142,10 +142,9 @@ F)
 /
 0
 5
-d7
-b7
 <
 (
+:
 :
 :
 :
@@ -1656,6 +1655,7 @@ N16CCookieContainer11CCookieInfoE
 17CHTTPRequestParam
 10CUtlVectorI17CHTTPRequestParam10CUtlMemoryIS0_EE
 10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE
+<html><body>Fake captive portal</body></html>
 33CHTTPDefaultRedirectEnableHandler
 20IHTTPRedirectHandler
 18CHTTPClientRequest
@@ -2321,6 +2321,7 @@ Documents/Steam%s Content
 -nosteamuisharedjscontext
 -desktopui
 -tesla
+-vgui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
@@ -2363,7 +2364,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Feb 20 2023 14:39:30
+Startup - updater built Feb 22 2023 12:30:58
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2650,8 +2651,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Feb 20 2023
-14:39:31
+Feb 22 2023
+12:30:59
 crashhandler004
 steam
 Steam Executable Crash
@@ -2748,7 +2749,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-14:39:29
+12:30:57
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10868,7 +10869,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-14:37:42
+12:29:03
 Jan
 Feb
 Mar
@@ -12216,6 +12217,8 @@ k_EMsgClientEnableOrDisableDownloads
 k_EMsgClientEnableOrDisableDownloadsResponse
 k_EMsgClientStartPeerContentServer
 k_EMsgClientStartPeerContentServerResponse
+k_EMsgClientGetPeerContentInfo
+k_EMsgClientGetPeerContentInfoResponse
 k_EMsgChannelEncryptRequest
 k_EMsgChannelEncryptResponse
 k_EMsgFileXferRequest
@@ -13290,6 +13293,7 @@ file_ofs == pFile->GetBytesWritten()
 
 0
 O>
+^9
 0
 *
 9
@@ -13316,7 +13320,6 @@ F)
 )
 
 %
-8
 '
 2
 2
@@ -13326,10 +13329,9 @@ F)
 /
 0
 5
-d7
-b7
 <
 (
+:
 :
 :
 :
@@ -13387,9 +13389,8 @@ IcE
 @
 @
 V
-5
 =
-f4
+}4
 ?.
 4.
 =
@@ -13399,11 +13400,10 @@ f4
 4
 D-
 -
+3
 !
 @
-e2
 ,
-2
 ($
 2
 2
@@ -13411,17 +13411,18 @@ e2
 &
 +
 I,
->
 1
+i0
 *
 *
-20
+,0
 0
 4
 )
 )
-*/
 /
+/
+1
 @
 M9e
 @
@@ -13454,6 +13455,7 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
+~,
 j
 j
 q0
@@ -13769,12 +13771,13 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 =
 @
+F)
 
+?1
 @
 @
 @
 0
-')
 H=
 "
 Ic]
@@ -13787,6 +13790,7 @@ j
 $
 
 '
+'
 t$I;M
 *
 )
@@ -13795,10 +13799,10 @@ t$I;M
 e
 W
 ,7~5d
+#/
 H
-#
-#
 0
+,!
 
 .
 
@@ -13811,16 +13815,15 @@ H
 
 
 Hc
-]'
-H;5\K'
-L)5[E'
+&
+L)5;O'
+L950K'
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
 J"
-&
 $
 $
 "
@@ -13833,7 +13836,6 @@ $
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
-%
 0
 0
 N
@@ -14132,11 +14134,13 @@ j
 @
 @
 @
+k
 0
 0
 
 
 Hc
+4
 0
 
 
@@ -14144,9 +14148,13 @@ Hc
 @
 @
 @
-,
 &
 %
+
+
+
+
+
 
 @
 =h2
@@ -14166,9 +14174,9 @@ P
 0
 =a
 0
-u
-Z
 Hi
+A
+1
 $
 $
 $

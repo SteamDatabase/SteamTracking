@@ -157,6 +157,7 @@ message StoreItem {
 		optional string library_hero = 11 [(description) = "960x310 or 1920x620 - library detail background asset"];
 		optional string library_hero_2x = 12 [(description) = "1920x620 or 3840x1240 - library detail background asset"];
 		optional string community_icon = 13 [(description) = "32x32 jpg uploading via steamworks under community assets"];
+		optional string clan_avatar = 14;
 	}
 
 	message ReleaseInfo {
@@ -294,6 +295,7 @@ message StoreItem {
 	optional string store_url_path_override = 53 [(description) = "Navigate to this URL (relative to store home) when the store capsule for this item is clicked, instead of the default /app/... URL. Used by advertising apps that point to a sale page."];
 	optional .StoreItem.FreeWeekend free_weekend = 54 [(description) = "Information about a free weekend offer."];
 	optional bool unlisted = 55 [(description) = "If true, item is only accessible on store via a direct link"];
+	optional uint32 game_count = 56 [(description) = "For creators and tags, how many games belong to them"];
 }
 
 message CStoreBrowse_GetItems_Response {

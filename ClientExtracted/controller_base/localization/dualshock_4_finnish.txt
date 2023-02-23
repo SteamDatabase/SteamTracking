@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Ristiohjaimen liike"
 	"origin_ps5_button_create"					"Luontinäppäin"
 	"origin_ps5_button_mute"					"Mykistyspainike"
+	"origin_PS5_leftgrip"						"Vasen takanäppäin"
+	"origin_PS5_rightgrip"						"Oikea takanäppäin"
+	"origin_PS5_leftfn"							"Vasen toimintopainike"
+	"origin_PS5_rightfn"						"Oikea toimintopainike"
 }

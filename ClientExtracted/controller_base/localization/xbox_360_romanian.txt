@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"Shoulder drept"
 	"origin_xbox360_button_start"					"Butonul Start"
 	"origin_xbox360_button_back"					"Butonul Back"
-	}
+	"origin_xbox360_button_dpad_move"				"Mișcare D-pad"
+}

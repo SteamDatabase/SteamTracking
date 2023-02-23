@@ -358,9 +358,15 @@
 "SteamUI_AccountDialog_Subscriptions"	"Suscripciones"
 "SteamUI_AccountDialog_AccountDetails"	"Cuenta"
 "Steam_LogoutDialogTitle"			"Cerrar sesión"
-"Steam_LogoutDialogMsg"				"Se cerrará tu sesión de Steam. Tendrás que volver a introducir\ntu nombre de cuenta y tu contraseña para volver a usar Steam.\n\n¿Quieres continuar?"
+"Steam_LogoutDialogMsg"				"Se cerrará tu sesión de Steam. Tendrás que volver a introducir tu nombre de cuenta, tu contraseña y los detalles correspondientes de Steam Guard para volver a usar Steam.\n\n¿Deseas continuar?"
 "Steam_LogoutDialogOKButton"			"Cerrar sesión"
 "Steam_LogoutDialogLabel"			"Nombre de cuenta:"
+
+"Steam_ChangeUserDialogTitle"			"Cambiar de cuenta"
+"Steam_ChangeUserDialogMsg"				"Esta opción te permite elegir otra cuenta de Steam. La cuenta permanecerá en este equipo para que puedas usarla en el futuro.\n\n¿Deseas continuar?"
+"Steam_ChangeUserDialogMsg_NoCachedCredentials"	"Esta opción te permite elegir otra cuenta de Steam. Si quieres volver a usar esta cuenta, tendrás que proporcionar la contraseña o utilizar el autenticador móvil.\n\n¿Deseas continuar?"
+"Steam_ChangeUserDialogOKButton"			"Cambiar de cuenta"
+"Steam_ChangeUserDialogLabel"			"Nombre de la cuenta:"
 
 "Steam_FlushConfigDialogTitle"			"Steam - Borrar caché de descarga"
 "Steam_FlushConfigDialogMsg"			"Esto borrará tu caché de descarga local y tendrás que volver a iniciar sesión en Steam.\n\n¿Quieres continuar?"
@@ -448,7 +454,7 @@
 
 "Steam_ErrorDataInvalid_Title"			"Steam"
 "Steam_PurchaseUserInfoInvalid"			"Tienes que completar todos los campos para continuar."
-"Steam_PurchaseUserEmailInvalid"		"Se necesita una dirección de email válida."
+"Steam_PurchaseUserEmailInvalid"		"Se necesita un correo electrónico válido."
 "Steam_CreditCardInfoInvalid"			"El número de tarjeta de crédito introducido no es válido."
 "Steam_CreditCardExpired"			"La tarjeta de crédito introducida ha caducado."
 "Steam_CreditCardCVV2Invalid"			"El número de seguridad de la tarjeta de crédito debe tener 3 dígitos."
@@ -1134,7 +1140,7 @@
 "Steam_CreditCardEncrypted"	"La información de tu tarjeta de crédito se cifrará para la transmisión y el procesamiento."
 
 "SteamUI_AccountNameInUse" "No se ha podido crear una cuenta.\nEl nombre de cuenta ya está en uso.\nVuelve a intentarlo con un nombre diferente."
-"Steam_ErrorValidEmailRequired" "Se necesita una dirección de email válida."
+"Steam_ErrorValidEmailRequired" "Se necesita un correo electrónico válido."
 "Steam_ForgottenPassword_CouldNotFindEmail" "No se ha encontrado la cuenta.\nIntroduce el nombre de cuenta que utilizas para conectarte a Steam."
 "SteamUI_CreateAccountFailedPasswordIllegal" "Error al crear la cuenta.\nEsa contraseña no cumple con los requisitos de complejidad adicionales. Por favor, escoge otra."
 
@@ -1766,6 +1772,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "steam_menu_fullgameslist"	"Cambiar a vista completa"
 "steam_menu_backupgames"	"Hacer copia de seguridad y restaurar programas..."
 "steam_menu_changeuser"		"Cambiar de cuenta..."
+"steam_menu_signout"		"Cerrar sesión..."
 "steam_menu_support"		"Soporte de Steam"
 "steam_menu_community"		"Comunidad"
 "steam_menu_community_home"		"Comunidad"

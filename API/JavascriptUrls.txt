@@ -544,6 +544,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${hero_carousel_image}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
+${MEDIA_CDN_COMMUNITY_URL}images/steamtv/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
 ${MEDIA_CDN_URL}${}
@@ -2280,7 +2281,6 @@ https://steamloopback.host
 https://steamloopback.host/
 https://steamloopback.host/${strUrl}
 https://steamloopback.host/${}
-https://steamloopback.host/friendsui/
 https://steamsupport.valvesoftware.com/account/overview/${}
 https://steamsupport.valvesoftware.com/account_support.php?steamID=${strSteamID}
 https://steamsupport.valvesoftware.com/clan/overview/${}
@@ -2526,6 +2526,7 @@ https://www.dota2.com/risinggale
 https://www.dota2.com/theonetrueking
 https://www.example.com
 https://www.facebook.com/dota2/
+https://www.google.com
 https://www.google.com/
 https://www.instagram.com/dota2
 https://www.netflix.com/
@@ -2564,6 +2565,7 @@ steam://${}
 steam://AddNonSteamGame
 steam://broadcast/watch/${steamid64}
 steam://cdkeys/${appid}
+steam://checkforupdates
 steam://checkout_return/paypal_cancel/
 steam://checkout_return/paypal_success/
 steam://close
@@ -2581,7 +2583,6 @@ steam://joinlobby/${}/${}/${}
 steam://nav/games/details/${}
 steam://open/about
 steam://open/changeemail
-steam://open/checkforupdates
 steam://open/downloads
 steam://open/friends
 steam://open/goonline
@@ -2600,6 +2601,7 @@ steam://openurl/${}
 steam://openurl_external/
 steam://openurl_external/${}
 steam://openurl_external/https://help.steampowered.com/en/faqs/view/1433-AD20-F11D-B71E
+steam://openurl_external/https://help.steampowered.com/en/faqs/view/443B-C1B8-0998-C02A
 steam://openurl_external/https://help.steampowered.com/en/faqs/view/548F-BC55-89EB-1BC8
 steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=${transID}
 steam://remoteplay/connect

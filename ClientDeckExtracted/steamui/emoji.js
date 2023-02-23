@@ -1825,3 +1825,4 @@
     },
   },
 ]);
+//# sourceMappingURL=sourcemaps\emoji.js.map

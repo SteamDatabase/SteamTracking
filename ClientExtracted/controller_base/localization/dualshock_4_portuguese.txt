@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Movimento do pad direcional"
 	"origin_ps5_button_create"					"Botão de criação"
 	"origin_ps5_button_mute"					"Botão de silenciamento"
+	"origin_PS5_leftgrip"						"Botão traseiro esquerdo"
+	"origin_PS5_rightgrip"						"Botão traseiro direito"
+	"origin_PS5_leftfn"							"Botão Fn esquerdo"
+	"origin_PS5_rightfn"						"Botão Fn direito"
 }

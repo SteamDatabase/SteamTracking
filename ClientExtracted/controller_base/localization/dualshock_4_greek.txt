@@ -54,6 +54,10 @@
 	"origin_ps4_button_options"					"Κουμπί OPTIONS"
 	"origin_ps4_button_share"					"Κουμπί SHARE"
 	"origin_ps4_button_dpad_move"					"Κίνηση D-Pad"
-	"origin_ps5_button_create"					"Κουμπί Δημιουργία"
-	"origin_ps5_button_mute"					"Κουμπί Σίγαση"
+	"origin_ps5_button_create"					"Κουμπί δημιουργίας"
+	"origin_ps5_button_mute"					"Κουμπί σίγασης"
+	"origin_PS5_leftgrip"						"Πίσω αριστερό κουμπί"
+	"origin_PS5_rightgrip"						"Πίσω δεξί κουμπί"
+	"origin_PS5_leftfn"							"Αριστερό κουμπί Fn"
+	"origin_PS5_rightfn"						"Δεξί κουμπί Fn"
 }

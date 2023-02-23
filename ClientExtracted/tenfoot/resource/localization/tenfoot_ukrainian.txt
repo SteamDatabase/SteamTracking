@@ -1797,7 +1797,7 @@
 	"Library_Details_StreamingLaunchVR_Desc"				"{s:gamename} працює у режимі ВР. Бажаєте запустити для перегляду із {s:streamingclient}?"
 	
 	"Library_Details_OculusOnlyGameWarning_Title"				"УВАГА"
-	"Library_Details_OculusOnlyGameWarning_Desc" "{s:gamename} буде запущено за межами середовища SteamVR. Вам може знадобитися зняти шолом, аби повернутися у Steam."
+	"Library_Details_OculusOnlyGameWarning_Desc" "{s:gamename} буде запущено за межами середовища SteamVR. Можливо, вам доведеться зняти шолом, щоб повернутися у Steam."
 
 	"Library_Details_CloseVRGame_Title"					"Вийти?"
 	"Library_Details_CloseVRGame_Desc"					"Будь ласка, підтвердьте своє бажання вийти з поточного застосунку ВР."

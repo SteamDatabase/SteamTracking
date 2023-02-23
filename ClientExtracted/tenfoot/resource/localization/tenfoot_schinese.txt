@@ -4263,7 +4263,7 @@
 	"Settings_Broadcast_360p" "640x360（360p）"
 	"Settings_Broadcast_IncludeDesktop" "不在游戏中时继续录制我的桌面"
 	"Settings_Broadcast_RecordMic" "录制并直播我的麦克风"
-	"Settings_Broadcast_ShowDebugInfo" "显示上传统计"
+	"Settings_Broadcast_ShowDebugInfo" "显示上传统计数据"
 	"Settings_Broadcast_ShowChat" "在游戏中显示观众的聊天"
 	"Settings_Broadcast_PermissionsHeader" "隐私设置"
 	"Settings_Broadcast_BitrateHeader" "最大比特率"

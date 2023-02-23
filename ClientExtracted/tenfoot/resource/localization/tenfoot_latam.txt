@@ -245,7 +245,7 @@
 	"MainMenu_UnreadChatSingular"	"{d:unreadchatmessagecount} mensaje de chat sin leer"
 	"MainMenu_UnreadChat"			"{d:unreadchatmessagecount} mensajes de chat sin leer"
 	"MainMenu_AlertsTitle" "Tus avisos"
-	"MainMenu_OfflineTitle" "Desconectados"
+	"MainMenu_OfflineTitle" "Sin conexión"
 	"MainMenu_FamilyTitle" "Modo familiar"
 	"MainMenu_AlertsEmpty" "No tienes avisos pendientes"
 
@@ -452,7 +452,7 @@
 	"CreateAccount_Email_Description" "Si olvidas tu contraseña o necesitamos verificar tu cuenta, ¿cómo contactamos contigo?"
 	"CreateAccount_Email_EmailAddress" "Dirección de email"
 	"CreateAccount_Email_EmailAddressAgain" "Dirección de email, una vez más"
-	"CreateAccount_Email_Invalid"	"Se necesita una dirección de email válida."
+	"CreateAccount_Email_Invalid"	"Se necesita un correo electrónico válido."
 	"CreateAccount_Email_DontMatch" "Las direcciones de email introducidas no coinciden. Por favor, introduce la misma dirección de email en cada campo."
 	"CreateAccount_Email_SameAsExisting" "Esta dirección de email de contacto coincide con la que actualmente está asociada a esta cuenta."
 
@@ -2968,8 +2968,8 @@ Por favor, inténtalo de nuevo más tarde."
 	"Friends_GroupEvent_NewAccouncement"	"ha publicado un anuncio"
 
 	"Friends_Header_Recent"		"Chats recientes"
-	"Friends_Header_Online"		"Conectados"
-	"Friends_Header_Offline"		"Desconectados"
+	"Friends_Header_Online"		"En línea"
+	"Friends_Header_Offline"		"Sin conexión"
 
 
 	"Steam_DeleteCacheConfirmation_Title"		"¿Desinstalar?"
@@ -7398,8 +7398,8 @@ Por favor, inténtalo de nuevo más tarde."
 
 	"friends_list_recent_container_title"	"Chats recientes"
 	"friends_list_igname_container_title"	"Jugando"
-	"friends_list_online_container_title"	"Conectados"
-	"friends_list_offline_container_title"	"Desconectados"
+	"friends_list_online_container_title"	"En línea"
+	"friends_list_offline_container_title"	"Sin conexión"
 
 	"friends_groups_recent_container_title"	"Chats de grupo recientes"
 	"friends_groups_container_title"		"Grupos"

@@ -67,7 +67,8 @@
  SDL_GL_SetAttribute
  SDL_GL_SwapWindow
  SDL_GetDisplayBounds
- SDL_GetNumVideoDisplays
+ SDL_GetDisplays
+ SDL_GetPrimaryDisplay
  SDL_GetWindowFromID
  SDL_GetWindowSize
  SDL_GetWindowWMInfo
@@ -77,6 +78,7 @@
  SDL_SetHint
  SDL_ShowCursor
  SDL_WasInit
+ SDL_free
  SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  SteamStdLib::CCommandLineParam::~CCommandLineParam()
  SteamStdLib::CommandLine()

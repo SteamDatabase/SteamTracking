@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Di chuyển D-Pad"
 	"origin_ps5_button_create"					"Nút Create"
 	"origin_ps5_button_mute"					"Nút Mute"
+	"origin_PS5_leftgrip"						"Nút lưng trái"
+	"origin_PS5_rightgrip"						"Nút lưng phải"
+	"origin_PS5_leftfn"							"Nút Fn trái"
+	"origin_PS5_rightfn"						"Nút Fn phải"
 }

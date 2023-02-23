@@ -760,7 +760,7 @@
 "Steam_Settings_Broadcast_ShowChat_LeftBottom" "左下角"
 "Steam_Settings_Broadcast_Disabled_System" "Steam 實況直播目前不支援此作業系統。"
 "Steam_Settings_Broadcast_Disabled_Overlay" "Steam 內嵌介面必須啟用以進行實況直播。"
-"Steam_Settings_Broadcast_Disabled_User" "您的帳戶未有足夠的權限進行實況直播。"
+"Steam_Settings_Broadcast_Disabled_User" "您的帳戶並沒有足夠的權限來進行實況直播。"
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Steam 無法在這台電腦上進行實況直播。\n\nWindows 目前正以相容模式執行 Steam，且可能會讓 Steam 實況直播無法正常運作。如果這台電腦使用 Windows 7 或更高版本的作業系統，請按照以下頁面中的步驟停用相容模式。"
 "Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_Settings_Broadcast_WindowsCompatSupportText" "我要如何停用相容模式？"

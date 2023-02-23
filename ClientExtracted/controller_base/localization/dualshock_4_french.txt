@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"D-pad : mouvement"
 	"origin_ps5_button_create"					"Touche Create"
 	"origin_ps5_button_mute"					"Touche mode silencieux"
+	"origin_PS5_leftgrip"						"Touche arrière gauche"
+	"origin_PS5_rightgrip"						"Touche arrière droite"
+	"origin_PS5_leftfn"							"Touche fonction gauche"
+	"origin_PS5_rightfn"						"Touche fonction droite"
 }

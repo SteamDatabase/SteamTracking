@@ -1374,6 +1374,18 @@
         "name": "k_EMsgClientOGSWriteRow"
     },
     {
+        "emsg": 5495,
+        "flags": 2,
+        "server_type": -1,
+        "name": "k_EMsgClientGetPeerContentInfo"
+    },
+    {
+        "emsg": 5496,
+        "flags": 2,
+        "server_type": -1,
+        "name": "k_EMsgClientGetPeerContentInfoResponse"
+    },
+    {
         "emsg": 5497,
         "flags": 2,
         "server_type": -1,

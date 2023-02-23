@@ -64122,7 +64122,8 @@ object-assign
               shared_utils_localization__WEBPACK_IMPORTED_MODULE_5__.Localize)(
                 "#WindowTitle_FriendsList"
               ),
-              html_class: "client_chat_frame fullheight SavedDimensionsPopup",
+              html_class:
+                "friendsui-container client_chat_frame fullheight SavedDimensionsPopup",
               body_class: "fullheight",
               eCreationFlags:
                 shared_domutil_popupmanager__WEBPACK_IMPORTED_MODULE_4__
@@ -64372,6 +64373,8 @@ object-assign
             /* binding */ k_nGameIDControllerConfigs_Desktop,
           /* harmony export */ k_nGameIDControllerConfigs_GuideChord: () =>
             /* binding */ k_nGameIDControllerConfigs_GuideChord,
+          /* harmony export */ k_nGameIDGamepadUIStandaloneWindow: () =>
+            /* binding */ k_nGameIDGamepadUIStandaloneWindow,
           /* harmony export */ k_nGameIDServiceAppFirst: () =>
             /* binding */ k_nGameIDServiceAppFirst,
           /* harmony export */ k_nGameIDServiceAppLast: () =>
@@ -65579,6 +65582,7 @@ object-assign
         const k_nGameIDControllerConfigs_Desktop = 413080;
         const k_nGameIDControllerConfigs_BigPicture = 413090;
         const k_nGameIDControllerConfigs_GuideChord = 443510;
+        const k_nGameIDGamepadUIStandaloneWindow = 1;
         function BIsControllerConfigGameID(appid) {
           return (
             appid == k_nGameIDControllerConfigs_Desktop ||
@@ -67750,6 +67754,11 @@ object-assign
           /* harmony export */ WorkshopItem: () => /* binding */ WorkshopItem,
           /* harmony export */
         });
+        /* harmony import */ var shared_clientenums__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
+          );
+
         class WorkshopItem {}
         class FriendState {}
         class BroadcastStatus {
@@ -68730,6 +68739,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.BIsReducedUILauncher,
           /* harmony export */ BIsSaleItemType: () =>
             /* reexport safe */ _storetypes__WEBPACK_IMPORTED_MODULE_20__.BIsSaleItemType,
+          /* harmony export */ BIsValidStartPage: () =>
+            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.BIsValidStartPage,
           /* harmony export */ BOpenVROverlayBrowser: () =>
             /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.BOpenVROverlayBrowser,
           /* harmony export */ BatteryState_t: () =>
@@ -68754,8 +68765,6 @@ object-assign
             /* reexport safe */ _controllertypes__WEBPACK_IMPORTED_MODULE_9__.ControllerState,
           /* harmony export */ ControllerVisualizationState: () =>
             /* reexport safe */ _controllertypes__WEBPACK_IMPORTED_MODULE_9__.ControllerVisualizationState,
-          /* harmony export */ CurrentUser: () =>
-            /* reexport safe */ _logintypes__WEBPACK_IMPORTED_MODULE_13__.CurrentUser,
           /* harmony export */ CustomNetworkDeviceWapId: () =>
             /* reexport safe */ _networktypes__WEBPACK_IMPORTED_MODULE_15__.CustomNetworkDeviceWapId,
           /* harmony export */ DefaultFriendsSettings: () =>
@@ -69020,16 +69029,12 @@ object-assign
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.IterateDrivesItem,
           /* harmony export */ IterateFolderItem: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.IterateFolderItem,
-          /* harmony export */ LoginUser: () =>
-            /* reexport safe */ _logintypes__WEBPACK_IMPORTED_MODULE_13__.LoginUser,
           /* harmony export */ MapKoreanaToKorean: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.MapKoreanaToKorean,
           /* harmony export */ MarketingMessage: () =>
             /* reexport safe */ _storetypes__WEBPACK_IMPORTED_MODULE_20__.MarketingMessage,
           /* harmony export */ MoveContentProgress: () =>
             /* reexport safe */ _downloadtypes__WEBPACK_IMPORTED_MODULE_10__.MoveContentProgress,
-          /* harmony export */ NotificationCounts: () =>
-            /* reexport safe */ _notificationtypes__WEBPACK_IMPORTED_MODULE_16__.NotificationCounts,
           /* harmony export */ OverlayBrowserInfo: () =>
             /* reexport safe */ _chattypes__WEBPACK_IMPORTED_MODULE_6__.OverlayBrowserInfo,
           /* harmony export */ PchLanguageToELanguage: () =>
@@ -69096,6 +69101,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.k_nGameIDControllerConfigs_Desktop,
           /* harmony export */ k_nGameIDControllerConfigs_GuideChord: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.k_nGameIDControllerConfigs_GuideChord,
+          /* harmony export */ k_nGameIDGamepadUIStandaloneWindow: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.k_nGameIDGamepadUIStandaloneWindow,
           /* harmony export */ k_nGameIDServiceAppFirst: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.k_nGameIDServiceAppFirst,
           /* harmony export */ k_nGameIDServiceAppLast: () =>
@@ -69234,35 +69241,10 @@ object-assign
       ) => {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
-        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ CurrentUser: () => /* binding */ CurrentUser,
-          /* harmony export */ LoginUser: () => /* binding */ LoginUser,
-          /* harmony export */
-        });
         /* harmony import */ var _notificationtypes__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
             /*! ./notificationtypes */ "../../../web_src/shared/js/clienttypes/notificationtypes.ts"
           );
-
-        class CurrentUser {
-          constructor() {
-            this.strSteamID = "";
-            this.strAccountName = "";
-            this.strAccountBalance = "";
-            this.strAccountBalancePending = "";
-            this.NotificationCounts =
-              new _notificationtypes__WEBPACK_IMPORTED_MODULE_0__.NotificationCounts();
-            this.bSupportAlertActive = false;
-            this.bSupportAckOnlyMessages = false;
-            this.bSupportPopupMessage = false;
-            this.bHWSurveyPending = false;
-            this.bIsLimited = false;
-            this.bIsOfflineMode = true;
-            this.strClientInstanceID = "";
-            this.bPromptToChangePassword = false;
-          }
-        }
-        class LoginUser {}
 
         /***/
       },
@@ -69466,26 +69448,10 @@ object-assign
             /* binding */ AppLifetimeNotification,
           /* harmony export */ EClientUINotificationType: () =>
             /* binding */ EClientUINotificationType,
-          /* harmony export */ NotificationCounts: () =>
-            /* binding */ NotificationCounts,
           /* harmony export */ ScreenshotNotification: () =>
             /* binding */ ScreenshotNotification,
           /* harmony export */
         });
-        class NotificationCounts {
-          constructor() {
-            this.comments = 0;
-            this.inventory_items = 0;
-            this.invites = 0;
-            this.gifts = 0;
-            this.offline_messages = 0;
-            this.trade_offers = 0;
-            this.async_game_updates = 0;
-            this.moderator_messages = 0;
-            this.help_request_replies = 0;
-            this.general = 0;
-          }
-        }
         class AppLifetimeNotification {}
         class ScreenshotNotification {}
         class AchievementNotification {}
@@ -69594,7 +69560,7 @@ object-assign
             this.nConsumerappid = 0;
             this.rTimeCreated = 0;
             this.rTimeUpdated = 0;
-            this.eVisiblity = 0;
+            this.eVisibility = 0;
             this.nIimageWidth = 0;
             this.nImageHeight = 0;
             this.nVotesUp = 0;
@@ -69620,6 +69586,8 @@ object-assign
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ AccountSettings: () =>
             /* binding */ AccountSettings,
+          /* harmony export */ BIsValidStartPage: () =>
+            /* binding */ BIsValidStartPage,
           /* harmony export */ DefaultFriendsSettings: () =>
             /* binding */ DefaultFriendsSettings,
           /* harmony export */ EBrowserComposerMode: () =>
@@ -69738,12 +69706,18 @@ object-assign
           EBrowserComposerMode[(EBrowserComposerMode["OpenGL"] = 1)] = "OpenGL";
         })(EBrowserComposerMode || (EBrowserComposerMode = {}));
         class FamilySharingUser {}
-        class SettingsState {
-          constructor() {
-            this.InGameOverlayScreenshotHotKey = new SettingsKeyBinding();
-            this.InGameOverlayShortcutKey = new SettingsKeyBinding();
-          }
+        const k_rgStartPages = [
+          "store",
+          "library",
+          "friendactivity",
+          "community",
+          "news",
+          "console",
+        ];
+        function BIsValidStartPage(value) {
+          return k_rgStartPages.includes(value);
         }
+        class SettingsState {}
         var ESteamGuardState;
         (function (ESteamGuardState) {
           ESteamGuardState[(ESteamGuardState["k_ESteamGuardOffline"] = 0)] =
@@ -72360,10 +72334,9 @@ object-assign
                   this.m_mapPopups.forEach((popup) => {
                     // @note Tom Bui & Al Farnsworth: we don't want to blow away styles sheets links in the popup
                     // this was happening when the virtual keyboard was shown in chat, screwing up all the added friendsui styles
-                    shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.AddStylesheetsToDocument(
+                    shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.UpdateStylesheetsInDocument(
                       popup.window.document,
-                      styleSheetLinks,
-                      false
+                      styleSheetLinks
                     );
                   });
                 });
@@ -75605,8 +75578,8 @@ object-assign
             (EControllerSetting["k_EControllerSettingGyroYawScale"] = 125)
           ] = "k_EControllerSettingGyroYawScale";
           EControllerSetting[
-            (EControllerSetting["k_EControllerSettingGyroRollScale"] = 126)
-          ] = "k_EControllerSettingGyroRollScale";
+            (EControllerSetting["k_EControllerSettingGyroRollScaleOld"] = 126)
+          ] = "k_EControllerSettingGyroRollScaleOld";
           EControllerSetting[
             (EControllerSetting[
               "k_EControllerSettingDeadzoneAdvancedSettings"
@@ -75667,7 +75640,10 @@ object-assign
             ] = 139)
           ] = "k_EControllerSettingFlickStickHapticBumpPerAngle";
           EControllerSetting[
-            (EControllerSetting["k_EControllerSettingCount"] = 140)
+            (EControllerSetting["k_EControllerSettingGyroRollScale"] = 140)
+          ] = "k_EControllerSettingGyroRollScale";
+          EControllerSetting[
+            (EControllerSetting["k_EControllerSettingCount"] = 141)
           ] = "k_EControllerSettingCount";
         })(EControllerSetting || (EControllerSetting = {}));
         function EControllerSettingToString(eControllerSetting) {
@@ -75926,7 +75902,7 @@ object-assign
               case 125:
                 return "k_EControllerSettingGyroYawScale";
               case 126:
-                return "k_EControllerSettingGyroRollScale";
+                return "k_EControllerSettingGyroRollScaleOld";
               case 127:
                 return "k_EControllerSettingDeadzoneAdvancedSettings";
               case 128:
@@ -75954,6 +75930,8 @@ object-assign
               case 139:
                 return "k_EControllerSettingFlickStickHapticBumpPerAngle";
               case 140:
+                return "k_EControllerSettingGyroRollScale";
+              case 141:
                 return "k_EControllerSettingCount";
             }
           }
@@ -86181,10 +86159,10 @@ object-assign
             );
           }
           componentWillUnmount() {
-            this.props.popup.removeEventListener(
-              "resize",
-              this.UpdateMaximizeState
-            );
+            var _a;
+            (_a = this.props.popup) === null || _a === void 0
+              ? void 0
+              : _a.removeEventListener("resize", this.UpdateMaximizeState);
           }
           UpdateMaximizeState() {
             if (
@@ -86691,6 +86669,8 @@ object-assign
             /* binding */ CScheduledFunc,
           /* harmony export */ CTrackedEventListeners: () =>
             /* binding */ CTrackedEventListeners,
+          /* harmony export */ CUnregisterList: () =>
+            /* binding */ CUnregisterList,
           /* harmony export */ IReadonlySubscribableValue: () =>
             /* binding */ IReadonlySubscribableValue,
           /* harmony export */ ISubscribableValue: () =>
@@ -86857,6 +86837,39 @@ object-assign
             }
           );
         }
+        /**
+         * Wrapper around an array to cut down on typing for common scenario of needing to wrap a number of unregister functions in
+         * a single unregister func
+         */
+        class CUnregisterList {
+          constructor() {
+            this.m_vecCallbacks = [];
+          }
+          Push(fnCallback) {
+            this.m_vecCallbacks.push(fnCallback);
+          }
+          PushArrayRemove(rgArray, element) {
+            this.m_vecCallbacks.push(() =>
+              shared_utils_arrayutils__WEBPACK_IMPORTED_MODULE_0__.FindAndRemove(
+                rgArray,
+                element
+              )
+            );
+          }
+          Unregister() {
+            for (let fn of this.m_vecCallbacks) fn();
+            this.m_vecCallbacks = [];
+          }
+          GetUnregisterFunc() {
+            return this.Unregister;
+          }
+        }
+        (0, tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)(
+          [shared_utils_bind__WEBPACK_IMPORTED_MODULE_1__.bind],
+          CUnregisterList.prototype,
+          "Unregister",
+          null
+        );
 
         /***/
       },
@@ -87766,6 +87779,9 @@ object-assign
             const link = rgLinks[i];
             const replacementInfo = normalizedLinks[normalizeHref(link.href)];
             if (replacementInfo) {
+              // In dev we create a new link rather than updating the existing one to help with
+              // code changes and ensuring we only have the latest changes.
+              const linkToUpdate = true ? document.createElement("link") : 0;
               const [_, replacement] = replacementInfo;
               for (
                 let iAttribute = 0;
@@ -87773,7 +87789,16 @@ object-assign
                 iAttribute++
               ) {
                 let attribute = replacement.attributes.item(iAttribute);
-                link.setAttribute(attribute.name, attribute.value);
+                linkToUpdate.setAttribute(attribute.name, attribute.value);
+              }
+              if (true) {
+                // Now we need to insert our new link and remove the old. We wait until the new
+                // on has loaded so there is not a flash of unstyled UI.
+                let parent = link.parentElement;
+                linkToUpdate.addEventListener("load", () =>
+                  parent.removeChild(link)
+                );
+                parent.insertBefore(linkToUpdate, link);
               }
               delete normalizedLinks[normalizeHref(link.href)];
             }
@@ -89646,6 +89671,8 @@ function TestLocalizeCalendarTime()
             /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useUnmemoizedTimeout,
           /* harmony export */ useValueWasTrueRecently: () =>
             /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useValueWasTrueRecently,
+          /* harmony export */ useValueWasTrueRecentlyOrNow: () =>
+            /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useValueWasTrueRecentlyOrNow,
           /* harmony export */ useVisibleOnScreen: () =>
             /* reexport safe */ _usevisibleonscreen__WEBPACK_IMPORTED_MODULE_3__.useVisibleOnScreen,
           /* harmony export */
@@ -89730,6 +89757,8 @@ function TestLocalizeCalendarTime()
             /* binding */ useUnmemoizedTimeout,
           /* harmony export */ useValueWasTrueRecently: () =>
             /* binding */ useValueWasTrueRecently,
+          /* harmony export */ useValueWasTrueRecentlyOrNow: () =>
+            /* binding */ useValueWasTrueRecentlyOrNow,
           /* harmony export */
         });
         /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ =
@@ -90266,27 +90295,31 @@ function TestLocalizeCalendarTime()
           ); // eslint-disable-line react-hooks/exhaustive-deps
         }
         /**
-         * Hook that returns true if the input `bValue` is currently true or has been true
-         * within the past `nWithinPastMS` ms.
+         * Hook that returns true if the input `bValue` was true in the last nWithinPastMS milliseconds.
+         * This will return false if bValue has just become true, which allows for a useEffect on that transition.
          */
         function useValueWasTrueRecently(bValue, nWithinPastMS) {
           const [bWasTrueRecently, setWasTrueRecently] =
             react__WEBPACK_IMPORTED_MODULE_0__.useState(bValue);
-          const refTimeoutHandle = react__WEBPACK_IMPORTED_MODULE_0__.useRef(0); // Timeout to set wasTrueRecently to false.
           react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
             if (bValue) {
               setWasTrueRecently(true);
-              window.clearTimeout(refTimeoutHandle.current);
+              return undefined;
             } else {
-              window.clearTimeout(refTimeoutHandle.current);
-              refTimeoutHandle.current = window.setTimeout(
+              const iTimeout = window.setTimeout(
                 () => setWasTrueRecently(false),
                 nWithinPastMS
               );
+              return () => window.clearTimeout(iTimeout);
             }
-            return () => window.clearTimeout(refTimeoutHandle.current);
           }, [bValue, nWithinPastMS]);
-          return bWasTrueRecently || bValue;
+          return bWasTrueRecently;
+        }
+        /**
+         * As above, but also returns true if the value is true now
+         */
+        function useValueWasTrueRecentlyOrNow(bValue, nWithinPastMS) {
+          return useValueWasTrueRecently(bValue, nWithinPastMS) || bValue;
         }
         /**
          * Helper for tracking modal state, gives memoized show/hide functions.  Could be used for any boolean really.
@@ -92904,4 +92937,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=49392eb35eb932dd6bbf
+//# sourceMappingURL=friends.js.map?contenthash=c72d1746de2f0fdcf3c8

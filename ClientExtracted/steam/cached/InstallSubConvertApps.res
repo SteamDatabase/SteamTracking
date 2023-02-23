@@ -33,23 +33,6 @@
 		"paintbackground"		"1"
 		"progress"		"0.489157"
 	}
-	"ProgressBarSingleDisk"
-	{
-		"ControlName"		"ProgressBar"
-		"fieldName"		"ProgressBarSingleDisk"
-		"xpos"		"26"
-		"ypos"		"180"
-		"wide"		"344"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"0"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"progress"		"0.705629"
-		"variable"		"cd_progress"
-	}
 	"infolabel"
 	{
 		"ControlName"		"Label"

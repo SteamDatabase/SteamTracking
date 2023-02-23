@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Рух хрестовини"
 	"origin_ps5_button_create"					"Кнопка «Створити»"
 	"origin_ps5_button_mute"					"Кнопка «Без звуку»"
+	"origin_PS5_leftgrip"						"Ліва задня кнопка"
+	"origin_PS5_rightgrip"						"Права задня кнопка"
+	"origin_PS5_leftfn"							"Ліва кнопка функцій"
+	"origin_PS5_rightfn"						"Права кнопка функцій"
 }

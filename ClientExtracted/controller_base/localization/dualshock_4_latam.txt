@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Movimiento de cruceta"
 	"origin_ps5_button_create"					"Botón Crear"
 	"origin_ps5_button_mute"					"Botón de silenciar"
+	"origin_PS5_leftgrip"						"Botón trasero izquierdo"
+	"origin_PS5_rightgrip"						"Botón trasero derecho"
+	"origin_PS5_leftfn"							"Botón \"Fn\" izquierdo"
+	"origin_PS5_rightfn"						"Botón \"Fn\" derecho"
 }

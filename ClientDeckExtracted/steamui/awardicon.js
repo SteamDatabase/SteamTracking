@@ -13,7 +13,7 @@
     },
     77986: (n, e, t) => {
       "use strict";
-      t.r(e), t.d(e, { AwardIcon: () => u, AwardIconList: () => d });
+      t.r(e), t.d(e, { AwardIcon: () => u, AwardIconList: () => l });
       var o = t(67294),
         a = (t(16329), t(81603)),
         r = t(22784),
@@ -23,7 +23,7 @@
         p = t(45520);
       class u extends o.PureComponent {
         render() {
-          const n = (0, s.kb)(
+          const n = (0, s.LocalizePlural)(
             "#RewardsReaction_Tooltip",
             this.props.reaction.count || 0,
             (0, a.C)(this.props.reaction.reaction_type)
@@ -31,7 +31,7 @@
           return o.createElement(
             r.HP,
             {
-              className: (0, p.Z)(i().InfoContainer, i().IconContainer),
+              className: (0, p.default)(i().InfoContainer, i().IconContainer),
               toolTipContent: n,
             },
             o.createElement("img", {
@@ -47,7 +47,7 @@
           );
         }
       }
-      class d extends o.PureComponent {
+      class l extends o.PureComponent {
         render() {
           let n = [];
           for (const e of this.props.reactions)
@@ -58,3 +58,4 @@
     },
   },
 ]);
+//# sourceMappingURL=sourcemaps\awardicon.js.map

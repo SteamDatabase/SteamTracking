@@ -53,4 +53,5 @@ typedef enum EAppUpdateError
     k_EAppUpdateErrorMissingGameFiles = 50,
     k_EAppUpdateErrorCompatToolFailed = 51,
     k_EAppUpdateErrorInstallPathRemoved = 52,
+    k_EAppUpdateErrorInvalidBackupPath = 53,
 } EAppUpdateError;

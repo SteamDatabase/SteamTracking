@@ -90,6 +90,16 @@ message CContentServerDirectory_RequestPeerContentServer_Response {
 	optional uint32 server_port = 1;
 }
 
+message CContentServerDirectory_GetPeerContentInfo_Request {
+	optional uint64 remote_client_id = 1;
+	optional uint64 steamid = 2;
+	optional uint64 server_remote_client_id = 3;
+}
+
+message CContentServerDirectory_GetPeerContentInfo_Response {
+	repeated uint32 appids = 1;
+}
+
 service ContentServerDirectory {
 	option (service_description) = "Content Server and CDN directory";
 
@@ -99,4 +109,5 @@ service ContentServerDirectory {
 	rpc GetManifestRequestCode (.CContentServerDirectory_GetManifestRequestCode_Request) returns (.CContentServerDirectory_GetManifestRequestCode_Response);
 	rpc GetCDNAuthToken (.CContentServerDirectory_GetCDNAuthToken_Request) returns (.CContentServerDirectory_GetCDNAuthToken_Response);
 	rpc RequestPeerContentServer (.CContentServerDirectory_RequestPeerContentServer_Request) returns (.CContentServerDirectory_RequestPeerContentServer_Response);
+	rpc GetPeerContentInfo (.CContentServerDirectory_GetPeerContentInfo_Request) returns (.CContentServerDirectory_GetPeerContentInfo_Response);
 }

@@ -746,3 +746,13 @@ message CMsgClientStartPeerContentServerResponse {
 	optional uint32 result = 1;
 	optional uint32 server_port = 2;
 }
+
+message CMsgClientGetPeerContentInfo {
+	optional fixed64 steamid = 1;
+	optional fixed64 client_remote_id = 2;
+}
+
+message CMsgClientGetPeerContentInfoResponse {
+	optional uint32 result = 1;
+	repeated uint32 apps = 2;
+}

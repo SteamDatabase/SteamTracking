@@ -1013,6 +1013,8 @@ enum EMsg {
 	k_EMsgClientOGSEndSession = 5492;
 	k_EMsgClientOGSEndSessionResponse = 5493;
 	k_EMsgClientOGSWriteRow = 5494;
+	k_EMsgClientGetPeerContentInfo = 5495;
+	k_EMsgClientGetPeerContentInfoResponse = 5496;
 	k_EMsgClientStartPeerContentServer = 5497;
 	k_EMsgClientStartPeerContentServerResponse = 5498;
 	k_EMsgClientServerUnavailable = 5500;

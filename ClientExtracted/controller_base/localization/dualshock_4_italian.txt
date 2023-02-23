@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Movimento del pad direzionale"
 	"origin_ps5_button_create"					"Tasto Crea"
 	"origin_ps5_button_mute"					"Tasto mute"
+	"origin_PS5_leftgrip"						"Tasto posteriore sinistro"
+	"origin_PS5_rightgrip"						"Tasto posteriore destro"
+	"origin_PS5_leftfn"							"Tasto Fn sinistro"
+	"origin_PS5_rightfn"						"Tasto Fn destro"
 }

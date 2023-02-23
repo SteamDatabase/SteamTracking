@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"D 패드 이동"
 	"origin_ps5_button_create"					"만들기 버튼"
 	"origin_ps5_button_mute"					"음소거 버튼"
+	"origin_PS5_leftgrip"						"왼쪽 후면 버튼"
+	"origin_PS5_rightgrip"						"오른쪽 후면 버튼"
+	"origin_PS5_leftfn"							"왼쪽 Fn 버튼"
+	"origin_PS5_rightfn"						"오른쪽 Fn 버튼"
 }

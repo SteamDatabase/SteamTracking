@@ -1,8 +1,9 @@
 .
 __TEXT
+@;
+@;
 __text
 __TEXT
-n;1
 __stubs
 __TEXT
 __stub_helper
@@ -12,33 +13,35 @@ __TEXT
 __const
 __TEXT
 __gcc_except_tab__TEXT
-B8
-B8
 __objc_methname
 __TEXT
 __objc_classname__TEXT
-QD:
-QD:
 __objc_methtype
 __TEXT
-\D:
 (
-\D:
 __unwind_info
 __TEXT
 __eh_frame
 __TEXT
 __DATA
+@;
+@;
 __nl_symbol_ptr
 __DATA
+@;
+@;
 __got
 __DATA
 __la_symbol_ptr
 __DATA
+HB;
+HB;
 __mod_init_func
 __DATA
 __const
 __DATA
+P];
+P];
 __cfstring
 __DATA
 __objc_classlist__DATA
@@ -48,12 +51,20 @@ __DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
+xw=
+xw=
 __objc_superrefs__DATA
+x=
+x=
 __objc_ivar
 __DATA
+(x=
+(x=
 __objc_data
 __DATA
+0x=
 P
+0x=
 __data
 __DATA
 (U
@@ -62,28 +73,25 @@ __DATA
 0
 __thread_data
 __DATA
-/>
 @
-/>
 __thread_bss
 __DATA
-@/>
 __bss
 __DATA
-@3>
 __common
 __DATA
 H
 __LINKEDIT
-A
-@>
+>
 
 8
 @loader_path/panorama.dylib
 "
-@>
-@l>
+>
+,>
+XX
 P
+!?
 
 *
 8
@@ -156,12 +164,7 @@ h
 &
 )
 HB
-W=
-M1
-1
-1
 0
-=
 
 
 
@@ -172,6 +175,7 @@ M1
 1
 @
 @
+2
 @
 8
 HC
@@ -256,13 +260,15 @@ $
 $
 (
 $
-D
 H
+L
 ,
 0
 4
-@
 8
+@
+<
+
 $
 (
 ,
@@ -2805,69 +2811,6 @@ IsValid()
 src.IsValid() && IsValid()
 v.IsValid()
 a.IsValid() && b.IsValid()
-Xbox 360 Controller
-Xbox 360 Wireless Controller
-PDP Xbox 360 Afterglow
-PDP Xbox 360 Rock Candy
-PDP INJUSTICE FightStick
-PDP INJUSTICE FightPad
-PDP EA Soccer Controller
-PDP Battlefield 4 Controller
-PDP MK X Fight Stick
-PDP Xbox 360 Marvel Controller
-PDP Xbox 360 Controller
-SteelSeries Stratus Duo
-Amazon Luna Controller
-Xbox One Controller
-Xbox One S Controller
-Xbox Adaptive Controller
-Xbox Series X Controller
-PDP Xbox One Afterglow
-PDP Xbox One Face-Off Controller
-PDP MK X Fight Pad
-PDP Xbox One Rock Candy
-PDP Fallout 4 Vault Boy Controller
-PDP Xbox One @Play Controller
-PDP Mirror's Edge Controller
-PDP Metallic Controller
-PDP NFL Face-Off Controller
-PDP Xbox One Camo
-PDP Xbox One Controller
-PDP Deliverer of Truth
-PDP Battlefield 1 Controller
-PDP Titanfall 2 Controller
-PDP Mass Effect: Andromeda Controller
-PDP Halo Wars 2 Face-Off Controller
-PDP Victrix Pro Fight Stick
-PDP Mortal Kombat Controller
-PDP Xbox One Midnight Blue
-PDP Xbox One Verdant Green
-PDP Xbox One Crimson Red
-PDP Xbox One Arctic White
-PDP Xbox One Phantom Black
-PDP Xbox One Ghost White
-PDP Xbox One Revenant Blue
-PDP Xbox One Raven Black
-PDP Xbox One Ember Orange
-PDP Xbox One GAMEware Controller
-PDP Xbox One Royal Purple
-PDP Kingdom Hearts Controller
-PDP Xbox One Phantasm Red
-PDP Xbox One Specter Violet
-PDP Xbox One Blu-merang
-PDP Xbox One Cranblast
-PDP Xbox One Aqualime
-PDP Xbox One Red Camo
-PDP Xbox One RC Gamepad
-PDP Xbox Series X Afterglow
-Victrix Gambit Tournament Controller
-PDP Xbox Series X Midnight Blue
-PowerA Xbox Series X Controller
-PowerA Fusion Pro 2 Controller
-PowerA Spectra Infinity Controller
-PowerA Xbox One Controller
-Xbox One Elite Controller
-Xbox One Elite 2 Controller
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
 libjpeg asking to skip more bytes than exist, and we can't further fill buffer - was a crash before 12/29/21
 row_stride_out >= row_stride
@@ -3148,9 +3091,6 @@ int32
 @panorama_joystick_button_repeat_curve_time
 1.2
 SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS
-GamePad-
-Streaming Gamepad
-Opening joystick %u : %s
 Closing joystick %u
 CGamepadController::RunFrame
 XInput Controller
@@ -5397,8 +5337,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Feb 20 2023
-14:40:12
+Feb 22 2023
+12:31:56
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8286,15 +8226,9 @@ q.IsValid()
 angles.IsValid()
 SSE is required.
 src.IsValid()
-jM2
 
 HB
-W=
-M1
-1
-1
 0
-=
 
 
 
@@ -8305,65 +8239,55 @@ M1
 1
 @
 @
-X0
+2
++0
 0
-4/
-/
-@$
-t&
+<$
+r/
 9
-%
+Y%
+q9
+F-
+8
 .
-&
-%
-,9
-$
+-
+"
+v8
 -
 7
-7
-7
-7
-,
-,
-,
-,
-,
-,
-,
-,
-,
-u,
-d,
-.
-:
-,
-,
-,
-,
-,
+q,
+",
+)
 ,
 j
 "
 "
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
 ?
 )
 >
 ;
 F
 ,
-/
-/
 -
 +
 !
 &
-A+
-c-
-+
-:+
++(
+-
 j
-}*
-z'
 @
 @
 @
@@ -8378,9 +8302,10 @@ z'
 @
 @
 @
+,
+-*
 @
 @
-**
 @
 @
 @
@@ -8414,14 +8339,9 @@ z'
 @
 @
 d
-96
 Uk/
 K
-86
-76
-66
-*
-*
+6
 @
 @
 @
@@ -8454,12 +8374,15 @@ K
 0
 @
 @
--
--
-:+
+2+
++
++
+:&
+)
 &
 &
-&
+x)
+X)
 @
 @
 @
@@ -8473,48 +8396,43 @@ K
 @
 0
 0
-t(
-)
-)
-)
+u(
+Z(
 =
-Q(
 @
 @
+/(
+$%
 (
 H=
-1
-1
-1
-'
-'
-'
-'
-'
-$
-$
-&
-@
-1
 2
-=
+1
+E)
+r$
+(
+(
+)
+'
+'
+$
 &
 @
+=
 @
-%
+@
+"$
+$
+0
 $
 @
 @
 ?
 $
-./
+/
 .
 .
-.
-1
 @
-/
-/
+#
 #
 P
 (
@@ -8526,58 +8444,61 @@ A
 A
 A
 (
--
+H#
+y"
+r"
+.
+@
+E9u
+E9u
+t
+"
+@
+A
+A
+A
+A
+A
+A
+A
+A
+,
 /
 /
+/
+#
+#
+!
+!
+!
+!
+!
+!
+!
+!
+!
+=#
+6
+"
 @
 #
-E9u
-E9u
-@
-&
-&
-&
-&
-&
-&
-A
-A
-A
-A
-A
-A
-A
-A
-Ic
-_"
-k"
->.
-i%
-"
-C%
-k.
-@
-!
-)
-/-
-+
-+
--
-z(
-(
-"
 [
 ,
-
+*
 }
 "
 @
-%(
-'
-$
 (
+(
+%
+%
+%
 Hi
 (
+#
+#
+Ic
+}#
 @
 @
 0
@@ -8588,6 +8509,9 @@ Hi
 0
 
 
+!
+!
+n%
 0
 %
 %
@@ -8715,7 +8639,6 @@ IcE
 @
 @
 @
-@#
 @
 @
 @
@@ -8800,7 +8723,6 @@ IcE
 @
 @
 @
-#
 @
 @
 @
@@ -8887,12 +8809,10 @@ IcE
 @
 @
 @
-^!
-!
-!
-!
+^
 @
 j
+!
 @
 @
 j
@@ -8988,20 +8908,13 @@ V
 =
 =
 !
-2
 
 @
 &
-}
-J
-(
 
 
 
 
-
-
-1
 
 @
 M9e
@@ -9062,13 +8975,11 @@ I;E
 B
 ?
 `
+_
 `
 !
 A
 @
-
-
-
 @
 @
 P
@@ -9130,4 +9041,4 @@ E
 @
 @
 0
-Lc5s\
+Lc534

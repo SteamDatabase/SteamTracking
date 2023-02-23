@@ -28,8 +28,10 @@
 	"origin_xboxone_shoulder_r"						"Shoulder drept"
 	"origin_xboxone_button_menu"					"Buton Meniu"
 	"origin_xboxone_button_view"					"Butonul Vizualizare"
+	"origin_xboxone_button_dpad_move"				"Mișcare D-pad"
 	"origin_xboxone_button_paddle_1"				"Clapeta P1"
 	"origin_xboxone_button_paddle_2"				"Clapeta P2"
 	"origin_xboxone_button_paddle_3"				"Clapeta P3"
 	"origin_xboxone_button_paddle_4"				"Clapeta P4"
-	}
+	"origin_xboxone_button_share"					"Butonul Share"
+}

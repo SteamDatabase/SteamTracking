@@ -166,7 +166,7 @@
 "Overlay_MicroTxnAuth_BalanceLabel" "Балансът Ви"
 "Overlay_MicroTxnAuth_Tax"			"Данък"
 "Overlay_MicroTxnCancelDlgTitle"	"Отказ на транзакцията"
-"Overlay_MicroTxnCancelDlgText"		"Сигурни ли сте, че искате да откажете тази транзакция?"
+"Overlay_MicroTxnCancelDlgText"		"Сигурни ли сте, че бихте искали да откажете тази транзакция?"
 "Overlay_MicroTxnCancelDlgOK"		"Отказ на транзакцията"
 "Overlay_MicroTxnCancelDlgCancel"	"Продължаване с транзакцията"
 "Overlay_MicroTxnSubscription"			"Ще бъдете таксувани %cost% през %time%"
@@ -243,7 +243,7 @@
 "Overlay_AsyncNotificatoinsRequestedDialog_Title" "Позволяване на известия?"
 "Overlay_AsyncNotificatoinsRequestedDialog_Allow" "Позволяване на известия"
 "Overlay_AsyncNotificatoinsRequestedDialog_Disallow" "Забраняване"
-"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "Това заглавие поддържа асинхронно игрално преживяване, позволявайки Ви да го затваряте между ходовете. Искате ли да получавате известия в Steam клиента, когато е Ваш ред да играете?"
+"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "Това заглавие поддържа асинхронно игрално преживяване, позволявайки Ви да го затваряте между ходовете. Бихте ли искали да получавате известия в Steam клиента, когато е Ваш ред да играете?"
 
 "Overlay_Broadcast_Panel_Title" "Предаване"
 "Overlay_Broadcast_Panel_Text" "В момента това предаване е следвано от %numviewers% зрители"

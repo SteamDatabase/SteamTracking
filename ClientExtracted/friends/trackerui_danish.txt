@@ -742,7 +742,7 @@
 "Steam_Settings_Broadcast_ShowChat" "Vis seers chat i spil:"
 "Steam_Settings_Broadcast_StatusHeader" "Broadcast-status:"
 "Steam_Settings_Broadcast_HelpHeader" "Brug for hjælp?"
-"Steam_Settings_Broadcast_HelpURL_Desc" "Vis broadcast-supportsider"
+"Steam_Settings_Broadcast_HelpURL_Desc" "Vis broadcastsupportsider"
 "Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Steam_Settings_Broadcast_PermissionsHeader" "Indstilling for synlighed:"
 "Steam_Settings_Broadcast_BitrateHeader" "Maksimal bitrate:"

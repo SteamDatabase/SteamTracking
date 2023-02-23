@@ -234,7 +234,7 @@
 "Overlay_CommunityDiscussions_Panel_NumDiscussions" "%num_discussions% discusión(es) activa(s)"
 
 "Overlay_SaveUncompressed" "Guardar copia sin comprimir"
-"Overlay_SetScreenshotFolder" "Elegir carpeta de capturas externa"
+"Overlay_SetScreenshotFolder" "Elegir carpeta externa de capturas"
 
 
 "Overlay_SetScreenshotFolder_NoDriveRoot" "No puedes seleccionar la raíz de una unidad"

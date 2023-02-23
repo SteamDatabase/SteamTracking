@@ -4206,7 +4206,7 @@ wacht even tot dat spel is gestart."
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Voer de machtigingscode in om {s:devicename} toe te staan verbinding te maken en spellen te spelen."
 
 	"Steam_OtherSessionPlaying_Title" "Fout - Steam"
-	"Steam_OtherSessionPlaying_Text" "Je bent ingelogd op een andere momenteel spelende computer \"{s:existing_app}\".\nOpstarten \"{s:launching_app}\" op deze computer zal de verbinding met de andere sessie verbreken van Steam."
+	"Steam_OtherSessionPlaying_Text" "Je bent ingelogd op een andere computer en daar speel je \"{s:existing_app}\".\nAls je \"{s:launching_app}\" op deze computer start, wordt je andere Steam-sessie beëindigd."
 	
 	"SteamUI_JoinDialog_KickSessions_Error" "Kon andere sessie die \"{s:existing_app}\" speelt niet afbreken."
 

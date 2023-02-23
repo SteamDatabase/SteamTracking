@@ -4281,7 +4281,7 @@
 	"Settings_Broadcast_ShowChat_RightTop" "右上"
 	"Settings_Broadcast_ShowChat_RightBottom" "右下"
 	"Settings_Broadcast_ShowChat_LeftBottom" "左下"
-	"Settings_Broadcast_Disabled_System" "Steam 實況直播目前並不支援這個作業系統。"
+	"Settings_Broadcast_Disabled_System" "Steam 實況直播目前不支援此作業系統。"
 	"Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Steam 實況直播需要 Windows 7 或更高版本的作業系統。\n\n 請在 Steam.exe 檔案內容裡移除\n任何 Windows 相容性設定後重新開啟 Steam。"
 	"Settings_Broadcast_Disabled_User" "您的帳戶並沒有足夠的權限來進行實況直播。"
 

@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"方向パッドの動作"
 	"origin_ps5_button_create"					"クリエイトボタン"
 	"origin_ps5_button_mute"					"MUTEボタン"
+	"origin_PS5_leftgrip"						"左背面ボタン"
+	"origin_PS5_rightgrip"						"右背面ボタン"
+	"origin_PS5_leftfn"							"左Fnボタン"
+	"origin_PS5_rightfn"						"右Fnボタン"
 }

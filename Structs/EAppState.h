@@ -19,5 +19,5 @@ typedef enum EAppState
     k_EAppStateMovingFolder = 32768,
     k_EAppStateTerminating = 65536,
     k_EAppStatePrefetchingInfo = 131072,
-    k_EAppStatePeerDownloading = 262144,
+    k_EAppStatePeerServer = 262144,
 } EAppState;

@@ -19,7 +19,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-(f
+,f
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -178,13 +178,15 @@ $
 $
 (
 $
-D
 H
+L
 ,
 0
 4
-@
 8
+@
+<
+
 $
 (
 ,
@@ -2353,20 +2355,22 @@ sc_schinese
 
 @
 
+g
 @
 @
-
+j
 @
 =
+q
 Ic
-m
+t
+Y
 
-9
-r
+L
+2
 
 0
 0
-
 
 
 Hi
@@ -2385,7 +2389,7 @@ D
 
 
 
-]
+
 @
 Hc
 Hc

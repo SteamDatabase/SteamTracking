@@ -1198,6 +1198,7 @@ Corrupt file signature
 Missing game files
 Compat tool failed
 Install path removed
+Invalid backup path
 Logged Off
 Connecting
 Connected

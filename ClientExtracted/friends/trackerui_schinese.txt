@@ -737,7 +737,7 @@
 "Steam_Settings_Broadcast_RecordMic" "录制我的麦克风"
 "Steam_Settings_Broadcast_ConfigMic" "配置麦克风"
 "Steam_Settings_Broadcast_EnableHardwareSupport" "启用硬件支持 *"
-"Steam_Settings_Broadcast_ShowDebugInfo" "显示上传统计"
+"Steam_Settings_Broadcast_ShowDebugInfo" "显示上传统计数据"
 "Steam_Settings_Broadcast_ShowReminderBanner" "总是显示直播状态"
 "Steam_Settings_Broadcast_ShowChat" "在游戏中显示观众的聊天："
 "Steam_Settings_Broadcast_StatusHeader" "直播状态："

@@ -840,11 +840,6 @@
         "size": 1
     },
     {
-        "id": 1020009,
-        "name": "20UninstallClientApp_t",
-        "size": 4
-    },
-    {
         "id": 1020011,
         "name": "25ClientAppNewsItemUpdate_t",
         "size": 12
@@ -1088,11 +1083,6 @@
         "id": 1020094,
         "name": "AppLicensesChanged_t",
         "size": 264
-    },
-    {
-        "id": 1020095,
-        "name": "Unknown",
-        "size": 1
     },
     {
         "id": 1020098,
@@ -1928,6 +1918,11 @@
         "id": 1280031,
         "name": "Unknown",
         "size": 4
+    },
+    {
+        "id": 1280033,
+        "name": "Unknown",
+        "size": 8
     },
     {
         "id": 1290004,

@@ -114,6 +114,10 @@
             "argc": "3"
         },
         {
+            "name": "GetRemoteClientStreamingSession",
+            "argc": "3"
+        },
+        {
             "name": "GetRemoteClientFormFactor",
             "argc": "3"
         },
@@ -155,6 +159,10 @@
         },
         {
             "name": "BRemoteDeviceStreaming",
+            "argc": "3"
+        },
+        {
+            "name": "GetRemoteDeviceStreamingSession",
             "argc": "3"
         },
         {

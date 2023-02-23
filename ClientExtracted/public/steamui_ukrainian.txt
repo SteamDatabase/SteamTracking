@@ -363,9 +363,15 @@
 "SteamUI_AccountDialog_Subscriptions"	"Підписки"
 "SteamUI_AccountDialog_AccountDetails"	"Акаунт"
 "Steam_LogoutDialogTitle"			"Вийти"
-"Steam_LogoutDialogMsg"				"Це призведе до виходу з акаунта Steam. Вам буде необхідно заново\nввести логін та пароль свого акаунта, щоби знову скористатися Steam.\n\nХочете продовжити?"
+"Steam_LogoutDialogMsg"				"Це призведе до виходу з акаунта Steam. Вам буде потрібно заново ввести свій логін і пароль, а також пройти перевірку Steam Guard, щоб увійти до акаунта Steam.\n\nБажаєте продовжити?"
 "Steam_LogoutDialogOKButton"			"Вийти"
 "Steam_LogoutDialogLabel"			"Логін:"
+
+"Steam_ChangeUserDialogTitle"			"Змінити акаунт"
+"Steam_ChangeUserDialogMsg"				"Це дозволить вам увійти до іншого акаунта Steam. Поточний акаунт буде збережений на цьому комп’ютері, тож ви зможете ввійти до нього в майбутньому.\n\nБажаєте продовжити?"
+"Steam_ChangeUserDialogMsg_NoCachedCredentials"	"Це дозволить вам увійти до іншого акаунта Steam. Щоб увійти до цього акаунта знову, вам доведеться ввести пароль або пройти мобільну автентифікацію.\n\nБажаєте продовжити?"
+"Steam_ChangeUserDialogOKButton"			"Змінити акаунт"
+"Steam_ChangeUserDialogLabel"			"Логін:"
 
 "Steam_FlushConfigDialogTitle"			"Steam — Очистити кеш завантаження"
 "Steam_FlushConfigDialogMsg"			"Це зітре локальний кеш завантаження і вам знову необхідно буде увійти до Steam.\n\nДійсно бажаєте продовжити?"
@@ -1504,12 +1510,12 @@
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Якщо ввімкнено, Steam обмежить швидкість завантаження, щоби зберегти найвищу якість Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Відображати швидкість завантаження у бітах за секунду"
 
-"Steam_PeerContentTitle"			"Перенесення файлів гри через локальну мережу"
-"Steam_PeerContentInfo"			"Ця функція дозволяє переносити файли гри з вашого ПК на інші ПК чи Steam Deck у локальній мережі (і навпаки), зменшуючи Інтернет-трафік під час завантаження або оновлення гри"
-"Steam_PeerContentOff"			"Вимкнути: заборонити перенесення файлів"
-"Steam_PeerContentSameUser"		"Дозволити перенесення файлів між моїми пристроями"
-"Steam_PeerContentFriends"		"Дозволити перенесення файлів між моїми друзями в Steam"
-"Steam_PeerContentAnyUser"		"Дозволити перенесення файлів між всіма користувачами"
+"Steam_PeerContentTitle"			"Передавання файлів гри через локальну мережу"
+"Steam_PeerContentInfo"			"Ця функція дозволяє передавати файли гри з вашого ПК на інші ПК чи Steam Deck у локальній мережі (і навпаки), зменшуючи Інтернет-трафік під час завантаження або оновлення гри"
+"Steam_PeerContentOff"			"Вимкнути: заборонити передавання файлів"
+"Steam_PeerContentSameUser"		"Дозволити передавання файлів між моїми пристроями"
+"Steam_PeerContentFriends"		"Дозволити передавання файлів між моїми друзями в Steam"
+"Steam_PeerContentAnyUser"		"Дозволити передавання файлів між всіма користувачами"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud зберігає інформацію для того, щоби ваша взаємодія з тим чи іншим продуктом була узгодженою на всіх комп’ютерах."
@@ -1771,6 +1777,7 @@
 "steam_menu_fullgameslist"	"Повернути повний вигляд"
 "steam_menu_backupgames"	"Резервне копіювання ігор…"
 "steam_menu_changeuser"		"Змінити акаунт…"
+"steam_menu_signout"		"Вийти…"
 "steam_menu_support"		"Служба підтримки Steam"
 "steam_menu_community"		"Спільнота"
 "steam_menu_community_home"		"Головна сторінка спільноти"
@@ -1961,7 +1968,7 @@
 "Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"Ваше замовлення %subscription% не було завершене. Кредитна компанія відхилила запит через неправильно вказану адресу.\n\nЗауважте, що в деяких випадках кредитна компанія може «заморозити» кошти вашого рахунка, але гроші не буде знято. Якщо після перевірки даних нижче ви вважаєте, що запит на оплату відхилено помилково, спробуйте здійснити придбання ще раз."
 
 "ServerBrowser_ModNotInstalled" "Ця модифікація не встановлена"
-"ServerBrowser_AppNotFound" "Неможливо підключитися до сервера,\n вказаний сервером AppID неправильний."
+"ServerBrowser_AppNotFound" "Неможливо підключитися до сервера:\n вказаний сервером AppID неправильний."
 "ServerBrowser_NotInitialized" "Steam не ініціалізований. Будь ласка, спробуйте ще раз"
 
 "SteamUI_SSAUpdatedInfo"	"Угоду підписника Steam було оновлено %SSA_date%. Користування Steam та іграми в ньому передбачає, що ви ознайомилися з цими змінами та приймаєте їх."
@@ -3158,7 +3165,7 @@
 "Steam_NoBetaChosen"	"У жодному\n(Наразі доступно %numbetas%)"
 "Steam_NoBetaChosenNonAdmin"	"Наразі доступно %numbetas%\n(Цей параметр може змінити тільки користувач, який інстальовав Steam.)"
 "Steam_UserCantSetBeta" "%electedbeta%\n(Цей параметр може змінити тільки користувач, який інстальовав Steam.)"
-"Steam_BetaReportBug"	"Знайшли ваду?"
+"Steam_BetaReportBug"	"Повідомити про помилку"
 "Steam_ChooseBetaDlgTitle" "Бета-версія Steam"
 "Steam_ChooseBetaExplanation"	"Steam часто пропонує можливість випробувати оновлення клієнту та ігор до того, як вони будуть офіційно випущені.
 
@@ -4807,15 +4814,15 @@
 "Steam_ViewSSAInBrowser" "Ви повинні прочитати та прийняти умови Угоди підписника Steam.\n<a href=\"%url%\">Клацніть тут</a>, щоби відкрити угоду у браузері. Аби продовжити, поверніться до цього вікна."
 
 "Steam_VR2DGameWarning_Title" "Попередження"
-"Steam_VR2DGameWarning_Desc" "%launching_app% запуститься одночасно у вашому шоломі ВР та на екрані ПК.\nВ такому режимі швидкодія може бути неприйнятною. Для запуску гри лише на екрані ПК, будь ласка, закрийте SteamVR до її запуску."
+"Steam_VR2DGameWarning_Desc" "%launching_app% запуститься одночасно у вашому шоломі ВР та на екрані ПК.\nУ такому режимі ви можете не досягти бажаної швидкодії. Щоб запустити гру лише на екрані ПК, закрийте SteamVR до її запуску."
 "Steam_VR2DGameWarning_Desc_Old" "%launching_app% не підтримує ВР. Цей застосунок запуститься на вашому ПК та може вплинути на продуктивність ВР."
-"Steam_VR2DGameWarning_Desc_VRGame" "%launching_app% підтримує ВР, але ви обрали звичайну версію, бажаєте продовжити?"
+"Steam_VR2DGameWarning_Desc_VRGame" "%launching_app% має вбудовану підтримку ВР, але ви обрали версію для настільного комп’ютера. Бажаєте продовжити?"
 
 "Steam_OculusOnlyGameWarning_Title" "Увага"
-"Steam_OculusOnlyGameWarning_Desc" "%launching_app% буде запущено за межами середовища SteamVR. Вам може знадобитися зняти шолом, аби повернутися у Steam."
+"Steam_OculusOnlyGameWarning_Desc" "%launching_app% буде запущено за межами середовища SteamVR. Можливо, вам доведеться зняти шолом, щоб повернутися у Steam."
 
 "Steam_IncorrectVRSDKWarning_Title" "Попередження"
-"Steam_IncorrectVRSDKWarning_Desc" "%launching_app% не підтримує поточний під’єднаний шолом. Для запуску натисніть «Гаразд»."
+"Steam_IncorrectVRSDKWarning_Desc" "%launching_app% не підтримує під’єднаний шолом. Якщо ви все одно бажаєте запустити застосунок, натисніть «Гаразд»."
 
 "Steam_VacBanOnAccount"		"Блокування античіта Valve на акаунті"
 "Steam_NoVacBanOnAccount"	"Акаунт не має блокувань VAC"

@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Движение крестовины"
 	"origin_ps5_button_create"					"Кнопка создания"
 	"origin_ps5_button_mute"					"Кнопка выключения звука"
+	"origin_PS5_leftgrip"						"Тыльная левая кнопка"
+	"origin_PS5_rightgrip"						"Тыльная правая кнопка"
+	"origin_PS5_leftfn"							"Левая кнопка Fn"
+	"origin_PS5_rightfn"						"Правая кнопка Fn"
 }

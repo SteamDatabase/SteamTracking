@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Mișcare D-pad"
 	"origin_ps5_button_create"					"Butonul de creare"
 	"origin_ps5_button_mute"					"Buton dezactivare sunet"
+	"origin_PS5_leftgrip"						"Butonul posterior stâng"
+	"origin_PS5_rightgrip"						"Butonul posterior drept"
+	"origin_PS5_leftfn"							"Butonul Fn stâng"
+	"origin_PS5_rightfn"						"Butonul Fn drept"
 }

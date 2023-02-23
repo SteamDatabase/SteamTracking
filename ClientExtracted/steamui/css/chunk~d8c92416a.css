@@ -179,9 +179,6 @@ body {
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .loginpanel_LoginBackground_1lh1e {
   background-color: #0e141b;
   display: flex;
@@ -911,9 +908,6 @@ body {
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .languagescreen_LanguageScreen_20rTp {
   display: flex;
   justify-content: center;
@@ -1114,9 +1108,6 @@ body {
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .timezonescreen_TimezoneScreen_1imE6 {
   display: flex;
   justify-content: center;
@@ -1279,9 +1270,6 @@ body {
   100% {
     background-position: 50% 0%;
   }
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .networkscreen_NetworkScreen_1s2Cm {
   display: flex;
@@ -1467,9 +1455,6 @@ body {
   100% {
     background-position: 50% 0%;
   }
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .oobecontrols_OOBEButton_2Pycd {
   background: #23262e;
@@ -1782,9 +1767,6 @@ body {
   100% {
     background-position: 50% 0%;
   }
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .newloginpanel_Login_1sc-B {
   position: relative;
@@ -2647,3 +2629,5 @@ body {
   font-weight: 500;
   text-align: center;
 }
+
+/*# sourceMappingURL=sourcemaps\css\chunk~d8c92416a.css.map*/

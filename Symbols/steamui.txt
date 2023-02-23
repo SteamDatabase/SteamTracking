@@ -383,6 +383,7 @@
  SDL_GetAudioDeviceName
  SDL_GetAudioDeviceSpec
  SDL_GetDisplayBounds
+ SDL_GetDisplays
  SDL_GetError
  SDL_GetGamepadAxisFromString
  SDL_GetGamepadBindForAxis
@@ -412,8 +413,8 @@
  SDL_GetJoysticks
  SDL_GetNumAudioDevices
  SDL_GetNumJoystickAxes
- SDL_GetNumVideoDisplays
  SDL_GetPlatform
+ SDL_GetPrimaryDisplay
  SDL_GetQueuedAudioSize
  SDL_GetRectIntersection
  SDL_GetRectUnion
@@ -1093,7 +1094,6 @@
  Test_TerminateThread
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
- ThreadImplOneTimeInit
  ThreadInMainThread
  ThreadInterlockedAssignIf
  ThreadInterlockedAssignIf64
@@ -1241,6 +1241,7 @@
  __bzero
  __cxa_allocate_exception
  __cxa_atexit
+ __cxa_bad_cast
  __cxa_bad_typeid
  __cxa_begin_catch
  __cxa_end_catch

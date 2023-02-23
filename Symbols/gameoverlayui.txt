@@ -115,7 +115,8 @@
  SDL_GL_SetAttribute
  SDL_GL_SwapWindow
  SDL_GetDisplayBounds
- SDL_GetNumVideoDisplays
+ SDL_GetDisplays
+ SDL_GetPrimaryDisplay
  SDL_GetWindowFromID
  SDL_GetWindowSize
  SDL_GetWindowWMInfo
@@ -125,6 +126,7 @@
  SDL_SetHint
  SDL_ShowCursor
  SDL_WasInit
+ SDL_free
  SetMiniDumpBuildID
  SetMiniDumpSteamID
  SpewOutputFunc
@@ -312,7 +314,6 @@
  V_strncmp
  V_strncpy
  V_strnicmp
- V_strristr
  V_strtoui64
  V_tolower
  V_towlower32

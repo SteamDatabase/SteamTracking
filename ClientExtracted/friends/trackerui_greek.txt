@@ -391,7 +391,7 @@
 "Friends_NameChangeFailed_Info"		"Αποτυχία αλλαγής ονόματος προφίλ. Παρακαλούμε δοκιμάστε ξανά σε λίγα λεπτά."
 "Friends_NameChangeThrottled_Info"		"Δεν επιτρέπονται πολύ συχνές αλλαγές στο όνομα προφίλ. Προσπαθήστε ξανά σε λίγα λεπτά."
 
-"Friends_OnlineNotification_Info"			"είναι τώρα σε σύνδεση"
+"Friends_OnlineNotification_Info"			"μόλις συνδέθηκε"
 "Friends_InGameNotification_Info"			"τώρα παίζει"
 "Friends_InAppNotification_Info"			"τώρα χρησιμοποιεί"
 "Friends_ChatInvitation_Info"				"σας προσκάλεσε να συνομιλήσετε"

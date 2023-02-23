@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Směrový kříž – pohyb"
 	"origin_ps5_button_create"					"Tlačítko Vytvořit"
 	"origin_ps5_button_mute"					"Tlačítko ztlumení"
+	"origin_PS5_leftgrip"						"Levé zadní tlačítko"
+	"origin_PS5_rightgrip"						"Pravé zadní tlačítko"
+	"origin_PS5_leftfn"							"Levé tlačítko Fn"
+	"origin_PS5_rightfn"						"Pravé tlačítko Fn"
 }

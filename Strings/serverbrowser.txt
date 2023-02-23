@@ -56,7 +56,7 @@ __LINKEDIT
 @
 @loader_path/serverbrowser.dylib
 "
-h!
+("
 P
 
 
@@ -89,6 +89,7 @@ h
 &
 4
 )
+@(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -404,13 +405,15 @@ $
 $
 (
 $
-D
 H
+L
 ,
 0
 4
-@
 8
+@
+<
+
 $
 (
 ,
@@ -3945,12 +3948,13 @@ M9e
 0
 @
 @
+4
 
 
 
 d
+4
 A+M
-
 
 j
 j
@@ -4195,9 +4199,9 @@ d
 @
 @
 @
-`
 @
 @
+4
 @
 @
 @

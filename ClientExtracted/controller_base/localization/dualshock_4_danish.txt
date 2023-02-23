@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Retningsknap – bevægelse"
 	"origin_ps5_button_create"					"Oprettelsesknap"
 	"origin_ps5_button_mute"					"Muteknap"
+	"origin_PS5_leftgrip"						"Venstre bagsideknap"
+	"origin_PS5_rightgrip"						"Højre bagsideknap"
+	"origin_PS5_leftfn"							"Venstre funktionsknap"
+	"origin_PS5_rightfn"						"Højre funktionsknap"
 }

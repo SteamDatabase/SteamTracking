@@ -125,9 +125,6 @@
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .allcollections_Container_1TBJ1 {
   min-height: 100%;
 }
@@ -143,7 +140,7 @@
   user-select: none;
 }
 .BasicUI .allcollections_ScrollContainer_u1xD3 {
-  padding-top: calc(24px + var(--basicui-header-height));
+  padding-top: calc(24px + var(--basicui-header-height, 0px));
 }
 .allcollections_ScrollContainer_u1xD3.allcollections_EventContainer_In4ZE {
   padding: 0;
@@ -840,9 +837,6 @@
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetails_Container_2iE-7 {
   height: 100%;
   display: flex;
@@ -910,9 +904,6 @@ div.HighPerfMode .appdetails_ScrollContainer_2l416 {
 }
 .appdetails_Header_2gZXh.appdetails_HeaderLoaded_tXlLv {
   opacity: 1;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .sharedappdetailsheader_TopCapsule_2meE3 {
   --header-height: 24vw;
@@ -1581,12 +1572,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   );
   pointer-events: none;
 }
-:root {
-  --basicui-header-height: 0px;
-}
-:root {
-  --basicui-header-height: 0px;
-}
+
 .appdetailsheader_Container_6-WKl {
   position: relative;
   width: 100%;
@@ -1771,9 +1757,6 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
 a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4:hover {
   background-color: rgba(101, 113, 128, 0.356);
   color: #fff;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .appactivityday_AppActivityDay_S2Fu9 {
   margin-bottom: 16px;
@@ -2991,9 +2974,6 @@ div.NarrowRightPanel
 .remainderlist_ItemWrapper_2H_yt {
   height: 100%;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetailsachievementssection_Container_eXM8B {
   width: 100%;
   max-height: 300px;
@@ -3377,9 +3357,6 @@ div.NarrowRightPanel
   position: relative;
   overflow: hidden;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .achievementiconbase_Icon_2bzHb {
   width: 100%;
   height: 100%;
@@ -3501,9 +3478,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .posttextentry_PostTextEntry_3x31A {
   overflow: hidden;
@@ -3713,9 +3687,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   .posttextentry_PostButton_2JSyA.posttextentry_Enabled_bGfja
   .posttextentry_Label_3jvEk {
   color: #fff;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .comment_thread_ActivityCommentThreadMinimized_EhWKR {
   display: flex;
@@ -4547,9 +4518,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 64px;
   height: 32px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .artworkmodal_ArtworkModal_36VpV {
   border: 2px solid #000;
   box-sizing: border-box;
@@ -4977,9 +4945,6 @@ div.sharescreenshotupload_Spoiler_tmUAv {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   border: none;
   margin-bottom: 10px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .appdetailscommunityfeed_InnerContainer_3Uy7t {
   display: block;
@@ -5657,9 +5622,6 @@ div.LowPerfMode
   text-align: center;
   margin: auto;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetailstradingcardssection_Container_3iIro {
   user-select: none;
 }
@@ -5935,9 +5897,6 @@ div.WideRightPanel .appdetailstradingcardssection_Card_1WsOn {
   .appdetailstradingcardssection_Focus_q4bD6 {
   width: 100px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetailsactivitysection_ActivityFeedContainer_3yTl3 {
   color: #fff;
   margin-bottom: 64px;
@@ -6176,9 +6135,6 @@ div.LowPerfMode .appdetailsactivitysection_Loading_3UShz {
   background-color: rgba(101, 113, 128, 0.356);
   color: #fff;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appactivitydlc_Rollup_2UySY {
   font-size: 13px;
   margin-bottom: 16px;
@@ -6391,9 +6347,6 @@ p.appactivitydlc_Tooltip_3MRzL:first-child {
   flex-grow: 1;
   margin-top: 0px;
   margin-left: 16px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .appdetailsgameinfopanel_Container_2jPMy {
   box-sizing: border-box;
@@ -6773,9 +6726,6 @@ div.NarrowRightPanel
   background-color: #fff;
   color: #000;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetailsgameinfocontainer_AppGameInfoContainer_25oBZ {
   transition-property: transform, transform-origin, opacity, height,
     border-radius, overflow;
@@ -6886,9 +6836,6 @@ div.NarrowRightPanel
   overflow: hidden;
   background-color: rgba(1, 1, 1, 0.6);
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetailsscreenshotssection_ScreenshotsSection_2_TE0 {
   width: 100%;
 }
@@ -6964,9 +6911,6 @@ div.NarrowRightPanel
 }
 .appdetailsscreenshotssection_ScreenshotModal_2xAnv .DialogBodyText div {
   flex-shrink: 0;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .writereview_WriteReviewContainer_10bN3 {
   width: 700px;
@@ -7542,9 +7486,6 @@ div.NarrowRightPanel
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetailsprimarylinkssection_LinksSection_3-V8v {
   box-sizing: border-box;
   width: 100%;
@@ -7723,9 +7664,6 @@ div.NarrowRightPanel .appdetailsprimarylinkssection_LinksSection_3-V8v {
 }
 .appdetailsprimarylinkssection_ForcedCarouselPadding_1B7Xk {
   width: 100px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .appdetailsworkshopsection_WorkshopContainer_176QJ {
   background: url(/images/workshopbackground.png) #2c3138;
@@ -8078,9 +8016,6 @@ div.NarrowRightPanel .appdetailsprimarylinkssection_LinksSection_3-V8v {
   text-align: center;
   font-size: 16px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetailsspotlight_SpotlightDLC_ut0Yc {
   position: relative;
   border: 1px solid #fff;
@@ -8298,9 +8233,6 @@ div.UltraNarrowRightPanel
 }
 .appdetailsspotlight_SpotlightButton_1fSOe {
   background-color: rgba(0, 0, 0, 0.2);
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .spotlightgameplaysummary_GamePlaySummaryContainer_2bWtu {
   display: flex;
@@ -8732,9 +8664,6 @@ div.NarrowRightPanel
   a {
   color: #fff;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .appdetailsoverview_Container_27RcN {
   position: relative;
   width: 100%;
@@ -9119,9 +9048,6 @@ div.LowPerfMode
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .collectionview_OuterContainer_2sNr7 {
   min-height: 100%;
   background: radial-gradient(100% 100% at 33% 45%, #313d53 0%, #101314 100%);
@@ -9143,7 +9069,7 @@ div.LowPerfMode
   min-height: 100%;
 }
 .BasicUI .collectionview_Container_2q70u {
-  padding-top: calc(24px + var(--basicui-header-height));
+  padding-top: calc(24px + var(--basicui-header-height, 0px));
 }
 .collectionview_Container_2q70u .collectionview_Header_2rqTS {
   box-sizing: border-box;
@@ -10452,9 +10378,6 @@ div.LowPerfMode
 .gamelistbar_OneCollectionWarning_2Q95p:hover {
   background-color: #545763;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 html:not(.client)
   .events_listing
   .apppartnereventspage_AppPartnerEventsPage_1m-hJ
@@ -11720,9 +11643,6 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   .nominationandvote_SteamAwardCategoryTitle_3hZED {
   padding-left: 8px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 body.v6.partner_events {
   background: #24282e;
 }
@@ -12772,49 +12692,6 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   color: #80bcd2;
   text-decoration: none;
 }
-.salebanner_Link_26cHo {
-  display: block;
-  margin-bottom: 16px;
-}
-.salebanner_Banner_2df4N {
-  object-fit: contain;
-  display: block;
-  width: 100%;
-  top: 0;
-  max-width: 100%;
-  cursor: pointer;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0px;
-  transform: scale(1);
-  filter: saturate(0.85);
-  transition: transform 0.21s ease-in-out, filter 0.21s ease-in-out;
-}
-.salebanner_Banner_2df4N:hover {
-  filter: saturate(1);
-  transform: scale(1.03);
-}
-.salebanner_Big_1m7WT {
-  width: 1053px;
-}
-.salebanner_Mobile_2w3oX {
-  display: none;
-}
-@media screen and (max-width: 940px) {
-  .salebanner_Link_26cHo {
-    margin-bottom: 10px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .salebanner_Big_1m7WT {
-    display: none;
-  }
-  .salebanner_Mobile_2w3oX {
-    display: block;
-    margin-bottom: 10px;
-  }
-}
 @keyframes basicpartnereventspage_ItemFocusAnim-darkerGrey-nocolor_2UxlT {
   from {
     background: #3d4450;
@@ -12888,9 +12765,6 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   100% {
     background-position: 50% 0%;
   }
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .basicpartnereventspage_BasicPartnerEventsPage_2pQUV {
   padding-top: 40px;
@@ -13295,9 +13169,6 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 .libraryhomemajorupdates_ExplanationDialog_7OaeN
   .libraryhomemajorupdates_UpdateButton_1VMqy {
   margin-bottom: 0;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .spotlight_ReadMoreLink_2Kaxo {
   color: #fff;
@@ -15668,9 +15539,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   color: red;
   font-size: medium;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .errorconditiondesktop_RefreshLoginDialogModal_2V79Z {
   padding: 0;
   margin: 0;
@@ -15879,9 +15747,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   width: fit-content;
   padding: 0px 20px;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 @keyframes serverbrowserdialog_ItemFocusAnim-darkerGrey-nocolor_368ke {
   from {
     background: #3d4450;
@@ -15961,6 +15826,91 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerBrowserTabRow_lS1uF {
+  flex-grow: 0;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerBrowserTabRow_lS1uF
+  button.serverbrowserdialog_ServerBrowserTab_25RZZ {
+  display: inline-block;
+  width: auto;
+  padding: 0.4ex 2ex 0.4ex 2ex;
+  margin-right: 1ex;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerBrowserTabRow_lS1uF
+  button.serverbrowserdialog_ServerBrowserTab_25RZZ.serverbrowserdialog_Selected_L3t04 {
+  font-weight: bold;
+  color: #fff;
+  background: #717e93;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerTabPane_2YSm1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_ServerList_2_4_n {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_ServerList_2_4_n
+  div[role="rowgroup"] {
+  flex-grow: 1;
+  flex-basis: 30px;
+  overflow: scroll;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_DetailedFilterOptionsCtr_2nIYe {
+  flex-grow: 0;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BasicControlsRow_BlGOl {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BasicControlsRow_BlGOl
+  .serverbrowserdialog_BasicControlsButton_28LI6 {
+  flex-basis: 25em;
+  flex-grow: 0;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBodyText_1o0un
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BasicControlsRow_BlGOl
+  .serverbrowserdialog_SelectGameDropdownContainer_3n5uN {
+  flex-basis: 50em;
+  flex-grow: 1;
 }
 .gameinfodialog_DialogBody_3wJ6F {
   flex-grow: 1;
@@ -15998,9 +15948,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .gameinfodialog_PlayersList_3HOjF .gameinfodialog_Details_3s0LV {
   border-bottom: 1px solid;
   padding: 5px;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .menu_MenuWrapper_2Lu3d {
   height: fit-content;
@@ -16040,9 +15987,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .menu_MenuWrapper_2Lu3d.menu_MenuOpen_3rgV8 {
   --no-op: "no-op";
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .supernav_SuperNav_2D64j {
   width: 100%;
@@ -16106,6 +16050,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   padding: 0 4px;
   -webkit-app-region: no-drag;
 }
+.supernav_Arrow_25lBL:first-child {
+  padding-left: 12px;
+}
 .supernav_Arrow_25lBL.supernav_Enabled_1LYTH:hover {
   color: #dcdedf;
   cursor: pointer;
@@ -16124,9 +16071,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .changeuserdialog_Dialog_4076W .DialogToggle_Label {
   color: #969696;
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .rootmenu_RootMenuButton_2UyOB {
   color: #8b929a;
@@ -16166,8 +16110,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   padding-top: 1px;
 }
 .rootmenu_SteamButton_bSKGl .rootmenu_Logo_GG9wV {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 .parentalunlockdialog_Body_2Tzz8 {
   align-items: center;
@@ -16260,9 +16204,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   100% {
     background-position: 50% 0%;
   }
-}
-:root {
-  --basicui-header-height: 0px;
 }
 .notificationcontent_StandardTemplateDesktop_jD4XY,
 .notificationcontent_StandardTemplate_5HZT7,
@@ -16593,7 +16534,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   position: relative;
   background-color: #3d4450;
 }
-.notificationcontent_PinnedTemplateDesktop_1-8YO:not(:first-child):after {
+.notificationcontent_PinnedTemplateDesktop_1-8YO:not(:first-child):not(:nth-child(2)):after {
   content: "";
   position: absolute;
   top: 0;
@@ -17106,9 +17047,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .notificationcontent_Unread_1X5wH {
   background-color: #3d4450;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .titlebarcontrols_TitleBarControls_3cykd {
   margin-top: 8px;
   display: flex;
@@ -17140,7 +17078,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .titlebarcontrols_AccountMenu_3yD46.ingame {
   color: #c2ffb3;
-  background-color: #5c7e10;
+  background-color: rgba(92, 126, 16, 0.5);
 }
 .titlebarcontrols_AccountMenu_3yD46 .titlebarcontrols_Chevron_3x51w {
   width: 10px;
@@ -17255,20 +17193,19 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   height: 14px;
 }
 .titlebarcontrols_VRToggle_3lRfT {
-  background-color: #969696;
-  color: #212124;
-  padding: 0px 2px;
-  font-weight: 800;
+  color: #67707b;
+  width: 32px;
+  height: 24px;
   height: 14px;
-  min-height: 14px;
-  letter-spacing: 1px;
-  font-size: 12px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  margin: 0px 6px;
 }
 .titlebarcontrols_VRToggle_3lRfT:hover {
-  background-color: #fff;
-  color: #212124;
+  background: #23262e;
+  border-radius: 16px;
 }
 .titlebarcontrols_VRToggle_3lRfT.titlebarcontrols_Running_1oMrx {
   background-color: #5c7e10;
@@ -17276,18 +17213,25 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .titlebarcontrols_VRToggle_3lRfT.titlebarcontrols_Running_1oMrx:hover {
   background-color: #7ea64b;
 }
-.titlebarcontrols_GamepadUIToggle_3LKQ3 {
+.titlebarcontrols_GamepadUIToggle_3LKQ3,
+.titlebarcontrols_SoundtrackControls_Utdt7 {
+  color: #67707b;
   width: 32px;
   height: 24px;
+  padding: 0px 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #67707b;
-  padding: 0px 2px;
-  margin-left: 4px;
   cursor: pointer;
 }
-.titlebarcontrols_GamepadUIToggle_3LKQ3:hover {
+.titlebarcontrols_GamepadUIToggle_3LKQ3 .titlebarcontrols_Icon_34bQc,
+.titlebarcontrols_SoundtrackControls_Utdt7 .titlebarcontrols_Icon_34bQc {
+  height: 16px;
+  width: 16px;
+  padding-bottom: 3px;
+}
+.titlebarcontrols_GamepadUIToggle_3LKQ3:hover,
+.titlebarcontrols_SoundtrackControls_Utdt7:hover {
   background: #23262e;
   border-radius: 16px;
 }
@@ -17296,6 +17240,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-radius: 2px;
   cursor: pointer;
   background-color: #9a3130;
 }
@@ -17498,9 +17443,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     transform: rotate(360deg);
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .console_Console_1fuML {
   width: 100%;
   height: 100%;
@@ -17580,9 +17522,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   height: 23px;
   cursor: pointer;
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .bottombar_BottomBarContainer_1_yS5 {
   display: flex;
   flex-direction: column;
@@ -17602,28 +17541,37 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .bottombar_DownloadStatus_2EQ7g {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottombar_DownloadStatusContent_ip-YZ {
+  flex-grow: 1;
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 30vw;
   color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
-.bottombar_DownloadStatus_2EQ7g .bottombar_Status_1sCy- {
+.bottombar_DownloadStatusContent_ip-YZ .bottombar_Status_1sCy- {
   text-transform: uppercase;
   font-size: 11px;
   cursor: pointer;
 }
-.bottombar_DownloadStatus_2EQ7g .bottombar_Status_1sCy-:hover {
-  color: #fff;
-}
-.bottombar_DownloadStatus_2EQ7g .bottombar_Queue_3wJnT {
+.bottombar_DownloadStatusContent_ip-YZ .bottombar_Queue_3wJnT {
   font-size: 11px;
 }
+.bottombar_DownloadStatusContent_ip-YZ:hover {
+  color: #fff;
+}
 .bottombar_DetailedDownloadProgress_2VtAq {
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
   gap: 8px;
-  width: 30%;
+  width: 30vw;
 }
 .bottombar_DetailedDownloadProgress_2VtAq .bottombar_Icon_1KrJ3 {
   width: 32px;
@@ -17641,7 +17589,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: row;
   color: #1a9fff;
 }
-.bottombar_ProgressBarWrapper_2_Fom .bottombar_StatusLine_1xCcF:hover {
+.bottombar_DownloadStatusContent_ip-YZ:hover
+  .bottombar_ProgressBarWrapper_2_Fom
+  .bottombar_StatusLine_1xCcF {
   color: #fff;
 }
 .bottombar_ProgressBarWrapper_2_Fom .bottombar_Status_1sCy- {
@@ -17788,9 +17738,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     background-position: 50% 0%;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
 .toastmanager_ToastPlaceholder_3aN-b {
   position: fixed;
   bottom: 30px;
@@ -17868,8 +17815,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     opacity: 0;
   }
 }
-:root {
-  --basicui-header-height: 0px;
+.steamdesktop_FocusNavigationRoot_27qas {
+  width: 100%;
+  height: 100%;
 }
 .steamdesktop_Wrapper_1ENHE {
   width: 100%;
@@ -18135,7 +18083,7 @@ img {
   min-width: 32px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4e5157;
+  background-color: #4e5157;
 }
 ::-webkit-scrollbar-corner {
   background: #202020;
@@ -18257,3 +18205,5 @@ img {
   width: 16px;
   height: 16px;
 }
+
+/*# sourceMappingURL=sourcemaps\css\chunk~547eb3232.css.map*/

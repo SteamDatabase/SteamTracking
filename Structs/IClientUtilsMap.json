@@ -258,18 +258,6 @@
             "argc": "1"
         },
         {
-            "name": "SetOverlayChatBrowserInfo",
-            "argc": "6"
-        },
-        {
-            "name": "ClearOverlayChatBrowserInfo",
-            "argc": "2"
-        },
-        {
-            "name": "GetOverlayChatBrowserInfo",
-            "argc": "4"
-        },
-        {
             "name": "SetOverlayBrowserInfo",
             "argc": "8"
         },
@@ -362,14 +350,6 @@
             "argc": "3"
         },
         {
-            "name": "StartRuntimeInformationGathering",
-            "argc": "1"
-        },
-        {
-            "name": "GetRuntimeInformation",
-            "argc": "1"
-        },
-        {
             "name": "GetCloudGamingPlatform",
             "argc": "1"
         },
@@ -423,6 +403,10 @@
         },
         {
             "name": "RecordFakeReactRouteMetric",
+            "argc": "2"
+        },
+        {
+            "name": "SteamRuntimeSystemInfo",
             "argc": "2"
         }
     ]

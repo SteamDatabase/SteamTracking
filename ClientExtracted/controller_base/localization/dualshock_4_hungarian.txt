@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Iránygombos mozgás"
 	"origin_ps5_button_create"					"Létrehozás gomb"
 	"origin_ps5_button_mute"					"Némítás gomb"
+	"origin_PS5_leftgrip"						"Bal hátsó gomb"
+	"origin_PS5_rightgrip"						"Jobb hátsó gomb"
+	"origin_PS5_leftfn"							"Bal funkciógomb"
+	"origin_PS5_rightfn"						"Jobb funkciógomb"
 }

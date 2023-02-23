@@ -125,7 +125,6 @@
  SDL_DestroyWindow
  SDL_GL_CreateContext
  SDL_GL_DeleteContext
- SDL_GL_GetDrawableSize
  SDL_GL_GetProcAddress
  SDL_GL_MakeCurrent
  SDL_GL_SetAttribute
@@ -140,31 +139,25 @@
  SDL_GetJoystickAxis
  SDL_GetJoystickButton
  SDL_GetJoystickInstanceID
- SDL_GetJoystickInstanceName
- SDL_GetJoystickInstanceProduct
- SDL_GetJoystickInstanceType
- SDL_GetJoystickInstanceVendor
  SDL_GetJoystickName
  SDL_GetJoystickPowerLevel
  SDL_GetJoysticks
  SDL_GetModState
  SDL_GetMouseState
- SDL_GetNumJoystickAxes
- SDL_GetNumJoystickButtons
+ SDL_GetPrimaryDisplay
  SDL_GetTicks
  SDL_GetVersion
  SDL_GetWindowFlags
  SDL_GetWindowFromID
  SDL_GetWindowPosition
  SDL_GetWindowSize
+ SDL_GetWindowSizeInPixels
  SDL_GetWindowWMInfo
  SDL_HideCursor
  SDL_HideWindow
  SDL_Init
  SDL_InitSubSystem
- SDL_IsGamepad
  SDL_MinimizeWindow
- SDL_OpenJoystick
  SDL_PollEvent
  SDL_PumpEvents
  SDL_QuitSubSystem

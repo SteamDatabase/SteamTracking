@@ -56,4 +56,8 @@
 	"origin_ps4_button_dpad_move"					"Krzyżak – ruch"
 	"origin_ps5_button_create"					"Przycisk tworzenia"
 	"origin_ps5_button_mute"					"Przycisk MUTE"
+	"origin_PS5_leftgrip"						"Lewa łopatka"
+	"origin_PS5_rightgrip"						"Prawa łopatka"
+	"origin_PS5_leftfn"							"Lewy przycisk Fn"
+	"origin_PS5_rightfn"						"Prawy przycisk Fn"
 }

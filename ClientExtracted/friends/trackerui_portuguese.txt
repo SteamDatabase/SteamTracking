@@ -744,7 +744,7 @@
 "Steam_Settings_Broadcast_HelpHeader" "Precisas de ajuda?"
 "Steam_Settings_Broadcast_HelpURL_Desc" "Ver artigos no Suporte Steam"
 "Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
-"Steam_Settings_Broadcast_PermissionsHeader" "Definições de privacidade:"
+"Steam_Settings_Broadcast_PermissionsHeader" "Definição de privacidade:"
 "Steam_Settings_Broadcast_BitrateHeader" "Bitrate máxima:"
 "Steam_Settings_Broadcast_DimensionsHeader" "Dimensões do vídeo:"
 "Steam_Settings_Broadcast_EncoderHeader" "Otimizar codificação para:"
