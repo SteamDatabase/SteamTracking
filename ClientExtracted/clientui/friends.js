@@ -72332,12 +72332,16 @@ object-assign
                   const styleSheetLinks =
                     shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.GetStyleSheetLinks();
                   this.m_mapPopups.forEach((popup) => {
-                    // @note Tom Bui & Al Farnsworth: we don't want to blow away styles sheets links in the popup
-                    // this was happening when the virtual keyboard was shown in chat, screwing up all the added friendsui styles
-                    shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.UpdateStylesheetsInDocument(
-                      popup.window.document,
-                      styleSheetLinks
-                    );
+                    if (true) {
+                      // @note Colby Sieber: In dev we want to update existing sheets so that hot replacement of changed CSS
+                      // works. It seemed like this would be safe to do all the time, but can cause flashes of unstyled UI
+                      // that I still need to work out first.
+                      shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.UpdateStylesheetsInDocument(
+                        popup.window.document,
+                        styleSheetLinks
+                      );
+                    } else {
+                    }
                   });
                 });
                 this.m_DynamicCSSObserver.observe(elHead, { childList: true });
@@ -86188,6 +86192,7 @@ object-assign
             }
           }
           render() {
+            var _a;
             let popup = this.props.popup;
             let fnClose = () => {
               if (popup) popup.close();
@@ -86223,7 +86228,10 @@ object-assign
                     "div",
                     {
                       className: "title-area-icon closeButton",
-                      onClick: fnClose,
+                      onClick:
+                        (_a = this.props.onClose) !== null && _a !== void 0
+                          ? _a
+                          : fnClose,
                     },
                     react__WEBPACK_IMPORTED_MODULE_0__.createElement(
                       shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__.X_Line,
@@ -92937,4 +92945,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=c72d1746de2f0fdcf3c8
+//# sourceMappingURL=friends.js.map?contenthash=5d4918fce296b15e3f04

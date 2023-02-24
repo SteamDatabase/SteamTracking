@@ -410,6 +410,8 @@
  SDL_GetJoystickInstanceName
  SDL_GetJoystickInstanceType
  SDL_GetJoystickName
+ SDL_GetJoystickProduct
+ SDL_GetJoystickVendor
  SDL_GetJoysticks
  SDL_GetNumAudioDevices
  SDL_GetNumJoystickAxes

@@ -34647,7 +34647,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .steamdesktopoverlay_OverlayPopup_C9tvu .title-area-children {
   float: none;
-  -webkit-app-region: no-drag;
+  -webkit-app-region: drag;
   pointer-events: auto;
   position: absolute;
   left: 5px;
@@ -34853,6 +34853,42 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   .steamdesktopoverlay_Container_6K3Uq {
   flex: 1;
   padding-top: 24px;
+}
+.soundtrackoverlay_Overlay_fMMMD {
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.soundtrackoverlay_OuterContainer_2qxDr {
+  min-height: 100%;
+  background: radial-gradient(100% 100% at 33% 45%, #313d53 0%, #101314 100%);
+  margin-top: 24px;
+}
+.soundtrackoverlay_ContainerScroll_3zB7s {
+  box-sizing: border-box;
+  overflow: hidden scroll;
+  min-height: 100%;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+.soundtrackoverlay_Details_27zjI {
+  box-sizing: border-box;
+  overflow: hidden scroll;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4px;
+  padding-top: 12px;
+}
+.soundtrackoverlay_Details_27zjI .soundtrackoverlay_Back_1I26U {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px;
+  margin: 4px;
+  gap: 4px;
+  width: fit-content;
 }
 
 /*# sourceMappingURL=sourcemaps\css\sp.css.map*/

@@ -4,29 +4,35 @@ __text
 __TEXT
 __stubs
 __TEXT
+j='
+j='
 __stub_helper
 __TEXT
+hG'
+hG'
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+0{)
+0{)
 __const
 __TEXT
 __objc_methname
 __TEXT
 __objc_classname__TEXT
-pw-
-pw-
+Pw-
+Pw-
 __objc_methtype
 __TEXT
-{w-
+[w-
 (
-{w-
+[w-
 __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-Pp.
-Pp.
+Hp.
+Hp.
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -8393,7 +8399,7 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_pObj == NULL
 m_p == NULL
 %s requires %d arguments; only %d given
-%s call had invalid argument (arg %d)
+%s call had invalid argument (arg %d): %s
 SettingsSubBroadcast
 BroadcastStatus
 #Steam_Settings_Broadcast_StatusNotBroadcast
@@ -9732,6 +9738,7 @@ Broadcast_Upload_Result_%u
 #Broadcast_RecordingError_URL_Razer
 #Broadcast_RecordingError_Title
 #Broadcast_RecordingError_URL_Text
+steamloopback.host
 #Overlay_Current_Session
 minutes_session
 hours_twoweeks
@@ -9884,8 +9891,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Feb 22 2023
-12:31:07
+Feb 23 2023
+16:56:08
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10299,6 +10306,7 @@ google/protobuf/stubs/strutil.cc
 CHECK failed: errors == nullptr:
 Error reporting not implemented.
 CHECK failed: (digits) < (100):
+-inf
 %.*g
 CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
 CHECK failed: value != nullptr:
@@ -10312,6 +10320,8 @@ CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
 CHECK failed: (out) == (begin + result.size()):
 CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())):
 operator[]
+./google/protobuf/stubs/stringpiece.h
+0 <= i
 i < length_
 size_t to int conversion
 %.1f
@@ -10368,6 +10378,7 @@ flat_end
 CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
 google/protobuf/message_lite.cc
 parse
+CHECK failed: IsInitialized():
 serialize
 exceeded maximum protobuf size of 2GB:
 ./google/protobuf/parse_context.h
@@ -10377,6 +10388,11 @@ message of type "
 StringPiece
 len >= 0
 CHECK failed: target + size == res:
+./google/protobuf/io/coded_stream.h
+CHECK failed: cur_:
+./google/protobuf/metadata_lite.h
+CHECK failed: arena != nullptr:
+CHECK failed: owning_arena == nullptr:
 google/protobuf/parse_context.cc
 CHECK failed: limit_ > kSlopBytes:
 CHECK failed: overrun != limit_:
@@ -10392,8 +10408,6 @@ Requested size is too large to fit into size_t.
 CHECK failed: (total_size_ - current_size_) >= (n):
 CHECK failed: (total_size_) > (0):
 CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit):
-./google/protobuf/message_lite.h
-CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
 google/protobuf/wire_format_lite.cc
 '%s'
 String field
@@ -10417,6 +10431,7 @@ CHECK failed: !had_error_:
 CHECK failed: overrun <= kSlopBytes:
 CHECK failed: s >= 0:
 CHECK failed: overrun >= 0:
+CHECK failed: ptr < end_:
 CHECK failed: (*buffer) == (first_byte):
 CHECK failed: (first_byte & 0x80) == (0x80):
 CHECK failed: (buffer[0]) >= (128):
@@ -10435,8 +10450,6 @@ ERROR
 int64
 uint64
 int32
-fixed64
-fixed32
 uint32
 enum
 sfixed32
@@ -10475,7 +10488,6 @@ Messages can't have default values!
 Can't get here: failed to get default value as string
 extend .$0 {
 $0message $1
-{
 $0  extensions $1 to $2;
 $0  }
 $0  extend .$1 {
@@ -10514,7 +10526,6 @@ PLACEHOLDER_VALUE
 " not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
 " is already defined.
 " is already defined in "
-".
 " is already defined in file "
 null
 " is already defined (as something other than a package) in file "
@@ -10545,9 +10556,6 @@ The [proto3_optional=true] option may only be set on proto3fields, not
 The extension
 cannot be required.
 Repeated fields can't have default values.
-inf
--inf
-nan
 Boolean default must be true or false.
 Messages can't have default values.
 Couldn't parse default value "
@@ -10697,9 +10705,6 @@ CHECK failed: !file->finished_building_:
 CHECK failed: file_->finished_building_:
 UNKNOWN_ENUM_VALUE_%s_%d
 ./google/protobuf/descriptor.pb.h
-./google/protobuf/repeated_field.h
-CHECK failed: (index) >= (0):
-CHECK failed: (index) < (current_size_):
 _internal_set_label
 PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Label_IsValid(value)
 _internal_set_type
@@ -10709,8 +10714,6 @@ $0option $1;
 Found invalid proto option data for:
 (.
 =
-./google/protobuf/stubs/stringpiece.h
-0 <= i
 CHECK failed: !value || source_code_info_ != nullptr:
 CHECK failed: !value || options_ != nullptr:
 remove_prefix
@@ -10734,11 +10737,6 @@ Parsing attempt:
 down_cast
 ./google/protobuf/stubs/casts.h
 f == nullptr || dynamic_cast<To>(f) != nullptr
-./google/protobuf/io/coded_stream.h
-CHECK failed: cur_:
-length_delimited
-./google/protobuf/unknown_field_set.h
-type() == TYPE_LENGTH_DELIMITED
 ;
 Uninterpreted option is missing name or value.
 CHECK failed: (n) >= (0):
@@ -10800,9 +10798,9 @@ _InternalSerialize
 ./google/protobuf/extension_set.h
 !is_large()
 CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
-CHECK failed: ptr < end_:
 google/protobuf/dynamic_message.cc
 CHECK failed: is_prototype():
+Can't get here.
 google/protobuf/extension_set_heavy.cc
 CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
 CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
@@ -10827,7 +10825,6 @@ Field does not match message type.
 Field is repeated; the method requires a singular field.
 FieldSize
 Field is singular; the method requires a repeated field.
-Can't get here.
 ClearField
 GetInt32
 SetInt32
@@ -10924,6 +10921,7 @@ CHECK failed: !InRealOneof(field):
 CHECK failed: file != nullptr:
 google/protobuf/map_field.cc
 CHECK failed: IsMapValid() && other.IsMapValid():
+Unsupported
 MapValueRef::SetInt32Value
 MapValueRef::SetInt64Value
 MapValueRef::SetUInt32Value
@@ -10959,7 +10957,6 @@ CHECK failed: (from.GetDescriptor()) == (descriptor):
 : Tried to merge from a message with a different type.  to:
 , from:
 : Tried to copy from a message with a different type. to:
-CHECK failed: IsInitialized():
 CHECK failed: field->is_repeated():
 Should not reach here.
 File appears to be in generated pool but wasn't registered:
@@ -10969,9 +10966,6 @@ File is already registered:
 CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
 Tried to register a non-generated type with the generated type registry.
 Type is already registered:
-./google/protobuf/metadata_lite.h
-CHECK failed: arena != nullptr:
-CHECK failed: owning_arena == nullptr:
 CHECK failed: (current_size_) > (0):
 ./google/protobuf/reflection_internal.h
 CHECK failed: this == other_mutator:
@@ -10986,13 +10980,6 @@ Tried to merge messages of different types
 to
 Message does not support reflection (type
 ).
-./google/protobuf/map_field.h
-Protocol Buffer map usage error:
-MapValueConstRef::GetMessageValue
-type does not match
-Expected :
-Actual   :
-MapValueConstRef::type MapValueConstRef is not initialized.
 MapValueRef::MutableMessageValue
 google/protobuf/stubs/substitute.cc
 strings::Substitute format string invalid: asked for "$
@@ -11004,6 +10991,8 @@ index < 10
 CHECK failed: (target - output->data()) == (output->size()):
 google/protobuf/text_format.cc
 Message missing required fields:
+nan
+{
 {
 }
 CHECK failed: output:
@@ -11036,6 +11025,7 @@ Could not find type "
 Non-repeated Any specified multiple times.
 Extension "
 " is not defined or is not an extension of "
+".
 Ignoring extension "
 " which is not defined or is not an extension of "
 Message type "
@@ -11054,6 +11044,7 @@ Value of type "
 Expected identifier, got:
 Message is too deep, the parser exceeded the configured recursion limit of
 Cannot skip field value, unexpected token:
+inf
 infinity
 Invalid float number:
 Expected string, got:
@@ -11072,7 +11063,12 @@ Expect a decimal number, got:
 Error parsing text-format
 Outdent() without matching Indent().
 CHECK failed: !failed_:
+./google/protobuf/map_field.h
+Protocol Buffer map usage error:
 MapKey::GetStringValue
+type does not match
+Expected :
+Actual   :
 MapKey::type MapKey is not initialized.
 Call set methods to initialize MapKey.
 MapKey::GetInt64Value
@@ -11081,8 +11077,10 @@ MapKey::GetUInt64Value
 MapKey::GetUInt32Value
 MapKey::GetBoolValue
 MapValueConstRef::GetDoubleValue
+MapValueConstRef::type MapValueConstRef is not initialized.
 MapValueConstRef::GetFloatValue
 MapValueConstRef::GetEnumValue
+MapValueConstRef::GetMessageValue
 MapValueConstRef::GetStringValue
 MapValueConstRef::GetInt64Value
 MapValueConstRef::GetInt32Value
@@ -11090,20 +11088,29 @@ MapValueConstRef::GetUInt64Value
 MapValueConstRef::GetUInt32Value
 MapValueConstRef::GetBoolValue
 varint
+./google/protobuf/unknown_field_set.h
 type() == TYPE_VARINT
+fixed32
 type() == TYPE_FIXED32
+fixed64
 type() == TYPE_FIXED64
+length_delimited
+type() == TYPE_LENGTH_DELIMITED
 type() == TYPE_GROUP
+./google/protobuf/repeated_field.h
+CHECK failed: (index) >= (0):
+CHECK failed: (index) < (current_size_):
 Invalid key for map field.
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+./google/protobuf/message_lite.h
+CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
 CHECK failed: reflection:
 Can't reach
-Unsupported
 Invalid descriptor
 CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()):
 Cannot get here
@@ -12169,6 +12176,10 @@ Disables new faster overlay HTML path (or enables if on a branch it's not on by 
 -html-perf-monitor
 Draws html perf data
 resource/webkit.css
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
+Failed creating HTML browser %s: %s
+<unnamed>
+<no url>
 ComboBoxHost
 contextmenu
 #Steam_Browser_Disabled
@@ -12213,7 +12224,6 @@ HTML.SearchAnimationTime
 DeletePanel
 custom_
 FindBar
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
 ulPlatformParentWindow == 0
 FindEntry
 FindCount
@@ -13773,63 +13783,17 @@ Dec
 0
 C
 C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
-C
+X&
 p
 0
 0
-R&
 p
 0
-3&
-2&
+J&
+o&
 &
-\.
+4&
+!
 j
 j
 j
@@ -13839,32 +13803,55 @@ j
 j
 j
 j
-s%
+p%
+Ic
 0
-)%
+`$
+/%
+[$
 p
 0
-z%
-&
-j
-j
-j
-j
-j
-j
-%
-6,
-G%
-j
-j
 F%
-A
-A
-A
-A
+/A
+j
+j
+j
+j
+j
+j
 %
-J#
-2#
+j
+j
+A
+A
+A
+A
+A
+A
+A
+LA
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+>#
 j
 j
 j
@@ -13913,11 +13900,17 @@ j
 j
 j
 j
-B$
+Y$
+#
+#
+6$
 j
 j
 j
 j
+b.
+$
+$
 $
 j
 j
@@ -13939,9 +13932,10 @@ j
 j
 j
 0
-p#
+$
+m#
 A9]
-h#
+e#
 d
 j
 j
@@ -13955,7 +13949,7 @@ j
 j
 j
 j
-4"
+1"
 #
 #
 
@@ -13966,7 +13960,6 @@ j
 @
 
 0
-X#
 p
 0
 p
@@ -13988,14 +13981,15 @@ p
 p
 p
 p
+1
 @
-N"
-""
 
 "
-0
 "
 "
+"
+,!
+0
 0
 >
 >
@@ -14009,8 +14003,6 @@ N"
 >
 >
 >
->
->
 j
 j
 j
@@ -14039,33 +14031,23 @@ j
 j
 j
 j
-^!
-R!
-)
-K!
+2
+\!
 Hi
 "
-"
-"
-"
-"
+1!
+e=
 >
 >
 !
 !
-1
 j
 j
 j
 j
-!
-j
-=
-=
 j
 j
-=
-=
+j
 j
 j
 j
@@ -14075,21 +14057,11 @@ j
 0
 p
 0
-]
-(
+V!
+!
 #
 #
-+!
 #
-5
-j
-j
-j
-j
-j
-j
-j
-d<
 j
 j
 j
@@ -14107,6 +14079,18 @@ j
 j
 j
 j
+j
+j
+j
+j
+j
+j
+j
+!
+!
+!
+!
+!
 !
 j
 j
@@ -14128,7 +14112,8 @@ AT=
 D
 @
 @
-8
+c#
+=
 @
 Hc
 Hc
@@ -14160,18 +14145,13 @@ IcE
 IcE
 @
 @
-&
 V
-4$
-%
+"
 =
 =
-
 !
--
 @
 &
-,
 @
 M9e
 @
@@ -14271,6 +14251,7 @@ B
 0
 @
 p
+/
 >
 0
 >
@@ -14309,6 +14290,7 @@ G
 @
 >
 0
+.
 .
 p
 =
@@ -14366,42 +14348,30 @@ P
 @
 |
 |
-"
 @
 @
-,
+h!
+!
+)
 )
 d
-fD9%]W(
-fD9-FQ(
-p
->
+[(
+fD9%:T(
 
 
 
-G
 A+M
 
-
-
-
-
-
-
-
-
+t7f9_(
 j
 j
 j
 j
 j
 j
-
-
-
 =
 0
-n
+9
 j
 j
 j
@@ -14413,6 +14383,10 @@ j
 j
 j
 j
+
+
+
+
 
 
 j
@@ -14433,14 +14407,12 @@ j
 j
 j
 
-+&
 d
 &
 &
 d
 0
 A+4$A+u
-K
 =
 =
 @
@@ -14455,7 +14427,6 @@ j
 j
 j
 j
-4
 j
 j
 j
@@ -14472,7 +14443,6 @@ j
 j
 j
 j
-C$
 j
 j
 j
@@ -14483,6 +14453,7 @@ j
 j
 j
 j
+'$
 j
 j
 j
@@ -14495,13 +14466,6 @@ j
 j
 j
 =
-$
-$
-$
-$
-$
-$
-$
 $
 $
 $
@@ -14539,10 +14503,12 @@ j
 j
 j
 j
+W"
 j
 j
 j
 j
+L!
 j
 j
 j
@@ -14625,7 +14591,6 @@ j
 j
 j
 j
-Ic
 
 
 @

@@ -44386,19 +44386,23 @@ button.soundtrackcontrols_IconButton_1iFnR:hover svg path {
 button.soundtrackcontrols_IconButton_1iFnR.gpfocus {
   outline: outset #fff 2px;
 }
-.soundtrackcontrols_TopBarIcon_BkoG1 {
+.soundtrackcontrols_TopBarIcon_BkoG1,
+.soundtrackcontrols_Icon_229M1 {
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
-.soundtrackcontrols_TopBarIcon_BkoG1 svg path {
+.soundtrackcontrols_TopBarIcon_BkoG1 svg path,
+.soundtrackcontrols_Icon_229M1 svg path {
   stroke: #b8bcbf;
   fill: #b8bcbf;
 }
-.soundtrackcontrols_TopBarIcon_BkoG1:hover {
+.soundtrackcontrols_TopBarIcon_BkoG1:hover,
+.soundtrackcontrols_Icon_229M1:hover {
   background: none;
 }
-.soundtrackcontrols_TopBarIcon_BkoG1:hover svg path {
+.soundtrackcontrols_TopBarIcon_BkoG1:hover svg path,
+.soundtrackcontrols_Icon_229M1:hover svg path {
   stroke: #dcdedf;
   fill: #dcdedf;
 }
@@ -44445,11 +44449,42 @@ button.soundtrackcontrols_IconButton_1iFnR.gpfocus {
   .soundtrackcontrols_TrackName_2mM3t {
   font-size: 12pt;
 }
-.soundtrackcontrols_QuickAccess_3_y7M {
+.soundtrackcontrols_QuickAccess_3_y7M,
+.soundtrackcontrols_Overlay_cq_KB {
   padding: 6px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+.soundtrackcontrols_OuterContainer_198BX {
+  min-height: 100%;
+  background: radial-gradient(100% 100% at 33% 45%, #313d53 0%, #101314 100%);
+  margin-top: 24px;
+}
+.soundtrackcontrols_ContainerScroll_1L57G {
+  box-sizing: border-box;
+  overflow: hidden scroll;
+  min-height: 100%;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+.soundtrackcontrols_Details_faBTT {
+  box-sizing: border-box;
+  overflow: hidden scroll;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4px;
+  padding-top: 12px;
+}
+.soundtrackcontrols_Details_faBTT .soundtrackcontrols_Back_13oc1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px;
+  margin: 4px;
+  gap: 4px;
+  width: fit-content;
 }
 .appdetailssectionoffline_OfflineSectionBody_2dnxv {
   overflow: hidden;

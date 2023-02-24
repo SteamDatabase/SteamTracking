@@ -19,7 +19,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-,f
+@f
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -931,6 +931,7 @@ ChromeHTML_Controller_003
 BOffScreenRendererBrowser( eBrowserType )
 BDirectRendererBrowser( eBrowserType )
 pchVROverlayKey && pchVROverlayKey[0]
+CreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
 widevine
 !m_ChromeIPCClient.BInitialized()
 CHTMLController::CIPCTaskPost Thread
@@ -941,6 +942,7 @@ pCmd->m_eCmd == eHTMLCommands_NeedsPaint || pCmd->m_eCmd == eHTMLCommands_NeedsS
 CHTMLController::RunFrame
 CHTMLController::RunFrame - IPC Client
 CHTMLController::RunFrame - Dispatch commands
+CreateResponse: id:%u handle:%u
 unexpected BrowserCreateResponse for unknown browser 0x%x
 HTML_MSG_FUNC eHTMLCommands_BrowserReady
 HTML_MSG_FUNC eHTMLCommands_StartRequest
@@ -999,6 +1001,7 @@ HTML_MSG_FUNC eHTMLCommands_TouchGesture
 HTML_MSG_FUNC eHTMLCommands_IME_CompositionRangeChanged
 HTML_MSG_FUNC eHTMLCommands_AckScreenDPI
 CHTMLController::RunFrame - Deferred paint
+RetryCreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
 STEAMVIDEOTOKEN
 m_ChromeIPCClient
 CHTMLController::ValidateStatics
@@ -2355,19 +2358,20 @@ sc_schinese
 
 @
 
-g
 @
 @
-j
-@
-=
-q
-Ic
-t
-Y
 
-L
-2
+
+v
+
+@
+7
+Ic
+l
+s
+;
+
+
 
 0
 0
@@ -2385,8 +2389,6 @@ AT=
 D
 @
 @
-
-
 
 
 
@@ -2457,4 +2459,3 @@ M9e
 0
 0
 0
-V

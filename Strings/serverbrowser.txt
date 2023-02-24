@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+^
+^
 __stubs
 __TEXT
 __stub_helper
@@ -1621,6 +1623,7 @@ google/protobuf/stubs/strutil.cc
 CHECK failed: errors == nullptr:
 Error reporting not implemented.
 CHECK failed: (digits) < (100):
+-inf
 %.*g
 CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
 CHECK failed: value != nullptr:
@@ -1633,6 +1636,8 @@ CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
 CHECK failed: (out) == (begin + result.size()):
 CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())):
 operator[]
+./google/protobuf/stubs/stringpiece.h
+0 <= i
 i < length_
 size_t to int conversion
 %.1f
@@ -1700,12 +1705,10 @@ Can't
 message of type "
 " because it is missing required fields:
 StringPiece
-./google/protobuf/stubs/stringpiece.h
 len >= 0
 CHECK failed: target + size == res:
 ./google/protobuf/io/coded_stream.h
 CHECK failed: cur_:
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 ./google/protobuf/metadata_lite.h
 CHECK failed: arena != nullptr:
 CHECK failed: owning_arena == nullptr:
@@ -1778,8 +1781,6 @@ ERROR
 int64
 uint64
 int32
-fixed64
-fixed32
 uint32
 enum
 sfixed32
@@ -1819,7 +1820,6 @@ Messages can't have default values!
 Can't get here: failed to get default value as string
 extend .$0 {
 $0message $1
-{
 $0  extensions $1 to $2;
 $0  }
 $0  extend .$1 {
@@ -1858,7 +1858,6 @@ PLACEHOLDER_VALUE
 " not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
 " is already defined.
 " is already defined in "
-".
 " is already defined in file "
 null
 " is already defined (as something other than a package) in file "
@@ -1889,9 +1888,6 @@ The [proto3_optional=true] option may only be set on proto3fields, not
 The extension
 cannot be required.
 Repeated fields can't have default values.
-inf
--inf
-nan
 Boolean default must be true or false.
 Messages can't have default values.
 Couldn't parse default value "
@@ -2051,7 +2047,6 @@ $0option $1;
 Found invalid proto option data for:
 (.
 =
-0 <= i
 CHECK failed: !value || source_code_info_ != nullptr:
 CHECK failed: !value || options_ != nullptr:
 remove_prefix
@@ -2075,9 +2070,6 @@ Parsing attempt:
 down_cast
 ./google/protobuf/stubs/casts.h
 f == nullptr || dynamic_cast<To>(f) != nullptr
-length_delimited
-./google/protobuf/unknown_field_set.h
-type() == TYPE_LENGTH_DELIMITED
 Uninterpreted option is missing name or value.
 google/protobuf/descriptor_database.cc
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
@@ -2134,6 +2126,7 @@ google.protobuf.GeneratedCodeInfo.Annotation.source_file
 CHECK failed: GetArena() == nullptr:
 google/protobuf/dynamic_message.cc
 CHECK failed: is_prototype():
+Can't get here.
 google/protobuf/extension_set_heavy.cc
 CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
 CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
@@ -2158,7 +2151,6 @@ Field does not match message type.
 Field is repeated; the method requires a singular field.
 FieldSize
 Field is singular; the method requires a repeated field.
-Can't get here.
 ClearField
 GetInt32
 SetInt32
@@ -2320,6 +2312,8 @@ index < 10
 CHECK failed: (target - output->data()) == (output->size()):
 google/protobuf/text_format.cc
 Message missing required fields:
+nan
+{
 {
 }
 CHECK failed: output:
@@ -2352,6 +2346,7 @@ Could not find type "
 Non-repeated Any specified multiple times.
 Extension "
 " is not defined or is not an extension of "
+".
 Ignoring extension "
 " which is not defined or is not an extension of "
 Message type "
@@ -2367,9 +2362,11 @@ Expected "
 ", found "
 Value of type "
 " stored in google.protobuf.Any has missing required fields
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 Expected identifier, got:
 Message is too deep, the parser exceeded the configured recursion limit of
 Cannot skip field value, unexpected token:
+inf
 infinity
 Invalid float number:
 Expected string, got:
@@ -2388,10 +2385,41 @@ Expect a decimal number, got:
 Error parsing text-format
 Outdent() without matching Indent().
 CHECK failed: !failed_:
+./google/protobuf/map_field.h
+Protocol Buffer map usage error:
+MapKey::GetStringValue
+type does not match
+Expected :
+Actual   :
+MapKey::type MapKey is not initialized.
+Call set methods to initialize MapKey.
+MapKey::GetInt64Value
+MapKey::GetInt32Value
+MapKey::GetUInt64Value
+MapKey::GetUInt32Value
+MapKey::GetBoolValue
+MapValueConstRef::GetDoubleValue
+MapValueConstRef::type MapValueConstRef is not initialized.
+MapValueConstRef::GetFloatValue
+MapValueConstRef::GetEnumValue
+MapValueConstRef::GetMessageValue
+MapValueConstRef::GetStringValue
+MapValueConstRef::GetInt64Value
+MapValueConstRef::GetInt32Value
+MapValueConstRef::GetUInt64Value
+MapValueConstRef::GetUInt32Value
+MapValueConstRef::GetBoolValue
 varint
+./google/protobuf/unknown_field_set.h
 type() == TYPE_VARINT
+fixed32
 type() == TYPE_FIXED32
+fixed64
 type() == TYPE_FIXED64
+length_delimited
+type() == TYPE_LENGTH_DELIMITED
+type() == TYPE_GROUP
+Invalid key for map field.
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
@@ -2404,31 +2432,7 @@ Unsupported
 Invalid descriptor
 CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()):
 Cannot get here
-type() == TYPE_GROUP
-./google/protobuf/map_field.h
-Protocol Buffer map usage error:
-MapKey::GetInt64Value
-type does not match
-Expected :
-Actual   :
-MapKey::GetUInt64Value
-MapKey::GetInt32Value
-MapKey::GetUInt32Value
-MapKey::GetBoolValue
-MapKey::GetStringValue
 CHECK failed: a.type() == b.type():
-Invalid key for map field.
-MapValueConstRef::GetInt64Value
-MapValueConstRef::type MapValueConstRef is not initialized.
-MapValueConstRef::GetUInt64Value
-MapValueConstRef::GetInt32Value
-MapValueConstRef::GetUInt32Value
-MapValueConstRef::GetBoolValue
-MapValueConstRef::GetEnumValue
-MapValueConstRef::GetDoubleValue
-MapValueConstRef::GetFloatValue
-MapValueConstRef::GetStringValue
-MapValueConstRef::GetMessageValue
 ./google/protobuf/dynamic_message.h
 internal error in map key sorting
 map keys are not unique
@@ -2436,8 +2440,6 @@ operator!=
 ./google/protobuf/reflection.h
 data_ == other.data_
 accessor_ == other.accessor_
-MapKey::type MapKey is not initialized.
-Call set methods to initialize MapKey.
 CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
 CHECK failed: (size) > (0):
 Unexpected end of string.
@@ -2827,6 +2829,10 @@ Disables new faster overlay HTML path (or enables if on a branch it's not on by 
 Draws html perf data
 resource/webkit.css
 SKIN
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
+Failed creating HTML browser %s: %s
+<unnamed>
+<no url>
 ComboBoxHost
 contextmenu
 #Steam_Browser_Disabled
@@ -2872,7 +2878,6 @@ HTML.SearchAnimationTime
 DeletePanel
 custom_
 FindBar
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
 ulPlatformParentWindow == 0
 FindEntry
 FindCount
@@ -3840,6 +3845,7 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
+=&
 j
 j
 j
@@ -3873,6 +3879,7 @@ j
 j
 j
 0
+t%
 p
 0
 j
@@ -3948,12 +3955,9 @@ M9e
 0
 @
 @
-4
-
 
 
 d
-4
 A+M
 
 j
@@ -4201,7 +4205,6 @@ d
 @
 @
 @
-4
 @
 @
 @

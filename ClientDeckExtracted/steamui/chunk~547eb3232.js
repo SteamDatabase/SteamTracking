@@ -33237,6 +33237,7 @@
             right: n,
             bottom: a,
             left: s,
+            pointerEvents: "none",
           };
           return o.createPortal(i.createElement("div", { style: e }, l), c);
         }

@@ -844,6 +844,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   height: 32px;
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .gameslistitems_AchievementContainer_38RhR
   .gameslistitems_AchievementIcons_6o-Nn
