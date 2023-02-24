@@ -7688,7 +7688,7 @@
               const r = Math.ceil(window.innerHeight / a[0]);
               let i = 0,
                 n = 0;
-              for (; i < e; ) (i += a[n]), n++;
+              for (; i > e; ) (i -= a[n]), n++;
               const s = n - r,
                 o = s + 3 * r;
               for (let e = s; e < o; e++)
