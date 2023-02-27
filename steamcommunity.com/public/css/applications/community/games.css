@@ -514,6 +514,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
     gap: 4px;
     align-content: start;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
   .gameslistitems_GamesListItem_2-pQF
     .gameslistitems_Playtime_2Eeyh
@@ -528,6 +531,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     grid-template-rows: 1fr auto;
     gap: 8px;
     padding-bottom: var(--padding);
+    align-self: stretch;
   }
   .gameslistitems_GamesListItem_2-pQF
     .gameslistitems_Playtime_2Eeyh
@@ -537,7 +541,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   .gameslistitems_GamesListItem_2-pQF
     .gameslistitems_Playtime_2Eeyh
     .gameslistitems_Hours2weeks_1_mJZ {
-    display: none;
+    flex-direction: row;
+    gap: 1ch;
   }
   .gameslistitems_GamesListItem_2-pQF .gameslistitems_Buttons_1uRB5 {
     display: none;
@@ -1219,6 +1224,24 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-size: var(--typography-font-size-medium);
   white-space: nowrap;
 }
+.gameslistremote_RemoteControls_1Fput .gameslistremote_UpdateSchedule__nq0r {
+  font-weight: 700;
+  font-size: var(--typography-font-size-medium);
+  display: -webkit-inline-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+@media (max-width: 37rem) {
+  .gameslistremote_RemoteControls_1Fput .gameslistremote_UpdateSchedule__nq0r {
+    display: none;
+  }
+}
+.gameslistremote_RemoteControls_1Fput
+  .gameslistremote_DownloadIconButton_2P659 {
+  align-self: flex-end;
+}
 .gameslistremote_DownloadBarContainer_2Qx7n {
   height: 56px;
   display: flex;
@@ -1233,11 +1256,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .gameslistremote_DownloadBarContainer_2Qx7n
   .gameslistremote_DownloadSize_2zfId {
-  font-weight: 700;
-  font-size: var(--typography-font-size-medium);
-}
-.gameslistremote_DownloadBarContainer_2Qx7n
-  .gameslistremote_UpdateSchedule__nq0r {
   font-weight: 700;
   font-size: var(--typography-font-size-medium);
 }

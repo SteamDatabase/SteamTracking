@@ -155,9 +155,9 @@
         ButtonContainer: "gameslistremote_ButtonContainer_2mckt",
         NoRemoteControl: "gameslistremote_NoRemoteControl_217Ei",
         DownloadSize: "gameslistremote_DownloadSize_2zfId",
-        DownloadBarContainer: "gameslistremote_DownloadBarContainer_2Qx7n",
         UpdateSchedule: "gameslistremote_UpdateSchedule__nq0r",
         DownloadIconButton: "gameslistremote_DownloadIconButton_2P659",
+        DownloadBarContainer: "gameslistremote_DownloadBarContainer_2Qx7n",
       };
     },
     72442: (e) => {
@@ -284,7 +284,7 @@
     },
     47734: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Ni });
+      r.r(t), r.d(t, { default: () => Ii });
       var i = r(70655),
         n = r(67294),
         a = r(88767),
@@ -6109,7 +6109,7 @@
           d = r
             ? (0, $e.Xx)("#GamesList_Button_Pause")
             : (0, $e.Xx)("#GamesList_Button_Resume"),
-          m = (0, n.useContext)(Mi);
+          m = (0, n.useContext)(Ci);
         return (
           (0, n.useEffect)(
             () => (
@@ -6171,7 +6171,7 @@
               {
                 disabled: l.isLoading,
                 onClick: () => {
-                  l.mutateAsync(), vi(e.appid);
+                  l.mutateAsync(), Fi(e.appid);
                 },
                 className: nr.DownloadIconButton,
               },
@@ -6243,7 +6243,7 @@
             {
               disabled: r.isLoading,
               onClick: () => {
-                r.mutateAsync(), vi(e.appid);
+                r.mutateAsync(), Fi(e.appid);
               },
               className: nr.DownloadIconButton,
             },
@@ -6334,14 +6334,14 @@
                   n.createElement(_r, {
                     app: e,
                     onOK: () => {
-                      s.mutateAsync(), vi(e.appid);
+                      s.mutateAsync(), Fi(e.appid);
                     },
                   }),
                   window
                 );
               }
             : () => {
-                r.mutateAsync(), vi(e.appid);
+                r.mutateAsync(), Fi(e.appid);
               },
           u = e.installed
             ? "#GamesList_Button_Uninstall"
@@ -7336,8 +7336,8 @@
           : null;
       }
       function bi({ tab: e }) {
-        const t = yi().openGame,
-          r = gi(),
+        const t = fi().openGame,
+          r = yi(),
           i = (0, n.useRef)(null);
         (0, n.useEffect)(() => {
           var e;
@@ -7402,7 +7402,9 @@
       }
       function pi({ game: e, visible: t, tab: r }) {
         const i = Oe(),
-          a = Ue(e);
+          a = Ue(e),
+          s = Nr(),
+          l = r !== Cr.All && !(s && r === Cr.RecentlyPlayed);
         return n.createElement(
           "div",
           { className: Jt.Playtime },
@@ -7446,46 +7448,51 @@
             n.createElement(
               "div",
               { className: Jt.AchievementContainer },
-              n.createElement(Yr, {
-                game: e,
-                visible: t,
-                showTop: r !== Cr.All,
-              })
+              n.createElement(Yr, { game: e, visible: t, showTop: l })
             )
         );
       }
-      function Bi({ game: e, hasEverBeenVisible: t }) {
-        const [r, i] = (0, n.useState)(!1),
-          a = `${Re.De.STORE_ICON_BASE_URL}${e.appid}/header.jpg`,
-          s = `${Re.De.STORE_ICON_BASE_URL}${e.appid}/${
-            e.capsule_filename || "library_600x900.jpg"
-          }`,
-          l = Nr();
+      function Bi({ game: e }) {
+        const t = Nr(),
+          [r, i] = (0, n.useState)(0),
+          a = [
+            `${Re.De.STORE_ICON_BASE_URL}${e.appid}/${
+              e.capsule_filename || "library_600x900.jpg"
+            }`,
+            `${Re.De.STORE_ICON_BASE_URL}${e.appid}/portrait.png`,
+            Ur,
+          ],
+          s = [`${Re.De.STORE_ICON_BASE_URL}${e.appid}/header.jpg`, Ur],
+          l = t ? a[r] === Ur : s[r] === Ur;
+        return n.createElement(
+          n.Fragment,
+          null,
+          n.createElement(
+            "picture",
+            { onError: () => i((e) => e + 1) },
+            n.createElement("source", {
+              media: `(max-width: ${jr.MobileBreakpoint})`,
+              srcSet: a[r],
+            }),
+            n.createElement("img", { src: s[r], alt: e.name, loading: "lazy" })
+          ),
+          l && n.createElement("span", { className: Jt.FallbackTitle }, e.name)
+        );
+      }
+      function _i({ game: e, hasEverBeenVisible: t }) {
+        const r = Nr();
         return n.createElement(
           "div",
           { className: Jt.PortraitContainer },
-          n.createElement(
-            "picture",
-            { onError: () => i(!0) },
-            n.createElement("source", {
-              media: `(max-width: ${jr.MobileBreakpoint})`,
-              srcSet: r ? Ur : s,
-            }),
-            n.createElement("img", {
-              src: r ? Ur : a,
-              alt: e.name,
-              loading: "lazy",
-            })
-          ),
-          r && n.createElement("span", { className: Jt.FallbackTitle }, e.name),
-          !l && n.createElement(Jr, { game: e, visible: t })
+          n.createElement(Bi, { game: e }),
+          !r && n.createElement(Jr, { game: e, visible: t })
         );
       }
-      const _i = n.memo(function ({ game: e, top: t, tab: r }) {
+      const gi = n.memo(function ({ game: e, top: t, tab: r }) {
         const i = `${Re.De.STORE_BASE_URL}app/${e.appid}`,
           a = Oe(),
           s = Nr(),
-          l = gi(),
+          l = yi(),
           o = s ? "button" : ot.eh,
           c = s ? () => l(e) : void 0,
           [u, d] = (0, n.useState)(!1),
@@ -7518,7 +7525,7 @@
             n.createElement(
               B,
               { href: i, className: Jt.GameItemPortrait },
-              n.createElement(Bi, { game: e, hasEverBeenVisible: u })
+              n.createElement(_i, { game: e, hasEverBeenVisible: u })
             ),
             n.createElement(
               "span",
@@ -7551,32 +7558,32 @@
           a && n.createElement(hr, { game: e, visible: u })
         );
       });
-      function gi() {
-        return yi().fnSetOpenGame;
-      }
       function yi() {
-        const e = (0, n.useContext)(fi);
+        return fi().fnSetOpenGame;
+      }
+      function fi() {
+        const e = (0, n.useContext)(wi);
         if (!e)
           throw new Error(
             "attempted to use BottomSheetContext outside of provider"
           );
         return e;
       }
-      const fi = n.createContext(void 0);
-      function wi({ children: e }) {
+      const wi = n.createContext(void 0);
+      function hi({ children: e }) {
         const [t, r] = (0, n.useState)(void 0);
         return n.createElement(
-          fi.Provider,
+          wi.Provider,
           { value: { openGame: t, fnSetOpenGame: r } },
           e
         );
       }
-      const hi = new Set();
-      function vi(e) {
-        hi.add(e);
+      const vi = new Set();
+      function Fi(e) {
+        vi.add(e);
       }
-      const Fi = new Set();
-      function Ri({ games: e, tab: t, fnCalculateGameSize: r }) {
+      const Ri = new Set();
+      function zi({ games: e, tab: t, fnCalculateGameSize: r }) {
         const [i, a] = (0, n.useMemo)(() => {
           let t = 0;
           const i = e.map((e) => {
@@ -7626,7 +7633,7 @@
           Le.s,
           { ref: s, className: Jt.List, style: { height: i }, autoFocus: !0 },
           n.createElement(
-            Ei,
+            Si,
             {
               disableContinuousRender: e.length > 1024,
               batchSize: 16,
@@ -7637,20 +7644,20 @@
               const i = l;
               return (
                 (l += a[r]),
-                n.createElement(_i, { game: e, key: e.appid, top: i, tab: t })
+                n.createElement(gi, { game: e, key: e.appid, top: i, tab: t })
               );
             })
           )
         );
       }
-      function zi() {
+      function Ei() {
         return (0, i.mG)(this, void 0, void 0, function* () {
           return new Promise((e) => {
             setTimeout(e, 0);
           });
         });
       }
-      function Ei({
+      function Si({
         children: e,
         batchSize: t,
         containerRef: r,
@@ -7671,7 +7678,7 @@
                       if (e) return;
                       null === (r = l[n]) || void 0 === r || r.call(l, !0);
                     }
-                    yield zi();
+                    yield Ei();
                   }
                 });
               })(),
@@ -7712,17 +7719,17 @@
             n.Fragment,
             null,
             e.map((e, t) =>
-              n.createElement(Si, { key: e.key, index: t, renderers: l }, e)
+              n.createElement(Mi, { key: e.key, index: t, renderers: l }, e)
             )
           )
         );
       }
-      function Si({ renderers: e, index: t, children: r }) {
+      function Mi({ renderers: e, index: t, children: r }) {
         const [i, a] = (0, n.useState)(!1);
         return (e[t] = a), i ? n.createElement(n.Fragment, null, r) : null;
       }
-      const Mi = n.createContext(void 0);
-      function Ci({ query: e, isLoading: t, tab: r }) {
+      const Ci = n.createContext(void 0);
+      function Ti({ query: e, isLoading: t, tab: r }) {
         var i;
         const a = jt(),
           s = (function (e) {
@@ -7743,8 +7750,8 @@
               const r = new Set();
               if (null == i ? void 0 : i.data)
                 for (const e of i.data.mapApps.values())
-                  (Fi.has(e.appid) || (!hi.has(e.appid) && yr(e))) &&
-                    (r.add(e.appid), Fi.add(e.appid));
+                  (Ri.has(e.appid) || (!vi.has(e.appid) && yr(e))) &&
+                    (r.add(e.appid), Ri.add(e.appid));
               const n = [],
                 s = [];
               return (
@@ -7783,44 +7790,44 @@
               (0, $e.Xx)("#GamesList_PerfectGames_Description")
             )
           : n.createElement(
-              Mi.Provider,
+              Ci.Provider,
               { value: c },
-              n.createElement(Ri, {
+              n.createElement(zi, {
                 games: s.data,
                 tab: r,
                 fnCalculateGameSize: u,
               })
             );
       }
-      function Ti(e) {
+      function Wi(e) {
         return Lr;
       }
-      function Wi({ query: e, isLoading: t, tab: r }) {
+      function Oi({ query: e, isLoading: t, tab: r }) {
         return void 0 === e.data || t
           ? null
-          : n.createElement(Ri, {
+          : n.createElement(zi, {
               games: e.data,
               tab: r,
-              fnCalculateGameSize: Ti,
+              fnCalculateGameSize: Wi,
             });
       }
-      const Oi = (0, Ht.AP)(
+      const Gi = (0, Ht.AP)(
           ({ owned: e, filter: t, dependencyLoading: r, sort: i, tab: a }) => {
             const s = Mr(Ve(e, t), i),
               l = Oe(),
               o = s.isLoading || r;
             if (s.error && !o) throw s.error;
             return n.createElement(
-              wi,
+              hi,
               null,
               n.createElement(bi, { tab: a }),
               l
-                ? n.createElement(Ci, { query: s, isLoading: o, tab: a })
-                : n.createElement(Wi, { query: s, isLoading: o, tab: a })
+                ? n.createElement(Ti, { query: s, isLoading: o, tab: a })
+                : n.createElement(Oi, { query: s, isLoading: o, tab: a })
             );
           }
         ),
-        Gi = [
+        Ui = [
           {
             label: (0, $e.Xx)("#GamesList_Sort_HoursPlayed"),
             sortOption: Fr.HoursPlayed,
@@ -7831,11 +7838,11 @@
             sortOption: Fr.AchievementCompletion,
           },
         ];
-      function Ui({ strSort: e, setStrSort: t }) {
+      function ji({ strSort: e, setStrSort: t }) {
         return n.createElement(
           "ul",
           { className: qe.SortOptions },
-          Gi.map((r) =>
+          Ui.map((r) =>
             n.createElement(
               "li",
               { key: r.sortOption },
@@ -7854,7 +7861,7 @@
           )
         );
       }
-      function ji() {
+      function Pi() {
         const [e, t] = (0, Ie.Ar)("games_in_common", !1);
         return n.createElement(
           "label",
@@ -7867,7 +7874,7 @@
           })
         );
       }
-      function Pi() {
+      function Ai() {
         return n.createElement(
           xe.HP,
           {
@@ -7882,19 +7889,19 @@
           )
         );
       }
-      function Ai(e) {
+      function Xi(e) {
         const t = new Set();
         return null == e || e.forEach((e) => t.add(e.appid)), t;
       }
-      function Xi(e, t, r) {
+      function Li(e, t, r) {
         const [i, n] = (0, Ie.Ar)(e, r);
         let a = i;
         return Object.values(t).includes(i) || (a = r), [a, n];
       }
-      function Li(e) {
+      function Ni(e) {
         const t = We(),
-          [r, i] = Xi("sort", Fr, Fr.HoursPlayed),
-          [a, s] = Xi("tab", Cr),
+          [r, i] = Li("sort", Fr, Fr.HoursPlayed),
+          [a, s] = Li("tab", Cr),
           l = null != a ? a : Cr.RecentlyPlayed,
           [o, c, u] = (function (e, t) {
             const [r, i] = (0, n.useState)(e),
@@ -7937,7 +7944,7 @@
           g = (function (e) {
             const t = Ce(Re.L7.steamid, { enabled: e });
             return (0, n.useMemo)(
-              () => ({ data: Ai(t.data), isLoading: t.isLoading }),
+              () => ({ data: Xi(t.data), isLoading: t.isLoading }),
               [t.data, t.isLoading]
             );
           })(_),
@@ -7977,7 +7984,7 @@
         let S = f;
         l === Cr.RecentlyPlayed ? (S = h) : l === Cr.Perfect && (S = v),
           (0, n.useEffect)(() => {
-            hi.clear();
+            vi.clear();
           }, [l]);
         const M = Or(l, f, h, v),
           C = (function (...e) {
@@ -8018,13 +8025,13 @@
                         setStrNameFilter: u,
                         className: qe.FilterInput,
                       }),
-                      z && n.createElement(Pi, null),
-                      !z && l === Cr.All && n.createElement(ji, null),
-                      n.createElement(Ui, { strSort: r, setStrSort: i })
+                      z && n.createElement(Ai, null),
+                      !z && l === Cr.All && n.createElement(Pi, null),
+                      n.createElement(ji, { strSort: r, setStrSort: i })
                     ),
                   z && !Re.De.IN_CLIENT && n.createElement(mr, null)
                 ),
-              n.createElement(Oi, {
+              n.createElement(Gi, {
                 owned: S,
                 filter: C,
                 sort: l === Cr.RecentlyPlayed ? Fr.RecentlyPlayed : r,
@@ -8035,11 +8042,11 @@
           )
         );
       }
-      function Ni(e) {
+      function Ii(e) {
         return n.createElement(
           c,
           { value: { useActiveServiceTransport: Ge } },
-          n.createElement(Li, Object.assign({}, e))
+          n.createElement(Ni, Object.assign({}, e))
         );
       }
     },

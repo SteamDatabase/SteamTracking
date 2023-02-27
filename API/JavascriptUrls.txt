@@ -1029,6 +1029,7 @@ ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_ICON_BASE_URL}${appid}/${}
 ${STORE_ICON_BASE_URL}${appid}/header.jpg
+${STORE_ICON_BASE_URL}${appid}/portrait.png
 ${STORE_ICON_BASE_URL}${}
 ${STORE_ICON_BASE_URL}/${appid}/${}
 ${URL}${URL}
