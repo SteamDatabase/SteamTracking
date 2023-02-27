@@ -1,14 +1,14 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7866573";
+var CLSTAMP = "7873633";
 (() => {
   "use strict";
   var e,
     a,
     n,
     r,
-    c,
     d,
+    c,
     s,
     t = {},
     i = {};
@@ -20,14 +20,14 @@ var CLSTAMP = "7866573";
   }
   (o.m = t),
     (e = []),
-    (o.O = (a, n, r, c) => {
+    (o.O = (a, n, r, d) => {
       if (!n) {
-        var d = 1 / 0;
+        var c = 1 / 0;
         for (b = 0; b < e.length; b++) {
-          for (var [n, r, c] = e[b], s = !0, t = 0; t < n.length; t++)
-            (!1 & c || d >= c) && Object.keys(o.O).every((e) => o.O[e](n[t]))
+          for (var [n, r, d] = e[b], s = !0, t = 0; t < n.length; t++)
+            (!1 & d || c >= d) && Object.keys(o.O).every((e) => o.O[e](n[t]))
               ? n.splice(t--, 1)
-              : ((s = !1), c < d && (d = c));
+              : ((s = !1), d < c && (c = d));
           if (s) {
             e.splice(b--, 1);
             var i = r();
@@ -36,9 +36,9 @@ var CLSTAMP = "7866573";
         }
         return a;
       }
-      c = c || 0;
-      for (var b = e.length; b > 0 && e[b - 1][2] > c; b--) e[b] = e[b - 1];
-      e[b] = [n, r, c];
+      d = d || 0;
+      for (var b = e.length; b > 0 && e[b - 1][2] > d; b--) e[b] = e[b - 1];
+      e[b] = [n, r, d];
     }),
     (o.n = (e) => {
       var a = e && e.__esModule ? () => e.default : () => e;
@@ -53,13 +53,13 @@ var CLSTAMP = "7866573";
         if (4 & r && e.__esModule) return e;
         if (16 & r && "function" == typeof e.then) return e;
       }
-      var c = Object.create(null);
-      o.r(c);
-      var d = {};
+      var d = Object.create(null);
+      o.r(d);
+      var c = {};
       a = a || [null, n({}), n([]), n(n)];
       for (var s = 2 & r && e; "object" == typeof s && !~a.indexOf(s); s = n(s))
-        Object.getOwnPropertyNames(s).forEach((a) => (d[a] = () => e[a]));
-      return (d.default = () => e), o.d(c, d), c;
+        Object.getOwnPropertyNames(s).forEach((a) => (c[a] = () => e[a]));
+      return (c.default = () => e), o.d(d, c), d;
     }),
     (o.d = (e, a) => {
       for (var n in a)
@@ -206,7 +206,7 @@ var CLSTAMP = "7866573";
         1313: "7ba9b75211fb9bb5f36d",
         2029: "a59527d0540a72406547",
         2120: "b4882f76bab9c3a9e06d",
-        2136: "f4612303a2b5be95dddf",
+        2136: "977c303c7c344a8387e3",
         2431: "fe5ea733482a8a8976a5",
         2443: "5b613c1a224ba578fd43",
         2448: "31bed41a6804b70f63ad",
@@ -348,8 +348,8 @@ var CLSTAMP = "7866573";
     })()),
     (o.o = (e, a) => Object.prototype.hasOwnProperty.call(e, a)),
     (r = {}),
-    (c = "appmgmt-storeadmin:"),
-    (o.l = (e, a, n, d) => {
+    (d = "appmgmt-storeadmin:"),
+    (o.l = (e, a, n, c) => {
       if (r[e]) r[e].push(a);
       else {
         var s, t;
@@ -362,7 +362,7 @@ var CLSTAMP = "7866573";
             var f = i[b];
             if (
               f.getAttribute("src") == e ||
-              f.getAttribute("data-webpack") == c + n
+              f.getAttribute("data-webpack") == d + n
             ) {
               s = f;
               break;
@@ -373,16 +373,16 @@ var CLSTAMP = "7866573";
           ((s = document.createElement("script")).charset = "utf-8"),
           (s.timeout = 120),
           o.nc && s.setAttribute("nonce", o.nc),
-          s.setAttribute("data-webpack", c + n),
+          s.setAttribute("data-webpack", d + n),
           (s.src = e)),
           (r[e] = [a]);
         var h = (a, n) => {
             (s.onerror = s.onload = null), clearTimeout(m);
-            var c = r[e];
+            var d = r[e];
             if (
               (delete r[e],
               s.parentNode && s.parentNode.removeChild(s),
-              c && c.forEach((e) => e(n)),
+              d && d.forEach((e) => e(n)),
               a)
             )
               return a(n);
@@ -421,10 +421,10 @@ var CLSTAMP = "7866573";
         .replace(/\/[^\/]+$/, "/")),
         (o.p = e + "../../../");
     })(),
-    (d = (e) =>
+    (c = (e) =>
       new Promise((a, n) => {
         var r = o.miniCssF(e),
-          c = o.p + r;
+          d = o.p + r;
         if (
           ((e, a) => {
             for (
@@ -432,42 +432,42 @@ var CLSTAMP = "7866573";
               r < n.length;
               r++
             ) {
-              var c =
+              var d =
                 (s = n[r]).getAttribute("data-href") || s.getAttribute("href");
-              if ("stylesheet" === s.rel && (c === e || c === a)) return s;
+              if ("stylesheet" === s.rel && (d === e || d === a)) return s;
             }
-            var d = document.getElementsByTagName("style");
-            for (r = 0; r < d.length; r++) {
+            var c = document.getElementsByTagName("style");
+            for (r = 0; r < c.length; r++) {
               var s;
-              if ((c = (s = d[r]).getAttribute("data-href")) === e || c === a)
+              if ((d = (s = c[r]).getAttribute("data-href")) === e || d === a)
                 return s;
             }
-          })(r, c)
+          })(r, d)
         )
           return a();
         ((e, a, n, r) => {
-          var c = document.createElement("link");
-          (c.rel = "stylesheet"),
-            (c.type = "text/css"),
-            (c.onerror = c.onload =
-              (d) => {
-                if (((c.onerror = c.onload = null), "load" === d.type)) n();
+          var d = document.createElement("link");
+          (d.rel = "stylesheet"),
+            (d.type = "text/css"),
+            (d.onerror = d.onload =
+              (c) => {
+                if (((d.onerror = d.onload = null), "load" === c.type)) n();
                 else {
-                  var s = d && ("load" === d.type ? "missing" : d.type),
-                    t = (d && d.target && d.target.href) || a,
+                  var s = c && ("load" === c.type ? "missing" : c.type),
+                    t = (c && c.target && c.target.href) || a,
                     i = new Error(
                       "Loading CSS chunk " + e + " failed.\n(" + t + ")"
                     );
                   (i.code = "CSS_CHUNK_LOAD_FAILED"),
                     (i.type = s),
                     (i.request = t),
-                    c.parentNode.removeChild(c),
+                    d.parentNode.removeChild(d),
                     r(i);
                 }
               }),
-            (c.href = a),
-            document.head.appendChild(c);
-        })(e, c, a, n);
+            (d.href = a),
+            document.head.appendChild(d);
+        })(e, d, a, n);
       })),
     (s = { 6700: 0 }),
     (o.f.miniCss = (e, a) => {
@@ -490,7 +490,7 @@ var CLSTAMP = "7866573";
             9035: 1,
           }[e] &&
           a.push(
-            (s[e] = d(e).then(
+            (s[e] = c(e).then(
               () => {
                 s[e] = 0;
               },
@@ -507,21 +507,21 @@ var CLSTAMP = "7866573";
         if (0 !== r)
           if (r) n.push(r[2]);
           else if (6700 != a) {
-            var c = new Promise((n, c) => (r = e[a] = [n, c]));
-            n.push((r[2] = c));
-            var d = o.p + o.u(a),
+            var d = new Promise((n, d) => (r = e[a] = [n, d]));
+            n.push((r[2] = d));
+            var c = o.p + o.u(a),
               s = new Error();
             o.l(
-              d,
+              c,
               (n) => {
                 if (o.o(e, a) && (0 !== (r = e[a]) && (e[a] = void 0), r)) {
-                  var c = n && ("load" === n.type ? "missing" : n.type),
-                    d = n && n.target && n.target.src;
+                  var d = n && ("load" === n.type ? "missing" : n.type),
+                    c = n && n.target && n.target.src;
                   (s.message =
-                    "Loading chunk " + a + " failed.\n(" + c + ": " + d + ")"),
+                    "Loading chunk " + a + " failed.\n(" + d + ": " + c + ")"),
                     (s.name = "ChunkLoadError"),
-                    (s.type = c),
-                    (s.request = d),
+                    (s.type = d),
+                    (s.request = c),
                     r[1](s);
                 }
               },
@@ -533,15 +533,15 @@ var CLSTAMP = "7866573";
         (o.O.j = (a) => 0 === e[a]);
       var a = (a, n) => {
           var r,
-            c,
-            [d, s, t] = n,
+            d,
+            [c, s, t] = n,
             i = 0;
-          if (d.some((a) => 0 !== e[a])) {
+          if (c.some((a) => 0 !== e[a])) {
             for (r in s) o.o(s, r) && (o.m[r] = s[r]);
             if (t) var b = t(o);
           }
-          for (a && a(n); i < d.length; i++)
-            (c = d[i]), o.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
+          for (a && a(n); i < c.length; i++)
+            (d = c[i]), o.o(e, d) && e[d] && e[d][0](), (e[d] = 0);
           return o.O(b);
         },
         n = (self.webpackChunkappmgmt_storeadmin =
