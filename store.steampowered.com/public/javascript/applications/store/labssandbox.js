@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2814],
   {
-    73175: (e) => {
+    27978: (e) => {
       e.exports = {
         LoginDialog: "login_LoginDialog_2y6W_",
         AccountPasswordPanel: "login_AccountPasswordPanel_3hiT2",
@@ -41,7 +41,7 @@
         LoginComplete: "login_LoginComplete_KmQja",
       };
     },
-    72781: (e) => {
+    69701: (e) => {
       e.exports = {
         AppSelector: "labssandbox_AppSelector_2Fikz",
         AppDisplay: "labssandbox_AppDisplay_3m6Sh",
@@ -79,7 +79,7 @@
         Active: "labssandbox_Active_2J9Kx",
       };
     },
-    203: (e) => {
+    33723: (e) => {
       e.exports = {
         EntryError: "tagclustering_EntryError_1UGoD",
         ClusterConfig: "tagclustering_ClusterConfig_3Qp2u",
@@ -89,19 +89,19 @@
         SimilarTitle: "tagclustering_SimilarTitle_gRxJT",
       };
     },
-    86605: (e, t, a) => {
+    10726: (e, t, a) => {
       "use strict";
       a.d(t, { Q8: () => u });
-      var s = a(70655),
-        r = a(22188),
-        i = a(26149),
-        n = a(58114),
-        o = a(40252),
-        l = a(22154),
-        p = (a(64010), a(68002)),
-        m = a(77520),
-        c = a(99533),
-        d = a(90666);
+      var s = a(33940),
+        r = a(50265),
+        i = a(6960),
+        n = a(17922),
+        o = a(15781),
+        l = a(17339),
+        p = (a(20870), a(67237)),
+        m = a(32338),
+        c = a(23213),
+        d = a(70983);
       class h {
         constructor() {
           (this.m_mapAppInfo = r.LO.map()),
@@ -388,17 +388,17 @@
         (0, s.gn)([r.aD], h.prototype, "OnRichPresenceLocUpdate", null);
       const u = new h();
     },
-    26554: (e, t, a) => {
+    89013: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => we });
-      var s = a(9355),
-        r = a(70655),
-        i = a(86605),
-        n = a(73812),
-        o = a(90666),
-        l = a(22188),
-        p = a(64839),
-        m = a(9669),
+      var s = a(94629),
+        r = a(33940),
+        i = a(10726),
+        n = a(70657),
+        o = a(70983),
+        l = a(50265),
+        p = a(31621),
+        m = a(52868),
         c = a.n(m);
       class d {
         constructor() {
@@ -634,14 +634,14 @@
       }
       const g = new d();
       window.g_LabsSandbox = g;
-      var _ = a(67294),
-        f = a(73727),
-        b = a(16550),
-        S = a(72781),
-        C = a(48341),
-        y = a(76796),
-        E = a(29323),
-        A = a(7573);
+      var _ = a(89526),
+        f = a(565),
+        b = a(59934),
+        S = a(69701),
+        C = a(57255),
+        y = a(38800),
+        E = a(88464),
+        A = a(13806);
       class I extends _.Component {
         constructor(e) {
           super(e),
@@ -1322,12 +1322,12 @@
         (0, r.gn)([p.ak], P.prototype, "OnSelectedStartApp", null),
         (0, r.gn)([p.ak], P.prototype, "OnSelectedEndApp", null),
         (P = (0, r.gn)([E.Pi], P));
-      var F = a(3389),
-        N = (a(46321), a(99533)),
-        M = a(58114),
-        x = a(33019),
-        k = a(40110),
-        D = a(990);
+      var F = a(82569),
+        N = (a(89252), a(23213)),
+        M = a(17922),
+        x = a(45878),
+        k = a(19320),
+        D = a(82702);
       const G = x.Message;
       class T extends G {
         constructor(e = null) {
@@ -1797,8 +1797,8 @@
             );
           });
       })(X || (X = {}));
-      var Q = a(32367),
-        $ = (a(14146), a(159));
+      var Q = a(79983),
+        $ = (a(55449), a(63154));
       class V {
         constructor(e) {
           this.m_SteamInterface = e;
@@ -1851,12 +1851,12 @@
           );
         }
       }
-      var Z = a(13596),
-        J = a(41311),
-        Y = a(203),
-        ee = a(52114),
-        te = a(80533),
-        ae = a(32548);
+      var Z = a(15642),
+        J = a(31587),
+        Y = a(33723),
+        ee = a(23708),
+        te = a(74802),
+        ae = a(22840);
       function se(e) {
         const { SteamInterface: t } = e,
           a = _.useRef();
@@ -2110,11 +2110,11 @@
           t.GetName()
         );
       }
-      var ce = a(95598),
-        de = a(73175),
+      var ce = a(86701),
+        de = a(27978),
         he = a.n(de),
-        ue = a(75255),
-        ge = a(81130);
+        ue = a(94721),
+        ge = a(59821);
       var _e, fe;
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),

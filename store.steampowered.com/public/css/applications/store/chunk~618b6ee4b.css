@@ -972,23 +972,23 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .loyaltyrewarditemembed_Ctn_2di0m {
   width: 100px;
 }
-.VODPlayer_BroadcastCtn_KL2t9 {
+.vodplayer_BroadcastCtn_3YzMi {
   position: relative;
   margin: 0 auto;
   max-width: 940px;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .videoContainer {
+.vodplayer_BroadcastCtn_3YzMi .videoContainer {
   height: unset;
   width: unset;
   display: block;
   position: relative;
   padding-bottom: 56.25%;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .BroadcastPlaceholderImg {
+.vodplayer_BroadcastCtn_3YzMi .BroadcastPlaceholderImg {
   position: absolute;
   width: 100%;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .videoSrc {
+.vodplayer_BroadcastCtn_3YzMi .videoSrc {
   width: 100%;
   height: auto;
   border-left: none;
@@ -7594,8 +7594,27 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .dlcforyou_ParentAppSortTabsCtn_HLysW {
   display: flex;
+  align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.1ch;
+  font-family: "Motiva Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  position: sticky;
+  z-index: 150;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 10px 18px 10px 18px;
+  border-radius: 50px;
+  border-top: #ffffff30 2px solid;
+  height: fit-content;
+  height: -moz-fit-content;
+  backdrop-filter: blur(4px);
 }
 .dlcforyou_ParentAppSortTabsCtn_HLysW .dlcforyou_ParentAppSortTabHeader_2UAG8 {
   margin: 0 4px;
@@ -7604,11 +7623,23 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   padding-left: 0;
 }
 .dlcforyou_ParentAppSortTabsCtn_HLysW .dlcforyou_ParentAppSortTab_3z9ZE {
-  margin: 0 4px;
-  padding: 4px 8px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 28px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  height: 40px;
+  margin: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding: 0 16px;
+  border-top: 2px solid #575d6e;
+  color: #dcdedf;
+  background: linear-gradient(0deg, #241f30 0%, #28384b 100%);
   cursor: pointer;
 }
 .dlcforyou_ParentAppSortTabsCtn_HLysW .dlcforyou_ParentAppSortTabActive_3O8Ab {

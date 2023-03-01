@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6699],
   {
-    50732: (e) => {
+    2508: (e) => {
       e.exports = {
         LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
         Static: "throbber_Static_kwzRJ",
@@ -49,11 +49,11 @@
         Visible: "throbber_Visible_1ziaT",
       };
     },
-    99752: (e, r, t) => {
+    23711: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, { default: () => b });
-      var o = t(67294),
-        c = (t(44396), t(78507));
+      var o = t(89526),
+        c = (t(68620), t(82235));
       function b(e) {
         var r, t;
         const { dataprops: b, results: l } = e;
@@ -73,12 +73,12 @@
         return n ? o.createElement(c.default, { results: n }) : null;
       }
     },
-    13596: (e, r, t) => {
+    15642: (e, r, t) => {
       "use strict";
       t.d(r, { V: () => n });
-      var o = t(67294),
-        c = t(7573),
-        b = t(50732),
+      var o = t(89526),
+        c = t(13806),
+        b = t(2508),
         l = t.n(b);
       const n = o.memo(function (e) {
         const {

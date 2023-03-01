@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4158],
   {
-    74992: (e) => {
+    53592: (e) => {
       e.exports = {
         MarketingMessagePage: "messagelist_MarketingMessagePage_1HVoK",
         MessageListPage: "messagelist_MessageListPage_1N7O3",
@@ -28,7 +28,7 @@
         ExitDone: "messagelist_ExitDone_3cFXR",
       };
     },
-    43044: (e) => {
+    56985: (e) => {
       e.exports = {
         MessageContent: "image_MessageContent_rohJ-",
         IsBlur: "image_IsBlur_2lGtR",
@@ -52,19 +52,19 @@
         ButtonContainer: "image_ButtonContainer_3CVNg",
       };
     },
-    23955: (e, t, s) => {
+    84080: (e, t, s) => {
       "use strict";
       s.d(t, { Ke: () => M, N8: () => _, Q2: () => p });
-      var a = s(70655),
-        n = s(88767),
-        r = s(67294),
-        i = s(26149),
-        l = s(58114),
-        o = (s(46321), s(39722)),
-        c = s(90666),
-        m = s(32367),
-        g = s(14146),
-        u = (s(990), s(77520));
+      var a = s(33940),
+        n = s(5615),
+        r = s(89526),
+        i = s(6960),
+        l = s(17922),
+        o = (s(89252), s(98831)),
+        c = s(70983),
+        m = s(79983),
+        g = s(55449),
+        u = (s(82702), s(32338));
       class _ {
         constructor(e) {
           (this.m_setMessagesSeen = new Set()), (this.m_SteamInterface = e);
@@ -232,11 +232,11 @@
         return { message: r.useMemo(() => a && new d(a), [a]), isError: i };
       }
     },
-    29866: (e, t, s) => {
+    70762: (e, t, s) => {
       "use strict";
       s.d(t, { KY: () => i, Ks: () => o, li: () => l });
-      var a = s(67294),
-        n = s(26682);
+      var a = s(89526),
+        n = s(50840);
       const r = a.createContext({ setLegalText: void 0 });
       function i() {
         return !!a.useContext(r).setLegalText;
@@ -281,10 +281,10 @@
         );
       }
     },
-    57649: (e, t, s) => {
+    54324: (e, t, s) => {
       "use strict";
       s.d(t, { P: () => n, h: () => r });
-      var a = s(67294);
+      var a = s(89526);
       function n(e) {
         const { title: t, bodyClassName: s, children: n } = e;
         return (
@@ -314,30 +314,30 @@
         }, [e]);
       }
     },
-    70695: (e, t, s) => {
+    24808: (e, t, s) => {
       "use strict";
       s.d(t, { T: () => n });
-      var a = s(90666);
+      var a = s(70983);
       function n() {
         return (0, a.kQ)("store_user_config", "application_config");
       }
     },
-    40782: (e, t, s) => {
+    18035: (e, t, s) => {
       "use strict";
       s.d(t, { v: () => L, U: () => A });
-      var a = s(67294),
-        n = (s(23955), s(29866)),
-        r = s(90666),
-        i = s(35921),
-        l = s(32548),
-        o = s(44741),
-        c = s(65924),
-        m = (s(72258), s(53622)),
-        g = s(43044),
-        u = s(7573),
-        _ = s(70655),
-        d = s(26149),
-        M = (s(76796), s(64782));
+      var a = s(89526),
+        n = (s(84080), s(70762)),
+        r = s(70983),
+        i = s(23907),
+        l = s(22840),
+        o = s(16147),
+        c = s(68910),
+        m = (s(72745), s(81052)),
+        g = s(56985),
+        u = s(13806),
+        _ = s(33940),
+        d = s(6960),
+        M = (s(38800), s(5545));
       function p(e) {
         var t;
         const { path: s, message: n } = e,
@@ -474,7 +474,7 @@
           )
         );
       }
-      const C = a.lazy(() => s.e(938).then(s.bind(s, 74368)));
+      const C = a.lazy(() => s.e(938).then(s.bind(s, 96194)));
       function x(e) {
         const { message: t, active: s } = e;
         if ("replay2022" === t.GetTemplateVars().custom_display)
@@ -484,16 +484,16 @@
           : null;
       }
     },
-    11154: (e, t, s) => {
+    24839: (e, t, s) => {
       "use strict";
       s.r(t), s.d(t, { MarketingMessageRoutes: () => N, default: () => I });
-      var a = s(67294),
-        n = s(9355),
-        r = s(16550),
-        i = s(65924),
-        l = s(23955),
-        o = s(48341),
-        c = s(41311);
+      var a = s(89526),
+        n = s(94629),
+        r = s(59934),
+        i = s(68910),
+        l = s(84080),
+        o = s(57255),
+        c = s(31587);
       function m(e) {
         const t = new URLSearchParams();
         return (
@@ -507,13 +507,13 @@
           t.toString()
         );
       }
-      var g = s(74992),
-        u = s(95598),
-        _ = s(7573),
-        d = s(37723),
-        M = s(57649),
-        p = s(13596),
-        E = s(40782);
+      var g = s(53592),
+        u = s(86701),
+        _ = s(13806),
+        d = s(22171),
+        M = s(54324),
+        p = s(15642),
+        E = s(18035);
       const f = 8;
       function v(e) {
         const { MarketingMessagesStore: t } = e,
@@ -742,10 +742,10 @@
           )
         );
       }
-      var C = s(70695),
-        x = s(73812),
-        B = s(90666),
-        y = s(29866);
+      var C = s(24808),
+        x = s(70657),
+        B = s(70983),
+        y = s(70762);
       const G = a.createContext({});
       function T(e) {
         const [t, s] = a.useState(),

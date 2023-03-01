@@ -7,11 +7,6 @@ function ImportAndSaveSurvey( appid )
 
 function SaveSurvey( appid )
 {
-	if ( !$J("input:radio[name='maturecontent_radio']").is(":checked") )
-	{
-		ShowAlertDialog( 'Please specify whether your game contains mature content or themes.', 'Please specify whether your game contains mature content or themes.' );
-		return;
-	}
 
 	var form = $J( "#SaveSurveyForm" );
 
@@ -147,7 +142,7 @@ function HandleRelatedTags( descid, bAnimate )
 
 function HandleMatureContentChange( bMature, bAnimate )
 {
-	var rgElements = [ '#customer_notes', '#content_descriptors', '#dev_notes' ];
+	var rgElements = [ '#customer_notes', '#dev_notes' ];
 
 	if ( bMature )
 	{

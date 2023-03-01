@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1614],
   {
-    62639: (e) => {
+    37664: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         BannerContainer: "deckverified_BannerContainer_2b4eh",
@@ -56,7 +56,7 @@
           "deckverified_DeveloperComments_LinkIcon_1cm6k",
       };
     },
-    47276: (e) => {
+    70424: (e) => {
       e.exports = {
         Dark: "footericons_Dark_2SV_e",
         Background: "footericons_Background_I3P4e",
@@ -69,23 +69,23 @@
         ChordSummary: "footericons_ChordSummary_2sFpI",
       };
     },
-    1245: (e, t, r) => {
+    81084: (e, t, r) => {
       "use strict";
       r.d(t, { X: () => l });
-      r(10767);
+      r(54997);
       function l() {
         let e = window.GetUsabilityTracker;
         if (e) return e();
       }
     },
-    36705: (e, t, r) => {
+    2202: (e, t, r) => {
       "use strict";
       r.d(t, { FX: () => l });
       var l,
-        n = r(70655),
-        o = (r(67294), r(23816), r(23200)),
-        a = (r(37464), r(39746), r(56109), r(99533), r(30543)),
-        i = r(64839);
+        n = r(33940),
+        o = (r(89526), r(14258), r(60587)),
+        a = (r(36178), r(43407), r(19038), r(23213), r(87256)),
+        i = r(31621);
       function c(e) {
         switch (e) {
           case o.eV.OK:
@@ -280,21 +280,21 @@
         (0, n.gn)([i.ak], s.prototype, "OnFocusNavigationChanged", null),
         (0, n.gn)([i.ak], s.prototype, "SetActionDescriptionsFromMap", null);
     },
-    97024: (e, t, r) => {
+    10260: (e, t, r) => {
       "use strict";
       r.d(t, { Rd: () => T, _R: () => O, $g: () => S, Ws: () => B });
-      var l = r(67294),
-        n = (r(76796), r(7707)),
-        o = (r(21205), r(33019));
-      r(40110);
+      var l = r(89526),
+        n = (r(38800), r(49194)),
+        o = (r(82633), r(45878));
+      r(19320);
       o.Message;
-      var a = r(70655),
-        i = r(9669),
+      var a = r(33940),
+        i = r(52868),
         c = r.n(i),
-        s = (r(26149), r(82946), r(93976)),
-        C = r(99533),
-        u = r(64839),
-        m = r(90666);
+        s = (r(6960), r(96158), r(47330)),
+        C = r(23213),
+        u = r(31621),
+        m = r(70983);
       class d {
         constructor() {
           if (
@@ -396,24 +396,24 @@
         }
       }
       (0, a.gn)([u.ak], d.prototype, "LoadAppCompabitilityResult", null);
-      var p = r(37699),
-        g = r(41311),
-        f = r(35921),
-        H = r(27745),
-        v = (r(12505), r(98610)),
-        w = (r(23816), r(7573)),
-        h = r(62639),
+      var p = r(46723),
+        g = r(31587),
+        f = r(23907),
+        H = r(49920),
+        v = (r(84042), r(173)),
+        w = (r(14258), r(13806)),
+        h = r(37664),
         L = r.n(h),
-        V = r(41414),
-        E = r(53622),
-        k = r(73604),
-        _ = r(48341),
-        b = r(13596),
-        M = r(95598),
-        N = (r(10767), r(1245)),
-        y = r(88272),
-        D = r(24432),
-        R = r(36705);
+        V = r(24868),
+        E = r(81052),
+        k = r(32448),
+        _ = r(57255),
+        b = r(15642),
+        M = r(86701),
+        N = (r(54997), r(81084)),
+        y = r(76019),
+        D = r(34357),
+        R = r(2202);
       function Z(e) {
         var t, r;
         const {
@@ -930,17 +930,17 @@
         }
       }
     },
-    24432: (e, t, r) => {
+    34357: (e, t, r) => {
       "use strict";
       r.d(t, { VC: () => d, iM: () => n, yV: () => l });
       var l,
         n,
-        o = r(70655),
-        a = r(67294),
-        i = r(36705),
-        c = r(47276),
+        o = r(33940),
+        a = r(89526),
+        i = r(2202),
+        c = r(70424),
         s = r.n(c),
-        C = r(7573);
+        C = r(13806);
       function u(e) {
         switch (e) {
           case n.Small:

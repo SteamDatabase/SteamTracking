@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1918],
   {
-    27419: (e) => {
+    30325: (e) => {
       e.exports = {
         PageOuterContainer: "summersale2021story_PageOuterContainer_A1mol",
         LocalizedHeaderImg: "summersale2021story_LocalizedHeaderImg_2ef14",
@@ -45,15 +45,15 @@
         Column: "summersale2021story_Column_1TnJ8",
       };
     },
-    23879: (e, a, r) => {
+    19091: (e, a, r) => {
       "use strict";
       r.r(a), r.d(a, { default: () => d });
-      var t = r(67294),
-        m = (r(18330), r(65497), r(9558)),
-        s = r(7573),
-        l = r(41311),
-        _ = r(90666),
-        n = r(27419);
+      var t = r(89526),
+        m = (r(37034), r(43735), r(51619)),
+        s = r(13806),
+        l = r(31587),
+        _ = r(70983),
+        n = r(30325);
       const d = () => {
           (0, m.jM)();
           const e = (0, m.Tv)(),

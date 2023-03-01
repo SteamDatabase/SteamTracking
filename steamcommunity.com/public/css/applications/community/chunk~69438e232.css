@@ -972,23 +972,23 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .loyaltyrewarditemembed_Ctn_2di0m {
   width: 100px;
 }
-.VODPlayer_BroadcastCtn_KL2t9 {
+.vodplayer_BroadcastCtn_3YzMi {
   position: relative;
   margin: 0 auto;
   max-width: 940px;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .videoContainer {
+.vodplayer_BroadcastCtn_3YzMi .videoContainer {
   height: unset;
   width: unset;
   display: block;
   position: relative;
   padding-bottom: 56.25%;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .BroadcastPlaceholderImg {
+.vodplayer_BroadcastCtn_3YzMi .BroadcastPlaceholderImg {
   position: absolute;
   width: 100%;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .videoSrc {
+.vodplayer_BroadcastCtn_3YzMi .videoSrc {
   width: 100%;
   height: auto;
   border-left: none;

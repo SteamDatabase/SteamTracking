@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1979],
   {
-    55285: (e) => {
+    73401: (e) => {
       e.exports = {
         Container: "discussionwidget_Container_3BVe_",
         VoteContainer: "discussionwidget_VoteContainer_1uhQY",
@@ -37,7 +37,7 @@
         VoteButtonSelected: "discussionwidget_VoteButtonSelected_2c_5V",
       };
     },
-    77723: (e) => {
+    56675: (e) => {
       e.exports = {
         Link: "salebanner_Link_26cHo",
         Banner: "salebanner_Banner_2df4N",
@@ -45,14 +45,14 @@
         Mobile: "salebanner_Mobile_2w3oX",
       };
     },
-    81503: (e, t, n) => {
+    52310: (e, t, n) => {
       "use strict";
       n.d(t, { C: () => d, R: () => c });
-      var a = n(70655),
-        i = n(22188),
-        s = (n(26149), n(37662), n(76796), n(3389)),
-        o = (n(35118), n(5525)),
-        r = n(7200);
+      var a = n(33940),
+        i = n(50265),
+        s = (n(6960), n(67575), n(38800), n(82569)),
+        o = (n(18535), n(73265)),
+        r = n(68208);
       class c {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -205,19 +205,19 @@
       (0, a.gn)([i.LO], c.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const d = new c();
     },
-    54798: (e, t, n) => {
+    2796: (e, t, n) => {
       "use strict";
       n.d(t, { J: () => g });
-      var a = n(70655),
-        i = n(9669),
+      var a = n(33940),
+        i = n(52868),
         s = n.n(i),
-        o = n(22188),
-        r = n(13271),
-        c = n(67294),
-        d = (n(76796), n(82946), n(81130)),
-        u = n(99533),
-        l = n(64839),
-        w = n(90666);
+        o = n(50265),
+        r = n(25125),
+        c = n(89526),
+        d = (n(38800), n(96158), n(59821)),
+        u = n(23213),
+        l = n(31621),
+        w = n(70983);
       class _ {
         BIsValid() {
           return void 0 !== this.giveaway_id && null !== this.giveaway_id;
@@ -429,17 +429,17 @@
         (0, a.gn)([d.a], m.prototype, "SetupRefreshDataInterval", null),
         (0, a.gn)([d.a], m.prototype, "SetupCountDown", null);
     },
-    93612: (e, t, n) => {
+    76547: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => l });
-      var a = n(67294),
-        i = n(26149),
-        s = n(50153),
-        o = n(7573),
-        r = n(41311),
-        c = n(35092),
-        d = n(90666),
-        u = n(77723);
+      var a = n(89526),
+        i = n(6960),
+        s = n(83471),
+        o = n(13806),
+        r = n(31587),
+        c = n(98197),
+        d = n(70983),
+        u = n(56675);
       function l(e) {
         const { gidEvent: t } = e,
           n = (0, s.XC)(t),
@@ -500,7 +500,7 @@
           : null;
       }
     },
-    9495: (e, t, n) => {
+    92377: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =

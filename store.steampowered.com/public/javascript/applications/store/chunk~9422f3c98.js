@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [6633],
   {
-    25130: (e) => {
+    12094: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -12,19 +12,19 @@
         avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
       };
     },
-    86605: (e, t, a) => {
+    10726: (e, t, a) => {
       "use strict";
       a.d(t, { Q8: () => g });
-      var s = a(70655),
-        n = a(22188),
-        i = a(26149),
-        r = a(58114),
-        o = a(40252),
-        m = a(22154),
-        p = (a(64010), a(68002)),
-        c = a(77520),
-        l = a(99533),
-        h = a(90666);
+      var s = a(33940),
+        n = a(50265),
+        i = a(6960),
+        r = a(17922),
+        o = a(15781),
+        m = a(17339),
+        p = (a(20870), a(67237)),
+        c = a(32338),
+        l = a(23213),
+        h = a(70983);
       class A {
         constructor() {
           (this.m_mapAppInfo = n.LO.map()),
@@ -311,16 +311,16 @@
         (0, s.gn)([n.aD], A.prototype, "OnRichPresenceLocUpdate", null);
       const g = new A();
     },
-    93981: (e, t, a) => {
+    69202: (e, t, a) => {
       "use strict";
       a.d(t, { Pv: () => l, sB: () => c });
-      var s = a(70655),
-        n = a(22188),
-        i = a(27661),
-        r = a(86605),
-        o = a(41311),
-        m = (a(76796), a(21205), a(90666)),
-        p = (a(3389), a(43359));
+      var s = a(33940),
+        n = a(50265),
+        i = a(39818),
+        r = a(10726),
+        o = a(31587),
+        m = (a(38800), a(82633), a(70983)),
+        p = (a(82569), a(77515));
       function c(e) {
         let t = "offline";
         return (
@@ -591,16 +591,16 @@
         (0, s.gn)([n.LO], l.prototype, "m_strBroadcastTitle", void 0),
         (0, s.gn)([n.LO], l.prototype, "m_bCommunityBanned", void 0);
     },
-    44298: (e, t, a) => {
+    22911: (e, t, a) => {
       "use strict";
       a.d(t, { o: () => _, _1: () => f, DY: () => d, vV: () => u });
-      var s = a(70655),
-        n = a(67294),
-        i = a(29323),
-        r = a(93981),
-        o = a(7573),
-        m = (a(18330), a(90666)),
-        p = a(60501);
+      var s = a(33940),
+        n = a(89526),
+        i = a(88464),
+        r = a(69202),
+        o = a(13806),
+        m = (a(37034), a(70983)),
+        p = a(1633);
       const c =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
         l =
@@ -608,7 +608,7 @@
         h =
           a.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var A = a(25130),
+      var A = a(12094),
         g = a.n(A);
       class _ extends n.Component {
         render() {
@@ -805,12 +805,12 @@
       };
       f = (0, s.gn)([i.Pi], f);
     },
-    60501: (e, t, a) => {
+    1633: (e, t, a) => {
       "use strict";
       a.d(t, { j: () => r });
-      var s = a(70655),
-        n = a(67294),
-        i = a(64839);
+      var s = a(33940),
+        n = a(89526),
+        i = a(31621);
       class r extends n.Component {
         constructor(e) {
           super(e),

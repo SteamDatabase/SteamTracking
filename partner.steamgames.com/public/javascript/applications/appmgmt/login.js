@@ -5,15 +5,15 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4535],
   {
-    49686: (e, t, r) => {
+    3962: (e, t, r) => {
       r.r(t), r.d(t, { default: () => p });
-      var n = r(67294),
-        o = r(41414),
-        a = r(91340),
-        i = r(94486),
-        l = (r(88514), r(73812)),
-        s = r(90666),
-        c = r(92742);
+      var n = r(89526),
+        o = r(24868),
+        a = r(7008),
+        i = r(22891),
+        l = (r(59669), r(70657)),
+        s = r(70983),
+        c = r(29900);
       function p() {
         return (
           (0, n.useEffect)(

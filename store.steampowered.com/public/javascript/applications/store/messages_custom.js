@@ -3,7 +3,23 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [938],
   {
-    45933: (e) => {
+    52080: (e) => {
+      e.exports = {
+        Frame: "replay2022_Frame_1C1Yh",
+        SteamLogo: "replay2022_SteamLogo_1pv40",
+        ReplayLogo: "replay2022_ReplayLogo_3dizB",
+        Hashtag: "replay2022_Hashtag_2rfOn",
+        Content: "replay2022_Content_2snHz",
+        Avatar: "replay2022_Avatar_1UrOy",
+        DataBlock: "replay2022_DataBlock_1RIqD",
+        PersonaName: "replay2022_PersonaName_npXR-",
+        ReplayHighlight: "replay2022_ReplayHighlight_3swaC",
+        GenericTitleBlock: "replay2022_GenericTitleBlock_GlPgK",
+        ViewPageButton: "replay2022_ViewPageButton_3epsf",
+        Description: "replay2022_Description_NyKPE",
+      };
+    },
+    92994: (e) => {
       "use strict";
       var t,
         r = (function () {
@@ -244,35 +260,19 @@
       }
       e.exports = r;
     },
-    34031: (e) => {
-      e.exports = {
-        Frame: "replay2022_Frame_1C1Yh",
-        SteamLogo: "replay2022_SteamLogo_1pv40",
-        ReplayLogo: "replay2022_ReplayLogo_3dizB",
-        Hashtag: "replay2022_Hashtag_2rfOn",
-        Content: "replay2022_Content_2snHz",
-        Avatar: "replay2022_Avatar_1UrOy",
-        DataBlock: "replay2022_DataBlock_1RIqD",
-        PersonaName: "replay2022_PersonaName_npXR-",
-        ReplayHighlight: "replay2022_ReplayHighlight_3swaC",
-        GenericTitleBlock: "replay2022_GenericTitleBlock_GlPgK",
-        ViewPageButton: "replay2022_ViewPageButton_3epsf",
-        Description: "replay2022_Description_NyKPE",
-      };
-    },
-    31240: (e, t, r) => {
+    41580: (e, t, r) => {
       "use strict";
       r.d(t, { F: () => d, t: () => m });
-      var n = r(70655),
-        a = r(9669),
+      var n = r(33940),
+        a = r(52868),
         c = r.n(a),
-        o = r(45933),
+        o = r(92994),
         i = r.n(o),
-        l = r(67294),
-        s = r(88767),
-        u = (r(76796), r(3389)),
-        C = (r(82946), r(93976)),
-        h = r(90666);
+        l = r(89526),
+        s = r(5615),
+        u = (r(38800), r(82569)),
+        C = (r(96158), r(47330)),
+        h = r(70983);
       const f = new (i())(
           (e) =>
             (function (e) {
@@ -368,18 +368,18 @@
         return n ? null : a;
       }
     },
-    74368: (e, t, r) => {
+    96194: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => h });
-      var n = r(67294),
-        a = r(34031),
-        c = r(31240),
-        o = r(90666),
-        i = r(41311),
-        l = r(35921),
-        s = r(65924),
-        u = r(53622),
-        C = r(40782);
+      var n = r(89526),
+        a = r(52080),
+        c = r(41580),
+        o = r(70983),
+        i = r(31587),
+        l = r(23907),
+        s = r(68910),
+        u = r(81052),
+        C = r(18035);
       function h(e) {
         const t = v();
         return n.createElement(

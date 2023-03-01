@@ -592,6 +592,7 @@ ${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
+${PARTNER_BASE_URL}apps/landing/${appid}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/suggestapps
 ${PARTNER_BASE_URL}bundles/suggestbundle
@@ -676,6 +677,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminadddailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminremovedailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminupdatedailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxarchiveold
+${PARTNER_BASE_URL}promotion/dailydeals/ajaxgetdailydealarchivebyid
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxgetpartner
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout
@@ -688,13 +690,15 @@ ${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
+${PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist
-${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubdetail
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary
+${PARTNER_BASE_URL}promotion/planning/ajaxgetsalerankdashboard
 ${PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxuserwithreceivecommunications
 ${PARTNER_BASE_URL}promotion/planning/dashboard
+${PARTNER_BASE_URL}promotion/planning/salesrank
 ${PARTNER_BASE_URL}promotion/planning/themes
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxcreatenewspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/dashboard
@@ -1725,6 +1729,7 @@ https://community.cloudflare.steamstatic.com/public/shared/images/responsive/you
 https://community.cloudflare.steamstatic.com/public/shared/javascript/crypto/jsbn.js
 https://community.cloudflare.steamstatic.com/public/shared/javascript/crypto/rsa.js
 https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta
+https://confluence.valve.org/display/STEAM/How+to+Request+Moderation
 https://confluence.valve.org/display/STEAM/IM+Channel+Guidelines
 https://confluence.valve.org/display/STEAM/Opt-In+Tech+Custom+Event+type
 https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event

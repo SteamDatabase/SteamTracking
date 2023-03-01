@@ -3,23 +3,23 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3207],
   {
-    99312: (e) => {
+    60641: (e) => {
       e.exports = {
         VideoReviewCtn: "twitchembed_VideoReviewCtn_nNaTz",
         YouTubePreviewImage: "twitchembed_YouTubePreviewImage__mxmF",
         TwitchPlayer: "twitchembed_TwitchPlayer_Ny5PH",
       };
     },
-    21807: (e) => {
+    8593: (e) => {
       e.exports = { BreadContainer: "breadcrumbs_BreadContainer_1QPim" };
     },
-    47784: (e) => {
+    85806: (e) => {
       e.exports = {
         YoutubePreviewImage: "youtubepreviewimage_YoutubePreviewImage_MzScK",
         YoutubePlayer: "youtubepreviewimage_YoutubePlayer_3uK6c",
       };
     },
-    86196: (e) => {
+    37411: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CuratorListCtn: "curatorlist_CuratorListCtn_2gWFd",
@@ -54,19 +54,19 @@
         FullReviewDomain: "curatorlist_FullReviewDomain_2R37N",
       };
     },
-    38547: (e) => {
+    74178: (e) => {
       e.exports = { BreadContainer: "curatorminiheader_BreadContainer_GkVFI" };
     },
-    34425: (e, t, a) => {
+    29979: (e, t, a) => {
       "use strict";
       a.d(t, { p: () => u });
-      var r = a(70655),
-        n = a(67294),
-        l = a(7707),
-        o = a(27745),
-        i = a(64839),
-        s = a(90666),
-        c = a(9198);
+      var r = a(33940),
+        n = a(89526),
+        l = a(49194),
+        o = a(49920),
+        i = a(31621),
+        s = a(70983),
+        c = a(38811);
       function u(e) {
         const { children: t, navTreeRef: a } = e,
           u = (0, r._T)(e, ["children", "navTreeRef"]),
@@ -94,17 +94,17 @@
         return n.createElement(n.Fragment, null, t);
       }
     },
-    27991: (e, t, a) => {
+    94082: (e, t, a) => {
       "use strict";
       a.d(t, { NX: () => m, nf: () => d, ue: () => _ });
-      var r = a(70655),
-        n = a(37694),
-        l = a(67294),
-        o = a(73812),
-        i = a(159),
-        s = a(74163),
-        c = a(77520),
-        u = a(90666);
+      var r = a(33940),
+        n = a(87656),
+        l = a(89526),
+        o = a(70657),
+        i = a(63154),
+        s = a(66715),
+        c = a(32338),
+        u = a(70983);
       function m() {
         const e = (0, s.T)("usePartnerStoreBrowseAPI"),
           [t, a] = (0, l.useState)(!1);
@@ -147,15 +147,15 @@
         return n.OT.BIsInitialized() || d(e || null), !0;
       }
     },
-    54881: (e, t, a) => {
+    13330: (e, t, a) => {
       "use strict";
       a.d(t, { b: () => c });
-      var r = a(67294),
-        n = a(21807),
-        l = a(7573),
-        o = a(73727),
-        i = a(7707),
-        s = a(35921);
+      var r = a(89526),
+        n = a(8593),
+        l = a(13806),
+        o = a(565),
+        i = a(49194),
+        s = a(23907);
       function c(e) {
         const { crumbs: t, className: a } = e;
         return t && 0 != t.length
@@ -195,16 +195,16 @@
           : null;
       }
     },
-    52962: (e, t, a) => {
+    3529: (e, t, a) => {
       "use strict";
       a.d(t, { C: () => d, q: () => m });
-      var r = a(67294),
-        n = a(96187),
-        l = a(95598),
-        o = a(90844),
-        i = a(7573),
-        s = a(41311),
-        c = a(47784),
+      var r = a(89526),
+        n = a(90043),
+        l = a(86701),
+        o = a(91096),
+        i = a(13806),
+        s = a(31587),
+        c = a(85806),
         u = a.n(c);
       const m = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
@@ -290,26 +290,26 @@
           }
         };
     },
-    53881: (e, t, a) => {
+    9487: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { CuratorReviewListContainer: () => J, default: () => q });
-      var r = a(29323),
-        n = a(67294),
-        l = a(63473),
-        o = a(26149),
-        i = (a(76796), a(7707)),
-        s = a(34425),
-        c = a(35921),
-        u = a(4224),
-        m = (a(37662), a(50153)),
-        d = a(3389),
-        _ = a(67833),
-        p = a(70655),
-        v = a(74163),
-        E = a(9669),
+      var r = a(88464),
+        n = a(89526),
+        l = a(83799),
+        o = a(6960),
+        i = (a(38800), a(49194)),
+        s = a(29979),
+        c = a(23907),
+        u = a(66729),
+        m = (a(67575), a(83471)),
+        d = a(82569),
+        _ = a(12568),
+        p = a(33940),
+        v = a(66715),
+        E = a(52868),
         b = a.n(E),
-        g = (a(82946), a(90666)),
-        h = a(93976);
+        g = (a(96158), a(70983)),
+        h = a(47330);
       function f(e, t) {
         const [a, r] = (0, n.useState)(
             (null == e ? void 0 : e.BUsesContentHubForItemSource())
@@ -369,19 +369,19 @@
           a
         );
       }
-      var w = a(13354),
-        C = a(71174),
-        I = a(39388),
-        S = a(77636),
-        N = a(27991),
-        R = a(159),
-        T = a(48116),
-        y = a(52114),
-        B = a(99312),
+      var w = a(12263),
+        C = a(31641),
+        I = a(15877),
+        S = a(2351),
+        N = a(94082),
+        R = a(63154),
+        T = a(55910),
+        y = a(23708),
+        B = a(60641),
         k = a.n(B),
-        D = a(95598),
-        F = (a(8456), a(7573)),
-        P = a(47784);
+        D = a(86701),
+        F = (a(55863), a(13806)),
+        P = a(85806);
       const G = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*"
       );
@@ -464,19 +464,19 @@
           )
         );
       }
-      var x = a(67777),
-        A = a(89673),
-        M = a(85732),
-        U = a(87541),
-        W = a(13596),
-        H = a(6092),
-        V = a(52962),
-        j = a(41311),
-        Z = a(35092),
-        O = a(86196),
+      var x = a(69362),
+        A = a(44029),
+        M = a(20186),
+        U = a(7920),
+        W = a(15642),
+        H = a(76473),
+        V = a(3529),
+        j = a(31587),
+        Z = a(98197),
+        O = a(37411),
         z = a.n(O),
-        X = (a(76776), a(54881)),
-        Q = a(38547);
+        X = (a(29760), a(13330)),
+        Q = a(74178);
       function $(e) {
         const { clanInfo: t } = e,
           { curator_link: a, curator_medium_avatar: r } = (0, g.kQ)(

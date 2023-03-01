@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2530],
   {
-    62906: (e) => {
+    63880: (e) => {
       e.exports = {
         Login: "newlogindialog_Login_ZOBYq",
         SideBySide: "newlogindialog_SideBySide_1Wl13",
@@ -108,7 +108,7 @@
         Client: "newlogindialog_Client_1ZDxg",
       };
     },
-    1105: (e) => {
+    27953: (e) => {
       e.exports = {
         LoginQR: "qrlogin_LoginQR_1wtS3",
         QRLoginDeck: "qrlogin_QRLoginDeck_3pzmh",
@@ -123,14 +123,14 @@
         Large: "qrlogin_Large_elAzl",
       };
     },
-    72036: (e) => {
+    22601: (e) => {
       e.exports = {
         QRBits: "qrcode_QRBits_3FhhK",
         Bit: "qrcode_Bit_2Yuvr",
         Active: "qrcode_Active_274P1",
       };
     },
-    50732: (e) => {
+    2508: (e) => {
       e.exports = {
         LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
         Static: "throbber_Static_kwzRJ",
@@ -175,7 +175,7 @@
         Visible: "throbber_Visible_1ziaT",
       };
     },
-    73474: (e, t, r) => {
+    32720: (e, t, r) => {
       "use strict";
       var i;
       r.d(t, { Z: () => k });
@@ -1225,7 +1225,7 @@
         },
       };
     },
-    92742: (e, t, r) => {
+    29900: (e, t, r) => {
       "use strict";
       r.d(t, {
         NZ: () => i,
@@ -1236,16 +1236,16 @@
       });
       var i,
         n,
-        a = r(70655),
-        s = r(22188),
-        o = r(9669),
+        a = r(33940),
+        s = r(50265),
+        o = r(52868),
         l = r.n(o),
-        c = r(58114),
-        u = r(81130),
-        m = (r(26149), r(36039), r(90666)),
-        d = r(88514),
-        h = (r(99925), r(79742)),
-        g = r(26682);
+        c = r(17922),
+        u = r(59821),
+        m = (r(6960), r(91851), r(70983)),
+        d = r(59669),
+        h = (r(60806), r(5155)),
+        g = r(50840);
       function f(e) {
         const {
             shared_secret: t,
@@ -1508,31 +1508,31 @@
         (0, a.gn)([u.a], _.prototype, "PollForUpdate", null),
         (0, a.gn)([u.a], _.prototype, "SetTokenToRevoke", null);
     },
-    94486: (e, t, r) => {
+    22891: (e, t, r) => {
       "use strict";
       r.d(t, { uU: () => oe, Oz: () => se, wK: () => te, pT: () => ee });
-      var i = r(70655),
-        n = r(67294),
-        a = r(58114),
-        s = r(7573),
-        o = r(22188),
-        l = r(9669),
+      var i = r(33940),
+        n = r(89526),
+        a = r(17922),
+        s = r(13806),
+        o = r(50265),
+        l = r(52868),
         c = r.n(l),
-        u = r(90666),
-        m = (r(36039), r(92742)),
-        d = r(26149),
-        h = r(13271),
-        g = r(64839);
-      const f = r(73474).Z;
+        u = r(70983),
+        m = (r(91851), r(29900)),
+        d = r(6960),
+        h = r(25125),
+        g = r(31621);
+      const f = r(32720).Z;
       function _(e, t) {
         let r = f.getPublicKey(t.publickey_mod, t.publickey_exp),
           i = f.encrypt(e, r);
         return !1 === i ? null : i;
       }
-      var b = r(88514),
-        p = (r(21205), r(73812)),
-        y = r(99925),
-        B = r(26682);
+      var b = r(59669),
+        p = (r(82633), r(70657)),
+        y = r(60806),
+        B = r(50840);
       class w extends m.io {
         constructor(e) {
           super(
@@ -2159,11 +2159,11 @@
       }
       (0, i.gn)([o.LO], M.prototype, "m_eStatus", void 0);
       var T,
-        F = r(62906),
+        F = r(63880),
         z = r.n(F),
-        k = r(36876),
+        k = r(28545),
         A = r.n(k),
-        L = r(72036),
+        L = r(22601),
         N = r.n(L);
       function O(e) {
         let {
@@ -2222,9 +2222,9 @@
           (e[(e.Q = 3)] = "Q"),
           (e[(e.H = 2)] = "H");
       })(T || (T = {}));
-      var x = r(1105),
+      var x = r(27953),
         W = r.n(x),
-        D = r(76796);
+        D = r(38800);
       function I(e) {
         const {
             transport: t,
@@ -2381,16 +2381,16 @@
           })
         );
       }
-      var P = r(41311),
-        Z = r(13596),
-        H = r(95598);
+      var P = r(31587),
+        Z = r(15642),
+        H = r(86701);
       const V =
         r.p +
         "images/applications/community/login_mobile_auth.png?v=valveisgoodatcaching";
-      var q = r(16550),
-        Q = r(32548),
-        $ = r(53157),
-        K = r(28268);
+      var q = r(59934),
+        Q = r(22840),
+        $ = r(69210),
+        K = r(40108);
       const J = (0, n.createContext)(!1),
         Y = () => (0, n.useContext)(J);
       function ee() {
@@ -4082,7 +4082,7 @@
         );
       }
     },
-    88514: (e, t, r) => {
+    59669: (e, t, r) => {
       "use strict";
       r.d(t, {
         $h: () => D,
@@ -4093,9 +4093,9 @@
         oZ: () => m,
         up: () => c,
       });
-      var i = r(33019),
-        n = r(40110),
-        a = (r(21205), r(39799));
+      var i = r(45878),
+        n = r(19320),
+        a = (r(82633), r(67737));
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -6189,11 +6189,11 @@
             });
         })(j || (j = {}));
     },
-    99925: (e, t, r) => {
+    60806: (e, t, r) => {
       "use strict";
       r.d(t, { AX: () => _, Sz: () => B, _w: () => g });
-      var i = r(33019),
-        n = r(40110);
+      var i = r(45878),
+        n = r(19320);
       const a = i.Message;
       class s extends a {
         constructor(e = null) {
@@ -7108,12 +7108,12 @@
           });
       })(B || (B = {}));
     },
-    13596: (e, t, r) => {
+    15642: (e, t, r) => {
       "use strict";
       r.d(t, { V: () => o });
-      var i = r(67294),
-        n = r(7573),
-        a = r(50732),
+      var i = r(89526),
+        n = r(13806),
+        a = r(2508),
         s = r.n(a);
       const o = i.memo(function (e) {
         const {

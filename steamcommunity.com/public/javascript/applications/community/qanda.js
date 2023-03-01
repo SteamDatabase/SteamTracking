@@ -4,12 +4,12 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [908],
   {
-    93976: (r, e, s) => {
+    47330: (r, e, s) => {
       s.d(e, { l: () => a });
-      s(26149);
-      var o = s(9669),
+      s(6960);
+      var o = s(52868),
         t = s.n(o),
-        n = s(58114);
+        n = s(17922);
       function a(r) {
         if (t().isCancel(r))
           return { strErrorMsg: "Action Cancelled:" + r, errorCode: 52 };
@@ -70,13 +70,13 @@
           : { strErrorMsg: "Unknown Error: " + r, errorCode: 2 };
       }
     },
-    69761: (r, e, s) => {
+    56597: (r, e, s) => {
       s.r(e), s.d(e, { QAndARoutes: () => c, default: () => i });
-      var o = s(69382),
-        t = s(67294),
-        n = s(16550),
-        a = s(74091),
-        d = s(92244);
+      var o = s(52601),
+        t = s(89526),
+        n = s(59934),
+        a = s(20352),
+        d = s(83215);
       const c = {
         Dashboard: (r) => `/questions/${r}/dashboard`,
         FullPageView: (r, e) => `/questions/${r}/view/${e}`,

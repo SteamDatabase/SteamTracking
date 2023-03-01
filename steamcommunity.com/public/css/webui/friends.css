@@ -167,6 +167,42 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   margin-top: 0px;
   display: none;
 }
+.DesktopUI .contextmenu_contextMenu_PP7LM {
+  box-shadow: 0 10px 32px 0px #000000ab;
+  background: #3d4450;
+}
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl {
+  padding: 8px 18px;
+  font-size: 13px;
+  color: #dcdedf;
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+  position: relative;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl:first-child {
+  border-top: none;
+}
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl:hover,
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl.contextmenu_active_18z-3 {
+  background: #dcdedf;
+  color: #3d4450;
+}
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl.disabled {
+  background: none;
+  color: #67707b;
+  cursor: default;
+  pointer-events: none;
+}
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl.disabled:hover {
+  background: none;
+  color: #67707b;
+  cursor: default;
+}
 .contextmenu_PopoutSubMenu_Baq37 {
   position: relative;
   width: 100%;
@@ -502,11 +538,12 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_CFTLX {
-  padding: 24px 0px 24px 24px;
+  padding: 24px 0px 0px 24px;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX.DesktopUI .DialogBody,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogBody {
   padding-right: 24px;
+  padding-bottom: 24px;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader {
   margin-right: 0;
@@ -1133,6 +1170,9 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_FieldLeadIcon_3CGpa {
   margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .gamepaddialog_FieldLeadIcon_3CGpa svg {
   height: 20px;
@@ -9658,6 +9698,7 @@ html:not(.touch)
   width: 20px;
   height: 32px;
   margin-right: 12px;
+  cursor: pointer;
 }
 .newlogindialog_Login_lat0M
   .newlogindialog_LogoContainer_14exB
@@ -37017,6 +37058,15 @@ button.DialogButton::-moz-focus-inner {
 }
 .Destructive .ModalPosition_TopBar {
   background: linear-gradient(to right, #c44848, #c44848);
+}
+.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
+  opacity: 0;
 }
 .ModalDialogPopup .PopupFullWindow > .ModalPosition,
 .ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {

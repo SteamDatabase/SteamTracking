@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8087],
   {
-    56160: (e) => {
+    77620: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Icon: "achievementiconbase_Icon_2bzHb",
@@ -22,10 +22,10 @@
         HiddenLabel: "achievementiconbase_HiddenLabel_2yMyP",
       };
     },
-    44586: (e) => {
+    26888: (e) => {
       e.exports = { SmallAvatar: "userprofile_SmallAvatar_2cCH3" };
     },
-    29399: (e) => {
+    66057: (e) => {
       e.exports = {
         GraphicalAssetsTabs: "tabbar_GraphicalAssetsTabs_36r8g",
         GraphicalAssetsTab: "tabbar_GraphicalAssetsTab_K1_Tp",
@@ -37,7 +37,7 @@
         StatusCaution: "tabbar_StatusCaution_31Lxu",
       };
     },
-    53408: (e) => {
+    72100: (e) => {
       e.exports = {
         AchievementsCtn: "yirachievements_AchievementsCtn_2LUzg",
         AchievementSectionTitleCtn:
@@ -60,7 +60,7 @@
         BadgeBarFiller: "yirachievements_BadgeBarFiller_30I9Y",
       };
     },
-    27754: (e) => {
+    67629: (e) => {
       e.exports = {
         MonthGridOverallCtn: "yirallgames_MonthGridOverallCtn_2xKPi",
         MonthGroupCtn: "yirallgames_MonthGroupCtn_DMCZI",
@@ -70,7 +70,7 @@
         BGImage: "yirallgames_BGImage_1XJXA",
       };
     },
-    98144: (e) => {
+    25031: (e) => {
       e.exports = {
         ImagesCtn: "yirbackgroundtiles_ImagesCtn_1qcMw",
         AllImages: "yirbackgroundtiles_AllImages_RxFaO",
@@ -80,7 +80,7 @@
         SingleGame: "yirbackgroundtiles_SingleGame_VGWhX",
       };
     },
-    59588: (e) => {
+    97502: (e) => {
       e.exports = {
         TopHonorsCtn: "yirbadges_TopHonorsCtn_1xRuk",
         BadgeBox: "yirbadges_BadgeBox_21Ah2",
@@ -160,7 +160,7 @@
         ElementFadeIn: "yirbadges_ElementFadeIn_rfg_i",
       };
     },
-    33208: (e) => {
+    40188: (e) => {
       e.exports = {
         strGameDetailsTransitionTimeMS: "300ms",
         TotalHoursContainer: "yircomponents_TotalHoursContainer_26dqO",
@@ -223,7 +223,7 @@
         BadgeBarFiller: "yircomponents_BadgeBarFiller_E8NuE",
       };
     },
-    96109: (e) => {
+    31813: (e) => {
       e.exports = {
         FriendCtn: "yirfriends_FriendCtn_1dEBr",
         FriendsSharedSection: "yirfriends_FriendsSharedSection_3zKPE",
@@ -231,7 +231,7 @@
         FriendsGrid: "yirfriends_FriendsGrid_OQcaq",
       };
     },
-    38684: (e) => {
+    51261: (e) => {
       e.exports = {
         DeckContainer: "yirhowyouplayed_DeckContainer_3G2ne",
         StatsRow: "yirhowyouplayed_StatsRow_2kmTj",
@@ -241,7 +241,7 @@
         ScreenContainer: "yirhowyouplayed_ScreenContainer_13EBY",
       };
     },
-    82115: (e) => {
+    57779: (e) => {
       e.exports = {
         YearInReviewContainer: "yirlanding_YearInReviewContainer_1FBH8",
         YearInReviewContent: "yirlanding_YearInReviewContent_2Mj4n",
@@ -327,7 +327,7 @@
         BottomCtn: "yirlanding_BottomCtn_2mhHS",
       };
     },
-    78457: (e) => {
+    42315: (e) => {
       e.exports = {
         Section: "yirlongeststreak_Section_32a0u",
         StreakSubTitle: "yirlongeststreak_StreakSubTitle_6lD5o",
@@ -344,7 +344,7 @@
         BgImage: "yirlongeststreak_BgImage_2dY4F",
       };
     },
-    71387: (e) => {
+    15856: (e) => {
       e.exports = {
         ScreenshotsCtn: "yirscreenshot_ScreenshotsCtn_HFVMb",
         ElementFadeIn: "yirscreenshot_ElementFadeIn_2S3v_",
@@ -356,7 +356,7 @@
         BadgeBarFiller: "yirscreenshot_BadgeBarFiller_axniE",
       };
     },
-    28803: (e) => {
+    55680: (e) => {
       e.exports = {
         ShareCtn: "yirshare_ShareCtn_3wBwg",
         ShareHeader: "yirshare_ShareHeader_j8KV_",
@@ -423,7 +423,7 @@
         DropDownSizer: "yirshare_DropDownSizer_ZrLd2",
       };
     },
-    38943: (e) => {
+    74566: (e) => {
       e.exports = {
         Section: "yirstatsbesidegametiles_Section_3Q6xY",
         Windows: "yirstatsbesidegametiles_Windows_1vF9u",
@@ -447,7 +447,7 @@
         BadgeBarFiller: "yirstatsbesidegametiles_BadgeBarFiller_1TdxY",
       };
     },
-    15141: (e) => {
+    77029: (e) => {
       e.exports = {
         MonthlyChartTooltipCtn: "yirsummarycharts_MonthlyChartTooltipCtn_2XmLn",
         TooltipBackgroundOverlay:
@@ -460,20 +460,20 @@
         TotalPlaytime: "yirsummarycharts_TotalPlaytime_ObTF_",
       };
     },
-    77517: (e) => {
+    32020: (e) => {
       e.exports = {
         Section: "yirtimelinecontainer_Section_389gB",
         ChartContainer: "yirtimelinecontainer_ChartContainer_3X3Ad",
         Chart: "yirtimelinecontainer_Chart_1YUut",
       };
     },
-    7751: (e, t, a) => {
+    63682: (e, t, a) => {
       "use strict";
       a.d(t, { C: () => i });
-      a(14146);
-      var r = a(77636),
-        n = a(67294);
-      a(990);
+      a(55449);
+      var r = a(2351),
+        n = a(89526);
+      a(82702);
       function i(e) {
         const t = r.jg.Get().BIsLoaded() && r.jg.Get();
         return n.useMemo(
@@ -496,19 +496,19 @@
         );
       }
     },
-    31240: (e, t, a) => {
+    41580: (e, t, a) => {
       "use strict";
       a.d(t, { F: () => g, t: () => p });
-      var r = a(70655),
-        n = a(9669),
+      var r = a(33940),
+        n = a(52868),
         i = a.n(n),
-        s = a(45933),
+        s = a(92994),
         l = a.n(s),
-        o = a(67294),
-        c = a(88767),
-        m = (a(76796), a(3389)),
-        d = (a(82946), a(93976)),
-        u = a(90666);
+        o = a(89526),
+        c = a(5615),
+        m = (a(38800), a(82569)),
+        d = (a(96158), a(47330)),
+        u = a(70983);
       const _ = new (l())(
           (e) =>
             (function (e) {
@@ -604,16 +604,16 @@
         return r ? null : n;
       }
     },
-    30306: (e, t, a) => {
+    96290: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { YearInReviewRoutes: () => Rn, default: () => In });
-      var r = a(67294),
-        n = a(9355),
-        i = a(16550),
-        s = a(65924),
-        l = a(70655),
-        o = (a(76796), a(33019)),
-        c = a(40110);
+      var r = a(89526),
+        n = a(94629),
+        i = a(59934),
+        s = a(68910),
+        l = a(33940),
+        o = (a(38800), a(45878)),
+        c = a(19320);
       const m = o.Message;
       class d extends m {
         constructor(e = null) {
@@ -3713,9 +3713,9 @@
         ],
         ie = "#7d98aa",
         se = ne.length;
-      var le = a(22188),
-        oe = a(3389),
-        ce = a(30600);
+      var le = a(50265),
+        oe = a(82569),
+        ce = a(93958);
       const me = 5;
       class de {
         constructor(e) {
@@ -3990,16 +3990,16 @@
       }
       (0, l.gn)([le.LO], de.prototype, "m_privacyState", void 0);
       const ue = "0px 0px 100% 0px";
-      var _e = a(90666),
-        ye = a(77520),
-        ge = a(73812),
-        pe = (a(46321), a(58114)),
-        he = a(88767),
-        ve = a(159),
-        Be = a(990),
-        Se = a(32367),
-        be = a(13271),
-        Ee = a(77636);
+      var _e = a(70983),
+        ye = a(32338),
+        ge = a(70657),
+        pe = (a(89252), a(17922)),
+        he = a(5615),
+        ve = a(63154),
+        Be = a(82702),
+        Se = a(79983),
+        be = a(25125),
+        Ee = a(2351);
       const we = { include_basic_info: !0, include_assets: !0 };
       class Ce {
         constructor() {
@@ -4158,11 +4158,11 @@
         }, [e]);
       }
       (0, l.gn)([le.LO], Ce.prototype, "m_GameDetailPopupData", void 0);
-      var Ge = a(45933),
+      var Ge = a(92994),
         Ne = a.n(Ge),
-        Te = (a(14146), a(7751)),
-        Me = a(41311),
-        Fe = a(82115),
+        Te = (a(55449), a(63682)),
+        Me = a(31587),
+        Fe = a(57779),
         Ae = a.n(Fe);
       function ke() {
         return (0, r.useContext)(hn).bIsUser;
@@ -4254,9 +4254,9 @@
           );
         return a;
       }
-      var De = a(93976),
-        Ue = a(99533),
-        We = a(64839);
+      var De = a(47330),
+        Ue = a(23213),
+        We = a(31621);
       function Xe(e, t) {
         return (0, l.mG)(this, void 0, void 0, function* () {
           const a = yield t;
@@ -4417,24 +4417,24 @@
           n
         );
       }
-      var Ze = a(44298),
-        He = a(31240),
-        Ve = a(48341),
-        $e = a(32548),
-        Qe = a(31933),
-        Ke = a(34133),
-        qe = a(13596),
-        Je = a(7573),
-        et = a(38943),
+      var Ze = a(22911),
+        He = a(41580),
+        Ve = a(57255),
+        $e = a(22840),
+        Qe = a(31319),
+        Ke = a(65717),
+        qe = a(15642),
+        Je = a(13806),
+        et = a(74566),
         tt = a.n(et),
-        at = a(33208),
+        at = a(40188),
         rt = a.n(at),
-        nt = a(52114),
-        it = a(47808);
+        nt = a(23708),
+        it = a(81171);
       const st =
         a.p +
         "images/applications/store/defaultappimage.png?v=valveisgoodatcaching";
-      a(13328);
+      a(11643);
       const lt = Object.assign(Object.assign({}, we), {
         include_screenshots: !0,
       });
@@ -4593,13 +4593,13 @@
           r.createElement("div", null, (0, Me.Xx)(i))
         );
       }
-      var yt = a(67833),
-        gt = a(48116),
-        pt = a(72062),
-        ht = a(29399),
+      var yt = a(12568),
+        gt = a(55910),
+        pt = a(78205),
+        ht = a(66057),
         vt = a.n(ht),
-        Bt = a(28268),
-        St = a(72258);
+        Bt = a(40108),
+        St = a(72745);
       class bt extends r.Component {
         constructor() {
           super(...arguments), (this.state = { activeTab: "" });
@@ -4712,9 +4712,9 @@
         }
       }
       const Et = (0, i.EN)(bt);
-      var wt = a(74891),
-        Ct = a(27754),
-        ft = a(54452);
+      var wt = a(5055),
+        Ct = a(67629),
+        ft = a(85446);
       function Rt(e) {
         const { className: t, children: a, strClassOnFirstVisible: n } = e,
           [i, s] = (0, r.useState)(!1);
@@ -4919,7 +4919,7 @@
           )
         );
       }
-      var Ft = a(98144),
+      var Ft = a(25031),
         At = a.n(Ft);
       const kt = 9e3,
         xt = 10,
@@ -5025,19 +5025,19 @@
           e.children
         );
       }
-      var Ut = a(48899),
-        Wt = a(59588),
+      var Ut = a(46504),
+        Wt = a(97502),
         Xt = a.n(Wt),
-        Ot = a(37694),
-        jt = a(27991),
-        Zt = a(4965),
-        Ht = a(1752),
-        Vt = a(46208),
-        $t = a(43815),
-        Qt = a(98321),
-        Kt = a(90508),
-        qt = a(39277),
-        Jt = a(50294);
+        Ot = a(87656),
+        jt = a(94082),
+        Zt = a(30310),
+        Ht = a(77434),
+        Vt = a(86246),
+        $t = a(32214),
+        Qt = a(93950),
+        Kt = a(83962),
+        qt = a(10562),
+        Jt = a(57103);
       const ea = r.createElement(
           "svg",
           {
@@ -5623,7 +5623,7 @@
           r.createElement("div", { className: Xt().NumbersValue }, n)
         );
       }
-      a(82946);
+      a(96158);
       class da {
         constructor() {
           this.m_SteamInterface = null;
@@ -5666,7 +5666,7 @@
             (this.m_SteamInterface = new ge.J(_e.De.WEBAPI_BASE_URL, e));
         }
       }
-      var ua = a(44586);
+      var ua = a(26888);
       function _a(e) {
         const { accountID: t, bHideWhenNotAvailable: a } = e,
           [n] = (0, He.F)(t),
@@ -5692,8 +5692,8 @@
               )
         );
       }
-      var ya = a(15396),
-        ga = a(96109);
+      var ya = a(3660),
+        ga = a(31813);
       function pa(e) {
         const { userYearInReview: t } = e;
         return _e.L7.is_support || _e.L7.accountid == t.GetAccountID()
@@ -5786,10 +5786,10 @@
           })
         );
       }
-      var Sa = a(38684),
+      var Sa = a(51261),
         ba = a.n(Sa),
-        Ea = a(99307),
-        wa = a(23872);
+        Ea = a(57317),
+        wa = a(98241);
       const Ca = 100;
       var fa;
       function Ra(e) {
@@ -6191,7 +6191,7 @@
           )
         );
       }
-      var Aa = a(78457),
+      var Aa = a(42315),
         ka = a.n(Aa);
       function xa(e) {
         const { userYearInReview: t } = e,
@@ -6289,16 +6289,16 @@
         }
         return null;
       }
-      var Ya = a(28803),
-        La = a(95598),
-        za = a(41414),
-        Da = a(38600),
-        Ua = a(79281),
-        Wa = a(26149),
-        Xa = a(56175),
-        Oa = a(47077),
-        ja = a(78853),
-        Za = a(37699);
+      var Ya = a(55680),
+        La = a(86701),
+        za = a(24868),
+        Da = a(80681),
+        Ua = a(29634),
+        Wa = a(6960),
+        Xa = a(99212),
+        Oa = a(88393),
+        ja = a(51751),
+        Za = a(46723);
       class Ha {
         constructor() {
           this.m_SteamInterface = null;
@@ -6348,8 +6348,18 @@
         }
       }
       const Va = "yir_social_images";
-      var $a = a(12264),
-        Qa = a(22745);
+      var $a = a(90889);
+      function Qa(e, t) {
+        r.useEffect(() => {
+          const a = (a) => {
+            a.key === e && t(a);
+          };
+          return (
+            document.addEventListener("keydown", a),
+            () => document.removeEventListener("keydown", a)
+          );
+        }, [e, t]);
+      }
       function Ka(e) {
         const { userYearInReview: t, steamId: a, nYear: n } = e,
           i = ke();
@@ -6547,10 +6557,10 @@
             i < d && (s(i + 1), e.stopPropagation());
           };
         return (
-          (0, Qa.P)("ArrowLeft", _),
-          (0, Qa.P)("Left", _),
-          (0, Qa.P)("ArrowRight", y),
-          (0, Qa.P)("Right", y),
+          Qa("ArrowLeft", _),
+          Qa("Left", _),
+          Qa("ArrowRight", y),
+          Qa("Right", y),
           c
             ? r.createElement(
                 "div",
@@ -6689,8 +6699,8 @@
           url: o,
         } = e;
         return (
-          (0, Qa.P)("Escape", s),
-          (0, Qa.P)("Esc", s),
+          Qa("Escape", s),
+          Qa("Esc", s),
           r.createElement(
             "div",
             { className: Ya.PreviewImageCtn },
@@ -7530,12 +7540,12 @@
           r.createElement("div", { className: Ae().SmallText }, (0, Me.Xx)(s))
         );
       }
-      var br = a(1136),
-        Er = a(14195),
-        wr = a(75358),
-        Cr = a(87226),
-        fr = a(3023),
-        Rr = a(15141);
+      var br = a(77219),
+        Er = a(42333),
+        wr = a(58104),
+        Cr = a(75018),
+        fr = a(23007),
+        Rr = a(77029);
       const Ir = "#ffffff",
         Gr = "#1a9ffe",
         Nr = r.memo((e) => {
@@ -7805,7 +7815,7 @@
         const i = `${a}_Percent`;
         return (0, Me.kQ)(i, r.createElement("b", null, Ye(e)), t, ...n);
       }
-      var zr = a(77517);
+      var zr = a(32020);
       function Dr(e) {
         var t;
         const { userYearInReview: a } = e,
@@ -7838,7 +7848,7 @@
             )
         );
       }
-      var Ur = a(18330);
+      var Ur = a(37034);
       class Wr {
         constructor() {
           (this.m_SteamInterface = null),
@@ -7974,9 +7984,9 @@
           s
         );
       }
-      var jr = a(73935),
-        Zr = a(42055),
-        Hr = a(56160),
+      var jr = a(73961),
+        Zr = a(12186),
+        Hr = a(77620),
         Vr = a.n(Hr);
       const $r = r.forwardRef(
         ({ imgURL: e, glow: t, hidden: a, alt: n, className: i }, s) => {
@@ -8016,9 +8026,9 @@
           );
         }
       );
-      var Qr = a(48037),
+      var Qr = a(79053),
         Kr = a.n(Qr),
-        qr = a(53408);
+        qr = a(72100);
       function Jr(e) {
         var t;
         const { appid: a, userYearInReview: n } = e,
@@ -8213,7 +8223,7 @@
           )
         );
       }
-      var sn = a(71387);
+      var sn = a(15856);
       function ln(e) {
         const { appid: t, bBlurContent: a } = e,
           n = ze(t);

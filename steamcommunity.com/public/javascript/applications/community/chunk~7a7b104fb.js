@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2449],
   {
-    17157: (e) => {
+    24613: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -68,7 +68,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    47922: (e) => {
+    35534: (e) => {
       e.exports = {
         BroadcastChat: "broadcastchat_BroadcastChat_37jsi",
         ChatEntry: "broadcastchat_ChatEntry_3o0ss",
@@ -107,7 +107,7 @@
         SignInButton: "broadcastchat_SignInButton_26lxf",
       };
     },
-    36625: (e) => {
+    60669: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
         GiveawayWinnerAnnounced:
@@ -131,7 +131,7 @@
           "broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy",
       };
     },
-    35663: (e) => {
+    76014: (e) => {
       e.exports = {
         BroadcastPlayerLite: "broadcastplayer_BroadcastPlayerLite_3YmNP",
         BroadcastPlayerLiteVideo:
@@ -141,7 +141,7 @@
           "broadcastplayer_BroadcastPlaceholderImg_3Hcqn",
       };
     },
-    2375: (e) => {
+    44141: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FriendsListInsetShadowCtn:
@@ -151,26 +151,26 @@
           "insetshadow_FriendListInsetShadowBottom_2hL6s",
       };
     },
-    85503: (e, t, r) => {
+    76320: (e, t, r) => {
       "use strict";
       r.d(t, { c: () => P });
-      var i = r(70655),
-        a = r(22188),
-        s = r(29323),
-        n = r(67294),
-        o = r(57287),
-        l = (r(69765), r(4344)),
-        c = r(81503),
-        d = (r(29139), r(21927)),
-        m = (r(76920), r(89608)),
+      var i = r(33940),
+        a = r(50265),
+        s = r(88464),
+        n = r(89526),
+        o = r(7297),
+        l = (r(87487), r(33161)),
+        c = r(52310),
+        d = (r(55923), r(68041)),
+        m = (r(39766), r(24437)),
         u = r.n(m),
-        h = r(10847),
-        _ = r(48341),
-        p = r(83997),
-        g = r(92202),
-        b = r(23211),
-        B = r(88883),
-        S = r(2375),
+        h = r(14100),
+        _ = r(57255),
+        p = r(46722),
+        g = r(4940),
+        b = r(76478),
+        B = r(83878),
+        S = r(44141),
         y = r.n(S);
       const w = () =>
           n.createElement(
@@ -186,15 +186,15 @@
               className: y().FriendListInsetShadowBottom,
             })
           );
-      var C = r(95598),
-        M = r(7573),
-        v = r(41311),
-        F = r(64839),
-        T = r(90666),
-        R = r(47922),
+      var C = r(86701),
+        M = r(13806),
+        v = r(31587),
+        F = r(31621),
+        T = r(70983),
+        R = r(35534),
         E = r.n(R),
-        z = r(19279),
-        O = r(2641);
+        z = r(76553),
+        O = r(9050);
       const x = new RegExp("ː([^ː]*)ː", "g"),
         D = new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
@@ -847,21 +847,21 @@
         );
       }
     },
-    19279: (e, t, r) => {
+    76553: (e, t, r) => {
       "use strict";
       r.d(t, { E: () => g, U: () => B });
-      var i = r(13271),
-        a = r(67294),
-        s = (r(76796), r(4344)),
-        n = r(52795),
-        o = (r(28976), r(54798)),
-        l = r(75320),
-        c = r(72258),
-        d = r(7573),
-        m = r(41311),
-        u = r(35092),
-        h = r(90666),
-        _ = r(36625),
+      var i = r(25125),
+        a = r(89526),
+        s = (r(38800), r(33161)),
+        n = r(33927),
+        o = (r(89400), r(2796)),
+        l = r(29818),
+        c = r(72745),
+        d = r(13806),
+        m = r(31587),
+        u = r(98197),
+        h = r(70983),
+        _ = r(60669),
         p = r.n(_);
       function g(e) {
         const { latestAnnouncement: t } = e;
@@ -1030,7 +1030,7 @@
         );
       }
     },
-    63405: (e, t, r) => {
+    75467: (e, t, r) => {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -1038,19 +1038,19 @@
           LinkOverlay: () => le,
           default: () => H,
         });
-      var i = r(70655),
-        a = r(9669),
+      var i = r(33940),
+        a = r(52868),
         s = r.n(a),
-        n = r(22188),
-        o = r(29323),
-        l = r(67294),
-        c = r(63473),
-        d = (r(76796), r(57287)),
-        m = r(67833),
-        u = (r(69765), r(52795)),
-        h = r(159),
-        _ = r(64839),
-        p = r(99533);
+        n = r(50265),
+        o = r(88464),
+        l = r(89526),
+        c = r(83799),
+        d = (r(38800), r(7297)),
+        m = r(12568),
+        u = (r(87487), r(33927)),
+        h = r(63154),
+        _ = r(31621),
+        p = r(23213);
       class g extends l.Component {
         constructor() {
           super(...arguments),
@@ -1108,11 +1108,11 @@
       }
       (0, i.gn)([_.ak], g.prototype, "BindCanvasRef", null),
         (0, i.gn)([_.ak], g.prototype, "updateCanvas", null);
-      var b = r(10847),
-        B = r(989),
-        S = r(94537),
-        y = r(19670),
-        w = r(7573);
+      var b = r(14100),
+        B = r(43813),
+        S = r(32873),
+        y = r(26171),
+        w = r(13806);
       class f extends l.Component {
         render() {
           let e = this.props,
@@ -1162,21 +1162,21 @@
           );
         }
       }
-      var M = r(85732),
-        v = r(93612),
-        F = r(57148),
-        T = r(95598),
-        R = r(72258),
-        E = r(53622),
-        z = r(41311),
-        O = r(47808),
-        x = r(48899),
-        D = r(90666),
-        W = r(50141),
-        I = r(59950),
-        P = r(35663),
+      var M = r(20186),
+        v = r(76547),
+        F = r(62924),
+        T = r(86701),
+        R = r(72745),
+        E = r(81052),
+        z = r(31587),
+        O = r(81171),
+        x = r(46504),
+        D = r(70983),
+        W = r(56781),
+        I = r(1357),
+        P = r(76014),
         k = r.n(P),
-        A = r(13596);
+        A = r(15642);
       function N() {
         return l.createElement(
           "div",
@@ -1234,7 +1234,7 @@
         }
       }
       (0, i.gn)([_.ak], U.prototype, "OnClick", null);
-      r(14712);
+      r(31406);
       let G = class extends l.Component {
         constructor(e) {
           super(e);
@@ -1534,7 +1534,7 @@
         }
       };
       L = (0, i.gn)([o.Pi], L);
-      r(54891);
+      r(72524);
       const j = 15;
       let X = class extends l.Component {
         constructor(e) {
@@ -3174,21 +3174,21 @@
         (0, i.gn)([_.ak], le.prototype, "UpdatePanel", null),
         (le = (0, i.gn)([o.Pi], le));
     },
-    4344: (e, t, r) => {
+    33161: (e, t, r) => {
       "use strict";
       r.d(t, { Z: () => we });
-      var i = r(70655),
-        a = r(9669),
+      var i = r(33940),
+        a = r(52868),
         s = r.n(a),
-        n = r(22188),
-        o = r(2641),
-        l = (r(26149), r(76796), r(58114)),
-        c = r(55989),
-        d = r(73812),
-        m = r(3389),
-        u = r(69765),
-        h = r(33019),
-        _ = r(40110);
+        n = r(50265),
+        o = r(9050),
+        l = (r(6960), r(38800), r(17922)),
+        c = r(2546),
+        d = r(70657),
+        m = r(82569),
+        u = r(87487),
+        h = r(45878),
+        _ = r(19320);
       const p = h.Message;
       class g extends p {
         constructor(e = null) {
@@ -6416,12 +6416,12 @@
             });
           });
       })(pe || (pe = {}));
-      r(82946);
-      var ge = r(81130),
-        be = r(99533),
-        Be = r(41311),
-        Se = r(90666),
-        ye = r(76920);
+      r(96158);
+      var ge = r(59821),
+        be = r(23213),
+        Be = r(31587),
+        Se = r(70983),
+        ye = r(39766);
       class we {
         constructor() {
           this.m_mapChats = new Map();
@@ -7127,20 +7127,20 @@
         (0, i.gn)([ge.a], fe.prototype, "RequestLoop", null),
         (0, i.gn)([ge.a], fe.prototype, "MuteUserForSession", null);
     },
-    76920: (e, t, r) => {
+    39766: (e, t, r) => {
       "use strict";
       r.d(t, { V: () => g, l: () => _ });
-      var i = r(70655),
-        a = r(9669),
+      var i = r(33940),
+        a = r(52868),
         s = r.n(a),
-        n = r(22188),
-        o = r(26149),
-        l = r(76796),
-        c = r(58114),
-        d = r(3389),
-        m = (r(54612), r(18330)),
-        u = (r(82946), r(90666)),
-        h = r(83779);
+        n = r(50265),
+        o = r(6960),
+        l = r(38800),
+        c = r(17922),
+        d = r(82569),
+        m = (r(39396), r(37034)),
+        u = (r(96158), r(70983)),
+        h = r(1583);
       class _ {
         constructor(e) {
           (this.m_mapPlayerCache = new Map()),

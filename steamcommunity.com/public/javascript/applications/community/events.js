@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2136],
   {
-    13045: (e) => {
+    11895: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "partnereventwebrowembed_Container_3DZHU",
@@ -17,16 +17,16 @@
         LatestUpdateButton: "partnereventwebrowembed_LatestUpdateButton_3F6YM",
       };
     },
-    34425: (e, t, n) => {
+    29979: (e, t, n) => {
       "use strict";
       n.d(t, { p: () => c });
-      var a = n(70655),
-        o = n(67294),
-        r = n(7707),
-        s = n(27745),
-        i = n(64839),
-        l = n(90666),
-        d = n(9198);
+      var a = n(33940),
+        o = n(89526),
+        r = n(49194),
+        s = n(49920),
+        i = n(31621),
+        l = n(70983),
+        d = n(38811);
       function c(e) {
         const { children: t, navTreeRef: n } = e,
           c = (0, a._T)(e, ["children", "navTreeRef"]),
@@ -54,14 +54,14 @@
         return o.createElement(o.Fragment, null, t);
       }
     },
-    81503: (e, t, n) => {
+    52310: (e, t, n) => {
       "use strict";
       n.d(t, { C: () => d, R: () => l });
-      var a = n(70655),
-        o = n(22188),
-        r = (n(26149), n(49186), n(76796), n(3389)),
-        s = (n(55546), n(5525)),
-        i = n(7200);
+      var a = n(33940),
+        o = n(50265),
+        r = (n(6960), n(50567), n(38800), n(82569)),
+        s = (n(49064), n(73265)),
+        i = n(70756);
       class l {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -214,25 +214,25 @@
       (0, a.gn)([o.LO], l.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const d = new l();
     },
-    91799: (e, t, n) => {
+    62721: (e, t, n) => {
       "use strict";
       n.d(t, { M: () => w, q: () => D });
-      var a = n(70655),
-        o = n(67294),
-        r = n(29323),
-        s = n(90666),
-        i = n(26149),
-        l = n(3389),
-        d = (n(9355), n(14627)),
-        c = n(10669),
-        m = n(72327),
-        p = n(36067),
-        u = n(67754),
-        v = n(70350),
-        h = n(89694),
-        E = (n(68002), n(32548)),
-        _ = n(72905),
-        S = n(70882);
+      var a = n(33940),
+        o = n(89526),
+        r = n(88464),
+        s = n(70983),
+        i = n(6960),
+        l = n(82569),
+        d = (n(94629), n(52460)),
+        c = n(12628),
+        m = n(20694),
+        p = n(23301),
+        u = n(17699),
+        v = n(19310),
+        h = n(90806),
+        E = (n(67237), n(22840)),
+        _ = n(81997),
+        S = n(37238);
       let I = class extends o.Component {
         constructor() {
           super(...arguments), (this.m_clanSteamID = new l.K(s.JA.CLANSTEAMID));
@@ -256,7 +256,7 @@
               ? o.createElement(
                   E.SV,
                   null,
-                  o.createElement(_.o, {
+                  o.createElement(_.oS, {
                     eventModel: e,
                     bIsPreview: !0,
                     language: t,
@@ -305,31 +305,31 @@
             })
           );
     },
-    2218: (e, t, n) => {
+    52843: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => j });
-      var a = n(9355),
-        o = n(91799),
-        r = n(67294),
-        s = n(16550),
-        i = n(73812),
-        l = n(86605),
-        d = (n(68002), n(9915)),
-        c = n(7200),
-        m = n(27991),
-        p = n(23937),
-        u = n(69491),
+      var a = n(94629),
+        o = n(62721),
+        r = n(89526),
+        s = n(59934),
+        i = n(70657),
+        l = n(10726),
+        d = (n(67237), n(83983)),
+        c = n(70756),
+        m = n(94082),
+        p = n(91965),
+        u = n(90174),
         v = n.n(u),
-        h = n(13596),
-        E = n(74163),
-        _ = n(41311),
-        S = n(90666),
-        I = n(70655),
-        D = n(29323),
-        w = (n(76796), n(64839)),
-        f = n(3044),
-        b = n(76776),
-        B = (n(49186), n(3389), n(22188));
+        h = n(15642),
+        E = n(66715),
+        _ = n(31587),
+        S = n(70983),
+        I = n(33940),
+        D = n(88464),
+        w = (n(38800), n(31621)),
+        f = n(10904),
+        b = n(29760),
+        B = (n(50567), n(82569), n(50265));
       let g = class extends r.Component {
         constructor() {
           super(...arguments),
@@ -415,14 +415,14 @@
       };
       (0, I.gn)([w.ak], g.prototype, "HideModal", null),
         (g = (0, I.gn)([D.Pi], g));
-      n(34425);
-      var G = n(7707),
-        L = n(35921),
-        M = n(39746),
-        A = (n(12505), n(71174), n(24020)),
-        C = n(70350),
-        k = n(95598),
-        P = n(13045);
+      n(29979);
+      var G = n(49194),
+        L = n(23907),
+        M = n(43407),
+        A = (n(84042), n(31641), n(41140)),
+        C = n(19310),
+        k = n(86701),
+        P = n(11895);
       class y extends r.Component {
         constructor(e) {
           super(e),
@@ -721,8 +721,8 @@
         (0, I.gn)([w.ak], y.prototype, "ShowModal", null),
         (0, I.gn)([w.ak], y.prototype, "ShowLatestUpdateModal", null),
         (0, I.gn)([w.ak], y.prototype, "CloseModal", null);
-      var W = n(10669),
-        x = n(5525);
+      var W = n(12628),
+        x = n(73265);
       class N extends r.Component {
         render() {
           const { appid: e } = this.props;
@@ -749,7 +749,7 @@
           );
         }
       }
-      var R = n(92244);
+      var R = n(83215);
       function j(e) {
         const [t, n] = r.useState(!0),
           u = (0, E.T)();

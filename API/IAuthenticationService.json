@@ -120,6 +120,12 @@
                     "name": "language",
                     "type": "uint32",
                     "optional": false
+                },
+                {
+                    "name": "qos_level",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "[ENetQOSLevel] client-specified priority for this auth attempt"
                 }
             ]
         },

@@ -176,11 +176,18 @@ function HomeSaleFilterHeroes( $Parent )
 {
 	var Settings = { games_already_in_library: false, only_current_platform: true, enforce_minimum: true };
 
-	var $Row = $Parent.find('.hero_row' );
+	var $HeroItemCtn = $Parent.find('.carousel_items' );
+
+	/*
+	Filter apps out first before we do any sorting/rendering
+	Skip filtering out DLC for heroes, otherwise F2P DLCs would get filtered out
+	*/
+	GDynamicStorePage.FilterCapsules( 3, 21, $HeroItemCtn.children('.hero_capsule'), $HeroItemCtn, Settings, false );
+
+	var $Row = $Parent.find('.carousel_items' );
 	var rgHeroes = $Row.children('.hero_capsule').toArray();
 
 	var rgAppPriorityList = g_rgAppPriorityLists['tier1'] || [];
-
 
 	var rgPositionByApp = {};
 	for ( var i = 0; i < rgAppPriorityList.length; i++ )
@@ -196,6 +203,9 @@ function HomeSaleFilterHeroes( $Parent )
 
 	for ( var i = 0; i < rgHeroes.length; i++ )
 	{
+		// detach in case we need to shorten the carousel if we have an uneven number
+		$J( rgHeroes[i] ).detach();
+
 		var appid = $J(rgHeroes[i]).data('dsAppid');
 		if ( appid && rgPositionByApp[appid] === undefined )
 			rgPositionByApp[appid] = i + 1000;
@@ -209,20 +219,15 @@ function HomeSaleFilterHeroes( $Parent )
 		return ( posA !== undefined ? posA : 1000 ) - ( posB !== undefined ? posB : 1000 );
 	});
 
-
 	
-	/* skip filtering out DLC for heroes, otherwise F2P DLCs would get filtered out */
-	GDynamicStorePage.FilterCapsules( 3, 3, $J( rgHeroes ), $Row, Settings, false );
+	// generate carousel based on sorted and filtered hero capsules
+	GHomepage.FillPagedCapsuleCarousel( rgHeroes, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return $J( oItem ); }, 'sale-hero', 3 );
 
-	$Row.children('.hero_capsule:not(.hidden)').children('.hero_capsule_img').each( function () {
-		$J(this).attr('src', $J(this).data('src') );
-	});
-
-	$Row.children('.hero_capsule:not(.hidden)').children('a').each( function() {
+	$Row.find('.hero_capsule:not(.hidden)').children('a').each( function() {
 		ModifyLinkSNR( $J(this), function( snr ) { return GStoreItemData.rgNavParams['sale_heroes_priority'] } );
 	});
 
-	$Row.children().each( function( i, div ) {
+	$Row.find( '.hero_capsule' ).each( function( i, div ) {
 		GDynamicStore.MarkAppIDsAsDisplayed( [ $J(div).data('dsAppid') ] );
 	});
 
@@ -317,6 +322,11 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 			}
 		});
 	}
+
+	// filter dupes from tab lists
+	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#popular_new_releases_content .tab_content_items' ).children('.sale_capsule'), $J( '#popular_new_releases_content' ), { only_current_platform: true, games_already_in_library: false, displayed_elsewhere: true, localized: true, enforce_minimum: true } );
+	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#tab_upcoming_content .tab_content_items' ).children('.sale_capsule'), $J( '#tab_upcoming_content' ), { prepurchase: true, games_already_in_library: true, displayed_elsewhere: true, localized: true, enforce_minimum: true } );
+	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#topsellers_tier' ).children('.sale_capsule'), $J( '#topsellers_tier' ), {dlc_for_you: true, games_already_in_library: true, displayed_elsewhere: true, localized: true, enforce_minimum: true } );
 
 	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
 	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
@@ -554,7 +564,7 @@ function TagBoxTopDecoration()
 
 function SaleTagTexture( suffix )
 {
-	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/' + suffix + '_page.webp"); background-repeat: repeat;';
+	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/spring2023/' + suffix + '_page.webp"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )

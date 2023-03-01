@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [9211],
   {
-    36567: (t) => {
+    50902: (t) => {
       t.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -34,10 +34,10 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    29181: (t) => {
+    32744: (t) => {
       t.exports = { strMaxMobileWidth: "700px" };
     },
-    13354: (t, e, n) => {
+    12263: (t, e, n) => {
       "use strict";
       n.d(e, {
         Bo: () => L,
@@ -47,22 +47,22 @@
         mb: () => C,
         yS: () => S,
       });
-      var a = n(70655),
-        o = n(9669),
+      var a = n(33940),
+        o = n(52868),
         i = n.n(o),
-        r = n(22188),
-        l = n(67294),
-        s = (n(26149), n(76796), n(37662), n(3389)),
-        c = n(76776),
-        u = n(39388),
-        d = n(77636),
-        _ = n(7200),
-        p = n(89673),
-        m = (n(82946), n(48780)),
-        v = n(77520),
-        g = n(93976),
-        E = n(64839),
-        f = n(90666);
+        r = n(50265),
+        l = n(89526),
+        s = (n(6960), n(38800), n(67575), n(82569)),
+        c = n(29760),
+        u = n(15877),
+        d = n(2351),
+        _ = n(68208),
+        p = n(44029),
+        m = (n(96158), n(99096)),
+        v = n(32338),
+        g = n(47330),
+        E = n(31621),
+        f = n(70983);
       function h(t) {
         t.list_jsondata && "string" == typeof t.list_jsondata
           ? (t.list_jsondata = JSON.parse(t.list_jsondata))
@@ -383,34 +383,34 @@
       }
       (0, a.gn)([r.LO], L.prototype, "m_mapList", void 0);
     },
-    87541: (t, e, n) => {
+    7920: (t, e, n) => {
       "use strict";
       n.d(e, { B: () => G, O: () => w });
-      var a = n(67294),
-        o = n(77442),
-        i = n(7707),
-        r = n(35921),
-        l = n(39746),
-        s = (n(37662), n(67833)),
-        c = (n(990), n(77636)),
-        u = n(48116),
-        d = n(52114),
-        _ = n(36567),
-        p = n(67777),
-        m = n(85732),
-        v = n(88335),
+      var a = n(89526),
+        o = n(51684),
+        i = n(49194),
+        r = n(23907),
+        l = n(43407),
+        s = (n(67575), n(12568)),
+        c = (n(82702), n(2351)),
+        u = n(55910),
+        d = n(23708),
+        _ = n(50902),
+        p = n(69362),
+        m = n(20186),
+        v = n(30156),
         g = n.n(v),
-        E = n(88592),
-        f = n(9487),
-        h = (n(45031), n(75896)),
-        C = n(72062),
-        b = n(72842),
-        L = n(5146),
-        I = n(65160),
-        y = n(65924),
-        D = n(7573),
-        S = n(41311),
-        A = n(90666);
+        E = n(99004),
+        f = n(61720),
+        h = (n(87973), n(7746)),
+        C = n(78205),
+        b = n(741),
+        L = n(35266),
+        I = n(96138),
+        y = n(68910),
+        D = n(13806),
+        S = n(31587),
+        A = n(70983);
       const w = "capsule_index_";
       function G(t) {
         const {
@@ -592,10 +592,10 @@
         );
       }
     },
-    6092: (t, e, n) => {
+    76473: (t, e, n) => {
       "use strict";
       n.d(e, { p: () => i });
-      var a = n(29181),
+      var a = n(32744),
         o = n.n(a);
       function i() {
         return window.innerWidth < parseInt(o().strMaxMobileWidth);

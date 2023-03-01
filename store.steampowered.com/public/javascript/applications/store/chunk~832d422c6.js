@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2420],
   {
-    80510: (e) => {
+    9217: (e) => {
       e.exports = {
         SteamAwardContainer: "nominationandvote_SteamAwardContainer_jBtX5",
         InLibraryView: "nominationandvote_InLibraryView_1G81P",
@@ -43,7 +43,7 @@
         AwardCategoriesCtn: "nominationandvote_AwardCategoriesCtn_GCwk0",
       };
     },
-    96944: (e) => {
+    65181: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         EventDetailsPageContainer:
@@ -165,7 +165,7 @@
           "partnereventdisplay_VerticalLocalDateAndTime_1QFMN",
       };
     },
-    63543: (e, t, a) => {
+    99018: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -175,30 +175,30 @@
           WinterSaleSteamAwardVoteWrapper: () => x,
           default: () => I,
         });
-      var n = a(70655),
-        i = a(9669),
+      var n = a(33940),
+        i = a(52868),
         r = a.n(i),
-        o = a(22188),
-        s = a(29323),
-        l = a(67294),
-        d = (a(26149), a(76796), a(37662), a(12453), a(159)),
-        p = a(48341),
-        m = a(34133),
+        o = a(50265),
+        s = a(88464),
+        l = a(89526),
+        d = (a(6960), a(38800), a(67575), a(13309), a(63154)),
+        p = a(57255),
+        m = a(65717),
         v = a.n(m),
-        c = a(93976),
-        _ = a(7573),
-        g = a(41311),
-        S = a(64839),
-        u = a(90666),
-        h = a(37699),
-        y = a(41414),
-        A = a(13596),
-        E = a(14745),
-        C = a(80510),
+        c = a(47330),
+        _ = a(13806),
+        g = a(31587),
+        S = a(31621),
+        u = a(70983),
+        h = a(46723),
+        y = a(24868),
+        A = a(15642),
+        E = a(31041),
+        C = a(9217),
         w = a.n(C),
-        D = a(96944),
+        D = a(65181),
         T = a.n(D),
-        k = a(23211);
+        k = a(76478);
       function N(e) {
         return u.L7.logged_in
           ? !u.L7.is_limited ||

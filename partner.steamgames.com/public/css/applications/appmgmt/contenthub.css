@@ -164,7 +164,10 @@
   .adminshared_SectionCtn_3la4r {
   background: #17181c;
   padding: 24px;
-  color: #848f95;
+  color: #cacaca;
+  font-size: 14px;
+  font-weight: 300;
+  word-break: break-word;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_RightCol_p8nGm
@@ -175,12 +178,23 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 6px;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_RightCol_p8nGm
   .adminshared_SectionCtn_3la4r
   .adminshared_TitleSmall_oEKks:not(:first-child) {
   margin-top: 24px;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_RightCol_p8nGm
+  .adminshared_SectionCtn_3la4r
+  a,
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_RightCol_p8nGm
+  .adminshared_SectionCtn_3la4r
+  a.Link {
+  color: #fff;
 }
 .adminshared_DashLink_2y93_ {
   display: flex;
@@ -238,6 +252,11 @@ select {
 }
 .adminshared_UploadedImageDisplayCtn_suH0c .adminshared_UploaderLeftCol_1lUkC {
   width: 70%;
+}
+.adminshared_MarketingMessage_35Spt
+  .adminshared_UploadedImageDisplayCtn_suH0c
+  .adminshared_UploaderLeftCol_1lUkC {
+  max-width: 570px;
 }
 .adminshared_UploadedImageDisplayCtn_suH0c
   .adminshared_UploaderLeftCol_1lUkC

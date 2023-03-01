@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [8974],
   {
-    39294: (e) => {
+    10500: (e) => {
       e.exports = {
         EventTimeSection: "partnereventshareddates_EventTimeSection_27EoU",
         EventTimeTitle: "partnereventshareddates_EventTimeTitle_2sTdT",
@@ -31,7 +31,7 @@
         DateErrorCtn: "partnereventshareddates_DateErrorCtn_Bww9B",
       };
     },
-    50732: (e) => {
+    2508: (e) => {
       e.exports = {
         LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
         Static: "throbber_Static_kwzRJ",
@@ -76,7 +76,7 @@
         Visible: "throbber_Visible_1ziaT",
       };
     },
-    4687: (e) => {
+    58913: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "releasedateinfo_ReleaseDateInfoCtn_2mHXb",
         GameEditCtn: "releasedateinfo_GameEditCtn_2JigU",
@@ -92,7 +92,7 @@
         Set: "releasedateinfo_Set_eEhAf",
       };
     },
-    13634: (e) => {
+    1987: (e) => {
       e.exports = {
         ReleaseDateModal: "releasedaterequest_ReleaseDateModal_RKE7g",
         ReleaseDateRequestBody:
@@ -107,25 +107,25 @@
         HTMLErrorBoxAppear: "releasedaterequest_HTMLErrorBoxAppear_bXT6n",
       };
     },
-    25333: (e, t, r) => {
+    4955: (e, t, r) => {
       "use strict";
       r.d(t, { A: () => T });
-      var a = r(70655),
-        n = r(29323),
-        o = (r(30381), r(67294)),
-        l = r(8660),
+      var a = r(33940),
+        n = r(88464),
+        o = (r(36105), r(89526)),
+        l = r(5556),
         i = r.n(l),
-        s = r(33547),
-        c = r(5525),
-        m = r(34133),
+        s = r(51966),
+        c = r(73265),
+        m = r(65717),
         d = r.n(m),
-        u = r(7573),
-        b = r(41311),
-        p = r(64839),
-        h = r(28268),
-        _ = r(39294),
+        u = r(13806),
+        b = r(31587),
+        p = r(31621),
+        h = r(40108),
+        _ = r(10500),
         f = r.n(_),
-        E = r(80008),
+        E = r(47812),
         g = r.n(E);
       let T = class extends o.Component {
         constructor(e) {
@@ -362,12 +362,12 @@
         (0, a.gn)([p.ak], T.prototype, "SetToNow", null),
         (T = (0, a.gn)([n.Pi], T));
     },
-    13596: (e, t, r) => {
+    15642: (e, t, r) => {
       "use strict";
       r.d(t, { V: () => i });
-      var a = r(67294),
-        n = r(7573),
-        o = r(50732),
+      var a = r(89526),
+        n = r(13806),
+        o = r(2508),
         l = r.n(o);
       const i = a.memo(function (e) {
         const {
@@ -654,13 +654,13 @@
         );
       }
     },
-    48366: (e, t, r) => {
+    29577: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => J });
-      var a = r(67294),
-        n = r(50647),
-        o = r(22453),
-        l = r(41311);
+      var a = r(89526),
+        n = r(25659),
+        o = r(77449),
+        l = r(31587);
       function i(e) {
         const { rtSteamReleaseDate: t, value: r, onChange: i } = e,
           s = !!t,
@@ -700,23 +700,23 @@
         CommunityItems: (e) => `/apps/communityitems/${e}`,
       };
       const c = ["edit", "diff", "revert", "prepare", "publish"];
-      var m = r(16550),
-        d = r(74091),
-        u = r(74891),
-        b = r(4687),
-        p = r(95598),
-        h = r(70655),
-        _ = r(9669),
+      var m = r(59934),
+        d = r(20352),
+        u = r(5055),
+        b = r(58913),
+        p = r(86701),
+        h = r(33940),
+        _ = r(52868),
         f = r.n(_),
-        E = r(42795),
-        g = r(88767),
-        T = (r(26149), r(25333)),
-        S = r(91340),
-        C = r(13596),
-        D = r(23989),
-        k = r(35092),
-        v = r(90666),
-        A = r(13634);
+        E = r(85797),
+        g = r(5615),
+        T = (r(6960), r(4955)),
+        S = r(7008),
+        C = r(15642),
+        D = r(43886),
+        k = r(98197),
+        v = r(70983),
+        A = r(1987);
       function x(e) {
         const { appid: t, onClose: r, onCommit: n } = e,
           [o, i] = a.useState(null),
@@ -1024,7 +1024,7 @@
               )
             );
       }
-      var O = r(7573);
+      var O = r(13806);
       function G(e) {
         const { bIsGameEdit: t, unAppID: r } = e,
           [o, i] = a.useState(e.rtReleaseDate),
@@ -1140,8 +1140,8 @@
           })
         );
       }
-      var z = r(89876),
-        V = r(64839);
+      var z = r(6531),
+        V = r(31621);
       class q extends a.Component {
         constructor() {
           super(...arguments),
@@ -1164,7 +1164,7 @@
         }
       }
       (0, h.gn)([V.ak], q.prototype, "OnColorChange", null);
-      var j = r(57287);
+      var j = r(7297);
       function H(e) {
         const { rgGameProfileColorDefs: t } = e,
           r = t.map((e) =>
@@ -1257,7 +1257,7 @@
         );
       }
     },
-    33547: (e, t, r) => {
+    51966: (e, t, r) => {
       "use strict";
       r.d(t, { Z: () => a });
       const a =

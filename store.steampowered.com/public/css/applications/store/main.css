@@ -210,6 +210,42 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   margin-top: 0px;
   display: none;
 }
+.DesktopUI .contextmenu_contextMenu_LQkrb {
+  box-shadow: 0 10px 32px 0px #000000ab;
+  background: #3d4450;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k {
+  padding: 8px 18px;
+  font-size: 13px;
+  color: #dcdedf;
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+  position: relative;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k:first-child {
+  border-top: none;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k:hover,
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.contextmenu_active_1KPWU {
+  background: #dcdedf;
+  color: #3d4450;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.disabled {
+  background: none;
+  color: #67707b;
+  cursor: default;
+  pointer-events: none;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.disabled:hover {
+  background: none;
+  color: #67707b;
+  cursor: default;
+}
 .contextmenu_PopoutSubMenu_IpTgn {
   position: relative;
   width: 100%;
@@ -545,11 +581,12 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni {
-  padding: 24px 0px 24px 24px;
+  padding: 24px 0px 0px 24px;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.DesktopUI .DialogBody,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogBody {
   padding-right: 24px;
+  padding-bottom: 24px;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader {
   margin-right: 0;
@@ -1176,6 +1213,9 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_FieldLeadIcon_OKYIj {
   margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .gamepaddialog_FieldLeadIcon_OKYIj svg {
   height: 20px;
@@ -3077,6 +3117,15 @@ button.DialogButton::-moz-focus-inner {
 }
 .Destructive .ModalPosition_TopBar {
   background: linear-gradient(to right, #c44848, #c44848);
+}
+.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
+  opacity: 0;
 }
 .ModalDialogPopup .PopupFullWindow > .ModalPosition,
 .ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {

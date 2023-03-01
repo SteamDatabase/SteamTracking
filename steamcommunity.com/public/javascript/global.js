@@ -827,7 +827,6 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 		});
 }
 
-var g_CommunityPreferences = { 'hide_adult_content_sex' : 1, 'hide_adult_content_violence' : 1, 'text_filter_setting' : 0 };
 var g_ContentDescriptorPreferences = [ 3, 4 ];
 var g_UGCWithNoBlur = {};
 var g_bLoadedUGCWithNoBlur = false;
@@ -886,13 +885,10 @@ function ApplyAdultContentPreferences()
 		return;
 	}
 
-	var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
-	var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
-
 	for ( var i = 0; i < elementsWithAdultContent.length; ++i )
 	{
 		var e = $J( elementsWithAdultContent[i] );
-		ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, false );
+		ApplyAdultContentPreferencesHelper( e, g_ContentDescriptorPreferences, false );
 	}
 }
 
@@ -904,13 +900,10 @@ function ReapplyAdultContentPreferences()
 		return;
 	}
 
-	var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
-	var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
-
 	for ( var i = 0; i < elementsWithAdultContent.length; ++i )
 	{
 		var e = $J( elementsWithAdultContent[i] );
-		ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, true );
+		ApplyAdultContentPreferencesHelper( e, g_ContentDescriptorPreferences, true );
 	}
 }
 
@@ -919,9 +912,7 @@ function HandleNewDynamicLink( newDynamicLinkElement )
 {
 	if ( newDynamicLinkElement.hasClass( "has_adult_content" ) )
 	{
-		var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
-		var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
-		ApplyAdultContentPreferencesHelper( newDynamicLinkElement, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, false );
+		ApplyAdultContentPreferencesHelper( newDynamicLinkElement, g_ContentDescriptorPreferences, false );
 	}
 }
 
@@ -1024,7 +1015,7 @@ function UGCAdultContentPreferencesMenu( elSource )
 	}
 }
 
-function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, bForce )
+function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, bForce )
 {
 	if ( !bForce && e.data( 'processed_adult_content') )
 	{
@@ -1033,8 +1024,8 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 
 	e.data( 'processed_adult_content', true );
 
-	var bHideAdultContentSex = bGlobalHideAdultContentSex;
-	var bHideAdultContentViolence = bGlobalHideAdultContentViolence;
+	var bHideAdultContentSex = rgContentDescriptorsToExclude.indexOf( 1 ) != -1;
+	var bHideAdultContentViolence = rgContentDescriptorsToExclude.indexOf( 2 ) != -1;
 
 	var bIsAnchor = e.is('a');
 
@@ -1192,10 +1183,7 @@ function SetAppAgeGateBypass( appid, bBypass, callbackFunc )
 
 function CheckAppAgeGateBypass( appid, bCheckAppAgeGateBypass, callbackFunc )
 {
-	var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
-	var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
-
-	if ( !bGlobalHideAdultContentSex && !bGlobalHideAdultContentViolence )
+	if ( g_ContentDescriptorPreferences.length == 0 )
 	{
 		callbackFunc( false );
 		return;

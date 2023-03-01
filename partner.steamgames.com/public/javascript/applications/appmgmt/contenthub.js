@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [9035],
   {
-    4821: (e) => {
+    95641: (e) => {
       e.exports = {
         WhitelistNumber: "reorderablelist_WhitelistNumber_1ZU2Q",
         WhitelistCtn: "reorderablelist_WhitelistCtn_7i0GR",
@@ -16,7 +16,7 @@
         ButtonCtn: "reorderablelist_ButtonCtn_27xG1",
       };
     },
-    69491: (e) => {
+    90174: (e) => {
       e.exports = {
         v6: "shared_common_v6_3r3Le",
         SubText: "shared_common_SubText_3Ctn8",
@@ -35,7 +35,7 @@
         RemoveIcon: "shared_common_RemoveIcon_1iOrE",
       };
     },
-    50732: (e) => {
+    2508: (e) => {
       e.exports = {
         LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
         Static: "throbber_Static_kwzRJ",
@@ -80,7 +80,7 @@
         Visible: "throbber_Visible_1ziaT",
       };
     },
-    3912: (e) => {
+    22021: (e) => {
       e.exports = {
         TitleHR: "categories_TitleHR_1rdzN",
         ActionButtonCtn: "categories_ActionButtonCtn_7a7-w",
@@ -96,12 +96,12 @@
         UnpublishedChangesNotice: "categories_UnpublishedChangesNotice_3IZil",
       };
     },
-    13596: (e, r, t) => {
+    15642: (e, r, t) => {
       "use strict";
       t.d(r, { V: () => n });
-      var o = t(67294),
-        a = t(7573),
-        s = t(50732),
+      var o = t(89526),
+        a = t(13806),
+        s = t(2508),
         c = t.n(s);
       const n = o.memo(function (e) {
         const {
@@ -388,17 +388,17 @@
         );
       }
     },
-    82946: (e, r, t) => {
+    96158: (e, r, t) => {
       "use strict";
-      t(26149);
+      t(6960);
     },
-    93976: (e, r, t) => {
+    47330: (e, r, t) => {
       "use strict";
       t.d(r, { l: () => c });
-      t(26149);
-      var o = t(9669),
+      t(6960);
+      var o = t(52868),
         a = t.n(o),
-        s = t(58114);
+        s = t(17922);
       function c(e) {
         if (a().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
@@ -459,23 +459,23 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    49279: (e, r, t) => {
+    65368: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, { default: () => p });
-      var o = t(62642),
-        a = t(67294),
-        s = t(24762),
-        c = t(95018),
+      var o = t(71016),
+        a = t(89526),
+        s = t(18030),
+        c = t(22832),
         n = t.n(c),
-        l = t(22453),
-        i = t(91340),
-        b = t(41414),
-        m = t(14809),
-        d = t(95598),
-        u = t(13596),
-        h = t(64839),
-        f = t(64782),
-        _ = t(3912),
+        l = t(77449),
+        i = t(7008),
+        b = t(24868),
+        m = t(15599),
+        d = t(86701),
+        u = t(15642),
+        h = t(31621),
+        f = t(5545),
+        _ = t(22021),
         g = t.n(_);
       function p() {
         const [e, r] = a.useState(),

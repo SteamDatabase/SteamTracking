@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4134],
   {
-    62906: (e) => {
+    63880: (e) => {
       e.exports = {
         Login: "newlogindialog_Login_ZOBYq",
         SideBySide: "newlogindialog_SideBySide_1Wl13",
@@ -108,7 +108,7 @@
         Client: "newlogindialog_Client_1ZDxg",
       };
     },
-    1105: (e) => {
+    27953: (e) => {
       e.exports = {
         LoginQR: "qrlogin_LoginQR_1wtS3",
         QRLoginDeck: "qrlogin_QRLoginDeck_3pzmh",
@@ -123,14 +123,14 @@
         Large: "qrlogin_Large_elAzl",
       };
     },
-    72036: (e) => {
+    22601: (e) => {
       e.exports = {
         QRBits: "qrcode_QRBits_3FhhK",
         Bit: "qrcode_Bit_2Yuvr",
         Active: "qrcode_Active_274P1",
       };
     },
-    92742: (e, t, r) => {
+    29900: (e, t, r) => {
       "use strict";
       r.d(t, {
         NZ: () => i,
@@ -141,16 +141,16 @@
       });
       var i,
         n,
-        a = r(70655),
-        s = r(22188),
-        o = r(9669),
+        a = r(33940),
+        s = r(50265),
+        o = r(52868),
         l = r.n(o),
-        c = r(58114),
-        u = r(81130),
-        m = (r(26149), r(36039), r(90666)),
-        d = r(88514),
-        g = (r(99925), r(79742)),
-        _ = r(26682);
+        c = r(17922),
+        u = r(59821),
+        m = (r(6960), r(91851), r(70983)),
+        d = r(59669),
+        g = (r(60806), r(5155)),
+        _ = r(50840);
       function h(e) {
         const {
             shared_secret: t,
@@ -413,26 +413,26 @@
         (0, a.gn)([u.a], b.prototype, "PollForUpdate", null),
         (0, a.gn)([u.a], b.prototype, "SetTokenToRevoke", null);
     },
-    51167: (e, t, r) => {
+    5347: (e, t, r) => {
       "use strict";
       r.d(t, { uU: () => se, Oz: () => ae, wK: () => ee, pT: () => Y });
-      var i = r(70655),
-        n = r(67294),
-        a = r(58114),
-        s = r(7573),
-        o = r(22188),
-        l = r(9669),
+      var i = r(33940),
+        n = r(89526),
+        a = r(17922),
+        s = r(13806),
+        o = r(50265),
+        l = r(52868),
         c = r.n(l),
-        u = r(90666),
-        m = (r(36039), r(92742)),
-        d = r(26149),
-        g = r(13271),
-        _ = r(64839),
-        h = r(75255),
-        b = r(88514),
-        B = (r(21205), r(73812)),
-        f = r(99925),
-        w = r(26682);
+        u = r(70983),
+        m = (r(91851), r(29900)),
+        d = r(6960),
+        g = r(25125),
+        _ = r(31621),
+        h = r(94721),
+        b = r(59669),
+        B = (r(82633), r(70657)),
+        f = r(60806),
+        w = r(50840);
       class y extends m.io {
         constructor(e) {
           super(
@@ -1059,11 +1059,11 @@
       }
       (0, i.gn)([o.LO], F.prototype, "m_eStatus", void 0);
       var v,
-        M = r(62906),
+        M = r(63880),
         z = r.n(M),
-        T = r(36876),
+        T = r(28545),
         A = r.n(T),
-        k = r(72036),
+        k = r(22601),
         L = r.n(k);
       function N(e) {
         let {
@@ -1122,9 +1122,9 @@
           (e[(e.Q = 3)] = "Q"),
           (e[(e.H = 2)] = "H");
       })(v || (v = {}));
-      var O = r(1105),
+      var O = r(27953),
         W = r.n(O),
-        x = r(76796);
+        x = r(38800);
       function I(e) {
         const {
             transport: t,
@@ -1281,16 +1281,16 @@
           })
         );
       }
-      var G = r(41311),
-        P = r(13596),
-        H = r(95598);
+      var G = r(31587),
+        P = r(15642),
+        H = r(86701);
       const Z =
         r.p +
         "images/applications/store/login_mobile_auth.png?v=valveisgoodatcaching";
-      var q = r(16550),
-        Q = r(32548),
-        V = r(53157),
-        $ = r(28268);
+      var q = r(59934),
+        Q = r(22840),
+        V = r(69210),
+        $ = r(40108);
       const K = (0, n.createContext)(!1),
         J = () => (0, n.useContext)(K);
       function Y() {
@@ -2982,7 +2982,7 @@
         );
       }
     },
-    88514: (e, t, r) => {
+    59669: (e, t, r) => {
       "use strict";
       r.d(t, {
         $h: () => I,
@@ -2993,9 +2993,9 @@
         oZ: () => m,
         up: () => c,
       });
-      var i = r(33019),
-        n = r(40110),
-        a = (r(21205), r(39799));
+      var i = r(45878),
+        n = r(19320),
+        a = (r(82633), r(67737));
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -5089,11 +5089,11 @@
             });
         })(X || (X = {}));
     },
-    99925: (e, t, r) => {
+    60806: (e, t, r) => {
       "use strict";
       r.d(t, { AX: () => b, Sz: () => y, _w: () => _ });
-      var i = r(33019),
-        n = r(40110);
+      var i = r(45878),
+        n = r(19320);
       const a = i.Message;
       class s extends a {
         constructor(e = null) {

@@ -465,6 +465,35 @@ strong {
 .partnereventsale_DefaultSocialImgCtn_1aACe {
   width: 300px;
 }
+.partnereventsale_SocialShareCtn_2FiwW {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #505662;
+  padding: 6px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.partnereventsale_SocialShareText_2d2Gq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 12px;
+}
+.partnereventsale_SocialShareText_2d2Gq span {
+  font-size: 12px;
+  color: gray;
+}
+.partnereventsale_SocialShareText_2d2Gq .partnereventsale_SocialTitle_1ysHm {
+  font-size: 20px;
+  color: #fff;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.partnereventsale_SocialShareText_2d2Gq .partnereventsale_SocialDesc_3EEeN {
+  font-size: 15px;
+  color: #dfe3e6;
+}
 .partnereventsaletagitems_FilterDisplayCtn_3y3Xg
   .partnereventsaletagitems_FilterTitle_24W_L {
   color: #fff;

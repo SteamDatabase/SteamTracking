@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5503],
   {
-    25130: (e) => {
+    12094: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -12,16 +12,16 @@
         avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
       };
     },
-    93981: (e, t, a) => {
+    69202: (e, t, a) => {
       "use strict";
       a.d(t, { Pv: () => _, U0: () => A.U, sB: () => l });
-      var r = a(70655),
-        s = a(22188),
-        i = a(27661),
-        n = a(86605),
-        o = a(41311),
-        m = (a(76796), a(21205), a(90666)),
-        A = (a(3389), a(43359));
+      var r = a(33940),
+        s = a(50265),
+        i = a(39818),
+        n = a(10726),
+        o = a(31587),
+        m = (a(38800), a(82633), a(70983)),
+        A = (a(82569), a(77515));
       function l(e) {
         let t = "offline";
         return (
@@ -292,16 +292,16 @@
         (0, r.gn)([s.LO], _.prototype, "m_strBroadcastTitle", void 0),
         (0, r.gn)([s.LO], _.prototype, "m_bCommunityBanned", void 0);
     },
-    44298: (e, t, a) => {
+    22911: (e, t, a) => {
       "use strict";
       a.d(t, { o: () => u, vV: () => g });
-      var r = a(70655),
-        s = a(67294),
-        i = a(29323),
-        n = a(93981),
-        o = a(7573),
-        m = (a(18330), a(90666)),
-        A = a(60501);
+      var r = a(33940),
+        s = a(89526),
+        i = a(88464),
+        n = a(69202),
+        o = a(13806),
+        m = (a(37034), a(70983)),
+        A = a(1633);
       const l =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
         _ =
@@ -309,7 +309,7 @@
         p =
           a.p +
           "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var c = a(25130),
+      var c = a(12094),
         h = a.n(c);
       class u extends s.Component {
         render() {

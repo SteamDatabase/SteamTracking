@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [6845],
   {
-    59445: (e) => {
+    20565: (e) => {
       e.exports = {
         SnoozeContainer: "friendsnooze_SnoozeContainer_3EzTy",
         SnoozeZ: "friendsnooze_SnoozeZ_1DArl",
@@ -19,7 +19,7 @@
         Snoring: "friendsnooze_Snoring_YuCwj",
       };
     },
-    1029: (e) => {
+    47198: (e) => {
       e.exports = {
         miniProfile: "miniprofile_miniProfile_1AMAp",
         miniProfileContent: "miniprofile_miniProfileContent_3QoRR",
@@ -76,14 +76,14 @@
         featuredSubTitle: "miniprofile_featuredSubTitle_1IP-p",
       };
     },
-    82202: (e) => {
+    9236: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PersonaStatusIcon: "personastatusicons_PersonaStatusIcon_1YsWj",
         MobilePhoneIcon: "personastatusicons_MobilePhoneIcon_3pGV8",
       };
     },
-    41493: (e) => {
+    87276: (e) => {
       e.exports = {
         DefaultTheme: "profilethemecolors_DefaultTheme_1qSTn",
         CosmicTheme: "profilethemecolors_CosmicTheme_1H27L",
@@ -118,7 +118,7 @@
         SteamDeckTheme: "profilethemecolors_SteamDeckTheme_3TBj7",
       };
     },
-    7273: (e) => {
+    16952: (e) => {
       e.exports = {
         AvatarRow: "avatar_AvatarRow_2_WvK",
         Avatar: "avatar_Avatar_27tBX",
@@ -138,7 +138,7 @@
         HideDefaultAvatar: "avatar_HideDefaultAvatar_6zU6F",
       };
     },
-    33866: (e) => {
+    93720: (e) => {
       e.exports = {
         AvatarCollectionHeader: "avatarcollection_AvatarCollectionHeader_27Q-8",
         AvatarCollectionName: "avatarcollection_AvatarCollectionName_2pum1",
@@ -161,7 +161,7 @@
         CollectionGroupAvatars: "avatarcollection_CollectionGroupAvatars_wWso7",
       };
     },
-    86715: (e) => {
+    70035: (e) => {
       e.exports = {
         Badge: "favoritebadge_Badge_2ODUB",
         BadgeImage: "favoritebadge_BadgeImage_3M7FE",
@@ -172,7 +172,7 @@
         BadgeOption: "favoritebadge_BadgeOption_P1MG7",
       };
     },
-    95799: (e) => {
+    819: (e) => {
       e.exports = {
         Group: "favoritegroup_Group_1yHxt",
         GroupAvatar: "favoritegroup_GroupAvatar_1C_n6",
@@ -182,7 +182,7 @@
         GroupOption: "favoritegroup_GroupOption_3neyr",
       };
     },
-    67077: (e) => {
+    18262: (e) => {
       e.exports = {
         MiniProfilePreview: "miniprofilepreview_MiniProfilePreview_1MWlW",
         MiniProfileBackgroundOption:
@@ -197,7 +197,7 @@
         WithVideo: "miniprofilepreview_WithVideo_1BBIS",
       };
     },
-    64582: (e) => {
+    62627: (e) => {
       e.exports = {
         EquippedBackgroundBlock:
           "profilebackground_EquippedBackgroundBlock_1Pihr",
@@ -218,7 +218,7 @@
           "profilebackground_ProfileBackgroundEquipOption_3Hc2R",
       };
     },
-    22192: (e) => {
+    63547: (e) => {
       e.exports = {
         Shell: "profileeditshell_Shell_2kqKZ",
         Navigation: "profileeditshell_Navigation_33Kl1",
@@ -232,7 +232,7 @@
         BackToProfileCtn: "profileeditshell_BackToProfileCtn_1YOt2",
       };
     },
-    976: (e) => {
+    84206: (e) => {
       e.exports = {
         ProfileModifierPreview: "profilemodifier_ProfileModifierPreview_OhBEt",
         ProfileModifierOption: "profilemodifier_ProfileModifierOption_3NIiY",
@@ -244,7 +244,7 @@
         App: "profilemodifier_App_2SYZ_",
       };
     },
-    13998: (e) => {
+    60299: (e) => {
       e.exports = {
         ProfilePreview: "profilepreview_ProfilePreview_sJ5St",
         PaintRadial0: "profilepreview_PaintRadial0_3ygvj",
@@ -258,7 +258,7 @@
         ProfilePreviewCtn: "profilepreview_ProfilePreviewCtn_uyN_g",
       };
     },
-    20021: (e) => {
+    45812: (e) => {
       e.exports = {
         ProfileThemePicker: "profiletheme_ProfileThemePicker_37I7q",
         ThemePickerDisabled: "profiletheme_ThemePickerDisabled_1gBl2",
@@ -277,14 +277,14 @@
         ProfilePreview: "profiletheme_ProfilePreview_MneEO",
       };
     },
-    43220: (e) => {
+    14772: (e) => {
       e.exports = {
         formattingButtons: "summary_formattingButtons_2T2D7",
         formattingButton: "summary_formattingButton_LhNoI",
         summaryTextArea: "summary_summaryTextArea_2ipSt",
       };
     },
-    95735: (e) => {
+    90661: (e) => {
       e.exports = {
         ProfileEditRoot: "profileedit_ProfileEditRoot_1lBbV",
         ItemPicker: "profileedit_ItemPicker_n1M1o",
@@ -307,16 +307,16 @@
         DisabledInputCtn: "profileedit_DisabledInputCtn_ZePu4",
       };
     },
-    72081: (e, t, r) => {
+    31692: (e, t, r) => {
       "use strict";
       r.d(t, { a: () => m });
-      var i = r(70655),
-        a = r(67294),
-        o = r(29323),
-        n = r(7573),
-        s = r(59445),
+      var i = r(33940),
+        a = r(89526),
+        o = r(88464),
+        n = r(13806),
+        s = r(20565),
         l = r.n(s);
-      r(93981);
+      r(69202);
       let m = class extends a.Component {
         static get hoverClass() {
           return l().hoverParent;
@@ -370,19 +370,19 @@
       };
       m = (0, i.gn)([o.Pi], m);
     },
-    1302: (e, t, r) => {
+    97335: (e, t, r) => {
       "use strict";
       r.d(t, { _: () => u });
-      var i = r(70655),
-        a = r(67294),
-        o = r(29323),
-        n = r(41311),
-        s = (r(21205), r(93981)),
-        l = r(7573),
-        m = r(95598),
-        c = r(82202),
+      var i = r(33940),
+        a = r(89526),
+        o = r(88464),
+        n = r(31587),
+        s = (r(82633), r(69202)),
+        l = r(13806),
+        m = r(86701),
+        c = r(9236),
         d = r.n(c),
-        p = r(5827);
+        p = r(10171);
       const u = (0, o.Pi)((e) => {
         const { persona: t, className: r } = e,
           o = (0, i._T)(e, ["persona", "className"]);
@@ -448,34 +448,34 @@
         );
       });
     },
-    83500: (e, t, r) => {
+    22963: (e, t, r) => {
       "use strict";
       r.d(t, { _: () => i });
       let i = { ProfileURL: "" };
     },
-    68161: (e, t, r) => {
+    25906: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { ProfileEditRoutes: () => Xr, default: () => zr });
-      var i = r(70655),
-        a = r(83500),
-        o = r(9669),
+      var i = r(33940),
+        a = r(22963),
+        o = r(52868),
         n = r.n(o),
-        s = r(22188),
-        l = (r(26149), r(55989)),
-        m = r(73812),
-        c = r(86605),
-        d = r(67294),
-        p = r(29323),
-        u = r(90666),
-        h = r(93981),
-        v = r(41311),
-        _ = r(72081),
-        f = r(44298),
-        g = r(1302),
-        P = r(7573),
-        E = r(1029),
+        s = r(50265),
+        l = (r(6960), r(2546)),
+        m = r(70657),
+        c = r(10726),
+        d = r(89526),
+        p = r(88464),
+        u = r(70983),
+        h = r(69202),
+        v = r(31587),
+        _ = r(31692),
+        f = r(22911),
+        g = r(97335),
+        P = r(13806),
+        E = r(47198),
         y = r.n(E);
-      const C = r(30600)._H.PerMinute;
+      const C = r(93958)._H.PerMinute;
       class S {
         constructor(e) {
           (this.m_bLoadingData = !1),
@@ -998,13 +998,13 @@
               )
             : d.createElement(f.vV, Object.assign({ persona: t }, o, l), n);
         };
-      var L = r(3389),
-        w = (r(29139), r(21927)),
-        O = r(89694),
-        D = r(58114),
-        x = (r(46321), r(18330)),
-        R = r(65497),
-        M = r(99533);
+      var L = r(82569),
+        w = (r(55923), r(68041)),
+        O = r(90806),
+        D = r(17922),
+        x = (r(89252), r(37034)),
+        R = r(43735),
+        M = r(23213);
       function T(e) {
         return q(e.image_small);
       }
@@ -2011,7 +2011,7 @@
         }
       }
       (0, i.gn)([s.LO.shallow], Y.prototype, "m_AvatarData", void 0);
-      var J = r(43359);
+      var J = r(77515);
       function Q(e, t) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           let r;
@@ -2138,7 +2138,7 @@
           );
         }
       }
-      var re = r(68002);
+      var re = r(67237);
       class ie {
         constructor(e) {
           this.m_SteamInterface = e;
@@ -2346,7 +2346,7 @@
         (0, i.gn)([s.LO], ne.prototype, "m_eCommentPermission", void 0),
         (0, i.gn)([s.LO], ne.prototype, "m_eSaveStateByKey", void 0),
         (0, i.gn)([s.LO], ne.prototype, "m_eCommentSaveState", void 0);
-      r(95598);
+      r(86701);
       class se {
         constructor(e, t) {
           (this.m_OGGAvatars = new Y()),
@@ -2621,13 +2621,13 @@
         (0, i.gn)([s.aD], le.prototype, "RevertBasicInfoChanges", null),
         (0, i.gn)([s.aD], le.prototype, "SetAvatarHash", null),
         (0, i.gn)([s.aD], le.prototype, "RevertToComittedAvatarHash", null);
-      var me = r(16550),
-        ce = r(76796),
-        de = (r(69491), r(73935)),
-        pe = r(7273),
-        ue = r(48341),
-        he = r(64839),
-        ve = (r(37699), r(33866));
+      var me = r(59934),
+        ce = r(38800),
+        de = (r(90174), r(73961)),
+        pe = r(16952),
+        ue = r(57255),
+        he = r(31621),
+        ve = (r(46723), r(93720));
       let _e = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
@@ -2944,7 +2944,7 @@
               )
             )
           );
-      var Be = r(32548);
+      var Be = r(22840);
       class Ie extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
@@ -3133,8 +3133,8 @@
               )
             )
           );
-      var Le = r(95735),
-        we = r(74891);
+      var Le = r(90661),
+        we = r(5055);
       const Oe = ({ title: e, className: t, children: r }) =>
           d.createElement(
             "div",
@@ -3435,7 +3435,7 @@
           );
         },
         He = d.lazy(() =>
-          Promise.all([r.e(8691), r.e(2329)]).then(r.bind(r, 70844))
+          Promise.all([r.e(8691), r.e(2329)]).then(r.bind(r, 39573))
         ),
         qe = !0;
       let Xe = class extends d.Component {
@@ -3828,7 +3828,7 @@
           )
         );
       });
-      var Qe = r(56794);
+      var Qe = r(3947);
       class et extends d.Component {
         render() {
           const {
@@ -3974,8 +3974,8 @@
       (0, i.gn)([he.ak], at.prototype, "GetCityList", null),
         (0, i.gn)([he.ak], at.prototype, "OnStateSelected", null),
         (at = (0, i.gn)([p.Pi], at));
-      var ot = r(92202),
-        nt = r(43220);
+      var ot = r(4940),
+        nt = r(14772);
       class st extends d.Component {
         constructor() {
           super(...arguments),
@@ -4328,7 +4328,7 @@
       };
       (0, i.gn)([he.ak], _t.prototype, "OnProfileAwardsCheckboxChecked", null),
         (_t = (0, i.gn)([p.Pi], _t));
-      var ft = r(86715);
+      var ft = r(70035);
       let gt = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -4466,7 +4466,7 @@
             )
           );
         };
-      var At = r(95799);
+      var At = r(819);
       let Gt = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -4568,7 +4568,7 @@
             )
           );
         };
-      var bt = r(67077);
+      var bt = r(18262);
       const Lt = ({ Item: e, small: t }) => {
           let r = H(e, t);
           return 0 == Object.keys(r).length
@@ -4786,8 +4786,8 @@
                   r
                 )
               );
-      var qt = r(57287),
-        Xt = r(10847);
+      var qt = r(7297),
+        Xt = r(14100);
       let Zt = class extends d.Component {
         render() {
           let e = this.props.PrivacyStore;
@@ -5203,9 +5203,9 @@
           );
         }
       }
-      var tr = r(64582),
-        rr = r(13998),
-        ir = r(41493);
+      var tr = r(62627),
+        rr = r(60299),
+        ir = r(87276);
       const ar = ({ className: e, width: t, height: r, theme: i }) => (
           i || (i = "Default"),
           (i += "Theme"),
@@ -5804,8 +5804,8 @@
                 ),
                 d.createElement(dr, { Background: null }, i)
               );
-      var hr = r(73727),
-        vr = r(22192);
+      var hr = r(565),
+        vr = r(63547);
       class _r extends d.Component {
         render() {
           const {
@@ -5960,7 +5960,7 @@
             );
           }
         );
-      var Pr = r(976);
+      var Pr = r(84206);
       let Er = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bDialogActive: !1 });
@@ -6118,7 +6118,7 @@
               t
             )
           );
-      var Ir = r(20021);
+      var Ir = r(45812);
       let Nr = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -6508,9 +6508,9 @@
             });
         }
       }
-      r(14974);
-      var Ur = r(77817),
-        Hr = r(74091);
+      r(33787);
+      var Ur = r(80982),
+        Hr = r(20352);
       const qr = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",

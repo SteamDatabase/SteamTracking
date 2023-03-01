@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3504],
   {
-    95018: (e) => {
+    22832: (e) => {
       e.exports = {
         AdminPageCtn: "adminshared_AdminPageCtn_KNaeC",
         WidePageCtn: "adminshared_WidePageCtn_3-Dwx",
@@ -28,6 +28,7 @@
         StatusIconDone: "adminshared_StatusIconDone_20lWe",
         UploadedImageDisplayCtn: "adminshared_UploadedImageDisplayCtn_suH0c",
         UploaderLeftCol: "adminshared_UploaderLeftCol_1lUkC",
+        MarketingMessage: "adminshared_MarketingMessage_35Spt",
         BannerPreview: "adminshared_BannerPreview_1HJLo",
         UploaderRightCol: "adminshared_UploaderRightCol_1qxnk",
         LangCountTitle: "adminshared_LangCountTitle_32cpl",
@@ -37,23 +38,23 @@
         DeleteAll: "adminshared_DeleteAll_2aArL",
       };
     },
-    14809: (e, t, s) => {
+    15599: (e, t, s) => {
       "use strict";
       s.d(t, { R: () => _ });
-      var n = s(70655),
-        a = s(67294),
-        i = s(29323),
-        o = s(64839);
-      var r = s(33547),
-        l = s(48780),
-        d = s(4821),
+      var n = s(33940),
+        a = s(89526),
+        i = s(88464),
+        o = s(31621);
+      var r = s(51966),
+        l = s(99096),
+        d = s(95641),
         m = s.n(d),
-        h = s(69491),
+        h = s(90174),
         g = s.n(h),
-        u = s(95598),
-        c = s(9669),
+        u = s(86701),
+        c = s(52868),
         p = s.n(c),
-        A = s(48899);
+        A = s(46504);
       let _ = class extends a.Component {
         constructor(e) {
           super(e),
@@ -147,7 +148,7 @@
                   { className: m().WhitelistNumber },
                   s + 1
                 ),
-                e(t),
+                e(t, s),
                 Boolean(this.props.onEdit || this.props.onDelete) &&
                   a.createElement(
                     "div",
@@ -178,7 +179,7 @@
         (0, n.gn)([o.ak], _.prototype, "OnWhitelistMove", null),
         (_ = (0, n.gn)([i.Pi], _));
     },
-    62642: (e, t, s) => {
+    71016: (e, t, s) => {
       "use strict";
       s.d(t, {
         C1: () => c,
@@ -189,12 +190,12 @@
         ee: () => d,
         ky: () => g,
       });
-      var n = s(70655),
-        a = s(9669),
+      var n = s(33940),
+        a = s(52868),
         i = s.n(a),
-        o = s(67294),
-        r = (s(26149), s(82946), s(93976)),
-        l = s(90666);
+        o = s(89526),
+        r = (s(6960), s(96158), s(47330)),
+        l = s(70983);
       class d {
         constructor() {
           "dev" === l.De.WEB_UNIVERSE &&
@@ -526,7 +527,7 @@
         );
       }
     },
-    33547: (e, t, s) => {
+    51966: (e, t, s) => {
       "use strict";
       s.d(t, { Z: () => n });
       const n =

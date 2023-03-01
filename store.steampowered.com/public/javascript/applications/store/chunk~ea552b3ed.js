@@ -4,7 +4,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8878],
   {
-    67833: (e, t, r) => {
+    12568: (e, t, r) => {
       r.d(t, {
         OL: () => o,
         Hf: () => l,
@@ -12,9 +12,9 @@
         B1: () => c,
         ZP: () => m,
       });
-      var i = r(77520),
-        n = r(35092),
-        s = r(90666);
+      var i = r(32338),
+        n = r(98197),
+        s = r(70983);
       const a = JSON.parse(
         '{"store.steampowered.com":1,"default":4,"message":41,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201,"yearinreview":662}'
       );
@@ -139,10 +139,10 @@
         }
       }
     },
-    83090: (e, t, r) => {
+    40574: (e, t, r) => {
       r.d(t, { Fi: () => y, Ng: () => v, hu: () => a, it: () => z });
-      var i = r(33019),
-        n = r(40110);
+      var i = r(45878),
+        n = r(19320);
       const s = i.Message;
       class a extends s {
         constructor(e = null) {
@@ -1313,12 +1313,12 @@
           };
         })(F || (F = {}));
     },
-    5827: (e, t, r) => {
+    10171: (e, t, r) => {
       r.d(t, { Mr: () => o, tk: () => c });
-      var i = r(67294),
-        n = r(95598),
-        s = r(57376),
-        a = r(90666);
+      var i = r(89526),
+        n = r(86701),
+        s = r(89372),
+        a = r(70983);
       function o() {
         return (0, a.id)(), i.createElement(n.MrB, null);
       }
@@ -1328,12 +1328,12 @@
           : i.createElement(n.tkI, null);
       }
     },
-    65924: (e, t, r) => {
+    68910: (e, t, r) => {
       r.d(t, { HC: () => l, YR: () => m, ZP: () => c, bJ: () => u });
-      var i = r(70655),
-        n = r(67294),
-        s = r(67833),
-        a = r(90666);
+      var i = r(33940),
+        n = r(89526),
+        s = r(12568),
+        a = r(70983);
       const o = n.createContext({});
       function c(e) {
         const { children: t } = e,
@@ -1380,12 +1380,12 @@
         return n.useMemo(() => s.ZP.AddNavParamToURL(e, a), [e, a]);
       }
     },
-    54452: (e, t, r) => {
+    85446: (e, t, r) => {
       r.d(t, { U: () => o });
-      var i = r(70655),
-        n = r(67294),
-        s = r(53622),
-        a = r(64839);
+      var i = r(33940),
+        n = r(89526),
+        s = r(81052),
+        a = r(31621);
       class o extends n.Component {
         constructor() {
           super(...arguments),
@@ -1490,7 +1490,7 @@
       }
       (0, i.gn)([a.ak], o.prototype, "OnIntersection", null);
     },
-    35092: (e, t, r) => {
+    98197: (e, t, r) => {
       r.d(t, {
         FM: () => n,
         OL: () => _,
@@ -1502,8 +1502,8 @@
         md: () => b,
         xL: () => m,
       });
-      var i = r(90666);
-      r(76796), r(41311);
+      var i = r(70983);
+      r(38800), r(31587);
       function n(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
@@ -1614,10 +1614,10 @@
         }
       }
     },
-    41775: (e, t, r) => {
+    98995: (e, t, r) => {
       r.d(t, { Y: () => a });
-      var i = r(70655),
-        n = (r(67294), r(22188));
+      var i = r(33940),
+        n = (r(89526), r(50265));
       class s {
         constructor(e, t) {
           if (!t.hasOwnProperty(e))

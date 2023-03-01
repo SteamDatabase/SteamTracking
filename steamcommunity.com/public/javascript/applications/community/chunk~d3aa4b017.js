@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2832],
   {
-    56052: (e) => {
+    20535: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -16,31 +16,31 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    934: (e, t, a) => {
+    49487: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
           BroadcastEmbeddablePopoutHeader: () => be,
           default: () => de,
         });
-      var n = a(70655),
-        r = a(9669),
+      var n = a(33940),
+        r = a(52868),
         s = a.n(r),
-        o = a(29323),
-        i = a(13271),
-        l = a(67294),
-        c = a(85503),
-        d = a(63405),
-        m = a(67833),
-        p = (a(990), a(52114)),
-        _ = a(88335),
-        u = a(44741),
-        h = a(5146),
-        b = a(65924),
-        E = a(13596),
-        g = a(7573),
-        S = a(90666),
-        v = (a(76796), a(56052)),
+        o = a(88464),
+        i = a(25125),
+        l = a(89526),
+        c = a(76320),
+        d = a(75467),
+        m = a(12568),
+        p = (a(82702), a(23708)),
+        _ = a(30156),
+        u = a(16147),
+        h = a(35266),
+        b = a(68910),
+        E = a(15642),
+        g = a(13806),
+        S = a(70983),
+        v = (a(38800), a(20535)),
         f = a.n(v);
       const C = (0, o.Pi)((e) => {
         const { appid: t } = e,
@@ -124,26 +124,26 @@
           )
         );
       });
-      var N = a(26149),
-        D = a(1351),
-        y = a(1245),
-        B = (a(69765), a(58185), a(10767), a(81503)),
-        I = a(52795),
-        P = a(28976),
-        G = (a(3356), a(27991)),
-        w = a(159),
-        x = a(71387),
-        A = a(96187),
-        O = a(15396),
-        k = a(95598),
-        T = a(28268),
-        L = a(11539),
-        R = a(41311),
-        V = a(47808),
-        M = a(64839),
-        W = (a(19663), a(3389)),
-        H = (a(49186), a(461)),
-        U = a(17157),
+      var N = a(6960),
+        D = a(43155),
+        y = a(81084),
+        B = (a(87487), a(72634), a(54997), a(52310)),
+        I = a(33927),
+        P = a(89400),
+        G = (a(18376), a(94082)),
+        w = a(63154),
+        x = a(75751),
+        A = a(90043),
+        O = a(3660),
+        k = a(86701),
+        T = a(40108),
+        L = a(20183),
+        R = a(31587),
+        V = a(81171),
+        M = a(31621),
+        W = (a(26105), a(82569)),
+        H = (a(50567), a(92801)),
+        U = a(24613),
         Z = a.n(U);
       const j = (0, o.Pi)((e) => {
         const { event: t } = e,
@@ -207,16 +207,16 @@
           )
         );
       });
-      var F = a(34133),
+      var F = a(65717),
         X = a.n(F),
-        Y = a(9495),
-        q = a(56175),
-        $ = a(47077),
-        z = a(78853),
-        J = a(37699),
-        K = a(72258),
-        Q = a(23937),
-        ee = a(55285),
+        Y = a(92377),
+        q = a(99212),
+        $ = a(88393),
+        z = a(51751),
+        J = a(46723),
+        K = a(72745),
+        Q = a(91965),
+        ee = a(73401),
         te = a.n(ee);
       function ae(e) {
         const { steamid: t, closeModal: a } = e;
@@ -342,9 +342,9 @@
       function se(e, t) {
         return S.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
-      var oe = a(53622),
-        ie = a(41414),
-        le = a(19279);
+      var oe = a(81052),
+        ie = a(24868),
+        le = a(76553);
       const ce = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
@@ -1188,11 +1188,11 @@
           : null;
       }
     },
-    11539: (e, t, a) => {
+    20183: (e, t, a) => {
       "use strict";
       a.d(t, { h: () => s });
-      var n = a(67294),
-        r = a(80533);
+      var n = a(89526),
+        r = a(74802);
       const s = (e) => {
         const { onPositionChange: t, onLeave: a } = e,
           s = n.useCallback(

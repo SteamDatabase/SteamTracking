@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6117],
   {
-    62639: (e) => {
+    37664: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         BannerContainer: "deckverified_BannerContainer_2b4eh",
@@ -57,7 +57,7 @@
           "deckverified_DeveloperComments_LinkIcon_1cm6k",
       };
     },
-    47276: (e) => {
+    70424: (e) => {
       e.exports = {
         Dark: "footericons_Dark_2SV_e",
         Background: "footericons_Background_I3P4e",
@@ -70,33 +70,33 @@
         ChordSummary: "footericons_ChordSummary_2sFpI",
       };
     },
-    1245: (e, t, r) => {
+    81084: (e, t, r) => {
       "use strict";
       r.d(t, { X: () => l });
-      r(10767);
+      r(54997);
       function l() {
         let e = window.GetUsabilityTracker;
         if (e) return e();
       }
     },
-    44396: (e, t, r) => {
+    68620: (e, t, r) => {
       "use strict";
-      var l = r(33019);
-      r(40110), r(21205);
+      var l = r(45878);
+      r(19320), r(82633);
       l.Message;
     },
-    33423: (e, t, r) => {
+    83883: (e, t, r) => {
       "use strict";
       r.d(t, { Rd: () => N, _R: () => R, Ws: () => _ });
-      var l = r(67294),
-        n = (r(76796), r(7707)),
-        o = (r(21205), r(44396), r(70655)),
-        a = r(9669),
+      var l = r(89526),
+        n = (r(38800), r(49194)),
+        o = (r(82633), r(68620), r(33940)),
+        a = r(52868),
         i = r.n(a),
-        c = (r(26149), r(82946), r(93976)),
-        s = r(99533),
-        C = r(64839),
-        u = r(90666);
+        c = (r(6960), r(96158), r(47330)),
+        s = r(23213),
+        C = r(31621),
+        u = r(70983);
       class m {
         constructor() {
           if (
@@ -198,19 +198,19 @@
         }
       }
       (0, o.gn)([C.ak], m.prototype, "LoadAppCompabitilityResult", null);
-      var d = r(91340),
-        p = r(41311),
-        g = r(35921),
-        f = (r(27745), r(12505), r(98610), r(23816), r(7573)),
-        H = r(62639),
+      var d = r(7008),
+        p = r(31587),
+        g = r(23907),
+        f = (r(49920), r(84042), r(173), r(14258), r(13806)),
+        H = r(37664),
         v = r.n(H),
-        w = r(41414),
-        h = r(53622),
-        L = r(73604),
-        V = r(22453),
-        k = r(13596),
-        E = r(95598),
-        b = (r(10767), r(1245), r(78507));
+        w = r(24868),
+        h = r(81052),
+        L = r(32448),
+        V = r(77449),
+        k = r(15642),
+        E = r(86701),
+        b = (r(54997), r(81084), r(82235));
       function _(e) {
         const { nAppID: t } = e;
         return l.createElement(
@@ -346,22 +346,22 @@
         }
       }
     },
-    78507: (e, t, r) => {
+    82235: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => re });
       var l,
-        n = r(67294),
-        o = (r(21205), r(44396), r(41311)),
-        a = r(90666),
-        i = r(35921),
-        c = r(62639),
+        n = r(89526),
+        o = (r(82633), r(68620), r(31587)),
+        a = r(70983),
+        i = r(23907),
+        c = r(37664),
         s = r.n(c),
-        C = r(88272),
-        u = r(95598),
-        m = r(70655),
-        d = (r(23816), r(23200)),
-        p = (r(17010), r(39746), r(56109), r(99533), r(30543)),
-        g = r(64839);
+        C = r(76019),
+        u = r(86701),
+        m = r(33940),
+        d = (r(14258), r(60587)),
+        p = (r(48870), r(43407), r(19038), r(23213), r(87256)),
+        g = r(31621);
       function f(e) {
         switch (e) {
           case d.eV.OK:
@@ -557,9 +557,9 @@
         (0, m.gn)([g.ak], H.prototype, "SetActionDescriptionsFromMap", null);
       var v,
         w,
-        h = r(47276),
+        h = r(70424),
         L = r.n(h),
-        V = r(7573);
+        V = r(13806);
       function k(e) {
         switch (e) {
           case w.Small:
@@ -2125,7 +2125,7 @@
             (e[(e.Medium = 1)] = "Medium"),
             (e[(e.Large = 2)] = "Large");
         })(w || (w = {}));
-      var te = r(33423);
+      var te = r(83883);
       function re(e) {
         var t, r;
         const {
