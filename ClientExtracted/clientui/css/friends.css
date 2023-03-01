@@ -917,6 +917,17 @@ button.DialogButton::-moz-focus-inner {
   background: linear-gradient(to right, #c44848, #c44848);
 }
 
+.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
+  opacity: 0;
+}
+
 /* Needs to target only the ModalPosition provided to the popup window and avoid being applied
    to the additional, generic popups that can be placed inside the modal */
 .ModalDialogPopup .PopupFullWindow > .ModalPosition,
@@ -2671,4 +2682,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=385aacbf0ee5bb258a8a*/
+/*# sourceMappingURL=friends.css.map?contenthash=4810dadf42f78fc6bc8a*/

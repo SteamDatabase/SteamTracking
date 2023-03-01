@@ -1305,6 +1305,7 @@
 
 "Steam_PreallocateAppStatus"	"Выделение места на диске для %s1..."
 "Steam_ValidateAppStatus"	"Поиск существующих файлов для %s1 ..."
+"Steam_VerifyingAppStatus"	"Проверка установленных файлов: %s1..."
 
 "Steam_CDKeyCafe"			"На этом аккаунте нельзя регистрировать ключи активации."
 
@@ -1773,7 +1774,7 @@
 "steam_menu_fullgameslist"	"Развернуть"
 "steam_menu_backupgames"	"Резервное копирование и восстановление игр..."
 "steam_menu_changeuser"		"Войти в другой аккаунт..."
-"steam_menu_signout"		"Выйти..."
+"steam_menu_signout"		"Выйти из аккаунта..."
 "steam_menu_support"		"Служба поддержки Steam"
 "steam_menu_community"		"Сообщество"
 "steam_menu_community_home"		"Главная Сообщества"
@@ -2321,7 +2322,7 @@
 "Steam_InsertNextDisk_Info"		"Вставьте диск %disk%"
 
 "Steam_InstallingFromDisk"			"Диск %disk%"
-"Steam_InstallingWithTimeRemaining"	"Установка: осталось %time%"
+"Steam_InstallingWithTimeRemaining"	"Установка: осталось %s1"
 
 "Steam_InstallDownloadTime"			"Примерное время загрузки:"
 "Steam_InstallDownloadTime_Info"		"%time% со скоростью %rate%"
@@ -4199,7 +4200,8 @@
 "Steam_AppUpdateError_49"		"файлы Steam повреждены"
 "Steam_AppUpdateError_50"		"файлы контента отсутствуют"
 "Steam_AppUpdateError_51"		"настройка инструмента совместимости не удалась"
-
+"Steam_AppUpdateError_52"		"путь установки отключён"
+"Steam_AppUpdateError_53"		"недопустимый диск установки"
 
 "steam_subnav_featured"		"Популярное"
 "steam_subnav_news"			"Новости"
@@ -4831,11 +4833,6 @@
 
 "SteamUI_RunningConflictingSoftware" "Обнаружены конфликтующие программы"
 "SteamUI_RunningIncompatibleTcpService" "В процессе Steam обнаружена несовместимая версия\nфайла %incompatdll% (связанного с %incompatname%).\n\nРекомендуем обновить или удалить эту программу,\nесли при запущенном клиенте Steam или в играх\nпроисходят сбои или замедляется работа сети."
-
-"Steam_XboxDriverInstall_Title"		"Установка драйвера Xbox"
-"Steam_XboxDriverInstall_Success"	"Драйвер обновлён и будет активен после перезагрузки компьютера."
-"Steam_XboxDriverInstall_ServiceFailure"	"Не удалось обновить драйвер. Проверьте, запущен ли Steam от имени обычного пользователя, а также запущена и обновлена ли служба Steam."
-"Steam_XboxDriverInstall_Failure"	"Не удалось обновить драйвер. Ошибка: %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Доступна новая прошивка контроллера"
 "Steam_DualSense_FirmwareUpdate_Text"	"Для устройства %product% доступно обновление прошивки. Нажмите на ссылку ниже, чтобы перейти на страницу обновления на сайте Sony:"

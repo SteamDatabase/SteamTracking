@@ -1577,7 +1577,7 @@
     {
         "id": 1110029,
         "name": "Unknown",
-        "size": 40
+        "size": 39
     },
     {
         "id": 1110030,
@@ -1715,6 +1715,11 @@
         "size": 4
     },
     {
+        "id": 1260019,
+        "name": "43RemoteStorage_SteamCloudEnableStateChange_t",
+        "size": 1
+    },
+    {
         "id": 1270001,
         "name": "BeginBroadcastSessionResult_t",
         "size": 12
@@ -1767,7 +1772,7 @@
     {
         "id": 1270015,
         "name": "Unknown",
-        "size": 20
+        "size": 28
     },
     {
         "id": 1270016,

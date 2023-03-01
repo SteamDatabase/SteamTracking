@@ -1305,7 +1305,6 @@
 
 "Steam_PreallocateAppStatus"	"Δέσμευση χώρου στο δίσκο για το %s1 ..."
 "Steam_ValidateAppStatus"	"Εύρεση υπαρχόντων αρχείων του %s1 ..."
-
 "Steam_CDKeyCafe"			"Δεν μπορείτε να καταχωρήσετε κωδικούς προϊόντων σε αυτό τον λογαριασμό."
 
 "Steam_BrowseGames"		"Περιήγηση στα παιχνίδια..."
@@ -2322,8 +2321,6 @@
 "Steam_InsertNextDisk_Info"		"Εισάγετε το δίσκο %disk%"
 
 "Steam_InstallingFromDisk"			"Δίσκος %disk%"
-"Steam_InstallingWithTimeRemaining"	"Γίνεται εγκατάσταση: %time% απομένει"
-
 "Steam_InstallDownloadTime"			"Εκτιμώμενος χρόνος λήψης:"
 "Steam_InstallDownloadTime_Info"		"%time% με %rate%"
 "Steam_InstallBytesProgress"			"Εγκαταστάθηκαν: %mb_installed% / %mb_to_install% MB"
@@ -4200,8 +4197,6 @@
 "Steam_AppUpdateError_49"		"Κατεστραμμένα αρχεία Steam"
 "Steam_AppUpdateError_50"		"λείπουν αρχεία περιεχομένου"
 "Steam_AppUpdateError_51"		"η διαμόρφωση του εργαλείου συμβατότητας απέτυχε"
-
-
 "steam_subnav_featured"		"ΠΡΟΒΑΛΛΟΜΕΝΑ"
 "steam_subnav_news"			"ΝΕΑ"
 "steam_subnav_recommended"	"ΠΡΟΤΕΙΝΟΜΕΝΑ"
@@ -4747,7 +4742,7 @@
 "VR_Error_Title"				"Σφάλμα εκκίνησης SteamVR"
 "VR_Error_VRSkipParam"			"Το SteamVR δεν ξεκίνησε λόγω της παραμέτρου γραμμής εντολών -vrskip. Θέλετε σίγουρα να την εκκινήσετε;"
 "VR_Error_ComponentNotInstalled" "Το SteamVR δεν είναι διαθέσιμο επειδή το εργαλείο SteamVR δεν είναι εγκατεστημένο. Θέλετε να το εγκαταστήσετε;"
-"VR_Error_ComponentBusy"		"Το SteamVR δεν είναι διαθέσιμο καθώς το εργαλείο SteamVR ενημερώνεται, απεγκαθίσταται, επικυρώνεται κτλ."
+"VR_Error_ComponentBusy"		"Το SteamVR δεν θα είναι διαθέσιμο ενώ το εργαλείο SteamVR ενημερώνεται, απεγκαθίσταται, επικυρώνεται κτλ."
 "VR_Error_CrashProtection"		"Το SteamVR είναι απενεργοποιημένο επειδή τερματίστηκε απροσδόκητα την τελευταία φορά που εκτελέστηκε. Θέλετε να δοκιμάσετε ξανά;"
 "VR_Error_HmdNotFound"			"Το SteamVR δεν είναι διαθέσιμο γιατί δεν έχει εντοπιστεί υποστηριζόμενο headset."
 "VR_Error_UnknownError"			"Αποτυχία εκκίνησης SteamVR για άγνωστους λόγους. (Σφάλμα: %error%)"
@@ -4832,11 +4827,6 @@
 
 "SteamUI_RunningConflictingSoftware" "Εντοπίστηκε ασύμβατο λογισμικό"
 "SteamUI_RunningIncompatibleTcpService" "Μια μη συμβατή έκδοση του %incompatdll% (που σχετίζεται με το %incompatname%)\nεντοπίστηκε εντός της διεργασίας Steam.\n\nΠροτείνουμε να ενημερώσετε ή να απεγκαταστήσετε αυτό το λογισμικό εάν αντιμετωπίζετε απροσδόκητους τερματισμούς\nή επιβράδυνση του δικτύου όταν εκτελείτε το Steam ή μεμονωμένα παιχνίδια."
-
-"Steam_XboxDriverInstall_Title"		"Εγκατάσταση οδηγού Xbox"
-"Steam_XboxDriverInstall_Success"	"Ο οδηγός ενημερώθηκε επιτυχώς και θα είναι ενεργός αφού επανεκκινήσετε τον υπολογιστή σας."
-"Steam_XboxDriverInstall_ServiceFailure"	"Αποτυχία ενημέρωσης οδηγού, εκτελείτε το Steam ως κανονικός χρήστης και εκτελείται η υπηρεσία Steam και είναι ενημερωμένη;"
-"Steam_XboxDriverInstall_Failure"	"Αποτυχία ενημέρωσης οδηγού (σφάλμα %error%)"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Νέο υλικολογισμικό χειριστηρίου διαθέσιμο"
 "Steam_DualSense_FirmwareUpdate_Text"	"Υπάρχει νέο υλικολογισμικό διαθέσιμο για το %product% σας. Κάντε κλικ στον παρακάτω σύνδεσμο για να μεταβείτε στη σελίδα ενημέρωσης υλικολογισμικού της Sony:"

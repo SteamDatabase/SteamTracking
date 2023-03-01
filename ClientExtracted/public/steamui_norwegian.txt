@@ -1315,6 +1315,7 @@ nødvendig for å kontakte deg via e-post."
 
 "Steam_PreallocateAppStatus"	"Tildeler diskplass for %s1 …"
 "Steam_ValidateAppStatus"	"Oppdager eksisterende filer for %s1 …"
+"Steam_VerifyingAppStatus"	"Bekrefter installerte filer for %s1 …"
 
 "Steam_CDKeyCafe"			"Du kan ikke registrere produktnøkler på denne kontoen."
 
@@ -2331,7 +2332,7 @@ Du må logge av macOS for at endringen skal tre i kraft."
 "Steam_InsertNextDisk_Info"		"Sett inn ny disk %disk%"
 
 "Steam_InstallingFromDisk"			"Disk %disk%"
-"Steam_InstallingWithTimeRemaining"	"Installerer: %time% gjenstår"
+"Steam_InstallingWithTimeRemaining"	"Installerer: %s1 gjenstår"
 
 "Steam_InstallDownloadTime"			"Anslått nedlastingstid:"
 "Steam_InstallDownloadTime_Info"		"%time% med %rate%"
@@ -4209,7 +4210,8 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_AppUpdateError_49"		"skadede Steam-filer"
 "Steam_AppUpdateError_50"		"mangler innholdsfiler"
 "Steam_AppUpdateError_51"		"konfigurasjon av kompatibilitetsverktøy mislyktes"
-
+"Steam_AppUpdateError_52"		"umontert installasjonssti"
+"Steam_AppUpdateError_53"		"ugyldig installasjonsdisk"
 
 "steam_subnav_featured"		"Utvalgt"
 "steam_subnav_news"			"Nyheter"
@@ -4841,11 +4843,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 
 "SteamUI_RunningConflictingSoftware" "Oppdaget programvarekonflikt"
 "SteamUI_RunningIncompatibleTcpService" "En inkompatibel versjon av %incompatdll% (relatert til %incompatname%)\ner oppdaget i Steam-prosessen.\n\nVi foreslår at du oppdaterer eller avinstallerer denne programvaren dersom du\nopplever krasjer eller tregt nettverk mens du kjører Steam eller spill."
-
-"Steam_XboxDriverInstall_Title"		"Installasjon av Xbox-driver"
-"Steam_XboxDriverInstall_Success"	"Driveren ble oppdatert og blir tatt i bruk når du starter datamaskinen på nytt."
-"Steam_XboxDriverInstall_ServiceFailure"	"Kunne ikke oppdatere driver. Kjører du Steam som en vanlig bruker, og er Steam-tjenesten oppdatert?"
-"Steam_XboxDriverInstall_Failure"	"Kunne ikke oppdatere driver. Feil: %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Ny kontrollerfastvare tilgjengelig"
 "Steam_DualSense_FirmwareUpdate_Text"	"Det finnes ny fastvare tilgjengelig for %product%. Trykk på lenken nedenfor for å gå til oppdateringssiden for fastvare fra Sony:"

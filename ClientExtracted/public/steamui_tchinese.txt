@@ -512,7 +512,7 @@ Steam，請在其圖示上按右鍵。"
 "Steam_Interface"				"介面"
 "Steam_EnableGPUWebViews_Option"		"在網頁瀏覽中啟用 GPU 加速彩現（需要重新啟動）"
 "Steam_SmoothScrollWebViews_Option"		"在網頁瀏覽中啟用平滑捲動（需要重新啟動）"
-"Steam_SetJumplistOptions"		"設定工作列喜好"
+"Steam_SetJumplistOptions"		"設定工作列偏好"
 "Steam_ShowOnlineStatusOptions"	"選擇要顯示的線上選項"
 "Steam_ShowDestinationOptions"	"選擇要顯示的目的地"
 "Steam_MustRestartToTakeEffect"			"這項修改須等到下次啟動Steam\n之後才會完成。"
@@ -1309,7 +1309,6 @@ Steam，請在其圖示上按右鍵。"
 
 "Steam_PreallocateAppStatus"	"為 %s1 分配磁碟空間 …"
 "Steam_ValidateAppStatus"	"正在尋找 %s1 的現存檔案…"
-
 "Steam_CDKeyCafe"			"您無法於此帳戶註冊產品序號。"
 
 "Steam_BrowseGames"		"瀏覽遊戲…"
@@ -2325,8 +2324,6 @@ Steam，請在其圖示上按右鍵。"
 "Steam_InsertNextDisk_Info"		"請插入光碟 %disk%"
 
 "Steam_InstallingFromDisk"			"光碟 %disk%"
-"Steam_InstallingWithTimeRemaining"	"正在安裝：尚需 %time%"
-
 "Steam_InstallDownloadTime"			"估計下載時間："
 "Steam_InstallDownloadTime_Info"		"%time%，下載速度 %rate%"
 "Steam_InstallBytesProgress"			"已安裝：%mb_installed% / %mb_to_install% MB"
@@ -4203,8 +4200,6 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_AppUpdateError_49"		"Steam 檔案毀損"
 "Steam_AppUpdateError_50"		"遺失內容檔案"
 "Steam_AppUpdateError_51"		"相容性工具設定失敗"
-
-
 "steam_subnav_featured"		"精選"
 "steam_subnav_news"			"新聞"
 "steam_subnav_recommended"	"推薦"
@@ -4835,11 +4830,6 @@ Mac OS X 10.7 或是更高的版本。"
 
 "SteamUI_RunningConflictingSoftware" "偵測到衝突軟體"
 "SteamUI_RunningIncompatibleTcpService" "在 Steam 處理程序中偵測到\n%incompatdll%（與 %incompatname% 有關）的不相容版本。\n\n如執行 Steam 或個別遊戲時遇到當機或網路遲緩的問題，\n我們建議您更新或移除此軟體。"
-
-"Steam_XboxDriverInstall_Title"		"Xbox 驅動程式安裝"
-"Steam_XboxDriverInstall_Success"	"驅動程式更新成功，在您重新啟動電腦後執行。"
-"Steam_XboxDriverInstall_ServiceFailure"	"驅動程式更新失敗。是否正以一般使用者身份執行 Steam，且 Steam 服務正在執行並為最新版本？"
-"Steam_XboxDriverInstall_Failure"	"驅動程式更新失敗，錯誤 = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"有新的控制器韌體可使用"
 "Steam_DualSense_FirmwareUpdate_Text"	"您的 %product% 有新的韌體可使用。點擊下方連結前往 Sony 韌體更新頁面："

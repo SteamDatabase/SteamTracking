@@ -1313,6 +1313,7 @@
 
 "Steam_PreallocateAppStatus"	"Разпределяне на дисковото пространство за %s1 …"
 "Steam_ValidateAppStatus"	"Откриване съществуващи файлове за %s1 …"
+"Steam_VerifyingAppStatus"	"Потвърждаване на инсталираните файлове за %s1…"
 
 "Steam_CDKeyCafe"			"Нямате възможност да регистрирате продуктови кодове към този акаунт."
 
@@ -2294,7 +2295,7 @@
 "Steam_P2P_SharingLabel"		"Споделяне: %game%"
 "Steam_P2P_PausedLabel"			"Паузирана: %game%"
 "Steam_P2P_DownloadLabel_Complete"	"%game%"
-"Steam_P2P_ProgressLabel"		"%percentcomplete% завършени; %remainingtime% оставащи"
+"Steam_P2P_ProgressLabel"		"Завършени: %percentcomplete% | Остава(т): %remainingtime%"
 "Steam_P2P_ProgressLabel_Complete"	"100% завършено"
 "Steam_P2P_ProgressLabel_Paused"	"%percentcomplete% завършено"
 "Steam_P2P_DownloadRateLabel"		"Скорост на сваляне: %dlrate% (връх: %dlpeak%)"
@@ -2330,7 +2331,7 @@
 "Steam_InsertNextDisk_Info"		"Моля, поставете диск %disk%"
 
 "Steam_InstallingFromDisk"			"Диск %disk%"
-"Steam_InstallingWithTimeRemaining"	"Инсталиране: %time% оставащо"
+"Steam_InstallingWithTimeRemaining"	"Инсталиране. Остава(т): %s1"
 
 "Steam_InstallDownloadTime"			"Приблизително време за сваляне:"
 "Steam_InstallDownloadTime_Info"		"%time% при %rate%"
@@ -4212,7 +4213,8 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_AppUpdateError_49"		"повредени Steam файлове"
 "Steam_AppUpdateError_50"		"липсващи файлове за съдържание"
 "Steam_AppUpdateError_51"		"конфигурирането на инструмента за съвместимост беше неуспешно"
-
+"Steam_AppUpdateError_52"		"пътят за инсталиране не е монтиран"
+"Steam_AppUpdateError_53"		"невалиден диск за инсталиране"
 
 "steam_subnav_featured"		"Отличени"
 "steam_subnav_news"			"Новини"
@@ -4845,11 +4847,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "SteamUI_RunningConflictingSoftware" "Засечен е конфликтен софтуер"
 "SteamUI_RunningIncompatibleTcpService" "Засечена е несъвместима версия на %incompatdll% (свързана с %incompatname%)\nв Steam процеса.\n\nПрепоръчваме да обновите или деинсталирате този софтуер, ако се натъквате на сривове\nили мрежови забавяния, докато сте пуснали Steam или индивидуални игри."
-
-"Steam_XboxDriverInstall_Title"		"Инсталиране на Xbox драйвер"
-"Steam_XboxDriverInstall_Success"	"Драйверът е успешно обновен и ще бъде активен след рестартиране на компютъра Ви."
-"Steam_XboxDriverInstall_ServiceFailure"	"Обновяването на драйвера е неуспешно. Моля, уверете се, че Steam е включен в режим „Нормален потребител“, както и че Steam услугата е включена и актуална."
-"Steam_XboxDriverInstall_Failure"	"Обновяването на драйвера е неуспешно. Грешка: %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Достъпен е нов фърмуер за контролера"
 "Steam_DualSense_FirmwareUpdate_Text"	"Достъпен е нов фърмуер за Вашия %product%. Кликнете върху връзката по-долу, за да се упътите към страницата за обновления на фърмуера на Sony:"

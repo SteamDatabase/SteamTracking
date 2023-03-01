@@ -792,7 +792,7 @@
 
 "Steam_Settings_Browser"	"Webböngésző"
 "Overlay_SettingsBrowserDesc" "Az alábbi beállítások a Steam kliensen és a Steam játékon belüli átfedésen használt webböngészőre vonatkoznak."
-"Steam_SettingsBrowserDeleteAllData"	"Webböngésző-adatok törlése"
+"Steam_SettingsBrowserDeleteAllData"	"Webböngészőadatok törlése"
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Törölsz minden gyorsítótár-fájlt, sütit és előzményt a Steam webböngészőjéből?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"

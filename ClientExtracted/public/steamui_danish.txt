@@ -1311,6 +1311,7 @@ Dette burde vare mindre end et minut."
 
 "Steam_PreallocateAppStatus"	"Allokerer diskplads til %s1 ..."
 "Steam_ValidateAppStatus"	"Finder eksisterende filer for %s1 ..."
+"Steam_VerifyingAppStatus"	"Bekræfter installerede filer for %s1..."
 
 "Steam_CDKeyCafe"			"Du kan ikke registrere produktkoder på denne konto."
 
@@ -2327,7 +2328,7 @@ Du skal logge ud af OSX før ændringerne træder i kraft."
 "Steam_InsertNextDisk_Info"		"Isæt disk %disk%"
 
 "Steam_InstallingFromDisk"			"Disk %disk%"
-"Steam_InstallingWithTimeRemaining"	"Installerer: %time% tilbage"
+"Steam_InstallingWithTimeRemaining"	"Installerer: %s1 tilbage"
 
 "Steam_InstallDownloadTime"			"Anslået overførselstid:"
 "Steam_InstallDownloadTime_Info"		"%time% med %rate%"
@@ -4201,7 +4202,8 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 "Steam_AppUpdateError_49"		"Steam-filerne er beskadiget"
 "Steam_AppUpdateError_50"		"indholdsfiler mangler"
 "Steam_AppUpdateError_51"		"Konfiguration af kompatibilitetsværktøj mislykkedes"
-
+"Steam_AppUpdateError_52"		"frakoblet installationssti"
+"Steam_AppUpdateError_53"		"ugyldig installationsdisk"
 
 "steam_subnav_featured"		"Fremhævede"
 "steam_subnav_news"			"Nyheder"
@@ -4833,11 +4835,6 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 
 "SteamUI_RunningConflictingSoftware" "Softwarekonflikt fundet"
 "SteamUI_RunningIncompatibleTcpService" "En inkompatible version af %incompatdll% (relateret til %incompatname%)\ner blevet fundet i Steam-processen.\n\nVi foreslår at du opdaterer eller afinstallerer denne software, hvis du oplever nedbrud\neller at netværket bliver langsomt, når du kører Steam eller individuelle spil."
-
-"Steam_XboxDriverInstall_Title"		"Installation af Xbox-driver"
-"Steam_XboxDriverInstall_Success"	"Driveren er blevet opdateret og bliver aktiv, når du har genstartet din computer."
-"Steam_XboxDriverInstall_ServiceFailure"	"Driveropdateringen mislykkedes. Kører du Steam som en almindelig bruger, og har Steam-tjenesten de seneste opdateringer?"
-"Steam_XboxDriverInstall_Failure"	"Driveropdateringen mislykkedes. Fejl = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Ny controller-firmware tilgængelig"
 "Steam_DualSense_FirmwareUpdate_Text"	"Der er ny firmware tilgængelig til følgende: %product%. Klik på linket nedenfor for at gå til firmwareopdateringssiden hos Sony:"

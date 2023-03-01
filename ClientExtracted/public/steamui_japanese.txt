@@ -1311,6 +1311,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_PreallocateAppStatus"	"%s1 用のディスク領域を割り当て中..."
 "Steam_ValidateAppStatus"	"%s1の既存のファイルを 検索しています..."
+"Steam_VerifyingAppStatus"	"%s1のインストール済みファイルを確認中..."
 
 "Steam_CDKeyCafe"			"このアカウントでは製品コードを登録できません。"
 
@@ -2324,7 +2325,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_InsertNextDisk_Info"		"ディスク%disk%を挿入してください"
 
 "Steam_InstallingFromDisk"			"ディスク%disk%"
-"Steam_InstallingWithTimeRemaining"	"インストール中：残り時間%time%"
+"Steam_InstallingWithTimeRemaining"	"インストール中：残り時間%s1"
 
 "Steam_InstallDownloadTime"			"推定ダウンロード時間："
 "Steam_InstallDownloadTime_Info"		"%time%、速度 %rate%"
@@ -4206,7 +4207,8 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_AppUpdateError_49"		"Steamファイルが破損しています"
 "Steam_AppUpdateError_50"		"コンテンツファイルが見つかりません"
 "Steam_AppUpdateError_51"		"互換性ツールの設定に失敗しました"
-
+"Steam_AppUpdateError_52"		"マウントが解除されたインストールパス"
+"Steam_AppUpdateError_53"		"インストールディスクが無効です"
 
 "steam_subnav_featured"		"おすすめアイテム"
 "steam_subnav_news"			"ニュース"
@@ -4839,11 +4841,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "SteamUI_RunningConflictingSoftware" "競合するソフトウェアを検出しました"
 "SteamUI_RunningIncompatibleTcpService" "Steam プロセス内で %incompatdll% (%incompatname% 関連) \nの互換性のないバージョンを検出しました。Steam または個々のゲームの\n実行中にクラッシュやネットワークの遅延が発生した場合は、\nこのソフトウェアを更新またはアンインストールすることをお勧めします。"
-
-"Steam_XboxDriverInstall_Title"		"Xboxドライバーインストール"
-"Steam_XboxDriverInstall_Success"	"ドライバーが正常に更新されました。コンピューターを再起動すると有効になります。"
-"Steam_XboxDriverInstall_ServiceFailure"	"ドライバーの更新に失敗しました。最新のSteamを通常のユーザーとして実行中ですか？"
-"Steam_XboxDriverInstall_Failure"	"ドライバーの更新に失敗しました。エラー = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"コントローラの新しいファームウェアが利用可能"
 "Steam_DualSense_FirmwareUpdate_Text"	"%product%の新しいファームウェアが利用できます。以下のリンクをクリックして、Sonyファームウェアアップデートページへ移動してください："

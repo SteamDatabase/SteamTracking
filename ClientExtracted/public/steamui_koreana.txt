@@ -1311,6 +1311,7 @@
 
 "Steam_PreallocateAppStatus"	"%s1 설치를 위해 공간을 확보하는 중 ..."
 "Steam_ValidateAppStatus"	"이미 있는 %s1 파일을 찾는 중 ..."
+"Steam_VerifyingAppStatus"	"%s1의 설치 파일 확인 중..."
 
 "Steam_CDKeyCafe"			"이 계정에서는 제품 코드를 등록할 수 없습니다."
 
@@ -2328,7 +2329,7 @@
 "Steam_InsertNextDisk_Info"		"%disk% 디스크를 넣으십시오."
 
 "Steam_InstallingFromDisk"			"디스크 %disk%"
-"Steam_InstallingWithTimeRemaining"	"설치: %time% 남음"
+"Steam_InstallingWithTimeRemaining"	"설치 중: %s1 남음"
 
 "Steam_InstallDownloadTime"			"예상 다운로드 시간:"
 "Steam_InstallDownloadTime_Info"		"%time%, %rate%"
@@ -4207,7 +4208,8 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_AppUpdateError_49"		"Steam 파일 오류"
 "Steam_AppUpdateError_50"		"콘텐츠 파일 누락"
 "Steam_AppUpdateError_51"		"호환 도구를 구성하지 못했습니다"
-
+"Steam_AppUpdateError_52"		"마운트 해제된 설치 경로"
+"Steam_AppUpdateError_53"		"유효하지 않은 설치 디스크"
 
 "steam_subnav_featured"		"특집"
 "steam_subnav_news"			"뉴스"
@@ -4839,11 +4841,6 @@ Windows에 관리자로 로그인해야 합니다.
 
 "SteamUI_RunningConflictingSoftware" "충돌하는 소프트웨어 발견됨"
 "SteamUI_RunningIncompatibleTcpService" "Steam 프로세스 안에서 호환되지 않는\n%incompatdll% 버전이 발견되었습니다.(%incompatname%와/과 관련)\n\nSteam 또는 게임을 실행하는데 크래시 또는 네트워크 느림 형상을\n경험하고 계시면 이 소프트웨어를 업데이트하시던가 삭제하시는 것을 추천합니다."
-
-"Steam_XboxDriverInstall_Title"		"Xbox 드라이버 설치"
-"Steam_XboxDriverInstall_Success"	"드라이버가 성공적으로 업데이트되었습니다. 컴퓨터를 다시 시작하면 활성화됩니다."
-"Steam_XboxDriverInstall_ServiceFailure"	"드라이버 업데이트에 실패했습니다. Steam이 일반 사용자 계정으로 실행되고 있으며, Steam 서비스가 최신 버전으로 실행 중입니까?"
-"Steam_XboxDriverInstall_Failure"	"드라이버 업데이트에 실패하였습니다. 오류 = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"새로운 컨트롤러 펌웨어 사용 가능"
 "Steam_DualSense_FirmwareUpdate_Text"	"%product%에 대한 새로운 펌웨어를 사용할 수 있습니다. 아래 링크를 클릭하여 Sony 펌웨어 업데이트 페이지로 이동하세요."

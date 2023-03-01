@@ -414,6 +414,14 @@ StoreFrontPage
 	filter		"store"
 }
 
+
+StoreCheckout
+{
+	url			"%checkout%"
+	method		"internal"
+	filter		"store"
+}
+
 StoreFrontPageBigPicture
 {
 	url			"%store%/bigpicture/home"

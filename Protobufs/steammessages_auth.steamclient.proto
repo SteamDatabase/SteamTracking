@@ -19,6 +19,7 @@ enum EAuthSessionGuardType {
 	k_EAuthSessionGuardType_DeviceConfirmation = 4;
 	k_EAuthSessionGuardType_EmailConfirmation = 5;
 	k_EAuthSessionGuardType_MachineToken = 6;
+	k_EAuthSessionGuardType_LegacyMachineAuth = 7;
 }
 
 enum EAuthSessionSecurityHistory {
@@ -96,6 +97,7 @@ message CAuthentication_BeginAuthSessionViaCredentials_Request {
 	optional .CAuthentication_DeviceDetails device_details = 9 [(description) = "User-supplied details about the device attempting to sign in"];
 	optional string guard_data = 10 [(description) = "steam guard data for client login"];
 	optional uint32 language = 11;
+	optional int32 qos_level = 12 [default = 2, (description) = "[ENetQOSLevel] client-specified priority for this auth attempt"];
 }
 
 message CAuthentication_BeginAuthSessionViaCredentials_Response {

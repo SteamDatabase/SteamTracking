@@ -1304,6 +1304,7 @@
 
 "Steam_PreallocateAppStatus"	"A alocar espaço no disco para %s1 ..."
 "Steam_ValidateAppStatus"	"A descobrir ficheiros existentes de %s1..."
+"Steam_VerifyingAppStatus"	"A verificar os ficheiros instalados de %s1..."
 
 "Steam_CDKeyCafe"			"Não podes registar códigos de produto nesta conta."
 
@@ -1508,9 +1509,9 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_PeerContentTitle"			"Transferência de ficheiros de jogos pela rede local"
 "Steam_PeerContentInfo"			"Esta funcionalidade permite ao teu PC transferir ficheiros para e a partir de outros PCs ou Steam Decks na tua rede local, reduzindo o teu tráfego na internet enquanto fazes o download ou a atualização de um jogo."
 "Steam_PeerContentOff"			"Off - Impedir transferências"
-"Steam_PeerContentSameUser"		"Permitir transferências para/a partir dos meus dispositivos"
-"Steam_PeerContentFriends"		"Permitir transferências para/a partir dos meus amigos no Steam"
-"Steam_PeerContentAnyUser"		"Permitir transferências para/a partir de qualquer utilizador"
+"Steam_PeerContentSameUser"		"Permitir entre os meus dispositivos"
+"Steam_PeerContentFriends"		"Permitir entre amigos no Steam"
+"Steam_PeerContentAnyUser"		"Permitir entre qualquer utilizador"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"A Steam Cloud armazena informações para que a tua experiência seja consistente entre computadores diferentes."
@@ -2321,7 +2322,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_InsertNextDisk_Info"		"Introduz o disco %disk%"
 
 "Steam_InstallingFromDisk"			"Disco %disk%"
-"Steam_InstallingWithTimeRemaining"	"A instalar: faltam %time%"
+"Steam_InstallingWithTimeRemaining"	"A instalar: faltam %s1"
 
 "Steam_InstallDownloadTime"			"Tempo de download estimado:"
 "Steam_InstallDownloadTime_Info"		"%time% a %rate%"
@@ -4069,7 +4070,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "steam_inbox_offlinemessage"	"1 mensagem de chat não lida"
 "steam_inbox_offlinemessages"	"%offlinemessages% mensagens de chat não lidas"
 
-"SteamUI_ContentMgr_ManageInstalledApps" "Pastas de biblioteca"
+"SteamUI_ContentMgr_ManageInstalledApps" "Pastas de biblioteca Steam"
 "SteamUI_ContentMgr_ManageInstalledAppsInfo" "Gerir diretórios de instalação em vários discos"
 "SteamUI_ContentMgr_Title" "Pastas de biblioteca Steam"
 "SteamUI_ContentMgr_InstallFolder" "Pasta"
@@ -4197,7 +4198,8 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "Steam_AppUpdateError_49"		"ficheiros do Steam corrompidos"
 "Steam_AppUpdateError_50"		"ficheiros de conteúdo em falta"
 "Steam_AppUpdateError_51"		"a configuração da ferramenta de compatibilidade falhou"
-
+"Steam_AppUpdateError_52"		"caminho de instalação não montado"
+"Steam_AppUpdateError_53"		"disco de instalação inválido"
 
 "steam_subnav_featured"		"Em destaque"
 "steam_subnav_news"			"Notícias"
@@ -4829,11 +4831,6 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 
 "SteamUI_RunningConflictingSoftware" "Conflito de software detetado"
 "SteamUI_RunningIncompatibleTcpService" "Uma versão incompatível de %incompatdll% (relacionada com\n%incompatname%) foi detetada no processo do Steam.\n\nSugerimos atualizar ou desinstalar este software caso aconteçam\nbloqueios ou problemas de rede durante a utilização do Steam ou jogos."
-
-"Steam_XboxDriverInstall_Title"		"Instalação do driver da Xbox"
-"Steam_XboxDriverInstall_Success"	"O driver foi atualizado com sucesso e estará ativo após reiniciares o computador."
-"Steam_XboxDriverInstall_ServiceFailure"	"Falha ao atualizar o driver. Verifica se o Steam está a ser executado sem privilégios de administrador e se o serviço do Steam está em execução e atualizado."
-"Steam_XboxDriverInstall_Failure"	"Falha ao atualizar o driver. Erro = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Novo firmware disponível para o comando"
 "Steam_DualSense_FirmwareUpdate_Text"	"Existe firmware novo disponível para \"%product%\". Clica no link abaixo para acederes à página de atualização de firmware da Sony:"

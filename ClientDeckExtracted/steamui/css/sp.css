@@ -34440,420 +34440,6 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   margin-top: 0px;
   display: none;
 }
-.steamdesktopoverlay_Wrapper_3b_pl {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-.steamdesktopoverlay_TopSection_fi6UD {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1280px;
-  margin: auto;
-}
-.steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_BackToGame_2LJMR {
-  flex: 1 1 0;
-  width: 0;
-  display: flex;
-  flex-direction: row;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_BackToGameBtn_mh8m9 {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_BackToGameBtn_mh8m9:hover {
-  background-color: #8b929a;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_BackToGameBtn_mh8m9
-  > svg {
-  height: 30px;
-  vertical-align: middle;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_TextContainer_rgGY_ {
-  max-width: calc(100% - 60px);
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_GameName_3mi5H {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 22px;
-  line-height: 28px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_KBShortcut_2EuLv {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  img.steamdesktopoverlay_CurrentGameLogo_qaXdN {
-  width: 300px;
-  object-fit: contain;
-}
-.steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_TimeStats_vCykY {
-  flex: 1 1 0;
-  width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_TimeStats_vCykY
-  .steamdesktopoverlay_CurrentTime_2gQ69 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 34px;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_TimeStats_vCykY
-  .steamdesktopoverlay_CurrentDate_2tSzh {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_TimeStats_vCykY
-  .steamdesktopoverlay_PlaytimeCurrentSession_3YTmr {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translate(-50%);
-  padding: 50px 50px 0px 50px;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV .steamdesktopoverlay_Toolbar_fbu3l {
-  display: flex;
-  height: 50px;
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT {
-  height: 50px;
-  width: 50px;
-  margin-left: 5px;
-  margin-right: 5px;
-  transform: scale(0.9);
-  transition: transform 0.2s ease-in-out;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT:hover {
-  background-color: #8b929a;
-  transform: scale(1);
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT.steamdesktopoverlay_Toggled_1BXjK {
-  background-color: #1a9fff;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT.steamdesktopoverlay_Toggled_1BXjK:hover {
-  background-color: #0bf;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT
-  > svg {
-  height: 30px;
-  vertical-align: middle;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV:hover
-  .steamdesktopoverlay_Toolbar_fbu3l {
-  opacity: 1;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu {
-  background-color: #1f2a39;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu .title-area-children {
-  float: none;
-  -webkit-app-region: drag;
-  pointer-events: auto;
-  position: absolute;
-  left: 5px;
-  right: unset;
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  color: #67707b;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: calc(100% - 30px);
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_WindowControls_2O7tj {
-  position: relative;
-  height: 24px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_WindowControls_2O7tj
-  .title-area {
-  height: 24px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_ControllerConfiguratorWrapper_2RTmc {
-  flex: 1;
-  position: relative;
-  display: flex;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu .steamdesktopoverlay_URLBar_3MSUy {
-  position: relative;
-  padding: 0px 4px 4px 9px;
-  display: flex;
-  align-items: center;
-  background: #0e141b;
-  box-shadow: inset #3d4450 1px 0px 0px 0px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_StatusIcon_3GH2H {
-  height: 18px;
-  color: #67707b;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_LockIcon_2HQtQ {
-  height: 16px;
-  padding-bottom: 2px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu .steamdesktopoverlay_URLBar_3MSUy svg {
-  height: 100%;
-  padding-right: 6px;
-  padding-left: 2px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  svg.steamdesktopoverlay_CertError_20-Cm {
-  color: #de3618;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_NavigationButton_fnk5x {
-  padding: 2px 0px 2px 4px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_NavigationButton_fnk5x:hover {
-  cursor: pointer;
-  background: #23262e;
-  border-radius: 16px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_NavigationButton_fnk5x.steamdesktopoverlay_Disabled_LgJWC {
-  pointer-events: none;
-  color: #3d4450;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_URLBarText_-ewZT {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  padding: 2px 16px 2px 8px;
-  border-radius: 16px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_URLBarText_-ewZT:hover {
-  cursor: pointer;
-  background: #23262e;
-  border-radius: 16px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_URLBarText_-ewZT:hover
-  .steamdesktopoverlay_URL_1_ona {
-  color: #b8bcbf;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_URLBarText_-ewZT::after {
-  content: "";
-  width: 1px;
-  height: 100%;
-  background: #23262e;
-  position: absolute;
-  right: 0;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_URLBarText_-ewZT
-  .steamdesktopoverlay_URL_1_ona {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  padding: 0 0px;
-  color: #67707b;
-  font-size: 11px;
-  font-weight: 400;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_URLBarText_-ewZT
-  .steamdesktopoverlay_URL_1_ona.steamdesktopoverlay_CertError_20-Cm {
-  color: #de3618;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_URLBarText_-ewZT
-  .steamdesktopoverlay_URL_1_ona
-  .DialogInput_Wrapper {
-  flex-grow: 1;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_URLBar_3MSUy
-  .steamdesktopoverlay_URLBarText_-ewZT
-  .steamdesktopoverlay_URL_1_ona
-  .DialogInput_Wrapper
-  > input.DialogInput {
-  padding: 0px 5px 0px 5px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6- {
-  flex: 1;
-  background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
-  border: none;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar {
-  width: 12px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb {
-  width: 4px;
-  border: 3px solid transparent;
-  background-image: none;
-  background-color: #606774;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-track,
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-button {
-  display: none;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb:hover {
-  background-color: #7b8392;
-  background-clip: padding-box;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb:active {
-  background-color: #7b8392;
-  border: 2px solid transparent;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-corner {
-  background-color: #434953;
-}
-.steamdesktopoverlay_OverlayAchievements_2mPty {
-  position: relative;
-  flex: 1;
-  flex-direction: column;
-  display: flex;
-  min-height: 0;
-  width: 100%;
-}
-.steamdesktopoverlay_OverlayAchievements_2mPty
-  .steamdesktopoverlay_Container_6K3Uq {
-  flex: 1;
-  padding-top: 24px;
-}
 .soundtrackoverlay_Overlay_fMMMD {
   padding: 6px;
   display: flex;
@@ -34889,6 +34475,51 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   margin: 4px;
   gap: 4px;
   width: fit-content;
+}
+.broadcaststatus_BroadcastStatusBody_3t4AG {
+  width: 200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  pointer-events: none;
+  overflow: hidden;
+}
+.broadcaststatus_BroadcastStatusDetails_RSl-w {
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+}
+.broadcaststatus_BroadcastStatusLine_163_B {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.broadcaststatus_LiveText_1BxgJ {
+  text-transform: uppercase;
+}
+.broadcaststatus_Icon_3sx3e {
+  height: 20px;
+  width: 20px;
+}
+.broadcaststatus_Microphone_-eaXE.broadcaststatus_Active_1mbdO {
+  color: #de3618;
+}
+.broadcaststatus_Live_12DTg {
+  color: #969696;
+}
+.broadcaststatus_Live_12DTg.broadcaststatus_Active_1mbdO {
+  color: #de3618;
+}
+.broadcaststatus_Stats_231Y0 {
+  font-size: 12px;
+}
+.broadcaststatus_Icon_3sx3e.broadcaststatus_Requests_2mpTK svg {
+  fill: #969696;
+}
+.broadcaststatus_Icon_3sx3e.broadcaststatus_Requests_2mpTK svg line {
+  stroke: #969696;
 }
 
 /*# sourceMappingURL=sourcemaps\css\sp.css.map*/

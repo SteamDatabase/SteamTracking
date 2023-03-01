@@ -790,7 +790,7 @@
 "Broadcast_Upload_Result_11" "chybějící zvuk"
 "Broadcast_Upload_Result_12" "přenos je příliš zpožděn"
 
-"Steam_Settings_Browser"	"Internetový prohlížeč"
+"Steam_Settings_Browser"	"Webový prohlížeč"
 "Overlay_SettingsBrowserDesc" "Následující nastavení se vztahují k internetovému prohlížeči používanému v klientu služby Steam a ve hrách (resp. v překrytí služby Steam)."
 "Steam_SettingsBrowserDeleteAllData"	"Vymazat data prohlížeče"
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Vymazat v prohlížeči všechny soubory z mezipaměti, cookies a historii?"

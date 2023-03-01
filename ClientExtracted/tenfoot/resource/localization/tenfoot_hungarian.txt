@@ -710,7 +710,7 @@
 	"SettingsAbout_SteamPackageVersion"	"{s:package_version}"
 	"SettingsAbout_SteamAPI"			"Steam API"
 	"SettingsAbout_SteamAPIVersion"		"v{s:build_interface}"
-	"SettingsAbout_SystemInfo"			"Rendszer-információ"
+	"SettingsAbout_SystemInfo"			"Rendszerinformáció"
 	"SettingsAbout_CPUVendorLabel"		"CPU gyártó"
 	"SettingsAbout_CPUVendor"			"{s:cpu_vendor}"
 	"SettingsAbout_CPUSpeedLabel"		"CPU órajel"

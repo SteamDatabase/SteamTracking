@@ -1311,6 +1311,7 @@ Dit duurt niet langer dan een minuut."
 
 "Steam_PreallocateAppStatus"	"Schijfruimte toewijzen voor %s1..."
 "Steam_ValidateAppStatus"	"Bestaande bestanden aan het vinden voor %s1 ..."
+"Steam_VerifyingAppStatus"	"Geïnstalleerde bestanden verifiëren voor %s1 ..."
 
 "Steam_CDKeyCafe"			"Je kunt op dit account geen productsleutels registreren."
 
@@ -2328,7 +2329,7 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_InsertNextDisk_Info"		"Schijf %disk% plaatsen"
 
 "Steam_InstallingFromDisk"			"Schijf %disk%"
-"Steam_InstallingWithTimeRemaining"	"Wordt geïnstalleerd: %time% resterend ..."
+"Steam_InstallingWithTimeRemaining"	"Wordt geïnstalleerd: %s1 resterend ..."
 
 "Steam_InstallDownloadTime"			"Geschatte downloadtijd:"
 "Steam_InstallDownloadTime_Info"		"%time% bij %rate%"
@@ -4210,7 +4211,8 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_AppUpdateError_49"		"Steam-bestanden beschadigd"
 "Steam_AppUpdateError_50"		"inhoudsbestanden ontbreken"
 "Steam_AppUpdateError_51"		"Configuratie van com­pa­ti­bi­li­teitstool mislukt"
-
+"Steam_AppUpdateError_52"		"installatiepad ontkoppeld"
+"Steam_AppUpdateError_53"		"ongeldige installatieschijf"
 
 "steam_subnav_featured"		"Uitgelicht"
 "steam_subnav_news"			"Nieuws"
@@ -4842,11 +4844,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 
 "SteamUI_RunningConflictingSoftware" "Conflicterende software gedetecteerd"
 "SteamUI_RunningIncompatibleTcpService" "Er is een incompatibele versie van %incompatdll% (gerelateerd aan %incompatname%)\ngedetecteerd in het Steam-proces.\n\nWe stellen voor om deze software bij te werken of te verwijderen als je crashes\nof vertragingen van het netwerk ervaart terwijl je Steam of individuele spellen draait."
-
-"Steam_XboxDriverInstall_Title"		"Installatie van Xbox-stuurprogramma"
-"Steam_XboxDriverInstall_Success"	"Stuurprogramma is met succes geüpdated. Het wordt actief nadat je je computer opnieuw hebt opgestart."
-"Steam_XboxDriverInstall_ServiceFailure"	"Updaten van het stuurprogramma is mislukt. Gebruik je Steam als een gewone gebruiker en is Steam-service nog actief en up-to-date?"
-"Steam_XboxDriverInstall_Failure"	"Update van het stuurprogramma is mislukt, fout = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Nieuwe controllerfirmware beschikbaar"
 "Steam_DualSense_FirmwareUpdate_Text"	"Er is nieuwe firmware beschikbaar voor je %product%. Klik op onderstaande link om naar de Sony-firmwarepagina te gaan voor de update:"

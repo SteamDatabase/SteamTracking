@@ -1309,6 +1309,7 @@ Cela devrait prendre moins d'une minute."
 
 "Steam_PreallocateAppStatus"	"Attribution de l'espace disque pour %s1..."
 "Steam_ValidateAppStatus"	"Découverte des fichiers existants de %s1..."
+"Steam_VerifyingAppStatus"	"Vérification des fichiers installés pour %s1…"
 
 "Steam_CDKeyCafe"			"Impossible d'enregistrer des codes de produit sur ce compte."
 
@@ -2325,7 +2326,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_InsertNextDisk_Info"		"Insérez le disque %disk%"
 
 "Steam_InstallingFromDisk"			"Disque %disk%"
-"Steam_InstallingWithTimeRemaining"	"Installation : %time% restante(s)"
+"Steam_InstallingWithTimeRemaining"	"Installation… Temps restant : %s1"
 
 "Steam_InstallDownloadTime"			"Temps de téléchargement estimé :"
 "Steam_InstallDownloadTime_Info"		"%time% à %rate%"
@@ -4207,7 +4208,8 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_AppUpdateError_49"		"fichiers Steam corrompus"
 "Steam_AppUpdateError_50"		"fichiers de contenu manquants"
 "Steam_AppUpdateError_51"		"échec de la configuration de l'outil de compatibilité"
-
+"Steam_AppUpdateError_52"		"chemin d'installation démonté"
+"Steam_AppUpdateError_53"		"disque d'installation non valide"
 
 "steam_subnav_featured"		"À la une"
 "steam_subnav_news"			"Actualités"
@@ -4839,11 +4841,6 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "SteamUI_RunningConflictingSoftware" "Logiciel conflictuel détecté"
 "SteamUI_RunningIncompatibleTcpService" "Une version incompatible de %incompatdll% (associée au programme %incompatname%)\na été détectée dans le processus Steam.\n\nIl est recommandé de mettre à jour ou de désinstaller ce programme si vous constatez des crashs\nou un ralentissement sur le réseau lorsque vous utilisez Steam ou des jeux Steam."
-
-"Steam_XboxDriverInstall_Title"		"Installation du pilote Xbox"
-"Steam_XboxDriverInstall_Success"	"Le pilote a bien été mis à jour. Redémarrez votre ordinateur pour l'activer."
-"Steam_XboxDriverInstall_ServiceFailure"	"Échec de la mise à jour du pilote. Vérifiez que Steam est lancé pour un compte normal. Vérifiez également que le service Steam est en cours d'exécution et mis à jour."
-"Steam_XboxDriverInstall_Failure"	"Échec de la mise à jour du pilote (erreur : %error%)"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Nouveau microprogramme disponible pour votre manette"
 "Steam_DualSense_FirmwareUpdate_Text"	"Un nouveau microprogramme est disponible pour votre %product%. Veuillez cliquer sur le lien ci-dessous pour vous rendre sur la page de mise à jour du microprogramme Sony :"

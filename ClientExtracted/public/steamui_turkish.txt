@@ -1311,6 +1311,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 
 "Steam_PreallocateAppStatus"	"%s1 için depolama alanı ayrılıyor..."
 "Steam_ValidateAppStatus"	"%s1 için mevcut dosyalar aranıyor..."
+"Steam_VerifyingAppStatus"	"%s1 için yüklü dosyalar doğrulanıyor..."
 
 "Steam_CDKeyCafe"			"Ürün kodlarını bu hesaba kaydedemezsiniz."
 
@@ -2328,7 +2329,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_InsertNextDisk_Info"		"Lütfen %disk%. diski yerleştirin"
 
 "Steam_InstallingFromDisk"			"Disk %disk%"
-"Steam_InstallingWithTimeRemaining"	"Yükleniyor: %time% kaldı"
+"Steam_InstallingWithTimeRemaining"	"Yükleniyor: %s1 kaldı"
 
 "Steam_InstallDownloadTime"			"Tahmini indirme süresi:"
 "Steam_InstallDownloadTime_Info"		"%time% (%rate% hızında)"
@@ -4208,7 +4209,8 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_AppUpdateError_49"		"bozuk Steam dosyaları"
 "Steam_AppUpdateError_50"		"eksik içerik dosyaları"
 "Steam_AppUpdateError_51"		"uyumluluk aracı yapılandırma başarısız"
-
+"Steam_AppUpdateError_52"		"takılmamış yükleme yolu"
+"Steam_AppUpdateError_53"		"geçersiz yükleme diski"
 
 "steam_subnav_featured"		"Öne Çıkanlar"
 "steam_subnav_news"			"Haberler"
@@ -4841,11 +4843,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 
 "SteamUI_RunningConflictingSoftware" "Çakışan Yazılım Algılandı"
 "SteamUI_RunningIncompatibleTcpService" "%incompatdll% öğesinin (%incompatname% ile ilişkilidir) uyumsuz bir sürümü \nSteam işleminde tespit edildi.\n\nSteam veya oyun çalışırken çökme veya ağ bağlantısı yavaşlaması yaşadığınız\nbu yazılımı güncelleştirmenizi veya kaldırmanızı tavsiye ediyoruz."
-
-"Steam_XboxDriverInstall_Title"		"Xbox Sürücü Yükleme"
-"Steam_XboxDriverInstall_Success"	"Sürücü başarıyla güncellendi, bilgisayarınızı yeniden başlattığınızda etkinleşecek."
-"Steam_XboxDriverInstall_ServiceFailure"	"Sürücü güncellemesi başarısız oldu. Steam normal kullanıcı hesabıyla mı açık ve Steam hizmeti çalışır durumda ve güncel mi?"
-"Steam_XboxDriverInstall_Failure"	"Sürücü güncelleme başarısız, hata = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Yeni Kontrolcü Yazılımı Mevcut"
 "Steam_DualSense_FirmwareUpdate_Text"	"%product% için kullanılabilir yeni bir yazılım var. Sony aygıt yazılımı güncelleme sayfasına gitmek için aşağıdaki bağlantıya tıklayın:"

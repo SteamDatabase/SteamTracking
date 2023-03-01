@@ -1304,6 +1304,7 @@
 
 "Steam_PreallocateAppStatus"	"Lemezterület lefoglalása a(z) %s1 számára..."
 "Steam_ValidateAppStatus"	"%s1 létező fájljainak felderítése..."
+"Steam_VerifyingAppStatus"	"A(z) %s1 telepített fájljainak ellenőrzése..."
 
 "Steam_CDKeyCafe"			"Nem regisztrálhatsz termékkódokat ehhez a fiókhoz."
 
@@ -2250,8 +2251,8 @@
 "Steam_NoLongerOwnsGame_Title"	"Steam - %game%"
 "Steam_NoLongerOwnsGame_Info"		"Ez a játék már nem érhető el ingyenesen."
 
-"steam_menu_systeminfo"			"Rendszer-információk"
-"steam_systeminfo_title"			"Steam - Rendszer-információk"
+"steam_menu_systeminfo"			"Rendszerinformációk"
+"steam_systeminfo_title"			"Steam - Rendszerinformációk"
 "steam_systeminfo_surveylink"	"Hasonlítsd össze hardveredet más Steam felhasználókéval"
 
 "Steam_P2P"				"P2P"
@@ -2316,7 +2317,7 @@
 "Steam_InsertNextDisk_Info"		"Kérjük, tedd be a(z) %disk%. lemezt"
 
 "Steam_InstallingFromDisk"			"%disk%. lemez"
-"Steam_InstallingWithTimeRemaining"	"Telepítés: %time% van hátra"
+"Steam_InstallingWithTimeRemaining"	"Telepítés: %s1 van hátra"
 
 "Steam_InstallDownloadTime"			"Várható letöltési idő:"
 "Steam_InstallDownloadTime_Info"		"%time% %rate% esetén"
@@ -3463,7 +3464,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "SteamUI_SiteLicense_LockedDetail"	"Jelenleg nem érhető el licenc ehhez a termékhez. Ellenőrizd később\naz elérhetőséget, vagy értesítsd a helyi rendszergazdát."
 
 "SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Steam merevlemez-használat: %s1 MB"
-"SteamUI_ValveSurvey_GatheringSystemInformation"	"Rendszer-információk gyűjtése folyamatban..."
+"SteamUI_ValveSurvey_GatheringSystemInformation"	"Rendszerinformációk gyűjtése folyamatban..."
 
 "SteamUI_ValidateEmailDescriptionAlt" "E-mail-címed nincs hitelesítve.\nE-mail-címed Steamen történő hitelesítéséhez kattints a „Tovább”-ra.\nA hitelesített címet használjuk a fiókadataidon végzett változtatások megerősítésére, így csak és kizárólag te tudod megváltoztatni a titkos kérdést és a jelszót."
 "SteamUI_ValidateEmailDescription" "A „Következő” gombra kattintva hitelesítsd e-mail-címedet a Steamen.\nA hitelesített címmel hagyhatod jóvá a Steam fiókoddal kapcsolatos adatváltoztatásokat, így csak te változtathatod meg a titkos kérdést vagy a jelszót."
@@ -4182,7 +4183,8 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_AppUpdateError_49"		"hibás Steam fájlok"
 "Steam_AppUpdateError_50"		"hiányzó tartalomfájlok"
 "Steam_AppUpdateError_51"		"kompatibilitási eszköz beállítása sikertelen"
-
+"Steam_AppUpdateError_52"		"leválasztott telepítési útvonal"
+"Steam_AppUpdateError_53"		"érvénytelen telepítési lemez"
 
 "steam_subnav_featured"		"Kiemelt"
 "steam_subnav_news"			"Hírek"
@@ -4814,11 +4816,6 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 
 "SteamUI_RunningConflictingSoftware" "Ütköző szoftver észlelve"
 "SteamUI_RunningIncompatibleTcpService" "A(z) %incompatdll% (ami a(z) %incompatname% része)\ninkompatibilis változatát észleltük a Steam folyamatban.\n\nAjánljuk a szoftver frissítését vagy eltávolítását, ha összeomlásokat vagy\nhálózati lassulást tapasztalsz a Steam vagy egyes játékok futtatása közben."
-
-"Steam_XboxDriverInstall_Title"		"Xbox illesztőprogram telepítése"
-"Steam_XboxDriverInstall_Success"	"Az illesztőprogram sikeresen frissült, és a számítógéped újraindítása után aktív lesz."
-"Steam_XboxDriverInstall_ServiceFailure"	"Az illesztőprogram frissítése sikertelen. A Steam normál felhasználóként van futtatva és a Steam szolgáltatás fut és frissítve van?"
-"Steam_XboxDriverInstall_Failure"	"Sikertelen illesztőprogram-frissítés, hiba = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Új játékvezérlő firmware érhető el"
 "Steam_DualSense_FirmwareUpdate_Text"	"Új firmware érhető el a(z) %product% termékedhez. Kattints az alábbi hivatkozásra a Sony firmware-frissítési oldalának felkereséséhez:"

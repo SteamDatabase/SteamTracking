@@ -1316,6 +1316,7 @@ Vänligen skriv in SMS-koden nedan."
 
 "Steam_PreallocateAppStatus"	"Allokerar hårddiskutrymme för %s1 ..."
 "Steam_ValidateAppStatus"	"Upptäcker befintliga filer för %s1 ..."
+"Steam_VerifyingAppStatus"	"Verifierar installerade filer för %s1 ..."
 
 "Steam_CDKeyCafe"			"Du kan inte registrera produktkoder på det här kontot."
 
@@ -2332,7 +2333,7 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "Steam_InsertNextDisk_Info"		"Sätt in skivan %disk%"
 
 "Steam_InstallingFromDisk"			"Skivan %disk%"
-"Steam_InstallingWithTimeRemaining"	"Installerar: %time% återstår"
+"Steam_InstallingWithTimeRemaining"	"Installerar: %s1 återstår"
 
 "Steam_InstallDownloadTime"			"Beräknad nedladdningstid:"
 "Steam_InstallDownloadTime_Info"		"%time% vid %rate%"
@@ -4078,7 +4079,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "steam_inbox_gifts"	"%gifts% nya gåvor"
 "steam_inbox_commentnotification"	"1 ny kommentar"
 "steam_inbox_commentnotifications"	"%comments% nya kommentarer"
-"steam_inbox_offlinemessage"	"1 oläst chattmeddelande."
+"steam_inbox_offlinemessage"	"1 oläst chattmeddelande"
 "steam_inbox_offlinemessages"	"%offlinemessages% olästa chattmeddelanden"
 
 "SteamUI_ContentMgr_ManageInstalledApps" "Steam-biblioteksmappar"
@@ -4209,7 +4210,8 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_AppUpdateError_49"		"Skadade Steam-filer"
 "Steam_AppUpdateError_50"		"Innhehållsfiler saknas"
 "Steam_AppUpdateError_51"		"konfigurering av kompatibilitetsverktyg misslyckades"
-
+"Steam_AppUpdateError_52"		"omonterad installationssökväg"
+"Steam_AppUpdateError_53"		"ogiltig installationsdisk"
 
 "steam_subnav_featured"		"I fokus"
 "steam_subnav_news"			"Nyheter"
@@ -4842,11 +4844,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 
 "SteamUI_RunningConflictingSoftware" "Konflikt med programvara upptäckt"
 "SteamUI_RunningIncompatibleTcpService" "En inkompatibel version av %incompatdll% (relaterad till %incompatname%)\nhar upptäckts i Steam.\n\nVi föreslår att du uppdaterar eller avinstallerar detta program om du upplever krascher\neller långsamt nätverk är du kör Steam eller spel."
-
-"Steam_XboxDriverInstall_Title"		"Installation av Xbox-drivrutin"
-"Steam_XboxDriverInstall_Success"	"Drivrutinen har uppdaterats och blir aktiv när du startar om datorn."
-"Steam_XboxDriverInstall_ServiceFailure"	"Kunde inte uppdatera drivrutinen. Kör du Steam som en vanlig användare? Är Steam-tjänsten igång och uppdaterad?"
-"Steam_XboxDriverInstall_Failure"	"Kunde inte uppdatera drivrutin. Felmeddelande = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Ny kontrollprogramvara tillgänglig"
 "Steam_DualSense_FirmwareUpdate_Text"	"Det finns ny inbyggd programvara till din %product%. Klicka på länken nedan för att gå till Sonys sida för programvaruuppdateringar:"

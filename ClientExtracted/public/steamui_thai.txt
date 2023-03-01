@@ -1310,6 +1310,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 
 "Steam_PreallocateAppStatus"	"กำลังจัดสรรพื้นที่บนดิสก์สำหรับ %s1 ..."
 "Steam_ValidateAppStatus"	"กำลังสำรวจไฟล์ที่มีอยู่แล้วของ %s1 ..."
+"Steam_VerifyingAppStatus"	"กำลังตรวจสอบไฟล์ที่ติดตั้งแล้วสำหรับ %s1..."
 
 "Steam_CDKeyCafe"			"คุณไม่สามารถลงทะเบียนรหัสผลิตภัณฑ์บนบัญชีนี้ได้"
 
@@ -2327,7 +2328,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_InsertNextDisk_Info"		"กรุณาใส่ดิสก์แผ่นที่ %disk%"
 
 "Steam_InstallingFromDisk"			"ดิสก์ %disk%"
-"Steam_InstallingWithTimeRemaining"	"กำลังติดตั้ง: คงเหลือ %time%"
+"Steam_InstallingWithTimeRemaining"	"กำลังติดตั้ง: คงเหลือ %s1"
 
 "Steam_InstallDownloadTime"			"เวลาดาวน์โหลดโดยประมาณ:"
 "Steam_InstallDownloadTime_Info"		"%time% ที่ %rate%"
@@ -4204,7 +4205,8 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_AppUpdateError_49"		"ไฟล์บน Steam เสียหาย"
 "Steam_AppUpdateError_50"		"ไฟล์เนื้อหาสูญหาย"
 "Steam_AppUpdateError_51"		"การกำหนดค่าเครื่องมือความเข้ากันได้ไม่ประสบผลสำเร็จ"
-
+"Steam_AppUpdateError_52"		"ถอดการเชื่อมต่อตำแหน่งการติดตั้ง"
+"Steam_AppUpdateError_53"		"ดิสก์การติดตั้งไม่ถูกต้อง"
 
 "steam_subnav_featured"		"โดดเด่น"
 "steam_subnav_news"			"ข่าวสาร"
@@ -4836,11 +4838,6 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 
 "SteamUI_RunningConflictingSoftware" "ตรวจพบซอฟต์แวร์ที่ทำงานขัดแย้งกัน"
 "SteamUI_RunningIncompatibleTcpService" "เวอร์ชันที่เข้ากันไม่ได้ของ %incompatdll% (เกี่ยวข้องกับ %incompatname%) \nได้ถูกตรวจพบภายในโปรเซส Steam \n\nเราแนะนำให้อัปเดตหรือถอนการติดตั้งซอฟต์แวร์นี้ หากคุณประสบปัญหา \nเกีี่ยวกับการแครชหรือเครือข่ายช้าลงขณะกำลังใช้งาน Steam หรือขณะเล่นเกมอื่น ๆ"
-
-"Steam_XboxDriverInstall_Title"		"การติดตั้งไดรเวอร์ของ Xbox"
-"Steam_XboxDriverInstall_Success"	"ไดรเวอร์ได้รับการอัปเดตสำเร็จเรียบร้อยแล้ว และจะใช้งานได้หลังจากที่คุณรีสตาร์ทเครื่องคอมพิวเตอร์ของคุณ"
-"Steam_XboxDriverInstall_ServiceFailure"	"การอัปเดตไดรเวอร์ล้มเหลว Steam กำลังทำงานแบบผู้ใช้ธรรมดาและบริการ Steam ทำงานอยู่และเป็นเวอร์ชันล่าสุดแล้วใช่หรือไม่?"
-"Steam_XboxDriverInstall_Failure"	"การอัปเดตไดรเวอร์ล้มเหลว ข้อผิดพลาด = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"เฟิร์มแวร์ใหม่ของคอนโทรลเลอร์พร้อมใช้งานแล้ว"
 "Steam_DualSense_FirmwareUpdate_Text"	"เฟิร์มแวร์ใหม่สำหรับ %product% ของคุณพร้อมใช้แล้ว คลิกที่ลิงก์ด้านล่างเพื่อไปยังหน้าอัปเดตเฟิร์มแวร์ของ Sony:"

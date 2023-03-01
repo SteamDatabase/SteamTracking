@@ -433,7 +433,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_Status_ItemsComplete"	"%numcompl% trên %numtotal% đã hoàn thành"
 "Steam_Status_DownloadsTitle"		"Tải xuống"
 "Steam_Status_GoToDownloadsPage"		"Quản lý"
-"Steam_Status_PeerContentServer"		"Đang chuyển"
+"Steam_Status_PeerContentServer"		"Đang truyền"
 
 "Steam_Time_ShowMostRecent"			"Hiển thị những mục mới nhất"
 "Steam_Time_5Minutes"				"5 phút"
@@ -1307,6 +1307,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 
 "Steam_PreallocateAppStatus"	"Đang xác định chỗ trống trên ổ cứng cho %s1 ..."
 "Steam_ValidateAppStatus"	"Đang khám phá các file đã tồn tại cho %s1..."
+"Steam_VerifyingAppStatus"	"Đang kiểm tra lại dữ liệu file %s1 đã cài..."
 
 "Steam_CDKeyCafe"			"Bạn không thể đăng ký mã sản phẩm trên tài khoản này."
 
@@ -2325,7 +2326,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_InsertNextDisk_Info"		"Xin vui lòng chèn đĩa %disk%"
 
 "Steam_InstallingFromDisk"			"Đĩa %disk%"
-"Steam_InstallingWithTimeRemaining"	"Đang cài: còn %time%"
+"Steam_InstallingWithTimeRemaining"	"Đang cài: còn %s1"
 
 "Steam_InstallDownloadTime"			"Ước lượng thời gian tải về:"
 "Steam_InstallDownloadTime_Info"		"%time% tại %rate%"
@@ -4206,7 +4207,8 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_AppUpdateError_49"		"Tệp Steam bị hỏng"
 "Steam_AppUpdateError_50"		"thiếu tệp nội dung"
 "Steam_AppUpdateError_51"		"thiết lập công cụ tương thích thất bại"
-
+"Steam_AppUpdateError_52"		"tháo đường dẫn cài đặt"
+"Steam_AppUpdateError_53"		"ổ đĩa cài đặt không hợp lệ"
 
 "steam_subnav_featured"		"Đặc sắc"
 "steam_subnav_news"			"Tin tức"
@@ -4838,11 +4840,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "SteamUI_RunningConflictingSoftware" "Phát hiện phần mềm gây mâu thuẫn"
 "SteamUI_RunningIncompatibleTcpService" "Phiên bản không tương thích của %incompatdll% (thuộc về %incompatname%)\nđã được tìm thấy trong ứng dụng Steam.\n\nChúng tôi khuyên bạn nên cập nhật hoặc gỡ bỏ phần mềm này nếu bạn cảm thấy\nphần mềm tự động đóng hoặc kết nối bị chậm khi dùng Steam hoặc mở các trò chơi."
-
-"Steam_XboxDriverInstall_Title"		"Cài đặt driver Xbox"
-"Steam_XboxDriverInstall_Success"	"Cập nhật driver thành công, và sẽ kích hoạt sau khi bạn khởi động lại máy tính."
-"Steam_XboxDriverInstall_ServiceFailure"	"Cập nhật driver không thành công, Steam có đang được chạy dưới quyền người dùng bình thường và dịch vụ Steam có đang chạy với cập nhật hiện hành?"
-"Steam_XboxDriverInstall_Failure"	"Không thể cập nhật driver, lỗi = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Bản cập nhật firmware mới cho tay cầm đã sẵn sàng"
 "Steam_DualSense_FirmwareUpdate_Text"	"Đã có firmware mới cho %product%. Nhấp vào liên kết bên dưới để đến trang cập nhật firmware của Sony:"

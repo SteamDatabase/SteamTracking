@@ -67357,7 +67357,11 @@ object-assign
             /* binding */ PushToTalkInfo,
           /* harmony export */
         });
-        /* harmony import */ var _clientuitypes__WEBPACK_IMPORTED_MODULE_0__ =
+        /* harmony import */ var _clientenums__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            /*! ../clientenums */ "../../../web_src/shared/js/clientenums.ts"
+          );
+        /* harmony import */ var _clientuitypes__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
             /*! ./clientuitypes */ "../../../web_src/shared/js/clienttypes/clientuitypes.ts"
           );
@@ -67388,6 +67392,8 @@ object-assign
             /* binding */ EClientBetaState,
           /* harmony export */ EJoinServerError: () =>
             /* binding */ EJoinServerError,
+          /* harmony export */ EMatchMakingServerResponse: () =>
+            /* binding */ EMatchMakingServerResponse,
           /* harmony export */ ESteamUIWindowType: () =>
             /* binding */ ESteamUIWindowType,
           /* harmony export */ ESystemUISystemKey: () =>
@@ -67722,6 +67728,18 @@ object-assign
             (EJoinServerError["k_EJoinServerError_NotInitialized"] = 5)
           ] = "k_EJoinServerError_NotInitialized";
         })(EJoinServerError || (EJoinServerError = {}));
+        var EMatchMakingServerResponse;
+        (function (EMatchMakingServerResponse) {
+          EMatchMakingServerResponse[
+            (EMatchMakingServerResponse["k_EServerResponded"] = 0)
+          ] = "k_EServerResponded";
+          EMatchMakingServerResponse[
+            (EMatchMakingServerResponse["k_EServerFailedToRespond"] = 1)
+          ] = "k_EServerFailedToRespond";
+          EMatchMakingServerResponse[
+            (EMatchMakingServerResponse["k_ENoServersListedOnMasterServer"] = 2)
+          ] = "k_ENoServersListedOnMasterServer";
+        })(EMatchMakingServerResponse || (EMatchMakingServerResponse = {}));
 
         /***/
       },
@@ -68909,6 +68927,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ELoginUIStyle,
           /* harmony export */ ELogoPinnedPosition: () =>
             /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.ELogoPinnedPosition,
+          /* harmony export */ EMatchMakingServerResponse: () =>
+            /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.EMatchMakingServerResponse,
           /* harmony export */ EMusicPlayingRepeatStatus: () =>
             /* reexport safe */ _musictypes__WEBPACK_IMPORTED_MODULE_14__.EMusicPlayingRepeatStatus,
           /* harmony export */ ENetFakeLocalSystemState: () =>
@@ -71760,10 +71780,15 @@ object-assign
             "NoWindowShadow";
           EPopupCreationFlags[(EPopupCreationFlags["NoMinimize"] = 32768)] =
             "NoMinimize";
+          EPopupCreationFlags[(EPopupCreationFlags["PopUpMenu"] = 65536)] =
+            "PopUpMenu";
           EPopupCreationFlags[(EPopupCreationFlags["Overlay"] = 8712)] =
             "Overlay";
-          EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 25096)] =
+          EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 90632)] =
             "Notification";
+          EPopupCreationFlags[
+            (EPopupCreationFlags["PopupContextMenu"] = 65544)
+          ] = "PopupContextMenu";
         })(EPopupCreationFlags || (EPopupCreationFlags = {}));
         const BrowserContext = react__WEBPACK_IMPORTED_MODULE_1__.createContext(
           { ownerWindow: window }
@@ -72016,6 +72041,9 @@ object-assign
             this.m_strTitle = title;
             if (this.m_popup) this.m_popup.document.title = this.m_strTitle;
           }
+          get params() {
+            return this.m_rgParams;
+          }
           Focus(bForceToForeground = false) {
             if (
               this.m_popup &&
@@ -72053,10 +72081,16 @@ object-assign
             return this.BIsVisible() && this.m_popup.document.hasFocus();
           }
           OnFocusInternal() {
+            if (this.m_popup) {
+              this.m_popup.document.body.classList.add("WindowFocus");
+            }
             this.m_bFocused = true;
             this.OnFocus();
           }
           OnBlurInternal() {
+            if (this.m_popup) {
+              this.m_popup.document.body.classList.remove("WindowFocus");
+            }
             this.m_bFocused = false;
             this.OnBlur();
           }
@@ -72351,6 +72385,20 @@ object-assign
           BAnyPopupHasFocus() {
             for (const popup of this.m_mapPopups.values()) {
               if (popup.focused) {
+                return true;
+              }
+            }
+            return false;
+          }
+          BAnyMenuHasFocus() {
+            for (const popup of this.m_mapPopups.values()) {
+              if (
+                popup.focused &&
+                !!(
+                  popup.params.eCreationFlags &
+                  EPopupCreationFlags.NoTaskbarIcon
+                )
+              ) {
                 return true;
               }
             }
@@ -76760,6 +76808,7 @@ object-assign
           /* harmony export */ Check: () => /* binding */ Check,
           /* harmony export */ ChevronNoPadding: () =>
             /* binding */ ChevronNoPadding,
+          /* harmony export */ Circle: () => /* binding */ Circle,
           /* harmony export */ Clock: () => /* binding */ Clock,
           /* harmony export */ ClosedCaption: () => /* binding */ ClosedCaption,
           /* harmony export */ CloudDownload: () => /* binding */ CloudDownload,
@@ -76941,6 +76990,7 @@ object-assign
           /* harmony export */ Update: () => /* binding */ Update,
           /* harmony export */ Upgrade: () => /* binding */ Upgrade,
           /* harmony export */ User: () => /* binding */ User,
+          /* harmony export */ VACShield: () => /* binding */ VACShield,
           /* harmony export */ VR: () => /* binding */ VR,
           /* harmony export */ Video: () => /* binding */ Video,
           /* harmony export */ VideoPlay: () => /* binding */ VideoPlay,
@@ -77955,7 +78005,7 @@ object-assign
             Object.assign(
               {
                 xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 13 12",
+                viewBox: "0 0 12 12",
                 fill: "none",
               },
               props
@@ -77964,7 +78014,7 @@ object-assign
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
-              d: "M1.68848 0C1.13619 0 0.688477 0.447715 0.688477 1V11C0.688477 11.5523 1.13619 12 1.68848 12H11.6885C12.2408 12 12.6885 11.5523 12.6885 11V1C12.6885 0.447715 12.2408 0 11.6885 0H1.68848ZM6.68857 9.14281V7.97879C6.68857 7.48484 6.49291 7.01112 6.14462 6.66185C5.79634 6.31258 5.32397 6.11636 4.83143 6.11636C4.33888 6.11636 3.86651 6.31258 3.51823 6.66185C3.16995 7.01112 2.97428 7.48484 2.97428 7.97879V9.14281H6.68857ZM5.4118 5.24139C5.24001 5.3565 5.03804 5.41794 4.83143 5.41794C4.69416 5.41825 4.55818 5.39136 4.4313 5.33882C4.30442 5.28628 4.18914 5.20913 4.09207 5.11179C3.99501 5.01445 3.91807 4.89884 3.86568 4.77159C3.81329 4.64435 3.78648 4.50799 3.78678 4.37032C3.78678 4.16313 3.84805 3.96058 3.96284 3.7883C4.07762 3.61602 4.24078 3.48174 4.43166 3.40245C4.62254 3.32316 4.83259 3.30241 5.03523 3.34283C5.23787 3.38326 5.424 3.48303 5.5701 3.62955C5.7162 3.77606 5.81569 3.96273 5.856 4.16594C5.8963 4.36916 5.87562 4.5798 5.79655 4.77123C5.71748 4.96266 5.58359 5.12627 5.4118 5.24139ZM9.20914 5.77217C9.45326 5.86581 9.67493 6.01006 9.85964 6.19551C10.032 6.3686 10.1688 6.57406 10.262 6.80015C10.3552 7.02624 10.403 7.26853 10.4029 7.51318V8.6772H7.61714V7.97879C7.61894 7.39391 7.4361 6.82346 7.09482 6.34916C7.25797 6.14438 7.46239 5.97645 7.6947 5.85634C7.92701 5.73622 8.18199 5.66664 8.44296 5.65214C8.70393 5.63764 8.96501 5.67854 9.20914 5.77217ZM9.12608 4.77578C8.95429 4.89089 8.75232 4.95233 8.54571 4.95233C8.40844 4.95264 8.27246 4.92575 8.14558 4.87321C8.0187 4.82068 7.90342 4.74352 7.80636 4.64618C7.70929 4.54884 7.63235 4.43323 7.57996 4.30598C7.52758 4.17874 7.50076 4.04238 7.50107 3.90472C7.50107 3.69752 7.56234 3.49497 7.67712 3.32269C7.79191 3.15041 7.95506 3.01613 8.14594 2.93684C8.33683 2.85755 8.54687 2.8368 8.74951 2.87723C8.95215 2.91765 9.13829 3.01743 9.28439 3.16394C9.43048 3.31045 9.52997 3.49712 9.57028 3.70034C9.61059 3.90355 9.5899 4.11419 9.51084 4.30562C9.43177 4.49705 9.29788 4.66067 9.12608 4.77578Z",
+              d: "M1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H11C11.5523 12 12 11.5523 12 11V1C12 0.447715 11.5523 0 11 0H1ZM6.00009 9.14281V7.97879C6.00009 7.48484 5.80443 7.01112 5.45615 6.66185C5.10787 6.31258 4.63549 6.11636 4.14295 6.11636C3.65041 6.11636 3.17803 6.31258 2.82975 6.66185C2.48147 7.01112 2.28581 7.48484 2.28581 7.97879V9.14281H6.00009ZM4.72332 5.24139C4.55153 5.3565 4.34956 5.41794 4.14295 5.41794C4.00568 5.41825 3.8697 5.39136 3.74282 5.33882C3.61594 5.28628 3.50066 5.20913 3.40359 5.11179C3.30653 5.01445 3.22959 4.89884 3.1772 4.77159C3.12481 4.64435 3.098 4.50799 3.09831 4.37032C3.09831 4.16313 3.15957 3.96058 3.27436 3.7883C3.38915 3.61602 3.5523 3.48174 3.74318 3.40245C3.93407 3.32316 4.14411 3.30241 4.34675 3.34283C4.54939 3.38326 4.73553 3.48303 4.88162 3.62955C5.02772 3.77606 5.12721 3.96273 5.16752 4.16594C5.20783 4.36916 5.18714 4.5798 5.10807 4.77123C5.02901 4.96266 4.89511 5.12627 4.72332 5.24139ZM8.52066 5.77217C8.76478 5.86581 8.98645 6.01006 9.17116 6.19551C9.34357 6.3686 9.48028 6.57406 9.57349 6.80015C9.6667 7.02624 9.71457 7.26853 9.71438 7.51318V8.6772H6.92866V7.97879C6.93046 7.39391 6.74762 6.82346 6.40634 6.34916C6.56949 6.14438 6.77391 5.97645 7.00622 5.85634C7.23854 5.73622 7.49351 5.66664 7.75448 5.65214C8.01545 5.63764 8.27654 5.67854 8.52066 5.77217ZM8.43761 4.77578C8.26582 4.89089 8.06385 4.95233 7.85724 4.95233C7.71996 4.95264 7.58399 4.92575 7.45711 4.87321C7.33023 4.82068 7.21494 4.74352 7.11788 4.64618C7.02081 4.54884 6.94388 4.43323 6.89149 4.30598C6.8391 4.17874 6.81229 4.04238 6.81259 3.90472C6.81259 3.69752 6.87386 3.49497 6.98865 3.32269C7.10343 3.15041 7.26658 3.01613 7.45747 2.93684C7.64835 2.85755 7.85839 2.8368 8.06104 2.87723C8.26368 2.91765 8.44981 3.01743 8.59591 3.16394C8.74201 3.31045 8.8415 3.49712 8.88181 3.70034C8.92211 3.90355 8.90143 4.11419 8.82236 4.30562C8.74329 4.49705 8.6094 4.66067 8.43761 4.77578Z",
             })
           );
         }
@@ -85334,6 +85384,39 @@ object-assign
             )
           );
         }
+        function VACShield() {
+          // FIXME help
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            {
+              version: "1.1",
+              id: "Layer_1",
+              xmlns: "http://www.w3.org/2000/svg",
+              x: "0px",
+              y: "0px",
+              viewBox: "0 0 32 32",
+              enableBackground: "new 0 0 32 32",
+            },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              "g",
+              null,
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  fill: "white",
+                  d: "M19.39,8.13c-1.67,0-3.03,1.36-3.03,3.03c0,1.67,1.36,3.03,3.03,3.03c1.67,0,3.03-1.36,3.03-3.03\r\n\t\tC22.42,9.5,21.06,8.13,19.39,8.13z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  fill: "white",
+                  d: "M27.97,4.82c-4.73,0-8.86-1.62-11.34-4.45c-0.24-0.28-0.61-0.43-0.98-0.39c-0.37,0.03-0.7,0.24-0.89,0.55\r\n\t\tc-0.81,1.32-2.4,2.44-4.61,3.23C8.27,4.44,6.05,4.82,4.07,4.82c-0.64,0-1.16,0.52-1.16,1.16v14.2c0,1.19,0.39,2.55,1.13,3.93\r\n\t\tc0.69,1.29,1.68,2.58,2.84,3.71c2.64,2.57,5.87,4.09,8.85,4.15c0.07,0,0.14,0,0.2,0c3.02,0,6.29-1.43,9-3.96\r\n\t\tc1.23-1.14,2.26-2.45,3-3.77c0.78-1.41,1.2-2.82,1.2-4.06V5.99C29.14,5.35,28.61,4.82,27.97,4.82z M19.39,15.86\r\n\t\tc-1,0-1.92-0.3-2.7-0.83l-3.86,3.86l1.74,1.74l0.04,0.04l-0.04,0.04l-1.08,1.08l-0.04,0.04l-0.04-0.04l-1.74-1.74l-1.93,1.93\r\n\t\tl1.74,1.74l0.04,0.04l-0.04,0.04l-1.08,1.08l-0.04,0.04l-0.04-0.04l-2.86-2.86l-0.04-0.04l0.04-0.04l8.08-8.08\r\n\t\tc-0.53-0.77-0.83-1.7-0.83-2.7c0-2.58,2.11-4.69,4.69-4.69c2.58,0,4.69,2.11,4.69,4.69C24.08,13.75,21.97,15.86,19.39,15.86z",
+                }
+              )
+            )
+          );
+        }
         function Share(props) {
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
@@ -85599,6 +85682,34 @@ object-assign
               fill: "currentColor",
               d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 28.54L8.23001 18.77L11.77 15.23L15.5 19V8H20.5V19L24.23 15.27L27.77 18.81L18 28.54Z",
             })
+          );
+        }
+        function Circle(props) {
+          const { className } = props,
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
+              "className",
+            ]);
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                className: (0,
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
+                  "default"
+                ])(
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
+                    .Circke,
+                  className
+                ),
+              },
+              rest,
+              { width: "50", height: "50", viewBox: "0 0 50 50", fill: "none" }
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              "circle",
+              { fill: "currentColor", cx: "25", cy: "25", r: "25" }
+            )
           );
         }
 
@@ -86224,20 +86335,21 @@ object-assign
                 react__WEBPACK_IMPORTED_MODULE_0__.createElement(
                   "div",
                   { className: "title-bar-actions" },
-                  react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-                    "div",
-                    {
-                      className: "title-area-icon closeButton",
-                      onClick:
-                        (_a = this.props.onClose) !== null && _a !== void 0
-                          ? _a
-                          : fnClose,
-                    },
+                  !this.props.hideClose &&
                     react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-                      shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__.X_Line,
-                      null
-                    )
-                  ),
+                      "div",
+                      {
+                        className: "title-area-icon closeButton",
+                        onClick:
+                          (_a = this.props.onClose) !== null && _a !== void 0
+                            ? _a
+                            : fnClose,
+                      },
+                      react__WEBPACK_IMPORTED_MODULE_0__.createElement(
+                        shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__.X_Line,
+                        null
+                      )
+                    ),
                   !this.props.hideMinMax &&
                     react__WEBPACK_IMPORTED_MODULE_0__.createElement(
                       "div",
@@ -89647,6 +89759,8 @@ function TestLocalizeCalendarTime()
             /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useInterval,
           /* harmony export */ useIsUnmounted: () =>
             /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useIsUnmounted,
+          /* harmony export */ useLazyMemoizedValue: () =>
+            /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useLazyMemoizedValue,
           /* harmony export */ useMemoWithDependencyDebugging: () =>
             /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useMemoWithDependencyDebugging,
           /* harmony export */ useModalState: () =>
@@ -89748,6 +89862,8 @@ function TestLocalizeCalendarTime()
           /* harmony export */ useInterval: () => /* binding */ useInterval,
           /* harmony export */ useIsUnmounted: () =>
             /* binding */ useIsUnmounted,
+          /* harmony export */ useLazyMemoizedValue: () =>
+            /* binding */ useLazyMemoizedValue,
           /* harmony export */ useMemoWithDependencyDebugging: () =>
             /* binding */ useMemoWithDependencyDebugging,
           /* harmony export */ useModalState: () => /* binding */ useModalState,
@@ -90360,6 +90476,18 @@ function TestLocalizeCalendarTime()
           });
           return strID;
         }
+        /**
+         * Constructs a value once, using the passed-in constructor.  If the
+         * constructor changes, it will be invoked again on next access.
+         */
+        function useLazyMemoizedValue(fnConstruct) {
+          const refValue = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
+          return react__WEBPACK_IMPORTED_MODULE_0__.useCallback(() => {
+            if (!refValue.current || refValue.current.factory != fnConstruct)
+              refValue.current = { value: fnConstruct(), factory: fnConstruct };
+            return refValue.current.value;
+          }, [fnConstruct]);
+        }
 
         /***/
       },
@@ -90857,6 +90985,8 @@ function TestLocalizeCalendarTime()
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ BConfigContextInGamepadUI: () =>
+            /* binding */ BConfigContextInGamepadUI,
           /* harmony export */ BIsInPresentationMode: () =>
             /* binding */ BIsInPresentationMode,
           /* harmony export */ BroadcastConfig: () =>
@@ -90978,6 +91108,11 @@ function TestLocalizeCalendarTime()
         function useOnDeck() {
           return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
             .Config.ON_DECK;
+        }
+        function BConfigContextInGamepadUI(configContext) {
+          return configContext === null || configContext === void 0
+            ? void 0
+            : configContext.IN_GAMEPADUI;
         }
         const CONFIG_ELEMENT_ID = "webui_config";
         // Helper method to determine if we are in presentation mode. Only supported where we can read a cookie.
@@ -92945,4 +93080,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=5d4918fce296b15e3f04
+//# sourceMappingURL=friends.js.map?contenthash=96313c170073c1e3025e

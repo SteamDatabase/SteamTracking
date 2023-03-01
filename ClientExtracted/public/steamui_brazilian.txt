@@ -1307,6 +1307,7 @@ A sua assinatura está registrada na seguinte conta Steam: %accountname%. No fut
 
 "Steam_PreallocateAppStatus"	"Alocando espaço em disco para %s1 ..."
 "Steam_ValidateAppStatus"	"Descobrindo arquivos existentes para %s1 ..."
+"Steam_VerifyingAppStatus"	"Verificando os arquivos instalados para %s1..."
 
 "Steam_CDKeyCafe"			"Você está impossibilitado de registrar códigos de produto nesta conta."
 
@@ -2324,7 +2325,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_InsertNextDisk_Info"		"Insira o disco %disk%"
 
 "Steam_InstallingFromDisk"			"Disco %disk%"
-"Steam_InstallingWithTimeRemaining"	"Instalando: %time% restantes"
+"Steam_InstallingWithTimeRemaining"	"Instalando: %s1 restantes"
 
 "Steam_InstallDownloadTime"			"Tempo estimado de download:"
 "Steam_InstallDownloadTime_Info"		"%time% a %rate%"
@@ -4201,7 +4202,8 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_AppUpdateError_49"		"arquivos do Steam corrompidos"
 "Steam_AppUpdateError_50"		"arquivos de conteúdo ausentes"
 "Steam_AppUpdateError_51"		"falha na configuração da ferramenta de compatibilidade"
-
+"Steam_AppUpdateError_52"		"caminho de instalação não montado"
+"Steam_AppUpdateError_53"		"disco de instalação inválido"
 
 "steam_subnav_featured"		"Destaques"
 "steam_subnav_news"			"Notícias"
@@ -4833,11 +4835,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "SteamUI_RunningConflictingSoftware" "Software conflitante detectado"
 "SteamUI_RunningIncompatibleTcpService" "Uma versão incompatível de %incompatdll% (relacionado a %incompatname%)\nfoi detectada dentro do processo Steam.\n\nSugerimos que atualize ou desinstale esse software caso esteja enfrentando erros\nou lentidão na rede enquanto usa o Steam ou jogos."
-
-"Steam_XboxDriverInstall_Title"		"Instalação do driver de Xbox"
-"Steam_XboxDriverInstall_Success"	"Driver atualizado com sucesso; ele será ativado após reiniciar o computador."
-"Steam_XboxDriverInstall_ServiceFailure"	"Falha ao atualizar o driver. O Steam está rodando sem privilégios de administrador e o serviço do Steam está rodando e atualizado?"
-"Steam_XboxDriverInstall_Failure"	"Falha ao atualizar o driver. Erro = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Novo firmware disponível para o controle"
 "Steam_DualSense_FirmwareUpdate_Text"	"Novo firmware disponível para: \"%product%\". Clique no link abaixo para acessar a página de atualização de firmware da Sony."

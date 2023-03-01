@@ -949,7 +949,7 @@
     "FriendSettings_HideCategorizedFriends": "Приховати друзів із категорій у списках «У мережі/не в мережі»",
     "FriendSettings_AlwaysUse24HourClock": "Завжди показувати часові мітки у 24-годинному форматі",
     "FriendSettings_DisableEmbedInlining": "Не вбудовувати зображення та інші медіа-файли",
-    "FriendSettings_SignInToFriends": "Перехід до списку друзів із запуском клієнта Steam",
+    "FriendSettings_SignInToFriends": "З’являтися «У мережі» із запуском клієнта Steam",
     "FriendSettings_ExampleFriend": "Приклад друга",
     "FriendSettings_ExampleNickname": "Псевдонім",
     "FriendSettings_DisableSpellcheck": "Вимкнути перевірку орфографії для повідомлень",

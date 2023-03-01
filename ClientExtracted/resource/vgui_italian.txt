@@ -221,7 +221,7 @@
 "vgui_HTMLViewSource" "Visualizza sorgente..."
 "vgui_HTMLCopyLink" "Copia Collegamento"
 "vgui_HTMLSearchMatch" "%findactive% di %findcount%"
-"vgui_HTMLSearchThisPage" "Cerca in questa pagina"
+"vgui_HTMLSearchThisPage" "Cerca"
 "vgui_choosedirectoryname"	"Scegli il nome della cartella"
 "vgui_HTMLCloseDevTools"	"Chiudi gli strumenti per gli sviluppatori"
 "vgui_HTMLOpenDevTools"		"Apri gli strumenti per gli sviluppatori"

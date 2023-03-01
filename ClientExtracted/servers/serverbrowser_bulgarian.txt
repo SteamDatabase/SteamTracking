@@ -86,7 +86,7 @@
 "ServerBrowser_FilterDescNoPassword"		"няма парола"
 "ServerBrowser_NoLanServers"			"Няма пуснати сървъри в локалната Ви мрежа."
 "ServerBrowser_NoFavoriteServers"		"Понастоящем не разполагате с избрани любими сървъри."
-"ServerBrowser_NoFriendsServers"		"Понастоящем никой от приятелите Ви не е пуснел игра."
+"ServerBrowser_NoFriendsServers"		"Понастоящем никой от приятелите Ви не е пуснaл игра."
 "ServerBrowser_NoInternetGames"			"Няма видими интернет игри, които да отговорят на настройките Ви за филтриране."
 "ServerBrowser_NoInternetGamesResponded"	"Никакви интернет игри не откликнаха на запитването."
 "ServerBrowser_MasterServerNotResponsive"	"Не може да се осъществи контакт с главния игрален сървър за набавяне на списъка със съответните такива."

@@ -1249,8 +1249,9 @@
 	"SteamNotification_HelpRequest_Title": "A help request is updated",
 	"SteamNotification_HelpRequest_Body": "Ticket %1$s",
 
-	"SteamNotification_asyncgame_action": "New turn waiting",
-	"SteamNotification_asyncgame_done": "A game has finished",
+	"SteamNotification_AsyncGame_Title": "Game Session",
+	"SteamNotification_AsyncGame_Action": "New turn waiting",
+	"SteamNotification_AsyncGame_Done": "A game has finished",
 
 	"Emoticon_Search": "Search Emoticons",
 	"AddonPicker_RecentlyUsed": "Recently Used",
@@ -1885,6 +1886,9 @@
 	"SalePage_WatchForDrop_Hours_Developer": "Watch the stream for %1$s hours and get item drops from the developer when the event is over!",
 	"SalePage_WatchForDrop_Hours_CreatorNamed": "Watch the stream for %1$s hours and get item drops from %2$s when the event is over!",
 	"SalePage_WatchForDrop_LearnMore": "Learn more about the drops here.",
+
+	"SalePresented_By": "This third-party event is presented by %1$s",
+	"SalePresented_By_Multi": "This third-party event is presented by %1$s and %2$s",
 
 	"ContentHub_Recommendation_Curator": "Recommended by %1$s",
 	"ContentHub_Recommendation_Curators": "Recommended by curators you follow",
@@ -2593,17 +2597,38 @@
 
 	"selectimage_select_file": "Select file",
 
+	"ServerBrowser_Servers": "Servers",
+	"ServerBrowser_IPAddress": "IP Address",
+	"ServerBrowser_Game": "Game",
+	"ServerBrowser_Players": "Players",
+	"ServerBrowser_Map": "Map",
+	"ServerBrowser_Latency": "Latency",
+
 	"ServerBrowser_Internet": "Internet",
 	"ServerBrowser_Favorites": "Favorites",
 	"ServerBrowser_LAN": "LAN",
 	"ServerBrowser_Friends": "Friends",
+	"ServerBrowser_History": "History",
 
 	"ServerBrowser_ServerNotFull": "Server not full",
 	"ServerBrowser_HasUsersPlaying": "Has users playing",
 	"ServerBrowser_NoPassword": "Is not password protected",
+	"ServerBrowser_NotResponding": "< not responding >",
 
-	"ServerBrowser_Game": "Game",
+	"ServerBrowser_FilterDescLatency": "latency",
+	"ServerBrowser_FilterDescNotFull": "is not full",
+	"ServerBrowser_FilterDescNotEmpty": "is not empty",
+	"ServerBrowser_FilterDescNoPassword": "has no password",
+	"ServerBrowser_NoLanServers": "There are no servers running on your local network.",
+	"ServerBrowser_NoFavoriteServers": "You currently have no favorite servers selected.",
+	"ServerBrowser_NoFriendsServers": "None of your friends are currently playing a game.",
+	"ServerBrowser_NoInternetGames": "There are no internet games visible that pass your filter settings.",
+	"ServerBrowser_NoInternetGamesResponded": "No internet games responded to the query.",
+	"ServerBrowser_MasterServerNotResponsive": "Could not contact master game server to retrieve server list.",
+	"ServerBrowser_MasterServerHasNoServersListed": "There are no internet games listed on the master server that pass your filter settings.",
+
 	"ServerBrowser_ChangeFilters": "Change Filters",
+	"ServerBrowser_Search": "Search",
 	"ServerBrowser_Stop": "Stop",
 	"ServerBrowser_Refresh": "Refresh",
 	"ServerBrowser_Connect": "Connect",

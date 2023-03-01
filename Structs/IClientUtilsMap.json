@@ -259,7 +259,7 @@
         },
         {
             "name": "SetOverlayBrowserInfo",
-            "argc": "8"
+            "argc": "9"
         },
         {
             "name": "ClearOverlayBrowserInfo",

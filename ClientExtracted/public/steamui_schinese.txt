@@ -1309,6 +1309,7 @@
 
 "Steam_PreallocateAppStatus"	"正在给 %s1 分配磁盘空间 ..."
 "Steam_ValidateAppStatus"	"正在查找 %s1 的现存文件..."
+"Steam_VerifyingAppStatus"	"正在验证 %s1 的安装文件…"
 
 "Steam_CDKeyCafe"			"您不能使用此帐户注册产品序列号。"
 
@@ -2326,7 +2327,7 @@
 "Steam_InsertNextDisk_Info"		"请插入光盘 %disk%"
 
 "Steam_InstallingFromDisk"			"光盘 %disk%"
-"Steam_InstallingWithTimeRemaining"	"正在安装：剩余 %time%"
+"Steam_InstallingWithTimeRemaining"	"正在安装：剩余 %s1"
 
 "Steam_InstallDownloadTime"			"预计下载时间："
 "Steam_InstallDownloadTime_Info"		"%time%，速度 %rate%"
@@ -3460,11 +3461,11 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_ServerBrowserPingRateDefault"	"自动（%PingsPerMin%）"
 
 "Steam_TextFilterSettingLabel"									"聊天过滤"
-"Steam_TextFilterStatus_Enabled"								"当前设置为过滤强烈不雅内容和诽谤字眼"
-"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"当前设置为过滤来自除好友外所有人的强烈不雅内容和诽谤字眼"
-"Steam_TextFilterStatus_EnabledAllowProfanity"					"当前设置为允许强烈不雅内容，但过滤诽谤字眼"
-"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"当前设置为允许强烈不雅内容，但过滤来自除好友外所有人的诽谤字眼"
-"Steam_TextFilterStatus_Disabled"								"当前设置为允许强烈不雅内容和诽谤字眼"
+"Steam_TextFilterStatus_Enabled"								"当前设置为过滤强烈脏话和侮辱性文字"
+"Steam_TextFilterStatus_Enabled_IgnoreFriends"					"当前设置为过滤来自除好友外所有人的强烈脏话和污辱性文字"
+"Steam_TextFilterStatus_EnabledAllowProfanity"					"当前设置为允许强烈脏话，但过滤侮辱性文字"
+"Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends"	"当前设置为允许强烈脏话，但过滤来自除好友外所有人的污辱性文字"
+"Steam_TextFilterStatus_Disabled"								"当前设置为允许强烈脏话和污辱性文字"
 "Steam_TextFilterSettingURL"									"更改聊天过滤偏好"
 
 "Steam_SettingsInGameScreenshotFolder"	"截图文件夹"
@@ -4203,7 +4204,8 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_AppUpdateError_49"		"Steam 文件已损坏"
 "Steam_AppUpdateError_50"		"缺失内容文件"
 "Steam_AppUpdateError_51"		"兼容工具配置失败"
-
+"Steam_AppUpdateError_52"		"安装路径已卸载"
+"Steam_AppUpdateError_53"		"安装磁盘无效"
 
 "steam_subnav_featured"		"精选"
 "steam_subnav_news"			"新闻"
@@ -4835,11 +4837,6 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "SteamUI_RunningConflictingSoftware" "检测到冲突软件"
 "SteamUI_RunningIncompatibleTcpService" "在 Steam 进程中检测到 %incompatdll% （与 %incompatname% 相关）\n 的不兼容版本。\n\n 如果您在运行 Steam 或单个游戏时，遭遇崩溃或网络速度缓慢，我们建议更新或卸载此软件。"
-
-"Steam_XboxDriverInstall_Title"		"Xbox 驱动安装"
-"Steam_XboxDriverInstall_Success"	"驱动已成功更新，将会在重启电脑后激活。"
-"Steam_XboxDriverInstall_ServiceFailure"	"驱动更新失败，Steam 是否在作为普通用户运行？Steam 服务是否在运行且为最新？"
-"Steam_XboxDriverInstall_Failure"	"驱动更新失败，错误 = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"新控制器固件可用"
 "Steam_DualSense_FirmwareUpdate_Text"	"%product%有新固件可用。点击下方链接前往索尼固件更新页面："

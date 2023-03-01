@@ -523,7 +523,7 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "đã tải xong"
 
-"Friends_PeerUploadNotification_Info" "Đang chuyển file trò chơi đến"
+"Friends_PeerUploadNotification_Info" "Đang truyền file trò chơi đến"
 
 "Friends_SteamInputActionSetChangedTitle"	"Bộ hành động tay cầm"
 "Friends_SteamInputActionSetChanged"	"%action_set%"

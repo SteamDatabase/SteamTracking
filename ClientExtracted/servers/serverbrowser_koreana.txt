@@ -87,10 +87,10 @@
 "ServerBrowser_NoLanServers"			"로컬 네트워크에 실행 중인 서버가 없습니다."
 "ServerBrowser_NoFavoriteServers"		"즐겨찾기 서버가 없습니다."
 "ServerBrowser_NoFriendsServers"		"게임을 실행 중인 친구가 없습니다."
-"ServerBrowser_NoInternetGames"			"선택한 필터 설정에 맞는 인터넷 게임을 찾을 수 없습니다."
-"ServerBrowser_NoInternetGamesResponded"	"쿼리에 응답하는 인터넷 게임이 없습니다."
+"ServerBrowser_NoInternetGames"			"선택한 필터 설정에 맞는 온라인 게임을 찾을 수 없습니다."
+"ServerBrowser_NoInternetGamesResponded"	"쿼리에 응답하는 온라인 게임이 없습니다."
 "ServerBrowser_MasterServerNotResponsive"	"마스터 게임 서버에 연결할 수 없어 서버 목록을 가져오지 못했습니다."
-"ServerBrowser_MasterServerHasNoServersListed"	"마스터 서버에 사용자의 필터 설정에 맞는 인터넷 게임이 없습니다."
+"ServerBrowser_MasterServerHasNoServersListed"	"마스터 서버에 사용자의 필터 설정에 맞는 온라인 게임이 없습니다."
 "ServerBrowser_Refresh"				"새로고침"
 "ServerBrowser_RefreshAll"			"새로 받기"
 "ServerBrowser_RefreshQuick"			"업데이트"
@@ -118,7 +118,7 @@
 "ServerBrowser_RemoveServerFromHistory"		"기록에서 서버 제거"
 "ServerBrowser_LastPlayed"			"최근 플레이한 서버"
 
-"ServerBrowser_OfflineMode" 			"Steam이 현재 오프라인 모드입니다. 인터넷 게임을 플레이하려면 인터넷에 연결하고\nSteam을 다시 시작해야 합니다."
+"ServerBrowser_OfflineMode" 			"Steam이 현재 오프라인 모드입니다. 온라인으로 게임을 플레이하려면 인터넷을 연결하고\nSteam을 다시 시작해야 합니다."
 
 "ServerBrowser_ConnectToServer"		"서버에 연결"
 "ServerBrowser_ViewServerInfo"		"서버 정보 보기"

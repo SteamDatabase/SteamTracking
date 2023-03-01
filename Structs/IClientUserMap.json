@@ -2,7 +2,7 @@
     "name": "IClientUserMap",
     "functions": [ 
         {
-            "name": "Unknown_5406832",
+            "name": "Unknown_5405264",
             "argc": "0"
         },
         {
@@ -192,6 +192,10 @@
         {
             "name": "ResetConnectionPriority",
             "argc": "2"
+        },
+        {
+            "name": "GetDesiredNetQOSLevel",
+            "argc": "1"
         },
         {
             "name": "BHasCachedCredentials",

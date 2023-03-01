@@ -1309,6 +1309,7 @@ Tämä kestää alle minuutin."
 
 "Steam_PreallocateAppStatus"	"Varataan levytilaa kohteelle %s1 ..."
 "Steam_ValidateAppStatus"	"Etsitään olemassaolevia tiedostoja kohteelle %s1 ..."
+"Steam_VerifyingAppStatus"	"Tarkistetaan asennettuja tiedostoja pelille %s1..."
 
 "Steam_CDKeyCafe"			"Et voi rekisteröidä tuotetunnuksia tällä tilillä."
 
@@ -2325,7 +2326,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_InsertNextDisk_Info"		"Aseta levy %disk%"
 
 "Steam_InstallingFromDisk"			"Levy %disk%"
-"Steam_InstallingWithTimeRemaining"	"Asennetaan: %time% jäljellä"
+"Steam_InstallingWithTimeRemaining"	"Asennetaan: %s1 jäljellä"
 
 "Steam_InstallDownloadTime"			"Arvioitu latausaika:"
 "Steam_InstallDownloadTime_Info"		"%time% %rate% nopeudella"
@@ -4205,7 +4206,8 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_AppUpdateError_49"		"vioittuneet Steam-tiedostot"
 "Steam_AppUpdateError_50"		"puuttuvia sisältötiedostoja"
 "Steam_AppUpdateError_51"		"yhteensopivuustyökalun määritys epäonnistui"
-
+"Steam_AppUpdateError_52"		"poistettu asennuspolku"
+"Steam_AppUpdateError_53"		"viallinen asennuslevy"
 
 "steam_subnav_featured"		"Esittelyssä"
 "steam_subnav_news"			"Uutiset"
@@ -4838,11 +4840,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 
 "SteamUI_RunningConflictingSoftware" "Ohjelmistoristiriita havaittu"
 "SteamUI_RunningIncompatibleTcpService" "Steamin prosessissa on tunnistettu yhteensopimaton\n%incompatdll% -versio (liittyy ohjelmaan %incompatname%).\n\nSuosittelemme päivittämään tämän ohjelman tai poistamaan sen asennuksen,\njos Steam tai yksittäiset pelit kaatuvat tai koet verkkoyhteyden hidastumista niitä käyttäessäsi."
-
-"Steam_XboxDriverInstall_Title"		"Xbox-ajurin asennus"
-"Steam_XboxDriverInstall_Success"	"Ajuri päivitetty ja käytössä, kun tietokone käynnistetään uudelleen."
-"Steam_XboxDriverInstall_ServiceFailure"	"Ajurin päivitys epäonnistui. Käytätkö Steamiä normaalina käyttäjänä? Onko Steam-palvelu käytössä ja ajan tasalla?"
-"Steam_XboxDriverInstall_Failure"	"Ajurin päivitys epäonnistui. Virhe: %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Uusi ohjainohjelmisto saatavilla"
 "Steam_DualSense_FirmwareUpdate_Text"	"Uusi ohjelmistopäivitys on saatavilla seuraavalle laitteelle: %product%. Klikkaa alla olevaa linkkiä siirtyäksesi Sonyn ohjelmistopäivityssivulle:"

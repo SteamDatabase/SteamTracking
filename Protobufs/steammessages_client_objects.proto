@@ -285,11 +285,11 @@ message CMsgSystemPerfSettingsGlobal {
 	optional bool is_advanced_settings_enabled = 7;
 	optional bool allow_external_display_refresh_control = 8;
 	optional bool is_hdr_enabled = 9;
-	optional bool force_hdr_wide_gammut_for_sdr = 10;
 	optional bool force_hdr_10pq_output_debug = 11;
 	optional .EHDRToneMapOperator hdr_on_sdr_tonemap_operator = 12 [default = k_EHDRToneMapOperator_Invalid];
 	optional bool is_hdr_debug_heatmap_enabled = 13;
 	optional bool debug_force_hdr_support = 14;
+	optional bool force_hdr_wide_gammut_for_sdr = 15 [default = true];
 }
 
 message CMsgSystemPerfSettingsPerApp {

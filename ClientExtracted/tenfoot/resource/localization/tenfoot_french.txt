@@ -4761,7 +4761,7 @@ applications multimédias. Vous devriez consulter le manuel de vos applications 
 	"DownloadRegion_ro_bucharest"   "Roumanie"
 	"DownloadRegion_ca_toronto"     "Canada – Toronto"
 	"DownloadRegion_nz_auckland"    "Nouvelle-Zélande"
-	"DownloadRegion_br_sao_paulo"   "Brésil – São Paulo"
+	"DownloadRegion_br_sao_paulo"   "Brésil : São Paulo"
 	"DownloadRegion_za_johannesburg""Afrique du Sud – Johannesbourg"
 	"DownloadRegion_iceland"        "Islande"
 	"DownloadRegion_israel"         "Israël"

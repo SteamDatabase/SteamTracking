@@ -508,7 +508,7 @@
 "Steam_Interface"				"Interfață"
 "Steam_EnableGPUWebViews_Option"		"Activează randarea accelerată pentru placa video în vizualizările web (necesită restartare)"
 "Steam_SmoothScrollWebViews_Option"		"Activează derularea lină pentru vizualizarea web (necesită repornire)"
-"Steam_SetJumplistOptions"		"Setări Listă Rapidă"
+"Steam_SetJumplistOptions"		"Preferințe pentru bara de activități"
 "Steam_ShowOnlineStatusOptions"	"Alege opțiunile online care vor fi afișate"
 "Steam_ShowDestinationOptions"	"Alege destinațiile care vor fi afișate"
 "Steam_MustRestartToTakeEffect"			"Această setare nu va intra în vigoare decât după\nce repornești Steam."
@@ -1307,6 +1307,7 @@ Te rugăm să reintroduci parola dorită."
 
 "Steam_PreallocateAppStatus"	"Se alocă spațiu pe disc pentru %s1 ..."
 "Steam_ValidateAppStatus"	"Se descoperă fișiere existente pentru %s1 ..."
+"Steam_VerifyingAppStatus"	"Se verifică fișierele instalate pentru %s1..."
 
 "Steam_CDKeyCafe"			"Nu poți înregistra coduri de activare pentru produse pe acest cont."
 
@@ -2319,7 +2320,7 @@ Te rugăm să reintroduci parola dorită."
 "Steam_InsertNextDisk_Info"		"Te rugăm să introduci discul %disk%"
 
 "Steam_InstallingFromDisk"			"Discul %disk%"
-"Steam_InstallingWithTimeRemaining"	"Se instalează: %time% rămas"
+"Steam_InstallingWithTimeRemaining"	"Se instalează. Timp rămas: %s1."
 
 "Steam_InstallDownloadTime"			"Timp estimat de transfer:"
 "Steam_InstallDownloadTime_Info"		"%time% la %rate%"
@@ -4196,7 +4197,8 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "Steam_AppUpdateError_49"		"Fișierele Steam sunt corupte"
 "Steam_AppUpdateError_50"		"Fișierele de conținut lipsesc"
 "Steam_AppUpdateError_51"		"nu s-a reușit configurarea instrumentului de compatibilitate"
-
+"Steam_AppUpdateError_52"		"cale de instalare nemontată"
+"Steam_AppUpdateError_53"		"disc de instalare nevalid"
 
 "steam_subnav_featured"		"Deosebite"
 "steam_subnav_news"			"Știri"
@@ -4829,11 +4831,6 @@ Artiști"
 
 "SteamUI_RunningConflictingSoftware" "A fost detectat un software care cauzează un conflict"
 "SteamUI_RunningIncompatibleTcpService" "O versiune incompatibilă a %incompatdll% (în legătură cu %incompatname%)\na fost detectată în procesul Steam.\n\nSugerăm să actualizezi sau să dezinstalezi acest software dacă ai parte de căderi\nsau încetiniri ale rețelei în timp ce rulezi Steam sau jocuri individuale."
-
-"Steam_XboxDriverInstall_Title"		"Instalarea driverului Xbox"
-"Steam_XboxDriverInstall_Success"	"Driverul a fost actualizat cu succes și va fi activ după repornirea calculatorului."
-"Steam_XboxDriverInstall_ServiceFailure"	"Actualizarea driverului nu a reușit. Verifică dacă Steam rulează pentru un cont obișnuit de utilizator și dacă serviciul Steam funcționează și este actualizat."
-"Steam_XboxDriverInstall_Failure"	"Actualizarea driverului nu a reușit. Eroare = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Este disponibil un firmware nou pentru controler"
 "Steam_DualSense_FirmwareUpdate_Text"	"Este disponibil un nou firmware pentru %product%. Apasă linkul de mai jos pentru a accesa pagina Sony cu actualizarea de firmware:"

@@ -19,7 +19,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-@f
+8f
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -944,7 +944,8 @@ CHTMLController::RunFrame - IPC Client
 CHTMLController::RunFrame - Dispatch commands
 CreateResponse: id:%u handle:%u
 unexpected BrowserCreateResponse for unknown browser 0x%x
-HTML_MSG_FUNC eHTMLCommands_BrowserReady
+PopupHTMLWindow: idx:%u handle:%u
+BrowserReady: handle:%u
 HTML_MSG_FUNC eHTMLCommands_StartRequest
 HTML_MSG_FUNC eHTMLCommands_URLChanged
 HTML_MSG_FUNC eHTMLCommands_LoadedRequest
@@ -2362,18 +2363,15 @@ sc_schinese
 @
 
 
-v
-
 @
-7
-Ic
-l
-s
-;
+C
+e
+
 
 
 
 0
+
 0
 
 
@@ -2392,6 +2390,8 @@ D
 
 
 
+
+
 @
 Hc
 Hc
@@ -2423,6 +2423,7 @@ IcE
 IcE
 @
 @
+k
 V
 =
 =
@@ -2448,7 +2449,9 @@ M9e
 ?
 ?
 ?
+B
 
+Ic
 @
 @
 @

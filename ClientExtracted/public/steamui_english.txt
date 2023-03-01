@@ -431,6 +431,7 @@ This should take less than a minute."
 "Steam_Status_OfflineMode"					"Offline Mode"
 "Steam_Status_NoConnection"					"No Connection"
 "Steam_Status_OneItemDownloading" 	"Downloading "
+"Steam_Status_OneItemTransferring" 	"Transferring "
 "Steam_Status_DownloadsPaused" 	"Downloads Paused "
 "Steam_Status_OneItemPaused" 				"1 Item Queued "
 "Steam_Status_OneItemComplete"			"1 Item Complete "
@@ -439,7 +440,7 @@ This should take less than a minute."
 "Steam_Status_ItemsComplete"	"%numcompl% of %numtotal% Items Complete "
 "Steam_Status_DownloadsTitle"		"Downloads"
 "Steam_Status_GoToDownloadsPage"		"Manage"
-"Steam_Status_PeerContentServer"		"Transferring"
+"Steam_Status_PeerContentServer"		"Hosting Network Transfer"
 
 "Steam_Time_ShowMostRecent"			"Show most recent"
 "Steam_Time_5Minutes"				"5 minutes"
@@ -4857,6 +4858,11 @@ Set a category for these games to help you find them quickly and organize your L
 
 "SteamUI_RunningConflictingSoftware" "Conflicting Software Detected"
 "SteamUI_RunningIncompatibleTcpService" "An incompatible version of %incompatdll% (related to %incompatname%)\nhas been detected inside of the Steam process.\n\nWe suggest updating or uninstalling this software if you experience crashes\nor network slowdowns while running Steam or individual games."
+
+"Steam_XboxDriverInstall_Title"		"Xbox Driver Installation"
+"Steam_XboxDriverInstall_Success"	"Driver successfully updated, and will be active after you restart your computer."
+"Steam_XboxDriverInstall_ServiceFailure"	"Driver update failed, is Steam running as a normal user and is the Steam service running and up to date?"
+"Steam_XboxDriverInstall_Failure"	"Driver update failed, error = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"New Controller Firmware Available"
 "Steam_DualSense_FirmwareUpdate_Text"	"There is new firmware available for your %product%. Click the link below to go to the Sony firmware update page:"

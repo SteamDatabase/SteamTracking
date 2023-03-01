@@ -1310,6 +1310,7 @@ Tato operace zabere jenom okamžik."
 
 "Steam_PreallocateAppStatus"	"Přiřazování místa na disku pro hru %s1 ..."
 "Steam_ValidateAppStatus"	"Hledání stávajících souborů hry %s1..."
+"Steam_VerifyingAppStatus"	"Ověřování nainstalovaných souborů hry %s1..."
 
 "Steam_CDKeyCafe"			"Na tomto účtu nemůžete aktivovat kódy produktů."
 
@@ -2327,7 +2328,7 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_InsertNextDisk_Info"		"Vložte disk %disk%"
 
 "Steam_InstallingFromDisk"			"Disk %disk%"
-"Steam_InstallingWithTimeRemaining"	"Instalování: zbývá %time%"
+"Steam_InstallingWithTimeRemaining"	"Instalování: zbývá %s1"
 
 "Steam_InstallDownloadTime"			"Odhadovaná délka stahování:"
 "Steam_InstallDownloadTime_Info"		"%time% při rychlosti %rate%"
@@ -4210,7 +4211,8 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_AppUpdateError_49"		"poškozené soubory klienta služby Steam"
 "Steam_AppUpdateError_50"		"chybí soubory s obsahem"
 "Steam_AppUpdateError_51"		"nepodařilo se nakonfigurovat nástroj pro kompatibilitu"
-
+"Steam_AppUpdateError_52"		"odpojená instalační cesta"
+"Steam_AppUpdateError_53"		"neplatný instalační disk"
 
 "steam_subnav_featured"		"Hlavní stránka"
 "steam_subnav_news"			"Novinky"
@@ -4842,11 +4844,6 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 
 "SteamUI_RunningConflictingSoftware" "Byl zjištěn konfliktní software"
 "SteamUI_RunningIncompatibleTcpService" "V procesu klienta služby Steam byla zjištěna nekompatibilní verze \nknihovny %incompatdll% (související se softwarem %incompatname%). \n\nPokud se při používání klienta služby Steam nebo hraní her \npotýkáte s pády nebo chybami připojení, doporučujeme aktualizovat či odinstalovat tento software."
-
-"Steam_XboxDriverInstall_Title"		"Instalace rozšíření ovladače Xbox"
-"Steam_XboxDriverInstall_Success"	"Rozšíření bylo úspěšně aktualizováno a bude aktivní po restartu počítače."
-"Steam_XboxDriverInstall_ServiceFailure"	"Aktualizace rozšíření se nezdařila. Instalace rozšíření se nezdařila. Je spuštěn aktualizovaný klient služby Steam a jste v něm přihlášeni?"
-"Steam_XboxDriverInstall_Failure"	"Aktualizace rozšíření se nezdařila, chyba = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Pro ovladač je dostupný nový firmware"
 "Steam_DualSense_FirmwareUpdate_Text"	"Pro Váš ovladač %product% je k dispozici nový firmware. Kliknutím na odkaz níže přejdete na stránky společnosti Sony:"

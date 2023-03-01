@@ -67,6 +67,7 @@ message CMsgClientSettings {
 	optional int32 default_ping_rate = 4010 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_readonly) = true, (setting_description) = "Computed default (automatic) server ping rate based on network speed"];
 	optional int32 server_ping_rate = 4011 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 steam_networking_share_ip = 4012 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional string web_browser_home = 4013 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool smooth_scroll_webviews = 5000 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\SmoothScrollWebViews", (setting_default_bool) = true];
 	optional bool enable_gpu_accelerated_webviews = 5001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_hardware_video_decoding = 5003 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -87,6 +88,15 @@ message CMsgClientSettings {
 	optional bool enable_shader_background_processing = 8001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional uint64 shader_precached_size = 8002 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_readonly) = true];
 	optional bool needs_steam_service_repair = 8003 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_readonly) = true];
+	optional int32 download_peer_content = 8004 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool download_rate_bits_per_s = 8005 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool restrict_auto_updates = 8006 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 restrict_auto_updates_start = 8007 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 restrict_auto_updates_end = 8008 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 download_region = 8009 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool download_while_app_running = 8010 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool download_throttle_while_streaming = 8011 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 download_throttle_rate = 8012 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool cloud_enabled = 10000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_screenshot_manager = 10001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "Software\\Valve\\Steam\\ShowScreenshotManager"];
 	optional int32 music_volume = 11000 [(setting_store) = k_EClientSettingStore_CustomFunc];

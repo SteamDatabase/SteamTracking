@@ -4759,7 +4759,7 @@
 	"DownloadRegion_ro_bucharest"   "Romania"
 	"DownloadRegion_ca_toronto"     "Canada - Toronto"
 	"DownloadRegion_nz_auckland"    "New Zealand"
-	"DownloadRegion_br_sao_paulo"   "Brazil - Sao Paulo"
+	"DownloadRegion_br_sao_paulo"   "Brazil - São Paulo"
 	"DownloadRegion_za_johannesburg""Nam Phi - Johannesburg"
 	"DownloadRegion_iceland"        "Iceland"
 	"DownloadRegion_israel"         "Israel"

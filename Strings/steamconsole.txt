@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+`o
+`o
 __stubs
 __TEXT
 __stub_helper
@@ -265,7 +267,9 @@ Set the store URL
 -help
 Set the help/support URL
 /
+help
 %s/
+login
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Missing String for %s (%d)
 Unknown
@@ -360,7 +364,6 @@ ERROR! Timed out waiting for password check.
 @NoPromptForPassword
 anonymous
 see 'login'
-login
 <username> [<password>] [<Steam guard code>] - login to Steam
 set_steam_guard_code
 <code> - authorize this computer by adding the Steam Guard email code
@@ -574,7 +577,6 @@ set_var
 <name> <value>- Set the value of a Cvar
 quit
 Stops Steam client console
-help
 Show help information
 exit
 runscript
@@ -1313,7 +1315,6 @@ Ic
 =
 @
 =*.*
-t
 @
 @
 0

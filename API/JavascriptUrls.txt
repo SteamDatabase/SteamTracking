@@ -2533,7 +2533,6 @@ https://www.dota2.com/risinggale
 https://www.dota2.com/theonetrueking
 https://www.example.com
 https://www.facebook.com/dota2/
-https://www.google.com
 https://www.google.com/
 https://www.instagram.com/dota2
 https://www.netflix.com/

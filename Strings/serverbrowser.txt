@@ -2,8 +2,8 @@
 __TEXT
 __text
 __TEXT
-^
-^
+@^
+@^
 __stubs
 __TEXT
 __stub_helper
@@ -3845,7 +3845,8 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-=&
+'
+'
 j
 j
 j
@@ -3864,6 +3865,7 @@ p
 0
 p
 0
+&
 p
 0
 p
@@ -3878,11 +3880,14 @@ j
 j
 j
 j
+&
+&
+&
 0
-t%
 p
 0
 j
+b%
 j
 j
 j
@@ -3955,11 +3960,12 @@ M9e
 0
 @
 @
+_
 
 
 d
+%
 A+M
-
 j
 j
 j
@@ -4201,8 +4207,10 @@ d
 =*.*
 =
 @
+}
 @
 @
+i
 @
 @
 @

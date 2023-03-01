@@ -298,6 +298,15 @@ button.DialogButton::-moz-focus-inner {
 .Destructive .ModalPosition_TopBar {
   background: linear-gradient(to right, #c44848, #c44848);
 }
+.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
+  opacity: 0;
+}
 .ModalDialogPopup .PopupFullWindow > .ModalPosition,
 .ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {
   max-width: none;
@@ -2138,6 +2147,42 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   margin-top: 0px;
   display: none;
 }
+.DesktopUI .contextmenu_contextMenu_LQkrb {
+  box-shadow: 0 10px 32px 0px #000000ab;
+  background: #3d4450;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k {
+  padding: 8px 18px;
+  font-size: 13px;
+  color: #dcdedf;
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+  position: relative;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k:first-child {
+  border-top: none;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k:hover,
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.contextmenu_active_1KPWU {
+  background: #dcdedf;
+  color: #3d4450;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.disabled {
+  background: none;
+  color: #67707b;
+  cursor: default;
+  pointer-events: none;
+}
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.disabled:hover {
+  background: none;
+  color: #67707b;
+  cursor: default;
+}
 .contextmenu_PopoutSubMenu_IpTgn {
   position: relative;
   width: 100%;
@@ -3105,6 +3150,9 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_FieldLeadIcon_OKYIj {
   margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .gamepaddialog_FieldLeadIcon_OKYIj svg {
   height: 20px;
@@ -13114,6 +13162,9 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 }
 .controllerconfiguratormapping_FieldLeadIcon_2DiD3 {
   margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .controllerconfiguratormapping_FieldLeadIcon_2DiD3 svg {
   height: 20px;
@@ -18644,6 +18695,18 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 .salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA
   .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_grKiy
   .salepreviewwidgets_CapsuleBottomBar_6IVLn
+  .salepreviewwidgets_PlayNowButton_PEl6X,
+.salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA
+  .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_grKiy
+  .salepreviewwidgets_CapsuleBottomBar_6IVLn
+  .salepreviewwidgets_AddToLibraryButton_3Sy6v {
+  cursor: pointer;
+  height: fit-content;
+  padding: 6px 12px;
+}
+.salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA
+  .salepreviewwidgets_StoreSaleWidgetCrossCenterRight_grKiy
+  .salepreviewwidgets_CapsuleBottomBar_6IVLn
   .salepreviewwidgets_CapsulePlatform_3vzWb
   img,
 .salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA
@@ -21981,6 +22044,29 @@ html.responsive.touch .ContentHubSalePage {
 .BasicUI .partnersaledisplay_SaleBroadcastCtn_kBxKM {
   display: none;
 }
+.partnersaledisplay_PresenterDisclaimer_2DKML {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: auto;
+  margin-top: 74px;
+  margin-bottom: -74px;
+  text-align: center;
+  padding: 4px 32px;
+  max-width: 940px;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 1px 1px 3px #000;
+  z-index: 2;
+  cursor: default;
+}
+.partnersaledisplay_PresenterDisclaimer_2DKML
+  .partnersaledisplay_PresenterLabel_2DHK7 {
+  color: #fff;
+  font-weight: bold;
+}
+.partnersaledisplay_PresenterDisclaimer_2DKML
+  .partnersaledisplay_PresenterLabel_2DHK7:hover {
+  text-decoration: underline;
+}
 .partnersaledisplay_SaleOuterContainer_3FwA4 {
   display: flex;
   flex-direction: column;
@@ -22765,23 +22851,23 @@ div.creatorhomeembed_SocialContainer_1MvXz {
 .loyaltyrewarditemembed_Ctn_2di0m {
   width: 100px;
 }
-.VODPlayer_BroadcastCtn_KL2t9 {
+.vodplayer_BroadcastCtn_3YzMi {
   position: relative;
   margin: 0 auto;
   max-width: 940px;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .videoContainer {
+.vodplayer_BroadcastCtn_3YzMi .videoContainer {
   height: unset;
   width: unset;
   display: block;
   position: relative;
   padding-bottom: 56.25%;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .BroadcastPlaceholderImg {
+.vodplayer_BroadcastCtn_3YzMi .BroadcastPlaceholderImg {
   position: absolute;
   width: 100%;
 }
-.VODPlayer_BroadcastCtn_KL2t9 .videoSrc {
+.vodplayer_BroadcastCtn_3YzMi .videoSrc {
   width: 100%;
   height: auto;
   border-left: none;
@@ -28173,10 +28259,9 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
   display: flex;
 }
 .library_Container_3xRRJ {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 }
 .library_Container_3xRRJ.library_IsResizingLeftList_2ZP8e {
   cursor: ew-resize !important;
@@ -28222,7 +28307,6 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
 }
 .library_MainPanel_3BFcm {
   flex-grow: 1;
-  height: 100%;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -28467,6 +28551,62 @@ div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
   top: 0;
   bottom: 0;
   z-index: 1400;
+}
+.DesktopUI .library_ContextMenuAction_Z5iAX:hover {
+  color: #fff;
+}
+.DesktopUI .library_ContextMenuAction_Z5iAX.Stream,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Connect,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Launch,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PlayMusic,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Play {
+  background: linear-gradient(-45deg, #236c39 0%, #59bf40 70%);
+}
+.DesktopUI .library_ContextMenuAction_Z5iAX.Stream:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Stream:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Connect:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Connect:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Launch:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Launch:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PlayMusic:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PlayMusic:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Play:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Play:focus {
+  background: linear-gradient(-45deg, #59bf40 0%, #5be33a 70%);
+}
+.DesktopUI .library_ContextMenuAction_Z5iAX.Download,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Update,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PreLoad,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Resume,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Pause,
+.DesktopUI .library_ContextMenuAction_Z5iAX.BorrowApp,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Stop,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Cancel,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Install,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PurchaseApp {
+  background: linear-gradient(-45deg, #0056d6 8%, #1a9fff 90%);
+}
+.DesktopUI .library_ContextMenuAction_Z5iAX.Download:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Download:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Update:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Update:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PreLoad:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PreLoad:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Resume:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Resume:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Pause:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Pause:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.BorrowApp:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.BorrowApp:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Stop:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Stop:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Cancel:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Cancel:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Install:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.Install:focus,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PurchaseApp:hover,
+.DesktopUI .library_ContextMenuAction_Z5iAX.PurchaseApp:focus {
+  background: linear-gradient(-45deg, #1a9fff 8%, #00bbff 90%);
 }
 @keyframes activateproductdialog_ItemFocusAnim-darkerGrey-nocolor_3monw {
   from {
@@ -28815,6 +28955,20 @@ div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
   display: flex;
   flex-direction: row;
   gap: 4px;
+}
+.settings_SettingsDialogButton_3epr8.DesktopUI,
+.DesktopUI .settings_SettingsDialogButton_3epr8 {
+  color: hotpink;
+  background-color: #ff0;
+}
+.settings_SettingsDialogFatButton_UqEiV.DesktopUI,
+.DesktopUI .settings_SettingsDialogFatButton_UqEiV {
+  color: hotpink;
+  background-color: green;
+}
+.settings_SettingsDialogSubHeader_2rK4Y.DesktopUI,
+.DesktopUI .settings_SettingsDialogSubHeader_2rK4Y {
+  color: hotpink;
 }
 .bluetoothsettings_NotConnectedLabel_31Z4e {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -39811,7 +39965,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   bottom: initial;
 }
 .appportrait_Draggable_1pwP4.appportrait_Soundtrack_3Lu_5
-  :not(.appportrait_InDownloads_3J3TT).appportrait_LibraryItemBox_WYgDg {
+  :not(.appportrait_InDownloads_3J3TT):not(.appportrait_SoundtrackCollection_cooZd).appportrait_LibraryItemBox_WYgDg {
   height: 66.666666%;
   margin-top: 25%;
 }
@@ -44294,7 +44448,7 @@ div.NarrowRightPanel
 .soundtrackcontrols_ControlBlock_3DLyr .soundtrackcontrols_Controls_2U3M1 {
   flex: 1;
   flex-direction: row;
-  gap: 14px;
+  gap: 20px;
   display: flex;
   align-items: center;
   max-width: 400px;
@@ -44329,6 +44483,8 @@ div.NarrowRightPanel
   align-items: center;
   flex: 1;
   gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 12px;
 }
 .soundtrackcontrols_ControlBlock_3DLyr
   .soundtrackcontrols_VolumeControl_1AJ4u.gpfocuswithin {
@@ -44337,8 +44493,8 @@ div.NarrowRightPanel
 .soundtrackcontrols_ControlBlock_3DLyr
   .soundtrackcontrols_VolumeControl_1AJ4u
   .GamepadSliderIcon {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   margin-right: 0;
 }
 .soundtrackcontrols_ControlBlock_3DLyr
@@ -44353,6 +44509,12 @@ div.NarrowRightPanel
   input {
   flex: 1;
 }
+.soundtrackcontrols_ControlBlock_3DLyr
+  .soundtrackcontrols_gamepadslider_2xqKl
+  .soundtrackcontrols_SliderHandle_khQR5 {
+  height: 16px;
+  width: 16px;
+}
 .soundtrackcontrols_ControlBlock_3DLyr button.DialogButton,
 .soundtrackcontrols_ControlBlock_3DLyr button.DialogButton:enabled {
   min-width: 10px;
@@ -44360,6 +44522,7 @@ div.NarrowRightPanel
   background: none;
 }
 button.soundtrackcontrols_IconButton_1iFnR {
+  all: initial;
   flex: 1;
   background: transparent;
 }
@@ -44369,6 +44532,9 @@ button.soundtrackcontrols_IconButton_1iFnR.soundtrackcontrols_Large_Upr_V {
 button.soundtrackcontrols_IconButton_1iFnR svg path {
   stroke: #67707b;
   fill: #67707b;
+}
+button.soundtrackcontrols_IconButton_1iFnR.soundtrackcontrols_Active_h782P {
+  background: none;
 }
 button.soundtrackcontrols_IconButton_1iFnR.soundtrackcontrols_Active_h782P
   svg
@@ -44400,6 +44566,7 @@ button.soundtrackcontrols_IconButton_1iFnR.gpfocus {
 .soundtrackcontrols_TopBarIcon_BkoG1:hover,
 .soundtrackcontrols_Icon_229M1:hover {
   background: none;
+  box-shadow: none;
 }
 .soundtrackcontrols_TopBarIcon_BkoG1:hover svg path,
 .soundtrackcontrols_Icon_229M1:hover svg path {
@@ -44413,12 +44580,16 @@ button.soundtrackcontrols_IconButton_1iFnR.gpfocus {
   min-height: 206px;
   padding: 12px;
 }
+.soundtrackcontrols_ContextMenu_20v4M .soundtrackcontrols_Controls_2U3M1 {
+  gap: 30px;
+}
 .soundtrackcontrols_CurrentTrackContainer_2JNXb {
   display: flex;
   flex-direction: row;
   flex: 0;
   padding: 6px;
   gap: 6px;
+  align-items: center;
 }
 .soundtrackcontrols_CurrentTrackContainer_2JNXb .soundtrackcontrols_Art_2YNlq {
   width: 64px;
@@ -44442,12 +44613,13 @@ button.soundtrackcontrols_IconButton_1iFnR.gpfocus {
 .soundtrackcontrols_CurrentTrackContainer_2JNXb
   .soundtrackcontrols_Details_faBTT
   .soundtrackcontrols_SoundtrackName_I1Aqd {
-  font-size: 14pt;
+  font-size: 12pt;
 }
 .soundtrackcontrols_CurrentTrackContainer_2JNXb
   .soundtrackcontrols_Details_faBTT
   .soundtrackcontrols_TrackName_2mM3t {
   font-size: 12pt;
+  color: #fff;
 }
 .soundtrackcontrols_QuickAccess_3_y7M,
 .soundtrackcontrols_Overlay_cq_KB {
@@ -44475,7 +44647,6 @@ button.soundtrackcontrols_IconButton_1iFnR.gpfocus {
   display: flex;
   flex-direction: column;
   padding-left: 4px;
-  padding-top: 12px;
 }
 .soundtrackcontrols_Details_faBTT .soundtrackcontrols_Back_13oc1 {
   display: flex;
