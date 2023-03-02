@@ -21844,23 +21844,26 @@
         );
       }
       function ne(e) {
-        var t, n, a, i;
-        const { def: r, stats: l, bActiveOptIn: s } = e,
-          o = c.v.Get().BHasUnpublishedChagnes(r.pageid),
-          p =
-            (null === (t = null == l ? void 0 : l[r.pageid]) || void 0 === t
+        var t, n, a, i, r;
+        const { def: l, stats: s, bActiveOptIn: o } = e,
+          p = c.v.Get().BHasUnpublishedChagnes(l.pageid),
+          _ =
+            (null === (t = null == s ? void 0 : s[l.pageid]) || void 0 === t
               ? void 0
               : t.time_updated) || 0,
-          _ = r.sale_optin_enabled,
-          v = r.event_title.english;
+          v = l.sale_optin_enabled,
+          S =
+            (null === (n = l.event_title) || void 0 === n
+              ? void 0
+              : n.english) || "No Name Assigned";
         return d.createElement(
           "div",
           {
-            key: r.pageid,
+            key: l.pageid,
             className: (0, D.Z)(
               A().OptInAdminRow,
               I().TileContainer,
-              Boolean(_) ? A().OptinEnabled : ""
+              Boolean(v) ? A().OptinEnabled : ""
             ),
           },
           d.createElement(
@@ -21869,9 +21872,9 @@
             d.createElement(
               "div",
               { className: I().EventName },
-              Boolean(v) && v,
+              Boolean(S) && S,
               " ",
-              d.createElement("span", null, "(", r.pageid, ")")
+              d.createElement("span", null, "(", l.pageid, ")")
             ),
             d.createElement(
               "div",
@@ -21880,7 +21883,7 @@
                 "span",
                 { className: I().DateAndTime },
                 d.createElement(h.H6, {
-                  dateAndTime: r.event_start_date,
+                  dateAndTime: l.event_start_date,
                   bSingleLine: !0,
                   bOnlyDate: !0,
                 })
@@ -21891,7 +21894,7 @@
                 { className: I().DateAndTime },
                 "To ",
                 d.createElement(h.H6, {
-                  dateAndTime: r.event_end_date,
+                  dateAndTime: l.event_end_date,
                   bSingleLine: !0,
                   bOnlyDate: !0,
                 })
@@ -21908,10 +21911,10 @@
                 "div",
                 { className: I().TopStatsCtn },
                 Boolean(
-                  null === (n = null == l ? void 0 : l[r.pageid]) ||
-                    void 0 === n
+                  null === (a = null == s ? void 0 : s[l.pageid]) ||
+                    void 0 === a
                     ? void 0
-                    : n.count_eligible
+                    : a.count_eligible
                 ) &&
                   d.createElement(
                     "div",
@@ -21919,7 +21922,7 @@
                     d.createElement(
                       "div",
                       { className: I().BigNumber },
-                      l[r.pageid].count_eligible.toLocaleString()
+                      s[l.pageid].count_eligible.toLocaleString()
                     ),
                     d.createElement(
                       "span",
@@ -21932,10 +21935,10 @@
                     )
                   ),
                 Boolean(
-                  null === (a = null == l ? void 0 : l[r.pageid]) ||
-                    void 0 === a
+                  null === (i = null == s ? void 0 : s[l.pageid]) ||
+                    void 0 === i
                     ? void 0
-                    : a.count_invited
+                    : i.count_invited
                 ) &&
                   d.createElement(
                     "div",
@@ -21943,7 +21946,7 @@
                     d.createElement(
                       "div",
                       { className: I().BigNumber },
-                      l[r.pageid].count_invited.toLocaleString()
+                      s[l.pageid].count_invited.toLocaleString()
                     ),
                     d.createElement(
                       "span",
@@ -21955,14 +21958,14 @@
                       "Open Invitation"
                     )
                   ),
-                Boolean(null == l ? void 0 : l[r.pageid]) &&
+                Boolean(null == s ? void 0 : s[l.pageid]) &&
                   d.createElement(
                     "div",
                     { className: I().FeaturedApps },
                     d.createElement(
                       "div",
                       { className: (0, D.Z)(I().BigNumber, I().Highlight) },
-                      l[r.pageid].count_opted_in.toLocaleString()
+                      s[l.pageid].count_opted_in.toLocaleString()
                     ),
                     d.createElement(
                       "span",
@@ -21978,7 +21981,7 @@
                           href:
                             b.De.PARTNER_BASE_URL +
                             "optin/admin/edit/" +
-                            r.pageid +
+                            l.pageid +
                             "?tab=manage",
                           className: (0, D.Z)(I().BrowseLink),
                         },
@@ -21987,14 +21990,14 @@
                       ")"
                     )
                   ),
-                Boolean(null == l ? void 0 : l[r.pageid]) &&
+                Boolean(null == s ? void 0 : s[l.pageid]) &&
                   d.createElement(
                     "div",
                     { className: I().FeaturedApps },
                     d.createElement(
                       "div",
                       { className: I().BigNumber },
-                      l[r.pageid].count_opted_out.toLocaleString()
+                      s[l.pageid].count_opted_out.toLocaleString()
                     ),
                     d.createElement(
                       "div",
@@ -22003,10 +22006,10 @@
                     )
                   ),
                 Boolean(
-                  null === (i = null == l ? void 0 : l[r.pageid]) ||
-                    void 0 === i
+                  null === (r = null == s ? void 0 : s[l.pageid]) ||
+                    void 0 === r
                     ? void 0
-                    : i.count_featured
+                    : r.count_featured
                 ) &&
                   d.createElement(
                     "div",
@@ -22014,7 +22017,7 @@
                     d.createElement(
                       "div",
                       { className: I().BigNumber },
-                      l[r.pageid].count_featured.toLocaleString()
+                      s[l.pageid].count_featured.toLocaleString()
                     ),
                     d.createElement(
                       "span",
@@ -22030,14 +22033,14 @@
               d.createElement(
                 "div",
                 { className: I().StatusCtn },
-                Boolean(null == l ? void 0 : l[r.pageid]) &&
+                Boolean(null == s ? void 0 : s[l.pageid]) &&
                   d.createElement(
                     "div",
                     { className: A().StatRefresh },
                     "Stats refreshed:",
-                    d.createElement(h.H6, { dateAndTime: p, bSingleLine: !0 })
+                    d.createElement(h.H6, { dateAndTime: _, bSingleLine: !0 })
                   ),
-                o &&
+                p &&
                   d.createElement(
                     "div",
                     { className: I().PendingChanges },
@@ -22051,19 +22054,19 @@
               d.createElement(
                 m.rU,
                 {
-                  to: br.OptinAdminEdit(r.pageid),
+                  to: br.OptinAdminEdit(l.pageid),
                   className: (0, D.Z)(g().Button, g().Primary),
                 },
                 "Edit Opt-In Definition"
               ),
-              Boolean(s) &&
+              Boolean(o) &&
                 d.createElement(
                   "a",
                   {
                     href:
                       b.De.PARTNER_BASE_URL +
                       "optin" +
-                      br.OptInAppReview(r.pageid),
+                      br.OptInAppReview(l.pageid),
                     className: (0, D.Z)(g().Button),
                     target: "_blank",
                   },
@@ -22075,8 +22078,8 @@
                   onClick: (e) =>
                     (0, E.AM)(
                       d.createElement($, {
-                        def: r,
-                        stats: null == l ? void 0 : l[r.pageid],
+                        def: l,
+                        stats: null == s ? void 0 : s[l.pageid],
                       }),
                       (0, f.RA)(e)
                     ),
