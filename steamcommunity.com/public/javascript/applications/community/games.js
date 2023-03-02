@@ -6440,33 +6440,35 @@
           );
         if (!a.data || 0 === a.data.size || !s) return null;
         const o = [],
-          c = a.data.get(l).app;
-        if (c.BIsDownloading() || c.BIsPaused()) {
+          c = a.data.get(l),
+          u = null == c ? void 0 : c.app;
+        if (!u) return null;
+        if (u.BIsDownloading() || u.BIsPaused()) {
           if (!r) return null;
           o.push(
-            n.createElement(Br, { key: "downloading", app: c, clientid: l })
+            n.createElement(Br, { key: "downloading", app: u, clientid: l })
           );
         } else
-          c.uninstalling
+          u.uninstalling
             ? o.push(
                 n.createElement(_r, {
                   key: "uninstalling",
-                  app: c,
+                  app: u,
                   clientid: l,
                 })
               )
-            : c.BHasPendingUpdate()
+            : u.BHasPendingUpdate()
             ? o.push(
                 n.createElement(gr, {
                   key: "updatePending",
-                  app: c,
+                  app: u,
                   clientid: l,
                 })
               )
             : o.push(
                 n.createElement(fr, {
                   key: "installuninstall",
-                  app: c,
+                  app: u,
                   clientid: l,
                 })
               );
