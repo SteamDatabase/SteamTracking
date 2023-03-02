@@ -33,7 +33,7 @@
     57508: (e) => {
       e.exports = {
         GameHeight: "140px",
-        GamePadding: "16px",
+        GamePadding: "10px",
         RemoteControlsHeight: "56px",
         MobileBreakpoint: "30rem",
       };
@@ -41,7 +41,7 @@
     17627: (e) => {
       e.exports = {
         GameHeight: "140px",
-        GamePadding: "16px",
+        GamePadding: "10px",
         RemoteControlsHeight: "56px",
         MobileBreakpoint: "30rem",
         Gameslistapp: "gameslistapp_Gameslistapp_2nl8H",
@@ -65,7 +65,7 @@
     26089: (e) => {
       e.exports = {
         GameHeight: "140px",
-        GamePadding: "16px",
+        GamePadding: "10px",
         RemoteControlsHeight: "56px",
         MobileBreakpoint: "30rem",
         List: "gameslistitems_List_3tY9v",
@@ -130,7 +130,7 @@
     71530: (e) => {
       e.exports = {
         GameHeight: "140px",
-        GamePadding: "16px",
+        GamePadding: "10px",
         RemoteControlsHeight: "56px",
         MobileBreakpoint: "30rem",
         ClientSelectDropdown: "gameslistremote_ClientSelectDropdown_2Z6JL",
@@ -5713,32 +5713,33 @@
       function Nt(e, t, r) {
         return [jt, e, t, r];
       }
-      function Dt(e) {
-        var t, r;
-        const s = Xt(),
-          l = d(),
-          o = (0, dt.M)(),
-          c = (e) => {
-            (21 != e.result && 16 != e.result) || s.refetch();
+      function Dt(e, t = !0) {
+        var r, s;
+        const l = Xt(),
+          o = d(),
+          c = (0, dt.M)(),
+          u = (e) => {
+            t && ((21 != e.result && 16 != e.result) || l.refetch());
           },
-          u = (0, a.useQueries)(
+          m = (0, a.useQueries)(
             (
-              (null === (t = s.data) || void 0 === t ? void 0 : t.sessions) ||
+              (null === (r = l.data) || void 0 === r ? void 0 : r.sessions) ||
               []
             ).map((e) => ({
-              queryKey: Nt(o, e.client_instanceid, "none"),
+              queryKey: Nt(c, e.client_instanceid, "none"),
               queryFn: () =>
                 (0, i.mG)(this, void 0, void 0, function* () {
-                  return It(l, e, "none");
+                  return It(o, e, "none");
                 }),
               staletime: 36e5,
               refetchInterval: (e) =>
                 1e3 * ((null == e ? void 0 : e.refetchIntervals.full) || 3600),
-              enabled: s.isSuccess && !s.isFetching,
-              onError: c,
+              enabled: l.isSuccess && !l.isFetching,
+              onError: u,
+              retry: t,
             }))
           ),
-          m = (0, n.useCallback)(
+          b = (0, n.useCallback)(
             (t) => {
               if (!e) return t;
               const r = new Map(Array.from(t.mapApps.entries()).filter(e));
@@ -5746,12 +5747,12 @@
             },
             [e]
           ),
-          b = (0, a.useQueries)(
+          p = (0, a.useQueries)(
             (
-              (null === (r = s.data) || void 0 === r ? void 0 : r.sessions) ||
+              (null === (s = l.data) || void 0 === s ? void 0 : s.sessions) ||
               []
-            ).map((e, t) => ({
-              queryKey: Nt(o, e.client_instanceid, "changing"),
+            ).map((e, r) => ({
+              queryKey: Nt(c, e.client_instanceid, "changing"),
               queryFn: () =>
                 (0, i.mG)(this, void 0, void 0, function* () {
                   return (function (e, t, r, n) {
@@ -5763,11 +5764,11 @@
                         mapApps: n.mapApps,
                       });
                     });
-                  })(l, e, "changing", u[t].data);
+                  })(o, e, "changing", m[r].data);
                 }),
-              enabled: u[t].isSuccess && !u[t].isFetching,
+              enabled: m[r].isSuccess && !m[r].isFetching,
               staletime: 1e4,
-              select: m,
+              select: b,
               refetchInterval: (e) => {
                 if (!e) return 6e4;
                 let t = !1;
@@ -5779,39 +5780,42 @@
                 const r = e.refetchIntervals;
                 return 1e3 * (t ? r.updating : r.changing);
               },
-              onError: c,
+              onError: u,
+              retry: t,
             }))
           );
         return {
-          rgQueries: b,
+          rgQueries: p.map((e, t) =>
+            m[t].isError && !m[t].isFetching ? m[t] : e
+          ),
           refetch: () => {
-            for (const e of b) e.remove();
-            for (const e of u) e.refetch();
+            for (const e of p) e.remove();
+            for (const e of m) e.refetch();
           },
         };
       }
       function xt(e, t) {
         return [Pt, e, t];
       }
-      function kt(e) {
-        const t = (0, dt.M)(),
-          { rgQueries: r } = Dt();
+      function kt(e, t = !0) {
+        const r = (0, dt.M)(),
+          { rgQueries: i } = Dt(void 0, t);
         return (0, a.useQuery)(
-          xt(t, e),
+          xt(r, e),
           () => {
-            var t, i;
+            var t, r;
             const n = new Map();
-            for (const a of r)
+            for (const a of i)
               if (a.isSuccess) {
-                const r =
+                const i =
                     null === (t = a.data) || void 0 === t
                       ? void 0
                       : t.session.client_instanceid,
                   s = (
-                    null === (i = a.data) || void 0 === i ? void 0 : i.mapApps
+                    null === (r = a.data) || void 0 === r ? void 0 : r.mapApps
                   ).get(e);
                 s &&
-                  n.set(r, {
+                  n.set(i, {
                     session: a.data.session,
                     app: s,
                     clientInfo: a.data.clientInfo,
@@ -5820,7 +5824,7 @@
             return n;
           },
           {
-            enabled: r.reduce((e, t) => e && t.isSuccess && !t.isFetching, !0),
+            enabled: i.reduce((e, t) => e && t.isSuccess && !t.isFetching, !0),
             staleTime: 0,
             cacheTime: 0,
           }
@@ -5955,8 +5959,14 @@
       }
       function cr() {
         const e = or().remoteDownloadClientId,
-          t = Xt();
-        if (!ze.De.IN_CLIENT && t.data && 0 !== t.data.sessions.length)
+          t = Xt(),
+          r = Dt();
+        if (
+          !ze.De.IN_CLIENT &&
+          t.data &&
+          0 !== t.data.sessions.length &&
+          r.rgQueries.some((e) => e.data)
+        )
           return e
             ? t.data.sessions.find((t) => t.client_instanceid === e)
             : t.data.sessions[0];
@@ -6392,7 +6402,7 @@
       }
       function hr({ game: e }) {
         var t;
-        const r = kt(e.appid),
+        const r = kt(e.appid, !1),
           i = cr(),
           a = null == i ? void 0 : i.client_instanceid;
         if (
@@ -6412,7 +6422,7 @@
       }
       function vr({ game: e, className: t, enableDownloadBar: r = !1 }) {
         var i;
-        const a = kt(e.appid),
+        const a = kt(e.appid, !1),
           s = cr(),
           l = null == s ? void 0 : s.client_instanceid;
         if (
@@ -7755,8 +7765,7 @@
         const a = Xt(),
           s = (function (e) {
             const t = cr(),
-              r = Dt(),
-              i = r.rgQueries.find((e) => {
+              r = Dt(void 0, !1).rgQueries.find((e) => {
                 var r;
                 return (
                   (null === (r = e.data) || void 0 === r
@@ -7764,34 +7773,29 @@
                     : r.session.client_instanceid) ===
                   (null == t ? void 0 : t.client_instanceid)
                 );
-              }),
-              a = !i && r.rgQueries.some((e) => e.isLoading || !e.data);
+              });
             return (0, n.useMemo)(() => {
               var t;
-              const r = new Set();
-              if (null == i ? void 0 : i.data)
-                for (const e of i.data.mapApps.values())
+              const i = new Set();
+              if (null == r ? void 0 : r.data)
+                for (const e of r.data.mapApps.values())
                   (Ei.has(e.appid) || (!Ri.has(e.appid) && wr(e))) &&
-                    (r.add(e.appid), Ei.add(e.appid));
+                    (i.add(e.appid), Ei.add(e.appid));
               const n = [],
-                s = [];
+                a = [];
               return (
                 null === (t = e.data) ||
                   void 0 === t ||
                   t.forEach((e) => {
-                    r.has(e.appid)
+                    i.has(e.appid)
                       ? n.push(
                           Object.assign(Object.assign({}, e), { changing: !0 })
                         )
-                      : s.push(e);
+                      : a.push(e);
                   }),
-                {
-                  data: [...n, ...s],
-                  isLoading: e.isLoading || a,
-                  error: e.error,
-                }
+                { data: [...n, ...a], isLoading: e.isLoading, error: e.error }
               );
-            }, [e.data, e.isLoading, e.error, a, null == i ? void 0 : i.data]);
+            }, [e.data, e.isLoading, e.error, null == r ? void 0 : r.data]);
           })(e),
           [l, o] = (0, n.useState)({}),
           c = (0, n.useCallback)((e, t) => {
@@ -7813,6 +7817,7 @@
           : n.createElement(
               Wi.Provider,
               { value: c },
+              !ze.De.IN_CLIENT && n.createElement(pr, null),
               n.createElement(Si, {
                 games: s.data,
                 tab: r,
@@ -8049,8 +8054,7 @@
                       z && n.createElement(Li, null),
                       !z && l === Wr.All && n.createElement(Xi, null),
                       n.createElement(Ai, { strSort: r, setStrSort: i })
-                    ),
-                  z && !ze.De.IN_CLIENT && n.createElement(pr, null)
+                    )
                 ),
               n.createElement(ji, {
                 owned: S,

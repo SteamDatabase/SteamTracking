@@ -20,7 +20,7 @@
   grid-template-areas: "search bothOwned sort";
   grid-template-rows: 1fr;
   grid-template-columns: auto 1fr auto;
-  padding-bottom: 18px;
+  padding-bottom: 10px;
 }
 .gameslistapp_FilterInput_24EKv {
   grid-area: search;
@@ -291,7 +291,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   position: relative;
 }
 .gameslistitems_GamesListItemContainer_29H3o {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   position: absolute;
   width: 100%;
 }
@@ -1034,8 +1034,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   background-color: var(--color-highlight);
   color: var(--typography-color-primary);
   border-radius: 2px;
-  padding: 18px;
-  margin-bottom: 20px;
+  padding: 12px;
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr;
@@ -1049,7 +1049,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   .gameslistremote_RemoteDownloadHeader_UVZ1r {
   font-size: 14px;
   font-weight: 700;
-  gap: 16px;
+  gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
