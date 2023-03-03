@@ -17,6 +17,7 @@
         ColHeader: "adminshared_ColHeader_uP0hv",
         ColHeaderImg: "adminshared_ColHeaderImg_3OYqx",
         SectionCtn: "adminshared_SectionCtn_3la4r",
+        warning: "adminshared_warning_3RQNx",
         RightCol: "adminshared_RightCol_p8nGm",
         SmallText: "adminshared_SmallText_1YUYd",
         TitleSmall: "adminshared_TitleSmall_oEKks",

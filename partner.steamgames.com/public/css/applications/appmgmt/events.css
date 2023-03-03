@@ -9944,13 +9944,37 @@ html.responsive.touch
   .adminshared_LeftCol_1neFt
   .adminshared_SectionCtn_3la4r {
   position: relative;
-  background: #2c2e35;
+  background: linear-gradient(90deg, #2c2e35, #25272c, #2c2e35);
+  border-top: 1px solid #2c2e35;
   padding: 24px;
   box-sizing: border-box;
   margin-bottom: 1px;
   font-size: 14px;
   font-weight: 300;
   color: #dfe3e6;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r
+  .adminshared_warning_3RQNx {
+  background: radial-gradient(#c9793f, #955425);
+  border-top: 1px solid #bd723c;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 12px 24px;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r
+  .adminshared_warning_3RQNx
+  p,
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r
+  .adminshared_warning_3RQNx
+  a {
+  color: #fff;
+  font-size: 14px;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
@@ -13204,10 +13228,8 @@ table.optin_admin_editor_EligibleGamesTable_3sBXw td {
   h2 {
   color: #ebce39;
 }
-.optin_display_appeal_AppealTitle_X7wqW {
-  background: #c9793f;
-  padding: 4px 8px;
-  border-radius: 2px;
+h1.optin_display_appeal_AppealTitle_X7wqW {
+  font-weight: 600;
 }
 .optin_display_appeal_dialog_Dummy_2ezUj {
   background-color: hotpink;
