@@ -7134,7 +7134,7 @@
     "ClientUpdate_NotEnoughSpace": "Not enough disk space to download the Steam Client update",
     "ClientUpdate_Checking_GenericError": "Something went wrong while checking for a Steam Client update",
     "ClientUpdate_Applying_GenericError": "Something went wrong while applying the Steam Client update",
-    "ClientUpdate_CheckForUpdates_Button": "Check for Updates...",
+    "ClientUpdate_ApplyUpdate_Button": "Apply Update...",
     "SP_WindowTitle_Configurator": "%1$s Controller Layout",
     "SP_WindowTitle_BigPicture": "Steam Big Picture Mode",
     "SP_WindowTitle_Keyboard": "Steam Input On-screen Keyboard",
