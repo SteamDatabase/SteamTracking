@@ -879,7 +879,7 @@ function ApplyAdultContentPreferences()
 {
 	LoadUGCWithNoBlur();
 
-	var elementsWithAdultContent = $J('.has_adult_content');
+	var elementsWithAdultContent = $J( '[data-descids]');
 	if ( elementsWithAdultContent.length == 0 )
 	{
 		return;
@@ -894,7 +894,7 @@ function ApplyAdultContentPreferences()
 
 function ReapplyAdultContentPreferences()
 {
-	var elementsWithAdultContent = $J('.has_adult_content');
+	var elementsWithAdultContent = $J( '[data-descids]');
 	if ( elementsWithAdultContent.length == 0 )
 	{
 		return;
@@ -1024,35 +1024,23 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 
 	e.data( 'processed_adult_content', true );
 
-	var bHideAdultContentSex = rgContentDescriptorsToExclude.indexOf( 1 ) != -1;
-	var bHideAdultContentViolence = rgContentDescriptorsToExclude.indexOf( 2 ) != -1;
-
 	var bIsAnchor = e.is('a');
 
 	var publishedFileID = e.data( 'publishedfileid' );
+	var rgContentDescriptorIDs = e.data( 'descids' ) ?? [];
 	var appid = e.data( 'appid' );
 	var bForceDeBlur = ( publishedFileID && g_UGCWithNoBlur.hasOwnProperty( publishedFileID ) ) || ( appid && g_UGCSkipAdultContentCheckForAppID == appid );
 
-	if ( bForceDeBlur )
+	var filteredArray = rgContentDescriptorIDs.filter( function( descid ) { return rgContentDescriptorsToExclude.indexOf( descid ) !== -1; } );
+	var bHasExcludedContent = filteredArray.length != 0;
+
+	if ( bForceDeBlur || !bHasExcludedContent )
 	{
 		e.removeClass( 'has_adult_content' );
 	}
-	else if ( e.hasClass( "maybe_inappropriate_sex" ) || e.hasClass( "maybe_inappropriate_violence" ) )
+	else if ( bHasExcludedContent )
 	{
-		if ( e.hasClass( "maybe_inappropriate_sex" ) && !bHideAdultContentSex )
-		{
-			e.removeClass( 'maybe_inappropriate_sex' );
-		}
-
-		if ( e.hasClass( "maybe_inappropriate_violence" ) && !bHideAdultContentViolence )
-		{
-			e.removeClass( 'maybe_inappropriate_violence' );
-		}
-
-		if ( !e.hasClass( "maybe_inappropriate_sex" ) && !e.hasClass( "maybe_inappropriate_violence" ) )
-		{
-			e.removeClass( 'has_adult_content' );
-		}
+		e.addClass( 'has_adult_content' );
 	}
 
 	if ( e.data( 'ugclinktextonly' ) === 1 )
@@ -1181,9 +1169,12 @@ function SetAppAgeGateBypass( appid, bBypass, callbackFunc )
 	} );
 }
 
-function CheckAppAgeGateBypass( appid, bCheckAppAgeGateBypass, callbackFunc )
+function CheckAppAgeGateBypass( appid, bCheckAppAgeGateBypass, rgAppContentDescriptors, callbackFunc )
 {
-	if ( g_ContentDescriptorPreferences.length == 0 )
+	var filteredArray = rgAppContentDescriptors.filter( function( descid ) { return g_ContentDescriptorPreferences.indexOf( descid ) !== -1; } );
+	var bHasExcludedContent = filteredArray.length != 0;
+
+	if ( !bHasExcludedContent )
 	{
 		callbackFunc( false );
 		return;

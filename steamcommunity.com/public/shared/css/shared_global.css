@@ -2158,6 +2158,10 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	box-shadow: 0 0 40px rgba(102, 192, 244, 0.4);
 }
 
+.adult_content_age_gate h2 {
+	padding: 20px 0;
+}
+
 .adult_content_age_gate p {
 	padding: 26px 0;
 	font-size: 18px;
