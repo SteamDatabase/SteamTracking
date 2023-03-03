@@ -13166,7 +13166,7 @@
       var Gn = a(56443),
         wn = a(20912),
         In = a.n(wn),
-        Tn = a(20186);
+        Tn = a(77994);
       let Bn = class extends n.Component {
         constructor(e) {
           super(e),
@@ -13785,38 +13785,30 @@
             .filter(
               (e) => !i || ("sub" != e.type && "bundle" != e.type && i(e.id))
             )
-            .map((e, a) => {
-              let i;
+            .map((e) => {
+              let a;
               return (
                 !c &&
                   "overrideNavigation" in e &&
-                  (i = (t) => (
+                  (a = (t) => (
                     e.overrideNavigation(),
                     t && (t.preventDefault(), t.stopPropagation()),
                     !1
                   )),
-                n.createElement(
-                  "div",
-                  {
-                    key: "saleitem_browser_" + e.type + "_" + e.id,
-                    className: Ee().SaleItemBrowserRow,
-                  },
-                  n.createElement(Tn.ju, {
-                    id: e.id,
-                    type: e.type || "game",
-                    bShowDemoButton:
-                      Boolean(t.show_as_demos) ||
-                      (null == l ? void 0 : l.BFilterRequiresFeatureDemo()),
-                    bLoadShortDescription: !0,
-                    bShowReviewSummary: !0,
-                    bShowDeckCompatibilityDialog:
-                      t.show_deck_compability_details ||
-                      (null == l
-                        ? void 0
-                        : l.BFilterRequiresSteamDeckVerifiedOrPlayable()),
-                    fnOnClickOverride: i,
-                  })
-                )
+                n.createElement(Tn.a, {
+                  key: "saleitem_browser_" + e.type + "_" + e.id,
+                  bShowDemoButton:
+                    t.show_as_demos ||
+                    (null == l ? void 0 : l.BFilterRequiresFeatureDemo()),
+                  bShowDeckCompatibilityDialog:
+                    t.show_deck_compability_details ||
+                    (null == l
+                      ? void 0
+                      : l.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                  id: e.id,
+                  type: e.type || "game",
+                  fnOnClickOverride: a,
+                })
               );
             })
         );

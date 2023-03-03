@@ -6776,9 +6776,30 @@
         return null;
       }
     },
+    77994: (e, t, a) => {
+      "use strict";
+      a.d(t, { a: () => o });
+      var n = a(89526),
+        i = a(20186),
+        l = a(30156),
+        r = a.n(l);
+      function o(e) {
+        return n.createElement(
+          "div",
+          { className: r().SaleItemBrowserRow },
+          n.createElement(
+            i.ju,
+            Object.assign({}, e, {
+              bLoadShortDescription: !0,
+              bShowReviewSummary: !0,
+            })
+          )
+        );
+      }
+    },
     20082: (e, t, a) => {
       "use strict";
-      a.d(t, { T: () => F });
+      a.d(t, { T: () => X });
       var n = a(89526),
         i = (a(50567), a(76473)),
         l = a(70983),
@@ -7064,14 +7085,15 @@
           )
         );
       };
-      var G = a(88464),
-        M = (a(38800), a(39613)),
-        L = a.n(M),
-        B = a(16147),
-        N = a(13803),
-        O = a(35266),
-        R = a(45321);
-      const P = (0, G.Pi)((e) => {
+      var G = a(77994),
+        M = a(88464),
+        L = (a(38800), a(39613)),
+        B = a.n(L),
+        N = a(16147),
+        O = a(13803),
+        R = a(35266),
+        P = a(45321);
+      const F = (0, M.Pi)((e) => {
           var t, a, i, l, r;
           const {
               myInstance: s,
@@ -7088,8 +7110,8 @@
               bShowPurchaseOptionsButton: k,
               bUseSubscriptionLayout: G,
             } = e,
-            [M, P] = n.useState(!1),
-            F = () => P(!M),
+            [M, L] = n.useState(!1),
+            F = () => L(!M),
             X = (0, h.bJ)(),
             j = n.useMemo(
               () => (null == y ? void 0 : y.GetIncludedAppIDsOrSelf()),
@@ -7117,7 +7139,7 @@
                   "div",
                   { className: (0, p.Z)(E().StoreSaleWidgetLeft) },
                   n.createElement(
-                    O._,
+                    R._,
                     { type: D, id: I, fnHoverState: c },
                     n.createElement(
                       "div",
@@ -7139,7 +7161,7 @@
                   n.createElement(v.RJ, {
                     appID: U && y.GetAppID(),
                     classOverride: (0, p.Z)(
-                      L().WishlistButtonNotTop,
+                      B().WishlistButtonNotTop,
                       "WishlistButton"
                     ),
                     snr: z,
@@ -7217,7 +7239,7 @@
                     n.createElement(
                       "div",
                       { className: E().StoreSaleWidgetRight },
-                      n.createElement(N.O, {
+                      n.createElement(O.O, {
                         info: S,
                         bPopOutTrailerPlayback: !0,
                       })
@@ -7239,8 +7261,8 @@
                       : n.createElement(
                           n.Fragment,
                           null,
-                          n.createElement(R.a, { item: S }),
-                          n.createElement(B.x1, {
+                          n.createElement(P.a, { item: S }),
+                          n.createElement(N.x1, {
                             info: w,
                             bShowDemoButton: A,
                             bHidePrice: x,
@@ -7263,7 +7285,7 @@
                   )
                 )
               ),
-              n.createElement(B.Gh, {
+              n.createElement(N.Gh, {
                 storeItem: y,
                 bPurchaseOptionsExpanded: M,
                 fnCollapseOptions: F,
@@ -7271,7 +7293,7 @@
             )
           );
         }),
-        F = (e) => {
+        X = (e) => {
           let { displayStyle: t } = e,
             a = (0, l.id)();
           if ("bundle" == e.type || "sub" == e.type)
@@ -7284,9 +7306,11 @@
             t)
           ) {
             case "library":
-              return n.createElement(P, Object.assign({}, e));
+              return n.createElement(F, Object.assign({}, e));
             case "animated":
               return n.createElement(k, Object.assign({}, e));
+            case "compactlist":
+              return n.createElement(G.a, Object.assign({}, e));
             default:
               return n.createElement(d.ju, Object.assign({}, e));
           }
@@ -22930,6 +22954,13 @@
                 "#Sale_Section_SingleItemDisplay_animated_ttip"
               ),
               data: "animated",
+            },
+            {
+              label: (0, u.Xx)("#Sale_Section_SingleItemDisplay_compactlist"),
+              tooltip: (0, u.Xx)(
+                "#Sale_Section_SingleItemDisplay_compactlist_ttip"
+              ),
+              data: "compactlist",
             },
           ];
           return d.createElement(m.ry, {

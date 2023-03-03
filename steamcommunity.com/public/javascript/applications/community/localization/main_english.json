@@ -1597,6 +1597,8 @@
     "Sale_Section_SingleItemDisplay_library_ttip": "A taller display per item, which uses the store vertical capsule. This has all of the information as Full and additional interactivity to watch trailer and choose between screenshots. Bundles will not be able to use this display and will fall back to Full, and packages will fall back to use the primary app's library asset.",
     "Sale_Section_SingleItemDisplay_animated": "Animated Vertical Capsule Display",
     "Sale_Section_SingleItemDisplay_animated_ttip": "A Taller and wider display that features animated transition and the micro-trailer behind the artwork. Visually appealing but having more than one can be distracting.",
+    "Sale_Section_SingleItemDisplay_compactlist": "Slim List Capsule",
+    "Sale_Section_SingleItemDisplay_compactlist_ttip": "Allows creating a custom list of games using a slim list display as found in Sale Item Browser.",
     "Sale_Section_ShowPurchaseOptions": "Show Purchase Options button",
     "Sale_Section_ShowPurchaseOptions_ttip": "When checked, we will replace the Add To Cart button with a button that shows all purchase options.",
     "Sale_Section_RevealSetting": "Dynamic Reveal Section",

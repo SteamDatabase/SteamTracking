@@ -15236,7 +15236,7 @@
       var li = n(56443),
         ci = n(20912),
         di = n.n(ci),
-        ui = n(20186);
+        ui = n(77994);
       let mi = class extends a.Component {
         constructor(e) {
           super(e),
@@ -15857,38 +15857,30 @@
             .filter(
               (e) => !i || ("sub" != e.type && "bundle" != e.type && i(e.id))
             )
-            .map((e, n) => {
-              let i;
+            .map((e) => {
+              let n;
               return (
                 !c &&
                   "overrideNavigation" in e &&
-                  (i = (t) => (
+                  (n = (t) => (
                     e.overrideNavigation(),
                     t && (t.preventDefault(), t.stopPropagation()),
                     !1
                   )),
-                a.createElement(
-                  "div",
-                  {
-                    key: "saleitem_browser_" + e.type + "_" + e.id,
-                    className: he().SaleItemBrowserRow,
-                  },
-                  a.createElement(ui.ju, {
-                    id: e.id,
-                    type: e.type || "game",
-                    bShowDemoButton:
-                      Boolean(t.show_as_demos) ||
-                      (null == l ? void 0 : l.BFilterRequiresFeatureDemo()),
-                    bLoadShortDescription: !0,
-                    bShowReviewSummary: !0,
-                    bShowDeckCompatibilityDialog:
-                      t.show_deck_compability_details ||
-                      (null == l
-                        ? void 0
-                        : l.BFilterRequiresSteamDeckVerifiedOrPlayable()),
-                    fnOnClickOverride: i,
-                  })
-                )
+                a.createElement(ui.a, {
+                  key: "saleitem_browser_" + e.type + "_" + e.id,
+                  bShowDemoButton:
+                    t.show_as_demos ||
+                    (null == l ? void 0 : l.BFilterRequiresFeatureDemo()),
+                  bShowDeckCompatibilityDialog:
+                    t.show_deck_compability_details ||
+                    (null == l
+                      ? void 0
+                      : l.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                  id: e.id,
+                  type: e.type || "game",
+                  fnOnClickOverride: n,
+                })
               );
             })
         );
@@ -22097,6 +22089,27 @@
         return null;
       }
     },
+    77994: (e, t, n) => {
+      "use strict";
+      n.d(t, { a: () => r });
+      var a = n(89526),
+        i = n(20186),
+        o = n(30156),
+        s = n.n(o);
+      function r(e) {
+        return a.createElement(
+          "div",
+          { className: s().SaleItemBrowserRow },
+          a.createElement(
+            i.ju,
+            Object.assign({}, e, {
+              bLoadShortDescription: !0,
+              bShowReviewSummary: !0,
+            })
+          )
+        );
+      }
+    },
     84032: (e, t, n) => {
       "use strict";
       n.d(t, { l: () => C, N: () => y });
@@ -22247,7 +22260,7 @@
     },
     20082: (e, t, n) => {
       "use strict";
-      n.d(t, { T: () => F });
+      n.d(t, { T: () => U });
       var a = n(89526),
         i = (n(67575), n(76473)),
         o = n(70983),
@@ -22533,14 +22546,15 @@
           )
         );
       };
-      var B = n(88464),
-        N = (n(38800), n(39613)),
-        T = n.n(N),
-        R = n(16147),
-        P = n(75646),
-        x = n(35266),
-        M = n(45321);
-      const O = (0, B.Pi)((e) => {
+      var B = n(77994),
+        N = n(88464),
+        T = (n(38800), n(39613)),
+        R = n.n(T),
+        P = n(16147),
+        x = n(75646),
+        M = n(35266),
+        O = n(45321);
+      const F = (0, N.Pi)((e) => {
           var t, n, i, o, s;
           const {
               myInstance: l,
@@ -22557,8 +22571,8 @@
               bShowPurchaseOptionsButton: L,
               bUseSubscriptionLayout: B,
             } = e,
-            [N, O] = a.useState(!1),
-            F = () => O(!N),
+            [N, T] = a.useState(!1),
+            F = () => T(!N),
             U = (0, v.bJ)(),
             H = a.useMemo(
               () => (null == f ? void 0 : f.GetIncludedAppIDsOrSelf()),
@@ -22586,7 +22600,7 @@
                   "div",
                   { className: (0, _.Z)(E().StoreSaleWidgetLeft) },
                   a.createElement(
-                    x._,
+                    M._,
                     { type: I, id: w, fnHoverState: c },
                     a.createElement(
                       "div",
@@ -22608,7 +22622,7 @@
                   a.createElement(h.RJ, {
                     appID: z && f.GetAppID(),
                     classOverride: (0, _.Z)(
-                      T().WishlistButtonNotTop,
+                      R().WishlistButtonNotTop,
                       "WishlistButton"
                     ),
                     snr: j,
@@ -22686,7 +22700,7 @@
                     a.createElement(
                       "div",
                       { className: E().StoreSaleWidgetRight },
-                      a.createElement(P.O, {
+                      a.createElement(x.O, {
                         info: S,
                         bPopOutTrailerPlayback: !0,
                       })
@@ -22708,8 +22722,8 @@
                       : a.createElement(
                           a.Fragment,
                           null,
-                          a.createElement(M.a, { item: S }),
-                          a.createElement(R.x1, {
+                          a.createElement(O.a, { item: S }),
+                          a.createElement(P.x1, {
                             info: G,
                             bShowDemoButton: k,
                             bHidePrice: A,
@@ -22732,7 +22746,7 @@
                   )
                 )
               ),
-              a.createElement(R.Gh, {
+              a.createElement(P.Gh, {
                 storeItem: f,
                 bPurchaseOptionsExpanded: N,
                 fnCollapseOptions: F,
@@ -22740,7 +22754,7 @@
             )
           );
         }),
-        F = (e) => {
+        U = (e) => {
           let { displayStyle: t } = e,
             n = (0, o.id)();
           if ("bundle" == e.type || "sub" == e.type)
@@ -22753,9 +22767,11 @@
             t)
           ) {
             case "library":
-              return a.createElement(O, Object.assign({}, e));
+              return a.createElement(F, Object.assign({}, e));
             case "animated":
               return a.createElement(L, Object.assign({}, e));
+            case "compactlist":
+              return a.createElement(B.a, Object.assign({}, e));
             default:
               return a.createElement(d.ju, Object.assign({}, e));
           }
