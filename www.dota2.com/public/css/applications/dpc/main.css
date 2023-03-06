@@ -4782,7 +4782,9 @@
   .fantasypage_Contents_QRAGK
   .fantasypage_Roster_2YPlj
   .fantasypage_SubmitButton_2gOug {
-  transition: all 0.4s ease-in-out;
+  transition-property: height, min-height, margin-top, padding-top;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
   margin-left: 12px;
   margin-right: 12px;
   overflow-y: hidden;

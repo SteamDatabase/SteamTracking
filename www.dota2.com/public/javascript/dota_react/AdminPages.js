@@ -3,7 +3,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [1510],
   {
-    48278: (e) => {
+    80655: (e) => {
       e.exports = {
         Tooltip: "teamdetails_Tooltip_31hC1",
         CarouselFade: "teamdetails_CarouselFade_2UcOF",
@@ -35,39 +35,34 @@
         SmoothLine: "teamdetails_SmoothLine_3YaqJ",
       };
     },
-    84437: (e, t, n) => {
+    19944: (e, t, a) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => D });
-      var a,
-        r = n(70655),
-        i = n(9669),
-        o = n.n(i),
-        c = n(26016),
-        l = n(5977),
-        m = n(67294),
-        u = n(64593),
-        s = n(67506),
-        d = n(12814),
-        _ = n(8460),
-        f = n(5550),
-        p = n(28856),
-        A = n(48278),
-        g = n.n(A),
-        v = "public",
-        E = 5e3,
-        T = function (e) {
-          return m.createElement(
+      a.r(t), a.d(t, { default: () => D });
+      var n = a(33940),
+        l = a(52868),
+        m = a.n(l),
+        i = a(75427),
+        r = a(65092),
+        o = a(89526),
+        c = a(53672),
+        s = a(44834),
+        d = a(9658),
+        u = a(92375),
+        _ = a(80448),
+        A = a(25559),
+        g = a(80655),
+        p = a.n(g);
+      const E = "public",
+        T = 5e3,
+        y = (e) =>
+          o.createElement(
             "a",
             {
-              href: ""
-                .concat(c.Y.BASE_URL, "persona/showplayer/")
-                .concat(e, "?u=")
-                .concat(v, "&appid=")
-                .concat(c.Y.DOTA_APP_ID),
+              href: `${i.Y.BASE_URL}persona/showplayer/${e}?u=${E}&appid=${i.Y.DOTA_APP_ID}`,
             },
             e
           );
-        };
+      var v;
       !(function (e) {
         (e[(e.kTRAA_RegisterTeam = 0)] = "kTRAA_RegisterTeam"),
           (e[(e.kTRAA_InvitePlayer = 1)] = "kTRAA_InvitePlayer"),
@@ -87,8 +82,8 @@
           (e[(e.kTRAA_ValveUpdateName = 15)] = "kTRAA_ValveUpdateName"),
           (e[(e.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
           (e[(e.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20");
-      })(a || (a = {}));
-      var y = {
+      })(v || (v = {}));
+      const k = {
           0: "kTRAA_RegisterTeam",
           1: "kTRAA_InvitePlayer",
           2: "kTRAA_RemovePlayer",
@@ -108,368 +103,259 @@
           16: "kTRAA_ValveUpdateTeamName",
           20: "kTRAA_Penalty20",
         },
-        k = [
+        f = [
           {
-            enum: a.kTRAA_RegisterTeam,
-            formatFunction: function () {
-              return "Registered a team or re-registered an existing team.";
-            },
+            enum: v.kTRAA_RegisterTeam,
+            formatFunction: () =>
+              "Registered a team or re-registered an existing team.",
           },
           {
-            enum: a.kTRAA_InvitePlayer,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  "Invited a new/legacy player ",
-                  m.createElement("b", null, "".concat(e)),
-                  "."
-                )
-              );
-            },
+            enum: v.kTRAA_InvitePlayer,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                "Invited a new/legacy player ",
+                o.createElement("b", null, `${e}`),
+                "."
+              ),
           },
           {
-            enum: a.kTRAA_RemovePlayer,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  "Removed a legacy player ",
-                  m.createElement("b", null, "".concat(e)),
-                  "."
-                )
-              );
-            },
+            enum: v.kTRAA_RemovePlayer,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                "Removed a legacy player ",
+                o.createElement("b", null, `${e}`),
+                "."
+              ),
           },
           {
-            enum: a.kTRAA_CancelInvite,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement("b", null, "".concat(e)),
-                  " cancelled an issued invite."
-                )
-              );
-            },
+            enum: v.kTRAA_CancelInvite,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement("b", null, `${e}`),
+                " cancelled an issued invite."
+              ),
           },
           {
-            enum: a.kTRAA_RegisterPlayer,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement("b", null, "".concat(e)),
-                  " registered a new player."
-                )
-              );
-            },
+            enum: v.kTRAA_RegisterPlayer,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement("b", null, `${e}`),
+                " registered a new player."
+              ),
           },
           {
-            enum: a.kTRAA_AcceptInvite,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement("b", null, "".concat(e)),
-                  " accepted an invite."
-                )
-              );
-            },
+            enum: v.kTRAA_AcceptInvite,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement("b", null, `${e}`),
+                " accepted an invite."
+              ),
           },
           {
-            enum: a.kTRAA_RejectInvite,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement("b", null, "".concat(e)),
-                  " rejected an invite."
-                )
-              );
-            },
+            enum: v.kTRAA_RejectInvite,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement("b", null, `${e}`),
+                " rejected an invite."
+              ),
           },
           {
-            enum: a.kTRAA_UnregisterTeam,
-            formatFunction: function () {
-              return "Manager removed the team registration.";
-            },
+            enum: v.kTRAA_UnregisterTeam,
+            formatFunction: () => "Manager removed the team registration.",
           },
           {
-            enum: a.kTRAA_TransferTeam,
-            formatFunction: function () {
-              return "Manager transferred the team wholesale to new management.";
-            },
+            enum: v.kTRAA_TransferTeam,
+            formatFunction: () =>
+              "Manager transferred the team wholesale to new management.",
           },
           {
-            enum: a.kTRAA_TransferTeamAdmin,
-            formatFunction: function (e, t) {
-              return (
-                void 0 === e && (e = ""),
-                void 0 === t && (t = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  "Manager transferred management to a new manager ",
-                  m.createElement("b", null, "".concat(t), ".")
-                )
-              );
-            },
+            enum: v.kTRAA_TransferTeamAdmin,
+            formatFunction: (e = "", t = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                "Manager transferred management to a new manager ",
+                o.createElement("b", null, `${t}`, ".")
+              ),
           },
           {
-            enum: a.kTRAA_InviteCoach,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  "Invited a coach ",
-                  m.createElement("b", null, "".concat(e)),
-                  "."
-                )
-              );
-            },
+            enum: v.kTRAA_InviteCoach,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                "Invited a coach ",
+                o.createElement("b", null, `${e}`),
+                "."
+              ),
           },
           {
-            enum: a.kTRAA_RemoveCoach,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  "Removed a coach ",
-                  m.createElement("b", null, "".concat(e)),
-                  "."
-                )
-              );
-            },
+            enum: v.kTRAA_RemoveCoach,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                "Removed a coach ",
+                o.createElement("b", null, `${e}`),
+                "."
+              ),
           },
           {
-            enum: a.kTRAA_CancelInviteCoach,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement("b", null, "".concat(e)),
-                  " cancelled an issued coach invite."
-                )
-              );
-            },
+            enum: v.kTRAA_CancelInviteCoach,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement("b", null, `${e}`),
+                " cancelled an issued coach invite."
+              ),
           },
           {
-            enum: a.kTRAA_AcceptCoachInvite,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement("b", null, "".concat(e)),
-                  " (coach) accepted an invite."
-                )
-              );
-            },
+            enum: v.kTRAA_AcceptCoachInvite,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement("b", null, `${e}`),
+                " (coach) accepted an invite."
+              ),
           },
           {
-            enum: a.kTRAA_RejectCoachInvite,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement("b", null, "".concat(e)),
-                  " (coach) rejected an invite."
-                )
-              );
-            },
+            enum: v.kTRAA_RejectCoachInvite,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement("b", null, `${e}`),
+                " (coach) rejected an invite."
+              ),
           },
           {
-            enum: a.kTRAA_ValveUpdateName,
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  "Valve fixed a name for player ",
-                  m.createElement("b", null, "".concat(e)),
-                  "."
-                )
-              );
-            },
+            enum: v.kTRAA_ValveUpdateName,
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                "Valve fixed a name for player ",
+                o.createElement("b", null, `${e}`),
+                "."
+              ),
           },
           {
-            enum: a.kTRAA_ValveUpdateTeamName,
-            formatFunction: function () {
-              return "Valve updated the team name.";
-            },
+            enum: v.kTRAA_ValveUpdateTeamName,
+            formatFunction: () => "Valve updated the team name.",
           },
           {
-            enum: a.kTRAA_Penalty20,
-            formatFunction: function () {
-              return "20% point penalty.";
-            },
+            enum: v.kTRAA_Penalty20,
+            formatFunction: () => "20% point penalty.",
           },
         ],
-        h = [
+        R = [
           {
             key: "pro",
             displayName: "Pro?",
-            formatFunction: function (e) {
-              return e ? "YES" : "NO";
-            },
+            formatFunction: (e) => (e ? "YES" : "NO"),
           },
           { key: "tag", displayName: "Tag" },
           { key: "abbreviation", displayName: "Abbreviation" },
           {
             key: "time_created",
             displayName: "Time Created",
-            formatFunction: function (e) {
-              return e ? new Date(1e3 * e).toLocaleString() : "";
-            },
+            formatFunction: (e) =>
+              e ? new Date(1e3 * e).toLocaleString() : "",
           },
           {
             key: "pickup_team",
             displayName: "Pickup Team?",
-            formatFunction: function (e) {
-              return e ? "YES" : "NO";
-            },
+            formatFunction: (e) => (e ? "YES" : "NO"),
           },
           {
             key: "url",
             displayName: "URL",
-            formatFunction: function (e) {
-              return e
-                ? m.createElement(
-                    m.Fragment,
+            formatFunction: (e) =>
+              e
+                ? o.createElement(
+                    o.Fragment,
                     null,
-                    m.createElement("a", { href: e }, e)
+                    o.createElement("a", { href: e }, e)
                   )
-                : "";
-            },
+                : "",
           },
           {
             key: "country_code",
             displayName: "Country Code",
-            formatFunction: function (e) {
-              return void 0 === e && (e = ""), e.toUpperCase();
-            },
+            formatFunction: (e = "") => e.toUpperCase(),
           },
         ],
-        R = [
+        N = [
           {
             key: "account_id",
             displayName: "Account ID",
-            formatFunction: function (e) {
-              return T(e);
-            },
+            formatFunction: (e) => y(e),
           },
           { key: "name", displayName: "Name" },
           { key: "persona_name", displayName: "Persona Name" },
           {
             key: "is_pro",
             displayName: "Pro",
-            formatFunction: function (e) {
-              return e ? "YES" : "NO";
-            },
+            formatFunction: (e) => (e ? "YES" : "NO"),
           },
           {
             key: "admin",
             displayName: "Admin",
-            formatFunction: function (e) {
-              return e ? "YES" : "NO";
-            },
+            formatFunction: (e) => (e ? "YES" : "NO"),
           },
           {
             key: "kick_link",
             displayName: "KICK",
-            formatFunction: function (e, t) {
-              return m.createElement(
+            formatFunction: (e, t) =>
+              o.createElement(
                 "div",
                 {
-                  className: g().Link,
-                  onClick: function () {
-                    return (0, r.mG)(void 0, void 0, void 0, function () {
-                      return (0, r.Jh)(this, function (n) {
-                        switch (n.label) {
-                          case 0:
-                            return [4, o().get("".concat(e))];
-                          case 1:
-                            return (
-                              n.sent(),
-                              setTimeout(function () {
-                                return t();
-                              }, 1e3),
-                              [2]
-                            );
-                        }
-                      });
-                    });
-                  },
+                  className: p().Link,
+                  onClick: () =>
+                    (0, n.mG)(void 0, void 0, void 0, function* () {
+                      yield m().get(`${e}`), setTimeout(() => t(), 1e3);
+                    }),
                 },
                 "KICK"
-              );
-            },
+              ),
           },
           {
             key: "make_admin_link",
             displayName: "MAKE ADMIN",
-            formatFunction: function (e, t) {
-              return (
-                !!e &&
-                m.createElement(
-                  "div",
-                  {
-                    className: g().Link,
-                    onClick: function () {
-                      return (0, r.mG)(void 0, void 0, void 0, function () {
-                        return (0, r.Jh)(this, function (n) {
-                          switch (n.label) {
-                            case 0:
-                              return [4, o().get("".concat(e))];
-                            case 1:
-                              return (
-                                n.sent(),
-                                setTimeout(function () {
-                                  return t();
-                                }, 1e3),
-                                [2]
-                              );
-                          }
-                        });
-                      });
-                    },
-                  },
-                  "MAKE ADMIN"
-                )
-              );
-            },
+            formatFunction: (e, t) =>
+              !!e &&
+              o.createElement(
+                "div",
+                {
+                  className: p().Link,
+                  onClick: () =>
+                    (0, n.mG)(void 0, void 0, void 0, function* () {
+                      yield m().get(`${e}`), setTimeout(() => t(), 1e3);
+                    }),
+                },
+                "MAKE ADMIN"
+              ),
           },
         ],
-        N = [
+        h = [
           {
             key: "manager_account_id",
             displayName: "Manager Account ID",
-            formatFunction: function (e) {
-              return T(e);
-            },
+            formatFunction: (e) => y(e),
           },
           { key: "manager_email", displayName: "Manager Email" },
         ],
@@ -477,195 +363,146 @@
           {
             key: "color_primary",
             displayName: "Color (Primary)",
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  e &&
-                    m.createElement(
-                      "div",
-                      null,
-                      m.createElement("span", {
-                        className: g().ColorBox,
-                        style: { backgroundColor: e },
-                      }),
-                      " ",
-                      e
-                    )
-                )
-              );
-            },
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                e &&
+                  o.createElement(
+                    "div",
+                    null,
+                    o.createElement("span", {
+                      className: p().ColorBox,
+                      style: { backgroundColor: e },
+                    }),
+                    " ",
+                    e
+                  )
+              ),
           },
           {
             key: "color_secondary",
             displayName: "Color (Secondary)",
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  e &&
-                    m.createElement(
-                      "div",
-                      null,
-                      m.createElement("span", {
-                        className: g().ColorBox,
-                        style: { backgroundColor: e },
-                      }),
-                      " ",
-                      e
-                    )
-                )
-              );
-            },
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                e &&
+                  o.createElement(
+                    "div",
+                    null,
+                    o.createElement("span", {
+                      className: p().ColorBox,
+                      style: { backgroundColor: e },
+                    }),
+                    " ",
+                    e
+                  )
+              ),
           },
           {
             key: "url_logo",
             displayName: "DPC Logo",
-            formatFunction: function (e, t) {
-              return (
-                void 0 === e && (e = ""),
-                void 0 === t && (t = 0),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  e &&
-                    t &&
-                    m.createElement(
-                      "div",
-                      { className: g().DPCLogoContainer },
-                      m.createElement("img", {
-                        onError: function (e) {
-                          var t = e.currentTarget;
-                          (t.onerror = null),
-                            (t.src = "".concat(
-                              c.Y.IMG_URL,
-                              "teams_override/team_unknown_web.png"
-                            ));
-                        },
-                        src: ""
-                          .concat(c.Y.CDN_URL, "apps/dota2/teamlogos/")
-                          .concat(t, ".png"),
-                      })
-                    )
-                )
-              );
-            },
+            formatFunction: (e = "", t = 0) =>
+              o.createElement(
+                o.Fragment,
+                null,
+                e &&
+                  t &&
+                  o.createElement(
+                    "div",
+                    { className: p().DPCLogoContainer },
+                    o.createElement("img", {
+                      onError: ({ currentTarget: e }) => {
+                        (e.onerror = null),
+                          (e.src = `${i.Y.IMG_URL}teams_override/team_unknown_web.png`);
+                      },
+                      src: `${i.Y.CDN_URL}apps/dota2/teamlogos/${t}.png`,
+                    })
+                  )
+              ),
           },
         ],
         I = [
           {
             key: "ugc_logo_url",
             displayName: "Logo",
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement(
-                    "div",
-                    { className: g().URLLogoContainer },
-                    e && m.createElement("img", { src: e })
-                  )
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement(
+                  "div",
+                  { className: p().URLLogoContainer },
+                  e && o.createElement("img", { src: e })
                 )
-              );
-            },
+              ),
           },
           {
             key: "ugc_base_logo_url",
             displayName: "Base Logo",
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement(
-                    "div",
-                    { className: g().URLLogoContainer },
-                    e && m.createElement("img", { src: e })
-                  )
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement(
+                  "div",
+                  { className: p().URLLogoContainer },
+                  e && o.createElement("img", { src: e })
                 )
-              );
-            },
+              ),
           },
           {
             key: "ugc_banner_logo_url",
             displayName: "Banner Logo",
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement(
-                    "div",
-                    { className: g().URLLogoContainer },
-                    e && m.createElement("img", { src: e })
-                  )
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement(
+                  "div",
+                  { className: p().URLLogoContainer },
+                  e && o.createElement("img", { src: e })
                 )
-              );
-            },
+              ),
           },
           {
             key: "ugc_sponsor_logo_url",
             displayName: "Sponsor Logo",
-            formatFunction: function (e) {
-              return (
-                void 0 === e && (e = ""),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement(
-                    "div",
-                    { className: g().URLLogoContainer },
-                    e && m.createElement("img", { src: e })
-                  )
+            formatFunction: (e = "") =>
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement(
+                  "div",
+                  { className: p().URLLogoContainer },
+                  e && o.createElement("img", { src: e })
                 )
-              );
-            },
+              ),
           },
         ],
         C = [
           {
             key: "account_id",
             displayName: "Account ID",
-            formatFunction: function (e) {
-              return T(e);
-            },
+            formatFunction: (e) => y(e),
           },
           {
             key: "timestamp",
             displayName: "Timestamp",
-            formatFunction: function (e) {
-              return e ? new Date(1e3 * e).toLocaleString() : "";
-            },
+            formatFunction: (e) =>
+              e ? new Date(1e3 * e).toLocaleString() : "",
           },
           {
             key: "action",
             displayName: "Action Enum",
-            formatFunction: function (e) {
-              return "".concat(y[e], " (").concat(e, ")");
-            },
+            formatFunction: (e) => `${k[e]} (${e})`,
           },
           {
             key: "action",
             displayName: "Audit Action",
-            formatFunction: function (e, t, n) {
-              return (
-                void 0 === t && (t = ""),
-                void 0 === n && (n = ""),
-                k
-                  .find(function (t) {
-                    return t.enum === e;
-                  })
-                  .formatFunction.call(null, t, n)
-              );
-            },
+            formatFunction: (e, t = "", a = "") =>
+              f.find((t) => t.enum === e).formatFunction.call(null, t, a),
           },
         ],
         S = [
@@ -673,16 +510,13 @@
           {
             key: "comment",
             displayName: "Comment",
-            formatFunction: function (e) {
-              return e ? '"'.concat(e, '"') : "";
-            },
+            formatFunction: (e) => (e ? `"${e}"` : ""),
           },
           {
             key: "comment_timestamp",
             displayName: "Last Comment",
-            formatFunction: function (e) {
-              return e ? new Date(1e3 * e).toLocaleString() : "";
-            },
+            formatFunction: (e) =>
+              e ? new Date(1e3 * e).toLocaleString() : "",
           },
           { key: "spray_count", displayName: "Sprays" },
           { key: "wallpaper_count", displayName: "Wallpapers" },
@@ -691,86 +525,75 @@
           {
             key: "timestamp",
             displayName: "Last Changed",
-            formatFunction: function (e) {
-              return e ? new Date(1e3 * e).toLocaleString() : "";
-            },
+            formatFunction: (e) =>
+              e ? new Date(1e3 * e).toLocaleString() : "",
           },
         ],
-        b = [
+        L = [
           { key: "series_id", displayName: "Series ID" },
           {
             key: "scheduled_time",
             displayName: "Series Date & Time",
-            formatFunction: function (e) {
-              return e ? new Date(1e3 * e).toLocaleString() : "";
-            },
+            formatFunction: (e) =>
+              e ? new Date(1e3 * e).toLocaleString() : "",
           },
           {
             key: "outcome",
             displayName: "Outcome",
-            formatFunction: function (e) {
-              return m.createElement(
+            formatFunction: (e) =>
+              o.createElement(
                 "div",
                 {
                   style: {
-                    color: "".concat(
-                      "Win" === e ? "green" : "Loss" === e ? "red" : "yellow"
-                    ),
+                    color:
+                      "" +
+                      ("Win" === e ? "green" : "Loss" === e ? "red" : "yellow"),
                   },
                 },
                 e
-              );
-            },
+              ),
           },
           { key: "score", displayName: "Score" },
           {
             key: "opponent_team_id",
             displayName: "Opponent",
-            formatFunction: function (e, t) {
-              return m.createElement(
-                m.Fragment,
+            formatFunction: (e, t) => {
+              return o.createElement(
+                o.Fragment,
                 null,
-                "".concat(t, " ( "),
-                ((n = e),
-                m.createElement(
+                `${t} ( `,
+                ((a = e),
+                o.createElement(
                   "a",
-                  {
-                    href: ""
-                      .concat(c.Y.BASE_URL)
-                      .concat(f._.teamdetails(n).substr(1)),
-                  },
-                  n
+                  { href: `${i.Y.BASE_URL}${_._.teamdetails(a).substr(1)}` },
+                  a
                 )),
                 " )"
               );
-              var n;
+              var a;
             },
           },
           {
             key: "matches",
             displayName: "Match IDs",
-            formatFunction: function (e) {
-              var t = [];
+            formatFunction: (e) => {
+              const t = [];
               return (
                 t.push(
-                  e.map(function (e) {
+                  e.map((e) => {
                     return [
                       ((t = e.match_id),
-                      m.createElement(
+                      o.createElement(
                         "a",
                         {
                           key: t,
-                          href: ""
-                            .concat(c.Y.BASE_URL)
-                            .concat("matches/match/".concat(t), "?u=")
-                            .concat(v, "&appid=")
-                            .concat(c.Y.DOTA_APP_ID),
+                          href: `${i.Y.BASE_URL}matches/match/${t}?u=${E}&appid=${i.Y.DOTA_APP_ID}`,
                         },
                         t
                       )),
-                      m.createElement(
+                      o.createElement(
                         "span",
-                        { key: "".concat(e.match_id, "-tab") },
+                        { key: `${e.match_id}-tab` },
                         " "
                       ),
                     ];
@@ -782,765 +605,453 @@
             },
           },
         ],
-        L = function (e) {
-          var t = (0, l.UO)().id,
-            n = (0, m.useState)([]),
-            i = n[0],
-            f = n[1],
-            A = (0, m.useState)(!1),
-            T = A[0],
-            y = A[1],
-            k = (0, m.useState)(!1),
-            L = k[0],
-            D = k[1],
-            O = (0, m.useState)({}),
-            U = O[0],
-            G = O[1],
-            w = (0, m.useState)(!1),
-            P = w[0],
-            Y = w[1],
-            M = (0, m.useState)(!1),
-            x = M[0],
-            B = M[1],
-            J = (0, m.useState)({}),
-            j = J[0],
-            H = J[1],
-            V = (0, m.useState)([]),
-            W = V[0],
-            K = V[1],
-            Z = (0, m.useState)(!0),
-            q = Z[0],
-            z = Z[1],
-            X = (0, m.useState)([]),
-            Q = X[0],
-            $ = X[1];
-          function ee() {
+        b = (e) => {
+          const t = (0, r.UO)().id,
+            [a, l] = (0, o.useState)([]),
+            [_, g] = (0, o.useState)(!1),
+            [y, k] = (0, o.useState)(!1),
+            [f, b] = (0, o.useState)({}),
+            [D, $] = (0, o.useState)(!1),
+            [O, U] = (0, o.useState)(!1),
+            [G, P] = (0, o.useState)({}),
+            [w, Y] = (0, o.useState)([]),
+            [M, x] = (0, o.useState)(!0),
+            [B, j] = (0, o.useState)([]);
+          function H() {
             var e, t;
-            return (0, r.mG)(this, void 0, void 0, function () {
-              var n, a, i;
-              return (0, r.Jh)(this, function (r) {
-                switch (r.label) {
-                  case 0:
-                    return c.Y.DOTA_APP_ID &&
-                      c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
-                      ? ((n = {
-                          appid: c.Y.DOTA_APP_ID,
-                          registration_period:
-                            c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                        }),
-                        [
-                          4,
-                          o().get(
-                            c.Y.BASE_URL +
-                              "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
-                            { params: n }
-                          ),
-                        ])
-                      : [2];
-                  case 1:
-                    return (
-                      (a = r.sent()),
-                      (i =
-                        (null ===
-                          (t =
-                            null === (e = null == a ? void 0 : a.data) ||
-                            void 0 === e
-                              ? void 0
-                              : e.result) || void 0 === t
+            return (0, n.mG)(this, void 0, void 0, function* () {
+              if (
+                !i.Y.DOTA_APP_ID ||
+                !i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
+              )
+                return;
+              const a = {
+                  appid: i.Y.DOTA_APP_ID,
+                  registration_period:
+                    i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                },
+                n = yield m().get(
+                  i.Y.BASE_URL + "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
+                  { params: a }
+                ),
+                r =
+                  (null ===
+                    (t =
+                      null === (e = null == n ? void 0 : n.data) || void 0 === e
+                        ? void 0
+                        : e.result) || void 0 === t
+                    ? void 0
+                    : t.teams) || [];
+              r.length && l(r), g(!0);
+            });
+          }
+          function V() {
+            return (0, n.mG)(this, void 0, void 0, function* () {
+              if (
+                !i.Y.DOTA_APP_ID ||
+                !i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
+                !t
+              )
+                return;
+              const e = { appid: i.Y.DOTA_APP_ID, u: E, team_id: t },
+                a = yield m().get(
+                  i.Y.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
+                  { params: e }
+                ),
+                l = null == a ? void 0 : a.data,
+                r = l.members || [];
+              try {
+                const e = yield m().get(
+                  i.Y.BASE_URL + "teams/getugcfilelinks/",
+                  { params: { team_id: t } }
+                );
+                e.data && Object.assign(l, e.data),
+                  yield Promise.all(
+                    r.map((e, t) =>
+                      (0, n.mG)(this, void 0, void 0, function* () {
+                        var a, n;
+                        const l = yield m().get(
+                          i.Y.BASE_URL +
+                            "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
+                          { params: { account_id: e.account_id } }
+                        );
+                        (r[t].is_pro = !!(null ===
+                          (a = null == l ? void 0 : l.data) || void 0 === a
                           ? void 0
-                          : t.teams) || []).length && f(i),
-                      y(!0),
-                      [2]
-                    );
-                }
-              });
+                          : a.is_pro)),
+                          (r[t].name =
+                            (null === (n = null == l ? void 0 : l.data) ||
+                            void 0 === n
+                              ? void 0
+                              : n.name) || "");
+                        const o = yield m().get(
+                          i.Y.BASE_URL + "teams/getpersonaname/",
+                          { params: { account_id: e.account_id } }
+                        );
+                        r[t].persona_name = (null == o ? void 0 : o.data) || "";
+                      })
+                    )
+                  );
+                const a = (e, t) =>
+                  e.is_pro && !t.is_pro
+                    ? -1
+                    : !e.is_pro && t.is_pro
+                    ? 1
+                    : e.admin && !t.admin
+                    ? -1
+                    : (!e.admin && t.admin) ||
+                      (null == e ? void 0 : e.pro_name.toLowerCase()) >
+                        (null == t ? void 0 : t.pro_name.toLowerCase())
+                    ? 1
+                    : (null == e ? void 0 : e.pro_name.toLowerCase()) <
+                      (null == t ? void 0 : t.pro_name.toLowerCase())
+                    ? -1
+                    : 0;
+                r.sort(a);
+              } catch (e) {
+                console.log("Error fetching individual player info.");
+              }
+              a && a.data && b(l), $(!0);
             });
           }
-          function te() {
-            return (0, r.mG)(this, void 0, void 0, function () {
-              var e,
-                n,
-                a,
-                i,
-                l,
-                m,
-                u = this;
-              return (0, r.Jh)(this, function (s) {
-                switch (s.label) {
-                  case 0:
-                    return c.Y.DOTA_APP_ID &&
-                      c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD &&
-                      t
-                      ? ((e = { appid: c.Y.DOTA_APP_ID, u: v, team_id: t }),
-                        [
-                          4,
-                          o().get(
-                            c.Y.BASE_URL +
-                              "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
-                            { params: e }
-                          ),
-                        ])
-                      : [2];
-                  case 1:
-                    (n = s.sent()),
-                      (a = null == n ? void 0 : n.data),
-                      (i = a.members || []),
-                      (s.label = 2);
-                  case 2:
-                    return (
-                      s.trys.push([2, 5, , 6]),
-                      [
-                        4,
-                        o().get(c.Y.BASE_URL + "teams/getugcfilelinks/", {
-                          params: { team_id: t },
-                        }),
-                      ]
-                    );
-                  case 3:
-                    return (
-                      (l = s.sent()).data && Object.assign(a, l.data),
-                      [
-                        4,
-                        Promise.all(
-                          i.map(function (e, t) {
-                            return (0, r.mG)(u, void 0, void 0, function () {
-                              var n, a, l, m;
-                              return (0, r.Jh)(this, function (r) {
-                                switch (r.label) {
-                                  case 0:
-                                    return [
-                                      4,
-                                      o().get(
-                                        c.Y.BASE_URL +
-                                          "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
-                                        { params: { account_id: e.account_id } }
-                                      ),
-                                    ];
-                                  case 1:
-                                    return (
-                                      (n = r.sent()),
-                                      (i[t].is_pro = !!(null ===
-                                        (l = null == n ? void 0 : n.data) ||
-                                      void 0 === l
-                                        ? void 0
-                                        : l.is_pro)),
-                                      (i[t].name =
-                                        (null ===
-                                          (m = null == n ? void 0 : n.data) ||
-                                        void 0 === m
-                                          ? void 0
-                                          : m.name) || ""),
-                                      [
-                                        4,
-                                        o().get(
-                                          c.Y.BASE_URL +
-                                            "teams/getpersonaname/",
-                                          {
-                                            params: {
-                                              account_id: e.account_id,
-                                            },
-                                          }
-                                        ),
-                                      ]
-                                    );
-                                  case 2:
-                                    return (
-                                      (a = r.sent()),
-                                      (i[t].persona_name =
-                                        (null == a ? void 0 : a.data) || ""),
-                                      [2]
-                                    );
-                                }
-                              });
-                            });
-                          })
-                        ),
-                      ]
-                    );
-                  case 4:
-                    return (
-                      s.sent(),
-                      (m = function (e, t) {
-                        return e.is_pro && !t.is_pro
-                          ? -1
-                          : !e.is_pro && t.is_pro
-                          ? 1
-                          : e.admin && !t.admin
-                          ? -1
-                          : (!e.admin && t.admin) ||
-                            (null == e ? void 0 : e.pro_name.toLowerCase()) >
-                              (null == t ? void 0 : t.pro_name.toLowerCase())
-                          ? 1
-                          : (null == e ? void 0 : e.pro_name.toLowerCase()) <
-                            (null == t ? void 0 : t.pro_name.toLowerCase())
-                          ? -1
-                          : 0;
-                      }),
-                      i.sort(m),
-                      [3, 6]
-                    );
-                  case 5:
-                    return (
-                      s.sent(),
-                      console.log("Error fetching individual player info."),
-                      [3, 6]
-                    );
-                  case 6:
-                    return n && n.data && G(a), Y(!0), [2];
-                }
-              });
-            });
-          }
-          (0, m.useEffect)(
-            function () {
+          (0, o.useEffect)(() => {
+            try {
+              !(function () {
+                var e;
+                (0, n.mG)(this, void 0, void 0, function* () {
+                  if (!i.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) return;
+                  const a = { season: i.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON },
+                    n = yield m().get(
+                      i.Y.BASE_URL +
+                        "webapi/IDOTA2Teams/GetFanContentStatus/v0001",
+                      { params: a }
+                    ),
+                    l =
+                      (null === (e = null == n ? void 0 : n.data) ||
+                      void 0 === e
+                        ? void 0
+                        : e.team_status_list) || [];
+                  if (l.length && t) {
+                    const e = l.find((e) => e.team_id.toString() == t);
+                    e && P(e);
+                  }
+                });
+              })();
+            } catch (e) {
+              console.log("Could not fetch fan content status.");
+            }
+          }, [t]),
+            (0, o.useEffect)(() => {
+              try {
+                H();
+              } catch (e) {
+                console.log("Could not fetch registered teams."), k(!0);
+              }
+            }, []),
+            (0, o.useEffect)(() => {
+              try {
+                V();
+              } catch (e) {
+                console.log("Could not fetch single team info."), U(!0);
+              }
+            }, [t]),
+            (0, o.useEffect)(() => {
               try {
                 !(function () {
-                  var e;
-                  (0, r.mG)(this, void 0, void 0, function () {
-                    var n, a, i, l;
-                    return (0, r.Jh)(this, function (r) {
-                      switch (r.label) {
-                        case 0:
-                          return c.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON
-                            ? ((n = {
-                                season: c.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON,
-                              }),
-                              [
-                                4,
-                                o().get(
-                                  c.Y.BASE_URL +
-                                    "webapi/IDOTA2Teams/GetFanContentStatus/v0001",
-                                  { params: n }
-                                ),
-                              ])
-                            : [2];
-                        case 1:
-                          return (
-                            (a = r.sent()),
-                            (i =
-                              (null === (e = null == a ? void 0 : a.data) ||
-                              void 0 === e
-                                ? void 0
-                                : e.team_status_list) || []).length &&
-                              t &&
-                              (l = i.find(function (e) {
-                                return e.team_id.toString() == t;
-                              })) &&
-                              H(l),
-                            [2]
-                          );
-                      }
-                    });
+                  (0, n.mG)(this, void 0, void 0, function* () {
+                    if (
+                      !i.Y.DOTA_APP_ID ||
+                      !i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
+                      !t
+                    )
+                      return;
+                    const e = {
+                        team_id: t,
+                        registration_period:
+                          i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                      },
+                      a = yield m().get(
+                        i.Y.BASE_URL +
+                          "webapi/IDOTA2Teams/GetTeamAuditInformation/v001",
+                        { params: e }
+                      ),
+                      l = null == a ? void 0 : a.data,
+                      r = (null == l ? void 0 : l.actions) || [];
+                    yield Promise.all(
+                      r.map((e) =>
+                        (0, n.mG)(this, void 0, void 0, function* () {
+                          if (
+                            e.action === v.kTRAA_TransferTeamAdmin &&
+                            e.account_id
+                          ) {
+                            const t = yield m().get(
+                              i.Y.BASE_URL + "teams/getpersonaname/",
+                              { params: { account_id: e.account_id } }
+                            );
+                            e.target_manager_name =
+                              (null == t ? void 0 : t.data) || "";
+                          }
+                        })
+                      )
+                    ),
+                      a && a.data && l.actions && j(l.actions);
                   });
                 })();
               } catch (e) {
-                console.log("Could not fetch fan content status.");
+                console.log("Could not fetch single team info."), U(!0);
               }
-            },
-            [t]
-          ),
-            (0, m.useEffect)(function () {
+            }, [t]),
+            (0, o.useEffect)(() => {
+              let e;
               try {
-                ee();
-              } catch (e) {
-                console.log("Could not fetch registered teams."), D(!0);
+                e = JSON.parse(i.Y.DPC_DATA).events;
+              } catch (e) {}
+              if (!e) return;
+              e = e.filter(
+                (e) =>
+                  e.registration_period ===
+                  i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
+              );
+              let a = [];
+              for (let t of e) {
+                const e = t.leagues.map((e) => e.league_id);
+                a.push(...e);
               }
-            }, []),
-            (0, m.useEffect)(
-              function () {
-                try {
-                  te();
-                } catch (e) {
-                  console.log("Could not fetch single team info."), B(!0);
-                }
-              },
-              [t]
-            ),
-            (0, m.useEffect)(
-              function () {
-                try {
-                  !(function () {
-                    (0, r.mG)(this, void 0, void 0, function () {
-                      var e,
-                        n,
-                        i,
-                        l,
-                        m = this;
-                      return (0, r.Jh)(this, function (u) {
-                        switch (u.label) {
-                          case 0:
-                            return c.Y.DOTA_APP_ID &&
-                              c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD &&
-                              t
-                              ? ((e = {
-                                  team_id: t,
-                                  registration_period:
-                                    c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                                }),
-                                [
-                                  4,
-                                  o().get(
-                                    c.Y.BASE_URL +
-                                      "webapi/IDOTA2Teams/GetTeamAuditInformation/v001",
-                                    { params: e }
-                                  ),
-                                ])
-                              : [2];
-                          case 1:
-                            return (
-                              (n = u.sent()),
-                              (i = null == n ? void 0 : n.data),
-                              (l = (null == i ? void 0 : i.actions) || []),
-                              [
-                                4,
-                                Promise.all(
-                                  l.map(function (e) {
-                                    return (0,
-                                    r.mG)(m, void 0, void 0, function () {
-                                      var t;
-                                      return (0, r.Jh)(this, function (n) {
-                                        switch (n.label) {
-                                          case 0:
-                                            return e.action ===
-                                              a.kTRAA_TransferTeamAdmin &&
-                                              e.account_id
-                                              ? [
-                                                  4,
-                                                  o().get(
-                                                    c.Y.BASE_URL +
-                                                      "teams/getpersonaname/",
-                                                    {
-                                                      params: {
-                                                        account_id:
-                                                          e.account_id,
-                                                      },
-                                                    }
-                                                  ),
-                                                ]
-                                              : [3, 2];
-                                          case 1:
-                                            (t = n.sent()),
-                                              (e.target_manager_name =
-                                                (null == t ? void 0 : t.data) ||
-                                                ""),
-                                              (n.label = 2);
-                                          case 2:
-                                            return [2];
-                                        }
-                                      });
-                                    });
-                                  })
-                                ),
-                              ]
-                            );
-                          case 2:
-                            return (
-                              u.sent(),
-                              n && n.data && i.actions && $(i.actions),
-                              [2]
-                            );
-                        }
-                      });
-                    });
-                  })();
-                } catch (e) {
-                  console.log("Could not fetch single team info."), B(!0);
-                }
-              },
-              [t]
-            ),
-            (0, m.useEffect)(
-              function () {
-                var e;
-                try {
-                  e = JSON.parse(c.Y.DPC_DATA).events;
-                } catch (e) {}
-                if (e) {
-                  e = e.filter(function (e) {
-                    return (
-                      e.registration_period ===
-                      c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
-                    );
+              a.sort(),
+                (a = a.filter((e, t, a) => a.indexOf(e) == t)),
+                a.length > 50 && (a = a.slice(a.length - 50));
+              try {
+                !(function () {
+                  (0, n.mG)(this, void 0, void 0, function* () {
+                    if (!a.length) return;
+                    const e = { league_ids: a.join(",") },
+                      n = yield m().get(
+                        i.Y.BASE_URL +
+                          "webapi/IDOTA2League/GetLeaguesData/v001",
+                        { params: e }
+                      ),
+                      l = null == n ? void 0 : n.data,
+                      r = null == l ? void 0 : l.leagues,
+                      o = [];
+                    for (let e of r)
+                      for (let a of e.node_groups)
+                        for (let n of a.node_groups)
+                          for (let a of n.nodes)
+                            a.team_id_1 &&
+                              a.team_id_2 &&
+                              (a.team_id_1 == t || a.team_id_2 == t) &&
+                              ((a.league_name =
+                                e.info.name + ` (${e.info.league_id})`),
+                              a.team_id_1 == t
+                                ? ((a.opponent_team_id = a.team_id_2),
+                                  a.team_1_wins > a.team_2_wins
+                                    ? (a.outcome = "Win")
+                                    : a.team_1_wins === a.team_2_wins
+                                    ? (a.outcome = "Tie")
+                                    : (a.outcome = "Loss"),
+                                  (a.score = `${a.team_1_wins} - ${a.team_2_wins}`))
+                                : ((a.opponent_team_id = a.team_id_1),
+                                  a.team_2_wins > a.team_1_wins
+                                    ? (a.outcome = "Win")
+                                    : a.team_2_wins === a.team_1_wins
+                                    ? (a.outcome = "Tie")
+                                    : (a.outcome = "Loss"),
+                                  (a.score = `${a.team_2_wins} - ${a.team_1_wins}`)),
+                              0 === a.team_1_wins &&
+                                0 === a.team_2_wins &&
+                                a.scheduled_time &&
+                                new Date().getTime() < 1e3 * a.scheduled_time &&
+                                (a.outcome = "Upcoming"),
+                              o.push(a));
+                    var c;
+                    o.sort((e, t) =>
+                      e.scheduled_time > t.scheduled_time
+                        ? -1
+                        : e.scheduled_time < t.scheduled_time
+                        ? 1
+                        : 0
+                    ),
+                      o.length &&
+                        Y(
+                          ((c = "league_name"),
+                          o.reduce(
+                            (e, t) =>
+                              Object.assign(Object.assign({}, e), {
+                                [t[c]]: [...(e[t[c]] || []), t],
+                              }),
+                            {}
+                          ))
+                        );
                   });
-                  for (var n = [], a = 0, i = e; a < i.length; a++) {
-                    var l = i[a].leagues.map(function (e) {
-                      return e.league_id;
-                    });
-                    n.push.apply(n, l);
-                  }
-                  n.sort(),
-                    (n = n.filter(function (e, t, n) {
-                      return n.indexOf(e) == t;
-                    })).length > 50 && (n = n.slice(n.length - 50));
-                  try {
-                    !(function () {
-                      (0, r.mG)(this, void 0, void 0, function () {
-                        var e,
-                          a,
-                          i,
-                          l,
-                          m,
-                          u,
-                          s,
-                          d,
-                          _,
-                          f,
-                          p,
-                          A,
-                          g,
-                          v,
-                          E,
-                          T,
-                          y,
-                          k,
-                          h;
-                        return (0, r.Jh)(this, function (R) {
-                          switch (R.label) {
-                            case 0:
-                              return n.length
-                                ? ((e = { league_ids: n.join(",") }),
-                                  [
-                                    4,
-                                    o().get(
-                                      c.Y.BASE_URL +
-                                        "webapi/IDOTA2League/GetLeaguesData/v001",
-                                      { params: e }
-                                    ),
-                                  ])
-                                : [2];
-                            case 1:
-                              for (
-                                a = R.sent(),
-                                  i = null == a ? void 0 : a.data,
-                                  l = null == i ? void 0 : i.leagues,
-                                  m = [],
-                                  u = 0,
-                                  s = l;
-                                u < s.length;
-                                u++
-                              )
-                                for (
-                                  d = s[u], _ = 0, f = d.node_groups;
-                                  _ < f.length;
-                                  _++
-                                )
-                                  for (
-                                    p = f[_], A = 0, g = p.node_groups;
-                                    A < g.length;
-                                    A++
-                                  )
-                                    for (
-                                      v = g[A], E = 0, T = v.nodes;
-                                      E < T.length;
-                                      E++
-                                    )
-                                      (y = T[E]).team_id_1 &&
-                                        y.team_id_2 &&
-                                        (y.team_id_1 == t ||
-                                          y.team_id_2 == t) &&
-                                        ((y.league_name =
-                                          d.info.name +
-                                          " (".concat(d.info.league_id, ")")),
-                                        y.team_id_1 == t
-                                          ? ((y.opponent_team_id = y.team_id_2),
-                                            y.team_1_wins > y.team_2_wins
-                                              ? (y.outcome = "Win")
-                                              : y.team_1_wins === y.team_2_wins
-                                              ? (y.outcome = "Tie")
-                                              : (y.outcome = "Loss"),
-                                            (y.score = ""
-                                              .concat(y.team_1_wins, " - ")
-                                              .concat(y.team_2_wins)))
-                                          : ((y.opponent_team_id = y.team_id_1),
-                                            y.team_2_wins > y.team_1_wins
-                                              ? (y.outcome = "Win")
-                                              : y.team_2_wins === y.team_1_wins
-                                              ? (y.outcome = "Tie")
-                                              : (y.outcome = "Loss"),
-                                            (y.score = ""
-                                              .concat(y.team_2_wins, " - ")
-                                              .concat(y.team_1_wins))),
-                                        0 === y.team_1_wins &&
-                                          0 === y.team_2_wins &&
-                                          y.scheduled_time &&
-                                          new Date().getTime() <
-                                            1e3 * y.scheduled_time &&
-                                          (y.outcome = "Upcoming"),
-                                        m.push(y));
-                              return (
-                                (k = function (e, t) {
-                                  return e.scheduled_time > t.scheduled_time
-                                    ? -1
-                                    : e.scheduled_time < t.scheduled_time
-                                    ? 1
-                                    : 0;
-                                }),
-                                m.sort(k),
-                                (h = function (e, t) {
-                                  return e.reduce(function (e, n) {
-                                    var a;
-                                    return (0,
-                                    r.pi)((0, r.pi)({}, e), (((a = {})[n[t]] = (0, r.ev)((0, r.ev)([], e[n[t]] || [], !0), [n], !1)), a));
-                                  }, {});
-                                }),
-                                m.length && K(h(m, "league_name")),
-                                [2]
-                              );
-                          }
-                        });
-                      });
-                    })();
-                  } catch (e) {
-                    console.log("Could not fetch leagues data.");
-                  }
-                }
-              },
-              [t]
-            );
-          var ne,
-            ae =
-              i.find(function (e) {
-                return e.team_id == t;
-              }) || {};
+                })();
+              } catch (e) {
+                console.log("Could not fetch leagues data.");
+              }
+            }, [t]);
+          const W = a.find((e) => e.team_id == t) || {};
+          let J;
           if (
-            ((T && P) || (ne = m.createElement("div", null, "Loading...")),
-            T &&
-              (0 == i.length || L) &&
-              (ne = m.createElement(
+            ((_ && D) || (J = o.createElement("div", null, "Loading...")),
+            _ &&
+              (0 == a.length || y) &&
+              (J = o.createElement(
                 "div",
                 null,
                 "Error loading registered teams..."
               )),
-            P &&
-              (0 == Object.keys(U).length || x) &&
-              (ne = m.createElement(
+            D &&
+              (0 == Object.keys(f).length || O) &&
+              (J = o.createElement(
                 "div",
                 null,
-                "Error loading single team info for teamId ".concat(t, " ")
+                `Error loading single team info for teamId ${t} `
               )),
-            ne)
+            J)
           )
-            return m.createElement(
+            return o.createElement(
               "div",
-              { className: g().TeamDetails },
-              m.createElement(d.j, { bOverlapping: !1 }),
-              m.createElement(
-                u.q,
+              { className: p().TeamDetails },
+              o.createElement(d.j, { bOverlapping: !1 }),
+              o.createElement(
+                c.q,
                 null,
-                m.createElement("title", null, "Dota 2 - Team Details")
+                o.createElement("title", null, "Dota 2 - Team Details")
               ),
-              m.createElement(p.Z, null),
-              m.createElement("div", { className: g().ContentFrame }, ne),
-              m.createElement(_.U, null)
+              o.createElement(A.Z, null),
+              o.createElement("div", { className: p().ContentFrame }, J),
+              o.createElement(u.U, null)
             );
-          var re = U.members || [];
-          re.forEach(function (e) {
-            (e.kick_link = ""
-              .concat(
-                "".concat(
-                  c.Y.BASE_URL,
-                  "webapi/IDOTA2Teams/RemoveTeamMember/v0001"
-                ),
-                "?u="
-              )
-              .concat(v, "&appid=")
-              .concat(c.Y.DOTA_APP_ID, "&team_id=")
-              .concat(t, "&account_id=")
-              .concat(e.account_id)),
+          const K = f.members || [];
+          K.forEach((e) => {
+            (e.kick_link = `${i.Y.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${E}&appid=${i.Y.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
               (e.make_admin_link = e.admin
                 ? ""
-                : ""
-                    .concat(
-                      "".concat(
-                        c.Y.BASE_URL,
-                        "webapi/IDOTA2Teams/SetTeamAdmin/v0001"
-                      ),
-                      "?u="
-                    )
-                    .concat(v, "&appid=")
-                    .concat(c.Y.DOTA_APP_ID, "&team_id=")
-                    .concat(t, "&account_id=")
-                    .concat(e.account_id));
+                : `${i.Y.BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${E}&appid=${i.Y.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`);
           });
-          var ie,
-            oe = function (e) {
-              var t = i.find(function (t) {
-                return t.team_id == e;
-              });
-              return t ? t.team_name : "";
-            };
-          return m.createElement(
+          const Z = (e) => {
+            const t = a.find((t) => t.team_id == e);
+            return t ? t.team_name : "";
+          };
+          return o.createElement(
             "div",
-            { className: g().TeamDetails },
-            m.createElement(d.j, { bOverlapping: !1 }),
-            m.createElement(
-              u.q,
+            { className: p().TeamDetails },
+            o.createElement(d.j, { bOverlapping: !1 }),
+            o.createElement(
+              c.q,
               null,
-              m.createElement("title", null, "Dota 2 - Team Details")
+              o.createElement("title", null, "Dota 2 - Team Details")
             ),
-            m.createElement(p.Z, null),
-            m.createElement(
+            o.createElement(A.Z, null),
+            o.createElement(
               "div",
-              { className: g().ContentFrame },
-              m.createElement(
+              { className: p().ContentFrame },
+              o.createElement(
                 "h1",
-                { className: g().Header },
-                "Team Details for "
-                  .concat(null == U ? void 0 : U.name, " (")
-                  .concat(U.team_id, ")")
+                { className: p().Header },
+                `Team Details for ${null == f ? void 0 : f.name} (${f.team_id})`
               ),
-              m.createElement(
+              o.createElement(
                 "div",
-                { className: g().MiscInfoGrid },
-                h.map(function (e) {
-                  return m.createElement(
-                    m.Fragment,
-                    { key: "".concat(e.key, "-misc-row") },
-                    m.createElement("div", null, e.displayName || e.key),
-                    m.createElement(
+                { className: p().MiscInfoGrid },
+                R.map((e) =>
+                  o.createElement(
+                    o.Fragment,
+                    { key: `${e.key}-misc-row` },
+                    o.createElement("div", null, e.displayName || e.key),
+                    o.createElement(
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, U[e.key])
-                        : JSON.stringify(U[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, f[e.key])
+                        : JSON.stringify(f[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             ""
                           )
                     )
-                  );
-                }),
-                !q &&
-                  m.createElement(
-                    m.Fragment,
+                  )
+                ),
+                !M &&
+                  o.createElement(
+                    o.Fragment,
                     null,
-                    m.createElement(
+                    o.createElement(
                       "div",
-                      {
-                        className: g().Link,
-                        onClick: function () {
-                          return z(!0);
-                        },
-                      },
+                      { className: p().Link, onClick: () => x(!0) },
                       "Update Info / Add Member"
                     ),
-                    m.createElement("div", null)
+                    o.createElement("div", null)
                   )
               ),
-              q &&
-                m.createElement(
-                  m.Fragment,
+              M &&
+                o.createElement(
+                  o.Fragment,
                   null,
-                  m.createElement("div", { className: g().SmoothLine }),
-                  m.createElement(
-                    function (e) {
-                      var t = e.strTeamId,
-                        n = (0, m.useState)(""),
-                        a = n[0],
-                        i = n[1],
-                        l = (0, m.useState)(""),
-                        u = l[0],
-                        s = l[1],
-                        d = (0, m.useState)(""),
-                        _ = d[0],
-                        f = d[1],
-                        p = (0, m.useState)(!1),
-                        A = p[0],
-                        v = p[1];
-                      return m.createElement(
+                  o.createElement("div", { className: p().SmoothLine }),
+                  o.createElement(
+                    ({ strTeamId: e }) => {
+                      const [t, a] = (0, o.useState)(""),
+                        [l, r] = (0, o.useState)(""),
+                        [c, s] = (0, o.useState)(""),
+                        [d, u] = (0, o.useState)(!1);
+                      return o.createElement(
                         "form",
                         {
-                          onSubmit: function (e) {
-                            return (0, r.mG)(
-                              void 0,
-                              void 0,
-                              void 0,
-                              function () {
-                                var n;
-                                return (0, r.Jh)(this, function (r) {
-                                  switch (r.label) {
-                                    case 0:
-                                      return (
-                                        e.preventDefault(),
-                                        a || u || _
-                                          ? (v(!0),
-                                            (n = {
-                                              team_id: t,
-                                              team_name: a,
-                                              team_tag: u,
-                                              team_abbreviation: _,
-                                            }),
-                                            [
-                                              4,
-                                              o().get(
-                                                "".concat(
-                                                  c.Y.BASE_URL,
-                                                  "webapi/IDOTA2Teams/EditTeamName/v0001"
-                                                ),
-                                                { params: n }
-                                              ),
-                                            ])
-                                          : [2]
-                                      );
-                                    case 1:
-                                      return (
-                                        r.sent(),
-                                        te(),
-                                        setTimeout(function () {
-                                          return v(!1);
-                                        }, E),
-                                        [2]
-                                      );
-                                  }
-                                });
-                              }
-                            );
-                          },
+                          onSubmit: (a) =>
+                            (0, n.mG)(void 0, void 0, void 0, function* () {
+                              if ((a.preventDefault(), !t && !l && !c)) return;
+                              u(!0);
+                              const n = {
+                                team_id: e,
+                                team_name: t,
+                                team_tag: l,
+                                team_abbreviation: c,
+                              };
+                              yield m().get(
+                                `${i.Y.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
+                                { params: n }
+                              );
+                              V(), setTimeout(() => u(!1), T);
+                            }),
                         },
-                        m.createElement(
+                        o.createElement(
                           "h2",
-                          { className: g().Header },
+                          { className: p().Header },
                           "Update Team Information"
                         ),
-                        m.createElement(
+                        o.createElement(
                           "div",
-                          { className: g().EditInfoGrid },
-                          m.createElement("div", null, "Team Name"),
-                          m.createElement("input", {
-                            className: g().MediumTextField,
+                          { className: p().EditInfoGrid },
+                          o.createElement("div", null, "Team Name"),
+                          o.createElement("input", {
+                            className: p().MediumTextField,
                             type: "text",
                             name: "teamName",
                             maxLength: 32,
-                            onChange: function (e) {
-                              return i(e.target.value);
-                            },
+                            onChange: (e) => a(e.target.value),
                           }),
-                          m.createElement("div", null, "Tag"),
-                          m.createElement("input", {
-                            className: g().SmallTextField,
+                          o.createElement("div", null, "Tag"),
+                          o.createElement("input", {
+                            className: p().SmallTextField,
                             type: "text",
                             name: "teamTag",
                             maxLength: 8,
-                            onChange: function (e) {
-                              return s(e.target.value);
-                            },
+                            onChange: (e) => r(e.target.value),
                           }),
-                          m.createElement("div", null, "Abbreviation"),
-                          m.createElement("input", {
-                            className: g().SmallTextField,
+                          o.createElement("div", null, "Abbreviation"),
+                          o.createElement("input", {
+                            className: p().SmallTextField,
                             type: "text",
                             name: "teamAbbreviation",
                             maxLength: 4,
-                            onChange: function (e) {
-                              return f(e.target.value);
-                            },
+                            onChange: (e) => s(e.target.value),
                           }),
-                          m.createElement(
+                          o.createElement(
                             "div",
                             null,
-                            m.createElement(
+                            o.createElement(
                               "button",
-                              { className: g().SubmitButton, disabled: A },
-                              A ? "Updating..." : "Update"
+                              { className: p().SubmitButton, disabled: d },
+                              d ? "Updating..." : "Update"
                             )
                           )
                         )
@@ -1548,86 +1059,49 @@
                     },
                     { strTeamId: t }
                   ),
-                  m.createElement("div", { className: g().SmoothLine }),
-                  m.createElement(
-                    function (e) {
-                      var t = e.strTeamId,
-                        n = (0, m.useState)(""),
-                        a = n[0],
-                        i = n[1],
-                        l = (0, m.useState)(!1),
-                        u = l[0],
-                        s = l[1];
-                      return m.createElement(
+                  o.createElement("div", { className: p().SmoothLine }),
+                  o.createElement(
+                    ({ strTeamId: e }) => {
+                      const [t, a] = (0, o.useState)(""),
+                        [l, r] = (0, o.useState)(!1);
+                      return o.createElement(
                         "form",
                         {
-                          onSubmit: function (e) {
-                            return (0, r.mG)(
-                              void 0,
-                              void 0,
-                              void 0,
-                              function () {
-                                var n;
-                                return (0, r.Jh)(this, function (r) {
-                                  switch (r.label) {
-                                    case 0:
-                                      return (
-                                        e.preventDefault(),
-                                        a
-                                          ? (s(!0),
-                                            (n = { team_id: t, account_id: a }),
-                                            [
-                                              4,
-                                              o().get(
-                                                "".concat(
-                                                  c.Y.BASE_URL,
-                                                  "webapi/IDOTA2Teams/AddTeamMember/v0001"
-                                                ),
-                                                { params: n }
-                                              ),
-                                            ])
-                                          : [2]
-                                      );
-                                    case 1:
-                                      return (
-                                        r.sent(),
-                                        te(),
-                                        setTimeout(function () {
-                                          return s(!1);
-                                        }, E),
-                                        [2]
-                                      );
-                                  }
-                                });
-                              }
-                            );
-                          },
+                          onSubmit: (a) =>
+                            (0, n.mG)(void 0, void 0, void 0, function* () {
+                              if ((a.preventDefault(), !t)) return;
+                              r(!0);
+                              const n = { team_id: e, account_id: t };
+                              yield m().get(
+                                `${i.Y.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
+                                { params: n }
+                              );
+                              V(), setTimeout(() => r(!1), T);
+                            }),
                         },
-                        m.createElement(
+                        o.createElement(
                           "h2",
-                          { className: g().Header },
+                          { className: p().Header },
                           "Add Team Member"
                         ),
-                        m.createElement(
+                        o.createElement(
                           "div",
-                          { className: g().EditInfoGrid },
-                          m.createElement("div", null, "Account ID"),
-                          m.createElement("input", {
-                            className: g().MediumTextField,
+                          { className: p().EditInfoGrid },
+                          o.createElement("div", null, "Account ID"),
+                          o.createElement("input", {
+                            className: p().MediumTextField,
                             type: "text",
                             name: "accountId",
                             maxLength: 20,
-                            onChange: function (e) {
-                              return i(e.target.value);
-                            },
+                            onChange: (e) => a(e.target.value),
                           }),
-                          m.createElement(
+                          o.createElement(
                             "div",
                             null,
-                            m.createElement(
+                            o.createElement(
                               "button",
-                              { className: g().SubmitButton, disabled: u },
-                              u ? "Adding..." : "Add Account"
+                              { className: p().SubmitButton, disabled: l },
+                              l ? "Adding..." : "Add Account"
                             )
                           )
                         )
@@ -1636,206 +1110,151 @@
                     { strTeamId: t }
                   )
                 ),
-              m.createElement("div", { className: g().SmoothLine }),
-              m.createElement("h2", { className: g().Header }, "Members"),
-              m.createElement(
+              o.createElement("div", { className: p().SmoothLine }),
+              o.createElement("h2", { className: p().Header }, "Members"),
+              o.createElement(
                 "div",
                 {
-                  className: g().MembersGrid,
+                  className: p().MembersGrid,
                   style: {
-                    gridTemplateColumns: "250px repeat(".concat(
-                      R.length - 1,
-                      ", auto)"
-                    ),
+                    gridTemplateColumns: `250px repeat(${N.length - 1}, auto)`,
                   },
                 },
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  R.map(function (e) {
-                    return m.createElement(
+                  N.map((e) =>
+                    o.createElement(
                       "div",
-                      { key: "".concat(e.key, "-members-grid-header}") },
-                      m.createElement("b", null, e.displayName || e.key)
-                    );
-                  })
+                      { key: `${e.key}-members-grid-header}` },
+                      o.createElement("b", null, e.displayName || e.key)
+                    )
+                  )
                 ),
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  !!re.length &&
-                    re.map(function (e) {
-                      return R.map(function (t) {
-                        return m.createElement(
+                  !!K.length &&
+                    K.map((e) =>
+                      N.map((t) =>
+                        o.createElement(
                           "div",
-                          {
-                            key: ""
-                              .concat(t.key, "-member-row-")
-                              .concat(e.account_id),
-                          },
+                          { key: `${t.key}-member-row-${e.account_id}` },
                           t.formatFunction
-                            ? t.formatFunction.call(null, e[t.key], te)
+                            ? t.formatFunction.call(null, e[t.key], V)
                             : JSON.stringify(e[t.key] || "", null, 2).replace(
                                 /['"]+/g,
                                 ""
                               )
-                        );
-                      });
-                    }),
-                  !re.length && m.createElement("div", null, "No team members.")
+                        )
+                      )
+                    ),
+                  !K.length && o.createElement("div", null, "No team members.")
                 )
               ),
-              m.createElement("br", null),
-              m.createElement(
+              o.createElement("br", null),
+              o.createElement(
                 "div",
                 {
-                  className: g().ManagerGrid,
+                  className: p().ManagerGrid,
                   style: {
-                    gridTemplateColumns: "250px repeat(".concat(
-                      N.length - 1,
-                      ", auto)"
-                    ),
+                    gridTemplateColumns: `250px repeat(${h.length - 1}, auto)`,
                   },
                 },
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  N.map(function (e) {
-                    return m.createElement(
+                  h.map((e) =>
+                    o.createElement(
                       "div",
-                      { key: "".concat(e.key, "-manager-grid-header}") },
-                      m.createElement("b", null, e.displayName || e.key)
-                    );
-                  })
+                      { key: `${e.key}-manager-grid-header}` },
+                      o.createElement("b", null, e.displayName || e.key)
+                    )
+                  )
                 ),
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  N.map(function (e) {
-                    return m.createElement(
-                      m.Fragment,
-                      { key: "".concat(e.key, "-manager-row") },
-                      m.createElement(
+                  h.map((e) =>
+                    o.createElement(
+                      o.Fragment,
+                      { key: `${e.key}-manager-row` },
+                      o.createElement(
                         "div",
                         null,
                         e.formatFunction
-                          ? e.formatFunction.call(null, ae[e.key])
-                          : JSON.stringify(ae[e.key] || "", null, 2).replace(
+                          ? e.formatFunction.call(null, W[e.key])
+                          : JSON.stringify(W[e.key] || "", null, 2).replace(
                               /['"]+/g,
                               ""
                             )
                       )
-                    );
-                  }),
-                  !N.length && m.createElement("div", null, "No manager.")
+                    )
+                  ),
+                  !h.length && o.createElement("div", null, "No manager.")
                 )
               ),
-              q &&
-                m.createElement(
-                  m.Fragment,
+              M &&
+                o.createElement(
+                  o.Fragment,
                   null,
-                  m.createElement("div", { className: g().SmoothLine }),
-                  m.createElement(
-                    function (e) {
-                      e.strTeamId;
-                      var t = (0, m.useState)(""),
-                        n = t[0],
-                        a = t[1],
-                        i = (0, m.useState)(""),
-                        l = i[0],
-                        u = i[1],
-                        s = (0, m.useState)(!1),
-                        d = s[0],
-                        _ = s[1];
-                      return m.createElement(
+                  o.createElement("div", { className: p().SmoothLine }),
+                  o.createElement(
+                    ({ strTeamId: e }) => {
+                      const [t, a] = (0, o.useState)(""),
+                        [l, r] = (0, o.useState)(""),
+                        [c, s] = (0, o.useState)(!1);
+                      return o.createElement(
                         "form",
                         {
-                          onSubmit: function (e) {
-                            return (0, r.mG)(
-                              void 0,
-                              void 0,
-                              void 0,
-                              function () {
-                                var t;
-                                return (0, r.Jh)(this, function (a) {
-                                  switch (a.label) {
-                                    case 0:
-                                      return (
-                                        e.preventDefault(),
-                                        n && l
-                                          ? (_(!0),
-                                            (t = {
-                                              admin_account_id: parseInt(n),
-                                              admin_email: l,
-                                              registration_period:
-                                                c.Y
-                                                  .DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                                            }),
-                                            [
-                                              4,
-                                              o().post(
-                                                ""
-                                                  .concat(
-                                                    c.Y.BASE_URL,
-                                                    "webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u="
-                                                  )
-                                                  .concat(v, "&appid=")
-                                                  .concat(c.Y.DOTA_APP_ID),
-                                                { params: t }
-                                              ),
-                                            ])
-                                          : [2]
-                                      );
-                                    case 1:
-                                      return (
-                                        a.sent(),
-                                        ee(),
-                                        setTimeout(function () {
-                                          return _(!1);
-                                        }, E),
-                                        [2]
-                                      );
-                                  }
-                                });
-                              }
-                            );
-                          },
+                          onSubmit: (e) =>
+                            (0, n.mG)(void 0, void 0, void 0, function* () {
+                              if ((e.preventDefault(), !t || !l)) return;
+                              s(!0);
+                              const a = {
+                                admin_account_id: parseInt(t),
+                                admin_email: l,
+                                registration_period:
+                                  i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                              };
+                              yield m().post(
+                                `${i.Y.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${E}&appid=${i.Y.DOTA_APP_ID}`,
+                                { params: a }
+                              );
+                              H(), setTimeout(() => s(!1), T);
+                            }),
                         },
-                        m.createElement(
+                        o.createElement(
                           "h2",
-                          { className: g().Header },
+                          { className: p().Header },
                           "Update Manager Email"
                         ),
-                        m.createElement(
+                        o.createElement(
                           "div",
-                          { className: g().EditInfoGrid },
-                          m.createElement("div", null, "Manager Account ID"),
-                          m.createElement("input", {
-                            className: g().MediumTextField,
+                          { className: p().EditInfoGrid },
+                          o.createElement("div", null, "Manager Account ID"),
+                          o.createElement("input", {
+                            className: p().MediumTextField,
                             type: "text",
                             name: "adminAccountId",
                             maxLength: 20,
-                            onChange: function (e) {
-                              return a(e.target.value);
-                            },
+                            onChange: (e) => a(e.target.value),
                           }),
-                          m.createElement("div", null, "Manager Email"),
-                          m.createElement("input", {
-                            className: g().MediumTextField,
+                          o.createElement("div", null, "Manager Email"),
+                          o.createElement("input", {
+                            className: p().MediumTextField,
                             type: "email",
                             name: "adminEmail",
                             maxLength: 255,
-                            onChange: function (e) {
-                              return u(e.target.value);
-                            },
+                            onChange: (e) => r(e.target.value),
                           }),
-                          m.createElement(
+                          o.createElement(
                             "div",
                             null,
-                            m.createElement(
+                            o.createElement(
                               "button",
-                              { className: g().SubmitButton, disabled: d },
-                              d ? "Updating..." : "Update Manager Email"
+                              { className: p().SubmitButton, disabled: c },
+                              c ? "Updating..." : "Update Manager Email"
                             )
                           )
                         )
@@ -1844,113 +1263,102 @@
                     { strTeamId: t }
                   )
                 ),
-              m.createElement("div", { className: g().SmoothLine }),
-              m.createElement(
+              o.createElement("div", { className: p().SmoothLine }),
+              o.createElement(
                 "h2",
-                { className: g().Header },
+                { className: p().Header },
                 "Logos & Colors"
               ),
-              m.createElement(
+              o.createElement(
                 "div",
-                { className: g().LogoAndColorsGrid },
-                F.map(function (e) {
-                  return m.createElement(
-                    m.Fragment,
-                    { key: "".concat(e.key, "-logo-colors-row") },
-                    m.createElement("div", null, e.displayName || e.key),
-                    m.createElement(
+                { className: p().LogoAndColorsGrid },
+                F.map((e) =>
+                  o.createElement(
+                    o.Fragment,
+                    { key: `${e.key}-logo-colors-row` },
+                    o.createElement("div", null, e.displayName || e.key),
+                    o.createElement(
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, U[e.key], U.team_id)
-                        : JSON.stringify(U[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, f[e.key], f.team_id)
+                        : JSON.stringify(f[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             ""
                           )
                     )
-                  );
-                })
+                  )
+                )
               ),
-              m.createElement("br", null),
-              m.createElement(
+              o.createElement("br", null),
+              o.createElement(
                 "div",
                 {
-                  className: g().UGCLogosGrid,
-                  style: {
-                    gridTemplateColumns: "repeat(".concat(I.length, ", auto)"),
-                  },
+                  className: p().UGCLogosGrid,
+                  style: { gridTemplateColumns: `repeat(${I.length}, auto)` },
                 },
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  I.map(function (e) {
-                    return m.createElement(
+                  I.map((e) =>
+                    o.createElement(
                       "div",
-                      { key: "".concat(e.key, "-ugc-grid-header}") },
-                      m.createElement("b", null, e.displayName || e.key)
-                    );
-                  })
+                      { key: `${e.key}-ugc-grid-header}` },
+                      o.createElement("b", null, e.displayName || e.key)
+                    )
+                  )
                 ),
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  I.map(function (e) {
-                    return m.createElement(
+                  I.map((e) =>
+                    o.createElement(
                       "div",
-                      { key: "".concat(e.key, "-ugc-logo") },
+                      { key: `${e.key}-ugc-logo` },
                       e.formatFunction
-                        ? e.formatFunction.call(null, U[e.key])
-                        : JSON.stringify(U[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, f[e.key])
+                        : JSON.stringify(f[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             ""
                           )
-                    );
-                  })
+                    )
+                  )
                 )
               ),
-              m.createElement("div", { className: g().SmoothLine }),
-              m.createElement(
+              o.createElement("div", { className: p().SmoothLine }),
+              o.createElement(
                 "h2",
-                { className: g().Header },
+                { className: p().Header },
                 "Audit Action History"
               ),
-              m.createElement(
+              o.createElement(
                 "div",
                 {
-                  className: g().AuditActionsGrid,
-                  style: {
-                    gridTemplateColumns: "repeat(".concat(C.length, ", auto)"),
-                  },
+                  className: p().AuditActionsGrid,
+                  style: { gridTemplateColumns: `repeat(${C.length}, auto)` },
                 },
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  C.map(function (e) {
-                    return m.createElement(
+                  C.map((e) =>
+                    o.createElement(
                       "div",
                       {
-                        key: ""
-                          .concat(e.key, "-")
-                          .concat(e.displayName, "-audit-action-grid-header"),
+                        key: `${e.key}-${e.displayName}-audit-action-grid-header`,
                       },
-                      m.createElement("b", null, e.displayName || e.key)
-                    );
-                  })
+                      o.createElement("b", null, e.displayName || e.key)
+                    )
+                  )
                 ),
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  !!Q.length &&
-                    Q.map(function (e) {
-                      return C.map(function (t) {
-                        return m.createElement(
+                  !!B.length &&
+                    B.map((e) =>
+                      C.map((t) =>
+                        o.createElement(
                           "div",
-                          {
-                            key: ""
-                              .concat(t.key, "-")
-                              .concat(t.displayName, "-")
-                              .concat(e.timestamp),
-                          },
+                          { key: `${t.key}-${t.displayName}-${e.timestamp}` },
                           t.formatFunction
                             ? t.formatFunction.call(
                                 null,
@@ -1962,149 +1370,128 @@
                                 /['"]+/g,
                                 ""
                               )
-                        );
-                      });
-                    }),
-                  !Q.length && m.createElement("div", null, "No audit actions.")
+                        )
+                      )
+                    ),
+                  !B.length && o.createElement("div", null, "No audit actions.")
                 )
               ),
-              m.createElement("div", { className: g().SmoothLine }),
-              m.createElement(
+              o.createElement("div", { className: p().SmoothLine }),
+              o.createElement(
                 "h2",
-                { className: g().Header },
+                { className: p().Header },
                 "Supporters Club / Workshop Status"
               ),
-              m.createElement(
+              o.createElement(
                 "div",
-                { className: g().WorkshopStatusGrid },
-                S.map(function (e) {
-                  return m.createElement(
-                    m.Fragment,
-                    { key: "".concat(e.key, "-workshop-status-row") },
-                    m.createElement("div", null, e.displayName || e.key),
-                    m.createElement(
+                { className: p().WorkshopStatusGrid },
+                S.map((e) =>
+                  o.createElement(
+                    o.Fragment,
+                    { key: `${e.key}-workshop-status-row` },
+                    o.createElement("div", null, e.displayName || e.key),
+                    o.createElement(
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, j[e.key])
-                        : JSON.stringify(j[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, G[e.key])
+                        : JSON.stringify(G[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             ""
                           )
                     )
-                  );
-                })
-              ),
-              m.createElement("div", { className: g().SmoothLine }),
-              m.createElement(
-                "h2",
-                { className: (0, s.Z)(g().Header, g().SeasonMatchHeader) },
-                "Season ".concat(
-                  c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                  " Matches"
+                  )
                 )
               ),
-              m.createElement(
+              o.createElement("div", { className: p().SmoothLine }),
+              o.createElement(
+                "h2",
+                { className: (0, s.Z)(p().Header, p().SeasonMatchHeader) },
+                `Season ${i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`
+              ),
+              o.createElement(
                 "div",
                 {
-                  className: g().MatchesGrid,
-                  style: {
-                    gridTemplateColumns: "repeat(".concat(b.length, ", auto)"),
-                  },
+                  className: p().MatchesGrid,
+                  style: { gridTemplateColumns: `repeat(${L.length}, auto)` },
                 },
-                m.createElement(
-                  m.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  ((ie = []),
-                  Object.keys(W).forEach(function (e, t) {
-                    ie.push(
-                      m.createElement(
-                        "h3",
-                        {
-                          key: "league-name-row-".concat(t),
-                          style: { gridColumn: "span ".concat(b.length) },
-                        },
-                        m.createElement("b", null, e)
-                      )
-                    ),
-                      ie.push(
-                        b.map(function (e) {
-                          return m.createElement(
-                            "div",
+                  (() => {
+                    const e = [];
+                    return (
+                      Object.keys(w).forEach((t, a) => {
+                        e.push(
+                          o.createElement(
+                            "h3",
                             {
-                              key: ""
-                                .concat(e.key, "-")
-                                .concat(
-                                  e.displayName,
-                                  "-matches-grid-header-league-"
-                                )
-                                .concat(t),
+                              key: `league-name-row-${a}`,
+                              style: { gridColumn: `span ${L.length}` },
                             },
-                            m.createElement("b", null, e.displayName || e.key)
-                          );
-                        })
-                      );
-                    for (
-                      var n = function (e) {
-                          ie.push(
-                            b.map(function (t) {
-                              return m.createElement(
+                            o.createElement("b", null, t)
+                          )
+                        ),
+                          e.push(
+                            L.map((e) =>
+                              o.createElement(
                                 "div",
                                 {
-                                  key: ""
-                                    .concat(t.key, "-")
-                                    .concat(t.displayName, "-")
-                                    .concat(e.series_id),
+                                  key: `${e.key}-${e.displayName}-matches-grid-header-league-${a}`,
                                 },
-                                t.formatFunction
-                                  ? t.formatFunction.call(
+                                o.createElement(
+                                  "b",
+                                  null,
+                                  e.displayName || e.key
+                                )
+                              )
+                            )
+                          );
+                        for (let a of w[t])
+                          e.push(
+                            L.map((e) =>
+                              o.createElement(
+                                "div",
+                                {
+                                  key: `${e.key}-${e.displayName}-${a.series_id}`,
+                                },
+                                e.formatFunction
+                                  ? e.formatFunction.call(
                                       null,
-                                      e[t.key],
-                                      oe(e.opponent_team_id)
+                                      a[e.key],
+                                      Z(a.opponent_team_id)
                                     )
                                   : JSON.stringify(
-                                      e[t.key] || "",
+                                      a[e.key] || "",
                                       null,
                                       2
                                     ).replace(/['"]+/g, "")
-                              );
-                            })
+                              )
+                            )
                           );
-                        },
-                        a = 0,
-                        r = W[e];
-                      a < r.length;
-                      a++
-                    )
-                      n(r[a]);
-                  }),
-                  ie),
-                  !Object.keys(W).length &&
-                    m.createElement(
+                      }),
+                      e
+                    );
+                  })(),
+                  !Object.keys(w).length &&
+                    o.createElement(
                       "div",
                       null,
-                      m.createElement("br", null),
+                      o.createElement("br", null),
                       "No league matches."
                     )
                 )
               ),
-              m.createElement("br", null)
+              o.createElement("br", null)
             ),
-            m.createElement(_.U, null)
+            o.createElement(u.U, null)
           );
         };
-      const D = (function (e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
+      class D extends o.Component {
+        render() {
+          return o.createElement(b, null);
         }
-        return (
-          (0, r.ZT)(t, e),
-          (t.prototype.render = function () {
-            return m.createElement(L, null);
-          }),
-          t
-        );
-      })(m.Component);
+      }
     },
   },
 ]);

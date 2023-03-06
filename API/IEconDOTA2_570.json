@@ -27,19 +27,6 @@
             ]
         },
         {
-            "name": "GetGameItems",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "language",
-                    "type": "string",
-                    "optional": true,
-                    "description": "The language to provide item names in."
-                }
-            ]
-        },
-        {
             "name": "GetHeroes",
             "version": 1,
             "httpmethod": "GET",

@@ -1,3 +1,6 @@
+${AUDIO_URL}international2020/${}.wav
+${AUDIO_URL}international2022/${}.wav
+${BASE_URL}${patch_website}
 ${BASE_URL}${}
 ${BASE_URL}${}/checkforshortfilmownership/
 ${BASE_URL}${}/getboundbadges
@@ -19,8 +22,19 @@ ${BASE_URL}datafeed/itemdata
 ${BASE_URL}datafeed/itemlist
 ${BASE_URL}datafeed/patchnotes
 ${BASE_URL}datafeed/patchnoteslist
+${BASE_URL}eminenceofristul
+${BASE_URL}esports/ti11/schedule
+${BASE_URL}heroes
 ${BASE_URL}ingest
+${BASE_URL}items
+${BASE_URL}matches/match/${}?u=${}&appid=${DOTA_APP_ID}
+${BASE_URL}newsentry/3398555399418412272
+${BASE_URL}oauth/logout
+${BASE_URL}oauth/logout?goto=${}
+${BASE_URL}patches
+${BASE_URL}persona/showplayer/${}?u=${}&appid=${DOTA_APP_ID}
 ${BASE_URL}play
+${BASE_URL}quiz
 ${BASE_URL}react/getfavoriteteams
 ${BASE_URL}react/getlivestreams
 ${BASE_URL}react/getspoilerblock
@@ -36,8 +50,10 @@ ${BASE_URL}recommender/${STEAM_ID}/savesettings
 ${BASE_URL}recommender/${STEAM_ID}/stats
 ${BASE_URL}recommender/${STEAM_ID}/tags?sessionid=${SESSION_ID}
 ${BASE_URL}recommender/${STEAM_ID}/wishlist?snr=${LINK_PARAM}
+${BASE_URL}store
 ${BASE_URL}teams/getpersonaname/
 ${BASE_URL}teams/getugcfilelinks/
+${BASE_URL}theonetrueking
 ${BASE_URL}webapi/IDOTA2DPC/${}/v001
 ${BASE_URL}webapi/IDOTA2DPC/GetDPCSearchResults/v001
 ${BASE_URL}webapi/IDOTA2DPC/GetDPCStandings/v001
@@ -48,15 +64,24 @@ ${BASE_URL}webapi/IDOTA2Fantasy/GetPlayerInfo/v0001
 ${BASE_URL}webapi/IDOTA2League/GetLeagueData/v001
 ${BASE_URL}webapi/IDOTA2League/GetLeaguesData/v001
 ${BASE_URL}webapi/IDOTA2League/GetPrizePool/v001
+${BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001
+${BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001
 ${BASE_URL}webapi/IDOTA2Teams/GetFanContentStatus/v0001
 ${BASE_URL}webapi/IDOTA2Teams/GetRegisteredTeams/v001
 ${BASE_URL}webapi/IDOTA2Teams/GetSingleTeamInfo/v001
 ${BASE_URL}webapi/IDOTA2Teams/GetTeamAuditInformation/v001
+${BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${}&appid=${DOTA_APP_ID}&team_id=${}&account_id=${account_id}
+${BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${}&appid=${DOTA_APP_ID}&team_id=${}&account_id=${account_id}
+${BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${}&appid=${DOTA_APP_ID}
+${BASE_URL}workshop/builds
 ${CDN_URL}apps/${}/header.jpg
 ${CDN_URL}apps/dota2/images/leagues/${leagueID}/images/image_8.png
 ${CDN_URL}apps/dota2/images/leagues/${league_id}/images/image_9.png
 ${CDN_URL}apps/dota2/images/leagues/${}/images/image_8.png
 ${CDN_URL}apps/dota2/images/leagues/${}/images/image_9.png
+${CDN_URL}apps/dota2/players/${nAccountID}.png
+${CDN_URL}apps/dota2/teamlogos/${nTeamID}.png
+${CDN_URL}apps/dota2/teamlogos/${}.png
 ${CHAT_BASE_URL}actions/EmoticonData
 ${CHAT_BASE_URL}actions/ajaxgetgoldenprofiledata/
 ${CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate
@@ -329,6 +354,11 @@ ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&languag
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${}&v=1&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=1&origin=${}
+${COMMUNITY_URL}app/${DOTA_APP_ID}/guides
+${COMMUNITY_URL}app/570/guides
+${COMMUNITY_URL}broadcast/watchnew/${_ ? _ : _}?origin=https://${}&enablechat=0&enablevideo=1&iframe=1
+${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
+${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${}/
 ${HELP_BASE_URL}/wizard/HelpWithSteamIssue/?issueid=809
@@ -346,15 +376,65 @@ ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=920
 ${HELP_BASE_URL}wizard/HelpWithSteamGuardCode
 ${HELP_BASE_URL}wizard/HelpWithSteamMobileChat
 ${IMG_URL}${_ ? "favorite_star.png" : "favorite_star_empty.png"}
+${IMG_URL}${image}
 ${IMG_URL}${titleButtonImage}
 ${IMG_URL}${}
+${IMG_URL}${}/icons/scroll_arrow.png
+${IMG_URL}${}/river_vials/river_vial_${}1.jpg
+${IMG_URL}${}/river_vials/river_vial_icon_${}.png
 ${IMG_URL}/${}
+${IMG_URL}/dpc/dpc_logo.png
+${IMG_URL}/dpc/logo_lc_quals.png
+${IMG_URL}/dpc/ti10/facebook.png
+${IMG_URL}/dpc/ti10/insta.png
+${IMG_URL}/dpc/ti10/ti_short_logo.png
+${IMG_URL}/dpc/ti10/twitch.png
+${IMG_URL}/dpc/ti10/twitter.png
+${IMG_URL}/dpc/ti10/winners_statue.png
+${IMG_URL}/dpc/ti10/youtube.png
+${IMG_URL}/dpc/ti11/fantasy.png
+${IMG_URL}/dpc/ti11/key_heroes.png
+${IMG_URL}/dpc/ti11/predictions.png
+${IMG_URL}/dpc/ti11/supporters_club.png
+${IMG_URL}/heroes/stats/icon_armor.png
+${IMG_URL}/heroes/stats/icon_attack_range.png
+${IMG_URL}/heroes/stats/icon_attack_time.png
+${IMG_URL}/heroes/stats/icon_damage.png
+${IMG_URL}/heroes/stats/icon_magic_resist.png
+${IMG_URL}/heroes/stats/icon_movement_speed.png
+${IMG_URL}/heroes/stats/icon_projectile_speed.png
+${IMG_URL}/heroes/stats/icon_turn_rate.png
+${IMG_URL}/heroes/stats/icon_vision.png
+${IMG_URL}/home/battle_mobile.jpg
+${IMG_URL}/home/dpc_ti9_1.jpg
+${IMG_URL}/home/dpc_ti9_2.jpg
+${IMG_URL}/home/dpc_ti9_3.jpg
+${IMG_URL}/home/radiant_dire5.jpg
+${IMG_URL}/international2022/logos/cm_persona_logo_${LANGUAGE}.png
+${IMG_URL}/international2022/logos/cm_persona_logo_english.png
+${IMG_URL}/international2022/logos/fv_arcana_logo_${LANGUAGE}.png
+${IMG_URL}/international2022/logos/fv_arcana_logo_english.png
+${IMG_URL}/international2022/logos/logo_battlepass_${LANGUAGE}.png
+${IMG_URL}/international2022/logos/logo_battlepass_english.png
+${IMG_URL}/international2022/logos/logo_battlepass_p2_${LANGUAGE}.png
+${IMG_URL}/international2022/logos/logo_battlepass_p2_english.png
+${IMG_URL}/international2022/logos/logo_bundles_${LANGUAGE}.png
+${IMG_URL}/international2022/logos/logo_bundles_english.png
+${IMG_URL}/international2022/logos/logo_diretide_${LANGUAGE}.png
+${IMG_URL}/international2022/logos/logo_diretide_english.png
+${IMG_URL}/international2022/logos/pa_persona_logo_${LANGUAGE}.png
+${IMG_URL}/international2022/logos/pa_persona_logo_english.png
+${IMG_URL}/international2022/logos/razor_logo_${LANGUAGE}.png
+${IMG_URL}/international2022/logos/razor_logo_english.png
+${IMG_URL}/international2022/sticker_book_main.png
 ${IMG_URL}/nav/logomark.svg
 ${IMG_URL}Underlords_WordMark_Vertical.svg
+${IMG_URL}abilities/${name}.png
 ${IMG_URL}apple_store.png
 ${IMG_URL}applications/community/
 ${IMG_URL}arrow_left.png
 ${IMG_URL}arrow_over.png
+${IMG_URL}arrow_solid_left.png
 ${IMG_URL}back_arrow.png
 ${IMG_URL}characters/${}.png
 ${IMG_URL}characters/heroes-sil.png
@@ -370,7 +450,22 @@ ${IMG_URL}cityscene_bdg_05_glow.png
 ${IMG_URL}cityscene_bdg_06.png
 ${IMG_URL}cityscene_moon.png
 ${IMG_URL}cityscene_sky.jpg
+${IMG_URL}close.png
 ${IMG_URL}currency_icon_small.png
+${IMG_URL}dota_footer_logo.png
+${IMG_URL}dpc/autograph_guidelines/${imageName}
+${IMG_URL}dpc/autograph_guidelines/check-mark.png
+${IMG_URL}dpc/autograph_guidelines/example-signature-1.jpg
+${IMG_URL}dpc/autograph_guidelines/example-signature-2.jpg
+${IMG_URL}dpc/autograph_guidelines/guidelines-clarity.jpg
+${IMG_URL}dpc/autograph_guidelines/guidelines-imagery.jpg
+${IMG_URL}dpc/autograph_guidelines/guidelines-thickness.jpg
+${IMG_URL}dpc/dpc_logo.png
+${IMG_URL}dpc/portrait_guidelines/${imageName}
+${IMG_URL}dpc/portrait_guidelines/example-player-1.jpg
+${IMG_URL}dpc/portrait_guidelines/example-player-2.jpg
+${IMG_URL}dpc/request_for_proposal/dpc_2023_rfp.pdf
+${IMG_URL}dpc/request_for_proposal/dpc_major_2023_rfp.pdf
 ${IMG_URL}enno/build1_poster.jpg
 ${IMG_URL}enno/build2_poster.jpg
 ${IMG_URL}enno/enno-attack.png
@@ -407,6 +502,186 @@ ${IMG_URL}help_main_tournament.png
 ${IMG_URL}help_prediction_pick.png
 ${IMG_URL}help_prediction_wager.png
 ${IMG_URL}help_prediction_win.png
+${IMG_URL}heroes/${}.png
+${IMG_URL}heroes/crops/${}.png
+${IMG_URL}heroes/icons/${}.png
+${IMG_URL}heroes/wide/${}.png
+${IMG_URL}icons/${}.svg
+${IMG_URL}icons/hero_${}.png
+${IMG_URL}icons/hero_agility.png
+${IMG_URL}icons/hero_intelligence.png
+${IMG_URL}icons/hero_strength.png
+${IMG_URL}icons/talents.svg
+${IMG_URL}international2020/arrow_left.png
+${IMG_URL}international2020/assistant/assistant_1.png
+${IMG_URL}international2020/assistant/assistant_2.png
+${IMG_URL}international2020/assistant/assistant_3.png
+${IMG_URL}international2020/assistant/assistant_4.png
+${IMG_URL}international2020/assistant/assistant_6.png
+${IMG_URL}international2020/assistant/assistant_7.png
+${IMG_URL}international2020/benefactor_bg.png
+${IMG_URL}international2020/bp_level_shield.png
+${IMG_URL}international2020/bp_shield_small.png
+${IMG_URL}international2020/button_arrow.png
+${IMG_URL}international2020/cat_1.png
+${IMG_URL}international2020/cat_2.png
+${IMG_URL}international2020/chat_wheel_bg.png
+${IMG_URL}international2020/collector_1.png
+${IMG_URL}international2020/collector_2.png
+${IMG_URL}international2020/consumables/consumable_${}.png
+${IMG_URL}international2020/custom_tower_1.png
+${IMG_URL}international2020/custom_tower_2.png
+${IMG_URL}international2020/divine_overlay.png
+${IMG_URL}international2020/emblem_bg.png
+${IMG_URL}international2020/emoticon_mars.png
+${IMG_URL}international2020/emoticon_pango.png
+${IMG_URL}international2020/emoticons/general_emoticon_1.gif
+${IMG_URL}international2020/emoticons/general_emoticon_10.gif
+${IMG_URL}international2020/emoticons/general_emoticon_11.gif
+${IMG_URL}international2020/emoticons/general_emoticon_12.gif
+${IMG_URL}international2020/emoticons/general_emoticon_13.gif
+${IMG_URL}international2020/emoticons/general_emoticon_14.gif
+${IMG_URL}international2020/emoticons/general_emoticon_2.gif
+${IMG_URL}international2020/emoticons/general_emoticon_3.gif
+${IMG_URL}international2020/emoticons/general_emoticon_4.gif
+${IMG_URL}international2020/emoticons/general_emoticon_5.gif
+${IMG_URL}international2020/emoticons/general_emoticon_6.gif
+${IMG_URL}international2020/emoticons/general_emoticon_7.gif
+${IMG_URL}international2020/emoticons/general_emoticon_8.gif
+${IMG_URL}international2020/emoticons/general_emoticon_9.gif
+${IMG_URL}international2020/emoticons/guild_emoticon_1.gif
+${IMG_URL}international2020/emoticons/guild_emoticon_2.gif
+${IMG_URL}international2020/emoticons/guild_emoticon_3.gif
+${IMG_URL}international2020/emoticons/guild_emoticon_4.gif
+${IMG_URL}international2020/emoticons/guild_emoticon_5.gif
+${IMG_URL}international2020/gauntlet_1.png
+${IMG_URL}international2020/gauntlet_2.png
+${IMG_URL}international2020/gauntlet_3.png
+${IMG_URL}international2020/guilds_1.png
+${IMG_URL}international2020/guilds_2.png
+${IMG_URL}international2020/guilds_2b.png
+${IMG_URL}international2020/guilds_3.png
+${IMG_URL}international2020/icon_check.png
+${IMG_URL}international2020/icon_x.png
+${IMG_URL}international2020/immortal_treasure_1.png
+${IMG_URL}international2020/immortal_treasure_2.png
+${IMG_URL}international2020/immortal_treasure_3.png
+${IMG_URL}international2020/immortals/${}.jpg
+${IMG_URL}international2020/immortals/art/${}.png
+${IMG_URL}international2020/killstreak.png
+${IMG_URL}international2020/logo_${LANGUAGE}.png
+${IMG_URL}international2020/logo_english.png
+${IMG_URL}international2020/musicpack_keyart.png
+${IMG_URL}international2020/ping_cosmetics_bg.png
+${IMG_URL}international2020/qop_title_${LANGUAGE}.png
+${IMG_URL}international2020/qop_title_english.png
+${IMG_URL}international2020/rangedattack_keyart.png
+${IMG_URL}international2020/river_vials/river_vial_1.jpg
+${IMG_URL}international2020/river_vials/river_vial_2.jpg
+${IMG_URL}international2020/river_vials/river_vial_3.jpg
+${IMG_URL}international2020/river_vials/river_vial_4.jpg
+${IMG_URL}international2020/river_vials/river_vial_5.jpg
+${IMG_URL}international2020/river_vials/river_vial_6.jpg
+${IMG_URL}international2020/river_vials/river_vial_7.jpg
+${IMG_URL}international2020/river_vials/river_vial_icon_${}.png
+${IMG_URL}international2020/seasonal_effects/seasonal_effect_icon_${}.png
+${IMG_URL}international2020/shortfilm/header.jpg
+${IMG_URL}international2020/sprays/spray_${}.png
+${IMG_URL}international2020/sprays/spray_1.png
+${IMG_URL}international2020/sprays/spray_10.png
+${IMG_URL}international2020/sprays/spray_11.png
+${IMG_URL}international2020/sprays/spray_12.png
+${IMG_URL}international2020/sprays/spray_13.png
+${IMG_URL}international2020/sprays/spray_14.png
+${IMG_URL}international2020/sprays/spray_15.png
+${IMG_URL}international2020/sprays/spray_16.png
+${IMG_URL}international2020/sprays/spray_17.png
+${IMG_URL}international2020/sprays/spray_18.png
+${IMG_URL}international2020/sprays/spray_19.png
+${IMG_URL}international2020/sprays/spray_2.png
+${IMG_URL}international2020/sprays/spray_20.png
+${IMG_URL}international2020/sprays/spray_3.png
+${IMG_URL}international2020/sprays/spray_4.png
+${IMG_URL}international2020/sprays/spray_5.png
+${IMG_URL}international2020/sprays/spray_6.png
+${IMG_URL}international2020/sprays/spray_7.png
+${IMG_URL}international2020/sprays/spray_8.png
+${IMG_URL}international2020/sprays/spray_9.png
+${IMG_URL}international2020/stone_left.png
+${IMG_URL}international2020/stone_right.png
+${IMG_URL}international2020/taunt_1.png
+${IMG_URL}international2020/taunt_2.png
+${IMG_URL}international2020/taunt_3.png
+${IMG_URL}international2020/title_${LANGUAGE}.png
+${IMG_URL}international2020/title_english.png
+${IMG_URL}international2020/tribute_image.png
+${IMG_URL}international2020/voice_announcer_bg.png
+${IMG_URL}international2020/ward_bg.png
+${IMG_URL}international2020/wraith_king_title_${LANGUAGE}.png
+${IMG_URL}international2020/wraith_king_title_english.png
+${IMG_URL}international2022/2022_ti_tips.png
+${IMG_URL}international2022/arcana/fv_icons.png
+${IMG_URL}international2022/arcana/fv_mobile.jpg
+${IMG_URL}international2022/arcana/fv_mobile_02.jpg
+${IMG_URL}international2022/arcana/fv_thumb.jpg
+${IMG_URL}international2022/arcana/fv_thumb_02.jpg
+${IMG_URL}international2022/arcana/fv_wallpaper.jpg
+${IMG_URL}international2022/arcana/fv_wallpaper_02.jpg
+${IMG_URL}international2022/arcana/mobile_razor_thumb.jpg
+${IMG_URL}international2022/arcana/mobile_thumb.jpg
+${IMG_URL}international2022/arcana/mobile_thumb_02.jpg
+${IMG_URL}international2022/arcana/razor_icons.png
+${IMG_URL}international2022/arcana/razor_mobile.jpg
+${IMG_URL}international2022/arcana/razor_thumb.jpg
+${IMG_URL}international2022/arcana/razor_wallpaper.jpg
+${IMG_URL}international2022/backgrounds/candyworks_bg.png
+${IMG_URL}international2022/backgrounds/chat_wheels_spot.png
+${IMG_URL}international2022/cave_johnson.png
+${IMG_URL}international2022/consumables/consumables_${}.png
+${IMG_URL}international2022/diretide/battle_points_02.png
+${IMG_URL}international2022/diretide/jugg.png
+${IMG_URL}international2022/diretide/penguin_rider.png
+${IMG_URL}international2022/diretide/taffy_donkey_02.png
+${IMG_URL}international2022/diretide/taffy_eater.png
+${IMG_URL}international2022/diretide/taffy_well.png
+${IMG_URL}international2022/emoticons/${}.gif
+${IMG_URL}international2022/favorite_teams.png
+${IMG_URL}international2022/icons/carousel_mystery_mark.jpg
+${IMG_URL}international2022/icons/molten_play_btn.png 
+${IMG_URL}international2022/icons/scroll_arrow.png
+${IMG_URL}international2022/icons/social_fb.png
+${IMG_URL}international2022/icons/social_insta.png
+${IMG_URL}international2022/icons/social_twitch.png
+${IMG_URL}international2022/icons/social_twitter.png
+${IMG_URL}international2022/icons/social_yt.png
+${IMG_URL}international2022/logos/ti_logo.png
+${IMG_URL}international2022/persona/cm_icons.png
+${IMG_URL}international2022/persona/cm_mobile.jpg
+${IMG_URL}international2022/persona/cm_mobile_02.jpg
+${IMG_URL}international2022/persona/cm_wallpaper.jpg
+${IMG_URL}international2022/persona/cm_wallpaper_02.jpg
+${IMG_URL}international2022/persona/pa_icons.png
+${IMG_URL}international2022/persona/pa_wp.jpg
+${IMG_URL}international2022/persona/pa_wp_02.jpg
+${IMG_URL}international2022/persona/pa_wp_mob.jpg
+${IMG_URL}international2022/persona/pa_wp_mob_02.jpg
+${IMG_URL}international2022/persona/thumb_cm_mobile.jpg
+${IMG_URL}international2022/persona/thumb_cm_mobile_02.jpg
+${IMG_URL}international2022/persona/thumb_cm_wallpaper.jpg
+${IMG_URL}international2022/persona/thumb_cm_wallpaper_02.jpg
+${IMG_URL}international2022/persona/thumb_mobile.jpg
+${IMG_URL}international2022/persona/thumb_mobile_02.jpg
+${IMG_URL}international2022/persona/thumb_wallpaper.jpg
+${IMG_URL}international2022/persona/thumb_wallpaper_02.jpg
+${IMG_URL}international2022/prestige/pb_prestige_side_overlay.png
+${IMG_URL}international2022/sprays/${filename}.png
+${IMG_URL}international2022/sprays/${}_icon.png
+${IMG_URL}international2022/sticker_book_main.png
+${IMG_URL}international2022/sticker_capsules.png
+${IMG_URL}international2022/swag_bag.png
+${IMG_URL}international2022/ti11_collectors_aegis.png
+${IMG_URL}international2022/truesight_logo.jpg
+${IMG_URL}international2022/weekly_quests.png
 ${IMG_URL}locked.png
 ${IMG_URL}logo.png
 ${IMG_URL}logos/Underlords_WordMark_Horiz.svg
@@ -477,6 +752,7 @@ ${IMG_URL}outlanders/void_spirit_dissimilate.png
 ${IMG_URL}outlanders/void_spirit_element.png
 ${IMG_URL}outlanders/void_title.png
 ${IMG_URL}paint_swipe.svg
+${IMG_URL}player_unknown.png
 ${IMG_URL}portrait_unknown.png
 ${IMG_URL}protopass/YOs.png
 ${IMG_URL}protopass/banners_web_a.png
@@ -490,6 +766,8 @@ ${IMG_URL}protopass/streaks_and_teleports_a.png
 ${IMG_URL}recruit_and_upgrade.png
 ${IMG_URL}right_arrow.png
 ${IMG_URL}search.png
+${IMG_URL}shortfilmcontest2022/clapper_2022.png
+${IMG_URL}shortfilmcontest2022/clapper_fallback_2022.png
 ${IMG_URL}social/${}_large.png
 ${IMG_URL}steam.png
 ${IMG_URL}synergyicons/${strAllianceName}.png
@@ -497,7 +775,9 @@ ${IMG_URL}team_15.png
 ${IMG_URL}team_2586976.png
 ${IMG_URL}team_unknown.png
 ${IMG_URL}team_unkown.png
+${IMG_URL}teams_override/team_unknown_web.png
 ${IMG_URL}teaser/valve_logo.png
+${IMG_URL}valve_logo.png
 ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
@@ -824,6 +1104,7 @@ ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpreview
 ${STORE_BASE_URL}broadcast/ajaxgettopntagsforappbatch
 ${STORE_BASE_URL}broadcast/ajaxgetuserbroadcastpreferences
 ${STORE_BASE_URL}bundle/${id}
+${STORE_BASE_URL}buyitem/${DOTA_APP_ID}/${}/${}
 ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
@@ -1038,19 +1319,105 @@ ${STORE_ICON_BASE_URL}${appid}/header.jpg
 ${STORE_ICON_BASE_URL}${appid}/portrait.png
 ${STORE_ICON_BASE_URL}${}
 ${STORE_ICON_BASE_URL}/${appid}/${}
+${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
+${STORE_URL}app/570/Dota_2/
 ${URL}${URL}
 ${URL}${_ ? _ : _}
 ${URL}${}
+${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.jpg
+${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.mp4
+${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.png
+${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.webm
+${VIDEO_URL}${strContentDir}/immortals/${}_right.png
+${VIDEO_URL}${video}.mp4
+${VIDEO_URL}${video}.webm
+${VIDEO_URL}${}.mp4
+${VIDEO_URL}${}.webm
+${VIDEO_URL}abilities/${}/${name}.jpg
+${VIDEO_URL}abilities/${}/${name}.mp4
+${VIDEO_URL}abilities/${}/${name}.webm
+${VIDEO_URL}abilities/${}/${}.jpg
+${VIDEO_URL}abilities/${}/${}.mp4
+${VIDEO_URL}abilities/${}/${}.webm
+${VIDEO_URL}heroes/renders/${}.png
+${VIDEO_URL}heroes/renders/${}.webm
+${VIDEO_URL}homepage/dota_montage_02.mp4
+${VIDEO_URL}homepage/dota_montage_webm.webm
+${VIDEO_URL}international2020/${}.mp4
+${VIDEO_URL}international2020/${}.webm
 ${VIDEO_URL}international2020/bp_aegis_header.mp4
 ${VIDEO_URL}international2020/bp_aegis_header2.webm
+${VIDEO_URL}international2020/consumables/${}.mp4
+${VIDEO_URL}international2020/consumables/${}.webm
+${VIDEO_URL}international2020/immortals/${}.mp4
+${VIDEO_URL}international2020/immortals/${}.webm
+${VIDEO_URL}international2020/item_effects/${}.mp4
+${VIDEO_URL}international2020/item_effects/${}.webm
+${VIDEO_URL}international2020/item_effects/attack_modifier.mp4
+${VIDEO_URL}international2020/item_effects/attack_modifier.webm
+${VIDEO_URL}international2020/shortfilm/header.mp4
+${VIDEO_URL}international2020/shortfilm/header.webm
+${VIDEO_URL}international2020/ti10_courier.mp4
+${VIDEO_URL}international2020/ti10_courier.webm
+${VIDEO_URL}international2020/ti10_mvp.mp4
+${VIDEO_URL}international2020/ti10_mvp.webm
+${VIDEO_URL}international2020/ti10_terrain_wide.mp4
+${VIDEO_URL}international2020/ti10_terrain_wide.webm
+${VIDEO_URL}international2020/ti10_versus.mp4
+${VIDEO_URL}international2020/ti10_versus.webm
+${VIDEO_URL}international2020/towers.mp4
+${VIDEO_URL}international2020/towers.webm
+${VIDEO_URL}international2022/aegis_loop.jpg
 ${VIDEO_URL}international2022/aegis_loop.mp4
 ${VIDEO_URL}international2022/aegis_loop.webm
+${VIDEO_URL}international2022/cm_persona.jpg
+${VIDEO_URL}international2022/cm_persona.mp4
+${VIDEO_URL}international2022/cm_persona.webm
+${VIDEO_URL}international2022/consumables/${}.jpg
+${VIDEO_URL}international2022/consumables/${}.mp4
+${VIDEO_URL}international2022/consumables/${}.webm
+${VIDEO_URL}international2022/crystal_pedestal.mp4
+${VIDEO_URL}international2022/crystal_pedestal.png
+${VIDEO_URL}international2022/crystal_pedestal.webm
+${VIDEO_URL}international2022/diretide/diretide_snow_loop.jpg
 ${VIDEO_URL}international2022/diretide/diretide_snow_loop.mp4
 ${VIDEO_URL}international2022/diretide/diretide_snow_loop2.webm
+${VIDEO_URL}international2022/faceless_void_arcana.jpg
+${VIDEO_URL}international2022/faceless_void_arcana.mp4
+${VIDEO_URL}international2022/faceless_void_arcana.webm
+${VIDEO_URL}international2022/fv_loadout.jpg
+${VIDEO_URL}international2022/fv_loadout.mp4
+${VIDEO_URL}international2022/fv_loadout.webm
+${VIDEO_URL}international2022/immortals/${}_2022.png
+${VIDEO_URL}international2022/misc/shader.jpg
 ${VIDEO_URL}international2022/misc/shader.mp4
 ${VIDEO_URL}international2022/misc/shader.webm
+${VIDEO_URL}international2022/misc/towers.jpg
+${VIDEO_URL}international2022/misc/towers.webm
+${VIDEO_URL}international2022/misc/versus_screen.jpg
 ${VIDEO_URL}international2022/misc/versus_screen.mp4
 ${VIDEO_URL}international2022/misc/versus_screen.webm
+${VIDEO_URL}international2022/pa_persona_turntable.mp4
+${VIDEO_URL}international2022/pa_persona_turntable.png
+${VIDEO_URL}international2022/pa_persona_turntable.webm
+${VIDEO_URL}international2022/phantom_assassin_persona.jpg
+${VIDEO_URL}international2022/phantom_assassin_persona.mp4
+${VIDEO_URL}international2022/phantom_assassin_persona.webm
+${VIDEO_URL}international2022/primal_beast.jpg
+${VIDEO_URL}international2022/primal_beast.mp4
+${VIDEO_URL}international2022/primal_beast.webm
+${VIDEO_URL}international2022/razor_arcana.mp4
+${VIDEO_URL}international2022/razor_arcana.png
+${VIDEO_URL}international2022/razor_arcana.webm
+${VIDEO_URL}international2022/razor_arcana_turntable.mp4
+${VIDEO_URL}international2022/razor_arcana_turntable.png
+${VIDEO_URL}international2022/razor_arcana_turntable.webm
+${VIDEO_URL}international2022/taunts/${}_taunt.jpg
+${VIDEO_URL}international2022/taunts/${}_taunt.mp4
+${VIDEO_URL}international2022/taunts/${}_taunt.webm
+${VIDEO_URL}international2022/truesight_logo.mp4
+${VIDEO_URL}international2022/truesight_logo.webm
+${VIDEO_URL}shortfilmcontest2022/clapper_2022.webm
 ${WEBAPI_BASE_URL}${}/${}/v000${}
 ${WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${m_webApiToken}
@@ -1677,7 +2044,6 @@ https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_boost_defau
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_setback_attack.png
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/random_drop_attack.png
 https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif
-https://cdn.dota2.com/apps/dota2/teamautographs/
 https://community.cloudflare.steamstatic.com/${m_strURL}
 https://community.cloudflare.steamstatic.com/economy/boosterpack/${appid}?l=english&single=1&v=2
 https://community.cloudflare.steamstatic.com/economy/boosterpackribbon/?l=english
@@ -1992,7 +2358,6 @@ https://partner.steamgames.com/tagdata/simpletagprofile
 https://partner.steamgames.com/tagdata/tagassociations
 https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.friendsui
 https://play.google.com/store/apps/details?id=com.valvesoftware.underlords
-https://player.twitch.tv/?video-with-chat=true&channel=
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0
 https://reactjs.org/docs/error-decoder.html?invariant=${}
 https://s.team/chat/${}
@@ -2087,7 +2452,6 @@ https://steamcommunity.com/broadcast/getbroadcastinfo/
 https://steamcommunity.com/broadcast/getbroadcastmpd
 https://steamcommunity.com/broadcast/getbroadcastviewers/
 https://steamcommunity.com/broadcast/getchatinfo/
-https://steamcommunity.com/broadcast/watch/
 https://steamcommunity.com/chat/
 https://steamcommunity.com/chat/chatlog/${m_unAccountID}
 https://steamcommunity.com/chat/friend/${steamid}
@@ -2101,7 +2465,6 @@ https://steamcommunity.com/dota2shortfilm/
 https://steamcommunity.com/forum/0/0/setpreference
 https://steamcommunity.com/forum/0/General/gettopicdestinations/
 https://steamcommunity.com/games/593110/announcements/detail/1612767708821405787
-https://steamcommunity.com/games/dota2/announcements/detail/
 https://steamcommunity.com/games/underlords/announcements/create/
 https://steamcommunity.com/games/underlords/announcements/edit/${gid}
 https://steamcommunity.com/gid/${clanid}/banuser/?ajax=1
@@ -2542,12 +2905,10 @@ https://www.reddit.com/
 https://www.store.steampowered.com
 https://www.twitch.tv/
 https://www.twitch.tv/directory/game/Dota%202
-https://www.twitch.tv/embed/
 https://www.valvesoftware.com/
 https://www.valvesoftware.com/en/about
 https://www.wanmei.com/
 https://www.youtube.com/
-https://www.youtube.com/embed/
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
 https://www.youtube.com/embed/${}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}
@@ -2566,6 +2927,8 @@ https://www.youtube.com/watch?v=${}
 https://www.youtube.com/watch?v=MZhBVH9UeAA
 https://youtu.be/
 https://youtube.com/user/dota2
+linear-gradient( ${}${}, ${}${} ), url( '${IMG_URL}international2022/backgrounds/buy_bp_capsule_bg.jpg' )
+linear-gradient(90deg, rgba(3, 2, 2, 0) 22.92%, rgba(3, 2, 2, 0.6) 100%), url( ${IMG_URL}international2020/stone_rect_small.png )
 steam://
 steam://${path}
 steam://${}
@@ -2640,6 +3003,186 @@ steam://url/SteamPreferences
 steam://url/StoreAccount
 steam://url/StoreAddFundsPage
 steam://url/StoreCart
+url( ${CDN_URL}apps/dota2/images/leagues/${league_id}/images/image_8.png
+url( ${CDN_URL}apps/dota2/players/${}.png )
+url( ${CDN_URL}apps/dota2/teamlogos/${}.png )
+url( ${IMG_URL}${}/${} )
+url( ${IMG_URL}/arrow_left.png )
+url( ${IMG_URL}/home/background4.png )
+url( ${IMG_URL}/home/dpc.jpg )
+url( ${IMG_URL}/icons/dpc.svg )
+url( ${IMG_URL}/icons/steam.svg )
+url( ${IMG_URL}/pastupdates/700_social.jpg )
+url( ${IMG_URL}/pastupdates/720_social.jpg )
+url( ${IMG_URL}/pastupdates/acolyte_social.jpg )
+url( ${IMG_URL}/pastupdates/aegis_social.jpg )
+url( ${IMG_URL}/pastupdates/aghs_share.png )
+url( ${IMG_URL}/pastupdates/am_social.png )
+url( ${IMG_URL}/pastupdates/balance_social.jpg )
+url( ${IMG_URL}/pastupdates/beta_social.jpg )
+url( ${IMG_URL}/pastupdates/bladeform_social.jpg )
+url( ${IMG_URL}/pastupdates/cleaning_social.jpg )
+url( ${IMG_URL}/pastupdates/compendium_social.jpg )
+url( ${IMG_URL}/pastupdates/darkrift_social.jpg )
+url( ${IMG_URL}/pastupdates/dawnbreaker_social.jpg )
+url( ${IMG_URL}/pastupdates/diretide2012_social.jpg )
+url( ${IMG_URL}/pastupdates/diretide_twitter.png )
+url( ${IMG_URL}/pastupdates/duelingfates_social.jpg )
+url( ${IMG_URL}/pastupdates/firstblood_social.jpg )
+url( ${IMG_URL}/pastupdates/flockheart_img.jpg )
+url( ${IMG_URL}/pastupdates/frosthaven_social.jpg )
+url( ${IMG_URL}/pastupdates/greevling_social.jpg )
+url( ${IMG_URL}/pastupdates/grimstroke_social.jpg )
+url( ${IMG_URL}/pastupdates/heroes_social.jpg )
+url( ${IMG_URL}/pastupdates/hoodwink_social.jpg )
+url( ${IMG_URL}/pastupdates/labyrinth_social.jpg )
+url( ${IMG_URL}/pastupdates/marci_social.jpg )
+url( ${IMG_URL}/pastupdates/mars_social.jpg )
+url( ${IMG_URL}/pastupdates/nemestice_social.jpg )
+url( ${IMG_URL}/pastupdates/newbloom2014_social.jpg )
+url( ${IMG_URL}/pastupdates/newbloom2015_social.jpg )
+url( ${IMG_URL}/pastupdates/oracle_social.jpg )
+url( ${IMG_URL}/pastupdates/outlanders_social.jpg )
+url( ${IMG_URL}/pastupdates/planetfall_social.jpg )
+url( ${IMG_URL}/pastupdates/plus_social.jpg )
+url( ${IMG_URL}/pastupdates/primalbeast_social.jpg )
+url( ${IMG_URL}/pastupdates/pudge_social.jpg )
+url( ${IMG_URL}/pastupdates/qop_twitter.png )
+url( ${IMG_URL}/pastupdates/reborn_social.jpg )
+url( ${IMG_URL}/pastupdates/rekindling_social.jpg )
+url( ${IMG_URL}/pastupdates/shanghai_social.jpg )
+url( ${IMG_URL}/pastupdates/snows_social.jpg )
+url( ${IMG_URL}/pastupdates/spirits_social.jpg )
+url( ${IMG_URL}/pastupdates/spoils_social.jpg )
+url( ${IMG_URL}/pastupdates/techies_social.jpg )
+url( ${IMG_URL}/pastupdates/ti10_social.jpg )
+url( ${IMG_URL}/pastupdates/ti3_social.jpg )
+url( ${IMG_URL}/pastupdates/ti4_social.jpg )
+url( ${IMG_URL}/pastupdates/ti5_social.jpg )
+url( ${IMG_URL}/pastupdates/ti6_social.jpg )
+url( ${IMG_URL}/pastupdates/ti7_social.jpg )
+url( ${IMG_URL}/pastupdates/ti8_social.jpg )
+url( ${IMG_URL}/pastupdates/ti9_social.jpg )
+url( ${IMG_URL}/pastupdates/winterbp_social.jpg )
+url( ${IMG_URL}/pastupdates/wk_social.jpg )
+url( ${IMG_URL}/pastupdates/wr_social.png )
+url( ${IMG_URL}/pastupdates/wraith_social.jpg )
+url( ${IMG_URL}abilities/${name}.png )
+url( ${IMG_URL}arrow_solid_left.png )
+url( ${IMG_URL}backgrounds/bg_granite_texture.jpg )
+url( ${IMG_URL}backgrounds/bg_granite_texture_sched.jpg )
+url( ${IMG_URL}backgrounds/bg_granite_texture_teams.jpg )
+url( ${IMG_URL}backgrounds/bg_grout_texture.jpg )
+url( ${IMG_URL}backgrounds/bg_stone_texture.png )
+url( ${IMG_URL}backgrounds/featured.jpg )
+url( ${IMG_URL}backgrounds/gameblur01.jpg )
+url( ${IMG_URL}backgrounds/grey_painterly.png )
+url( ${IMG_URL}backgrounds/grey_painterly_wide.png )
+url( ${IMG_URL}backgrounds/greyfade.jpg )
+url( ${IMG_URL}backgrounds/slate_bg_01.jpg )
+url( ${IMG_URL}backgrounds/ti10_half_aegis.png )
+url( ${IMG_URL}close.png )
+url( ${IMG_URL}dota_icon_generic.png )
+url( ${IMG_URL}dpc/bottom_block.jpg )
+url( ${IMG_URL}dpc/dark_gray_bg.jpg )
+url( ${IMG_URL}dpc/dpc_about_footer.jpg )
+url( ${IMG_URL}dpc/dpc_about_seasons.jpg )
+url( ${IMG_URL}dpc/dpc_about_tournaments.jpg )
+url( ${IMG_URL}dpc/dpc_about_tours.jpg )
+url( ${IMG_URL}dpc/dpc_flowchart.png )
+url( ${IMG_URL}dpc/headers/dpc_header_event_${}.jpg ), linear-gradient( to right, ${} 49%, ${} 51% )
+url( ${IMG_URL}dpc/light_gray_bg.jpg )
+url( ${IMG_URL}dpc/top_block.jpg )
+url( ${IMG_URL}heroes/${}.png
+url( ${IMG_URL}heroes/${}.png )
+url( ${IMG_URL}heroes/icons/${}.png )
+url( ${IMG_URL}heroes/stats/aghs_scepter.png )
+url( ${IMG_URL}heroes/stats/aghs_shard.png )
+url( ${IMG_URL}herogrid/filter-agi-active.png )
+url( ${IMG_URL}herogrid/filter-diamond.png )
+url( ${IMG_URL}herogrid/filter-int-active.png )
+url( ${IMG_URL}herogrid/filter-str-active.png )
+url( ${IMG_URL}icons/${_ ? "star_gold" : "star_black"}.png )
+url( ${IMG_URL}icons/cooldown.png )
+url( ${IMG_URL}icons/external_arrow.png )
+url( ${IMG_URL}icons/search.svg )
+url( ${IMG_URL}international2020/antimage_arcana_bg.png )
+url( ${IMG_URL}international2020/backgrounds/background_1.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_10.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_11.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_12.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_13.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_15.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_2.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_3.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_4.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_5.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_6.jpg )
+url( ${IMG_URL}international2020/backgrounds/background_9.jpg )
+url( ${IMG_URL}international2020/bounty_bg.png )
+url( ${IMG_URL}international2020/divine_path_bg.png )
+url( ${IMG_URL}international2020/evolving_courier_bg.png )
+url( ${IMG_URL}international2020/gauntlet_bg.png )
+url( ${IMG_URL}international2020/gift_bg.png )
+url( ${IMG_URL}international2020/guilds_bg.png )
+url( ${IMG_URL}international2020/match_predictions_bg.png )
+url( ${IMG_URL}international2020/pause_screen_bg.png )
+url( ${IMG_URL}international2020/pudge_arcana_bg.png )
+url( ${IMG_URL}international2020/qop_arcana_bg.png )
+url( ${IMG_URL}international2020/returning_feature_1.png )
+url( ${IMG_URL}international2020/returning_feature_2.png )
+url( ${IMG_URL}international2020/returning_feature_3.png )
+url( ${IMG_URL}international2020/returning_feature_4.png )
+url( ${IMG_URL}international2020/returning_feature_5.png )
+url( ${IMG_URL}international2020/returning_feature_6.png )
+url( ${IMG_URL}international2020/returning_feature_7.png )
+url( ${IMG_URL}international2020/returning_feature_8.png )
+url( ${IMG_URL}international2020/returning_features_bg.png )
+url( ${IMG_URL}international2020/stone_rect.png )
+url( ${IMG_URL}international2020/summer_event_bg.png )
+url( ${IMG_URL}international2020/teams_gold/${}.png )
+url( ${IMG_URL}international2020/tribute_bg.png )
+url( ${IMG_URL}international2020/windranger_arcana_bg.png )
+url( ${IMG_URL}international2022/arcana/fv_keyart.jpg )
+url( ${IMG_URL}international2022/arcana/razor_keyart.png )
+url( ${IMG_URL}international2022/backgrounds/candyshop_bg.jpg )
+url( ${IMG_URL}international2022/backgrounds/cc_sets.png )
+url( ${IMG_URL}international2022/backgrounds/diretide_bg_03.jpg )
+url( ${IMG_URL}international2022/backgrounds/fv_bg_01.png )
+url( ${IMG_URL}international2022/backgrounds/fv_bg_02.jpg )
+url( ${IMG_URL}international2022/backgrounds/generic_bg_02.jpg )
+url( ${IMG_URL}international2022/backgrounds/generic_bg_03.jpg )
+url( ${IMG_URL}international2022/backgrounds/generic_bg_04.jpg )
+url( ${IMG_URL}international2022/backgrounds/icey_bg.jpg )
+url( ${IMG_URL}international2022/backgrounds/music_pack_bg.jpg )
+url( ${IMG_URL}international2022/backgrounds/razor_bg.jpg )
+url( ${IMG_URL}international2022/backgrounds/singapore_skyline.jpg )
+url( ${IMG_URL}international2022/backgrounds/sticker_book_bg.jpg )
+url( ${IMG_URL}international2022/backgrounds/swirl_bg.jpg )
+url( ${IMG_URL}international2022/backgrounds/swirl_bg_long.jpg )
+url( ${IMG_URL}international2022/courier.png )
+url( ${IMG_URL}international2022/diretide/candyworks_rewards_bg.jpg )
+url( ${IMG_URL}international2022/persona/cm_persona_keyart.jpg)
+url( ${IMG_URL}international2022/persona/pa_persona_bg.jpg )
+url( ${IMG_URL}international2022/persona/pa_persona_keyart.jpg )
+url( ${IMG_URL}international2022/prestige/pb_prestige_bg.jpg )
+url( ${IMG_URL}international2022/prestige/pb_prestige_header.jpg )
+url( ${IMG_URL}international2022/reward_montage/ti11_small_generaltreasure.png )
+url( ${IMG_URL}international2022/reward_montage/ti11_small_highfive.png )
+url( ${IMG_URL}international2022/reward_montage/ti11_small_hud.png )
+url( ${IMG_URL}international2022/reward_montage/ti11_small_itemfx.png )
+url( ${IMG_URL}international2022/reward_montage/ti11_small_loadingscreens.png )
+url( ${IMG_URL}international2022/reward_montage/ti11_small_mmrtokens.png )
+url( ${IMG_URL}international2022/reward_montage/ti11_small_themedtreasure.png )
+url( ${IMG_URL}international2022/reward_montage/ti11_small_trust.png )
+url( ${IMG_URL}international2022/wards.png )
+url( ${IMG_URL}items/${_ ? _ : _}.png )
+url( ${IMG_URL}items/${}.png )
+url( ${IMG_URL}labyrinth/assistant_controller.jpg )
+url( ${IMG_URL}springcleaning22/featured.jpg )
+url( ${IMG_URL}springcleaning22/keyart.jpg )
+url( ${IMG_URL}springcleaning22/list.jpg )
+url( ${IMG_URL}units/${name}.png )
 url( '${thumb_url}' )
 url(${IMG_URL}yearinreview/2022/steamDeckBackground.jpg)
 url(${avatar_full_url})
