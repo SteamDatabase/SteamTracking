@@ -1198,7 +1198,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthFixed_ljcbL
   .gamepaddialog_FieldChildren_2rhav {
-  min-width: 250px;
+  min-width: var(--gamepad-field-control-min-width, 250px);
 }
 #QuickAccess-Menu
   .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthFixed_ljcbL

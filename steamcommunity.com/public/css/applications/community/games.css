@@ -425,7 +425,12 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_AchievementContainer_38RhR {
   grid-area: achievements;
-  align-self: center;
+  align-self: stretch;
+}
+.gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_AchievementContainer_38RhR
+  .gameslistitems_AchievementsProgress_3L-qR {
+  row-gap: 6px;
 }
 .gameslistitems_GamesListItem_2-pQF .gameslistitems_Buttons_1uRB5 {
   grid-area: links;
@@ -1010,6 +1015,21 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-weight: 400;
   text-align: center;
 }
+.gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_GamepadNavigationDropdown_Ml4QU {
+  padding-top: 0;
+  padding-bottom: 0;
+  --field-row-children-spacing: 0;
+  --gamepad-field-control-min-width: 150px;
+}
+.gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_GamepadNavigationDropdown_Ml4QU
+  .gameslistitems_GamepadNavigationDropdownButton_2u7K0.DialogButton {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
 .gameslistremote_ClientSelectDropdown_2Z6JL {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
@@ -1130,11 +1150,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 @media (max-width: 910px) {
   .gameslistremote_RemoteDownloadClientBar_hQ4Q9 {
-    position: sticky;
-    top: 62px;
-  }
-  .no_header .gameslistremote_RemoteDownloadClientBar_hQ4Q9 {
-    top: 0;
+    position: relative;
   }
 }
 @media (max-width: 30rem) {
