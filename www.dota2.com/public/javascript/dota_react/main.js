@@ -3748,6 +3748,7 @@
     },
     36823: (e) => {
       e.exports = {
+        "duration-app-launch": "800ms",
         PagedSettingsDialog: "pagedsettings_PagedSettingsDialog_379hM",
         PagedSettingsDialog_PageContent:
           "pagedsettings_PagedSettingsDialog_PageContent_26LM5",
@@ -56415,16 +56416,16 @@
         const t = (0, o.jM)(l.Y.LANGUAGE),
           a = (function (e, t, a) {
             const n = (null == a ? void 0 : a.rtime32_last_modified) || 0;
-            if (void 0 !== e && e.startsWith(p))
+            if (void 0 !== e && 1 == e.length && e[0].startsWith(p))
               return (
                 s.De.MEDIA_CDN_COMMUNITY_URL +
                 "images/clans/" +
-                e.substr(p.length + 1)
+                e[0].substr(p.length + 1)
               );
-            if (void 0 !== e && e.startsWith(_)) {
+            if (void 0 !== e && 1 == e.length && e[0].startsWith(_)) {
               let a = new Array(),
                 r = s.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/",
-                l = e.substr(_.length + 1),
+                l = e[0].substr(_.length + 1),
                 c = i.aN.GetHashFromHashAndExt(l),
                 d = i.aN.GetExtensionStringFromHashAndExt(l);
               if (null != t) {
@@ -56436,7 +56437,7 @@
               }
               return a.push(r + l), a;
             }
-            return e;
+            return 1 == e.length ? e[0] : "";
           })(e.children, t),
           r = "string" == typeof a ? [a] : a;
         return n.createElement(m, { rgSources: r });
@@ -69263,17 +69264,17 @@
         );
       }
       function Pe(e) {
-        const { title: t, icon: a, active: i, className: s } = e,
-          o = (0, n._T)(e, ["title", "icon", "active", "className"]);
+        const { title: t, icon: a, active: i, className: s, onClick: o } = e,
+          l = (0, n._T)(e, ["title", "icon", "active", "className", "onClick"]);
         return r.createElement(
           "div",
-          { className: s },
+          { className: s, onClick: o },
           a
             ? r.createElement("div", { className: ke().PageListItem_Icon }, a)
             : null,
           r.createElement(
             "div",
-            Object.assign({ className: ke().PageListItem_Title }, o),
+            Object.assign({ className: ke().PageListItem_Title }, l),
             t
           )
         );
