@@ -17414,7 +17414,7 @@
                   language: this.m_renderingLanguage,
                   key: "bbnode_" + n++,
                 }),
-                r
+                ...r
               ),
             a
           );
@@ -56416,16 +56416,16 @@
         const t = (0, o.jM)(l.Y.LANGUAGE),
           a = (function (e, t, a) {
             const n = (null == a ? void 0 : a.rtime32_last_modified) || 0;
-            if (void 0 !== e && 1 == e.length && e[0].startsWith(p))
+            if (void 0 !== e && e.startsWith(p))
               return (
                 s.De.MEDIA_CDN_COMMUNITY_URL +
                 "images/clans/" +
-                e[0].substr(p.length + 1)
+                e.substr(p.length + 1)
               );
-            if (void 0 !== e && 1 == e.length && e[0].startsWith(_)) {
+            if (void 0 !== e && e.startsWith(_)) {
               let a = new Array(),
                 r = s.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/",
-                l = e[0].substr(_.length + 1),
+                l = e.substr(_.length + 1),
                 c = i.aN.GetHashFromHashAndExt(l),
                 d = i.aN.GetExtensionStringFromHashAndExt(l);
               if (null != t) {
@@ -56437,7 +56437,7 @@
               }
               return a.push(r + l), a;
             }
-            return 1 == e.length ? e[0] : "";
+            return e;
           })(e.children, t),
           r = "string" == typeof a ? [a] : a;
         return n.createElement(m, { rgSources: r });
