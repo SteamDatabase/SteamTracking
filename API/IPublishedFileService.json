@@ -214,6 +214,12 @@
                     "description": "(Optional) Filter to items updated within this range."
                 },
                 {
+                    "name": "excluded_content_descriptors",
+                    "type": "{enum}",
+                    "optional": false,
+                    "description": "(Optional) Filter out items that have these content descriptors."
+                },
+                {
                     "name": "totalonly",
                     "type": "bool",
                     "optional": false,
@@ -683,6 +689,12 @@
                     "description": "(Optional) At least one of the tags must be present on a published file to satisfy the query."
                 },
                 {
+                    "name": "excluded_content_descriptors",
+                    "type": "{enum}",
+                    "optional": false,
+                    "description": "(Optional) Filter out items that have these content descriptors."
+                },
+                {
                     "name": "totalonly",
                     "type": "bool",
                     "optional": false,
@@ -887,6 +899,12 @@
                     "type": "{message}",
                     "optional": false,
                     "description": "(Optional) At least one of the tags must be present on a published file to satisfy the query."
+                },
+                {
+                    "name": "excluded_content_descriptors",
+                    "type": "{enum}",
+                    "optional": false,
+                    "description": "(Optional) Filter out items that have these content descriptors."
                 },
                 {
                     "name": "totalonly",
