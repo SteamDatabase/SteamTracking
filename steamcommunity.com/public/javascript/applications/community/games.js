@@ -4237,7 +4237,7 @@
               n.Body().set_appid(r),
               i.Body().add_requests(n.Body());
             const a = yield fe.fG.GetIndividualRecommendations(t, i);
-            if (1 !== a.GetEResult() && 42 !== i.GetEResult())
+            if (1 !== a.GetEResult() && 42 !== a.GetEResult())
               throw (
                 (console.error(
                   "Received error from GetIndividualRecommendations",

@@ -17755,9 +17755,9 @@
         };
       }
     },
-    13664: (e, t, n) => {
+    33296: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OptInRoutes: () => Ir, default: () => Tr });
+      n.r(t), n.d(t, { OptInRoutes: () => Tr, default: () => Nr });
       var a = n(94629),
         i = n(83215),
         r = n(52868),
@@ -18843,7 +18843,7 @@
               d.createElement(
                 m.rU,
                 {
-                  to: Ir.OptinAdminEdit(l.pageid),
+                  to: Tr.OptinAdminEdit(l.pageid),
                   className: (0, D.Z)(g().Button, g().Primary),
                 },
                 "Edit Opt-In Definition"
@@ -18855,7 +18855,7 @@
                     href:
                       C.De.PARTNER_BASE_URL +
                       "optin" +
-                      Ir.OptInAppReview(l.pageid),
+                      Tr.OptInAppReview(l.pageid),
                     className: (0, D.Z)(g().Button),
                     target: "_blank",
                   },
@@ -28594,7 +28594,7 @@
               { className: ge().BasicButtonSize },
               d.createElement(
                 m.rU,
-                { to: Ir.OptinAdminDashboard() },
+                { to: Tr.OptinAdminDashboard() },
                 "Dashboard"
               )
             ),
@@ -30015,7 +30015,7 @@
           d.createElement(Tn.NL, {
             message: (e) =>
               !o.On.Get().BIsDirty() ||
-              e.pathname != Ir.OptinAdminDashboard() ||
+              e.pathname != Tr.OptinAdminDashboard() ||
               "Do you want to discard unsaved changes?",
           });
       class Bi {
@@ -31436,7 +31436,228 @@
                 }),
             });
       }
+      n(36105);
       function ir(e) {
+        const { optInDef: t } = e,
+          n = Fe(t);
+        return d.createElement(
+          "div",
+          { className: Re().RightCol },
+          d.createElement(
+            "div",
+            { className: Re().ColHeader },
+            Boolean(n) &&
+              d.createElement("div", {
+                className: Re().ColHeaderImg,
+                style: { backgroundImage: `url( '${n}' )` },
+              })
+          ),
+          d.createElement(
+            "div",
+            { className: Re().SectionCtn },
+            d.createElement(rr, Object.assign({}, e)),
+            Boolean(Le.L7.is_support) &&
+              d.createElement(lr, Object.assign({}, e))
+          )
+        );
+      }
+      function rr(e) {
+        const { optInDef: t } = e;
+        return d.createElement(pr, { optInDef: t });
+      }
+      function lr(e) {
+        const { optInDef: t, optInRegistration: n } = e,
+          { fnUpdateAppToInvitation: a } = Ke();
+        return d.createElement(
+          d.Fragment,
+          null,
+          d.createElement("br", null),
+          d.createElement("br", null),
+          d.createElement(
+            "div",
+            { className: g().ValveOnlyBackground },
+            d.createElement(
+              "ul",
+              null,
+              d.createElement(
+                "li",
+                null,
+                d.createElement(
+                  "a",
+                  {
+                    href: `${Le.De.PARTNER_BASE_URL}optin/admin/edit/${t.pageid}`,
+                  },
+                  "Edit OptIn Definition"
+                )
+              ),
+              d.createElement(
+                "li",
+                null,
+                d.createElement(
+                  "a",
+                  {
+                    href: `${Le.De.PARTNER_BASE_URL}optin/appreview/${t.pageid}?tab=appeal`,
+                  },
+                  "Go to Appeals Review Page"
+                )
+              )
+            ),
+            d.createElement("br", null),
+            d.createElement(
+              u.zx,
+              {
+                onClick: (t) =>
+                  (0, E.AM)(
+                    d.createElement(sr, Object.assign({}, e)),
+                    (0, f.RA)(t)
+                  ),
+              },
+              "(VO) Invite App to Participate"
+            ),
+            d.createElement("br", null),
+            d.createElement(
+              u.zx,
+              {
+                onClick: (e) =>
+                  (0, E.AM)(
+                    d.createElement(
+                      v.uH,
+                      { strTitle: (0, y.Xx)("#OptIn_Debug"), bAlertDialog: !0 },
+                      d.createElement(Ie.G, { data: n })
+                    ),
+                    (0, f.RA)(e)
+                  ),
+              },
+              "(VO) " + (0, y.Xx)("#OptIn_Debug")
+            ),
+            d.createElement(
+              u.zx,
+              {
+                onClick: (e) =>
+                  (0, E.AM)(
+                    d.createElement(
+                      v.uH,
+                      {
+                        strTitle: (0, y.Xx)("#OptIn_Def_Debug"),
+                        bAlertDialog: !0,
+                      },
+                      d.createElement(Ie.G, { data: t })
+                    ),
+                    (0, f.RA)(e)
+                  ),
+              },
+              "(VO) " + (0, y.Xx)("#OptIn_Def_Debug")
+            ),
+            Boolean(n.jsondata.accountid_appealing) &&
+              d.createElement(
+                d.Fragment,
+                null,
+                d.createElement(
+                  u.zx,
+                  {
+                    onClick: (t) =>
+                      (0, E.AM)(
+                        d.createElement(ar, Object.assign({ bReject: !1 }, e)),
+                        (0, f.RA)(t)
+                      ),
+                  },
+                  "Clear Appeal Data"
+                ),
+                d.createElement(
+                  u.zx,
+                  {
+                    onClick: (e) =>
+                      (0, E.AM)(
+                        d.createElement(Vi, {
+                          appid: n.appid,
+                          registration: n,
+                          bAcceptAppeal: !0,
+                        }),
+                        (0, f.RA)(e)
+                      ),
+                  },
+                  "Accept Appeal and Email Requested"
+                ),
+                d.createElement(
+                  u.zx,
+                  {
+                    onClick: (e) =>
+                      (0, E.AM)(
+                        d.createElement(Vi, {
+                          appid: n.appid,
+                          registration: n,
+                          bAcceptAppeal: !1,
+                        }),
+                        (0, f.RA)(e)
+                      ),
+                  },
+                  "REJECT Appeal and Email Requested"
+                )
+              )
+          )
+        );
+      }
+      function sr(e) {
+        var t;
+        const { optInDef: n, optInRegistration: a, closeModal: i } = e,
+          { fnUpdateAppToInvitation: r } = Ke(),
+          l = (0, We.tx)();
+        return l.bLoading
+          ? d.createElement(We.NT, {
+              state: l,
+              strDialogTitle: "Inviting App to Participate",
+              closeModal: i,
+            })
+          : d.createElement(
+              v.uH,
+              {
+                strTitle: "Invite App to Participate",
+                onCancel: i,
+                onOK: () => {
+                  l.fnSetLoading(!0),
+                    r(n.pageid, [a.appid], !0, !1, !1)
+                      .then((e) => {
+                        1 == e
+                          ? l.fnSetElSuccess(
+                              d.createElement(
+                                "div",
+                                null,
+                                d.createElement(
+                                  "span",
+                                  null,
+                                  "Success. Please reload the page to verify."
+                                ),
+                                d.createElement("br", null),
+                                d.createElement(
+                                  "a",
+                                  {
+                                    href: `${Le.De.PARTNER_BASE_URL}optin/sale/${n.pageid}/${a.appid}`,
+                                  },
+                                  "Or go to registration Page."
+                                )
+                              )
+                            )
+                          : l.fnSetStrError("Failed with error code: " + e);
+                      })
+                      .catch(() =>
+                        l.fnSetStrError(
+                          "failed with exception, check console ouput."
+                        )
+                      );
+                },
+              },
+              d.createElement(
+                "div",
+                null,
+                "Confirm we want to invite this appear to register for ",
+                null === (t = n.event_title) || void 0 === t
+                  ? void 0
+                  : t.english,
+                "? They will need to perform the registration after you invite completes"
+              )
+            );
+      }
+      function or(e) {
         const { appid: t, pageid: n } = e,
           [a] = (0, Je.vs)(t, { include_release: !0 }),
           i = (0, C.kQ)("eligible_due_optin_def", "application_config"),
@@ -31485,7 +31706,7 @@
                   )
                 ),
                 d.createElement("hr", null),
-                d.createElement(rr, {
+                d.createElement(cr, {
                   optInDef: r,
                   optInRegistration: l,
                   storeItem: a,
@@ -31496,7 +31717,7 @@
               string: (0, y.Xx)("#Loading"),
             });
       }
-      function rr(e) {
+      function cr(e) {
         const { optInDef: t } = e,
           n = (0, s.Xj)(t.event_title, (0, L.jM)(Le.De.LANGUAGE)),
           a = Fe(t);
@@ -31525,26 +31746,13 @@
                 (0, y.Xx)("#OptIn_Appeals_Title_Pruned")
               )
             ),
-            d.createElement(lr, Object.assign({}, e)),
-            d.createElement(sr, Object.assign({}, e))
+            d.createElement(dr, Object.assign({}, e)),
+            d.createElement(mr, Object.assign({}, e))
           ),
-          d.createElement(
-            "div",
-            { className: Re().RightCol },
-            d.createElement(
-              "div",
-              { className: Re().ColHeader },
-              Boolean(a) &&
-                d.createElement("div", {
-                  className: Re().ColHeaderImg,
-                  style: { backgroundImage: `url( '${a}' )` },
-                })
-            ),
-            d.createElement(dr, Object.assign({}, e))
-          )
+          d.createElement(ir, Object.assign({}, e))
         );
       }
-      function lr(e) {
+      function dr(e) {
         const { optInDef: t, storeItem: n } = e,
           a = (0, s.Xj)(t.event_title, (0, L.jM)(Le.De.LANGUAGE)),
           i = (0, s.Xj)(t.appeals_text, (0, L.jM)(Le.De.LANGUAGE), null);
@@ -31583,7 +31791,7 @@
             )
         );
       }
-      function sr(e) {
+      function mr(e) {
         var t;
         const { optInDef: n, optInRegistration: a, storeItem: i } = e;
         let r = !1;
@@ -31656,11 +31864,11 @@
               )
             );
         return d.createElement(
-          or,
+          ur,
           Object.assign({}, e, { bShowReleaseDatePassed: r })
         );
       }
-      function or(e) {
+      function ur(e) {
         var t;
         const {
             optInDef: n,
@@ -31767,7 +31975,7 @@
             )
         );
       }
-      function cr(e) {
+      function pr(e) {
         const { optInDef: t } = e,
           n = (0, s.Xj)(t.event_title, (0, L.jM)(Le.De.LANGUAGE)),
           a = t.public_doc_wiki_url,
@@ -31821,137 +32029,7 @@
           )
         );
       }
-      function dr(e) {
-        const { optInDef: t, optInRegistration: n } = e;
-        return d.createElement(
-          "div",
-          { className: Re().SectionCtn },
-          d.createElement(cr, { optInDef: t }),
-          Boolean(Le.L7.is_support) &&
-            d.createElement(
-              d.Fragment,
-              null,
-              d.createElement("br", null),
-              d.createElement("br", null),
-              d.createElement(
-                "div",
-                { className: g().ValveOnlyBackground },
-                d.createElement(
-                  "ul",
-                  null,
-                  d.createElement(
-                    "li",
-                    null,
-                    d.createElement(
-                      "a",
-                      {
-                        href: `${Le.De.PARTNER_BASE_URL}optin/admin/edit/${t.pageid}`,
-                      },
-                      "Edit OptIn Definition"
-                    )
-                  ),
-                  d.createElement(
-                    "li",
-                    null,
-                    d.createElement(
-                      "a",
-                      {
-                        href: `${Le.De.PARTNER_BASE_URL}optin/appreview/${t.pageid}?tab=appeal`,
-                      },
-                      "Go to Appeals Review Page"
-                    )
-                  )
-                ),
-                d.createElement(
-                  u.zx,
-                  {
-                    onClick: (e) =>
-                      (0, E.AM)(
-                        d.createElement(
-                          v.uH,
-                          {
-                            strTitle: (0, y.Xx)("#OptIn_Debug"),
-                            bAlertDialog: !0,
-                          },
-                          d.createElement(Ie.G, { data: n })
-                        ),
-                        (0, f.RA)(e)
-                      ),
-                  },
-                  "(VO) " + (0, y.Xx)("#OptIn_Debug")
-                ),
-                d.createElement(
-                  u.zx,
-                  {
-                    onClick: (e) =>
-                      (0, E.AM)(
-                        d.createElement(
-                          v.uH,
-                          {
-                            strTitle: (0, y.Xx)("#OptIn_Def_Debug"),
-                            bAlertDialog: !0,
-                          },
-                          d.createElement(Ie.G, { data: t })
-                        ),
-                        (0, f.RA)(e)
-                      ),
-                  },
-                  "(VO) " + (0, y.Xx)("#OptIn_Def_Debug")
-                ),
-                Boolean(n.jsondata.accountid_appealing) &&
-                  d.createElement(
-                    d.Fragment,
-                    null,
-                    d.createElement(
-                      u.zx,
-                      {
-                        onClick: (t) =>
-                          (0, E.AM)(
-                            d.createElement(
-                              ar,
-                              Object.assign({ bReject: !1 }, e)
-                            ),
-                            (0, f.RA)(t)
-                          ),
-                      },
-                      "Clear Appeal Data"
-                    ),
-                    d.createElement(
-                      u.zx,
-                      {
-                        onClick: (e) =>
-                          (0, E.AM)(
-                            d.createElement(Vi, {
-                              appid: n.appid,
-                              registration: n,
-                              bAcceptAppeal: !0,
-                            }),
-                            (0, f.RA)(e)
-                          ),
-                      },
-                      "Accept Appeal and Email Requested"
-                    ),
-                    d.createElement(
-                      u.zx,
-                      {
-                        onClick: (e) =>
-                          (0, E.AM)(
-                            d.createElement(Vi, {
-                              appid: n.appid,
-                              registration: n,
-                              bAcceptAppeal: !1,
-                            }),
-                            (0, f.RA)(e)
-                          ),
-                      },
-                      "REJECT Appeal and Email Requested"
-                    )
-                  )
-              )
-            )
-        );
-      }
-      function mr(e) {
+      function _r(e) {
         const t = e;
         return (
           t &&
@@ -31961,12 +32039,12 @@
           "string" == typeof t[0].app_name
         );
       }
-      function ur() {
+      function gr() {
         const [e, t] = (0, d.useState)(null);
         return (
           (0, d.useEffect)(() => {
             const e = (0, C.ip)("optin_registered", "application_config");
-            mr(e) &&
+            _r(e) &&
               ("dev" === C.De.WEB_UNIVERSE &&
                 console.log(
                   "useOptInRegistrationForDashboardNotPruned has " + e.length
@@ -31992,9 +32070,9 @@
         );
       }
       n(4022);
-      var pr = n(55910),
-        _r = n(69261);
-      function gr(e) {
+      var hr = n(55910),
+        vr = n(69261);
+      function Er(e) {
         const { pageid: t } = e,
           n = (0, c.r)(t),
           a = (0, d.useMemo)(
@@ -32023,10 +32101,10 @@
             (0, y.Xx)("#OptIn_DashBoard", i.name || "", a)
           ),
           d.createElement("hr", null),
-          d.createElement(hr, { optInDef: n })
+          d.createElement(Sr, { optInDef: n })
         );
       }
-      function hr(e) {
+      function Sr(e) {
         const { optInDef: t } = e,
           n = Math.floor(Date.now() / 1e3);
         return t.event_end_date < n
@@ -32042,22 +32120,22 @@
                   : d.createElement(
                       d.Fragment,
                       null,
-                      d.createElement(Sr, { optInDef: t }),
-                      d.createElement(Dr, { optInDef: t }),
-                      d.createElement(fr, { optInDef: t }),
-                      d.createElement(br, { optInDef: t })
+                      d.createElement(yr, { optInDef: t }),
+                      d.createElement(br, { optInDef: t }),
+                      d.createElement(Cr, { optInDef: t }),
+                      d.createElement(Ir, { optInDef: t })
                     )
               ),
               d.createElement(
                 "div",
                 { className: Re().RightCol },
-                d.createElement(vr, { optInDef: t }),
-                d.createElement(Er, { optInDef: t }),
-                d.createElement(wr, { optInDef: t })
+                d.createElement(Dr, { optInDef: t }),
+                d.createElement(fr, { optInDef: t }),
+                d.createElement(Br, { optInDef: t })
               )
             );
       }
-      function vr(e) {
+      function Dr(e) {
         const { optInDef: t } = e,
           n = ((0, s.Xj)(t.event_title, (0, G.jM)(Le.De.LANGUAGE)), Fe(t));
         return d.createElement(
@@ -32084,7 +32162,7 @@
           )
         );
       }
-      function Er(e) {
+      function fr(e) {
         var t, n;
         const { optInDef: a } = e;
         return (
@@ -32120,7 +32198,7 @@
             )
           : null;
       }
-      function Sr(e) {
+      function yr(e) {
         const { optInDef: t } = e,
           n = (0, s.Xj)(t.event_title, (0, G.jM)(Le.De.LANGUAGE)),
           a = Fe(t),
@@ -32153,9 +32231,9 @@
           )
         );
       }
-      function Dr(e) {
+      function br(e) {
         const { optInDef: t } = e,
-          n = ur();
+          n = gr();
         return n && 0 != n.length
           ? d.createElement(
               "div",
@@ -32191,7 +32269,7 @@
                   "tbody",
                   null,
                   n.map((e) =>
-                    d.createElement(yr, {
+                    d.createElement(wr, {
                       key: "registered_" + e.appid,
                       bReview: !0,
                       appid: e.appid,
@@ -32204,7 +32282,7 @@
             )
           : null;
       }
-      function fr(e) {
+      function Cr(e) {
         const { optInDef: t } = e,
           n = (function () {
             const [e, t] = (0, d.useState)(null);
@@ -32214,7 +32292,7 @@
                   "optin_opportunities",
                   "application_config"
                 );
-                mr(e) &&
+                _r(e) &&
                   ("dev" === C.De.WEB_UNIVERSE &&
                     console.log(
                       "useOptInOpportunitiesForDashboard has " + e.length
@@ -32232,7 +32310,7 @@
               e
             );
           })(),
-          a = ur();
+          a = gr();
         return (!n || 0 == n.length) && (null == a ? void 0 : a.length) > 0
           ? null
           : d.createElement(
@@ -32271,7 +32349,7 @@
                       "tbody",
                       null,
                       n.map((e) =>
-                        d.createElement(yr, {
+                        d.createElement(wr, {
                           key: "opportunity_" + e.appid,
                           appid: e.appid,
                           appName: e.app_name,
@@ -32282,7 +32360,7 @@
                   )
             );
       }
-      function yr(e) {
+      function wr(e) {
         const { appid: t, appName: n, optInDef: a, bReview: i } = e;
         return d.createElement(
           "tr",
@@ -32300,10 +32378,10 @@
           )
         );
       }
-      function br(e) {
+      function Ir(e) {
         const { optInDef: t } = e,
           [n, a] = (0, d.useState)(null),
-          [i] = (0, Je.jk)((0, pr.u$)(n), (0, pr.D3)(n), {
+          [i] = (0, Je.jk)((0, hr.u$)(n), (0, hr.D3)(n), {
             include_assets: !0,
           }),
           r =
@@ -32315,14 +32393,14 @@
           d.createElement("h1", null, (0, y.Xx)("#OptIn_NoEligible_title")),
           d.createElement("p", null, (0, y.Xx)("#OptIn_NoEligible_Desc1")),
           d.createElement("p", null, (0, y.Xx)("#OptIn_NoEligible_Desc2")),
-          d.createElement(_r.u, {
+          d.createElement(vr.u, {
             itemType: 0,
             strLabel: (0, y.Xx)("#OptIn_SearchGame"),
             fnSetItemID: (e) => {
               (n && n.appid == e) || a({ appid: e });
             },
           }),
-          d.createElement(Cr, { oFeaturedItem: n, oStoreItem: i }),
+          d.createElement(Ar, { oFeaturedItem: n, oStoreItem: i }),
           d.createElement(
             u.zx,
             {
@@ -32342,7 +32420,7 @@
           )
         );
       }
-      function Cr(e) {
+      function Ar(e) {
         const { oFeaturedItem: t, oStoreItem: n } = e;
         return t && !n
           ? d.createElement(
@@ -32365,12 +32443,12 @@
             )
           : null;
       }
-      function wr(e) {
+      function Br(e) {
         const { optInDef: t } = e;
         return d.createElement(
           "div",
           { className: Re().SectionCtn },
-          d.createElement(cr, { optInDef: t }),
+          d.createElement(pr, { optInDef: t }),
           Boolean(Le.L7.is_support) &&
             d.createElement(
               "div",
@@ -32385,7 +32463,7 @@
             )
         );
       }
-      const Ir = {
+      const Tr = {
           OptinAdminDashboard: () => "/admin/",
           OptinAdminEdit: (e) => `/admin/edit/${e}`,
           OptinAdminSupport: (e) => `/admin/support/${e}`,
@@ -32394,11 +32472,11 @@
           OptInAppAppeal: (e, t) => `/appeal/${e}/${t}`,
           OptInAppReview: (e) => `/appreview/${e}`,
         },
-        Ar = "sale_";
-      function Br(e) {
-        return (null == e ? void 0 : e.startsWith(Ar)) ? e : Ar + e;
+        kr = "sale_";
+      function Rr(e) {
+        return (null == e ? void 0 : e.startsWith(kr)) ? e : kr + e;
       }
-      function Tr(e) {
+      function Nr(e) {
         return (0, ki.NX)()
           ? d.createElement(
               m.VK,
@@ -32420,49 +32498,49 @@
                 }),
                 d.createElement(Tn.AW, {
                   exact: !0,
-                  path: Ir.OptinAdminDashboard(),
+                  path: Tr.OptinAdminDashboard(),
                   component: te,
                 }),
                 d.createElement(Tn.AW, {
                   exact: !0,
-                  path: Ir.OptinAdminEdit(":pageid"),
+                  path: Tr.OptinAdminEdit(":pageid"),
                   render: (e) =>
                     d.createElement(Ya, { pageid: e.match.params.pageid }),
                 }),
                 d.createElement(Tn.AW, {
                   exact: !0,
-                  path: Ir.OptinAdminSupport(":appid"),
+                  path: Tr.OptinAdminSupport(":appid"),
                   render: (e) =>
                     d.createElement(ti, {
                       appid: Number.parseInt(e.match.params.appid),
                     }),
                 }),
                 d.createElement(Tn.AW, {
-                  path: Ir.OptInApp(":partialpageid", ":appid"),
+                  path: Tr.OptInApp(":partialpageid", ":appid"),
                   render: (e) =>
                     d.createElement(Ii, {
                       appid: e.match.params.appid,
-                      pageid: Br(e.match.params.partialpageid),
+                      pageid: Rr(e.match.params.partialpageid),
                     }),
                 }),
                 d.createElement(Tn.AW, {
-                  path: Ir.OptInAppReview(":pageid"),
+                  path: Tr.OptInAppReview(":pageid"),
                   render: (e) =>
                     d.createElement(Hi, { pageid: e.match.params.pageid }),
                 }),
                 d.createElement(Tn.AW, {
-                  path: Ir.OptInAppAppeal(":partialpageid", ":appid"),
+                  path: Tr.OptInAppAppeal(":partialpageid", ":appid"),
                   render: (e) =>
-                    d.createElement(ir, {
+                    d.createElement(or, {
                       appid: Number.parseInt(e.match.params.appid),
-                      pageid: Br(e.match.params.partialpageid),
+                      pageid: Rr(e.match.params.partialpageid),
                     }),
                 }),
                 d.createElement(Tn.AW, {
-                  path: Ir.OptInPartnerDashboard(":partialpageid"),
+                  path: Tr.OptInPartnerDashboard(":partialpageid"),
                   render: (e) =>
-                    d.createElement(gr, {
-                      pageid: Br(e.match.params.partialpageid),
+                    d.createElement(Er, {
+                      pageid: Rr(e.match.params.partialpageid),
                     }),
                 }),
                 d.createElement(Tn.AW, { component: i.R })
@@ -40247,7 +40325,7 @@
       })(Pa || (Pa = {}));
       class Ma {
         constructor(e) {
-          (this.m_oMesssage = null),
+          (this.m_oMessage = null),
             (this.m_originalMessage = null),
             (this.m_oTemplateVars = null),
             (this.m_oAdditionalRestrictions = null),
@@ -40262,7 +40340,7 @@
         Reset(e) {
           switch (
             ((this.m_originalMessage = JSON.parse(JSON.stringify(e))),
-            (this.m_oMesssage = JSON.parse(JSON.stringify(e))),
+            (this.m_oMessage = JSON.parse(JSON.stringify(e))),
             (this.m_bDirty = !1),
             this.GetRealm())
           ) {
@@ -40300,9 +40378,10 @@
                   this.m_oAdditionalRestrictions.experiment_control_group
                 )),
             this.m_oAdditionalRestrictions.user_filters &&
+              ((this.m_oAdditionalRestrictions.no_filters_required = !1),
               this.RecursivelyDecorateTempIDAndHandleDeserialization(
                 this.m_oAdditionalRestrictions.user_filters
-              ),
+              )),
             this.SetupStoreItemKey();
         }
         RecursivelyDecorateTempIDAndHandleDeserialization(e) {
@@ -40329,7 +40408,7 @@
               );
         }
         PrepareMessageModelForUpdate() {
-          const e = JSON.parse(JSON.stringify(this.m_oMesssage)),
+          const e = JSON.parse(JSON.stringify(this.m_oMessage)),
             t = JSON.parse(
               JSON.stringify(this.m_oAdditionalRestrictions || {})
             );
@@ -40342,21 +40421,21 @@
           );
         }
         SetupStoreItemKey() {
-          switch (this.m_oMesssage.association_type) {
+          switch (this.m_oMessage.association_type) {
             case 1:
-              this.m_storeItemKey = (0, kt.Bl)(this.m_oMesssage.associated_id);
+              this.m_storeItemKey = (0, kt.Bl)(this.m_oMessage.associated_id);
               break;
             case 2:
               this.m_storeItemKey = (0, kt.Bl)(
                 null,
-                this.m_oMesssage.associated_id
+                this.m_oMessage.associated_id
               );
               break;
             case 5:
               this.m_storeItemKey = (0, kt.Bl)(
                 null,
                 null,
-                this.m_oMesssage.associated_id
+                this.m_oMessage.associated_id
               );
               break;
             default:
@@ -40371,7 +40450,7 @@
           return this.m_callback;
         }
         GetModel() {
-          return this.m_oMesssage;
+          return this.m_oMessage;
         }
         GetTemplateVarsModel() {
           return this.m_oTemplateVars;
@@ -40386,58 +40465,58 @@
           return this.m_storeItemID;
         }
         GetGID() {
-          return this.m_oMesssage.gid;
+          return this.m_oMessage.gid;
         }
         GetName() {
-          return this.m_oMesssage.title;
+          return this.m_oMessage.title;
         }
         GetType() {
-          return this.m_oMesssage.type;
+          return this.m_oMessage.type;
         }
         GetVisibilty() {
-          return this.m_oMesssage.visibility;
+          return this.m_oMessage.visibility;
         }
         GetPriority() {
-          return this.m_oMesssage.priority;
+          return this.m_oMessage.priority;
         }
         GetCreatorName() {
-          return this.m_oMesssage.creator_name;
+          return this.m_oMessage.creator_name;
         }
         GetStartRTime() {
-          return this.m_oMesssage.start_date;
+          return this.m_oMessage.start_date;
         }
         GetEndRTime() {
-          return this.m_oMesssage.end_date;
+          return this.m_oMessage.end_date;
         }
         GetCountryAllow() {
-          return this.m_oMesssage.country_allow;
+          return this.m_oMessage.country_allow;
         }
         GetCountryAllowList() {
-          return (this.m_oMesssage.country_allow || "").split(",");
+          return (this.m_oMessage.country_allow || "").split(",");
         }
         GetCountryDeny() {
-          return this.m_oMesssage.country_allow;
+          return this.m_oMessage.country_deny;
         }
         GetCountryDenyList() {
-          return (this.m_oMesssage.country_deny || "").split(",");
+          return (this.m_oMessage.country_deny || "").split(",");
         }
         GetMustOwnAppID() {
-          return this.m_oMesssage.must_own_appid;
+          return this.m_oMessage.must_own_appid;
         }
         GetMustNotOwnAppID() {
-          return this.m_oMesssage.must_not_own_appid;
+          return this.m_oMessage.must_not_own_appid;
         }
         GetMustOwnPackageID() {
-          return this.m_oMesssage.must_own_packageid;
+          return this.m_oMessage.must_own_packageid;
         }
         GetMustNotOwnPackageID() {
-          return this.m_oMesssage.must_not_own_packageid;
+          return this.m_oMessage.must_not_own_packageid;
         }
         GetMustHaveLaunchedAppID() {
-          return this.m_oMesssage.must_have_launched_appid;
+          return this.m_oMessage.must_have_launched_appid;
         }
         GetPreviewURL() {
-          return `${A.De.PARTNER_BASE_URL}marketing/messagepreview/${this.m_oMesssage.gid}/`;
+          return `${A.De.PARTNER_BASE_URL}marketing/messagepreview/${this.m_oMessage.gid}/`;
         }
         GetSteamRealmsForLanguage() {
           return this.m_eSteamRealms;
@@ -40452,17 +40531,17 @@
         }
         BHasPlatformWindows() {
           return Boolean(
-            this.m_oMesssage.flags & Pa.k_EMarketingMessageFlagsPlatformWindows
+            this.m_oMessage.flags & Pa.k_EMarketingMessageFlagsPlatformWindows
           );
         }
         BHasPlatformMac() {
           return Boolean(
-            this.m_oMesssage.flags & Pa.k_EMarketingMessageFlagsPlatformMac
+            this.m_oMessage.flags & Pa.k_EMarketingMessageFlagsPlatformMac
           );
         }
         BHasPlatformLinux() {
           return Boolean(
-            this.m_oMesssage.flags & Pa.k_EMarketingMessageFlagsPlatformLinux
+            this.m_oMessage.flags & Pa.k_EMarketingMessageFlagsPlatformLinux
           );
         }
         BHasFeaturedStoreItem() {
@@ -40470,21 +40549,21 @@
         }
         BIsCountryShow() {
           return (
-            !this.m_oMesssage.country_deny ||
-            0 == this.m_oMesssage.country_deny.trim().length
+            !this.m_oMessage.country_deny ||
+            0 == this.m_oMessage.country_deny.trim().length
           );
         }
         BOwnershipRestrictionOverride() {
-          return this.m_oMesssage.ownership_restrictions_overridden;
+          return this.m_oMessage.ownership_restrictions_overridden;
         }
         BHasLegacyRestrictions() {
           return Boolean(
-            this.m_oMesssage.ownership_restrictions_overridden ||
-              this.m_oMesssage.must_own_appid ||
-              this.m_oMesssage.must_not_own_appid ||
-              this.m_oMesssage.must_own_packageid ||
-              this.m_oMesssage.must_not_own_packageid ||
-              this.m_oMesssage.must_have_launched_appid
+            this.m_oMessage.ownership_restrictions_overridden ||
+              this.m_oMessage.must_own_appid ||
+              this.m_oMessage.must_not_own_appid ||
+              this.m_oMessage.must_own_packageid ||
+              this.m_oMessage.must_not_own_packageid ||
+              this.m_oMessage.must_have_launched_appid
           );
         }
         GetLinkURL() {
@@ -40504,6 +40583,9 @@
         }
         GetAssetsModifyTime() {
           return this.m_oTemplateVars.last_asset_mtime;
+        }
+        BIsNoFilterRequired() {
+          return this.m_oAdditionalRestrictions.no_filters_required;
         }
         GetRealm() {
           var e;
@@ -40559,17 +40641,17 @@
         }
         SaveSuccessClearDirty() {
           (this.m_originalMessage = JSON.parse(
-            JSON.stringify(this.m_oMesssage)
+            JSON.stringify(this.m_oMessage)
           )),
             (this.m_bDirty = !1);
         }
         ClearAllLegacyRestrictions() {
-          (this.m_oMesssage.must_own_appid = 0),
-            (this.m_oMesssage.must_not_own_appid = 0),
-            (this.m_oMesssage.must_own_packageid = 0),
-            (this.m_oMesssage.must_not_own_packageid = 0),
-            (this.m_oMesssage.must_have_launched_appid = 0),
-            (this.m_oMesssage.ownership_restrictions_overridden = !1),
+          (this.m_oMessage.must_own_appid = 0),
+            (this.m_oMessage.must_not_own_appid = 0),
+            (this.m_oMessage.must_own_packageid = 0),
+            (this.m_oMessage.must_not_own_packageid = 0),
+            (this.m_oMessage.must_have_launched_appid = 0),
+            (this.m_oMessage.ownership_restrictions_overridden = !1),
             this.Dispatch();
         }
         SetAdminNote(e) {
@@ -40577,36 +40659,36 @@
             ((this.m_oAdditionalRestrictions.admin_notes = e), this.Dispatch());
         }
         SetName(e) {
-          this.m_oMesssage.title !== e &&
-            ((this.m_oMesssage.title = e), this.Dispatch());
+          this.m_oMessage.title !== e &&
+            ((this.m_oMessage.title = e), this.Dispatch());
         }
         SetType(e) {
-          this.m_oMesssage.type !== e &&
-            ((this.m_oMesssage.type = e), this.Dispatch());
+          this.m_oMessage.type !== e &&
+            ((this.m_oMessage.type = e), this.Dispatch());
         }
         SetVisibility(e) {
-          this.m_oMesssage.visibility !== e &&
-            ((this.m_oMesssage.visibility = e), this.Dispatch());
+          this.m_oMessage.visibility !== e &&
+            ((this.m_oMessage.visibility = e), this.Dispatch());
         }
         SetAssociation(e, t) {
           if (
-            this.m_oMesssage.association_type != e ||
-            this.m_oMesssage.associated_id != t
+            this.m_oMessage.association_type != e ||
+            this.m_oMessage.associated_id != t
           )
             switch (e) {
               case 1:
               case 5:
               case 2:
               case 0:
-                (this.m_oMesssage.association_type = e),
-                  (this.m_oMesssage.associated_id = t),
-                  (this.m_oMesssage.associated_name = ""),
+                (this.m_oMessage.association_type = e),
+                  (this.m_oMessage.associated_id = t),
+                  (this.m_oMessage.associated_name = ""),
                   this.SetupStoreItemKey(),
                   this.Dispatch();
                 break;
               case 4:
               case 3:
-                this.m_oMesssage.associated_name = "" + t;
+                this.m_oMessage.associated_name = "" + t;
               default:
                 throw new Error(
                   "Unexpected Marketing Message Association Type: " + e
@@ -40614,47 +40696,47 @@
             }
         }
         SetMessageTime(e, t) {
-          (this.m_oMesssage.start_date === e &&
-            this.m_oMesssage.end_date === t) ||
-            ((this.m_oMesssage.start_date = e),
-            (this.m_oMesssage.end_date = t),
+          (this.m_oMessage.start_date === e &&
+            this.m_oMessage.end_date === t) ||
+            ((this.m_oMessage.start_date = e),
+            (this.m_oMessage.end_date = t),
             this.Dispatch());
         }
         SetMessageStartTime(e) {
-          this.m_oMesssage.start_date !== e &&
-            ((this.m_oMesssage.start_date = e), this.Dispatch());
+          this.m_oMessage.start_date !== e &&
+            ((this.m_oMessage.start_date = e), this.Dispatch());
         }
         SetMessageEndTime(e) {
-          this.m_oMesssage.end_date !== e &&
-            ((this.m_oMesssage.end_date = e), this.Dispatch());
+          this.m_oMessage.end_date !== e &&
+            ((this.m_oMessage.end_date = e), this.Dispatch());
         }
         SetCountryAllow(e) {
-          this.m_oMesssage.country_allow !== e &&
-            ((this.m_oMesssage.country_allow = e), this.Dispatch());
+          this.m_oMessage.country_allow !== e &&
+            ((this.m_oMessage.country_allow = e), this.Dispatch());
         }
         SetCountryDeny(e) {
-          this.m_oMesssage.country_deny !== e &&
-            ((this.m_oMesssage.country_deny = e), this.Dispatch());
+          this.m_oMessage.country_deny !== e &&
+            ((this.m_oMessage.country_deny = e), this.Dispatch());
         }
         SetMustOwnAppID(e) {
-          this.m_oMesssage.must_own_appid !== e &&
-            ((this.m_oMesssage.must_own_appid = e), this.Dispatch());
+          this.m_oMessage.must_own_appid !== e &&
+            ((this.m_oMessage.must_own_appid = e), this.Dispatch());
         }
         SetMustNotOwnAppID(e) {
-          this.m_oMesssage.must_not_own_appid !== e &&
-            ((this.m_oMesssage.must_not_own_appid = e), this.Dispatch());
+          this.m_oMessage.must_not_own_appid !== e &&
+            ((this.m_oMessage.must_not_own_appid = e), this.Dispatch());
         }
         SetMustOwnPackageID(e) {
-          this.m_oMesssage.must_own_packageid !== e &&
-            ((this.m_oMesssage.must_own_packageid = e), this.Dispatch());
+          this.m_oMessage.must_own_packageid !== e &&
+            ((this.m_oMessage.must_own_packageid = e), this.Dispatch());
         }
         SetMustNotOwnPackageID(e) {
-          this.m_oMesssage.must_not_own_packageid !== e &&
-            ((this.m_oMesssage.must_not_own_packageid = e), this.Dispatch());
+          this.m_oMessage.must_not_own_packageid !== e &&
+            ((this.m_oMessage.must_not_own_packageid = e), this.Dispatch());
         }
         SetMustHaveLaunchedAppID(e) {
-          this.m_oMesssage.must_have_launched_appid !== e &&
-            ((this.m_oMesssage.must_have_launched_appid = e), this.Dispatch());
+          this.m_oMessage.must_have_launched_appid !== e &&
+            ((this.m_oMessage.must_have_launched_appid = e), this.Dispatch());
         }
         SetLinkURL(e) {
           this.m_oTemplateVars.linkurl !== e &&
@@ -40690,11 +40772,16 @@
           this.SetFlag(Pa.k_EMarketingMessageFlagsPlatformLinux, e);
         }
         SetFlag(e, t) {
-          t && !Boolean(this.m_oMesssage.flags & e)
-            ? ((this.m_oMesssage.flags |= e), this.Dispatch())
+          t && !Boolean(this.m_oMessage.flags & e)
+            ? ((this.m_oMessage.flags |= e), this.Dispatch())
             : !t &&
-              Boolean(this.m_oMesssage.flags & e) &&
-              ((this.m_oMesssage.flags &= ~e), this.Dispatch());
+              Boolean(this.m_oMessage.flags & e) &&
+              ((this.m_oMessage.flags &= ~e), this.Dispatch());
+        }
+        SetNoFiltersRequired(e) {
+          this.m_oAdditionalRestrictions.no_filters_required != e &&
+            ((this.m_oAdditionalRestrictions.no_filters_required = e),
+            this.Dispatch());
         }
         AddNewAndUserFilter(e = { filter_type: 1, id_list: [] }) {
           this.m_oAdditionalRestrictions ||
@@ -40818,6 +40905,7 @@
         (0, B.gn)([fn.a], Ma.prototype, "SetPlatformWindows", null),
         (0, B.gn)([fn.a], Ma.prototype, "SetPlatformMac", null),
         (0, B.gn)([fn.a], Ma.prototype, "SetPlatformLinux", null),
+        (0, B.gn)([fn.a], Ma.prototype, "SetNoFiltersRequired", null),
         (0, B.gn)([fn.a], Ma.prototype, "AddNewAndUserFilter", null),
         (0, B.gn)([fn.a], Ma.prototype, "RemoveAndUserFilter", null),
         (0, B.gn)([fn.a], Ma.prototype, "AddNewOrUserFilter", null),
@@ -47127,7 +47215,9 @@
             Boolean(t.GetEndRTime()) &&
             t.GetStartRTime() < t.GetEndRTime(),
           i = Boolean(t.GetStoreItemID()),
-          l = Boolean(t.GetUserMessageFilterCount() > 0),
+          l = Boolean(
+            t.GetUserMessageFilterCount() > 0 || t.BIsNoFilterRequired()
+          ),
           s = Boolean(t.GetAssetsObject() && t.GetAssetsObject().english),
           o = a && i && l && s;
         return r.createElement(
@@ -47211,14 +47301,25 @@
       function ql(e) {
         const { oEditableMessage: t } = e,
           n = t.GetUserMessageFilters();
-        return (
-          (0, Dn.X)("and" == n.clause, "Unexpected usefilter structure"),
-          r.createElement(
-            "div",
-            { className: Nt().SectionCtn },
-            r.createElement(S.__, null, "DYNAMIC FILTERS"),
-            r.createElement(Kl, { andFilter: n, oEditableMessage: t })
-          )
+        (0, Dn.X)("and" == n.clause, "Unexpected usefilter structure");
+        const a = (0, Tt.SZ)(() => t.BIsNoFilterRequired());
+        return r.createElement(
+          "div",
+          { className: Nt().SectionCtn },
+          r.createElement(S.__, null, "DYNAMIC FILTERS"),
+          Boolean(!a) &&
+            r.createElement(Kl, { andFilter: n, oEditableMessage: t }),
+          r.createElement("br", null),
+          r.createElement(S.ji, {
+            label: "Show to all users; no filters to be applied.",
+            tooltip:
+              "Checking this to on will show to all users in the Steam Realm. This will also clear any dynamic filters associated with the marketing messages including legacy filter settings.",
+            checked: a,
+            onChange: (e) => {
+              t.SetNoFiltersRequired(e),
+                e && (t.ClearUserFilters(), t.ClearAllLegacyRestrictions());
+            },
+          })
         );
       }
       function Kl(e) {
@@ -47764,8 +47865,7 @@
       }
       function rs(e) {
         const { oEditableMessage: t } = e,
-          [n, a] = (0, r.useState)(t.BIsCountryShow()),
-          i = (0, r.useMemo)(
+          n = (0, r.useMemo)(
             () => [
               { label: "Steam Global (not Steam China)", data: 0 },
               { label: "Steam China (not Steam Global)", data: 1 },
@@ -47773,26 +47873,30 @@
             ],
             []
           ),
-          l = (0, r.useMemo)(
+          a = (0, r.useMemo)(
             () => [
               { label: "Show To:", data: !0 },
               { label: "Hide From:", data: !1 },
             ],
             []
           ),
-          s = (0, r.useCallback)(
-            (e) => {
-              n ? t.SetCountryDeny(e) : t.SetCountryAllow(e);
+          i = (0, r.useCallback)(
+            (e, n) => {
+              e
+                ? (t.SetCountryAllow(n), t.SetCountryDeny(void 0))
+                : (t.SetCountryAllow(void 0), t.SetCountryDeny(n));
             },
-            [n, t]
-          );
+            [t]
+          ),
+          l = (0, Tt.SZ)(() => t.BIsCountryShow()),
+          s = (0, Tt.SZ)(() => (l ? t.GetCountryAllow() : t.GetCountryDeny()));
         return r.createElement(
           "div",
           { className: Nt().SectionCtn },
           r.createElement(S.ry, {
             label: "REALM",
             strClassName: (0, G.Z)(ne().DropDownScroll),
-            rgOptions: i,
+            rgOptions: n,
             selectedOption: t.GetRealm(),
             onChange: (e) => t.SetRealm(e.data),
           }),
@@ -47802,10 +47906,10 @@
             { className: (0, G.Z)(Nt().FlexRow, Nt().MarginBottom) },
             r.createElement(S.ry, {
               strClassName: (0, G.Z)(ne().DropDownScroll, bl().CountryInOut),
-              rgOptions: l,
-              selectedOption: n,
+              rgOptions: a,
+              selectedOption: l,
               onChange: (e) => {
-                s(""), a(e.data);
+                i(e.data, s);
               },
             }),
             r.createElement(
@@ -47813,12 +47917,12 @@
               { className: bl().CountryText },
               r.createElement(S.II, {
                 type: "text",
-                value: n ? t.GetCountryAllow() : t.GetCountryDeny(),
+                value: s,
                 placeholder:
                   "Comma separated lists of 2 letter country codes...",
                 bShowClearAction: !0,
                 onChange: (e) => {
-                  s(e.target.value);
+                  i(l, e.target.value);
                 },
               }),
               r.createElement(
@@ -47826,7 +47930,7 @@
                 {
                   href: "#",
                   onClick: (e) => {
-                    e.preventDefault(), s("CA,US,MX");
+                    e.preventDefault(), i(l, "CA,US,MX");
                   },
                 },
                 "North America"
@@ -47838,7 +47942,8 @@
                   href: "#",
                   onClick: (e) => {
                     e.preventDefault(),
-                      s(
+                      i(
+                        l,
                         "BS,PA,BZ,CR,SV,GT,HN,NI,VE,CO,GY,SR,GF,BR,PE,BO,PY,UY,AR,CL,EC"
                       );
                   },
@@ -47852,7 +47957,8 @@
                   href: "#",
                   onClick: (e) => {
                     e.preventDefault(),
-                      s(
+                      i(
+                        l,
                         "AT,BE,BG,CY,CZ,DK,EE,FI,FR,GR,HU,IS,IE,IT,LV,LT,LU,MT,NL,NO,PL,RO,SK,SI,ES,SE,CH,UK,GB,PT"
                       );
                   },
@@ -47866,7 +47972,10 @@
                   href: "#",
                   onClick: (e) => {
                     e.preventDefault(),
-                      s("NO,SE,FI,DK,PT,ES,FR,IT,AT,CH,LU,LI,BE,NL,IE,UK,GB");
+                      i(
+                        l,
+                        "NO,SE,FI,DK,PT,ES,FR,IT,AT,CH,LU,LI,BE,NL,IE,UK,GB"
+                      );
                   },
                 },
                 "Western Europe"

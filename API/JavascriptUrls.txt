@@ -936,6 +936,7 @@ ${PARTNER_BASE_URL}optin/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}optin/appeal/${pageid}/${_ ? _ : _}
 ${PARTNER_BASE_URL}optin/appreview/${pageid}?tab=appeal
 ${PARTNER_BASE_URL}optin/appreview/${}
+${PARTNER_BASE_URL}optin/sale/${pageid}/${appid}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
 ${PARTNER_BASE_URL}optin/sale/${}/
