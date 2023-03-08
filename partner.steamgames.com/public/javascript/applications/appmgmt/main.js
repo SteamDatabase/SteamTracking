@@ -21535,7 +21535,7 @@
         const r = new Date(1e3 * e),
           i = o.Yt.GetPreferredLocales(),
           s =
-            t.bForce24HourClock ||
+            (null == t ? void 0 : t.bForce24HourClock) ||
             (function (e) {
               let t = d.get(e);
               if (!0 === t || !1 === t) return t;
