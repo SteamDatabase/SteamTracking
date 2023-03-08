@@ -1278,7 +1278,8 @@
           (e[(e.Expired = 2)] = "Expired"),
           (e[(e.Network = 3)] = "Network"),
           (e[(e.MoveAuthenticator = 4)] = "MoveAuthenticator"),
-          (e[(e.RateLimitExceeded = 5)] = "RateLimitExceeded");
+          (e[(e.RateLimitExceeded = 5)] = "RateLimitExceeded"),
+          (e[(e.AnonymousLogin = 6)] = "AnonymousLogin");
       })(i || (i = {})),
         (function (e) {
           (e[(e.k_Success = 0)] = "k_Success"),
@@ -1568,7 +1569,14 @@
             const n = e.replace(/[^\x00-\x7F]/g, ""),
               s = t.replace(/[^\x00-\x7F]/g, "").slice(0, 64);
             if (!n.length || !s.length) return 8;
-            (this.m_eStatus = 1), (this.m_bUsingCodeOverride = !1);
+            if (
+              ((this.m_eStatus = 1),
+              (this.m_bUsingCodeOverride = !1),
+              "anonymous" == e)
+            )
+              return (
+                this.SetFailureState(m.NZ.AnonymousLogin, R.EResult(12)), 12
+              );
             try {
               const t = yield (function (e, t) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
@@ -3387,6 +3395,12 @@
                 r = {
                   title: (0, P.Xx)("#Login_Error_RateLimit_Title"),
                   description: (0, P.Xx)("#Login_Error_RateLimit_Description"),
+                };
+                break;
+              case m.NZ.AnonymousLogin:
+                r = {
+                  title: (0, P.Xx)("#Login_Error_Anonymous_Title"),
+                  description: (0, P.Xx)("#Login_Error_Anonymous_Description"),
                 };
                 break;
               case m.NZ.Generic:

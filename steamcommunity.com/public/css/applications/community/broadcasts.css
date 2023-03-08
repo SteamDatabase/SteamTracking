@@ -77,6 +77,10 @@
   background-size: cover;
   position: absolute;
   opacity: 0.4;
+  filter: blur(10px);
+}
+.BasicUI .eventrow_OtherEvents_BGImage_3rp-l {
+  filter: unset;
 }
 .eventrow_OtherEvents_BGImage_3rp-l::after {
   content: "";
@@ -84,6 +88,8 @@
   width: 100%;
   height: 100%;
   top: 0px;
+}
+.BasicUI .eventrow_OtherEvents_BGImage_3rp-l::after {
   backdrop-filter: blur(32px);
 }
 .eventrow_OtherEvents_ContentCtn_3QaFW {

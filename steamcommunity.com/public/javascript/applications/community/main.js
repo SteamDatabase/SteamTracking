@@ -262,6 +262,7 @@
     },
     78815: (e) => {
       e.exports = {
+        "duration-app-launch": "800ms",
         PagedSettingsDialog: "pagedsettings_PagedSettingsDialog_3I6h_",
         PagedSettingsDialog_PageContent:
           "pagedsettings_PagedSettingsDialog_PageContent_1I3Ni",
@@ -275,6 +276,7 @@
         PagedSettingsDialog_PageListItem:
           "pagedsettings_PagedSettingsDialog_PageListItem_bkfjn",
         PageListItem_Icon: "pagedsettings_PageListItem_Icon_U6HcK",
+        PageListItem_Title: "pagedsettings_PageListItem_Title_2X9_I",
         DisabledItem: "pagedsettings_DisabledItem_1RDp9",
         Active: "pagedsettings_Active_Myra7",
         PageListSpacer: "pagedsettings_PageListSpacer_33lCZ",
@@ -1130,7 +1132,8 @@
             (e[(e.k_EVRError_ComponentBusy = 3)] = "k_EVRError_ComponentBusy"),
             (e[(e.k_EVRError_CrashProtection = 4)] =
               "k_EVRError_CrashProtection"),
-            (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError");
+            (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
+            (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
         })(D || (D = {})),
         (function (e) {
           (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
@@ -1936,6 +1939,40 @@
             };
       }
     },
+    60209: (e, t, n) => {
+      "use strict";
+      n.d(t, { P9: () => s, Ub: () => a, bY: () => l, y$: () => c });
+      var r = n(89526);
+      const i = r.createContext(void 0),
+        o = i.Provider,
+        s = () => {
+          const e = r.useContext(i);
+          if (!e)
+            throw new Error(
+              "called useActiveServiceTransportContext outside of ServiceTransportProvider"
+            );
+          return e;
+        };
+      function a(e) {
+        const { useStorage: t, children: n } = e;
+        let i, s;
+        s =
+          "useActiveCMInterface" in e
+            ? (i = e.useActiveCMInterface)
+            : e.useActiveSteamInterface;
+        const a = r.useMemo(
+          () => ({
+            useActiveSteamInterface: s,
+            useActiveCMInterface: i,
+            useStorage: t,
+          }),
+          [s, i, t]
+        );
+        return r.createElement(o, { value: a }, n);
+      }
+      const l = () => s().useActiveSteamInterface().GetServiceTransport(),
+        c = () => s().useStorage();
+    },
     43057: (e, t, n) => {
       "use strict";
       n.d(t, { At: () => r });
@@ -2575,6 +2612,7 @@
           (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
           (e[(e.NoMinimize = 32768)] = "NoMinimize"),
           (e[(e.PopUpMenu = 65536)] = "PopUpMenu"),
+          (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
           (e[(e.Overlay = 8712)] = "Overlay"),
           (e[(e.Notification = 90632)] = "Notification"),
           (e[(e.PopupContextMenu = 65544)] = "PopupContextMenu");
@@ -3040,6 +3078,12 @@
           u.push("createflags=" + t.eCreationFlags),
             t.minWidth && u.push("minwidth=" + t.minWidth),
             t.minHeight && u.push("minheight=" + t.minHeight),
+            t.maxWidth &&
+              t.maxWidth != 1 / 0 &&
+              u.push("maxwidth=" + t.maxWidth),
+            t.maxHeight &&
+              t.maxHeight != 1 / 0 &&
+              u.push("maxheight=" + t.maxHeight),
             t.target_browser
               ? (u.push("pid=" + t.target_browser.m_unPID),
                 u.push("browser=" + t.target_browser.m_nBrowserID),
@@ -14703,15 +14747,19 @@
         );
       }
       function $e(e) {
-        const { title: t, icon: n, active: o, className: s } = e,
-          a = (0, r._T)(e, ["title", "icon", "active", "className"]);
+        const { title: t, icon: n, active: o, className: s, onClick: a } = e,
+          l = (0, r._T)(e, ["title", "icon", "active", "className", "onClick"]);
         return i.createElement(
           "div",
-          { className: s },
+          { className: s, onClick: a },
           n
             ? i.createElement("div", { className: ze().PageListItem_Icon }, n)
             : null,
-          i.createElement("div", Object.assign({}, a), t)
+          i.createElement(
+            "div",
+            Object.assign({ className: ze().PageListItem_Title }, l),
+            t
+          )
         );
       }
       function Ze(e) {
@@ -15848,7 +15896,10 @@
               Ct.eh,
               {
                 noFocusRing: !0,
-                className: ft().SliderControlPanelGroup,
+                className: (0, l.Z)(
+                  ft().SliderControlPanelGroup,
+                  "SliderControlPanelGroup"
+                ),
                 navRef: this.props.navRef,
                 onMouseDown: (e) => this.OnMouseDown(e.nativeEvent),
                 onTouchStart: (e) => this.OnTouchStart(e.nativeEvent),
@@ -18586,14 +18637,15 @@
           )
         );
       }
-      function u() {
+      function u(e) {
+        const t = (0, o.Z)("SVGIcon_Button", "SVGIcon_Settings", e.className);
         return i.createElement(
           "svg",
           {
             version: "1.1",
             id: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Settings",
+            className: t,
             x: "0px",
             y: "0px",
             width: "256px",
@@ -23553,16 +23605,17 @@
       n.d(t, {
         De: () => s.De,
         E_: () => a,
-        Ek: () => h,
+        Ek: () => p,
         JA: () => s.JA,
-        Kc: () => v,
+        Kc: () => C,
         L7: () => s.L7,
         Wj: () => s.Wj,
-        Zv: () => C,
-        id: () => c,
-        ip: () => g,
-        kQ: () => _,
-        y9: () => m,
+        Zv: () => b,
+        fI: () => c,
+        id: () => u,
+        ip: () => f,
+        kQ: () => g,
+        y9: () => h,
       });
       var r = n(89526),
         i = n(32338),
@@ -23579,36 +23632,48 @@
             e
           );
         };
-      function c() {
+      function c(e) {
+        const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: o } = e,
+          l = r.useMemo(
+            () => ({
+              IN_GAMEPADUI: null != t ? t : s.De.IN_GAMEPADUI,
+              IN_DESKTOPUI: null != n && n,
+              IN_VR: null != i && i,
+            }),
+            [t, n, i]
+          );
+        return r.createElement(a.Provider, { value: l }, o);
+      }
+      function u() {
         const e = l();
         return null == e ? void 0 : e.IN_GAMEPADUI;
       }
-      const u = "webui_config",
-        d = "presentation_mode";
-      function m() {
+      const d = "webui_config",
+        m = "presentation_mode";
+      function h() {
         let e = null;
         return (
-          (0, o.t$)() && (e = (0, o.bG)(d)),
+          (0, o.t$)() && (e = (0, o.bG)(m)),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function h(e = u) {
+      function p(e = d) {
         const t = {},
-          n = _("config", e);
+          n = g("config", e);
         n && (delete n.SESSIONID, Object.assign(s.De, n), (t.config = !0));
-        const r = _("userinfo", e);
+        const r = g("userinfo", e);
         r &&
           (Object.assign(s.L7, r),
           (t.userConfig = !0),
-          s.L7.is_support && m() && (s.L7.is_support = !1));
-        const i = _("broadcast", e);
+          s.L7.is_support && h() && (s.L7.is_support = !1));
+        const i = g("broadcast", e);
         i && (Object.assign(s.dk, i), (t.broadcastConfig = !0));
-        const o = _("community", e);
+        const o = g("community", e);
         o && (Object.assign(s.JA, o), (t.communityConfig = !0));
-        const a = _("event", e);
+        const a = g("event", e);
         return a && (Object.assign(s.Wj, a), (t.eventConfig = !0)), t;
       }
-      function p(e, t = u, n) {
+      function _(e, t = d, n) {
         let r;
         if (
           ((r =
@@ -23628,54 +23693,54 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function _(e, t = u) {
-        return p(e, t, !0);
+      function g(e, t = d) {
+        return _(e, t, !0);
       }
-      function g(e, t = u) {
-        return p(e, t, !1);
+      function f(e, t = d) {
+        return _(e, t, !1);
       }
-      function f(e, t) {
+      function v(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function v() {
+      function C() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return f(e, s.De.STORE_BASE_URL)
+        return v(e, s.De.STORE_BASE_URL)
           ? s.De.STORE_BASE_URL
-          : f(e, s.De.COMMUNITY_BASE_URL)
+          : v(e, s.De.COMMUNITY_BASE_URL)
           ? s.De.COMMUNITY_BASE_URL
-          : f(e, s.De.CHAT_BASE_URL)
+          : v(e, s.De.CHAT_BASE_URL)
           ? s.De.CHAT_BASE_URL
-          : f(e, s.De.PARTNER_BASE_URL)
+          : v(e, s.De.PARTNER_BASE_URL)
           ? s.De.PARTNER_BASE_URL
-          : f(e, s.De.HELP_BASE_URL)
+          : v(e, s.De.HELP_BASE_URL)
           ? s.De.HELP_BASE_URL
-          : f(e, s.De.STEAMTV_BASE_URL)
+          : v(e, s.De.STEAMTV_BASE_URL)
           ? s.De.STEAMTV_BASE_URL
-          : f(e, s.De.STATS_BASE_URL)
+          : v(e, s.De.STATS_BASE_URL)
           ? s.De.STATS_BASE_URL
-          : f(e, s.De.INTERNAL_STATS_BASE_URL)
+          : v(e, s.De.INTERNAL_STATS_BASE_URL)
           ? s.De.INTERNAL_STATS_BASE_URL
-          : f(e, s.De.STORE_CHECKOUT_BASE_URL)
+          : v(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? s.De.STORE_CHECKOUT_BASE_URL
-          : f(e, "https://steamloopback.host")
+          : v(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function C() {
+      function b() {
         const e = window.location.href;
-        return f(e, s.De.STORE_BASE_URL) || f(e, s.De.STORE_CHECKOUT_BASE_URL)
+        return v(e, s.De.STORE_BASE_URL) || v(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : f(e, s.De.COMMUNITY_BASE_URL)
+          : v(e, s.De.COMMUNITY_BASE_URL)
           ? "community"
-          : f(e, s.De.PARTNER_BASE_URL)
+          : v(e, s.De.PARTNER_BASE_URL)
           ? "partnerweb"
-          : f(e, s.De.HELP_BASE_URL)
+          : v(e, s.De.HELP_BASE_URL)
           ? "help"
-          : f(e, s.De.STEAMTV_BASE_URL)
+          : v(e, s.De.STEAMTV_BASE_URL)
           ? "steamtv"
-          : f(e, s.De.STATS_BASE_URL) || f(e, s.De.INTERNAL_STATS_BASE_URL)
+          : v(e, s.De.STATS_BASE_URL) || v(e, s.De.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -23821,17 +23886,20 @@
       "use strict";
       var r = n(33940),
         i = (n(96759), n(76583), n(89526)),
-        o = n(73961),
-        s = n(565),
-        a = n(59934),
-        l = n(5874),
-        c = n(49551),
-        u = (n(46723), n(93713)),
-        d = n(20352),
-        m = n(83215),
-        h = n(43886),
-        p = n(70983);
-      const _ = i.lazy(() =>
+        o = n(565),
+        s = n(59934),
+        a = n(5874),
+        l = n(60209),
+        c = n(2546),
+        u = n(70657),
+        d = n(49551),
+        m = n(93713),
+        h = n(20352),
+        p = n(83215),
+        _ = n(31621),
+        g = n(43886),
+        f = n(70983);
+      const v = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -23839,6 +23907,7 @@
             n.e(6148),
             n.e(2530),
             n.e(1338),
+            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23848,7 +23917,7 @@
             n.e(6845),
           ]).then(n.bind(n, 25906))
         ),
-        g = i.lazy(() =>
+        C = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -23856,6 +23925,7 @@
             n.e(2468),
             n.e(2530),
             n.e(1338),
+            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23868,7 +23938,7 @@
             n.e(2136),
           ]).then(n.bind(n, 52843))
         ),
-        f = i.lazy(() =>
+        b = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -23876,6 +23946,7 @@
             n.e(2468),
             n.e(2530),
             n.e(1338),
+            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23889,7 +23960,7 @@
             n.e(9349),
           ]).then(n.bind(n, 55613))
         ),
-        v = i.lazy(() =>
+        E = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -23897,6 +23968,7 @@
             n.e(2468),
             n.e(2530),
             n.e(1338),
+            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23909,18 +23981,19 @@
             n.e(3352),
           ]).then(n.bind(n, 20546))
         ),
-        C = i.lazy(() =>
+        S = i.lazy(() =>
           Promise.all([n.e(6148), n.e(3742), n.e(2805), n.e(238)]).then(
             n.bind(n, 6869)
           )
         ),
-        b = i.lazy(() =>
+        w = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
             n.e(483),
             n.e(2530),
             n.e(1338),
+            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23932,8 +24005,11 @@
             n.e(5436),
           ]).then(n.bind(n, 7169))
         ),
-        E = i.lazy(() => n.e(8647).then(n.bind(n, 57564))),
-        S = i.lazy(() =>
+        I = i.lazy(() =>
+          Promise.all([n.e(8657), n.e(6838)]).then(n.bind(n, 88870))
+        ),
+        y = i.lazy(() => n.e(8647).then(n.bind(n, 57564))),
+        R = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -23942,6 +24018,7 @@
             n.e(543),
             n.e(2530),
             n.e(1338),
+            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23954,13 +24031,14 @@
             n.e(3499),
           ]).then(n.bind(n, 11162))
         ),
-        w = i.lazy(() =>
+        D = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
             n.e(483),
             n.e(2530),
             n.e(1338),
+            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23974,7 +24052,7 @@
             n.e(6272),
           ]).then(n.bind(n, 59032))
         ),
-        I = i.lazy(() =>
+        M = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -23984,28 +24062,29 @@
             n.e(908),
           ]).then(n.bind(n, 56597))
         ),
-        y = i.lazy(() =>
+        T = i.lazy(() =>
           Promise.all([n.e(6588), n.e(2530), n.e(4535)]).then(n.bind(n, 93063))
         ),
-        R = i.lazy(() =>
+        k = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
             n.e(483),
             n.e(2530),
             n.e(1338),
+            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(7942),
             n.e(3903),
-          ]).then(n.bind(n, 42452))
+          ]).then(n.bind(n, 6150))
         ),
-        D = i.lazy(() =>
+        O = i.lazy(() =>
           Promise.all([n.e(1338), n.e(312)]).then(n.bind(n, 18786))
         ),
-        M = () => (p.JA.IS_OGG ? "games" : "groups"),
-        T = {},
-        k = Object.assign(
+        L = () => (f.JA.IS_OGG ? "games" : "groups"),
+        B = {},
+        F = Object.assign(
           Object.assign(
             {
               DiagData: () => "/:anything*/diagdata",
@@ -24013,14 +24092,14 @@
               OAuthLogin: () => "/oauth/loginform",
               OpenidLogin: () => "/openid/loginform",
               EventsInternal: () => "/(migrateevents|migrate)",
-              EventEditor: (e) => `/${M()}/${e}/partnerevents`,
-              EventReaders: (e) => `/${M()}/${e}/(events|announcements)`,
+              EventEditor: (e) => `/${L()}/${e}/partnerevents`,
+              EventReaders: (e) => `/${L()}/${e}/(events|announcements)`,
               HubRoot: (e) => `/app/${e}(/workshop/)?`,
               GroupRoot: (e) => `/groups/${e}/`,
               ProfileVanity: (e) => `/id/${e}`,
               ProfileSteamID: (e) => `/profiles/${e}`,
-              ProfileVanityGamesList: (e) => `${k.ProfileVanity(e)}/games`,
-              ProfileSteamIDGamesLIst: (e) => `${k.ProfileSteamID(e)}/games`,
+              ProfileVanityGamesList: (e) => `${F.ProfileVanity(e)}/games`,
+              ProfileSteamIDGamesLIst: (e) => `${F.ProfileSteamID(e)}/games`,
               UGCRewardApp: () => "/:anything/filedetails",
               UserReviewRewardAppVanity: () =>
                 "/id/:vanity_url/recommended/:appid/",
@@ -24034,34 +24113,35 @@
               DiscussionsAppWorkshop: () => "/workshop/discussions",
               DiscussionsAppUGC: () => "/sharedfiles/filedetails/discussions",
               DiscussionsAppGeneral: () => "/discussions/forum",
+              GameNotes: () => "/notes/",
               FAQApp: () => "/faqs/",
               QuestionsApp: () => "/questions/",
               ConferenceApp: () => "/(conference|steamworksvirtualconference)/",
             },
-            T
+            B
           ),
           { CommunityHomeRoot: () => "/" }
         );
-      class O extends i.Component {
+      class x extends i.Component {
         render() {
           return i.createElement(
-            s.VK,
-            { basename: B() },
+            o.VK,
+            { basename: V() },
             i.createElement(
-              L,
+              A,
               null,
               i.createElement(
                 i.Suspense,
                 { fallback: i.createElement("div", null) },
                 i.createElement(
-                  a.rs,
+                  s.rs,
                   null,
-                  i.createElement(a.AW, {
+                  i.createElement(s.AW, {
                     exact: !0,
-                    path: k.DiagData(),
+                    path: F.DiagData(),
                     render: (e) =>
                       i.createElement(
-                        c.m,
+                        d.m,
                         Object.assign({}, e, {
                           key: e.match.params.gid,
                           strConfigID: "application_config",
@@ -24069,204 +24149,215 @@
                       ),
                   }),
                   i.createElement(
-                    a.AW,
-                    { path: [k.Login(), k.OAuthLogin()] },
-                    i.createElement(d.d, {
+                    s.AW,
+                    { path: [F.Login(), F.OAuthLogin()] },
+                    i.createElement(h.d, {
                       config: {
-                        login: (e) => i.createElement(y, Object.assign({}, e)),
+                        login: (e) => i.createElement(T, Object.assign({}, e)),
                       },
                     })
                   ),
                   i.createElement(
-                    a.AW,
-                    { path: [k.Login(), k.OpenidLogin()] },
-                    i.createElement(d.d, {
+                    s.AW,
+                    { path: [F.Login(), F.OpenidLogin()] },
+                    i.createElement(h.d, {
                       config: {
-                        login: (e) => i.createElement(y, Object.assign({}, e)),
+                        login: (e) => i.createElement(T, Object.assign({}, e)),
                       },
                     })
                   ),
-                  i.createElement(a.AW, {
-                    path: k.EventEditor(":appid_or_vanity_str"),
-                    component: f,
-                  }),
-                  i.createElement(a.AW, {
-                    path: k.EventsInternal(),
-                    component: v,
-                  }),
-                  i.createElement(a.AW, {
-                    path: k.EventReaders(":appid_or_vanity_str"),
-                    component: g,
-                  }),
-                  i.createElement(a.AW, {
-                    path: k.BroadcastApp(),
+                  i.createElement(s.AW, {
+                    path: F.EventEditor(":appid_or_vanity_str"),
                     component: b,
                   }),
-                  i.createElement(a.AW, {
-                    path: k.HubRoot(":appid"),
+                  i.createElement(s.AW, {
+                    path: F.EventsInternal(),
+                    component: E,
+                  }),
+                  i.createElement(s.AW, {
+                    path: F.EventReaders(":appid_or_vanity_str"),
+                    component: C,
+                  }),
+                  i.createElement(s.AW, {
+                    path: F.BroadcastApp(),
+                    component: w,
+                  }),
+                  i.createElement(s.AW, {
+                    path: F.HubRoot(":appid"),
                     render: (e) =>
-                      i.createElement(d.d, {
+                      i.createElement(h.d, {
                         config: {
-                          "apphub-events": () => i.createElement(g, null),
+                          "apphub-events": () => i.createElement(C, null),
                           "apphub-ugcrewards": () =>
-                            i.createElement(C, Object.assign({}, e)),
+                            i.createElement(S, Object.assign({}, e)),
                           "community-awards": () =>
-                            i.createElement(C, Object.assign({}, e)),
+                            i.createElement(S, Object.assign({}, e)),
                         },
                       }),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.GroupRoot(":groupid_or_vanity_str"),
+                  i.createElement(s.AW, {
+                    path: F.GroupRoot(":groupid_or_vanity_str"),
                     render: (e) =>
-                      i.createElement(d.d, {
+                      i.createElement(h.d, {
                         config: {
-                          "apphub-events": () => i.createElement(g, null),
+                          "apphub-events": () => i.createElement(C, null),
                           "community-awards": () =>
-                            i.createElement(C, Object.assign({}, e)),
+                            i.createElement(S, Object.assign({}, e)),
                         },
                       }),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.UserReviewRewardAppVanity(),
-                    render: (e) => i.createElement(C, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.UserReviewRewardAppVanity(),
+                    render: (e) => i.createElement(S, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.UserReviewRewardApp(),
-                    render: (e) => i.createElement(C, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.UserReviewRewardApp(),
+                    render: (e) => i.createElement(S, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.UserReviewsRewardVanity(),
-                    render: (e) => i.createElement(C, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.UserReviewsRewardVanity(),
+                    render: (e) => i.createElement(S, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.UserReviewsReward(),
-                    render: (e) => i.createElement(C, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.UserReviewsReward(),
+                    render: (e) => i.createElement(S, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, {
+                  i.createElement(s.AW, {
                     path: [
-                      k.DiscussionsAppGeneral(),
-                      k.DiscussionsAppWorkshop(),
-                      k.DiscussionsAppUGC(),
+                      F.DiscussionsAppGeneral(),
+                      F.DiscussionsAppWorkshop(),
+                      F.DiscussionsAppUGC(),
                     ],
                     render: (e) =>
-                      i.createElement(d.d, {
+                      i.createElement(h.d, {
                         config: {
                           "community-awards": () =>
-                            i.createElement(C, Object.assign({}, e)),
+                            i.createElement(S, Object.assign({}, e)),
                         },
                       }),
                   }),
                   i.createElement(
-                    a.AW,
+                    s.AW,
                     {
-                      path: [k.ManageFriendsApp(), k.ManageFriendsProfileApp()],
+                      path: [F.ManageFriendsApp(), F.ManageFriendsProfileApp()],
                     },
-                    i.createElement(E, null)
+                    i.createElement(y, null)
                   ),
-                  i.createElement(a.AW, {
-                    path: k.ProfileVanityGamesList(":vanity_url"),
-                    render: (e) => i.createElement(R, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.ProfileVanityGamesList(":vanity_url"),
+                    render: (e) => i.createElement(k, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.ProfileSteamIDGamesLIst(":steamid"),
-                    render: (e) => i.createElement(R, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.ProfileSteamIDGamesLIst(":steamid"),
+                    render: (e) => i.createElement(k, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.ProfileVanity(":vanity_url"),
-                    render: (e) => i.createElement(_, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.ProfileVanity(":vanity_url"),
+                    render: (e) => i.createElement(v, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.ProfileSteamID(":steamid"),
-                    render: (e) => i.createElement(_, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.ProfileSteamID(":steamid"),
+                    render: (e) => i.createElement(v, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, {
-                    path: k.UGCRewardApp(),
-                    render: (e) => i.createElement(C, Object.assign({}, e)),
+                  i.createElement(s.AW, {
+                    path: F.UGCRewardApp(),
+                    render: (e) => i.createElement(S, Object.assign({}, e)),
                   }),
-                  i.createElement(a.AW, { path: k.FAQApp(), component: S }),
-                  i.createElement(a.AW, {
-                    path: k.QuestionsApp(),
-                    component: I,
+                  i.createElement(s.AW, { path: F.GameNotes(), component: I }),
+                  i.createElement(s.AW, { path: F.FAQApp(), component: R }),
+                  i.createElement(s.AW, {
+                    path: F.QuestionsApp(),
+                    component: M,
                   }),
-                  i.createElement(a.AW, {
-                    path: k.ConferenceApp(),
-                    component: w,
+                  i.createElement(s.AW, {
+                    path: F.ConferenceApp(),
+                    component: D,
                   }),
                   !1,
-                  i.createElement(a.AW, {
-                    path: k.CommunityHomeRoot(),
+                  i.createElement(s.AW, {
+                    path: F.CommunityHomeRoot(),
                     render: (e) =>
-                      i.createElement(d.d, {
+                      i.createElement(h.d, {
                         config: {
-                          "apphub-events": () => i.createElement(g, null),
+                          "apphub-events": () => i.createElement(C, null),
                           "apphub-ugcrewards": () =>
-                            i.createElement(C, Object.assign({}, e)),
+                            i.createElement(S, Object.assign({}, e)),
                           "community-home-header-v2": () =>
-                            i.createElement(D, null),
+                            i.createElement(O, null),
                         },
                       }),
                   }),
-                  i.createElement(a.AW, null, i.createElement(m.R, null))
+                  i.createElement(s.AW, null, i.createElement(p.R, null))
                 )
               )
             )
           );
         }
       }
-      function L(e) {
+      function A(e) {
         return i.createElement(
-          p.E_.Provider,
-          {
-            value: {
-              IN_GAMEPADUI: p.De.IN_GAMEPADUI,
-              IN_DESKTOPUI: !1,
-              IN_VR: !1,
-            },
-          },
+          f.fI,
+          null,
           i.createElement(
-            h.R,
+            P,
             null,
             i.createElement(
-              u.Y0,
+              g.R,
               null,
               i.createElement(
-                l.B,
-                { value: { useActiveAccount: () => p.L7.steamid } },
-                e.children
+                m.Y0,
+                null,
+                i.createElement(
+                  a.B,
+                  { value: { useActiveAccount: () => f.L7.steamid } },
+                  e.children
+                )
               )
             )
           )
         );
       }
-      function B() {
+      function N() {
+        const e = (0, f.kQ)("loyalty_webapi_token", "application_config");
+        return new u.J(f.De.WEBAPI_BASE_URL, e);
+      }
+      function P(e) {
+        const t = (0, _.kD)(N),
+          n = (0, _.kD)(i.useCallback(() => new c.Z(), []));
+        return i.createElement(
+          l.Ub,
+          { useActiveSteamInterface: t, useStorage: n },
+          e.children
+        );
+      }
+      function V() {
         let e = document.createElement("a");
-        e.href = p.De.COMMUNITY_BASE_URL;
+        e.href = f.De.COMMUNITY_BASE_URL;
         let t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
-      n(46139);
-      var F = n(31587);
+      var H = n(73961),
+        G = (n(46139), n(31587));
       n(6960);
-      var x = n(32338),
-        A = n(70657),
-        N = n(1583),
-        P = n(81052);
-      n(57255), n(86701), n(87256), n(24868), n(66289), n(22974);
+      var U = n(32338),
+        W = n(1583),
+        j = n(81052);
+      n(57255), n(86701), n(87256), n(46723), n(24868), n(66289), n(22974);
       n(90174);
-      (0, P.Dj)(() =>
+      (0, j.Dj)(() =>
         (0, r.mG)(void 0, void 0, void 0, function* () {
           document.getElementById("application_config")
-            ? (0, p.Ek)("application_config")
-            : (0, p.Ek)(),
-            (0, N.Uh)().Init(
+            ? (0, f.Ek)("application_config")
+            : (0, f.Ek)(),
+            (0, W.Uh)().Init(
               "Community",
               CLSTAMP,
-              new A.J(p.De.WEBAPI_BASE_URL).GetServiceTransport()
+              new u.J(f.De.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return (0, r.mG)(this, void 0, void 0, function* () {
                 {
-                  const t = F.LJ.GetLanguageFallback(e),
+                  const t = G.LJ.GetLanguageFallback(e),
                     r = e === t,
                     [i, o, s, a, l, c] = yield Promise.all([
                       n(71574)(`./shared_${e}.json`).then((e) => e.default),
@@ -24282,26 +24373,25 @@
                         ? {}
                         : n(29790)(`./main_${t}.json`).then((e) => e.default),
                     ]);
-                  F.Yt.AddTokens(
+                  G.Yt.AddTokens(
                     Object.assign(Object.assign(Object.assign({}, o), i), s),
                     Object.assign(Object.assign(Object.assign({}, l), a), c)
                   );
                 }
-                for (const e of V) F.Yt.AddTokens(e);
-                V = void 0;
+                for (const e of z) G.Yt.AddTokens(e);
+                z = void 0;
               });
-            })(p.De.LANGUAGE),
-            document.getElementById("application_root") &&
-              o.render(
-                i.createElement(O, {}),
-                document.getElementById("application_root")
-              );
+            })(f.De.LANGUAGE);
+          const e =
+            document.getElementById("react_root") ||
+            document.getElementById("application_root");
+          e && H.render(i.createElement(x, {}), e);
         })
       );
-      let V = [];
+      let z = [];
       window.LocalizationManifestReady = function (e, t, n) {
-        (0, x.X)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== V ? V.push(n) : F.Yt.AddTokens(n);
+        (0, U.X)("manifest" === t, `Expected manifest not "${t}"`),
+          void 0 !== z ? z.push(n) : G.Yt.AddTokens(n);
       };
     },
     76430: (e, t, n) => {

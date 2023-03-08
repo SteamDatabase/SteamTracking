@@ -262,6 +262,7 @@
     },
     78815: (e) => {
       e.exports = {
+        "duration-app-launch": "800ms",
         PagedSettingsDialog: "pagedsettings_PagedSettingsDialog_3I6h_",
         PagedSettingsDialog_PageContent:
           "pagedsettings_PagedSettingsDialog_PageContent_1I3Ni",
@@ -275,6 +276,7 @@
         PagedSettingsDialog_PageListItem:
           "pagedsettings_PagedSettingsDialog_PageListItem_bkfjn",
         PageListItem_Icon: "pagedsettings_PageListItem_Icon_U6HcK",
+        PageListItem_Title: "pagedsettings_PageListItem_Title_2X9_I",
         DisabledItem: "pagedsettings_DisabledItem_1RDp9",
         Active: "pagedsettings_Active_Myra7",
         PageListSpacer: "pagedsettings_PageListSpacer_33lCZ",
@@ -3949,7 +3951,8 @@
             (e[(e.k_EVRError_ComponentBusy = 3)] = "k_EVRError_ComponentBusy"),
             (e[(e.k_EVRError_CrashProtection = 4)] =
               "k_EVRError_CrashProtection"),
-            (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError");
+            (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
+            (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
         })(R || (R = {})),
         (function (e) {
           (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
@@ -5379,6 +5382,7 @@
           (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
           (e[(e.NoMinimize = 32768)] = "NoMinimize"),
           (e[(e.PopUpMenu = 65536)] = "PopUpMenu"),
+          (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
           (e[(e.Overlay = 8712)] = "Overlay"),
           (e[(e.Notification = 90632)] = "Notification"),
           (e[(e.PopupContextMenu = 65544)] = "PopupContextMenu");
@@ -5844,6 +5848,12 @@
           d.push("createflags=" + t.eCreationFlags),
             t.minWidth && d.push("minwidth=" + t.minWidth),
             t.minHeight && d.push("minheight=" + t.minHeight),
+            t.maxWidth &&
+              t.maxWidth != 1 / 0 &&
+              d.push("maxwidth=" + t.maxWidth),
+            t.maxHeight &&
+              t.maxHeight != 1 / 0 &&
+              d.push("maxheight=" + t.maxHeight),
             t.target_browser
               ? (d.push("pid=" + t.target_browser.m_unPID),
                 d.push("browser=" + t.target_browser.m_nBrowserID),
@@ -18008,15 +18018,19 @@
         );
       }
       function $e(e) {
-        const { title: t, icon: n, active: o, className: s } = e,
-          a = (0, r._T)(e, ["title", "icon", "active", "className"]);
+        const { title: t, icon: n, active: o, className: s, onClick: a } = e,
+          l = (0, r._T)(e, ["title", "icon", "active", "className", "onClick"]);
         return i.createElement(
           "div",
-          { className: s },
+          { className: s, onClick: a },
           n
             ? i.createElement("div", { className: ze().PageListItem_Icon }, n)
             : null,
-          i.createElement("div", Object.assign({}, a), t)
+          i.createElement(
+            "div",
+            Object.assign({ className: ze().PageListItem_Title }, l),
+            t
+          )
         );
       }
       function Ze(e) {
@@ -19046,7 +19060,10 @@
               mt.eh,
               {
                 noFocusRing: !0,
-                className: dt().SliderControlPanelGroup,
+                className: (0, l.Z)(
+                  dt().SliderControlPanelGroup,
+                  "SliderControlPanelGroup"
+                ),
                 navRef: this.props.navRef,
                 onMouseDown: (e) => this.OnMouseDown(e.nativeEvent),
                 onTouchStart: (e) => this.OnTouchStart(e.nativeEvent),
@@ -21332,14 +21349,15 @@
           )
         );
       }
-      function d() {
+      function d(e) {
+        const t = (0, o.Z)("SVGIcon_Button", "SVGIcon_Settings", e.className);
         return i.createElement(
           "svg",
           {
             version: "1.1",
             id: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Settings",
+            className: t,
             x: "0px",
             y: "0px",
             width: "256px",
@@ -26942,7 +26960,7 @@
       var r = n(70983);
       const i = {},
         o = { LoyaltyEquippedProfile: (e) => `/points/profile/${e}` },
-        s = {},
+        s = { LoyaltyStartupMovie: () => "/points/shop/c/startupmovie" },
         a = {
           LoyaltySteamBadge: () => "/points/shop/c/steambadge",
           LoyaltyProfileCustomizations: () => "/points/shop/profileshowcases",
@@ -28116,7 +28134,7 @@
             n.e(6633),
             n.e(8489),
             n.e(8087),
-          ]).then(n.bind(n, 96290))
+          ]).then(n.bind(n, 12896))
         );
       class Ie extends o.Component {
         componentDidMount() {

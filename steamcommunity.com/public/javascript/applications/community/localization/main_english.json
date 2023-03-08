@@ -916,7 +916,7 @@
     "EventDisclaimer_desc": "Please provide the name and URL for the organizer(s) for the events. This informs Steam customers who organized the event.  One is required now, this can be edited at anytime afterward.",
     "EventDisclaimer_title": "Event Organizers",
     "EventDisclaimer_button": "Update Event Organizers",
-    "EventDisclaimer_desc_details": "To help Steam customers understand who the presents of the event are, we ask for you to enter one or more of them. The link can be to their creator home on Steam or can be to an external URL. The name can optionally be localized.",
+    "EventDisclaimer_desc_details": "To help Steam customers understand who the presenters of the event are, we ask for you to enter one or more of them. The link can be to their creator home on Steam or can be to an external URL. The name can optionally be localized.",
     "EventDisclaimer_preview": "Event Disclaimer Preview:",
     "EventDisclaimer_add": "Add Presenters",
     "EventDisclaimer_name": "Presenter Name",

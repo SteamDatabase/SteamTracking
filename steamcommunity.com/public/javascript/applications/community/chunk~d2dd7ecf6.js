@@ -5455,7 +5455,7 @@
       var n,
         i = a(88464),
         l = a(89526),
-        r = (a(96824), a(38800), a(12568)),
+        r = (a(44229), a(38800), a(12568)),
         o = (a(55449), a(23708)),
         s = a(39613),
         c = a.n(s),
@@ -20225,7 +20225,7 @@
                   o.createElement(
                     "a",
                     {
-                      href: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/SalePageTemplates.zip",
+                      href: "https://partner.steamgames.com/public/marketing/steam_game_templates_2023.zip",
                     },
                     (0, T.Xx)("#selectimage_tip_sale_header_3")
                   )
@@ -25194,7 +25194,7 @@
       }
       var Mt = a(77476),
         Lt = a(43424),
-        Bt = a(96824),
+        Bt = a(44229),
         Nt = a(51684),
         Ot = a(90806),
         Rt = a(63154),

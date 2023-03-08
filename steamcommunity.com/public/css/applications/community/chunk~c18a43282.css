@@ -1834,7 +1834,6 @@ iframe.eventbbcodeparser_MedalTVWidget_1Ysh1 {
 .SaleSectionCtn.text_section
   .eventbbcodeparser_SaleTextCtn_2Z1dC
   .eventbbcodeparser_ReminderCtn_1dtL2 {
-  width: 300px;
   margin: 6px 0;
 }
 .SaleSectionCtn.text_section
@@ -2205,6 +2204,7 @@ html:not(.touch)
     #225dce 80%
   );
   border-radius: 3px;
+  width: 300px;
 }
 .eventreminder_ReminderCheckBox_2bkmL.eventreminder_TextMode_2CgU9:hover,
 .eventreminder_ReminderCheckBox_2bkmL.eventreminder_IconMode_3L1VN:hover:hover,

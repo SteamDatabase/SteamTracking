@@ -1,43 +1,43 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7892870";
+var CLSTAMP = "7898286";
 (self.webpackChunk_steam_friendsui =
   self.webpackChunk_steam_friendsui || []).push([
   [5140],
   {
-    75231: (e, r, t) => {
+    27231: (e, r, t) => {
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
     },
-    32561: (e, r, t) => {
+    5780: (e, r, t) => {
       t.d(r, { SR: () => a });
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
       function a(e) {
         return "unknown EMsg ( " + e + " )";
       }
     },
-    87662: (e, r, t) => {
+    52437: (e, r, t) => {
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
     },
-    91178: (e, r, t) => {
+    73150: (e, r, t) => {
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
     },
-    42478: (e, r, t) => {
+    52141: (e, r, t) => {
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
     },
-    26253: (e, r, t) => {
+    17734: (e, r, t) => {
       t.d(r, { Lj: () => B, nS: () => m });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -421,12 +421,12 @@ var CLSTAMP = "7892870";
         };
       })(B || (B = {}));
     },
-    13547: (e, r, t) => {
+    31952: (e, r, t) => {
       var i = t(33019);
-      t(43370), t(87662);
+      t(40195), t(52437);
       i.Message;
     },
-    40958: (e, r, t) => {
+    14672: (e, r, t) => {
       t.d(r, {
         $h: () => N,
         Am: () => F,
@@ -437,8 +437,8 @@ var CLSTAMP = "7892870";
         up: () => c,
       });
       var i = t(33019),
-        a = t(43370),
-        n = (t(87662), t(23015));
+        a = t(40195),
+        n = (t(52437), t(86476));
       const s = i.Message;
       class o extends (1856 != t.j ? s : null) {
         constructor(e = null) {
@@ -2532,7 +2532,7 @@ var CLSTAMP = "7892870";
             });
         })(I || (I = {}));
     },
-    23015: (e, r, t) => {
+    86476: (e, r, t) => {
       t.d(r, {
         Cu: () => l,
         VJ: () => u,
@@ -2541,7 +2541,7 @@ var CLSTAMP = "7892870";
         uV: () => d,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -3179,7 +3179,7 @@ var CLSTAMP = "7892870";
         }
       }
     },
-    14097: (e, r, t) => {
+    11055: (e, r, t) => {
       t.d(r, {
         $m: () => v,
         Mr: () => ne,
@@ -3190,7 +3190,7 @@ var CLSTAMP = "7892870";
         qZ: () => d,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -6685,7 +6685,7 @@ var CLSTAMP = "7892870";
             });
         })(se || (se = {}));
     },
-    87998: (e, r, t) => {
+    24493: (e, r, t) => {
       t.d(r, {
         $n: () => J,
         $r: () => or,
@@ -6746,8 +6746,8 @@ var CLSTAMP = "7892870";
         zw: () => je,
       });
       var i = t(33019),
-        a = t(43370),
-        n = t(24047);
+        a = t(40195),
+        n = t(87182);
       const s = i.Message;
       function o(e) {
         return "unknown EChatRoomMemberStateChange ( " + e + " )";
@@ -15694,10 +15694,10 @@ var CLSTAMP = "7892870";
           };
         })(Lr || (Lr = {}));
     },
-    18161: (e, r, t) => {
+    45426: (e, r, t) => {
       t.d(r, { NA: () => s, Zh: () => u });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -15935,7 +15935,7 @@ var CLSTAMP = "7892870";
           });
       })(u || (u = {}));
     },
-    91290: (e, r, t) => {
+    42987: (e, r, t) => {
       t.d(r, {
         $4: () => u,
         kb: () => m,
@@ -15946,7 +15946,7 @@ var CLSTAMP = "7892870";
         TF: () => d,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       i.Message;
       const n = i.Message;
       class s extends n {
@@ -16363,7 +16363,7 @@ var CLSTAMP = "7892870";
           });
       })(d || (d = {}));
     },
-    76118: (e, r, t) => {
+    72113: (e, r, t) => {
       t.d(r, {
         $Z: () => s,
         RI: () => o,
@@ -16372,7 +16372,7 @@ var CLSTAMP = "7892870";
         tj: () => m,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -16776,7 +16776,7 @@ var CLSTAMP = "7892870";
         }
       }
     },
-    24047: (e, r, t) => {
+    87182: (e, r, t) => {
       t.d(r, {
         $K: () => u,
         Ek: () => F,
@@ -16797,7 +16797,7 @@ var CLSTAMP = "7892870";
         wr: () => y,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -18336,7 +18336,7 @@ var CLSTAMP = "7892870";
         }
       }
     },
-    98737: (e, r, t) => {
+    73825: (e, r, t) => {
       t.d(r, {
         Cm: () => d,
         Rt: () => b,
@@ -18347,8 +18347,8 @@ var CLSTAMP = "7892870";
         p$: () => m,
       });
       var i = t(33019),
-        a = t(43370),
-        n = t(23015);
+        a = t(40195),
+        n = t(86476);
       const s = i.Message;
       class o extends (1856 != t.j ? s : null) {
         constructor(e = null) {
@@ -19243,11 +19243,11 @@ var CLSTAMP = "7892870";
         }
       }
     },
-    10483: (e, r, t) => {
+    46362: (e, r, t) => {
       t.d(r, { BQ: () => s });
       var i = t(33019),
-        a = t(43370);
-      t(23015);
+        a = t(40195);
+      t(86476);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -19313,7 +19313,7 @@ var CLSTAMP = "7892870";
         }
       }
     },
-    28001: (e, r, t) => {
+    41167: (e, r, t) => {
       t.d(r, {
         x0: () => c,
         Km: () => m,
@@ -19322,8 +19322,8 @@ var CLSTAMP = "7892870";
         f9: () => o,
       });
       var i = t(33019),
-        a = t(43370);
-      t(23015);
+        a = t(40195);
+      t(86476);
       i.Message;
       const n = i.Message;
       class s extends n {
@@ -20054,10 +20054,10 @@ var CLSTAMP = "7892870";
         }
       }
     },
-    41504: (e, r, t) => {
+    7468: (e, r, t) => {
       var i = t(33019),
-        a = t(43370);
-      t(87662);
+        a = t(40195);
+      t(52437);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -22082,7 +22082,7 @@ var CLSTAMP = "7892870";
             });
         })(I || (I = {}));
     },
-    56357: (e, r, t) => {
+    1595: (e, r, t) => {
       t.d(r, {
         AE: () => I,
         DI: () => U,
@@ -22093,8 +22093,8 @@ var CLSTAMP = "7892870";
         tj: () => c,
       });
       var i = t(33019),
-        a = t(43370),
-        n = t(23015);
+        a = t(40195),
+        n = t(86476);
       const s = i.Message;
       class o extends (1856 != t.j ? s : null) {
         constructor(e = null) {
@@ -24080,15 +24080,15 @@ var CLSTAMP = "7892870";
           });
       })(I || (I = {}));
     },
-    47802: (e, r, t) => {
+    39817: (e, r, t) => {
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
     },
-    83633: (e, r, t) => {
+    15497: (e, r, t) => {
       t.d(r, { $n: () => w, OE: () => d, T4: () => y });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -24930,10 +24930,10 @@ var CLSTAMP = "7892870";
           });
       })(w || (w = {}));
     },
-    83338: (e, r, t) => {
+    46905: (e, r, t) => {
       t.d(r, { KZ: () => l, XX: () => s });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -25056,7 +25056,7 @@ var CLSTAMP = "7892870";
         };
       })(l || (l = {}));
     },
-    14591: (e, r, t) => {
+    94141: (e, r, t) => {
       t.d(r, {
         F5: () => _,
         Pt: () => M,
@@ -25068,7 +25068,7 @@ var CLSTAMP = "7892870";
         yq: () => s,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -26210,7 +26210,7 @@ var CLSTAMP = "7892870";
             });
         })(R || (R = {}));
     },
-    55381: (e, r, t) => {
+    62663: (e, r, t) => {
       t.d(r, {
         Fi: () => _,
         Zi: () => m,
@@ -26220,8 +26220,8 @@ var CLSTAMP = "7892870";
         u: () => l,
       });
       var i = t(33019),
-        a = t(43370),
-        n = t(24047);
+        a = t(40195),
+        n = t(87182);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -26772,10 +26772,10 @@ var CLSTAMP = "7892870";
           };
         })(z || (z = {}));
     },
-    66681: (e, r, t) => {
+    53953: (e, r, t) => {
       var i = t(33019),
-        a = t(43370),
-        n = t(10563);
+        a = t(40195),
+        n = t(43612);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -27596,12 +27596,12 @@ var CLSTAMP = "7892870";
           });
       })(z || (z = {}));
     },
-    99679: (e, r, t) => {
+    66710: (e, r, t) => {
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
     },
-    86079: (e, r, t) => {
+    42409: (e, r, t) => {
       t.d(r, {
         DB: () => _,
         LD: () => b,
@@ -27610,7 +27610,7 @@ var CLSTAMP = "7892870";
         pR: () => h,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -28579,11 +28579,11 @@ var CLSTAMP = "7892870";
             });
         })(p || (p = {}));
     },
-    76330: (e, r, t) => {
+    719: (e, r, t) => {
       t.d(r, { n: () => l, z: () => o });
       var i = t(33019),
-        a = t(43370),
-        n = t(10563);
+        a = t(40195),
+        n = t(43612);
       const s = i.Message;
       class o extends (1856 != t.j ? s : null) {
         constructor(e = null) {
@@ -28653,7 +28653,7 @@ var CLSTAMP = "7892870";
         };
       })(l || (l = {}));
     },
-    32095: (e, r, t) => {
+    25845: (e, r, t) => {
       t.d(r, {
         AP: () => Se,
         B: () => l,
@@ -28672,8 +28672,8 @@ var CLSTAMP = "7892870";
         pl: () => ze,
       });
       var i = t(33019),
-        a = t(43370);
-      t(87662), t(23015);
+        a = t(40195);
+      t(52437), t(86476);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -34344,9 +34344,9 @@ var CLSTAMP = "7892870";
             });
         })($e || ($e = {}));
     },
-    43786: (e, r, t) => {
+    56204: (e, r, t) => {
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -35064,20 +35064,20 @@ var CLSTAMP = "7892870";
           });
       })(_ || (_ = {}));
     },
-    61954: (e, r, t) => {
+    61664: (e, r, t) => {
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
     },
-    24325: (e, r, t) => {
+    22354: (e, r, t) => {
       var i = t(33019);
-      t(43370), t(87662);
+      t(40195), t(52437);
       i.Message;
     },
-    79338: (e, r, t) => {
+    4268: (e, r, t) => {
       t.d(r, { Ly: () => ne, kX: () => X, mm: () => v, q5: () => P });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -38306,32 +38306,34 @@ var CLSTAMP = "7892870";
           });
       })(ne || (ne = {}));
     },
-    69500: (e, r, t) => {
+    97985: (e, r, t) => {
       t.d(r, {
-        $2: () => R,
+        $2: () => p,
         CO: () => l,
         Fy: () => o,
-        IP: () => h,
-        Ix: () => f,
+        IP: () => S,
+        Ix: () => R,
         K3: () => d,
         KX: () => c,
         NW: () => B,
-        O9: () => M,
-        Q4: () => w,
-        Sb: () => F,
+        O9: () => h,
+        Q4: () => F,
+        Sb: () => M,
+        Sh: () => z,
         TM: () => u,
         Tb: () => m,
-        U6: () => p,
-        Wi: () => S,
+        U6: () => W,
+        Wi: () => T,
         Z5: () => b,
         _5: () => s,
+        cz: () => w,
         iO: () => y,
         j7: () => g,
-        kb: () => z,
+        kb: () => f,
         tV: () => _,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -38962,42 +38964,16 @@ var CLSTAMP = "7892870";
       }
       class w extends n {
         constructor(e = null) {
-          super(),
-            w.prototype.chat_group_id || a.aR(w.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: {
-                  chat_group_id: {
-                    n: 1,
-                    br: a.FE.readUint64String,
-                    bw: a.Xc.writeUint64String,
-                  },
-                  chat_room_id: {
-                    n: 2,
-                    br: a.FE.readUint64String,
-                    bw: a.Xc.writeUint64String,
-                  },
-                },
-              }),
-            w.sm_m
-          );
-        }
-        static MBF() {
-          return w.sm_mbf || (w.sm_mbf = a.Bh(w.M())), w.sm_mbf;
+          super(), n.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return w.toObject(e, this);
         }
         static toObject(e, r) {
-          return a.TA(w.M(), e, r);
+          return e ? { $jspbMessageInstance: r } : {};
         }
         static fromObject(e) {
-          return a.aD(w.M(), e);
+          return new w();
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
@@ -39005,21 +38981,19 @@ var CLSTAMP = "7892870";
           return w.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return a.F(w.MBF(), e, r);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, r) {
-          a.l2(w.M(), e, r);
-        }
+        static serializeBinaryToWriter(e, r) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamVR_VoiceChat_InitiateRoomChat_Request";
+          return "CSteamVR_VoiceChat_Active_Notification";
         }
       }
       class z extends n {
@@ -39053,7 +39027,7 @@ var CLSTAMP = "7892870";
           return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamVR_VoiceChat_InitiateRoomChat_Response";
+          return "CSteamVR_VoiceChat_Inactive_Notification";
         }
       }
       class F extends n {
@@ -39115,7 +39089,7 @@ var CLSTAMP = "7892870";
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamVR_VoiceChat_ExitRoomChat_Request";
+          return "CSteamVR_VoiceChat_InitiateRoomChat_Request";
         }
       }
       class f extends n {
@@ -39149,7 +39123,7 @@ var CLSTAMP = "7892870";
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamVR_VoiceChat_ExitRoomChat_Response";
+          return "CSteamVR_VoiceChat_InitiateRoomChat_Response";
         }
       }
       class M extends n {
@@ -39174,18 +39148,6 @@ var CLSTAMP = "7892870";
                     br: a.FE.readUint64String,
                     bw: a.Xc.writeUint64String,
                   },
-                  sender_accountid: {
-                    n: 3,
-                    br: a.FE.readUint32,
-                    bw: a.Xc.writeUint32,
-                  },
-                  timestamp: {
-                    n: 4,
-                    br: a.FE.readUint32,
-                    bw: a.Xc.writeUint32,
-                  },
-                  ordinal: { n: 5, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
-                  message: { n: 6, br: a.FE.readString, bw: a.Xc.writeString },
                 },
               }),
             M.sm_m
@@ -39223,42 +39185,21 @@ var CLSTAMP = "7892870";
           return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamVR_VoiceChat_NewGroupChatMsgAdded_Notification";
+          return "CSteamVR_VoiceChat_ExitRoomChat_Request";
         }
       }
       class R extends n {
         constructor(e = null) {
-          super(),
-            R.prototype.message_with_bbcode || a.aR(R.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
-                fields: {
-                  message_with_bbcode: {
-                    n: 1,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
-                },
-              }),
-            R.sm_m
-          );
-        }
-        static MBF() {
-          return R.sm_mbf || (R.sm_mbf = a.Bh(R.M())), R.sm_mbf;
+          super(), n.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return R.toObject(e, this);
         }
         static toObject(e, r) {
-          return a.TA(R.M(), e, r);
+          return e ? { $jspbMessageInstance: r } : {};
         }
         static fromObject(e) {
-          return a.aD(R.M(), e);
+          return new R();
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
@@ -39266,35 +39207,71 @@ var CLSTAMP = "7892870";
           return R.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return a.F(R.MBF(), e, r);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, r) {
-          a.l2(R.M(), e, r);
-        }
+        static serializeBinaryToWriter(e, r) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamVR_VoiceChat_SendGroupChatMessage_Request";
+          return "CSteamVR_VoiceChat_ExitRoomChat_Response";
         }
       }
       class h extends n {
         constructor(e = null) {
-          super(), n.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            h.prototype.chat_group_id || a.aR(h.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  chat_group_id: {
+                    n: 1,
+                    br: a.FE.readUint64String,
+                    bw: a.Xc.writeUint64String,
+                  },
+                  chat_room_id: {
+                    n: 2,
+                    br: a.FE.readUint64String,
+                    bw: a.Xc.writeUint64String,
+                  },
+                  sender_accountid: {
+                    n: 3,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
+                  },
+                  timestamp: {
+                    n: 4,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
+                  },
+                  ordinal: { n: 5, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
+                  message: { n: 6, br: a.FE.readString, bw: a.Xc.writeString },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = a.Bh(h.M())), h.sm_mbf;
         }
         toObject(e = !1) {
           return h.toObject(e, this);
         }
         static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
+          return a.TA(h.M(), e, r);
         }
         static fromObject(e) {
-          return new h();
+          return a.aD(h.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
@@ -39302,25 +39279,27 @@ var CLSTAMP = "7892870";
           return h.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return e;
+          return a.F(h.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, r) {}
+        static serializeBinaryToWriter(e, r) {
+          a.l2(h.M(), e, r);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamVR_VoiceChat_SendGroupChatMessage_Response";
+          return "CSteamVR_VoiceChat_NewGroupChatMsgAdded_Notification";
         }
       }
       class p extends n {
         constructor(e = null) {
           super(),
-            p.prototype.profile_steamid || a.aR(p.M()),
+            p.prototype.message_with_bbcode || a.aR(p.M()),
             n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -39329,12 +39308,11 @@ var CLSTAMP = "7892870";
               (p.sm_m = {
                 proto: p,
                 fields: {
-                  profile_steamid: {
+                  message_with_bbcode: {
                     n: 1,
-                    br: a.FE.readFixed64String,
-                    bw: a.Xc.writeFixed64String,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
                   },
-                  avatar_type: { n: 2, br: a.FE.readEnum, bw: a.Xc.writeEnum },
                 },
               }),
             p.sm_m
@@ -39372,20 +39350,112 @@ var CLSTAMP = "7892870";
           return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamVR_VoiceChat_GetAvatarUrl_Request";
+          return "CSteamVR_VoiceChat_SendGroupChatMessage_Request";
         }
       }
       class S extends n {
         constructor(e = null) {
+          super(), n.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return S.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return e ? { $jspbMessageInstance: r } : {};
+        }
+        static fromObject(e) {
+          return new S();
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new S();
+          return S.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamVR_VoiceChat_SendGroupChatMessage_Response";
+        }
+      }
+      class W extends n {
+        constructor(e = null) {
           super(),
-            S.prototype.profile_avatar_url || a.aR(S.M()),
+            W.prototype.profile_steamid || a.aR(W.M()),
             n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            S.sm_m ||
-              (S.sm_m = {
-                proto: S,
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: {
+                  profile_steamid: {
+                    n: 1,
+                    br: a.FE.readFixed64String,
+                    bw: a.Xc.writeFixed64String,
+                  },
+                  avatar_type: { n: 2, br: a.FE.readEnum, bw: a.Xc.writeEnum },
+                },
+              }),
+            W.sm_m
+          );
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = a.Bh(W.M())), W.sm_mbf;
+        }
+        toObject(e = !1) {
+          return W.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return a.TA(W.M(), e, r);
+        }
+        static fromObject(e) {
+          return a.aD(W.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new W();
+          return W.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return a.F(W.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          a.l2(W.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamVR_VoiceChat_GetAvatarUrl_Request";
+        }
+      }
+      class T extends n {
+        constructor(e = null) {
+          super(),
+            T.prototype.profile_avatar_url || a.aR(T.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            T.sm_m ||
+              (T.sm_m = {
+                proto: T,
                 fields: {
                   profile_avatar_url: {
                     n: 1,
@@ -39394,45 +39464,45 @@ var CLSTAMP = "7892870";
                   },
                 },
               }),
-            S.sm_m
+            T.sm_m
           );
         }
         static MBF() {
-          return S.sm_mbf || (S.sm_mbf = a.Bh(S.M())), S.sm_mbf;
+          return T.sm_mbf || (T.sm_mbf = a.Bh(T.M())), T.sm_mbf;
         }
         toObject(e = !1) {
-          return S.toObject(e, this);
+          return T.toObject(e, this);
         }
         static toObject(e, r) {
-          return a.TA(S.M(), e, r);
+          return a.TA(T.M(), e, r);
         }
         static fromObject(e) {
-          return a.aD(S.M(), e);
+          return a.aD(T.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
-            t = new S();
-          return S.deserializeBinaryFromReader(t, r);
+            t = new T();
+          return T.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return a.F(S.MBF(), e, r);
+          return a.F(T.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {
-          a.l2(S.M(), e, r);
+          a.l2(T.M(), e, r);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamVR_VoiceChat_GetAvatarUrl_Response";
         }
       }
-      var W, T;
+      var j, v;
       !(function (e) {
         (e.HeaderHandler = { name: "SteamVRWebRTC.Header#1", request: s }),
           (e.ActiveHandler = { name: "SteamVRWebRTC.Active#1", request: o }),
@@ -39470,39 +39540,44 @@ var CLSTAMP = "7892870";
             name: "SteamVRWebRTC.Notify_DataChannelMessage#1",
             request: g,
           });
-      })(W || (W = {})),
+      })(j || (j = {})),
         (function (e) {
-          (e.InitiateRoomChatHandler = {
-            name: "SteamVRVoiceChat.InitiateRoomChat#1",
-            request: w,
-            response: z,
-          }),
-            (e.ExitRoomChatHandler = {
-              name: "SteamVRVoiceChat.ExitRoomChat#1",
+          (e.ActiveHandler = { name: "SteamVRVoiceChat.Active#1", request: w }),
+            (e.InactiveHandler = {
+              name: "SteamVRVoiceChat.Inactive#1",
+              request: z,
+            }),
+            (e.InitiateRoomChatHandler = {
+              name: "SteamVRVoiceChat.InitiateRoomChat#1",
               request: F,
               response: f,
             }),
+            (e.ExitRoomChatHandler = {
+              name: "SteamVRVoiceChat.ExitRoomChat#1",
+              request: M,
+              response: R,
+            }),
             (e.NewGroupChatMsgAddedHandler = {
               name: "SteamVRVoiceChat.NewGroupChatMsgAdded#1",
-              request: M,
+              request: h,
             }),
             (e.SendGroupChatMessageHandler = {
               name: "SteamVRVoiceChat.SendGroupChatMessage#1",
-              request: R,
-              response: h,
+              request: p,
+              response: S,
             }),
             (e.GetAvatarUrlHandler = {
               name: "SteamVRVoiceChat.GetAvatarUrl#1",
-              request: p,
-              response: S,
+              request: W,
+              response: T,
             });
-        })(T || (T = {}));
+        })(v || (v = {}));
     },
-    19290: (e, r, t) => {
+    26619: (e, r, t) => {
       t.d(r, { HU: () => m, Ug: () => p, d6: () => E });
       var i = t(33019),
-        a = t(43370);
-      t(75231), t(87662);
+        a = t(40195);
+      t(27231), t(52437);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -41315,7 +41390,7 @@ var CLSTAMP = "7892870";
           };
         })(X || (X = {}));
     },
-    10563: (e, r, t) => {
+    43612: (e, r, t) => {
       t.d(r, {
         Qn: () => T,
         VJ: () => I,
@@ -41326,8 +41401,8 @@ var CLSTAMP = "7892870";
         oY: () => v,
       });
       var i = t(33019),
-        a = t(43370);
-      t(91178), t(87662), t(75231);
+        a = t(40195);
+      t(73150), t(52437), t(27231);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -43733,10 +43808,10 @@ var CLSTAMP = "7892870";
           });
       })(I || (I = {}));
     },
-    99310: (e, r, t) => {
+    89494: (e, r, t) => {
       var i = t(33019),
-        a = t(43370),
-        n = (t(91178), t(75231), t(10563));
+        a = t(40195),
+        n = (t(73150), t(27231), t(43612));
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -43992,9 +44067,9 @@ var CLSTAMP = "7892870";
           });
       })(m || (m = {}));
     },
-    7815: (e, r, t) => {
+    66690: (e, r, t) => {
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -44248,10 +44323,10 @@ var CLSTAMP = "7892870";
           };
         })(m || (m = {}));
     },
-    95106: (e, r, t) => {
+    60224: (e, r, t) => {
       t.d(r, { AX: () => _, Sz: () => F, _w: () => b });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -45166,14 +45241,14 @@ var CLSTAMP = "7892870";
           });
       })(F || (F = {}));
     },
-    67141: (e, r, t) => {
+    34734: (e, r, t) => {
       var i = t(33019);
-      t(43370);
+      t(40195);
       i.Message;
     },
-    3824: (e, r, t) => {
+    67739: (e, r, t) => {
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -46223,10 +46298,10 @@ var CLSTAMP = "7892870";
           };
         })(h || (h = {}));
     },
-    46096: (e, r, t) => {
+    48244: (e, r, t) => {
       t.d(r, { A_: () => u, Q_: () => c, kI: () => d });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -46629,7 +46704,7 @@ var CLSTAMP = "7892870";
           };
         })(b || (b = {}));
     },
-    41340: (e, r, t) => {
+    77801: (e, r, t) => {
       t.d(r, {
         Jv: () => g,
         Ky: () => b,
@@ -46642,7 +46717,7 @@ var CLSTAMP = "7892870";
         zQ: () => s,
       });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -47924,10 +47999,10 @@ var CLSTAMP = "7892870";
             });
         })(W || (W = {}));
     },
-    42315: (e, r, t) => {
+    98770: (e, r, t) => {
       t.d(r, { Kp: () => B, Mm: () => s, VG: () => m, dF: () => b });
       var i = t(33019),
-        a = t(43370);
+        a = t(40195);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {

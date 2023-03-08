@@ -1030,3 +1030,90 @@ function ShowDeveloperComments()
 	commentsTabDev.className = "commentsTab active";
 }
 
+function EditContentDescriptors( publishedfileid )
+{
+	$J.get( 'https://steamcommunity.com/sharedfiles/ajaxeditcontentdescriptors/', { publishedfileid: publishedfileid } )
+	.done( function( json ) {
+		if ( json.success == 1 )
+		{
+			var content = $J( json.html );
+			var dialog = ShowConfirmDialog( 'Update Content Descriptors', content );
+
+			dialog.done( function() {
+				var rgCheckboxes = $J("input:checkbox", content );
+
+				var add = [];
+				var remove = [];
+
+				for ( var i = 0; i < rgCheckboxes.length; ++i )
+				{
+					let checkbox = rgCheckboxes[i];
+					if ( checkbox.checked && !checkbox.disabled )
+					{
+						add.push( checkbox.value );
+					}
+					else
+					{
+						remove.push( checkbox.value );
+					}
+				}
+
+				if ( add.length == 0 && remove.length == 0 )
+					return;
+
+				$J.post(
+					'https://steamcommunity.com/sharedfiles/ajaxupdatecontentdescriptors/',
+					{ sessionid: g_sessionID, publishedfileid: publishedfileid, add: add, remove: remove },
+				).done( function( json )
+				{
+					if ( json.success == 1 )
+					{
+						window.top.location.reload();
+					}
+					else
+					{
+						ShowAlertDialog( 'Update Content Descriptors', 'There was a problem updating the content descriptors for this item: ' + json.success );
+					}
+				} );
+			} );
+		}
+	} );
+}
+
+function HandleRelatedContentDescriptors( $elem, bAnimate )
+{
+	var checked = $elem.prop( "checked" ) && !$elem.attr( "disabled" );
+	var descid = $elem.val();
+	var childrenDescriptors = $J( '[data-parentdescid="' + descid + '"]' );
+
+	if ( checked )
+	{
+		childrenDescriptors.each( function( ) {
+			var child = $J( this );
+
+			if ( !child.hasClass( "account_setting_not_customer_facing" ) )
+			{
+				child.animate( { opacity: 'show', height: 'show' }, bAnimate ? 500 : 0 );
+			}
+
+			child.find( 'input[type="checkbox"]' ).each( function() {
+				$J( this ).removeAttr( "disabled" );
+				HandleRelatedContentDescriptors( $J( this ), bAnimate );
+			} );
+		} );
+	}
+	else
+	{
+		childrenDescriptors.each( function( ) {
+			var child = $J( this );
+
+			child.animate( { opacity: 'hide', height: 'hide' }, bAnimate ? 500 : 0 );
+
+			child.find( 'input[type="checkbox"]' ).each( function() {
+				$J( this ).attr( "disabled", true );
+				HandleRelatedContentDescriptors( $J( this ), bAnimate );
+			} );
+		} );
+	}
+}
+

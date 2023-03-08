@@ -604,7 +604,7 @@
         return r ? null : n;
       }
     },
-    96290: (e, t, a) => {
+    12896: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { YearInReviewRoutes: () => Rn, default: () => In });
       var r = a(89526),
@@ -6348,18 +6348,8 @@
         }
       }
       const Va = "yir_social_images";
-      var $a = a(90889);
-      function Qa(e, t) {
-        r.useEffect(() => {
-          const a = (a) => {
-            a.key === e && t(a);
-          };
-          return (
-            document.addEventListener("keydown", a),
-            () => document.removeEventListener("keydown", a)
-          );
-        }, [e, t]);
-      }
+      var $a = a(90889),
+        Qa = a(81671);
       function Ka(e) {
         const { userYearInReview: t, steamId: a, nYear: n } = e,
           i = ke();
@@ -6557,10 +6547,10 @@
             i < d && (s(i + 1), e.stopPropagation());
           };
         return (
-          Qa("ArrowLeft", _),
-          Qa("Left", _),
-          Qa("ArrowRight", y),
-          Qa("Right", y),
+          (0, Qa.P)("ArrowLeft", _),
+          (0, Qa.P)("Left", _),
+          (0, Qa.P)("ArrowRight", y),
+          (0, Qa.P)("Right", y),
           c
             ? r.createElement(
                 "div",
@@ -6699,8 +6689,8 @@
           url: o,
         } = e;
         return (
-          Qa("Escape", s),
-          Qa("Esc", s),
+          (0, Qa.P)("Escape", s),
+          (0, Qa.P)("Esc", s),
           r.createElement(
             "div",
             { className: Ya.PreviewImageCtn },

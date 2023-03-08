@@ -177,15 +177,7 @@ function HomeSaleFilterHeroes( $Parent )
 	var Settings = { games_already_in_library: false, only_current_platform: true, enforce_minimum: true };
 
 	var $HeroItemCtn = $Parent.find('.carousel_items' );
-
-	/*
-	Filter apps out first before we do any sorting/rendering
-	Skip filtering out DLC for heroes, otherwise F2P DLCs would get filtered out
-	*/
-	GDynamicStorePage.FilterCapsules( 3, 21, $HeroItemCtn.children('.hero_capsule'), $HeroItemCtn, Settings, false );
-
-	var $Row = $Parent.find('.carousel_items' );
-	var rgHeroes = $Row.children('.hero_capsule').toArray();
+	var rgHeroes = $HeroItemCtn.children('.hero_capsule').toArray();
 
 	var rgAppPriorityList = g_rgAppPriorityLists['tier1'] || [];
 
@@ -203,9 +195,6 @@ function HomeSaleFilterHeroes( $Parent )
 
 	for ( var i = 0; i < rgHeroes.length; i++ )
 	{
-		// detach in case we need to shorten the carousel if we have an uneven number
-		$J( rgHeroes[i] ).detach();
-
 		var appid = $J(rgHeroes[i]).data('dsAppid');
 		if ( appid && rgPositionByApp[appid] === undefined )
 			rgPositionByApp[appid] = i + 1000;
@@ -216,22 +205,42 @@ function HomeSaleFilterHeroes( $Parent )
 		var appidB = $J(b).data('dsAppid');
 		var posA = rgPositionByApp[appidA];
 		var posB = rgPositionByApp[appidB];
+
 		return ( posA !== undefined ? posA : 1000 ) - ( posB !== undefined ? posB : 1000 );
 	});
 
 	
-	// generate carousel based on sorted and filtered hero capsules
-	GHomepage.FillPagedCapsuleCarousel( rgHeroes, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return $J( oItem ); }, 'sale-hero', 3 );
+	// Skip filtering out DLC for heroes, otherwise F2P DLCs would get filtered out
+	GDynamicStorePage.FilterCapsules( 3, 21, $J( rgHeroes ), $HeroItemCtn, Settings, false );
 
-	$Row.find('.hero_capsule:not(.hidden)').children('a').each( function() {
+	// remove from dom and re-apply later
+	var rgFilteredHeros = $HeroItemCtn.children('.hero_capsule').remove().toArray();
+
+	
+	// generate carousel based on sorted and filtered hero capsules
+	GHomepage.FillPagedCapsuleCarousel( rgFilteredHeros, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return $J( oItem ); }, 'sale-hero', 3 );
+
+	$HeroItemCtn.find('.hero_capsule:not(.hidden)').children('a').each( function() {
 		ModifyLinkSNR( $J(this), function( snr ) { return GStoreItemData.rgNavParams['sale_heroes_priority'] } );
 	});
 
-	$Row.find( '.hero_capsule' ).each( function( i, div ) {
+	$HeroItemCtn.find( '.hero_capsule' ).each( function( i, div ) {
 		GDynamicStore.MarkAppIDsAsDisplayed( [ $J(div).data('dsAppid') ] );
 	});
 
-	$Row.css('minHeight', '' );
+	$J('.hero_capsule').on( 'mouseenter vgp_onfocus', function() {
+		$J(this).find('.hero_screenshot_load').each( function() { $J(this).css( 'backgroundImage', $J(this).data('background') ); } );
+	} );
+
+	$J('.hero_capsule:not(.valveindex)').on( 'mouseenter vgp_onfocus', function() {
+		$J(this).find('video.hero_video')[0].play();
+	} );
+
+	$J('.hero_capsule:not(.valveindex)').on( 'mouseleave vgp_onblur', function() {
+		$J(this).find('video.hero_video')[0].pause();
+	} );
+
+	$HeroItemCtn.css('minHeight', '' );
 }
 
 

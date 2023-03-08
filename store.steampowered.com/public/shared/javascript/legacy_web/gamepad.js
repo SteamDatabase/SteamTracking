@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    990: (t, e, n) => {
+    126: (t, e, n) => {
       "use strict";
       n.d(e, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(13),
-        s = n(82);
+        o = n(50),
+        s = n(894);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -72,7 +72,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    567: (t, e, n) => {
+    989: (t, e, n) => {
       "use strict";
       n.d(e, {
         $G: () => d,
@@ -87,7 +87,7 @@
         x: () => a,
       });
       var i,
-        o = n(862);
+        o = n(459);
       !(function (t) {
         (t[(t.GAMEPAD = 0)] = "GAMEPAD"),
           (t[(t.KEYBOARD = 1)] = "KEYBOARD"),
@@ -176,10 +176,10 @@
         );
       }
     },
-    82: (t, e, n) => {
+    894: (t, e, n) => {
       "use strict";
       n.d(e, { i: () => o, l: () => i });
-      n(567), n(862);
+      n(989), n(459);
       const i = "GamepadInput";
       var o;
       !(function (t) {
@@ -190,14 +190,14 @@
           (t[(t.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    695: (t, e, n) => {
+    162: (t, e, n) => {
       "use strict";
       n.r(e), n.d(e, { InitializeGamepadNavigation: () => ee });
       var i = n(655),
         o = n(311),
         s = n.n(o),
-        r = n(567),
-        a = n(862);
+        r = n(989),
+        a = n(459);
       const l = { x: "y", y: "x" };
       function c(t, e, ...n) {
         console.assert
@@ -206,8 +206,8 @@
             : console.assert(!!t, e, ...n)
           : t || console.warn(e, ...n);
       }
-      var u = n(13),
-        h = n(439);
+      var u = n(50),
+        h = n(840);
       class d extends class {
         GetObject(t) {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -587,8 +587,8 @@
           );
         }
       }
-      var w = n(354),
-        F = n(448);
+      var w = n(746),
+        F = n(816);
       function N(t) {
         return null != t && void 0 !== t.focus;
       }
@@ -2984,9 +2984,9 @@
       (0, i.gn)([u.a], bt.prototype, "OnDOMFocus", null),
         (0, i.gn)([u.a], bt.prototype, "OnDOMBlur", null),
         (0, i.gn)([u.a], bt.prototype, "OnNavigationEvent", null);
-      var St = n(82),
-        wt = n(827),
-        Ft = n(990);
+      var St = n(894),
+        wt = n(809),
+        Ft = n(126);
       class Nt {
         constructor(t) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -3065,11 +3065,11 @@
       (0, i.gn)([u.a], Nt.prototype, "OnFocusChanged", null),
         (0, i.gn)([u.a], Nt.prototype, "OnMessage", null),
         (0, i.gn)([u.a], Nt.prototype, "PostPageUnloading", null);
-      n(345);
+      n(789);
       function Rt() {
         return !!window.document;
       }
-      n(235);
+      n(932);
       const It = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",

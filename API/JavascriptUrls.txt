@@ -479,7 +479,6 @@ ${IMG_URL}error_artwork.png
 ${IMG_URL}events/defaults/default_img_cover.jpg
 ${IMG_URL}events/defaults/default_img_header.jpg
 ${IMG_URL}events/defaults/default_img_spotlight.jpg
-${IMG_URL}events/event_header_template.zip?t=14
 ${IMG_URL}events/thumb_library_home.jpg
 ${IMG_URL}events/types/type_${_ ? "11" : "9"}.png
 ${IMG_URL}events/types/type_${icon ? _ : _}.png?v=4
@@ -972,6 +971,7 @@ ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries
+${PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary
@@ -2350,6 +2350,7 @@ https://partner.steamgames.com/pub/ajaxgetprices/${g_nPublisherId}/
 https://partner.steamgames.com/pub/ajaxselectvalvecontactsdialog
 https://partner.steamgames.com/pub/ajaxvalvecontactchange/${publisherID}/
 https://partner.steamgames.com/public/captcha.php?gid=${gid}
+https://partner.steamgames.com/public/marketing/steam_game_templates_2023.zip
 https://partner.steamgames.com/store/ajaxpackagesave/${packageid}
 https://partner.steamgames.com/store/ajaxupdatef2pstore
 https://partner.steamgames.com/store/packagelanding/${packageid}
@@ -2359,6 +2360,7 @@ https://partner.steamgames.com/tagdata/tagassociations
 https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.friendsui
 https://play.google.com/store/apps/details?id=com.valvesoftware.underlords
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0
+https://policies.google.com/privacy
 https://reactjs.org/docs/error-decoder.html?invariant=${}
 https://s.team/chat/${}
 https://s.team/deck/setup
@@ -2368,6 +2370,7 @@ https://s.team/remoteplay/connect/${}?appid=${}&${}
 https://sketchfab.com/models/${modelID}/embed?autostart=1
 https://sketchfab.com/models/${modelid}/embed?autostart=1
 https://sketchfab.com/oembed?url=https://sketchfab.com/models/${modelID}
+https://sketchfab.com/privacy
 https://steam.steamchina.com
 https://steam.tv/artifact
 https://steam.tv/csgo
@@ -2555,6 +2558,7 @@ https://steamcommunity.com/sharedfiles/addcontributor
 https://steamcommunity.com/sharedfiles/ajaxaddtocollections
 https://steamcommunity.com/sharedfiles/ajaxchangecommercesubmissionstatus/${publishedFileID}/
 https://steamcommunity.com/sharedfiles/ajaxchoosepublishoption/${publishedFileID}/
+https://steamcommunity.com/sharedfiles/ajaxeditcontentdescriptors/
 https://steamcommunity.com/sharedfiles/ajaxgetmaturecontentwarningdialog/
 https://steamcommunity.com/sharedfiles/ajaxgetmycollections
 https://steamcommunity.com/sharedfiles/ajaxgetserviceproviders
@@ -2570,6 +2574,7 @@ https://steamcommunity.com/sharedfiles/ajaxresendverificationemail/
 https://steamcommunity.com/sharedfiles/ajaxsetserviceprovidersplits
 https://steamcommunity.com/sharedfiles/ajaxshowcommercepurchasedialog/${publishedFileID}/
 https://steamcommunity.com/sharedfiles/ajaxshowcommercerefunddialog/${publishedFileID}/
+https://steamcommunity.com/sharedfiles/ajaxupdatecontentdescriptors/
 https://steamcommunity.com/sharedfiles/ban
 https://steamcommunity.com/sharedfiles/banupvoters
 https://steamcommunity.com/sharedfiles/contributorpicker/${publishedfileid}
@@ -2685,6 +2690,7 @@ https://store.steampowered.com/account/ajaxregisterkey/
 https://store.steampowered.com/account/ajaxsetcookiepreferences
 https://store.steampowered.com/account/edituserreviewscorepreference/
 https://store.steampowered.com/account/languagepreferences/
+https://store.steampowered.com/account/preferences
 https://store.steampowered.com/account/preferences/
 https://store.steampowered.com/account/renewsubscription/
 https://store.steampowered.com/account/savesearchpreferences
@@ -2696,6 +2702,8 @@ https://store.steampowered.com/api/removefromwishlist
 https://store.steampowered.com/app/${appid}/?snr=1_saliens_4__salienapps
 https://store.steampowered.com/app/${appid}?snr=${g_SNR}
 https://store.steampowered.com/app/${nAppID}
+https://store.steampowered.com/app/${unAppID}/
+https://store.steampowered.com/app/${unAppID}/${url_name}/
 https://store.steampowered.com/app/1046930/Dota_Underlords/
 https://store.steampowered.com/app/570/Dota_2/
 https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/
@@ -2703,6 +2711,7 @@ https://store.steampowered.com/appreport/${nAppId}/report/
 https://store.steampowered.com/appreviewhistogram/${appid}
 https://store.steampowered.com/appreviews/${appid}
 https://store.steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts/
+https://store.steampowered.com/bundle/${unBundleID}/
 https://store.steampowered.com/cart/
 https://store.steampowered.com/categories/homepageimage/${strImageURL}?cc=${}&l=${}
 https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreementid=${agreementid}&agreementpackageid=${packageid}
@@ -2737,8 +2746,11 @@ https://store.steampowered.com/default/home_sale_data
 https://store.steampowered.com/default/usabilitytracking/
 https://store.steampowered.com/dev/${vanity_url}
 https://store.steampowered.com/developer/${vanity_url}
+https://store.steampowered.com/dynamicstore/saledata/?cc=${strCC}
 https://store.steampowered.com/dynamicstore/updatehomeviewsettings
+https://store.steampowered.com/dynamicstore/userdata/?id=${accountid}&cc=${strCC}
 https://store.steampowered.com/explore/followgame/
+https://store.steampowered.com/explore/howitworks/
 https://store.steampowered.com/explore/logfeedview/
 https://store.steampowered.com/explore/more
 https://store.steampowered.com/explore/recommended/
@@ -2793,19 +2805,13 @@ https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&returnurl=$
 https://store.steampowered.com/steamawards/nominategame
 https://store.steampowered.com/steamawards/nominations/
 https://store.steampowered.com/store/${strURL}
-https://store.steampowered.com/store/account/preferences
 https://store.steampowered.com/store/account/updateshippingaddress/
 https://store.steampowered.com/store/actions/ReportAbuse/
 https://store.steampowered.com/store/actions/clues
-https://store.steampowered.com/store/api/addtowishlist
 https://store.steampowered.com/store/api/addtowishlist/
-https://store.steampowered.com/store/api/removefromwishlist
 https://store.steampowered.com/store/api/removefromwishlist/
 https://store.steampowered.com/store/app/${nAppID}
-https://store.steampowered.com/store/app/${unAppID}/
-https://store.steampowered.com/store/app/${unAppID}/${url_name}/
 https://store.steampowered.com/store/bundle/${nBundleID}
-https://store.steampowered.com/store/bundle/${unBundleID}/
 https://store.steampowered.com/store/cart/
 https://store.steampowered.com/store/cart/addtocart
 https://store.steampowered.com/store/cart/getcartstate
@@ -2813,12 +2819,9 @@ https://store.steampowered.com/store/checkout/addfreelicense/${subid}
 https://store.steampowered.com/store/checkout/verifyshippingaddress/
 https://store.steampowered.com/store/curators/ajaxfollow
 https://store.steampowered.com/store/curators/ajaxgetcurators/
-https://store.steampowered.com/store/dynamicstore/saledata/?cc=${strCC}
-https://store.steampowered.com/store/dynamicstore/userdata/?id=${accountid}&cc=${strCC}
 https://store.steampowered.com/store/explore/
 https://store.steampowered.com/store/explore/discoveryqueuesettings/
 https://store.steampowered.com/store/explore/generatenewdiscoveryqueue
-https://store.steampowered.com/store/explore/howitworks/
 https://store.steampowered.com/store/explore/next
 https://store.steampowered.com/store/explore/next/
 https://store.steampowered.com/store/explore/updatediscoveryqueuesettings
@@ -2830,10 +2833,9 @@ https://store.steampowered.com/store/recommended/ignorerecommendation/
 https://store.steampowered.com/store/search/suggest
 https://store.steampowered.com/store/seasonsandepisodes/${nAppID}/?ver=nx
 https://store.steampowered.com/store/sub/${nPackageID}
-https://store.steampowered.com/store/sub/${unPackageID}/
-https://store.steampowered.com/store/tags/en/${}
 https://store.steampowered.com/store/tags/en/TAGNAME/
 https://store.steampowered.com/store/wintercomic/
+https://store.steampowered.com/sub/${unPackageID}/
 https://store.steampowered.com/subscriptions/ea
 https://store.steampowered.com/supportmessages/ackmessages
 https://store.steampowered.com/tag/en/${}
@@ -2843,6 +2845,7 @@ https://store.steampowered.com/tagdata/populartags/english
 https://store.steampowered.com/tagdata/recommendedtags
 https://store.steampowered.com/tagdata/tagapp
 https://store.steampowered.com/tags/
+https://store.steampowered.com/tags/en/${}
 https://store.steampowered.com/tags/en/TAGNAME/
 https://store.steampowered.com/video/details/${m_nAppId}/${m_strVideoId}
 https://store.steampowered.com/video/licenseex/${m_strUniqueId}
@@ -2869,6 +2872,7 @@ https://underlords.com/download/androidarm32
 https://underlords.com/download/androidarm64
 https://valvecorp.slack.com/app_redirect?channel=${_ ? _ : _}
 https://valvesoftware.com
+https://vimeo.com/privacy
 https://www.amazon.com/
 https://www.dota2.com.cn/theshanghaimajor/english/overview
 https://www.dota2.com/720

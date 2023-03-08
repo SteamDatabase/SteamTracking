@@ -412,6 +412,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .radio_Button_3lwcR.radio_Active_3ZBFo:hover {
   background-color: #1f8dff;
   cursor: default;
+  color: #fff;
 }
 .radio_Button_3lwcR:hover {
   background-color: #33363e;
@@ -582,14 +583,36 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni {
   padding: 24px 0px 0px 24px;
+  background: #171d25;
+}
+.pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.DesktopUI.pagedsettings_NoPadding_1iWhH,
+.DesktopUI
+  .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.pagedsettings_NoPadding_1iWhH {
+  padding: 0;
+}
+.pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.DesktopUI.pagedsettings_NoPadding_1iWhH
+  .DialogBody,
+.DesktopUI
+  .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.pagedsettings_NoPadding_1iWhH
+  .DialogBody {
+  padding-right: 0px;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni.DesktopUI .DialogBody,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogBody {
-  padding-right: 24px;
+  padding-right: 12px;
   padding-bottom: 24px;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader {
   margin-right: 0;
+}
+.pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader.DesktopUI,
+.DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: unset;
 }
 .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
   background: #2a2d34;
@@ -602,13 +625,24 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   flex-direction: column;
   position: relative;
 }
+.pagedsettings_PagedSettingsDialog_PageListColumn_RTicB.DesktopUI,
+.DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
+  padding-left: 0px;
+}
 .pagedsettings_PagedSettingsDialog_Title_3qEgQ {
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: #4297f8;
+  color: #1a9fff;
   font-weight: 300;
   font-size: 13px;
   user-select: none;
+}
+.pagedsettings_PagedSettingsDialog_Title_3qEgQ.DesktopUI,
+.DesktopUI .pagedsettings_PagedSettingsDialog_Title_3qEgQ {
+  padding-left: 24px;
+  padding-right: 14px;
+  font-weight: 700;
+  font-size: 17px;
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF {
   line-height: 16px;
@@ -633,23 +667,53 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   margin-bottom: 14px;
   user-select: none;
 }
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.DesktopUI,
+.DesktopUI .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn {
+  margin-bottom: 0px;
+  padding: 10px 16px 10px 24px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #b8bcbf;
+  text-transform: none;
+}
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn
   .pagedsettings_PageListItem_Icon_U6HcK {
   height: 20px;
   width: 20px;
   margin-right: 16px;
 }
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn
+  .pagedsettings_PageListItem_Icon_U6HcK.DesktopUI,
+.DesktopUI
+  .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn
+  .pagedsettings_PageListItem_Icon_U6HcK {
+  color: #b8bcbf;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn
+  .pagedsettings_PageListItem_Title_2X9_I {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9,
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9:hover,
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9:not(.pagedsettings_Active_Myra7):hover {
-  color: #414141;
+  background-color: #23262e;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn:not(.pagedsettings_Active_Myra7):hover {
-  color: #ccc;
+  background-color: #dcdedf;
+  color: #3d4450;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn:not(.pagedsettings_Active_Myra7):hover
+  .pagedsettings_PageListItem_Icon_U6HcK {
+  color: #3d4450;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_Active_Myra7 {
   color: #fff;
-  cursor: default;
+  background-color: #3d4450;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_Active_Myra7
+  .pagedsettings_PageListItem_Icon_U6HcK {
+  color: #fff;
 }
 .pagedsettings_PageListSpacer_33lCZ {
   flex-grow: 1;
@@ -660,6 +724,10 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   margin-bottom: 14px;
   margin-right: 24px;
   flex-shrink: 0;
+}
+.pagedsettings_PageListSeparator_1UEEm.DesktopUI,
+.DesktopUI .pagedsettings_PageListSeparator_1UEEm {
+  margin: 0px 12px;
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_20uOg {
   from {
@@ -1186,11 +1254,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_S-_La .Focusable {
   scroll-margin: 20px 0 55px 0;
 }
-.gamepaddialog_Field_S-_La.DesktopUI .DialogButton,
-.DesktopUI .gamepaddialog_Field_S-_La .DialogButton {
-  padding: 0px 10px;
-  box-sizing: border-box;
-}
 .gamepaddialog_FieldClickTarget_TN6vN {
   position: absolute;
   left: 0;
@@ -1241,7 +1304,14 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_ChildrenWidthFixed_1ugIU
   .gamepaddialog_FieldChildren_14_HB {
-  min-width: 250px;
+  min-width: var(--gamepad-field-control-min-width, 250px);
+}
+.gamepaddialog_Field_S-_La.gamepaddialog_ChildrenWidthFixed_1ugIU
+  .gamepaddialog_FieldChildren_14_HB.DesktopUI,
+.DesktopUI
+  .gamepaddialog_Field_S-_La.gamepaddialog_ChildrenWidthFixed_1ugIU
+  .gamepaddialog_FieldChildren_14_HB {
+  min-width: 0px;
 }
 #QuickAccess-Menu
   .gamepaddialog_Field_S-_La.gamepaddialog_ChildrenWidthFixed_1ugIU
@@ -1256,6 +1326,10 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   .gamepaddialog_FieldChildren_14_HB {
   padding-top: var(--field-row-children-spacing);
 }
+.gamepaddialog_FieldChildren_14_HB.DesktopUI,
+.DesktopUI .gamepaddialog_FieldChildren_14_HB {
+  display: flex;
+}
 .gamepaddialog_FieldLabel_3b0U- {
   font-size: 16px;
   line-height: 20px;
@@ -1265,6 +1339,11 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   flex-direction: row;
   max-width: 100%;
   word-break: break-word;
+}
+.gamepaddialog_FieldLabel_3b0U-.DesktopUI,
+.DesktopUI .gamepaddialog_FieldLabel_3b0U- {
+  font-size: 14px;
+  line-height: 18px;
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_InlineWrapShiftsChildrenBelow_pHUb6
   .gamepaddialog_FieldLabel_3b0U- {
@@ -1297,6 +1376,13 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   line-height: 16px;
   color: #b8bcbf;
   margin-top: 8px;
+}
+.gamepaddialog_FieldDescription_2OJfk.DesktopUI,
+.DesktopUI .gamepaddialog_FieldDescription_2OJfk {
+  color: #8b929a;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_WithChildrenBelow_1u5FT
   .gamepaddialog_FieldChildren_14_HB
@@ -1515,6 +1601,8 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_ControlsListOuterPanel_2Mvpu.gamepaddialog_ItemMaxSizeDesktop_LFWdf {
   --controls-child-max-width: 200px;
+  gap: 20px;
+  flex-grow: 1;
 }
 .gamepaddialog_ControlsListOuterPanel_2Mvpu.gamepaddialog_AlignRight_4eBGA {
   margin-right: calc(-1 * var(--controls-list-spacing));
@@ -1538,6 +1626,13 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   .gamepaddialog_ControlsListOuterPanel_2Mvpu
   .gamepaddialog_ControlsListChild_XvRso {
   max-width: 270px;
+}
+.gamepaddialog_ControlsListOuterPanel_2Mvpu
+  .gamepaddialog_ControlsListChild_XvRso.DesktopUI,
+.DesktopUI
+  .gamepaddialog_ControlsListOuterPanel_2Mvpu
+  .gamepaddialog_ControlsListChild_XvRso {
+  display: flex;
 }
 .gamepaddialog_ControlsListOuterPanel_2Mvpu.gamepaddialog_AlignLeft_2N3q6
   .gamepaddialog_ControlsListChild_XvRso {
@@ -2957,12 +3052,6 @@ button.DialogButton::-moz-focus-inner {
 .ModalDialogPopup .FullModalOverlay .ModalPosition_Dismiss {
   display: block;
 }
-.ModalPosition_Dismiss {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  z-index: 1;
-}
 .DeckVerifiedModalDialogClient .ModalPosition_Content {
   width: 640px;
   font-weight: 400;
@@ -3015,17 +3104,40 @@ button.DialogButton::-moz-focus-inner {
   display: flex;
   flex-direction: column;
 }
-.ModalPosition_Content
-  > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
+.ModalPosition_Content > * {
   min-height: 0;
   min-width: 0;
-  flex-shrink: 1;
   flex-grow: 1;
+  flex-shrink: 1;
 }
-.PopupFullWindow
-  .ModalPosition_Content
-  > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
-  flex: 1;
+div.ModalPosition_Dismiss {
+  min-width: initial;
+  min-height: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 1;
+}
+div.ModalPosition_TopBar {
+  min-height: 1px;
+  min-width: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+  background: linear-gradient(to right, #00ccff, #3366ff);
+}
+.Destructive .ModalPosition_TopBar {
+  background: linear-gradient(to right, #c44848, #c44848);
+}
+.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
+  opacity: 0;
 }
 .DialogContent,
 .DialogContentTransition {
@@ -3110,22 +3222,6 @@ button.DialogButton::-moz-focus-inner {
   flex-direction: column;
   min-height: 0;
   flex: 1;
-}
-.ModalPosition_TopBar {
-  min-height: 1px;
-  background: linear-gradient(to right, #00ccff, #3366ff);
-}
-.Destructive .ModalPosition_TopBar {
-  background: linear-gradient(to right, #c44848, #c44848);
-}
-.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
-  opacity: 0;
 }
 .ModalDialogPopup .PopupFullWindow > .ModalPosition,
 .ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {

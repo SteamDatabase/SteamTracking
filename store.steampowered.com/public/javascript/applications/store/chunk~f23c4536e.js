@@ -4,102 +4,180 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2529],
   {
-    96824: (e, t, r) => {
+    44229: (e, t, r) => {
       r.d(t, {
-        A1: () => c,
-        NO: () => _,
-        UC: () => d,
-        Z6: () => g,
-        iP: () => l,
-        p8: () => m,
-        yp: () => o,
+        Z6: () => c,
+        p8: () => h,
+        NO: () => b,
+        UC: () => g,
+        A1: () => B,
+        yp: () => d,
+        iP: () => m,
       });
       var i = r(89526),
         s = r(6960),
         a = r(70983),
         n = r(26371);
-      const o = [
-          "h1",
-          "h2",
-          "h3",
-          "h4",
-          "h5",
-          "smalltext",
-          "b",
-          "u",
-          "hr",
-          "i",
-          "img",
-          "strike",
-          "spoiler",
-          "noparse",
-          "url",
-          "list",
-          "olist",
-          "quote",
-          "pullquote",
-          "code",
-          "table",
-          "tr",
-          "td",
-          "th",
-          "previewyoutube",
-          "looping_media",
-          "roomeffect",
-          "sticker",
-          "price",
-          "pricesavings",
-          "trailer",
-          "speaker",
-          "doclink",
-          "video",
-          "vod",
-          "youtubeorvideo",
-          "giveawayeligible",
-          "claimitem",
-          "packagepurchaseable",
-          "actiondialog",
-          "uploadfilebutton",
-          "docimg",
-        ],
-        l = [
-          "h1",
-          "h2",
-          "h3",
-          "b",
-          "u",
-          "i",
-          "strike",
-          "spoiler",
-          "noparse",
-          "url",
-        ],
-        u = [
-          "img",
-          "previewyoutube",
-          "looping_media",
-          "roomeffect",
-          "video",
-          "vod",
-          "trailer",
-          "youtubeorvideo",
-          "docimg",
-        ],
-        c = (o.filter((e) => -1 == u.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
-        d = "{STEAM_CLAN_LOC_IMAGE}";
-      function m(e, t = null, r = " ") {
-        let i = null == t ? void 0 : t.join("|");
-        i || (i = o.join("|") + "|\\*");
-        let s = new RegExp("\\[(" + i + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
-        return e.replace(s, r);
+      class o {
+        constructor() {
+          (this.type = 0), (this.text = "");
+        }
+        ConvertMalformedNodeToText() {
+          3 == this.type
+            ? (this.text = "[/" + this.text)
+            : 2 == this.type && (this.text = "[" + this.text),
+            (this.type = 1);
+        }
       }
-      function _(e, t = null, r = "") {
-        let i = null == t ? void 0 : t.join("|");
-        i || (i = o.join("|") + "|\\*");
-        let s = "\\[\\/?(?:" + i + "){1,}.*?]";
-        return e.replace(new RegExp(s, "gi"), r);
+      class l {
+        constructor(e, t) {
+          (this.m_dictComponents = void 0),
+            (this.m_dictComponents = e),
+            (this.m_fnAccumulatorFactory = t);
+        }
+        Parse(e, t, r = !1) {
+          const i = (function (e, t) {
+            const r = [];
+            let i = new o(),
+              s = !1,
+              a = !1,
+              n = !1;
+            for (let o = 0; o < e.length; o++) {
+              let l = e[o];
+              switch (i.type) {
+                case 0:
+                  "[" == l
+                    ? ((i.type = 2), (a = !0))
+                    : ((i.type = 1), "\\" == l && t ? (s = !s) : (i.text += l));
+                  break;
+                case 2:
+                case 3:
+                  if ("/" == l && a) (i.type = 3), (i.text = ""), (a = !1);
+                  else if ("[" != l || s)
+                    if ("]" != l || s)
+                      "\\" == l && t
+                        ? ((i.text += l), (s = !s), (a = !1))
+                        : ((i.text += l), (s = !1), (a = !1));
+                    else {
+                      const e =
+                          2 == i.type &&
+                          "noparse" == i.text.toLocaleLowerCase(),
+                        t =
+                          3 == i.type &&
+                          "noparse" == i.text.toLocaleLowerCase();
+                      a || (n && !t)
+                        ? (i.ConvertMalformedNodeToText(), (i.text += l))
+                        : e
+                        ? (n = !0)
+                        : t && (n = !1),
+                        (i = u(r, i)),
+                        (a = !1);
+                    }
+                  else
+                    i.ConvertMalformedNodeToText(), (i = u(r, i, 2)), (a = !0);
+                  break;
+                case 1:
+                  "[" != l || s
+                    ? "\\" == l && t
+                      ? (s && (i.text += l), (s = !s))
+                      : (s && ((i.text += "\\"), (s = !1)), (i.text += l))
+                    : ((i = u(r, i, 2)), (a = !0));
+              }
+            }
+            0 != i.type &&
+              ((2 != i.type && 3 != i.type) || i.ConvertMalformedNodeToText(),
+              r.push(i));
+            return r;
+          })(e, r);
+          return this.Parse_BuildElements(i, t);
+        }
+        Parse_BuildElements(e, t) {
+          let r = this.m_fnAccumulatorFactory(void 0),
+            i = [],
+            s = function () {
+              return i.length < 1 ? void 0 : i[i.length - 1];
+            },
+            a = this.m_dictComponents,
+            n = !1,
+            o = !0,
+            l = function (e, s, l) {
+              if (e && e.node.tag === s.text && a.get(e.node.tag)) {
+                const s = a.get(e.node.tag),
+                  l = i.map((e) => e.node.tag),
+                  u = { parentTags: l, tagname: e.node.tag, args: e.node.args },
+                  c = t(s.Constructor, u, ...r.GetElements());
+                (r = e.accumulator),
+                  r.AppendNode(c),
+                  (n = s.skipFollowingNewline),
+                  (o = e.bWrapTextForCopying);
+              } else if (e) {
+                let t = e.accumulator;
+                t.AppendText("[" + e.node.text + "]", !1),
+                  r.GetElements().forEach((e) => t.AppendNode(e)),
+                  t.AppendText("[/" + s.text + "]", !1),
+                  (r = t),
+                  (o = e.bWrapTextForCopying);
+              }
+            };
+          for (
+            e.forEach((e, t) => {
+              var u, c;
+              if (1 == e.type) {
+                const t = n ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                r.AppendText(t, o), (n = !1);
+              } else if (2 == e.type) {
+                const t = a.get(e.tag);
+                if (t) {
+                  const c = s();
+                  if (void 0 !== c) {
+                    const t = a.get(c.node.tag);
+                    t &&
+                      t.autocloses &&
+                      e.tag === c.node.tag &&
+                      l(i.pop(), c.node);
+                  }
+                  i.push({ accumulator: r, node: e, bWrapTextForCopying: o }),
+                    (r = this.m_fnAccumulatorFactory(e)),
+                    (n = t.skipInternalNewline),
+                    (o =
+                      null !== (u = t.allowWrapTextForCopying) &&
+                      void 0 !== u &&
+                      u);
+                } else r.AppendText("[" + e.text + "]", 0 == i.length);
+              } else if (3 == e.type) {
+                for (
+                  ;
+                  s() &&
+                  s().node.tag !== e.text &&
+                  a.get(s().node.tag) &&
+                  a.get(s().node.tag).autocloses;
+
+                ) {
+                  const e = i.pop();
+                  l(e, e.node);
+                }
+                if (
+                  (null === (c = s()) || void 0 === c ? void 0 : c.node.tag) ==
+                  e.text
+                ) {
+                  const t = i.pop();
+                  l(t, e);
+                } else r.AppendText("[/" + e.text + "]", 0 == i.length);
+              }
+            });
+            i.length > 0;
+
+          ) {
+            let e = i.pop(),
+              t = e.accumulator;
+            t.AppendText("[" + e.node.text + "]", !1),
+              r.GetElements().forEach((e) => t.AppendNode(e)),
+              (r = t);
+          }
+          return r.GetElements();
+        }
       }
-      function B(e, t, r = 0) {
+      function u(e, t, r = 0) {
         if (2 == t.type) {
           let e = t.text.indexOf("="),
             r = t.text.indexOf(" ");
@@ -162,193 +240,126 @@
           } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
         }
         e.push(t);
-        let i = new h();
+        let i = new o();
         return (i.type = r), i;
       }
-      class g {
-        constructor(e, t = () => new n.LT(), r) {
-          (this.m_dictComponents = void 0),
-            (this.m_dictComponents = e),
-            (this.m_fnAccumulatorFactory = t),
+      class c extends l {
+        constructor(e, t, r) {
+          super(e, null != t ? t : () => new n.LT()),
             (this.m_renderingLanguage = r || (0, s.jM)(a.De.LANGUAGE));
         }
         UpdateOverrideLanguage(e) {
           this.m_renderingLanguage = e || (0, s.jM)(a.De.LANGUAGE);
         }
         ParseBBCode(e, t, r = !1) {
-          const i = (function (e, t) {
-            const r = [];
-            let i = new h(),
-              s = !1,
-              a = !1,
-              n = !1;
-            for (let o = 0; o < e.length; o++) {
-              let l = e[o];
-              switch (i.type) {
-                case 0:
-                  "[" == l
-                    ? ((i.type = 2), (a = !0))
-                    : ((i.type = 1), "\\" == l && t ? (s = !s) : (i.text += l));
-                  break;
-                case 2:
-                case 3:
-                  if ("/" == l && a) (i.type = 3), (i.text = ""), (a = !1);
-                  else if ("[" != l || s)
-                    if ("]" != l || s)
-                      "\\" == l && t
-                        ? ((i.text += l), (s = !s), (a = !1))
-                        : ((i.text += l), (s = !1), (a = !1));
-                    else {
-                      const e =
-                          2 == i.type &&
-                          "noparse" == i.text.toLocaleLowerCase(),
-                        t =
-                          3 == i.type &&
-                          "noparse" == i.text.toLocaleLowerCase();
-                      a || (n && !t)
-                        ? (i.ConvertMalformedNodeToText(), (i.text += l))
-                        : e
-                        ? (n = !0)
-                        : t && (n = !1),
-                        (i = B(r, i)),
-                        (a = !1);
-                    }
-                  else
-                    i.ConvertMalformedNodeToText(), (i = B(r, i, 2)), (a = !0);
-                  break;
-                case 1:
-                  "[" != l || s
-                    ? "\\" == l && t
-                      ? (s && (i.text += l), (s = !s))
-                      : (s && ((i.text += "\\"), (s = !1)), (i.text += l))
-                    : ((i = B(r, i, 2)), (a = !0));
-              }
-            }
-            return (
-              0 != i.type &&
-                ((2 != i.type && 3 != i.type) || i.ConvertMalformedNodeToText(),
-                r.push(i)),
-              r
-            );
-          })(e, r);
-          return this.Parse_BuildReactComponents(i, t);
-        }
-        Parse_BuildReactComponents(e, t) {
-          let r = this.m_fnAccumulatorFactory(void 0),
-            s = [],
-            a = function () {
-              return s.length < 1 ? void 0 : s[s.length - 1];
-            },
-            n = this.m_dictComponents,
-            o = this.m_renderingLanguage,
-            l = !1,
-            u = !0,
-            c = function (e, a, c) {
-              if (e && e.node.tag === a.text && n.get(e.node.tag)) {
-                const a = n.get(e.node.tag),
-                  d = s.map((e) => e.node.tag),
-                  m = {
-                    context: t,
-                    parentTags: d,
-                    tagname: e.node.tag,
-                    args: e.node.args,
-                    language: o,
-                    key: `${e.node.tag}_${c}`,
-                  },
-                  _ = i.createElement(a.Constructor, m, ...r.GetElements());
-                (r = e.accumulator),
-                  r.AppendNode(_),
-                  (l = a.skipFollowingNewline),
-                  (u = e.bWrapTextForCopying);
-              } else if (e) {
-                let t = e.accumulator;
-                t.AppendText("[" + e.node.text + "]", !1),
-                  r.GetElements().forEach((e) => t.AppendNode(e)),
-                  t.AppendText("[/" + a.text + "]", !1),
-                  (r = t),
-                  (u = e.bWrapTextForCopying);
-              }
-            };
-          for (
-            e.forEach((e, t) => {
-              var i, o;
-              if (1 == e.type) {
-                const t = l ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                r.AppendText(t, u), (l = !1);
-              } else if (2 == e.type) {
-                const o = n.get(e.tag);
-                if (o) {
-                  const d = a();
-                  if (void 0 !== d) {
-                    const r = n.get(d.node.tag);
-                    r &&
-                      r.autocloses &&
-                      e.tag === d.node.tag &&
-                      c(s.pop(), d.node, t);
-                  }
-                  s.push({ accumulator: r, node: e, bWrapTextForCopying: u }),
-                    (r = this.m_fnAccumulatorFactory(e)),
-                    (l = o.skipInternalNewline),
-                    (u =
-                      null !== (i = o.allowWrapTextForCopying) &&
-                      void 0 !== i &&
-                      i);
-                } else r.AppendText("[" + e.text + "]", 0 == s.length);
-              } else if (3 == e.type) {
-                for (
-                  ;
-                  a() &&
-                  a().node.tag !== e.text &&
-                  n.get(a().node.tag) &&
-                  n.get(a().node.tag).autocloses;
-
-                ) {
-                  const e = s.pop();
-                  c(e, e.node, t);
-                }
-                if (
-                  (null === (o = a()) || void 0 === o ? void 0 : o.node.tag) ==
-                  e.text
-                ) {
-                  const r = s.pop();
-                  c(r, e, t);
-                } else r.AppendText("[/" + e.text + "]", 0 == s.length);
-              }
-            });
-            s.length > 0;
-
-          ) {
-            let e = s.pop(),
-              t = e.accumulator;
-            t.AppendText("[" + e.node.text + "]", !1),
-              r.GetElements().forEach((e) => t.AppendNode(e)),
-              (r = t);
-          }
-          let d = r.GetElements();
-          return d.length > 1
-            ? i.createElement(i.Fragment, null, ...d)
-            : 1 == d.length
-            ? d[0]
+          let s = 0;
+          const a = this.Parse(
+            e,
+            (e, r, ...a) =>
+              i.createElement(
+                e,
+                Object.assign(Object.assign({}, r), {
+                  context: t,
+                  language: this.m_renderingLanguage,
+                  key: "bbnode_" + s++,
+                }),
+                ...a
+              ),
+            r
+          );
+          return a.length > 1
+            ? i.createElement(i.Fragment, null, ...a)
+            : 1 == a.length
+            ? a[0]
             : null;
         }
       }
-      class h {
-        constructor() {
-          (this.type = 0), (this.text = "");
-        }
-        ConvertMalformedNodeToText() {
-          3 == this.type
-            ? (this.text = "[/" + this.text)
-            : 2 == this.type && (this.text = "[" + this.text),
-            (this.type = 1);
-        }
+      const d = [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "smalltext",
+          "b",
+          "u",
+          "hr",
+          "i",
+          "img",
+          "strike",
+          "spoiler",
+          "noparse",
+          "url",
+          "list",
+          "olist",
+          "quote",
+          "pullquote",
+          "code",
+          "table",
+          "tr",
+          "td",
+          "th",
+          "previewyoutube",
+          "looping_media",
+          "roomeffect",
+          "sticker",
+          "price",
+          "pricesavings",
+          "trailer",
+          "speaker",
+          "doclink",
+          "video",
+          "vod",
+          "youtubeorvideo",
+          "giveawayeligible",
+          "claimitem",
+          "packagepurchaseable",
+          "actiondialog",
+          "uploadfilebutton",
+          "docimg",
+        ],
+        m = [
+          "h1",
+          "h2",
+          "h3",
+          "b",
+          "u",
+          "i",
+          "strike",
+          "spoiler",
+          "noparse",
+          "url",
+        ],
+        _ = [
+          "img",
+          "previewyoutube",
+          "looping_media",
+          "roomeffect",
+          "video",
+          "vod",
+          "trailer",
+          "youtubeorvideo",
+          "docimg",
+        ],
+        B = (d.filter((e) => -1 == _.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
+        g = "{STEAM_CLAN_LOC_IMAGE}";
+      function h(e, t = null, r = " ") {
+        let i = null == t ? void 0 : t.join("|");
+        i || (i = d.join("|") + "|\\*");
+        let s = new RegExp("\\[(" + i + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
+        return e.replace(s, r);
+      }
+      function b(e, t = null, r = "") {
+        let i = null == t ? void 0 : t.join("|");
+        i || (i = d.join("|") + "|\\*");
+        let s = "\\[\\/?(?:" + i + "){1,}.*?]";
+        return e.replace(new RegExp(s, "gi"), r);
       }
     },
     26371: (e, t, r) => {
       r.d(t, { DX: () => n, LT: () => a, So: () => o });
       var i = r(89526),
         s = r(32338);
-      r(96824);
       class a {
         constructor() {
           this.reactNodes = [];
@@ -1751,8 +1762,8 @@
         VL: () => l,
         WJ: () => E,
         _A: () => X,
-        cR: () => O,
-        eK: () => C,
+        cR: () => C,
+        eK: () => O,
         oY: () => W,
       });
       var i = r(45878),
@@ -3598,65 +3609,10 @@
           return "StoreItemID";
         }
       }
-      class C extends n {
-        constructor(e = null) {
-          super(),
-            C.prototype.ids || s.aR(C.M()),
-            n.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
-                fields: {
-                  ids: { n: 1, c: W, r: !0, q: !0 },
-                  context: { n: 2, c: E },
-                  data_request: { n: 3, c: T },
-                },
-              }),
-            C.sm_m
-          );
-        }
-        static MBF() {
-          return C.sm_mbf || (C.sm_mbf = s.Bh(C.M())), C.sm_mbf;
-        }
-        toObject(e = !1) {
-          return C.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.TA(C.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.aD(C.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new C();
-          return C.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.F(C.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.l2(C.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetItems_Request";
-        }
-      }
       class O extends n {
         constructor(e = null) {
           super(),
-            O.prototype.store_items || s.aR(O.M()),
+            O.prototype.ids || s.aR(O.M()),
             n.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -3664,7 +3620,11 @@
             O.sm_m ||
               (O.sm_m = {
                 proto: O,
-                fields: { store_items: { n: 1, c: l, r: !0, q: !0 } },
+                fields: {
+                  ids: { n: 1, c: W, r: !0, q: !0 },
+                  context: { n: 2, c: E },
+                  data_request: { n: 3, c: T },
+                },
               }),
             O.sm_m
           );
@@ -3699,6 +3659,57 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetItems_Request";
+        }
+      }
+      class C extends n {
+        constructor(e = null) {
+          super(),
+            C.prototype.store_items || s.aR(C.M()),
+            n.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
+                fields: { store_items: { n: 1, c: l, r: !0, q: !0 } },
+              }),
+            C.sm_m
+          );
+        }
+        static MBF() {
+          return C.sm_mbf || (C.sm_mbf = s.Bh(C.M())), C.sm_mbf;
+        }
+        toObject(e = !1) {
+          return C.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.TA(C.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.aD(C.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new C();
+          return C.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.F(C.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.l2(C.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreBrowse_GetItems_Response";
@@ -4200,7 +4211,7 @@
       var x;
       !(function (e) {
         (e.GetItems = function (e, t) {
-          return e.SendMsg("StoreBrowse.GetItems#1", t, O, {
+          return e.SendMsg("StoreBrowse.GetItems#1", t, C, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
@@ -6751,7 +6762,7 @@
       var i = r(52868),
         s = r.n(i),
         a = r(89526),
-        n = (r(96824), r(38800), r(82702), r(31621)),
+        n = (r(44229), r(38800), r(82702), r(31621)),
         o = (r(55449), r(63154));
       function l(e, t, r, i) {
         const n = (0, a.useRef)(),

@@ -9922,7 +9922,7 @@
         da = a(52645),
         ma = a(65717),
         ua = a.n(ma),
-        _a = a(96824);
+        _a = a(44229);
       class pa {
         constructor() {
           (this.m_rgAnswerToCategoryID = Array()),
@@ -26711,7 +26711,7 @@
           );
         });
       var Pe = a(69015),
-        Fe = a(96824),
+        Fe = a(44229),
         Xe = a(80833),
         je = a(36764),
         He = a(90806),
@@ -35974,8 +35974,7 @@
                 d.createElement(
                   "a",
                   {
-                    href:
-                      S.De.IMG_URL + "events/event_header_template.zip?t=14",
+                    href: "https://partner.steamgames.com/public/marketing/steam_game_templates_2023.zip",
                     download: !0,
                   },
                   (0, E.Xx)("#selectimage_downloadtemplate")
