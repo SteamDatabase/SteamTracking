@@ -78,6 +78,10 @@
             "argc": "7"
         },
         {
+            "name": "GetQueryUGCContentDescriptors",
+            "argc": "6"
+        },
+        {
             "name": "GetQueryUGCIsDepotBuild",
             "argc": "5"
         },
@@ -243,6 +247,14 @@
         },
         {
             "name": "RemoveItemPreview",
+            "argc": "4"
+        },
+        {
+            "name": "AddContentDescriptor",
+            "argc": "4"
+        },
+        {
+            "name": "RemoveContentDescriptor",
             "argc": "4"
         },
         {

@@ -125,4 +125,7 @@ message CMsgClientSettings {
 	optional int32 controller_power_off_timeout = 14008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "CSettingsPanelGameController.Timeout", (setting_default_int) = 15];
 	optional bool turn_off_controller_on_exit = 14009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "CSettingsPanelGameController.TurnOff"];
 	optional bool controller_combine_nintendo_joycons = 14010 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional uint64 startup_movie_id = 16000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/MovieID", (setting_pre_login) = true];
+	optional string startup_movie_local_path = 16001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/LocalPath", (setting_pre_login) = true];
+	optional bool startup_movie_shuffle = 16002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/Shuffle", (setting_pre_login) = true];
 }

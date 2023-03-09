@@ -299,6 +299,7 @@ message CPublishedFile_GetUserFiles_Request {
 	optional uint32 cache_max_age_seconds = 27 [default = 0, (description) = "Allow stale data to be returned for the specified number of seconds."];
 	optional int32 language = 29 [default = 0, (description) = "Specifies the localized text to return. Defaults to English."];
 	repeated .CPublishedFile_GetUserFiles_Request.TagGroup taggroups = 34 [(description) = "(Optional) At least one of the tags must be present on a published file to satisfy the query."];
+	repeated .EContentDescriptorID excluded_content_descriptors = 37 [(description) = "(Optional) Filter out items that have these content descriptors."];
 	optional bool totalonly = 17 [(description) = "(Optional) If true, only return the total number of files that satisfy this query."];
 	optional bool ids_only = 18 [(description) = "(Optional) If true, only return the published file ids of files that satisfy this query."];
 	optional bool return_vote_data = 19 [default = true, (description) = "Return vote data"];
@@ -452,6 +453,7 @@ message CPublishedFile_QueryFiles_Request {
 	repeated .CPublishedFile_QueryFiles_Request.TagGroup taggroups = 42 [(description) = "(Optional) At least one of the tags must be present on a published file to satisfy the query."];
 	optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44 [(description) = "(Optional) Filter to items created within this range."];
 	optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45 [(description) = "(Optional) Filter to items updated within this range."];
+	repeated .EContentDescriptorID excluded_content_descriptors = 46 [(description) = "(Optional) Filter out items that have these content descriptors."];
 	optional bool totalonly = 16 [(description) = "(Optional) If true, only return the total number of files that satisfy this query."];
 	optional bool ids_only = 35 [(description) = "(Optional) If true, only return the published file ids of files that satisfy this query."];
 	optional bool return_vote_data = 17 [(description) = "Return vote data"];
@@ -610,6 +612,30 @@ message CPublishedFile_GetItemChanges_Response {
 	repeated .CPublishedFile_GetItemChanges_Response.WorkshopItemInfo workshop_items = 2;
 }
 
+message CPublishedFile_GetContentDescriptors_Request {
+	optional fixed64 publishedfileid = 1;
+}
+
+message CPublishedFile_GetContentDescriptors_Response {
+	message ContentDescriptor {
+		optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_FrequentNudityOrSexualContent];
+		optional uint32 accountid = 2;
+		optional uint32 timestamp = 3;
+		optional bool moderator_set = 4;
+	}
+
+	repeated .CPublishedFile_GetContentDescriptors_Response.ContentDescriptor content_descriptors = 1;
+}
+
+message CPublishedFile_UpdateContentDescriptors_Request {
+	optional fixed64 publishedfileid = 1;
+	repeated .EContentDescriptorID descriptors_to_add = 2;
+	repeated .EContentDescriptorID descriptors_to_remove = 3;
+}
+
+message CPublishedFile_UpdateContentDescriptors_Response {
+}
+
 message CPublishedFile_FileSubscribed_Notification {
 	message RevisionData {
 		optional .EPublishedFileRevision revision = 1 [default = k_EPublishedFileRevision_Default];
@@ -754,6 +780,14 @@ service PublishedFile {
 
 	rpc GetItemChanges (.CPublishedFile_GetItemChanges_Request) returns (.CPublishedFile_GetItemChanges_Response) {
 		option (method_description) = "Get list of updated items since given date";
+	}
+
+	rpc GetContentDescriptors (.CPublishedFile_GetContentDescriptors_Request) returns (.CPublishedFile_GetContentDescriptors_Response) {
+		option (method_description) = "Returns more detailed information about the content descriptors for the published file";
+	}
+
+	rpc UpdateContentDescriptors (.CPublishedFile_UpdateContentDescriptors_Request) returns (.CPublishedFile_UpdateContentDescriptors_Response) {
+		option (method_description) = "Updates content descriptors on the published file";
 	}
 }
 

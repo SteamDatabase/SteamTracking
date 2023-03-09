@@ -290,6 +290,8 @@ message CMsgSystemPerfSettingsGlobal {
 	optional bool is_hdr_debug_heatmap_enabled = 13;
 	optional bool debug_force_hdr_support = 14;
 	optional bool force_hdr_wide_gammut_for_sdr = 15 [default = true];
+	optional bool allow_experimental_hdr = 16;
+	optional float sdr_to_hdr_brightness = 17;
 }
 
 message CMsgSystemPerfSettingsPerApp {
@@ -540,6 +542,7 @@ message CMsgSystemUpdateCheckResult {
 	optional fixed32 rtime_checked = 3;
 	optional bool available = 4;
 	optional string version = 5;
+	optional string auto_message = 6;
 }
 
 message CMsgSystemUpdateApplyParams {

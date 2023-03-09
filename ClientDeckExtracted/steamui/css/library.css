@@ -2581,13 +2581,6 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9:not(.pagedsettings_Active_Myra7):hover {
   color: #414141;
 }
-.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn:not(.pagedsettings_Active_Myra7):hover {
-  color: #ccc;
-}
-.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_Active_Myra7 {
-  color: #fff;
-  cursor: default;
-}
 .pagedsettings_PageListSpacer_33lCZ {
   flex-grow: 1;
 }
@@ -13770,7 +13763,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .controllerconfiguratormapping_PageListColumn_2oua5 {
   background: #23262e;
-  flex: 1;
+  flex: 0;
   min-width: 240px;
   max-width: 40%;
   display: flex;
@@ -13796,6 +13789,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   scroll-padding: 36px 0px;
 }
 .controllerconfiguratormapping_RightColumnContainer_3zXJC {
+  flex: 1;
   overflow-y: scroll;
   padding-left: 4%;
   scroll-margin-top: 200px;
@@ -23728,9 +23722,9 @@ div.creatorhomeembed_SocialContainer_1MvXz {
 .friendslist_FriendsChatsContainer_2Ze6b {
   position: absolute;
   top: var(--basicui-header-height);
-  right: 0;
+  right: var(--gamepad-page-gutter-width);
   bottom: 0;
-  left: 0;
+  left: var(--gamepad-page-gutter-width);
 }
 .friendslist_FriendsListAnchored_1oFDK {
   position: relative;

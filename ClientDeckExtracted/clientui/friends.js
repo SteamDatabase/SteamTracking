@@ -69722,8 +69722,10 @@ object-assign
          */
         var EBrowserComposerMode;
         (function (EBrowserComposerMode) {
-          EBrowserComposerMode[(EBrowserComposerMode["System"] = 0)] = "System";
-          EBrowserComposerMode[(EBrowserComposerMode["OpenGL"] = 1)] = "OpenGL";
+          EBrowserComposerMode[(EBrowserComposerMode["Invalid"] = 0)] =
+            "Invalid";
+          EBrowserComposerMode[(EBrowserComposerMode["System"] = 1)] = "System";
+          EBrowserComposerMode[(EBrowserComposerMode["OpenGL"] = 2)] = "OpenGL";
         })(EBrowserComposerMode || (EBrowserComposerMode = {}));
         class FamilySharingUser {}
         const k_rgStartPages = [
@@ -75630,8 +75632,8 @@ object-assign
             (EControllerSetting["k_EControllerSettingGyroYawScale"] = 125)
           ] = "k_EControllerSettingGyroYawScale";
           EControllerSetting[
-            (EControllerSetting["k_EControllerSettingGyroRollScaleOld"] = 126)
-          ] = "k_EControllerSettingGyroRollScaleOld";
+            (EControllerSetting["k_EControllerSettingGyroRollScale"] = 126)
+          ] = "k_EControllerSettingGyroRollScale";
           EControllerSetting[
             (EControllerSetting[
               "k_EControllerSettingDeadzoneAdvancedSettings"
@@ -75692,10 +75694,7 @@ object-assign
             ] = 139)
           ] = "k_EControllerSettingFlickStickHapticBumpPerAngle";
           EControllerSetting[
-            (EControllerSetting["k_EControllerSettingGyroRollScale"] = 140)
-          ] = "k_EControllerSettingGyroRollScale";
-          EControllerSetting[
-            (EControllerSetting["k_EControllerSettingCount"] = 141)
+            (EControllerSetting["k_EControllerSettingCount"] = 140)
           ] = "k_EControllerSettingCount";
         })(EControllerSetting || (EControllerSetting = {}));
         function EControllerSettingToString(eControllerSetting) {
@@ -75954,7 +75953,7 @@ object-assign
               case 125:
                 return "k_EControllerSettingGyroYawScale";
               case 126:
-                return "k_EControllerSettingGyroRollScaleOld";
+                return "k_EControllerSettingGyroRollScale";
               case 127:
                 return "k_EControllerSettingDeadzoneAdvancedSettings";
               case 128:
@@ -75982,8 +75981,6 @@ object-assign
               case 139:
                 return "k_EControllerSettingFlickStickHapticBumpPerAngle";
               case 140:
-                return "k_EControllerSettingGyroRollScale";
-              case 141:
                 return "k_EControllerSettingCount";
             }
           }
@@ -93080,4 +93077,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=46a25afd0e3f7de8fa4a
+//# sourceMappingURL=friends.js.map?contenthash=60bc860ffbc7d5770ccc

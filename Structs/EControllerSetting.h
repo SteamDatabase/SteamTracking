@@ -124,6 +124,7 @@ typedef enum EControllerSetting
     k_EControllerSettingActivation_button = 123,
     k_EControllerSettingDeadzone_enable_type = 124,
     k_EControllerSettingGyro_yaw_scale = 125,
+    k_EControllerSettingGyro_roll_scale = 126,
     k_EControllerSettingDeadzone_adv_settings = 127,
     k_EControllerSettingRotation = 128,
     k_EControllerSettingReferenced_mode = 129,
@@ -137,5 +138,4 @@ typedef enum EControllerSetting
     k_EControllerSettingFlickstick_rotation_sensitivity = 137,
     k_EControllerSettingFlickstick_command_binding_radius = 138,
     k_EControllerSettingFlickstick_haptic_bump_per_angle = 139,
-    k_EControllerSettingGyro_roll_scale = 140,
 } EControllerSetting;

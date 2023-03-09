@@ -8079,7 +8079,6 @@ div.LowPerfMode
   transition-property: opacity, transform;
   transition-duration: 320ms;
   transition-timing-function: ease-in;
-  margin-left: 32px;
   scroll-margin-left: 32px;
   overflow: hidden;
   background: linear-gradient(
@@ -8220,7 +8219,7 @@ div.LowPerfMode
 .mainmenuapprunning_AppColumn_3FAI9 {
   flex-shrink: 0;
   scroll-snap-align: center;
-  width: max(63vw, 810px);
+  width: max(177vh, 810px);
   height: 100%;
   display: flex;
   background-color: transparent;
