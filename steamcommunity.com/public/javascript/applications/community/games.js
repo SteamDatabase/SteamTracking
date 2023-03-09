@@ -4189,6 +4189,7 @@
                   e.has_community_visible_stats() || !1,
                 has_leaderboards: e.has_leaderboards() || !1,
                 content_descriptorids: e.content_descriptorids() || [],
+                img_icon_url: e.img_icon_url(),
               }));
           });
         }
@@ -4319,6 +4320,7 @@
             {
               queryKey: ["OwnedGames", e, Re.De.LANGUAGE],
               queryFn: () => r.GetGames(e, i),
+              select: (e) => e.filter((e) => e.img_icon_url),
             },
             t
           )
