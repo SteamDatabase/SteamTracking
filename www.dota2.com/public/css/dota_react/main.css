@@ -157,6 +157,26 @@ html.contextmenu_ContextMenuPopup_152-v body {
 .contextmenu_contextMenuItem_3hJA5 .SVGIcon_PlusCircle circle {
   opacity: 0;
 }
+.contextmenu_contextMenuItem_3hJA5 .contextmenu_IconContainer_2LpD6 {
+  width: 16px;
+  height: 16px;
+  margin-left: -4px;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  margin-right: 6px;
+}
+.contextmenu_contextMenuItem_3hJA5 .contextmenu_IconContainer_2LpD6 svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 0px;
+}
+.contextmenu_ContextMenuHRSeparator_11giZ {
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 0.2px solid #67707b;
+  margin: 0px;
+  padding: 0px;
+}
 .contextMenuCheckMark {
   width: 4px;
   height: 18px;
@@ -559,13 +579,17 @@ html.contextmenu_ContextMenuPopup_152-v body {
   padding-right: 12px;
   padding-bottom: 24px;
 }
+.pagedsettings_PagedSettingsDialog_PageContent_26LM5
+  .DialogHeader:first-child
+  + .DialogControlsSection:not(:first-child) {
+  margin-top: 5px;
+}
 .pagedsettings_PagedSettingsDialog_PageContent_26LM5 .DialogHeader {
   margin-right: 0;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_26LM5 .DialogHeader.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_26LM5 .DialogHeader {
   margin-top: 8px;
-  margin-bottom: 0;
   font-size: 22px;
   font-weight: 700;
   text-transform: none;
@@ -576,8 +600,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
   flex: 1;
   min-width: 140px;
   max-width: 220px;
-  padding-left: 24px;
-  padding-top: 40px;
+  padding-top: 36px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -589,17 +612,15 @@ html.contextmenu_ContextMenuPopup_152-v body {
 .pagedsettings_PagedSettingsDialog_Title_3gBLR {
   text-transform: uppercase;
   margin-bottom: 20px;
+  padding-left: 24px;
   color: #1a9fff;
-  font-weight: 300;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 17px;
   user-select: none;
 }
 .pagedsettings_PagedSettingsDialog_Title_3gBLR.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_Title_3gBLR {
-  padding-left: 24px;
   padding-right: 14px;
-  font-weight: 700;
-  font-size: 17px;
 }
 .pagedsettings_PagedSettingsDialog_PageList_2f7v2 {
   line-height: 16px;
@@ -616,22 +637,17 @@ html.contextmenu_ContextMenuPopup_152-v body {
   white-space: normal;
   max-width: 180px;
   text-overflow: ellipsis;
-  color: #7e7e7e;
-  font-size: 15px;
-  font-weight: normal;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 14px;
-  user-select: none;
-}
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.DesktopUI,
-.DesktopUI .pagedsettings_PagedSettingsDialog_PageListItem_15qhi {
-  margin-bottom: 0px;
   padding: 10px 16px 10px 24px;
   font-size: 14px;
   font-weight: 400;
   color: #b8bcbf;
   text-transform: none;
+  cursor: pointer;
+  user-select: none;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.DesktopUI,
+.DesktopUI .pagedsettings_PagedSettingsDialog_PageListItem_15qhi {
+  margin-bottom: 0px;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi
   .pagedsettings_PageListItem_Icon_2HTG8 {
@@ -685,6 +701,11 @@ html.contextmenu_ContextMenuPopup_152-v body {
 .pagedsettings_PageListSeparator_17Ug7.DesktopUI,
 .DesktopUI .pagedsettings_PageListSeparator_17Ug7 {
   margin: 0px 12px;
+}
+.pagedsettings_PageListSeparator_17Ug7.pagedsettings_Transparent_pR-Zm.DesktopUI,
+.DesktopUI
+  .pagedsettings_PageListSeparator_17Ug7.pagedsettings_Transparent_pR-Zm {
+  background: transparent;
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_IT9mg {
   from {
@@ -1573,6 +1594,9 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   margin-right: calc(-0.5 * var(--controls-list-spacing));
   justify-content: center;
 }
+.gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_FullWidth_2tn54 {
+  flex: 1;
+}
 .gamepaddialog_ControlsListOuterPanel_YU3Po
   .gamepaddialog_ControlsListChild_3uFQq {
   max-width: var(--controls-child-max-width);
@@ -1583,6 +1607,13 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   .gamepaddialog_ControlsListOuterPanel_YU3Po
   .gamepaddialog_ControlsListChild_3uFQq {
   max-width: 270px;
+}
+.gamepaddialog_ControlsListOuterPanel_YU3Po
+  .gamepaddialog_ControlsListChild_3uFQq.DesktopUI,
+.DesktopUI
+  .gamepaddialog_ControlsListOuterPanel_YU3Po
+  .gamepaddialog_ControlsListChild_3uFQq {
+  display: flex;
 }
 .gamepaddialog_ControlsListOuterPanel_YU3Po.gamepaddialog_AlignLeft_3nfmw
   .gamepaddialog_ControlsListChild_3uFQq {
@@ -2430,6 +2461,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .DialogContent.gamepadpagedsettings_PagedSettingsDialog_PageContent_2Jsay.gamepadpagedsettings_NoPadding_13dbi {
   padding: 0;
   padding-top: calc(0px + var(--basicui-header-height, 0px));
+}
+.DialogContent.gamepadpagedsettings_PagedSettingsDialog_PageContent_2Jsay
+  .DialogBody
+  .DialogHeader:first-child
+  + .DialogControlsSection:not(:first-child) {
+  margin-top: 5px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListColumn_3Xe9v {
   background: #23262e;
@@ -31652,6 +31689,301 @@ a {
     display: none;
   }
 }
+.dpcroot_DPCHeaderSpring2023League_ZCEeL {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23EventPhaseBox_1HI6K {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23EventPhaseBox_1HI6K
+  .dpcroot_Spring23EventStartTitle_1Kb80,
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23EventPhaseBox_1HI6K
+  .dpcroot_Spring23EventEndTitle_37IKF {
+  margin-top: 25px;
+  margin-left: 150px;
+  font-family: "Radiance", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2023League_ZCEeL
+    .dpcroot_Spring23BannerContainer_2JS_p
+    .dpcroot_Spring23BannerContent_3_RbB
+    .dpcroot_Spring23EventPhaseBox_1HI6K
+    .dpcroot_Spring23EventStartTitle_1Kb80,
+  .dpcroot_DPCHeaderSpring2023League_ZCEeL
+    .dpcroot_Spring23BannerContainer_2JS_p
+    .dpcroot_Spring23BannerContent_3_RbB
+    .dpcroot_Spring23EventPhaseBox_1HI6K
+    .dpcroot_Spring23EventEndTitle_37IKF {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23EventPhaseBox_1HI6K
+  .dpcroot_Spring23EventStartDate_KvOlG,
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23EventPhaseBox_1HI6K
+  .dpcroot_Spring23EventEndDate_1_6KI {
+  margin-top: 3px;
+  margin-left: 150px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2023League_ZCEeL
+    .dpcroot_Spring23BannerContainer_2JS_p
+    .dpcroot_Spring23BannerContent_3_RbB
+    .dpcroot_Spring23EventPhaseBox_1HI6K
+    .dpcroot_Spring23EventStartDate_KvOlG,
+  .dpcroot_DPCHeaderSpring2023League_ZCEeL
+    .dpcroot_Spring23BannerContainer_2JS_p
+    .dpcroot_Spring23BannerContent_3_RbB
+    .dpcroot_Spring23EventPhaseBox_1HI6K
+    .dpcroot_Spring23EventEndDate_1_6KI {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23EventPhaseBox_1HI6K
+  .dpcroot_Spring23EventStartDate_KvOlG
+  time,
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23EventPhaseBox_1HI6K
+  .dpcroot_Spring23EventEndDate_1_6KI
+  time {
+  font-family: "Radiance", sans-serif;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23CenterBox_2a3wa {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23CenterBox_2a3wa
+  .dpcroot_Spring23EventTitle_2pq50 {
+  font-size: 40px;
+  font-family: "Reaver", serif;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23CenterBox_2a3wa
+  .dpcroot_Spring23EventSegment_gTAtK {
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23CenterBox_2a3wa
+  .dpcroot_Spring23Season_3abcC {
+  margin-top: 5px;
+  font-size: 18px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23PrizePoolBox_1uW2t {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23PrizePoolBox_1uW2t
+  .dpcroot_Spring23PrizePoolTitle_NJm3T {
+  margin-right: 120px;
+  margin-left: 50px;
+  font-family: "Radiance", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2023League_ZCEeL
+    .dpcroot_Spring23BannerContainer_2JS_p
+    .dpcroot_Spring23BannerContent_3_RbB
+    .dpcroot_Spring23PrizePoolBox_1uW2t
+    .dpcroot_Spring23PrizePoolTitle_NJm3T {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23PrizePoolBox_1uW2t
+  .dpcroot_Spring23PrizePoolValue_gI5ze {
+  margin-right: 120px;
+  margin-left: 50px;
+  margin-top: 3px;
+  color: #fff;
+  font-family: "Reaver", serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2023League_ZCEeL
+    .dpcroot_Spring23BannerContainer_2JS_p
+    .dpcroot_Spring23BannerContent_3_RbB
+    .dpcroot_Spring23PrizePoolBox_1uW2t
+    .dpcroot_Spring23PrizePoolValue_gI5ze {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23PrizePoolBox_1uW2t
+  .dpcroot_Spring23EventResultsTitle_9jBwY {
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-right: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Radiance", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2023League_ZCEeL
+    .dpcroot_Spring23BannerContainer_2JS_p
+    .dpcroot_Spring23BannerContent_3_RbB
+    .dpcroot_Spring23PrizePoolBox_1uW2t
+    .dpcroot_Spring23EventResultsTitle_9jBwY {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23PrizePoolBox_1uW2t
+  .dpcroot_Spring23EventResultsButton_1GOpZ {
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 280px;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(90deg, #30de9f 0%, #1fbd84 100%);
+  box-shadow: 0px 6px 10px #00000057;
+  border-top: 2px solid #7cffd0;
+  border-radius: 4px;
+  transition: 0.15s;
+  transition-property: box-shadow, transform;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.dpcroot_DPCHeaderSpring2023League_ZCEeL
+  .dpcroot_Spring23BannerContainer_2JS_p
+  .dpcroot_Spring23BannerContent_3_RbB
+  .dpcroot_Spring23PrizePoolBox_1uW2t
+  .dpcroot_Spring23EventResultsButton_1GOpZ:hover {
+  box-shadow: 0px 0px 10px #00ffa28c;
+  transform: translateY(-2px);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSpring2023League_ZCEeL
+    .dpcroot_Spring23BannerContainer_2JS_p
+    .dpcroot_Spring23BannerContent_3_RbB
+    .dpcroot_Spring23PrizePoolBox_1uW2t
+    .dpcroot_Spring23EventResultsButton_1GOpZ {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Radiance", "Noto Sans", sans-serif;
@@ -59677,6 +60009,9 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .bbcodes_Italic_zA7ad {
   display: inline;
   font-style: italic;
+}
+p.bbcodes_Paragraph_2c6V3 {
+  margin: 0.5em 0;
 }
 .bbcodes_Header1_3nmkN {
   display: block;
