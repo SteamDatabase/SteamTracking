@@ -155,6 +155,7 @@
     "EventCalendar_FilterSubSection_EventTypeGroups": "Show these types of posts",
     "EventCalendar_FilterSubSection_GameSources": "Show posts from these sources",
     "EventCalendar_FilterSubSection_CuratorSources": "Show posts from curators",
+    "EventCalendar_FilterSubSection_CollectionSources": "Show posts from these sources",
     "EventCalendar_BrowseCurators": "Browse Curators",
     "EventCalendar_EmptyCalendar": "No posts found. Try selecting different search criteria in the sidebar.",
     "EventCalendar_DisabledFilter_LoginPrompt": "Sign in to enable these categories",

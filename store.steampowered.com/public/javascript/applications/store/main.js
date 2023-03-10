@@ -24403,16 +24403,23 @@
     },
     72745: (e, t, n) => {
       "use strict";
-      n.d(t, { M2: () => g, Qc: () => f, R6: () => u, ns: () => m });
+      n.d(t, {
+        M2: () => f,
+        Qc: () => C,
+        R6: () => m,
+        Sb: () => v,
+        ns: () => h,
+      });
       var r = n(33940),
         i = n(50265),
         o = n(89526),
         s = (n(6960), n(38800), n(7297)),
-        a = n(81052),
-        l = n(31587),
-        c = n(70983),
-        d = n(14100);
-      function u(e, t) {
+        a = n(13806),
+        l = n(81052),
+        c = n(31587),
+        d = n(70983),
+        u = n(14100);
+      function m(e, t) {
         let n;
         (n =
           "currentTarget" in e ? e.currentTarget.ownerDocument.defaultView : e),
@@ -24424,7 +24431,7 @@
                 "menubar,location,resizable,scrollbars,status,noopener"
               );
       }
-      function m(e) {
+      function h(e) {
         let {
             bDisableContextMenu: t,
             onContextMenu: n,
@@ -24433,7 +24440,7 @@
             bUseLinkFilter: a,
             getPIDFromEvent: l,
           } = e,
-          d = (0, r._T)(e, [
+          c = (0, r._T)(e, [
             "bDisableContextMenu",
             "onContextMenu",
             "bForceExternal",
@@ -24442,22 +24449,22 @@
             "getPIDFromEvent",
           ]);
         return (
-          t || n || (n = p),
+          t || n || (n = _),
           a &&
             s &&
             (s =
-              (c.De.IN_CLIENT ? "steam://openurl_external/" : "") +
-              c.De.COMMUNITY_BASE_URL +
+              (d.De.IN_CLIENT ? "steam://openurl_external/" : "") +
+              d.De.COMMUNITY_BASE_URL +
               "linkfilter/?url=" +
               s),
           l || (l = () => 0),
           o.createElement(
             "a",
-            Object.assign({}, d, {
+            Object.assign({}, c, {
               href: s,
               onClick: (e) => {
                 e.preventDefault(),
-                  _(window, s, {
+                  g(window, s, {
                     bForceExternal: !!i,
                     bUseLinkFilter: !!a,
                     unPID: l(e),
@@ -24470,43 +24477,43 @@
           )
         );
       }
-      function h(e) {
+      function p(e) {
         const { strURL: t, unPID: n } = e;
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(
-            d.Zo,
+            u.Zo,
             {
               onSelected: () => {
-                a.J$(t);
+                l.J$(t);
               },
             },
-            (0, l.Xx)("#ContextMenu_CopyLinkURL")
+            (0, c.Xx)("#ContextMenu_CopyLinkURL")
           ),
           o.createElement(
-            d.Zo,
+            u.Zo,
             {
               onSelected: (e) => {
-                _(e, t, { unPID: n });
+                g(e, t, { unPID: n });
               },
             },
-            (0, l.Xx)("#ContextMenu_OpenLinkInNewWindow")
+            (0, c.Xx)("#ContextMenu_OpenLinkInNewWindow")
           )
         );
       }
-      function p(e, t) {
+      function _(e, t) {
         let n = e.currentTarget;
         return (0, s.yV)(
           o.createElement(
-            d.xV,
+            u.xV,
             null,
-            o.createElement(h, { strURL: n.href, unPID: t })
+            o.createElement(p, { strURL: n.href, unPID: t })
           ),
           e
         );
       }
-      function _(e, t, n = {}) {
+      function g(e, t, n = {}) {
         const { bForceExternal: r, unPID: i, bUseLinkFilter: o } = n;
         let s;
         (s =
@@ -24523,13 +24530,24 @@
                   (o ? ",noreferrer" : "")
               );
       }
-      const g = (e) =>
+      const f = (e) =>
         o.createElement(
           o.Fragment,
           null,
           Boolean(e.condition) ? e.wrap(e.children) : e.children
         );
-      function f(e) {
+      function v(e) {
+        return o.forwardRef((t, n) =>
+          o.createElement(
+            "div",
+            Object.assign({}, t, {
+              className: (0, a.Z)(e, t.className),
+              ref: n,
+            })
+          )
+        );
+      }
+      function C(e) {
         if ("string" != typeof e) return NaN;
         const t = !e.includes("ms") && e.includes("s");
         let n = Number.parseFloat(e);
