@@ -3656,6 +3656,7 @@
                 loc_token: n.loc_token,
                 type: n.type,
                 heading: n.heading,
+                id: n.id || void 0,
               };
             n.must &&
               (Array.isArray(n.must)
@@ -3722,6 +3723,7 @@
               type: n.type,
               loc_token: n.loc_token,
               heading: n.heading,
+              id: n.id || void 0,
             };
           n.must &&
             (Array.isArray(n.must)
@@ -3754,6 +3756,8 @@
         var t, a, o, r, m, c;
         return (0, n.mG)(this, void 0, void 0, function* () {
           const n = {};
+          let d = 0;
+          for (const t of e) t.id && t.id > d && (d = t.id);
           for (const s of e)
             (n[s.handle] = {
               handle: s.handle,
@@ -3772,6 +3776,7 @@
                   ? void 0
                   : o.map((e) => e.id)) || void 0,
               heading: s.heading || void 0,
+              id: s.id || ++d,
             }),
               1 ===
                 (null === (r = n[s.handle].must) || void 0 === r
@@ -3781,27 +3786,27 @@
                 (null === (m = n[s.handle].mustnot) || void 0 === m
                   ? void 0
                   : m.length) && (n[s.handle].mustnot = n[s.handle].mustnot[0]);
-          const d =
+          const u =
               l.De.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
-            u = new FormData();
-          u.append("sessionid", l.De.SESSIONID),
-            u.append("origin", self.origin),
-            u.append("json", JSON.stringify(n));
-          let p = null;
+            p = new FormData();
+          p.append("sessionid", l.De.SESSIONID),
+            p.append("origin", self.origin),
+            p.append("json", JSON.stringify(n));
+          let g = null;
           try {
-            const e = yield s().post(d, u, { withCredentials: !0 });
+            const e = yield s().post(u, p, { withCredentials: !0 });
             if (
               200 === e.status &&
               1 === (null === (c = e.data) || void 0 === c ? void 0 : c.success)
             )
               return null;
-            p = (0, i.l)(e);
+            g = (0, i.l)(e);
           } catch (e) {
-            p = (0, i.l)(e);
+            g = (0, i.l)(e);
           }
           return (
-            console.error("SaveCategoriesKV failed: " + p.strErrorMsg, p), p
+            console.error("SaveCategoriesKV failed: " + g.strErrorMsg, g), g
           );
         });
       }
@@ -4588,6 +4593,12 @@
                 onChange: (e) => {
                   (t.handle = e.target.value), o();
                 },
+              }),
+              s.createElement(m.II, {
+                label: "Internal ID (auto assigned)",
+                tooltip: "Assigned automatically, do not try to fill this in",
+                value: t.id,
+                disabled: !0,
               }),
               s.createElement(m.II, {
                 label: "Loc Token",
