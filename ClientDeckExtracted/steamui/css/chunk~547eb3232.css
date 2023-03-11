@@ -17258,11 +17258,22 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background-color: #3d4450;
 }
 .titlebarcontrols_TitleBarControls_3cykd {
-  margin-top: 8px;
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
   align-items: center;
+}
+.titlebarcontrols_TitleBarControls_3cykd .titlebarcontrols_BranchBar_1n8t0,
+.titlebarcontrols_TitleBarControls_3cykd
+  .titlebarcontrols_SupportAlertsButton_32TmR,
+.titlebarcontrols_TitleBarControls_3cykd
+  .titlebarcontrols_ParentalToggleButton_13vrq,
+.titlebarcontrols_TitleBarControls_3cykd
+  .titlebarcontrols_AnnouncementsButton_5wILZ,
+.titlebarcontrols_TitleBarControls_3cykd
+  .titlebarcontrols_NotificationButtonContainer_3mGEz,
+.titlebarcontrols_TitleBarControls_3cykd .titlebarcontrols_AccountMenu_3yD46 {
+  margin-right: 8px;
 }
 .titlebarcontrols_AccountMenu_3yD46 {
   max-height: 24px;
@@ -17316,8 +17327,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   color: #fff;
 }
 .titlebarcontrols_Icon_34bQc {
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
 }
 .titlebarcontrols_AnnouncementsButton_5wILZ {
   padding: 0px 12px;
@@ -17424,15 +17435,15 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   color: #67707b;
   width: 32px;
   height: 24px;
-  height: 14px;
   padding: 2px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 .titlebarcontrols_VRToggle_3lRfT:hover {
-  background: #23262e;
+  background: #3d4450;
   border-radius: 16px;
 }
 .titlebarcontrols_VRToggle_3lRfT.titlebarcontrols_Running_1oMrx {
@@ -17450,18 +17461,17 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: default;
 }
 .titlebarcontrols_GamepadUIToggle_3LKQ3 .titlebarcontrols_Icon_34bQc,
 .titlebarcontrols_SoundtrackControls_Utdt7 .titlebarcontrols_Icon_34bQc {
   height: 16px;
   width: 16px;
-  padding-bottom: 3px;
 }
 .titlebarcontrols_GamepadUIToggle_3LKQ3:hover,
 .titlebarcontrols_SoundtrackControls_Utdt7:hover {
-  background: #23262e;
-  border-radius: 16px;
+  background: #3d4450;
+  border-radius: 2px;
 }
 .titlebarcontrols_ParentalToggleButton_13vrq {
   min-width: 50px;
@@ -18368,21 +18378,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex: 0 0 auto;
 }
 .steamdesktop_TitleBar_39oUC .steamdesktop_WindowControls_qP17e {
-  flex: 0 0 92px;
+  flex: 0 0 99px;
   position: relative;
-  margin: 6px 8px 0px 8px;
   cursor: pointer;
-}
-.steamdesktop_TitleBar_39oUC
-  .steamdesktop_WindowControls_qP17e
-  .title-bar-actions {
-  gap: 8px;
-}
-.steamdesktop_TitleBar_39oUC
-  .steamdesktop_WindowControls_qP17e
-  .minimizeButton
-  svg {
-  transform: translateY(-4px);
 }
 .steamdesktop_SuperNavBar_3Z3oh {
   display: flex;

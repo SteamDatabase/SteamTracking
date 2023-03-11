@@ -2281,24 +2281,25 @@
         const { loginState: t } = e,
           o = (0, g.SZ)(() => m.P.loginPercentage),
           r = a.useRef(0),
-          i = (0, g.SZ)(() => m.P.currentUser);
+          i = (0, g.SZ)(() => m.P.currentUser),
+          l = 4 != M.nm.UIMode && !!i;
         a.useEffect(() => {
           0 == o ? (r.current = 0) : r.current++;
         }, [o]);
-        let l = "",
-          s = !1;
+        let s = "",
+          u = !1;
         switch (t) {
           case 4:
-            l = (0, h.Localize)("#Login_WaitingForNetwork");
+            s = (0, h.Localize)("#Login_WaitingForNetwork");
             break;
           case 5:
-            l = (0, h.Localize)("#Login_WaitingForServer");
+            s = (0, h.Localize)("#Login_WaitingForServer");
             break;
           case 6:
-            (l = (0, h.Localize)("#Login_LoadingLibrary")), (s = r.current > 5);
+            (s = (0, h.Localize)("#Login_LoadingLibrary")), (u = r.current > 5);
             break;
           case 8:
-            l = (0, h.Localize)("#Login_ShuttingDown");
+            s = (0, h.Localize)("#Login_ShuttingDown");
         }
         return a.createElement(
           _.Panel,
@@ -2312,23 +2313,23 @@
           a.createElement(
             v.t,
             {
-              extraSpace: !!i,
+              extraSpace: l,
               className: e.throbberClassName,
-              size: i ? "small" : "medium",
+              size: l ? "small" : "medium",
             },
             a.createElement(
               "div",
               { className: (0, E.default)(c.LoginStatus) },
-              l
+              s
             ),
             a.createElement(
               "div",
               {
-                className: (0, E.default)(c.Progress, s && o > 0 && c.Visible),
+                className: (0, E.default)(c.Progress, u && o > 0 && c.Visible),
               },
               a.createElement(He.k, { nProgress: 100 * o })
             ),
-            i &&
+            l &&
               a.createElement(
                 "div",
                 { className: c.UserContainer },

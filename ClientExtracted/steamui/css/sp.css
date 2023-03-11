@@ -8046,11 +8046,7 @@ div.LowPerfMode
   display: flex;
   flex-direction: row;
   min-width: 0;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    black calc(80% - 32px),
-    rgba(0, 0, 0, 0) 100%
-  );
+  background-color: rgba(14, 20, 27, 0.8);
 }
 .mainmenuapprunning_ScrollMask_322FV.mainmenuapprunning_HideMask_1009K {
   -webkit-mask-image: none;
@@ -8222,14 +8218,11 @@ div.LowPerfMode
   width: max(177vh, 810px);
   height: 100%;
   display: flex;
-  background-color: transparent;
+  background-color: rgba(14, 20, 27, 0.9);
   transition: background-color 320ms ease-in-out;
 }
 .mainmenuapprunning_AppColumn_3FAI9.mainmenuapprunning_FocusedColumn_lz9Db {
   background-color: rgba(14, 20, 27, 0.8);
-}
-.mainmenuapprunning_AppColumn_3FAI9.mainmenuapprunning_DesktopOverlay_1ysK1 {
-  background-color: rgba(14, 20, 27, 0.9);
 }
 .mainmenuapprunning_AppColumn_3FAI9 .mainmenuapprunning_AppColumnContent_2P4E7 {
   display: none;

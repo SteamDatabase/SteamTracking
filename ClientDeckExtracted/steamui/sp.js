@@ -974,7 +974,6 @@
           "mainmenuapprunning_NavigationMenuItemSeparator_l7dF3",
         AppColumn: "mainmenuapprunning_AppColumn_3FAI9",
         FocusedColumn: "mainmenuapprunning_FocusedColumn_lz9Db",
-        DesktopOverlay: "mainmenuapprunning_DesktopOverlay_1ysK1",
         AppColumnContent: "mainmenuapprunning_AppColumnContent_2P4E7",
         ActiveContent: "mainmenuapprunning_ActiveContent_3cU2E",
         CurrentGameBackground: "mainmenuapprunning_CurrentGameBackground_2Jbd_",
@@ -1893,7 +1892,7 @@
     },
     57811: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Fh });
+      a.r(t), a.d(t, { default: () => Nh });
       var n = a(70655),
         o = a(16614),
         r = (a(67862), a(67294)),
@@ -18820,7 +18819,7 @@
                 in: !n && !!t,
                 appear: m,
                 enter: m,
-                exit: m,
+                exit: !0,
                 classNames: d,
                 timeout: e,
                 onExited: u,
@@ -26200,27 +26199,27 @@
           a.map((e) => {
             const a = e.params.browserInfo;
             return e.IsMainGamepadUIWindow()
-              ? r.createElement(kh, { key: "Main", cm: t, instance: e })
+              ? r.createElement(Ih, { key: "Main", cm: t, instance: e })
               : e.IsGamepadUIOverlayWindow()
-              ? r.createElement(Dh, {
+              ? r.createElement(Fh, {
                   key: `overlay_${a.m_unPID}`,
                   cm: t,
                   instance: e,
                 })
               : e.IsStandaloneKeyboardWindow()
-              ? r.createElement(Lh, { key: "keyboard", cm: t, instance: e })
+              ? r.createElement(Bh, { key: "keyboard", cm: t, instance: e })
               : e.IsControllerConfiguratorWindow()
-              ? r.createElement(Bh, {
+              ? r.createElement(Gh, {
                   key: "controllerconfigurator",
                   cm: t,
                   instance: e,
                 })
               : e.IsVRWindow()
-              ? r.createElement(Ih, { key: "vr", cm: t, instance: e })
+              ? r.createElement(Th, { key: "vr", cm: t, instance: e })
               : e.IsSteamLibraryWindow()
-              ? r.createElement(Th, { key: "SteamLibrary", cm: t, instance: e })
+              ? r.createElement(wh, { key: "SteamLibrary", cm: t, instance: e })
               : e.IsDesktopLoginWindow()
-              ? r.createElement(wh, { key: "DesktopLogin", cm: t, instance: e })
+              ? r.createElement(Lh, { key: "DesktopLogin", cm: t, instance: e })
               : null;
           })
         );
@@ -26333,11 +26332,14 @@
           (e[(e.GamepadUI = 2)] = "GamepadUI"),
           (e[(e.DesktopUI = 3)] = "DesktopUI");
       })(Ah || (Ah = {}));
-      !(function () {
+      const kh = (function () {
         const e = "steam-firstclientrun";
-        null == sessionStorage.getItem(e) && sessionStorage.setItem(e, "ran");
+        return (
+          null == sessionStorage.getItem(e) &&
+          (sessionStorage.setItem(e, "ran"), !0)
+        );
       })();
-      function kh(e) {
+      function Ih(e) {
         const { cm: t, instance: a } = e,
           n = (0, o.xY)(),
           i = (0, oe.SZ)(() => (0, o.gV)().LoginState),
@@ -26346,7 +26348,7 @@
           g = h.Config.ON_DECK ? Dg.Z : Fg.Z,
           v = (0, yp.rZ)(),
           _ = (0, Ng.dh)(g),
-          [b, f] = r.useState(!0),
+          [b, f] = r.useState((kh || !h.Config.ON_DECK) && null != g),
           E = r.useCallback(() => f(!1), []);
         (0, me.useTimeout)(E, 3e4, []);
         let A = c.EBrowserType.EBrowserType_DirectHWND_Borderless,
@@ -26442,8 +26444,8 @@
           w
         );
       }
-      const Ih = (e) => null;
-      function Th(e) {
+      const Th = (e) => null;
+      function wh(e) {
         const { cm: t, instance: a } = e,
           n =
             "macos" != h.Config.PLATFORM
@@ -26519,7 +26521,7 @@
         );
       }
       r.Fragment;
-      function wh(e) {
+      function Lh(e) {
         const { cm: t, instance: a } = e;
         c.EBrowserType.EBrowserType_DirectHWND_Borderless;
         let n = { width: 705, height: 440, left: yh, top: yh },
@@ -26592,7 +26594,7 @@
             )
           : null;
       }
-      function Lh(e) {
+      function Bh(e) {
         const { cm: t, instance: a } = e,
           { initialX: n, initialY: o } = a.params,
           { popup: i, element: s } = Sh("SP Keyboard", a, Ah.GamepadUI, {
@@ -26620,7 +26622,7 @@
             )
           : null;
       }
-      function Bh(e) {
+      function Gh(e) {
         const { cm: t, instance: a } = e,
           { appid: n, strAppName: o } = a.params;
         (0, oe.SZ)(() => a.BIsGamepadApplicationUIInitialized());
@@ -26683,7 +26685,7 @@
             )
           : null;
       }
-      const Gh = r.memo(function (e) {
+      const Dh = r.memo(function (e) {
         const { children: t } = e,
           a = r.useContext(ua.S).params;
         let n = a.browserInfo.m_unAppID,
@@ -26695,7 +26697,7 @@
           t
         );
       });
-      function Dh(e) {
+      function Fh(e) {
         const { cm: t, instance: a } = e,
           n = a.params;
         let o = c.EBrowserType.EBrowserType_OffScreen,
@@ -26757,7 +26759,7 @@
                   Ch,
                   { ownerWindow: p, instance: a },
                   r.createElement(
-                    Gh,
+                    Dh,
                     null,
                     r.createElement(kg, {
                       cm: t,
@@ -26785,7 +26787,7 @@
           yield e.Init(window.cm);
         });
       })();
-      const Fh = function (e) {
+      const Nh = function (e) {
         const t = (0, o.gl)();
         return (
           (0, i.pJ)(1920, 1080),

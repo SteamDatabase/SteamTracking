@@ -951,6 +951,17 @@ button.DialogButton::-moz-focus-inner {
   margin-bottom: 12px;
 }
 
+.DesktopUI .DialogHeader,
+.friendsui-container .DialogHeader {
+  /* we're trying a thicker, friendlier title that isn't shouting*/
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: unset;
+  margin-bottom: 4px;
+  line-height: 28px;
+  text-transform: none;
+}
+
 .DialogSubHeader {
   font-weight: 300;
   font-size: 24px;
@@ -1158,6 +1169,19 @@ button.DialogButton::-moz-focus-inner {
 
 .DialogTextInputBase:not(:disabled):hover {
   background: rgba(67, 73, 83, 0.6);
+}
+
+.DesktopUI .DialogTextInputBase:focus,
+.DialogTextInputBase:focus-within {
+  /*attempting to limit this to desktopui, but we may want to use this everywhere in the future */
+  background: #23262e;
+  box-shadow: inset 1px 1px 4px #000a;
+  padding-left: 11px;
+}
+
+.DesktopUI .DialogTextInputBase:not(:disabled):hover {
+  /*attempting to limit this to desktopui, but we may want to use this everywhere in the future */
+  /* background: rgba( 67, 73, 83, .6 ); */
 }
 
 .DialogTextInputBase:disabled:hover {
@@ -2422,6 +2446,50 @@ body.in_global_drag .title-area {
   color: white;
   text-decoration: underline;
 }
+
+/*============= DESKTOP UI SPECIFIC TITLEBAR STYLES =============*/
+/* stylelint-disable selector-class-pattern */
+.DesktopUI .title-area .title-bar-actions,
+.friendsui-container .title-area .title-bar-actions {
+  margin-right: 2px;
+}
+
+.DesktopUI .title-area-icon,
+.friendsui-container .title-area-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  width: 32px;
+  height: 24px;
+  margin-top: 7px;
+}
+
+.DesktopUI .title-area-icon .SVGIcon_Minimize,
+.DesktopUI .title-area-icon .SVGIcon_Maximize,
+.DesktopUI .title-area-icon .SVGIcon_X_Line,
+.DesktopUI .title-area-icon .SVGIcon_Restore,
+.friendsui-container .title-area-icon .SVGIcon_Minimize,
+.friendsui-container .title-area-icon .SVGIcon_Maximize,
+.friendsui-container .title-area-icon .SVGIcon_X_Line,
+.friendsui-container .title-area-icon .SVGIcon_Restore {
+  margin: 0px;
+  width: 14px;
+  height: 14px;
+}
+
+.DesktopUI .title-area-icon:hover,
+.friendsui-container .title-area-icon:hover {
+  background: #3d4450;
+  border-radius: 2px;
+}
+
+.DesktopUI .title-area-icon.closeButton:hover,
+.friendsui-container .title-area-icon.closeButton:hover {
+  background: red;
+}
+
+/* stylelint-enable selector-class-pattern */
 /*!********************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/fonts.css ***!
   \********************************************************************************************************************************************************************/
@@ -2682,4 +2750,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=4810dadf42f78fc6bc8a*/
+/*# sourceMappingURL=friends.css.map?contenthash=ffd452934647f15c3ad1*/

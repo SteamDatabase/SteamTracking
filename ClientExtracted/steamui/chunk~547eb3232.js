@@ -859,6 +859,12 @@
         GamepadUIBreakShort: "500px",
         "duration-app-launch": "800ms",
         TitleBarControls: "titlebarcontrols_TitleBarControls_3cykd",
+        BranchBar: "titlebarcontrols_BranchBar_1n8t0",
+        SupportAlertsButton: "titlebarcontrols_SupportAlertsButton_32TmR",
+        ParentalToggleButton: "titlebarcontrols_ParentalToggleButton_13vrq",
+        AnnouncementsButton: "titlebarcontrols_AnnouncementsButton_5wILZ",
+        NotificationButtonContainer:
+          "titlebarcontrols_NotificationButtonContainer_3mGEz",
         AccountMenu: "titlebarcontrols_AccountMenu_3yD46",
         WalletBalance: "titlebarcontrols_WalletBalance_2jphj",
         Chevron: "titlebarcontrols_Chevron_3x51w",
@@ -867,10 +873,7 @@
         AccountName: "titlebarcontrols_AccountName_11phB",
         Button: "titlebarcontrols_Button_2Szzh",
         Icon: "titlebarcontrols_Icon_34bQc",
-        AnnouncementsButton: "titlebarcontrols_AnnouncementsButton_5wILZ",
         Active: "titlebarcontrols_Active_1oEwi",
-        NotificationButtonContainer:
-          "titlebarcontrols_NotificationButtonContainer_3mGEz",
         NotificationsMenu: "titlebarcontrols_NotificationsMenu_1UgM1",
         NotificationsMenuScrollable:
           "titlebarcontrols_NotificationsMenuScrollable_3sTMv",
@@ -885,9 +888,7 @@
         Running: "titlebarcontrols_Running_1oMrx",
         GamepadUIToggle: "titlebarcontrols_GamepadUIToggle_3LKQ3",
         SoundtrackControls: "titlebarcontrols_SoundtrackControls_Utdt7",
-        ParentalToggleButton: "titlebarcontrols_ParentalToggleButton_13vrq",
         Locked: "titlebarcontrols_Locked_2lStU",
-        BranchBar: "titlebarcontrols_BranchBar_1n8t0",
       };
     },
     89750: (e) => {

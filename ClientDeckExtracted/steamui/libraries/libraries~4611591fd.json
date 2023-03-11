@@ -942,7 +942,7 @@
     "FriendSettings_RememberOpenChats": "Lembrar conversas abertas",
     "FriendSettings_RememberOpenChats_Desc": "Reabre as abas das conversas abertas quando iniciar o Steam.",
     "FriendSettings_RememberOpenChats_DescClient": "Reabre as abas das conversas abertas quando iniciar o Steam. Não se aplica caso o Steam inicie junto com o computador.",
-    "FriendSettings_DockChats": "Fixar conversas à lista de amigos",
+    "FriendSettings_DockChats": "Afixar conversas à lista de amigos",
     "FriendSettings_SortFriendsByStatus": "Ignorar status \"Ausente\" ao ordenar amigos",
     "FriendSettings_HideOfflineFriendsInCategories": "Ocultar amigos off-line de categorias personalizadas",
     "FriendSettings_CategorizeInGameFriendsByGame": "Agrupar amigos por jogo",

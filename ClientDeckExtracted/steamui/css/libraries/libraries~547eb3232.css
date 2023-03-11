@@ -35317,6 +35317,9 @@ button.DialogButton.LocalMicTestButton {
 .FriendSettingsContainer .SettingsGroup {
   margin-bottom: 14px;
 }
+.FriendSettingsContainer .DialogHeader {
+  padding-bottom: 20px;
+}
 .FriendsSettingsNotificationRow {
   padding: 8px 12px;
   margin-bottom: 10px;
