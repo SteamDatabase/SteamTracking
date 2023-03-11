@@ -940,7 +940,6 @@ function GenerateQuickTextInsertLink( quicktext )
     return link;
 }
 
-
 function TicketDetailsSearchBoxKeyUp( event, strLanguage )
 {
 	var $Selected = $J( '#search_select > option:selected' );
@@ -954,7 +953,7 @@ function TicketDetailsSearchBoxKeyUp( event, strLanguage )
 		$J( '#escalation_level').hide();
 		SearchBoxKeyUp( event, DoFAQSearch, function( data )
 		{
-			var link = $J('<div class="qt_link"> <a onclick="InsertQuickText(this, this.getAttribute(\'data-content\'), -1, false); return false;" href="javascript:void(0);">'+data.title+'</a> </div>');
+			var link = $J('<div class="qt_link"> <a onclick="InsertQuickText(this, this.getAttribute(\'data-content\'), -1, false); return false;" href="javascript:void(0);">'+data.agent_title+'</a> </div>');
 			var url = '[url=https://help.steampowered.com/faqs/view/'+data.ref+']'+data.title+'[/url]';
 			link.find('a').attr( 'data-content', url );
 			return link;
@@ -1283,7 +1282,7 @@ CTextAutoComplete.prototype.GetFAQDictionary = function( hits, rgFAQNames, rgFAQ
 	for ( var i = 0; i < hits.length; ++i )
 	{
 		var faq = hits[i];
-		rgFAQNames.push( faq.title );
+		rgFAQNames.push( faq.agent_title );
 		rgFAQLinks.push( '[url=https://help.steampowered.com/faqs/view/' + faq.ref +']' + faq.title + '[/url]' );
 	}
 };
