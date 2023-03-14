@@ -107,24 +107,55 @@
         HTMLErrorBoxAppear: "releasedaterequest_HTMLErrorBoxAppear_bXT6n",
       };
     },
+    25659: (e, t, r) => {
+      "use strict";
+      r.d(t, { M: () => s, y: () => o });
+      var a = r(31587),
+        n = r(5055);
+      function o(e) {
+        return s(
+          e.coming_soon_display,
+          e.steam_release_date,
+          e.custom_release_date_message
+        );
+      }
+      function s(e, t, r) {
+        switch (e) {
+          case "date_full":
+            return (0, a.vX)(t);
+          case "date_month":
+            return (0, n.LO)(new Date(1e3 * t));
+          case "date_quarter":
+            return (0, n.Kb)(new Date(1e3 * t));
+          case "date_year":
+            return (0, n.Np)(new Date(1e3 * t));
+          case "text_comingsoon":
+            return r || (0, a.Xx)("#Store_ComingSoon_ComingSoon");
+          case "text_tba":
+            return r || (0, a.Xx)("#Store_ComingSoon_TBA");
+          default:
+            return "";
+        }
+      }
+    },
     4955: (e, t, r) => {
       "use strict";
       r.d(t, { A: () => T });
       var a = r(33940),
         n = r(88464),
         o = (r(36105), r(89526)),
-        i = r(5556),
-        l = r.n(i),
-        s = r(51966),
+        s = r(5556),
+        i = r.n(s),
+        l = r(51966),
         c = r(73265),
         m = r(65717),
         d = r.n(m),
         u = r(13806),
         b = r(31587),
         p = r(31621),
-        h = r(40108),
-        _ = r(10500),
-        f = r.n(_),
+        _ = r(40108),
+        h = r(10500),
+        f = r.n(h),
         E = r(47812),
         g = r.n(E);
       let T = class extends o.Component {
@@ -150,24 +181,24 @@
             e = t;
           }
           let o = this.props.fnGetTimeToUpdate(),
-            i = 0;
+            s = 0;
           if (o) {
             const t = g().unix(o);
             e.year(t.year()),
               e.month(t.month()),
               e.day(t.day()),
-              (i = e.unix());
+              (s = e.unix());
           } else {
-            i =
+            s =
               g().unix(t).hour(0).second(0).minutes(0).unix() +
               3600 * e.hour() +
               60 * e.minutes();
           }
-          r(i);
-          let l = a && !0 === a();
+          r(s);
+          let i = a && !0 === a();
           (null == this.state.timeAsString &&
-            l == this.state.bEndTimeBeforeStartTime) ||
-            this.setState({ timeAsString: null, bEndTimeBeforeStartTime: l });
+            i == this.state.bEndTimeBeforeStartTime) ||
+            this.setState({ timeAsString: null, bEndTimeBeforeStartTime: i });
         }
         OnDateChange(e) {
           const { disabled: t } = this.props;
@@ -219,11 +250,11 @@
             fnGetTimeToUpdate: r,
             fnIsValidDateTime: a,
             strAlsoShowTimeZone: n,
-            disabled: i,
+            disabled: s,
             bNoDefaultDate: m,
           } = this.props;
           let p = r(),
-            _ = p > 0 ? new Date(1e3 * p) : null,
+            h = p > 0 ? new Date(1e3 * p) : null,
             E = "h:mm A";
           const T = a && a(),
             S =
@@ -262,7 +293,7 @@
               "div",
               { className: (0, u.Z)(f().EventTimeTitle, "DialogLabel") },
               o.createElement(
-                h.HP,
+                _.HP,
                 { toolTipContent: this.props.strDescToolTip, direction: "top" },
                 Boolean(this.props.strDescription) &&
                   o.createElement("span", null, this.props.strDescription)
@@ -271,7 +302,7 @@
                 o.createElement(
                   "span",
                   { className: f().DateErrorCtn },
-                  o.createElement("img", { src: s.Z }),
+                  o.createElement("img", { src: l.Z }),
                   (0, b.Xx)(k)
                 )
             ),
@@ -281,10 +312,10 @@
               o.createElement(
                 "div",
                 { className: (0, u.Z)(d().InputBorder, f().TimeBlock) },
-                o.createElement(l(), {
+                o.createElement(i(), {
                   onChange: this.OnDateChange,
                   timeFormat: !1,
-                  value: this.state.dateAsString ? this.state.dateAsString : _,
+                  value: this.state.dateAsString ? this.state.dateAsString : h,
                   isValidDate: this.IsValidDate,
                   initialValue: D,
                   inputProps: {
@@ -294,7 +325,7 @@
                       "DialogInput",
                       "DialogTextInputBase"
                     ),
-                    disabled: i,
+                    disabled: s,
                   },
                 }),
                 !!x &&
@@ -307,12 +338,12 @@
               o.createElement(
                 "div",
                 { className: (0, u.Z)(d().InputBorder, f().TimeBlock) },
-                o.createElement(l(), {
+                o.createElement(i(), {
                   onChange: this.OnTimeChange,
                   dateFormat: !1,
                   timeFormat: E,
                   timeConstraints: C,
-                  value: this.state.timeAsString ? this.state.timeAsString : _,
+                  value: this.state.timeAsString ? this.state.timeAsString : h,
                   inputProps: {
                     placeholder: (0, b.Xx)("#DateTimePicker_Enter_Time"),
                     className: (0, u.Z)(
@@ -320,7 +351,7 @@
                       "DialogInput",
                       "DialogTextInputBase"
                     ),
-                    disabled: i,
+                    disabled: s,
                   },
                 }),
                 !!x &&
@@ -364,21 +395,21 @@
     },
     15642: (e, t, r) => {
       "use strict";
-      r.d(t, { V: () => l });
+      r.d(t, { V: () => i });
       var a = r(89526),
         n = r(13806),
         o = r(2508),
-        i = r.n(o);
-      const l = a.memo(function (e) {
+        s = r.n(o);
+      const i = a.memo(function (e) {
         const {
           className: t,
           size: r,
           string: o,
-          position: l,
+          position: i,
           static: m,
           msDelayAppear: d,
         } = e;
-        let u = [i().LoadingWrapper, "SteamLogoThrobber", s(r)];
+        let u = [s().LoadingWrapper, "SteamLogoThrobber", l(r)];
         const [b, p] = a.useState(!d);
         return (
           (0, a.useEffect)(() => {
@@ -386,16 +417,16 @@
             const e = setTimeout(() => p(!0), d);
             return () => clearTimeout(e);
           }, [d, b]),
-          void 0 === o && u.push(i().noString),
+          void 0 === o && u.push(s().noString),
           t && u.push(t),
-          m && u.push(i().Static),
+          m && u.push(s().Static),
           a.createElement(
             "div",
             {
               className: (0, n.Z)(
-                "center" == l && i().throbber_center_wrapper,
-                d && i().ThrobberDelayAppear,
-                b && i().Visible
+                "center" == i && s().throbber_center_wrapper,
+                d && s().ThrobberDelayAppear,
+                b && s().Visible
               ),
             },
             b &&
@@ -404,28 +435,28 @@
                 { className: u.join(" ") },
                 a.createElement(
                   "div",
-                  { className: i().Throbber },
-                  a.createElement(c, { className: i().base }),
-                  a.createElement(c, { className: i().blur })
+                  { className: s().Throbber },
+                  a.createElement(c, { className: s().base }),
+                  a.createElement(c, { className: s().blur })
                 )
               ),
             Boolean(o) &&
-              a.createElement("div", { className: i().ThrobberText }, o)
+              a.createElement("div", { className: s().ThrobberText }, o)
           )
         );
       });
-      function s(e) {
+      function l(e) {
         switch (e) {
           case "small":
-            return i().throbber_small;
+            return s().throbber_small;
           case "medium":
-            return i().throbber_medium;
+            return s().throbber_medium;
           case "xlarge":
-            return i().throbber_xlarge;
+            return s().throbber_xlarge;
           case "xxlarge":
-            return i().throbber_xxlarge;
+            return s().throbber_xxlarge;
           default:
-            return i().throbber_large;
+            return s().throbber_large;
         }
       }
       function c(e) {
@@ -447,9 +478,9 @@
             },
             a.createElement(
               "g",
-              { className: i().partCircle },
+              { className: s().partCircle },
               a.createElement("path", {
-                className: i().roundOuter,
+                className: s().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -457,7 +488,7 @@
                 d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               a.createElement("path", {
-                className: i().roundOuter,
+                className: s().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -465,7 +496,7 @@
                 d: "M201.432,101.166",
               }),
               a.createElement("path", {
-                className: i().roundOuter,
+                className: s().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -475,9 +506,9 @@
             ),
             a.createElement(
               "g",
-              { className: i().mainOutline },
+              { className: s().mainOutline },
               a.createElement("path", {
-                className: i().roundFill,
+                className: s().roundFill,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -485,7 +516,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundOuterOutline,
+                className: s().roundOuterOutline,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -494,7 +525,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber01,
+                className: s().roundThrobber01,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -503,7 +534,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber02,
+                className: s().roundThrobber02,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -512,7 +543,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber03,
+                className: s().roundThrobber03,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -521,7 +552,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber04,
+                className: s().roundThrobber04,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -530,7 +561,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber05,
+                className: s().roundThrobber05,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -539,7 +570,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber06,
+                className: s().roundThrobber06,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -548,7 +579,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber07,
+                className: s().roundThrobber07,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -557,7 +588,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber08,
+                className: s().roundThrobber08,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -566,7 +597,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber09,
+                className: s().roundThrobber09,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -575,7 +606,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber10,
+                className: s().roundThrobber10,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -584,7 +615,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber11,
+                className: s().roundThrobber11,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -593,7 +624,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber12,
+                className: s().roundThrobber12,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -602,7 +633,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber13,
+                className: s().roundThrobber13,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -611,7 +642,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber14,
+                className: s().roundThrobber14,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -620,7 +651,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: i().roundThrobber15,
+                className: s().roundThrobber15,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -631,7 +662,7 @@
             ),
             a.createElement(
               "g",
-              { className: i().bottomCircle },
+              { className: s().bottomCircle },
               a.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -639,7 +670,7 @@
             ),
             a.createElement(
               "g",
-              { className: i().topCircle },
+              { className: s().topCircle },
               a.createElement("circle", {
                 fill: "none",
                 stroke: "#ffffff",
@@ -660,10 +691,10 @@
       var a = r(89526),
         n = r(25659),
         o = r(77449),
-        i = r(31587);
-      function l(e) {
-        const { rtSteamReleaseDate: t, value: r, onChange: l } = e,
-          s = !!t,
+        s = r(31587);
+      function i(e) {
+        const { rtSteamReleaseDate: t, value: r, onChange: i } = e,
+          l = !!t,
           c = a.useMemo(
             () =>
               [
@@ -678,22 +709,22 @@
           ),
           m = a.useCallback(
             (e) => {
-              l(e.data);
+              i(e.data);
             },
-            [l]
+            [i]
           ),
           d = t
-            ? (0, i.Xx)("#GameEdit_ComingSoon_SelectAnOption")
-            : (0, i.Xx)("#App_Landing_NoDateSelected");
+            ? (0, s.Xx)("#GameEdit_ComingSoon_SelectAnOption")
+            : (0, s.Xx)("#App_Landing_NoDateSelected");
         return a.createElement(o.TW, {
-          disabled: !s,
+          disabled: !l,
           strDefaultLabel: d,
           rgOptions: c,
-          selectedOption: s ? r : null,
+          selectedOption: l ? r : null,
           onChange: m,
         });
       }
-      let s = {
+      let l = {
         GameEdit: (e, t) => `/admin/game/${e}/${t}`,
         GameEditByAppID: (e) => `/admin/game/editbyappid/${e}`,
         AppLanding: (e) => `/apps/landing/${e}`,
@@ -705,9 +736,9 @@
         u = r(5055),
         b = r(58913),
         p = r(86701),
-        h = r(33940),
-        _ = r(52868),
-        f = r.n(_),
+        _ = r(33940),
+        h = r(52868),
+        f = r.n(h),
         E = r(85797),
         g = r(5615),
         T = (r(6960), r(4955)),
@@ -719,14 +750,14 @@
         A = r(1987);
       function x(e) {
         const { appid: t, onClose: r, onCommit: n } = e,
-          [o, l] = a.useState(null),
+          [o, i] = a.useState(null),
           {
-            data: s,
+            data: l,
             isLoading: c,
             isLoadingError: m,
           } = (function (e) {
             return (0, g.useQuery)(["ReleaseRequest", e], () =>
-              (0, h.mG)(this, void 0, void 0, function* () {
+              (0, _.mG)(this, void 0, void 0, function* () {
                 const t = yield f().get(
                   `${v.De.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`
                 );
@@ -736,23 +767,23 @@
               })
             );
           })(t),
-          d = "prerelease" == (null == s ? void 0 : s.strReleaseState),
+          d = "prerelease" == (null == l ? void 0 : l.strReleaseState),
           u = a.useCallback(
             (e, r) => {
               D.U.invalidateQueries(["ReleaseRequest", t]), n(e, r, d);
             },
             [t, n, d]
           );
-        let b = a.createElement(R, { setOnOKButton: l, onCommit: u });
+        let b = a.createElement(R, { setOnOKButton: i, onCommit: u });
         return (
           m
             ? (b = a.createElement(w, {
-                strError: (0, i.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+                strError: (0, s.Xx)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!c && s) || (b = a.createElement(C.V, null)),
+            : (!c && l) || (b = a.createElement(C.V, null)),
           a.createElement(
             L.Provider,
-            { value: s },
+            { value: l },
             a.createElement(B, { fnSubmit: o, fnCloseModal: r }, b)
           )
         );
@@ -766,12 +797,12 @@
             appid: t,
             bCanUpdateComingSoonDate: r,
             rtReleaseDate: n,
-            strComingSoonDisplay: s,
+            strComingSoonDisplay: l,
           } = N(),
           { setOnOKButton: c, onCommit: m } = e,
           [d, u] = a.useState(n),
-          [b, p] = a.useState(s || void 0),
-          [_, E] = a.useState("none"),
+          [b, p] = a.useState(l || void 0),
+          [h, E] = a.useState("none"),
           [g, T] = a.useState(),
           S = a.useCallback((e) => {
             T(e), E("none");
@@ -783,20 +814,20 @@
                   T(null),
                   (function (e) {
                     var t, r;
-                    return (0, h.mG)(this, void 0, void 0, function* () {
+                    return (0, _.mG)(this, void 0, void 0, function* () {
                       const {
                           unAppID: a,
                           rtReleaseDate: n,
                           strComingSoonDisplay: o,
                         } = e,
-                        l = `${v.De.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${a}`,
-                        s = new FormData();
-                      s.append("sessionid", v.De.SESSIONID),
-                        s.append("release_date", n.toString()),
-                        s.append("coming_soon_display", o);
-                      const c = yield f().post(l, s);
+                        i = `${v.De.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${a}`,
+                        l = new FormData();
+                      l.append("sessionid", v.De.SESSIONID),
+                        l.append("release_date", n.toString()),
+                        l.append("coming_soon_display", o);
+                      const c = yield f().post(i, l);
                       if (!c.data || 1 != c.data.success)
-                        throw (0, i.Xx)(
+                        throw (0, s.Xx)(
                           "#Error_Description",
                           null === (t = c.data) || void 0 === t
                             ? void 0
@@ -814,16 +845,16 @@
                       S(e);
                     }))
                 : S(
-                    (0, i.Xx)(
+                    (0, s.Xx)(
                       "#App_Landing_ReleaseDate_Error_ComingSoonDisplay"
                     )
                   )
-              : S((0, i.Xx)("#App_Landing_ReleaseDate_Error_NoDate"));
+              : S((0, s.Xx)("#App_Landing_ReleaseDate_Error_NoDate"));
           }, [t, d, b, m, S]);
         return (
           a.useLayoutEffect(() => {
-            c(r && "none" == _ ? () => C : null);
-          }, [C, r, _, c]),
+            c(r && "none" == h ? () => C : null);
+          }, [C, r, h, c]),
           a.createElement(
             a.Fragment,
             null,
@@ -834,14 +865,14 @@
               null,
               a.createElement(
                 M,
-                { label: (0, i.Xx)("#App_Landing_IntendedReleaseDateTitle") },
+                { label: (0, s.Xx)("#App_Landing_IntendedReleaseDateTitle") },
                 a.createElement(W, { rtSelectedDate: d, setSelectedDate: u }),
                 a.createElement(I, null)
               ),
               a.createElement(
                 M,
-                { label: (0, i.Xx)("#App_Landing_PublicDateDisplayTitle") },
-                a.createElement(l, {
+                { label: (0, s.Xx)("#App_Landing_PublicDateDisplayTitle") },
+                a.createElement(i, {
                   rtSteamReleaseDate: d,
                   value: b,
                   onChange: p,
@@ -849,19 +880,19 @@
                 a.createElement(
                   "p",
                   null,
-                  (0, i.Xx)("#App_Landing_ReleaseDateStorePage")
+                  (0, s.Xx)("#App_Landing_ReleaseDateStorePage")
                 ),
                 a.createElement(
                   "p",
                   null,
-                  (0, i.Xx)("#App_Landing_ReleaseDateStoreListing")
+                  (0, s.Xx)("#App_Landing_ReleaseDateStoreListing")
                 )
               )
             ),
             a.createElement(
               "div",
               { className: A.ReleaseColumnFooter },
-              (0, i.yu)(
+              (0, s.yu)(
                 "#App_Landing_NeedHelpWithReleaseDates",
                 a.createElement("a", {
                   target: "_blank",
@@ -873,7 +904,7 @@
                 })
               )
             ),
-            a.createElement(X, null)
+            a.createElement(P, null)
           )
         );
       });
@@ -892,30 +923,30 @@
         return e && t
           ? r
             ? a.createElement(
-                P,
+                X,
                 null,
-                (0, i.Xx)("#App_Landing_Release_EarliestDate_BuildReview")
+                (0, s.Xx)("#App_Landing_Release_EarliestDate_BuildReview")
               )
             : a.createElement(
-                P,
+                X,
                 null,
-                (0, i.Xx)("#App_Landing_Release_EarliestDate", (0, i.vX)(o))
+                (0, s.Xx)("#App_Landing_Release_EarliestDate", (0, s.vX)(o))
               )
           : n
           ? a.createElement(
-              P,
+              X,
               null,
-              (0, i.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days")
+              (0, s.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days")
             )
           : a.createElement(
-              P,
+              X,
               null,
-              (0, i.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks")
+              (0, s.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks")
             );
       }
       function B(e) {
         const { fnCloseModal: t, fnSubmit: r, children: n } = e,
-          { bCanUpdateComingSoonDate: l } = N() || {
+          { bCanUpdateComingSoonDate: i } = N() || {
             bCanUpdateComingSoonDate: !0,
           };
         return a.createElement(
@@ -924,8 +955,8 @@
           a.createElement(
             o.h4,
             null,
-            (0, i.Xx)(
-              l
+            (0, s.Xx)(
+              i
                 ? "#App_Landing_Set_Release_Date"
                 : "#App_Landing_Change_Release_Date"
             )
@@ -934,9 +965,9 @@
           a.createElement(o.o9, {
             bOKDisabled: !r,
             onCancel: t,
-            strCancelText: (0, i.Xx)("#App_Landing_Requested_Date_Cancel"),
+            strCancelText: (0, s.Xx)("#App_Landing_Requested_Date_Cancel"),
             onOK: r,
-            strOKText: (0, i.Xx)("#App_Landing_Requested_Date_Update"),
+            strOKText: (0, s.Xx)("#App_Landing_Requested_Date_Update"),
           })
         );
       }
@@ -977,26 +1008,26 @@
               a.createElement(
                 "p",
                 null,
-                (0, i.Xx)("#App_Landing_Set_Release_Date_SetIntended")
+                (0, s.Xx)("#App_Landing_Set_Release_Date_SetIntended")
               ),
               a.createElement(
                 "p",
                 null,
-                (0, i.Xx)("#App_Landing_Set_Release_Date_Weekends")
+                (0, s.Xx)("#App_Landing_Set_Release_Date_Weekends")
               ),
               a.createElement(
                 "p",
                 null,
-                (0, i.Xx)("#App_Landing_Set_Release_Date_PacificTime")
+                (0, s.Xx)("#App_Landing_Set_Release_Date_PacificTime")
               )
             )
           : a.createElement(
               "p",
               null,
-              (0, i.yu)(
-                (0, i.Xx)(
+              (0, s.yu)(
+                (0, s.Xx)(
                   "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
-                  (0, i.vX)(r)
+                  (0, s.vX)(r)
                 ),
                 a.createElement("a", {
                   href: `${(0, k.iv)()}wizard/HelpWithPublishing?issueid=905`,
@@ -1004,10 +1035,10 @@
               )
             );
       }
-      function P(e) {
+      function X(e) {
         return a.createElement("span", { className: A.BlueNote }, e.children);
       }
-      function X(e) {
+      function P(e) {
         const {
           rtEarliestDate: t,
           strReleaseState: r,
@@ -1018,23 +1049,23 @@
           : a.createElement(
               "div",
               { className: A.PublishNowWarning },
-              (0, i.Xx)(
+              (0, s.Xx)(
                 "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
-                (0, i.vX)(t)
+                (0, s.vX)(t)
               )
             );
       }
       var O = r(13806);
       function G(e) {
         const { bIsGameEdit: t, unAppID: r } = e,
-          [o, l] = a.useState(e.rtReleaseDate),
-          [s, c] = a.useState(e.strComingSoonDisplay),
+          [o, i] = a.useState(e.rtReleaseDate),
+          [l, c] = a.useState(e.strComingSoonDisplay),
           [m, d] = a.useState(!1),
-          [u, h] = a.useState(!1),
-          _ = a.useCallback(() => d(!0), []),
+          [u, _] = a.useState(!1),
+          h = a.useCallback(() => d(!0), []),
           f = a.useCallback(() => d(!1), []),
           E = a.useCallback((e, t, r) => {
-            l(e), c(t), d(!1), r && h(!0);
+            i(e), c(t), d(!1), r && _(!0);
           }, []);
         return a.createElement(
           a.Fragment,
@@ -1044,7 +1075,7 @@
             a.createElement(Z, {
               appid: r,
               bIsGameEdit: t,
-              closeModal: () => h(!1),
+              closeModal: () => _(!1),
             }),
           a.createElement(
             "div",
@@ -1054,24 +1085,24 @@
               { className: b.ReleaseDateContent },
               a.createElement(
                 U,
-                { label: (0, i.Xx)("#App_Landing_SpecifiedReleaseDate") },
+                { label: (0, s.Xx)("#App_Landing_SpecifiedReleaseDate") },
                 a.createElement(F, { rtReleaseDate: o })
               ),
               a.createElement(
                 U,
-                { label: (0, i.Xx)("#App_Landing_CustomersSeeReleaseDate") },
+                { label: (0, s.Xx)("#App_Landing_CustomersSeeReleaseDate") },
                 a.createElement(
                   "div",
-                  { className: (0, O.Z)(b.BigField, s ? b.Set : b.Unset) },
-                  s
-                    ? (0, n.M)(s, o)
-                    : (0, i.Xx)("#App_Landing_UnsetReleaseDate")
+                  { className: (0, O.Z)(b.BigField, l ? b.Set : b.Unset) },
+                  l
+                    ? (0, n.M)(l, o)
+                    : (0, s.Xx)("#App_Landing_UnsetReleaseDate")
                 )
               )
             ),
             a.createElement(
               "div",
-              { className: b.EditButton, onClick: _ },
+              { className: b.EditButton, onClick: h },
               a.createElement("div", { className: (0, O.Z)(b.Spacer, b.Top) }),
               a.createElement(
                 "div",
@@ -1094,7 +1125,7 @@
               a.createElement(
                 "div",
                 { className: (0, O.Z)(b.BigField, b.Set) },
-                (0, i.vX)(t)
+                (0, s.vX)(t)
               ),
               a.createElement(
                 "div",
@@ -1105,7 +1136,7 @@
           : a.createElement(
               "div",
               { className: (0, O.Z)(b.BigField, b.Unset) },
-              (0, i.Xx)("#App_Landing_UnsetReleaseDate")
+              (0, s.Xx)("#App_Landing_UnsetReleaseDate")
             );
       }
       function U(e) {
@@ -1122,20 +1153,20 @@
             r
               ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
               : (window.location.href =
-                  s.GameEditByAppID(t.toString()) + "?activetab=tab_publish"),
+                  l.GameEditByAppID(t.toString()) + "?activetab=tab_publish"),
               n();
           }, [t, r, n]);
         return a.createElement(
           S.Yy,
           { active: !0 },
           a.createElement(S.uH, {
-            strTitle: (0, i.Xx)("#App_Landing_ReleaseDate_ChangesSaved"),
-            strDescription: (0, i.Xx)(
+            strTitle: (0, s.Xx)("#App_Landing_ReleaseDate_ChangesSaved"),
+            strDescription: (0, s.Xx)(
               "#App_Landing_Release_PublishStorePrompt"
             ),
-            strOKButtonText: (0, i.Xx)("#App_Landing_Release_PrepareToPublish"),
+            strOKButtonText: (0, s.Xx)("#App_Landing_Release_PrepareToPublish"),
             onOK: o,
-            strCancelButtonText: (0, i.Xx)("#Button_OK"),
+            strCancelButtonText: (0, s.Xx)("#Button_OK"),
             closeModal: n,
           })
         );
@@ -1163,7 +1194,7 @@
           });
         }
       }
-      (0, h.gn)([V.ak], q.prototype, "OnColorChange", null);
+      (0, _.gn)([V.ak], q.prototype, "OnColorChange", null);
       var j = r(7297);
       function H(e) {
         const { rgGameProfileColorDefs: t } = e,
@@ -1193,7 +1224,7 @@
                         { bDisablePopTop: !0 }
                       );
                     },
-                    i = () => {
+                    s = () => {
                       r(n.current.value);
                     };
                   return a.createElement(
@@ -1203,7 +1234,7 @@
                       ref: n,
                       type: "text",
                       name: `item[profile_colors][${e.strProfileColorKey}]`,
-                      onChange: i,
+                      onChange: s,
                       placeholder: "rgba(255, 255, 255, .5)",
                       size: 20,
                       value: t,
@@ -1226,7 +1257,7 @@
           null,
           a.createElement(
             m.AW,
-            { path: s.GameEdit(`:action(${c.join("|")})`, ":itemid") },
+            { path: l.GameEdit(`:action(${c.join("|")})`, ":itemid") },
             a.createElement(d.d, {
               config: {
                 "storeadmin-releasedateinfo": (e) =>
@@ -1235,7 +1266,7 @@
             })
           ),
           a.createElement(m.AW, {
-            path: s.AppLanding(":appid"),
+            path: l.AppLanding(":appid"),
             render: (e) =>
               a.createElement(d.d, {
                 config: {
@@ -1245,7 +1276,7 @@
               }),
           }),
           a.createElement(m.AW, {
-            path: s.CommunityItems(":appid"),
+            path: l.CommunityItems(":appid"),
             render: (e) =>
               a.createElement(d.d, {
                 config: {

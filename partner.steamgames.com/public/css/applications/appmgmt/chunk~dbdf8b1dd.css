@@ -342,7 +342,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_SubmitButton_2QgFE.newlogindialog_Loading_i9MK3 {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_SubmitButton_2QgFE
@@ -541,7 +541,7 @@
   letter-spacing: 36px;
   font-size: 28px;
   padding: 12px 26px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   border: none;
   outline: none;
   color: #fff;
@@ -577,7 +577,7 @@
   gap: 20px;
   padding: 10px 28px;
   cursor: text;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   position: relative;
 }
 .newlogindialog_Login_ZOBYq
@@ -614,7 +614,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #00000077;
+  background-color: rgba(0, 0, 0, 0.4666666667);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -693,7 +693,7 @@
     .newlogindialog_StandardLayout_286eh
     .newlogindialog_FormContainer_3jLIH {
     min-width: 0px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 .newlogindialog_Login_ZOBYq
@@ -705,7 +705,7 @@
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
   .newlogindialog_FormContainer_3jLIH {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   padding: 24px 0px;
 }
 @media screen and (max-width: 796px) {
@@ -727,7 +727,7 @@
   .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc:not(.IN_CLIENT)
   .newlogindialog_FormContainer_3jLIH {
-  background: #21232880;
+  background: rgba(33, 35, 40, 0.5019607843);
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.IN_CLIENT {

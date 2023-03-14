@@ -30,15 +30,15 @@
 .sharedappdetailsheader_TopCapsule_2meE3
   .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0 {
   opacity: 1 !important;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .sharedappdetailsheader_TopCapsule_2meE3
   .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0:hover {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .sharedappdetailsheader_TopCapsule_2meE3 .AddLinkRegion {
   margin-top: 24px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 .sharedappdetailsheader_TopCapsule_2meE3
   .sharedappdetailsheader_BoxSizerValidRegion_3IAVE {
@@ -235,10 +235,14 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   max-width: none;
   -webkit-mask-image: linear-gradient(
     to bottom,
-    black 80%,
+    rgb(0, 0, 0) 80%,
     rgba(0, 0, 0, 0) 100%
   );
-  mask-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 .BasicUI
   .sharedappdetailsheader_ImgSrc__dije.sharedappdetailsheader_ImgBlurBackdrop_ooM_c,
@@ -252,8 +256,12 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   position: relative;
   transform: scaleY(-1);
   filter: saturate(2);
-  -webkit-mask-image: linear-gradient(to top, black 80%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgb(0, 0, 0) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
 }
 .BasicUI
   .sharedappdetailsheader_ImgSrc__dije.sharedappdetailsheader_ImgBlurBackdrop_ooM_c {
@@ -506,7 +514,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   right: 8px;
   top: 8px;
   padding: 8px;
-  background: #000a;
+  background: rgba(0, 0, 0, 0.6666666667);
   border: 1px solid rgba(59, 127, 238, 0.541);
   color: #3b7fee;
   z-index: 51;
@@ -633,7 +641,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   overflow: visible;
 }
 .sharedappdetailsheader_SVGTitle_2w_Zq text {
-  text-shadow: 1px 1px 10px #000, 0px 0px 22px #0008;
+  text-shadow: 1px 1px 10px #000, 0px 0px 22px rgba(0, 0, 0, 0.5333333333);
   letter-spacing: 1px;
 }
 .BasicUI .sharedappdetailsheader_SVGTitle_2w_Zq text {
@@ -872,7 +880,7 @@ html {
   background: linear-gradient(to top, #24282f 18px, rgba(0, 0, 0, 0) 100%),
     rgba(29, 34, 39, 0.75);
   transition: border-bottom 0.3s;
-  border-bottom: 0px solid #6a6a6a00;
+  border-bottom: 0px solid rgba(106, 106, 106, 0);
   position: relative;
   top: 0;
   z-index: 10;
@@ -1166,8 +1174,12 @@ html {
   background: linear-gradient(to right, #70d61d, #01a75b);
 }
 .fakeappdetailsrow_PlayButton_3MzeF.fakeappdetailsrow_Disabled_o6V6t {
-  background: linear-gradient(to right, #06bfff80, #2d73ff80);
-  color: #ffffff80;
+  background: linear-gradient(
+    to right,
+    rgba(6, 191, 255, 0.5019607843),
+    rgba(45, 115, 255, 0.5019607843)
+  );
+  color: rgba(255, 255, 255, 0.5019607843);
   border: 1px solid #06c1ff;
   padding: 7px;
   padding-top: 3px;
@@ -1201,7 +1213,7 @@ html {
 }
 .fakeappdetailsrow_PlayButton_3MzeF.fakeappdetailsrow_Disabled_o6V6t
   .fakeappdetailsrow_ButtonText_3PV-5 {
-  color: #ffffff80;
+  color: rgba(255, 255, 255, 0.5019607843);
 }
 .fakegamelist_GameList_2Ke99 {
   padding: 0px;
@@ -1229,19 +1241,20 @@ html {
   box-sizing: border-box;
   background: linear-gradient(
     to right,
-    #42444d 0%,
-    #35373f 90%,
+    rgb(66, 68, 77) 0%,
+    rgb(53, 55, 63) 90%,
     rgba(53, 55, 63, 0) 110%
   );
   border-right: 0px solid #202127;
-  box-shadow: 0 0px 2px 0px #0005, 0 0px 16px 0px #0004;
+  box-shadow: 0 0px 2px 0px rgba(0, 0, 0, 0.3333333333),
+    0 0px 16px 0px rgba(0, 0, 0, 0.2666666667);
 }
 .fakegamelist_GameListEntry_14lr0.fakegamelist_Selected_3QI8h.fakegamelist_Updating_yTNHk {
   color: #74d1ff;
   background: linear-gradient(
     to right,
-    #4f5364 0%,
-    #444757 90%,
+    rgb(79, 83, 100) 0%,
+    rgb(68, 71, 87) 90%,
     rgba(69, 73, 88, 0) 110%
   );
 }

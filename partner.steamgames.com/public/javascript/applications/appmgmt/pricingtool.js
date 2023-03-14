@@ -1348,7 +1348,7 @@
                   a.createElement(Ne, Object.assign({}, g))
                 ),
                 cssClass: x().PriceProposalState,
-                width: 150,
+                width: 200,
                 frozen: !0,
                 headerTooltip: (0, E.Xx)(
                   "#PricingDashboard_Column_PriceProposalState_ttip"

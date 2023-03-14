@@ -4,6 +4,8 @@ var g_rgLanguageNames = {"english":"English","german":"German","french":"French"
 function updateArticleSummary( articleSummary ) {
 	$J( '#articleSummaryUrlSlug' ).text( articleSummary.url_slug );
 	$J( '#articleSummaryVisible' ).text( articleSummary.visible ? 'Yes' : 'No' );
+	$J( '#articleSummaryVisible' ).addClass( !articleSummary.visible ? 'Hidden' : '' );
+	$J( '#articleSummaryVisible' ).removeClass( articleSummary.visible ? 'Hidden' : '' );
 	$J( '#articleSummaryMakeVisible span' ).text( articleSummary.visible ? 'Make Hidden' : 'Make Visible' );
 	$J( '#articleSummaryMakeVisible' ).data( 'currentVisibility', articleSummary.visible );
 	$J( '#articleSummaryHideFromToc' ).prop( 'checked', articleSummary.hide_from_toc );

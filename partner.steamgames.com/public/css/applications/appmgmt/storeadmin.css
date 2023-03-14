@@ -70,7 +70,7 @@
   background-image: radial-gradient(
     circle at top left,
     #056890 0%,
-    #143d4d 60%
+    hsl(197, 59%, 19%) 60%
   );
   border-bottom: 1px solid #09b8fe;
   padding: 40px;
@@ -1290,7 +1290,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 .releasedaterequest_PublishNowWarning_2-dra:after {
   top: 100%;
   left: 24%;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: "";
   height: 0;
   width: 0;

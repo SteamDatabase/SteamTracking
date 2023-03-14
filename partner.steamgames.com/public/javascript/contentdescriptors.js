@@ -91,30 +91,40 @@ function FinishSurvey( appid )
 
 function HandleRelatedContentDescriptors( descid, bAnimate )
 {
-	var checkboxDesc = $J( "#descriptor_" + descid );
+	var $elem = $J( "#descriptor_" + descid );
+	var checked = $elem.prop( "checked" ) && !$elem.prop( "disabled" );
+	var $container = $elem.closest( '[data-parentdescid' );
+	var parentDescID = $container.data( 'parentdescid' );
 	var childrenDescriptors = $J( '[data-parentdescid="' + descid + '"]' );
 
-	if ( checkboxDesc.prop( "checked" ) )
+	HandleRelatedTags( descid, bAnimate );
+
+	if ( checked )
 	{
+		// check all ancestors
+		if ( parentDescID )
+		{
+			var $parentElem = $J( '#descriptor_' + parentDescID );
+			$parentElem.prop( 'checked', true );
+			HandleRelatedContentDescriptors( parentDescID, bAnimate );
+		}
+
+		// make sure all related tags for children are handled
 		childrenDescriptors.each( function( ) {
 			var child = $J( this );
-
-			child.animate( { opacity: 'show', height: 'show'}, bAnimate ? 500 : 0 );
-
 			child.find( 'input[type="checkbox"]' ).each( function() {
-				$J( this ).removeAttr( "disabled" );
+				HandleRelatedTags( $J( this ).data( 'descid' ), bAnimate );
 			} );
 		} );
 	}
 	else
 	{
+		// uncheck all children
 		childrenDescriptors.each( function( ) {
 			var child = $J( this );
-
-			child.animate( { opacity: 'hide', height: 'hide'}, bAnimate ? 500 : 0 );
-
 			child.find( 'input[type="checkbox"]' ).each( function() {
-				$J( this ).attr( "disabled", true );
+				$J( this ).prop( 'checked', false );
+				HandleRelatedContentDescriptors( $J( this ).data( 'descid' ), bAnimate );
 			} );
 		} );
 	}
@@ -122,9 +132,10 @@ function HandleRelatedContentDescriptors( descid, bAnimate )
 
 function HandleRelatedTags( descid, bAnimate )
 {
-	var checkboxDesc = $J( "#descriptor_" + descid );
+	var $elem = $J( "#descriptor_" + descid );
+	var checked = $elem.prop( "checked" ) && !$elem.attr( "disabled" );
 	var elemTags = $J( "#related_tags_" + descid );
-	if ( checkboxDesc.prop( "checked" ) )
+	if ( checked )
 	{
 		elemTags.animate( { opacity: 'show', height: 'show'}, bAnimate ? 500 : 0 );
 		elemTags.find( 'input[type="checkbox"]' ).each( function() {

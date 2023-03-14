@@ -212,7 +212,7 @@ a {
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-  box-shadow: 4px 4px 4px #00000044;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2666666667);
   transition-property: transform, filter;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
@@ -538,7 +538,7 @@ a {
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-  box-shadow: 4px 4px 4px #00000044;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2666666667);
   transition-property: transform, filter;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
@@ -1071,7 +1071,7 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 2px;
   padding: 4px;
 }

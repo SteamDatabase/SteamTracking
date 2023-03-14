@@ -15,7 +15,7 @@
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
-  background-color: #3b5a7280;
+  background-color: rgba(59, 90, 114, 0.5019607843);
   align-items: center;
   transition: background-color 0.2s ease;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
 }
 .deckverified_BannerContentDesktop_2qr1f:focus-within,
 .deckverified_BannerContent_1B2KF:focus-within {
-  background-color: #678ba670;
+  background-color: rgba(103, 139, 166, 0.4392156863);
 }
 .deckverified_BannerContentDesktop_2qr1f {
   background: linear-gradient(

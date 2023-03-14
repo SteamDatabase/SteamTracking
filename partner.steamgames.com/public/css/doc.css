@@ -193,6 +193,16 @@ td {
 	flex-grow: 1;
 }
 
+#articleSummaryVisible.Hidden {
+    color: red;
+    font-weight: bold;
+}
+
+.ArticleVisibilityCtn {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
 .docPageTitle {
 	font-size: 34px;
 	color: #e6e6e6;

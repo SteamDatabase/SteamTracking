@@ -70,6 +70,26 @@
         ChordSummary: "footericons_ChordSummary_2sFpI",
       };
     },
+    88735: (e, t, r) => {
+      "use strict";
+      r.d(t, { sC: () => i });
+      var l = r(89526),
+        n = (r(82633), r(13806)),
+        o = r(86701),
+        a = r(55310);
+      r(31587), r(70983);
+      const i = (e) => {
+          const t = ((r = e.category), c[r] || o.z5E);
+          var r;
+          return l.createElement(
+            "div",
+            { className: (0, n.Z)(a.SteamDeckCompatInfo, e.className) },
+            l.createElement(o.j7C, null),
+            l.createElement(t, { className: a.SteamDeckCompatIcon })
+          );
+        },
+        c = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
+    },
     81084: (e, t, r) => {
       "use strict";
       r.d(t, { X: () => l });
@@ -87,17 +107,19 @@
     },
     83883: (e, t, r) => {
       "use strict";
-      r.d(t, { Rd: () => N, _R: () => R, Ws: () => _ });
+      r.d(t, { Rd: () => y, _R: () => R, Ws: () => M });
       var l = r(89526),
         n = (r(38800), r(49194)),
-        o = (r(82633), r(68620), r(33940)),
-        a = r(52868),
-        i = r.n(a),
-        c = (r(6960), r(96158), r(47330)),
-        s = r(23213),
-        C = r(31621),
-        u = r(70983);
-      class m {
+        o = (r(49920), r(23907)),
+        a = (r(14258), r(173), r(84042), r(88735)),
+        i = (r(81084), r(82633), r(68620), r(82702), r(54997), r(33940)),
+        c = r(52868),
+        s = r.n(c),
+        C = (r(6960), r(96158), r(47330)),
+        u = r(23213),
+        m = r(31621),
+        d = r(70983);
+      class p {
         constructor() {
           if (
             ((this.m_mapAppResults = new Map()),
@@ -105,10 +127,10 @@
             (this.m_mapAppResultsPromises = new Map()),
             document.getElementById("application_config"))
           ) {
-            let e = (0, u.kQ)("deckcompatibility", "application_config");
-            m.ValidateCompatabilityResult(e) &&
+            let e = (0, d.kQ)("deckcompatibility", "application_config");
+            p.ValidateCompatabilityResult(e) &&
               (this.AddCompatabilityResult(e),
-              "dev" == u.De.WEB_UNIVERSE &&
+              "dev" == d.De.WEB_UNIVERSE &&
                 console.log(
                   "CDeckCompatibilityDetailsStore compatability loaded: ",
                   e
@@ -124,7 +146,7 @@
         GetCallbackForAppList(e) {
           return (
             this.m_mapAppCallbackList.has(e) ||
-              this.m_mapAppCallbackList.set(e, new s.pB()),
+              this.m_mapAppCallbackList.set(e, new u.pB()),
             this.m_mapAppCallbackList.get(e)
           );
         }
@@ -133,7 +155,7 @@
             this.GetCallbackForAppList(e.appid).Dispatch(e);
         }
         LoadAppCompabitilityResult(e) {
-          return (0, o.mG)(this, void 0, void 0, function* () {
+          return (0, i.mG)(this, void 0, void 0, function* () {
             return (
               !!this.m_mapAppResults.has(e) ||
               (this.m_mapAppResultsPromises.has(e) ||
@@ -147,14 +169,14 @@
         }
         InternalLoadAppCompatability(e) {
           var t, r;
-          return (0, o.mG)(this, void 0, void 0, function* () {
+          return (0, i.mG)(this, void 0, void 0, function* () {
             let l = null;
             try {
-              const n = { nAppID: e, l: u.De.LANGUAGE, cc: u.De.COUNTRY };
+              const n = { nAppID: e, l: d.De.LANGUAGE, cc: d.De.COUNTRY };
               let o =
-                u.De.STORE_BASE_URL +
+                d.De.STORE_BASE_URL +
                 "saleaction/ajaxgetdeckappcompatibilityreport";
-              const a = yield i().get(o, { params: n, withCredentials: !0 });
+              const a = yield s().get(o, { params: n, withCredentials: !0 });
               if (
                 200 == (null == a ? void 0 : a.status) &&
                 1 ==
@@ -164,9 +186,9 @@
                 (null === (r = a.data) || void 0 === r ? void 0 : r.results)
               )
                 return this.AddCompatabilityResult(a.data.results), !0;
-              l = (0, c.l)(a);
+              l = (0, C.l)(a);
             } catch (e) {
-              l = (0, c.l)(e);
+              l = (0, C.l)(e);
             }
             return (
               console.error(
@@ -180,11 +202,11 @@
         }
         static Get() {
           return (
-            m.s_Singleton ||
-              ((m.s_Singleton = new m()),
-              ("dev" != u.De.WEB_UNIVERSE && "beta" != u.De.WEB_UNIVERSE) ||
-                (window.g_DeckVerifiedDetailStores = m.s_Singleton)),
-            m.s_Singleton
+            p.s_Singleton ||
+              ((p.s_Singleton = new p()),
+              ("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
+                (window.g_DeckVerifiedDetailStores = p.s_Singleton)),
+            p.s_Singleton
           );
         }
         static ValidateCompatabilityResult(e) {
@@ -197,92 +219,103 @@
           );
         }
       }
-      (0, o.gn)([C.ak], m.prototype, "LoadAppCompabitilityResult", null);
-      var d = r(7008),
-        p = r(31587),
-        g = r(23907),
-        f = (r(49920), r(84042), r(173), r(14258), r(13806)),
-        H = r(37664),
-        v = r.n(H),
-        w = r(24868),
-        h = r(81052),
-        L = r(32448),
-        V = r(77449),
-        k = r(15642),
-        E = r(86701),
-        b = (r(54997), r(81084), r(82235));
-      function _(e) {
-        const { nAppID: t } = e;
+      (0, i.gn)([m.ak], p.prototype, "LoadAppCompabitilityResult", null);
+      r(84413);
+      var g = r(77449),
+        f = r(7008),
+        H = r(86701),
+        v = r(82235),
+        w = r(15642),
+        h = r(13806),
+        L = r(81052),
+        V = r(31587),
+        E = r(32448),
+        k = r(37664),
+        b = r.n(k),
+        _ = r(24868);
+      function M(e) {
+        var t;
+        const { storeItem: r } = e;
+        if (0 !== r.GetStoreItemType()) return null;
+        const o =
+          (null === (t = r.GetPlatforms()) || void 0 === t
+            ? void 0
+            : t.steam_deck_compat_category) || 0;
         return l.createElement(
           "div",
-          { className: (0, f.Z)(v().LearnMoreCtn, "LearnMoreCtn") },
+          { className: (0, h.Z)(b().LearnMoreCtn, "LearnMoreCtn") },
+          l.createElement(a.sC, { category: o }),
           l.createElement(
             n.IS,
             {
-              onClick: (e) =>
-                (function (e, t) {
-                  (0, w.AM)(l.createElement(M, { nAppID: t }), e);
-                })((0, h.RA)(e), t),
+              onClick: (e) => {
+                return (
+                  (t = (0, L.RA)(e)),
+                  (n = r.GetAppID()),
+                  void (0, _.AM)(l.createElement(N, { nAppID: n }), t)
+                );
+                var t, n;
+              },
             },
             l.createElement(
               "span",
-              { className: v().LearnMorePC },
-              (0, p.Xx)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop")
+              { className: b().LearnMorePC },
+              (0, V.Xx)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop")
             )
           )
         );
       }
-      function M(e) {
+      function N(e) {
         const { nAppID: t, closeModal: r } = e,
           n = (function (e) {
-            const [t, r] = l.useState(m.Get().GetCompatabilityResultForApp(e));
+            const [t, r] = l.useState(p.Get().GetCompatabilityResultForApp(e));
             return (
-              (0, C.Qg)(m.Get().GetCallbackForAppList(e), r),
+              (0, m.Qg)(p.Get().GetCallbackForAppList(e), r),
               l.useEffect(() => {
-                m.Get().BHasCompatabilityResultForApp(e) ||
-                  m
+                p.Get().BHasCompatabilityResultForApp(e) ||
+                  p
                     .Get()
                     .LoadAppCompabitilityResult(e)
-                    .then(() => r(m.Get().GetCompatabilityResultForApp(e)));
+                    .then(() => r(p.Get().GetCompatabilityResultForApp(e)));
               }, [e]),
               t
             );
           })(t);
         return l.createElement(
-          d.RG,
+          f.RG,
           {
             modalClassName: "DeckVerifiedModalDialog",
             closeModal: r,
             onCancel: r,
           },
           l.createElement(
-            V.uT,
+            g.uT,
             null,
             l.createElement(
-              g.s,
+              o.s,
               { focusable: !1, "flow-children": "column" },
               Boolean(n)
-                ? l.createElement(b.default, { results: n })
-                : l.createElement(k.V, {
+                ? l.createElement(v.default, { results: n })
+                : l.createElement(w.V, {
                     size: "medium",
                     position: "center",
-                    string: (0, p.Xx)("#Loading"),
+                    string: (0, V.Xx)("#Loading"),
                   })
             )
           )
         );
       }
-      function N(e) {
+      function y(e) {
         const { category: t } = e;
         switch (t) {
           case 3:
-            return l.createElement(E.YVI, { className: v().CategoryIcon });
+            return l.createElement(H.YVI, { className: b().CategoryIcon });
           case 2:
-            return l.createElement(E.KKY, { className: v().CategoryIcon });
+            return l.createElement(H.KKY, { className: b().CategoryIcon });
           case 1:
-            return l.createElement(E.vyu, { className: v().CategoryIcon });
+            return l.createElement(H.vyu, { className: b().CategoryIcon });
           case 0:
-            return l.createElement(E.z5E, { className: v().CategoryIcon });
+            return l.createElement(H.z5E, { className: b().CategoryIcon });
         }
       }
       function R(e) {
@@ -290,50 +323,50 @@
         if (0 == t)
           return l.createElement(
             "div",
-            { className: v().CompatibilityDetailRatingSummary },
+            { className: b().CompatibilityDetailRatingSummary },
             r
-              ? (0, p.kQ)(
+              ? (0, V.kQ)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                  l.createElement("b", null, (0, L.HA)(r))
+                  l.createElement("b", null, (0, E.HA)(r))
                 )
-              : (0, p.Xx)("#SteamDeckVerified_DescriptionHeader_Unknown")
+              : (0, V.Xx)("#SteamDeckVerified_DescriptionHeader_Unknown")
           );
         let o = "",
           a = null;
         switch (t) {
           case 3:
             (o = "#SteamDeckVerified_DescriptionHeader_Verified"),
-              (a = v().Verified);
+              (a = b().Verified);
             break;
           case 2:
             (o = "#SteamDeckVerified_DescriptionHeader_Playable"),
-              (a = v().Playable);
+              (a = b().Playable);
             break;
           case 1:
             (o = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
-              (a = v().Unsupported);
+              (a = b().Unsupported);
         }
-        const i = l.createElement("span", { className: a }, (0, p.Xx)(y(t))),
+        const i = l.createElement("span", { className: a }, (0, V.Xx)(Z(t))),
           c = l.createElement(
             "span",
-            { className: v().CompatibilityDetailRatingSummary },
-            (0, p.Xx)(n || o)
+            { className: b().CompatibilityDetailRatingSummary },
+            (0, V.Xx)(n || o)
           ),
           s = r
-            ? (0, p.kQ)(
+            ? (0, V.kQ)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                l.createElement("b", null, (0, L.HA)(r)),
+                l.createElement("b", null, (0, E.HA)(r)),
                 i,
                 c
               )
-            : (0, p.kQ)("#SteamDeckVerified_DescriptionHeader", i, c);
+            : (0, V.kQ)("#SteamDeckVerified_DescriptionHeader", i, c);
         return l.createElement(
           "div",
-          { className: v().CompatibilityDetailRatingSummary },
+          { className: b().CompatibilityDetailRatingSummary },
           s
         );
       }
-      function y(e) {
+      function Z(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -560,7 +593,7 @@
         h = r(70424),
         L = r.n(h),
         V = r(13806);
-      function k(e) {
+      function E(e) {
         switch (e) {
           case w.Small:
             return L().SizeSmall;
@@ -572,7 +605,7 @@
             return L().SizeMedium;
         }
       }
-      function E(e) {
+      function k(e) {
         switch (e) {
           case v.Knockout:
             return L().Knockout;
@@ -586,8 +619,8 @@
       }
       function b(e) {
         const t = (0, V.Z)(
-            null != e.size ? k(e.size) : k(w.Medium),
-            null != e.type ? E(e.type) : E(v.Light),
+            null != e.size ? E(e.size) : E(w.Medium),
+            null != e.type ? k(e.type) : k(v.Light),
             e.additionalClassName
           ),
           r = e.type == v.Knockout;
@@ -599,13 +632,13 @@
           case l.X:
             return n.createElement(N, { bIsKnockout: r, className: t });
           case l.Y:
-            return n.createElement(R, { bIsKnockout: r, className: t });
+            return n.createElement(y, { bIsKnockout: r, className: t });
           case l.Left:
             return n.createElement(D, { bIsKnockout: r, className: t });
           case l.Right:
             return n.createElement(x, { bIsKnockout: r, className: t });
           case l.Up:
-            return n.createElement(y, { bIsKnockout: r, className: t });
+            return n.createElement(R, { bIsKnockout: r, className: t });
           case l.Down:
             return n.createElement(Z, { bIsKnockout: r, className: t });
           case l.HomeMenu:
@@ -641,11 +674,11 @@
           case l.RightTrackpadClick:
             return n.createElement($, { bIsKnockout: r, className: t });
           case l.RearLeftUpper:
-            return n.createElement(X, { bIsKnockout: r, className: t });
+            return n.createElement(Y, { bIsKnockout: r, className: t });
           case l.RearRightUpper:
             return n.createElement(z, { bIsKnockout: r, className: t });
           case l.RearLeftLower:
-            return n.createElement(Y, { bIsKnockout: r, className: t });
+            return n.createElement(X, { bIsKnockout: r, className: t });
           case l.RearRightLower:
             return n.createElement(Q, { bIsKnockout: r, className: t });
           default:
@@ -787,7 +820,7 @@
               })
             );
       }
-      function R(e) {
+      function y(e) {
         var { bIsKnockout: t } = e,
           r = (0, m._T)(e, ["bIsKnockout"]);
         return t
@@ -832,7 +865,7 @@
               })
             );
       }
-      function y(e) {
+      function R(e) {
         var { bIsKnockout: t } = e,
           r = (0, m._T)(e, ["bIsKnockout"]);
         return t
@@ -1688,7 +1721,7 @@
               })
             );
       }
-      function X(e) {
+      function Y(e) {
         var { bIsKnockout: t } = e,
           r = (0, m._T)(e, ["bIsKnockout"]);
         return t
@@ -1736,7 +1769,7 @@
               })
             );
       }
-      function Y(e) {
+      function X(e) {
         var { bIsKnockout: t } = e,
           r = (0, m._T)(e, ["bIsKnockout"]);
         return t

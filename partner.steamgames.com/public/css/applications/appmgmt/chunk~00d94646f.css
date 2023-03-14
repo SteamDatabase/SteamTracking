@@ -15,7 +15,7 @@
   right: 0;
   background: #2c3036;
   padding: 12px 0px 12px 12px;
-  box-shadow: 0 0 32px 0px #000000ab;
+  box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.6705882353);
   overflow-y: auto;
   overflow-x: hidden;
   white-space: nowrap;
@@ -105,7 +105,7 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 4px solid transparent;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
   padding: 2px 2px;
   cursor: pointer;
 }
@@ -479,18 +479,18 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   box-shadow: inset 0px 0px 4px #000;
   outline-width: 0px;
   color: #aaa;
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   padding-right: 2px;
 }
 .chatentry_chatTextarea_pewyB {
   resize: none;
   margin-right: 4px;
   height: 42px;
-  background-color: transparent;
-  box-shadow: inset 0px 0px 4px transparent;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
   outline-width: 0px;
   color: #aaa;
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -763,8 +763,8 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   margin: 0;
   width: 100%;
   height: 100%;
-  border: 0px solid transparent;
-  background-color: transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   max-width: 44px;
   min-width: 0;
 }
@@ -816,7 +816,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
   background: radial-gradient(
     128px 128px at 20% 50%,
-    #1da834 0%,
+    rgb(29, 168, 52) 0%,
     rgba(27, 28, 32, 0) 100%
   );
   background-position: -190px 0px;
@@ -837,7 +837,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .ChatMessageEntryVoice.Disabled {
   opacity: 0.2;
   border: 1px dashed #000;
-  outline: 2px solid #0007;
+  outline: 2px solid rgba(0, 0, 0, 0.4666666667);
 }
 .ChatMessageEntryVoice.Active {
   min-width: 136px;
@@ -855,7 +855,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   width: 87px;
   text-align: center;
   color: #74c069;
-  background-color: #0005;
+  background-color: rgba(0, 0, 0, 0.3333333333);
   font-size: 10px;
   margin-top: 0px;
 }
@@ -877,8 +877,8 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .ChatMessageEntryVoice .activeVoiceControls {
   min-width: 0px;
   width: 84px;
-  border-top: 0px solid transparent;
-  border-bottom: 0px solid transparent;
+  border-top: 0px solid rgba(0, 0, 0, 0);
+  border-bottom: 0px solid rgba(0, 0, 0, 0);
   background: none;
 }
 .ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
@@ -1030,7 +1030,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   width: 66px;
   text-align: center;
   color: #74c069;
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
 }
 .reorderablelist_WhitelistNumber_1ZU2Q {
   width: 30px;
@@ -1080,7 +1080,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   background-image: radial-gradient(
     circle at top left,
     #056890 0%,
-    #143d4d 60%
+    hsl(197, 59%, 19%) 60%
   );
   border-bottom: 1px solid #09b8fe;
   padding: 40px;
@@ -2146,7 +2146,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1Ysh1 {
 .eventreminder_ReminderDialog_2S_bd.eventreminder_ReminderOptions_P5dFj {
   width: 300px;
   padding: 0px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   border-left: none;
 }
 .eventreminder_ReminderBackground_GDF1p {
@@ -2467,6 +2467,9 @@ html:not(.touch)
   display: inline;
   font-style: italic;
 }
+p.bbcodes_Paragraph_3zjkn {
+  margin: 0.5em 0;
+}
 .bbcodes_Header1_38GFQ {
   display: block;
   color: #fff;
@@ -2739,7 +2742,7 @@ a.bbcodes_LinkButton_lMVeY:hover {
 .presenterpopup_SpeakerPopup_ntY3G {
   font-size: 14px;
   background-color: #383e47;
-  box-shadow: 0 0 12px #00000066;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border: 1px solid #404754;
   border-radius: 2px;
   padding: 8px;
@@ -2802,7 +2805,7 @@ a.bbcodes_LinkButton_lMVeY:hover {
   filter: blur(5px);
 }
 .bbcodeeditor_DescriptionCtn_3uiaP {
-  border: 2px solid transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   margin: -2px;
 }
 .bbcodeeditor_DescriptionCtn_3uiaP.bbcodeeditor_DragTarget_2Mg-b {
@@ -2819,12 +2822,12 @@ a.bbcodes_LinkButton_lMVeY:hover {
   color: #dfe3e6;
   background: rgba(59, 63, 72, 0.5);
   border: none;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
 }
 .bbcodeeditor_EventEditorLinkInput_2tulF input:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 11px;
   outline: none;
 }
@@ -2910,12 +2913,12 @@ a.bbcodes_LinkButton_lMVeY:hover {
   color: #dfe3e6;
   background: rgba(59, 63, 72, 0.5);
   border: none;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
 }
 .bbcodeeditor_YouTubeInput_20wVy input[type="text"]:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 11px;
   outline: none;
 }
@@ -3685,7 +3688,7 @@ img {
 ::-webkit-scrollbar {
   height: 12px;
   width: 14px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   z-index: 12;
   overflow: visible;
 }
@@ -3709,7 +3712,7 @@ img {
 }
 ::selection {
   background: #54a5d4;
-  text-shadow: 1px 1px 2px #000000aa;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6666666667);
   color: #fff;
 }
 .shared_common_SubText_3Ctn8 {
@@ -3808,14 +3811,14 @@ img {
   padding: 4px;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   transition-property: background, box-shadow, padding-left;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 .shared_common_SummaryTextArea_2xqdR:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 6px;
   outline: none;
 }

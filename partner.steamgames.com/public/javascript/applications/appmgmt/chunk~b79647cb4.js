@@ -415,8 +415,8 @@
         s = n(36105),
         o = n.n(s),
         i = n(89526),
-        d = n(38800),
-        l = n(66715),
+        l = n(38800),
+        d = n(66715),
         _ = n(70983);
       class p {
         constructor() {
@@ -428,10 +428,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return _.De.EREALM != d.IN.k_ESteamRealmChina;
+          return _.De.EREALM != l.IN.k_ESteamRealmChina;
         }
         get bIsCuratorsEnabled() {
-          return _.De.EREALM != d.IN.k_ESteamRealmChina;
+          return _.De.EREALM != l.IN.k_ESteamRealmChina;
         }
         get bIncludeCurators() {
           return !0;
@@ -472,7 +472,7 @@
       const v = new p();
       function c(e = 1) {
         const [t, n] = i.useState(() => m()),
-          r = (0, l.T)("useTimeNowWithOverride"),
+          r = (0, d.T)("useTimeNowWithOverride"),
           a = i.useCallback(() => {
             r.token.reason || n(m());
           }, []);
@@ -503,37 +503,6 @@
         return i.useMemo(() => j(), []);
       }
     },
-    25659: (e, t, n) => {
-      "use strict";
-      n.d(t, { M: () => o, y: () => s });
-      var r = n(31587),
-        a = n(5055);
-      function s(e) {
-        return o(
-          e.coming_soon_display,
-          e.steam_release_date,
-          e.custom_release_date_message
-        );
-      }
-      function o(e, t, n) {
-        switch (e) {
-          case "date_full":
-            return (0, r.vX)(t);
-          case "date_month":
-            return (0, a.LO)(new Date(1e3 * t));
-          case "date_quarter":
-            return (0, a.Kb)(new Date(1e3 * t));
-          case "date_year":
-            return (0, a.Np)(new Date(1e3 * t));
-          case "text_comingsoon":
-            return n || (0, r.Xx)("#Store_ComingSoon_ComingSoon");
-          case "text_tba":
-            return n || (0, r.Xx)("#Store_ComingSoon_TBA");
-          default:
-            return "";
-        }
-      }
-    },
     66715: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o });
@@ -554,18 +523,21 @@
     98197: (e, t, n) => {
       "use strict";
       n.d(t, {
-        FM: () => s,
-        OL: () => p,
+        FM: () => o,
+        H7: () => s,
+        OL: () => v,
         Pm: () => d,
-        XW: () => o,
-        dK: () => _,
-        et: () => l,
-        iv: () => c,
-        md: () => v,
+        XW: () => i,
+        dK: () => p,
+        et: () => _,
+        iv: () => h,
+        md: () => c,
       });
       var r = n(70983),
         a = (n(38800), n(31587));
-      function s(e) {
+      const s =
+        /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
+      function o(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
             "im"
@@ -573,15 +545,15 @@
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
       }
-      function o(e) {
-        let t = s(e);
+      function i(e) {
+        let t = o(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      const i = /^(steam|ftp|https?):\/\//;
+      const l = /^(steam|ftp|https?):\/\//;
       function d(e) {
-        return i.test(e) ? e : "https://" + e;
+        return l.test(e) ? e : "https://" + e;
       }
-      function l(e) {
+      function _(e) {
         return e
           ? 1 != r.De.EUNIVERSE
             ? e
@@ -632,15 +604,15 @@
               )))
           : e;
       }
-      function _(e) {
+      function p(e) {
         if (!e) return !0;
-        const t = s(e).toLocaleLowerCase();
+        const t = o(e).toLocaleLowerCase();
         return (
           [
-            s(r.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            s(r.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            s(r.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            s(r.De.STORE_CDN_URL).toLocaleLowerCase(),
+            o(r.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            o(r.De.MEDIA_CDN_URL).toLocaleLowerCase(),
+            o(r.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            o(r.De.STORE_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -648,7 +620,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function p(e) {
+      function v(e) {
         return r.De.SNR &&
           r.De.SNR.length > 0 &&
           e &&
@@ -656,7 +628,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + r.De.SNR
           : e;
       }
-      function v(e, t) {
+      function c(e, t) {
         try {
           const n = new URL(t),
             r = new URL(e);
@@ -665,7 +637,7 @@
           return "";
         }
       }
-      function c() {
+      function h() {
         return `${r.De.HELP_BASE_URL}${(0, a.CE)()}/`;
       }
     },

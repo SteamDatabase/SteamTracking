@@ -516,7 +516,7 @@
   .steamml_Value_3RWed {
   flex-grow: 1;
   height: 22px;
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   background-color: #1a1a1a;
   outline: none;
   color: #fff;
