@@ -42611,6 +42611,59 @@
       (0, i.gn)([m.ak], h.prototype, "OnCrop", null),
         (0, i.gn)([m.ak], h.prototype, "UpdateCrop", null);
     },
+    5052: (e, t, r) => {
+      "use strict";
+      r.d(t, { K: () => a });
+      var i = r(54905),
+        n = r.n(i);
+      class a {
+        static ParseCSVFile(e) {
+          return new Promise((t, r) => {
+            const i = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: t,
+              error: (e) => r({ errors: [e] }),
+            };
+            n().parse(e, i);
+          });
+        }
+        static ReadFile(e) {
+          return new Promise((t, r) => {
+            const i = new FileReader();
+            (i.onload = (e) => t(i.result)), i.readAsText(e);
+          });
+        }
+        static WriteFile(e, t) {
+          let r = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
+          else {
+            const t = window.URL.createObjectURL(e);
+            r.href = t;
+          }
+          r.setAttribute("download", t), r.click();
+          try {
+            document.removeChild(r);
+          } catch (e) {}
+        }
+        static WriteCSVToFile(e, t) {
+          const r = n().unparse(e, { header: !0 });
+          a.WriteFile(new Blob([r], { type: "text/csv:charset=utf-8;" }), t);
+        }
+        static WriteXMLToFile(e, t) {
+          const r = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let i =
+            "<" + r() + 'xml version="1.0" encoding="UTF-8" ' + r() + ">\n";
+          (i += new XMLSerializer().serializeToString(e)),
+            a.WriteFile(
+              new Blob([i], { type: "application/xml:charset=utf-8;" }),
+              t
+            );
+        }
+      }
+      a.m_DummyValueForQuestionHack = 0;
+    },
     81171: (e, t, r) => {
       "use strict";
       r.d(t, { AV: () => a, l: () => n });

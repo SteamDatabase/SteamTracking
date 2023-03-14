@@ -4402,7 +4402,7 @@
     },
     65368: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { CategoryEditorComponent: () => f, default: () => w });
+      a.r(t), a.d(t, { CategoryEditorComponent: () => I, default: () => A });
       var n = a(71016),
         o = a(18987),
         s = a(89526),
@@ -4421,9 +4421,9 @@
         v = a(48091),
         C = a(22021),
         E = a.n(C),
-        y = a(30185);
-      a(73107);
-      function w() {
+        y = a(30185),
+        w = (a(73107), a(5052));
+      function A() {
         const [e, t] = s.useState(),
           [a, o] = s.useState(!1),
           [r, i] = s.useState(!1),
@@ -4467,7 +4467,7 @@
                     { className: E().UnpublishedChangesNotice },
                     "You have unpublished changes. Click Publish below to publish and make them available to users."
                   ),
-                s.createElement(A, { categories: e, onUpdate: () => i(!0) }),
+                s.createElement(b, { categories: e, onUpdate: () => i(!0) }),
                 s.createElement(
                   "div",
                   { className: E().ActionButtonCtn },
@@ -4476,7 +4476,7 @@
                     {
                       onClick: () =>
                         (0, d.AM)(
-                          s.createElement(G, {
+                          s.createElement(B, {
                             onImport: (e) => {
                               t(e), i(!0);
                             },
@@ -4491,7 +4491,7 @@
                     {
                       onClick: () =>
                         (0, d.AM)(
-                          s.createElement(B, {
+                          s.createElement(N, {
                             categories: e,
                             onSave: () => {
                               i(!1), u(!0);
@@ -4514,7 +4514,7 @@
                     {
                       onClick: () =>
                         (0, d.AM)(
-                          s.createElement(N, { onPublish: () => u(!1) }),
+                          s.createElement(R, { onPublish: () => u(!1) }),
                           window
                         ),
                     },
@@ -4525,7 +4525,7 @@
             : s.createElement(g.V, { size: "medium", position: "center" })
         );
       }
-      function A(e) {
+      function b(e) {
         const { categories: t, onUpdate: a } = e;
         if (!t) return s.createElement("div", null, "No categories defined.");
         return s.createElement(
@@ -4552,7 +4552,7 @@
                           e.preventDefault(),
                             e.stopPropagation(),
                             (0, d.AM)(
-                              s.createElement(b, { category: t, onUpdate: a }),
+                              s.createElement(f, { category: t, onUpdate: a }),
                               window
                             );
                         })(t, e),
@@ -4573,7 +4573,7 @@
           )
         );
       }
-      function b(e) {
+      function f(e) {
         const { category: t, onUpdate: a, closeModal: n } = e,
           o = (0, h.NW)();
         return s.createElement(
@@ -4631,7 +4631,7 @@
                 },
               }),
               ("tagids" === t.type || "category" === t.type) &&
-                s.createElement(f, { category: t })
+                s.createElement(I, { category: t })
             )
           ),
           s.createElement(
@@ -4649,7 +4649,7 @@
           )
         );
       }
-      function f(e) {
+      function I(e) {
         const { category: t } = e,
           [a, n] = (0, s.useState)(!1),
           [o, r] = (0, s.useState)(0);
@@ -4659,17 +4659,17 @@
           s.createElement(
             "div",
             { className: E().Category },
-            s.createElement(D, {
+            s.createElement(G, {
               category: t,
               list: "must",
               title: "Must have all of",
             }),
-            s.createElement(D, {
+            s.createElement(G, {
               category: t,
               list: "any",
               title: "Must have any of",
             }),
-            s.createElement(D, {
+            s.createElement(G, {
               category: t,
               list: "mustnot",
               title: "Must not have any of",
@@ -4684,7 +4684,7 @@
                   { onClick: () => r(o + 1) },
                   "Refresh Stats"
                 ),
-                s.createElement(I, { category: t })
+                s.createElement(T, { category: t })
               )
             : s.createElement(m.ji, {
                 checked: a,
@@ -4694,7 +4694,7 @@
               })
         );
       }
-      function I(e) {
+      function T(e) {
         var t;
         const { category: a } = e,
           n = (0, o.LV)(a.must, a.any, a.mustnot);
@@ -4706,45 +4706,64 @@
           });
         const r = n.total_games > v.t9 && n.total_games <= v.DL;
         return s.createElement(
-          "div",
-          { className: y.ThemeRow },
+          s.Fragment,
+          null,
           s.createElement(
-            "div",
-            { className: y.ThemeDefinitionCtn },
-            s.createElement("h3", null, "Sales Stats:"),
-            s.createElement(v.hW, { nTotalGames: n.total_games }),
-            Boolean(r) && s.createElement(T, { category: a })
+            m.zx,
+            {
+              onClick: () => {
+                const e = [];
+                e.push(["AppID", "Sale Rank"]),
+                  n.top_games.forEach((t) => {
+                    e.push(["" + t.appid, "" + t.long_term_sale_rank]);
+                  });
+                const t = (a.handle || "top100").replace(" ", "_") + ".csv";
+                w.K.WriteCSVToFile(e, t);
+              },
+            },
+            "Download Top 100 Games"
           ),
           s.createElement(
             "div",
-            { className: y.TopGamesCtn },
-            s.createElement("div", null, "Top 5 Games non-F2P:"),
+            { className: y.ThemeRow },
             s.createElement(
               "div",
-              { className: y.GamesRow },
-              null === (t = n.top_games) || void 0 === t
-                ? void 0
-                : t
-                    .slice(0, 5)
-                    .map((e) =>
-                      s.createElement(v.vI, {
-                        key: e.appid,
-                        info: e,
-                        category: a,
-                        bSaleSummary: r,
-                      })
-                    )
+              { className: y.ThemeDefinitionCtn },
+              s.createElement("h3", null, "Sales Stats:"),
+              s.createElement(v.hW, { nTotalGames: n.total_games }),
+              Boolean(r) && s.createElement(D, { category: a })
+            ),
+            s.createElement(
+              "div",
+              { className: y.TopGamesCtn },
+              s.createElement("div", null, "Top 5 Games non-F2P:"),
+              s.createElement(
+                "div",
+                { className: y.GamesRow },
+                null === (t = n.top_games) || void 0 === t
+                  ? void 0
+                  : t
+                      .slice(0, 5)
+                      .map((e) =>
+                        s.createElement(v.vI, {
+                          key: e.appid,
+                          info: e,
+                          category: a,
+                          bSaleSummary: r,
+                        })
+                      )
+              )
             )
           )
         );
       }
-      function T(e) {
+      function D(e) {
         const { category: t } = e,
           a = (0, o.U0)(t.must, t.any, t.mustnot),
           n = (0, o.qx)(t.must, t.any, t.mustnot);
         return s.createElement(v.kt, { saleSummary: a, topAppSummary: n });
       }
-      function D(e) {
+      function G(e) {
         const { category: t, list: a, title: o } = e,
           { rgTags: i, rgCategories: l } = (0, n.bA)(),
           c = (0, h.NW)(),
@@ -4818,7 +4837,7 @@
           )
         );
       }
-      function G(e) {
+      function B(e) {
         const { onImport: t, closeModal: a } = e;
         return (
           s.useEffect(() => {
@@ -4841,7 +4860,7 @@
           )
         );
       }
-      function B(e) {
+      function N(e) {
         const { categories: t, onSave: a, closeModal: o } = e,
           [r, i] = s.useState();
         return (
@@ -4865,7 +4884,7 @@
           )
         );
       }
-      function N(e) {
+      function R(e) {
         const { onPublish: t, closeModal: a } = e,
           [o, r] = s.useState(!1),
           [i, l] = s.useState();

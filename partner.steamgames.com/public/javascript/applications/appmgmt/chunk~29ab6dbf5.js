@@ -72,7 +72,7 @@
         ik: () => u,
         pA: () => b,
         rf: () => I,
-        u2: () => w,
+        u2: () => R,
         vc: () => _,
         xQ: () => a,
       });
@@ -1639,7 +1639,7 @@
           return "CPartnerMembershipInvite_GetInvites_Response";
         }
       }
-      var w, R;
+      var R, w;
       !(function (e) {
         (e.GetSinglePartnerAppOptIn = function (e, t) {
           return e.SendMsg("Publishing.GetSinglePartnerAppOptIn#1", t, k, {
@@ -1702,7 +1702,7 @@
               ePrivilege: 1,
             });
           });
-      })(w || (w = {})),
+      })(R || (R = {})),
         (function (e) {
           e.GetInvites = function (e, t) {
             return e.SendMsg("PartnerMembershipInvite.GetInvites#1", t, B, {
@@ -1710,7 +1710,7 @@
               ePrivilege: 11,
             });
           };
-        })(R || (R = {}));
+        })(w || (w = {}));
     },
     93523: (e, t, i) => {
       "use strict";
@@ -1942,59 +1942,6 @@
         r.OT.BIsInitialized() ||
           r.OT.Initialize(new a.J(d.De.WEBAPI_BASE_URL, e));
       }
-    },
-    5052: (e, t, i) => {
-      "use strict";
-      i.d(t, { K: () => s });
-      var n = i(54905),
-        r = i.n(n);
-      class s {
-        static ParseCSVFile(e) {
-          return new Promise((t, i) => {
-            const n = {
-              header: !0,
-              skipEmptyLines: "greedy",
-              complete: t,
-              error: (e) => i({ errors: [e] }),
-            };
-            r().parse(e, n);
-          });
-        }
-        static ReadFile(e) {
-          return new Promise((t, i) => {
-            const n = new FileReader();
-            (n.onload = (e) => t(n.result)), n.readAsText(e);
-          });
-        }
-        static WriteFile(e, t) {
-          let i = document.createElement("a");
-          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
-          else {
-            const t = window.URL.createObjectURL(e);
-            i.href = t;
-          }
-          i.setAttribute("download", t), i.click();
-          try {
-            document.removeChild(i);
-          } catch (e) {}
-        }
-        static WriteCSVToFile(e, t) {
-          const i = r().unparse(e, { header: !0 });
-          s.WriteFile(new Blob([i], { type: "text/csv:charset=utf-8;" }), t);
-        }
-        static WriteXMLToFile(e, t) {
-          const i = () =>
-            this.m_DummyValueForQuestionHack ? "never returned" : "?";
-          let n =
-            "<" + i() + 'xml version="1.0" encoding="UTF-8" ' + i() + ">\n";
-          (n += new XMLSerializer().serializeToString(e)),
-            s.WriteFile(
-              new Blob([n], { type: "application/xml:charset=utf-8;" }),
-              t
-            );
-        }
-      }
-      s.m_DummyValueForQuestionHack = 0;
     },
     75746: (e, t, i) => {
       "use strict";
@@ -5904,14 +5851,14 @@
     73797: (e, t, i) => {
       "use strict";
       i.d(t, {
-        EV: () => w,
+        EV: () => R,
         Fi: () => k,
         ID: () => E,
         LT: () => v,
         Qy: () => B,
         Su: () => S,
         XM: () => y,
-        Xj: () => R,
+        Xj: () => w,
         _J: () => h,
         b2: () => I,
         co: () => D,
@@ -6433,12 +6380,12 @@
       function B(e) {
         return p.Get().GetMaxDiscountPercentage(e);
       }
-      function w(e) {
+      function R(e) {
         return e.some(
           (e) => e.nDiscountPct > p.Get().GetMaxDiscountPercentage(e.packageID)
         );
       }
-      function R(e) {
+      function w(e) {
         return p.Get().GetMaxDiscountPercentageForGroup(e);
       }
     },
@@ -6565,10 +6512,10 @@
         dU: () => G,
         df: () => x,
         j_: () => q,
-        ju: () => R,
+        ju: () => w,
         np: () => K,
         on: () => A,
-        ps: () => w,
+        ps: () => R,
         rX: () => P,
         s7: () => C,
         sN: () => X,
@@ -7321,10 +7268,10 @@
           );
         }, []);
       }
-      function w(e) {
+      function R(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function R(e) {
+      function w(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
       function C(e) {
@@ -7336,7 +7283,7 @@
         return t;
       }
       function O(e) {
-        const t = w(e),
+        const t = R(e),
           i = [];
         for (const n of g.Get().m_rgKnownPriceKeys) {
           const r = t.prices[n],
@@ -7444,7 +7391,7 @@
     86371: (e, t, i) => {
       "use strict";
       i.d(t, {
-        B6: () => R,
+        B6: () => w,
         E5: () => U,
         E_: () => M,
         Eh: () => S,
@@ -7456,7 +7403,7 @@
         dy: () => N,
         hr: () => B,
         k: () => z,
-        pl: () => w,
+        pl: () => R,
         s$: () => O,
         yn: () => F,
         z$: () => j,
@@ -7974,13 +7921,13 @@
           E.Get();
         }, []);
       }
-      function w() {
+      function R() {
         const [e, t] = c.useState(E.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, p.Qg)(E.Get().GetLocalPackageDiscountOverrideCallbackList(), t), e
         );
       }
-      function R() {
+      function w() {
         return c.useCallback(() => {
           var e;
           return (
