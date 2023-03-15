@@ -1,27 +1,27 @@
 
 var gItems = Array();
 
-function BlurAndHide( id )
+function AddContentDescriptors( id, add )
 {
-	var item = gItems[id];
-	var appid = item['consumer_appid'];
-	var title = V_EscapeHTML( item['title'] );
-	var options = {
-		method: 'post',
-		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&force_inappropriate=1',
-		onComplete: (function(id){
-			return function(transport)
-			{
-				ShowWithFade( $( 'blurred_' + id ) );
-				$J( '#item_' + id ).addClass( 'blurred' );
-			}
-		}(id))
-	};
-	new Ajax.Request(
-		'https://steamcommunity.com/sharedfiles/setinappropriate/',
-		options
-	);
+	$J.post(
+		'https://steamcommunity.com/sharedfiles/ajaxupdatecontentdescriptors/',
+		{ sessionid: g_sessionID, publishedfileid: id, add: add, remove: [] },
+	).done( function( json ) {
+		ShowWithFade( $( 'blurred_' + id ) );
+		$J( '#item_' + id ).addClass( 'blurred' );
+	} );
 }
+
+function ModeratorEditContentDescriptors( id )
+{
+	function fn( publishedfileid )
+	{
+		ShowWithFade( $( 'blurred_' + id ) );
+		$J( '#item_' + id ).addClass( 'blurred' );
+	}
+	EditContentDescriptors( id, fn );
+}
+
 
 function BanItem( id )
 {
@@ -183,9 +183,13 @@ function ApplyFuncOnSelectedItems( func )
 	} );
 }
 
-function SelectedItems_Blur()
+function SelectedItems_AddContentDescriptors( add )
 {
-	ApplyFuncOnSelectedItems( BlurAndHide );
+	function fn( id )
+	{
+		AddContentDescriptors( id, add );
+	}
+	ApplyFuncOnSelectedItems( fn );
 }
 
 function SelectedItems_Ban()

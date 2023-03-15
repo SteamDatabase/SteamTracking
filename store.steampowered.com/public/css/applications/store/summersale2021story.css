@@ -2,7 +2,7 @@ body.forgeyourfate {
   background: url(../../../images/applications/store/story_page_bg.jpg?v=valveisgoodatcaching)
       no-repeat top center,
     #232323;
-  filter: drop-shadow(2px 4px 6px #00000066);
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
 }
 .summersale2021story_PageOuterContainer_A1mol {
   width: 100%;
@@ -40,7 +40,7 @@ body.forgeyourfate {
   background-size: contain;
   padding: 50px 0;
   border-radius: 7px;
-  filter: drop-shadow(2px 4px 20px #00000033);
+  filter: drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.2));
 }
 .summersale2021story_PageInnerContent_20TiA {
   max-width: 940px;
@@ -214,7 +214,7 @@ body.forgeyourfate {
   transition-property: color, border, transform;
   transition-duration: 0.23s;
   transition-timing-function: ease-out;
-  border: 10px solid #fffbec00;
+  border: 10px solid rgba(255, 251, 236, 0);
   border-radius: 40px;
   transform: scale(1);
 }
@@ -280,18 +280,19 @@ body.forgeyourfate {
   .summersale2021story_StickerPreview_1AsdN {
   width: 158px;
   height: 158px;
-  border: 0px solid #efefef00;
+  border: 0px solid rgba(239, 239, 239, 0);
   box-sizing: border-box;
   border-radius: 50%;
   background-position: center;
-  background-color: #23232333;
+  background-color: rgba(35, 35, 35, 0.2);
   background-repeat: no-repeat;
-  box-shadow: 3px -1px 4px 4px #00000022, inset 0px 0px 0px 5px #fefeef;
+  box-shadow: 3px -1px 4px 4px rgba(0, 0, 0, 0.1333333333),
+    inset 0px 0px 0px 5px #fefeef;
 }
 .summersale2021story_GenreContainer_2JuP7
   .summersale2021story_StickerPreview_1AsdN.summersale2021story_Unclaimed_oT-hE {
-  border: 3px dashed #fefeef66;
-  box-shadow: inset 0px 0px 0px 5px #fefeef00;
+  border: 3px dashed rgba(254, 254, 239, 0.4);
+  box-shadow: inset 0px 0px 0px 5px rgba(254, 254, 239, 0);
 }
 .summersale2021story_GenreContainer_2JuP7.summersale2021story_Unclaimed_oT-hE {
   background: #7c5f5a;
@@ -321,7 +322,7 @@ body.forgeyourfate {
   max-width: 1100px;
   border-radius: 5px;
   transform: skew(2deg, -2deg);
-  box-shadow: 6px -2px 8px 8px #00000011;
+  box-shadow: 6px -2px 8px 8px rgba(0, 0, 0, 0.0666666667);
 }
 @media screen and (max-width: 900px) {
   .summersale2021story_BadgeContainer_2wlN6 {
@@ -393,7 +394,8 @@ body.forgeyourfate {
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
-  box-shadow: 3px -1px 4px 4px #00000011, inset 0px 0px 0px 22px #fefeef;
+  box-shadow: 3px -1px 4px 4px rgba(0, 0, 0, 0.0666666667),
+    inset 0px 0px 0px 22px #fefeef;
   margin-bottom: 50px;
 }
 @media screen and (max-width: 700px) {

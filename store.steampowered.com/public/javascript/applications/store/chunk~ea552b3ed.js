@@ -630,17 +630,17 @@
           return "CUserAccount_GetUserCountry_Response";
         }
       }
-      class _ extends s {
+      class b extends s {
         constructor(e = null) {
           super(),
-            _.prototype.invite_token || n.aR(_.M()),
+            b.prototype.invite_token || n.aR(b.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
                 fields: {
                   invite_token: {
                     n: 1,
@@ -664,57 +664,6 @@
                   },
                   valid: { n: 5, br: n.FE.readBool, bw: n.Xc.writeBool },
                 },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = n.Bh(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(_.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new _();
-          return _.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(_.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(_.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserAccount_CreateFriendInviteToken_Response";
-        }
-      }
-      class b extends s {
-        constructor(e = null) {
-          super(),
-            b.prototype.tokens || n.aR(b.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            b.sm_m ||
-              (b.sm_m = {
-                proto: b,
-                fields: { tokens: { n: 1, c: _, r: !0, q: !0 } },
               }),
             b.sm_m
           );
@@ -749,6 +698,57 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserAccount_CreateFriendInviteToken_Response";
+        }
+      }
+      class _ extends s {
+        constructor(e = null) {
+          super(),
+            _.prototype.tokens || n.aR(_.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: { tokens: { n: 1, c: b, r: !0, q: !0 } },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = n.Bh(_.M())), _.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(_.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(_.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new _();
+          return _.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(_.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(_.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserAccount_GetFriendInviteTokens_Response";
@@ -1266,12 +1266,12 @@
             });
           }),
           (e.CreateFriendInviteToken = function (e, t) {
-            return e.SendMsg("UserAccount.CreateFriendInviteToken#1", t, _, {
+            return e.SendMsg("UserAccount.CreateFriendInviteToken#1", t, b, {
               ePrivilege: 3,
             });
           }),
           (e.GetFriendInviteTokens = function (e, t) {
-            return e.SendMsg("UserAccount.GetFriendInviteTokens#1", t, b, {
+            return e.SendMsg("UserAccount.GetFriendInviteTokens#1", t, _, {
               ePrivilege: 1,
             });
           }),
@@ -1492,19 +1492,22 @@
     },
     98197: (e, t, r) => {
       r.d(t, {
-        FM: () => n,
+        FM: () => s,
+        H7: () => n,
         OL: () => _,
-        Pm: () => o,
-        XW: () => s,
-        dK: () => l,
-        et: () => c,
-        k6: () => d,
-        md: () => b,
-        xL: () => m,
+        Pm: () => c,
+        XW: () => a,
+        dK: () => u,
+        et: () => l,
+        k6: () => b,
+        md: () => g,
+        xL: () => d,
       });
       var i = r(70983);
       r(38800), r(31587);
-      function n(e) {
+      const n =
+        /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
+      function s(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
             "im"
@@ -1512,15 +1515,15 @@
           r = e.match(t);
         return r && r.length > 5 ? r[6].toString() : e;
       }
-      function s(e) {
-        let t = n(e);
+      function a(e) {
+        let t = s(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      const a = /^(steam|ftp|https?):\/\//;
-      function o(e) {
-        return a.test(e) ? e : "https://" + e;
-      }
+      const o = /^(steam|ftp|https?):\/\//;
       function c(e) {
+        return o.test(e) ? e : "https://" + e;
+      }
+      function l(e) {
         return e
           ? 1 != i.De.EUNIVERSE
             ? e
@@ -1571,15 +1574,15 @@
               )))
           : e;
       }
-      function l(e) {
+      function u(e) {
         if (!e) return !0;
-        const t = n(e).toLocaleLowerCase();
+        const t = s(e).toLocaleLowerCase();
         return (
           [
-            n(i.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            n(i.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            n(i.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            n(i.De.STORE_CDN_URL).toLocaleLowerCase(),
+            s(i.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            s(i.De.MEDIA_CDN_URL).toLocaleLowerCase(),
+            s(i.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            s(i.De.STORE_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -1587,14 +1590,14 @@
           ].indexOf(t) >= 0
         );
       }
-      function u(e, t) {
+      function m(e, t) {
         return `${i.De.MEDIA_CDN_URL}steam/apps/${e}/${t}`;
       }
-      function m(e) {
-        return u(e, "page_bg_generated.jpg");
-      }
       function d(e) {
-        return u(e, "page_bg_generated_v6b.jpg");
+        return m(e, "page_bg_generated.jpg");
+      }
+      function b(e) {
+        return m(e, "page_bg_generated_v6b.jpg");
       }
       function _(e) {
         return i.De.SNR &&
@@ -1604,7 +1607,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + i.De.SNR
           : e;
       }
-      function b(e, t) {
+      function g(e, t) {
         try {
           const r = new URL(t),
             i = new URL(e);

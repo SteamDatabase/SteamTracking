@@ -6,7 +6,7 @@
   background-image: radial-gradient(
     circle at top left,
     #056890 0%,
-    #143d4d 60%
+    hsl(197, 59%, 19%) 60%
   );
   border-bottom: 1px solid #09b8fe;
   padding: 40px;

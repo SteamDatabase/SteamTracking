@@ -780,7 +780,11 @@
 }
 .login_LoginDialog_2y6W_ {
   background-color: #101114;
-  background-image: linear-gradient(to bottom, #101114, #1f2127);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(16, 17, 20),
+    rgb(31, 33, 39)
+  );
   min-height: 512px;
   position: relative;
 }

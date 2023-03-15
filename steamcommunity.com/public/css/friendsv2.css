@@ -149,6 +149,7 @@ body.v6 {
 	html.responsive .profile_groups.title_bar {
 		background-color: transparent;
 		flex-wrap: wrap;
+		 padding: 10px 0;
 	}
 
 	html.responsive .profile_friends .friends_search_text_box, html.responsive .profile_groups .groups_search_text_box {
@@ -163,8 +164,6 @@ body.v6 {
 	html.responsive .manage_link, html.responsive #add_friends_button {
 		text-align: center;
 		margin: 0;
-		flex-grow: 1;
-		min-height: 30px;
 	}
 
 
@@ -174,6 +173,7 @@ body.v6 {
 	html.responsive.tablet .profile_groups.title_bar {
 		background-color: transparent;
 		flex-wrap: wrap;
+		 padding: 10px 0;
 	}
 
 	html.responsive.tablet .profile_friends .friends_search_text_box, html.responsive .profile_groups .groups_search_text_box {
@@ -188,10 +188,14 @@ body.v6 {
 	html.responsive.tablet .manage_link, html.responsive #add_friends_button {
 		text-align: center;
 		margin: 0;
-		flex-grow: 1;
-		min-height: 30px;
 	}
 
+
+@media screen and ( max-width: 500px ) {
+	html.responsive .friend_block_v2 {
+		width: 100%;
+	}
+}
 
 @media screen and (max-width: 910px) {
     html.responsive .friends_container {
@@ -236,15 +240,12 @@ body.v6 {
 		float: none;
 	}
 
-	html.responsive .friend_block_v2 {
-		width: 100%;
-	}
 
-	html.responsive .active .SVGIcon_DownArrowContextMenu {
+	html.responsive .active .down_arrow_context_menu {
 		visibility: visible;
 	}
 
-	html.responsive .friends_nav.expanded .SVGIcon_DownArrowContextMenu {
+	html.responsive .friends_nav.expanded .down_arrow_context_menu {
 		visibility: hidden;
 	}
 
@@ -322,16 +323,16 @@ body.v6 {
 
 
 .profile_friends #button_manage_image {
-	display: none;
+    display: none;
 }
 
 
-.SVGIcon_DownArrowContextMenu {
-	fill: rgb( 76, 145, 172 );
-	width:  24px;
-	height: 24px;
-	float: right;
-	visibility: hidden;
+.down_arrow_context_menu {
+    fill: rgb( 76, 145, 172 );
+    width: 24px;
+    height: 24px;
+    float: right;
+    visibility: hidden;
 }
 
 .friends_nav .icon_all_friends .title {
@@ -547,11 +548,10 @@ body.v6 {
 /* --- Title bar and search box --- */
 .profile_friends.title_bar,
 .profile_groups.title_bar {
-    flex: 1 100%;
     width: 100%;
     display: flex;
     align-items: center;
-    min-height: 30px;
+	padding: 5px 10px;
     background-color: #015e80;
 }
 
@@ -563,7 +563,6 @@ body.v6 {
     color: #fff;
     font-weight: normal;
     min-width: 250px;
-    padding: 10px 16px;
 }
 
 .friends_search_text_box,

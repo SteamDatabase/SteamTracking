@@ -1537,7 +1537,7 @@ strong {
 .partnereventeditor_EventCategoryNotExpandable_3gOyF:hover:after {
   left: 100%;
   top: 50%;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: " ";
   height: 0;
   width: 0;
@@ -2151,7 +2151,7 @@ input.clanimagepicker_SearchInput_lwt4u {
   padding: 1px;
   float: left;
   margin-bottom: 14px;
-  border-top: 1px solid transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0);
 }
 .artworkuploader_PreviewImgInfo_3Iv_t:hover {
   background-color: #000;
@@ -2538,12 +2538,12 @@ input.clanimagepicker_SearchInput_lwt4u {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   border-image-source: url(../../../images/applications/community/glassborder_02.png?v=valveisgoodatcaching);
   border-image-width: 1px;
   border-image-repeat: stretch;
   border-image-slice: 7;
-  box-shadow: 0 0 12px #00000025;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1450980392);
 }
 .spotlight_MajorEventImageContainer_35tOs {
   width: fit-content;
@@ -2554,15 +2554,15 @@ input.clanimagepicker_SearchInput_lwt4u {
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    black 44px,
-    black calc(100% - 44px),
+    rgb(0, 0, 0) 44px,
+    rgb(0, 0, 0) calc(100% - 44px),
     transparent 100%
   );
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    black 44px,
-    black calc(100% - 44px),
+    rgb(0, 0, 0) 44px,
+    rgb(0, 0, 0) calc(100% - 44px),
     transparent 100%
   );
   -webkit-mask-repeat: no-repeat;
@@ -2709,7 +2709,7 @@ input.clanimagepicker_SearchInput_lwt4u {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 35%,
     black 45%,
-    black 80%,
+    rgb(0, 0, 0) 80%,
     rgba(0, 0, 0, 0) 100%
   );
   mask-image: linear-gradient(
@@ -2717,7 +2717,7 @@ input.clanimagepicker_SearchInput_lwt4u {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 35%,
     black 45%,
-    black 80%,
+    rgb(0, 0, 0) 80%,
     rgba(0, 0, 0, 0) 100%
   );
   filter: blur(30px);
@@ -2776,7 +2776,7 @@ input.clanimagepicker_SearchInput_lwt4u {
   flex-direction: column;
 }
 .spotlight_AppDetailsSpotlightContainer_30w2v {
-  box-shadow: 1px 2px 12px 1px #00000055;
+  box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.3333333333);
 }
 .spotlight_AppDetailsSpotlightContainer_30w2v .spotlight_BottomShadow_1AACQ {
   display: none;
@@ -2861,7 +2861,7 @@ p a:hover {
 }
 .partnereventartwork_EventEditorDragTargetArea_13RCA {
   width: calc(100% - 20px);
-  border: 2px solid transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -2971,7 +2971,7 @@ p a:hover {
 .partnereventartwork_LanguageSelectorSelected_1M7um:after {
   right: calc(100% + 1px);
   top: 10px;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: " ";
   height: 0;
   width: 0;
@@ -3157,7 +3157,7 @@ p a:hover {
   padding: 16px;
 }
 .partnereventartwork_SelectImageBlock_3jEs0.partnereventartwork_Tips_1CHYZ {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -3197,7 +3197,7 @@ p a:hover {
     #399aec 10%,
     #225dce 80%
   );
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   padding: 4px 20px;
   border-radius: 2px;
   border: none;
@@ -3434,7 +3434,7 @@ p a:hover {
 .rdtPicker td.rdtToday:before {
   content: "";
   display: inline-block;
-  border-left: 7px solid transparent;
+  border-left: 7px solid rgba(0, 0, 0, 0);
   border-bottom: 7px solid #428bca;
   border-top-color: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -3594,351 +3594,6 @@ td.rdtYear:hover {
   color: gray;
   font-size: 10px;
 }
-.buttonBack___1mlaL,
-.buttonFirst___2rhFr,
-.buttonLast___2yuh0,
-.buttonNext___2mOCa,
-.buttonNext___3Lm3s,
-.dot___3c3SI {
-  cursor: pointer;
-}
-.image___xtQGH {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.spinner___27VUp {
-  position: absolute;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
-  width: 30px;
-  height: 30px;
-  animation-name: spin___S3UuE;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  border: 4px solid #a9a9a9;
-  border-top-color: #000;
-  border-radius: 30px;
-}
-@keyframes spin___S3UuE {
-  0% {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-.container___2O72F {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-.overlay___IV4qY {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  cursor: zoom-in;
-  transition: opacity 0.3s, transform 0.3s;
-}
-.hover___MYy31,
-.loading___1pvNI,
-.zoom___3kqYk {
-  opacity: 1;
-}
-.imageLoadingSpinnerContainer___3UIPD {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #f4f4f4;
-}
-.slide___3-Nqo {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  height: 0;
-  margin: 0;
-  list-style-type: none;
-}
-.slide___3-Nqo:focus {
-  outline: none !important;
-}
-.slideHorizontal___1NzNV {
-  float: left;
-}
-[dir="rtl"] .slideHorizontal___1NzNV {
-  direction: rtl;
-  transform: scaleX(-1);
-}
-.slideInner___2mfX9 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.focusRing___1airF {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-  pointer-events: none;
-  outline-width: 5px;
-  outline-style: solid;
-  outline-color: Highlight;
-}
-@media (-webkit-min-device-pixel-ratio: 0) {
-  .focusRing___1airF {
-    outline-style: auto;
-    outline-color: -webkit-focus-ring-color;
-  }
-}
-.horizontalSlider___281Ls {
-  position: relative;
-  overflow: hidden;
-  touch-action: pan-y pinch-zoom;
-}
-[dir="rtl"] .horizontalSlider___281Ls {
-  direction: ltr;
-  transform: scaleX(-1);
-}
-.horizontalSliderTray___1L-0W {
-  overflow: hidden;
-  width: 100%;
-}
-.verticalSlider___34ZFD {
-  position: relative;
-  overflow: hidden;
-}
-.verticalSliderTray___267D8 {
-  overflow: hidden;
-}
-.verticalTray___12Key {
-  float: left;
-}
-.verticalSlideTrayWrap___2nO7o {
-  overflow: hidden;
-}
-.sliderTray___-vHFQ {
-  display: block;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sliderAnimation___300FY {
-  transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  will-change: transform;
-}
-.masterSpinnerContainer___1Z6hB {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #f4f4f4;
-}
-.carousel_carouselNavButton_1KK5N {
-  border: none;
-  background-color: transparent;
-  outline: none !important;
-  display: flex;
-  cursor: pointer;
-  padding: 0px;
-}
-.carousel_carouselNavButton_1KK5N:hover svg {
-  opacity: 1;
-}
-.carousel_carouselNavButton_1KK5N:disabled svg {
-  opacity: 0.1;
-  filter: none;
-}
-.carousel_carouselNavButton_1KK5N.carousel_left_gLIfz {
-  transform: rotateZ(180deg);
-}
-.carousel_carouselNavButton_1KK5N svg {
-  opacity: 0.7;
-  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
-  fill: #fff;
-}
-.carousel_carouselBtnCtn_aqswv {
-  display: flex;
-  z-index: 1;
-  align-items: center;
-  position: absolute;
-  padding: 0px;
-  width: 50px;
-  top: 0px;
-  bottom: 0px;
-}
-.carousel_carouselBtnCtn_aqswv.carousel_left_gLIfz {
-  left: -68px;
-}
-.carousel_carouselBtnCtn_aqswv.carousel_right_1qWih {
-  right: -68px;
-}
-.carousel_carouselBtnCtn_aqswv svg {
-  width: 50px;
-  height: 50px;
-}
-.BasicUI .carousel_carouselBtnCtn_aqswv {
-  display: none;
-}
-.carousel_carouselBody_2M7XO {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.carousel_sliderBody_gtnxY {
-  position: relative;
-}
-.SaleSectionCarousel .carousel__slider {
-  padding: 10px 0px;
-  margin: -10px -7px 0px -7px;
-}
-html.responsive.touch .SaleSectionCarousel .carousel__slider {
-  margin: 0;
-}
-@media screen and (max-width: 910px) {
-  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
-    margin: 0;
-  }
-}
-.BasicUI .SaleSectionCarousel .carousel__slider {
-  padding: unset;
-}
-.BasicUI .carousel_slideTrayCustomize_2rRBe {
-  column-gap: 12px;
-}
-.carousel_breadcrumbContainer_1nhaj {
-  display: flex;
-  justify-content: center;
-  margin-top: 12px;
-}
-.carousel_pipList_3oTuB {
-  display: flex;
-  flex-flow: row;
-}
-.carousel_pipScrollerContainer_1C-B8 {
-  display: flex;
-  flex-direction: row;
-  height: 35px;
-  margin: 2px 10px 0px 10px;
-}
-.BasicUI .carousel_pipScrollerContainer_1C-B8 {
-  display: none;
-}
-.contenthubmaincarousel .carousel_pipScrollerContainer_1C-B8 {
-  max-width: 940px;
-  width: 100%;
-  margin: 0px auto;
-}
-.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr {
-  width: 40px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-}
-.carousel_pipScrollerContainer_1C-B8
-  .carousel_pipScrollButton_vy7Kr.carousel_left_gLIfz {
-  padding-left: 0px;
-  padding-right: 20px;
-}
-.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr svg {
-  height: 30px;
-}
-.carousel_pipScrollerContainer_1C-B8 .carousel_scrollNavDiv_13TQ_ {
-  display: block;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-}
-.carousel_pipScrollerContainer_1C-B8
-  .carousel_scrollNavDiv_13TQ_
-  .carousel_scrollNavButton_1GLi1 {
-  width: 100%;
-  height: 100%;
-}
-.carousel_pipScrollerContainer_1C-B8 .carousel_pipScroller_GXWYa {
-  position: relative;
-  flex-grow: 1;
-  height: 100%;
-}
-.carousel_pipScrollerContainer_1C-B8
-  .carousel_pipScroller_GXWYa
-  .carousel_scrollBackground_3-RYo {
-  position: absolute;
-  left: 0px;
-  top: 17px;
-  bottom: 17px;
-  right: 0px;
-  background-color: rgba(255, 255, 255, 0.13);
-  margin: auto 0;
-}
-.carousel_pipScrollerContainer_1C-B8
-  .carousel_pipScroller_GXWYa
-  .carousel_scrollForeground_yJM1K {
-  position: absolute;
-  top: 16px;
-  bottom: 16px;
-  background-color: rgba(255, 255, 255, 0.35);
-  transition: left right;
-  transition-duration: 0.4s;
-}
-.carousel_pipContainer_373Zi {
-  padding-top: 10px;
-}
-.carousel_pipContainer_373Zi .carousel_pip_3Bznr {
-  width: 28px;
-  height: 25px;
-  position: relative;
-}
-.carousel_pipContainer_373Zi .carousel_pip_3Bznr .carousel_pipNumber_2_JtJ {
-  position: absolute;
-  top: 3px;
-  left: 0px;
-  right: 0px;
-  text-align: center;
-}
-.carousel_pip_3Bznr {
-  border: none;
-  background-color: transparent;
-  outline: none !important;
-  cursor: pointer;
-  width: 18px;
-  height: 15px;
-  opacity: 0.3;
-  padding: 1px 2px;
-  margin: 0px;
-  transition: opacity 0.2s;
-}
-.carousel_pip_3Bznr img {
-  width: 100%;
-  height: 100%;
-}
-.carousel_pip_3Bznr.carousel__dot--selected {
-  opacity: 1;
-}
-.carousel_innerSlide_Kx5A5 div {
-  outline-width: 0px;
-}
-.carousel_DisableSliderMotion_3la_1 {
-  transition: none;
-}
-.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  display: flex;
-  flex-wrap: nowrap;
-}
 .packagepricewidget_StoreSalePriceWidget_2ykYV {
   margin-left: auto;
   display: flex;
@@ -3976,7 +3631,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   align-items: center;
   margin-right: 3px;
 }
-.packagepricewidget_StoreOrignalPrice_QKEgu {
+.packagepricewidget_StoreOriginalPrice_3h9iQ {
   text-decoration: line-through;
   color: #626366;
   font-size: 11px;
@@ -4263,7 +3918,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   margin-right: 0px;
   height: 100%;
   opacity: 0.8;
-  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+  -webkit-mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       15.77% 44.22% at 50% 104.95%,
       rgba(66, 66, 66, 0) 0%,
@@ -4281,7 +3936,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
       rgba(0, 0, 0, 0.18) 83.33%,
       rgba(0, 0, 0, 0) 95.31%
     );
-  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+  mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       15.77% 44.22% at 50% 104.95%,
       rgba(66, 66, 66, 0) 0%,
@@ -4720,7 +4375,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .ContentHubMainCarouselCapsule .animated_featured_capsule_Info_2mUNQ {
   padding: 20px;
-  background: #0000004f;
+  background: rgba(0, 0, 0, 0.3098039216);
   backdrop-filter: blur(20px);
   height: 308px;
   width: 100%;
@@ -4732,7 +4387,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .WidgetTag {
   font-size: 12px;
   color: #c6d4df;
-  background-color: #c6d4df26;
+  background-color: rgba(198, 212, 223, 0.1490196078);
 }
 .ContentHubMainCarouselCapsule
   .animated_featured_capsule_Info_2mUNQ
@@ -4740,7 +4395,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .TagBox
   .WidgetTag:hover {
   color: #fff;
-  background-color: #c6d4df51;
+  background-color: rgba(198, 212, 223, 0.3176470588);
 }
 .ContentHubMainCarouselCapsule
   .animated_featured_capsule_Info_2mUNQ
@@ -4767,7 +4422,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .ReviewScore {
   font-size: 16px;
   font-weight: 500;
-  background: #00000045;
+  background: rgba(0, 0, 0, 0.2705882353);
   border-radius: 2px;
   width: fit-content;
   width: moz-fit-content;
@@ -4862,10 +4517,10 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .ingame .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #8cd61d 0%,
-    #a1f410 30%,
-    #a1f410 70%,
-    #8cd61d 100%
+    rgb(140, 214, 29) 0%,
+    rgb(161, 244, 16) 30%,
+    rgb(161, 244, 16) 70%,
+    rgb(140, 214, 29) 100%
   );
 }
 .ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -4882,19 +4537,19 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .watchingbroadcast .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #9c8fd4 0%,
-    #9c8fd4 30%,
-    #9c8fd4 70%,
-    #9c8fd4 100%
+    rgb(156, 143, 212) 0%,
+    rgb(156, 143, 212) 30%,
+    rgb(156, 143, 212) 70%,
+    rgb(156, 143, 212) 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #6dcff6 0%,
-    #6dcff6 30%,
-    #6dcff6 70%,
-    #6dcff6 100%
+    rgb(109, 207, 246) 0%,
+    rgb(109, 207, 246) 30%,
+    rgb(109, 207, 246) 70%,
+    rgb(109, 207, 246) 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -4957,7 +4612,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .steamavatar_avatar_1p_Qr.GamepadMode,
 .GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
 }
@@ -5238,12 +4893,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .personanameandstatus_playerName_r62qz {
   -webkit-mask: linear-gradient(
     to right,
-    black calc(100% - 6px),
+    rgb(0, 0, 0) calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
     to right,
-    black calc(100% - 6px),
+    rgb(0, 0, 0) calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   flex: initial;
@@ -5291,12 +4946,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   margin-top: -1px;
   -webkit-mask: linear-gradient(
     to right,
-    black calc(100% - 8px),
+    rgb(0, 0, 0) calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
     to right,
-    black calc(100% - 8px),
+    rgb(0, 0, 0) calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   margin-right: -24px;
@@ -6265,7 +5920,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .discoveryqueuewizard_RelevantCtn_FGuCn {
   padding: 0;
-  border-top: 1px solid #acb2c924;
+  border-top: 1px solid rgba(172, 178, 201, 0.1411764706);
   display: flex;
   flex-direction: column;
   margin: 4px 0px;
@@ -6392,7 +6047,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-size: 14px;
   opacity: 0.8;
   padding-bottom: 16px;
-  border-bottom: 1px solid #acb2c924;
+  border-bottom: 1px solid rgba(172, 178, 201, 0.1411764706);
   width: 50%;
   text-align: center;
 }
@@ -6545,7 +6200,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ:hover {
   color: #fff;
-  background-color: #acb2c924;
+  background-color: rgba(172, 178, 201, 0.1411764706);
   border-radius: 2px;
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ:visited {
@@ -6553,7 +6208,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ.gpfocus {
   color: #fff;
-  background-color: #acb2c924;
+  background-color: rgba(172, 178, 201, 0.1411764706);
 }
 .discoveryqueuewizard_ControlsCtn_3UbRl {
   display: flex;
@@ -6568,7 +6223,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   box-shadow: none;
   box-sizing: border-box;
   position: relative;
-  background-color: #acb2c924;
+  background-color: rgba(172, 178, 201, 0.1411764706);
   cursor: pointer;
   text-align: center;
   user-select: none;
@@ -6599,7 +6254,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   transition: fill 0.1s ease;
 }
 .discoveryqueuewizard_QueueButton_19cHb:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
-  background-color: #acb2c947;
+  background-color: rgba(172, 178, 201, 0.2784313725);
 }
 .discoveryqueuewizard_QueueButton_19cHb.gpfocus {
   background-color: #fff;
@@ -6721,7 +6376,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .discoveryqueuewizard_TradingCardCtn_36Qbj {
   display: flex;
-  background: #83beec1f;
+  background: rgba(131, 190, 236, 0.1215686275);
   padding: 16px 1vw;
   align-items: center;
   color: var(--gpStoreLighterGrey);
@@ -6736,7 +6391,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .discoveryqueuewizard_TradingCardCtn_36Qbj
   .discoveryqueuewizard_TradingCardImage_3wa0d {
   transform: rotate(-10deg);
-  filter: drop-shadow(0px 8px 6px #00000022);
+  filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.1333333333));
 }
 @media screen and (max-width: 1400px) {
   .discoveryqueuewizard_TradingCardCtn_36Qbj
@@ -6884,7 +6539,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover,
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7.gpfocus {
-  box-shadow: 0px 6px 12px 0px #0000003d;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2392156863);
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover
   .discoveryqueuewidget_WidgetHeaderCtn_3u5R_,
@@ -7037,8 +6692,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: #0006;
-  border: 1px solid #aaa3;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(170, 170, 170, 0.2);
   opacity: 0.75;
   transition-property: opacity;
   transition-duration: 0.16s;
@@ -7071,7 +6726,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   left: 8px;
   border-radius: 4px;
   z-index: 3;
-  background-color: #000d;
+  background-color: rgba(0, 0, 0, 0.8666666667);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7171,7 +6826,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   display: flex;
   flex-direction: column;
   margin: 0px 8px 0px 8px;
-  background: #00000080;
+  background: rgba(0, 0, 0, 0.5019607843);
   backdrop-filter: blur(20px);
   gap: 6px;
   border-radius: 3px;
@@ -7203,7 +6858,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   overflow: hidden;
 }
 .salepointshopsmartdisplay_RewardClass_194Jt {
-  color: #ffffff6b;
+  color: rgba(255, 255, 255, 0.4196078431);
   font-style: italic;
 }
 @media screen and (max-width: 620px) {

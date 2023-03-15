@@ -15,7 +15,7 @@
   right: 0;
   background: #2c3036;
   padding: 12px 0px 12px 12px;
-  box-shadow: 0 0 32px 0px #000000ab;
+  box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.6705882353);
   overflow-y: auto;
   overflow-x: hidden;
   white-space: nowrap;
@@ -105,7 +105,7 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 4px solid transparent;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
   padding: 2px 2px;
   cursor: pointer;
 }
@@ -479,18 +479,18 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   box-shadow: inset 0px 0px 4px #000;
   outline-width: 0px;
   color: #aaa;
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   padding-right: 2px;
 }
 .chatentry_chatTextarea_pewyB {
   resize: none;
   margin-right: 4px;
   height: 42px;
-  background-color: transparent;
-  box-shadow: inset 0px 0px 4px transparent;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
   outline-width: 0px;
   color: #aaa;
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -763,8 +763,8 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   margin: 0;
   width: 100%;
   height: 100%;
-  border: 0px solid transparent;
-  background-color: transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   max-width: 44px;
   min-width: 0;
 }
@@ -816,7 +816,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
   background: radial-gradient(
     128px 128px at 20% 50%,
-    #1da834 0%,
+    rgb(29, 168, 52) 0%,
     rgba(27, 28, 32, 0) 100%
   );
   background-position: -190px 0px;
@@ -837,7 +837,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .ChatMessageEntryVoice.Disabled {
   opacity: 0.2;
   border: 1px dashed #000;
-  outline: 2px solid #0007;
+  outline: 2px solid rgba(0, 0, 0, 0.4666666667);
 }
 .ChatMessageEntryVoice.Active {
   min-width: 136px;
@@ -855,7 +855,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   width: 87px;
   text-align: center;
   color: #74c069;
-  background-color: #0005;
+  background-color: rgba(0, 0, 0, 0.3333333333);
   font-size: 10px;
   margin-top: 0px;
 }
@@ -877,8 +877,8 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .ChatMessageEntryVoice .activeVoiceControls {
   min-width: 0px;
   width: 84px;
-  border-top: 0px solid transparent;
-  border-bottom: 0px solid transparent;
+  border-top: 0px solid rgba(0, 0, 0, 0);
+  border-bottom: 0px solid rgba(0, 0, 0, 0);
   background: none;
 }
 .ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
@@ -1030,7 +1030,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   width: 66px;
   text-align: center;
   color: #74c069;
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
 }
 .reorderablelist_WhitelistNumber_1ZU2Q {
   width: 30px;
@@ -1084,7 +1084,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .presenterpopup_SpeakerPopup_ntY3G {
   font-size: 14px;
   background-color: #383e47;
-  box-shadow: 0 0 12px #00000066;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border: 1px solid #404754;
   border-radius: 2px;
   padding: 8px;
@@ -1147,7 +1147,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   filter: blur(5px);
 }
 .bbcodeeditor_DescriptionCtn_3uiaP {
-  border: 2px solid transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   margin: -2px;
 }
 .bbcodeeditor_DescriptionCtn_3uiaP.bbcodeeditor_DragTarget_2Mg-b {
@@ -1164,12 +1164,12 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   color: #dfe3e6;
   background: rgba(59, 63, 72, 0.5);
   border: none;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
 }
 .bbcodeeditor_EventEditorLinkInput_2tulF input:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 11px;
   outline: none;
 }
@@ -1255,12 +1255,12 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   color: #dfe3e6;
   background: rgba(59, 63, 72, 0.5);
   border: none;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
 }
 .bbcodeeditor_YouTubeInput_20wVy input[type="text"]:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 11px;
   outline: none;
 }
@@ -2030,7 +2030,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1Ysh1 {
 .eventreminder_ReminderDialog_2S_bd.eventreminder_ReminderOptions_P5dFj {
   width: 300px;
   padding: 0px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   border-left: none;
 }
 .eventreminder_ReminderBackground_GDF1p {
@@ -2664,6 +2664,9 @@ input.imageseachinput_SearchInput_1MoNl {
   display: inline;
   font-style: italic;
 }
+p.bbcodes_Paragraph_3zjkn {
+  margin: 0.5em 0;
+}
 .bbcodes_Header1_38GFQ {
   display: block;
   color: #fff;
@@ -2941,7 +2944,7 @@ a.bbcodes_LinkButton_lMVeY:hover {
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
-  background-color: #3b5a7280;
+  background-color: rgba(59, 90, 114, 0.5019607843);
   align-items: center;
   transition: background-color 0.2s ease;
   flex-wrap: wrap;
@@ -2955,7 +2958,7 @@ a.bbcodes_LinkButton_lMVeY:hover {
 }
 .deckverified_BannerContentDesktop_2qr1f:focus-within,
 .deckverified_BannerContent_1B2KF:focus-within {
-  background-color: #678ba670;
+  background-color: rgba(103, 139, 166, 0.4392156863);
 }
 .deckverified_BannerContentDesktop_2qr1f {
   background: linear-gradient(
@@ -3382,7 +3385,7 @@ a.bbcodes_LinkButton_lMVeY:hover {
   display: block;
 }
 .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
   width: 0;
   height: 0;
   padding: 7px 0;
@@ -3408,7 +3411,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 .gamehover_BottomShelf_2tBkj {
   background: linear-gradient(
     359.91deg,
-    #2b333a 30%,
+    rgb(43, 51, 58) 30%,
     rgba(103, 113, 122, 0.3) 85%
   );
   mix-blend-mode: normal;
@@ -4366,7 +4369,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0,
 .salepreviewwidgets_InGameHover_2uFQ-
   .salepreviewwidgets_StoreSalePriceBox_Wh0L8 {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 .salepreviewwidgets_InGameHover_2uFQ-
   .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
@@ -4558,8 +4561,16 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   text-decoration: none !important;
   color: #d2e885 !important;
   background: #799905;
-  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
-  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+  background: -webkit-linear-gradient(
+    top,
+    rgb(121, 153, 5) 5%,
+    rgb(83, 105, 4) 95%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgb(121, 153, 5) 5%,
+    rgb(83, 105, 4) 95%
+  );
   padding: 0 15px;
   font-size: 15px;
   line-height: 30px;
@@ -4568,8 +4579,16 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   text-decoration: none !important;
   color: #fff !important;
   background: #a4d007;
-  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
-  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
+  background: -webkit-linear-gradient(
+    top,
+    rgb(164, 208, 7) 5%,
+    rgb(107, 135, 5) 95%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgb(164, 208, 7) 5%,
+    rgb(107, 135, 5) 95%
+  );
 }
 .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
   position: relative;
@@ -5213,10 +5232,14 @@ html.touch
   border-radius: 3px;
   background: -webkit-radial-gradient(
     ellipse at top left,
-    #42454c99,
-    #25282e66
+    rgba(66, 69, 76, 0.6),
+    rgba(37, 40, 46, 0.4)
   );
-  background: radial-gradient(ellipse at top left, #42454c99, #25282e66);
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(66, 69, 76, 0.6),
+    rgba(37, 40, 46, 0.4)
+  );
   backdrop-filter: blur(15px);
   height: 110px;
   position: absolute;
@@ -5258,12 +5281,8 @@ html.touch
 .salepreviewwidgets_SaleItemBrowserRow_y9MSd
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
   .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover {
-  background: -webkit-radial-gradient(
-    ellipse at top left,
-    #42454cff,
-    #25282eff
-  );
-  background: radial-gradient(ellipse at top left, #42454cff, #25282eff);
+  background: -webkit-radial-gradient(ellipse at top left, #42454c, #25282e);
+  background: radial-gradient(ellipse at top left, #42454c, #25282e);
 }
 .BasicUI
   .salepreviewwidgets_SaleItemBrowserRow_y9MSd
@@ -6172,6 +6191,15 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover
     .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
     .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3sBHX
+    .salepreviewwidgets_DeckCompatIcon_hup-v {
+    display: none;
+  }
+  html:not(.BasicUI)
+    .salepreviewwidgets_SaleItemBrowserRow_y9MSd
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
+    .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
+    .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3sBHX
     .ReviewScore {
     display: none;
   }
@@ -6637,7 +6665,7 @@ html.touch
   left: 4px;
   backdrop-filter: blur(24px);
   border-radius: 2px;
-  text-shadow: 0px 1px 1px #0000001f;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1215686275);
 }
 .salepreviewwidgets_LocalizationSpan_3WrJ4 {
   white-space: pre-wrap;
@@ -6692,7 +6720,11 @@ html.touch
 .gameactions_GotSteamDialog_3omvM
   .gameactions_Buttons_2zw5J
   .gameactions_Button_dbZlJ:hover {
-  background: linear-gradient(to bottom, #66c0f4 5%, #2f89bc 95%);
+  background: linear-gradient(
+    to bottom,
+    rgb(102, 192, 244) 5%,
+    rgb(47, 137, 188) 95%
+  );
 }
 .gameactions_GotSteamDialog_3omvM
   .gameactions_Buttons_2zw5J
@@ -6914,14 +6946,13 @@ html.responsive.touch .ContentHubSalePage {
 }
 .partnersaledisplay_PresenterDisclaimer_2DKML {
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.65);
   margin: auto;
-  margin-top: 74px;
-  margin-bottom: -74px;
+  margin-bottom: 12px;
   text-align: center;
   padding: 4px 32px;
   max-width: 940px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   text-shadow: 1px 1px 3px #000;
   z-index: 2;
   cursor: default;
@@ -7347,7 +7378,7 @@ html.responsive.touch
   .partnersaledisplay_MobileTabSelectorButton_3JQSU
   .DialogDropDown {
   width: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   font-weight: 700;
 }
 .partnersaledisplay_MobileTabSelector___-ej
@@ -7549,10 +7580,14 @@ html.responsive.touch
   background-size: cover;
   -webkit-mask-image: radial-gradient(
     circle at top left,
-    black,
+    rgb(0, 0, 0),
     rgba(0, 0, 0, 0) 60%
   );
-  mask-image: radial-gradient(circle at top left, black, rgba(0, 0, 0, 0) 60%);
+  mask-image: radial-gradient(
+    circle at top left,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0) 60%
+  );
   filter: blur(30px);
   opacity: 0.3;
 }

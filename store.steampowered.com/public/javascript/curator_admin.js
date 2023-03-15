@@ -95,6 +95,29 @@ function CreateReview( appid, blurb, link_url, recommendation_state, received_co
 
 }
 
+function UpdateCuratorSearchAlias( elForm, bAsync )
+{
+	if( bAsync !== false )
+		bAsync = true;
+
+	var search_alias = $J( '#search_alias').val();
+
+	$J.ajax ( {
+		url: g_strCuratorAdminURL + 'ajaxupdatecuratorsearchalias/',
+		data: {
+			search_alias: search_alias,
+			sessionid: g_sessionID,
+			async: bAsync,
+		},
+		dataType: 'json',
+		type: 'POST',
+		async: bAsync
+	} ).fail( function( data ){
+		var response = JSON.parse(data.responseText);
+		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.msg ) );
+	});
+}
+
 function UpdateCreatorHomeVanityURL( elForm, bAsync )
 {
 	if( bAsync !== false )

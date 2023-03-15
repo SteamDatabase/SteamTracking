@@ -121,7 +121,7 @@ html.tablet .friends_nav:not(.expanded) > a {
 	display: block;
 }
 
-html.tablet .active .SVGIcon_DownArrowContextMenu {
+html.tablet .active .down_arrow_context_menu {
 	display: none;
 }
 

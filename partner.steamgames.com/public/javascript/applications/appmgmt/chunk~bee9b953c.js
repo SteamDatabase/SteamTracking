@@ -355,6 +355,9 @@
         CategoriesList: "categories_CategoriesList_YMtVa",
         CategoryCtn: "categories_CategoryCtn_1vjux",
         Category: "categories_Category_12BB3",
+        CategoryType: "categories_CategoryType_2rg93",
+        ExcludedFromSearch: "categories_ExcludedFromSearch_1qSt9",
+        ReplacesTags: "categories_ReplacesTags_2VMbz",
         CategoryEditor: "categories_CategoryEditor_hDZX9",
         TagOrCategoryList: "categories_TagOrCategoryList_33SvL",
         IDSelector: "categories_IDSelector_1COCu",
@@ -1107,8 +1110,8 @@
         j = a.n(F),
         Z = a(76478),
         z = a(30156),
-        Y = a.n(z),
-        V = a(35266);
+        V = a.n(z),
+        Y = a(35266);
       const X = "DEBUG_UseNewGameHover";
       function J() {
         return "none" !== Q();
@@ -1559,7 +1562,7 @@
               {
                 className: (0, k.Z)(
                   O().GameHoverCapsuleCtn,
-                  Y().InGameHover,
+                  V().InGameHover,
                   n && O().UseHidingBottomHalf
                 ),
                 onClick: o,
@@ -1623,7 +1626,7 @@
         if (S) return i.createElement(i.Fragment, null, e.children);
         if (!J())
           return i.createElement(
-            V._,
+            Y._,
             {
               type: (0, v.Hy)(g.GetStoreItemType()),
               id: t.id,
@@ -1995,7 +1998,7 @@
         j = a(30156),
         Z = a.n(j),
         z = a(13806);
-      function Y(e) {
+      function V(e) {
         var t;
         const { info: a } = e,
           [n] = (0, p.jk)(a.id, (0, u.TM)(a.type), { include_assets: !0 }),
@@ -2047,7 +2050,7 @@
             })
           );
         const m = new Array();
-        V(n, !0, m);
+        Y(n, !0, m);
         const c = m.length - 1,
           g = (e) => {
             const t = m.indexOf(e);
@@ -2075,7 +2078,7 @@
           className: Z().HeroCapsuleImageContainer,
         });
       }
-      function V(e, t, a) {
+      function Y(e, t, a) {
         var n;
         if (
           (t
@@ -2241,8 +2244,8 @@
               bHidePlatforms: W,
               bHideContainedApps: F,
               bAllowTwoLinesForHeader: j,
-              bShowReviewSummary: Y,
-              bShowDeckCompatibilityDialog: V,
+              bShowReviewSummary: V,
+              bShowDeckCompatibilityDialog: Y,
               bAutoFocus: X,
               fnOnClickOverride: Q,
             } = e,
@@ -2410,7 +2413,7 @@
                           null,
                           s.createElement(S.a, { item: C }),
                           Boolean(
-                            V &&
+                            Y &&
                               0 ==
                                 (null == d ? void 0 : d.GetStoreItemType()) &&
                               d.GetPlatforms()
@@ -2422,7 +2425,7 @@
                             })
                         )
                     ),
-                    Y && s.createElement(K.Yb, { appInfo: C })
+                    V && s.createElement(K.Yb, { appInfo: C })
                   ),
                   ie && s.createElement(te, { info: A }),
                   Boolean(ce && oe) &&
@@ -2459,7 +2462,7 @@
                               bShowDemoButton: G,
                               bHidePrice: B,
                               bHideWishlistButton: ue,
-                              bShowDeckCompatibilityDialog: V,
+                              bShowDeckCompatibilityDialog: Y,
                             })
                       )
                     : s.createElement(
@@ -2562,9 +2565,9 @@
             position: "center",
             string: (0, x.Xx)("#Loading"),
           });
-        if ("library" === a) return s.createElement(Y, { info: t });
+        if ("library" === a) return s.createElement(V, { info: t });
         let o = new Array();
-        V(n, "header" === a, o), (o = o.filter((e) => Boolean(e) && "" !== e));
+        Y(n, "header" === a, o), (o = o.filter((e) => Boolean(e) && "" !== e));
         let r,
           l,
           i = "";
@@ -4570,7 +4573,8 @@
         );
       }
       function b(e) {
-        const { categories: t, onUpdate: a } = e;
+        const { categories: t, onUpdate: a } = e,
+          { rgTags: s, rgCategories: r } = (0, n.bA)();
         if (!t) return o.createElement("div", null, "No categories defined.");
         return o.createElement(
           "div",
@@ -4602,6 +4606,47 @@
                         })(t, e),
                     },
                     e.handle
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: E().CategoryType },
+                    "tagids" === e.type
+                      ? "Tags"
+                      : "category" === e.type
+                      ? "Category"
+                      : "Special"
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: E().ExcludedFromSearch },
+                    !0 === e.exclude_from_search ? "Excluded from search" : ""
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: E().ReplacesTags },
+                    ((e, t) => {
+                      const a =
+                        null == t
+                          ? void 0
+                          : t
+                              .map((t) => {
+                                const a =
+                                  null == e
+                                    ? void 0
+                                    : e.find((e) => e.tagid === t.id);
+                                return (
+                                  ((null == a ? void 0 : a.name) ||
+                                    "Unknown tag") +
+                                  " (" +
+                                  String(t.id) +
+                                  ")"
+                                );
+                              })
+                              .join(", ");
+                      return a
+                        ? o.createElement("span", null, "Replaces tags: " + a)
+                        : o.createElement("span", null);
+                    })(s, e.replaces_tags)
                   )
                 )
               ),

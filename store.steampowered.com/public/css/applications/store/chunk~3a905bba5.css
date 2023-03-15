@@ -15,7 +15,7 @@
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
-  background-color: #3b5a7280;
+  background-color: rgba(59, 90, 114, 0.5019607843);
   align-items: center;
   transition: background-color 0.2s ease;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
 }
 .deckverified_BannerContentDesktop_2qr1f:focus-within,
 .deckverified_BannerContent_1B2KF:focus-within {
-  background-color: #678ba670;
+  background-color: rgba(103, 139, 166, 0.4392156863);
 }
 .deckverified_BannerContentDesktop_2qr1f {
   background: linear-gradient(
@@ -1097,7 +1097,7 @@
   .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0,
 .salepreviewwidgets_InGameHover_2uFQ-
   .salepreviewwidgets_StoreSalePriceBox_Wh0L8 {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 .salepreviewwidgets_InGameHover_2uFQ-
   .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
@@ -1289,8 +1289,16 @@
   text-decoration: none !important;
   color: #d2e885 !important;
   background: #799905;
-  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
-  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+  background: -webkit-linear-gradient(
+    top,
+    rgb(121, 153, 5) 5%,
+    rgb(83, 105, 4) 95%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgb(121, 153, 5) 5%,
+    rgb(83, 105, 4) 95%
+  );
   padding: 0 15px;
   font-size: 15px;
   line-height: 30px;
@@ -1299,8 +1307,16 @@
   text-decoration: none !important;
   color: #fff !important;
   background: #a4d007;
-  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
-  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
+  background: -webkit-linear-gradient(
+    top,
+    rgb(164, 208, 7) 5%,
+    rgb(107, 135, 5) 95%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgb(164, 208, 7) 5%,
+    rgb(107, 135, 5) 95%
+  );
 }
 .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
   position: relative;
@@ -1944,10 +1960,14 @@ html.touch
   border-radius: 3px;
   background: -webkit-radial-gradient(
     ellipse at top left,
-    #42454c99,
-    #25282e66
+    rgba(66, 69, 76, 0.6),
+    rgba(37, 40, 46, 0.4)
   );
-  background: radial-gradient(ellipse at top left, #42454c99, #25282e66);
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(66, 69, 76, 0.6),
+    rgba(37, 40, 46, 0.4)
+  );
   backdrop-filter: blur(15px);
   height: 110px;
   position: absolute;
@@ -1989,12 +2009,8 @@ html.touch
 .salepreviewwidgets_SaleItemBrowserRow_y9MSd
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
   .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover {
-  background: -webkit-radial-gradient(
-    ellipse at top left,
-    #42454cff,
-    #25282eff
-  );
-  background: radial-gradient(ellipse at top left, #42454cff, #25282eff);
+  background: -webkit-radial-gradient(ellipse at top left, #42454c, #25282e);
+  background: radial-gradient(ellipse at top left, #42454c, #25282e);
 }
 .BasicUI
   .salepreviewwidgets_SaleItemBrowserRow_y9MSd
@@ -2903,6 +2919,15 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover
     .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
     .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3sBHX
+    .salepreviewwidgets_DeckCompatIcon_hup-v {
+    display: none;
+  }
+  html:not(.BasicUI)
+    .salepreviewwidgets_SaleItemBrowserRow_y9MSd
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
+    .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover
+    .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
+    .salepreviewwidgets_StoreSaleWidgetReleaseAndTags_3sBHX
     .ReviewScore {
     display: none;
   }
@@ -3368,7 +3393,7 @@ html.touch
   left: 4px;
   backdrop-filter: blur(24px);
   border-radius: 2px;
-  text-shadow: 0px 1px 1px #0000001f;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1215686275);
 }
 .salepreviewwidgets_LocalizationSpan_3WrJ4 {
   white-space: pre-wrap;
@@ -3423,7 +3448,11 @@ html.touch
 .gameactions_GotSteamDialog_3omvM
   .gameactions_Buttons_2zw5J
   .gameactions_Button_dbZlJ:hover {
-  background: linear-gradient(to bottom, #66c0f4 5%, #2f89bc 95%);
+  background: linear-gradient(
+    to bottom,
+    rgb(102, 192, 244) 5%,
+    rgb(47, 137, 188) 95%
+  );
 }
 .gameactions_GotSteamDialog_3omvM
   .gameactions_Buttons_2zw5J
@@ -3632,7 +3661,7 @@ html.touch
   display: block;
 }
 .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
   width: 0;
   height: 0;
   padding: 7px 0;
@@ -3658,7 +3687,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 .gamehover_BottomShelf_2tBkj {
   background: linear-gradient(
     359.91deg,
-    #2b333a 30%,
+    rgb(43, 51, 58) 30%,
     rgba(103, 113, 122, 0.3) 85%
   );
   mix-blend-mode: normal;
@@ -3988,14 +4017,13 @@ html.responsive.touch .ContentHubSalePage {
 }
 .partnersaledisplay_PresenterDisclaimer_2DKML {
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.65);
   margin: auto;
-  margin-top: 74px;
-  margin-bottom: -74px;
+  margin-bottom: 12px;
   text-align: center;
   padding: 4px 32px;
   max-width: 940px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   text-shadow: 1px 1px 3px #000;
   z-index: 2;
   cursor: default;
@@ -4421,7 +4449,7 @@ html.responsive.touch
   .partnersaledisplay_MobileTabSelectorButton_3JQSU
   .DialogDropDown {
   width: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   font-weight: 700;
 }
 .partnersaledisplay_MobileTabSelector___-ej
@@ -4623,10 +4651,14 @@ html.responsive.touch
   background-size: cover;
   -webkit-mask-image: radial-gradient(
     circle at top left,
-    black,
+    rgb(0, 0, 0),
     rgba(0, 0, 0, 0) 60%
   );
-  mask-image: radial-gradient(circle at top left, black, rgba(0, 0, 0, 0) 60%);
+  mask-image: radial-gradient(
+    circle at top left,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0) 60%
+  );
   filter: blur(30px);
   opacity: 0.3;
 }

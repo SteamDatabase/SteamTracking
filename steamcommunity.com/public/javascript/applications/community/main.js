@@ -50,6 +50,9 @@
         SubMenu: "contextmenu_SubMenu_jVo8T",
         Label: "contextmenu_Label_38fI0",
         Arrow: "contextmenu_Arrow_2NKnR",
+        IconContainer: "contextmenu_IconContainer_J6UFb",
+        ContextMenuHRSeparator: "contextmenu_ContextMenuHRSeparator_3Ac-M",
+        AddSeparator: "contextmenu_AddSeparator_3yuoe",
         PopoutSubMenu: "contextmenu_PopoutSubMenu_IpTgn",
         PopoutSubMenuItems: "contextmenu_PopoutSubMenuItems_y5L1f",
       };
@@ -135,6 +138,7 @@
         AlignRight: "gamepaddialog_AlignRight_4eBGA",
         AlignLeft: "gamepaddialog_AlignLeft_2N3q6",
         AlignCenter: "gamepaddialog_AlignCenter_3groU",
+        FullWidth: "gamepaddialog_FullWidth_1a_HO",
         ControlsListChild: "gamepaddialog_ControlsListChild_XvRso",
         "QuickAccess-Menu": "gamepaddialog_QuickAccess-Menu_1YEXn",
         BottomButtons: "gamepaddialog_BottomButtons_3_Evp",
@@ -281,6 +285,7 @@
         Active: "pagedsettings_Active_Myra7",
         PageListSpacer: "pagedsettings_PageListSpacer_33lCZ",
         PageListSeparator: "pagedsettings_PageListSeparator_1UEEm",
+        Transparent: "pagedsettings_Transparent_SeoUZ",
       };
     },
     19425: (e) => {
@@ -1941,7 +1946,7 @@
     },
     60209: (e, t, n) => {
       "use strict";
-      n.d(t, { P9: () => s, Ub: () => a, bY: () => l, y$: () => c });
+      n.d(t, { P9: () => s, Ub: () => a, bY: () => l, lS: () => c });
       var r = n(89526);
       const i = r.createContext(void 0),
         o = i.Provider,
@@ -1971,7 +1976,7 @@
         return r.createElement(o, { value: a }, n);
       }
       const l = () => s().useActiveSteamInterface().GetServiceTransport(),
-        c = () => s().useStorage();
+        c = () => s().useActiveSteamInterface();
     },
     43057: (e, t, n) => {
       "use strict";
@@ -2122,7 +2127,7 @@
           this.m_mapManagers.set(t, this.GetContextMenuManager(e));
         }
       }
-      const a = (0, i.Y)("ContextMenuFactory", () => new s());
+      const a = (0, i.Yt)("ContextMenuFactory", () => new s());
       function l(e, t, n) {
         let r,
           i,
@@ -2132,7 +2137,7 @@
           (null == s ? void 0 : s.preventDefault) &&
           (null == s ? void 0 : s.stopPropagation)
         ) {
-          if (s.shiftKey) return null;
+          if (s.shiftKey || (s.altKey && !n.bRootContextMenu)) return null;
           s.preventDefault(),
             s.stopPropagation(),
             (o = s.currentTarget),
@@ -2613,9 +2618,11 @@
           (e[(e.NoMinimize = 32768)] = "NoMinimize"),
           (e[(e.PopUpMenu = 65536)] = "PopUpMenu"),
           (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+          (e[(e.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+          (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
           (e[(e.Overlay = 8712)] = "Overlay"),
-          (e[(e.Notification = 90632)] = "Notification"),
-          (e[(e.PopupContextMenu = 65544)] = "PopupContextMenu");
+          (e[(e.Notification = 352776)] = "Notification"),
+          (e[(e.PopupContextMenu = 327688)] = "PopupContextMenu");
       })(_ || (_ = {}));
       const f = o.createContext({ ownerWindow: window }),
         v = () => o.useContext(f);
@@ -2717,7 +2724,7 @@
               )),
             S.AddTrackedPopup(this),
             a
-              ? e && this.Focus()
+              ? (this.OnCreateInternal(), e && this.Focus())
               : (null ===
                   (r =
                     null === (n = SteamClient.Features) || void 0 === n
@@ -3201,7 +3208,7 @@
         "DebouncedSaveSavedDimensionStore",
         null
       );
-      let S = (0, g.Y)("PopupManager", () => new E());
+      let S = (0, g.Yt)("PopupManager", () => new E());
       window.g_PopupManager = S;
     },
     17149: (e, t, n) => {
@@ -5261,10 +5268,12 @@
         d = n(13806),
         m = n(31621),
         h = n(70983);
-      const p = (0, c.Y)("GamepadNavigationContext", () =>
+      const p = (0, c.Yt)("GamepadNavigationContext", () =>
           i.createContext(null)
         ),
-        _ = (0, c.Y)("FocusRingNavigationContext", () => i.createContext(a.U7));
+        _ = (0, c.Yt)("FocusRingNavigationContext", () =>
+          i.createContext(a.U7)
+        );
       function g(e) {
         const { navRef: t } = e,
           n = (0, r._T)(e, ["navRef"]),
@@ -9012,7 +9021,7 @@
               BIsElementValidForInput: () => !1,
             };
       }
-      const d = (0, s.Y)("VirtualKeyboardRefFactory", () => new c());
+      const d = (0, s.Yt)("VirtualKeyboardRefFactory", () => new c());
       function m(e, t) {
         const { onTextEntered: n } = e,
           s = (0, r._T)(e, ["onTextEntered"]),
@@ -9421,9 +9430,16 @@
     },
     25730: (e, t, n) => {
       "use strict";
-      n.d(t, { Y: () => r });
+      n.d(t, { Yt: () => i });
+      var r;
       n(6960);
-      function r(e, t) {
+      !(function (e) {
+        (e[(e.k_ENoiseGateLevel_Off = 0)] = "k_ENoiseGateLevel_Off"),
+          (e[(e.k_ENoiseGateLevel_Low = 1)] = "k_ENoiseGateLevel_Low"),
+          (e[(e.k_ENoiseGateLevel_Medium = 2)] = "k_ENoiseGateLevel_Medium"),
+          (e[(e.k_ENoiseGateLevel_High = 3)] = "k_ENoiseGateLevel_High");
+      })(r || (r = {}));
+      function i(e, t) {
         return t();
       }
     },
@@ -11660,14 +11676,14 @@
     14100: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Td: () => D,
-        xV: () => y,
-        Yr: () => I,
-        Zo: () => R,
-        D1: () => T,
-        Vc: () => L,
-        Wn: () => O,
-        T: () => B,
+        Td: () => M,
+        xV: () => R,
+        Yr: () => y,
+        Zo: () => D,
+        D1: () => O,
+        Vc: () => F,
+        Wn: () => B,
+        T: () => x,
       });
       var r = n(33940),
         i = n(88464),
@@ -11688,21 +11704,22 @@
           : n == u.zE.BACKWARD && t.BFocusLastChild(c.uS.GAMEPAD);
       }
       var h = n(25730),
-        p = n(43813),
-        _ = (n(46723), n(24868), n(86701)),
-        g = n(13806),
-        f = n(63845),
-        v = n(81052),
-        C = n(31587),
-        b = n(31621),
-        E = n(70983),
-        S = n(80346),
-        w = n.n(S);
+        p = n(50840),
+        _ = n(43813),
+        g = (n(46723), n(24868), n(86701)),
+        f = n(13806),
+        v = n(63845),
+        C = n(81052),
+        b = n(31587),
+        E = n(31621),
+        S = n(70983),
+        w = n(80346),
+        I = n.n(w);
       n(72745);
-      const I = (0, h.Y)("ContextMenuInstanceContext", () =>
+      const y = (0, h.Yt)("ContextMenuInstanceContext", () =>
         o.createContext(null)
       );
-      let y = class extends o.Component {
+      let R = class extends o.Component {
         constructor() {
           super(...arguments),
             (this.m_navRef = (0, a.Hy)()),
@@ -11717,7 +11734,7 @@
             null === (e = this.m_navRef.current) ||
               void 0 === e ||
               e.TakeFocus(),
-            (0, b.k$)(this.props.refInstance, this.instance);
+            (0, E.k$)(this.props.refInstance, this.instance);
         }
         componentDidUpdate(e) {
           e.label !== this.props.label &&
@@ -11755,7 +11772,7 @@
               "refInstance",
             ]);
           const p =
-            null !== (e = this.context.styles) && void 0 !== e ? e : w();
+            null !== (e = this.context.styles) && void 0 !== e ? e : I();
           let _ = null != c ? c : "#Button_Cancel";
           if (1 == this.context.presentation) {
             const e = () => {
@@ -11767,7 +11784,7 @@
                 {},
                 h,
                 {
-                  className: (0, g.Z)(
+                  className: (0, f.Z)(
                     p.contextMenuContents,
                     { [p.hasSubMenu]: this.instance.BIsSubMenuVisible() },
                     i
@@ -11791,11 +11808,11 @@
                 o.createElement(
                   o.Fragment,
                   null,
-                  o.createElement(M, null),
+                  o.createElement(k, null),
                   o.createElement(
-                    R,
+                    D,
                     { className: p.Cancel, onSelected: e },
-                    (0, C.Xx)(_)
+                    (0, b.Xx)(_)
                   )
                 ),
               this.instance.BIsSubMenuVisible() &&
@@ -11809,7 +11826,7 @@
             "div",
             Object.assign({}, h, {
               ref: this.m_divRef,
-              className: (0, g.Z)(
+              className: (0, f.Z)(
                 {
                   [p.contextMenuContents]: !0,
                   [p.hasSubMenu]: this.instance.BIsSubMenuVisible(),
@@ -11821,11 +11838,11 @@
           );
         }
       };
-      (y.contextType = I),
-        (0, r.gn)([b.ak], y.prototype, "HideIfSubmenu", null),
-        (0, r.gn)([b.ak], y.prototype, "HideMenu", null),
-        (y = (0, r.gn)([i.Pi], y));
-      class R extends o.PureComponent {
+      (R.contextType = y),
+        (0, r.gn)([E.ak], R.prototype, "HideIfSubmenu", null),
+        (0, r.gn)([E.ak], R.prototype, "HideMenu", null),
+        (R = (0, r.gn)([i.Pi], R));
+      class D extends o.PureComponent {
         constructor() {
           super(...arguments),
             (this.m_ref = o.createRef()),
@@ -11876,7 +11893,7 @@
                     ? void 0
                     : e.styles) && void 0 !== t
                 ? t
-                : w();
+                : I();
           return 1 == this.context.presentation
             ? o.createElement(
                 l.s,
@@ -11890,7 +11907,7 @@
                   },
                   c,
                   {
-                    className: (0, g.Z)(
+                    className: (0, f.Z)(
                       this.props.className,
                       u.contextMenuItem,
                       "contextMenuItem",
@@ -11911,7 +11928,7 @@
                 this.props.children
               )
             : o.createElement(
-                p.s,
+                _.s,
                 Object.assign(
                   { ref: this.m_refDiv, onMouseEnter: this.OnMouseEnter },
                   c,
@@ -11925,37 +11942,50 @@
               );
         }
       }
-      (R.contextType = I),
-        (0, r.gn)([b.ak], R.prototype, "OnClick", null),
-        (0, r.gn)([b.ak], R.prototype, "OnOKButton", null),
-        (0, r.gn)([b.ak], R.prototype, "OnMouseEnter", null),
-        (0, r.gn)([b.ak], R.prototype, "Focus", null);
-      class D extends o.PureComponent {
+      (D.contextType = y),
+        (0, r.gn)([E.ak], D.prototype, "OnClick", null),
+        (0, r.gn)([E.ak], D.prototype, "OnOKButton", null),
+        (0, r.gn)([E.ak], D.prototype, "OnMouseEnter", null),
+        (0, r.gn)([E.ak], D.prototype, "Focus", null);
+      class M extends o.PureComponent {
         render() {
           const e = this.props,
             { bChecked: t, children: n, className: i } = e,
             s = (0, r._T)(e, ["bChecked", "children", "className"]);
           return o.createElement(
-            R,
+            D,
             Object.assign({}, s, {
-              className: (0, g.Z)(i, t && "menuChecked"),
+              className: (0, f.Z)(i, t && "menuChecked"),
             }),
             o.createElement("div", { className: "contextMenuCheckMark" }),
             n
           );
         }
       }
-      function M(e) {
+      class T extends o.PureComponent {
+        render() {
+          const e = this.props,
+            { icon: t, children: n } = e,
+            r = __rest(e, ["icon", "children"]);
+          return React.createElement(
+            D,
+            Object.assign({}, r),
+            React.createElement("div", { className: styles.IconContainer }, t),
+            n
+          );
+        }
+      }
+      function k(e) {
         var t;
         const n =
-          null !== (t = o.useContext(I).styles) && void 0 !== t ? t : w();
+          null !== (t = o.useContext(y).styles) && void 0 !== t ? t : I();
         return o.createElement("div", { className: n.ContextMenuSeparator });
       }
-      const T = (e) => {
-        const t = (0, E.id)();
-        return o.createElement(k, Object.assign({}, e, { bInGamepadUI: t }));
+      const O = (e) => {
+        const t = (0, S.id)();
+        return o.createElement(L, Object.assign({}, e, { bInGamepadUI: t }));
       };
-      class k extends o.PureComponent {
+      class L extends o.PureComponent {
         constructor(e) {
           super(e),
             (this.m_refItem = o.createRef()),
@@ -11986,7 +12016,7 @@
         }
         RenderSubMenu() {
           return o.createElement(
-            y,
+            R,
             { onMouseEnter: this.OnSubMenuMouseEnter, label: this.props.label },
             this.props.children
           );
@@ -12019,14 +12049,14 @@
               "bInGamepadUI",
             ]);
           const u =
-            null !== (e = this.context.styles) && void 0 !== e ? e : w();
+            null !== (e = this.context.styles) && void 0 !== e ? e : I();
           return o.createElement(
-            R,
+            D,
             Object.assign({}, c, {
               ref: this.m_refItem,
               onClick: this.OnClick,
               selected: i && !this.state.bActive,
-              className: (0, g.Z)(a, u.SubMenu, this.state.bActive && u.active),
+              className: (0, f.Z)(a, u.SubMenu, this.state.bActive && u.active),
               onMouseEnter: this.OnMouseEnter,
               onSelected: null,
               bInteractableItem: !0,
@@ -12036,19 +12066,19 @@
             o.createElement(
               "div",
               { className: u.Arrow },
-              o.createElement(_.$gZ, null)
+              o.createElement(g.$gZ, null)
             )
           );
         }
       }
-      (k.contextType = I),
-        (0, r.gn)([b.ak], k.prototype, "OnSubMenuMouseEnter", null),
-        (0, r.gn)([b.ak], k.prototype, "OnSubMenuHidden", null),
-        (0, r.gn)([b.ak], k.prototype, "ShowSubMenu", null),
-        (0, r.gn)([b.ak], k.prototype, "RenderSubMenu", null),
-        (0, r.gn)([b.ak], k.prototype, "OnMouseEnter", null),
-        (0, r.gn)([b.ak], k.prototype, "OnClick", null);
-      let O = class extends o.Component {
+      (L.contextType = y),
+        (0, r.gn)([E.ak], L.prototype, "OnSubMenuMouseEnter", null),
+        (0, r.gn)([E.ak], L.prototype, "OnSubMenuHidden", null),
+        (0, r.gn)([E.ak], L.prototype, "ShowSubMenu", null),
+        (0, r.gn)([E.ak], L.prototype, "RenderSubMenu", null),
+        (0, r.gn)([E.ak], L.prototype, "OnMouseEnter", null),
+        (0, r.gn)([E.ak], L.prototype, "OnClick", null);
+      let B = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_elMenu = void 0),
@@ -12099,7 +12129,7 @@
                   this.OnWindowResize
                 )),
             (this.m_elMenu = e || void 0),
-            E.De.IN_CLIENT && this.props.popup && this.m_elMenu
+            S.De.IN_CLIENT && this.props.popup && this.m_elMenu
               ? this.m_elMenu.ownerDocument.fonts.ready.then(() => {
                   this.PositionMenu();
                 })
@@ -12123,7 +12153,7 @@
           this.PositionMenu(!0);
         }
         OnBlur(e) {
-          (e.relatedTarget && v.ni(e.currentTarget, e.relatedTarget)) ||
+          (e.relatedTarget && C.ni(e.currentTarget, e.relatedTarget)) ||
             (e.relatedTarget &&
               this.props.instance.BIsElementInMenuHierarchy(e.relatedTarget)) ||
             this.props.instance.BIsSubMenuVisible() ||
@@ -12149,7 +12179,7 @@
             this.state.ready &&
             this.props.instance.visible &&
             (this.props.popup ||
-              !v.ni(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
+              !C.ni(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
           ) {
             let e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
             e && e.focus ? e.focus() : this.m_elMenu.focus();
@@ -12181,7 +12211,7 @@
           if (s) {
             this.props.options.bScreenCoordinates ||
               ((c += r.screenLeft), (u += r.screenTop)),
-              (i = v.sH(r, i));
+              (i = C.sH(r, i));
             let e = r.screen,
               t = 0,
               n = 0;
@@ -12198,13 +12228,13 @@
             a.bGrowToElementWidth && (l.menuMinWidth = Math.max(_, p - h));
           let g = (a.bOverlapHorizontal ? p : h) - _,
             f = g > 0,
-            C = d - (a.bOverlapHorizontal ? h : p) - _,
-            b = C > 0,
+            v = d - (a.bOverlapHorizontal ? h : p) - _,
+            b = v > 0,
             E = (a.bPreferPopLeft || !b) && f;
           f ||
             b ||
             ((E = f > b),
-            a.bFitToWindow && ((_ += (E ? g : C) - 8), (l.menuWidth = _))),
+            a.bFitToWindow && ((_ += (E ? g : v) - 8), (l.menuWidth = _))),
             (!a.bPreferPopLeft && b) || !f
               ? (l.menuLeft = a.bOverlapHorizontal ? h : p)
               : (l.menuRight = d - (a.bOverlapHorizontal ? p : h));
@@ -12307,12 +12337,12 @@
                 (e.width = this.state.menuWidth),
               void 0 !== this.state.menuMinWidth &&
                 (e.minWidth = this.state.menuMinWidth));
-          let t = this.props.options.strClassName || w().contextMenu;
+          let t = this.props.options.strClassName || I().contextMenu;
           return (
             (this.props.options.bCreateHidden ||
               (this.props.instance.visible && this.state.ready)) &&
               (t += " visible"),
-            (t += " " + w().ContextMenuFocusContainer),
+            (t += " " + I().ContextMenuFocusContainer),
             o.createElement(
               "div",
               {
@@ -12328,23 +12358,25 @@
           );
         }
       };
-      function L(e) {
+      function F(e) {
         return o.createElement("div", {
-          className: w().ContextMenuMouseOverlay,
+          className: I().ContextMenuMouseOverlay,
         });
       }
-      function B(e) {
+      function x(e) {
         let t = [],
-          n = v.RA(e),
+          n = C.RA(e),
           r = n.getSelection(),
           i = r && r.rangeCount > 0 && r.toString().length > 0,
           a = e.target,
           l = !1;
+        const c = e.clientY,
+          u = e.clientX;
         if (
           (a &&
             "tagName" in a &&
             (("INPUT" != a.tagName && "TEXTAREA" != a.tagName) || (l = !0)),
-          E.De.IN_CLIENT &&
+          S.De.IN_CLIENT &&
             l &&
             n.SteamClient._internal &&
             n.SteamClient._internal.GetSpellingSuggestions &&
@@ -12357,7 +12389,7 @@
               r.forEach((e, r) => {
                 t.push(
                   o.createElement(
-                    R,
+                    D,
                     {
                       key: `spelling_${r}_${e}`,
                       onSelected: () => {
@@ -12369,7 +12401,7 @@
                           i.setSelectionRange(i.selectionEnd, i.selectionEnd),
                           a.focus();
                       },
-                      className: w().NoSeparation,
+                      className: I().NoSeparation,
                     },
                     e
                   )
@@ -12381,13 +12413,13 @@
             (e = e.trim()),
               t.push(
                 o.createElement(
-                  R,
+                  D,
                   {
                     key: `addtodictionary_${e}`,
                     onSelected: () =>
                       n.SteamClient._internal.AddWordToDictionary(e),
                   },
-                  (0, C.Xx)(
+                  (0, b.Xx)(
                     "#ContextMenu_AddToDictionary",
                     e.length < r ? e : e.substring(0, r) + "..."
                   )
@@ -12399,63 +12431,93 @@
           ((n.document.queryCommandEnabled("cut") || (i && l)) &&
             t.push(
               o.createElement(
-                R,
+                D,
                 {
                   key: "cut",
                   onSelected: () => {
                     n.document.execCommand("cut");
                   },
                 },
-                (0, C.Xx)("#ContextMenu_Cut")
+                (0, b.Xx)("#ContextMenu_Cut")
               )
             ),
           (n.document.queryCommandEnabled("copy") || i) &&
             t.push(
               o.createElement(
-                R,
+                D,
                 {
                   key: "copy",
                   onSelected: () => {
                     n.document.execCommand("copy");
                   },
-                  className: w().NoSeparation,
+                  className: I().NoSeparation,
                 },
-                (0, C.Xx)("#ContextMenu_Copy")
+                (0, b.Xx)("#ContextMenu_Copy")
               )
             ),
-          E.De.IN_CLIENT &&
+          S.De.IN_CLIENT &&
             l &&
             n.SteamClient._internal &&
             n.SteamClient._internal.Paste &&
             t.push(
               o.createElement(
-                R,
+                D,
                 {
                   key: "paste",
                   onSelected: () => {
                     a.focus(), n.SteamClient._internal.Paste();
                   },
-                  className: w().NoSeparation,
+                  className: I().NoSeparation,
                 },
-                (0, C.Xx)("#ContextMenu_Paste")
+                (0, b.Xx)("#ContextMenu_Paste")
               )
             ),
+          S.De.IN_CLIENT &&
+            S.De.DEV_MODE &&
+            ((0, p.U5)("Browser.OpenDevTools") &&
+              t.push(
+                o.createElement(
+                  D,
+                  {
+                    key: "opendevtools",
+                    onSelected: () => {
+                      a.focus(), n.SteamClient.Browser.OpenDevTools();
+                    },
+                    className: I().AddSeparator,
+                  },
+                  "Open Dev Tools"
+                )
+              ),
+            (0, p.U5)("Browser.InspectElement") &&
+              t.push(
+                o.createElement(
+                  D,
+                  {
+                    key: "inspectelement",
+                    onSelected: () => {
+                      a.focus(), n.SteamClient.Browser.InspectElement(c, u);
+                    },
+                    className: I().NoSeparation,
+                  },
+                  "Inspect Element"
+                )
+              )),
           t.length)
         )
-          (0, s.yV)(o.createElement(y, null, t), e);
+          (0, s.yV)(o.createElement(R, null, t), e, { bRootContextMenu: !0 });
         else {
           if (e.shiftKey) return;
           e.preventDefault(), e.stopPropagation();
         }
       }
-      (0, r.gn)([b.ak], O.prototype, "BindMenuElement", null),
-        (0, r.gn)([b.ak, (0, f.D)(100)], O.prototype, "OnMenuMutation", null),
-        (0, r.gn)([b.ak], O.prototype, "OnWindowResize", null),
-        (0, r.gn)([b.ak], O.prototype, "OnMessage", null),
-        (0, r.gn)([(0, f.D)(100)], O.prototype, "DebouncedPositionMenu", null),
-        (0, r.gn)([b.ak], O.prototype, "OnBlur", null),
-        (0, r.gn)([b.ak], O.prototype, "OnKeyDown", null),
-        (O = (0, r.gn)([i.Pi], O));
+      (0, r.gn)([E.ak], B.prototype, "BindMenuElement", null),
+        (0, r.gn)([E.ak, (0, v.D)(100)], B.prototype, "OnMenuMutation", null),
+        (0, r.gn)([E.ak], B.prototype, "OnWindowResize", null),
+        (0, r.gn)([E.ak], B.prototype, "OnMessage", null),
+        (0, r.gn)([(0, v.D)(100)], B.prototype, "DebouncedPositionMenu", null),
+        (0, r.gn)([E.ak], B.prototype, "OnBlur", null),
+        (0, r.gn)([E.ak], B.prototype, "OnKeyDown", null),
+        (B = (0, r.gn)([i.Pi], B));
     },
     43813: (e, t, n) => {
       "use strict";
@@ -12545,7 +12607,7 @@
         l = n(13806),
         c = n(31587),
         u = n(59821);
-      const d = (0, n(25730).Y)("DialogPresentationContext", () =>
+      const d = (0, n(25730).Yt)("DialogPresentationContext", () =>
           i.createContext({})
         ),
         m = () => i.useContext(d);
@@ -14784,8 +14846,12 @@
           )
         );
       }
-      function Ye() {
-        return i.createElement("div", { className: ze().PageListSeparator });
+      function Ye(e) {
+        return i.createElement("div", {
+          className: (0, l.Z)(ze().PageListSeparator, {
+            [ze().Transparent]: e.bTransparent,
+          }),
+        });
       }
       const qe = i.forwardRef(function (e, t) {
         var n, r, o;
@@ -14819,14 +14885,16 @@
         const v = i.useRef(),
           C = i.useCallback(() => v.current.TakeFocus(), [v]),
           b = c.map((t, n) => {
-            if ("separator" === t)
+            if ("separator" === t) {
+              const t = n === _ + 1 || n === _ - 1;
               return i.createElement(
                 i.Fragment,
                 { key: n },
                 e.renderPageListSeparator
                   ? e.renderPageListSeparator({})
-                  : i.createElement(Ye, null)
+                  : i.createElement(Ye, { bTransparent: t })
               );
+            }
             if ("spacer" === t)
               return i.createElement("div", {
                 key: n,
@@ -17341,9 +17409,9 @@
       n.d(t, {
         On: () => C,
         Pv: () => D,
-        uH: () => B,
-        RG: () => L,
-        JX: () => F,
+        uH: () => F,
+        RG: () => B,
+        JX: () => x,
         BL: () => l.BL,
         e1: () => f,
         D2: () => b,
@@ -17390,7 +17458,9 @@
         m = n(86701),
         h = n(81052),
         p = n(19621);
-      const _ = (0, u.Y)("ModalPresentationContext", () => r.createContext({})),
+      const _ = (0, u.Yt)("ModalPresentationContext", () =>
+          r.createContext({})
+        ),
         g = () => r.useContext(_);
       function f(e) {
         const t = g();
@@ -17511,11 +17581,16 @@
       var M = n(33940),
         T = n(88464),
         k = n(31587),
-        O = n(13806);
-      const L = (0, T.Pi)((e) => {
+        O = n(32338),
+        L = n(13806);
+      const B = (0, T.Pi)((e) => {
         const { onCancel: t, closeModal: n, bOKDisabled: o, onOK: s } = e,
-          a = (0, R.id)(),
-          l = r.useCallback(() => {
+          a = (0, R.id)();
+        (0, O.X)(
+          n || t,
+          "Either closeModal or onCancel should be passed to GenericDialog."
+        );
+        const l = r.useCallback(() => {
             (t && t()) || (n && n());
           }, [t, n]),
           c = r.useCallback(
@@ -17537,7 +17612,7 @@
           r.createElement(
             i.oX,
             {
-              classNameContent: (0, O.Z)(
+              classNameContent: (0, L.Z)(
                 "GenericConfirmDialog",
                 e.bAllowFullSize && "DialogContentFullSize",
                 e.className
@@ -17549,7 +17624,7 @@
           )
         );
       });
-      let B = class extends r.Component {
+      let F = class extends r.Component {
         Cancel() {
           this.props.onCancel && this.props.onCancel(),
             this.props.closeModal && this.props.closeModal();
@@ -17601,7 +17676,7 @@
                   bUpdateDisabled: this.props.bMiddleDisabled,
                 })),
             r.createElement(
-              L,
+              B,
               Object.assign({}, d),
               r.createElement(
                 w.s,
@@ -17624,9 +17699,9 @@
           );
         }
       };
-      (0, M.gn)([s.ak], B.prototype, "Cancel", null),
-        (B = (0, M.gn)([T.Pi], B));
-      let F = class extends r.Component {
+      (0, M.gn)([s.ak], F.prototype, "Cancel", null),
+        (F = (0, M.gn)([T.Pi], F));
+      let x = class extends r.Component {
         render() {
           const e = Object.assign(
             {
@@ -17639,10 +17714,10 @@
             },
             this.props
           );
-          return r.createElement(B, Object.assign({}, e));
+          return r.createElement(F, Object.assign({}, e));
         }
       };
-      F = (0, M.gn)([T.Pi], F);
+      x = (0, M.gn)([T.Pi], x);
     },
     19231: (e, t, n) => {
       "use strict";
@@ -17888,7 +17963,8 @@
       }
       function S(e) {
         const { instance: t, browserInfo: n } = e,
-          r = i.useCallback(
+          r = i.useRef(),
+          s = i.useCallback(
             (e) => {
               const { options: n, position: r } = t,
                 i = r.element;
@@ -17921,7 +17997,7 @@
             },
             [t]
           ),
-          { popupObj: s, element: a } = (0, m.B)(
+          { popupObj: a, element: l } = (0, m.B)(
             "contextmenu_" + t.key,
             {
               title: t.options.title || "Menu",
@@ -17934,29 +18010,30 @@
                 d.eL.PopupContextMenu |
                 (t.options.bCreateHidden ? d.eL.Hidden : 0),
             },
-            { updateParamsBeforeShow: r }
+            { updateParamsBeforeShow: s }
           );
         return (
           (0, i.useEffect)(() => {
             t.options.bRetainOnHide &&
-              s &&
+              a &&
               (t.visible
-                ? (s.window.SteamClient.Window.SetForegroundWindow(),
+                ? (r.current && r.current.PositionMenu(),
+                  a.window.SteamClient.Window.SetForegroundWindow(),
                   t.TakeFocus())
-                : s.window.SteamClient.Window.HideWindow());
-          }, [s, t, t.visible]),
-          T(s.window),
+                : a.window.SteamClient.Window.HideWindow());
+          }, [a, t, t.visible]),
+          T(a.window),
           i.useLayoutEffect(() => {
-            t.SetPopup(s);
-          }, [t, s]),
-          a
+            t.SetPopup(a);
+          }, [t, a]),
+          l
             ? o.createPortal(
                 i.createElement(
                   h.Wn,
-                  Object.assign({}, t.position, { popup: s }),
+                  Object.assign({ ref: r }, t.position, { popup: a }),
                   t.ReactElement
                 ),
-                a
+                l
               )
             : null
         );
@@ -18227,27 +18304,32 @@
           return this.m_rgLegacyPopupModals;
         }
         ShowLegacyPopupModal(e, t, n, r) {
-          const o = new i.lc(
-            e,
-            t,
-            n,
-            Object.assign({ bCenterOnWindow: this.m_bCenterPopupsOnWindow }, r)
-          );
+          const o = () => {
+              let e = this.m_rgLegacyPopupModals.indexOf(s);
+              -1 != e && this.m_rgLegacyPopupModals.splice(e, 1),
+                this.m_OnLegacyPopupModalCountChanged.Dispatch(
+                  this.m_rgLegacyPopupModals.length
+                ),
+                n.fnOnClose && n.fnOnClose();
+            },
+            s = new i.lc(
+              e,
+              t,
+              Object.assign(Object.assign({}, n), { fnOnClose: o }),
+              Object.assign(
+                { bCenterOnWindow: this.m_bCenterPopupsOnWindow },
+                r
+              )
+            );
           return (
-            this.m_rgLegacyPopupModals.push(o),
+            this.m_rgLegacyPopupModals.push(s),
             this.m_OnLegacyPopupModalCountChanged.Dispatch(
               this.m_rgLegacyPopupModals.length
             ),
             {
-              Close: () => {
-                let e = this.m_rgLegacyPopupModals.indexOf(o);
-                -1 != e && this.m_rgLegacyPopupModals.splice(e, 1),
-                  this.m_OnLegacyPopupModalCountChanged.Dispatch(
-                    this.m_rgLegacyPopupModals.length
-                  );
-              },
+              Close: o,
               Update: (e) => {
-                o.UpdateModal(e);
+                s.UpdateModal(e);
               },
             }
           );
@@ -18289,7 +18371,7 @@
           this.m_mapModalManager.delete(e);
         }
       }
-      const u = (0, r.Y)("ModalManagerFactory", () => new c());
+      const u = (0, r.Yt)("ModalManagerFactory", () => new c());
       function d(e) {
         return u.GetModalManager(e);
       }
@@ -18422,28 +18504,28 @@
       function c(e, t, n) {
         return (0, r.mG)(this, void 0, void 0, function* () {
           const i = (0, o.BL)(t),
-            l = (null == n ? void 0 : n.bForcePopOut) || i.BOnlyPopups();
+            l = (null == n ? void 0 : n.bForcePopOut) || h(i);
           (0,
           s.X)(l || (null == n ? void 0 : n.bNeverPopOut), "Conflicting popout options; will ignore bNeverPopOut");
           const c = !l && !0 === (null == n ? void 0 : n.bNeverPopOut),
-            u = i.BOnlyPopups() || (!c && m(i, t)),
-            h =
+            u = h(i) || (!c && m(i, t)),
+            p =
               l &&
               (null == n ? void 0 : n.popupWidth) &&
               (null == n ? void 0 : n.popupHeight);
-          let p;
+          let _;
           u &&
-            !h &&
-            (p = yield (function (e, t, n) {
+            !p &&
+            (_ = yield (function (e, t, n) {
               return (0, r.mG)(this, void 0, void 0, function* () {
                 return new Promise((r, i) => {
                   e.RequestModalMeasure(t, r, n);
                 });
               });
             })(i, e, null == n ? void 0 : n.promiseRenderComplete));
-          const _ =
-            p && p.height / t.innerHeight < 0.9 && p.width / t.innerWidth < 0.8;
-          if (c || (!l && _)) return d(e, t);
+          const g =
+            _ && _.height / t.innerHeight < 0.9 && _.width / t.innerWidth < 0.8;
+          if (c || (!l && g)) return d(e, t);
           {
             const r = {
                 strTitle:
@@ -18452,10 +18534,10 @@
                 fnOnClose: null == n ? void 0 : n.fnOnClose,
                 popupWidth:
                   (null == n ? void 0 : n.popupWidth) ||
-                  (null == p ? void 0 : p.width),
+                  (null == _ ? void 0 : _.width),
                 popupHeight:
                   (null == n ? void 0 : n.popupHeight) ||
-                  (null == p ? void 0 : p.height),
+                  (null == _ ? void 0 : _.height),
                 bHideMainWindowForPopouts:
                   null == n ? void 0 : n.bHideMainWindowForPopouts,
               },
@@ -18479,39 +18561,42 @@
       function d(e, t, n, r, s, a, l) {
         let c, u;
         const d = e.props.closeModal,
-          h = () => {
+          p = () => {
             u && u.Close(),
               d && d(),
               (null == r ? void 0 : r.fnOnClose) && r.fnOnClose();
           },
-          p = () => {
-            c && c.Close(), h();
+          _ = () => {
+            c && c.Close(), p();
           },
-          _ = i.cloneElement(e, { closeModal: p });
+          g = i.cloneElement(e, { closeModal: _ });
         if (m((l = l || (0, o.BL)(t)), t) && r && n) {
-          if (r.bHideMainWindowForPopouts && !l.BOnlyPopups()) {
+          if (r.bHideMainWindowForPopouts && !h(l)) {
             const e = i.createElement(
               o.e1,
               {
                 className: "Hidden",
-                onEscKeypress: !_.props.bDisableBackgroundDismiss && p,
+                onEscKeypress: !g.props.bDisableBackgroundDismiss && _,
               },
               i.createElement("div", null)
             );
             u = l.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, r), {
-            fnOnClose: h,
+            fnOnClose: p,
             browserContext: s,
           });
-          c = l.ShowLegacyPopupModal(n, _, e, a);
-        } else c = l.ShowModal(_);
+          c = l.ShowLegacyPopupModal(n, g, e, a);
+        } else c = l.ShowModal(g);
         return c;
       }
       function m(e, t) {
         return (
           (e = e || (0, o.BL)(t || window)), l.De.USE_POPUPS && e.BUsePopups()
         );
+      }
+      function h(e) {
+        return e.BOnlyPopups && e.BOnlyPopups();
       }
     },
     86701: (e, t, n) => {
@@ -21237,6 +21322,9 @@
         TryHide() {
           this.m_fnHide && this.m_fnHide(), (this.m_fnHide = null);
         }
+        componentDidUpdate() {
+          this.props.bDisabled && this.TryHide();
+        }
         componentWillUnmount() {
           this.TryHide();
         }
@@ -22699,7 +22787,7 @@
         const r = new Date(1e3 * e),
           i = o.Yt.GetPreferredLocales(),
           s =
-            t.bForce24HourClock ||
+            (null == t ? void 0 : t.bForce24HourClock) ||
             (function (e) {
               let t = u.get(e);
               if (!0 === t || !1 === t) return t;
@@ -23603,24 +23691,24 @@
     70983: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => s.De,
+        De: () => o.De,
         E_: () => a,
-        Ek: () => p,
-        JA: () => s.JA,
-        Kc: () => C,
-        L7: () => s.L7,
-        Wj: () => s.Wj,
-        Zv: () => b,
+        Ek: () => s.Ek,
+        JA: () => o.JA,
+        Kc: () => m,
+        L7: () => o.L7,
+        Wj: () => o.Wj,
+        Zv: () => h,
         fI: () => c,
         id: () => u,
-        ip: () => f,
-        kQ: () => g,
-        y9: () => h,
+        ip: () => s.ip,
+        kQ: () => s.kQ,
+        y9: () => s.y9,
       });
       var r = n(89526),
         i = n(32338),
-        o = n(6283),
-        s = n(5545);
+        o = n(5545),
+        s = n(87017);
       const a = r.createContext({}),
         l = () => {
           let e = r.useContext(a);
@@ -23633,114 +23721,63 @@
           );
         };
       function c(e) {
-        const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: o } = e,
+        const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: s } = e,
           l = r.useMemo(
             () => ({
-              IN_GAMEPADUI: null != t ? t : s.De.IN_GAMEPADUI,
+              IN_GAMEPADUI: null != t ? t : o.De.IN_GAMEPADUI,
               IN_DESKTOPUI: null != n && n,
               IN_VR: null != i && i,
             }),
             [t, n, i]
           );
-        return r.createElement(a.Provider, { value: l }, o);
+        return r.createElement(a.Provider, { value: l }, s);
       }
       function u() {
         const e = l();
         return null == e ? void 0 : e.IN_GAMEPADUI;
       }
-      const d = "webui_config",
-        m = "presentation_mode";
-      function h() {
-        let e = null;
-        return (
-          (0, o.t$)() && (e = (0, o.bG)(m)),
-          Boolean(e && 1 === Number.parseInt(e))
-        );
-      }
-      function p(e = d) {
-        const t = {},
-          n = g("config", e);
-        n && (delete n.SESSIONID, Object.assign(s.De, n), (t.config = !0));
-        const r = g("userinfo", e);
-        r &&
-          (Object.assign(s.L7, r),
-          (t.userConfig = !0),
-          s.L7.is_support && h() && (s.L7.is_support = !1));
-        const i = g("broadcast", e);
-        i && (Object.assign(s.dk, i), (t.broadcastConfig = !0));
-        const o = g("community", e);
-        o && (Object.assign(s.JA, o), (t.communityConfig = !0));
-        const a = g("event", e);
-        return a && (Object.assign(s.Wj, a), (t.eventConfig = !0)), t;
-      }
-      function _(e, t = d, n) {
-        let r;
-        if (
-          ((r =
-            "string" == typeof t
-              ? !{ NODE_ENV: "production", STEAM_BUILD: "buildbot" }
-                  .MOBILE_BUILD && document.getElementById(t)
-              : t),
-          r)
-        )
-          try {
-            if (r.hasAttribute("data-" + e)) {
-              return JSON.parse(r.getAttribute("data-" + e));
-            }
-            return null;
-          } catch (e) {
-            console.error("Failed to parse config", e);
-          }
-        else n && console.error("Missing config element #", t);
-      }
-      function g(e, t = d) {
-        return _(e, t, !0);
-      }
-      function f(e, t = d) {
-        return _(e, t, !1);
-      }
-      function v(e, t) {
+      function d(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function C() {
+      function m() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return v(e, s.De.STORE_BASE_URL)
-          ? s.De.STORE_BASE_URL
-          : v(e, s.De.COMMUNITY_BASE_URL)
-          ? s.De.COMMUNITY_BASE_URL
-          : v(e, s.De.CHAT_BASE_URL)
-          ? s.De.CHAT_BASE_URL
-          : v(e, s.De.PARTNER_BASE_URL)
-          ? s.De.PARTNER_BASE_URL
-          : v(e, s.De.HELP_BASE_URL)
-          ? s.De.HELP_BASE_URL
-          : v(e, s.De.STEAMTV_BASE_URL)
-          ? s.De.STEAMTV_BASE_URL
-          : v(e, s.De.STATS_BASE_URL)
-          ? s.De.STATS_BASE_URL
-          : v(e, s.De.INTERNAL_STATS_BASE_URL)
-          ? s.De.INTERNAL_STATS_BASE_URL
-          : v(e, s.De.STORE_CHECKOUT_BASE_URL)
-          ? s.De.STORE_CHECKOUT_BASE_URL
-          : v(e, "https://steamloopback.host")
+        return d(e, o.De.STORE_BASE_URL)
+          ? o.De.STORE_BASE_URL
+          : d(e, o.De.COMMUNITY_BASE_URL)
+          ? o.De.COMMUNITY_BASE_URL
+          : d(e, o.De.CHAT_BASE_URL)
+          ? o.De.CHAT_BASE_URL
+          : d(e, o.De.PARTNER_BASE_URL)
+          ? o.De.PARTNER_BASE_URL
+          : d(e, o.De.HELP_BASE_URL)
+          ? o.De.HELP_BASE_URL
+          : d(e, o.De.STEAMTV_BASE_URL)
+          ? o.De.STEAMTV_BASE_URL
+          : d(e, o.De.STATS_BASE_URL)
+          ? o.De.STATS_BASE_URL
+          : d(e, o.De.INTERNAL_STATS_BASE_URL)
+          ? o.De.INTERNAL_STATS_BASE_URL
+          : d(e, o.De.STORE_CHECKOUT_BASE_URL)
+          ? o.De.STORE_CHECKOUT_BASE_URL
+          : d(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function b() {
+      function h() {
         const e = window.location.href;
-        return v(e, s.De.STORE_BASE_URL) || v(e, s.De.STORE_CHECKOUT_BASE_URL)
+        return d(e, o.De.STORE_BASE_URL) || d(e, o.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : v(e, s.De.COMMUNITY_BASE_URL)
+          : d(e, o.De.COMMUNITY_BASE_URL)
           ? "community"
-          : v(e, s.De.PARTNER_BASE_URL)
+          : d(e, o.De.PARTNER_BASE_URL)
           ? "partnerweb"
-          : v(e, s.De.HELP_BASE_URL)
+          : d(e, o.De.HELP_BASE_URL)
           ? "help"
-          : v(e, s.De.STEAMTV_BASE_URL)
+          : d(e, o.De.STEAMTV_BASE_URL)
           ? "steamtv"
-          : v(e, s.De.STATS_BASE_URL) || v(e, s.De.INTERNAL_STATS_BASE_URL)
+          : d(e, o.De.STATS_BASE_URL) || d(e, o.De.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -23748,16 +23785,14 @@
     5545: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => o,
-        JA: () => l,
-        L7: () => s,
-        Wj: () => c,
-        dk: () => a,
+        De: () => i,
+        JA: () => a,
+        L7: () => o,
+        Wj: () => l,
+        dk: () => s,
       });
-      var r = n(46504),
-        i = n(6283);
-      n(6960);
-      const o = {
+      var r = n(87017);
+      const i = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -23804,12 +23839,7 @@
           FROM_WEB: !1,
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
-            return (function () {
-              if (!(0, i.t$)()) return u || (u = d()), u;
-              let e = (0, i.bG)("sessionid");
-              e || (e = d());
-              return e;
-            })();
+            return (0, r.c9)();
           },
           FRIENDSUI_BETA: !1,
           STEAM_TV: !1,
@@ -23826,7 +23856,7 @@
           IN_LOGIN_REFRESH: !1,
           USE_LONGEST_LOC_STRING: !1,
         },
-        s = {
+        o = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -23841,8 +23871,8 @@
           short_url: "",
           country_code: "",
         },
-        a = { steamid: "", clanid: 0, listid: 0 },
-        l = {
+        s = { steamid: "", clanid: 0, listid: 0 },
+        a = {
           CLANSTEAMID: "",
           CLANACCOUNTID: 0,
           APPID: 0,
@@ -23859,15 +23889,84 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        c = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-      let u;
-      function d() {
+        l = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+    },
+    87017: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        Ek: () => u,
+        c9: () => l,
+        ip: () => m,
+        kQ: () => d,
+        y9: () => _,
+      });
+      var r = n(46504),
+        i = n(6283),
+        o = n(5545);
+      const s = "webui_config";
+      let a;
+      function l() {
+        if (!(0, i.t$)()) return a || (a = c()), a;
+        let e = (0, i.bG)("sessionid");
+        return e || (e = c()), e;
+      }
+      function c() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, r.LO)(0, 35).toString(36);
           return e;
         })();
         return (0, i.I1)("sessionid", e, 0), e;
+      }
+      function u(e = s) {
+        const t = {},
+          n = d("config", e);
+        n && (delete n.SESSIONID, Object.assign(o.De, n), (t.config = !0));
+        const r = d("userinfo", e);
+        r &&
+          (Object.assign(o.L7, r),
+          (t.userConfig = !0),
+          o.L7.is_support && _() && (o.L7.is_support = !1));
+        const i = d("broadcast", e);
+        i && (Object.assign(o.dk, i), (t.broadcastConfig = !0));
+        const a = d("community", e);
+        a && (Object.assign(o.JA, a), (t.communityConfig = !0));
+        const l = d("event", e);
+        return l && (Object.assign(o.Wj, l), (t.eventConfig = !0)), t;
+      }
+      function d(e, t = s) {
+        return h(e, t, !0);
+      }
+      function m(e, t = s) {
+        return h(e, t, !1);
+      }
+      function h(e, t = s, n) {
+        let r;
+        if (
+          ((r =
+            "string" == typeof t
+              ? !{ NODE_ENV: "production", STEAM_BUILD: "buildbot" }
+                  .MOBILE_BUILD && document.getElementById(t)
+              : t),
+          r)
+        )
+          try {
+            if (r.hasAttribute("data-" + e)) {
+              return JSON.parse(r.getAttribute("data-" + e));
+            }
+            return null;
+          } catch (e) {
+            console.error("Failed to parse config", e);
+          }
+        else n && console.error("Missing config element #", t);
+      }
+      const p = "presentation_mode";
+      function _() {
+        let e = null;
+        return (
+          (0, i.t$)() && (e = (0, i.bG)(p)),
+          Boolean(e && 1 === Number.parseInt(e))
+        );
       }
     },
     96759: (e, t, n) => {
@@ -23904,10 +24003,10 @@
             n.e(6588),
             n.e(7948),
             n.e(483),
+            n.e(6656),
             n.e(6148),
             n.e(2530),
             n.e(1338),
-            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23922,10 +24021,10 @@
             n.e(6588),
             n.e(7948),
             n.e(483),
+            n.e(6656),
             n.e(2468),
             n.e(2530),
             n.e(1338),
-            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23943,10 +24042,10 @@
             n.e(6588),
             n.e(7948),
             n.e(483),
+            n.e(6656),
             n.e(2468),
             n.e(2530),
             n.e(1338),
-            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23965,10 +24064,10 @@
             n.e(6588),
             n.e(7948),
             n.e(483),
+            n.e(6656),
             n.e(2468),
             n.e(2530),
             n.e(1338),
-            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -23991,9 +24090,9 @@
             n.e(6588),
             n.e(7948),
             n.e(483),
+            n.e(6656),
             n.e(2530),
             n.e(1338),
-            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -24005,20 +24104,18 @@
             n.e(5436),
           ]).then(n.bind(n, 7169))
         ),
-        I = i.lazy(() =>
-          Promise.all([n.e(8657), n.e(6838)]).then(n.bind(n, 88870))
-        ),
+        I = () => i.createElement("div", null),
         y = i.lazy(() => n.e(8647).then(n.bind(n, 57564))),
         R = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
             n.e(483),
+            n.e(6656),
             n.e(2468),
             n.e(543),
             n.e(2530),
             n.e(1338),
-            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -24036,9 +24133,9 @@
             n.e(6588),
             n.e(7948),
             n.e(483),
+            n.e(6656),
             n.e(2530),
             n.e(1338),
-            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(3742),
@@ -24072,7 +24169,6 @@
             n.e(483),
             n.e(2530),
             n.e(1338),
-            n.e(8657),
             n.e(9949),
             n.e(8931),
             n.e(7942),
@@ -24389,10 +24485,17 @@
         })
       );
       let z = [];
-      window.LocalizationManifestReady = function (e, t, n) {
+      function K(e, t, n) {
         (0, U.X)("manifest" === t, `Expected manifest not "${t}"`),
           void 0 !== z ? z.push(n) : G.Yt.AddTokens(n);
-      };
+      }
+      !(function () {
+        const e = window;
+        e.g_rgPendingLocManifests &&
+          e.g_rgPendingLocManifests.forEach((e) => K(...e)),
+          (e.LocalizationManifestReady = K),
+          (e.g_rgPendingLocManifests = void 0);
+      })();
     },
     76430: (e, t, n) => {
       var r = {

@@ -162,7 +162,7 @@
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -203,7 +203,7 @@
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   box-sizing: border-box;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
@@ -943,7 +943,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 .partnereventdisplay_AppSummaryCtn_1kEXu {
   width: 100%;
   border-top: 1px dotted #6d6e70;
-  background: linear-gradient(#1b1d21, rgba(27, 29, 33, 0));
+  background: linear-gradient(rgb(27, 29, 33), rgba(27, 29, 33, 0));
   padding-top: 36px;
   padding-bottom: 42px;
 }
@@ -1137,7 +1137,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   padding: 5px 20px;
   border-radius: 3px;
   background: #dd3e3e;
-  color: #eeeeeeaa;
+  color: rgba(238, 238, 238, 0.6666666667);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 .partnereventdisplay_LunarNewYearHeader_3hCjp

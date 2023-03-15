@@ -5231,6 +5231,25 @@ select {
   .categories_Category_12BB3
   a {
   cursor: pointer;
+  width: 20%;
+}
+.categories_CategoriesList_YMtVa
+  .categories_CategoryCtn_1vjux
+  .categories_Category_12BB3
+  .categories_CategoryType_2rg93 {
+  width: 20%;
+}
+.categories_CategoriesList_YMtVa
+  .categories_CategoryCtn_1vjux
+  .categories_Category_12BB3
+  .categories_ExcludedFromSearch_1qSt9 {
+  width: 25%;
+}
+.categories_CategoriesList_YMtVa
+  .categories_CategoryCtn_1vjux
+  .categories_Category_12BB3
+  .categories_ReplacesTags_2VMbz {
+  width: 35%;
 }
 .categories_CategoryEditor_hDZX9 {
   width: 600px;

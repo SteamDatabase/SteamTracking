@@ -9,7 +9,7 @@
   margin: 0 16px;
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid transparent;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
   transition-property: border-bottom-color;
   transition-duration: 0.25s;
   font-size: 14px;
@@ -441,13 +441,13 @@ body.qanda {
   font-size: 14px;
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: #6dcff63d;
+  text-decoration-color: rgba(109, 207, 246, 0.2392156863);
   width: fit-content;
 }
 .questions_PersonaName_3CaA5:active,
 .questions_PersonaName_3CaA5:hover {
   color: #9edff8;
-  text-decoration-color: #6dcff6b4;
+  text-decoration-color: rgba(109, 207, 246, 0.7058823529);
 }
 .questions_QuestionText_2NuCE {
   display: flex;
@@ -1091,6 +1091,15 @@ body.qanda {
 .eventcalendartile_TileContainer_27AwJ.eventcalendartile_EventType12_KucHh
   .eventcalendartile_Tile_a0iPy
   .eventcalendartile_MainContentContainer_2W5LC
+  .eventcalendartile_CoverImageCtn_1z05m
+  .eventcalendartile_AppBannerLogo_QRRaO.eventcalendartile_FallbackImage_kbkLs.eventcalendartile_ClanSource_110XI {
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: top right;
+}
+.eventcalendartile_TileContainer_27AwJ.eventcalendartile_EventType12_KucHh
+  .eventcalendartile_Tile_a0iPy
+  .eventcalendartile_MainContentContainer_2W5LC
   .eventcalendartile_TileTextHeader_2SYia {
   margin-bottom: 0px;
 }
@@ -1287,6 +1296,15 @@ body.qanda {
   .eventcalendartile_CoverImageCtn_1z05m
   .eventcalendartile_TileImage_Zo12U.eventcalendartile_FallbackImage_kbkLs {
   height: 0;
+}
+.eventcalendartile_TileContainer_27AwJ
+  .eventcalendartile_Tile_a0iPy
+  .eventcalendartile_MainContentContainer_2W5LC
+  .eventcalendartile_CoverImageCtn_1z05m
+  .eventcalendartile_TileImage_Zo12U.eventcalendartile_FallbackImage_kbkLs.eventcalendartile_ClanSource_110XI {
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: top right;
 }
 .eventcalendartile_TileContainer_27AwJ
   .eventcalendartile_Tile_a0iPy
@@ -1589,7 +1607,7 @@ body.qanda {
   }
   .eventcalendartile_TileContainer_27AwJ
     .eventcalendartile_FooterStat_3L6pU:hover {
-    background: transparent;
+    background: rgba(0, 0, 0, 0);
   }
 }
 .eventcalendartile_TileContainer_27AwJ
@@ -2266,7 +2284,7 @@ body.qanda {
   opacity: 1;
 }
 .youtubepreviewimage_YoutubePreviewImage_MzScK:hover .YoutubePreviewPlay svg {
-  filter: drop-shadow(0 0 5px black);
+  filter: drop-shadow(0 0 5px rgb(0, 0, 0));
 }
 .youtubepreviewimage_YoutubePreviewImage_MzScK:hover .YoutubePreviewImage {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
@@ -2362,7 +2380,7 @@ body.qanda {
 .conferenceevents_ActiveEventCtn_2lP0C:after {
   left: calc(100% - 16px);
   top: 50px;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: "";
   height: 0;
   width: 0;

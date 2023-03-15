@@ -101,7 +101,7 @@
   .categoriesapp_CategoryName_3VNsE {
   position: absolute;
   z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0), #0b1621 72%);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(11, 22, 33) 72%);
   width: 100%;
   height: 100%;
 }

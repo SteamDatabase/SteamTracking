@@ -38,7 +38,7 @@
 }
 .gameslistapp_SortOptions_3pgJX .gameslistapp_SortOption_YcplN {
   border: none;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   color: var(--color-highlight);
   cursor: pointer;
 }
@@ -103,7 +103,7 @@
 }
 .gameslistfilter_Filter_ZQQNQ .gameslistfilter_ClearButton_2iq6O {
   position: absolute;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   border: none;
   width: 18px;
   height: 100%;
@@ -131,7 +131,7 @@
   position: relative;
   transition: transform 0.1s ease-in-out;
   vertical-align: top;
-  box-shadow: 0 0 3px #0005;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3333333333);
   cursor: pointer;
 }
 .achievementiconbase_Icon_2bzHb.achievementiconbase_IconGlow_tH67c {
@@ -205,11 +205,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlowContainer_leuGO {
     rgba(255, 217, 0, 0.178) 0%,
     rgba(255, 184, 78, 0) 6%,
     rgba(255, 217, 0, 0.178) 10%,
-    #ffb84e 26%,
+    rgb(255, 184, 78) 26%,
     rgba(255, 217, 0, 0.178) 35%,
-    #ffb84e 40%,
+    rgb(255, 184, 78) 40%,
     rgba(255, 217, 0, 0.178) 60%,
-    #ffb84e 82%,
+    rgb(255, 184, 78) 82%,
     rgba(255, 217, 0, 0.178) 100%
   );
   overflow: hidden;
@@ -235,13 +235,13 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-align: center;
   vertical-align: middle;
   position: relative;
-  box-shadow: 0 0 3px #0005;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3333333333);
   background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
 }
 .BasicUI .achievementiconbase_HiddenLabel_2yMyP {
   width: 64px;
   height: 64px;
-  background: #acb2c924;
+  background: rgba(172, 178, 201, 0.1411764706);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -276,7 +276,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .progressbar_ProgressBar_yZ55N.progressbar_AnimateProgress_1Ccdv.progressbar_Indeterminate_1sxT4::after {
   width: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 @keyframes progressbar_loadingBarAnim_BX2Tm {
   0% {
@@ -341,7 +341,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   background: linear-gradient(to bottom, #ffffff 0%, #b1b7ca 60%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   z-index: 3;
 }
@@ -887,7 +887,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   position: relative;
   box-sizing: border-box;
   color: #fff;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   width: 400px;
   padding: 0;
 }
@@ -901,9 +901,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   z-index: -3;
   background: radial-gradient(
     ellipse farthest-corner at 20% 30%,
-    #4c505b 0%,
-    #34373f 50%,
-    #282c32 100%
+    rgb(76, 80, 91) 0%,
+    rgb(52, 55, 63) 50%,
+    rgb(40, 44, 50) 100%
   );
 }
 .gameslistitems_AchievementHover_1Whe1 .gameslistitems_Blur_BPScs {
@@ -916,14 +916,14 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   opacity: 0.4;
   -webkit-mask: radial-gradient(
     ellipse farthest-corner at 150px 150px,
-    black 0%,
+    rgb(0, 0, 0) 0%,
     rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0.3) 34%,
     rgba(0, 0, 0, 0) 64%
   );
   mask: radial-gradient(
     ellipse farthest-corner at 150px 150px,
-    black 0%,
+    rgb(0, 0, 0) 0%,
     rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0.3) 34%,
     rgba(0, 0, 0, 0) 64%
@@ -949,7 +949,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   .gameslistitems_TextSection_3sCHJ {
   font-weight: 300;
   flex-grow: 1;
-  color: #ffffff80;
+  color: rgba(255, 255, 255, 0.5019607843);
   font-size: 13px;
   padding: 16px 16px 16px 4px;
 }
@@ -959,7 +959,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   .gameslistitems_Name_2jbhF {
   margin-bottom: 5px;
   font-size: 14px;
-  color: #ffffffe0;
+  color: rgba(255, 255, 255, 0.8784313725);
 }
 .gameslistitems_AchievementHover_1Whe1 .gameslistitems_Unlocked_1UIA3 {
   padding: 10px 15px;

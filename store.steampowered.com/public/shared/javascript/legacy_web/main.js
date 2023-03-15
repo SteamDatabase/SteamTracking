@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7909569";
+var CLSTAMP = "7918503";
 (() => {
   var __webpack_modules__ = {
       19: function (module, exports) {
@@ -10089,207 +10089,12 @@ var CLSTAMP = "7909569";
             (exports.object = { extend: goog.object.extend }),
             (exports.typeOf = goog.typeOf));
       },
-      661: (e, t, o) => {
-        "use strict";
-        var r, n, i, s, a, g, l, u, p, c, d, _, f, h;
-        !(function (e) {
-          (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
-            "k_EConnectivityTestResult_Unknown"),
-            (e[(e.k_EConnectivityTestResult_Connected = 1)] =
-              "k_EConnectivityTestResult_Connected"),
-            (e[(e.k_EConnectivityTestResult_CaptivePortal = 2)] =
-              "k_EConnectivityTestResult_CaptivePortal"),
-            (e[(e.k_EConnectivityTestResult_TimedOut = 3)] =
-              "k_EConnectivityTestResult_TimedOut"),
-            (e[(e.k_EConnectivityTestResult_Failed = 4)] =
-              "k_EConnectivityTestResult_Failed"),
-            (e[(e.k_EConnectivityTestResult_WifiDisabled = 5)] =
-              "k_EConnectivityTestResult_WifiDisabled"),
-            (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
-              "k_EConnectivityTestResult_NoLAN");
-        })(r || (r = {})),
-          (function (e) {
-            (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
-              "k_ENetFakeLocalSystemState_Normal"),
-              (e[(e.k_ENetFakeLocalSystemState_NoLAN = 1)] =
-                "k_ENetFakeLocalSystemState_NoLAN"),
-              (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_Redirected = 2)] =
-                "k_ENetFakeLocalSystemState_CaptivePortal_Redirected"),
-              (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_InPlace = 3)] =
-                "k_ENetFakeLocalSystemState_CaptivePortal_InPlace"),
-              (e[(e.k_ENetFakeLocalSystemState_NoInternet = 4)] =
-                "k_ENetFakeLocalSystemState_NoInternet"),
-              (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
-                "k_ENetFakeLocalSystemState_NoSteam");
-          })(n || (n = {})),
-          (function (e) {
-            (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
-              "k_ESuspendResumeProgressState_Invalid"),
-              (e[(e.k_ESuspendResumeProgressState_Complete = 1)] =
-                "k_ESuspendResumeProgressState_Complete"),
-              (e[(e.k_ESuspendResumeProgressState_CloudSync = 2)] =
-                "k_ESuspendResumeProgressState_CloudSync"),
-              (e[(e.k_ESuspendResumeProgressState_LoggingIn = 3)] =
-                "k_ESuspendResumeProgressState_LoggingIn"),
-              (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
-                "k_ESuspendResumeProgressState_WaitingForApp"),
-              (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
-                "k_ESuspendResumeProgressState_Working");
-          })(i || (i = {})),
-          (function (e) {
-            (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
-              "k_EFloatingGamepadTextInputModeModeSingleLine"),
-              (e[(e.k_EFloatingGamepadTextInputModeModeMultipleLines = 1)] =
-                "k_EFloatingGamepadTextInputModeModeMultipleLines"),
-              (e[(e.k_EFloatingGamepadTextInputModeModeEmail = 2)] =
-                "k_EFloatingGamepadTextInputModeModeEmail"),
-              (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
-                "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(s || (s = {})),
-          (function (e) {
-            (e[(e.k_EAppUpdateContentType_Content = 0)] =
-              "k_EAppUpdateContentType_Content"),
-              (e[(e.k_EAppUpdateContentType_Workshop = 1)] =
-                "k_EAppUpdateContentType_Workshop"),
-              (e[(e.k_EAppUpdateContentType_Shader = 2)] =
-                "k_EAppUpdateContentType_Shader"),
-              (e[(e.k_EAppUpdateContentType_Max = 3)] =
-                "k_EAppUpdateContentType_Max");
-          })(a || (a = {})),
-          (function (e) {
-            (e[(e.k_EOverlayToStoreFlag_None = 0)] =
-              "k_EOverlayToStoreFlag_None"),
-              (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
-                "k_EOverlayToStoreFlag_AddToCart"),
-              (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
-                "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(g || (g = {})),
-          (function (e) {
-            (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
-              "k_EActivateGameOverlayToWebPageMode_Default"),
-              (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
-                "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(l || (l = {})),
-          (function (e) {
-            (e[(e.k_EGamingDeviceType_Unknown = 0)] =
-              "k_EGamingDeviceType_Unknown"),
-              (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
-                "k_EGamingDeviceType_StandardPC"),
-              (e[(e.k_EGamingDeviceType_Console = 256)] =
-                "k_EGamingDeviceType_Console"),
-              (e[(e.k_EGamingDeviceType_PS3 = 272)] =
-                "k_EGamingDeviceType_PS3"),
-              (e[(e.k_EGamingDeviceType_Steambox = 288)] =
-                "k_EGamingDeviceType_Steambox"),
-              (e[(e.k_EGamingDeviceType_Handheld = 512)] =
-                "k_EGamingDeviceType_Handheld"),
-              (e[(e.k_EGamingDeviceType_Phone = 528)] =
-                "k_EGamingDeviceType_Phone"),
-              (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
-                "k_EGamingDeviceType_SteamDeck");
-          })(u || (u = {})),
-          (function (e) {
-            (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
-              (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
-                "k_ELoginUIStyleNewWithoutQRCode"),
-              (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(p || (p = {})),
-          (function (e) {
-            (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
-              "k_ECommunityProfileItemProperty_ImageSmall"),
-              (e[(e.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
-                "k_ECommunityProfileItemProperty_ImageLarge"),
-              (e[(e.k_ECommunityProfileItemProperty_InternalName = 2)] =
-                "k_ECommunityProfileItemProperty_InternalName"),
-              (e[(e.k_ECommunityProfileItemProperty_Title = 3)] =
-                "k_ECommunityProfileItemProperty_Title"),
-              (e[(e.k_ECommunityProfileItemProperty_Description = 4)] =
-                "k_ECommunityProfileItemProperty_Description"),
-              (e[(e.k_ECommunityProfileItemProperty_AppID = 5)] =
-                "k_ECommunityProfileItemProperty_AppID"),
-              (e[(e.k_ECommunityProfileItemProperty_TypeID = 6)] =
-                "k_ECommunityProfileItemProperty_TypeID"),
-              (e[(e.k_ECommunityProfileItemProperty_Class = 7)] =
-                "k_ECommunityProfileItemProperty_Class"),
-              (e[(e.k_ECommunityProfileItemProperty_MovieWebM = 8)] =
-                "k_ECommunityProfileItemProperty_MovieWebM"),
-              (e[(e.k_ECommunityProfileItemProperty_MovieMP4 = 9)] =
-                "k_ECommunityProfileItemProperty_MovieMP4"),
-              (e[(e.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
-                "k_ECommunityProfileItemProperty_MovieWebMSmall"),
-              (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
-                "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(c || (c = {})),
-          (function (e) {
-            (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
-              "k_ERaiseGameWindowResult_NotRunning"),
-              (e[(e.k_ERaiseGameWindowResult_Success = 2)] =
-                "k_ERaiseGameWindowResult_Success"),
-              (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
-                "k_ERaiseGameWindowResult_Failure");
-          })(d || (d = {})),
-          (function (e) {
-            (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
-              (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
-              (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
-              (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
-              (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(_ || (_ = {})),
-          (function (e) {
-            (e[(e.k_EAppReleaseState_Unknown = 0)] =
-              "k_EAppReleaseState_Unknown"),
-              (e[(e.k_EAppReleaseState_Unavailable = 1)] =
-                "k_EAppReleaseState_Unavailable"),
-              (e[(e.k_EAppReleaseState_Prerelease = 2)] =
-                "k_EAppReleaseState_Prerelease"),
-              (e[(e.k_EAppReleaseState_PreloadOnly = 3)] =
-                "k_EAppReleaseState_PreloadOnly"),
-              (e[(e.k_EAppReleaseState_Released = 4)] =
-                "k_EAppReleaseState_Released"),
-              (e[(e.k_EAppReleaseState_Disabled = 5)] =
-                "k_EAppReleaseState_Disabled");
-          })(f || (f = {})),
-          (function (e) {
-            (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
-              (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
-              (e[(e.k_EInstallMgrStateWaitLicense = 2)] =
-                "k_EInstallMgrStateWaitLicense"),
-              (e[(e.k_EInstallMgrStateFreeLicense = 3)] =
-                "k_EInstallMgrStateFreeLicense"),
-              (e[(e.k_EInstallMgrStateShowCDKey = 4)] =
-                "k_EInstallMgrStateShowCDKey"),
-              (e[(e.k_EInstallMgrStateWaitAppInfo = 5)] =
-                "k_EInstallMgrStateWaitAppInfo"),
-              (e[(e.k_EInstallMgrStateShowPassword = 6)] =
-                "k_EInstallMgrStateShowPassword"),
-              (e[(e.k_EInstallMgrStateShowConfig = 7)] =
-                "k_EInstallMgrStateShowConfig"),
-              (e[(e.k_EInstallMgrStateShowEULAs = 8)] =
-                "k_EInstallMgrStateShowEULAs"),
-              (e[(e.k_EInstallMgrStateCreateApps = 9)] =
-                "k_EInstallMgrStateCreateApps"),
-              (e[(e.k_EInstallMgrStateReadFromMedia = 10)] =
-                "k_EInstallMgrStateReadFromMedia"),
-              (e[(e.k_EInstallMgrStateShowChangeMedia = 11)] =
-                "k_EInstallMgrStateShowChangeMedia"),
-              (e[(e.k_EInstallMgrStateWaitLegacyCDKeys = 12)] =
-                "k_EInstallMgrStateWaitLegacyCDKeys"),
-              (e[(e.k_EInstallMgrStateShowSignup = 13)] =
-                "k_EInstallMgrStateShowSignup"),
-              (e[(e.k_EInstallMgrStateComplete = 14)] =
-                "k_EInstallMgrStateComplete"),
-              (e[(e.k_EInstallMgrStateFailed = 15)] =
-                "k_EInstallMgrStateFailed"),
-              (e[(e.k_EInstallMgrStateCanceled = 16)] =
-                "k_EInstallMgrStateCanceled");
-          })(h || (h = {}));
-      },
-      559: (e, t, o) => {
+      629: (e, t, o) => {
         "use strict";
         o.d(t, { B: () => a });
         var r = o(655),
-          n = o(544),
-          i = o(52);
+          n = o(671),
+          i = o(748);
         let s = [
           { index: 0, type: n.eV.OK, category: "action" },
           { index: 1, type: n.eV.CANCEL, category: "action" },
@@ -10354,12 +10159,12 @@ var CLSTAMP = "7909569";
         (0, r.gn)([i.a], a.prototype, "PollGamepads", null),
           (0, r.gn)([i.a], a.prototype, "OnWindowRegainedFocus", null);
       },
-      544: (e, t, o) => {
+      671: (e, t, o) => {
         "use strict";
         o.d(t, { eV: () => r, Rr: () => n, oH: () => g });
         var r,
           n,
-          i = o(287);
+          i = o(619);
         class s {
           constructor(e) {
             this.m_config = e;
@@ -10541,11 +10346,11 @@ var CLSTAMP = "7909569";
           }
         }
       },
-      391: (e, t, o) => {
+      418: (e, t, o) => {
         "use strict";
         o.d(t, { U5: () => n.U5 });
         var r,
-          n = o(498);
+          n = o(524);
         !(function (e) {
           (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
             (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -10564,11 +10369,202 @@ var CLSTAMP = "7909569";
             (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
             (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
         })(r || (r = {}));
-        o(661);
-        var i, s, a;
+        var i, s, a, g, l, u, p, c, d, _, f, h, m, y;
+        !(function (e) {
+          (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
+            "k_EConnectivityTestResult_Unknown"),
+            (e[(e.k_EConnectivityTestResult_Connected = 1)] =
+              "k_EConnectivityTestResult_Connected"),
+            (e[(e.k_EConnectivityTestResult_CaptivePortal = 2)] =
+              "k_EConnectivityTestResult_CaptivePortal"),
+            (e[(e.k_EConnectivityTestResult_TimedOut = 3)] =
+              "k_EConnectivityTestResult_TimedOut"),
+            (e[(e.k_EConnectivityTestResult_Failed = 4)] =
+              "k_EConnectivityTestResult_Failed"),
+            (e[(e.k_EConnectivityTestResult_WifiDisabled = 5)] =
+              "k_EConnectivityTestResult_WifiDisabled"),
+            (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
+              "k_EConnectivityTestResult_NoLAN");
+        })(i || (i = {})),
+          (function (e) {
+            (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
+              "k_ENetFakeLocalSystemState_Normal"),
+              (e[(e.k_ENetFakeLocalSystemState_NoLAN = 1)] =
+                "k_ENetFakeLocalSystemState_NoLAN"),
+              (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_Redirected = 2)] =
+                "k_ENetFakeLocalSystemState_CaptivePortal_Redirected"),
+              (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_InPlace = 3)] =
+                "k_ENetFakeLocalSystemState_CaptivePortal_InPlace"),
+              (e[(e.k_ENetFakeLocalSystemState_NoInternet = 4)] =
+                "k_ENetFakeLocalSystemState_NoInternet"),
+              (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
+                "k_ENetFakeLocalSystemState_NoSteam");
+          })(s || (s = {})),
+          (function (e) {
+            (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
+              "k_ESuspendResumeProgressState_Invalid"),
+              (e[(e.k_ESuspendResumeProgressState_Complete = 1)] =
+                "k_ESuspendResumeProgressState_Complete"),
+              (e[(e.k_ESuspendResumeProgressState_CloudSync = 2)] =
+                "k_ESuspendResumeProgressState_CloudSync"),
+              (e[(e.k_ESuspendResumeProgressState_LoggingIn = 3)] =
+                "k_ESuspendResumeProgressState_LoggingIn"),
+              (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
+                "k_ESuspendResumeProgressState_WaitingForApp"),
+              (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
+                "k_ESuspendResumeProgressState_Working");
+          })(a || (a = {})),
+          (function (e) {
+            (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
+              "k_EFloatingGamepadTextInputModeModeSingleLine"),
+              (e[(e.k_EFloatingGamepadTextInputModeModeMultipleLines = 1)] =
+                "k_EFloatingGamepadTextInputModeModeMultipleLines"),
+              (e[(e.k_EFloatingGamepadTextInputModeModeEmail = 2)] =
+                "k_EFloatingGamepadTextInputModeModeEmail"),
+              (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
+                "k_EFloatingGamepadTextInputModeModeNumeric");
+          })(g || (g = {})),
+          (function (e) {
+            (e[(e.k_EAppUpdateContentType_Content = 0)] =
+              "k_EAppUpdateContentType_Content"),
+              (e[(e.k_EAppUpdateContentType_Workshop = 1)] =
+                "k_EAppUpdateContentType_Workshop"),
+              (e[(e.k_EAppUpdateContentType_Shader = 2)] =
+                "k_EAppUpdateContentType_Shader"),
+              (e[(e.k_EAppUpdateContentType_Max = 3)] =
+                "k_EAppUpdateContentType_Max");
+          })(l || (l = {})),
+          (function (e) {
+            (e[(e.k_EOverlayToStoreFlag_None = 0)] =
+              "k_EOverlayToStoreFlag_None"),
+              (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
+                "k_EOverlayToStoreFlag_AddToCart"),
+              (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
+                "k_EOverlayToStoreFlag_AddToCartAndShow");
+          })(u || (u = {})),
+          (function (e) {
+            (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
+              "k_EActivateGameOverlayToWebPageMode_Default"),
+              (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
+                "k_EActivateGameOverlayToWebPageMode_Modal");
+          })(p || (p = {})),
+          (function (e) {
+            (e[(e.k_EGamingDeviceType_Unknown = 0)] =
+              "k_EGamingDeviceType_Unknown"),
+              (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
+                "k_EGamingDeviceType_StandardPC"),
+              (e[(e.k_EGamingDeviceType_Console = 256)] =
+                "k_EGamingDeviceType_Console"),
+              (e[(e.k_EGamingDeviceType_PS3 = 272)] =
+                "k_EGamingDeviceType_PS3"),
+              (e[(e.k_EGamingDeviceType_Steambox = 288)] =
+                "k_EGamingDeviceType_Steambox"),
+              (e[(e.k_EGamingDeviceType_Handheld = 512)] =
+                "k_EGamingDeviceType_Handheld"),
+              (e[(e.k_EGamingDeviceType_Phone = 528)] =
+                "k_EGamingDeviceType_Phone"),
+              (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
+                "k_EGamingDeviceType_SteamDeck");
+          })(c || (c = {})),
+          (function (e) {
+            (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
+              (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
+                "k_ELoginUIStyleNewWithoutQRCode"),
+              (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
+          })(d || (d = {})),
+          (function (e) {
+            (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
+              "k_ECommunityProfileItemProperty_ImageSmall"),
+              (e[(e.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
+                "k_ECommunityProfileItemProperty_ImageLarge"),
+              (e[(e.k_ECommunityProfileItemProperty_InternalName = 2)] =
+                "k_ECommunityProfileItemProperty_InternalName"),
+              (e[(e.k_ECommunityProfileItemProperty_Title = 3)] =
+                "k_ECommunityProfileItemProperty_Title"),
+              (e[(e.k_ECommunityProfileItemProperty_Description = 4)] =
+                "k_ECommunityProfileItemProperty_Description"),
+              (e[(e.k_ECommunityProfileItemProperty_AppID = 5)] =
+                "k_ECommunityProfileItemProperty_AppID"),
+              (e[(e.k_ECommunityProfileItemProperty_TypeID = 6)] =
+                "k_ECommunityProfileItemProperty_TypeID"),
+              (e[(e.k_ECommunityProfileItemProperty_Class = 7)] =
+                "k_ECommunityProfileItemProperty_Class"),
+              (e[(e.k_ECommunityProfileItemProperty_MovieWebM = 8)] =
+                "k_ECommunityProfileItemProperty_MovieWebM"),
+              (e[(e.k_ECommunityProfileItemProperty_MovieMP4 = 9)] =
+                "k_ECommunityProfileItemProperty_MovieMP4"),
+              (e[(e.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
+                "k_ECommunityProfileItemProperty_MovieWebMSmall"),
+              (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
+                "k_ECommunityProfileItemProperty_MovieMP4Small");
+          })(_ || (_ = {})),
+          (function (e) {
+            (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
+              "k_ERaiseGameWindowResult_NotRunning"),
+              (e[(e.k_ERaiseGameWindowResult_Success = 2)] =
+                "k_ERaiseGameWindowResult_Success"),
+              (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
+                "k_ERaiseGameWindowResult_Failure");
+          })(f || (f = {})),
+          (function (e) {
+            (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
+              (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
+              (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
+              (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
+              (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
+          })(h || (h = {})),
+          (function (e) {
+            (e[(e.k_EAppReleaseState_Unknown = 0)] =
+              "k_EAppReleaseState_Unknown"),
+              (e[(e.k_EAppReleaseState_Unavailable = 1)] =
+                "k_EAppReleaseState_Unavailable"),
+              (e[(e.k_EAppReleaseState_Prerelease = 2)] =
+                "k_EAppReleaseState_Prerelease"),
+              (e[(e.k_EAppReleaseState_PreloadOnly = 3)] =
+                "k_EAppReleaseState_PreloadOnly"),
+              (e[(e.k_EAppReleaseState_Released = 4)] =
+                "k_EAppReleaseState_Released"),
+              (e[(e.k_EAppReleaseState_Disabled = 5)] =
+                "k_EAppReleaseState_Disabled");
+          })(m || (m = {})),
+          (function (e) {
+            (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
+              (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
+              (e[(e.k_EInstallMgrStateWaitLicense = 2)] =
+                "k_EInstallMgrStateWaitLicense"),
+              (e[(e.k_EInstallMgrStateFreeLicense = 3)] =
+                "k_EInstallMgrStateFreeLicense"),
+              (e[(e.k_EInstallMgrStateShowCDKey = 4)] =
+                "k_EInstallMgrStateShowCDKey"),
+              (e[(e.k_EInstallMgrStateWaitAppInfo = 5)] =
+                "k_EInstallMgrStateWaitAppInfo"),
+              (e[(e.k_EInstallMgrStateShowPassword = 6)] =
+                "k_EInstallMgrStateShowPassword"),
+              (e[(e.k_EInstallMgrStateShowConfig = 7)] =
+                "k_EInstallMgrStateShowConfig"),
+              (e[(e.k_EInstallMgrStateShowEULAs = 8)] =
+                "k_EInstallMgrStateShowEULAs"),
+              (e[(e.k_EInstallMgrStateCreateApps = 9)] =
+                "k_EInstallMgrStateCreateApps"),
+              (e[(e.k_EInstallMgrStateReadFromMedia = 10)] =
+                "k_EInstallMgrStateReadFromMedia"),
+              (e[(e.k_EInstallMgrStateShowChangeMedia = 11)] =
+                "k_EInstallMgrStateShowChangeMedia"),
+              (e[(e.k_EInstallMgrStateWaitLegacyCDKeys = 12)] =
+                "k_EInstallMgrStateWaitLegacyCDKeys"),
+              (e[(e.k_EInstallMgrStateShowSignup = 13)] =
+                "k_EInstallMgrStateShowSignup"),
+              (e[(e.k_EInstallMgrStateComplete = 14)] =
+                "k_EInstallMgrStateComplete"),
+              (e[(e.k_EInstallMgrStateFailed = 15)] =
+                "k_EInstallMgrStateFailed"),
+              (e[(e.k_EInstallMgrStateCanceled = 16)] =
+                "k_EInstallMgrStateCanceled");
+          })(y || (y = {}));
+        var E, S, b;
         !(function (e) {
           (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-        })(i || (i = {})),
+        })(E || (E = {})),
           (function (e) {
             (e[(e.Input = 0)] = "Input"),
               (e[(e.AllOutput = 1)] = "AllOutput"),
@@ -10577,13 +10573,13 @@ var CLSTAMP = "7909569";
               (e[(e.Sub = 4)] = "Sub"),
               (e[(e.BackLeft = 5)] = "BackLeft"),
               (e[(e.BackRight = 6)] = "BackRight");
-          })(s || (s = {}));
+          })(S || (S = {}));
         !(function (e) {
           (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
             (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-        })(a || (a = {}));
-        var g;
+        })(b || (b = {}));
+        var T;
         !(function (e) {
           (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
             "k_BluetoothDeviceType_Invalid"),
@@ -10609,8 +10605,8 @@ var CLSTAMP = "7909569";
               "k_BluetoothDeviceType_Gamepad"),
             (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
               "k_BluetoothDeviceType_Keyboard");
-        })(g || (g = {}));
-        var l, u, p, c;
+        })(T || (T = {}));
+        var I, R, A, C;
         !(function (e) {
           (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
             (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -10638,18 +10634,18 @@ var CLSTAMP = "7909569";
               "EBrowserType_Offscreen_SteamUI"),
             (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
               "EBrowserType_OpenVROverlay_Subview");
-        })(l || (l = {})),
+        })(I || (I = {})),
           (function (e) {
             (e[(e.SystemKey0 = 0)] = "SystemKey0"),
               (e[(e.SystemKey1 = 1)] = "SystemKey1");
-          })(u || (u = {})),
+          })(R || (R = {})),
           (function (e) {
             (e[(e.Hidden = 0)] = "Hidden"),
               (e[(e.Notification = 1)] = "Notification"),
               (e[(e.Overlay = 2)] = "Overlay"),
               (e[(e.Opaque = 3)] = "Opaque"),
               (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-          })(p || (p = {})),
+          })(A || (A = {})),
           (function (e) {
             (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
               (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
@@ -10661,17 +10657,17 @@ var CLSTAMP = "7909569";
               (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
               (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
               (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
-          })(c || (c = {}));
-        var d;
+          })(C || (C = {}));
+        var O;
         !(function (e) {
           (e[(e.k_EPending = 0)] = "k_EPending"),
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
-        })(d || (d = {}));
-        var _ = o(19);
-        _.BinaryReader.prototype, _.BinaryWriter.prototype;
-        _.Message;
-        var f, h, m, y;
+        })(O || (O = {}));
+        var v = o(19);
+        v.BinaryReader.prototype, v.BinaryWriter.prototype;
+        v.Message;
+        var N, w, D, j;
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -10689,7 +10685,7 @@ var CLSTAMP = "7909569";
               "k_EControllerBindingType_GameAction"),
             (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
               "k_EControllerBindingType_ControllerAction");
-        })(f || (f = {}));
+        })(N || (N = {}));
         !(function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -10746,7 +10742,7 @@ var CLSTAMP = "7909569";
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(h || (h = {}));
+        })(w || (w = {}));
         !(function (e) {
           (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
             "k_EClientUINotificationGroupChatMessage"),
@@ -10754,20 +10750,20 @@ var CLSTAMP = "7909569";
               "k_EClientUINotificationFriendChatMessage"),
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
-        })(m || (m = {}));
+        })(D || (D = {}));
         !(function (e) {
           (e[(e.AudioPlayback_Undefined = 0)] = "AudioPlayback_Undefined"),
             (e[(e.AudioPlayback_Playing = 1)] = "AudioPlayback_Playing"),
             (e[(e.AudioPlayback_Paused = 2)] = "AudioPlayback_Paused"),
             (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
-        })(y || (y = {}));
-        var E, S, b, T, I;
+        })(j || (j = {}));
+        var U, L, M, P, B;
         !(function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Wired = 1)] = "Wired"),
             (e[(e.Wireless = 2)] = "Wireless"),
             (e[(e.Virtual = 3)] = "Virtual");
-        })(E || (E = {})),
+        })(U || (U = {})),
           (function (e) {
             (e[(e.NotPresent = 0)] = "NotPresent"),
               (e[(e.Failed = 1)] = "Failed"),
@@ -10776,14 +10772,14 @@ var CLSTAMP = "7909569";
               (e[(e.Connecting = 4)] = "Connecting"),
               (e[(e.Connected = 5)] = "Connected"),
               (e[(e.Retrying = 6)] = "Retrying");
-          })(S || (S = {})),
+          })(L || (L = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.Weak = 1)] = "Weak"),
               (e[(e.Ok = 2)] = "Ok"),
               (e[(e.Good = 3)] = "Good"),
               (e[(e.Excellent = 4)] = "Excellent");
-          })(b || (b = {})),
+          })(M || (M = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -10793,15 +10789,15 @@ var CLSTAMP = "7909569";
               (e[(e.Wpa2 = 16)] = "Wpa2"),
               (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
               (e[(e.Unsupported = 32768)] = "Unsupported");
-          })(T || (T = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
               (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
               (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
               (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
                 "k_EHTTPProxyMode_Automatic");
-          })(I || (I = {}));
-        var R, A, C, O;
+          })(B || (B = {}));
+        var V, F, k, H;
         !(function (e) {
           (e[(e.k_EComputerActiveStateInvalid = 0)] =
             "k_EComputerActiveStateInvalid"),
@@ -10809,7 +10805,7 @@ var CLSTAMP = "7909569";
               "k_EComputerActiveStateActive"),
             (e[(e.k_EComputerActiveStateIdle = 2)] =
               "k_EComputerActiveStateIdle");
-        })(R || (R = {})),
+        })(V || (V = {})),
           (function (e) {
             (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
               "k_EClientUsedInputTypeKeyboard"),
@@ -10819,7 +10815,7 @@ var CLSTAMP = "7909569";
                 "k_EClientUsedInputTypeController"),
               (e[(e.k_EClientUsedInputTypeMax = 3)] =
                 "k_EClientUsedInputTypeMax");
-          })(A || (A = {})),
+          })(F || (F = {})),
           (function (e) {
             (e[(e.k_EVRError_None = 0)] = "k_EVRError_None"),
               (e[(e.k_EVRError_VRSkipParam = 1)] = "k_EVRError_VRSkipParam"),
@@ -10831,7 +10827,7 @@ var CLSTAMP = "7909569";
                 "k_EVRError_CrashProtection"),
               (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
               (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
-          })(C || (C = {})),
+          })(k || (k = {})),
           (function (e) {
             (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
               (e[(e.VRInitError_Unknown = 1)] = "VRInitError_Unknown"),
@@ -11309,9 +11305,9 @@ var CLSTAMP = "7909569";
               (e[(e.VRInitError_Steam_SteamInstallationNotFound = 2e3)] =
                 "VRInitError_Steam_SteamInstallationNotFound"),
               (e[(e.VRInitError_LastError = 2001)] = "VRInitError_LastError");
-          })(O || (O = {}));
+          })(H || (H = {}));
       },
-      498: (e, t, o) => {
+      524: (e, t, o) => {
         "use strict";
         function r(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
@@ -11325,7 +11321,7 @@ var CLSTAMP = "7909569";
         }
         o.d(t, { U5: () => n });
       },
-      675: (e, t, o) => {
+      187: (e, t, o) => {
         "use strict";
         function r(e, t) {
           return (function (e, t) {
@@ -11335,7 +11331,7 @@ var CLSTAMP = "7909569";
         }
         o.d(t, { Zf: () => r });
       },
-      52: (e, t, o) => {
+      748: (e, t, o) => {
         "use strict";
         function r(e, t, o) {
           return {
@@ -11351,12 +11347,12 @@ var CLSTAMP = "7909569";
         }
         o.d(t, { a: () => r });
       },
-      287: (e, t, o) => {
+      619: (e, t, o) => {
         "use strict";
         o.d(t, { Ar: () => l, Hf: () => u, pB: () => s, vq: () => g });
         var r = o(655),
-          n = o(675),
-          i = o(52);
+          n = o(187),
+          i = o(748);
         class s {
           constructor() {
             this.m_vecCallbacks = [];
@@ -11436,7 +11432,7 @@ var CLSTAMP = "7909569";
         }
         (0, r.gn)([i.a], u.prototype, "Unregister", null);
       },
-      341: (e, t, o) => {
+      226: (e, t, o) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (o.p = window.VALVE_PUBLIC_PATH)
@@ -11561,7 +11557,7 @@ var CLSTAMP = "7909569";
       "javascript/legacy_web/" +
       { 380: "desktop", 511: "gamepad" }[e] +
       ".js?contenthash=" +
-      { 380: "a06232f75c284d769762", 511: "0ff1c220f80867ecbe38" }[e]),
+      { 380: "99a9c102cac7ef1ab3bc", 511: "885cd5fca58acfd514ef" }[e]),
     (__webpack_require__.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
     (__webpack_require__.g = (function () {
@@ -11769,15 +11765,15 @@ var CLSTAMP = "7909569";
   (() => {
     "use strict";
     var e = __webpack_require__(655),
-      t = (__webpack_require__(341), __webpack_require__(311)),
+      t = (__webpack_require__(226), __webpack_require__(311)),
       o = __webpack_require__.n(t),
-      r = __webpack_require__(559),
-      n = __webpack_require__(391);
+      r = __webpack_require__(629),
+      n = __webpack_require__(418);
     function i(t) {
       return (0, e.mG)(this, void 0, void 0, function* () {
         const { InitializeGamepadNavigation: e } = yield __webpack_require__
           .e(511)
-          .then(__webpack_require__.bind(__webpack_require__, 300));
+          .then(__webpack_require__.bind(__webpack_require__, 346));
         e(t);
       });
     }
@@ -11794,7 +11790,7 @@ var CLSTAMP = "7909569";
                 (0, e.mG)(this, void 0, void 0, function* () {
                   const { InitializeForDesktop: e } = yield __webpack_require__
                     .e(380)
-                    .then(__webpack_require__.bind(__webpack_require__, 781));
+                    .then(__webpack_require__.bind(__webpack_require__, 255));
                   e();
                 });
               })()

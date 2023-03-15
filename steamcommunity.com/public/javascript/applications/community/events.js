@@ -232,7 +232,7 @@
         h = n(90806),
         E = (n(67237), n(22840)),
         _ = n(81997),
-        S = n(37238);
+        S = n(29213);
       let I = class extends o.Component {
         constructor() {
           super(...arguments), (this.m_clanSteamID = new l.K(s.JA.CLANSTEAMID));

@@ -40,7 +40,7 @@
 .cookiesettings_NecessaryGroup_24o8c {
   margin-bottom: 22px;
   background: rgba(59, 63, 72, 0.5);
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   border-radius: 3px;
   padding: 6px 6px 6px 12px;
 }

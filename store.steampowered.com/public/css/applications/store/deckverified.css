@@ -15,7 +15,7 @@
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
-  background-color: #3b5a7280;
+  background-color: rgba(59, 90, 114, 0.5019607843);
   align-items: center;
   transition: background-color 0.2s ease;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
 }
 .deckverified_BannerContentDesktop_2qr1f:focus-within,
 .deckverified_BannerContent_1B2KF:focus-within {
-  background-color: #678ba670;
+  background-color: rgba(103, 139, 166, 0.4392156863);
 }
 .deckverified_BannerContentDesktop_2qr1f {
   background: linear-gradient(
@@ -267,6 +267,36 @@
   color: var(--gpStoreLightestGrey);
   font-size: 14px;
   line-height: 20px;
+}
+.footericons_Dark_2SV_e .footericons_Background_I3P4e {
+  color: #0e141b;
+}
+.footericons_Dark_2SV_e .footericons_Foreground_39K5g {
+  color: #fff;
+}
+.footericons_Light_2e0Fq .footericons_Background_I3P4e {
+  color: #fff;
+}
+.footericons_Light_2e0Fq .footericons_Foreground_39K5g {
+  color: #0e141b;
+}
+.footericons_Knockout_2Q-49 {
+  color: #fff;
+}
+.footericons_SizeSmall_3sify {
+  width: auto;
+  height: 16px;
+}
+.footericons_SizeMedium_3-w0R {
+  width: auto;
+  height: 22px;
+}
+.footericons_SizeLarge_3jE5H {
+  width: auto;
+  height: 36px;
+}
+.footericons_ChordSummary_2sFpI.footericons_SizeSmall_3sify {
+  margin-right: 20px;
 }
 .throbber_LoadingWrapper_3Z36h {
   display: flex;
@@ -665,34 +695,4 @@
 }
 .throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
   opacity: 1;
-}
-.footericons_Dark_2SV_e .footericons_Background_I3P4e {
-  color: #0e141b;
-}
-.footericons_Dark_2SV_e .footericons_Foreground_39K5g {
-  color: #fff;
-}
-.footericons_Light_2e0Fq .footericons_Background_I3P4e {
-  color: #fff;
-}
-.footericons_Light_2e0Fq .footericons_Foreground_39K5g {
-  color: #0e141b;
-}
-.footericons_Knockout_2Q-49 {
-  color: #fff;
-}
-.footericons_SizeSmall_3sify {
-  width: auto;
-  height: 16px;
-}
-.footericons_SizeMedium_3-w0R {
-  width: auto;
-  height: 22px;
-}
-.footericons_SizeLarge_3jE5H {
-  width: auto;
-  height: 36px;
-}
-.footericons_ChordSummary_2sFpI.footericons_SizeSmall_3sify {
-  margin-right: 20px;
 }

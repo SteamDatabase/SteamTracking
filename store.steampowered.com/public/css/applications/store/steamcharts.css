@@ -326,7 +326,7 @@
 .chartscommon_ChartTable_37mz_
   .chartscommon_TableRow_1e_nc
   .chartscommon_ChangeCell_5XCIf {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
   text-align: right;
   padding-right: 16px;
   width: 7%;
@@ -698,7 +698,7 @@ div#global_header .content {
   padding-top: 94px;
   overflow: hidden;
   background: #0e1014;
-  background: linear-gradient(180deg, #0e1014 50%, #0e101400 100%);
+  background: linear-gradient(180deg, #0e1014 50%, rgba(14, 16, 20, 0) 100%);
   transition: padding-top 0.2s;
 }
 .steamchartsshell_SteamChartsMenu_KSZ9h svg.steamchartsshell_SteamLogo_3qWYY {
@@ -739,7 +739,7 @@ div#global_header .content {
   }
   .steamchartsshell_SteamChartsMenu_KSZ9h::-webkit-scrollbar {
     height: 0;
-    background: transparent;
+    background: rgba(0, 0, 0, 0);
   }
 }
 @media all and (max-width: 910px) {
@@ -902,7 +902,7 @@ div#global_header .content {
   height: 0;
   border-style: solid;
   border-width: 7px 9px 7px 0;
-  border-color: transparent #fff transparent transparent;
+  border-color: rgba(0, 0, 0, 0) #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 }
 .steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavNext_27ASB {
   display: inline-block;
@@ -910,7 +910,7 @@ div#global_header .content {
   height: 0;
   border-style: solid;
   border-width: 7px 0 7px 9px;
-  border-color: transparent transparent transparent #fff;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff;
 }
 .steamchartsshell_ChartRangeCtn_wLFBO
   .steamchartsshell_ChartNavCtn_1tUsA.steamchartsshell_Disabled_2VVBw
@@ -918,7 +918,7 @@ div#global_header .content {
 .steamchartsshell_ChartRangeCtn_wLFBO
   .steamchartsshell_ChartNavCtn_1tUsA.steamchartsshell_Disabled_2VVBw
   .steamchartsshell_ChartNavPrev_PFs4U {
-  border-color: transparent transparent transparent #545c67;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #545c67;
 }
 .overviewpage_PageContainer_ACgX0 {
   max-width: 940px;
@@ -1415,7 +1415,7 @@ div#global_header .content {
 .weeklytopsellers_ChartTable_3arZn
   .weeklytopsellers_TableRow_2-RN6
   .weeklytopsellers_ChangeCell_1ZdIh {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
   text-align: right;
   padding-right: 16px;
   width: 7%;
@@ -1656,7 +1656,7 @@ div#global_header .content {
   width: calc(100vw - 200px);
   max-width: 1900px;
   transform-origin: top;
-  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+  -webkit-mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       15.77% 44.22% at 50% 104.95%,
       rgba(66, 66, 66, 0) 0%,

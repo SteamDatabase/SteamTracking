@@ -165,10 +165,10 @@
 .ingame .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #8cd61d 0%,
-    #a1f410 30%,
-    #a1f410 70%,
-    #8cd61d 100%
+    rgb(140, 214, 29) 0%,
+    rgb(161, 244, 16) 30%,
+    rgb(161, 244, 16) 70%,
+    rgb(140, 214, 29) 100%
   );
 }
 .ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -185,19 +185,19 @@
 .watchingbroadcast .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #9c8fd4 0%,
-    #9c8fd4 30%,
-    #9c8fd4 70%,
-    #9c8fd4 100%
+    rgb(156, 143, 212) 0%,
+    rgb(156, 143, 212) 30%,
+    rgb(156, 143, 212) 70%,
+    rgb(156, 143, 212) 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #6dcff6 0%,
-    #6dcff6 30%,
-    #6dcff6 70%,
-    #6dcff6 100%
+    rgb(109, 207, 246) 0%,
+    rgb(109, 207, 246) 30%,
+    rgb(109, 207, 246) 70%,
+    rgb(109, 207, 246) 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -260,7 +260,7 @@
 }
 .steamavatar_avatar_1p_Qr.GamepadMode,
 .GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
 }
@@ -361,7 +361,7 @@
 .miniprofile_miniProfile_1AMAp {
   width: fit-content;
   margin: 11px;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   overflow: hidden;
 }
 .miniprofile_miniProfileContent_3QoRR {
@@ -397,9 +397,9 @@
   z-index: -3;
   background: radial-gradient(
     ellipse farthest-corner at 20% 30%,
-    #4c505b 0%,
-    #34373f 50%,
-    #282c32 100%
+    rgb(76, 80, 91) 0%,
+    rgb(52, 55, 63) 50%,
+    rgb(40, 44, 50) 100%
   );
 }
 .miniprofile_miniProfileBackgroundBlur_QTyZx {
@@ -412,14 +412,14 @@
   opacity: 0.4;
   -webkit-mask: radial-gradient(
     ellipse farthest-corner at 150px 150px,
-    black 0%,
+    rgb(0, 0, 0) 0%,
     rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0.3) 34%,
     rgba(0, 0, 0, 0) 64%
   );
   mask: radial-gradient(
     ellipse farthest-corner at 150px 150px,
-    black 0%,
+    rgb(0, 0, 0) 0%,
     rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0.3) 34%,
     rgba(0, 0, 0, 0) 64%
@@ -753,7 +753,7 @@
   color: #b1b1b1;
 }
 .miniprofile_mutualFriends_3tWrb {
-  background-color: #000a;
+  background-color: rgba(0, 0, 0, 0.6666666667);
 }
 .miniprofile_miniProfileContent_3QoRR
   .miniprofile_miniProfileBottom_2MwqO
@@ -1294,7 +1294,11 @@
   right: 5%;
   bottom: 5%;
   left: 5%;
-  background: linear-gradient(to bottom, #53a4c4 5%, #458097 95%);
+  background: linear-gradient(
+    to bottom,
+    rgb(83, 164, 196) 5%,
+    rgb(69, 128, 151) 95%
+  );
 }
 .avatarcollection_FramePreview_16w1D
   .avatarcollection_DefaultAvatarFrame_Z3REH
@@ -1387,7 +1391,7 @@ input.DialogTextInputBase,
 input.DialogTextInputBase:not(:disabled):hover,
 input.DialogTextInputBase:disabled:hover,
 input.DialogTextInputBase:focus {
-  box-shadow: inset 1px 1px 0px #000a;
+  box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.6666666667);
   border: none;
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -1679,6 +1683,351 @@ input.DialogTextInputBase:focus {
   border-right: none;
   background-color: unset;
 }
+.buttonBack___1mlaL,
+.buttonFirst___2rhFr,
+.buttonLast___2yuh0,
+.buttonNext___2mOCa,
+.buttonNext___3Lm3s,
+.dot___3c3SI {
+  cursor: pointer;
+}
+.image___xtQGH {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.spinner___27VUp {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  animation-name: spin___S3UuE;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border: 4px solid #a9a9a9;
+  border-top-color: #000;
+  border-radius: 30px;
+}
+@keyframes spin___S3UuE {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.container___2O72F {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.overlay___IV4qY {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  cursor: zoom-in;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.hover___MYy31,
+.loading___1pvNI,
+.zoom___3kqYk {
+  opacity: 1;
+}
+.imageLoadingSpinnerContainer___3UIPD {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
+.slide___3-Nqo {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.slide___3-Nqo:focus {
+  outline: none !important;
+}
+.slideHorizontal___1NzNV {
+  float: left;
+}
+[dir="rtl"] .slideHorizontal___1NzNV {
+  direction: rtl;
+  transform: scaleX(-1);
+}
+.slideInner___2mfX9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.focusRing___1airF {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  pointer-events: none;
+  outline-width: 5px;
+  outline-style: solid;
+  outline-color: Highlight;
+}
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .focusRing___1airF {
+    outline-style: auto;
+    outline-color: -webkit-focus-ring-color;
+  }
+}
+.horizontalSlider___281Ls {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+[dir="rtl"] .horizontalSlider___281Ls {
+  direction: ltr;
+  transform: scaleX(-1);
+}
+.horizontalSliderTray___1L-0W {
+  overflow: hidden;
+  width: 100%;
+}
+.verticalSlider___34ZFD {
+  position: relative;
+  overflow: hidden;
+}
+.verticalSliderTray___267D8 {
+  overflow: hidden;
+}
+.verticalTray___12Key {
+  float: left;
+}
+.verticalSlideTrayWrap___2nO7o {
+  overflow: hidden;
+}
+.sliderTray___-vHFQ {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sliderAnimation___300FY {
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: transform;
+}
+.masterSpinnerContainer___1Z6hB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
+.carousel_carouselNavButton_1KK5N {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none !important;
+  display: flex;
+  cursor: pointer;
+  padding: 0px;
+}
+.carousel_carouselNavButton_1KK5N:hover svg {
+  opacity: 1;
+}
+.carousel_carouselNavButton_1KK5N:disabled svg {
+  opacity: 0.1;
+  filter: none;
+}
+.carousel_carouselNavButton_1KK5N.carousel_left_gLIfz {
+  transform: rotateZ(180deg);
+}
+.carousel_carouselNavButton_1KK5N svg {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+  fill: #fff;
+}
+.carousel_carouselBtnCtn_aqswv {
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  position: absolute;
+  padding: 0px;
+  width: 50px;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_carouselBtnCtn_aqswv.carousel_left_gLIfz {
+  left: -68px;
+}
+.carousel_carouselBtnCtn_aqswv.carousel_right_1qWih {
+  right: -68px;
+}
+.carousel_carouselBtnCtn_aqswv svg {
+  width: 50px;
+  height: 50px;
+}
+.BasicUI .carousel_carouselBtnCtn_aqswv {
+  display: none;
+}
+.carousel_carouselBody_2M7XO {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.carousel_sliderBody_gtnxY {
+  position: relative;
+}
+.SaleSectionCarousel .carousel__slider {
+  padding: 10px 0px;
+  margin: -10px -7px 0px -7px;
+}
+html.responsive.touch .SaleSectionCarousel .carousel__slider {
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+    margin: 0;
+  }
+}
+.BasicUI .SaleSectionCarousel .carousel__slider {
+  padding: unset;
+}
+.BasicUI .carousel_slideTrayCustomize_2rRBe {
+  column-gap: 12px;
+}
+.carousel_breadcrumbContainer_1nhaj {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.carousel_pipList_3oTuB {
+  display: flex;
+  flex-flow: row;
+}
+.carousel_pipScrollerContainer_1C-B8 {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  margin: 2px 10px 0px 10px;
+}
+.BasicUI .carousel_pipScrollerContainer_1C-B8 {
+  display: none;
+}
+.contenthubmaincarousel .carousel_pipScrollerContainer_1C-B8 {
+  max-width: 940px;
+  width: 100%;
+  margin: 0px auto;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScrollButton_vy7Kr.carousel_left_gLIfz {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr svg {
+  height: 30px;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_scrollNavDiv_13TQ_ {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_scrollNavDiv_13TQ_
+  .carousel_scrollNavButton_1GLi1 {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScroller_GXWYa {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScroller_GXWYa
+  .carousel_scrollBackground_3-RYo {
+  position: absolute;
+  left: 0px;
+  top: 17px;
+  bottom: 17px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.13);
+  margin: auto 0;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScroller_GXWYa
+  .carousel_scrollForeground_yJM1K {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: left right;
+  transition-duration: 0.4s;
+}
+.carousel_pipContainer_373Zi {
+  padding-top: 10px;
+}
+.carousel_pipContainer_373Zi .carousel_pip_3Bznr {
+  width: 28px;
+  height: 25px;
+  position: relative;
+}
+.carousel_pipContainer_373Zi .carousel_pip_3Bznr .carousel_pipNumber_2_JtJ {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.carousel_pip_3Bznr {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none !important;
+  cursor: pointer;
+  width: 18px;
+  height: 15px;
+  opacity: 0.3;
+  padding: 1px 2px;
+  margin: 0px;
+  transition: opacity 0.2s;
+}
+.carousel_pip_3Bznr img {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pip_3Bznr.carousel__dot--selected {
+  opacity: 1;
+}
+.carousel_innerSlide_Kx5A5 div {
+  outline-width: 0px;
+}
+.carousel_DisableSliderMotion_3la_1 {
+  transition: none;
+}
+.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+}
 .cloudfileuploadbutton_Ctn_MKp7i {
   position: relative;
 }
@@ -1690,7 +2039,7 @@ input.DialogTextInputBase:focus {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -1705,7 +2054,7 @@ input.DialogTextInputBase:focus {
 .cloudfileuploadprogress_UploadPreviewContainer_2IhGM
   .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
   fill: #788a92;
-  background-color: #0004;
+  background-color: rgba(0, 0, 0, 0.2666666667);
   border-radius: 4px;
   height: 150px;
   width: 100%;
@@ -1740,7 +2089,7 @@ input.DialogTextInputBase:focus {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  box-shadow: 0 0 4px 1px #00000088;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5333333333);
 }
 .cloudfileuploadprogress_FileUploadCancel_2MPbU
   .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
@@ -1772,7 +2121,7 @@ input.DialogTextInputBase:focus {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -1878,7 +2227,7 @@ input.DialogTextInputBase:focus {
   color: #909090;
   font-size: 14px;
   line-height: 1.4em;
-  box-shadow: inset 1px 1px 0px #000a;
+  box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.6666666667);
   border: none;
   background-color: rgba(0, 0, 0, 0.25);
   padding: 12px;
@@ -3041,7 +3390,7 @@ body.profilethemecolors_SteamDeckTheme_3TBj7 {
   .awardmodal_Button_zGUr9 {
   padding: 8px;
   border-radius: 2px;
-  border: 3px solid transparent;
+  border: 3px solid rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3052,7 +3401,7 @@ body.profilethemecolors_SteamDeckTheme_3TBj7 {
   .awardmodal_GrantAwardModal_2vlF5
     .awardmodal_ButtonContainer_1SCKZ
     .awardmodal_Button_zGUr9 {
-    border: 2px solid transparent;
+    border: 2px solid rgba(0, 0, 0, 0);
     padding: 4px 12px;
     flex-direction: row;
     column-gap: 20px;

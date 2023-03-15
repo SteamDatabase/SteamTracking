@@ -478,7 +478,7 @@ body.v6 {
   font-size: 1.1vw;
   text-align: center;
   font-weight: 200;
-  color: #ffffff85;
+  color: rgba(255, 255, 255, 0.5215686275);
   overflow: hidden;
   z-index: 1;
 }
@@ -811,7 +811,7 @@ body.v6 {
 }
 .yirlanding_QuestionCtn_1_WCk .yirlanding_Answer_zGzLS {
   font-weight: 400;
-  color: #ffffffad;
+  color: rgba(255, 255, 255, 0.6784313725);
   font-size: 16px;
 }
 .yirlanding_QuestionCtn_1_WCk .yirlanding_Answer_zGzLS ol {
@@ -867,10 +867,10 @@ body.v6 {
 .ingame .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #8cd61d 0%,
-    #a1f410 30%,
-    #a1f410 70%,
-    #8cd61d 100%
+    rgb(140, 214, 29) 0%,
+    rgb(161, 244, 16) 30%,
+    rgb(161, 244, 16) 70%,
+    rgb(140, 214, 29) 100%
   );
 }
 .ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -887,19 +887,19 @@ body.v6 {
 .watchingbroadcast .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #9c8fd4 0%,
-    #9c8fd4 30%,
-    #9c8fd4 70%,
-    #9c8fd4 100%
+    rgb(156, 143, 212) 0%,
+    rgb(156, 143, 212) 30%,
+    rgb(156, 143, 212) 70%,
+    rgb(156, 143, 212) 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #6dcff6 0%,
-    #6dcff6 30%,
-    #6dcff6 70%,
-    #6dcff6 100%
+    rgb(109, 207, 246) 0%,
+    rgb(109, 207, 246) 30%,
+    rgb(109, 207, 246) 70%,
+    rgb(109, 207, 246) 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -962,7 +962,7 @@ body.v6 {
 }
 .steamavatar_avatar_1p_Qr.GamepadMode,
 .GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
 }
@@ -1106,7 +1106,7 @@ body.v6 {
     linear,
     left 90%,
     left bottom,
-    from(#0e1014),
+    from(rgb(14, 16, 20)),
     to(rgba(0, 0, 0, 0))
   );
 }
@@ -1357,7 +1357,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_IntroLine_3uV4W,
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
   .yircomponents_Title_2geom {
-  text-shadow: 2px 2px 13px #185a1d91;
+  text-shadow: 2px 2px 13px rgba(24, 90, 29, 0.568627451);
 }
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1 {
   background: radial-gradient(
@@ -1375,7 +1375,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_IntroLine_3uV4W,
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
   .yircomponents_Title_2geom {
-  text-shadow: 2px 2px 13px #64245291;
+  text-shadow: 2px 2px 13px rgba(100, 36, 82, 0.568627451);
 }
 .yircomponents_TopMostGame_GSCk- .yircomponents_TopGameBlockContainer_1o-Oa {
   background: radial-gradient(
@@ -1701,14 +1701,14 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_GameChart_3EsVJ
   .recharts-cartesian-axis-ticks
   line {
-  stroke: #ffffff3b;
+  stroke: rgba(255, 255, 255, 0.231372549);
 }
 .yircomponents_StandardInfoCtn_qUC7C
   .yircomponents_GameChartCtn_3gqqv
   .yircomponents_GameChart_3EsVJ
   .recharts-text
   tspan {
-  color: #ffffff3b;
+  color: rgba(255, 255, 255, 0.231372549);
   font-size: clamp(12px, 1vw, 22px);
 }
 .yircomponents_StandardInfoCtn_qUC7C
@@ -1818,7 +1818,12 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   position: absolute;
   width: 194px;
   text-align: center;
-  background: linear-gradient(45deg, #0b70598a 15%, #005580d9 55%, #941a73bd);
+  background: linear-gradient(
+    45deg,
+    rgba(11, 112, 89, 0.5411764706) 15%,
+    rgba(0, 85, 128, 0.8509803922) 55%,
+    rgba(148, 26, 115, 0.7411764706)
+  );
   color: #fff;
   font-weight: 700;
   font-size: 10px;
@@ -1848,7 +1853,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   top: 0;
 }
 .yircomponents_PlatformChartsCtn_1dYXW .recharts-pie-sector path {
-  stroke: #0f1a1d6b;
+  stroke: rgba(15, 26, 29, 0.4196078431);
   stroke-width: 6px;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -2007,7 +2012,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   color: #b9c2cc;
   background: linear-gradient(to bottom, #ffffff 0%, #b1b7ca 60%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .yircomponents_GameDetailsPopup_3OhDS {
@@ -2080,7 +2085,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   margin: 0 16px;
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid transparent;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
   transition-property: border-bottom-color;
   transition-duration: 0.25s;
   font-size: 14px;
@@ -2205,9 +2210,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   background-position: 0 0;
   background-image: radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      #02bbff34 0%,
-      #ff03b33a 52.6%,
-      #6aff0023
+      rgba(2, 187, 255, 0.2039215686) 0%,
+      rgba(255, 3, 179, 0.2274509804) 52.6%,
+      rgba(106, 255, 0, 0.137254902)
     ),
     url("/public/images/yearinreview/2022/steam_logo_offset.png");
   background-repeat: repeat;
@@ -2215,7 +2220,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     linear,
     left 90%,
     left bottom,
-    from(#0e1014),
+    from(rgb(14, 16, 20)),
     to(rgba(0, 0, 0, 0))
   );
   background-size: clamp(180px, 25vw, 400px);
@@ -2232,7 +2237,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     linear,
     left 90%,
     left bottom,
-    from(#0e1014),
+    from(rgb(14, 16, 20)),
     to(rgba(0, 0, 0, 0))
   );
   z-index: -1;
@@ -2251,13 +2256,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
-      #424242 0%,
+      rgb(66, 66, 66) 0%,
       rgba(66, 66, 66, 0) 100%
     );
   mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
-      #424242 0%,
+      rgb(66, 66, 66) 0%,
       rgba(66, 66, 66, 0) 100%
     );
   -webkit-mask-composite: source-in;
@@ -2301,13 +2306,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
-      #424242 0%,
+      rgb(66, 66, 66) 0%,
       rgba(66, 66, 66, 0) 100%
     );
   mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
-      #424242 0%,
+      rgb(66, 66, 66) 0%,
       rgba(66, 66, 66, 0) 100%
     );
   -webkit-mask-composite: source-in;
@@ -2390,8 +2395,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   flex-direction: row;
   background-image: radial-gradient(
     100% 100% at 25% 0%,
-    #ffffff63 0%,
-    #fdfdfd47 100%
+    rgba(255, 255, 255, 0.3882352941) 0%,
+    rgba(253, 253, 253, 0.2784313725) 100%
   );
   transition: transform 250ms ease-out, box-shadow 250ms ease-out;
 }
@@ -2460,7 +2465,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   display: flex;
   flex-direction: row;
   background: rgba(0, 0, 0, 0.2);
-  box-shadow: 6px 6px 15px 0px #00000080 inset;
+  box-shadow: 6px 6px 15px 0px rgba(0, 0, 0, 0.5019607843) inset;
   border-radius: 4px;
 }
 .yirbadges_TopHonorsCtn_1xRuk
@@ -2667,7 +2672,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_GraphBox_2n56d
   .recharts-radar-polygon
   path {
-  fill: #3a32af83;
+  fill: rgba(58, 50, 175, 0.5137254902);
   stroke: rgba(72, 107, 224, 0.8);
   stroke-width: 2px;
 }
@@ -2675,7 +2680,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_GraphBox_2n56d
   .recharts-polar-grid-angle
   line {
-  stroke: #000c;
+  stroke: rgba(0, 0, 0, 0.8);
   stroke-width: 2px;
   z-index: 2;
 }
@@ -2683,17 +2688,17 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_GraphBox_2n56d
   .recharts-polar-grid-concentric
   path {
-  stroke: #0002;
+  stroke: rgba(0, 0, 0, 0.1333333333);
   stroke-width: 2px;
-  fill: #0000;
+  fill: rgba(0, 0, 0, 0);
 }
 .yirbadges_SpidergraphContainer_2zK9j
   .yirbadges_GraphBox_2n56d
   .recharts-polar-grid-concentric
   path:last-child {
-  stroke: #0001;
+  stroke: rgba(0, 0, 0, 0.0666666667);
   stroke-width: 4px;
-  fill: #0003;
+  fill: rgba(0, 0, 0, 0.2);
 }
 .yirbadges_SpidergraphContainer_2zK9j text {
   font-size: clamp(12px, 2vw, 20px);
@@ -2805,7 +2810,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_ProgressIcon_3J3rX {
   width: clamp(80px, 8vw, 156px);
   height: clamp(80px, 8vw, 156px);
-  background-color: #0008;
+  background-color: rgba(0, 0, 0, 0.5333333333);
   flex-shrink: 0;
   border: 2px solid #000;
   display: flex;
@@ -2863,8 +2868,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_ProgressRightSide_3FXre
   .yirbadges_ProgressBar_ImOR1 {
   height: clamp(12px, 1.75vw, 26px);
-  border: 4px solid #0005;
-  background-color: #0003;
+  border: 4px solid rgba(0, 0, 0, 0.3333333333);
+  background-color: rgba(0, 0, 0, 0.2);
   align-self: stretch;
   border-radius: 6px;
   position: relative;
@@ -2875,7 +2880,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_ProgressBar_ImOR1
   .yirbadges_ProgressBarMid_1yo31 {
   width: 4px;
-  background-color: #0005;
+  background-color: rgba(0, 0, 0, 0.3333333333);
   height: 150%;
   position: absolute;
   left: 50%;
@@ -3013,7 +3018,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_WheelChart_3uLgh
   .recharts-pie-sector
   path {
-  stroke: #0003;
+  stroke: rgba(0, 0, 0, 0.2);
   stroke-width: 4px;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -3091,7 +3096,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-weight: 600;
   color: #fff;
   z-index: 1;
-  text-shadow: 2px 2px 4px #0005;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3333333333);
   position: relative;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
@@ -3233,11 +3238,15 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .yirfriends_FriendCtn_1dEBr {
   display: flex;
   align-items: center;
-  background: linear-gradient(14deg, #162964e0, #105662b8);
+  background: linear-gradient(
+    14deg,
+    rgba(22, 41, 100, 0.8784313725),
+    rgba(16, 86, 98, 0.7215686275)
+  );
   border-radius: 5px;
   padding: 8px;
   font-size: 14px;
-  filter: drop-shadow(2px 4px 6px #021b23e8);
+  filter: drop-shadow(2px 4px 6px rgba(2, 27, 35, 0.9098039216));
   transition-property: filter, transform;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -3492,7 +3501,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   padding: 8px;
 }
 .yirshare_ShareCtn_3wBwg .yirshare_DropdownButton_H5GE- {
-  background: #ffffff6b;
+  background: rgba(255, 255, 255, 0.4196078431);
   color: #fff;
   font-size: 18px;
   margin-top: 8px;
@@ -4399,6 +4408,351 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   border-right: none;
   background-color: unset;
 }
+.buttonBack___1mlaL,
+.buttonFirst___2rhFr,
+.buttonLast___2yuh0,
+.buttonNext___2mOCa,
+.buttonNext___3Lm3s,
+.dot___3c3SI {
+  cursor: pointer;
+}
+.image___xtQGH {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.spinner___27VUp {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  animation-name: spin___S3UuE;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border: 4px solid #a9a9a9;
+  border-top-color: #000;
+  border-radius: 30px;
+}
+@keyframes spin___S3UuE {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.container___2O72F {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.overlay___IV4qY {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  cursor: zoom-in;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.hover___MYy31,
+.loading___1pvNI,
+.zoom___3kqYk {
+  opacity: 1;
+}
+.imageLoadingSpinnerContainer___3UIPD {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
+.slide___3-Nqo {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.slide___3-Nqo:focus {
+  outline: none !important;
+}
+.slideHorizontal___1NzNV {
+  float: left;
+}
+[dir="rtl"] .slideHorizontal___1NzNV {
+  direction: rtl;
+  transform: scaleX(-1);
+}
+.slideInner___2mfX9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.focusRing___1airF {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  pointer-events: none;
+  outline-width: 5px;
+  outline-style: solid;
+  outline-color: Highlight;
+}
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .focusRing___1airF {
+    outline-style: auto;
+    outline-color: -webkit-focus-ring-color;
+  }
+}
+.horizontalSlider___281Ls {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+[dir="rtl"] .horizontalSlider___281Ls {
+  direction: ltr;
+  transform: scaleX(-1);
+}
+.horizontalSliderTray___1L-0W {
+  overflow: hidden;
+  width: 100%;
+}
+.verticalSlider___34ZFD {
+  position: relative;
+  overflow: hidden;
+}
+.verticalSliderTray___267D8 {
+  overflow: hidden;
+}
+.verticalTray___12Key {
+  float: left;
+}
+.verticalSlideTrayWrap___2nO7o {
+  overflow: hidden;
+}
+.sliderTray___-vHFQ {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sliderAnimation___300FY {
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: transform;
+}
+.masterSpinnerContainer___1Z6hB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
+.carousel_carouselNavButton_1KK5N {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none !important;
+  display: flex;
+  cursor: pointer;
+  padding: 0px;
+}
+.carousel_carouselNavButton_1KK5N:hover svg {
+  opacity: 1;
+}
+.carousel_carouselNavButton_1KK5N:disabled svg {
+  opacity: 0.1;
+  filter: none;
+}
+.carousel_carouselNavButton_1KK5N.carousel_left_gLIfz {
+  transform: rotateZ(180deg);
+}
+.carousel_carouselNavButton_1KK5N svg {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+  fill: #fff;
+}
+.carousel_carouselBtnCtn_aqswv {
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  position: absolute;
+  padding: 0px;
+  width: 50px;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_carouselBtnCtn_aqswv.carousel_left_gLIfz {
+  left: -68px;
+}
+.carousel_carouselBtnCtn_aqswv.carousel_right_1qWih {
+  right: -68px;
+}
+.carousel_carouselBtnCtn_aqswv svg {
+  width: 50px;
+  height: 50px;
+}
+.BasicUI .carousel_carouselBtnCtn_aqswv {
+  display: none;
+}
+.carousel_carouselBody_2M7XO {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.carousel_sliderBody_gtnxY {
+  position: relative;
+}
+.SaleSectionCarousel .carousel__slider {
+  padding: 10px 0px;
+  margin: -10px -7px 0px -7px;
+}
+html.responsive.touch .SaleSectionCarousel .carousel__slider {
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+    margin: 0;
+  }
+}
+.BasicUI .SaleSectionCarousel .carousel__slider {
+  padding: unset;
+}
+.BasicUI .carousel_slideTrayCustomize_2rRBe {
+  column-gap: 12px;
+}
+.carousel_breadcrumbContainer_1nhaj {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.carousel_pipList_3oTuB {
+  display: flex;
+  flex-flow: row;
+}
+.carousel_pipScrollerContainer_1C-B8 {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  margin: 2px 10px 0px 10px;
+}
+.BasicUI .carousel_pipScrollerContainer_1C-B8 {
+  display: none;
+}
+.contenthubmaincarousel .carousel_pipScrollerContainer_1C-B8 {
+  max-width: 940px;
+  width: 100%;
+  margin: 0px auto;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScrollButton_vy7Kr.carousel_left_gLIfz {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr svg {
+  height: 30px;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_scrollNavDiv_13TQ_ {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_scrollNavDiv_13TQ_
+  .carousel_scrollNavButton_1GLi1 {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScroller_GXWYa {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScroller_GXWYa
+  .carousel_scrollBackground_3-RYo {
+  position: absolute;
+  left: 0px;
+  top: 17px;
+  bottom: 17px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.13);
+  margin: auto 0;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScroller_GXWYa
+  .carousel_scrollForeground_yJM1K {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: left right;
+  transition-duration: 0.4s;
+}
+.carousel_pipContainer_373Zi {
+  padding-top: 10px;
+}
+.carousel_pipContainer_373Zi .carousel_pip_3Bznr {
+  width: 28px;
+  height: 25px;
+  position: relative;
+}
+.carousel_pipContainer_373Zi .carousel_pip_3Bznr .carousel_pipNumber_2_JtJ {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.carousel_pip_3Bznr {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none !important;
+  cursor: pointer;
+  width: 18px;
+  height: 15px;
+  opacity: 0.3;
+  padding: 1px 2px;
+  margin: 0px;
+  transition: opacity 0.2s;
+}
+.carousel_pip_3Bznr img {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pip_3Bznr.carousel__dot--selected {
+  opacity: 1;
+}
+.carousel_innerSlide_Kx5A5 div {
+  outline-width: 0px;
+}
+.carousel_DisableSliderMotion_3la_1 {
+  transition: none;
+}
+.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+}
 .cloudfileuploadbutton_Ctn_MKp7i {
   position: relative;
 }
@@ -4410,7 +4764,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -4425,7 +4779,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 .cloudfileuploadprogress_UploadPreviewContainer_2IhGM
   .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
   fill: #788a92;
-  background-color: #0004;
+  background-color: rgba(0, 0, 0, 0.2666666667);
   border-radius: 4px;
   height: 150px;
   width: 100%;
@@ -4460,7 +4814,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  box-shadow: 0 0 4px 1px #00000088;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5333333333);
 }
 .cloudfileuploadprogress_FileUploadCancel_2MPbU
   .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
@@ -4492,7 +4846,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -4606,7 +4960,12 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   bottom: 0;
   right: 0;
   left: 0;
-  background: linear-gradient(to right, #0000, #ffffff45 22%, #ffffff75 24%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(255, 255, 255, 0.2705882353) 22%,
+    rgba(255, 255, 255, 0.4588235294) 24%
+  );
 }
 div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   .yirsummarycharts_TotalPlaytimeContainer_1yw88 {
@@ -4757,7 +5116,7 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   paint-order: stroke;
   z-index: 2;
   transform: translateX(-1px);
-  filter: drop-shadow(0px 0px 8px black) brightness(1.1);
+  filter: drop-shadow(0px 0px 8px rgb(0, 0, 0)) brightness(1.1);
   transition-property: filter, transform, stroke, stroke-width;
   transition-duration: 0.16s;
   transition-timing-function: ease-in-out;
@@ -4767,7 +5126,7 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   .yirtimelinecontainer_Chart_1YUut
   .recharts-text
   tspan {
-  color: #ffffff3b;
+  color: rgba(255, 255, 255, 0.231372549);
   font-size: clamp(12px, 1vw, 22px);
 }
 .screenshotpopout_PopupScreenshotContainer_2mYDh {
@@ -4809,7 +5168,7 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   position: relative;
   transition: transform 0.1s ease-in-out;
   vertical-align: top;
-  box-shadow: 0 0 3px #0005;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3333333333);
   cursor: pointer;
 }
 .achievementiconbase_Icon_2bzHb.achievementiconbase_IconGlow_tH67c {
@@ -4883,11 +5242,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlowContainer_leuGO {
     rgba(255, 217, 0, 0.178) 0%,
     rgba(255, 184, 78, 0) 6%,
     rgba(255, 217, 0, 0.178) 10%,
-    #ffb84e 26%,
+    rgb(255, 184, 78) 26%,
     rgba(255, 217, 0, 0.178) 35%,
-    #ffb84e 40%,
+    rgb(255, 184, 78) 40%,
     rgba(255, 217, 0, 0.178) 60%,
-    #ffb84e 82%,
+    rgb(255, 184, 78) 82%,
     rgba(255, 217, 0, 0.178) 100%
   );
   overflow: hidden;
@@ -4913,13 +5272,13 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-align: center;
   vertical-align: middle;
   position: relative;
-  box-shadow: 0 0 3px #0005;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3333333333);
   background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
 }
 .BasicUI .achievementiconbase_HiddenLabel_2yMyP {
   width: 64px;
   height: 64px;
-  background: #acb2c924;
+  background: rgba(172, 178, 201, 0.1411764706);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5050,8 +5409,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   justify-content: center;
   height: auto;
   max-height: 80px;
-  background: #2a335670;
-  border: 1px solid #7d7dcf4a;
+  background: rgba(42, 51, 86, 0.4392156863);
+  border: 1px solid rgba(125, 125, 207, 0.2901960784);
   padding: 0 8px;
   box-sizing: border-box;
   grid-column-start: 1;

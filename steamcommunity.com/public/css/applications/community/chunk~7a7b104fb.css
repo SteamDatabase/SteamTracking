@@ -138,12 +138,12 @@
   font-size: 14px;
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: #6dcff63d;
+  text-decoration-color: rgba(109, 207, 246, 0.2392156863);
 }
 .broadcastchat_MessageName_2moOK:hover,
 .broadcastchat_MessageName_2moOK:active {
   color: #9edff8;
-  text-decoration-color: #6dcff6b4;
+  text-decoration-color: rgba(109, 207, 246, 0.7058823529);
 }
 .broadcastchat_MessageContents_3YqUZ {
   font-size: 14px;
@@ -171,7 +171,7 @@
   color: #812819;
   padding: 6px;
   border: 1px dashed rgba(255, 58, 58, 0.15);
-  box-shadow: 2px 3px 14px 1px #00000066 inset;
+  box-shadow: 2px 3px 14px 1px rgba(0, 0, 0, 0.4) inset;
   margin: 8px;
 }
 .broadcastchat_minHeightZero_-dYCi {
@@ -425,7 +425,7 @@
   height: 24px;
   padding: 6px;
   margin: 10px;
-  background-color: #0002;
+  background-color: rgba(0, 0, 0, 0.1333333333);
   border-radius: 50%;
   cursor: pointer;
   opacity: 0.75;
@@ -435,7 +435,7 @@
   margin-right: 40px;
 }
 .STV_BroadcastClose:hover {
-  background-color: #000a;
+  background-color: rgba(0, 0, 0, 0.6666666667);
   opacity: 1;
 }
 .STV_ReplayBanner {
@@ -493,10 +493,10 @@
   margin-bottom: 4px;
   padding: 8px;
   border-radius: 50%;
-  border: 1px solid #fff1;
+  border: 1px solid rgba(255, 255, 255, 0.0666666667);
 }
 .BroadcastVideoUserInputNeeded .SVGIcon_Play path {
-  fill: #fff4;
+  fill: rgba(255, 255, 255, 0.2666666667);
   stroke: #fff;
   stroke-width: 6px;
   stroke-dasharray: 0 576;
@@ -508,7 +508,7 @@
 }
 .BroadcastVideoUserInputNeeded:hover .SVGIcon_Play path {
   stroke-dasharray: 512 0;
-  fill: #fffc;
+  fill: rgba(255, 255, 255, 0.8);
 }
 .videoTimelineMain {
   width: 92%;
@@ -555,7 +555,7 @@
     to right,
     rgba(54, 143, 167, 0.45) 0px,
     rgba(54, 143, 167, 0.5) calc(100% - 64px),
-    #5dc3ff 100%
+    rgb(93, 195, 255) 100%
   );
   position: absolute;
   left: 0;
@@ -573,10 +573,10 @@
 .videoTimelineMain .STV_timelineGhostValue {
   background: linear-gradient(
     to right,
-    #368fa7 0%,
-    #5dc3ff calc(100% - 4px),
-    #dcf2ff calc(100% - 1px),
-    #dcf2ff 100%
+    rgb(54, 143, 167) 0%,
+    rgb(93, 195, 255) calc(100% - 4px),
+    rgb(220, 242, 255) calc(100% - 1px),
+    rgb(220, 242, 255) 100%
   );
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -637,7 +637,7 @@
   height: 18px;
 }
 .STV_BroadcastSettings .videoControlButton .SVGIcon_Settings path {
-  fill: transparent;
+  fill: rgba(0, 0, 0, 0);
   stroke: #fff;
   stroke: #7e7e7e;
   stroke-width: 10px;
@@ -645,8 +645,8 @@
 .STV_BroadcastSettingsPanel {
   padding: 8px;
   text-align: right;
-  border: 1px solid #333e;
-  background: #000c;
+  border: 1px solid rgba(51, 51, 51, 0.9333333333);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   margin-top: -156px;
   margin-left: -64px;
@@ -659,13 +659,13 @@
 .STV_BroadcastContextMenuPanel {
   padding: 8px;
   text-align: center;
-  border: 1px solid #333e;
-  background: #000c;
+  border: 1px solid rgba(51, 51, 51, 0.9333333333);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   z-index: 44;
 }
 .STV_BroadcastSettingsMenuItems {
-  background: #234e;
+  background: rgba(34, 51, 68, 0.9333333333);
   font-size: 12px;
 }
 .STV_BroadcastSettingsMenuItems .contextMenuItem {
@@ -781,7 +781,7 @@
 }
 .videoControlButton.videoControlGoLive.isLiveEdge:hover .jumpGoLive,
 .videoControlButton.videoControlGoLive.isLiveEdge .jumpGoLive {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   color: #3da5da;
 }
 .videoControlButton.videoControlGoLive.isLiveEdge svg {
@@ -829,7 +829,7 @@
   margin-left: -2px;
 }
 .videoControlButton .SVGIcon_Button.SVGIcon_ClosedCaption path.CCBox {
-  fill: transparent;
+  fill: rgba(0, 0, 0, 0);
   stroke: #7e7e7e;
 }
 .videoControlButton.ClosedCaptionsActive
@@ -1006,7 +1006,11 @@
   padding: 0 3px;
   text-align: center;
   white-space: nowrap;
-  background: linear-gradient(to bottom, #5dc3ff 0%, #5dc3ff 80%);
+  background: linear-gradient(
+    to bottom,
+    rgb(93, 195, 255) 0%,
+    rgb(93, 195, 255) 80%
+  );
   box-shadow: 0px -4px 5px 2px rgba(0, 0, 0, 0.2);
   font-size: 10px;
   color: #fff;
@@ -1092,8 +1096,8 @@
   width: 8px;
   height: 100%;
   border: 1px solid gray;
-  border-bottom: 0px solid transparent;
-  border-right: 0px solid transparent;
+  border-bottom: 0px solid rgba(0, 0, 0, 0);
+  border-right: 0px solid rgba(0, 0, 0, 0);
   margin-top: 6px;
   margin-right: 4px;
   opacity: 0.3;
@@ -1101,7 +1105,7 @@
   transition: opacity 0.1s ease-in-out;
 }
 .STV_timelineSegment.hideFront .STV_timelineSegmentFrontFill {
-  border-left: 0px solid transparent;
+  border-left: 0px solid rgba(0, 0, 0, 0);
   border-top-style: dotted;
 }
 .STV_timelineSegmentLabel {
@@ -1115,8 +1119,8 @@
   flex: 1;
   height: 100%;
   border: 1px solid gray;
-  border-bottom: 0px solid transparent;
-  border-left: 0px solid transparent;
+  border-bottom: 0px solid rgba(0, 0, 0, 0);
+  border-left: 0px solid rgba(0, 0, 0, 0);
   margin-top: 6px;
   margin-left: 4px;
   opacity: 0.3;
@@ -1144,9 +1148,9 @@
 .STV_timelineMinimapLine.Played {
   background: linear-gradient(
     to right,
-    #368fa7 0px,
-    #368fa7 calc(100% - 6px),
-    #5dc3ff 100%
+    rgb(54, 143, 167) 0px,
+    rgb(54, 143, 167) calc(100% - 6px),
+    rgb(93, 195, 255) 100%
   );
   background-color: #216c91;
   position: absolute;
@@ -1157,9 +1161,9 @@
 }
 .STV_timelineMapWindow {
   height: 100%;
-  border: 0px solid #fff0;
-  border-top: 1px dashed #fff2;
-  border-bottom: 1px dashed #fff2;
+  border: 0px solid rgba(255, 255, 255, 0);
+  border-top: 1px dashed rgba(255, 255, 255, 0.1333333333);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1333333333);
   position: absolute;
   top: -2px;
   backdrop-filter: brightness(160%);
@@ -1170,7 +1174,7 @@
 }
 .STV_timelineMapWindowCenter {
   flex: 1;
-  background-color: #06f1;
+  background-color: rgba(0, 102, 255, 0.0666666667);
   cursor: pointer;
 }
 .STV_timelineMapWindowCenter:hover {
@@ -1228,7 +1232,7 @@
   border: none;
   width: 24px;
   height: 24px;
-  background-color: #0005;
+  background-color: rgba(0, 0, 0, 0.3333333333);
   border-radius: 4px;
   padding: 2px;
   margin: 0;
@@ -1734,7 +1738,7 @@ iframe.steamTVLogin {
 .StandalonePlayer,
 .StandalonePlayer .BroadcastContainerSection,
 .StandalonePlayer .BroadcastContainer {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .StandalonePlayer.TheaterMode,
 .TheaterMode .BroadcastContainerSection,
@@ -1773,9 +1777,13 @@ iframe.steamTVLogin {
 .STV_Logo_STEAM {
   font-weight: bold;
   margin-right: 1px;
-  background: linear-gradient(to right, #5b6adb 0%, #7d6ebc 80%);
+  background: linear-gradient(
+    to right,
+    rgb(91, 106, 219) 0%,
+    rgb(125, 110, 188) 80%
+  );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
 .STV_Logo .SVGIcon_Throbber #mainOutline path {
   stroke-width: 0px;
@@ -1825,7 +1833,7 @@ iframe.steamTVLogin {
   background-size: 16px;
   border-top: 1px solid rgba(101, 164, 212, 0.25);
   border-bottom: 1px solid rgba(101, 164, 212, 0.25);
-  background-color: #0003;
+  background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   display: flex;
   justify-content: center;
@@ -1866,7 +1874,7 @@ iframe.steamTVLogin {
   right: 8px;
   top: 8px;
   padding: 8px;
-  background: #000a;
+  background: rgba(0, 0, 0, 0.6666666667);
   border: 1px solid rgba(59, 127, 238, 0.541);
   color: #3b7fee;
   z-index: 51;
@@ -1970,7 +1978,7 @@ iframe.steamTVLogin {
     position: absolute;
     top: 4px;
     right: 4px;
-    background-color: #0008;
+    background-color: rgba(0, 0, 0, 0.5333333333);
     border-radius: 8px;
     padding-right: 16px;
     filter: brightness(1.3);
@@ -1999,7 +2007,7 @@ iframe.steamTVLogin {
     position: absolute;
     top: 4px;
     right: 4px;
-    background-color: #0008;
+    background-color: rgba(0, 0, 0, 0.5333333333);
     border-radius: 8px;
     padding-right: 16px;
     filter: brightness(1.3);
@@ -2116,7 +2124,7 @@ iframe.steamTVLogin {
   background: linear-gradient(120deg, #1b9fff 0%, #8e00d1 100%);
   top: 0;
   z-index: 1000;
-  box-shadow: 0px 3px 5px #000000aa;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.6666666667);
   transition: filter 0.25s ease-in-out 100ms;
   filter: hue-rotate(0deg);
 }
@@ -2214,7 +2222,11 @@ iframe.steamTVLogin {
   margin-right: 10px;
 }
 .broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy {
-  background: linear-gradient(120deg, #62aadf88 0%, #e34bba88 100%);
+  background: linear-gradient(
+    120deg,
+    rgba(98, 170, 223, 0.5333333333) 0%,
+    rgba(227, 75, 186, 0.5333333333) 100%
+  );
 }
 .broadcastchatannouncement_GiveawayRegisterButton_3rlW-:hover {
   filter: brightness(1.3);
@@ -2680,9 +2692,9 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
 .broadcast_embeddable_stream_icon_arrow_3mivE {
   width: 0;
   height: 0;
-  border-top: 8px solid transparent;
+  border-top: 8px solid rgba(0, 0, 0, 0);
   border-left: 8px solid #fff;
-  border-bottom: 8px solid transparent;
+  border-bottom: 8px solid rgba(0, 0, 0, 0);
   position: absolute;
   right: -7px;
 }
@@ -2780,7 +2792,7 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
 .broadcast_embeddable_ChatContainer_2X2rQ ::-webkit-scrollbar {
   height: 12px;
   width: 14px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   z-index: 12;
   overflow: visible;
 }

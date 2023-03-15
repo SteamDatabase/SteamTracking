@@ -1,4 +1,9 @@
-LocalizationManifestReady("profile", "manifest", {
+(typeof LocalizationManifestReady != "undefined"
+  ? LocalizationManifestReady
+  : function () {
+      if (!window.g_rgPendingLocManifests) window.g_rgPendingLocManifests = [];
+      window.g_rgPendingLocManifests.push(arguments);
+    })("profile", "manifest", {
   Privacy_Private: "Private",
   Privacy_FriendsOnly: "Friends Only",
   Privacy_Public: "Public",

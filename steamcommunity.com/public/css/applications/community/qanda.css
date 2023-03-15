@@ -319,13 +319,13 @@ body.qanda {
   font-size: 14px;
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: #6dcff63d;
+  text-decoration-color: rgba(109, 207, 246, 0.2392156863);
   width: fit-content;
 }
 .questions_PersonaName_3CaA5:active,
 .questions_PersonaName_3CaA5:hover {
   color: #9edff8;
-  text-decoration-color: #6dcff6b4;
+  text-decoration-color: rgba(109, 207, 246, 0.7058823529);
 }
 .questions_QuestionText_2NuCE {
   display: flex;

@@ -245,12 +245,13 @@
         EventSubTitle: "eventcalendartile_EventSubTitle_3sqG2",
         GameCapsuleCtn: "eventcalendartile_GameCapsuleCtn_1js7a",
         AppBannerLogo: "eventcalendartile_AppBannerLogo_QRRaO",
+        FallbackImage: "eventcalendartile_FallbackImage_kbkLs",
+        ClanSource: "eventcalendartile_ClanSource_110XI",
         TileTextHeader: "eventcalendartile_TileTextHeader_2SYia",
         PatchIconCtn: "eventcalendartile_PatchIconCtn_rRP5R",
         EventTitleCtn: "eventcalendartile_EventTitleCtn_1SP_7",
         Footer: "eventcalendartile_Footer_DEtoe",
         EventCapsuleCtn: "eventcalendartile_EventCapsuleCtn_2vLZ-",
-        FallbackImage: "eventcalendartile_FallbackImage_kbkLs",
         LiveBroadcastPreview: "eventcalendartile_LiveBroadcastPreview_1HaxG",
         TileBackgroundImage: "eventcalendartile_TileBackgroundImage_2Gnfg",
         TileCoverImagePlayable:
@@ -1271,7 +1272,7 @@
         H = n(24568),
         M = n(7687),
         R = n(43890),
-        P = n(16057),
+        P = n(79427),
         O = n(99363),
         U = n(99018),
         V = n(65181),
@@ -1663,6 +1664,7 @@
             n.e(6364),
             n.e(4134),
             n.e(4605),
+            n.e(149),
             n.e(9886),
             n.e(4881),
             n.e(2529),
@@ -4703,37 +4705,39 @@
                 : Me.FN.capsule_main,
             m = "capsule",
             p = e.BImageNeedScreenshotFallback(m, s),
-            v = Boolean(p && e.appid)
+            g = Boolean(p && e.appid)
               ? e.GetFallbackArtworkScreenshot()
               : e.GetImageURLWithFallback(m, s, d),
-            g = "upcoming" !== a && this.getVideoPreviewControl(),
-            E = !g && "upcoming" !== a,
-            h = e.GetCategoryAsString(),
-            S = $t()[`EventType${e.GetEventType()}`],
-            b = e.GetAllTags().map((e) => $t()[`Tag-${e}`]),
-            f = (0, z.Z)(
+            E = v.sV.GetClanInfoByClanAccountID(e.clanSteamID.GetAccountID()),
+            h = E && !E.is_ogg,
+            S = "upcoming" !== a && this.getVideoPreviewControl(),
+            b = !S && "upcoming" !== a,
+            f = e.GetCategoryAsString(),
+            I = $t()[`EventType${e.GetEventType()}`],
+            y = e.GetAllTags().map((e) => $t()[`Tag-${e}`]),
+            G = (0, z.Z)(
               $t().TileContainer,
-              S,
+              I,
               i && $t().TileVideoIcon,
               n ? $t().DisableHovers : $t().EnableHovers,
               this.state.bVideoPlayerReady && $t().VideoPlayerReady,
-              g && $t().HasVideo,
+              S && $t().HasVideo,
               l.HasEventBeenRead(e.GID) && $t().HasBeenRead,
               "wide" === a && $t().WideMode,
               "carousel" === a && $t().CarouselMode,
               "upcoming" === a && $t().UpcomingMode,
-              ...b
+              ...y
             ),
-            I = e.GetNameWithFallback(s);
-          let y = e.GetSubTitleWithLanguageFallback(s),
-            G = e.GetSummaryWithFallback(s);
-          y === G && (G = void 0), y === I && (y = void 0);
-          const L = (0, _.ax)(v),
-            B = r.createElement(
+            L = e.GetNameWithFallback(s);
+          let B = e.GetSubTitleWithLanguageFallback(s),
+            D = e.GetSummaryWithFallback(s);
+          B === D && (D = void 0), B === L && (B = void 0);
+          const k = (0, _.ax)(g),
+            A = r.createElement(
               "div",
               { className: $t().CoverImageCtn },
-              g,
-              E &&
+              S,
+              b &&
                 r.createElement(
                   r.Fragment,
                   null,
@@ -4745,14 +4749,18 @@
                         "div",
                         { className: $t().GameCapsuleCtn },
                         r.createElement("div", {
-                          className: $t().AppBannerLogo,
+                          className: (0, z.Z)(
+                            $t().AppBannerLogo,
+                            p && $t().FallbackImage,
+                            h && $t().ClanSource
+                          ),
                           style: { backgroundImage: `url(${o})` },
                         })
                       ),
                       r.createElement(
                         "div",
                         { className: $t().GameShortDescription },
-                        G
+                        D
                       )
                     ),
                   12 !== e.type &&
@@ -4767,9 +4775,10 @@
                       r.createElement("div", {
                         className: (0, z.Z)(
                           $t().TileImage,
-                          p && $t().FallbackImage
+                          p && $t().FallbackImage,
+                          h && $t().ClanSource
                         ),
-                        style: { backgroundImage: `url(${L})` },
+                        style: { backgroundImage: `url(${k})` },
                       }),
                       i &&
                         r.createElement("div", {
@@ -4790,12 +4799,12 @@
                     )
                 )
             ),
-            D = g && "carousel" !== a,
-            k = n && 14 != e.GetEventType() && !D,
-            A = k && B,
-            x = !k && B,
-            F = "wide" !== a || n,
-            H =
+            x = S && "carousel" !== a,
+            F = n && 14 != e.GetEventType() && !x,
+            H = F && A,
+            M = !F && A,
+            R = "wide" !== a || n,
+            P =
               28 !== e.type &&
               12 !== e.type &&
               w.JW.GetTimeNowWithOverride() <
@@ -4805,22 +4814,22 @@
                 {
                   className: (0, z.Z)(
                     $t().ReminderContainer,
-                    F && $t().OnlyIcon
+                    R && $t().OnlyIcon
                   ),
                 },
                 r.createElement(O.m, {
                   eventModel: e,
                   lang: s,
                   bShowStartTime: !0,
-                  bOnlyShowIcon: F,
-                  bExpandLeft: F,
+                  bOnlyShowIcon: R,
+                  bExpandLeft: R,
                 })
               ),
-            M = Boolean(12 !== e.type && G),
-            R = Boolean(y && (!M || !this.BIsSubTitleRedundant(y, G)));
+            U = Boolean(12 !== e.type && D),
+            V = Boolean(B && (!U || !this.BIsSubTitleRedundant(B, D)));
           return r.createElement(
             "div",
-            { className: f },
+            { className: G },
             r.createElement(tn.I, { event: e, recordNewsHubStats: !0 }),
             r.createElement(
               C.JW,
@@ -4834,7 +4843,7 @@
                       $t().TileBackgroundImage,
                       p && $t().FallbackImage
                     ),
-                    style: { backgroundImage: `url(${L})` },
+                    style: { backgroundImage: `url(${k})` },
                   }),
                 r.createElement(
                   "div",
@@ -4850,7 +4859,7 @@
                     r.createElement(
                       "div",
                       { className: $t().EventTitleCtn },
-                      A,
+                      H,
                       !this.props.bHideGameTitle &&
                         r.createElement(
                           "div",
@@ -4858,42 +4867,42 @@
                           r.createElement(cn, Object.assign({}, this.props)),
                           t && r.createElement(mn, { calendarEvent: t })
                         ),
-                      r.createElement("div", { className: $t().EventName }, I),
+                      r.createElement("div", { className: $t().EventName }, L),
                       r.createElement(
                         "div",
                         { className: $t().EventTypeAndDateCtn },
                         r.createElement(
                           "div",
-                          { className: (0, z.Z)($t().TileTextCategoryType, S) },
-                          h
+                          { className: (0, z.Z)($t().TileTextCategoryType, I) },
+                          f
                         ),
                         r.createElement(dn, {
                           eventModel: e,
-                          className: (0, z.Z)(F && $t().LeaveRoomForReminder),
+                          className: (0, z.Z)(R && $t().LeaveRoomForReminder),
                         }),
-                        F && H
+                        R && P
                       ),
-                      R &&
+                      V &&
                         r.createElement(
                           "div",
                           { className: $t().EventSubTitle },
-                          y
+                          B
                         ),
-                      M &&
+                      U &&
                         r.createElement(
                           "div",
                           {
                             className: (0, z.Z)(
                               $t().EventSummaryDefault,
-                              y ? $t().SubTitleShown : ""
+                              B ? $t().SubTitleShown : ""
                             ),
                           },
-                          G
+                          D
                         )
                     ),
-                    !F && H
+                    !R && P
                   ),
-                  x
+                  M
                 )
               )
             ),

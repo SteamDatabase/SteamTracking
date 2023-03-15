@@ -157,6 +157,26 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .contextmenu_contextMenuItem_1n7Wl .SVGIcon_PlusCircle circle {
   opacity: 0;
 }
+.contextmenu_contextMenuItem_1n7Wl .contextmenu_IconContainer_38-c8 {
+  width: 16px;
+  height: 16px;
+  margin-left: -4px;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  margin-right: 6px;
+}
+.contextmenu_contextMenuItem_1n7Wl .contextmenu_IconContainer_38-c8 svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 0px;
+}
+.contextmenu_ContextMenuHRSeparator_IjIBR {
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 0.2px solid #67707b;
+  margin: 0px;
+  padding: 0px;
+}
 .contextMenuCheckMark {
   width: 4px;
   height: 18px;
@@ -175,14 +195,17 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   padding: 8px 18px;
   font-size: 13px;
   color: #dcdedf;
-  border-top: none;
-  border-bottom: none;
   cursor: pointer;
   position: relative;
   min-width: fit-content;
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+.DesktopUI
+  .contextmenu_contextMenuItem_1n7Wl:not(.contextmenu_AddSeparator_3nZcE) {
+  border-top: none;
+  border-bottom: none;
 }
 .DesktopUI .contextmenu_contextMenuItem_1n7Wl:first-child {
   border-top: none;
@@ -559,13 +582,17 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   padding-right: 12px;
   padding-bottom: 24px;
 }
+.pagedsettings_PagedSettingsDialog_PageContent_CFTLX
+  .DialogHeader:first-child
+  + .DialogControlsSection:not(:first-child) {
+  margin-top: 5px;
+}
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader {
   margin-right: 0;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader {
   margin-top: 8px;
-  margin-bottom: 0;
   font-size: 22px;
   font-weight: 700;
   text-transform: none;
@@ -576,8 +603,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   flex: 1;
   min-width: 140px;
   max-width: 220px;
-  padding-left: 24px;
-  padding-top: 40px;
+  padding-top: 36px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -589,17 +615,15 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .pagedsettings_PagedSettingsDialog_Title_2rjVT {
   text-transform: uppercase;
   margin-bottom: 20px;
+  padding-left: 24px;
   color: #1a9fff;
-  font-weight: 300;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 17px;
   user-select: none;
 }
 .pagedsettings_PagedSettingsDialog_Title_2rjVT.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_Title_2rjVT {
-  padding-left: 24px;
   padding-right: 14px;
-  font-weight: 700;
-  font-size: 17px;
 }
 .pagedsettings_PagedSettingsDialog_PageList_18QCu {
   line-height: 16px;
@@ -616,22 +640,17 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   white-space: normal;
   max-width: 180px;
   text-overflow: ellipsis;
-  color: #7e7e7e;
-  font-size: 15px;
-  font-weight: normal;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 14px;
-  user-select: none;
-}
-.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.DesktopUI,
-.DesktopUI .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
-  margin-bottom: 0px;
   padding: 10px 16px 10px 24px;
   font-size: 14px;
   font-weight: 400;
   color: #b8bcbf;
   text-transform: none;
+  cursor: pointer;
+  user-select: none;
+}
+.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.DesktopUI,
+.DesktopUI .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
+  margin-bottom: 0px;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr
   .pagedsettings_PageListItem_Icon_1rD8X {
@@ -685,6 +704,11 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .pagedsettings_PageListSeparator_1Hye7.DesktopUI,
 .DesktopUI .pagedsettings_PageListSeparator_1Hye7 {
   margin: 0px 12px;
+}
+.pagedsettings_PageListSeparator_1Hye7.pagedsettings_Transparent_1ahzM.DesktopUI,
+.DesktopUI
+  .pagedsettings_PageListSeparator_1Hye7.pagedsettings_Transparent_1ahzM {
+  background: transparent;
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_OLaBY {
   from {
@@ -1544,7 +1568,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN {
   --controls-list-spacing: 0px;
-  --controls-child-max-width: $gamepadFieldControlMinWidth;
+  --controls-child-max-width: 250px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1572,6 +1596,9 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   margin-left: calc(-0.5 * var(--controls-list-spacing));
   margin-right: calc(-0.5 * var(--controls-list-spacing));
   justify-content: center;
+}
+.gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_FullWidth_3vgH- {
+  flex: 1;
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN
   .gamepaddialog_ControlsListChild_2LQjj {
@@ -2437,6 +2464,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .DialogContent.gamepadpagedsettings_PagedSettingsDialog_PageContent_3mgb-.gamepadpagedsettings_NoPadding_3ePFF {
   padding: 0;
   padding-top: calc(0px + var(--basicui-header-height, 0px));
+}
+.DialogContent.gamepadpagedsettings_PagedSettingsDialog_PageContent_3mgb-
+  .DialogBody
+  .DialogHeader:first-child
+  + .DialogControlsSection:not(:first-child) {
+  margin-top: 5px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListColumn_1d6VI {
   background: #23262e;
@@ -10159,6 +10192,9 @@ html:not(.touch)
 .bbcodes_Italic_3sfhE {
   display: inline;
   font-style: italic;
+}
+p.bbcodes_Paragraph_KPN-t {
+  margin: 0.5em 0;
 }
 .bbcodes_Header1_2SIyP {
   display: block;
@@ -37183,6 +37219,15 @@ div.ModalPosition_TopBar {
   margin-right: 26px;
   margin-bottom: 12px;
 }
+.DesktopUI .DialogHeader,
+.friendsui-container .DialogHeader {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: unset;
+  margin-bottom: 4px;
+  line-height: 28px;
+  text-transform: none;
+}
 .DialogSubHeader {
   font-weight: 300;
   font-size: 24px;
@@ -37210,6 +37255,15 @@ div.ModalPosition_TopBar {
   margin-top: auto;
   padding-top: 16px;
   flex-shrink: 0;
+}
+.DesktopUI .DialogFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.DesktopUI .DialogFooter button.DialogButton {
+  padding: 0 12px;
+  width: auto;
 }
 .DialogBodyText {
   color: #969696;
@@ -37353,6 +37407,12 @@ div.ModalPosition_TopBar {
 }
 .DialogTextInputBase:not(:disabled):hover {
   background: rgba(67, 73, 83, 0.6);
+}
+.DesktopUI .DialogTextInputBase:focus,
+.DialogTextInputBase:focus-within {
+  background: #23262e;
+  box-shadow: inset 1px 1px 4px #000a;
+  padding-left: 11px;
 }
 .DialogTextInputBase:disabled:hover {
   background: rgba(67, 73, 83, 0.3);
@@ -37683,6 +37743,9 @@ button.TextButton.gpfocus {
   flex-flow: row wrap;
   justify-content: space-between;
 }
+.DesktopUI ._DialogColLayout {
+  justify-content: flex-end;
+}
 ._DialogColLayout > ._DialogLayout {
   flex: 1;
   box-sizing: border-box;
@@ -37691,14 +37754,23 @@ button.TextButton.gpfocus {
   max-width: calc(50% - 14px);
   min-width: 200px;
 }
+.DesktopUI .DialogTwoColLayout._DialogColLayout {
+  gap: 14px;
+}
 .DialogThreeColLayout > ._DialogLayout,
 .DialogTwoThirdColLayout > ._DialogLayout:nth-child(2n + 1) {
   max-width: calc(33.33% - 9px);
   min-width: 133px;
 }
+.DesktopUI .DialogThreeColLayout._DialogColLayout {
+  gap: 9px;
+}
 .DialogTwoThirdColLayout > ._DialogLayout {
   max-width: calc(66.66% - 18px);
   min-width: 266px;
+}
+.DesktopUI .DialogTwoThirdColLayout._DialogColLayout {
+  gap: 18px;
 }
 .DialogLayout_NoMinWidth > ._DialogLayout,
 .DialogTwoThirdColLayout.DialogLayout_NoMinWidth > ._DialogLayout {
@@ -38375,6 +38447,41 @@ body.in_global_drag .title-area {
 .textLink {
   color: #fff;
   text-decoration: underline;
+}
+.DesktopUI .title-area .title-bar-actions,
+.friendsui-container .title-area .title-bar-actions {
+  margin-right: 5px;
+}
+.DesktopUI .title-area-icon,
+.friendsui-container .title-area-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  width: 32px;
+  height: 24px;
+  margin-top: 7px;
+}
+.DesktopUI .title-area-icon .SVGIcon_Minimize,
+.DesktopUI .title-area-icon .SVGIcon_Maximize,
+.DesktopUI .title-area-icon .SVGIcon_X_Line,
+.DesktopUI .title-area-icon .SVGIcon_Restore,
+.friendsui-container .title-area-icon .SVGIcon_Minimize,
+.friendsui-container .title-area-icon .SVGIcon_Maximize,
+.friendsui-container .title-area-icon .SVGIcon_X_Line,
+.friendsui-container .title-area-icon .SVGIcon_Restore {
+  margin: 0px;
+  width: 14px;
+  height: 14px;
+}
+.DesktopUI .title-area-icon:hover,
+.friendsui-container .title-area-icon:hover {
+  background: #3d4450;
+  border-radius: 2px;
+}
+.DesktopUI .title-area-icon.closeButton:hover,
+.friendsui-container .title-area-icon.closeButton:hover {
+  background: red;
 }
 @keyframes ItemFocusAnim-darkerGrey-nocolor {
   from {
@@ -52200,6 +52307,9 @@ button.DialogButton.LocalMicTestButton {
 }
 .FriendSettingsContainer .SettingsGroup {
   margin-bottom: 14px;
+}
+.FriendSettingsContainer .DialogHeader {
+  padding-bottom: 20px;
 }
 .FriendsSettingsNotificationRow {
   padding: 8px 12px;

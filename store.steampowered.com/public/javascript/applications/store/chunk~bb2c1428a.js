@@ -7,6 +7,7 @@
       e.exports = {
         Bold: "bbcodes_Bold_1opdq",
         Italic: "bbcodes_Italic_3PSCE",
+        Paragraph: "bbcodes_Paragraph_3zjkn",
         Header1: "bbcodes_Header1_38GFQ",
         Header2: "bbcodes_Header2_2ZqUv",
         Header3: "bbcodes_Header3_KePJs",
@@ -4133,6 +4134,7 @@
       "use strict";
       r.d(t, {
         HG: () => a,
+        H_: () => o,
         LJ: () => m,
         Zh: () => c,
         _: () => l,

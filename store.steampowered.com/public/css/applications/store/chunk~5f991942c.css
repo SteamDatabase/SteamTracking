@@ -44,10 +44,10 @@
 .ingame .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #8cd61d 0%,
-    #a1f410 30%,
-    #a1f410 70%,
-    #8cd61d 100%
+    rgb(140, 214, 29) 0%,
+    rgb(161, 244, 16) 30%,
+    rgb(161, 244, 16) 70%,
+    rgb(140, 214, 29) 100%
   );
 }
 .ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -64,19 +64,19 @@
 .watchingbroadcast .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #9c8fd4 0%,
-    #9c8fd4 30%,
-    #9c8fd4 70%,
-    #9c8fd4 100%
+    rgb(156, 143, 212) 0%,
+    rgb(156, 143, 212) 30%,
+    rgb(156, 143, 212) 70%,
+    rgb(156, 143, 212) 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    #6dcff6 0%,
-    #6dcff6 30%,
-    #6dcff6 70%,
-    #6dcff6 100%
+    rgb(109, 207, 246) 0%,
+    rgb(109, 207, 246) 30%,
+    rgb(109, 207, 246) 70%,
+    rgb(109, 207, 246) 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -139,7 +139,7 @@
 }
 .steamavatar_avatar_1p_Qr.GamepadMode,
 .GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
 }
@@ -420,12 +420,12 @@
 .personanameandstatus_playerName_r62qz {
   -webkit-mask: linear-gradient(
     to right,
-    black calc(100% - 6px),
+    rgb(0, 0, 0) calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
     to right,
-    black calc(100% - 6px),
+    rgb(0, 0, 0) calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   flex: initial;
@@ -473,12 +473,12 @@
   margin-top: -1px;
   -webkit-mask: linear-gradient(
     to right,
-    black calc(100% - 8px),
+    rgb(0, 0, 0) calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
     to right,
-    black calc(100% - 8px),
+    rgb(0, 0, 0) calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   margin-right: -24px;

@@ -97,7 +97,7 @@
         p = n(90806),
         _ = (n(67237), n(22840)),
         h = n(81997),
-        g = n(37238);
+        g = n(29213);
       let b = class extends i.Component {
         constructor() {
           super(...arguments), (this.m_clanSteamID = new s.K(l.JA.CLANSTEAMID));
@@ -1446,7 +1446,7 @@
         _e = (0, A.M)(Ee);
       var he = n(62721),
         ge = n(16704),
-        be = n(37238),
+        be = n(29213),
         Se = n(70657),
         De = n(10726),
         Ce = n(83983),
@@ -1884,7 +1884,7 @@
         }
         return d.createElement(d.Fragment, null);
       }
-      var ct = n(3947),
+      var ct = n(39598),
         dt = (n(90174), n(46139), n(83215));
       function mt(e) {
         const [t, n] = d.useState(!0);

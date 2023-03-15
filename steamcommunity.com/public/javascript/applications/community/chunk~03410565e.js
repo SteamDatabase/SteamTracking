@@ -103,7 +103,8 @@
             "div",
             {
               className: (0, r.Z)(
-                e.className ? e.className : c.SectionTitleHeader,
+                e.className ? e.className : "",
+                c.SectionTitleHeader,
                 c.required_title
               ),
             },

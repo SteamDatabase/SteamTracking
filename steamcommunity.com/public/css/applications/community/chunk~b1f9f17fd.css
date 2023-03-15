@@ -21,7 +21,7 @@
   margin: 0 16px;
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid transparent;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
   transition-property: border-bottom-color;
   transition-duration: 0.25s;
   font-size: 14px;
@@ -340,7 +340,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   padding: 4px 8px;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   transition: background 0.2s ease-in-out;
 }
 .partnereventbroadcast_customTitleOptionsCtn_zhH_V
@@ -2374,7 +2374,11 @@ html.responsive.touch
   }
 }
 .contenthubmaincarousel_SteamLabsBannerCtn_Mqi1I {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #1b387d 25%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(27, 56, 125) 25%
+  );
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2462,13 +2466,13 @@ html.responsive.touch
   -webkit-mask-image: linear-gradient(
     -90deg,
     rgba(0, 0, 0, 0.2) 5%,
-    black 50%,
+    rgb(0, 0, 0) 50%,
     rgba(0, 0, 0, 0.2) 100%
   );
   mask-image: linear-gradient(
     -90deg,
     rgba(0, 0, 0, 0.2) 5%,
-    black 50%,
+    rgb(0, 0, 0) 50%,
     rgba(0, 0, 0, 0.1) 100%
   );
 }
@@ -2751,11 +2755,11 @@ html.responsive.touch
   padding-top: 0px;
   color: #fff;
 }
-.reservations_j1_3F3Ev {
+.reservations_reservation_ctn_15uTq {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #ffffff0f;
+  background: rgba(255, 255, 255, 0.0588235294);
   border-radius: 3px;
   width: 300px;
   padding: 20px;
@@ -2818,7 +2822,7 @@ html.responsive.touch
 .reservations_alreadyreserved_1MUMr {
   font-style: italic;
   padding-bottom: 5px;
-  color: #ffffff80;
+  color: rgba(255, 255, 255, 0.5019607843);
 }
 .reservations_expecteddate_3T6SP {
   text-align: center;
@@ -2952,7 +2956,7 @@ html.responsive.touch
 .salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a:after {
   top: 100%;
   left: 10%;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: "";
   height: 0;
   width: 0;
@@ -3080,7 +3084,11 @@ html.responsive.touch
 .salequiz_questionCtn_3VzRv
   .DialogRoundCheckboxField_Control.Active
   .DialogRoundCheckboxField_InnerCircle {
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff61 80%);
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.3803921569) 80%
+  );
 }
 .salequiz_questionCtn_3VzRv .DialogLabel {
   font-size: 18px;
@@ -3805,7 +3813,7 @@ html.responsive.touch
   mask-image: linear-gradient(
     left 90%,
     left bottom,
-    from(black),
+    from(rgb(0, 0, 0)),
     to(rgba(0, 0, 0, 0))
   );
 }
@@ -4291,7 +4299,7 @@ html.responsive.touch
   display: flex;
   margin-right: -10px;
   cursor: pointer;
-  box-shadow: 3px -6px 5px -6px #23232366;
+  box-shadow: 3px -6px 5px -6px rgba(35, 35, 35, 0.4);
   transform: rotate(0deg) scale(1);
   -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -4301,7 +4309,7 @@ html.responsive.touch
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkCtn_1YzIh:hover {
-  box-shadow: 3px -6px 10px -6px #23232366;
+  box-shadow: 3px -6px 10px -6px rgba(35, 35, 35, 0.4);
   transform: rotate(3deg) scale(1.07);
   -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -4364,7 +4372,7 @@ html.responsive.touch
   height: 130px;
   width: 130px;
   border-radius: 50%;
-  box-shadow: 3px -6px 5px -6px #23232366;
+  box-shadow: 3px -6px 5px -6px rgba(35, 35, 35, 0.4);
 }
 @media screen and (max-width: 400px) {
   .storywidget_BookmarkBadge_33xIh {
@@ -4491,7 +4499,7 @@ html.responsive.touch
   cursor: pointer;
 }
 .storywidget_OptionText_LbihD.storywidget_Disabled_2jbGn {
-  color: #6666667d;
+  color: rgba(102, 102, 102, 0.4901960784);
   cursor: default;
 }
 .storywidget_OptionText_LbihD.storywidget_Disabled_2jbGn:hover {
@@ -4507,7 +4515,8 @@ html.responsive.touch
   margin: 4px;
   margin-top: 0px;
   margin-bottom: 18px;
-  box-shadow: 0 0 0 2px #23232366, 0 0 0 4px #f7f0e4, 0 0 0 6px #23232366;
+  box-shadow: 0 0 0 2px rgba(35, 35, 35, 0.4), 0 0 0 4px #f7f0e4,
+    0 0 0 6px rgba(35, 35, 35, 0.4);
 }
 .storywidget_OptionTextNotice_3_DMH {
   text-align: left;
@@ -4520,7 +4529,7 @@ html.responsive.touch
   text-indent: 0px;
 }
 .storywidget_OptionTextNotice_3_DMH.storywidget_Disabled_2jbGn {
-  color: #6666663d;
+  color: rgba(102, 102, 102, 0.2392156863);
 }
 .storywidget_OptionTextNotice_3_DMH.storywidget_Disabled_2jbGn:hover {
   text-decoration: unset;
@@ -4537,8 +4546,8 @@ html.responsive.touch
   padding: 12px;
   box-sizing: border-box;
   background: url(../../../images/applications/community/paper.jpg?v=valveisgoodatcaching)
-    center #df584133 !important;
-  color: #e0ddd1dd;
+    center rgba(223, 88, 65, 0.2) !important;
+  color: rgba(224, 221, 209, 0.8666666667);
   letter-spacing: 1px;
   display: flex;
   flex-direction: column;
@@ -4547,9 +4556,9 @@ html.responsive.touch
   font-size: 11px;
   text-transform: uppercase;
   text-indent: 0px;
-  border: 3px dashed #df584199;
+  border: 3px dashed rgba(223, 88, 65, 0.6);
   border-radius: 5px;
-  box-shadow: 2px 4px 16px #3d3e3899;
+  box-shadow: 2px 4px 16px rgba(61, 62, 56, 0.6);
   transform: rotateZ(3deg) scale(1);
   -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -4603,13 +4612,13 @@ a.storywidget_BadgeFooter_3kBeS {
   padding: 12px 0;
   white-space: wrap;
   text-overflow: ellipsis;
-  border-top: 2px dashed #23232366;
+  border-top: 2px dashed rgba(35, 35, 35, 0.4);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 11px;
   line-height: 15px;
   width: 150px;
-  color: #e0ddd1dd;
+  color: rgba(224, 221, 209, 0.8666666667);
 }
 a.storywidget_BadgeFooter_3kBeS:hover {
   color: #fefeef;
@@ -4711,7 +4720,11 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .dlcforyou_GameCtn_OQaNt {
   position: relative;
-  background: linear-gradient(140deg, rgba(0, 0, 0, 0) 1.25%, black 97.55%),
+  background: linear-gradient(
+      140deg,
+      rgba(0, 0, 0, 0) 1.25%,
+      rgb(0, 0, 0) 97.55%
+    ),
     linear-gradient(
       119.08deg,
       rgba(205, 59, 218, 0.5) 1.25%,
@@ -4738,19 +4751,23 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     linear,
     0% 20%,
     0% 100%,
-    from(#0e1014),
+    from(rgb(14, 16, 20)),
     to(rgba(0, 0, 0, 0))
   );
   mask-image: -webkit-gradient(
     linear,
     0% 20%,
     0% 100%,
-    from(#0e1014),
+    from(rgb(14, 16, 20)),
     to(rgba(0, 0, 0, 0))
   );
 }
 .dlcforyou_GameCtn_OQaNt:nth-child(even) {
-  background: linear-gradient(140deg, rgba(0, 0, 0, 0) 1.25%, black 97.55%),
+  background: linear-gradient(
+      140deg,
+      rgba(0, 0, 0, 0) 1.25%,
+      rgb(0, 0, 0) 97.55%
+    ),
     linear-gradient(
       119.08deg,
       rgba(218, 145, 59, 0.5) 1.25%,
@@ -4822,7 +4839,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   width: -moz-fit-content;
   padding: 10px 18px 10px 18px;
   border-radius: 50px;
-  border-top: #ffffff30 2px solid;
+  border-top: rgba(255, 255, 255, 0.1882352941) 2px solid;
   height: fit-content;
   height: -moz-fit-content;
   backdrop-filter: blur(4px);
@@ -4850,7 +4867,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   padding: 0 16px;
   border-top: 2px solid #575d6e;
   color: #dcdedf;
-  background: linear-gradient(0deg, #241f30 0%, #28384b 100%);
+  background: linear-gradient(0deg, rgb(36, 31, 48) 0%, rgb(40, 56, 75) 100%);
   cursor: pointer;
 }
 .dlcforyou_ParentAppSortTabsCtn_HLysW .dlcforyou_ParentAppSortTabActive_3O8Ab {
@@ -4896,7 +4913,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
-  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+  -webkit-mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       15.77% 44.22% at 50% 104.95%,
       rgba(66, 66, 66, 0) 0%,
@@ -4922,7 +4939,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
       rgba(0, 0, 0, 0) 95.31%
     ),
     linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
-  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+  mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       15.77% 44.22% at 50% 104.95%,
       rgba(66, 66, 66, 0) 0%,
@@ -5102,7 +5119,7 @@ button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
   color: orange;
 }
 .partnereventstats_StatsCtnTitle_1MBiN.partnereventstats_SmallStatsMode_kgm3s {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   padding: 0px;
   border: none;
 }
@@ -5299,7 +5316,7 @@ button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
 .partnereventpreview_FallBackWarning_2x0Ma:after {
   left: 100%;
   top: 50%;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: " ";
   height: 0;
   width: 0;
@@ -5311,7 +5328,7 @@ button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
   margin-top: -8px;
 }
 .partnereventpreview_StoreNavigationPlaceholder_tHKKN {
-  background: #80808099;
+  background: rgba(128, 128, 128, 0.6);
   height: 66px;
   display: flex;
   align-items: center;
@@ -5325,51 +5342,6 @@ button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
 .partnersaledebug_SearchResults_26iJ3 {
   overflow: scroll;
   max-height: 300px;
-}
-.communityagegate_adult_content_age_gate_2PyPU {
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  text-align: center;
-  max-width: 940px;
-  margin: 0 auto;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 88px 5% 0 5%;
-}
-.communityagegate_ButtonRow_2I-G6 {
-  justify-content: center;
-}
-.communityagegate_ButtonRow_2I-G6 div {
-  margin-right: 20px;
-}
-.communityagegate_checkbox_3zQBG {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.communityagegate_edit_link_1fSrN {
-  text-decoration: underline;
-}
-.communityagegate_edit_link_1fSrN:hover {
-  color: #fff;
-}
-.communityagegate_edit_preference_3eHEB {
-  border-top: 1px solid #779abc;
-  margin-top: 80px;
-  padding-top: 20px;
-  padding-bottom: 100px;
-}
-.communityagegate_header_image_3H7w6 {
-  max-width: 100%;
-  box-shadow: 0 0 40px rgba(102, 192, 244, 0.4);
-}
-.communityagegate_descriptor_3s2aY {
-  padding: 26px 0;
-  font-size: 18px;
-  line-height: 26px;
-}
-.communityagegate_strong_3lsXG {
-  text-decoration: underline #7092a5;
 }
 @keyframes closeWindow {
   0% {

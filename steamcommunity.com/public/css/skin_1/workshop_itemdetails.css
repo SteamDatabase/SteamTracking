@@ -4204,20 +4204,3 @@ span.change_log_edit
 	color: #576e03;
 	padding-left: 10px;
 }
-
-.edit_content_descriptors {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-.edit_content_descriptors .content_descriptor {
-
-}
-.edit_content_descriptors .content_descriptor .content_descriptor_name {
-	display: inline-block;
-}
-.edit_content_descriptors .content_descriptor .content_descriptor_desc {
-	color: #97a0ab;
-	margin-left: 24px;
-	font-size: 12px;
-}

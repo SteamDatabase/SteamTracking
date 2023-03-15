@@ -310,7 +310,7 @@ html:not(.client)
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 32px #000;
   pointer-events: initial;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   font-weight: 300;
 }
 .BasicUI .apppartnereventspage_PartnerEvent_lwprN {
@@ -995,6 +995,351 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   border-right: none;
   background-color: unset;
 }
+.buttonBack___1mlaL,
+.buttonFirst___2rhFr,
+.buttonLast___2yuh0,
+.buttonNext___2mOCa,
+.buttonNext___3Lm3s,
+.dot___3c3SI {
+  cursor: pointer;
+}
+.image___xtQGH {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.spinner___27VUp {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  animation-name: spin___S3UuE;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border: 4px solid #a9a9a9;
+  border-top-color: #000;
+  border-radius: 30px;
+}
+@keyframes spin___S3UuE {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.container___2O72F {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.overlay___IV4qY {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  cursor: zoom-in;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.hover___MYy31,
+.loading___1pvNI,
+.zoom___3kqYk {
+  opacity: 1;
+}
+.imageLoadingSpinnerContainer___3UIPD {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
+.slide___3-Nqo {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.slide___3-Nqo:focus {
+  outline: none !important;
+}
+.slideHorizontal___1NzNV {
+  float: left;
+}
+[dir="rtl"] .slideHorizontal___1NzNV {
+  direction: rtl;
+  transform: scaleX(-1);
+}
+.slideInner___2mfX9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.focusRing___1airF {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  pointer-events: none;
+  outline-width: 5px;
+  outline-style: solid;
+  outline-color: Highlight;
+}
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .focusRing___1airF {
+    outline-style: auto;
+    outline-color: -webkit-focus-ring-color;
+  }
+}
+.horizontalSlider___281Ls {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+[dir="rtl"] .horizontalSlider___281Ls {
+  direction: ltr;
+  transform: scaleX(-1);
+}
+.horizontalSliderTray___1L-0W {
+  overflow: hidden;
+  width: 100%;
+}
+.verticalSlider___34ZFD {
+  position: relative;
+  overflow: hidden;
+}
+.verticalSliderTray___267D8 {
+  overflow: hidden;
+}
+.verticalTray___12Key {
+  float: left;
+}
+.verticalSlideTrayWrap___2nO7o {
+  overflow: hidden;
+}
+.sliderTray___-vHFQ {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sliderAnimation___300FY {
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: transform;
+}
+.masterSpinnerContainer___1Z6hB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
+.carousel_carouselNavButton_1KK5N {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none !important;
+  display: flex;
+  cursor: pointer;
+  padding: 0px;
+}
+.carousel_carouselNavButton_1KK5N:hover svg {
+  opacity: 1;
+}
+.carousel_carouselNavButton_1KK5N:disabled svg {
+  opacity: 0.1;
+  filter: none;
+}
+.carousel_carouselNavButton_1KK5N.carousel_left_gLIfz {
+  transform: rotateZ(180deg);
+}
+.carousel_carouselNavButton_1KK5N svg {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+  fill: #fff;
+}
+.carousel_carouselBtnCtn_aqswv {
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  position: absolute;
+  padding: 0px;
+  width: 50px;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_carouselBtnCtn_aqswv.carousel_left_gLIfz {
+  left: -68px;
+}
+.carousel_carouselBtnCtn_aqswv.carousel_right_1qWih {
+  right: -68px;
+}
+.carousel_carouselBtnCtn_aqswv svg {
+  width: 50px;
+  height: 50px;
+}
+.BasicUI .carousel_carouselBtnCtn_aqswv {
+  display: none;
+}
+.carousel_carouselBody_2M7XO {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.carousel_sliderBody_gtnxY {
+  position: relative;
+}
+.SaleSectionCarousel .carousel__slider {
+  padding: 10px 0px;
+  margin: -10px -7px 0px -7px;
+}
+html.responsive.touch .SaleSectionCarousel .carousel__slider {
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+    margin: 0;
+  }
+}
+.BasicUI .SaleSectionCarousel .carousel__slider {
+  padding: unset;
+}
+.BasicUI .carousel_slideTrayCustomize_2rRBe {
+  column-gap: 12px;
+}
+.carousel_breadcrumbContainer_1nhaj {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.carousel_pipList_3oTuB {
+  display: flex;
+  flex-flow: row;
+}
+.carousel_pipScrollerContainer_1C-B8 {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  margin: 2px 10px 0px 10px;
+}
+.BasicUI .carousel_pipScrollerContainer_1C-B8 {
+  display: none;
+}
+.contenthubmaincarousel .carousel_pipScrollerContainer_1C-B8 {
+  max-width: 940px;
+  width: 100%;
+  margin: 0px auto;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScrollButton_vy7Kr.carousel_left_gLIfz {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr svg {
+  height: 30px;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_scrollNavDiv_13TQ_ {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_scrollNavDiv_13TQ_
+  .carousel_scrollNavButton_1GLi1 {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScroller_GXWYa {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScroller_GXWYa
+  .carousel_scrollBackground_3-RYo {
+  position: absolute;
+  left: 0px;
+  top: 17px;
+  bottom: 17px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.13);
+  margin: auto 0;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScroller_GXWYa
+  .carousel_scrollForeground_yJM1K {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: left right;
+  transition-duration: 0.4s;
+}
+.carousel_pipContainer_373Zi {
+  padding-top: 10px;
+}
+.carousel_pipContainer_373Zi .carousel_pip_3Bznr {
+  width: 28px;
+  height: 25px;
+  position: relative;
+}
+.carousel_pipContainer_373Zi .carousel_pip_3Bznr .carousel_pipNumber_2_JtJ {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.carousel_pip_3Bznr {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none !important;
+  cursor: pointer;
+  width: 18px;
+  height: 15px;
+  opacity: 0.3;
+  padding: 1px 2px;
+  margin: 0px;
+  transition: opacity 0.2s;
+}
+.carousel_pip_3Bznr img {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pip_3Bznr.carousel__dot--selected {
+  opacity: 1;
+}
+.carousel_innerSlide_Kx5A5 div {
+  outline-width: 0px;
+}
+.carousel_DisableSliderMotion_3la_1 {
+  transition: none;
+}
+.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+}
 .cloudfileuploadbutton_Ctn_MKp7i {
   position: relative;
 }
@@ -1006,7 +1351,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -1021,7 +1366,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .cloudfileuploadprogress_UploadPreviewContainer_2IhGM
   .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
   fill: #788a92;
-  background-color: #0004;
+  background-color: rgba(0, 0, 0, 0.2666666667);
   border-radius: 4px;
   height: 150px;
   width: 100%;
@@ -1056,7 +1401,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  box-shadow: 0 0 4px 1px #00000088;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5333333333);
 }
 .cloudfileuploadprogress_FileUploadCancel_2MPbU
   .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
@@ -1088,7 +1433,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -1350,7 +1695,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -1391,7 +1736,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   box-sizing: border-box;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
@@ -2131,7 +2476,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 .partnereventdisplay_AppSummaryCtn_1kEXu {
   width: 100%;
   border-top: 1px dotted #6d6e70;
-  background: linear-gradient(#1b1d21, rgba(27, 29, 33, 0));
+  background: linear-gradient(rgb(27, 29, 33), rgba(27, 29, 33, 0));
   padding-top: 36px;
   padding-bottom: 42px;
 }
@@ -2325,7 +2670,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   padding: 5px 20px;
   border-radius: 3px;
   background: #dd3e3e;
-  color: #eeeeeeaa;
+  color: rgba(238, 238, 238, 0.6666666667);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 .partnereventdisplay_LunarNewYearHeader_3hCjp

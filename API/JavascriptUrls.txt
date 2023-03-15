@@ -140,7 +140,6 @@ ${COMMUNITY_BASE_URL}actions/ajaxcreateupdatediscountevent
 ${COMMUNITY_BASE_URL}actions/ajaxgetwatchvodtoken
 ${COMMUNITY_BASE_URL}actions/ajaxlistfriends
 ${COMMUNITY_BASE_URL}actions/ajaxresolveusers
-${COMMUNITY_BASE_URL}actions/ajaxsetappagegatebypass/
 ${COMMUNITY_BASE_URL}actions/selectPreviousAvatar
 ${COMMUNITY_BASE_URL}app/${appId}
 ${COMMUNITY_BASE_URL}app/${appid}
@@ -238,8 +237,6 @@ ${COMMUNITY_BASE_URL}mobileconf/detailspage/${id}?${}
 ${COMMUNITY_BASE_URL}mobileconf/getlist
 ${COMMUNITY_BASE_URL}mobileconf/multiajaxop?${}
 ${COMMUNITY_BASE_URL}my
-${COMMUNITY_BASE_URL}my/ajaxgetappagegatesbypassed/
-${COMMUNITY_BASE_URL}my/ajaxgetcommunitypreference/
 ${COMMUNITY_BASE_URL}my/badges/${}
 ${COMMUNITY_BASE_URL}my/edit/avatar
 ${COMMUNITY_BASE_URL}my/edit/avatar/${}
@@ -1483,6 +1480,7 @@ ${g_strCuratorAdminURL}ajaxrespondoffer
 ${g_strCuratorAdminURL}ajaxunlinkappfromcreatorhome/
 ${g_strCuratorAdminURL}ajaxupdatecreatorvanityurl/
 ${g_strCuratorAdminURL}ajaxupdatecuratordetails/
+${g_strCuratorAdminURL}ajaxupdatecuratorsearchalias/
 ${g_strCuratorAdminURL}ajaxupdatecustomizationcreatedapp/
 ${g_strCuratorAdminURL}ajaxupdatelistorder/
 ${g_strCuratorAdminURL}ajaxupdatemultiplecurations/
@@ -2593,7 +2591,6 @@ https://steamcommunity.com/sharedfiles/removetaggeduser
 https://steamcommunity.com/sharedfiles/reportitem
 https://steamcommunity.com/sharedfiles/resetreportedcount
 https://steamcommunity.com/sharedfiles/setaccepted
-https://steamcommunity.com/sharedfiles/setinappropriate/
 https://steamcommunity.com/sharedfiles/setpending
 https://steamcommunity.com/sharedfiles/share/?id=${publishedFileID}
 https://steamcommunity.com/sharedfiles/shareonsteam/?id=${publishedFileID}&appid=${appID}
@@ -2966,6 +2963,8 @@ steam://open/library/details/${id}
 steam://open/library/shared-apps/${}
 steam://open/screenshots/${}
 steam://open/settings/audio
+steam://open/settings/customization
+steam://open/settings/friends
 steam://open/systeminfo
 steam://open/workshop
 steam://openexternalforpid/

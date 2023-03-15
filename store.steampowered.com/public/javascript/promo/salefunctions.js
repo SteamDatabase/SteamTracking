@@ -172,12 +172,79 @@ function PromoteFeaturedGamesWithinList( TagData, rgTier1, rgTier2 )
 	}
 }
 
-function HomeSaleFilterHeroes( $Parent )
+function fnRenderHeroCapsule( oItem )
+{
+	const rgAppInfo = GStoreItemData.rgAppData[ oItem.appid ];
+	if ( !rgAppInfo )
+		return;
+	
+	var url = GStoreItemData.GetAppURL( oItem.appid, 'sale_hero' );
+	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"addToCart( %subid% )","flow-children":"column"}'.replace( '%subid%', rgAppInfo.pricing_subid ) } );
+	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
+	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': oItem.appid, 'style': 'max-height: 450px', 'src': rgAppInfo[ 'hero_capsule' ] ?? rgAppInfo[ 'main_capsule' ] } ) );
+
+	if ( rgAppInfo.has_live_broadcast )
+	{
+		$J('<div/>', {'class': 'broadcast_live_stream_icon', 'style': 'z-index:unset' } ).append( 'Live')
+	}
+
+	var Screenshots = $J( '<div/>', {'class': 'hover_screenshots' } );
+	var VideoCtn = $J( '<div/>', {'class': 'hover_video_container hero_screenshot_load', 'data-background': 'url(' + ( rgAppInfo.screenshots.length > 0 ? GetScreenshotURL( oItem.appid, rgAppInfo.screenshots[0].filename, '.600x338' ) : rgAppInfo.main_capsule ) + ')' } );
+	var Video = $J( '<video/>', {'class': 'hero_video', 'loop': true, 'preload': 'none' } ).prop("muted", true).append( $J( '<source/>', { 'src': rgAppInfo.microtrailer, 'type': 'video/webm' } ) );
+	VideoCtn.append( Video );
+	Screenshots.append( VideoCtn );
+	$Cap.append( Screenshots );
+
+	var HeroData = $J( '<div/>', {'class': 'hero_data' } );
+	var HeroContent = $J( '<div/>', {'class': 'hero_data_content' } )
+	HeroContent.append( $J( '<div/>', {'class': 'hero_name' } ).text( rgAppInfo.name ) );
+
+	if ( rgAppInfo.review_summary )
+	{
+		var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
+		var reviewSummary = pref !== 1 ? rgAppInfo.review_summary_filtered : rgAppInfo.review_summary;
+		var $elReviewData = $J('<div>', {'class': 'hero_stat', "data-tooltip-text": reviewSummary['sReviewScoreTooltip'] } );
+		//$elReviewData.append( $J('<span>', {'class': 'label'}).text( 'All Reviews:') );
+		$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
+		if ( reviewSummary['reviewScore'] > 0 )
+		{
+			$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
+		}
+		if ( rgAppInfo['review_anomaly'] )
+		{
+			$elReviewData.append( $J( '<span class="review_anomaly_icon">&nbsp;*</span>' ) );
+		}
+
+		HeroContent.append( $elReviewData );
+	}
+
+	if( rgAppInfo.tags )
+	{
+		var $elTagContainer = $J('<div>',{'class': 'hero_tags_ctn'});
+		for( var i=0; i < rgAppInfo.tags.length; i++)
+		{
+			$elTagContainer.append($J('<div>', {'class': 'hero_tag'}).text( rgAppInfo.tags[i] ));
+		}
+		HeroContent.append($elTagContainer);
+	}
+	HeroData.append( HeroContent );
+
+	var AddToCartCtn = $J( '<div/>', {'class': 'hero_add_to_cart' } );
+	AddToCartCtn.append( $J( '<button/>', {'class': 'btn_green_white_innerfade btn_medium', } ).click( function( e ){ addToCart( rgAppInfo.pricing_subid ); } ).append( $J( '<span/>' ).text( 'Add to Cart' )  ) );
+	HeroData.append( AddToCartCtn );
+
+	$Cap.append( HeroData );
+
+	$Cap.append( $J( rgAppInfo.discount_block ).addClass( 'discount_block_inline hero_discount' ) );
+
+	return $Cap;
+}
+
+function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 {
 	var Settings = { games_already_in_library: false, only_current_platform: true, enforce_minimum: true };
 
 	var $HeroItemCtn = $Parent.find('.carousel_items' );
-	var rgHeroes = $HeroItemCtn.children('.hero_capsule').toArray();
 
 	var rgAppPriorityList = g_rgAppPriorityLists['tier1'] || [];
 
@@ -193,16 +260,16 @@ function HomeSaleFilterHeroes( $Parent )
 	if ( rgPositionByApp[1314563] !== undefined )
 		rgPositionByApp[1085660] = Math.min( rgPositionByApp[1314563] , rgPositionByApp[1085660] || 0 );
 
-	for ( var i = 0; i < rgHeroes.length; i++ )
+	for ( var i = 0; i < rgHeroItems.length; i++ )
 	{
-		var appid = $J(rgHeroes[i]).data('dsAppid');
+		var appid = rgHeroItems[i].appid;
 		if ( appid && rgPositionByApp[appid] === undefined )
 			rgPositionByApp[appid] = i + 1000;
 	}
 
-	rgHeroes.sort( function( a, b ) {
-		var appidA = $J(a).data('dsAppid');
-		var appidB = $J(b).data('dsAppid');
+	rgHeroItems.sort( function( a, b ) {
+		var appidA = a.appid;
+		var appidB = b.appid;
 		var posA = rgPositionByApp[appidA];
 		var posB = rgPositionByApp[appidB];
 
@@ -210,15 +277,11 @@ function HomeSaleFilterHeroes( $Parent )
 	});
 
 	
-	// Skip filtering out DLC for heroes, otherwise F2P DLCs would get filtered out
-	GDynamicStorePage.FilterCapsules( 3, 21, $J( rgHeroes ), $HeroItemCtn, Settings, false );
-
-	// remove from dom and re-apply later
-	var rgFilteredHeros = $HeroItemCtn.children('.hero_capsule').remove().toArray();
+	var rgFilteredHeroes = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 21, Settings );
 
 	
 	// generate carousel based on sorted and filtered hero capsules
-	GHomepage.FillPagedCapsuleCarousel( rgFilteredHeros, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return $J( oItem ); }, 'sale-hero', 3 );
+	GHomepage.FillPagedCapsuleCarousel( rgFilteredHeroes, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return fnRenderHeroCapsule( oItem ); }, 'sale-hero', 3 );
 
 	$HeroItemCtn.find('.hero_capsule:not(.hidden)').children('a').each( function() {
 		ModifyLinkSNR( $J(this), function( snr ) { return GStoreItemData.rgNavParams['sale_heroes_priority'] } );
@@ -228,15 +291,15 @@ function HomeSaleFilterHeroes( $Parent )
 		GDynamicStore.MarkAppIDsAsDisplayed( [ $J(div).data('dsAppid') ] );
 	});
 
-	$J('.hero_capsule').on( 'mouseenter vgp_onfocus', function() {
+	$J('.hero_capsule').on( 'mouseenter vgp_onfocus touchstart', function() {
 		$J(this).find('.hero_screenshot_load').each( function() { $J(this).css( 'backgroundImage', $J(this).data('background') ); } );
 	} );
 
-	$J('.hero_capsule:not(.valveindex)').on( 'mouseenter vgp_onfocus', function() {
+	$J('.hero_capsule:not(.valveindex)').on( 'mouseenter vgp_onfocus touchstart', function() {
 		$J(this).find('video.hero_video')[0].play();
 	} );
 
-	$J('.hero_capsule:not(.valveindex)').on( 'mouseleave vgp_onblur', function() {
+	$J('.hero_capsule:not(.valveindex)').on( 'mouseleave vgp_onblur touchend', function() {
 		$J(this).find('video.hero_video')[0].pause();
 	} );
 
@@ -247,7 +310,7 @@ function HomeSaleFilterHeroes( $Parent )
 
 
 
-function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgFeaturedSeasonEvents )
+function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 {
 	var k_nTier1ItemsMin = 14;
 	var k_nTier1ItemsMax = 14;
@@ -262,7 +325,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
 	}
 
-	HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
+	HomeSaleFilterHeroes( $J('.hero_parent_ctn'), rgDisplayLists.heros );
 
 	var rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
 
@@ -344,7 +407,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
 
 	// Render the featured events section
-	RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgDisplayLists.feature_event_apps );
+	// RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgDisplayLists.feature_event_apps );
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems, cMaxItems )
@@ -521,7 +584,7 @@ function AddMicrotrailer( $CapCtn, microtrailer )
 		let $Video = null;
 		if ( !$ImgCtn.children( '.sale_capsule_video' ).length )
 		{
-			$Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', muted: 'muted'})
+			$Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none' }).prop( "muted", true )
 				.append($J("<source>", {src: microtrailer, type: "video/webm"}));
 			$ImgCtn.append( $Video );
 		}

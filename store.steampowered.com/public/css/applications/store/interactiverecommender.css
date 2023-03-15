@@ -182,7 +182,7 @@ a:link {
 .interactiverecommender_PlayedGame_sNb81 {
   display: flex;
   flex-direction: row;
-  background-color: #00000000;
+  background-color: rgba(0, 0, 0, 0);
   margin-right: 20px;
   margin-bottom: 4px;
   transition-property: filter;
@@ -880,7 +880,7 @@ a:link {
   .interactiverecommender_PurchaseSection_mjTZM
   .interactiverecommender_PurchaseBG_2UHKw {
   padding: 0px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 0px;
 }
 .interactiverecommender_RecommendationEntry_3opuX.interactiverecommender_Hovered_3b9wG
@@ -971,9 +971,9 @@ input[type="range"]::-ms-track {
   width: 100%;
   height: 3.1px;
   cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
 }
 input[type="range"]::-ms-fill-lower {
   background: #4fb7f3;
