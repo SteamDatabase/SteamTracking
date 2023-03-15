@@ -183,8 +183,24 @@ function ApplyFuncOnSelectedItems( func )
 	} );
 }
 
-function SelectedItems_AddContentDescriptors( add )
+function SelectedItems_ApplyContentDescriptors()
 {
+	var rgCheckboxes = $J( "input:checkbox", $J( "#content_descriptors" ) );
+
+	var add = [];
+
+	for ( var i = 0; i < rgCheckboxes.length; ++i )
+	{
+		let checkbox = rgCheckboxes[i];
+		if ( checkbox.checked && !checkbox.disabled )
+		{
+			add.push( checkbox.value );
+		}
+	}
+
+	if ( add.length == 0 )
+		return;
+
 	function fn( id )
 	{
 		AddContentDescriptors( id, add );
