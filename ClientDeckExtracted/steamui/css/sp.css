@@ -8097,6 +8097,8 @@ div.LowPerfMode
 }
 .mainmenuapprunning_NavigationColumn_27FEg.mainmenuapprunning_ControllerColumnFocused_2u5P4 {
   opacity: 0;
+  width: 0;
+  transition: width 320ms ease-in-out;
   transform: translateX(-13px);
 }
 .mainmenuapprunning_NavigationColumn_27FEg.mainmenuapprunning_ControllerColumnFocused_2u5P4:before {
@@ -8215,9 +8217,9 @@ div.LowPerfMode
 .mainmenuapprunning_AppColumn_3FAI9 {
   flex-shrink: 0;
   scroll-snap-align: center;
-  width: max(177vh, 810px);
-  height: 100%;
+  width: calc(100vw - 360px);
   display: flex;
+  flex-grow: 1;
   background-color: rgba(14, 20, 27, 0.9);
   transition: background-color 320ms ease-in-out;
 }

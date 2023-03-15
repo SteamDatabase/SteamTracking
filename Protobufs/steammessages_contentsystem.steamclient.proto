@@ -88,6 +88,7 @@ message CContentServerDirectory_RequestPeerContentServer_Request {
 
 message CContentServerDirectory_RequestPeerContentServer_Response {
 	optional uint32 server_port = 1;
+	repeated uint32 installed_depots = 2;
 }
 
 message CContentServerDirectory_GetPeerContentInfo_Request {
