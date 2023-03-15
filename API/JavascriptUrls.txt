@@ -244,6 +244,7 @@ ${COMMUNITY_BASE_URL}my/edit/background
 ${COMMUNITY_BASE_URL}my/edit/favoritebadge
 ${COMMUNITY_BASE_URL}my/edit/miniprofile
 ${COMMUNITY_BASE_URL}my/friends/add
+${COMMUNITY_BASE_URL}my/gamenotifications/
 ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${appid}/announcements/ajaxgetmyvote/${AnnouncementGID}
@@ -268,9 +269,11 @@ ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
 ${COMMUNITY_BASE_URL}profiles/${}/friends/pending
 ${COMMUNITY_BASE_URL}profiles/${}/home
 ${COMMUNITY_BASE_URL}profiles/${}/inventory
+${COMMUNITY_BASE_URL}profiles/${}/inventory/#pending_gifts
 ${COMMUNITY_BASE_URL}profiles/${}/previewsingleshowcase/?customization_type=${}&level=${}
 ${COMMUNITY_BASE_URL}profiles/${}/stats/${}
 ${COMMUNITY_BASE_URL}profiles/${}/stats/appid/${}/achievements
+${COMMUNITY_BASE_URL}profiles/${}/tradeoffers
 ${COMMUNITY_BASE_URL}profiles/${}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${}?previewprofile=1&appid=${}&itemtype=${}
 ${COMMUNITY_BASE_URL}public/images/events/media_play_icon.png
