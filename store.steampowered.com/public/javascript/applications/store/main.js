@@ -52,7 +52,6 @@
         Arrow: "contextmenu_Arrow_2NKnR",
         IconContainer: "contextmenu_IconContainer_J6UFb",
         ContextMenuHRSeparator: "contextmenu_ContextMenuHRSeparator_3Ac-M",
-        AddSeparator: "contextmenu_AddSeparator_3yuoe",
         PopoutSubMenu: "contextmenu_PopoutSubMenu_IpTgn",
         PopoutSubMenuItems: "contextmenu_PopoutSubMenuItems_y5L1f",
       };
@@ -5390,8 +5389,9 @@
           (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
           (e[(e.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
           (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+          (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
           (e[(e.Overlay = 8712)] = "Overlay"),
-          (e[(e.Notification = 352776)] = "Notification"),
+          (e[(e.Notification = 1335816)] = "Notification"),
           (e[(e.PopupContextMenu = 327688)] = "PopupContextMenu");
       })(_ || (_ = {}));
       const f = o.createContext({ ownerWindow: window }),
@@ -15760,7 +15760,11 @@
             ),
           E.De.IN_CLIENT &&
             E.De.DEV_MODE &&
-            ((0, p.U5)("Browser.OpenDevTools") &&
+            (t.length > 0 &&
+              ((0, p.U5)("Browser.OpenDevTools") ||
+                (0, p.U5)("Browser.InspectElement")) &&
+              t.push(o.createElement(k, { key: "devtools-separator" })),
+            (0, p.U5)("Browser.OpenDevTools") &&
               t.push(
                 o.createElement(
                   R,
@@ -20782,13 +20786,19 @@
         );
       }
       function E(e) {
-        const { instance: t, browserInfo: n } = e,
-          r = i.useRef(),
-          s = i.useCallback(
+        var t;
+        const { instance: n, browserInfo: r } = e,
+          s = i.useRef(),
+          a = (0, u.Wy)(),
+          l =
+            null === (t = null == a ? void 0 : a.ownerWindow) || void 0 === t
+              ? void 0
+              : t.SteamClient.Browser.GetBrowserID(),
+          c = i.useCallback(
             (e) => {
-              const { options: n, position: r } = t,
+              const { options: t, position: r } = n,
                 i = r.element;
-              if (n.bScreenCoordinates)
+              if (t.bScreenCoordinates)
                 e.dimensions = {
                   left: r.clientX,
                   top: r.clientY,
@@ -20815,45 +20825,47 @@
                 e
               );
             },
-            [t]
+            [n]
           ),
-          { popupObj: a, element: l } = (0, m.B)(
-            "contextmenu_" + t.key,
+          { popupObj: d, element: p } = (0, m.B)(
+            "contextmenu_" + n.key,
             {
-              title: t.options.title || "Menu",
+              title: n.options.title || "Menu",
               html_class: _().ContextMenuPopup + " client_chat_frame",
               body_class: "ContextMenuPopupBody",
               replace_existing_popup: !1,
-              target_browser: n,
+              target_browser: r,
+              window_opener_id: l,
               bHideOnClose: !0,
               eCreationFlags:
                 u.eL.PopupContextMenu |
-                (t.options.bCreateHidden ? u.eL.Hidden : 0),
+                (n.options.bCreateHidden ? u.eL.Hidden : 0) |
+                (n.options.bAlwaysOnTop ? u.eL.AlwaysOnTop : 0),
             },
-            { updateParamsBeforeShow: s }
+            { updateParamsBeforeShow: c }
           );
         return (
           (0, i.useEffect)(() => {
-            t.options.bRetainOnHide &&
-              a &&
-              (t.visible
-                ? (r.current && r.current.PositionMenu(),
-                  a.window.SteamClient.Window.SetForegroundWindow(),
-                  t.TakeFocus())
-                : a.window.SteamClient.Window.HideWindow());
-          }, [a, t, t.visible]),
-          T(a.window),
+            n.options.bRetainOnHide &&
+              d &&
+              (n.visible
+                ? (s.current && s.current.PositionMenu(),
+                  d.window.SteamClient.Window.SetForegroundWindow(),
+                  n.TakeFocus())
+                : d.window.SteamClient.Window.HideWindow());
+          }, [d, n, n.visible]),
+          T(d.window),
           i.useLayoutEffect(() => {
-            t.SetPopup(a);
-          }, [t, a]),
-          l
+            n.SetPopup(d);
+          }, [n, d]),
+          p
             ? o.createPortal(
                 i.createElement(
                   h.Wn,
-                  Object.assign({ ref: r }, t.position, { popup: a }),
-                  t.ReactElement
+                  Object.assign({ ref: s }, n.position, { popup: d }),
+                  n.ReactElement
                 ),
-                l
+                p
               )
             : null
         );

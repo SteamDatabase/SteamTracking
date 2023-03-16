@@ -1580,7 +1580,7 @@
                     }
                   ).Unregister;
               }, [t, s]),
-              i.useEffect(() => {
+              i.useLayoutEffect(() => {
                 var t;
                 if (r.current && c.current != l) {
                   const n = r.current.NavTree().DeferredFocus;

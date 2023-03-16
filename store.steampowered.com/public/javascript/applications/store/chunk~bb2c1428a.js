@@ -25,6 +25,7 @@
         QuoteAuthor: "bbcodes_QuoteAuthor_2CMyS",
         PullQuote: "bbcodes_PullQuote_3DRIe",
         Code: "bbcodes_Code_1Aels",
+        CodeBlock: "bbcodes_CodeBlock_1paKw",
         List: "bbcodes_List_tfM5V",
         OrderedList: "bbcodes_OrderedList_3Ve1E",
         ListItem: "bbcodes_ListItem_3DlO0",
@@ -1044,6 +1045,19 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
+                { className: I().CodeBlock },
+                e.children
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "c",
+          {
+            Constructor: function (e) {
+              return i.createElement(
+                "code",
                 { className: I().Code },
                 e.children
               );
@@ -1844,6 +1858,12 @@
         bestofyear_banner_mobile: { width: 500, height: 160 },
         localized_marketing_message: { width: 570, height: 600 },
         localized_optin_banner: { width: 1e3, height: 150 },
+        spotlight_art: { width: 306, height: 350 },
+        marketingmessage_art: { width: 570, height: 600 },
+        takeover_art: { width: 1850, height: 450 },
+        takeover_mobile_art: { width: 500, height: 350 },
+        takeunder_art: { width: 940, height: 150 },
+        takeunder_mobile_art: { width: 500, height: 160 },
       };
       function i(e, t, r) {
         const i = n[r];

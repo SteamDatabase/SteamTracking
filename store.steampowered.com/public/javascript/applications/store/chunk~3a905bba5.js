@@ -824,7 +824,7 @@
               ) ||
               (0, h.AM)(o.createElement(A, null), window)));
       }
-      function y() {
+      function B() {
         return (
           !!u.cb.Get().BIsUserLoggedIn() ||
           ((0, h.AM)(
@@ -841,7 +841,7 @@
           !1)
         );
       }
-      function B(e) {
+      function y(e) {
         const t = l.K.InitFromClanID(e),
           a = u.cb.Get().GetPartnerEventPermissions(t);
         return (
@@ -852,7 +852,7 @@
       }
       function G(e) {
         return (0, n.mG)(this, void 0, void 0, function* () {
-          if (y() && B(e)) {
+          if (B() && y(e)) {
             let t = l.K.InitFromClanID(e),
               a = s.jg.Get().BIsFollowingCurator(t);
             yield s.jg.Get().UpdateFollowOrIgnoreCurator(t, !0, !a), f(a);
@@ -914,8 +914,8 @@
             bApplyingFollowing: t,
             onFollowClick: () => {
               const { clanAccountID: t } = e;
-              y() &&
-                B(t) &&
+              B() &&
+                y(t) &&
                 (a(!0),
                 (() => {
                   const { clanAccountID: t, creatorID: n } = e,
@@ -958,7 +958,7 @@
             bFollowing: l,
             bApplyingFollowing: t,
             onFollowClick: () => {
-              y() &&
+              B() &&
                 (a(!0),
                 (() => {
                   const { appid: t } = e,
@@ -1010,8 +1010,8 @@
         D = a(45321),
         A = a(16147),
         f = a(3341),
-        y = a(56695),
-        B = a(741),
+        B = a(56695),
+        y = a(741),
         G = a(86701),
         T = a(40108),
         N = a(32338),
@@ -1257,7 +1257,7 @@
               m = "#ReviewScore_PercentPositive_series";
           }
         return s.createElement(
-          y.K,
+          B.K,
           { url: i, className: (0, R.Z)(U().ReviewScore, "ReviewScore") },
           n &&
             null != o.percent_positive &&
@@ -1457,7 +1457,7 @@
                 Boolean(i && E) && s.createElement(C.Ws, { storeItem: v }),
                 Boolean(n) && n,
                 Boolean(c && E) &&
-                  s.createElement(B.r, { appid: t.id, bIsMuted: !1 }),
+                  s.createElement(y.r, { appid: t.id, bIsMuted: !1 }),
                 m && s.createElement(ne, { nCreatorAccountID: m })
               )
             )
@@ -1803,8 +1803,8 @@
         D = a(78205),
         A = a(56695),
         f = a(741),
-        y = a(24276),
-        B = a(96138),
+        B = a(24276),
+        y = a(96138),
         G = a(90043),
         T = a(13806),
         N = a(31587),
@@ -1827,7 +1827,7 @@
               purchaseInfo: g,
               hoverType: _,
               nHoverId: A,
-              artworkInfo: y,
+              artworkInfo: B,
               artworkStoreItem: G,
             } = (0, C.Q)(e),
             {
@@ -1910,8 +1910,8 @@
                       "div",
                       { className: H().StoreSaleWidgetImage },
                       r.createElement(w.vs, { appids: J }),
-                      r.createElement(Y, { info: y, imageType: "header" }),
-                      r.createElement(B.y, {
+                      r.createElement(Y, { info: B, imageType: "header" }),
+                      r.createElement(y.y, {
                         eDeckCompatibilityCategory:
                           null === (t = d.GetPlatforms()) || void 0 === t
                             ? void 0
@@ -2203,9 +2203,9 @@
             position: "center",
             string: (0, N.Xx)("#Loading"),
           });
-        if ("library" === a) return r.createElement(y.N, { info: t });
+        if ("library" === a) return r.createElement(B.N, { info: t });
         let o = new Array();
-        (0, y.q)(n, "header" === a, o),
+        (0, B.q)(n, "header" === a, o),
           (o = o.filter((e) => Boolean(e) && "" !== e));
         let l,
           i,
@@ -2444,8 +2444,8 @@
           [I] = (0, c.vs)(E.id, p),
           [b] = (0, o.useState)(++d.instance_count),
           [D, A] = (0, o.useState)(!1),
-          [f, y] = (0, o.useState)((0, m.Dt)(u)),
-          [B, G] = (0, o.useState)(n);
+          [f, B] = (0, o.useState)((0, m.Dt)(u)),
+          [y, G] = (0, o.useState)(n);
         return (
           (0, o.useEffect)(() => {
             if (
@@ -2456,7 +2456,7 @@
                 !(null == a ? void 0 : a.current.token.reason))
             ) {
               const e = _.GetIncludedAppIDs()[0];
-              S({ id: e, type: "game" }), y("app"), G(e);
+              S({ id: e, type: "game" }), B("app"), G(e);
             }
           }, [v.id, v.type, _]),
           (0, o.useEffect)(
@@ -2476,7 +2476,7 @@
             baseGameStoreItem: I,
             baseGameInfo: E,
             hoverType: f,
-            nHoverId: B,
+            nHoverId: y,
             artworkInfo: w,
             artworkStoreItem: C,
           }
@@ -2714,17 +2714,36 @@
           return null;
         const s = r.GetBestPurchaseOption().discount_pct || i,
           c = s && i && s > i && i;
-        r.GetBestPurchaseOption().packageid;
+        return l.createElement(f, {
+          bSingleLineMode: n,
+          nBaseDiscountPercentage: c,
+          nDiscountPercentage: s,
+          bIsPrePurchase: r.BIsPrePurchase(),
+          strBestPurchaseOriginalPriceFormatted:
+            r.GetBestPurchaseOriginalPriceFormatted(),
+          strBestPurchasePriceFormatted: r.GetBestPurchasePriceFormatted(),
+        });
+      }
+      function f(e) {
+        const {
+          bSingleLineMode: t,
+          nDiscountPercentage: a,
+          bIsPrePurchase: n,
+          nBaseDiscountPercentage: r,
+          strBestPurchaseOriginalPriceFormatted: o,
+          strBestPurchasePriceFormatted: i,
+        } = e;
         return l.createElement(
           "div",
           {
-            className: (0, w.Z)(
-              o,
-              s && S().Discounted,
-              "StoreSalePriceWidgetContainer"
-            ),
+            className: (0, w.Z)({
+              [S().StoreSalePriceWidgetContainer]: !0,
+              [S().SingleLineMode]: t,
+              StoreSalePriceWidgetContainer: !0,
+              [S().Discounted]: Boolean(a),
+            }),
           },
-          Boolean(r.BIsPrePurchase()) &&
+          Boolean(n) &&
             l.createElement(
               "div",
               {
@@ -2735,47 +2754,44 @@
               },
               (0, C.Xx)("#EventDisplay_CallToAction_Prepurchase_Short")
             ),
-          Boolean(c) &&
+          Boolean(r) &&
             l.createElement(
               "span",
               { className: (0, w.Z)(S().BaseDiscount) },
-              `-${c}%`
+              `-${r}%`
             ),
-          Boolean(s) &&
+          Boolean(a) &&
             l.createElement(
               "div",
               { className: S().StoreSaleDiscountBox },
-              `-${s}%`
+              `-${a}%`
             ),
-          s && r.GetBestPurchaseOriginalPriceFormatted()
+          Boolean(a && o)
             ? l.createElement(
                 "div",
                 { className: (0, w.Z)(S().StoreSaleDiscountedPriceCtn) },
                 l.createElement(
                   "div",
                   {
-                    className: n
-                      ? S().SingleLineOriginalPrice
-                      : S().StoreOriginalPrice,
+                    className: (0, w.Z)({
+                      [S().SingleLineOriginalPrice]: t,
+                      [S().StoreOriginalPrice]: !t,
+                    }),
                   },
-                  r.GetBestPurchaseOriginalPriceFormatted()
+                  o
                 ),
                 l.createElement(
                   "div",
                   {
-                    className: (0, w.Z)(
-                      S().StoreSalePriceBox,
-                      n && S().SingleLineMode
-                    ),
+                    className: (0, w.Z)({
+                      [S().StoreSalePriceBox]: !0,
+                      [S().SingleLineMode]: t,
+                    }),
                   },
-                  r.GetBestPurchasePriceFormatted()
+                  i
                 )
               )
-            : l.createElement(
-                "div",
-                { className: S().StoreSalePriceBox },
-                r.GetBestPurchasePriceFormatted()
-              )
+            : l.createElement("div", { className: S().StoreSalePriceBox }, i)
         );
       }
     },
@@ -2946,7 +2962,7 @@
           [s, m] = o.useState(!i.jg.Get().BIsLoaded()),
           p = (0, v.bJ)(),
           { appid: g, bIsFree: b, bIsComingSoon: D, className: A } = e,
-          [f, y] = (0, r.SZ)(() => [
+          [f, B] = (0, r.SZ)(() => [
             i.jg.Get().BIsGameWishlisted(g),
             i.jg.Get().BOwnsApp(g),
           ]);
@@ -2957,7 +2973,7 @@
             });
           })();
         }, []);
-        return y || (!D && b)
+        return B || (!D && b)
           ? null
           : o.createElement(
               "div",

@@ -174,43 +174,62 @@ function PromoteFeaturedGamesWithinList( TagData, rgTier1, rgTier2 )
 
 function fnRenderHeroCapsule( oItem )
 {
-	const rgAppInfo = GStoreItemData.rgAppData[ oItem.appid ];
-	if ( !rgAppInfo )
-		return;
-	
-	var url = GStoreItemData.GetAppURL( oItem.appid, 'sale_hero' );
-	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"addToCart( %subid% )","flow-children":"column"}'.replace( '%subid%', rgAppInfo.pricing_subid ) } );
-	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
-	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': oItem.appid, 'style': 'max-height: 450px', 'src': rgAppInfo[ 'hero_capsule' ] ?? rgAppInfo[ 'main_capsule' ] } ) );
+	let rgItemData = null;
+	let purchaseAction = null;
+	let itemID = null;
+	if ( oItem.appid )
+	{
+		rgItemData = GStoreItemData.rgAppData[ oItem.appid ];
+		purchaseAction = 'addToCart( %subid% )'.replace( '%subid%', rgItemData.pricing_subid );
+		itemID = oItem.appid;
+	}
+	else if ( oItem.bundleid )
+	{
+		rgItemData = GStoreItemData.rgBundleData[ oItem.bundleid ];
+		purchaseAction = 'addBundleToCart( %bundleid% )'.replace( '%bundleid%', oItem.bundleid );
+		itemID = oItem.bundleid;
+	}
 
-	if ( rgAppInfo.has_live_broadcast )
+	if ( !rgItemData )
+		return;
+
+	var url = GStoreItemData.GetAppURL( oItem.appid, 'sale_hero' );
+	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
+	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
+	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': oItem.appid, 'style': 'max-height: 450px', 'src': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
+
+	if ( rgItemData.has_live_broadcast )
 	{
 		$J('<div/>', {'class': 'broadcast_live_stream_icon', 'style': 'z-index:unset' } ).append( 'Live')
 	}
 
 	var Screenshots = $J( '<div/>', {'class': 'hover_screenshots' } );
-	var VideoCtn = $J( '<div/>', {'class': 'hover_video_container hero_screenshot_load', 'data-background': 'url(' + ( rgAppInfo.screenshots.length > 0 ? GetScreenshotURL( oItem.appid, rgAppInfo.screenshots[0].filename, '.600x338' ) : rgAppInfo.main_capsule ) + ')' } );
-	var Video = $J( '<video/>', {'class': 'hero_video', 'loop': true, 'preload': 'none' } ).prop("muted", true).append( $J( '<source/>', { 'src': rgAppInfo.microtrailer, 'type': 'video/webm' } ) );
-	VideoCtn.append( Video );
+	var VideoCtn = $J( '<div/>', {'class': 'hover_video_container hero_screenshot_load', 'data-background': 'url(' + ( rgItemData.screenshots.length > 0 ? GetScreenshotURL( rgItemData.screenshots[0].appid, rgItemData.screenshots[0].filename, '.600x338' ) : rgItemData.main_capsule ) + ')' } );
+
+	if ( rgItemData.microtrailer )
+	{
+		var Video = $J( '<video/>', {'class': 'hero_video', 'loop': true, 'preload': 'none' } ).prop("muted", true).append( $J( '<source/>', { 'src': rgItemData.microtrailer, 'type': 'video/webm' } ) );
+		VideoCtn.append( Video );
+	}
+
 	Screenshots.append( VideoCtn );
 	$Cap.append( Screenshots );
 
 	var HeroData = $J( '<div/>', {'class': 'hero_data' } );
 	var HeroContent = $J( '<div/>', {'class': 'hero_data_content' } )
-	HeroContent.append( $J( '<div/>', {'class': 'hero_name' } ).text( rgAppInfo.name ) );
+	HeroContent.append( $J( '<div/>', {'class': 'hero_name' } ).text( rgItemData.name ) );
 
-	if ( rgAppInfo.review_summary )
+	if ( rgItemData.review_summary )
 	{
 		var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
-		var reviewSummary = pref !== 1 ? rgAppInfo.review_summary_filtered : rgAppInfo.review_summary;
+		var reviewSummary = pref !== 1 ? rgItemData.review_summary_filtered : rgItemData.review_summary;
 		var $elReviewData = $J('<div>', {'class': 'hero_stat', "data-tooltip-text": reviewSummary['sReviewScoreTooltip'] } );
-		//$elReviewData.append( $J('<span>', {'class': 'label'}).text( 'All Reviews:') );
 		$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
 		if ( reviewSummary['reviewScore'] > 0 )
 		{
 			$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
 		}
-		if ( rgAppInfo['review_anomaly'] )
+		if ( rgItemData['review_anomaly'] )
 		{
 			$elReviewData.append( $J( '<span class="review_anomaly_icon">&nbsp;*</span>' ) );
 		}
@@ -218,68 +237,40 @@ function fnRenderHeroCapsule( oItem )
 		HeroContent.append( $elReviewData );
 	}
 
-	if( rgAppInfo.tags )
+	if( rgItemData.tags )
 	{
 		var $elTagContainer = $J('<div>',{'class': 'hero_tags_ctn'});
-		for( var i=0; i < rgAppInfo.tags.length; i++)
+		for( var i=0; i < rgItemData.tags.length; i++)
 		{
-			$elTagContainer.append($J('<div>', {'class': 'hero_tag'}).text( rgAppInfo.tags[i] ));
+			$elTagContainer.append($J('<div>', {'class': 'hero_tag'}).text( rgItemData.tags[i] ));
 		}
 		HeroContent.append($elTagContainer);
 	}
 	HeroData.append( HeroContent );
 
 	var AddToCartCtn = $J( '<div/>', {'class': 'hero_add_to_cart' } );
-	AddToCartCtn.append( $J( '<button/>', {'class': 'btn_green_white_innerfade btn_medium', } ).click( function( e ){ addToCart( rgAppInfo.pricing_subid ); } ).append( $J( '<span/>' ).text( 'Add to Cart' )  ) );
+	AddToCartCtn.append( $J( '<button/>', {'class': 'btn_green_white_innerfade btn_medium', } ).click( function( e ){ eval( purchaseAction ); } ).append( $J( '<span/>' ).text( 'Add to Cart' )  ) );
 	HeroData.append( AddToCartCtn );
 
 	$Cap.append( HeroData );
 
-	$Cap.append( $J( rgAppInfo.discount_block ).addClass( 'discount_block_inline hero_discount' ) );
+	$Cap.append( $J( rgItemData.discount_block ).addClass( 'discount_block_inline hero_discount' ) );
 
 	return $Cap;
 }
 
 function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 {
-	var Settings = { games_already_in_library: false, only_current_platform: true, enforce_minimum: true };
+	var Settings = { games_already_in_library: false, localized: true, only_current_platform: true, enforce_minimum: true };
 
 	var $HeroItemCtn = $Parent.find('.carousel_items' );
-
-	var rgAppPriorityList = g_rgAppPriorityLists['tier1'] || [];
-
-	var rgPositionByApp = {};
-	for ( var i = 0; i < rgAppPriorityList.length; i++ )
-	{
-		if ( !rgAppPriorityList[i].appid )
-			continue;
-		rgPositionByApp[ rgAppPriorityList[i].appid ] = i;
-	}
-
-	/* promote Destiny 2 position to match Beyond Light, if present */
-	if ( rgPositionByApp[1314563] !== undefined )
-		rgPositionByApp[1085660] = Math.min( rgPositionByApp[1314563] , rgPositionByApp[1085660] || 0 );
-
-	for ( var i = 0; i < rgHeroItems.length; i++ )
-	{
-		var appid = rgHeroItems[i].appid;
-		if ( appid && rgPositionByApp[appid] === undefined )
-			rgPositionByApp[appid] = i + 1000;
-	}
-
-	rgHeroItems.sort( function( a, b ) {
-		var appidA = a.appid;
-		var appidB = b.appid;
-		var posA = rgPositionByApp[appidA];
-		var posB = rgPositionByApp[appidB];
-
-		return ( posA !== undefined ? posA : 1000 ) - ( posB !== undefined ? posB : 1000 );
-	});
 
 	
 	var rgFilteredHeroes = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 21, Settings );
 
 	
+	GDynamicStore.MarkItemsAsDisplayed( rgFilteredHeroes );
+
 	// generate carousel based on sorted and filtered hero capsules
 	GHomepage.FillPagedCapsuleCarousel( rgFilteredHeroes, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return fnRenderHeroCapsule( oItem ); }, 'sale-hero', 3 );
 
@@ -287,20 +278,18 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 		ModifyLinkSNR( $J(this), function( snr ) { return GStoreItemData.rgNavParams['sale_heroes_priority'] } );
 	});
 
-	$HeroItemCtn.find( '.hero_capsule' ).each( function( i, div ) {
-		GDynamicStore.MarkAppIDsAsDisplayed( [ $J(div).data('dsAppid') ] );
-	});
-
 	$J('.hero_capsule').on( 'mouseenter vgp_onfocus touchstart', function() {
 		$J(this).find('.hero_screenshot_load').each( function() { $J(this).css( 'backgroundImage', $J(this).data('background') ); } );
 	} );
 
 	$J('.hero_capsule:not(.valveindex)').on( 'mouseenter vgp_onfocus touchstart', function() {
-		$J(this).find('video.hero_video')[0].play();
+		if ( $J(this).find('video.hero_video').length )
+			$J(this).find('video.hero_video')[0].play();
 	} );
 
 	$J('.hero_capsule:not(.valveindex)').on( 'mouseleave vgp_onblur touchend', function() {
-		$J(this).find('video.hero_video')[0].pause();
+		if ( $J(this).find('video.hero_video').length )
+			$J(this).find('video.hero_video')[0].pause();
 	} );
 
 	$HeroItemCtn.css('minHeight', '' );
@@ -325,7 +314,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
 	}
 
-	HomeSaleFilterHeroes( $J('.hero_parent_ctn'), rgDisplayLists.heros );
+	HomeSaleFilterHeroes( $J('.hero_parent_ctn'), SortItemListByPriorityList( rgDisplayLists.heros, 'tier1' ) );
 
 	var rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
 

@@ -145,8 +145,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   font-size: 12px;
   text-transform: uppercase;
 }
-.contextmenu_ContextMenuSeparator_1F2Ec + .contextmenu_contextMenuItem_pFo3k {
-  border-top-color: dimgray;
+.contextmenu_ContextMenuSeparator_1F2Ec.contextmenu_ContextMenuSeparator_1F2Ec
+  + .contextmenu_contextMenuItem_pFo3k {
+  border-top: 1px solid dimgray;
 }
 .contextmenu_contextMenuItem_pFo3k.contextmenu_NoSeparation_3twt2 {
   border-top-color: rgba(0, 0, 0, 0);
@@ -244,9 +245,6 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   display: flex;
   align-items: center;
   flex-direction: row;
-}
-.DesktopUI
-  .contextmenu_contextMenuItem_pFo3k:not(.contextmenu_AddSeparator_3yuoe) {
   border-top: none;
   border-bottom: none;
 }
@@ -3288,7 +3286,6 @@ div.ModalPosition_TopBar {
   letter-spacing: unset;
   margin-bottom: 4px;
   line-height: 28px;
-  text-transform: none;
 }
 .DialogSubHeader {
   font-weight: 300;
@@ -3344,6 +3341,9 @@ div.ModalPosition_TopBar {
 }
 .DialogBodyText p a:hover {
   color: #fff;
+}
+.DesktopUI .DialogBodyText {
+  line-height: 22px;
 }
 .DialogLabel {
   cursor: default;
@@ -4550,8 +4550,8 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area-icon .SVGIcon_X_Line,
 .friendsui-container .title-area-icon .SVGIcon_Restore {
   margin: 0px;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
 }
 .DesktopUI .title-area-icon:hover,
 .friendsui-container .title-area-icon:hover {
@@ -4560,5 +4560,5 @@ body.in_global_drag .title-area {
 }
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
-  background: red;
+  background: #e22a27;
 }

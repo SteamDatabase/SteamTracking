@@ -785,11 +785,11 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     padding: 4px 8px 4px 8px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 45px 75px 1fr;
+    grid-template-columns: 45px 75px 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-            "img img name"
-            "img img price";
+            "img img name name"
+            "img img price price";
     height: unset;
     transition: background 0.3s ease-in-out;
 }
@@ -811,6 +811,10 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     transition: color 0.3s ease-in-out;
 }
+.popup_body.search_v2 .match.match_tag.match_v2 .match_name > div {
+    min-width: 40px;
+}
+
 .popup_body.search_v2 .match.match_v2 .match_name span {
     background: rgba(255,255,255,0.3);
     padding: 1px 8px;
@@ -839,7 +843,8 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: #DCDEDF;
+    color: #f5f5f5;
+    font-size: 13px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     transition: color 0.3s ease-in-out;
 }
@@ -847,7 +852,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 .popup_body.search_v2 .match.match_v2:hover,
 .popup_body.search_v2 .match.match_v2.focus {
     background-color: #DCDEDF;
-    color: #3D4450;
+    color: #151515;
 }
 
 /* make sure to target both :hover and .focus to cover keyboard input */
@@ -855,7 +860,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 .popup_body.search_v2 .match.match_v2:hover .match_subtitle,
 .popup_body.search_v2 .match.match_v2.focus .match_name,
 .popup_body.search_v2 .match.match_v2.focus .match_subtitle {
-    color: #3D4450;
+    color: #151515;
     text-shadow: unset;
 }
 
@@ -868,13 +873,34 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 .search_suggest .match_category_top {
 	margin-top: 6px;
 }
-.popup_body.search_v2 .match.match_creator.match_v2,
 .popup_body.search_v2 .match.match_tag.match_v2 {
     display: grid;
     grid-template-areas:
-            "img name name"
-            "img price price";
+            "name name name price"
+            "name name name price";
+    height: 53px;
+}
+.popup_body.search_v2 .match.match_creator.match_v2 {
+    display: grid;
+    grid-template-areas:
+            "img name name price"
+            "img name name price";
     height: unset;
+}
+
+.popup_body.search_v2 .match.match_tag.match_v2 .match_name,
+.popup_body.search_v2 .match.match_creator.match_v2 .match_name{
+    display: flex;
+    align-items: center;
+}
+.popup_body.search_v2 .match.match_tag.match_v2 .match_subtitle,
+.popup_body.search_v2 .match.match_creator.match_v2 .match_subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.popup_body.search_v2 .match.match_tag.match_v2 .match_img {
+    display: none;
 }
 .popup_body.search_v2 .match.match_creator.match_v2 .match_img {
     background: black;

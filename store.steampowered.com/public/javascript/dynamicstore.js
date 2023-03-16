@@ -82,6 +82,7 @@ GDynamicStore = {
 	s_rgfnOnReadyCallbacks: [],
 
 	s_rgDisplayedApps: [],
+	s_rgDisplayedBundles: [],
 
 	s_bUserOnMacOS: false,
 	s_bUserOnLinux: false,
@@ -487,6 +488,31 @@ GDynamicStore = {
 		GDynamicStore.MarkAppIDsAsDisplayed( $J.map( rgDisplayList, function ( item ) { return item.appid; } ), cItemsToMark );
 	},
 
+	MarkItemsAsDisplayed: function( rgItems, cItemsToMark )
+	{
+		for ( var i = 0; i < rgItems.length; i++ )
+		{
+			const item = rgItems[i];
+			if ( item.appid )
+			{
+				GDynamicStore.s_rgDisplayedApps.push( item.appid );
+
+				// if this appid is a demo, also mark the parent app as displayed
+				var rgAppData = GStoreItemData.rgAppData[ item.appid ];
+				if ( rgAppData && rgAppData.demo_for_app )
+					GDynamicStore.s_rgDisplayedApps.push( rgAppData.demo_for_app );
+			}
+
+			if ( item.bundleid )
+			{
+				GDynamicStore.s_rgDisplayedBundles.push( item.bundleid );
+			}
+
+			if ( cItemsToMark !== undefined && --cItemsToMark == 0 )
+				break;
+		}
+	},
+
 	MarkAppIDsAsDisplayed: function( rgAppIDs, cItemsToMark )
 	{
 		for ( var i = 0; i < rgAppIDs.length; i++ )
@@ -499,7 +525,6 @@ GDynamicStore = {
 				var rgAppData = GStoreItemData.rgAppData[ rgAppIDs[i] ];
 				if ( rgAppData && rgAppData.demo_for_app )
 					GDynamicStore.s_rgDisplayedApps.push( rgAppData.demo_for_app );
-
 
 				if ( cItemsToMark !== undefined && --cItemsToMark == 0 )
 					break;
@@ -2113,6 +2138,8 @@ GStoreItemData = {
 		if ( !GStoreItemData.BAppIDSetPassesFilters( rgBundleData.appids, Settings, ApplicableSettings, bStrict ) )
 			return false;
 
+		if ( bStrict && ApplicableSettings.displayed_elsewhere && !Settings.displayed_elsewhere && GDynamicStore.s_rgDisplayedBundles.indexOf( bundleid ) !== -1 )
+			return false;
 
 		return true;
 	},

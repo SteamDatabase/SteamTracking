@@ -2516,5 +2516,8 @@
     "Notification_FriendInvite_Title": "Friend Request",
     "Notification_FriendInvite_Short": "Friend request received",
     "Notification_FriendInvite_Description": "Sent you a friend request",
+    "Notification_GiftReceived_Title": "Gift",
+    "Notification_GiftReceived_Body": "You received a gift!",
+    "Notification_GiftReceived_Description": "From %1$s",
     "shared_dummy": "dont translate"
 }

@@ -55,6 +55,7 @@
   box-sizing: border-box;
   height: 28px;
   display: flex;
+  gap: 6px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -2784,6 +2785,15 @@ html.touch
     line-height: 15px;
     margin-top: 0px;
     margin-bottom: 6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .salepreviewwidgets_SaleItemBrowserRow_y9MSd
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
+    .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk
+    .salepreviewwidgets_DeckCompatIcon_hup-v
+    svg {
+    height: 14px;
   }
 }
 @media screen and (min-width: 768px) {
