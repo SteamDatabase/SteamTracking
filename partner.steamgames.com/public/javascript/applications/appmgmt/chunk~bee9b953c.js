@@ -4781,7 +4781,7 @@
               })
             )
           ),
-          "tagids" == t.type &&
+          ("tagids" == t.type || "category" == t.type) &&
             o.createElement(
               "div",
               { className: E().CategoryCtn },
@@ -4914,7 +4914,7 @@
               t[a].splice(e, 1), c();
             },
             render: (e) =>
-              "tagids" === t.type
+              "tagids" === t.type || "replaces_tags" === a
                 ? o.createElement(
                     "div",
                     { className: E().IDSelector },
