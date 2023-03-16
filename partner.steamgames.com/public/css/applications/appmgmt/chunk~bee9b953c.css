@@ -5231,25 +5231,33 @@ select {
   .categories_Category_12BB3
   a {
   cursor: pointer;
-  width: 20%;
+  width: 50%;
+}
+.categories_CategoriesList_YMtVa
+  .categories_CategoryCtn_1vjux
+  .categories_Category_12BB3
+  a
+  b {
+  color: #fff;
+  font-size: 14px;
 }
 .categories_CategoriesList_YMtVa
   .categories_CategoryCtn_1vjux
   .categories_Category_12BB3
   .categories_CategoryType_2rg93 {
-  width: 20%;
+  width: 5%;
 }
 .categories_CategoriesList_YMtVa
   .categories_CategoryCtn_1vjux
   .categories_Category_12BB3
   .categories_ExcludedFromSearch_1qSt9 {
-  width: 25%;
+  width: 20%;
 }
 .categories_CategoriesList_YMtVa
   .categories_CategoryCtn_1vjux
   .categories_Category_12BB3
   .categories_ReplacesTags_2VMbz {
-  width: 35%;
+  width: 25%;
 }
 .categories_CategoryEditor_hDZX9 {
   width: 600px;
@@ -5274,6 +5282,12 @@ select {
 .categories_CategoryEditor_hDZX9 .categories_TagOrCategoryList_33SvL button {
   width: 120px;
   margin-right: auto;
+}
+.categories_CategoryEditor_hDZX9 .categories_CategoryCtn_1vjux {
+  border: 1px solid gray;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
 }
 .categories_CategorySummary_1h-LQ {
   margin-left: auto;

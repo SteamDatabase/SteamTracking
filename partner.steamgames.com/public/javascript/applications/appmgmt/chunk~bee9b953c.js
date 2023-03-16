@@ -3793,8 +3793,6 @@
         var t, a, s, r, m, c, d, u;
         return (0, n.mG)(this, void 0, void 0, function* () {
           const n = {};
-          let p = 0;
-          for (const t of e) t.id && t.id > p && (p = t.id);
           for (const o of e)
             (n[o.handle] = {
               handle: o.handle,
@@ -3817,7 +3815,7 @@
                   ? void 0
                   : r.map((e) => e.id)) || void 0,
               heading: o.heading || void 0,
-              id: o.id || ++p,
+              id: o.id,
               exclude_from_search: o.exclude_from_search,
             }),
               1 ===
@@ -3833,27 +3831,27 @@
                   ? void 0
                   : d.length) &&
                 (n[o.handle].replaces_tags = n[o.handle].replaces_tags[0]);
-          const g =
+          const p =
               i.De.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
-            _ = new FormData();
-          _.append("sessionid", i.De.SESSIONID),
-            _.append("origin", self.origin),
-            _.append("json", JSON.stringify(n));
-          let h = null;
+            g = new FormData();
+          g.append("sessionid", i.De.SESSIONID),
+            g.append("origin", self.origin),
+            g.append("json", JSON.stringify(n));
+          let _ = null;
           try {
-            const e = yield o().post(g, _, { withCredentials: !0 });
+            const e = yield o().post(p, g, { withCredentials: !0 });
             if (
               200 === e.status &&
               1 === (null === (u = e.data) || void 0 === u ? void 0 : u.success)
             )
               return null;
-            h = (0, l.l)(e);
+            _ = (0, l.l)(e);
           } catch (e) {
-            h = (0, l.l)(e);
+            _ = (0, l.l)(e);
           }
           return (
-            console.error("SaveCategoriesKV failed: " + h.strErrorMsg, h), h
+            console.error("SaveCategoriesKV failed: " + _.strErrorMsg, _), _
           );
         });
       }
@@ -4605,7 +4603,12 @@
                             );
                         })(t, e),
                     },
-                    e.handle
+                    o.createElement(
+                      "b",
+                      null,
+                      e.loc_token ? (0, _.Xx)(e.loc_token) : ""
+                    ),
+                    e.loc_token ? " (" + e.handle + ")" : e.handle
                   ),
                   o.createElement(
                     "div",
@@ -4655,7 +4658,10 @@
             m.zx,
             {
               onClick: () => {
-                t.push({ handle: "new_category_" + t.length }), a();
+                let e = 0;
+                for (const a of t)
+                  a.id && Number(a.id) > e && (e = Number(a.id));
+                t.push({ handle: "new_category_" + t.length, id: ++e }), a();
               },
             },
             "Add Category"
@@ -4668,7 +4674,7 @@
         return o.createElement(
           c.RG,
           { bAllowFullSize: !0, onCancel: n, closeModal: n },
-          o.createElement(m.h4, null, "Edit Category"),
+          o.createElement(m.h4, null, "Edit Category (ID ", t.id, ")"),
           o.createElement(
             m.uT,
             null,
@@ -4677,29 +4683,28 @@
               { className: E().CategoryEditor },
               o.createElement(m.II, {
                 label: "Handle",
-                tooltip: "Must be unique",
+                tooltip: "This forms the end of the URL. It must be unique",
                 value: t.handle,
                 onChange: (e) => {
                   (t.handle = e.target.value), s();
                 },
               }),
-              o.createElement(m.II, {
-                label: "Internal ID (auto assigned)",
-                tooltip: "Assigned automatically, do not try to fill this in",
-                value: t.id,
-                disabled: !0,
-              }),
-              o.createElement(m.II, {
-                label: "Loc Token",
-                tooltip:
-                  "Token only needed if we wish to expose this hub to customers",
-                value: t.loc_token,
-                onChange: (e) => {
-                  (t.loc_token = e.target.value), s();
-                },
-              }),
+              o.createElement(
+                "div",
+                { className: E().CategoryCtn },
+                o.createElement(m.II, {
+                  label: "Loc Token",
+                  tooltip:
+                    "Token only needed if we wish to expose this hub to customers",
+                  value: t.loc_token,
+                  onChange: (e) => {
+                    (t.loc_token = e.target.value), s();
+                  },
+                }),
+                t.loc_token ? (0, _.Xx)(t.loc_token) : ""
+              ),
               o.createElement(m.ji, {
-                label: "Heading",
+                label: "Use As A Heading ",
                 tooltip:
                   "Only used for establishing headings used on the main store drop-down menu",
                 checked: t.heading,
@@ -4708,7 +4713,7 @@
                 },
               }),
               o.createElement(m.ji, {
-                label: "Exclude from search",
+                label: "Exclude from search ",
                 tooltip: "Do not show this category in store search",
                 checked: t.exclude_from_search,
                 onChange: (e) => {
@@ -4755,30 +4760,43 @@
           null,
           o.createElement(
             "div",
-            { className: E().Category },
-            o.createElement(G, {
-              category: t,
-              list: "must",
-              title: "Must have all of",
-            }),
-            o.createElement(G, {
-              category: t,
-              list: "any",
-              title: "Must have any of",
-            }),
-            o.createElement(G, {
-              category: t,
-              list: "mustnot",
-              title: "Must not have any of",
-            }),
-            "tagids" == t.type
-              ? o.createElement(G, {
-                  category: t,
-                  list: "replaces_tags",
-                  title: "Replaces tag(s)",
-                })
-              : null
+            { className: E().CategoryCtn },
+            o.createElement(
+              "div",
+              { className: E().Category },
+              o.createElement(G, {
+                category: t,
+                list: "must",
+                title: "Must have all of these tags",
+              }),
+              o.createElement(G, {
+                category: t,
+                list: "any",
+                title: "Must have one of these tags",
+              }),
+              o.createElement(G, {
+                category: t,
+                list: "mustnot",
+                title: "Must not have any of these tags",
+              })
+            )
           ),
+          "tagids" == t.type &&
+            o.createElement(
+              "div",
+              { className: E().CategoryCtn },
+              o.createElement(G, {
+                category: t,
+                list: "replaces_tags",
+                title:
+                  "The following Tags should redirect to this category page",
+              }),
+              o.createElement(
+                "p",
+                null,
+                'This is only needed if this category is similar in name to an existing tag, such as "Sports" where the category is better than the individual tag.'
+              )
+            ),
           Boolean(a)
             ? o.createElement(
                 o.Fragment,
