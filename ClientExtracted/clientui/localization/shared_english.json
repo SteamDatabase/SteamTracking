@@ -34,6 +34,7 @@
 	"Button_Share": "Share",
 	"Button_Update": "Update",
 	"Button_SaveAndContinue": "Save and Continue",
+	"Button_SaveAndClose": "Save and Close",
 	"Button_Submit": "Submit",
 	"Button_Follow": "Follow",
 	"Button_Followed": "Followed",
@@ -1467,7 +1468,7 @@
 	"Sale_Minigame_ContineQuest": "Go to Quest Page",
 	"Sale_ReserveNow": "Reserve Now %1$s",
 	"Sale_ReserveExhausted": "Out of stock",
-	"Sale_ReserveUnavailable": "Unavailable in your Country",
+	"Sale_ReserveUnavailable": "Unavailable in your Region",
 	"Sale_ReserveEditor": "Reservation Widget Editor",
 	"Sale_ReserveEditor_Add": "Add Reservation Option",
 	"Sale_ReserveEditor_EditTitle": "Edit Description",
@@ -1825,7 +1826,7 @@
 	"SalePage_BadgeProgress_LevelNum": "Level %1$s",
 
 	"Sale_Reservation_NotAllowedAccount": "Your account is either too new or not in good standing. Your account is not permitted to make a reservation.",
-	"Sale_Reservation_NotAvailableCountry": "This item is not available for reservation in your country",
+	"Sale_Reservation_NotAvailableCountry": "This item is not available for reservation in your region",
 	"Sale_Reservation_CanceledPendingRefund": "Reservation cancellation is in progress. Please be patient.",
 	"Sale_Reservation_CancelAreYouSure": "Are you sure? Cancelling your reservation will refund your deposit and remove you from the queue",
 	"Sale_Reservation_CompletePurchase": "Complete purchase",
@@ -1840,7 +1841,7 @@
 		"dummy_for_ease_of_use":"dummy"
 	},
 	"Sale_Reservation_YourExpectedDate": "Your expected order availability:",
-	"Sale_Reservation_Komodo": "Steam Deck is open for reservation in Japan, South Korea, Taiwan, and Hong Kong via Komodo at <1>steamdeck.komodo.jp</1>",
+	"Sale_Reservation_Komodo": "Steam Deck is available for purchase in Japan, South Korea, Taiwan, and Hong Kong via Komodo at <1>steamdeck.komodo.jp</1>",
 
 	"Sale_BrowserSortOption_TopWishlisted": "Most Wishlisted Upcoming Games",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Upcoming games sorted by total (all-time) wishlist counts. Only includes games not yet released on Steam.",
@@ -2602,6 +2603,9 @@
 
 	"ImageUpload_DeleteAll_Confirm": "This will remove all of the localized artwork of this type.  Must save the event afterward for it to apply. Are you sure?",
 
+	"UserGameNotes_DeleteNote": "Delete Note",
+	"UserGameNotes_PromptDelete": "Are you sure you want to delete this note?",
+
 	"selectimage_select_file": "Select file",
 
 	"ServerBrowser_Password": "Password",
@@ -2659,6 +2663,57 @@
 	"ServerBrowser_AntiCheat": "Anti-cheat",
 	"ServerBrowser_SecureOnly": "Secure",
 	"ServerBrowser_InsecureOnly": "Not secure",
+
+	"NotificationsMenu_Title": "Notifications",
+	"NotificationsMenu_ViewAll": "View All",
+	"Notification_NewGiftsPinned_Body": "%1$s New Gift",
+	"Notification_NewGiftsPinned_Body_Plural": "%1$s New Gifts",
+	"Notification_NewCommentPinned_Body": "%1$s New Comment",
+	"Notification_NewCommentPinned_Body_Plural": "%1$s New Comments",
+	"Notification_FriendInvitePinned_Body": "%1$s New Friend Request",
+	"Notification_FriendInvitePinned_Body_Plural": "%1$s New Friend Requests",
+	"Notification_NewItemAnnouncementPinned_Body": "%1$s New Item in Your Inventory",
+	"Notification_NewItemAnnouncementPinned_Body_Plural": "%1$s New Items in Your Inventory",
+
+	"SteamNotifications_Wishlist": "Wishlist Sale",
+	"SteamNotifications_Wishlist_OnSale_Single": "Is on sale for %1$s",
+	"SteamNotifications_Wishlist_OnSale_PlusOne": "And 1 other game are on sale!",
+	"SteamNotifications_Wishlist_OnSale_PlusMany": "And %1$s other games are on sale!",
+	"SteamNotifications_Wishlist_Generic": "Games on your wishlist are on sale!",
+
+	"SteamNotifications_Comment_Your_Profile": "Your profile",
+	"SteamNotifications_Comment_Profile": "A profile you subscribed to",
+	"SteamNotifications_Comment_Player_Profile": "%1$s's profile",
+	"SteamNotifications_Comment": "Comment",
+	"SteamNotifications_Comment_NewDiscussion": "A new discussion in '%1$s'",
+
+	"Notification_ItemAnnouncement_Title": "Item",
+	"Notification_ItemAnnouncement_Body": "You have a new inventory item",
+	"Notification_ItemAnnouncement_Body_Plural": "You have %1$s new inventory items",
+
+	"Notification_Item_Body": "You received: %1$s",
+	"Notification_Item_Body_Generic": "You received an item",
+	"Notification_Item_RollupMore_GameName": "And %1$s more for %2$s",
+	"Notification_Item_RollupMore_Steam": "And %1$s more Steam items",
+	"Notification_Item_RollupMore": "And %1$s more for this game",
+	"Notification_Item_Single_GameName": "For %1$s",
+
+	"SteamNotifications_FriendInvite_Body_Generic": "You received a friend request",
+	"SteamNotifications_FriendInvite_Description": "sent you a friend request",
+	"SteamNotifications_FriendInvite_Description_AwaitingResponse": "is awaiting your response",
+	"SteamNotifications_FriendInvite_Description_Friends": "and you are now friends",
+
+	"SteamNotifications_TradeOffer_Title": "Trade Offer",
+	"SteamNotifications_TradeOffer_Body": "You received a trade offer!",
+	"SteamNotifications_TradeOffer_Description": "From %1$s",
+
+	"Notification_FriendInvite_Title": "Friend Request",
+	"Notification_FriendInvite_Short": "Friend request received",
+	"Notification_FriendInvite_Description": "Sent you a friend request",
+
+	"Notification_GiftReceived_Title": "Gift",
+	"Notification_GiftReceived_Body": "You received a gift!",
+	"Notification_GiftReceived_Description": "From %1$s",
 
 	"shared_dummy": "dont translate"
 }

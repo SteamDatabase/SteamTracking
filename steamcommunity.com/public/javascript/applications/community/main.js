@@ -24630,7 +24630,9 @@
               FAQApp: () => "/faqs/",
               QuestionsApp: () => "/questions/",
               ConferenceApp: () => "/(conference|steamworksvirtualconference)/",
-              ProfileNotifications: (e) =>
+              ProfileVanityNotifications: (e) =>
+                `${F.ProfileVanity(e)}/notifications`,
+              ProfileSteamIDNotifications: (e) =>
                 `${F.ProfileSteamID(e)}/notifications`,
             },
             x
@@ -24767,12 +24769,16 @@
                     render: (e) => i.createElement(k, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: F.ProfileVanity(":vanity_url"),
-                    render: (e) => i.createElement(v, Object.assign({}, e)),
+                    path: F.ProfileVanityNotifications(":vanity_url"),
+                    render: (e) => i.createElement(L, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: F.ProfileNotifications(":steamid"),
+                    path: F.ProfileSteamIDNotifications(":steamid"),
                     render: (e) => i.createElement(L, Object.assign({}, e)),
+                  }),
+                  i.createElement(s.AW, {
+                    path: F.ProfileVanity(":vanity_url"),
+                    render: (e) => i.createElement(v, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
                     path: F.ProfileSteamID(":steamid"),

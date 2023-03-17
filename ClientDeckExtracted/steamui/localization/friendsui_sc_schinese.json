@@ -19,7 +19,7 @@
     "Chat_InviteFriend_SomeUnavailable": "在蒸汽平台聊天测试版中，您只能与参与测试活动的好友进行群组聊天。",
     "Chat_InviteFriend_Unavailable_Released": "%1$s 没有运行最新版的蒸汽平台客户端，也许不能使用新的聊天功能。您仍可以发送邀请。对方一旦更新蒸汽平台客户端，便会看到您的邀请。",
     "Chat_InviteFriend_SomeUnavailable_Released": "您选择的部分好友没有运行最新版的蒸汽平台客户端。他们一旦更新客户端，便会看到您的邀请。",
-    "Chat_TextFilter_Active": "来自陌生人的强烈不雅内容和诽谤字眼先已默认在蒸汽平台聊天中模糊处理。[url=%1$s]查看过滤设置[/url]",
+    "Chat_TextFilter_Active": "来自陌生人的强烈脏话和侮辱性文字现已默认在蒸汽平台聊天中模糊处理。[url=%1$s]查看过滤设置[/url]",
     "Chat_Create": "创建新蒸汽平台聊天",
     "bbcode_disable_embed_inlining_steam_workshop": "%1$s（蒸汽平台创意工坊）",
     "bbcode_steam_store_embed_Filtered": "已分享一个并未通过您所选择内容筛选器筛选的蒸汽平台产品页面。",

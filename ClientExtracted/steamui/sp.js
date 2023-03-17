@@ -1892,7 +1892,7 @@
     },
     57811: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Nh });
+      a.r(t), a.d(t, { default: () => Ph });
       var n = a(70655),
         o = a(16614),
         r = (a(67862), a(67294)),
@@ -11684,10 +11684,10 @@
               }
               const y = c.GetAppCountWithToolsFilter(i),
                 b = m.GetAppCountWithToolsFilter(i),
-                f = (0, bt.zq)(Ji()),
-                E = p.GetAppCountWithToolsFilter(i);
+                f = (0, bt.zq)(Ji());
               if (
-                (y > 0 && _.push(v("Favorites", c, "#LibraryTab_Favorites")),
+                (p.GetAppCountWithToolsFilter(i),
+                y > 0 && _.push(v("Favorites", c, "#LibraryTab_Favorites")),
                 b > 0 && _.push(v("RemotePlay", m, "#LibraryTab_RemotePlay")),
                 f > 0)
               ) {
@@ -11740,7 +11740,6 @@
                     Object.assign({ collection: d }, g)
                   ),
                 }),
-                E > 0 && _.push(v("Soundtracks", p, "#LibraryTab_Soundtracks")),
                 _
               );
             }, [a, n, o, l, s, c, i, m, p, d, t, u, e]);
@@ -24616,8 +24615,9 @@
           r.createElement(sg, { ActiveMenu: a })
         );
       });
-      var mg = a(84316);
-      const pg = (0, f.observer)(function (e) {
+      var mg = a(84316),
+        pg = a(87205);
+      const gg = (0, f.observer)(function (e) {
           var t;
           const { bPlayingStartupMovie: a } = e,
             [n, o] = r.useState(),
@@ -24663,8 +24663,8 @@
                     "flow-children": "row",
                     className: _().MainNavMenuMainSplit,
                   },
-                  d.BHasMenus() && r.createElement(gg, { ModalManager: i }),
-                  r.createElement(hg, {
+                  d.BHasMenus() && r.createElement(hg, { ModalManager: i }),
+                  r.createElement(vg, {
                     refNavTreeRoot: o,
                     refModalManager: l,
                   }),
@@ -24681,7 +24681,7 @@
             )
           );
         }),
-        gg = (0, f.observer)(function (e) {
+        hg = (0, f.observer)(function (e) {
           const { ModalManager: t } = e,
             a = (0, Me.Ls)().GetOpenSideMenu(),
             n = te.mg.IsLockScreenActive(),
@@ -24702,7 +24702,7 @@
                 })
               );
         }),
-        hg = (0, f.observer)(function (e) {
+        vg = (0, f.observer)(function (e) {
           var t;
           const a = (0, Et.bz)(s.nm.BIsOverlayPath),
             n = (0, k.default)(
@@ -24738,7 +24738,7 @@
               onButtonDown: g,
             },
             r.createElement(
-              _g,
+              yg,
               { refModalManager: e.refModalManager, instance: p },
               p.BIsGamepadApplicationUIInitialized() &&
                 r.createElement(
@@ -24765,7 +24765,9 @@
                         null,
                         m
                           ? r.createElement($.qH, Object.assign({}, m))
-                          : r.createElement(Ou, null)
+                          : r.createElement(Ou, null),
+                        r.createElement(pg.pF, null),
+                        !m && r.createElement(pg.Nz, null)
                       )
                     )
                   )
@@ -24773,7 +24775,7 @@
             )
           );
         }),
-        vg = r.forwardRef(function (e, t) {
+        _g = r.forwardRef(function (e, t) {
           const { className: a, active: n, children: o, modalKey: i } = e,
             l = r.useRef();
           (0, ie.useActivateNavTree)(l, n, !0);
@@ -24793,7 +24795,7 @@
             o
           );
         });
-      function _g(e) {
+      function yg(e) {
         const { instance: t, refModalManager: a } = e,
           n = r.useCallback((e) => {
             if (e) {
@@ -24824,7 +24826,7 @@
           rg.ModalRoot,
           {
             className: (0, k.default)(_().GamepadDialogOverlay, "GamepadMode"),
-            DialogWrapper: vg,
+            DialogWrapper: _g,
             ContextMenuComponent: ug,
             refModalManager: o,
             refContextMenuManager: i,
@@ -24832,7 +24834,7 @@
           e.children
         );
       }
-      const yg = (0, f.observer)((e) => {
+      const bg = (0, f.observer)((e) => {
         const t = r.useRef(),
           a = s.nm.ActiveNavigationSourceType != Ge.ENavigationSourceType.MOUSE,
           n = (0, me.useComputedZoom)(t),
@@ -24884,9 +24886,9 @@
           )
         );
       });
-      var bg = a(28875);
-      function fg(e) {
-        const t = (0, bg.Zb)().bShutdownRequested;
+      var fg = a(28875);
+      function Eg(e) {
+        const t = (0, fg.Zb)().bShutdownRequested;
         return r.createElement(
           il.t,
           null,
@@ -24924,15 +24926,15 @@
           })(e)
         );
       }
-      var Eg = a(4757),
-        Ag = a.n(Eg),
-        Cg = a(2476);
-      function Sg(e) {
-        return (0, oe.SZ)(() => Cg.qh.Get().ContinuouslyRender)
+      var Ag = a(4757),
+        Cg = a.n(Ag),
+        Sg = a(2476);
+      function kg(e) {
+        return (0, oe.SZ)(() => Sg.qh.Get().ContinuouslyRender)
           ? r.createElement("div", { className: _().ContinuousRenderPixel })
           : null;
       }
-      let kg = class extends r.Component {
+      let Ig = class extends r.Component {
         constructor(e) {
           var t;
           super(e),
@@ -24960,7 +24962,7 @@
             return e ? null : r.createElement(il.t, null);
           if (s.nm.BIsShuttingDown()) {
             const e = s.nm.GetShutdownState();
-            return r.createElement(fg, {
+            return r.createElement(Eg, {
               eShutdownState: e.eShutdownState,
               appid: e.appid,
             });
@@ -24971,7 +24973,7 @@
               Me.my,
               { mode: this.props.mode },
               r.createElement(
-                Ig,
+                Tg,
                 {
                   className: (0, k.default)(
                     "BasicUI",
@@ -24990,21 +24992,21 @@
                       "flow-children": "row",
                       className: _().MainNavMenuMainSplit,
                     },
-                    r.createElement(Lg, null),
+                    r.createElement(Bg, null),
                     r.createElement(og, null)
                   )
                 ),
                 r.createElement(Y, { visible: t }),
-                r.createElement(yg, null)
+                r.createElement(bg, null)
               ),
-              r.createElement(Sg, null)
+              r.createElement(kg, null)
             );
           if (this.props.mode == Me.iZ.ControllerConfigurator)
             return r.createElement(
               Me.my,
               { mode: this.props.mode, forcedAppID: this.props.forcedAppID },
               r.createElement(
-                Ig,
+                Tg,
                 {
                   className: (0, k.default)(
                     "BasicUI",
@@ -25014,16 +25016,16 @@
                       _().StandaloneConfigurator
                   ),
                 },
-                r.createElement(pg, { bPlayingStartupMovie: !1 }),
+                r.createElement(gg, { bPlayingStartupMovie: !1 }),
                 r.createElement(Y, { visible: t }),
-                r.createElement(yg, null)
+                r.createElement(bg, null)
               ),
-              r.createElement(Sg, null)
+              r.createElement(kg, null)
             );
           const a = {
-            breakNarrow: [parseInt(Ag().GamepadUIBreakNarrow), "NarrowWindow"],
-            breakWide: [parseInt(Ag().GamepadUIBreakWide), "WideWindow"],
-            breakShort: [parseInt(Ag().GamepadUIBreakShort), "ShortWindow"],
+            breakNarrow: [parseInt(Cg().GamepadUIBreakNarrow), "NarrowWindow"],
+            breakWide: [parseInt(Cg().GamepadUIBreakWide), "WideWindow"],
+            breakShort: [parseInt(Cg().GamepadUIBreakShort), "ShortWindow"],
             strMedium: "MediumWindow",
             fnDimensionsChanged: (e, t) => {
               s.nm.SetWindowDimensions(e, t);
@@ -25034,7 +25036,7 @@
               Me.my,
               { mode: this.props.mode, forcedAppID: this.props.forcedAppID },
               r.createElement(
-                Ig,
+                Tg,
                 {
                   className: (0, k.default)(
                     "BasicUI",
@@ -25043,7 +25045,7 @@
                   ),
                   ResponsiveRecorderProps: a,
                 },
-                r.createElement(pg, { bPlayingStartupMovie: e }),
+                r.createElement(gg, { bPlayingStartupMovie: e }),
                 r.createElement(
                   ce.ErrorBoundary,
                   null,
@@ -25057,20 +25059,20 @@
                 r.createElement(
                   ce.ErrorBoundary,
                   null,
-                  r.createElement(wg, null)
+                  r.createElement(Lg, null)
                 ),
-                !n.IN_VR && r.createElement(yg, null),
+                !n.IN_VR && r.createElement(bg, null),
                 e &&
-                  r.createElement(Tg, {
+                  r.createElement(wg, {
                     fnCancelStartupMove: this.props.fnCancelStartupMove,
                   })
               ),
-              r.createElement(Sg, null)
+              r.createElement(kg, null)
             )
           );
         }
       };
-      function Ig(e) {
+      function Tg(e) {
         const { className: t, ResponsiveRecorderProps: a, children: n } = e,
           [o, i] = r.useState(_().HeaderHeightVisible),
           l = (0, Me.kk)();
@@ -25091,7 +25093,7 @@
             )
           : r.createElement("div", { style: s, className: t }, n);
       }
-      function Tg(e) {
+      function wg(e) {
         const { fnCancelStartupMove: t } = e,
           a = r.useCallback(
             (e) => {
@@ -25152,7 +25154,7 @@
           null
         );
       }
-      function wg() {
+      function Lg() {
         const e = (0, re.k6)();
         return (
           r.useEffect(() => {
@@ -25164,9 +25166,9 @@
           null
         );
       }
-      (0, n.gn)([me.bind], kg.prototype, "OnGestureEvent", null),
-        (kg = (0, n.gn)([f.observer], kg));
-      const Lg = (0, f.observer)(function () {
+      (0, n.gn)([me.bind], Ig.prototype, "OnGestureEvent", null),
+        (Ig = (0, n.gn)([f.observer], Ig));
+      const Bg = (0, f.observer)(function () {
         const e = (0, k.default)(_().BasicHome, _().TransparentBackground),
           t = r.useCallback((e) => {
             (0, ee.LP)(e) ||
@@ -25217,7 +25219,7 @@
           )
         );
       });
-      function Bg(e) {
+      function Gg(e) {
         return r.createElement(
           ce.ErrorBoundary,
           null,
@@ -25233,89 +25235,89 @@
         );
       }
       a(68184);
-      var Gg = a(89517),
-        Dg = a(5917),
-        Fg = a(10920),
-        Ng = a(64388),
-        Pg = a(1013),
-        Rg = a(87964),
-        Mg = a(54673),
-        xg = a(3162),
-        Og = a(70082),
-        Hg = a(45665),
-        Ug = a(43029),
-        zg = a(30946),
-        Wg = a(22784),
-        Kg = a(84290),
-        Vg = a(3876),
-        jg = a(10200),
-        qg = a(96935);
+      var Dg = a(89517),
+        Fg = a(5917),
+        Ng = a(10920),
+        Pg = a(64388),
+        Rg = a(1013),
+        Mg = a(87964),
+        xg = a(54673),
+        Og = a(3162),
+        Hg = a(70082),
+        Ug = a(45665),
+        zg = a(43029),
+        Wg = a(30946),
+        Kg = a(22784),
+        Vg = a(84290),
+        jg = a(3876),
+        qg = a(10200),
+        Zg = a(96935);
       a(54733), a(67164), a(63576);
-      const Zg = r.Fragment;
+      const Qg = r.Fragment;
       a(90379);
       u.EPopupCreationFlags.BackgroundTransparent,
         u.EPopupCreationFlags.Hidden,
         u.EPopupCreationFlags.Notification;
       a(88003);
-      const Qg = {
-        [Kg._.FriendsList]: {
+      const Xg = {
+        [Vg._.FriendsList]: {
           tooltipToken: "#AppOverlay_Toolbar_Friends",
           svgicon: () => r.createElement(Jt.Friends, null),
         },
-        [Kg._.StoreBrowser]: {
+        [Vg._.StoreBrowser]: {
           tooltipToken: "#AppOverlay_Toolbar_Store",
           svgicon: () => r.createElement(Jt.Store, null),
         },
-        [Kg._.CommunityBrowser]: {
+        [Vg._.CommunityBrowser]: {
           tooltipToken: "#AppOverlay_Toolbar_Community",
           svgicon: () => r.createElement(Jt.Community, null),
         },
-        [Kg._.Settings]: {
+        [Vg._.Settings]: {
           tooltipToken: "#AppOverlay_Toolbar_Settings",
           svgicon: () => r.createElement(Vn.Settings, null),
         },
-        [Kg._.Guides]: {
+        [Vg._.Guides]: {
           tooltipToken: "#AppOverlay_Toolbar_Guides",
           svgicon: () => r.createElement(Jt.Guides, null),
         },
-        [Kg._.Achievements]: {
+        [Vg._.Achievements]: {
           tooltipToken: "#AppOverlay_Toolbar_Achievements",
           svgicon: () => r.createElement(Jt.SteamAchievements, null),
         },
-        [Kg._.GameHubs]: {
+        [Vg._.GameHubs]: {
           tooltipToken: "#AppOverlay_Toolbar_GameHub",
           svgicon: () => r.createElement(Jt.GameHubs, null),
         },
-        [Kg._.Discussions]: {
+        [Vg._.Discussions]: {
           tooltipToken: "#AppOverlay_Toolbar_Discussions",
           svgicon: () => r.createElement(Jt.CommentThread, null),
         },
-        [Kg._.Controller]: {
+        [Vg._.Controller]: {
           tooltipToken: "#AppOverlay_Toolbar_Controller",
           svgicon: () => r.createElement(Jt.Controller, { type: "generic" }),
         },
-        [Kg._.SoundtrackPlayer]: {
+        [Vg._.SoundtrackPlayer]: {
           tooltipToken: "#AppOverlay_Toolbar_SoundtrackPlayer",
           svgicon: () => r.createElement(Jt.Music, null),
         },
-        [Kg._.AppSpotlight]: {
+        [Vg._.AppSpotlight]: {
           tooltipToken: "#AppOverlay_Toolbar_AppSpotlight",
           svgicon: () => r.createElement(Jt.Checkmark, null),
         },
-        [Kg._.Browser]: {
+        [Vg._.Browser]: {
           tooltipToken: "#AppOverlay_Toolbar_Browser",
           svgicon: () => r.createElement(Jt.Browse, null),
         },
-        [Kg._.Broadcast]: { tooltipToken: "", svgicon: () => null },
+        [Vg._.Broadcast]: { tooltipToken: "", svgicon: () => null },
       };
-      function Xg() {
+      function Jg() {
         return (0, ua.p)().DesktopOverlay;
       }
-      function Jg(e) {
+      function Yg(e) {
         const { children: t } = e;
         return (
           (function () {
-            const e = Xg();
+            const e = Jg();
             r.useEffect(
               () => (e.EnterMinimalMode(), () => e.ExitMinimalMode()),
               [e]
@@ -25325,7 +25327,7 @@
         );
       }
       r.Fragment;
-      function Yg(e) {
+      function $g(e) {
         return r.useCallback(
           (t, a) => {
             const n = {
@@ -25347,7 +25349,7 @@
       }
       (0, ce.WithErrorBoundary)((e) => {
         const { appid: t } = e,
-          a = Yg(t),
+          a = $g(t),
           n = (0, ke.C)(t);
         if (0 == n.length) return null;
         let o = n[0],
@@ -25375,14 +25377,14 @@
             i = r.createElement(je, { request: o });
         }
         return i
-          ? r.createElement(Jg, null, i)
+          ? r.createElement(Yg, null, i)
           : r.createElement(
-              Jg,
+              Yg,
               null,
               n.map((e) => {
                 if (e.bWebPage) {
                   let n = () => ke.H.RemoveDialogRequest(e);
-                  return r.createElement(qg.L, {
+                  return r.createElement(Zg.L, {
                     strName: `OverlayBrowser_${t}_${e.strDialog}`,
                     strInitialURL: e.strDialog,
                     bCanChangeURL: !1,
@@ -25406,11 +25408,11 @@
             );
           return a ? null : r.createElement(dl.i5, { appID: t, bVisible: n });
         });
-      function $g(e) {
-        const t = (0, Og.DL)(),
+      function eh(e) {
+        const t = (0, Hg.DL)(),
           a = (0, ua.p)(),
-          n = Xg(),
-          o = Kg._.FriendsList,
+          n = Jg(),
+          o = Vg._.FriendsList,
           i = (0, oe.SZ)(() => t.GetFriendsListPopup(a.params.browserInfo));
         return (
           r.useEffect(
@@ -25423,26 +25425,26 @@
           r.createElement(r.Fragment, null)
         );
       }
-      function eh(e) {
+      function th(e) {
         const { windowType: t, onToggleOn: a } = e,
           o = (0, n._T)(e, ["windowType", "onToggleOn"]),
-          i = Xg(),
+          i = Jg(),
           l = (0, oe.SZ)(() => i.BWindowVisible(t)),
           s = r.useCallback(() => {
             i.ToggleWindowVisibility(t) && a && a();
           }, [i, t, a]);
         return r.createElement(
-          ah,
+          nh,
           Object.assign({ windowType: t, onToggle: s, bToggled: l }, o)
         );
       }
-      function th(e) {
-        const t = Xg(),
+      function ah(e) {
+        const t = Jg(),
           a = r.useCallback(() => {
             t.HideAllWindows();
           }, [t]);
         return r.createElement(
-          Wg.HP,
+          Kg.HP,
           {
             toolTipContent: (0, I.Localize)(
               "#AppOverlay_Toolbar_MinimizeWindows"
@@ -25451,24 +25453,24 @@
             nBodyAlignment: 0.5,
           },
           r.createElement(S.Button, {
-            className: (0, k.default)(Hg.ToolbarButton),
+            className: (0, k.default)(Ug.ToolbarButton),
             svgicon: () => r.createElement(Jt.Close, null),
             onClick: a,
           })
         );
       }
-      function ah(e) {
+      function nh(e) {
         const { windowType: t, bToggled: a, onToggle: n, disabled: o } = e,
-          i = Qg[t];
+          i = Xg[t];
         return r.createElement(
-          Wg.HP,
+          Kg.HP,
           {
             toolTipContent: (0, I.Localize)(i.tooltipToken),
             direction: "bottom",
             nBodyAlignment: 0.5,
           },
           r.createElement(S.Button, {
-            className: (0, k.default)(Hg.ToolbarButton, a && Hg.Toggled),
+            className: (0, k.default)(Ug.ToolbarButton, a && Ug.Toggled),
             svgicon: i.svgicon,
             onClick: n,
             disabled: o,
@@ -25480,24 +25482,24 @@
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement($g, null),
-          r.createElement(oh, null),
-          r.createElement(uh, null),
-          r.createElement(mh, null),
+          r.createElement(eh, null),
+          r.createElement(rh, null),
+          r.createElement(dh, null),
           r.createElement(ph, null),
           r.createElement(gh, null),
           r.createElement(hh, null),
           r.createElement(vh, null),
           r.createElement(_h, null),
-          r.createElement(ih, null),
-          r.createElement(lh, { appid: t }),
+          r.createElement(yh, null),
+          r.createElement(lh, null),
           r.createElement(sh, { appid: t }),
-          r.createElement(rh, null)
+          r.createElement(ch, { appid: t }),
+          r.createElement(ih, null)
         );
       }),
         (0, ce.WithErrorBoundary)((e) => {
           const { appid: t } = e,
-            a = Xg(),
+            a = Jg(),
             n = (0, oe.SZ)(() => tt.d.GetAchievements(t)),
             o = n && 0 != n.nTotal,
             [i] = (0, Se.HQ)("web_browser_home"),
@@ -25506,26 +25508,26 @@
             }, [a, i]);
           return r.createElement(
             "div",
-            { className: Hg.ToolbarContainer },
+            { className: Ug.ToolbarContainer },
             r.createElement(
               "div",
-              { className: Hg.Toolbar },
-              r.createElement(eh, { windowType: Kg._.AppSpotlight }),
-              r.createElement(eh, { windowType: Kg._.FriendsList }),
-              r.createElement(eh, { windowType: Kg._.Settings }),
-              r.createElement(eh, { windowType: Kg._.Guides }),
-              r.createElement(eh, {
-                windowType: Kg._.Achievements,
+              { className: Ug.Toolbar },
+              r.createElement(th, { windowType: Vg._.AppSpotlight }),
+              r.createElement(th, { windowType: Vg._.FriendsList }),
+              r.createElement(th, { windowType: Vg._.Settings }),
+              r.createElement(th, { windowType: Vg._.Guides }),
+              r.createElement(th, {
+                windowType: Vg._.Achievements,
                 disabled: !o,
               }),
-              r.createElement(eh, { windowType: Kg._.StoreBrowser }),
-              r.createElement(eh, { windowType: Kg._.CommunityBrowser }),
-              r.createElement(eh, { windowType: Kg._.Browser, onToggleOn: l }),
-              r.createElement(eh, { windowType: Kg._.GameHubs }),
-              r.createElement(eh, { windowType: Kg._.Controller }),
-              r.createElement(eh, { windowType: Kg._.Discussions }),
-              r.createElement(eh, { windowType: Kg._.SoundtrackPlayer }),
-              r.createElement(th, null)
+              r.createElement(th, { windowType: Vg._.StoreBrowser }),
+              r.createElement(th, { windowType: Vg._.CommunityBrowser }),
+              r.createElement(th, { windowType: Vg._.Browser, onToggleOn: l }),
+              r.createElement(th, { windowType: Vg._.GameHubs }),
+              r.createElement(th, { windowType: Vg._.Controller }),
+              r.createElement(th, { windowType: Vg._.Discussions }),
+              r.createElement(th, { windowType: Vg._.SoundtrackPlayer }),
+              r.createElement(ah, null)
             )
           );
         }),
@@ -25535,7 +25537,7 @@
             o = r.useRef(),
             i = r.useRef(),
             l = r.useRef();
-          l.current || (l.current = new Ug.cA());
+          l.current || (l.current = new zg.cA());
           const s = r.useCallback(
               (e, t) => {
                 var a;
@@ -25590,7 +25592,7 @@
               () => e.forEach((e) => e.unregister())
             );
           }, [s, u]);
-          const d = Yg(t),
+          const d = $g(t),
             m = r.useCallback(
               (e) => {
                 if (0 == e.indexOf("steam://close/authorize"))
@@ -25685,9 +25687,9 @@
           );
           return a
             ? r.createElement(
-                Jg,
+                Yg,
                 null,
-                r.createElement(qg.L, {
+                r.createElement(Zg.L, {
                   strName: `MTXOverlayBrowser_${t}`,
                   strInitialURL: a,
                   bCanChangeURL: !1,
@@ -25701,9 +25703,9 @@
               )
             : null;
         });
-      function nh(e) {
+      function oh(e) {
         const { windowType: t, strURL: a, bCanChangeURL: n } = e,
-          o = Xg(),
+          o = Jg(),
           i = (0, oe.SZ)(() => o.BWindowVisible(t)),
           l = r.useCallback(() => {
             o.SetWindowVisibility(t, !1);
@@ -25715,7 +25717,7 @@
             [o]
           );
         return i
-          ? r.createElement(qg.L, {
+          ? r.createElement(Zg.L, {
               strName: `OverlayBrowser_${t.toString()}`,
               strInitialURL: a,
               bCanChangeURL: n,
@@ -25726,9 +25728,9 @@
             })
           : null;
       }
-      function oh() {
-        const e = Xg(),
-          t = Kg._.Settings,
+      function rh() {
+        const e = Jg(),
+          t = Vg._.Settings,
           a = (0, oe.SZ)(() => e.settings_page),
           n = (0, oe.SZ)(() => e.BWindowVisible(t)),
           o = r.useCallback(() => {
@@ -25736,7 +25738,7 @@
           }, [t, e]);
         return n
           ? r.createElement(
-              dh,
+              mh,
               {
                 strName: "Settings",
                 width: 820,
@@ -25750,9 +25752,9 @@
             )
           : null;
       }
-      function rh() {
-        const e = Xg(),
-          t = Kg._.Broadcast,
+      function ih() {
+        const e = Jg(),
+          t = Vg._.Broadcast,
           a = (0, o.xJ)(),
           n = (0, y.an)("SteamIDBroadcastPage", a.strSteamID),
           [i, l] = r.useState(),
@@ -25772,7 +25774,7 @@
           }, [e, t, c]),
           c
             ? r.createElement(
-                dh,
+                mh,
                 {
                   strName: "Broadcast",
                   width: 400,
@@ -25783,10 +25785,10 @@
                 },
                 r.createElement(
                   "div",
-                  { className: Hg.OverlayBroadcast },
+                  { className: Ug.OverlayBroadcast },
                   r.createElement(
                     "div",
-                    { className: Hg.Title },
+                    { className: Ug.Title },
                     (0, I.Localize)("#BroadcastControl_Title")
                   ),
                   r.createElement(
@@ -25799,7 +25801,7 @@
                   ),
                   r.createElement(
                     "div",
-                    { className: Hg.Buttons },
+                    { className: Ug.Buttons },
                     r.createElement(
                       S.Button,
                       { onClick: () => n() },
@@ -25813,7 +25815,7 @@
                     r.createElement(
                       S.Button,
                       {
-                        onClick: () => e.SetWindowVisibility(Kg._.Settings, !0),
+                        onClick: () => e.SetWindowVisibility(Vg._.Settings, !0),
                       },
                       (0, I.Localize)("#BroadcastControl_Button_Settings")
                     ),
@@ -25830,16 +25832,16 @@
             : null
         );
       }
-      function ih(e) {
-        const t = Xg(),
-          a = Kg._.SoundtrackPlayer,
+      function lh(e) {
+        const t = Jg(),
+          a = Vg._.SoundtrackPlayer,
           n = (0, oe.SZ)(() => t.BWindowVisible(a)),
           o = r.useCallback(() => {
             t.SetWindowVisibility(a, !1);
           }, [a, t]);
         return n
           ? r.createElement(
-              dh,
+              mh,
               {
                 strName: "SoundtrackPlayer",
                 width: 250,
@@ -25849,25 +25851,25 @@
                 onClose: o,
                 bUseSavedDimensions: !0,
               },
-              r.createElement(Zg, null)
+              r.createElement(Qg, null)
             )
           : null;
       }
-      function lh(e) {
+      function sh(e) {
         const { appid: t } = e,
           a = (0, oe.SZ)(() => tt.d.GetAchievements(t)),
           n = a && a.nTotal > 0,
-          o = Xg(),
-          i = Kg._.Achievements,
+          o = Jg(),
+          i = Vg._.Achievements,
           l = (0, oe.SZ)(() => o.BWindowVisible(i)),
           s = r.useCallback(() => {
             o.SetWindowVisibility(i, !1);
           }, [i, o]),
           c = r.useRef(),
-          u = Ss(c, Hg.headerPadding);
+          u = Ss(c, Ug.headerPadding);
         return l && n
           ? r.createElement(
-              dh,
+              mh,
               {
                 strName: "Achievements",
                 width: 500,
@@ -25880,7 +25882,7 @@
               r.createElement(
                 Ae.ScrollPanel,
                 {
-                  className: Hg.Page,
+                  className: Ug.Page,
                   ref: c,
                   scrollPaddingTop: 0,
                   scrollIntoViewType: cr.EScrollIntoViewType.NoTransform,
@@ -25894,23 +25896,23 @@
             )
           : null;
       }
-      function sh(e) {
+      function ch(e) {
         const { appid: t } = e,
-          a = Xg(),
-          n = (0, oe.SZ)(() => jg.oT.GetFeaturedSpotlight(t)),
+          a = Jg(),
+          n = (0, oe.SZ)(() => qg.oT.GetFeaturedSpotlight(t)),
           o = (0, tt.i)(t),
-          i = Kg._.AppSpotlight,
+          i = Vg._.AppSpotlight,
           l = (0, oe.SZ)(() => a.BWindowVisible(i)),
           s = r.useCallback(() => {
             a.SetWindowVisibility(i, !1);
           }, [i, a]);
         return (
           r.useEffect(() => {
-            l && jg.oT.UpdateSpotlightForAppID(t);
+            l && qg.oT.UpdateSpotlightForAppID(t);
           }, [l, t]),
           l && (null == n ? void 0 : n.sessionData)
             ? r.createElement(
-                dh,
+                mh,
                 {
                   strName: "AppSpotlight",
                   width: 250,
@@ -25920,7 +25922,7 @@
                   onClose: s,
                   bUseSavedDimensions: !0,
                 },
-                r.createElement(Vg.p, {
+                r.createElement(jg.p, {
                   details: o,
                   sessionData: n.sessionData,
                 })
@@ -25928,11 +25930,11 @@
             : null
         );
       }
-      function ch(e) {
+      function uh(e) {
         const { onClose: t } = e,
           a = (0, o.gV)().cm,
           n = (0, ua.p)(),
-          i = Xg(),
+          i = Jg(),
           {
             popup: d,
             element: m,
@@ -25956,10 +25958,10 @@
                   s.nm.SetConfiguratorWidth(e.outerWidth);
                 },
               };
-            const { popup: p, element: g } = Ch(
+            const { popup: p, element: g } = Sh(
                 "ControllerConfigurator",
                 i.current,
-                Ah.GamepadUI,
+                Ch.GamepadUI,
                 {
                   title: (0, I.Localize)("#SP_WindowTitle_Configurator", o),
                   dimensions: d,
@@ -25985,12 +25987,12 @@
               popup: p,
               element: g,
               configurator: r.createElement(
-                Sh,
+                kh,
                 { ownerWindow: p, instance: i.current },
                 r.createElement(
                   y.PU,
                   { initialEntries: h, initialIndex: 1 },
-                  r.createElement(kg, {
+                  r.createElement(Ig, {
                     cm: e,
                     mode: Me.iZ.ControllerConfigurator,
                     forcedAppID: t,
@@ -26003,15 +26005,15 @@
           ? l.createPortal(
               r.createElement(
                 "div",
-                { className: Hg.OverlayPopup },
+                { className: Ug.OverlayPopup },
                 r.createElement(
                   "div",
-                  { className: Hg.WindowControls },
-                  r.createElement(zg.TitleBar, { popup: d, hideMinMax: !0 })
+                  { className: Ug.WindowControls },
+                  r.createElement(Wg.TitleBar, { popup: d, hideMinMax: !0 })
                 ),
                 r.createElement(
                   "div",
-                  { className: Hg.ControllerConfiguratorWrapper },
+                  { className: Ug.ControllerConfiguratorWrapper },
                   p
                 )
               ),
@@ -26019,16 +26021,16 @@
             )
           : null;
       }
-      function uh(e) {
-        const t = Xg(),
-          a = Kg._.Controller,
+      function dh(e) {
+        const t = Jg(),
+          a = Vg._.Controller,
           n = (0, oe.SZ)(() => t.BWindowVisible(a)),
           o = r.useCallback(() => {
             t.SetWindowVisibility(a, !1);
           }, [a, t]);
-        return n ? r.createElement(ch, { onClose: o }) : null;
+        return n ? r.createElement(uh, { onClose: o }) : null;
       }
-      const dh = (0, ce.WithErrorBoundary)((e) => {
+      const mh = (0, ce.WithErrorBoundary)((e) => {
         const {
             strName: t,
             width: a,
@@ -26042,7 +26044,7 @@
           } = e,
           h = (0, o.gV)().cm,
           v = (0, ua.p)(),
-          _ = `OverlayPopup${Xg().appid}_${t}`,
+          _ = `OverlayPopup${Jg().appid}_${t}`,
           y = (0, d.s)(h, _),
           b = g ? y : {};
         b.onClose = c;
@@ -26074,11 +26076,11 @@
                   { ownerWindow: f },
                   r.createElement(
                     "div",
-                    { className: Hg.OverlayPopup },
+                    { className: Ug.OverlayPopup },
                     r.createElement(
                       "div",
-                      { className: Hg.WindowControls },
-                      r.createElement(zg.TitleBar, {
+                      { className: Ug.WindowControls },
+                      r.createElement(Wg.TitleBar, {
                         popup: f,
                         hideMinMax: !0,
                         hideClose: !c,
@@ -26099,26 +26101,26 @@
             : null
         );
       });
-      function mh(e) {
-        const t = Xg(),
-          a = St.de.ResolveURL("GameHubGuides", t.appid);
-        return r.createElement(nh, { windowType: Kg._.Guides, strURL: a });
-      }
       function ph(e) {
-        return r.createElement(nh, {
-          windowType: Kg._.StoreBrowser,
+        const t = Jg(),
+          a = St.de.ResolveURL("GameHubGuides", t.appid);
+        return r.createElement(oh, { windowType: Vg._.Guides, strURL: a });
+      }
+      function gh(e) {
+        return r.createElement(oh, {
+          windowType: Vg._.StoreBrowser,
           strURL: St.de.GetStoreURL(),
         });
       }
-      function gh(e) {
-        return r.createElement(nh, {
-          windowType: Kg._.CommunityBrowser,
+      function hh(e) {
+        return r.createElement(oh, {
+          windowType: Vg._.CommunityBrowser,
           strURL: St.de.GetCommunityURL(),
         });
       }
-      function hh(e) {
-        const t = Xg(),
-          a = Kg._.Browser,
+      function vh(e) {
+        const t = Jg(),
+          a = Vg._.Browser,
           n = (0, oe.SZ)(() => t.BWindowVisible(a)),
           [o] = (0, Se.HQ)("web_browser_home"),
           i = r.useCallback(() => {
@@ -26160,7 +26162,7 @@
             [t]
           );
         return n && 0 != s.length
-          ? r.createElement(qg.w, {
+          ? r.createElement(Zg.w, {
               strName: `OverlayBrowser_${a.toString()}`,
               appid: t.appid,
               strHomeURL: o,
@@ -26175,21 +26177,21 @@
             })
           : null;
       }
-      function vh(e) {
-        const t = Xg(),
-          a = St.de.ResolveURL("GameHub", t.appid);
-        return r.createElement(nh, { windowType: Kg._.GameHubs, strURL: a });
-      }
       function _h(e) {
-        const t = Xg(),
+        const t = Jg(),
+          a = St.de.ResolveURL("GameHub", t.appid);
+        return r.createElement(oh, { windowType: Vg._.GameHubs, strURL: a });
+      }
+      function yh(e) {
+        const t = Jg(),
           a = St.de.ResolveURL("GameHubDiscussions", t.appid);
-        return r.createElement(nh, { windowType: Kg._.Discussions, strURL: a });
+        return r.createElement(oh, { windowType: Vg._.Discussions, strURL: a });
       }
       a(88987);
       new Ir.CLog("VR");
-      const yh = -2147483648,
-        bh = "DesktopUI";
-      function fh(e) {
+      const bh = -2147483648,
+        fh = "DesktopUI";
+      function Eh(e) {
         const { cm: t } = e,
           a = (0, oe.SZ)(() => s.nm.WindowStore.SteamUIWindows);
         (0, Se.rV)().bSmallMode;
@@ -26199,40 +26201,40 @@
           a.map((e) => {
             const a = e.params.browserInfo;
             return e.IsMainGamepadUIWindow()
-              ? r.createElement(Ih, { key: "Main", cm: t, instance: e })
+              ? r.createElement(Th, { key: "Main", cm: t, instance: e })
               : e.IsGamepadUIOverlayWindow()
-              ? r.createElement(Fh, {
+              ? r.createElement(Nh, {
                   key: `overlay_${a.m_unPID}`,
                   cm: t,
                   instance: e,
                 })
               : e.IsStandaloneKeyboardWindow()
-              ? r.createElement(Bh, { key: "keyboard", cm: t, instance: e })
+              ? r.createElement(Gh, { key: "keyboard", cm: t, instance: e })
               : e.IsControllerConfiguratorWindow()
-              ? r.createElement(Gh, {
+              ? r.createElement(Dh, {
                   key: "controllerconfigurator",
                   cm: t,
                   instance: e,
                 })
               : e.IsVRWindow()
-              ? r.createElement(Th, { key: "vr", cm: t, instance: e })
+              ? r.createElement(wh, { key: "vr", cm: t, instance: e })
               : e.IsSteamLibraryWindow()
-              ? r.createElement(wh, { key: "SteamLibrary", cm: t, instance: e })
+              ? r.createElement(Lh, { key: "SteamLibrary", cm: t, instance: e })
               : e.IsDesktopLoginWindow()
-              ? r.createElement(Lh, { key: "DesktopLogin", cm: t, instance: e })
+              ? r.createElement(Bh, { key: "DesktopLogin", cm: t, instance: e })
               : null;
           })
         );
       }
-      const Eh =
+      const Ah =
         u.EPopupCreationFlags.Resizable |
         u.EPopupCreationFlags.BackgroundTransparent;
-      var Ah;
-      function Ch(e, t, a, n, o) {
+      var Ch;
+      function Sh(e, t, a, n, o) {
         let i = r.useRef(new tr.CUnregisterList());
         let l = -1;
         return (
-          a === Ah.GamepadUI ? (l = 4) : a === Ah.DesktopUI && (l = 7),
+          a === Ch.GamepadUI ? (l = 4) : a === Ch.DesktopUI && (l = 7),
           (0, d.B)(
             e,
             Object.assign(
@@ -26241,11 +26243,11 @@
                   html_class: _().SteamUIPopupHTML,
                   body_class: (0, k.default)(
                     _().SteamUIPopupWindowBody,
-                    a == Ah.GamepadUI && _().GamepadUIPopupWindowBody,
-                    a == Ah.DesktopUI && bh
+                    a == Ch.GamepadUI && _().GamepadUIPopupWindowBody,
+                    a == Ch.DesktopUI && fh
                   ),
                   popup_class: _().SteamUIPopupWindow,
-                  eCreationFlags: Eh,
+                  eCreationFlags: Ah,
                 },
                 n
               ),
@@ -26266,7 +26268,7 @@
                   i.current.Push(
                     s.nm.NavigationManager.RegisterInputSource(new g.Q(e))
                   ),
-                  a == Ah.GamepadUI &&
+                  a == Ch.GamepadUI &&
                     i.current.Push(
                       s.nm.NavigationManager.RegisterInputSource(
                         new m.CKeyboardGamepadSimulator(e)
@@ -26284,7 +26286,7 @@
           )
         );
       }
-      function Sh(e) {
+      function kh(e) {
         const { instance: t, ownerWindow: a, children: n, vr: o } = e,
           i = r.useMemo(() => ({ ownerWindow: a }), [a]);
         r.useEffect(() => t.Init(), [t]),
@@ -26300,7 +26302,7 @@
         return (
           r.useEffect(() => t.InitFocusNavContext(l.current), [t]),
           r.createElement(
-            Bg,
+            Gg,
             null,
             r.createElement(
               h.ConfigContextRoot,
@@ -26331,33 +26333,33 @@
           (e[(e.Library = 1)] = "Library"),
           (e[(e.GamepadUI = 2)] = "GamepadUI"),
           (e[(e.DesktopUI = 3)] = "DesktopUI");
-      })(Ah || (Ah = {}));
-      const kh = (function () {
+      })(Ch || (Ch = {}));
+      const Ih = (function () {
         const e = "steam-firstclientrun";
         return (
           null == sessionStorage.getItem(e) &&
           (sessionStorage.setItem(e, "ran"), !0)
         );
       })();
-      function Ih(e) {
+      function Th(e) {
         const { cm: t, instance: a } = e,
           n = (0, o.xY)(),
           i = (0, oe.SZ)(() => (0, o.gV)().LoginState),
           d = (0, oe.SZ)(() => a.BIsGamepadApplicationUIInitialized()),
           [m, p] = r.useState(!1),
-          g = h.Config.ON_DECK ? Dg.Z : Fg.Z,
+          g = h.Config.ON_DECK ? Fg.Z : Ng.Z,
           v = (0, yp.rZ)(),
-          _ = (0, Ng.dh)(g),
-          [b, f] = r.useState((kh || !h.Config.ON_DECK) && null != g),
+          _ = (0, Pg.dh)(g),
+          [b, f] = r.useState((Ih || !h.Config.ON_DECK) && null != g),
           E = r.useCallback(() => f(!1), []);
         (0, me.useTimeout)(E, 3e4, []);
         let A = c.EBrowserType.EBrowserType_DirectHWND_Borderless,
           C = { width: 1280, height: 800, left: 0, top: 0 };
         (h.Config.ON_DECK && "linux" === h.Config.PLATFORM) ||
-          ((C.left = yh),
-          (C.top = yh),
+          ((C.left = bh),
+          (C.top = bh),
           (A = c.EBrowserType.EBrowserType_DirectHWND));
-        let S = Eh | u.EPopupCreationFlags.BackgroundTransparent;
+        let S = Ah | u.EPopupCreationFlags.BackgroundTransparent;
         (0, oe.SZ)(() => Se.cS.WindowedMode && !h.Config.IN_GAMESCOPE) ||
           (S |= u.EPopupCreationFlags.FullScreen),
           h.Config.DECK_DISPLAY_MODE &&
@@ -26369,10 +26371,10 @@
             s.nm.SetConfiguratorWidth(e.outerWidth);
           },
         };
-        const { popup: T, element: w } = Ch(
+        const { popup: T, element: w } = Sh(
           "SP BPM",
           a,
-          Ah.GamepadUI,
+          Ch.GamepadUI,
           {
             title: (0, I.Localize)("#SP_WindowTitle_BigPicture"),
             dimensions: C,
@@ -26421,19 +26423,19 @@
           B = L.bIsOverride || !h.Config.ON_DECK;
         return l.createPortal(
           r.createElement(
-            Sh,
+            kh,
             { ownerWindow: T, instance: e.instance },
             r.createElement(
               y.Br,
               { basename: (0, y.bo)() },
-              r.createElement(Gg.x, {
+              r.createElement(Dg.x, {
                 bPlayingMovie: b,
                 strOverrideStartupMovie: L.strUrl,
                 bFullscreenVideo: B,
                 onVideoComplete: E,
                 onVideoError: E,
               }),
-              r.createElement(kg, {
+              r.createElement(Ig, {
                 cm: t,
                 mode: Me.iZ.Full,
                 bPlayingStartupMovie: b,
@@ -26444,14 +26446,14 @@
           w
         );
       }
-      const Th = (e) => null;
-      function wh(e) {
+      const wh = (e) => null;
+      function Lh(e) {
         const { cm: t, instance: a } = e,
           n =
             "macos" !== h.Config.PLATFORM && "linux" !== h.Config.PLATFORM
               ? c.EBrowserType.EBrowserType_ChildHWNDNative
               : void 0,
-          { popup: i, element: d } = Ch("SteamLibraryWindow", a, Ah.Library, {
+          { popup: i, element: d } = Sh("SteamLibraryWindow", a, Ch.Library, {
             title: "SteamLibraryWindow",
             dimensions: { width: 1280, height: 800, left: 0, top: 0 },
             replace_existing_popup: !1,
@@ -26497,7 +26499,7 @@
                       u.BrowserContext.Provider,
                       { value: m },
                       r.createElement(
-                        Mg.sJ,
+                        xg.sJ,
                         { webNavigationsUseSteamURL: !0 },
                         r.createElement(
                           ua.S.Provider,
@@ -26505,7 +26507,7 @@
                           r.createElement(
                             ce.ErrorBoundary,
                             null,
-                            r.createElement(Pg.default, {
+                            r.createElement(Rg.default, {
                               cm: t,
                               bSmallMode: !1,
                             })
@@ -26521,16 +26523,16 @@
         );
       }
       r.Fragment;
-      function Lh(e) {
+      function Bh(e) {
         const { cm: t, instance: a } = e;
         c.EBrowserType.EBrowserType_DirectHWND_Borderless;
-        let n = { width: 705, height: 440, left: yh, top: yh },
+        let n = { width: 705, height: 440, left: bh, top: bh },
           o = (0, I.Localize)("#SignIn_Title"),
           i = r.useRef(!1);
-        const { popup: d, element: m } = Ch(
+        const { popup: d, element: m } = Sh(
             "SP DesktopLoginWindow",
             a,
-            Ah.DesktopUI,
+            Ch.DesktopUI,
             {
               title: o,
               dimensions: n,
@@ -26558,8 +26560,8 @@
                 h.ConfigContextRoot,
                 { IN_DESKTOPUI: !0, IN_GAMEPADUI: !1, IN_VR: !1 },
                 r.createElement(
-                  xg.PopupStyleContextRoot,
-                  { body_class: bh },
+                  Og.PopupStyleContextRoot,
+                  { body_class: fh },
                   r.createElement(
                     u.BrowserContext.Provider,
                     { value: p },
@@ -26573,9 +26575,9 @@
                           ce.ErrorBoundary,
                           null,
                           r.createElement(
-                            Mg.sJ,
+                            xg.sJ,
                             { webNavigationsUseSteamURL: !0 },
-                            r.createElement(Rg.FullLogin, {
+                            r.createElement(Mg.FullLogin, {
                               cm: t,
                               popup: d,
                               includeTitleBar: !0,
@@ -26594,10 +26596,10 @@
             )
           : null;
       }
-      function Bh(e) {
+      function Gh(e) {
         const { cm: t, instance: a } = e,
           { initialX: n, initialY: o } = a.params,
-          { popup: i, element: s } = Ch("SP Keyboard", a, Ah.GamepadUI, {
+          { popup: i, element: s } = Sh("SP Keyboard", a, Ch.GamepadUI, {
             title: (0, I.Localize)("#SP_WindowTitle_Keyboard"),
             dimensions: { width: 1280, height: 360, left: n, top: o },
             replace_existing_popup: !1,
@@ -26614,23 +26616,23 @@
         return s
           ? l.createPortal(
               r.createElement(
-                Sh,
+                kh,
                 { ownerWindow: i, instance: e.instance },
-                r.createElement(kg, { cm: t, mode: Me.iZ.StandaloneKeyboard })
+                r.createElement(Ig, { cm: t, mode: Me.iZ.StandaloneKeyboard })
               ),
               s
             )
           : null;
       }
-      function Gh(e) {
+      function Dh(e) {
         const { cm: t, instance: a } = e,
           { appid: n, strAppName: o } = a.params;
         (0, oe.SZ)(() => a.BIsGamepadApplicationUIInitialized());
         let i = c.EBrowserType.EBrowserType_DirectHWND_Borderless,
           u = { width: 1280, height: 800, left: 0, top: 0 };
         (h.Config.ON_DECK && "linux" === h.Config.PLATFORM) ||
-          ((u.left = yh),
-          (u.top = yh),
+          ((u.left = bh),
+          (u.top = bh),
           (i = c.EBrowserType.EBrowserType_DirectHWND));
         let d = {
           onClose: () =>
@@ -26639,10 +26641,10 @@
             s.nm.SetConfiguratorWidth(e.outerWidth);
           },
         };
-        const { popup: m, element: p } = Ch(
+        const { popup: m, element: p } = Sh(
             "SP Controller Configurator",
             a,
-            Ah.GamepadUI,
+            Ch.GamepadUI,
             {
               title: (0, I.Localize)("#SP_WindowTitle_Configurator", o),
               dimensions: u,
@@ -26669,12 +26671,12 @@
         return p
           ? l.createPortal(
               r.createElement(
-                Sh,
+                kh,
                 { ownerWindow: m, instance: e.instance },
                 r.createElement(
                   y.PU,
                   { initialEntries: g, initialIndex: 1 },
-                  r.createElement(kg, {
+                  r.createElement(Ig, {
                     cm: t,
                     mode: Me.iZ.ControllerConfigurator,
                     forcedAppID: n,
@@ -26685,7 +26687,7 @@
             )
           : null;
       }
-      const Dh = r.memo(function (e) {
+      const Fh = r.memo(function (e) {
         const { children: t } = e,
           a = r.useContext(ua.S).params;
         let n = a.browserInfo.m_unAppID,
@@ -26697,7 +26699,7 @@
           t
         );
       });
-      function Fh(e) {
+      function Nh(e) {
         const { cm: t, instance: a } = e,
           n = a.params;
         let o = c.EBrowserType.EBrowserType_OffScreen,
@@ -26717,10 +26719,10 @@
               s.nm.WindowStore.RemoveTestWindowsOverlayBrowser(n.appid),
           }));
         const m = a.params.browserInfo,
-          { popup: p, element: g } = Ch(
+          { popup: p, element: g } = Sh(
             "overlay",
             a,
-            Ah.GamepadUI,
+            Ch.GamepadUI,
             {
               title:
                 "SP Overlay: " +
@@ -26756,12 +26758,12 @@
           g
             ? l.createPortal(
                 r.createElement(
-                  Sh,
+                  kh,
                   { ownerWindow: p, instance: a },
                   r.createElement(
-                    Dh,
+                    Fh,
                     null,
-                    r.createElement(kg, {
+                    r.createElement(Ig, {
                       cm: t,
                       mode: Me.iZ.Overlay,
                       forcedAppID: n.appid,
@@ -26787,7 +26789,7 @@
           yield e.Init(window.cm);
         });
       })();
-      const Nh = function (e) {
+      const Ph = function (e) {
         const t = (0, o.gl)();
         return (
           (0, i.pJ)(1920, 1080),
@@ -26797,7 +26799,7 @@
             r.createElement(
               rg.ModalRoot,
               { bOnlyPopups: !0 },
-              t && r.createElement(fh, { cm: e.cm })
+              t && r.createElement(Eh, { cm: e.cm })
             )
           )
         );
