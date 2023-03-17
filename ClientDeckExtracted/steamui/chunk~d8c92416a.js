@@ -1753,17 +1753,12 @@
               (this.m_lastMode = void 0);
             const { loginState: n } = e;
             let t;
-            switch (n) {
-              case 1:
-              case 2:
-                (this.modeHistory = $e.slice()), (t = Xe);
-                break;
-              default:
-                t =
-                  0 != m.P.GetLoginUsers().length
-                    ? Ye.CachedUsersPanel
-                    : Ye.SignInPanel;
-            }
+            if (1 === n) (this.modeHistory = $e.slice()), (t = Xe);
+            else
+              t =
+                0 != m.P.GetLoginUsers().length
+                  ? Ye.CachedUsersPanel
+                  : Ye.SignInPanel;
             ie.mg.BResettingPIN() && (t = Ye.SignInPanel),
               (this.state = {
                 mode: t,
