@@ -2400,6 +2400,7 @@ GDynamicStorePage = {
 		// Get a list of appids to filter
 		var rgItems = [];
 		var oShownItems = { rgAppIds: [], rgPackageIds: [], rgBundleIds: [] };
+		var rgValidElements = [];
 
 		// Remove duplicates or DLC from the list
 		for( var i = 0; i < $elElements.length; i++ )
@@ -2410,7 +2411,10 @@ GDynamicStorePage = {
 				continue;
 
 			if ( GDynamicStorePage.BItemValid( item, oShownItems, { filter_dlc: bFilterDLC } ) )
+			{
 				rgItems.push( item );
+				rgValidElements.push( $capsule );
+			}
 			else
 				$capsule.remove();
 		}
@@ -2421,9 +2425,9 @@ GDynamicStorePage = {
 		);
 
 		// Now follow filters as long we we can keep 4 items in the capsule
-		for( var i = 0; i < $elElements.length; i++ )
+		for( var i = 0; i < rgValidElements.length; i++ )
 		{
-			var $capsule = $J( $elElements[i] );
+			var $capsule = rgValidElements[i];
 			var item = GDynamicStorePage.ItemIDFromCapsule( $capsule );
 			if ( !item )
 				continue;

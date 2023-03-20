@@ -385,9 +385,9 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	}
 
 	// filter dupes from tab lists
-	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#popular_new_releases_content .tab_content_items' ).children('.sale_capsule'), $J( '#popular_new_releases_content' ), { only_current_platform: true, games_already_in_library: false, displayed_elsewhere: true, localized: true, enforce_minimum: true } );
-	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#tab_upcoming_content .tab_content_items' ).children('.sale_capsule'), $J( '#tab_upcoming_content' ), { prepurchase: true, games_already_in_library: true, displayed_elsewhere: true, localized: true, enforce_minimum: true } );
-	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#topsellers_tier' ).children('.sale_capsule'), $J( '#topsellers_tier' ), {dlc_for_you: true, games_already_in_library: true, displayed_elsewhere: true, localized: true, enforce_minimum: true } );
+	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#popular_new_releases_content .tab_content_items' ).children('.sale_capsule'), $J( '#popular_new_releases_content' ), { only_current_platform: true, games_already_in_library: false, localized: true, enforce_minimum: true } );
+	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#tab_upcoming_content .tab_content_items' ).children('.sale_capsule'), $J( '#tab_upcoming_content' ), { prepurchase: true, games_already_in_library: true, localized: true, enforce_minimum: true } );
+	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#topsellers_tier' ).children('.sale_capsule'), $J( '#topsellers_tier' ), {dlc_for_you: true, games_already_in_library: true, localized: true, enforce_minimum: true } );
 
 	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
 	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
