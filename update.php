@@ -427,6 +427,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				str_ends_with( $File, 'english-json.js' ) ||
 				str_starts_with( $OriginalFile, 'www.underlords.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.dota2.com/' ) ||
+				str_starts_with( $OriginalFile, 'counter-strike.net/' ) ||
 				str_starts_with( $OriginalFile, 'Scripts/WebUI/steammobile' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||
 				str_contains( $OriginalFile, '/legacy_web/' ) ||
