@@ -7826,15 +7826,7 @@ body {
   .beta_source2_BetaCS2_3plBW
     .beta_source2_HeaderSection_1C-QD
     .beta_source2_HeaderBG_1u8z4 {
-    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/cs2/header_mobile.jpg");
-    background-size: contain;
-  }
-}
-@media (max-width: 600px) {
-  .beta_source2_BetaCS2_3plBW
-    .beta_source2_HeaderSection_1C-QD
-    .beta_source2_HeaderBG_1u8z4 {
-    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/cs2/header_mobile.jpg");
+    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/cs2/header_mobile2.jpg");
     background-size: cover;
   }
 }
