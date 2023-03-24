@@ -5687,10 +5687,205 @@ html.responsive.touch
   margin-bottom: 12px;
 }
 .assetportal_AssetSection_2Sa_- .assetportal_SectionCtn_PHCQr {
-  padding: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+}
+.assetportal_AssetSection_2Sa_- .assetportal_AssetSpecs_25TK9 {
+  width: 40%;
+  padding-right: 24px;
+  box-sizing: border-box;
+  color: #d0d1d2;
+  font-size: 14px;
+}
+.assetportal_AssetSection_2Sa_- .assetportal_AssetSpecs_25TK9 h2 {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.assetportal_AssetSection_2Sa_-
+  .assetportal_AssetSpecs_25TK9
+  .assetportal_LinkRow_ADaiG {
+  margin-bottom: 8px;
+}
+.assetportal_AssetSection_2Sa_-
+  .assetportal_AssetSpecs_25TK9
+  .assetportal_LinkRow_ADaiG
+  a {
+  color: #fff;
+}
+.assetportal_AssetSection_2Sa_- .assetportal_AssetUploadPreview_3qbEj {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+}
+.assetportal_AssetSection_2Sa_- .assetportal_AssetUploadPreview_3qbEj h2 {
+  color: #fff;
+  font-weight: 300;
+}
+.assetportal_AssetSection_2Sa_- .assetportal_AssetUploadPreview_3qbEj h2 span {
+  color: #f36969;
+}
+.assetportal_AssetSection_2Sa_-
+  .assetportal_AssetUploadPreview_3qbEj
+  .DragAndDropContainer {
+  flex-grow: 1;
+}
+.assetportal_UploadPreviewCtn_1X0nV {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .assetportal_TitleBar_3sj9k {
   background: #25272d;
+}
+.assetportal_TitleBar_3sj9k .EventEditorTextTitle {
+  padding-left: 24px;
+  padding-bottom: 4px;
+}
+.assetportal_SetupRow_Bif2R {
+  display: flex;
+  flex-direction: row;
+}
+.assetportal_SetupRow_Bif2R .assetportal_TypeNotLinked_kk2lJ {
+  color: #73767a;
+  margin-left: 34px;
+  line-height: 27px;
+}
+.assetportal_SetupRow_Bif2R .assetportal_AssetNeedsColumn_xo-7h {
+  padding-right: 40px;
+  margin-right: 40px;
+  border-right: 1px solid #73767a;
+}
+.assetportal_SetupRow_Bif2R .assetportal_InstructionCtn_18kCx textarea {
+  width: 500px;
+  height: 100px;
+}
+.assetportal_SpotlightPreviewCtn_GrCIp {
+  width: 306px;
+  height: 390px;
+  margin-left: 12px;
+  background: #000;
+  position: relative;
+}
+.assetportal_SpotlightPreviewCtn_GrCIp .assetportal_Content_JPDZn {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 16px 12px 16px;
+  bottom: 0;
+  height: 113px;
+  background: #257ba2;
+}
+.assetportal_SpotlightPreviewCtn_GrCIp
+  .assetportal_Content_JPDZn
+  .assetportal_Title_2fVP6 {
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 0.03em;
+  font-weight: normal;
+  padding-top: 2px;
+}
+.assetportal_SpotlightPreviewCtn_GrCIp
+  .assetportal_Content_JPDZn
+  .assetportal_Subtitle_3Ar6J {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: #acdbf5;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.assetportal_SpotlightPreviewCtn_GrCIp
+  .assetportal_Content_JPDZn
+  .StoreSalePriceWidgetContainer {
+  width: fit-content;
+}
+.assetportal_MarketingMessagePreviewCtn_1XRRQ {
+  width: 570px;
+  height: 600px;
+  margin-left: 12px;
+  background: #000;
+  position: relative;
+}
+.assetportal_PromoDetailsCtn_3GPlR {
+  display: flex;
+  flex-direction: row;
+}
+.assetportal_PromoDetailsCtn_3GPlR .assetportal_FeaturedApp_35Rvm {
+  width: 50%;
+}
+.assetportal_PromoDetailsCtn_3GPlR .assetportal_FeaturedApp_35Rvm a {
+  display: block;
+}
+.assetportal_PromoDetailsCtn_3GPlR .assetportal_FeaturedApp_35Rvm img {
+  width: 100%;
+  height: auto;
+}
+.assetportal_PromoDetailsCtn_3GPlR .assetportal_PromoText_3grp6 {
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+.assetportal_ArtTaskCtn_8a8hI {
+  display: flex;
+  flex-direction: row;
+  background: #2e3442;
+  padding: 6px 6px;
+  margin-bottom: 2px;
+}
+.assetportal_ArtTaskCtn_8a8hI .assetportal_Icon_2A8k7 {
+  height: 25px;
+}
+.assetportal_ArtTaskCtn_8a8hI .assetportal_Asset_wLZ-- {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+.assetportal_ArtTaskCtn_8a8hI .assetportal_Deadline_LiOZU {
+  font-size: 14px;
+  color: #b1b1b1;
+  flex-grow: 1;
+  text-align: right;
+}
+.assetportal_ArtTaskCtn_8a8hI .assetportal_Deadline_LiOZU span {
+  color: #facc56;
+}
+.assetportal_CustomMessage_1GbC2 {
+  font-size: 20px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 12px;
+}
+.assetportal_ChecklistTitleCtn_2at5P {
+  margin-bottom: 6px;
+}
+.assetportal_ChecklistTitleCtn_2at5P .assetportal_ChecklistTitle_1dnpj {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+}
+.assetportal_ChecklistTitleCtn_2at5P .assetportal_Required_28FR7 {
+  color: #f36969;
+}
+.assetportal_ChecklistTitleCtn_2at5P .assetportal_Optional_24ZWq {
+  color: #aeaeae;
+}
+.assetportal_ChecklistDescription_1hBXn {
+  margin-bottom: 12px;
+  margin-left: 26px;
+}
+.assetportal_InstructionsTextInput_33qrx {
+  margin-top: 8px;
+}
+.assetportal_InstructionsTextInput_33qrx textarea {
+  width: 100%;
+  height: 50px;
+}
+.assetportal_OptionalToggle_35eGe {
+  opacity: 0.3;
 }
 .collapseablesection_SectionTitleHeader_1K5gA {
   display: flex;
@@ -5709,6 +5904,68 @@ html.responsive.touch
 }
 .collapseablesection_SectionTitleHeader_1K5gA .EventEditorTextTitle {
   padding-top: 6px;
+}
+.artworkuploader_ArtworkDimensionTooSmall_8JWUN {
+  color: #999;
+}
+.artworkuploader_UploadPreviewCtn_ei0wW {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.artworkuploader_UploadPreviewButtonsCtn_26B6A {
+  width: 50%;
+  margin: 0px auto;
+}
+.artworkuploader_UploadPreviewDelete_341V_ {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.artworkuploader_UploadPreviewButton_2cbB1 {
+  margin: 8px;
+}
+.artworkuploader_UploadPreviewError_2v0gp {
+  color: #943636;
+  font-size: 12px;
+  font-weight: bold;
+}
+.artworkuploader_UploadPreviewWarning_3AsII {
+  color: #ffba70;
+  font-size: 12px;
+}
+.artworkuploader_UploadPreview_3pASZ {
+  width: 300px;
+  background-color: gray;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 10px #000;
+  margin: 8px;
+  position: relative;
+}
+.artworkuploader_UploadPreview_3pASZ > div {
+  margin-bottom: 8px;
+}
+.artworkuploader_PreviewImgCtn_3cUm3 {
+  height: 120px;
+  background: #000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 8px;
+}
+.artworkuploader_PreviewImgInfo_3Iv_t {
+  padding: 1px;
+  float: left;
+  margin-bottom: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0);
+}
+.artworkuploader_PreviewImgInfo_3Iv_t:hover {
+  background-color: #000;
+  border: 1px solid #fff;
 }
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
@@ -7499,68 +7756,6 @@ select {
 .marketingmessageassets_LegalPreview_3UR3E {
   margin-top: 6px;
   font-size: 12px;
-}
-.artworkuploader_ArtworkDimensionTooSmall_8JWUN {
-  color: #999;
-}
-.artworkuploader_UploadPreviewCtn_ei0wW {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.artworkuploader_UploadPreviewButtonsCtn_26B6A {
-  width: 50%;
-  margin: 0px auto;
-}
-.artworkuploader_UploadPreviewDelete_341V_ {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-.artworkuploader_UploadPreviewButton_2cbB1 {
-  margin: 8px;
-}
-.artworkuploader_UploadPreviewError_2v0gp {
-  color: #943636;
-  font-size: 12px;
-  font-weight: bold;
-}
-.artworkuploader_UploadPreviewWarning_3AsII {
-  color: #ffba70;
-  font-size: 12px;
-}
-.artworkuploader_UploadPreview_3pASZ {
-  width: 300px;
-  background-color: gray;
-  border-radius: 4px;
-  padding: 8px;
-  box-shadow: 0px 0px 10px #000;
-  margin: 8px;
-  position: relative;
-}
-.artworkuploader_UploadPreview_3pASZ > div {
-  margin-bottom: 8px;
-}
-.artworkuploader_PreviewImgCtn_3cUm3 {
-  height: 120px;
-  background: #000;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-bottom: 8px;
-}
-.artworkuploader_PreviewImgInfo_3Iv_t {
-  padding: 1px;
-  float: left;
-  margin-bottom: 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0);
-}
-.artworkuploader_PreviewImgInfo_3Iv_t:hover {
-  background-color: #000;
-  border: 1px solid #fff;
 }
 .cloudlocalizedartdisplay_ArtPreview_2V4yU {
   width: 100%;

@@ -1883,6 +1883,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	position: relative;
 	float: none;
 	margin: 2px;
+	overflow: hidden;
 }
 
 .workshop_showcase_multiitem img.workshop_showcase_item_image {
@@ -2148,6 +2149,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 .screenshot_showcase_smallscreenshot {
 	float: none;
 	margin-bottom: 11px;
+	overflow: hidden;
 }
 
 .screenshot_showcase_smallscreenshot.screenshot_count {

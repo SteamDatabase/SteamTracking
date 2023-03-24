@@ -640,6 +640,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader {
   margin-top: 8px;
+  margin-bottom: 22px;
   font-size: 22px;
   font-weight: 700;
   text-transform: none;
@@ -654,6 +655,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+.pagedsettings_PagedSettingsDialog_PageListColumn_RTicB.pagedsettings_Hidden_1uk_4 {
+  display: none;
 }
 .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
@@ -756,6 +760,18 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .DesktopUI
   .pagedsettings_PageListSeparator_1UEEm.pagedsettings_Transparent_SeoUZ {
   background: rgba(0, 0, 0, 0);
+}
+.pagedsettings_HidePageListButton_3i4Ep {
+  position: absolute;
+  left: 24px;
+  top: 8px;
+  z-index: 5;
+  -webkit-app-region: no-drag;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pagedsettings_HidePageListButton_3i4Ep:hover {
+  color: #fff;
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_20uOg {
   from {
@@ -3044,6 +3060,7 @@ button.DialogButton::-moz-focus-inner {
   flex-direction: column;
   flex: 1;
   overflow: auto;
+  -webkit-app-region: no-drag;
 }
 .DialogBody a {
   color: #6dcff6;

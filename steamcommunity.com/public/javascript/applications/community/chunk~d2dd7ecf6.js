@@ -5042,60 +5042,62 @@
     },
     29839: (e, t, a) => {
       "use strict";
-      a.d(t, { x: () => s });
+      a.d(t, { x: () => c });
       var n = a(89526),
         i = a(31587),
-        l = a(32874),
-        o = a.n(l);
-      let r = 1;
-      function s(e) {
+        l = a(13806),
+        o = a(32874),
+        r = a.n(o);
+      let s = 1;
+      function c(e) {
         const {
             onDropFiles: t,
             renderDesciption: a,
-            elAdditonalButtons: l,
+            elAdditonalButtons: o,
           } = e,
-          [s] = (0, n.useState)(++r),
-          c = (0, n.useRef)(),
-          [d, m] = (0, n.useState)(!1),
-          u = (0, n.useRef)(0),
-          _ = (0, n.useCallback)((e) => {
+          [c] = (0, n.useState)(++s),
+          d = (0, n.useRef)(),
+          [m, u] = (0, n.useState)(!1),
+          _ = (0, n.useRef)(0),
+          p = (0, n.useCallback)((e) => {
             e.preventDefault(), e.stopPropagation();
           }, []),
-          p = (0, n.useCallback)(
+          g = (0, n.useCallback)(
             (e) => {
               let a = e.target.files;
               a && a.length > 0 && a[0] && t(a),
-                c.current && c.current.value && (c.current.value = null);
+                d.current && d.current.value && (d.current.value = null);
             },
             [t]
           );
         return n.createElement(
           "div",
           {
-            className: d
-              ? o().DragAndDropContainerDragging
-              : o().DragAndDropContainer,
-            onDrag: _,
-            onDragStart: _,
-            onDragEnd: _,
-            onDragOver: _,
+            className: (0, l.Z)(
+              m ? r().DragAndDropContainerDragging : r().DragAndDropContainer,
+              "DragAndDropContainer"
+            ),
+            onDrag: p,
+            onDragStart: p,
+            onDragEnd: p,
+            onDragOver: p,
             onDragEnter: (e) => {
               e.preventDefault(),
                 e.stopPropagation(),
-                (u.current += 1),
+                (_.current += 1),
                 ((e.dataTransfer.files && e.dataTransfer.files[0]) ||
                   (e.dataTransfer.types &&
                     "Files" === e.dataTransfer.types[0])) &&
-                  (d || m(!0));
+                  (m || u(!0));
             },
             onDragLeave: (e) => {
               e.preventDefault(),
                 e.stopPropagation(),
-                (u.current -= 1),
-                0 === u.current && d && m(!1);
+                (_.current -= 1),
+                0 === _.current && m && u(!1);
             },
             onDrop: (e) => {
-              e.preventDefault(), e.stopPropagation(), (u.current = 0), m(!1);
+              e.preventDefault(), e.stopPropagation(), (_.current = 0), u(!1);
               const a = e.dataTransfer.files;
               a && a.length > 0 && a[0] && t(a);
             },
@@ -5104,10 +5106,10 @@
           n.createElement("div", null, (0, i.Xx)("#ImagePicker_DragAndDrop")),
           n.createElement(
             "div",
-            { className: o().ImageUploadBar },
+            { className: r().ImageUploadBar },
             n.createElement(
               "label",
-              { htmlFor: "imagepickerfilechoice" + s },
+              { htmlFor: "imagepickerfilechoice" + c },
               n.createElement(
                 "span",
                 null,
@@ -5116,22 +5118,22 @@
               ),
               n.createElement(
                 "span",
-                { className: o().SelectImageButton },
+                { className: r().SelectImageButton },
                 (0, i.Xx)("#selectimage_select_file")
               )
             ),
             n.createElement("input", {
-              ref: c,
+              ref: d,
               style: { display: "none" },
-              id: "imagepickerfilechoice" + s,
+              id: "imagepickerfilechoice" + c,
               type: "file",
-              onSubmit: p,
-              onChange: p,
+              onSubmit: g,
+              onChange: g,
               multiple: !0,
               accept: "image/png, image/jpg, image/gif",
             })
           ),
-          l,
+          o,
           e.children
         );
       }

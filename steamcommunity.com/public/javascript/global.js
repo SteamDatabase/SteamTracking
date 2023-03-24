@@ -965,22 +965,22 @@ function EditContentDescriptors( publishedfileid, callback )
 		} );
 }
 
-function HandleRelatedContentDescriptors( $elem, bAnimate )
+function HandleRelatedContentDescriptors( $topContainer, $elem, bAnimate )
 {
 	var checked = $elem.prop( "checked" ) && !$elem.attr( "disabled" );
 	var descid = $elem.val();
-	var $container = $elem.closest( '[data-parentdescid' );
+	var $container = $elem.closest( '[data-parentdescid]' );
 	var parentDescID = $container.data( 'parentdescid' );
-	var childrenDescriptors = $J( '[data-parentdescid="' + descid + '"]' );
+	var childrenDescriptors = $topContainer.find( '[data-parentdescid="' + descid + '"]' );
 
 	if ( checked )
 	{
 		// check all ancestors
 		if ( parentDescID )
 		{
-			var $parentElem = $J( '#descriptor_' + parentDescID );
+			var $parentElem = $topContainer.find( '#descriptor_' + parentDescID );
 			$parentElem.prop( 'checked', true );
-			HandleRelatedContentDescriptors( $parentElem, bAnimate );
+			HandleRelatedContentDescriptors( $topContainer, $parentElem, bAnimate );
 		}
 	}
 	else
@@ -989,7 +989,7 @@ function HandleRelatedContentDescriptors( $elem, bAnimate )
 			var child = $J( this );
 			child.find( 'input[type="checkbox"]' ).each( function() {
 				$J( this ).prop( "checked", false );
-				HandleRelatedContentDescriptors( $J( this ), bAnimate );
+				HandleRelatedContentDescriptors( $topContainer, $J( this ), bAnimate );
 			} );
 		} );
 	}
@@ -1066,31 +1066,6 @@ function UGCAdultContentPreferencesMenu( elSource )
 		$El.append( $elViewWarning );
 	}
 
-	if ( $elSource.hasClass( "has_adult_content" ) )
-	{
-		var fnUnblur = function ()
-		{
-			$elSource.removeClass('has_adult_content');
-			g_UGCWithNoBlur[publishedFileID] = { 'timestamp' : Date.now() };
-			SaveUGCWithNoBlur();
-			return true;
-		};
-		var $elUnblur = $J( '<div/>' ).click( fnUnblur ).text( 'Remove blur for this content only' ).addClass( 'option' );
-		$El.append( $elUnblur );
-	}
-	else
-	{
-		var fnAddBlur = function ()
-		{
-			$elSource.addClass('has_adult_content');
-			delete g_UGCWithNoBlur[publishedFileID];
-			SaveUGCWithNoBlur();
-			return true;
-		};
-		var $elAddBlur = $J( '<div/>' ).click( fnAddBlur ).text( 'Blur this content' ).addClass( 'option' );
-		$El.append( $elAddBlur );
-	}
-
 	// preferences
 	{
 		var fnViewPreferences = function ()
@@ -1153,29 +1128,6 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 			e.append( $elMenu );
 		}
 
-		if ( !e.hasClass( "modalContentLink" ) )
-		{
-			var appid = e.data('appid');
-			e.on( 'click', function( e ) {
-				var $Link = $J( e.currentTarget );
-				var bLinkHasAdultContent = $Link.hasClass( 'has_adult_content' );
-				if ( !bLinkHasAdultContent )
-				{
-					return;
-				}
-
-				e.preventDefault();
-				e.stopPropagation();
-				ShowAdultContentWarningDialog( $Link, appid, publishedFileID, function() {
-					if ( bIsAnchor )
-					{
-						top.location.href = $Link[0].href;
-					}
-				} );
-				return false;
-			} );
-		}
-
 		// warning
 		if ( e.width() > 100 && !e.hasClass( 'ugc_show_warning_image' ) && !e.hasClass( 'dynamiclink_box' ) )
 		{
@@ -1196,7 +1148,7 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 				$elWarning.append( $J( '<div>', { 'class': 'ugc_warning_image' } ) );
 			}
 
-			$elWarning.append( $J( '<span>', { 'text': 'Content may not be appropriate for all audiences'} ) );
+			$elWarning.append( $J( '<span>', { 'text': 'Content may not be appropriate based on your preferences '} ) );
 
 			var $elOptions = $J( '<div></div>' );
 			var $elViewOption = $J( '<div></div>', {
@@ -1226,7 +1178,7 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 			} );
 			$elPreferencesOption.click( function ( event )	{
 				event.stopPropagation();
-				top.location.href = 'https://store.steampowered.com//account/preferences/#CommunityContentPreferences';
+				top.location.href = 'https://store.steampowered.com/account/preferences';
 				return false;
 			} );
 			$elOptions.append( $elPreferencesOption );

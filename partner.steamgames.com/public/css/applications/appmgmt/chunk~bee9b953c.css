@@ -286,6 +286,7 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   box-sizing: border-box;
   height: 28px;
   display: flex;
+  gap: 6px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -3017,6 +3018,15 @@ html.touch
     margin-bottom: 6px;
   }
 }
+@media screen and (max-width: 768px) {
+  .salepreviewwidgets_SaleItemBrowserRow_y9MSd
+    .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
+    .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk
+    .salepreviewwidgets_DeckCompatIcon_hup-v
+    svg {
+    height: 14px;
+  }
+}
 @media screen and (min-width: 768px) {
   html:not(.BasicUI)
     .salepreviewwidgets_SaleItemBrowserRow_y9MSd
@@ -4852,7 +4862,7 @@ html.responsive.touch
   color: #e1745b;
 }
 .adminshared_ValveOnlyBackground_TRbfz {
-  background-color: #461f28;
+  background: #461f28;
   border: 1px solid #761f28;
   padding: 4px;
 }
@@ -4901,6 +4911,13 @@ html.responsive.touch
   font-size: 14px;
   font-weight: 300;
   color: #dfe3e6;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r
+  .adminshared_SectionIntroText_2BLTK {
+  font-size: 20px;
+  margin-bottom: 6px;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
@@ -4960,6 +4977,18 @@ html.responsive.touch
   font-weight: 600;
   color: #fff;
   margin-top: 16px;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r
+  ol {
+  margin-top: 8px;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r
+  li {
+  margin-bottom: 6px;
 }
 .adminshared_ColumnCtn_1Mnmn .adminshared_RightCol_p8nGm {
   width: 40%;
@@ -5049,6 +5078,20 @@ html.responsive.touch
   .adminshared_SectionCtn_3la4r
   a.Link {
   color: #fff;
+}
+.adminshared_DefaultSectionCtn_2Cn7r {
+  position: relative;
+  background: linear-gradient(90deg, #2c2e35, #25272c, #2c2e35);
+  border-top: 1px solid #2c2e35;
+  padding: 24px;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #dfe3e6;
+}
+.adminshared_DefaultSectionCtn_2Cn7r.adminshared_ValveOnlyBackground_TRbfz {
+  border: 1px solid #761f28;
 }
 .adminshared_Indent_225jn {
   margin-left: 24px;

@@ -1801,9 +1801,7 @@
                     (e) => `${e.uploadTime}/${e.file.name}` === i
                   );
                 if (r)
-                  if (1 !== n.success)
-                    (r.status = "failed"), (r.message = n.message);
-                  else {
+                  if (n && 1 === n.success) {
                     r.status = "success";
                     const i = (0, m.C)(n.language, t, e);
                     this.m_fnUploadSuccessCallback(
@@ -1826,7 +1824,7 @@
                         return null;
                       })(n.file_type)
                     );
-                  }
+                  } else (r.status = "failed"), (r.message = n.message);
               }),
               a
             );
@@ -1861,7 +1859,8 @@
               });
             } catch (e) {
               const t = (0, o.l)(e);
-              console.log("CCloudImageUploader.UploadFile failed ", t, e);
+              console.log("CCloudImageUploader.UploadFile failed ", t, e),
+                (n = e.response);
             }
             return null == n ? void 0 : n.data;
           });

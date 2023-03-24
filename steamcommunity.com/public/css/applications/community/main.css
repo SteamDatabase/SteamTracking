@@ -102,8 +102,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   font-size: 12px;
   text-transform: uppercase;
 }
-.contextmenu_ContextMenuSeparator_1F2Ec + .contextmenu_contextMenuItem_pFo3k {
-  border-top-color: dimgray;
+.contextmenu_ContextMenuSeparator_1F2Ec.contextmenu_ContextMenuSeparator_1F2Ec
+  + .contextmenu_contextMenuItem_pFo3k {
+  border-top: 1px solid dimgray;
 }
 .contextmenu_contextMenuItem_pFo3k.contextmenu_NoSeparation_3twt2 {
   border-top-color: rgba(0, 0, 0, 0);
@@ -201,9 +202,6 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   display: flex;
   align-items: center;
   flex-direction: row;
-}
-.DesktopUI
-  .contextmenu_contextMenuItem_pFo3k:not(.contextmenu_AddSeparator_3yuoe) {
   border-top: none;
   border-bottom: none;
 }
@@ -599,6 +597,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_1I3Ni .DialogHeader {
   margin-top: 8px;
+  margin-bottom: 22px;
   font-size: 22px;
   font-weight: 700;
   text-transform: none;
@@ -613,6 +612,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+.pagedsettings_PagedSettingsDialog_PageListColumn_RTicB.pagedsettings_Hidden_1uk_4 {
+  display: none;
 }
 .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
@@ -715,6 +717,18 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .DesktopUI
   .pagedsettings_PageListSeparator_1UEEm.pagedsettings_Transparent_SeoUZ {
   background: rgba(0, 0, 0, 0);
+}
+.pagedsettings_HidePageListButton_3i4Ep {
+  position: absolute;
+  left: 24px;
+  top: 8px;
+  z-index: 5;
+  -webkit-app-region: no-drag;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pagedsettings_HidePageListButton_3i4Ep:hover {
+  color: #fff;
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_20uOg {
   from {
@@ -2942,6 +2956,7 @@ button.DialogButton::-moz-focus-inner {
   flex-direction: column;
   flex: 1;
   overflow: auto;
+  -webkit-app-region: no-drag;
 }
 .DialogBody a {
   color: #6dcff6;
@@ -3184,7 +3199,6 @@ div.ModalPosition_TopBar {
   letter-spacing: unset;
   margin-bottom: 4px;
   line-height: 28px;
-  text-transform: none;
 }
 .DialogSubHeader {
   font-weight: 300;
@@ -3240,6 +3254,9 @@ div.ModalPosition_TopBar {
 }
 .DialogBodyText p a:hover {
   color: #fff;
+}
+.DesktopUI .DialogBodyText {
+  line-height: 22px;
 }
 .DialogLabel {
   cursor: default;
@@ -4446,8 +4463,8 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area-icon .SVGIcon_X_Line,
 .friendsui-container .title-area-icon .SVGIcon_Restore {
   margin: 0px;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
 }
 .DesktopUI .title-area-icon:hover,
 .friendsui-container .title-area-icon:hover {
@@ -4456,5 +4473,5 @@ body.in_global_drag .title-area {
 }
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
-  background: red;
+  background: #e22a27;
 }

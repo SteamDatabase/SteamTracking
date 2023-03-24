@@ -427,27 +427,7 @@ $J( function($) {
 		if ( typeof bSizeToFit == 'undefined' )
 			bSizeToFit = true;
 
-		var bLinkHasAdultContent = $Link.hasClass( 'has_adult_content' );
-		if ( bLinkHasAdultContent )
-		{
-			var appid = $Link.data( 'appid' );
-			if ( !Number.isInteger(appid) )
-			{
-				appid = 0;
-			}
-
-			var publishedfileid = $Link.data( 'publishedfileid' );
-
-			var callbackFunc = function() {
-				ShowModalContent( strModalURL, strTitle, strURL, bSizeToFit );
-			};
-
-			ShowAdultContentWarningDialog( $Link, appid, publishedfileid, callbackFunc );
-		}
-		else
-		{
-			ShowModalContent( strModalURL, strTitle, strURL, bSizeToFit );
-		}
+		ShowModalContent( strModalURL, strTitle, strURL, bSizeToFit );
 
 	});
 });

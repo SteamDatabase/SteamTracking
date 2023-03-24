@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7932866";
+var CLSTAMP = "7945021";
 (() => {
   "use strict";
   function e(e) {
@@ -71,7 +71,6 @@ var CLSTAMP = "7932866";
       IN_STEAMUI: !1,
       IN_GAMEPADUI: !1,
       IN_STEAMUI_SHARED_CONTEXT: !1,
-      ONE_STEAMUI_SHARED_CONTEXT: !1,
       DECK_DISPLAY_MODE: !1,
       ON_DECK: !1,
       ON_STEAMOS: !1,
@@ -160,12 +159,12 @@ var CLSTAMP = "7932866";
       o.is_support &&
         (function () {
           let n = null;
-          t() && (n = e(S));
+          t() && (n = e(u));
           return Boolean(n && 1 === Number.parseInt(n));
         })() &&
         (o.is_support = !1));
-    const u = E("broadcast", r);
-    u && (Object.assign(i, u), (l.broadcastConfig = !0));
+    const S = E("broadcast", r);
+    S && (Object.assign(i, S), (l.broadcastConfig = !0));
     const p = E("community", r);
     p && (Object.assign(a, p), (l.communityConfig = !0));
     const d = E("event", r);
@@ -197,8 +196,8 @@ var CLSTAMP = "7932866";
       }
     else n && console.error("Missing config element #", t);
   }
-  const S = "presentation_mode";
-  var u, p, d, k, C, g, I, A, y, R, h, M, T, P;
+  const u = "presentation_mode";
+  var S, p, d, k, C, g, I, A, y, h, R, M, T, P;
   !(function (e) {
     (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
       "k_EConnectivityTestResult_Unknown"),
@@ -214,7 +213,7 @@ var CLSTAMP = "7932866";
         "k_EConnectivityTestResult_WifiDisabled"),
       (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
         "k_EConnectivityTestResult_NoLAN");
-  })(u || (u = {})),
+  })(S || (S = {})),
     (function (e) {
       (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
         "k_ENetFakeLocalSystemState_Normal"),
@@ -322,7 +321,7 @@ var CLSTAMP = "7932866";
           "k_ECommunityProfileItemProperty_MovieWebMSmall"),
         (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
           "k_ECommunityProfileItemProperty_MovieMP4Small");
-    })(R || (R = {})),
+    })(h || (h = {})),
     (function (e) {
       (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
         "k_ERaiseGameWindowResult_NotRunning"),
@@ -330,7 +329,7 @@ var CLSTAMP = "7932866";
           "k_ERaiseGameWindowResult_Success"),
         (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
           "k_ERaiseGameWindowResult_Failure");
-    })(h || (h = {})),
+    })(R || (R = {})),
     (function (e) {
       (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
         (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),

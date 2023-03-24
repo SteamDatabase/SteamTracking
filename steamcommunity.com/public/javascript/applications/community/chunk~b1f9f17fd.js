@@ -33772,21 +33772,22 @@
       }
       function fn(e) {
         const t = s.wk.GetEditModel(),
-          [a, n] = (0, ne.SZ)(() => [
+          [a, n, i] = (0, ne.SZ)(() => [
             t.GetEventModel().jsondata.sale_vanity_id,
             t.GetEventModel().jsondata
               .sale_vanity_id_valve_approved_for_sale_subpath,
+            t.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub,
           ]),
-          i = (0, N.iG)(t.GetClanAccountID());
-        let r = null;
+          r = (0, N.iG)(t.GetClanAccountID());
+        let o = null;
         return (
           a && !n
-            ? (r = i
-                ? i.GetCreatorHomeURL("publisher") + "sale/" + a
+            ? (o = r
+                ? r.GetCreatorHomeURL("publisher") + "sale/" + a
                 : `${
                     S.De.STORE_BASE_URL
                   }curator/${t.GetClanAccountID()}/sale/${a}`)
-            : a && n && (r = S.De.STORE_BASE_URL + "sale/" + a),
+            : a && n && (o = S.De.STORE_BASE_URL + "sale/" + a),
           d.createElement(
             d.Fragment,
             null,
@@ -33796,8 +33797,7 @@
               tooltip: (0, E.Xx)("#Sale_VanityID_ttip"),
               onChange: (e) => t.SetSaleVanityID(e.target.value),
               value: a,
-              disabled:
-                t.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub,
+              disabled: i,
             }),
             t.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub &&
               d.createElement(
@@ -33805,7 +33805,7 @@
                 { className: "LongURL Note" },
                 "The vanity URL for this sale page is automatically set based on its content hub configuration. Adjust the settings under Content Hub Settings to change this behavior."
               ),
-            Boolean(r)
+            Boolean(o)
               ? d.createElement(
                   "div",
                   null,
@@ -33818,11 +33818,11 @@
                   d.createElement(
                     "a",
                     {
-                      href: r,
+                      href: o,
                       className: "LongURL",
                       target: S.De.IN_CLIENT ? "" : "_blank",
                     },
-                    r
+                    o
                   )
                 )
               : d.createElement(

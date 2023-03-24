@@ -25,6 +25,7 @@
         QuoteAuthor: "bbcodes_QuoteAuthor_2CMyS",
         PullQuote: "bbcodes_PullQuote_3DRIe",
         Code: "bbcodes_Code_1Aels",
+        CodeBlock: "bbcodes_CodeBlock_1paKw",
         List: "bbcodes_List_tfM5V",
         OrderedList: "bbcodes_OrderedList_3Ve1E",
         ListItem: "bbcodes_ListItem_3DlO0",
@@ -1027,6 +1028,19 @@
               Constructor: function (e) {
                 return n.createElement(
                   "div",
+                  { className: C().CodeBlock },
+                  e.children
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "c",
+            {
+              Constructor: function (e) {
+                return n.createElement(
+                  "code",
                   { className: C().Code },
                   e.children
                 );
@@ -3550,6 +3564,12 @@
         bestofyear_banner_mobile: { width: 500, height: 160 },
         localized_marketing_message: { width: 570, height: 600 },
         localized_optin_banner: { width: 1e3, height: 150 },
+        spotlight_art: { width: 306, height: 350 },
+        marketingmessage_art: { width: 570, height: 600 },
+        takeover_art: { width: 1850, height: 450 },
+        takeover_mobile_art: { width: 500, height: 350 },
+        takeunder_art: { width: 940, height: 150 },
+        takeunder_mobile_art: { width: 500, height: 160 },
       };
       function n(e, t, r) {
         const n = i[r];
@@ -9753,6 +9773,7 @@
       var i = r(45878),
         n = r(19320),
         a = r(67737);
+      r(82633);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -42533,17 +42554,36 @@
           return null;
         const l = n.GetBestPurchaseOption().discount_pct || o,
           c = l && o && l > o && o;
-        n.GetBestPurchaseOption().packageid;
+        return s.createElement(I, {
+          bSingleLineMode: i,
+          nBaseDiscountPercentage: c,
+          nDiscountPercentage: l,
+          bIsPrePurchase: n.BIsPrePurchase(),
+          strBestPurchaseOriginalPriceFormatted:
+            n.GetBestPurchaseOriginalPriceFormatted(),
+          strBestPurchasePriceFormatted: n.GetBestPurchasePriceFormatted(),
+        });
+      }
+      function I(e) {
+        const {
+          bSingleLineMode: t,
+          nDiscountPercentage: r,
+          bIsPrePurchase: i,
+          nBaseDiscountPercentage: n,
+          strBestPurchaseOriginalPriceFormatted: a,
+          strBestPurchasePriceFormatted: o,
+        } = e;
         return s.createElement(
           "div",
           {
-            className: (0, B.Z)(
-              a,
-              l && f().Discounted,
-              "StoreSalePriceWidgetContainer"
-            ),
+            className: (0, B.Z)({
+              [f().StoreSalePriceWidgetContainer]: !0,
+              [f().SingleLineMode]: t,
+              StoreSalePriceWidgetContainer: !0,
+              [f().Discounted]: Boolean(r),
+            }),
           },
-          Boolean(n.BIsPrePurchase()) &&
+          Boolean(i) &&
             s.createElement(
               "div",
               {
@@ -42554,47 +42594,44 @@
               },
               (0, y.Xx)("#EventDisplay_CallToAction_Prepurchase_Short")
             ),
-          Boolean(c) &&
+          Boolean(n) &&
             s.createElement(
               "span",
               { className: (0, B.Z)(f().BaseDiscount) },
-              `-${c}%`
+              `-${n}%`
             ),
-          Boolean(l) &&
+          Boolean(r) &&
             s.createElement(
               "div",
               { className: f().StoreSaleDiscountBox },
-              `-${l}%`
+              `-${r}%`
             ),
-          l && n.GetBestPurchaseOriginalPriceFormatted()
+          Boolean(r && a)
             ? s.createElement(
                 "div",
                 { className: (0, B.Z)(f().StoreSaleDiscountedPriceCtn) },
                 s.createElement(
                   "div",
                   {
-                    className: i
-                      ? f().SingleLineOriginalPrice
-                      : f().StoreOriginalPrice,
+                    className: (0, B.Z)({
+                      [f().SingleLineOriginalPrice]: t,
+                      [f().StoreOriginalPrice]: !t,
+                    }),
                   },
-                  n.GetBestPurchaseOriginalPriceFormatted()
+                  a
                 ),
                 s.createElement(
                   "div",
                   {
-                    className: (0, B.Z)(
-                      f().StoreSalePriceBox,
-                      i && f().SingleLineMode
-                    ),
+                    className: (0, B.Z)({
+                      [f().StoreSalePriceBox]: !0,
+                      [f().SingleLineMode]: t,
+                    }),
                   },
-                  n.GetBestPurchasePriceFormatted()
+                  o
                 )
               )
-            : s.createElement(
-                "div",
-                { className: f().StoreSalePriceBox },
-                n.GetBestPurchasePriceFormatted()
-              )
+            : s.createElement("div", { className: f().StoreSalePriceBox }, o)
         );
       }
     },

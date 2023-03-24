@@ -954,6 +954,8 @@ ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
+${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
+${PARTNER_BASE_URL}promotion/assetportal/request/${}
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminadddailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminremovedailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminupdatedailydeal
@@ -1311,6 +1313,7 @@ ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}wishlist
+${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
@@ -1607,6 +1610,7 @@ ${icon_drag_url}
 ${image_url}_${}
 ${imgURL}${value}
 ${imgUrl}
+${input_artwork_url}${}
 ${internal_wiki_url}${}
 ${last_revealed_footer_img_url}${_ ? _ : _}
 ${linkURL}${id}${ownerAppend}/?${linkAppend}
@@ -2400,6 +2404,7 @@ https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/7614223/fe3aa
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/${appid}/${}
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/646570/85b510e2e164070a59947395ff91d250c010a5c9.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg
+https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets.zip
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/SalePageTemplates.zip
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_3.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_4.jpg

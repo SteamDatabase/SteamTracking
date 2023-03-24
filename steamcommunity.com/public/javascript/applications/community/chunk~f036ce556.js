@@ -2846,14 +2846,16 @@
         const p = f.password.eStatus;
         switch (p) {
           case 13:
-            return n.createElement(ze, null);
+            return e.renderLoading
+              ? n.createElement(n.Fragment, null, e.renderLoading())
+              : n.createElement(ze, null);
           case 5:
           case 11:
           case 3:
           case 10:
-            const e = 5 === p || 11 === p;
+            const t = 5 === p || 11 === p;
             return n.createElement(Oe, {
-              type: e ? "mobile" : "email",
+              type: t ? "mobile" : "email",
               onSubmitCode: f.password.addCode,
               status: p,
               associatedLabel: f.password.strConfirmationAssociatedMessage,
@@ -2862,9 +2864,9 @@
             });
           case 6:
           case 4:
-            const t = 6 === p;
+            const r = 6 === p;
             return n.createElement(Pe, {
-              type: t ? "mobile" : "email",
+              type: r ? "mobile" : "email",
               accountName: f.password.strAccountName,
               onUseCodeOverride: f.password.useCodeOverride,
             });

@@ -1746,14 +1746,16 @@
         const f = h.password.eStatus;
         switch (f) {
           case 13:
-            return n.createElement(ze, null);
+            return e.renderLoading
+              ? n.createElement(n.Fragment, null, e.renderLoading())
+              : n.createElement(ze, null);
           case 5:
           case 11:
           case 3:
           case 10:
-            const e = 5 === f || 11 === f;
+            const t = 5 === f || 11 === f;
             return n.createElement(Ne, {
-              type: e ? "mobile" : "email",
+              type: t ? "mobile" : "email",
               onSubmitCode: h.password.addCode,
               status: f,
               associatedLabel: h.password.strConfirmationAssociatedMessage,
@@ -1762,9 +1764,9 @@
             });
           case 6:
           case 4:
-            const t = 6 === f;
+            const r = 6 === f;
             return n.createElement(Ge, {
-              type: t ? "mobile" : "email",
+              type: r ? "mobile" : "email",
               accountName: h.password.strAccountName,
               onUseCodeOverride: h.password.useCodeOverride,
             });

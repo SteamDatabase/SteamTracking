@@ -26,6 +26,7 @@
         QuoteAuthor: "bbcodes_QuoteAuthor_2CMyS",
         PullQuote: "bbcodes_PullQuote_3DRIe",
         Code: "bbcodes_Code_1Aels",
+        CodeBlock: "bbcodes_CodeBlock_1paKw",
         List: "bbcodes_List_tfM5V",
         OrderedList: "bbcodes_OrderedList_3Ve1E",
         ListItem: "bbcodes_ListItem_3DlO0",
@@ -1085,6 +1086,19 @@
             Constructor: function (e) {
               return n.createElement(
                 "div",
+                { className: w().CodeBlock },
+                e.children
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
+          "c",
+          {
+            Constructor: function (e) {
+              return n.createElement(
+                "code",
                 { className: w().Code },
                 e.children
               );
@@ -3359,6 +3373,12 @@
         bestofyear_banner_mobile: { width: 500, height: 160 },
         localized_marketing_message: { width: 570, height: 600 },
         localized_optin_banner: { width: 1e3, height: 150 },
+        spotlight_art: { width: 306, height: 350 },
+        marketingmessage_art: { width: 570, height: 600 },
+        takeover_art: { width: 1850, height: 450 },
+        takeover_mobile_art: { width: 500, height: 350 },
+        takeunder_art: { width: 940, height: 150 },
+        takeunder_mobile_art: { width: 500, height: 160 },
       };
       function n(e, t, r) {
         const n = i[r];
@@ -10289,6 +10309,7 @@
       var i = r(45878),
         n = r(19320),
         a = r(67737);
+      r(82633);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {

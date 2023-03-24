@@ -2568,17 +2568,19 @@ p.bbcodes_Paragraph_3zjkn {
   line-height: 28px;
   padding: 0px 0px 10px 20px;
 }
-.bbcodes_Code_1Aels {
-  display: block;
-  box-sizing: border-box;
-  border: 1px solid #535354;
-  border-radius: 3px;
-  padding: 12px;
-  margin: 8px;
+.bbcodes_Code_1Aels,
+.bbcodes_CodeBlock_1paKw {
   font-size: 11px;
   font-family: Consolas, monospace;
   white-space: pre;
   white-space: pre-wrap;
+}
+.bbcodes_CodeBlock_1paKw {
+  display: block;
+  border: 1px solid #535354;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
   overflow-x: auto;
 }
 .bbcodes_List_tfM5V {

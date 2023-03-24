@@ -380,7 +380,7 @@
           for (let t of e) {
             const e = new o.Am(t.appid());
             e.DeserializeFromAppOverview(t),
-              this.m_mapAppInfo.set(t.appid(), e);
+              e.is_initialized && this.m_mapAppInfo.set(t.appid(), e);
           }
         }
         EnsureAppInfoForAppIDs(e) {
