@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7944169";
+var CLSTAMP = "7947568";
 (() => {
   "use strict";
   var e,
@@ -22,14 +22,14 @@ var CLSTAMP = "7944169";
       if (!n) {
         var o = 1 / 0;
         for (f = 0; f < e.length; f++) {
-          for (var [n, r, s] = e[f], t = !0, d = 0; d < n.length; d++)
-            (!1 & s || o >= s) && Object.keys(c.O).every((e) => c.O[e](n[d]))
-              ? n.splice(d--, 1)
+          for (var [n, r, s] = e[f], t = !0, i = 0; i < n.length; i++)
+            (!1 & s || o >= s) && Object.keys(c.O).every((e) => c.O[e](n[i]))
+              ? n.splice(i--, 1)
               : ((t = !1), s < o && (o = s));
           if (t) {
             e.splice(f--, 1);
-            var i = r();
-            void 0 !== i && (a = i);
+            var d = r();
+            void 0 !== d && (a = d);
           }
         }
         return a;
@@ -146,7 +146,7 @@ var CLSTAMP = "7944169";
         2767: "96c61d2ec9b1ea1d1390",
         2844: "a959b4fbabc86a2424b4",
         2848: "171db2991f4addcd2f6e",
-        2942: "68e92c6344324566ff68",
+        2942: "6d837262bfa091c6e3f6",
         3112: "03b22c91d62cb42bf1f2",
         3185: "cdd590c9ba1006c61e18",
         3252: "4402c754b7c6652a2f79",
@@ -158,7 +158,7 @@ var CLSTAMP = "7944169";
         4108: "9ff6b5d7ff361110be73",
         4189: "413363a438df80eb9c57",
         4297: "0052351ae0082f67b6d8",
-        4722: "1903fe4f27088e89fea4",
+        4722: "da3f71f9423a1df79bd6",
         4823: "884aa9f7b069546ccd4b",
         4860: "135e786e221b040effa3",
         4964: "a0e42a8487b9bab980c1",
@@ -169,7 +169,7 @@ var CLSTAMP = "7944169";
         5933: "b08700009dc3f8d2d0b3",
         5948: "53a0fd556033dae56687",
         6007: "8bad76e735e467898598",
-        6087: "bc20fcdf8b76a96b3e9c",
+        6087: "2c48eba4a82dd85fb6a4",
         6492: "10cf54ecf934b0f2af0c",
         6542: "659d5b50d7734017f56b",
         6815: "8722d50574baac161a80",
@@ -206,14 +206,14 @@ var CLSTAMP = "7944169";
     (c.l = (e, a, n, o) => {
       if (r[e]) r[e].push(a);
       else {
-        var t, d;
+        var t, i;
         if (void 0 !== n)
           for (
-            var i = document.getElementsByTagName("script"), f = 0;
-            f < i.length;
+            var d = document.getElementsByTagName("script"), f = 0;
+            f < d.length;
             f++
           ) {
-            var b = i[f];
+            var b = d[f];
             if (
               b.getAttribute("src") == e ||
               b.getAttribute("data-webpack") == s + n
@@ -223,7 +223,7 @@ var CLSTAMP = "7944169";
             }
           }
         t ||
-          ((d = !0),
+          ((i = !0),
           ((t = document.createElement("script")).charset = "utf-8"),
           (t.timeout = 120),
           c.nc && t.setAttribute("nonce", c.nc),
@@ -247,7 +247,7 @@ var CLSTAMP = "7944169";
           );
         (t.onerror = h.bind(null, t.onerror)),
           (t.onload = h.bind(null, t.onload)),
-          d && document.head.appendChild(t);
+          i && document.head.appendChild(t);
       }
     }),
     (c.r = (e) => {
@@ -309,14 +309,14 @@ var CLSTAMP = "7944169";
       var a = (a, n) => {
           var r,
             s,
-            [o, t, d] = n,
-            i = 0;
+            [o, t, i] = n,
+            d = 0;
           if (o.some((a) => 0 !== e[a])) {
             for (r in t) c.o(t, r) && (c.m[r] = t[r]);
-            if (d) var f = d(c);
+            if (i) var f = i(c);
           }
-          for (a && a(n); i < o.length; i++)
-            (s = o[i]), c.o(e, s) && e[s] && e[s][0](), (e[s] = 0);
+          for (a && a(n); d < o.length; d++)
+            (s = o[d]), c.o(e, s) && e[s] && e[s][0](), (e[s] = 0);
           return c.O(f);
         },
         n = (self.webpackChunkcsgo_react = self.webpackChunkcsgo_react || []);
