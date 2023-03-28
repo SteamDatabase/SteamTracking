@@ -12,7 +12,7 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-D#
+Y#
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -111,7 +111,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-
+(
 )
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
 7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
@@ -2235,14 +2235,13 @@ Seconds
 @
 Ic
 0
+0
 
 A;E
 0
 
 
-0
 PPj
-(
 `
 `
 !
@@ -2276,9 +2275,7 @@ P
 ;
 @
 @
-n
 0
-I
 @
 @
 @

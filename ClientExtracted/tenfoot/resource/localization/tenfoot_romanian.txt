@@ -7677,7 +7677,7 @@ Dacă ai reconfigurat tastele în joc, s-ar putea să necesite să resetezi acel
 	"ControllerBinding_SoftPress_RepeatRate" "Frecvență de repetiție"
 	"ControllerBinding_SoftPress_RepeatRate_Description" "Viteza modului Turbo va fi setată de către acest glisor."
 
-	"ControllerBinding_ModeDropDown_FlickStick" "Tipul de input – Rotire rapidă cu stickul"
+	"ControllerBinding_ModeDropDown_FlickStick" "Tipul de input – Smucire de stick"
 	"ControllerBinding_ModeDropDown_FlickStick_Description" "Creată pe baza schemei de control dezvoltată de youtuberul Jibb Smart, această opțiune preia direcția inițială a joystickului pentru a roti rapid camera în funcție de poziția joystickului; deplasarea în sus imobilizează camera, iar deplasarea în jos determină o rotire de 180 de grade în joc. După această fază inițială, orice rotire suplimentară a joystickului va deplasa camera în mod normal. Această configurare a fost concepută spre a fi utilizată împreună cu giroscopul, pentru o mișcare verticală similară cu cea a mouse-ului."
 	"ControllerBinding_FlickStickClick" "Asociere clic"
 	"ControllerBinding_FlickStickClick_Description"	"Acțiunea aceasta va fi realizată atunci când faci clic pe joystick."

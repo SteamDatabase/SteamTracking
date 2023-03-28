@@ -246,7 +246,7 @@
 "Overlay_AsyncNotificatoinsRequestedDialog_Desc" "Това заглавие поддържа асинхронно игрално преживяване, позволявайки Ви да го затваряте между ходовете. Бихте ли искали да получавате известия в Steam клиента, когато е Ваш ред да играете?"
 
 "Overlay_Broadcast_Panel_Title" "Предаване"
-"Overlay_Broadcast_Panel_Text" "В момента това предаване е следвано от %numviewers% зрители"
+"Overlay_Broadcast_Panel_Text" "Понастоящем това предаване е следвано от %numviewers% зрители"
 "Overlay_Broadcast_ShowBroadcast" "Гледане"
 "Overlay_Broadcast_ShowChat" "Отваряне на чат"
 "Overlay_Broadcast_ShowSettings" "Настройки"

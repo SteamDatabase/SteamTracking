@@ -14,6 +14,7 @@ enum EStoreItemType {
 	k_EStoreItemType_Mtx = 3;
 	k_EStoreItemType_Tag = 4;
 	k_EStoreItemType_Creator = 5;
+	k_EStoreItemType_HubCategory = 6;
 }
 
 enum EStoreAppType {
@@ -62,6 +63,7 @@ message StoreItemID {
 	optional uint32 bundleid = 3;
 	optional uint32 tagid = 4;
 	optional uint32 creatorid = 5;
+	optional uint32 hubcategoryid = 6;
 }
 
 message StoreBrowseContext {
@@ -216,6 +218,7 @@ message StoreItem {
 		optional bool user_can_purchase_as_gift = 31;
 		optional bool is_commercial_license = 40 [(description) = "This is a commercial license"];
 		optional bool should_suppress_discount_pct = 41 [(description) = "Don't show the discount percentage on a store capsule for this item."];
+		optional bool hide_discount_pct_for_compliance = 42 [default = false, (description) = "Don't show the discount percent because there was a discount in the last 30 days."];
 	}
 
 	message Screenshots {
@@ -296,6 +299,7 @@ message StoreItem {
 	optional .StoreItem.FreeWeekend free_weekend = 54 [(description) = "Information about a free weekend offer."];
 	optional bool unlisted = 55 [(description) = "If true, item is only accessible on store via a direct link"];
 	optional uint32 game_count = 56 [(description) = "For creators and tags, how many games belong to them"];
+	optional string internal_name = 57 [(description) = " For hub categories, the internal name (handle) of the category"];
 }
 
 message CStoreBrowse_GetItems_Response {

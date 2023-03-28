@@ -410,6 +410,11 @@
         "size": 8
     },
     {
+        "id": 2803,
+        "name": "Unknown",
+        "size": 32
+    },
+    {
         "id": 3405,
         "name": "15ItemInstalled_t",
         "size": 12
@@ -1107,6 +1112,11 @@
     {
         "id": 1020104,
         "name": "OverlaySettingsChanged_t",
+        "size": 1
+    },
+    {
+        "id": 1020105,
+        "name": "Unknown",
         "size": 1
     },
     {

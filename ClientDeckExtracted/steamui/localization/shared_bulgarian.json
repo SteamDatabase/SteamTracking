@@ -2431,6 +2431,7 @@
     "ServerBrowser_IPAddress": "IP адрес",
     "ServerBrowser_Game": "Игра",
     "ServerBrowser_Players": "Играчи",
+    "ServerBrowser_ServerName": "Име на сървър",
     "ServerBrowser_Map": "Карта",
     "ServerBrowser_Latency": "Латентност",
     "ServerBrowser_Internet": "Интернет",

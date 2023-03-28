@@ -240,7 +240,7 @@
     "Chat_StillInVoiceDialog_Desc1": "관련 채팅창을 닫아도 음성 채팅은 계속됩니다.",
     "Chat_StillInVoiceDialog_Desc2": "음성 채팅을 종료하려면 친구 목록이나 음성 채널에서 '음성 채팅 나가기' 버튼을 사용하세요.",
     "Chat_StillInVoiceDialog_LeaveNow": "지금 음성 채팅 나가기",
-    "Chat_StillInVoiceDialog_KeepChatting": "계속하기",
+    "Chat_StillInVoiceDialog_KeepChatting": "계속",
     "Chat_CloseTooltip": "이 탭 닫기",
     "Chat_Tooltip_FindGamesToPlay_UserCountRestriction_ChatGroup": "채팅에서 해당 기능을 사용하기 위해서는 %1$s~%2$s명의 인원이 있어야 합니다.",
     "Chat_Tooltip_FindGamesToPlay_UserCountRestriction_Channel": "채널에서 해당 기능을 사용하기 위해서는 %1$s~%2$s명의 인원이 있어야 합니다.",

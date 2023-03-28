@@ -618,7 +618,7 @@ message CPublishedFile_GetContentDescriptors_Request {
 
 message CPublishedFile_GetContentDescriptors_Response {
 	message ContentDescriptor {
-		optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_FrequentNudityOrSexualContent];
+		optional .EContentDescriptorID descriptorid = 1 [default = k_EContentDescriptor_NudityOrSexualContent];
 		optional uint32 accountid = 2;
 		optional uint32 timestamp = 3;
 		optional bool moderator_set = 4;

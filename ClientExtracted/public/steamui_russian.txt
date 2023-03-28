@@ -423,6 +423,7 @@
 "Steam_Status_OfflineMode"					"Автономный режим"
 "Steam_Status_NoConnection"					"Нет соединения"
 "Steam_Status_OneItemDownloading" 	"Загружается"
+"Steam_Status_OneItemTransferring" 	"Приём "
 "Steam_Status_DownloadsPaused" 	"Загрузки приостановлены"
 "Steam_Status_OneItemPaused" 				"В очереди: 1"
 "Steam_Status_OneItemComplete"			"Загружено: 1 "
@@ -431,7 +432,7 @@
 "Steam_Status_ItemsComplete"	"Загружено: %numcompl% из %numtotal%"
 "Steam_Status_DownloadsTitle"		"Загрузки"
 "Steam_Status_GoToDownloadsPage"		"Управление"
-"Steam_Status_PeerContentServer"		"Передача"
+"Steam_Status_PeerContentServer"		"Передача по сети"
 
 "Steam_Time_ShowMostRecent"			"Показать последнее"
 "Steam_Time_5Minutes"				"5 минут"
@@ -4102,7 +4103,7 @@
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Основную папку библиотеки Steam невозможно удалить."
 "SteamUI_ContentMgr_RemoveFailedUsedFolder" "%game% использует эту папку библиотеки Steam, поэтому её нельзя удалить."
 "SteamUI_ContentMgr_FlushDownloadConfig" "Очистить кэш загрузки"
-"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Очистив кэш загрузки, вы можете решить проблемы при загрузке или запуске приложений"
+"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Очистив кэш, вы можете решить проблемы при загрузке или запуске приложений"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Это не повлияет на установленные или сохраненные игры"
 
 "SteamUI_ContentMgr_Repair_Title" "Восстановление библиотеки Steam"
@@ -4834,9 +4835,23 @@
 "SteamUI_RunningConflictingSoftware" "Обнаружены конфликтующие программы"
 "SteamUI_RunningIncompatibleTcpService" "В процессе Steam обнаружена несовместимая версия\nфайла %incompatdll% (связанного с %incompatname%).\n\nРекомендуем обновить или удалить эту программу,\nесли при запущенном клиенте Steam или в играх\nпроисходят сбои или замедляется работа сети."
 
+"Steam_XboxDriverInstall_Title"		"Установка драйвера Xbox"
+"Steam_XboxDriverInstall_Success"	"Драйвер обновлён и начнёт работать после перезагрузки компьютера."
+"Steam_XboxDriverInstall_ServiceFailure"	"Не удалось обновить драйвер. Проверьте, запущен ли Steam от имени обычного пользователя, а также запущена и обновлена ли служба Steam."
+"Steam_XboxDriverInstall_Failure"	"Не удалось обновить драйвер. Ошибка: %error%"
+
 "Steam_DualSense_FirmwareUpdate_Title"	"Доступна новая прошивка контроллера"
 "Steam_DualSense_FirmwareUpdate_Text"	"Для устройства %product% доступно обновление прошивки. Нажмите на ссылку ниже, чтобы перейти на страницу обновления на сайте Sony:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Больше не показывать"
+
+"RescueDialog_Title" "Steamwebhelper не отвечает"
+"RescueDialog_Explanation" "steamwebhelper.exe (критический компонент Steam) не отвечает. Интерфейс Steam невозможно использовать. Узнайте больше <a href=\"about:blank\">здесь</a>."
+"RescueDialog_RadioHeader" "Давайте попробуем это исправить:"
+"RescueDialog_RestartSteam" "Перезапустить Steam"
+"RescueDialog_RestartSteam_NoGPU" "Перезапустить Steam с выключенным аппаратным ускорением"
+"RescueDialog_RestartSteam_NoSandbox" "Перезапустить Steam с выключенной «песочницей» для браузера"
+"RescueDialog_RestartSteamWebHelper" "Перезапустить steamwebhelper.exe"
+"RescueDialog_ExitSteam" "Выйти из Steam"
 
 "DownloadRegion_default"				 "Неизвестно"
 "DownloadRegion_us_chicago"			"США — Чикаго"

@@ -115,9 +115,7 @@
  FSGetVolumeInfo
  FSPathMakeRef
  FSRefMakePath
- GetAvailableRAM
  GetCPUInformation()
- GetCRunTimeVersion
  GetCrashHandlerFactory
  GetCurrentProcess
  GetFrontProcess

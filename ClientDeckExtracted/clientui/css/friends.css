@@ -653,11 +653,11 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .DialogBody {
-  /*border: 2px dotted #f005;*/
   display: flex;
   flex-direction: column;
   flex: 1;
   overflow: auto;
+  -webkit-app-region: no-drag;
 }
 
 .DialogBody a {
@@ -716,13 +716,6 @@ button.DialogButton::-moz-focus-inner {
 
 .ModalDialogPopup .FullModalOverlay .ModalPosition_Dismiss {
   display: block;
-}
-
-.ModalPosition_Dismiss {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  z-index: 1;
 }
 
 .DeckVerifiedModalDialogClient .ModalPosition_Content {
@@ -789,18 +782,48 @@ button.DialogButton::-moz-focus-inner {
   flex-direction: column;
 }
 
-.ModalPosition_Content
-  > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
+/* applies to the content of the modal, but we don't have a classname because it is user-supplied */
+.ModalPosition_Content > * {
   min-height: 0;
   min-width: 0;
-  flex-shrink: 1;
   flex-grow: 1;
+  flex-shrink: 1;
 }
 
-.PopupFullWindow
-  .ModalPosition_Content
-  > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
-  flex: 1;
+div.ModalPosition_Dismiss {
+  /* Override .ModalPosition_Content > div styles with defaults */
+  min-width: initial;
+  min-height: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 1;
+}
+
+div.ModalPosition_TopBar {
+  /* Override .ModalPosition_Content > div styles with defaults */
+  min-height: 1px;
+  min-width: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+  background: linear-gradient(to right, #00ccff, #3366ff);
+}
+
+.Destructive .ModalPosition_TopBar {
+  background: linear-gradient(to right, #c44848, #c44848);
+}
+
+.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
+  opacity: 0;
 }
 
 .DialogContent,
@@ -908,26 +931,6 @@ button.DialogButton::-moz-focus-inner {
   flex: 1;
 }
 
-.ModalPosition_TopBar {
-  min-height: 1px;
-  background: linear-gradient(to right, #00ccff, #3366ff);
-}
-
-.Destructive .ModalPosition_TopBar {
-  background: linear-gradient(to right, #c44848, #c44848);
-}
-
-.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
-  opacity: 0;
-}
-
 /* Needs to target only the ModalPosition provided to the popup window and avoid being applied
    to the additional, generic popups that can be placed inside the modal */
 .ModalDialogPopup .PopupFullWindow > .ModalPosition,
@@ -953,13 +956,13 @@ button.DialogButton::-moz-focus-inner {
 
 .DesktopUI .DialogHeader,
 .friendsui-container .DialogHeader {
+  /* stylelint-disable-line selector-class-pattern */
   /* we're trying a thicker, friendlier title that isn't shouting*/
   font-size: 22px;
   font-weight: 500;
   letter-spacing: unset;
   margin-bottom: 4px;
   line-height: 28px;
-  text-transform: none;
 }
 
 .DialogSubHeader {
@@ -995,6 +998,17 @@ button.DialogButton::-moz-focus-inner {
   flex-shrink: 0;
 }
 
+.DesktopUI .DialogFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.DesktopUI .DialogFooter button.DialogButton {
+  padding: 0 12px;
+  width: auto;
+}
+
 .DialogBodyText {
   color: #969696;
   font-size: 16px;
@@ -1015,6 +1029,10 @@ button.DialogButton::-moz-focus-inner {
 
 .DialogBodyText p a:hover {
   color: #ffffff;
+}
+
+.DesktopUI .DialogBodyText {
+  line-height: 22px;
 }
 
 .DialogLabel {
@@ -1592,6 +1610,10 @@ button.TextButton.gpfocus {
   justify-content: space-between;
 }
 
+.DesktopUI ._DialogColLayout {
+  justify-content: flex-end;
+}
+
 ._DialogColLayout > ._DialogLayout {
   flex: 1;
   box-sizing: border-box;
@@ -1602,15 +1624,27 @@ button.TextButton.gpfocus {
   min-width: 200px;
 }
 
+.DesktopUI .DialogTwoColLayout._DialogColLayout {
+  gap: 14px;
+}
+
 .DialogThreeColLayout > ._DialogLayout,
 .DialogTwoThirdColLayout > ._DialogLayout:nth-child(2n + 1) {
   max-width: calc(33.33% - 9px);
   min-width: 133px;
 }
 
+.DesktopUI .DialogThreeColLayout._DialogColLayout {
+  gap: 9px;
+}
+
 .DialogTwoThirdColLayout > ._DialogLayout {
   max-width: calc(66.66% - 18px);
   min-width: 266px;
+}
+
+.DesktopUI .DialogTwoThirdColLayout._DialogColLayout {
+  gap: 18px;
 }
 
 .DialogLayout_NoMinWidth > ._DialogLayout,
@@ -2451,7 +2485,7 @@ body.in_global_drag .title-area {
 /* stylelint-disable selector-class-pattern */
 .DesktopUI .title-area .title-bar-actions,
 .friendsui-container .title-area .title-bar-actions {
-  margin-right: 2px;
+  margin-right: 5px;
 }
 
 .DesktopUI .title-area-icon,
@@ -2474,8 +2508,8 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area-icon .SVGIcon_X_Line,
 .friendsui-container .title-area-icon .SVGIcon_Restore {
   margin: 0px;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
 }
 
 .DesktopUI .title-area-icon:hover,
@@ -2486,7 +2520,7 @@ body.in_global_drag .title-area {
 
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
-  background: red;
+  background: #e22a27;
 }
 
 /* stylelint-enable selector-class-pattern */
@@ -2750,4 +2784,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=ffd452934647f15c3ad1*/
+/*# sourceMappingURL=friends.css.map?contenthash=e75e2d1eeaffef1c7fca*/

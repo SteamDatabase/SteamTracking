@@ -1787,7 +1787,7 @@
 	"Library_Details_VRController_KBMouse"						"Клавиатура/Мышь"
 
 	"Library_Details_VRPlayAreaWarning_Title"					"ПРЕДУПРЕЖДЕНИЕ ИГРОВОГО ПРОСТРАНСТВА"
-	"Library_Details_VRPlayAreaWarning_Uncalibrated"			"Игровая зона не откалибрована. Пожалуйста, запустите подготовку комнаты."
+	"Library_Details_VRPlayAreaWarning_Uncalibrated"			"Игровая зона не откалибрована. Пожалуйста, настройте пространство."
 	"Library_Details_VRPlayAreaWarning_RoomScale"				"Эта игра требует настройки виртуальной реальности в пределах целой комнаты, а ваше игровое пространство настроено в настоящий момент на режим «Стоя»."
 	"Library_Details_VRPlayAreaWarning_NotEnoughRoom"			"Размер вашего игрового пространства не соответствует требованиям игры. Игра требует {s:requiredwidth} на {s:requireddepth} м игрового пространства, а текущий размер составляет {s:currentwidth} на {s:currentdepth} м."
 	
@@ -1811,10 +1811,10 @@
 	"Library_Details_IncorrectSDKWarning_Desc"		"{s:gamename} не поддерживает ваш шлем."
 
 	"Library_Details_IncorrectVRPlayAreaWarning_Title"				"ВНИМАНИЕ"
-	"Library_Details_IncorrectVRPlayAreaWarning_Uncalibrated"		"Игровая зона не откалибрована. Нажмите OK, чтобы запустить подготовку комнаты."
+	"Library_Details_IncorrectVRPlayAreaWarning_Uncalibrated"		"Игровая зона не откалибрована. Нажмите OK, чтобы настроить пространство."
 	"Library_Details_IncorrectVRPlayAreaWarning_RoomScale"			"Для этой игры необходимо игровое пространство в пределах целой комнаты, а вашей текущей конфигурацией является режим «Стоя». Возможно, вам не удастся сыграть в эту игру."
 	"Library_Details_IncorrectVRPlayAreaWarning_NotEnoughRoom"		"Ваше игровое пространство не соответствует требованиям игры. Возможно, вам не удастся сыграть в эту игру."
-	"Library_Details_IncorrectVRPlayAreaWarning_RoomSetup"			"ЗАПУСТИТЬ ПОДГОТОВКУ КОМНАТЫ"
+	"Library_Details_IncorrectVRPlayAreaWarning_RoomSetup"			"НАСТРОИТЬ ПРОСТРАНСТВО"
 
 	"Library_Details_WorkshopWhatIsIt"	"Создавайте, изучайте и используйте контент от сообщества Steam (предметов: {d:wscount})."
 	"Library_Details_CommunityHubWhatIsIt"	"Контент от сообщества (всего: {d:ugccount})."

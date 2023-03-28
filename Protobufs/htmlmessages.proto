@@ -166,6 +166,7 @@ message CMsgPostURL {
 	optional string url = 2;
 	optional string post = 3;
 	optional uint32 pageserial = 4;
+	optional bool replace_entry = 5;
 }
 
 message CMsgAddHeader {
@@ -340,6 +341,11 @@ message CMsgLoadedRequest {
 	optional string url = 2;
 	optional string pageTitle = 3;
 	repeated .CHTMLHeader headers = 5;
+}
+
+message CMsgFavIconURLChanged {
+	optional uint32 browser_handle = 1;
+	repeated string urls = 2;
 }
 
 message CMsgPageSecurity {
@@ -888,6 +894,8 @@ message CMsgSetWindowPosition {
 	optional double height = 5;
 	optional double min_width = 6;
 	optional double min_height = 7;
+	optional double max_width = 8;
+	optional double max_height = 9;
 }
 
 message CMsgShowWindow {
@@ -922,6 +930,15 @@ message CMsgShowBrowserContextMenu {
 
 	optional uint32 browser_handle = 1;
 	repeated .CMsgShowBrowserContextMenu.ContextCommand custom_commands = 2;
+	optional uint32 type_flags = 3;
+	optional string page_url = 4;
+	optional int32 coord_x = 5;
+	optional int32 coord_y = 6;
+	optional string link_url = 7;
+	optional string unfiltered_link_url = 8;
+	optional string selection_text = 9;
+	optional string misspelled_word = 10;
+	optional uint32 edit_state_flags = 11;
 }
 
 message CMsgHandleContextMenuCommand {

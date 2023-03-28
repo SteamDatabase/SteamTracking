@@ -28,7 +28,7 @@
 "SteamBootstrapper_UpdateInstalling"			"Installerer oppdatering …"
 "SteamBootstrapper_InstallVerify"				"Bekrefter installering ..."
 "SteamBootstrapper_DownloadComplete"			"Nedlastingen er fullført."
-"SteamBootstrapper_PercentComplete"			"%percent%%% utført"
+"SteamBootstrapper_PercentComplete"			"%percent% %% utført"
 "SteamBootstrapper_NoNetwork"					"%appname% må være tilkoblet for å kunne oppdatere. Bekreft nettverkstilkoblingen, og prøv på nytt."
 "SteamBootstrapper_FailedMkdir"				"Kunne ikke opprette mappen %dirname%. Fikk feilen %errno%"
 "SteamBootstrapper_NotWriteable"				"Mappen «%dirname%» kan ikke skrives til."

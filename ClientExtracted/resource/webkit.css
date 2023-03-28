@@ -26,8 +26,7 @@
 }
 
 ::-webkit-scrollbar-corner {
-    background: #202020;
-    background-color: rgb(67, 73, 83);
+    background: none;
 }
 
 ::-webkit-scrollbar-track,

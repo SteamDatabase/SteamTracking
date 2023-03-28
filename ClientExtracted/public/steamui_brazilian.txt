@@ -424,6 +424,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_Status_OfflineMode"					"Modo off-line"
 "Steam_Status_NoConnection"					"Sem conexão"
 "Steam_Status_OneItemDownloading" 	"Baixando "
+"Steam_Status_OneItemTransferring" 	"Transferindo "
 "Steam_Status_DownloadsPaused" 	"Downloads em pausa "
 "Steam_Status_OneItemPaused" 				"1 item na fila "
 "Steam_Status_OneItemComplete"			"1 item concluído "
@@ -432,7 +433,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_Status_ItemsComplete"	"%numcompl%/%numtotal% itens concluídos "
 "Steam_Status_DownloadsTitle"		"Downloads"
 "Steam_Status_GoToDownloadsPage"		"Gerenciar"
-"Steam_Status_PeerContentServer"		"Transferindo"
+"Steam_Status_PeerContentServer"		"Hospedando transferência na rede"
 
 "Steam_Time_ShowMostRecent"			"Exibir mais recente(s)"
 "Steam_Time_5Minutes"				"5 minutos"
@@ -4006,7 +4007,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "SteamUI_ValveSurvey_Summary_Software"	"Software instalado:"
 "steam_systeminfo_info"			"O Steam detectou os seguintes hardwares e softwares no seu sistema:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Reserve um momento para participar desta breve pesquisa. Todo mês o Steam realiza uma pesquisa mensal para descobrir os componentes (hardware) e programas (softwares) mais usados pelos nossos usuários. A participação na pesquisa é voluntária e anônima. Os dados coletados nos ajudam a tomar decisões sobre quais tecnologias devemos investir e quais produtos oferecer.\nOs dados coletados são confidenciais e não serão associados à sua conta."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Reserve um momento para participar desta breve pesquisa. Todo mês o Steam realiza uma pesquisa mensal para descobrir os componentes (hardwares) e programas (softwares) mais usados pelos nossos usuários. A participação na pesquisa é voluntária e anônima. Os dados coletados nos ajudam a tomar decisões sobre quais tecnologias devemos investir e quais produtos oferecer.\nOs dados coletados são confidenciais e não serão associados à sua conta."
 
 "steam_statuslabel"	"Estado"
 
@@ -4836,9 +4837,23 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_RunningConflictingSoftware" "Software conflitante detectado"
 "SteamUI_RunningIncompatibleTcpService" "Uma versão incompatível de %incompatdll% (relacionado a %incompatname%)\nfoi detectada dentro do processo Steam.\n\nSugerimos que atualize ou desinstale esse software caso esteja enfrentando erros\nou lentidão na rede enquanto usa o Steam ou jogos."
 
+"Steam_XboxDriverInstall_Title"		"Instalação do driver de Xbox"
+"Steam_XboxDriverInstall_Success"	"Driver atualizado com sucesso e será ativado após reiniciar o computador."
+"Steam_XboxDriverInstall_ServiceFailure"	"Falha ao atualizar o driver. O Steam está rodando sem privilégios de administrador e o serviço do Steam está rodando e atualizado?"
+"Steam_XboxDriverInstall_Failure"	"Falha ao atualizar o driver. Erro: %error%"
+
 "Steam_DualSense_FirmwareUpdate_Title"	"Novo firmware disponível para o controle"
 "Steam_DualSense_FirmwareUpdate_Text"	"Novo firmware disponível para: \"%product%\". Clique no link abaixo para acessar a página de atualização de firmware da Sony."
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Não exibir isso novamente"
+
+"RescueDialog_Title" "O SteamWebHelper não está respondendo"
+"RescueDialog_Explanation" "O steamwebhelper.exe, componente essencial do Steam, não está respondendo. A interface do Steam não poderá ser usada. Clique <a href=\"about:blank\">aqui</a> para mais informações."
+"RescueDialog_RadioHeader" "Vamos tentar ajudar:"
+"RescueDialog_RestartSteam" "Reiniciar o Steam"
+"RescueDialog_RestartSteam_NoGPU" "Reiniciar o Steam sem aceleração da placa de vídeo"
+"RescueDialog_RestartSteam_NoSandbox" "Reiniciar o Steam sem isolamento do navegador"
+"RescueDialog_RestartSteamWebHelper" "Reiniciar o steamwebhelper.exe"
+"RescueDialog_ExitSteam" "Sair do Steam"
 
 "DownloadRegion_default"				 "Desconhecida"
 "DownloadRegion_us_chicago"			"EUA — Chicago"

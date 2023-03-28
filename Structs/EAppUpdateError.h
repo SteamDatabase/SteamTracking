@@ -54,4 +54,6 @@ typedef enum EAppUpdateError
     k_EAppUpdateErrorCompatToolFailed = 51,
     k_EAppUpdateErrorInstallPathRemoved = 52,
     k_EAppUpdateErrorInvalidBackupPath = 53,
+    k_EAppUpdateErrorInvalidPasscode = 54,
+    k_EAppUpdateErrorSelfUdpating = 55,
 } EAppUpdateError;

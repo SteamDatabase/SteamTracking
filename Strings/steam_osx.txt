@@ -103,17 +103,12 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-e<
-O>
-^9
 0
 9
 0
 @
 @
-9
-r(
-)
+|*
 @
 @
 @
@@ -125,30 +120,28 @@ Hi
 (
 3
 3
-e(
+3
+L;
+R=
 D)
-;
+-)
+)
 
 %
-m2
-(
-(
-)
-'
 2
 '
 
 /
 0
 5
-v?
-<
-:
-:
-:
+$(
 (
-7
-i1
+(
+(
+:
+:
+:
+>?
 
 0
 Ic
@@ -167,6 +160,8 @@ D
 1
 1
 1
+F2
+[6
 @
 Hc
 Hc
@@ -198,7 +193,8 @@ IcE
 IcE
 @
 @
-,0
+>0
+YC
 V
 15CBaseFileSystem
 11IFileSystem
@@ -229,6 +225,7 @@ $@
 $tI
 _
 @18CSteamContentMover
+N@
 zD
 package
 .delete
@@ -1653,7 +1650,6 @@ N16CCookieContainer11CCookieInfoE
 17CHTTPRequestParam
 10CUtlVectorI17CHTTPRequestParam10CUtlMemoryIS0_EE
 10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE
-<html><body>Fake captive portal</body></html>
 33CHTTPDefaultRedirectEnableHandler
 20IHTTPRedirectHandler
 18CHTTPClientRequest
@@ -1909,14 +1905,14 @@ $
 8
 (
 (
->
-\
-c
-(
+?
+^
 e
-k
-l
-y
+(
+g
+m
+n
+{
 H
 X
 0
@@ -2315,8 +2311,6 @@ Documents/Steam%s Content
 -gamepadnewauth
 -nogamepadnewauth
 -newbigpicture
--oldbigpicture
--nosteamuisharedjscontext
 -desktopui
 -tesla
 -vgui
@@ -2362,7 +2356,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Mar 20 2023 15:16:31
+Startup - updater built Mar 27 2023 13:09:45
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2452,6 +2446,7 @@ BRepairInstalledFiles: ignoring bootstrap file %s
 BRepairInstalledFiles: renaming stale file %s -> %s
 DownloadManifest - exhausted list of download hosts
 steam_client_
+?t=%u
 Downloading manifest: http%s://%s%s
 %s;%s;%d;%d
 client
@@ -2649,8 +2644,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Mar 20 2023
-15:16:32
+Mar 27 2023
+13:09:45
 crashhandler004
 steam
 Steam Executable Crash
@@ -2747,7 +2742,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:16:30
+13:09:43
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10866,7 +10861,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-15:14:27
+13:07:41
 Jan
 Feb
 Mar
@@ -12392,7 +12387,6 @@ k_EMsgClientFriendUserStatusPublished
 k_EMsgClientCurrentUIMode
 k_EMsgClientVanityURLChangedNotification
 k_EMsgClientUserNotifications
-k_EMsgGSPerformHardwareSurvey
 k_EMsgClientEnableTestLicense
 k_EMsgClientEnableTestLicenseResponse
 k_EMsgClientDisableTestLicense
@@ -13292,17 +13286,12 @@ file_ofs == pFile->GetBytesWritten()
 
 
 0
-e<
-O>
-^9
 0
 9
 0
 @
 @
-9
-r(
-)
+|*
 @
 @
 @
@@ -13314,30 +13303,28 @@ Hi
 (
 3
 3
-e(
+3
+L;
+R=
 D)
-;
+-)
+)
 
 %
-m2
-(
-(
-)
-'
 2
 '
 
 /
 0
 5
-v?
-<
-:
-:
-:
+$(
 (
-7
-i1
+(
+(
+:
+:
+:
+>?
 
 0
 Ic
@@ -13356,6 +13343,8 @@ D
 1
 1
 1
+F2
+[6
 @
 Hc
 Hc
@@ -13387,47 +13376,58 @@ IcE
 IcE
 @
 @
-,0
+>0
+YC
 V
+5
+/
 =
-}4
+E7
+{.
 =
-.
 .
 .
 4
-|-
-C-
-C-
+-
 -
 3
 !
 @
-,
-&$
+7
+:
 2
 2
 @
 &
 +
-I,
++
 1
-k*
-i0
+5
 *
-,0
+*
+*
 0
-4
-A)
+0
+8
+8
+8
+8
+j)
+b)
+\/
+)
 )
 /
 /
+/
+b(
+W(
 @
 M9e
 @
 @
 .
-.
+(
 ?
 ?
 ?
@@ -13444,24 +13444,28 @@ M9e
 ?
 ?
 
+")
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
+d(
+S(
 @
 %
 `
 `
 @
-~,
 j
 j
-q0
 Pj
 ARj
 j
-/
+T,
+C,
+(,
+0
 0
 0
 IcU
@@ -13471,10 +13475,6 @@ M)u
 =
 @
 =
-&
-&
-&
-$
 =
 %
 =
@@ -13768,17 +13768,17 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
+/
 =
 @
 F)
 
-?1
 @
 @
 @
+
 0
 H=
-"
 Ic]
 j
 j
@@ -13788,21 +13788,20 @@ j
 j
 $
 
-'
+^#
++
++
 '
 t$I;M
-*
-)
-)
-!(
+!
+!
 e
 W
 ,7~5d
-#/
 H
-#
 0
-,!
+9!
+q!
 
 .
 
@@ -13815,7 +13814,6 @@ H
 
 
 Hc
-&
 L)5;O'
 L950K'
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -13824,7 +13822,6 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @8
 `$
 J"
-$
 $
 "
 "
@@ -14077,15 +14074,16 @@ q
 @
 H=
 =
-0
 
 =
 @
+
 =
 @
 =*.*
 @
 @
+
 @
 @
 @
@@ -14114,7 +14112,6 @@ H=
 E
 0
 Hi
-
 E
 -
 0
@@ -14137,23 +14134,17 @@ j
 @
 0
 0
+0
 
 
 Hc
-
-
-
-
 0
-#
-
-
-@
-@
-@
-H
+X
+%
 &
 %
+
+
 
 
 
@@ -14178,9 +14169,9 @@ P
 @
 0
 =a
+z
 0
-y
-[
+a
 Hi
 $
 $

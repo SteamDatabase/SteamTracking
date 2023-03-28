@@ -4147,8 +4147,8 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 
 	"Library_SelectBeta_CodeLabel" "Wählen Sie die Beta aus, an der Sie teilnehmen möchten."
 	"Library_SelectBeta_Title"	"Beta auswählen"
-	"Library_SelectBeta_PrivateTitle"	"Geben Sie ein Passwort ein, um private Betas freizuschalten."
-	"Library_SelectBeta_BetaPassword"	"PASSWORT"
+	"Library_SelectBeta_PrivateTitle"	"Geben Sie ein Passcode ein, um private Betas freizuschalten."
+	"Library_SelectBeta_BetaPassword"	"PASSCODE"
 	"Library_SelectBeta_PrivateButton"	"PRÜFEN"
 	"Library_SelectBeta_NoBeta" "Für dieses Spiel gibt es keine öffentlichen Betas."
 

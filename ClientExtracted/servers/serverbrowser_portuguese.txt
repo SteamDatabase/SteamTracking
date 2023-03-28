@@ -48,8 +48,8 @@
 "ServerBrowser_EnterIPofServerToAdd"		"Introduz o endereço IP do servidor que pretendes adicionar."
 "ServerBrowser_OK"				"OK"
 "ServerBrowser_Examples"			"Exemplos:\ntfc.valvesoftware.com\ncounterstrike.speakeasy.net:27016\n205.158.143.200:27015"
-"ServerBrowser_AddServersTitle"			"Adicionar Servidor - Servidores"
-"ServerBrowser_AddServerErrorTitle"		"Adicionar Servidor - Erro"
+"ServerBrowser_AddServersTitle"			"Adicionar servidor - Servidores"
+"ServerBrowser_AddServerErrorTitle"		"Adicionar servidor - Erro"
 "ServerBrowser_AddServerError"			"O endereço IP do servidor que introduziste não é válido."
 "ServerBrowser_ServerRequiresPasswordTitle"	"Servidor necessita de palavra-passe"
 "ServerBrowser_ServerRequiresPassword"		"É necessária uma palavra-passe para entrar."
@@ -94,11 +94,11 @@
 "ServerBrowser_Refresh"				"Atualizar"
 "ServerBrowser_RefreshAll"			"Atual. tudo"
 "ServerBrowser_RefreshQuick"			"Atual. rápida"
-"ServerBrowser_StopRefreshingList"		"Parar Atual."
+"ServerBrowser_StopRefreshingList"		"Parar atual."
 "ServerBrowser_AddServer"			"Adicion. serv."
 "ServerBrowser_AddCurrentServer"			"Adicionar servidor atual"
 "ServerBrowser_PasswordColumn_Tooltip"		"É necessária uma palavra-passe para entrar"
-"ServerBrowser_BotColumn_Tooltip"		"Existem jogadores-CPU neste servidor"
+"ServerBrowser_BotColumn_Tooltip"		"Existem jogadores controlados pelo computador neste servidor"
 
 "ServerBrowser_ServersCount"			"Servidores (%s1)"
 "ServerBrowser_UnableToQueryMasters"		"Não foi possível determinar os endereços do servidor mestre. A lista de servidores não funcionará corretamente."
@@ -142,7 +142,7 @@
 "VAC_YourAccountBanned"	"A tua conta Steam '%account%' foi banida dos servidores seguros de jogos devido a uma infração de batota."
 "VAC_GamesAffected"	"Foram afetados os seguintes jogos:"
 "VAC_ForDetails"	"Clica aqui para detalhes"
-"VAC_ConnectionRefusedTitle"	"Ligação Recusada - VAC"
+"VAC_ConnectionRefusedTitle"	"Ligação recusada - VAC"
 "VAC_ConnectionRefusedDetail"	"Não podes efetuar a ligação ao servidor selecionado porque este está a funcionar no modo de segurança VAC (Antibatota da Valve).\n\nEsta conta Steam foi banida de servidores protegidos por ter usado \"cheats\"."
 "VAC_ConnectionRefusedByServer"	"O servidor recusou a ligação porque está a funcionar sob o modo VAC (Antibatota da Valve).\n\nEsta conta Steam foi banida de servidores protegidos por ter usado \"cheats\"."
 "VAC_BanSupportURL"	"https://support.steampowered.com/kb/7849-RADZ-6869&l=portuguese/"
@@ -158,10 +158,10 @@
 
 // need to remove the VAC line from this when we have our authentication system going via the Steam servers (when it should change to a login failure)
 "Steam_ValidLoginRequired"	"Não foi possível efetuar uma ligação aos servidores VAC do Steam. Para solucionar problemas de rede, clica no link abaixo."
-"VAC_ConnectionIssuesSupport_Title"	"Falha na Ligação Segura"
+"VAC_ConnectionIssuesSupport_Title"	"Falha na ligação segura"
 "VAC_ConnectionIssuesSupportSite"	"Clica aqui para visitares o Suporte Steam"
 "VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098&l=portuguese/"
-"VAC_LoggedInElsewhere_Title"		"Conta Utilizada Noutro Computador"
+"VAC_LoggedInElsewhere_Title"		"Conta utilizada noutro computador"
 "VAC_LoggedInElsewhereReason"		"Esta conta Steam foi utilizada para iniciar sessão a partir de outro computador. Para continuares a usar o Steam, deves iniciar a sessão outra vez."
 
 "ServerBrowser_FriendNotInGameServer"	"%friend% não está a jogar em nenhum servidor de jogo."
@@ -170,7 +170,7 @@
 "ServerBrowser_NonSteamGame"	"O estado do jogo não se encontra disponível."
 
 "ServerBrowser_AddSelectedToFavorites"	"Adicionar o servidor selecionado aos favoritos"
-"ServerBrowser_AddAddressToFavorites"	"Adicionar este endereço aos favoritos"
-"ServerBrowser_FindGames"	"Procurar partidas neste endereço..."
+"ServerBrowser_AddAddressToFavorites"	"Adicionar aos favoritos"
+"ServerBrowser_FindGames"	"Procurar com este endereço"
 } 
 }  

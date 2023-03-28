@@ -2,8 +2,8 @@
 __TEXT
 __text
 __TEXT
-@^
-@^
+I
+I
 __stubs
 __TEXT
 __stub_helper
@@ -36,20 +36,18 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
-19
 __thread_vars
 __DATA
+HO'
 0
+HO'
 __thread_data
 __DATA
-@N'
 @
-@N'
 __thread_bss
 __DATA
 __bss
 __DATA
-z-
 __common
 __DATA
 H
@@ -58,7 +56,7 @@ __LINKEDIT
 @
 @loader_path/serverbrowser.dylib
 "
-("
+P"
 P
 
 
@@ -89,9 +87,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-4
 )
-@(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -383,6 +379,7 @@ H
 @
 H
 ,
+0
 $
 (
 ,
@@ -499,6 +496,17 @@ $
 0
 8
 @
+H
+P
+\
+0
+`
+d
+8
+@
+H
+P
+h
 0
 (
 8
@@ -538,7 +546,7 @@ X
 0
 @
 X
-0
+8
 0
 (
 0
@@ -553,6 +561,7 @@ X
 8
 0
 H
+8
 0
 8
 0
@@ -606,9 +615,9 @@ X
 0
 8
 (
-P
+`
 (
-8
+p
 P
 0
 (
@@ -673,6 +682,7 @@ P
 21CHTMLPageSecurityInfo
 19CMsgFinishedRequest
 17CMsgLoadedRequest
+21CMsgFavIconURLChanged
 16CMsgPageSecurity
 16CMsgStartRequest
 24CMsgStartRequestResponse
@@ -790,7 +800,6 @@ P
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
 16CMsgPopupCreated
-NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N4vgui19AnimatingImagePanelE
@@ -925,6 +934,7 @@ N4vgui4HTMLE
 7IHTMLJS
 N4vgui4HTML12CHTMLFindBarE
 22CFrameEventPerfTracker
+NSt3__121__basic_string_commonILb1EEE
 10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
@@ -2423,6 +2433,8 @@ Invalid key for map field.
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -2959,6 +2971,8 @@ width
 height
 minWidth
 minHeight
+maxWidth
+maxHeight
 BrowserHideWindow
 BrowserShowWindow
 BrowserBringWindowToFront
@@ -3847,6 +3861,29 @@ s_pSymbolTable
 0
 '
 '
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
 j
 j
 j
@@ -3855,6 +3892,12 @@ j
 j
 j
 j
+p
+0
+p
+0
+p
+0
 p
 0
 p
@@ -3866,31 +3909,29 @@ p
 p
 0
 &
-p
-0
-p
-0
-p
-0
-j
-j
-j
-j
-j
-j
-j
-j
 &
 &
 &
+&
+&
+&
+j
+j
+j
+j
+j
+j
+j
+j
+"&
 0
 p
 0
 j
-b%
 j
 j
 j
+m%
 0
 0
 AT=
@@ -3960,11 +4001,11 @@ M9e
 0
 @
 @
-_
+a
+
 
 
 d
-%
 A+M
 j
 j
@@ -4071,7 +4112,7 @@ j
 j
 j
 j
-P
+A
 j
 j
 j
@@ -4207,10 +4248,8 @@ d
 =*.*
 =
 @
-}
 @
 @
-i
 @
 @
 @

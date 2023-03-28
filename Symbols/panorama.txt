@@ -131,7 +131,6 @@
  SDL_GL_SetSwapInterval
  SDL_GL_SwapWindow
  SDL_GetClipboardText
- SDL_GetDisplayBounds
  SDL_GetGamepadAxis
  SDL_GetGamepadButton
  SDL_GetGamepadJoystick
@@ -144,7 +143,6 @@
  SDL_GetJoysticks
  SDL_GetModState
  SDL_GetMouseState
- SDL_GetPrimaryDisplay
  SDL_GetTicks
  SDL_GetVersion
  SDL_GetWindowFlags

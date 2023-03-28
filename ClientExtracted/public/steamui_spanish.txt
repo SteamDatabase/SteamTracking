@@ -422,6 +422,7 @@
 "Steam_Status_OfflineMode"					"Modo desconectado"
 "Steam_Status_NoConnection"					"Sin conexión"
 "Steam_Status_OneItemDownloading" 	"Descargando "
+"Steam_Status_OneItemTransferring" 	"Transfiriendo "
 "Steam_Status_DownloadsPaused" 	"Descargas en pausa "
 "Steam_Status_OneItemPaused" 				"1 artículo en cola"
 "Steam_Status_OneItemComplete"			"1 artículo completado "
@@ -430,7 +431,7 @@
 "Steam_Status_ItemsComplete"	"%numcompl% de %numtotal% artículos completados"
 "Steam_Status_DownloadsTitle"		"Descargas"
 "Steam_Status_GoToDownloadsPage"		"Administrar"
-"Steam_Status_PeerContentServer"		"Transfiriendo"
+"Steam_Status_PeerContentServer"		"Transferencia de red en curso"
 
 "Steam_Time_ShowMostRecent"			"Mostrar lo más reciente"
 "Steam_Time_5Minutes"				"5 minutos"
@@ -1507,11 +1508,11 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_DownloadRatesInBits"			"Mostrar velocidad de descarga en bits por segundo"
 
 "Steam_PeerContentTitle"			"Transferencia de archivos de juegos a través de la red local"
-"Steam_PeerContentInfo"			"Esta función permite transferir archivos de juegos desde tu ordenador a otros ordenadores o Steam Decks (y viceversa) a través de tu red local, lo cual reduce el tráfico de internet a la hora de descargar o actualizar un juego."
-"Steam_PeerContentOff"			"Desactivado (no permitir ninguna transferencia)"
-"Steam_PeerContentSameUser"		"Permitir transferencias a/de mis propios dispositivos"
-"Steam_PeerContentFriends"		"Permitir transferencias a/de mis amigos de Steam"
-"Steam_PeerContentAnyUser"		"Permitir transferencias a/de cualquier usuario"
+"Steam_PeerContentInfo"			"Permite transferir archivos de juegos de tu ordenador a otros ordenadores o Steam Decks (y viceversa) en tu red local para reducir el tráfico de internet al descargar o actualizar juegos."
+"Steam_PeerContentOff"			"Desactivado (no permitir transferencias)"
+"Steam_PeerContentSameUser"		"Permitirlas a/de mis dispositivos"
+"Steam_PeerContentFriends"		"Permitirlas a/de mis amigos de Steam"
+"Steam_PeerContentAnyUser"		"Permitirlas a/de cualquier usuario"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud almacena información para que tu experiencia con el producto sea consistente en todos tus ordenadores."
@@ -4319,7 +4320,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_AllowGameLaunch_Info"	"%game% está intentando iniciarse con los parámetros opcionales que se muestran a continuación."
 "Steam_AllowGameLaunch_Info_args"	"\"%arguments%\"\n"
-"Steam_AllowGameLaunch_Info_Prompt" "Si no has solicitado este inicio o no entiendes estas opciones, selecciona Cancelar."
+"Steam_AllowGameLaunch_Info_Prompt" "Si no has solicitado este inicio o no entiendes estos parámetros, selecciona Cancelar."
 "Steam_AllowGameLaunch_Title"	"¿Permitir inicio del juego?"
 
 "Steam_Parental_UnlockTitle"			"Modo familiar"
@@ -4836,9 +4837,23 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_RunningConflictingSoftware" "Se ha detectado software conflictivo"
 "SteamUI_RunningIncompatibleTcpService" "Se ha detectado una versión incompatible de %incompatdll% (relacionada\ncon %incompatname%) dentro del proceso de Steam.\n\nTe sugerimos que actualices o desinstales este software si sufres bloqueos\no reducciones en la velocidad de red mientras ejecutas Steam o algún juego."
 
+"Steam_XboxDriverInstall_Title"		"Instalación del controlador para Xbox"
+"Steam_XboxDriverInstall_Success"	"El controlador se actualizó correctamente y estará activo después de que reinicies tu ordenador."
+"Steam_XboxDriverInstall_ServiceFailure"	"No se ha podido actualizar el controlador. ¿Se está ejecutando Steam como usuario normal, y el servicio de Steam está actualizado y en funcionamiento?"
+"Steam_XboxDriverInstall_Failure"	"No se ha podido actualizar el controlador. Error: %error%"
+
 "Steam_DualSense_FirmwareUpdate_Title"	"Nuevo firmware del mando disponible"
 "Steam_DualSense_FirmwareUpdate_Text"	"Hay nuevo firmware disponible para tu %product%. Haz clic en el enlace de abajo para ir la página de la actualización del firmware de Sony:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"No mostrar esto de nuevo"
+
+"RescueDialog_Title" "Steamwebhelper no responde"
+"RescueDialog_Explanation" "Steamwebhelper.exe, un componente crítico de Steam, no responde. No será posible utilizar la IU de Steam. Haz clic <a href=\"about:blank\">aquí</a> para obtener más información."
+"RescueDialog_RadioHeader" "Opciones que pueden ayudar:"
+"RescueDialog_RestartSteam" "Reiniciar Steam"
+"RescueDialog_RestartSteam_NoGPU" "Reiniciar Steam con la aceleración por GPU desactivada"
+"RescueDialog_RestartSteam_NoSandbox" "Reiniciar Steam con el entorno aislado del navegador desactivado"
+"RescueDialog_RestartSteamWebHelper" "Reiniciar steamwebhelper.exe"
+"RescueDialog_ExitSteam" "Salir de Steam"
 
 "DownloadRegion_default"				 "Desconocida"
 "DownloadRegion_us_chicago"			"EE. UU. - Chicago"

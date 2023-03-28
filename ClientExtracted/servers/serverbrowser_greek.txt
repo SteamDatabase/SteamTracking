@@ -88,7 +88,7 @@
 "ServerBrowser_NoFavoriteServers"		"Αυτή τη στιγμή δεν έχετε επιλέξει κανένα αγαπημένο διακομιστή."
 "ServerBrowser_NoFriendsServers"		"Αυτή τη στιγμή κανένας φίλος σας δεν παίζει κάποιο παιχνίδι."
 "ServerBrowser_NoInternetGames"			"Δεν υπάρχουν παιχνίδια στο διαδίκτυο που να πληρούν τις ρυθμίσεις φίλτρου σας."
-"ServerBrowser_NoInternetGamesResponded"	"Δε βρέθηκαν παιχνίδια στο διαδίκτυο που να ανταποκρίνονται στην αναζήτηση."
+"ServerBrowser_NoInternetGamesResponded"	"Δεν βρέθηκαν παιχνίδια στο διαδίκτυο που να ανταποκρίνονται στην αναζήτηση."
 "ServerBrowser_MasterServerNotResponsive"	"Δεν ήταν δυνατή η επικοινωνία με τον κύριο διακομιστή για την παραλαβή της λίστας διακομιστών."
 "ServerBrowser_MasterServerHasNoServersListed"	"Δεν υπάρχουν διαδικτυακά παιχνίδια στη λίστα του κύριου διακομιστή που να περνούν τις ρυθμίσεις του φίλτρου σας."
 "ServerBrowser_Refresh"				"ΑΝΑΝΕΩΣΗ"

@@ -670,6 +670,18 @@ SteamClientBetaBugReports
 	method		"internal"
 }
 
+SteamClientPatchNotes
+{
+	url			"%store%/events/clientpatchnotes"
+	method		"internal"
+}
+
+SteamClientBetaPatchNotes
+{
+	url			"%store%/events/clientpatchnotes?branch=beta"
+	method		"internal"
+}
+
 NewsHomePage
 {
 	url			"%store%/news"

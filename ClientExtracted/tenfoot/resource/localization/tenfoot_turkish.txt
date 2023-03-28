@@ -1094,7 +1094,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"SettingsController_XboxDriverRestart_Now"			"YENİDEN BAŞLAT"
 	"SettingsController_XboxDriverRestart_Later"		"DAHA SONRA"
 	"SettingsController_SwitchSupport"					"Switch Yapılandırma Desteği"
-	"SettingsController_NintendoLayout"					"Nintendo Buton Düzenini Kullan"
+	"SettingsController_NintendoLayout"					"  Nintendo buton düzenini kullan"
 	"SettingsController_CombinedJoycon"					"  Joy-Con Kontrolcü Çiftlerini Birleştir"
 	"SettingsController_GenericGamepadSupport"			"Genel Oyun Kumandası Yapılandırma Desteği"
 	"SettingsController_CheckGuideButton"				"Kılavuz Düğmesi Steam'i Öne Çıkarır"

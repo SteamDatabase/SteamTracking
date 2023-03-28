@@ -4768,6 +4768,7 @@
 	"DownloadRegion_ro_bucharest"   "羅馬尼亞"
 	"DownloadRegion_ca_toronto"     "加拿大 - 多倫多"
 	"DownloadRegion_nz_auckland"    "紐西蘭"
+	"DownloadRegion_br_sao_paulo"   "巴西 - 聖保羅"
 	"DownloadRegion_za_johannesburg""南非 - 約翰尼斯堡"
 	"DownloadRegion_iceland"        "冰島"
 	"DownloadRegion_israel"         "以色列"

@@ -64818,8 +64818,16 @@ object-assign
           EAppUpdateError[
             (EAppUpdateError["k_EAppErrorRemovedInstallPath"] = 52)
           ] = "k_EAppErrorRemovedInstallPath";
+          EAppUpdateError[
+            (EAppUpdateError["k_EAppErrorInvalidBackupPath"] = 53)
+          ] = "k_EAppErrorInvalidBackupPath";
+          EAppUpdateError[
+            (EAppUpdateError["k_EAppErrorInvalidPasscode"] = 54)
+          ] = "k_EAppErrorInvalidPasscode";
+          EAppUpdateError[(EAppUpdateError["k_EAppErrorSelfUpdating"] = 55)] =
+            "k_EAppErrorSelfUpdating";
           // if you add new enums, update localization for Steam_AppUpdateError_
-          EAppUpdateError[(EAppUpdateError["k_EAppErrorMax"] = 53)] =
+          EAppUpdateError[(EAppUpdateError["k_EAppErrorMax"] = 56)] =
             "k_EAppErrorMax";
         })(EAppUpdateError || (EAppUpdateError = {}));
         var EAvatarFriendState;
@@ -66946,15 +66954,6 @@ object-assign
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ AppDetails: () => /* binding */ AppDetails,
-          /* harmony export */ AppDetailsBeta: () =>
-            /* binding */ AppDetailsBeta,
-          /* harmony export */ AppDetailsDLC: () => /* binding */ AppDetailsDLC,
-          /* harmony export */ AppLegacyCDKey: () =>
-            /* binding */ AppLegacyCDKey,
-          /* harmony export */ AppLibraryAssets: () =>
-            /* binding */ AppLibraryAssets,
-          /* harmony export */ AppTag: () => /* binding */ AppTag,
           /* harmony export */ EAppAction: () => /* binding */ EAppAction,
           /* harmony export */ EAppAllowDownloadsWhileRunningBehavior: () =>
             /* binding */ EAppAllowDownloadsWhileRunningBehavior,
@@ -66968,12 +66967,6 @@ object-assign
             /* binding */ ELogoPinnedPosition,
           /* harmony export */
         });
-        class AppTag {
-          constructor() {
-            this.tagName = "";
-            this.vecTagIds = [];
-          }
-        }
         /** Possible actions one can take for an app. */
         var EAppAction;
         (function (EAppAction) {
@@ -67122,9 +67115,6 @@ object-assign
             (EAppOwnershipFlags["k_EAppOwnershipFlags_TimedTrial"] = 2097152)
           ] = "k_EAppOwnershipFlags_TimedTrial";
         })(EAppOwnershipFlags || (EAppOwnershipFlags = {}));
-        class AppDetailsBeta {}
-        class AppDetailsDLC {}
-        class AppLegacyCDKey {}
         var ELogoPinnedPosition;
         (function (ELogoPinnedPosition) {
           ELogoPinnedPosition["UpperLeft"] = "UpperLeft";
@@ -67133,8 +67123,6 @@ object-assign
           ELogoPinnedPosition["CenterCenter"] = "CenterCenter";
           ELogoPinnedPosition["BottomCenter"] = "BottomCenter";
         })(ELogoPinnedPosition || (ELogoPinnedPosition = {}));
-        class AppLibraryAssets {}
-        class AppDetails {}
 
         /***/
       },
@@ -67727,6 +67715,16 @@ object-assign
           EJoinServerError[
             (EJoinServerError["k_EJoinServerError_NotInitialized"] = 5)
           ] = "k_EJoinServerError_NotInitialized";
+          // Special values used on JS side only, not by C++ code
+          EJoinServerError[
+            (EJoinServerError["k_EJoinServerError_Pinging"] = -1)
+          ] = "k_EJoinServerError_Pinging";
+          EJoinServerError[
+            (EJoinServerError["k_EJoinServerError_Connecting"] = -2)
+          ] = "k_EJoinServerError_Connecting";
+          EJoinServerError[
+            (EJoinServerError["k_EJoinServerError_PingFailed"] = -3)
+          ] = "k_EJoinServerError_PingFailed";
         })(EJoinServerError || (EJoinServerError = {}));
         var EMatchMakingServerResponse;
         (function (EMatchMakingServerResponse) {
@@ -68376,6 +68374,8 @@ object-assign
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ BackupAppProgress: () =>
+            /* binding */ BackupAppProgress,
           /* harmony export */ DownloadItem: () => /* binding */ DownloadItem,
           /* harmony export */ DownloadItemUpdateTypeInfo: () =>
             /* binding */ DownloadItemUpdateTypeInfo,
@@ -68513,6 +68513,16 @@ object-assign
             this.nFilesMoved = 0;
           }
         }
+        class BackupAppProgress {
+          constructor() {
+            this.appid = 0;
+            this.eError =
+              _clientenums__WEBPACK_IMPORTED_MODULE_0__.EAppUpdateError.k_EAppErrorNone;
+            this.strBytesToProcess = ""; // bytes we need to read from disk and compress
+            this.strBytesProcessed = ""; // bytes we already read from disk and compressed
+            this.strTotalBytesWritten = ""; // bytes written to backup folder
+          }
+        }
 
         /***/
       },
@@ -68537,11 +68547,14 @@ object-assign
             /* binding */ InstallFolderInfo,
           /* harmony export */ InstalledAppInfo: () =>
             /* binding */ InstalledAppInfo,
+          /* harmony export */ InstallingAppInfo: () =>
+            /* binding */ InstallingAppInfo,
           /* harmony export */ RemoteClientInputSettings: () =>
             /* binding */ RemoteClientInputSettings,
           /* harmony export */
         });
         class GameActionDetails {}
+        class InstallingAppInfo {}
         class InstalledAppInfo {}
         class InstallFolderInfo {}
         class RemoteClientInputSettings {}
@@ -68715,26 +68728,14 @@ object-assign
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.AccountSettings,
           /* harmony export */ AchievementNotification: () =>
             /* reexport safe */ _notificationtypes__WEBPACK_IMPORTED_MODULE_16__.AchievementNotification,
-          /* harmony export */ AppDetails: () =>
-            /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.AppDetails,
           /* harmony export */ AppDetailsAchievements: () =>
             /* reexport safe */ _gamestatstypes__WEBPACK_IMPORTED_MODULE_12__.AppDetailsAchievements,
           /* harmony export */ AppDetailsAchievementsHighlight: () =>
             /* reexport safe */ _gamestatstypes__WEBPACK_IMPORTED_MODULE_12__.AppDetailsAchievementsHighlight,
-          /* harmony export */ AppDetailsBeta: () =>
-            /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.AppDetailsBeta,
-          /* harmony export */ AppDetailsDLC: () =>
-            /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.AppDetailsDLC,
           /* harmony export */ AppDetailsMusicAlbum: () =>
             /* reexport safe */ _musictypes__WEBPACK_IMPORTED_MODULE_14__.AppDetailsMusicAlbum,
-          /* harmony export */ AppLegacyCDKey: () =>
-            /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.AppLegacyCDKey,
-          /* harmony export */ AppLibraryAssets: () =>
-            /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.AppLibraryAssets,
           /* harmony export */ AppLifetimeNotification: () =>
             /* reexport safe */ _notificationtypes__WEBPACK_IMPORTED_MODULE_16__.AppLifetimeNotification,
-          /* harmony export */ AppTag: () =>
-            /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.AppTag,
           /* harmony export */ AudioDevice: () =>
             /* reexport safe */ _audiotypes__WEBPACK_IMPORTED_MODULE_2__.AudioDevice,
           /* harmony export */ AudioDevices: () =>
@@ -68761,6 +68762,8 @@ object-assign
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.BIsValidStartPage,
           /* harmony export */ BOpenVROverlayBrowser: () =>
             /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.BOpenVROverlayBrowser,
+          /* harmony export */ BackupAppProgress: () =>
+            /* reexport safe */ _downloadtypes__WEBPACK_IMPORTED_MODULE_10__.BackupAppProgress,
           /* harmony export */ BatteryState_t: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.BatteryState_t,
           /* harmony export */ BluetoothAdapter_t: () =>
@@ -68846,7 +68849,7 @@ object-assign
           /* harmony export */ EClientUsedInputType: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.EClientUsedInputType,
           /* harmony export */ EClientVRError: () =>
-            /* reexport safe */ _vrtypes__WEBPACK_IMPORTED_MODULE_22__.EClientVRError,
+            /* reexport safe */ _vrtypes__WEBPACK_IMPORTED_MODULE_23__.EClientVRError,
           /* harmony export */ ECommunityPrivacyState: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ECommunityPrivacyState,
           /* harmony export */ ECommunityProfileItemProperty: () =>
@@ -68998,7 +69001,7 @@ object-assign
           /* harmony export */ EUniverse: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EUniverse,
           /* harmony export */ EVRInitError: () =>
-            /* reexport safe */ _vrtypes__WEBPACK_IMPORTED_MODULE_22__.EVRInitError,
+            /* reexport safe */ _vrtypes__WEBPACK_IMPORTED_MODULE_23__.EVRInitError,
           /* harmony export */ EValidationPhase: () =>
             /* reexport safe */ _downloadtypes__WEBPACK_IMPORTED_MODULE_10__.EValidationPhase,
           /* harmony export */ EWirelessEndpointStrength: () =>
@@ -69033,6 +69036,8 @@ object-assign
             /* reexport safe */ _gameactiontypes__WEBPACK_IMPORTED_MODULE_11__.InstallFolderInfo,
           /* harmony export */ InstalledAppInfo: () =>
             /* reexport safe */ _gameactiontypes__WEBPACK_IMPORTED_MODULE_11__.InstalledAppInfo,
+          /* harmony export */ InstallingAppInfo: () =>
+            /* reexport safe */ _gameactiontypes__WEBPACK_IMPORTED_MODULE_11__.InstallingAppInfo,
           /* harmony export */ InvalidAudioDeviceId: () =>
             /* reexport safe */ _audiotypes__WEBPACK_IMPORTED_MODULE_2__.InvalidAudioDeviceId,
           /* harmony export */ InvalidBluetoothAdapterId: () =>
@@ -69241,7 +69246,11 @@ object-assign
           __webpack_require__(
             /*! ./systemtypes */ "../../../web_src/shared/js/clienttypes/systemtypes.ts"
           );
-        /* harmony import */ var _vrtypes__WEBPACK_IMPORTED_MODULE_22__ =
+        /* harmony import */ var _usergamenotestypes__WEBPACK_IMPORTED_MODULE_22__ =
+          __webpack_require__(
+            /*! ./usergamenotestypes */ "../../../web_src/shared/js/clienttypes/usergamenotestypes.ts"
+          );
+        /* harmony import */ var _vrtypes__WEBPACK_IMPORTED_MODULE_23__ =
           __webpack_require__(
             /*! ./vrtypes */ "../../../web_src/shared/js/clienttypes/vrtypes.ts"
           );
@@ -70002,6 +70011,21 @@ object-assign
         /***/
       },
 
+    /***/ "../../../web_src/shared/js/clienttypes/usergamenotestypes.ts":
+      /*!********************************************************************!*\
+  !*** ../../../web_src/shared/js/clienttypes/usergamenotestypes.ts ***!
+  \********************************************************************/
+      /***/ (
+        __unused_webpack_module,
+        __webpack_exports__,
+        __webpack_require__
+      ) => {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+
+        /***/
+      },
+
     /***/ "../../../web_src/shared/js/clienttypes/vrtypes.ts":
       /*!*********************************************************!*\
   !*** ../../../web_src/shared/js/clienttypes/vrtypes.ts ***!
@@ -70034,6 +70058,8 @@ object-assign
             "k_EVRError_CrashProtection";
           EClientVRError[(EClientVRError["k_EVRError_HmdError"] = 5)] =
             "k_EVRError_HmdError";
+          EClientVRError[(EClientVRError["k_EVRError_PathChanged"] = 6)] =
+            "k_EVRError_PathChanged";
         })(EClientVRError || (EClientVRError = {}));
         var EVRInitError;
         (function (EVRInitError) {
@@ -71784,13 +71810,33 @@ object-assign
             "NoMinimize";
           EPopupCreationFlags[(EPopupCreationFlags["PopUpMenu"] = 65536)] =
             "PopUpMenu";
+          // If loading window dimensions from restore details, ignore the size.
+          // Useful for windows that are not user resizable but may have been a different size in a past incarnation.
+          EPopupCreationFlags[
+            (EPopupCreationFlags["IgnoreSavedSize"] = 131072)
+          ] = "IgnoreSavedSize";
+          // Disable rounded corners on browser window
+          EPopupCreationFlags[
+            (EPopupCreationFlags["NoRoundedCorners"] = 262144)
+          ] = "NoRoundedCorners";
+          // Force rounded corners on browser window
+          EPopupCreationFlags[
+            (EPopupCreationFlags["ForceRoundedCorners"] = 524288)
+          ] = "ForceRoundedCorners";
+          // Force X11 override redirect behavior on browser window
+          EPopupCreationFlags[
+            (EPopupCreationFlags["OverrideRedirect"] = 1048576)
+          ] = "OverrideRedirect";
           EPopupCreationFlags[(EPopupCreationFlags["Overlay"] = 8712)] =
             "Overlay";
-          EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 90632)] =
+          EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 1335816)] =
             "Notification";
           EPopupCreationFlags[
-            (EPopupCreationFlags["PopupContextMenu"] = 65544)
+            (EPopupCreationFlags["PopupContextMenu"] = 327688)
           ] = "PopupContextMenu";
+          EPopupCreationFlags[
+            (EPopupCreationFlags["StandaloneContextMenu"] = 1310728)
+          ] = "StandaloneContextMenu";
         })(EPopupCreationFlags || (EPopupCreationFlags = {}));
         const BrowserContext = react__WEBPACK_IMPORTED_MODULE_1__.createContext(
           { ownerWindow: window }
@@ -71846,9 +71892,6 @@ object-assign
             this.m_strTitle = rgParams.title;
             delete this.m_rgParams.title;
           }
-          SetClosedByUser(bClosedByUser) {
-            this.m_bClosedByUser = bClosedByUser;
-          }
           UpdateParamsBeforeShow(rgParams) {
             // TODO: if this modifies target_browser, the name field will be incorrect
             return rgParams;
@@ -71873,6 +71916,9 @@ object-assign
             }
             if (event.data == "popup-created") {
               this.OnCreateInternal();
+            }
+            if (event.data == "steam_shutdown") {
+              SteamClient.User.StartShutdown(false);
             }
           }
           Show(bFocus = true, bForceToForeground = false) {
@@ -71960,6 +72006,9 @@ object-assign
             }
             g_PopupManager.AddTrackedPopup(this);
             if (existingPopup) {
+              // Because the popup has already been created, we won't get a 'popup-created' event, so
+              // kick off our creation callbacks immediately.
+              this.OnCreateInternal();
               if (bFocus) this.Focus();
             } else if (
               !((_b =
@@ -72328,7 +72377,6 @@ object-assign
                 this.m_mapPopups.forEach((popup) => {
                   if (popup.BIsValid() && !popup.BIsClosed()) {
                     rgPopupsToClose.push(popup);
-                    popup.SetClosedByUser(false);
                   }
                 });
                 for (let popup of rgPopupsToClose) {
@@ -72476,6 +72524,12 @@ object-assign
             }
             if (rgParams.minHeight) {
               rgQueryParams.push("minheight=" + rgParams.minHeight);
+            }
+            if (rgParams.maxWidth && rgParams.maxWidth != Infinity) {
+              rgQueryParams.push("maxwidth=" + rgParams.maxWidth);
+            }
+            if (rgParams.maxHeight && rgParams.maxHeight != Infinity) {
+              rgQueryParams.push("maxheight=" + rgParams.maxHeight);
             }
             if (rgParams.target_browser) {
               // these parameters are interpreted by the steam process to open popups in the Steam overlay
@@ -72792,6 +72846,8 @@ object-assign
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ ENoiseGateLevel: () =>
+            /* binding */ ENoiseGateLevel,
           /* harmony export */ SharedFriendsUIGlobal: () =>
             /* binding */ SharedFriendsUIGlobal,
           /* harmony export */ k_nFriendsUIExportsVersion: () =>
@@ -72807,6 +72863,17 @@ object-assign
             /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
           );
 
+        var ENoiseGateLevel;
+        (function (ENoiseGateLevel) {
+          ENoiseGateLevel[(ENoiseGateLevel["k_ENoiseGateLevel_Off"] = 0)] =
+            "k_ENoiseGateLevel_Off";
+          ENoiseGateLevel[(ENoiseGateLevel["k_ENoiseGateLevel_Low"] = 1)] =
+            "k_ENoiseGateLevel_Low";
+          ENoiseGateLevel[(ENoiseGateLevel["k_ENoiseGateLevel_Medium"] = 2)] =
+            "k_ENoiseGateLevel_Medium";
+          ENoiseGateLevel[(ENoiseGateLevel["k_ENoiseGateLevel_High"] = 3)] =
+            "k_ENoiseGateLevel_High";
+        })(ENoiseGateLevel || (ENoiseGateLevel = {}));
         /**
          * Roll this forward if there are breaking changes to the friendsui/pal interface.  This will cause the client
          * to display a "you need to update" message.
@@ -76810,6 +76877,7 @@ object-assign
           /* harmony export */ ClosedCaption: () => /* binding */ ClosedCaption,
           /* harmony export */ CloudDownload: () => /* binding */ CloudDownload,
           /* harmony export */ Collapse: () => /* binding */ Collapse,
+          /* harmony export */ Comment: () => /* binding */ Comment,
           /* harmony export */ CommentThread: () => /* binding */ CommentThread,
           /* harmony export */ CopyToClipboard: () =>
             /* binding */ CopyToClipboard,
@@ -76845,6 +76913,7 @@ object-assign
           /* harmony export */ Flag: () => /* binding */ Flag,
           /* harmony export */ Flair: () => /* binding */ Flair,
           /* harmony export */ FlatArrow: () => /* binding */ FlatArrow,
+          /* harmony export */ Font: () => /* binding */ Font,
           /* harmony export */ FriendFilled: () => /* binding */ FriendFilled,
           /* harmony export */ FriendIcon: () => /* binding */ FriendIcon,
           /* harmony export */ FriendRequest: () => /* binding */ FriendRequest,
@@ -76866,6 +76935,7 @@ object-assign
           /* harmony export */ Instagram: () => /* binding */ Instagram,
           /* harmony export */ Installed: () => /* binding */ Installed,
           /* harmony export */ Invalid: () => /* binding */ Invalid,
+          /* harmony export */ Inventory: () => /* binding */ Inventory,
           /* harmony export */ Invite: () => /* binding */ Invite,
           /* harmony export */ InviteFriend: () => /* binding */ InviteFriend,
           /* harmony export */ LanguageOptions: () =>
@@ -76901,6 +76971,7 @@ object-assign
           /* harmony export */ Notification: () => /* binding */ Notification,
           /* harmony export */ OutgoingVoiceCall: () =>
             /* binding */ OutgoingVoiceCall,
+          /* harmony export */ PSD: () => /* binding */ PSD,
           /* harmony export */ Paperclip: () => /* binding */ Paperclip,
           /* harmony export */ PartyPopper: () => /* binding */ PartyPopper,
           /* harmony export */ Patch: () => /* binding */ Patch,
@@ -76964,6 +77035,7 @@ object-assign
           /* harmony export */ SteamLogo_Piston: () =>
             /* binding */ SteamLogo_Piston,
           /* harmony export */ SteamTV: () => /* binding */ SteamTV,
+          /* harmony export */ Store: () => /* binding */ Store,
           /* harmony export */ StoryWidgetBookmarkPage: () =>
             /* binding */ StoryWidgetBookmarkPage,
           /* harmony export */ Submit: () => /* binding */ Submit,
@@ -77071,6 +77143,23 @@ object-assign
             )
           );
         }
+        function Inventory(props) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+              },
+              props
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M18 17.8L4 10.05L18 2.29999L32 10.05L18 17.8ZM18 22.37L7.1 16.37L4 18.05L18 25.8L32 18.05L28.9 16.34L18 22.37ZM18 30.37L7.1 24.37L4 26.05L18 33.8L32 26.05L28.9 24.34L18 30.37Z",
+              fill: "currentColor",
+            })
+          );
+        }
         function Hyperlink(props) {
           const { className } = props;
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -77153,14 +77242,20 @@ object-assign
             )
           );
         }
-        function Settings() {
+        function Settings(props) {
+          const className = (0,
+          shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
+            "SVGIcon_Button",
+            "SVGIcon_Settings",
+            props.className
+          );
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
             {
               version: "1.1",
               id: "Layer_1",
               xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Settings",
+              className: className,
               x: "0px",
               y: "0px",
               width: "256px",
@@ -79845,14 +79940,19 @@ object-assign
           );
         }
         function Caution(props) {
-          const color = props.color || "#020202";
+          const { className, color = "#020202" } = props;
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
             {
               version: "1.1",
               id: "Layer_1",
               xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Caution",
+              className: (0,
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
+                "SVGIcon_Button",
+                "SVGIcon_Caution",
+                className
+              ),
               x: "0px",
               y: "0px",
               width: "256px",
@@ -83850,6 +83950,45 @@ object-assign
             )
           );
         }
+        function Comment(props) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+              },
+              props
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M2 4V20V24L7 20H24V4H2ZM34 12V32L29 28H12V24H28V12H34Z",
+              fill: "currentColor",
+            })
+          );
+        }
+        //this is a discount "tag"
+        function Store(props) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+              },
+              props
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M33.78 19.22L19.22 33.78L4 18.56V4H18.56L33.78 19.22Z",
+              fill: "currentColor",
+            })
+          );
+        }
         function CommentThread(props, className) {
           if (
             !(0,
@@ -85707,6 +85846,74 @@ object-assign
               "circle",
               { fill: "currentColor", cx: "25", cy: "25", r: "25" }
             )
+          );
+        }
+        function PSD(props) {
+          const { className } = props,
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
+              "className",
+            ]);
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            {
+              width: "23",
+              height: "25",
+              viewBox: "0 0 23 25",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M4.69484 16.275V10.9611C4.69484 10.8919 4.72235 10.8255 4.77132 10.7765C4.82028 10.7275 4.8867 10.7 4.95595 10.7H6.70039C7.00391 10.6976 7.30673 10.7293 7.60317 10.7945C7.86613 10.8506 8.11537 10.9582 8.33651 11.1111C8.54843 11.2597 8.71945 11.4594 8.83373 11.6917C8.96393 11.9704 9.02673 12.2759 9.01706 12.5833C9.02406 12.8888 8.96136 13.1919 8.83373 13.4695C8.71807 13.7108 8.54784 13.9219 8.33651 14.0861C8.12019 14.2512 7.87401 14.3729 7.61151 14.4445C7.32667 14.5238 7.03217 14.563 6.73651 14.5611H6.26984C6.20107 14.5619 6.13537 14.5897 6.087 14.6386C6.03863 14.6875 6.0115 14.7535 6.01151 14.8222V16.2778C6.01151 16.347 5.984 16.4135 5.93503 16.4624C5.88606 16.5114 5.81965 16.5389 5.75039 16.5389H4.95595C4.92143 16.5389 4.88724 16.5321 4.85538 16.5188C4.82352 16.5055 4.79461 16.486 4.77033 16.4614C4.74604 16.4369 4.72687 16.4078 4.71391 16.3758C4.70095 16.3438 4.69447 16.3095 4.69484 16.275ZM6.01151 13.25C6.0115 13.3188 6.03863 13.3848 6.087 13.4337C6.13537 13.4826 6.20107 13.5104 6.26984 13.5111H6.65595C7.37076 13.5111 7.72817 13.2009 7.72817 12.5806C7.74184 12.4583 7.72341 12.3345 7.6747 12.2215C7.62599 12.1085 7.54868 12.0102 7.4504 11.9361C7.1968 11.7937 6.90728 11.7281 6.61706 11.7472H6.26984C6.20107 11.748 6.13537 11.7758 6.087 11.8247C6.03863 11.8736 6.0115 11.9396 6.01151 12.0084V13.25Z",
+              fill: "white",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M11.3615 16.6417C10.9725 16.6403 10.5869 16.5697 10.2226 16.4334C9.93059 16.3269 9.65765 16.174 9.41429 15.9806C9.38607 15.9594 9.36245 15.9327 9.34485 15.9021C9.32725 15.8715 9.31603 15.8376 9.31187 15.8026C9.30772 15.7675 9.31072 15.732 9.32068 15.6981C9.33064 15.6643 9.34737 15.6328 9.36984 15.6056L9.78929 15.0917C9.83025 15.0411 9.889 15.008 9.95353 14.9992C10.0181 14.9904 10.0835 15.0066 10.1365 15.0445C10.2956 15.1588 10.4659 15.2565 10.6448 15.3361C10.879 15.4453 11.1338 15.503 11.3921 15.5056C11.6097 15.5234 11.8272 15.4698 12.0115 15.3528C12.076 15.3059 12.128 15.2439 12.1629 15.1722C12.1977 15.1005 12.2144 15.0214 12.2115 14.9417C12.2138 14.8609 12.1936 14.7811 12.1532 14.7111C12.111 14.6405 12.053 14.5806 11.9837 14.5361C11.8965 14.4784 11.8034 14.43 11.706 14.3917L11.3615 14.2445L10.6226 13.9222C10.4687 13.8616 10.3224 13.7833 10.1865 13.6889C10.0391 13.5959 9.90538 13.4828 9.78929 13.3528C9.67576 13.2204 9.58643 13.069 9.5254 12.9056C9.45716 12.7217 9.42418 12.5266 9.42818 12.3306C9.43275 12.1002 9.48774 11.8736 9.58929 11.6667C9.69168 11.453 9.83847 11.2636 10.0198 11.1111C10.2145 10.9475 10.4377 10.8213 10.6782 10.7389C10.9462 10.6466 11.228 10.6006 11.5115 10.6028C11.857 10.6045 12.1991 10.6715 12.5198 10.8C12.7638 10.8972 12.9914 11.0312 13.1948 11.1972C13.2462 11.2428 13.2789 11.3057 13.2866 11.374C13.2943 11.4422 13.2764 11.5108 13.2365 11.5667L12.8726 12.0139C12.833 12.0643 12.7759 12.0981 12.7126 12.1083C12.6493 12.1186 12.5845 12.1048 12.531 12.0695C12.4099 11.9884 12.2815 11.9186 12.1476 11.8611C11.9458 11.779 11.7294 11.7384 11.5115 11.7417C11.3163 11.7282 11.1219 11.7769 10.956 11.8806C10.8919 11.9227 10.8399 11.9806 10.8048 12.0487C10.7698 12.1169 10.7529 12.1929 10.756 12.2695C10.7537 12.3505 10.777 12.4302 10.8226 12.4972C10.8731 12.5653 10.9363 12.6228 11.0087 12.6667C11.0975 12.7218 11.1904 12.7701 11.2865 12.8111L11.6365 12.9584L12.3865 13.2611C12.7093 13.3858 12.9957 13.5892 13.2198 13.8528C13.437 14.1374 13.5462 14.4897 13.5282 14.8472C13.5291 15.0857 13.4789 15.3215 13.381 15.5389C13.2905 15.7549 13.1562 15.9497 12.9865 16.1111C12.7803 16.2816 12.5437 16.4117 12.2893 16.4945C11.991 16.5975 11.677 16.6474 11.3615 16.6417Z",
+              fill: "white",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M14.2003 16.275V10.9611C14.2003 10.8924 14.2275 10.8264 14.2758 10.7775C14.3242 10.7286 14.3899 10.7008 14.4587 10.7H15.8476C16.2566 10.6955 16.6639 10.7526 17.0559 10.8695C17.3969 10.9728 17.7108 11.1502 17.9753 11.3889C18.24 11.6387 18.4426 11.9469 18.567 12.2889C18.7124 12.7056 18.7821 13.1449 18.7725 13.5861C18.7813 14.03 18.7117 14.472 18.567 14.8917C18.4447 15.2376 18.2452 15.551 17.9837 15.8084C17.7297 16.058 17.4231 16.2478 17.0864 16.3639C16.7092 16.488 16.3141 16.549 15.917 16.5445H14.4587C14.4239 16.5441 14.3895 16.5368 14.3576 16.523C14.3257 16.5092 14.2969 16.4892 14.2728 16.4641C14.2488 16.439 14.23 16.4093 14.2175 16.3769C14.2051 16.3444 14.1992 16.3098 14.2003 16.275ZM15.5142 15.4695H15.7642C15.9985 15.4747 16.2321 15.4418 16.4559 15.3722C16.652 15.3101 16.8303 15.2015 16.9753 15.0556C17.1218 14.8888 17.229 14.6914 17.2892 14.4778C17.3762 14.1907 17.4166 13.8916 17.4087 13.5917C17.4164 13.2964 17.3761 13.0018 17.2892 12.7195C17.2226 12.5103 17.1075 12.3199 16.9531 12.1639C16.8157 12.0212 16.6448 11.9152 16.4559 11.8556C16.2346 11.7928 16.0053 11.7629 15.7753 11.7667H15.5253L15.5142 15.4695Z",
+              fill: "white",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M22.0115 5.65L17.5448 0.763889C17.325 0.523608 17.0577 0.331628 16.7598 0.200128C16.4619 0.0686279 16.1399 0.000477439 15.8143 0H3.18649C2.56493 0.000735139 1.96903 0.247974 1.52952 0.687484C1.09002 1.12699 0.842776 1.72288 0.842041 2.34444V22.6556C0.842776 23.2771 1.09002 23.873 1.52952 24.3125C1.96903 24.752 2.56493 24.9993 3.18649 25H20.2809C20.9025 24.9993 21.4984 24.752 21.9379 24.3125C22.3774 23.873 22.6246 23.2771 22.6254 22.6556V7.22222C22.6236 6.64001 22.4047 6.0794 22.0115 5.65ZM20.5309 6.34722H17.6532C17.5498 6.34686 17.4476 6.32606 17.3523 6.28601C17.257 6.24596 17.1706 6.18745 17.0981 6.11387C17.0255 6.04028 16.9683 5.95306 16.9296 5.85724C16.8909 5.76142 16.8715 5.65889 16.8726 5.55556V2.34444L20.5309 6.34722ZM20.2809 23.4389H3.18649C2.97873 23.4389 2.77949 23.3564 2.63259 23.2095C2.48568 23.0626 2.40315 22.8633 2.40315 22.6556V2.34444C2.40315 2.13669 2.48568 1.93745 2.63259 1.79054C2.77949 1.64364 2.97873 1.56111 3.18649 1.56111H15.3087V5.55556C15.3094 6.17712 15.5567 6.77301 15.9962 7.21252C16.4357 7.65203 17.0316 7.89926 17.6532 7.9H21.0643V22.6556C21.0635 22.8631 20.9808 23.0619 20.834 23.2086C20.6873 23.3554 20.4885 23.4382 20.2809 23.4389Z",
+              fill: "white",
+            })
+          );
+        }
+        function Font(props) {
+          const { className } = props,
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
+              "className",
+            ]);
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            {
+              width: "24",
+              height: "25",
+              viewBox: "0 0 24 25",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M5.83642 17.6544L11.1103 8.49123C11.3014 8.11205 11.3354 7.67284 11.2048 7.2688C11.0743 6.86477 10.7898 6.52846 10.4129 6.33279C10.0085 6.09741 9.52857 6.02807 9.07408 6.13935C8.71066 6.24593 8.40357 6.49087 8.21885 6.82149L4.65539 13.027C4.58789 13.1445 4.56981 13.2839 4.60513 13.4147C4.64045 13.5455 4.72628 13.6569 4.84375 13.7244C4.96121 13.7919 5.10067 13.81 5.23146 13.7747C5.36226 13.7394 5.47366 13.6535 5.54116 13.5361L9.10462 7.33056C9.15274 7.23444 9.23692 7.16124 9.33879 7.12693C9.43346 7.10335 9.53194 7.09931 9.62821 7.11507C9.72449 7.13082 9.81655 7.16604 9.89876 7.21856C10.0402 7.28047 10.153 7.39363 10.2143 7.5353C10.2757 7.67697 10.2812 7.83663 10.2297 7.98216L4.95574 17.1453C4.85186 17.316 4.7119 17.4618 4.5457 17.5726C4.37949 17.6834 4.19106 17.7565 3.99361 17.7868C3.51917 17.8652 3.03226 17.7733 2.61913 17.5271C1.74354 17.0181 1.36174 15.9999 1.77917 15.3025L7.29744 5.71682C7.61091 5.20551 8.11435 4.83937 8.69737 4.69869C9.53455 4.49469 10.4184 4.63011 11.1562 5.0754C12.5968 5.90518 13.1924 7.55964 12.5154 8.75594L10.5555 12.1514C10.5186 12.2093 10.4939 12.2741 10.4827 12.3419C10.4716 12.4096 10.4743 12.4789 10.4906 12.5456C10.507 12.6123 10.5366 12.675 10.5778 12.7299C10.619 12.7849 10.6709 12.8309 10.7303 12.8652C10.7897 12.8996 10.8555 12.9216 10.9237 12.9299C10.9918 12.9381 11.061 12.9325 11.1269 12.9134C11.1928 12.8943 11.2542 12.862 11.3074 12.8185C11.3605 12.7751 11.4043 12.7213 11.4361 12.6605L13.396 9.26501C14.3684 7.58 13.5946 5.30448 11.6652 4.17435C10.6915 3.59863 9.53056 3.4286 8.43265 3.70092C8.00868 3.80714 7.61018 3.99694 7.26052 4.25918C6.91086 4.52143 6.61708 4.85085 6.39639 5.22812L0.883219 14.7935C0.190891 15.9999 0.735591 17.6188 2.11007 18.4078C2.58193 18.6822 3.1169 18.8296 3.66271 18.8354C3.8334 18.8348 4.00372 18.8194 4.17178 18.7896C4.51534 18.7335 4.84242 18.6028 5.13002 18.4066C5.41762 18.2105 5.65874 17.9537 5.83642 17.6544Z",
+              fill: "white",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M23.6994 4.07252L19.9272 0.300349C19.8325 0.205068 19.7199 0.129475 19.5958 0.0779264C19.4717 0.0263781 19.3387 -0.000106136 19.2044 3.19658e-07H5.96866C5.6194 0.00268705 5.28535 0.143319 5.03933 0.391246C4.79331 0.639173 4.65526 0.974294 4.65527 1.32357V4.58159C4.65527 4.7166 4.70891 4.84608 4.80438 4.94155C4.89984 5.03702 5.02933 5.09065 5.16434 5.09065C5.29935 5.09065 5.42883 5.03702 5.5243 4.94155C5.61977 4.84608 5.6734 4.7166 5.6734 4.58159V1.32357C5.6734 1.24256 5.70558 1.16487 5.76286 1.10759C5.82015 1.05031 5.89784 1.01813 5.97884 1.01813H19.2145L22.9816 4.7903V23.1166C22.9816 23.1977 22.9494 23.2753 22.8922 23.3326C22.8349 23.3899 22.7572 23.4221 22.6762 23.4221H5.97884C5.89784 23.4221 5.82015 23.3899 5.76286 23.3326C5.70558 23.2753 5.6734 23.1977 5.6734 23.1166V19.8535C5.6734 19.7185 5.61977 19.589 5.5243 19.4936C5.42883 19.3981 5.29935 19.3445 5.16434 19.3445C5.02933 19.3445 4.89984 19.3981 4.80438 19.4936C4.70891 19.589 4.65527 19.7185 4.65527 19.8535V23.1116C4.65527 23.4626 4.79472 23.7992 5.04294 24.0475C5.29116 24.2957 5.62781 24.4351 5.97884 24.4351H22.6762C23.0268 24.4338 23.3627 24.2939 23.6106 24.046C23.8585 23.7981 23.9984 23.4622 23.9997 23.1116V4.78521C23.9973 4.51739 23.8894 4.26133 23.6994 4.07252Z",
+              fill: "white",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M20.4365 18.3264H9.23706V19.3445H20.4365V18.3264Z",
+              fill: "white",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M20.4365 14.2538H13.3096V15.2719H20.4365V14.2538Z",
+              fill: "white",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M20.4364 10.1813H15.3457V11.1995H20.4364V10.1813Z",
+              fill: "white",
+            })
           );
         }
 
@@ -87880,8 +88087,9 @@ object-assign
          * Updates any stylesheest in the provided map within the specified document, adding any that are not present at all.
          */
         function UpdateStylesheetsInDocument(doc, styleSheetLinks) {
-          // Strips query params
-          const normalizeHref = (href) => href.split("?")[0];
+          // Strips query params and replaces backslashes with forward slashes
+          const normalizeHref = (href) =>
+            decodeURI(href.split("?")[0]).replace(/\\/g, "/");
           // Normalize query params off of links so we can update with cache busting rather than just prepending like AddStylesheetsToDocument does
           const normalizedLinks = Object.keys(styleSheetLinks).reduce(
             (normalized, href) => {
@@ -89119,7 +89327,9 @@ object-assign
           const rgLocales =
             _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales();
           const bUse24HourClock =
-            options.bForce24HourClock ||
+            (options === null || options === void 0
+              ? void 0
+              : options.bForce24HourClock) ||
             BDoesLocaleUse24Hourclock(rgLocales[0]); // Just check the first locale.
           const mergedFormatOptions = Object.assign(
             Object.assign(
@@ -90985,31 +91195,35 @@ function TestLocalizeCalendarTime()
           /* harmony export */ BConfigContextInGamepadUI: () =>
             /* binding */ BConfigContextInGamepadUI,
           /* harmony export */ BIsInPresentationMode: () =>
-            /* binding */ BIsInPresentationMode,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.BIsInPresentationMode,
           /* harmony export */ BroadcastConfig: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.BroadcastConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.BroadcastConfig,
           /* harmony export */ CommunityConfig: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.CommunityConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.CommunityConfig,
           /* harmony export */ Config: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config,
           /* harmony export */ ConfigContext: () => /* binding */ ConfigContext,
           /* harmony export */ ConfigContextRoot: () =>
             /* binding */ ConfigContextRoot,
           /* harmony export */ EventConfig: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.EventConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.EventConfig,
           /* harmony export */ GET_BASE_URL: () => /* binding */ GET_BASE_URL,
           /* harmony export */ GET_BASE_WEB_PROPERTY: () =>
             /* binding */ GET_BASE_WEB_PROPERTY,
           /* harmony export */ GenerateNewSessionID: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.GenerateNewSessionID,
-          /* harmony export */ GetConfigJSON: () => /* binding */ GetConfigJSON,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.GenerateNewSessionID,
+          /* harmony export */ GetConfigJSON: () =>
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.GetConfigJSON,
           /* harmony export */ GetOptionalConfigJSON: () =>
-            /* binding */ GetOptionalConfigJSON,
-          /* harmony export */ InitConfig: () => /* binding */ InitConfig,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.GetOptionalConfigJSON,
+          /* harmony export */ GetSessionID: () =>
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.GetSessionID,
+          /* harmony export */ InitConfig: () =>
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.InitConfig,
           /* harmony export */ InitConfigAsync: () =>
             /* binding */ InitConfigAsync,
           /* harmony export */ UserConfig: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.UserConfig,
           /* harmony export */ useConfigContext: () =>
             /* binding */ useConfigContext,
           /* harmony export */ useInDesktopUI: () =>
@@ -91031,13 +91245,13 @@ function TestLocalizeCalendarTime()
           __webpack_require__(
             /*! shared/utils/assert */ "../../../web_src/shared/js/utils/assert.ts"
           );
-        /* harmony import */ var shared_utils_cookies__WEBPACK_IMPORTED_MODULE_2__ =
-          __webpack_require__(
-            /*! shared/utils/cookies */ "../../../web_src/shared/js/utils/cookies.ts"
-          );
-        /* harmony import */ var shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__ =
+        /* harmony import */ var shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__ =
           __webpack_require__(
             /*! shared/webui/configconstants */ "../../../web_src/shared/js/webui/configconstants.ts"
+          );
+        /* harmony import */ var shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__ =
+          __webpack_require__(
+            /*! shared/webui/coreconfig */ "../../../web_src/shared/js/webui/coreconfig.ts"
           );
 
         const ConfigContext =
@@ -91063,7 +91277,7 @@ function TestLocalizeCalendarTime()
               IN_GAMEPADUI:
                 IN_GAMEPADUI !== null && IN_GAMEPADUI !== void 0
                   ? IN_GAMEPADUI
-                  : shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+                  : shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
                       .Config.IN_GAMEPADUI,
               IN_DESKTOPUI:
                 IN_DESKTOPUI !== null && IN_DESKTOPUI !== void 0
@@ -91103,95 +91317,13 @@ function TestLocalizeCalendarTime()
          * @returns boolean
          */
         function useOnDeck() {
-          return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+          return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
             .Config.ON_DECK;
         }
         function BConfigContextInGamepadUI(configContext) {
           return configContext === null || configContext === void 0
             ? void 0
             : configContext.IN_GAMEPADUI;
-        }
-        const CONFIG_ELEMENT_ID = "webui_config";
-        // Helper method to determine if we are in presentation mode. Only supported where we can read a cookie.
-        const k_PresentationModeCookie = "presentation_mode";
-        function BIsInPresentationMode() {
-          let strPresentationMode = null;
-          if (
-            (0,
-            shared_utils_cookies__WEBPACK_IMPORTED_MODULE_2__.BCanAccessCookies)()
-          ) {
-            strPresentationMode = (0,
-            shared_utils_cookies__WEBPACK_IMPORTED_MODULE_2__.GetCookie)(
-              k_PresentationModeCookie
-            );
-          }
-          return Boolean(
-            strPresentationMode && Number.parseInt(strPresentationMode) === 1
-          );
-        }
-        /**
-         * Initialize global & webpack config with data from PHP
-         */
-        function InitConfig(strConfigElement = CONFIG_ELEMENT_ID) {
-          const rgConfigsLoaded = {};
-          const rgConfig = GetConfigJSON("config", strConfigElement);
-          if (rgConfig) {
-            delete rgConfig.SESSIONID; // no longer read from page
-            Object.assign(
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config,
-              rgConfig
-            );
-            rgConfigsLoaded.config = true;
-          }
-          const rgUserConfig = GetConfigJSON("userinfo", strConfigElement);
-          if (rgUserConfig) {
-            Object.assign(
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig,
-              rgUserConfig
-            );
-            rgConfigsLoaded.userConfig = true;
-            // Presentation Mode: Remove our support user status so that we can present a feature for a recording
-            // or screen capture as if we are regular users and prevent the various react widgets from showing support
-            // or valve only features.
-            if (
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
-                .UserConfig.is_support &&
-              BIsInPresentationMode()
-            ) {
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig.is_support = false;
-            }
-          }
-          const rgBroadcastConfig = GetConfigJSON(
-            "broadcast",
-            strConfigElement
-          );
-          if (rgBroadcastConfig) {
-            Object.assign(
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.BroadcastConfig,
-              rgBroadcastConfig
-            );
-            rgConfigsLoaded.broadcastConfig = true;
-          }
-          const rgCommunityConfig = GetConfigJSON(
-            "community",
-            strConfigElement
-          );
-          if (rgCommunityConfig) {
-            Object.assign(
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.CommunityConfig,
-              rgCommunityConfig
-            );
-            rgConfigsLoaded.communityConfig = true;
-          }
-          const rgEventConfig = GetConfigJSON("event", strConfigElement);
-          if (rgEventConfig) {
-            Object.assign(
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.EventConfig,
-              rgEventConfig
-            );
-            rgConfigsLoaded.eventConfig = true;
-          }
-          return rgConfigsLoaded;
         }
         function InitConfigAsync(axios, baseUrl, options) {
           return (0, tslib__WEBPACK_IMPORTED_MODULE_4__.__awaiter)(
@@ -91205,7 +91337,7 @@ function TestLocalizeCalendarTime()
                 if (rgConfig) {
                   delete rgConfig.SESSIONID; // no longer read from page
                   Object.assign(
-                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config,
+                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config,
                     rgConfig
                   );
                 }
@@ -91218,54 +91350,13 @@ function TestLocalizeCalendarTime()
                 const rgUserConfig = userResponse.data;
                 if (rgUserConfig) {
                   Object.assign(
-                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig,
+                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.UserConfig,
                     rgUserConfig
                   );
                 }
               }
             }
           );
-        }
-        function GetConfigJSONInternal(
-          attr,
-          IdOrElement = CONFIG_ELEMENT_ID,
-          bLogOnMissingConfigElement
-        ) {
-          let elConfig;
-          if (typeof IdOrElement === "string")
-            elConfig =
-              !{ NODE_ENV: "development", STEAM_BUILD: "dev" }.MOBILE_BUILD &&
-              document.getElementById(IdOrElement);
-          else elConfig = IdOrElement;
-          if (elConfig) {
-            try {
-              if (elConfig.hasAttribute("data-" + attr)) {
-                let rgConfig = JSON.parse(
-                  elConfig.getAttribute("data-" + attr)
-                );
-                return rgConfig;
-              }
-              return null;
-            } catch (e) {
-              console.error("Failed to parse config", e);
-            }
-          } else {
-            if (bLogOnMissingConfigElement)
-              console.error("Missing config element #", IdOrElement);
-          }
-          return undefined;
-        }
-        function GetConfigJSON(attr, IdOrElement = CONFIG_ELEMENT_ID) {
-          return GetConfigJSONInternal(attr, IdOrElement, true);
-        }
-        /**
-         * Read a blob of JSON out of a data attribute on the web page. Returns undefined and does
-         * not log an error if the attribute is not found. Use this version if your code is supposed
-         * to run on the client, and then handle the error case.
-         * @param attr The name of the data attribute on CONFIG_ELEMENT_ID
-         */
-        function GetOptionalConfigJSON(attr, IdOrElement = CONFIG_ELEMENT_ID) {
-          return GetConfigJSONInternal(attr, IdOrElement, false);
         }
         function BBaseURLMatches(currentURL, strBaseURL) {
           return strBaseURL.length != 0 && currentURL.startsWith(strBaseURL);
@@ -91281,83 +91372,83 @@ function TestLocalizeCalendarTime()
           if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .STORE_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.STORE_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .COMMUNITY_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.COMMUNITY_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .CHAT_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.CHAT_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .PARTNER_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.PARTNER_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .HELP_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.HELP_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .STEAMTV_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.STEAMTV_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .STATS_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.STATS_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .INTERNAL_STATS_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.INTERNAL_STATS_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .STORE_CHECKOUT_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
               .Config.STORE_CHECKOUT_BASE_URL;
           } else if (
             BBaseURLMatches(currentURL, "https://steamloopback.host")
@@ -91371,12 +91462,12 @@ function TestLocalizeCalendarTime()
           if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .STORE_BASE_URL
             ) ||
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .STORE_CHECKOUT_BASE_URL
             )
           ) {
@@ -91384,7 +91475,7 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .COMMUNITY_BASE_URL
             )
           ) {
@@ -91392,7 +91483,7 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .PARTNER_BASE_URL
             )
           ) {
@@ -91400,7 +91491,7 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .HELP_BASE_URL
             )
           ) {
@@ -91408,7 +91499,7 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .STEAMTV_BASE_URL
             )
           ) {
@@ -91416,12 +91507,12 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .STATS_BASE_URL
             ) ||
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
                 .INTERNAL_STATS_BASE_URL
             )
           ) {
@@ -91451,22 +91542,12 @@ function TestLocalizeCalendarTime()
             /* binding */ CommunityConfig,
           /* harmony export */ Config: () => /* binding */ Config,
           /* harmony export */ EventConfig: () => /* binding */ EventConfig,
-          /* harmony export */ GenerateNewSessionID: () =>
-            /* binding */ GenerateNewSessionID,
           /* harmony export */ UserConfig: () => /* binding */ UserConfig,
           /* harmony export */
         });
-        /* harmony import */ var shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_0__ =
+        /* harmony import */ var shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
-            /*! shared/utils/mathutils */ "../../../web_src/shared/js/utils/mathutils.ts"
-          );
-        /* harmony import */ var shared_utils_cookies__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! shared/utils/cookies */ "../../../web_src/shared/js/utils/cookies.ts"
-          );
-        /* harmony import */ var shared_clientenums__WEBPACK_IMPORTED_MODULE_2__ =
-          __webpack_require__(
-            /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
+            /*! shared/webui/coreconfig */ "../../../web_src/shared/js/webui/coreconfig.ts"
           );
 
         /**
@@ -91516,9 +91597,7 @@ function TestLocalizeCalendarTime()
           PLATFORM: "",
           /** SNR code if available for the current page. It should be appended to all outward links */
           SNR: "",
-          LAUNCHER_TYPE:
-            shared_clientenums__WEBPACK_IMPORTED_MODULE_2__.ELauncherType
-              .k_ELauncherTypeDefault,
+          LAUNCHER_TYPE: 0,
           EREALM: 0,
           /** technically Linux underneath, so needs its own flag to distinguish */
           IN_CHROMEOS: false,
@@ -91538,7 +91617,8 @@ function TestLocalizeCalendarTime()
           WEBSITE_ID: "Unknown",
           // this used to be part of config, but reading the cookie is best.  Defined as a getter for backwards compatibility.
           get SESSIONID() {
-            return GetSessionID();
+            return (0,
+            shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_0__.GetSessionID)();
           },
           // web chat specific, could move to a specialized config struct
           FRIENDSUI_BETA: false,
@@ -91551,8 +91631,6 @@ function TestLocalizeCalendarTime()
           IN_GAMEPADUI: false,
           /** Whether we're using a shared js context or not.  Always true for gamepadui. */
           IN_STEAMUI_SHARED_CONTEXT: false,
-          /** Whether there is only one shared js context.  To be removed once we ship -steamuisharedjscontext. */
-          ONE_STEAMUI_SHARED_CONTEXT: false,
           /** Whether GamepadUI is in Steam Deck override mode and should display similarly to device on desktop */
           DECK_DISPLAY_MODE: false,
           /** Whether we are running on the Steam Deck device (in gamepadui mode or not).  Can be emulated with -steamdeck. */
@@ -91616,6 +91694,49 @@ function TestLocalizeCalendarTime()
           ANNOUNCEMENT_GID: "",
           TAKEOVER_ANNOUNCEMENT_GID: "", // used by content hubs page that for a limited time override the default hub (think theme for sale event)
         };
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/webui/coreconfig.ts":
+      /*!******************************************************!*\
+  !*** ../../../web_src/shared/js/webui/coreconfig.ts ***!
+  \******************************************************/
+      /***/ (
+        __unused_webpack_module,
+        __webpack_exports__,
+        __webpack_require__
+      ) => {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ BIsInPresentationMode: () =>
+            /* binding */ BIsInPresentationMode,
+          /* harmony export */ GenerateNewSessionID: () =>
+            /* binding */ GenerateNewSessionID,
+          /* harmony export */ GetConfigJSON: () => /* binding */ GetConfigJSON,
+          /* harmony export */ GetOptionalConfigJSON: () =>
+            /* binding */ GetOptionalConfigJSON,
+          /* harmony export */ GetSessionID: () => /* binding */ GetSessionID,
+          /* harmony export */ InitConfig: () => /* binding */ InitConfig,
+          /* harmony export */
+        });
+        /* harmony import */ var shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            /*! shared/utils/mathutils */ "../../../web_src/shared/js/utils/mathutils.ts"
+          );
+        /* harmony import */ var shared_utils_cookies__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            /*! shared/utils/cookies */ "../../../web_src/shared/js/utils/cookies.ts"
+          );
+        /* harmony import */ var shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__ =
+          __webpack_require__(
+            /*! shared/webui/configconstants */ "../../../web_src/shared/js/webui/configconstants.ts"
+          );
+
+        // THIS FILE IS INCLUDED EVERYWHERE IN EVERY APPICATION
+        // please be careful if adding dependencies
+        const CONFIG_ELEMENT_ID = "webui_config";
         let g_fallbackSessionID;
         /**
          * Read sessionid value from cookie.
@@ -91665,6 +91786,128 @@ function TestLocalizeCalendarTime()
             0
           );
           return strSessionID;
+        }
+        /**
+         * Initialize global & webpack config with data from PHP
+         */
+        function InitConfig(strConfigElement = CONFIG_ELEMENT_ID) {
+          const rgConfigsLoaded = {};
+          const rgConfig = GetConfigJSON("config", strConfigElement);
+          if (rgConfig) {
+            delete rgConfig.SESSIONID; // no longer read from page
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config,
+              rgConfig
+            );
+            rgConfigsLoaded.config = true;
+          }
+          const rgUserConfig = GetConfigJSON("userinfo", strConfigElement);
+          if (rgUserConfig) {
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.UserConfig,
+              rgUserConfig
+            );
+            rgConfigsLoaded.userConfig = true;
+            // Presentation Mode: Remove our support user status so that we can present a feature for a recording
+            // or screen capture as if we are regular users and prevent the various react widgets from showing support
+            // or valve only features.
+            if (
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+                .UserConfig.is_support &&
+              BIsInPresentationMode()
+            ) {
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.UserConfig.is_support = false;
+            }
+          }
+          const rgBroadcastConfig = GetConfigJSON(
+            "broadcast",
+            strConfigElement
+          );
+          if (rgBroadcastConfig) {
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.BroadcastConfig,
+              rgBroadcastConfig
+            );
+            rgConfigsLoaded.broadcastConfig = true;
+          }
+          const rgCommunityConfig = GetConfigJSON(
+            "community",
+            strConfigElement
+          );
+          if (rgCommunityConfig) {
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.CommunityConfig,
+              rgCommunityConfig
+            );
+            rgConfigsLoaded.communityConfig = true;
+          }
+          const rgEventConfig = GetConfigJSON("event", strConfigElement);
+          if (rgEventConfig) {
+            Object.assign(
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.EventConfig,
+              rgEventConfig
+            );
+            rgConfigsLoaded.eventConfig = true;
+          }
+          return rgConfigsLoaded;
+        }
+        function GetConfigJSON(attr, IdOrElement = CONFIG_ELEMENT_ID) {
+          return GetConfigJSONInternal(attr, IdOrElement, true);
+        }
+        /**
+         * Read a blob of JSON out of a data attribute on the web page. Returns undefined and does
+         * not log an error if the attribute is not found. Use this version if your code is supposed
+         * to run on the client, and then handle the error case.
+         * @param attr The name of the data attribute on CONFIG_ELEMENT_ID
+         */
+        function GetOptionalConfigJSON(attr, IdOrElement = CONFIG_ELEMENT_ID) {
+          return GetConfigJSONInternal(attr, IdOrElement, false);
+        }
+        function GetConfigJSONInternal(
+          attr,
+          IdOrElement = CONFIG_ELEMENT_ID,
+          bLogOnMissingConfigElement
+        ) {
+          let elConfig;
+          if (typeof IdOrElement === "string")
+            elConfig =
+              !{ NODE_ENV: "development", STEAM_BUILD: "dev" }.MOBILE_BUILD &&
+              document.getElementById(IdOrElement);
+          else elConfig = IdOrElement;
+          if (elConfig) {
+            try {
+              if (elConfig.hasAttribute("data-" + attr)) {
+                let rgConfig = JSON.parse(
+                  elConfig.getAttribute("data-" + attr)
+                );
+                return rgConfig;
+              }
+              return null;
+            } catch (e) {
+              console.error("Failed to parse config", e);
+            }
+          } else {
+            if (bLogOnMissingConfigElement)
+              console.error("Missing config element #", IdOrElement);
+          }
+          return undefined;
+        }
+        // Helper method to determine if we are in presentation mode. Only supported where we can read a cookie.
+        const k_PresentationModeCookie = "presentation_mode";
+        function BIsInPresentationMode() {
+          let strPresentationMode = null;
+          if (
+            (0,
+            shared_utils_cookies__WEBPACK_IMPORTED_MODULE_1__.BCanAccessCookies)()
+          ) {
+            strPresentationMode = (0,
+            shared_utils_cookies__WEBPACK_IMPORTED_MODULE_1__.GetCookie)(
+              k_PresentationModeCookie
+            );
+          }
+          return Boolean(
+            strPresentationMode && Number.parseInt(strPresentationMode) === 1
+          );
         }
 
         /***/
@@ -93077,4 +93320,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=981b0e2def6570df9500
+//# sourceMappingURL=friends.js.map?contenthash=ad6c37e9915d26a7c119

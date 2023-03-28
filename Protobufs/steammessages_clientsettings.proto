@@ -53,6 +53,7 @@ message CMsgClientSettings {
 	optional bool small_mode = 16 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Software\\Valve\\Steam\\SmallMode"];
 	optional bool disable_all_toasts = 17 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableAllToasts"];
 	optional bool disable_toasts_in_game = 18 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableToastsInGame"];
+	optional bool skip_steamvr_install_dialog = 19 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\SteamVRHMDVGUIWarning"];
 	optional bool show_family_sharing_notifications = 3000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "HideSharingNotifications"];
 	optional int32 overlay_fps_counter_corner = 4000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSCorner"];
 	optional bool overlay_fps_counter_high_contrast = 4001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSContrast"];
@@ -68,6 +69,11 @@ message CMsgClientSettings {
 	optional int32 server_ping_rate = 4011 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 steam_networking_share_ip = 4012 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional string web_browser_home = 4013 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional string voice_mic_device_name = 4014 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional float voice_mic_input_gain = 4015 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional float voice_speaker_output_gain = 4016 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 voice_push_to_talk_setting = 4017 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional .CMsgHotkey voice_push_to_talk_key = 4018 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool smooth_scroll_webviews = 5000 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\SmoothScrollWebViews", (setting_default_bool) = true];
 	optional bool enable_gpu_accelerated_webviews = 5001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_hardware_video_decoding = 5003 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -104,7 +110,7 @@ message CMsgClientSettings {
 	optional bool music_pause_on_voice_chat = 11002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\PauseOnVoiceChat"];
 	optional bool music_download_high_quality = 11003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\DownloadHighQualityAudioSoundtracks"];
 	optional bool music_playlist_notification = 11004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\PlaylistNowPlayingNotification"];
-	optional int32 broadcast_permissions = 12000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\Permissions"];
+	optional int32 broadcast_permissions = 12000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\Permissions", (setting_default_int) = 1];
 	optional int32 broadcast_output_width = 12001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\OutputWidth"];
 	optional int32 broadcast_output_height = 12002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\OutputHeight"];
 	optional int32 broadcast_bitrate = 12003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\MaxKbps"];
@@ -113,8 +119,8 @@ message CMsgClientSettings {
 	optional bool broadcast_record_all_audio = 12006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\RecordSystemAudio"];
 	optional bool broadcast_record_microphone = 12007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\RecordMic"];
 	optional bool broadcast_show_upload_stats = 12008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowDebugInfo"];
-	optional bool broadcast_show_live_reminder = 12009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowReminder"];
-	optional int32 broadcast_chat_corner = 12010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowChat"];
+	optional bool broadcast_show_live_reminder = 12009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowReminder", (setting_default_bool) = true];
+	optional int32 broadcast_chat_corner = 12010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowChat", (setting_default_int) = 1];
 	optional bool steam_input_configurator_error_msg_enable = 14001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamInput/Configurator/ErrorMsgEnabled"];
 	optional bool controller_guide_button_focus_steam = 14002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Controller_CheckGuideButton"];
 	optional bool controller_ps4_support = 14003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_PS4Support"];

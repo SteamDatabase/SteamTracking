@@ -2431,6 +2431,7 @@
 	"ServerBrowser_IPAddress": "IP-Adresse",
 	"ServerBrowser_Game": "Spiel",
 	"ServerBrowser_Players": "Spieler",
+	"ServerBrowser_ServerName": "Servername",
 	"ServerBrowser_Map": "Karte",
 	"ServerBrowser_Latency": "Latenz",
 	"ServerBrowser_Internet": "Internet",

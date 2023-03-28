@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-`o
-`o
+o
+o
 __stubs
 __TEXT
 __stub_helper
@@ -362,7 +362,6 @@ ERROR! Failed to request AppInfo update, not online or not logged in to Steam.
 ERROR! Timed out waiting for AppInfo update.
 ERROR! Timed out waiting for password check.
 @NoPromptForPassword
-anonymous
 see 'login'
 <username> [<password>] [<Steam guard code>] - login to Steam
 set_steam_guard_code
@@ -446,7 +445,7 @@ run_app_build_http
 run_app_build_http : alias for run_app_build
 build_installer
 <project file> <target folder> [beta key] [beta pwd]
-build_backup
+app_backup
 <appid> <target folder> [max folder size MB]
 verify_chunk_store
 verify_chunk_store <appid> <depotid> <datafile> : run app depot build as specified in appbuildfile
@@ -504,9 +503,9 @@ Successfully finished AppID %u build preview.
 ERROR! Failed to commit build for AppID %u : %s
 Successfully finished AppID %u build (BuildID %d).
 CAppInstallerBuilder::OnAppBackupStatus
-ERROR! Failed to begin installer build
+ERROR! Failed to begin installer build (%s)
 ERROR! Installer build failed (%s)
-ERROR! Failed to begin backup build
+ERROR! Failed to begin backup build (%s)
 ERROR! Backup build failed (%s)
 Chunk store "%s" successfully verified. %u of %u chunks failed
 Failed to verify chunk store "%s".
@@ -1201,6 +1200,8 @@ Missing game files
 Compat tool failed
 Install path removed
 Invalid backup path
+Invalid Passcode
+Self udpating
 Logged Off
 Connecting
 Connected

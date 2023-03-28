@@ -210,6 +210,10 @@
             "argc": "3"
         },
         {
+            "name": "GetFocusedGameWindow",
+            "argc": "3"
+        },
+        {
             "name": "SetControllerConfigFileForAppID",
             "argc": "3"
         },
@@ -407,6 +411,10 @@
         },
         {
             "name": "SteamRuntimeSystemInfo",
+            "argc": "2"
+        },
+        {
+            "name": "DumpHTTPClients",
             "argc": "2"
         }
     ]

@@ -56,7 +56,7 @@
 "Steam_AccountName"	"Nome da conta"
 "Steam_Twofactor_Code"			"Código do Steam Guard"
 "Steam_ErrorLoginNeedTwoFactor" "Introduz o teu código atual do autenticador do Steam Guard."
-"Steam_ErrorLoginBadTwoFactor" "O código de dois passos é inválido.\nIntroduz o teu código atual do autenticador do Steam Guard."
+"Steam_ErrorLoginBadTwoFactor" "O código de dois fatores é inválido.\nIntroduz o teu código atual do autenticador do Steam Guard."
 
 "SteamGuardBanner"				"Steam Guard com Tecnologia de Proteção de Identidade da Intel®"
 "LoginIPTNotDetected"			"Processador Intel® Core™ de 2ª Geração não detetado.\nEsta conta não pode ser utilizada neste computador."

@@ -973,7 +973,6 @@ enum EMsg {
 	k_EMsgClientP2PConnectionFailInfo = 5435;
 	k_EMsgClientGetDepotDecryptionKey = 5438;
 	k_EMsgClientGetDepotDecryptionKeyResponse = 5439;
-	k_EMsgGSPerformHardwareSurvey = 5440;
 	k_EMsgClientEnableTestLicense = 5443;
 	k_EMsgClientEnableTestLicenseResponse = 5444;
 	k_EMsgClientDisableTestLicense = 5445;

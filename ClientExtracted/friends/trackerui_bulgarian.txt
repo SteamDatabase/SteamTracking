@@ -688,7 +688,7 @@
 "Friends_BroadcastApprove_Or" "или"
 "Friends_BroadcastApprove_Ignore" "ИГНОРИРАНЕ"
 
-"Broadcast_FirstTime_Header" "Добре дошли в Steam „Предаване“! Вече можете да гледате други потребители и предавате собствените си игри в Steam."
+"Broadcast_FirstTime_Header" "Добре дошли в Steam „Предаване“! Вече можете да гледате други потребители и да предавате собствените си игри в Steam."
 "Broadcast_FirstTime_PermissionHeader" "Отделете минутка, за да зададете предпочитанията си…"
 "Broadcast_FirstTime_DesktopOnly" "По подразбиране, само съдържанието от играта Ви може да бъде гледано. Работният Ви плот няма да бъде предаван."
 "Broadcast_FirstTime_FAQ" "Прочетете ЧЗВ за Steam „Предаване“"

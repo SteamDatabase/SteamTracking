@@ -4,7 +4,7 @@
 "Tokens"
 {
 "Overlay_Splash_Hotkey"		"按下 %hotkey% 以開始"
-"Overlay_Splash_Message"		"在遊戲進行中使用 Steam 社群。"
+"Overlay_Splash_Message"		"在遊戲中存取 Steam 社群。"
 
 "Overlay_SettingsTabTitle"	"遊戲中"
 "Overlay_SettingsTabTitleApp"	"程式中"

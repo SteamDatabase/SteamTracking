@@ -1134,12 +1134,6 @@
         "name": "k_EMsgClientGetDepotDecryptionKeyResponse"
     },
     {
-        "emsg": 5440,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgGSPerformHardwareSurvey"
-    },
-    {
         "emsg": 5443,
         "flags": 2,
         "server_type": -1,

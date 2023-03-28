@@ -221,7 +221,6 @@
  std::exception::what() const
  std::exception::~exception()
  std::terminate()
- strcasecmp
  strchr
  strcmp
  strcpy

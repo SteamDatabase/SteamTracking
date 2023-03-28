@@ -429,6 +429,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Status_OfflineMode"					"オフラインモード"
 "Steam_Status_NoConnection"					"接続されていません"
 "Steam_Status_OneItemDownloading" 	"ダウンロード中 "
+"Steam_Status_OneItemTransferring" 	"転送中 "
 "Steam_Status_DownloadsPaused" 	"ダウンロード一時停止"
 "Steam_Status_OneItemPaused" 				"キュー内に 1 アイテム"
 "Steam_Status_OneItemComplete"			"1アイテム完了 "
@@ -437,7 +438,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Status_ItemsComplete"	"%numcompl%／%numtotal% アイテム完了"
 "Steam_Status_DownloadsTitle"		"ダウンロード"
 "Steam_Status_GoToDownloadsPage"		"管理"
-"Steam_Status_PeerContentServer"		"転送中"
+"Steam_Status_PeerContentServer"		"ネットワーク転送をホスト中"
 
 "Steam_Time_ShowMostRecent"			"確認する範囲"
 "Steam_Time_5Minutes"				"5分"
@@ -4842,9 +4843,23 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_RunningConflictingSoftware" "競合するソフトウェアを検出しました"
 "SteamUI_RunningIncompatibleTcpService" "Steam プロセス内で %incompatdll% (%incompatname% 関連) \nの互換性のないバージョンを検出しました。Steam または個々のゲームの\n実行中にクラッシュやネットワークの遅延が発生した場合は、\nこのソフトウェアを更新またはアンインストールすることをお勧めします。"
 
+"Steam_XboxDriverInstall_Title"		"Xboxドライバーインストール"
+"Steam_XboxDriverInstall_Success"	"ドライバーが正常に更新されました。コンピューターを再起動すると有効になります。"
+"Steam_XboxDriverInstall_ServiceFailure"	"ドライバーの更新に失敗しました。最新のSteamを通常のユーザーとして実行中ですか？"
+"Steam_XboxDriverInstall_Failure"	"ドライバーの更新に失敗しました。エラー = %error%"
+
 "Steam_DualSense_FirmwareUpdate_Title"	"コントローラの新しいファームウェアが利用可能"
 "Steam_DualSense_FirmwareUpdate_Text"	"%product%の新しいファームウェアが利用できます。以下のリンクをクリックして、Sonyファームウェアアップデートページへ移動してください："
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"次から表示しない"
+
+"RescueDialog_Title" "Steamwebhelperが応答していません"
+"RescueDialog_Explanation" "Steamの重要なコンポーネントであるsteamwebhelper.exeが応答していません。Steam UIが使用できません。詳細は、<a href=\"about:blank\">こちら</a>をクリックしてくだい。"
+"RescueDialog_RadioHeader" "トラブルシューティング："
+"RescueDialog_RestartSteam" "Steamを再起動"
+"RescueDialog_RestartSteam_NoGPU" "GPUアクセラレーションを無効にしてSteamを再起動"
+"RescueDialog_RestartSteam_NoSandbox" "ブラウザーのサンドボックス機能を無効にしてSteamを再起動"
+"RescueDialog_RestartSteamWebHelper" "steamwebhelper.exeを再起動"
+"RescueDialog_ExitSteam" "Steamを終了"
 
 "DownloadRegion_default"				 "不明"
 "DownloadRegion_us_chicago"			"アメリカ－シカゴ"

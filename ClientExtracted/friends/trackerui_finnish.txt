@@ -513,7 +513,7 @@
 "Friends_Voice_ChangingDevice_Info"		"Windowsin ääniohjauspaneeli on nyt avoinna. Kun asetukset on muutettu, valitse OK."
 "Friends_Voice_ChangingDevice_Button"	"OK, asetukset on muutettu"
 "Friends_Voice_NoDeviceDetected"		"[ Tallennuslaitetta ei tunnistettu ]"
-"Friends_Voice_PushToTalkKey"			"Puhenäppäin"
+"Friends_Voice_PushToTalkKey"			"Puhepainike"
 "Friends_Voice_WhenActive"	"Puhelun ollessa käynnissä:"
 "Friends_Voice_AutoTransmit"	"Lähetä ääni automaattisesti, kun puhun"
 "Friends_Voice_PushToTalk"	"Lähetä ääni, kun painan puhenäppäintä"

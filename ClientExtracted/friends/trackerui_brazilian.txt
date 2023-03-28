@@ -520,7 +520,7 @@
 "Friends_Voice_PushToMute"	"Usar uma tecla para desativar voz"
 
 
-"Friends_DownloadNotification_Steam" "Steam"
+"Friends_DownloadNotification_Steam" "O Steam"
 "Friends_DownloadNotification_Info" "terminou de baixar"
 
 "Friends_PeerUploadNotification_Info" "Transferindo para"

@@ -43,7 +43,7 @@
         },
         {
             "name": "InitVR",
-            "argc": "5"
+            "argc": "4"
         },
         {
             "name": "StartSteamVR",
@@ -79,6 +79,18 @@
         },
         {
             "name": "GetWebSecret",
+            "argc": "1"
+        },
+        {
+            "name": "BSteamCanMakeVROverlays",
+            "argc": "1"
+        },
+        {
+            "name": "BServeVRGamepadUIOverlay",
+            "argc": "1"
+        },
+        {
+            "name": "BServeTenfootOverlay",
             "argc": "1"
         }
     ]

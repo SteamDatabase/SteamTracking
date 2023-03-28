@@ -429,6 +429,7 @@
 "Steam_Status_OfflineMode"					"오프라인 모드"
 "Steam_Status_NoConnection"					"연결할 수 없음"
 "Steam_Status_OneItemDownloading" 	"다운로드 중"
+"Steam_Status_OneItemTransferring" 	"전송 중 "
 "Steam_Status_DownloadsPaused" 	"다운로드 일시정지"
 "Steam_Status_OneItemPaused" 				"항목 1개 대기 중"
 "Steam_Status_OneItemComplete"			"1개 항목이 완료됨 "
@@ -437,7 +438,7 @@
 "Steam_Status_ItemsComplete"	"항목 %numtotal%개 중 %numcompl%개 완료됨"
 "Steam_Status_DownloadsTitle"		"다운로드"
 "Steam_Status_GoToDownloadsPage"		"관리"
-"Steam_Status_PeerContentServer"		"전송 중"
+"Steam_Status_PeerContentServer"		"네트워크 전송 호스팅 중"
 
 "Steam_Time_ShowMostRecent"			"표시 기간"
 "Steam_Time_5Minutes"				"5분"
@@ -809,7 +810,7 @@
 "SteamUI_Hungarian"		"헝가리어"
 "SteamUI_Romanian"			"루마니아어"
 "SteamUI_Bulgarian"			"불가리아어"
-"SteamUI_Turkish"			"터키어"
+"SteamUI_Turkish"			"튀르키예어"
 "SteamUI_Ukrainian"			"우크라이나어"
 
 // selection strings, pre-localized
@@ -838,7 +839,7 @@
 "SteamUI_Selection_Hungarian"		"Magyar (헝가리어)"
 "SteamUI_Selection_Romanian"			"Română (루마니아어)"
 "SteamUI_Selection_Bulgarian"			"български (불가리아어)"
-"SteamUI_Selection_Turkish"			"Türkçe (터키어)"
+"SteamUI_Selection_Turkish"			"Türkçe (튀르키예어)"
 "SteamUI_Selection_Arabic"			"العربية(아랍어)"
 "SteamUI_Selection_Ukrainian"			"Українська (우크라이나어)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (스페인어-중남미)"
@@ -4842,9 +4843,23 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_RunningConflictingSoftware" "충돌하는 소프트웨어 발견됨"
 "SteamUI_RunningIncompatibleTcpService" "Steam 프로세스 안에서 호환되지 않는\n%incompatdll% 버전이 발견되었습니다.(%incompatname%와/과 관련)\n\nSteam 또는 게임을 실행하는데 크래시 또는 네트워크 느림 형상을\n경험하고 계시면 이 소프트웨어를 업데이트하시던가 삭제하시는 것을 추천합니다."
 
+"Steam_XboxDriverInstall_Title"		"Xbox 드라이버 설치"
+"Steam_XboxDriverInstall_Success"	"드라이버를 성공적으로 업데이트했습니다. 컴퓨터를 다시 시작하면 활성화됩니다."
+"Steam_XboxDriverInstall_ServiceFailure"	"드라이버를 업데이트하지 못했습니다. Steam이 일반 사용자 계정으로 실행되고 있으며, Steam 서비스가 최신 버전으로 실행 중인가요?"
+"Steam_XboxDriverInstall_Failure"	"드라이브를 업데이트하지 못했습니다.(오류: %error%)"
+
 "Steam_DualSense_FirmwareUpdate_Title"	"새로운 컨트롤러 펌웨어 사용 가능"
 "Steam_DualSense_FirmwareUpdate_Text"	"%product%에 대한 새로운 펌웨어를 사용할 수 있습니다. 아래 링크를 클릭하여 Sony 펌웨어 업데이트 페이지로 이동하세요."
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"다시 보지 않기"
+
+"RescueDialog_Title" "Steamwebhelper가 응답하지 않습니다"
+"RescueDialog_Explanation" "핵심적인 Steam 구성 요소인 steamwebhelper.exe가 응답하지 않습니다. Steam UI를 사용할 수 없습니다. <a href=\"about:blank\">여기</a>를 클릭하여 더 자세한 정보를 확인하세요."
+"RescueDialog_RadioHeader" "문제 해결 방법:"
+"RescueDialog_RestartSteam" "Steam 다시 시작해 보세요."
+"RescueDialog_RestartSteam_NoGPU" "GPU 가속 기능을 비활성화한 상태로 Steam을 다시 시작해 보세요."
+"RescueDialog_RestartSteam_NoSandbox" "브라우저 샌드박싱을 비활성화한 상태로 Steam을 다시 시작해 보세요."
+"RescueDialog_RestartSteamWebHelper" "steamwebhelper.exe를 다시 실행해 보세요."
+"RescueDialog_ExitSteam" "Steam을 종료하세요."
 
 "DownloadRegion_default"				 "알 수 없음"
 "DownloadRegion_us_chicago"			"미국 - 시카고"

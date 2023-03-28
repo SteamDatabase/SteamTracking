@@ -448,7 +448,7 @@
 "Friends_GroupEvent_Title"					"%group% - evento iniciado"
 "Friends_GroupEvent_View"						"Ver evento"
 
-"Voice_Settings_NewTabTitle"		"Voz en la partida"
+"Voice_Settings_NewTabTitle"		"Voz en el juego"
 "Voice_Settings_TabTitle"		"Voz"
 "Steam_RepairAudioDescription"				"(Cuando se conectan o desconectan dispositivos de audio, puede ser necesario volver a detectar los activos)."
 "Steam_RepairAudioButton"		"Detectar disp. de audio"

@@ -29,7 +29,7 @@
 "SteamBootstrapper_InstallVerify"				"Επαλήθευση εγκατάστασης..."
 "SteamBootstrapper_DownloadComplete"			"Η λήψη ολοκληρώθηκε."
 "SteamBootstrapper_PercentComplete"			"%percent%%%"
-"SteamBootstrapper_NoNetwork"					"Το %appname% απαιτεί σύνδεση στο διαδίκτυο για να ενημερωθεί. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και προσπαθήστε ξανά."
+"SteamBootstrapper_NoNetwork"					"Το %appname% απαιτεί σύνδεση στο διαδίκτυο για να ενημερωθεί. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά."
 "SteamBootstrapper_FailedMkdir"				"Αδυναμία δημιουργίας φακέλου %dirname%, σφάλμα %errno%"
 "SteamBootstrapper_NotWriteable"				"Κατάλογος %dirname% μη εγγράψιμος."
 "SteamBootstrapper_FailedDownloadHTTPError"	"Αποτυχία λήψης: σφάλμα http %errno%"

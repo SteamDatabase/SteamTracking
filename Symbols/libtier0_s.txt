@@ -1,4 +1,5 @@
 
+ B CAdHocValidation::s_pFirst
  B g_VProfManager
  B g_VProfProfilesRunningCount
  B g_VProfile
@@ -16,8 +17,13 @@
  D g_ClockSpeedMillisecondsMultiplier
  D g_ClockSpeedSecondsMultiplier
  D g_pMemAllocSteam
+ D typeinfo for CAdHocValidation
+ D typeinfo for CAdHocValidation_SimpleCallback
  D typeinfo for SteamThreadTools::CThread
+ D vtable for CAdHocValidation_SimpleCallback
  D vtable for SteamThreadTools::CThread
+ R typeinfo name for CAdHocValidation
+ R typeinfo name for CAdHocValidation_SimpleCallback
  R typeinfo name for SteamThreadTools::CThread
  R typeinfo name for SteamVProf::CVProfManager
  T AllocateCrashMemoryReserve
@@ -33,6 +39,11 @@
  T BWritingFatalMiniDump
  T BWritingMiniDump
  T BWritingNonFatalMiniDump
+ T CAdHocValidation::CAdHocValidation()
+ T CAdHocValidation::StaticValidateAll(CValidator&)
+ T CAdHocValidation::~CAdHocValidation()
+ T CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
+ T CAdHocValidation_SimpleCallback::DoValidate(CValidator&) const
  T CTier0::ValidateGlobals(CValidator&)
  T CVProfile_ExitScope
  T CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)

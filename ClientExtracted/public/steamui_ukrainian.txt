@@ -427,6 +427,7 @@
 "Steam_Status_OfflineMode"					"Автономний режим"
 "Steam_Status_NoConnection"					"Відсутнє з’єднання"
 "Steam_Status_OneItemDownloading" 	"Триває завантаження"
+"Steam_Status_OneItemTransferring" 	"Отримання файлів через мережу "
 "Steam_Status_DownloadsPaused" 	"Завантаження призупинені"
 "Steam_Status_OneItemPaused" 				"Елементів у черзі: 1"
 "Steam_Status_OneItemComplete"			"Закінчено завантаження 1 елемента"
@@ -435,7 +436,7 @@
 "Steam_Status_ItemsComplete"	"Готово %numcompl% із %numtotal%"
 "Steam_Status_DownloadsTitle"		"Завантаження"
 "Steam_Status_GoToDownloadsPage"		"Управління"
-"Steam_Status_PeerContentServer"		"Перенесення"
+"Steam_Status_PeerContentServer"		"Передавання файлів через мережу"
 
 "Steam_Time_ShowMostRecent"			"Показати останні"
 "Steam_Time_5Minutes"				"5 хвилин"
@@ -4837,9 +4838,23 @@
 "SteamUI_RunningConflictingSoftware" "Виявлено конфліктне програмне забезпечення"
 "SteamUI_RunningIncompatibleTcpService" "Несумісна версія %incompatdll% (відноситься до %incompatname%)\nвиявлена всередині процесу Steam.\n\nМи рекомендуємо оновити або деінсталювати це програмне забезпечення, якщо ви зазнаєте падінь\nчи уповільнень мережі під час роботи Steam чи окремих ігор."
 
+"Steam_XboxDriverInstall_Title"		"Інсталяція драйвера Xbox"
+"Steam_XboxDriverInstall_Success"	"Драйвер успішно оновлено й буде активовано після перезавантаження комп’ютера."
+"Steam_XboxDriverInstall_ServiceFailure"	"Не вдалося оновити драйвер. Перевірте, чи запущено Steam у режимі звичайного користувача, а також чи використовується остання версія служби Steam і чи працює вона."
+"Steam_XboxDriverInstall_Failure"	"Не вдалося оновити драйвер, помилка: %error%"
+
 "Steam_DualSense_FirmwareUpdate_Title"	"Доступна нова мікропрограма для контролера"
 "Steam_DualSense_FirmwareUpdate_Text"	"Доступна нова мікропрограма для вашого %product%. Клацніть на посилання нижче, щоби перейти на сайт Sony для оновлення мікропрограми:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Більше не показувати"
+
+"RescueDialog_Title" "Steamwebhelper не відповідає"
+"RescueDialog_Explanation" "steamwebhelper.exe, необхідний компонент Steam, не відповідає. Інтерфейс Steam не працюватиме. Клацніть <a href=\"about:blank\">тут</a> для докладнішої інформації."
+"RescueDialog_RadioHeader" "Спробуймо вирішити цю проблему:"
+"RescueDialog_RestartSteam" "Перезапустити Steam"
+"RescueDialog_RestartSteam_NoGPU" "Перезапустити Steam із вимкненим апаратним прискоренням"
+"RescueDialog_RestartSteam_NoSandbox" "Перезапустити Steam із вимкненим ізольованим програмним середовищем браузера"
+"RescueDialog_RestartSteamWebHelper" "Перезапустити steamwebhelper.exe"
+"RescueDialog_ExitSteam" "Вийти зі Steam"
 
 "DownloadRegion_default"				 "Невідомо"
 "DownloadRegion_us_chicago"			"США — Чикаго"

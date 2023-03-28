@@ -4868,6 +4868,15 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_DualSense_FirmwareUpdate_Text"	"There is new firmware available for your %product%. Click the link below to go to the Sony firmware update page:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Don't show this again"
 
+"RescueDialog_Title" "Steamwebhelper is not responding"
+"RescueDialog_Explanation" "steamwebhelper.exe, a critical Steam component, is not responding. The Steam UI will not be usable.  Click <a href=\"about:blank\">here</a> for more information."
+"RescueDialog_RadioHeader" "Let's try to help:"
+"RescueDialog_RestartSteam" "Restart Steam"
+"RescueDialog_RestartSteam_NoGPU" "Restart Steam with GPU Acceleration disabled"
+"RescueDialog_RestartSteam_NoSandbox" "Restart Steam with Browser Sandboxing disabled"
+"RescueDialog_RestartSteamWebHelper" "Restart steamwebhelper.exe"
+"RescueDialog_ExitSteam" "Exit Steam"
+
 "DownloadRegion_default"				 "Unknown"
 "DownloadRegion_us_chicago"			"US - Chicago"
 "DownloadRegion_us_newyork"			"US - New York"

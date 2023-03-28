@@ -2431,6 +2431,7 @@
 	"ServerBrowser_IPAddress": "IP 주소",
 	"ServerBrowser_Game": "게임",
 	"ServerBrowser_Players": "플레이어",
+	"ServerBrowser_ServerName": "서버 이름",
 	"ServerBrowser_Map": "맵",
 	"ServerBrowser_Latency": "지연 시간",
 	"ServerBrowser_Internet": "인터넷",

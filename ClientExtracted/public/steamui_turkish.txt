@@ -429,6 +429,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_Status_OfflineMode"					"ÇEVRİMDIŞI MOD"
 "Steam_Status_NoConnection"					"BAĞLANTI YOK"
 "Steam_Status_OneItemDownloading" 	"İNDİRİLİYOR "
+"Steam_Status_OneItemTransferring" 	"Aktarılıyor "
 "Steam_Status_DownloadsPaused" 	"İNDİRMELER DURAKLATILDI"
 "Steam_Status_OneItemPaused" 				"1 Öğe Kuyrukta "
 "Steam_Status_OneItemComplete"			"1 Öğe Tamamlandı"
@@ -437,7 +438,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_Status_ItemsComplete"	"%numcompl%/%numtotal% Öğe Tamamlandı "
 "Steam_Status_DownloadsTitle"		"İNDİRMELER"
 "Steam_Status_GoToDownloadsPage"		"Yönet"
-"Steam_Status_PeerContentServer"		"Aktarılıyor..."
+"Steam_Status_PeerContentServer"		"Yerel Ağ Aktarımı Barındırılıyor"
 
 "Steam_Time_ShowMostRecent"			"En yeniyi göster"
 "Steam_Time_5Minutes"				"5 dakika"
@@ -4844,9 +4845,23 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "SteamUI_RunningConflictingSoftware" "Çakışan Yazılım Algılandı"
 "SteamUI_RunningIncompatibleTcpService" "%incompatdll% öğesinin (%incompatname% ile ilişkilidir) uyumsuz bir sürümü \nSteam işleminde tespit edildi.\n\nSteam veya oyun çalışırken çökme veya ağ bağlantısı yavaşlaması yaşadığınız\nbu yazılımı güncelleştirmenizi veya kaldırmanızı tavsiye ediyoruz."
 
+"Steam_XboxDriverInstall_Title"		"Xbox Sürücü Yükleme"
+"Steam_XboxDriverInstall_Success"	"Sürücü başarıyla güncellendi, bilgisayarınızı yeniden başlattığınızda etkinleşecek."
+"Steam_XboxDriverInstall_ServiceFailure"	"Sürücü güncellemesi başarısız oldu. Steam normal kullanıcı hesabıyla açık ve Steam hizmeti çalışır durumda ve güncel mi?"
+"Steam_XboxDriverInstall_Failure"	"Sürücü güncelleme başarısız, hata = %error%"
+
 "Steam_DualSense_FirmwareUpdate_Title"	"Yeni Kontrolcü Yazılımı Mevcut"
 "Steam_DualSense_FirmwareUpdate_Text"	"%product% için kullanılabilir yeni bir yazılım var. Sony aygıt yazılımı güncelleme sayfasına gitmek için aşağıdaki bağlantıya tıklayın:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Bunu tekrar gösterme"
+
+"RescueDialog_Title" "Steamwebhelper yanıt vermiyor"
+"RescueDialog_Explanation" "Steam'in önemli bir bileşeni olan steamwebhelper.exe yanıt vermiyor. Bu nedenle Steam arayüzü kullanılamıyor. Ayrıntılı bilgi için <a href=\"about:blank\">buraya</a> tıklayın."
+"RescueDialog_RadioHeader" "Size yardımcı olalım:"
+"RescueDialog_RestartSteam" "Steam'i yeniden başlat"
+"RescueDialog_RestartSteam_NoGPU" "Steam'i GPU hızlandırmasını devre dışı bırakarak yeniden başlat"
+"RescueDialog_RestartSteam_NoSandbox" "Steam'i tarayıcı sandbox'ını devre dışı bırakarak yeniden başlat"
+"RescueDialog_RestartSteamWebHelper" "Steamwebhelper.exe'yi yeniden başlat"
+"RescueDialog_ExitSteam" "Steam'den çık"
 
 "DownloadRegion_default"				 "Bilinmiyor"
 "DownloadRegion_us_chicago"			"ABD - Şikago"

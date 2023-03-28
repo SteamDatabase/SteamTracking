@@ -448,7 +448,7 @@
 "Friends_GroupEvent_Title"					"%group% - evenimentul a început"
 "Friends_GroupEvent_View"						"Vezi evenimentul"
 
-"Voice_Settings_NewTabTitle"		"Voce în joc"
+"Voice_Settings_NewTabTitle"		"Chat vocal în joc"
 "Voice_Settings_TabTitle"		"Audio"
 "Steam_RepairAudioDescription"				"(Când un dispozitiv audio este conectat sau eliminat, e posibil să fie nevoie de o redetectare a dispozitivelor audio active.)"
 "Steam_RepairAudioButton"		"Detectare dispozitive"

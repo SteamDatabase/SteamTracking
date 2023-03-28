@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+j
+j
 __stubs
 __TEXT
 __stub_helper
@@ -19,7 +21,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-8f
+lf
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -47,6 +49,7 @@ __DATA
 P
 __data
 __DATA
+P(
 __thread_vars
 __DATA
 __thread_data
@@ -154,6 +157,7 @@ H
 @
 H
 ,
+0
 $
 (
 ,
@@ -270,6 +274,17 @@ $
 0
 8
 @
+H
+P
+\
+0
+`
+d
+8
+@
+H
+P
+h
 0
 (
 8
@@ -309,7 +324,7 @@ X
 0
 @
 X
-0
+8
 0
 (
 0
@@ -324,6 +339,7 @@ X
 8
 0
 H
+8
 0
 8
 0
@@ -377,9 +393,9 @@ X
 0
 8
 (
-P
+`
 (
-8
+p
 P
 0
 (
@@ -444,6 +460,7 @@ P
 21CHTMLPageSecurityInfo
 19CMsgFinishedRequest
 17CMsgLoadedRequest
+21CMsgFavIconURLChanged
 16CMsgPageSecurity
 16CMsgStartRequest
 24CMsgStartRequestResponse
@@ -1107,6 +1124,7 @@ https://crash.steampowered.com/submit
 -buildid=%u
 -steamid=%llu
 -logdir=%s
+-uimode=%d
 -composer-mode=%d
 -steamdeck
 -steamos3
@@ -2024,6 +2042,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2363,19 +2383,23 @@ sc_schinese
 @
 
 
-@
-C
-e
+,
 
+a
+@
+Ic
+i
+]
 L
 
 
-0
+
+
 
 0
-
-
+0
 Hi
+#
 `
 0
 0
@@ -2388,10 +2412,6 @@ D
 @
 @
 
-
-
-
-
 @
 Hc
 Hc
@@ -2423,7 +2443,6 @@ IcE
 IcE
 @
 @
-k
 V
 =
 =
@@ -2449,9 +2468,7 @@ M9e
 ?
 ?
 ?
-B
 
-Ic
 @
 @
 @

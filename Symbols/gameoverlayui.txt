@@ -124,7 +124,9 @@
  SDL_InitSubSystem
  SDL_RaiseWindow
  SDL_SetHint
+ SDL_SetWindowPosition
  SDL_ShowCursor
+ SDL_ShowWindow
  SDL_WasInit
  SDL_free
  SetMiniDumpBuildID

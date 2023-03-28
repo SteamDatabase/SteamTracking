@@ -691,7 +691,7 @@
 "Broadcast_FirstTime_Header" "Bem-vindo(a) às Transmissões Steam! Agora podes ver outros utilizadores a jogar ou transmitir os teus jogos no Steam."
 "Broadcast_FirstTime_PermissionHeader" "Define as tuas preferências..."
 "Broadcast_FirstTime_DesktopOnly" "Por predefinição, só o teu jogo será transmitido. O teu ambiente de trabalho não."
-"Broadcast_FirstTime_FAQ" "Lê o FAQ das Transmissões Steam"
+"Broadcast_FirstTime_FAQ" "Lê as perguntas frequentes sobre Transmissões Steam"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=portuguese"
 "Broadcast_FirstTime_Title" "Transmissões Steam"
 "Broadcast_FirstTime_OK" "OK"

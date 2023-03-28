@@ -53,7 +53,7 @@
 "ServerBrowser_AddServerError"			"Сървърният IP адрес, който въведохте е невалиден."
 "ServerBrowser_ServerRequiresPasswordTitle"	"Сървърът изисква парола"
 "ServerBrowser_ServerRequiresPassword"		"Този сървър изисква парола, за да се присъедините."
-"ServerBrowser_RemoveServerFromFavorites"	"Премахване на сървъра от любимите"
+"ServerBrowser_RemoveServerFromFavorites"	"Премахване на сървъра от любими"
 "ServerBrowser_AddServerByIP"			"Добавяне на сървър по IP адрес"
 "ServerBrowser_UpdatingFavsTitle"		"Обновяване на любимите"
 "ServerBrowser_UpdatingFavs"			"Прехвърляне на любимите Ви. Възможно е това да отнеме минутка…"
@@ -121,7 +121,7 @@
 "ServerBrowser_OfflineMode" 			"Понастоящем Steam е извън линия. Интернет игрите няма да бъдат достъпни,\nдокато не рестартирате Steam и сте свързани към интернет."
 
 "ServerBrowser_ConnectToServer"		"Свързване към сървъра"
-"ServerBrowser_ViewServerInfo"		"Показване на информацията за сървъра"
+"ServerBrowser_ViewServerInfo"		"Преглед на информацията за сървъра"
 "ServerBrowser_RefreshServer"		"Опресняване на сървъра"
 "ServerBrowser_AddServerToFavorites"		"Добавяне на сървъра към любими"
 "ServerBrowser_NotResponding"		"< не откликва >"
