@@ -685,6 +685,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   display: flex;
   flex-direction: column;
 }
+.pagedsettings_PagedSettingsDialog_PageList__EebF.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_36Srg {
+  overflow-y: hidden;
+}
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn {
   display: flex;
   align-items: center;
@@ -2569,6 +2572,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp.gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_2brQE {
+  overflow-y: hidden;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r {
   font-family: "Motiva Sans", Helvetica, sans-serif;
