@@ -4845,6 +4845,9 @@ html.responsive.touch
   display: flex;
   flex-direction: column;
 }
+.adminshared_AdminPageCtn_KNaeC .DialogLabel {
+  display: flex;
+}
 .adminshared_PageTitle_15d88 {
   font-size: 32px;
   color: #67c1f5;

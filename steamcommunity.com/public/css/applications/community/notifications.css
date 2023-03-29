@@ -298,7 +298,6 @@
 .standardtemplates_DesktopToastTemplate_3CGHg:hover,
 .standardtemplates_PinnedTemplateDesktop_2caCr:hover {
   cursor: pointer;
-  background: #3d4450;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU:hover
   .standardtemplates_Timestamp_2vSvC,
@@ -653,10 +652,11 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 .standardtemplates_DesktopToastTemplate_3CGHg {
-  background: #0e141b;
+  background: none;
+  line-height: 16px;
 }
 .standardtemplates_DesktopToastTemplate_3CGHg:hover {
-  background: #23262e;
+  background: none;
 }
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Content_1MZiz {
   justify-content: center;
@@ -669,11 +669,22 @@
   font-size: 12px;
   color: #fff;
 }
+.standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Header_39ZAW {
+  line-height: 15px;
+}
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Body_2cgMq {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 12px;
+  font-size: 11px;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_FriendInGameAppColor_19RnF {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #adff2f;
+  font-size: 11px;
 }
 .standardtemplates_WishlistBlurImage_5wyKr {
   filter: brightness(40%) blur(2px);
@@ -1017,7 +1028,6 @@
 .shorttemplates_DesktopToastTemplate_PhN5d:hover,
 .shorttemplates_PinnedTemplateDesktop_3iJFa:hover {
   cursor: pointer;
-  background: #3d4450;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi:hover
   .shorttemplates_Timestamp_3OOgm,
@@ -1344,10 +1354,11 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 .shorttemplates_DesktopToastTemplate_PhN5d {
-  background: #0e141b;
+  background: none;
+  line-height: 16px;
 }
 .shorttemplates_DesktopToastTemplate_PhN5d:hover {
-  background: #23262e;
+  background: none;
 }
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Content_23dSW {
   justify-content: center;
@@ -1360,11 +1371,22 @@
   font-size: 12px;
   color: #fff;
 }
+.shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Header_2wU4t {
+  line-height: 15px;
+}
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Body_i5dFV {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 12px;
+  font-size: 11px;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_FriendInGameAppColor_7xejb {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #adff2f;
+  font-size: 11px;
 }
 .shorttemplates_WishlistBlurImage_2C81z {
   filter: brightness(40%) blur(2px);
@@ -1532,8 +1554,11 @@
   height: 100%;
 }
 .notifications_AllNotificationsRowCtn_3Y-y3 {
-  min-height: 72px;
-  height: 72px;
+  min-height: 70px;
+  height: 70px;
+}
+.notifications_AllNotificationsRowCtn_3Y-y3:not(:last-child) {
+  border-bottom: 2px solid rgba(58, 62, 71, 0.5);
 }
 .notifications_NotificationFiltersCtn_1uSw_ {
   background-color: rgba(58, 62, 71, 0.5);
@@ -1543,6 +1568,25 @@
   top: 0;
   z-index: 1;
   height: 100%;
+}
+.notifications_EmptyNotifications_3t24B {
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(58, 62, 71, 0.5);
+  min-height: 200px;
+}
+.notifications_EmptyNotifications_3t24B
+  .notifications_EmptyNotificationsTitle__uGFL {
+  padding-top: 50px;
+  font-weight: 500;
+  text-align: center;
+}
+.notifications_EmptyNotifications_3t24B
+  .notifications_EmptyNotificationsBody_3Iomc {
+  padding: 20px;
+  font-weight: 200;
+  text-align: center;
+  color: #dfe3e6;
 }
 .notifications_SettingsButtons_3B7mJ {
   display: flex;

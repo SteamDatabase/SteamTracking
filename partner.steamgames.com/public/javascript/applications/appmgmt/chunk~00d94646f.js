@@ -29152,61 +29152,62 @@
         s = (r(44229), r(38800), r(82702), r(31621)),
         o = (r(84413), r(63154));
       function l(e, t, r, i) {
-        const s = (0, a.useRef)(),
-          l = (0, a.useRef)(void 0);
-        s.current = e;
-        const [c, d] = (0, a.useState)(void 0),
+        const l = (0, a.useRef)(),
+          c = (0, a.useRef)(void 0),
+          d = (0, s.NW)();
+        l.current = e;
+        const [m, u] = (0, a.useState)(void 0),
           {
-            include_assets: m,
-            include_release: u,
-            include_platforms: h,
-            include_all_purchase_options: p,
-            include_screenshots: _,
-            include_trailers: g,
-            include_ratings: f,
-            include_tag_count: y,
-            include_reviews: b,
-            include_basic_info: B,
-            include_supported_languages: S,
+            include_assets: h,
+            include_release: p,
+            include_platforms: _,
+            include_all_purchase_options: g,
+            include_screenshots: f,
+            include_trailers: y,
+            include_ratings: b,
+            include_tag_count: B,
+            include_reviews: S,
+            include_basic_info: v,
+            include_supported_languages: w,
           } = r;
         if (
           ((0, a.useEffect)(() => {
             const r = {
-              include_assets: m,
-              include_release: u,
-              include_platforms: h,
-              include_all_purchase_options: p,
-              include_screenshots: _,
-              include_trailers: g,
-              include_ratings: f,
-              include_tag_count: y,
-              include_reviews: b,
-              include_basic_info: B,
-              include_supported_languages: S,
+              include_assets: h,
+              include_release: p,
+              include_platforms: _,
+              include_all_purchase_options: g,
+              include_screenshots: f,
+              include_trailers: y,
+              include_ratings: b,
+              include_tag_count: B,
+              include_reviews: S,
+              include_basic_info: v,
+              include_supported_languages: w,
             };
             let a = null;
             return (
               !e ||
                 o.Z.Get().BHasStoreItem(e, t, r) ||
-                (void 0 !== c && i && i == l.current) ||
-                (i !== l.current && (d(void 0), (l.current = i)),
+                (void 0 !== m && i && i == c.current) ||
+                (i !== c.current && (u(void 0), (c.current = i)),
                 (a = n().CancelToken.source()),
                 o.Z.Get()
                   .QueueStoreItemRequest(e, t, r)
                   .then((t) => {
-                    a.token.reason || s.current !== e || d(1 == t);
+                    a.token.reason || l.current !== e || u(1 == t), d();
                   })),
               () => a && a.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, c, m, u, h, p, _, g, f, y, b, B, S]),
+          }, [e, t, i, m, h, p, _, g, f, y, b, B, S, v, w, d]),
           !e)
         )
           return [null, 2];
-        if (!1 === c) return [void 0, 2];
+        if (!1 === m) return [void 0, 2];
         if (o.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.Z.Get().BHasStoreItem(e, t, r)) return [void 0, 1];
-        const v = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return v ? [v, 3] : [null, 2];
+        const E = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return E ? [E, 3] : [null, 2];
       }
       function c(e, t, r) {
         return l(e, 0, t, r);

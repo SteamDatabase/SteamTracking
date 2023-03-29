@@ -2273,6 +2273,8 @@
     "NotificationsList_CommentFilters_YourItems": "Comments on your items",
     "NotificationsList_CommentFilters_Subscribed": "Comments on subscribed discussions",
     "NotificationsList_CommentFilters_Advanced": "Advanced",
+    "NotificationsList_EmptyTitle": "You have no notifications at this time.",
+    "NotificationsList_EmptyBody": "This is where you'll be able to see Steam notifications regarding your Wishlist, Friends, Games, Inventory, and more.",
     "CommentThreadType_1": "Screenshot",
     "CommentThreadType_4": "Workshop Item (Dev Comments)",
     "CommentThreadType_5": "Workshop Item",

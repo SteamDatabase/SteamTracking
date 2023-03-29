@@ -636,6 +636,9 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   display: flex;
   flex-direction: column;
 }
+.pagedsettings_PagedSettingsDialog_PageList_18QCu.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_yTqIu {
+  overflow-y: hidden;
+}
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
   display: flex;
   align-items: center;
@@ -2520,6 +2523,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageList_gNwoz.gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_sMDrh {
+  overflow-y: hidden;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -40476,7 +40482,7 @@ body.in_global_drag .friendlist_titlebar {
   transform: scale(1.05);
   filter: brightness(1.2);
 }
-.currentUserAvatar .avatarHolder {
+.currentUserAvatar .avatarHolder.Medium {
   width: 48px;
   height: 48px;
   transform: none;
@@ -40675,6 +40681,15 @@ body.in_global_drag .friendlist_titlebar {
 }
 .InsetWindowOpen .ActiveVoiceChannel .ScratchPadConnect {
   display: block;
+}
+.remoteVideo {
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
 }
 .dropConfirmationNotice {
   position: absolute;

@@ -205,6 +205,8 @@
           "gamepadpagedsettings_PagedSettingsDialog_Title_1Px9u",
         PagedSettingsDialog_PageList:
           "gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp",
+        PagedSettingsDialog_PageList_DisableScrolling:
+          "gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_2brQE",
         PagedSettingsDialog_PageListItem:
           "gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r",
         DisabledItem: "gamepadpagedsettings_DisabledItem_3Lp2f",
@@ -304,6 +306,8 @@
           "pagedsettings_PagedSettingsDialog_Title_3qEgQ",
         PagedSettingsDialog_PageList:
           "pagedsettings_PagedSettingsDialog_PageList__EebF",
+        PagedSettingsDialog_PageList_DisableScrolling:
+          "pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_36Srg",
         PagedSettingsDialog_PageListItem:
           "pagedsettings_PagedSettingsDialog_PageListItem_bkfjn",
         PageListItem_Icon: "pagedsettings_PageListItem_Icon_U6HcK",
@@ -2603,8 +2607,8 @@
           (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
           (e[(e.Overlay = 8712)] = "Overlay"),
           (e[(e.Notification = 1335816)] = "Notification"),
-          (e[(e.PopupContextMenu = 327688)] = "PopupContextMenu"),
-          (e[(e.StandaloneContextMenu = 1310728)] = "StandaloneContextMenu");
+          (e[(e.PopupContextMenu = 344328)] = "PopupContextMenu"),
+          (e[(e.StandaloneContextMenu = 1327368)] = "StandaloneContextMenu");
       })(_ || (_ = {}));
       const v = o.createContext({ ownerWindow: window }),
         f = () => o.useContext(v);
@@ -2646,7 +2650,8 @@
         }
         OnMessage(e) {
           "window_moved" == e.data && this.OnResize(),
-            "popup-created" == e.data && this.OnCreateInternal();
+            "popup-created" == e.data && this.OnCreateInternal(),
+            "steam_shutdown" == e.data && SteamClient.User.StartShutdown(!1);
         }
         Show(e = !0, t = !1) {
           var n, r;
@@ -12657,7 +12662,7 @@
                       i.createElement(
                         "span",
                         { "data-tooltip-text": this.props.tooltip },
-                        " (?)"
+                        " (?)"
                       )
                   ),
                   i.createElement("div", { style: { clear: "left" } }),
@@ -13431,33 +13436,34 @@
         (0, r.gn)([z.ak], ne.prototype, "OnKeyDown", null);
       var re = n(19425),
         ie = n.n(re);
-      const oe = i.createContext({ setValue: () => {} }),
-        se = (e) => {
-          const { value: t, onChange: n, classNames: r, children: o } = e,
-            s = { value: t, setValue: n };
-          return i.createElement(
-            oe.Provider,
-            { value: s },
-            i.createElement(
-              "div",
-              { className: (0, l.Z)(ie().Group, "Shared_Radio_Group", r) },
-              o
-            )
-          );
-        },
-        ae = (e) => {
-          const { value: t } = e,
-            { value: n, setValue: r } = i.useContext(oe),
-            o = t === n;
-          return i.createElement(
+      const oe = i.createContext({ setValue: () => {} });
+      function se(e) {
+        const { value: t, onChange: n, classNames: r, children: o } = e,
+          s = { value: t, setValue: n };
+        return i.createElement(
+          oe.Provider,
+          { value: s },
+          i.createElement(
             "div",
-            {
-              className: (0, l.Z)(ie().Button, "RadioButton", o && ie().Active),
-              onClick: () => r(t),
-            },
-            e.children
-          );
-        };
+            { className: (0, l.Z)(ie().Group, "Shared_Radio_Group", r) },
+            o
+          )
+        );
+      }
+      function ae(e) {
+        const { value: t } = e,
+          { value: n, setValue: r } = i.useContext(oe);
+        let o = r;
+        const s = t === n;
+        return i.createElement(
+          "div",
+          {
+            className: (0, l.Z)(ie().Button, "RadioButton", s && ie().Active),
+            onClick: () => o(t),
+          },
+          e.children
+        );
+      }
       var le = n(7297),
         ce = n(14100),
         ue = n(17893),
@@ -14612,7 +14618,13 @@
             e.topControls && i.createElement("div", null, e.topControls),
             i.createElement(
               Ze,
-              { className: a.PagedSettingsDialog_PageList },
+              {
+                className: (0, l.Z)(
+                  a.PagedSettingsDialog_PageList,
+                  e.disablePageListScrolling &&
+                    a.PagedSettingsDialog_PageList_DisableScrolling
+                ),
+              },
               C
             ),
             e.bottomControls && i.createElement("div", null, e.bottomControls)
@@ -23435,7 +23447,7 @@
             n.e(7334),
             n.e(3504),
             n.e(2136),
-          ]).then(n.bind(n, 9330))
+          ]).then(n.bind(n, 11698))
         ),
         F = c.lazy(() =>
           Promise.all([
@@ -23479,7 +23491,7 @@
         ),
         x = c.lazy(() =>
           Promise.all([n.e(7037), n.e(5117), n.e(907), n.e(5676)]).then(
-            n.bind(n, 59917)
+            n.bind(n, 46657)
           )
         ),
         P = c.lazy(() =>

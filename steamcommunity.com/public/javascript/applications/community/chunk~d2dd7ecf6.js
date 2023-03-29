@@ -29042,9 +29042,7 @@
               "category" === e.type
                 ? (a += "_" + e.category)
                 : "tags" === e.type && (a += "_" + e.tagid),
-                (t.GetEventModel().jsondata.sale_defines_specific_contenthub ||
-                  t.GetEventModel().jsondata
-                    .sale_defines_temporary_contenthub) &&
+                t.GetEventModel().jsondata.sale_defines_temporary_contenthub &&
                   (a = "override_" + a),
                 (t.GetEventModel().jsondata.sale_vanity_id = a);
             } else

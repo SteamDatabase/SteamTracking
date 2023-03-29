@@ -905,7 +905,8 @@ ${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
-${PARTNER_BASE_URL}marketing/messagepreview/${gid}/
+${PARTNER_BASE_URL}marketing/messagelist
+${PARTNER_BASE_URL}marketing/messagepreview/${gid}/?cc=${}&l=${}
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
@@ -974,6 +975,7 @@ ${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
+${PARTNER_BASE_URL}promotion/marketingmessages/edit/${}
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist
@@ -1107,7 +1109,9 @@ ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpage
 ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpreview
 ${STORE_BASE_URL}broadcast/ajaxgettopntagsforappbatch
 ${STORE_BASE_URL}broadcast/ajaxgetuserbroadcastpreferences
+${STORE_BASE_URL}bundle/${bundleid}
 ${STORE_BASE_URL}bundle/${id}
+${STORE_BASE_URL}bundle/${}
 ${STORE_BASE_URL}buyitem/${DOTA_APP_ID}/${}/${}
 ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
@@ -1304,6 +1308,8 @@ ${STORE_BASE_URL}steamawards/ajaxnominategame
 ${STORE_BASE_URL}steamawards/ajaxvoteforgame
 ${STORE_BASE_URL}steamawards/nominations/
 ${STORE_BASE_URL}sub/${id}
+${STORE_BASE_URL}sub/${}
+${STORE_BASE_URL}subs/${packageid}
 ${STORE_BASE_URL}subscriber_agreement
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}?deck_ssa=1
 ${STORE_BASE_URL}tags/${}/${_ ? _ : _}
