@@ -270,9 +270,10 @@ s_pSymbolTable
 @
 @
 K
+Ic
 =
 @
 =
 @
 =*.*
-Ic
+i

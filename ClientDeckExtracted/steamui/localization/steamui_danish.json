@@ -6513,7 +6513,6 @@
     "Notification_CannotReadControllerGuideButton_Title": "Problem med Xbox-controller",
     "Notification_CannotReadControllerGuideButton_Body": "Steam kan ikke læse Xbox-knappen til Xbox-controlleren for at åbne overlayet eller hurtigmenuen med controlleren. For at løse dette skal du gå til siden med controllerindstillinger for Game Bar, vælge genvejsfanen og fjerne markeringen i det første afkrydsningsfelt (på Windows 10) eller de to afkrydsningsfelter (på Windows 11).",
     "Notification_OverlaySplashScreen": "Hav adgang til Steam-fællesskabet i spil.",
-    "Notificaiton_OverlaySplashScreen_ShiftTab": "Tryk på Shift + Tab for at begynde",
     "SteamDock_UnsupportedFirmwareModal_Title": "Opdatering til dockingstation tilgængelig",
     "SteamDock_UnsupportedFirmwareModal_Description": "Der er en vigtig firmwareopdatering til dockingstationen. Installér den, før du fortsætter.",
     "SteamDock_UnsupportedFirmwareModal_OK": "Installér",

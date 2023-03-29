@@ -34,7 +34,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcpconnection.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcphost.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.cpp

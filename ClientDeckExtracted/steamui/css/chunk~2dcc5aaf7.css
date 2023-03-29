@@ -9046,6 +9046,7 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   display: flex;
   flex-flow: row;
   align-items: center;
+  justify-content: center;
 }
 .controllerconfiguratormapping_FlexFlowRow_2_Bof
   .controllerconfiguratormapping_MediumGlyphIcon_Ntuq5 {
@@ -44730,6 +44731,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .notificationcontent_DesktopToastTemplate_vW8HM {
   background: none;
+  line-height: 16px;
 }
 .notificationcontent_DesktopToastTemplate_vW8HM:hover {
   background: none;
@@ -44748,11 +44750,23 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   color: #fff;
 }
 .notificationcontent_DesktopToastTemplate_vW8HM
+  .notificationcontent_Header_1KnyC {
+  line-height: 15px;
+}
+.notificationcontent_DesktopToastTemplate_vW8HM
   .notificationcontent_Body_2RpDR {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 12px;
+  font-size: 11px;
+}
+.notificationcontent_DesktopToastTemplate_vW8HM
+  .notificationcontent_FriendInGameAppColor_3uw_G {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #adff2f;
+  font-size: 11px;
 }
 .notificationcontent_WishlistBlurImage_20crv {
   filter: brightness(40%) blur(2px);
@@ -44888,6 +44902,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .notificationcontent_FriendInGameAppColor_3uw_G {
   color: #59bf40;
+}
+.notificationcontent_FriendOnlineColor_37hLx {
+  color: #4cb4ff;
 }
 .notificationcontent_AchievementBody_2iHCs {
   display: flex;
@@ -45800,6 +45817,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .standardtemplates_DesktopToastTemplate_3CGHg {
   background: none;
+  line-height: 16px;
 }
 .standardtemplates_DesktopToastTemplate_3CGHg:hover {
   background: none;
@@ -45815,11 +45833,22 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-size: 12px;
   color: #fff;
 }
+.standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Header_39ZAW {
+  line-height: 15px;
+}
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Body_2cgMq {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 12px;
+  font-size: 11px;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_FriendInGameAppColor_19RnF {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #adff2f;
+  font-size: 11px;
 }
 .standardtemplates_WishlistBlurImage_5wyKr {
   filter: brightness(40%) blur(2px);
@@ -46490,6 +46519,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .shorttemplates_DesktopToastTemplate_PhN5d {
   background: none;
+  line-height: 16px;
 }
 .shorttemplates_DesktopToastTemplate_PhN5d:hover {
   background: none;
@@ -46505,11 +46535,22 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-size: 12px;
   color: #fff;
 }
+.shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Header_2wU4t {
+  line-height: 15px;
+}
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Body_i5dFV {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 12px;
+  font-size: 11px;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_FriendInGameAppColor_7xejb {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #adff2f;
+  font-size: 11px;
 }
 .shorttemplates_WishlistBlurImage_2C81z {
   filter: brightness(40%) blur(2px);

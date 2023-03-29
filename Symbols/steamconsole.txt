@@ -25,6 +25,7 @@
  Plat_MSTime
  Plat_RelativeTicks
  Plat_ctime
+ Plat_gmtime
  Plat_localtime
  R typeinfo name for std::__1::bad_function_call
  SpewAndLogActivate
@@ -224,6 +225,7 @@
  strchr
  strcmp
  strcpy
+ strftime
  strlen
  strncmp
  strncpy

@@ -6513,7 +6513,6 @@
     "Notification_CannotReadControllerGuideButton_Title": "Xboxコントローラーの問題",
     "Notification_CannotReadControllerGuideButton_Body": "SteamがXboxコントローラーのXboxボタンを読み取れず、コントローラーからオーバーレイまたはクイックアクセスメニューを開くことができません。この問題を解決するには、「ゲームバーコントローラの設定」ページを開き、「ショートカット」タブを選択後、最初のチェックボックス（Windows 10の場合は1つ。Windows 11の場合は2つ）から、チェックを外してください。",
     "Notification_OverlaySplashScreen": "ゲームをプレイしながらSteamコミュニティにアクセス。",
-    "Notificaiton_OverlaySplashScreen_ShiftTab": "Shift＋Tabを押して開始",
     "SteamDock_UnsupportedFirmwareModal_Title": "ドッキングステーションの更新があります",
     "SteamDock_UnsupportedFirmwareModal_Description": "ドッキングステーションのファームウェアの重要な更新があります。続行する前にインストールしてください。",
     "SteamDock_UnsupportedFirmwareModal_OK": "適用",

@@ -105,6 +105,7 @@
  Plat_OutputDebugString
  Plat_RelativeTickFrequency
  Plat_RelativeTicks
+ Plat_gmtime
  Plat_localtime
  R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::bad_function_call
@@ -717,6 +718,7 @@
  strcpy
  strcspn
  strerror
+ strftime
  strlen
  strncmp
  strncpy

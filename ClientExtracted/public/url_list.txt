@@ -316,6 +316,11 @@ HelpFrontPage
 	url			"%help%"
 	method		"internal"
 }
+HelpFAQ
+{
+	url			"%help%/faqs/view/%p1%"
+	method		"internal"
+}
 MyHelpRequests
 {
 	url			"%help%wizard/HelpRequests"

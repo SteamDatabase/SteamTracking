@@ -414,3 +414,16 @@ enum ECommentThreadType {
 	k_ECommentThreadTypeQAndASession = 20;
 	k_ECommentThreadTypeMax = 21;
 }
+
+enum EBroadcastPermission {
+	k_EBroadcastPermissionDisabled = 0;
+	k_EBroadcastPermissionFriendsApprove = 1;
+	k_EBroadcastPermissionFriendsAllowed = 2;
+	k_EBroadcastPermissionPublic = 3;
+	k_EBroadcastPermissionSubscribers = 4;
+}
+
+enum EBroadcastEncoderSetting {
+	k_EBroadcastEncoderBestQuality = 0;
+	k_EBroadcastEncoderBestPerformance = 1;
+}

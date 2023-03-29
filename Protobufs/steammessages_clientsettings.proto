@@ -1,4 +1,5 @@
 import "google/protobuf/descriptor.proto";
+import "enums.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = true;
@@ -110,11 +111,11 @@ message CMsgClientSettings {
 	optional bool music_pause_on_voice_chat = 11002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\PauseOnVoiceChat"];
 	optional bool music_download_high_quality = 11003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\DownloadHighQualityAudioSoundtracks"];
 	optional bool music_playlist_notification = 11004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\PlaylistNowPlayingNotification"];
-	optional int32 broadcast_permissions = 12000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\Permissions", (setting_default_int) = 1];
+	optional .EBroadcastPermission broadcast_permissions = 12000 [default = k_EBroadcastPermissionDisabled, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\Permissions", (setting_default_int) = 1];
 	optional int32 broadcast_output_width = 12001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\OutputWidth"];
 	optional int32 broadcast_output_height = 12002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\OutputHeight"];
 	optional int32 broadcast_bitrate = 12003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\MaxKbps"];
-	optional int32 broadcast_encoding_option = 12004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\EncoderSetting"];
+	optional .EBroadcastEncoderSetting broadcast_encoding_option = 12004 [default = k_EBroadcastEncoderBestQuality, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\EncoderSetting"];
 	optional bool broadcast_record_all_video = 12005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\IncludeDesktop"];
 	optional bool broadcast_record_all_audio = 12006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\RecordSystemAudio"];
 	optional bool broadcast_record_microphone = 12007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\RecordMic"];

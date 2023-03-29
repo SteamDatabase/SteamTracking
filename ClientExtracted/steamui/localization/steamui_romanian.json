@@ -6511,7 +6511,6 @@
     "Notification_CannotReadControllerGuideButton_Title": "Problemă aferentă controlerului Xbox",
     "Notification_CannotReadControllerGuideButton_Body": "Steam nu poate citi inputul trimis de butonul Xbox al controlerului Xbox pentru a deschide interfața sau meniul de acces rapid folosind controlerul. Pentru a remedia acest lucru, te rugăm să accesezi setările controlerului pentru bara de joc, să selectezi fila „Scurtături” și să debifezi prima căsuță (în Windows 10) sau primele două căsuțe (în Windows 11).",
     "Notification_OverlaySplashScreen": "Accesează comunitatea Steam în timpul jocului.",
-    "Notificaiton_OverlaySplashScreen_ShiftTab": "Apasă Shift + Tab pentru a începe",
     "SteamDock_UnsupportedFirmwareModal_Title": "Este disponibilă o actualizare a stației de andocare",
     "SteamDock_UnsupportedFirmwareModal_Description": "Este disponibilă o actualizare importantă a firmware-ului pentru stația de andocare. Te rugăm să o instalezi înainte de a continua.",
     "SteamDock_UnsupportedFirmwareModal_OK": "Aplică",

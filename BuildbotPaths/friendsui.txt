@@ -12,7 +12,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamid.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/AppDownloadNotification.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/ChatRoomDlg.cpp

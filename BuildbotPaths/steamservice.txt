@@ -25,7 +25,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h

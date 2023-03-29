@@ -372,6 +372,7 @@
  getpwuid
  getsockname
  getuid
+ gmtime_r
  ioctl
  kevent
  kill
@@ -518,6 +519,7 @@
  strcmp
  strcpy
  strerror
+ strftime
  strlen
  strncasecmp
  strncat

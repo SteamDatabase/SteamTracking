@@ -36,6 +36,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_General = 31;
 	k_EClientNotificationType_HelpRequest = 32;
 	k_EClientNotificationType_OverlaySplashScreen = 33;
+	k_EClientNotificationType_BroadcastAvailableToWatch = 34;
 }
 
 enum ESystemUpdateNotificationType {
@@ -178,4 +179,8 @@ message CClientNotificationCannotReadControllerGuideButton {
 }
 
 message CClientNotificationOverlaySplashScreen {
+}
+
+message CClientNotificationBroadcastAvailableToWatch {
+	optional int32 broadcast_permission = 1;
 }

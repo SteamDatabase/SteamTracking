@@ -50458,11 +50458,15 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .serverbrowserdialog_ServerBrowserDialog_2rxrV button.DialogButton {
   padding: 0 12px;
   width: auto;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV button.DialogButton svg {
   width: 2ex;
   height: 2ex;
+  margin-right: 4px;
+  color: #fff;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK {
@@ -50483,7 +50487,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_DialogBody_2SvsK
   .serverbrowserdialog_TopControlsCtr_2X_Zp
   button.serverbrowserdialog_SwitchTabButton_1jEPp {
-  display: inline-block;
   flex-grow: 0;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
@@ -50824,9 +50827,26 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_DialogBody_2SvsK
   .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_BottomControlsRow_341md
+  .serverbrowserdialog_ToggleShowFilterDetailsButton_30Bn7
+  svg {
+  transition: transform 0.2s ease-in-out;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BottomControlsRow_341md
   .serverbrowserdialog_ToggleShowFilterDetailsButton_30Bn7.serverbrowserdialog_Selected_L3t04 {
   color: #fff;
   background: #717e93;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BottomControlsRow_341md
+  .serverbrowserdialog_ToggleShowFilterDetailsButton_30Bn7.serverbrowserdialog_Selected_L3t04
+  svg {
+  transform: rotateZ(180deg);
+  transition: transform 0.2s ease-in-out;
 }
 .gameinfodialog_DialogBody_3wJ6F {
   flex-grow: 1;
@@ -51453,10 +51473,17 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-wrap: wrap;
 }
 .prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
-  width: auto;
-  min-width: 24px;
-  margin-right: 3px;
-  padding: 0 4px;
+  margin-right: 4px;
+  width: 30px;
+  height: 30px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 6px;
+  padding-left: 1px;
 }
 .prosemirror_ToolbarRow_2H40R
   .prosemirror_CommandButton_1-R1U.prosemirror_Toggled_41y1p {
@@ -51516,6 +51543,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: column;
   min-height: 0;
   min-width: 0;
+  margin: 0px 20px 20px 0px;
   position: relative;
   color: #c1c6cf;
 }
@@ -51532,8 +51560,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: row;
 }
 .gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy .DialogButton {
-  width: auto;
-  padding: 0 12px;
+  width: 21px;
+  padding: 8px 8px 0px 8px;
 }
 .gamenotes_NoteEditorArea_3WOF4
   .gamenotes_NoteActions_3uGOy
@@ -51541,18 +51569,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   margin-left: 24px;
 }
 .gamenotes_Toolbar_A6mhR {
-  padding: 8px 0;
+  padding: 12px 0;
   -webkit-app-region: no-drag;
   position: relative;
   z-index: 3;
 }
 .gamenotes_EditorInput_3zWun {
-  background: radial-gradient(
-    ellipse farthest-corner at 50% 30%,
-    #212329 0%,
-    #1e2025 50%,
-    #1c1d22 100%
-  );
+  background: #111;
+  box-shadow: inset 0 8px 6px -6px #000;
   display: flex;
   flex-direction: column;
 }

@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-o
-o
+0n
+0n
 __stubs
 __TEXT
 __stub_helper
@@ -148,6 +148,7 @@ e
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
+%Y-%m-%d %H:%M:%S
 Logger
 console
 generic
@@ -1332,4 +1333,3 @@ Ic
 0
 0
 0
-(

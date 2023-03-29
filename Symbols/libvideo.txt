@@ -1613,6 +1613,7 @@
  gettimeofday
  getuid
  gmtime
+ gmtime_r
  ioctl
  kCFAllocatorDefault
  kCFAllocatorNull
@@ -1806,6 +1807,8 @@
  strcspn
  strerror
  strerror$UNIX2003
+ strftime
+ strftime$UNIX2003
  strlen
  strncasecmp
  strncat
