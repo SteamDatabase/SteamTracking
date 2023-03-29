@@ -3097,10 +3097,8 @@ html, body { height:100%; }
 }
 
 .priceChangedNew:hover {
-    position: absolute;
     z-index: 10;
     background: black;
-    cursor: default;
 }
 
 .priceChangedNew

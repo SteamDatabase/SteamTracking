@@ -1332,6 +1332,7 @@ div + #landingFooter.nonconfidential {
     border: 1px #464b53 solid;
 	padding: 2px 3px !important;
     border-radius: 3px;
+    cursor: text;
 }
 
 .fancyCurrencyInput input {
