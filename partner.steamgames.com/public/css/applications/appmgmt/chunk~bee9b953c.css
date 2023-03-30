@@ -4997,7 +4997,7 @@ html.responsive.touch
   width: 40%;
   position: sticky;
   top: 1px;
-  height: calc(100vh - 180px);
+  height: fit-content;
   overflow-y: auto;
 }
 .adminshared_ColumnCtn_1Mnmn

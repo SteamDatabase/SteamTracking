@@ -6392,6 +6392,12 @@ html.responsive.touch
   max-width: 200px;
   margin-right: 4px;
 }
+.dailydealcalendar_CalendarCol_RdS93:first-child
+  .dailydealcalendar_DealSection_jxKWo,
+.dailydealcalendar_CalendarCol_RdS93:last-child
+  .dailydealcalendar_DealSection_jxKWo {
+  background: #525a6e;
+}
 .dailydealcalendar_CalendarCol_RdS93 .dailydealcalendar_DayOfTheWeek_1gW_B {
   font-size: 12px;
   color: #fff;
@@ -6482,7 +6488,7 @@ html.responsive.touch
 .dailydealcalendar_DealSection_jxKWo {
   height: 187px;
   background: #3a4254;
-  margin-bottom: 30px;
+  margin-bottom: 4px;
   padding: 6px;
   box-sizing: border-box;
 }
@@ -7909,6 +7915,19 @@ select {
 }
 .marketingmessageeditor_RemoveLegacyBtn_1pvKr {
   width: 30%;
+}
+.marketingmessageeditor_MessageImagePreview_3vqnt img {
+  width: 100%;
+  box-sizing: border-box;
+}
+.marketingmessageeditor_ScopeNameGlobal_1mF1E {
+  font-size: 21px;
+  color: #fff;
+}
+.marketingmessageeditor_ScopeNameChina_2O5jc {
+  font-size: 21px;
+  color: #c93a3a;
+  font-weight: 500;
 }
 .userprofile_SmallAvatar_2cCH3 {
   max-width: 32px;

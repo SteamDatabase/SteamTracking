@@ -2645,6 +2645,7 @@ html, body { height:100%; }
 	width: 178px;
 	height: 100px;
 	float: left;
+    background-size: cover;
 }
 
 .movie_screenshot .drag_and_drop

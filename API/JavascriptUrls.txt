@@ -906,7 +906,7 @@ ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
 ${PARTNER_BASE_URL}marketing/messagelist
-${PARTNER_BASE_URL}marketing/messagepreview/${gid}/?cc=${}&l=${}
+${PARTNER_BASE_URL}marketing/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
