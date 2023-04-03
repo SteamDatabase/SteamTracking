@@ -45266,110 +45266,100 @@
         var t;
         const { marketingMessageID: n } = e,
           a = (0, ce.k6)(),
-          i = ri(n),
-          r = it.JW.GetTimeNowWithOverride(),
+          i = ri(n);
+        if (!i) return d.createElement(be.V, { string: n, size: "small" });
+        const r = it.JW.GetTimeNowWithOverride(),
           l = i.start_date > r,
           s = i.start_date < r && 1 == i.visibility;
-        return i
-          ? d.createElement(
+        return d.createElement(
+          "div",
+          {
+            className: (0, Pe.Z)({
+              [$i.RowCtn]: !0,
+              [$i.Public]: Boolean(2 == i.visibility),
+              [$i.Future]: l,
+            }),
+            onClick: () => {
+              a.push(no.MarketingMessageEditor(n));
+            },
+          },
+          d.createElement(
+            "div",
+            { className: (0, Pe.Z)($i.Row, $i.Primary) },
+            d.createElement(
+              "div",
+              { className: (0, Pe.Z)($i.Col, $i.ItemName) },
+              i.title,
+              Boolean(l && 2 == i.visibility) &&
+                d.createElement(
+                  "span",
+                  { className: $i.WillBecomeVisible },
+                  "Will automatically become visible on ",
+                  (0, G.$1)(i.start_date, !0)
+                )
+            ),
+            d.createElement(
               "div",
               {
                 className: (0, Pe.Z)({
-                  [$i.RowCtn]: !0,
-                  [$i.Public]: Boolean(2 == i.visibility),
-                  [$i.Future]: l,
+                  [$i.Col]: !0,
+                  [$i.Type]: !0,
+                  [$i.Deal]: Boolean(2 == i.type),
                 }),
-                onClick: () => {
-                  a.push(no.MarketingMessageEditor(n));
-                },
               },
+              d.createElement("span", null, I(i.type))
+            ),
+            d.createElement(
+              "div",
+              { className: (0, Pe.Z)($i.Col, $i.Date) },
               d.createElement(
-                "div",
-                { className: (0, Pe.Z)($i.Row, $i.Primary) },
-                d.createElement(
-                  "div",
-                  { className: (0, Pe.Z)($i.Col, $i.ItemName) },
-                  i.title,
-                  Boolean(l && 2 == i.visibility) &&
-                    d.createElement(
-                      "span",
-                      { className: $i.WillBecomeVisible },
-                      "Will automatically become visible on ",
-                      (0, G.$1)(i.start_date, !0)
-                    )
-                ),
-                d.createElement(
-                  "div",
-                  {
-                    className: (0, Pe.Z)({
-                      [$i.Col]: !0,
-                      [$i.Type]: !0,
-                      [$i.Deal]: Boolean(2 == i.type),
-                    }),
-                  },
-                  d.createElement("span", null, I(i.type))
-                ),
-                d.createElement(
-                  "div",
-                  { className: (0, Pe.Z)($i.Col, $i.Date) },
-                  d.createElement(
-                    "span",
-                    { className: (0, Pe.Z)({ [$i.MissedRelease]: s }) },
-                    d.createElement(Yi, {
-                      rtStartDate: i.start_date,
-                      rtEndDate: i.end_date,
-                    })
-                  )
-                ),
-                d.createElement(
-                  "div",
-                  { className: (0, Pe.Z)($i.Col, $i.Creator) },
-                  i.creator_name
-                )
-              ),
-              d.createElement(
-                "div",
-                { className: $i.Row },
-                d.createElement(kr, { flags: i.flags }),
-                d.createElement(Rr, {
-                  strCountries: i.country_allow || i.country_deny,
-                  bAllowList:
-                    (null === (t = i.country_allow) || void 0 === t
-                      ? void 0
-                      : t.length) > 0,
-                }),
-                d.createElement(Nr, {
-                  strPrefix: "only owners of",
-                  storeItemID: { id: i.must_own_appid, item_type: "app" },
-                }),
-                d.createElement(Nr, {
-                  strPrefix: "except owners of",
-                  storeItemID: { id: i.must_not_own_appid, item_type: "app" },
-                }),
-                d.createElement(Nr, {
-                  strPrefix: "only owners of",
-                  storeItemID: {
-                    id: i.must_not_own_packageid,
-                    item_type: "sub",
-                  },
-                }),
-                d.createElement(Nr, {
-                  strPrefix: "except owners of",
-                  storeItemID: {
-                    id: i.must_not_own_packageid,
-                    item_type: "sub",
-                  },
-                }),
-                d.createElement(Nr, {
-                  strPrefix: "only users who have launched",
-                  storeItemID: {
-                    id: i.must_have_launched_appid,
-                    item_type: "app",
-                  },
+                "span",
+                { className: (0, Pe.Z)({ [$i.MissedRelease]: s }) },
+                d.createElement(Yi, {
+                  rtStartDate: i.start_date,
+                  rtEndDate: i.end_date,
                 })
               )
+            ),
+            d.createElement(
+              "div",
+              { className: (0, Pe.Z)($i.Col, $i.Creator) },
+              i.creator_name
             )
-          : d.createElement(be.V, { string: n, size: "small" });
+          ),
+          d.createElement(
+            "div",
+            { className: $i.Row },
+            d.createElement(kr, { flags: i.flags }),
+            d.createElement(Rr, {
+              strCountries: i.country_allow || i.country_deny,
+              bAllowList:
+                (null === (t = i.country_allow) || void 0 === t
+                  ? void 0
+                  : t.length) > 0,
+            }),
+            d.createElement(Nr, {
+              strPrefix: "only owners of",
+              storeItemID: { id: i.must_own_appid, item_type: "app" },
+            }),
+            d.createElement(Nr, {
+              strPrefix: "except owners of",
+              storeItemID: { id: i.must_not_own_appid, item_type: "app" },
+            }),
+            d.createElement(Nr, {
+              strPrefix: "only owners of",
+              storeItemID: { id: i.must_not_own_packageid, item_type: "sub" },
+            }),
+            d.createElement(Nr, {
+              strPrefix: "except owners of",
+              storeItemID: { id: i.must_not_own_packageid, item_type: "sub" },
+            }),
+            d.createElement(Nr, {
+              strPrefix: "only users who have launched",
+              storeItemID: { id: i.must_have_launched_appid, item_type: "app" },
+            })
+          )
+        );
       }
       function kr(e) {
         const { flags: t } = e;
