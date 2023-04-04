@@ -424,6 +424,10 @@
         {
             "name": "SuspendPeerContentServer",
             "argc": "2"
+        },
+        {
+            "name": "GetPeerContentServerForApp",
+            "argc": "3"
         }
     ]
 }
