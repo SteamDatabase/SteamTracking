@@ -239,7 +239,7 @@ Processen tar max en minut."
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Misslyckades att starta %game% i VR. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Väntar på att %quitting_game% avslutas %dots%"
 
-"SteamUI_JoinDialog_UpdatingAppInfo" "Uppdaterar konfigurationen %dots%"
+"SteamUI_JoinDialog_UpdatingAppInfo" "Uppdaterar konfigurationen%dots%"
 "SteamUI_JoinDialog_UpdatingAppTicket" "Uppdaterar biljett %dots%"
 
 "SteamUI_JoinDialog_TimedTrial_Error" "Kunde inte starta %game% som en tidsbegränsad utvärderingsversion. (Felkod: %error%)"

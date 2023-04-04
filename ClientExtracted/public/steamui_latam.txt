@@ -2969,7 +2969,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_AlreadyRunningError_SupportTicket"	"Por favor, contacta con el Soporte de Steam lo antes posible"
 
 "Steam_LoggedInElsewhere_Title"		"Steam - Sesión iniciada en otro lugar"
-"Steam_LoggedInElsewhere_Info"		"Se ha iniciado sesión en esta cuenta de Steam desde otro equipo."
+"Steam_LoggedInElsewhere_Info"		"Se inició sesión en esta cuenta de Steam desde otro equipo."
 "Steam_LoggedInElsewhere_Reconect"  "Volver a conectarse a Steam"
 
 

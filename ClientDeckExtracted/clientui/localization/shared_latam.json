@@ -1154,6 +1154,7 @@
 	"Login_Error_MoveAuthenticator_Description": "Ha habido un problema al trasladar tu autenticador. Por favor, inténtalo de nuevo más tarde.",
 	"Login_ConnectingToSteam": "Conectando a Steam",
 	"Login_LoadingAccountInfo": "Cargando la cuenta",
+	"SteamNotification_HelpRequest_Author": "Soporte de Steam",
 	"SteamNotification_HelpRequest_Title": "Se actualizó una petición de ayuda",
 	"SteamNotification_HelpRequest_Body": "Ticket %1$s",
 	"SteamNotification_AsyncGame_Title": "Sesión de juego",

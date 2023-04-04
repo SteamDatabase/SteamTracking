@@ -120,13 +120,6 @@ enum ESystemFanControlMode {
 	k_SystemFanControlMode_Default = 2;
 }
 
-enum EColorProfile {
-	k_EColorProfile_Invalid = 0;
-	k_EColorProfile_Native = 1;
-	k_EColorProfile_Standard = 2;
-	k_EColorProfile_Vivid = 3;
-}
-
 enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Invalid = 0;
 	k_BluetoothDeviceType_Unknown = 1;

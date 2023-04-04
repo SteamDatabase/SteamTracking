@@ -1,0 +1,1320 @@
+
+ .objc_class_name_NSAlert
+ .objc_class_name_NSAppleEventManager
+ .objc_class_name_NSApplication
+ .objc_class_name_NSArray
+ .objc_class_name_NSAttributedString
+ .objc_class_name_NSBezierPath
+ .objc_class_name_NSBitmapImageRep
+ .objc_class_name_NSBundle
+ .objc_class_name_NSColor
+ .objc_class_name_NSColorSpace
+ .objc_class_name_NSCursor
+ .objc_class_name_NSData
+ .objc_class_name_NSDate
+ .objc_class_name_NSDictionary
+ .objc_class_name_NSEvent
+ .objc_class_name_NSException
+ .objc_class_name_NSFileManager
+ .objc_class_name_NSGraphicsContext
+ .objc_class_name_NSImage
+ .objc_class_name_NSLocale
+ .objc_class_name_NSMenu
+ .objc_class_name_NSMenuItem
+ .objc_class_name_NSMutableArray
+ .objc_class_name_NSNotificationCenter
+ .objc_class_name_NSNumber
+ .objc_class_name_NSObject
+ .objc_class_name_NSOpenGLContext
+ .objc_class_name_NSOpenGLPixelFormat
+ .objc_class_name_NSPasteboard
+ .objc_class_name_NSProcessInfo
+ .objc_class_name_NSResponder
+ .objc_class_name_NSRunningApplication
+ .objc_class_name_NSScreen
+ .objc_class_name_NSString
+ .objc_class_name_NSThread
+ .objc_class_name_NSURL
+ .objc_class_name_NSUserDefaults
+ .objc_class_name_NSView
+ .objc_class_name_NSWindow
+ AudioObjectAddPropertyListener
+ AudioObjectGetPropertyData
+ AudioObjectGetPropertyDataSize
+ AudioObjectRemovePropertyListener
+ AudioQueueAllocateBuffer
+ AudioQueueDispose
+ AudioQueueEnqueueBuffer
+ AudioQueueNewInput
+ AudioQueueNewOutput
+ AudioQueueSetProperty
+ AudioQueueStart
+ AudioQueueStop
+ CFArrayAppendValue
+ CFArrayApplyFunction
+ CFArrayCreate
+ CFArrayCreateMutable
+ CFArrayExchangeValuesAtIndices
+ CFArrayGetCount
+ CFArrayGetValueAtIndex
+ CFDataGetBytePtr
+ CFDictionaryCreate
+ CFDictionaryGetValue
+ CFDictionaryGetValueIfPresent
+ CFEqual
+ CFGetTypeID
+ CFNumberCreate
+ CFNumberGetTypeID
+ CFNumberGetValue
+ CFRelease
+ CFRetain
+ CFRunLoopAddSource
+ CFRunLoopGetCurrent
+ CFRunLoopGetMain
+ CFRunLoopRunInMode
+ CFRunLoopSourceCreate
+ CFRunLoopSourceSignal
+ CFRunLoopStop
+ CFRunLoopWakeUp
+ CFSetGetCount
+ CFSetGetValues
+ CFStringCompare
+ CFStringCreateWithCString
+ CFStringGetBytes
+ CFStringGetCString
+ CFStringGetLength
+ CFStringGetMaximumSizeForEncoding
+ CFStringGetSystemEncoding
+ CFStringGetTypeID
+ CFURLCreateWithBytes
+ CFUUIDGetConstantUUIDWithBytes
+ CGAcquireDisplayFadeReservation
+ CGAssociateMouseAndMouseCursorPosition
+ CGCaptureAllDisplays
+ CGColorGetConstantColor
+ CGDisplayBounds
+ CGDisplayCapture
+ CGDisplayCopyAllDisplayModes
+ CGDisplayCopyDisplayMode
+ CGDisplayFade
+ CGDisplayIDToOpenGLDisplayMask
+ CGDisplayIOServicePort
+ CGDisplayIsMain
+ CGDisplayMirrorsDisplay
+ CGDisplayModeCopyPixelEncoding
+ CGDisplayModeGetHeight
+ CGDisplayModeGetIOFlags
+ CGDisplayModeGetPixelHeight
+ CGDisplayModeGetPixelWidth
+ CGDisplayModeGetRefreshRate
+ CGDisplayModeGetWidth
+ CGDisplayModeIsUsableForDesktopGUI
+ CGDisplayModeRelease
+ CGDisplayMoveCursorToPoint
+ CGDisplayPixelsHigh
+ CGDisplayRelease
+ CGDisplaySetDisplayMode
+ CGGetOnlineDisplayList
+ CGMainDisplayID
+ CGReleaseAllDisplays
+ CGReleaseDisplayFadeReservation
+ CGShieldingWindowLevel
+ CGWarpMouseCursorPosition
+ CGWindowLevelForKey
+ CVDisplayLinkCreateWithActiveCGDisplays
+ CVDisplayLinkCreateWithCGDisplay
+ CVDisplayLinkGetNominalOutputVideoRefreshPeriod
+ CVDisplayLinkRelease
+ CVDisplayLinkSetCurrentCGDisplayFromOpenGLContext
+ CVDisplayLinkSetOutputCallback
+ CVDisplayLinkStart
+ D .objc_class_name_Cocoa_WindowListener
+ D .objc_class_name_SDLAppDelegate
+ D .objc_class_name_SDLApplication
+ D .objc_class_name_SDLMessageBoxPresenter
+ D .objc_class_name_SDLOpenGLContext
+ D .objc_class_name_SDLTranslatorResponder
+ D .objc_class_name_SDLView
+ D .objc_class_name_SDLWindow
+ D .objc_class_name_SDL_CocoaClosure
+ D .objc_class_name_SDL_CocoaVideoData
+ D .objc_class_name_SDL_CocoaWindowData
+ D .objc_class_name_SDL_ShapeData
+ FFCreateDevice
+ FFDeviceCreateEffect
+ FFDeviceGetForceFeedbackCapabilities
+ FFDeviceGetForceFeedbackProperty
+ FFDeviceReleaseEffect
+ FFDeviceSendForceFeedbackCommand
+ FFDeviceSetForceFeedbackProperty
+ FFEffectGetEffectStatus
+ FFEffectSetParameters
+ FFEffectStart
+ FFEffectStop
+ FFIsForceFeedback
+ FFReleaseDevice
+ IODispatchCalloutFromMessage
+ IODisplayCreateInfoDictionary
+ IOHIDDeviceClose
+ IOHIDDeviceCopyMatchingElements
+ IOHIDDeviceGetProperty
+ IOHIDDeviceGetReport
+ IOHIDDeviceGetService
+ IOHIDDeviceGetValue
+ IOHIDDeviceOpen
+ IOHIDDeviceRegisterInputReportCallback
+ IOHIDDeviceRegisterRemovalCallback
+ IOHIDDeviceScheduleWithRunLoop
+ IOHIDDeviceSetReport
+ IOHIDDeviceUnscheduleFromRunLoop
+ IOHIDElementGetChildren
+ IOHIDElementGetCookie
+ IOHIDElementGetLogicalMax
+ IOHIDElementGetLogicalMin
+ IOHIDElementGetType
+ IOHIDElementGetTypeID
+ IOHIDElementGetUsage
+ IOHIDElementGetUsagePage
+ IOHIDManagerClose
+ IOHIDManagerCopyDevices
+ IOHIDManagerCreate
+ IOHIDManagerOpen
+ IOHIDManagerRegisterDeviceMatchingCallback
+ IOHIDManagerRegisterDeviceRemovalCallback
+ IOHIDManagerScheduleWithRunLoop
+ IOHIDManagerSetDeviceMatchingMultiple
+ IOHIDManagerUnscheduleFromRunLoop
+ IOHIDValueGetIntegerValue
+ IOIteratorIsValid
+ IOIteratorNext
+ IONotificationPortCreate
+ IONotificationPortDestroy
+ IONotificationPortGetMachPort
+ IOObjectIsEqualTo
+ IOObjectRelease
+ IOObjectRetain
+ IOPMAssertionCreateWithDescription
+ IOPMAssertionRelease
+ IOPSCopyPowerSourcesInfo
+ IOPSCopyPowerSourcesList
+ IOPSGetPowerSourceDescription
+ IORegistryEntryCreateCFProperties
+ IORegistryEntryGetParentEntry
+ IOServiceAddMatchingNotification
+ IOServiceGetMatchingServices
+ IOServiceMatching
+ KBGetLayoutType
+ LMGetKbdType
+ LSOpenCFURLRef
+ NSApp
+ NSAppKitVersionNumber
+ NSApplicationDidBecomeActiveNotification
+ NSBackingPropertyOldScaleFactorKey
+ NSCurrentLocaleDidChangeNotification
+ NSDefaultRunLoopMode
+ NSDeviceRGBColorSpace
+ NSFilenamesPboardType
+ NSLog
+ NSMouseInRect
+ NSPasteboardTypeString
+ NSRectFill
+ NSSearchPathForDirectoriesInDomains
+ NSURLIsAliasFileKey
+ NSWindowDidBecomeKeyNotification
+ NSWindowDidChangeBackingPropertiesNotification
+ NSWindowDidChangeScreenNotification
+ NSWindowDidChangeScreenProfileNotification
+ NSWindowDidDeminiaturizeNotification
+ NSWindowDidEnterFullScreenNotification
+ NSWindowDidExitFullScreenNotification
+ NSWindowDidExposeNotification
+ NSWindowDidMiniaturizeNotification
+ NSWindowDidMoveNotification
+ NSWindowDidResignKeyNotification
+ NSWindowDidResizeNotification
+ NSWindowWillCloseNotification
+ NSWindowWillEnterFullScreenNotification
+ NSWindowWillExitFullScreenNotification
+ NSZeroPoint
+ NSZeroRect
+ OBJC_CLASS_$_NSAlert
+ OBJC_CLASS_$_NSAppleEventManager
+ OBJC_CLASS_$_NSApplication
+ OBJC_CLASS_$_NSArray
+ OBJC_CLASS_$_NSAttributedString
+ OBJC_CLASS_$_NSBezierPath
+ OBJC_CLASS_$_NSBitmapImageRep
+ OBJC_CLASS_$_NSBundle
+ OBJC_CLASS_$_NSColor
+ OBJC_CLASS_$_NSColorSpace
+ OBJC_CLASS_$_NSCursor
+ OBJC_CLASS_$_NSData
+ OBJC_CLASS_$_NSDate
+ OBJC_CLASS_$_NSDictionary
+ OBJC_CLASS_$_NSEvent
+ OBJC_CLASS_$_NSFileManager
+ OBJC_CLASS_$_NSGraphicsContext
+ OBJC_CLASS_$_NSImage
+ OBJC_CLASS_$_NSLocale
+ OBJC_CLASS_$_NSMenu
+ OBJC_CLASS_$_NSMenuItem
+ OBJC_CLASS_$_NSMutableArray
+ OBJC_CLASS_$_NSNotificationCenter
+ OBJC_CLASS_$_NSNumber
+ OBJC_CLASS_$_NSObject
+ OBJC_CLASS_$_NSOpenGLContext
+ OBJC_CLASS_$_NSOpenGLPixelFormat
+ OBJC_CLASS_$_NSPasteboard
+ OBJC_CLASS_$_NSProcessInfo
+ OBJC_CLASS_$_NSResponder
+ OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSScreen
+ OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSThread
+ OBJC_CLASS_$_NSURL
+ OBJC_CLASS_$_NSUserDefaults
+ OBJC_CLASS_$_NSView
+ OBJC_CLASS_$_NSWindow
+ OBJC_EHTYPE_$_NSException
+ OBJC_METACLASS_$_NSApplication
+ OBJC_METACLASS_$_NSObject
+ OBJC_METACLASS_$_NSOpenGLContext
+ OBJC_METACLASS_$_NSResponder
+ OBJC_METACLASS_$_NSView
+ OBJC_METACLASS_$_NSWindow
+ T SDL_AddEventWatch
+ T SDL_AddGamepadMapping
+ T SDL_AddGamepadMappingsFromRW
+ T SDL_AddHintCallback
+ T SDL_AddTimer
+ T SDL_AtomicAdd
+ T SDL_AtomicCAS
+ T SDL_AtomicCASPtr
+ T SDL_AtomicGet
+ T SDL_AtomicGetPtr
+ T SDL_AtomicLock
+ T SDL_AtomicSet
+ T SDL_AtomicSetPtr
+ T SDL_AtomicTryLock
+ T SDL_AtomicUnlock
+ T SDL_AttachVirtualJoystick
+ T SDL_AttachVirtualJoystickEx
+ T SDL_BlitSurface
+ T SDL_BlitSurfaceScaled
+ T SDL_BlitSurfaceUnchecked
+ T SDL_BlitSurfaceUncheckedScaled
+ T SDL_CaptureMouse
+ T SDL_ClearAudioStream
+ T SDL_ClearComposition
+ T SDL_ClearError
+ T SDL_ClearHints
+ T SDL_ClearQueuedAudio
+ T SDL_CloseAudioDevice
+ T SDL_CloseGamepad
+ T SDL_CloseJoystick
+ T SDL_CloseSensor
+ T SDL_ComposeCustomBlendMode
+ T SDL_CondBroadcast
+ T SDL_CondSignal
+ T SDL_CondWait
+ T SDL_CondWaitTimeout
+ T SDL_ConvertAudioSamples
+ T SDL_ConvertEventToRenderCoordinates
+ T SDL_ConvertPixels
+ T SDL_ConvertSurface
+ T SDL_ConvertSurfaceFormat
+ T SDL_CreateAudioStream
+ T SDL_CreateColorCursor
+ T SDL_CreateCond
+ T SDL_CreateCursor
+ T SDL_CreateMutex
+ T SDL_CreatePalette
+ T SDL_CreatePixelFormat
+ T SDL_CreatePopupWindow
+ T SDL_CreateRW
+ T SDL_CreateRenderer
+ T SDL_CreateSemaphore
+ T SDL_CreateShapedWindow
+ T SDL_CreateSoftwareRenderer
+ T SDL_CreateSurface
+ T SDL_CreateSurfaceFrom
+ T SDL_CreateSystemCursor
+ T SDL_CreateTexture
+ T SDL_CreateTextureFromSurface
+ T SDL_CreateThread
+ T SDL_CreateThreadWithStackSize
+ T SDL_CreateWindow
+ T SDL_CreateWindowAndRenderer
+ T SDL_CreateWindowFrom
+ T SDL_CursorVisible
+ T SDL_DYNAPI_entry
+ T SDL_DelEventWatch
+ T SDL_DelHintCallback
+ T SDL_Delay
+ T SDL_DelayNS
+ T SDL_DequeueAudio
+ T SDL_DestroyAudioStream
+ T SDL_DestroyCond
+ T SDL_DestroyCursor
+ T SDL_DestroyMutex
+ T SDL_DestroyPalette
+ T SDL_DestroyPixelFormat
+ T SDL_DestroyRW
+ T SDL_DestroyRenderer
+ T SDL_DestroySemaphore
+ T SDL_DestroySurface
+ T SDL_DestroyTexture
+ T SDL_DestroyWindow
+ T SDL_DetachThread
+ T SDL_DetachVirtualJoystick
+ T SDL_DisableScreenSaver
+ T SDL_DuplicateSurface
+ T SDL_EGL_GetCurrentEGLConfig
+ T SDL_EGL_GetCurrentEGLDisplay
+ T SDL_EGL_GetProcAddress
+ T SDL_EGL_GetWindowEGLSurface
+ T SDL_EGL_SetEGLAttributeCallbacks
+ T SDL_EnableScreenSaver
+ T SDL_Error
+ T SDL_EventEnabled
+ T SDL_FillSurfaceRect
+ T SDL_FillSurfaceRects
+ T SDL_FilterEvents
+ T SDL_FlashWindow
+ T SDL_FlushAudioStream
+ T SDL_FlushEvent
+ T SDL_FlushEvents
+ T SDL_GL_BindTexture
+ T SDL_GL_CreateContext
+ T SDL_GL_DeleteContext
+ T SDL_GL_ExtensionSupported
+ T SDL_GL_GetAttribute
+ T SDL_GL_GetCurrentContext
+ T SDL_GL_GetCurrentWindow
+ T SDL_GL_GetProcAddress
+ T SDL_GL_GetSwapInterval
+ T SDL_GL_LoadLibrary
+ T SDL_GL_MakeCurrent
+ T SDL_GL_ResetAttributes
+ T SDL_GL_SetAttribute
+ T SDL_GL_SetSwapInterval
+ T SDL_GL_SwapWindow
+ T SDL_GL_UnbindTexture
+ T SDL_GL_UnloadLibrary
+ T SDL_GUIDFromString
+ T SDL_GUIDToString
+ T SDL_GamepadConnected
+ T SDL_GamepadEventsEnabled
+ T SDL_GamepadHasAxis
+ T SDL_GamepadHasButton
+ T SDL_GamepadHasLED
+ T SDL_GamepadHasRumble
+ T SDL_GamepadHasRumbleTriggers
+ T SDL_GamepadHasSensor
+ T SDL_GamepadSensorEnabled
+ T SDL_GetAssertionHandler
+ T SDL_GetAssertionReport
+ T SDL_GetAudioDeviceName
+ T SDL_GetAudioDeviceSpec
+ T SDL_GetAudioDeviceStatus
+ T SDL_GetAudioDriver
+ T SDL_GetAudioStreamAvailable
+ T SDL_GetAudioStreamData
+ T SDL_GetBasePath
+ T SDL_GetCPUCacheLineSize
+ T SDL_GetCPUCount
+ T SDL_GetClipboardText
+ T SDL_GetClosestFullscreenDisplayMode
+ T SDL_GetCurrentAudioDriver
+ T SDL_GetCurrentDisplayMode
+ T SDL_GetCurrentRenderOutputSize
+ T SDL_GetCurrentVideoDriver
+ T SDL_GetCursor
+ T SDL_GetDefaultAssertionHandler
+ T SDL_GetDefaultAudioInfo
+ T SDL_GetDefaultCursor
+ T SDL_GetDesktopDisplayMode
+ T SDL_GetDisplayBounds
+ T SDL_GetDisplayForPoint
+ T SDL_GetDisplayForRect
+ T SDL_GetDisplayForWindow
+ T SDL_GetDisplayName
+ T SDL_GetDisplayOrientation
+ T SDL_GetDisplayUsableBounds
+ T SDL_GetDisplays
+ T SDL_GetError
+ T SDL_GetErrorMsg
+ T SDL_GetEventFilter
+ T SDL_GetFullscreenDisplayModes
+ T SDL_GetGamepadAppleSFSymbolsNameForAxis
+ T SDL_GetGamepadAppleSFSymbolsNameForButton
+ T SDL_GetGamepadAxis
+ T SDL_GetGamepadAxisFromString
+ T SDL_GetGamepadBindForAxis
+ T SDL_GetGamepadBindForButton
+ T SDL_GetGamepadButton
+ T SDL_GetGamepadButtonFromString
+ T SDL_GetGamepadFirmwareVersion
+ T SDL_GetGamepadFromInstanceID
+ T SDL_GetGamepadFromPlayerIndex
+ T SDL_GetGamepadInstanceGUID
+ T SDL_GetGamepadInstanceMapping
+ T SDL_GetGamepadInstanceName
+ T SDL_GetGamepadInstancePath
+ T SDL_GetGamepadInstancePlayerIndex
+ T SDL_GetGamepadInstanceProduct
+ T SDL_GetGamepadInstanceProductVersion
+ T SDL_GetGamepadInstanceType
+ T SDL_GetGamepadInstanceVendor
+ T SDL_GetGamepadJoystick
+ T SDL_GetGamepadMapping
+ T SDL_GetGamepadMappingForGUID
+ T SDL_GetGamepadMappingForIndex
+ T SDL_GetGamepadName
+ T SDL_GetGamepadPath
+ T SDL_GetGamepadPlayerIndex
+ T SDL_GetGamepadProduct
+ T SDL_GetGamepadProductVersion
+ T SDL_GetGamepadSensorData
+ T SDL_GetGamepadSensorDataRate
+ T SDL_GetGamepadSerial
+ T SDL_GetGamepadStringForAxis
+ T SDL_GetGamepadStringForButton
+ T SDL_GetGamepadTouchpadFinger
+ T SDL_GetGamepadType
+ T SDL_GetGamepadVendor
+ T SDL_GetGamepads
+ T SDL_GetGlobalMouseState
+ T SDL_GetGrabbedWindow
+ T SDL_GetHint
+ T SDL_GetHintBoolean
+ T SDL_GetJoystickAxis
+ T SDL_GetJoystickAxisInitialState
+ T SDL_GetJoystickButton
+ T SDL_GetJoystickFirmwareVersion
+ T SDL_GetJoystickFromInstanceID
+ T SDL_GetJoystickFromPlayerIndex
+ T SDL_GetJoystickGUID
+ T SDL_GetJoystickGUIDFromString
+ T SDL_GetJoystickGUIDInfo
+ T SDL_GetJoystickGUIDString
+ T SDL_GetJoystickHat
+ T SDL_GetJoystickInstanceGUID
+ T SDL_GetJoystickInstanceID
+ T SDL_GetJoystickInstanceName
+ T SDL_GetJoystickInstancePath
+ T SDL_GetJoystickInstancePlayerIndex
+ T SDL_GetJoystickInstanceProduct
+ T SDL_GetJoystickInstanceProductVersion
+ T SDL_GetJoystickInstanceType
+ T SDL_GetJoystickInstanceVendor
+ T SDL_GetJoystickName
+ T SDL_GetJoystickPath
+ T SDL_GetJoystickPlayerIndex
+ T SDL_GetJoystickPowerLevel
+ T SDL_GetJoystickProduct
+ T SDL_GetJoystickProductVersion
+ T SDL_GetJoystickSerial
+ T SDL_GetJoystickType
+ T SDL_GetJoystickVendor
+ T SDL_GetJoysticks
+ T SDL_GetKeyFromName
+ T SDL_GetKeyFromScancode
+ T SDL_GetKeyName
+ T SDL_GetKeyboardFocus
+ T SDL_GetKeyboardState
+ T SDL_GetMasksForPixelFormatEnum
+ T SDL_GetMemoryFunctions
+ T SDL_GetModState
+ T SDL_GetMouseFocus
+ T SDL_GetMouseState
+ T SDL_GetNumAllocations
+ T SDL_GetNumAudioDevices
+ T SDL_GetNumAudioDrivers
+ T SDL_GetNumGamepadMappings
+ T SDL_GetNumGamepadTouchpadFingers
+ T SDL_GetNumGamepadTouchpads
+ T SDL_GetNumJoystickAxes
+ T SDL_GetNumJoystickButtons
+ T SDL_GetNumJoystickHats
+ T SDL_GetNumRenderDrivers
+ T SDL_GetNumTouchDevices
+ T SDL_GetNumTouchFingers
+ T SDL_GetNumVideoDrivers
+ T SDL_GetOriginalMemoryFunctions
+ T SDL_GetPerformanceCounter
+ T SDL_GetPerformanceFrequency
+ T SDL_GetPixelFormatEnumForMasks
+ T SDL_GetPixelFormatName
+ T SDL_GetPlatform
+ T SDL_GetPowerInfo
+ T SDL_GetPrefPath
+ T SDL_GetPreferredLocales
+ T SDL_GetPrimaryDisplay
+ T SDL_GetPrimarySelectionText
+ T SDL_GetQueuedAudioSize
+ T SDL_GetRGB
+ T SDL_GetRGBA
+ T SDL_GetRectAndLineIntersection
+ T SDL_GetRectAndLineIntersectionFloat
+ T SDL_GetRectEnclosingPoints
+ T SDL_GetRectEnclosingPointsFloat
+ T SDL_GetRectIntersection
+ T SDL_GetRectIntersectionFloat
+ T SDL_GetRectUnion
+ T SDL_GetRectUnionFloat
+ T SDL_GetRelativeMouseMode
+ T SDL_GetRelativeMouseState
+ T SDL_GetRenderClipRect
+ T SDL_GetRenderDrawBlendMode
+ T SDL_GetRenderDrawColor
+ T SDL_GetRenderDriver
+ T SDL_GetRenderLogicalPresentation
+ T SDL_GetRenderMetalCommandEncoder
+ T SDL_GetRenderMetalLayer
+ T SDL_GetRenderOutputSize
+ T SDL_GetRenderScale
+ T SDL_GetRenderTarget
+ T SDL_GetRenderVSync
+ T SDL_GetRenderViewport
+ T SDL_GetRenderWindow
+ T SDL_GetRenderWindowSize
+ T SDL_GetRenderer
+ T SDL_GetRendererInfo
+ T SDL_GetRevision
+ T SDL_GetScancodeFromKey
+ T SDL_GetScancodeFromName
+ T SDL_GetScancodeName
+ T SDL_GetSensorData
+ T SDL_GetSensorFromInstanceID
+ T SDL_GetSensorInstanceID
+ T SDL_GetSensorInstanceName
+ T SDL_GetSensorInstanceNonPortableType
+ T SDL_GetSensorInstanceType
+ T SDL_GetSensorName
+ T SDL_GetSensorNonPortableType
+ T SDL_GetSensorType
+ T SDL_GetSensors
+ T SDL_GetShapedWindowMode
+ T SDL_GetSurfaceAlphaMod
+ T SDL_GetSurfaceBlendMode
+ T SDL_GetSurfaceClipRect
+ T SDL_GetSurfaceColorKey
+ T SDL_GetSurfaceColorMod
+ T SDL_GetSystemRAM
+ T SDL_GetSystemTheme
+ T SDL_GetTextureAlphaMod
+ T SDL_GetTextureBlendMode
+ T SDL_GetTextureColorMod
+ T SDL_GetTextureScaleMode
+ T SDL_GetTextureUserData
+ T SDL_GetThreadID
+ T SDL_GetThreadName
+ T SDL_GetTicks
+ T SDL_GetTicksNS
+ T SDL_GetTouchDevice
+ T SDL_GetTouchDeviceType
+ T SDL_GetTouchFinger
+ T SDL_GetTouchName
+ T SDL_GetVersion
+ T SDL_GetVideoDriver
+ T SDL_GetWindowBordersSize
+ T SDL_GetWindowData
+ T SDL_GetWindowFlags
+ T SDL_GetWindowFromID
+ T SDL_GetWindowFullscreenMode
+ T SDL_GetWindowGrab
+ T SDL_GetWindowICCProfile
+ T SDL_GetWindowID
+ T SDL_GetWindowKeyboardGrab
+ T SDL_GetWindowMaximumSize
+ T SDL_GetWindowMinimumSize
+ T SDL_GetWindowMouseGrab
+ T SDL_GetWindowMouseRect
+ T SDL_GetWindowOpacity
+ T SDL_GetWindowParent
+ T SDL_GetWindowPixelFormat
+ T SDL_GetWindowPosition
+ T SDL_GetWindowSize
+ T SDL_GetWindowSizeInPixels
+ T SDL_GetWindowSurface
+ T SDL_GetWindowTitle
+ T SDL_GetWindowWMInfo
+ T SDL_GetYUVConversionMode
+ T SDL_GetYUVConversionModeForResolution
+ T SDL_HapticClose
+ T SDL_HapticDestroyEffect
+ T SDL_HapticEffectSupported
+ T SDL_HapticGetEffectStatus
+ T SDL_HapticIndex
+ T SDL_HapticName
+ T SDL_HapticNewEffect
+ T SDL_HapticNumAxes
+ T SDL_HapticNumEffects
+ T SDL_HapticNumEffectsPlaying
+ T SDL_HapticOpen
+ T SDL_HapticOpenFromJoystick
+ T SDL_HapticOpenFromMouse
+ T SDL_HapticOpened
+ T SDL_HapticPause
+ T SDL_HapticQuery
+ T SDL_HapticRumbleInit
+ T SDL_HapticRumblePlay
+ T SDL_HapticRumbleStop
+ T SDL_HapticRumbleSupported
+ T SDL_HapticRunEffect
+ T SDL_HapticSetAutocenter
+ T SDL_HapticSetGain
+ T SDL_HapticStopAll
+ T SDL_HapticStopEffect
+ T SDL_HapticUnpause
+ T SDL_HapticUpdateEffect
+ T SDL_HasARMSIMD
+ T SDL_HasAVX
+ T SDL_HasAVX2
+ T SDL_HasAVX512F
+ T SDL_HasAltiVec
+ T SDL_HasClipboardText
+ T SDL_HasEvent
+ T SDL_HasEvents
+ T SDL_HasLASX
+ T SDL_HasLSX
+ T SDL_HasMMX
+ T SDL_HasNEON
+ T SDL_HasPrimarySelectionText
+ T SDL_HasRectIntersection
+ T SDL_HasRectIntersectionFloat
+ T SDL_HasSSE
+ T SDL_HasSSE2
+ T SDL_HasSSE3
+ T SDL_HasSSE41
+ T SDL_HasSSE42
+ T SDL_HasScreenKeyboardSupport
+ T SDL_HideCursor
+ T SDL_HideWindow
+ T SDL_Init
+ T SDL_InitSubSystem
+ T SDL_IsGamepad
+ T SDL_IsJoystickVirtual
+ T SDL_IsShapedWindow
+ T SDL_IsTablet
+ T SDL_JoystickConnected
+ T SDL_JoystickEventsEnabled
+ T SDL_JoystickHasLED
+ T SDL_JoystickHasRumble
+ T SDL_JoystickHasRumbleTriggers
+ T SDL_JoystickIsHaptic
+ T SDL_LoadBMP_RW
+ T SDL_LoadFile
+ T SDL_LoadFile_RW
+ T SDL_LoadFunction
+ T SDL_LoadObject
+ T SDL_LoadWAV_RW
+ T SDL_LockAudioDevice
+ T SDL_LockJoysticks
+ T SDL_LockMutex
+ T SDL_LockSurface
+ T SDL_LockTexture
+ T SDL_LockTextureToSurface
+ T SDL_Log
+ T SDL_LogCritical
+ T SDL_LogDebug
+ T SDL_LogError
+ T SDL_LogGetOutputFunction
+ T SDL_LogGetPriority
+ T SDL_LogInfo
+ T SDL_LogMessage
+ T SDL_LogMessageV
+ T SDL_LogResetPriorities
+ T SDL_LogSetAllPriority
+ T SDL_LogSetOutputFunction
+ T SDL_LogSetPriority
+ T SDL_LogVerbose
+ T SDL_LogWarn
+ T SDL_MapRGB
+ T SDL_MapRGBA
+ T SDL_MaximizeWindow
+ T SDL_MemoryBarrierAcquireFunction
+ T SDL_MemoryBarrierReleaseFunction
+ T SDL_Metal_CreateView
+ T SDL_Metal_DestroyView
+ T SDL_Metal_GetLayer
+ T SDL_MinimizeWindow
+ T SDL_MixAudioFormat
+ T SDL_MouseIsHaptic
+ T SDL_NumHaptics
+ T SDL_OnApplicationDidBecomeActive
+ T SDL_OnApplicationDidEnterBackground
+ T SDL_OnApplicationDidReceiveMemoryWarning
+ T SDL_OnApplicationWillEnterForeground
+ T SDL_OnApplicationWillResignActive
+ T SDL_OnApplicationWillTerminate
+ T SDL_OpenAudioDevice
+ T SDL_OpenGamepad
+ T SDL_OpenJoystick
+ T SDL_OpenSensor
+ T SDL_OpenURL
+ T SDL_PauseAudioDevice
+ T SDL_PeepEvents
+ T SDL_PlayAudioDevice
+ T SDL_PollEvent
+ T SDL_PremultiplyAlpha
+ T SDL_PumpEvents
+ T SDL_PushEvent
+ T SDL_PutAudioStreamData
+ T SDL_QueryTexture
+ T SDL_QueueAudio
+ T SDL_Quit
+ T SDL_QuitSubSystem
+ T SDL_RWFromConstMem
+ T SDL_RWFromFile
+ T SDL_RWFromMem
+ T SDL_RWclose
+ T SDL_RWread
+ T SDL_RWseek
+ T SDL_RWsize
+ T SDL_RWtell
+ T SDL_RWwrite
+ T SDL_RaiseWindow
+ T SDL_ReadBE16
+ T SDL_ReadBE32
+ T SDL_ReadBE64
+ T SDL_ReadLE16
+ T SDL_ReadLE32
+ T SDL_ReadLE64
+ T SDL_ReadU8
+ T SDL_RegisterEvents
+ T SDL_RemoveTimer
+ T SDL_RenderClear
+ T SDL_RenderClipEnabled
+ T SDL_RenderCoordinatesFromWindow
+ T SDL_RenderCoordinatesToWindow
+ T SDL_RenderFillRect
+ T SDL_RenderFillRects
+ T SDL_RenderFlush
+ T SDL_RenderGeometry
+ T SDL_RenderGeometryRaw
+ T SDL_RenderLine
+ T SDL_RenderLines
+ T SDL_RenderPoint
+ T SDL_RenderPoints
+ T SDL_RenderPresent
+ T SDL_RenderReadPixels
+ T SDL_RenderRect
+ T SDL_RenderRects
+ T SDL_RenderTexture
+ T SDL_RenderTextureRotated
+ T SDL_ReportAssertion
+ T SDL_ResetAssertionReport
+ T SDL_ResetHint
+ T SDL_ResetHints
+ T SDL_ResetKeyboard
+ T SDL_RestoreWindow
+ T SDL_RumbleGamepad
+ T SDL_RumbleGamepadTriggers
+ T SDL_RumbleJoystick
+ T SDL_RumbleJoystickTriggers
+ T SDL_RunApp
+ T SDL_SIMDGetAlignment
+ T SDL_SaveBMP_RW
+ T SDL_ScreenKeyboardShown
+ T SDL_ScreenSaverEnabled
+ T SDL_SemPost
+ T SDL_SemTryWait
+ T SDL_SemValue
+ T SDL_SemWait
+ T SDL_SemWaitTimeout
+ T SDL_SendGamepadEffect
+ T SDL_SendJoystickEffect
+ T SDL_SetAssertionHandler
+ T SDL_SetClipboardText
+ T SDL_SetCursor
+ T SDL_SetError
+ T SDL_SetEventEnabled
+ T SDL_SetEventFilter
+ T SDL_SetGamepadEventsEnabled
+ T SDL_SetGamepadLED
+ T SDL_SetGamepadPlayerIndex
+ T SDL_SetGamepadSensorEnabled
+ T SDL_SetHint
+ T SDL_SetHintWithPriority
+ T SDL_SetJoystickEventsEnabled
+ T SDL_SetJoystickLED
+ T SDL_SetJoystickPlayerIndex
+ T SDL_SetJoystickVirtualAxis
+ T SDL_SetJoystickVirtualButton
+ T SDL_SetJoystickVirtualHat
+ T SDL_SetMainReady
+ T SDL_SetMemoryFunctions
+ T SDL_SetModState
+ T SDL_SetPaletteColors
+ T SDL_SetPixelFormatPalette
+ T SDL_SetPrimarySelectionText
+ T SDL_SetRelativeMouseMode
+ T SDL_SetRenderClipRect
+ T SDL_SetRenderDrawBlendMode
+ T SDL_SetRenderDrawColor
+ T SDL_SetRenderLogicalPresentation
+ T SDL_SetRenderScale
+ T SDL_SetRenderTarget
+ T SDL_SetRenderVSync
+ T SDL_SetRenderViewport
+ T SDL_SetSurfaceAlphaMod
+ T SDL_SetSurfaceBlendMode
+ T SDL_SetSurfaceClipRect
+ T SDL_SetSurfaceColorKey
+ T SDL_SetSurfaceColorMod
+ T SDL_SetSurfacePalette
+ T SDL_SetSurfaceRLE
+ T SDL_SetTextInputRect
+ T SDL_SetTextureAlphaMod
+ T SDL_SetTextureBlendMode
+ T SDL_SetTextureColorMod
+ T SDL_SetTextureScaleMode
+ T SDL_SetTextureUserData
+ T SDL_SetThreadPriority
+ T SDL_SetWindowAlwaysOnTop
+ T SDL_SetWindowBordered
+ T SDL_SetWindowData
+ T SDL_SetWindowFullscreen
+ T SDL_SetWindowFullscreenMode
+ T SDL_SetWindowGrab
+ T SDL_SetWindowHitTest
+ T SDL_SetWindowIcon
+ T SDL_SetWindowInputFocus
+ T SDL_SetWindowKeyboardGrab
+ T SDL_SetWindowMaximumSize
+ T SDL_SetWindowMinimumSize
+ T SDL_SetWindowModalFor
+ T SDL_SetWindowMouseGrab
+ T SDL_SetWindowMouseRect
+ T SDL_SetWindowOpacity
+ T SDL_SetWindowPosition
+ T SDL_SetWindowResizable
+ T SDL_SetWindowShape
+ T SDL_SetWindowSize
+ T SDL_SetWindowTitle
+ T SDL_SetYUVConversionMode
+ T SDL_ShowCursor
+ T SDL_ShowMessageBox
+ T SDL_ShowSimpleMessageBox
+ T SDL_ShowWindow
+ T SDL_SoftStretch
+ T SDL_SoftStretchLinear
+ T SDL_StartTextInput
+ T SDL_StopTextInput
+ T SDL_SurfaceHasColorKey
+ T SDL_SurfaceHasRLE
+ T SDL_TLSCleanup
+ T SDL_TLSCreate
+ T SDL_TLSGet
+ T SDL_TLSSet
+ T SDL_TextInputActive
+ T SDL_TextInputShown
+ T SDL_ThreadID
+ T SDL_TryLockMutex
+ T SDL_UnloadObject
+ T SDL_UnlockAudioDevice
+ T SDL_UnlockJoysticks
+ T SDL_UnlockMutex
+ T SDL_UnlockSurface
+ T SDL_UnlockTexture
+ T SDL_UpdateGamepads
+ T SDL_UpdateJoysticks
+ T SDL_UpdateNVTexture
+ T SDL_UpdateSensors
+ T SDL_UpdateTexture
+ T SDL_UpdateWindowSurface
+ T SDL_UpdateWindowSurfaceRects
+ T SDL_UpdateYUVTexture
+ T SDL_Vulkan_CreateSurface
+ T SDL_Vulkan_GetInstanceExtensions
+ T SDL_Vulkan_GetVkGetInstanceProcAddr
+ T SDL_Vulkan_LoadLibrary
+ T SDL_Vulkan_UnloadLibrary
+ T SDL_WaitEvent
+ T SDL_WaitEventTimeout
+ T SDL_WaitThread
+ T SDL_WarpMouseGlobal
+ T SDL_WarpMouseInWindow
+ T SDL_WasInit
+ T SDL_WriteBE16
+ T SDL_WriteBE32
+ T SDL_WriteBE64
+ T SDL_WriteLE16
+ T SDL_WriteLE32
+ T SDL_WriteLE64
+ T SDL_WriteU8
+ T SDL_abs
+ T SDL_acos
+ T SDL_acosf
+ T SDL_aligned_alloc
+ T SDL_aligned_free
+ T SDL_asin
+ T SDL_asinf
+ T SDL_asprintf
+ T SDL_atan
+ T SDL_atan2
+ T SDL_atan2f
+ T SDL_atanf
+ T SDL_atof
+ T SDL_atoi
+ T SDL_bsearch
+ T SDL_calloc
+ T SDL_ceil
+ T SDL_ceilf
+ T SDL_copysign
+ T SDL_copysignf
+ T SDL_cos
+ T SDL_cosf
+ T SDL_crc16
+ T SDL_crc32
+ T SDL_exp
+ T SDL_expf
+ T SDL_fabs
+ T SDL_fabsf
+ T SDL_floor
+ T SDL_floorf
+ T SDL_fmod
+ T SDL_fmodf
+ T SDL_free
+ T SDL_getenv
+ T SDL_hid_ble_scan
+ T SDL_hid_close
+ T SDL_hid_device_change_count
+ T SDL_hid_enumerate
+ T SDL_hid_exit
+ T SDL_hid_free_enumeration
+ T SDL_hid_get_feature_report
+ T SDL_hid_get_indexed_string
+ T SDL_hid_get_manufacturer_string
+ T SDL_hid_get_product_string
+ T SDL_hid_get_serial_number_string
+ T SDL_hid_init
+ T SDL_hid_open
+ T SDL_hid_open_path
+ T SDL_hid_read
+ T SDL_hid_read_timeout
+ T SDL_hid_send_feature_report
+ T SDL_hid_set_nonblocking
+ T SDL_hid_write
+ T SDL_iconv
+ T SDL_iconv_close
+ T SDL_iconv_open
+ T SDL_iconv_string
+ T SDL_isalnum
+ T SDL_isalpha
+ T SDL_isblank
+ T SDL_iscntrl
+ T SDL_isdigit
+ T SDL_isgraph
+ T SDL_islower
+ T SDL_isprint
+ T SDL_ispunct
+ T SDL_isspace
+ T SDL_isupper
+ T SDL_isxdigit
+ T SDL_itoa
+ T SDL_lltoa
+ T SDL_log
+ T SDL_log10
+ T SDL_log10f
+ T SDL_logf
+ T SDL_lround
+ T SDL_lroundf
+ T SDL_ltoa
+ T SDL_malloc
+ T SDL_memcmp
+ T SDL_memcpy
+ T SDL_memmove
+ T SDL_memset
+ T SDL_memset4
+ T SDL_modf
+ T SDL_modff
+ T SDL_pow
+ T SDL_powf
+ T SDL_qsort
+ T SDL_realloc
+ T SDL_round
+ T SDL_roundf
+ T SDL_scalbn
+ T SDL_scalbnf
+ T SDL_setenv
+ T SDL_sin
+ T SDL_sinf
+ T SDL_snprintf
+ T SDL_sqrt
+ T SDL_sqrtf
+ T SDL_sscanf
+ T SDL_strcasecmp
+ T SDL_strcasestr
+ T SDL_strchr
+ T SDL_strcmp
+ T SDL_strdup
+ T SDL_strlcat
+ T SDL_strlcpy
+ T SDL_strlen
+ T SDL_strlwr
+ T SDL_strncasecmp
+ T SDL_strncmp
+ T SDL_strrchr
+ T SDL_strrev
+ T SDL_strstr
+ T SDL_strtod
+ T SDL_strtokr
+ T SDL_strtol
+ T SDL_strtoll
+ T SDL_strtoul
+ T SDL_strtoull
+ T SDL_strupr
+ T SDL_tan
+ T SDL_tanf
+ T SDL_tolower
+ T SDL_toupper
+ T SDL_trunc
+ T SDL_truncf
+ T SDL_uitoa
+ T SDL_ulltoa
+ T SDL_ultoa
+ T SDL_utf8strlcpy
+ T SDL_utf8strlen
+ T SDL_utf8strnlen
+ T SDL_vasprintf
+ T SDL_vsnprintf
+ T SDL_vsscanf
+ T SDL_wcscasecmp
+ T SDL_wcscmp
+ T SDL_wcsdup
+ T SDL_wcslcat
+ T SDL_wcslcpy
+ T SDL_wcslen
+ T SDL_wcsncasecmp
+ T SDL_wcsncmp
+ T SDL_wcsstr
+ TISCopyCurrentKeyboardLayoutInputSource
+ TISGetInputSourceProperty
+ UCKeyTranslate
+ _Block_object_assign
+ _Block_object_dispose
+ _DefaultRuneLocale
+ _Exit
+ _NSConcreteGlobalBlock
+ _NSConcreteStackBlock
+ _Unwind_Resume
+ __CFConstantStringClassReference
+ __bzero
+ __divdi3
+ __error
+ __maskrune
+ __objc_personality_v0
+ __sprintf_chk
+ __stack_chk_fail
+ __stack_chk_guard
+ __stderrp
+ __stdinp
+ __tolower
+ __toupper
+ __udivdi3
+ __umoddi3
+ _dispatch_main_q
+ _objc_empty_cache
+ _setjmp
+ acos
+ acosf
+ asin
+ asinf
+ atan
+ atan2
+ atan2f
+ atanf
+ atof
+ atoi
+ bsearch
+ calloc
+ ceil
+ ceilf
+ cos
+ cosf
+ dispatch_async
+ dispatch_once_f
+ dispatch_sync
+ dlclose
+ dlerror
+ dlopen
+ dlsym
+ dyld_stub_binder
+ exp
+ expf
+ fclose
+ ferror
+ fflush
+ fgets
+ floor
+ floorf
+ fmod
+ fmodf
+ fopen
+ fopen$DARWIN_EXTSN
+ fprintf
+ fread
+ free
+ fseek
+ fseeko
+ ftell
+ ftello
+ fwrite
+ fwrite$UNIX2003
+ getenv
+ gettimeofday
+ iconv
+ iconv_close
+ iconv_open
+ kCFAllocatorDefault
+ kCFBooleanFalse
+ kCFBooleanTrue
+ kCFCopyStringDictionaryKeyCallBacks
+ kCFRunLoopDefaultMode
+ kCFTypeArrayCallBacks
+ kCFTypeDictionaryKeyCallBacks
+ kCFTypeDictionaryValueCallBacks
+ kCGColorBlack
+ kCGColorClear
+ kCGDisplayShowDuplicateLowResolutionModes
+ kIOMasterPortDefault
+ kTISPropertyUnicodeKeyLayoutData
+ kUTTypeFileURL
+ log
+ log10
+ log10f
+ logf
+ lround
+ lroundf
+ mach_absolute_time
+ mach_msg
+ mach_timebase_info
+ malloc
+ memcmp
+ memcpy
+ memmove
+ memset
+ memset_pattern4
+ mkdir
+ nanosleep
+ nanosleep$UNIX2003
+ objc_alloc
+ objc_autoreleasePoolPop
+ objc_autoreleasePoolPush
+ objc_autoreleaseReturnValue
+ objc_begin_catch
+ objc_destroyWeak
+ objc_end_catch
+ objc_enumerationMutation
+ objc_exception_extract
+ objc_exception_match
+ objc_exception_throw
+ objc_exception_try_enter
+ objc_exception_try_exit
+ objc_loadWeakRetained
+ objc_msgSend
+ objc_msgSendSuper
+ objc_msgSendSuper2
+ objc_msgSend_fpret
+ objc_msgSend_stret
+ objc_release
+ objc_retain
+ objc_retainAutorelease
+ objc_retainAutoreleaseReturnValue
+ objc_retainAutoreleasedReturnValue
+ objc_storeStrong
+ objc_storeWeak
+ objc_sync_enter
+ objc_sync_exit
+ pow
+ powf
+ pthread_attr_init
+ pthread_attr_setdetachstate
+ pthread_attr_setstacksize
+ pthread_cond_broadcast
+ pthread_cond_destroy
+ pthread_cond_init
+ pthread_cond_init$UNIX2003
+ pthread_cond_signal
+ pthread_cond_timedwait
+ pthread_cond_timedwait$UNIX2003
+ pthread_cond_wait
+ pthread_cond_wait$UNIX2003
+ pthread_create
+ pthread_detach
+ pthread_getschedparam
+ pthread_getspecific
+ pthread_join
+ pthread_join$UNIX2003
+ pthread_key_create
+ pthread_mutex_destroy
+ pthread_mutex_init
+ pthread_mutex_lock
+ pthread_mutex_trylock
+ pthread_mutex_unlock
+ pthread_mutexattr_init
+ pthread_mutexattr_settype
+ pthread_self
+ pthread_setcanceltype
+ pthread_setcanceltype$UNIX2003
+ pthread_setschedparam
+ pthread_setspecific
+ pthread_sigmask
+ pthread_sigmask$UNIX2003
+ qsort
+ realloc
+ rewind
+ round
+ roundf
+ scalbn
+ scalbnf
+ sched_get_priority_max
+ sched_get_priority_min
+ setenv
+ setenv$UNIX2003
+ sigaction
+ signal
+ sin
+ sinf
+ snprintf
+ sscanf
+ strcasecmp
+ strcasestr
+ strchr
+ strcmp
+ strdup
+ strlcat
+ strlcpy
+ strlen
+ strncasecmp
+ strncmp
+ strrchr
+ strstr
+ strtod
+ strtod$UNIX2003
+ strtok_r
+ strtol
+ strtoll
+ strtoul
+ strtoull
+ sysconf
+ sysctl
+ sysctlbyname
+ tan
+ tanf
+ trunc
+ truncf
+ vsnprintf
+ vsscanf
+ wcscasecmp
+ wcscmp
+ wcscpy
+ wcslcat
+ wcslcpy
+ wcslen
+ wcsncasecmp
+ wcsncmp
+ wcsstr

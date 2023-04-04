@@ -38,7 +38,7 @@
 "Steam_RefreshEnterTwoFactorCode"				"Моля, въведете текущия код от Steam Guard удостоверителя Ви"
 "Steam_RefreshLogin_RateLimited"		"Имало е прекалено много неуспешни опити за влизане от мрежата Ви в кратък времеви период. Моля, изчакайте и опитайте отново по-късно."
 "Steam_RefreshLogin_Title"			"Steam — Опресняване при влизане"
-"Steam_RefreshLogin_InfoTicketExpired"	"Steam билетът Ви изтече.\nВъведете паролата си отново, за да продължите."
+"Steam_RefreshLogin_InfoTicketExpired"	"Steam билетът Ви изтече.\nМоля, въведете си отново, за да продължите."
 "Steam_RefreshLogin_InvalidPassword"	"Информацията за акаунта Ви е променена.\nМоля, въведете отново паролата си, за да продължите."
 
 "Steam_RefreshLogin_PurchaseSecurity"		"От съображения за сигурност се изисква пак да въведете паролата си, за да продължите."

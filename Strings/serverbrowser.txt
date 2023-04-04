@@ -2,8 +2,8 @@
 __TEXT
 __text
 __TEXT
-I
-I
+@j
+@j
 __stubs
 __TEXT
 __stub_helper
@@ -38,9 +38,7 @@ __data
 __DATA
 __thread_vars
 __DATA
-HO'
 0
-HO'
 __thread_data
 __DATA
 @
@@ -48,8 +46,10 @@ __thread_bss
 __DATA
 __bss
 __DATA
+Z-
 __common
 __DATA
+~'
 H
 __LINKEDIT
 
@@ -88,6 +88,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+@@(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -486,10 +487,6 @@ r
 4
 8
 $
-(
-(
-P
-0
 $
 (
 (
@@ -607,9 +604,6 @@ x
 (
 (
 0
-0
-8
-X
 0
 (
 0
@@ -765,9 +759,6 @@ P
 20CMsgLoadLocalization
 24CMsgNotifyUserActivation
 30CMsgSetNetFakeLocalSystemState
-16CMsgJumpListLink
-18CMSgJumpListMRUApp
-15CMsgSetJumpList
 28CMsgSetGameOverlayTargetPIDs
 30CMsgGameOverlayTargetTextureID
 42CMsgDraggableRegionsChanged_DraggableRects
@@ -3859,31 +3850,6 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
 j
 j
 j
@@ -3967,7 +3933,10 @@ IcE
 V
 =
 =
-$"
+"
+"
+"
+"
 !
 @
 &
@@ -3994,13 +3963,12 @@ M9e
 @
 @
 
-a
+C
 
 
 
 d
 A+M
-V
 j
 j
 j
@@ -4061,7 +4029,6 @@ j
 j
 j
 j
-
 j
 j
 j

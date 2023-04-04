@@ -1154,6 +1154,7 @@
     "Login_Error_MoveAuthenticator_Description": "Der opstod et problem i forsøget på at flytte din authenticator. Prøv venligst igen senere.",
     "Login_ConnectingToSteam": "Opretter forbindelse til Steam",
     "Login_LoadingAccountInfo": "Indlæser konto",
+    "SteamNotification_HelpRequest_Author": "Steam Support",
     "SteamNotification_HelpRequest_Title": "En hjælpeanmodning er blevet opdateret",
     "SteamNotification_HelpRequest_Body": "Sag %1$s",
     "SteamNotification_AsyncGame_Title": "Spilsession",

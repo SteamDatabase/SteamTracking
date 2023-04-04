@@ -932,26 +932,6 @@ SupportMessages
 	url			"%storehttps%/account/supportmessages/"
 	method		"internal"
 }
-EducationPage
-{
-	url			"http://learningwithportals.com/client/"
-	method		"internal"
-}
-EducationPageStore
-{
-	url			"http://learningwithportals.com/client/"
-	method		"internal"
-}
-EducationPageCommunity
-{
-	url			"http://learningwithportals.com/profiles/"
-	method		"internal"
-}
-EducationPageNews
-{
-	url			"http://learningwithportals.com/news/"
-	method		"internal"
-}
 CommunityFilePage
 {
 	url		"%community%/sharedfiles/filedetails/?id=%p1%"

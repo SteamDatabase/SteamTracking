@@ -11,7 +11,7 @@
 		Restart { controlname="RadioButton" labeltext="#RescueDialog_RestartSteam" style=RadioOption }
 		RestartNoGPU { controlname="RadioButton" labeltext="#RescueDialog_RestartSteam_NoGPU" style=RadioOption }
 		RestartNoSandbox { controlname="RadioButton" labeltext="#RescueDialog_RestartSteam_NoSandbox" style=RadioOption }
-		RestartWebHelper { controlname="RadioButton" labeltext="#RescueDialog_RestartSteamWebHelper" style=RadioOption }
+		RestartWebhelper { controlname="RadioButton" labeltext="#RescueDialog_RestartSteamWebHelper" style=RadioOption }
 		Exit { controlname="RadioButton" labeltext="#RescueDialog_ExitSteam" style=RadioOption }
 
 		OK { controlname="Button" tabposition=1 labeltext="#MessageBox_OK" textalignment=left command="OK" }
@@ -66,9 +66,9 @@
 	{
 		region { name="bottom" width=max align=bottom height=45 margin=10 }
 
-		place { control="ExplanationText" width=max y=20 margin=20 margin-left=30 spacing=15 dir=down }
+		place { control="ExplanationText" width=max height=40 y=20 margin=20 margin-left=30 spacing=15 dir=down }
 
-		place { control="RadioHeader" start="ExplanationText" control="RadioHeader" width=max margin-left=40 dir=down margin-top=20 }
+		place { control="RadioHeader" start="ExplanationText" control="RadioHeader" width=max margin-left=40 dir=down margin-top=15 }
 		place { control="Restart,RestartNoGPU,RestartNoSandbox,RestartWebhelper,Exit" start="RadioHeader" width=max margin-left=40 margin-top=10 dir=down }
 
 		place { control="OK,Cancel" region="bottom" align=right spacing=20 width=120 height=25  }

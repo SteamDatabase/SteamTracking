@@ -1154,6 +1154,7 @@
 	"Login_Error_MoveAuthenticator_Description": "Det oppstod et problem med å flytte autentiseringsenheten din. Prøv igjen senere.",
 	"Login_ConnectingToSteam": "Kobler til Steam",
 	"Login_LoadingAccountInfo": "Laster konto",
+	"SteamNotification_HelpRequest_Author": "Steams kundestøtte",
 	"SteamNotification_HelpRequest_Title": "En støtteforespørsel er oppdatert",
 	"SteamNotification_HelpRequest_Body": "Sak %1$s",
 	"SteamNotification_AsyncGame_Title": "Spilløkt",

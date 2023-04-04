@@ -188,7 +188,7 @@
 "Overlay_Screenshots_Panel_Title" "螢幕擷圖"
 "Overlay_Screenshots_Show" "顯示："
 "Overlay_Screenshots_Size_Cloud" "%selected_ss_size%"
-"Overlay_Screenshots_Size_Original" "（磁碟大小：%selected_ss_size_original%）"
+"Overlay_Screenshots_Size_Original" "（佔用磁碟空間：%selected_ss_size_original%）"
 "Overlay_View_All_Screenshots" "檢視線上圖庫"
 "Overlay_View_Screenshots" "檢視螢幕擷圖"
 "Overlay_View_Local" "在磁碟上顯示"

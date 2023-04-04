@@ -99,6 +99,7 @@ message CContentServerDirectory_GetPeerContentInfo_Request {
 
 message CContentServerDirectory_GetPeerContentInfo_Response {
 	repeated uint32 appids = 1;
+	optional string ip_public = 2;
 }
 
 service ContentServerDirectory {

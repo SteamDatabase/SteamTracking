@@ -3740,7 +3740,7 @@
 	"Parental_All_Store"			"Магазин Steam"
 	"Parental_All_Community"		"Контент сообщества"
 	"Parental_All_Friends"			"Друзья, чат и группы"
-	"Parental_All_Profile"			"Мой профиль в сети, скриншоты и достижения"
+	"Parental_All_Profile"			"Мой профиль, скриншоты и достижения"
 
 
 	"Parental_Set_Big_Switch" 	"Использовать семейный просмотр на этом аккаунте"

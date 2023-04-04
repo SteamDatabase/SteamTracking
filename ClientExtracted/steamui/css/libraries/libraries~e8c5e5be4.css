@@ -23817,6 +23817,15 @@ body.in_global_drag .friendlist_titlebar {
 .InsetWindowOpen .ActiveVoiceChannel .ScratchPadConnect {
   display: block;
 }
+.remoteVideo {
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
+}
 .dropConfirmationNotice {
   position: absolute;
   pointer-events: none;

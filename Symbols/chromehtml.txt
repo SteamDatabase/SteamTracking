@@ -43,6 +43,7 @@
  Plat_CommandLineParamExists
  Plat_CommandLineParamValue
  Plat_FloatTime
+ Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsChromeOS
  Plat_IsInDebugSession

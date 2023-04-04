@@ -2,7 +2,7 @@
     "name": "IClientUserMap",
     "functions": [ 
         {
-            "name": "Unknown_5419312",
+            "name": "Unknown_5432272",
             "argc": "0"
         },
         {
@@ -260,18 +260,6 @@
         {
             "name": "GetLanguage",
             "argc": "3"
-        },
-        {
-            "name": "BIsCyberCafe",
-            "argc": "1"
-        },
-        {
-            "name": "BIsAcademicAccount",
-            "argc": "1"
-        },
-        {
-            "name": "BIsPortal2EducationAccount",
-            "argc": "1"
         },
         {
             "name": "TrackNatTraversalStat",
@@ -1031,7 +1019,7 @@
         },
         {
             "name": "GetTimedTrialStatus",
-            "argc": "4"
+            "argc": "5"
         },
         {
             "name": "RequestTimedTrialStatus",

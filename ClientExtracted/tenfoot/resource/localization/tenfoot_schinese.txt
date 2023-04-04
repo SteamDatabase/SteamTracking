@@ -2987,7 +2987,7 @@
 	"SteamUI_WrongPlatform_Title" "游戏不可用"
 	"SteamUI_WrongPlatform" "{s:gamename} 在您的当前平台中不可用。"
 	"SteamUI_Game_Requires_NTFS"		"游戏需要 NTFS"
-	"SteamUI_GameRequires_NTFS_Detail"	"您正在安装的游戏需要采用了 NTFS 文件系统的硬盘，并且其无法安装在 FAT32 文件系统下。"
+	"SteamUI_GameRequires_NTFS_Detail"	"您正在安装的游戏需要采用了 NTFS 文件系统的磁盘，并且其无法安装在 FAT32 文件系统下。"
 	"SteamUI_OfflineMode_GameNotReady"		"此游戏尚未准备好在离线模式下运行。"
 	"SteamUI_OfflineMode_GameNotReady_Title"	"游戏不可用"
 

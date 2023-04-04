@@ -927,7 +927,7 @@
     {
         "id": 1020044,
         "name": "29MicroTxnAuthDismissCallback_t",
-        "size": 8
+        "size": 12
     },
     {
         "id": 1020046,

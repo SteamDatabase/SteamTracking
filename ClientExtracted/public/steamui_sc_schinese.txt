@@ -723,4 +723,9 @@
 	"Steam_ClientBrowserAuth_AllowBrowserAuth" "允许桌面网页浏览器自动登入蒸汽平台站点\n（需要重新启动以应用更改）"
 	"SteamUI_RunningIncompatibleTcpService" "在蒸汽平台进程中检测到 %incompatdll% （与 %incompatname% 相关）\n 的不兼容版本。\n\n 如果您在运行蒸汽平台或单个游戏时，遭遇崩溃或网络速度缓慢，我们建议更新或卸载此软件。"
 	"Steam_XboxDriverInstall_ServiceFailure" "驱动程序更新失败，蒸汽平台是否在作为普通用户运行？蒸汽平台服务是否在运行且为最新版本？"
+	"RescueDialog_Explanation" "steamwebhelper.exe，一个关键的蒸汽平台组件，没有响应。 Steam UI 将无法使用。 点击<a href=\"about:blank\">此处</a>了解更多信息。"
+	"RescueDialog_RestartSteam" "重启蒸汽平台"
+	"RescueDialog_RestartSteam_NoGPU" "在禁用 GPU 加速的情况下重新启动蒸汽平台"
+	"RescueDialog_RestartSteam_NoSandbox" "在禁用浏览器沙盒的情况下重新启动蒸汽平台"
+	"RescueDialog_ExitSteam" "退出蒸汽平台"
 }

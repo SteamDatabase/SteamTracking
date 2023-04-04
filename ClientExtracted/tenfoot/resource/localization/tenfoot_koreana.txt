@@ -2700,7 +2700,7 @@
 	"Library_NoControllerConfigLetsGo" "게임 시작!"
 	"Library_NoControllerConfigBrowse" "다른 바인딩 설정 찾아보기"
 	"Library_ScreenshotsSlideshowTitle"	"{s:gamename}"
-	"Library_ScreenshotsSlideshowSubTitle"	"스크린샷 {d:totalss}개 중 {d:curss}개"
+	"Library_ScreenshotsSlideshowSubTitle"	"스크린샷 {d:totalss}장 중 {d:curss}장"
 	"Library_ScreenshotTakenOn"		"{t:l:timetaken}"
 	"Library_ShareScreenshot"		"공유"
 	"Library_ViewThisScreenshotOnline"	"온라인에서 보기"

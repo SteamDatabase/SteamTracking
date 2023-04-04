@@ -7,7 +7,7 @@
 "SteamBootstrapper_RunFromDiskImageOSX"		"Σύρετε το %appname% στο φάκελο Εφαρμογών σας πριν το εκκινήσετε."
 "SteamBootstrapper_ReadOnlyInstall"			"Το %appname% δεν μπορεί να γράψει στο φάκελο εγκατάστασής του."
 "SteamBootstrapper_InstallDirNotASCII"			"Το %appname% δεν μπορεί να εκκινήσει από διαδρομή φακέλου με μη αγγλικούς χαρακτήρες. Εγκαταστήστε το %appname% ξανά στον προεπιλεγμένο φάκελο."
-"SteamBootstrapper_InstallDirIncompatible"		"Το %appname% δεν μπορεί να εκκινήσει από διαδρομή φακέλου με χαρακτήρες μη-ASCII σε αυτή την έκδοση των Windows. Εγκαταστήστε ξανά το %appname% στον προεπιλεγμένο φάκελο ή εγκαταστήστε Windows 7 ή νεότερα."
+"SteamBootstrapper_InstallDirIncompatible"		"Το %appname% δεν μπορεί να εκκινήσει από διαδρομή φακέλου με χαρακτήρες μη ASCII σε αυτή την έκδοση των Windows. Εγκαταστήστε ξανά το %appname% στον προεπιλεγμένο φάκελο ή εγκαταστήστε Windows 7 ή νεότερα."
 "SteamBootstrapper_InsufficientDiskSpace"		"Το %appname% απαιτεί %nMegaBytes%MB ελεύθερου χώρου στο δίσκο για να ενημερωθεί."
 "SteamBootstrapper_FailedManifestLoad"		"Αποτυχία φόρτωσης δηλωτικού πακέτου."
 "SteamBootstrapper_FailedManifestVerify"		"Αποτυχία επικύρωσης δηλωτικού πακέτου."

@@ -19,7 +19,6 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-df
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -47,7 +46,6 @@ __DATA
 P
 __data
 __DATA
-P(
 __thread_vars
 __DATA
 __thread_data
@@ -63,7 +61,6 @@ __LINKEDIT
 8
 @loader_path/chromehtml.dylib
 "
-x
 P
 
 
@@ -262,10 +259,6 @@ r
 4
 8
 $
-(
-(
-P
-0
 $
 (
 (
@@ -383,9 +376,6 @@ x
 (
 (
 0
-0
-8
-X
 0
 (
 0
@@ -541,9 +531,6 @@ P
 20CMsgLoadLocalization
 24CMsgNotifyUserActivation
 30CMsgSetNetFakeLocalSystemState
-16CMsgJumpListLink
-18CMSgJumpListMRUApp
-15CMsgSetJumpList
 28CMsgSetGameOverlayTargetPIDs
 30CMsgGameOverlayTargetTextureID
 42CMsgDraggableRegionsChanged_DraggableRects
@@ -576,7 +563,6 @@ P
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
 16CMsgPopupCreated
-NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 15CHTMLController
@@ -822,6 +808,7 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -1140,6 +1127,7 @@ Draws html perf data
 SteamBootstrapper_GetInstallDir
 clientui
 -clientui=%s
+-steampath=%s
 --ignore-certificate-errors
 -browser-offline
 -fakeoffline
@@ -2380,12 +2368,16 @@ sc_schinese
 @
 @
 
-a
+d
+$
+
+
 @
 Ic
-o
+]
+}
 
-S
+
 
 0
 0
@@ -2432,9 +2424,10 @@ IcE
 IcE
 @
 @
+e
 V
 =
-5
+2
 =
 !
 @
@@ -2443,6 +2436,7 @@ V
 M9e
 @
 @
+V
 ?
 ?
 ?
@@ -2458,7 +2452,6 @@ M9e
 ?
 ?
 ?
-9
 
 @
 @

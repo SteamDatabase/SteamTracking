@@ -1154,6 +1154,7 @@
 	"Login_Error_MoveAuthenticator_Description": "Probléma adódott mobilhitelesítőd áthelyezésekor. Próbáld újra később.",
 	"Login_ConnectingToSteam": "Csatlakozás a Steamhez",
 	"Login_LoadingAccountInfo": "Fiók betöltése",
+	"SteamNotification_HelpRequest_Author": "Steam Támogatás",
 	"SteamNotification_HelpRequest_Title": "Egy segítségkérelem frissítve lett",
 	"SteamNotification_HelpRequest_Body": "Jegy: %1$s",
 	"SteamNotification_AsyncGame_Title": "Játékmenet",
@@ -2417,7 +2418,7 @@
 	"ImageUpload_InvalidFormatSelected": "Érvénytelen képtípus lett kiválasztva.",
 	"ImageUpload_InvalidResolution": "A képnek pontosan %1$s x %2$s felbontásúnak kell lennie.",
 	"ImageUpload_CropPreview": "Végső kép",
-	"ImageDisplay_NoAssetUploaded": "Nincsenek elemek feltöltve",
+	"ImageDisplay_NoAssetUploaded": "Nincsenek feltöltve elemek",
 	"ImageDisplay_ShowAllAssets": "Mind a(z) %1$s nyelv elemeinek mutatása",
 	"ImageUpload_DeleteAll_Confirm": "Ez el fogja távolítani az összes ilyen típusú lokalizált grafikát. Utána el kell menteni az eseményt, hogy alkalmazva legyen. Biztos vagy benne?",
 	"UserGameNotes_UntitledNote_Title": "Új megjegyzés",
@@ -2537,5 +2538,8 @@
 	"Notification_FriendInvite_Description": "barátkérelmet küldött neked.",
 	"Notification_GiftReceived_Title": "Ajándék",
 	"Notification_GiftReceived_Body": "Ajándékot kaptál!",
-	"Notification_GiftReceived_Description": "%1$s felhasználótól."
+	"Notification_GiftReceived_Description": "%1$s felhasználótól.",
+	"NotificationsList_EmptyTitle": "Jelenleg nincsenek értesítéseid.",
+	"NotificationsList_EmptyTitle_New": "Jelenleg nincsenek új értesítéseid.",
+	"NotificationsList_EmptyBody": "Itt fogod látni a Steam értesítéseket a kívánságlistád, barátaid, játékaid, raktárad és egyebek kapcsán."
 }

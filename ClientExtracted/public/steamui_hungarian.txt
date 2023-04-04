@@ -471,7 +471,7 @@
 "Steam_LaunchSteamOnStartup_Option"		"Steam futtatása a számítógép indulásakor"
 "Steam_BPMOnStartup_Option"				"Steam indítása Nagy Kép módban"
 "Steam_ShowUrlBar_Option"				"Webes címsáv mutatása, amikor lehet"
-"Steam_UseDirectWrite_Option"			"DirectWrite engedélyezése jobb karakter-simítás és -térközölés érdekében"
+"Steam_UseDirectWrite_Option"			"DirectWrite engedélyezése jobb karaktersimítás és -térközölés érdekében"
 "Steam_UseH264HWAccel_Option"			"Hardveres videó-dekódolás, ha támogatott (újraindítást igényel)"
 
 "Steam_ErrorFilesystemNotExecutable_Title"	"Steam - Hiba"
@@ -509,7 +509,7 @@
 "Steam_Interface"				"Kezelőfelület"
 "Steam_EnableGPUWebViews_Option"		"GPU-gyorsításos megjelenítés bekapcsolása webnézetekben (újraindítást igényel)"
 "Steam_SmoothScrollWebViews_Option"		"Sima görgetés engedélyezése webes nézetben (újraindítást igényel)"
-"Steam_SetJumplistOptions"		"Tálca beállítások megadása"
+"Steam_SetJumplistOptions"		"Tálcabeállítások megadása"
 "Steam_ShowOnlineStatusOptions"	"Megjelenítendő online opciók kiválasztása"
 "Steam_ShowDestinationOptions"	"Megjelenítendő helyek kiválasztása"
 "Steam_MustRestartToTakeEffect"			"Ez a beállítás nem lép érvénybe,\nmíg újra nem indítod a Steamet."

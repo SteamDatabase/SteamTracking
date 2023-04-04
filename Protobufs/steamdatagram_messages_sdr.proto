@@ -183,7 +183,7 @@ message CMsgSteamDatagramClientPingSampleReply {
 	}
 
 	optional fixed32 connection_id = 1;
-	optional bool override_active = 4;
+	optional bool relay_override_active = 5;
 	repeated .CMsgSteamDatagramClientPingSampleReply.POP pops = 2;
 	repeated .CMsgSteamDatagramClientPingSampleReply.LegacyDataCenter legacy_data_centers = 3;
 }
@@ -278,6 +278,7 @@ message CMsgSteamDatagramConnectionClosed {
 	optional fixed64 routing_secret = 14;
 	optional bool not_primary_session = 16;
 	optional bool not_primary_transport = 19;
+	optional bool relay_override_active = 22;
 	optional .CMsgSteamDatagramConnectionQuality quality_relay = 17;
 	optional .CMsgSteamDatagramConnectionQuality quality_e2e = 18;
 	optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing_summary = 21;
@@ -294,6 +295,7 @@ message CMsgSteamDatagramNoConnection {
 	optional bool end_to_end = 4;
 	optional bool not_primary_session = 12;
 	optional bool not_primary_transport = 15;
+	optional bool relay_override_active = 17;
 	optional .CMsgSteamDatagramConnectionQuality quality_relay = 13;
 	optional .CMsgSteamDatagramConnectionQuality quality_e2e = 14;
 	optional .CMsgSteamDatagramP2PRoutingSummary p2p_routing_summary = 16;
@@ -330,6 +332,7 @@ message CMsgSteamDatagramConnectionStatsClientToRouter {
 		ACK_REQUEST_E2E = 2;
 		ACK_REQUEST_IMMEDIATE = 4;
 		NOT_PRIMARY_SESSION = 8;
+		CLIENT_RELAY_OVERRIDE = 32;
 	}
 
 	optional .CMsgSteamDatagramConnectionQuality quality_relay = 1;
@@ -444,6 +447,7 @@ message CMsgSteamDatagramConnectionStatsP2PClientToRouter {
 		ACK_REQUEST_IMMEDIATE = 4;
 		NOT_PRIMARY_SESSION = 8;
 		NOT_PRIMARY_TRANSPORT_E2E = 16;
+		CLIENT_RELAY_OVERRIDE = 32;
 	}
 
 	optional .CMsgSteamDatagramConnectionQuality quality_relay = 1;

@@ -21,9 +21,9 @@
 "SteamUI_ConvertExistingInfo" "正在转换已安装游戏。这个过程需要花费几分钟时间。"
 "SteamUI_ConversionCompleteInfo" "Steam 预载完成。"
 
-"SteamUI_ConvertExistingStatus1" "从硬盘上预读 %s1 文件."
-"SteamUI_ConvertExistingStatus2" "从硬盘上预读 %s1 文件.."
-"SteamUI_ConvertExistingStatus3" "从硬盘上预读 %s1 文件..."
+"SteamUI_ConvertExistingStatus1" "正在从磁盘上预载 %s1 文件."
+"SteamUI_ConvertExistingStatus2" "正在从磁盘上预载 %s1 文件.."
+"SteamUI_ConvertExistingStatus3" "正在从磁盘上预载 %s1 文件..."
 
 "WelcomeToSteamNameLabel" "名字"
 "WelcomeToSteamEmailLabel1" "电子邮件地址"
@@ -327,7 +327,7 @@
 "SteamUI_GamePropertiesContent_ReadyToPlay"	"准备就绪"
 "SteamUI_GamePropertiesContent_Launching"	"启动中..."
 "SteamUI_GamePropertiesContent_CacheAcquired"	"%cache_usage%%%"
-"SteamUI_GamePropertiesContent_DiskUsageLabel"	"硬盘使用量："
+"SteamUI_GamePropertiesContent_DiskUsageLabel"	"磁盘使用量："
 "SteamUI_GamePropertiesContent_DeveloperLabel"	"开发商："
 
 "SteamUI_GamePropertiesVersion_GameVersionLabel" "游戏版本信息"
@@ -385,8 +385,8 @@
 "Steam_PurchaseProductIntroTitle"		"Steam - 购买 %subscription%"
 "Steam_ScanCDKey_NoRetailProduct"		"您的有效产品代码能授权您\n订购以下游戏。"
 "Steam_ScanCDKey_RetailProductFound"	"在您的计算机中发现一个存在的 %s1 \n安装程序。 您的产品代码能授权您\n订购以下游戏。"
-"Steam_ScanCDKey_SpaceRequired"		"需要的硬盘空间："
-"Steam_ScanCDKey_SpaceAvailable"		"可用的硬盘空间："
+"Steam_ScanCDKey_SpaceRequired"		"需要的磁盘空间："
+"Steam_ScanCDKey_SpaceAvailable"		"可用的磁盘空间："
 "Steam_ScanCDKey_SelectGames"			"选择要添加至库的游戏。"
 "Steam_UncheckAnyGamesNotConvert"		"取消选择那些您不想改变的游戏。"
 
@@ -506,11 +506,11 @@
 "Steam_Games_DonePreLoading" 			"预先载入状态"
 
 "Steam_ReAddToMyGames_Title"			"Steam - 安装应用程序"
-"Steam_ReAddToMyGames_Info"			"%s1 会在硬盘上使用 %s2 MB 的空间。\nSteam 现在将要下载游戏内容或\n转换已存在的游戏安装程序。"
+"Steam_ReAddToMyGames_Info"			"%s1 会在磁盘上使用 %s2 MB 的空间。\nSteam 现在将要下载游戏内容或\n转换已存在的游戏安装程序。"
 
-"Steam_ConversionNotEnoughDiskSpace_Title"	"Steam - 没有足够的硬盘空间"
+"Steam_ConversionNotEnoughDiskSpace_Title"	"Steam - 没有足够的磁盘空间"
 "Steam_ConversionNotEnoughDiskSpace_Info"	"您没有足够的磁盘空间安装所选游戏。\n请释放一定的磁盘空间，或点击“返回”按钮取消选择部分项目。"
-"Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"没有足够的硬盘空间转换所选游戏到 Steam。\n请释放 %s1 MB 硬盘空间并重试。"
+"Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"没有足够的磁盘空间转换所选游戏到 Steam。\n请释放 %s1 MB 硬盘空间并重试。"
 "Steam_Interface"				"界面"
 "Steam_EnableGPUWebViews_Option"		"在网页视图中启用 GPU 加速渲染（需要重启）"
 "Steam_SmoothScrollWebViews_Option"		"在网页视图中启用平滑滚动（需要重启）"
@@ -1359,8 +1359,8 @@
 "Steam_App_Update_Failed_Title"	"Steam - 错误"
 "Steam_App_Update_Failed_Text" "更新 %game% 时发生错误（%reason%）"
 "Steam_App_Update_Failed_Text_Long" "更新 %game% 时出现错误（%reason%）：\n\n%detail%"
-"Steam_App_Update_NotEnoughDiskSpace" "没有足够的硬盘空间更新 %game%（需要 %detail%）"
-"Steam_App_Update_NotEnoughDiskQuota" "没有足够的用户硬盘配额更新 %game%（需要 %detail%）"
+"Steam_App_Update_NotEnoughDiskSpace" "没有足够的磁盘空间更新 %game%（需要 %detail%）"
+"Steam_App_Update_NotEnoughDiskQuota" "没有足够的用户磁盘配额更新 %game%（需要 %detail%）"
 "Steam_App_Update_LockedByProcess" "%game% 的一个文件被 %program% 锁定，无法更新。请关闭该程序并重试。\n\n 程序：%executable%\n 文件：%detail%"
 
 "Steam_PreloadCompleteNoPreorderAvailable" "现在您的计算机上有一个被锁定的 %game% 副本。"
@@ -3480,7 +3480,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "SteamUI_JoinDialog_InstallScriptInfo"	"正在执行初始设置 %dots% \n\n正在安装：%stepname%（第 %step% 步，共 %steptotal% 步）"
 
 
-"SteamUI_GameRequires_NTFS_Detail"	"您正安装的游戏需要带有 NTFS 文件系统的硬盘并且\n无法安装在\n FAT32 文件系统下。要了解更多信息，请参见下面链接的客服支持文章。"
+"SteamUI_GameRequires_NTFS_Detail"	"您正安装的游戏需要带有 NTFS 文件系统的磁盘并且\n无法安装在\n FAT32 文件系统下。要了解更多信息，请参见下面链接的客服支持文章。"
 "SteamUI_GameRequires_64BitOS_Detail"	"您正在安装的游戏要求 64 位版本的 Windows，如果您的电脑不满足此要求，请点击以下内容，了解如何申请退款。"
 
 "SteamUI_SiteLicense_LockedDetail"	"该产品目前尚未有可用许可。请稍后再查看\n产品可用性或通知本地管理员。"
@@ -4097,7 +4097,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "SteamUI_ContentMgr_NotWritableFolder" "新的 Steam 库文件夹必须为可写"
 "SteamUI_ContentMgr_NotExecutableFolder" "新的 Steam 库文件夹必须安装到拥有执行权限的文件系统中"
 "SteamUI_ContentMgr_NotWhileDownloading" "下载时无法添加新的 Steam 库文件夹"
-"SteamUI_ContentMgr_DriveAlreadyHasLibrary" "所选硬盘已存在一个 Steam 库文件夹。Steam 将在一个单独文件夹中管理您的多个游戏安装。"
+"SteamUI_ContentMgr_DriveAlreadyHasLibrary" "所选磁盘已存在一个 Steam 库文件夹。Steam 将在一个单独文件夹中管理您的多个游戏安装。"
 "SteamUI_ContentMgr_FailedToAdd" "添加新的 Steam 库文件夹失败"
 "SteamUI_ContentMgr_UninstallApp" "卸载应用程序"
 "SteamUI_ContentMgr_Refresh" "刷新"

@@ -713,7 +713,7 @@
 "Broadcast_Notification_Is_Watching" "está a assistir à tua transmissão"
 "Broadcast_Notification_AvailableToWatch_Title" "Transmissão ativada!"
 "Broadcast_Notification_AvailableToWatch_Friends" "Os teus amigos podem assistir à tua transmissão a qualquer momento."
-"Broadcast_Notification_AvailableToWatch_Public" "Qualquer utilizador Steam pode assistir à tua transmissão a qualquer momento."
+"Broadcast_Notification_AvailableToWatch_Public" "Qualquer utilizador do Steam pode assistir à tua transmissão a qualquer momento."
 
 "Steam_Settings_BroadcastTitle" "Transmissões"
 "Steam_Settings_Broadcast_Disabled" "Transmissões desativadas"

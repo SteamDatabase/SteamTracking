@@ -1154,6 +1154,7 @@
 	"Login_Error_MoveAuthenticator_Description": "認証機器の移行に問題が発生しました。後でもう一度お試しください。",
 	"Login_ConnectingToSteam": "Steamに接続中",
 	"Login_LoadingAccountInfo": "アカウントを読み込み中",
+	"SteamNotification_HelpRequest_Author": "Steamサポート",
 	"SteamNotification_HelpRequest_Title": "ヘルプリクエストにアップデートがあります",
 	"SteamNotification_HelpRequest_Body": "チケット%1$s",
 	"SteamNotification_AsyncGame_Title": "ゲームセッション",

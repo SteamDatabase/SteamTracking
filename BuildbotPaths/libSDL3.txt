@@ -1,0 +1,3 @@
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/opengl/SDL_render_gl.c
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/opengles2/SDL_render_gles2.c
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c

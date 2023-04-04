@@ -102,6 +102,7 @@
     "BroadcastWatch_SystemNotSupported": "此主播的系统目前不支持蒸汽平台直播",
     "BroadcastWatch_UserRestricted": "此主播目前被禁止在蒸汽平台上进行实况直播",
     "BroadcastWatch_PoorUploadQuality": "此主播目前无法与蒸汽平台进行稳定的连接",
+    "Sale_Reservation_Komodo": "Steam Deck 现可通过 Komodo 在日本、韩国、台湾和香港购买：<1>https://steamdeck.komodo.jp/product/蒸汽平台-deck/?lang=zh-hans</1>",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "按加入愿望单总数（迄今为止）排序的即将推出游戏。仅包括尚未在蒸汽平台上发行的游戏。",
     "Sale_BrowserSortOption_TrendingWishlisted_ttip": "按热门程度或最近加入愿望单次数排序的的即将推出的游戏。仅包括尚未在蒸汽平台上发行的游戏。",
     "Sale_BrowserSortOption_PopularComingSoon_ttip": "愿望单热门游戏，按发行日期排序。仅包括尚未在蒸汽平台上发行的游戏。",
@@ -141,5 +142,6 @@
     "DiscoveryQueue_Error_Login": "您必须登录至蒸汽平台才能打开新探索队列。",
     "DiscoveryQueue_LabsHeader": "<1>蒸汽平台实验室</1> <2>留下反馈</2>",
     "DiscoveryQueue_WidgetHeader": "全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
-    "DiscoveryQueue_WidgetHeader_LoggedOut": "登录以体验全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。"
+    "DiscoveryQueue_WidgetHeader_LoggedOut": "登录以体验全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
+    "Notification_Item_RollupMore_Steam": "还有 %1$s 个蒸汽平台物品"
 }

@@ -83,8 +83,8 @@
     "VoiceTransmissionType_Disabled": "Microfone aberto só para a versão web",
     "VoiceVolume": "Volume",
     "VoiceSetupHeader": "Configuração e teste de voz",
-    "VoiceStartLocalMicTest": "Começar teste de microfone",
-    "VoiceStopLocalMicTest": "Terminar teste de microfone",
+    "VoiceStartLocalMicTest": "Testar microfone",
+    "VoiceStopLocalMicTest": "Parar de testar",
     "VoiceWhenMicIsWorking": "Se o teu microfone estiver a funcionar, deves conseguir ouvir a tua voz e a barra colorida ao lado do teu avatar irá mover-se enquanto falas.",
     "VoiceDevice": "Dispositivo de entrada de voz",
     "VoiceOutputDevice": "Dispositivo de saída de voz",
@@ -1154,6 +1154,7 @@
     "Login_Error_MoveAuthenticator_Description": "Ocorreu um problema ao mover o teu autenticador. Tenta mais tarde.",
     "Login_ConnectingToSteam": "A estabelecer ligação ao Steam",
     "Login_LoadingAccountInfo": "A carregar conta",
+    "SteamNotification_HelpRequest_Author": "Suporte Steam",
     "SteamNotification_HelpRequest_Title": "Um pedido de ajuda foi atualizado",
     "SteamNotification_HelpRequest_Body": "Pedido %1$s",
     "SteamNotification_AsyncGame_Title": "Sessão de jogo",
@@ -2439,7 +2440,7 @@
     "FormattingToolbar_Strike": "Rasurado",
     "FormattingToolbar_InlineCode": "Código",
     "FormattingToolbar_BulletedList": "Lista com marcas",
-    "FormattingToolbar_IndentList": "Avanço",
+    "FormattingToolbar_IndentList": "Aumentar avanço",
     "FormattingToolbar_OutdentList": "Diminuir avanço",
     "selectimage_select_file": "Selecionar ficheiro",
     "ServerBrowser_Password": "Palavra-passe",
@@ -2538,5 +2539,8 @@
     "Notification_FriendInvite_Description": "Enviou-te um pedido de amizade",
     "Notification_GiftReceived_Title": "Presente",
     "Notification_GiftReceived_Body": "Recebeste um presente!",
-    "Notification_GiftReceived_Description": "De %1$s"
+    "Notification_GiftReceived_Description": "De %1$s",
+    "NotificationsList_EmptyTitle": "Nenhuma notificação de momento.",
+    "NotificationsList_EmptyTitle_New": "Nenhuma notificação nova de momento.",
+    "NotificationsList_EmptyBody": "Aqui poderás encontrar notificações acerca da tua lista de desejos, amigos, jogos, inventário e muito mais."
 }

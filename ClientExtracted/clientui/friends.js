@@ -72500,16 +72500,6 @@ object-assign
             let width = dimensions.width || 300;
             let height = dimensions.height || 300;
             let title = rgParams.title;
-            if (
-              rgParams.center_on_window &&
-              typeof dimensions.left == "undefined" &&
-              typeof dimensions.top == "undefined"
-            ) {
-              // Center this on the given window
-              const win = rgParams.center_on_window;
-              dimensions.left = win.innerWidth / 2 + win.screenLeft - width / 2;
-              dimensions.top = win.innerHeight / 2 + win.screenTop - height / 2;
-            }
             let strParams = "width=" + width + ",height=" + height;
             if (typeof dimensions.left != "undefined")
               strParams += ",left=" + dimensions.left;
@@ -72567,6 +72557,16 @@ object-assign
             if (rgParams.window_opener_id) {
               rgQueryParams.push("openerid=" + rgParams.window_opener_id);
             }
+            if (
+              rgParams.center_on_window &&
+              typeof dimensions.left == "undefined" &&
+              typeof dimensions.top == "undefined"
+            ) {
+              rgQueryParams.push(
+                "centerOnBrowserID=" +
+                  rgParams.center_on_window.SteamClient.Browser.GetBrowserID()
+              );
+            }
             if (rgParams.strUserAgent) {
               rgQueryParams.push(
                 "useragent=" +
@@ -72581,6 +72581,12 @@ object-assign
             }
             if (rgParams.hwndParent) {
               rgQueryParams.push("hwndParent=" + rgParams.hwndParent);
+            }
+            if (rgParams.bPinned) {
+              rgQueryParams.push("pinned=true");
+            }
+            if (rgParams.bModal) {
+              rgQueryParams.push("modal=true");
             }
             if (rgQueryParams) {
               strPopupURL += "?" + rgQueryParams.join("&");
@@ -86580,7 +86586,8 @@ object-assign
                         shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_2__.Minimize,
                         null
                       )
-                    )
+                    ),
+                  this.props.extraActions
                 )
             );
           }
@@ -91195,35 +91202,36 @@ function TestLocalizeCalendarTime()
           /* harmony export */ BConfigContextInGamepadUI: () =>
             /* binding */ BConfigContextInGamepadUI,
           /* harmony export */ BIsInPresentationMode: () =>
-            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.BIsInPresentationMode,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_4__.BIsInPresentationMode,
           /* harmony export */ BroadcastConfig: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.BroadcastConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.BroadcastConfig,
           /* harmony export */ CommunityConfig: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.CommunityConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.CommunityConfig,
           /* harmony export */ Config: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config,
           /* harmony export */ ConfigContext: () => /* binding */ ConfigContext,
           /* harmony export */ ConfigContextRoot: () =>
             /* binding */ ConfigContextRoot,
           /* harmony export */ EventConfig: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.EventConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.EventConfig,
           /* harmony export */ GET_BASE_URL: () => /* binding */ GET_BASE_URL,
           /* harmony export */ GET_BASE_WEB_PROPERTY: () =>
             /* binding */ GET_BASE_WEB_PROPERTY,
           /* harmony export */ GenerateNewSessionID: () =>
-            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.GenerateNewSessionID,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_4__.GenerateNewSessionID,
           /* harmony export */ GetConfigJSON: () =>
-            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.GetConfigJSON,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_4__.GetConfigJSON,
           /* harmony export */ GetOptionalConfigJSON: () =>
-            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.GetOptionalConfigJSON,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_4__.GetOptionalConfigJSON,
           /* harmony export */ GetSessionID: () =>
-            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.GetSessionID,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_4__.GetSessionID,
           /* harmony export */ InitConfig: () =>
-            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__.InitConfig,
+            /* reexport safe */ shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_4__.InitConfig,
           /* harmony export */ InitConfigAsync: () =>
             /* binding */ InitConfigAsync,
+          /* harmony export */ IsSteamChina: () => /* binding */ IsSteamChina,
           /* harmony export */ UserConfig: () =>
-            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.UserConfig,
+            /* reexport safe */ shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig,
           /* harmony export */ useConfigContext: () =>
             /* binding */ useConfigContext,
           /* harmony export */ useInDesktopUI: () =>
@@ -91233,7 +91241,7 @@ function TestLocalizeCalendarTime()
           /* harmony export */ useOnDeck: () => /* binding */ useOnDeck,
           /* harmony export */
         });
-        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ =
+        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ =
           __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
         /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -91241,15 +91249,19 @@ function TestLocalizeCalendarTime()
           /*#__PURE__*/ __webpack_require__.n(
             react__WEBPACK_IMPORTED_MODULE_0__
           );
-        /* harmony import */ var shared_utils_assert__WEBPACK_IMPORTED_MODULE_1__ =
+        /* harmony import */ var shared_clienttypes__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            /*! shared/clienttypes */ "../../../web_src/shared/js/clienttypes/index.ts"
+          );
+        /* harmony import */ var shared_utils_assert__WEBPACK_IMPORTED_MODULE_2__ =
           __webpack_require__(
             /*! shared/utils/assert */ "../../../web_src/shared/js/utils/assert.ts"
           );
-        /* harmony import */ var shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__ =
+        /* harmony import */ var shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__ =
           __webpack_require__(
             /*! shared/webui/configconstants */ "../../../web_src/shared/js/webui/configconstants.ts"
           );
-        /* harmony import */ var shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_3__ =
+        /* harmony import */ var shared_webui_coreconfig__WEBPACK_IMPORTED_MODULE_4__ =
           __webpack_require__(
             /*! shared/webui/coreconfig */ "../../../web_src/shared/js/webui/coreconfig.ts"
           );
@@ -91261,7 +91273,7 @@ function TestLocalizeCalendarTime()
             react__WEBPACK_IMPORTED_MODULE_0___default().useContext(
               ConfigContext
             );
-          (0, shared_utils_assert__WEBPACK_IMPORTED_MODULE_1__.AssertMsg)(
+          (0, shared_utils_assert__WEBPACK_IMPORTED_MODULE_2__.AssertMsg)(
             context.IN_GAMEPADUI !== undefined,
             "Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application."
           );
@@ -91277,7 +91289,7 @@ function TestLocalizeCalendarTime()
               IN_GAMEPADUI:
                 IN_GAMEPADUI !== null && IN_GAMEPADUI !== void 0
                   ? IN_GAMEPADUI
-                  : shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+                  : shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
                       .Config.IN_GAMEPADUI,
               IN_DESKTOPUI:
                 IN_DESKTOPUI !== null && IN_DESKTOPUI !== void 0
@@ -91317,8 +91329,16 @@ function TestLocalizeCalendarTime()
          * @returns boolean
          */
         function useOnDeck() {
-          return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+          return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
             .Config.ON_DECK;
+        }
+        function IsSteamChina() {
+          return (
+            shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
+              .EREALM ===
+            shared_clienttypes__WEBPACK_IMPORTED_MODULE_1__.ESteamRealm
+              .k_ESteamRealmChina
+          );
         }
         function BConfigContextInGamepadUI(configContext) {
           return configContext === null || configContext === void 0
@@ -91326,7 +91346,7 @@ function TestLocalizeCalendarTime()
             : configContext.IN_GAMEPADUI;
         }
         function InitConfigAsync(axios, baseUrl, options) {
-          return (0, tslib__WEBPACK_IMPORTED_MODULE_4__.__awaiter)(
+          return (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__awaiter)(
             this,
             void 0,
             void 0,
@@ -91337,7 +91357,7 @@ function TestLocalizeCalendarTime()
                 if (rgConfig) {
                   delete rgConfig.SESSIONID; // no longer read from page
                   Object.assign(
-                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config,
+                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config,
                     rgConfig
                   );
                 }
@@ -91350,7 +91370,7 @@ function TestLocalizeCalendarTime()
                 const rgUserConfig = userResponse.data;
                 if (rgUserConfig) {
                   Object.assign(
-                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.UserConfig,
+                    shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.UserConfig,
                     rgUserConfig
                   );
                 }
@@ -91372,83 +91392,83 @@ function TestLocalizeCalendarTime()
           if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .STORE_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.STORE_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .COMMUNITY_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.COMMUNITY_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .CHAT_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.CHAT_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .PARTNER_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.PARTNER_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .HELP_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.HELP_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .STEAMTV_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.STEAMTV_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .STATS_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.STATS_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .INTERNAL_STATS_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.INTERNAL_STATS_BASE_URL;
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .STORE_CHECKOUT_BASE_URL
             )
           ) {
-            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__
+            return shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__
               .Config.STORE_CHECKOUT_BASE_URL;
           } else if (
             BBaseURLMatches(currentURL, "https://steamloopback.host")
@@ -91462,12 +91482,12 @@ function TestLocalizeCalendarTime()
           if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .STORE_BASE_URL
             ) ||
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .STORE_CHECKOUT_BASE_URL
             )
           ) {
@@ -91475,7 +91495,7 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .COMMUNITY_BASE_URL
             )
           ) {
@@ -91483,7 +91503,7 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .PARTNER_BASE_URL
             )
           ) {
@@ -91491,7 +91511,7 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .HELP_BASE_URL
             )
           ) {
@@ -91499,7 +91519,7 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .STEAMTV_BASE_URL
             )
           ) {
@@ -91507,12 +91527,12 @@ function TestLocalizeCalendarTime()
           } else if (
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .STATS_BASE_URL
             ) ||
             BBaseURLMatches(
               currentURL,
-              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_2__.Config
+              shared_webui_configconstants__WEBPACK_IMPORTED_MODULE_3__.Config
                 .INTERNAL_STATS_BASE_URL
             )
           ) {
@@ -93320,4 +93340,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=739942a3e283359a3180
+//# sourceMappingURL=friends.js.map?contenthash=3befdcfa4fd3afae285e

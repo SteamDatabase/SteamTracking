@@ -781,7 +781,7 @@ Cu joystickul drept mouse te poți juca ca și cum ai folosi un gamepad, în tim
 	"SettingsFriends_ChangeAvatar"			"Schimbă avatarul meu"
 	"SettingsFriends_ViewProfile"			"Arată profilul în Comunitatea Steam"
 	"SettingsFriends_AutoSignIn"			"Conectare automată listă Prieteni"
-	"SettingsFriends_Timestamps"			"Afișează ora în discuții"
+	"SettingsFriends_Timestamps"			"Afișează marcaje temporare în chat"
 	"SettingsFriends_ScalingOverride"		"Scalarea interfeței chatului"
 	"SettingsFriends_HighVisibilityMode"	"Suprascrie mărimea interfeței pentru chat"
 	"SettingsFriends_HighVisibilityModeVR"	"Suprascrie mărimea interfeței pentru chatul VR"

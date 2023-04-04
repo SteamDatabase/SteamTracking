@@ -4293,7 +4293,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Broadcast_Notification_Ignore_Request" "Ignorar" 
 	"Broadcast_Notification_AvailableToWatch_Title" "Transmissão ativada!"
 	"Broadcast_Notification_AvailableToWatch_Friends" "Os teus amigos podem assistir à tua transmissão a qualquer momento."
-	"Broadcast_Notification_AvailableToWatch_Public" "Qualquer utilizador pode assistir à tua transmissão a qualquer momento."
+	"Broadcast_Notification_AvailableToWatch_Public" "Qualquer utilizador do Steam pode assistir à tua transmissão a qualquer momento."
 
 	"Broadcast_FirstTime_Title" "Transmissões Steam"
 	"Broadcast_FirstTime_Header" "Com as Transmissões Steam podes transmitir os teus jogos e ver outros utilizadores a jogar."
@@ -4607,7 +4607,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Country_LB"		"Líbano"
 	"Country_LC"		"Santa Lúcia"
 	"Country_LI"		"Liechtenstein"
-	"Country_LK"		"Sri Lanka"
+	"Country_LK"		"Seri Lanca"
 	"Country_LR"		"Libéria"
 	"Country_LS"		"Lesoto"
 	"Country_LT"		"Lituânia"

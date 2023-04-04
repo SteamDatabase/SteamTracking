@@ -1194,7 +1194,7 @@
     "changeLog_UpdateItem09": "Sửa lỗi gán phím ấn-để-nói từ giao diện trò chuyện mới.",
     "changeLog_UpdateItem10": "Thêm hỗ trợ ấn-để-nói cho nút chuột.",
     "changeLog_UpdateItem11": "Sửa một lỗi khác trong trò chuyện mới, khi đó đôi khi trò chuyện tự động đóng ngay khi vừa mở nếu trước đó bạn dùng qua một trò chơi.",
-    "changeLog_UpdateItem12": "Sửa trình đơn ngữ cảnh bạn bè để hiện nút tham gia trò chơi, nếu người bạn đó trong phòng chờ hoặc có một IP máy chủ hợp lệ.",
+    "changeLog_UpdateItem12": "Sửa menu ngữ cảnh bạn bè để hiện nút tham gia trò chơi, nếu người bạn đó trong phòng chờ hoặc có một IP máy chủ hợp lệ.",
     "changeLog_UpdateItem13": "Làm cho Ctrl+Tab và Shift+Ctrl+Tab hoạt động ổn định khi được ấn liên tục.",
     "changeLog_UpdateItem14": "Thêm tổ hợp phím Ctrl+PgUp và Ctrl+PgDn để chuyển giữa các thẻ trò chuyện.",
     "changeLog_UpdateItem15": "Thêm các nút để đóng video nhúng và YouTube.",

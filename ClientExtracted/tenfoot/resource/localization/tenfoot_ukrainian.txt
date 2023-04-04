@@ -849,8 +849,8 @@
 	"SettingsDownloads_AllowDownloadsDuringGameplayDetails"	"Якщо ввімкнено, Steam може починати чи продовжувати завантаження, поки ви граєте у гру або користуєтеся програмою через Steam. Ви також можете перевизначити цю опцію індивідуально для кожного продукту у вашій бібліотеці."
 	"SettingsDownloads_ThrottleDownloadsWhileStreaming"	"Обмежити завантаження під час транслювання"
 	"SettingsDownloads_ThrottleDownloadsWhileStreamingDetails"	"Якщо ввімкнено, Steam обмежить швидкість завантаження, щоби зберегти найвищу якість Steam Remote Play."
-	"SettingsDownloads_ShowDownloadRatesInBits"	"Відображати швидкість завантаження у бітах за секунду"
-	"SettingsDownloads_ThrottleShowDownloadRatesInBitsDetails"	"Якщо ввімкнено, Steam показуватиме швидкість завантаження у бітах за секунду. Наприклад: «4 Мбіт/с» замість «500 кБ/с»."
+	"SettingsDownloads_ShowDownloadRatesInBits"	"Показувати швидкість завантаження в бітах за секунду"
+	"SettingsDownloads_ThrottleShowDownloadRatesInBitsDetails"	"Якщо ввімкнено, Steam показуватиме швидкість завантаження в бітах за секунду. Наприклад: «4 Мбіт/с» замість «500 кБ/с»."
 	
 	// Settings, network screen
 	//
@@ -2713,7 +2713,7 @@
 	"Library_ScreenshotDeleteErrorDescription"	"Виникла помилка при спробі видалити ваш знімок екрана, можливо, він буде ще доступним локально або в хмарі."
 	"Library_ScreenshotUploadErrorTitle"	"Помилка"
 	"Library_ScreenshotUploadDescription"	"Виникла помилка під час вивантаження вашого знімка екрана. Steam Cloud може бути тимчасово недоступним."
-	"Library_UploadScreenshotSpoilerTag"	"Відмітити як можливий спойлер"
+	"Library_UploadScreenshotSpoilerTag"	"Позначити як можливий спойлер"
 	"Library_PromptScreenshotManagerTitle"	"Керувати знімками екрана?"
 	"Library_PromptScreenshotManagerDescription"	"Схоже, у вас є нові знімки екрана з {s:gamename}. Не бажаєте зараз їх переглянути чи виконати дії?"
 	"Library_UploadScreenshotTitle"		"Вивантаження знімка екрана"

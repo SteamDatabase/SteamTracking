@@ -714,7 +714,7 @@
 "Broadcast_Notification_Is_Watching" "正在看您的直播"
 "Broadcast_Notification_AvailableToWatch_Title" "實況直播功能已開啟！"
 "Broadcast_Notification_AvailableToWatch_Friends" "您的好友能於任何時間觀看您的實況。"
-"Broadcast_Notification_AvailableToWatch_Public" "任何 Steam 使用者均能於任何時間觀看您的實況。"
+"Broadcast_Notification_AvailableToWatch_Public" "任何 Steam 使用者均能隨時加入觀看您的實況。"
 
 "Steam_Settings_BroadcastTitle" "實況直播"
 "Steam_Settings_Broadcast_Disabled" "停用實況直播功能"

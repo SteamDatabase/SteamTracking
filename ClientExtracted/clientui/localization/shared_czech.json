@@ -1154,6 +1154,7 @@
 	"Login_Error_MoveAuthenticator_Description": "Při přesouvání Vašeho autentifikátoru došlo k chybě. Zkuste to později znovu.",
 	"Login_ConnectingToSteam": "Připojování do služby Steam",
 	"Login_LoadingAccountInfo": "Načítání účtu",
+	"SteamNotification_HelpRequest_Author": "Podpora služby Steam",
 	"SteamNotification_HelpRequest_Title": "Žádost na podporu byla aktualizována",
 	"SteamNotification_HelpRequest_Body": "Žádost na podporu %1$s",
 	"SteamNotification_AsyncGame_Title": "Herní relace",

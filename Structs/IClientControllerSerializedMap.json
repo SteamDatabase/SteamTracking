@@ -2,11 +2,11 @@
     "name": "IClientControllerSerializedMap",
     "functions": [ 
         {
-            "name": "Unknown_5419280",
+            "name": "Unknown_5432240",
             "argc": "0"
         },
         {
-            "name": "Unknown_6230688",
+            "name": "Unknown_6242992",
             "argc": "0"
         },
         {
@@ -168,6 +168,10 @@
         {
             "name": "SetGyroAutoCalibrate",
             "argc": "3"
+        },
+        {
+            "name": "RequestGyroActive",
+            "argc": "4"
         },
         {
             "name": "SetGyroCalibrating",

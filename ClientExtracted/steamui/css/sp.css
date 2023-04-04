@@ -13361,6 +13361,29 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   display: flex;
   flex-direction: column;
 }
+.gamepadsearch_LibraryImageWithName_3vyTQ.gamepadsearch_TagCtn_Xw4aS
+  .gamepadsearch_GameIcon_1SjNH {
+  background: linear-gradient(127deg, #562d67 0%, #2b4d5ec2 85%);
+}
+.gamepadsearch_LibraryImageWithName_3vyTQ.gamepadsearch_TagCtn_Xw4aS img {
+  filter: saturate(0.6) contrast(0.5) brightness(0.7);
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 68%,
+    #000000 39%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(circle at 50% 68%, #000000 39%, transparent 100%);
+}
+.gamepadsearch_LibraryImageWithName_3vyTQ.gamepadsearch_TagCtn_Xw4aS
+  .gamepadsearch_Title_3CMVj
+  span {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2px 8px;
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
 .gamepadsearch_LibraryImageWithName_3vyTQ .gamepadsearch_Title_3CMVj {
   position: absolute;
   top: 10px;
@@ -13408,12 +13431,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   display: flex;
   flex-direction: row;
   gap: 8px;
-}
-.achievementslist_AchievementListItemBase_2Kmn7
-  .achievementslist_Container_cvw8D
-  .achievementslist_Media_RmNOQ {
-  width: 64px;
-  height: 64px;
+  align-items: center;
 }
 .achievementslist_AchievementListItemBase_2Kmn7
   .achievementslist_Container_cvw8D
@@ -13458,10 +13476,6 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   font-size: 12px;
   font-weight: 400;
   color: #8b929a;
-}
-.achievementslist_AchievementImage_dfV5H {
-  width: 64px;
-  height: 64px;
 }
 .achievementslist_AlignEnd_33MZ9 {
   align-items: flex-end;
@@ -13542,12 +13556,6 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   flex: 1;
   align-self: stretch;
   padding: 10px;
-}
-.achievementslist_GlobalAchievementListItem_316Uo
-  .achievementslist_Content_UWkKt
-  .achievementslist_ImageContainer_SGyFw {
-  width: 64px;
-  height: 64px;
 }
 .achievementslist_GlobalAchievementListItem_316Uo
   .achievementslist_Content_UWkKt
@@ -13658,6 +13666,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   .achievementsheader_Content_Pr0VC
   .achievementsheader_LeaderboardsButton_3_7wz {
   align-self: flex-end;
+  min-width: 200px;
 }
 .achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl {
   color: #fff;
@@ -13729,6 +13738,8 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   flex: 1;
   z-index: 1;
   padding-top: 64px;
+  display: flex;
+  flex-direction: column;
 }
 .achievementspage_Page_3FQHg .achievementspage_Nav_15Sq7 {
   display: flex;
@@ -13760,7 +13771,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   font-weight: 400;
 }
 .achievementspage_AchievementTabs_gxNvE {
-  height: 454px;
+  flex: 1 1 454px;
 }
 .achievementspage_Background_ODpLj {
   position: absolute;
@@ -13843,6 +13854,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   display: flex;
   flex-direction: row;
   gap: 8px;
+}
+.achievementspage_CompareButtonContainer_1UeO0 {
+  flex-basis: 220px;
 }
 .sharedappdetailsheader_TopCapsule_2meE3 {
   --header-height: 24vw;
@@ -16706,7 +16720,6 @@ div.LowPerfMode
   min-width: 64px;
 }
 .installrequest_NoticeInstallFolder_WonjN {
-  color: #ffc82c;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -16718,6 +16731,9 @@ div.LowPerfMode
 .installrequest_NoticeInstallFolder_WonjN svg {
   width: 16px;
   height: 16px;
+}
+.installrequest_NoticeInstallFolder_WonjN.installrequest_Warning_bhL5Q {
+  color: #ffc82c;
 }
 .DesktopUI .installrequest_InstallRequestModal_3wtPU {
   min-width: 500px;
@@ -50151,6 +50167,751 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   padding: 0;
   margin: 0;
 }
+.steamdesktopoverlay_Wrapper_3b_pl {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.steamdesktopoverlay_Wrapper_3b_pl.steamdesktopoverlay_PreviewPinnedView_3dzz4 {
+  opacity: 0;
+}
+.steamdesktopoverlay_TopSection_fi6UD {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1280px;
+  margin: auto;
+}
+.steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_BackToGame_2LJMR {
+  flex: 1 1 0;
+  width: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_BackToGame_2LJMR
+  .steamdesktopoverlay_BackToGameBtn_mh8m9 {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-color: #23262e;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_BackToGame_2LJMR
+  .steamdesktopoverlay_BackToGameBtn_mh8m9:hover {
+  background-color: #3d4450;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_BackToGame_2LJMR
+  .steamdesktopoverlay_BackToGameBtn_mh8m9
+  > svg {
+  height: 25px;
+  vertical-align: middle;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_BackToGame_2LJMR
+  .steamdesktopoverlay_TextContainer_rgGY_ {
+  max-width: calc(100% - 60px);
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_BackToGame_2LJMR
+  .steamdesktopoverlay_GameName_3mi5H {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_BackToGame_2LJMR
+  .steamdesktopoverlay_KBShortcut_2EuLv {
+  margin-top: 5px;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  color: #b8bcbf;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_CurrentGameLogoContainer_17-q3 {
+  max-width: 300px;
+  width: 33%;
+}
+.steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_TimeStats_vCykY {
+  flex: 1 1 0;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TimeStats_vCykY
+  .steamdesktopoverlay_CurrentTime_2gQ69 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TimeStats_vCykY
+  .steamdesktopoverlay_CurrentDate_2tSzh {
+  margin-top: 5px;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b8bcbf;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TimeStats_vCykY
+  .steamdesktopoverlay_PlaytimeCurrentSession_3YTmr {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b8bcbf;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TimeStats_vCykY
+  .steamdesktopoverlay_TimeTrialRemaining_1pESm {
+  margin-top: 20px;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffc82c;
+}
+.steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_ExitGameBtn_Boygo {
+  width: auto;
+  text-transform: uppercase;
+  padding: 0px 15px;
+  margin-top: 10px;
+  color: #b8bcbf;
+  background-color: #23262e;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_ExitGameBtn_Boygo:hover {
+  background-color: #e22a27;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 50px 50px 0px 50px;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV .SVGIcon_Button {
+  opacity: 1 !important;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV .steamdesktopoverlay_Toolbar_fbu3l {
+  display: flex;
+  height: 50px;
+  opacity: 0.5;
+  transition: opacity 0.1s ease-in-out;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV
+  .steamdesktopoverlay_Toolbar_fbu3l
+  .steamdesktopoverlay_ToolbarButton_3ZLaT {
+  height: 45px;
+  width: 45px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #23262e;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV
+  .steamdesktopoverlay_Toolbar_fbu3l
+  .steamdesktopoverlay_ToolbarButton_3ZLaT:hover {
+  background-color: #3d4450;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV
+  .steamdesktopoverlay_Toolbar_fbu3l
+  .steamdesktopoverlay_ToolbarButton_3ZLaT.steamdesktopoverlay_Toggled_1BXjK {
+  background-color: #1a9fff;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV
+  .steamdesktopoverlay_Toolbar_fbu3l
+  .steamdesktopoverlay_ToolbarButton_3ZLaT.steamdesktopoverlay_Toggled_1BXjK:hover {
+  background-color: #0bf;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV
+  .steamdesktopoverlay_Toolbar_fbu3l
+  .steamdesktopoverlay_ToolbarButton_3ZLaT
+  > svg {
+  height: 25px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV
+  .steamdesktopoverlay_Toolbar_fbu3l
+  .steamdesktopoverlay_ScreenshotToggleButton_6SwHr {
+  margin-right: 20px;
+}
+.steamdesktopoverlay_ToolbarContainer_3OzkV:hover
+  .steamdesktopoverlay_Toolbar_fbu3l {
+  opacity: 1;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu {
+  background-color: #0e141b;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s linear;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_FitToContent_Wt45H {
+  width: fit-content;
+  height: fit-content;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu.GameNotes.steamdesktopoverlay_PinnedView_2OoAj {
+  background: none;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu.GameNotes.steamdesktopoverlay_PinnedView_2OoAj
+  .TitleBar {
+  visibility: hidden;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu .title-area-children {
+  float: none;
+  -webkit-app-region: drag;
+  pointer-events: auto;
+  position: relative;
+  padding-left: 8px;
+  top: unset;
+  right: unset;
+  color: #b8bcbf;
+  font-size: 13px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(100% - 40px);
+  margin-right: 0px;
+}
+.ModalDialogPopup:not(.steamdesktopoverlay_NoTitlebarSpacer_20pOd)
+  .steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_WindowControls_2O7tj {
+  position: relative;
+  height: 36px;
+}
+.ModalDialogPopup:not(.steamdesktopoverlay_NoTitlebarSpacer_20pOd)
+  .steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_WindowControls_2O7tj
+  .title-area {
+  align-items: center;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+}
+.ModalDialogPopup:not(.steamdesktopoverlay_NoTitlebarSpacer_20pOd)
+  .steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_WindowControls_2O7tj
+  .title-area
+  .title-area-icon.closeButton {
+  margin-top: 7px;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_PinWindowButton_3EcEd {
+  color: #b8bcbf;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_PinWindowButton_3EcEd
+  svg {
+  height: 15px;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_PinWindowButton_3EcEd.steamdesktopoverlay_Pinned_1dJ6y {
+  color: #0bf;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_PinWindowButton_3EcEd:hover {
+  color: #fff;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_OpacityButton_2J5BI
+  svg {
+  height: 15px;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_FocusIndicator_25FUF {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  z-index: 10;
+  background: linear-gradient(to right, #00ccff, #3366ff);
+  opacity: 0;
+}
+.DesktopUI.WindowFocus
+  .steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_FocusIndicator_25FUF {
+  opacity: 1;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_ControllerConfiguratorWrapper_2RTmc {
+  flex: 1;
+  position: relative;
+  display: flex;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_BrowserViewHost_3JV6- {
+  flex: 1;
+  background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
+  margin: 0px 2px 2px 2px;
+  border: none;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar {
+  width: 12px;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb {
+  width: 4px;
+  border: 3px solid transparent;
+  background-image: none;
+  background-color: #606774;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-track,
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-button {
+  display: none;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb:hover {
+  background-color: #7b8392;
+  background-clip: padding-box;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb:active {
+  background-color: #7b8392;
+  border: 2px solid transparent;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-corner {
+  background-color: #434953;
+}
+.steamdesktopoverlay_OverlayAchievements_2mPty {
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  min-height: 0;
+  width: 100%;
+}
+.steamdesktopoverlay_OverlayAchievements_2mPty
+  .steamdesktopoverlay_Container_6K3Uq {
+  flex: 1;
+  padding-top: 24px;
+}
+.steamdesktopoverlay_OverlayBroadcast_261QW {
+  padding: 0px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.steamdesktopoverlay_OverlayBroadcast_261QW .steamdesktopoverlay_Title_8psoS {
+  font-size: 24px;
+  color: #1a9fff;
+}
+.steamdesktopoverlay_OverlayBroadcast_261QW
+  .steamdesktopoverlay_ViewerCount_ntXif {
+  white-space: nowrap;
+}
+.steamdesktopoverlay_OverlayBroadcast_261QW .steamdesktopoverlay_Buttons_2Grbs {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 8px;
+}
+.steamdesktopoverlay_OverlayBroadcast_261QW
+  .steamdesktopoverlay_Buttons_2Grbs
+  button {
+  flex-grow: 1;
+}
+.steamdesktopoverlay_OverlayBroadcastChat_2kcas {
+  flex-grow: 1;
+  display: flex;
+}
+.steamdesktopoverlay_GameOverview_27m9Q {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0px 5px 5px 5px;
+  background-color: #0e141b;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_IsDragging_-AETe
+  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7 {
+  background-color: #23262e;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v {
+  margin: 5px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v.steamdesktopoverlay_HasBackground_P46KV {
+  background-color: #23262e;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background-color: #3d4450;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: dc_hand;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
+  .steamdesktopoverlay_GameOverviewSectionTitle_3BbUJ {
+  display: flex;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
+  .steamdesktopoverlay_GameOverviewSectionTitle_3BbUJ
+  svg.steamdesktopoverlay_DragHandle_IPRP2 {
+  margin-top: 5px;
+  height: 12px;
+  padding: 0px 6px 2px 2px;
+  color: #b8bcbf;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
+  > svg {
+  height: 18px;
+  margin-top: 2px;
+  color: #b8bcbf;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
+  > svg:hover {
+  color: #fff;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GameOverviewSectionChildren_17TJ4 {
+  display: flex;
+  flex-direction: column;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GameOverviewSectionChildren_17TJ4.steamdesktopoverlay_ContainChildren_3WMiI {
+  padding: 0px 5px 5px 5px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_Playtime_1g_TU {
+  padding-top: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  color: #dcdedf;
+  margin-left: 4px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_FriendsWhoPlayed_3udkV {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_FriendsWhoPlayed_3udkV
+  .steamdesktopoverlay_Friend_sMY6B {
+  cursor: pointer;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_ScreenshotsList_ZLlpm {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_ScreenshotsList_ZLlpm
+  .steamdesktopoverlay_Screenshot_f99W0 {
+  max-height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_ScreenshotsList_ZLlpm
+  .steamdesktopoverlay_Screenshot_f99W0
+  img {
+  width: calc(100% - 4px);
+  max-width: 200px;
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_ScreenshotsList_ZLlpm
+  .steamdesktopoverlay_Screenshot_f99W0
+  img:hover {
+  border-color: #fff;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC
+  .steamdesktopoverlay_RecentAchievement_nzZlh {
+  margin-top: 8px;
+  width: 300px;
+  height: 80px;
+  padding: 8px;
+  gap: 8px;
+  cursor: pointer;
+  background-color: #23262e;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC
+  .steamdesktopoverlay_RecentAchievement_nzZlh:hover {
+  background-color: #3d4450;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC
+  .steamdesktopoverlay_RecentAchievement_nzZlh
+  .steamdesktopoverlay_UnlockTime_2rTQl {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC
+  .steamdesktopoverlay_RecentAchievement_nzZlh
+  .steamdesktopoverlay_AchievementDetails_iXxDt {
+  display: flex;
+  flex-direction: row;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC
+  .steamdesktopoverlay_RecentAchievement_nzZlh
+  .steamdesktopoverlay_AchievementDetails_iXxDt
+  .steamdesktopoverlay_AchievementContent_1vfXh {
+  margin-left: 5px;
+  width: 247px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC
+  .steamdesktopoverlay_RecentAchievement_nzZlh
+  .steamdesktopoverlay_AchievementDetails_iXxDt
+  .steamdesktopoverlay_AchievementContent_1vfXh
+  .steamdesktopoverlay_AchievementTitle_gK1HB {
+  font-size: 16px;
+  font-weight: 500;
+  color: #dcdedf;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC
+  .steamdesktopoverlay_RecentAchievement_nzZlh
+  .steamdesktopoverlay_AchievementDetails_iXxDt
+  .steamdesktopoverlay_AchievementContent_1vfXh
+  .steamdesktopoverlay_AchievementDescription_I0sr9 {
+  font-size: 12px;
+  color: #b8bcbf;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_AchievementsList_1zaAC
+  .steamdesktopoverlay_RecentAchievement_nzZlh
+  .steamdesktopoverlay_AchievementDetails_iXxDt
+  .steamdesktopoverlay_AchievementContent_1vfXh
+  .steamdesktopoverlay_AchievementGlobalPercentage_VZWVj {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GuideListItem_2OwqX {
+  margin-top: 1px;
+  padding: 8px;
+  color: #b8bcbf;
+  background-color: #23262e;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GuideListItem_2OwqX
+  .steamdesktopoverlay_GuideTitle_1MjGj {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_GuideListItem_2OwqX:hover {
+  color: #23262e;
+  background-color: #dcdedf;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_RecentNewsItem_3eNE5 {
+  margin-top: 1px;
+  padding: 8px;
+  color: #b8bcbf;
+  background-color: #23262e;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_RecentNewsItem_3eNE5
+  .steamdesktopoverlay_EventDetailTitle_p8bs- {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_RecentNewsItem_3eNE5
+  .steamdesktopoverlay_PostedTime_2FYqq {
+  white-space: nowrap;
+  padding-left: 5px;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_RecentNewsItem_3eNE5:hover {
+  color: #23262e;
+  background-color: #dcdedf;
+}
 .addnonsteamgamedialog_AddNonSteamGameDialog_1tQy- {
   min-width: 600px;
   display: flex;
@@ -50583,6 +51344,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ColumnResizer_1XAm7 {
   background: #fff;
   display: inline-block;
+  cursor: col-resize;
   top: 0;
   right: 0;
   width: 4px;
@@ -50614,7 +51376,16 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   position: relative;
   white-space: nowrap;
   overflow: hidden;
+  display: flex;
   text-overflow: ellipsis;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_ServerList_2_4_n
+  .serverbrowserdialog_ServerListHeaderSort_3mOBJ {
+  flex-grow: 1;
+  margin-right: 4px;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -50657,7 +51428,16 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_ServerListHeaderRow_1m0su {
-  gap: 5px;
+  gap: 0px;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_ServerList_2_4_n
+  .serverbrowserdialog_ServerListHeaderRow_1m0su
+  .serverbrowserdialog_ServerListHeaderCell_1PuPp:last-of-type
+  .serverbrowserdialog_ColumnResizer_1XAm7 {
+  display: none;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51279,10 +52059,29 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   font-size: 13px;
   color: #8b929a;
 }
+.screenshotmanagerdialog_Text_1DrNv {
+  color: #fff;
+}
 .screenshotmanagerdialog_Text_1DrNv.screenshotmanagerdialog_Truncate_3xHEe {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.screenshotmanagerdialog_Text_1DrNv.screenshotmanagerdialog_Link_1e_xs {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.screenshotmanagerdialog_Text_1DrNv.screenshotmanagerdialog_Link_1e_xs:hover {
+  color: #b8bcbf;
+}
+.screenshotmanagerdialog_Text_1DrNv.screenshotmanagerdialog_Warning_2Z7NO {
+  color: #ffc82c;
+}
+.screenshotmanagerdialog_Text_1DrNv.screenshotmanagerdialog_Warning_2Z7NO.screenshotmanagerdialog_Link_1e_xs:hover {
+  color: #ffd55f;
+}
+.screenshotmanagerdialog_Text_1DrNv.screenshotmanagerdialog_Secondary_2Wyma {
+  color: #8b929a;
 }
 .screenshotmanagerdialog_ProgressContainer_oNDZM {
   position: relative;
@@ -51471,6 +52270,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 4px;
 }
 .prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
   margin-right: 4px;
@@ -51482,8 +52282,28 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .SVGIcon_Button {
   width: 20px;
   height: 20px;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   padding-left: 1px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextBold,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextItalic,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextStrikethrough {
+  width: 18px;
+  height: 18px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline {
+  padding-bottom: 5px;
 }
 .prosemirror_ToolbarRow_2H40R
   .prosemirror_CommandButton_1-R1U.prosemirror_Toggled_41y1p {
@@ -51496,8 +52316,16 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .prosemirror_ToolbarRow_2H40R .prosemirror_Spacer_2Zt31 {
   flex: 1;
 }
+.prosemirror_ExpandButton_3454x svg {
+  width: 24px;
+  height: 24px;
+  padding-top: 4px;
+  padding-right: 1px;
+}
 .prosemirror_ExpandButton_3454x.prosemirror_Toggled_41y1p svg {
   transform: rotate(180deg);
+  margin-top: 3px;
+  margin-right: 1px;
 }
 .pmhover_Hover_3tNcT {
   position: absolute;
@@ -51536,6 +52364,23 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .gamenotes_NotePage_2r0iB
   > .DialogContent_InnerWidth {
   max-width: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .DialogContentTransition {
+  background: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft .PageListColumn {
+  visibility: hidden;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NotePage_2r0iB {
+  background: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_Toolbar_A6mhR,
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NoteActions_3uGOy {
+  visibility: hidden;
 }
 .gamenotes_NoteEditorArea_3WOF4 {
   display: flex;
@@ -51609,657 +52454,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .gamenotes_EditorInput_3zWun li > p:first-of-type {
   margin: 0;
-}
-.steamdesktopoverlay_Wrapper_3b_pl {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-.steamdesktopoverlay_TopSection_fi6UD {
-  display: flex;
-  flex-direction: row;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1280px;
-  margin: auto;
-}
-.steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_BackToGame_2LJMR {
-  flex: 1 1 0;
-  width: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_BackToGameBtn_mh8m9 {
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_BackToGameBtn_mh8m9:hover {
-  background-color: red;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_BackToGameBtn_mh8m9
-  > svg {
-  height: 30px;
-  vertical-align: middle;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_TextContainer_rgGY_ {
-  max-width: calc(100% - 60px);
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_GameName_3mi5H {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 22px;
-  line-height: 28px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-top: 5px;
-  text-align: right;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_BackToGame_2LJMR
-  .steamdesktopoverlay_KBShortcut_2EuLv {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  text-align: right;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_CurrentGameLogoContainer_17-q3 {
-  max-width: 300px;
-  width: 33%;
-}
-.steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_TimeStats_vCykY {
-  flex: 1 1 0;
-  width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_TimeStats_vCykY
-  .steamdesktopoverlay_CurrentTime_2gQ69 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 34px;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_TimeStats_vCykY
-  .steamdesktopoverlay_CurrentDate_2tSzh {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-}
-.steamdesktopoverlay_TopSection_fi6UD
-  .steamdesktopoverlay_TimeStats_vCykY
-  .steamdesktopoverlay_PlaytimeCurrentSession_3YTmr {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translate(-50%);
-  padding: 50px 50px 0px 50px;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV .SVGIcon_Button {
-  opacity: 1 !important;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV .steamdesktopoverlay_Toolbar_fbu3l {
-  display: flex;
-  height: 50px;
-  opacity: 0.5;
-  transition: opacity 0.1s ease-in-out;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT {
-  height: 50px;
-  width: 50px;
-  margin-left: 5px;
-  margin-right: 5px;
-  background-color: #23262e;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT:hover {
-  background-color: #3d4450;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT.steamdesktopoverlay_Toggled_1BXjK {
-  background-color: #1a9fff;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT.steamdesktopoverlay_Toggled_1BXjK:hover {
-  background-color: #0bf;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV
-  .steamdesktopoverlay_Toolbar_fbu3l
-  .steamdesktopoverlay_ToolbarButton_3ZLaT
-  > svg {
-  height: 30px;
-  vertical-align: middle;
-}
-.steamdesktopoverlay_ToolbarContainer_3OzkV:hover
-  .steamdesktopoverlay_Toolbar_fbu3l {
-  opacity: 1;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu {
-  background-color: #0e141b;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_FitToContent_Wt45H {
-  width: fit-content;
-  height: fit-content;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu .title-area-children {
-  float: none;
-  -webkit-app-region: drag;
-  pointer-events: auto;
-  position: relative;
-  padding-left: 8px;
-  top: unset;
-  right: unset;
-  color: #b8bcbf;
-  font-size: 13px;
-  text-align: left;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: calc(100% - 40px);
-  margin-right: 0px;
-}
-.ModalDialogPopup:not(.steamdesktopoverlay_NoTitlebarSpacer_20pOd)
-  .steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_WindowControls_2O7tj {
-  position: relative;
-  height: 36px;
-}
-.ModalDialogPopup:not(.steamdesktopoverlay_NoTitlebarSpacer_20pOd)
-  .steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_WindowControls_2O7tj
-  .title-area {
-  align-items: center;
-  height: 36px;
-  display: flex;
-  flex-direction: row;
-}
-.ModalDialogPopup:not(.steamdesktopoverlay_NoTitlebarSpacer_20pOd)
-  .steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_WindowControls_2O7tj
-  .title-area
-  .title-area-icon.closeButton {
-  margin-top: 7px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_FocusIndicator_25FUF {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  z-index: 10;
-  background: linear-gradient(to right, #00ccff, #3366ff);
-  opacity: 0;
-}
-.DesktopUI.WindowFocus
-  .steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_FocusIndicator_25FUF {
-  opacity: 1;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_ControllerConfiguratorWrapper_2RTmc {
-  flex: 1;
-  position: relative;
-  display: flex;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6- {
-  flex: 1;
-  background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
-  margin: 0px 2px 2px 2px;
-  border: none;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar {
-  width: 12px;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb {
-  width: 4px;
-  border: 3px solid transparent;
-  background-image: none;
-  background-color: #606774;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-track,
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-button {
-  display: none;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb:hover {
-  background-color: #7b8392;
-  background-clip: padding-box;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-thumb:active {
-  background-color: #7b8392;
-  border: 2px solid transparent;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_BrowserViewHost_3JV6-::-webkit-scrollbar-corner {
-  background-color: #434953;
-}
-.steamdesktopoverlay_OverlayAchievements_2mPty {
-  position: relative;
-  flex: 1;
-  flex-direction: column;
-  display: flex;
-  min-height: 0;
-  width: 100%;
-}
-.steamdesktopoverlay_OverlayAchievements_2mPty
-  .steamdesktopoverlay_Container_6K3Uq {
-  flex: 1;
-  padding-top: 24px;
-}
-.steamdesktopoverlay_OverlayBroadcast_261QW {
-  padding: 0px 12px 12px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.steamdesktopoverlay_OverlayBroadcast_261QW .steamdesktopoverlay_Title_8psoS {
-  font-size: 24px;
-  color: #1a9fff;
-}
-.steamdesktopoverlay_OverlayBroadcast_261QW
-  .steamdesktopoverlay_ViewerCount_ntXif {
-  white-space: nowrap;
-}
-.steamdesktopoverlay_OverlayBroadcast_261QW .steamdesktopoverlay_Buttons_2Grbs {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  gap: 8px;
-}
-.steamdesktopoverlay_OverlayBroadcast_261QW
-  .steamdesktopoverlay_Buttons_2Grbs
-  button {
-  flex-grow: 1;
-}
-.steamdesktopoverlay_OverlayBroadcastChat_2kcas {
-  flex-grow: 1;
-  display: flex;
-}
-.steamdesktopoverlay_GameOverview_27m9Q {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-  overflow-y: auto;
-}
-.steamdesktopoverlay_GameOverview_27m9Q .steamdesktopoverlay_IsDragging_-AETe {
-  background-color: #3d4450;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v {
-  margin: 5px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v.steamdesktopoverlay_HasBackground_P46KV {
-  background-color: #23262e;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  background-color: #3d4450;
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7.steamdesktopoverlay_Clickable_jCIBN {
-  cursor: pointer;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
-  .steamdesktopoverlay_GameOverviewSectionTitle_3BbUJ {
-  display: flex;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
-  .steamdesktopoverlay_GameOverviewSectionTitle_3BbUJ
-  svg.steamdesktopoverlay_DragHandle_IPRP2 {
-  margin-top: 5px;
-  height: 12px;
-  padding: 0px 6px 2px 2px;
-  color: #b8bcbf;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
-  > svg {
-  height: 18px;
-  margin-top: 2px;
-  color: #b8bcbf;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
-  > svg:hover {
-  color: #fff;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GameOverviewSectionChildren_17TJ4 {
-  display: flex;
-  flex-direction: column;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GameOverviewSectionChildren_17TJ4.steamdesktopoverlay_ContainChildren_3WMiI {
-  padding: 0px 5px 5px 5px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_FriendsWhoPlayed_3udkV {
-  display: flex;
-  flex-direction: row;
-  gap: 2px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_FriendsWhoPlayed_3udkV
-  .steamdesktopoverlay_Friend_sMY6B {
-  cursor: pointer;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_ScreenshotsList_ZLlpm {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_ScreenshotsList_ZLlpm
-  .steamdesktopoverlay_Screenshot_f99W0 {
-  max-height: 200px;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 8px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_ScreenshotsList_ZLlpm
-  .steamdesktopoverlay_Screenshot_f99W0
-  img {
-  width: calc(100% - 4px);
-  max-width: 200px;
-  border: 2px solid rgba(255, 255, 255, 0);
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_ScreenshotsList_ZLlpm
-  .steamdesktopoverlay_Screenshot_f99W0
-  img:hover {
-  border-color: #fff;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC
-  .steamdesktopoverlay_RecentAchievement_nzZlh {
-  margin-top: 8px;
-  width: 300px;
-  height: 80px;
-  padding: 8px;
-  gap: 8px;
-  cursor: pointer;
-  background-color: #23262e;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC
-  .steamdesktopoverlay_RecentAchievement_nzZlh:hover {
-  background-color: #3d4450;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC
-  .steamdesktopoverlay_RecentAchievement_nzZlh
-  .steamdesktopoverlay_UnlockTime_2rTQl {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 10px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC
-  .steamdesktopoverlay_RecentAchievement_nzZlh
-  .steamdesktopoverlay_AchievementDetails_iXxDt {
-  display: flex;
-  flex-direction: row;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC
-  .steamdesktopoverlay_RecentAchievement_nzZlh
-  .steamdesktopoverlay_AchievementDetails_iXxDt
-  .steamdesktopoverlay_AchievementContent_1vfXh {
-  margin-left: 5px;
-  width: 247px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC
-  .steamdesktopoverlay_RecentAchievement_nzZlh
-  .steamdesktopoverlay_AchievementDetails_iXxDt
-  .steamdesktopoverlay_AchievementContent_1vfXh
-  .steamdesktopoverlay_AchievementTitle_gK1HB {
-  font-size: 16px;
-  font-weight: 500;
-  color: #dcdedf;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC
-  .steamdesktopoverlay_RecentAchievement_nzZlh
-  .steamdesktopoverlay_AchievementDetails_iXxDt
-  .steamdesktopoverlay_AchievementContent_1vfXh
-  .steamdesktopoverlay_AchievementDescription_I0sr9 {
-  font-size: 12px;
-  color: #b8bcbf;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_AchievementsList_1zaAC
-  .steamdesktopoverlay_RecentAchievement_nzZlh
-  .steamdesktopoverlay_AchievementDetails_iXxDt
-  .steamdesktopoverlay_AchievementContent_1vfXh
-  .steamdesktopoverlay_AchievementGlobalPercentage_VZWVj {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GuideListItem_2OwqX {
-  margin-top: 1px;
-  padding: 8px;
-  color: #b8bcbf;
-  background-color: #23262e;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GuideListItem_2OwqX
-  .steamdesktopoverlay_GuideTitle_1MjGj {
-  flex-grow: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 12px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_GuideListItem_2OwqX:hover {
-  color: #23262e;
-  background-color: #dcdedf;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_RecentNewsItem_3eNE5 {
-  margin-top: 1px;
-  padding: 8px;
-  color: #b8bcbf;
-  background-color: #23262e;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_RecentNewsItem_3eNE5
-  .steamdesktopoverlay_EventDetailTitle_p8bs- {
-  flex-grow: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_RecentNewsItem_3eNE5
-  .steamdesktopoverlay_PostedTime_2FYqq {
-  white-space: nowrap;
-  padding-left: 5px;
-}
-.steamdesktopoverlay_GameOverview_27m9Q
-  .steamdesktopoverlay_GameOverviewSection_1vG-v
-  .steamdesktopoverlay_RecentNewsItem_3eNE5:hover {
-  color: #23262e;
-  background-color: #dcdedf;
 }
 .ModalDialogPopup
   .gamenotespopups_GameNotesPopup_3hIt9.ModalDialogBody
@@ -52626,6 +52820,20 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     inset rgba(61, 68, 80, 0.25) -1px 0px 1px 0px;
   border: 1px solid #000;
   border-bottom: none;
+}
+.titlebarcontrols_EmptyNotificationsCtn_p2CKe {
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.titlebarcontrols_EmptyNotificationsCtn_p2CKe
+  .titlebarcontrols_EmptyNotificationsTitle_2uHOs {
+  font-weight: 400;
+}
+.titlebarcontrols_EmptyNotificationsCtn_p2CKe
+  .titlebarcontrols_EmptyNotificationsBody_cam5n {
+  padding-top: 15px;
+  color: #b8bcbf;
 }
 .titlebarcontrols_NotificationsMenuScrollable_3sTMv {
   overflow-y: auto;
@@ -53240,256 +53448,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .bottombar_FriendsButton_1TdaA.bottombar_Disabled_2Sdix .bottombar_Text_3OhUx {
   color: rgba(169, 169, 169, 0.5);
 }
-.steamdesktop_FocusNavigationRoot_27qas {
-  width: 100%;
-  height: 100%;
-}
-.steamdesktop_Wrapper_1ENHE {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #000;
-  border-top: none;
-  background-color: #000;
-  box-sizing: border-box;
-}
-.steamdesktop_Wrapper_1ENHE .steamdesktop_FocusBar_3pXas {
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background-color: #000;
-  display: none;
-}
-.steamdesktop_Wrapper_1ENHE.WindowFocus .steamdesktop_FocusBar_3pXas,
-.WindowFocus .steamdesktop_Wrapper_1ENHE .steamdesktop_FocusBar_3pXas {
-  display: block;
-  background: linear-gradient(
-    to right,
-    transparent 10%,
-    #1aa0ff53 50%,
-    transparent 90%
-  );
-}
-.steamdesktop_OuterFrame_3mz8w {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.steamdesktop_ContentFrame_1rDh5 {
-  overflow: hidden;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.steamdesktop_SettingsZooButtonContainer_2Vofd {
-  position: fixed;
-  box-sizing: border-box;
-  right: 0;
-  bottom: 0;
-  width: 64px;
-  height: 64px;
-  z-index: 65000;
-  background: linear-gradient(-45deg, black 0%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-}
-.steamdesktop_SettingsZooButton_1eUQw {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  right: -10px;
-  bottom: -10px;
-  background-image: url(data:image/png;base64,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);
-  background-size: 20px 20px;
-  background-position: 30% 40%;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  border: 1px solid #8d3b00;
-  border-radius: 50%;
-  padding: 6px;
-  pointer-events: initial;
-}
-.steamdesktop_SettingsZooButton_1eUQw:hover {
-  filter: brightness(2);
-}
-.steamdesktop_TopBar_3Z7VQ {
-  flex: 0 0 auto;
-  width: 100%;
-  background: #171d25;
-  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
-    inset rgba(61, 68, 80, 0.25) -1px 0px 1px 0px;
-  display: flex;
-  flex-direction: column;
-}
-.steamdesktop_TitleBar_39oUC {
-  width: 100%;
-  height: 32px;
-  display: flex;
-  flex-direction: row;
-  -webkit-app-region: drag;
-}
-.steamdesktop_TitleBar_39oUC .steamdesktop_RootMenuBar_3s0lk {
-  flex: 0 0 auto;
-  padding-top: 2px;
-}
-.steamdesktop_TitleBar_39oUC .steamdesktop_DragArea_30vB9 {
-  flex: 1 0 auto;
-  -webkit-app-region: drag;
-}
-.steamdesktop_TitleBar_39oUC .steamdesktop_TitleBarControls_1-9si {
-  flex: 0 0 auto;
-}
-.steamdesktop_TitleBar_39oUC .steamdesktop_WindowControls_qP17e {
-  flex: 0 0 99px;
-  position: relative;
-  cursor: pointer;
-}
-.steamdesktop_SuperNavBar_3Z3oh {
-  display: flex;
-  flex-direction: row;
-  height: 32px;
-  min-height: 32px;
-  padding: 2px 0px 0px 11px;
-  -webkit-app-region: drag;
-}
-.steamdesktop_LocalContentContainer_RGNMW {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.steamdesktop_LocalContentContainer_RGNMW
-  .steamdesktop_URLBarReplacement_2Cmrn {
-  min-height: 6px;
-  height: 6px;
-  background: #171d25;
-  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 0px 0px 0px,
-    inset rgba(61, 68, 80, 0.25) -1px -1px 0px 0px;
-}
-.steamdesktop_BrowserWrapper_1bGew {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
-.steamdesktop_BrowserWrapper_1bGew .steamdesktop_URLBar_UkR3s {
-  position: relative;
-  padding: 0px 4px 4px 9px;
-  display: flex;
-  align-items: center;
-  background: #23262e;
-  background: #171d25;
-  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 0px 0px 0px,
-    inset rgba(61, 68, 80, 0.25) -1px -1px 0px 0px;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_StatusIcon_3izqE {
-  height: 18px;
-  color: #67707b;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_LockIcon_3GFlj {
-  height: 16px;
-  padding-bottom: 2px;
-}
-.steamdesktop_BrowserWrapper_1bGew .steamdesktop_URLBar_UkR3s svg {
-  height: 100%;
-  padding-right: 6px;
-  padding-left: 2px;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  svg.steamdesktop_CertError_2T8z7 {
-  color: #de3618;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_ReloadButton_3KaB9 {
-  padding: 2px 0px 2px 4px;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_ReloadButton_3KaB9:hover {
-  cursor: pointer;
-  background: #23262e;
-  border-radius: 16px;
-  color: #b8bcbf;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_URLBarText_2m_or {
-  display: flex;
-  align-items: center;
-  padding: 2px 16px 2px 8px;
-  border-radius: 16px;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_URLBarText_2m_or:hover {
-  cursor: pointer;
-  background: #23262e;
-  border-radius: 16px;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_URLBarText_2m_or:hover
-  .steamdesktop_URL_MZPxE {
-  color: #b8bcbf;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_URLBarText_2m_or:hover
-  .steamdesktop_StatusIcon_3izqE {
-  color: #b8bcbf;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_URLBarText_2m_or
-  .steamdesktop_URL_MZPxE {
-  flex-grow: 1;
-  padding: 0 0px;
-  color: #67707b;
-  font-size: 11px;
-  font-weight: 400;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.steamdesktop_BrowserWrapper_1bGew
-  .steamdesktop_URLBar_UkR3s
-  .steamdesktop_URLBarText_2m_or
-  .steamdesktop_URL_MZPxE.steamdesktop_CertError_2T8z7 {
-  color: #de3618;
-}
-.steamdesktop_BrowserWrapper_1bGew .steamdesktop_Browser_29p1j {
-  flex-grow: 1;
-  width: 100%;
-}
-.steamdesktop_URLBarCopied_3ZGpa {
-  background-color: #1e90ff;
-  color: #fff;
-  font-size: 10px;
-  position: fixed;
-  padding: 2px 4px;
-  border-radius: 4px;
-  animation-name: steamdesktop_URLBarCopiedAnimation_2sW92;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-}
-@keyframes steamdesktop_URLBarCopiedAnimation_2sW92 {
-  from {
-    opacity: 1;
-    transform: translate(20px, 0);
-  }
-  40% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translate(20px, -30px);
-  }
-}
 .desktopbrowser_LoadingThrobber_VicgW {
   flex: 1;
   display: flex;
@@ -53765,43 +53723,263 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   min-width: 50vw;
   max-width: 90vw;
 }
-.soundtrackoverlay_Overlay_fMMMD {
-  padding: 12px;
+.steamdesktop_FocusNavigationRoot_27qas {
+  width: 100%;
+  height: 100%;
+}
+.steamdesktop_Wrapper_1ENHE {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-top: none;
+  background-color: #000;
+  box-sizing: border-box;
+  display: flex;
+}
+.steamdesktop_Wrapper_1ENHE .steamdesktop_FocusBar_3pXas {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+  display: none;
+}
+.steamdesktop_Wrapper_1ENHE.WindowFocus .steamdesktop_FocusBar_3pXas,
+.WindowFocus .steamdesktop_Wrapper_1ENHE .steamdesktop_FocusBar_3pXas {
+  display: block;
+  background: linear-gradient(
+    to right,
+    transparent 10%,
+    #1aa0ff53 50%,
+    transparent 90%
+  );
+}
+.steamdesktop_OuterFrame_3mz8w {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4px;
 }
-.soundtrackoverlay_OuterContainer_2qxDr {
-  min-height: 100%;
-  background: radial-gradient(100% 100% at 33% 45%, #313d53 0%, #101314 100%);
-  margin-top: 24px;
-}
-.soundtrackoverlay_ContainerScroll_3zB7s {
-  box-sizing: border-box;
-  overflow: hidden scroll;
-  min-height: 100%;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  padding: 0px 20px 20px 20px;
-  margin-top: 10px;
-}
-.soundtrackoverlay_Details_27zjI {
-  box-sizing: border-box;
-  overflow: hidden scroll;
-  min-height: 100%;
+.steamdesktop_ContentFrame_1rDh5 {
+  overflow: hidden;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding-left: 4px;
-  padding-top: 12px;
 }
-.soundtrackoverlay_Details_27zjI .soundtrackoverlay_Back_1I26U {
+.steamdesktop_SettingsZooButtonContainer_2Vofd {
+  position: fixed;
+  box-sizing: border-box;
+  right: 0;
+  bottom: 0;
+  width: 64px;
+  height: 64px;
+  z-index: 65000;
+  background: linear-gradient(-45deg, black 0%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+}
+.steamdesktop_SettingsZooButton_1eUQw {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  background-image: url(data:image/png;base64,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);
+  background-size: 20px 20px;
+  background-position: 30% 40%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 1px solid #8d3b00;
+  border-radius: 50%;
+  padding: 6px;
+  pointer-events: initial;
+}
+.steamdesktop_SettingsZooButton_1eUQw:hover {
+  filter: brightness(2);
+}
+.steamdesktop_TopBar_3Z7VQ {
+  flex: 0 0 auto;
+  width: 100%;
+  background: #171d25;
+  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px 0px 1px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.steamdesktop_TitleBar_39oUC {
+  width: 100%;
+  height: 32px;
   display: flex;
   flex-direction: row;
+  -webkit-app-region: drag;
+}
+.steamdesktop_TitleBar_39oUC .steamdesktop_RootMenuBar_3s0lk {
+  flex: 0 0 auto;
+  padding-top: 2px;
+}
+.steamdesktop_TitleBar_39oUC .steamdesktop_DragArea_30vB9 {
+  flex: 1 0 auto;
+  -webkit-app-region: drag;
+}
+.steamdesktop_TitleBar_39oUC .steamdesktop_TitleBarControls_1-9si {
+  flex: 0 0 auto;
+}
+.steamdesktop_TitleBar_39oUC .steamdesktop_WindowControls_qP17e {
+  flex: 0 0 99px;
+  position: relative;
+  cursor: pointer;
+}
+.steamdesktop_SuperNavBar_3Z3oh {
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  min-height: 32px;
+  padding: 2px 0px 0px 11px;
+  -webkit-app-region: drag;
+}
+.steamdesktop_LocalContentContainer_RGNMW {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.steamdesktop_LocalContentContainer_RGNMW
+  .steamdesktop_URLBarReplacement_2Cmrn {
+  min-height: 6px;
+  height: 6px;
+  background: #171d25;
+  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 0px 0px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px -1px 0px 0px;
+}
+.steamdesktop_BrowserWrapper_1bGew {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.steamdesktop_BrowserWrapper_1bGew .steamdesktop_URLBar_UkR3s {
+  position: relative;
+  padding: 0px 4px 4px 9px;
+  display: flex;
   align-items: center;
-  padding: 6px;
-  margin: 4px;
-  gap: 4px;
-  width: fit-content;
+  background: #23262e;
+  background: #171d25;
+  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 0px 0px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px -1px 0px 0px;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_StatusIcon_3izqE {
+  height: 18px;
+  color: #67707b;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_LockIcon_3GFlj {
+  height: 16px;
+  padding-bottom: 2px;
+}
+.steamdesktop_BrowserWrapper_1bGew .steamdesktop_URLBar_UkR3s svg {
+  height: 100%;
+  padding-right: 6px;
+  padding-left: 2px;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  svg.steamdesktop_CertError_2T8z7 {
+  color: #de3618;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_ReloadButton_3KaB9 {
+  padding: 2px 0px 2px 4px;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_ReloadButton_3KaB9:hover {
+  cursor: pointer;
+  background: #23262e;
+  border-radius: 16px;
+  color: #b8bcbf;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_URLBarText_2m_or {
+  display: flex;
+  align-items: center;
+  padding: 2px 16px 2px 8px;
+  border-radius: 16px;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_URLBarText_2m_or:hover {
+  cursor: pointer;
+  background: #23262e;
+  border-radius: 16px;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_URLBarText_2m_or:hover
+  .steamdesktop_URL_MZPxE {
+  color: #b8bcbf;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_URLBarText_2m_or:hover
+  .steamdesktop_StatusIcon_3izqE {
+  color: #b8bcbf;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_URLBarText_2m_or
+  .steamdesktop_URL_MZPxE {
+  flex-grow: 1;
+  padding: 0 0px;
+  color: #67707b;
+  font-size: 11px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.steamdesktop_BrowserWrapper_1bGew
+  .steamdesktop_URLBar_UkR3s
+  .steamdesktop_URLBarText_2m_or
+  .steamdesktop_URL_MZPxE.steamdesktop_CertError_2T8z7 {
+  color: #de3618;
+}
+.steamdesktop_BrowserWrapper_1bGew .steamdesktop_Browser_29p1j {
+  flex-grow: 1;
+  width: 100%;
+}
+.steamdesktop_URLBarCopied_3ZGpa {
+  background-color: #1e90ff;
+  color: #fff;
+  font-size: 10px;
+  position: fixed;
+  padding: 2px 4px;
+  border-radius: 4px;
+  animation-name: steamdesktop_URLBarCopiedAnimation_2sW92;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+@keyframes steamdesktop_URLBarCopiedAnimation_2sW92 {
+  from {
+    opacity: 1;
+    transform: translate(20px, 0);
+  }
+  40% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate(20px, -30px);
+  }
+}
+.steamdesktop_InitContainer_2YwTw {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0e141b;
 }
 .broadcastfirsttime_BroadcastFirstTimeDialog_2bRIt {
   padding: 12px 12px;
@@ -53847,6 +54025,44 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-basis: 25%;
   width: fit-content;
   padding: 8px;
+}
+.soundtrackoverlay_Overlay_fMMMD {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.soundtrackoverlay_OuterContainer_2qxDr {
+  min-height: 100%;
+  background: radial-gradient(100% 100% at 33% 45%, #313d53 0%, #101314 100%);
+  margin-top: 24px;
+}
+.soundtrackoverlay_ContainerScroll_3zB7s {
+  box-sizing: border-box;
+  overflow: hidden scroll;
+  min-height: 100%;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  padding: 0px 20px 20px 20px;
+  margin-top: 10px;
+}
+.soundtrackoverlay_Details_27zjI {
+  box-sizing: border-box;
+  overflow: hidden scroll;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4px;
+  padding-top: 12px;
+}
+.soundtrackoverlay_Details_27zjI .soundtrackoverlay_Back_1I26U {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px;
+  margin: 4px;
+  gap: 4px;
+  width: fit-content;
 }
 
 /*# sourceMappingURL=sourcemaps\css\sp.css.map*/

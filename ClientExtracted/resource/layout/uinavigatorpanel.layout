@@ -921,12 +921,12 @@
 		place { control=GamesPage_List		width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=21 start=LibraryAnchor dir=down }
 		place { control=GamesPage_Details 	width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=21 start=LibraryAnchor dir=down }
 		place { control=GamesPage_Grid 		width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=20 start=LibraryAnchor dir=down }
-		place { control=WebPanel 			width=max height=max margin-top=0 margin-left=-7 margin-right=0 margin-bottom=21 start=LibraryAnchor dir=down }
+		place { control=WebPanel 			width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=21 start=LibraryAnchor dir=down }
 		place { control=BroadcastPage			width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=21 start=LibraryAnchor dir=down }
 		place { control=BroadcastPageMin		width=298 height=168 margin-top=0 margin-left=2 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
 		place { control=BroadcastPageMinHoriz	width=298 height=168 margin-top=0 margin-left=2 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
-		place { control=ConsolePage 		width=max height=max margin-top=0 margin-left=-7 margin-right=0 margin-bottom=21 start=LibraryAnchor dir=down }
-		place { control=NewLibraryPage		width=max height=max margin-top=0 margin-left=-6 margin-right=0 margin-bottom=21 start=LibraryAnchor dir=down }
+		place { control=ConsolePage 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=21 start=LibraryAnchor dir=down }
+		place { control=NewLibraryPage		width=max height=max margin-top=0 margin-left=-2 margin-right=-1 margin-bottom=21 start=LibraryAnchor dir=down }
 
 		place { control=MediaPage 		width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=20 start=LibraryAnchor dir=down }
 		place { control=ToolsPage 		width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=20 start=LibraryAnchor dir=down }

@@ -524,6 +524,7 @@
  alcGetError
  alcGetIntegerv
  alphasort$INODE64
+ asinf
  atan
  atan2
  atan2f

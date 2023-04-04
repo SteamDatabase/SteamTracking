@@ -502,8 +502,6 @@ message CMsgSystemManagerSettings {
 	optional bool idle_suspend_supressed = 5;
 	optional bool is_adaptive_brightness_available = 6;
 	optional bool display_adaptive_brightness_enabled = 7;
-	optional bool is_display_colorprofile_available = 8;
-	optional .EColorProfile display_colorprofile = 9 [default = k_EColorProfile_Invalid];
 	optional bool display_nightmode_enabled = 10;
 	optional float display_nightmode_tintstrength = 11;
 	optional float display_nightmode_maxhue = 12;
@@ -523,6 +521,10 @@ message CMsgSystemManagerSettings {
 	optional bool is_wifi_powersave_enabled = 26;
 	optional bool is_fan_control_available = 27;
 	optional .ESystemFanControlMode fan_control_mode = 28 [default = k_SystemFanControlMode_Invalid];
+	optional bool is_display_brightness_available = 29;
+	optional bool is_display_nightmode_blend_available = 30;
+	optional bool is_display_colorgamut_available = 31;
+	optional float display_colorgamut = 32;
 }
 
 message CMsgSelectOSBranchParams {

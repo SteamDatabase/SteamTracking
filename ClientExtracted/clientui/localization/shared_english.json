@@ -1250,6 +1250,7 @@
 	"Login_ConnectingToSteam": "Connecting to Steam",
 	"Login_LoadingAccountInfo": "Loading Account",
 
+	"SteamNotification_HelpRequest_Author": "Steam Support",
 	"SteamNotification_HelpRequest_Title": "A help request is updated",
 	"SteamNotification_HelpRequest_Body": "Ticket %1$s",
 
@@ -2735,6 +2736,10 @@
 	"Notification_GiftReceived_Title": "Gift",
 	"Notification_GiftReceived_Body": "You received a gift!",
 	"Notification_GiftReceived_Description": "From %1$s",
+
+	"NotificationsList_EmptyTitle": "You have no notifications at this time.",
+	"NotificationsList_EmptyTitle_New": "You have no new notifications at this time.",
+	"NotificationsList_EmptyBody": "This is where you'll be able to see Steam notifications regarding your Wishlist, Friends, Games, Inventory, and more.",
 
 	"shared_dummy": "dont translate"
 }

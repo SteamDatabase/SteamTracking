@@ -4298,7 +4298,6 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "Steam_TimedTrial_EndSoon" "Perioada ta de probă se va încheia în curând"
 "Steam_TimedTrial_CloseSoon" "Jocul se va închide în %minutes% minute"
 "Steam_TimedTrial_Over" "Perioada ta de probă s-a încheiat"
-"Steam_TimedTrial_CloseNow" "Jocul se va inchide acum"
 "Steam_TimedTrial_Enjoy" "Bucură-te de perioada ta de probă"
 "Steam_TimedTrial_Offline" "Jocul de probă a pierdut conexiunea"
 "Steam_TimedTrial_Minutes" "Au mai rămas %minutes% minute de joc"

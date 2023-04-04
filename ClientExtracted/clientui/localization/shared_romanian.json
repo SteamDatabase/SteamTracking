@@ -1154,6 +1154,7 @@
 	"Login_Error_MoveAuthenticator_Description": "A apărut o problemă la transferarea autentificatorului tău. Te rugăm să încerci din nou mai târziu.",
 	"Login_ConnectingToSteam": "Se conectează la Steam",
 	"Login_LoadingAccountInfo": "Contul se încarcă",
+	"SteamNotification_HelpRequest_Author": "Asistența Steam",
 	"SteamNotification_HelpRequest_Title": "A fost actualizată o solicitare de asistență",
 	"SteamNotification_HelpRequest_Body": "Tichet: %1$s",
 	"SteamNotification_AsyncGame_Title": "Sesiune de joc",

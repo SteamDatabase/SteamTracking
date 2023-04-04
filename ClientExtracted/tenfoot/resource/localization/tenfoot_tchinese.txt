@@ -4299,7 +4299,7 @@
 	"Broadcast_Notification_Ignore_Request" "忽略" 
 	"Broadcast_Notification_AvailableToWatch_Title" "實況直播功能已開啟！"
 	"Broadcast_Notification_AvailableToWatch_Friends" "您的好友能於任何時間觀看您的實況。"
-	"Broadcast_Notification_AvailableToWatch_Public" "任何 Steam 使用者均能於任何時間觀看您的實況。"
+	"Broadcast_Notification_AvailableToWatch_Public" "任何 Steam 使用者均能隨時加入觀看您的實況。"
 
 	"Broadcast_FirstTime_Title" "Steam 實況直播"
 	"Broadcast_FirstTime_Header" "藉由 Steam 實況直播，您將可以把您的遊戲過程搬上檯面進行實況轉播，或者用此功能觀看其他玩家進行遊戲。"

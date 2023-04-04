@@ -1154,6 +1154,7 @@
     "Login_Error_MoveAuthenticator_Description": "Si è verificato un problema durante il trasferimento del tuo autenticatore. Riprova più tardi.",
     "Login_ConnectingToSteam": "Connessione a Steam",
     "Login_LoadingAccountInfo": "Caricamento dell'account",
+    "SteamNotification_HelpRequest_Author": "Assistenza di Steam",
     "SteamNotification_HelpRequest_Title": "Richiesta di Assistenza aggiornata",
     "SteamNotification_HelpRequest_Body": "Ticket %1$s",
     "SteamNotification_AsyncGame_Title": "Sessione di gioco",
@@ -1815,7 +1816,7 @@
     "Steam_Settings_Compat_Launch_Forced": "selezionato da te per questo titolo.",
     "Steam_Settings_Compat_Launch_Wildcard": "selezionato da te per tutti i titoli.",
     "Steam_Settings_Compat_Launch_Whitelisted": "selezionato dai test di Valve.",
-    "Steam_Settings_Compat_Launch_SteamPlay": "Funziona su questo computer tramite <1>Steam Play.</1>",
+    "Steam_Settings_Compat_Launch_SteamPlay": "Funziona su questo dispositivo tramite <1>Steam Play.</1>",
     "Steam_Settings_Compat_Launch_Tool_Forced": "La tua selezione per questo titolo: %1$s.",
     "Steam_Settings_Compat_Launch_Tool_Whitelisted": "Selezione dopo i test di Valve: %1$s.",
     "SteamAwards_EventMainTitle": "I Premi di Steam",
@@ -2538,5 +2539,8 @@
     "Notification_FriendInvite_Description": "Ti ha inviato una richiesta di amicizia",
     "Notification_GiftReceived_Title": "Dono",
     "Notification_GiftReceived_Body": "Hai ricevuto un dono!",
-    "Notification_GiftReceived_Description": "Da %1$s"
+    "Notification_GiftReceived_Description": "Da %1$s",
+    "NotificationsList_EmptyTitle": "Al momento non hai notifiche.",
+    "NotificationsList_EmptyTitle_New": "Al momento non hai nuove notifiche.",
+    "NotificationsList_EmptyBody": "Qui puoi visualizzare le notifiche di Steam relative alla Lista dei desideri, agli amici, ai giochi, all'inventario e altro ancora."
 }

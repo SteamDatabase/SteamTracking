@@ -836,26 +836,6 @@ message CMsgSetNetFakeLocalSystemState {
 	optional uint32 state = 1;
 }
 
-message CMsgJumpListLink {
-	optional string display_name = 1;
-	optional string url_link = 2;
-	optional string icon_path = 3;
-}
-
-message CMSgJumpListMRUApp {
-	optional uint32 appid = 1;
-	optional string display_name = 2;
-	optional string url_link = 3;
-	optional string icon_path = 4;
-}
-
-message CMsgSetJumpList {
-	optional string steam_path = 1;
-	optional string mru_title = 2;
-	repeated .CMSgJumpListMRUApp apps = 3;
-	repeated .CMsgJumpListLink links = 4;
-}
-
 message CMsgSetGameOverlayTargetPIDs {
 	optional uint32 browser_handle = 1;
 	repeated uint32 target_pid = 2;

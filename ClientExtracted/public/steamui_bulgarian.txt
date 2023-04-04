@@ -1572,12 +1572,16 @@
 "Steam_Working_HardwarePromo" "Регистриране на оферта…"
 "SteamUI_OEMTicketWizard_Title" "Регистрация на OEM лиценз"
 
+"SteamUI_GamesDialog_RightClick_BackupGame" "Резервно копие на игралните файлове…"
+"SteamUI_GamesDialog_RightClick_BackupApplication" "Резервно копие на файловете за приложението…"
 "Steam_BackupRequiresFullCache_Title"	"Steam — Резервно копие"
 "Steam_BackupRequiresFullCache_Info"	"%game% не може да бъде архивирана, докато не приключи обновлението."
 
 "Steam_BackupSelectGames_Info"		"Изберете програмите, които желаете да се включат в това резервно копие.\nСамо програми, които са изцяло свалени и актуални, са достъпни за добавяне към резервно копие."
 "Steam_BackupStartText"			"Какво бихте искали да направите?"
 "Steam_BackupChooseRestore"		"Възстановяване на предишно резервно копие"
+"Steam_BackupChooseBackup"		"Резервно копие на текущите инсталирани програми"
+
 "Steam_BackupWizard_Title"	"Резервно копие и възстановяване на програми"
 "Steam_BackingUpFile"		"Създаване резервно копие на %file%"
 "Steam_TotalBackupProgress"	"Оставащо време:"
@@ -2137,7 +2141,7 @@
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "Това съдържание и обновленията му ще бъдат автоматично придобивани веднага щом са достъпни. Steam ще приоритизира този инструмент спрямо други сваляния."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"Потвърждаване целостта на файловете за приложението…"
-"Steam_Game_VerifyGameFiles$appType=game"				"Потвърждаване целостта на файловете за играта…"
+"Steam_Game_VerifyGameFiles$appType=game"				"Потвърждаване целостта на игралните файлове…"
 "Steam_Game_VerifyGameFiles$appType=demo"				"Потвърждаване целостта на файловете за демото…"
 "Steam_Game_VerifyGameFiles$appType=media"				"Потвърждаване целостта на файловете за медията…"
 "Steam_Game_VerifyGameFiles$appType=music"				"Потвърждаване целостта на файловете…"
@@ -2153,7 +2157,7 @@
 "Steam_DeleteLocalGameContent$appType"          "Деинсталиране на съдържанието…"
 
 "Steam_BackupGameFiles$appType=application"		"Резервно копие на файловете за приложението…"
-"Steam_BackupGameFiles$appType=game"			"Резервно копие на файловете за играта…"
+"Steam_BackupGameFiles$appType=game"			"Резервно копие на игралните файлове…"
 "Steam_BackupGameFiles$appType=demo"			"Резервно копие на файловете за демото…"
 "Steam_BackupGameFiles$appType=media"			"Резервно копие на файловете за медията…"
 "Steam_BackupGameFiles$appType=music"			"Резервно копие на файловете за саундтрака…"

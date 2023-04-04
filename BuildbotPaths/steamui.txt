@@ -58,7 +58,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/singleprocesspipe_any.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/startupmodemanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamid.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamservice.cpp
@@ -273,6 +272,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/shutdowncontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/startupmodemanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamstartuphandlers.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiappcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiappiconcontroller.cpp
@@ -290,10 +290,10 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/subpaneloptionsfamily.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemaudiocontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemdevkitcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/account/tenfootconfirmpassworddialog.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/avatarimage.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/avatarimage.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/broadcast/broadcastchat.cpp
@@ -426,11 +426,11 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayasyncnotification.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaybasepanel.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaybasepanel.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaycontroller.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaycontroller.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayfirsttimebroadcast.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlayfriendsnotifications.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/steamcontrollerhud.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/tenfootoverlaycontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/tenfootoverlaycontroller.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/tenfootoverlaymanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/tenfootoverlaymanager.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../community/community.h
