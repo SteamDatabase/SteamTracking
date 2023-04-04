@@ -1388,7 +1388,7 @@
         );
       }
       function N(e) {
-        if (v.De.EREALM === s.IN.k_ESteamRealmChina) return null;
+        if ((0, v.h4)()) return null;
         let t = M(e.args);
         if (t) {
           let e = t.split(";");
@@ -1413,7 +1413,7 @@
         return n.createElement(n.Fragment, null);
       }
       function U(e) {
-        if (v.De.EREALM === s.IN.k_ESteamRealmChina) return null;
+        if ((0, v.h4)()) return null;
         const t = (0, c.S6)(e);
         return void 0 !== (null == t ? void 0 : t.strVideoID)
           ? n.createElement(u.O, {
@@ -1485,20 +1485,17 @@
         });
       }
       function H(e) {
-        if (
-          v.De.EREALM === s.IN.k_ESteamRealmChina ||
-          "CN" == v.De.COUNTRY.toLocaleUpperCase()
-        )
+        if ((0, v.h4)() || "CN" == v.De.COUNTRY.toLocaleUpperCase())
           return V(e);
         const t = M(e.args, "youtubeid"),
           r = M(e.args, "size"),
           i = M(e.args, "seconds");
         let a = "full" == r ? p.sizeFull : p.sizeThumb,
-          o = "full" == r ? "" : "leftthumb" == r ? p.floatLeft : p.floatRight;
+          s = "full" == r ? "" : "leftthumb" == r ? p.floatLeft : p.floatRight;
         return n.createElement(u.O, {
           videoID: t,
           nStartSeconds: i ? Number.parseInt(i) : void 0,
-          classNameAlign: o,
+          classNameAlign: s,
           classNameSize: a,
           bShowVideoImmediately: !0,
         });
@@ -29860,16 +29857,15 @@
     },
     59649: (e, t, r) => {
       "use strict";
-      r.d(t, { Ar: () => _, Gf: () => i, RC: () => B });
+      r.d(t, { Ar: () => h, Gf: () => i, RC: () => b });
       var i,
         n = r(33940),
         a = r(50265),
-        s = (r(6960), r(38800)),
-        o = r(81319),
-        l = r(32338),
-        c = r(70983),
-        d = r(10717),
-        m = r(73265);
+        s = (r(6960), r(38800), r(81319)),
+        o = r(32338),
+        l = r(70983),
+        c = r(10717),
+        d = r(73265);
       !(function (e) {
         (e.k_ERecent = "recent"),
           (e.k_ELibrary = "library"),
@@ -29880,7 +29876,7 @@
           (e.k_EFeatured = "featured"),
           (e.k_ECurator = "curator");
       })(i || (i = {}));
-      const u = [
+      const m = [
           i.k_ELibrary,
           i.k_EWishlist,
           i.k_EFollowing,
@@ -29888,9 +29884,9 @@
           i.k_ESteam,
           i.k_ECurator,
         ],
-        p = [...u, i.k_EFeatured],
-        h = [i.k_EFeatured];
-      var _;
+        u = [...m, i.k_EFeatured],
+        p = [i.k_EFeatured];
+      var h;
       !(function (e) {
         (e.k_ENews = "news"),
           (e.k_EEvents = "events"),
@@ -29898,27 +29894,27 @@
           (e.k_EUpdates = "updates"),
           (e.k_EReleases = "releases"),
           (e.k_ESales = "sales");
-      })(_ || (_ = {}));
-      const g = [
-          _.k_ENews,
-          _.k_EEvents,
-          _.k_EStreaming,
-          _.k_EUpdates,
-          _.k_EReleases,
-          _.k_ESales,
+      })(h || (h = {}));
+      const _ = [
+          h.k_ENews,
+          h.k_EEvents,
+          h.k_EStreaming,
+          h.k_EUpdates,
+          h.k_EReleases,
+          h.k_ESales,
         ],
-        f = new Map([
-          [_.k_ENews, [28]],
-          [_.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
-          [_.k_EStreaming, [11]],
-          [_.k_EUpdates, [12, 13, 14]],
-          [_.k_EReleases, [10, 29, 16, 15, 32]],
-          [_.k_ESales, [20, 21, 31, 34]],
+        g = new Map([
+          [h.k_ENews, [28]],
+          [h.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
+          [h.k_EStreaming, [11]],
+          [h.k_EUpdates, [12, 13, 14]],
+          [h.k_EReleases, [10, 29, 16, 15, 32]],
+          [h.k_ESales, [20, 21, 31, 34]],
         ]);
-      function b(e) {
+      function f(e) {
         return new Map(e.map((e) => [e, !0]));
       }
-      class B {
+      class b {
         constructor(e) {
           (this.m_mapEventTypeGroupsAllowed = new Map()),
             (this.m_mapGameSources = new Map()),
@@ -29951,23 +29947,23 @@
         get enabledEventTypeSet() {
           const e = new Set();
           for (const t of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
-            f.get(t).forEach((t) => e.add(t));
+            g.get(t).forEach((t) => e.add(t));
           return e;
         }
         MapClanEventTypeToGroup(e) {
           let t = null;
           return (
-            f.forEach((r, i) => {
+            g.forEach((r, i) => {
               -1 !== r.indexOf(e) && (t = i);
             }),
-            t || _.k_EEvents
+            t || h.k_EEvents
           );
         }
         InitDefaultCheckboxes(e, t, r) {
           (this.m_bInitializedForUpdatesOnly = t),
-            (this.m_mapEventTypeGroupsAllowed = b(t ? [_.k_EUpdates] : g));
-          const n = c.De.EREALM === s.IN.k_ESteamRealmChina ? p : u;
-          (this.m_mapGameSources = b(e ? n : h)),
+            (this.m_mapEventTypeGroupsAllowed = f(t ? [h.k_EUpdates] : _));
+          const n = (0, l.h4)() ? u : m;
+          (this.m_mapGameSources = f(e ? n : p)),
             r && this.m_mapGameSources.set(i.k_EFeatured, !0);
         }
         Init(e, t, r, i, n) {
@@ -29979,8 +29975,8 @@
             if (e.rgEventTypeGroupsAllowed && e.rgGameSources) {
               const { rgEventTypeGroupsAllowed: t, rgGameSources: r } = e;
               return (
-                (this.m_mapEventTypeGroupsAllowed = b(t)),
-                (this.m_mapGameSources = b(r)),
+                (this.m_mapEventTypeGroupsAllowed = f(t)),
+                (this.m_mapGameSources = f(r)),
                 void (
                   void 0 !== e.bCuratorUnhideOnFollowDismissed &&
                   (this.m_bCuratorUnhideOnFollowDialogDismissed =
@@ -30016,8 +30012,8 @@
         }
         BIsGameSourceAllowed(e) {
           return (
-            !(e === i.k_EFollowing && !m.JW.bIsFollowingEnabled) &&
-            !(e === i.k_ECurator && !m.JW.bIsCuratorsEnabled) &&
+            !(e === i.k_EFollowing && !d.JW.bIsFollowingEnabled) &&
+            !(e === i.k_ECurator && !d.JW.bIsCuratorsEnabled) &&
             this.m_mapGameSources.has(e)
           );
         }
@@ -30026,7 +30022,7 @@
             ? this.m_mapEventTypeGroupsAllowed.set(e, !0)
             : this.m_mapEventTypeGroupsAllowed.delete(e),
             this.SaveFilterPreferences(),
-            d.Y.RecordFilterChangeEvent(this);
+            c.Y.RecordFilterChangeEvent(this);
         }
         SetGameSourceAllowed(e, t) {
           t
@@ -30034,7 +30030,7 @@
               e == i.k_ERecent
                 ? this.m_mapGameSources.delete(i.k_ELibrary)
                 : e == i.k_ELibrary &&
-                  ((0, l.X)(
+                  ((0, o.X)(
                     !this.m_mapGameSources.has(i.k_ERecent),
                     "Setting Library although Recent already set - illusion was broken"
                   ),
@@ -30045,42 +30041,42 @@
                 : e == i.k_ELibrary &&
                   this.m_mapGameSources.delete(i.k_ERecent)),
             this.SaveFilterPreferences(),
-            d.Y.RecordFilterChangeEvent(this);
+            c.Y.RecordFilterChangeEvent(this);
         }
         BShouldDisplayEvent(e) {
           const t = e.GetSource(),
             r = Boolean(
               e.appInfo &&
                 e.appInfo.last_played &&
-                e.appInfo.last_played + 15552e3 >= m.JW.GetTimeNowWithOverride()
+                e.appInfo.last_played + 15552e3 >= d.JW.GetTimeNowWithOverride()
             );
           return (
             !!(
               this.enabledEventTypeSet.has(e.event_type) ||
               (this.m_bInitializedForUpdatesOnly &&
-                this.BIsEventTypeGroupAllowed(_.k_EUpdates) &&
+                this.BIsEventTypeGroupAllowed(h.k_EUpdates) &&
                 28 == e.event_type &&
                 e.start_time < 1599202800)
             ) &&
             !this.m_mapHiddenApps.has(e.appid) &&
             !this.m_mapHiddenClans.has(e.clanid) &&
-            (!!(t & o.ZT.k_eRequired || t & o.ZT.k_eReposted) ||
+            (!!(t & s.ZT.k_eRequired || t & s.ZT.k_eReposted) ||
               Boolean(
                 (this.BIsGameSourceAllowed(i.k_ERecent) && r) ||
                   (this.BIsGameSourceAllowed(i.k_ELibrary) &&
-                    t & o.ZT.k_eLibrary) ||
+                    t & s.ZT.k_eLibrary) ||
                   (this.BIsGameSourceAllowed(i.k_EWishlist) &&
-                    t & o.ZT.k_eWishlist) ||
+                    t & s.ZT.k_eWishlist) ||
                   (this.BIsGameSourceAllowed(i.k_EFollowing) &&
-                    t & o.ZT.k_eFollowing) ||
+                    t & s.ZT.k_eFollowing) ||
                   (this.BIsGameSourceAllowed(i.k_ERecommended) &&
-                    t & o.ZT.k_eRecommended) ||
+                    t & s.ZT.k_eRecommended) ||
                   (this.BIsGameSourceAllowed(i.k_ESteam) &&
-                    t & o.ZT.k_eSteam) ||
+                    t & s.ZT.k_eSteam) ||
                   (this.BIsGameSourceAllowed(i.k_EFeatured) &&
-                    t & o.ZT.k_eFeatured) ||
+                    t & s.ZT.k_eFeatured) ||
                   (this.BIsGameSourceAllowed(i.k_ECurator) &&
-                    t & o.ZT.k_eCurator)
+                    t & s.ZT.k_eCurator)
               ))
           );
         }
@@ -30091,10 +30087,10 @@
           );
         }
         BAreAnyEventsFiltered(e) {
-          const t = c.De.EREALM === s.IN.k_ESteamRealmChina ? p : u;
+          const t = (0, l.h4)() ? u : m;
           return (
-            (e ? t : h).some((e) => !this.BIsGameSourceAllowed(e)) ||
-            g.some((e) => !this.BIsEventTypeGroupAllowed(e))
+            (e ? t : p).some((e) => !this.BIsGameSourceAllowed(e)) ||
+            _.some((e) => !this.BIsEventTypeGroupAllowed(e))
           );
         }
         BIsClanVisible(e) {
@@ -30114,24 +30110,24 @@
             : this.m_mapHiddenApps.has(e) || this.m_mapHiddenApps.set(e, !0);
         }
       }
-      (0, n.gn)([a.LO], B.prototype, "m_mapEventTypeGroupsAllowed", void 0),
-        (0, n.gn)([a.LO], B.prototype, "m_mapGameSources", void 0),
+      (0, n.gn)([a.LO], b.prototype, "m_mapEventTypeGroupsAllowed", void 0),
+        (0, n.gn)([a.LO], b.prototype, "m_mapGameSources", void 0),
         (0, n.gn)(
           [a.LO],
-          B.prototype,
+          b.prototype,
           "m_bCuratorUnhideOnFollowDialogDismissed",
           void 0
         ),
-        (0, n.gn)([a.LO], B.prototype, "m_mapHiddenApps", void 0),
-        (0, n.gn)([a.LO], B.prototype, "m_mapHiddenClans", void 0),
+        (0, n.gn)([a.LO], b.prototype, "m_mapHiddenApps", void 0),
+        (0, n.gn)([a.LO], b.prototype, "m_mapHiddenClans", void 0),
         (0, n.gn)(
           [(0, a.Fl)({ keepAlive: !0, equals: a.p6.structural })],
-          B.prototype,
+          b.prototype,
           "enabledEventTypeSet",
           null
         ),
-        (0, n.gn)([a.aD], B.prototype, "SetEventTypeGroupAllowed", null),
-        (0, n.gn)([a.aD], B.prototype, "SetGameSourceAllowed", null);
+        (0, n.gn)([a.aD], b.prototype, "SetEventTypeGroupAllowed", null),
+        (0, n.gn)([a.aD], b.prototype, "SetGameSourceAllowed", null);
     },
     83983: (e, t, r) => {
       "use strict";
@@ -43414,7 +43410,7 @@
           b = t.rgVideoTracks
             ? t.rgVideoTracks.map((e) => {
                 let r = e.eLanguage;
-                if (c.De.EREALM === s.IN.k_ESteamRealmChina)
+                if ((0, c.h4)())
                   if (o.LJ.IsELanguageValidInRealm(r, s.IN.k_ESteamRealmChina))
                     r = o.LJ.GetELanguageFallback(r);
                   else {

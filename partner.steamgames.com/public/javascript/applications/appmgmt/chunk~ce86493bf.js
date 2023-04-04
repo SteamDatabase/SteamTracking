@@ -3263,6 +3263,11 @@
                     br: s.FE.readUint32,
                     bw: s.Xc.writeUint32,
                   },
+                  internal_name: {
+                    n: 57,
+                    br: s.FE.readString,
+                    bw: s.Xc.writeString,
+                  },
                 },
               }),
             o.sm_m
@@ -4161,6 +4166,12 @@
                     br: s.FE.readBool,
                     bw: s.Xc.writeBool,
                   },
+                  hide_discount_pct_for_compliance: {
+                    n: 42,
+                    d: !1,
+                    br: s.FE.readBool,
+                    bw: s.Xc.writeBool,
+                  },
                 },
               }),
             w.sm_m
@@ -4875,6 +4886,11 @@
                     br: s.FE.readUint32,
                     bw: s.Xc.writeUint32,
                   },
+                  hubcategoryid: {
+                    n: 6,
+                    br: s.FE.readUint32,
+                    bw: s.Xc.writeUint32,
+                  },
                 },
               }),
             E.sm_m
@@ -5524,6 +5540,7 @@
               null === (s = e.free_weekend()) || void 0 === s
                 ? void 0
                 : s.toObject()),
+            (this.m_strInternalName = e.internal_name()),
             this.MergeData(e, r);
         }
         MergeData(e, r) {
@@ -6181,6 +6198,9 @@
         }
         ReplaceBestPurchaseOption(e) {
           this.m_BestPurchaseOption = e;
+        }
+        GetInternalName() {
+          return this.m_strInternalName;
         }
       }
       function d(e) {

@@ -2763,7 +2763,7 @@
           );
         if (!f.bHaveLastCreds)
           return n.createElement(Je, null, n.createElement("div", null));
-        const b = u.De.EREALM !== D.IN.k_ESteamRealmChina;
+        const b = !(0, u.h4)();
         if (!f.bInPasswordFlow) {
           const r = n.createElement(
             "div",

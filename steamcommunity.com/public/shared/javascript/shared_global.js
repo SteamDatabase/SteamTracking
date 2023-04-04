@@ -1065,7 +1065,8 @@ function InitCookiePreferencesPopup()
 	}
 }
 
-function InitMiniprofileHovers()
+// The /miniprofile/ is cacheable. We need to specify the origin URL of the request to avoid CORS see cl 5773210
+function InitMiniprofileHovers( origin )
 {
 	var $Hover = $J('<div/>', {'class': 'miniprofile_hover'} );
 	var $HoverContent = $J('<div/>', {'class': 'miniprofile_hover_inner shadow_content'} );
@@ -1082,14 +1083,30 @@ function InitMiniprofileHovers()
 		if ( rgKey[1] )
         {
 			strURL += '?appid=' + rgKey[1];
+
+			if( origin )
+			{
+				strURL += '&origin=' + origin;
+			}
         }
+		else if( origin )
+		{
+			strURL += '?origin=' + origin;
+		}
 
 		return new CDelayedAJAXData( strURL, MINIPROFILE_DELAY_BEFORE_AJAX );
 	};
 
 	var fnReadKey = function ( $Target ) {
 		var appid = $Target.parents('[data-miniprofile-appid]').first().data('miniprofile-appid');
-		return $Target.data('miniprofile') + '_' + appid;
+		if( appid  )
+		{
+			return $Target.data('miniprofile') + '_' + appid;
+		}
+		else
+		{
+			return $Target.data('miniprofile')
+		}
 	};
 
 	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, {
@@ -5112,5 +5129,11 @@ function InitializeGPFocusRestoreTimeout( bUseWindowOnload = true )
 
 	if ( bUseWindowOnload )
 		window.addEventListener( "load", function(){ SetGPFocusRestoreTimeout(); } );
+}
+
+function HandleOverlayWindowPinnedView( bPinned, bShowPinnedView )
+{
+	$J( 'body' ).toggleClass( 'OverlayWindowPinned', bPinned );
+	$J( 'body' ).toggleClass( 'OverlayWindowPinnedView', bShowPinnedView );
 }
 

@@ -1581,3 +1581,7 @@ h3.apphub_responsive_menu_title {
 	margin-right: 10px;
 	max-width: 26px;
 }
+
+html.responsive body.OverlayWindowPinned div.apphub_HomeHeaderContent {
+	display: none;
+}

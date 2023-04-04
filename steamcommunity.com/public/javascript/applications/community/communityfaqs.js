@@ -9715,7 +9715,7 @@
                 )
               )
             ),
-            !(0, Le.e7)(m.De.EREALM) &&
+            !(0, m.h4)() &&
               n.createElement(
                 "div",
                 { className: (0, y.Z)(yt.Section, yt.CommunityHelp) },

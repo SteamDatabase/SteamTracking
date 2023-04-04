@@ -3515,9 +3515,7 @@
             )
           ),
         yt = (e) =>
-          N.De.EREALM === p.IN.k_ESteamRealmChina
-            ? r.createElement(ft, null)
-            : r.createElement(It, null);
+          (0, N.h4)() ? r.createElement(ft, null) : r.createElement(It, null);
       class wt {
         constructor() {
           (this.m_curDisplay = "desktop_navigation"),
@@ -4429,7 +4427,7 @@
           let a = [];
           const l = n.GetSource(),
             o = n.unique_id,
-            s = N.De.EREALM === p.IN.k_ESteamRealmChina,
+            s = (0, N.h4)(),
             i = (0, Re.vY)();
           if (
             (i.BIsGlobalCalendar() &&
@@ -5106,7 +5104,7 @@
                 : $t().Vote_NotLoggedIn;
             })(e, a),
             o = t.GetForumTopicURL(),
-            s = N.De.EREALM !== p.IN.k_ESteamRealmChina && o,
+            s = !(0, N.h4)() && o,
             i =
               t.live_stream_viewer_count > 0
                 ? t.live_stream_viewer_count
@@ -5638,7 +5636,7 @@
               })()
             );
           if (n) return null;
-          if (N.De.EREALM === p.IN.k_ESteamRealmChina) return null;
+          if ((0, N.h4)()) return null;
           const l = N.De.STORE_BASE_URL + "account/languagepreferences/";
           return r.createElement(
             "div",

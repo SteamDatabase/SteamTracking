@@ -4917,10 +4917,23 @@ html.responsive.touch
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r.adminshared_Bright_1Sq2a {
+  background: linear-gradient(127deg, #474c5c, #32363e, #363944);
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
   .adminshared_SectionCtn_3la4r
   .adminshared_SectionIntroText_2BLTK {
-  font-size: 20px;
+  font-size: 21px;
+  font-weight: 500;
   margin-bottom: 6px;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_LeftCol_1neFt
+  .adminshared_SectionCtn_3la4r
+  .adminshared_SectionIntroRequirements_2wFwI {
+  font-size: 15px;
+  line-height: 23px;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt

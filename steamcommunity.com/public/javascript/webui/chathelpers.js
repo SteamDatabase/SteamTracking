@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7954876";
+var CLSTAMP = "7970670";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7954876";
     n,
     o,
     i = {
-      78014: (e, t, r) => {
+      9349: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,206 +62,12 @@ var CLSTAMP = "7954876";
         }
         Object.create;
         Object.create;
-        r(70186);
+        r(84931);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
-        function _(e) {
-          if (!l() || !window.document.cookie) return null;
-          let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
-          return t && t[2] ? decodeURIComponent(t[2]) : null;
-        }
-        function l() {
-          return !!window.document;
-        }
-        const c = "webui_config";
-        let d;
-        function u() {
-          let e = (function () {
-            let e = "";
-            for (let n = 0; n < 24; n++)
-              e += ((t = 0),
-              (r = 35),
-              (t = Math.ceil(t)),
-              (r = Math.floor(r)),
-              Math.floor(Math.random() * (r - t + 1)) + t).toString(36);
-            var t, r;
-            return e;
-          })();
-          return (
-            (function (e, t, r, n) {
-              if (!l()) return;
-              n || (n = "/");
-              let o = "";
-              if (void 0 !== r && r) {
-                let e = new Date();
-                e.setTime(e.getTime() + 864e5 * r),
-                  (o = "; expires=" + e.toUTCString());
-              }
-              document.cookie =
-                encodeURIComponent(e) +
-                "=" +
-                encodeURIComponent(t) +
-                o +
-                ";path=" +
-                n;
-            })("sessionid", e, 0),
-            e
-          );
-        }
-        function m(e = c) {
-          const t = {},
-            r = p("config", e);
-          r && (delete r.SESSIONID, Object.assign(h, r), (t.config = !0));
-          const n = p("userinfo", e);
-          n &&
-            (Object.assign(C, n),
-            (t.userConfig = !0),
-            C.is_support &&
-              (function () {
-                let e = null;
-                l() && (e = _(E));
-                return Boolean(e && 1 === Number.parseInt(e));
-              })() &&
-              (C.is_support = !1));
-          const o = p("broadcast", e);
-          o && (Object.assign(R, o), (t.broadcastConfig = !0));
-          const i = p("community", e);
-          i && (Object.assign(f, i), (t.communityConfig = !0));
-          const a = p("event", e);
-          return a && (Object.assign(S, a), (t.eventConfig = !0)), t;
-        }
-        function p(e, t = c) {
-          return I(e, t, !0);
-        }
-        function I(e, t = c, r) {
-          let n;
-          if (
-            ((n =
-              "string" == typeof t
-                ? !{
-                    NODE_ENV: "production",
-                    STEAM_BUILD: "buildbot",
-                    VALVE_BUILD: "false",
-                  }.MOBILE_BUILD && document.getElementById(t)
-                : t),
-            n)
-          )
-            try {
-              if (n.hasAttribute("data-" + e)) {
-                return JSON.parse(n.getAttribute("data-" + e));
-              }
-              return null;
-            } catch (e) {
-              console.error("Failed to parse config", e);
-            }
-          else r && console.error("Missing config element #", t);
-        }
-        const E = "presentation_mode";
-        const h = {
-            EUNIVERSE: 0,
-            WEB_UNIVERSE: "",
-            LANGUAGE: "english",
-            SUPPORTED_LANGUAGES: [],
-            COUNTRY: "",
-            AVATAR_BASE_URL: "",
-            MEDIA_CDN_COMMUNITY_URL: "",
-            MEDIA_CDN_URL: "",
-            COMMUNITY_CDN_URL: "",
-            COMMUNITY_CDN_ASSET_URL: "",
-            BASE_URL_SHARED_CDN: "",
-            STORE_CDN_URL: "",
-            PUBLIC_SHARED_URL: "",
-            COMMUNITY_BASE_URL: "",
-            CHAT_BASE_URL: "",
-            STORE_BASE_URL: "",
-            STORE_CHECKOUT_BASE_URL: "",
-            LOGIN_BASE_URL: "",
-            SUPPORT_BASE_URL: "",
-            STORE_ICON_BASE_URL: "",
-            IMG_URL: "",
-            STEAMTV_BASE_URL: "",
-            HELP_BASE_URL: "",
-            PARTNER_BASE_URL: "",
-            STATS_BASE_URL: "",
-            INTERNAL_STATS_BASE_URL: "",
-            BASE_URL_STORE_CDN_ASSETS: "",
-            IN_CLIENT: !1,
-            USE_POPUPS: !1,
-            IN_MOBILE: !1,
-            IN_MOBILE_WEBVIEW: !1,
-            IN_TENFOOT: !1,
-            PLATFORM: "",
-            SNR: "",
-            LAUNCHER_TYPE: 0,
-            EREALM: 0,
-            IN_CHROMEOS: !1,
-            TESLA: !1,
-            LOCAL_HOSTNAME: "",
-            WEBAPI_BASE_URL: "",
-            TOKEN_URL: "",
-            BUILD_TIMESTAMP: 0,
-            PAGE_TIMESTAMP: 0,
-            FROM_WEB: !1,
-            WEBSITE_ID: "Unknown",
-            get SESSIONID() {
-              return (function () {
-                if (!l()) return d || (d = u()), d;
-                let e = _("sessionid");
-                return e || (e = u()), e;
-              })();
-            },
-            FRIENDSUI_BETA: !1,
-            STEAM_TV: !1,
-            DEV_MODE: !1,
-            IN_STEAMUI: !1,
-            IN_GAMEPADUI: !1,
-            IN_STEAMUI_SHARED_CONTEXT: !1,
-            DECK_DISPLAY_MODE: !1,
-            ON_DECK: !1,
-            ON_STEAMOS: !1,
-            IN_GAMESCOPE: !1,
-            IN_LOGIN: !1,
-            IN_LOGIN_REFRESH: !1,
-            USE_LONGEST_LOC_STRING: !1,
-          },
-          C = {
-            logged_in: !1,
-            steamid: "",
-            accountid: 0,
-            account_name: "",
-            token: void 0,
-            token_use_id: void 0,
-            webapi_token: "",
-            authwgtoken: "",
-            is_support: !1,
-            is_limited: !1,
-            is_partner_member: !1,
-            short_url: "",
-            country_code: "",
-          },
-          R = { steamid: "", clanid: 0, listid: 0 },
-          f = {
-            CLANSTEAMID: "",
-            CLANACCOUNTID: 0,
-            APPID: 0,
-            VANITY_ID: "",
-            IS_CREATOR_HOME: !1,
-            IS_CURATOR: !1,
-            IS_OGG: !1,
-            CAN_UPLOAD_IMAGES: !1,
-            APP_NAME: "",
-            HEADER_IMAGE: "",
-            HAS_ADULT_CONTENT: !1,
-            HAS_ADULT_CONTENT_SEX: !1,
-            HAS_ADULT_CONTENT_VIOLENCE: !1,
-            IS_VALVE_GROUP: !1,
-            IS_ALLOWED_SC: !1,
-          },
-          S = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-        a().createContext({});
-        const k = 2147483647;
-        function g(e, t = 0) {
+        const _ = 2147483647;
+        function l(e, t = 0) {
           switch (e) {
             case "english":
               return 0;
@@ -328,7 +134,7 @@ var CLSTAMP = "7954876";
               return t;
           }
         }
-        var V, v, y, T, b, D, F, A, N, L, M, P, O, B;
+        var c, d, u, m, p, I, E, h, C, R, f, S, k, g;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -344,7 +150,7 @@ var CLSTAMP = "7954876";
               "k_EConnectivityTestResult_WifiDisabled"),
             (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
               "k_EConnectivityTestResult_NoLAN");
-        })(V || (V = {})),
+        })(c || (c = {})),
           (function (e) {
             (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
               "k_ENetFakeLocalSystemState_Normal"),
@@ -358,7 +164,7 @@ var CLSTAMP = "7954876";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(v || (v = {})),
+          })(d || (d = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -372,7 +178,7 @@ var CLSTAMP = "7954876";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(y || (y = {})),
+          })(u || (u = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -382,7 +188,7 @@ var CLSTAMP = "7954876";
                 "k_EFloatingGamepadTextInputModeModeEmail"),
               (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
                 "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(T || (T = {})),
+          })(m || (m = {})),
           (function (e) {
             (e[(e.k_EAppUpdateContentType_Content = 0)] =
               "k_EAppUpdateContentType_Content"),
@@ -392,7 +198,7 @@ var CLSTAMP = "7954876";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(b || (b = {})),
+          })(p || (p = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -400,13 +206,13 @@ var CLSTAMP = "7954876";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(D || (D = {})),
+          })(I || (I = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(F || (F = {})),
+          })(E || (E = {})),
           (function (e) {
             (e[(e.k_EGamingDeviceType_Unknown = 0)] =
               "k_EGamingDeviceType_Unknown"),
@@ -424,13 +230,13 @@ var CLSTAMP = "7954876";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(A || (A = {})),
+          })(h || (h = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(N || (N = {})),
+          })(C || (C = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -456,7 +262,7 @@ var CLSTAMP = "7954876";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(L || (L = {})),
+          })(R || (R = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -464,14 +270,14 @@ var CLSTAMP = "7954876";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(M || (M = {})),
+          })(f || (f = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(P || (P = {})),
+          })(S || (S = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -485,7 +291,7 @@ var CLSTAMP = "7954876";
                 "k_EAppReleaseState_Released"),
               (e[(e.k_EAppReleaseState_Disabled = 5)] =
                 "k_EAppReleaseState_Disabled");
-          })(O || (O = {})),
+          })(k || (k = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -519,211 +325,11 @@ var CLSTAMP = "7954876";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })(B || (B = {}));
-        let U = { success: !0, result: 1 };
-        class w {
-          constructor() {
-            (this.m_connection = new j()),
-              (this.m_bAllowAccountMismatch = !1),
-              (this.m_mapCacheSubscribedApp = new Map());
-          }
-          FailureResult(e = 2) {
-            let t = { success: !1, result: e };
-            return (
-              this.m_connection &&
-                !this.m_connection.browser_supported &&
-                (t.browser_unsupported = !0),
-              this.m_connection &&
-                !this.m_connection.connected_to_client &&
-                (t.connect_failed = !0),
-              7 == e && (t.call_unsupported = !0),
-              t
-            );
-          }
-          SetAllowAccountMismatch(e) {
-            this.m_bAllowAccountMismatch = e;
-          }
-          BClientConnected() {
-            return this.m_connection.Connect().then(
-              () => U,
-              () => this.FailureResult()
-            );
-          }
-          BClientSupportsMessage(e) {
-            return (
-              !(
-                !this.m_connection.connected_to_client ||
-                !this.m_connection.ready
-              ) &&
-              -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
-            );
-          }
-          OpenFriendChatDialog(e) {
-            let t = { message: "ShowFriendChatDialog", steamid: e };
-            return this.GenericEResultCall(t);
-          }
-          OpenChatRoomGroupDialog(e, t) {
-            let r = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
-            return t && (r.chat_room_id = t), this.GenericEResultCall(r);
-          }
-          ShowChatRoomGroupInvite(e) {
-            let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
-            return this.GenericEResultCall(t);
-          }
-          BIsSubscribedApp(e) {
-            if (this.m_mapCacheSubscribedApp.has(e))
-              return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
-            let t = { message: "IsSubscribedApp", appid: e };
-            return this.GenericEResultCall(t).then((t) => {
-              if (t.connect_failed) return;
-              let r = 1 == t.result;
-              return this.m_mapCacheSubscribedApp.set(e, r), r;
-            });
-          }
-          OpenFriendsDialog() {
-            return this.GenericEResultCall({ message: "OpenFriendsDialog" });
-          }
-          BClientAccountMatches() {
-            return (
-              !C.logged_in ||
-              C.accountid == this.m_connection.ClientInfo.unAccountID
-            );
-          }
-          GenericEResultCall(e) {
-            return this.m_connection
-              .Connect()
-              .then(() =>
-                this.m_bAllowAccountMismatch || this.BClientAccountMatches()
-                  ? this.m_connection
-                      .SendMsgAndAwaitResponse(e)
-                      .then((e) =>
-                        1 === e.success ? U : this.FailureResult(e.success)
-                      )
-                  : { success: !1, result: 19, account_mismatch: !0 }
-              )
-              .catch(() => this.FailureResult());
-          }
-        }
-        class j {
-          constructor() {
-            (this.m_mapWaitingCallbacks = new Map()),
-              (this.m_iCallSeq = 1),
-              (this.m_bReady = !1),
-              (this.m_bClientConnectionFailed = !1),
-              (this.m_bSecurityException = !1),
-              (this.m_ClientInfo = {
-                ulVersion: "",
-                bFriendsUIEnabled: !1,
-                unAccountID: 0,
-                rgSupportedMessages: [],
-              });
-          }
-          get ClientInfo() {
-            return this.m_ClientInfo;
-          }
-          get ready() {
-            return this.m_bReady;
-          }
-          get browser_supported() {
-            return !this.m_bSecurityException;
-          }
-          get connected_to_client() {
-            return this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
-          }
-          SendMsgAndAwaitResponse(e) {
-            return new Promise((t, r) => {
-              let n = this.m_iCallSeq++;
-              this.BSendMsg(e, n)
-                ? this.m_mapWaitingCallbacks.set(n, {
-                    iSeq: n,
-                    fnCallback: t,
-                    fnError: r,
-                  })
-                : r();
-            });
-          }
-          BSendMsg(e, t) {
-            if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
-              return !1;
-            let r = Object.assign({}, e, {
-              universe: h.EUNIVERSE,
-              accountid: C.accountid,
-            });
-            void 0 !== t && (r.sequenceid = t);
-            try {
-              return this.m_socket.send(JSON.stringify(r)), !0;
-            } catch (e) {
-              return !1;
-            }
-          }
-          OnSocketMessage(e) {
-            try {
-              let t = JSON.parse(e.data);
-              if (t.sequenceid) {
-                let e = this.m_mapWaitingCallbacks.get(t.sequenceid);
-                if (e)
-                  return (
-                    this.m_mapWaitingCallbacks.delete(t.sequenceid),
-                    void e.fnCallback(t)
-                  );
-              }
-            } catch (e) {
-              console.error("exception parsing response", e);
-            }
-          }
-          Connect() {
-            if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
-              return Promise.resolve();
-            if (this.m_promiseConnect) return this.m_promiseConnect;
-            let e = new Promise((e, t) => {
-              try {
-                this.m_socket = new WebSocket(
-                  "ws://127.0.0.1:27060/clientsocket/"
-                );
-              } catch (e) {
-                return (this.m_bSecurityException = !0), void t(e);
-              }
-              (this.m_socket.onerror = (e) => {
-                t();
-              }),
-                (this.m_socket.onmessage = this.OnSocketMessage.bind(this)),
-                (this.m_socket.onopen = () => {
-                  this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
-                    .then((r) => {
-                      1 == r.success
-                        ? ((this.m_ClientInfo.ulVersion = r.clientversion),
-                          (this.m_ClientInfo.bFriendsUIEnabled = !!r.friendsui),
-                          (this.m_ClientInfo.unAccountID = r.accountid),
-                          r.supported_messages &&
-                            (this.m_ClientInfo.rgSupportedMessages =
-                              r.supported_messages),
-                          e())
-                        : t();
-                    })
-                    .catch(t);
-                });
-            });
-            return (
-              (this.m_promiseConnect = e),
-              this.m_promiseConnect
-                .then(() => {
-                  (this.m_bReady = !0), (this.m_promiseConnect = void 0);
-                })
-                .catch(() => {
-                  (this.m_bClientConnectionFailed = !0),
-                    (this.m_promiseConnect = void 0);
-                }),
-              this.m_promiseConnect
-            );
-          }
-        }
-        let G = new w();
-        window.ClientConnectionAPI = G;
-        r(9669);
-        var x, W, H;
+          })(g || (g = {}));
+        var V, v, y;
         !(function (e) {
           (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-        })(x || (x = {})),
+        })(V || (V = {})),
           (function (e) {
             (e[(e.Input = 0)] = "Input"),
               (e[(e.AllOutput = 1)] = "AllOutput"),
@@ -732,13 +338,13 @@ var CLSTAMP = "7954876";
               (e[(e.Sub = 4)] = "Sub"),
               (e[(e.BackLeft = 5)] = "BackLeft"),
               (e[(e.BackRight = 6)] = "BackRight");
-          })(W || (W = {}));
+          })(v || (v = {}));
         !(function (e) {
           (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
             (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-        })(H || (H = {}));
-        var z;
+        })(y || (y = {}));
+        var T;
         !(function (e) {
           (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
             "k_BluetoothDeviceType_Invalid"),
@@ -764,8 +370,8 @@ var CLSTAMP = "7954876";
               "k_BluetoothDeviceType_Gamepad"),
             (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
               "k_BluetoothDeviceType_Keyboard");
-        })(z || (z = {}));
-        var q, K, $, X;
+        })(T || (T = {}));
+        var b, D, F, A;
         !(function (e) {
           (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
             (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -793,18 +399,18 @@ var CLSTAMP = "7954876";
               "EBrowserType_Offscreen_SteamUI"),
             (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
               "EBrowserType_OpenVROverlay_Subview");
-        })(q || (q = {})),
+        })(b || (b = {})),
           (function (e) {
             (e[(e.SystemKey0 = 0)] = "SystemKey0"),
               (e[(e.SystemKey1 = 1)] = "SystemKey1");
-          })(K || (K = {})),
+          })(D || (D = {})),
           (function (e) {
             (e[(e.Hidden = 0)] = "Hidden"),
               (e[(e.Notification = 1)] = "Notification"),
               (e[(e.Overlay = 2)] = "Overlay"),
               (e[(e.Opaque = 3)] = "Opaque"),
               (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-          })($ || ($ = {})),
+          })(F || (F = {})),
           (function (e) {
             (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
               (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
@@ -816,15 +422,15 @@ var CLSTAMP = "7954876";
               (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
               (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
               (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
-          })(X || (X = {}));
-        var Y;
+          })(A || (A = {}));
+        var N;
         !(function (e) {
           (e[(e.k_EPending = 0)] = "k_EPending"),
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
-        })(Y || (Y = {}));
-        var J, Q, Z, ee;
-        r(19563);
+        })(N || (N = {}));
+        var L, M, P, O;
+        r(91845);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -842,7 +448,7 @@ var CLSTAMP = "7954876";
               "k_EControllerBindingType_GameAction"),
             (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
               "k_EControllerBindingType_ControllerAction");
-        })(J || (J = {}));
+        })(L || (L = {}));
         !(function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -899,7 +505,7 @@ var CLSTAMP = "7954876";
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(Q || (Q = {}));
+        })(M || (M = {}));
         !(function (e) {
           (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
             "k_EClientUINotificationGroupChatMessage"),
@@ -907,20 +513,20 @@ var CLSTAMP = "7954876";
               "k_EClientUINotificationFriendChatMessage"),
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
-        })(Z || (Z = {}));
+        })(P || (P = {}));
         !(function (e) {
           (e[(e.AudioPlayback_Undefined = 0)] = "AudioPlayback_Undefined"),
             (e[(e.AudioPlayback_Playing = 1)] = "AudioPlayback_Playing"),
             (e[(e.AudioPlayback_Paused = 2)] = "AudioPlayback_Paused"),
             (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
-        })(ee || (ee = {}));
-        var te, re, ne, oe, ie;
+        })(O || (O = {}));
+        var B, U, w, j, G;
         !(function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Wired = 1)] = "Wired"),
             (e[(e.Wireless = 2)] = "Wireless"),
             (e[(e.Virtual = 3)] = "Virtual");
-        })(te || (te = {})),
+        })(B || (B = {})),
           (function (e) {
             (e[(e.NotPresent = 0)] = "NotPresent"),
               (e[(e.Failed = 1)] = "Failed"),
@@ -929,14 +535,14 @@ var CLSTAMP = "7954876";
               (e[(e.Connecting = 4)] = "Connecting"),
               (e[(e.Connected = 5)] = "Connected"),
               (e[(e.Retrying = 6)] = "Retrying");
-          })(re || (re = {})),
+          })(U || (U = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.Weak = 1)] = "Weak"),
               (e[(e.Ok = 2)] = "Ok"),
               (e[(e.Good = 3)] = "Good"),
               (e[(e.Excellent = 4)] = "Excellent");
-          })(ne || (ne = {})),
+          })(w || (w = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -946,32 +552,22 @@ var CLSTAMP = "7954876";
               (e[(e.Wpa2 = 16)] = "Wpa2"),
               (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
               (e[(e.Unsupported = 32768)] = "Unsupported");
-          })(oe || (oe = {})),
+          })(j || (j = {})),
           (function (e) {
             (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
               (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
               (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
               (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
                 "k_EHTTPProxyMode_Automatic");
-          })(ie || (ie = {}));
-        var ae, se, _e, le;
-        function ce(e, t) {
-          return (function (e, t) {
-            let r = e.findIndex(t);
-            return r >= 0 && (e.splice(r, 1), !0);
-          })(e, (e) => t == e);
+          })(G || (G = {}));
+        var x, W, H, z;
+        function q(e) {
+          if (!K() || !window.document.cookie) return null;
+          let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+          return t && t[2] ? decodeURIComponent(t[2]) : null;
         }
-        function de(e, t, r) {
-          return {
-            get() {
-              let e = r.value.bind(this);
-              return (
-                this.hasOwnProperty(t) ||
-                  Object.defineProperty(this, t, { value: e }),
-                e
-              );
-            },
-          };
+        function K() {
+          return !!window.document;
         }
         !(function (e) {
           (e[(e.k_EComputerActiveStateInvalid = 0)] =
@@ -980,7 +576,7 @@ var CLSTAMP = "7954876";
               "k_EComputerActiveStateActive"),
             (e[(e.k_EComputerActiveStateIdle = 2)] =
               "k_EComputerActiveStateIdle");
-        })(ae || (ae = {})),
+        })(x || (x = {})),
           (function (e) {
             (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
               "k_EClientUsedInputTypeKeyboard"),
@@ -990,7 +586,7 @@ var CLSTAMP = "7954876";
                 "k_EClientUsedInputTypeController"),
               (e[(e.k_EClientUsedInputTypeMax = 3)] =
                 "k_EClientUsedInputTypeMax");
-          })(se || (se = {})),
+          })(W || (W = {})),
           (function (e) {
             (e[(e.k_EVRError_None = 0)] = "k_EVRError_None"),
               (e[(e.k_EVRError_VRSkipParam = 1)] = "k_EVRError_VRSkipParam"),
@@ -1002,7 +598,7 @@ var CLSTAMP = "7954876";
                 "k_EVRError_CrashProtection"),
               (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
               (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
-          })(_e || (_e = {})),
+          })(H || (H = {})),
           (function (e) {
             (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
               (e[(e.VRInitError_Unknown = 1)] = "VRInitError_Unknown"),
@@ -1480,7 +1076,411 @@ var CLSTAMP = "7954876";
               (e[(e.VRInitError_Steam_SteamInstallationNotFound = 2e3)] =
                 "VRInitError_Steam_SteamInstallationNotFound"),
               (e[(e.VRInitError_LastError = 2001)] = "VRInitError_LastError");
-          })(le || (le = {}));
+          })(z || (z = {}));
+        const $ = "webui_config";
+        let X;
+        function Y() {
+          let e = (function () {
+            let e = "";
+            for (let n = 0; n < 24; n++)
+              e += ((t = 0),
+              (r = 35),
+              (t = Math.ceil(t)),
+              (r = Math.floor(r)),
+              Math.floor(Math.random() * (r - t + 1)) + t).toString(36);
+            var t, r;
+            return e;
+          })();
+          return (
+            (function (e, t, r, n) {
+              if (!K()) return;
+              n || (n = "/");
+              let o = "";
+              if (void 0 !== r && r) {
+                let e = new Date();
+                e.setTime(e.getTime() + 864e5 * r),
+                  (o = "; expires=" + e.toUTCString());
+              }
+              document.cookie =
+                encodeURIComponent(e) +
+                "=" +
+                encodeURIComponent(t) +
+                o +
+                ";path=" +
+                n;
+            })("sessionid", e, 0),
+            e
+          );
+        }
+        function J(e = $) {
+          const t = {},
+            r = Q("config", e);
+          r && (delete r.SESSIONID, Object.assign(te, r), (t.config = !0));
+          const n = Q("userinfo", e);
+          n &&
+            (Object.assign(re, n),
+            (t.userConfig = !0),
+            re.is_support &&
+              (function () {
+                let e = null;
+                K() && (e = q(ee));
+                return Boolean(e && 1 === Number.parseInt(e));
+              })() &&
+              (re.is_support = !1));
+          const o = Q("broadcast", e);
+          o && (Object.assign(ne, o), (t.broadcastConfig = !0));
+          const i = Q("community", e);
+          i && (Object.assign(oe, i), (t.communityConfig = !0));
+          const a = Q("event", e);
+          return a && (Object.assign(ie, a), (t.eventConfig = !0)), t;
+        }
+        function Q(e, t = $) {
+          return Z(e, t, !0);
+        }
+        function Z(e, t = $, r) {
+          let n;
+          if (
+            ((n =
+              "string" == typeof t
+                ? !{
+                    NODE_ENV: "production",
+                    STEAM_BUILD: "buildbot",
+                    VALVE_BUILD: "false",
+                  }.MOBILE_BUILD && document.getElementById(t)
+                : t),
+            n)
+          )
+            try {
+              if (n.hasAttribute("data-" + e)) {
+                return JSON.parse(n.getAttribute("data-" + e));
+              }
+              return null;
+            } catch (e) {
+              console.error("Failed to parse config", e);
+            }
+          else r && console.error("Missing config element #", t);
+        }
+        const ee = "presentation_mode";
+        const te = {
+            EUNIVERSE: 0,
+            WEB_UNIVERSE: "",
+            LANGUAGE: "english",
+            SUPPORTED_LANGUAGES: [],
+            COUNTRY: "",
+            AVATAR_BASE_URL: "",
+            MEDIA_CDN_COMMUNITY_URL: "",
+            MEDIA_CDN_URL: "",
+            COMMUNITY_CDN_URL: "",
+            COMMUNITY_CDN_ASSET_URL: "",
+            BASE_URL_SHARED_CDN: "",
+            STORE_CDN_URL: "",
+            PUBLIC_SHARED_URL: "",
+            COMMUNITY_BASE_URL: "",
+            CHAT_BASE_URL: "",
+            STORE_BASE_URL: "",
+            STORE_CHECKOUT_BASE_URL: "",
+            LOGIN_BASE_URL: "",
+            SUPPORT_BASE_URL: "",
+            STORE_ICON_BASE_URL: "",
+            IMG_URL: "",
+            STEAMTV_BASE_URL: "",
+            HELP_BASE_URL: "",
+            PARTNER_BASE_URL: "",
+            STATS_BASE_URL: "",
+            INTERNAL_STATS_BASE_URL: "",
+            BASE_URL_STORE_CDN_ASSETS: "",
+            IN_CLIENT: !1,
+            USE_POPUPS: !1,
+            IN_MOBILE: !1,
+            IN_MOBILE_WEBVIEW: !1,
+            IN_TENFOOT: !1,
+            PLATFORM: "",
+            SNR: "",
+            LAUNCHER_TYPE: 0,
+            EREALM: 0,
+            IN_CHROMEOS: !1,
+            TESLA: !1,
+            LOCAL_HOSTNAME: "",
+            WEBAPI_BASE_URL: "",
+            TOKEN_URL: "",
+            BUILD_TIMESTAMP: 0,
+            PAGE_TIMESTAMP: 0,
+            FROM_WEB: !1,
+            WEBSITE_ID: "Unknown",
+            get SESSIONID() {
+              return (function () {
+                if (!K()) return X || (X = Y()), X;
+                let e = q("sessionid");
+                return e || (e = Y()), e;
+              })();
+            },
+            FRIENDSUI_BETA: !1,
+            STEAM_TV: !1,
+            DEV_MODE: !1,
+            IN_STEAMUI: !1,
+            IN_GAMEPADUI: !1,
+            IN_STEAMUI_SHARED_CONTEXT: !1,
+            DECK_DISPLAY_MODE: !1,
+            ON_DECK: !1,
+            ON_STEAMOS: !1,
+            IN_GAMESCOPE: !1,
+            IN_LOGIN: !1,
+            IN_LOGIN_REFRESH: !1,
+            USE_LONGEST_LOC_STRING: !1,
+          },
+          re = {
+            logged_in: !1,
+            steamid: "",
+            accountid: 0,
+            account_name: "",
+            token: void 0,
+            token_use_id: void 0,
+            webapi_token: "",
+            authwgtoken: "",
+            is_support: !1,
+            is_limited: !1,
+            is_partner_member: !1,
+            short_url: "",
+            country_code: "",
+          },
+          ne = { steamid: "", clanid: 0, listid: 0 },
+          oe = {
+            CLANSTEAMID: "",
+            CLANACCOUNTID: 0,
+            APPID: 0,
+            VANITY_ID: "",
+            IS_CREATOR_HOME: !1,
+            IS_CURATOR: !1,
+            IS_OGG: !1,
+            CAN_UPLOAD_IMAGES: !1,
+            APP_NAME: "",
+            HEADER_IMAGE: "",
+            HAS_ADULT_CONTENT: !1,
+            HAS_ADULT_CONTENT_SEX: !1,
+            HAS_ADULT_CONTENT_VIOLENCE: !1,
+            IS_VALVE_GROUP: !1,
+            IS_ALLOWED_SC: !1,
+          },
+          ie = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+        a().createContext({});
+        let ae = { success: !0, result: 1 };
+        class se {
+          constructor() {
+            (this.m_connection = new _e()),
+              (this.m_bAllowAccountMismatch = !1),
+              (this.m_mapCacheSubscribedApp = new Map());
+          }
+          FailureResult(e = 2) {
+            let t = { success: !1, result: e };
+            return (
+              this.m_connection &&
+                !this.m_connection.browser_supported &&
+                (t.browser_unsupported = !0),
+              this.m_connection &&
+                !this.m_connection.connected_to_client &&
+                (t.connect_failed = !0),
+              7 == e && (t.call_unsupported = !0),
+              t
+            );
+          }
+          SetAllowAccountMismatch(e) {
+            this.m_bAllowAccountMismatch = e;
+          }
+          BClientConnected() {
+            return this.m_connection.Connect().then(
+              () => ae,
+              () => this.FailureResult()
+            );
+          }
+          BClientSupportsMessage(e) {
+            return (
+              !(
+                !this.m_connection.connected_to_client ||
+                !this.m_connection.ready
+              ) &&
+              -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
+            );
+          }
+          OpenFriendChatDialog(e) {
+            let t = { message: "ShowFriendChatDialog", steamid: e };
+            return this.GenericEResultCall(t);
+          }
+          OpenChatRoomGroupDialog(e, t) {
+            let r = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
+            return t && (r.chat_room_id = t), this.GenericEResultCall(r);
+          }
+          ShowChatRoomGroupInvite(e) {
+            let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
+            return this.GenericEResultCall(t);
+          }
+          BIsSubscribedApp(e) {
+            if (this.m_mapCacheSubscribedApp.has(e))
+              return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
+            let t = { message: "IsSubscribedApp", appid: e };
+            return this.GenericEResultCall(t).then((t) => {
+              if (t.connect_failed) return;
+              let r = 1 == t.result;
+              return this.m_mapCacheSubscribedApp.set(e, r), r;
+            });
+          }
+          OpenFriendsDialog() {
+            return this.GenericEResultCall({ message: "OpenFriendsDialog" });
+          }
+          BClientAccountMatches() {
+            return (
+              !re.logged_in ||
+              re.accountid == this.m_connection.ClientInfo.unAccountID
+            );
+          }
+          GenericEResultCall(e) {
+            return this.m_connection
+              .Connect()
+              .then(() =>
+                this.m_bAllowAccountMismatch || this.BClientAccountMatches()
+                  ? this.m_connection
+                      .SendMsgAndAwaitResponse(e)
+                      .then((e) =>
+                        1 === e.success ? ae : this.FailureResult(e.success)
+                      )
+                  : { success: !1, result: 19, account_mismatch: !0 }
+              )
+              .catch(() => this.FailureResult());
+          }
+        }
+        class _e {
+          constructor() {
+            (this.m_mapWaitingCallbacks = new Map()),
+              (this.m_iCallSeq = 1),
+              (this.m_bReady = !1),
+              (this.m_bClientConnectionFailed = !1),
+              (this.m_bSecurityException = !1),
+              (this.m_ClientInfo = {
+                ulVersion: "",
+                bFriendsUIEnabled: !1,
+                unAccountID: 0,
+                rgSupportedMessages: [],
+              });
+          }
+          get ClientInfo() {
+            return this.m_ClientInfo;
+          }
+          get ready() {
+            return this.m_bReady;
+          }
+          get browser_supported() {
+            return !this.m_bSecurityException;
+          }
+          get connected_to_client() {
+            return this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
+          }
+          SendMsgAndAwaitResponse(e) {
+            return new Promise((t, r) => {
+              let n = this.m_iCallSeq++;
+              this.BSendMsg(e, n)
+                ? this.m_mapWaitingCallbacks.set(n, {
+                    iSeq: n,
+                    fnCallback: t,
+                    fnError: r,
+                  })
+                : r();
+            });
+          }
+          BSendMsg(e, t) {
+            if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
+              return !1;
+            let r = Object.assign({}, e, {
+              universe: te.EUNIVERSE,
+              accountid: re.accountid,
+            });
+            void 0 !== t && (r.sequenceid = t);
+            try {
+              return this.m_socket.send(JSON.stringify(r)), !0;
+            } catch (e) {
+              return !1;
+            }
+          }
+          OnSocketMessage(e) {
+            try {
+              let t = JSON.parse(e.data);
+              if (t.sequenceid) {
+                let e = this.m_mapWaitingCallbacks.get(t.sequenceid);
+                if (e)
+                  return (
+                    this.m_mapWaitingCallbacks.delete(t.sequenceid),
+                    void e.fnCallback(t)
+                  );
+              }
+            } catch (e) {
+              console.error("exception parsing response", e);
+            }
+          }
+          Connect() {
+            if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
+              return Promise.resolve();
+            if (this.m_promiseConnect) return this.m_promiseConnect;
+            let e = new Promise((e, t) => {
+              try {
+                this.m_socket = new WebSocket(
+                  "ws://127.0.0.1:27060/clientsocket/"
+                );
+              } catch (e) {
+                return (this.m_bSecurityException = !0), void t(e);
+              }
+              (this.m_socket.onerror = (e) => {
+                t();
+              }),
+                (this.m_socket.onmessage = this.OnSocketMessage.bind(this)),
+                (this.m_socket.onopen = () => {
+                  this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
+                    .then((r) => {
+                      1 == r.success
+                        ? ((this.m_ClientInfo.ulVersion = r.clientversion),
+                          (this.m_ClientInfo.bFriendsUIEnabled = !!r.friendsui),
+                          (this.m_ClientInfo.unAccountID = r.accountid),
+                          r.supported_messages &&
+                            (this.m_ClientInfo.rgSupportedMessages =
+                              r.supported_messages),
+                          e())
+                        : t();
+                    })
+                    .catch(t);
+                });
+            });
+            return (
+              (this.m_promiseConnect = e),
+              this.m_promiseConnect
+                .then(() => {
+                  (this.m_bReady = !0), (this.m_promiseConnect = void 0);
+                })
+                .catch(() => {
+                  (this.m_bClientConnectionFailed = !0),
+                    (this.m_promiseConnect = void 0);
+                }),
+              this.m_promiseConnect
+            );
+          }
+        }
+        let le = new se();
+        window.ClientConnectionAPI = le;
+        r(9669);
+        function ce(e, t) {
+          return (function (e, t) {
+            let r = e.findIndex(t);
+            return r >= 0 && (e.splice(r, 1), !0);
+          })(e, (e) => t == e);
+        }
+        function de(e, t, r) {
+          return {
+            get() {
+              let e = r.value.bind(this);
+              return (
+                this.hasOwnProperty(t) ||
+                  Object.defineProperty(this, t, { value: e }),
+                e
+              );
+            },
+          };
+        }
         class ue {
           constructor() {
             this.m_vecCallbacks = [];
@@ -1579,7 +1579,7 @@ var CLSTAMP = "7954876";
           }
           static IsELanguageValidInRealm(e, t) {
             return (
-              t === (29 === e ? H.k_ESteamRealmChina : H.k_ESteamRealmGlobal)
+              t === (29 === e ? y.k_ESteamRealmChina : y.k_ESteamRealmGlobal)
             );
           }
           static GetLanguageListForRealms(e) {
@@ -1627,9 +1627,9 @@ var CLSTAMP = "7954876";
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
             if (
-              (t.push(g(h.LANGUAGE)),
-              (h.SUPPORTED_LANGUAGES || []).forEach((e) => {
-                e.value != h.LANGUAGE && t.push(g(e.value));
+              (t.push(l(te.LANGUAGE)),
+              (te.SUPPORTED_LANGUAGES || []).forEach((e) => {
+                e.value != te.LANGUAGE && t.push(l(e.value));
               }),
               e)
             ) {
@@ -1656,7 +1656,7 @@ var CLSTAMP = "7954876";
               pe.sm_ErrorReportingStore &&
               pe.sm_ErrorReportingStore.ReportError(
                 new Error(
-                  `Unable to find localization token '${e}' for language '${h.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`
+                  `Unable to find localization token '${e}' for language '${te.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`
                 ),
                 { bIncludeMessageInIdentifier: !0 }
               );
@@ -1726,7 +1726,7 @@ var CLSTAMP = "7954876";
             return this.m_strInviteCode;
           }
           BNeverExpires() {
-            return this.m_rtTimeExpires == k;
+            return this.m_rtTimeExpires == _;
           }
           GetChatRoomGroupID() {
             return this.m_ulChatRoomGroupID;
@@ -1740,9 +1740,9 @@ var CLSTAMP = "7954876";
           GetURL() {
             return this.m_strInviteCode
               ? ((e = this.m_strInviteCode),
-                "public" == h.WEB_UNIVERSE
+                "public" == te.WEB_UNIVERSE
                   ? `https://s.team/chat/${e}`
-                  : `${h.COMMUNITY_BASE_URL}chat/invite/${e}`)
+                  : `${te.COMMUNITY_BASE_URL}chat/invite/${e}`)
               : null;
             var e;
           }
@@ -1763,7 +1763,7 @@ var CLSTAMP = "7954876";
               (this.m_ulChatID = t),
               (this.m_bIsBanned = r),
               (this.m_rtKickExpires = n),
-              (this.m_rtTimeExpires = k),
+              (this.m_rtTimeExpires = _),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }
@@ -1784,10 +1784,10 @@ var CLSTAMP = "7954876";
               : (this.m_ulSteamID = e ? Ve().fromNumber(e, !0) : Ve().UZERO);
           }
           static InitFromAccountID(e) {
-            return new ve(Number(e), h.EUNIVERSE, 1, 1);
+            return new ve(Number(e), te.EUNIVERSE, 1, 1);
           }
           static InitFromClanID(e) {
-            return new ve(Number(e), h.EUNIVERSE, 7, 0);
+            return new ve(Number(e), te.EUNIVERSE, 7, 0);
           }
           GetAccountID() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -1938,7 +1938,7 @@ var CLSTAMP = "7954876";
           }
         }
         var ye = r(42238);
-        r(79718);
+        r(18821);
         class Te extends ke {
           BIsExpired() {
             return be.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1997,20 +1997,20 @@ var CLSTAMP = "7954876";
               if (r) {
                 if (e) {
                   let r = function (n) {
-                    let o = h.COMMUNITY_BASE_URL.replace(
+                    let o = te.COMMUNITY_BASE_URL.replace(
                       /(https?:\/\/[^/]*).*$/,
                       "$1"
                     );
                     n.source == t &&
                       "FriendsUIReady" == n.data &&
                       n.origin == o &&
-                      (t.postMessage(e, h.COMMUNITY_BASE_URL),
+                      (t.postMessage(e, te.COMMUNITY_BASE_URL),
                       window.removeEventListener("message", r));
                   };
                   window.addEventListener("message", r);
                 }
-                t.location.href = h.COMMUNITY_BASE_URL + "chat/";
-              } else e && t.postMessage(e, h.COMMUNITY_BASE_URL);
+                t.location.href = te.COMMUNITY_BASE_URL + "chat/";
+              } else e && t.postMessage(e, te.COMMUNITY_BASE_URL);
               t.focus();
             })({
               command: "ShowChatRoomGroupInvite",
@@ -2018,7 +2018,7 @@ var CLSTAMP = "7954876";
             });
           }
           LaunchSteamIgnoreAccount() {
-            G.SetAllowAccountMismatch(!0), this.SendInviteToClient();
+            le.SetAllowAccountMismatch(!0), this.SendInviteToClient();
           }
           ForceLaunchSteamClient() {
             window.location.href = `steam://friends/ShowChatRoomGroupInvite/${this.m_invite.GetInviteCode()}`;
@@ -2027,15 +2027,15 @@ var CLSTAMP = "7954876";
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              G.ShowChatRoomGroupInvite(this.m_invite.GetInviteCode()).then(
-                (e) => {
+              le
+                .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
+                .then((e) => {
                   (0, fe.z)(() => {
                     (this.m_bConnectingToClient = !1),
                       (this.m_connectResult = e),
                       console.log(e);
                   });
-                }
-              ));
+                }));
           }
         }
         n([fe.LO], be.prototype, "m_bConnectingToClient", void 0),
@@ -2090,7 +2090,7 @@ var CLSTAMP = "7954876";
               );
             let e = this.props.controller.GetConnectResults(),
               t = this.props.controller.GetInvite(),
-              r = (h.COMMUNITY_BASE_URL, this.IsMobileDevice()),
+              r = (te.COMMUNITY_BASE_URL, this.IsMobileDevice()),
               n = "inviteButton inviteButtonJoinChat";
             return (
               t.BIsVoiceChatInvite() && (n += " inviteButtonJoinVoice"),
@@ -2263,7 +2263,7 @@ var CLSTAMP = "7954876";
           );
         }
         window.AssertMsg = Re;
-        let Le = new w();
+        let Le = new se();
         function Me(e) {
           let t;
           try {
@@ -2276,7 +2276,7 @@ var CLSTAMP = "7954876";
         (window.ClientConnectionAPI = Le),
           document.addEventListener("DOMContentLoaded", function () {
             return o(this, void 0, void 0, function* () {
-              m(),
+              J(),
                 yield (function (e) {
                   return o(this, void 0, void 0, function* () {
                     const t = pe.GetLanguageFallback(e),
@@ -2292,7 +2292,7 @@ var CLSTAMP = "7954876";
                       Object.assign(Object.assign({}, a), s)
                     );
                   });
-                })(h.LANGUAGE),
+                })(te.LANGUAGE),
                 (function () {
                   let e = document.querySelectorAll(".ChatReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -2306,7 +2306,7 @@ var CLSTAMP = "7954876";
             });
           });
       },
-      23934: (e, t, r) => {
+      86802: (e, t, r) => {
         "use strict";
         r.d(t, {
           Bh: () => a,
@@ -2473,7 +2473,7 @@ var CLSTAMP = "7954876";
               };
         }
       },
-      70186: (e, t, r) => {
+      84931: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -2803,14 +2803,14 @@ var CLSTAMP = "7954876";
         699: "0e6be9bdafd632532acf",
         1162: "3123971e114ddaf7b69e",
         1313: "653328d639b77b885821",
-        1471: "3915677faff51134f11f",
-        1635: "baa142d746b1bc246608",
+        1471: "9e18e42f9dda9a45436c",
+        1635: "9e954d378764979ab99a",
         2029: "320f752ee0bf0eca34cc",
         2431: "faf493c0d081b4c4473c",
-        2443: "35b5992a173f7aa17015",
+        2443: "50aca8eaa06c15857fdc",
         2537: "4a590d394aea685192ea",
-        2822: "21e15b7e57be122d0748",
-        2844: "2ecffa3077c456e433e2",
+        2822: "ccac351edad122054af7",
+        2844: "1eb4faf727d7f13b6b63",
         2862: "79bc6ca783e3aacd8e43",
         2913: "997700daa9514dd83d9f",
         3112: "e6063c7ace52480df68a",
@@ -2820,44 +2820,44 @@ var CLSTAMP = "7954876";
         3471: "28adb9309da5d6af565c",
         3500: "75b4c6abdfb23fbd5675",
         3557: "3b45a955f04a701b3a1c",
-        4108: "98d917d373b024762be6",
-        4189: "80d765ea45b298f4a595",
+        4108: "98ac9546bff8f715091a",
+        4189: "a7011b9eafd7bd7bdf5b",
         4264: "5fa72bc23ee91b8b7078",
         4297: "0a64d88ec508a40efb02",
         4448: "858136e3ff45e6aa8927",
         4596: "3201306636cfd2376dea",
         4716: "3cfeb29b4c384d042c51",
-        4823: "f628308f6e63ab6b935b",
+        4823: "899c681e5efcd5b9eb29",
         4964: "678dbd6862f8de86b75e",
         4989: "3bf15e40cf2705cca758",
         5438: "baef5f199150857cae87",
         5625: "8be9b83f65c0267885b5",
         5632: "41f9f0c2b5c7a2e08ba5",
         5802: "7acfbe1ee8536a73b7a9",
-        5849: "f76425ead8a08021742b",
+        5849: "f08ac7eb71a1a0fb01c4",
         5925: "6b963e93994772bdfa9e",
-        5933: "102ea26fb1dacaa5bd50",
-        5948: "8fd9e97088bb0e7e1ef1",
+        5933: "d8737a955d8865684853",
+        5948: "3faefc35ff0fcf9599f3",
         6007: "bae07717e721ba0705f9",
         6492: "ea39077e1ee281cf3c31",
         6542: "016ea1550cab12c6ea79",
         6727: "899f8cb08b52efa12fc6",
-        6986: "517a793f1aa3c8a938a1",
+        6986: "60de7a92a72ba66cae00",
         6992: "833786d371ab4153d7d7",
         7340: "522a435f38adb65478b9",
         7575: "712739ee4724a5e9fed6",
         7602: "cdda53ac042b6039a43b",
         7651: "f3f4fffc3aa9a665f055",
         7706: "0114b0976cca2e263f9a",
-        7781: "af7acca7d6fe572707bf",
-        7975: "96a6f1d146e6609633b2",
+        7781: "3c95b2237e02da66c7cf",
+        7975: "b1eb2fa743f3a6cea3f8",
         8247: "3720d0e4cccdbfe9d0e8",
-        8385: "7b8d4aac716d77fec078",
+        8385: "1f587d44d8a94dccd559",
         8518: "c8900b6637a039ab8c80",
         8815: "8c783561f59d582b2e23",
         9062: "0c06150ea3e6e189d64d",
         9263: "691c305416e1b1a87d66",
-        9753: "f2c42f1808d26ec5bb73",
+        9753: "12ce572db52a64d6b7db",
         9775: "49f88d52753c15d175ec",
         9818: "a754f1cdd15e517ed383",
       }[e]),
@@ -2994,6 +2994,6 @@ var CLSTAMP = "7954876";
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [3817, 5140, 5968], () => s(78014));
+  var _ = s.O(void 0, [3817, 5140, 5968], () => s(9349));
   _ = s.O(_);
 })();

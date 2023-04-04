@@ -968,6 +968,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
+${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventapplist
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventbyid
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetpackagediscounts/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxupdatediscountevent
@@ -1042,6 +1043,9 @@ ${ROOT_URL}/puzzleleaderboarddata
 ${ROOT_URL}/submitfeedback
 ${ROOT_URL}/updatesdata
 ${STATS_BASE_URL}${type}
+${STATS_BASE_URL}app/details/${}/${}
+${STATS_BASE_URL}bundles/details/${}/${}
+${STATS_BASE_URL}package/details/${}/${}
 ${STATS_BASE_URL}sales/details/?gid=${GID}&clanid=${}
 ${STATS_BASE_URL}sales/details/?gid=${}&clanid=${}
 ${STORE_BASE_URL}
@@ -2686,6 +2690,7 @@ https://store.cloudflare.steamstatic.com/public/images/v6/home/maincap_placehold
 https://store.cloudflare.steamstatic.com/public/shared/images/apphubs/play_icon80.png
 https://store.cloudflare.steamstatic.com/public/shared/images/icon_share_ios.svg
 https://store.steam
+https://store.steamchina.com
 https://store.steamchina.com/
 https://store.steampowered.com
 https://store.steampowered.com/

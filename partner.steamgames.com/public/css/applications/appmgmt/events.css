@@ -5772,13 +5772,14 @@ html.responsive.touch
   margin-left: 12px;
 }
 .assetportal_PartnerIdRow_2BgYY .assetportal_SetObviousPartner_1hUvZ {
-  width: 25%;
+  width: fit-content;
   margin-left: 12px;
 }
 .assetportal_PartnerIdRow_2BgYY
   .assetportal_SetObviousPartner_1hUvZ
   button.DialogButton {
   height: 42px;
+  padding: 0px 12px;
 }
 .assetportal_SpotlightPreviewCtn_GrCIp {
   width: 306px;
@@ -5904,7 +5905,7 @@ html.responsive.touch
   height: 50px;
 }
 .assetportal_OptionalToggle_35eGe {
-  opacity: 0.3;
+  opacity: 0;
 }
 .collapseablesection_SectionTitleHeader_1K5gA {
   display: flex;
@@ -7226,49 +7227,45 @@ button.rbc-input::-moz-focus-inner {
 .promotionplaneditor_FeatureSelectBtn_KdmlA button.DialogButton {
   padding: 0px 12px;
 }
-.promotionplaneditor_StatusIncomplete_2ux1t {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.promotionplaneditor_StatusIncomplete_2ux1t
-  .promotionplaneditor_ReviewedCtn_11pA1 {
-  margin-right: 12px;
-  font-size: 20px;
-  color: #fff;
-}
-.promotionplaneditor_StatusComplete_34TgX {
-  display: inline-block;
-  width: 100%;
-}
-.promotionplaneditor_StatusComplete_34TgX
-  .promotionplaneditor_ReviewedCtn_11pA1 {
+.promotionplaneditor_StatusCtn_1DrAw .promotionplaneditor_ReviewState_3mtqD {
   position: relative;
-}
-.promotionplaneditor_ReviewedCtn_11pA1 {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  padding: 4px 10px;
+  padding: 4px 0;
+  color: #fff;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid gray;
 }
-.promotionplaneditor_ReviewedCtn_11pA1 svg {
+.promotionplaneditor_StatusCtn_1DrAw
+  .promotionplaneditor_ReviewState_3mtqD
+  span {
+  margin-right: 12px;
+  font-size: 21px;
+}
+.promotionplaneditor_StatusCtn_1DrAw
+  .promotionplaneditor_ReviewState_3mtqD
+  svg {
   width: 20px;
   height: 20px;
   color: #8bc53f;
   margin-right: 8px;
 }
-.promotionplaneditor_ReviewedCtn_11pA1
-  .promotionplaneditor_ReviewedSummary_1_eM8 {
+.promotionplaneditor_StatusCtn_1DrAw.promotionplaneditor_Complete_kpXmM
+  .promotionplaneditor_ReviewState_3mtqD {
+  width: 100%;
+  color: #8bc53f;
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 21px;
-  color: #8bc53f;
-  padding-bottom: 2px;
-  margin-bottom: 6px;
-  border-bottom: 1px solid gray;
+}
+.promotionplaneditor_StatusCtn_1DrAw.promotionplaneditor_Incomplete_2TKFB {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .promotionplaneditor_LinksCtn_2SJfi {
   margin-top: 20px;

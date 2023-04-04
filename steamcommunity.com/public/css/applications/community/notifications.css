@@ -370,6 +370,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU
   .standardtemplates_Header_39ZAW,
@@ -389,6 +390,7 @@
   height: 13px;
   margin-right: 5px;
   color: #8b929a;
+  fill: #8b929a;
   display: flex;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU
@@ -463,6 +465,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-height: 15px;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU
   .standardtemplates_StandardNotificationDescription_1Ldq1,
@@ -653,7 +656,6 @@
 }
 .standardtemplates_DesktopToastTemplate_3CGHg {
   background: none;
-  line-height: 16px;
 }
 .standardtemplates_DesktopToastTemplate_3CGHg:hover {
   background: none;
@@ -666,24 +668,98 @@
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
-  font-size: 12px;
-  color: #fff;
-}
-.standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Header_39ZAW {
-  line-height: 15px;
-}
-.standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Body_2cgMq {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_IngameTitle_1wh9o {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
   font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #e3ffc2;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_OnlineTitle_bpePV {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #6dcff6;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_GroupMessageTitle_3dAcR {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_GroupMessageUserName_2cDEk {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 13px;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_GroupMessageBody_2jxGp {
+  color: #b8bcbf;
+  font-size: 12px;
+  align-items: center;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_GroupMessageBody_2jxGp:not(.standardtemplates_Multiline_2v77K) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_GroupMessageBody_2jxGp.standardtemplates_Multiline_2v77K {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_GroupMessageBody_2jxGp
+  .standardtemplates_GroupMessageIcon_1pJtW {
+  vertical-align: middle;
+  display: inline;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Body_2cgMq {
+  font-size: 11px;
+}
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_StandardNotificationDescription_1Ldq1.standardtemplates_Multiline_2v77K,
+.standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_StandardNotificationSubText_2XcN2.standardtemplates_Multiline_2v77K {
+  line-height: 15px;
 }
 .standardtemplates_DesktopToastTemplate_3CGHg
   .standardtemplates_FriendInGameAppColor_19RnF {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #adff2f;
+  color: #91c257;
   font-size: 11px;
 }
 .standardtemplates_WishlistBlurImage_5wyKr {
@@ -729,6 +805,61 @@
   width: 40px;
   height: 40px;
   flex-shrink: 0;
+}
+.standardtemplates_LoadingTemplate_pqT9i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 13px 0px;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  transition: opacity 500ms;
+  background-color: #3d4450;
+}
+.standardtemplates_LoadingTemplate_pqT9i:hover {
+  cursor: default;
+  background: inherit;
+}
+.standardtemplates_LoadingTemplate_pqT9i.standardtemplates_Hide_3xyq9 {
+  opacity: 0;
+}
+.standardtemplates_ShimmerLogo_1WEJP {
+  margin-left: 13px;
+}
+.standardtemplates_ShimmerBody_3FMh3 {
+  width: 160px;
+  height: 29px;
+  margin-top: 5px;
+}
+.standardtemplates_ShimmerHeader_WDHRp {
+  width: 120px;
+  height: 10px;
+}
+.standardtemplates_ShimmerLogo_1WEJP,
+.standardtemplates_ShimmerHeader_WDHRp,
+.standardtemplates_ShimmerBody_3FMh3 {
+  background: linear-gradient(
+    to right,
+    rgba(250, 250, 250, 0.9) 5%,
+    rgba(200, 200, 200, 0.8) 35%,
+    rgba(250, 250, 250, 0.9) 50%
+  );
+  background-size: 600px 100%;
+  background-repeat: repeat-x;
+  animation: standardtemplates_loading_377dn 1s;
+  animation-iteration-count: 20;
+  box-shadow: 0 0 2px #8b929a;
+}
+@keyframes standardtemplates_loading_377dn {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 0px 0;
+  }
 }
 @keyframes shorttemplates_ItemFocusAnim-darkerGrey-nocolor_1kXW6 {
   from {
@@ -1097,6 +1228,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Header_2wU4t,
 .shorttemplates_StandardTemplateDesktop_3B-l9 .shorttemplates_Header_2wU4t,
@@ -1114,6 +1246,7 @@
   height: 13px;
   margin-right: 5px;
   color: #8b929a;
+  fill: #8b929a;
   display: flex;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Icon_2TlJy > svg,
@@ -1179,6 +1312,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-height: 15px;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi
   .shorttemplates_StandardNotificationDescription_Dacpy,
@@ -1355,7 +1489,6 @@
 }
 .shorttemplates_DesktopToastTemplate_PhN5d {
   background: none;
-  line-height: 16px;
 }
 .shorttemplates_DesktopToastTemplate_PhN5d:hover {
   background: none;
@@ -1368,24 +1501,96 @@
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
-  font-size: 12px;
-  color: #fff;
-}
-.shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Header_2wU4t {
-  line-height: 15px;
-}
-.shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Body_i5dFV {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_IngameTitle_JXm-p {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
   font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #e3ffc2;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_OnlineTitle_rOUw_ {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #6dcff6;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_GroupMessageTitle_2HzV8 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_GroupMessageUserName_3Pmep {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 13px;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_GroupMessageBody_LlaDV {
+  color: #b8bcbf;
+  font-size: 12px;
+  align-items: center;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_GroupMessageBody_LlaDV:not(.shorttemplates_Multiline_1DSpL) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_GroupMessageBody_LlaDV.shorttemplates_Multiline_1DSpL {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_GroupMessageBody_LlaDV
+  .shorttemplates_GroupMessageIcon_mQLEg {
+  vertical-align: middle;
+  display: inline;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Body_i5dFV {
+  font-size: 11px;
+}
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_StandardNotificationDescription_Dacpy.shorttemplates_Multiline_1DSpL,
+.shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_StandardNotificationSubText_2AQNp.shorttemplates_Multiline_1DSpL {
+  line-height: 15px;
 }
 .shorttemplates_DesktopToastTemplate_PhN5d
   .shorttemplates_FriendInGameAppColor_7xejb {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #adff2f;
+  color: #91c257;
   font-size: 11px;
 }
 .shorttemplates_WishlistBlurImage_2C81z {
@@ -1430,6 +1635,61 @@
   width: 40px;
   height: 40px;
   flex-shrink: 0;
+}
+.shorttemplates_LoadingTemplate_O4oyG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 13px 0px;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  transition: opacity 500ms;
+  background-color: #3d4450;
+}
+.shorttemplates_LoadingTemplate_O4oyG:hover {
+  cursor: default;
+  background: inherit;
+}
+.shorttemplates_LoadingTemplate_O4oyG.shorttemplates_Hide_2th6f {
+  opacity: 0;
+}
+.shorttemplates_ShimmerLogo_2dcrv {
+  margin-left: 13px;
+}
+.shorttemplates_ShimmerBody_B1DQw {
+  width: 160px;
+  height: 29px;
+  margin-top: 5px;
+}
+.shorttemplates_ShimmerHeader_1_4e9 {
+  width: 120px;
+  height: 10px;
+}
+.shorttemplates_ShimmerLogo_2dcrv,
+.shorttemplates_ShimmerHeader_1_4e9,
+.shorttemplates_ShimmerBody_B1DQw {
+  background: linear-gradient(
+    to right,
+    rgba(250, 250, 250, 0.9) 5%,
+    rgba(200, 200, 200, 0.8) 35%,
+    rgba(250, 250, 250, 0.9) 50%
+  );
+  background-size: 600px 100%;
+  background-repeat: repeat-x;
+  animation: shorttemplates_loading_5ADCC 1s;
+  animation-iteration-count: 20;
+  box-shadow: 0 0 2px #8b929a;
+}
+@keyframes shorttemplates_loading_5ADCC {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 0px 0;
+  }
 }
 .shorttemplates_ShortTemplate_29NLb {
   padding: 0;
@@ -1556,9 +1816,7 @@
 .notifications_AllNotificationsRowCtn_3Y-y3 {
   min-height: 70px;
   height: 70px;
-}
-.notifications_AllNotificationsRowCtn_3Y-y3:not(:last-child) {
-  border-bottom: 2px solid rgba(58, 62, 71, 0.5);
+  padding-bottom: 2px;
 }
 .notifications_NotificationFiltersCtn_1uSw_ {
   background-color: rgba(58, 62, 71, 0.5);

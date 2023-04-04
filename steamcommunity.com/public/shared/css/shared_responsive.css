@@ -814,3 +814,18 @@ html.force_desktop body #footer_responsive_optin_spacer {
 
 
 }
+
+html.responsive body.OverlayWindowPinned div.responsive_header {
+	display: none;
+}
+html.responsive body.OverlayWindowPinned.responsive_page .responsive_page_frame.with_header div.responsive_page_content {
+	padding-top: 0px;
+}
+
+html.responsive body.OverlayWindowPinnedView div.responsive_local_menu_tab {
+	display: none;
+}
+html.responsive body.OverlayWindowPinnedView.responsive_page {
+	overflow: hidden;
+	background: none;
+}

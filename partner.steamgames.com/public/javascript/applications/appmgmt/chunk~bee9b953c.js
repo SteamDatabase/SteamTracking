@@ -31,7 +31,9 @@
         ColHeader: "adminshared_ColHeader_uP0hv",
         ColHeaderImg: "adminshared_ColHeaderImg_3OYqx",
         SectionCtn: "adminshared_SectionCtn_3la4r",
+        Bright: "adminshared_Bright_1Sq2a",
         SectionIntroText: "adminshared_SectionIntroText_2BLTK",
+        SectionIntroRequirements: "adminshared_SectionIntroRequirements_2wFwI",
         warning: "adminshared_warning_3RQNx",
         RightCol: "adminshared_RightCol_p8nGm",
         NoSticky: "adminshared_NoSticky_1sSkE",
@@ -3491,30 +3493,36 @@
       "use strict";
       a.d(t, { j: () => m });
       var n = a(33940),
-        s = (a(89526), a(52868)),
+        s = a(52868),
         r = a.n(s),
-        o = (a(50265), a(5615), a(38800), a(96158), a(47330)),
+        o = (a(38800), a(47330)),
         l = a(23213),
-        i = (a(31621), a(5545));
+        i = a(5545);
       class m {
-        constructor(e) {
-          (this.m_mapPackageSummary = new Map()),
+        constructor(e, t) {
+          if (
+            ((this.m_mapPackageSummary = new Map()),
             (this.m_mapAppPackageList = new Map()),
             (this.m_mapAppSaleSummary = new Map()),
             (this.m_mapAppSaleSummaryChange = new Map()),
-            (this.m_mapAppToLoadPromises = new Map());
-          const t = new Date();
-          t.setUTCHours(0),
-            t.setUTCMinutes(0),
-            t.setUTCSeconds(0),
-            t.setUTCMilliseconds(0);
-          const a = Math.floor(t.getTime() / 1e3);
-          (this.m_rtEndTime = a - 86400),
-            (this.m_rtStartTime = a - 24 * (e + 1) * 60 * 60),
-            "dev" == i.De.WEB_UNIVERSE &&
-              console.log(
-                `CAppSaleSummary initializing to ${this.m_rtStartTime} to ${this.m_rtEndTime}`
-              );
+            (this.m_mapAppToLoadPromises = new Map()),
+            t)
+          )
+            (this.m_rtStartTime = e), (this.m_rtEndTime = t);
+          else {
+            const t = new Date();
+            t.setUTCHours(0),
+              t.setUTCMinutes(0),
+              t.setUTCSeconds(0),
+              t.setUTCMilliseconds(0);
+            const a = Math.floor(t.getTime() / 1e3);
+            (this.m_rtEndTime = a - 86400),
+              (this.m_rtStartTime = a - 24 * (e + 1) * 60 * 60);
+          }
+          "dev" == i.De.WEB_UNIVERSE &&
+            console.log(
+              `CAppSaleSummary initializing to ${this.m_rtStartTime} to ${this.m_rtEndTime}`
+            );
         }
         GetRTStartTime() {
           return this.m_rtStartTime;
@@ -3534,6 +3542,24 @@
         }
         BHasAppSaleSummaryChangeCallback(e) {
           return this.m_mapAppSaleSummaryChange.has(e);
+        }
+        GetTotalSummary() {
+          return (
+            this.m_totalSummary ||
+              ((this.m_totalSummary = {
+                net_sales_usd: 0,
+                net_units_sold: 0,
+                gross_sales_usd: 0,
+                gross_units_sold: 0,
+              }),
+              this.m_mapAppSaleSummary.forEach((e) => {
+                (this.m_totalSummary.net_sales_usd += e.net_sales_usd),
+                  (this.m_totalSummary.net_units_sold += e.net_units_sold),
+                  (this.m_totalSummary.gross_sales_usd += e.gross_sales_usd),
+                  (this.m_totalSummary.gross_units_sold += e.gross_units_sold);
+              })),
+            this.m_totalSummary
+          );
         }
         SetAppSaleSummary(e) {
           this.m_mapAppSaleSummary.set(e.appid, e),

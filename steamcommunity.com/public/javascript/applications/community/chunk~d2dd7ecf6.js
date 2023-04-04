@@ -11199,21 +11199,19 @@
     },
     50612: (e, t, a) => {
       "use strict";
-      a.d(t, { V: () => s });
+      a.d(t, { V: () => r });
       var n = a(33940),
         i = a(49194),
         l = a(89526),
-        o = a(38800),
-        r = a(70983);
-      a(72745);
-      function s(e) {
-        const { href: t, children: a, bAllowFocuseableAnchor: s } = e,
-          c = (0, n._T)(e, ["href", "children", "bAllowFocuseableAnchor"]);
-        return r.De.EREALM === o.IN.k_ESteamRealmChina
-          ? l.createElement("div", Object.assign({}, c), a)
-          : s
-          ? l.createElement(i.IS, Object.assign({ href: t }, c), a)
-          : l.createElement("a", Object.assign({ href: t }, c), a);
+        o = a(70983);
+      function r(e) {
+        const { href: t, children: a, bAllowFocuseableAnchor: r } = e,
+          s = (0, n._T)(e, ["href", "children", "bAllowFocuseableAnchor"]);
+        return (0, o.h4)()
+          ? l.createElement("div", Object.assign({}, s), a)
+          : r
+          ? l.createElement(i.IS, Object.assign({ href: t }, s), a)
+          : l.createElement("a", Object.assign({ href: t }, s), a);
       }
     },
     5052: (e, t, a) => {
@@ -27553,25 +27551,31 @@
           }),
           s = (0, c.SZ)(() => {
             var e;
+            return null === (e = t.dlc_for_you_data) || void 0 === e
+              ? void 0
+              : e.hide_dlc_stats;
+          }),
+          _ = (0, c.SZ)(() => {
+            var e;
             return (
               (null === (e = t.dlc_for_you_data) || void 0 === e
                 ? void 0
                 : e.parent_app_sorts) || []
             );
           }),
-          _ = (0, c.SZ)(() => {
+          p = (0, c.SZ)(() => {
             var e;
             return null === (e = t.dlc_for_you_data) || void 0 === e
               ? void 0
               : e.max_last_played;
           }),
-          p = (0, c.SZ)(() => {
+          g = (0, c.SZ)(() => {
             var e;
             return null === (e = t.dlc_for_you_data) || void 0 === e
               ? void 0
               : e.min_playtime;
           }),
-          g = (0, c.SZ)(() => {
+          h = (0, c.SZ)(() => {
             var e;
             return null === (e = t.dlc_for_you_data) || void 0 === e
               ? void 0
@@ -27613,12 +27617,25 @@
                   a.SetDirty(o.jB.jsondata_sales);
               },
             }),
+            !r &&
+              d.createElement(m.ji, {
+                label: (0, u.Xx)("#Sale_DLCForYou_HideDLCStats"),
+                tooltip: (0, u.Xx)("#Sale_DLCForYou_HideDLCStats_ttip"),
+                checked: s,
+                onChange: (e) => {
+                  (t.dlc_for_you_data = Object.assign(
+                    Object.assign({}, t.dlc_for_you_data),
+                    { hide_dlc_stats: e }
+                  )),
+                    a.SetDirty(o.jB.jsondata_sales);
+                },
+              }),
             r &&
               d.createElement(
                 d.Fragment,
                 null,
                 d.createElement(P.R, {
-                  items: s,
+                  items: _,
                   onDelete: (e) => {
                     t.dlc_for_you_data.parent_app_sorts.splice(e, 1),
                       a.SetDirty(o.jB.jsondata_sales);
@@ -27656,7 +27673,7 @@
               tooltip: (0, u.Xx)("#Sale_DLCForYou_MaxLastPlayed_ttip"),
               mustBeNumeric: !0,
               rangeMin: 0,
-              value: _,
+              value: p,
               onChange: (e) => {
                 (t.dlc_for_you_data = Object.assign(
                   Object.assign({}, t.dlc_for_you_data),
@@ -27670,7 +27687,7 @@
               tooltip: (0, u.Xx)("#Sale_DLCForYou_MinPlaytime_ttip"),
               mustBeNumeric: !0,
               rangeMin: 0,
-              value: p,
+              value: g,
               onChange: (e) => {
                 (t.dlc_for_you_data = Object.assign(
                   Object.assign({}, t.dlc_for_you_data),
@@ -27685,7 +27702,7 @@
               disabled: !r,
               mustBeNumeric: !0,
               rangeMin: 0,
-              value: g,
+              value: h,
               onChange: (e) => {
                 (t.dlc_for_you_data = Object.assign(
                   Object.assign({}, t.dlc_for_you_data),
@@ -30093,7 +30110,7 @@
                   : e.push(t.capsule.id);
               }),
                 y.Z.Get()
-                  .HintLoadStoreItems(null, e, a, n, Z.j4)
+                  .HintLoadStoreItems(null, e, a, n, null, null, null, Z.j4)
                   .then(() => {
                     var e;
                     (null === (e = null == t ? void 0 : t.token) || void 0 === e

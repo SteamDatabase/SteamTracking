@@ -373,7 +373,17 @@
       }
       function f(e, t) {
         const s = e.GetTemplateVars();
-        let n = (0, c.YR)(s.linkurl, t);
+        let n = (0, c.YR)(
+          ((i = s.linkurl),
+          (0, r.h4)() && i.startsWith("https://store.steampowered.com")
+            ? i.replace(
+                "https://store.steampowered.com",
+                "https://store.steamchina.com"
+              )
+            : i),
+          t
+        );
+        var i;
         return (
           n.startsWith("steam://") || (n = `steam://openurl/${n}`),
           a.useCallback(
@@ -486,7 +496,7 @@
     },
     24839: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { MarketingMessageRoutes: () => N, default: () => I });
+      s.r(t), s.d(t, { MarketingMessageRoutes: () => N, default: () => w });
       var a = s(89526),
         n = s(94629),
         r = s(59934),
@@ -767,7 +777,7 @@
         Message: (e) => `${n.Z.MarketingMessages()}${e}`,
         MessagePreview: (e) => `${n.Z.MarketingMessages()}preview/${e}`,
       };
-      function I(e) {
+      function w(e) {
         const t = (function () {
           const [e, t] = a.useState(null);
           return (
@@ -775,7 +785,7 @@
               e ||
                 t(
                   (function () {
-                    if (!w) {
+                    if (!I) {
                       const e = (0, C.T)(),
                         t = (0, B.kQ)(
                           "marketingmessage_config",
@@ -783,17 +793,17 @@
                         ),
                         s = new x.J(B.De.WEBAPI_BASE_URL, e.webapi_token);
                       if (
-                        ((w = new l.N8(s)),
+                        ((I = new l.N8(s)),
                         null == t ? void 0 : t.promotion_operation_token)
                       ) {
                         const e = new x.J(
                           B.De.WEBAPI_BASE_URL,
                           t.promotion_operation_token
                         );
-                        w.SetSteamInterfacePromotions(e);
+                        I.SetSteamInterfacePromotions(e);
                       }
                     }
-                    return w;
+                    return I;
                   })()
                 );
             }, [e]),
@@ -846,7 +856,7 @@
             )
           : null;
       }
-      let w;
+      let I;
     },
   },
 ]);

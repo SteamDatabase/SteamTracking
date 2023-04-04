@@ -613,6 +613,10 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
   padding-left: 0px;
+  min-width: 160px;
+}
+.pagedsettings_NewNoteButton_g8SKU {
+  margin: 0px 4px 4px 4px;
 }
 .pagedsettings_PagedSettingsDialog_Title_2rjVT {
   text-transform: uppercase;
@@ -720,12 +724,139 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   left: 24px;
   top: 8px;
   z-index: 5;
+  width: 32px;
+  height: 24px;
   -webkit-app-region: no-drag;
   font-weight: bold;
   cursor: pointer;
 }
+.pagedsettings_HidePageListButton_3LLH_ svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  margin-left: 8px;
+}
 .pagedsettings_HidePageListButton_3LLH_:hover {
   color: #fff;
+  background: #3d4450;
+  border-radius: 2px;
+}
+@keyframes gamepadui_svg_library_SpinnerSpokeFade_2Wg5d {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.gamepadui_svg_library_Spinner_3m_2l > path {
+  animation: gamepadui_svg_library_SpinnerSpokeFade_2Wg5d 0.6s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(1) {
+  animation-delay: -0.925s;
+}
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(2) {
+  animation-delay: -0.85s;
+}
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(3) {
+  animation-delay: -0.775s;
+}
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(4) {
+  animation-delay: -0.7s;
+}
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(5) {
+  animation-delay: -0.625s;
+}
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(6) {
+  animation-delay: -0.55s;
+}
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(7) {
+  animation-delay: -0.475s;
+}
+.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(8) {
+  animation-delay: -0.4s;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8- > path {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8-
+  .gamepadui_svg_library_WifiBar1_1o6HA {
+  animation-name: gamepadui_svg_library_WifiBar1Anim_1PDAZ;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8-
+  .gamepadui_svg_library_WifiBar2_1q8-n {
+  animation-name: gamepadui_svg_library_WifiBar2Anim_QyijT;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8-
+  .gamepadui_svg_library_WifiBar3_23ih_ {
+  animation-name: gamepadui_svg_library_WifiBar3Anim_2wGDz;
+}
+.gamepadui_svg_library_WirelessConnectingActive_cop8-
+  .gamepadui_svg_library_WifiBar4_2DSRH {
+  animation-name: gamepadui_svg_library_WifiBar4Anim_3jrA8;
+}
+@keyframes gamepadui_svg_library_WifiBar1Anim_1PDAZ {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar2Anim_QyijT {
+  0% {
+    opacity: 0.25;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar3Anim_2wGDz {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes gamepadui_svg_library_WifiBar4Anim_3jrA8 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gamepadui_svg_library_GenericGamepadHighlight_3-ZZD {
+  fill: #4897d2;
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_OLaBY {
   from {
@@ -1327,6 +1458,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_FieldChildren_2rhav.DesktopUI,
 .DesktopUI .gamepaddialog_FieldChildren_2rhav {
   display: flex;
+  flex-shrink: 0;
 }
 .gamepaddialog_FieldLabel_3jMlJ {
   font-size: 16px;
@@ -1663,123 +1795,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   .DialogControlsSection
   .Focusable {
   scroll-margin-top: 80px;
-}
-@keyframes gamepadui_svg_library_SpinnerSpokeFade_2Wg5d {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
-.gamepadui_svg_library_Spinner_3m_2l > path {
-  animation: gamepadui_svg_library_SpinnerSpokeFade_2Wg5d 0.6s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(1) {
-  animation-delay: -0.925s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(2) {
-  animation-delay: -0.85s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(3) {
-  animation-delay: -0.775s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(4) {
-  animation-delay: -0.7s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(5) {
-  animation-delay: -0.625s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(6) {
-  animation-delay: -0.55s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(7) {
-  animation-delay: -0.475s;
-}
-.gamepadui_svg_library_Spinner_3m_2l > path:nth-child(8) {
-  animation-delay: -0.4s;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8- > path {
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8-
-  .gamepadui_svg_library_WifiBar1_1o6HA {
-  animation-name: gamepadui_svg_library_WifiBar1Anim_1PDAZ;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8-
-  .gamepadui_svg_library_WifiBar2_1q8-n {
-  animation-name: gamepadui_svg_library_WifiBar2Anim_QyijT;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8-
-  .gamepadui_svg_library_WifiBar3_23ih_ {
-  animation-name: gamepadui_svg_library_WifiBar3Anim_2wGDz;
-}
-.gamepadui_svg_library_WirelessConnectingActive_cop8-
-  .gamepadui_svg_library_WifiBar4_2DSRH {
-  animation-name: gamepadui_svg_library_WifiBar4Anim_3jrA8;
-}
-@keyframes gamepadui_svg_library_WifiBar1Anim_1PDAZ {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar2Anim_QyijT {
-  0% {
-    opacity: 0.25;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar3Anim_2wGDz {
-  0% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.25;
-  }
-}
-@keyframes gamepadui_svg_library_WifiBar4Anim_3jrA8 {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.gamepadui_svg_library_GenericGamepadHighlight_3-ZZD {
-  fill: #4897d2;
 }
 button.gamepaddropdown_DropDownControlButton_v8oJc.DialogButton {
   padding: 10px 16px;
@@ -4717,6 +4732,34 @@ body.modals_BodyNoScrollDialog_3jhMI {
   font-size: 11px;
   color: #707379;
   line-height: 14px;
+}
+.chatroomlist_VRToggle_1Jycb {
+  color: #67707b;
+  width: 32px;
+  height: 24px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatroomlist_VRToggle_1Jycb .chatroomlist_Icon_3LOBT {
+  padding-top: 1px;
+  width: 18px;
+  height: 18px;
+}
+.chatroomlist_VRToggle_1Jycb:hover {
+  background: #3d4450;
+}
+.chatroomlist_VRToggle_1Jycb.chatroomlist_Running_2Azgv {
+  background-color: #5c7e10;
+  border-radius: 2px;
+}
+.chatroomlist_VRToggle_1Jycb.chatroomlist_Running_2Azgv
+  .chatroomlist_Icon_3LOBT {
+  color: #fff;
+}
+.chatroomlist_VRToggle_1Jycb.chatroomlist_Running_2Azgv:hover {
+  background-color: #97bb69;
 }
 .invitedrop_InviteDropMessage_2f19f {
   text-shadow: 0px 1px 6px #000, 0px 2px 12px #000;
@@ -37179,6 +37222,9 @@ div.ModalPosition_TopBar {
   overflow: visible;
   position: relative;
 }
+.DialogContent.NoContentPadding {
+  padding: 0;
+}
 .DialogToggle_Label {
   user-select: none;
   display: flex;
@@ -37246,8 +37292,9 @@ div.ModalPosition_TopBar {
 .DesktopUI .DialogHeader,
 .friendsui-container .DialogHeader {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: unset;
+  text-transform: unset;
   margin-bottom: 4px;
   line-height: 28px;
 }
@@ -37782,6 +37829,10 @@ button.TextButton.gpfocus {
 }
 .DesktopUI .DialogTwoColLayout._DialogColLayout {
   gap: 14px;
+}
+.DesktopUI .DialogTwoColLayout > ._DialogLayout {
+  max-width: unset;
+  flex: 1 0 auto;
 }
 .DialogThreeColLayout > ._DialogLayout,
 .DialogTwoThirdColLayout > ._DialogLayout:nth-child(2n + 1) {
