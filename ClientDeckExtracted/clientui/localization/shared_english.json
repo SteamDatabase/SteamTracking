@@ -2604,7 +2604,8 @@
 
 	"ImageUpload_DeleteAll_Confirm": "This will remove all of the localized artwork of this type.  Must save the event afterward for it to apply. Are you sure?",
 
-	"UserGameNotes_UntitledNote_Title": "New Note",
+	"UserGameNotes_UntitledNote_Title": "Untitled Note",
+	"UserGameNotes_NewNote": "New Note",
 	"UserGameNotes_NotesList": "Notes",
 	"UserGameNotes_DeleteNote": "Delete Note",
 	"UserGameNotes_PromptDelete": "Are you sure you want to delete this note?",

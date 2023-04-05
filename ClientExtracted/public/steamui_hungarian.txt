@@ -507,7 +507,7 @@
 "Steam_ConversionNotEnoughDiskSpace_Info"	"Nincs elég lemezterület a kiválasztott játékok telepítéséhez.\nSzabadíts fel lemezterületet, vagy nyomd meg a „Vissza” gombot, és töröld néhány elem kijelölését."
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"Nincs elég szabad lemezterület a kiválasztott játékok Steambe konvertálásához.\nSzabadíts fel %s1 MB lemezterületet, és próbáld újra."
 "Steam_Interface"				"Kezelőfelület"
-"Steam_EnableGPUWebViews_Option"		"GPU-gyorsításos megjelenítés bekapcsolása webnézetekben (újraindítást igényel)"
+"Steam_EnableGPUWebViews_Option"		"GPU-gyorsításos megjelenítés webnézetekben (újraindítást igényel)"
 "Steam_SmoothScrollWebViews_Option"		"Sima görgetés engedélyezése webes nézetben (újraindítást igényel)"
 "Steam_SetJumplistOptions"		"Tálcabeállítások megadása"
 "Steam_ShowOnlineStatusOptions"	"Megjelenítendő online opciók kiválasztása"
@@ -1506,9 +1506,9 @@
 "Steam_PeerContentTitle"			"Játékfájl-átvitel helyi hálózaton keresztül"
 "Steam_PeerContentInfo"			"E funkció lehetővé teszi, hogy a PC-d játékfájlokat cseréljen a helyi hálózatodon levő más PC-kkel vagy Steam Deckekkel, csökkentve az internetforgalmat játékok letöltésekor vagy frissítésekor."
 "Steam_PeerContentOff"			"Kikapcsolva – Ne engedélyezzen átvitelt"
-"Steam_PeerContentSameUser"		"Átvitel engedélyezése a saját eszközeim között"
-"Steam_PeerContentFriends"		"Átvitel engedélyezése a Steames barátaimmal"
-"Steam_PeerContentAnyUser"		"Átvitel engedélyezése bármely felhasználóval"
+"Steam_PeerContentSameUser"		"Átvitel a saját eszközeim között"
+"Steam_PeerContentFriends"		"Átvitel a Steames barátaimmal"
+"Steam_PeerContentAnyUser"		"Átvitel bármely felhasználóval"
 
 "Steam_CloudLabel"					"Steam Felhő"
 "Steam_CloudInfo"					"A Steam Felhő információkat tárol, melyekkel a termék használata különböző PC-ken ugyanolyan lesz."
@@ -1581,7 +1581,7 @@
 
 "Steam_SelectRestoreDirectory_Title" 	"Biztonságimentés-fájlok megkeresése"
 
-"Steam_ChooseBackupDirectory_Info"	"Válassz könyvárat a biztonsági mentés fájlok létrehozásához."
+"Steam_ChooseBackupDirectory_Info"	"Válassz könyvtárat a biztonsági mentés fájlok létrehozásához."
 "Steam_BackupDirectory"			"Biztonsági mentés helye"
 "Steam_ChangeDirectory"			"Mappaválasztás..."
 "Steam_BackingUpFiles_Info"		"Kérjük, várd meg a biztonsági mentési állományok tömörítését és mentését..."

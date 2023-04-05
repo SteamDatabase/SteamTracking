@@ -871,6 +871,10 @@ div.ModalPosition_TopBar {
   position: relative;
 }
 
+.DialogContent.NoContentPadding {
+  padding: 0;
+}
+
 .DialogToggle_Label {
   user-select: none;
   display: flex;
@@ -959,8 +963,9 @@ div.ModalPosition_TopBar {
   /* stylelint-disable-line selector-class-pattern */
   /* we're trying a thicker, friendlier title that isn't shouting*/
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: unset;
+  text-transform: unset;
   margin-bottom: 4px;
   line-height: 28px;
 }
@@ -1626,6 +1631,11 @@ button.TextButton.gpfocus {
 
 .DesktopUI .DialogTwoColLayout._DialogColLayout {
   gap: 14px;
+}
+
+.DesktopUI .DialogTwoColLayout > ._DialogLayout {
+  max-width: unset;
+  flex: 1 0 auto;
 }
 
 .DialogThreeColLayout > ._DialogLayout,
@@ -2784,4 +2794,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=e75e2d1eeaffef1c7fca*/
+/*# sourceMappingURL=friends.css.map?contenthash=e59dd90316d434029a36*/

@@ -13673,6 +13673,10 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   font-size: 22px;
   font-weight: 400;
 }
+.achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl.DesktopUI,
+.DesktopUI .achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl {
+  font-weight: 700;
+}
 .achievementsheader_StatsBlock__gDkI {
   padding: 14px;
   display: flex;
@@ -16597,6 +16601,22 @@ div.LowPerfMode
   height: 24px;
   margin-left: auto;
 }
+.installrequest_FolderSelector_vaNI8
+  .installrequest_FolderSettings_2pnPQ.DesktopUI,
+.DesktopUI
+  .installrequest_FolderSelector_vaNI8
+  .installrequest_FolderSettings_2pnPQ {
+  line-height: 12px;
+}
+.installrequest_FolderSelector_vaNI8
+  .installrequest_FolderSettings_2pnPQ
+  svg.DesktopUI,
+.DesktopUI
+  .installrequest_FolderSelector_vaNI8
+  .installrequest_FolderSettings_2pnPQ
+  svg {
+  width: 20px;
+}
 .installrequest_DiskSpace_3lAxX {
   font-size: 12px;
   font-weight: bold;
@@ -16720,6 +16740,7 @@ div.LowPerfMode
   min-width: 64px;
 }
 .installrequest_NoticeInstallFolder_WonjN {
+  color: #ffc82c;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -16731,9 +16752,6 @@ div.LowPerfMode
 .installrequest_NoticeInstallFolder_WonjN svg {
   width: 16px;
   height: 16px;
-}
-.installrequest_NoticeInstallFolder_WonjN.installrequest_Warning_bhL5Q {
-  color: #ffc82c;
 }
 .DesktopUI .installrequest_InstallRequestModal_3wtPU {
   min-width: 500px;
@@ -50378,7 +50396,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .steamdesktopoverlay_ToolbarContainer_3OzkV .steamdesktopoverlay_Toolbar_fbu3l {
   display: flex;
   height: 50px;
-  opacity: 0.5;
+  opacity: 0.75;
   transition: opacity 0.1s ease-in-out;
 }
 .steamdesktopoverlay_ToolbarContainer_3OzkV
@@ -50434,11 +50452,18 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   width: fit-content;
   height: fit-content;
 }
-.steamdesktopoverlay_OverlayPopup_C9tvu.GameNotes.steamdesktopoverlay_PinnedView_2OoAj {
+.steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.GameNotes,
+.steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.OverlayBrowser_Guides {
   background: none;
 }
-.steamdesktopoverlay_OverlayPopup_C9tvu.GameNotes.steamdesktopoverlay_PinnedView_2OoAj
+.steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.GameNotes
+  .TitleBar,
+.steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.OverlayBrowser_Guides
   .TitleBar {
+  visibility: hidden;
+}
+.steamdesktopoverlay_OverlayPopup_C9tvu
+  .steamdesktopoverlay_PinnedViewURLBar_3QtXR {
   visibility: hidden;
 }
 .steamdesktopoverlay_OverlayPopup_C9tvu .title-area-children {
@@ -50455,7 +50480,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: calc(100% - 40px);
+  width: calc(100% - 100px);
   margin-right: 0px;
 }
 .ModalDialogPopup:not(.steamdesktopoverlay_NoTitlebarSpacer_20pOd)
@@ -50602,13 +50627,19 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-grow: 1;
   display: flex;
 }
+.steamdesktopoverlay_OverviewTitle_2heIy {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 15px;
+}
 .steamdesktopoverlay_GameOverview_27m9Q {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
   overflow-y: auto;
-  padding: 0px 5px 5px 5px;
+  padding: 5px 10px 5px 10px;
   background-color: #0e141b;
 }
 .steamdesktopoverlay_GameOverview_27m9Q
@@ -50805,6 +50836,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .steamdesktopoverlay_AchievementDetails_iXxDt {
   display: flex;
   flex-direction: row;
+  gap: 3px;
+  margin-top: 2px;
 }
 .steamdesktopoverlay_GameOverview_27m9Q
   .steamdesktopoverlay_GameOverviewSection_1vG-v
@@ -50814,6 +50847,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .steamdesktopoverlay_AchievementContent_1vfXh {
   margin-left: 5px;
   width: 247px;
+  align-items: bottom;
 }
 .steamdesktopoverlay_GameOverview_27m9Q
   .steamdesktopoverlay_GameOverviewSection_1vG-v
@@ -50824,6 +50858,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .steamdesktopoverlay_AchievementTitle_gK1HB {
   font-size: 16px;
   font-weight: 500;
+  line-height: 16px;
   color: #dcdedf;
 }
 .steamdesktopoverlay_GameOverview_27m9Q
@@ -50833,6 +50868,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .steamdesktopoverlay_AchievementDetails_iXxDt
   .steamdesktopoverlay_AchievementContent_1vfXh
   .steamdesktopoverlay_AchievementDescription_I0sr9 {
+  margin-top: 2px;
   font-size: 12px;
   color: #b8bcbf;
   white-space: nowrap;
@@ -50911,205 +50947,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .steamdesktopoverlay_RecentNewsItem_3eNE5:hover {
   color: #23262e;
   background-color: #dcdedf;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialog_1tQy- {
-  min-width: 600px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  height: 100%;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_DialogHeader_tNxx1 {
-  text-align: center;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_DialogBodyText_Xdr35 {
-  font-size: 14px;
-  padding-bottom: 0px;
-  line-height: 22px;
-  font-weight: 400;
-  color: #b8bcbf;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn {
-  margin-top: 8px;
-  padding: 3px 0px;
-  display: flex;
-  flex-direction: row;
-  background: rgba(61, 68, 80, 0.5);
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_Checkbox_f3L-g {
-  width: 5%;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_Icon_3LUXL {
-  width: 6%;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_AppName_1kVk1 {
-  width: 32%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_AppName_1kVk1:hover {
-  color: #b8bcbf;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_ExePath_1LM_T {
-  width: 62%;
-  padding-left: 6px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_ExePath_1LM_T:hover {
-  color: #b8bcbf;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameList_1e6tj {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background: #23262e;
-  border: 1px solid #0e141b;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameList_1e6tj
-  .addnonsteamgamedialog_LoadingContainer_2xttH {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 2px 0;
-  cursor: pointer;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM:hover {
-  background-color: rgba(61, 68, 80, 0.5);
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_Checkbox_f3L-g {
-  margin: auto;
-  padding: 4px 8px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_Checkbox_f3L-g.DialogCheckbox {
-  border: 0.5px solid #3d4450;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_IconContainer_1lI4J {
-  margin-right: 2px;
-  width: 6%;
-  display: flex;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_IconContainer_1lI4J
-  img {
-  width: 26px;
-  height: 26px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_AppName_1kVk1 {
-  width: 32%;
-  font-weight: 500;
-  overflow-x: hidden;
-  white-space: nowrap;
-  margin: auto 0;
-  color: #dcdedf;
-  font-size: 13px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_ExePath_1LM_T {
-  width: 62%;
-  padding-left: 6px;
-  font-style: italic;
-  overflow-x: hidden;
-  white-space: nowrap;
-  margin: auto 0;
-  font-size: 12px;
-  color: #dcdedf;
-  opacity: 50%;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Footer_kOsdH {
-  flex-direction: row;
-  display: flex;
-  gap: 10px;
-  padding-top: 12px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Footer_kOsdH
-  .addnonsteamgamedialog_Spacer_3bbcw {
-  flex: 1;
-  min-width: 0;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Footer_kOsdH
-  button.DialogButton {
-  padding: 0 12px;
-  width: auto;
-  min-width: 100px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_SortArrowContainer_20na8 {
-  display: flex;
-  padding-left: 6px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_SortArrowContainer_20na8
-  .addnonsteamgamedialog_Arrow_22hYb {
-  width: 14px;
-  height: 14px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Filter_2Fheq {
-  flex: 1;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_BrowseButton_3XOLU {
-  flex-shrink: 1;
-  flex-grow: 0;
 }
 .shutdowndialog_ShutdownDialog_3StXN .shutdowndialog_Body_2Se5J {
   align-items: center;
@@ -52184,9 +52021,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   padding-left: 2px;
   font-size: 12px;
   color: #b8bcbf;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   display: flex;
   flex-direction: row;
   align-items: center;

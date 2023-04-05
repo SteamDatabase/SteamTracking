@@ -118,7 +118,7 @@
 "ServerBrowser_RemoveServerFromHistory"		"Αφαίρεση διακομιστή από το ιστορικό"
 "ServerBrowser_LastPlayed"			"Τελευταία εκκίνηση"
 
-"ServerBrowser_OfflineMode" 			"Το Steam είναι αυτή τη στιγμή σε λειτουργία εκτός σύνδεσης. Τα παιχνίδια στο διαδίκτυο δε θα είναι διαθέσιμα μέχρι να επανεκκινήσετε το\nsteam ενώ είστε συνδεδεμένος στο διαδίκτυο."
+"ServerBrowser_OfflineMode" 			"Το Steam είναι σε λειτουργία εκτός σύνδεσης. Τα διαδικτυακά παιχνίδια δεν θα είναι διαθέσιμα μέχρι να επανεκκινήσετε το\nsteam ενώ είστε συνδεδεμένος στο διαδίκτυο."
 
 "ServerBrowser_ConnectToServer"		"Σύνδεση στον διακομιστή"
 "ServerBrowser_ViewServerInfo"		"Εμφάνιση πληροφοριών διακομιστή"

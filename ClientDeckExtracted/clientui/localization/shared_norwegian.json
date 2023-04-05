@@ -2539,5 +2539,8 @@
 	"Notification_FriendInvite_Description": "Sendte deg en venneforespørsel",
 	"Notification_GiftReceived_Title": "Gave",
 	"Notification_GiftReceived_Body": "Du har fått en gave!",
-	"Notification_GiftReceived_Description": "Fra %1$s"
+	"Notification_GiftReceived_Description": "Fra %1$s",
+	"NotificationsList_EmptyTitle": "Du har ingen varsler akkurat nå.",
+	"NotificationsList_EmptyTitle_New": "Du har ingen nye varsler akkurat nå.",
+	"NotificationsList_EmptyBody": "Her kan du se Steam-varsler som omhandler ønskelisten, venner, spill, lager og mer."
 }

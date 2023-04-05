@@ -862,7 +862,7 @@ Vänligen skriv in SMS-koden nedan."
 "SteamUI_Preload_GameNotReady_Title" "Inte tillgängligt ännu"
 "SteamUI_Preload_GameNotReady" "Det här spelet har inte släppts än. Det kommer att låsas upp\nför spel så fort det släpps officiellt."
 
-"SteamUI_ValveSurvey_Title"									"Valves hårdvaruundersökning"
+"SteamUI_ValveSurvey_Title"									"Valves maskinvaruundersökning"
 "SteamUI_ValveSurvey_YesParticipate"						"Ja, jag svarar gärna på enkäten."
 "SteamUI_ValveSurvey_NoParticipate"							"Nej tack"
 

@@ -103,6 +103,21 @@ message CStore_GetLocalizedNameForTags_Response {
 	repeated .CStore_GetLocalizedNameForTags_Response.Tag tags = 1;
 }
 
+message CStore_GetTagList_Request {
+	optional string language = 1;
+	optional string have_version_hash = 2 [(description) = "The hash returned in the last call.  Will return no results if the list hasn't changed."];
+}
+
+message CStore_GetTagList_Response {
+	message Tag {
+		optional uint32 tagid = 1;
+		optional string name = 2;
+	}
+
+	optional string version_hash = 1 [(description) = "Pass in future calls, server will only return data if it has changed (hash is per-language)."];
+	repeated .CStore_GetTagList_Response.Tag tags = 2;
+}
+
 message CStoreDiscoveryQueueSettings {
 	optional bool os_win = 4;
 	optional bool os_mac = 5;
@@ -295,6 +310,10 @@ service Store {
 
 	rpc GetLocalizedNameForTags (.CStore_GetLocalizedNameForTags_Request) returns (.CStore_GetLocalizedNameForTags_Response) {
 		option (method_description) = "Gets tag names in a different language";
+	}
+
+	rpc GetTagList (.CStore_GetTagList_Request) returns (.CStore_GetTagList_Response) {
+		option (method_description) = "Get the list of tags, localized";
 	}
 
 	rpc GetDiscoveryQueue (.CStore_GetDiscoveryQueue_Request) returns (.CStore_GetDiscoveryQueue_Response) {

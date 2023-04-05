@@ -2539,5 +2539,8 @@
     "Notification_FriendInvite_Description": "ți-a trimis o cerere de prietenie",
     "Notification_GiftReceived_Title": "Cadou",
     "Notification_GiftReceived_Body": "Ai primit un cadou!",
-    "Notification_GiftReceived_Description": "De la %1$s"
+    "Notification_GiftReceived_Description": "De la %1$s",
+    "NotificationsList_EmptyTitle": "Momentan nu ai nicio notificare.",
+    "NotificationsList_EmptyTitle_New": "Momentan nu ai nicio notificare nouă.",
+    "NotificationsList_EmptyBody": "Aici vei vedea notificările tale Steam despre lista de dorințe, prieteni, jocuri, inventar și multe altele."
 }

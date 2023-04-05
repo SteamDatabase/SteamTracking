@@ -18,7 +18,7 @@
 "Overlay_SettingsScreenshotActionLabel" "Jakmile pořídím snímek:"
 "Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Když je režim SteamVR aktivní, spouštět obyčejné hry na plátnu ve virtuální realitě"
 "Overlay_SettingsDesktopGameTheaterCheck" "Když je režim SteamVR aktivní, použít plátno ve virtuální realitě"
-"Overlay_SettingsIsVRShortcut"			"Zahrnout do VR knihovny"
+"Overlay_SettingsIsVRShortcut"			"Zahrnout ve VR knihovně"
 
 "Steam_Settings_Ingame_ShowFPS_Title"	"Ukazatel FPS ve hře"
 "Steam_Settings_Ingame_ShowFPS_Off" "Nezobrazovat"

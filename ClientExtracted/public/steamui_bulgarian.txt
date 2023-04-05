@@ -164,7 +164,6 @@
 
 "SteamUI_GamesDialog_MyGames"		"МОИТЕ ИГРИ"
 "SteamUI_GamesDialog_MyMedia"		"МЕДИЯ"
-"SteamUI_GamesDialog_ThirdParty" 	"ИГРИ ОТ ДРУГИ ПРОИЗВОДИТЕЛИ"
 "SteamUI_GamesDialog_AvailableGames" 	"ДОСТЪПНИ ИГРИ"
 "SteamUI_GamesDialog_ComingSoon" 	"ОЧАКВАЙТЕ СКОРО"
 "SteamUI_GamesDialog_RightClick_LaunchGames" "Пускане на играта…"
@@ -1594,7 +1593,7 @@
 
 "Steam_SelectRestoreDirectory_Title" 	"Намерете Вашите резервни копия на файловете"
 
-"Steam_ChooseBackupDirectory_Info"	"Изберете директорията, в която искате да създадете резервно копие на файловете."
+"Steam_ChooseBackupDirectory_Info"	"Изберете директорията, в която желаете да създадете резервно копие на файловете."
 "Steam_BackupDirectory"			"Директория на резервното копие"
 "Steam_ChangeDirectory"			"Преглед…"
 "Steam_BackingUpFiles_Info"		"Моля, изчакайте, докато архивите на резервното копие се компресират и запазват…"

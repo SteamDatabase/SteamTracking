@@ -346,6 +346,7 @@
  T SDL_CreateWindow
  T SDL_CreateWindowAndRenderer
  T SDL_CreateWindowFrom
+ T SDL_CreateWindowWithPosition
  T SDL_CursorVisible
  T SDL_DYNAPI_entry
  T SDL_DelEventWatch

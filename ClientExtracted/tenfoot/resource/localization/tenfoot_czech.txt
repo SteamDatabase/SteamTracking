@@ -1656,7 +1656,7 @@
 	"Library_Details_Settings"			"Spravovat"
 	"Library_Details_SetCategory"		"Zvolit kategorie..."
 	"Library_Details_SetLanguage"		"Vybrat jazyk..."
-	"Library_Details_IncludeInVR"		"Zahrnout do VR knihovny"
+	"Library_Details_IncludeInVR"		"Zahrnout ve VR knihovně"
 	"Library_Details_DeleteLocalContent"	"Odinstalovat..."
 	"Library_Details_DeleteShortcut"	"Odstranit zástupce..."
 	"Library_Details_ChooseIcon"	"Změnit ikonu..."

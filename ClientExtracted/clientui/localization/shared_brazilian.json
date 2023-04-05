@@ -2539,5 +2539,8 @@
 	"Notification_FriendInvite_Description": "enviou um pedido de amizade",
 	"Notification_GiftReceived_Title": "Presente",
 	"Notification_GiftReceived_Body": "Você recebeu um presente!",
-	"Notification_GiftReceived_Description": "De %1$s"
+	"Notification_GiftReceived_Description": "De %1$s",
+	"NotificationsList_EmptyTitle": "Não há notificações no momento.",
+	"NotificationsList_EmptyTitle_New": "Não há notificações novas no momento.",
+	"NotificationsList_EmptyBody": "Aqui, você poderá ver notificações do Steam relacionadas à sua lista de desejos, amigos, jogos, inventário e mais."
 }

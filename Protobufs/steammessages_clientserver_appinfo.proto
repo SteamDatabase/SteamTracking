@@ -73,6 +73,7 @@ message CMsgClientPICSProductInfoRequest {
 	optional uint32 num_prev_failed = 4;
 	optional uint32 OBSOLETE_supports_package_tokens = 5;
 	optional uint32 sequence_number = 6;
+	optional bool single_response = 7;
 }
 
 message CMsgClientPICSProductInfoResponse {

@@ -368,7 +368,7 @@
 "Steam_ChangeUserDialogOKButton"			"Mudar de conta"
 "Steam_ChangeUserDialogLabel"			"Nome da conta:"
 
-"Steam_FlushConfigDialogTitle"			"Steam - Limpar Cache de Downloads"
+"Steam_FlushConfigDialogTitle"			"Steam - Limpar cache de downloads"
 "Steam_FlushConfigDialogMsg"			"Isto irá limpar a tua cache de downloads local e terás de iniciar sessão de novo.\n\nPretendes continuar?"
 
 "Steam_AccountDialog_Logout"			"Terminar sessão..."
@@ -2753,7 +2753,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_Country_GB"		"Reino Unido"
 "Steam_Country_UM"		"Ilhas Menores Afastadas dos Estados Unidos"
 "Steam_Country_UY"		"Uruguai"
-"Steam_Country_UZ"		"Uzbequistão"
+"Steam_Country_UZ"		"Usbequistão"
 "Steam_Country_VU"		"Vanuatu"
 "Steam_Country_VE"		"Venezuela"
 "Steam_Country_VN"		"Vietname"

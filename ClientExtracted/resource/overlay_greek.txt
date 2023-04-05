@@ -4,7 +4,7 @@
 "Tokens"
 {
 "Overlay_Splash_Hotkey"		"Πατήστε %hotkey% για να ξεκινήσετε"
-"Overlay_Splash_Message"		"Αποκτήστε πρόσβαση στην Κοινότητα Steam καθώς παίζετε."
+"Overlay_Splash_Message"		"Αποκτήστε πρόσβαση στην Κοινότητα Steam ενώ παίζετε."
 
 "Overlay_SettingsTabTitle"	"Εντός παιχνιδιού"
 "Overlay_SettingsTabTitleApp"	"Σε εφαρμογή"

@@ -2539,5 +2539,8 @@
 	"Notification_FriendInvite_Description": "からフレンドリクエストを受け取りました",
 	"Notification_GiftReceived_Title": "ギフト",
 	"Notification_GiftReceived_Body": "ギフトが届きました！",
-	"Notification_GiftReceived_Description": "送り主：%1$s"
+	"Notification_GiftReceived_Description": "送り主：%1$s",
+	"NotificationsList_EmptyTitle": "現在通知はありません。",
+	"NotificationsList_EmptyTitle_New": "現在新しい通知はありません。",
+	"NotificationsList_EmptyBody": "ここでは、ウィッシュリスト、フレンド、ゲーム、インベントリなどに関するSteam通知を確認できます。"
 }

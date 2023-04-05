@@ -12,7 +12,7 @@
 "Overlay_SettingsDescriptionApp"	"A Steam tovább működhet, és alkalmazáson belül is értesíthet Steam közösségi üzenetekről, valamint teljes barátok-kezelőfelületet jeleníthet meg."
 "Overlay_SettingsEnable"	"A Steam Átfedés engedélyezése játékon belül"
 "Overlay_SettingsEnableApp"	"Steam közösség engedélyezése alkalmazáson belül"
-"Overlay_SettingsSCTenfootEnable"	"Nagy Kép átfedés használata, amikor az asztalról használsz Steam bemenetes játékvezérlőt"
+"Overlay_SettingsSCTenfootEnable"	"Nagy Kép átfedés használata Steam Beviteles játékvezérlők asztalról használatakor"
 "Overlay_SettingsHotKeyLabel"	"Átfedés-gyorsbillentyűk"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Képernyőmentés-gyorsbillentyűk"
 "Overlay_SettingsScreenshotActionLabel" "Mikor képernyőmentés készült"

@@ -2539,5 +2539,8 @@
     "Notification_FriendInvite_Description": "Надсилає вам запит на дружбу",
     "Notification_GiftReceived_Title": "Дарунок",
     "Notification_GiftReceived_Body": "Ви отримали дарунок!",
-    "Notification_GiftReceived_Description": "Від %1$s"
+    "Notification_GiftReceived_Description": "Від %1$s",
+    "NotificationsList_EmptyTitle": "Наразі у вас немає жодних сповіщень.",
+    "NotificationsList_EmptyTitle_New": "Наразі у вас немає нових сповіщень.",
+    "NotificationsList_EmptyBody": "Тут будуть з’являтися сповіщення Steam про список бажаного, друзів, ігри, інвентар та інше."
 }

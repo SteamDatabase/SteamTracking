@@ -2539,5 +2539,8 @@
 	"Notification_FriendInvite_Description": "Vás žádá o přátelství",
 	"Notification_GiftReceived_Title": "Dárek",
 	"Notification_GiftReceived_Body": "Dostali jste dárek!",
-	"Notification_GiftReceived_Description": "Od uživatele %1$s"
+	"Notification_GiftReceived_Description": "Od uživatele %1$s",
+	"NotificationsList_EmptyTitle": "Momentálně nemáte žádná upozornění.",
+	"NotificationsList_EmptyTitle_New": "Momentálně nemáte žádná nová upozornění.",
+	"NotificationsList_EmptyBody": "Zde uvidíte upozornění služby Steam týkající se Vašeho seznamu přání, přátel, her, inventáře a všeho dalšího."
 }

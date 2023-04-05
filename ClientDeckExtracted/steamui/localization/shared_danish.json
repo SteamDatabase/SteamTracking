@@ -2539,5 +2539,8 @@
     "Notification_FriendInvite_Description": "har sendt dig en venneanmodning",
     "Notification_GiftReceived_Title": "Gave",
     "Notification_GiftReceived_Body": "Du har modtaget en gave!",
-    "Notification_GiftReceived_Description": "Fra %1$s"
+    "Notification_GiftReceived_Description": "Fra %1$s",
+    "NotificationsList_EmptyTitle": "Du har ingen notifikationer lige nu.",
+    "NotificationsList_EmptyTitle_New": "Du har ingen nye notifikationer lige nu.",
+    "NotificationsList_EmptyBody": "Her kan du se Steam-notifikationer om din ønskeliste, dine venner, dit inventar og meget mere."
 }

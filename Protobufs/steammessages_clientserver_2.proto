@@ -751,6 +751,7 @@ message CMsgClientStartPeerContentServerResponse {
 message CMsgClientGetPeerContentInfo {
 	optional fixed64 steamid = 1;
 	optional fixed64 client_remote_id = 2;
+	optional bool owned_games_visible = 3;
 }
 
 message CMsgClientGetPeerContentInfoResponse {

@@ -1179,7 +1179,6 @@
  V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  V_ParseSteamOpenURLExternalProtocol
  V_ParseURLQueryString
- V_RemoveChar
  V_RemoveDotSlashes
  V_ReplaceBadFilenameCharactersInPlace
  V_SetExtension

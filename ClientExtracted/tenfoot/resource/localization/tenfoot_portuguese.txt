@@ -4712,7 +4712,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Country_UM"		"Ilhas Menores Afastadas dos Estados Unidos"
 	"Country_US"		"Estados Unidos"
 	"Country_UY"		"Uruguai"
-	"Country_UZ"		"Uzbequistão"
+	"Country_UZ"		"Usbequistão"
 	"Country_VA"		"Cidade do Vaticano"
 	"Country_VC"		"São Vicente"
 	"Country_VE"		"Venezuela"

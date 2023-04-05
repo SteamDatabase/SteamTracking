@@ -2183,6 +2183,34 @@
   color: #707379;
   line-height: 14px;
 }
+.chatroomlist_VRToggle_1Jycb {
+  color: #67707b;
+  width: 32px;
+  height: 24px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatroomlist_VRToggle_1Jycb .chatroomlist_Icon_3LOBT {
+  padding-top: 1px;
+  width: 18px;
+  height: 18px;
+}
+.chatroomlist_VRToggle_1Jycb:hover {
+  background: #3d4450;
+}
+.chatroomlist_VRToggle_1Jycb.chatroomlist_Running_2Azgv {
+  background-color: #5c7e10;
+  border-radius: 2px;
+}
+.chatroomlist_VRToggle_1Jycb.chatroomlist_Running_2Azgv
+  .chatroomlist_Icon_3LOBT {
+  color: #fff;
+}
+.chatroomlist_VRToggle_1Jycb.chatroomlist_Running_2Azgv:hover {
+  background-color: #97bb69;
+}
 .invitedrop_InviteDropMessage_2f19f {
   text-shadow: 0px 1px 6px #000, 0px 2px 12px #000;
   user-select: none;

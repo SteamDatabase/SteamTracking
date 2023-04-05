@@ -539,6 +539,7 @@ N18COverlayWebBrowser31CCallback_OnParentalLockChangedE
 9CCallbackI18COverlayWebBrowser21ParentalLockChanged_tLb0EE
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
 14CUtlLinkedListI17BrowserPosition_tiE
+13CEmbeddedHTML
 20COverlayWebVguiFrame
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -9896,8 +9897,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Apr  3 2023
-19:45:16
+Apr  4 2023
+14:02:16
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13798,28 +13799,25 @@ Dec
 </)
 0
 0
-2C
-1C
-/C
-#C
-"C
-!
 p
 0
 0
 p
 0
-l!
-F&
-=&
+p%
+n&
+bB
 &
 &
 &
 &
 &
 &
+7&
+"&
 !
-!
+WB
+&
 &
 &
 &
@@ -13835,15 +13833,10 @@ j
 j
 j
 j
-l%
 Ic
 0
-m$
-6%
-!%
 p
 0
-|%
 j
 j
 j
@@ -13854,15 +13847,12 @@ j
 %
 %
 %
-%
-O,
 j
 j
 ]
 ,
 %
-N#
-6#
+u$
 j
 j
 j
@@ -13911,16 +13901,17 @@ j
 j
 j
 j
+d$
+\$
 #
+:$
 j
 j
 j
 j
-'$
+g@
 %
 %
-$
-|$
 j
 j
 $
@@ -13943,11 +13934,13 @@ j
 j
 $
 $
+S$
 0
+{$
+;"
 A9]
 O
 d
-f"
 j
 j
 j
@@ -13968,6 +13961,7 @@ j
 @
 
 0
+m#
 p
 0
 p
@@ -13976,6 +13970,8 @@ p
 0
 p
 0
+*
+*
 p
 0
 p
@@ -13992,8 +13988,6 @@ p
 p
 1
 @
-/
-^"
 #
 #
 #
@@ -14002,7 +13996,7 @@ p
 #
 #
 #
-A"
+#
 Mce
 #
 
@@ -14039,14 +14033,12 @@ j
 j
 j
 j
-D"
-W!
-N!
-<>
+B"
 Hi
 "
 "
-"
+}=
+&!
 !
 !
 !
@@ -14068,8 +14060,10 @@ j
 0
 p
 0
-Z$
-3
+w!
+Y!
+Q!
+8
 #
 j
 j
@@ -14092,7 +14086,6 @@ j
 j
 j
 !
-!
 j
 j
 j
@@ -14112,8 +14105,9 @@ AT=
 D
 @
 @
-}
-/
+'
+'
+t
 @
 Hc
 Hc
@@ -14145,17 +14139,15 @@ IcE
 IcE
 @
 @
-&
+\"
 V
 =
-=/
 =
+$
 !
--
-7
 @
 &
-,
+0*
 @
 M9e
 @
@@ -14349,19 +14341,21 @@ P
 @
 |
 |
+R"
 @
 @
-"
 !
+!
+
 d
-fD9%=m(
-fD9-&g(
-L
+v
+fD9%Zo(
+fD9-3j(
 
 
 
-/
 A+M
+t7f9o)(
 
 
 j
@@ -14370,14 +14364,9 @@ j
 j
 j
 j
-
-
-
-
 =
 0
-T
-7
+v
 j
 j
 j
@@ -14390,8 +14379,6 @@ j
 j
 j
 
-
-
 j
 j
 j
@@ -14406,17 +14393,11 @@ j
 j
 j
 j
-M&
 j
 j
 j
 
-@&
-&
-&
-&
-&
-&
+'&
 &
 &
 &
@@ -14425,12 +14406,11 @@ d
 &
 d
 0
+
 A+4$A+u
-z
 =
 =
 @
-
 j
 j
 j
