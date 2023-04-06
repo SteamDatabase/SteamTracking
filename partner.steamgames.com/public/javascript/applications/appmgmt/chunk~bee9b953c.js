@@ -3727,6 +3727,7 @@
                 heading: n.heading,
                 id: n.id || void 0,
                 exclude_from_search: n.exclude_from_search,
+                search_alias: n.search_alias,
               };
             n.must &&
               (Array.isArray(n.must)
@@ -3799,6 +3800,7 @@
               heading: n.heading,
               id: n.id || void 0,
               exclude_from_search: Boolean(n.exclude_from_search),
+              search_alias: n.search_alias,
             };
           n.must &&
             (Array.isArray(n.must)
@@ -3861,6 +3863,7 @@
               heading: r.heading || void 0,
               id: r.id,
               exclude_from_search: r.exclude_from_search,
+              search_alias: r.search_alias,
             }),
               1 ===
                 (null === (m = n[r.handle].must) || void 0 === m
@@ -4762,6 +4765,14 @@
                 checked: t.exclude_from_search,
                 onChange: (e) => {
                   (t.exclude_from_search = e), s();
+                },
+              }),
+              r.createElement(m.II, {
+                label: "Search aliases",
+                tooltip: "Comma separated search aliases",
+                value: t.search_alias,
+                onChange: (e) => {
+                  (t.search_alias = e.target.value), s();
                 },
               }),
               r.createElement(m.ry, {
