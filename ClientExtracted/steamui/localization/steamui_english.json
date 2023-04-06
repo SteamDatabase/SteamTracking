@@ -1400,7 +1400,6 @@
     "Downloads_DownloadStarted": "Download initiated: %1$s",
     "Downloads_DownloadTimeRemaining": "Estimated time remaining: %1$s",
     "Downloads_DownloadFinished": "Completed: %1$s",
-    "Downloads_AutoUpdate_Default": "",
     "Downloads_AutoUpdate_DoNotUpdate": "Update on Launch",
     "Downloads_AutoUpdate_HighPriority": "High Priority",
     "Downloads_Section_Current": "Up Next",

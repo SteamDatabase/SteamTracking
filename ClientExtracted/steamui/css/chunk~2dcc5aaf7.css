@@ -44607,10 +44607,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .notificationcontent_StandardTemplate_5HZT7,
 .notificationcontent_PinnedTemplate_1X-O1 {
-  padding: 13px 13px;
+  padding: 10px 10px;
   display: flex;
   flex-direction: row;
-  height: 44px;
+  align-items: center;
+  height: 50px;
   position: relative;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
@@ -44638,8 +44639,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   content: "";
   position: absolute;
   top: 0;
-  left: 13px;
-  right: 13px;
+  left: 10px;
+  right: 10px;
   height: 1px;
   border-bottom: 1px solid #3d4450;
 }
@@ -44655,6 +44656,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Content_2TTnY {
   margin-left: 12px;
   min-width: 0;
+  overflow: hidden;
 }
 .notificationcontent_StandardTemplate_5HZT7 .notificationcontent_Header_1KnyC,
 .notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Header_1KnyC {
@@ -44690,10 +44692,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-overflow: ellipsis;
   margin-right: 0.5em;
   color: #fff;
-}
-.notificationcontent_StandardTemplate_5HZT7 .notificationcontent_Body_2RpDR,
-.notificationcontent_PinnedTemplate_1X-O1 .notificationcontent_Body_2RpDR {
-  overflow: hidden;
 }
 .notificationcontent_StandardTemplate_5HZT7
   .notificationcontent_StandardNotificationDescription_zB56A,
@@ -44818,10 +44816,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .notificationcontent_StandardTemplateDesktop_jD4XY,
 .notificationcontent_DesktopToastTemplate_vW8HM,
 .notificationcontent_PinnedTemplateDesktop_1-8YO {
-  padding: 13px 13px;
+  padding: 10px 10px;
   display: flex;
   flex-direction: row;
-  height: 44px;
+  align-items: center;
+  height: 50px;
   position: relative;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
@@ -45112,15 +45111,21 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 100%;
   border-bottom: 1px solid #23262e;
 }
+.notificationcontent_StandardTemplateDesktop_jD4XY:hover {
+  background: #474f5c;
+}
 .notificationcontent_StandardTemplateDesktop_jD4XY.notificationcontent_Unread_1X5wH {
   background-color: #3d4450;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.notificationcontent_StandardTemplateDesktop_jD4XY.notificationcontent_Unread_1X5wH:hover {
+  background: #474f5c;
 }
 .notificationcontent_PinnedTemplateDesktop_1-8YO {
   height: 36px;
   padding: 0px;
   position: relative;
   background-color: #3d4450;
+  background: linear-gradient(#474f5c, #3d4450 60%);
 }
 .notificationcontent_PinnedTemplateDesktop_1-8YO:not(:first-child):after {
   content: "";
@@ -45130,13 +45135,16 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 100%;
   border-bottom: 1px solid #23262e;
 }
+.notificationcontent_PinnedTemplateDesktop_1-8YO:hover {
+  background: #474f5c;
+}
 .notificationcontent_PinnedTemplateDesktop_1-8YO
   .notificationcontent_Icon_opgc6 {
   width: 18px;
   height: 18px;
   margin-right: 10px;
   padding-left: 2px;
-  color: #dcdedf;
+  color: #b8bcbf;
 }
 .notificationcontent_PinnedTemplateDesktop_1-8YO
   .notificationcontent_Icon_opgc6
@@ -45154,8 +45162,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #dcdedf;
-  font-size: 13px;
+  color: #70ba24;
+  font-size: 12px;
+  font-weight: 400;
 }
 .notificationcontent_PinnedTemplateDesktop_1-8YO.gpfocus
   .notificationcontent_Timestamp_3q7nN {
@@ -45164,9 +45173,16 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .notificationcontent_AllNotificationsTemplate_3Ak7c {
   background: rgba(0, 0, 0, 0.2);
   align-items: center;
+  cursor: pointer;
 }
 .notificationcontent_AllNotificationsTemplate_3Ak7c:hover {
-  cursor: pointer;
+  background: #474f5c;
+}
+.notificationcontent_AllNotificationsTemplate_3Ak7c.notificationcontent_Unread_1X5wH {
+  background-color: #3d4450;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.notificationcontent_AllNotificationsTemplate_3Ak7c.notificationcontent_Unread_1X5wH:hover {
   background: #474f5c;
 }
 .notificationcontent_AllNotificationsTemplate_3Ak7c
@@ -45201,10 +45217,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   svg {
   color: #8b929a;
   fill: #8b929a;
-}
-.notificationcontent_AllNotificationsTemplate_3Ak7c.notificationcontent_Unread_1X5wH {
-  background-color: #3d4450;
-  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 .notificationcontent_DesktopToastTemplate_vW8HM {
   background: none;
@@ -45325,7 +45337,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .notificationcontent_AvatarStatus_1d4A6 {
   width: 3px;
-  height: 100%;
+  height: 44px;
   flex-shrink: 0;
   box-shadow: -1px 0px 1px #000a;
 }
@@ -45365,7 +45377,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 13px 0px;
+  padding: 10px 0px;
   width: 100%;
   height: 44px;
   display: flex;
@@ -45382,7 +45394,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   opacity: 0;
 }
 .notificationcontent_ShimmerLogo_34N7A {
-  margin-left: 13px;
+  margin-left: 10px;
 }
 .notificationcontent_ShimmerBody_2XMfL {
   width: 160px;
@@ -45845,10 +45857,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .standardtemplates_StandardTemplate_3e_DB,
 .standardtemplates_PinnedTemplate_2eBei {
-  padding: 13px 13px;
+  padding: 10px 10px;
   display: flex;
   flex-direction: row;
-  height: 44px;
+  align-items: center;
+  height: 50px;
   position: relative;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
@@ -45876,8 +45889,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   content: "";
   position: absolute;
   top: 0;
-  left: 13px;
-  right: 13px;
+  left: 10px;
+  right: 10px;
   height: 1px;
   border-bottom: 1px solid #3d4450;
 }
@@ -45893,6 +45906,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .standardtemplates_PinnedTemplate_2eBei .standardtemplates_Content_1MZiz {
   margin-left: 12px;
   min-width: 0;
+  overflow: hidden;
 }
 .standardtemplates_StandardTemplate_3e_DB .standardtemplates_Header_39ZAW,
 .standardtemplates_PinnedTemplate_2eBei .standardtemplates_Header_39ZAW {
@@ -45924,10 +45938,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-overflow: ellipsis;
   margin-right: 0.5em;
   color: #fff;
-}
-.standardtemplates_StandardTemplate_3e_DB .standardtemplates_Body_2cgMq,
-.standardtemplates_PinnedTemplate_2eBei .standardtemplates_Body_2cgMq {
-  overflow: hidden;
 }
 .standardtemplates_StandardTemplate_3e_DB
   .standardtemplates_StandardNotificationDescription_1Ldq1,
@@ -46050,10 +46060,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .standardtemplates_StandardTemplateDesktop_1tsEf,
 .standardtemplates_DesktopToastTemplate_3CGHg,
 .standardtemplates_PinnedTemplateDesktop_2caCr {
-  padding: 13px 13px;
+  padding: 10px 10px;
   display: flex;
   flex-direction: row;
-  height: 44px;
+  align-items: center;
+  height: 50px;
   position: relative;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
@@ -46332,15 +46343,21 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 100%;
   border-bottom: 1px solid #23262e;
 }
+.standardtemplates_StandardTemplateDesktop_1tsEf:hover {
+  background: #474f5c;
+}
 .standardtemplates_StandardTemplateDesktop_1tsEf.standardtemplates_Unread_2GC8q {
   background-color: #3d4450;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.standardtemplates_StandardTemplateDesktop_1tsEf.standardtemplates_Unread_2GC8q:hover {
+  background: #474f5c;
 }
 .standardtemplates_PinnedTemplateDesktop_2caCr {
   height: 36px;
   padding: 0px;
   position: relative;
   background-color: #3d4450;
+  background: linear-gradient(#474f5c, #3d4450 60%);
 }
 .standardtemplates_PinnedTemplateDesktop_2caCr:not(:first-child):after {
   content: "";
@@ -46350,12 +46367,15 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 100%;
   border-bottom: 1px solid #23262e;
 }
+.standardtemplates_PinnedTemplateDesktop_2caCr:hover {
+  background: #474f5c;
+}
 .standardtemplates_PinnedTemplateDesktop_2caCr .standardtemplates_Icon_19g_L {
   width: 18px;
   height: 18px;
   margin-right: 10px;
   padding-left: 2px;
-  color: #dcdedf;
+  color: #b8bcbf;
 }
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_Icon_19g_L
@@ -46373,8 +46393,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #dcdedf;
-  font-size: 13px;
+  color: #70ba24;
+  font-size: 12px;
+  font-weight: 400;
 }
 .standardtemplates_PinnedTemplateDesktop_2caCr.gpfocus
   .standardtemplates_Timestamp_2vSvC {
@@ -46383,9 +46404,16 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .standardtemplates_AllNotificationsTemplate_2m9JU {
   background: rgba(0, 0, 0, 0.2);
   align-items: center;
+  cursor: pointer;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU:hover {
-  cursor: pointer;
+  background: #474f5c;
+}
+.standardtemplates_AllNotificationsTemplate_2m9JU.standardtemplates_Unread_2GC8q {
+  background-color: #3d4450;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.standardtemplates_AllNotificationsTemplate_2m9JU.standardtemplates_Unread_2GC8q:hover {
   background: #474f5c;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU
@@ -46420,10 +46448,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   svg {
   color: #8b929a;
   fill: #8b929a;
-}
-.standardtemplates_AllNotificationsTemplate_2m9JU.standardtemplates_Unread_2GC8q {
-  background-color: #3d4450;
-  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 .standardtemplates_DesktopToastTemplate_3CGHg {
   background: none;
@@ -46541,7 +46565,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .standardtemplates_AvatarStatus_2yhOC {
   width: 3px;
-  height: 100%;
+  height: 44px;
   flex-shrink: 0;
   box-shadow: -1px 0px 1px #000a;
 }
@@ -46581,7 +46605,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 13px 0px;
+  padding: 10px 0px;
   width: 100%;
   height: 44px;
   display: flex;
@@ -46598,7 +46622,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   opacity: 0;
 }
 .standardtemplates_ShimmerLogo_1WEJP {
-  margin-left: 13px;
+  margin-left: 10px;
 }
 .standardtemplates_ShimmerBody_3FMh3 {
   width: 160px;
@@ -46708,10 +46732,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .shorttemplates_StandardTemplate_WgSlJ,
 .shorttemplates_PinnedTemplate_3T_a6 {
-  padding: 13px 13px;
+  padding: 10px 10px;
   display: flex;
   flex-direction: row;
-  height: 44px;
+  align-items: center;
+  height: 50px;
   position: relative;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
@@ -46739,8 +46764,8 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   content: "";
   position: absolute;
   top: 0;
-  left: 13px;
-  right: 13px;
+  left: 10px;
+  right: 10px;
   height: 1px;
   border-bottom: 1px solid #3d4450;
 }
@@ -46756,6 +46781,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .shorttemplates_PinnedTemplate_3T_a6 .shorttemplates_Content_23dSW {
   margin-left: 12px;
   min-width: 0;
+  overflow: hidden;
 }
 .shorttemplates_StandardTemplate_WgSlJ .shorttemplates_Header_2wU4t,
 .shorttemplates_PinnedTemplate_3T_a6 .shorttemplates_Header_2wU4t {
@@ -46787,10 +46813,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-overflow: ellipsis;
   margin-right: 0.5em;
   color: #fff;
-}
-.shorttemplates_StandardTemplate_WgSlJ .shorttemplates_Body_i5dFV,
-.shorttemplates_PinnedTemplate_3T_a6 .shorttemplates_Body_i5dFV {
-  overflow: hidden;
 }
 .shorttemplates_StandardTemplate_WgSlJ
   .shorttemplates_StandardNotificationDescription_Dacpy,
@@ -46911,10 +46933,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .shorttemplates_StandardTemplateDesktop_3B-l9,
 .shorttemplates_DesktopToastTemplate_PhN5d,
 .shorttemplates_PinnedTemplateDesktop_3iJFa {
-  padding: 13px 13px;
+  padding: 10px 10px;
   display: flex;
   flex-direction: row;
-  height: 44px;
+  align-items: center;
+  height: 50px;
   position: relative;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
@@ -47173,15 +47196,21 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 100%;
   border-bottom: 1px solid #23262e;
 }
+.shorttemplates_StandardTemplateDesktop_3B-l9:hover {
+  background: #474f5c;
+}
 .shorttemplates_StandardTemplateDesktop_3B-l9.shorttemplates_Unread_3Kkjo {
   background-color: #3d4450;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.shorttemplates_StandardTemplateDesktop_3B-l9.shorttemplates_Unread_3Kkjo:hover {
+  background: #474f5c;
 }
 .shorttemplates_PinnedTemplateDesktop_3iJFa {
   height: 36px;
   padding: 0px;
   position: relative;
   background-color: #3d4450;
+  background: linear-gradient(#474f5c, #3d4450 60%);
 }
 .shorttemplates_PinnedTemplateDesktop_3iJFa:not(:first-child):after {
   content: "";
@@ -47191,12 +47220,15 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 100%;
   border-bottom: 1px solid #23262e;
 }
+.shorttemplates_PinnedTemplateDesktop_3iJFa:hover {
+  background: #474f5c;
+}
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Icon_2TlJy {
   width: 18px;
   height: 18px;
   margin-right: 10px;
   padding-left: 2px;
-  color: #dcdedf;
+  color: #b8bcbf;
 }
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Icon_2TlJy > svg {
   width: 18px;
@@ -47211,8 +47243,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #dcdedf;
-  font-size: 13px;
+  color: #70ba24;
+  font-size: 12px;
+  font-weight: 400;
 }
 .shorttemplates_PinnedTemplateDesktop_3iJFa.gpfocus
   .shorttemplates_Timestamp_3OOgm {
@@ -47221,9 +47254,16 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .shorttemplates_AllNotificationsTemplate_yn7qi {
   background: rgba(0, 0, 0, 0.2);
   align-items: center;
+  cursor: pointer;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi:hover {
-  cursor: pointer;
+  background: #474f5c;
+}
+.shorttemplates_AllNotificationsTemplate_yn7qi.shorttemplates_Unread_3Kkjo {
+  background-color: #3d4450;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.shorttemplates_AllNotificationsTemplate_yn7qi.shorttemplates_Unread_3Kkjo:hover {
   background: #474f5c;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi
@@ -47253,10 +47293,6 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Icon_2TlJy svg {
   color: #8b929a;
   fill: #8b929a;
-}
-.shorttemplates_AllNotificationsTemplate_yn7qi.shorttemplates_Unread_3Kkjo {
-  background-color: #3d4450;
-  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 .shorttemplates_DesktopToastTemplate_PhN5d {
   background: none;
@@ -47372,7 +47408,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .shorttemplates_AvatarStatus_1wkTz {
   width: 3px;
-  height: 100%;
+  height: 44px;
   flex-shrink: 0;
   box-shadow: -1px 0px 1px #000a;
 }
@@ -47411,7 +47447,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 13px 0px;
+  padding: 10px 0px;
   width: 100%;
   height: 44px;
   display: flex;
@@ -47428,7 +47464,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   opacity: 0;
 }
 .shorttemplates_ShimmerLogo_2dcrv {
-  margin-left: 13px;
+  margin-left: 10px;
 }
 .shorttemplates_ShimmerBody_B1DQw {
   width: 160px;

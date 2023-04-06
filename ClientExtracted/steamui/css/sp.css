@@ -51058,12 +51058,12 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   width: auto;
   display: flex;
   align-items: center;
+  gap: 5px;
   white-space: nowrap;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV button.DialogButton svg {
   width: 2ex;
   height: 2ex;
-  margin-right: 4px;
   color: #fff;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
@@ -51093,7 +51093,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   button.serverbrowserdialog_SwitchTabButton_1jEPp.serverbrowserdialog_Selected_L3t04 {
   font-weight: bold;
   color: #fff;
-  background: #717e93;
+  background: #67707b;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51113,9 +51113,21 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
   .serverbrowserdialog_TopControlsCtr_2X_Zp
+  .serverbrowserdialog_SearchButton_2KYMM.serverbrowserdialog_SearchActive_B0KOf {
+  background: #1a9fff;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_TopControlsCtr_2X_Zp
   .serverbrowserdialog_SearchButton_2KYMM.serverbrowserdialog_SearchActive_B0KOf
   .serverbrowserdialog_Stop_3k3ZJ {
   display: none;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_TopControlsCtr_2X_Zp
+  .serverbrowserdialog_SearchButton_2KYMM.serverbrowserdialog_SearchActive_B0KOf:hover {
+  background: #1a9fff;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51129,13 +51141,13 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_TopControlsCtr_2X_Zp
   .serverbrowserdialog_SearchButton_2KYMM.serverbrowserdialog_SearchActive_B0KOf:hover
   .serverbrowserdialog_Stop_3k3ZJ {
-  display: default;
+  display: block;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
   .serverbrowserdialog_TopControlsCtr_2X_Zp
   .serverbrowserdialog_SearchButton_2KYMM.serverbrowserdialog_NewSearchButton_3pbT2 {
-  background: #1f8dff;
+  background: #1a9fff;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51153,7 +51165,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: column;
   margin-top: 12px;
   margin-bottom: 12px;
-  background: #0e141b;
+  background: #23262e;
+  border: 1px solid #0e141b;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51166,6 +51180,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerList_2_4_n
   ::-webkit-scrollbar {
   width: 18px;
+  height: 100%;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51173,18 +51188,33 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_SelectColumnsButton_3mCrT {
   text-align: center;
+  padding: 0px 3px;
+  cursor: pointer;
+  margin-right: 6px;
+  background: #3d4450;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_ServerList_2_4_n
+  .serverbrowserdialog_SelectColumnsButton_3mCrT:hover {
+  color: #fff;
+  background: #464d58;
+  transition: background 0.3s ease-in-out;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
   .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_ColumnResizer_1XAm7 {
-  background: #fff;
+  background: #3d4450;
   display: inline-block;
   cursor: col-resize;
   top: 0;
   right: 0;
-  width: 4px;
+  width: 1px;
+  border-right: 1px solid #67707b;
+  margin-right: 6px;
   height: 100%;
   position: absolute;
   z-index: 1;
@@ -51198,7 +51228,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-grow: 1;
   flex-basis: 30px;
   overflow: scroll;
-  padding: 6px;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51265,7 +51294,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_ServerListHeaderRow_1m0su {
-  gap: 0px;
+  gap: 5px;
+  align-items: center;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51290,6 +51320,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_ServerRow_c8HfP:hover {
   background: #171d25;
+  cursor: pointer;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51297,7 +51328,15 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_SelectedRow_3vedM {
   color: #fff;
-  background: linear-gradient(to right, #1aa0ff53, #171d25);
+  background: linear-gradient(to right, #1aa0ff53, #23262e);
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_ServerList_2_4_n
+  .serverbrowserdialog_SelectedRow_3vedM:hover {
+  background: linear-gradient(to right, #1aa0ff7c, #23262e);
+  cursor: pointer;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51312,6 +51351,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_RadioButtonColumn_2fSU9 {
   width: 20px;
+  padding-left: 6px;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51361,7 +51401,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_PlayersColumn_3ya-W {
-  text-align: right;
+  text-align: left;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51375,7 +51415,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_ServerList_2_4_n
   .serverbrowserdialog_LatencyColumn_1O1MW {
-  text-align: right;
+  text-align: left;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51385,8 +51425,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   height: 134px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 2em;
   overflow-y: hidden;
+  padding-bottom: 16px;
   opacity: 1;
   transition: height 0.34s ease-in-out, opacity 0.34s ease-in-out;
 }
@@ -51420,6 +51462,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_FilterOptionsCheckboxesCtr_wEGw5 {
   flex-basis: 15em;
   flex-grow: 0;
+  align-self: flex-end;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51430,6 +51473,40 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: row;
   height: 5ex;
   gap: 10px;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BottomControlsRow_341md
+  .DialogFooter {
+  padding-top: 0px;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BottomControlsRow_341md
+  button.DialogButton {
+  justify-content: center;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BottomControlsRow_341md
+  .serverbrowserdialog_ConnectButton_21aBX:not(.Disabled) {
+  background: #1a9fff;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BottomControlsRow_341md
+  .serverbrowserdialog_ConnectButton_21aBX,
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BottomControlsRow_341md
+  .serverbrowserdialog_CloseButton_3LG-3 {
+  min-width: 200px;
+  justify-content: center;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51454,7 +51531,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_BottomControlsRow_341md
   .serverbrowserdialog_ToggleShowFilterDetailsButton_30Bn7.serverbrowserdialog_Selected_L3t04 {
   color: #fff;
-  background: #717e93;
+  background: #67707b;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -51467,6 +51544,26 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .gameinfodialog_DialogBody_3wJ6F {
   flex-grow: 1;
+}
+.gameinfodialog_DialogBody_3wJ6F.DesktopUI .DialogDropDown_Arrow,
+.DesktopUI .gameinfodialog_DialogBody_3wJ6F .DialogDropDown_Arrow {
+  position: unset;
+}
+.gameinfodialog_DialogBody_3wJ6F.DesktopUI .DialogDropDown,
+.DesktopUI .gameinfodialog_DialogBody_3wJ6F .DialogDropDown {
+  display: flex;
+  gap: 9px;
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 18px;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.gameinfodialog_DialogBody_3wJ6F.DesktopUI .DialogDropDown:hover,
+.DesktopUI .gameinfodialog_DialogBody_3wJ6F .DialogDropDown:hover {
+  background: #464d58;
+  color: #fff;
 }
 .gameinfodialog_GameInfoDialogContents_1J28N {
   margin-bottom: 10px;
@@ -51850,12 +51947,45 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .screenshotmanagerdialog_Label_9TcOq {
   color: #dcdedf;
   font-size: 14px;
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .screenshotmanagerdialog_SpoilerField_3Hvsr
+    .screenshotmanagerdialog_Label_9TcOq.screenshotmanagerdialog_Wide_QwnO0,
+  .screenshotmanagerdialog_VisibilityField_27wV3
+    .screenshotmanagerdialog_Label_9TcOq.screenshotmanagerdialog_Wide_QwnO0 {
+    display: none;
+  }
+}
+@media (min-width: 1001px) {
+  .screenshotmanagerdialog_SpoilerField_3Hvsr
+    .screenshotmanagerdialog_Label_9TcOq.screenshotmanagerdialog_Narrow_MT9J_,
+  .screenshotmanagerdialog_VisibilityField_27wV3
+    .screenshotmanagerdialog_Label_9TcOq.screenshotmanagerdialog_Narrow_MT9J_ {
+    display: none;
+  }
+}
+.screenshotmanagerdialog_SpoilerField_3Hvsr
+  .screenshotmanagerdialog_Label_9TcOq
+  .screenshotmanagerdialog_Eye_3GhFa,
+.screenshotmanagerdialog_VisibilityField_27wV3
+  .screenshotmanagerdialog_Label_9TcOq
+  .screenshotmanagerdialog_Eye_3GhFa {
+  width: 25px;
 }
 .screenshotmanagerdialog_SpoilerField_3Hvsr
   .screenshotmanagerdialog_Dropdown_T1szE,
 .screenshotmanagerdialog_VisibilityField_27wV3
   .screenshotmanagerdialog_Dropdown_T1szE {
   min-width: 200px;
+}
+@media (max-width: 1000px) {
+  .screenshotmanagerdialog_SpoilerField_3Hvsr
+    .screenshotmanagerdialog_Dropdown_T1szE,
+  .screenshotmanagerdialog_VisibilityField_27wV3
+    .screenshotmanagerdialog_Dropdown_T1szE {
+    min-width: 120px;
+  }
 }
 .screenshotmanagerdialog_Combobox_1G-9f {
   display: flex;
@@ -52703,10 +52833,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .titlebarcontrols_NotificationHeader_MCa4R
   .titlebarcontrols_AllNotificationsTitle_3zQLP {
-  font-size: 14px;
+  font-size: 16px;
   align-self: center;
-  letter-spacing: 0.05em;
-  font-weight: 300;
+  font-weight: 700;
 }
 .titlebarcontrols_NotificationHeader_MCa4R
   .titlebarcontrols_AllNotificationsButton_1oERP {
