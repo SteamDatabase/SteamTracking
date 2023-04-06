@@ -9,12 +9,12 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-4$4
-4$4
+T$4
+T$4
 __const
 __TEXT
-`5
-`5
+@`5
+@`5
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -107,9 +107,8 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-b<
 0
-:9
+B9
 9
 0
 @
@@ -123,19 +122,19 @@ $
 Hi
 Hi
 Hi
+w1
 (
 3
 3
 3
 3
 R=
--;
 D)
 -)
-T8
 )
 
 %
+)8
 2
 2
 '
@@ -148,9 +147,7 @@ $(
 (
 :
 :
-:
 >?
-_1
 
 0
 Ic
@@ -160,12 +157,11 @@ AT=
 AT5
 AT5
 AT=
+"1
 ?
 D
 @
 @
-1
-1
 1
 1
 1
@@ -202,7 +198,10 @@ IcE
 IcE
 @
 @
+,6
 YC
+20
+6
 6
 V
 15CBaseFileSystem
@@ -2368,7 +2367,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Apr  4 2023 14:02:07
+Startup - updater built Apr  5 2023 14:21:27
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2655,8 +2654,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Apr  4 2023
-14:02:07
+Apr  5 2023
+14:21:27
 crashhandler004
 steam
 Steam Executable Crash
@@ -2753,7 +2752,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-14:02:06
+14:21:25
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10872,7 +10871,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-13:59:53
+14:19:12
 Jan
 Feb
 Mar
@@ -13297,9 +13296,8 @@ file_ofs == pFile->GetBytesWritten()
 
 
 0
-b<
 0
-:9
+B9
 9
 0
 @
@@ -13313,19 +13311,19 @@ $
 Hi
 Hi
 Hi
+w1
 (
 3
 3
 3
 3
 R=
--;
 D)
 -)
-T8
 )
 
 %
+)8
 2
 2
 '
@@ -13338,9 +13336,7 @@ $(
 (
 :
 :
-:
 >?
-_1
 
 0
 Ic
@@ -13350,6 +13346,7 @@ AT=
 AT5
 AT5
 AT=
+"1
 ?
 D
 @
@@ -13358,8 +13355,6 @@ D
 1
 1
 1
-1
-1
 2
 @
 Hc
@@ -13392,17 +13387,22 @@ IcE
 IcE
 @
 @
+,6
 YC
+20
+6
 6
 V
-Q/
+I/
 5
 =
+7
+g4
 =
 .
 .
 .
-G-
+x-
 -
 -
 -
@@ -13410,40 +13410,39 @@ G-
 !
 @
 7
+f2
 :
 ,
-2
-2
+!2
 @
 &
-F+
 +
-<3
++
 5
-T*
 *
 *
+30
 0
 0
 0
 0
 0
-0
-l)
+y)
 8
 8
 8
 8
-^/
 )
-)
++/
 /
 /
 1
+b(
 @
 M9e
 @
 @
+.
 .
 (
 ?
@@ -13472,26 +13471,24 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
+z,
 j
 j
 Pj
-W,
 ARj
 j
-P,
-(,
 0
 /
 0
 0
 IcU
 E;e
-K%
 M)u
 =
 =
 @
 =
+&
 =
 %
 =
@@ -13789,11 +13786,13 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 @
 
+[(
 @
 @
 @
 
 0
+))
 H=
 Ic]
 j
@@ -13803,16 +13802,17 @@ j
 j
 j
 
+v#
 +
 +
 '
 '
 t$I;M
+-&
 e
 W
 ,7~5d
 H
-J!
 #
 0
 
@@ -13827,7 +13827,6 @@ J!
 
 
 Hc
-%
 L)5;O'
 L950K'
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -14091,9 +14090,9 @@ H=
 
 =
 @
-w
 =
 @
+c
 =*.*
 @
 @
@@ -14119,6 +14118,7 @@ w
 0
 0
 0
+
 0
 H=
 0
@@ -14128,6 +14128,8 @@ E
 Hi
 E
 -
+
+0
 0
 0
 
@@ -14146,32 +14148,22 @@ j
 @
 @
 @
-0
 0
 0
 
 
 Hc
 0
-
 &
 %
 
-
-
-
-
-
-
-
-
+95
 @
 =h2
 P
 P
 @
 @
-,
 @
 @
 ?

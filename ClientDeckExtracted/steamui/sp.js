@@ -45,6 +45,7 @@
         PinnedView: "gamenotes_PinnedView_3mIft",
         Toolbar: "gamenotes_Toolbar_A6mhR",
         NoteActions: "gamenotes_NoteActions_3uGOy",
+        NewNoteButton: "gamenotes_NewNoteButton_2J6kv",
         NoteEditorArea: "gamenotes_NoteEditorArea_3WOF4",
         EditorInput: "gamenotes_EditorInput_3zWun",
         CloseWindowButton: "gamenotes_CloseWindowButton_G0Fgh",
@@ -20751,7 +20752,7 @@
         let n = [];
         return (
           t.forEach((e, t) => {
-            n.push(r.createElement(qc, { name: t, url: e }));
+            n.push(r.createElement(qc, { key: t, name: t, url: e }));
           }),
           r.createElement(f.Panel, null, r.createElement(Xc, null), n)
         );
@@ -45132,7 +45133,6 @@
         HandleTrackpadClick(e, t) {
           let n = null,
             a = qe.ENavigationSourceType.UNKNOWN;
-          this.props.windowInstance.BrowserWindow;
           switch (e) {
             case qe.EGamepadButton.LPAD_CLICK:
             case qe.EGamepadButton.TRIGGER_LEFT:
@@ -45142,7 +45142,7 @@
               )),
                 this.setState({ bLeftTrackpadDown: t }),
                 (a = qe.ENavigationSourceType.LPAD),
-                this.OnTrackpadHover(this.m_rightTrackpad.lastElement, n);
+                this.OnTrackpadHover(this.m_leftTrackpad.lastElement, n);
               break;
             case qe.EGamepadButton.RPAD_CLICK:
             case qe.EGamepadButton.TRIGGER_RIGHT:
@@ -46029,21 +46029,36 @@
             const n = (0, Ug.GetZoomFromParents)(this.m_keyboardDiv);
             (e *= n), (t *= n);
           }
-          return n.document.elementFromPoint(e, t);
+          let a = n.document.elementFromPoint(e, t);
+          return a && (a.getAttribute("data-key") || (a = void 0)), a;
         }
         OnLeftTrackpadAnalog(e, t, n, a) {
-          this.props.windowInstance.BrowserWindow;
           if (
             ((this.m_leftTrackpad.active = e),
             (this.m_leftTrackpad.x = t),
             (this.m_leftTrackpad.y = n),
             e)
           ) {
-            let e = this.getElementFromPointWorkaround(t, n);
-            e != this.m_leftTrackpad.lastElement &&
-              (this.OnTrackpadHover(this.m_leftTrackpad.lastElement, e),
-              (this.m_leftTrackpad.lastElement = e),
-              YS.e.PlayHaptic(a, 0, YS.X.Tick, 1, 0));
+            let e = this.m_leftTrackpad.lastElement
+              ? this.m_leftTrackpad.lastElementBoundingRect
+              : void 0;
+            if (
+              !e ||
+              !(
+                e.x <= t &&
+                t <= e.x + e.width &&
+                e.y <= n &&
+                n <= e.y + e.height
+              )
+            ) {
+              let e = this.getElementFromPointWorkaround(t, n);
+              e != this.m_leftTrackpad.lastElement &&
+                (this.OnTrackpadHover(this.m_leftTrackpad.lastElement, e),
+                (this.m_leftTrackpad.lastElement = e),
+                (this.m_leftTrackpad.lastElementBoundingRect =
+                  e.getBoundingClientRect()),
+                YS.e.PlayHaptic(a, 0, YS.X.Tick, 1, 0));
+            }
           } else
             this.OnTrackpadHover(this.m_leftTrackpad.lastElement, void 0),
               (this.m_leftTrackpad.lastElement = void 0);
@@ -46051,18 +46066,32 @@
             this.setState({ bLeftTrackpadActive: e });
         }
         OnRightTrackpadAnalog(e, t, n, a) {
-          this.props.windowInstance.BrowserWindow;
           if (
             ((this.m_rightTrackpad.active = e),
             (this.m_rightTrackpad.x = t),
             (this.m_rightTrackpad.y = n),
             e)
           ) {
-            let e = this.getElementFromPointWorkaround(t, n);
-            e != this.m_rightTrackpad.lastElement &&
-              (this.OnTrackpadHover(this.m_rightTrackpad.lastElement, e),
-              (this.m_rightTrackpad.lastElement = e),
-              YS.e.PlayHaptic(a, 1, YS.X.Tick, 1, 0));
+            let e = this.m_rightTrackpad.lastElement
+              ? this.m_rightTrackpad.lastElementBoundingRect
+              : void 0;
+            if (
+              !e ||
+              !(
+                e.x <= t &&
+                t <= e.x + e.width &&
+                e.y <= n &&
+                n <= e.y + e.height
+              )
+            ) {
+              let e = this.getElementFromPointWorkaround(t, n);
+              e != this.m_rightTrackpad.lastElement &&
+                (this.OnTrackpadHover(this.m_rightTrackpad.lastElement, e),
+                (this.m_rightTrackpad.lastElement = e),
+                (this.m_rightTrackpad.lastElementBoundingRect =
+                  e.getBoundingClientRect()),
+                YS.e.PlayHaptic(a, 1, YS.X.Tick, 1, 0));
+            }
           } else
             this.OnTrackpadHover(this.m_rightTrackpad.lastElement, void 0),
               (this.m_rightTrackpad.lastElement = void 0);
@@ -46378,56 +46407,67 @@
             (null !== (t = e.inputScale) && void 0 !== t ? t : 1) *
             JS.J.TrackPadTypingInputScale,
           i = r.useRef(),
-          [s, c] = r.useState(!1),
-          [d, m] = r.useState(0),
-          [u, p] = r.useState(0),
-          h = r.useRef(void 0);
-        const g = r.useCallback(() => {
-            h.current && ((h.current = void 0), a(!1, 0, 0)), c(!1);
-          }, [a, h]),
-          _ = r.useCallback(
+          [s, c] = r.useState(),
+          d = r.useRef(void 0);
+        const m = r.useCallback(() => {
+            d.current && ((d.current = void 0), a(!1, 0, 0)),
+              c({ active: !1, trackpadX: 0, trackpadY: 0 });
+          }, [a, d]),
+          u = r.useCallback((e) => {
+            i.current = null == e ? void 0 : e.getBoundingClientRect();
+          }, []),
+          p = r.useCallback(
             (t, n, a, r) => {
               l.unstable_batchedUpdates(() => {
-                if (t == e.trackpad && (c(!0), m(a), p(r), i.current)) {
+                if (
+                  t == e.trackpad &&
+                  (c({ active: !0, trackpadX: a, trackpadY: r }), i.current)
+                ) {
                   let t = 0.5 * (1 + (0, sa.Clamp)(a * o, -1, 1)),
                     l = 0.5 * (1 - (0, sa.Clamp)(r * o, -1, 1)),
-                    s = i.current.getBoundingClientRect(),
+                    s = i.current,
                     c = s.left + s.width * t,
-                    d = s.top + s.height * l;
-                  e.fnCallback(!0, c, d, n),
-                    void 0 !== h.current && window.clearTimeout(h.current),
-                    (h.current = window.setTimeout(g, 100));
+                    u = s.top + s.height * l;
+                  e.fnCallback(!0, c, u, n),
+                    void 0 !== d.current && window.clearTimeout(d.current),
+                    (d.current = window.setTimeout(m, 100));
                 }
               });
             },
-            [e, h, g, o]
+            [e, d, m, o]
           );
         if (
           (r.useEffect(() => {
             if (n) {
-              let e = n.RegisterForAnalog(_);
+              let e = n.RegisterForAnalog(p);
               return () => e.Unregister();
             }
             return () => {};
-          }, [n, _]),
+          }, [n, p]),
           r.useEffect(
             () => () => {
-              void 0 !== h.current &&
-                (a(!1, 0, 0), c(!1), window.clearTimeout(h.current));
+              void 0 !== d.current &&
+                (a(!1, 0, 0),
+                c({ active: !1, trackpadX: 0, trackpadY: 0 }),
+                window.clearTimeout(d.current));
             },
             [a]
           ),
-          !s)
+          !(null == s ? void 0 : s.active))
         )
           return null;
-        let v = {
-          left: `calc( ${50 * (1 + (0, sa.Clamp)(d * o, -1, 1)) + "%"} - 15px)`,
-          top: `calc( ${50 * (1 - (0, sa.Clamp)(u * o, -1, 1)) + "%"} - 15px)`,
+        let h = {
+          left: `calc( ${
+            50 * (1 + (0, sa.Clamp)(s.trackpadX * o, -1, 1)) + "%"
+          } - 15px)`,
+          top: `calc( ${
+            50 * (1 - (0, sa.Clamp)(s.trackpadY * o, -1, 1)) + "%"
+          } - 15px)`,
         };
         return r.createElement(
           f.Panel,
           {
-            ref: i,
+            ref: u,
             className: (0, w.default)(
               sf().TouchpadPointerContainer,
               e.className
@@ -46440,7 +46480,7 @@
                 sf().TouchpadPointer,
                 e.pressed && sf().PressedDown
               ),
-              style: v,
+              style: h,
             },
             r.createElement("circle", { cx: "50%", cy: "50%", r: "10" })
           )
@@ -48910,13 +48950,16 @@
           this.m_nDelayedIndex = -1;
           let t = this.visibleRows[e];
           ps.l.ClearSelection(),
-            ma.OX.SetGameListSelection(t.strCollectionId, t.appOverview.appid),
-            ma.OX.UpdateGameListSelection(),
             t.bIsCollection
               ? this.props.navigator.Collection(t.strCollectionId)
-              : this.props.navigator.App(t.appOverview.appid, {
+              : (ma.OX.SetGameListSelection(
+                  t.strCollectionId,
+                  t.appOverview.appid
+                ),
+                ma.OX.UpdateGameListSelection(),
+                this.props.navigator.App(t.appOverview.appid, {
                   strCollectionId: t.strCollectionId,
-                });
+                }));
         }
         EqualsCurrentCursor(e, t) {
           if (this.m_nDelayedIndex > -1) {
@@ -58392,12 +58435,13 @@
         const c = r.createElement(
           A.Button,
           {
+            className: WL.NewNoteButton,
             onClick: () => {
               const e = o();
               JL(a, t, e);
             },
           },
-          (0, k.Localize)("#UserGameNotes_NewNote")
+          r.createElement(ll.TextNewNote, null)
         );
         return i
           ? r.createElement(YL, {

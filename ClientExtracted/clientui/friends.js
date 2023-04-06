@@ -67859,6 +67859,8 @@ object-assign
             /* binding */ EControllerType,
           /* harmony export */ EControllerVirtualMenuType: () =>
             /* binding */ EControllerVirtualMenuType,
+          /* harmony export */ EGamepadInputType: () =>
+            /* binding */ EGamepadInputType,
           /* harmony export */ ESWGyroCalibrationWizardState: () =>
             /* binding */ ESWGyroCalibrationWizardState,
           /* harmony export */
@@ -68272,6 +68274,140 @@ object-assign
         })(
           ESWGyroCalibrationWizardState || (ESWGyroCalibrationWizardState = {})
         );
+        var EGamepadInputType;
+        (function (EGamepadInputType) {
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_A"] = 0)] =
+            "GAMEPAD_BUTTON_A";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_B"] = 1)] =
+            "GAMEPAD_BUTTON_B";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_X"] = 2)] =
+            "GAMEPAD_BUTTON_X";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_Y"] = 3)] =
+            "GAMEPAD_BUTTON_Y";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_DPAD_UP"] = 4)] =
+            "GAMEPAD_BUTTON_DPAD_UP";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_DPAD_RIGHT"] = 5)
+          ] = "GAMEPAD_BUTTON_DPAD_RIGHT";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_DPAD_DOWN"] = 6)
+          ] = "GAMEPAD_BUTTON_DPAD_DOWN";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_DPAD_LEFT"] = 7)
+          ] = "GAMEPAD_BUTTON_DPAD_LEFT";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_MENU"] = 8)] =
+            "GAMEPAD_BUTTON_MENU";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_VIEW"] = 9)] =
+            "GAMEPAD_BUTTON_VIEW";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_LEFTPAD_UP"] = 10)] =
+            "GAMEPAD_LEFTPAD_UP";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_LEFTPAD_DOWN"] = 11)] =
+            "GAMEPAD_LEFTPAD_DOWN";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_LEFTPAD_LEFT"] = 12)] =
+            "GAMEPAD_LEFTPAD_LEFT";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_LEFTPAD_RIGHT"] = 13)] =
+            "GAMEPAD_LEFTPAD_RIGHT";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_LEFTPAD_ANALOG"] = 14)
+          ] = "GAMEPAD_LEFTPAD_ANALOG";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_RIGHTPAD_UP"] = 15)] =
+            "GAMEPAD_RIGHTPAD_UP";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_RIGHTPAD_DOWN"] = 16)] =
+            "GAMEPAD_RIGHTPAD_DOWN";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_RIGHTPAD_LEFT"] = 17)] =
+            "GAMEPAD_RIGHTPAD_LEFT";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_RIGHTPAD_RIGHT"] = 18)
+          ] = "GAMEPAD_RIGHTPAD_RIGHT";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_RIGHTPAD_ANALOG"] = 19)
+          ] = "GAMEPAD_RIGHTPAD_ANALOG";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_LEFTSTICK_UP"] = 20)] =
+            "GAMEPAD_LEFTSTICK_UP";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_LEFTSTICK_DOWN"] = 21)
+          ] = "GAMEPAD_LEFTSTICK_DOWN";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_LEFTSTICK_LEFT"] = 22)
+          ] = "GAMEPAD_LEFTSTICK_LEFT";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_LEFTSTICK_RIGHT"] = 23)
+          ] = "GAMEPAD_LEFTSTICK_RIGHT";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_LEFTSTICK_ANALOG"] = 24)
+          ] = "GAMEPAD_LEFTSTICK_ANALOG";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_LEFTSTICK_CLICK"] = 25)
+          ] = "GAMEPAD_LEFTSTICK_CLICK";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_LTRIGGER_ANALOG"] = 26)
+          ] = "GAMEPAD_LTRIGGER_ANALOG";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_RTRIGGER_ANALOG"] = 27)
+          ] = "GAMEPAD_RTRIGGER_ANALOG";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_LTRIGGER"] = 28)
+          ] = "GAMEPAD_BUTTON_LTRIGGER";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_RTRIGGER"] = 29)
+          ] = "GAMEPAD_BUTTON_RTRIGGER";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_LSHOULDER"] = 30)
+          ] = "GAMEPAD_BUTTON_LSHOULDER";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_RSHOULDER"] = 31)
+          ] = "GAMEPAD_BUTTON_RSHOULDER";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_LBACK"] = 32)] =
+            "GAMEPAD_BUTTON_LBACK";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_RBACK"] = 33)] =
+            "GAMEPAD_BUTTON_RBACK";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_GUIDE"] = 34)] =
+            "GAMEPAD_BUTTON_GUIDE";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_SELECT"] = 35)] =
+            "GAMEPAD_BUTTON_SELECT";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_START"] = 36)] =
+            "GAMEPAD_BUTTON_START";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_LPAD_CLICKED"] = 37)
+          ] = "GAMEPAD_BUTTON_LPAD_CLICKED";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_LPAD_TOUCH"] = 38)
+          ] = "GAMEPAD_BUTTON_LPAD_TOUCH";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_RPAD_CLICKED"] = 39)
+          ] = "GAMEPAD_BUTTON_RPAD_CLICKED";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_RPAD_TOUCH"] = 40)
+          ] = "GAMEPAD_BUTTON_RPAD_TOUCH";
+          // Everything beyond here is not in panorama version
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_RIGHTSTICK_CLICK"] = 41)
+          ] = "GAMEPAD_RIGHTSTICK_CLICK";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_RIGHTSTICK_TOUCH"] = 42)
+          ] = "GAMEPAD_RIGHTSTICK_TOUCH";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_LEFTSTICK_TOUCH"] = 43)
+          ] = "GAMEPAD_LEFTSTICK_TOUCH";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_LBACK_UPPER"] = 44)
+          ] = "GAMEPAD_BUTTON_LBACK_UPPER";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_BUTTON_RBACK_UPPER"] = 45)
+          ] = "GAMEPAD_BUTTON_RBACK_UPPER";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_BUTTON_LAST"] = 46)] =
+            "GAMEPAD_BUTTON_LAST";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_ANALOG_SCROLL"] = 47)] =
+            "GAMEPAD_ANALOG_SCROLL";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR"] = 48)
+          ] = "GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR";
+          EGamepadInputType[
+            (EGamepadInputType["GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"] = 49)
+          ] = "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR";
+          EGamepadInputType[(EGamepadInputType["GAMEPAD_ANALOG_LAST"] = 50)] =
+            "GAMEPAD_ANALOG_LAST";
+        })(EGamepadInputType || (EGamepadInputType = {}));
         var EControllerPad;
         (function (EControllerPad) {
           EControllerPad[(EControllerPad["k_EControllerPad_Left"] = 0)] =
@@ -68898,6 +69034,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EFloatingGamepadTextInputMode,
           /* harmony export */ EFriendRelationship: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EFriendRelationship,
+          /* harmony export */ EGamepadInputType: () =>
+            /* reexport safe */ _controllertypes__WEBPACK_IMPORTED_MODULE_9__.EGamepadInputType,
           /* harmony export */ EGamingDeviceType: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EGamingDeviceType,
           /* harmony export */ EGraphicsPerfOverlayState: () =>
@@ -93340,4 +93478,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=0ba50b5d0f01f962b9dc
+//# sourceMappingURL=friends.js.map?contenthash=5d8868213774797feeed

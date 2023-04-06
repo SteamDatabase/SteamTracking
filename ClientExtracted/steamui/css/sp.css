@@ -52218,13 +52218,22 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .gamenotes_NoteActions_3uGOy {
   visibility: hidden;
 }
+.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
+  width: 36px;
+  height: 36px;
+  margin: 0px 0px 10px 10px;
+  padding: 0px;
+}
+.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv svg {
+  margin-bottom: 4px;
+}
 .gamenotes_NoteEditorArea_3WOF4 {
   display: flex;
   flex: 1;
   flex-direction: column;
   min-height: 0;
   min-width: 0;
-  margin: 0px 20px 20px 0px;
+  margin: 0px 10px 12px 0px;
   position: relative;
   color: #c1c6cf;
 }
@@ -52241,13 +52250,23 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: row;
 }
 .gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy .DialogButton {
-  width: 21px;
+  width: 22px;
+  height: 30px;
   padding: 8px 8px 0px 8px;
+  opacity: 0.5;
+}
+.gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton:hover {
+  opacity: 0.8;
 }
 .gamenotes_NoteEditorArea_3WOF4
   .gamenotes_NoteActions_3uGOy
   .gamenotes_CloseWindowButton_G0Fgh {
-  margin-left: 24px;
+  margin-left: 8px;
+  width: fit-content;
+  padding: 0px 8px;
+  height: 38px;
 }
 .gamenotes_Toolbar_A6mhR {
   padding: 12px 0;
@@ -52595,7 +52614,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background-color: #3d4450;
 }
 .titlebarcontrols_AnnouncementsButton_5wILZ:hover .titlebarcontrols_Icon_34bQc {
-  color: #b8bcbf;
+  color: #fff;
 }
 .titlebarcontrols_AnnouncementsButton_5wILZ.titlebarcontrols_Active_1oEwi {
   background-color: #1999ff;
@@ -52674,7 +52693,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .titlebarcontrols_NotificationsMenuScrollable_3sTMv {
   overflow-y: auto;
   max-height: 400px;
-  border-top: 1px solid #202328;
   background: #25282e;
 }
 .titlebarcontrols_NotificationHeader_MCa4R {
@@ -52692,10 +52710,19 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .titlebarcontrols_NotificationHeader_MCa4R
   .titlebarcontrols_AllNotificationsButton_1oERP {
-  background-color: #454953;
+  background-color: #3d4450;
   color: #fff;
   border-style: none;
+  outline: none;
   padding: 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.titlebarcontrols_NotificationHeader_MCa4R
+  .titlebarcontrols_AllNotificationsButton_1oERP:hover {
+  background-color: #67707b;
+  transition-property: background;
+  transition-duration: 250ms;
 }
 .titlebarcontrols_NotificationsButton_RtSv3 {
   padding: 0px 12px;
