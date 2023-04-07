@@ -334,7 +334,7 @@
             "argc": "2"
         },
         {
-            "name": "CreateRemotePlayInviteAndSession",
+            "name": "BCreateRemotePlayInviteAndSession",
             "argc": "11"
         },
         {

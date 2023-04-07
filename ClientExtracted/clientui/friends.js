@@ -71916,7 +71916,8 @@ object-assign
           EPopupCreationFlags[(EPopupCreationFlags["Minimized"] = 1)] =
             "Minimized";
           EPopupCreationFlags[(EPopupCreationFlags["Hidden"] = 2)] = "Hidden";
-          EPopupCreationFlags[(EPopupCreationFlags["Tooltip"] = 4)] = "Tooltip";
+          EPopupCreationFlags[(EPopupCreationFlags["TooltipHint"] = 4)] =
+            "TooltipHint";
           EPopupCreationFlags[(EPopupCreationFlags["NoTaskbarIcon"] = 8)] =
             "NoTaskbarIcon";
           EPopupCreationFlags[(EPopupCreationFlags["Resizable"] = 16)] =
@@ -71946,8 +71947,8 @@ object-assign
             "NoWindowShadow";
           EPopupCreationFlags[(EPopupCreationFlags["NoMinimize"] = 32768)] =
             "NoMinimize";
-          EPopupCreationFlags[(EPopupCreationFlags["PopUpMenu"] = 65536)] =
-            "PopUpMenu";
+          EPopupCreationFlags[(EPopupCreationFlags["PopUpMenuHint"] = 65536)] =
+            "PopUpMenuHint";
           // If loading window dimensions from restore details, ignore the size.
           // Useful for windows that are not user resizable but may have been a different size in a past incarnation.
           EPopupCreationFlags[
@@ -71969,6 +71970,8 @@ object-assign
             "Overlay";
           EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 1335816)] =
             "Notification";
+          EPopupCreationFlags[(EPopupCreationFlags["Tooltip"] = 287500)] =
+            "Tooltip";
           EPopupCreationFlags[
             (EPopupCreationFlags["PopupContextMenu"] = 344328)
           ] = "PopupContextMenu";
@@ -72064,11 +72067,8 @@ object-assign
             // all popup windows are initially created hidden then set visible when rendering is complete to prevent initial black screen flash
             if (window.SteamClient)
               this.m_rgParams.eCreationFlags |= EPopupCreationFlags.Hidden;
-            // TODO (mikela): EPopupCreationFlags.Tooltip can be removed once EPopupCreationFlags.AlwaysOnTop
-            // is available in the public client.
             if (
-              this.m_rgParams.eCreationFlags &
-              (EPopupCreationFlags.NotFocusable | EPopupCreationFlags.Tooltip)
+              this.m_rgParams.eCreationFlags & EPopupCreationFlags.NotFocusable
             )
               bFocus = false;
             if (this.BIsValid()) {
@@ -93478,4 +93478,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=5d8868213774797feeed
+//# sourceMappingURL=friends.js.map?contenthash=227c5665146e5d055ced

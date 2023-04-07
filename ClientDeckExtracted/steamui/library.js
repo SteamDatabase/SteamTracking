@@ -1,4 +1,4 @@
-var CLSTAMP = "7973469";
+var CLSTAMP = "7975608";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -3289,7 +3289,7 @@ var CLSTAMP = "7973469";
         !(function (e) {
           (e[(e.Minimized = 1)] = "Minimized"),
             (e[(e.Hidden = 2)] = "Hidden"),
-            (e[(e.Tooltip = 4)] = "Tooltip"),
+            (e[(e.TooltipHint = 4)] = "TooltipHint"),
             (e[(e.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
             (e[(e.Resizable = 16)] = "Resizable"),
             (e[(e.ScalePosition = 32)] = "ScalePosition"),
@@ -3304,13 +3304,14 @@ var CLSTAMP = "7973469";
             (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
             (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
             (e[(e.NoMinimize = 32768)] = "NoMinimize"),
-            (e[(e.PopUpMenu = 65536)] = "PopUpMenu"),
+            (e[(e.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
             (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
             (e[(e.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
             (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
             (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
             (e[(e.Overlay = 8712)] = "Overlay"),
             (e[(e.Notification = 1335816)] = "Notification"),
+            (e[(e.Tooltip = 287500)] = "Tooltip"),
             (e[(e.PopupContextMenu = 344328)] = "PopupContextMenu"),
             (e[(e.StandaloneContextMenu = 1327368)] = "StandaloneContextMenu");
         })(n || (n = {}));
@@ -3367,8 +3368,7 @@ var CLSTAMP = "7973469";
           Show(e = !0, t = !1) {
             var r, i;
             window.SteamClient && (this.m_rgParams.eCreationFlags |= n.Hidden),
-              this.m_rgParams.eCreationFlags & (n.NotFocusable | n.Tooltip) &&
-                (e = !1),
+              this.m_rgParams.eCreationFlags & n.NotFocusable && (e = !1),
               this.BIsValid() &&
                 (this.BIsClosed()
                   ? ((this.m_popup = void 0), (this.m_element = void 0))
@@ -3672,9 +3672,9 @@ var CLSTAMP = "7973469";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Apr 5 2023 : 18:03:37",
-                BUILD_TIME_UTC: "Apr 6 2023 : 01:03:37",
-                BUILD_RTIME_UTC: 1680743017,
+                BUILD_TIME_LOCAL: "Apr 6 2023 : 14:57:02",
+                BUILD_TIME_UTC: "Apr 6 2023 : 21:57:02",
+                BUILD_RTIME_UTC: 1680818222,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -39624,10 +39624,10 @@ var CLSTAMP = "7973469";
         "use strict";
         r.r(t),
           r.d(t, {
-            ModalRoot: () => d,
-            useAssociateModalManagerWithWindow: () => h,
-            useModalDialogWrapper: () => m,
-            useModalManager: () => C,
+            ModalRoot: () => C,
+            useAssociateModalManagerWithWindow: () => p,
+            useModalDialogWrapper: () => h,
+            useModalManager: () => m,
           });
         var n = r(70655),
           i = r(67294),
@@ -39635,23 +39635,23 @@ var CLSTAMP = "7973469";
           a = r(77993),
           l = r(17789),
           s = r(71364),
-          c = r(12141);
-        r(12219), r(83893);
-        const u = i.createContext({}),
-          d = i.memo(function (e) {
+          c = r(12141),
+          u = (r(12219), r(83893), r(27715));
+        const d = i.createContext({}),
+          C = i.memo(function (e) {
             const {
                 children: t,
                 bRenderOverlayAtRoot: r,
-                refModalManager: d,
-                DialogWrapper: C,
-                ContextMenuComponent: m,
-                refContextMenuManager: h,
-                browserInfo: p,
-                bUsePopups: g,
-                bOnlyPopups: f,
-                bCenterPopupsOnWindow: _,
+                refModalManager: C,
+                DialogWrapper: m,
+                ContextMenuComponent: h,
+                refContextMenuManager: p,
+                browserInfo: g,
+                bUsePopups: f,
+                bOnlyPopups: _,
+                bCenterPopupsOnWindow: w,
               } = e,
-              w = (0, n._T)(e, [
+              E = (0, n._T)(e, [
                 "children",
                 "bRenderOverlayAtRoot",
                 "refModalManager",
@@ -39663,55 +39663,55 @@ var CLSTAMP = "7973469";
                 "bOnlyPopups",
                 "bCenterPopupsOnWindow",
               ]),
-              E = i.useRef();
-            E.current || (E.current = new s.CModalManager());
-            let v = i.createElement(
+              v = i.useRef();
+            v.current || (v.current = new s.CModalManager());
+            let M = i.createElement(
               l.t,
-              Object.assign({}, w, {
-                DialogWrapper: C,
-                ModalManager: E.current,
+              Object.assign({}, E, {
+                DialogWrapper: m,
+                ModalManager: v.current,
               })
             );
             e.bOnlyPopups
-              ? (v = i.createElement(l.U, { ModalManager: E.current }))
+              ? (M = i.createElement(l.U, { ModalManager: v.current }))
               : e.bRenderOverlayAtRoot &&
-                (v = o.createPortal(v, document.body)),
+                (M = o.createPortal(M, document.body)),
               i.useEffect(
-                () => ((0, a.k$)(d, E.current), () => (0, a.k$)(d, null)),
-                [d]
+                () => ((0, a.k$)(C, v.current), () => (0, a.k$)(C, null)),
+                [C]
               ),
               i.useEffect(() => {
-                void 0 !== g && E.current.SetUsePopups(g),
-                  void 0 !== _ && E.current.SetCenterPopupsOnWindow(_),
-                  void 0 !== f && E.current.SetOnlyPopups(f);
-              }, [g, _, f]);
-            const M = i.useMemo(
-              () => ({ ModalManager: E.current, DialogWrapper: C }),
-              [C]
+                void 0 !== f && v.current.SetUsePopups(f),
+                  void 0 !== w && v.current.SetCenterPopupsOnWindow(w),
+                  void 0 !== _ && v.current.SetOnlyPopups(_);
+              }, [f, w, _]);
+            const b = i.useMemo(
+              () => ({ ModalManager: v.current, DialogWrapper: m }),
+              [m]
             );
             return i.createElement(
-              u.Provider,
-              { value: M },
+              d.Provider,
+              { value: b },
               i.createElement(
                 c.O,
                 {
-                  ActiveMenuComponent: m,
-                  refContextMenuManager: h,
-                  browserInfo: p,
+                  ActiveMenuComponent: h,
+                  refContextMenuManager: p,
+                  browserInfo: g,
                 },
-                v,
+                i.createElement(u.ErrorBoundary, null, M),
                 e.children
               )
             );
           });
-        function C() {
-          return i.useContext(u).ModalManager;
-        }
         function m() {
-          return i.useContext(u).DialogWrapper;
+          return i.useContext(d).ModalManager;
         }
-        function h(e) {
-          const t = C();
+        function h() {
+          return i.useContext(d).DialogWrapper;
+        }
+        function p(e) {
+          const t = m();
           i.useEffect(() => {
             if (e) return s.g_ModalManagerFactory.RegisterModalManager(t, e);
           }, [e, t]);
@@ -52349,9 +52349,9 @@ var CLSTAMP = "7973469";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Apr 5 2023 : 18:03:37",
-                    BUILD_TIME_UTC: "Apr 6 2023 : 01:03:37",
-                    BUILD_RTIME_UTC: 1680743017,
+                    BUILD_TIME_LOCAL: "Apr 6 2023 : 14:57:02",
+                    BUILD_TIME_UTC: "Apr 6 2023 : 21:57:02",
+                    BUILD_RTIME_UTC: 1680818222,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -52493,7 +52493,7 @@ var CLSTAMP = "7973469";
           ),
           B = n.lazy(() =>
             Promise.all([r.e(7962), r.e(8553), r.e(58), r.e(5742)]).then(
-              r.bind(r, 54192)
+              r.bind(r, 94765)
             )
           );
         function x() {
@@ -52794,7 +52794,7 @@ var CLSTAMP = "7973469";
       ".js?contenthash=" +
       {
         27: "ca2776e698fff2ef4f9f",
-        58: "c3ea00bacfe8bd4c2e16",
+        58: "15f2e1815f7760a364ce",
         131: "7e4bb71e36b6407c292b",
         200: "777643ad169046f46b5a",
         220: "0355b5539ec987b27c67",
@@ -52833,7 +52833,7 @@ var CLSTAMP = "7973469";
         3357: "b2cc1a2cdcb46f01da6f",
         3403: "a87a0fd820563d54ca6b",
         3602: "205d6103e4d3fef2ef9a",
-        3687: "ca0d74ad3010e1624ebb",
+        3687: "bec5c1b161fc26f3d530",
         3858: "6d2ad781814ce26cb7b8",
         4061: "f6106cb25876a7c201b3",
         4097: "335d65d1fd5e8e350d3a",
@@ -52848,12 +52848,12 @@ var CLSTAMP = "7973469";
         4487: "c7390f3c84cdf6d1cf49",
         4513: "be44e945b069b0dee9d7",
         4535: "c0792c41539f5fb7f6ce",
-        4601: "6b92ca3ef9b8c6a5231a",
+        4601: "6f87cb98cdfab6de40f3",
         4729: "4333b13d36f315506483",
         5175: "6c2fe2807118c863ee97",
         5279: "5d43f504e8bafd474900",
         5590: "29b509505a1d74596791",
-        5742: "364f44aace07a1f72b1a",
+        5742: "f1eaf633d13ef477227a",
         5984: "35225af61810cc206155",
         6002: "3cfbd51cc04619d6b463",
         6006: "9795ab57c0c40cf7e0de",
@@ -52872,7 +52872,7 @@ var CLSTAMP = "7973469";
         7660: "e869795e4a67d7a2e41d",
         7781: "df8e024605731dde1830",
         7832: "35e371c703d65c6c518c",
-        7962: "154e02cbcbe2501ef339",
+        7962: "c0ddcc0d931b069ff5eb",
         8011: "2bad8c957b2510d4af07",
         8085: "b3f373b0790b4e773766",
         8232: "52fdc32aeed2a9fa1b0e",
@@ -52881,7 +52881,7 @@ var CLSTAMP = "7973469";
         8319: "72e307de25d76adf8d75",
         8433: "d2574b900f7ffa20c13a",
         8467: "144b00b064a622d8178a",
-        8553: "7d8620590983643a0db2",
+        8553: "f319d2a1e16698da630e",
         8778: "479bec607dff7b19dccc",
         8956: "c14ca884c5e3916cb4c6",
         9547: "12ff993ac19db74a4274",

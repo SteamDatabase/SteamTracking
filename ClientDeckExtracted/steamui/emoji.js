@@ -2,12 +2,12 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [3687],
   {
-    12580: (n, T, i) => {
-      i.r(T), i.d(T, { CEmojiStore: () => u });
-      var t = i(70655),
-        N = i(84656),
-        e = i(13088);
-      let m = [
+    12580: (n, T, t) => {
+      t.r(T), t.d(T, { CEmojiStore: () => u });
+      var i = t(70655),
+        N = t(84656),
+        e = t(13088);
+      let s = [
         { key: "😀", nNumTints: 0 },
         { key: "😃", nNumTints: 0 },
         { key: "😄", nNumTints: 0 },
@@ -1723,7 +1723,7 @@
         { key: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", nNumTints: 0 },
         { key: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", nNumTints: 0 },
       ];
-      const s = "emoji_storage";
+      const m = "emoji_storage";
       class u {
         constructor() {
           (this.m_nScrollLeftPosition = 0),
@@ -1731,13 +1731,13 @@
             (this.m_emojiTints = []);
         }
         Init() {
-          return (0, t.mG)(this, void 0, void 0, function* () {
+          return (0, i.mG)(this, void 0, void 0, function* () {
             (this.m_LocalStorage = new N.E()),
               yield this.LoadCacheFromLocalStorage();
           });
         }
         get FullEmojiList() {
-          return m;
+          return s;
         }
         AddRecentEmoji(n) {
           for (
@@ -1785,8 +1785,8 @@
           console.log(n);
         }
         LoadCacheFromLocalStorage() {
-          return (0, t.mG)(this, void 0, void 0, function* () {
-            const n = yield this.m_LocalStorage.GetObject(s);
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const n = yield this.m_LocalStorage.GetObject(m);
             n && 2 == n.nVersion
               ? ((this.m_nScrollLeftPosition = n.nScrollPosition),
                 (this.m_recentEmoji = n.recentEmoji.filter(
@@ -1799,8 +1799,8 @@
           });
         }
         SaveCacheToLocalStorage() {
-          return (0, t.mG)(this, void 0, void 0, function* () {
-            return this.m_LocalStorage.StoreObject(s, {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            return this.m_LocalStorage.StoreObject(m, {
               nVersion: 2,
               nScrollPosition: this.m_nScrollLeftPosition,
               recentEmoji: this.m_recentEmoji,
@@ -1809,19 +1809,6 @@
           });
         }
       }
-    },
-    13088: (n, T, i) => {
-      var t;
-      i.d(T, { N: () => t }),
-        (function (n) {
-          (n[(n.Invalid = -1)] = "Invalid"),
-            (n[(n.Default = 0)] = "Default"),
-            (n[(n.Light = 1)] = "Light"),
-            (n[(n.Medium_Light = 2)] = "Medium_Light"),
-            (n[(n.Medium = 3)] = "Medium"),
-            (n[(n.Medium_Dark = 4)] = "Medium_Dark"),
-            (n[(n.Dark = 5)] = "Dark");
-        })(t || (t = {}));
     },
   },
 ]);

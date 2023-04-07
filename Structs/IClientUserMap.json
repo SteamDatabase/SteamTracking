@@ -2,7 +2,7 @@
     "name": "IClientUserMap",
     "functions": [ 
         {
-            "name": "Unknown_5432320",
+            "name": "Unknown_5432560",
             "argc": "0"
         },
         {
@@ -11,7 +11,7 @@
         },
         {
             "name": "InvalidateCredentials",
-            "argc": "1"
+            "argc": "3"
         },
         {
             "name": "LogOff",
@@ -207,7 +207,7 @@
         },
         {
             "name": "DestroyCachedCredentials",
-            "argc": "2"
+            "argc": "3"
         },
         {
             "name": "GetCurrentWebAuthToken",
