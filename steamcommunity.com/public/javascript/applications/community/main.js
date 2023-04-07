@@ -2603,7 +2603,7 @@
       !(function (e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
-          (e[(e.Tooltip = 4)] = "Tooltip"),
+          (e[(e.TooltipHint = 4)] = "TooltipHint"),
           (e[(e.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
           (e[(e.Resizable = 16)] = "Resizable"),
           (e[(e.ScalePosition = 32)] = "ScalePosition"),
@@ -2618,13 +2618,14 @@
           (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
           (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
           (e[(e.NoMinimize = 32768)] = "NoMinimize"),
-          (e[(e.PopUpMenu = 65536)] = "PopUpMenu"),
+          (e[(e.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
           (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
           (e[(e.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
           (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
           (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
           (e[(e.Overlay = 8712)] = "Overlay"),
           (e[(e.Notification = 1335816)] = "Notification"),
+          (e[(e.Tooltip = 287500)] = "Tooltip"),
           (e[(e.PopupContextMenu = 344328)] = "PopupContextMenu"),
           (e[(e.StandaloneContextMenu = 1327368)] = "StandaloneContextMenu");
       })(_ || (_ = {}));
@@ -2674,8 +2675,7 @@
         Show(e = !0, t = !1) {
           var n, r;
           window.SteamClient && (this.m_rgParams.eCreationFlags |= _.Hidden),
-            this.m_rgParams.eCreationFlags & (_.NotFocusable | _.Tooltip) &&
-              (e = !1),
+            this.m_rgParams.eCreationFlags & _.NotFocusable && (e = !1),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
