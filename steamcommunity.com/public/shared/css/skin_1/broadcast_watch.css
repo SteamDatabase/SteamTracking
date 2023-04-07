@@ -230,8 +230,7 @@ body.flat_page #footer
 
 body.flat_page
 {
-    background: radial-gradient(ellipse farthest-corner at 20% 30%, #0A0B0D 0%, #262A31 0%, rgb(33, 36, 43) 100%); */
-    background: radial-gradient(ellipse farthest-corner at 50% 30%, #212329 0%, #1e2025 50%, #1c1d22 100%);
+    background: radial-gradient(ellipse farthest-corner at 50% 30%, #212329 0%, #1e2025 50%, #1c1d22 100%), #1c1d22;
 }
 
 .HeaderRow
