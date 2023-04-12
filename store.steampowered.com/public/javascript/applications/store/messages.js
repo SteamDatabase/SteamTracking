@@ -314,14 +314,6 @@
         }, [e]);
       }
     },
-    24808: (e, t, s) => {
-      "use strict";
-      s.d(t, { T: () => n });
-      var a = s(70983);
-      function n() {
-        return (0, a.kQ)("store_user_config", "application_config");
-      }
-    },
     18035: (e, t, s) => {
       "use strict";
       s.d(t, { v: () => L, U: () => A });
@@ -337,7 +329,7 @@
         u = s(13806),
         _ = s(33940),
         d = s(6960),
-        M = (s(38800), s(5545));
+        M = (s(45797), s(5545));
       function p(e) {
         var t;
         const { path: s, message: n } = e,

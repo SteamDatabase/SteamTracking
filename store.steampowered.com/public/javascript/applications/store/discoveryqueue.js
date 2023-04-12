@@ -22,26 +22,26 @@
         o = n(49194),
         c = n(49920),
         s = n(31621),
-        a = n(70983),
-        u = n(38811);
+        u = n(70983),
+        a = n(38811);
       function l(e) {
         const { children: t, navTreeRef: n } = e,
           l = (0, i._T)(e, ["children", "navTreeRef"]),
           d = r.useRef(),
-          v = (0, s.BE)(d, n),
-          E = (0, a.id)(),
+          g = (0, s.BE)(d, n),
+          v = (0, u.id)(),
           p = window.__virtual_keyboard_client;
         if (
           ((0, r.useEffect)(() => {
-            u.Wz.SetHookFactory(() => p);
+            a.Wz.SetHookFactory(() => p);
           }, [p]),
-          E)
+          v)
         ) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
             Object.assign({}, l, {
-              navTreeRef: v,
+              navTreeRef: g,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
@@ -51,62 +51,9 @@
         return r.createElement(r.Fragment, null, t);
       }
     },
-    94082: (e, t, n) => {
-      "use strict";
-      n.d(t, { NX: () => d, nf: () => v, ue: () => E });
-      var i = n(33940),
-        r = n(87656),
-        o = n(89526),
-        c = n(70657),
-        s = n(63154),
-        a = n(66715),
-        u = n(32338),
-        l = n(70983);
-      function d() {
-        const e = (0, a.T)("usePartnerStoreBrowseAPI"),
-          [t, n] = (0, o.useState)(!1);
-        return (
-          (0, o.useEffect)(() => {
-            (function (e = !1) {
-              return (0, i.mG)(this, void 0, void 0, function* () {
-                if (e && s.Z.BIsInitialized()) return;
-                const t = (0, l.kQ)(
-                  "partnerbrowse_webapi_token",
-                  "application_config"
-                );
-                (0, u.X)(Boolean(t), "require partnerbrowse_webapi_token");
-                const n = new c.J(l.De.WEBAPI_BASE_URL, t);
-                return (
-                  ("dev" != l.De.WEB_UNIVERSE && "beta" != l.De.WEB_UNIVERSE) ||
-                    console.log(
-                      "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                      t
-                    ),
-                  v(t),
-                  s.Z.Initialize(n, l.L7.is_partner_member)
-                );
-              });
-            })().then(() => {
-              var t;
-              (null === (t = null == e ? void 0 : e.token) || void 0 === t
-                ? void 0
-                : t.reason) || n(!0);
-            });
-          }, []),
-          t
-        );
-      }
-      function v(e) {
-        r.OT.BIsInitialized() ||
-          r.OT.Initialize(new c.J(l.De.WEBAPI_BASE_URL, e));
-      }
-      function E(e) {
-        return r.OT.BIsInitialized() || v(e || null), !0;
-      }
-    },
     31319: (e, t, n) => {
       "use strict";
-      n.d(t, { Ar: () => a, Wo: () => u, i9: () => s, ks: () => o });
+      n.d(t, { Ar: () => u, Wo: () => a, i9: () => s, ks: () => o });
       var i = n(89526),
         r = n(59934);
       function o(e, t) {
@@ -127,11 +74,11 @@
         const i = new URLSearchParams(e.location.search.substring(1));
         i.delete(t), c(n) && i.append(t, n), e.push(`?${i.toString()}`);
       }
-      function a(e, t) {
+      function u(e, t) {
         const n = (0, r.k6)(),
-          a = (0, r.TH)(),
-          u = (0, i.useMemo)(() => {
-            const n = o(a.search, e);
+          u = (0, r.TH)(),
+          a = (0, i.useMemo)(() => {
+            const n = o(u.search, e);
             return c(n)
               ? c(t)
                 ? "boolean" == typeof t
@@ -139,16 +86,16 @@
                   : t.constructor(n)
                 : n
               : t;
-          }, [a.search, e, t]),
+          }, [u.search, e, t]),
           l = (0, i.useCallback)(
             (t) => {
               s(n, e, c(t) ? String(t) : null);
             },
             [n, e]
           );
-        return [u, l];
+        return [a, l];
       }
-      function u(e, t) {
+      function a(e, t) {
         const n = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
@@ -178,36 +125,36 @@
       "use strict";
       n.r(t), n.d(t, { default: () => m });
       var i = n(89526),
-        r = (n(38800), n(29979)),
+        r = (n(45797), n(29979)),
         o = n(23907),
         c = (n(84042), n(54997), n(31641)),
         s = n(28697),
-        a = n(23708),
-        u = n(31319),
+        u = n(23708),
+        a = n(31319),
         l = n(86701),
         d = n(12687),
-        v = n(36670),
-        E = n(31587),
+        g = n(36670),
+        v = n(31587),
         p = n(78236),
-        g = n.n(p),
-        A = n(70983);
+        A = n.n(p),
+        E = n(70983);
       function m(e) {
         const { appID: t } = e,
-          n = (0, v.g)(),
-          [p] = (0, u.Ar)("inqueue", "0"),
-          [m, D] = (0, i.useState)(!1),
-          [y, b] = (0, i.useState)(!1),
-          [w] = (0, a.vs)(t, { include_assets: !0 }),
-          R = (0, c.L)(),
-          h = i.useRef();
+          n = (0, g.g)(),
+          [p] = (0, a.Ar)("inqueue", "0"),
+          [m, y] = (0, i.useState)(!1),
+          [D, b] = (0, i.useState)(!1),
+          [R] = (0, u.vs)(t, { include_assets: !0 }),
+          h = (0, c.L)(),
+          N = i.useRef();
         i.useEffect(() => {
           var e;
-          return null === (e = h.current) || void 0 === e
+          return null === (e = N.current) || void 0 === e
             ? void 0
             : e.Activate(!0);
         }, []);
-        const S = (0, A.id)(),
-          { eStoreDiscoveryQueueType: f, storePageFilter: I } =
+        const w = (0, E.id)(),
+          { eStoreDiscoveryQueueType: S, storePageFilter: M } =
             i.useMemo(() => {
               if ((null == p ? void 0 : p.length) > 0) {
                 const e = p.split("_"),
@@ -220,59 +167,59 @@
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
             }, [p]),
-          N = i.useCallback(() => {
+          Z = i.useCallback(() => {
             b(!0);
           }, []),
-          _ = i.useCallback(() => {
-            D(!0);
+          f = i.useCallback(() => {
+            y(!0);
           }, []),
-          k = (0, s.ZP)(f, I);
-        return n && w
-          ? y
+          C = (0, s.ZP)(S, M);
+        return n && R
+          ? D
             ? null
             : i.createElement(
                 r.p,
                 {
-                  NavigationManager: R,
-                  navTreeRef: h,
+                  NavigationManager: h,
+                  navTreeRef: N,
                   navID: "DiscoveryQueueAppWidget",
                 },
                 i.createElement(
                   o.s,
                   {
                     focusable: !0,
-                    className: g().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: N,
-                    onOKButton: _,
-                    onOKActionDescription: (0, E.Xx)(
+                    className: A().DiscoveryQueueWidgetCtn,
+                    onSecondaryButton: Z,
+                    onOKButton: f,
+                    onOKActionDescription: (0, v.Xx)(
                       "#DiscoveryQueue_ResumeWizard"
                     ),
-                    onSecondaryActionDescription: (0, E.Xx)("#Button_Close"),
+                    onSecondaryActionDescription: (0, v.Xx)("#Button_Close"),
                   },
                   i.createElement("img", {
-                    className: g().WidgetCapsule,
+                    className: A().WidgetCapsule,
                     src:
-                      null == w ? void 0 : w.GetAssets().GetSmallCapsuleURL(),
+                      null == R ? void 0 : R.GetAssets().GetSmallCapsuleURL(),
                   }),
                   i.createElement(
                     "div",
-                    { onClick: _, className: g().WidgetText },
-                    (0, E.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == k ? void 0 : k.length) > 0 && ": " + k
+                    { onClick: f, className: A().WidgetText },
+                    (0, v.Xx)("#DiscoveryQueue_ResumeWizard"),
+                    (null == C ? void 0 : C.length) > 0 && ": " + C
                   ),
-                  !S &&
+                  !w &&
                     i.createElement(
                       "div",
-                      { className: g().CloseButton, onClick: N },
+                      { className: A().CloseButton, onClick: Z },
                       i.createElement(l.X, null)
                     ),
                   m &&
                     i.createElement(d.MS, {
                       includeAppID: t,
                       bWizardVisible: m,
-                      fnCloseModal: () => D(!1),
-                      eStoreDiscoveryQueueType: f,
-                      storePageFilter: I,
+                      fnCloseModal: () => y(!1),
+                      eStoreDiscoveryQueueType: S,
+                      storePageFilter: M,
                     })
                 )
               )
@@ -287,20 +234,20 @@
         o = n(12687),
         c = n(36670),
         s = n(23907),
-        a = n(70983),
-        u = n(46723),
+        u = n(70983),
+        a = n(46723),
         l = n(24868);
       function d(e) {
         const t = (0, c.g)(),
           [n, d] = (0, i.useState)(!1),
-          v = i.useCallback(() => {
-            a.L7.logged_in
+          g = i.useCallback(() => {
+            u.L7.logged_in
               ? d(!0)
               : (0, l.AM)(
-                  i.createElement(u.JX, {
+                  i.createElement(a.JX, {
                     onOK: () => {
                       window.location.href = `${
-                        a.De.STORE_BASE_URL
+                        u.De.STORE_BASE_URL
                       }login?redir=${encodeURIComponent(
                         document.location.href
                       )}`;
@@ -320,7 +267,7 @@
               null,
               i.createElement(
                 "a",
-                { onClick: v, className: "experiment-button" },
+                { onClick: g, className: "experiment-button" },
                 (0, r.Xx)("#DiscoveryQueue_OpenWizard")
               ),
               n &&

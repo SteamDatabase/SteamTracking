@@ -299,7 +299,7 @@
     },
     25893: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => p });
+      n.r(t), n.d(t, { default: () => E });
       var a = n(89526),
         r = (n(6960), n(29979)),
         o = n(40070),
@@ -307,65 +307,63 @@
         s = n(82569),
         i = n(31641),
         u = n(68208),
-        l = n(94082),
-        g = n(45688),
-        m = n(90174),
-        d = n.n(m),
-        _ = n(15642),
-        f = n(31587),
-        v = n(70983),
-        E = n(59544);
-      function p(e) {
+        l = n(17356),
+        g = n(90174),
+        m = n.n(g),
+        d = n(15642),
+        _ = n(31587),
+        f = n(70983),
+        v = n(59544);
+      function E(e) {
         return a.createElement(
-          E.n,
+          v.n,
           { bSalePage: !0 },
-          a.createElement(y, Object.assign({}, e))
+          a.createElement(p, Object.assign({}, e))
         );
       }
-      function y(e) {
+      function p(e) {
         const { promotionName: t, language: n } = e,
-          [m, E] = a.useState(
-            u.j1.GetClanEventFromAnnouncementGID(v.Wj.ANNOUNCEMENT_GID)
+          [g, v] = a.useState(
+            u.j1.GetClanEventFromAnnouncementGID(f.Wj.ANNOUNCEMENT_GID)
           ),
-          p = (0, i.L)();
+          E = (0, i.L)();
         if (
           (a.useEffect(() => {
             if (
-              (null == m ? void 0 : m.AnnouncementGID) != v.Wj.ANNOUNCEMENT_GID
+              (null == g ? void 0 : g.AnnouncementGID) != f.Wj.ANNOUNCEMENT_GID
             ) {
-              const e = new s.K(v.JA.CLANSTEAMID);
+              const e = new s.K(f.JA.CLANSTEAMID);
               u.j1
                 .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                   e,
-                  v.Wj.ANNOUNCEMENT_GID,
+                  f.Wj.ANNOUNCEMENT_GID,
                   null
                 )
-                .then(E);
+                .then(v);
             }
-            (0, l.nf)(null);
-          }, [m]),
-          !m)
+          }, [g]),
+          !g)
         )
           return a.createElement(
             "div",
-            { className: d().FlexCenter, style: { height: "500px" } },
-            a.createElement(_.V, {
+            { className: m().FlexCenter, style: { height: "500px" } },
+            a.createElement(d.V, {
               size: "medium",
-              string: (0, f.Xx)("#Loading"),
+              string: (0, _.Xx)("#Loading"),
             })
           );
-        const y = m.visibility_state !== c.ac.k_EEventStateVisible;
+        const p = g.visibility_state !== c.ac.k_EEventStateVisible;
         return a.createElement(
           r.p,
-          { navID: "StoreSalePageRoot", NavigationManager: p },
+          { navID: "StoreSalePageRoot", NavigationManager: E },
           a.createElement(
             o.g,
             { timeoutMS: 1e3 },
-            a.createElement(g.oS, {
+            a.createElement(l.oS, {
               promotionName: t,
               language: n,
-              eventModel: m,
-              bIsPreview: y,
+              eventModel: g,
+              bIsPreview: p,
             })
           )
         );

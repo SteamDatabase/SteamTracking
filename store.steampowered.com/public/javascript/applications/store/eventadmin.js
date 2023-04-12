@@ -950,7 +950,7 @@
         l = n(70657),
         d = n(17922),
         c = n(59904),
-        m = (n(6960), n(38800), n(82569)),
+        m = (n(6960), n(45797), n(82569)),
         u = (n(96158), n(68208)),
         _ = n(91851),
         p = n(32338),
@@ -1369,7 +1369,7 @@
         i = n.n(r),
         s = n(73066),
         o = n(70983),
-        l = (n(38800), n(82569));
+        l = (n(45797), n(82569));
       n(96158), n(12263);
       class d {
         constructor() {
@@ -2613,13 +2613,13 @@
         }
       }
     },
-    93603: (e, t, n) => {
+    1244: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => qe });
+      n.r(t), n.d(t, { default: () => Ye });
       var a = n(94629),
         r = n(33940),
         i = n(73066),
-        s = n(38800),
+        s = n(45797),
         o = n(70983),
         l = n(52868),
         d = n.n(l),
@@ -5964,12 +5964,47 @@
         }
       };
       We = (0, r.gn)([_.Pi], We);
-      var Ve = n(94082),
-        Ze = n(59544);
-      const qe = () =>
-        (0, Ve.NX)()
+      var Ve = n(70657),
+        Ze = n(66715),
+        qe = n(32338);
+      function Qe() {
+        const e = (0, Ze.T)("usePartnerStoreBrowseAPI"),
+          [t, n] = (0, p.useState)(!1);
+        return (
+          (0, p.useEffect)(() => {
+            (function (e = !1) {
+              return (0, r.mG)(this, void 0, void 0, function* () {
+                if (e && ue.Z.BIsInitialized()) return;
+                const t = (0, o.kQ)(
+                  "partnerbrowse_webapi_token",
+                  "application_config"
+                );
+                (0, qe.X)(Boolean(t), "require partnerbrowse_webapi_token");
+                const n = new Ve.J(o.De.WEBAPI_BASE_URL, t);
+                return (
+                  ("dev" != o.De.WEB_UNIVERSE && "beta" != o.De.WEB_UNIVERSE) ||
+                    console.log(
+                      "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                      t
+                    ),
+                  ue.Z.Initialize(n, o.L7.is_partner_member)
+                );
+              });
+            })().then(() => {
+              var t;
+              (null === (t = null == e ? void 0 : e.token) || void 0 === t
+                ? void 0
+                : t.reason) || n(!0);
+            });
+          }, []),
+          t
+        );
+      }
+      var Ke = n(59544);
+      const Ye = () =>
+        Qe()
           ? p.createElement(
-              Ze.n,
+              Ke.n,
               null,
               p.createElement(
                 g.rs,
