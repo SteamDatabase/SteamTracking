@@ -72,7 +72,7 @@
         ik: () => u,
         pA: () => b,
         rf: () => G,
-        u2: () => R,
+        u2: () => w,
         vc: () => _,
         xQ: () => a,
       });
@@ -1588,58 +1588,58 @@
           return "MembershipInvite";
         }
       }
-      class B extends s {
+      class R extends s {
         constructor(e = null) {
           super(),
-            B.prototype.invites || r.aR(B.M()),
+            R.prototype.invites || r.aR(R.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            B.sm_m ||
-              (B.sm_m = {
-                proto: B,
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
                 fields: { invites: { n: 1, c: P, r: !0, q: !0 } },
               }),
-            B.sm_m
+            R.sm_m
           );
         }
         static MBF() {
-          return B.sm_mbf || (B.sm_mbf = r.Bh(B.M())), B.sm_mbf;
+          return R.sm_mbf || (R.sm_mbf = r.Bh(R.M())), R.sm_mbf;
         }
         toObject(e = !1) {
-          return B.toObject(e, this);
+          return R.toObject(e, this);
         }
         static toObject(e, t) {
-          return r.TA(B.M(), e, t);
+          return r.TA(R.M(), e, t);
         }
         static fromObject(e) {
-          return r.aD(B.M(), e);
+          return r.aD(R.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
-            i = new B();
-          return B.deserializeBinaryFromReader(i, t);
+            i = new R();
+          return R.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return r.F(B.MBF(), e, t);
+          return r.F(R.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          r.l2(B.M(), e, t);
+          r.l2(R.M(), e, t);
         }
         serializeBase64String() {
           var e = new n.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPartnerMembershipInvite_GetInvites_Response";
         }
       }
-      var R, w;
+      var w, B;
       !(function (e) {
         (e.GetSinglePartnerAppOptIn = function (e, t) {
           return e.SendMsg("Publishing.GetSinglePartnerAppOptIn#1", t, k, {
@@ -1702,15 +1702,15 @@
               ePrivilege: 1,
             });
           });
-      })(R || (R = {})),
+      })(w || (w = {})),
         (function (e) {
           e.GetInvites = function (e, t) {
-            return e.SendMsg("PartnerMembershipInvite.GetInvites#1", t, B, {
+            return e.SendMsg("PartnerMembershipInvite.GetInvites#1", t, R, {
               bConstMethod: !0,
               ePrivilege: 11,
             });
           };
-        })(w || (w = {}));
+        })(B || (B = {}));
     },
     93523: (e, t, i) => {
       "use strict";
@@ -1719,7 +1719,7 @@
         r = i(52868),
         s = i.n(r),
         a = i(50265),
-        o = (i(6960), i(38800), i(93982), i(67237), i(47330)),
+        o = (i(6960), i(45797), i(93982), i(67237), i(47330)),
         l = i(59821),
         c = i(23213),
         d = i(5545),
@@ -1893,41 +1893,39 @@
     },
     94082: (e, t, i) => {
       "use strict";
-      i.d(t, { NX: () => m, aD: () => u, nf: () => p });
+      i.d(t, { N: () => u, a: () => d });
       var n = i(33940),
-        r = i(87656),
-        s = i(89526),
-        a = i(70657),
-        o = i(63154),
-        l = i(66715),
-        c = i(32338),
-        d = i(70983);
-      function u(e = !1) {
+        r = i(89526),
+        s = i(70657),
+        a = i(63154),
+        o = i(66715),
+        l = i(32338),
+        c = i(70983);
+      function d(e = !1) {
         return (0, n.mG)(this, void 0, void 0, function* () {
-          if (e && o.Z.BIsInitialized()) return;
-          const t = (0, d.kQ)(
+          if (e && a.Z.BIsInitialized()) return;
+          const t = (0, c.kQ)(
             "partnerbrowse_webapi_token",
             "application_config"
           );
-          (0, c.X)(Boolean(t), "require partnerbrowse_webapi_token");
-          const i = new a.J(d.De.WEBAPI_BASE_URL, t);
+          (0, l.X)(Boolean(t), "require partnerbrowse_webapi_token");
+          const i = new s.J(c.De.WEBAPI_BASE_URL, t);
           return (
-            ("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
+            ("dev" != c.De.WEB_UNIVERSE && "beta" != c.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: Initializing CStoreItemCache with access token",
                 t
               ),
-            p(t),
-            o.Z.Initialize(i, d.L7.is_partner_member)
+            a.Z.Initialize(i, c.L7.is_partner_member)
           );
         });
       }
-      function m() {
-        const e = (0, l.T)("usePartnerStoreBrowseAPI"),
-          [t, i] = (0, s.useState)(!1);
+      function u() {
+        const e = (0, o.T)("usePartnerStoreBrowseAPI"),
+          [t, i] = (0, r.useState)(!1);
         return (
-          (0, s.useEffect)(() => {
-            u().then(() => {
+          (0, r.useEffect)(() => {
+            d().then(() => {
               var t;
               (null === (t = null == e ? void 0 : e.token) || void 0 === t
                 ? void 0
@@ -1936,10 +1934,6 @@
           }, []),
           t
         );
-      }
-      function p(e) {
-        r.OT.BIsInitialized() ||
-          r.OT.Initialize(new a.J(d.De.WEBAPI_BASE_URL, e));
       }
     },
     75746: (e, t, i) => {
@@ -1955,7 +1949,7 @@
       var n,
         r,
         s = i(6960);
-      i(38800), i(93523), i(5390), i(52790);
+      i(45797), i(93523), i(5390), i(52790);
       function a(e, t) {
         var i, n, r, s, a;
         if (e) {
@@ -2067,7 +2061,7 @@
         s = i(89511),
         a = i(50265),
         o = i(6960),
-        l = (i(38800), i(64222), i(69728)),
+        l = (i(45797), i(64222), i(69728)),
         c = i(32338),
         d = i(31621);
       const u = "email_",
@@ -2696,11 +2690,11 @@
     },
     52790: (e, t, i) => {
       "use strict";
-      i(38800), i(64222);
+      i(45797), i(64222);
     },
     53144: (e, t, i) => {
       "use strict";
-      i(20614), i(38800), i(34275), i(75746);
+      i(20614), i(45797), i(34275), i(75746);
     },
     78457: (e, t, i) => {
       "use strict";
@@ -2718,7 +2712,7 @@
         r = i(52868),
         s = i.n(r),
         a = i(89526),
-        o = (i(6960), i(38800), i(73265)),
+        o = (i(6960), i(45797), i(73265)),
         l = (i(96158), i(47330)),
         c = i(59821),
         d = i(23213),
@@ -3199,7 +3193,7 @@
         r = i(52868),
         s = i.n(r),
         a = (i(73797), i(50265), i(5615)),
-        o = (i(38800), i(96158), i(47330), i(70983));
+        o = (i(45797), i(96158), i(47330), i(70983));
       function l(e, t, i) {
         const { isLoading: r, data: l } = (0, a.useQuery)(
           ["useOptedInAppWithDiscounts", e, t, i],
@@ -3270,7 +3264,7 @@
         o = i(5390),
         l = (i(53144), i(50265)),
         c = i(89526),
-        d = i(38800),
+        d = i(45797),
         u = (i(93523), i(69728)),
         m = (i(77449), i(96158), i(99096)),
         p = i(47330),
@@ -5234,7 +5228,7 @@
         ZW: () => S,
         _l: () => I,
         dS: () => P,
-        du: () => B,
+        du: () => R,
         nw: () => E,
         py: () => k,
         qh: () => h,
@@ -5245,7 +5239,7 @@
         a = (i(75746), i(52790), i(50265)),
         o = i(89526),
         l = i(5615),
-        c = (i(38800), i(64222), i(96158), i(99096)),
+        c = (i(45797), i(64222), i(96158), i(99096)),
         d = i(32338),
         u = i(47330),
         m = i(59821),
@@ -5934,7 +5928,7 @@
           fnUpdateOptInRegistrationJson: h.Get().UpdateOptInRegistrationJson,
         };
       }
-      function B() {
+      function R() {
         return { fnUpdateAppealState: h.Get().UpdateAppealState };
       }
       (0, n.gn)(
@@ -5957,14 +5951,14 @@
     73797: (e, t, i) => {
       "use strict";
       i.d(t, {
-        EV: () => R,
+        EV: () => w,
         Fi: () => k,
         ID: () => E,
         LT: () => v,
-        Qy: () => B,
+        Qy: () => R,
         Su: () => S,
         XM: () => y,
-        Xj: () => w,
+        Xj: () => B,
         _J: () => h,
         b2: () => G,
         co: () => D,
@@ -5978,7 +5972,7 @@
         r = i(52868),
         s = i.n(r),
         a = i(89526),
-        o = (i(38800), i(73265)),
+        o = (i(45797), i(73265)),
         l = (i(96158), i(47330)),
         c = i(23213),
         d = i(31621),
@@ -6483,15 +6477,15 @@
         const [t, i] = a.useState(p.Get().GetAllDiscountsForDiscountEvent(e));
         return (0, d.Qg)(p.Get().GetCallbackListForDiscountEvent(e), i), t;
       }
-      function B(e) {
+      function R(e) {
         return p.Get().GetMaxDiscountPercentage(e);
       }
-      function R(e) {
+      function w(e) {
         return e.some(
           (e) => e.nDiscountPct > p.Get().GetMaxDiscountPercentage(e.packageID)
         );
       }
-      function w(e) {
+      function B(e) {
         return p.Get().GetMaxDiscountPercentageForGroup(e);
       }
     },
@@ -6508,7 +6502,7 @@
         z: () => d,
       });
       var n = i(89526),
-        r = (i(38800), i(23213)),
+        r = (i(45797), i(23213)),
         s = i(31621),
         a = i(70983);
       const o = "pn";
@@ -6612,16 +6606,16 @@
         Rs: () => T,
         Tj: () => f,
         We: () => W,
-        X1: () => B,
+        X1: () => R,
         _w: () => v,
         bS: () => M,
         dU: () => I,
         df: () => x,
         j_: () => q,
-        ju: () => w,
+        ju: () => B,
         np: () => K,
         on: () => A,
-        ps: () => R,
+        ps: () => w,
         rX: () => P,
         s7: () => C,
         sN: () => X,
@@ -6633,7 +6627,7 @@
         s = i.n(r),
         a = i(89526),
         o = i(50265),
-        l = (i(38800), i(96158), i(47330)),
+        l = (i(45797), i(96158), i(47330)),
         c = i(23213),
         d = i(31621),
         u = i(32448),
@@ -7358,7 +7352,7 @@
             : null,
         };
       }
-      function B() {
+      function R() {
         return a.useCallback((e, t, i) => {
           const n = g.Get().GetPrice(e, t);
           return (
@@ -7374,10 +7368,10 @@
           );
         }, []);
       }
-      function R(e) {
+      function w(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function w(e) {
+      function B(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
       function C(e) {
@@ -7389,7 +7383,7 @@
         return t;
       }
       function O(e) {
-        const t = R(e),
+        const t = w(e),
           i = [];
         for (const n of g.Get().m_rgKnownPriceKeys) {
           const r = t.prices[n],
@@ -7497,7 +7491,7 @@
     86371: (e, t, i) => {
       "use strict";
       i.d(t, {
-        B6: () => w,
+        B6: () => B,
         E5: () => U,
         E_: () => M,
         Eh: () => S,
@@ -7507,9 +7501,9 @@
         TB: () => A,
         _9: () => C,
         dy: () => N,
-        hr: () => B,
+        hr: () => R,
         k: () => z,
-        pl: () => R,
+        pl: () => w,
         s$: () => O,
         yn: () => F,
         z$: () => j,
@@ -7522,7 +7516,7 @@
         o = i(84935),
         l = i(85797),
         c = i(89526),
-        d = (i(38800), i(73265)),
+        d = (i(45797), i(73265)),
         u = (i(84413), i(63154)),
         m = (i(86701), i(23213)),
         p = i(31621),
@@ -8022,18 +8016,18 @@
             : e.rtStartDate - t.rtStartDate;
         }
       }
-      function B() {
+      function R() {
         return c.useCallback(() => {
           E.Get();
         }, []);
       }
-      function R() {
+      function w() {
         const [e, t] = c.useState(E.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, p.Qg)(E.Get().GetLocalPackageDiscountOverrideCallbackList(), t), e
         );
       }
-      function w() {
+      function B() {
         return c.useCallback(() => {
           var e;
           return (
@@ -8245,7 +8239,7 @@
         y4: () => b,
       });
       var n = i(89526),
-        r = (i(38800), i(73265)),
+        r = (i(45797), i(73265)),
         s = i(23213),
         a = i(31621),
         o = i(70983),
@@ -8816,7 +8810,7 @@
       "use strict";
       i.d(t, { R1: () => l, Sx: () => a, xs: () => d });
       var n = i(33940),
-        r = (i(52868), i(38800), i(82702), i(84413), i(63154)),
+        r = (i(52868), i(45797), i(82702), i(84413), i(63154)),
         s = i(31587);
       const a = new Set([0, 2, 6, 13]),
         o = new Set([4, 7, 11]);

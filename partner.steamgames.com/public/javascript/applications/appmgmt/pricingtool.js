@@ -162,7 +162,7 @@
         w = t(40108),
         X = t(58340),
         B = t(47008),
-        y = (t(38800), t(35796)),
+        y = (t(45797), t(35796)),
         A = t(64831),
         O = t(86701),
         G = t(7297),
@@ -1956,7 +1956,7 @@
       var Fe = t(94082);
       const Ke = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
       function Ue(e) {
-        return (0, Fe.NX)()
+        return (0, Fe.N)()
           ? a.createElement(
               c.VK,
               { basename: (0, n.l)() + "pricing/" },

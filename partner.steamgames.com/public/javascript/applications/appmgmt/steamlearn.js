@@ -470,8 +470,8 @@
         });
       var r = a(94629),
         n = a(89526),
-        i = a(565),
-        s = a(59934),
+        i = a(59934),
+        s = a(565),
         o = a(80969),
         c = a(70983),
         l = (a(50265), a(13806)),
@@ -5112,7 +5112,7 @@
       var Pe = a(5615),
         We = a(17922),
         Ie =
-          (a(38800),
+          (a(45797),
           a(52868),
           a(47330),
           a(96158),
@@ -5790,8 +5790,8 @@
           const t = ct(e.nDataSourceID);
           if (!t.isSuccess) return null;
           const a = t.data,
-            r = ((s = e.nDataSourceID), Ae.U.getQueryData([nt, s]) || "");
-          var s;
+            r = ((i = e.nDataSourceID), Ae.U.getQueryData([nt, i]) || "");
+          var i;
           return n.createElement(
             "div",
             { className: zt.DataSourceListElement },
@@ -5834,7 +5834,7 @@
                 (0, Ot.Xx)("#SteamLearn_DataSource_Uncached")
               ),
             n.createElement(
-              i.rU,
+              s.rU,
               { to: Mr.SteamLearnDataSourceInspect(a.id()) },
               (0, Ot.Xx)("#SteamLearn_DataSource_ViewStructure")
             )
@@ -5980,7 +5980,7 @@
           );
         },
         Ut = () => {
-          const e = (0, s.UO)(),
+          const e = (0, i.UO)(),
             t = ct(parseInt(e.id));
           if (t.isError)
             return n.createElement(
@@ -6050,8 +6050,8 @@
           const t = ut(e.nProjectID);
           if (!t.isSuccess) return null;
           const a = t.data[0],
-            r = ((s = e.nProjectID), Ae.U.getQueryData([it, s]) || "");
-          var s;
+            r = ((i = e.nProjectID), Ae.U.getQueryData([it, i]) || "");
+          var i;
           const o = Math.max(
             0,
             ...a.published_configs().map((e) => e.published_version())
@@ -6087,7 +6087,7 @@
               (0, Ot.Xx)("#SteamLearn_Project_Snapshot_HMACKey")
             ),
             n.createElement(
-              i.rU,
+              s.rU,
               {
                 to: Mr.SteamLearnProjectDataSources(a.project_id(), o),
                 className: (0, l.Z)(Vt.SteamLearnButton, Vt.Blue),
@@ -6121,7 +6121,7 @@
                     (0, Ot.Xx)("#SteamLearn_Project_Empty")
                   ),
                 n.createElement(
-                  i.rU,
+                  s.rU,
                   {
                     to: Mr.SteamLearnProjectCreate(),
                     className: (0, l.Z)(
@@ -6335,24 +6335,24 @@
           );
         },
         ia = (e) => {
-          const t = (0, s.TH)(),
+          const t = (0, i.TH)(),
             a = t.pathname.includes(`/${Mr.SteamLearnDataSource()}/`),
             r = t.pathname.includes(`/${Mr.SteamLearnProject()}/`);
-          let i, o, c;
+          let s, o, c;
           for (const e of Object.values(Mr)) {
             const a = e(void 0, void 0, void 0, void 0),
-              r = (0, s.LX)(t.pathname, a);
+              r = (0, i.LX)(t.pathname, a);
             r &&
               (a.includes(`/${Mr.SteamLearnDataSource()}/`) &&
                 void 0 !== r.params.id &&
-                (i = parseInt(r.params.id)),
+                (s = parseInt(r.params.id)),
               a.includes(`/${Mr.SteamLearnProject()}/`) &&
                 (void 0 !== r.params.id && (o = parseInt(r.params.id)),
                 void 0 !== r.params.version &&
                   (c = parseInt(r.params.version))));
           }
-          return a && void 0 !== i
-            ? n.createElement(ra, { nDataSourceID: i }, e.children)
+          return a && void 0 !== s
+            ? n.createElement(ra, { nDataSourceID: s }, e.children)
             : r && void 0 !== o
             ? n.createElement(
                 na,
@@ -6423,11 +6423,11 @@
           );
         },
         la = (e) => {
-          const t = (0, s.k6)(),
-            a = (0, s.UO)(),
+          const t = (0, i.k6)(),
+            a = (0, i.UO)(),
             {
               msgProject: r,
-              msgWorkingProject: i,
+              msgWorkingProject: s,
               nProjectID: o,
               nPublishedVersion: c,
             } = ta(),
@@ -6441,7 +6441,7 @@
               value: 0,
             },
           ];
-          for (const e of i.published_configs())
+          for (const e of s.published_configs())
             B.push({
               label: (0, Ot.Xx)(
                 "#SteamLearn_Header_Version_PublishedVersion",
@@ -6449,15 +6449,15 @@
               ),
               value: e.published_version(),
             });
-          if (!i) return null;
+          if (!s) return null;
           const h = () => {
-              i.set_project_name(_), Mt(i), u(!1);
+              s.set_project_name(_), Mt(s), u(!1);
             },
             b = () => {
-              i.set_project_description(f), Mt(i), S(!1);
+              s.set_project_description(f), Mt(s), S(!1);
             },
             E =
-              r && i && i.serializeBase64String() != r.serializeBase64String();
+              r && s && s.serializeBase64String() != r.serializeBase64String();
           return n.createElement(
             "div",
             { className: oa.ProjectHeader },
@@ -6485,7 +6485,7 @@
                       }
                     },
                   }),
-                !d && i.project_name(),
+                !d && s.project_name(),
                 !d &&
                   n.createElement("div", {
                     className: (0, l.Z)(
@@ -6494,7 +6494,7 @@
                       "icon_steamworks"
                     ),
                     onClick: () => {
-                      p(i.project_name()), u(!0);
+                      p(s.project_name()), u(!0);
                     },
                   })
               ),
@@ -6519,8 +6519,8 @@
                     },
                   }),
                 !g &&
-                  (i.project_description().length > 0
-                    ? i.project_description()
+                  (s.project_description().length > 0
+                    ? s.project_description()
                     : (0, Ot.Xx)("#SteamLearn_Config_NoDescription")),
                 !g &&
                   n.createElement("div", {
@@ -6530,7 +6530,7 @@
                       "icon_steamworks"
                     ),
                     onClick: () => {
-                      v(i.project_description()), S(!0);
+                      v(s.project_description()), S(!0);
                     },
                   })
               )
@@ -6586,7 +6586,7 @@
                                           : 3;
                                       }
                                     );
-                                  })(i.project_id());
+                                  })(s.project_id());
                                 1 == n && setInterval(() => Lr(t, a, e), 500);
                               }),
                           }),
@@ -6622,7 +6622,7 @@
                     !E && "btn_disabled"
                   ),
                   onClick: () => {
-                    ft(i, c);
+                    ft(s, c);
                   },
                 },
                 (0, Ot.Xx)("#SteamLearn_Project_Save")
@@ -6639,7 +6639,7 @@
                           strDescription: (0, Ot.Xx)(
                             "#SteamLearn_Project_Discard_Warning"
                           ),
-                          onOK: () => vt(i.project_id()),
+                          onOK: () => vt(s.project_id()),
                         }),
                         window
                       );
@@ -6660,7 +6660,7 @@
                       (0, Kt.AM)(
                         n.createElement(ca, {
                           arrVersions: e,
-                          msgWorkingProject: i,
+                          msgWorkingProject: s,
                         }),
                         window
                       );
@@ -12433,17 +12433,17 @@
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nProjectID: r,
-              nPublishedVersion: i,
+              nPublishedVersion: s,
             } = ta(),
             [o, c] = n.useState(0),
             [d, u] = n.useState(0),
-            _ = _t(r, i),
-            p = pt(r, i),
-            g = (0, s.k6)(),
+            _ = _t(r, s),
+            p = pt(r, s),
+            g = (0, i.k6)(),
             S = _.data,
             f = p.data,
             v = _.isLoading || p.isLoading,
-            B = i > 0,
+            B = s > 0,
             h =
               e && t && t.serializeBase64String() == e.serializeBase64String();
           return n.createElement(
@@ -12549,21 +12549,21 @@
                           );
                         n += 1;
                       }
-                      let s = We.gA.Init(pe);
-                      s.Body().set_project_config(a),
-                        s.Body().fetch().set_fetch_id(e),
-                        s.Body().fetch().set_request_cancel(!1),
-                        s.Body().train().set_train_id(n),
-                        s.Body().train().set_request_cancel(!1),
+                      let i = We.gA.Init(pe);
+                      i.Body().set_project_config(a),
+                        i.Body().fetch().set_fetch_id(e),
+                        i.Body().fetch().set_request_cancel(!1),
+                        i.Body().train().set_train_id(n),
+                        i.Body().train().set_request_cancel(!1),
                         console.log(`Fetch ${e}, Train ${n}`);
                       const c = yield Re.Train(
                         ke.Get().GetServiceTransport(),
-                        s
+                        i
                       );
                       c.BIsValid() &&
                         1 == c.GetEResult() &&
                         (vt(t.project_id()),
-                        g.push(Mr.SteamLearnProjectTrainStatus(r, i, e, n)));
+                        g.push(Mr.SteamLearnProjectTrainStatus(r, s, e, n)));
                     }),
                 },
                 (0, Ot.Xx)("#SteamLearn_ManualTrain_Start")
@@ -13461,25 +13461,25 @@
               nProjectID: a,
               nPublishedVersion: r,
             } = ta(),
-            i = (0, s.UO)(),
-            o = (0, s.k6)(),
+            s = (0, i.UO)(),
+            o = (0, i.k6)(),
             c = _t(a, r),
             l = pt(a, r),
             m = c.data,
             d = l.data;
           return (
             n.useEffect(() => {
-              const e = parseInt(i.fetch_id);
+              const e = parseInt(s.fetch_id);
               let t = e;
               m && (isNaN(e) || 0 == e) && (t = Math.max(0, ...m.versions()));
-              const a = parseInt(i.train_id);
+              const a = parseInt(s.train_id);
               let r = a;
               d && (isNaN(a) || 0 == a) && (r = Math.max(0, ...d.versions())),
                 (e == t && a == r) ||
                   o.push(
-                    Mr.SteamLearnProjectTrainStatus(i.id, i.version, t, r)
+                    Mr.SteamLearnProjectTrainStatus(s.id, s.version, t, r)
                   );
-            }, [i, m, d, o]),
+            }, [s, m, d, o]),
             c.isLoading || l.isLoading
               ? n.createElement("div", null, "LOADING")
               : c.isSuccess && l.isSuccess
@@ -13488,15 +13488,15 @@
                   { className: dr.ProjectTrain },
                   n.createElement(vr, {
                     nProjectID: a,
-                    nFetchID: parseInt(i.fetch_id),
+                    nFetchID: parseInt(s.fetch_id),
                     arrAllFetchIDs: m.versions(),
                     fnSetFetchID: (e) => {
                       o.push(
                         Mr.SteamLearnProjectTrainStatus(
-                          i.id,
-                          i.version,
+                          s.id,
+                          s.version,
                           e,
-                          i.train_id
+                          s.train_id
                         )
                       );
                     },
@@ -13504,14 +13504,14 @@
                   n.createElement("div", { className: dr.Separator }),
                   n.createElement(br, {
                     nProjectID: a,
-                    nTrainID: parseInt(i.train_id),
+                    nTrainID: parseInt(s.train_id),
                     arrAllTrainIDs: d.versions(),
                     fnSetTrainID: (e) => {
                       o.push(
                         Mr.SteamLearnProjectTrainStatus(
-                          i.id,
-                          i.version,
-                          i.fetch_id,
+                          s.id,
+                          s.version,
+                          s.fetch_id,
                           e
                         )
                       );
@@ -14041,10 +14041,10 @@
             ) && e.push(Mr.SteamLearnProjectInferenceTester(t.id, a));
         },
         Tr = (e) => {
-          const t = (0, s.TH)(),
-            a = null != (0, s.LX)(t.pathname, e.strRoute);
+          const t = (0, i.TH)(),
+            a = null != (0, i.LX)(t.pathname, e.strRoute);
           return n.createElement(
-            i.rU,
+            s.rU,
             {
               to: e.strLink,
               className: (0, l.Z)(
@@ -14057,16 +14057,16 @@
           );
         },
         wr = () => {
-          const e = (0, s.TH)();
+          const e = (0, i.TH)();
           let t, a, r;
           for (const n of Object.values(Mr)) {
-            const i = n(void 0, void 0, void 0, void 0),
-              o = (0, s.LX)(e.pathname, i);
+            const s = n(void 0, void 0, void 0, void 0),
+              o = (0, i.LX)(e.pathname, s);
             o &&
               o.params.id &&
-              (i.includes(`/${Mr.SteamLearnDataSource()}/`) &&
+              (s.includes(`/${Mr.SteamLearnDataSource()}/`) &&
                 (t = parseInt(o.params.id)),
-              i.includes(`/${Mr.SteamLearnProject()}/`) &&
+              s.includes(`/${Mr.SteamLearnProject()}/`) &&
                 ((a = parseInt(o.params.id)),
                 void 0 !== o.params.version &&
                   (r = parseInt(o.params.version))));
@@ -14168,7 +14168,7 @@
           "div",
           { className: o.SteamLearnApp },
           n.createElement(
-            i.VK,
+            s.VK,
             { basename: (0, r.l)() + Mr.SteamLearnBase() },
             n.createElement(
               ia,
@@ -14178,53 +14178,53 @@
                 "div",
                 { className: o.MainAppContainer },
                 n.createElement(
-                  s.rs,
+                  i.rs,
                   null,
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnDataSourceList(),
                     component: It,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnDataSourceInspect(void 0),
                     component: Ut,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectList(),
                     component: Gt,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectCreate(),
                     component: Qt,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectDataSources(void 0, void 0),
                     component: da,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectSnapshotFilter(void 0, void 0),
                     component: jr,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectModel(void 0, void 0),
                     component: Qa,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectTrainSettings(void 0, void 0),
                     component: ar,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectDataSettings(void 0, void 0),
                     component: nr,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectManualTrain(void 0, void 0),
                     component: sr,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectScheduledTrain(void 0, void 0),
                     component: lr,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectTrainStatus(
                       void 0,
                       void 0,
@@ -14233,11 +14233,11 @@
                     ),
                     component: Er,
                   }),
-                  n.createElement(s.AW, {
+                  n.createElement(i.AW, {
                     path: Mr.SteamLearnProjectInferenceTester(void 0, void 0),
                     component: Dr,
                   }),
-                  n.createElement(s.l_, {
+                  n.createElement(i.l_, {
                     from: "/",
                     to: Mr.SteamLearnProjectList(),
                   })
