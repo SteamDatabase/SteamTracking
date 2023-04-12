@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7970669";
+var CLSTAMP = "7980876";
 (() => {
   var __webpack_modules__ = {
       19: function (module, exports) {
@@ -10089,12 +10089,12 @@ var CLSTAMP = "7970669";
             (exports.object = { extend: goog.object.extend }),
             (exports.typeOf = goog.typeOf));
       },
-      52: (e, t, o) => {
+      472: (e, t, o) => {
         "use strict";
         o.d(t, { B: () => a });
         var r = o(655),
-          n = o(99),
-          i = o(707);
+          n = o(417),
+          i = o(568);
         let s = [
           { index: 0, type: n.eV.OK, category: "action" },
           { index: 1, type: n.eV.CANCEL, category: "action" },
@@ -10159,12 +10159,12 @@ var CLSTAMP = "7970669";
         (0, r.gn)([i.a], a.prototype, "PollGamepads", null),
           (0, r.gn)([i.a], a.prototype, "OnWindowRegainedFocus", null);
       },
-      99: (e, t, o) => {
+      417: (e, t, o) => {
         "use strict";
         o.d(t, { eV: () => r, Rr: () => n, oH: () => g });
         var r,
           n,
-          i = o(218);
+          i = o(48);
         class s {
           constructor(e) {
             this.m_config = e;
@@ -10346,11 +10346,11 @@ var CLSTAMP = "7970669";
           }
         }
       },
-      457: (e, t, o) => {
+      414: (e, t, o) => {
         "use strict";
         o.d(t, { U5: () => n.U5 });
         var r,
-          n = o(794);
+          n = o(871);
         !(function (e) {
           (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
             (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -10369,7 +10369,7 @@ var CLSTAMP = "7970669";
             (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
             (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
         })(r || (r = {}));
-        var i, s, a, g, l, u, p, c, d, _, f, h, m, y;
+        var i, s, a, g, l, u, p, c, _, d, f, h, m, y;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -10471,7 +10471,7 @@ var CLSTAMP = "7970669";
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(d || (d = {})),
+          })(_ || (_ = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -10497,7 +10497,7 @@ var CLSTAMP = "7970669";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(_ || (_ = {})),
+          })(d || (d = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -10606,7 +10606,7 @@ var CLSTAMP = "7970669";
             (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
               "k_BluetoothDeviceType_Keyboard");
         })(T || (T = {}));
-        var I, R, A, C;
+        var A, I, R, C;
         !(function (e) {
           (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
             (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -10634,18 +10634,18 @@ var CLSTAMP = "7970669";
               "EBrowserType_Offscreen_SteamUI"),
             (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
               "EBrowserType_OpenVROverlay_Subview");
-        })(I || (I = {})),
+        })(A || (A = {})),
           (function (e) {
             (e[(e.SystemKey0 = 0)] = "SystemKey0"),
               (e[(e.SystemKey1 = 1)] = "SystemKey1");
-          })(R || (R = {})),
+          })(I || (I = {})),
           (function (e) {
             (e[(e.Hidden = 0)] = "Hidden"),
               (e[(e.Notification = 1)] = "Notification"),
               (e[(e.Overlay = 2)] = "Overlay"),
               (e[(e.Opaque = 3)] = "Opaque"),
               (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-          })(A || (A = {})),
+          })(R || (R = {})),
           (function (e) {
             (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
               (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
@@ -10664,10 +10664,10 @@ var CLSTAMP = "7970669";
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(O || (O = {}));
-        var v = o(19);
-        v.BinaryReader.prototype, v.BinaryWriter.prototype;
-        v.Message;
-        var N, w, D, j;
+        var D = o(19);
+        D.BinaryReader.prototype, D.BinaryWriter.prototype;
+        D.Message;
+        var N, v, w, U, L;
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -10685,7 +10685,76 @@ var CLSTAMP = "7970669";
               "k_EControllerBindingType_GameAction"),
             (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
               "k_EControllerBindingType_ControllerAction");
-        })(N || (N = {}));
+        })(N || (N = {})),
+          (function (e) {
+            (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
+              (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
+              (e[(e.GAMEPAD_BUTTON_X = 2)] = "GAMEPAD_BUTTON_X"),
+              (e[(e.GAMEPAD_BUTTON_Y = 3)] = "GAMEPAD_BUTTON_Y"),
+              (e[(e.GAMEPAD_BUTTON_DPAD_UP = 4)] = "GAMEPAD_BUTTON_DPAD_UP"),
+              (e[(e.GAMEPAD_BUTTON_DPAD_RIGHT = 5)] =
+                "GAMEPAD_BUTTON_DPAD_RIGHT"),
+              (e[(e.GAMEPAD_BUTTON_DPAD_DOWN = 6)] =
+                "GAMEPAD_BUTTON_DPAD_DOWN"),
+              (e[(e.GAMEPAD_BUTTON_DPAD_LEFT = 7)] =
+                "GAMEPAD_BUTTON_DPAD_LEFT"),
+              (e[(e.GAMEPAD_BUTTON_MENU = 8)] = "GAMEPAD_BUTTON_MENU"),
+              (e[(e.GAMEPAD_BUTTON_VIEW = 9)] = "GAMEPAD_BUTTON_VIEW"),
+              (e[(e.GAMEPAD_LEFTPAD_UP = 10)] = "GAMEPAD_LEFTPAD_UP"),
+              (e[(e.GAMEPAD_LEFTPAD_DOWN = 11)] = "GAMEPAD_LEFTPAD_DOWN"),
+              (e[(e.GAMEPAD_LEFTPAD_LEFT = 12)] = "GAMEPAD_LEFTPAD_LEFT"),
+              (e[(e.GAMEPAD_LEFTPAD_RIGHT = 13)] = "GAMEPAD_LEFTPAD_RIGHT"),
+              (e[(e.GAMEPAD_LEFTPAD_ANALOG = 14)] = "GAMEPAD_LEFTPAD_ANALOG"),
+              (e[(e.GAMEPAD_RIGHTPAD_UP = 15)] = "GAMEPAD_RIGHTPAD_UP"),
+              (e[(e.GAMEPAD_RIGHTPAD_DOWN = 16)] = "GAMEPAD_RIGHTPAD_DOWN"),
+              (e[(e.GAMEPAD_RIGHTPAD_LEFT = 17)] = "GAMEPAD_RIGHTPAD_LEFT"),
+              (e[(e.GAMEPAD_RIGHTPAD_RIGHT = 18)] = "GAMEPAD_RIGHTPAD_RIGHT"),
+              (e[(e.GAMEPAD_RIGHTPAD_ANALOG = 19)] = "GAMEPAD_RIGHTPAD_ANALOG"),
+              (e[(e.GAMEPAD_LEFTSTICK_UP = 20)] = "GAMEPAD_LEFTSTICK_UP"),
+              (e[(e.GAMEPAD_LEFTSTICK_DOWN = 21)] = "GAMEPAD_LEFTSTICK_DOWN"),
+              (e[(e.GAMEPAD_LEFTSTICK_LEFT = 22)] = "GAMEPAD_LEFTSTICK_LEFT"),
+              (e[(e.GAMEPAD_LEFTSTICK_RIGHT = 23)] = "GAMEPAD_LEFTSTICK_RIGHT"),
+              (e[(e.GAMEPAD_LEFTSTICK_ANALOG = 24)] =
+                "GAMEPAD_LEFTSTICK_ANALOG"),
+              (e[(e.GAMEPAD_LEFTSTICK_CLICK = 25)] = "GAMEPAD_LEFTSTICK_CLICK"),
+              (e[(e.GAMEPAD_LTRIGGER_ANALOG = 26)] = "GAMEPAD_LTRIGGER_ANALOG"),
+              (e[(e.GAMEPAD_RTRIGGER_ANALOG = 27)] = "GAMEPAD_RTRIGGER_ANALOG"),
+              (e[(e.GAMEPAD_BUTTON_LTRIGGER = 28)] = "GAMEPAD_BUTTON_LTRIGGER"),
+              (e[(e.GAMEPAD_BUTTON_RTRIGGER = 29)] = "GAMEPAD_BUTTON_RTRIGGER"),
+              (e[(e.GAMEPAD_BUTTON_LSHOULDER = 30)] =
+                "GAMEPAD_BUTTON_LSHOULDER"),
+              (e[(e.GAMEPAD_BUTTON_RSHOULDER = 31)] =
+                "GAMEPAD_BUTTON_RSHOULDER"),
+              (e[(e.GAMEPAD_BUTTON_LBACK = 32)] = "GAMEPAD_BUTTON_LBACK"),
+              (e[(e.GAMEPAD_BUTTON_RBACK = 33)] = "GAMEPAD_BUTTON_RBACK"),
+              (e[(e.GAMEPAD_BUTTON_GUIDE = 34)] = "GAMEPAD_BUTTON_GUIDE"),
+              (e[(e.GAMEPAD_BUTTON_SELECT = 35)] = "GAMEPAD_BUTTON_SELECT"),
+              (e[(e.GAMEPAD_BUTTON_START = 36)] = "GAMEPAD_BUTTON_START"),
+              (e[(e.GAMEPAD_BUTTON_LPAD_CLICKED = 37)] =
+                "GAMEPAD_BUTTON_LPAD_CLICKED"),
+              (e[(e.GAMEPAD_BUTTON_LPAD_TOUCH = 38)] =
+                "GAMEPAD_BUTTON_LPAD_TOUCH"),
+              (e[(e.GAMEPAD_BUTTON_RPAD_CLICKED = 39)] =
+                "GAMEPAD_BUTTON_RPAD_CLICKED"),
+              (e[(e.GAMEPAD_BUTTON_RPAD_TOUCH = 40)] =
+                "GAMEPAD_BUTTON_RPAD_TOUCH"),
+              (e[(e.GAMEPAD_RIGHTSTICK_CLICK = 41)] =
+                "GAMEPAD_RIGHTSTICK_CLICK"),
+              (e[(e.GAMEPAD_RIGHTSTICK_TOUCH = 42)] =
+                "GAMEPAD_RIGHTSTICK_TOUCH"),
+              (e[(e.GAMEPAD_LEFTSTICK_TOUCH = 43)] = "GAMEPAD_LEFTSTICK_TOUCH"),
+              (e[(e.GAMEPAD_BUTTON_LBACK_UPPER = 44)] =
+                "GAMEPAD_BUTTON_LBACK_UPPER"),
+              (e[(e.GAMEPAD_BUTTON_RBACK_UPPER = 45)] =
+                "GAMEPAD_BUTTON_RBACK_UPPER"),
+              (e[(e.GAMEPAD_BUTTON_LAST = 46)] = "GAMEPAD_BUTTON_LAST"),
+              (e[(e.GAMEPAD_ANALOG_SCROLL = 47)] = "GAMEPAD_ANALOG_SCROLL"),
+              (e[(e.GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR = 48)] =
+                "GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR"),
+              (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
+                "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
+              (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
+          })(v || (v = {}));
         !(function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -10750,20 +10819,20 @@ var CLSTAMP = "7970669";
               "k_EClientUINotificationFriendChatMessage"),
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
-        })(D || (D = {}));
+        })(U || (U = {}));
         !(function (e) {
           (e[(e.AudioPlayback_Undefined = 0)] = "AudioPlayback_Undefined"),
             (e[(e.AudioPlayback_Playing = 1)] = "AudioPlayback_Playing"),
             (e[(e.AudioPlayback_Paused = 2)] = "AudioPlayback_Paused"),
             (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
-        })(j || (j = {}));
-        var U, L, M, P, B;
+        })(L || (L = {}));
+        var j, P, M, B, V;
         !(function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Wired = 1)] = "Wired"),
             (e[(e.Wireless = 2)] = "Wireless"),
             (e[(e.Virtual = 3)] = "Virtual");
-        })(U || (U = {})),
+        })(j || (j = {})),
           (function (e) {
             (e[(e.NotPresent = 0)] = "NotPresent"),
               (e[(e.Failed = 1)] = "Failed"),
@@ -10772,7 +10841,7 @@ var CLSTAMP = "7970669";
               (e[(e.Connecting = 4)] = "Connecting"),
               (e[(e.Connected = 5)] = "Connected"),
               (e[(e.Retrying = 6)] = "Retrying");
-          })(L || (L = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.Weak = 1)] = "Weak"),
@@ -10789,15 +10858,15 @@ var CLSTAMP = "7970669";
               (e[(e.Wpa2 = 16)] = "Wpa2"),
               (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
               (e[(e.Unsupported = 32768)] = "Unsupported");
-          })(P || (P = {})),
+          })(B || (B = {})),
           (function (e) {
             (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
               (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
               (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
               (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
                 "k_EHTTPProxyMode_Automatic");
-          })(B || (B = {}));
-        var V, F, k, H;
+          })(V || (V = {}));
+        var F, k, H, W;
         !(function (e) {
           (e[(e.k_EComputerActiveStateInvalid = 0)] =
             "k_EComputerActiveStateInvalid"),
@@ -10805,7 +10874,7 @@ var CLSTAMP = "7970669";
               "k_EComputerActiveStateActive"),
             (e[(e.k_EComputerActiveStateIdle = 2)] =
               "k_EComputerActiveStateIdle");
-        })(V || (V = {})),
+        })(F || (F = {})),
           (function (e) {
             (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
               "k_EClientUsedInputTypeKeyboard"),
@@ -10815,7 +10884,7 @@ var CLSTAMP = "7970669";
                 "k_EClientUsedInputTypeController"),
               (e[(e.k_EClientUsedInputTypeMax = 3)] =
                 "k_EClientUsedInputTypeMax");
-          })(F || (F = {})),
+          })(k || (k = {})),
           (function (e) {
             (e[(e.k_EVRError_None = 0)] = "k_EVRError_None"),
               (e[(e.k_EVRError_VRSkipParam = 1)] = "k_EVRError_VRSkipParam"),
@@ -10827,7 +10896,7 @@ var CLSTAMP = "7970669";
                 "k_EVRError_CrashProtection"),
               (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
               (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
-          })(k || (k = {})),
+          })(H || (H = {})),
           (function (e) {
             (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
               (e[(e.VRInitError_Unknown = 1)] = "VRInitError_Unknown"),
@@ -11305,9 +11374,9 @@ var CLSTAMP = "7970669";
               (e[(e.VRInitError_Steam_SteamInstallationNotFound = 2e3)] =
                 "VRInitError_Steam_SteamInstallationNotFound"),
               (e[(e.VRInitError_LastError = 2001)] = "VRInitError_LastError");
-          })(H || (H = {}));
+          })(W || (W = {}));
       },
-      794: (e, t, o) => {
+      871: (e, t, o) => {
         "use strict";
         function r(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
@@ -11321,7 +11390,7 @@ var CLSTAMP = "7970669";
         }
         o.d(t, { U5: () => n });
       },
-      540: (e, t, o) => {
+      633: (e, t, o) => {
         "use strict";
         function r(e, t) {
           return (function (e, t) {
@@ -11331,7 +11400,7 @@ var CLSTAMP = "7970669";
         }
         o.d(t, { Zf: () => r });
       },
-      707: (e, t, o) => {
+      568: (e, t, o) => {
         "use strict";
         function r(e, t, o) {
           return {
@@ -11347,12 +11416,12 @@ var CLSTAMP = "7970669";
         }
         o.d(t, { a: () => r });
       },
-      218: (e, t, o) => {
+      48: (e, t, o) => {
         "use strict";
         o.d(t, { Ar: () => l, Hf: () => u, pB: () => s, vq: () => g });
         var r = o(655),
-          n = o(540),
-          i = o(707);
+          n = o(633),
+          i = o(568);
         class s {
           constructor() {
             this.m_vecCallbacks = [];
@@ -11432,7 +11501,7 @@ var CLSTAMP = "7970669";
         }
         (0, r.gn)([i.a], u.prototype, "Unregister", null);
       },
-      670: (e, t, o) => {
+      232: (e, t, o) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (o.p = window.VALVE_PUBLIC_PATH)
@@ -11557,7 +11626,7 @@ var CLSTAMP = "7970669";
       "javascript/legacy_web/" +
       { 380: "desktop", 511: "gamepad" }[e] +
       ".js?contenthash=" +
-      { 380: "c383297bc4b254ddf36d", 511: "e92242541b4eacbc1e96" }[e]),
+      { 380: "dbc5ff6c840b53a74870", 511: "f6230b85aaedb7981234" }[e]),
     (__webpack_require__.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
     (__webpack_require__.g = (function () {
@@ -11765,15 +11834,15 @@ var CLSTAMP = "7970669";
   (() => {
     "use strict";
     var e = __webpack_require__(655),
-      t = (__webpack_require__(670), __webpack_require__(311)),
+      t = (__webpack_require__(232), __webpack_require__(311)),
       o = __webpack_require__.n(t),
-      r = __webpack_require__(52),
-      n = __webpack_require__(457);
+      r = __webpack_require__(472),
+      n = __webpack_require__(414);
     function i(t) {
       return (0, e.mG)(this, void 0, void 0, function* () {
         const { InitializeGamepadNavigation: e } = yield __webpack_require__
           .e(511)
-          .then(__webpack_require__.bind(__webpack_require__, 851));
+          .then(__webpack_require__.bind(__webpack_require__, 817));
         e(t);
       });
     }
@@ -11790,7 +11859,7 @@ var CLSTAMP = "7970669";
                 (0, e.mG)(this, void 0, void 0, function* () {
                   const { InitializeForDesktop: e } = yield __webpack_require__
                     .e(380)
-                    .then(__webpack_require__.bind(__webpack_require__, 912));
+                    .then(__webpack_require__.bind(__webpack_require__, 997));
                   e();
                 });
               })()

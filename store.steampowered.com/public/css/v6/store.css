@@ -791,7 +791,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
             "img img name name"
             "img img price price";
     height: unset;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.2s ease-in-out;
 }
 .popup_body.search_v2 .match.match_v2 .match_name {
     grid-area: name;
@@ -809,7 +809,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     box-sizing: border-box;
     color: #f5f5f5;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 .popup_body.search_v2 .match.match_tag.match_v2 .match_name > div {
     min-width: 40px;
@@ -846,7 +846,13 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     color: #f5f5f5;
     font-size: 13px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+.popup_body.search_v2 .match.match_v2 .match_subtitle .includes_games {
+	padding-left: 8px;
+    color: grey;
+    font-size: 11px;
 }
 
 .popup_body.search_v2 .match.match_v2:hover,
@@ -918,7 +924,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     overflow: hidden;
     border-radius: 3px;
     background: linear-gradient( 90deg, #2c556a29 0%, #28414e30 15%, #2e5e76c2 85%);
-    transition: background 0.5s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 .match_v2:nth-child(odd) .match_background_image {
     background: linear-gradient( 90deg, #1d344029 0%, #16262e30 15%, #2b4d5ec2 85%)
@@ -1002,6 +1008,12 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	position: absolute;
 	left: 134px;
 	top: 30px;
+}
+
+.search_suggest .match .match_subtitle .includes_games {
+	padding-left: 8px;
+    color: grey;
+    font-size: 11px;
 }
 
 .search_suggest .match .debug_spell_correct_info {
