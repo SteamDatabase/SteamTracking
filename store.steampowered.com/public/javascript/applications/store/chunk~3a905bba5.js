@@ -943,7 +943,7 @@
               ) ||
               (0, w.AM)(o.createElement(A, null), window)));
       }
-      function B() {
+      function G() {
         return (
           !!u.cb.Get().BIsUserLoggedIn() ||
           ((0, w.AM)(
@@ -960,7 +960,7 @@
           !1)
         );
       }
-      function G(e) {
+      function B(e) {
         const t = l.K.InitFromClanID(e),
           a = u.cb.Get().GetPartnerEventPermissions(t);
         return (
@@ -971,7 +971,7 @@
       }
       function y(e) {
         return (0, n.mG)(this, void 0, void 0, function* () {
-          if (B() && G(e)) {
+          if (G() && B(e)) {
             let t = l.K.InitFromClanID(e),
               a = s.jg.Get().BIsFollowingCurator(t);
             yield s.jg.Get().UpdateFollowOrIgnoreCurator(t, !0, !a), f(a);
@@ -1033,8 +1033,8 @@
             bApplyingFollowing: t,
             onFollowClick: () => {
               const { clanAccountID: t } = e;
-              B() &&
-                G(t) &&
+              G() &&
+                B(t) &&
                 (a(!0),
                 (() => {
                   const { clanAccountID: t, creatorID: n } = e,
@@ -1077,7 +1077,7 @@
             bFollowing: l,
             bApplyingFollowing: t,
             onFollowClick: () => {
-              B() &&
+              G() &&
                 (a(!0),
                 (() => {
                   const { appid: t } = e,
@@ -1129,8 +1129,8 @@
         b = a(45321),
         A = a(16147),
         f = a(3341),
-        B = a(56695),
-        G = a(741),
+        G = a(56695),
+        B = a(741),
         y = a(86701),
         N = a(40108),
         T = a(32338),
@@ -1375,7 +1375,7 @@
               m = "#ReviewScore_PercentPositive_series";
           }
         return s.createElement(
-          B.K,
+          G.K,
           { url: i, className: (0, P.Z)(U().ReviewScore, "ReviewScore") },
           n &&
             null != o.percent_positive &&
@@ -1575,7 +1575,7 @@
                 Boolean(i && C) && s.createElement(E.Ws, { storeItem: v }),
                 Boolean(n) && n,
                 Boolean(c && C) &&
-                  s.createElement(G.r, { appid: t.id, bIsMuted: !1 }),
+                  s.createElement(B.r, { appid: t.id, bIsMuted: !1 }),
                 m && s.createElement(ae, { nCreatorAccountID: m })
               )
             )
@@ -1701,7 +1701,8 @@
         );
       }
       const se = s.forwardRef((e, t) => {
-        const { hoverProps: a, children: n } = e;
+        const { hoverProps: a, children: n } = e,
+          r = s.useCallback((e) => (null == e ? void 0 : e.focus()), []);
         return s.createElement(
           d.T,
           Object.assign({}, a),
@@ -1715,11 +1716,7 @@
             },
             s.createElement(
               "div",
-              {
-                ref: (e) => (null == e ? void 0 : e.focus()),
-                className: U().HoverContentTransition,
-                tabIndex: -1,
-              },
+              { ref: r, className: U().HoverContentTransition, tabIndex: -1 },
               n
             )
           )
@@ -1764,7 +1761,6 @@
             onMouseEnter: v,
             onMouseLeave: S,
             onFocus: v,
-            onBlur: S,
             onClick: !!o && h,
             onTouchStart: E,
             onKeyDown: w,
@@ -1872,8 +1868,8 @@
         b = a(3341),
         A = a(78205),
         f = a(56695),
-        B = a(741),
-        G = a(24276),
+        G = a(741),
+        B = a(24276),
         y = a(96138),
         N = a(90043),
         T = a(13806),
@@ -1897,7 +1893,7 @@
               purchaseInfo: _,
               hoverType: v,
               nHoverId: f,
-              artworkInfo: G,
+              artworkInfo: B,
               artworkStoreItem: N,
             } = (0, C.Q)(e),
             {
@@ -1980,7 +1976,7 @@
                       "div",
                       { className: W().StoreSaleWidgetImage },
                       r.createElement(E.vs, { appids: Q }),
-                      r.createElement(X, { info: G, imageType: "header" }),
+                      r.createElement(X, { info: B, imageType: "header" }),
                       r.createElement(y.y, {
                         eDeckCompatibilityCategory:
                           null === (t = u.GetPlatforms()) || void 0 === t
@@ -2098,7 +2094,7 @@
                         r.Fragment,
                         null,
                         Boolean(H && oe)
-                          ? r.createElement(B.r, { appid: g.id, bIsMuted: n })
+                          ? r.createElement(G.r, { appid: g.id, bIsMuted: n })
                           : r.createElement(I.x1, {
                               info: _,
                               bShowDemoButton: k,
@@ -2273,9 +2269,9 @@
             position: "center",
             string: (0, R.Xx)("#Loading"),
           });
-        if ("library" === a) return r.createElement(G.N, { info: t });
+        if ("library" === a) return r.createElement(B.N, { info: t });
         let o = new Array();
-        (0, G.q)(n, "header" === a, o),
+        (0, B.q)(n, "header" === a, o),
           (o = o.filter((e) => Boolean(e) && "" !== e));
         let l,
           i,
@@ -2514,8 +2510,8 @@
           [I] = (0, c.vs)(C.id, p),
           [D] = (0, o.useState)(++d.instance_count),
           [b, A] = (0, o.useState)(!1),
-          [f, B] = (0, o.useState)((0, m.Dt)(u)),
-          [G, y] = (0, o.useState)(n);
+          [f, G] = (0, o.useState)((0, m.Dt)(u)),
+          [B, y] = (0, o.useState)(n);
         return (
           (0, o.useEffect)(() => {
             if (
@@ -2526,7 +2522,7 @@
                 !(null == a ? void 0 : a.current.token.reason))
             ) {
               const e = _.GetIncludedAppIDs()[0];
-              S({ id: e, type: "game" }), B("app"), y(e);
+              S({ id: e, type: "game" }), G("app"), y(e);
             }
           }, [v.id, v.type, _]),
           (0, o.useEffect)(
@@ -2546,7 +2542,7 @@
             baseGameStoreItem: I,
             baseGameInfo: C,
             hoverType: f,
-            nHoverId: G,
+            nHoverId: B,
             artworkInfo: h,
             artworkStoreItem: E,
           }
@@ -3037,7 +3033,7 @@
           [s, m] = o.useState(!i.jg.Get().BIsLoaded()),
           p = (0, v.bJ)(),
           { appid: g, bIsFree: D, bIsComingSoon: b, className: A } = e,
-          [f, B] = (0, r.SZ)(() => [
+          [f, G] = (0, r.SZ)(() => [
             i.jg.Get().BIsGameWishlisted(g),
             i.jg.Get().BOwnsApp(g),
           ]);
@@ -3048,7 +3044,7 @@
             });
           })();
         }, []);
-        return B || (!b && D)
+        return G || (!b && D)
           ? null
           : o.createElement(
               "div",
