@@ -114,6 +114,11 @@
         "name": "Software Engineering - Other",
         "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> If you have an entrepreneurial spirit and a high level of expertise in your discipline, send us your resume.</div>"
     },
+    "18": {
+        "reqid": 18,
+        "name": "Sound Designer",
+        "description": "<div class=\"job_description_intro\"><p> We’re looking for experienced sound designers and/or interactive audio \"integrator\" who can help us create sophisticated, emotionally-compelling audio experiences for a variety of media formats and products. Our sound designers collaborate with a team of broadly-skilled peers to make sound a powerful element in all current and future Valve products, from multimedia ads to video game consoles, PC, and on-line gaming.</p><div style=\"font-weight:bold;\">Please include a reel with your application that includes in-game examples of your audio design and implementation. Please outline the contributions you made to the project and which parts of the reel highlight the value you added to the piece.</div></div>"
+    },
     "19": {
         "reqid": 19,
         "name": "Statistician / Data Scientist",

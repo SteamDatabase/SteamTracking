@@ -1304,6 +1304,9 @@ function SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions )
 		}
 		else
 		{
+  		if ( !$CurSuggestion.length )
+	  		$CurSuggestion = $Suggestions.children('.hover');
+
 			if ( event.keyCode == 38 /* Event.KEY_UP */ )
 			{
 				if ( $CurSuggestion.length )
@@ -1333,8 +1336,10 @@ function SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions )
 }
 function SearchSuggestOnMouseOver( event, $Suggestion )
 {
-	$Suggestion.siblings().removeClass( 'focus');
-	$Suggestion.addClass( 'focus' );
+	$Suggestion.siblings().removeClass( 'focus' );
+	$Suggestion.removeClass( 'focus' );
+	$Suggestion.siblings().removeClass( 'hover' );
+	$Suggestion.addClass( 'hover' );
 }
 
 function SearchSuggestClearDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions )
