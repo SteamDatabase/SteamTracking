@@ -13675,9 +13675,6 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
   width: 100%;
   height: 100%;
 }
-* {
-  user-select: none;
-}
 .gamepadui_BasicUiRoot_gbo6E {
   width: 100%;
   height: 100%;
@@ -13686,6 +13683,9 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
   -webkit-tap-highlight-color: transparent;
   touch-action: none;
   z-index: 5;
+}
+.gamepadui_BasicUiRoot_gbo6E * {
+  user-select: none;
 }
 .gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneConfigurator_1oZO8,
 .gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneKeyboard_1uyWM {
