@@ -91,7 +91,7 @@
         s = a(25125),
         i = a(89526),
         c = a(6960),
-        d = (a(38800), a(51684)),
+        d = (a(45797), a(51684)),
         m = a(23907),
         u = a(43407),
         _ = a(50567),
@@ -503,7 +503,7 @@
     },
     7169: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Ee });
+      a.r(t), a.d(t, { default: () => pe });
       a(90174);
       var n = a(89526),
         r = a(59934),
@@ -512,7 +512,7 @@
         s = a(52868),
         i = a.n(s),
         c = a(50265),
-        d = (a(38800), a(82569)),
+        d = (a(45797), a(82569)),
         m = a(33927),
         u = (a(96158), a(47330)),
         _ = a(70983);
@@ -1867,14 +1867,13 @@
             )
           );
         });
-      var _e = a(83983),
-        ve = a(94082);
-      let pe = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
-      function Ee(e) {
+      var _e = a(83983);
+      let ve = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
+      function pe(e) {
         const [t, a] = n.useState(!0);
         return (
           (0, n.useEffect)(() => {
-            t && ((0, ve.nf)(null), _e.cb.InitGlobal().then(() => a(!1)));
+            t && _e.cb.InitGlobal().then(() => a(!1));
           }, [t]),
           t
             ? n.createElement(le.V, {
@@ -1889,7 +1888,7 @@
                   r.rs,
                   null,
                   n.createElement(r.AW, {
-                    path: pe.BroadcastWatch(":steamid_or_user_vanity"),
+                    path: ve.BroadcastWatch(":steamid_or_user_vanity"),
                     render: (e) =>
                       n.createElement(de, {
                         strSteamID: e.match.params.steamid_or_user_vanity,

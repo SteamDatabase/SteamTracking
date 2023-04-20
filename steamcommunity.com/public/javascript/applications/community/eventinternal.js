@@ -34,7 +34,7 @@
       a.d(t, { C: () => c, R: () => s });
       var n = a(33940),
         r = a(50265),
-        o = (a(6960), a(50567), a(38800), a(82569)),
+        o = (a(6960), a(50567), a(45797), a(82569)),
         l = (a(49064), a(73265)),
         i = a(70756);
       class s {
@@ -191,7 +191,7 @@
     },
     20546: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => J });
+      a.r(t), a.d(t, { default: () => X });
       var n = a(94629),
         r = a(12628),
         o = a(33940),
@@ -200,7 +200,7 @@
         s = a(50265),
         c = a(88464),
         d = (a(36105), a(89526)),
-        m = (a(6960), a(38800), a(82569)),
+        m = (a(6960), a(45797), a(82569)),
         u = a(12263),
         g = a(57255),
         p = a(46723),
@@ -1152,13 +1152,12 @@
         });
       var Y = a(59934),
         K = a(70756),
-        Z = a(94082),
-        X = (a(46139), a(83215));
-      function J(e) {
+        Z = (a(46139), a(83215));
+      function X(e) {
         const [t, a] = d.useState(!0);
         return (
           d.useEffect(() => {
-            K.j1.Init(), Promise.all([(0, Z.nf)(null)]).then(() => a(!1));
+            K.j1.Init(), Promise.all([]).then(() => a(!1));
           }, []),
           t
             ? d.createElement(E.V, { position: "center", size: "medium" })
@@ -1173,7 +1172,7 @@
                   path: n.wZ.MigrateEvents(),
                   component: $,
                 }),
-                d.createElement(Y.AW, { component: X.R })
+                d.createElement(Y.AW, { component: Z.R })
               )
         );
       }

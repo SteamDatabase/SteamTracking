@@ -1111,14 +1111,12 @@ function SetMovieConvertState( movieContainer, state, queue_pos )
 	var dragdrop = movieContainer.find( '.drag_and_drop' )[0];
 	var movieUploading = movieContainer.find( '.movie_uploading' )[0];
 	var movieUploadedUI = movieContainer.find( '.movie_uploaded_ui' )[0];
-	var movieMoreLink = movieContainer.find( '.movie_more_link' )[0];
 
 	var bSchedule = false;
 	if ( state == 'published' )
 	{
 		movieUploadUI.hide();
 		movieUploadedUI.show();
-		movieMoreLink.show();
 	}
 	else if ( state == 'converting' || state == 'publishing' )
 	{
@@ -1143,7 +1141,6 @@ function SetMovieConvertState( movieContainer, state, queue_pos )
 		bSchedule = true;
 
 		movieUploadedUI.hide();
-		movieMoreLink.hide();
 		movieUploadUI.show();
 		dragdrop.hide();
 		movieUploading.show();
@@ -1155,7 +1152,6 @@ function SetMovieConvertState( movieContainer, state, queue_pos )
 			SetMovieError( movieContainer, 'An error occurred while uploading this movie', true );
 
 		movieUploadedUI.hide();
-		movieMoreLink.hide();
 		movieUploadUI.show();
 		dragdrop.show();
 		movieUploading.hide();
@@ -1239,18 +1235,6 @@ function RegisterMovieDragDrop()
 		target.bind( 'drop', OnMovieScreenshotDrop );
 		target.data( 'drag_registered', true );
 	}
-}
-
-function MovieExpandCollapse( link )
-{
-	$J( link ).siblings().find( '.movie_expanded' ).toggle();
-	var divText = $J( link ).find( '.movie_more_row' )[0];
-	if ( $J( divText ).text().indexOf( 'Hide' ) == -1 )
-		$J( divText ).text( 'Hide' );
-	else
-		$J( divText ).text( 'Advanced / Replace Movie' );
-
-	return false;
 }
 
 function SetMovieData( form )
@@ -1533,7 +1517,15 @@ function UpdateMovieAllowedCountries( container )
 function VisibilityCheckboxChanged( id )
 {
 	var bChecked = GetFancyCheckboxState( 'checkbox_visibility_' + id );
-	SetFancyCheckboxEnabled( 'checkbox_highlight_' + id, bChecked );
+
+	if ( bChecked )
+	{
+		$J( '#checkbox_highlight_ctn_' + id ).show();
+	}
+	else
+	{
+		$J( '#checkbox_highlight_ctn_' + id ).hide();
+	}
 }
 
 function DeleteRelease( req )

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7977629";
+var CLSTAMP = "7993989";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7977629";
     n,
     o,
     i = {
-      60502: (e, t, r) => {
+      31355: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "7977629";
         }
         Object.create;
         Object.create;
-        r(74594);
+        r(94598);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
@@ -134,7 +134,7 @@ var CLSTAMP = "7977629";
               return t;
           }
         }
-        var c, d, u, m, p, I, E, h, C, R, f, S, k, g;
+        var d, c, u, p, I, m, E, C, h, R, S, f, g, D;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -150,7 +150,7 @@ var CLSTAMP = "7977629";
               "k_EConnectivityTestResult_WifiDisabled"),
             (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
               "k_EConnectivityTestResult_NoLAN");
-        })(c || (c = {})),
+        })(d || (d = {})),
           (function (e) {
             (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
               "k_ENetFakeLocalSystemState_Normal"),
@@ -164,7 +164,7 @@ var CLSTAMP = "7977629";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(d || (d = {})),
+          })(c || (c = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -188,7 +188,7 @@ var CLSTAMP = "7977629";
                 "k_EFloatingGamepadTextInputModeModeEmail"),
               (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
                 "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(m || (m = {})),
+          })(p || (p = {})),
           (function (e) {
             (e[(e.k_EAppUpdateContentType_Content = 0)] =
               "k_EAppUpdateContentType_Content"),
@@ -198,7 +198,7 @@ var CLSTAMP = "7977629";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(p || (p = {})),
+          })(I || (I = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -206,7 +206,7 @@ var CLSTAMP = "7977629";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(I || (I = {})),
+          })(m || (m = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
@@ -230,13 +230,13 @@ var CLSTAMP = "7977629";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(h || (h = {})),
+          })(C || (C = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(C || (C = {})),
+          })(h || (h = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -270,14 +270,14 @@ var CLSTAMP = "7977629";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(f || (f = {})),
+          })(S || (S = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(S || (S = {})),
+          })(f || (f = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -291,7 +291,7 @@ var CLSTAMP = "7977629";
                 "k_EAppReleaseState_Released"),
               (e[(e.k_EAppReleaseState_Disabled = 5)] =
                 "k_EAppReleaseState_Disabled");
-          })(k || (k = {})),
+          })(g || (g = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -325,11 +325,11 @@ var CLSTAMP = "7977629";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })(g || (g = {}));
-        var V, v, y;
+          })(D || (D = {}));
+        var T, A, y;
         !(function (e) {
           (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-        })(V || (V = {})),
+        })(T || (T = {})),
           (function (e) {
             (e[(e.Input = 0)] = "Input"),
               (e[(e.AllOutput = 1)] = "AllOutput"),
@@ -338,13 +338,13 @@ var CLSTAMP = "7977629";
               (e[(e.Sub = 4)] = "Sub"),
               (e[(e.BackLeft = 5)] = "BackLeft"),
               (e[(e.BackRight = 6)] = "BackRight");
-          })(v || (v = {}));
+          })(A || (A = {}));
         !(function (e) {
           (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
             (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
         })(y || (y = {}));
-        var T;
+        var v;
         !(function (e) {
           (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
             "k_BluetoothDeviceType_Invalid"),
@@ -370,8 +370,8 @@ var CLSTAMP = "7977629";
               "k_BluetoothDeviceType_Gamepad"),
             (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
               "k_BluetoothDeviceType_Keyboard");
-        })(T || (T = {}));
-        var b, D, F, A;
+        })(v || (v = {}));
+        var V, k, P, F;
         !(function (e) {
           (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
             (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -399,18 +399,18 @@ var CLSTAMP = "7977629";
               "EBrowserType_Offscreen_SteamUI"),
             (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
               "EBrowserType_OpenVROverlay_Subview");
-        })(b || (b = {})),
+        })(V || (V = {})),
           (function (e) {
             (e[(e.SystemKey0 = 0)] = "SystemKey0"),
               (e[(e.SystemKey1 = 1)] = "SystemKey1");
-          })(D || (D = {})),
+          })(k || (k = {})),
           (function (e) {
             (e[(e.Hidden = 0)] = "Hidden"),
               (e[(e.Notification = 1)] = "Notification"),
               (e[(e.Overlay = 2)] = "Overlay"),
               (e[(e.Opaque = 3)] = "Opaque"),
               (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-          })(F || (F = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
               (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
@@ -422,15 +422,15 @@ var CLSTAMP = "7977629";
               (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
               (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
               (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
-          })(A || (A = {}));
-        var N;
+          })(F || (F = {}));
+        var M;
         !(function (e) {
           (e[(e.k_EPending = 0)] = "k_EPending"),
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
-        })(N || (N = {}));
-        var L, M, P, O;
-        r(9654);
+        })(M || (M = {}));
+        var b, B, N, L, U;
+        r(75395);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -448,7 +448,76 @@ var CLSTAMP = "7977629";
               "k_EControllerBindingType_GameAction"),
             (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
               "k_EControllerBindingType_ControllerAction");
-        })(L || (L = {}));
+        })(b || (b = {})),
+          (function (e) {
+            (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
+              (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
+              (e[(e.GAMEPAD_BUTTON_X = 2)] = "GAMEPAD_BUTTON_X"),
+              (e[(e.GAMEPAD_BUTTON_Y = 3)] = "GAMEPAD_BUTTON_Y"),
+              (e[(e.GAMEPAD_BUTTON_DPAD_UP = 4)] = "GAMEPAD_BUTTON_DPAD_UP"),
+              (e[(e.GAMEPAD_BUTTON_DPAD_RIGHT = 5)] =
+                "GAMEPAD_BUTTON_DPAD_RIGHT"),
+              (e[(e.GAMEPAD_BUTTON_DPAD_DOWN = 6)] =
+                "GAMEPAD_BUTTON_DPAD_DOWN"),
+              (e[(e.GAMEPAD_BUTTON_DPAD_LEFT = 7)] =
+                "GAMEPAD_BUTTON_DPAD_LEFT"),
+              (e[(e.GAMEPAD_BUTTON_MENU = 8)] = "GAMEPAD_BUTTON_MENU"),
+              (e[(e.GAMEPAD_BUTTON_VIEW = 9)] = "GAMEPAD_BUTTON_VIEW"),
+              (e[(e.GAMEPAD_LEFTPAD_UP = 10)] = "GAMEPAD_LEFTPAD_UP"),
+              (e[(e.GAMEPAD_LEFTPAD_DOWN = 11)] = "GAMEPAD_LEFTPAD_DOWN"),
+              (e[(e.GAMEPAD_LEFTPAD_LEFT = 12)] = "GAMEPAD_LEFTPAD_LEFT"),
+              (e[(e.GAMEPAD_LEFTPAD_RIGHT = 13)] = "GAMEPAD_LEFTPAD_RIGHT"),
+              (e[(e.GAMEPAD_LEFTPAD_ANALOG = 14)] = "GAMEPAD_LEFTPAD_ANALOG"),
+              (e[(e.GAMEPAD_RIGHTPAD_UP = 15)] = "GAMEPAD_RIGHTPAD_UP"),
+              (e[(e.GAMEPAD_RIGHTPAD_DOWN = 16)] = "GAMEPAD_RIGHTPAD_DOWN"),
+              (e[(e.GAMEPAD_RIGHTPAD_LEFT = 17)] = "GAMEPAD_RIGHTPAD_LEFT"),
+              (e[(e.GAMEPAD_RIGHTPAD_RIGHT = 18)] = "GAMEPAD_RIGHTPAD_RIGHT"),
+              (e[(e.GAMEPAD_RIGHTPAD_ANALOG = 19)] = "GAMEPAD_RIGHTPAD_ANALOG"),
+              (e[(e.GAMEPAD_LEFTSTICK_UP = 20)] = "GAMEPAD_LEFTSTICK_UP"),
+              (e[(e.GAMEPAD_LEFTSTICK_DOWN = 21)] = "GAMEPAD_LEFTSTICK_DOWN"),
+              (e[(e.GAMEPAD_LEFTSTICK_LEFT = 22)] = "GAMEPAD_LEFTSTICK_LEFT"),
+              (e[(e.GAMEPAD_LEFTSTICK_RIGHT = 23)] = "GAMEPAD_LEFTSTICK_RIGHT"),
+              (e[(e.GAMEPAD_LEFTSTICK_ANALOG = 24)] =
+                "GAMEPAD_LEFTSTICK_ANALOG"),
+              (e[(e.GAMEPAD_LEFTSTICK_CLICK = 25)] = "GAMEPAD_LEFTSTICK_CLICK"),
+              (e[(e.GAMEPAD_LTRIGGER_ANALOG = 26)] = "GAMEPAD_LTRIGGER_ANALOG"),
+              (e[(e.GAMEPAD_RTRIGGER_ANALOG = 27)] = "GAMEPAD_RTRIGGER_ANALOG"),
+              (e[(e.GAMEPAD_BUTTON_LTRIGGER = 28)] = "GAMEPAD_BUTTON_LTRIGGER"),
+              (e[(e.GAMEPAD_BUTTON_RTRIGGER = 29)] = "GAMEPAD_BUTTON_RTRIGGER"),
+              (e[(e.GAMEPAD_BUTTON_LSHOULDER = 30)] =
+                "GAMEPAD_BUTTON_LSHOULDER"),
+              (e[(e.GAMEPAD_BUTTON_RSHOULDER = 31)] =
+                "GAMEPAD_BUTTON_RSHOULDER"),
+              (e[(e.GAMEPAD_BUTTON_LBACK = 32)] = "GAMEPAD_BUTTON_LBACK"),
+              (e[(e.GAMEPAD_BUTTON_RBACK = 33)] = "GAMEPAD_BUTTON_RBACK"),
+              (e[(e.GAMEPAD_BUTTON_GUIDE = 34)] = "GAMEPAD_BUTTON_GUIDE"),
+              (e[(e.GAMEPAD_BUTTON_SELECT = 35)] = "GAMEPAD_BUTTON_SELECT"),
+              (e[(e.GAMEPAD_BUTTON_START = 36)] = "GAMEPAD_BUTTON_START"),
+              (e[(e.GAMEPAD_BUTTON_LPAD_CLICKED = 37)] =
+                "GAMEPAD_BUTTON_LPAD_CLICKED"),
+              (e[(e.GAMEPAD_BUTTON_LPAD_TOUCH = 38)] =
+                "GAMEPAD_BUTTON_LPAD_TOUCH"),
+              (e[(e.GAMEPAD_BUTTON_RPAD_CLICKED = 39)] =
+                "GAMEPAD_BUTTON_RPAD_CLICKED"),
+              (e[(e.GAMEPAD_BUTTON_RPAD_TOUCH = 40)] =
+                "GAMEPAD_BUTTON_RPAD_TOUCH"),
+              (e[(e.GAMEPAD_RIGHTSTICK_CLICK = 41)] =
+                "GAMEPAD_RIGHTSTICK_CLICK"),
+              (e[(e.GAMEPAD_RIGHTSTICK_TOUCH = 42)] =
+                "GAMEPAD_RIGHTSTICK_TOUCH"),
+              (e[(e.GAMEPAD_LEFTSTICK_TOUCH = 43)] = "GAMEPAD_LEFTSTICK_TOUCH"),
+              (e[(e.GAMEPAD_BUTTON_LBACK_UPPER = 44)] =
+                "GAMEPAD_BUTTON_LBACK_UPPER"),
+              (e[(e.GAMEPAD_BUTTON_RBACK_UPPER = 45)] =
+                "GAMEPAD_BUTTON_RBACK_UPPER"),
+              (e[(e.GAMEPAD_BUTTON_LAST = 46)] = "GAMEPAD_BUTTON_LAST"),
+              (e[(e.GAMEPAD_ANALOG_SCROLL = 47)] = "GAMEPAD_ANALOG_SCROLL"),
+              (e[(e.GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR = 48)] =
+                "GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR"),
+              (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
+                "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
+              (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
+          })(B || (B = {}));
         !(function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -505,7 +574,7 @@ var CLSTAMP = "7977629";
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(M || (M = {}));
+        })(N || (N = {}));
         !(function (e) {
           (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
             "k_EClientUINotificationGroupChatMessage"),
@@ -513,20 +582,20 @@ var CLSTAMP = "7977629";
               "k_EClientUINotificationFriendChatMessage"),
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
-        })(P || (P = {}));
+        })(L || (L = {}));
         !(function (e) {
           (e[(e.AudioPlayback_Undefined = 0)] = "AudioPlayback_Undefined"),
             (e[(e.AudioPlayback_Playing = 1)] = "AudioPlayback_Playing"),
             (e[(e.AudioPlayback_Paused = 2)] = "AudioPlayback_Paused"),
             (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
-        })(O || (O = {}));
-        var B, U, w, j, G;
+        })(U || (U = {}));
+        var O, G, w, j, H;
         !(function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Wired = 1)] = "Wired"),
             (e[(e.Wireless = 2)] = "Wireless"),
             (e[(e.Virtual = 3)] = "Virtual");
-        })(B || (B = {})),
+        })(O || (O = {})),
           (function (e) {
             (e[(e.NotPresent = 0)] = "NotPresent"),
               (e[(e.Failed = 1)] = "Failed"),
@@ -535,7 +604,7 @@ var CLSTAMP = "7977629";
               (e[(e.Connecting = 4)] = "Connecting"),
               (e[(e.Connected = 5)] = "Connected"),
               (e[(e.Retrying = 6)] = "Retrying");
-          })(U || (U = {})),
+          })(G || (G = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.Weak = 1)] = "Weak"),
@@ -559,14 +628,14 @@ var CLSTAMP = "7977629";
               (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
               (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
                 "k_EHTTPProxyMode_Automatic");
-          })(G || (G = {}));
-        var x, W, H, z;
-        function q(e) {
-          if (!K() || !window.document.cookie) return null;
+          })(H || (H = {}));
+        var x, W, K, q, z;
+        function $(e) {
+          if (!Y() || !window.document.cookie) return null;
           let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         }
-        function K() {
+        function Y() {
           return !!window.document;
         }
         !(function (e) {
@@ -598,7 +667,7 @@ var CLSTAMP = "7977629";
                 "k_EVRError_CrashProtection"),
               (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
               (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
-          })(H || (H = {})),
+          })(K || (K = {})),
           (function (e) {
             (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
               (e[(e.VRInitError_Unknown = 1)] = "VRInitError_Unknown"),
@@ -1076,10 +1145,333 @@ var CLSTAMP = "7977629";
               (e[(e.VRInitError_Steam_SteamInstallationNotFound = 2e3)] =
                 "VRInitError_Steam_SteamInstallationNotFound"),
               (e[(e.VRInitError_LastError = 2001)] = "VRInitError_LastError");
+          })(q || (q = {})),
+          (function (e) {
+            (e[(e.Invalid = 0)] = "Invalid"),
+              (e[(e.TrackingSystemName_String = 1e3)] =
+                "TrackingSystemName_String"),
+              (e[(e.ModelNumber_String = 1001)] = "ModelNumber_String"),
+              (e[(e.SerialNumber_String = 1002)] = "SerialNumber_String"),
+              (e[(e.RenderModelName_String = 1003)] = "RenderModelName_String"),
+              (e[(e.WillDriftInYaw_Bool = 1004)] = "WillDriftInYaw_Bool"),
+              (e[(e.ManufacturerName_String = 1005)] =
+                "ManufacturerName_String"),
+              (e[(e.TrackingFirmwareVersion_String = 1006)] =
+                "TrackingFirmwareVersion_String"),
+              (e[(e.HardwareRevision_String = 1007)] =
+                "HardwareRevision_String"),
+              (e[(e.AllWirelessDongleDescriptions_String = 1008)] =
+                "AllWirelessDongleDescriptions_String"),
+              (e[(e.ConnectedWirelessDongle_String = 1009)] =
+                "ConnectedWirelessDongle_String"),
+              (e[(e.DeviceIsWireless_Bool = 1010)] = "DeviceIsWireless_Bool"),
+              (e[(e.DeviceIsCharging_Bool = 1011)] = "DeviceIsCharging_Bool"),
+              (e[(e.DeviceBatteryPercentage_Float = 1012)] =
+                "DeviceBatteryPercentage_Float"),
+              (e[(e.StatusDisplayTransform_Matrix34 = 1013)] =
+                "StatusDisplayTransform_Matrix34"),
+              (e[(e.Firmware_UpdateAvailable_Bool = 1014)] =
+                "Firmware_UpdateAvailable_Bool"),
+              (e[(e.Firmware_ManualUpdate_Bool = 1015)] =
+                "Firmware_ManualUpdate_Bool"),
+              (e[(e.Firmware_ManualUpdateURL_String = 1016)] =
+                "Firmware_ManualUpdateURL_String"),
+              (e[(e.HardwareRevision_Uint64 = 1017)] =
+                "HardwareRevision_Uint64"),
+              (e[(e.FirmwareVersion_Uint64 = 1018)] = "FirmwareVersion_Uint64"),
+              (e[(e.FPGAVersion_Uint64 = 1019)] = "FPGAVersion_Uint64"),
+              (e[(e.VRCVersion_Uint64 = 1020)] = "VRCVersion_Uint64"),
+              (e[(e.RadioVersion_Uint64 = 1021)] = "RadioVersion_Uint64"),
+              (e[(e.DongleVersion_Uint64 = 1022)] = "DongleVersion_Uint64"),
+              (e[(e.BlockServerShutdown_Bool = 1023)] =
+                "BlockServerShutdown_Bool"),
+              (e[(e.CanUnifyCoordinateSystemWithHmd_Bool = 1024)] =
+                "CanUnifyCoordinateSystemWithHmd_Bool"),
+              (e[(e.ContainsProximitySensor_Bool = 1025)] =
+                "ContainsProximitySensor_Bool"),
+              (e[(e.DeviceProvidesBatteryStatus_Bool = 1026)] =
+                "DeviceProvidesBatteryStatus_Bool"),
+              (e[(e.DeviceCanPowerOff_Bool = 1027)] = "DeviceCanPowerOff_Bool"),
+              (e[(e.Firmware_ProgrammingTarget_String = 1028)] =
+                "Firmware_ProgrammingTarget_String"),
+              (e[(e.DeviceClass_Int32 = 1029)] = "DeviceClass_Int32"),
+              (e[(e.HasCamera_Bool = 1030)] = "HasCamera_Bool"),
+              (e[(e.DriverVersion_String = 1031)] = "DriverVersion_String"),
+              (e[(e.Firmware_ForceUpdateRequired_Bool = 1032)] =
+                "Firmware_ForceUpdateRequired_Bool"),
+              (e[(e.ViveSystemButtonFixRequired_Bool = 1033)] =
+                "ViveSystemButtonFixRequired_Bool"),
+              (e[(e.ParentDriver_Uint64 = 1034)] = "ParentDriver_Uint64"),
+              (e[(e.ResourceRoot_String = 1035)] = "ResourceRoot_String"),
+              (e[(e.RegisteredDeviceType_String = 1036)] =
+                "RegisteredDeviceType_String"),
+              (e[(e.InputProfilePath_String = 1037)] =
+                "InputProfilePath_String"),
+              (e[(e.NeverTracked_Bool = 1038)] = "NeverTracked_Bool"),
+              (e[(e.NumCameras_Int32 = 1039)] = "NumCameras_Int32"),
+              (e[(e.CameraFrameLayout_Int32 = 1040)] =
+                "CameraFrameLayout_Int32"),
+              (e[(e.CameraStreamFormat_Int32 = 1041)] =
+                "CameraStreamFormat_Int32"),
+              (e[(e.AdditionalDeviceSettingsPath_String = 1042)] =
+                "AdditionalDeviceSettingsPath_String"),
+              (e[(e.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
+              (e[(e.ReportsTimeSinceVSync_Bool = 2e3)] =
+                "ReportsTimeSinceVSync_Bool"),
+              (e[(e.SecondsFromVsyncToPhotons_Float = 2001)] =
+                "SecondsFromVsyncToPhotons_Float"),
+              (e[(e.DisplayFrequency_Float = 2002)] = "DisplayFrequency_Float"),
+              (e[(e.UserIpdMeters_Float = 2003)] = "UserIpdMeters_Float"),
+              (e[(e.CurrentUniverseId_Uint64 = 2004)] =
+                "CurrentUniverseId_Uint64"),
+              (e[(e.PreviousUniverseId_Uint64 = 2005)] =
+                "PreviousUniverseId_Uint64"),
+              (e[(e.DisplayFirmwareVersion_Uint64 = 2006)] =
+                "DisplayFirmwareVersion_Uint64"),
+              (e[(e.IsOnDesktop_Bool = 2007)] = "IsOnDesktop_Bool"),
+              (e[(e.DisplayMCType_Int32 = 2008)] = "DisplayMCType_Int32"),
+              (e[(e.DisplayMCOffset_Float = 2009)] = "DisplayMCOffset_Float"),
+              (e[(e.DisplayMCScale_Float = 2010)] = "DisplayMCScale_Float"),
+              (e[(e.EdidVendorID_Int32 = 2011)] = "EdidVendorID_Int32"),
+              (e[(e.DisplayMCImageLeft_String = 2012)] =
+                "DisplayMCImageLeft_String"),
+              (e[(e.DisplayMCImageRight_String = 2013)] =
+                "DisplayMCImageRight_String"),
+              (e[(e.DisplayGCBlackClamp_Float = 2014)] =
+                "DisplayGCBlackClamp_Float"),
+              (e[(e.EdidProductID_Int32 = 2015)] = "EdidProductID_Int32"),
+              (e[(e.CameraToHeadTransform_Matrix34 = 2016)] =
+                "CameraToHeadTransform_Matrix34"),
+              (e[(e.DisplayGCType_Int32 = 2017)] = "DisplayGCType_Int32"),
+              (e[(e.DisplayGCOffset_Float = 2018)] = "DisplayGCOffset_Float"),
+              (e[(e.DisplayGCScale_Float = 2019)] = "DisplayGCScale_Float"),
+              (e[(e.DisplayGCPrescale_Float = 2020)] =
+                "DisplayGCPrescale_Float"),
+              (e[(e.DisplayGCImage_String = 2021)] = "DisplayGCImage_String"),
+              (e[(e.LensCenterLeftU_Float = 2022)] = "LensCenterLeftU_Float"),
+              (e[(e.LensCenterLeftV_Float = 2023)] = "LensCenterLeftV_Float"),
+              (e[(e.LensCenterRightU_Float = 2024)] = "LensCenterRightU_Float"),
+              (e[(e.LensCenterRightV_Float = 2025)] = "LensCenterRightV_Float"),
+              (e[(e.UserHeadToEyeDepthMeters_Float = 2026)] =
+                "UserHeadToEyeDepthMeters_Float"),
+              (e[(e.CameraFirmwareVersion_Uint64 = 2027)] =
+                "CameraFirmwareVersion_Uint64"),
+              (e[(e.CameraFirmwareDescription_String = 2028)] =
+                "CameraFirmwareDescription_String"),
+              (e[(e.DisplayFPGAVersion_Uint64 = 2029)] =
+                "DisplayFPGAVersion_Uint64"),
+              (e[(e.DisplayBootloaderVersion_Uint64 = 2030)] =
+                "DisplayBootloaderVersion_Uint64"),
+              (e[(e.DisplayHardwareVersion_Uint64 = 2031)] =
+                "DisplayHardwareVersion_Uint64"),
+              (e[(e.AudioFirmwareVersion_Uint64 = 2032)] =
+                "AudioFirmwareVersion_Uint64"),
+              (e[(e.CameraCompatibilityMode_Int32 = 2033)] =
+                "CameraCompatibilityMode_Int32"),
+              (e[(e.ScreenshotHorizontalFieldOfViewDegrees_Float = 2034)] =
+                "ScreenshotHorizontalFieldOfViewDegrees_Float"),
+              (e[(e.ScreenshotVerticalFieldOfViewDegrees_Float = 2035)] =
+                "ScreenshotVerticalFieldOfViewDegrees_Float"),
+              (e[(e.DisplaySuppressed_Bool = 2036)] = "DisplaySuppressed_Bool"),
+              (e[(e.DisplayAllowNightMode_Bool = 2037)] =
+                "DisplayAllowNightMode_Bool"),
+              (e[(e.DisplayMCImageWidth_Int32 = 2038)] =
+                "DisplayMCImageWidth_Int32"),
+              (e[(e.DisplayMCImageHeight_Int32 = 2039)] =
+                "DisplayMCImageHeight_Int32"),
+              (e[(e.DisplayMCImageNumChannels_Int32 = 2040)] =
+                "DisplayMCImageNumChannels_Int32"),
+              (e[(e.DisplayMCImageData_Binary = 2041)] =
+                "DisplayMCImageData_Binary"),
+              (e[(e.SecondsFromPhotonsToVblank_Float = 2042)] =
+                "SecondsFromPhotonsToVblank_Float"),
+              (e[(e.DriverDirectModeSendsVsyncEvents_Bool = 2043)] =
+                "DriverDirectModeSendsVsyncEvents_Bool"),
+              (e[(e.DisplayDebugMode_Bool = 2044)] = "DisplayDebugMode_Bool"),
+              (e[(e.GraphicsAdapterLuid_Uint64 = 2045)] =
+                "GraphicsAdapterLuid_Uint64"),
+              (e[(e.DriverProvidedChaperonePath_String = 2048)] =
+                "DriverProvidedChaperonePath_String"),
+              (e[(e.ExpectedTrackingReferenceCount_Int32 = 2049)] =
+                "ExpectedTrackingReferenceCount_Int32"),
+              (e[(e.ExpectedControllerCount_Int32 = 2050)] =
+                "ExpectedControllerCount_Int32"),
+              (e[(e.NamedIconPathControllerLeftDeviceOff_String = 2051)] =
+                "NamedIconPathControllerLeftDeviceOff_String"),
+              (e[(e.NamedIconPathControllerRightDeviceOff_String = 2052)] =
+                "NamedIconPathControllerRightDeviceOff_String"),
+              (e[(e.NamedIconPathTrackingReferenceDeviceOff_String = 2053)] =
+                "NamedIconPathTrackingReferenceDeviceOff_String"),
+              (e[(e.DoNotApplyPrediction_Bool = 2054)] =
+                "DoNotApplyPrediction_Bool"),
+              (e[(e.CameraToHeadTransforms_Matrix34_Array = 2055)] =
+                "CameraToHeadTransforms_Matrix34_Array"),
+              (e[(e.DistortionMeshResolution_Int32 = 2056)] =
+                "DistortionMeshResolution_Int32"),
+              (e[(e.DriverIsDrawingControllers_Bool = 2057)] =
+                "DriverIsDrawingControllers_Bool"),
+              (e[(e.DriverRequestsApplicationPause_Bool = 2058)] =
+                "DriverRequestsApplicationPause_Bool"),
+              (e[(e.DriverRequestsReducedRendering_Bool = 2059)] =
+                "DriverRequestsReducedRendering_Bool"),
+              (e[(e.MinimumIpdStepMeters_Float = 2060)] =
+                "MinimumIpdStepMeters_Float"),
+              (e[(e.AudioBridgeFirmwareVersion_Uint64 = 2061)] =
+                "AudioBridgeFirmwareVersion_Uint64"),
+              (e[(e.ImageBridgeFirmwareVersion_Uint64 = 2062)] =
+                "ImageBridgeFirmwareVersion_Uint64"),
+              (e[(e.ImuToHeadTransform_Matrix34 = 2063)] =
+                "ImuToHeadTransform_Matrix34"),
+              (e[(e.ImuFactoryGyroBias_Vector3 = 2064)] =
+                "ImuFactoryGyroBias_Vector3"),
+              (e[(e.ImuFactoryGyroScale_Vector3 = 2065)] =
+                "ImuFactoryGyroScale_Vector3"),
+              (e[(e.ImuFactoryAccelerometerBias_Vector3 = 2066)] =
+                "ImuFactoryAccelerometerBias_Vector3"),
+              (e[(e.ImuFactoryAccelerometerScale_Vector3 = 2067)] =
+                "ImuFactoryAccelerometerScale_Vector3"),
+              (e[(e.ConfigurationIncludesLighthouse20Features_Bool = 2069)] =
+                "ConfigurationIncludesLighthouse20Features_Bool"),
+              (e[(e.Prop_AdditionalRadioFeatures_Uint64 = 2070)] =
+                "Prop_AdditionalRadioFeatures_Uint64"),
+              (e[(e.Prop_CameraWhiteBalance_Vector4_Array = 2071)] =
+                "Prop_CameraWhiteBalance_Vector4_Array"),
+              (e[(e.Prop_CameraDistortionFunction_Int32_Array = 2072)] =
+                "Prop_CameraDistortionFunction_Int32_Array"),
+              (e[(e.Prop_CameraDistortionCoefficients_Float_Array = 2073)] =
+                "Prop_CameraDistortionCoefficients_Float_Array"),
+              (e[(e.Prop_ExpectedControllerType_String = 2074)] =
+                "Prop_ExpectedControllerType_String"),
+              (e[(e.HmdTrackingStyle_Int32 = 2075)] = "HmdTrackingStyle_Int32"),
+              (e[(e.DriverProvidedChaperoneVisibility_Bool = 2076)] =
+                "DriverProvidedChaperoneVisibility_Bool"),
+              (e[(e.HmdColumnCorrectionSettingPrefix_String = 2077)] =
+                "HmdColumnCorrectionSettingPrefix_String"),
+              (e[(e.CameraSupportsCompatibilityModes_Bool = 2078)] =
+                "CameraSupportsCompatibilityModes_Bool"),
+              (e[(e.SupportsRoomViewDepthProjection_Bool = 2079)] =
+                "SupportsRoomViewDepthProjection_Bool"),
+              (e[(e.DisplayAvailableFrameRates_Float_Array = 2080)] =
+                "DisplayAvailableFrameRates_Float_Array"),
+              (e[(e.DisplaySupportsRuntimeFramerateChange_Bool = 2084)] =
+                "DisplaySupportsRuntimeFramerateChange_Bool"),
+              (e[(e.DisplaySupportsAnalogGain_Bool = 2085)] =
+                "DisplaySupportsAnalogGain_Bool"),
+              (e[(e.DisplayMinAnalogGain_Float = 2086)] =
+                "DisplayMinAnalogGain_Float"),
+              (e[(e.DisplayMaxAnalogGain_Float = 2087)] =
+                "DisplayMaxAnalogGain_Float"),
+              (e[(e.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
+              (e[(e.PeerButtonInfo_String = 2092)] = "PeerButtonInfo_String"),
+              (e[(e.IpdUIRangeMinMeters_Float = 2100)] =
+                "IpdUIRangeMinMeters_Float"),
+              (e[(e.IpdUIRangeMaxMeters_Float = 2101)] =
+                "IpdUIRangeMaxMeters_Float"),
+              (e[(e.Hmd_SupportsHDCP14LegacyCompat_Bool = 2102)] =
+                "Hmd_SupportsHDCP14LegacyCompat_Bool"),
+              (e[(e.Hmd_SupportsMicMonitoring_Bool = 2103)] =
+                "Hmd_SupportsMicMonitoring_Bool"),
+              (e[(e.Hmd_SupportsDisplayPortTrainingMode_Bool = 2104)] =
+                "Hmd_SupportsDisplayPortTrainingMode_Bool"),
+              (e[(e.Hmd_SupportsRoomViewDirect_Bool = 2105)] =
+                "Hmd_SupportsRoomViewDirect_Bool"),
+              (e[(e.Hmd_SupportsAppThrottling_Bool = 2106)] =
+                "Hmd_SupportsAppThrottling_Bool"),
+              (e[(e.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
+                "Hmd_SupportsGpuBusMonitoring_Bool"),
+              (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
+                "DriverRequestedMuraCorrectionMode_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
+                "DriverRequestedMuraFeather_InnerLeft_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerRight_Int32 = 2202)] =
+                "DriverRequestedMuraFeather_InnerRight_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerTop_Int32 = 2203)] =
+                "DriverRequestedMuraFeather_InnerTop_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerBottom_Int32 = 2204)] =
+                "DriverRequestedMuraFeather_InnerBottom_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterLeft_Int32 = 2205)] =
+                "DriverRequestedMuraFeather_OuterLeft_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterRight_Int32 = 2206)] =
+                "DriverRequestedMuraFeather_OuterRight_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterTop_Int32 = 2207)] =
+                "DriverRequestedMuraFeather_OuterTop_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterBottom_Int32 = 2208)] =
+                "DriverRequestedMuraFeather_OuterBottom_Int32"),
+              (e[(e.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
+                "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+              (e[(e.AttachedDeviceId_String = 3e3)] =
+                "AttachedDeviceId_String"),
+              (e[(e.SupportedButtons_Uint64 = 3001)] =
+                "SupportedButtons_Uint64"),
+              (e[(e.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
+              (e[(e.Axis1Type_Int32 = 3003)] = "Axis1Type_Int32"),
+              (e[(e.Axis2Type_Int32 = 3004)] = "Axis2Type_Int32"),
+              (e[(e.Axis3Type_Int32 = 3005)] = "Axis3Type_Int32"),
+              (e[(e.Axis4Type_Int32 = 3006)] = "Axis4Type_Int32"),
+              (e[(e.ControllerRoleHint_Int32 = 3007)] =
+                "ControllerRoleHint_Int32"),
+              (e[(e.FieldOfViewLeftDegrees_Float = 4e3)] =
+                "FieldOfViewLeftDegrees_Float"),
+              (e[(e.FieldOfViewRightDegrees_Float = 4001)] =
+                "FieldOfViewRightDegrees_Float"),
+              (e[(e.FieldOfViewTopDegrees_Float = 4002)] =
+                "FieldOfViewTopDegrees_Float"),
+              (e[(e.FieldOfViewBottomDegrees_Float = 4003)] =
+                "FieldOfViewBottomDegrees_Float"),
+              (e[(e.TrackingRangeMinimumMeters_Float = 4004)] =
+                "TrackingRangeMinimumMeters_Float"),
+              (e[(e.TrackingRangeMaximumMeters_Float = 4005)] =
+                "TrackingRangeMaximumMeters_Float"),
+              (e[(e.ModeLabel_String = 4006)] = "ModeLabel_String"),
+              (e[(e.IconPathName_String = 5e3)] = "IconPathName_String"),
+              (e[(e.NamedIconPathDeviceOff_String = 5001)] =
+                "NamedIconPathDeviceOff_String"),
+              (e[(e.NamedIconPathDeviceSearching_String = 5002)] =
+                "NamedIconPathDeviceSearching_String"),
+              (e[(e.NamedIconPathDeviceSearchingAlert_String = 5003)] =
+                "NamedIconPathDeviceSearchingAlert_String"),
+              (e[(e.NamedIconPathDeviceReady_String = 5004)] =
+                "NamedIconPathDeviceReady_String"),
+              (e[(e.NamedIconPathDeviceReadyAlert_String = 5005)] =
+                "NamedIconPathDeviceReadyAlert_String"),
+              (e[(e.NamedIconPathDeviceNotReady_String = 5006)] =
+                "NamedIconPathDeviceNotReady_String"),
+              (e[(e.NamedIconPathDeviceStandby_String = 5007)] =
+                "NamedIconPathDeviceStandby_String"),
+              (e[(e.NamedIconPathDeviceAlertLow_String = 5008)] =
+                "NamedIconPathDeviceAlertLow_String"),
+              (e[(e.DisplayHiddenArea_Binary_Start = 5100)] =
+                "DisplayHiddenArea_Binary_Start"),
+              (e[(e.DisplayHiddenArea_Binary_End = 5150)] =
+                "DisplayHiddenArea_Binary_End"),
+              (e[(e.ParentContainer = 5151)] = "ParentContainer"),
+              (e[(e.UserConfigPath_String = 6e3)] = "UserConfigPath_String"),
+              (e[(e.InstallPath_String = 6001)] = "InstallPath_String"),
+              (e[(e.HasDisplayComponent_Bool = 6002)] =
+                "HasDisplayComponent_Bool"),
+              (e[(e.HasControllerComponent_Bool = 6003)] =
+                "HasControllerComponent_Bool"),
+              (e[(e.HasCameraComponent_Bool = 6004)] =
+                "HasCameraComponent_Bool"),
+              (e[(e.HasDriverDirectModeComponent_Bool = 6005)] =
+                "HasDriverDirectModeComponent_Bool"),
+              (e[(e.HasVirtualDisplayComponent_Bool = 6006)] =
+                "HasVirtualDisplayComponent_Bool"),
+              (e[(e.HasSpatialAnchorsSupport_Bool = 6007)] =
+                "HasSpatialAnchorsSupport_Bool"),
+              (e[(e.ControllerType_String = 7e3)] = "ControllerType_String"),
+              (e[(e.LegacyInputProfile_String = 7001)] =
+                "LegacyInputProfile_String"),
+              (e[(e.VendorSpecific_Reserved_Start = 1e4)] =
+                "VendorSpecific_Reserved_Start"),
+              (e[(e.VendorSpecific_Reserved_End = 10999)] =
+                "VendorSpecific_Reserved_End"),
+              (e[(e.TrackedDeviceProperty_Max = 1e6)] =
+                "TrackedDeviceProperty_Max");
           })(z || (z = {}));
-        const $ = "webui_config";
-        let X;
-        function Y() {
+        const X = "webui_config";
+        let J;
+        function Q() {
           let e = (function () {
             let e = "";
             for (let n = 0; n < 24; n++)
@@ -1093,7 +1485,7 @@ var CLSTAMP = "7977629";
           })();
           return (
             (function (e, t, r, n) {
-              if (!K()) return;
+              if (!Y()) return;
               n || (n = "/");
               let o = "";
               if (void 0 !== r && r) {
@@ -1112,32 +1504,32 @@ var CLSTAMP = "7977629";
             e
           );
         }
-        function J(e = $) {
+        function Z(e = X) {
           const t = {},
-            r = Q("config", e);
-          r && (delete r.SESSIONID, Object.assign(te, r), (t.config = !0));
-          const n = Q("userinfo", e);
+            r = ee("config", e);
+          r && (delete r.SESSIONID, Object.assign(ne, r), (t.config = !0));
+          const n = ee("userinfo", e);
           n &&
-            (Object.assign(re, n),
+            (Object.assign(oe, n),
             (t.userConfig = !0),
-            re.is_support &&
+            oe.is_support &&
               (function () {
                 let e = null;
-                K() && (e = q(ee));
+                Y() && (e = $(re));
                 return Boolean(e && 1 === Number.parseInt(e));
               })() &&
-              (re.is_support = !1));
-          const o = Q("broadcast", e);
-          o && (Object.assign(ne, o), (t.broadcastConfig = !0));
-          const i = Q("community", e);
-          i && (Object.assign(oe, i), (t.communityConfig = !0));
-          const a = Q("event", e);
-          return a && (Object.assign(ie, a), (t.eventConfig = !0)), t;
+              (oe.is_support = !1));
+          const o = ee("broadcast", e);
+          o && (Object.assign(ie, o), (t.broadcastConfig = !0));
+          const i = ee("community", e);
+          i && (Object.assign(ae, i), (t.communityConfig = !0));
+          const a = ee("event", e);
+          return a && (Object.assign(se, a), (t.eventConfig = !0)), t;
         }
-        function Q(e, t = $) {
-          return Z(e, t, !0);
+        function ee(e, t = X) {
+          return te(e, t, !0);
         }
-        function Z(e, t = $, r) {
+        function te(e, t = X, r) {
           let n;
           if (
             ((n =
@@ -1160,8 +1552,8 @@ var CLSTAMP = "7977629";
             }
           else r && console.error("Missing config element #", t);
         }
-        const ee = "presentation_mode";
-        const te = {
+        const re = "presentation_mode";
+        const ne = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
             LANGUAGE: "english",
@@ -1209,9 +1601,9 @@ var CLSTAMP = "7977629";
             WEBSITE_ID: "Unknown",
             get SESSIONID() {
               return (function () {
-                if (!K()) return X || (X = Y()), X;
-                let e = q("sessionid");
-                return e || (e = Y()), e;
+                if (!Y()) return J || (J = Q()), J;
+                let e = $("sessionid");
+                return e || (e = Q()), e;
               })();
             },
             FRIENDSUI_BETA: !1,
@@ -1228,7 +1620,7 @@ var CLSTAMP = "7977629";
             IN_LOGIN_REFRESH: !1,
             USE_LONGEST_LOC_STRING: !1,
           },
-          re = {
+          oe = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -1243,8 +1635,8 @@ var CLSTAMP = "7977629";
             short_url: "",
             country_code: "",
           },
-          ne = { steamid: "", clanid: 0, listid: 0 },
-          oe = {
+          ie = { steamid: "", clanid: 0, listid: 0 },
+          ae = {
             CLANSTEAMID: "",
             CLANACCOUNTID: 0,
             APPID: 0,
@@ -1261,12 +1653,12 @@ var CLSTAMP = "7977629";
             IS_VALVE_GROUP: !1,
             IS_ALLOWED_SC: !1,
           },
-          ie = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+          se = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
         a().createContext({});
-        let ae = { success: !0, result: 1 };
-        class se {
+        let _e = { success: !0, result: 1 };
+        class le {
           constructor() {
-            (this.m_connection = new _e()),
+            (this.m_connection = new de()),
               (this.m_bAllowAccountMismatch = !1),
               (this.m_mapCacheSubscribedApp = new Map());
           }
@@ -1288,7 +1680,7 @@ var CLSTAMP = "7977629";
           }
           BClientConnected() {
             return this.m_connection.Connect().then(
-              () => ae,
+              () => _e,
               () => this.FailureResult()
             );
           }
@@ -1328,8 +1720,8 @@ var CLSTAMP = "7977629";
           }
           BClientAccountMatches() {
             return (
-              !re.logged_in ||
-              re.accountid == this.m_connection.ClientInfo.unAccountID
+              !oe.logged_in ||
+              oe.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }
           GenericEResultCall(e) {
@@ -1340,14 +1732,14 @@ var CLSTAMP = "7977629";
                   ? this.m_connection
                       .SendMsgAndAwaitResponse(e)
                       .then((e) =>
-                        1 === e.success ? ae : this.FailureResult(e.success)
+                        1 === e.success ? _e : this.FailureResult(e.success)
                       )
                   : { success: !1, result: 19, account_mismatch: !0 }
               )
               .catch(() => this.FailureResult());
           }
         }
-        class _e {
+        class de {
           constructor() {
             (this.m_mapWaitingCallbacks = new Map()),
               (this.m_iCallSeq = 1),
@@ -1389,8 +1781,8 @@ var CLSTAMP = "7977629";
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             let r = Object.assign({}, e, {
-              universe: te.EUNIVERSE,
-              accountid: re.accountid,
+              universe: ne.EUNIVERSE,
+              accountid: oe.accountid,
             });
             void 0 !== t && (r.sequenceid = t);
             try {
@@ -1460,16 +1852,16 @@ var CLSTAMP = "7977629";
             );
           }
         }
-        let le = new se();
-        window.ClientConnectionAPI = le;
+        let ce = new le();
+        window.ClientConnectionAPI = ce;
         r(9669);
-        function ce(e, t) {
+        function ue(e, t) {
           return (function (e, t) {
             let r = e.findIndex(t);
             return r >= 0 && (e.splice(r, 1), !0);
           })(e, (e) => t == e);
         }
-        function de(e, t, r) {
+        function pe(e, t, r) {
           return {
             get() {
               let e = r.value.bind(this);
@@ -1481,7 +1873,7 @@ var CLSTAMP = "7977629";
             },
           };
         }
-        class ue {
+        class Ie {
           constructor() {
             this.m_vecCallbacks = [];
           }
@@ -1489,7 +1881,7 @@ var CLSTAMP = "7977629";
             this.m_vecCallbacks.push(e);
             return {
               Unregister: () => {
-                ce(this.m_vecCallbacks, e);
+                ue(this.m_vecCallbacks, e);
               },
             };
           }
@@ -1504,7 +1896,7 @@ var CLSTAMP = "7977629";
           }
         }
         n(
-          [de],
+          [pe],
           class {
             Schedule(e, t) {
               this.IsScheduled() && this.Cancel(),
@@ -1531,7 +1923,7 @@ var CLSTAMP = "7977629";
           null
         );
         n(
-          [de],
+          [pe],
           class {
             constructor() {
               this.m_vecCallbacks = [];
@@ -1540,7 +1932,7 @@ var CLSTAMP = "7977629";
               this.m_vecCallbacks.push(e);
             }
             PushArrayRemove(e, t) {
-              this.m_vecCallbacks.push(() => ce(e, t));
+              this.m_vecCallbacks.push(() => ue(e, t));
             }
             Unregister() {
               for (let e of this.m_vecCallbacks) e();
@@ -1562,11 +1954,11 @@ var CLSTAMP = "7977629";
         new Map();
         new Map(), new Map();
         new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
-        class pe {
+        class Ee {
           constructor() {
             (this.m_mapTokens = new Map()),
               (this.m_mapFallbackTokens = new Map()),
-              (this.m_cbkTokensChanged = new ue());
+              (this.m_cbkTokensChanged = new Ie());
           }
           static InstallErrorReportingStore(e) {
             this.sm_ErrorReportingStore = e;
@@ -1627,13 +2019,13 @@ var CLSTAMP = "7977629";
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
             if (
-              (t.push(l(te.LANGUAGE)),
-              (te.SUPPORTED_LANGUAGES || []).forEach((e) => {
-                e.value != te.LANGUAGE && t.push(l(e.value));
+              (t.push(l(ne.LANGUAGE)),
+              (ne.SUPPORTED_LANGUAGES || []).forEach((e) => {
+                e.value != ne.LANGUAGE && t.push(l(e.value));
               }),
               e)
             ) {
-              pe.GetLanguageListForRealms(e).forEach((e) => {
+              Ee.GetLanguageListForRealms(e).forEach((e) => {
                 -1 == t.indexOf(e) && t.push(e);
               });
             }
@@ -1653,10 +2045,10 @@ var CLSTAMP = "7977629";
             let r = this.m_mapTokens.get(e.substring(1));
             if (void 0 !== r) return r;
             !t &&
-              pe.sm_ErrorReportingStore &&
-              pe.sm_ErrorReportingStore.ReportError(
+              Ee.sm_ErrorReportingStore &&
+              Ee.sm_ErrorReportingStore.ReportError(
                 new Error(
-                  `Unable to find localization token '${e}' for language '${te.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`
+                  `Unable to find localization token '${e}' for language '${ne.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`
                 ),
                 { bIncludeMessageInIdentifier: !0 }
               );
@@ -1667,12 +2059,12 @@ var CLSTAMP = "7977629";
             return void 0 !== t ? t : void 0;
           }
         }
-        function Ie(e, ...t) {
-          let r = Ce.LocalizeString(e);
-          return void 0 === r ? e : he(r, ...t);
+        function Ce(e, ...t) {
+          let r = Se.LocalizeString(e);
+          return void 0 === r ? e : Re(r, ...t);
         }
-        function Ee(e, ...t) {
-          let r = Ce.LocalizeString(e);
+        function he(e, ...t) {
+          let r = Se.LocalizeString(e);
           if (void 0 === r) return e;
           let n,
             o = [],
@@ -1685,7 +2077,7 @@ var CLSTAMP = "7977629";
           }
           return o.push(r.substr(s)), i.createElement(i.Fragment, null, ...o);
         }
-        function he(e, ...t) {
+        function Re(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
@@ -1696,18 +2088,18 @@ var CLSTAMP = "7977629";
                 return e;
               }));
         }
-        const Ce = new pe();
-        function Re(e, t, ...r) {
+        const Se = new Ee();
+        function fe(e, t, ...r) {
           console.assert
             ? 0 == r.length
               ? console.assert(!!e, t)
               : console.assert(!!e, t, ...r)
             : e || console.warn(t, ...r);
         }
-        window.LocalizationManager = Ce;
-        var fe = r(22188),
-          Se = r(29323);
-        class ke {
+        window.LocalizationManager = Se;
+        var ge = r(22188),
+          De = r(29323);
+        class Te {
           constructor(e) {
             (this.m_bReady = !1),
               (this.m_bValid = !1),
@@ -1740,9 +2132,9 @@ var CLSTAMP = "7977629";
           GetURL() {
             return this.m_strInviteCode
               ? ((e = this.m_strInviteCode),
-                "public" == te.WEB_UNIVERSE
+                "public" == ne.WEB_UNIVERSE
                   ? `https://s.team/chat/${e}`
-                  : `${te.COMMUNITY_BASE_URL}chat/invite/${e}`)
+                  : `${ne.COMMUNITY_BASE_URL}chat/invite/${e}`)
               : null;
             var e;
           }
@@ -1768,26 +2160,26 @@ var CLSTAMP = "7977629";
               (this.m_bReady = !0);
           }
         }
-        n([fe.LO], ke.prototype, "m_bReady", void 0),
-          n([fe.aD], ke.prototype, "InitInvalid", null),
-          n([fe.aD], ke.prototype, "InitDirectInvite", null);
-        var ge = r(43720),
-          Ve = r.n(ge);
+        n([ge.LO], Te.prototype, "m_bReady", void 0),
+          n([ge.aD], Te.prototype, "InitInvalid", null),
+          n([ge.aD], Te.prototype, "InitDirectInvite", null);
+        var Ae = r(43720),
+          ye = r.n(Ae);
         class ve {
           constructor(e = 0, t, r, n) {
             e instanceof ve
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-              ? (this.m_ulSteamID = Ve().fromString(e, !0))
+              ? (this.m_ulSteamID = ye().fromString(e, !0))
               : t && r && void 0 !== n
               ? this.SetFromComponents(e, n, r, t)
-              : (this.m_ulSteamID = e ? Ve().fromNumber(e, !0) : Ve().UZERO);
+              : (this.m_ulSteamID = e ? ye().fromNumber(e, !0) : ye().UZERO);
           }
           static InitFromAccountID(e) {
-            return new ve(Number(e), te.EUNIVERSE, 1, 1);
+            return new ve(Number(e), ne.EUNIVERSE, 1, 1);
           }
           static InitFromClanID(e) {
-            return new ve(Number(e), te.EUNIVERSE, 7, 0);
+            return new ve(Number(e), ne.EUNIVERSE, 7, 0);
           }
           GetAccountID() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -1901,7 +2293,7 @@ var CLSTAMP = "7977629";
             return 7 == this.GetAccountType();
           }
           SetAccountID(e) {
-            this.m_ulSteamID = new (Ve())(
+            this.m_ulSteamID = new (ye())(
               e,
               this.m_ulSteamID.getHighBitsUnsigned(),
               !0
@@ -1934,14 +2326,14 @@ var CLSTAMP = "7977629";
           SetFromComponents(e, t, r, n) {
             let o = ((255 & n) << 24) + ((15 & r) << 20) + (1048575 & t),
               i = 4294967295 & e;
-            this.m_ulSteamID = new (Ve())(i, o, !0);
+            this.m_ulSteamID = new (ye())(i, o, !0);
           }
         }
-        var ye = r(42238);
-        r(79743);
-        class Te extends ke {
+        var Ve = r(42238);
+        r(54560);
+        class ke extends Te {
           BIsExpired() {
-            return be.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return Pe.sm_rtTimeCur >= this.m_rtTimeExpires;
           }
           InitFromPHPInviteLinkInfo(e) {
             this.m_ulChatID = e.chat_id;
@@ -1957,11 +2349,11 @@ var CLSTAMP = "7977629";
               (this.m_bReady = !0);
           }
         }
-        n([fe.aD], Te.prototype, "InitFromPHPInviteLinkInfo", null);
-        class be {
+        n([ge.aD], ke.prototype, "InitFromPHPInviteLinkInfo", null);
+        class Pe {
           constructor(e) {
             (this.m_bConnectingToClient = !1),
-              (this.m_invite = new Te(e.strInviteCode)),
+              (this.m_invite = new ke(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
                 : this.m_invite.InitInvalid(),
@@ -1997,20 +2389,20 @@ var CLSTAMP = "7977629";
               if (r) {
                 if (e) {
                   let r = function (n) {
-                    let o = te.COMMUNITY_BASE_URL.replace(
+                    let o = ne.COMMUNITY_BASE_URL.replace(
                       /(https?:\/\/[^/]*).*$/,
                       "$1"
                     );
                     n.source == t &&
                       "FriendsUIReady" == n.data &&
                       n.origin == o &&
-                      (t.postMessage(e, te.COMMUNITY_BASE_URL),
+                      (t.postMessage(e, ne.COMMUNITY_BASE_URL),
                       window.removeEventListener("message", r));
                   };
                   window.addEventListener("message", r);
                 }
-                t.location.href = te.COMMUNITY_BASE_URL + "chat/";
-              } else e && t.postMessage(e, te.COMMUNITY_BASE_URL);
+                t.location.href = ne.COMMUNITY_BASE_URL + "chat/";
+              } else e && t.postMessage(e, ne.COMMUNITY_BASE_URL);
               t.focus();
             })({
               command: "ShowChatRoomGroupInvite",
@@ -2018,7 +2410,7 @@ var CLSTAMP = "7977629";
             });
           }
           LaunchSteamIgnoreAccount() {
-            le.SetAllowAccountMismatch(!0), this.SendInviteToClient();
+            ce.SetAllowAccountMismatch(!0), this.SendInviteToClient();
           }
           ForceLaunchSteamClient() {
             window.location.href = `steam://friends/ShowChatRoomGroupInvite/${this.m_invite.GetInviteCode()}`;
@@ -2027,10 +2419,10 @@ var CLSTAMP = "7977629";
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              le
+              ce
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then((e) => {
-                  (0, fe.z)(() => {
+                  (0, ge.z)(() => {
                     (this.m_bConnectingToClient = !1),
                       (this.m_connectResult = e),
                       console.log(e);
@@ -2038,21 +2430,21 @@ var CLSTAMP = "7977629";
                 }));
           }
         }
-        n([fe.LO], be.prototype, "m_bConnectingToClient", void 0),
-          n([fe.LO], be.prototype, "m_connectResult", void 0);
-        let De = class extends i.Component {
+        n([ge.LO], Pe.prototype, "m_bConnectingToClient", void 0),
+          n([ge.LO], Pe.prototype, "m_connectResult", void 0);
+        let Fe = class extends i.Component {
           render() {
             return i.createElement(
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? i.createElement(Fe, { controller: this.props.controller })
-                : i.createElement(Ae, { controller: this.props.controller })
+                ? i.createElement(Me, { controller: this.props.controller })
+                : i.createElement(be, { controller: this.props.controller })
             );
           }
         };
-        De = n([Se.Pi], De);
-        let Fe = class extends i.Component {
+        Fe = n([De.Pi], Fe);
+        let Me = class extends i.Component {
           constructor() {
             super(...arguments), (this.m_bTriedToLaunchSteam = !1);
           }
@@ -2069,7 +2461,7 @@ var CLSTAMP = "7977629";
               }, 1e3);
           }
           IsMobileDevice() {
-            switch (new ye.UAParser(navigator.userAgent).getResult().os.name) {
+            switch (new Ve.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
               case "BlackBerry":
@@ -2085,12 +2477,12 @@ var CLSTAMP = "7977629";
                 i.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
-                  Ie("#bbcode_invite_requesting_info")
+                  Ce("#bbcode_invite_requesting_info")
                 )
               );
             let e = this.props.controller.GetConnectResults(),
               t = this.props.controller.GetInvite(),
-              r = (te.COMMUNITY_BASE_URL, this.IsMobileDevice()),
+              r = (ne.COMMUNITY_BASE_URL, this.IsMobileDevice()),
               n = "inviteButton inviteButtonJoinChat";
             return (
               t.BIsVoiceChatInvite() && (n += " inviteButtonJoinVoice"),
@@ -2101,12 +2493,12 @@ var CLSTAMP = "7977629";
                     i.createElement(
                       "div",
                       { className: "groupName" },
-                      Ie("#InviteLanding_SentToSteam")
+                      Ce("#InviteLanding_SentToSteam")
                     ),
                     i.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Ee(
+                      he(
                         "#InviteLanding_SentToSteam_Desc",
                         i.createElement(
                           "a",
@@ -2114,19 +2506,19 @@ var CLSTAMP = "7977629";
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat,
                           },
-                          Ie("#InviteLanding_SentToSteam_Desc_LaunchWebChat")
+                          Ce("#InviteLanding_SentToSteam_Desc_LaunchWebChat")
                         )
                       )
                     )
                   )
                 : e.account_mismatch
                 ? i.createElement(
-                    Ne,
+                    Be,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     i.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Ie("#InviteLanding_AccountMismatch")
+                      Ce("#InviteLanding_AccountMismatch")
                     ),
                     i.createElement(
                       "div",
@@ -2138,7 +2530,7 @@ var CLSTAMP = "7977629";
                           type: "button",
                           onClick: this.OpenInSteamIgnoreAccount,
                         },
-                        Ie("#InviteLanding_OpenInSteam")
+                        Ce("#InviteLanding_OpenInSteam")
                       ),
                       i.createElement(
                         "button",
@@ -2147,7 +2539,7 @@ var CLSTAMP = "7977629";
                           type: "button",
                           onClick: this.LaunchWebChat,
                         },
-                        Ie("#InviteLanding_OpenInWebChat")
+                        Ce("#InviteLanding_OpenInWebChat")
                       )
                     )
                   )
@@ -2158,12 +2550,12 @@ var CLSTAMP = "7977629";
                     i.createElement(
                       "div",
                       { className: "groupName" },
-                      Ie("#InviteLanding_SentToSteam")
+                      Ce("#InviteLanding_SentToSteam")
                     ),
                     i.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Ee(
+                      he(
                         "#InviteLanding_SentToSteam_Desc",
                         i.createElement(
                           "a",
@@ -2171,13 +2563,13 @@ var CLSTAMP = "7977629";
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat,
                           },
-                          Ie("#InviteLanding_SentToSteam_Desc_LaunchWebChat")
+                          Ce("#InviteLanding_SentToSteam_Desc_LaunchWebChat")
                         )
                       )
                     )
                   )
                 : i.createElement(
-                    Ne,
+                    Be,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     i.createElement(
                       "div",
@@ -2190,7 +2582,7 @@ var CLSTAMP = "7977629";
                             type: "button",
                             onClick: this.LaunchSteamClient,
                           },
-                          Ie("#InviteLanding_OpenInSteam")
+                          Ce("#InviteLanding_OpenInSteam")
                         ),
                       i.createElement(
                         "button",
@@ -2199,25 +2591,25 @@ var CLSTAMP = "7977629";
                           type: "button",
                           onClick: this.LaunchWebChat,
                         },
-                        Ie("#InviteLanding_OpenInWebChat")
+                        Ce("#InviteLanding_OpenInWebChat")
                       )
                     ),
                     this.m_bTriedToLaunchSteam &&
                       i.createElement(
                         "div",
                         { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        Ie("#InviteLanding_OpenInSteam_Help")
+                        Ce("#InviteLanding_OpenInSteam_Help")
                       )
                   )
             );
           }
         };
-        n([fe.LO], Fe.prototype, "m_bTriedToLaunchSteam", void 0),
-          n([de], Fe.prototype, "LaunchWebChat", null),
-          n([de], Fe.prototype, "OpenInSteamIgnoreAccount", null),
-          n([de], Fe.prototype, "LaunchSteamClient", null),
-          (Fe = n([Se.Pi], Fe));
-        class Ae extends i.Component {
+        n([ge.LO], Me.prototype, "m_bTriedToLaunchSteam", void 0),
+          n([pe], Me.prototype, "LaunchWebChat", null),
+          n([pe], Me.prototype, "OpenInSteamIgnoreAccount", null),
+          n([pe], Me.prototype, "LaunchSteamClient", null),
+          (Me = n([De.Pi], Me));
+        class be extends i.Component {
           render() {
             return i.createElement(
               "div",
@@ -2225,12 +2617,12 @@ var CLSTAMP = "7977629";
               i.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
-                Ie("#InviteLanding_ExpiredOrInvalid")
+                Ce("#InviteLanding_ExpiredOrInvalid")
               )
             );
           }
         }
-        function Ne(e) {
+        function Be(e) {
           return i.createElement(
             "div",
             { className: "ChatMessageInvite" },
@@ -2244,7 +2636,7 @@ var CLSTAMP = "7977629";
               i.createElement(
                 "div",
                 { className: "inviteLabel" },
-                Ee(
+                he(
                   "#bbcode_invite_description",
                   i.createElement("span", {
                     dangerouslySetInnerHTML: {
@@ -2262,24 +2654,24 @@ var CLSTAMP = "7977629";
             )
           );
         }
-        window.AssertMsg = Re;
-        let Le = new se();
-        function Me(e) {
+        window.AssertMsg = fe;
+        let Ne = new le();
+        function Le(e) {
           let t;
           try {
             t = JSON.parse(e.getAttribute("data-inviteinfo"));
           } catch (e) {}
-          be.sm_rtTimeCur = t.rtTimeCur;
-          let r = new be(t);
-          s.render(i.createElement(De, { controller: r }), e);
+          Pe.sm_rtTimeCur = t.rtTimeCur;
+          let r = new Pe(t);
+          s.render(i.createElement(Fe, { controller: r }), e);
         }
-        (window.ClientConnectionAPI = Le),
+        (window.ClientConnectionAPI = Ne),
           document.addEventListener("DOMContentLoaded", function () {
             return o(this, void 0, void 0, function* () {
-              J(),
+              Z(),
                 yield (function (e) {
                   return o(this, void 0, void 0, function* () {
-                    const t = pe.GetLanguageFallback(e),
+                    const t = Ee.GetLanguageFallback(e),
                       n = e === t,
                       [o, i, a, s] = yield Promise.all([
                         r(41171)(`./shared_${e}.json`),
@@ -2287,26 +2679,26 @@ var CLSTAMP = "7977629";
                         n ? {} : r(91090)(`./shared_${t}.json`),
                         n ? {} : r(9014)(`./friendsui_${t}.json`),
                       ]);
-                    Ce.AddTokens(
+                    Se.AddTokens(
                       Object.assign(Object.assign({}, o), i),
                       Object.assign(Object.assign({}, a), s)
                     );
                   });
-                })(te.LANGUAGE),
+                })(ne.LANGUAGE),
                 (function () {
                   let e = document.querySelectorAll(".ChatReactRoot");
                   for (let t = 0; t < e.length; t++) {
                     let r = e[t],
                       n = r.getAttribute("data-component");
                     "ChatInvite" === n
-                      ? Me(r)
-                      : Re(!1, `unknown component: "${n}"`);
+                      ? Le(r)
+                      : fe(!1, `unknown component: "${n}"`);
                   }
                 })();
             });
           });
       },
-      19966: (e, t, r) => {
+      33210: (e, t, r) => {
         "use strict";
         r.d(t, {
           Bh: () => a,
@@ -2315,8 +2707,8 @@ var CLSTAMP = "7977629";
           TA: () => _,
           Xc: () => i,
           aD: () => s,
-          aR: () => d,
-          l2: () => c,
+          aR: () => c,
+          l2: () => d,
         });
         var n = r(33019);
         const o = n.BinaryReader.prototype,
@@ -2336,16 +2728,16 @@ var CLSTAMP = "7977629";
           for (let e in o) {
             const { n: r, c: a, r: s, d: _, q: l } = o[e];
             if (!t.hasOwnProperty(e)) continue;
-            const c = t[e];
+            const d = t[e];
             a
               ? s
                 ? n.Message.setRepeatedWrapperField(
                     i,
                     r,
-                    Array.isArray(c) ? c.map((e) => a.fromObject(e)) : []
+                    Array.isArray(d) ? d.map((e) => a.fromObject(e)) : []
                   )
-                : n.Message.setWrapperField(i, r, a.fromObject(c))
-              : n.Message.setField(i, r, c);
+                : n.Message.setWrapperField(i, r, a.fromObject(d))
+              : n.Message.setField(i, r, d);
           }
           return i;
         }
@@ -2353,7 +2745,7 @@ var CLSTAMP = "7977629";
           const { proto: o, fields: i } = e;
           let a = {};
           for (let e in i) {
-            const { n: o, c: s, r: _, d: l, q: c } = i[e];
+            const { n: o, c: s, r: _, d: l, q: d } = i[e];
             if (s)
               if (_)
                 a[e] = n.Message.toObjectList(
@@ -2362,7 +2754,7 @@ var CLSTAMP = "7977629";
                   t
                 );
               else {
-                const i = n.Message.getWrapperField(r, s, o, c ? 1 : 0);
+                const i = n.Message.getWrapperField(r, s, o, d ? 1 : 0);
                 i && (a[e] = s.toObject(t, i));
               }
             else {
@@ -2371,7 +2763,7 @@ var CLSTAMP = "7977629";
                 o,
                 void 0 !== l ? l : null
               );
-              (null !== t || c) && (a[e] = t);
+              (null !== t || d) && (a[e] = t);
             }
           }
           return t && (a.$jspbMessageInstance = r), a;
@@ -2402,10 +2794,10 @@ var CLSTAMP = "7977629";
           }
           return t;
         }
-        function c(e, t, r) {
+        function d(e, t, r) {
           const { fields: o } = e;
           for (let e in o) {
-            const { n: i, c: a, r: s, d: _, q: l, bw: c } = o[e];
+            const { n: i, c: a, r: s, d: _, q: l, bw: d } = o[e];
             if (a)
               if (s) {
                 const e = n.Message.getRepeatedWrapperField(t, a, i);
@@ -2415,17 +2807,17 @@ var CLSTAMP = "7977629";
                 const e = n.Message.getWrapperField(t, a, i, l ? 1 : 0);
                 e && r.writeMessage(i, e, a.serializeBinaryToWriter);
               }
-            else if (c) {
+            else if (d) {
               const e = n.Message.getField(t, i);
-              void 0 !== e && c.call(r, i, e);
+              void 0 !== e && d.call(r, i, e);
             } else
               console.assert(
-                c,
+                d,
                 `Writer func not set for field number ${i} in class ${a}`
               );
           }
         }
-        function d(e) {
+        function c(e) {
           const t = e.proto;
           for (const r in e.fields) {
             const o = e.fields[r],
@@ -2435,9 +2827,9 @@ var CLSTAMP = "7977629";
               : (t.prototype[r] = a
                   ? s
                     ? u(n.Message.getRepeatedWrapperField, a, i)
-                    : m(a, i)
+                    : p(a, i)
                   : u(n.Message.getField, i)),
-              (t.prototype[`set_${r}`] = p(
+              (t.prototype[`set_${r}`] = I(
                 a
                   ? s
                     ? n.Message.setRepeatedWrapperField
@@ -2445,7 +2837,7 @@ var CLSTAMP = "7977629";
                   : n.Message.setField,
                 i
               )),
-              s && (t.prototype[`add_${r}`] = I(i, a));
+              s && (t.prototype[`add_${r}`] = m(i, a));
           }
         }
         function u(e, ...t) {
@@ -2453,17 +2845,17 @@ var CLSTAMP = "7977629";
             return e(this, ...t);
           };
         }
-        function m(e, t) {
+        function p(e, t) {
           return function (r = !0) {
             return n.Message.getWrapperField(this, e, t, r ? 1 : 0);
           };
         }
-        function p(e, t) {
+        function I(e, t) {
           return function (r) {
             return e(this, t, r);
           };
         }
-        function I(e, t) {
+        function m(e, t) {
           return t
             ? function (r, o) {
                 return n.Message.addToRepeatedWrapperField(this, e, r, t, o);
@@ -2473,7 +2865,7 @@ var CLSTAMP = "7977629";
               };
         }
       },
-      74594: (e, t, r) => {
+      94598: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -2687,13 +3079,13 @@ var CLSTAMP = "7977629";
     (s.O = (t, r, n, o) => {
       if (!r) {
         var i = 1 / 0;
-        for (c = 0; c < e.length; c++) {
-          for (var [r, n, o] = e[c], a = !0, _ = 0; _ < r.length; _++)
+        for (d = 0; d < e.length; d++) {
+          for (var [r, n, o] = e[d], a = !0, _ = 0; _ < r.length; _++)
             (!1 & o || i >= o) && Object.keys(s.O).every((e) => s.O[e](r[_]))
               ? r.splice(_--, 1)
               : ((a = !1), o < i && (i = o));
           if (a) {
-            e.splice(c--, 1);
+            e.splice(d--, 1);
             var l = n();
             void 0 !== l && (t = l);
           }
@@ -2701,8 +3093,8 @@ var CLSTAMP = "7977629";
         return t;
       }
       o = o || 0;
-      for (var c = e.length; c > 0 && e[c - 1][2] > o; c--) e[c] = e[c - 1];
-      e[c] = [r, n, o];
+      for (var d = e.length; d > 0 && e[d - 1][2] > o; d--) e[d] = e[d - 1];
+      e[d] = [r, n, o];
     }),
     (s.n = (e) => {
       var t = e && e.__esModule ? () => e.default : () => e;
@@ -2801,63 +3193,63 @@ var CLSTAMP = "7977629";
       ".js?contenthash=" +
       {
         699: "0e6be9bdafd632532acf",
-        1162: "3123971e114ddaf7b69e",
-        1313: "653328d639b77b885821",
-        1471: "9e18e42f9dda9a45436c",
+        1162: "319150a69af1b4977c94",
+        1313: "fea433f72a26a5a819a9",
+        1471: "c2de77ce2d787377bf24",
         1635: "9e954d378764979ab99a",
         2029: "320f752ee0bf0eca34cc",
         2431: "faf493c0d081b4c4473c",
-        2443: "50aca8eaa06c15857fdc",
-        2537: "4a590d394aea685192ea",
+        2443: "05633a95cf08cca5b2b7",
+        2537: "b2201d0f3edd3311f55e",
         2822: "ccac351edad122054af7",
-        2844: "1eb4faf727d7f13b6b63",
+        2844: "ae944a6aabc6c585daf4",
         2862: "79bc6ca783e3aacd8e43",
         2913: "997700daa9514dd83d9f",
-        3112: "e6063c7ace52480df68a",
+        3112: "1426a78cb3eb8337739f",
         3140: "55bf5933caf7dbe82ae3",
         3182: "dcf29bb29c25ec77b614",
-        3252: "98f8dc0fe282184e4e60",
+        3252: "42f0de0cef2ffb75b87f",
         3471: "28adb9309da5d6af565c",
         3500: "75b4c6abdfb23fbd5675",
-        3557: "3b45a955f04a701b3a1c",
-        4108: "98ac9546bff8f715091a",
-        4189: "a7011b9eafd7bd7bdf5b",
+        3557: "ab698f02b70f39edc5e4",
+        4108: "0554a917c47319084d70",
+        4189: "ca869675dd5405bfd164",
         4264: "5fa72bc23ee91b8b7078",
-        4297: "0a64d88ec508a40efb02",
+        4297: "7301c25eebae6fc3cc2e",
         4448: "858136e3ff45e6aa8927",
         4596: "3201306636cfd2376dea",
         4716: "3cfeb29b4c384d042c51",
-        4823: "899c681e5efcd5b9eb29",
-        4964: "678dbd6862f8de86b75e",
+        4823: "081b5dcf23f13815a7ea",
+        4964: "7c3fc07b16b4aeef5b23",
         4989: "3bf15e40cf2705cca758",
-        5438: "baef5f199150857cae87",
-        5625: "8be9b83f65c0267885b5",
+        5438: "ffaff275d33ded9f9ba2",
+        5625: "11cad18fcf334e1d883c",
         5632: "41f9f0c2b5c7a2e08ba5",
         5802: "7acfbe1ee8536a73b7a9",
-        5849: "f08ac7eb71a1a0fb01c4",
-        5925: "6b963e93994772bdfa9e",
-        5933: "d8737a955d8865684853",
-        5948: "3faefc35ff0fcf9599f3",
-        6007: "bae07717e721ba0705f9",
-        6492: "ea39077e1ee281cf3c31",
-        6542: "016ea1550cab12c6ea79",
+        5849: "a782b7fe1b7fd29f4890",
+        5925: "8cef9ef8fa463f8b4316",
+        5933: "58e57f6fb8063319e36c",
+        5948: "f5825bddf8577ba2a2ae",
+        6007: "406464bd5e30d6a3219a",
+        6492: "98900db7bba4dcc47be3",
+        6542: "1fc029f806e68d26bcfc",
         6727: "899f8cb08b52efa12fc6",
-        6986: "60de7a92a72ba66cae00",
+        6986: "0f12cc222d1a18360f9f",
         6992: "833786d371ab4153d7d7",
         7340: "522a435f38adb65478b9",
         7575: "712739ee4724a5e9fed6",
-        7602: "cdda53ac042b6039a43b",
+        7602: "93f1f720d04844884f54",
         7651: "f3f4fffc3aa9a665f055",
         7706: "0114b0976cca2e263f9a",
-        7781: "3c95b2237e02da66c7cf",
+        7781: "27fb85cb80fbda34d4b6",
         7975: "b1eb2fa743f3a6cea3f8",
         8247: "3720d0e4cccdbfe9d0e8",
-        8385: "1f587d44d8a94dccd559",
+        8385: "252e20f94a6d5f160de6",
         8518: "c8900b6637a039ab8c80",
         8815: "8c783561f59d582b2e23",
-        9062: "0c06150ea3e6e189d64d",
+        9062: "e7583f5723ff333db10f",
         9263: "691c305416e1b1a87d66",
-        9753: "12ce572db52a64d6b7db",
+        9753: "b2a71b413daf035609f1",
         9775: "49f88d52753c15d175ec",
         9818: "a754f1cdd15e517ed383",
       }[e]),
@@ -2879,16 +3271,16 @@ var CLSTAMP = "7977629";
         var a, _;
         if (void 0 !== r)
           for (
-            var l = document.getElementsByTagName("script"), c = 0;
-            c < l.length;
-            c++
+            var l = document.getElementsByTagName("script"), d = 0;
+            d < l.length;
+            d++
           ) {
-            var d = l[c];
+            var c = l[d];
             if (
-              d.getAttribute("src") == e ||
-              d.getAttribute("data-webpack") == o + r
+              c.getAttribute("src") == e ||
+              c.getAttribute("data-webpack") == o + r
             ) {
-              a = d;
+              a = c;
               break;
             }
           }
@@ -2901,7 +3293,7 @@ var CLSTAMP = "7977629";
           (a.src = e)),
           (n[e] = [t]);
         var u = (t, r) => {
-            (a.onerror = a.onload = null), clearTimeout(m);
+            (a.onerror = a.onload = null), clearTimeout(p);
             var o = n[e];
             if (
               (delete n[e],
@@ -2911,7 +3303,7 @@ var CLSTAMP = "7977629";
             )
               return t(r);
           },
-          m = setTimeout(
+          p = setTimeout(
             u.bind(null, void 0, { type: "timeout", target: a }),
             12e4
           );
@@ -2984,16 +3376,16 @@ var CLSTAMP = "7977629";
             l = 0;
           if (i.some((t) => 0 !== e[t])) {
             for (n in a) s.o(a, n) && (s.m[n] = a[n]);
-            if (_) var c = _(s);
+            if (_) var d = _(s);
           }
           for (t && t(r); l < i.length; l++)
             (o = i[l]), s.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
-          return s.O(c);
+          return s.O(d);
         },
         r = (self.webpackChunk_steam_friendsui =
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [3817, 5140, 5968], () => s(60502));
+  var _ = s.O(void 0, [3817, 5140, 5968], () => s(31355));
   _ = s.O(_);
 })();

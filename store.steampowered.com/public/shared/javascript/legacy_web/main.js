@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7983614";
+var CLSTAMP = "7993986";
 (() => {
   var __webpack_modules__ = {
       19: function (module, exports) {
@@ -501,11 +501,11 @@ var CLSTAMP = "7983614";
             var n = r.transpile;
             if (!n) {
               var i = goog.basePath + goog.TRANSPILER,
-                s = goog.loadFileSync_(i);
-              if (s) {
+                a = goog.loadFileSync_(i);
+              if (a) {
                 if (
                   (function () {
-                    (0, eval)(s + "\n//# sourceURL=" + i);
+                    (0, eval)(a + "\n//# sourceURL=" + i);
                   }.call(goog.global),
                   goog.global.$gwtExport &&
                     goog.global.$gwtExport.$jscomp &&
@@ -969,11 +969,11 @@ var CLSTAMP = "7983614";
                   t.push(this.dependencies_[i]);
                 }
                 i = goog.require;
-                var s = 0;
+                var a = 0;
                 for (n = 0; n < e.length; n++)
                   i(e[n]),
                     t[n].onLoad(function () {
-                      ++s == e.length && o();
+                      ++a == e.length && o();
                     });
               } else o();
             }),
@@ -1362,12 +1362,12 @@ var CLSTAMP = "7983614";
                     i +
                     '", m)'
                 );
-                var s = goog.Dependency.registerCallback_(function () {
-                  goog.Dependency.unregisterCallback_(s),
+                var a = goog.Dependency.registerCallback_(function () {
+                  goog.Dependency.unregisterCallback_(a),
                     e.clearModuleState(),
                     e.loaded();
                 });
-                r(void 0, 'goog.Dependency.callback_("' + s + '")');
+                r(void 0, 'goog.Dependency.callback_("' + a + '")');
               } else
                 goog.logToConsole_(
                   "Cannot use default debug loader outside of HTML documents."
@@ -1427,30 +1427,30 @@ var CLSTAMP = "7983614";
                 var n = this.loadFlags.module == goog.ModuleType.ES6;
                 this.lazyFetch_ || t();
                 var i = 1 < e.pending().length,
-                  s = i && goog.DebugLoader_.IS_OLD_IE_;
+                  a = i && goog.DebugLoader_.IS_OLD_IE_;
                 if (
                   ((i =
                     goog.Dependency.defer_ && (i || goog.isDocumentLoading_())),
-                  s || i)
+                  a || i)
                 )
                   e.defer(function () {
                     o();
                   });
                 else {
-                  var a = goog.global.document;
+                  var s = goog.global.document;
                   if (
-                    ((s =
+                    ((a =
                       goog.inHtmlDocument_() && "ActiveXObject" in goog.global),
                     n &&
                       goog.inHtmlDocument_() &&
                       goog.isDocumentLoading_() &&
-                      !s)
+                      !a)
                   ) {
                     (goog.Dependency.defer_ = !0), e.pause();
-                    var g = a.onreadystatechange;
-                    a.onreadystatechange = function () {
-                      "interactive" == a.readyState &&
-                        ((a.onreadystatechange = g), o(), e.resume()),
+                    var g = s.onreadystatechange;
+                    s.onreadystatechange = function () {
+                      "interactive" == s.readyState &&
+                        ((s.onreadystatechange = g), o(), e.resume()),
                         goog.isFunction(g) && g.apply(void 0, arguments);
                     };
                   } else
@@ -1501,10 +1501,10 @@ var CLSTAMP = "7983614";
               function (e) {
                 return e;
               }),
-            (goog.GoogModuleDependency = function (e, t, o, r, n, i, s) {
+            (goog.GoogModuleDependency = function (e, t, o, r, n, i, a) {
               goog.TransformedDependency.call(this, e, t, o, r, n),
                 (this.needsTranspile_ = i),
-                (this.transpiler_ = s);
+                (this.transpiler_ = a);
             }),
             goog.inherits(
               goog.GoogModuleDependency,
@@ -2217,14 +2217,14 @@ var CLSTAMP = "7983614";
                     var r = e.length,
                       n = [],
                       i = 0,
-                      s = "string" == typeof e ? e.split("") : e,
-                      a = 0;
-                    a < r;
-                    a++
+                      a = "string" == typeof e ? e.split("") : e,
+                      s = 0;
+                    s < r;
+                    s++
                   )
-                    if (a in s) {
-                      var g = s[a];
-                      t.call(o, g, a, e) && (n[i++] = g);
+                    if (s in a) {
+                      var g = a[s];
+                      t.call(o, g, s, e) && (n[i++] = g);
                     }
                   return n;
                 }),
@@ -2242,11 +2242,11 @@ var CLSTAMP = "7983614";
                     var r = e.length,
                       n = Array(r),
                       i = "string" == typeof e ? e.split("") : e,
-                      s = 0;
-                    s < r;
-                    s++
+                      a = 0;
+                    a < r;
+                    a++
                   )
-                    s in i && (n[s] = t.call(o, i[s], s, e));
+                    a in i && (n[a] = t.call(o, i[a], a, e));
                   return n;
                 }),
           (goog.array.reduce =
@@ -2456,7 +2456,7 @@ var CLSTAMP = "7983614";
                 var n = e.length || 0,
                   i = r.length || 0;
                 e.length = n + i;
-                for (var s = 0; s < i; s++) e[n + s] = r[s];
+                for (var a = 0; a < i; a++) e[n + a] = r[a];
               } else e.push(r);
             }
           }),
@@ -2483,10 +2483,10 @@ var CLSTAMP = "7983614";
             };
             (o = o || r), (r = {});
             for (var n = 0, i = 0; i < e.length; ) {
-              var s = e[i++],
-                a = o(s);
-              Object.prototype.hasOwnProperty.call(r, a) ||
-                ((r[a] = !0), (t[n++] = s));
+              var a = e[i++],
+                s = o(a);
+              Object.prototype.hasOwnProperty.call(r, s) ||
+                ((r[s] = !0), (t[n++] = a));
             }
             t.length = n;
           }),
@@ -2502,12 +2502,12 @@ var CLSTAMP = "7983614";
             return goog.array.binarySearch_(e, t, !0, void 0, o);
           }),
           (goog.array.binarySearch_ = function (e, t, o, r, n) {
-            for (var i, s = 0, a = e.length; s < a; ) {
-              var g = s + ((a - s) >>> 1),
+            for (var i, a = 0, s = e.length; a < s; ) {
+              var g = a + ((s - a) >>> 1),
                 l = o ? t.call(n, e[g], g, e) : t(r, e[g]);
-              0 < l ? (s = g + 1) : ((a = g), (i = !l));
+              0 < l ? (a = g + 1) : ((s = g), (i = !l));
             }
-            return i ? s : -s - 1;
+            return i ? a : -a - 1;
           }),
           (goog.array.sort = function (e, t) {
             e.sort(t || goog.array.defaultCompare);
@@ -2593,8 +2593,8 @@ var CLSTAMP = "7983614";
           (goog.array.bucket = function (e, t, o) {
             for (var r = {}, n = 0; n < e.length; n++) {
               var i = e[n],
-                s = t.call(o, i, n, e);
-              void 0 !== s && (r[s] || (r[s] = [])).push(i);
+                a = t.call(o, i, n, e);
+              void 0 !== a && (r[a] || (r[a] = [])).push(i);
             }
             return r;
           }),
@@ -2630,7 +2630,7 @@ var CLSTAMP = "7983614";
                 for (var n = 0; n < r.length; n += 8192) {
                   var i = goog.array.slice(r, n, n + 8192);
                   i = goog.array.flatten.apply(null, i);
-                  for (var s = 0; s < i.length; s++) t.push(i[s]);
+                  for (var a = 0; a < i.length; a++) t.push(i[a]);
                 }
               else t.push(r);
             }
@@ -2750,20 +2750,20 @@ var CLSTAMP = "7983614";
                 t[r++] = String.fromCharCode(((31 & n) << 6) | (63 & i));
               } else if (239 < n && 365 > n) {
                 i = e[o++];
-                var s = e[o++];
+                var a = e[o++];
                 (n =
                   (((7 & n) << 18) |
                     ((63 & i) << 12) |
-                    ((63 & s) << 6) |
+                    ((63 & a) << 6) |
                     (63 & e[o++])) -
                   65536),
                   (t[r++] = String.fromCharCode(55296 + (n >> 10))),
                   (t[r++] = String.fromCharCode(56320 + (1023 & n)));
               } else
                 (i = e[o++]),
-                  (s = e[o++]),
+                  (a = e[o++]),
                   (t[r++] = String.fromCharCode(
-                    ((15 & n) << 12) | ((63 & i) << 6) | (63 & s)
+                    ((15 & n) << 12) | ((63 & i) << 6) | (63 & a)
                   ));
             }
             return t.join("");
@@ -3039,14 +3039,14 @@ var CLSTAMP = "7983614";
             var r = 0,
               n = !1,
               i = [],
-              s = function () {
-                (r = 0), n && ((n = !1), a());
-              },
               a = function () {
-                (r = goog.global.setTimeout(s, t)), e.apply(o, i);
+                (r = 0), n && ((n = !1), s());
+              },
+              s = function () {
+                (r = goog.global.setTimeout(a, t)), e.apply(o, i);
               };
             return function (e) {
-              (i = arguments), r ? (n = !0) : a();
+              (i = arguments), r ? (n = !0) : s();
             };
           }),
           (goog.functions.rateLimit = function (e, t, o) {
@@ -3842,14 +3842,14 @@ var CLSTAMP = "7983614";
               var n = o[r];
               n = Array.isArray(n) ? n : [n];
               for (var i = 0; i < n.length; i++) {
-                var s = n[i];
-                null != s &&
+                var a = n[i];
+                null != a &&
                   (t || (t = e),
                   (t +=
                     (t.length > e.length ? "&" : "") +
                     encodeURIComponent(r) +
                     "=" +
-                    encodeURIComponent(String(s))));
+                    encodeURIComponent(String(a))));
               }
             }
             return t;
@@ -3966,25 +3966,25 @@ var CLSTAMP = "7983614";
               n++
             ) {
               var i = e[n] || "",
-                s = t[n] || "";
+                a = t[n] || "";
               do {
                 if (
                   ((i = /(\d*)(\D*)(.*)/.exec(i) || ["", "", "", ""]),
-                  (s = /(\d*)(\D*)(.*)/.exec(s) || ["", "", "", ""]),
-                  0 == i[0].length && 0 == s[0].length)
+                  (a = /(\d*)(\D*)(.*)/.exec(a) || ["", "", "", ""]),
+                  0 == i[0].length && 0 == a[0].length)
                 )
                   break;
                 o = 0 == i[1].length ? 0 : parseInt(i[1], 10);
-                var a = 0 == s[1].length ? 0 : parseInt(s[1], 10);
+                var s = 0 == a[1].length ? 0 : parseInt(a[1], 10);
                 (o =
-                  goog.string.internal.compareElements_(o, a) ||
+                  goog.string.internal.compareElements_(o, s) ||
                   goog.string.internal.compareElements_(
                     0 == i[2].length,
-                    0 == s[2].length
+                    0 == a[2].length
                   ) ||
-                  goog.string.internal.compareElements_(i[2], s[2])),
+                  goog.string.internal.compareElements_(i[2], a[2])),
                   (i = i[3]),
-                  (s = s[3]);
+                  (a = a[3]);
               } while (0 == o);
             }
             return o;
@@ -5644,18 +5644,18 @@ var CLSTAMP = "7983614";
               var r = e.toLowerCase().match(o),
                 n = t.toLowerCase().match(o),
                 i = Math.min(r.length, n.length),
-                s = 0;
-              s < i;
-              s++
+                a = 0;
+              a < i;
+              a++
             ) {
-              o = r[s];
-              var a = n[s];
-              if (o != a)
+              o = r[a];
+              var s = n[a];
+              if (o != s)
                 return (
                   (e = parseInt(o, 10)),
-                  !isNaN(e) && ((t = parseInt(a, 10)), !isNaN(t) && e - t)
+                  !isNaN(e) && ((t = parseInt(s, 10)), !isNaN(t) && e - t)
                     ? e - t
-                    : o < a
+                    : o < s
                     ? -1
                     : 1
                 );
@@ -6425,15 +6425,15 @@ var CLSTAMP = "7983614";
             for (var o = [], r = 0; r < e.length; r += 3) {
               var n = e[r],
                 i = r + 1 < e.length,
-                s = i ? e[r + 1] : 0,
-                a = r + 2 < e.length,
-                g = a ? e[r + 2] : 0,
+                a = i ? e[r + 1] : 0,
+                s = r + 2 < e.length,
+                g = s ? e[r + 2] : 0,
                 l = n >> 2;
-              (n = ((3 & n) << 4) | (s >> 4)),
-                (s = ((15 & s) << 2) | (g >> 6)),
+              (n = ((3 & n) << 4) | (a >> 4)),
+                (a = ((15 & a) << 2) | (g >> 6)),
                 (g &= 63),
-                a || ((g = 64), i || (s = 64)),
-                o.push(t[l], t[n], t[s] || "", t[g] || "");
+                s || ((g = 64), i || (a = 64)),
+                o.push(t[l], t[n], t[a] || "", t[g] || "");
             }
             return o.join("");
           }),
@@ -6500,13 +6500,13 @@ var CLSTAMP = "7983614";
             for (var r = 0; ; ) {
               var n = o(-1),
                 i = o(0),
-                s = o(64),
-                a = o(64);
-              if (64 === a && -1 === n) break;
+                a = o(64),
+                s = o(64);
+              if (64 === s && -1 === n) break;
               t((n << 2) | (i >> 4)),
-                64 != s &&
-                  (t(((i << 4) & 240) | (s >> 2)),
-                  64 != a && t(((s << 6) & 192) | a));
+                64 != a &&
+                  (t(((i << 4) & 240) | (a >> 2)),
+                  64 != s && t(((a << 6) & 192) | s));
             }
           }),
           (goog.crypt.base64.init_ = function () {
@@ -6523,10 +6523,10 @@ var CLSTAMP = "7983614";
                 goog.crypt.base64.byteToCharMaps_[o] = r;
                 for (var n = 0; n < r.length; n++) {
                   var i = r[n],
-                    s = goog.crypt.base64.charToByteMap_[i];
-                  void 0 === s
+                    a = goog.crypt.base64.charToByteMap_[i];
+                  void 0 === a
                     ? (goog.crypt.base64.charToByteMap_[i] = n)
-                    : goog.asserts.assert(s === n);
+                    : goog.asserts.assert(a === n);
                 }
               }
             }
@@ -6629,13 +6629,13 @@ var CLSTAMP = "7983614";
               r = e.charCodeAt(2),
               n = e.charCodeAt(3),
               i = e.charCodeAt(4),
-              s = e.charCodeAt(5),
-              a = e.charCodeAt(6);
+              a = e.charCodeAt(5),
+              s = e.charCodeAt(6);
             (e = e.charCodeAt(7)),
               (jspb.utils.split64Low =
                 (t + (o << 8) + (r << 16) + (n << 24)) >>> 0),
               (jspb.utils.split64High =
-                (i + (s << 8) + (a << 16) + (e << 24)) >>> 0);
+                (i + (a << 8) + (s << 16) + (e << 24)) >>> 0);
           }),
           (jspb.utils.joinUint64 = function (e, t) {
             return t * jspb.BinaryConstants.TWO_TO_32 + (e >>> 0);
@@ -6844,11 +6844,11 @@ var CLSTAMP = "7983614";
             if (128 > r) for (; t < o && e[t++] == r; ) i++, (t += n);
             else
               for (; t < o; ) {
-                for (var s = r; 128 < s; ) {
-                  if (e[t++] != ((127 & s) | 128)) return i;
-                  s >>= 7;
+                for (var a = r; 128 < a; ) {
+                  if (e[t++] != ((127 & a) | 128)) return i;
+                  a >>= 7;
                 }
-                if (e[t++] != s) break;
+                if (e[t++] != a) break;
                 i++, (t += n);
               }
             return i;
@@ -6881,11 +6881,11 @@ var CLSTAMP = "7983614";
               if (e[t++] != i) break;
               n++;
               for (
-                var s = 0, a = 1;
-                (s += (127 & (i = e[t++])) * a), (a *= 128), 0 != (128 & i);
+                var a = 0, s = 1;
+                (a += (127 & (i = e[t++])) * s), (s *= 128), 0 != (128 & i);
 
               );
-              t += s;
+              t += a;
             }
             return n;
           }),
@@ -7205,17 +7205,17 @@ var CLSTAMP = "7983614";
               else {
                 if (192 > i) continue;
                 if (224 > i) {
-                  var s = t[o++];
-                  r.push(((31 & i) << 6) | (63 & s));
-                } else if (240 > i) {
-                  s = t[o++];
                   var a = t[o++];
-                  r.push(((15 & i) << 12) | ((63 & s) << 6) | (63 & a));
+                  r.push(((31 & i) << 6) | (63 & a));
+                } else if (240 > i) {
+                  a = t[o++];
+                  var s = t[o++];
+                  r.push(((15 & i) << 12) | ((63 & a) << 6) | (63 & s));
                 } else if (248 > i) {
                   (i =
                     ((7 & i) << 18) |
-                    ((63 & (s = t[o++])) << 12) |
-                    ((63 & (a = t[o++])) << 6) |
+                    ((63 & (a = t[o++])) << 12) |
+                    ((63 & (s = t[o++])) << 6) |
                     (63 & t[o++])),
                     (i -= 65536),
                     r.push(55296 + ((i >> 10) & 1023), 56320 + (1023 & i));
@@ -7256,13 +7256,13 @@ var CLSTAMP = "7983614";
               r = e[t + 1],
               n = e[t + 2],
               i = e[t + 3],
-              s = e[t + 4],
-              a = e[t + 5],
+              a = e[t + 4],
+              s = e[t + 5],
               g = e[t + 6];
             return (
               (e = e[t + 7]),
               (this.cursor_ += 8),
-              String.fromCharCode(o, r, n, i, s, a, g, e)
+              String.fromCharCode(o, r, n, i, a, s, g, e)
             );
           }),
           (jspb.BinaryReader = function (e, t, o) {
@@ -9305,9 +9305,9 @@ var CLSTAMP = "7983614";
             for (var o = this.toArray(), r = [], n = 0; n < o.length; n++) {
               var i = this.map_[o[n][0].toString()];
               this.wrapEntry_(i);
-              var s = i.valueWrapper;
-              s
-                ? (goog.asserts.assert(t), r.push([i.key, t(e, s)]))
+              var a = i.valueWrapper;
+              a
+                ? (goog.asserts.assert(t), r.push([i.key, t(e, a)]))
                 : r.push([i.key, i.value]);
             }
             return r;
@@ -9415,31 +9415,31 @@ var CLSTAMP = "7983614";
           (jspb.Map.prototype.serializeBinary = function (e, t, o, r, n) {
             var i = this.stringKeys_();
             i.sort();
-            for (var s = 0; s < i.length; s++) {
-              var a = this.map_[i[s]];
+            for (var a = 0; a < i.length; a++) {
+              var s = this.map_[i[a]];
               t.beginSubMessage(e),
-                o.call(t, 1, a.key),
+                o.call(t, 1, s.key),
                 this.valueCtor_
-                  ? r.call(t, 2, this.wrapEntry_(a), n)
-                  : r.call(t, 2, a.value),
+                  ? r.call(t, 2, this.wrapEntry_(s), n)
+                  : r.call(t, 2, s.value),
                 t.endSubMessage();
             }
           }),
-          (jspb.Map.deserializeBinary = function (e, t, o, r, n, i, s) {
+          (jspb.Map.deserializeBinary = function (e, t, o, r, n, i, a) {
             for (; t.nextField() && !t.isEndGroup(); ) {
-              var a = t.getFieldNumber();
-              1 == a
+              var s = t.getFieldNumber();
+              1 == s
                 ? (i = o.call(t))
-                : 2 == a &&
+                : 2 == s &&
                   (e.valueCtor_
                     ? (goog.asserts.assert(n),
-                      s || (s = new e.valueCtor_()),
-                      r.call(t, s, n))
-                    : (s = r.call(t)));
+                      a || (a = new e.valueCtor_()),
+                      r.call(t, a, n))
+                    : (a = r.call(t)));
             }
             goog.asserts.assert(null != i),
-              goog.asserts.assert(null != s),
-              e.set(i, s);
+              goog.asserts.assert(null != a),
+              e.set(i, a);
           }),
           (jspb.Map.prototype.stringKeys_ = function () {
             var e,
@@ -9560,41 +9560,41 @@ var CLSTAMP = "7983614";
           }),
           (jspb.Message.toObjectExtension = function (e, t, o, r, n) {
             for (var i in o) {
-              var s = o[i],
-                a = r.call(e, s);
-              if (null != a) {
-                for (var g in s.fieldName)
-                  if (s.fieldName.hasOwnProperty(g)) break;
-                t[g] = s.toObjectFn
-                  ? s.isRepeated
-                    ? jspb.Message.toObjectList(a, s.toObjectFn, n)
-                    : s.toObjectFn(n, a)
-                  : a;
+              var a = o[i],
+                s = r.call(e, a);
+              if (null != s) {
+                for (var g in a.fieldName)
+                  if (a.fieldName.hasOwnProperty(g)) break;
+                t[g] = a.toObjectFn
+                  ? a.isRepeated
+                    ? jspb.Message.toObjectList(s, a.toObjectFn, n)
+                    : a.toObjectFn(n, s)
+                  : s;
               }
             }
           }),
           (jspb.Message.serializeBinaryExtensions = function (e, t, o, r) {
             for (var n in o) {
               var i = o[n],
-                s = i.fieldInfo;
+                a = i.fieldInfo;
               if (!i.binaryWriterFn)
                 throw Error(
                   "Message extension present that was generated without binary serialization support"
                 );
-              var a = r.call(e, s);
-              if (null != a)
-                if (s.isMessageType()) {
+              var s = r.call(e, a);
+              if (null != s)
+                if (a.isMessageType()) {
                   if (!i.binaryMessageSerializeFn)
                     throw Error(
                       "Message extension present holding submessage without binary support enabled, and message is being serialized to binary format"
                     );
                   i.binaryWriterFn.call(
                     t,
-                    s.fieldIndex,
-                    a,
+                    a.fieldIndex,
+                    s,
                     i.binaryMessageSerializeFn
                   );
-                } else i.binaryWriterFn.call(t, s.fieldIndex, a);
+                } else i.binaryWriterFn.call(t, a.fieldIndex, s);
             }
           }),
           (jspb.Message.readBinaryExtension = function (e, t, o, r, n) {
@@ -9605,14 +9605,14 @@ var CLSTAMP = "7983614";
                   "Deserializing extension whose generated code does not support binary format"
                 );
               if (o.isMessageType()) {
-                var s = new o.ctor();
-                i.binaryReaderFn.call(t, s, i.binaryMessageDeserializeFn);
-              } else s = i.binaryReaderFn.call(t);
+                var a = new o.ctor();
+                i.binaryReaderFn.call(t, a, i.binaryMessageDeserializeFn);
+              } else a = i.binaryReaderFn.call(t);
               o.isRepeated && !i.isPacked
                 ? (t = r.call(e, o))
-                  ? t.push(s)
-                  : n.call(e, o, [s])
-                : n.call(e, o, s);
+                  ? t.push(a)
+                  : n.call(e, o, [a])
+                : n.call(e, o, a);
             } else t.skipField();
           }),
           (jspb.Message.getField = function (e, t) {
@@ -9800,9 +9800,9 @@ var CLSTAMP = "7983614";
           (jspb.Message.computeOneofCase = function (e, t) {
             for (var o, r, n = 0; n < t.length; n++) {
               var i = t[n],
-                s = jspb.Message.getField(e, i);
-              null != s &&
-                ((o = i), (r = s), jspb.Message.setField(e, i, void 0));
+                a = jspb.Message.getField(e, i);
+              null != a &&
+                ((o = i), (r = a), jspb.Message.setField(e, i, void 0));
             }
             return o ? (jspb.Message.setField(e, o, r), o) : 0;
           }),
@@ -9990,22 +9990,22 @@ var CLSTAMP = "7983614";
                 n = void 0,
                 i = Math.max(e.length, t.length);
               for (o = 0; o < i; o++) {
-                var s = e[o],
-                  a = t[o];
+                var a = e[o],
+                  s = t[o];
                 if (
-                  (s &&
-                    s.constructor == Object &&
+                  (a &&
+                    a.constructor == Object &&
                     (goog.asserts.assert(void 0 === r),
                     goog.asserts.assert(o === e.length - 1),
-                    (r = s),
-                    (s = void 0)),
-                  a &&
-                    a.constructor == Object &&
+                    (r = a),
+                    (a = void 0)),
+                  s &&
+                    s.constructor == Object &&
                     (goog.asserts.assert(void 0 === n),
                     goog.asserts.assert(o === t.length - 1),
-                    (n = a),
-                    (a = void 0)),
-                  !jspb.Message.compareFields(s, a))
+                    (n = s),
+                    (s = void 0)),
+                  !jspb.Message.compareFields(a, s))
                 )
                   return !1;
               }
@@ -10089,13 +10089,13 @@ var CLSTAMP = "7983614";
             (exports.object = { extend: goog.object.extend }),
             (exports.typeOf = goog.typeOf));
       },
-      972: (e, t, o) => {
+      228: (e, t, o) => {
         "use strict";
-        o.d(t, { B: () => a });
+        o.d(t, { B: () => s });
         var r = o(655),
-          n = o(398),
-          i = o(976);
-        let s = [
+          n = o(987),
+          i = o(340);
+        let a = [
           { index: 0, type: n.eV.OK, category: "action" },
           { index: 1, type: n.eV.CANCEL, category: "action" },
           { index: 2, type: n.eV.SECONDARY, category: "action" },
@@ -10115,7 +10115,7 @@ var CLSTAMP = "7983614";
           { index: 16, type: n.eV.STEAM_GUIDE, category: "action" },
           { index: 17, type: n.eV.SELECT, category: "action" },
         ];
-        class a extends n.oH {
+        class s extends n.oH {
           constructor() {
             super(),
               (this.m_rgGamepadStatus = []),
@@ -10134,8 +10134,8 @@ var CLSTAMP = "7983614";
               this.m_rgGamepadStatus[o] ||
                 (this.m_rgGamepadStatus[o] = { buttons: [] });
               let n = this.m_rgGamepadStatus[o];
-              for (let e = 0; e < s.length; e++) {
-                let o = s[e],
+              for (let e = 0; e < a.length; e++) {
+                let o = a[e],
                   i = o.index;
                 r.buttons[i] &&
                   (r.buttons[i].pressed
@@ -10156,16 +10156,16 @@ var CLSTAMP = "7983614";
               this.PollGamepads();
           }
         }
-        (0, r.gn)([i.a], a.prototype, "PollGamepads", null),
-          (0, r.gn)([i.a], a.prototype, "OnWindowRegainedFocus", null);
+        (0, r.gn)([i.a], s.prototype, "PollGamepads", null),
+          (0, r.gn)([i.a], s.prototype, "OnWindowRegainedFocus", null);
       },
-      398: (e, t, o) => {
+      987: (e, t, o) => {
         "use strict";
         o.d(t, { eV: () => r, Rr: () => n, oH: () => g });
         var r,
           n,
-          i = o(70);
-        class s {
+          i = o(185);
+        class a {
           constructor(e) {
             this.m_config = e;
           }
@@ -10193,9 +10193,9 @@ var CLSTAMP = "7983614";
             }
           }
         }
-        class a {
+        class s {
           constructor(e) {
-            (this.m_config = e), (this.m_inputRepeatGenerator = new s(e));
+            (this.m_config = e), (this.m_inputRepeatGenerator = new a(e));
           }
           Reset() {
             this.m_inputRepeatGenerator.Reset();
@@ -10257,7 +10257,7 @@ var CLSTAMP = "7983614";
               (this.m_AnalogCallbacks = new i.pB()),
               (this.m_NavigationTypeChangeCallbacks = new i.pB()),
               (this.m_nLastActiveControllerIndex = -1),
-              (this.m_ButtonRepeatHandler = new a({
+              (this.m_ButtonRepeatHandler = new s({
                 inputsThatRepeat: new Set([
                   r.DIR_UP,
                   r.DIR_DOWN,
@@ -10346,11 +10346,11 @@ var CLSTAMP = "7983614";
           }
         }
       },
-      526: (e, t, o) => {
+      634: (e, t, o) => {
         "use strict";
         o.d(t, { U5: () => n.U5 });
         var r,
-          n = o(608);
+          n = o(386);
         !(function (e) {
           (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
             (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -10369,7 +10369,7 @@ var CLSTAMP = "7983614";
             (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
             (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
         })(r || (r = {}));
-        var i, s, a, g, l, u, p, c, _, d, f, h, m, y;
+        var i, a, s, g, l, u, p, c, _, d, f, h, m, y;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -10399,7 +10399,7 @@ var CLSTAMP = "7983614";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(s || (s = {})),
+          })(a || (a = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -10413,7 +10413,7 @@ var CLSTAMP = "7983614";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(a || (a = {})),
+          })(s || (s = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -10606,7 +10606,7 @@ var CLSTAMP = "7983614";
             (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
               "k_BluetoothDeviceType_Keyboard");
         })(T || (T = {}));
-        var A, I, R, C;
+        var I, A, R, C;
         !(function (e) {
           (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
             (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -10634,11 +10634,11 @@ var CLSTAMP = "7983614";
               "EBrowserType_Offscreen_SteamUI"),
             (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
               "EBrowserType_OpenVROverlay_Subview");
-        })(A || (A = {})),
+        })(I || (I = {})),
           (function (e) {
             (e[(e.SystemKey0 = 0)] = "SystemKey0"),
               (e[(e.SystemKey1 = 1)] = "SystemKey1");
-          })(I || (I = {})),
+          })(A || (A = {})),
           (function (e) {
             (e[(e.Hidden = 0)] = "Hidden"),
               (e[(e.Notification = 1)] = "Notification"),
@@ -10658,16 +10658,16 @@ var CLSTAMP = "7983614";
               (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
               (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
           })(C || (C = {}));
-        var O;
+        var D;
         !(function (e) {
           (e[(e.k_EPending = 0)] = "k_EPending"),
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
-        })(O || (O = {}));
-        var D = o(19);
-        D.BinaryReader.prototype, D.BinaryWriter.prototype;
-        D.Message;
-        var N, v, w, U, L;
+        })(D || (D = {}));
+        var O = o(19);
+        O.BinaryReader.prototype, O.BinaryWriter.prototype;
+        O.Message;
+        var v, N, U, w, M;
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -10685,7 +10685,7 @@ var CLSTAMP = "7983614";
               "k_EControllerBindingType_GameAction"),
             (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
               "k_EControllerBindingType_ControllerAction");
-        })(N || (N = {})),
+        })(v || (v = {})),
           (function (e) {
             (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
               (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
@@ -10754,7 +10754,7 @@ var CLSTAMP = "7983614";
               (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
                 "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
               (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
-          })(v || (v = {}));
+          })(N || (N = {}));
         !(function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -10811,7 +10811,7 @@ var CLSTAMP = "7983614";
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(w || (w = {}));
+        })(U || (U = {}));
         !(function (e) {
           (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
             "k_EClientUINotificationGroupChatMessage"),
@@ -10819,20 +10819,20 @@ var CLSTAMP = "7983614";
               "k_EClientUINotificationFriendChatMessage"),
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
-        })(U || (U = {}));
+        })(w || (w = {}));
         !(function (e) {
           (e[(e.AudioPlayback_Undefined = 0)] = "AudioPlayback_Undefined"),
             (e[(e.AudioPlayback_Playing = 1)] = "AudioPlayback_Playing"),
             (e[(e.AudioPlayback_Paused = 2)] = "AudioPlayback_Paused"),
             (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
-        })(L || (L = {}));
-        var j, P, M, B, V;
+        })(M || (M = {}));
+        var P, L, j, B, F;
         !(function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Wired = 1)] = "Wired"),
             (e[(e.Wireless = 2)] = "Wireless"),
             (e[(e.Virtual = 3)] = "Virtual");
-        })(j || (j = {})),
+        })(P || (P = {})),
           (function (e) {
             (e[(e.NotPresent = 0)] = "NotPresent"),
               (e[(e.Failed = 1)] = "Failed"),
@@ -10841,14 +10841,14 @@ var CLSTAMP = "7983614";
               (e[(e.Connecting = 4)] = "Connecting"),
               (e[(e.Connected = 5)] = "Connected"),
               (e[(e.Retrying = 6)] = "Retrying");
-          })(P || (P = {})),
+          })(L || (L = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.Weak = 1)] = "Weak"),
               (e[(e.Ok = 2)] = "Ok"),
               (e[(e.Good = 3)] = "Good"),
               (e[(e.Excellent = 4)] = "Excellent");
-          })(M || (M = {})),
+          })(j || (j = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -10865,8 +10865,8 @@ var CLSTAMP = "7983614";
               (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
               (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
                 "k_EHTTPProxyMode_Automatic");
-          })(V || (V = {}));
-        var F, k, H, W;
+          })(F || (F = {}));
+        var V, k, H, x, W;
         !(function (e) {
           (e[(e.k_EComputerActiveStateInvalid = 0)] =
             "k_EComputerActiveStateInvalid"),
@@ -10874,7 +10874,7 @@ var CLSTAMP = "7983614";
               "k_EComputerActiveStateActive"),
             (e[(e.k_EComputerActiveStateIdle = 2)] =
               "k_EComputerActiveStateIdle");
-        })(F || (F = {})),
+        })(V || (V = {})),
           (function (e) {
             (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
               "k_EClientUsedInputTypeKeyboard"),
@@ -11374,9 +11374,332 @@ var CLSTAMP = "7983614";
               (e[(e.VRInitError_Steam_SteamInstallationNotFound = 2e3)] =
                 "VRInitError_Steam_SteamInstallationNotFound"),
               (e[(e.VRInitError_LastError = 2001)] = "VRInitError_LastError");
+          })(x || (x = {})),
+          (function (e) {
+            (e[(e.Invalid = 0)] = "Invalid"),
+              (e[(e.TrackingSystemName_String = 1e3)] =
+                "TrackingSystemName_String"),
+              (e[(e.ModelNumber_String = 1001)] = "ModelNumber_String"),
+              (e[(e.SerialNumber_String = 1002)] = "SerialNumber_String"),
+              (e[(e.RenderModelName_String = 1003)] = "RenderModelName_String"),
+              (e[(e.WillDriftInYaw_Bool = 1004)] = "WillDriftInYaw_Bool"),
+              (e[(e.ManufacturerName_String = 1005)] =
+                "ManufacturerName_String"),
+              (e[(e.TrackingFirmwareVersion_String = 1006)] =
+                "TrackingFirmwareVersion_String"),
+              (e[(e.HardwareRevision_String = 1007)] =
+                "HardwareRevision_String"),
+              (e[(e.AllWirelessDongleDescriptions_String = 1008)] =
+                "AllWirelessDongleDescriptions_String"),
+              (e[(e.ConnectedWirelessDongle_String = 1009)] =
+                "ConnectedWirelessDongle_String"),
+              (e[(e.DeviceIsWireless_Bool = 1010)] = "DeviceIsWireless_Bool"),
+              (e[(e.DeviceIsCharging_Bool = 1011)] = "DeviceIsCharging_Bool"),
+              (e[(e.DeviceBatteryPercentage_Float = 1012)] =
+                "DeviceBatteryPercentage_Float"),
+              (e[(e.StatusDisplayTransform_Matrix34 = 1013)] =
+                "StatusDisplayTransform_Matrix34"),
+              (e[(e.Firmware_UpdateAvailable_Bool = 1014)] =
+                "Firmware_UpdateAvailable_Bool"),
+              (e[(e.Firmware_ManualUpdate_Bool = 1015)] =
+                "Firmware_ManualUpdate_Bool"),
+              (e[(e.Firmware_ManualUpdateURL_String = 1016)] =
+                "Firmware_ManualUpdateURL_String"),
+              (e[(e.HardwareRevision_Uint64 = 1017)] =
+                "HardwareRevision_Uint64"),
+              (e[(e.FirmwareVersion_Uint64 = 1018)] = "FirmwareVersion_Uint64"),
+              (e[(e.FPGAVersion_Uint64 = 1019)] = "FPGAVersion_Uint64"),
+              (e[(e.VRCVersion_Uint64 = 1020)] = "VRCVersion_Uint64"),
+              (e[(e.RadioVersion_Uint64 = 1021)] = "RadioVersion_Uint64"),
+              (e[(e.DongleVersion_Uint64 = 1022)] = "DongleVersion_Uint64"),
+              (e[(e.BlockServerShutdown_Bool = 1023)] =
+                "BlockServerShutdown_Bool"),
+              (e[(e.CanUnifyCoordinateSystemWithHmd_Bool = 1024)] =
+                "CanUnifyCoordinateSystemWithHmd_Bool"),
+              (e[(e.ContainsProximitySensor_Bool = 1025)] =
+                "ContainsProximitySensor_Bool"),
+              (e[(e.DeviceProvidesBatteryStatus_Bool = 1026)] =
+                "DeviceProvidesBatteryStatus_Bool"),
+              (e[(e.DeviceCanPowerOff_Bool = 1027)] = "DeviceCanPowerOff_Bool"),
+              (e[(e.Firmware_ProgrammingTarget_String = 1028)] =
+                "Firmware_ProgrammingTarget_String"),
+              (e[(e.DeviceClass_Int32 = 1029)] = "DeviceClass_Int32"),
+              (e[(e.HasCamera_Bool = 1030)] = "HasCamera_Bool"),
+              (e[(e.DriverVersion_String = 1031)] = "DriverVersion_String"),
+              (e[(e.Firmware_ForceUpdateRequired_Bool = 1032)] =
+                "Firmware_ForceUpdateRequired_Bool"),
+              (e[(e.ViveSystemButtonFixRequired_Bool = 1033)] =
+                "ViveSystemButtonFixRequired_Bool"),
+              (e[(e.ParentDriver_Uint64 = 1034)] = "ParentDriver_Uint64"),
+              (e[(e.ResourceRoot_String = 1035)] = "ResourceRoot_String"),
+              (e[(e.RegisteredDeviceType_String = 1036)] =
+                "RegisteredDeviceType_String"),
+              (e[(e.InputProfilePath_String = 1037)] =
+                "InputProfilePath_String"),
+              (e[(e.NeverTracked_Bool = 1038)] = "NeverTracked_Bool"),
+              (e[(e.NumCameras_Int32 = 1039)] = "NumCameras_Int32"),
+              (e[(e.CameraFrameLayout_Int32 = 1040)] =
+                "CameraFrameLayout_Int32"),
+              (e[(e.CameraStreamFormat_Int32 = 1041)] =
+                "CameraStreamFormat_Int32"),
+              (e[(e.AdditionalDeviceSettingsPath_String = 1042)] =
+                "AdditionalDeviceSettingsPath_String"),
+              (e[(e.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
+              (e[(e.ReportsTimeSinceVSync_Bool = 2e3)] =
+                "ReportsTimeSinceVSync_Bool"),
+              (e[(e.SecondsFromVsyncToPhotons_Float = 2001)] =
+                "SecondsFromVsyncToPhotons_Float"),
+              (e[(e.DisplayFrequency_Float = 2002)] = "DisplayFrequency_Float"),
+              (e[(e.UserIpdMeters_Float = 2003)] = "UserIpdMeters_Float"),
+              (e[(e.CurrentUniverseId_Uint64 = 2004)] =
+                "CurrentUniverseId_Uint64"),
+              (e[(e.PreviousUniverseId_Uint64 = 2005)] =
+                "PreviousUniverseId_Uint64"),
+              (e[(e.DisplayFirmwareVersion_Uint64 = 2006)] =
+                "DisplayFirmwareVersion_Uint64"),
+              (e[(e.IsOnDesktop_Bool = 2007)] = "IsOnDesktop_Bool"),
+              (e[(e.DisplayMCType_Int32 = 2008)] = "DisplayMCType_Int32"),
+              (e[(e.DisplayMCOffset_Float = 2009)] = "DisplayMCOffset_Float"),
+              (e[(e.DisplayMCScale_Float = 2010)] = "DisplayMCScale_Float"),
+              (e[(e.EdidVendorID_Int32 = 2011)] = "EdidVendorID_Int32"),
+              (e[(e.DisplayMCImageLeft_String = 2012)] =
+                "DisplayMCImageLeft_String"),
+              (e[(e.DisplayMCImageRight_String = 2013)] =
+                "DisplayMCImageRight_String"),
+              (e[(e.DisplayGCBlackClamp_Float = 2014)] =
+                "DisplayGCBlackClamp_Float"),
+              (e[(e.EdidProductID_Int32 = 2015)] = "EdidProductID_Int32"),
+              (e[(e.CameraToHeadTransform_Matrix34 = 2016)] =
+                "CameraToHeadTransform_Matrix34"),
+              (e[(e.DisplayGCType_Int32 = 2017)] = "DisplayGCType_Int32"),
+              (e[(e.DisplayGCOffset_Float = 2018)] = "DisplayGCOffset_Float"),
+              (e[(e.DisplayGCScale_Float = 2019)] = "DisplayGCScale_Float"),
+              (e[(e.DisplayGCPrescale_Float = 2020)] =
+                "DisplayGCPrescale_Float"),
+              (e[(e.DisplayGCImage_String = 2021)] = "DisplayGCImage_String"),
+              (e[(e.LensCenterLeftU_Float = 2022)] = "LensCenterLeftU_Float"),
+              (e[(e.LensCenterLeftV_Float = 2023)] = "LensCenterLeftV_Float"),
+              (e[(e.LensCenterRightU_Float = 2024)] = "LensCenterRightU_Float"),
+              (e[(e.LensCenterRightV_Float = 2025)] = "LensCenterRightV_Float"),
+              (e[(e.UserHeadToEyeDepthMeters_Float = 2026)] =
+                "UserHeadToEyeDepthMeters_Float"),
+              (e[(e.CameraFirmwareVersion_Uint64 = 2027)] =
+                "CameraFirmwareVersion_Uint64"),
+              (e[(e.CameraFirmwareDescription_String = 2028)] =
+                "CameraFirmwareDescription_String"),
+              (e[(e.DisplayFPGAVersion_Uint64 = 2029)] =
+                "DisplayFPGAVersion_Uint64"),
+              (e[(e.DisplayBootloaderVersion_Uint64 = 2030)] =
+                "DisplayBootloaderVersion_Uint64"),
+              (e[(e.DisplayHardwareVersion_Uint64 = 2031)] =
+                "DisplayHardwareVersion_Uint64"),
+              (e[(e.AudioFirmwareVersion_Uint64 = 2032)] =
+                "AudioFirmwareVersion_Uint64"),
+              (e[(e.CameraCompatibilityMode_Int32 = 2033)] =
+                "CameraCompatibilityMode_Int32"),
+              (e[(e.ScreenshotHorizontalFieldOfViewDegrees_Float = 2034)] =
+                "ScreenshotHorizontalFieldOfViewDegrees_Float"),
+              (e[(e.ScreenshotVerticalFieldOfViewDegrees_Float = 2035)] =
+                "ScreenshotVerticalFieldOfViewDegrees_Float"),
+              (e[(e.DisplaySuppressed_Bool = 2036)] = "DisplaySuppressed_Bool"),
+              (e[(e.DisplayAllowNightMode_Bool = 2037)] =
+                "DisplayAllowNightMode_Bool"),
+              (e[(e.DisplayMCImageWidth_Int32 = 2038)] =
+                "DisplayMCImageWidth_Int32"),
+              (e[(e.DisplayMCImageHeight_Int32 = 2039)] =
+                "DisplayMCImageHeight_Int32"),
+              (e[(e.DisplayMCImageNumChannels_Int32 = 2040)] =
+                "DisplayMCImageNumChannels_Int32"),
+              (e[(e.DisplayMCImageData_Binary = 2041)] =
+                "DisplayMCImageData_Binary"),
+              (e[(e.SecondsFromPhotonsToVblank_Float = 2042)] =
+                "SecondsFromPhotonsToVblank_Float"),
+              (e[(e.DriverDirectModeSendsVsyncEvents_Bool = 2043)] =
+                "DriverDirectModeSendsVsyncEvents_Bool"),
+              (e[(e.DisplayDebugMode_Bool = 2044)] = "DisplayDebugMode_Bool"),
+              (e[(e.GraphicsAdapterLuid_Uint64 = 2045)] =
+                "GraphicsAdapterLuid_Uint64"),
+              (e[(e.DriverProvidedChaperonePath_String = 2048)] =
+                "DriverProvidedChaperonePath_String"),
+              (e[(e.ExpectedTrackingReferenceCount_Int32 = 2049)] =
+                "ExpectedTrackingReferenceCount_Int32"),
+              (e[(e.ExpectedControllerCount_Int32 = 2050)] =
+                "ExpectedControllerCount_Int32"),
+              (e[(e.NamedIconPathControllerLeftDeviceOff_String = 2051)] =
+                "NamedIconPathControllerLeftDeviceOff_String"),
+              (e[(e.NamedIconPathControllerRightDeviceOff_String = 2052)] =
+                "NamedIconPathControllerRightDeviceOff_String"),
+              (e[(e.NamedIconPathTrackingReferenceDeviceOff_String = 2053)] =
+                "NamedIconPathTrackingReferenceDeviceOff_String"),
+              (e[(e.DoNotApplyPrediction_Bool = 2054)] =
+                "DoNotApplyPrediction_Bool"),
+              (e[(e.CameraToHeadTransforms_Matrix34_Array = 2055)] =
+                "CameraToHeadTransforms_Matrix34_Array"),
+              (e[(e.DistortionMeshResolution_Int32 = 2056)] =
+                "DistortionMeshResolution_Int32"),
+              (e[(e.DriverIsDrawingControllers_Bool = 2057)] =
+                "DriverIsDrawingControllers_Bool"),
+              (e[(e.DriverRequestsApplicationPause_Bool = 2058)] =
+                "DriverRequestsApplicationPause_Bool"),
+              (e[(e.DriverRequestsReducedRendering_Bool = 2059)] =
+                "DriverRequestsReducedRendering_Bool"),
+              (e[(e.MinimumIpdStepMeters_Float = 2060)] =
+                "MinimumIpdStepMeters_Float"),
+              (e[(e.AudioBridgeFirmwareVersion_Uint64 = 2061)] =
+                "AudioBridgeFirmwareVersion_Uint64"),
+              (e[(e.ImageBridgeFirmwareVersion_Uint64 = 2062)] =
+                "ImageBridgeFirmwareVersion_Uint64"),
+              (e[(e.ImuToHeadTransform_Matrix34 = 2063)] =
+                "ImuToHeadTransform_Matrix34"),
+              (e[(e.ImuFactoryGyroBias_Vector3 = 2064)] =
+                "ImuFactoryGyroBias_Vector3"),
+              (e[(e.ImuFactoryGyroScale_Vector3 = 2065)] =
+                "ImuFactoryGyroScale_Vector3"),
+              (e[(e.ImuFactoryAccelerometerBias_Vector3 = 2066)] =
+                "ImuFactoryAccelerometerBias_Vector3"),
+              (e[(e.ImuFactoryAccelerometerScale_Vector3 = 2067)] =
+                "ImuFactoryAccelerometerScale_Vector3"),
+              (e[(e.ConfigurationIncludesLighthouse20Features_Bool = 2069)] =
+                "ConfigurationIncludesLighthouse20Features_Bool"),
+              (e[(e.Prop_AdditionalRadioFeatures_Uint64 = 2070)] =
+                "Prop_AdditionalRadioFeatures_Uint64"),
+              (e[(e.Prop_CameraWhiteBalance_Vector4_Array = 2071)] =
+                "Prop_CameraWhiteBalance_Vector4_Array"),
+              (e[(e.Prop_CameraDistortionFunction_Int32_Array = 2072)] =
+                "Prop_CameraDistortionFunction_Int32_Array"),
+              (e[(e.Prop_CameraDistortionCoefficients_Float_Array = 2073)] =
+                "Prop_CameraDistortionCoefficients_Float_Array"),
+              (e[(e.Prop_ExpectedControllerType_String = 2074)] =
+                "Prop_ExpectedControllerType_String"),
+              (e[(e.HmdTrackingStyle_Int32 = 2075)] = "HmdTrackingStyle_Int32"),
+              (e[(e.DriverProvidedChaperoneVisibility_Bool = 2076)] =
+                "DriverProvidedChaperoneVisibility_Bool"),
+              (e[(e.HmdColumnCorrectionSettingPrefix_String = 2077)] =
+                "HmdColumnCorrectionSettingPrefix_String"),
+              (e[(e.CameraSupportsCompatibilityModes_Bool = 2078)] =
+                "CameraSupportsCompatibilityModes_Bool"),
+              (e[(e.SupportsRoomViewDepthProjection_Bool = 2079)] =
+                "SupportsRoomViewDepthProjection_Bool"),
+              (e[(e.DisplayAvailableFrameRates_Float_Array = 2080)] =
+                "DisplayAvailableFrameRates_Float_Array"),
+              (e[(e.DisplaySupportsRuntimeFramerateChange_Bool = 2084)] =
+                "DisplaySupportsRuntimeFramerateChange_Bool"),
+              (e[(e.DisplaySupportsAnalogGain_Bool = 2085)] =
+                "DisplaySupportsAnalogGain_Bool"),
+              (e[(e.DisplayMinAnalogGain_Float = 2086)] =
+                "DisplayMinAnalogGain_Float"),
+              (e[(e.DisplayMaxAnalogGain_Float = 2087)] =
+                "DisplayMaxAnalogGain_Float"),
+              (e[(e.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
+              (e[(e.PeerButtonInfo_String = 2092)] = "PeerButtonInfo_String"),
+              (e[(e.IpdUIRangeMinMeters_Float = 2100)] =
+                "IpdUIRangeMinMeters_Float"),
+              (e[(e.IpdUIRangeMaxMeters_Float = 2101)] =
+                "IpdUIRangeMaxMeters_Float"),
+              (e[(e.Hmd_SupportsHDCP14LegacyCompat_Bool = 2102)] =
+                "Hmd_SupportsHDCP14LegacyCompat_Bool"),
+              (e[(e.Hmd_SupportsMicMonitoring_Bool = 2103)] =
+                "Hmd_SupportsMicMonitoring_Bool"),
+              (e[(e.Hmd_SupportsDisplayPortTrainingMode_Bool = 2104)] =
+                "Hmd_SupportsDisplayPortTrainingMode_Bool"),
+              (e[(e.Hmd_SupportsRoomViewDirect_Bool = 2105)] =
+                "Hmd_SupportsRoomViewDirect_Bool"),
+              (e[(e.Hmd_SupportsAppThrottling_Bool = 2106)] =
+                "Hmd_SupportsAppThrottling_Bool"),
+              (e[(e.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
+                "Hmd_SupportsGpuBusMonitoring_Bool"),
+              (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
+                "DriverRequestedMuraCorrectionMode_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
+                "DriverRequestedMuraFeather_InnerLeft_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerRight_Int32 = 2202)] =
+                "DriverRequestedMuraFeather_InnerRight_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerTop_Int32 = 2203)] =
+                "DriverRequestedMuraFeather_InnerTop_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerBottom_Int32 = 2204)] =
+                "DriverRequestedMuraFeather_InnerBottom_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterLeft_Int32 = 2205)] =
+                "DriverRequestedMuraFeather_OuterLeft_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterRight_Int32 = 2206)] =
+                "DriverRequestedMuraFeather_OuterRight_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterTop_Int32 = 2207)] =
+                "DriverRequestedMuraFeather_OuterTop_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterBottom_Int32 = 2208)] =
+                "DriverRequestedMuraFeather_OuterBottom_Int32"),
+              (e[(e.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
+                "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+              (e[(e.AttachedDeviceId_String = 3e3)] =
+                "AttachedDeviceId_String"),
+              (e[(e.SupportedButtons_Uint64 = 3001)] =
+                "SupportedButtons_Uint64"),
+              (e[(e.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
+              (e[(e.Axis1Type_Int32 = 3003)] = "Axis1Type_Int32"),
+              (e[(e.Axis2Type_Int32 = 3004)] = "Axis2Type_Int32"),
+              (e[(e.Axis3Type_Int32 = 3005)] = "Axis3Type_Int32"),
+              (e[(e.Axis4Type_Int32 = 3006)] = "Axis4Type_Int32"),
+              (e[(e.ControllerRoleHint_Int32 = 3007)] =
+                "ControllerRoleHint_Int32"),
+              (e[(e.FieldOfViewLeftDegrees_Float = 4e3)] =
+                "FieldOfViewLeftDegrees_Float"),
+              (e[(e.FieldOfViewRightDegrees_Float = 4001)] =
+                "FieldOfViewRightDegrees_Float"),
+              (e[(e.FieldOfViewTopDegrees_Float = 4002)] =
+                "FieldOfViewTopDegrees_Float"),
+              (e[(e.FieldOfViewBottomDegrees_Float = 4003)] =
+                "FieldOfViewBottomDegrees_Float"),
+              (e[(e.TrackingRangeMinimumMeters_Float = 4004)] =
+                "TrackingRangeMinimumMeters_Float"),
+              (e[(e.TrackingRangeMaximumMeters_Float = 4005)] =
+                "TrackingRangeMaximumMeters_Float"),
+              (e[(e.ModeLabel_String = 4006)] = "ModeLabel_String"),
+              (e[(e.IconPathName_String = 5e3)] = "IconPathName_String"),
+              (e[(e.NamedIconPathDeviceOff_String = 5001)] =
+                "NamedIconPathDeviceOff_String"),
+              (e[(e.NamedIconPathDeviceSearching_String = 5002)] =
+                "NamedIconPathDeviceSearching_String"),
+              (e[(e.NamedIconPathDeviceSearchingAlert_String = 5003)] =
+                "NamedIconPathDeviceSearchingAlert_String"),
+              (e[(e.NamedIconPathDeviceReady_String = 5004)] =
+                "NamedIconPathDeviceReady_String"),
+              (e[(e.NamedIconPathDeviceReadyAlert_String = 5005)] =
+                "NamedIconPathDeviceReadyAlert_String"),
+              (e[(e.NamedIconPathDeviceNotReady_String = 5006)] =
+                "NamedIconPathDeviceNotReady_String"),
+              (e[(e.NamedIconPathDeviceStandby_String = 5007)] =
+                "NamedIconPathDeviceStandby_String"),
+              (e[(e.NamedIconPathDeviceAlertLow_String = 5008)] =
+                "NamedIconPathDeviceAlertLow_String"),
+              (e[(e.DisplayHiddenArea_Binary_Start = 5100)] =
+                "DisplayHiddenArea_Binary_Start"),
+              (e[(e.DisplayHiddenArea_Binary_End = 5150)] =
+                "DisplayHiddenArea_Binary_End"),
+              (e[(e.ParentContainer = 5151)] = "ParentContainer"),
+              (e[(e.UserConfigPath_String = 6e3)] = "UserConfigPath_String"),
+              (e[(e.InstallPath_String = 6001)] = "InstallPath_String"),
+              (e[(e.HasDisplayComponent_Bool = 6002)] =
+                "HasDisplayComponent_Bool"),
+              (e[(e.HasControllerComponent_Bool = 6003)] =
+                "HasControllerComponent_Bool"),
+              (e[(e.HasCameraComponent_Bool = 6004)] =
+                "HasCameraComponent_Bool"),
+              (e[(e.HasDriverDirectModeComponent_Bool = 6005)] =
+                "HasDriverDirectModeComponent_Bool"),
+              (e[(e.HasVirtualDisplayComponent_Bool = 6006)] =
+                "HasVirtualDisplayComponent_Bool"),
+              (e[(e.HasSpatialAnchorsSupport_Bool = 6007)] =
+                "HasSpatialAnchorsSupport_Bool"),
+              (e[(e.ControllerType_String = 7e3)] = "ControllerType_String"),
+              (e[(e.LegacyInputProfile_String = 7001)] =
+                "LegacyInputProfile_String"),
+              (e[(e.VendorSpecific_Reserved_Start = 1e4)] =
+                "VendorSpecific_Reserved_Start"),
+              (e[(e.VendorSpecific_Reserved_End = 10999)] =
+                "VendorSpecific_Reserved_End"),
+              (e[(e.TrackedDeviceProperty_Max = 1e6)] =
+                "TrackedDeviceProperty_Max");
           })(W || (W = {}));
       },
-      608: (e, t, o) => {
+      386: (e, t, o) => {
         "use strict";
         function r(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
@@ -11390,7 +11713,7 @@ var CLSTAMP = "7983614";
         }
         o.d(t, { U5: () => n });
       },
-      873: (e, t, o) => {
+      454: (e, t, o) => {
         "use strict";
         function r(e, t) {
           return (function (e, t) {
@@ -11400,7 +11723,7 @@ var CLSTAMP = "7983614";
         }
         o.d(t, { Zf: () => r });
       },
-      976: (e, t, o) => {
+      340: (e, t, o) => {
         "use strict";
         function r(e, t, o) {
           return {
@@ -11416,13 +11739,13 @@ var CLSTAMP = "7983614";
         }
         o.d(t, { a: () => r });
       },
-      70: (e, t, o) => {
+      185: (e, t, o) => {
         "use strict";
-        o.d(t, { Ar: () => l, Hf: () => u, pB: () => s, vq: () => g });
+        o.d(t, { Ar: () => l, Hf: () => u, pB: () => a, vq: () => g });
         var r = o(655),
-          n = o(873),
-          i = o(976);
-        class s {
+          n = o(454),
+          i = o(340);
+        class a {
           constructor() {
             this.m_vecCallbacks = [];
           }
@@ -11444,9 +11767,9 @@ var CLSTAMP = "7983614";
             return this.m_vecCallbacks.length;
           }
         }
-        class a {
+        class s {
           constructor(e) {
-            (this.m_callbacks = new s()), (this.m_currentValue = e);
+            (this.m_callbacks = new a()), (this.m_currentValue = e);
           }
           Set(e) {
             (this.m_currentValue = e), this.m_callbacks.Dispatch(e);
@@ -11459,7 +11782,7 @@ var CLSTAMP = "7983614";
           }
         }
         function g(e) {
-          return new a(e);
+          return new s(e);
         }
         class l {
           Schedule(e, t) {
@@ -11501,7 +11824,7 @@ var CLSTAMP = "7983614";
         }
         (0, r.gn)([i.a], u.prototype, "Unregister", null);
       },
-      963: (e, t, o) => {
+      153: (e, t, o) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (o.p = window.VALVE_PUBLIC_PATH)
@@ -11534,7 +11857,7 @@ var CLSTAMP = "7983614";
         function n(e, t, o, r) {
           var n,
             i = arguments.length,
-            s =
+            a =
               i < 3
                 ? t
                 : null === r
@@ -11544,23 +11867,23 @@ var CLSTAMP = "7983614";
             "object" == typeof Reflect &&
             "function" == typeof Reflect.decorate
           )
-            s = Reflect.decorate(e, t, o, r);
+            a = Reflect.decorate(e, t, o, r);
           else
-            for (var a = e.length - 1; a >= 0; a--)
-              (n = e[a]) &&
-                (s = (i < 3 ? n(s) : i > 3 ? n(t, o, s) : n(t, o)) || s);
-          return i > 3 && s && Object.defineProperty(t, o, s), s;
+            for (var s = e.length - 1; s >= 0; s--)
+              (n = e[s]) &&
+                (a = (i < 3 ? n(a) : i > 3 ? n(t, o, a) : n(t, o)) || a);
+          return i > 3 && a && Object.defineProperty(t, o, a), a;
         }
         function i(e, t, o, r) {
           return new (o || (o = Promise))(function (n, i) {
-            function s(e) {
+            function a(e) {
               try {
                 g(r.next(e));
               } catch (e) {
                 i(e);
               }
             }
-            function a(e) {
+            function s(e) {
               try {
                 g(r.throw(e));
               } catch (e) {
@@ -11576,7 +11899,7 @@ var CLSTAMP = "7983614";
                     ? t
                     : new o(function (e) {
                         e(t);
-                      })).then(s, a);
+                      })).then(a, s);
             }
             g((r = r.apply(e, t || [])).next());
           });
@@ -11626,7 +11949,7 @@ var CLSTAMP = "7983614";
       "javascript/legacy_web/" +
       { 380: "desktop", 511: "gamepad" }[e] +
       ".js?contenthash=" +
-      { 380: "5d90d1d4d7c967e3153b", 511: "bbb8b50eeb55a43ff251" }[e]),
+      { 380: "eb02b987918b31dfc6fc", 511: "e462250d9e4314134760" }[e]),
     (__webpack_require__.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
     (__webpack_require__.g = (function () {
@@ -11647,11 +11970,11 @@ var CLSTAMP = "7983614";
         var n, i;
         if (void 0 !== o)
           for (
-            var s = document.getElementsByTagName("script"), a = 0;
-            a < s.length;
-            a++
+            var a = document.getElementsByTagName("script"), s = 0;
+            s < a.length;
+            s++
           ) {
-            var g = s[a];
+            var g = a[s];
             if (
               g.getAttribute("src") == e ||
               g.getAttribute("data-webpack") == dataWebpackPrefix + o
@@ -11726,14 +12049,14 @@ var CLSTAMP = "7983614";
               r++
             ) {
               var n =
-                (s = o[r]).getAttribute("data-href") || s.getAttribute("href");
-              if ("stylesheet" === s.rel && (n === e || n === t)) return s;
+                (a = o[r]).getAttribute("data-href") || a.getAttribute("href");
+              if ("stylesheet" === a.rel && (n === e || n === t)) return a;
             }
             var i = document.getElementsByTagName("style");
             for (r = 0; r < i.length; r++) {
-              var s;
-              if ((n = (s = i[r]).getAttribute("data-href")) === e || n === t)
-                return s;
+              var a;
+              if ((n = (a = i[r]).getAttribute("data-href")) === e || n === t)
+                return a;
             }
           })(r, n)
         )
@@ -11746,14 +12069,14 @@ var CLSTAMP = "7983614";
               (i) => {
                 if (((n.onerror = n.onload = null), "load" === i.type)) o();
                 else {
-                  var s = i && ("load" === i.type ? "missing" : i.type),
-                    a = (i && i.target && i.target.href) || t,
+                  var a = i && ("load" === i.type ? "missing" : i.type),
+                    s = (i && i.target && i.target.href) || t,
                     g = new Error(
-                      "Loading CSS chunk " + e + " failed.\n(" + a + ")"
+                      "Loading CSS chunk " + e + " failed.\n(" + s + ")"
                     );
                   (g.code = "CSS_CHUNK_LOAD_FAILED"),
-                    (g.type = s),
-                    (g.request = a),
+                    (g.type = a),
+                    (g.request = s),
                     n.parentNode.removeChild(n),
                     r(g);
                 }
@@ -11789,7 +12112,7 @@ var CLSTAMP = "7983614";
             var n = new Promise((o, n) => (r = e[t] = [o, n]));
             o.push((r[2] = n));
             var i = __webpack_require__.p + __webpack_require__.u(t),
-              s = new Error();
+              a = new Error();
             __webpack_require__.l(
               i,
               (o) => {
@@ -11799,12 +12122,12 @@ var CLSTAMP = "7983614";
                 ) {
                   var n = o && ("load" === o.type ? "missing" : o.type),
                     i = o && o.target && o.target.src;
-                  (s.message =
+                  (a.message =
                     "Loading chunk " + t + " failed.\n(" + n + ": " + i + ")"),
-                    (s.name = "ChunkLoadError"),
-                    (s.type = n),
-                    (s.request = i),
-                    r[1](s);
+                    (a.name = "ChunkLoadError"),
+                    (a.type = n),
+                    (a.request = i),
+                    r[1](a);
                 }
               },
               "chunk-" + t,
@@ -11815,12 +12138,12 @@ var CLSTAMP = "7983614";
       var t = (t, o) => {
           var r,
             n,
-            [i, s, a] = o,
+            [i, a, s] = o,
             g = 0;
           if (i.some((t) => 0 !== e[t])) {
-            for (r in s)
-              __webpack_require__.o(s, r) && (__webpack_require__.m[r] = s[r]);
-            if (a) a(__webpack_require__);
+            for (r in a)
+              __webpack_require__.o(a, r) && (__webpack_require__.m[r] = a[r]);
+            if (s) s(__webpack_require__);
           }
           for (t && t(o); g < i.length; g++)
             (n = i[g]),
@@ -11834,15 +12157,15 @@ var CLSTAMP = "7983614";
   (() => {
     "use strict";
     var e = __webpack_require__(655),
-      t = (__webpack_require__(963), __webpack_require__(311)),
+      t = (__webpack_require__(153), __webpack_require__(311)),
       o = __webpack_require__.n(t),
-      r = __webpack_require__(972),
-      n = __webpack_require__(526);
+      r = __webpack_require__(228),
+      n = __webpack_require__(634);
     function i(t) {
       return (0, e.mG)(this, void 0, void 0, function* () {
         const { InitializeGamepadNavigation: e } = yield __webpack_require__
           .e(511)
-          .then(__webpack_require__.bind(__webpack_require__, 71));
+          .then(__webpack_require__.bind(__webpack_require__, 183));
         e(t);
       });
     }
@@ -11859,7 +12182,7 @@ var CLSTAMP = "7983614";
                 (0, e.mG)(this, void 0, void 0, function* () {
                   const { InitializeForDesktop: e } = yield __webpack_require__
                     .e(380)
-                    .then(__webpack_require__.bind(__webpack_require__, 929));
+                    .then(__webpack_require__.bind(__webpack_require__, 261));
                   e();
                 });
               })()

@@ -2623,7 +2623,7 @@ html, body { height:100%; }
 
 .movie_upload_ui
 {
-	margin: 5px 5px 0px 20px;
+	margin: 5px 5px 0px 30px;
 }
 
 .movie_upload_ui .drag_and_drop
@@ -2635,17 +2635,22 @@ html, body { height:100%; }
 	text-align: center;
 }
 
-.movie_uploaded_ui
-{
-	margin: 5px 5px 5px 20px;
+.movie_uploaded_ui {
+	padding: 25px 25px 10px 5px;
+	display: flex;
 }
 
 .movie_screenshot
 {
-	width: 178px;
+	margin-top: 5px;
+	width: 190px;
 	height: 100px;
-	float: left;
-    background-size: cover;
+	background-size: cover;
+}
+
+.movie_buttons {
+	margin-top: 10px;
+	justify-content: end;
 }
 
 .movie_screenshot .drag_and_drop
@@ -2664,11 +2669,27 @@ html, body { height:100%; }
 	background: rgba( 25, 25, 25, 0.8 );
 }
 
-.movie_name_label
+.movie_label
 {
-	width: 60px;
-	display: inline-block;
-	margin-top: 20px;
+	margin-right: 10px;
+	color: #ddd;
+	min-width: 100px;
+}
+
+.movie_label span {
+	color: #9e9e9e;
+}
+
+.movie_form_ctn {
+	margin-bottom: 15px;
+}
+
+.movie_flex_row {
+	display: flex;
+}
+
+.movie_category_select {
+	width: 100%;
 }
 
 .movie_name_label_upload
@@ -2679,19 +2700,20 @@ html, body { height:100%; }
 
 .movie_name_input
 {
-	width: 400px;
+	width: 100%;
+	max-width: 600px;
 }
 
 .movie_highlighted_row
 {
-	margin: 8px 0px 0px 60px;
+	margin-right: 20px;
+	display: flex;
 }
 
 .movie_rightofscreenshot
 {
-	float: left;
-	margin-left: 16px;
-	width: 595px;
+	margin: 0 25px;
+	flex-grow: 1;
 }
 
 .movie_more_row
@@ -2712,9 +2734,7 @@ html, body { height:100%; }
 	background-color: #575757;
 }
 
-.movie_group
-{
-	width: 818px;
+.movie_group {
 	margin-bottom: 10px;
 }
 
@@ -2739,7 +2759,7 @@ html, body { height:100%; }
 	width: 818px;
 }
 
-.movie_save
+.movie_delete
 {
 	position: absolute;
 	top: 4px;
@@ -2748,7 +2768,12 @@ html, body { height:100%; }
 
 .movie_expanded
 {
-	padding-top: 8px;
+	width: 30%;
+}
+
+.movie_expanded_content {
+	border-left: 1px solid #fff;
+	padding-left: 20px;
 }
 
 .movie_expanded_row
@@ -2774,7 +2799,7 @@ html, body { height:100%; }
 
 .movie_allowed_countries_text
 {
-	width: 420px;
+	width: 100%;
 }
 
 .movie_more_link
@@ -2835,7 +2860,6 @@ html, body { height:100%; }
 .movie_list_wrapper
 {
 	position: relative;
-	width: 820px;
 }
 
 .movie_error

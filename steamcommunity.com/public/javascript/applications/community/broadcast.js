@@ -45,17 +45,6 @@
         Mobile: "salebanner_Mobile_2w3oX",
       };
     },
-    94082: (i, n, e) => {
-      "use strict";
-      e.d(n, { nf: () => o });
-      var s = e(87656),
-        t = (e(89526), e(70657)),
-        A = (e(63154), e(66715), e(70983));
-      function o(i) {
-        s.OT.BIsInitialized() ||
-          s.OT.Initialize(new t.J(A.De.WEBAPI_BASE_URL, i));
-      }
-    },
     76547: (i, n, e) => {
       "use strict";
       e.d(n, { i: () => N });

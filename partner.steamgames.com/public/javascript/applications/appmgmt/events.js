@@ -35985,6 +35985,13 @@
             (this.m_oPromotionPlan.sale_clan_account = t),
             this.Dispatch());
         }
+        ClearSalePage() {
+          this.m_oPromotionPlan.sale_clan_event_gid &&
+            ((this.m_oPromotionPlan.sale_clan_account = void 0),
+            (this.m_oPromotionPlan.sale_clan_event_gid = void 0),
+            (this.m_oPromotionPlan.sale_page_reviewed = void 0),
+            this.Dispatch());
+        }
         SetSaleEventReviewed(e) {
           Boolean(this.m_oPromotionPlan.sale_page_reviewed) != e &&
             ((this.m_oPromotionPlan.sale_page_reviewed = e
@@ -36314,6 +36321,7 @@
         ),
         (0, h.gn)([P.ak], me.prototype, "SetFeaturedStoreItem", null),
         (0, h.gn)([P.ak], me.prototype, "SetSaleEvent", null),
+        (0, h.gn)([P.ak], me.prototype, "ClearSalePage", null),
         (0, h.gn)([P.ak], me.prototype, "SetSaleEventReviewed", null),
         (0, h.gn)([P.ak], me.prototype, "SetOptInID", null),
         (0, h.gn)([P.ak], me.prototype, "SetOptInReviewed", null),
@@ -49315,11 +49323,12 @@
       var Ls = n(77545);
       function Os(e) {
         const { oEditablePlan: t } = e,
-          n = (0, ws.Mx)(t.GetSaleClanAccountID(), t.GetSaleClanEventGID(), !0);
+          n = (0, ws.Mx)(t.GetSaleClanAccountID(), t.GetSaleClanEventGID(), !0),
+          [a] = (0, N.SZ)(() => [t.BHasAssociatedSaleEvent()]);
         return S.createElement(
           "div",
           { className: Si.LinkCtn },
-          Boolean(t.BHasAssociatedSaleEvent()) &&
+          Boolean(a) &&
             S.createElement(
               "div",
               { className: Si.SalePageLinkCtn },
@@ -49373,6 +49382,12 @@
             S.createElement(
               "div",
               { className: Si.ButtonRow },
+              Boolean(a) &&
+                S.createElement(
+                  U.zx,
+                  { onClick: (e) => t.ClearSalePage() },
+                  "Clear Associated Sale Page"
+                ),
               S.createElement(
                 U.zx,
                 {

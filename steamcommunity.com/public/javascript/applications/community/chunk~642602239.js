@@ -138,7 +138,7 @@
                       );
                     break;
                   }
-              n || super.AppendNode((0, l.h)(i)),
+              n || super.AppendNode((0, l.hF)(i)),
                 (r = e.input.substr(e.index + i.length)),
                 (e = this.m_LinkFilter.exec(r));
             }
@@ -187,63 +187,6 @@
             super.AppendText(r, t);
         }
       }
-    },
-    93373: (e, t, r) => {
-      "use strict";
-      r.d(t, { h: () => c, z: () => m });
-      var i = r(89526),
-        n = r(83799),
-        a = (r(50567), r(12568)),
-        s = r(98197),
-        o = r(70983);
-      function l(e, t) {
-        return (0, n.Ah)(
-          e,
-          (function (e) {
-            var t;
-            return [
-              (
-                null === (t = null == e ? void 0 : e.jsondata) || void 0 === t
-                  ? void 0
-                  : t.read_more_link
-              )
-                ? (0, s.FM)(e.jsondata.read_more_link).toLocaleLowerCase()
-                : void 0,
-            ];
-          })(t)
-        );
-      }
-      function c(e, t, r) {
-        let n = e;
-        return (
-          n.toLowerCase().startsWith("http") || (n = "http://" + n),
-          i.createElement(m, { url: n, event: t }, r || e)
-        );
-      }
-      const m = (e) => {
-        const { url: t, event: r, className: c } = e;
-        let m,
-          d = (0, a.B1)(t);
-        l(d, r) &&
-          (d =
-            (o.De.IN_CLIENT ? "steam://openurl_external/" : "") +
-            o.De.COMMUNITY_BASE_URL +
-            "linkfilter/?url=" +
-            d),
-          (0, n.Ah)(d) && (m = "noopener nofollow");
-        const u =
-          "string" == typeof e.children &&
-          e.children.length > 0 &&
-          t &&
-          !t.startsWith("steam://")
-            ? (0, s.XW)(t)
-            : void 0;
-        return i.createElement(
-          "a",
-          { className: c, href: d, rel: m, id: e.id },
-          i.createElement("span", { "data-tooltip-text": u }, e.children)
-        );
-      };
     },
     10726: (e, t, r) => {
       "use strict";
@@ -549,7 +492,7 @@
       r.d(t, { O: () => g, V: () => h });
       var i = r(33940),
         n = r(89526),
-        a = (r(38800), r(17922)),
+        a = (r(45797), r(17922)),
         s = r(70657),
         o = (r(89252), r(82633), r(33787)),
         l = r(32338),
@@ -767,7 +710,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(89526),
-        o = (r(38800), r(96158), r(47330)),
+        o = (r(45797), r(96158), r(47330)),
         l = r(23213),
         c = r(31621),
         m = r(70983);
@@ -942,7 +885,7 @@
       "use strict";
       r.d(t, { Ax: () => h, jS: () => _, rW: () => f });
       var i = r(33940),
-        n = (r(38800), r(17922)),
+        n = (r(45797), r(17922)),
         a = r(70657),
         s = r(33787),
         o = r(32338),
@@ -1225,7 +1168,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(89526),
-        o = (r(38800), r(96158), r(47330)),
+        o = (r(45797), r(96158), r(47330)),
         l = r(23213),
         c = r(31621),
         m = r(70983);
@@ -1511,7 +1454,7 @@
               disableKeyboard: !0,
             },
             n.createElement(
-              C,
+              b,
               {
                 bHideArrows: g,
                 bAutoAdvance: e.bAutoAdvance && !t,
@@ -1560,7 +1503,7 @@
       function B(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function C(e) {
+      function b(e) {
         const { bHideArrows: t, bAutoAdvance: r, children: a, onSlide: l } = e,
           m = n.useContext(i.ro),
           u = n.useRef(m.state.currentSlide),
@@ -1596,10 +1539,10 @@
             }
           );
         }, [m, h]);
-        const C = !!p && "CarouselSliding" + p;
+        const b = !!p && "CarouselSliding" + p;
         return n.createElement(
           "div",
-          { className: (0, o.Z)(c.sliderBody, "SliderBody", C) },
+          { className: (0, o.Z)(c.sliderBody, "SliderBody", b) },
           !t &&
             n.createElement(
               i.jp,
@@ -1732,15 +1675,15 @@
         m = r(50567),
         d = r(70756),
         u = r(31621),
-        p = (r(38800), r(66729)),
+        p = (r(45797), r(66729)),
         g = r(82569),
         h = r(33920),
         _ = r(55863),
         f = r.n(_),
         y = r(88464),
         B = r(31587),
-        C = r(52868),
-        b = r.n(C),
+        b = r(52868),
+        C = r.n(b),
         S = r(70983),
         v = r(50265),
         w = r(15642),
@@ -1749,7 +1692,7 @@
       let F = class extends n.Component {
         constructor(e) {
           super(e),
-            (this.m_cancelSignal = b().CancelToken.source()),
+            (this.m_cancelSignal = C().CancelToken.source()),
             (this.state = { bLoadedMetadata: !1 }),
             (this.m_sharedFileInfo = {
               sharedfileid: this.props.sharedFileID,
@@ -1859,7 +1802,7 @@
                 : !d.j1.BHasClanAnnouncementGID(this.props.eventGID),
               bFailedLoad: !1,
             }),
-            (this.m_cancelSignal = b().CancelToken.source());
+            (this.m_cancelSignal = C().CancelToken.source());
         }
         componentDidMount() {
           this.HandleLoadEventInfo();
@@ -1932,13 +1875,13 @@
             fnFilterImageURLsForKnownFailures: s,
             fnImageFailureCallback: o,
           } = this.props;
-          if (this.state.bFailedLoad) return (0, N.h)(a);
+          if (this.state.bFailedLoad) return (0, N.hF)(a);
           if (this.state.bLoading) return n.createElement(w.V, null);
           let l =
             void 0 !== r
               ? d.j1.GetClanEventFromAnnouncementGID(r)
               : d.j1.GetClanEventModel(i);
-          if (null == l) return (0, N.h)(a);
+          if (null == l) return (0, N.hF)(a);
           let m = (0, c.jM)(S.De.LANGUAGE),
             u = l.GetImageForSizeAsArrayWithFallback(
               "capsule",
@@ -2010,7 +1953,7 @@
               "https://sketchfab.com/oembed?url=https://sketchfab.com/models/" +
               this.props.modelID;
             try {
-              let t = yield b().get(e);
+              let t = yield C().get(e);
               this.setState({ bLoadedMetaData: !0, data: t.data });
             } catch (e) {
               this.setState({ bError: !0 }),
@@ -2159,7 +2102,7 @@
               classNameSize: f().sizeFull,
               bShowVideoImmediately: !1,
             })
-          : (0, N.h)(e, null == t ? void 0 : t.event);
+          : (0, N.hF)(e, null == t ? void 0 : t.event);
       }
       function oe(e, t) {
         if ((0, S.h4)()) return null;
@@ -2180,7 +2123,7 @@
             });
           }
         }
-        return (0, N.h)(e, null == t ? void 0 : t.event);
+        return (0, N.hF)(e, null == t ? void 0 : t.event);
       }
       function le(e, t) {
         let r = new RegExp(J).exec(e);
@@ -2188,7 +2131,7 @@
           let e = r[1];
           if (e && e.length > 1) return n.createElement(O, { modelID: e });
         }
-        return (0, N.h)(e, null == t ? void 0 : t.event);
+        return (0, N.hF)(e, null == t ? void 0 : t.event);
       }
       function ce(e, t) {
         const r = e.split("?");
@@ -2199,7 +2142,7 @@
         }
         return void 0 !== i
           ? n.createElement(F, { sharedFileID: i })
-          : (0, N.h)(e, null == t ? void 0 : t.event);
+          : (0, N.hF)(e, null == t ? void 0 : t.event);
       }
       function me(e) {
         let t = (0, U.FM)(e).toLocaleLowerCase(),
@@ -2239,7 +2182,7 @@
             }
           }
         }
-        return (0, N.h)(e, null == t ? void 0 : t.event);
+        return (0, N.hF)(e, null == t ? void 0 : t.event);
       }
       function ue(e, t) {
         if (me(e)) {
@@ -2254,7 +2197,7 @@
               );
           }
         }
-        return (0, N.h)(e, null == t ? void 0 : t.event);
+        return (0, N.hF)(e, null == t ? void 0 : t.event);
       }
       function pe(e, t) {
         if (me(e)) {
@@ -2287,35 +2230,35 @@
               });
           }
         }
-        return (0, N.h)(e, null == t ? void 0 : t.event);
+        return (0, N.hF)(e, null == t ? void 0 : t.event);
       }
       function ge(e, t) {
-        return be($, e, t);
+        return Ce($, e, t);
       }
       function he(e, t) {
-        return be(Y, e, t);
+        return Ce(Y, e, t);
       }
       function _e(e, t) {
-        return (0, S.h4)() ? null : Ce(e, n.createElement(I.tLe, null), "@", t);
+        return (0, S.h4)() ? null : be(e, n.createElement(I.tLe, null), "@", t);
       }
       function fe(e, t) {
-        return (0, S.h4)() ? null : Ce(e, n.createElement(I.tLe, null), "#", t);
+        return (0, S.h4)() ? null : be(e, n.createElement(I.tLe, null), "#", t);
       }
       function ye(e, t) {
         return (0, S.h4)()
           ? null
-          : Ce(e, n.createElement(I.Lk$, null), void 0, t);
+          : be(e, n.createElement(I.Lk$, null), void 0, t);
       }
       function Be(e, t) {
-        return Ce(e, n.createElement(I.ui7, null), void 0, t);
+        return be(e, n.createElement(I.ui7, null), void 0, t);
       }
-      function Ce(e, t, r, i) {
+      function be(e, t, r, i) {
         let a;
         const s = e.endsWith("/") ? e.length - 1 : e.length,
           o = e.lastIndexOf("/", s - 1);
         -1 != o && o + 1 < e.length && (a = e.substring(o + 1, s)),
           r && a && (a = r + a);
-        const l = (0, N.h)(e, null == i ? void 0 : i.event, null != a ? a : e);
+        const l = (0, N.hF)(e, null == i ? void 0 : i.event, null != a ? a : e);
         return n.createElement(
           "div",
           { className: G.SocialLink },
@@ -2323,7 +2266,7 @@
           l
         );
       }
-      function be(e, t, r) {
+      function Ce(e, t, r) {
         if (me(t)) {
           let r = new RegExp(e).exec(t);
           if (r && r.length > 2) {
@@ -2356,7 +2299,7 @@
               });
           }
         }
-        return (0, N.h)(t, null == r ? void 0 : r.event);
+        return (0, N.hF)(t, null == r ? void 0 : r.event);
       }
       r(82702);
       var Se = r(45878),
@@ -4585,7 +4528,7 @@
                   this.file_upload_props.additionalProps
                 );
             try {
-              let e = yield b().post(
+              let e = yield C().post(
                 this.m_Callbacks.GetBeginFileUploadURL(),
                 r,
                 { params: { l: S.De.LANGUAGE } }
@@ -4643,7 +4586,7 @@
                 (i.headers[r.name] = r.value);
             }
             try {
-              return yield b().put(r, t, i), this.CommitFileUpload(!0, e.ugcid);
+              return yield C().put(r, t, i), this.CommitFileUpload(!0, e.ugcid);
             } catch (t) {
               throw (
                 (this.LogFileUploadMessage(t.response),
@@ -4690,7 +4633,7 @@
                 this.file_upload_props.additionalProps
               );
             try {
-              let t = yield b().post(
+              let t = yield C().post(
                 this.m_Callbacks.GetCommitFileUploadURL(),
                 n
               );
@@ -4883,8 +4826,8 @@
       };
       var yt = r(91753),
         Bt = r(4083),
-        Ct = (r(87487), r(22840));
-      const bt = n.lazy(() =>
+        bt = (r(87487), r(22840));
+      const Ct = n.lazy(() =>
           Promise.all([r.e(5119), r.e(2449), r.e(2832), r.e(4601)]).then(
             r.bind(r, 75467)
           )
@@ -4910,7 +4853,7 @@
                 const r = () =>
                   (0, i.mG)(void 0, void 0, void 0, function* () {
                     t.current && t.current();
-                    const r = b().CancelToken.source();
+                    const r = C().CancelToken.source();
                     (t.current = r.cancel),
                       (n = yield Bt.D.Get().LoadVODForAppID(e.appid)),
                       r.token.reason || a(n),
@@ -4933,12 +4876,12 @@
                   "div",
                   { className: yt.BroadcastCtn },
                   n.createElement(
-                    Ct.SV,
+                    bt.SV,
                     null,
                     n.createElement(
                       n.Suspense,
                       { fallback: n.createElement("div", null) },
-                      n.createElement(bt, {
+                      n.createElement(Ct, {
                         nAppIDVOD: e.appid,
                         watchLocation: 9,
                         bStartPaused: !0,
@@ -5752,7 +5695,7 @@
       r.d(t, { v: () => m, x: () => c });
       var i = r(25125),
         n = r(89526),
-        a = (r(6960), r(38800), r(50567), r(40590), r(82633), r(22271)),
+        a = (r(6960), r(45797), r(50567), r(40590), r(82633), r(22271)),
         s = r(15642),
         o = r(31587),
         l = r(70983);
