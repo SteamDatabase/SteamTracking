@@ -72,7 +72,7 @@
         ik: () => u,
         pA: () => b,
         rf: () => G,
-        u2: () => w,
+        u2: () => B,
         vc: () => _,
         xQ: () => a,
       });
@@ -1639,7 +1639,7 @@
           return "CPartnerMembershipInvite_GetInvites_Response";
         }
       }
-      var w, B;
+      var B, w;
       !(function (e) {
         (e.GetSinglePartnerAppOptIn = function (e, t) {
           return e.SendMsg("Publishing.GetSinglePartnerAppOptIn#1", t, k, {
@@ -1702,7 +1702,7 @@
               ePrivilege: 1,
             });
           });
-      })(w || (w = {})),
+      })(B || (B = {})),
         (function (e) {
           e.GetInvites = function (e, t) {
             return e.SendMsg("PartnerMembershipInvite.GetInvites#1", t, R, {
@@ -1710,7 +1710,7 @@
               ePrivilege: 11,
             });
           };
-        })(B || (B = {}));
+        })(w || (w = {}));
     },
     93523: (e, t, i) => {
       "use strict";
@@ -5951,14 +5951,14 @@
     73797: (e, t, i) => {
       "use strict";
       i.d(t, {
-        EV: () => w,
+        EV: () => B,
         Fi: () => k,
         ID: () => E,
         LT: () => v,
         Qy: () => R,
         Su: () => S,
         XM: () => y,
-        Xj: () => B,
+        Xj: () => w,
         _J: () => h,
         b2: () => G,
         co: () => D,
@@ -6480,12 +6480,12 @@
       function R(e) {
         return p.Get().GetMaxDiscountPercentage(e);
       }
-      function w(e) {
+      function B(e) {
         return e.some(
           (e) => e.nDiscountPct > p.Get().GetMaxDiscountPercentage(e.packageID)
         );
       }
-      function B(e) {
+      function w(e) {
         return p.Get().GetMaxDiscountPercentageForGroup(e);
       }
     },
@@ -6595,7 +6595,6 @@
       i.d(t, {
         $w: () => O,
         AN: () => V,
-        Dt: () => L,
         FR: () => b,
         HV: () => D,
         HX: () => N,
@@ -6603,6 +6602,7 @@
         OG: () => z,
         Ol: () => G,
         PP: () => E,
+        R2: () => L,
         Rs: () => T,
         Tj: () => f,
         We: () => W,
@@ -6612,14 +6612,14 @@
         dU: () => I,
         df: () => x,
         j_: () => q,
-        ju: () => B,
+        ju: () => w,
         np: () => K,
         on: () => A,
-        ps: () => w,
+        ps: () => B,
         rX: () => P,
-        s7: () => C,
         sN: () => X,
         uT: () => j,
+        xm: () => Q,
         yh: () => F,
       });
       var n = i(33940),
@@ -6879,9 +6879,28 @@
           if (!t || "object" != typeof t) return !1;
           for (let e in t) {
             const i = t[e];
-            if (!i || "string" != typeof i) return !1;
+            if (
+              !i ||
+              "object" != typeof i ||
+              void 0 === i.bRequired ||
+              void 0 === i.strDescription
+            )
+              return !1;
           }
           return !0;
+        }
+        BPriceKeyRequired(e) {
+          var t, i;
+          return (
+            null !==
+              (i =
+                null === (t = this.m_mapPriceKeyDescriptions.get(e)) ||
+                void 0 === t
+                  ? void 0
+                  : t.bRequired) &&
+            void 0 !== i &&
+            i
+          );
         }
         GetPublishedPrice(e, t) {
           var i;
@@ -6961,6 +6980,10 @@
             e.sort(h),
             e
           );
+        }
+        BHasLocalPriceOverride(e, t) {
+          let i = this.m_mapLocalPackagePriceOverrides.get(e);
+          return !!i && i.has(t);
         }
         UpdateOverridesPerPriceKey() {
           this.m_mapOverridesPerPriceKey.clear(),
@@ -7368,10 +7391,10 @@
           );
         }, []);
       }
-      function w(e) {
+      function B(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function B(e) {
+      function w(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
       function C(e) {
@@ -7383,7 +7406,7 @@
         return t;
       }
       function O(e) {
-        const t = w(e),
+        const t = B(e),
           i = [];
         for (const n of g.Get().m_rgKnownPriceKeys) {
           const r = t.prices[n],
@@ -7402,7 +7425,8 @@
         return g.Get().m_rgKnownPriceKeys;
       }
       function L(e) {
-        return g.Get().m_mapPriceKeyDescriptions.get(e);
+        let t = g.Get().m_mapPriceKeyDescriptions.get(e);
+        return t ? t.strDescription : "";
       }
       function F(e) {
         return a.useCallback(() => {
@@ -7487,11 +7511,29 @@
           []
         );
       }
+      function Q(e) {
+        let t = [];
+        const i = g.Get().m_rgKnownPriceKeys;
+        for (let n of e) {
+          if (C(n)) continue;
+          let e = !1;
+          for (const t of i)
+            if (
+              g.Get().BPriceKeyRequired(t) &&
+              !g.Get().BHasLocalPriceOverride(n, t)
+            ) {
+              e = !0;
+              break;
+            }
+          e && t.push(n);
+        }
+        return t;
+      }
     },
     86371: (e, t, i) => {
       "use strict";
       i.d(t, {
-        B6: () => B,
+        B6: () => w,
         E5: () => U,
         E_: () => M,
         Eh: () => S,
@@ -7503,7 +7545,7 @@
         dy: () => N,
         hr: () => R,
         k: () => z,
-        pl: () => w,
+        pl: () => B,
         s$: () => O,
         yn: () => F,
         z$: () => j,
@@ -8021,13 +8063,13 @@
           E.Get();
         }, []);
       }
-      function w() {
+      function B() {
         const [e, t] = c.useState(E.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, p.Qg)(E.Get().GetLocalPackageDiscountOverrideCallbackList(), t), e
         );
       }
-      function B() {
+      function w() {
         return c.useCallback(() => {
           var e;
           return (

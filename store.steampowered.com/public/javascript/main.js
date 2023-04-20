@@ -1234,6 +1234,8 @@ function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions, bUseRespons
 			$Suggestions.find('a.match').each( function () {
 				var el = this;
 				$J(el).on( 'mouseover', function( event ) { SearchSuggestOnMouseOver( event, $J(el) ); } );
+				$J(el).on( 'mouseleave', function( event ) { SearchSuggestOnMouseLeave( event, $J(el) ); } );
+				$J(el).on( 'mousemove', function( event ) { SearchSuggestOnMouseOver( event, $J(el) ); } );
 			} );
 			ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions, bUseResponsivePopupOverlay );
 		} );
@@ -1304,8 +1306,8 @@ function SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions )
 		}
 		else
 		{
-  		if ( !$CurSuggestion.length )
-	  		$CurSuggestion = $Suggestions.children('.hover');
+			if ( !$CurSuggestion.length )
+				$CurSuggestion = $Suggestions.children('.hover');
 
 			if ( event.keyCode == 38 /* Event.KEY_UP */ )
 			{
@@ -1325,6 +1327,7 @@ function SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions )
 			if ( $NewSuggestion.length  )
 			{
 				$CurSuggestion.removeClass( 'focus' );
+				$CurSuggestion.removeClass( 'hover' );
 				$NewSuggestion.addClass('focus');
 			}
 
@@ -1340,6 +1343,12 @@ function SearchSuggestOnMouseOver( event, $Suggestion )
 	$Suggestion.removeClass( 'focus' );
 	$Suggestion.siblings().removeClass( 'hover' );
 	$Suggestion.addClass( 'hover' );
+}
+
+function SearchSuggestOnMouseLeave( event, $Suggestion )
+{
+	$Suggestion.removeClass( 'focus' );
+	$Suggestion.removeClass( 'hover' );
 }
 
 function SearchSuggestClearDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions )

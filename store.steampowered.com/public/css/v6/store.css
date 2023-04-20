@@ -855,15 +855,15 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     font-size: 11px;
 }
 
-.popup_body.search_v2 .match.match_v2:hover,
+.popup_body.search_v2 .match.match_v2.hover,
 .popup_body.search_v2 .match.match_v2.focus {
     background-color: #DCDEDF;
     color: #151515;
 }
 
-/* make sure to target both :hover and .focus to cover keyboard input */
-.popup_body.search_v2 .match.match_v2:hover .match_name,
-.popup_body.search_v2 .match.match_v2:hover .match_subtitle,
+/* make sure to target both .hover and .focus to cover keyboard input */
+.popup_body.search_v2 .match.match_v2.hover .match_name,
+.popup_body.search_v2 .match.match_v2.hover .match_subtitle,
 .popup_body.search_v2 .match.match_v2.focus .match_name,
 .popup_body.search_v2 .match.match_v2.focus .match_subtitle {
     color: #151515;
@@ -930,7 +930,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     background: linear-gradient( 90deg, #1d344029 0%, #16262e30 15%, #2b4d5ec2 85%)
 }
 
-.popup_body.search_v2 .match.match_v2:hover .match_background_image,
+.popup_body.search_v2 .match.match_v2.hover .match_background_image,
 .popup_body.search_v2 .match.match_v2.focus .match_background_image {
     background: transparent;
 }
@@ -941,7 +941,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 }
 
 
-.search_suggest .match:hover,
+.search_suggest .match.hover,
 .search_suggest .match.focus,
 .search_suggest .match:focus-visible
  {
@@ -5127,8 +5127,8 @@ body.v6 .store_nav .popup_block_new .popup_body {
 .curator .popup_menu .popup_menu_item.focus,
 .footer_content .popup_menu .popup_menu_item:hover,
 .footer_content .popup_menu .popup_menu_item.focus,
-.search_area .popup_body .match:hover,
-.search_area .popup_body .match:hover .match_name,
+.search_area .popup_body .match.hover,
+.search_area .popup_body .match.hover .match_name,
 .search_area .popup_body .match.focus,
 .search_area .popup_body .match.focus .match_name {
 	color: #fff;
