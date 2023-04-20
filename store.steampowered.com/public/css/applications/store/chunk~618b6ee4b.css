@@ -1511,6 +1511,21 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .claimitemshared_CheckMark_3HeHP {
   height: 32px;
 }
+.claimitemshared_DialogCtn_ltlR6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.claimitemshared_EquipCtn_2_8bZ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.claimitemshared_EquipCtn_2_8bZ button.DialogButton {
+  padding: 0px 12px;
+}
 .sharewithfriends_Container_8f6EQ {
   background-color: #1c1e26;
   padding: 10px;

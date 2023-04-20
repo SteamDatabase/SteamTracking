@@ -262,6 +262,7 @@ ${COMMUNITY_BASE_URL}profiles/${steamid64}/
 ${COMMUNITY_BASE_URL}profiles/${steamid64}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${steamid}
 ${COMMUNITY_BASE_URL}profiles/${steamid}/
+${COMMUNITY_BASE_URL}profiles/${steamid}/edit/goldenprofile
 ${COMMUNITY_BASE_URL}profiles/${steamid}/friendscommon
 ${COMMUNITY_BASE_URL}profiles/${steamid}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}
