@@ -232,7 +232,10 @@
   height: 0;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(#0c2f42f2, #05141df2);
+  background-image: linear-gradient(
+    rgba(12, 47, 66, 0.9490196078),
+    rgba(5, 20, 29, 0.9490196078)
+  );
   color: #fff;
   z-index: 100;
 }
@@ -2738,7 +2741,7 @@
 }
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 .predictionspage_PredictionsPage_1kPgW {
   width: 100%;
@@ -7454,10 +7457,10 @@
   .matchpage_EdgeMask_3w90D {
   position: absolute;
   background-image: linear-gradient(
-    #0f1417 0%,
+    rgb(15, 20, 23) 0%,
     rgba(15, 20, 23, 0) 30%,
     rgba(15, 20, 23, 0) 70%,
-    #0f1417 100%
+    rgb(15, 20, 23) 100%
   );
   width: 100%;
   height: 200px;
@@ -8436,10 +8439,10 @@
   .livematchpage_EdgeMask_3Mm-4 {
   position: absolute;
   background-image: linear-gradient(
-    #0f1417 0%,
+    rgb(15, 20, 23) 0%,
     rgba(15, 20, 23, 0) 30%,
     rgba(15, 20, 23, 0) 70%,
-    #0f1417 100%
+    rgb(15, 20, 23) 100%
   );
   width: 100%;
   height: 200px;

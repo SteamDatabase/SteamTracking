@@ -9,6 +9,8 @@
         CarouselFade: "teamdetails_CarouselFade_2UcOF",
         StandardButton: "teamdetails_StandardButton_1OiL0",
         ButtonText: "teamdetails_ButtonText_3gcUn",
+        Icon: "teamdetails_Icon_17oKd",
+        Play: "teamdetails_Play_1e79t",
         SteamLogo: "teamdetails_SteamLogo_2Z206",
         ToolTip: "teamdetails_ToolTip_2w_iN",
         TeamDetails: "teamdetails_TeamDetails_w3idB",
@@ -888,25 +890,25 @@
                 console.log("Could not fetch leagues data.");
               }
             }, [t]);
-          const W = a.find((e) => e.team_id == t) || {};
-          let J;
+          const K = a.find((e) => e.team_id == t) || {};
+          let W;
           if (
-            ((_ && D) || (J = o.createElement("div", null, "Loading...")),
+            ((_ && D) || (W = o.createElement("div", null, "Loading...")),
             _ &&
               (0 == a.length || y) &&
-              (J = o.createElement(
+              (W = o.createElement(
                 "div",
                 null,
                 "Error loading registered teams..."
               )),
             D &&
               (0 == Object.keys(f).length || O) &&
-              (J = o.createElement(
+              (W = o.createElement(
                 "div",
                 null,
                 `Error loading single team info for teamId ${t} `
               )),
-            J)
+            W)
           )
             return o.createElement(
               "div",
@@ -918,11 +920,11 @@
                 o.createElement("title", null, "Dota 2 - Team Details")
               ),
               o.createElement(A.Z, null),
-              o.createElement("div", { className: p().ContentFrame }, J),
+              o.createElement("div", { className: p().ContentFrame }, W),
               o.createElement(u.U, null)
             );
-          const K = f.members || [];
-          K.forEach((e) => {
+          const J = f.members || [];
+          J.forEach((e) => {
             (e.kick_link = `${i.Y.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${E}&appid=${i.Y.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
               (e.make_admin_link = e.admin
                 ? ""
@@ -1134,8 +1136,8 @@
                 o.createElement(
                   o.Fragment,
                   null,
-                  !!K.length &&
-                    K.map((e) =>
+                  !!J.length &&
+                    J.map((e) =>
                       N.map((t) =>
                         o.createElement(
                           "div",
@@ -1149,7 +1151,7 @@
                         )
                       )
                     ),
-                  !K.length && o.createElement("div", null, "No team members.")
+                  !J.length && o.createElement("div", null, "No team members.")
                 )
               ),
               o.createElement("br", null),
@@ -1183,8 +1185,8 @@
                         "div",
                         null,
                         e.formatFunction
-                          ? e.formatFunction.call(null, W[e.key])
-                          : JSON.stringify(W[e.key] || "", null, 2).replace(
+                          ? e.formatFunction.call(null, K[e.key])
+                          : JSON.stringify(K[e.key] || "", null, 2).replace(
                               /['"]+/g,
                               ""
                             )

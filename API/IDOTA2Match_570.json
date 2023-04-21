@@ -96,7 +96,7 @@
                     "name": "matches_requested",
                     "type": "string",
                     "optional": true,
-                    "description": "The number of requested matches to return"
+                    "description": "The number of requested matches to return (maximum 100)"
                 }
             ]
         },
