@@ -5665,11 +5665,14 @@
                   c.createElement(
                     "div",
                     { className: T.SelectedFacetValuesList },
-                    a.map((t) =>
+                    a.map((t, a) =>
                       c.createElement(
                         G,
                         Object.assign(
-                          { key: t.facetValue.unique_id, facetValue: t },
+                          {
+                            key: t.facetValue.unique_id + "_" + a,
+                            facetValue: t,
+                          },
                           e
                         )
                       )
@@ -5806,16 +5809,19 @@
         return (0, b.Xx)(b.LZ.GetWithFallback(l, t).trim());
       }
       function O(e, t) {
-        var a;
-        const n = e.name;
-        let i;
-        (null == n ? void 0 : n.length) > 0 &&
-          (null === (a = n[0]) || void 0 === a
+        var a, n;
+        const i = e.name;
+        let l;
+        (null == i ? void 0 : i.length) > 0 &&
+          (null === (a = i[0]) || void 0 === a
             ? void 0
             : a.startsWith("#tagid_")) &&
-          (i = parseInt(n[0].substring(7)));
-        const l = (0, v.wj)(i, (0, u.j_)(t));
-        return i ? l : (0, b.Xx)(b.LZ.GetWithFallback(n, t).trim());
+          (l = parseInt(i[0].substring(7)));
+        const r =
+          null === (n = (0, v.wj)(l, (0, u.j_)(t))) || void 0 === n
+            ? void 0
+            : n.name;
+        return l ? r : (0, b.Xx)(b.LZ.GetWithFallback(i, t).trim());
       }
       const N = (0, o.Pi)((e) => {
           const {

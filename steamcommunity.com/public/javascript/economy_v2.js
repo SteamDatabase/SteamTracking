@@ -3332,6 +3332,9 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 		if ( description.color )
 			elDescription.style.color = '#' + description.color;
 
+		if ( description.class )
+			elDescription.classList.add( description.class );
+
 		// just use a blank space for an empty string
 		if ( strParsedDescription.length == 0 )
 		{

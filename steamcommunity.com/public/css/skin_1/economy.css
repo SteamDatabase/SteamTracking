@@ -300,6 +300,9 @@ a.item_action:hover {
 	font-size: 14px;
 	padding-right: 8px;
 }
+.item_desc_content .item_desc_description .descriptor.accessories_desc {
+	padding-top: 8px;
+}
 
 .item_desc_descriptors {
 	margin-bottom: 16px;

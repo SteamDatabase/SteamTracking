@@ -805,6 +805,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg
+${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/
 ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/${}_${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${clanAccountID}/${}
