@@ -3302,6 +3302,7 @@
         IN_LOGIN_REFRESH: !1,
         USE_LONGEST_LOC_STRING: !1,
       };
+      oe.FOO = !1;
       _.createContext({});
       function ne(e, t) {
         return (function (e, t) {
