@@ -1237,6 +1237,9 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 .throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
   opacity: 1;
 }
+.throbber_NewThrobber_tAKvs img {
+  width: 100%;
+}
 .releasedaterequest_ReleaseDateModal_RKE7g > .DialogContent_InnerWidth {
   max-width: 920px;
 }

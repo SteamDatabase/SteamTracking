@@ -83,7 +83,7 @@
     },
     19310: (e, t, a) => {
       "use strict";
-      a.d(t, { KE: () => z, T4: () => V, _G: () => L, zY: () => H });
+      a.d(t, { KE: () => F, T4: () => H, _G: () => P, zY: () => z });
       var n = a(33940),
         r = a(52868),
         o = a.n(r),
@@ -113,13 +113,14 @@
         N = a(31587),
         w = a(70983),
         T = a(22840),
-        O = a(15642),
+        O = a(8392),
         k = a(50902),
         x = a.n(k),
         M = a(69362),
         R = a(30156),
-        U = a.n(R);
-      const L = (0, l.Pi)((e) => {
+        U = a.n(R),
+        L = a(86701);
+      const P = (0, l.Pi)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: a,
@@ -253,7 +254,7 @@
                   navEntryPreferPosition: u.c4.PREFERRED_CHILD,
                 },
                 _.map((e) =>
-                  i.createElement(V, { key: e.AnnouncementGID, event: e })
+                  i.createElement(H, { key: e.AnnouncementGID, event: e })
                 )
               ),
               Boolean(f) &&
@@ -267,8 +268,8 @@
             )
           );
         }),
-        P = 30;
-      function V(e) {
+        V = 30;
+      function H(e) {
         const {
             event: t,
             imageURLOverride: a,
@@ -312,7 +313,7 @@
           D = t ? t.GetStartTimeAndDateUnixSeconds() : "";
         let T = b;
         return (
-          b && (b.length > P || u.length > P) && (T = void 0),
+          b && (b.length > V || u.length > V) && (T = void 0),
           i.createElement(
             i.Fragment,
             null,
@@ -383,17 +384,18 @@
                 )
               )
             ),
-            Boolean(n && t.appid) && i.createElement(H, { appid: t.appid })
+            Boolean(n && t.appid) && i.createElement(z, { appid: t.appid })
           )
         );
       }
-      function H(e) {
+      function z(e) {
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, h.vs)(t, d.bk),
           r = (0, G.bJ)(),
           o = (0, w.id)();
         if (!n) return null;
-        const l = n.GetBestPurchaseOption();
+        const l = n.GetBestPurchaseOption(),
+          s = (null == l ? void 0 : l.hide_discount_pct_for_compliance) && !1;
         return i.createElement(
           m.s,
           Object.assign(
@@ -425,7 +427,9 @@
                     : ""
                 ),
               },
-              Boolean(null == l ? void 0 : l.discount_pct) &&
+              Boolean((null == l ? void 0 : l.discount_pct) && s) &&
+                i.createElement(L.dCe, null),
+              Boolean((null == l ? void 0 : l.discount_pct) && !s) &&
                 i.createElement(
                   "span",
                   { className: U().StoreSaleDiscountBox },
@@ -440,7 +444,7 @@
             )
         );
       }
-      function z(e) {
+      function F(e) {
         const { event: t, imageURLOverride: a, onClick: n } = e,
           r = (0, c.jM)(w.De.LANGUAGE),
           [o, l, d] = (0, s.SZ)(() =>
@@ -732,7 +736,7 @@
         D = a(65717),
         A = a.n(D),
         N = a(20186),
-        w = a(46723),
+        w = a(46085),
         T = a(24868),
         O = a(13806),
         k = a(81052),
@@ -1362,7 +1366,7 @@
           );
         };
       var oe = a(99462),
-        le = a(15642);
+        le = a(8392);
       const se = (e) => {
           if (!_.L7.is_support) return null;
           const t = (t, a) => {

@@ -536,7 +536,7 @@
     "EventEdit_Warnign_SubTitle": "Subtitle exists in %1$s out of %2$s languages. Consider ensuring every language also has translated subtitle.",
     "EventEdit_Warnign_Artwork": "Language specific Artwork exists in %1$s out of %2$s languages. This could be fine to ignore if the artwork does not need localization. For languages without artwork, it will fallback to the artwork chosen for English.",
     "EventEdit_Warning_VisibilityTimeChange": "The visibility time has been adjusted into the past and thus saving now will make the event visible. Once visible, start time cannot be changed, event cannot be hidden.",
-    "EventEdit_Warning_SpotlightImageWithFlag": "There are spotlight images added to the event but the spotlight flag is disabled. This event will not appear in the spotlight sections in the library.",
+    "EventEdit_Warning_SpotlightImageWithFlag": "There are store spotlight images uploaded for this event but the spotlight flag is disabled. The spotlight flag must be enabled by Valve in order to show the banner on your store page.",
     "EventEdit_Warning_MultipleSingletonSections_Heading": "Multiple sections of this type found",
     "EventEdit_Warning_MultipleSingletonSections": "This sale page contains at least one other section with the same type as this section. This section is intended to only be used once on a single sale page. Are you sure you need multiple sections of this type?",
     "EventEdit_Publishing_Success": "Publishing has successfully completed.",

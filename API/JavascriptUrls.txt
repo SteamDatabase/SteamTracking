@@ -1626,6 +1626,7 @@ ${image_url}_${}
 ${imgURL}${value}
 ${imgUrl}
 ${input_artwork_url}${}
+${internal_asset_url}${}
 ${internal_wiki_url}${}
 ${last_revealed_footer_img_url}${_ ? _ : _}
 ${linkURL}${id}${ownerAppend}/?${linkAppend}

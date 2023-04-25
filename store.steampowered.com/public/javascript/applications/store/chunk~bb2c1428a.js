@@ -10249,9 +10249,9 @@
         _ = r(65717),
         g = r.n(_),
         v = r(3660),
-        f = r(46723),
+        f = r(46085),
         b = r(24868),
-        S = r(15642),
+        S = r(8392),
         y = (r(96158), r(47330)),
         E = r(13806),
         B = r(81052),
@@ -11631,16 +11631,25 @@
         (0, n.gn)([s.aD], u.prototype, "InternalSetupValue", null);
       const p = new u();
       function h(e) {
-        const [t, r] = (0, o.useState)(p.GetClanInfoByClanAccountID(e)),
-          [n, i] = (0, o.useState)(!p.BHasClanInfoLoadedByAccountID(e));
+        const [t, r] = (0, o.useState)(
+            e ? p.GetClanInfoByClanAccountID(e) : void 0
+          ),
+          [n, i] = (0, o.useState)(!!e && !p.BHasClanInfoLoadedByAccountID(e));
         return (
           (0, o.useEffect)(() => {
-            const t = l.K.InitFromClanID(
-              "string" == typeof e ? Number.parseInt(e) : e
-            );
-            p.LoadClanInfoForClanSteamID(t).then((e) => {
-              r(e), i(!1);
-            });
+            if (e)
+              if (p.BHasClanInfoLoadedByAccountID(e))
+                r(p.GetClanInfoByClanAccountID(e)), i(!1);
+              else {
+                i(!0);
+                const t = l.K.InitFromClanID(
+                  "string" == typeof e ? Number.parseInt(e) : e
+                );
+                p.LoadClanInfoForClanSteamID(t).then((e) => {
+                  r(e), i(!1);
+                });
+              }
+            else r(void 0), i(!1);
           }, [e]),
           [n, t]
         );
@@ -16570,14 +16579,14 @@
         x = r(4940),
         P = r(65717),
         N = r.n(P),
-        U = r(46723),
+        U = r(46085),
         z = r(24868),
         j = r(95641),
         H = r.n(j),
         V = r(81052);
       var W = r(14100),
         X = r(83878),
-        Y = r(15642),
+        Y = r(8392),
         q = r(40108),
         Z = r(81419),
         $ = r.n(Z),
@@ -18361,7 +18370,7 @@
       r.d(t, { O: () => _ });
       var n = r(89526),
         i = r(62114),
-        a = r(15642),
+        a = r(8392),
         s = r(66715),
         o = r(47330),
         l = r(13806),
@@ -19882,9 +19891,9 @@
         o = (r(82569), r(36764)),
         l = r(57255),
         c = r(22840),
-        d = r(46723),
+        d = r(46085),
         m = r(31587),
-        u = r(15642),
+        u = r(8392),
         p = r(6549);
       const h = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: r } = e,
@@ -20384,10 +20393,10 @@
       var y = r(80346),
         E = r(57255),
         B = r(23062),
-        I = r(46723),
+        I = r(46085),
         C = r(24868),
         w = r(86701),
-        D = r(15642),
+        D = r(8392),
         T = r(40108),
         k = r(47330),
         A = r(13806),
@@ -20908,7 +20917,7 @@
       "use strict";
       r.d(t, { r: () => o });
       var n = r(89526),
-        i = r(46723),
+        i = r(46085),
         a = r(31587),
         s = r(70983);
       const o = (e) => {
@@ -22546,7 +22555,7 @@
         o = r(74802),
         l = r(31621),
         c = r(13806),
-        d = r(15642);
+        d = r(8392);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),

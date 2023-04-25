@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8002642";
+var CLSTAMP = "8011796";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "8002642";
     n,
     o,
     i = {
-      78579: (e, t, r) => {
+      21590: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "8002642";
         }
         Object.create;
         Object.create;
-        r(65199);
+        r(44569);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
@@ -430,7 +430,7 @@ var CLSTAMP = "8002642";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(M || (M = {}));
         var b, B, N, L, U;
-        r(41522);
+        r(98849);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1554,73 +1554,74 @@ var CLSTAMP = "8002642";
         }
         const re = "presentation_mode";
         const ne = {
-            EUNIVERSE: 0,
-            WEB_UNIVERSE: "",
-            LANGUAGE: "english",
-            SUPPORTED_LANGUAGES: [],
-            COUNTRY: "",
-            AVATAR_BASE_URL: "",
-            MEDIA_CDN_COMMUNITY_URL: "",
-            MEDIA_CDN_URL: "",
-            COMMUNITY_CDN_URL: "",
-            COMMUNITY_CDN_ASSET_URL: "",
-            BASE_URL_SHARED_CDN: "",
-            STORE_CDN_URL: "",
-            PUBLIC_SHARED_URL: "",
-            COMMUNITY_BASE_URL: "",
-            CHAT_BASE_URL: "",
-            STORE_BASE_URL: "",
-            STORE_CHECKOUT_BASE_URL: "",
-            LOGIN_BASE_URL: "",
-            SUPPORT_BASE_URL: "",
-            STORE_ICON_BASE_URL: "",
-            IMG_URL: "",
-            STEAMTV_BASE_URL: "",
-            HELP_BASE_URL: "",
-            PARTNER_BASE_URL: "",
-            STATS_BASE_URL: "",
-            INTERNAL_STATS_BASE_URL: "",
-            BASE_URL_STORE_CDN_ASSETS: "",
-            IN_CLIENT: !1,
-            USE_POPUPS: !1,
-            IN_MOBILE: !1,
-            IN_MOBILE_WEBVIEW: !1,
-            IN_TENFOOT: !1,
-            PLATFORM: "",
-            SNR: "",
-            LAUNCHER_TYPE: 0,
-            EREALM: 0,
-            IN_CHROMEOS: !1,
-            TESLA: !1,
-            LOCAL_HOSTNAME: "",
-            WEBAPI_BASE_URL: "",
-            TOKEN_URL: "",
-            BUILD_TIMESTAMP: 0,
-            PAGE_TIMESTAMP: 0,
-            FROM_WEB: !1,
-            WEBSITE_ID: "Unknown",
-            get SESSIONID() {
-              return (function () {
-                if (!Y()) return J || (J = Q()), J;
-                let e = $("sessionid");
-                return e || (e = Q()), e;
-              })();
-            },
-            FRIENDSUI_BETA: !1,
-            STEAM_TV: !1,
-            DEV_MODE: !1,
-            IN_STEAMUI: !1,
-            IN_GAMEPADUI: !1,
-            IN_STEAMUI_SHARED_CONTEXT: !1,
-            DECK_DISPLAY_MODE: !1,
-            ON_DECK: !1,
-            ON_STEAMOS: !1,
-            IN_GAMESCOPE: !1,
-            IN_LOGIN: !1,
-            IN_LOGIN_REFRESH: !1,
-            USE_LONGEST_LOC_STRING: !1,
+          EUNIVERSE: 0,
+          WEB_UNIVERSE: "",
+          LANGUAGE: "english",
+          SUPPORTED_LANGUAGES: [],
+          COUNTRY: "",
+          AVATAR_BASE_URL: "",
+          MEDIA_CDN_COMMUNITY_URL: "",
+          MEDIA_CDN_URL: "",
+          COMMUNITY_CDN_URL: "",
+          COMMUNITY_CDN_ASSET_URL: "",
+          BASE_URL_SHARED_CDN: "",
+          STORE_CDN_URL: "",
+          PUBLIC_SHARED_URL: "",
+          COMMUNITY_BASE_URL: "",
+          CHAT_BASE_URL: "",
+          STORE_BASE_URL: "",
+          STORE_CHECKOUT_BASE_URL: "",
+          LOGIN_BASE_URL: "",
+          SUPPORT_BASE_URL: "",
+          STORE_ICON_BASE_URL: "",
+          IMG_URL: "",
+          STEAMTV_BASE_URL: "",
+          HELP_BASE_URL: "",
+          PARTNER_BASE_URL: "",
+          STATS_BASE_URL: "",
+          INTERNAL_STATS_BASE_URL: "",
+          BASE_URL_STORE_CDN_ASSETS: "",
+          IN_CLIENT: !1,
+          USE_POPUPS: !1,
+          IN_MOBILE: !1,
+          IN_MOBILE_WEBVIEW: !1,
+          IN_TENFOOT: !1,
+          PLATFORM: "",
+          SNR: "",
+          LAUNCHER_TYPE: 0,
+          EREALM: 0,
+          IN_CHROMEOS: !1,
+          TESLA: !1,
+          LOCAL_HOSTNAME: "",
+          WEBAPI_BASE_URL: "",
+          TOKEN_URL: "",
+          BUILD_TIMESTAMP: 0,
+          PAGE_TIMESTAMP: 0,
+          FROM_WEB: !1,
+          WEBSITE_ID: "Unknown",
+          get SESSIONID() {
+            return (function () {
+              if (!Y()) return J || (J = Q()), J;
+              let e = $("sessionid");
+              return e || (e = Q()), e;
+            })();
           },
-          oe = {
+          FRIENDSUI_BETA: !1,
+          STEAM_TV: !1,
+          DEV_MODE: !1,
+          IN_STEAMUI: !1,
+          IN_GAMEPADUI: !1,
+          IN_STEAMUI_SHARED_CONTEXT: !1,
+          DECK_DISPLAY_MODE: !1,
+          ON_DECK: !1,
+          ON_STEAMOS: !1,
+          IN_GAMESCOPE: !1,
+          IN_LOGIN: !1,
+          IN_LOGIN_REFRESH: !1,
+          USE_LONGEST_LOC_STRING: !1,
+        };
+        ne.FOO = !1;
+        const oe = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -2330,7 +2331,7 @@ var CLSTAMP = "8002642";
           }
         }
         var Ve = r(42238);
-        r(99437);
+        r(82423);
         class ke extends Te {
           BIsExpired() {
             return Pe.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -2698,7 +2699,7 @@ var CLSTAMP = "8002642";
             });
           });
       },
-      53609: (e, t, r) => {
+      68703: (e, t, r) => {
         "use strict";
         r.d(t, {
           Bh: () => a,
@@ -2865,7 +2866,7 @@ var CLSTAMP = "8002642";
               };
         }
       },
-      65199: (e, t, r) => {
+      44569: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -3193,63 +3194,63 @@ var CLSTAMP = "8002642";
       ".js?contenthash=" +
       {
         699: "0e6be9bdafd632532acf",
-        1162: "319150a69af1b4977c94",
-        1313: "fea433f72a26a5a819a9",
+        1162: "3ef7de67e123648ccf71",
+        1313: "54378ea3e6aab194e9ff",
         1471: "c2de77ce2d787377bf24",
         1635: "9e954d378764979ab99a",
         2029: "320f752ee0bf0eca34cc",
         2431: "faf493c0d081b4c4473c",
-        2443: "05633a95cf08cca5b2b7",
-        2537: "b2201d0f3edd3311f55e",
+        2443: "d097906b1b06efda8821",
+        2537: "8c1bb3432b8820a3f5b6",
         2822: "ccac351edad122054af7",
-        2844: "ae944a6aabc6c585daf4",
+        2844: "a1dffc498d00770d18e5",
         2862: "79bc6ca783e3aacd8e43",
         2913: "997700daa9514dd83d9f",
-        3112: "1426a78cb3eb8337739f",
+        3112: "f12b8f1c5d6295f90507",
         3140: "55bf5933caf7dbe82ae3",
         3182: "dcf29bb29c25ec77b614",
-        3252: "42f0de0cef2ffb75b87f",
+        3252: "40775d6a0077f9064eec",
         3471: "28adb9309da5d6af565c",
         3500: "75b4c6abdfb23fbd5675",
-        3557: "ab698f02b70f39edc5e4",
-        4108: "0554a917c47319084d70",
-        4189: "ca869675dd5405bfd164",
+        3557: "d8347c1d06f7ebb96e40",
+        4108: "bd853f96a457e75f298e",
+        4189: "34d9fba57c365a9a20da",
         4264: "5fa72bc23ee91b8b7078",
-        4297: "7301c25eebae6fc3cc2e",
+        4297: "8755d9741776606be149",
         4448: "858136e3ff45e6aa8927",
         4596: "3201306636cfd2376dea",
         4716: "3cfeb29b4c384d042c51",
-        4823: "081b5dcf23f13815a7ea",
-        4964: "7c3fc07b16b4aeef5b23",
+        4823: "cb99f8cb21012b59f4a2",
+        4964: "62b4e0525d9aa3ab1635",
         4989: "3bf15e40cf2705cca758",
-        5438: "ffaff275d33ded9f9ba2",
-        5625: "11cad18fcf334e1d883c",
+        5438: "c468e5b652912a31a968",
+        5625: "c024d9c5138fc65c6349",
         5632: "41f9f0c2b5c7a2e08ba5",
         5802: "7acfbe1ee8536a73b7a9",
-        5849: "a782b7fe1b7fd29f4890",
-        5925: "8cef9ef8fa463f8b4316",
-        5933: "58e57f6fb8063319e36c",
-        5948: "f5825bddf8577ba2a2ae",
-        6007: "406464bd5e30d6a3219a",
-        6492: "98900db7bba4dcc47be3",
-        6542: "1fc029f806e68d26bcfc",
+        5849: "0698c87678f715e8bb4f",
+        5925: "70d0ddd5ffb799bcf653",
+        5933: "461a1f544e0ebd6fed2d",
+        5948: "6ebb66370484c5569b2f",
+        6007: "f1dd012430f3789552d3",
+        6492: "4575d40007f91a4a3568",
+        6542: "f04c9080bae66d2a9f00",
         6727: "899f8cb08b52efa12fc6",
         6986: "0f12cc222d1a18360f9f",
         6992: "833786d371ab4153d7d7",
         7340: "522a435f38adb65478b9",
         7575: "712739ee4724a5e9fed6",
-        7602: "93f1f720d04844884f54",
+        7602: "5031ab708e22b157e1ad",
         7651: "f3f4fffc3aa9a665f055",
         7706: "0114b0976cca2e263f9a",
-        7781: "27fb85cb80fbda34d4b6",
-        7975: "b1eb2fa743f3a6cea3f8",
+        7781: "d721ffe8870da2fc952f",
+        7975: "cbf1601f9fc3ba680dfc",
         8247: "3720d0e4cccdbfe9d0e8",
-        8385: "252e20f94a6d5f160de6",
+        8385: "6bf0fa970c94cf29ce06",
         8518: "c8900b6637a039ab8c80",
         8815: "8c783561f59d582b2e23",
-        9062: "e7583f5723ff333db10f",
+        9062: "aad239875fc29fcb7229",
         9263: "691c305416e1b1a87d66",
-        9753: "b2a71b413daf035609f1",
+        9753: "d51ab201f5d6172d05b6",
         9775: "49f88d52753c15d175ec",
         9818: "a754f1cdd15e517ed383",
       }[e]),
@@ -3386,6 +3387,6 @@ var CLSTAMP = "8002642";
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [3817, 5140, 5968], () => s(78579));
+  var _ = s.O(void 0, [3817, 5140, 5968], () => s(21590));
   _ = s.O(_);
 })();

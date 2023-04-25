@@ -1397,6 +1397,9 @@
 .throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
   opacity: 1;
 }
+.throbber_NewThrobber_tAKvs img {
+  width: 100%;
+}
 .qrlogin_LoginQR_1wtS3 {
   position: relative;
   width: calc(200px - 2.5em);

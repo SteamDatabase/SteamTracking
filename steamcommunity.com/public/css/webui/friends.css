@@ -5437,6 +5437,9 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .throbber_ThrobberDelayAppear_I3aEq.throbber_Visible_2SwSJ {
   opacity: 1;
 }
+.throbber_NewThrobber_1m8iQ img {
+  width: 100%;
+}
 .friendsnooze_SnoozeContainer_1Dsum {
   position: relative;
   overflow: hidden;
@@ -24035,6 +24038,20 @@ input.imageseachinput_SearchInput_z7qI4 {
   margin: 20px 15px 0px 15px;
   font-size: 14px;
 }
+.quickaccesscontrols_QuickAccessNotifications_2qO6x > div {
+  position: relative;
+}
+.quickaccesscontrols_QuickAccessNotifications_2qO6x
+  > div:not(:focus)
+  + div:not(:focus):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  border-bottom: 1px solid #3d4450;
+}
 .quickaccesscontrols_LowBattery_3R8-d {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -24280,6 +24297,20 @@ input.imageseachinput_SearchInput_z7qI4 {
   color: #b8bcbf;
   margin: 20px 15px 0px 15px;
   font-size: 14px;
+}
+.remoteplay_QuickAccessNotifications_3EHGW > div {
+  position: relative;
+}
+.remoteplay_QuickAccessNotifications_3EHGW
+  > div:not(:focus)
+  + div:not(:focus):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  border-bottom: 1px solid #3d4450;
 }
 .remoteplay_LowBattery_2byQS {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -38047,6 +38078,7 @@ body.in_global_drag .title-area {
 .title-area-icon:hover .SVGIcon_Button line,
 .title-area-icon:hover .SVGIcon_Button polyline {
   stroke: #fff;
+  transition: stroke 0.15s ease-out;
 }
 .ModalDialogPopup .maximizeRestoreButton {
   display: none;
@@ -38286,6 +38318,7 @@ body.in_global_drag .title-area {
   align-items: center;
   justify-content: center;
   cursor: default;
+  transition: stroke 0.15s ease-out;
   width: 32px;
   height: 24px;
   margin-top: 7px;
@@ -38306,10 +38339,12 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area-icon:hover {
   background: #3d4450;
   border-radius: 2px;
+  transition: background 0.15s ease-out;
 }
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
   background: #e22a27;
+  transition: background 0.15s ease-out;
 }
 @keyframes ItemFocusAnim-darkerGrey-nocolor {
   from {

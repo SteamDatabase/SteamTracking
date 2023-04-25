@@ -4423,7 +4423,7 @@
         $e = a(22840),
         Qe = a(31319),
         Ke = a(65717),
-        qe = a(15642),
+        qe = a(8392),
         Je = a(13806),
         et = a(74566),
         tt = a.n(et),
@@ -6294,7 +6294,7 @@
         Wa = a(99212),
         Xa = a(88393),
         Oa = a(51751),
-        ja = a(46723);
+        ja = a(46085);
       class Za {
         constructor() {
           this.m_SteamInterface = null;

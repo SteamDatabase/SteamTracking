@@ -396,6 +396,9 @@
 .throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
   opacity: 1;
 }
+.throbber_NewThrobber_tAKvs img {
+  width: 100%;
+}
 .BasicUI .DialogContent_InnerWidth {
   overflow: visible;
 }

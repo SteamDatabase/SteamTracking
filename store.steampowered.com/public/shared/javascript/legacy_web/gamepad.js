@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    91: (e, t, n) => {
+    992: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(399),
-        s = n(337);
+        o = n(621),
+        s = n(84);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    110: (e, t, n) => {
+    238: (e, t, n) => {
       "use strict";
       n.d(t, {
         $G: () => d,
@@ -95,7 +95,7 @@
         x: () => a,
       });
       var i,
-        o = n(455);
+        o = n(405);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -184,10 +184,10 @@
         );
       }
     },
-    337: (e, t, n) => {
+    84: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
-      n(110), n(455);
+      n(238), n(405);
       const i = "GamepadInput";
       var o;
       !(function (e) {
@@ -198,14 +198,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    302: (e, t, n) => {
+    880: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ot });
       var i = n(655),
         o = n(311),
         s = n.n(o),
-        r = n(110),
-        a = n(455);
+        r = n(238),
+        a = n(405);
       const l = { x: "y", y: "x" };
       function c(e, t, ...n) {
         console.assert
@@ -214,8 +214,8 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var u = n(399),
-        h = n(611);
+      var u = n(621),
+        h = n(875);
       class d extends class {
         GetObject(e) {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -610,8 +610,8 @@
           );
         }
       }
-      var N = n(513),
-        R = n(736);
+      var N = n(586),
+        R = n(503);
       function I(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -3007,9 +3007,9 @@
       (0, i.gn)([u.a], we.prototype, "OnDOMFocus", null),
         (0, i.gn)([u.a], we.prototype, "OnDOMBlur", null),
         (0, i.gn)([u.a], we.prototype, "OnNavigationEvent", null);
-      var Fe = n(337),
-        Ne = n(697),
-        Re = n(91);
+      var Fe = n(84),
+        Ne = n(825),
+        Re = n(992);
       class Ie {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -3088,7 +3088,7 @@
       (0, i.gn)([u.a], Ie.prototype, "OnFocusChanged", null),
         (0, i.gn)([u.a], Ie.prototype, "OnMessage", null),
         (0, i.gn)([u.a], Ie.prototype, "PostPageUnloading", null);
-      n(84);
+      n(983);
       function De() {
         return !!window.document;
       }
@@ -3198,6 +3198,7 @@
         IN_LOGIN_REFRESH: !1,
         USE_LONGEST_LOC_STRING: !1,
       };
+      Le.FOO = !1;
       class ye extends a.oH {
         constructor(e) {
           super(),

@@ -401,7 +401,7 @@
       a.d(t, { hF: () => c, sR: () => m, z: () => d });
       var n = a(89526),
         s = a(83799),
-        r = (a(96405), a(12568)),
+        r = (a(65881), a(12568)),
         o = a(98197),
         l = a(70983);
       function i(e, t) {
@@ -468,7 +468,7 @@
         s = a(89526),
         r = (a(45797), a(63154)),
         o = a(77449),
-        l = a(7008),
+        l = a(7021),
         i = a(24868),
         m = a(86701),
         c = a(13806),
@@ -978,9 +978,9 @@
         p = a(31587),
         g = a(47330),
         _ = a(70983),
-        h = a(7008),
+        h = a(7021),
         S = a(24868),
-        v = a(15642),
+        v = a(8392),
         C = a(41037),
         E = a(31041),
         y = a(65717),
@@ -1194,7 +1194,7 @@
         i = a(89526),
         m = a(73961),
         c = a(1981),
-        d = (a(45797), a(96405), a(64831)),
+        d = (a(45797), a(65881), a(64831)),
         u = a(77515),
         p = a(12568),
         g = (a(82702), a(29760)),
@@ -1926,7 +1926,7 @@
       "use strict";
       a.d(t, { r: () => l });
       var n = a(89526),
-        s = a(7008),
+        s = a(7021),
         r = a(31587),
         o = a(70983);
       const l = (e) => {
@@ -1964,7 +1964,7 @@
         l = a(49194),
         i = a(23907),
         m = a(43407),
-        c = (a(96405), a(77515), a(88735)),
+        c = (a(65881), a(77515), a(88735)),
         d = a(12568),
         u = (a(82702), a(29760), a(63154)),
         p = a(55910),
@@ -2205,7 +2205,7 @@
           ),
         });
       }
-      var $ = a(15642),
+      var $ = a(8392),
         q = a(69362),
         ee = a(35266);
       const te = (0, n.Pi)((e) => {
@@ -2697,7 +2697,7 @@
       "use strict";
       a.d(t, { v: () => m });
       var n = a(89526),
-        s = (a(96405), a(82702), a(55910)),
+        s = (a(65881), a(82702), a(55910)),
         r = a(23708),
         o = a(70983),
         l = a(30156),
@@ -2739,7 +2739,7 @@
       "use strict";
       a.d(t, { a: () => c });
       var n = a(89526),
-        s = (a(96405), a(55910)),
+        s = (a(65881), a(55910)),
         r = a(23708),
         o = a(86701),
         l = a(13806),
@@ -2850,11 +2850,11 @@
         C = a(65717),
         E = a.n(C),
         y = a(76478),
-        w = a(7008),
+        w = a(7021),
         A = a(24868),
         b = a(86701),
         f = a(68910),
-        I = a(15642),
+        I = a(8392),
         T = a(47330),
         D = a(13806),
         G = a(31587),
@@ -3093,17 +3093,21 @@
           strBestPurchaseOriginalPriceFormatted:
             s.GetBestPurchaseOriginalPriceFormatted(),
           strBestPurchasePriceFormatted: s.GetBestPurchasePriceFormatted(),
+          bHideDiscountPercentForCompliance:
+            s.GetBestPurchaseOption().hide_discount_pct_for_compliance,
         });
       }
       function H(e) {
         const {
-          bSingleLineMode: t,
-          nDiscountPercentage: a,
-          bIsPrePurchase: n,
-          nBaseDiscountPercentage: s,
-          strBestPurchaseOriginalPriceFormatted: r,
-          strBestPurchasePriceFormatted: l,
-        } = e;
+            bSingleLineMode: t,
+            nDiscountPercentage: a,
+            bIsPrePurchase: n,
+            nBaseDiscountPercentage: s,
+            strBestPurchaseOriginalPriceFormatted: r,
+            strBestPurchasePriceFormatted: l,
+            bHideDiscountPercentForCompliance: i,
+          } = e,
+          m = i && !1;
         return o.createElement(
           "div",
           {
@@ -3125,18 +3129,19 @@
               },
               (0, G.Xx)("#EventDisplay_CallToAction_Prepurchase_Short")
             ),
-          Boolean(s) &&
+          Boolean(s && !m) &&
             o.createElement(
               "span",
               { className: (0, D.Z)(_().BaseDiscount) },
               `-${s}%`
             ),
-          Boolean(a) &&
+          Boolean(a && !m) &&
             o.createElement(
               "div",
               { className: _().StoreSaleDiscountBox },
               `-${a}%`
             ),
+          Boolean(m) && o.createElement(b.dCe, null),
           Boolean(a && r)
             ? o.createElement(
                 "div",
@@ -3195,7 +3200,7 @@
       a.d(t, { K: () => m });
       var n = a(89526),
         s = (a(31587), a(49194)),
-        r = (a(96405), a(12568)),
+        r = (a(65881), a(12568)),
         o = a(68910),
         l = a(98197),
         i = a(70983);
@@ -4569,11 +4574,11 @@
         l = a(22832),
         i = a.n(l),
         m = a(77449),
-        c = a(7008),
+        c = a(7021),
         d = a(24868),
         u = a(15599),
         p = a(86701),
-        g = a(15642),
+        g = a(8392),
         _ = a(31587),
         h = a(31621),
         S = a(5545),
@@ -5188,7 +5193,7 @@
         m = a(77449),
         c = a(69362),
         d = a(3660),
-        u = a(15642),
+        u = a(8392),
         p = a(13806),
         g = a(31587),
         _ = a(81171),

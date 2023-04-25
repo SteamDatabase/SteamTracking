@@ -1938,7 +1938,7 @@
         f = r(87256),
         S = r(65650),
         b = r(72310),
-        C = r(15642),
+        C = r(8392),
         w = r(40029),
         I = r.n(w);
       const E = new f.s("AppRelevance").Debug;
@@ -3068,7 +3068,7 @@
         (0, n.gn)([G.ak], M.prototype, "MoveRight", null),
         (0, n.gn)([G.ak], M.prototype, "OnGamepadButtonDown", null),
         (0, n.gn)([G.ak], M.prototype, "OnGamepadDirection", null);
-      var x = r(46723),
+      var x = r(46085),
         O = r(86701),
         Q = r(30051),
         W = r(68910),

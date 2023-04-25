@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8002642";
+var CLSTAMP = "8011796";
 (() => {
   "use strict";
   function e(e) {
@@ -12,74 +12,75 @@ var CLSTAMP = "8002642";
     return !!window.document;
   }
   const n = {
-      EUNIVERSE: 0,
-      WEB_UNIVERSE: "",
-      LANGUAGE: "english",
-      SUPPORTED_LANGUAGES: [],
-      COUNTRY: "",
-      AVATAR_BASE_URL: "",
-      MEDIA_CDN_COMMUNITY_URL: "",
-      MEDIA_CDN_URL: "",
-      COMMUNITY_CDN_URL: "",
-      COMMUNITY_CDN_ASSET_URL: "",
-      BASE_URL_SHARED_CDN: "",
-      STORE_CDN_URL: "",
-      PUBLIC_SHARED_URL: "",
-      COMMUNITY_BASE_URL: "",
-      CHAT_BASE_URL: "",
-      STORE_BASE_URL: "",
-      STORE_CHECKOUT_BASE_URL: "",
-      LOGIN_BASE_URL: "",
-      SUPPORT_BASE_URL: "",
-      STORE_ICON_BASE_URL: "",
-      IMG_URL: "",
-      STEAMTV_BASE_URL: "",
-      HELP_BASE_URL: "",
-      PARTNER_BASE_URL: "",
-      STATS_BASE_URL: "",
-      INTERNAL_STATS_BASE_URL: "",
-      BASE_URL_STORE_CDN_ASSETS: "",
-      IN_CLIENT: !1,
-      USE_POPUPS: !1,
-      IN_MOBILE: !1,
-      IN_MOBILE_WEBVIEW: !1,
-      IN_TENFOOT: !1,
-      PLATFORM: "",
-      SNR: "",
-      LAUNCHER_TYPE: 0,
-      EREALM: 0,
-      IN_CHROMEOS: !1,
-      TESLA: !1,
-      LOCAL_HOSTNAME: "",
-      WEBAPI_BASE_URL: "",
-      TOKEN_URL: "",
-      BUILD_TIMESTAMP: 0,
-      PAGE_TIMESTAMP: 0,
-      FROM_WEB: !1,
-      WEBSITE_ID: "Unknown",
-      get SESSIONID() {
-        return (function () {
-          if (!t()) return r || (r = l()), r;
-          let n = e("sessionid");
-          n || (n = l());
-          return n;
-        })();
-      },
-      FRIENDSUI_BETA: !1,
-      STEAM_TV: !1,
-      DEV_MODE: !1,
-      IN_STEAMUI: !1,
-      IN_GAMEPADUI: !1,
-      IN_STEAMUI_SHARED_CONTEXT: !1,
-      DECK_DISPLAY_MODE: !1,
-      ON_DECK: !1,
-      ON_STEAMOS: !1,
-      IN_GAMESCOPE: !1,
-      IN_LOGIN: !1,
-      IN_LOGIN_REFRESH: !1,
-      USE_LONGEST_LOC_STRING: !1,
+    EUNIVERSE: 0,
+    WEB_UNIVERSE: "",
+    LANGUAGE: "english",
+    SUPPORTED_LANGUAGES: [],
+    COUNTRY: "",
+    AVATAR_BASE_URL: "",
+    MEDIA_CDN_COMMUNITY_URL: "",
+    MEDIA_CDN_URL: "",
+    COMMUNITY_CDN_URL: "",
+    COMMUNITY_CDN_ASSET_URL: "",
+    BASE_URL_SHARED_CDN: "",
+    STORE_CDN_URL: "",
+    PUBLIC_SHARED_URL: "",
+    COMMUNITY_BASE_URL: "",
+    CHAT_BASE_URL: "",
+    STORE_BASE_URL: "",
+    STORE_CHECKOUT_BASE_URL: "",
+    LOGIN_BASE_URL: "",
+    SUPPORT_BASE_URL: "",
+    STORE_ICON_BASE_URL: "",
+    IMG_URL: "",
+    STEAMTV_BASE_URL: "",
+    HELP_BASE_URL: "",
+    PARTNER_BASE_URL: "",
+    STATS_BASE_URL: "",
+    INTERNAL_STATS_BASE_URL: "",
+    BASE_URL_STORE_CDN_ASSETS: "",
+    IN_CLIENT: !1,
+    USE_POPUPS: !1,
+    IN_MOBILE: !1,
+    IN_MOBILE_WEBVIEW: !1,
+    IN_TENFOOT: !1,
+    PLATFORM: "",
+    SNR: "",
+    LAUNCHER_TYPE: 0,
+    EREALM: 0,
+    IN_CHROMEOS: !1,
+    TESLA: !1,
+    LOCAL_HOSTNAME: "",
+    WEBAPI_BASE_URL: "",
+    TOKEN_URL: "",
+    BUILD_TIMESTAMP: 0,
+    PAGE_TIMESTAMP: 0,
+    FROM_WEB: !1,
+    WEBSITE_ID: "Unknown",
+    get SESSIONID() {
+      return (function () {
+        if (!t()) return r || (r = l()), r;
+        let n = e("sessionid");
+        n || (n = l());
+        return n;
+      })();
     },
-    o = {
+    FRIENDSUI_BETA: !1,
+    STEAM_TV: !1,
+    DEV_MODE: !1,
+    IN_STEAMUI: !1,
+    IN_GAMEPADUI: !1,
+    IN_STEAMUI_SHARED_CONTEXT: !1,
+    DECK_DISPLAY_MODE: !1,
+    ON_DECK: !1,
+    ON_STEAMOS: !1,
+    IN_GAMESCOPE: !1,
+    IN_LOGIN: !1,
+    IN_LOGIN_REFRESH: !1,
+    USE_LONGEST_LOC_STRING: !1,
+  };
+  n.FOO = !1;
+  const o = {
       logged_in: !1,
       steamid: "",
       accountid: 0,

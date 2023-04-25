@@ -4,51 +4,6 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4935],
   {
-    2508: (e) => {
-      e.exports = {
-        LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
-        Static: "throbber_Static_kwzRJ",
-        none: "throbber_none_2iT5l",
-        bottomCircle: "throbber_bottomCircle_3-sjx",
-        noString: "throbber_noString_M4pF_",
-        Throbber: "throbber_Throbber_7MdwT",
-        throbber_small: "throbber_throbber_small_29-XT",
-        throbber_medium: "throbber_throbber_medium_1yqSo",
-        throbber_large: "throbber_throbber_large_1u2tL",
-        throbber_center_wrapper: "throbber_throbber_center_wrapper_Yi4EM",
-        ThrobberText: "throbber_ThrobberText_1Zlvf",
-        blur: "throbber_blur_3ebLc",
-        ThrobberRoundLoop: "throbber_ThrobberRoundLoop_3SEk8",
-        roundOuterOutline: "throbber_roundOuterOutline_3M8Ar",
-        roundOuter: "throbber_roundOuter_3H7At",
-        roundFill: "throbber_roundFill_2FWWt",
-        ThrobberFillLoop: "throbber_ThrobberFillLoop_1-rlb",
-        topCircle: "throbber_topCircle_3znUF",
-        circlePulse: "throbber_circlePulse_1oQUO",
-        ThrobberTopCircleLoop: "throbber_ThrobberTopCircleLoop_3oqZE",
-        ThrobberBottomCircleLoop: "throbber_ThrobberBottomCircleLoop_3veQr",
-        roundThrobber15: "throbber_roundThrobber15_1gQte",
-        roundThrobber14: "throbber_roundThrobber14_3DXeR",
-        roundThrobber13: "throbber_roundThrobber13_5VEyI",
-        roundThrobber12: "throbber_roundThrobber12_wOdFm",
-        roundThrobber11: "throbber_roundThrobber11_3Jmyz",
-        roundThrobber10: "throbber_roundThrobber10_3QwXn",
-        roundThrobber09: "throbber_roundThrobber09_2Yhvq",
-        roundThrobber08: "throbber_roundThrobber08_3HcIU",
-        roundThrobber07: "throbber_roundThrobber07__2fn3",
-        roundThrobber06: "throbber_roundThrobber06_2gCCI",
-        roundThrobber05: "throbber_roundThrobber05_1SrtW",
-        roundThrobber04: "throbber_roundThrobber04_2P5xs",
-        roundThrobber03: "throbber_roundThrobber03_3zYDa",
-        roundThrobber02: "throbber_roundThrobber02_2_KYJ",
-        roundThrobber01: "throbber_roundThrobber01_3N41H",
-        ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1wAwc",
-        throbber_xlarge: "throbber_throbber_xlarge_2jzZM",
-        throbber_xxlarge: "throbber_throbber_xxlarge_1DFOT",
-        ThrobberDelayAppear: "throbber_ThrobberDelayAppear_34XSs",
-        Visible: "throbber_Visible_1ziaT",
-      };
-    },
     45043: (e) => {
       e.exports = {
         SDRConnectionsAppCtn: "connections_SDRConnectionsAppCtn_3Vqm_",
@@ -99,311 +54,19 @@
         ClientIPInfo: "connections_ClientIPInfo_1IW5o",
       };
     },
-    15642: (e, t, r) => {
+    96158: (e, t, n) => {
       "use strict";
-      r.d(t, { V: () => l });
-      var n = r(89526),
-        c = r(13806),
-        o = r(2508),
-        s = r.n(o);
-      const l = n.memo(function (e) {
-        const {
-          className: t,
-          size: r,
-          string: o,
-          position: l,
-          static: m,
-          msDelayAppear: d,
-        } = e;
-        let u = [s().LoadingWrapper, "SteamLogoThrobber", a(r)];
-        const [b, _] = n.useState(!d);
-        return (
-          (0, n.useEffect)(() => {
-            if (b) return;
-            const e = setTimeout(() => _(!0), d);
-            return () => clearTimeout(e);
-          }, [d, b]),
-          void 0 === o && u.push(s().noString),
-          t && u.push(t),
-          m && u.push(s().Static),
-          n.createElement(
-            "div",
-            {
-              className: (0, c.Z)(
-                "center" == l && s().throbber_center_wrapper,
-                d && s().ThrobberDelayAppear,
-                b && s().Visible
-              ),
-            },
-            b &&
-              n.createElement(
-                "div",
-                { className: u.join(" ") },
-                n.createElement(
-                  "div",
-                  { className: s().Throbber },
-                  n.createElement(i, { className: s().base }),
-                  n.createElement(i, { className: s().blur })
-                )
-              ),
-            Boolean(o) &&
-              n.createElement("div", { className: s().ThrobberText }, o)
-          )
-        );
-      });
-      function a(e) {
-        switch (e) {
-          case "small":
-            return s().throbber_small;
-          case "medium":
-            return s().throbber_medium;
-          case "xlarge":
-            return s().throbber_xlarge;
-          case "xxlarge":
-            return s().throbber_xxlarge;
-          default:
-            return s().throbber_large;
-        }
-      }
-      function i(e) {
-        let t = "SVGIcon_Button SVGIcon_Throbber ";
-        return (
-          e.className && (t += e.className),
-          n.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: t,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            n.createElement(
-              "g",
-              { className: s().partCircle },
-              n.createElement("path", {
-                className: s().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
-              }),
-              n.createElement("path", {
-                className: s().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M201.432,101.166",
-              }),
-              n.createElement("path", {
-                className: s().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
-              })
-            ),
-            n.createElement(
-              "g",
-              { className: s().mainOutline },
-              n.createElement("path", {
-                className: s().roundFill,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundOuterOutline,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber01,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber02,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber03,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber04,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber05,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber06,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber07,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber08,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber09,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber10,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber11,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber12,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber13,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber14,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              n.createElement("path", {
-                className: s().roundThrobber15,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              })
-            ),
-            n.createElement(
-              "g",
-              { className: s().bottomCircle },
-              n.createElement("path", {
-                fill: "#ffffff",
-                d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
-              })
-            ),
-            n.createElement(
-              "g",
-              { className: s().topCircle },
-              n.createElement("circle", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                cx: "161.731",
-                cy: "101.274",
-                r: "23.019",
-              })
-            )
-          )
-        );
-      }
+      n(6960);
     },
-    96158: (e, t, r) => {
+    47330: (e, t, n) => {
       "use strict";
-      r(6960);
-    },
-    47330: (e, t, r) => {
-      "use strict";
-      r.d(t, { l: () => s });
-      r(6960);
-      var n = r(52868),
-        c = r.n(n),
-        o = r(17922);
-      function s(e) {
-        if (c().isCancel(e))
+      n.d(t, { l: () => l });
+      n(6960);
+      var s = n(52868),
+        a = n.n(s),
+        r = n(17922);
+      function l(e) {
+        if (a().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -446,7 +109,7 @@
               console.error(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof o.gA)
+            if ("object" == typeof e && e instanceof r.gA)
               return {
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
@@ -462,117 +125,117 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    94154: (e, t, r) => {
+    94154: (e, t, n) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => L });
-      var n = r(33940),
-        c = r(52868),
-        o = r.n(c),
-        s = r(89526),
-        l = r(13806),
-        a = (r(6960), r(45797), r(59934)),
-        i = r(77449),
-        m = r(22840),
-        d = (r(96158), r(31587), r(47330)),
-        u = r(70983),
-        b = r(45043),
-        _ = r(15642),
-        p = r(5055),
-        f = r(45878);
-      r(19320);
+      n.r(t), n.d(t, { default: () => F });
+      var s = n(33940),
+        a = n(52868),
+        r = n.n(a),
+        l = n(89526),
+        c = n(13806),
+        o = (n(6960), n(45797), n(59934)),
+        i = n(77449),
+        m = n(22840),
+        d = (n(96158), n(31587), n(47330)),
+        u = n(70983),
+        p = n(45043),
+        _ = n(8392),
+        E = n(5055),
+        f = n(45878);
+      n(19320);
       f.Message;
-      r(8453);
-      function h(e) {
-        return s.createElement(
+      n(8453);
+      function C(e) {
+        return l.createElement(
           "span",
-          { className: (0, l.Z)(b.GenericLabeledItem, e.className) },
-          s.createElement(
+          { className: (0, c.Z)(p.GenericLabeledItem, e.className) },
+          l.createElement(
             "span",
-            { className: b.CxnGenericDataLabel },
+            { className: p.CxnGenericDataLabel },
             e.label
           ),
-          s.createElement("span", { className: b.CxnGenericData }, e.children)
+          l.createElement("span", { className: p.CxnGenericData }, e.children)
         );
       }
-      function E(e) {
+      function g(e) {
         const t = e.host,
-          r = t.type + ":" + t.id;
-        let n = "peer" == e.host_role ? "Peer" : "Client",
-          c = null;
+          n = t.type + ":" + t.id;
+        let s = "peer" == e.host_role ? "Peer" : "Client",
+          a = null;
         if (t.data_center)
-          (n = "Gameserver"),
-            (c = s.createElement(
-              s.Fragment,
+          (s = "Gameserver"),
+            (a = l.createElement(
+              l.Fragment,
               null,
-              s.createElement("span", { className: b.host_id }, r),
+              l.createElement("span", { className: p.host_id }, n),
               " in ",
-              s.createElement(
+              l.createElement(
                 "span",
-                { className: b.GameServerDataCenter },
+                { className: p.GameServerDataCenter },
                 t.data_center
               )
             ));
         else if (t.steam_persona) {
           const e = u.De.COMMUNITY_BASE_URL + "/profiles/" + t.id;
-          c = s.createElement(
-            s.Fragment,
+          a = l.createElement(
+            l.Fragment,
             null,
-            s.createElement(
+            l.createElement(
               "span",
-              { className: b.host_id },
-              s.createElement("a", { href: e }, t.steam_persona)
+              { className: p.host_id },
+              l.createElement("a", { href: e }, t.steam_persona)
             ),
             " (",
-            s.createElement("span", { className: b.host_id }, r),
+            l.createElement("span", { className: p.host_id }, n),
             ")"
           );
         } else
-          c = s.createElement(
-            s.Fragment,
+          a = l.createElement(
+            l.Fragment,
             null,
-            s.createElement("span", { className: b.host_id }, r)
+            l.createElement("span", { className: p.host_id }, n)
           );
-        return s.createElement(
+        return l.createElement(
           "div",
           {
-            className: (0, l.Z)(
-              b.ConnectionClientInfo,
-              t.data_center && b.HostIsGameserver
+            className: (0, c.Z)(
+              p.ConnectionClientInfo,
+              t.data_center && p.HostIsGameserver
             ),
           },
-          s.createElement(
+          l.createElement(
             "div",
-            { className: b.HostIDAndConnectionCtr },
-            s.createElement(h, { className: b.HostIDInfo, label: n }, c),
+            { className: p.HostIDAndConnectionCtr },
+            l.createElement(C, { className: p.HostIDInfo, label: s }, a),
             null != t.connection_id &&
-              s.createElement(
-                h,
-                { className: b.HostConnectionID, label: "ConnectionID" },
+              l.createElement(
+                C,
+                { className: p.HostConnectionID, label: "ConnectionID" },
                 t.connection_id
               )
           ),
-          s.createElement(
+          l.createElement(
             "div",
-            { className: b.ClientIPInfo },
+            { className: p.ClientIPInfo },
             t.addr &&
-              s.createElement(h, { className: "addr", label: "IP" }, t.addr),
+              l.createElement(C, { className: "addr", label: "IP" }, t.addr),
             t.city_name &&
-              s.createElement(
-                h,
+              l.createElement(
+                C,
                 { className: "city_name", label: "City" },
                 t.city_name
               ),
             t.country_code &&
-              s.createElement(
-                h,
+              l.createElement(
+                C,
                 { className: "country_code", label: "Country" },
                 t.country_code
               ),
-            t.as && s.createElement(h, { className: "as", label: "AS" }, t.as)
+            t.as && l.createElement(C, { className: "as", label: "AS" }, t.as)
           )
         );
       }
-      function g(e, t) {
+      function v(e, t) {
         return (
           null == t && (t = 0),
           e.toLocaleString(void 0, {
@@ -581,181 +244,181 @@
           })
         );
       }
-      function C(e) {
+      function h(e) {
         let t = 1e30,
-          r = -1e30;
+          n = -1e30;
         if (e && e.ping_pctile)
-          for (const n in e.ping_pctile) {
-            const c = parseFloat(n);
-            if (c >= 5 && c <= 95) {
-              const c = e.ping_pctile[n];
-              c < t && (t = c), c > r && (r = c);
+          for (const s in e.ping_pctile) {
+            const a = parseFloat(s);
+            if (a >= 5 && a <= 95) {
+              const a = e.ping_pctile[s];
+              a < t && (t = a), a > n && (n = a);
             }
           }
-        return [t, r];
+        return [t, n];
       }
-      function k(e) {
+      function y(e) {
         let t = 1e30;
         if (e && e.quality_pctile)
-          for (const r in e.quality_pctile) {
-            const n = parseFloat(r);
-            if (n >= 5 && n <= 95) {
-              const n = e.quality_pctile[r];
-              n < t && (t = n);
+          for (const n in e.quality_pctile) {
+            const s = parseFloat(n);
+            if (s >= 5 && s <= 95) {
+              const s = e.quality_pctile[n];
+              s < t && (t = s);
             }
           }
         return t;
       }
-      function v(e, t, r) {
-        const n = r > 0 ? t / r : 0,
-          c = (100 * n).toFixed(1) + "%";
-        return s.createElement(
+      function N(e, t, n) {
+        const s = n > 0 ? t / n : 0,
+          a = (100 * s).toFixed(1) + "%";
+        return l.createElement(
           "tr",
           { key: e },
-          s.createElement("th", { className: b.Label }, e),
-          s.createElement("td", { className: b.Pct }, c),
-          s.createElement(
+          l.createElement("th", { className: p.Label }, e),
+          l.createElement("td", { className: p.Pct }, a),
+          l.createElement(
             "td",
             null,
-            s.createElement("span", {
-              className: b.Bar,
-              style: { width: 90 * n + 1 + "px" },
+            l.createElement("span", {
+              className: p.Bar,
+              style: { width: 90 * s + 1 + "px" },
             }),
-            s.createElement("span", { className: b.Num }, g(t))
+            l.createElement("span", { className: p.Num }, v(t))
           )
         );
       }
-      function N(e, t) {
+      function S(e, t) {
         if (!(t > 0)) return null;
-        let r = [];
-        for (let n = 0; n < e.length; ++n) r.push(v(e[n][0], e[n][1], t));
-        return s.createElement(
+        let n = [];
+        for (let s = 0; s < e.length; ++s) n.push(N(e[s][0], e[s][1], t));
+        return l.createElement(
           "table",
-          { className: b.Histogram },
-          s.createElement("tbody", null, r)
+          { className: p.Histogram },
+          l.createElement("tbody", null, n)
         );
       }
-      function S(e) {
+      function b(e) {
         let t = [];
-        for (let r = 0; r < e.length; ++r) {
-          const [n, c] = e[r];
-          null != c &&
+        for (let n = 0; n < e.length; ++n) {
+          const [s, a] = e[n];
+          null != a &&
             t.push(
-              s.createElement(
+              l.createElement(
                 "tr",
-                { key: n },
-                s.createElement("th", { className: b.NTile }, n, "% <="),
-                s.createElement("td", { className: b.Value }, c)
+                { key: s },
+                l.createElement("th", { className: p.NTile }, s, "% <="),
+                l.createElement("td", { className: p.Value }, a)
               )
             );
         }
         return t.length
-          ? s.createElement(
+          ? l.createElement(
               "table",
-              { className: b.Distribution },
-              s.createElement("tbody", null, t)
+              { className: p.Distribution },
+              l.createElement("tbody", null, t)
             )
           : null;
       }
-      function T(e) {
+      function k(e) {
         return e >= 0 ? e.toFixed(0) + "ms" : "???";
       }
-      function y(e) {
+      function P(e) {
         const t = e.flow;
-        return s.createElement(
+        return l.createElement(
           "div",
-          { className: b.FlowQualityStats },
-          s.createElement("div", { className: b.FlowQualityTitle }, e.title),
+          { className: p.FlowQualityStats },
+          l.createElement("div", { className: p.FlowQualityTitle }, e.title),
           t
-            ? s.createElement(
-                s.Fragment,
+            ? l.createElement(
+                l.Fragment,
                 null,
                 (function (e) {
                   const t = function (e) {
-                      const t = e >= 0 ? g(e) : "?";
-                      return s.createElement(
+                      const t = e >= 0 ? v(e) : "?";
+                      return l.createElement(
                         "td",
-                        { className: b.NumPkts },
+                        { className: p.NumPkts },
                         t + " pkts"
                       );
                     },
-                    r = function (e) {
-                      const t = e >= 0 ? g(e) : "?";
-                      return s.createElement(
+                    n = function (e) {
+                      const t = e >= 0 ? v(e) : "?";
+                      return l.createElement(
                         "td",
-                        { className: b.KB },
+                        { className: p.KB },
                         t + "kb"
                       );
                     },
-                    n = function (e, t) {
-                      let r = "";
+                    s = function (e, t) {
+                      let n = "";
                       return (
                         t > 0 &&
                           e >= 0 &&
-                          (r = ((e / t) * 100).toFixed(3) + "%"),
-                        s.createElement("td", { className: b.Pct }, r)
+                          (n = ((e / t) * 100).toFixed(3) + "%"),
+                        l.createElement("td", { className: p.Pct }, n)
                       );
                     };
-                  return s.createElement(
+                  return l.createElement(
                     "div",
                     {
-                      className: (0, l.Z)(
-                        b.FlowPacketCounts,
-                        b.FlowStatsSection
+                      className: (0, c.Z)(
+                        p.FlowPacketCounts,
+                        p.FlowStatsSection
                       ),
                     },
-                    s.createElement(
+                    l.createElement(
                       "div",
-                      { className: b.FlowSectionTitle },
+                      { className: p.FlowSectionTitle },
                       "Summary counters"
                     ),
-                    s.createElement(
+                    l.createElement(
                       "table",
                       null,
-                      s.createElement(
+                      l.createElement(
                         "tbody",
                         null,
-                        s.createElement(
+                        l.createElement(
                           "tr",
                           null,
-                          s.createElement("th", null, "Sent"),
+                          l.createElement("th", null, "Sent"),
                           t(e.sent_pkt),
-                          r(e.sent_kb),
-                          s.createElement("td", { className: b.Spacer }),
-                          s.createElement("th", null, "Dropped"),
+                          n(e.sent_kb),
+                          l.createElement("td", { className: p.Spacer }),
+                          l.createElement("th", null, "Dropped"),
                           t(e.drop),
-                          n(e.drop, e.recv_seq)
+                          s(e.drop, e.recv_seq)
                         ),
-                        s.createElement(
+                        l.createElement(
                           "tr",
                           null,
-                          s.createElement("th", null, "Recv"),
+                          l.createElement("th", null, "Recv"),
                           t(e.recv_pkt),
-                          r(e.recv_kb),
-                          s.createElement("td", { className: b.Spacer }),
-                          s.createElement("th", null, "Duplicate"),
+                          n(e.recv_kb),
+                          l.createElement("td", { className: p.Spacer }),
+                          l.createElement("th", null, "Duplicate"),
                           t(e.dup),
-                          n(e.dup, e.recv_seq)
+                          s(e.dup, e.recv_seq)
                         ),
-                        s.createElement(
+                        l.createElement(
                           "tr",
                           null,
-                          s.createElement("th", null, "Recv w/ seq"),
+                          l.createElement("th", null, "Recv w/ seq"),
                           t(e.recv_seq),
-                          s.createElement("td", null),
-                          s.createElement("td", { className: b.Spacer }),
-                          s.createElement("th", null, "Out of order"),
+                          l.createElement("td", null),
+                          l.createElement("td", { className: p.Spacer }),
+                          l.createElement("th", null, "Out of order"),
                           t(e.ooo),
-                          n(e.ooo, e.recv_seq)
+                          s(e.ooo, e.recv_seq)
                         ),
-                        s.createElement(
+                        l.createElement(
                           "tr",
                           null,
-                          s.createElement("th", null, "Summary"),
-                          s.createElement(
+                          l.createElement("th", null, "Summary"),
+                          l.createElement(
                             "td",
-                            { colSpan: 2, className: b.FlowQualityClass },
-                            s.createElement(
+                            { colSpan: 2, className: p.FlowQualityClass },
+                            l.createElement(
                               "span",
                               {
                                 className:
@@ -764,10 +427,10 @@
                               e.quality_class
                             )
                           ),
-                          s.createElement("td", { className: b.Spacer }),
-                          s.createElement("th", null, "Seq num lurch"),
+                          l.createElement("td", { className: p.Spacer }),
+                          l.createElement("th", null, "Seq num lurch"),
                           t(e.seqlurch),
-                          n(e.seqlurch, e.recv_seq)
+                          s(e.seqlurch, e.recv_seq)
                         )
                       )
                     )
@@ -775,104 +438,104 @@
                 })(t),
                 (function (e) {
                   let t = null,
-                    r = null,
-                    n = 0;
-                  const c = e.quality_hist;
-                  if (c) {
+                    n = null,
+                    s = 0;
+                  const a = e.quality_hist;
+                  if (a) {
                     const e = [
-                      ["Perfect", c[100] || 0],
-                      [">99%", c[99] || 0],
-                      ["97-99%", c[97] || 0],
-                      ["95-97%", c[95] || 0],
-                      ["90-95%", c[90] || 0],
-                      ["75-90%", c[75] || 0],
-                      ["50-75%", c[50] || 0],
-                      ["<50%", c[1] || 0],
-                      ["Dead", c[0] || 0],
+                      ["Perfect", a[100] || 0],
+                      [">99%", a[99] || 0],
+                      ["97-99%", a[97] || 0],
+                      ["95-97%", a[95] || 0],
+                      ["90-95%", a[90] || 0],
+                      ["75-90%", a[75] || 0],
+                      ["50-75%", a[50] || 0],
+                      ["<50%", a[1] || 0],
+                      ["Dead", a[0] || 0],
                     ];
-                    for (let t = 0; t < e.length; ++t) n += e[t][1];
-                    t = N(e, n);
+                    for (let t = 0; t < e.length; ++t) s += e[t][1];
+                    t = S(e, s);
                   }
-                  if (n <= 0) return null;
-                  const o = e.quality_pctile;
-                  if (o) {
+                  if (s <= 0) return null;
+                  const r = e.quality_pctile;
+                  if (r) {
                     const e = (e) => (null == e ? void 0 : e + "%");
-                    r = S([
-                      [50, e(o[50])],
-                      [25, e(o[25])],
-                      [5, e(o[5])],
-                      [2, e(o[2])],
+                    n = b([
+                      [50, e(r[50])],
+                      [25, e(r[25])],
+                      [5, e(r[5])],
+                      [2, e(r[2])],
                     ]);
                   }
-                  const l = g(n) + " measurement intervals";
-                  return s.createElement(
+                  const c = v(s) + " measurement intervals";
+                  return l.createElement(
                     "div",
-                    { className: b.QualityBreakdown },
-                    s.createElement(
+                    { className: p.QualityBreakdown },
+                    l.createElement(
                       "div",
-                      { className: b.FlowSectionTitle },
+                      { className: p.FlowSectionTitle },
                       "Quality interval breakdown"
                     ),
-                    s.createElement("div", { className: b.numSamples }, l),
+                    l.createElement("div", { className: p.numSamples }, c),
                     t,
-                    r
+                    n
                   );
                 })(t),
                 (function (e) {
                   let t = null;
-                  const r = e.ping_hist;
-                  let n = 0;
-                  if (r) {
+                  const n = e.ping_hist;
+                  let s = 0;
+                  if (n) {
                     const e = [
-                      [0, r[25] || 0],
-                      [25, r[50] || 0],
-                      [50, r[75] || 0],
-                      [75, r[100] || 0],
-                      [100, r[125] || 0],
-                      [125, r[150] || 0],
-                      [150, r[200] || 0],
-                      [200, r[300] || 0],
-                      [300, r.max || 0],
+                      [0, n[25] || 0],
+                      [25, n[50] || 0],
+                      [50, n[75] || 0],
+                      [75, n[100] || 0],
+                      [100, n[125] || 0],
+                      [125, n[150] || 0],
+                      [150, n[200] || 0],
+                      [200, n[300] || 0],
+                      [300, n.max || 0],
                     ];
-                    let c,
-                      o = 0;
+                    let a,
+                      r = 0;
                     for (let t = 0; t < e.length; ++t)
                       e[t][1] > 0 &&
-                        (null == c && (c = t), (o = t + 1), (n += e[t][1]));
-                    if (n > 0) {
-                      (c = Math.max(0, c - 2)), (o = Math.min(e.length, o + 2));
-                      let r = [];
-                      for (let t = c; t < o; ++t) {
-                        let s,
-                          [l, a] = e[t];
-                        t == c && 0 == a && (l = 0),
-                          (s =
-                            t + 1 >= e.length || (t + 1 >= o && 0 == a)
-                              ? T(l) + "+"
-                              : l + "-" + T(e[t + 1][0])),
-                          r.push(v(s, a, n));
+                        (null == a && (a = t), (r = t + 1), (s += e[t][1]));
+                    if (s > 0) {
+                      (a = Math.max(0, a - 2)), (r = Math.min(e.length, r + 2));
+                      let n = [];
+                      for (let t = a; t < r; ++t) {
+                        let l,
+                          [c, o] = e[t];
+                        t == a && 0 == o && (c = 0),
+                          (l =
+                            t + 1 >= e.length || (t + 1 >= r && 0 == o)
+                              ? k(c) + "+"
+                              : c + "-" + k(e[t + 1][0])),
+                          n.push(N(l, o, s));
                       }
-                      t = s.createElement(
+                      t = l.createElement(
                         "table",
-                        { className: b.Histogram },
-                        s.createElement("tbody", null, r)
+                        { className: p.Histogram },
+                        l.createElement("tbody", null, n)
                       );
                     }
                   }
-                  let c = null;
-                  const o = e.ping_pctile;
-                  if (o) {
-                    const e = (e) => (null == e ? void 0 : T(e));
-                    c = S([
-                      [5, e(o[5])],
-                      [50, e(o[50])],
-                      [75, e(o[75])],
-                      [95, e(o[95])],
-                      [98, e(o[98])],
+                  let a = null;
+                  const r = e.ping_pctile;
+                  if (r) {
+                    const e = (e) => (null == e ? void 0 : k(e));
+                    a = b([
+                      [5, e(r[5])],
+                      [50, e(r[50])],
+                      [75, e(r[75])],
+                      [95, e(r[95])],
+                      [98, e(r[98])],
                     ]);
                   }
-                  let l = null,
-                    a = 0;
+                  let c = null,
+                    o = 0;
                   const i = e.jitter_hist;
                   if (i) {
                     const e = [
@@ -883,63 +546,63 @@
                       ["10-20ms", i[10] || 0],
                       ["20ms+", i[20] || 0],
                     ];
-                    for (let t = 0; t < e.length; ++t) a += e[t][1];
-                    l = N(e, a);
+                    for (let t = 0; t < e.length; ++t) o += e[t][1];
+                    c = S(e, o);
                   }
-                  if (!t && !c && !l) return null;
-                  const m = g(n) + " samples",
-                    d = g(a) + " samples";
-                  return s.createElement(
+                  if (!t && !a && !c) return null;
+                  const m = v(s) + " samples",
+                    d = v(o) + " samples";
+                  return l.createElement(
                     "div",
-                    { className: b.PingBreakdown },
-                    s.createElement(
+                    { className: p.PingBreakdown },
+                    l.createElement(
                       "div",
-                      { className: b.PingSection },
-                      s.createElement(
+                      { className: p.PingSection },
+                      l.createElement(
                         "div",
-                        { className: b.FlowSectionTitle },
+                        { className: p.FlowSectionTitle },
                         "Round Trip Latency"
                       ),
-                      s.createElement("div", { className: b.NumSamples }, m),
+                      l.createElement("div", { className: p.NumSamples }, m),
                       t,
-                      c
+                      a
                     ),
-                    s.createElement(
+                    l.createElement(
                       "div",
-                      { className: b.JitterSection },
-                      s.createElement(
+                      { className: p.JitterSection },
+                      l.createElement(
                         "div",
-                        { className: b.FlowSectionTitle },
+                        { className: p.FlowSectionTitle },
                         "Jitter"
                       ),
-                      s.createElement("div", { className: b.NumSamples }, d),
-                      l
+                      l.createElement("div", { className: p.NumSamples }, d),
+                      c
                     )
                   );
                 })(t)
               )
-            : s.createElement(
+            : l.createElement(
                 "div",
-                { className: b.NoFlowDataAvailable },
+                { className: p.NoFlowDataAvailable },
                 "(No data available)"
               )
         );
       }
-      function x(e) {
+      function w(e) {
         const t = e.sess,
-          r = e.cxn;
-        let n = null,
-          c = null;
+          n = e.cxn;
+        let s = null,
+          a = null;
         if (t.client_front || t.router_front) {
           const e =
-            "ded" == r.kind
+            "ded" == n.kind
               ? "End-to-end statistics reported by client"
               : "End-to-end statistics reported by player";
-          n = s.createElement(
+          s = l.createElement(
             "div",
-            { className: b.QualityFlowPairCtr },
-            s.createElement(y, { title: e, flow: t.client_front }),
-            s.createElement(y, {
+            { className: p.QualityFlowPairCtr },
+            l.createElement(P, { title: e, flow: t.client_front }),
+            l.createElement(P, {
               title: "Front side statistics reported by relay",
               flow: t.router_front,
             })
@@ -947,56 +610,56 @@
         }
         return (
           (t.router_back || t.gameserver_back) &&
-            (c = s.createElement(
+            (a = l.createElement(
               "div",
-              { className: b.QualityFlowPairCtr },
-              s.createElement(y, {
+              { className: p.QualityFlowPairCtr },
+              l.createElement(P, {
                 title: "Back side statistics reported by relay",
                 flow: t.router_back,
               }),
-              s.createElement(y, {
+              l.createElement(P, {
                 title: "Back side statistics reported by gameserver",
                 flow: t.gameserver_back,
               })
             )),
-          s.createElement(
+          l.createElement(
             "div",
-            { className: b.RelaySessionCtr },
-            s.createElement(
+            { className: p.RelaySessionCtr },
+            l.createElement(
               "div",
-              { className: b.RelayInfoCtr },
-              s.createElement(
-                h,
+              { className: p.RelayInfoCtr },
+              l.createElement(
+                C,
                 { label: "Relay address" },
                 t.client.relay_addr
               ),
-              s.createElement(
-                h,
+              l.createElement(
+                C,
                 { label: "Relay POP" },
                 t.client.relay_cluster
               ),
-              s.createElement(h, { label: "Active" }, (0, p.jA)(t.active_time))
+              l.createElement(C, { label: "Active" }, (0, E.jA)(t.active_time))
             ),
-            n,
-            c
+            s,
+            a
           )
         );
       }
-      function M(e) {
+      function x(e) {
         const t = e.cxn,
-          r = t.client,
-          n = t.peer,
-          c = t.client_e2e,
-          o = t.peer_e2e,
-          [l, a] = s.useState(!1),
+          n = t.client,
+          s = t.peer,
+          a = t.client_e2e,
+          r = t.peer_e2e,
+          [c, o] = l.useState(!1),
           m = (function (e) {
             if (!e || !e.length) return null;
             let t = e[0];
-            for (let r = 1; r < e.length; ++r) {
-              const n = e[r];
-              (n.primary > t.primary ||
-                (n.primary == t.primary && n.active_time > t.active_time)) &&
-                (t = n);
+            for (let n = 1; n < e.length; ++n) {
+              const s = e[n];
+              (s.primary > t.primary ||
+                (s.primary == t.primary && s.active_time > t.active_time)) &&
+                (t = s);
             }
             return t;
           })(t.client_sessions);
@@ -1004,50 +667,50 @@
           u = null,
           _ = null,
           f = null,
-          g = null,
           v = null,
           N = null,
-          S = [];
+          S = null,
+          b = [];
         if (m) {
-          n &&
-            m.client.connection_id == n.connection_id &&
-            (!r || (m.client.connection_id, r.connection_id));
+          s &&
+            m.client.connection_id == s.connection_id &&
+            (!n || (m.client.connection_id, n.connection_id));
           if (m.start_time && m.duration) {
             const e = new Date(1e3 * m.start_time),
               t = new Date(1e3 * (m.start_time + m.duration)),
-              r = void 0,
-              n = e.toLocaleString(r, {
+              n = void 0,
+              s = e.toLocaleString(n, {
                 weekday: "short",
                 year: "numeric",
                 month: "short",
                 day: "numeric",
               }),
-              c = e.toLocaleString(r, {
+              a = e.toLocaleString(n, {
                 hour12: !1,
                 hour: "2-digit",
                 minute: "2-digit",
                 second: "2-digit",
               }),
-              o = t.toLocaleString(r, {
+              r = t.toLocaleString(n, {
                 hour12: !1,
                 hour: "2-digit",
                 minute: "2-digit",
                 second: "2-digit",
                 timeZoneName: "short",
               }),
-              l = (0, p.jA)(m.duration);
-            d = s.createElement(
+              c = (0, E.jA)(m.duration);
+            d = l.createElement(
               "span",
-              { className: b.CxnTimeAndDuration },
-              s.createElement(h, { label: "Time" }, n, " ", c, "--", o),
-              s.createElement(h, { label: "Duration" }, l)
+              { className: p.CxnTimeAndDuration },
+              l.createElement(C, { label: "Time" }, s, " ", a, "--", r),
+              l.createElement(C, { label: "Duration" }, c)
             );
           }
           if (
             (m.close_code &&
-              (u = s.createElement(
-                h,
-                { label: "Closed", className: b.CxnCloseInfo },
+              (u = l.createElement(
+                C,
+                { label: "Closed", className: p.CxnCloseInfo },
                 m.close_type,
                 " ",
                 m.close_msg,
@@ -1058,10 +721,10 @@
             m.experience_class)
           ) {
             const e = m.class_reason ? ` (${m.class_reason})` : "";
-            _ = s.createElement(
-              h,
+            _ = l.createElement(
+              C,
               { label: "Experience" },
-              s.createElement(
+              l.createElement(
                 "span",
                 { className: "experience_" + m.experience_class },
                 m.experience_class
@@ -1074,190 +737,190 @@
           let e = Object.keys(t.app);
           if (e.length > 0) {
             e.sort();
-            let r = [];
-            for (let n of e) r.push(s.createElement(h, { label: n }, t.app[n]));
-            f = s.createElement(
+            let n = [];
+            for (let s of e) n.push(l.createElement(C, { label: s }, t.app[s]));
+            f = l.createElement(
               "div",
-              { className: b.AppFieldsCtr },
-              s.createElement(
+              { className: p.AppFieldsCtr },
+              l.createElement(
                 "span",
-                { className: b.AppFieldsTitle },
+                { className: p.AppFieldsTitle },
                 "Application fields:"
               ),
-              r
+              n
             );
           }
         }
-        if (c || o) {
-          const [e, r] = C(c),
-            [n, a] = C(o),
-            i = Math.min(e, n),
-            m = Math.max(r, a);
+        if (a || r) {
+          const [e, n] = h(a),
+            [s, o] = h(r),
+            i = Math.min(e, s),
+            m = Math.max(n, o);
           if (i <= m) {
             const e =
               0.03 * i + 2 < m
                 ? `${i}--${m}ms`
                 : Math.floor((i + m) / 2 + 0.5) + "ms";
-            g = s.createElement(h, { label: "Ping" }, e);
+            v = l.createElement(C, { label: "Ping" }, e);
           }
-          const d = k(c),
-            u = k(o),
+          const d = y(a),
+            u = y(r),
             _ = Math.min(d, u);
           if (
             (_ >= 0 &&
               _ <= 100 &&
-              (v = s.createElement(
-                h,
+              (N = l.createElement(
+                C,
                 { label: "Packet delivery" },
                 `${_.toFixed(2)}%`
               )),
-            l)
+            c)
           ) {
             const e = "End-to-end statistics reported by client",
-              r =
+              n =
                 "ded" == t.kind
                   ? "End-to-end statistics reported by gameserver"
                   : "End-to-end statistics reported by peer";
-            N = s.createElement(
+            S = l.createElement(
               "div",
-              { className: b.QualityFlowPairCtr },
-              s.createElement(y, { title: e, flow: c }),
-              s.createElement(y, { title: r, flow: o })
+              { className: p.QualityFlowPairCtr },
+              l.createElement(P, { title: e, flow: a }),
+              l.createElement(P, { title: n, flow: r })
             );
           }
         }
-        if (l) {
+        if (c) {
           const e = function (e) {
               let t = [...e];
               return (
                 t.sort((e, t) => (t.active_time || 0) - (e.active_time || 0)), t
               );
             },
-            r = t.client_sessions && t.client_sessions.length > 0,
-            n = t.peer_sessions && t.peer_sessions.length > 0;
-          if (r) {
-            "p2p" == t.kind || n
-              ? S.push(
-                  s.createElement(
+            n = t.client_sessions && t.client_sessions.length > 0,
+            s = t.peer_sessions && t.peer_sessions.length > 0;
+          if (n) {
+            "p2p" == t.kind || s
+              ? b.push(
+                  l.createElement(
                     "div",
-                    { className: b.SessionsGroupHeader },
+                    { className: p.SessionsGroupHeader },
                     "Client relay sessions"
                   )
                 )
-              : S.push(
-                  s.createElement(
+              : b.push(
+                  l.createElement(
                     "div",
-                    { className: b.SessionsGroupHeader },
+                    { className: p.SessionsGroupHeader },
                     "Relay sessions"
                   )
                 );
-            for (const r of e(t.client_sessions))
-              S.push(
-                s.createElement(x, { cxn: t, sess: r, host_role: "client" })
+            for (const n of e(t.client_sessions))
+              b.push(
+                l.createElement(w, { cxn: t, sess: n, host_role: "client" })
               );
           }
-          if (n) {
-            S.push(
-              s.createElement(
+          if (s) {
+            b.push(
+              l.createElement(
                 "div",
-                { className: b.SessionsGroupHeader },
+                { className: p.SessionsGroupHeader },
                 "Peer relay sessions"
               )
             );
-            for (const r of e(t.peer_sessions))
-              S.push(
-                s.createElement(x, { cxn: t, sess: r, host_role: "peer" })
+            for (const n of e(t.peer_sessions))
+              b.push(
+                l.createElement(w, { cxn: t, sess: n, host_role: "peer" })
               );
           }
         }
-        return s.createElement(
+        return l.createElement(
           "div",
-          { className: b.ConnectionCtr, key: e.key },
-          s.createElement(
+          { className: p.ConnectionCtr, key: e.key },
+          l.createElement(
             "div",
-            { className: b.ConnectionHeader },
-            s.createElement(
+            { className: p.ConnectionHeader },
+            l.createElement(
               "div",
-              { className: b.CxnSummary },
+              { className: p.CxnSummary },
               d,
-              g,
               v,
+              N,
               _,
               f,
               u
             ),
-            s.createElement(i.ji, {
-              className: b.ExpandDetailsCheckbox,
+            l.createElement(i.ji, {
+              className: p.ExpandDetailsCheckbox,
               label: "Details",
-              checked: l,
-              onChange: a,
+              checked: c,
+              onChange: o,
             })
           ),
-          s.createElement(
+          l.createElement(
             "div",
-            { className: b.CxnPeersCtr },
-            s.createElement(E, { host: t.client, host_role: "client" }),
-            s.createElement(E, { host: t.peer, host_role: "peer" })
+            { className: p.CxnPeersCtr },
+            l.createElement(g, { host: t.client, host_role: "client" }),
+            l.createElement(g, { host: t.peer, host_role: "peer" })
           ),
-          N,
-          S
+          S,
+          b
         );
       }
-      function L(e) {
-        const t = (0, a.k6)(),
-          r = e.appId,
-          [c, p] = s.useState(!1),
-          [f, h] = s.useState(""),
-          [E, g] = s.useState(void 0),
-          [C, k] = s.useState(""),
-          [v, N] = s.useState(""),
-          [S, T] = s.useState(""),
-          [y, x] = s.useState(0),
-          [L, w] = s.useState(""),
-          [F, P] = s.useState("");
-        s.useEffect(() => {
+      function F(e) {
+        const t = (0, o.k6)(),
+          n = e.appId,
+          [a, E] = l.useState(!1),
+          [f, C] = l.useState(""),
+          [g, v] = l.useState(void 0),
+          [h, y] = l.useState(""),
+          [N, S] = l.useState(""),
+          [b, k] = l.useState(""),
+          [P, w] = l.useState(0),
+          [F, D] = l.useState(""),
+          [I, R] = l.useState("");
+        l.useEffect(() => {
           let e = new URLSearchParams(t.location.search);
-          const c = e.get("client_id") || "",
-            s = e.get("peer_id") || "",
-            l = e.get("kind") || "",
-            a = e.get("app_name1") || "",
+          const a = e.get("client_id") || "",
+            l = e.get("peer_id") || "",
+            c = e.get("kind") || "",
+            o = e.get("app_name1") || "",
             i = e.get("app_value1") || "";
-          if ((k(c), N(s), T(l), w(a), P(i), !e.toString() && 0 == y)) return;
-          p(!0), h(""), e.set("appid", "" + r);
+          if ((y(a), S(l), k(c), D(o), R(i), !e.toString() && 0 == P)) return;
+          E(!0), C(""), e.set("appid", "" + n);
           const m =
             u.De.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
           (() => {
-            (0, n.mG)(this, void 0, void 0, function* () {
-              var e, t, r, n, c;
+            (0, s.mG)(this, void 0, void 0, function* () {
+              var e, t, n, s, a;
               try {
-                const s = yield o().get(m);
+                const l = yield r().get(m);
                 1 ==
-                (null === (e = null == s ? void 0 : s.data) || void 0 === e
+                (null === (e = null == l ? void 0 : l.data) || void 0 === e
                   ? void 0
                   : e.success)
-                  ? g(s.data.connections)
+                  ? v(l.data.connections)
                   : (console.error(
                       "sdrsessionsearch: OnPerformSearch error code  " +
-                        (null === (t = null == s ? void 0 : s.data) ||
+                        (null === (t = null == l ? void 0 : l.data) ||
                         void 0 === t
                           ? void 0
                           : t.success) +
                         " msg: " +
-                        (null === (r = null == s ? void 0 : s.data) ||
-                        void 0 === r
+                        (null === (n = null == l ? void 0 : l.data) ||
+                        void 0 === n
                           ? void 0
-                          : r.msg)
+                          : n.msg)
                     ),
-                    h(
-                      (null === (n = null == s ? void 0 : s.data) ||
-                      void 0 === n
+                    C(
+                      (null === (s = null == l ? void 0 : l.data) ||
+                      void 0 === s
                         ? void 0
-                        : n.success) +
+                        : s.success) +
                         " msg: " +
-                        (null === (c = null == s ? void 0 : s.data) ||
-                        void 0 === c
+                        (null === (a = null == l ? void 0 : l.data) ||
+                        void 0 === a
                           ? void 0
-                          : c.msg)
+                          : a.msg)
                     ));
               } catch (e) {
                 const t = (0, d.l)(e);
@@ -1266,134 +929,134 @@
                   t
                 );
               }
-              p(!1);
+              E(!1);
             });
           })();
-        }, [r, t.location, y]);
-        let D = null;
-        if (void 0 !== E) {
+        }, [n, t.location, P]);
+        let T = null;
+        if (void 0 !== g) {
           let e = [];
-          for (const t of E) {
-            const r =
+          for (const t of g) {
+            const n =
               (t.client.id || "") + "-" + (t.client.connection_id || "");
-            e.push(s.createElement(M, { key: r, cxn: t }));
+            e.push(l.createElement(x, { key: n, cxn: t }));
           }
-          D = s.createElement(
+          T = l.createElement(
             "div",
-            { className: b.SearchResultsCtr },
-            s.createElement(
+            { className: p.SearchResultsCtr },
+            l.createElement(
               "div",
-              { className: b.SearchResultsTitle },
+              { className: p.SearchResultsTitle },
               "Found ",
-              E.length,
+              g.length,
               " connection(s)"
             ),
             e
           );
         }
-        const I = "ded" == S ? "Gameserver" : "Peer",
-          R = !1;
-        return s.createElement(
+        const A = "ded" == b ? "Gameserver" : "Peer",
+          G = !1;
+        return l.createElement(
           m.SV,
           null,
-          s.createElement(
+          l.createElement(
             "div",
-            { className: b.SDRConnectionsAppCtn },
-            s.createElement(
+            { className: p.SDRConnectionsAppCtn },
+            l.createElement(
               "div",
-              { className: b.SDRConnectionsAppTitle },
+              { className: p.SDRConnectionsAppTitle },
               "SDR Connections [BETA] - App ",
               e.appId,
               " "
             ),
-            f && s.createElement("div", { className: b.ErrMsg }, f),
-            s.createElement(
+            f && l.createElement("div", { className: p.ErrMsg }, f),
+            l.createElement(
               "div",
-              { className: b.SearchParamsCtr },
-              s.createElement(
+              { className: p.SearchParamsCtr },
+              l.createElement(
                 "div",
                 {
-                  className: (0, l.Z)(
+                  className: (0, c.Z)(
                     "DialogInputLabelGroup",
-                    b.ConnectionKindGroup
+                    p.ConnectionKindGroup
                   ),
                 },
-                s.createElement(
+                l.createElement(
                   "div",
                   { className: "DialogLabel" },
                   "Connection kind"
                 ),
-                s.createElement(
+                l.createElement(
                   i.SY,
-                  { value: S, onChange: (e) => T(e) },
-                  s.createElement(i.EU, { value: "" }, "Any"),
-                  s.createElement(i.EU, { value: "ded" }, "Dedicated server"),
-                  s.createElement(i.EU, { value: "p2p" }, "Peer-to-Peer")
+                  { value: b, onChange: (e) => k(e) },
+                  l.createElement(i.EU, { value: "" }, "Any"),
+                  l.createElement(i.EU, { value: "ded" }, "Dedicated server"),
+                  l.createElement(i.EU, { value: "p2p" }, "Peer-to-Peer")
                 )
               ),
-              s.createElement(
+              l.createElement(
                 "div",
-                { className: b.AppFieldPair },
-                s.createElement(i.II, {
+                { className: p.AppFieldPair },
+                l.createElement(i.II, {
                   type: "text",
-                  value: C,
-                  disabled: R,
+                  value: h,
+                  disabled: G,
                   label: "Client",
-                  onChange: (e) => k(e.currentTarget.value),
+                  onChange: (e) => y(e.currentTarget.value),
                 }),
-                s.createElement(i.II, {
+                l.createElement(i.II, {
                   type: "text",
-                  value: v,
-                  disabled: R,
-                  label: I,
-                  onChange: (e) => N(e.currentTarget.value),
+                  value: N,
+                  disabled: G,
+                  label: A,
+                  onChange: (e) => S(e.currentTarget.value),
                 })
               ),
-              s.createElement(
+              l.createElement(
                 "div",
-                { className: b.AppFieldPair },
-                s.createElement(i.II, {
-                  type: "text",
-                  value: L,
-                  disabled: R,
-                  label: "App field name 1",
-                  onChange: (e) => w(e.currentTarget.value),
-                }),
-                s.createElement(i.II, {
+                { className: p.AppFieldPair },
+                l.createElement(i.II, {
                   type: "text",
                   value: F,
-                  disabled: R,
+                  disabled: G,
+                  label: "App field name 1",
+                  onChange: (e) => D(e.currentTarget.value),
+                }),
+                l.createElement(i.II, {
+                  type: "text",
+                  value: I,
+                  disabled: G,
                   label: "App field value 1",
-                  onChange: (e) => P(e.currentTarget.value),
+                  onChange: (e) => R(e.currentTarget.value),
                 })
               ),
-              s.createElement(
+              l.createElement(
                 "div",
-                { className: b.SubmitButtonCtn },
-                s.createElement(
+                { className: p.SubmitButtonCtn },
+                l.createElement(
                   i.KM,
                   {
                     onClick: () => {
                       let e = new URLSearchParams();
-                      C && e.set("client_id", C),
-                        v && e.set("peer_id", v),
-                        S && e.set("kind", S),
-                        L &&
-                          F &&
-                          (e.set("app_name1", L), e.set("app_value1", F));
-                      let r = Object.assign({}, t.location);
-                      (r.search = e.toString()),
-                        r != t.location && t.push(r),
-                        x(y + 1);
+                      h && e.set("client_id", h),
+                        N && e.set("peer_id", N),
+                        b && e.set("kind", b),
+                        F &&
+                          I &&
+                          (e.set("app_name1", F), e.set("app_value1", I));
+                      let n = Object.assign({}, t.location);
+                      (n.search = e.toString()),
+                        n != t.location && t.push(n),
+                        w(P + 1);
                     },
-                    disabled: c,
+                    disabled: a,
                   },
                   "Search "
                 )
               )
             ),
-            c && s.createElement(_.V, null),
-            D
+            a && l.createElement(_.V, null),
+            T
           )
         );
       }

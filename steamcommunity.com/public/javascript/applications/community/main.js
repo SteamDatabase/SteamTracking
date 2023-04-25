@@ -3210,7 +3210,7 @@
             : this.m_popup && this.m_popup.focus();
         }
         Close() {
-          this.m_popup && this.m_popup.close();
+          this.m_popup && this.m_popup.window.SteamClient.Window.Close();
         }
         GetName() {
           return this.m_strName;
@@ -11450,13 +11450,31 @@
           super(),
             (this.m_nAccumulatedMouseMovement = 0),
             (this.m_bFirstMouseUpdate = !0),
+            (this.m_lastButtonDown = i.eV.INVALID),
             this.SetSourceType(i.Rr.MOUSE),
             e.addEventListener("mousedown", this.OnMouseDown),
+            e.addEventListener("mouseup", this.OnMouseUp),
             e.addEventListener("mousemove", this.OnMouseMove),
             e.addEventListener("blur", this.Reset);
         }
+        TranslateKey(e) {
+          return 3 === e.button ? i.eV.CANCEL : i.eV.INVALID;
+        }
         OnMouseDown(e) {
-          e.defaultPrevented || this.OnNavigationTypeChanged(i.Rr.MOUSE);
+          if (e.defaultPrevented) return;
+          const t = this.TranslateKey(e);
+          t != i.eV.INVALID &&
+            (e.preventDefault(),
+            t != this.m_lastButtonDown &&
+              (this.Reset(), this.OnButtonDown(t), (this.m_lastButtonDown = t)),
+            this.OnNavigationTypeChanged(i.Rr.MOUSE));
+        }
+        OnMouseUp(e) {
+          const t = this.TranslateKey(e);
+          t != i.eV.INVALID &&
+            (this.OnButtonUp(t),
+            (this.m_lastButtonDown = i.eV.INVALID),
+            event.preventDefault());
         }
         OnMouseMove(e) {
           if (!e.defaultPrevented) {
@@ -11475,10 +11493,15 @@
         }
         Reset() {
           (this.m_nAccumulatedMouseMovement = 0),
-            (this.m_bFirstMouseUpdate = !0);
+            (this.m_bFirstMouseUpdate = !0),
+            this.m_lastButtonDown != i.eV.INVALID &&
+              (this.OnButtonUp(this.m_lastButtonDown),
+              (this.m_lastButtonDown = i.eV.INVALID));
         }
       }
-      (0, r.gn)([o.a], g.prototype, "OnMouseDown", null),
+      (0, r.gn)([o.a], g.prototype, "TranslateKey", null),
+        (0, r.gn)([o.a], g.prototype, "OnMouseDown", null),
+        (0, r.gn)([o.a], g.prototype, "OnMouseUp", null),
         (0, r.gn)([o.a], g.prototype, "OnMouseMove", null),
         (0, r.gn)([o.a], g.prototype, "Reset", null);
       var f = n(48870),
@@ -12093,7 +12116,7 @@
       var h = n(25730),
         p = n(50840),
         _ = n(43813),
-        g = (n(46723), n(24868), n(86701)),
+        g = (n(46085), n(24868), n(86701)),
         f = n(13806),
         C = n(63845),
         v = n(81052),
@@ -12559,20 +12582,45 @@
           }
         }
         PositionMenu(e = !1) {
-          let t = this.m_elMenu,
-            n = this.props.element;
-          if (!t) return;
-          let r = this.parentWin;
-          if (!r || (n && "none" === r.getComputedStyle(n).display)) return;
-          let i = null == n ? void 0 : n.getBoundingClientRect(),
-            o = t.getBoundingClientRect();
-          if (this.props.options.flScale > 0) {
-            const e = this.props.options.flScale;
-            o = new DOMRect(o.x * e, o.y * e, o.width * e, o.height * e);
+          const t = this.props.options;
+          let n = this.m_elMenu,
+            r = this.props.element;
+          if (!n) return;
+          let i = null != this.props.popup,
+            o = this.parentWin;
+          if (!o || (r && "none" === o.getComputedStyle(r).display)) return;
+          let s = this.props.clientX,
+            a = this.props.clientY,
+            l = o.innerWidth,
+            c = o.innerHeight,
+            u = 1,
+            d = null == r ? void 0 : r.getBoundingClientRect();
+          if (i)
+            if (
+              (t.bScreenCoordinates ||
+                ((s += o.screenLeft), (a += o.screenTop)),
+              d && (d = v.sH(o, d)),
+              t.targetMonitor)
+            )
+              (u = t.targetMonitor.flMonitorScale),
+                (l = t.targetMonitor.nScreenWidth),
+                (c = t.targetMonitor.nScreenHeight);
+            else {
+              let e = o.screen,
+                t = 0,
+                n = 0;
+              e.availLeft && (t = e.availLeft),
+                e.availTop && (n = e.availTop),
+                (l = t + e.availWidth),
+                (c = n + e.availHeight);
+            }
+          (t.bOverlapHorizontal || t.bOverlapVertical) && (s = a = void 0);
+          let m = n.getBoundingClientRect();
+          if (t.flGamepadScale > 0) {
+            const e = t.flGamepadScale;
+            m = new DOMRect(m.x * e, m.y * e, m.width * e, m.height * e);
           }
-          let s = null != this.props.popup;
-          const a = this.props.options;
-          let l = {
+          let h = {
               menuLeft: void 0,
               menuRight: void 0,
               menuTop: void 0,
@@ -12581,123 +12629,127 @@
               menuHeight: void 0,
               menuMinWidth: void 0,
             },
-            c = this.props.clientX,
-            u = this.props.clientY,
-            d = r.innerWidth,
-            m = r.innerHeight;
-          if (s) {
-            this.props.options.bScreenCoordinates ||
-              ((c += r.screenLeft), (u += r.screenTop)),
-              i && (i = v.sH(r, i));
-            let e = r.screen,
-              t = 0,
-              n = 0;
-            e.availLeft && (t = e.availLeft),
-              e.availTop && (n = e.availTop),
-              (d = t + e.availWidth),
-              (m = n + e.availHeight);
-          }
-          (a.bOverlapHorizontal || a.bOverlapVertical) && (c = u = void 0);
-          let h = c || i.left,
-            p = c || i.right,
-            _ = o.width;
-          a.bMatchWidth && ((_ = p - h), (l.menuWidth = _)),
-            a.bGrowToElementWidth && (l.menuMinWidth = Math.max(_, p - h));
-          let g = (a.bOverlapHorizontal ? p : h) - _,
-            f = g > 0,
-            C = d - (a.bOverlapHorizontal ? h : p) - _,
-            E = C > 0,
-            b = (a.bPreferPopLeft || !E) && f;
-          f ||
-            E ||
-            ((b = f > E),
-            a.bFitToWindow && ((_ += (b ? g : C) - 8), (l.menuWidth = _))),
-            (!a.bPreferPopLeft && E) || !f
-              ? (l.menuLeft = a.bOverlapHorizontal ? h : p)
-              : (l.menuRight = d - (a.bOverlapHorizontal ? p : h));
-          let S = u || i.top,
-            w = u || i.bottom,
-            I = t.scrollHeight;
-          a.bMatchHeight && ((I = w - S), (l.menuHeight = I));
-          let D = (a.bOverlapVertical ? w : S) - I,
-            y = D > 0,
-            R = m - (a.bOverlapVertical ? S : w) - I,
-            M = R > 0,
-            T = (a.bPreferPopTop || !M) && y && !a.bDisablePopTop;
-          if (!y && !M) {
+            p = s || d.left,
+            _ = s || d.right,
+            g = m.width;
+          t.bMatchWidth && ((g = _ - p), (h.menuWidth = g)),
+            t.bGrowToElementWidth && (h.menuMinWidth = Math.max(g, _ - p));
+          let f = (t.bOverlapHorizontal ? _ : p) - g,
+            C = f > 0,
+            E = l - (t.bOverlapHorizontal ? p : _) - g,
+            b = E > 0,
+            S = (t.bPreferPopLeft || !b) && C;
+          C ||
+            b ||
+            ((S = C > b),
+            t.bFitToWindow && ((g += (S ? f : E) - 8), (h.menuWidth = g))),
+            (!t.bPreferPopLeft && b) || !C
+              ? (h.menuLeft = t.bOverlapHorizontal ? p : _)
+              : (h.menuRight = l - (t.bOverlapHorizontal ? _ : p));
+          let w = a || d.top,
+            I = a || d.bottom,
+            D = n.scrollHeight;
+          t.bMatchHeight && ((D = I - w), (h.menuHeight = D));
+          let y = (t.bOverlapVertical ? I : w) - D,
+            R = y > 0,
+            M = c - (t.bOverlapVertical ? w : I) - D,
+            T = M > 0,
+            A = (t.bPreferPopTop || !T) && R && !t.bDisablePopTop;
+          if (!R && !T) {
             const e =
-              void 0 !== a.bShiftToFitWindow
-                ? a.bShiftToFitWindow
-                : a.bFitToWindow && !a.bOverlapHorizontal;
-            (T = D > R && !a.bDisablePopTop),
-              e && (T ? (l.menuTop = 4) : (l.menuBottom = 4)),
-              a.bFitToWindow &&
-                (e ? (I = Math.min(I, m - 8)) : (I += T ? D : R),
-                (l.menuHeight = I - 8));
+              void 0 !== t.bShiftToFitWindow
+                ? t.bShiftToFitWindow
+                : t.bFitToWindow && !t.bOverlapHorizontal;
+            (A = y > M && !t.bDisablePopTop),
+              e && (A ? (h.menuTop = 4) : (h.menuBottom = 4)),
+              t.bFitToWindow &&
+                (e ? (D = Math.min(D, c - 8)) : (D += A ? y : M),
+                (h.menuHeight = D - 8));
           }
-          void 0 === l.menuBottom &&
-            void 0 === l.menuTop &&
-            (T
-              ? (l.menuBottom = m - (a.bOverlapVertical ? w : S))
-              : (l.menuTop = a.bOverlapVertical ? S : w)),
-            s
-              ? (l.menuHeight || (l.menuHeight = o.height),
-                l.menuWidth || (l.menuWidth = o.width),
-                l.menuBottom &&
-                  !l.menuTop &&
-                  ((l.menuTop = m - l.menuBottom - l.menuHeight),
-                  (l.menuBottom = void 0)),
-                l.menuRight &&
-                  !l.menuLeft &&
-                  ((l.menuLeft = d - l.menuRight - l.menuWidth),
-                  (l.menuRight = void 0)))
-              : (l.menuLeft && (l.menuLeft += r.scrollX),
-                l.menuTop && (l.menuTop += r.scrollY),
-                l.menuBottom &&
-                  (l.menuBottom +=
-                    r.document.body.clientHeight - r.scrollY - r.innerHeight),
-                l.menuRight &&
-                  (l.menuRight +=
-                    r.document.body.clientWidth - r.scrollX - r.innerWidth)),
+          void 0 === h.menuBottom &&
+            void 0 === h.menuTop &&
+            (A
+              ? (h.menuBottom = c - (t.bOverlapVertical ? I : w))
+              : (h.menuTop = t.bOverlapVertical ? w : I)),
+            i
+              ? (h.menuHeight || (h.menuHeight = m.height),
+                h.menuWidth || (h.menuWidth = m.width),
+                h.menuBottom &&
+                  !h.menuTop &&
+                  ((h.menuTop = c - h.menuBottom - h.menuHeight),
+                  (h.menuBottom = void 0)),
+                h.menuRight &&
+                  !h.menuLeft &&
+                  ((h.menuLeft = l - h.menuRight - h.menuWidth),
+                  (h.menuRight = void 0)))
+              : (h.menuLeft && (h.menuLeft += o.scrollX),
+                h.menuTop && (h.menuTop += o.scrollY),
+                h.menuBottom &&
+                  (h.menuBottom +=
+                    o.document.body.clientHeight - o.scrollY - o.innerHeight),
+                h.menuRight &&
+                  (h.menuRight +=
+                    o.document.body.clientWidth - o.scrollX - o.innerWidth)),
             (e ||
-              l.menuLeft !== this.state.menuLeft ||
-              l.menuRight !== this.state.menuRight ||
-              l.menuTop !== this.state.menuTop ||
-              l.menuBottom !== this.state.menuBottom ||
-              l.menuWidth !== this.state.menuWidth ||
-              l.menuHeight !== this.state.menuHeight) &&
-              this.setState(l);
+              h.menuLeft !== this.state.menuLeft ||
+              h.menuRight !== this.state.menuRight ||
+              h.menuTop !== this.state.menuTop ||
+              h.menuBottom !== this.state.menuBottom ||
+              h.menuWidth !== this.state.menuWidth ||
+              h.menuHeight !== this.state.menuHeight) &&
+              this.setState(h);
         }
         PositionPopupWindow() {
           if (
-            void 0 !== this.state.menuLeft &&
-            void 0 !== this.state.menuTop &&
-            void 0 !== this.state.menuWidth &&
-            void 0 !== this.state.menuHeight
-          ) {
-            const e = this.parentWin;
-            e.SteamClient.Window.GetWindowRestoreDetails((t) => {
-              let n = this.props.popup.window,
-                r = this.state.menuLeft - e.screenX,
-                i = this.state.menuTop - e.screenY;
-              try {
-                n.SteamClient.Window.PositionWindowRelative(
-                  t,
-                  r,
-                  i,
-                  this.state.menuWidth,
-                  this.state.menuHeight
-                );
-              } catch (e) {
-                console.error(e);
-              }
-            });
+            !(
+              void 0 !== this.state.menuLeft &&
+              void 0 !== this.state.menuTop &&
+              void 0 !== this.state.menuWidth &&
+              void 0 !== this.state.menuHeight
+            )
+          )
+            return;
+          const e = this.props.popup.window,
+            t = this.props.options;
+          if (t.bScreenCoordinates) {
+            let n = this.parentWin.devicePixelRatio;
+            if (t.targetMonitor) {
+              let e = t.flGamepadScale || 1;
+              n = t.targetMonitor.flMonitorScale / e;
+            }
+            return (
+              e.SteamClient.Window.MoveTo(
+                this.state.menuLeft,
+                this.state.menuTop,
+                n
+              ),
+              void e.SteamClient.Window.ResizeTo(
+                this.state.menuWidth,
+                this.state.menuHeight,
+                !0
+              )
+            );
           }
+          this.parentWin.SteamClient.Window.GetWindowRestoreDetails((t) => {
+            const n = this.state.menuLeft - this.parentWin.screenX,
+              r = this.state.menuTop - this.parentWin.screenY;
+            try {
+              e.SteamClient.Window.PositionWindowRelative(
+                t,
+                n,
+                r,
+                this.state.menuWidth,
+                this.state.menuHeight
+              );
+            } catch (e) {
+              console.error(e);
+            }
+          });
         }
         render() {
           let e = { visibility: this.state.ready ? "visible" : "hidden" };
-          this.props.options.flScale > 0 &&
-            (e.zoom = this.props.options.flScale),
+          this.props.options.flGamepadScale > 0 &&
+            (e.zoom = this.props.options.flGamepadScale),
             this.props.popup
               ? (this.PositionPopupWindow(),
                 void 0 !== this.state.menuMinWidth &&
@@ -17852,7 +17904,7 @@
         );
       }
     },
-    46723: (e, t, n) => {
+    46085: (e, t, n) => {
       "use strict";
       n.d(t, {
         On: () => E,
@@ -18175,7 +18227,7 @@
         c = n(93713),
         u = n(87121),
         d = n(70983);
-      n(46723);
+      n(46085);
       function m(e) {
         const { Modal: t } = e,
           { name: n, modalProps: l, options: m } = t,
@@ -18416,18 +18468,16 @@
                 };
               else {
                 let t = f.sH(a, i.getBoundingClientRect());
-                e.dimensions = {
+                (e.dimensions = {
                   left: t.right,
                   top: t.top,
                   width: 2,
                   height: 1,
-                };
+                }),
+                  (e.availscreenwidth = a.screen.availWidth),
+                  (e.availscreenheight = a.screen.availHeight);
               }
-              return (
-                (e.availscreenwidth = a.screen.availWidth),
-                (e.availscreenheight = a.screen.availHeight),
-                e
-              );
+              return e;
             },
             [a, t]
           ),
@@ -18938,7 +18988,7 @@
       n.d(t, { AM: () => u, BR: () => d, e1: () => o.e1, x1: () => c });
       var r = n(33940),
         i = n(89526),
-        o = (n(69210), n(46723)),
+        o = (n(69210), n(46085)),
         s = (n(19231), n(32338)),
         a = n(31587),
         l = n(70983);
@@ -19076,6 +19126,7 @@
         _GE: () => ue,
         c7E: () => Fe,
         chI: () => te,
+        dCe: () => He,
         dLw: () => Ee,
         daM: () => pe,
         doA: () => Me,
@@ -21999,6 +22050,27 @@
           })
         );
       }
+      function He(e) {
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              width: "26",
+              height: "26",
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 26 26",
+              fill: "none",
+            },
+            e
+          ),
+          i.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M17.5133 4.65595C15.8046 6.36468 17.0366 9.2803 19.4284 9.28035C20.446 9.28035 21.0261 8.76331 21.2519 8.56209C21.2963 8.5225 21.327 8.49513 21.3447 8.48633C22.4018 7.42917 22.4024 5.71423 21.3441 4.65595C20.2817 3.59714 18.5699 3.59936 17.5133 4.65595ZM18.5553 7.44735C17.4045 6.30173 19.1522 4.54882 20.301 5.69597V5.69586C20.7836 6.18159 20.783 6.96269 20.301 7.44422C19.8189 7.92684 19.0348 7.92415 18.5553 7.44735ZM0.583974 13.873L14.455 0L24.4165 1.583L26 11.5449L12.1289 25.416C11.7368 25.805 11.2252 26 10.7156 26C10.2065 26 9.69489 25.805 9.30552 25.416L0.583974 16.6976C0.194954 16.305 0 15.7933 0 15.2843C0 14.7742 0.194948 14.2625 0.583974 13.873ZM9.26632 17.5853L8.88665 17.965C8.62416 18.2274 8.43667 18.5227 8.32418 18.8509C8.21403 19.1766 8.19645 19.5106 8.27145 19.8528C8.34879 20.1926 8.53979 20.5148 8.84446 20.8195C9.14445 21.1195 9.46318 21.307 9.80066 21.382C10.1428 21.457 10.4756 21.4382 10.7991 21.3257C11.1272 21.2132 11.4225 21.0257 11.6849 20.7633L12.0646 20.3836C12.3271 20.1211 12.5146 19.8281 12.6271 19.5047C12.7419 19.179 12.7618 18.8473 12.6868 18.5099C12.6142 18.17 12.4255 17.8478 12.1209 17.5431C11.8209 17.2431 11.4986 17.0545 11.1541 16.9771C10.8143 16.8998 10.4791 16.9162 10.1487 17.0263C9.82293 17.1365 9.5288 17.3228 9.26632 17.5853ZM9.6038 18.6821L9.98347 18.3024C10.2014 18.0845 10.4487 17.9427 10.7252 17.8771C11.0065 17.8115 11.2701 17.9017 11.5162 18.1478C11.7693 18.4009 11.8584 18.6634 11.7834 18.9352C11.7107 19.2047 11.5654 19.4485 11.3475 19.6664L10.9678 20.0461C10.7498 20.2641 10.5026 20.4082 10.226 20.4785C9.95417 20.5488 9.6952 20.4609 9.44912 20.2148C9.19601 19.9617 9.10344 19.6981 9.1714 19.4239C9.24171 19.1473 9.38584 18.9001 9.6038 18.6821ZM9.80066 9.87944L9.421 10.2591C9.15851 10.5216 8.97102 10.8169 8.85853 11.145C8.74837 11.4708 8.7308 11.8047 8.80579 12.1469C8.88313 12.4867 9.07414 12.809 9.37881 13.1136C9.6788 13.4136 9.99753 13.6011 10.335 13.6761C10.6772 13.7511 11.01 13.7324 11.3334 13.6199C11.6615 13.5074 11.9568 13.3199 12.2193 13.0574L12.599 12.6777C12.8614 12.4152 13.0489 12.1223 13.1614 11.7989C13.2763 11.4731 13.2962 11.1415 13.2212 10.804C13.1485 10.4642 12.9599 10.1419 12.6552 9.83725C12.3552 9.53727 12.033 9.34861 11.6885 9.27127C11.3486 9.19393 11.0135 9.21033 10.683 9.32048C10.3573 9.43063 10.0632 9.61695 9.80066 9.87944ZM10.1381 10.9763L10.5178 10.5966C10.7358 10.3786 10.983 10.2368 11.2596 10.1712C11.5408 10.1056 11.8045 10.1958 12.0506 10.4419C12.3037 10.695 12.3927 10.9575 12.3177 11.2294C12.2451 11.4989 12.0998 11.7426 11.8818 11.9606L11.5021 12.3403C11.2842 12.5582 11.0369 12.7023 10.7604 12.7726C10.4885 12.843 10.2295 12.7551 9.98347 12.509C9.73036 12.2559 9.63778 11.9922 9.70575 11.718C9.77606 11.4415 9.92019 11.1942 10.1381 10.9763ZM16.3675 13.7464L4.21814 15.9963L5.01966 16.7978L17.169 14.5479L16.3675 13.7464Z",
+          })
+        );
+      }
     },
     87121: (e, t, n) => {
       "use strict";
@@ -22075,7 +22147,7 @@
                           null !== (e = this.props.onClose) && void 0 !== e
                             ? e
                             : () => {
-                                t && t.close();
+                                t && t.SteamClient.Window.Close();
                               },
                       },
                       i.createElement(s.pVO, null)
@@ -24618,69 +24690,70 @@
       });
       var r = n(87017);
       const i = {
-          EUNIVERSE: 0,
-          WEB_UNIVERSE: "",
-          LANGUAGE: "english",
-          SUPPORTED_LANGUAGES: [],
-          COUNTRY: "",
-          AVATAR_BASE_URL: "",
-          MEDIA_CDN_COMMUNITY_URL: "",
-          MEDIA_CDN_URL: "",
-          COMMUNITY_CDN_URL: "",
-          COMMUNITY_CDN_ASSET_URL: "",
-          BASE_URL_SHARED_CDN: "",
-          STORE_CDN_URL: "",
-          PUBLIC_SHARED_URL: "",
-          COMMUNITY_BASE_URL: "",
-          CHAT_BASE_URL: "",
-          STORE_BASE_URL: "",
-          STORE_CHECKOUT_BASE_URL: "",
-          LOGIN_BASE_URL: "",
-          SUPPORT_BASE_URL: "",
-          STORE_ICON_BASE_URL: "",
-          IMG_URL: "",
-          STEAMTV_BASE_URL: "",
-          HELP_BASE_URL: "",
-          PARTNER_BASE_URL: "",
-          STATS_BASE_URL: "",
-          INTERNAL_STATS_BASE_URL: "",
-          BASE_URL_STORE_CDN_ASSETS: "",
-          IN_CLIENT: !1,
-          USE_POPUPS: !1,
-          IN_MOBILE: !1,
-          IN_MOBILE_WEBVIEW: !1,
-          IN_TENFOOT: !1,
-          PLATFORM: "",
-          SNR: "",
-          LAUNCHER_TYPE: 0,
-          EREALM: 0,
-          IN_CHROMEOS: !1,
-          TESLA: !1,
-          LOCAL_HOSTNAME: "",
-          WEBAPI_BASE_URL: "",
-          TOKEN_URL: "",
-          BUILD_TIMESTAMP: 0,
-          PAGE_TIMESTAMP: 0,
-          FROM_WEB: !1,
-          WEBSITE_ID: "Unknown",
-          get SESSIONID() {
-            return (0, r.c9)();
-          },
-          FRIENDSUI_BETA: !1,
-          STEAM_TV: !1,
-          DEV_MODE: !1,
-          IN_STEAMUI: !1,
-          IN_GAMEPADUI: !1,
-          IN_STEAMUI_SHARED_CONTEXT: !1,
-          DECK_DISPLAY_MODE: !1,
-          ON_DECK: !1,
-          ON_STEAMOS: !1,
-          IN_GAMESCOPE: !1,
-          IN_LOGIN: !1,
-          IN_LOGIN_REFRESH: !1,
-          USE_LONGEST_LOC_STRING: !1,
+        EUNIVERSE: 0,
+        WEB_UNIVERSE: "",
+        LANGUAGE: "english",
+        SUPPORTED_LANGUAGES: [],
+        COUNTRY: "",
+        AVATAR_BASE_URL: "",
+        MEDIA_CDN_COMMUNITY_URL: "",
+        MEDIA_CDN_URL: "",
+        COMMUNITY_CDN_URL: "",
+        COMMUNITY_CDN_ASSET_URL: "",
+        BASE_URL_SHARED_CDN: "",
+        STORE_CDN_URL: "",
+        PUBLIC_SHARED_URL: "",
+        COMMUNITY_BASE_URL: "",
+        CHAT_BASE_URL: "",
+        STORE_BASE_URL: "",
+        STORE_CHECKOUT_BASE_URL: "",
+        LOGIN_BASE_URL: "",
+        SUPPORT_BASE_URL: "",
+        STORE_ICON_BASE_URL: "",
+        IMG_URL: "",
+        STEAMTV_BASE_URL: "",
+        HELP_BASE_URL: "",
+        PARTNER_BASE_URL: "",
+        STATS_BASE_URL: "",
+        INTERNAL_STATS_BASE_URL: "",
+        BASE_URL_STORE_CDN_ASSETS: "",
+        IN_CLIENT: !1,
+        USE_POPUPS: !1,
+        IN_MOBILE: !1,
+        IN_MOBILE_WEBVIEW: !1,
+        IN_TENFOOT: !1,
+        PLATFORM: "",
+        SNR: "",
+        LAUNCHER_TYPE: 0,
+        EREALM: 0,
+        IN_CHROMEOS: !1,
+        TESLA: !1,
+        LOCAL_HOSTNAME: "",
+        WEBAPI_BASE_URL: "",
+        TOKEN_URL: "",
+        BUILD_TIMESTAMP: 0,
+        PAGE_TIMESTAMP: 0,
+        FROM_WEB: !1,
+        WEBSITE_ID: "Unknown",
+        get SESSIONID() {
+          return (0, r.c9)();
         },
-        o = {
+        FRIENDSUI_BETA: !1,
+        STEAM_TV: !1,
+        DEV_MODE: !1,
+        IN_STEAMUI: !1,
+        IN_GAMEPADUI: !1,
+        IN_STEAMUI_SHARED_CONTEXT: !1,
+        DECK_DISPLAY_MODE: !1,
+        ON_DECK: !1,
+        ON_STEAMOS: !1,
+        IN_GAMESCOPE: !1,
+        IN_LOGIN: !1,
+        IN_LOGIN_REFRESH: !1,
+        USE_LONGEST_LOC_STRING: !1,
+      };
+      i.FOO = !1;
+      const o = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -24829,10 +24902,11 @@
             n.e(483),
             n.e(6656),
             n.e(6148),
+            n.e(6576),
             n.e(2530),
             n.e(8805),
-            n.e(9949),
             n.e(5663),
+            n.e(9949),
             n.e(8931),
             n.e(3742),
             n.e(9427),
@@ -24848,10 +24922,11 @@
             n.e(483),
             n.e(6656),
             n.e(2468),
+            n.e(6576),
             n.e(2530),
             n.e(8805),
-            n.e(9949),
             n.e(5663),
+            n.e(9949),
             n.e(8931),
             n.e(3742),
             n.e(9427),
@@ -24870,10 +24945,11 @@
             n.e(483),
             n.e(6656),
             n.e(2468),
+            n.e(6576),
             n.e(2530),
             n.e(8805),
-            n.e(9949),
             n.e(5663),
+            n.e(9949),
             n.e(8931),
             n.e(3742),
             n.e(9427),
@@ -24893,10 +24969,11 @@
             n.e(483),
             n.e(6656),
             n.e(2468),
+            n.e(6576),
             n.e(2530),
             n.e(8805),
-            n.e(9949),
             n.e(5663),
+            n.e(9949),
             n.e(8931),
             n.e(3742),
             n.e(9427),
@@ -24909,9 +24986,13 @@
           ]).then(n.bind(n, 20546))
         ),
         S = i.lazy(() =>
-          Promise.all([n.e(6148), n.e(3742), n.e(2805), n.e(238)]).then(
-            n.bind(n, 6869)
-          )
+          Promise.all([
+            n.e(6148),
+            n.e(6576),
+            n.e(3742),
+            n.e(2805),
+            n.e(238),
+          ]).then(n.bind(n, 6869))
         ),
         w = i.lazy(() =>
           Promise.all([
@@ -24919,10 +25000,11 @@
             n.e(7948),
             n.e(483),
             n.e(6656),
+            n.e(6576),
             n.e(2530),
             n.e(8805),
-            n.e(9949),
             n.e(5663),
+            n.e(9949),
             n.e(8931),
             n.e(3742),
             n.e(9427),
@@ -24943,10 +25025,11 @@
             n.e(6656),
             n.e(2468),
             n.e(543),
+            n.e(6576),
             n.e(2530),
             n.e(8805),
-            n.e(9949),
             n.e(5663),
+            n.e(9949),
             n.e(8931),
             n.e(3742),
             n.e(9427),
@@ -24964,10 +25047,11 @@
             n.e(7948),
             n.e(483),
             n.e(6656),
+            n.e(6576),
             n.e(2530),
             n.e(8805),
-            n.e(9949),
             n.e(5663),
+            n.e(9949),
             n.e(8931),
             n.e(3742),
             n.e(9427),
@@ -24984,6 +25068,7 @@
           Promise.all([
             n.e(6588),
             n.e(7948),
+            n.e(6576),
             n.e(2530),
             n.e(9949),
             n.e(1649),
@@ -24991,27 +25076,30 @@
           ]).then(n.bind(n, 56597))
         ),
         T = i.lazy(() =>
-          Promise.all([n.e(6588), n.e(2530), n.e(4535)]).then(n.bind(n, 93063))
+          Promise.all([n.e(6588), n.e(6576), n.e(2530), n.e(4535)]).then(
+            n.bind(n, 93063)
+          )
         ),
         A = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
             n.e(483),
+            n.e(6576),
             n.e(2530),
             n.e(8805),
-            n.e(9949),
             n.e(5663),
+            n.e(9949),
             n.e(8931),
             n.e(7942),
             n.e(3903),
           ]).then(n.bind(n, 6150))
         ),
         O = i.lazy(() =>
-          Promise.all([n.e(8805), n.e(312)]).then(n.bind(n, 18786))
+          Promise.all([n.e(6576), n.e(8805), n.e(312)]).then(n.bind(n, 18786))
         ),
         L = i.lazy(() =>
-          Promise.all([n.e(8805), n.e(5663), n.e(1909)]).then(n.bind(n, 66358))
+          Promise.all([n.e(8805), n.e(5663), n.e(1909)]).then(n.bind(n, 2031))
         ),
         B = () => (f.JA.IS_OGG ? "games" : "groups"),
         k = {},
@@ -25285,7 +25373,7 @@
       var W = n(32338),
         j = n(1583),
         z = n(81052);
-      n(57255), n(86701), n(87256), n(46723), n(24868), n(66289), n(22974);
+      n(57255), n(86701), n(87256), n(46085), n(24868), n(66289), n(22974);
       n(90174);
       (0, z.Dj)(() =>
         (0, r.mG)(void 0, void 0, void 0, function* () {

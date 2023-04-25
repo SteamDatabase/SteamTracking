@@ -1009,13 +1009,11 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 .newmodal_header {
 	padding: 0px 0px 0px 0px;
 	text-align: left;
-
-	font-weight: 300;
-	font-size: 32px;
-	line-height: 36px;
-	letter-spacing: 2px;
+	font-size: 22px;
+	font-weight: 700;
 	color: #ffffff;
-	text-transform: uppercase;
+	letter-spacing: unset;
+	text-transform: unset;
 	flex-shrink: 0;
 }
 @media screen and (max-width: 910px)

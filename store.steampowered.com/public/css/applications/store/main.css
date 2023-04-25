@@ -4344,6 +4344,7 @@ body.in_global_drag .title-area {
 .title-area-icon:hover .SVGIcon_Button line,
 .title-area-icon:hover .SVGIcon_Button polyline {
   stroke: #fff;
+  transition: stroke 0.15s ease-out;
 }
 .ModalDialogPopup .maximizeRestoreButton {
   display: none;
@@ -4583,6 +4584,7 @@ body.in_global_drag .title-area {
   align-items: center;
   justify-content: center;
   cursor: default;
+  transition: stroke 0.15s ease-out;
   width: 32px;
   height: 24px;
   margin-top: 7px;
@@ -4603,8 +4605,10 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area-icon:hover {
   background: #3d4450;
   border-radius: 2px;
+  transition: background 0.15s ease-out;
 }
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
   background: #e22a27;
+  transition: background 0.15s ease-out;
 }

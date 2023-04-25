@@ -6549,7 +6549,7 @@
               )
             : n.createElement(ia, { steamLearnContext: {} }, e.children);
         };
-      var la = a(7008),
+      var la = a(7021),
         ma = a(32494);
       a(23907);
       const da = (e) => {
@@ -12736,7 +12736,7 @@
                           );
                         e += 1;
                       }
-                      let n = o;
+                      let n = d;
                       if (0 == n) {
                         for (const e of t.published_configs())
                           n = Math.max(
