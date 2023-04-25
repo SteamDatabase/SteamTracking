@@ -45249,7 +45249,6 @@ a {
 .herogridpage_HeroGrid_D36V-
   .herogridpage_FilterContainer_2dEVd
   .herogridpage_SpecificFilterContainer_30qnj {
-  width: 250px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45276,8 +45275,8 @@ a {
   .herogridpage_FilterContainer_2dEVd
   .herogridpage_SpecificFilterContainer_30qnj
   .herogridpage_Filter_N74aa {
-  width: 43px;
-  height: 35px;
+  width: 44px;
+  height: 34px;
   margin-left: -4px;
   background-size: cover;
   background-repeat: no-repeat;

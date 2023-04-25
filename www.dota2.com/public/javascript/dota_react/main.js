@@ -39873,7 +39873,8 @@
                     0 == t ||
                     (0 == e.primary_attr && 1 == t) ||
                     (1 == e.primary_attr && 2 == t) ||
-                    (2 == e.primary_attr && 3 == t),
+                    (2 == e.primary_attr && 3 == t) ||
+                    (3 == e.primary_attr && 4 == t),
                   r = 0 == n || e.complexity == n;
                 return a && r;
               }
@@ -39955,6 +39956,16 @@
                     backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-int-active.png )`,
                   },
                   onClick: () => a(3 == t ? 0 : 3),
+                }),
+                i.createElement("div", {
+                  className: (0, v.Z)(
+                    qo().Filter,
+                    4 == t && 0 == s.length && qo().Selected
+                  ),
+                  style: {
+                    backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-uni-active.png )`,
+                  },
+                  onClick: () => a(4 == t ? 0 : 4),
                 })
               ),
               i.createElement(
