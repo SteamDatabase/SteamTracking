@@ -25339,14 +25339,14 @@
     },
     99096: (e, t, n) => {
       "use strict";
-      function r(e) {
+      function r(e, t) {
         if ((null == e ? void 0 : e.length) > 1) {
-          let t = e.length;
-          for (; 0 !== t; ) {
-            let n = Math.floor(Math.random() * t);
-            t -= 1;
-            let r = e[t];
-            (e[t] = e[n]), (e[n] = r);
+          let n = t > 0 ? Math.min(t, e.length) : e.length;
+          for (; 0 !== n; ) {
+            let t = Math.floor(Math.random() * n);
+            n -= 1;
+            let r = e[n];
+            (e[n] = e[t]), (e[t] = r);
           }
         }
       }

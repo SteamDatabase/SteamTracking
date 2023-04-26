@@ -21375,7 +21375,7 @@
               (this.m_bDefaultTab = r),
               e.capsules && 0 !== e.capsules.length
                 ? ((this.m_capsuleFilter = new Set()),
-                  i(e.capsules, t).forEach((e) => {
+                  (i ? i(e.capsules, t) : e.capsules).forEach((e) => {
                     this.m_capsuleFilter.add(Number(e.id));
                   }))
                 : (this.m_capsuleFilter = null));

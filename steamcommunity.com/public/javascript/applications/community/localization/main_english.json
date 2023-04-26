@@ -1551,6 +1551,8 @@
     "Sale_Section_FeaturedCurator_UseRandomOrder": "Randomize order of Featured Curators",
     "Sale_Section_FeaturedCurator_UseRandomOrder_hint": "Randomizes the order of display for the Featured curators chosen",
     "Sale_Section_UseRandomOrder_smart_hint": "Randomizes the order of display for top selling items in this smart section",
+    "Sale_Section_UseRandomOrder_TopN": "Top N Items to Randomize",
+    "Sale_Section_UseRandomOrder_TopN_hint": "This will randomize only this number of items and display the rest (unrandomized) in the order insert or recieved.",
     "Sale_Section_RandomFromSmartSet": "Randomly Pull from All Possible items",
     "Sale_Section_RandomFromSmartSet_hint": "When set, this won't just grab the top selling items that match this tag or category, but will randomly pick from all possible matching items",
     "Sale_Section_ShowAsCarousel": "Display as Carousel",
