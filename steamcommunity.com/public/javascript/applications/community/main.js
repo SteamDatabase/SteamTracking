@@ -2942,7 +2942,7 @@
     },
     69210: (e, t, n) => {
       "use strict";
-      n.d(t, { Rt: () => v, K3: () => E, eL: () => _, Wy: () => C });
+      n.d(t, { Rt: () => E, K3: () => b, eL: () => _, Wy: () => v });
       var r = n(33940),
         i = n(50265),
         o = n(89526),
@@ -2994,7 +2994,8 @@
       }
       (0, r.gn)([l.a], p.prototype, "OnLinkLoad", null);
       var _,
-        g = n(25730);
+        g = n(25730),
+        f = n(50840);
       !(function (e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
@@ -3024,14 +3025,14 @@
           (e[(e.PopupContextMenu = 344328)] = "PopupContextMenu"),
           (e[(e.StandaloneContextMenu = 1327368)] = "StandaloneContextMenu");
       })(_ || (_ = {}));
-      const f = o.createContext({ ownerWindow: window }),
-        C = () => o.useContext(f);
-      function v(e) {
+      const C = o.createContext({ ownerWindow: window }),
+        v = () => o.useContext(C);
+      function E(e) {
         const { ownerWindow: t, children: n } = e,
           r = o.useMemo(() => ({ ownerWindow: t }), [t]);
-        return o.createElement(f.Provider, { value: r }, n);
+        return o.createElement(C.Provider, { value: r }, n);
       }
-      class E {
+      class b {
         constructor(e, t) {
           (this.m_bCreated = !1),
             (this.m_onCreateRender = null),
@@ -3078,7 +3079,7 @@
           let i,
             o,
             s,
-            a = S.GetExistingPopup(this.m_strName);
+            a = w.GetExistingPopup(this.m_strName);
           (a && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
             a
@@ -3086,7 +3087,7 @@
                 (i = a.m_popup),
                 a.ReleasePopup(),
                 (s = a.m_renderWhenReady),
-                S.RemoveTrackedPopup(a),
+                w.RemoveTrackedPopup(a),
                 i.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
                 i.removeEventListener("unload", a.OnUnload),
                 i.removeEventListener("resize", a.OnResizeEvent),
@@ -3095,7 +3096,7 @@
                 i.removeEventListener("drop", a.OnDrop),
                 i.removeEventListener("dragover", a.OnDragOver),
                 i.removeEventListener("message", this.OnMessage))
-              : (({ popup: i, element: o } = b.CreatePopup(
+              : (({ popup: i, element: o } = S.CreatePopup(
                   this.m_strName,
                   this.m_rgParams
                 )),
@@ -3119,7 +3120,7 @@
               this.m_renderWhenReady.SetTarget(() =>
                 this.RenderInternal(this.m_popup, this.m_element, e)
               )),
-            S.AddTrackedPopup(this),
+            w.AddTrackedPopup(this),
             a
               ? (this.OnCreateInternal(), e && this.Focus())
               : (null ===
@@ -3177,7 +3178,7 @@
         }
         OnUnload() {
           this.RemoveEventListeners(),
-            S.RemoveTrackedPopup(this),
+            w.RemoveTrackedPopup(this),
             this.OnClose(),
             (this.m_popup = void 0);
         }
@@ -3210,7 +3211,10 @@
             : this.m_popup && this.m_popup.focus();
         }
         Close() {
-          this.m_popup && this.m_popup.window.SteamClient.Window.Close();
+          this.m_popup &&
+            ((0, f.w3)(this.m_popup.window, "Window.Close")
+              ? this.m_popup.window.SteamClient.Window.Close()
+              : this.m_popup.window.close());
         }
         GetName() {
           return this.m_strName;
@@ -3277,18 +3281,18 @@
         OnFocus() {}
         OnBlur() {}
       }
-      (0, r.gn)([i.LO], E.prototype, "m_bFocused", void 0),
-        (0, r.gn)([l.a], E.prototype, "OnMessage", null),
-        (0, r.gn)([l.a], E.prototype, "RenderInternal", null),
-        (0, r.gn)([l.a], E.prototype, "OnCreateInternal", null),
-        (0, r.gn)([l.a], E.prototype, "OnResizeEvent", null),
-        (0, r.gn)([l.a], E.prototype, "OnBeforeUnloadEvent", null),
-        (0, r.gn)([l.a], E.prototype, "OnUnload", null),
-        (0, r.gn)([l.a], E.prototype, "OnFocusInternal", null),
-        (0, r.gn)([l.a], E.prototype, "OnBlurInternal", null);
+      (0, r.gn)([i.LO], b.prototype, "m_bFocused", void 0),
+        (0, r.gn)([l.a], b.prototype, "OnMessage", null),
+        (0, r.gn)([l.a], b.prototype, "RenderInternal", null),
+        (0, r.gn)([l.a], b.prototype, "OnCreateInternal", null),
+        (0, r.gn)([l.a], b.prototype, "OnResizeEvent", null),
+        (0, r.gn)([l.a], b.prototype, "OnBeforeUnloadEvent", null),
+        (0, r.gn)([l.a], b.prototype, "OnUnload", null),
+        (0, r.gn)([l.a], b.prototype, "OnFocusInternal", null),
+        (0, r.gn)([l.a], b.prototype, "OnBlurInternal", null);
       (0, r.gn)(
         [l.a],
-        class extends E {
+        class extends b {
           constructor(e, t, n, r) {
             super(e, n), this.SetSavedDimensionsKey(t), (this.m_bExpires = r);
           }
@@ -3310,14 +3314,14 @@
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  S.SetRestoreDetails(
+                  w.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = S.GetRestoreDetails(
+                  (e.strRestoreDetails = w.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -3344,7 +3348,7 @@
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !n &&
-                    (S.SetRestoreDetails(e, t, this.m_bExpires),
+                    (w.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -3357,14 +3361,14 @@
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            S.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            w.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }.prototype,
         "QueryAndStoreWindowPosition",
         null
       );
-      class b {
+      class S {
         constructor() {
           if (
             ((this.m_bShuttingDown = !1),
@@ -3603,12 +3607,12 @@
       }
       (0, r.gn)(
         [l.a, (0, a.D)(100)],
-        b.prototype,
+        S.prototype,
         "DebouncedSaveSavedDimensionStore",
         null
       );
-      let S = (0, g.Yt)("PopupManager", () => new b());
-      window.g_PopupManager = S;
+      let w = (0, g.Yt)("PopupManager", () => new S());
+      window.g_PopupManager = w;
     },
     17149: (e, t, n) => {
       "use strict";
@@ -22147,7 +22151,10 @@
                           null !== (e = this.props.onClose) && void 0 !== e
                             ? e
                             : () => {
-                                t && t.SteamClient.Window.Close();
+                                t &&
+                                  ((0, o.w3)(t, "Window.Close")
+                                    ? t.SteamClient.Window.Close()
+                                    : t.close());
                               },
                       },
                       i.createElement(s.pVO, null)
