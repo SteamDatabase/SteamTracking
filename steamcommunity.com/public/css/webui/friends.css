@@ -726,6 +726,11 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   z-index: 5;
   width: 32px;
   height: 24px;
+  background-color: #3d4450;
+  border-radius: 2px;
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   -webkit-app-region: no-drag;
   font-weight: bold;
   cursor: pointer;
@@ -738,7 +743,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 }
 .pagedsettings_HidePageListButton_3LLH_:hover {
   color: #fff;
-  background: #3d4450;
+  background: #464d58;
   border-radius: 2px;
 }
 @keyframes gamepadui_svg_library_SpinnerSpokeFade_2Wg5d {
@@ -9138,6 +9143,8 @@ html:not(.touch)
 }
 .newlogindialog_Login_lat0M {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .newlogindialog_Login_lat0M .newlogindialog_SideBySide_ZHRZ8 {
   display: flex;
@@ -9429,11 +9436,10 @@ html:not(.touch)
   background: #3d4450;
   color: #fff;
   padding: 12px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   font-family: inherit;
   text-align: center;
-  letter-spacing: 0.03em;
   border: none;
   border-radius: 2px;
 }
@@ -9458,11 +9464,10 @@ html:not(.touch)
   outline: none;
   padding: 12px;
   color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   font-family: inherit;
   text-align: center;
-  letter-spacing: 0.03em;
   cursor: pointer;
 }
 .newlogindialog_Login_lat0M .newlogindialog_SubmitButton_DjSvC:hover {
@@ -9582,6 +9587,14 @@ html:not(.touch)
   margin-top: 20px;
   padding-left: 20px;
 }
+.newlogindialog_Login_lat0M .newlogindialog_ConfirmationEntryContainer_3huyZ {
+  background-color: #32353c;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0px 20px;
+  border-radius: 2px;
+  max-width: 500px;
+}
 .newlogindialog_Login_lat0M .newlogindialog_AwaitingMobileConfIcon_3WvDp {
   width: 40px;
   color: #1a99ff;
@@ -9605,7 +9618,7 @@ html:not(.touch)
 .newlogindialog_Login_lat0M .newlogindialog_EnterBackupCodeContainer_DdK_F,
 .newlogindialog_Login_lat0M .newlogindialog_EnterCodeFromMobileContainer_2Io_J,
 .newlogindialog_Login_lat0M .newlogindialog_EnterCodeFromEmailContainer_1YQZI {
-  padding: 0 12px;
+  padding: 12px 12px 24px 12px;
   gap: 24px;
 }
 .newlogindialog_Login_lat0M
@@ -9619,6 +9632,7 @@ html:not(.touch)
   .newlogindialog_Label_1hKgi {
   font-size: 12px;
   color: #afafaf;
+  text-align: center;
 }
 .newlogindialog_Login_lat0M
   .newlogindialog_EnterBackupCodeContainer_DdK_F
@@ -9710,10 +9724,10 @@ html:not(.touch)
   flex-direction: row;
   justify-content: center;
   max-width: 280px;
-  background-color: #32353c;
+  background-color: #2b2e33;
   border-radius: 2px;
   gap: 20px;
-  padding: 10px 28px;
+  padding: 10px 28px 20px;
   cursor: text;
   border: 1px solid transparent;
   position: relative;
@@ -9837,14 +9851,17 @@ html:not(.touch)
 .newlogindialog_Login_lat0M
   .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2 {
   background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
-  padding: 40px 32px 15px 32px;
+  padding: 40px 40px 15px 40px;
   width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .newlogindialog_Login_lat0M
   .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2
   .newlogindialog_FormContainer_3XCnc {
   background: transparent;
-  padding: 24px 0px;
+  padding: 14px 0px;
 }
 @media screen and (max-width: 796px) {
   .newlogindialog_Login_lat0M
@@ -9875,11 +9892,6 @@ html:not(.touch)
 .newlogindialog_Login_lat0M .newlogindialog_HeaderLogo_3v6Wn {
   height: 46px;
   width: 153px;
-}
-.newlogindialog_Login_lat0M
-  .newlogindialog_InClient_1VAFg
-  .newlogindialog_LogoContainer_14exB {
-  margin-top: 10px;
 }
 .newlogindialog_Login_lat0M .newlogindialog_LogoContainer_14exB {
   display: flex;
@@ -10011,10 +10023,8 @@ html:not(.touch)
 }
 .newlogindialog_FailureTitle_1A8Mk {
   color: #fff;
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.055em;
-  font-weight: 200;
+  font-size: 22px;
+  font-weight: 700;
   text-align: center;
 }
 .newlogindialog_FailureDescription_3H-JH {

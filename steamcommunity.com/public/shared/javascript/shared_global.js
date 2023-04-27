@@ -1077,7 +1077,8 @@ function InitMiniprofileHovers( origin )
 	$J(document.body).append( $Hover );
 
 	var fnDataFactory = function( key ) {
-		var rgKey = key.split( /_/ );
+    // key is either a number (accountid) or a string of "accountid_appid"
+		var rgKey = typeof key === "string" ? key.split( /_/ ) : [ key ];
 		var strURL = 'miniprofile/' + rgKey[0];
 
 		if ( rgKey[1] )

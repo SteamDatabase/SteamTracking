@@ -732,6 +732,11 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   z-index: 5;
   width: 32px;
   height: 24px;
+  background-color: #3d4450;
+  border-radius: 2px;
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   -webkit-app-region: no-drag;
   font-weight: bold;
   cursor: pointer;
@@ -744,7 +749,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_HidePageListButton_3i4Ep:hover {
   color: #fff;
-  background: #3d4450;
+  background: #464d58;
   border-radius: 2px;
 }
 @keyframes gamepadui_svg_library_SpinnerSpokeFade_2QBT4 {

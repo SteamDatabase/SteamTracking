@@ -188,6 +188,9 @@
         GetTemplateImage() {
           let e = this.m_templateVars.ll_image[c.De.LANGUAGE];
           return (
+            e ||
+              c.De.LANGUAGE != (0, i.j_)(27) ||
+              (e = this.m_templateVars.ll_image.LATAM),
             e || (e = this.m_templateVars.ll_image.english),
             null == e ? void 0 : e.path
           );
@@ -329,7 +332,7 @@
         u = s(13806),
         _ = s(33940),
         d = s(6960),
-        M = (s(45797), s(5545));
+        M = (s(49969), s(5545));
       function p(e) {
         var t;
         const { path: s, message: n } = e,
@@ -747,8 +750,8 @@
       var C = s(24808),
         x = s(70657),
         B = s(70983),
-        y = s(70762);
-      const G = a.createContext({});
+        G = s(70762);
+      const y = a.createContext({});
       function T(e) {
         const [t, s] = a.useState(),
           n = (0, r.TH)(),
@@ -761,7 +764,7 @@
             (0, B.kQ)("marketingmessage_config", "application_config");
             s({});
           }, [i]),
-          t ? a.createElement(G.Provider, { value: t }, e.children, " ") : null
+          t ? a.createElement(y.Provider, { value: t }, e.children, " ") : null
         );
       }
       const N = {
@@ -814,7 +817,7 @@
                 T,
                 null,
                 a.createElement(
-                  y.Ks,
+                  G.Ks,
                   null,
                   a.createElement(
                     r.rs,

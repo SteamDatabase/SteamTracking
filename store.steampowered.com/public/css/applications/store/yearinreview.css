@@ -4909,6 +4909,29 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   top: 89px;
   z-index: 1;
 }
+.partnereventdialog_InfoStyles_2Zq0U,
+.partnereventdialog_InfoStylesWithIcon_2TYAo {
+  color: #556b2f;
+}
+.partnereventdialog_InfoIconLayout_qgVd4,
+.partnereventdialog_InfoStylesWithIcon_2TYAo,
+.partnereventdialog_InfoStylesBackground_3YqPi {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("/public/images//sharedfiles/icons/icon_spoiler_tag.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_InfoStylesBackground_3YqPi {
+  background-color: #556b2f;
+  color: #fff;
+}
+.partnereventdialog_InfoStylesBackground_3YqPi .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
 .partnereventdialog_Padding_2oWai {
   padding-top: 10px;
 }

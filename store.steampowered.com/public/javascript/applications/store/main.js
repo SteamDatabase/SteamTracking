@@ -3760,7 +3760,7 @@
             (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
         })(o || (o = {}));
     },
-    45797: (e, t, n) => {
+    49969: (e, t, n) => {
       "use strict";
       n.d(t, {
         e7: () => s.e7,
@@ -4814,7 +4814,7 @@
       "use strict";
       n.d(t, { gA: () => a, lq: () => s });
       var r = n(45878),
-        i = (n(6960), n(45797), n(82569), n(91851), n(67737)),
+        i = (n(6960), n(49969), n(82569), n(91851), n(67737)),
         o = n(43057);
       class s {
         constructor(e, t, n, o, s) {
@@ -5474,9 +5474,9 @@
             : o.ni(this.m_popupContextMenu.root_element, e);
         }
         BHasFocus() {
-          return this.m_element
-            ? o.ni(this.m_element, this.m_element.ownerDocument.activeElement)
-            : this.m_popupContextMenu.focused;
+          return this.m_popupContextMenu
+            ? this.m_popupContextMenu.focused
+            : o.ni(this.m_element, this.m_element.ownerDocument.activeElement);
         }
         BIsFocusInChildHierarchy() {
           return (
@@ -5739,14 +5739,14 @@
     },
     69210: (e, t, n) => {
       "use strict";
-      n.d(t, { Rt: () => v, K3: () => S, eL: () => _, Wy: () => C });
+      n.d(t, { Rt: () => S, K3: () => b, eL: () => _, Wy: () => v });
       var r = n(33940),
         i = n(50265),
         o = n(89526),
         s = n(81052),
         a = n(63845),
         l = n(59821),
-        c = n(45797),
+        c = n(49969),
         d = n(31587),
         u = n(70983),
         m = n(32338),
@@ -5791,7 +5791,8 @@
       }
       (0, r.gn)([l.a], p.prototype, "OnLinkLoad", null);
       var _,
-        g = n(25730);
+        g = n(25730),
+        f = n(50840);
       !(function (e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
@@ -5821,14 +5822,14 @@
           (e[(e.PopupContextMenu = 344328)] = "PopupContextMenu"),
           (e[(e.StandaloneContextMenu = 1327368)] = "StandaloneContextMenu");
       })(_ || (_ = {}));
-      const f = o.createContext({ ownerWindow: window }),
-        C = () => o.useContext(f);
-      function v(e) {
+      const C = o.createContext({ ownerWindow: window }),
+        v = () => o.useContext(C);
+      function S(e) {
         const { ownerWindow: t, children: n } = e,
           r = o.useMemo(() => ({ ownerWindow: t }), [t]);
-        return o.createElement(f.Provider, { value: r }, n);
+        return o.createElement(C.Provider, { value: r }, n);
       }
-      class S {
+      class b {
         constructor(e, t) {
           (this.m_bCreated = !1),
             (this.m_onCreateRender = null),
@@ -5875,7 +5876,7 @@
           let i,
             o,
             s,
-            a = E.GetExistingPopup(this.m_strName);
+            a = w.GetExistingPopup(this.m_strName);
           (a && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
             a
@@ -5883,7 +5884,7 @@
                 (i = a.m_popup),
                 a.ReleasePopup(),
                 (s = a.m_renderWhenReady),
-                E.RemoveTrackedPopup(a),
+                w.RemoveTrackedPopup(a),
                 i.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
                 i.removeEventListener("unload", a.OnUnload),
                 i.removeEventListener("resize", a.OnResizeEvent),
@@ -5892,7 +5893,7 @@
                 i.removeEventListener("drop", a.OnDrop),
                 i.removeEventListener("dragover", a.OnDragOver),
                 i.removeEventListener("message", this.OnMessage))
-              : (({ popup: i, element: o } = b.CreatePopup(
+              : (({ popup: i, element: o } = E.CreatePopup(
                   this.m_strName,
                   this.m_rgParams
                 )),
@@ -5916,7 +5917,7 @@
               this.m_renderWhenReady.SetTarget(() =>
                 this.RenderInternal(this.m_popup, this.m_element, e)
               )),
-            E.AddTrackedPopup(this),
+            w.AddTrackedPopup(this),
             a
               ? (this.OnCreateInternal(), e && this.Focus())
               : (null ===
@@ -5974,7 +5975,7 @@
         }
         OnUnload() {
           this.RemoveEventListeners(),
-            E.RemoveTrackedPopup(this),
+            w.RemoveTrackedPopup(this),
             this.OnClose(),
             (this.m_popup = void 0);
         }
@@ -6007,7 +6008,10 @@
             : this.m_popup && this.m_popup.focus();
         }
         Close() {
-          this.m_popup && this.m_popup.window.SteamClient.Window.Close();
+          this.m_popup &&
+            ((0, f.w3)(this.m_popup.window, "Window.Close")
+              ? this.m_popup.window.SteamClient.Window.Close()
+              : this.m_popup.window.close());
         }
         GetName() {
           return this.m_strName;
@@ -6074,18 +6078,18 @@
         OnFocus() {}
         OnBlur() {}
       }
-      (0, r.gn)([i.LO], S.prototype, "m_bFocused", void 0),
-        (0, r.gn)([l.a], S.prototype, "OnMessage", null),
-        (0, r.gn)([l.a], S.prototype, "RenderInternal", null),
-        (0, r.gn)([l.a], S.prototype, "OnCreateInternal", null),
-        (0, r.gn)([l.a], S.prototype, "OnResizeEvent", null),
-        (0, r.gn)([l.a], S.prototype, "OnBeforeUnloadEvent", null),
-        (0, r.gn)([l.a], S.prototype, "OnUnload", null),
-        (0, r.gn)([l.a], S.prototype, "OnFocusInternal", null),
-        (0, r.gn)([l.a], S.prototype, "OnBlurInternal", null);
+      (0, r.gn)([i.LO], b.prototype, "m_bFocused", void 0),
+        (0, r.gn)([l.a], b.prototype, "OnMessage", null),
+        (0, r.gn)([l.a], b.prototype, "RenderInternal", null),
+        (0, r.gn)([l.a], b.prototype, "OnCreateInternal", null),
+        (0, r.gn)([l.a], b.prototype, "OnResizeEvent", null),
+        (0, r.gn)([l.a], b.prototype, "OnBeforeUnloadEvent", null),
+        (0, r.gn)([l.a], b.prototype, "OnUnload", null),
+        (0, r.gn)([l.a], b.prototype, "OnFocusInternal", null),
+        (0, r.gn)([l.a], b.prototype, "OnBlurInternal", null);
       (0, r.gn)(
         [l.a],
-        class extends S {
+        class extends b {
           constructor(e, t, n, r) {
             super(e, n), this.SetSavedDimensionsKey(t), (this.m_bExpires = r);
           }
@@ -6107,14 +6111,14 @@
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  E.SetRestoreDetails(
+                  w.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = E.GetRestoreDetails(
+                  (e.strRestoreDetails = w.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -6141,7 +6145,7 @@
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !n &&
-                    (E.SetRestoreDetails(e, t, this.m_bExpires),
+                    (w.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -6154,14 +6158,14 @@
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            E.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            w.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }.prototype,
         "QueryAndStoreWindowPosition",
         null
       );
-      class b {
+      class E {
         constructor() {
           if (
             ((this.m_bShuttingDown = !1),
@@ -6400,16 +6404,16 @@
       }
       (0, r.gn)(
         [l.a, (0, a.D)(100)],
-        b.prototype,
+        E.prototype,
         "DebouncedSaveSavedDimensionStore",
         null
       );
-      let E = (0, g.Yt)("PopupManager", () => new b());
-      window.g_PopupManager = E;
+      let w = (0, g.Yt)("PopupManager", () => new E());
+      window.g_PopupManager = w;
     },
     17149: (e, t, n) => {
       "use strict";
-      n.d(t, { B: () => H });
+      n.d(t, { B: () => W });
       var r = n(89526),
         i = n(69210),
         o = n(33940),
@@ -6423,7 +6427,7 @@
         h = n(39396),
         p = n(50265),
         _ = n(6960);
-      n(45797), n(89252);
+      n(49969), n(89252);
       class g {
         constructor() {
           (this.m_mapCallbacks = new Map()),
@@ -7182,8 +7186,9 @@
         }
       }
       var M = n(23213),
-        T = n(32338);
-      class B {
+        T = n(32338),
+        B = n(93958);
+      class L {
         constructor(e = !1) {
           (this.m_bRunOnce = !1),
             (this.m_ClientConnectionCallbacks = new M.pB()),
@@ -7214,7 +7219,7 @@
           );
         }
       }
-      function L(e, t) {
+      function A(e, t) {
         return () => {
           try {
             e();
@@ -7223,20 +7228,23 @@
           }
         };
       }
-      class A {
+      class k {
         constructor() {
+          var e;
           (this.m_steamid = new d.K()),
             (this.m_bLoggedOn = !1),
             (this.m_bCompletedInitialConnect = !1),
             (this.m_unAccountFlags = 0),
             (this.m_strIPCountry = ""),
             (this.m_strPersonaName = ""),
+            (this.m_rtReconnectThrottleStart = 0),
+            (this.m_rtReconnectThrottleExpiration = 0),
             (this.m_bConnected = !1),
             (this.m_bConnectionFailed = !1),
             (this.m_setConnectedServers = new Set()),
-            (this.m_callbacksOnConnectOneTime = new B(!0)),
-            (this.m_callbacksOnConnect = new B()),
-            (this.m_callbacksOnDisconnect = new B()),
+            (this.m_callbacksOnConnectOneTime = new L(!0)),
+            (this.m_callbacksOnConnect = new L()),
+            (this.m_callbacksOnDisconnect = new L()),
             (this.m_bForceDisconnect = !1),
             (this.m_bPerformedInitialClockAdjustment = !1),
             (this.m_nWallClockDriftMS = 0),
@@ -7284,7 +7292,17 @@
               window.addEventListener &&
               window.addEventListener("unload", (e) => {
                 this.ForceDisconnect();
-              });
+              }),
+            (null ===
+              (e =
+                null === SteamClient || void 0 === SteamClient
+                  ? void 0
+                  : SteamClient.User) || void 0 === e
+              ? void 0
+              : e.RegisterForConnectionAttemptsThrottled) &&
+              SteamClient.User.RegisterForConnectionAttemptsThrottled(
+                this.OnConnectionAttempThrottled
+              );
         }
         get steamid() {
           return this.m_steamid;
@@ -7297,6 +7315,12 @@
         }
         get messageHandlers() {
           return this.m_messageHandlers;
+        }
+        get rtReconnectThrottleStart() {
+          return this.m_rtReconnectThrottleStart;
+        }
+        get rtReconnectThrottleExpiration() {
+          return this.m_rtReconnectThrottleExpiration;
         }
         BDisconnected() {
           return !this.logged_on && this.m_steamid.BIsValid();
@@ -7322,7 +7346,7 @@
           return SteamClient.User.Connect();
         }
         RunWhenLoggedOn(e, t) {
-          let n = L(e, "RunWhenLoggedOn");
+          let n = A(e, "RunWhenLoggedOn");
           this.BConnectedToServer(t)
             ? n()
             : this.m_callbacksOnConnectOneTime.AddCallback(n, t);
@@ -7331,7 +7355,7 @@
           return new Promise((e) => this.RunWhenLoggedOn(e));
         }
         AddOnLogonCallback(e, t) {
-          let n = L(e, "AddOnLogonCallback");
+          let n = A(e, "AddOnLogonCallback");
           return (
             this.BConnectedToServer(t) && n(),
             this.m_callbacksOnConnect.AddCallback(n, t)
@@ -7424,6 +7448,13 @@
             ),
             this.m_setConnectedServers.clear();
         }
+        OnConnectionAttempThrottled(e) {
+          0 == e.rtCooldownExpiration
+            ? (this.m_rtReconnectThrottleStart = 0)
+            : 0 == this.m_rtReconnectThrottleStart &&
+              (this.m_rtReconnectThrottleStart = (0, B.QU)()),
+            (this.m_rtReconnectThrottleExpiration = e.rtCooldownExpiration);
+        }
         DEBUG_LogCMInterfaceActivity(e, t, n = !0) {
           0;
         }
@@ -7474,24 +7505,37 @@
           return new Date(1e3 * e + this.m_nWallClockDriftMS);
         }
       }
-      (0, o.gn)([p.LO], A.prototype, "m_steamid", void 0),
-        (0, o.gn)([p.LO], A.prototype, "m_bLoggedOn", void 0),
-        (0, o.gn)([p.LO], A.prototype, "m_bCompletedInitialConnect", void 0),
-        (0, o.gn)([p.LO], A.prototype, "m_unAccountFlags", void 0),
-        (0, o.gn)([p.LO], A.prototype, "m_strIPCountry", void 0),
-        (0, o.gn)([p.LO], A.prototype, "m_strPersonaName", void 0),
-        (0, o.gn)([p.LO], A.prototype, "m_bConnected", void 0),
+      (0, o.gn)([p.LO], k.prototype, "m_steamid", void 0),
+        (0, o.gn)([p.LO], k.prototype, "m_bLoggedOn", void 0),
+        (0, o.gn)([p.LO], k.prototype, "m_bCompletedInitialConnect", void 0),
+        (0, o.gn)([p.LO], k.prototype, "m_unAccountFlags", void 0),
+        (0, o.gn)([p.LO], k.prototype, "m_strIPCountry", void 0),
+        (0, o.gn)([p.LO], k.prototype, "m_strPersonaName", void 0),
+        (0, o.gn)([p.LO], k.prototype, "m_rtReconnectThrottleStart", void 0),
         (0, o.gn)(
           [p.LO],
-          A.prototype,
+          k.prototype,
+          "m_rtReconnectThrottleExpiration",
+          void 0
+        ),
+        (0, o.gn)([p.LO], k.prototype, "m_bConnected", void 0),
+        (0, o.gn)(
+          [p.LO],
+          k.prototype,
           "m_bPerformedInitialClockAdjustment",
           void 0
         ),
-        (0, o.gn)([p.aD], A.prototype, "DispatchMessage", null),
-        (0, o.gn)([p.aD], A.prototype, "OnDisconnect", null);
+        (0, o.gn)([p.aD], k.prototype, "DispatchMessage", null),
+        (0, o.gn)([p.aD], k.prototype, "OnDisconnect", null),
+        (0, o.gn)(
+          [p.aD.bound],
+          k.prototype,
+          "OnConnectionAttempThrottled",
+          null
+        );
       (0, o.gn)(
         [p.aD],
-        class extends A {
+        class extends k {
           constructor() {
             super(...arguments),
               (this.m_setEMsgHandlers = new Set()),
@@ -7680,11 +7724,11 @@
         "OnLogonInfoChanged",
         null
       );
-      var k = n(34316),
-        O = n(52868),
-        F = n.n(O);
-      const P = (e) => false;
-      class x {
+      var O = n(34316),
+        F = n(52868),
+        P = n.n(F);
+      const x = (e) => false;
+      class N {
         constructor() {
           this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
         }
@@ -7751,7 +7795,7 @@
         GetCMListFromWebAPI() {
           return (0, o.mG)(this, void 0, void 0, function* () {
             try {
-              const n = yield ((e = N),
+              const n = yield ((e = V),
                 (t = 1e4),
                 () =>
                   new Promise((n, r) => {
@@ -7790,12 +7834,12 @@
             t = [];
           const n = {};
           for (const r of this.m_CMList.rgCMList) {
-            const i = V(r),
+            const i = G(r),
               o = !i || r.rtLastCheck < e;
             o && t.length < 20 && t.push(r),
               (o && !l.De.IN_MOBILE) || (i && i < 1e4 && (n[r.strHost] = r));
           }
-          P(`CM Ping: Starting job, ${t.length} to ping.`);
+          x(`CM Ping: Starting job, ${t.length} to ping.`);
           let r = !1;
           return new Promise((e, i) => {
             let o,
@@ -7807,9 +7851,9 @@
                 ) {
                   const n = Object.keys(t)
                     .map((e) => t[e])
-                    .sort((e, t) => V(e) - V(t));
+                    .sort((e, t) => G(e) - G(t));
                   if (
-                    (P(
+                    (x(
                       `CM Ping: resolving with ${
                         n.length
                       } available hosts. Best: "${
@@ -7833,11 +7877,11 @@
               (l.De.IN_MOBILE && Object.keys(n).length)) &&
               (Object.keys(n).length
                 ? l.De.IN_MOBILE
-                  ? P(
+                  ? x(
                       "CM Ping: Using available CMs for mobile immediate connection"
                     )
-                  : P("CM Ping: CMs immediately ready.")
-                : P(
+                  : x("CM Ping: CMs immediately ready.")
+                : x(
                     "CM Ping: No CMs to ping, but also no already usable CM found. Attempting to use fallback heuristic."
                   ),
               c(n)),
@@ -7846,11 +7890,11 @@
                   (a = "timeout"),
                     !r &&
                       Object.keys(n).some((e) => this.BCMOkToUse(n[e], a)) &&
-                      (P("CM Ping: Using available CMs after timeout."), c(n));
+                      (x("CM Ping: Using available CMs after timeout."), c(n));
                 }, 400)),
                 (s = window.setTimeout(() => {
                   (a = "seriouslytimeout"),
-                    P("CM Ping: Using available CMs after final timeout"),
+                    x("CM Ping: Using available CMs after final timeout"),
                     c(n);
                 }, 12e3)));
             let d,
@@ -7863,11 +7907,11 @@
                   (!r && d()) ||
                     (0 == --m &&
                       (r
-                        ? (P(
+                        ? (x(
                             "CM Ping: Pinging threads complete, but we've already found a CM."
                           ),
                           this.WriteCMListToLocalStorage())
-                        : (P(
+                        : (x(
                             "CM Ping: exhausted CMs to ping with no resolution"
                           ),
                           this.BCMOkToUse(e, "seriouslytimeout")
@@ -7903,7 +7947,7 @@
               (e = n);
           }
           return (
-            P(
+            x(
               "CMList: GetCMWithFewestDisconnects - using " +
                 (e ? this.FixDevHost(e.strHost) : "none!")
             ),
@@ -7923,27 +7967,27 @@
         PingCM(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
             let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/";
-            P(`CM Ping: Pinging ${t}...`);
+            x(`CM Ping: Pinging ${t}...`);
             let n = performance.now();
-            const r = F().CancelToken.source();
+            const r = P().CancelToken.source();
             let i = window.setTimeout(() => {
-              P(`CM Ping: Cancelling ping for ${e.strHost} due to timeout`),
+              x(`CM Ping: Cancelling ping for ${e.strHost} due to timeout`),
                 r.cancel();
             }, 1e3);
             try {
-              let o = yield F().head(t, { cancelToken: r.token });
-              P(`CM Ping: Got HEAD response for ${e.strHost}`),
+              let o = yield P().head(t, { cancelToken: r.token });
+              x(`CM Ping: Got HEAD response for ${e.strHost}`),
                 window.clearTimeout(i);
               let s = performance.now() - n,
                 a = o.headers["x-steam-cmload"]
                   ? parseInt(o.headers["x-steam-cmload"])
                   : void 0;
-              P(`CM Ping: pinged ${e.strHost} in ${s}ms, load value ${a}`),
+              x(`CM Ping: pinged ${e.strHost} in ${s}ms, load value ${a}`),
                 (e.msPing = s),
                 (e.nCMLoad = a);
             } catch (t) {
-              F().isCancel(t)
-                ? P(`CM Ping: Cancelled ping for ${e.strHost} after timeout`)
+              P().isCancel(t)
+                ? x(`CM Ping: Cancelled ping for ${e.strHost} after timeout`)
                 : window.clearTimeout(i),
                 (e.msPing = 1e4),
                 (e.nCMLoad = 0);
@@ -7952,28 +7996,28 @@
           });
         }
       }
-      function N() {
+      function V() {
         return (0, o.mG)(this, void 0, void 0, function* () {
           const e =
             l.De.WEBAPI_BASE_URL +
             "ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets";
-          P(`Fetching "${e}"`);
-          const t = (yield F().get(e)).data,
+          x(`Fetching "${e}"`);
+          const t = (yield P().get(e)).data,
             n = (t && t.response && t.response.serverlist) || [];
           return (
-            P(
+            x(
               `CM Ping: Got CM list from webapi, ${n.length} websocket CMs available`
             ),
             n.map((e, t) => ({ strHost: e.endpoint, nPriority: t }))
           );
         });
       }
-      function V(e) {
+      function G(e) {
         return (e.msPing || 0) + (e.nCMLoad || 0);
       }
       (0, o.gn)(
         [p.aD],
-        class extends A {
+        class extends k {
           constructor(e) {
             super(),
               (this.m_Session = {
@@ -7986,7 +8030,7 @@
               (this.m_bLoadingCMList = !1),
               (this.m_iCallSeq = 1),
               (this.m_mapWaitingCallbacks = new Map()),
-              (this.m_CMList = new x()),
+              (this.m_CMList = new N()),
               (this.LogOnResponseHandler =
                 this.messageHandlers.RegisterEMessageAction(751, w, (e) => {
                   let t = e.Body().eresult();
@@ -8227,7 +8271,7 @@
           DecodeAndDispatchMultiMsg(e) {
             let t = e.Body().message_body();
             if (!t) return;
-            e.Body().size_unzipped() && (t = k.inflate(t));
+            e.Body().size_unzipped() && (t = O.inflate(t));
             let n = new u.At(t);
             for (; n.GetCountBytesRemaining() > 0; ) {
               let e = n.GetUint32(),
@@ -8241,17 +8285,17 @@
         "DecodeAndDispatchMultiMsg",
         null
       );
-      const G = r.createContext({ body_class: "" });
-      function U() {
-        return r.useContext(G);
+      const U = r.createContext({ body_class: "" });
+      function H() {
+        return r.useContext(U);
       }
-      function H(e, t, n) {
+      function W(e, t, n) {
         const i = r.useRef(),
           [o, s] = r.useState(void 0),
-          a = U();
+          a = H();
         return (
           i.current ||
-            (i.current = new W(
+            (i.current = new j(
               e,
               (function (e, t) {
                 return Object.assign(Object.assign({}, e), {
@@ -8290,7 +8334,7 @@
           { popup: i.current.window, element: o, popupObj: i.current }
         );
       }
-      class W extends i.K3 {
+      class j extends i.K3 {
         constructor(e, t, n) {
           super(e, t), (this.m_fnReadyToRender = n);
         }
@@ -12185,7 +12229,7 @@
       n.d(t, { Wz: () => u, k$: () => m });
       var r = n(33940),
         i = n(89526),
-        o = (n(45797), n(14258)),
+        o = (n(49969), n(14258)),
         s = n(25730),
         a = n(81052),
         l = n(31621);
@@ -12413,7 +12457,7 @@
         a = n(59821),
         l = n(52868),
         c = n.n(l),
-        d = (n(6960), n(45797), n(43057)),
+        d = (n(6960), n(49969), n(43057)),
         u = (n(91851), n(82569));
       n(89252), n(19320);
       o.Message;
@@ -13085,7 +13129,7 @@
           (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
           (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
       })(r || (r = {}));
-      n(45797);
+      n(49969);
     },
     23970: (e, t, n) => {
       "use strict";
@@ -13104,7 +13148,7 @@
     },
     89252: (e, t, n) => {
       "use strict";
-      n(45797);
+      n(49969);
     },
     91851: (e, t, n) => {
       "use strict";
@@ -14391,7 +14435,7 @@
       }
       (0, r.gn)([o.a], a.prototype, "PollGamepads", null),
         (0, r.gn)([o.a], a.prototype, "OnWindowRegainedFocus", null);
-      var l = n(45797),
+      var l = n(49969),
         c = n(57986);
       const d = {
           [c.A6.GAMEPAD_BUTTON_A]: i.eV.OK,
@@ -15260,7 +15304,7 @@
       var r = n(33940),
         i = n(52868),
         o = n.n(i),
-        s = (n(50265), n(6960), n(45797), n(17922)),
+        s = (n(50265), n(6960), n(49969), n(17922)),
         a = n(70657),
         l = n(8453),
         c = (n(96158), n(47330)),
@@ -15820,8 +15864,11 @@
             ));
         }
         get parentWin() {
+          var e;
           return (
-            this.props.parentWin || this.props.element.ownerDocument.defaultView
+            (null === (e = this.props.element) || void 0 === e
+              ? void 0
+              : e.ownerDocument.defaultView) || this.props.parentWin
           );
         }
         BindMenuElement(e) {
@@ -20266,7 +20313,7 @@
       });
       var r = n(33940),
         i = n(89526);
-      n(45797), n(82633), n(75959);
+      n(49969), n(82633), n(75959);
       function o(e) {
         return i.createElement(
           "svg",
@@ -20523,10 +20570,10 @@
       n.d(t, { t: () => S, U: () => b });
       var r = n(33940),
         i = n(89526),
-        o = n(22840),
-        s = n(19231),
-        a = n(73961),
-        l = n(69210),
+        o = n(69210),
+        s = n(22840),
+        a = n(19231),
+        l = n(73961),
         c = n(24971),
         d = n(70983);
       function u(e) {
@@ -20554,7 +20601,7 @@
       }
       function m(e) {
         const [t, n] = i.useState(),
-          r = (0, l.Wy)().ownerWindow;
+          r = (0, o.Wy)().ownerWindow;
         return (
           i.useLayoutEffect(() => {
             const e = r.document.body,
@@ -20570,7 +20617,7 @@
             );
           }, [r]),
           t
-            ? a.createPortal(
+            ? l.createPortal(
                 i.createElement(h, Object.assign({}, e, { elContainer: t })),
                 t
               )
@@ -20578,12 +20625,12 @@
         );
       }
       function h(e) {
-        const { elContainer: t, onMeasureComplete: n, request: s } = e;
+        const { elContainer: t, onMeasureComplete: n, request: o } = e;
         return (
           i.useEffect(() => {
             let e = !1;
             const i = (t) => {
-              e || (s.fnResults(t), n(s), (e = !0));
+              e || (o.fnResults(t), n(o), (e = !0));
             };
             return (
               (function (e, t) {
@@ -20597,11 +20644,11 @@
                     width: Math.ceil(r.width),
                   };
                 });
-              })(t, s.promiseContentReady).then(i),
+              })(t, o.promiseContentReady).then(i),
               () => i(void 0)
             );
-          }, [t, n, s]),
-          i.createElement(o.SV, null, s.rctToMeasure)
+          }, [t, n, o]),
+          i.createElement(s.SV, null, o.rctToMeasure)
         );
       }
       var p = n(13806),
@@ -20628,47 +20675,59 @@
         );
       }
       function S(e) {
-        let { ModalManager: t, DialogWrapper: n, style: o } = e,
-          s = (0, r._T)(e, ["ModalManager", "DialogWrapper", "style"]);
-        const a = t.modals,
-          l = a && !!a.length,
-          c = t.active_modal;
-        C(l),
+        let { ModalManager: t, DialogWrapper: n, style: s } = e,
+          a = (0, r._T)(e, ["ModalManager", "DialogWrapper", "style"]);
+        const l = t.modals,
+          c = l && !!l.length,
+          d = t.active_modal;
+        C(c),
           (function (e) {
-            const t = (0, _.NW)();
-            i.useEffect(() => e.RegisterOverlay(t), [e, t]);
+            const t = (0, o.Wy)().ownerWindow,
+              n = (0, _.NW)(),
+              r = i.useCallback(() => {
+                var e;
+                (null === (e = null == t ? void 0 : t.SteamClient) ||
+                void 0 === e
+                  ? void 0
+                  : e.Window) && t.SteamClient.Window.BringToFront();
+              }, [t]);
+            i.useEffect(() => e.RegisterOverlay(n), [e, n]),
+              i.useEffect(
+                () => e.RegisterOnModalShownCallback(r).Unregister,
+                [e, r]
+              );
           })(t);
-        const d = v(t);
-        let m = null;
+        const m = v(t);
+        let h = null;
         return (
-          a && a.length
-            ? (m = a.map((e) =>
+          l && l.length
+            ? (h = l.map((e) =>
                 e instanceof g.kv
                   ? i.createElement(w, {
                       key: e.key,
                       modal: e,
-                      active: e == c,
+                      active: e == d,
                       Component: null != n ? n : y,
                     })
                   : e instanceof g.QA
-                  ? i.createElement(E, { key: e.key, modal: e, active: e == c })
+                  ? i.createElement(E, { key: e.key, modal: e, active: e == d })
                   : void 0
               ))
-            : (o = Object.assign(Object.assign({}, o), { display: "none" })),
+            : (s = Object.assign(Object.assign({}, s), { display: "none" })),
           i.createElement(
             i.Fragment,
             null,
             i.createElement(
               "div",
-              Object.assign({}, s, {
-                style: o,
-                ref: d,
-                className: (0, p.Z)(s.className, "FullModalOverlay"),
+              Object.assign({}, a, {
+                style: s,
+                ref: m,
+                className: (0, p.Z)(a.className, "FullModalOverlay"),
               }),
               i.createElement("div", {
                 className: "ModalOverlayContent ModalOverlayBackground",
               }),
-              m
+              h
             ),
             i.createElement(u, { ModalManager: t }),
             i.createElement(D, { ModalManager: t })
@@ -20694,7 +20753,7 @@
             [t, n]
           ),
           i.createElement(
-            o.SV,
+            s.SV,
             null,
             i.createElement("div", {
               className: (0, p.Z)(
@@ -20708,11 +20767,11 @@
       }
       function w(e) {
         const { modal: t, active: n, Component: r } = e,
-          s = (0, _.NW)();
+          o = (0, _.NW)();
         return (
-          (0, _.Qg)(t.ModalUpdatedCallback, s),
+          (0, _.Qg)(t.ModalUpdatedCallback, o),
           i.createElement(
-            o.SV,
+            s.SV,
             null,
             i.createElement(
               r,
@@ -20755,7 +20814,7 @@
             i.Fragment,
             null,
             t.legacy_popup_modals.map((e) =>
-              i.createElement(s.l6, { key: e.key, Modal: e })
+              i.createElement(a.l6, { key: e.key, Modal: e })
             )
           )
         );
@@ -20872,7 +20931,7 @@
           o({ className: "ModalPosition_Content", children: s })
         );
       }
-      n(17149), n(14100), n(87121), n(45797), n(69210);
+      n(17149), n(14100), n(87121), n(49969), n(69210);
       var v = n(70983);
       const S = ({
         active: e,
@@ -24804,7 +24863,10 @@
                           null !== (e = this.props.onClose) && void 0 !== e
                             ? e
                             : () => {
-                                t && t.SteamClient.Window.Close();
+                                t &&
+                                  ((0, o.w3)(t, "Window.Close")
+                                    ? t.SteamClient.Window.Close()
+                                    : t.close());
                               },
                       },
                       i.createElement(s.pVO, null)
@@ -25047,7 +25109,7 @@
       var r = n(33940),
         i = n(50265),
         o = n(89526),
-        s = (n(6960), n(45797), n(7297)),
+        s = (n(6960), n(49969), n(7297)),
         a = n(13806),
         l = n(81052),
         c = n(31587),
@@ -25975,7 +26037,7 @@
       });
       var r = n(89526),
         i = n(6960),
-        o = n(45797),
+        o = n(49969),
         s = n(70983),
         a = n(99096),
         l = n(23213),
@@ -27322,6 +27384,7 @@
     93958: (e, t, n) => {
       "use strict";
       n.d(t, {
+        QU: () => l,
         U8: () => o,
         _H: () => r,
         _R: () => a,
@@ -27360,6 +27423,9 @@
       function a(e) {
         return new Promise((t) => setTimeout(t, e));
       }
+      function l() {
+        return Math.floor(Date.now() / 1e3);
+      }
     },
     70983: (e, t, n) => {
       "use strict";
@@ -27383,7 +27449,7 @@
       });
       var r = n(33940),
         i = n(89526),
-        o = n(45797),
+        o = n(49969),
         s = n(32338),
         a = n(5545),
         l = n(87017);
@@ -27916,7 +27982,7 @@
         m = n.n(u),
         h = n(565),
         p = n(59934),
-        _ = n(45797);
+        _ = n(49969);
       class g extends o.Component {
         render() {
           if ("dev" !== l.De.WEB_UNIVERSE) return null;

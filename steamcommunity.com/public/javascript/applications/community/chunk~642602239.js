@@ -79,6 +79,10 @@
         WarningStylesBackground:
           "partnereventdialog_WarningStylesBackground_2MAql",
         Stuck: "partnereventdialog_Stuck_2JqXL",
+        InfoStyles: "partnereventdialog_InfoStyles_2Zq0U",
+        InfoStylesWithIcon: "partnereventdialog_InfoStylesWithIcon_2TYAo",
+        InfoIconLayout: "partnereventdialog_InfoIconLayout_qgVd4",
+        InfoStylesBackground: "partnereventdialog_InfoStylesBackground_3YqPi",
         Padding: "partnereventdialog_Padding_2oWai",
         NotTooWideModal: "partnereventdialog_NotTooWideModal_3P6Se",
       };
@@ -496,7 +500,7 @@
       r.d(t, { O: () => g, V: () => h });
       var i = r(33940),
         n = r(89526),
-        a = (r(45797), r(17922)),
+        a = (r(49969), r(17922)),
         s = r(70657),
         o = (r(89252), r(82633), r(33787)),
         l = r(32338),
@@ -714,7 +718,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(89526),
-        o = (r(45797), r(96158), r(47330)),
+        o = (r(49969), r(96158), r(47330)),
         l = r(23213),
         m = r(31621),
         c = r(70983);
@@ -890,7 +894,7 @@
       r.d(t, { Hy: () => _, i8: () => g, mo: () => h });
       var i = r(33940),
         n = r(89526),
-        a = (r(45797), r(17922)),
+        a = (r(49969), r(17922)),
         s = r(70657),
         o = (r(89252), r(43735)),
         l = r(32338),
@@ -1025,7 +1029,7 @@
       "use strict";
       r.d(t, { Ax: () => _, jS: () => f, rW: () => y, sp: () => B });
       var i = r(33940),
-        n = (r(45797), r(17922)),
+        n = (r(49969), r(17922)),
         a = r(70657),
         s = r(33787),
         o = r(32338),
@@ -1333,7 +1337,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(89526),
-        o = (r(45797), r(96158), r(47330)),
+        o = (r(49969), r(96158), r(47330)),
         l = r(23213),
         m = r(31621),
         c = r(70983);
@@ -1840,7 +1844,7 @@
         c = r(50567),
         d = r(70756),
         u = r(31621),
-        p = (r(45797), r(66729)),
+        p = (r(49969), r(66729)),
         g = r(82569),
         h = r(33920),
         _ = r(55863),
@@ -1853,8 +1857,8 @@
         v = r(50265),
         w = r(8392),
         E = r(62114),
-        R = r(47330);
-      let I = class extends n.Component {
+        I = r(47330);
+      let R = class extends n.Component {
         constructor(e) {
           super(e),
             (this.m_cancelSignal = b().CancelToken.source()),
@@ -1884,7 +1888,7 @@
                 this.setState({ bLoadedMetadata: !0 }));
             })
             .catch((e) =>
-              console.error("SharedFileSnippet: " + (0, R.l)(e).strErrorMsg)
+              console.error("SharedFileSnippet: " + (0, I.l)(e).strErrorMsg)
             );
         }
         componentWillUnmount() {
@@ -1947,12 +1951,12 @@
           );
         }
       };
-      (0, i.gn)([v.LO], I.prototype, "m_sharedFileInfo", void 0),
-        (I = (0, i.gn)([y.Pi], I));
+      (0, i.gn)([v.LO], R.prototype, "m_sharedFileInfo", void 0),
+        (R = (0, i.gn)([y.Pi], R));
       var F = r(86701),
         M = r(13806),
-        D = r(98197),
-        A = r(36764),
+        A = r(98197),
+        D = r(36764),
         U = r(29760),
         z = r(63154),
         T = r(1633),
@@ -2006,7 +2010,7 @@
           });
         }
         HandleError(e) {
-          let t = (0, R.l)(e);
+          let t = (0, I.l)(e);
           const {
             eventGID: r,
             announcementGID: i,
@@ -2051,7 +2055,7 @@
             u = l.GetImageForSizeAsArrayWithFallback(
               "capsule",
               c,
-              A.FN.capsule_main
+              D.FN.capsule_main
             );
           s && (u = s(u));
           let p = l.GetNameWithFallback(c),
@@ -2123,7 +2127,7 @@
             } catch (e) {
               this.setState({ bError: !0 }),
                 console.error(
-                  "SketchFabEmbed failed to load: " + (0, R.l)(e).strErrorMsg
+                  "SketchFabEmbed failed to load: " + (0, I.l)(e).strErrorMsg
                 );
             }
           });
@@ -2306,13 +2310,13 @@
           e.has("id") && (i = e.get("id"));
         }
         return void 0 !== i
-          ? n.createElement(I, { sharedFileID: i })
+          ? n.createElement(R, { sharedFileID: i })
           : (0, N.hF)(e, null == t ? void 0 : t.event);
       }
       function ce(e) {
-        let t = (0, D.FM)(e).toLocaleLowerCase(),
-          r = (0, D.FM)(S.De.STORE_BASE_URL),
-          i = (0, D.FM)(S.De.COMMUNITY_BASE_URL);
+        let t = (0, A.FM)(e).toLocaleLowerCase(),
+          r = (0, A.FM)(S.De.STORE_BASE_URL),
+          i = (0, A.FM)(S.De.COMMUNITY_BASE_URL);
         return (
           t == r ||
           t == i ||
@@ -2539,18 +2543,18 @@
           return "CCloud_PendingRemoteOperation";
         }
       }
-      const Re = Se.Message;
-      class Ie extends Re {
+      const Ie = Se.Message;
+      class Re extends Ie {
         constructor(e = null) {
           super(),
-            Ie.prototype.appid || ve.aR(Ie.M()),
-            Re.initialize(this, e, 0, -1, [9], null);
+            Re.prototype.appid || ve.aR(Re.M()),
+            Ie.initialize(this, e, 0, -1, [9], null);
         }
         static M() {
           return (
-            Ie.sm_m ||
-              (Ie.sm_m = {
-                proto: Ie,
+            Re.sm_m ||
+              (Re.sm_m = {
+                proto: Re,
                 fields: {
                   appid: { n: 1, br: ve.FE.readUint32, bw: ve.Xc.writeUint32 },
                   ugcid: {
@@ -2594,49 +2598,49 @@
                   },
                 },
               }),
-            Ie.sm_m
+            Re.sm_m
           );
         }
         static MBF() {
-          return Ie.sm_mbf || (Ie.sm_mbf = ve.Bh(Ie.M())), Ie.sm_mbf;
+          return Re.sm_mbf || (Re.sm_mbf = ve.Bh(Re.M())), Re.sm_mbf;
         }
         toObject(e = !1) {
-          return Ie.toObject(e, this);
+          return Re.toObject(e, this);
         }
         static toObject(e, t) {
-          return ve.TA(Ie.M(), e, t);
+          return ve.TA(Re.M(), e, t);
         }
         static fromObject(e) {
-          return ve.aD(Ie.M(), e);
+          return ve.aD(Re.M(), e);
         }
         static deserializeBinary(e) {
           let t = new Se.BinaryReader(e),
-            r = new Ie();
-          return Ie.deserializeBinaryFromReader(r, t);
+            r = new Re();
+          return Re.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return ve.F(Ie.MBF(), e, t);
+          return ve.F(Re.MBF(), e, t);
         }
         serializeBinary() {
           var e = new Se.BinaryWriter();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Re.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          ve.l2(Ie.M(), e, t);
+          ve.l2(Re.M(), e, t);
         }
         serializeBase64String() {
           var e = new Se.BinaryWriter();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_UserFile";
         }
       }
-      class Fe extends Re {
+      class Fe extends Ie {
         constructor(e = null) {
           super(),
             Fe.prototype.server_url || ve.aR(Fe.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -2689,11 +2693,11 @@
           return "CCloud_GetUploadServerInfo_Response";
         }
       }
-      class Me extends Re {
+      class Me extends Ie {
         constructor(e = null) {
           super(),
             Me.prototype.ugcid || ve.aR(Me.M()),
-            Re.initialize(this, e, 0, -1, [6], null);
+            Ie.initialize(this, e, 0, -1, [6], null);
         }
         static M() {
           return (
@@ -2722,7 +2726,7 @@
                     bw: ve.Xc.writeString,
                   },
                   use_https: { n: 5, br: ve.FE.readBool, bw: ve.Xc.writeBool },
-                  request_headers: { n: 6, c: De, r: !0, q: !0 },
+                  request_headers: { n: 6, c: Ae, r: !0, q: !0 },
                 },
               }),
             Me.sm_m
@@ -2763,65 +2767,11 @@
           return "CCloud_BeginHTTPUpload_Response";
         }
       }
-      class De extends Re {
+      class Ae extends Ie {
         constructor(e = null) {
           super(),
-            De.prototype.name || ve.aR(De.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            De.sm_m ||
-              (De.sm_m = {
-                proto: De,
-                fields: {
-                  name: { n: 1, br: ve.FE.readString, bw: ve.Xc.writeString },
-                  value: { n: 2, br: ve.FE.readString, bw: ve.Xc.writeString },
-                },
-              }),
-            De.sm_m
-          );
-        }
-        static MBF() {
-          return De.sm_mbf || (De.sm_mbf = ve.Bh(De.M())), De.sm_mbf;
-        }
-        toObject(e = !1) {
-          return De.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return ve.TA(De.M(), e, t);
-        }
-        static fromObject(e) {
-          return ve.aD(De.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new Se.BinaryReader(e),
-            r = new De();
-          return De.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return ve.F(De.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new Se.BinaryWriter();
-          return De.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          ve.l2(De.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new Se.BinaryWriter();
-          return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCloud_BeginHTTPUpload_Response_HTTPHeaders";
-        }
-      }
-      class Ae extends Re {
-        constructor(e = null) {
-          super(),
-            Ae.prototype.file_committed || ve.aR(Ae.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ae.prototype.name || ve.aR(Ae.M()),
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -2829,11 +2779,8 @@
               (Ae.sm_m = {
                 proto: Ae,
                 fields: {
-                  file_committed: {
-                    n: 1,
-                    br: ve.FE.readBool,
-                    bw: ve.Xc.writeBool,
-                  },
+                  name: { n: 1, br: ve.FE.readString, bw: ve.Xc.writeString },
+                  value: { n: 2, br: ve.FE.readString, bw: ve.Xc.writeString },
                 },
               }),
             Ae.sm_m
@@ -2871,14 +2818,71 @@
           return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CCloud_BeginHTTPUpload_Response_HTTPHeaders";
+        }
+      }
+      class De extends Ie {
+        constructor(e = null) {
+          super(),
+            De.prototype.file_committed || ve.aR(De.M()),
+            Ie.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            De.sm_m ||
+              (De.sm_m = {
+                proto: De,
+                fields: {
+                  file_committed: {
+                    n: 1,
+                    br: ve.FE.readBool,
+                    bw: ve.Xc.writeBool,
+                  },
+                },
+              }),
+            De.sm_m
+          );
+        }
+        static MBF() {
+          return De.sm_mbf || (De.sm_mbf = ve.Bh(De.M())), De.sm_mbf;
+        }
+        toObject(e = !1) {
+          return De.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return ve.TA(De.M(), e, t);
+        }
+        static fromObject(e) {
+          return ve.aD(De.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new Se.BinaryReader(e),
+            r = new De();
+          return De.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return ve.F(De.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new Se.BinaryWriter();
+          return De.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          ve.l2(De.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new Se.BinaryWriter();
+          return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CCloud_CommitHTTPUpload_Response";
         }
       }
-      class Ue extends Re {
+      class Ue extends Ie {
         constructor(e = null) {
           super(),
             Ue.prototype.storage_system || ve.aR(Ue.M()),
-            Re.initialize(this, e, 0, -1, [7], null);
+            Ie.initialize(this, e, 0, -1, [7], null);
         }
         static M() {
           return (
@@ -2953,11 +2957,11 @@
           return "CCloud_BeginUGCUpload_Response";
         }
       }
-      class ze extends Re {
+      class ze extends Ie {
         constructor(e = null) {
           super(),
             ze.prototype.name || ve.aR(ze.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3007,11 +3011,11 @@
           return "CCloud_BeginUGCUpload_Response_HTTPHeaders";
         }
       }
-      class Te extends Re {
+      class Te extends Ie {
         constructor(e = null) {
           super(),
             Te.prototype.file_committed || ve.aR(Te.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3064,16 +3068,16 @@
           return "CCloud_CommitUGCUpload_Response";
         }
       }
-      class Ne extends Re {
+      class Ne extends Ie {
         constructor(e = null) {
           super(),
             Ne.prototype.details || ve.aR(Ne.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Ne.sm_m ||
-              (Ne.sm_m = { proto: Ne, fields: { details: { n: 1, c: Ie } } }),
+              (Ne.sm_m = { proto: Ne, fields: { details: { n: 1, c: Re } } }),
             Ne.sm_m
           );
         }
@@ -3112,11 +3116,11 @@
           return "CCloud_GetFileDetails_Response";
         }
       }
-      class Le extends Re {
+      class Le extends Ie {
         constructor(e = null) {
           super(),
             Le.prototype.files || ve.aR(Le.M()),
-            Re.initialize(this, e, 0, -1, [1], null);
+            Ie.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -3124,7 +3128,7 @@
               (Le.sm_m = {
                 proto: Le,
                 fields: {
-                  files: { n: 1, c: Ie, r: !0, q: !0 },
+                  files: { n: 1, c: Re, r: !0, q: !0 },
                   total_files: {
                     n: 2,
                     br: ve.FE.readUint32,
@@ -3170,9 +3174,9 @@
           return "CCloud_EnumerateUserFiles_Response";
         }
       }
-      class Ge extends Re {
+      class Ge extends Ie {
         constructor(e = null) {
-          super(), Re.initialize(this, e, 0, -1, void 0, null);
+          super(), Ie.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Ge.toObject(e, this);
@@ -3204,11 +3208,11 @@
           return "CCloud_Delete_Response";
         }
       }
-      class xe extends Re {
+      class xe extends Ie {
         constructor(e = null) {
           super(),
             xe.prototype.key || ve.aR(xe.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3258,11 +3262,11 @@
           return "CCloud_GetClientEncryptionKey_Response";
         }
       }
-      class Pe extends Re {
+      class Pe extends Ie {
         constructor(e = null) {
           super(),
             Pe.prototype.pending_remote_operations || ve.aR(Pe.M()),
-            Re.initialize(this, e, 0, -1, [1], null);
+            Ie.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -3311,11 +3315,11 @@
           return "CCloud_AppLaunchIntent_Response";
         }
       }
-      class ke extends Re {
+      class ke extends Ie {
         constructor(e = null) {
           super(),
             ke.prototype.existing_files || ve.aR(ke.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3383,11 +3387,11 @@
           return "CCloud_ClientGetAppQuotaUsage_Response";
         }
       }
-      class Oe extends Re {
+      class Oe extends Ie {
         constructor(e = null) {
           super(),
             Oe.prototype.file_name || ve.aR(Oe.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3471,11 +3475,11 @@
           return "CCloud_AppFileInfo";
         }
       }
-      class We extends Re {
+      class We extends Ie {
         constructor(e = null) {
           super(),
             We.prototype.current_change_number || ve.aR(We.M()),
-            Re.initialize(this, e, 0, -1, [2, 4, 5], null);
+            Ie.initialize(this, e, 0, -1, [2, 4, 5], null);
         }
         static M() {
           return (
@@ -3553,11 +3557,11 @@
           return "CCloud_GetAppFileChangelist_Response";
         }
       }
-      class je extends Re {
+      class je extends Ie {
         constructor(e = null) {
           super(),
             je.prototype.url_host || ve.aR(je.M()),
-            Re.initialize(this, e, 0, -1, [5], null);
+            Ie.initialize(this, e, 0, -1, [5], null);
         }
         static M() {
           return (
@@ -3642,11 +3646,11 @@
           return "ClientCloudFileUploadBlockDetails";
         }
       }
-      class Xe extends Re {
+      class Xe extends Ie {
         constructor(e = null) {
           super(),
             Xe.prototype.name || ve.aR(Xe.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3696,11 +3700,11 @@
           return "ClientCloudFileUploadBlockDetails_HTTPHeaders";
         }
       }
-      class Ve extends Re {
+      class Ve extends Ie {
         constructor(e = null) {
           super(),
             Ve.prototype.batch_id || ve.aR(Ve.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3758,9 +3762,9 @@
           return "CCloud_BeginAppUploadBatch_Response";
         }
       }
-      class Ze extends Re {
+      class Ze extends Ie {
         constructor(e = null) {
-          super(), Re.initialize(this, e, 0, -1, void 0, null);
+          super(), Ie.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Ze.toObject(e, this);
@@ -3792,11 +3796,11 @@
           return "CCloud_CompleteAppUploadBatch_Response";
         }
       }
-      class He extends Re {
+      class He extends Ie {
         constructor(e = null) {
           super(),
             He.prototype.appid || ve.aR(He.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3850,11 +3854,11 @@
           return "CCloud_AppCloudStateChange_Notification";
         }
       }
-      class Qe extends Re {
+      class Qe extends Ie {
         constructor(e = null) {
           super(),
             Qe.prototype.encrypt_file || ve.aR(Qe.M()),
-            Re.initialize(this, e, 0, -1, [2], null);
+            Ie.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -3908,11 +3912,11 @@
           return "CCloud_ClientBeginFileUpload_Response";
         }
       }
-      class qe extends Re {
+      class qe extends Ie {
         constructor(e = null) {
           super(),
             qe.prototype.file_committed || ve.aR(qe.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3965,11 +3969,11 @@
           return "CCloud_ClientCommitFileUpload_Response";
         }
       }
-      class Ye extends Re {
+      class Ye extends Ie {
         constructor(e = null) {
           super(),
             Ye.prototype.appid || ve.aR(Ye.M()),
-            Re.initialize(this, e, 0, -1, [10], null);
+            Ie.initialize(this, e, 0, -1, [10], null);
         }
         static M() {
           return (
@@ -4052,11 +4056,11 @@
           return "CCloud_ClientFileDownload_Response";
         }
       }
-      class $e extends Re {
+      class $e extends Ie {
         constructor(e = null) {
           super(),
             $e.prototype.name || ve.aR($e.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -4106,9 +4110,9 @@
           return "CCloud_ClientFileDownload_Response_HTTPHeaders";
         }
       }
-      class Ke extends Re {
+      class Ke extends Ie {
         constructor(e = null) {
-          super(), Re.initialize(this, e, 0, -1, void 0, null);
+          super(), Ie.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Ke.toObject(e, this);
@@ -4140,11 +4144,11 @@
           return "CCloud_ClientDeleteFile_Response";
         }
       }
-      class Je extends Re {
+      class Je extends Ie {
         constructor(e = null) {
           super(),
             Je.prototype.apps || ve.aR(Je.M()),
-            Re.initialize(this, e, 0, -1, [1], null);
+            Ie.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -4191,11 +4195,11 @@
           return "CCloud_EnumerateUserApps_Response";
         }
       }
-      class et extends Re {
+      class et extends Ie {
         constructor(e = null) {
           super(),
             et.prototype.appid || ve.aR(et.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -4254,9 +4258,9 @@
           return "CCloud_EnumerateUserApps_Response_Apps";
         }
       }
-      class tt extends Re {
+      class tt extends Ie {
         constructor(e = null) {
-          super(), Re.initialize(this, e, 0, -1, void 0, null);
+          super(), Ie.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return tt.toObject(e, this);
@@ -4288,9 +4292,9 @@
           return "CCloud_AppSessionSuspend_Response";
         }
       }
-      class rt extends Re {
+      class rt extends Ie {
         constructor(e = null) {
-          super(), Re.initialize(this, e, 0, -1, void 0, null);
+          super(), Ie.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return rt.toObject(e, this);
@@ -4322,11 +4326,11 @@
           return "CCloud_AppSessionResume_Response";
         }
       }
-      class it extends Re {
+      class it extends Ie {
         constructor(e = null) {
           super(),
             it.prototype.request_id || ve.aR(it.M()),
-            Re.initialize(this, e, 0, -1, void 0, null);
+            Ie.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -4403,7 +4407,7 @@
             });
           }),
           (e.CommitHTTPUpload = function (e, t) {
-            return e.SendMsg("Cloud.CommitHTTPUpload#1", t, Ae, {
+            return e.SendMsg("Cloud.CommitHTTPUpload#1", t, De, {
               ePrivilege: 1,
             });
           }),
@@ -5059,14 +5063,14 @@
       var vt = r(90043),
         wt = r(72745),
         Et = r(81052),
-        Rt = r(35177),
-        It = r(45647);
+        It = r(35177),
+        Rt = r(45647);
       function Ft(e) {
         const t = (0, S.id)(),
-          r = (0, Rt.Zh)(Rt.H_),
+          r = (0, It.Zh)(It.H_),
           i = "true" === String((0, o.im)(e.args, "autoadvance")).toLowerCase();
         return n.createElement(
-          It.l,
+          Rt.l,
           {
             hideArrows: !r,
             hidePips: t,
@@ -5080,13 +5084,13 @@
         );
       }
       var Mt = r(49194),
-        Dt = r(59665);
-      function At(e) {
+        At = r(59665);
+      function Dt(e) {
         const { fileUploadManager: t } = e,
           r = (0, n.useRef)();
         return n.createElement(
           "div",
-          { className: Dt.Ctn },
+          { className: At.Ctn },
           n.createElement("input", {
             type: "file",
             accept: ".jpg,.jpeg,.png,.gif,.webm,.mpg,.mpeg,.ogv,.mp4",
@@ -5271,7 +5275,7 @@
         return (
           "dev" == S.De.WEB_UNIVERSE &&
             "store" == (0, S.Zv)() &&
-            "store.steampowered.com" == (0, D.FM)(i) &&
+            "store.steampowered.com" == (0, A.FM)(i) &&
             ((i = i.replace(
               "https://store.steampowered.com/",
               S.De.STORE_BASE_URL
@@ -5316,8 +5320,8 @@
           let e;
           return (
             (i = a),
-            (e = (!r || !r.BHasTag("auto_rssfeed")) && !(0, D.dK)(i)),
-            t || (i = (0, D.et)(i)),
+            (e = (!r || !r.BHasTag("auto_rssfeed")) && !(0, A.dK)(i)),
+            t || (i = (0, A.et)(i)),
             t
               ? n.createElement(vt.e, {
                   src: i,
@@ -5599,7 +5603,7 @@
           ? n.createElement(
               "div",
               null,
-              n.createElement(At, { fileUploadManager: a }),
+              n.createElement(Dt, { fileUploadManager: a }),
               n.createElement(Tt, { fileUploadManager: a })
             )
           : t
@@ -5768,7 +5772,7 @@
       r.d(t, { w: () => B });
       var i = r(50265),
         n = r(89526),
-        a = (r(45797), r(49194)),
+        a = (r(49969), r(49194)),
         s = (r(82633), r(43735), r(52790)),
         o = r(26095),
         l = r(57255),
@@ -5964,7 +5968,7 @@
       r.d(t, { v: () => c, x: () => m });
       var i = r(25125),
         n = r(89526),
-        a = (r(6960), r(45797), r(50567), r(40590), r(82633), r(22271)),
+        a = (r(6960), r(49969), r(50567), r(40590), r(82633), r(22271)),
         s = r(8392),
         o = r(31587),
         l = r(70983);

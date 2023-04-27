@@ -1,5 +1,7 @@
 .newlogindialog_Login_ZOBYq {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_SideBySide_1Wl13 {
   display: flex;
@@ -291,11 +293,10 @@
   background: #3d4450;
   color: #fff;
   padding: 12px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   font-family: inherit;
   text-align: center;
-  letter-spacing: 0.03em;
   border: none;
   border-radius: 2px;
 }
@@ -320,11 +321,10 @@
   outline: none;
   padding: 12px;
   color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   font-family: inherit;
   text-align: center;
-  letter-spacing: 0.03em;
   cursor: pointer;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:hover {
@@ -444,6 +444,14 @@
   margin-top: 20px;
   padding-left: 20px;
 }
+.newlogindialog_Login_ZOBYq .newlogindialog_ConfirmationEntryContainer_2AnqS {
+  background-color: #32353c;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0px 20px;
+  border-radius: 2px;
+  max-width: 500px;
+}
 .newlogindialog_Login_ZOBYq .newlogindialog_AwaitingMobileConfIcon_2hLC_ {
   width: 40px;
   color: #1a99ff;
@@ -467,7 +475,7 @@
 .newlogindialog_Login_ZOBYq .newlogindialog_EnterBackupCodeContainer_2TAgP,
 .newlogindialog_Login_ZOBYq .newlogindialog_EnterCodeFromMobileContainer_T68fB,
 .newlogindialog_Login_ZOBYq .newlogindialog_EnterCodeFromEmailContainer_2pVTW {
-  padding: 0 12px;
+  padding: 12px 12px 24px 12px;
   gap: 24px;
 }
 .newlogindialog_Login_ZOBYq
@@ -481,6 +489,7 @@
   .newlogindialog_Label_2SE9Z {
   font-size: 12px;
   color: #afafaf;
+  text-align: center;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EnterBackupCodeContainer_2TAgP
@@ -572,10 +581,10 @@
   flex-direction: row;
   justify-content: center;
   max-width: 280px;
-  background-color: #32353c;
+  background-color: #2b2e33;
   border-radius: 2px;
   gap: 20px;
-  padding: 10px 28px;
+  padding: 10px 28px 20px;
   cursor: text;
   border: 1px solid rgba(0, 0, 0, 0);
   position: relative;
@@ -699,14 +708,17 @@
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc {
   background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
-  padding: 40px 32px 15px 32px;
+  padding: 40px 40px 15px 40px;
   width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
   .newlogindialog_FormContainer_3jLIH {
   background: rgba(0, 0, 0, 0);
-  padding: 24px 0px;
+  padding: 14px 0px;
 }
 @media screen and (max-width: 796px) {
   .newlogindialog_Login_ZOBYq
@@ -737,11 +749,6 @@
 .newlogindialog_Login_ZOBYq .newlogindialog_HeaderLogo_1rtyT {
   height: 46px;
   width: 153px;
-}
-.newlogindialog_Login_ZOBYq
-  .newlogindialog_InClient_2GR-7
-  .newlogindialog_LogoContainer_vnUiF {
-  margin-top: 10px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_LogoContainer_vnUiF {
   display: flex;
@@ -873,10 +880,8 @@
 }
 .newlogindialog_FailureTitle_A3Y-u {
   color: #fff;
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.055em;
-  font-weight: 200;
+  font-size: 22px;
+  font-weight: 700;
   text-align: center;
 }
 .newlogindialog_FailureDescription_3gFes {

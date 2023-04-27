@@ -771,7 +771,7 @@
       var i = r(33940),
         n = r(89526),
         a = r(6960),
-        s = r(45797),
+        s = r(49969),
         o = r(49194),
         l = r(23907),
         c = r(66729),
@@ -3311,7 +3311,7 @@
         ml: () => u,
         q2: () => d,
       });
-      var i = r(45797),
+      var i = r(49969),
         n = (r(82702), r(77836), r(2351)),
         a = (r(55449), r(63154)),
         s = r(51600),
@@ -3622,7 +3622,7 @@
       r.d(t, { Gk: () => c, LH: () => l, ZT: () => i, xM: () => o });
       var i,
         n = r(63154),
-        a = (r(6960), r(45797), r(29760)),
+        a = (r(6960), r(49969), r(29760)),
         s = r(31587);
       !(function (e) {
         (e[(e.k_eLibrary = 1)] = "k_eLibrary"),
@@ -3762,7 +3762,7 @@
       "use strict";
       r.d(t, { Sn: () => a });
       var i = r(33940),
-        n = (r(45797), r(59821));
+        n = (r(49969), r(59821));
       const a = { bScheduleEnabled: !1, scheduleEntries: [] };
       (0, i.gn)(
         [n.a],
@@ -3822,7 +3822,7 @@
     73098: (e, t, r) => {
       "use strict";
       r.d(t, { Y: () => n, l: () => i });
-      r(45797), r(6960);
+      r(49969), r(6960);
       const i = ["show", "hide", "remove"],
         n = {
           bBroadcastEnabled: !1,
@@ -3848,7 +3848,7 @@
       var i,
         n = r(33940),
         a = r(50265),
-        s = (r(6960), r(45797), r(66729)),
+        s = (r(6960), r(49969), r(66729)),
         o = (r(82569), r(36764)),
         l = r(31587),
         c = r(59821);
@@ -4229,7 +4229,7 @@
       var i = r(33940),
         n = r(50265),
         a = r(44229),
-        s = (r(6960), r(45797)),
+        s = (r(6960), r(49969)),
         o = (r(93982), r(73098)),
         l = r(82569),
         c = (r(82633), r(43735), r(13309), r(36764)),
@@ -5578,7 +5578,7 @@
       r.d(t, { XC: () => l, ai: () => o });
       var i = r(25125),
         n = r(89526),
-        a = (r(45797), r(50567), r(70756)),
+        a = (r(49969), r(50567), r(70756)),
         s = r(66715);
       r(82569), r(70983), r(15781);
       function o(e) {
@@ -5672,7 +5672,7 @@
     40590: (e, t, r) => {
       "use strict";
       r.d(t, { k: () => n, m: () => i });
-      r(47687), r(35177), r(82633), r(45797);
+      r(47687), r(35177), r(82633), r(49969);
       const i = "terminal",
         n = "questdoor_";
     },
@@ -5681,7 +5681,7 @@
       r.d(t, { v: () => _ });
       var i = r(33940),
         n = r(89526),
-        a = (r(45797), r(63154)),
+        a = (r(49969), r(63154)),
         s = r(57255),
         o = r(46085),
         l = r(24868),
@@ -23563,7 +23563,7 @@
         (0, i.gn)([s.aD.bound], D.prototype, "CaptureStatsForDisplay", null),
         (0, i.gn)([y.a], D.prototype, "OnVideoPause", null),
         (0, i.gn)([y.a], D.prototype, "OnVideoResize", null);
-      r(45797), r(87487);
+      r(49969), r(87487);
       var k = r(47330),
         A = r(4083),
         z = r(23970);
@@ -24667,7 +24667,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(50265),
-        o = (r(6960), r(45797)),
+        o = (r(6960), r(49969)),
         l = (r(93982), r(82569), r(67237), r(37137), r(96158), r(47330)),
         c = r(59821),
         d = r(23213),
@@ -25048,7 +25048,7 @@
       "use strict";
       r.d(t, { C: () => s, Z: () => o });
       var i = r(6960),
-        n = r(45797),
+        n = r(49969),
         a = (r(93982), r(67237), r(60560), r(31587));
       r(36764), r(95895);
       function s(e, t, r) {
@@ -25085,7 +25085,7 @@
         a = r.n(n),
         s = r(50265),
         o = r(6960),
-        l = (r(45797), r(93982)),
+        l = (r(49969), r(93982)),
         c = r(82569),
         d = (r(67237), r(96158), r(99096)),
         m = r(32338),
@@ -25627,7 +25627,7 @@
         a = r.n(n),
         s = r(50265),
         o = r(89526),
-        l = (r(6960), r(45797), r(15781), r(96158), r(70983));
+        l = (r(6960), r(49969), r(15781), r(96158), r(70983));
       class c {
         constructor(e) {
           (this.appid = e.appid),
@@ -26130,7 +26130,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(89526),
-        o = (r(6960), r(45797), r(96158), r(47330)),
+        o = (r(6960), r(49969), r(96158), r(47330)),
         l = r(23213),
         c = r(31621),
         d = r(70983);
@@ -26451,7 +26451,7 @@
         s = r.n(a),
         o = r(50265),
         l = r(36105),
-        c = (r(6960), r(45797), r(81319)),
+        c = (r(6960), r(49969), r(81319)),
         d = (r(50567), r(82569)),
         m = r(83983),
         u = r(70756),
@@ -27261,7 +27261,7 @@
         n = r(52868),
         a = r.n(n),
         s = (r(72634), r(70983)),
-        o = (r(45797), r(49064), r(81319), r(23213)),
+        o = (r(49969), r(49064), r(81319), r(23213)),
         l = r(59649);
       !(function (e) {
         (e[(e.k_eDiscussions = 0)] = "k_eDiscussions"),
@@ -27403,7 +27403,7 @@
       var i,
         n = r(33940),
         a = r(50265),
-        s = (r(6960), r(45797), r(81319)),
+        s = (r(6960), r(49969), r(81319)),
         o = r(32338),
         l = r(70983),
         c = r(10717),
@@ -27678,7 +27678,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(50265),
-        o = (r(6960), r(45797), r(17922)),
+        o = (r(6960), r(49969), r(17922)),
         l = (r(50567), r(67237)),
         c = r(23213),
         d = r(59821),
@@ -28264,7 +28264,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(50265),
-        o = (r(6960), r(45797), r(81319), r(96158), r(32338)),
+        o = (r(6960), r(49969), r(81319), r(96158), r(32338)),
         l = r(47330),
         c = r(70983);
       class d {
@@ -28377,7 +28377,7 @@
         s = r(50265),
         o = r(39818),
         l = r(6960),
-        c = (r(45797), r(79283), r(50567)),
+        c = (r(49969), r(79283), r(50567)),
         d = r(82569),
         m = (r(67737), r(41140)),
         u = (r(96158), r(99096)),
@@ -29566,7 +29566,7 @@
       r.d(t, { Eq: () => p, NH: () => d, QG: () => m, wj: () => u });
       var i = r(33940),
         n = r(5615),
-        a = (r(45797), r(17922)),
+        a = (r(49969), r(17922)),
         s = r(60209),
         o = r(54997),
         l = r(43886),
@@ -29706,7 +29706,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(50265),
-        o = (r(6960), r(45797), r(8453), r(47330)),
+        o = (r(6960), r(49969), r(8453), r(47330)),
         l = r(70983),
         c = r(32478);
       class d {
@@ -29772,7 +29772,7 @@
       var i = r(33940),
         n = r(52868),
         a = r.n(n),
-        s = (r(50265), r(6960), r(45797), r(17922)),
+        s = (r(50265), r(6960), r(49969), r(17922)),
         o = r(70657),
         l = r(8453),
         c = (r(96158), r(47330)),
@@ -30681,7 +30681,7 @@
         ee = r(48706),
         te = (r(95895), r(60560)),
         re = r(69728),
-        ie = r(45797);
+        ie = r(49969);
       const ne = (0, o.Pi)((e) => {
         const {
             clanSteamID: t,
@@ -32405,7 +32405,7 @@
       "use strict";
       r.d(t, { Rd: () => G, _R: () => O, Ws: () => A });
       var i = r(89526),
-        n = (r(45797), r(49194)),
+        n = (r(49969), r(49194)),
         a = (r(49920), r(23907)),
         s = (r(14258), r(173), r(84042), r(88735)),
         o = (r(81084), r(82633), r(45878));
@@ -34326,7 +34326,7 @@
       "use strict";
       r.d(t, { a: () => _ });
       var i = r(89526),
-        n = (r(45797), r(12568)),
+        n = (r(49969), r(12568)),
         a = (r(82702), r(2351)),
         s = r(51600),
         o = r(23708),
@@ -34585,7 +34585,7 @@
       "use strict";
       r.d(t, { f: () => h });
       var i = r(89526),
-        n = (r(45797), r(56290)),
+        n = (r(49969), r(56290)),
         a = (r(82702), r(15877)),
         s = r(51600),
         o = r(23708),
@@ -34905,7 +34905,7 @@
         a = r(36105),
         s = r(89526),
         o = r(6960),
-        l = (r(45797), r(7297)),
+        l = (r(49969), r(7297)),
         c = r(81319),
         d = r(83471),
         m = (r(50567), r(29760)),
@@ -35443,7 +35443,7 @@
       var i = r(33940),
         n = r(88464),
         a = r(89526),
-        s = (r(45797), r(26105), r(82569)),
+        s = (r(49969), r(26105), r(82569)),
         o = r(92801),
         l = r(2351),
         c = r(49064),
@@ -35679,7 +35679,7 @@
         l = r(89526),
         c = r(73961),
         d = r(26171),
-        m = (r(45797), r(50567), r(64831)),
+        m = (r(49969), r(50567), r(64831)),
         u = r(77515),
         p = r(12568),
         h = (r(82702), r(29760)),
@@ -36413,7 +36413,7 @@
       var i = r(33940),
         n = r(89526),
         a = r(80833),
-        s = (r(6960), r(45797), r(93982), r(82569)),
+        s = (r(6960), r(49969), r(93982), r(82569)),
         o = r(36764),
         l = r(83983),
         c = r(52117),
@@ -37127,7 +37127,7 @@
       var i = r(33940),
         n = r(51684),
         a = r(51600),
-        s = r(45797),
+        s = r(49969),
         o = (r(50567), r(82702), r(2351)),
         l = (r(55449), r(63154)),
         c = r(70983),
@@ -37316,7 +37316,7 @@
       var i = r(88464),
         n = r(89526),
         a = r(93373),
-        s = (r(6960), r(45797), r(49194)),
+        s = (r(6960), r(49969), r(49194)),
         o = r(23907),
         l = r(43407),
         c = (r(50567), r(77515)),
@@ -37877,7 +37877,7 @@
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC",
         a =
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTM3OEVDNTUyMUM0MTFFNDgxN0ZEN0MzNjYzNzcxOTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTM3OEVDNTYyMUM0MTFFNDgxN0ZEN0MzNjYzNzcxOTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMzc4RUM1MzIxQzQxMUU0ODE3RkQ3QzM2NjM3NzE5NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMzc4RUM1NDIxQzQxMUU0ODE3RkQ3QzM2NjM3NzE5NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps9jzFQAAACPSURBVHjaYvz//z+DkJDQdQYGhpsMCMAKxMZAHPXu3bt9cFGQYkFBwQ0gGoaBfAEgzgfibUDsBxNnYsAOfgKxJBBvAeIZMEEWZBVA52xA5gOdUAEUc8NQDBTkBEoGMOAByCYLAjUsRzM5AKtioMQzIEW0ydjcHIBTMSE3M0Ij5RKQfQ6HGiOgIXogBkCAAQDGVT+0v+n6EQAAAABJRU5ErkJggg==";
-      r(45797);
+      r(49969);
       var s = r(89400),
         o = r(2351),
         l = r(63154),
@@ -38030,7 +38030,7 @@
         a = r.n(n),
         s = r(89526),
         o = r(26171),
-        l = r(45797),
+        l = r(49969),
         c = (r(52276), r(82702), r(15877)),
         d = (r(55449), r(51600)),
         m = r(23708),
@@ -38310,7 +38310,7 @@
               `-${r}%`
             ),
           Boolean(c) && s.createElement(v.dCe, null),
-          Boolean(r && a)
+          Boolean(r && a && !c)
             ? s.createElement(
                 "div",
                 { className: (0, f.Z)(B().StoreSaleDiscountedPriceCtn) },
@@ -38373,7 +38373,7 @@
     64996: (e, t, r) => {
       "use strict";
       r.d(t, { K: () => n, u: () => a });
-      r(45797);
+      r(49969);
       var i = r(65666);
       r(50567);
       function n(e, t) {
@@ -38430,68 +38430,90 @@
           return this.m_bDefaultTab;
         }
         BFilterRequiresFeatureDemo() {
-          var e, t, r, i, n;
+          return a.BFilterRequiresFeatureDemoStatic(this.m_activeTab);
+        }
+        static BFilterRequiresFeatureDemoStatic(e) {
+          var t, r, i;
           if (
             1 ==
             (null ===
               (r =
-                null ===
-                  (t =
-                    null === (e = this.m_activeTab) || void 0 === e
-                      ? void 0
-                      : e.sale_tag_filter) || void 0 === t
+                null === (t = null == e ? void 0 : e.sale_tag_filter) ||
+                void 0 === t
                   ? void 0
                   : t.clauses) || void 0 === r
               ? void 0
               : r.length)
           ) {
-            const e =
-              null ===
-                (n =
-                  null === (i = this.m_activeTab) || void 0 === i
-                    ? void 0
-                    : i.sale_tag_filter) || void 0 === n
+            const t =
+              null === (i = null == e ? void 0 : e.sale_tag_filter) ||
+              void 0 === i
                 ? void 0
-                : n.clauses[0];
+                : i.clauses[0];
             return (
-              "Must have" === e.type &&
-              1 === e.or_tags.length &&
-              "[Feature] Has Demo" === e.or_tags[0]
+              "Must have" === t.type &&
+              1 === t.or_tags.length &&
+              "[Feature] Has Demo" === t.or_tags[0]
             );
           }
           return !1;
         }
         BFilterRequiresSteamDeckVerifiedOrPlayable() {
-          var e, t, r, i, n;
+          return a.BFilterRequiresSteamDeckVerifiedOrPlayableStatic(
+            this.m_activeTab
+          );
+        }
+        static BFilterRequiresSteamDeckVerifiedOrPlayableStatic(e) {
+          var t, r, i;
           if (
             1 ==
             (null ===
               (r =
-                null ===
-                  (t =
-                    null === (e = this.m_activeTab) || void 0 === e
-                      ? void 0
-                      : e.sale_tag_filter) || void 0 === t
+                null === (t = null == e ? void 0 : e.sale_tag_filter) ||
+                void 0 === t
                   ? void 0
                   : t.clauses) || void 0 === r
               ? void 0
               : r.length)
           ) {
-            const e =
-              null ===
-                (n =
-                  null === (i = this.m_activeTab) || void 0 === i
-                    ? void 0
-                    : i.sale_tag_filter) || void 0 === n
+            const t =
+              null === (i = null == e ? void 0 : e.sale_tag_filter) ||
+              void 0 === i
                 ? void 0
-                : n.clauses[0];
+                : i.clauses[0];
             return (
-              "Must have" === e.type &&
-              e.or_tags.some(
+              "Must have" === t.type &&
+              t.or_tags.some(
                 (e) =>
                   "[Feature] Steam Deck Playable" == e ||
                   "[Feature] Steam Deck Verified" == e
               )
+            );
+          }
+          return !1;
+        }
+        static BFilterRequiresFeatureAdultOnly(e) {
+          var t, r, i;
+          if (
+            1 ==
+            (null ===
+              (r =
+                null === (t = null == e ? void 0 : e.sale_tag_filter) ||
+                void 0 === t
+                  ? void 0
+                  : t.clauses) || void 0 === r
+              ? void 0
+              : r.length)
+          ) {
+            const t =
+              null === (i = null == e ? void 0 : e.sale_tag_filter) ||
+              void 0 === i
+                ? void 0
+                : i.clauses[0];
+            return (
+              "Must have" === t.type &&
+              1 === t.or_tags.length &&
+              "[Feature] Adult Only Sexual Content" === t.or_tags[0]
             );
           }
           return !1;
@@ -38589,7 +38611,7 @@
       r.d(t, { zw: () => h, Dt: () => u, $N: () => p });
       r(82702);
       var i = r(89526),
-        n = r(45797),
+        n = r(49969),
         a = r(12568),
         s = r(33940),
         o = r(71906),
@@ -38643,7 +38665,7 @@
       var i = r(33940),
         n = r(25125),
         a = r(89526),
-        s = (r(45797), r(12568)),
+        s = (r(49969), r(12568)),
         o = r(2351),
         l = r(30156),
         c = r.n(l),
@@ -38788,7 +38810,7 @@
       r.d(t, { r: () => m });
       var i = r(88464),
         n = r(89526),
-        a = (r(45797), r(56290)),
+        a = (r(49969), r(56290)),
         s = r(2351),
         o = r(13806),
         l = r(31587),
@@ -39039,7 +39061,7 @@
       var i = r(33940),
         n = r(89526),
         a = r(6960),
-        s = r(45797),
+        s = r(49969),
         o = r(31587),
         l = r(98197),
         c = r(70983),
@@ -42100,7 +42122,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(89526),
-        o = (r(6960), r(45797), r(96158), r(47330)),
+        o = (r(6960), r(49969), r(96158), r(47330)),
         l = r(70983);
       const c = (e) => {
         const [t, r] = (0, s.useState)(!!e && void 0);

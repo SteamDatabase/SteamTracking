@@ -55,6 +55,8 @@
         Description: "newlogindialog_Description_QApnT",
         ConfirmationContainer: "newlogindialog_ConfirmationContainer_2aZnk",
         AwaitingMobileConfText: "newlogindialog_AwaitingMobileConfText_7LmnT",
+        ConfirmationEntryContainer:
+          "newlogindialog_ConfirmationEntryContainer_2AnqS",
         AwaitingMobileConfIcon: "newlogindialog_AwaitingMobileConfIcon_2hLC_",
         AwaitingEmailConfIcon: "newlogindialog_AwaitingEmailConfIcon_3iM5L",
         LinkContainer: "newlogindialog_LinkContainer_3yJHp",
@@ -1132,7 +1134,7 @@
       })(v || (v = {}));
       var O = r(27953),
         W = r.n(O),
-        x = r(45797);
+        x = r(49969);
       function I(e) {
         const {
             transport: t,
@@ -2399,34 +2401,43 @@
               },
               n.createElement(
                 Ze,
-                { alignItems: "center", gap: 20 },
+                { alignItems: "center", gap: 14 },
                 n.createElement(je, { type: t, accountName: a }),
                 n.createElement(
-                  Ze,
-                  { alignItems: "center", gap: 2 },
-                  y &&
-                    n.createElement(
-                      Me,
-                      null,
-                      (0, G.Xx)("#Login_IncorrectSteamGuard")
-                    ),
-                  n.createElement(Qe, {
-                    value: l,
-                    onChange: (e) => {
-                      u || m(!0), c(e);
-                      const t = e.join("");
-                      C(t, _) && w(t);
-                    },
-                    tone: y ? "danger" : void 0,
-                    loading: d,
-                    backupCode: _,
-                  })
+                  "div",
+                  { className: z().ConfirmationEntryContainer },
+                  n.createElement(
+                    Ze,
+                    { alignItems: "center", gap: 2 },
+                    y &&
+                      n.createElement(
+                        Me,
+                        null,
+                        (0, G.Xx)("#Login_IncorrectSteamGuard")
+                      ),
+                    n.createElement(Qe, {
+                      value: l,
+                      onChange: (e) => {
+                        u || m(!0), c(e);
+                        const t = e.join("");
+                        C(t, _) && w(t);
+                      },
+                      tone: y ? "danger" : void 0,
+                      loading: d,
+                      backupCode: _,
+                    })
+                  ),
+                  S
                 ),
-                S,
                 b &&
                   n.createElement(
                     Pe,
-                    { onClick: () => h(!_), align: "center" },
+                    {
+                      onClick: () => {
+                        h(!_), c([]);
+                      },
+                      align: "center",
+                    },
                     (0, G.Xx)(p)
                   ),
                 n.createElement(Oe, { type: t })
@@ -2476,8 +2487,7 @@
               { className: z().Label },
               (0, G.Xx)("#Login_EnterBackupCodeDescription")
             )
-          ),
-          n.createElement(De, { className: z().AwaitingMobileConfIcon })
+          )
         );
       }
       function xe() {

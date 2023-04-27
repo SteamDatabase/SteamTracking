@@ -789,7 +789,7 @@
       var n = r(33940),
         i = r(89526),
         a = r(6960),
-        s = r(45797),
+        s = r(49969),
         o = r(49194),
         l = r(23907),
         c = (r(67575), r(12568)),
@@ -1540,7 +1540,7 @@
         ml: () => u,
         q2: () => d,
       });
-      var n = r(45797),
+      var n = r(49969),
         i = (r(82702), r(77836), r(2351)),
         a = (r(55449), r(63154)),
         s = r(55910),
@@ -1858,7 +1858,7 @@
       r.d(t, { W: () => _ });
       var n = r(33940),
         i = (r(82569), r(50265)),
-        a = (r(45797), r(52276), r(92801), r(70983)),
+        a = (r(49969), r(52276), r(92801), r(70983)),
         s = r(45878),
         o = r(19320);
       const l = s.Message;
@@ -2194,7 +2194,7 @@
       r.d(t, { Gk: () => c, LH: () => l, ZT: () => n, xM: () => o });
       var n,
         i = r(63154),
-        a = (r(6960), r(45797), r(29760)),
+        a = (r(6960), r(49969), r(29760)),
         s = r(31587);
       !(function (e) {
         (e[(e.k_eLibrary = 1)] = "k_eLibrary"),
@@ -2369,7 +2369,7 @@
       var n,
         i = r(33940),
         a = r(50265),
-        s = (r(6960), r(45797), r(66729)),
+        s = (r(6960), r(49969), r(66729)),
         o = (r(82569), r(36764)),
         l = r(31587),
         c = r(59821);
@@ -2713,7 +2713,7 @@
       var n = r(33940),
         i = r(50265),
         a = r(44229),
-        s = (r(6960), r(45797));
+        s = (r(6960), r(49969));
       r(93982);
       const o = {
         bBroadcastEnabled: !1,
@@ -4086,7 +4086,7 @@
       "use strict";
       r.d(t, { Me: () => l, Mx: () => d, XC: () => c });
       var n = r(89526),
-        i = (r(45797), r(67575), r(68208)),
+        i = (r(49969), r(67575), r(68208)),
         a = r(66715),
         s = r(82569),
         o = r(70983);
@@ -4215,14 +4215,14 @@
     40590: (e, t, r) => {
       "use strict";
       r.d(t, { m: () => n });
-      r(47687), r(35177), r(82633), r(45797);
+      r(47687), r(35177), r(82633), r(49969);
       const n = "terminal";
     },
     52276: (e, t, r) => {
       "use strict";
       var n = r(33940),
         i = r(50265),
-        a = (r(6960), r(45797), r(82633), r(40574), r(2351), r(98197)),
+        a = (r(6960), r(49969), r(82633), r(40574), r(2351), r(98197)),
         s = r(70983);
       class o {
         InitFrom(e) {
@@ -9124,7 +9124,7 @@
         (0, n.gn)([s.aD.bound], b.prototype, "CaptureStatsForDisplay", null),
         (0, n.gn)([g.a], b.prototype, "OnVideoPause", null),
         (0, n.gn)([g.a], b.prototype, "OnVideoResize", null);
-      r(45797), r(87487);
+      r(49969), r(87487);
       var S = r(99096),
         y = r(32338),
         E = r(31587),
@@ -10234,7 +10234,7 @@
         s = r.n(a),
         o = r(50265),
         l = r(6960),
-        c = r(45797),
+        c = r(49969),
         d = (r(93982), r(82569)),
         m = (r(67237), r(89526)),
         u = r(36764);
@@ -10855,7 +10855,7 @@
         a = r.n(i),
         s = r(50265),
         o = r(6960),
-        l = (r(45797), r(93982)),
+        l = (r(49969), r(93982)),
         c = r(82569),
         d = (r(67237), r(96158), r(99096)),
         m = r(32338),
@@ -11329,7 +11329,7 @@
         a = r.n(i),
         s = r(50265),
         o = r(89526),
-        l = (r(6960), r(45797), r(82569)),
+        l = (r(6960), r(49969), r(82569)),
         c = (r(96158), r(32338)),
         d = r(70983),
         m = r(92801);
@@ -11727,7 +11727,7 @@
         s = r.n(a),
         o = r(50265),
         l = r(89526),
-        c = (r(45797), r(97303)),
+        c = (r(49969), r(97303)),
         d = (r(52276), r(82569)),
         m = (r(96158), r(70983));
       class u {
@@ -12249,7 +12249,7 @@
         i = r(52868),
         a = r.n(i),
         s = r(89526),
-        o = (r(6960), r(45797), r(96158), r(47330)),
+        o = (r(6960), r(49969), r(96158), r(47330)),
         l = r(23213),
         c = r(31621),
         d = r(70983);
@@ -12498,7 +12498,7 @@
         a = r.n(i),
         s = r(50265),
         o = r(36105),
-        l = (r(6960), r(45797), r(81319)),
+        l = (r(6960), r(49969), r(81319)),
         c = (r(67575), r(82569)),
         d = r(83983),
         m = r(68208),
@@ -13296,7 +13296,7 @@
         i = r(52868),
         a = r.n(i),
         s = (r(72634), r(70983)),
-        o = (r(45797), r(18535), r(81319), r(23213)),
+        o = (r(49969), r(18535), r(81319), r(23213)),
         l = r(59649);
       !(function (e) {
         (e[(e.k_eDiscussions = 0)] = "k_eDiscussions"),
@@ -13438,7 +13438,7 @@
       var n,
         i = r(33940),
         a = r(50265),
-        s = (r(6960), r(45797), r(81319)),
+        s = (r(6960), r(49969), r(81319)),
         o = r(32338),
         l = r(70983),
         c = r(10717),
@@ -13904,7 +13904,7 @@
         i = r(52868),
         a = r.n(i),
         s = r(50265),
-        o = (r(6960), r(45797), r(17922)),
+        o = (r(6960), r(49969), r(17922)),
         l = (r(67575), r(67237)),
         c = r(23213),
         d = r(59821),
@@ -14490,7 +14490,7 @@
         i = r(52868),
         a = r.n(i),
         s = r(50265),
-        o = (r(6960), r(45797), r(81319), r(96158), r(32338)),
+        o = (r(6960), r(49969), r(81319), r(96158), r(32338)),
         l = r(47330),
         c = r(70983);
       class d {
@@ -14603,7 +14603,7 @@
         s = r(50265),
         o = r(39818),
         l = r(6960),
-        c = (r(45797), r(79283), r(67575)),
+        c = (r(49969), r(79283), r(67575)),
         d = r(82569),
         m = (r(67737), r(41140)),
         u = (r(96158), r(99096)),
@@ -15795,7 +15795,7 @@
         a = r.n(i),
         s = r(50265),
         o = r(89526),
-        l = (r(6960), r(45797), r(77515)),
+        l = (r(6960), r(49969), r(77515)),
         c = r(82569),
         d = (r(96158), r(32338)),
         m = r(47330),
@@ -15919,7 +15919,7 @@
         i = r(52868),
         a = r.n(i),
         s = r(50265),
-        o = (r(6960), r(45797), r(8453), r(47330)),
+        o = (r(6960), r(49969), r(8453), r(47330)),
         l = r(70983),
         c = r(32478);
       class d {
@@ -16753,7 +16753,7 @@
         ie = r(48706),
         ae = r(5833),
         se = r(69728),
-        oe = r(45797);
+        oe = r(49969);
       const le = (0, d.Pi)((e) => {
         const {
             clanSteamID: t,
@@ -20312,7 +20312,7 @@
         a = r(36105),
         s = r(89526),
         o = r(6960),
-        l = (r(45797), r(7297)),
+        l = (r(49969), r(7297)),
         c = r(81319),
         d = r(83471),
         m = (r(67575), r(29760)),
@@ -21170,7 +21170,7 @@
       var n = r(33940),
         i = r(51684),
         a = r(55910),
-        s = r(45797),
+        s = r(49969),
         o = (r(67575), r(82702), r(2351)),
         l = (r(55449), r(63154)),
         c = r(70983),
@@ -21356,7 +21356,7 @@
     64996: (e, t, r) => {
       "use strict";
       r.d(t, { K: () => i, u: () => a });
-      r(45797);
+      r(49969);
       var n = r(65666);
       r(67575);
       function i(e, t) {
@@ -21413,68 +21413,90 @@
           return this.m_bDefaultTab;
         }
         BFilterRequiresFeatureDemo() {
-          var e, t, r, n, i;
+          return a.BFilterRequiresFeatureDemoStatic(this.m_activeTab);
+        }
+        static BFilterRequiresFeatureDemoStatic(e) {
+          var t, r, n;
           if (
             1 ==
             (null ===
               (r =
-                null ===
-                  (t =
-                    null === (e = this.m_activeTab) || void 0 === e
-                      ? void 0
-                      : e.sale_tag_filter) || void 0 === t
+                null === (t = null == e ? void 0 : e.sale_tag_filter) ||
+                void 0 === t
                   ? void 0
                   : t.clauses) || void 0 === r
               ? void 0
               : r.length)
           ) {
-            const e =
-              null ===
-                (i =
-                  null === (n = this.m_activeTab) || void 0 === n
-                    ? void 0
-                    : n.sale_tag_filter) || void 0 === i
+            const t =
+              null === (n = null == e ? void 0 : e.sale_tag_filter) ||
+              void 0 === n
                 ? void 0
-                : i.clauses[0];
+                : n.clauses[0];
             return (
-              "Must have" === e.type &&
-              1 === e.or_tags.length &&
-              "[Feature] Has Demo" === e.or_tags[0]
+              "Must have" === t.type &&
+              1 === t.or_tags.length &&
+              "[Feature] Has Demo" === t.or_tags[0]
             );
           }
           return !1;
         }
         BFilterRequiresSteamDeckVerifiedOrPlayable() {
-          var e, t, r, n, i;
+          return a.BFilterRequiresSteamDeckVerifiedOrPlayableStatic(
+            this.m_activeTab
+          );
+        }
+        static BFilterRequiresSteamDeckVerifiedOrPlayableStatic(e) {
+          var t, r, n;
           if (
             1 ==
             (null ===
               (r =
-                null ===
-                  (t =
-                    null === (e = this.m_activeTab) || void 0 === e
-                      ? void 0
-                      : e.sale_tag_filter) || void 0 === t
+                null === (t = null == e ? void 0 : e.sale_tag_filter) ||
+                void 0 === t
                   ? void 0
                   : t.clauses) || void 0 === r
               ? void 0
               : r.length)
           ) {
-            const e =
-              null ===
-                (i =
-                  null === (n = this.m_activeTab) || void 0 === n
-                    ? void 0
-                    : n.sale_tag_filter) || void 0 === i
+            const t =
+              null === (n = null == e ? void 0 : e.sale_tag_filter) ||
+              void 0 === n
                 ? void 0
-                : i.clauses[0];
+                : n.clauses[0];
             return (
-              "Must have" === e.type &&
-              e.or_tags.some(
+              "Must have" === t.type &&
+              t.or_tags.some(
                 (e) =>
                   "[Feature] Steam Deck Playable" == e ||
                   "[Feature] Steam Deck Verified" == e
               )
+            );
+          }
+          return !1;
+        }
+        static BFilterRequiresFeatureAdultOnly(e) {
+          var t, r, n;
+          if (
+            1 ==
+            (null ===
+              (r =
+                null === (t = null == e ? void 0 : e.sale_tag_filter) ||
+                void 0 === t
+                  ? void 0
+                  : t.clauses) || void 0 === r
+              ? void 0
+              : r.length)
+          ) {
+            const t =
+              null === (n = null == e ? void 0 : e.sale_tag_filter) ||
+              void 0 === n
+                ? void 0
+                : n.clauses[0];
+            return (
+              "Must have" === t.type &&
+              1 === t.or_tags.length &&
+              "[Feature] Adult Only Sexual Content" === t.or_tags[0]
             );
           }
           return !1;
@@ -21511,7 +21533,7 @@
       var n = r(33940),
         i = r(89526),
         a = r(6960),
-        s = r(45797),
+        s = r(49969),
         o = r(31587),
         l = r(98197),
         c = r(70983),
