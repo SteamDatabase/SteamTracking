@@ -1338,6 +1338,7 @@ body.in_global_drag .title-area {
 .title-area-icon:hover .SVGIcon_Button line,
 .title-area-icon:hover .SVGIcon_Button polyline {
   stroke: #fff;
+  transition: stroke 0.15s ease-out;
 }
 .ModalDialogPopup .maximizeRestoreButton {
   display: none;
@@ -1577,6 +1578,7 @@ body.in_global_drag .title-area {
   align-items: center;
   justify-content: center;
   cursor: default;
+  transition: stroke 0.15s ease-out;
   width: 32px;
   height: 24px;
   margin-top: 7px;
@@ -1597,10 +1599,12 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area-icon:hover {
   background: #3d4450;
   border-radius: 2px;
+  transition: background 0.15s ease-out;
 }
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
   background: #e22a27;
+  transition: background 0.15s ease-out;
 }
 div:focus,
 a:focus,
@@ -2060,6 +2064,9 @@ span:focus {
 }
 .throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
   opacity: 1;
+}
+.throbber_NewThrobber_tAKvs img {
+  width: 100%;
 }
 .contextmenu_ContextMenuMouseOverlay_pu9cO {
   position: fixed;
@@ -2789,6 +2796,11 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   z-index: 5;
   width: 32px;
   height: 24px;
+  background-color: #3d4450;
+  border-radius: 2px;
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   -webkit-app-region: no-drag;
   font-weight: bold;
   cursor: pointer;
@@ -2801,7 +2813,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_HidePageListButton_3i4Ep:hover {
   color: #fff;
-  background: #3d4450;
+  background: #464d58;
   border-radius: 2px;
 }
 @keyframes gamepadui_svg_library_SpinnerSpokeFade_2QBT4 {

@@ -1454,7 +1454,6 @@ enum EMsg {
 	k_EMsgClientBroadcastInit = 9700;
 	k_EMsgClientBroadcastFrames = 9701;
 	k_EMsgClientBroadcastDisconnect = 9702;
-	k_EMsgClientBroadcastScreenshot = 9703;
 	k_EMsgClientBroadcastUploadConfig = 9704;
 	k_EMsgBaseClient3 = 9800;
 	k_EMsgClientVoiceCallPreAuthorize = 9800;

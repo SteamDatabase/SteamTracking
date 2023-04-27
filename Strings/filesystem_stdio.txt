@@ -266,14 +266,15 @@ s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
 =
+~
 0
 @
 @
-K
+\
+i
 Ic
 =
 @
 =
 @
 =*.*
-i

@@ -420,3 +420,9 @@ enum EBroadcastEncoderSetting {
 	k_EBroadcastEncoderBestQuality = 0;
 	k_EBroadcastEncoderBestPerformance = 1;
 }
+
+enum ECloudGamingPlatform {
+	k_ECloudGamingPlatformNone = 0;
+	k_ECloudGamingPlatformValve = 1;
+	k_ECloudGamingPlatformNVIDIA = 2;
+}

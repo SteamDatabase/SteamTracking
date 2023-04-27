@@ -1110,6 +1110,7 @@ https://crash.steampowered.com/submit
 -steamid=%llu
 -logdir=%s
 -uimode=%d
+-startcount=%d
 -composer-mode=%d
 -steamdeck
 -steamos3
@@ -1145,7 +1146,7 @@ SameSiteByDefaultCookies
 8080
 --remote-debugging-port=%s
 --remote-debugging-address=%s
-CalculateNativeWinOcclusion
+WebContentsOcclusion
 --enable-smooth-scrolling
 --disable-smooth-scrolling
 --disable-gpu-compositing --disable-gpu
@@ -2368,16 +2369,17 @@ sc_schinese
 @
 @
 
-d
-$
 
 
 @
 Ic
-]
-}
+n
+<
 
+8
 
+D
+<
 
 0
 0
@@ -2424,10 +2426,9 @@ IcE
 IcE
 @
 @
-e
+U
 V
 =
-2
 =
 !
 @
@@ -2436,7 +2437,6 @@ V
 M9e
 @
 @
-V
 ?
 ?
 ?

@@ -22,7 +22,11 @@
             "argc": "1"
         },
         {
-            "name": "GetExternalEventSource",
+            "name": "GetProperties",
+            "argc": "1"
+        },
+        {
+            "name": "GetPaths",
             "argc": "1"
         },
         {

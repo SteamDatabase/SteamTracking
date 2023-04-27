@@ -534,7 +534,7 @@
 "Friends_SteamInputControllerConfigNotification_Info2" "%config_name%"
 "Friends_SteamInputControllerConfigNotification_Info3" "Im Steam Overlay bearbeiten"
 "Library_ControllerSaveDefaultTitle" "Offizielle Konfiguration"
-"SettingsController_AutosaveName" "Persönliches Autosave"
+"SettingsController_AutosaveName" "Pers. autom. Speichern"
 "SettingsController_SteamController" "Steam Controller"
 "controller_none"									"Keiner"
 "controller_unknown"								"Unbekannter Controller"

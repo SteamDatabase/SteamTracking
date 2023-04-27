@@ -42,7 +42,7 @@
 "Steam_Settings_Library_DisableCommunityContent_Title" "Désactiver le contenu de la communauté"
 "Steam_Settings_Library_DisableCommunityContent_Desc" "Empêche le chargement automatique du contenu de la communauté sur la page des détails des produits."
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "Activé par le mode faible bande passante.\n\nEmpêche le chargement automatique du contenu de la communauté sur la page des détails des produits."
-"Steam_Settings_Library_IconInGameList_Title" "Icônes des jeux dans la colonne de gauche"
+"Steam_Settings_Library_IconInGameList_Title" "Icônes de jeux à gauche"
 
 
 "Overlay_WebBrowserTitle"	"Navigateur intégré au jeu"

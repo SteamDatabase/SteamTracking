@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-@j
-@j
 __stubs
 __TEXT
 __stub_helper
@@ -3933,10 +3931,6 @@ IcE
 V
 =
 =
-"
-"
-"
-"
 !
 @
 &
@@ -3963,12 +3957,11 @@ M9e
 @
 @
 
-C
-
 
 
 d
 A+M
+P
 j
 j
 j
@@ -4013,6 +4006,7 @@ d
 &
 &
 d
+
 0
 A+4$A+u
 =

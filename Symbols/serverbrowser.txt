@@ -87,7 +87,7 @@
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
- SteamVProf::CVProfManager::StartProfilingAllThreads()
+ SteamVProf::CVProfManager::StartProfilingAllThreads(float)
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  StringAfterPrefix
  T CreateInterface

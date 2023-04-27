@@ -189,7 +189,7 @@
 "Overlay_Screenshots_Show" "정렬:"
 "Overlay_Screenshots_Size_Cloud" "%selected_ss_size%"
 "Overlay_Screenshots_Size_Original" " (디스크 내의 %selected_ss_size_original%)"
-"Overlay_View_All_Screenshots" "온라인 모음집에서 보기"
+"Overlay_View_All_Screenshots" "스크린샷 보기"
 "Overlay_View_Screenshots" "스크린샷 보기"
 "Overlay_View_Local" "디스크에서 보기"
 "Overlay_Set_Shortcut" "바로 가기 지정"

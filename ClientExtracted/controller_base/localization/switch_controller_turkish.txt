@@ -46,4 +46,5 @@
 	"origin_switch_r_gyro_pitch"				"Sağ JoyCon Jiroskop Eğimi"
 	"origin_switch_r_gyro_yaw"					"Sağ JoyCon Jiroskop Sapması"
 	"origin_switch_r_gyro_roll"					"Sağ Joy-Con Jiroskop Döndürmesi"
-	}
+	"origin_switch_button_dpad_move"			"D-Pad Hareketi"
+}

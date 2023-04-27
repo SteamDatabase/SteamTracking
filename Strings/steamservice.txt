@@ -14,11 +14,10 @@ __cstring
 __TEXT
 __objc_methname
 __TEXT
-%A,
-%A,
 __unwind_info
 __TEXT
-|p
+M,
+M,
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -64,8 +63,7 @@ __LINKEDIT
 8
 @loader_path/steamservice.dylib
 "
-PL0
-px0
+hL0
 P
 
 *
@@ -91,6 +89,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+*
 )
 +g=/
 Hc5M6/
@@ -100,17 +99,20 @@ Hc5M6/
 
 
 !
+"
 
-)
+e!
 Hi
+)
+)
+)
+)
 H=
 ,
-s
-U(
-5
 Hc
 Hc
 Hc
+R+
 0
 0
 AT=
@@ -123,8 +125,9 @@ D
 @
 (
 (
-$
-+
+(
+(
+#
 @
 Hc
 Hc
@@ -157,21 +160,14 @@ IcE
 @
 @
 ]
-4'
+='
 '
-'
-'
-'
-'
-'
-"
 V
-H;5rJ)
-Y!
+W%
+d!
+T!
 =
-!
-!
-s%
+|%
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -1383,7 +1379,6 @@ N11SteamStdLib12ICommandLineE
 16IKeyValuesSystem
 20IUniformRandomStream
 0@
-zD
 $tI
 6ConVar
 13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
@@ -1404,6 +1399,7 @@ _12CStdMemAlloc
 0E
 N16SteamThreadTools7CThreadE
 Y@
+zD
 14CCryptoKeyBase
 24CCryptoKeyBase_RawBuffer
 11CRSAKeyBase
@@ -8594,7 +8590,6 @@ TMPDIR
 %s/steamXXXXXX
 flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
-written == count
 fsync %s failed, errno = %d
 rb
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
@@ -8778,8 +8773,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Apr 18 2023
-16:14:25
+Apr 27 2023
+15:05:48
 Jan
 Feb
 Mar
@@ -9215,8 +9210,6 @@ We we first discover the protobuf class used for a particular EMsg, log it
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
-@nTCPLargeSendBufSizeMB
-16
 *pvRecord
 m_pMemoryPoolRecord
 @cNetEncryptionHandshakeWorkMax_LowPri
@@ -9378,17 +9371,20 @@ Hc5M6/
 
 
 !
+"
 
-)
+e!
 Hi
+)
+)
+)
+)
 H=
 ,
-s
-U(
-5
 Hc
 Hc
 Hc
+R+
 0
 0
 AT=
@@ -9401,8 +9397,9 @@ D
 @
 (
 (
-$
-+
+(
+(
+#
 @
 Hc
 Hc
@@ -9435,48 +9432,42 @@ IcE
 @
 @
 ]
-4'
+='
 '
-'
-'
-'
-'
-'
-"
 V
-H;5rJ)
-Y!
+W%
+d!
+T!
 =
-!
-!
-s%
+|%
 =
-I
-I
+@
+*
 %
-%
-%
-$
-$
-$
 !
 @
-#
+'&
 @
 &
+v%
+t%
 "
 "
-P!
-8!
-/$
+"
+Y!
+'
+'
+A!
+!
+!
 $
 #
+&!
 #
 @
 M9e
 @
 @
-!
 ?
 ?
 ?
@@ -9502,10 +9493,10 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 Pj
 ARj
 j
-$
 0
 0
 =
+
 =
 @
 =
@@ -9806,12 +9797,10 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 @
 
-;
 @
 @
 @
 0
-!
 H=
 Ic]
 j
@@ -9927,9 +9916,6 @@ H=
 0
 0
 H=
-
-
-
 0
 &
 @

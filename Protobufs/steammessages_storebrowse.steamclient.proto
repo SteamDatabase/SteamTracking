@@ -85,6 +85,7 @@ message StoreBrowseItemDataRequest {
 	optional bool include_reviews = 9;
 	optional bool include_basic_info = 10 [(description) = "Include short description, publisher, developers"];
 	optional bool include_supported_languages = 11 [(description) = "includes the games support for languages: supported, full_audio, subtitles"];
+	optional bool include_full_description = 12;
 }
 
 message CStoreBrowse_GetItems_Request {
@@ -219,6 +220,7 @@ message StoreItem {
 		optional bool is_commercial_license = 40 [(description) = "This is a commercial license"];
 		optional bool should_suppress_discount_pct = 41 [(description) = "Don't show the discount percentage on a store capsule for this item."];
 		optional bool hide_discount_pct_for_compliance = 42 [default = false, (description) = "Don't show the discount percent because there was a discount in the last 30 days."];
+		optional int32 included_game_count = 43 [(description) = "How many games are included in this purchase option."];
 	}
 
 	message Screenshots {
@@ -299,7 +301,8 @@ message StoreItem {
 	optional .StoreItem.FreeWeekend free_weekend = 54 [(description) = "Information about a free weekend offer."];
 	optional bool unlisted = 55 [(description) = "If true, item is only accessible on store via a direct link"];
 	optional uint32 game_count = 56 [(description) = "For creators and tags, how many games belong to them"];
-	optional string internal_name = 57 [(description) = " For hub categories, the internal name (handle) of the category"];
+	optional string internal_name = 57 [(description) = "For hub categories, the internal name (handle) of the category"];
+	optional string full_description = 58 [(description) = "About this game section on the store page"];
 }
 
 message CStoreBrowse_GetItems_Response {

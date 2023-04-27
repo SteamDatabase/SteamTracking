@@ -4792,7 +4792,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_WindowsCompat_RestartSteam" "Restartovat klienta"
 "Steam_WindowsCompat_Continue" "Pokračovat"
 
-"Steam_WindowsCompat_BigPicture" "Klient služby Steam je momentálně spuštěna v režimu kompatibility. To může bránit v používání režimu Big Picture, protože klient může chybně rozpoznat Váš systém jako Windows XP nebo starší."
+"Steam_WindowsCompat_BigPicture" "Klient služby Steam je momentálně spuštěn v režimu kompatibility. To může bránit v používání režimu Big Picture, protože klient mohl chybně rozpoznat Váš systém jako Windows XP nebo starší."
 "Steam_WindowsCompat_Webhelper" "Webový prohlížeč klienta služby Steam momentálně běží v operačním systému Windows v režimu kompatibility, což může vyústit v nesprávné zobrazení některého obsahu. \n\nKlient služby Steam opraví problém a restartuje se. \n\nPokud tato zpráva nezmizí, vypněte režim kompatibility dle instrukcí níže."
 
 "Steam_InstallIssue_FolderReadOnly"	"Instalační složka klienta služby Steam momentálně neumožňuje zapisování, což může způsobit potíže s některými funkcemi a spuštěnými hrami. \n\nKlient služby Steam potřebuje tento problém opravit a poté se restartovat."

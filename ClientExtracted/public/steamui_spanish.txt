@@ -3475,7 +3475,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_JoinDialog_Updating_Title" 	"Actualizando %game%"
 "SteamUI_JoinDialog_Ready_Title"	"%game% listo"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
-"SteamUI_JoinDialog_InstallScriptInfo"	"Realizando la configuración inicial %dots% \n\nInstalando: %stepname% (paso %step% de %steptotal%)"
+"SteamUI_JoinDialog_InstallScriptInfo"	"Realizando la configuración inicial%dots% \n\nInstalando: %stepname% (paso %step% de %steptotal%)"
 
 
 "SteamUI_GameRequires_NTFS_Detail"	"El juego que estás instalando requiere un disco duro con el sistema de archivos NTFS y\nno puede instalarse en uno con el sistema FAT32. Para más información,\nconsulta el artículo de soporte en el vínculo que aparece abajo."

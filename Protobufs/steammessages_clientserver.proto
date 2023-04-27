@@ -156,6 +156,7 @@ message CMsgClientAuthList {
 	repeated .CMsgAuthTicket tickets = 4;
 	repeated uint32 app_ids = 5;
 	optional uint32 message_sequence = 6;
+	optional bool filtered = 7;
 }
 
 message CMsgClientAuthListAck {

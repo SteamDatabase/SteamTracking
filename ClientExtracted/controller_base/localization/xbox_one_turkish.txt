@@ -28,8 +28,10 @@
 	"origin_xboxone_shoulder_r"						"Sağ Omuz"
 	"origin_xboxone_button_menu"					"Menü Butonu"
 	"origin_xboxone_button_view"					"Görünüm Butonu"
+	"origin_xboxone_button_dpad_move"				"D-Pad Hareketi"
 	"origin_xboxone_button_paddle_1"				"P1 Denetim Düğmesi"
 	"origin_xboxone_button_paddle_2"				"P2 Denetim Düğmesi"
 	"origin_xboxone_button_paddle_3"				"P3 Denetim Düğmesi"
 	"origin_xboxone_button_paddle_4"				"P4 Denetim Düğmesi"
-	}
+	"origin_xboxone_button_share"					"Paylaş Butonu"
+}

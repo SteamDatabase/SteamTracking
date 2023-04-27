@@ -427,7 +427,7 @@
         },
         {
             "name": "GetPeerContentServerForApp",
-            "argc": "3"
+            "argc": "4"
         }
     ]
 }

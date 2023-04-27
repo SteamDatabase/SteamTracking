@@ -255,7 +255,7 @@
  T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  T SteamVProf::CVProfManager::EnableDumpSpikes(int)
  T SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
- T SteamVProf::CVProfManager::StartProfilingAllThreads()
+ T SteamVProf::CVProfManager::StartProfilingAllThreads(float)
  T SteamVProf::CVProfManager::StopProfilingAllThreads()
  T SteamVProf::CVProfManager::Validate(CValidator&, char const*)
  T SteamVProf::CVProfManager::~CVProfManager()
@@ -280,7 +280,8 @@
  T SteamVProf::CVProfile::CVProfile()
  T SteamVProf::CVProfile::CreateBudgetGroups()
  T SteamVProf::CVProfile::Dump(char const*, ...)
- T SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, int, bool)
+ T SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
+ T SteamVProf::CVProfile::DumpSingleNode(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
  T SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
  T SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
  T SteamVProf::CVProfile::ExitScope()
@@ -294,13 +295,13 @@
  T SteamVProf::CVProfile::OutputReport(int, char const*, int)
  T SteamVProf::CVProfile::Pause()
  T SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+ T SteamVProf::CVProfile::RegisterNode(SteamVProf::CVProfNode*)
  T SteamVProf::CVProfile::Reset()
  T SteamVProf::CVProfile::ResetPeaks()
  T SteamVProf::CVProfile::Resume()
  T SteamVProf::CVProfile::Start()
  T SteamVProf::CVProfile::Stop()
  T SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
- T SteamVProf::CVProfile::SumTimes(char const*, int)
  T SteamVProf::CVProfile::Term()
  T SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
  T SteamVProf::CVProfile::Validate(CValidator&, char const*)
@@ -312,7 +313,7 @@
  T SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
  T SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
  T SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
- T SteamVProf::CVProfileThreadEntry::StartProfiling()
+ T SteamVProf::CVProfileThreadEntry::StartProfiling(float)
  T SteamVProf::CVProfileThreadEntry::StopProfiling()
  T TSListBase_Init
  T TSListBase_Pop
@@ -536,8 +537,10 @@
  snprintf
  sscanf
  stat$INODE64
+ std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::length_error::~length_error()
  std::logic_error::logic_error(char const*)
  std::terminate()

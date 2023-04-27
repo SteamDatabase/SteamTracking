@@ -40,6 +40,45 @@ message CDataPublisher_ClientUpdateAppJob_Notification {
 	optional uint32 cell_id = 22;
 }
 
+message CDataPublisher_GetVRDeviceInfo_Request {
+	optional uint32 month_count = 1 [(description) = "Number of months for which to generate a report"];
+}
+
+message CDataPublisher_GetVRDeviceInfo_Response {
+	message Device {
+		optional string name = 1 [(description) = "Name to show for this device"];
+		optional uint32 ref = 2 [(description) = "Reference number for this device"];
+		optional uint32 aggregation_ref = 3 [(description) = "Reference number to aggregate this device under"];
+		optional uint32 total = 4 [(description) = "Sum of all the counts"];
+		optional string driver = 5 [(description) = "driver name reported by the user"];
+		optional int32 device_class = 6 [(description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];
+	}
+
+	repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(description) = "Result devices"];
+}
+
+message CDataPublisher_SetVRDeviceInfoAggregationReference_Request {
+	optional uint32 ref = 1 [(description) = "Reference number in the VRDeviceInfo table for the entry to set"];
+	optional uint32 aggregation_ref = 2 [(description) = "Aggregation to set the entry to"];
+}
+
+message CDataPublisher_SetVRDeviceInfoAggregationReference_Response {
+	optional uint32 result = 1 [(description) = "k_EResultOK, etc."];
+}
+
+message CDataPublisher_AddVRDeviceInfo_Request {
+	optional string manufacturer = 1 [(description) = "Manufacturer for the new device"];
+	optional string model = 2 [(description) = "Model for the new device"];
+	optional string driver = 3 [(description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];
+	optional string controller_type = 4 [(description) = "controller type for the device. Can be an empty string for devices with no inputs"];
+	optional int32 device_class = 5 [(description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];
+}
+
+message CDataPublisher_AddVRDeviceInfo_Response {
+	optional uint32 result = 1 [(description) = "k_EResultOK, etc."];
+	optional uint32 ref = 2 [(description) = "The reference number of the inserted device"];
+}
+
 message CValveHWSurvey_GetSurveySchedule_Request {
 	optional string surveydatetoken = 1;
 	optional fixed64 surveydatetokenversion = 2;
@@ -55,6 +94,17 @@ service DataPublisher {
 
 	rpc ClientContentCorruptionReport (.CDataPublisher_ClientContentCorruptionReport_Notification) returns (.NoResponse);
 	rpc ClientUpdateAppJobReport (.CDataPublisher_ClientUpdateAppJob_Notification) returns (.NoResponse);
+	rpc GetVRDeviceInfo (.CDataPublisher_GetVRDeviceInfo_Request) returns (.CDataPublisher_GetVRDeviceInfo_Response) {
+		option (method_description) = "Generate a debug report of what devices are in the survey";
+	}
+
+	rpc SetVRDeviceInfoAggregationReference (.CDataPublisher_SetVRDeviceInfoAggregationReference_Request) returns (.CDataPublisher_SetVRDeviceInfoAggregationReference_Response) {
+		option (method_description) = "Set the rollup reference of a single VR device";
+	}
+
+	rpc AddVRDeviceInfo (.CDataPublisher_AddVRDeviceInfo_Request) returns (.CDataPublisher_AddVRDeviceInfo_Response) {
+		option (method_description) = "Adds a device to the VRDeviceInfo table for the hardware survey";
+	}
 }
 
 service ValveHWSurvey {

@@ -231,7 +231,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/d2l_settings.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionjoinparty.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionlaunchapp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionverifyapp.cpp

@@ -2002,7 +2002,7 @@ Dacă ai reconfigurat tastele în joc, s-ar putea să necesite să resetezi acel
 	"Library_Details_ControllerBindingsGordon_ShowActivator"	"ARATĂ ACTIVATORI"
 	"Library_Details_ControllerBindingsGordon_NextActionSet"	"URMĂTORUL SET"
 	"Library_Details_ControllerBindingsGordon_PreviousActionSet"	"SETUL ANTERIOR"
-	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"APLICĂ CONFIGURAȚIA"
+	"Library_Details_ControllerBindingsGordon_ApplyConfiguration"	"APLICARE CONFIGURAȚIE"
 	"Library_Details_ControllerBindingsGordon_Share"	"ÎMPĂRTĂȘEȘTE CONFIGURAȚIA"	
 	"Library_Details_ControllerBindingsGordon_ListenForBinding"	"ÎN AȘTEPTAREA TASTEI"
 	"Library_Details_ControllerBindingsGordon_Reset"			"RESETEAZĂ LA ASOCIEREA CU SETUL DE ACȚIUNI"

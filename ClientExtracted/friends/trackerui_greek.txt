@@ -378,7 +378,7 @@
 "Friends_WhenReceiveMessage"			"Όταν λαμβάνω ένα μήνυμα"
 "Friends_WhenGroupEventsOrAnnouncementsHappen"	"Για συμβάντα και ανακοινώσεις ομάδας"
 "Friends_DisplayNotification"			"Εμφάνιση μιας ειδοποίησης"
-"Friends_PlayASound"					"Αναπαραγωγή ενός ήχου"
+"Friends_PlayASound"					"Αναπαραγωγή ήχου"
 "Friends_FlashWindow"			"Αναβόσβημα παραθύρου όταν λαμβάνω μήνυμα"
 "Friends_FlashWindowAlways"		"Πάντα"
 "Friends_FlashWindowMinimized"		"Μόνο όταν είναι ελαχιστοποιημένο"
@@ -388,7 +388,7 @@
 "Friends_NameTooShort_Title"			"Φίλοι - Όνομα προφίλ πολύ μικρό"
 "Friends_NameTooShort_Info"			"Το όνομα προφίλ πρέπει να περιέχει τουλάχιστον δύο χαρακτήρες."
 "Friends_NameChangeFailed_Title"		"Φίλοι - Αποτυχία αλλαγής ονόματος προφίλ"
-"Friends_NameChangeFailed_Info"		"Αποτυχία αλλαγής ονόματος προφίλ. Παρακαλούμε δοκιμάστε ξανά σε λίγα λεπτά."
+"Friends_NameChangeFailed_Info"		"Αποτυχία αλλαγής ονόματος προφίλ. Δοκιμάστε ξανά σε λίγα λεπτά."
 "Friends_NameChangeThrottled_Info"		"Δεν επιτρέπονται πολύ συχνές αλλαγές στο όνομα προφίλ. Δοκιμάστε ξανά σε λίγα λεπτά."
 
 "Friends_OnlineNotification_Info"			"μόλις συνδέθηκε"

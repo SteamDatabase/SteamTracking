@@ -10432,6 +10432,20 @@
   margin: 20px 15px 0px 15px;
   font-size: 14px;
 }
+.remoteplay_QuickAccessNotifications_3EHGW > div {
+  position: relative;
+}
+.remoteplay_QuickAccessNotifications_3EHGW
+  > div:not(:focus)
+  + div:not(:focus):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  border-bottom: 1px solid #3d4450;
+}
 .remoteplay_LowBattery_2byQS {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -35872,6 +35886,89 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 }
 body.VR {
   zoom: 200%;
+}
+.watchPartyDialog .watchOption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+  margin: 20px;
+}
+.watchPartyDialog .watchOptionRow {
+  border-bottom: 1px solid #535c68;
+}
+.watchPartyDialog .watchOption .watchOptionTitle,
+.watchPartyDialog .watchOption .watchOptionSubtitle {
+  color: #fff;
+}
+.watchPartyDialog .watchOption .watchOptionTitle .friendName {
+  color: #c9bdf7;
+}
+.watchPartyDialog .watchOption .watchOptionTitle {
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.watchPartyDialog .watchOption .watchOptionSubtitle {
+  font-size: 14px;
+  color: #777;
+}
+.watchPartyDialog .watchPartyPrompt {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.DialogButton.watchHowButton {
+  text-align: left;
+  height: 48px;
+  padding-left: 8px;
+  width: calc(100% - 16px);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.watchPartyDialog {
+  width: 450px;
+  max-height: 600px;
+}
+.ChatRoomListGroupItem.WatchPartyGroup .ChatRoomListGroupItem_header {
+  padding: 0;
+}
+.ChatRoomListGroupItem.WatchPartyGroup .ChatRoomMultiFriendAvatar.Small,
+.ChatRoomListGroupItem.WatchPartyGroup .ChatRoomGroupAvatar {
+  margin-left: 0;
+}
+.ChatRoomListGroupItem.WatchPartyGroup
+  .groupNameStatusContainer
+  .chatRoomDetails {
+  color: #9384d4;
+}
+.DialogButton.watchHowButton .friend.FriendAvatar.watchingbroadcast {
+  margin-right: 8px;
+}
+.DialogButton.watchHowButton .highlight {
+  margin-left: 4px;
+  color: #fff;
+}
+.DialogButton.watchHowButton .SVGIcon_Button {
+  margin-right: 6px;
+  width: 38px;
+  padding-top: 4px;
+}
+.DialogButton.watchHowButton .SVGIcon_FriendRequest .friendArm,
+.DialogButton.watchHowButton .SVGIcon_FriendRequest .redCircle {
+  display: none;
+}
+.DialogButton.watchHowButton .SVGIcon_FriendRequest,
+.DialogButton.watchHowButton .SVGIcon_NewChatGroup .Bubble {
+  fill: #b7ccd5;
+}
+.DialogButton.watchHowButton .SVGIcon_NewChatGroup line {
+  stroke: #3d4450;
+}
+.watchPartyDialog .DialogLabel {
+  margin-top: 16px;
 }
 
 /*# sourceMappingURL=../sourcemaps\css\libraries/libraries~e8c5e5be4.css.map*/

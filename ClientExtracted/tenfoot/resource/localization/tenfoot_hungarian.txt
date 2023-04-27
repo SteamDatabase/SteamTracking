@@ -3238,7 +3238,7 @@
 	"Community_Friends_MoreOnline_Count"	"TOVÁBBI {i:numfriendsonline} ONLINE"
 	"Community_Friends_JustOnline_Count"	"{i:numfriendsonline} BARÁT ONLINE"
 	"Community_Friends_Offline_Count"	"{i:numfriendsoffline} BARÁT"
-	"Community_Friends_ActivityFeed"	"AKTIVITÁS-LISTA"
+	"Community_Friends_ActivityFeed"	"AKTIVITÁSLISTA"
 
 	"Friends_Chat_Fail_LocalUserOffline"	"Nem tudsz üzenetet küldeni, mivel offline vagy."
 	"Friends_Chat_Fail_FriendUserOffline"	"Nem lehet üzenetet küldeni, a felhasználó offline."

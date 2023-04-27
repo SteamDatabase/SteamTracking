@@ -2842,7 +2842,7 @@
 
 	"Library_Details_EditSteamPlayOptions" "Изменить настройки Steam Play..."
 	"Library_EditSteamPlayOptions_Title"	"Steam Play"
-	"Library_EditSteamPlayOptions_SteamPlayOverrideTool"	"Принудительно использовать определённый инструмент совместимости Steam Play"
+	"Library_EditSteamPlayOptions_SteamPlayOverrideTool"	"Принудительно использовать выбранный инструмент совместимости Steam Play"
 
 	"Library_AppAllowDownloadsDuringGameplay_DefaultEnable" "Следовать общим настройкам (разрешить загрузки в фоне)"
 	"Library_AppAllowDownloadsDuringGameplay_DefaultDisable" "Следовать общим настройкам (остановить загрузки в фоне)"

@@ -1557,7 +1557,7 @@
           return "CEcon_GetAssetClassInfo_Response";
         }
       }
-      var C;
+      var z;
       !(function (e) {
         (e.GetInventoryItemsWithDescriptions = function (e, t) {
           return e.SendMsg("Econ.GetInventoryItemsWithDescriptions#1", t, M, {
@@ -1581,20 +1581,20 @@
               ePrivilege: 1,
             });
           });
-      })(C || (C = {}));
-      var z,
+      })(z || (z = {}));
+      var C,
         G = i(5615),
         U = i(50265),
         D = i(82569),
-        x = i(63154),
-        O = (i(49969), i(70983)),
+        O = i(63154),
+        x = (i(49969), i(70983)),
         X = i(31587);
       i(15781);
       !(function (e) {
         (e[(e.New = 0)] = "New"),
           (e[(e.Update = 1)] = "Update"),
           (e[(e.Remove = 2)] = "Remove");
-      })(z || (z = {}));
+      })(C || (C = {}));
       class L {
         constructor() {
           (this.m_rgNotificationRollups = []),
@@ -1797,18 +1797,18 @@
               (a.forEach((e) => {
                 e.bIncludesNew
                   ? (this.m_rgNewRollupIDs.set(e.key, { rollup: e, read: !1 }),
-                    t(e, z.New))
+                    t(e, C.New))
                   : this.m_rgNewRollupIDs.has(e.key) &&
                     this.m_rgNewRollupIDs.get(e.key).read != e.item.read &&
                     (this.m_rgNewRollupIDs.set(e.key, {
                       rollup: e,
                       read: e.item.read,
                     }),
-                    t(e, z.Update));
+                    t(e, C.Update));
               }),
               this.m_rgNewRollupIDs.forEach((e, i) => {
                 -1 == a.findIndex((e) => e.key == i) &&
-                  (t(e.rollup, z.Remove), this.m_rgNewRollupIDs.delete(i));
+                  (t(e.rollup, C.Remove), this.m_rgNewRollupIDs.delete(i));
               })),
             a.reverse(),
             (s.pending_gifts =
@@ -1887,7 +1887,7 @@
                       ? i.rgread.push(t.notification_id)
                       : i.rgunread.push(t.notification_id);
                 }
-                x.Z.Get().QueueAppRequest(parseInt(i.appid), {
+                O.Z.Get().QueueAppRequest(parseInt(i.appid), {
                   include_assets: !0,
                 });
               }
@@ -1918,12 +1918,12 @@
                       ? i.rgread.push(t.notification_id)
                       : i.rgunread.push(t.notification_id);
                 }
-                x.Z.Get().QueueAppRequest(parseInt(a), { include_assets: !0 });
+                O.Z.Get().QueueAppRequest(parseInt(a), { include_assets: !0 });
               }
               break;
             case 8:
               const s = J(t.body_data).appid;
-              s && x.Z.Get().QueueAppRequest(s, { include_assets: !0 });
+              s && O.Z.Get().QueueAppRequest(s, { include_assets: !0 });
             default:
               e.push({
                 type: r,
@@ -1970,7 +1970,7 @@
                     i.Body().set_get_descriptions(!0);
                   let n = new R();
                   n.add_assetids(e.assetid), i.Body().set_filters(n);
-                  const r = yield C.GetInventoryItemsWithDescriptions(t, i);
+                  const r = yield z.GetInventoryItemsWithDescriptions(t, i);
                   if (1 !== r.GetEResult())
                     return (
                       console.error(
@@ -1980,12 +1980,12 @@
                       null
                     );
                   let a = "";
-                  const s = yield x.Z.Get().QueueAppRequest(
+                  const s = yield O.Z.Get().QueueAppRequest(
                     parseInt(e.appid),
                     {}
                   );
                   if (1 == s) {
-                    const t = x.Z.Get().GetApp(parseInt(e.appid));
+                    const t = O.Z.Get().GetApp(parseInt(e.appid));
                     a = null == t ? void 0 : t.GetName();
                   } else console.log("Failed getting app info", s);
                   return {
@@ -2142,7 +2142,7 @@
                       "#SteamNotification_HelpRequest_Body",
                       t.ticket
                     ),
-                    link: O.De.HELP_BASE_URL + "wizard/HelpRequest/" + t.ticket,
+                    link: x.De.HELP_BASE_URL + "wizard/HelpRequest/" + t.ticket,
                   }
                 : (q(), null);
             } catch (e) {
@@ -2620,7 +2620,7 @@
             : t.icon_url) &&
           !_
         ) {
-          let e = `${O.De.COMMUNITY_CDN_URL}economy/image/${r.item_data.icon_url}`,
+          let e = `${x.De.COMMUNITY_CDN_URL}economy/image/${r.item_data.icon_url}`,
             t = r.item_data.background_color
               ? "#" + r.item_data.background_color
               : null;
@@ -2723,7 +2723,7 @@
               )
         );
       }
-      function Ce(e) {
+      function ze(e) {
         var t, i;
         let {
             currentUserSteamID: r,
@@ -2808,7 +2808,7 @@
               E
             );
       }
-      function ze(e) {
+      function Ce(e) {
         let {
           app: t,
           fallbackLogo: i,
@@ -2914,8 +2914,8 @@
           : null;
       }
       var De,
-        xe = i(60209),
-        Oe = i(57255),
+        Oe = i(60209),
+        xe = i(57255),
         Xe = i(15901),
         Le = i.n(Xe),
         We = i(25125),
@@ -3082,11 +3082,11 @@
         (0, n.useEffect)(() => {
           Ye.SetHash(t);
         }, [t]);
-        const i = (0, xe.bY)();
+        const i = (0, Oe.bY)();
         (0, n.useEffect)(() => {
           Ke.setTransport(i);
         }, [i]);
-        const r = (0, O.kQ)("notifications", "application_config");
+        const r = (0, x.kQ)("notifications", "application_config");
         return (
           Ke.ProcessNewNotificationPayload(r),
           (function () {
@@ -3236,7 +3236,7 @@
               "div",
               { className: Le().SettingsTooltip },
               n.createElement(
-                Oe.zx,
+                xe.zx,
                 {
                   className: Le().MarkAllReadButton,
                   onClick: () => Ke.MarkAllItemsRead(e),
@@ -3251,7 +3251,7 @@
                 className: Le().SettingsTooltip,
               },
               n.createElement(
-                Oe.zx,
+                xe.zx,
                 { className: Le().SettingsButton, disabled: !0 },
                 n.createElement(oe.Zrf, { className: Le().SettingsImg }),
                 (0, X.Xx)("#NotificationsList_Settings")
@@ -3273,7 +3273,7 @@
               )
           ),
           n.createElement(
-            Oe.zx,
+            xe.zx,
             {
               className: Le().ResetButton,
               onClick: () => Ye.SetFilter(10, !1, !0),
@@ -3287,7 +3287,7 @@
           { filters: i } = Pe();
         return 3 == t.type
           ? n.createElement(mt, { filterOptions: t, checked: i.get(t.type) })
-          : n.createElement(Oe.ji, {
+          : n.createElement(xe.ji, {
               className: Le().FilterCheckbox,
               key: t.type,
               label: t.display,
@@ -3298,7 +3298,7 @@
       function st(e) {
         const { threadType: t } = e,
           i = qe();
-        return n.createElement(Oe.ji, {
+        return n.createElement(xe.ji, {
           className: Le().AdvancedCommentFilterCheckbox,
           label: (0, X.Xx)("#CommentThreadType_" + t),
           checked: i.setItemTypes.has(t),
@@ -3364,15 +3364,13 @@
             }, [e]);
           })(),
           s = Ze(),
-          o = qe(),
-          [l, m] = n.useState(!1),
-          c = a.size > 2,
-          d = s.size > 1,
-          u = c || d;
+          o = a.size > 2,
+          l = s.size > 1,
+          m = o || l;
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(Oe.ji, {
+          n.createElement(xe.ji, {
             className: Le().FilterCheckbox,
             key: t.type,
             label: t.display,
@@ -3381,7 +3379,7 @@
               Ye.SetFilter(t.type, e);
             },
           }),
-          u &&
+          m &&
             n.createElement(
               "div",
               {
@@ -3393,42 +3391,7 @@
                 n.createElement(
                   "div",
                   { className: Le().CommentFilters },
-                  c &&
-                    n.createElement(
-                      Oe.SY,
-                      {
-                        classNames: Le().CommentRadioGroup,
-                        value: o.type,
-                        onChange: (e) => {
-                          Ye.SetCommentFilter({
-                            type: e,
-                            setItemTypes: o.setItemTypes,
-                          });
-                        },
-                      },
-                      Ye.k_rgCommentFilters
-                        .filter((e) => a.get(e.type) > 0)
-                        .map((e) =>
-                          n.createElement(
-                            le.s,
-                            { key: e.type, className: Le().CommentRadio },
-                            n.createElement(Oe.EU, { value: e.type }, e.display)
-                          )
-                        )
-                    ),
-                  d &&
-                    n.createElement(
-                      n.Fragment,
-                      null,
-                      n.createElement(
-                        Oe.zx,
-                        { onClick: () => m(!l) },
-                        (0, X.Xx)("#NotificationsList_CommentFilters_Advanced")
-                      ),
-                      n.createElement(ot, {
-                        className: (0, me.Z)(l && Le().Expanded),
-                      })
-                    )
+                  l && n.createElement(ot, { className: Le().Expanded })
                 )
               )
             )
@@ -3480,7 +3443,7 @@
             [o, l] = (0, je.Jq)(
               null == i ? void 0 : i.account_steam_id.GetAccountID()
             );
-          return n.createElement(Ce, {
+          return n.createElement(ze, {
             fallbackLogo: n.createElement(oe.ui7, null),
             icon: n.createElement(oe.svY, null),
             onActivate: () => ct(() => window.location.assign(s), t.item),
@@ -3511,7 +3474,7 @@
               );
             } else l(s.GetStorePageURL());
           }, [a, s, m]);
-          return n.createElement(ze, {
+          return n.createElement(Ce, {
             fallbackLogo: n.createElement(oe.ui7, null),
             icon: n.createElement(oe.yh4, null),
             onActivate: () => ct(() => window.location.assign(o), t.item),
@@ -3548,7 +3511,7 @@
         4: function (e) {
           const { rollup: t } = e,
             i = (0, r.M)(),
-            a = (0, xe.bY)(),
+            a = (0, Oe.bY)(),
             s = j(t.item, i, a),
             o = H(t.item.body_data),
             l = `${se.De.COMMUNITY_BASE_URL}profiles/${i}/inventory`;

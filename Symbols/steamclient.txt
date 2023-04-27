@@ -61,8 +61,11 @@
  CFStringCreateWithFormat
  CFStringGetCString
  CFStringGetCharacterAtIndex
+ CFStringGetFileSystemRepresentation
  CFStringGetLength
  CFStringGetTypeID
+ CFURLCopyFileSystemPath
+ CFURLCreateFromFSRef
  CFURLCreateWithBytes
  CFUUIDCreateString
  CGDisplayBitsPerPixel

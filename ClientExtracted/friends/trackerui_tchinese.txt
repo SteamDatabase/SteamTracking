@@ -145,7 +145,7 @@
 "Friends_NotifyFriendOnline_Title"	"%friend% - 好友上線通知"
 "Friends_NotifyFriendOnline_Info"		"您的好友 %friend% 上線了。"
 
-"Friends_RefreshLogin_Title"			"Steam - 重新整理登入"
+"Friends_RefreshLogin_Title"			"Steam - 更新登入狀態"
 "Friends_RefreshLogin"				"請重新輸入您的 Steam 登入資料，以登入好友。"
 "Friends_AccountName"					"帳戶名稱"
 "Friends_Login_Btn"					"登入"

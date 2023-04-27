@@ -37,7 +37,7 @@
 "Steam_NeverConnectedNoConnection"				"無法連線至 steam 伺服器，因此帳戶「%account%」從未在此機器上使用。\n有些服務將無法使用。Steam 將會繼續嘗試連線，成功連線後即可使用更多服務。"
 "Steam_RefreshEnterTwoFactorCode"				"請輸入您的 Steam Guard 驗證器上目前的代碼。"
 "Steam_RefreshLogin_RateLimited"		"短期內來自您的網域的登入失敗次數過多。請稍後再試。"
-"Steam_RefreshLogin_Title"			"Steam - 重新整理登入"
+"Steam_RefreshLogin_Title"			"Steam - 更新登入狀態"
 "Steam_RefreshLogin_InfoTicketExpired"	"您的 Steam 登入已經逾期。\n請重新輸入密碼以繼續。"
 "Steam_RefreshLogin_InvalidPassword"	"您的帳戶憑證已經變更。\n請重新輸入密碼以繼續。"
 

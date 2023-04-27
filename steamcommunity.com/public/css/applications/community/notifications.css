@@ -2758,6 +2758,6 @@ button.DialogButton.notifications_SettingsButton_T8q00
   position: relative;
 }
 .notifications_Expander_MjW-I {
-  transition: height 0.6s ease-in-out;
+  transition: height 0.3s ease-in-out;
   overflow: hidden;
 }

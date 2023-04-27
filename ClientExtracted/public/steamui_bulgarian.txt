@@ -164,6 +164,7 @@
 
 "SteamUI_GamesDialog_MyGames"		"МОИТЕ ИГРИ"
 "SteamUI_GamesDialog_MyMedia"		"МЕДИЯ"
+"SteamUI_GamesDialog_ThirdParty" 	"ИГРИ ОТ ТРЕТИ СТРАНИ"
 "SteamUI_GamesDialog_AvailableGames" 	"ДОСТЪПНИ ИГРИ"
 "SteamUI_GamesDialog_ComingSoon" 	"ОЧАКВАЙТЕ СКОРО"
 "SteamUI_GamesDialog_RightClick_LaunchGames" "Пускане на играта…"

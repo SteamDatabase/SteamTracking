@@ -415,6 +415,11 @@
         "size": 32
     },
     {
+        "id": 2804,
+        "name": "Unknown",
+        "size": 24
+    },
+    {
         "id": 3405,
         "name": "15ItemInstalled_t",
         "size": 12
@@ -1123,6 +1128,11 @@
         "id": 1020105,
         "name": "Unknown",
         "size": 1
+    },
+    {
+        "id": 1020106,
+        "name": "SteamServersConnectionAttemptThottled_t",
+        "size": 4
     },
     {
         "id": 1040003,

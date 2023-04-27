@@ -501,6 +501,7 @@
 "Steam_Games_PreOrder"				"预订"
 "Steam_Games_MoreInfo"				"更多信息"
 "Steam_Games_AddToMyGames"			"安装"
+"Steam_Games_PreDownload"			"开始预载"
 "Steam_Games_PreLoading" 			"预载状态"
 "Steam_Games_DonePreLoading" 			"预载状态"
 

@@ -1,15 +1,15 @@
-/*!******************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!../../../web_src/shared/js/ui/shared_svg_library.scss ***!
-  \******************************************************************************************************************************************************************************************************/
+/*!
+ * (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
+ *
+ */
 .SVGIcon_Button {
-  fill: #ffffff;
+  fill: #fff;
   overflow: visible;
   width: 100%;
   height: 100%;
   max-width: 320px;
   max-height: 320px;
 }
-
 .shared_svg_library_EmoticonBow_3pZfA {
   position: absolute;
   top: -15px;
@@ -17,49 +17,37 @@
   bottom: 0;
   left: 0;
 }
-
 .shared_svg_library_EmoticonBow_st0_qBW44 {
   opacity: 0.4;
   fill: #231f20;
 }
-
 .shared_svg_library_EmoticonBow_st1_23IlE {
   fill: #e41e25;
 }
-
 .shared_svg_library_SteamDeckCompatInfo_3TbPV {
   display: flex;
   background-color: #0e141b;
   padding: 2px;
   border-radius: 20px;
 }
-
 .shared_svg_library_SteamDeckCompatLogo_Q6MwZ {
   width: 20px;
   height: 20px;
 }
-
 .shared_svg_library_SteamDeckCompatIcon_2hKXi {
   width: 20px;
   height: 20px;
 }
-
 .shared_svg_library_SteamDeckCompatVerified_1PZiH {
   color: #59bf40;
 }
-
 .shared_svg_library_SteamDeckCompatPlayable_uTOLJ {
   color: #ffc82c;
 }
-
 .shared_svg_library_SteamDeckCompatUnsupported_3XLWD,
 .shared_svg_library_SteamDeckCompatUnknown_53DS6 {
   color: #dcdedf;
 }
-/*!********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!../../../web_src/shared/js/ui/throbber.scss ***!
-  \********************************************************************************************************************************************************************************************/
-/* stylelint-disable selector-class-pattern */
 .throbber_LoadingWrapper_1HyRg {
   display: flex;
   flex-direction: column;
@@ -80,11 +68,9 @@
   path {
   stroke-width: 0 !important;
 }
-
 .throbber_LoadingWrapper_1HyRg.throbber_noString_25hUI {
   flex-direction: row;
 }
-
 .throbber_LoadingWrapper_1HyRg .throbber_Throbber_v2Wva,
 .throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber,
 .throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber path {
@@ -92,32 +78,27 @@
   height: 100%;
   position: relative;
 }
-
 .throbber_LoadingWrapper_1HyRg .throbber_Throbber_v2Wva {
   align-self: center;
   margin: 0px;
   width: 100%;
   height: 100%;
 }
-
 .throbber_LoadingWrapper_1HyRg.throbber_throbber_small_4dIL2
   .throbber_Throbber_v2Wva {
   width: 32px;
   height: 32px;
 }
-
 .throbber_LoadingWrapper_1HyRg.throbber_throbber_medium_QXu8P
   .throbber_Throbber_v2Wva {
   width: 64px;
   height: 64px;
 }
-
 .throbber_LoadingWrapper_1HyRg.throbber_throbber_large_3nisx
   .throbber_Throbber_v2Wva {
   width: 92px;
   height: 92px;
 }
-
 .throbber_throbber_center_wrapper_3hIjC {
   width: 100%;
   height: 100%;
@@ -126,7 +107,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .throbber_ThrobberText_2LAFw,
 .throbber_LoadingWrapper_1HyRg .throbber_ThrobberText_2LAFw {
   color: #3d85c8;
@@ -138,28 +118,23 @@
   margin-top: 8px;
   font-weight: 500;
 }
-
 .throbber_LoadingWrapper_1HyRg.throbber_throbber_medium_QXu8P
   .throbber_ThrobberText_2LAFw {
   margin-top: 4px;
 }
-
 .throbber_LoadingWrapper_1HyRg.throbber_throbber_small_4dIL2
   .throbber_ThrobberText_2LAFw {
   margin-top: 2px;
 }
-
 .throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber.throbber_blur_1Zb5U {
   filter: blur(3px);
   position: absolute;
   left: 0;
   top: 0px;
 }
-
 .throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber.throbber_blur_1Zb5U path {
   stroke: #4375fd;
 }
-
 .throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: throbber_ThrobberRoundLoop_1PbAa;
@@ -169,17 +144,14 @@
   animation-timing-function: linear;
   opacity: 0;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundOuterOutline_TrexM,
 .throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundOuter_5ck73 {
   stroke-dashoffset: 0;
   stroke-dasharray: 116;
-  /*stroke-dasharray: 40 10 30 20 20 30 10 40;*/
   stroke-width: 6px;
 }
-
 .throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundOuter_5ck73 {
   opacity: 1;
   stroke: #3b8bb9;
@@ -187,13 +159,11 @@
   transform-origin: 50% 50%;
   stroke-linecap: round;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundOuterOutline_TrexM {
   display: none;
 }
-
 @keyframes throbber_ThrobberRoundLoop_1PbAa {
   to {
     stroke-dashoffset: -232;
@@ -208,7 +178,6 @@
   opacity: 1;
   stroke-width: 0;
 }
-
 @keyframes throbber_ThrobberFillLoop_HAZ1M {
   0% {
     fill: rgba(103, 193, 245, 0);
@@ -236,14 +205,12 @@
   animation-timing-function: linear;
   transform-origin: 67% 36%;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_topCircle__EJ7b
   circle {
   animation-name: throbber_ThrobberBottomCircleLoop_7qnpn;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_bottomCircle_25ip-
@@ -256,7 +223,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-
 @keyframes throbber_ThrobberTopCircleLoop_2GFtS {
   0% {
     opacity: 0;
@@ -343,7 +309,6 @@
   animation-duration: 3s;
   stroke-dasharray: 150 950;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber01_1VNop {
@@ -351,7 +316,6 @@
   opacity: 0.06;
   stroke-width: 0.5px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber02_1OqfY {
@@ -359,7 +323,6 @@
   opacity: 0.13;
   stroke-width: 1px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber03_SCH1y {
@@ -367,7 +330,6 @@
   opacity: 0.2;
   stroke-width: 1.5px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber04_3GvQ1 {
@@ -375,7 +337,6 @@
   opacity: 0.26;
   stroke-width: 2px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber05_2PAW0 {
@@ -383,7 +344,6 @@
   opacity: 0.33;
   stroke-width: 2.5px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber06_3IwAT {
@@ -391,7 +351,6 @@
   opacity: 0.4;
   stroke-width: 3px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber07_2O6v6 {
@@ -399,7 +358,6 @@
   opacity: 0.46;
   stroke-width: 3.5px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber08_3ARjZ {
@@ -407,7 +365,6 @@
   opacity: 0.53;
   stroke-width: 4px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber09_2tK3N {
@@ -415,7 +372,6 @@
   opacity: 0.6;
   stroke-width: 4.5px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber10_12Nu_ {
@@ -423,7 +379,6 @@
   opacity: 0.66;
   stroke-width: 5px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber11_6i7GD {
@@ -431,7 +386,6 @@
   opacity: 0.73;
   stroke-width: 5.5px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber12_1wN9D {
@@ -439,7 +393,6 @@
   opacity: 0.8;
   stroke-width: 6px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber13_3He3o {
@@ -447,7 +400,6 @@
   opacity: 0.86;
   stroke-width: 6.5px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber14_3Bz3S {
@@ -455,7 +407,6 @@
   opacity: 0.93;
   stroke-width: 7px;
 }
-
 .throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
   .throbber_roundThrobber15_3Xmey {
@@ -463,45 +414,7 @@
   opacity: 1;
   stroke-width: 7.5px;
 }
-
 @keyframes throbber_ThrobberRoundLoopThickness_2cif1 {
-  /*
-  10%
-  {
-  	stroke-width: 4.5px;
-  }
-  20%
-  {
-  	stroke-width: 2px;
-  }
-  30%
-  {
-  	stroke-width: 4.5px;
-  }
-  40%
-  {
-  	stroke-width: 2px;
-  }
-  50%
-  {
-  	stroke-width: 4.5px;
-  }
-  60%
-  {
-  	stroke-width: 9px;
-  }
-  70%
-  {
-  	stroke-width: 4.5px;
-  }
-  80%
-  {
-  	stroke-width: 9px;
-  }
-  90%
-  {
-  	stroke-width: 9px;
-  }*/
   100% {
     stroke-dashoffset: -1100;
   }
@@ -510,28 +423,22 @@
   width: 36px;
   height: 36px;
 }
-
 .throbber_throbber_medium_QXu8P {
   width: 64px;
   height: 64px;
 }
-
 .throbber_throbber_large_3nisx {
   width: 92px;
   height: 92px;
 }
-
 .throbber_throbber_xlarge_3LxJj {
   width: 120px;
   height: 120px;
 }
-
 .throbber_throbber_xxlarge_1mUb9 {
   width: 240px;
   height: 240px;
 }
-
-/* stylelint-enable selector-class-pattern */
 .throbber_ThrobberDelayAppear_25iLt {
   opacity: 0;
   transition: opacity 1s;
@@ -539,24 +446,20 @@
 .throbber_ThrobberDelayAppear_25iLt.throbber_Visible_19Akj {
   opacity: 1;
 }
-/*!************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../../../web_src/shared/js/ui/shared_dialog.css ***!
-  \************************************************************************************************************************************************************************************************/
-@charset "UTF-8";
-/* reset browser styles */
+.throbber_NewThrobber_1Z02a img {
+  width: 100%;
+}
 button.DialogButton {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   border: 0;
-  /* cursor: default; */
   font: inherit;
   overflow: visible;
   padding: 0;
   margin: 2px 0;
   user-select: none;
   -webkit-user-select: none;
-  /* for button */
   -moz-user-select: none;
   -ms-user-select: none;
   display: block;
@@ -565,7 +468,6 @@ button.DialogButton {
   font-size: 14px;
   text-align: center;
   border-radius: 2px;
-  /*margin-bottom: 22px;*/
   cursor: pointer;
   width: 100%;
   transition-property: opacity, background, color, box-shadow;
@@ -576,30 +478,24 @@ button.DialogButton {
   background-size: 300% 300%;
   position: relative;
 }
-
 input.DialogInput::-moz-focus-inner,
 button.DialogButton::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-
 .DialogInputPlaceholder::placeholder,
 .DialogInputPlaceholder::-webkit-input-placeholder {
   color: #969696;
   font-style: italic;
 }
-
-/* for some reason, mixing these with ::placeholder confuses chrome */
 .DialogInputPlaceholder::-ms-input-placeholder,
 .DialogInputPlaceholder:-ms-input-placeholder {
   color: #969696;
   font-style: italic;
 }
-
 .PopupFullWindow {
   height: 100%;
 }
-
 .FullModalOverlay {
   position: fixed;
   top: 0;
@@ -608,18 +504,15 @@ button.DialogButton::-moz-focus-inner {
   left: 0;
   z-index: 1500;
 }
-
 .FullModalOverlay.NotReadyToRender {
-  background: black;
+  background: #000;
 }
-
 .FullModalOverlay .ModalPosition_Content {
   height: initial;
   width: initial;
   max-width: 88vw;
   max-height: 90vh;
 }
-
 @media screen and (max-height: 640px) {
   .FullModalOverlay .ModalPosition_Content {
     max-height: 95vh;
@@ -632,26 +525,19 @@ button.DialogButton::-moz-focus-inner {
   bottom: 0;
   left: 0;
 }
-
 .ModalOverlayContent.inactive {
-  /* stylelint-disable-line selector-class-pattern */
   z-index: 5;
 }
-
 .ModalOverlayContent.active {
-  /* stylelint-disable-line selector-class-pattern */
   z-index: 10;
 }
-
 .ModalOverlayBackground {
   background: rgba(0, 0, 0, 0.8);
   z-index: 7;
 }
-
 .ModalOverlayBackground.NotificationBrowserWarning {
   background: rgba(0, 0, 0, 0.9);
 }
-
 .DialogBody {
   display: flex;
   flex-direction: column;
@@ -659,70 +545,54 @@ button.DialogButton::-moz-focus-inner {
   overflow: auto;
   -webkit-app-region: no-drag;
 }
-
 .DialogBody a {
   color: #6dcff6;
   text-decoration: none;
 }
-
 .DialogBody a:hover {
   color: #b0e9ff;
 }
-
 .ModalDialogPopup .DialogContentTransition .DialogBody {
   overflow-y: scroll;
 }
-
 .DialogInnerBody {
   flex: 1;
   overflow: auto;
   padding-right: 2px;
   padding-bottom: 16px;
 }
-
 .ModalDialogPopup .ModalDialogBody {
   margin: 0px;
 }
-
-/* We need .title-area for dragging the window, but if it covers the entire dialog, it blocks click events from the buttons. */
 .ModalDialogPopup .ModalDialogBody .title-area {
-  /* stylelint-disable-line selector-class-pattern */
   height: 80px;
 }
-
 .ModalDialogPopup .DialogInnerBody {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
 .ModalPosition {
   display: flex;
   align-content: center;
   height: 100%;
   flex-direction: column;
 }
-
 .ModalPosition:focus {
   outline: none;
 }
-
 .ModalPosition.Hidden .ModalPosition_Content {
   visibility: hidden;
 }
-
 .ModalDialogPopup .ModalPosition_Dismiss {
   display: none;
 }
-
 .ModalDialogPopup .FullModalOverlay .ModalPosition_Dismiss {
   display: block;
 }
-
 .DeckVerifiedModalDialogClient .ModalPosition_Content {
   width: 640px;
   font-weight: 400;
 }
-
 .DeckVerifiedModalDialogClient .DialogContent,
 .DeckVerifiedModalDialog .DialogContent {
   padding: calc(1.4vw + 12px) 2.8vw;
@@ -730,23 +600,18 @@ button.DialogButton::-moz-focus-inner {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   border: 2px solid #23262e;
 }
-
 .DeckVerifiedModalDialog .DialogContent {
   max-height: 85vh;
 }
-
 .DeckVerifiedModalDialogClient .ModalPosition_TopBar,
 .DeckVerifiedModalDialog .ModalPosition_TopBar {
   display: none;
 }
-
-/* stylelint-disable selector-class-pattern */
 .DeckVerifiedModalDialogClient .ModalPosition_Dismiss .closeButton,
 .DeckVerifiedModalDialog .ModalPosition_Dismiss .closeButton {
   width: 20px;
   height: 20px;
 }
-
 .ModalPosition_Dismiss .closeButton {
   width: 14px;
   height: 14px;
@@ -756,21 +621,16 @@ button.DialogButton::-moz-focus-inner {
   background-image: none;
   border-radius: 4px;
 }
-
 .ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
   stroke: #788a92;
   stroke-width: 24px;
 }
-
 .ModalPosition_Dismiss .closeButton:hover .SVGIcon_X_Line line {
-  stroke: white;
+  stroke: #fff;
 }
-
 .ModalPosition_Dismiss .closeButton:hover {
   opacity: 1;
 }
-
-/* stylelint-enable selector-class-pattern */
 .ModalPosition_Content {
   box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, 0.75);
   margin: auto;
@@ -781,17 +641,13 @@ button.DialogButton::-moz-focus-inner {
   display: flex;
   flex-direction: column;
 }
-
-/* applies to the content of the modal, but we don't have a classname because it is user-supplied */
 .ModalPosition_Content > * {
   min-height: 0;
   min-width: 0;
   flex-grow: 1;
   flex-shrink: 1;
 }
-
 div.ModalPosition_Dismiss {
-  /* Override .ModalPosition_Content > div styles with defaults */
   min-width: initial;
   min-height: initial;
   flex-grow: initial;
@@ -801,31 +657,25 @@ div.ModalPosition_Dismiss {
   top: 4px;
   z-index: 1;
 }
-
 div.ModalPosition_TopBar {
-  /* Override .ModalPosition_Content > div styles with defaults */
   min-height: 1px;
   min-width: initial;
   flex-grow: initial;
   flex-shrink: initial;
   background: linear-gradient(to right, #00ccff, #3366ff);
 }
-
 .Destructive .ModalPosition_TopBar {
   background: linear-gradient(to right, #c44848, #c44848);
 }
-
 .ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 1;
 }
-
 .ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
   opacity: 0;
 }
-
 .DialogContent,
 .DialogContentTransition {
   background: radial-gradient(
@@ -836,14 +686,12 @@ div.ModalPosition_TopBar {
     #25282e;
   user-select: none;
 }
-
 .DialogContent .DialogControlsSection:not(:first-child),
 .DialogContent .DialogControlsSectionHeader:not(:first-child),
 .DialogContent .DialogHeader:not(:first-child),
 .DialogContent .DialogSubHeader:not(:first-child) {
   margin-top: 24px;
 }
-
 .DialogContentTransition {
   display: flex;
   width: 664px;
@@ -851,11 +699,9 @@ div.ModalPosition_TopBar {
   flex: 3.3;
   position: relative;
 }
-
 .ModalDialogPopup .DialogContentTransition {
   display: block;
 }
-
 .ModalDialogPopup .DialogContentTransition > .DialogContent {
   position: absolute;
   bottom: 0;
@@ -863,80 +709,60 @@ div.ModalPosition_TopBar {
   left: 0;
   right: 0;
 }
-
 .DialogContent {
   padding: 24px;
   display: flex;
   overflow: visible;
   position: relative;
 }
-
 .DialogContent.NoContentPadding {
   padding: 0;
 }
-
 .DialogToggle_Label {
   user-select: none;
   display: flex;
   flex-direction: row;
 }
-
 .DialogToggle_Label span {
   display: flex;
 }
-
 .contextMenuItem .DialogToggle_Label {
-  /* stylelint-disable-line selector-class-pattern */
   white-space: nowrap;
 }
-
 ._DialogNote {
-  /* stylelint-disable-line selector-class-pattern */
   font-size: 12px;
   text-transform: uppercase;
 }
-
 ._DialogCenterVertically {
-  /* stylelint-disable-line selector-class-pattern */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-
 .DialogContent_InnerWidth {
   max-width: 600px;
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: auto;
-  /*border: 0.5px dashed #f805;*/
 }
-
 .DialogContent.DialogContentFullSize {
   width: max-content;
 }
-
 .DialogContentFullSize .DialogContent_InnerWidth {
   max-width: none;
 }
-
 .ModalDialogPopup .DialogContent {
   overflow: visible;
 }
-
 .ModalDialogPopup .DialogContent_InnerWidth {
   max-width: none;
 }
-
 .DialogContent_InnerWidth > form {
   display: flex;
   flex-direction: column;
   min-height: 0;
   flex: 1;
 }
-
-/* Needs to target only the ModalPosition provided to the popup window and avoid being applied
-   to the additional, generic popups that can be placed inside the modal */
 .ModalDialogPopup .PopupFullWindow > .ModalPosition,
 .ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {
   max-width: none;
@@ -944,24 +770,20 @@ div.ModalPosition_TopBar {
   width: 100%;
   height: 100%;
 }
-
 .DialogHeader {
   font-weight: 300;
   font-size: 32px;
   line-height: 36px;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
   margin-right: 26px;
   margin-bottom: 12px;
 }
-
 .DesktopUI .DialogHeader,
 .friendsui-container .DialogHeader {
-  /* stylelint-disable-line selector-class-pattern */
-  /* we're trying a thicker, friendlier title that isn't shouting*/
   font-size: 22px;
   font-weight: 700;
   letter-spacing: unset;
@@ -969,51 +791,43 @@ div.ModalPosition_TopBar {
   margin-bottom: 4px;
   line-height: 28px;
 }
-
 .DialogSubHeader {
   font-weight: 300;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
   margin-right: 26px;
 }
-
 .DialogContent_InnerWidth .DialogBody .DialogHeader {
   margin-right: 0px;
 }
-
 .DialogHeaderSubtitle {
   color: #6e7985;
   font-size: 22px;
   letter-spacing: 1px;
   text-transform: none;
 }
-
 .DialogHighlight {
   color: #4297f8;
 }
-
 .DialogFooter {
   margin-top: auto;
   padding-top: 16px;
   flex-shrink: 0;
 }
-
 .DesktopUI .DialogFooter {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-
 .DesktopUI .DialogFooter button.DialogButton {
   padding: 0 12px;
   width: auto;
 }
-
 .DialogBodyText {
   color: #969696;
   font-size: 16px;
@@ -1022,28 +836,22 @@ div.ModalPosition_TopBar {
   margin-bottom: 32px;
   user-select: none;
 }
-
 .DialogBodyText p {
   user-select: text;
 }
-
 .DialogBodyText p a {
   color: #969696;
   text-decoration: underline;
 }
-
 .DialogBodyText p a:hover {
-  color: #ffffff;
+  color: #fff;
 }
-
 .DesktopUI .DialogBodyText {
   line-height: 22px;
 }
-
 .DialogLabel {
   cursor: default;
 }
-
 .DialogLabel,
 .DialogLabelStrong {
   font-weight: 300;
@@ -1055,20 +863,15 @@ div.ModalPosition_TopBar {
   user-select: none;
   letter-spacing: initial;
 }
-
 .DialogLabelStrong .DialogLabel,
 .DialogLabel.DialogLabelStrong {
   text-transform: none;
   color: #dedede;
 }
-
-/* stylelint-disable selector-class-pattern */
 .disabled .DialogLabelStrong .DialogLabel,
 .disabled .DialogLabel.DialogLabelStrong {
   color: #424853;
 }
-
-/* stylelint-enable selector-class-pattern */
 .DialogHBar {
   flex: 1;
   min-height: 1px;
@@ -1076,12 +879,9 @@ div.ModalPosition_TopBar {
   background: linear-gradient(to right, #393e47 0%, #40464f 20%, #393e47 100%);
   margin-bottom: 16px;
 }
-
 .OrSeparator .DialogHBar {
   margin: 0;
 }
-
-/* stylelint-disable selector-class-pattern */
 ._DialogRow {
   display: flex;
   flex-direction: row;
@@ -1091,15 +891,12 @@ div.ModalPosition_TopBar {
   justify-content: space-between;
   flex-shrink: 0;
 }
-
 ._DialogRow._DialogRowBackground {
   background: linear-gradient(to right, #383d45, #383d45);
 }
-
 ._DialogRow ._DialogRowAction {
   flex: 1;
 }
-
 ._DialogRow ._DialogRowSecondaryLabel,
 ._DialogRow ._DialogRowLabel {
   flex: 1.5;
@@ -1111,7 +908,6 @@ div.ModalPosition_TopBar {
   display: flex;
   flex-direction: row;
 }
-
 ._DialogRow ._DialogRowSecondaryLabel {
   display: block;
   flex: 1;
@@ -1119,18 +915,14 @@ div.ModalPosition_TopBar {
   text-align: center;
   margin: 2px 0;
 }
-
 ._DialogRow ._DialogRowLabel .SVGIcon_Button {
   width: 24px;
   height: 24px;
 }
-
 .disabledNotice {
   color: rgba(184, 156, 80, 0.75);
   margin-left: 4px;
 }
-
-/* stylelint-enable selector-class-pattern */
 .DialogLabelExplainer {
   text-transform: none;
   text-align: center;
@@ -1139,39 +931,30 @@ div.ModalPosition_TopBar {
   font-size: 13px;
   margin-top: 4px;
 }
-
 .DialogInput {
-  border: 1px solid white;
+  border: 1px solid #fff;
   display: block;
   line-height: 22px;
   padding: 10px;
 }
-
 .DialogLabelExplainer.Left {
   text-align: left;
 }
-
 .DialogInputRequirementLabel {
   color: #b80505;
   margin-left: 15px;
 }
-
 .DialogRequirementLabel {
   color: #b80505;
 }
-
 .DialogInputLabelGroup {
   margin-bottom: 22px;
 }
-
 ._DialogSection {
-  /* stylelint-disable-line selector-class-pattern */
   margin-bottom: 26px;
 }
-
 .DialogTextInputBase,
 ._DialogInputContainer {
-  /* stylelint-disable-line selector-class-pattern */
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
   font-size: 14px;
@@ -1182,66 +965,45 @@ div.ModalPosition_TopBar {
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
 }
-
 .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
   background: rgba(67, 73, 83, 0.6);
   box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;
 }
-
 .DialogTextInputBase:not(:disabled):hover {
   background: rgba(67, 73, 83, 0.6);
 }
-
 .DesktopUI .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
-  /*attempting to limit this to desktopui, but we may want to use this everywhere in the future */
   background: #23262e;
   box-shadow: inset 1px 1px 4px #000a;
   padding-left: 11px;
 }
-
-.DesktopUI .DialogTextInputBase:not(:disabled):hover {
-  /*attempting to limit this to desktopui, but we may want to use this everywhere in the future */
-  /* background: rgba( 67, 73, 83, .6 ); */
-}
-
 .DialogTextInputBase:disabled:hover {
   background: rgba(67, 73, 83, 0.3);
 }
-
 ._DialogInputContainer {
-  /* stylelint-disable-line selector-class-pattern */
   padding: 12px;
   line-height: 18px;
   margin-bottom: 22px;
 }
-
 ._DialogInputContainer:focus {
-  /* stylelint-disable-line selector-class-pattern */
   outline: none;
 }
-
 .DialogToggleField._DialogInputContainer {
-  /* stylelint-disable-line selector-class-pattern */
   display: flex;
   justify-content: space-between;
   padding: 6px;
   padding-left: 12px;
 }
-
 .DialogToggleField.Disabled .DialogToggle_Label {
   color: #555;
 }
-
 .DialogDropDown._DialogInputContainer.Active {
-  /* stylelint-disable-line selector-class-pattern */
   outline: none;
 }
-
 .DialogTextInputBase.inviteURLLink {
-  /* stylelint-disable-line selector-class-pattern */
   padding: 0 12px;
   background: #30353b;
   margin-right: 4px;
@@ -1250,48 +1012,38 @@ div.ModalPosition_TopBar {
   border: 0.5px solid rgba(139, 153, 170, 0.4);
   border-style: inset;
 }
-
 .DialogTextInputBase:disabled,
 .DialogTextInputBase:read-only {
   color: rgba(136, 136, 136, 0.7);
 }
-
 .InviteLinksTable .DialogInput {
   padding: 5px;
   margin: 5px;
   margin-right: 30px;
 }
-
 .DialogInput_Wrapper {
   display: flex;
   flex-direction: row;
   position: relative;
   align-items: center;
 }
-
 .DialogInput_Wrapper > input.DialogInput {
   flex: 1;
 }
-
 .DialogInput_Wrapper > input.DialogInput:focus {
   outline: none;
 }
-
 button.DialogButton:focus {
   outline: none;
 }
-
 button.DialogButton.DialogInput_CopyAction {
   width: auto;
   padding-left: 16px;
   padding-right: 16px;
 }
-
 .DialogInput_ClearAction {
   position: absolute;
   right: 12px;
-  /* top: 0;
-  bottom: 0; */
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -1299,21 +1051,17 @@ button.DialogButton.DialogInput_CopyAction {
   align-items: center;
   justify-content: center;
 }
-
 .DialogInput_ClearAction svg {
   width: 18px;
   height: 18px;
 }
-
 .DialogInput_ClearAction .SVGIcon_X_Line line {
   stroke-width: 22px;
   stroke: #aaa;
 }
-
 .DialogInput_ClearAction:hover .SVGIcon_X_Line line {
   stroke: #fff;
 }
-
 button.DialogButton::before {
   pointer-events: none;
   user-select: none;
@@ -1327,63 +1075,49 @@ button.DialogButton::before {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
 }
-
 button.DialogButton:disabled:hover::before,
 button.DialogButton:disabled::before,
 button.DialogButton.Disabled:hover::before,
 button.DialogButton.Disabled::before {
   opacity: 0;
 }
-
 button.DialogButton:hover::before {
   opacity: 1;
 }
-
 button.DialogButton:active::before {
   opacity: 0;
 }
-
 button.DialogButton.DialogButtonTall {
   height: 44px;
 }
-
 .VoiceSettings .advancedSettingsButton {
-  /* stylelint-disable-line selector-class-pattern */
   margin-bottom: 0px;
   margin-top: 16px;
 }
-
 .VoiceSettings .advancedSettings {
-  /* stylelint-disable-line selector-class-pattern */
   margin-bottom: 16px;
 }
-
 .DialogBody.VoiceSettings ._FixedHeight {
-  /* stylelint-disable-line selector-class-pattern */
   padding-bottom: 16px;
 }
-
 button.DialogButton.Primary {
   background: transparent;
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 25%;
   background-size: 330% 100%;
 }
-
 button.DialogButton.GreenPlay {
   background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 25%;
   background-size: 330% 100%;
 }
-
 button.DialogButton.GreenPlay:hover,
 button.DialogButton.GreenPlay.gpfocus {
   background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 0%;
   background-size: 330% 100%;
-  color: white;
+  color: #fff;
 }
-
 button.DialogButton.GreenPlay:active,
 button.DialogButton.GreenPlay:active:hover,
 button.DialogButton.GreenPlay:active.gpfocus {
@@ -1391,11 +1125,9 @@ button.DialogButton.GreenPlay:active.gpfocus {
   background-position: 40%;
   transition-duration: 0.04s;
 }
-
 button.DialogButton.Secondary.Off {
   box-shadow: inset 1px 1px 4px #0003;
 }
-
 button.DialogButton:enabled:active,
 button.DialogButton:enabled:active:hover,
 button.DialogButton:enabled:active.gpfocus {
@@ -1403,15 +1135,13 @@ button.DialogButton:enabled:active.gpfocus {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
   transition-duration: 0.04s;
 }
-
 button.DialogButton.Primary:hover,
 button.DialogButton.Primary.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 0%;
   background-size: 330% 100%;
-  color: white;
+  color: #fff;
 }
-
 button.DialogButton.Primary:enabled:active,
 button.DialogButton.Primary:enabled:hover:active,
 button.DialogButton.Primary:enabled:active.gpfocus {
@@ -1419,13 +1149,11 @@ button.DialogButton.Primary:enabled:active.gpfocus {
   background-position: 40%;
   transition-duration: 0.04s;
 }
-
 button.DialogButton:hover,
 button.DialogButton.gpfocus {
   background: #464d58;
-  color: white;
+  color: #fff;
 }
-
 button.DialogButton:disabled,
 button.DialogButton:disabled:hover,
 button.DialogButton.Disabled,
@@ -1436,56 +1164,47 @@ button.DialogButton.Disabled:hover {
   cursor: default;
   pointer-events: none;
 }
-
 button.DialogButton.Small {
   line-height: 22px;
 }
-
 button.TextButton {
   background-color: transparent;
   border: 0px hidden transparent;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding: 0;
-  color: white;
+  color: #fff;
   cursor: pointer;
   font-weight: 100;
   border-bottom: 1px dotted #0000;
 }
-
 button.TextButton .SVGIcon_Button {
   transition: opacity 0.2s ease-in-out;
   margin-right: 2px;
 }
-
 button.TextButton:hover,
 button.TextButton.gpfocus {
-  color: white;
+  color: #fff;
 }
-
 button.TextButton:focus,
 button.TextButton.gpfocus {
   outline: none;
 }
-
 .DialogButton .SVGIcon_Button {
   width: 24px;
   height: 24px;
   vertical-align: middle;
   margin-right: 2px;
 }
-
 .DialogButton:disabled .SVGIcon_Button,
 .DialogButton.Disabled .SVGIcon_Button {
   opacity: 0.1;
 }
-
 .DialogToggleField_NewUIContainer {
   height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .DialogToggleField_Control {
   float: right;
   position: relative;
@@ -1503,11 +1222,9 @@ button.TextButton.gpfocus {
   flex-shrink: 0;
   margin-left: 6px;
 }
-
 .DialogToggleField_OptionPanel {
   display: flex;
 }
-
 .DialogToggleField_Option {
   text-transform: uppercase;
   width: 66px;
@@ -1516,11 +1233,9 @@ button.TextButton.gpfocus {
   transition-property: color, background;
   transition-duration: 250ms;
 }
-
 .DialogToggleField_Option:hover:not(.Active) {
   background: #464d58;
 }
-
 .Disabled .DialogToggleField_Option:hover:not(.Active),
 .Disabled .DialogToggleField_Option.Active,
 .Disabled .DialogToggleField_Option {
@@ -1528,12 +1243,10 @@ button.TextButton.gpfocus {
   color: #555;
   cursor: default;
 }
-
 .Disabled .DialogToggleField_Option.Active {
   color: #666;
   background-color: #434953;
 }
-
 .DialogToggle_Description {
   color: #999c9f;
   line-height: 19px;
@@ -1541,144 +1254,111 @@ button.TextButton.gpfocus {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding-top: 8px;
 }
-
 .DialogToggleField_Option.Active {
   color: #dfe3e6;
   background: #2d73ff;
 }
-
 .DialogToggleField_Option.Off.Active {
   color: #dfe3e6;
   background: #5f6875;
 }
-
 .DialogToggleField_Option:hover {
-  color: white;
+  color: #fff;
 }
-
 .DialogMenuPosition {
   position: absolute;
   z-index: 1600;
   overflow: auto;
 }
-
 .DialogMenuPosition:not(.visible) {
-  /* stylelint-disable-line selector-class-pattern */
   opacity: 0;
   pointer-events: none;
 }
-
 .DialogDropDown {
   cursor: pointer;
   position: relative;
 }
-
 .DialogDropDown.Disabled {
   cursor: initial;
   opacity: 0.5;
 }
-
 .DialogDropDown:hover {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
 }
-
 .DialogDropDown.Disabled:hover {
   box-shadow: unset;
 }
-
 .DialogDropDown_CurrentDisplay:empty::before {
-  /* Make the min height effectively 1 line. min-height:1em doesn't account for line-height. */
   content: " ";
 }
-
 .DialogDropDown._DialogInputContainer {
-  /* stylelint-disable-line selector-class-pattern */
   margin-bottom: 0;
   user-select: none;
 }
-
 .DialogDropDown_Arrow {
   position: absolute;
   width: 18px;
   top: 14px;
   right: 10px;
 }
-
 .DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
   fill: #189cff;
 }
-
-/* stylelint-disable selector-class-pattern */
 ._DialogColLayout {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
-
 .DesktopUI ._DialogColLayout {
   justify-content: flex-end;
 }
-
 ._DialogColLayout > ._DialogLayout {
   flex: 1;
   box-sizing: border-box;
 }
-
 .DialogTwoColLayout > ._DialogLayout {
   max-width: calc(50% - 14px);
   min-width: 200px;
 }
-
 .DesktopUI .DialogTwoColLayout._DialogColLayout {
   gap: 14px;
 }
-
 .DesktopUI .DialogTwoColLayout > ._DialogLayout {
   max-width: unset;
   flex: 1 0 auto;
 }
-
 .DialogThreeColLayout > ._DialogLayout,
 .DialogTwoThirdColLayout > ._DialogLayout:nth-child(2n + 1) {
   max-width: calc(33.33% - 9px);
   min-width: 133px;
 }
-
 .DesktopUI .DialogThreeColLayout._DialogColLayout {
   gap: 9px;
 }
-
 .DialogTwoThirdColLayout > ._DialogLayout {
   max-width: calc(66.66% - 18px);
   min-width: 266px;
 }
-
 .DesktopUI .DialogTwoThirdColLayout._DialogColLayout {
   gap: 18px;
 }
-
 .DialogLayout_NoMinWidth > ._DialogLayout,
 .DialogTwoThirdColLayout.DialogLayout_NoMinWidth > ._DialogLayout {
   min-width: 0;
 }
-
-/* stylelint-enable selector-class-pattern */
 .DialogDraggable {
   cursor: -webkit-grab;
   cursor: grab;
   user-select: none;
 }
-
 .DialogDraggable.DraggedOut {
   display: none;
 }
-
 .DialogDraggable_DropGhost {
   cursor: -webkit-grabbing;
   cursor: grabbing;
   opacity: 0.75;
 }
-
 .DialogDraggable_DragGhost {
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -1686,11 +1366,9 @@ button.TextButton.gpfocus {
   opacity: 0.75;
   z-index: 5000;
 }
-
 .DialogSlider_Container:focus {
   outline: none;
 }
-
 .DialogSlider_Slider {
   border: 4px solid #2a2d33;
   border-radius: 10px;
@@ -1701,7 +1379,6 @@ button.TextButton.gpfocus {
   box-shadow: inset 0px 11px 8px -10px #131313;
   user-select: none;
 }
-
 .DialogSlider_Value {
   position: absolute;
   left: 0;
@@ -1711,20 +1388,17 @@ button.TextButton.gpfocus {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-
 .DialogSlider_Grabber {
   position: absolute;
   top: -1px;
   bottom: -3px;
   margin-left: -6px;
-  /* should be half of width */
   width: 12px;
   height: 12px;
   background: linear-gradient(to bottom, #89e7ff 0%, #80aaff 80%);
   border-radius: 50%;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
-
 .DialogProgressBar_ProgressBarContainer {
   border: 4px solid #2a2d33;
   border-radius: 10px;
@@ -1736,7 +1410,6 @@ button.TextButton.gpfocus {
   user-select: none;
   overflow: hidden;
 }
-
 .DialogProgressBar_Value {
   height: 100%;
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
@@ -1745,31 +1418,26 @@ button.TextButton.gpfocus {
   width: 0px;
   transition: width 0.2s linear;
 }
-
 .DialogListBuilderInput_List {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
   line-height: 26px;
 }
-
 .DialogListBuilderInput_Input {
   border: none;
   background: transparent;
-  color: white;
+  color: #fff;
   outline: none;
 }
-
 .DialogListBuilderInput_Input:focus {
   outline: none;
 }
-
 .DialogSpanningTable {
   width: 100%;
   border-spacing: 0px 6px;
   table-layout: fixed;
 }
-
 .DialogSpanningTable th {
   font-weight: normal;
   text-align: left;
@@ -1777,78 +1445,61 @@ button.TextButton.gpfocus {
   height: 20px;
   text-transform: uppercase;
 }
-
-/* stylelint-disable selector-class-pattern */
 .DialogSpanningTable.BannedUsersTable tr.hoverRow,
 .DialogSpanningTable.InvitedUsersTable tr.hoverRow,
 .DialogSpanningTable.InviteLinksTable tbody tr {
   background: linear-gradient(to right, #383d45, #383d45);
 }
-
 .DialogSpanningTable tr.hoverRow:hover {
   background-color: #393d46;
 }
-
 .DialogSpanningTable td.friendCell {
   padding-left: 4px;
   padding-top: 4px;
   padding-bottom: 4px;
 }
-
 .DialogSpanningTable td.dateCell {
   text-align: left;
   font-size: 14px;
 }
-
 .DialogSpanningTable td.buttonCell {
   padding-left: 5px;
   padding-right: 10px;
 }
-
 .BannedUsersTable th.friendColumn,
 .InvitedUsersTable th.friendColumn {
   width: auto;
 }
-
 .BannedUsersTable th.dateColumn,
 .InvitedUsersTable th.dateColumn {
   width: 175px;
 }
-
 .BannedUsersTable th.buttonColumn,
 .InvitedUsersTable th.buttonColumn {
   width: 130px;
 }
-
 .InviteLinksTable .inviteCodeColumn {
   width: auto;
 }
-
 .InviteLinksTable .dateColumn {
   width: 175px;
 }
-
 .InviteLinksTable .buttonColumn {
   width: 130px;
 }
-
 .DialogSpanningTable th.tableAlignRight,
 .DialogSpanningTable td.tableAlignRight {
   text-align: right;
 }
-
-/* stylelint-enable selector-class-pattern */
 .DialogCheckbox_Container {
   cursor: pointer;
   padding: 4px;
   margin-bottom: 8px;
 }
-
 .DialogCheckbox_Container .DialogCheckbox {
   float: left;
   margin-right: 8px;
 }
-
 .DialogCheckbox {
   width: 22px;
   height: 22px;
@@ -1858,7 +1509,6 @@ button.TextButton.gpfocus {
   cursor: pointer;
   border-radius: 2px;
 }
-
 .DialogCheckbox .SVGIcon_DialogCheck {
   opacity: 0;
   transition: opacity 0.1s ease-in-out;
@@ -1867,7 +1517,6 @@ button.TextButton.gpfocus {
   margin-top: 9%;
   margin-left: 12%;
 }
-
 .DialogCheckbox .SVGIcon_DialogCheck path {
   stroke-width: 40px;
   stroke-dashoffset: -270;
@@ -1876,53 +1525,44 @@ button.TextButton.gpfocus {
   transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
   transition-delay: 0.3s;
 }
-
 .DialogCheckbox.Active .SVGIcon_DialogCheck path {
   stroke-dashoffset: 90;
   transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
   transition-delay: 0s;
 }
-
 .DialogCheckbox.Active .SVGIcon_DialogCheck {
   opacity: 1;
 }
-
 .DialogCheckbox.Active .SVGIcon_DialogCheck #stop0 {
   opacity: 1;
 }
-
 .DialogCheckbox.Disabled {
   cursor: default;
   opacity: 0.5;
   filter: saturate(0.35);
   box-shadow: none;
 }
-
 .DialogCheckbox_Container:hover .DialogCheckbox:not(.Disabled),
 .DialogCheckbox:hover:not(.Disabled),
 .DialogCheckbox_Container:focus .DialogCheckbox:not(.Disabled),
 .DialogCheckbox:focus:not(.Disabled) {
   background-color: #1e1f23;
 }
-
 .DialogCheckbox_Container:focus,
 .DialogCheckbox:focus {
   outline: none;
 }
-
 .DialogCheckbox .DialogCheck {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
-
 .DialogRoundCheckboxField {
   width: 24px;
   height: 24px;
   border-radius: 50%;
 }
-
 .DialogRoundCheckboxField_Control {
   width: 100%;
   height: 100%;
@@ -1931,7 +1571,6 @@ button.TextButton.gpfocus {
   padding: 0;
   background-color: #24262b;
 }
-
 .DialogRoundCheckboxField_OuterCircle {
   width: 100%;
   height: 100%;
@@ -1943,29 +1582,23 @@ button.TextButton.gpfocus {
   justify-content: center;
   transition: background-color 0.08s ease-in-out;
 }
-
 .DialogRoundCheckboxField_Container {
   cursor: pointer;
 }
-
 .DialogRoundCheckboxField_Container:focus {
   outline: none;
 }
-
 .DialogRoundCheckboxField_Container:hover
   .DialogRoundCheckboxField_OuterCircle {
   background-color: #1e1f23;
 }
-
 .DialogRoundCheckboxField_Container.WithLabel .DialogRoundCheckboxField {
   float: left;
   margin-right: 6px;
 }
-
 .DialogRoundCheckboxField_Container .DialogToggle_Label {
   overflow: hidden;
 }
-
 .DialogRoundCheckboxField_Control .DialogRoundCheckboxField_InnerCircle {
   width: 50%;
   height: 50%;
@@ -1979,15 +1612,12 @@ button.TextButton.gpfocus {
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
 }
-
 .DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   transform: scale(1);
   opacity: 1;
 }
-
 .copiedAnimation {
-  /* stylelint-disable-line selector-class-pattern */
   position: absolute;
   left: 0;
   right: 0;
@@ -2004,42 +1634,28 @@ button.TextButton.gpfocus {
   pointer-events: none;
   user-select: none;
 }
-
 .copiedAnimation.animationComplete {
-  /* stylelint-disable-line selector-class-pattern */
   opacity: 0;
   transition-duration: 1s;
   transition-delay: 0.5s;
 }
-
 .copiedAnimation.animationPlaying {
-  /* stylelint-disable-line selector-class-pattern */
   opacity: 1;
   transition-property: transform, opacity;
   transition-duration: 0s, 0.6s;
 }
-
 ._FixedHeight {
-  /* stylelint-disable-line selector-class-pattern */
   flex-shrink: 0;
 }
-
 ._FillAvailableHeightAndScroll {
-  /* stylelint-disable-line selector-class-pattern */
   flex: 1;
   min-height: 0;
   overflow-y: scroll;
 }
-
 ul {
   list-style-type: disc;
   list-style-position: inside;
 }
-
-/*
-* Title Bar styles
-*/
-/* stylelint-disable selector-class-pattern */
 .title-area {
   position: absolute;
   top: 0;
@@ -2050,20 +1666,16 @@ ul {
   -webkit-app-region: drag;
   z-index: 2;
 }
-
 body.in_global_drag .title-area {
   -webkit-app-region: no-drag;
 }
-
 .titleBarContainer {
   position: relative;
 }
-
 .titleBarContainer .no-drag {
   -webkit-app-region: no-drag;
   z-index: 3;
 }
-
 .title-area .title-bar-actions {
   display: flex;
   flex-direction: row-reverse;
@@ -2075,7 +1687,6 @@ body.in_global_drag .title-area {
   -webkit-app-region: no-drag;
   pointer-events: auto;
 }
-
 .singleWindowFocusBar {
   width: 100%;
   height: 24px;
@@ -2103,12 +1714,10 @@ body.in_global_drag .title-area {
   pointer-events: none;
   user-select: none;
 }
-
 .focused .singleWindowFocusBar {
   opacity: 1;
   z-index: 15;
 }
-
 .title-area-highlight {
   height: 24px;
   background: linear-gradient(to right, #007896, #1f3d96);
@@ -2133,21 +1742,17 @@ body.in_global_drag .title-area {
   pointer-events: none;
   user-select: none;
 }
-
 .focused:not(.singlewindow) .title-area-highlight {
   opacity: 1;
 }
-
 .title-area-icon {
   width: 24px;
   height: 18px;
   margin: auto 0px auto 0px;
-  /*background-size: 10px;*/
   background-repeat: no-repeat;
   background-position: center;
   -webkit-app-region: no-drag;
 }
-
 .title-area-children {
   float: right;
   margin-right: 84px;
@@ -2158,43 +1763,37 @@ body.in_global_drag .title-area {
   right: 0px;
   text-align: right;
 }
-
 .title-area-icon .SVGIcon_Minimize {
   width: 14px;
   height: 14px;
   margin-top: -2px;
   margin-left: 4px;
 }
-
 .title-area-icon .SVGIcon_Maximize {
   width: 14px;
   height: 14px;
   margin-top: -2px;
   margin-left: 4px;
 }
-
 .title-area-icon .SVGIcon_X_Line {
   width: 14px;
   height: 14px;
   margin-top: -2px;
   margin-left: 4px;
 }
-
 .title-area-icon .SVGIcon_X_Line line {
   stroke: #788a92;
   stroke-width: 24px;
 }
-
 .title-area-icon:hover .SVGIcon_Button rect,
 .title-area-icon:hover .SVGIcon_Button line,
 .title-area-icon:hover .SVGIcon_Button polyline {
-  stroke: white;
+  stroke: #fff;
+  transition: stroke 0.15s ease-out;
 }
-
 .ModalDialogPopup .maximizeRestoreButton {
   display: none;
 }
-
 .window_resize_grip {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAR0lEQVRIx2P8z0AZYKJQPwMLyTqQncxIBReMGsDAwDjg6WAYGIAvKaMlWuyiA++FYWDAaFKmWlImKtFiFx14LwwDAwY+KQMAmkcKPwxTSEoAAAAASUVORK5CYII=);
   background-size: 16px 16px;
@@ -2206,11 +1805,8 @@ body.in_global_drag .title-area {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  /* force above other ui. even when fixed, seeing other ui on top */
   z-index: 1000;
 }
-
-/* stylelint-enable selector-class-pattern */
 .DialogBodyNotificationBar {
   font-size: 12px;
   letter-spacing: 0px;
@@ -2220,7 +1816,6 @@ body.in_global_drag .title-area {
   display: flex;
   margin-top: -2px;
 }
-
 .DialogBodyNotificationBar svg {
   height: 13px;
   width: 13px;
@@ -2228,122 +1823,85 @@ body.in_global_drag .title-area {
   margin-right: 2px;
   margin-top: 2px;
 }
-
 .DialogBodyNotificationBar .SVGIcon_Lock .topLock {
-  /* stylelint-disable-line selector-class-pattern */
   fill: #52b8e0;
 }
-
 .DialogBodyNotificationBar .SVGIcon_Lock .baseLock {
-  /* stylelint-disable-line selector-class-pattern */
   stroke: #52b8e0;
 }
-
 .GenericConfirmDialog .friend {
-  /* stylelint-disable-line selector-class-pattern */
   margin-top: 10px;
 }
-
 .GenericConfirmDialog .DialogButton {
   min-width: 120px;
 }
-
 .displayColumn {
-  /* stylelint-disable-line selector-class-pattern */
   display: flex;
   flex-direction: column;
 }
-
 .displayRow {
-  /* stylelint-disable-line selector-class-pattern */
   display: flex;
   flex-direction: row;
 }
-
 .fullheight {
-  /* stylelint-disable-line selector-class-pattern */
   height: 100%;
   top: 0px;
   bottom: 0px;
 }
-
 .fullWidth {
-  /* stylelint-disable-line selector-class-pattern */
   width: 100%;
 }
-
 .alignItemsCenter {
-  /* stylelint-disable-line selector-class-pattern */
   align-items: center;
 }
-
 .alignSelfCenter {
-  /* stylelint-disable-line selector-class-pattern */
   align-self: center;
 }
-
 .tempText {
-  /* stylelint-disable-line selector-class-pattern */
   font-size: 10px;
   color: #f50;
   width: 400px;
   align-self: center;
 }
-
 .allCaps {
-  /* stylelint-disable-line selector-class-pattern */
   text-transform: uppercase;
 }
-
 .flexShrinkNone {
-  /* stylelint-disable-line selector-class-pattern */
   flex-shrink: 0;
 }
-
-/*
- * Throbber
- */
-/* stylelint-disable selector-class-pattern */
 .throbber {
   width: 60px;
   height: 90px;
   display: inline-block;
 }
-
 .throbber_small {
   width: 36px;
   height: 36px;
 }
-
 .throbber_medium {
   width: 60px;
   height: 60px;
 }
-
 .throbber_large {
   width: 92px;
   height: 92px;
 }
-
 .throbber_xlarge {
   width: 120px;
   height: 120px;
 }
-
 .throbber_fixed {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .throbber_absolute {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .throbber > div {
   float: left;
   width: 25%;
@@ -2351,43 +1909,35 @@ body.in_global_drag .title-area {
   background-color: #67c1f5;
   animation: loading_throbber_bar 1s ease-in-out infinite;
 }
-
 .throbber > div:nth-child(1) {
   transform: scaleX(1) scaleY(0.6);
 }
-
 .throbber > div:nth-child(2) {
   margin-left: 12%;
   transform: scaleX(1) scaleY(0.6);
   animation-delay: 0.16s;
 }
-
 .throbber > div:nth-child(3) {
   margin-left: 12%;
   transform: scaleX(1) scaleY(0.6);
   animation-delay: 0.32s;
 }
-
-/* stylelint-enable selector-class-pattern */
 .WaitingForInterFaceReadyContainer {
   width: 100%;
   height: 100%;
   background-color: #1f2126;
   display: flex;
 }
-
 .WaitingForInterFaceReadyThrobber {
   margin: auto;
   align-self: center;
   width: fit-content;
 }
-
 .Throbber_Blur {
   position: absolute;
   filter: blur(12px);
   transform: scale(1.25);
 }
-
 @keyframes loading_throbber_bar {
   0% {
     transform: scaleX(1) scaleY(0.6);
@@ -2402,33 +1952,26 @@ body.in_global_drag .title-area {
     transform: scaleX(1) scaleY(0.6);
   }
 }
-/*=============TEST STUFF BELOW PLZ DONT DELETE=======================*/
 .innerwidth {
-  /* stylelint-disable-line selector-class-pattern */
   border: 3px dashed #f80;
   flex: 1;
-  color: white;
+  color: #fff;
 }
-
 .form {
-  /* stylelint-disable-line selector-class-pattern */
-  border: 1px dotted cyan;
+  border: 1px dotted aqua;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-
 .A {
   background-color: #f006;
   height: 40px;
 }
-
 .B {
   background-color: #0f06;
   display: flex;
   flex-direction: column;
 }
-
 .ScrollList {
   border: 2px solid pink;
   background-color: #000a;
@@ -2438,7 +1981,6 @@ body.in_global_drag .title-area {
   height: 200px;
   min-height: 40px;
 }
-
 .FixedHeight {
   border: 2px outset red;
   height: 60px;
@@ -2446,69 +1988,52 @@ body.in_global_drag .title-area {
   background-color: #000a;
   margin-bottom: 16px;
 }
-
 .VariableHeight {
   border: 2px inset blue;
   height: 60px;
   margin: 4px 32px;
   background-color: #000a;
 }
-
 .C {
   background-color: #00f6;
   height: 40px;
 }
-
-/*=============TEST STUFF ABOVE PLZ DONT DELETE=======================*/
 .largeThrobber {
-  /* stylelint-disable-line selector-class-pattern */
   width: 64px;
   height: 64px;
   margin-bottom: 18px;
 }
-
 .mediumThrobber {
-  /* stylelint-disable-line selector-class-pattern */
   width: 32px;
   height: 32px;
   margin-bottom: 24px;
 }
-
 .smallThrobber {
-  /* stylelint-disable-line selector-class-pattern */
   width: 16px;
   height: 24px;
 }
-
 .whiteText {
-  /* stylelint-disable-line selector-class-pattern */
-  color: white;
+  color: #fff;
 }
-
 .textLink {
-  /* stylelint-disable-line selector-class-pattern */
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
-
-/*============= DESKTOP UI SPECIFIC TITLEBAR STYLES =============*/
-/* stylelint-disable selector-class-pattern */
 .DesktopUI .title-area .title-bar-actions,
 .friendsui-container .title-area .title-bar-actions {
   margin-right: 5px;
 }
-
 .DesktopUI .title-area-icon,
 .friendsui-container .title-area-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: default;
+  transition: stroke 0.15s ease-out;
   width: 32px;
   height: 24px;
   margin-top: 7px;
 }
-
 .DesktopUI .title-area-icon .SVGIcon_Minimize,
 .DesktopUI .title-area-icon .SVGIcon_Maximize,
 .DesktopUI .title-area-icon .SVGIcon_X_Line,
@@ -2521,26 +2046,17 @@ body.in_global_drag .title-area {
   width: 15px;
   height: 15px;
 }
-
 .DesktopUI .title-area-icon:hover,
 .friendsui-container .title-area-icon:hover {
   background: #3d4450;
   border-radius: 2px;
+  transition: background 0.15s ease-out;
 }
-
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
   background: #e22a27;
+  transition: background 0.15s ease-out;
 }
-
-/* stylelint-enable selector-class-pattern */
-/*!********************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/fonts.css ***!
-  \********************************************************************************************************************************************************************/
-/*
- * SteamMain
- */
-/* Our custom font face defintions */
 @font-face {
   font-family: "Motiva Sans";
   src: url("/custom_fonts/clientui.uifont?MotivaSans-Regular")
@@ -2597,14 +2113,10 @@ body.in_global_drag .title-area {
   src: url("/custom_fonts/clientui.uifont?MotivaSans-Black") format("truetype");
   font-weight: 900;
 }
-/*!****************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/index_friends.css ***!
-  \****************************************************************************************************************************************************************************/
 body {
   margin: 0px;
   padding: 0px;
 }
-
 .friendlist {
   display: flex;
   flex-direction: column;
@@ -2616,11 +2128,9 @@ body {
     #1c1d22 100%
   );
 }
-
 .fullheight {
   height: 100%;
 }
-
 .chat_main {
   width: 100%;
   height: 100%;
@@ -2629,12 +2139,10 @@ body {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   overflow: hidden;
 }
-
 .chat_main .TitleBar {
   height: 70px;
   border-bottom: 1px solid rgba(67, 73, 83, 0.5);
 }
-
 .FriendsFailureContainer {
   align-self: center;
   max-width: 324px;
@@ -2645,13 +2153,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .FriendsFailureContainer .titleText {
   color: #ffae00;
   font-size: 18px;
   margin-bottom: 8px;
 }
-
 .FriendsFailureContainer .summaryText {
   font-size: 14px;
   line-height: 24px;
@@ -2664,22 +2170,18 @@ body {
   color: #ffae00;
   cursor: default;
 }
-
 .FriendsFailureContainer .detailText {
   font-size: 12px;
   margin: 8px 16px;
   line-height: 20px;
   cursor: default;
 }
-
 body.in_global_drag .friendlist_titlebar {
   -webkit-app-region: no-drag;
 }
-
 .friendsThrobber {
   margin-top: 12px;
 }
-
 .retryButton {
   margin: 16px;
   margin-top: 24px;
@@ -2690,7 +2192,7 @@ body.in_global_drag .friendlist_titlebar {
   background: linear-gradient(to right, #15a2fe 0%, #3647e9 100%);
   user-select: none;
   cursor: pointer;
-  color: white;
+  color: #fff;
   border: 0px solid transparent;
   border-radius: 3px;
   padding: 0px 16px;
@@ -2698,60 +2200,49 @@ body.in_global_drag .friendlist_titlebar {
   box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 }
-
 .retryButton:focus {
   outline: none;
 }
-
 .retryButton:hover {
   background: linear-gradient(to right, #33c0ff 0%, #4a91ff 100%);
 }
-
 .retryButton:active {
   background: linear-gradient(to right, #018eea 0%, #185feb 100%);
 }
-
 .friends_loading_error .currentUserContainer {
   height: 70px;
   border-bottom: 1px solid rgba(67, 73, 83, 0.5);
 }
-
 .friends_loading_error .AvatarAndUser {
   display: flex;
   flex-direction: row;
   padding-left: 8px;
   padding-top: 8px;
 }
-
 .friends_loading_error .currentUserContainer .labelHolder {
   margin: 0px 0px 0px 12px;
   min-width: 0;
   flex-shrink: 1;
   margin-right: 14px;
 }
-
 .friends_loading_error .currentUserAvatar {
   pointer-events: none;
   width: 48px;
   height: 48px;
-  /*border: .5px solid black;*/
   box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.3);
   transition-property: box-shadow, filter;
   transition-duration: 0.24s;
   transition-timing-function: ease-in-out;
   z-index: 3;
 }
-
 .friends_loading_error .noAvatarImg {
-  border: 1px solid #888888;
+  border: 1px solid #888;
 }
-
 .friends_loading_error .currentUserContainer .statusAndName {
   display: flex;
   flex-direction: row;
   margin-bottom: -4px;
 }
-
 .friends_loading_error .playerName {
   font-size: 15px;
   font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
@@ -2762,7 +2253,6 @@ body.in_global_drag .friendlist_titlebar {
   overflow: hidden;
   min-width: 0;
 }
-
 .friends_loading_error .gameName.richPresenceLabel {
   font-size: 14px;
   display: inline-block;
@@ -2771,27 +2261,23 @@ body.in_global_drag .friendlist_titlebar {
   -webkit-app-region: drag;
   color: #575757;
 }
-
 .friends_loading_error .cautionIcon {
   width: 64px;
   height: 64px;
   margin-left: auto;
   margin-right: auto;
 }
-
 .friends_loading_error .cautionIcon .SVGIcon_Caution {
   width: 100%;
   height: 100%;
   margin-top: 16px;
 }
-
 .friends_loading_error .cautionIcon .SVGIcon_Caution .exclamation line,
 .friends_loading_error .cautionIcon .SVGIcon_Caution .triangle path {
   stroke: #ffae00;
 }
-
 .friends_loading_error .cautionIcon .SVGIcon_Caution .exclamation path {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=e59dd90316d434029a36*/
+/*# sourceMappingURL=friends.css.map?contenthash=9e829a43125e3c6840c4*/

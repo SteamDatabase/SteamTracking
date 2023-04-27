@@ -30,6 +30,7 @@ message CPartnerApps_FinishUploadLegacyDRM_Request {
 	optional uint32 app_id = 3;
 	optional uint32 flags = 4;
 	optional string tool_name = 5;
+	optional bool use_cloud = 6 [default = false, (description) = "use cloud storage for build products"];
 }
 
 message CPartnerApps_FinishUploadLegacyDRM_Response {

@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"Sağ Omuz"
 	"origin_xbox360_button_start"					"Başlat Butonu"
 	"origin_xbox360_button_back"					"Geri Butonu"
-	}
+	"origin_xbox360_button_dpad_move"				"D-Pad Hareketi"
+}

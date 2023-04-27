@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-0n
-0n
+n
+n
 __stubs
 __TEXT
 __stub_helper
@@ -835,7 +835,6 @@ fcntl failed to set F_NOCACHE
 ret != 0
 flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
-written == count
 fsync %s failed, errno = %d
 %lld
 %lf

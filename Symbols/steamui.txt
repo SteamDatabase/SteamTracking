@@ -550,7 +550,7 @@
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  SteamVProf::CVProfManager::EnableDumpSpikes(int)
  SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
- SteamVProf::CVProfManager::StartProfilingAllThreads()
+ SteamVProf::CVProfManager::StartProfilingAllThreads(float)
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  SteamVProf::CVProfNode::GetCurTimeLessChildren()
  SteamVProf::CVProfNode::GetTotalTimeLessChildren()
@@ -566,7 +566,7 @@
  SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
  SteamVProf::CVProfileArray::~CVProfileArray()
  SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
- SteamVProf::CVProfileThreadEntry::StartProfiling()
+ SteamVProf::CVProfileThreadEntry::StartProfiling(float)
  StringAfterPrefix
  StringAfterPrefixCaseSensitive
  StringFindSuffix

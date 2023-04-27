@@ -48,23 +48,23 @@ __cfstring
 __DATA
 __objc_classlist__DATA
 __objc_imageinfo__DATA
+t=
+t=
 __objc_const
 __DATA
 __objc_selrefs
 __DATA
+(u=
+(u=
 __objc_classrefs__DATA
 __objc_superrefs__DATA
-8x=
-8x=
+xx=
+xx=
 __objc_ivar
 __DATA
-@x=
-@x=
 __objc_data
 __DATA
-Hx=
 P
-Hx=
 __data
 __DATA
 __thread_vars
@@ -161,24 +161,25 @@ h
 &
 )
 HB
-4
+1
 1
 .
+C:
 0
 1
-1
 
 
 1
 
 
+1
+1
 
 @
 
-[>
 @
 @
-U0
+b'
 @
 8
 HC
@@ -2550,13 +2551,13 @@ l
 14CUtlMemoryBase
 10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_006EEE
+N5vrapi16IOpenVRInterfaceIN2vr15IVRSteamPrivateEEE
 N5vrapi33CVRSteamPrivateAdapter_003_as_004E
 N2vr19IVRSteamPrivate_004E
 N5vrapi33CVRSteamPrivateAdapter_004_as_005E
 N2vr19IVRSteamPrivate_005E
 N5vrapi33CVRSteamPrivateAdapter_005_as_006E
-N2vr19IVRSteamPrivate_006E
+N2vr15IVRSteamPrivateE
 12CDynamicFuncIPFPN2vr9IVRSystemEPNS0_12EVRInitErrorENS0_18EVRApplicationTypeEEE
 12CDynamicFuncIPFjPN2vr12EVRInitErrorENS0_18EVRApplicationTypeEEE
 12CDynamicFuncIPFvvEE
@@ -2579,8 +2580,10 @@ N5vrapi16COpenVRInterfaceIN2vr16IVRNotificationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
 N5vrapi16COpenVRInterfaceIN2vr11IVRSettingsEEE
 N5vrapi16IOpenVRInterfaceIN2vr11IVRSettingsEEE
-N5vrapi16COpenVRInterfaceIN2vr22IVRExternalEventSourceEEE
-N5vrapi16IOpenVRInterfaceIN2vr22IVRExternalEventSourceEEE
+N5vrapi16COpenVRInterfaceIN2vr13IVRPropertiesEEE
+N5vrapi16IOpenVRInterfaceIN2vr13IVRPropertiesEEE
+N5vrapi16COpenVRInterfaceIN2vr8IVRPathsEEE
+N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 %Y-%m-%d %H:%M:%S
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -5351,8 +5354,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Apr 18 2023
-16:18:40
+Apr 27 2023
+15:09:00
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -7443,7 +7446,6 @@ g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
 flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
-written == count
 fsync %s failed, errno = %d
 %lf
 unsupported flags 0x%x passed to CFileReader::BOpenFile
@@ -7609,12 +7611,13 @@ VR_GetGenericInterface
 IVRSystem_022
 IVRChaperone_004
 IVRCompositor_027
-IVROverlay_026
+IVROverlay_027
 IVRRenderModels_006
 IVRApplications_007
 IVRNotifications_002
 IVRSettings_003
-IVRExternalEventSource_001
+IVRProperties_001
+IVRPaths_001
 libopenvr_api.dylib
 IVRSteamPrivate_006
 IVRSteamPrivate_005
@@ -8052,8 +8055,6 @@ We we first discover the protobuf class used for a particular EMsg, log it
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
-@nTCPLargeSendBufSizeMB
-16
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
 CNet::BFrameFuncHandleCompletedWorkItems
 CNet
@@ -8236,37 +8237,45 @@ SSE is required.
 src.IsValid()
 
 HB
-4
+1
 1
 .
+C:
 0
 1
-1
 
 
 1
 
 
+1
+1
 
 @
 
-[>
 @
 @
-U0
-@&
-0
-9
+b'
+>;
+*'
+/
 %
-^9
-E%
-X,
+L.
+%
 7
+2,
 :
-:
+)
+,
+,
+,
 j
 "
 "
+,
+,
+,
+,
 ,
 ,
 ,
@@ -8286,12 +8295,12 @@ F
 +
 !
 &
-[-
-n(
-u+
+@+
+o(
+(+
 -
+/+
 j
-|*
 @
 @
 @
@@ -8304,19 +8313,7 @@ j
 @
 @
 @
-@
-@
-,
-*6
-@
-@
-)*
-@
-@
-@
-@
-@
-@
+;6
 @
 @
 @
@@ -8343,7 +8340,16 @@ j
 @
 @
 @
-*
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 d
 Uk/
 K
@@ -8378,17 +8384,15 @@ K
 @
 @
 0
+P*
 @
 @
-r)
-2+
-+
-+
+<)
 &
 &
 )
-&
-s,
+x)
+)
 @
 @
 @
@@ -8403,35 +8407,43 @@ s,
 0
 0
 =
-O%
-5(
 @
 @
-/(
 (
 H=
-e$
+s)
 (
-(
+C$
+?$
+)
 )
 '
-a'
+'
+'
+N1
 $
 $
 '
-j3
 &
 @
 =
+D%
 @
 @
-)$
 @
 @
 ?
 $
 ^
 @
+#
+#
+#
+#
+#
+#
+#
+#
 #
 #
 #
@@ -8445,11 +8457,10 @@ A
 A
 A
 (
-M#
-5%
+.
+J&
 #
 .
-+"
 @
 E9u
 E9u
@@ -8464,18 +8475,23 @@ A
 A
 A
 A
-6/
-2/
+]!
+e%
 "
+&$
+?%
 !
-1"
-c.
-?
-"
+!
+%,
+F#
+.
+.
+.
+(
 @
 )
 )
-M-
+)
 +
 +
 "
@@ -8484,18 +8500,21 @@ M-
 ,
 }
 "
-o(
+s(
 @
+'
 (
 (
-o%
+(
+(
 $
 Hi
 (
 #
+#
+*$
 Ic
 "
-"
 @
 @
 0
@@ -8506,16 +8525,17 @@ Ic
 0
 
 
-!
 0
 %
 %
 %
+W
 IcE
+$
 @
 @
-!
-!
+@
+@
 @
 @
 @
@@ -8803,10 +8823,8 @@ IcE
 @
 @
 @
-@
-@
-|"
-c"
+}"
+d"
 @
 j
 @
@@ -8909,6 +8927,9 @@ V
 
 
 
+
+
+
 @
 M9e
 @
@@ -8968,6 +8989,7 @@ I;E
 B
 ?
 `
+[
 `
 !
 A
@@ -9037,4 +9059,3 @@ l
 0
 
 s
-Lc5S3

@@ -271,6 +271,7 @@ ${COMMUNITY_BASE_URL}profiles/${}/friends/pending
 ${COMMUNITY_BASE_URL}profiles/${}/home
 ${COMMUNITY_BASE_URL}profiles/${}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}/inventory/#pending_gifts
+${COMMUNITY_BASE_URL}profiles/${}/notifications
 ${COMMUNITY_BASE_URL}profiles/${}/notifications#comments
 ${COMMUNITY_BASE_URL}profiles/${}/previewsingleshowcase/?customization_type=${}&level=${}
 ${COMMUNITY_BASE_URL}profiles/${}/stats/${}
@@ -368,6 +369,7 @@ ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${url_code}
 ${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
+${HELP_BASE_URL}faqs/view/548F-BC55-89EB-1BC8
 ${HELP_BASE_URL}wizard/HelpRequest/${ticket}
 ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
 ${HELP_BASE_URL}wizard/HelpWithLogin
@@ -1466,8 +1468,6 @@ ${baseURL}/userreviews/setdeveloperresponse/${recommendationID}
 ${baseURL}/userreviews/update/${recommendationID}
 ${baseURL}/userreviews/votetag/${recommendationID}
 ${baseURL}account/preferences
-${baseUrl}ajaxgetconfig
-${baseUrl}ajaxgetuserconfig
 ${cdnURL}/labs/diving_bell/back.svg
 ${cdnURL}/labs/diving_bell/openinnewtab_icon.svg
 ${cdnURL}/labs/diving_bell/refresh.svg
@@ -1685,7 +1685,6 @@ ${strClanURL}/uploadimage
 ${strPreviewURL}${strRssURL}
 ${strProfileURL}ajaxgroupinvite?new_profile=1${bBulkFriendInvite ? '&bulk=1' : ''}
 ${strRedirectURL}/info
-${strRelativeURL}${strChanged}
 ${strRssURL}${}
 ${strSearchBaseURL}${strQuery}
 ${strSearchBaseURL}Home
@@ -2131,15 +2130,7 @@ https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts
 https://developer.valvesoftware.com/
 https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
-https://fb.me/react-controlled-components
-https://fb.me/react-devtools
-https://fb.me/react-devtools-faq
-https://fb.me/react-strict-mode-find-node%s
-https://fb.me/react-strict-mode-string-ref%s
-https://fb.me/react-unsafe-component-lifecycles
-https://fb.me/rules-of-hooks
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
-https://github.com/facebook/react/issues/3236).
 https://help.steampowered.com
 https://help.steampowered.com/
 https://help.steampowered.com/#HelpWithEconTrading
@@ -2972,11 +2963,15 @@ steam://close
 steam://close${}
 steam://close/${}
 steam://close/authorize
+steam://close/bigpicture
 steam://close/cancel
 steam://controllerconfig/${appid}/${publishedFileID}
 steam://currentcontrollerconfig/${}
+steam://friends/add
 steam://friends/joinchat/${steamid}
 steam://friends/message/${steamid}
+steam://friends/oldplayers
+steam://friends/players
 steam://friends/status/away
 steam://friends/status/invisible
 steam://friends/status/offline
@@ -2986,6 +2981,7 @@ steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/details/${}
 steam://newsettings/broadcast
+steam://oldsettings
 steam://open/about
 steam://open/bigpicture
 steam://open/changeemail
@@ -2995,11 +2991,19 @@ steam://open/friends
 steam://open/games${}
 steam://open/games/
 steam://open/goonline
+steam://open/inventory
+steam://open/largegameslist
 steam://open/library
 steam://open/library${}
 steam://open/library/
+steam://open/library/collection/hidden
 steam://open/library/details/${id}
 steam://open/library/shared-apps/${}
+steam://open/library/view/home
+steam://open/library/view/soundtracks
+steam://open/minigameslist
+steam://open/newforyou
+steam://open/oldservers
 steam://open/screenshots
 steam://open/screenshots/${}
 steam://open/servers
@@ -3019,7 +3023,6 @@ steam://openurl_external/
 steam://openurl_external/${}
 steam://openurl_external/https://help.steampowered.com/en/faqs/view/1433-AD20-F11D-B71E
 steam://openurl_external/https://help.steampowered.com/en/faqs/view/443B-C1B8-0998-C02A
-steam://openurl_external/https://help.steampowered.com/en/faqs/view/548F-BC55-89EB-1BC8
 steam://openurl_external/https://help.steampowered.com/faqs/view/0C48-FCBD-DA71-93EB
 steam://openurl_external/https://help.steampowered.com/faqs/view/4593-5CB7-DC3C-64F0
 steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=${transID}
@@ -3034,6 +3037,7 @@ steam://run/250820
 steam://rungame/${appID}/${}
 steam://rungame/${}/${}
 steam://rungameid/${}
+steam://settings
 steam://settings/account
 steam://settings/account${}
 steam://settings/downloads
@@ -3050,6 +3054,14 @@ steam://url/CommunityHome
 steam://url/EventAnnouncementPage/593110/2173495126269399731
 steam://url/GameHubBroadcast/${appid}
 steam://url/GameHubBroadcasts/
+steam://url/HelpFrontPage
+steam://url/LegalInformation
+steam://url/ManageGiftsPage
+steam://url/PrivacyPolicy
+steam://url/RedeemWalletVoucher
+steam://url/SSA
+steam://url/SteamAnnouncements
+steam://url/SteamIDEditPage
 steam://url/SteamIDFriendsPage
 steam://url/SteamIDMyProfile
 steam://url/SteamPreferences

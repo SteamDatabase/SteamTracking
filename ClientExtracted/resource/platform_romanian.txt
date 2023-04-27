@@ -21,6 +21,7 @@
 "app_task_servers"	"Servere"
 "app_task_news"		"Știri"
 "app_task_bigpicture"	"Big Picture"
+"app_task_exit_bigpicture"	"Închide modul Big Picture"
 "app_task_friend_status" "Stare Steam"
 "app_task_exit_steam"	"Închide Steam"
 "app_task_screenshots"	"Capturi de ecran"

@@ -3929,7 +3929,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_menu_friends" "친구"
 "steam_menu_servers" "서버"
 "steam_menu_settings" "설정"
-"steam_menu_view_friends" "친구 목록 보기(%friends_online% 온라인)"
+"steam_menu_view_friends" "친구 목록 보기(%friends_online%명 온라인)"
 "steam_menu_view_players" "플레이어"
 "steam_menu_add_friend" "친구 추가"
 "steam_menu_friendsstatus" "친구 상태 설정"
@@ -4049,7 +4049,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_view_screenshots" "내 스크린샷 보기..."
 "steam_screenshot_not_loaded" "다음 스크린샷을 불러올 수 없습니다: %file_not_loaded_filename%"
 "steam_screenshots_no_selection_title" "좋아하는 게임의 스크린샷을 웹에 공유하세요"
-"steam_screenshots_no_selection_instructions" "게임 중 %screenshot_hotkey% 키를 눌러 스크린샷을 찍으세요!\n\n온라인 모음집으로 업로드할 스크린샷을 선택하세요!\n\nShift 키나 Ctrl 키를 누른 채로 여러 장의 스크린샷을 선택하세요!\n\n스크린샷을 전체 공개로 설정하여 웹에 공유하세요!"
+"steam_screenshots_no_selection_instructions" "게임 중 %screenshot_hotkey% 키를 눌러 스크린샷을 찍으세요!\n\n온라인에 업로드할 스크린샷을 선택하세요!\n\nShift 키나 Ctrl 키를 누른 채로 여러 장의 스크린샷을 선택하세요!\n\n스크린샷을 전체 공개로 설정하여 웹에 공유하세요!"
 
 
 "steam_screenshots_page_single_day" "%FirstDayInRange%"
