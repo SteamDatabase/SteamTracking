@@ -1512,7 +1512,7 @@
 
 "Steam_CloudLabel"					"Steam Felhő"
 "Steam_CloudInfo"					"A Steam Felhő információkat tárol, melyekkel a termék használata különböző PC-ken ugyanolyan lesz."
-"Steam_EnableCloud"					"Steam Felhő szinkronizálás engedélyezése az azt támogató alkalmazásokban"
+"Steam_EnableCloud"					"Steam Felhő szinkronizálás engedélyezése az azt támogató alkalmazásokban."
 "Steam_EnableCloudForApp"			"Steam Felhő szinkronizálás engedélyezése ebben a játékban: %game%"
 "Steam_EnableCloudScreenshots"		"Képernyőmentés-feltöltő megnyitása kilépés után, ha készültek képek"
 "Steam_CloudUsage"					"%used% használatban / %available% szabad"

@@ -4,10 +4,16 @@ __TEXT
 
 __text
 __TEXT
+P
+P
 __stubs
 __TEXT
+FF4
+FF4
 __stub_helper
 __TEXT
+(O4
+(O4
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -41,11 +47,19 @@ __DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
+x#B
+x#B
 __objc_superrefs__DATA
+X$B
+X$B
 __objc_ivar
 __DATA
+`$B
+`$B
 __objc_data
 __DATA
+h$B
+h$B
 __data
 __DATA
 __thread_vars
@@ -60,11 +74,16 @@ __bss
 __DATA
 __common
 __DATA
+`]G
 H
 __LINKEDIT
-H
+@H
+C
 "
+C
 %
+%C
+hYC
 P
 /usr/lib/dyld
 
@@ -104,12 +123,12 @@ h
 &
 )
 0
+L9
 9
 0
 @
 @
-<
-9
+>
 ^*
 K*
 @
@@ -120,9 +139,15 @@ $
 Hi
 Hi
 Hi
+9
 (
 3
 3
+3
+3
+3
+3
+8
 %)
 )
 )
@@ -131,23 +156,23 @@ Hi
 )
 
 %
+=
 ;
 (
-?8
-42
-'
 2
+'
 
 0
 5
-}7
 (
 (
-E?
+U?
 k&
+<
+<
+<
+<
 
-]1
-E1
 0
 Ic
 0
@@ -162,6 +187,8 @@ D
 @
 1
 1
+C2
+2
 @
 Hc
 Hc
@@ -193,12 +220,12 @@ IcE
 IcE
 @
 @
-)6
-n6
+56
+6
+6
 0
 0
-T:
-V
+d:
 15CBaseFileSystem
 11IFileSystem
 15IBaseFileSystem
@@ -1813,11 +1840,12 @@ u
 @
 
 
-D
+H
 (
 8
 4
 @
+D
 (
 0
 L
@@ -1918,8 +1946,8 @@ e
 g
 m
 n
-{
-H
+|
+P
 X
 0
 `
@@ -2361,7 +2389,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Apr 27 2023 15:08:03
+Startup - updater built Apr 28 2023 11:22:11
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2648,8 +2676,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Apr 27 2023
-15:08:03
+Apr 28 2023
+11:22:12
 crashhandler004
 steam
 Steam Executable Crash
@@ -2746,7 +2774,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:08:01
+11:22:10
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10864,7 +10892,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-15:05:48
+11:20:01
 Jan
 Feb
 Mar
@@ -13283,15 +13311,21 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
+Z!:
+.!:
+E!:
 
+P!:
+d!:
+m!:
 0
 0
+L9
 9
 0
 @
 @
-<
-9
+>
 ^*
 K*
 @
@@ -13302,9 +13336,15 @@ $
 Hi
 Hi
 Hi
+9
 (
 3
 3
+3
+3
+3
+3
+8
 %)
 )
 )
@@ -13313,23 +13353,23 @@ Hi
 )
 
 %
+=
 ;
 (
-?8
-42
-'
 2
+'
 
 0
 5
-}7
 (
 (
-E?
+U?
 k&
+<
+<
+<
+<
 
-]1
-E1
 0
 Ic
 0
@@ -13344,6 +13384,8 @@ D
 @
 1
 1
+C2
+2
 @
 Hc
 Hc
@@ -13375,65 +13417,63 @@ IcE
 IcE
 @
 @
-)6
-n6
+56
+6
+6
 0
 0
-T:
+d:
 V
-5
-5
-/
+^/
 =
-+5
+8
+9
+S4
 =
+.
 .
 .
 4
 4
-N-
+n-
 -
 -
--
--
--
--
--
--
-3
 !
 @
-7
-:
-,
+M,
 2
 2
 @
+u+
 &
 1
 1
+1
+1
 +
 +
 +
-=*
++
+S,
+1
+1
+o*
 *
 *
 *
 0
-0
-0
-8
-8
-8
-8
-^/
+*4
 )
-d(
+)
+)
+,/
+r.
 @
 M9e
 @
 @
 (
+.
 .
 ?
 ?
@@ -13456,8 +13496,6 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-n(
-](
 @
 %
 `
@@ -13466,14 +13504,15 @@ n(
 
 j
 j
-o0
+0
 Pj
 ARj
 j
+#0
 0
-,
-,
 0
+.
+.
 IcU
 E;e
 M)u
@@ -13489,7 +13528,6 @@ M)u
 %
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
-7#
 pppp
 pp
 ,,
@@ -13780,7 +13818,7 @@ expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 %
-%
+_)
 =
 @
 
@@ -13788,6 +13826,8 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
++)
+()
 H=
 Ic]
 j
@@ -13796,20 +13836,23 @@ j
 j
 j
 j
+,
 
-h#
-+
-+
-+
+'
+'
 t$I;M
+/(
 e
 W
 ,7~5d
+/
 H
+%
 0
-$
 
 
+.
+!
 
 
 
@@ -13818,18 +13861,17 @@ $
 
 
 
-6
+%
 Hc
+2
+$
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
-J"
-$
-"
-"
-"
+Z"
+$+
 @
 ,
 *
@@ -13839,6 +13881,9 @@ $
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 0
+%
+%
+%
 N
 N
 N
@@ -13848,6 +13893,7 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
+!
 $
 $
 
@@ -13989,7 +14035,6 @@ H=
 |f=
 |~=
 0
-
 @
 @
 |<=
@@ -14144,8 +14189,8 @@ j
 
 
 Hc
-0
 
+0
 &
 %
 
@@ -14155,7 +14200,7 @@ P
 P
 @
 @
-$
+4
 @
 @
 ?

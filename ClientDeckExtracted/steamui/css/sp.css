@@ -1520,7 +1520,7 @@
 .gamelistbar_GameListHomeAndSearch_2TKEa {
   padding: 4px 6px 2px 6px;
   background-color: #202022;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   position: relative;
   display: flex;
   height: 36px;
@@ -4213,6 +4213,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   max-width: 1920px;
   width: calc(100% - 40px);
   margin: auto;
+  user-select: none;
 }
 .steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_BackToGame_2LJMR {
   flex: 1 1 0;
@@ -4774,6 +4775,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   font-weight: 700;
   color: #fff;
   margin-left: 15px;
+  user-select: none;
 }
 .steamdesktopoverlay_GameOverview_27m9Q {
   display: flex;
@@ -4885,12 +4887,52 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   display: flex;
   flex-direction: row;
   gap: 2px;
+  overflow: hidden;
 }
 .steamdesktopoverlay_GameOverview_27m9Q
   .steamdesktopoverlay_GameOverviewSection_1vG-v
   .steamdesktopoverlay_FriendsWhoPlayed_3udkV
   .steamdesktopoverlay_Friend_sMY6B {
   cursor: pointer;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_PlayersSection_2fYjC {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_PlayersSection_2fYjC
+  .steamdesktopoverlay_Players_16nPx {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  overflow: hidden;
+  flex: 1;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_PlayersSection_2fYjC
+  .steamdesktopoverlay_Players_16nPx
+  .steamdesktopoverlay_Player_25VX4 {
+  cursor: pointer;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_PlayersSection_2fYjC
+  .steamdesktopoverlay_ViewPlayersBtn_2NLwf {
+  width: auto;
+  padding: 0px 8px;
+  margin-left: 5px;
+  background-color: #23262e;
+}
+.steamdesktopoverlay_GameOverview_27m9Q
+  .steamdesktopoverlay_GameOverviewSection_1vG-v
+  .steamdesktopoverlay_PlayersSection_2fYjC
+  .steamdesktopoverlay_ViewPlayersBtn_2NLwf:hover {
+  background-color: #3d4450;
 }
 .steamdesktopoverlay_GameOverview_27m9Q
   .steamdesktopoverlay_GameOverviewSection_1vG-v
@@ -5907,20 +5949,20 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   position: relative;
   cursor: pointer;
   flex: 1;
+  border: 2px solid transparent;
+}
+.screenshotmanagerdialog_ScreenshotListItem_1xlfg:hover {
+  border-color: gray;
+}
+.screenshotmanagerdialog_ScreenshotListItem_1xlfg.screenshotmanagerdialog_Selected_eUBvT {
+  border-color: #fff;
 }
 .screenshotmanagerdialog_ScreenshotListItem_1xlfg
   .screenshotmanagerdialog_ScreenshotListItemImg_2J4GI {
-  width: calc(100% - 4px);
+  background: #000;
+  width: 100%;
+  object-fit: contain;
   height: 158px;
-  border: 2px solid transparent;
-}
-.screenshotmanagerdialog_ScreenshotListItem_1xlfg
-  .screenshotmanagerdialog_ScreenshotListItemImg_2J4GI:hover {
-  border-color: gray;
-}
-.screenshotmanagerdialog_ScreenshotListItem_1xlfg
-  .screenshotmanagerdialog_ScreenshotListItemImg_2J4GI.screenshotmanagerdialog_Selected_eUBvT {
-  border-color: #fff;
 }
 .screenshotmanagerdialog_ScreenshotListItem_1xlfg
   .screenshotmanagerdialog_ScreenshotListItemImg_2J4GI.screenshotmanagerdialog_Small_GgiP4 {
@@ -6709,6 +6751,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .ModalDialogPopup .ModalDialogBody .title-area.playersdialog_TitleBar_KP71O {
   height: 46px;
 }
+.playersdialog_PlayersDialog_u-Qbw {
+  font-weight: 400;
+}
 .playersdialog_PlayersSpacer_2Pofc {
   padding-bottom: 20px;
 }
@@ -6726,6 +6771,12 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   font-weight: 400;
   color: #b8bcbf;
   margin-bottom: 20px;
+}
+.playersdialog_StatusText_1Z8gk {
+  color: #dcdedf;
+}
+.playersdialog_StatusText_1Z8gk.playersdialog_Blocked_1T0DL {
+  color: #de3618;
 }
 .playersdialog_AddFriendButton_2Dz7_.playersdialog_AddFriendButton_2Dz7_ {
   width: fit-content;
@@ -6845,6 +6896,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .playersdialog_NameColumn_27hqv .playersdialog_Name_lFOOx {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.playersdialog_OverlayPlayersDialog_1JPjn {
+  padding: 24px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex: 1;
 }
 .menu_MenuWrapper_2Lu3d {
   height: fit-content;
@@ -7136,6 +7195,28 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   height: 18px;
   width: 18px;
 }
+.titlebarcontrols_AnnouncementWaveSVG_1B_GY {
+  transition-property: opacity;
+  opacity: 0;
+  position: absolute;
+  animation: titlebarcontrols_AnnouncementWaves_2QXwl 1.5s linear;
+  animation-iteration-count: 40;
+  transform-origin: 50% 50%;
+  animation-fill-mode: both;
+}
+@keyframes titlebarcontrols_AnnouncementWaves_2QXwl {
+  0% {
+    opacity: 0;
+    transform: translateX(9px) translateY(-1px) scale(0.45);
+  }
+  12% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(12px) translateY(-1px) scale(0.8);
+  }
+}
 .titlebarcontrols_AnnouncementsButton_5wILZ {
   padding: 0px 12px;
   border-radius: 2px;
@@ -7157,9 +7238,17 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background-color: #1999ff;
   color: #fff;
 }
+.titlebarcontrols_AnnouncementsButton_5wILZ.titlebarcontrols_Active_1oEwi
+  .titlebarcontrols_AnnouncementWaveSVG_1B_GY {
+  opacity: 1;
+}
 .titlebarcontrols_AnnouncementsButton_5wILZ.titlebarcontrols_Active_1oEwi:hover {
   background-color: #4cb0ff;
   transition: background-color 0.15s ease-out;
+}
+.titlebarcontrols_AnnouncementsButton_5wILZ.titlebarcontrols_Active_1oEwi:hover
+  .titlebarcontrols_AnnouncementWaveSVG_1B_GY {
+  animation-iteration-count: infinite;
 }
 .titlebarcontrols_AnnouncementsButton_5wILZ .titlebarcontrols_Icon_34bQc {
   width: 16px;
@@ -7287,6 +7376,31 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background-color: #7ea64b;
   transition: background-color 0.15s ease-out;
 }
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:not(.titlebarcontrols_Disabled_1QQWj):hover
+  .titlebarcontrols_Icon_34bQc
+  g {
+  animation-iteration-count: infinite;
+}
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:not(.titlebarcontrols_Disabled_1QQWj):hover
+  .titlebarcontrols_Icon_34bQc
+  g
+  .SVGIcon_Notification_Uvula {
+  animation-iteration-count: infinite;
+}
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8.titlebarcontrols_ActiveAnimation_3HTKO
+  .titlebarcontrols_Icon_34bQc
+  g {
+  animation: titlebarcontrols_NotificationBellAnimation_1laPj 5s ease-in;
+  animation-iteration-count: 12;
+  transform-origin: 50% 0%;
+}
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8.titlebarcontrols_ActiveAnimation_3HTKO
+  .titlebarcontrols_Icon_34bQc
+  g
+  .SVGIcon_Notification_Uvula {
+  animation: titlebarcontrols_NotificationBellUvula_7IeLz 5s ease-in;
+  animation-iteration-count: 12;
+}
 @keyframes titlebarcontrols_wasNewBackground_1DUNR {
   0% {
     background-color: #5c7e10;
@@ -7339,6 +7453,88 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .titlebarcontrols_NotificationsButton_RtSv3 .titlebarcontrols_Icon_34bQc {
   width: 14px;
   height: 14px;
+}
+@keyframes titlebarcontrols_NotificationBellAnimation_1laPj {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  3% {
+    transform: rotateZ(16deg);
+  }
+  6% {
+    transform: rotateZ(-16deg);
+  }
+  9% {
+    transform: rotateZ(15deg);
+  }
+  12% {
+    transform: rotateZ(-15deg);
+  }
+  15% {
+    transform: rotateZ(14deg);
+  }
+  18% {
+    transform: rotateZ(-14deg);
+  }
+  21% {
+    transform: rotateZ(8deg);
+  }
+  24% {
+    transform: rotateZ(-8deg);
+  }
+  27% {
+    transform: rotateZ(3deg);
+  }
+  30% {
+    transform: rotateZ(-3deg);
+  }
+  33% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes titlebarcontrols_NotificationBellUvula_7IeLz {
+  0% {
+    transform: translateX(0px);
+  }
+  3% {
+    transform: translateX(6px);
+  }
+  5% {
+    transform: translateX(-6px);
+  }
+  8% {
+    transform: translateX(5px);
+  }
+  11% {
+    transform: translateX(-5px);
+  }
+  14% {
+    transform: translateX(4px);
+  }
+  17% {
+    transform: translateX(-4px);
+  }
+  20% {
+    transform: translateX(4px);
+  }
+  23% {
+    transform: translateX(-2px);
+  }
+  26% {
+    transform: translateX(2px);
+  }
+  29% {
+    transform: translateX(1px);
+  }
+  32% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 .titlebarcontrols_SoundtrackControls_Utdt7 {
   padding: 0px 12px;
@@ -8371,7 +8567,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .steamdesktop_LocalContentContainer_RGNMW
   .steamdesktop_URLBarReplacement_2Cmrn {
   min-height: 6px;
-  height: 6px;
+  height: 12px;
   background: #171d25;
   box-shadow: inset rgba(61, 68, 80, 0.75) 1px 0px 0px 0px,
     inset rgba(61, 68, 80, 0.25) -1px -1px 0px 0px;

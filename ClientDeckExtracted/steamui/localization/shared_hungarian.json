@@ -2437,6 +2437,7 @@
     "UserGameNotes_PinWindow": "Ablak játékhoz kitűzése",
     "UserGameNotes_WindowOpacity": "Ablakátlátszóság beállítása",
     "UserGameNotes_NotesListView": "Jegyzetlista",
+    "UserGameNotes_ClickToOpenLink": "Megnyitás középső kattintással",
     "FormattingToolbar_Undo": "Visszavonás",
     "FormattingToolbar_Redo": "Újra",
     "FormattingToolbar_HeadingLevelN": "%1$s. szintű címsor",

@@ -1092,6 +1092,8 @@ Disable early-out for known page loads
 Treat unspecified samesite as samesite=lax
 -cef-disable-renderer-restart
 Disable auto-restart of renderer process for existing browsers
+-cef-disable-gpu-compositing
+Disable GPU accelerated compositing in browsers
 -store
 -community
 -clientui
@@ -1161,6 +1163,7 @@ WebContentsOcclusion
 --in-process-gpu
 --ignore-gpu-blocklist
 --ignore-gpu-blacklist
+--disable-gpu-compositing
 --disable-d3d11
 -disablejslogging
 -verbosejslogging
@@ -2369,17 +2372,11 @@ sc_schinese
 @
 @
 
-
+?
 
 @
 Ic
-n
-<
-
-8
-
-D
-<
+F
 
 0
 0
@@ -2426,9 +2423,10 @@ IcE
 IcE
 @
 @
-U
+f
 V
 =
+3
 =
 !
 @

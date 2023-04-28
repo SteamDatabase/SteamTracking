@@ -2435,6 +2435,8 @@
     "UserGameNotes_NotesList": "Бележки",
     "UserGameNotes_DeleteNote": "Изтриване на бележката",
     "UserGameNotes_PromptDelete": "Сигурни ли сте, че искате да изтриете тази бележка?",
+    "UserGameNotes_PinWindow": "Закачане на прозорец към игра",
+    "UserGameNotes_WindowOpacity": "Задаване на прозрачност за прозорец",
     "UserGameNotes_NotesListView": "Списък с бележки",
     "FormattingToolbar_Undo": "Отмяна",
     "FormattingToolbar_Redo": "Преправяне",

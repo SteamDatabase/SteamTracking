@@ -3003,7 +3003,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_GamesDialog_RightClick_AddToUnblockedGames"			"Přidat do rodinných her"
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Odebrat z rodinných her"
 
-"steam_menu_checkforupdates"						"Vyhledat aktualizace klienta služby Steam..."
+"steam_menu_checkforupdates"						"Vyhledat aktualizace klienta..."
 "steam_menu_checkforupdates_osx"					"Vyhledat aktualizace..."
 "steam_checkforupdates_title"						"Steam – aktualizace klienta"
 "steam_ClientUpdateAvailableDownloading"			"Probíhá stahování nové aktualizace klienta služby Steam."
@@ -4293,7 +4293,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_Settings_Family_Sharing_Checked" "Sdílet"
 "Steam_Settings_Family_Sharing_List_Empty" "Nebyly nalezeny žádné další místní účty."
 "Steam_Settings_Family_Sharing_Borrowers" "Vyberte nejvýše %maxborrowers% uživatelů, kteří budou moci na jakémkoli autorizovaném počítači využívat Vaši sdílenou knihovnu:"
-"Steam_Settings_Family_Show_Notifications" "Zobrazit upozornění, až bude sdílená knihovna opět k dispozici"
+"Steam_Settings_Family_Show_Notifications" "Zobrazit upozornění, jakmile je sdílená knihovna opět k dispozici"
 
 "Steam_Settings_Family_Options_Title" "Rodinný režim"
 "Steam_Settings_Family_Options_Text" "Rodinný režim umožňuje pomocí kódu PIN omezit přístup k vybranému obsahu a funkcím."

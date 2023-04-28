@@ -4109,7 +4109,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "La cartella di installazione predefinita di Steam non può essere rimossa."
 "SteamUI_ContentMgr_RemoveFailedUsedFolder" "Questa cartella della Libreria di Steam è attualmente in uso da \"%game%\" e non può essere rimossa."
 "SteamUI_ContentMgr_FlushDownloadConfig" "Pulisci la cache dei download"
-"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Pulire la cache potrebbe risolvere i problemi di download o di avvio delle applicazioni"
+"SteamUI_ContentMgr_FlushDownloadConfigInfo" "Pulire la cache potrebbe risolvere i problemi di download o di avvio delle applicazioni."
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Questo non inciderà sui tuoi giochi già installati o i salvataggi dei giochi"
 
 "SteamUI_ContentMgr_Repair_Title" "Riparazione della Libreria di Steam"

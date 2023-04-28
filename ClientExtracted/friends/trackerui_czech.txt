@@ -406,7 +406,7 @@
 "Friends_InviteNotification_Hotkey"		"Stiskněte %hotkey% pro zobrazení"
 "Friends_ChatNotification_Hotkey"			"Stiskněte %hotkey% pro odpověď"
 
-"Friends_PlayersDialog_Title"				"Hráči"
+"Friends_PlayersDialog_Title"				"Spoluhráči"
 "Friends_CurrentPlayers_TabTitle"			"Aktuální hra"
 "Friends_RecentPlayers_TabTitle"			"Nedávné hry"
 "Friends_AddPlayerAsFriend"				"Přidat do přátel..."

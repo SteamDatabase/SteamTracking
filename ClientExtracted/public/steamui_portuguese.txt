@@ -191,7 +191,7 @@
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Jogar"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "Iniciar atalho"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Jogar"
-"SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jogar demonstração"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jogar demo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Iniciar ferramenta"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Reproduzir"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Reproduzir"

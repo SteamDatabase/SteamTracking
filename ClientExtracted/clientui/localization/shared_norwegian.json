@@ -2438,6 +2438,7 @@
 	"UserGameNotes_PinWindow": "Fest vinduet til spillet",
 	"UserGameNotes_WindowOpacity": "Angi vinduets ugjennomsiktighet",
 	"UserGameNotes_NotesListView": "Merknadsliste",
+	"UserGameNotes_ClickToOpenLink": "Trykk på midtre museknapp for å åpne",
 	"FormattingToolbar_Undo": "Angre",
 	"FormattingToolbar_Redo": "Gjør om",
 	"FormattingToolbar_HeadingLevelN": "Overskrift %1$s",

@@ -151,6 +151,7 @@ message CMsgAuthTicket {
 	optional uint32 ticket_crc = 6;
 	optional bytes ticket = 7;
 	optional bytes server_secret = 8;
+	optional uint32 ticket_type = 9;
 }
 
 message CCDDBAppDetailCommon {

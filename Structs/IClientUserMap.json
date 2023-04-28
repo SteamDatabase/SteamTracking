@@ -2,7 +2,7 @@
     "name": "IClientUserMap",
     "functions": [ 
         {
-            "name": "Unknown_5440384",
+            "name": "Unknown_5442320",
             "argc": "0"
         },
         {
@@ -454,6 +454,18 @@
             "argc": "5"
         },
         {
+            "name": "GetAuthSessionTicketV3",
+            "argc": "5"
+        },
+        {
+            "name": "GetAuthTicketForWebApi",
+            "argc": "2"
+        },
+        {
+            "name": "GetAuthSessionTicketForGameID",
+            "argc": "6"
+        },
+        {
             "name": "BeginAuthSession",
             "argc": "5"
         },
@@ -468,10 +480,6 @@
         {
             "name": "IsUserSubscribedAppInTicket",
             "argc": "4"
-        },
-        {
-            "name": "GetAuthSessionTicketForGameID",
-            "argc": "6"
         },
         {
             "name": "AdvertiseGame",

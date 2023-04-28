@@ -53010,6 +53010,7 @@ body {
 }
 .achievementspage_AchievementTabs_gxNvE {
   flex: 1 1 454px;
+  user-select: none;
 }
 .achievementspage_Background_ODpLj {
   position: absolute;
@@ -53071,6 +53072,7 @@ body {
   padding-left: 24px;
   padding-right: 24px;
   scroll-margin-top: 68px;
+  user-select: none;
 }
 .achievementspage_LoadingContainer_2lhAp {
   padding: 24px;

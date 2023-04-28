@@ -2440,6 +2440,7 @@
     "UserGameNotes_NotesListView": "Listă de notițe",
     "FormattingToolbar_Undo": "Anulează",
     "FormattingToolbar_Redo": "Refă",
+    "FormattingToolbar_HeadingLevelN": "Colontitlu %1$s",
     "FormattingToolbar_HeadingLevel1": "Colontitlu 1",
     "FormattingToolbar_HeadingLevel2": "Colontitlu 2",
     "FormattingToolbar_HeadingLevel3": "Colontitlu 3",

@@ -1305,7 +1305,7 @@
     "Sale_EmptySearchResultsOrLoadFailure": "No se encontraron coincidencias",
     "Sale_OnWishlist": "En tu lista de deseados",
     "Sale_InLibrary": "En la biblioteca",
-    "Sale_PlayDemo": "Jugar el demo",
+    "Sale_PlayDemo": "Jugar demo",
     "Sale_DownloadDemo": "Descargar demo %1$s",
     "Sale_InstallDemo": "Instalar demo",
     "Sale_DemoNotFound": "Demo no encontrada",
