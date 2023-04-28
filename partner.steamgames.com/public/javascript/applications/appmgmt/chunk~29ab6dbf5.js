@@ -7517,14 +7517,13 @@
         for (let n of e) {
           if (C(n)) continue;
           let e = !1;
-          for (const t of i)
-            if (
-              g.Get().BPriceKeyRequired(t) &&
-              !g.Get().BHasLocalPriceOverride(n, t)
-            ) {
+          for (const t of i) {
+            if (!g.Get().BPriceKeyRequired(t)) continue;
+            if (!g.Get().GetPrice(n, t)) {
               e = !0;
               break;
             }
+          }
           e && t.push(n);
         }
         return t;
