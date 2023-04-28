@@ -3616,7 +3616,7 @@
     },
     17149: (e, t, n) => {
       "use strict";
-      n.d(t, { B: () => W });
+      n.d(t, { B: () => z });
       var r = n(89526),
         i = n(69210),
         o = n(33940),
@@ -4389,9 +4389,8 @@
         }
       }
       var M = n(23213),
-        T = n(32338),
-        A = n(93958);
-      class O {
+        T = n(32338);
+      class A {
         constructor(e = !1) {
           (this.m_bRunOnce = !1),
             (this.m_ClientConnectionCallbacks = new M.pB()),
@@ -4422,7 +4421,7 @@
           );
         }
       }
-      function L(e, t) {
+      function O(e, t) {
         return () => {
           try {
             e();
@@ -4431,9 +4430,8 @@
           }
         };
       }
-      class B {
+      class L {
         constructor() {
-          var e;
           (this.m_steamid = new u.K()),
             (this.m_bLoggedOn = !1),
             (this.m_bCompletedInitialConnect = !1),
@@ -4445,9 +4443,9 @@
             (this.m_bConnected = !1),
             (this.m_bConnectionFailed = !1),
             (this.m_setConnectedServers = new Set()),
-            (this.m_callbacksOnConnectOneTime = new O(!0)),
-            (this.m_callbacksOnConnect = new O()),
-            (this.m_callbacksOnDisconnect = new O()),
+            (this.m_callbacksOnConnectOneTime = new A(!0)),
+            (this.m_callbacksOnConnect = new A()),
+            (this.m_callbacksOnDisconnect = new A()),
             (this.m_bForceDisconnect = !1),
             (this.m_bPerformedInitialClockAdjustment = !1),
             (this.m_nWallClockDriftMS = 0),
@@ -4495,17 +4493,7 @@
               window.addEventListener &&
               window.addEventListener("unload", (e) => {
                 this.ForceDisconnect();
-              }),
-            (null ===
-              (e =
-                null === SteamClient || void 0 === SteamClient
-                  ? void 0
-                  : SteamClient.User) || void 0 === e
-              ? void 0
-              : e.RegisterForConnectionAttemptsThrottled) &&
-              SteamClient.User.RegisterForConnectionAttemptsThrottled(
-                this.OnConnectionAttempThrottled
-              );
+              });
         }
         get steamid() {
           return this.m_steamid;
@@ -4549,7 +4537,7 @@
           return SteamClient.User.Connect();
         }
         RunWhenLoggedOn(e, t) {
-          let n = L(e, "RunWhenLoggedOn");
+          let n = O(e, "RunWhenLoggedOn");
           this.BConnectedToServer(t)
             ? n()
             : this.m_callbacksOnConnectOneTime.AddCallback(n, t);
@@ -4558,7 +4546,7 @@
           return new Promise((e) => this.RunWhenLoggedOn(e));
         }
         AddOnLogonCallback(e, t) {
-          let n = L(e, "AddOnLogonCallback");
+          let n = O(e, "AddOnLogonCallback");
           return (
             this.BConnectedToServer(t) && n(),
             this.m_callbacksOnConnect.AddCallback(n, t)
@@ -4651,13 +4639,6 @@
             ),
             this.m_setConnectedServers.clear();
         }
-        OnConnectionAttempThrottled(e) {
-          0 == e.rtCooldownExpiration
-            ? (this.m_rtReconnectThrottleStart = 0)
-            : 0 == this.m_rtReconnectThrottleStart &&
-              (this.m_rtReconnectThrottleStart = (0, A.QU)()),
-            (this.m_rtReconnectThrottleExpiration = e.rtCooldownExpiration);
-        }
         DEBUG_LogCMInterfaceActivity(e, t, n = !0) {
           0;
         }
@@ -4708,230 +4689,239 @@
           return new Date(1e3 * e + this.m_nWallClockDriftMS);
         }
       }
-      (0, o.gn)([p.LO], B.prototype, "m_steamid", void 0),
-        (0, o.gn)([p.LO], B.prototype, "m_bLoggedOn", void 0),
-        (0, o.gn)([p.LO], B.prototype, "m_bCompletedInitialConnect", void 0),
-        (0, o.gn)([p.LO], B.prototype, "m_unAccountFlags", void 0),
-        (0, o.gn)([p.LO], B.prototype, "m_strIPCountry", void 0),
-        (0, o.gn)([p.LO], B.prototype, "m_strPersonaName", void 0),
-        (0, o.gn)([p.LO], B.prototype, "m_rtReconnectThrottleStart", void 0),
+      (0, o.gn)([p.LO], L.prototype, "m_steamid", void 0),
+        (0, o.gn)([p.LO], L.prototype, "m_bLoggedOn", void 0),
+        (0, o.gn)([p.LO], L.prototype, "m_bCompletedInitialConnect", void 0),
+        (0, o.gn)([p.LO], L.prototype, "m_unAccountFlags", void 0),
+        (0, o.gn)([p.LO], L.prototype, "m_strIPCountry", void 0),
+        (0, o.gn)([p.LO], L.prototype, "m_strPersonaName", void 0),
+        (0, o.gn)([p.LO], L.prototype, "m_rtReconnectThrottleStart", void 0),
         (0, o.gn)(
           [p.LO],
-          B.prototype,
+          L.prototype,
           "m_rtReconnectThrottleExpiration",
           void 0
         ),
-        (0, o.gn)([p.LO], B.prototype, "m_bConnected", void 0),
+        (0, o.gn)([p.LO], L.prototype, "m_bConnected", void 0),
         (0, o.gn)(
           [p.LO],
-          B.prototype,
+          L.prototype,
           "m_bPerformedInitialClockAdjustment",
           void 0
         ),
-        (0, o.gn)([p.aD], B.prototype, "DispatchMessage", null),
-        (0, o.gn)([p.aD], B.prototype, "OnDisconnect", null),
+        (0, o.gn)([p.aD], L.prototype, "DispatchMessage", null),
+        (0, o.gn)([p.aD], L.prototype, "OnDisconnect", null);
+      var B = n(23970),
+        k = n(93958);
+      class F extends L {
+        constructor() {
+          super(),
+            (this.m_setEMsgHandlers = new Set()),
+            (this.m_setServiceMethodHandlers = new Set()),
+            (this.m_bShouldChangePersonaStatusOnDisconnect = !0),
+            (0, B.U5)("User.RegisterForConnectionAttemptsThrottled") &&
+              SteamClient.User.RegisterForConnectionAttemptsThrottled(
+                this.OnConnectionAttemptThrottled
+              );
+        }
+        SendMsgAndAwaitResponse(e, t) {
+          return new Promise((n, r) => {
+            if (this.m_hSharedConnection) {
+              this.DEBUG_LogCMInterfaceActivity(e, "send");
+              let r = s.JQ(e.Serialize());
+              void 0 !==
+              SteamClient.SharedConnection.SendMsgAndAwaitBinaryResponse
+                ? SteamClient.SharedConnection.SendMsgAndAwaitBinaryResponse(
+                    this.m_hSharedConnection,
+                    r
+                  )
+                    .then((e) => {
+                      let r = new d.At(e),
+                        i = c.gA.InitFromPacket(t, r);
+                      this.DEBUG_LogCMInterfaceActivity(i, "receive", !0),
+                        i.BIsValid()
+                          ? n(i)
+                          : this.ResolveAwaitWithTransportError(
+                              n,
+                              t,
+                              102,
+                              "Failed to parse response from server"
+                            );
+                    })
+                    .catch((e) => {
+                      this.ResolveAwaitWithTransportError(n, t, 2, e);
+                    })
+                : SteamClient.SharedConnection.SendMsgAndAwaitResponse(
+                    this.m_hSharedConnection,
+                    r
+                  )
+                    .then((e) => {
+                      let r = new d.At(s.b$(e)),
+                        i = c.gA.InitFromPacket(t, r);
+                      this.DEBUG_LogCMInterfaceActivity(i, "receive", !0),
+                        i.BIsValid()
+                          ? n(i)
+                          : this.ResolveAwaitWithTransportError(
+                              n,
+                              t,
+                              102,
+                              "Failed to parse response from server"
+                            );
+                    })
+                    .catch((e) => {
+                      this.ResolveAwaitWithTransportError(n, t, 2, e);
+                    });
+            } else
+              console.warn(
+                "shared connection handle is empty, dropping traffic"
+              );
+          });
+        }
+        SendInternal(e) {
+          let t = s.JQ(e.Serialize());
+          return (
+            SteamClient.SharedConnection.SendMsg(this.m_hSharedConnection, t),
+            !0
+          );
+        }
+        OnMsgRecvd(e) {
+          let t = new d.At(e),
+            n = c.lq.InitHeaderFromPacket(t);
+          this.DispatchMessage(n);
+        }
+        OnLogonInfoChanged(e) {
+          this.DEBUG_LogMessage("Login info from client: ", e),
+            (this.m_bLoggedOn = e.bLoggedOn),
+            (l.De.EUNIVERSE = e.eUniverse),
+            (l.De.MEDIA_CDN_COMMUNITY_URL = e.strCommunityImagesURL),
+            e.strSteamid
+              ? ((this.m_steamid = new u.K(e.strSteamid)),
+                (this.m_strPersonaName = e.strPersonaName),
+                (l.L7.logged_in = e.bLoggedOn),
+                (l.L7.steamid = e.strSteamid),
+                (l.L7.accountid = this.m_steamid.GetAccountID()),
+                (l.L7.account_name = e.strAccountName))
+              : 0 != this.m_steamid.GetAccountID() &&
+                (this.m_steamid = new u.K()),
+            this.m_bLoggedOn
+              ? (this.m_bConnected || this.OnConnect(), this.OnLoggedOn())
+              : this.OnDisconnect();
+        }
+        Connect() {
+          return this.m_hSharedConnection
+            ? Promise.resolve()
+            : (this.m_onConnect = new Promise((e, t) => {
+                SteamClient.SharedConnection.AllocateSharedConnection()
+                  .then((n) => {
+                    n
+                      ? (this.OnSharedConnectionEstablished(n),
+                        this.DEBUG_LogMessage(
+                          "obtained handle ",
+                          this.m_hSharedConnection
+                        ),
+                        this.OnConnect(),
+                        e())
+                      : t();
+                  })
+                  .catch(t);
+              }));
+        }
+        OnSharedConnectionEstablished(e) {
+          (this.m_hSharedConnection = e),
+            this.m_setEMsgHandlers.clear(),
+            this.m_setServiceMethodHandlers.clear(),
+            this.m_hEMsgRegistrationObserver &&
+              this.m_hEMsgRegistrationObserver(),
+            (this.m_hEMsgRegistrationObserver = (0, p.EH)(() => {
+              if (this.m_hSharedConnection) {
+                for (let e of this.m_messageHandlers.emsg_list)
+                  this.m_setEMsgHandlers.has(e) ||
+                    (this.m_setEMsgHandlers.add(e),
+                    SteamClient.SharedConnection.SubscribeToEMsg(
+                      this.m_hSharedConnection,
+                      e
+                    ));
+                for (let e of this.m_messageHandlers.servicemethod_list)
+                  this.m_setServiceMethodHandlers.has(e) ||
+                    (this.m_setServiceMethodHandlers.add(e),
+                    SteamClient.SharedConnection.SubscribeToClientServiceMethod(
+                      this.m_hSharedConnection,
+                      e
+                    ));
+              }
+            }));
+          let t = !1;
+          SteamClient.SharedConnection.RegisterOnLogonInfoChanged(
+            this.m_hSharedConnection,
+            (e) => {
+              this.OnLogonInfoChanged(e),
+                t ||
+                  ((t = !0),
+                  void 0 !==
+                  SteamClient.SharedConnection.RegisterOnBinaryMessageReceived
+                    ? SteamClient.SharedConnection.RegisterOnBinaryMessageReceived(
+                        this.m_hSharedConnection,
+                        this.OnMsgRecvd.bind(this)
+                      )
+                    : SteamClient.SharedConnection.RegisterOnMessageReceived(
+                        this.m_hSharedConnection,
+                        (e) => this.OnMsgRecvd(s.b$(e))
+                      ));
+            }
+          );
+        }
+        OnConnect() {
+          super.OnConnect();
+        }
+        Disconnect() {
+          if (this.m_hSharedConnection) {
+            if (this.m_bShouldChangePersonaStatusOnDisconnect) {
+              let e = c.gA.Init(h.bx, 716);
+              e.Body().set_persona_state(0),
+                e.Body().set_persona_set_by_user(!1),
+                this.Send(e);
+            }
+            SteamClient.SharedConnection.Close(this.m_hSharedConnection),
+              this.OnSharedConnectionClosed();
+          }
+        }
+        OnSharedConnectionClosed() {
+          super.OnDisconnect(),
+            (this.m_hSharedConnection = void 0),
+            this.m_setEMsgHandlers.clear(),
+            this.m_hEMsgRegistrationObserver &&
+              (this.m_hEMsgRegistrationObserver(),
+              (this.m_hEMsgRegistrationObserver = void 0));
+        }
+        SendHeartbeat() {}
+        ClearHeartbeatInterval() {}
+        ResetHeartbeatInterval() {}
+        SetShouldChangePersonaStatusOnDisconnect(e) {
+          this.m_bShouldChangePersonaStatusOnDisconnect = e;
+        }
+        GetShouldChangePersonaStatusOnDisconnect() {
+          return this.m_bShouldChangePersonaStatusOnDisconnect;
+        }
+        OnConnectionAttemptThrottled(e) {
+          0 == e.rtCooldownExpiration
+            ? (this.m_rtReconnectThrottleStart = 0)
+            : 0 == this.m_rtReconnectThrottleStart &&
+              (this.m_rtReconnectThrottleStart = (0, k.QU)()),
+            (this.m_rtReconnectThrottleExpiration = e.rtCooldownExpiration);
+        }
+      }
+      (0, o.gn)([p.aD], F.prototype, "OnLogonInfoChanged", null),
         (0, o.gn)(
           [p.aD.bound],
-          B.prototype,
-          "OnConnectionAttempThrottled",
+          F.prototype,
+          "OnConnectionAttemptThrottled",
           null
         );
-      (0, o.gn)(
-        [p.aD],
-        class extends B {
-          constructor() {
-            super(...arguments),
-              (this.m_setEMsgHandlers = new Set()),
-              (this.m_setServiceMethodHandlers = new Set()),
-              (this.m_bShouldChangePersonaStatusOnDisconnect = !0);
-          }
-          SendMsgAndAwaitResponse(e, t) {
-            return new Promise((n, r) => {
-              if (this.m_hSharedConnection) {
-                this.DEBUG_LogCMInterfaceActivity(e, "send");
-                let r = s.JQ(e.Serialize());
-                void 0 !==
-                SteamClient.SharedConnection.SendMsgAndAwaitBinaryResponse
-                  ? SteamClient.SharedConnection.SendMsgAndAwaitBinaryResponse(
-                      this.m_hSharedConnection,
-                      r
-                    )
-                      .then((e) => {
-                        let r = new d.At(e),
-                          i = c.gA.InitFromPacket(t, r);
-                        this.DEBUG_LogCMInterfaceActivity(i, "receive", !0),
-                          i.BIsValid()
-                            ? n(i)
-                            : this.ResolveAwaitWithTransportError(
-                                n,
-                                t,
-                                102,
-                                "Failed to parse response from server"
-                              );
-                      })
-                      .catch((e) => {
-                        this.ResolveAwaitWithTransportError(n, t, 2, e);
-                      })
-                  : SteamClient.SharedConnection.SendMsgAndAwaitResponse(
-                      this.m_hSharedConnection,
-                      r
-                    )
-                      .then((e) => {
-                        let r = new d.At(s.b$(e)),
-                          i = c.gA.InitFromPacket(t, r);
-                        this.DEBUG_LogCMInterfaceActivity(i, "receive", !0),
-                          i.BIsValid()
-                            ? n(i)
-                            : this.ResolveAwaitWithTransportError(
-                                n,
-                                t,
-                                102,
-                                "Failed to parse response from server"
-                              );
-                      })
-                      .catch((e) => {
-                        this.ResolveAwaitWithTransportError(n, t, 2, e);
-                      });
-              } else
-                console.warn(
-                  "shared connection handle is empty, dropping traffic"
-                );
-            });
-          }
-          SendInternal(e) {
-            let t = s.JQ(e.Serialize());
-            return (
-              SteamClient.SharedConnection.SendMsg(this.m_hSharedConnection, t),
-              !0
-            );
-          }
-          OnMsgRecvd(e) {
-            let t = new d.At(e),
-              n = c.lq.InitHeaderFromPacket(t);
-            this.DispatchMessage(n);
-          }
-          OnLogonInfoChanged(e) {
-            this.DEBUG_LogMessage("Login info from client: ", e),
-              (this.m_bLoggedOn = e.bLoggedOn),
-              (l.De.EUNIVERSE = e.eUniverse),
-              (l.De.MEDIA_CDN_COMMUNITY_URL = e.strCommunityImagesURL),
-              e.strSteamid
-                ? ((this.m_steamid = new u.K(e.strSteamid)),
-                  (this.m_strPersonaName = e.strPersonaName),
-                  (l.L7.logged_in = e.bLoggedOn),
-                  (l.L7.steamid = e.strSteamid),
-                  (l.L7.accountid = this.m_steamid.GetAccountID()),
-                  (l.L7.account_name = e.strAccountName))
-                : 0 != this.m_steamid.GetAccountID() &&
-                  (this.m_steamid = new u.K()),
-              this.m_bLoggedOn
-                ? (this.m_bConnected || this.OnConnect(), this.OnLoggedOn())
-                : this.OnDisconnect();
-          }
-          Connect() {
-            return this.m_hSharedConnection
-              ? Promise.resolve()
-              : (this.m_onConnect = new Promise((e, t) => {
-                  SteamClient.SharedConnection.AllocateSharedConnection()
-                    .then((n) => {
-                      n
-                        ? (this.OnSharedConnectionEstablished(n),
-                          this.DEBUG_LogMessage(
-                            "obtained handle ",
-                            this.m_hSharedConnection
-                          ),
-                          this.OnConnect(),
-                          e())
-                        : t();
-                    })
-                    .catch(t);
-                }));
-          }
-          OnSharedConnectionEstablished(e) {
-            (this.m_hSharedConnection = e),
-              this.m_setEMsgHandlers.clear(),
-              this.m_setServiceMethodHandlers.clear(),
-              this.m_hEMsgRegistrationObserver &&
-                this.m_hEMsgRegistrationObserver(),
-              (this.m_hEMsgRegistrationObserver = (0, p.EH)(() => {
-                if (this.m_hSharedConnection) {
-                  for (let e of this.m_messageHandlers.emsg_list)
-                    this.m_setEMsgHandlers.has(e) ||
-                      (this.m_setEMsgHandlers.add(e),
-                      SteamClient.SharedConnection.SubscribeToEMsg(
-                        this.m_hSharedConnection,
-                        e
-                      ));
-                  for (let e of this.m_messageHandlers.servicemethod_list)
-                    this.m_setServiceMethodHandlers.has(e) ||
-                      (this.m_setServiceMethodHandlers.add(e),
-                      SteamClient.SharedConnection.SubscribeToClientServiceMethod(
-                        this.m_hSharedConnection,
-                        e
-                      ));
-                }
-              }));
-            let t = !1;
-            SteamClient.SharedConnection.RegisterOnLogonInfoChanged(
-              this.m_hSharedConnection,
-              (e) => {
-                this.OnLogonInfoChanged(e),
-                  t ||
-                    ((t = !0),
-                    void 0 !==
-                    SteamClient.SharedConnection.RegisterOnBinaryMessageReceived
-                      ? SteamClient.SharedConnection.RegisterOnBinaryMessageReceived(
-                          this.m_hSharedConnection,
-                          this.OnMsgRecvd.bind(this)
-                        )
-                      : SteamClient.SharedConnection.RegisterOnMessageReceived(
-                          this.m_hSharedConnection,
-                          (e) => this.OnMsgRecvd(s.b$(e))
-                        ));
-              }
-            );
-          }
-          OnConnect() {
-            super.OnConnect();
-          }
-          Disconnect() {
-            if (this.m_hSharedConnection) {
-              if (this.m_bShouldChangePersonaStatusOnDisconnect) {
-                let e = c.gA.Init(h.bx, 716);
-                e.Body().set_persona_state(0),
-                  e.Body().set_persona_set_by_user(!1),
-                  this.Send(e);
-              }
-              SteamClient.SharedConnection.Close(this.m_hSharedConnection),
-                this.OnSharedConnectionClosed();
-            }
-          }
-          OnSharedConnectionClosed() {
-            super.OnDisconnect(),
-              (this.m_hSharedConnection = void 0),
-              this.m_setEMsgHandlers.clear(),
-              this.m_hEMsgRegistrationObserver &&
-                (this.m_hEMsgRegistrationObserver(),
-                (this.m_hEMsgRegistrationObserver = void 0));
-          }
-          SendHeartbeat() {}
-          ClearHeartbeatInterval() {}
-          ResetHeartbeatInterval() {}
-          SetShouldChangePersonaStatusOnDisconnect(e) {
-            this.m_bShouldChangePersonaStatusOnDisconnect = e;
-          }
-          GetShouldChangePersonaStatusOnDisconnect() {
-            return this.m_bShouldChangePersonaStatusOnDisconnect;
-          }
-        }.prototype,
-        "OnLogonInfoChanged",
-        null
-      );
-      var k = n(34316),
-        F = n(52868),
-        x = n.n(F);
-      const N = (e) => false;
-      class P {
+      var x = n(34316),
+        N = n(52868),
+        P = n.n(N);
+      const V = (e) => false;
+      class G {
         constructor() {
           this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
         }
@@ -4998,7 +4988,7 @@
         GetCMListFromWebAPI() {
           return (0, o.mG)(this, void 0, void 0, function* () {
             try {
-              const n = yield ((e = V),
+              const n = yield ((e = H),
                 (t = 1e4),
                 () =>
                   new Promise((n, r) => {
@@ -5037,12 +5027,12 @@
             t = [];
           const n = {};
           for (const r of this.m_CMList.rgCMList) {
-            const i = G(r),
+            const i = U(r),
               o = !i || r.rtLastCheck < e;
             o && t.length < 20 && t.push(r),
               (o && !l.De.IN_MOBILE) || (i && i < 1e4 && (n[r.strHost] = r));
           }
-          N(`CM Ping: Starting job, ${t.length} to ping.`);
+          V(`CM Ping: Starting job, ${t.length} to ping.`);
           let r = !1;
           return new Promise((e, i) => {
             let o,
@@ -5054,9 +5044,9 @@
                 ) {
                   const n = Object.keys(t)
                     .map((e) => t[e])
-                    .sort((e, t) => G(e) - G(t));
+                    .sort((e, t) => U(e) - U(t));
                   if (
-                    (N(
+                    (V(
                       `CM Ping: resolving with ${
                         n.length
                       } available hosts. Best: "${
@@ -5080,11 +5070,11 @@
               (l.De.IN_MOBILE && Object.keys(n).length)) &&
               (Object.keys(n).length
                 ? l.De.IN_MOBILE
-                  ? N(
+                  ? V(
                       "CM Ping: Using available CMs for mobile immediate connection"
                     )
-                  : N("CM Ping: CMs immediately ready.")
-                : N(
+                  : V("CM Ping: CMs immediately ready.")
+                : V(
                     "CM Ping: No CMs to ping, but also no already usable CM found. Attempting to use fallback heuristic."
                   ),
               c(n)),
@@ -5093,11 +5083,11 @@
                   (a = "timeout"),
                     !r &&
                       Object.keys(n).some((e) => this.BCMOkToUse(n[e], a)) &&
-                      (N("CM Ping: Using available CMs after timeout."), c(n));
+                      (V("CM Ping: Using available CMs after timeout."), c(n));
                 }, 400)),
                 (s = window.setTimeout(() => {
                   (a = "seriouslytimeout"),
-                    N("CM Ping: Using available CMs after final timeout"),
+                    V("CM Ping: Using available CMs after final timeout"),
                     c(n);
                 }, 12e3)));
             let u,
@@ -5110,11 +5100,11 @@
                   (!r && u()) ||
                     (0 == --m &&
                       (r
-                        ? (N(
+                        ? (V(
                             "CM Ping: Pinging threads complete, but we've already found a CM."
                           ),
                           this.WriteCMListToLocalStorage())
-                        : (N(
+                        : (V(
                             "CM Ping: exhausted CMs to ping with no resolution"
                           ),
                           this.BCMOkToUse(e, "seriouslytimeout")
@@ -5150,7 +5140,7 @@
               (e = n);
           }
           return (
-            N(
+            V(
               "CMList: GetCMWithFewestDisconnects - using " +
                 (e ? this.FixDevHost(e.strHost) : "none!")
             ),
@@ -5170,27 +5160,27 @@
         PingCM(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
             let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/";
-            N(`CM Ping: Pinging ${t}...`);
+            V(`CM Ping: Pinging ${t}...`);
             let n = performance.now();
-            const r = x().CancelToken.source();
+            const r = P().CancelToken.source();
             let i = window.setTimeout(() => {
-              N(`CM Ping: Cancelling ping for ${e.strHost} due to timeout`),
+              V(`CM Ping: Cancelling ping for ${e.strHost} due to timeout`),
                 r.cancel();
             }, 1e3);
             try {
-              let o = yield x().head(t, { cancelToken: r.token });
-              N(`CM Ping: Got HEAD response for ${e.strHost}`),
+              let o = yield P().head(t, { cancelToken: r.token });
+              V(`CM Ping: Got HEAD response for ${e.strHost}`),
                 window.clearTimeout(i);
               let s = performance.now() - n,
                 a = o.headers["x-steam-cmload"]
                   ? parseInt(o.headers["x-steam-cmload"])
                   : void 0;
-              N(`CM Ping: pinged ${e.strHost} in ${s}ms, load value ${a}`),
+              V(`CM Ping: pinged ${e.strHost} in ${s}ms, load value ${a}`),
                 (e.msPing = s),
                 (e.nCMLoad = a);
             } catch (t) {
-              x().isCancel(t)
-                ? N(`CM Ping: Cancelled ping for ${e.strHost} after timeout`)
+              P().isCancel(t)
+                ? V(`CM Ping: Cancelled ping for ${e.strHost} after timeout`)
                 : window.clearTimeout(i),
                 (e.msPing = 1e4),
                 (e.nCMLoad = 0);
@@ -5199,28 +5189,28 @@
           });
         }
       }
-      function V() {
+      function H() {
         return (0, o.mG)(this, void 0, void 0, function* () {
           const e =
             l.De.WEBAPI_BASE_URL +
             "ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets";
-          N(`Fetching "${e}"`);
-          const t = (yield x().get(e)).data,
+          V(`Fetching "${e}"`);
+          const t = (yield P().get(e)).data,
             n = (t && t.response && t.response.serverlist) || [];
           return (
-            N(
+            V(
               `CM Ping: Got CM list from webapi, ${n.length} websocket CMs available`
             ),
             n.map((e, t) => ({ strHost: e.endpoint, nPriority: t }))
           );
         });
       }
-      function G(e) {
+      function U(e) {
         return (e.msPing || 0) + (e.nCMLoad || 0);
       }
       (0, o.gn)(
         [p.aD],
-        class extends B {
+        class extends L {
           constructor(e) {
             super(),
               (this.m_Session = {
@@ -5233,7 +5223,7 @@
               (this.m_bLoadingCMList = !1),
               (this.m_iCallSeq = 1),
               (this.m_mapWaitingCallbacks = new Map()),
-              (this.m_CMList = new P()),
+              (this.m_CMList = new G()),
               (this.LogOnResponseHandler =
                 this.messageHandlers.RegisterEMessageAction(751, w, (e) => {
                   let t = e.Body().eresult();
@@ -5474,7 +5464,7 @@
           DecodeAndDispatchMultiMsg(e) {
             let t = e.Body().message_body();
             if (!t) return;
-            e.Body().size_unzipped() && (t = k.inflate(t));
+            e.Body().size_unzipped() && (t = x.inflate(t));
             let n = new d.At(t);
             for (; n.GetCountBytesRemaining() > 0; ) {
               let e = n.GetUint32(),
@@ -5488,17 +5478,17 @@
         "DecodeAndDispatchMultiMsg",
         null
       );
-      const H = r.createContext({ body_class: "" });
-      function U() {
-        return r.useContext(H);
+      const W = r.createContext({ body_class: "" });
+      function j() {
+        return r.useContext(W);
       }
-      function W(e, t, n) {
+      function z(e, t, n) {
         const i = r.useRef(),
           [o, s] = r.useState(void 0),
-          a = U();
+          a = j();
         return (
           i.current ||
-            (i.current = new j(
+            (i.current = new K(
               e,
               (function (e, t) {
                 return Object.assign(Object.assign({}, e), {
@@ -5537,7 +5527,7 @@
           { popup: i.current.window, element: o, popupObj: i.current }
         );
       }
-      class j extends i.K3 {
+      class K extends i.K3 {
         constructor(e, t, n) {
           super(e, t), (this.m_fnReadyToRender = n);
         }
