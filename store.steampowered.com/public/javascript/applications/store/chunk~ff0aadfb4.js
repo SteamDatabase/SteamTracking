@@ -34,24 +34,21 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    32744: (t) => {
-      t.exports = { strMaxMobileWidth: "700px" };
-    },
     12263: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Bo: () => L,
+        Bo: () => b,
         FG: () => D,
-        N: () => I,
-        P4: () => y,
+        N: () => y,
+        P4: () => I,
         mb: () => C,
         yS: () => S,
       });
       var a = n(33940),
         o = n(52868),
         i = n.n(o),
-        r = n(50265),
-        l = n(89526),
+        l = n(50265),
+        r = n(89526),
         s = (n(6960), n(49969), n(67575), n(82569)),
         c = n(29760),
         u = n(15877),
@@ -74,7 +71,7 @@
             (t.list_jsondata = {}));
       }
       const C = "0";
-      function b(t, e) {
+      function L(t, e) {
         (e.localized_flat_title = (0, m.LG)([], 30, null)),
           (e.localized_flat_blurb = (0, m.LG)([], 30, null)),
           (e.localized_flat_link = (0, m.LG)([], 30, null)),
@@ -103,7 +100,7 @@
               (e.localized_flat_link[t.language] = t.localized_string);
           });
       }
-      class L {
+      class b {
         constructor() {
           (this.m_mapList = new Map()),
             (this.m_mapEventGIDToLists = new Map()),
@@ -117,11 +114,11 @@
               t
             ),
             this.ValidateStoreDefault(t) &&
-              (0, r.z)(() => {
+              (0, l.z)(() => {
                 t.forEach((t) => {
                   t.multi_detail_lists.forEach((e) => {
                     h(e),
-                      b(t.curation_language, e),
+                      L(t.curation_language, e),
                       this.m_mapList.set(e.listid, e);
                   });
                 });
@@ -145,26 +142,26 @@
                 "curator/" +
                 t.GetAccountID() +
                 "/admin/ajaxgetlistdetails",
-              r = { listid: e };
+              l = { listid: e };
             try {
-              const l = yield i().get(a, {
-                params: r,
+              const r = yield i().get(a, {
+                params: l,
                 cancelToken: null == n ? void 0 : n.token,
               });
               if (
                 1 ==
-                (null === (o = null == l ? void 0 : l.data) || void 0 === o
+                (null === (o = null == r ? void 0 : r.data) || void 0 === o
                   ? void 0
                   : o.success)
               ) {
-                const n = Object.assign({}, l.data.list_details);
+                const n = Object.assign({}, r.data.list_details);
                 return (
                   (0, v.X)(
                     e == (null == n ? void 0 : n.listid),
                     "Wanted" + e + "but got" + (null == n ? void 0 : n.listid)
                   ),
                   h(n),
-                  b(l.data.curation_language, n),
+                  L(r.data.curation_language, n),
                   this.m_mapList.set(e, n),
                   this.m_mapListIDToClanAccount.set(e, t.GetAccountID()),
                   n
@@ -229,7 +226,7 @@
             );
           });
         }
-        InternalLoadSaleCuratorLists(t, e, n, o, l, s) {
+        InternalLoadSaleCuratorLists(t, e, n, o, r, s) {
           var c;
           return (0, a.mG)(this, void 0, void 0, function* () {
             try {
@@ -245,7 +242,7 @@
               ) {
                 const t = new Array();
                 return (
-                  (0, r.z)(() => {
+                  (0, l.z)(() => {
                     n.data.matches &&
                       n.data.matches.forEach((e) => {
                         e.multi_detail_lists.forEach((n) => {
@@ -254,12 +251,12 @@
                             e.clan_account_id
                           ),
                             h(n),
-                            b(e.curation_language, n),
+                            L(e.curation_language, n),
                             this.m_mapList.set(n.listid, n),
                             t.push(n);
                         });
                       }),
-                      this.m_mapEventGIDToLists.set(l, t);
+                      this.m_mapEventGIDToLists.set(r, t);
                   }),
                   t
                 );
@@ -272,7 +269,7 @@
           });
         }
         static Get() {
-          return L.s_Singleton || (L.s_Singleton = new L()), L.s_Singleton;
+          return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
         }
         ValidateStoreDefault(t) {
           const e = t;
@@ -289,25 +286,25 @@
             : e && Array.isArray(e) && 0 == e.length;
         }
       }
-      function I(t, e) {
+      function y(t, e) {
         const n = (0, E.NW)();
         return (
-          (0, l.useEffect)(() => {
-            if (L.Get().GetListDetails(e) || !t) return;
+          (0, r.useEffect)(() => {
+            if (b.Get().GetListDetails(e) || !t) return;
             const o = i().CancelToken.source();
             return (
               (() => {
                 (0, a.mG)(this, void 0, void 0, function* () {
                   var a, i;
-                  const r = yield L.Get().LoadListDetails(t, e);
+                  const l = yield b.Get().LoadListDetails(t, e);
                   if (!o.token.reason)
                     if (
-                      null === (a = null == r ? void 0 : r.apps) || void 0 === a
+                      null === (a = null == l ? void 0 : l.apps) || void 0 === a
                         ? void 0
                         : a.length
                     ) {
                       const t = [];
-                      for (const e of r.apps) {
+                      for (const e of l.apps) {
                         const n =
                           null ===
                             (i = null == e ? void 0 : e.recommended_app) ||
@@ -331,14 +328,14 @@
               () => o.cancel("unmounting CuratorList")
             );
           }, [t, e, n]),
-          L.Get().GetListDetails(e)
+          b.Get().GetListDetails(e)
         );
       }
-      function y(t) {
+      function I(t) {
         const e = t && c.sV.GetClanInfoByClanAccountID(t),
-          [n, a] = (0, l.useState)(!!e);
+          [n, a] = (0, r.useState)(!!e);
         return (
-          (0, l.useEffect)(() => {
+          (0, r.useEffect)(() => {
             if (n && t) {
               const e = s.K.InitFromClanID(t);
               c.sV.LoadClanInfoForClanSteamID(e).finally(() => {
@@ -360,9 +357,9 @@
           n = D(t) ? t.sale_clan_event_gid : null,
           o = n && _.j1.GetClanEventModel(n);
         return (
-          (0, l.useEffect)(() => {
+          (0, r.useEffect)(() => {
             if (o || !D(t)) return;
-            const r = i().CancelToken.source();
+            const l = i().CancelToken.source();
             return (
               (() => {
                 (0, a.mG)(this, void 0, void 0, function* () {
@@ -372,25 +369,25 @@
                       n,
                       0
                     ),
-                    r.token.reason || e();
+                    l.token.reason || e();
                 });
               })(),
-              () => r.cancel("unmounting CuratorList")
+              () => l.cancel("unmounting CuratorList")
             );
           }, [t, n, o, e]),
           o
         );
       }
-      (0, a.gn)([r.LO], L.prototype, "m_mapList", void 0);
+      (0, a.gn)([l.LO], b.prototype, "m_mapList", void 0);
     },
     7920: (t, e, n) => {
       "use strict";
-      n.d(e, { B: () => G, O: () => w });
+      n.d(e, { B: () => w, O: () => G });
       var a = n(89526),
         o = n(51684),
         i = n(49194),
-        r = n(23907),
-        l = n(43407),
+        l = n(23907),
+        r = n(43407),
         s = (n(67575), n(12568)),
         c = (n(82702), n(2351)),
         u = n(55910),
@@ -404,15 +401,15 @@
         f = n(61720),
         h = (n(87973), n(7746)),
         C = n(78205),
-        b = n(741),
-        L = n(35266),
-        I = n(96138),
-        y = n(68910),
+        L = n(741),
+        b = n(35266),
+        y = n(96138),
+        I = n(68910),
         D = n(13806),
         S = n(31587),
         A = n(70983);
-      const w = "capsule_index_";
-      function G(t) {
+      const G = "capsule_index_";
+      function w(t) {
         const {
             capsule: e,
             bShowParentApp: n,
@@ -422,25 +419,25 @@
             navKey: v,
           } = t,
           [E, f] = a.useState(!1),
-          [b] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
-          [I] = (0, d.vs)(n && (null == b ? void 0 : b.GetParentAppID()), o.bk),
-          G = (0, y.bJ)(),
+          [L] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
+          [y] = (0, d.vs)(n && (null == L ? void 0 : L.GetParentAppID()), o.bk),
+          w = (0, I.bJ)(),
           O = (0, A.id)();
-        if (!b) return null;
-        const P = Boolean(I);
+        if (!L) return null;
+        const P = Boolean(y);
         return a.createElement(
-          r.s,
+          l.s,
           {
             className: (0, D.Z)({
               [g().OuterCapsuleContainer]: !0,
-              [w + m]: 0 == m,
+              [G + m]: 0 == m,
             }),
-            navEntryPreferPosition: l.c4.PREFERRED_CHILD,
+            navEntryPreferPosition: r.c4.PREFERRED_CHILD,
             navKey: v,
           },
           a.createElement(
             C.zw,
-            { appid: b.GetAppID() },
+            { appid: L.GetAppID() },
             a.createElement(
               p.ll,
               {
@@ -471,25 +468,25 @@
               i.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, h.h)(I, G, O, t.strExtraParams)
+                (0, h.h)(y, w, O, t.strExtraParams)
               ),
               a.createElement(
                 C.zw,
-                { appid: I.GetAppID() },
+                { appid: y.GetAppID() },
                 a.createElement(
                   "div",
                   { className: g().ParentType },
                   (0, S.Xx)(
-                    11 == b.GetAppType()
+                    11 == L.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC"
                   )
                 ),
                 a.createElement(
-                  L._,
+                  b._,
                   {
                     type: "app",
-                    id: I.GetAppID(),
+                    id: y.GetAppID(),
                     strExtraParams: t.strExtraParams,
                   },
                   a.createElement(
@@ -498,8 +495,8 @@
                       {
                         loading: "lazy",
                         className: _.AppCapsuleImage,
-                        alt: I.GetName(),
-                        src: I.GetAssets().GetSmallCapsuleURL(),
+                        alt: y.GetName(),
+                        src: y.GetAssets().GetSmallCapsuleURL(),
                       },
                       (0, o.fn)()
                     )
@@ -514,39 +511,39 @@
         const {
             info: n,
             bHidePriceIfOwned: o,
-            bHideStatusBanners: r,
-            strExtraParams: l,
+            bHideStatusBanners: l,
+            strExtraParams: r,
             imageType: _,
             bHasParentAppToDisplay: v,
             bUseSubscriptionLayout: g,
             elElementToAppendToHover: h,
-            bHidePrice: L,
+            bHidePrice: b,
             bHidePlatforms: D,
             creatorAccountID: S,
             bIsHovered: A,
           } = t,
-          [w] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
-          G = (0, y.bJ)(),
+          [G] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
+          w = (0, I.bJ)(),
           T =
             ((0, C.Dt)(n.type),
             (0, a.useMemo)(
-              () => (null == w ? void 0 : w.GetIncludedAppIDsOrSelf()),
-              [w]
+              () => (null == G ? void 0 : G.GetIncludedAppIDsOrSelf()),
+              [G]
             )),
           O =
-            w &&
-            (null == w
+            G &&
+            (null == G
               ? void 0
-              : w
-                  .GetIncludedAppIDsOrSelf()
-                  .every((t) => c.jg.Get().BOwnsApp(t)));
-        if (!w) return null;
-        const P = O && !r,
-          z = (0, s.Hf)(`${w.GetStorePageURL()}${l || ""}`, G);
+              : G.GetIncludedAppIDsOrSelf().every((t) =>
+                  c.jg.Get().BOwnsApp(t)
+                ));
+        if (!G) return null;
+        const P = O && !l,
+          z = (0, s.Hf)(`${G.GetStorePageURL()}${r || ""}`, w);
         let H,
           j = null;
-        if (g && 0 == (null == w ? void 0 : w.GetStoreItemType()))
-          j = a.createElement(b.r, { appid: w.GetAppID(), bIsMuted: A });
+        if (g && 0 == (null == G ? void 0 : G.GetStoreItemType()))
+          j = a.createElement(L.r, { appid: G.GetAppID(), bIsMuted: A });
         else if (h);
         else {
           const e = O && o,
@@ -554,7 +551,7 @@
           j = a.createElement(m.Hl, {
             info: n,
             bShowAsMuted: i,
-            bHidePrice: L,
+            bHidePrice: b,
             bShowInLibraryInsteadOfPrice: e,
             bHidePlatforms: D,
             creatorAccountID: S,
@@ -577,11 +574,11 @@
               preferredFocus: v,
               onClick: H,
             },
-            a.createElement(f.vs, { appids: T, hide_status_banners: r }),
+            a.createElement(f.vs, { appids: T, hide_status_banners: l }),
             a.createElement(m.a4, { imageType: _, info: n }),
-            a.createElement(I.y, {
+            a.createElement(y.y, {
               eDeckCompatibilityCategory:
-                null === (e = null == w ? void 0 : w.GetPlatforms()) ||
+                null === (e = null == G ? void 0 : G.GetPlatforms()) ||
                 void 0 === e
                   ? void 0
                   : e.steam_deck_compat_category,
@@ -590,15 +587,6 @@
             j
           )
         );
-      }
-    },
-    76473: (t, e, n) => {
-      "use strict";
-      n.d(e, { p: () => i });
-      var a = n(32744),
-        o = n.n(a);
-      function i() {
-        return window.innerWidth < parseInt(o().strMaxMobileWidth);
       }
     },
   },

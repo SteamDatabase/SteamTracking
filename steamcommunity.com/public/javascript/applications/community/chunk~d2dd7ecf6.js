@@ -436,9 +436,6 @@
         required_title: "collapseablesection_required_title_29VCz",
       };
     },
-    32744: (e) => {
-      e.exports = { strMaxMobileWidth: "700px" };
-    },
     61496: (e) => {
       e.exports = {
         PickerContainer: "clanimagepicker_PickerContainer_1qhUO",
@@ -12666,15 +12663,6 @@
           " ",
           r.createElement(l.WWB, null)
         );
-      }
-    },
-    76473: (e, t, a) => {
-      "use strict";
-      a.d(t, { p: () => l });
-      var n = a(32744),
-        i = a.n(n);
-      function l() {
-        return window.innerWidth < parseInt(i().strMaxMobileWidth);
       }
     },
     79318: (e, t, a) => {

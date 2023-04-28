@@ -96,9 +96,6 @@
         StatusCaution: "tabbar_StatusCaution_31Lxu",
       };
     },
-    32744: (e) => {
-      e.exports = { strMaxMobileWidth: "700px" };
-    },
     85806: (e) => {
       e.exports = {
         YoutubePreviewImage: "youtubepreviewimage_YoutubePreviewImage_MzScK",
@@ -461,15 +458,6 @@
       }
       const v = (0, o.EN)(u);
     },
-    76473: (e, t, n) => {
-      "use strict";
-      n.d(t, { p: () => l });
-      var a = n(32744),
-        o = n.n(a);
-      function l() {
-        return window.innerWidth < parseInt(o().strMaxMobileWidth);
-      }
-    },
     59032: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { ConferenceRoutes: () => ut, default: () => vt });
@@ -671,8 +659,8 @@
       var O = n(81319),
         Z = (n(67237), n(52310)),
         U = n(50567),
-        W = n(70756),
-        X = n(57255),
+        X = n(70756),
+        W = n(57255),
         Y = n(60366),
         j = n(52868),
         Q = n.n(j),
@@ -1610,7 +1598,7 @@
           a.useEffect(() => {
             if (null != r && null != s) {
               const e = new i.K(s);
-              W.j1
+              X.j1
                 .LoadPartnerEventFromClanEventGIDAndClanSteamID(e, r, 0)
                 .then(l);
             }
@@ -1620,7 +1608,7 @@
                 appid: o.appid,
                 trackingLocation: t,
                 announcementGID: o.GetAnnouncementGID(),
-                partnerEventStore: W.j1,
+                partnerEventStore: X.j1,
                 eventModel: o,
                 showAppHeader: !0,
                 closeModal: () => {
@@ -1635,14 +1623,14 @@
         Oe = n(66715),
         Ze = n(5055),
         Ue = n(14128);
-      const We = 10;
-      function Xe(e) {
+      const Xe = 10;
+      function We(e) {
         const t = (0, R.vY)(),
-          n = (0, v.F_)(We),
+          n = (0, v.F_)(Xe),
           o = t.GetActiveEventsAt(n) || [],
           [l] = a.useState(new m.pB()),
           r = a.useCallback(
-            (e, t) => (0, Y.h)(W.j1.GetClanEventModel(e), window),
+            (e, t) => (0, Y.h)(X.j1.GetClanEventModel(e), window),
             []
           );
         return 0 == t.GetNumEventsLoaded()
@@ -1670,7 +1658,7 @@
               a.createElement("br", null),
               a.createElement("br", null),
               a.createElement(
-                X.zx,
+                W.zx,
                 {
                   onClick: (e) =>
                     (0, me.AM)(a.createElement(Je, null), (0, re.RA)(e)),
@@ -1683,7 +1671,7 @@
         return a.createElement(
           $e,
           Object.assign({}, e),
-          a.createElement(Xe, Object.assign({}, e))
+          a.createElement(We, Object.assign({}, e))
         );
       }
       function je(e) {
@@ -1728,7 +1716,7 @@
             fnDisplayModalEvent: o,
             rtNow: l,
           } = e,
-          r = W.j1.GetClanEventModel(t.unique_id),
+          r = X.j1.GetClanEventModel(t.unique_id),
           i = (0, c.jM)(d.De.LANGUAGE),
           s = r.GetStartTimeAndDateUnixSeconds(),
           m = (0, F.yK)(new Date(1e3 * l), new Date(1e3 * s));
@@ -1827,7 +1815,7 @@
       function Ke(e) {
         const { conferenceInfo: t } = e,
           n = (0, R.vY)(),
-          o = (0, v.F_)(We),
+          o = (0, v.F_)(Xe),
           l = n.GetActiveEventsAt(o) || [],
           [r] = a.useState(new m.pB()),
           c = n
@@ -1846,7 +1834,7 @@
                 fnChangeModalEvent: r,
               }),
               c.map((e) => {
-                const t = W.j1.GetClanEventModel(e.unique_id);
+                const t = X.j1.GetClanEventModel(e.unique_id);
                 return a.createElement(ke, {
                   key: "row" + e.unique_id,
                   eventModel: t,

@@ -395,11 +395,10 @@
               r.append("sessionid", d.De.SESSIONID),
               r.append("quantity", "1");
             try {
-              yield n().post(s, r, { withCredentials: !0 });
-              let t = d.De.IN_CLIENT ? "steam://url/StoreCart" : a;
-              e.preventDefault(),
+              yield n().post(s, r, { withCredentials: !0 }),
+                e.preventDefault(),
                 this.InvalidateCache(),
-                (window.location.href = t);
+                (window.location.href = a);
             } catch (e) {
               console.log("HandleOnAddToCart"), console.log(e);
             }

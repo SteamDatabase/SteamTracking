@@ -16,31 +16,31 @@
     },
     29979: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => l });
+      n.d(t, { p: () => u });
       var i = n(33940),
         r = n(89526),
         o = n(49194),
         c = n(49920),
         s = n(31621),
-        u = n(70983),
-        a = n(38811);
-      function l(e) {
+        a = n(70983),
+        l = n(38811);
+      function u(e) {
         const { children: t, navTreeRef: n } = e,
-          l = (0, i._T)(e, ["children", "navTreeRef"]),
+          u = (0, i._T)(e, ["children", "navTreeRef"]),
           d = r.useRef(),
           g = (0, s.BE)(d, n),
-          v = (0, u.id)(),
-          p = window.__virtual_keyboard_client;
+          p = (0, a.id)(),
+          A = window.__virtual_keyboard_client;
         if (
           ((0, r.useEffect)(() => {
-            a.Wz.SetHookFactory(() => p);
-          }, [p]),
-          v)
+            l.Wz.SetHookFactory(() => A);
+          }, [A]),
+          p)
         ) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
-            Object.assign({}, l, {
+            Object.assign({}, u, {
               navTreeRef: g,
               secondary: !0,
               parentEmbeddedNavTree: e,
@@ -53,7 +53,7 @@
     },
     31319: (e, t, n) => {
       "use strict";
-      n.d(t, { Ar: () => u, Wo: () => a, i9: () => s, ks: () => o });
+      n.d(t, { Ar: () => a, Wo: () => l, i9: () => s, ks: () => o });
       var i = n(89526),
         r = n(59934);
       function o(e, t) {
@@ -74,11 +74,11 @@
         const i = new URLSearchParams(e.location.search.substring(1));
         i.delete(t), c(n) && i.append(t, n), e.push(`?${i.toString()}`);
       }
-      function u(e, t) {
+      function a(e, t) {
         const n = (0, r.k6)(),
-          u = (0, r.TH)(),
-          a = (0, i.useMemo)(() => {
-            const n = o(u.search, e);
+          a = (0, r.TH)(),
+          l = (0, i.useMemo)(() => {
+            const n = o(a.search, e);
             return c(n)
               ? c(t)
                 ? "boolean" == typeof t
@@ -86,16 +86,16 @@
                   : t.constructor(n)
                 : n
               : t;
-          }, [u.search, e, t]),
-          l = (0, i.useCallback)(
+          }, [a.search, e, t]),
+          u = (0, i.useCallback)(
             (t) => {
               s(n, e, c(t) ? String(t) : null);
             },
             [n, e]
           );
-        return [a, l];
+        return [l, u];
       }
-      function a(e, t) {
+      function l(e, t) {
         const n = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
@@ -103,22 +103,6 @@
             n.delete(e), c(i) && n.append(e, i);
           }
         e.push(`?${n.toString()}`);
-      }
-    },
-    81671: (e, t, n) => {
-      "use strict";
-      n.d(t, { P: () => r });
-      var i = n(89526);
-      function r(e, t) {
-        i.useEffect(() => {
-          const n = (n) => {
-            n.key === e && t(n);
-          };
-          return (
-            document.addEventListener("keydown", n),
-            () => document.removeEventListener("keydown", n)
-          );
-        }, [e, t]);
       }
     },
     99503: (e, t, n) => {
@@ -129,22 +113,22 @@
         o = n(23907),
         c = (n(84042), n(54997), n(31641)),
         s = n(28697),
-        u = n(23708),
-        a = n(31319),
-        l = n(86701),
+        a = n(23708),
+        l = n(31319),
+        u = n(86701),
         d = n(12687),
         g = n(36670),
-        v = n(31587),
-        p = n(78236),
-        A = n.n(p),
+        p = n(31587),
+        A = n(78236),
+        v = n.n(A),
         E = n(70983);
       function m(e) {
         const { appID: t } = e,
           n = (0, g.g)(),
-          [p] = (0, a.Ar)("inqueue", "0"),
-          [m, y] = (0, i.useState)(!1),
-          [D, b] = (0, i.useState)(!1),
-          [R] = (0, u.vs)(t, { include_assets: !0 }),
+          [A] = (0, l.Ar)("inqueue", "0"),
+          [m, D] = (0, i.useState)(!1),
+          [y, b] = (0, i.useState)(!1),
+          [R] = (0, a.vs)(t, { include_assets: !0 }),
           h = (0, c.L)(),
           N = i.useRef();
         i.useEffect(() => {
@@ -153,11 +137,11 @@
             ? void 0
             : e.Activate(!0);
         }, []);
-        const w = (0, E.id)(),
-          { eStoreDiscoveryQueueType: S, storePageFilter: M } =
+        const S = (0, E.id)(),
+          { eStoreDiscoveryQueueType: w, storePageFilter: M } =
             i.useMemo(() => {
-              if ((null == p ? void 0 : p.length) > 0) {
-                const e = p.split("_"),
+              if ((null == A ? void 0 : A.length) > 0) {
+                const e = A.split("_"),
                   t = Number(e[0]);
                 let n;
                 return (
@@ -166,16 +150,16 @@
                 );
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
-            }, [p]),
+            }, [A]),
           Z = i.useCallback(() => {
             b(!0);
           }, []),
-          f = i.useCallback(() => {
-            y(!0);
+          C = i.useCallback(() => {
+            D(!0);
           }, []),
-          C = (0, s.ZP)(S, M);
+          Q = (0, s.ZP)(w, M);
         return n && R
-          ? D
+          ? y
             ? null
             : i.createElement(
                 r.p,
@@ -188,37 +172,37 @@
                   o.s,
                   {
                     focusable: !0,
-                    className: A().DiscoveryQueueWidgetCtn,
+                    className: v().DiscoveryQueueWidgetCtn,
                     onSecondaryButton: Z,
-                    onOKButton: f,
-                    onOKActionDescription: (0, v.Xx)(
+                    onOKButton: C,
+                    onOKActionDescription: (0, p.Xx)(
                       "#DiscoveryQueue_ResumeWizard"
                     ),
-                    onSecondaryActionDescription: (0, v.Xx)("#Button_Close"),
+                    onSecondaryActionDescription: (0, p.Xx)("#Button_Close"),
                   },
                   i.createElement("img", {
-                    className: A().WidgetCapsule,
+                    className: v().WidgetCapsule,
                     src:
                       null == R ? void 0 : R.GetAssets().GetSmallCapsuleURL(),
                   }),
                   i.createElement(
                     "div",
-                    { onClick: f, className: A().WidgetText },
-                    (0, v.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == C ? void 0 : C.length) > 0 && ": " + C
+                    { onClick: C, className: v().WidgetText },
+                    (0, p.Xx)("#DiscoveryQueue_ResumeWizard"),
+                    (null == Q ? void 0 : Q.length) > 0 && ": " + Q
                   ),
-                  !w &&
+                  !S &&
                     i.createElement(
                       "div",
-                      { className: A().CloseButton, onClick: Z },
-                      i.createElement(l.X, null)
+                      { className: v().CloseButton, onClick: Z },
+                      i.createElement(u.X, null)
                     ),
                   m &&
                     i.createElement(d.MS, {
                       includeAppID: t,
                       bWizardVisible: m,
-                      fnCloseModal: () => y(!1),
-                      eStoreDiscoveryQueueType: S,
+                      fnCloseModal: () => D(!1),
+                      eStoreDiscoveryQueueType: w,
                       storePageFilter: M,
                     })
                 )
@@ -234,20 +218,20 @@
         o = n(12687),
         c = n(36670),
         s = n(23907),
-        u = n(70983),
-        a = n(46085),
-        l = n(24868);
+        a = n(70983),
+        l = n(46085),
+        u = n(24868);
       function d(e) {
         const t = (0, c.g)(),
           [n, d] = (0, i.useState)(!1),
           g = i.useCallback(() => {
-            u.L7.logged_in
+            a.L7.logged_in
               ? d(!0)
-              : (0, l.AM)(
-                  i.createElement(a.JX, {
+              : (0, u.AM)(
+                  i.createElement(l.JX, {
                     onOK: () => {
                       window.location.href = `${
-                        u.De.STORE_BASE_URL
+                        a.De.STORE_BASE_URL
                       }login?redir=${encodeURIComponent(
                         document.location.href
                       )}`;

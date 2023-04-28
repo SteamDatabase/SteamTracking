@@ -729,6 +729,9 @@
         mentionSearchMatch: "suggestdialog_mentionSearchMatch_mBrO4",
       };
     },
+    32744: (e) => {
+      e.exports = { strMaxMobileWidth: "700px" };
+    },
     47013: (e) => {
       e.exports = {
         CropImage: "cropmodal_CropImage_3Mto6",
@@ -41021,39 +41024,40 @@
     },
     19769: (e, t, r) => {
       "use strict";
-      r.d(t, { l: () => d });
+      r.d(t, { l: () => m });
       var i = r(89526),
         n = r(86701),
         a = r(13806),
         s = r(12186),
-        o = r(21323);
-      const l = 1.3,
-        c = 3;
-      function d(e) {
+        o = r(76473),
+        l = r(21323);
+      const c = 1.3,
+        d = 3;
+      function m(e) {
         const [t, r] = (0, i.useState)(!1),
-          [d, m] = (0, i.useState)({
+          [m, u] = (0, i.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
             displayWidth: 0,
             displayHeight: 0,
           }),
-          u = (0, i.useRef)();
+          p = (0, i.useRef)();
         return (
           (0, i.useEffect)(() => {
             if (
-              d.naturalWidth > d.displayWidth * l &&
-              d.naturalHeight > d.displayHeight * l
+              m.naturalWidth > m.displayWidth * c &&
+              m.naturalHeight > m.displayHeight * c
             ) {
-              d.naturalWidth / d.naturalHeight < c && r(!0);
+              m.naturalWidth / m.naturalHeight < d && r(!0);
             }
-          }, [d]),
+          }, [m]),
           t
             ? i.createElement(
                 "div",
-                { className: o.PreviewCtn },
+                { className: l.PreviewCtn },
                 i.createElement(
                   "div",
-                  { className: o.SVG },
+                  { className: l.SVG },
                   i.createElement(n.yRy, null)
                 ),
                 i.createElement(
@@ -41061,7 +41065,7 @@
                   Object.assign({}, e, {
                     className: (0, a.Z)({
                       [e.className]: Boolean(e.className),
-                      [o.ExpandableHover]: !0,
+                      [l.ExpandableHover]: !0,
                     }),
                     onClick: (t) => (0, s.t0)([e.src]),
                   })
@@ -41070,16 +41074,16 @@
             : i.createElement(
                 "img",
                 Object.assign({}, e, {
-                  ref: u,
+                  ref: p,
                   onLoad: (e) => {
-                    if (!e.currentTarget.closest("a")) {
+                    if (!e.currentTarget.closest("a") && !(0, o.p)()) {
                       const {
                         naturalWidth: t,
                         naturalHeight: r,
                         width: i,
                         height: n,
                       } = e.currentTarget;
-                      m({
+                      u({
                         naturalWidth: t,
                         naturalHeight: r,
                         displayWidth: i,
@@ -41686,6 +41690,15 @@
       }
       function d() {
         return n.useContext(o);
+      }
+    },
+    76473: (e, t, r) => {
+      "use strict";
+      r.d(t, { p: () => a });
+      var i = r(32744),
+        n = r.n(i);
+      function a() {
+        return window.innerWidth < parseInt(n().strMaxMobileWidth);
       }
     },
     85446: (e, t, r) => {

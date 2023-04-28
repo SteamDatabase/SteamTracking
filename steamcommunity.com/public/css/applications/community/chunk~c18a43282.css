@@ -2680,6 +2680,11 @@ a.bbcodes_LinkButton_lMVeY:hover {
   color: #fff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
+.image_ErrorDiv_vIfbI {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
+}
 .deckverified_BannerContainer_2b4eh {
   padding: 12px 0px;
 }
@@ -2951,41 +2956,6 @@ a.bbcodes_LinkButton_lMVeY:hover {
   font-size: 14px;
   line-height: 20px;
 }
-.image_ErrorDiv_vIfbI {
-  background-color: hotpink;
-  border: 1px solid;
-  padding: 10px;
-}
-.footericons_Dark_2SV_e .footericons_Background_I3P4e {
-  color: #0e141b;
-}
-.footericons_Dark_2SV_e .footericons_Foreground_39K5g {
-  color: #fff;
-}
-.footericons_Light_2e0Fq .footericons_Background_I3P4e {
-  color: #fff;
-}
-.footericons_Light_2e0Fq .footericons_Foreground_39K5g {
-  color: #0e141b;
-}
-.footericons_Knockout_2Q-49 {
-  color: #fff;
-}
-.footericons_SizeSmall_3sify {
-  width: auto;
-  height: 16px;
-}
-.footericons_SizeMedium_3-w0R {
-  width: auto;
-  height: 22px;
-}
-.footericons_SizeLarge_3jE5H {
-  width: auto;
-  height: 36px;
-}
-.footericons_ChordSummary_2sFpI.footericons_SizeSmall_3sify {
-  margin-right: 20px;
-}
 .screenshotpopout_PopupScreenshotContainer_2mYDh {
   width: 80vw;
   height: auto;
@@ -3019,6 +2989,37 @@ a.bbcodes_LinkButton_lMVeY:hover {
   opacity: 0.5;
   pointer-events: none;
 }
+.footericons_Dark_2SV_e .footericons_Background_I3P4e {
+  color: #0e141b;
+}
+.footericons_Dark_2SV_e .footericons_Foreground_39K5g {
+  color: #fff;
+}
+.footericons_Light_2e0Fq .footericons_Background_I3P4e {
+  color: #fff;
+}
+.footericons_Light_2e0Fq .footericons_Foreground_39K5g {
+  color: #0e141b;
+}
+.footericons_Knockout_2Q-49 {
+  color: #fff;
+}
+.footericons_SizeSmall_3sify {
+  width: auto;
+  height: 16px;
+}
+.footericons_SizeMedium_3-w0R {
+  width: auto;
+  height: 22px;
+}
+.footericons_SizeLarge_3jE5H {
+  width: auto;
+  height: 36px;
+}
+.footericons_ChordSummary_2sFpI.footericons_SizeSmall_3sify {
+  margin-right: 20px;
+}
+
 .gamehover_HoverContentTransition_bHRhS {
   height: 100%;
   transition: transform 0.15s ease-out;

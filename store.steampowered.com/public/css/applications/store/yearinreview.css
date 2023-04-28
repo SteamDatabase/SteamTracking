@@ -5167,39 +5167,6 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   color: rgba(255, 255, 255, 0.231372549);
   font-size: clamp(12px, 1vw, 22px);
 }
-.screenshotpopout_PopupScreenshotContainer_2mYDh {
-  width: 80vw;
-  height: auto;
-}
-.PopupFullWindow .screenshotpopout_PopupScreenshotContainer_2mYDh {
-  width: calc(100vw - 48px);
-}
-.screenshotpopout_PopupScreenshot_1q7Ow {
-  width: 100%;
-  height: 100%;
-}
-.screenshotpopout_ButtonCtn_1Wwsx {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-}
-.screenshotpopout_ButtonIcon_2gBfU {
-  width: 24px;
-  height: 24px;
-  padding: 6px;
-  border-radius: 50%;
-  margin: 8px;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-.screenshotpopout_ButtonIcon_2gBfU:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-}
-.screenshotpopout_ButtonIcon_2gBfU.screenshotpopout_Disabled_1M3_p {
-  opacity: 0.5;
-  pointer-events: none;
-}
 .achievementiconbase_Icon_2bzHb {
   width: 100%;
   height: 100%;
