@@ -1833,7 +1833,7 @@
     },
     39598: (e, t, r) => {
       "use strict";
-      r.d(t, { d: () => ir });
+      r.d(t, { d: () => nr });
       var i = r(33940),
         n = r(89526),
         a = r(44229),
@@ -5248,9 +5248,10 @@
       var xt = r(46085),
         Pt = r(24868),
         kt = r(76478),
-        Ot = r(19464);
-      let Wt = null;
-      function jt(e) {
+        Ot = r(19464),
+        Wt = r(19769);
+      let jt = null;
+      function Xt(e) {
         var t, r;
         let i = (0, o.im)(e.args);
         const a = (0, o.im)(e.args, "style"),
@@ -5302,7 +5303,7 @@
               )
         );
       }
-      function Xt(e) {
+      function Vt(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let i = e && e.children && e.children.toString();
         if (
@@ -5310,7 +5311,7 @@
           ((i = e && e.args && e.args[""]),
           null == i || null == i || 0 == i.length)
         )
-          return "";
+          return n.createElement(n.Fragment, null);
         const a = o.vZ(
           i,
           e.language,
@@ -5327,7 +5328,7 @@
                   src: i,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
-              : n.createElement("img", {
+              : n.createElement(Wt.l, {
                   src: i,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
@@ -5335,7 +5336,7 @@
         }
         return n.createElement(T.j, { rgSources: a });
       }
-      function Vt(e) {
+      function Zt(e) {
         const t = (0, o.im)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const r = e && e.children && e.children.toString(),
@@ -5351,27 +5352,27 @@
           n.createElement(T.j, { rgSources: i, alt: r })
         );
       }
-      function Zt(e) {
-        const t = qt(
+      function Ht(e) {
+        const t = Yt(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0
           ),
-          r = qt(e.args, "trailerid", 0);
+          r = Yt(e.args, "trailerid", 0);
         return n.createElement(ft, {
           appid: t,
           trailerBaseID: r,
           bIsPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Ht(e) {
-        const t = qt(e.args, "appid", 0);
+      function Qt(e) {
+        const t = Yt(e.args, "appid", 0);
         return n.createElement(St, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Qt(e) {
+      function qt(e) {
         const t = (0, o.im)(e.args, "name"),
           r = (0, o.im)(e.args, "title"),
           i = (0, o.im)(e.args, "company"),
@@ -5392,11 +5393,11 @@
               bio: e.children,
             });
       }
-      function qt(e, t, r) {
+      function Yt(e, t, r) {
         const i = (0, o.im)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function Yt(e) {
+      function $t(e) {
         const t = (0, o.im)(e.args, "name"),
           r =
             "true" === ((0, o.im)(e.args, "visible") || "false").toLowerCase(),
@@ -5410,7 +5411,7 @@
           ? e.children
           : null;
       }
-      function $t(e) {
+      function Kt(e) {
         const t = e.context.showErrorInfo;
         if (!S.L7.logged_in)
           return n.createElement(
@@ -5430,7 +5431,7 @@
           }
         return n.createElement(Ot.w, { bPreviewMode: t, rewardType: i });
       }
-      function Kt(e) {
+      function Jt(e) {
         const t = Number.parseInt((0, o.im)(e.args, "id")) || 0,
           r =
             "true" === ((0, o.im)(e.args, "visible") || "false").toLowerCase(),
@@ -5448,7 +5449,7 @@
           (!l && !r) || (l && r) ? e.children : null
         );
       }
-      function Jt(e) {
+      function er(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, ct.x)(e),
             r = (0, ct.v)();
@@ -5476,12 +5477,12 @@
         }
         return { bInitialState: !0 };
       }
-      function er(e) {
+      function tr(e) {
         const t = (0, o.im)(e.args, "action"),
           r = (0, o.im)(e.args, "initialToken"),
           i = (0, o.im)(e.args, "successToken"),
           a = (0, o.im)(e.args, "failToken"),
-          s = Jt(t);
+          s = er(t);
         if (!(t && r && i && a)) {
           return e.context.showErrorInfo
             ? n.createElement(
@@ -5499,7 +5500,7 @@
                 onClick: (s) => {
                   (0, Pt.AM)(
                     n.createElement(
-                      tr,
+                      rr,
                       {
                         strAction: t,
                         strInitialToken: r,
@@ -5522,7 +5523,7 @@
               (0, B.Xx)("#Login_SignIn")
             );
       }
-      function tr(e) {
+      function rr(e) {
         const {
             strAction: t,
             children: r,
@@ -5531,7 +5532,7 @@
             strSuccessToken: s,
             strFailToken: o,
           } = e,
-          l = Jt(t),
+          l = er(t),
           [m, c] = n.useState(Boolean(l.fnAction));
         return (
           n.useEffect(() => {
@@ -5570,7 +5571,7 @@
           )
         );
       }
-      function rr(e) {
+      function ir(e) {
         const { showErrorInfo: t, event: r } = e.context,
           i = r.clanSteamID.GetAccountID(),
           [a] = n.useState(
@@ -5610,11 +5611,11 @@
           ? n.createElement("div", null, (0, B.Xx)("#CloudUpload_NotSupport"))
           : null;
       }
-      class ir extends n.Component {
+      class nr extends n.Component {
         constructor(e) {
           super(e),
             (this.m_parser = new a.Z6(
-              ir.sm_BBCodeDictionary,
+              nr.sm_BBCodeDictionary,
               this.ElementAccumulator,
               e.languageOverride
             ));
@@ -5668,8 +5669,8 @@
           );
         }
         static AddDictionary(e) {
-          ir.sm_BBCodeDictionary = new Map([
-            ...Array.from(ir.sm_BBCodeDictionary.entries()),
+          nr.sm_BBCodeDictionary = new Map([
+            ...Array.from(nr.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
@@ -5684,12 +5685,12 @@
           );
         }
       }
-      (ir.sm_BBCodeDictionary = new Map([
+      (nr.sm_BBCodeDictionary = new Map([
         ...Array.from(o.Be.entries()),
         ...Array.from(
-          (null == Wt &&
-            (Wt = new Map([
-              ["url", { Constructor: jt, autocloses: !1 }],
+          (null == jt &&
+            (jt = new Map([
+              ["url", { Constructor: Xt, autocloses: !1 }],
               [
                 "h1",
                 {
@@ -5738,34 +5739,34 @@
                 "*",
                 { Constructor: o.HC, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: Xt, autocloses: !1 }],
+              ["img", { Constructor: Vt, autocloses: !1 }],
               ["previewyoutube", { Constructor: o.MJ, autocloses: !1 }],
               ["looping_media", { Constructor: o.jj, autocloses: !1 }],
               ["video", { Constructor: o.qy, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: o.YC, autocloses: !1 }],
-              ["trailer", { Constructor: Zt, autocloses: !0 }],
-              ["vod", { Constructor: Ht, autocloses: !1 }],
+              ["trailer", { Constructor: Ht, autocloses: !0 }],
+              ["vod", { Constructor: Qt, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: Qt,
+                  Constructor: qt,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Yt, autocloses: !1 }],
-              ["claimitem", { Constructor: $t, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: Kt, autocloses: !1 }],
-              ["actiondialog", { Constructor: er, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: rr, autocloses: !0 }],
-              ["docimg", { Constructor: Vt, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: $t, autocloses: !1 }],
+              ["claimitem", { Constructor: Kt, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: Jt, autocloses: !1 }],
+              ["actiondialog", { Constructor: tr, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: ir, autocloses: !0 }],
+              ["docimg", { Constructor: Zt, autocloses: !1 }],
               ["carousel", { Constructor: Ft, autocloses: !1 }],
             ])),
-          Wt).entries()
+          jt).entries()
         ),
       ])),
-        (0, i.gn)([u.ak], ir.prototype, "ElementAccumulator", null);
+        (0, i.gn)([u.ak], nr.prototype, "ElementAccumulator", null);
     },
     19464: (e, t, r) => {
       "use strict";

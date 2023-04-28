@@ -635,6 +635,16 @@
     53519: (e) => {
       e.exports = { ErrorDiv: "saleeventbbcodeparser_ErrorDiv_1Vj6H" };
     },
+    20688: (e) => {
+      e.exports = {
+        PopupScreenshotContainer:
+          "screenshotpopout_PopupScreenshotContainer_2mYDh",
+        PopupScreenshot: "screenshotpopout_PopupScreenshot_1q7Ow",
+        ButtonCtn: "screenshotpopout_ButtonCtn_1Wwsx",
+        ButtonIcon: "screenshotpopout_ButtonIcon_2gBfU",
+        Disabled: "screenshotpopout_Disabled_1M3_p",
+      };
+    },
     70424: (e) => {
       e.exports = {
         Dark: "footericons_Dark_2SV_e",
@@ -653,6 +663,12 @@
     },
     19143: (e) => {
       e.exports = { ErrorDiv: "image_ErrorDiv_vIfbI" };
+    },
+    21323: (e) => {
+      e.exports = {
+        PreviewCtn: "expandableimage_PreviewCtn_3TAWD",
+        SVG: "expandableimage_SVG_3KS-f",
+      };
     },
     48110: (e) => {
       e.exports = {
@@ -25793,17 +25809,18 @@
     },
     69728: (e, t, r) => {
       "use strict";
-      r.d(t, { U: () => c });
+      r.d(t, { U: () => d, h: () => m });
       var i = r(33940),
         n = r(50265),
-        a = r(6960),
-        s = r(99096),
-        o = r(59821),
-        l = r(70983);
-      class c {
+        a = r(25125),
+        s = r(6960),
+        o = r(99096),
+        l = r(59821),
+        c = r(70983);
+      class d {
         constructor() {
-          (this.m_eCurLang = (0, a.jM)(l.De.LANGUAGE)),
-            (this.m_rgHasData = (0, s.LG)([], 30, !1)),
+          (this.m_eCurLang = (0, s.jM)(c.De.LANGUAGE)),
+            (this.m_rgHasData = (0, o.LG)([], 30, !1)),
             (this.m_bHasLocalizationContext = !1);
         }
         GetCurEditLanguage() {
@@ -25829,21 +25846,24 @@
         }
         static Get() {
           return (
-            c.s_globalSingletonStore ||
-              ((c.s_globalSingletonStore = new c()),
-              "dev" == l.De.WEB_UNIVERSE &&
-                (window.DUS = c.s_globalSingletonStore)),
-            c.s_globalSingletonStore
+            d.s_globalSingletonStore ||
+              ((d.s_globalSingletonStore = new d()),
+              "dev" == c.De.WEB_UNIVERSE &&
+                (window.DUS = d.s_globalSingletonStore)),
+            d.s_globalSingletonStore
           );
         }
       }
-      (0, i.gn)([n.LO], c.prototype, "m_eCurLang", void 0),
-        (0, i.gn)([n.LO], c.prototype, "m_rgHasData", void 0),
-        (0, i.gn)([n.LO], c.prototype, "m_bHasLocalizationContext", void 0),
-        (0, i.gn)([o.a], c.prototype, "GetCurEditLanguage", null),
-        (0, i.gn)([o.a], c.prototype, "SetCurEditLanguage", null),
-        (0, i.gn)([n.aD.bound], c.prototype, "SetHasLanguage", null),
-        (0, i.gn)([o.a], c.prototype, "BHasLanguageData", null);
+      function m() {
+        return (0, a.SZ)(() => d.Get().GetCurEditLanguage());
+      }
+      (0, i.gn)([n.LO], d.prototype, "m_eCurLang", void 0),
+        (0, i.gn)([n.LO], d.prototype, "m_rgHasData", void 0),
+        (0, i.gn)([n.LO], d.prototype, "m_bHasLocalizationContext", void 0),
+        (0, i.gn)([l.a], d.prototype, "GetCurEditLanguage", null),
+        (0, i.gn)([l.a], d.prototype, "SetCurEditLanguage", null),
+        (0, i.gn)([n.aD.bound], d.prototype, "SetHasLanguage", null),
+        (0, i.gn)([l.a], d.prototype, "BHasLanguageData", null);
     },
     55923: (e, t, r) => {
       "use strict";
@@ -38965,6 +38985,109 @@
         }
       }
     },
+    12186: (e, t, r) => {
+      "use strict";
+      r.d(t, { t0: () => m });
+      var i = r(89526),
+        n = r(13806),
+        a = r(81671),
+        s = r(46085),
+        o = r(24868),
+        l = r(20688),
+        c = r.n(l),
+        d = r(86701);
+      function m(e) {
+        (0, o.x1)(i.createElement(u, { rgImageURL: e }), window);
+      }
+      function u(e) {
+        const { closeModal: t, rgImageURL: r } = e,
+          [n, a] = i.useState(0),
+          o = i.useCallback(() => {
+            a(0 == n ? r.length - 1 : n - 1);
+          }, [n, r.length]),
+          l = i.useCallback(() => {
+            n + 1 >= r.length ? a(0) : a(n + 1);
+          }, [n, r.length]);
+        return i.createElement(
+          s.RG,
+          {
+            bAllowFullSize: !0,
+            bOKDisabled: !0,
+            closeModal: t,
+            bHideCloseIcon: !0,
+          },
+          i.createElement(p, {
+            index: n,
+            numElements: r.length,
+            fnForward: l,
+            fnBackwards: o,
+            fnClose: t,
+            bCircular: !0,
+          }),
+          i.createElement(
+            "div",
+            { className: c().PopupScreenshotContainer },
+            i.createElement("img", {
+              className: c().PopupScreenshot,
+              src: r[n],
+            })
+          )
+        );
+      }
+      function p(e) {
+        const {
+          index: t,
+          numElements: r,
+          fnForward: s,
+          fnBackwards: o,
+          fnClose: l,
+          bCircular: m,
+        } = e;
+        (0, a.P)("ArrowLeft", o),
+          (0, a.P)("Left", o),
+          (0, a.P)("ArrowRight", s),
+          (0, a.P)("Right", s),
+          (0, a.P)("Escape", () => l && l()),
+          (0, a.P)("Esc", () => l && l());
+        let u = r > 1;
+        return i.createElement(
+          "div",
+          { className: c().ButtonCtn },
+          u &&
+            i.createElement(
+              i.Fragment,
+              null,
+              i.createElement(
+                "div",
+                {
+                  className: (0, n.Z)(
+                    c().ButtonIcon,
+                    0 !== t || m ? null : c().Disabled
+                  ),
+                  onClick: o,
+                },
+                i.createElement(d.V7n, { angle: 270 })
+              ),
+              i.createElement(
+                "div",
+                {
+                  className: (0, n.Z)(
+                    c().ButtonIcon,
+                    t !== r - 1 || m ? null : c().Disabled
+                  ),
+                  onClick: s,
+                },
+                i.createElement(d.V7n, { angle: 90 })
+              )
+            ),
+          i.createElement(
+            "div",
+            { className: c().ButtonIcon, onClick: l },
+            i.createElement(d.X, null)
+          )
+        );
+      }
+    },
     35266: (e, t, r) => {
       "use strict";
       r.d(t, { W: () => c, _: () => d });
@@ -40824,11 +40947,12 @@
     },
     90043: (e, t, r) => {
       "use strict";
-      r.d(t, { J: () => s, e: () => o });
+      r.d(t, { J: () => o, e: () => l });
       var i = r(89526),
         n = r(31587),
-        a = r(19143);
-      function s(e) {
+        a = r(19143),
+        s = r(19769);
+      function o(e) {
         const {
             className: t,
             srcs: r,
@@ -40858,22 +40982,22 @@
           alt: o,
         });
       }
-      function o(e) {
+      function l(e) {
         const [t, r] = i.useState(!1),
           {
-            className: s,
-            src: o,
-            lazyLoad: l,
-            width: c,
-            height: d,
-            alt: m,
-            crossOrigin: u,
+            className: o,
+            src: l,
+            lazyLoad: c,
+            width: d,
+            height: m,
+            alt: u,
+            crossOrigin: p,
           } = e;
         return t
           ? i.createElement(
               "div",
               { className: a.ErrorDiv },
-              i.createElement("p", null, (0, n.Xx)("#Image_ErrorTitle", o)),
+              i.createElement("p", null, (0, n.Xx)("#Image_ErrorTitle", l)),
               i.createElement(
                 "ul",
                 null,
@@ -40883,16 +41007,89 @@
               ),
               i.createElement("p", null, (0, n.Xx)("#Image_Error_suggestion"))
             )
-          : i.createElement("img", {
-              className: s,
-              src: o,
+          : i.createElement(s.l, {
+              className: o,
+              src: l,
               onError: () => r(!0),
-              crossOrigin: u,
-              loading: l ? "lazy" : void 0,
-              width: c,
-              height: d,
-              alt: m,
+              crossOrigin: p,
+              loading: c ? "lazy" : void 0,
+              width: d,
+              height: m,
+              alt: u,
             });
+      }
+    },
+    19769: (e, t, r) => {
+      "use strict";
+      r.d(t, { l: () => d });
+      var i = r(89526),
+        n = r(86701),
+        a = r(13806),
+        s = r(12186),
+        o = r(21323);
+      const l = 1.3,
+        c = 3;
+      function d(e) {
+        const [t, r] = (0, i.useState)(!1),
+          [d, m] = (0, i.useState)({
+            naturalWidth: 0,
+            naturalHeight: 0,
+            displayWidth: 0,
+            displayHeight: 0,
+          }),
+          u = (0, i.useRef)();
+        return (
+          (0, i.useEffect)(() => {
+            if (
+              d.naturalWidth > d.displayWidth * l &&
+              d.naturalHeight > d.displayHeight * l
+            ) {
+              d.naturalWidth / d.naturalHeight < c && r(!0);
+            }
+          }, [d]),
+          t
+            ? i.createElement(
+                "div",
+                { className: o.PreviewCtn },
+                i.createElement(
+                  "div",
+                  { className: o.SVG },
+                  i.createElement(n.yRy, null)
+                ),
+                i.createElement(
+                  "img",
+                  Object.assign({}, e, {
+                    className: (0, a.Z)({
+                      [e.className]: Boolean(e.className),
+                      [o.ExpandableHover]: !0,
+                    }),
+                    onClick: (t) => (0, s.t0)([e.src]),
+                  })
+                )
+              )
+            : i.createElement(
+                "img",
+                Object.assign({}, e, {
+                  ref: u,
+                  onLoad: (e) => {
+                    if (!e.currentTarget.closest("a")) {
+                      const {
+                        naturalWidth: t,
+                        naturalHeight: r,
+                        width: i,
+                        height: n,
+                      } = e.currentTarget;
+                      m({
+                        naturalWidth: t,
+                        naturalHeight: r,
+                        displayWidth: i,
+                        displayHeight: n,
+                      });
+                    }
+                  },
+                })
+              )
+        );
       }
     },
     3660: (e, t, r) => {
@@ -42113,6 +42310,22 @@
         let t = "#PartnerEvent_" + e,
           r = (0, i.Xx)(t);
         return r != t ? r : (0, i.Xx)("#PartnerEvent_Other");
+      }
+    },
+    81671: (e, t, r) => {
+      "use strict";
+      r.d(t, { P: () => n });
+      var i = r(89526);
+      function n(e, t) {
+        i.useEffect(() => {
+          const r = (r) => {
+            r.key === e && t(r);
+          };
+          return (
+            document.addEventListener("keydown", r),
+            () => document.removeEventListener("keydown", r)
+          );
+        }, [e, t]);
       }
     },
     27344: (e, t, r) => {

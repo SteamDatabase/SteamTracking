@@ -271,16 +271,6 @@
         RewardClass: "salepointshopsmartdisplay_RewardClass_194Jt",
       };
     },
-    20688: (e) => {
-      e.exports = {
-        PopupScreenshotContainer:
-          "screenshotpopout_PopupScreenshotContainer_2mYDh",
-        PopupScreenshot: "screenshotpopout_PopupScreenshot_1q7Ow",
-        ButtonCtn: "screenshotpopout_ButtonCtn_1Wwsx",
-        ButtonIcon: "screenshotpopout_ButtonIcon_2gBfU",
-        Disabled: "screenshotpopout_Disabled_1M3_p",
-      };
-    },
     19814: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -7589,9 +7579,9 @@
         );
       };
     },
-    13803: (e, t, a) => {
+    75646: (e, t, a) => {
       "use strict";
-      a.d(t, { O: () => y });
+      a.d(t, { O: () => v });
       var n = a(70983),
         i = a(51600),
         l = a(23708),
@@ -7605,107 +7595,17 @@
         _ = a(8392),
         p = a(34405),
         g = a.n(p),
-        h = a(81671),
-        v = a(20688),
-        S = a.n(v);
-      function E(e) {
-        const { closeModal: t, rgImageURL: a } = e,
-          [n, i] = r.useState(0),
-          l = r.useCallback(() => {
-            i(0 == n ? a.length - 1 : n - 1);
-          }, [n, a.length]),
-          o = r.useCallback(() => {
-            n + 1 >= a.length ? i(0) : i(n + 1);
-          }, [n, a.length]);
-        return r.createElement(
-          u.RG,
-          {
-            bAllowFullSize: !0,
-            bOKDisabled: !0,
-            closeModal: t,
-            bHideCloseIcon: !0,
-          },
-          r.createElement(f, {
-            index: n,
-            numElements: a.length,
-            fnForward: o,
-            fnBackwards: l,
-            fnClose: t,
-            bCircular: !0,
-          }),
-          r.createElement(
-            "div",
-            { className: S().PopupScreenshotContainer },
-            r.createElement("img", {
-              className: S().PopupScreenshot,
-              src: a[n],
-            })
-          )
-        );
-      }
-      function f(e) {
-        const {
-          index: t,
-          numElements: a,
-          fnForward: n,
-          fnBackwards: i,
-          fnClose: l,
-          bCircular: s,
-        } = e;
-        (0, h.P)("ArrowLeft", i),
-          (0, h.P)("Left", i),
-          (0, h.P)("ArrowRight", n),
-          (0, h.P)("Right", n),
-          (0, h.P)("Escape", () => l && l()),
-          (0, h.P)("Esc", () => l && l());
-        let d = a > 1;
-        return r.createElement(
-          "div",
-          { className: S().ButtonCtn },
-          d &&
-            r.createElement(
-              r.Fragment,
-              null,
-              r.createElement(
-                "div",
-                {
-                  className: (0, c.Z)(
-                    S().ButtonIcon,
-                    0 !== t || s ? null : S().Disabled
-                  ),
-                  onClick: i,
-                },
-                r.createElement(o.V7n, { angle: 270 })
-              ),
-              r.createElement(
-                "div",
-                {
-                  className: (0, c.Z)(
-                    S().ButtonIcon,
-                    t !== a - 1 || s ? null : S().Disabled
-                  ),
-                  onClick: n,
-                },
-                r.createElement(o.V7n, { angle: 90 })
-              )
-            ),
-          r.createElement(
-            "div",
-            { className: S().ButtonIcon, onClick: l },
-            r.createElement(o.X, null)
-          )
-        );
-      }
-      function y(e) {
+        h = a(12186);
+      function v(e) {
         var t;
         const { info: a, bPopOutTrailerPlayback: p } = e,
-          [h] = (0, l.jk)(a.id, (0, i.TM)(a.type), {
+          [v] = (0, l.jk)(a.id, (0, i.TM)(a.type), {
             include_trailers: !0,
             include_screenshots: !0,
           }),
-          [v, S] = r.useState(!1),
+          [S, E] = r.useState(!1),
           [f, y] = r.useState(void 0),
-          b = null == h ? void 0 : h.GetAllTrailers().GetHighlightTrailers(),
+          b = null == v ? void 0 : v.GetAllTrailers().GetHighlightTrailers(),
           C = (null == b ? void 0 : b.length) > 0 && b[0],
           T = r.useCallback(
             (e) => {
@@ -7750,11 +7650,11 @@
                     ),
                     (0, d.RA)(e)
                   );
-                } else S((e) => !e);
+                } else E((e) => !e);
             },
             [C, p]
           );
-        if (!h)
+        if (!v)
           return r.createElement(
             "div",
             { className: g().MediaContainer },
@@ -7763,21 +7663,21 @@
         if (
           !C &&
           0 ===
-            (null === (t = h.GetOnlyAllAgesSafeScreenshots()) || void 0 === t
+            (null === (t = v.GetOnlyAllAgesSafeScreenshots()) || void 0 === t
               ? void 0
               : t.length)
         )
           return (
             ("dev" != n.De.WEB_UNIVERSE && "beta" != n.De.WEB_UNIVERSE) ||
               console.log(
-                "appCapsule for appid: " + (null == h ? void 0 : h.GetAppID()),
-                h.GetOnlyAllAgesSafeScreenshots()
+                "appCapsule for appid: " + (null == v ? void 0 : v.GetAppID()),
+                v.GetOnlyAllAgesSafeScreenshots()
               ),
             null
           );
         const D = C || (void 0 !== f && -1 !== f) ? f : 0,
           I = new Array(),
-          w = h.GetOnlyAllAgesSafeScreenshots();
+          w = v.GetOnlyAllAgesSafeScreenshots();
         return (
           w.forEach((e, t) => {
             if ((C || t > 0) && I.length < 3) {
@@ -7793,9 +7693,7 @@
                   onClick: () => {
                     const e = [...w];
                     for (let a = 0; a < t; ++a) e.push(e.shift());
-                    var a;
-                    (a = e),
-                      (0, m.x1)(r.createElement(E, { rgImageURL: a }), window);
+                    (0, h.t0)(e);
                   },
                   onMouseEnter: () => y(t),
                 })
@@ -7814,7 +7712,7 @@
                   {
                     className: (0, c.Z)(
                       g().VideoThumbnail,
-                      v ? g().videoPlaying : null
+                      S ? g().videoPlaying : null
                     ),
                     onClick: T,
                   },
@@ -7844,11 +7742,11 @@
               {
                 className: (0, c.Z)(
                   g().VideoLargeContainer,
-                  v ? g().videoPlaying : null
+                  S ? g().videoPlaying : null
                 ),
                 onClick: T,
               },
-              Boolean(v) &&
+              Boolean(S) &&
                 r.createElement(
                   "video",
                   {
@@ -8375,7 +8273,7 @@
         L = (a(49969), a(39613)),
         B = a.n(L),
         O = a(16147),
-        N = a(13803),
+        N = a(75646),
         F = a(35266),
         R = a(45321);
       const P = (0, G.Pi)((e) => {
@@ -13078,22 +12976,6 @@
           }),
             o.K.WriteXMLToFile(n, a);
         }
-      }
-    },
-    81671: (e, t, a) => {
-      "use strict";
-      a.d(t, { P: () => i });
-      var n = a(89526);
-      function i(e, t) {
-        n.useEffect(() => {
-          const a = (a) => {
-            a.key === e && t(a);
-          };
-          return (
-            document.addEventListener("keydown", a),
-            () => document.removeEventListener("keydown", a)
-          );
-        }, [e, t]);
       }
     },
     94629: (e, t, a) => {

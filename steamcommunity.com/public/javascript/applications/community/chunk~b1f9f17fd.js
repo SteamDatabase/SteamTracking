@@ -14311,7 +14311,7 @@
             n.createElement(xi, { event: e.event })
           );
         });
-      var ci = a(13803),
+      var ci = a(75646),
         di = a(74802),
         mi = a(74834);
       const ui = (e) => {
@@ -36324,7 +36324,7 @@
     },
     20694: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => N });
+      a.d(t, { H: () => L });
       var n = a(94629),
         i = (a(11858), a(23405)),
         r = a(89526);
@@ -36553,32 +36553,33 @@
       var c = a(12628),
         d = (a(50265), a(565)),
         m = a(6960),
-        u = a(90806),
-        _ = a(22840),
-        p = a(17699),
-        g = a(91965),
-        v = a(19310),
-        E = a(52460),
-        h = a(65717),
-        S = a.n(h),
-        b = a(81997),
-        y = a(50390),
-        C = a.n(y),
-        f = a(8392),
-        D = a(31587),
-        w = a(74545),
-        G = a(25125);
-      function T(e) {
+        u = a(69728),
+        _ = a(90806),
+        p = a(22840),
+        g = a(17699),
+        v = a(91965),
+        E = a(19310),
+        h = a(52460),
+        S = a(65717),
+        b = a.n(S),
+        y = a(81997),
+        C = a(50390),
+        f = a.n(C),
+        D = a(8392),
+        w = a(31587),
+        G = a(74545),
+        T = a(25125);
+      function I(e) {
         const {
             event: t,
             fnOnChangeHubType: a,
             fnOnChangeCategory: n,
             fnOnChangeTagID: i,
           } = e,
-          { contentHubNames: o } = (0, w.X)(),
-          l = (0, G.SZ)(() => (null == t ? void 0 : t.GetContentHubType())),
-          s = (0, G.SZ)(() => (null == t ? void 0 : t.GetContentHubCategory())),
-          c = (0, G.SZ)(() => (null == t ? void 0 : t.GetContentHubTag())),
+          { contentHubNames: o } = (0, G.X)(),
+          l = (0, T.SZ)(() => (null == t ? void 0 : t.GetContentHubType())),
+          s = (0, T.SZ)(() => (null == t ? void 0 : t.GetContentHubCategory())),
+          c = (0, T.SZ)(() => (null == t ? void 0 : t.GetContentHubTag())),
           d = (0, r.useMemo)(
             () =>
               o
@@ -36666,11 +36667,11 @@
             )
           : null;
       }
-      var I = a(18965),
-        B = a.n(I),
-        k = a(17901),
-        A = a(10454);
-      class x extends r.Component {
+      var B = a(18965),
+        k = a.n(B),
+        A = a(17901),
+        x = a(10454);
+      class N extends r.Component {
         render() {
           const e = c.wk.GetEditModel(),
             t = e.GetCategoryAsType(),
@@ -36684,7 +36685,7 @@
             } = this.props;
           return r.createElement(
             "div",
-            { className: B().PreviewBarContainer },
+            { className: k().PreviewBarContainer },
             r.createElement(
               d.rU,
               {
@@ -36692,41 +36693,41 @@
                   ? n.rQ.Migrate(l, e.GetAnnouncementGID())
                   : n.rQ.Edit(l, this.props.gid ? this.props.gid : "") +
                     (window.sessionStorage.getItem("editorCurrentTab") || ""),
-                className: S().EventBarBack,
+                className: b().EventBarBack,
               },
               28 == t
-                ? (0, D.Xx)("#EventEditor_TitleActionNews")
-                : (0, D.Xx)("#EventEditor_TitleAction")
+                ? (0, w.Xx)("#EventEditor_TitleActionNews")
+                : (0, w.Xx)("#EventEditor_TitleAction")
             ),
             r.createElement(
               "div",
-              { className: S().EventBarTitleCtn },
+              { className: b().EventBarTitleCtn },
               r.createElement(
                 "div",
-                { className: S().EventBarTitle },
-                (0, D.Xx)("#EventEditor_TitleState_Previewing")
+                { className: b().EventBarTitle },
+                (0, w.Xx)("#EventEditor_TitleState_Previewing")
               ),
-              r.createElement(A.TF, { editModel: e })
+              r.createElement(x.TF, { editModel: e })
             ),
             r.createElement(
               "div",
-              { className: S().EventOptions },
+              { className: b().EventOptions },
               null != i &&
                 r.createElement(
                   "span",
-                  { className: B().FallBackWarning },
-                  (0, D.Xx)(
+                  { className: k().FallBackWarning },
+                  (0, w.Xx)(
                     "#EventPreview_UsingFallBack",
-                    (0, D.Xx)("#Language_" + (0, m.j_)(i))
+                    (0, w.Xx)("#Language_" + (0, m.j_)(i))
                   ),
                   r.createElement(
                     "span",
                     {
                       className: "ttip",
-                      "data-tooltip-text": (0, D.Xx)(
+                      "data-tooltip-text": (0, w.Xx)(
                         "#EventPreview_UsingFallBack_ttip",
-                        (0, D.Xx)("#Language_" + (0, m.j_)(i)),
-                        (0, D.Xx)("#Language_" + (0, m.j_)(a))
+                        (0, w.Xx)("#Language_" + (0, m.j_)(i)),
+                        (0, w.Xx)("#Language_" + (0, m.j_)(a))
                       ),
                     },
                     " (?)"
@@ -36734,125 +36735,126 @@
                 ),
               e.BHasTag("contenthub") &&
                 r.createElement(
-                  T,
+                  I,
                   Object.assign(
                     { event: this.props.eventCopyForPreview },
                     this.props
                   )
                 ),
-              r.createElement(A.D7, null),
+              r.createElement(x.D7, null),
               s &&
                 r.createElement(
-                  g.JW,
+                  v.JW,
                   {
-                    className: S().EditPreviewButton,
-                    route: g.Ue.k_eCommunityPreview,
+                    className: b().EditPreviewButton,
+                    route: v.Ue.k_eCommunityPreview,
                     eventModel: e.GetEventModel(),
                   },
-                  (0, D.Xx)("#EventEditor_Preview")
+                  (0, w.Xx)("#EventEditor_Preview")
                 ),
               u &&
                 r.createElement(
-                  g.JW,
+                  v.JW,
                   {
-                    className: S().EditPreviewButton,
-                    route: g.Ue.k_eCommunityPreviewSale,
+                    className: b().EditPreviewButton,
+                    route: v.Ue.k_eCommunityPreviewSale,
                     eventModel: e.GetEventModel(),
                   },
-                  (0, D.Xx)("#EventEditor_PreviewSale")
+                  (0, w.Xx)("#EventEditor_PreviewSale")
                 ),
               r.createElement(
                 d.rU,
                 {
-                  className: S().EditPreviewButton,
+                  className: b().EditPreviewButton,
                   to: o
                     ? n.rQ.Migrate(l, e.GetAnnouncementGID())
                     : n.rQ.Edit(l, this.props.gid ? this.props.gid : "") +
                       (window.sessionStorage.getItem("editorCurrentTab") || ""),
                 },
                 28 == t
-                  ? (0, D.Xx)("#EventEditor_TitleActionNews")
-                  : (0, D.Xx)("#EventEditor_TitleAction")
+                  ? (0, w.Xx)("#EventEditor_TitleActionNews")
+                  : (0, w.Xx)("#EventEditor_TitleAction")
               )
             )
           );
         }
       }
-      function N(e) {
+      function L(e) {
         let t = e.editModel,
           a = t.ComputeEditingModelTimeOverrides();
-        const { appid_or_vanity_str: n } = e;
-        let i = t.GetEventModel();
-        const [l, s] = (0, r.useState)(i.GetContentHubType() || "games"),
-          [d, m] = (0, r.useState)(i.GetContentHubCategory() || "action"),
-          [g, h] = (0, r.useState)(i.GetContentHubTag() || 19),
-          [S, y] = o(i, l, d, g);
-        return S
-          ? r.createElement(f.V, { string: (0, D.Xx)("#Loading") })
-          : i.BHasSaleEnabled() && e.bDisplaySale
+        const n = (0, u.h)(),
+          { appid_or_vanity_str: i } = e;
+        let l = t.GetEventModel();
+        const [s, d] = (0, r.useState)(l.GetContentHubType() || "games"),
+          [m, v] = (0, r.useState)(l.GetContentHubCategory() || "action"),
+          [S, b] = (0, r.useState)(l.GetContentHubTag() || 19),
+          [C, G] = o(l, s, m, S);
+        return C
+          ? r.createElement(D.V, { string: (0, w.Xx)("#Loading") })
+          : l.BHasSaleEnabled() && e.bDisplaySale
           ? r.createElement(
-              _.SV,
+              p.SV,
               null,
               r.createElement(
                 "div",
-                { className: C().PreviewSalesPageContainer },
-                r.createElement(x, {
-                  appid_or_vanity_str: n,
+                { className: f().PreviewSalesPageContainer },
+                r.createElement(N, {
+                  appid_or_vanity_str: i,
                   gid: e.gid,
                   bShowPreviewEvent: !0,
-                  eventCopyForPreview: y,
-                  fnOnChangeHubType: (e) => s(e),
-                  fnOnChangeCategory: m,
-                  fnOnChangeTagID: h,
+                  eventCopyForPreview: G,
+                  fnOnChangeHubType: (e) => d(e),
+                  fnOnChangeCategory: v,
+                  fnOnChangeTagID: b,
                 }),
                 r.createElement(
                   "div",
                   { style: { position: "relative" } },
                   r.createElement(
                     "div",
-                    { className: B().StoreNavigationPlaceholder },
-                    (0, D.Xx)("#Sale_ReservedStoreNavigation")
+                    { className: k().StoreNavigationPlaceholder },
+                    (0, w.Xx)("#Sale_ReservedStoreNavigation")
                   ),
-                  r.createElement(b.oS, {
-                    eventModel: y,
+                  r.createElement(y.oS, {
+                    eventModel: G,
                     bIsPreview: !0,
-                    language: t.GetCurEditLanguage(),
+                    language: n,
                   })
                 )
               )
             )
           : r.createElement(
-              _.SV,
+              p.SV,
               null,
-              r.createElement(E.TY, {
-                event: i,
-                titleBar: r.createElement(x, {
-                  appid_or_vanity_str: n,
+              r.createElement(h.TY, {
+                event: l,
+                titleBar: r.createElement(N, {
+                  appid_or_vanity_str: i,
                   gid: e.gid,
-                  bShowPreviewSale: i.BHasSaleEnabled(),
+                  bShowPreviewSale: l.BHasSaleEnabled(),
                 }),
-                lang: t.GetCurEditLanguage(),
+                lang: n,
                 nOverrideStartTime: a.nOverrideStartTime,
                 nOverrideEndTime: a.nOverrideEndTime,
                 partnerEventStore: c.wk,
-                emoticonStore: u.F,
-                adminPanel: r.createElement(p.H, {
-                  eventModel: i,
+                emoticonStore: _.F,
+                adminPanel: r.createElement(g.H, {
+                  eventModel: l,
                   bPreviewMode: !0,
                   partnerEventStore: c.wk,
                   addtionalAdminButtons: [
-                    r.createElement(k.F, {
+                    r.createElement(A.F, {
                       key: t.GetUniqueKey(),
                       editModel: t,
                     }),
                   ],
                 }),
                 previewMode: !0,
-                otherEventRow: r.createElement(v._G, {
-                  clanAccountID: i.clanSteamID.GetAccountID(),
-                  gidAnnouncement: i.AnnouncementGID,
+                otherEventRow: r.createElement(E._G, {
+                  clanAccountID: l.clanSteamID.GetAccountID(),
+                  gidAnnouncement: l.AnnouncementGID,
                   partnerEventStore: c.wk,
-                  bViewAllShowInfiniteScroll: !i.BIsOGGEvent(),
+                  bViewAllShowInfiniteScroll: !l.BIsOGGEvent(),
                 }),
               })
             );
