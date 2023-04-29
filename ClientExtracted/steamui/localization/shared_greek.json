@@ -2438,6 +2438,7 @@
     "UserGameNotes_PinWindow": "Καρφίτσωμα παραθύρου στο παιχνίδι",
     "UserGameNotes_WindowOpacity": "Ρύθμιση αδιαφάνειας παραθύρου",
     "UserGameNotes_NotesListView": "Λίστα σημειώσεων",
+    "UserGameNotes_ClickToOpenLink": "Μεσαίο κλικ για άνοιγμα",
     "FormattingToolbar_Undo": "Αναίρεση",
     "FormattingToolbar_Redo": "Επανάληψη",
     "FormattingToolbar_HeadingLevelN": "Επικεφαλίδα %1$s",

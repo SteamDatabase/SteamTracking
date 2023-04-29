@@ -2438,6 +2438,7 @@
 	"UserGameNotes_PinWindow": "Przypnij okno do gry",
 	"UserGameNotes_WindowOpacity": "Ustaw przezroczystość okna",
 	"UserGameNotes_NotesListView": "Lista notatek",
+	"UserGameNotes_ClickToOpenLink": "Kliknij środkowym przyciskiem myszy, aby otworzyć",
 	"FormattingToolbar_Undo": "Cofnij",
 	"FormattingToolbar_Redo": "Edytuj",
 	"FormattingToolbar_HeadingLevelN": "Nagłówek nr %1$s",

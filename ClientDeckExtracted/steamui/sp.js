@@ -1429,8 +1429,8 @@
         H = a(94539),
         V = a(44301),
         j = a(64847),
-        K = a(87687),
-        Z = a(58238),
+        Z = a(87687),
+        K = a(58238),
         X = a(22784),
         q = a(3785),
         Q = a(7271),
@@ -1533,7 +1533,7 @@
                 "#GameList_SectionHeader_AppCountToolTipAllHidden"
               ))),
           o.createElement(
-            K.i5,
+            Z.i5,
             {
               strCollectionId: t,
               onContextMenu: (e) => {
@@ -1781,7 +1781,7 @@
                   filter: $.LibraryUIStore.collectionsAppFilter,
                 }))),
             o.createElement(
-              Z.$i,
+              K.$i,
               {
                 className: we().OuterContainer,
                 scrollClassName: we().ContainerScroll,
@@ -1790,7 +1790,7 @@
                 scrollToTopButtonWrapper: Be.o,
               },
               o.createElement(
-                K.i5,
+                Z.i5,
                 {
                   className: we().Container,
                   strCollectionId: e,
@@ -2098,7 +2098,7 @@
         He = a(89061),
         Ve = a(93759),
         je = a.n(Ve);
-      const Ke = (0, O.observer)(function (e) {
+      const Ze = (0, O.observer)(function (e) {
         const {
             item: t,
             isSelected: a,
@@ -2141,7 +2141,7 @@
           case 1:
           case 4:
           case 36:
-            p = o.createElement(Ze, {
+            p = o.createElement(Ke, {
               appName: p,
               status: (0, Oe.hx)(t.display_status, !0),
             });
@@ -2155,7 +2155,7 @@
           case 22:
           case 23:
           case 24:
-            (p = o.createElement(Ze, {
+            (p = o.createElement(Ke, {
               appName: p,
               status: (0, Oe.hx)(t.display_status, !0),
             })),
@@ -2167,14 +2167,14 @@
               const e = Fe.kx.DownloadOverview.update_network_bytes_per_second;
               let a = (t.status_percentage || 0) + "%";
               e && (a = a + " (" + (0, He.c)(e) + ")"),
-                (p = o.createElement(Ze, { appName: p, status: a })),
+                (p = o.createElement(Ke, { appName: p, status: a })),
                 (g = !0);
             }
             break;
           case 8:
             {
               let e = (t.status_percentage || 0) + "%";
-              (p = o.createElement(Ze, { appName: p, status: e })),
+              (p = o.createElement(Ke, { appName: p, status: e })),
                 (g = !0),
                 (_.save = !0),
                 (h = !0);
@@ -2182,7 +2182,7 @@
             break;
           case 34:
           case 35:
-            (p = o.createElement(Ze, {
+            (p = o.createElement(Ke, {
               appName: p,
               status: (0, Oe.hx)(t.display_status, !0),
             })),
@@ -2305,7 +2305,7 @@
             onKeyDown: (e) => 13 == e.keyCode && u(e),
           },
           o.createElement(
-            K.i5,
+            Z.i5,
             {
               strCollectionId: r,
               className: E,
@@ -2313,7 +2313,7 @@
               strTargetedClassName: je().DropTarget,
             },
             o.createElement(
-              K.Wp,
+              Z.Wp,
               {
                 className: y,
                 appid: t.appid,
@@ -2353,7 +2353,7 @@
           )
         );
       });
-      function Ze(e) {
+      function Ke(e) {
         const { appName: t, status: a } = e;
         return o.createElement(
           "div",
@@ -2724,7 +2724,7 @@
                     isSelected: this.EqualsCurrentCursor,
                     bInHover: e,
                   })
-                : o.createElement(Ke, {
+                : o.createElement(Ze, {
                     key: l,
                     index: t,
                     item: r.appOverview,
@@ -4437,8 +4437,8 @@
           )
         );
       }
-      var Kt = a(30845),
-        Zt = a(15126),
+      var Zt = a(30845),
+        Kt = a(15126),
         Xt = a(52894);
       var qt = a(14212),
         Qt = a.n(qt),
@@ -5247,7 +5247,7 @@
             (this.m_refScrollableCarousel = o.createRef()),
             (this.m_refDiv = o.createRef()),
             (this.m_bAnimateExpansion = !1),
-            (this.m_fnSort = (0, Kt.Z)((e, t) =>
+            (this.m_fnSort = (0, Zt.Z)((e, t) =>
               e.visibleApps.slice().sort(t)
             )),
             (this.state = { nItemsDisplayed: 0 });
@@ -5389,7 +5389,7 @@
                 (p -= 2));
               let a = this.m_fnSort(
                 t,
-                (0, Zt.f)(this.props.showcase.eSortBy)
+                (0, Kt.f)(this.props.showcase.eSortBy)
               ).filter($.LibraryUIStore.collectionsAppFilter.Matches);
               for (let n = 0; n <= a.length; n++) {
                 const r = a[n];
@@ -5488,7 +5488,7 @@
                       )
                   );
           return o.createElement(
-            K.i5,
+            Z.i5,
             {
               style: g,
               className: (0, A.default)(
@@ -6150,7 +6150,7 @@
           r = (0, Ia.KB)(),
           l = !!r;
         return o.createElement(
-          Z.$i,
+          K.$i,
           {
             className: Lt().Container,
             scrollClassName: Lt().InnerContainer,
@@ -6285,7 +6285,7 @@
                   timeout: 250,
                 },
                 o.createElement(
-                  K.o4,
+                  Z.o4,
                   {
                     className: Oa().Container,
                     strTargetId: "remove-game-hover",
@@ -6358,8 +6358,8 @@
           );
         }
       }
-      const Ka = "whatsnew_lastseen";
-      var Za = a(27661),
+      const Za = "whatsnew_lastseen";
+      var Ka = a(27661),
         Xa = a(33019),
         qa = a(27255);
       Xa.Message;
@@ -8226,7 +8226,7 @@
           const t = e.cxn,
             a = e.active,
             n = t.key,
-            r = (a ? Za.zO() / 1e3 : t.close_time) - t.start_time,
+            r = (a ? Ka.zO() / 1e3 : t.close_time) - t.start_time,
             l = a ? Cn(t.recv_pkts_rate) : yn(t.recv_pkts_total),
             i = a ? Cn(t.send_pkts_rate) : yn(t.send_pkts_total),
             s = a ? En(t.recv_kb_rate) : wn(t.recv_kb_total),
@@ -8439,7 +8439,7 @@
             null
           );
         };
-      let Kn = class extends o.Component {
+      let Zn = class extends o.Component {
         constructor(e) {
           super(e), (this.m_elGamesListContainerRef = o.createRef());
           const t = window.localStorage.getItem("GameListWidthPercentage");
@@ -8472,7 +8472,7 @@
                   return;
                 const t = yield SteamClient.UI.GetUIMode();
                 if (1 == t || 4 == t) return;
-                let a = yield e.GetObject(Ka);
+                let a = yield e.GetObject(Za);
                 const n = new Date(),
                   r = Va.filter(
                     ({ fnRender: e, incrementalID: t, dtExpiration: r }) =>
@@ -8492,7 +8492,7 @@
                     { strTitle: (0, se.Localize)("#WhatsNew_Title") }
                   ),
                     (a = r.reduce((e, t) => Math.max(e, t.incrementalID), a)),
-                    e.StoreObject(Ka, a);
+                    e.StoreObject(Za, a);
                 }
               });
             })((0, r.gV)().GetCloudStorageForLibrary()),
@@ -8690,16 +8690,16 @@
           );
         }
       };
-      (Kn.contextType = v.b2),
-        (0, n.gn)([C.bind], Kn.prototype, "OnRootLoad", null),
-        (0, n.gn)([C.bind], Kn.prototype, "OnGrabberMouseDown", null),
-        (0, n.gn)([C.bind], Kn.prototype, "OnGrabberTouchStart", null),
-        (0, n.gn)([C.bind], Kn.prototype, "HandleTouchMove", null),
-        (0, n.gn)([C.bind], Kn.prototype, "HandleMouseMove", null),
-        (0, n.gn)([C.bind], Kn.prototype, "SetGameListWidth", null),
-        (0, n.gn)([C.bind], Kn.prototype, "UnregisterGameListDragEvents", null),
-        (Kn = (0, n.gn)([O.observer], Kn));
-      const Zn = (0, M.EN)(Kn),
+      (Zn.contextType = v.b2),
+        (0, n.gn)([C.bind], Zn.prototype, "OnRootLoad", null),
+        (0, n.gn)([C.bind], Zn.prototype, "OnGrabberMouseDown", null),
+        (0, n.gn)([C.bind], Zn.prototype, "OnGrabberTouchStart", null),
+        (0, n.gn)([C.bind], Zn.prototype, "HandleTouchMove", null),
+        (0, n.gn)([C.bind], Zn.prototype, "HandleMouseMove", null),
+        (0, n.gn)([C.bind], Zn.prototype, "SetGameListWidth", null),
+        (0, n.gn)([C.bind], Zn.prototype, "UnregisterGameListDragEvents", null),
+        (Zn = (0, n.gn)([O.observer], Zn));
+      const Kn = (0, M.EN)(Zn),
         Xn = (0, O.observer)((e) =>
           o.createElement(
             On.r,
@@ -8958,7 +8958,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, se.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1682705075),
+          s = parseInt(1682722593),
           c = s && (0, cr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == _.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -9319,9 +9319,9 @@
         Hr = a(87964),
         Vr = a(66412),
         jr = a.n(Vr),
-        Kr = a(30946),
-        Zr = a(45665),
-        Xr = a.n(Zr),
+        Zr = a(30946),
+        Kr = a(45665),
+        Xr = a.n(Kr),
         qr = a(67715);
       const Qr = o.createContext({ width: void 0, height: void 0 });
       function $r(e, t, a, n) {
@@ -9491,7 +9491,7 @@
                   { className: Xr().WindowControls },
                   o.createElement("div", { className: Xr().FocusIndicator }),
                   o.createElement(
-                    Kr.TitleBar,
+                    Zr.TitleBar,
                     {
                       popup: x,
                       hideMinMax: !0,
@@ -11129,7 +11129,7 @@
           )
         );
       }
-      function Ko(e) {
+      function Zo(e) {
         const { dialog: t } = e,
           a = (0, E.SZ)(() => t.playerList);
         return 0 == a.length
@@ -11155,7 +11155,7 @@
               a.map((e, t) => o.createElement(jo, { key: t, playerDetails: e }))
             );
       }
-      function Zo(e) {
+      function Ko(e) {
         const { dialog: t } = e,
           a = (0, E.SZ)(() => t.gameServerItem),
           n = (0, E.SZ)(() => t.password),
@@ -11275,8 +11275,8 @@
               { label: (0, se.Localize)("#GameInfoDialog_Status") },
               n
             ),
-          o.createElement(Zo, { dialog: a }),
-          o.createElement(Ko, { dialog: a })
+          o.createElement(Ko, { dialog: a }),
+          o.createElement(Zo, { dialog: a })
         );
       }
       function qo(e) {
@@ -11677,7 +11677,7 @@
             o.createElement(
               "div",
               { className: il.FocusedContainer },
-              0 === m && o.createElement(Kl, null),
+              0 === m && o.createElement(Zl, null),
               1 === m &&
                 o.createElement(fl, { handle: c[0], onResetSelection: s }),
               m > 1 && o.createElement(Xl, { handles: c, onResetSelection: s })
@@ -12560,7 +12560,7 @@
           })
         );
       }
-      function Kl() {
+      function Zl() {
         const e = o.createElement("span", { className: il.KeyboardKey }, "F12"),
           t = (0, L.an)("CommunityScreenshots");
         return o.createElement(
@@ -12575,7 +12575,7 @@
               (0, se.Localize)("#ScreenshotUploader_Explainer_Header")
             ),
             o.createElement(
-              Zl,
+              Kl,
               null,
               (0, se.LocalizeReact)(
                 "#ScreenshotUploader_Explainer_HowToTake",
@@ -12583,12 +12583,12 @@
               )
             ),
             o.createElement(
-              Zl,
+              Kl,
               null,
               (0, se.Localize)("#ScreenshotUploader_Explainer_AccessAnywhere")
             ),
             o.createElement(
-              Zl,
+              Kl,
               null,
               (0, se.Localize)("#ScreenshotUploader_Explainer_Modifications")
             ),
@@ -12604,7 +12604,7 @@
           )
         );
       }
-      function Zl(e) {
+      function Kl(e) {
         return o.createElement(
           "div",
           { className: il.Bullet },
@@ -13720,8 +13720,8 @@
         );
       }
       var ji = a(25804),
-        Ki = a(5284);
-      function Zi(e) {
+        Zi = a(5284);
+      function Ki(e) {
         const {
             visible: t = !0,
             className: a,
@@ -13931,8 +13931,8 @@
                       cs,
                       {
                         title: (0, se.Localize)("#FormattingToolbar_Undo"),
-                        command: Ki.Yw,
-                        disabled: 0 == (0, Ki.of)(t.state),
+                        command: Zi.Yw,
+                        disabled: 0 == (0, Zi.of)(t.state),
                       },
                       o.createElement(xe.Undo, null)
                     )
@@ -13947,8 +13947,8 @@
                       cs,
                       {
                         title: (0, se.Localize)("#FormattingToolbar_Redo"),
-                        command: Ki.KX,
-                        disabled: 0 == (0, Ki.AH)(t.state),
+                        command: Zi.KX,
+                        disabled: 0 == (0, Zi.AH)(t.state),
                       },
                       o.createElement(xe.Redo, null)
                     )
@@ -14255,7 +14255,7 @@
         os = () => o.useContext(rs);
       function ls(e) {
         return o.createElement(
-          Zi,
+          Ki,
           { visible: e.visible },
           o.createElement(
             "div",
@@ -14404,8 +14404,8 @@
           )
         ),
         bs = (0, ms.h)({
-          "Mod-z": Ki.Yw,
-          "Mod-y": Ki.KX,
+          "Mod-z": Zi.Yw,
+          "Mod-y": Zi.KX,
           Backspace: Xi.dU,
           "Mod-Enter": hs,
           "Shift-Enter": hs,
@@ -14443,7 +14443,7 @@
                 return ds.yy.create({
                   schema: xi,
                   doc: e,
-                  plugins: [(0, Ki.m8)(), bs, (0, ms.h)(ji.YR), a, ys()],
+                  plugins: [(0, Zi.m8)(), bs, (0, ms.h)(ji.YR), a, ys()],
                 });
               })(e, (...e) => i.current && i.current(...e))
             );
@@ -14854,8 +14854,8 @@
           )
         );
       }
-      var Ks = a(3162),
-        Zs = a(31855);
+      var Zs = a(3162),
+        Ks = a(31855);
       function Xs() {
         const e = (0, C.useForceUpdate)();
         return (
@@ -14888,8 +14888,8 @@
         const { popup: t, refPopup: a } = e,
           n = (0, se.Localize)("#GameNotes_NoteForGame", t.display_name);
         return o.createElement(
-          Ks.PopupStyleContextRoot,
-          { body_class: Zs.GameNotesPopup },
+          Zs.PopupStyleContextRoot,
+          { body_class: Ks.GameNotesPopup },
           o.createElement(
             ne.DialogPopup,
             {
@@ -15259,32 +15259,46 @@
       }
       function dc(e) {
         const { rgUsers: t } = e,
-          a = (0, E.SZ)(() =>
-            t
-              .map((e) => {
-                const t = Q.i8.GetFriendState(e.accountid);
-                return Object.assign(Object.assign({}, e), {
-                  displayName: t.displayName,
-                  friendRelationship: t.friendRelationship,
-                });
-              })
-              .filter((e) => !!e.displayName)
-          );
-        oc(t, null == a ? void 0 : a.map((e) => e.displayName));
-        const n = a.length !== t.length;
-        return o.createElement(
-          tc.TelemetryTrackedComponent,
-          { name: "PlayerDialog" },
+          [a, n] = o.useState(!1);
+        o.useEffect(() => {
+          const e = window.setTimeout(() => n(!0), 1e4);
+          return () => {
+            window.clearTimeout(e);
+          };
+        }, []);
+        const r = (0, E.SZ)(() =>
+          t
+            .map((e) => {
+              const t = Q.i8.GetFriendState(e.accountid);
+              return Object.assign(Object.assign({}, e), {
+                displayName: t.displayName,
+                friendRelationship: t.friendRelationship,
+              });
+            })
+            .filter((e) => !!e.displayName)
+        );
+        oc(t, null == r ? void 0 : r.map((e) => e.displayName));
+        const l = !a && r.length !== t.length;
+        return (
+          l &&
+            oc(
+              "Waiting for",
+              t.filter((e) => !r.find((t) => t.accountid == e.accountid))
+            ),
           o.createElement(
-            "div",
-            {
-              className: (0, A.default)(
-                rc().PlayersListWrapper,
-                n && rc().Loading
-              ),
-            },
-            n && o.createElement(kt.Throbber, { position: "center" }),
-            !n && o.createElement(mc, { rgPlayers: a })
+            tc.TelemetryTrackedComponent,
+            { name: "PlayerDialog" },
+            o.createElement(
+              "div",
+              {
+                className: (0, A.default)(
+                  rc().PlayersListWrapper,
+                  l && rc().Loading
+                ),
+              },
+              l && o.createElement(kt.Throbber, { position: "center" }),
+              !l && o.createElement(mc, { rgPlayers: r })
+            )
           )
         );
       }
@@ -15936,8 +15950,8 @@
       }
       var Vc = a(48288),
         jc = a(35473),
-        Kc = a(22129),
-        Zc = a.n(Kc);
+        Zc = a(22129),
+        Kc = a.n(Zc);
       function Xc(e) {
         const { elCheckbox: t } = e,
           a = (0, n._T)(e, ["elCheckbox"]),
@@ -15952,7 +15966,7 @@
           [c, m, d] = (0, jc.M)(
             Object.assign(
               Object.assign(
-                { className: Zc().Dialog, bCloseOnOK: !1, bOKDisabled: r },
+                { className: Kc().Dialog, bCloseOnOK: !1, bOKDisabled: r },
                 a
               ),
               { children: r ? l : t }
@@ -15989,7 +16003,7 @@
         return e.mainApp
           ? o.createElement(
               "div",
-              { className: (0, A.default)(Zc().Prompt, Zc().Warning) },
+              { className: (0, A.default)(Kc().Prompt, Kc().Warning) },
               (0, se.Localize)(
                 "#Steam_AppMustBeClosedToQuit_Info",
                 e.mainApp.display_name
@@ -15997,7 +16011,7 @@
             )
           : o.createElement(
               "div",
-              { className: Zc().Prompt },
+              { className: Kc().Prompt },
               (0, se.Localize)("#ChangeUser_Prompt")
             );
       }
@@ -17071,7 +17085,7 @@
             )
           );
         },
-        Km = () => {
+        Zm = () => {
           const e = o.useRef(),
             [t, a] = o.useState(!1),
             n = o.useRef();
@@ -17132,7 +17146,7 @@
             )
           );
         },
-        Zm = () => {
+        Km = () => {
           const e = (0, Jo.u1)(),
             t = (0, Jo.WX)(),
             a = (0, Jo.g8)(),
@@ -17323,9 +17337,9 @@
           o.createElement(qm, null),
           o.createElement(Qm, null),
           o.createElement(Wm, null),
-          o.createElement(Km, null),
-          o.createElement(Um, null),
           o.createElement(Zm, null),
+          o.createElement(Um, null),
+          o.createElement(Km, null),
           o.createElement(Xm, null)
         );
       };
@@ -18285,14 +18299,14 @@
         }
         return e;
       }
-      function Kd(e) {
+      function Zd(e) {
         if (null == e ? void 0 : e.transform) {
           const t = `translate(0px, ${e.transform.split(",").pop()}`;
           return Object.assign(Object.assign({}, e), { transform: t });
         }
         return e;
       }
-      function Zd(e, t, a, n) {
+      function Kd(e, t, a, n) {
         let [r, l] = (0, Fd.Vd)(t, n, a);
         return (
           o.useEffect(() => {
@@ -18630,7 +18644,7 @@
                 },
                 e.draggableProps,
                 e.dragHandleProps,
-                { style: Kd(e.draggableProps.style) }
+                { style: Zd(e.draggableProps.style) }
               ),
               o.createElement(
                 ae.Field,
@@ -18999,7 +19013,7 @@
         const b = o.useCallback(() => {
             i(n.requestid);
           }, [i, n.requestid]),
-          v = Zd(_, a, b, n.requestid),
+          v = Kd(_, a, b, n.requestid),
           S = o.useCallback(
             (e, t) => {
               l(n.requestid, e, t);
@@ -19250,7 +19264,7 @@
         const [n, r] = o.useState(!0);
         let l = t.visibleApps.filter((e) => !n || e.installed);
         return o.createElement(
-          Z.$i,
+          K.$i,
           {
             className: yu().OuterContainer,
             scrollClassName: yu().ContainerScroll,
@@ -19307,23 +19321,23 @@
           "div",
           {
             className: (0, A.default)(
-              Zr.GameOverviewSection,
-              r && Zr.HasBackground
+              Kr.GameOverviewSection,
+              r && Kr.HasBackground
             ),
           },
           o.createElement(
             "div",
             {
               className: (0, A.default)(
-                Zr.GameOverviewSectionHeader,
-                n && Zr.Clickable
+                Kr.GameOverviewSectionHeader,
+                n && Kr.Clickable
               ),
               onClick: n,
             },
             o.createElement(
               "div",
-              { className: Zr.GameOverviewSectionTitle },
-              o.createElement(xe.Rows, { className: Zr.DragHandle }),
+              { className: Kr.GameOverviewSectionTitle },
+              o.createElement(xe.Rows, { className: Kr.DragHandle }),
               o.createElement("div", null, t)
             ),
             a
@@ -19333,15 +19347,15 @@
               "div",
               {
                 className: (0, A.default)(
-                  Zr.GameOverviewSectionChildren,
-                  r && Zr.ContainChildren
+                  Kr.GameOverviewSectionChildren,
+                  r && Kr.ContainChildren
                 ),
               },
               l
             )
         );
       }
-      function Ku(e) {
+      function Zu(e) {
         const { title: t, friends: a } = e,
           n = (0, R.p)().DesktopOverlay,
           r = o.useCallback(() => {
@@ -19359,14 +19373,14 @@
               },
               o.createElement(
                 "div",
-                { className: Zr.FriendsWhoPlayed },
+                { className: Kr.FriendsWhoPlayed },
                 a.map((e) => {
                   let t = e.friend.persona,
                     a = e.friend,
                     n = e.friend.persona.m_steamid;
                   return o.createElement(Ge.S5, {
                     key: t.m_steamid.GetAccountID(),
-                    className: Zr.Friend,
+                    className: Kr.Friend,
                     friend: a,
                     size: "Small",
                     statusPosition: "right",
@@ -19382,14 +19396,14 @@
               )
             );
       }
-      function Zu(e) {
+      function Ku(e) {
         const { appid: t } = e,
           a = (0, Mu.TX)(t);
         return o.createElement(
           o.Fragment,
           null,
           a &&
-            o.createElement(Ku, {
+            o.createElement(Zu, {
               title: (0, se.Localize)("#AppOverlay_GameOverview_FriendsInGame"),
               friends: a,
             })
@@ -19402,7 +19416,7 @@
           o.Fragment,
           null,
           a &&
-            o.createElement(Ku, {
+            o.createElement(Zu, {
               title: (0, se.Localize)(
                 "#AppOverlay_GameOverview_FriendsRecentlyPlayed"
               ),
@@ -19431,14 +19445,14 @@
                   "div",
                   {
                     key: e.publishedfileid,
-                    className: Zr.GuideListItem,
+                    className: Kr.GuideListItem,
                     onClick: (e) => {
                       (0, le.GetOwningWindowForEvent)(e).location.href = t;
                     },
                   },
                   o.createElement(
                     "div",
-                    { className: Zr.GuideTitle },
+                    { className: Kr.GuideTitle },
                     s.nm.TextFilterStore.FilterText(e.creator, e.title)
                   ),
                   o.createElement(Fu.x$, { details: e })
@@ -19486,7 +19500,7 @@
           }, [a]);
         return o.createElement(
           "div",
-          { className: Zr.Screenshot, onClick: n },
+          { className: Kr.Screenshot, onClick: n },
           o.createElement("img", {
             src: ((r = t.strUrl), r.startsWith("https://") ? r : Ju + r),
           })
@@ -19520,7 +19534,7 @@
               },
               o.createElement(
                 "div",
-                { className: Zr.ScreenshotsList },
+                { className: Kr.ScreenshotsList },
                 d.map((e) =>
                   o.createElement(Yu, {
                     key: e.data.hHandle,
@@ -19542,31 +19556,31 @@
           );
         return o.createElement(
           "div",
-          { className: Zr.RecentAchievement, onClick: r },
+          { className: Kr.RecentAchievement, onClick: r },
           o.createElement(
             "div",
-            { className: Zr.UnlockTime },
+            { className: Kr.UnlockTime },
             (0, se.LocalizeRtime32ToShorterDate)(t.rtUnlocked)
           ),
           o.createElement(
             "div",
-            { className: Zr.AchievementDetails },
+            { className: Kr.AchievementDetails },
             o.createElement(Wu.w, { glow: a, imgURL: t.strImage }),
             o.createElement(
               "div",
-              { className: Zr.AchievementContent },
+              { className: Kr.AchievementContent },
               o.createElement(
                 "div",
-                { className: Zr.AchievementTitle },
+                { className: Kr.AchievementTitle },
                 t.strName
               ),
               o.createElement(
                 "div",
-                { className: Zr.AchievementDescription },
+                { className: Kr.AchievementDescription },
                 t.strDescription
               ),
               o.createElement(zu.hE, {
-                className: Zr.AchievementGlobalPercentage,
+                className: Kr.AchievementGlobalPercentage,
                 percentage: t.flAchieved,
               })
             )
@@ -19602,7 +19616,7 @@
           },
           o.createElement(
             "div",
-            { className: Zr.AchievementsList },
+            { className: Kr.AchievementsList },
             m.map((e) => o.createElement(tp, { key: e.strID, achievement: e }))
           )
         );
@@ -19625,7 +19639,7 @@
           },
           o.createElement(
             "div",
-            { className: Zr.Playtime },
+            { className: Kr.Playtime },
             o.createElement("div", null, r),
             o.createElement("div", null, l)
           )
@@ -19647,15 +19661,15 @@
           );
         return o.createElement(
           "div",
-          { className: Zr.RecentNewsItem, onClick: n },
+          { className: Kr.RecentNewsItem, onClick: n },
           o.createElement(
             "div",
-            { className: Zr.EventDetailTitle },
+            { className: Kr.EventDetailTitle },
             t.GetNameWithFallback(a)
           ),
           o.createElement(
             "div",
-            { className: Zr.PostedTime },
+            { className: Kr.PostedTime },
             (0, se.LocalizeRtime32ToShorterDate)(
               t.GetPostTimeAndDateUnixSeconds()
             )
@@ -19735,15 +19749,15 @@
           {
             title: (0, se.Localize)("#AppOverlay_GameOverview_Players"),
             bContainChildren: !0,
-            icon: o.createElement(oe.MultiPlayer, null),
+            icon: o.createElement(oe.PlayerList, null),
             onClick: r,
           },
           o.createElement(
             "div",
-            { className: Zr.PlayersSection },
+            { className: Kr.PlayersSection },
             o.createElement(
               "div",
-              { className: Zr.Players },
+              { className: Kr.Players },
               null == n
                 ? void 0
                 : n.currentUsers.map((e) => {
@@ -19760,7 +19774,7 @@
                         };
                       return o.createElement(Ge.S5, {
                         key: e.m_steamid.GetAccountID(),
-                        className: Zr.Player,
+                        className: Kr.Player,
                         friend: t,
                         size: "Small",
                         statusPosition: "right",
@@ -19772,7 +19786,7 @@
             ),
             o.createElement(
               ae.Button,
-              { className: Zr.ViewPlayersBtn, onClick: r },
+              { className: Kr.ViewPlayersBtn, onClick: r },
               (0, se.Localize)("#AppOverlay_GameOverview_Players_View")
             )
           )
@@ -19825,7 +19839,7 @@
                 },
                 o.createElement(
                   "div",
-                  { className: Zr.OverviewTitle },
+                  { className: Kr.OverviewTitle },
                   (0, se.Localize)("#AppOverlay_GameOverview_Title")
                 ),
                 (null === (t = null == c ? void 0 : c.document) || void 0 === t
@@ -19850,8 +19864,8 @@
                           Object.assign(
                             {
                               className: (0, A.default)(
-                                Zr.GameOverview,
-                                t.isDraggingOver && Zr.IsDraggingOver
+                                Kr.GameOverview,
+                                t.isDraggingOver && Kr.IsDraggingOver
                               ),
                             },
                             e.droppableProps,
@@ -19864,7 +19878,7 @@
                                 a = o.createElement(np, null);
                                 break;
                               case ac.Me.FriendsInGame:
-                                a = o.createElement(Zu, { appid: n });
+                                a = o.createElement(Ku, { appid: n });
                                 break;
                               case ac.Me.FriendsRecentlyPlayed:
                                 a = o.createElement(Xu, { appid: n });
@@ -19896,7 +19910,7 @@
                                   Object.assign(
                                     {
                                       className: (0, A.default)(
-                                        t.isDragging && Zr.IsDragging
+                                        t.isDragging && Kr.IsDragging
                                       ),
                                       ref: e.innerRef,
                                     },
@@ -20030,7 +20044,7 @@
           o.createElement(
             B.FocusNavigationRoot,
             {
-              className: (0, A.default)(Zr.Wrapper, i && Zr.PreviewPinnedView),
+              className: (0, A.default)(Kr.Wrapper, i && Kr.PreviewPinnedView),
               NavigationManager: s.nm.NavigationManager,
               navID: c,
             },
@@ -20148,10 +20162,10 @@
           a = (0, E.SZ)(() => te.AppStore.GetAppOverviewByAppID(t));
         return o.createElement(
           "div",
-          { className: Zr.TopSection },
+          { className: Kr.TopSection },
           o.createElement(Sp, { app: a }),
           o.createElement(Y.A, {
-            className: Zr.CurrentGameLogoContainer,
+            className: Kr.CurrentGameLogoContainer,
             eAssetType: 2,
             app: a,
             backgroundType: "transparent",
@@ -20161,36 +20175,37 @@
       }
       function vp(e) {
         const { appid: t } = e,
-          a = (0, E.SZ)(() => te.AppStore.GetAppOverviewByAppID(t)),
-          n = o.useCallback(() => {
+          [a] = (0, ze.HQ)("overlay_key"),
+          n = (0, E.SZ)(() => te.AppStore.GetAppOverviewByAppID(t)),
+          r = o.useCallback(() => {
             SteamClient.Overlay.SetOverlayState(
-              a.gameid,
+              n.gameid,
               c.EUIComposition.Hidden
             );
-          }, [a]);
+          }, [n]);
         return o.createElement(
           Ne.Panel,
-          { className: Zr.BackToGame },
+          { className: Kr.BackToGame },
           o.createElement(
             "div",
-            { className: Zr.TextContainer },
+            { className: Kr.TextContainer },
             o.createElement(
               "div",
-              { className: Zr.GameName },
+              { className: Kr.GameName },
               (0, se.Localize)(
                 "#AppOverlay_BackToGame",
-                null == a ? void 0 : a.display_name
+                null == n ? void 0 : n.display_name
               )
             ),
             o.createElement(
               "div",
-              { className: Zr.KBShortcut },
-              (0, se.Localize)("#AppOverlay_BackToGame_KB")
+              { className: Kr.KBShortcut },
+              "(" + (null == a ? void 0 : a.display_name) + ")"
             )
           ),
           o.createElement(ae.Button, {
-            className: Zr.BackToGameBtn,
-            onClick: n,
+            className: Kr.BackToGameBtn,
+            onClick: r,
             svgicon: () => o.createElement(xe.Close, null),
           })
         );
@@ -20224,15 +20239,15 @@
         }, [l]);
         return o.createElement(
           "div",
-          { className: Zr.TimeStats },
-          o.createElement("div", { className: Zr.CurrentTime }, a),
-          o.createElement("div", { className: Zr.CurrentDate }, n),
-          o.createElement("div", { className: Zr.PlaytimeCurrentSession }, i),
+          { className: Kr.TimeStats },
+          o.createElement("div", { className: Kr.CurrentTime }, a),
+          o.createElement("div", { className: Kr.CurrentDate }, n),
+          o.createElement("div", { className: Kr.PlaytimeCurrentSession }, i),
           o.createElement(Ep, null),
           o.createElement(
             ae.Button,
             {
-              className: Zr.ExitGameBtn,
+              className: Kr.ExitGameBtn,
               onClick: (e) => {
                 const a = (0, Ae.tt)(
                   "Stop",
@@ -20261,7 +20276,7 @@
               bHighGranularity: !1,
             })
           );
-        return o.createElement("div", { className: Zr.TimeTrialRemaining }, r);
+        return o.createElement("div", { className: Kr.TimeTrialRemaining }, r);
       }
       function Cp(e) {
         const t = mp();
@@ -20392,15 +20407,15 @@
         return r
           ? o.createElement(
               "div",
-              { className: Zr.ToolbarButtonAndLabel },
+              { className: Kr.ToolbarButtonAndLabel },
               o.createElement(
                 ae.Button,
                 {
-                  className: (0, A.default)(Zr.ToolbarButton),
+                  className: (0, A.default)(Kr.ToolbarButton),
                   svgicon: () => i,
                   onClick: n,
                 },
-                o.createElement("span", { className: Zr.ToolbarToolTip }, l)
+                o.createElement("span", { className: Kr.ToolbarToolTip }, l)
               )
             )
           : o.createElement(
@@ -20408,7 +20423,7 @@
               {
                 toolTipContent: o.createElement(
                   "div",
-                  { className: Zr.ToolbarToolTip },
+                  { className: Kr.ToolbarToolTip },
                   " ",
                   l,
                   " "
@@ -20419,7 +20434,7 @@
                 nDelayShowMS: 25,
               },
               o.createElement(ae.Button, {
-                className: (0, A.default)(Zr.ToolbarButton),
+                className: (0, A.default)(Kr.ToolbarButton),
                 svgicon: () => i,
                 onClick: n,
               })
@@ -20442,14 +20457,14 @@
           : m
           ? o.createElement(
               "div",
-              { className: Zr.ToolbarButtonAndLabel },
+              { className: Kr.ToolbarButtonAndLabel },
               o.createElement(
                 ae.Button,
                 {
                   className: (0, A.default)(
-                    Zr.ToolbarButton,
+                    Kr.ToolbarButton,
                     i,
-                    a && Zr.Toggled
+                    a && Kr.Toggled
                   ),
                   svgicon: s.svgicon,
                   onClick: n,
@@ -20458,7 +20473,7 @@
                 },
                 o.createElement(
                   "span",
-                  { className: Zr.ToolbarToolTip },
+                  { className: Kr.ToolbarToolTip },
                   (0, se.Localize)(s.tooltipToken)
                 )
               )
@@ -20468,7 +20483,7 @@
               {
                 toolTipContent: o.createElement(
                   "div",
-                  { className: Zr.ToolbarToolTip },
+                  { className: Kr.ToolbarToolTip },
                   (0, se.Localize)(s.tooltipToken)
                 ),
                 direction: "bottom",
@@ -20477,7 +20492,7 @@
                 nDelayShowMS: 25,
               },
               o.createElement(ae.Button, {
-                className: (0, A.default)(Zr.ToolbarButton, i, a && Zr.Toggled),
+                className: (0, A.default)(Kr.ToolbarButton, i, a && Kr.Toggled),
                 svgicon: s.svgicon,
                 onClick: n,
                 disabled: l || c,
@@ -20498,10 +20513,10 @@
             o.createElement(Hp, { appid: t }),
             o.createElement(Up, { appid: t }),
             o.createElement(Op, { overview: a }),
-            o.createElement(Zp, { appid: t }),
+            o.createElement(Kp, { appid: t }),
             o.createElement(jp, { appid: t }),
             o.createElement(zp, { appid: t }),
-            o.createElement(Kp, { appid: t }),
+            o.createElement(Zp, { appid: t }),
             o.createElement(Pp, { appid: t }),
             o.createElement(xp, { appid: t }),
             o.createElement(Ap, { appid: t }),
@@ -20538,7 +20553,7 @@
             [_] = (0, ze.HQ)("web_browser_home"),
             h = (function () {
               const [e] = (0, ze.HQ)("overlay_toolbar_list_view");
-              return e ? Zr.LocationLeft : Zr.LocationBottom;
+              return e ? Kr.LocationLeft : Kr.LocationBottom;
             })(),
             b = (0, R.p)(),
             v = o.useCallback(() => {
@@ -20546,26 +20561,26 @@
             }, [l, _]);
           return o.createElement(
             "div",
-            { className: Zr.ToolbarMaxWidthContainer },
+            { className: Kr.ToolbarMaxWidthContainer },
             o.createElement(
               "div",
-              { className: (0, A.default)(Zr.ToolbarContainer, h) },
+              { className: (0, A.default)(Kr.ToolbarContainer, h) },
               o.createElement(
                 "div",
-                { className: Zr.Toolbar },
+                { className: Kr.Toolbar },
                 o.createElement(yp, {
                   windowType: ac._v.GameOverview,
                   disabled: i.BIsShortcut(),
                 }),
                 o.createElement(yp, {
                   windowType: ac._v.Achievements,
-                  className: Zr.AchievementsToggleButton,
+                  className: Kr.AchievementsToggleButton,
                   disabled: !d,
                 }),
                 o.createElement(yp, { windowType: ac._v.Notes }),
                 o.createElement(yp, {
                   windowType: ac._v.Guides,
-                  className: Zr.GuidesToggleButton,
+                  className: Kr.GuidesToggleButton,
                   disabled: i.BIsShortcut(),
                 }),
                 o.createElement(yp, {
@@ -20579,11 +20594,11 @@
                   !i.BIsShortcut() &&
                   o.createElement(yp, {
                     windowType: ac._v.Workshop,
-                    className: Zr.WorkshopToggleButton,
+                    className: Kr.WorkshopToggleButton,
                   }),
                 o.createElement(yp, {
                   windowType: ac._v.Screenshots,
-                  className: Zr.ScreenshotToggleButton,
+                  className: Kr.ScreenshotToggleButton,
                 }),
                 o.createElement(yp, {
                   windowType: ac._v.FriendsList,
@@ -20595,7 +20610,7 @@
                 }),
                 o.createElement(yp, {
                   windowType: ac._v.SoundtrackPlayer,
-                  className: Zr.SoundtrackToggleButton,
+                  className: Kr.SoundtrackToggleButton,
                 }),
                 b.BrowserWindow.innerWidth > 1280
                   ? o.createElement(yp, {
@@ -20605,7 +20620,7 @@
                   : o.createElement(Bp, { appid: t, bHasControllers: g }),
                 o.createElement(yp, {
                   windowType: ac._v.Settings,
-                  className: Zr.SettingsToggleButton,
+                  className: Kr.SettingsToggleButton,
                 }),
                 o.createElement(fp, null)
               )
@@ -20848,7 +20863,7 @@
                 strName: "Settings",
                 className: (0, A.default)(
                   Du.SettingsModalRoot,
-                  Zr.NoTitlebarSpacer
+                  Kr.NoTitlebarSpacer
                 ),
                 bFitToContent: !0,
                 updateParamsBeforeShow: s,
@@ -20893,15 +20908,15 @@
               },
               o.createElement(
                 "div",
-                { className: Zr.OverlayBroadcast },
+                { className: Kr.OverlayBroadcast },
                 o.createElement(
                   "div",
-                  { className: Zr.Title },
+                  { className: Kr.Title },
                   (0, se.Localize)("#BroadcastControl_Title")
                 ),
                 o.createElement(
                   "div",
-                  { className: Zr.ViewerCount },
+                  { className: Kr.ViewerCount },
                   (0, se.LocalizePlural)(
                     "#BroadcastControl_Viewers",
                     (null == c ? void 0 : c.nViewers) || 0
@@ -20909,7 +20924,7 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Zr.Buttons },
+                  { className: Kr.Buttons },
                   o.createElement(
                     ae.Button,
                     { onClick: () => s() },
@@ -20969,7 +20984,7 @@
               },
               o.createElement(
                 "div",
-                { className: Zr.OverlayBroadcastChat },
+                { className: Kr.OverlayBroadcastChat },
                 o.createElement(Pu.BroadcastChat, {
                   steamID: s.strSteamID,
                   broadcastID: c.broadcastid,
@@ -21181,7 +21196,7 @@
                 Object.assign(
                   {
                     refPopup: l,
-                    className: Zr.NoTitlebarSpacer,
+                    className: Kr.NoTitlebarSpacer,
                     strName: "GameNotes",
                     updateParamsBeforeShow: i,
                     onClose: c,
@@ -21299,16 +21314,16 @@
             ? i.createPortal(
                 o.createElement(
                   "div",
-                  { className: Zr.OverlayPopup },
+                  { className: Kr.OverlayPopup },
                   o.createElement(
                     "div",
-                    { className: Zr.WindowControls },
-                    o.createElement(Kr.TitleBar, { popup: d, hideMinMax: !0 })
+                    { className: Kr.WindowControls },
+                    o.createElement(Zr.TitleBar, { popup: d, hideMinMax: !0 })
                   ),
                   o.createElement(
                     Ne.Panel,
                     {
-                      className: Zr.ControllerConfiguratorWrapper,
+                      className: Kr.ControllerConfiguratorWrapper,
                       onFocus: () =>
                         SteamClient.Input.ForceConfiguratorFocus(!0),
                       onBlur: () =>
@@ -21429,7 +21444,7 @@
           bPinnable: !0,
         });
       }
-      function Kp(e) {
+      function Zp(e) {
         const { appid: t } = e,
           a = qe.de.ResolveURL("SteamWorkshopPage", t);
         return o.createElement(Ip, {
@@ -21438,7 +21453,7 @@
           strURL: a,
         });
       }
-      function Zp(e) {
+      function Kp(e) {
         const { appid: t } = e,
           a = qe.de.ResolveURL("StoreDlcPage", t);
         return o.createElement(Ip, {
@@ -21466,7 +21481,7 @@
           _ = `OverlayPopupURL${t}_${a}`,
           h = (u ? window.localStorage.getItem(_) : null) || n,
           [b, v] = (0, ar.f)(i, a, h, "Valve Steam GameOverlay"),
-          S = Zd(b, t, r),
+          S = Kd(b, t, r),
           w = Gd(),
           y = (0, E.SZ)(() => (null == S ? void 0 : S.Title));
         Ud(b),
@@ -21514,7 +21529,7 @@
                 o.Fragment,
                 null,
                 o.createElement(Qd, {
-                  className: g ? Zr.PinnedViewURLBar : void 0,
+                  className: g ? Kr.PinnedViewURLBar : void 0,
                   popup: i,
                   manager: S,
                   bookmarks: !m && w,
@@ -21524,7 +21539,7 @@
                 o.createElement(tr.z4, {
                   browser: b,
                   visible: v,
-                  className: Zr.BrowserViewHost,
+                  className: Kr.BrowserViewHost,
                 })
               ),
             !S && o.createElement($d, null)
@@ -21911,7 +21926,7 @@
               o.createElement(
                 "div",
                 { className: Yp().WindowControls },
-                o.createElement(Kr.TitleBar, { popup: t.BrowserWindow })
+                o.createElement(Zr.TitleBar, { popup: t.BrowserWindow })
               )
             ),
             e.bShowSuperNav &&
@@ -21973,7 +21988,7 @@
                     o.createElement(
                       M.AW,
                       { path: L.Z5.Library.Root() },
-                      o.createElement(Zn, { cm: e.cm, bInGamepadUI: l })
+                      o.createElement(Kn, { cm: e.cm, bInGamepadUI: l })
                     )
                   )
                 ),
@@ -22603,7 +22618,7 @@
                     _.ConfigContextRoot,
                     { IN_DESKTOPUI: !0, IN_GAMEPADUI: !1, IN_VR: !1 },
                     o.createElement(
-                      Ks.PopupStyleContextRoot,
+                      Zs.PopupStyleContextRoot,
                       { body_class: _g },
                       o.createElement(
                         L.R,
@@ -22672,7 +22687,7 @@
                 _.ConfigContextRoot,
                 { IN_DESKTOPUI: !0, IN_GAMEPADUI: !1, IN_VR: !1 },
                 o.createElement(
-                  Ks.PopupStyleContextRoot,
+                  Zs.PopupStyleContextRoot,
                   { body_class: _g },
                   o.createElement(
                     m.BrowserContextRoot,
@@ -22952,7 +22967,7 @@
                   _.ConfigContextRoot,
                   { IN_DESKTOPUI: !0, IN_GAMEPADUI: !1, IN_VR: !1 },
                   o.createElement(
-                    Ks.PopupStyleContextRoot,
+                    Zs.PopupStyleContextRoot,
                     { body_class: _g },
                     o.createElement(
                       R.S.Provider,

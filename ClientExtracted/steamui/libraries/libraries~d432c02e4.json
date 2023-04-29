@@ -229,7 +229,7 @@
     "ConnectionTrouble_ReconnectNow": "立即重新連線",
     "ConnectionTrouble_LoginLost": "您已登出 Steam。",
     "ConnectionTrouble_LoginAgain": "登入",
-    "ConnectionTrouble_LoginChanged": "您以不同的 Steam 帳戶登入了 Steam 社群。請點擊下方按紐切換至新帳戶。",
+    "ConnectionTrouble_LoginChanged": "您以不同的 Steam 帳戶登入了 Steam 社群。請點擊下方按鈕切換至新帳戶。",
     "ConnectionTrouble_LoginChanged_Reload": "變更帳戶",
     "ConnectionTrouble_LoggedOnElsewhere": "您的帳戶從過多的位置登入了 Steam。",
     "ConnectionTrouble_CurrentlyDisconnected": "已斷線",

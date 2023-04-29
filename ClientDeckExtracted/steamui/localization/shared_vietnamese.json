@@ -2438,6 +2438,7 @@
     "UserGameNotes_PinWindow": "Ghim cửa sổ vào trò chơi",
     "UserGameNotes_WindowOpacity": "Đặt độ mờ cửa sổ",
     "UserGameNotes_NotesListView": "Danh sách ghi chú",
+    "UserGameNotes_ClickToOpenLink": "Nhấp chuột giữa để mở",
     "FormattingToolbar_Undo": "Hoàn tác",
     "FormattingToolbar_Redo": "Làm lại",
     "FormattingToolbar_HeadingLevelN": "Tiêu đề %1$s",

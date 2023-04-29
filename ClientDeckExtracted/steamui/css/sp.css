@@ -4850,6 +4850,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .steamdesktopoverlay_GameOverviewSectionHeader_2wBK7
   > svg {
   height: 18px;
+  width: 18px;
+  margin-right: 3px;
   margin-top: 2px;
   color: #b8bcbf;
 }

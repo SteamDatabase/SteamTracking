@@ -2438,6 +2438,7 @@
     "UserGameNotes_PinWindow": "Fijar ventana al juego",
     "UserGameNotes_WindowOpacity": "Establecer la opacidad de la ventana",
     "UserGameNotes_NotesListView": "Lista de notas",
+    "UserGameNotes_ClickToOpenLink": "Clic en el botón central para abrir",
     "FormattingToolbar_Undo": "Deshacer",
     "FormattingToolbar_Redo": "Rehacer",
     "FormattingToolbar_HeadingLevelN": "Encabezado %1$s",

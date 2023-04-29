@@ -2438,6 +2438,7 @@
     "UserGameNotes_PinWindow": "Fäst fönstret i spelet",
     "UserGameNotes_WindowOpacity": "Ställ in fönstrets opacitet",
     "UserGameNotes_NotesListView": "Anteckningslista",
+    "UserGameNotes_ClickToOpenLink": "Klicka mittersta musknappen för att öppna",
     "FormattingToolbar_Undo": "Ångra",
     "FormattingToolbar_Redo": "Gör om",
     "FormattingToolbar_HeadingLevelN": "Rubrik %1$s",

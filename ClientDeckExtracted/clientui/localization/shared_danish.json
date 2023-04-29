@@ -2438,6 +2438,7 @@
 	"UserGameNotes_PinWindow": "Fastgør vindue til spil",
 	"UserGameNotes_WindowOpacity": "Angiv vinduesgennemsigtighed",
 	"UserGameNotes_NotesListView": "Noteliste",
+	"UserGameNotes_ClickToOpenLink": "Midterklik for at åbne",
 	"FormattingToolbar_Undo": "Fortryd",
 	"FormattingToolbar_Redo": "Annuller Fortryd",
 	"FormattingToolbar_HeadingLevelN": "Overskrift %1$s",

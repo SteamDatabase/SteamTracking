@@ -7359,6 +7359,7 @@
     "PlayersDialog_Game": "Gioco",
     "PlayersDialog_LastPlayed": "Ultimo avvio",
     "PlayersDialog_AddFriend": "Aggiungi amico",
+    "PlayersDialog_Status_Friends": "Amici",
     "PlayersDialog_Empty": "Di recente non hai giocato a nessun gioco multigiocatore che supporti questa funzione.",
     "PlayersDialog_Description": "Questi sono gli utenti Steam con cui hai giocato di recente in giochi multiplayer che supportano questa funzione.",
     "GameInfoDialog_GameInfo": "Informazioni sulla partita - %1$s",

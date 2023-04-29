@@ -2438,6 +2438,7 @@
 	"UserGameNotes_PinWindow": "ปักหมุดหน้าต่างไว้บนเกม",
 	"UserGameNotes_WindowOpacity": "ตั้งค่าความทึบแสงของหน้าต่าง",
 	"UserGameNotes_NotesListView": "รายการโน้ต",
+	"UserGameNotes_ClickToOpenLink": "คลิกกลางเพื่อเปิด",
 	"FormattingToolbar_Undo": "ยกเลิก",
 	"FormattingToolbar_Redo": "ทำซ้ำ",
 	"FormattingToolbar_HeadingLevelN": "หัวเรื่อง %1$s",

@@ -2438,6 +2438,7 @@
     "UserGameNotes_PinWindow": "Pencereyi oyunda sabitle",
     "UserGameNotes_WindowOpacity": "Pencere şeffaflığını ayarla",
     "UserGameNotes_NotesListView": "Notlar listesi",
+    "UserGameNotes_ClickToOpenLink": "Açmak için orta düğmeye tıkla",
     "FormattingToolbar_Undo": "Geri Al",
     "FormattingToolbar_Redo": "Yinele",
     "FormattingToolbar_HeadingLevelN": "Başlık %1$s",

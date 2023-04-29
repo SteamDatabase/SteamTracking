@@ -2438,6 +2438,7 @@
     "UserGameNotes_PinWindow": "Épingler la fenêtre au jeu",
     "UserGameNotes_WindowOpacity": "Ajuster l'opacité de la fenêtre",
     "UserGameNotes_NotesListView": "Liste de notes",
+    "UserGameNotes_ClickToOpenLink": "Faites un clic milieu pour ouvrir",
     "FormattingToolbar_Undo": "Annuler",
     "FormattingToolbar_Redo": "Rétablir",
     "FormattingToolbar_HeadingLevelN": "Entête %1$s",
