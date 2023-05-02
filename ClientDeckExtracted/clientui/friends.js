@@ -24659,6 +24659,7 @@ and limitations under the License.
       IN_LOGIN: !1,
       IN_LOGIN_REFRESH: !1,
       USE_LONGEST_LOC_STRING: !1,
+      SILENT_STARTUP: !1,
     };
     Wr.FOO = !1;
     qt().createContext({});
@@ -27502,4 +27503,4 @@ and limitations under the License.
       document.addEventListener("DOMContentLoaded", () => ci());
   })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=c05b0590c298a92263ca
+//# sourceMappingURL=friends.js.map?contenthash=4990256c750a780b91fd

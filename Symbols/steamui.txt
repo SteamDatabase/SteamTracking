@@ -1428,6 +1428,7 @@
  flock
  floor
  floorf
+ fmod
  fmodf
  fnmatch
  fopen

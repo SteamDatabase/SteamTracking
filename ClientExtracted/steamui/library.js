@@ -1,4 +1,4 @@
-var CLSTAMP = "8023697";
+var CLSTAMP = "8027008";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -452,11 +452,11 @@ var CLSTAMP = "8023697";
         }
         r.r(t),
           r.d(t, {
-            BIsChinaLauncher: () => F,
+            BIsChinaLauncher: () => V,
             BIsControllerConfigGameID: () => b,
             BIsEFriendRelationshipBlocked: () => i,
             BIsEFriendRelationshipFriend: () => n,
-            BIsReducedUILauncher: () => V,
+            BIsReducedUILauncher: () => F,
             EActivateGameOverlayToWebPageMode: () => G,
             EAppReleaseState: () => X,
             EAppUpdateContentType: () => N,
@@ -752,7 +752,7 @@ var CLSTAMP = "8023697";
               return "gameserver";
           }
         }
-        function F(e) {
+        function V(e) {
           switch (e) {
             default:
               break;
@@ -764,7 +764,7 @@ var CLSTAMP = "8023697";
           }
           return !1;
         }
-        function V(e) {
+        function F(e) {
           switch (e) {
             default:
               break;
@@ -1146,7 +1146,7 @@ var CLSTAMP = "8023697";
             EBroadcastViewRequestState: () => I,
             EBrowserType: () => f,
             EClanEventTypeArray: () => n.EClanEventTypeArray,
-            EClientUINotificationType: () => V,
+            EClientUINotificationType: () => F,
             EClientUsedInputType: () => We,
             EClientVRError: () => ze,
             ECommunityProfileItemProperty: () =>
@@ -1169,7 +1169,7 @@ var CLSTAMP = "8023697";
             ENotificationPosition: () => n.ENotificationPosition,
             EOverlayToStoreFlag: () => n.EOverlayToStoreFlag,
             ERaiseGameWindowResult: () => n.ERaiseGameWindowResult,
-            ERemoteClientLaunchResult: () => F,
+            ERemoteClientLaunchResult: () => V,
             ESocialDropTypes: () => k,
             ESteamRealm: () => c.IN,
             ESteamUIWindowType: () => E,
@@ -1187,8 +1187,8 @@ var CLSTAMP = "8023697";
             FriendState: () => S,
             FriendsSettings: () => ve,
             GameActionDetails: () => W,
-            GameLaunchOption: () => Fe,
-            InstallAppAndCreateShortcutData: () => Ve,
+            GameLaunchOption: () => Ve,
+            InstallAppAndCreateShortcutData: () => Fe,
             InstallFolderInfo: () => j,
             InstalledAppInfo: () => U,
             InstallingAppInfo: () => z,
@@ -1396,8 +1396,8 @@ var CLSTAMP = "8023697";
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(I || (I = {}));
-        var F,
-          V,
+        var V,
+          F,
           D,
           T = r(96882);
         class O {
@@ -1532,7 +1532,7 @@ var CLSTAMP = "8023697";
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(F || (F = {}));
+        })(V || (V = {}));
         class K {}
         class Y extends K {}
         class q {}
@@ -1546,7 +1546,7 @@ var CLSTAMP = "8023697";
               "k_EClientUINotificationFriendChatMessage"),
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
-        })(V || (V = {}));
+        })(F || (F = {}));
         class ee {}
         !(function (e) {
           (e[(e.AudioPlayback_Undefined = 0)] = "AudioPlayback_Undefined"),
@@ -1721,8 +1721,8 @@ var CLSTAMP = "8023697";
         class Re {}
         class He {}
         class Ie {}
-        class Fe {}
         class Ve {}
+        class Fe {}
         class De {}
         class Te {}
         class Oe {}
@@ -4023,9 +4023,9 @@ var CLSTAMP = "8023697";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Apr 28 2023 : 15:56:33",
-                BUILD_TIME_UTC: "Apr 28 2023 : 22:56:33",
-                BUILD_RTIME_UTC: 1682722593,
+                BUILD_TIME_LOCAL: "May 1 2023 : 18:16:27",
+                BUILD_TIME_UTC: "May 2 2023 : 01:16:27",
+                BUILD_RTIME_UTC: 1682990187,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -12102,7 +12102,7 @@ var CLSTAMP = "8023697";
             CMsgClientCreateFriendsGroup: () => R,
             CMsgClientCreateFriendsGroupResponse: () => H,
             CMsgClientDeleteFriendsGroup: () => I,
-            CMsgClientDeleteFriendsGroupResponse: () => F,
+            CMsgClientDeleteFriendsGroupResponse: () => V,
             CMsgClientEmoticonList: () => G,
             CMsgClientEmoticonList_Effect: () => z,
             CMsgClientEmoticonList_Emoticon: () => Z,
@@ -12118,7 +12118,7 @@ var CLSTAMP = "8023697";
             CMsgClientFriendsList_Friend: () => m,
             CMsgClientGetEmoticonList: () => P,
             CMsgClientHideFriend: () => d,
-            CMsgClientManageFriendsGroup: () => V,
+            CMsgClientManageFriendsGroup: () => F,
             CMsgClientManageFriendsGroupResponse: () => D,
             CMsgClientPersonaState: () => L,
             CMsgClientPersonaState_Friend: () => y,
@@ -14063,70 +14063,11 @@ var CLSTAMP = "8023697";
             return "CMsgClientDeleteFriendsGroup";
           }
         }
-        class F extends o {
-          constructor(e = null) {
-            super(),
-              F.prototype.eresult || i.aR(F.M()),
-              o.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              F.sm_m ||
-                (F.sm_m = {
-                  proto: F,
-                  fields: {
-                    eresult: {
-                      n: 1,
-                      br: i.FE.readUint32,
-                      bw: i.Xc.writeUint32,
-                    },
-                  },
-                }),
-              F.sm_m
-            );
-          }
-          static MBF() {
-            return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
-          }
-          toObject(e = !1) {
-            return F.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return i.TA(F.M(), e, t);
-          }
-          static fromObject(e) {
-            return i.aD(F.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new n.BinaryReader(e),
-              r = new F();
-            return F.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return i.F(F.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new n.BinaryWriter();
-            return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            i.l2(F.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new n.BinaryWriter();
-            return (
-              F.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientDeleteFriendsGroupResponse";
-          }
-        }
         class V extends o {
           constructor(e = null) {
             super(),
-              V.prototype.groupid || i.aR(V.M()),
-              o.initialize(this, e, 0, -1, [3, 4], null);
+              V.prototype.eresult || i.aR(V.M()),
+              o.initialize(this, e, 0, -1, void 0, null);
           }
           static M() {
             return (
@@ -14134,27 +14075,10 @@ var CLSTAMP = "8023697";
                 (V.sm_m = {
                   proto: V,
                   fields: {
-                    groupid: { n: 1, br: i.FE.readInt32, bw: i.Xc.writeInt32 },
-                    groupname: {
-                      n: 2,
-                      br: i.FE.readString,
-                      bw: i.Xc.writeString,
-                    },
-                    steamid_friends_added: {
-                      n: 3,
-                      r: !0,
-                      q: !0,
-                      br: i.FE.readFixed64String,
-                      pbr: i.FE.readPackedFixed64String,
-                      bw: i.Xc.writeRepeatedFixed64String,
-                    },
-                    steamid_friends_removed: {
-                      n: 4,
-                      r: !0,
-                      q: !0,
-                      br: i.FE.readFixed64String,
-                      pbr: i.FE.readPackedFixed64String,
-                      bw: i.Xc.writeRepeatedFixed64String,
+                    eresult: {
+                      n: 1,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
                     },
                   },
                 }),
@@ -14192,6 +14116,82 @@ var CLSTAMP = "8023697";
             var e = new n.BinaryWriter();
             return (
               V.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientDeleteFriendsGroupResponse";
+          }
+        }
+        class F extends o {
+          constructor(e = null) {
+            super(),
+              F.prototype.groupid || i.aR(F.M()),
+              o.initialize(this, e, 0, -1, [3, 4], null);
+          }
+          static M() {
+            return (
+              F.sm_m ||
+                (F.sm_m = {
+                  proto: F,
+                  fields: {
+                    groupid: { n: 1, br: i.FE.readInt32, bw: i.Xc.writeInt32 },
+                    groupname: {
+                      n: 2,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    steamid_friends_added: {
+                      n: 3,
+                      r: !0,
+                      q: !0,
+                      br: i.FE.readFixed64String,
+                      pbr: i.FE.readPackedFixed64String,
+                      bw: i.Xc.writeRepeatedFixed64String,
+                    },
+                    steamid_friends_removed: {
+                      n: 4,
+                      r: !0,
+                      q: !0,
+                      br: i.FE.readFixed64String,
+                      pbr: i.FE.readPackedFixed64String,
+                      bw: i.Xc.writeRepeatedFixed64String,
+                    },
+                  },
+                }),
+              F.sm_m
+            );
+          }
+          static MBF() {
+            return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
+          }
+          toObject(e = !1) {
+            return F.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(F.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(F.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new F();
+            return F.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(F.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(F.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              F.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -16267,8 +16267,8 @@ var CLSTAMP = "8023697";
             CMsgClientReportOverlayDetourFailure: () => U,
             CMsgClientRequestEncryptedAppTicket: () => j,
             CMsgClientRequestEncryptedAppTicketResponse: () => X,
-            CMsgClientRequestedClientStats: () => F,
-            CMsgClientRequestedClientStats_StatsToSend: () => V,
+            CMsgClientRequestedClientStats: () => V,
+            CMsgClientRequestedClientStats_StatsToSend: () => F,
             CMsgClientServersAvailable: () => W,
             CMsgClientServersAvailable_Server_Types_Available: () => z,
             CMsgClientSessionToken: () => E,
@@ -18220,82 +18220,18 @@ var CLSTAMP = "8023697";
             return "CMsgClientIsLimitedAccount";
           }
         }
-        class F extends s {
-          constructor(e = null) {
-            super(),
-              F.prototype.stats_to_send || i.aR(F.M()),
-              s.initialize(this, e, 0, -1, [1], null);
-          }
-          static M() {
-            return (
-              F.sm_m ||
-                (F.sm_m = {
-                  proto: F,
-                  fields: { stats_to_send: { n: 1, c: V, r: !0, q: !0 } },
-                }),
-              F.sm_m
-            );
-          }
-          static MBF() {
-            return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
-          }
-          toObject(e = !1) {
-            return F.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return i.TA(F.M(), e, t);
-          }
-          static fromObject(e) {
-            return i.aD(F.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new n.BinaryReader(e),
-              r = new F();
-            return F.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return i.F(F.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new n.BinaryWriter();
-            return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            i.l2(F.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new n.BinaryWriter();
-            return (
-              F.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientRequestedClientStats";
-          }
-        }
         class V extends s {
           constructor(e = null) {
             super(),
-              V.prototype.client_stat || i.aR(V.M()),
-              s.initialize(this, e, 0, -1, void 0, null);
+              V.prototype.stats_to_send || i.aR(V.M()),
+              s.initialize(this, e, 0, -1, [1], null);
           }
           static M() {
             return (
               V.sm_m ||
                 (V.sm_m = {
                   proto: V,
-                  fields: {
-                    client_stat: {
-                      n: 1,
-                      br: i.FE.readUint32,
-                      bw: i.Xc.writeUint32,
-                    },
-                    stat_aggregate_method: {
-                      n: 2,
-                      br: i.FE.readUint32,
-                      bw: i.Xc.writeUint32,
-                    },
-                  },
+                  fields: { stats_to_send: { n: 1, c: F, r: !0, q: !0 } },
                 }),
               V.sm_m
             );
@@ -18331,6 +18267,70 @@ var CLSTAMP = "8023697";
             var e = new n.BinaryWriter();
             return (
               V.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientRequestedClientStats";
+          }
+        }
+        class F extends s {
+          constructor(e = null) {
+            super(),
+              F.prototype.client_stat || i.aR(F.M()),
+              s.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              F.sm_m ||
+                (F.sm_m = {
+                  proto: F,
+                  fields: {
+                    client_stat: {
+                      n: 1,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
+                    },
+                    stat_aggregate_method: {
+                      n: 2,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
+                    },
+                  },
+                }),
+              F.sm_m
+            );
+          }
+          static MBF() {
+            return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
+          }
+          toObject(e = !1) {
+            return F.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(F.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(F.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new F();
+            return F.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(F.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(F.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              F.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -20238,8 +20238,8 @@ var CLSTAMP = "8023697";
             ContextMenuInstanceContext: () => y,
             ContextMenuItem: () => B,
             ContextMenuItemSubmenu: () => H,
-            ContextMenuMouseOverlay: () => V,
-            ContextMenuPosition: () => F,
+            ContextMenuMouseOverlay: () => F,
+            ContextMenuPosition: () => V,
             ContextMenuSeparator: () => R,
             GBForcePopupContextMenus: () => G,
             GBStickyContextMenus: () => A,
@@ -20643,7 +20643,7 @@ var CLSTAMP = "8023697";
           (0, n.gn)([v.bind], I.prototype, "RenderSubMenu", null),
           (0, n.gn)([v.bind], I.prototype, "OnMouseEnter", null),
           (0, n.gn)([v.bind], I.prototype, "OnClick", null);
-        let F = class extends o.Component {
+        let V = class extends o.Component {
           constructor(e) {
             super(e),
               (this.m_elMenu = void 0),
@@ -20954,7 +20954,7 @@ var CLSTAMP = "8023697";
             );
           }
         };
-        function V(e) {
+        function F(e) {
           return o.createElement("div", {
             className: L().ContextMenuMouseOverlay,
           });
@@ -21112,17 +21112,17 @@ var CLSTAMP = "8023697";
             e.preventDefault(), e.stopPropagation();
           }
         }
-        (0, n.gn)([v.bind], F.prototype, "BindMenuElement", null),
+        (0, n.gn)([v.bind], V.prototype, "BindMenuElement", null),
           (0, n.gn)(
             [v.bind, (0, _.debounce)(100)],
-            F.prototype,
+            V.prototype,
             "OnMenuMutation",
             null
           ),
-          (0, n.gn)([v.bind], F.prototype, "OnWindowResize", null),
-          (0, n.gn)([v.bind], F.prototype, "OnBlur", null),
-          (0, n.gn)([v.bind], F.prototype, "OnKeyDown", null),
-          (F = (0, n.gn)([i.observer], F));
+          (0, n.gn)([v.bind], V.prototype, "OnWindowResize", null),
+          (0, n.gn)([v.bind], V.prototype, "OnBlur", null),
+          (0, n.gn)([v.bind], V.prototype, "OnKeyDown", null),
+          (V = (0, n.gn)([i.observer], V));
         const T = (e) => {
             const {
                 strDisplayNameLocToken: t,
@@ -21472,7 +21472,7 @@ var CLSTAMP = "8023697";
           ji: () => z,
           l0: () => I,
           o9: () => P,
-          oX: () => F,
+          oX: () => V,
           rs: () => W,
           sg: () => x,
           tr: () => N,
@@ -21561,7 +21561,7 @@ var CLSTAMP = "8023697";
             );
           }
         }
-        function F(e) {
+        function V(e) {
           const { classNameContent: t, bCenterVertically: r } = e,
             o = (0, n._T)(e, ["classNameContent", "bCenterVertically"]);
           return i.createElement(
@@ -21571,7 +21571,7 @@ var CLSTAMP = "8023697";
           );
         }
         (0, n.gn)([u.a], I.prototype, "OnSubmit", null);
-        const V = i.forwardRef(function (e, t) {
+        const F = i.forwardRef(function (e, t) {
             const r = (0, d.D)(),
               { svgicon: a } = e,
               l = (0, n._T)(e, ["svgicon"]),
@@ -21611,7 +21611,7 @@ var CLSTAMP = "8023697";
           }),
           D = i.forwardRef(function (e, t) {
             return i.createElement(
-              V,
+              F,
               Object.assign(
                 { preferredFocus: !0, type: e.onClick ? "button" : "submit" },
                 e,
@@ -21629,7 +21629,7 @@ var CLSTAMP = "8023697";
           }),
           T = i.forwardRef(function (e, t) {
             return i.createElement(
-              V,
+              F,
               Object.assign({ type: "button" }, e, {
                 ref: t,
                 className: (0, s.default)(
@@ -21643,7 +21643,7 @@ var CLSTAMP = "8023697";
           }),
           O = i.forwardRef(function (e, t) {
             return i.createElement(
-              V,
+              F,
               Object.assign({ type: "button" }, e, {
                 ref: t,
                 className: (0, s.default)(
@@ -21655,7 +21655,7 @@ var CLSTAMP = "8023697";
           }),
           A = i.forwardRef(function (e, t) {
             return i.createElement(
-              V,
+              F,
               Object.assign({ type: "button" }, e, {
                 ref: t,
                 className: (0, s.default)(e.className, "TextButton"),
@@ -23416,8 +23416,8 @@ var CLSTAMP = "8023697";
           R = r(5739),
           H = r.n(R),
           I = r(22784),
-          F = r(6138),
-          V = r.n(F);
+          V = r(6138),
+          F = r.n(V);
         function D(e) {
           return "object" == typeof e && "data" in e;
         }
@@ -23749,7 +23749,7 @@ var CLSTAMP = "8023697";
                               I.HP,
                               {
                                 toolTipContent: t.tooltip,
-                                strTooltipClassname: V().HoverAboveModal,
+                                strTooltipClassname: F().HoverAboveModal,
                               },
                               t.label
                             )
@@ -24018,8 +24018,8 @@ var CLSTAMP = "8023697";
             R = null != a || null != r || (S && null != s),
             H = null != C ? C : "min",
             I = null != m ? m : "standard",
-            F = null != h ? h : "standard",
-            V = null != f ? f : "standard",
+            V = null != h ? h : "standard",
+            F = null != f ? f : "standard",
             D = null == w || w,
             T = null != E ? E : 0,
             O = null != v ? v : "center",
@@ -24058,13 +24058,13 @@ var CLSTAMP = "8023697";
                   "shift-children-below" == k &&
                     ne().InlineWrapShiftsChildrenBelow,
                   !!n && ne().WithDescription,
-                  "standard" == V && ne().WithBottomSeparatorStandard,
-                  "thick" == V && ne().WithBottomSeparatorThick,
+                  "standard" == F && ne().WithBottomSeparatorStandard,
+                  "thick" == F && ne().WithBottomSeparatorThick,
                   "fixed" == H && ne().ChildrenWidthFixed,
                   "max" == H && ne().ChildrenWidthGrow,
                   "standard" == I && ne().ExtraPaddingOnChildrenBelow,
-                  "standard" == F && ne().StandardPadding,
-                  "compact" == F && ne().CompactPadding,
+                  "standard" == V && ne().StandardPadding,
+                  "compact" == V && ne().CompactPadding,
                   x && ne().Clickable,
                   D && ne().HighlightOnFocus
                 ),
@@ -24604,8 +24604,8 @@ var CLSTAMP = "8023697";
           Re = r.n(xe),
           He = r(38645),
           Ie = r(40183),
-          Fe = r(2369),
-          Ve = r(86536),
+          Ve = r(2369),
+          Fe = r(86536),
           De = r(27910),
           Te = r(71488);
         const Oe = 1,
@@ -24838,10 +24838,10 @@ var CLSTAMP = "8023697";
               C != this.props.value)
             ) {
               const e = C > this.m_fLatestUserValue;
-              Fe.LT.PlayNavSound(e ? Fe.qr.SliderUp : Fe.qr.SliderDown),
+              Ve.LT.PlayNavSound(e ? Ve.qr.SliderUp : Ve.qr.SliderDown),
                 (this.m_fLatestUserValue = C),
                 this.props.onChange && this.props.onChange(C, 2);
-            } else Fe.LT.PlayNavSound(Fe.qr.FailedNav);
+            } else Ve.LT.PlayNavSound(Ve.qr.FailedNav);
             return !0;
           }
           ComputeNormalizedValueForMousePosition(e) {
@@ -24871,7 +24871,7 @@ var CLSTAMP = "8023697";
               const e = n > this.props.value,
                 t = 0 == this.step;
               (this.m_eDragMode == Ze.None || !t) &&
-                Fe.LT.PlayNavSound(e ? Fe.qr.SliderUp : Fe.qr.SliderDown),
+                Ve.LT.PlayNavSound(e ? Ve.qr.SliderUp : Ve.qr.SliderDown),
                 (this.m_fLatestUserValue = n),
                 this.props.onChange &&
                   this.props.onChange(n, this.SliderChangeSource);
@@ -24948,7 +24948,7 @@ var CLSTAMP = "8023697";
             const t = 0 == this.step;
             if (this.m_fLatestUserValue != this.m_fStartValue && t && e) {
               const e = this.m_fLatestUserValue > this.m_fStartValue;
-              Fe.LT.PlayNavSound(e ? Fe.qr.SliderUp : Fe.qr.SliderDown);
+              Ve.LT.PlayNavSound(e ? Ve.qr.SliderUp : Ve.qr.SliderDown);
             }
           }
           RemoveDocumentEventListeners() {
@@ -25015,7 +25015,7 @@ var CLSTAMP = "8023697";
                 : ((e = this.props.resetValue > this.props.value),
                   this.props.onChangeComplete &&
                     this.props.onChangeComplete(this.props.resetValue, 4)),
-              Fe.LT.PlayNavSound(e ? Fe.qr.SliderUp : Fe.qr.SliderDown);
+              Ve.LT.PlayNavSound(e ? Ve.qr.SliderUp : Ve.qr.SliderDown);
           }
           OnContextMenu(e) {
             if (null != this.props.resetValue) {
@@ -25070,7 +25070,7 @@ var CLSTAMP = "8023697";
                       : Re().Right
                   ))),
               o.createElement(
-                Ve.PanelGroup,
+                Fe.PanelGroup,
                 {
                   noFocusRing: !0,
                   className: (0, p.default)(
@@ -25087,7 +25087,7 @@ var CLSTAMP = "8023697";
                   childFocusDisabled: this.props.disabled || !n,
                   onContextMenu: this.OnContextMenu,
                   onOKButton: this.props.disabled
-                    ? () => Fe.LT.PlayNavSound(Fe.qr.FailedNav)
+                    ? () => Ve.LT.PlayNavSound(Ve.qr.FailedNav)
                     : null,
                   onSecondaryButton: this.CanResetToDefault
                     ? this.ResetToDefault
@@ -25371,7 +25371,7 @@ var CLSTAMP = "8023697";
             I = () => {
               e.onChangeStart && e.onChangeStart(3), H(!0);
             },
-            F = (t) => {
+            V = (t) => {
               x(t) &&
                 (e.onChange && e.onChange(t, 3),
                 e.onChangeComplete && e.onChangeComplete(t, 3)),
@@ -25385,9 +25385,9 @@ var CLSTAMP = "8023697";
                 : e.BHasFocus()) &&
               (null === (t = S.current) || void 0 === t || t.TakeFocus());
           }, [B, S, R]);
-          let V = t;
+          let F = t;
           _
-            ? (V = o.createElement(
+            ? (F = o.createElement(
                 o.Fragment,
                 null,
                 o.createElement("div", { className: Re().LabelText }, e.label),
@@ -25397,12 +25397,12 @@ var CLSTAMP = "8023697";
                   renderedValue: k,
                   valueSuffix: e.valueSuffix,
                   onClick: I,
-                  onChangeComplete: F,
+                  onChangeComplete: V,
                   validator: x,
                 })
               ))
             : c &&
-              (V = o.createElement(
+              (F = o.createElement(
                 o.Fragment,
                 null,
                 o.createElement("div", { className: Re().LabelText }, e.label),
@@ -25439,7 +25439,7 @@ var CLSTAMP = "8023697";
               padding: h,
               bottomSeparator: p,
               childrenContainerWidth: "fixed",
-              label: V,
+              label: F,
               description: r,
               ref: y,
               className: a,
@@ -25537,14 +25537,14 @@ var CLSTAMP = "8023697";
             k = (0, p.default)(Re().DescriptionValue, B && Re().RedBorder),
             [x, R] = o.useState(0),
             [H, I] = o.useState(0),
-            F = o.useRef(),
-            V = o.useCallback(() => {
-              const e = F.current.clientWidth;
+            V = o.useRef(),
+            F = o.useCallback(() => {
+              const e = V.current.clientWidth;
               w ? I(e) : R(e);
             }, [w]);
-          o.useLayoutEffect(V, []);
-          const D = (0, l.useResizeObserver)(V),
-            T = (0, l.useMultipleRefs)(F, D);
+          o.useLayoutEffect(F, []);
+          const D = (0, l.useResizeObserver)(F),
+            T = (0, l.useMultipleRefs)(V, D);
           o.useLayoutEffect(() => {
             var e, t;
             (null === (e = h.current) || void 0 === e
@@ -25772,7 +25772,7 @@ var CLSTAMP = "8023697";
                 if (!i && n) {
                   const e = !r;
                   n(e),
-                    Fe.LT.PlayNavSound(e ? Fe.qr.ToggleOn : Fe.qr.ToggleOff);
+                    Ve.LT.PlayNavSound(e ? Ve.qr.ToggleOn : Ve.qr.ToggleOff);
                 }
               },
               ref: t,
@@ -26072,7 +26072,7 @@ var CLSTAMP = "8023697";
             R = i.useRef(),
             H = null == b ? void 0 : b.hideTitle,
             I = null === (n = e.showTitle) || void 0 === n || n,
-            F = (0, c.default)(
+            V = (0, c.default)(
               "DialogContentTransition",
               s.PagedSettingDialog_ContentColumn
             );
@@ -26081,7 +26081,7 @@ var CLSTAMP = "8023697";
             e.focusChild &&
               (null === (t = R.current) || void 0 === t || t.TakeFocus());
           }, [R.current]);
-          const V = e.renderPageAnimation || S;
+          const F = e.renderPageAnimation || S;
           return i.createElement(
             o.Panel,
             {
@@ -26127,14 +26127,14 @@ var CLSTAMP = "8023697";
             ),
             i.createElement(
               o.Panel,
-              { className: F, onCancelButton: k, navRef: R },
+              { className: V, onCancelButton: k, navRef: R },
               e.toggleHideList &&
                 i.createElement(y, {
                   hideList: e.hideList,
                   toggleHideList: e.toggleHideList,
                 }),
               i.createElement(
-                V,
+                F,
                 { activePage: b, direction: L },
                 b &&
                   i.createElement(v, {
@@ -26415,12 +26415,12 @@ var CLSTAMP = "8023697";
             Accelerometer: () => Ai,
             Achievement: () => et,
             ActionSetIndicator: () => yn,
-            Activities: () => Vn,
+            Activities: () => Fn,
             Add: () => Xe,
             AddContained: () => Ke,
             AddFriend: () => tt,
             AirplaneMode: () => Q,
-            Arrow: () => Fe,
+            Arrow: () => Ve,
             AsyncGameTurn: () => Rr,
             Attachment: () => Lt,
             AudioVolumeIcon: () => we,
@@ -26434,13 +26434,13 @@ var CLSTAMP = "8023697";
             BigPicture: () => p,
             BlockUser: () => nt,
             Bluetooth: () => te,
-            Bookmark: () => V,
+            Bookmark: () => F,
             Brightness: () => P,
             Broadcast: () => m,
             Browse: () => tr,
             BugReport: () => br,
             CD: () => ni,
-            Carat: () => Ve,
+            Carat: () => Fe,
             Caution: () => it,
             Chat: () => v,
             Checkmark: () => ge,
@@ -26456,7 +26456,7 @@ var CLSTAMP = "8023697";
             Comment: () => kr,
             CommentHistory: () => wr,
             CommentThread: () => yr,
-            Community: () => Fr,
+            Community: () => Vr,
             CompoundSliderNotch: () => Ri,
             CompoundSliderNotchLeft: () => Hi,
             CompoundSliderNotchRight: () => Ii,
@@ -26469,8 +26469,8 @@ var CLSTAMP = "8023697";
             CreateGroup: () => Hr,
             Crown: () => ut,
             CustomizeSteamDeck: () => b,
-            DLC: () => F,
-            DeckDockFront: () => Vi,
+            DLC: () => V,
+            DeckDockFront: () => Fi,
             DeckLogo: () => q,
             Desktop: () => E,
             DevicesNone: () => he,
@@ -26485,7 +26485,7 @@ var CLSTAMP = "8023697";
             Download: () => Oe,
             Dynamic: () => Ir,
             Edit: () => dt,
-            Emoji: () => Fn,
+            Emoji: () => Vn,
             Emoticon: () => er,
             EmptyStar: () => O,
             Envelope: () => mt,
@@ -26623,7 +26623,7 @@ var CLSTAMP = "8023697";
             Refresh: () => $t,
             Reload: () => Je,
             RemotePlay: () => xt,
-            RemotePlayTogether: () => Vr,
+            RemotePlayTogether: () => Fr,
             Repeat: () => ze,
             RepeatOne: () => Ue,
             Resize: () => Rt,
@@ -26634,9 +26634,9 @@ var CLSTAMP = "8023697";
             RollAxisOverlay: () => zi,
             Rows: () => je,
             Schedule: () => It,
-            Scratchpad: () => Ft,
+            Scratchpad: () => Vt,
             Screenshot: () => H,
-            Scroll: () => Vt,
+            Scroll: () => Ft,
             SdCard: () => st,
             Search: () => B,
             SearchResultTypeLibrary: () => x,
@@ -26670,7 +26670,7 @@ var CLSTAMP = "8023697";
             SteamDeckSetupQR: () => ri,
             SteamDeckTiltedOutline: () => mi,
             SteamGuard: () => Er,
-            SteamInputAPISvg: () => Fi,
+            SteamInputAPISvg: () => Vi,
             SteamLogo: () => dr,
             SteamNetworkIssue: () => vo,
             SteamNews: () => Gt,
@@ -27264,7 +27264,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function F(e) {
+        function V(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -27281,7 +27281,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function V(e) {
+        function F(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -28740,7 +28740,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Fe(e) {
+        function Ve(e) {
           const { direction: t } = e,
             r = (0, n._T)(e, ["direction"]);
           switch (t) {
@@ -28810,7 +28810,7 @@ var CLSTAMP = "8023697";
               );
           }
         }
-        function Ve(e) {
+        function Fe(e) {
           const { direction: t } = e,
             r = (0, n._T)(e, ["direction"]);
           switch (t) {
@@ -29933,7 +29933,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Ft(e) {
+        function Vt(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -29950,7 +29950,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Vt(e) {
+        function Ft(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -31091,7 +31091,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Fr(e) {
+        function Vr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -31108,7 +31108,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Vr(e) {
+        function Fr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -32262,7 +32262,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Fn(e) {
+        function Vn(e) {
           return i.createElement(
             "svg",
             {
@@ -32278,7 +32278,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Vn(e) {
+        function Fn(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -34217,8 +34217,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -34436,7 +34436,7 @@ var CLSTAMP = "8023697";
                 fill: "#97AFDD",
                 d: "M803.871 231.996L802.104 230.229L785.561 246.794L768.997 230.229L767.23 231.996L783.794 248.56L767.23 265.104L768.997 266.871L785.561 250.306L802.104 266.871L803.871 265.104L787.307 248.56L803.871 231.996Z",
               }),
-            V &&
+            F &&
               i.createElement("path", {
                 className: l().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -34444,7 +34444,7 @@ var CLSTAMP = "8023697";
                 strokeWidth: "3",
                 strokeMiterlimit: "10",
               }),
-            F &&
+            V &&
               i.createElement("path", {
                 className: l().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -34643,8 +34643,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -34723,22 +34723,22 @@ var CLSTAMP = "8023697";
               d: "M305.01 505.897C351.009 480.714 396.629 478.678 487.813 478.678C578.996 478.678 624.617 480.714 670.615 505.897C717.801 531.731 746.261 563.55 775.241 595.952C775.851 596.634 776.462 597.316 777.072 597.999C804.738 628.92 833.218 660.228 879.092 686.752C835.832 678.795 810.357 662.437 787.927 641.624C778.968 633.309 770.517 624.307 761.583 614.791C758.324 611.32 755.001 607.78 751.566 604.181C738.745 590.747 724.456 576.586 706.37 562.375C671.872 535.27 642.44 520.403 608.879 512.599C575.401 504.815 537.923 504.088 487.447 505.067C436.971 504.088 399.483 504.815 365.995 512.599C332.424 520.403 302.981 535.27 268.483 562.375C250.457 576.539 236.278 590.66 223.602 604.066C219.976 607.901 216.482 611.667 213.06 615.356C204.486 624.597 196.367 633.349 187.77 641.458C165.754 662.227 140.78 678.601 98.097 686.683C143.764 660.168 171.898 628.872 199.237 597.971C199.81 597.324 200.382 596.677 200.953 596.031C229.647 563.587 257.821 531.732 305.01 505.897Z",
               strokeWidth: "4",
             }),
-            V &&
+            F &&
               i.createElement("path", {
                 className: l().GenericGamepadHighlight,
                 d: "M344.3 312.8L380.849 349.326C389.211 341.827 400.259 337.263 412.367 337.263C419.191 338.767 421.826 291.042 412.367 289.744C399.895 289.744 388.548 284.902 380.103 276.997L344.3 312.8Z",
               }),
-            V &&
+            F &&
               i.createElement("path", {
                 fill: "currentColor",
                 d: "M344.3 312.8L343.239 311.739L342.178 312.8L343.24 313.861L344.3 312.8ZM380.849 349.326L379.789 350.387L380.793 351.391L381.851 350.443L380.849 349.326ZM380.103 276.997L381.128 275.902L380.068 274.91L379.042 275.936L380.103 276.997ZM412.367 337.263L412.69 335.799C412.584 335.775 412.475 335.763 412.367 335.763V337.263ZM412.367 289.744L412.571 288.258C412.503 288.249 412.435 288.244 412.367 288.244V289.744ZM343.24 313.861L379.789 350.387L381.91 348.265L345.36 311.739L343.24 313.861ZM412.044 338.728C413.925 339.143 415.237 337.736 415.996 336.485C416.821 335.128 417.49 333.208 418.032 331.015C419.125 326.595 419.806 320.616 419.973 314.596C420.139 308.578 419.795 302.409 418.785 297.618C418.282 295.232 417.595 293.094 416.663 291.472C415.744 289.874 414.425 288.512 412.571 288.258L412.163 291.23C412.674 291.3 413.341 291.713 414.062 292.968C414.77 294.199 415.376 295.99 415.849 298.237C416.793 302.713 417.137 308.625 416.974 314.513C416.811 320.399 416.145 326.15 415.12 330.295C414.603 332.386 414.021 333.958 413.432 334.928C413.137 335.413 412.897 335.652 412.75 335.753C412.685 335.797 412.657 335.802 412.664 335.8C412.667 335.799 412.673 335.798 412.681 335.798C412.689 335.798 412.692 335.799 412.69 335.799L412.044 338.728ZM412.367 288.244C400.291 288.244 389.306 283.558 381.128 275.902L379.078 278.092C387.789 286.247 399.499 291.244 412.367 291.244V288.244ZM379.042 275.936L343.239 311.739L345.361 313.86L381.163 278.058L379.042 275.936ZM381.851 350.443C389.948 343.18 400.643 338.763 412.367 338.763V335.763C399.875 335.763 388.474 340.473 379.848 348.21L381.851 350.443Z",
               }),
-            F &&
+            V &&
               i.createElement("path", {
                 className: l().GenericGamepadHighlight,
                 d: "M344.3 312.8L307.301 349.55C298.91 341.918 287.763 337.264 275.535 337.264C266.362 336.995 267.891 289.452 275.535 289.744C288.184 289.744 299.677 284.764 308.158 276.658L344.3 312.8Z",
               }),
-            F &&
+            V &&
               i.createElement("path", {
                 fill: "currentColor",
                 d: "M308.158 276.658L309.219 275.598L308.182 274.561L307.122 275.574L308.158 276.658ZM344.3 312.8L345.357 313.864L346.425 312.803L345.361 311.739L344.3 312.8ZM307.301 349.55L306.291 350.66L307.346 351.619L308.358 350.614L307.301 349.55ZM275.535 289.744L275.478 291.243C275.497 291.244 275.516 291.244 275.535 291.244V289.744ZM275.535 337.264L275.492 338.763C275.506 338.764 275.521 338.764 275.535 338.764V337.264ZM343.243 311.736L306.244 348.486L308.358 350.614L345.357 313.864L343.243 311.736ZM275.593 288.245C273.766 288.175 272.495 289.543 271.675 290.925C270.808 292.385 270.114 294.385 269.563 296.654C268.453 301.216 267.826 307.258 267.729 313.27C267.632 319.278 268.064 325.368 269.128 330.019C269.658 332.333 270.366 334.395 271.313 335.923C272.249 337.433 273.611 338.708 275.492 338.763L275.579 335.764C275.167 335.752 274.57 335.483 273.863 334.343C273.168 333.221 272.551 331.526 272.053 329.35C271.062 325.02 270.634 319.193 270.729 313.318C270.823 307.446 271.438 301.64 272.478 297.362C273.001 295.21 273.61 293.542 274.254 292.457C274.945 291.294 275.394 291.24 275.478 291.243L275.593 288.245ZM345.361 311.739L309.219 275.598L307.098 277.719L343.239 313.861L345.361 311.739ZM307.122 275.574C298.908 283.424 287.783 288.244 275.535 288.244V291.244C288.586 291.244 300.446 286.104 309.195 277.743L307.122 275.574ZM308.31 348.44C299.654 340.567 288.151 335.764 275.535 335.764V338.764C287.375 338.764 298.166 343.269 306.291 350.66L308.31 348.44Z",
@@ -34947,8 +34947,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -35129,7 +35129,7 @@ var CLSTAMP = "8023697";
               fill: "currentColor",
               d: "M777.073 282.229H769.632L766.661 272.807H753.035L750.208 282.205H742.96L756.2 240.699H763.447L777.073 282.229ZM764.535 265.801L759.703 250.411L755.088 265.801H764.535Z",
             }),
-            V &&
+            F &&
               i.createElement("path", {
                 className: l().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -35137,7 +35137,7 @@ var CLSTAMP = "8023697";
                 strokeWidth: "3",
                 strokeMiterlimit: "10",
               }),
-            F &&
+            V &&
               i.createElement("path", {
                 className: l().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -35276,8 +35276,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -35436,14 +35436,14 @@ var CLSTAMP = "8023697";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: F ? l().GenericGamepadHighlight : null,
+              className: V ? l().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M135.579 262.698C131.997 262.52 128.631 260.933 126.215 258.283C123.799 255.633 122.528 252.136 122.68 248.553V221.466C122.534 218.194 123.693 214.998 125.902 212.58C128.111 210.161 131.189 208.718 134.461 208.568H167.417C168.356 208.549 169.289 208.731 170.153 209.101C171.017 209.472 171.792 210.023 172.425 210.718L190.032 229.915C191.362 231.423 192.096 233.364 192.096 235.375C192.096 237.386 191.362 239.328 190.032 240.836L172.425 260.033C171.789 260.724 171.014 261.273 170.151 261.643C169.288 262.014 168.356 262.197 167.417 262.183V262.183L135.579 262.698Z",
               strokeWidth: "4",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: V ? l().GenericGamepadHighlight : null,
+              className: F ? l().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M274.237 262.698C277.819 262.52 281.185 260.933 283.601 258.283C286.017 255.633 287.288 252.136 287.136 248.553V221.466C287.211 219.847 286.966 218.229 286.416 216.704C285.866 215.18 285.02 213.779 283.928 212.581C282.836 211.383 281.519 210.412 280.052 209.723C278.584 209.035 276.996 208.642 275.377 208.568H242.443C241.503 208.55 240.57 208.732 239.707 209.103C238.843 209.474 238.068 210.024 237.434 210.717L219.827 229.915C218.497 231.423 217.763 233.364 217.763 235.375C217.763 237.386 218.497 239.327 219.827 240.835L237.434 260.033C238.071 260.722 238.847 261.269 239.71 261.639C240.573 262.01 241.504 262.195 242.443 262.182L274.237 262.698Z",
               strokeWidth: "4",
@@ -35560,8 +35560,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -35792,14 +35792,14 @@ var CLSTAMP = "8023697";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: F ? l().GenericGamepadHighlight : null,
+              className: V ? l().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M118.451 213.945C114.833 213.765 111.434 212.162 108.993 209.485C106.553 206.809 105.269 203.276 105.423 199.657V172.297C105.275 168.992 106.446 165.764 108.677 163.321C110.908 160.878 114.017 159.421 117.322 159.269H150.61C151.559 159.25 152.501 159.433 153.374 159.808C154.247 160.182 155.029 160.739 155.669 161.44L173.453 180.831C174.796 182.354 175.538 184.315 175.538 186.346C175.538 188.377 174.796 190.339 173.453 191.862L155.669 211.253C155.026 211.951 154.243 212.505 153.371 212.879C152.5 213.253 151.558 213.439 150.61 213.424V213.424L118.451 213.945Z",
               strokeWidth: "4",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: V ? l().GenericGamepadHighlight : null,
+              className: F ? l().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M258.507 213.945C262.125 213.765 265.524 212.162 267.965 209.485C270.405 206.809 271.689 203.276 271.535 199.657V172.297C271.611 170.662 271.364 169.027 270.808 167.487C270.252 165.948 269.399 164.532 268.296 163.322C267.193 162.113 265.862 161.132 264.38 160.436C262.898 159.741 261.293 159.344 259.658 159.269H226.392C225.443 159.251 224.501 159.435 223.628 159.81C222.756 160.184 221.973 160.74 221.332 161.44L203.549 180.831C202.205 182.354 201.464 184.315 201.464 186.346C201.464 188.377 202.205 190.338 203.549 191.862L221.332 211.252C221.977 211.948 222.76 212.501 223.632 212.875C224.503 213.249 225.444 213.436 226.392 213.424L258.507 213.945Z",
               strokeWidth: "4",
@@ -35976,8 +35976,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -36214,14 +36214,14 @@ var CLSTAMP = "8023697";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: F ? l().GenericGamepadHighlight : null,
+              className: V ? l().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M116.253 206.594C112.562 206.424 109.089 204.8 106.592 202.078C104.095 199.355 102.777 195.754 102.926 192.063V164.31C102.852 162.648 103.106 160.987 103.675 159.422C104.243 157.858 105.114 156.421 106.238 155.193C107.362 153.965 108.716 152.971 110.225 152.266C111.733 151.562 113.365 151.162 115.028 151.089H148.821C149.795 151.093 150.757 151.303 151.644 151.703C152.532 152.103 153.326 152.685 153.974 153.412L172.054 173.16C173.425 174.706 174.183 176.701 174.183 178.768C174.183 180.834 173.425 182.829 172.054 184.375L153.974 204.102C153.326 204.829 152.532 205.411 151.644 205.811C150.757 206.211 149.795 206.421 148.821 206.425L116.253 206.594Z",
               strokeWidth: "4",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: V ? l().GenericGamepadHighlight : null,
+              className: F ? l().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M258.754 206.594C266.104 206.594 272.06 200.089 272.06 192.063V164.31C272.134 162.648 271.879 160.987 271.311 159.422C270.743 157.858 269.872 156.421 268.748 155.193C267.624 153.965 266.269 152.971 264.761 152.266C263.253 151.562 261.621 151.162 259.958 151.089H226.165C225.19 151.089 224.227 151.297 223.339 151.697C222.45 152.098 221.657 152.682 221.011 153.412L202.911 173.16C201.539 174.706 200.782 176.701 200.782 178.768C200.782 180.834 201.539 182.829 202.911 184.375L221.011 204.102C221.657 204.832 222.45 205.416 223.339 205.817C224.227 206.217 225.19 206.425 226.165 206.425L258.754 206.594Z",
               strokeWidth: "4",
@@ -36373,8 +36373,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -36595,7 +36595,7 @@ var CLSTAMP = "8023697";
               fill: "currentColor",
               d: "M389.143 136.707V132.248H364.619V136.707H389.143Z",
             }),
-            V &&
+            F &&
               i.createElement("path", {
                 className: l().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -36603,7 +36603,7 @@ var CLSTAMP = "8023697";
                 strokeWidth: "4",
                 strokeMiterlimit: "10",
               }),
-            F &&
+            V &&
               i.createElement("path", {
                 className: l().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -36772,8 +36772,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -36969,8 +36969,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -37174,8 +37174,8 @@ var CLSTAMP = "8023697";
               highlightY: R,
               highlightDPadUp: H,
               highlightDPadDown: I,
-              highlightDPadLeft: F,
-              highlightDPadRight: V,
+              highlightDPadLeft: V,
+              highlightDPadRight: F,
               highlightTouchpad: D,
               touchpadTouchX: T,
               touchpadTouchY: O,
@@ -37357,14 +37357,14 @@ var CLSTAMP = "8023697";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: F ? l().GenericGamepadHighlight : null,
+              className: V ? l().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M66.4886 374.475C78.6814 374.475 88.5656 364.591 88.5656 352.398C88.5656 340.206 78.6814 330.321 66.4886 330.321C54.2958 330.321 44.4116 340.206 44.4116 352.398C44.4116 364.591 54.2958 374.475 66.4886 374.475Z",
               strokeWidth: "3.89022",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: V ? l().GenericGamepadHighlight : null,
+              className: F ? l().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M167.323 374.979C179.515 374.979 189.4 365.095 189.4 352.902C189.4 340.709 179.515 330.825 167.323 330.825C155.13 330.825 145.246 340.709 145.246 352.902C145.246 365.095 155.13 374.979 167.323 374.979Z",
               strokeWidth: "3.89022",
@@ -37994,7 +37994,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Fi(e) {
+        function Vi(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -38024,7 +38024,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Vi(e) {
+        function Fi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -41081,7 +41081,7 @@ var CLSTAMP = "8023697";
             BroadcastAdminOfficer: () => Or,
             BroadcastBroadcaster: () => Tr,
             BroadcastContributor: () => Dr,
-            BroadcastModerator: () => Vr,
+            BroadcastModerator: () => Fr,
             Burger: () => hr,
             CSGO: () => _t,
             Calendar: () => pe,
@@ -41118,7 +41118,7 @@ var CLSTAMP = "8023697";
             Download: () => bt,
             DownloadsFilled: () => T,
             DynamicCollection: () => Ot,
-            Edit: () => Ft,
+            Edit: () => Vt,
             Effect: () => Mr,
             Emoticon: () => y,
             EmoticonBow: () => fr,
@@ -41150,7 +41150,7 @@ var CLSTAMP = "8023697";
             Image: () => Me,
             IncomingVoiceCall: () => Z,
             Info: () => dt,
-            Information: () => Vt,
+            Information: () => Ft,
             Instagram: () => ht,
             Installed: () => yt,
             Invalid: () => qt,
@@ -41161,6 +41161,7 @@ var CLSTAMP = "8023697";
             LargeMobilePhone: () => lt,
             LeaveVoiceChat: () => jr,
             Library: () => St,
+            LightBulb: () => Qr,
             LinuxLogo: () => Wt,
             LinuxLogo2: () => zt,
             Lock: () => Ee,
@@ -41192,9 +41193,9 @@ var CLSTAMP = "8023697";
             PlayCircle: () => se,
             PlayTime: () => kt,
             PlayerList: () => Jr,
-            Plus: () => F,
+            Plus: () => V,
             PlusCircle: () => Y,
-            PlusFilled: () => V,
+            PlusFilled: () => F,
             Popout: () => R,
             Profile: () => yr,
             ProgressCircle: () => Ht,
@@ -41204,7 +41205,7 @@ var CLSTAMP = "8023697";
             RecentClock: () => Ce,
             Reload: () => Te,
             ResizeIcon: () => x,
-            Restore: () => Fe,
+            Restore: () => Ve,
             ReviewHelp: () => dr,
             Reviews: () => Pt,
             RewardsIcon: () => kr,
@@ -41252,7 +41253,7 @@ var CLSTAMP = "8023697";
             TrashCan: () => Ne,
             TwitchTV: () => ft,
             Twitter: () => mt,
-            Undo: () => Ve,
+            Undo: () => Fe,
             Update: () => mr,
             Upgrade: () => we,
             User: () => ze,
@@ -41265,7 +41266,7 @@ var CLSTAMP = "8023697";
             VoiceRoom: () => O,
             Volume: () => te,
             WindowsLogo: () => Ut,
-            Wishlist: () => Fr,
+            Wishlist: () => Vr,
             WriteReview: () => Cr,
             X: () => H,
             X_Line: () => I,
@@ -42066,7 +42067,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function F(e) {
+        function V(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -42106,7 +42107,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function V(e) {
+        function F(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -44354,7 +44355,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Fe() {
+        function Ve() {
           return i.createElement(
             "svg",
             {
@@ -44387,7 +44388,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Ve() {
+        function Fe() {
           return i.createElement(
             "svg",
             {
@@ -46524,7 +46525,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Ft() {
+        function Vt() {
           return i.createElement(
             "svg",
             {
@@ -46562,7 +46563,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Vt() {
+        function Ft() {
           return i.createElement(
             "svg",
             {
@@ -48500,7 +48501,7 @@ var CLSTAMP = "8023697";
             )
           );
         }
-        function Fr(e) {
+        function Vr(e) {
           return i.createElement(
             "svg",
             Object.assign({}, e, {
@@ -48516,7 +48517,7 @@ var CLSTAMP = "8023697";
             })
           );
         }
-        function Vr() {
+        function Fr() {
           return i.createElement(
             "svg",
             {
@@ -48987,6 +48988,23 @@ var CLSTAMP = "8023697";
             i.createElement("path", {
               d: "M18.0011 30.4189H3.52539C3.52539 28.4993 4.28795 26.6583 5.64531 25.3009C7.00267 23.9436 8.84365 23.181 10.7633 23.181C12.6829 23.181 14.5238 23.9436 15.8812 25.3009C17.2386 26.6583 18.0011 28.4993 18.0011 30.4189ZM10.7633 20.4668C11.5685 20.4668 12.3556 20.228 13.0251 19.7807C13.6947 19.3333 14.2165 18.6975 14.5246 17.9535C14.8328 17.2096 14.9134 16.391 14.7563 15.6013C14.5992 14.8115 14.2115 14.0861 13.6421 13.5167C13.0727 12.9473 12.3473 12.5595 11.5575 12.4025C10.7678 12.2454 9.94917 12.326 9.20524 12.6341C8.4613 12.9423 7.82545 13.4641 7.37809 14.1336C6.93073 14.8032 6.69196 15.5903 6.69196 16.3955C6.69076 16.9305 6.79526 17.4605 6.99944 17.955C7.20362 18.4494 7.50346 18.8987 7.88175 19.277C8.26004 19.6553 8.70934 19.9552 9.20383 20.1593C9.69832 20.3635 10.2283 20.468 10.7633 20.4668ZM30.3598 25.2981C29.0262 23.9645 27.2248 23.204 25.3389 23.1787C23.4531 23.1533 21.6319 23.8651 20.263 25.1624C21.1577 26.7696 21.6249 28.5795 21.6201 30.4189H32.4768C32.4776 29.4681 32.291 28.5265 31.9278 27.6479C31.5645 26.7692 31.0317 25.9708 30.3598 25.2981ZM21.1677 16.3955C21.1677 17.2008 21.4065 17.9879 21.8538 18.6574C22.3012 19.3269 22.937 19.8488 23.681 20.1569C24.4249 20.4651 25.2435 20.5457 26.0333 20.3886C26.823 20.2315 27.5484 19.8438 28.1178 19.2744C28.6872 18.705 29.075 17.9796 29.2321 17.1898C29.3891 16.4 29.3085 15.5814 29.0004 14.8375C28.6922 14.0936 28.1704 13.4577 27.5009 13.0104C26.8314 12.563 26.0442 12.3242 25.239 12.3242C24.704 12.323 24.174 12.4275 23.6796 12.6317C23.1851 12.8359 22.7358 13.1357 22.3575 13.514C21.9792 13.8923 21.6793 14.3416 21.4752 14.8361C21.271 15.3306 21.1665 15.8605 21.1677 16.3955Z",
               fill: "currentColor",
+            })
+          );
+        }
+        function Qr(e) {
+          return i.createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 74 74",
+                fill: "none",
+              },
+              e
+            ),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M37 10.3599C27.6285 10.3599 19.98 17.9072 19.98 27.1949C19.98 32.8877 22.3457 35.9972 24.3969 38.4564C26.2758 40.7094 27.8247 42.4021 28.0737 46.0414C27.2441 46.3582 26.64 47.1509 26.64 48.0764V52.5627C26.64 53.6047 27.407 54.5044 28.3975 54.7133L30.0394 61.0267C30.041 61.0337 30.0377 61.0429 30.0394 61.0499C30.2774 61.9874 30.836 62.8416 31.6119 63.2467C32.3935 63.6548 33.1174 63.6399 33.6931 63.6399H40.3069C40.8826 63.6399 41.6064 63.6548 42.3881 63.2467C43.164 62.8416 43.7226 61.9874 43.9606 61.0499C43.9623 61.0429 43.9589 61.0337 43.9606 61.0267L45.6025 54.7133C46.593 54.5045 47.36 53.6047 47.36 52.5627V48.0764C47.36 47.1509 46.7558 46.3582 45.9262 46.0414C46.1753 42.4021 47.7242 40.7094 49.6031 38.4564C51.6543 35.9967 54.02 32.8874 54.02 27.1949C54.02 17.9072 46.3715 10.3599 37 10.3599ZM37 13.3199C44.7909 13.3199 51.06 19.5266 51.06 27.1949C51.06 32.132 49.3557 34.1398 47.3369 36.5608C45.4799 38.7878 43.3032 41.4093 42.9662 45.8799H31.0337C30.6967 41.409 28.5201 38.7876 26.6631 36.5608C24.6443 34.1399 22.94 32.1324 22.94 27.1949C22.94 19.5266 29.209 13.3199 37 13.3199ZM29.6 48.8399H44.4V51.7999H29.6V48.8399ZM31.4731 54.7599H42.5269L41.0931 60.3099V60.333C41.0411 60.5428 41.0153 60.6064 41.0006 60.6336C41.0329 60.6168 40.8045 60.6799 40.3069 60.6799H33.6931C33.1954 60.6799 32.9671 60.6168 32.9994 60.6336C32.9847 60.6064 32.9589 60.5428 32.9069 60.333V60.3099L31.4731 54.7599Z",
             })
           );
         }
@@ -50676,7 +50694,7 @@ var CLSTAMP = "8023697";
             BElementContainsSelection: () => c,
             BElementFullscreen: () => v,
             BIsDragLeaveOutOfElement: () => a,
-            BIsElementScrollableOnAxis: () => V,
+            BIsElementScrollableOnAxis: () => F,
             BIsParent: () => s,
             BIsParentOrSelf: () => l,
             BlobToFile: () => x,
@@ -50687,7 +50705,7 @@ var CLSTAMP = "8023697";
             CopyURLToClipboard: () => w,
             DistanceBetweenRects: () => C,
             FindAncestorWithAttribute: () => R,
-            FindAncestrally: () => F,
+            FindAncestrally: () => V,
             FindFirstDescendantsWithAttribute: () => H,
             FindScrollableAncestor: () => I,
             GetDistanceFromRect: () => d,
@@ -51030,13 +51048,13 @@ var CLSTAMP = "8023697";
           }
           return r;
         }
-        function F(e, t) {
+        function V(e, t) {
           for (; e; ) {
             if (t(e)) return e;
             e = e.parentElement;
           }
         }
-        function V(e, t) {
+        function F(e, t) {
           if (!("ownerDocument" in e)) return !0;
           const r = e.ownerDocument.defaultView.getComputedStyle(e),
             n = "x" === t ? r.overflowX : r.overflowY;
@@ -51498,8 +51516,8 @@ var CLSTAMP = "8023697";
             BDoesLocaleUse24Hourclock: () => h,
             ETimeSinceSuffix: () => n,
             LocalizeCalendarMonth: () => R,
-            LocalizeCalendarMonthAndYear: () => F,
-            LocalizeCalendarQuarter: () => V,
+            LocalizeCalendarMonthAndYear: () => V,
+            LocalizeCalendarQuarter: () => F,
             LocalizeCalendarTime: () => E,
             LocalizeCalendarTimeLessGranular: () => v,
             LocalizeCalendarWeekday: () => x,
@@ -51664,7 +51682,7 @@ var CLSTAMP = "8023697";
           );
         }
         function d(e) {
-          return F(new Date(1e3 * e));
+          return V(new Date(1e3 * e));
         }
         function C(e) {
           return I(new Date(1e3 * e));
@@ -51761,7 +51779,7 @@ var CLSTAMP = "8023697";
             if (!l.bGranularFutureTime)
               return (
                 i.zO(r.getTime() - n.getTime()),
-                r.getFullYear() == n.getFullYear() ? R(r) : F(r)
+                r.getFullYear() == n.getFullYear() ? R(r) : V(r)
               );
             i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
             let e = new Date();
@@ -51818,7 +51836,7 @@ var CLSTAMP = "8023697";
               ? (0, o.Localize)("#TimeSince_1Week")
               : (0, o.Localize)("#TimeSince_XWeeks", e);
           }
-          return r.getFullYear() == n.getFullYear() ? R(r) : F(r);
+          return r.getFullYear() == n.getFullYear() ? R(r) : V(r);
         }
         function v(e) {
           const t = new Date(1e3 * e),
@@ -51833,7 +51851,7 @@ var CLSTAMP = "8023697";
               : t.getFullYear() == r.getFullYear()
               ? R(t)
               : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
-              ? F(t)
+              ? V(t)
               : I(t)
           );
         }
@@ -51909,7 +51927,7 @@ var CLSTAMP = "8023697";
             t)
           );
         }
-        function F(e) {
+        function V(e) {
           const t = e.getMonth() + 12 * e.getFullYear();
           let r = y.get(t);
           return (
@@ -51922,7 +51940,7 @@ var CLSTAMP = "8023697";
             r)
           );
         }
-        function V(e) {
+        function F(e) {
           switch (e.getUTCMonth()) {
             case 0:
             case 1:
@@ -53192,6 +53210,7 @@ var CLSTAMP = "8023697";
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
           USE_LONGEST_LOC_STRING: !1,
+          SILENT_STARTUP: !1,
         };
         i.FOO = !1;
         const o = {
@@ -53291,9 +53310,9 @@ var CLSTAMP = "8023697";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Apr 28 2023 : 15:56:33",
-                    BUILD_TIME_UTC: "Apr 28 2023 : 22:56:33",
-                    BUILD_RTIME_UTC: 1682722593,
+                    BUILD_TIME_LOCAL: "May 1 2023 : 18:16:27",
+                    BUILD_TIME_UTC: "May 2 2023 : 01:16:27",
+                    BUILD_RTIME_UTC: 1682990187,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -53739,7 +53758,7 @@ var CLSTAMP = "8023697";
       ".js?contenthash=" +
       {
         27: "7df72e279be09610f03c",
-        58: "e2de2feeed8173bbca10",
+        58: "23bb39b3a2e44333389e",
         131: "70b32fae5dda851384fe",
         200: "777643ad169046f46b5a",
         220: "0355b5539ec987b27c67",
@@ -53797,7 +53816,7 @@ var CLSTAMP = "8023697";
         5175: "461f4e76ff29479b8ddd",
         5279: "271134b5737dc299cc64",
         5590: "e257b73af137dd9a4e50",
-        5742: "638b55eab473a859766e",
+        5742: "9cb359da7e8498a7dc62",
         5984: "2cd3d3e4055ba19552be",
         6002: "3cfbd51cc04619d6b463",
         6006: "daa3ee8e6fac8a06111a",
@@ -53816,7 +53835,7 @@ var CLSTAMP = "8023697";
         7660: "8ed742b721a9bc18aef3",
         7781: "e589a411d033e2ebe4fa",
         7832: "35e371c703d65c6c518c",
-        7962: "aed67d1d357c034e2de4",
+        7962: "e507a2c78017b5a86a40",
         8011: "2bad8c957b2510d4af07",
         8085: "391c0bfee7d8e753f4b7",
         8232: "c2e719a340a48d9b8443",
@@ -53824,7 +53843,7 @@ var CLSTAMP = "8023697";
         8282: "485314ba66dfbb93b090",
         8319: "c700affcbda57ab2cdc8",
         8433: "9f9304c05723001c8317",
-        8467: "a39c810d7b33c7c81f13",
+        8467: "7d59427bc05e30c0904e",
         8553: "7aaed2ce65c581cdc824",
         8778: "25bd34e66f49774e8fd1",
         8956: "5b4ee2cee009644c5506",

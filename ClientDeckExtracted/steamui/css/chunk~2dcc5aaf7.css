@@ -9328,6 +9328,19 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 .controllerconfiguratorsummary_GlyphAndLabel_1AjG8 {
   padding-left: 8px;
 }
+.controllerconfiguratorsummary_LEDColorButtonContents_3C4KX {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.controllerconfiguratorsummary_LEDColorGlyph_1sQNU {
+  width: 25px;
+  height: auto;
+  padding-right: 8px;
+}
 .controllerconfiguratorsummary_MediumGlyphIcon_2nNX3 {
   width: auto;
   height: auto;
@@ -9960,6 +9973,82 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Regular")
+    format("truetype");
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-RegularItalic")
+    format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Thin") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Light") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-LightItalic")
+    format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Medium") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Bold") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-BoldItalic")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-ExtraBold")
+    format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Motiva Sans";
+  src: url("/custom_fonts/clientui.uifont?MotivaSans-Black") format("truetype");
+  font-weight: 900;
+}
+body {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.gamepadcolorpicker_ColorPickerPreview_1RPXc {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  border-radius: 4px;
+  background-image: linear-gradient(45deg, #4d4d4d 25%, transparent 25%),
+    linear-gradient(-45deg, #4d4d4d 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #4d4d4d 75%),
+    linear-gradient(-45deg, transparent 75%, #4d4d4d 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+.gamepadcolorpicker_ColorPickerPreview_Square_3toK- {
+  flex: 1;
+  height: 100%;
+  border-radius: inherit;
+}
 .controllerconfiguratoractionsetselector_ActionSetNameOverIndicators_1Xyoy {
   padding-bottom: 10px;
   padding-left: 32.5px;
@@ -10065,65 +10154,6 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .footericons_ChordSummary_2sFpI.footericons_SizeSmall_3sify {
   margin-right: 20px;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Regular")
-    format("truetype");
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-RegularItalic")
-    format("truetype");
-  font-style: italic;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Thin") format("truetype");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Light") format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-LightItalic")
-    format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Medium") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Bold") format("truetype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-BoldItalic")
-    format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-ExtraBold")
-    format("truetype");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Motiva Sans";
-  src: url("/custom_fonts/clientui.uifont?MotivaSans-Black") format("truetype");
-  font-weight: 900;
-}
-body {
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
 .actionbuttonlegenditem_ActionButtonLegend_Mbyhb {
   display: flex;
@@ -92240,6 +92270,89 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
     transform: translateY(0px) scale(1);
   }
 }
+@keyframes controllerconfiguratorchoosebinding_listener_ItemFocusAnim-darkerGrey-nocolor_1Yyjb {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes controllerconfiguratorchoosebinding_listener_ItemFocusAnim-darkerGrey_3ub_A {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes controllerconfiguratorchoosebinding_listener_ItemFocusAnim-darkGrey_3C1Ti {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes controllerconfiguratorchoosebinding_listener_ItemFocusAnim-grey_1DJb9 {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes controllerconfiguratorchoosebinding_listener_ItemFocusAnimBorder-darkGrey_2uM1p {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes controllerconfiguratorchoosebinding_listener_ItemFocusAnim-green_2OXgQ {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes controllerconfiguratorchoosebinding_listener_focusAnimation_2SIk0 {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes controllerconfiguratorchoosebinding_listener_hoverAnimation_3O3C- {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.controllerconfiguratorchoosebinding_listener_ContainerDiv_1L-aG {
+  display: flex;
+  justify-content: center;
+}
+.controllerconfiguratorchoosebinding_listener_InlineGlyph_rGUgu {
+  margin-left: 4px;
+  margin-right: 4px;
+  height: 24px;
+}
 @keyframes controllerconfiguratorchoosebinding_ItemFocusAnim-darkerGrey-nocolor_26OSv {
   from {
     background: #3d4450;
@@ -92762,6 +92875,8 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.controllerconfiguratorchoosebinding_LEDColorGroup_1d7XO
+  .controllerconfiguratorchoosebinding_KeyboardKeyLabel_eUq_I,
 .controllerconfiguratorchoosebinding_TriggerButton_2MjBd
   .controllerconfiguratorchoosebinding_KeyboardKeyLabel_eUq_I,
 .controllerconfiguratorchoosebinding_BumperButton_2swvc
@@ -92779,6 +92894,13 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   flex-direction: row;
   justify-content: space-between;
 }
+.controllerconfiguratorchoosebinding_LEDColorGroup_1d7XO {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV,
 .controllerconfiguratorchoosebinding_StartButton_3s28A {
   border: solid;
@@ -92790,28 +92912,43 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   display: flex;
   border-radius: 5px;
 }
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5 img,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV img,
 .controllerconfiguratorchoosebinding_StartButton_3s28A img {
   max-width: 20px;
 }
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5.gpfocus,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV.gpfocus,
 .controllerconfiguratorchoosebinding_StartButton_3s28A.gpfocus {
   border-color: #fff;
   background: #fff;
   filter: drop-shadow(0px 0px 10px #1a9fff90);
 }
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5.gpfocus img,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV.gpfocus img,
 .controllerconfiguratorchoosebinding_StartButton_3s28A.gpfocus img {
   filter: brightness(0);
 }
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5.controllerconfiguratorchoosebinding_SelectedBinding_CX4Dp,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV.controllerconfiguratorchoosebinding_SelectedBinding_CX4Dp,
 .controllerconfiguratorchoosebinding_StartButton_3s28A.controllerconfiguratorchoosebinding_SelectedBinding_CX4Dp {
   background-color: #1a9fff;
   border-color: #1a9fff;
 }
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5:not(:last-child),
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV:not(:last-child),
 .controllerconfiguratorchoosebinding_StartButton_3s28A:not(:last-child) {
   margin-right: 3px;
+}
+.controllerconfiguratorchoosebinding_LEDColorGroup_1d7XO
+  .controllerconfiguratorchoosebinding_LEDButton_3U3h5 {
+  width: auto;
+}
+.controllerconfiguratorchoosebinding_LEDIcon_3qLrs {
+  width: 24px;
+  height: 24px;
+  padding-right: 2px;
+  vertical-align: middle;
 }
 .controllerconfiguratorchoosebinding_GamepadUnspported_1sDi2 {
   font-size: 10px;

@@ -2,11 +2,11 @@
     "name": "IClientGameServerInternalMap",
     "functions": [ 
         {
-            "name": "Unknown_5442320",
+            "name": "Unknown_5442048",
             "argc": "0"
         },
         {
-            "name": "Unknown_5442208",
+            "name": "Unknown_5441936",
             "argc": "0"
         },
         {
@@ -14,7 +14,7 @@
             "argc": "2"
         },
         {
-            "name": "Unknown_4997136",
+            "name": "Unknown_4996864",
             "argc": "0"
         },
         {

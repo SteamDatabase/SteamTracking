@@ -1401,7 +1401,7 @@
         _ = a(78869),
         h = a(61992),
         b = a.n(h),
-        v = a(58664),
+        v = a(71713),
         S = (a(68184), a(22188)),
         E = a(13271),
         C = a(31535),
@@ -8958,7 +8958,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, se.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1682722593),
+          s = parseInt(1682990187),
           c = s && (0, cr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == _.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -19065,7 +19065,7 @@
       });
       var iu = a(88987),
         su = a(53926),
-        cu = a(22088),
+        cu = a(23398),
         mu = a(3527),
         du = a(43029),
         uu = a(97086),
@@ -21778,7 +21778,7 @@
           const [t] = (0, ze.HQ)("start_page"),
             a = (0, $p.H7)();
           (0, o.useEffect)(() => {
-            if (e) {
+            if (e && !_.Config.SILENT_STARTUP) {
               if (!t) return a.Home(void 0, { bReplace: !0 });
               switch (t) {
                 case "library":
@@ -22557,7 +22557,10 @@
               ? "Window_SteamDesktopMini"
               : "Window_SteamDesktop",
             b = (0, d.useSavedDimensionPopupCallbacks)(t, h),
-            v = bg | m.EPopupCreationFlags.BackgroundTransparent,
+            v =
+              bg |
+              m.EPopupCreationFlags.BackgroundTransparent |
+              (_.Config.SILENT_STARTUP ? m.EPopupCreationFlags.Hidden : 0),
             S = b,
             E = o.useMemo(
               () => ({
