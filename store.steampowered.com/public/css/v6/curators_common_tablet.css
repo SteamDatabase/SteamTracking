@@ -144,12 +144,6 @@ html.tablet .breadcrumbs {
 	padding-top: 8px;
 }
 
-
-/* Hide beta button */
-html.tablet .creator_beta_ctn {
-	display: none;
-}
-
 html.tablet .header_area.curators {
 	padding-top: 0px;
 }

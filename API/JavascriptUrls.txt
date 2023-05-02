@@ -111,6 +111,7 @@ ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
 ${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}
 ${COMMUNITY_BASE_URL}${_ ? "minigame/ajaxgetgameitemdefsforeditor" : "minigame/ajaxgetgameitemdefs"}
+${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
 ${COMMUNITY_BASE_URL}${}/

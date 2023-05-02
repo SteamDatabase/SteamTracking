@@ -8,8 +8,6 @@
       e.exports = {
         "duration-app-launch": "800ms",
         PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
-        BetaContainer: "partnereventshared_BetaContainer_1KXQ4",
-        EventBetaTextTitle: "partnereventshared_EventBetaTextTitle_3roRb",
         Clear: "partnereventshared_Clear_2BXhG",
         Divider: "partnereventshared_Divider_1u63O",
         EventDefaultRowContainer:
@@ -533,7 +531,7 @@
         md: () => c,
       });
       var r = n(70983),
-        a = (n(45797), n(31587));
+        a = (n(49969), n(31587));
       const s =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
       function o(e) {

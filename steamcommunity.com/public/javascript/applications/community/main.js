@@ -12628,36 +12628,42 @@
           if (!o || (r && "none" === o.getComputedStyle(r).display)) return;
           let s = this.props.clientX,
             a = this.props.clientY,
-            l = o.innerWidth,
-            c = o.innerHeight,
-            u = 1,
-            d = null == r ? void 0 : r.getBoundingClientRect();
+            l = 0,
+            c = 0,
+            u = o.innerWidth,
+            d = o.innerHeight,
+            m = 1,
+            h = null == r ? void 0 : r.getBoundingClientRect();
           if (i)
             if (
               (t.bScreenCoordinates ||
                 ((s += o.screenLeft), (a += o.screenTop)),
-              d && (d = v.sH(o, d)),
+              h && (h = v.sH(o, h)),
               t.targetMonitor)
             )
-              (u = t.targetMonitor.flMonitorScale),
-                (l = t.targetMonitor.nScreenWidth),
-                (c = t.targetMonitor.nScreenHeight);
+              (m = t.targetMonitor.flMonitorScale),
+                (l = t.targetMonitor.nScreenLeft),
+                (c = t.targetMonitor.nScreenTop),
+                (u = t.targetMonitor.nScreenWidth),
+                (d = t.targetMonitor.nScreenHeight);
             else {
               let e = o.screen,
                 t = 0,
                 n = 0;
               e.availLeft && (t = e.availLeft),
                 e.availTop && (n = e.availTop),
-                (l = t + e.availWidth),
-                (c = n + e.availHeight);
+                (l = t),
+                (c = n),
+                (u = t + e.availWidth),
+                (d = n + e.availHeight);
             }
           (t.bOverlapHorizontal || t.bOverlapVertical) && (s = a = void 0);
-          let m = n.getBoundingClientRect();
+          let p = n.getBoundingClientRect();
           if (t.flGamepadScale > 0) {
             const e = t.flGamepadScale;
-            m = new DOMRect(m.x * e, m.y * e, m.width * e, m.height * e);
+            p = new DOMRect(p.x * e, p.y * e, p.width * e, p.height * e);
           }
-          let h = {
+          let _ = {
               menuLeft: void 0,
               menuRight: void 0,
               menuTop: void 0,
@@ -12666,75 +12672,75 @@
               menuHeight: void 0,
               menuMinWidth: void 0,
             },
-            p = s || d.left,
-            _ = s || d.right,
-            g = m.width;
-          t.bMatchWidth && ((g = _ - p), (h.menuWidth = g)),
-            t.bGrowToElementWidth && (h.menuMinWidth = Math.max(g, _ - p));
-          let f = (t.bOverlapHorizontal ? _ : p) - g,
-            C = f > 0,
-            E = l - (t.bOverlapHorizontal ? p : _) - g,
+            g = s || h.left,
+            f = s || h.right,
+            C = p.width;
+          t.bMatchWidth && ((C = f - g), (_.menuWidth = C)),
+            t.bGrowToElementWidth && (_.menuMinWidth = Math.max(C, f - g));
+          let E = (t.bOverlapHorizontal ? f : g) - l - C,
             b = E > 0,
-            S = (t.bPreferPopLeft || !b) && C;
-          C ||
-            b ||
-            ((S = C > b),
-            t.bFitToWindow && ((g += (S ? f : E) - 8), (h.menuWidth = g))),
-            (!t.bPreferPopLeft && b) || !C
-              ? (h.menuLeft = t.bOverlapHorizontal ? p : _)
-              : (h.menuRight = l - (t.bOverlapHorizontal ? _ : p));
-          let w = a || d.top,
-            I = a || d.bottom,
-            D = n.scrollHeight;
-          t.bMatchHeight && ((D = I - w), (h.menuHeight = D));
-          let y = (t.bOverlapVertical ? I : w) - D,
-            R = y > 0,
-            M = c - (t.bOverlapVertical ? w : I) - D,
+            S = l + u - (t.bOverlapHorizontal ? g : f) - C,
+            w = S > 0,
+            I = (t.bPreferPopLeft || !w) && b;
+          b ||
+            w ||
+            ((I = b > w),
+            t.bFitToWindow && ((C += (I ? E : S) - 8), (_.menuWidth = C))),
+            I
+              ? (_.menuRight = u - (t.bOverlapHorizontal ? f : g))
+              : (_.menuLeft = t.bOverlapHorizontal ? g : f);
+          let D = a || h.top,
+            y = a || h.bottom,
+            R = n.scrollHeight;
+          t.bMatchHeight && ((R = y - D), (_.menuHeight = R));
+          let M = (t.bOverlapVertical ? y : D) - c - R,
             T = M > 0,
-            A = (t.bPreferPopTop || !T) && R && !t.bDisablePopTop;
-          if (!R && !T) {
+            A = c + d - (t.bOverlapVertical ? D : y) - R,
+            O = A > 0,
+            L = (t.bPreferPopTop || !O) && T && !t.bDisablePopTop;
+          if (!T && !O) {
             const e =
               void 0 !== t.bShiftToFitWindow
                 ? t.bShiftToFitWindow
                 : t.bFitToWindow && !t.bOverlapHorizontal;
-            (A = y > M && !t.bDisablePopTop),
-              e && (A ? (h.menuTop = 4) : (h.menuBottom = 4)),
+            (L = M > A && !t.bDisablePopTop),
+              e && (L ? (_.menuTop = 4) : (_.menuBottom = 4)),
               t.bFitToWindow &&
-                (e ? (D = Math.min(D, c - 8)) : (D += A ? y : M),
-                (h.menuHeight = D - 8));
+                (e ? (R = Math.min(R, d - 8)) : (R += L ? M : A),
+                (_.menuHeight = R - 8));
           }
-          void 0 === h.menuBottom &&
-            void 0 === h.menuTop &&
-            (A
-              ? (h.menuBottom = c - (t.bOverlapVertical ? I : w))
-              : (h.menuTop = t.bOverlapVertical ? w : I)),
+          void 0 === _.menuBottom &&
+            void 0 === _.menuTop &&
+            (L
+              ? (_.menuBottom = d - (t.bOverlapVertical ? y : D))
+              : (_.menuTop = t.bOverlapVertical ? D : y)),
             i
-              ? (h.menuHeight || (h.menuHeight = m.height),
-                h.menuWidth || (h.menuWidth = m.width),
-                h.menuBottom &&
-                  !h.menuTop &&
-                  ((h.menuTop = c - h.menuBottom - h.menuHeight),
-                  (h.menuBottom = void 0)),
-                h.menuRight &&
-                  !h.menuLeft &&
-                  ((h.menuLeft = l - h.menuRight - h.menuWidth),
-                  (h.menuRight = void 0)))
-              : (h.menuLeft && (h.menuLeft += o.scrollX),
-                h.menuTop && (h.menuTop += o.scrollY),
-                h.menuBottom &&
-                  (h.menuBottom +=
+              ? (_.menuHeight || (_.menuHeight = p.height),
+                _.menuWidth || (_.menuWidth = p.width),
+                _.menuBottom &&
+                  !_.menuTop &&
+                  ((_.menuTop = d - _.menuBottom - _.menuHeight),
+                  (_.menuBottom = void 0)),
+                _.menuRight &&
+                  !_.menuLeft &&
+                  ((_.menuLeft = u - _.menuRight - _.menuWidth),
+                  (_.menuRight = void 0)))
+              : (_.menuLeft && (_.menuLeft += o.scrollX),
+                _.menuTop && (_.menuTop += o.scrollY),
+                _.menuBottom &&
+                  (_.menuBottom +=
                     o.document.body.clientHeight - o.scrollY - o.innerHeight),
-                h.menuRight &&
-                  (h.menuRight +=
+                _.menuRight &&
+                  (_.menuRight +=
                     o.document.body.clientWidth - o.scrollX - o.innerWidth)),
             (e ||
-              h.menuLeft !== this.state.menuLeft ||
-              h.menuRight !== this.state.menuRight ||
-              h.menuTop !== this.state.menuTop ||
-              h.menuBottom !== this.state.menuBottom ||
-              h.menuWidth !== this.state.menuWidth ||
-              h.menuHeight !== this.state.menuHeight) &&
-              this.setState(h);
+              _.menuLeft !== this.state.menuLeft ||
+              _.menuRight !== this.state.menuRight ||
+              _.menuTop !== this.state.menuTop ||
+              _.menuBottom !== this.state.menuBottom ||
+              _.menuWidth !== this.state.menuWidth ||
+              _.menuHeight !== this.state.menuHeight) &&
+              this.setState(_);
         }
         PositionPopupWindow() {
           if (
@@ -18551,13 +18557,13 @@
           );
         return (
           (0, i.useEffect)(() => {
-            t.options.bRetainOnHide &&
-              u &&
+            u &&
               (t.visible
                 ? (s.current && s.current.PositionMenu(),
                   u.window.SteamClient.Window.SetForegroundWindow(),
                   t.TakeFocus())
-                : u.window.SteamClient.Window.HideWindow());
+                : t.options.bRetainOnHide &&
+                  u.window.SteamClient.Window.HideWindow());
           }, [u, t, t.visible]),
           T(u.window),
           i.useLayoutEffect(() => {
@@ -19140,21 +19146,21 @@
         $06: () => ee,
         $gZ: () => m,
         BKy: () => P,
-        BNo: () => ye,
-        Bh5: () => Ce,
-        Cdc: () => He,
+        BNo: () => De,
+        Bh5: () => fe,
+        Cdc: () => Ge,
         Ehc: () => k,
         F8F: () => u,
         GhU: () => D,
-        Gue: () => de,
-        I8b: () => he,
+        Gue: () => ue,
+        I8b: () => me,
         IWH: () => q,
         JrY: () => T,
-        KJh: () => De,
-        KKY: () => Pe,
+        KJh: () => Ie,
+        KKY: () => Ne,
         Lao: () => U,
-        Lk$: () => ae,
-        M3$: () => Re,
+        Lk$: () => se,
+        M3$: () => ye,
         MrB: () => re,
         NP6: () => N,
         P9w: () => X,
@@ -19163,23 +19169,23 @@
         Uos: () => B,
         V7n: () => z,
         VR: () => ie,
-        Vgm: () => ce,
-        WNf: () => _e,
-        WWB: () => be,
+        Vgm: () => le,
+        WNf: () => pe,
+        WWB: () => Ee,
         X: () => v,
         XBH: () => Q,
-        YVI: () => Ne,
+        YVI: () => xe,
         YVR: () => K,
         YqJ: () => V,
         YtI: () => p,
         Zrf: () => d,
-        _GE: () => ue,
-        c7E: () => Fe,
+        _GE: () => ce,
+        c7E: () => ke,
         chI: () => te,
-        dCe: () => Ue,
-        dLw: () => Ee,
-        daM: () => pe,
-        doA: () => Me,
+        dCe: () => He,
+        dLw: () => ve,
+        daM: () => he,
+        doA: () => Re,
         dzL: () => R,
         faS: () => A,
         ffh: () => I,
@@ -19187,17 +19193,16 @@
         hLd: () => Z,
         hoX: () => W,
         iS8: () => M,
-        j7C: () => xe,
+        j7C: () => Fe,
         k4K: () => f,
-        kIV: () => oe,
         lBf: () => c,
         lsH: () => Y,
-        mBz: () => ke,
+        mBz: () => Be,
         mKE: () => O,
-        mKt: () => ge,
-        miF: () => Be,
+        mKt: () => _e,
+        miF: () => Le,
         nkn: () => L,
-        opd: () => Te,
+        opd: () => Me,
         pUF: () => S,
         pVO: () => E,
         pkz: () => w,
@@ -19205,26 +19210,26 @@
         rFk: () => j,
         ret: () => h,
         shV: () => y,
-        sqQ: () => Ae,
-        svY: () => Se,
+        sqQ: () => Te,
+        svY: () => be,
         tEX: () => J,
-        tLe: () => se,
+        tLe: () => oe,
         thP: () => x,
         tkI: () => g,
-        uZu: () => fe,
+        uZu: () => ge,
         ui7: () => $,
-        vJ$: () => ve,
-        vyu: () => Ve,
-        wn$: () => me,
+        vJ$: () => Ce,
+        vyu: () => Pe,
+        wn$: () => de,
         wx$: () => F,
-        x0L: () => Le,
-        xg: () => Ie,
+        x0L: () => Oe,
+        xg: () => we,
         yBp: () => b,
         yRy: () => C,
-        yTr: () => Oe,
-        yVt: () => le,
-        yh4: () => we,
-        z5E: () => Ge,
+        yTr: () => Ae,
+        yVt: () => ae,
+        yh4: () => Se,
+        z5E: () => Ve,
       });
       var r = n(33940),
         i = n(89526),
@@ -20954,47 +20959,6 @@
           "svg",
           {
             version: "1.1",
-            id: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Info",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          i.createElement("circle", {
-            fill: "none",
-            stroke: "#000000",
-            strokeWidth: "10",
-            strokeMiterlimit: "10",
-            cx: "128",
-            cy: "75.835",
-            r: "17.679",
-          }),
-          i.createElement("path", {
-            fill: "none",
-            stroke: "#000000",
-            strokeWidth: "10",
-            strokeMiterlimit: "10",
-            d: "M98.821,116.865c0,0,0.159,11,2.71,16.407 c2.451,5.198,8.789,2.938,8.789,10.33c0,13.388,0,42.604,0,42.604s-1.065,10.435,6,10.652c7.065,0.216,29.358,0,29.358,0 s0-50.383,0-68.859c0-5.181-6.328-11.135-11.848-11.135C123.181,116.865,98.821,116.865,98.821,116.865z",
-          }),
-          i.createElement("circle", {
-            fill: "none",
-            stroke: "#000000",
-            strokeWidth: "10",
-            strokeMiterlimit: "10",
-            cx: "128",
-            cy: "128",
-            r: "122.334",
-          })
-        );
-      }
-      function se() {
-        return i.createElement(
-          "svg",
-          {
-            version: "1.1",
             id: "Layer_3",
             xmlns: "http://www.w3.org/2000/svg",
             className: "SVGIcon_Button SVGIcon_Twitter",
@@ -21009,7 +20973,7 @@
           })
         );
       }
-      function ae() {
+      function se() {
         return i.createElement(
           "svg",
           {
@@ -21028,7 +20992,7 @@
           })
         );
       }
-      function le() {
+      function ae() {
         return i.createElement(
           "svg",
           {
@@ -21049,7 +21013,7 @@
           })
         );
       }
-      function ce() {
+      function le() {
         return i.createElement(
           "svg",
           {
@@ -21080,7 +21044,7 @@
           })
         );
       }
-      function ue() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -21146,7 +21110,7 @@
           })
         );
       }
-      function de(e) {
+      function ue(e) {
         const { fullcolor: t, className: n } = e;
         let r = t ? "rgb(102, 185, 255)" : "none",
           s = t ? "rgb(255, 208, 0)" : "none",
@@ -21200,7 +21164,7 @@
           })
         );
       }
-      function me() {
+      function de() {
         return i.createElement(
           "svg",
           {
@@ -21219,7 +21183,7 @@
           })
         );
       }
-      function he() {
+      function me() {
         return i.createElement(
           "svg",
           {
@@ -21257,7 +21221,7 @@
           })
         );
       }
-      function pe() {
+      function he() {
         return i.createElement(
           "svg",
           {
@@ -21293,7 +21257,7 @@
           })
         );
       }
-      function _e() {
+      function pe() {
         return i.createElement(
           "svg",
           {
@@ -21312,7 +21276,7 @@
           })
         );
       }
-      function ge() {
+      function _e() {
         return i.createElement(
           "svg",
           {
@@ -21337,7 +21301,7 @@
           })
         );
       }
-      function fe() {
+      function ge() {
         return i.createElement(
           "svg",
           {
@@ -21359,7 +21323,7 @@
           })
         );
       }
-      function Ce() {
+      function fe() {
         return i.createElement(
           "svg",
           {
@@ -21399,7 +21363,7 @@
           })
         );
       }
-      function ve() {
+      function Ce() {
         return i.createElement(
           "svg",
           {
@@ -21415,7 +21379,7 @@
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function Ee() {
+      function ve() {
         return i.createElement(
           "svg",
           {
@@ -21434,7 +21398,7 @@
           })
         );
       }
-      function be() {
+      function Ee() {
         return i.createElement(
           "svg",
           {
@@ -21454,7 +21418,7 @@
           })
         );
       }
-      function Se(e) {
+      function be(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -21473,7 +21437,7 @@
           })
         );
       }
-      function we(e) {
+      function Se(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -21492,7 +21456,7 @@
           })
         );
       }
-      function Ie(e, t) {
+      function we(e, t) {
         return (0, l.id)()
           ? i.createElement(
               "svg",
@@ -21529,7 +21493,7 @@
               })
             );
       }
-      function De(e) {
+      function Ie(e) {
         return i.createElement(
           "svg",
           {
@@ -21548,7 +21512,7 @@
           })
         );
       }
-      function ye(e) {
+      function De(e) {
         return i.createElement(
           "svg",
           {
@@ -21584,7 +21548,7 @@
           )
         );
       }
-      function Re(e) {
+      function ye(e) {
         const { className: t, color: n } = e;
         return i.createElement(
           "svg",
@@ -21610,7 +21574,7 @@
           })
         );
       }
-      function Me(e) {
+      function Re(e) {
         const { className: t } = e;
         (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -21788,7 +21752,7 @@
           )
         );
       }
-      function Te() {
+      function Me() {
         return i.createElement(
           "svg",
           {
@@ -21819,7 +21783,7 @@
           )
         );
       }
-      function Ae(e) {
+      function Te(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -21835,7 +21799,7 @@
           })
         );
       }
-      function Oe() {
+      function Ae() {
         return i.createElement(
           "svg",
           {
@@ -21853,7 +21817,7 @@
           })
         );
       }
-      function Le() {
+      function Oe() {
         return i.createElement(
           "svg",
           {
@@ -21875,7 +21839,7 @@
           )
         );
       }
-      function Be() {
+      function Le() {
         return i.createElement(
           "svg",
           {
@@ -21913,7 +21877,7 @@
           )
         );
       }
-      function ke(e) {
+      function Be(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -21931,7 +21895,7 @@
           })
         );
       }
-      function Fe() {
+      function ke() {
         return i.createElement(
           "svg",
           {
@@ -21965,7 +21929,7 @@
           )
         );
       }
-      function xe(e) {
+      function Fe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -21988,7 +21952,7 @@
           })
         );
       }
-      function Ne(e) {
+      function xe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -22016,7 +21980,7 @@
           })
         );
       }
-      function Pe(e) {
+      function Ne(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -22044,7 +22008,7 @@
           })
         );
       }
-      function Ve(e) {
+      function Pe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -22072,7 +22036,7 @@
           })
         );
       }
-      function Ge(e) {
+      function Ve(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -22100,7 +22064,7 @@
           })
         );
       }
-      function He(e) {
+      function Ge(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -22121,7 +22085,7 @@
           })
         );
       }
-      function Ue(e) {
+      function He(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -24825,6 +24789,7 @@
         IN_LOGIN: !1,
         IN_LOGIN_REFRESH: !1,
         USE_LONGEST_LOC_STRING: !1,
+        SILENT_STARTUP: !1,
       };
       i.FOO = !1;
       const o = {

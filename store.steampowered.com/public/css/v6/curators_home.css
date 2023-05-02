@@ -241,27 +241,6 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 	background: linear-gradient( to bottom, rgba(255,255,255,0.1) 5%, rgba(255,255,255,0) 95%);
 	padding: 30px 0px;
 }
-.creator_beta_ctn {
-	background: -webkit-linear-gradient( 135deg, rgb(220, 201, 132) 5%,rgb(200, 149, 40) 95%);
-	background: linear-gradient( -45deg, rgb(220, 201, 132) 5%,rgb(200, 149, 40) 95%);
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: bold; /* bold */
-
-			width: 100px;
-	height: 33px;
-	float: right;
-	text-align: center;
-	font-size: 18px;
-	padding-top: 8px;
-	color: #000;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    box-shadow: 0 0 5px #000;
-}
-.creator_beta_ctn:hover {
-	color: #fff;
-}
-
 
 .section_ctn {
 		font-family: "Motiva Sans", Sans-serif;
@@ -472,7 +451,7 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 .most_recommended .steam_curator_recommendation {
 	height: 215px;
 	width: 220px;
-	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 	box-shadow: 0 0 5px #000;
 	background-position-y: 20px;
 
@@ -489,7 +468,7 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 }
 
 .most_recommended .steam_curator_recommendation .store_capsule {
-	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 }
 .most_recommended .steam_curator_recommendation .steam_curators_for_app {
 	background: transparent;

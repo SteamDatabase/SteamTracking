@@ -1589,31 +1589,6 @@ body.v6 .page_content.curator_header_ctn.creator_announcement_browse_adjustment 
 .creator_checkbox_container {
 }
 
-.creator_beta_ctn {
-background: -webkit-linear-gradient( #dcc984 10%, #ab8b44 80%,#7b5f24 100%);
-	background: linear-gradient( #dcc984 10%, #ab8b44 80%,#7b5f24 100%);
-		font-family: "Motiva Sans", Sans-serif;
-		font-weight: bold; /* bold */
-
-			width: 100px;
-	height: 33px;
-	text-align: center;
-	font-size: 18px;
-	font-style: italic;
-
-	padding-top: 8px;
-	color: #000;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
-	box-shadow: 0 -5px 5px -5px #000;
-	bottom: 5px;
-	position: absolute;
-	right: 0;
-}
-.creator_beta_ctn:hover {
-	color: #fff;
-}
-
 .page_content_ctn.dlc_associated_franchise {
 background: -webkit-linear-gradient( top, rgba(78, 102, 115, 0.3) 5%, rgba(78, 102, 115, 0) 95%);
 	background: linear-gradient( to bottom, rgba(78, 102, 115, 0.3) 5%, rgba(78, 102, 115, 0) 95%);
@@ -1755,9 +1730,6 @@ background: -webkit-linear-gradient( top, rgba(78, 102, 115, 0.3) 5%, rgba(78, 1
 	html.responsive body.v6 h2.pageheader {
 		margin-bottom: 4px;
 		line-height: 24px;
-	}
-	html.responsive .creator_beta_ctn {
-		display: none;
 	}
 	html.responsive .socialmedia_accounts > * {
 		margin-left: 8px;

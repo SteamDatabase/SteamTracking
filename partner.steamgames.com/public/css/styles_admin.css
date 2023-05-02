@@ -433,6 +433,7 @@ select.hourselect,  select.minuteselect {
 }
 .newformrow.widelabel.EarlyAccess .formlabel {
 	margin-top: 42px;
+    width: 50%;
 }
 
 .newformrow .formdata {
@@ -444,7 +445,7 @@ select.hourselect,  select.minuteselect {
 	margin-left: 256px;
 }
 .newformrow.widelabel.EarlyAccess .formdata {
-	margin-left: 270px;
+	margin-left: 50%;
 }
 
 .localized_image_picker_ctn {
@@ -2640,11 +2641,16 @@ html, body { height:100%; }
 	display: flex;
 }
 
+.movie_screenshot_ctn {
+	max-width: 20%;
+}
+
 .movie_screenshot
 {
 	margin-top: 5px;
-	width: 190px;
-	height: 100px;
+	width: 184px;
+	height: 103px;
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 
@@ -2653,8 +2659,13 @@ html, body { height:100%; }
 	justify-content: end;
 }
 
+.movie_screenshot:hover .drag_and_drop {
+	display: none;
+}
+
 .movie_screenshot .drag_and_drop
 {
+	cursor: default;
 	background: rgba( 25, 25, 25, 0.4 );
 }
 
@@ -2678,6 +2689,10 @@ html, body { height:100%; }
 
 .movie_label span {
 	color: #9e9e9e;
+}
+
+.movie_label.small {
+	font-size: 12px;
 }
 
 .movie_form_ctn {

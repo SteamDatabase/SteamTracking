@@ -3535,9 +3535,29 @@ div.early_access_announcements .divider {
 	height: 529px;
 }
 
+.html5_video_titlebar_ctn {
+	position: absolute;
+	top: -35px;
+	left: 0;
+	text-align: left;
+	background-color: rgba(0,0,0,0.8);
+	color: #ffffff;
+	padding: 5px;
+	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.html5_video_titlebar_ctn .video_category {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
 .html5_video_overlay {
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
 	height: 35px;
 	background-color: rgba(0,0,0,0.8);
 	width: 100%;

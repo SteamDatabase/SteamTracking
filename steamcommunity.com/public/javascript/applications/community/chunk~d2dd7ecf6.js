@@ -34251,13 +34251,7 @@
     },
     10454: (e, t, a) => {
       "use strict";
-      a.d(t, {
-        D7: () => T,
-        Pv: () => w,
-        TF: () => D,
-        YC: () => I,
-        bE: () => C,
-      });
+      a.d(t, { D7: () => C, Pv: () => D, TF: () => T, bE: () => b });
       var n = a(33940),
         i = a(94629),
         l = a(11858),
@@ -34274,11 +34268,10 @@
         h = a(23062),
         v = a(13806),
         S = a(31587),
-        E = (a(47330), a(70983)),
-        f = a(34793),
-        y = a(99626),
-        b = a.n(y);
-      function C(e) {
+        E = (a(47330), a(70983), a(34793)),
+        f = a(99626),
+        y = a.n(f);
+      function b(e) {
         const [t] = (0, u.Xt)();
         s.useEffect(
           () => (
@@ -34318,7 +34311,7 @@
           },
         });
       }
-      const T = (0, o.Pi)((e) => {
+      const C = (0, o.Pi)((e) => {
         const t = r.wk.GetEditModel(),
           a = t.GetCurEditLanguage();
         return s.createElement(_.uW, {
@@ -34335,7 +34328,7 @@
           realms: t.GetIncludedRealmList(),
         });
       });
-      let D = class extends s.Component {
+      let T = class extends s.Component {
         render() {
           let e = this.props.editModel,
             t = e.GetVisibilityState();
@@ -34360,7 +34353,7 @@
                   (0, S.Xx)("#EventEditor_Status_Public")
                 ),
                 a &&
-                  s.createElement(f.bC, {
+                  s.createElement(E.bC, {
                     tooltip: (0, S.Xx)("#EventEditor_Status_Public_ttip"),
                   }),
                 n &&
@@ -34368,7 +34361,7 @@
                     "span",
                     {
                       className: (0, v.Z)(
-                        b().PendingVisibilityText,
+                        y().PendingVisibilityText,
                         "PendingVisibilityText"
                       ),
                     },
@@ -34377,7 +34370,7 @@
                   ),
                 a &&
                   n &&
-                  s.createElement(f.bC, {
+                  s.createElement(E.bC, {
                     tooltip: (0, S.Xx)(
                       "#EventDashBoard_ModerationQueueWarning"
                     ),
@@ -34399,7 +34392,7 @@
                   "span",
                   { className: g().FlexRowContainer },
                   s.createElement(h.H6, { bSingleLine: !0, dateAndTime: t }),
-                  s.createElement(f.bC, {
+                  s.createElement(E.bC, {
                     tooltip: (0, S.Xx)("#EventEditor_Status_Staged_ttip"),
                   })
                 )
@@ -34415,50 +34408,15 @@
               (0, S.Xx)("#EventEditor_Status") +
                 ": " +
                 (0, S.Xx)("#EventEditor_Status_Draft"),
-              s.createElement(f.bC, {
+              s.createElement(E.bC, {
                 tooltip: (0, S.Xx)("#EventEditor_Status_Draft_ttip"),
               })
             )
           );
         }
       };
-      D = (0, n.gn)([o.Pi], D);
-      class I extends s.Component {
-        render() {
-          return s.createElement(
-            "div",
-            {
-              className: (0, v.Z)(
-                g().FlexColumnContainer,
-                g().BetaContainer,
-                g().PartnerEventFont
-              ),
-            },
-            s.createElement(
-              "div",
-              { className: g().EventBetaTextTitle },
-              (0, S.Xx)("#PartnerEvent_Beta_Title")
-            ),
-            s.createElement("br", null),
-            s.createElement(
-              "div",
-              null,
-              (0, S.kQ)(
-                "#PartnerEvent_Beta_Feedback",
-                s.createElement(
-                  "a",
-                  {
-                    target: E.De.IN_CLIENT ? void 0 : "_blank",
-                    href: "https://steamcommunity.com/groups/steamworks/discussions/24/",
-                  },
-                  (0, S.Xx)("#PartnerEvent_Beta_SteamWorks")
-                )
-              )
-            )
-          );
-        }
-      }
-      class w extends s.Component {
+      T = (0, n.gn)([o.Pi], T);
+      class D extends s.Component {
         render() {
           return (
             console.warn(
@@ -34466,7 +34424,7 @@
             ),
             s.createElement(
               "div",
-              { className: b().ErrorPage },
+              { className: y().ErrorPage },
               s.createElement(
                 "div",
                 { className: g().maintitle },
@@ -34475,7 +34433,7 @@
               this.props.errorCode &&
                 s.createElement(
                   "div",
-                  { className: b().ErrorCode },
+                  { className: y().ErrorCode },
                   " ",
                   (0, S.Xx)("#EventError_Code", this.props.errorCode),
                   " "
@@ -34483,7 +34441,7 @@
               this.props.strErrorMsg &&
                 s.createElement(
                   "div",
-                  { className: b().ErrorMsg },
+                  { className: y().ErrorMsg },
                   this.props.strErrorMsg
                 )
             )

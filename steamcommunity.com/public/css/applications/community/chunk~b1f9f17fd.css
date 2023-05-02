@@ -1176,8 +1176,36 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 .saleguidelinedialog_GuidelinesDoneCtn_-bMPu .saleguidelinedialog_Text_1yrjm {
   flex-basis: 70%;
 }
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu
+  .saleguidelinedialog_ProcessButtons_3d-Yu {
+  display: flex;
+  flex-direction: column;
+}
+.saleguidelinedialog_PresenterInfoCtn_Ltbsl {
+  display: flex;
+}
+.saleguidelinedialog_PresenterInfoCtn_Ltbsl .DialogInputLabelGroup {
+  margin-right: 4px;
+  margin-bottom: 2px;
+}
+.saleguidelinedialog_PresenterPreviewCtn_2Hk4r {
+  border-top: 1px solid #444955;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.saleguidelinedialog_PresenterPreviewCtn_2Hk4r
+  .saleguidelinedialog_PresenterPreviewDesc_3pwOK {
+  margin-bottom: 20px;
+}
 .saleguidelinedialog_Intro_yYvoX {
+  display: flex;
+  align-items: center;
   margin-bottom: 8px;
+}
+.saleguidelinedialog_Intro_yYvoX svg {
+  width: 32px;
 }
 .saleguidelinedialog_AgreementsCtn_1TWap {
   margin: 12px 0px;

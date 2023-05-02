@@ -211,13 +211,14 @@ HighlightPlayer.prototype.SendDashTrailerState = function( strID, bState )
 HighlightPlayer.prototype.HighlightItem = function( elem, bUserAction )
 {
 	var $Elem = $JFromIDOrElement( elem );
+
 	if ( this.BIsMovie( $Elem ) )
 		this.HighlightMovie( this.GetMovieId( $Elem ), bUserAction );
 	else
 		this.HighlightScreenshot( this.GetScreenshotId( $Elem ) );
 
 	// preload the next screenshot in-order
-	var nextItem = this.m_activeItem.next( '.highlight_player_item' );
+	var nextItem = this.GetNextItem();
 	if ( nextItem && this.BIsScreenshot( nextItem ) )
 		this.LoadScreenshot( this.GetScreenshotId( nextItem ) );
  }
@@ -240,7 +241,7 @@ HighlightPlayer.prototype.HighlightScreenshot = function( id, bSkipAnimation )
 	this.HighlightStripItem( 'thumb_screenshot_' + id, bSkipAnimation );
 
 	//after showing at least one screenshot, show only screenshots from that point onward
-	this.bScreenshotsOnly = true;
+	// this.bScreenshotsOnly = true;
 	this.StartTimer();
 }
 
@@ -492,37 +493,104 @@ HighlightPlayer.prototype.Transition = function( bUserAction )
 	if( isFullscreen || this.m_bScreenshotModalActive )
 		return;
 
-	var className = '.highlight_player_item';
-	if ( this.bScreenshotsOnly && !bUserAction )
-		className = '.highlight_screenshot';
-
-	var $NextItem = this.m_activeItem.next( className );
-	if ( !$NextItem.length )
-	{
-		$NextItem = this.m_elemPlayerArea.find( className ).first();
-	}
+	let $NextItem = this.GetNextItem()
 	if ( $NextItem.length )
 	{
 		this.HighlightItem( $NextItem );
 	}
  }
+
+HighlightPlayer.prototype.GetNextItem = function()
+{
+	var $ElemActiveItem = this.GetActiveThumb();
+
+	var className = '.highlight_strip_item';
+	if ( !BIsUserGameHighlightAutoplayEnabled() )
+		className = '.highlight_strip_screenshot';
+
+	var $NextItem = $ElemActiveItem.next( className );
+
+	if ( !$NextItem.length )
+	{
+		var $ElemFirstHighlight = this.m_elemStrip.find( className ).first();
+		var id = this.GetIDFromElement( $ElemFirstHighlight );
+
+		if ( this.BIsMovie( $ElemFirstHighlight ) )
+		{
+			$NextItem = $JFromIDOrElement( 'highlight_movie_' + id );
+		}
+		else
+		{
+			$NextItem = $JFromIDOrElement( 'highlight_screenshot_' + id );
+		}
+	}
+
+	return $NextItem;
+}
+
+HighlightPlayer.prototype.GetIDFromElement = function( $Elem )
+{
+	let id = '';
+	if ( this.BIsMovie( $Elem ) )
+	{
+		id = this.GetMovieId( $Elem );
+	}
+	else
+	{
+		id = this.GetScreenshotId( $Elem );
+	}
+
+	return id;
+}
 
 HighlightPlayer.prototype.TransitionBack = function( bUserAction )
 {
-	var className = '.highlight_player_item';
-	if ( this.bScreenshotsOnly && !bUserAction )
-		className = '.highlight_screenshot';
+	var $ElemActiveItem = this.GetActiveThumb();
 
-	var $NextItem = this.m_activeItem.prev( className );
+	var className = '.highlight_strip_item';
+	if ( !BIsUserGameHighlightAutoplayEnabled() )
+		className = '.highlight_strip_screenshot';
+
+
+	var $NextItem = $ElemActiveItem.prev( className );
+
 	if ( !$NextItem.length )
 	{
-		$NextItem = this.m_elemPlayerArea.find( className).last();
+		var $ElemLastHighlight = this.m_elemStrip.find( className ).last();
+		var id = this.GetIDFromElement( $ElemLastHighlight );
+
+		if ( this.BIsMovie( $ElemLastHighlight ) )
+		{
+			$NextItem = $JFromIDOrElement( 'highlight_movie_' + id );
+		}
+		else
+		{
+			$NextItem = $JFromIDOrElement( 'highlight_screenshot_' + id );
+		}
 	}
 	if ( $NextItem.length )
 	{
 		this.HighlightItem( $NextItem );
 	}
+
  }
+
+HighlightPlayer.prototype.GetActiveThumb = function()
+{
+	let $ElemActiveItem;
+	if ( this.BIsMovie( this.m_activeItem ) )
+	{
+		let id = this.GetMovieId( this.m_activeItem );
+		$ElemActiveItem = $JFromIDOrElement( 'thumb_movie_' + id );
+	}
+	else
+	{
+		let id = this.GetScreenshotId( this.m_activeItem );
+		$ElemActiveItem = $JFromIDOrElement( 'thumb_screenshot_' + id );
+	}
+
+	return $ElemActiveItem;
+}
 
 HighlightPlayer.prototype.StartTimer = function()
 {
@@ -788,6 +856,8 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 				'</div>' +
 			'</div>';
 
+		var titleBarSrc = '<div class="html5_video_titlebar_ctn"><span class="video_category"></span><span class="video_title"></span></div>';
+
 
 		return this.each(function() {
 
@@ -795,6 +865,7 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 			var video = $(this); // jQuery wrapped version.
 			var videoControl = this;
 			var mouseoutEvent = false;
+			var playEvent = false;
 			var length = 0;
 			var bIsFullscreen = false;
 			var bIsHD = false;
@@ -806,6 +877,10 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 				$(wrapper).css({'position': 'relative'});
 			var overlay = $(overlaySrc);
 			$(wrapper).append(overlay);
+
+			var titleBar = $(titleBarSrc);
+			if ( $(wrapper).data( 'video-category' ).length )
+				$(wrapper).append(titleBar);
 
 			function setup()
 			{
@@ -819,7 +894,8 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 						hide();
 					},
 					'timeupdate': function() { timeUpdate(); },
-					'playing': function() { eventPlay(); },
+					'playing': function() { eventPlaying(); },
+					'play': function() { eventPlay(); },
 					'click': function() { playPause(); },
 					'waiting': function() { eventWaiting() }
 				});
@@ -843,6 +919,12 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 				$('.fullscreen_button',overlay).bind('click', function(e) { toggleFullscreen(); });
 				$('.progress_bar_container',overlay).bind('click', function(e) { progressClick(e, this); });
 
+				if ( $(wrapper).data( 'video-category' ).length )
+					$('.video_category', titleBar).text( $(wrapper).data( 'video-category' ) );
+
+				if ( $(wrapper).data( 'video-title' ).length )
+					$('.video_title', titleBar).text( ' | ' + $(wrapper).data( 'video-title' ) );
+
 				updateVolume();
 			}
 
@@ -853,7 +935,8 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 				// TODO: Cool slidey animation would give us parity with flash except chrome barfs hard. re-enable when
 				// chrome learns how to animate stuff in <video> properly.
 				overlay.stop().animate({'bottom': '0px'}, 200);
-				//overlay.show();
+				titleBar.stop().animate({'top': '0'}, 200);
+
 				var maxWidth = $('.progress_bar_container', overlay).width();
 				var progress = maxWidth * ( videoControl.currentTime / videoControl.duration);
 
@@ -873,15 +956,15 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 
 			function hide()
 			{
-				clearTimeout(mouseoutEvent);
+				clearTimeout( mouseoutEvent );
+				clearTimeout( playEvent );
 				mouseoutEvent = setTimeout( function(){
 					overlay.stop().animate({'bottom': '-35px'}, 200);
 					$('.volume_slider',overlay).unbind('mousemove');
+					titleBar.stop().animate({'top': '-35px'}, 200);
 				}, 1000 );
 				// TODO: Cool slidey animation would give us parity with flash except chrome barfs hard. re-enable when
 				// chrome learns how to animate stuff in <video> properly.
-
-				//overlay.hide();
 			}
 
 			// We need to call this every time we start playback so changes between tabs and instances are always in sync.
@@ -938,6 +1021,15 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 			}
 
 			function eventPlay()
+			{
+				titleBar.stop().animate({'top': '0'}, 200);
+				clearTimeout(playEvent);
+				playEvent = setTimeout(function () {
+					titleBar.stop().animate({'top': '-35px'}, 200);
+				}, 5000 );
+			}
+
+			function eventPlaying()
 			{
 				$('.play_button',overlay).removeClass('play');
 				$('.play_button',overlay).addClass('pause');
@@ -1061,7 +1153,6 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 						videoControl.preload = "metadata";
 
 						$(videoControl).bind('loadedmetadata', function() {
-							console.log("loadedmetadata");
 							this.currentTime = videoPosition;
 							videoControl.play();
 							$(videoControl).unbind('loadedmetadata');

@@ -5096,6 +5096,15 @@ body.v6 .store_nav .popup_block_new .popup_body {
 	padding: 5px 6px;
 }
 
+.store_nav .popup_menu .category_hr {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(216, 216, 216, 0.3), transparent);
+    margin-top: 7px;
+    margin-bottom: 8px;
+    margin-left: 13px;
+    width: 50%;
+}
+
 .store_nav .popup_menu .popup_menu_item  {
 	text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 	width: fit-content;
@@ -5117,6 +5126,10 @@ body.v6 .store_nav .popup_block_new .popup_body {
 	transition-duration: 0.15s;
 	transition-timing-function: ease-in-out;
     white-space: normal;
+}
+
+html:not(.responsive.touch) .store_nav #genre_flyout .popup_menu .popup_genre_expand_content .popup_menu_item {
+    margin-left: 2px;
 }
 
 .store_nav .popup_menu .popup_menu_item:hover,
