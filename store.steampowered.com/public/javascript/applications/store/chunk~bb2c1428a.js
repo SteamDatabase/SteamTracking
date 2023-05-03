@@ -273,8 +273,6 @@
       e.exports = {
         "duration-app-launch": "800ms",
         PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
-        BetaContainer: "partnereventshared_BetaContainer_1KXQ4",
-        EventBetaTextTitle: "partnereventshared_EventBetaTextTitle_3roRb",
         Clear: "partnereventshared_Clear_2BXhG",
         Divider: "partnereventshared_Divider_1u63O",
         EventDefaultRowContainer:

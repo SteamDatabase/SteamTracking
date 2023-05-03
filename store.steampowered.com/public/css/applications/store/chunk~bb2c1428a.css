@@ -1036,28 +1036,6 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
-.partnereventshared_BetaContainer_1KXQ4 {
-  background-image: radial-gradient(
-    circle at top left,
-    #056890 0%,
-    hsl(197, 59%, 19%) 60%
-  );
-  border-bottom: 1px solid #09b8fe;
-  padding: 40px;
-  color: #e5e5e5;
-}
-.partnereventshared_BetaContainer_1KXQ4 a {
-  text-decoration: underline;
-}
-.partnereventshared_BetaContainer_1KXQ4
-  .partnereventshared_EventBetaTextTitle_3roRb {
-  font-size: 23px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  color: #78bbf2;
-  text-transform: none;
-  margin-bottom: 8px;
-}
 .partnereventshared_Clear_2BXhG {
   clear: left;
   display: block;

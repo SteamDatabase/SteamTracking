@@ -4032,6 +4032,7 @@ html.responsive.touch .ContentHubSalePage {
   margin-bottom: 12px;
   text-align: center;
   padding: 4px 32px;
+  width: fit-content;
   max-width: 940px;
   color: rgba(255, 255, 255, 0.85);
   text-shadow: 1px 1px 3px #000;
