@@ -7920,6 +7920,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: row;
   align-items: center;
   max-width: 30vw;
+  gap: 10px;
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition-duration: 0.1s;
@@ -7928,13 +7929,12 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .bottombar_DownloadStatusContent_ip-YZ .bottombar_Status_1sCy- {
   font-size: 12px;
   color: #8b929a;
-  padding-top: 3px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 .bottombar_DownloadStatusContent_ip-YZ .bottombar_Queue_3wJnT {
   font-size: 12px;
   color: #8b929a;
-  padding-top: 3px;
   font-weight: 400;
   transition-property: color;
   transition-duration: 0.1s;
@@ -7948,7 +7948,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   transition-property: color;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
-  margin-right: 10px;
 }
 .bottombar_DownloadStatusContent_ip-YZ:hover .bottombar_Icon_1KrJ3,
 .bottombar_DownloadStatusContent_ip-YZ:hover .bottombar_Queue_3wJnT {
@@ -7958,6 +7957,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 10px;
   width: 30vw;
   position: relative;
@@ -8004,7 +8004,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   pointer-events: none;
 }
 .bottombar_ProgressBarWrapper_2_Fom {
-  margin-top: 4px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -8025,6 +8024,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .bottombar_ProgressBarWrapper_2_Fom .bottombar_Status_1sCy- {
   flex-grow: 1;
+  text-transform: none;
 }
 .bottombar_ProgressBarWrapper_2_Fom .bottombar_Percentage_1-TLi {
   flex-grow: 0;
@@ -8035,40 +8035,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   --color-progress-bar-background: #000000;
   border-radius: 10px;
 }
-.bottombar_AddGameButton_2foCk {
-  height: 50%;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  cursor: pointer;
-}
-.bottombar_AddGameButton_2foCk .bottombar_Icon_1KrJ3 {
-  height: 16px;
-  width: 16px;
-  color: #67707b;
-  transition-property: color;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-in-out;
-}
-.bottombar_AddGameButton_2foCk:hover .bottombar_Icon_1KrJ3 {
-  color: #fff;
-}
-.bottombar_AddGameButton_2foCk .bottombar_Text_3OhUx {
-  font-size: 12px;
-  color: #8b929a;
-  padding-top: 3px;
-  font-weight: 400;
-  transition-property: color;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-in-out;
-}
-.bottombar_AddGameButton_2foCk:hover .bottombar_Text_3OhUx {
-  color: #fff;
-}
+.bottombar_AddGameButton_2foCk,
 .bottombar_FriendsButton_1TdaA {
-  height: 50%;
   flex-shrink: 0;
   display: flex;
   flex-direction: row;
@@ -8076,6 +8044,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   align-items: center;
   cursor: pointer;
 }
+.bottombar_AddGameButton_2foCk .bottombar_Icon_1KrJ3,
 .bottombar_FriendsButton_1TdaA .bottombar_Icon_1KrJ3 {
   height: 16px;
   width: 16px;
@@ -8083,6 +8052,22 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   transition-property: color;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
+  display: grid;
+}
+.bottombar_AddGameButton_2foCk .bottombar_Text_3OhUx,
+.bottombar_FriendsButton_1TdaA .bottombar_Text_3OhUx {
+  font-size: 12px;
+  color: #8b929a;
+  font-weight: 400;
+  transition-property: color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+.bottombar_AddGameButton_2foCk:hover .bottombar_Icon_1KrJ3 {
+  color: #fff;
+}
+.bottombar_AddGameButton_2foCk:hover .bottombar_Text_3OhUx {
+  color: #fff;
 }
 .bottombar_FriendsButton_1TdaA.bottombar_Disabled_2Sdix .bottombar_Icon_1KrJ3 {
   stroke: rgba(169, 169, 169, 0.5);
@@ -8091,21 +8076,77 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .bottombar_Icon_1KrJ3 {
   color: #fff;
 }
-.bottombar_FriendsButton_1TdaA .bottombar_Text_3OhUx {
-  font-size: 12px;
-  color: #8b929a;
-  padding-top: 3px;
-  font-weight: 400;
-  transition-property: color;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-in-out;
-}
 .bottombar_FriendsButton_1TdaA:hover:not(.bottombar_Disabled_2Sdix)
   .bottombar_Text_3OhUx {
   color: #fff;
 }
 .bottombar_FriendsButton_1TdaA.bottombar_Disabled_2Sdix .bottombar_Text_3OhUx {
   color: rgba(169, 169, 169, 0.5);
+}
+.browserviewfindinpage_FindBar_g9zNQ {
+  background-color: #0e141b;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  overflow: hidden;
+}
+.browserviewfindinpage_FindBar_g9zNQ .browserviewfindinpage_SearchInput_2Lxss {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 5px;
+  height: 22px;
+  width: auto;
+}
+.browserviewfindinpage_FindBar_g9zNQ
+  .browserviewfindinpage_SearchInput_2Lxss:focus {
+  padding: 5px;
+}
+.browserviewfindinpage_FindBar_g9zNQ
+  .browserviewfindinpage_SearchResults_2LDhi {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  line-height: 32px;
+  margin: 0px 10px;
+  flex: 1;
+  text-align: center;
+}
+.browserviewfindinpage_FindBar_g9zNQ
+  .browserviewfindinpage_ControlButton_3R1Os {
+  min-width: unset;
+  width: 32px;
+  height: 32px;
+}
+.browserviewfindinpage_FindBar_g9zNQ
+  .browserviewfindinpage_ControlButton_3R1Os
+  > svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 .desktopbrowser_LoadingThrobber_VicgW {
   flex: 1;

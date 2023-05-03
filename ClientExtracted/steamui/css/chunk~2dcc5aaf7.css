@@ -13948,6 +13948,16 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
   padding: 40px 0px;
   text-align: center;
 }
+.deferredsettinglabel_DeferredSettingLabel_1HSFi {
+  display: flex;
+  gap: 8px;
+}
+.deferredsettinglabel_DeferredSettingLabel_1HSFi
+  .deferredsettinglabel_Icon_2oIoS {
+  color: #ffc82c;
+  height: 20px;
+  width: 20px;
+}
 @keyframes hardwaresurveydialog_ItemFocusAnim-darkerGrey-nocolor_32hdK {
   from {
     background: #3d4450;
@@ -17154,6 +17164,9 @@ div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
   .activateproductdialog_ResultAcceptButton_2Zs0B {
   margin-top: 30px !important;
   width: 200px;
+}
+.activateproductdialog_ProductName_2yUw3 {
+  color: #1a9fff;
 }
 @keyframes librarysettings_ItemFocusAnim-darkerGrey-nocolor_2X9Xl {
   from {
@@ -54949,6 +54962,7 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   flex-direction: row;
   gap: 24px;
   justify-content: space-between;
+  align-items: center;
 }
 .downloads_SectionItem_1VNuY {
   display: flex;

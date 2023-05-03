@@ -1,4 +1,4 @@
-var CLSTAMP = "8027008";
+var CLSTAMP = "8030042";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4023,9 +4023,9 @@ var CLSTAMP = "8027008";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "May 1 2023 : 18:16:27",
-                BUILD_TIME_UTC: "May 2 2023 : 01:16:27",
-                BUILD_RTIME_UTC: 1682990187,
+                BUILD_TIME_LOCAL: "May 2 2023 : 18:22:27",
+                BUILD_TIME_UTC: "May 3 2023 : 01:22:27",
+                BUILD_RTIME_UTC: 1683076947,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -20756,36 +20756,42 @@ var CLSTAMP = "8027008";
             if (!o || (n && "none" === o.getComputedStyle(n).display)) return;
             let a = this.props.clientX,
               l = this.props.clientY,
-              s = o.innerWidth,
-              c = o.innerHeight,
-              u = 1,
-              d = null == n ? void 0 : n.getBoundingClientRect();
+              s = 0,
+              c = 0,
+              u = o.innerWidth,
+              d = o.innerHeight,
+              C = 1,
+              m = null == n ? void 0 : n.getBoundingClientRect();
             if (i)
               if (
                 (t.bScreenCoordinates ||
                   ((a += o.screenLeft), (l += o.screenTop)),
-                d && (d = w.ClientRectToScreenCoords(o, d)),
+                m && (m = w.ClientRectToScreenCoords(o, m)),
                 t.targetMonitor)
               )
-                (u = t.targetMonitor.flMonitorScale),
-                  (s = t.targetMonitor.nScreenWidth),
-                  (c = t.targetMonitor.nScreenHeight);
+                (C = t.targetMonitor.flMonitorScale),
+                  (s = t.targetMonitor.nScreenLeft),
+                  (c = t.targetMonitor.nScreenTop),
+                  (u = t.targetMonitor.nScreenWidth),
+                  (d = t.targetMonitor.nScreenHeight);
               else {
                 let e = o.screen,
                   t = 0,
                   r = 0;
                 e.availLeft && (t = e.availLeft),
                   e.availTop && (r = e.availTop),
-                  (s = t + e.availWidth),
-                  (c = r + e.availHeight);
+                  (s = t),
+                  (c = r),
+                  (u = t + e.availWidth),
+                  (d = r + e.availHeight);
               }
             (t.bOverlapHorizontal || t.bOverlapVertical) && (a = l = void 0);
-            let C = r.getBoundingClientRect();
+            let h = r.getBoundingClientRect();
             if (t.flGamepadScale > 0) {
               const e = t.flGamepadScale;
-              C = new DOMRect(C.x * e, C.y * e, C.width * e, C.height * e);
+              h = new DOMRect(h.x * e, h.y * e, h.width * e, h.height * e);
             }
-            let m = {
+            let p = {
                 menuLeft: void 0,
                 menuRight: void 0,
                 menuTop: void 0,
@@ -20794,75 +20800,75 @@ var CLSTAMP = "8027008";
                 menuHeight: void 0,
                 menuMinWidth: void 0,
               },
-              h = a || d.left,
-              p = a || d.right,
-              g = C.width;
-            t.bMatchWidth && ((g = p - h), (m.menuWidth = g)),
-              t.bGrowToElementWidth && (m.menuMinWidth = Math.max(g, p - h));
-            let f = (t.bOverlapHorizontal ? p : h) - g,
-              _ = f > 0,
-              E = s - (t.bOverlapHorizontal ? h : p) - g,
+              g = a || m.left,
+              f = a || m.right,
+              _ = h.width;
+            t.bMatchWidth && ((_ = f - g), (p.menuWidth = _)),
+              t.bGrowToElementWidth && (p.menuMinWidth = Math.max(_, f - g));
+            let E = (t.bOverlapHorizontal ? f : g) - s - _,
               v = E > 0,
-              M = (t.bPreferPopLeft || !v) && _;
-            _ ||
-              v ||
-              ((M = _ > v),
-              t.bFitToWindow && ((g += (M ? f : E) - 8), (m.menuWidth = g))),
-              (!t.bPreferPopLeft && v) || !_
-                ? (m.menuLeft = t.bOverlapHorizontal ? h : p)
-                : (m.menuRight = s - (t.bOverlapHorizontal ? p : h));
-            let b = l || d.top,
-              L = l || d.bottom,
-              y = r.scrollHeight;
-            t.bMatchHeight && ((y = L - b), (m.menuHeight = y));
-            let S = (t.bOverlapVertical ? L : b) - y,
-              B = S > 0,
-              k = c - (t.bOverlapVertical ? b : L) - y,
+              M = s + u - (t.bOverlapHorizontal ? g : f) - _,
+              b = M > 0,
+              L = (t.bPreferPopLeft || !b) && v;
+            v ||
+              b ||
+              ((L = v > b),
+              t.bFitToWindow && ((_ += (L ? E : M) - 8), (p.menuWidth = _))),
+              L
+                ? (p.menuRight = u - (t.bOverlapHorizontal ? f : g))
+                : (p.menuLeft = t.bOverlapHorizontal ? g : f);
+            let y = l || m.top,
+              S = l || m.bottom,
+              B = r.scrollHeight;
+            t.bMatchHeight && ((B = S - y), (p.menuHeight = B));
+            let k = (t.bOverlapVertical ? S : y) - c - B,
               x = k > 0,
-              R = (t.bPreferPopTop || !x) && B && !t.bDisablePopTop;
-            if (!B && !x) {
+              R = c + d - (t.bOverlapVertical ? y : S) - B,
+              H = R > 0,
+              I = (t.bPreferPopTop || !H) && x && !t.bDisablePopTop;
+            if (!x && !H) {
               const e =
                 void 0 !== t.bShiftToFitWindow
                   ? t.bShiftToFitWindow
                   : t.bFitToWindow && !t.bOverlapHorizontal;
-              (R = S > k && !t.bDisablePopTop),
-                e && (R ? (m.menuTop = 4) : (m.menuBottom = 4)),
+              (I = k > R && !t.bDisablePopTop),
+                e && (I ? (p.menuTop = 4) : (p.menuBottom = 4)),
                 t.bFitToWindow &&
-                  (e ? (y = Math.min(y, c - 8)) : (y += R ? S : k),
-                  (m.menuHeight = y - 8));
+                  (e ? (B = Math.min(B, d - 8)) : (B += I ? k : R),
+                  (p.menuHeight = B - 8));
             }
-            void 0 === m.menuBottom &&
-              void 0 === m.menuTop &&
-              (R
-                ? (m.menuBottom = c - (t.bOverlapVertical ? L : b))
-                : (m.menuTop = t.bOverlapVertical ? b : L)),
+            void 0 === p.menuBottom &&
+              void 0 === p.menuTop &&
+              (I
+                ? (p.menuBottom = d - (t.bOverlapVertical ? S : y))
+                : (p.menuTop = t.bOverlapVertical ? y : S)),
               i
-                ? (m.menuHeight || (m.menuHeight = C.height),
-                  m.menuWidth || (m.menuWidth = C.width),
-                  m.menuBottom &&
-                    !m.menuTop &&
-                    ((m.menuTop = c - m.menuBottom - m.menuHeight),
-                    (m.menuBottom = void 0)),
-                  m.menuRight &&
-                    !m.menuLeft &&
-                    ((m.menuLeft = s - m.menuRight - m.menuWidth),
-                    (m.menuRight = void 0)))
-                : (m.menuLeft && (m.menuLeft += o.scrollX),
-                  m.menuTop && (m.menuTop += o.scrollY),
-                  m.menuBottom &&
-                    (m.menuBottom +=
+                ? (p.menuHeight || (p.menuHeight = h.height),
+                  p.menuWidth || (p.menuWidth = h.width),
+                  p.menuBottom &&
+                    !p.menuTop &&
+                    ((p.menuTop = d - p.menuBottom - p.menuHeight),
+                    (p.menuBottom = void 0)),
+                  p.menuRight &&
+                    !p.menuLeft &&
+                    ((p.menuLeft = u - p.menuRight - p.menuWidth),
+                    (p.menuRight = void 0)))
+                : (p.menuLeft && (p.menuLeft += o.scrollX),
+                  p.menuTop && (p.menuTop += o.scrollY),
+                  p.menuBottom &&
+                    (p.menuBottom +=
                       o.document.body.clientHeight - o.scrollY - o.innerHeight),
-                  m.menuRight &&
-                    (m.menuRight +=
+                  p.menuRight &&
+                    (p.menuRight +=
                       o.document.body.clientWidth - o.scrollX - o.innerWidth)),
               (e ||
-                m.menuLeft !== this.state.menuLeft ||
-                m.menuRight !== this.state.menuRight ||
-                m.menuTop !== this.state.menuTop ||
-                m.menuBottom !== this.state.menuBottom ||
-                m.menuWidth !== this.state.menuWidth ||
-                m.menuHeight !== this.state.menuHeight) &&
-                this.setState(m);
+                p.menuLeft !== this.state.menuLeft ||
+                p.menuRight !== this.state.menuRight ||
+                p.menuTop !== this.state.menuTop ||
+                p.menuBottom !== this.state.menuBottom ||
+                p.menuWidth !== this.state.menuWidth ||
+                p.menuHeight !== this.state.menuHeight) &&
+                this.setState(p);
           }
           PositionPopupWindow() {
             if (
@@ -53310,9 +53316,9 @@ var CLSTAMP = "8027008";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "May 1 2023 : 18:16:27",
-                    BUILD_TIME_UTC: "May 2 2023 : 01:16:27",
-                    BUILD_RTIME_UTC: 1682990187,
+                    BUILD_TIME_LOCAL: "May 2 2023 : 18:22:27",
+                    BUILD_TIME_UTC: "May 3 2023 : 01:22:27",
+                    BUILD_RTIME_UTC: 1683076947,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -53458,7 +53464,7 @@ var CLSTAMP = "8027008";
           ),
           k = n.lazy(() =>
             Promise.all([r.e(7962), r.e(8553), r.e(58), r.e(5742)]).then(
-              r.bind(r, 19548)
+              r.bind(r, 57045)
             )
           );
         function x() {
@@ -53758,8 +53764,8 @@ var CLSTAMP = "8027008";
       ".js?contenthash=" +
       {
         27: "7df72e279be09610f03c",
-        58: "23bb39b3a2e44333389e",
-        131: "70b32fae5dda851384fe",
+        58: "ca7b1925bf1ecd83eb71",
+        131: "4aa302569cf88cea530a",
         200: "777643ad169046f46b5a",
         220: "0355b5539ec987b27c67",
         224: "b4180c8b19c4a7523994",
@@ -53816,7 +53822,7 @@ var CLSTAMP = "8027008";
         5175: "461f4e76ff29479b8ddd",
         5279: "271134b5737dc299cc64",
         5590: "e257b73af137dd9a4e50",
-        5742: "9cb359da7e8498a7dc62",
+        5742: "9ffe532f9d50540c572a",
         5984: "2cd3d3e4055ba19552be",
         6002: "3cfbd51cc04619d6b463",
         6006: "daa3ee8e6fac8a06111a",
@@ -53835,7 +53841,7 @@ var CLSTAMP = "8027008";
         7660: "8ed742b721a9bc18aef3",
         7781: "e589a411d033e2ebe4fa",
         7832: "35e371c703d65c6c518c",
-        7962: "e507a2c78017b5a86a40",
+        7962: "0fee64cc310e07c7ddf6",
         8011: "2bad8c957b2510d4af07",
         8085: "391c0bfee7d8e753f4b7",
         8232: "c2e719a340a48d9b8443",
@@ -53843,7 +53849,7 @@ var CLSTAMP = "8027008";
         8282: "485314ba66dfbb93b090",
         8319: "c700affcbda57ab2cdc8",
         8433: "9f9304c05723001c8317",
-        8467: "7d59427bc05e30c0904e",
+        8467: "1356e9dbb68696093a36",
         8553: "7aaed2ce65c581cdc824",
         8778: "25bd34e66f49774e8fd1",
         8956: "5b4ee2cee009644c5506",

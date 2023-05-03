@@ -5054,4 +5054,8 @@ Set a category for these games to help you find them quickly and organize your L
 "DownloadRegion_reunion"        "Reunion"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ukraine - Sevastopol"
+
+"SettingsController_AutosaveName"	"Controller Configuration"
+"ControllerBinding_Offline_Save"	"[Offline AutoSave]"
+"ControllerBinding_Incompatible_Save"	"[Incompatible Config]"
 }
