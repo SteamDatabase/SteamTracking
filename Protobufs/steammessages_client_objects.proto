@@ -273,6 +273,7 @@ message CMsgSystemPerfLimits {
 	repeated .ESplitScalingFilter split_scaling_filters_available = 26;
 	repeated .ESplitScalingScaler split_scaling_scalers_available = 27;
 	optional bool is_hdr_supported = 28;
+	optional int32 display_refresh_manual_hz_oc_max = 29;
 }
 
 message CMsgSystemPerfSettingsGlobal {
@@ -292,6 +293,7 @@ message CMsgSystemPerfSettingsGlobal {
 	optional float sdr_to_hdr_brightness = 17;
 	optional bool debug_force_hdr_support = 18;
 	optional bool force_hdr_10pq_output_debug = 19;
+	optional bool is_display_oc_enabled = 20;
 }
 
 message CMsgSystemPerfSettingsPerApp {

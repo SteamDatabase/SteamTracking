@@ -6934,7 +6934,7 @@
 	"ControllerBinding_Missing_friends" "Ваши друзья не делились своими настройками с сообществом игры."
 	"ControllerBinding_NonMigrated_config"	"[локальная раскладка]"
 	"ControllerBinding_Autosave_config"		"[Устаревшее локальное автосохранение]"
-	"ControllerBinding_Offline_Save"		"[автосохранение вне сети]"
+	"ControllerBinding_Offline_Save"		"[Автосохранение вне сети]"
 
 	"ControllerBinding_ActivatorDropDown" "Вид активатора"
 	"ControllerBinding_ActivatorDropDown_Description" "Активаторы определяют манеру ввода, например, обычное нажатие, долгое нажатие, двойное нажатие. Здесь вы можете выбрать нужные или удалить лишние."

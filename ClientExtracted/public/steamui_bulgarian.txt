@@ -5044,4 +5044,8 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "DownloadRegion_reunion"        "Реюнион"
 "DownloadRegion_kuwait"         "Кувейт"
 "DownloadRegion_ua_sevastopol"  "Украйна — Севастопол"
+
+"SettingsController_AutosaveName"	"Конфигурация за контролер"
+"ControllerBinding_Offline_Save"	"[Авт. запазване извън линия]"
+"ControllerBinding_Incompatible_Save"	"[Несъвместима конфигурация]"
 }

@@ -39,6 +39,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_BroadcastAvailableToWatch = 34;
 	k_EClientNotificationType_TimedTrialRemaining = 35;
 	k_EClientNotificationType_LoginRefresh = 36;
+	k_EClientNotificationType_MajorSale = 37;
 }
 
 enum ESystemUpdateNotificationType {

@@ -1825,6 +1825,7 @@ https://about.steamchina.com/content_report.html
 https://about.steamchina.com/infringement_report.html
 https://about.steamchina.com/parentguardianship_agreement.html
 https://apps.apple.com/app/id1465996312
+https://avatars.akamai.steamstatic.com/e34e65ef2ef16093d4428c930fbcc42490522ed3_full.jpg
 https://avatars.cloudflare.steamstatic.com/${hash}
 https://avatars.cloudflare.steamstatic.com/${strAvatarHash}${}.jpg
 https://avatars.cloudflare.steamstatic.com/${strHash}${strSize}.jpg
@@ -3006,6 +3007,7 @@ steam://open/library/view/soundtracks
 steam://open/minigameslist
 steam://open/newforyou
 steam://open/oldservers
+steam://open/runtimeinfo
 steam://open/screenshots
 steam://open/screenshots/${}
 steam://open/servers
@@ -3021,6 +3023,7 @@ steam://openurl/
 steam://openurl/${href}
 steam://openurl/${url}
 steam://openurl/${}
+steam://openurl/${}?${}=${}
 steam://openurl_external/
 steam://openurl_external/${}
 steam://openurl_external/https://help.steampowered.com/en/faqs/view/1433-AD20-F11D-B71E
@@ -3028,6 +3031,7 @@ steam://openurl_external/https://help.steampowered.com/en/faqs/view/443B-C1B8-09
 steam://openurl_external/https://help.steampowered.com/faqs/view/0C48-FCBD-DA71-93EB
 steam://openurl_external/https://help.steampowered.com/faqs/view/4593-5CB7-DC3C-64F0
 steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=${transID}
+steam://openurlforpid/
 steam://remoteplay/connect
 steam://remoteplay/connect/${}?appid=${appID}&${remoteplayString}
 steam://remoteplay/connect/${}?appid=${}&${}

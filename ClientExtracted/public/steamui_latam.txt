@@ -5032,4 +5032,8 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "DownloadRegion_reunion"        "Reunión"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ucrania - Sebastopol"
+
+"SettingsController_AutosaveName"	"Configuración del control"
+"ControllerBinding_Offline_Save"	"[Autoguardado sin conexión]"
+"ControllerBinding_Incompatible_Save"	"[Configuración incompatible]"
 }

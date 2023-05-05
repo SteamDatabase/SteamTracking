@@ -444,7 +444,7 @@
 "Steam_NoGamesUpdating"				"Momentan Steam nu actualizează niciun joc."
 "Steam_SteamErrorTitle"				"Steam - Eroare"
 "Steam_UpdatingTitle"				"Steam"
-"Steam_CheckingForUpdates"			"Se verifică pentru actualizări..."
+"Steam_CheckingForUpdates"			"Se verifică dacă există actualizări..."
 "Steam_LaunchingSteam"				"Se conectează la contul Steam: %AccountName%..."
 "Steam_UpdatingSteamInformation"	"Se actualizează informațiile Steam..."
 "Steam_UpdatingUserConfiguration"	"Se actualizează configurația utilizatorului..."
@@ -5028,4 +5028,8 @@ Artiști"
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Kuweit"
 "DownloadRegion_ua_sevastopol"  "Ucraina – Sevastopol"
+
+"SettingsController_AutosaveName"	"Configurația controlerului"
+"ControllerBinding_Offline_Save"	"[Salvare automată offline]"
+"ControllerBinding_Incompatible_Save"	"[Configurație incompatibilă]"
 }

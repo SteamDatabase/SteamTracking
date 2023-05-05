@@ -156,7 +156,7 @@
  SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamVProf::CVProfManager::CleanupUnusedProfiles()
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
- SteamVProf::CVProfManager::StartProfilingAllThreads(float)
+ SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  SteamVProf::CVProfile::MarkFrame(char const*)
  StringAfterPrefix

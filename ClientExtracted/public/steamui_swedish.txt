@@ -612,7 +612,7 @@ Ange lösenordet en gång till."
 "Steam_CancelPreloading"		"Avbryt förladdning"
 "Steam_PreloadProgressNotes"	"%game% förhämtas nu till din dator.\n\nOm du förbeställer spelet nu kommer det att låsas upp och vara klart för spel så fort det släpps officiellt."
 "Steam_PreloadProgressNotesPayed"	"%game% förladdas nu till din dator.\n\nHa tålamod – förladdning kan ta lång tid. Du kan stänga det här fönstret, men låt Steam köra och kontrollera igen om en stund."
-"Steam_PreloadProgressNotesStart"	"%game% är redo för förladdning till din dator.\n\nOm du förbeställer spelet nu kommer det att låsas upp och vara klart för spel så fort det släpps officiellt."
+"Steam_PreloadProgressNotesStart"	"%game% är redo att förhämtas till din dator.\n\nOm du förbeställer spelet nu kommer det att låsas upp och vara klart för spel så fort det släpps officiellt."
 "Steam_PreloadProgressNotesStartPayed"	"%game% är redo att förladdas till din dator."
 
 "Steam_PreloadDescription"		"Obs! Du förbeställer nu %subscription%. Det kommer att låsas upp och vara klart för spel så fort det släpps officiellt."
@@ -5041,4 +5041,8 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ukraina – Sevastopol"
+
+"SettingsController_AutosaveName"	"Kontrollkonfiguration"
+"ControllerBinding_Offline_Save"	"[Automatiskt sparande offline]"
+"ControllerBinding_Incompatible_Save"	"[Inkompatibel konfiguration]"
 }

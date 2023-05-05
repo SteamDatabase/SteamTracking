@@ -4816,7 +4816,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Asztali böngészők automatikusan bejelentkezhetnek Steames weboldalakra\n (a változások alkalmazása újraindítást igényel)"
 
 "SteamUI_RunningConflictingSoftware" "Ütköző szoftver észlelve"
-"SteamUI_RunningIncompatibleTcpService" "A(z) %incompatdll% (ami a(z) %incompatname% része)\ninkompatibilis változatát észleltük a Steam folyamatban.\n\nAjánljuk a szoftver frissítését vagy eltávolítását, ha összeomlásokat vagy\nhálózati lassulást tapasztalsz a Steam vagy egyes játékok futtatása közben."
+"SteamUI_RunningIncompatibleTcpService" "A(z) %incompatdll% (ami a(z) %incompatname% része)\nösszeférhetetlen változatát észleltük a Steam folyamatban.\n\nAjánljuk a szoftver frissítését vagy eltávolítását, ha összeomlásokat vagy\nhálózati lassulást tapasztalsz a Steam vagy egyes játékok futtatása közben."
 
 "Steam_XboxDriverInstall_Title"		"Xbox illesztőprogram telepítése"
 "Steam_XboxDriverInstall_Success"	"Az illesztőprogram sikeresen frissült, és a számítógéped újraindítása után aktív lesz."
@@ -5013,4 +5013,8 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Kuvait"
 "DownloadRegion_ua_sevastopol"  "Ukrajna - Szevasztopol"
+
+"SettingsController_AutosaveName"	"Játékvezérlő-konfiguráció"
+"ControllerBinding_Offline_Save"	"[Offline automatikus mentés]"
+"ControllerBinding_Incompatible_Save"	"[Összeférhetetlen konfiguráció]"
 }

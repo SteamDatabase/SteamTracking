@@ -25470,6 +25470,8 @@ and limitations under the License.
           t.strRestoreDetails &&
             l.push("restoredetails=" + t.strRestoreDetails),
           t.window_opener_id && l.push("openerid=" + t.window_opener_id),
+          t.parent_container_popup_id &&
+            l.push("parentcontainerpopupid=" + t.parent_container_popup_id),
           t.center_on_window &&
             void 0 === r.left &&
             void 0 === r.top &&
@@ -27503,4 +27505,4 @@ and limitations under the License.
       document.addEventListener("DOMContentLoaded", () => ci());
   })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=4990256c750a780b91fd
+//# sourceMappingURL=friends.js.map?contenthash=e7f8a6ab5618adf4575d

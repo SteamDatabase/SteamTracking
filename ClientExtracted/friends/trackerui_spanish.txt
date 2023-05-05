@@ -712,7 +712,6 @@
 "Broadcast_Notification_Stopped_Public" "Todos los usuarios han dejado de ver tu retransmisión pública"
 "Broadcast_Notification_Is_Watching" "está viendo tu retransmisión"
 "Broadcast_Notification_AvailableToWatch_Title" "¡La retransmisión está activada!"
-"Broadcast_Notification_AvailableToWatch_Friends" "Tus amigos pueden unirse a tu retransmisión en cualquier momento."
 "Broadcast_Notification_AvailableToWatch_Public" "Cualquier usuario de Steam puede unirse a tu retransmisión en cualquier momento."
 
 "Steam_Settings_BroadcastTitle" "Retransmisión"

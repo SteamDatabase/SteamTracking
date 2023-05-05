@@ -2372,7 +2372,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_FindContent$appType=game"			"Explorar juegos..."
 "Steam_FindContent$appType=demo"			"Buscar demos..."
 "Steam_FindContent$appType=media"			"Buscar archivos multimedia..."
-"Steam_FindContent$appType=music"			"Buscar bandas sonoras..."
+"Steam_FindContent$appType=music"			"Explorar bandas sonoras..."
 "Steam_FindContent$appType=tool"			"Buscar herramientas..."
 "Steam_FindContent$appType"                 "Buscar contenido..."
 
@@ -5032,4 +5032,8 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "DownloadRegion_reunion"        "Reunión"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ucrania - Sebastopol"
+
+"SettingsController_AutosaveName"	"Configuración del mando"
+"ControllerBinding_Offline_Save"	"[Autoguardado sin conexión]"
+"ControllerBinding_Incompatible_Save"	"[Configuración incompatible]"
 }

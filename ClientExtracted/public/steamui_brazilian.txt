@@ -5032,4 +5032,8 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "DownloadRegion_reunion"        "Reunião (França)"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ucrânia — Sevastópol"
+
+"SettingsController_AutosaveName"	"Configuração de controle"
+"ControllerBinding_Offline_Save"	"[Salvo auto. no modo off-line]"
+"ControllerBinding_Incompatible_Save"	"[Config. incompatível]"
 }

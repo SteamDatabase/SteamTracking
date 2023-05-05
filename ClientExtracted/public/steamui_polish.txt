@@ -5023,4 +5023,8 @@ zaktualizować system do wersji Mac OS X 10.7 lub wyższej."
 "DownloadRegion_reunion"        "Reunion"
 "DownloadRegion_kuwait"         "Kuwejt"
 "DownloadRegion_ua_sevastopol"  "Ukraina – Sewastopol"
+
+"SettingsController_AutosaveName"	"Konfiguracja kontrolera"
+"ControllerBinding_Offline_Save"	"[Autozapis offline]"
+"ControllerBinding_Incompatible_Save"	"[Niekompatybilna konfiguracja]"
 }

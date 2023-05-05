@@ -33,7 +33,7 @@
 "Steam_Settings_Library_Size_Medium" "중간"
 "Steam_Settings_Library_Size_Large" "크게"
 "Steam_Settings_Library" "라이브러리 설정"
-"Steam_Settings_Library_Size_Title" "라이브러리 사용자 인터페이스 요소의 디스플레이 크기"
+"Steam_Settings_Library_Size_Title" "라이브러리 내 UI 디스플레이 크기"
 "Steam_Settings_Library_Size_Automatic_Label" "(창 너비에 따라 요소 크기 결정)"
 "Steam_Settings_Library_LowBandwidth_Title" "낮은 대역폭 모드"
 "Steam_Settings_Library_LowBandwidth_Desc" "커뮤니티 콘텐츠 자동 불러오기와 같은 기능을 비활성화하여 대역폭 사용을 줄입니다."

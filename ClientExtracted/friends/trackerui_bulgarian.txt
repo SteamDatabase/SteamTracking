@@ -216,7 +216,7 @@
 "Friends_Chat_MemberDisconnected"						"%member_changed% се разкачи.%ignored%\n"
 "Friends_Chat_MemberWasKicked"						"%member_changed% беше изритан от %member_making_change%.\n"
 "Friends_Chat_MemberWasBanned"						"%member_changed% получи забрана от %member_making_change%.\n"
-"Friends_Chat_MemberIgnored"						"(Блокиран)"	
+"Friends_Chat_MemberIgnored"						"(Блокирани)"	
 
 "Friends_Chat_InviteToChatRoom"							"Покана към чат стая"
 "Friends_Chat_InviteToChatRoom_Title"					"Steam общност — Покана за чат стая"

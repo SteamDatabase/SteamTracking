@@ -303,6 +303,7 @@
  T SDL_BlitSurfaceScaled
  T SDL_BlitSurfaceUnchecked
  T SDL_BlitSurfaceUncheckedScaled
+ T SDL_BroadcastCondition
  T SDL_CaptureMouse
  T SDL_ClearAudioStream
  T SDL_ClearComposition
@@ -314,10 +315,6 @@
  T SDL_CloseJoystick
  T SDL_CloseSensor
  T SDL_ComposeCustomBlendMode
- T SDL_CondBroadcast
- T SDL_CondSignal
- T SDL_CondWait
- T SDL_CondWaitTimeout
  T SDL_ConvertAudioSamples
  T SDL_ConvertEventToRenderCoordinates
  T SDL_ConvertPixels
@@ -325,13 +322,14 @@
  T SDL_ConvertSurfaceFormat
  T SDL_CreateAudioStream
  T SDL_CreateColorCursor
- T SDL_CreateCond
+ T SDL_CreateCondition
  T SDL_CreateCursor
  T SDL_CreateMutex
  T SDL_CreatePalette
  T SDL_CreatePixelFormat
  T SDL_CreatePopupWindow
  T SDL_CreateRW
+ T SDL_CreateRWLock
  T SDL_CreateRenderer
  T SDL_CreateSemaphore
  T SDL_CreateShapedWindow
@@ -355,12 +353,13 @@
  T SDL_DelayNS
  T SDL_DequeueAudio
  T SDL_DestroyAudioStream
- T SDL_DestroyCond
+ T SDL_DestroyCondition
  T SDL_DestroyCursor
  T SDL_DestroyMutex
  T SDL_DestroyPalette
  T SDL_DestroyPixelFormat
  T SDL_DestroyRW
+ T SDL_DestroyRWLock
  T SDL_DestroyRenderer
  T SDL_DestroySemaphore
  T SDL_DestroySurface
@@ -421,6 +420,7 @@
  T SDL_GetAudioDriver
  T SDL_GetAudioStreamAvailable
  T SDL_GetAudioStreamData
+ T SDL_GetAudioStreamFormat
  T SDL_GetBasePath
  T SDL_GetCPUCacheLineSize
  T SDL_GetCPUCount
@@ -586,6 +586,7 @@
  T SDL_GetScancodeFromKey
  T SDL_GetScancodeFromName
  T SDL_GetScancodeName
+ T SDL_GetSemaphoreValue
  T SDL_GetSensorData
  T SDL_GetSensorFromInstanceID
  T SDL_GetSensorInstanceID
@@ -714,6 +715,8 @@
  T SDL_LockAudioDevice
  T SDL_LockJoysticks
  T SDL_LockMutex
+ T SDL_LockRWLockForReading
+ T SDL_LockRWLockForWriting
  T SDL_LockSurface
  T SDL_LockTexture
  T SDL_LockTextureToSurface
@@ -759,6 +762,7 @@
  T SDL_PeepEvents
  T SDL_PlayAudioDevice
  T SDL_PollEvent
+ T SDL_PostSemaphore
  T SDL_PremultiplyAlpha
  T SDL_PumpEvents
  T SDL_PushEvent
@@ -820,14 +824,10 @@
  T SDL_SaveBMP_RW
  T SDL_ScreenKeyboardShown
  T SDL_ScreenSaverEnabled
- T SDL_SemPost
- T SDL_SemTryWait
- T SDL_SemValue
- T SDL_SemWait
- T SDL_SemWaitTimeout
  T SDL_SendGamepadEffect
  T SDL_SendJoystickEffect
  T SDL_SetAssertionHandler
+ T SDL_SetAudioStreamFormat
  T SDL_SetClipboardText
  T SDL_SetCursor
  T SDL_SetError
@@ -900,6 +900,7 @@
  T SDL_ShowMessageBox
  T SDL_ShowSimpleMessageBox
  T SDL_ShowWindow
+ T SDL_SignalCondition
  T SDL_SoftStretch
  T SDL_SoftStretchLinear
  T SDL_StartTextInput
@@ -914,10 +915,14 @@
  T SDL_TextInputShown
  T SDL_ThreadID
  T SDL_TryLockMutex
+ T SDL_TryLockRWLockForReading
+ T SDL_TryLockRWLockForWriting
+ T SDL_TryWaitSemaphore
  T SDL_UnloadObject
  T SDL_UnlockAudioDevice
  T SDL_UnlockJoysticks
  T SDL_UnlockMutex
+ T SDL_UnlockRWLock
  T SDL_UnlockSurface
  T SDL_UnlockTexture
  T SDL_UpdateGamepads
@@ -933,8 +938,12 @@
  T SDL_Vulkan_GetVkGetInstanceProcAddr
  T SDL_Vulkan_LoadLibrary
  T SDL_Vulkan_UnloadLibrary
+ T SDL_WaitCondition
+ T SDL_WaitConditionTimeout
  T SDL_WaitEvent
  T SDL_WaitEventTimeout
+ T SDL_WaitSemaphore
+ T SDL_WaitSemaphoreTimeout
  T SDL_WaitThread
  T SDL_WarpMouseGlobal
  T SDL_WarpMouseInWindow
@@ -1108,7 +1117,6 @@
  __error
  __maskrune
  __objc_personality_v0
- __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -1258,6 +1266,20 @@
  pthread_mutex_unlock
  pthread_mutexattr_init
  pthread_mutexattr_settype
+ pthread_rwlock_destroy
+ pthread_rwlock_destroy$UNIX2003
+ pthread_rwlock_init
+ pthread_rwlock_init$UNIX2003
+ pthread_rwlock_rdlock
+ pthread_rwlock_rdlock$UNIX2003
+ pthread_rwlock_tryrdlock
+ pthread_rwlock_tryrdlock$UNIX2003
+ pthread_rwlock_trywrlock
+ pthread_rwlock_trywrlock$UNIX2003
+ pthread_rwlock_unlock
+ pthread_rwlock_unlock$UNIX2003
+ pthread_rwlock_wrlock
+ pthread_rwlock_wrlock$UNIX2003
  pthread_self
  pthread_setcanceltype
  pthread_setcanceltype$UNIX2003

@@ -126,6 +126,7 @@ message CMsgProtoBufHeader {
 	optional uint64 token_id = 36;
 	optional .CMsgGCRoutingProtoBufHeader routing_gc = 37;
 	optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];
+	optional string wg_token = 39;
 
 	oneof ip_addr {
 		uint32 ip = 15;

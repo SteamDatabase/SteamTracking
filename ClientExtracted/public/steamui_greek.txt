@@ -5031,4 +5031,8 @@
 "DownloadRegion_reunion"        "Ρεϊνιόν"
 "DownloadRegion_kuwait"         "Κουβέιτ"
 "DownloadRegion_ua_sevastopol"  "Ουκρανία – Σεβαστούπολη"
+
+"SettingsController_AutosaveName"	"Διαμόρφωση χειριστηρίου"
+"ControllerBinding_Offline_Save"	"[Αυτ. αποθήκευση εκτός σύνδεσης]"
+"ControllerBinding_Incompatible_Save"	"[Μη συμβατή διαμόρφωση]"
 }

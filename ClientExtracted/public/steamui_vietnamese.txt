@@ -5037,4 +5037,8 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "DownloadRegion_reunion"        "Reunion"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ukraine - Sevastopol"
+
+"SettingsController_AutosaveName"	"Thiết lập tay cầm"
+"ControllerBinding_Offline_Save"	"[Bản tự lưu khi ngắt mạng]"
+"ControllerBinding_Incompatible_Save"	"[Thiết lập không tương thích]"
 }

@@ -61,11 +61,8 @@
  CFStringCreateWithFormat
  CFStringGetCString
  CFStringGetCharacterAtIndex
- CFStringGetFileSystemRepresentation
  CFStringGetLength
  CFStringGetTypeID
- CFURLCopyFileSystemPath
- CFURLCreateFromFSRef
  CFURLCreateWithBytes
  CFUUIDCreateString
  CGDisplayBitsPerPixel
@@ -404,7 +401,6 @@
  V_StripPrecedingAndTrailingWhitespace
  V_StripTrailingSlash
  V_StripTrailingWhitespaceASCII
- V_TruncateAbsolutePathToDiskIdentity
  V_URLContainsDomain
  V_URLCracker
  V_URLDecode
@@ -970,10 +966,6 @@
  std::__1::random_device::operator()()
  std::__1::random_device::random_device(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::random_device::~random_device()
- std::__1::recursive_mutex::lock()
- std::__1::recursive_mutex::recursive_mutex()
- std::__1::recursive_mutex::unlock()
- std::__1::recursive_mutex::~recursive_mutex()
  std::__1::recursive_timed_mutex::lock()
  std::__1::recursive_timed_mutex::recursive_timed_mutex()
  std::__1::recursive_timed_mutex::try_lock()

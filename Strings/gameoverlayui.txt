@@ -4,8 +4,6 @@ __text
 __TEXT
 __stubs
 __TEXT
-j'
-j'
 __stub_helper
 __TEXT
 __cstring
@@ -9632,6 +9630,7 @@ open_external/
 http:
 https:
 www.
+openurlforpid
 openurl
 openurl/
 about:
@@ -9897,8 +9896,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-May  2 2023
-18:24:47
+May  4 2023
+14:48:32
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -11014,6 +11013,7 @@ not found
 Not supported.
 : [
 ]
+]
 CHECK failed: field->is_repeated() || (index == -1):
 Index must be -1 for non-repeated fields
 ...<truncated>...
@@ -11787,7 +11787,6 @@ se
 event
 Couldn't parse script file: expected 'event', found '%s'
 Couldn't parse script file: expected <event name>, found nothing
-{
 Couldn't parse script sequence '%s': expected '{', found '%s'
 animate
 Accel
@@ -12776,9 +12775,7 @@ Key Pad =
 KEY_CLEAR
 Clear
 KEY_LBRACKET
-[
 KEY_RBRACKET
-]
 KEY_SEMICOLON
 ;
 KEY_APOSTROPHE
@@ -12915,7 +12912,6 @@ _
 KEY_PLUS
 KEY_LCURLY
 KEY_RCURLY
-}
 KEY_BAR
 |
 KEY_COLON
@@ -13286,8 +13282,11 @@ You should clear the KeyValues instance before calling this function or call Mer
 {
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 }
+[
+{
 
 ]
+}
 GetIntFromString() did not get correct peCS parameter
 GetUint64FromString() did not get correct peCS parameter
 GetFloatFromString() did not get correct peCS parameter
@@ -13799,25 +13798,17 @@ Dec
 .
 .
 0
-/C
+5C
+(C
 p
 0
 0
 p
 0
-}&
-.
-.
-.
-V&
-&
-&
-&
-&
-&
-%
-&
-&
+Y&
+U&
+L&
+s%
 &
 &
 &
@@ -13833,13 +13824,12 @@ j
 j
 j
 j
+}%
 p%
 Ic
 0
-%
 p
 0
-LA
 j
 j
 j
@@ -13847,18 +13837,11 @@ j
 j
 j
 %
-+
 %
 j
 j
+E%
 ]
-,
-t#
-@#
-?#
-%
-j
-r$
 j
 j
 j
@@ -13906,12 +13889,13 @@ j
 j
 j
 j
-#
 j
 j
 j
 j
-2$
+j
+$
+$
 $
 j
 j
@@ -13927,24 +13911,26 @@ j
 j
 j
 j
+)@
 j
 j
 j
 j
 j
+Q$
 @
 @
-@
-@
-@
-+
-+
 +
 +
 0
+/
 A9]
+$
+$
+/
 O
 d
+D#
 j
 j
 j
@@ -13957,8 +13943,7 @@ j
 j
 j
 j
-'
-'
+<"
 
 
 
@@ -13975,11 +13960,6 @@ p
 0
 p
 0
-*
-*
-*
-*
-*
 p
 0
 p
@@ -13991,12 +13971,16 @@ p
 p
 0
 p
+#
 p
 p
-1
+2
 @
-4&
-N#
+!
+#
+#
+#
+#
 #
 #
 #
@@ -14007,10 +13991,12 @@ N#
 Mce
 #
 
-?
-?
+#
+-!
 "
 0
+E)
+D)
 0
 j
 j
@@ -14040,14 +14026,17 @@ j
 j
 j
 j
-T!
+["
 Hi
-7!
 "
 "
+1
+>
+>
 !
+j
+j
 !
-!
 j
 j
 j
@@ -14059,20 +14048,10 @@ j
 j
 j
 j
-j
-j
-=
-=
-=
-=
-=
 0
 p
 0
-C!
-k
->!
-0!
+@=
 #
 j
 j
@@ -14094,6 +14073,7 @@ j
 j
 j
 j
+2
 j
 j
 j
@@ -14113,9 +14093,9 @@ AT=
 D
 @
 @
-W
-B
-6
+'
+I
+D
 @
 Hc
 Hc
@@ -14148,14 +14128,15 @@ IcE
 @
 @
 V
+H;5b%%
 =
 =
-9
 !
+-
+"
 @
 z
 &
-,
 @
 M9e
 @
@@ -14293,7 +14274,6 @@ G
 @
 >
 0
-e.
 p
 =
 0
@@ -14352,19 +14332,19 @@ P
 |
 @
 @
+>!
 d
-x
-fD9%-r(
+}
+fD9%jr(
+fD9-Cm(
+fD9-/l(
 
 
 
 A+M
-*
-t7f9o)(
 
 
 
-8
 j
 j
 j
@@ -14373,8 +14353,8 @@ j
 j
 =
 0
-E
-1
+g
+q&
 j
 j
 j
@@ -14405,7 +14385,6 @@ j
 j
 j
 
-6&
 d
 &
 &
@@ -14413,11 +14392,11 @@ d
 
 0
 A+4$A+u
-
-~
 =
 =
 @
+E
+
 j
 j
 j
@@ -14495,6 +14474,8 @@ j
 j
 j
 
+
+"
 j
 j
 j
@@ -14539,6 +14520,7 @@ j
 j
 j
 j
+8!
 j
 j
 j
@@ -14577,7 +14559,6 @@ j
 j
 j
 j
-W
 
 
 @
@@ -14620,6 +14601,7 @@ j
 j
 j
 j
+=
 .
 d
 =
@@ -14632,7 +14614,6 @@ d
 @
 @
 @
-;
 @
 @
 @

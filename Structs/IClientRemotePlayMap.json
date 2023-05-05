@@ -26,6 +26,10 @@
             "argc": "4"
         },
         {
+            "name": "BStartRemotePlayTogether",
+            "argc": "2"
+        },
+        {
             "name": "BSendRemotePlayTogetherInvite",
             "argc": "3"
         }

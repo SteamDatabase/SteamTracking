@@ -46,7 +46,7 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/crashhandler.dylib
-Vcx)8Y
+b3Z7[
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -318,16 +318,16 @@ Qj1P
 ^_[]
 ^_[]
 ^_[]
+GL9G
 ^_[]
+VWPS
 ^_[]
-^_[]
-^_[]
-F4uS
+PQRWV
 ^_[]
 ^_[]
 ,^_[]
-PSj	V
 ^_[]
+PSj	V
 ^_[]
 ^_[]
 ^_[]
@@ -537,8 +537,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-May  2 2023
-18:22:19
+May  4 2023
+14:46:05
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -558,7 +558,6 @@ NULL == pValObjectPrev->m_pValObjectNext
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
-m_nRecursions > 0
 Root
 m_pBudgetGroups == NULL
 Unaccounted
@@ -580,11 +579,13 @@ Streaming
 ThreadWorkItem
 TenFoot
 tier1
+m_vecNodeMemBlocks.size() == 1
+m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
 m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
-m_pParent
+m_nRecursions > 0
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 16CBreakpadFactory
 16IBreakpadFactory
@@ -778,8 +779,7 @@ Dzll
 `m(w
 !	'J+
 Z."&
-Rg	~
-iS<>O
+feS<>O
 _Breakpad_SetSteamID
 _CreateInterface
 .objc_class_name_NSArray
@@ -944,24 +944,22 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-DNMN:
-'\Yj
-kcU}
-lnCHP
-_m#O
+M>H+Y
+dGh 
+ZD2\
+@O6L
+@I,7
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-hmzY 
-`t'x
-x4Z	
-B5	h
-X=mKQ
-0S(2
-]_y9@H,
-y)BtX2
-S8G,
+xB@2
+z5B$
+oPdm
+C>$f
+*g6~
+Zgd]TlS
+HeHD
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1017,8 +1015,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230503012242Z0/
-a}sO
+230504214628Z0/
+s10-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1026,38 +1024,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		pDM3nXze3DF70kM1E2GfYX1zTwA=
+		OokrmEK+pDp6eYxorA5qIm4HczE=
 		</data>
 		<data>
-		NcWrkTQl7AgARoaAAXOqLxcgEXM=
+		wk1nyCR9+JyhdMqi72lDjvg4exE=
 		</data>
 	</array>
 </dict>
 </plist>
-%lN6
-GSy/
-BoXz
-20230503012328Z0
+EHEs{n
+4GYBF
+a-)bAM
+&.&r
+20230504214633Z0
+WwW>
++!20
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230419205837Z
-230531205836Z0B1
-Timestamp Signer NWK11
+230419204020Z
+230531204019Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-u]/:d
-Bu.X
-1L|K
-LWrKI
+=&9!GD
+iVd+
+0odL
+g}g/
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-i2d+
-EOSv(
-w^VX
--)KwX
+!YHt
+f5ND9
+7I~6
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1096,13 +1096,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230503012328Z0#
-fO1c
-0d"c
->L<l
-m	].-
-5x8z
-H32iG
+WwW>
++!20	
+230504214633Z0#
+ktX}
+ "mh3@y7
+_uPtf
 __TEXT
 __text
 __TEXT
@@ -1629,39 +1628,33 @@ AWAVAUATSPH
 [A\A]A^A_]
 AWAVATSI
 [A\A^A_]
-AVSI
-[A^]
-AVSH
-[A^]
-AWAVAUATSH
-[A\A]A^A_]
-AVSH
-[A^]
-AWAVAUATSH
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVATSA
-[A\A^A_]
-[A^]
-CHuO
 AWAVSPI
 [A^A_]
+AVSH
+[A^]
+AWAVATSE
+Cp[A\A^A_]
+AVSH
+[A^]
+AWAVATSA
+GX[A\A^A_]
+AWAVAUATSH
+Ic\$
+H[A\A]A^A_]
+AWAVSPH
 [A^A_]
-AWAVAUATSPL
-=urH
-[A\A]A^A_]
-[A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
+AVSH
+0[A^]
 AWAVAUATSPI
 [A\A]A^A_]
 AVSH
 [A^]
-AWAVATSI
-|$(H
-=uNH
-[A\A^A_]
-[A\A^A_]
+AVSI
+F(I9F
+[A^]
+[A^]
 AVSI
 [A^]
 t-UH
@@ -1670,6 +1663,9 @@ AVSH
 t<UH
 AVSH
 [A^]
+AWAVSPI
+<u4H
+[A^A_]
 AWAVATSE1
 [A\A^A_]
 Installing breakpad crash handler
@@ -1837,8 +1833,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-May  2 2023
-18:22:20
+May  4 2023
+14:46:05
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -1860,7 +1856,6 @@ NULL == pValObjectPrev->m_pValObjectNext
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
-m_nRecursions > 0
 Root
 m_pBudgetGroups == NULL
 Unaccounted
@@ -1882,11 +1877,13 @@ Streaming
 ThreadWorkItem
 TenFoot
 tier1
+m_vecNodeMemBlocks.size() == 1
+m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
 m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
-m_pParent
+m_nRecursions > 0
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 init
 stringWithCString:encoding:
@@ -2112,7 +2109,7 @@ CreateInterface
 @jtt
 Fvvh
 [g'b
-kG,4B
+n]G*4Bd
 _Breakpad_SetSteamID
 _CreateInterface
 _BreakpadAddUploadParameter
@@ -2278,28 +2275,25 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-c"8{[
-[cdFI
-w)eY
-Y,b+O
-S7H^(
-5J[;
+GCHm
+ce}g
+\Srd
+P|:vK'
+Z)L(
+7-DN
+R`Db@#
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-*5e+
->/#"
-|F-&?
- n{*
-?2${
-6:8a
-(rAM
-OP'J%Rf
-Z,zB
-y$?k
-_[Al
-O	7<
+;_lt
+G#I>
+E@.[
+C)S8
+7|84
+lD't
+y2Y I.5
+|1]}
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2355,7 +2349,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230503012242Z0/
+230504214628Z0/
+RKT 0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2363,19 +2358,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		60ZX1EPD1wkoA7nVTLPCWhcmf3w=
+		NseiqdcT71AZWPErs8mnFcxxkvg=
 		</data>
 		<data>
-		YL8/u6qnoBl4U6WhCbEGJOBcpDs=
+		o0DUxK8uPsrkuoshmvDSYgz1mhQ=
 		</data>
 	</array>
 </dict>
 </plist>
-S*$e
-bZLA36
-VLSN!]A
-~Z+~
-20230503012328Z0
+Zd6-
+t2ar.I
+}4Eovq
+20230504214633Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2434,14 +2428,13 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230503012328Z0#
+230504214633Z0#
+}?!W
 fO1c
 0d"c
-F:4w
-k_-{
-}P"@$
-eP;V
-&sXv'
+fc>eL
+;nS"
+(\uw
 __TEXT
 __text
 __TEXT
@@ -2488,6 +2481,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
+&i~{FV4
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -2508,12 +2502,13 @@ h&B)
 Lii8k	
 +ih8J	
 	En9
-R	E.9h
+R	E.9
 (I.9
 ii8J	
 T@cE
 *An9
 R*A.9
+ q	X
 jv8(
 h(8*
 ij`8
@@ -2535,7 +2530,6 @@ T		@9?
 5'qHs
 (a@9
 5(	@
-1)9`
 1i9h
 ThZ@
 ThZ@
@@ -2557,11 +2551,11 @@ ii8J
 T+	@
 !}9h
 	)}9
-R	)=9@}
+R	)=9
 %=9h
 (!=9
 	-}9
-R	-=9
+R	-=9`t
 bT9H
 @9_q
 jt8 
@@ -2575,9 +2569,9 @@ i"D)
 hBA9
 h2@9
 0@9h
-4h2@9
-TsJ@
-ThN@
+5h2@9
+Q+}@
+Th&Y
 Installing breakpad crash handler
 BreakpadProductDisplay
 BreakpadProduct
@@ -2747,8 +2741,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-May  2 2023
-18:22:21
+May  4 2023
+14:46:06
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2768,7 +2762,6 @@ NULL == pValObjectPrev->m_pValObjectNext
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
-m_nRecursions > 0
 Root
 m_pBudgetGroups == NULL
 Unaccounted
@@ -2790,11 +2783,13 @@ Streaming
 ThreadWorkItem
 TenFoot
 tier1
+m_vecNodeMemBlocks.size() == 1
+m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
 m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
-m_pParent
+m_nRecursions > 0
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 stringWithCString:encoding:
 bundleWithPath:
@@ -3016,7 +3011,8 @@ CreateInterface
 HXX\
 Ll(D\
 Hx0`
-`L,@P
+00((
+lPL,@P
 _Breakpad_SetSteamID
 _CreateInterface
 _BreakpadAddUploadParameter
@@ -3182,30 +3178,23 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
- pLW
-;q7'U
-Ge9TQ
-Cf'F
-I3,60
-2?W,t_j@
-lXCk
-<(aj
-6ix~t
-Baj%
+j,&UE
+3E>z
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-nsiO~
-$7i'
-#YQ$
-/n8n6
-R/,h
-aG@"
-6~|<
-iKw{CE
-DIHX
-[V@c
+;]frS
+P\|)
+dOIew1
+\?-6
+xCjp
+v"x2
+*JYY
+F(Vy
+\TG.=8/td
+F\2$
+X~r1
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -3261,8 +3250,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230503012242Z0/
- A"j^
+230504214628Z0/
+5h[{
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3270,41 +3259,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		jTgh3VrwfjUMYsjmhuTZcS/7o1g=
+		IG2zq0OesFs0/BoJ1Zz/y4Ay0tc=
 		</data>
 		<data>
-		QSJqXu9GaRymuiEivPT1waMwZA4=
+		I1DuPcqey22PK8OoQjMYv0BzV5Y=
 		</data>
 	</array>
 </dict>
 </plist>
-XPlje
-3G/}	
-}+V]
-(R/" x
-P	uH~
-20230503012328Z0
-WwW>
-+!20
+u82c
+[mf/
+c++8I
+20230504214633Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230419204020Z
-230531204019Z0B1
-Timestamp Signer NWK21
+230419205837Z
+230531205836Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-=&9!GD
-iVd+
-0odL
-g}g/
+u]/:d
+Bu.X
+1L|K
+LWrKI
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-!YHt
-f5ND9
-7I~6
+i2d+
+EOSv(
+w^VX
+-)KwX
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3343,12 +3329,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-WwW>
-+!20	
-230503012328Z0#
-.A0+
-kTp'v
-GEln
-32|0
-F'ZW
-^~0q
+230504214633Z0#
+fO1c
+0d"c
+X/?/1$
+fYDe

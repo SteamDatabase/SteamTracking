@@ -262,6 +262,10 @@
             "argc": "1"
         },
         {
+            "name": "AllowSetForegroundThroughWebhelper",
+            "argc": "2"
+        },
+        {
             "name": "SetOverlayBrowserInfo",
             "argc": "9"
         },

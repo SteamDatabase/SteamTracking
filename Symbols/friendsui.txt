@@ -101,7 +101,7 @@
  SteamThreadTools::CThreadMutex::~CThreadMutex()
  SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
- SteamVProf::CVProfManager::StartProfilingAllThreads(float)
+ SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  StringAfterPrefix
  T CRYPTO_memcmp

@@ -412,7 +412,7 @@
 "Friends_AddPlayerAsFriend"				"Arkadaş olarak ekle..."
 "Friends_NoRecentlyPlayedWithUsers"		"Henüz hiç kimseyle bir Steam oyunu oynamadınız."
 "Friends_NoCurrentlyPlayedWithUsers"		"Hiçbir Steam kullanıcısı oyun sunucusu tarafından raporlanmadı."
-"Friends_PlayerName"						"PROFİL ADI"
+"Friends_PlayerName"						"Profil adı"
 "Friends_SteamIDURLHeader"				"Steam Profili"
 "Friends_PlayerRelationship"				"İLİŞKİ"
 "Friends_PlayedWithGame"					"Oyun"

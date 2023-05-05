@@ -2323,6 +2323,7 @@ not found
 Not supported.
 : [
 ]
+]
 CHECK failed: field->is_repeated() || (index == -1):
 Index must be -1 for non-repeated fields
 ...<truncated>...
@@ -3734,7 +3735,6 @@ You should clear the KeyValues instance before calling this function or call Mer
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 :
 
-]
 GetIntFromString() did not get correct peCS parameter
 GetUint64FromString() did not get correct peCS parameter
 GetFloatFromString() did not get correct peCS parameter
@@ -3887,6 +3887,7 @@ j
 j
 j
 j
+J%
 0
 0
 AT=
@@ -3956,12 +3957,12 @@ M9e
 0
 @
 @
+F
 
 
 
 d
 A+M
-P
 j
 j
 j
@@ -4204,8 +4205,10 @@ d
 =*.*
 =
 @
+R
 @
 @
+Z
 @
 @
 @

@@ -409,7 +409,7 @@
 	"EventDisplay_CallToAction_VisitStore": "View Store Page",
 	"EventDisplay_CallToAction_FreeDemo": "Free Demo",
 
-	"EventDisplay_Events": "Admin Dashboard",
+	"EventDisplay_Events": "Back To Event List",
 	"EventDisplay_SeeOldVersion": "View Current Customer Version",
 	"EventDisplay_SalesPage": "View Store Sales Page",
 	"EventDisplay_StatsPage": "(VO) Stats Page",
@@ -2729,6 +2729,8 @@
 	"SteamNotifications_Comment_Player_Profile": "%1$s's profile",
 	"SteamNotifications_Comment": "Comment",
 	"SteamNotifications_Comment_NewDiscussion": "A new discussion in '%1$s'",
+
+	"SteamNotifications_MajorSale": "Sale",
 
 	"Notification_ItemAnnouncement_Title": "Item",
 	"Notification_ItemAnnouncement_TitleLong": "New inventory item",

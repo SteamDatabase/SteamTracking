@@ -5037,4 +5037,8 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "DownloadRegion_reunion"        "Riunione"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ucraina - Sebastopoli"
+
+"SettingsController_AutosaveName"	"Configurazione del controller"
+"ControllerBinding_Offline_Save"	"[Salvataggio automatico offline]"
+"ControllerBinding_Incompatible_Save"	"[Configurazione incompatibile]"
 }

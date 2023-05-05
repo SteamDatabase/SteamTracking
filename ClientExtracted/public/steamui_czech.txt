@@ -3933,7 +3933,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "steam_menu_servers" "Servery"
 "steam_menu_settings" "Nastavení"
 "steam_menu_view_friends" "Zobrazit seznam přátel (%friends_online% Online)"
-"steam_menu_view_players" "Hráči"
+"steam_menu_view_players" "Spoluhráči"
 "steam_menu_add_friend" "Přidat přítele..."
 "steam_menu_friendsstatus" "Nastavit stav"
 "steam_viewfriends"	"SEZNAM PŘÁTEL"
@@ -5041,4 +5041,8 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Kuvajt"
 "DownloadRegion_ua_sevastopol"  "Ukrajina – Sevastopol"
+
+"SettingsController_AutosaveName"	"Nastavení ovladače"
+"ControllerBinding_Offline_Save"	"[Auto. uložené offline nastavení]"
+"ControllerBinding_Incompatible_Save"	"[Nekompatibilní nastavení]"
 }

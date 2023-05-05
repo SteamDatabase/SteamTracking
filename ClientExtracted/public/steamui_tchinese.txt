@@ -5034,4 +5034,8 @@ Mac OS X 10.7 或是更高的版本。"
 "DownloadRegion_reunion"        "留尼旺"
 "DownloadRegion_kuwait"         "科威特"
 "DownloadRegion_ua_sevastopol"  "烏克蘭 - 塞瓦斯托波爾"
+
+"SettingsController_AutosaveName"	"控制器配置"
+"ControllerBinding_Offline_Save"	"[離線自動儲存]"
+"ControllerBinding_Incompatible_Save"	"[不相容的配置]"
 }

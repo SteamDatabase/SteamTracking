@@ -3316,7 +3316,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Gift_Sentiment_YouOweMe"		"내게 빚졌군"
 "Steam_Gift_Sentiment_YourTurn"		"네 차례야."
 "Steam_Gift_Sentiment_XOXOXO"		"XOXOXO"
-"Steam_Purchase_Gift_AlreadyOwn"	"이 제품은 귀하의 Steam 계정에서 이미 이용할 수 있습니다. Steam의 게임 라이브러리에서 게임을 이용할 수 있습니다."
+"Steam_Purchase_Gift_AlreadyOwn"	"이 제품은 Steam 계정에서 이미 이용할 수 있습니다. Steam의 게임 라이브러리에서 게임을 이용할 수 있습니다."
 "Steam_SendGuestPass_RecipientQuestion$type=gift" "'%package%' 의 게스트 패스를 누구에게 주시겠습니까?"
 
 "Steam_SendGuestPass_RecipientQuestion$type=guestpass" "'%package%' 게스트 패스를 누구에게 주시겠습니까?"
@@ -5038,4 +5038,8 @@ Windows에 관리자로 로그인해야 합니다.
 "DownloadRegion_reunion"        "레위니옹"
 "DownloadRegion_kuwait"         "쿠웨이트"
 "DownloadRegion_ua_sevastopol"  "우크라이나 - 세바스토폴"
+
+"SettingsController_AutosaveName"	"컨트롤러 구성"
+"ControllerBinding_Offline_Save"	"[오프라인 자동 저장]"
+"ControllerBinding_Incompatible_Save"	"[호환되지 않는 구성]"
 }

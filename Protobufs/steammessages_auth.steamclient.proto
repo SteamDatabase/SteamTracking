@@ -28,12 +28,20 @@ enum EAuthSessionSecurityHistory {
 	k_EAuthSessionSecurityHistory_NoPriorHistory = 2;
 }
 
+enum ETokenRenewalType {
+	k_ETokenRenewalType_None = 0;
+	k_ETokenRenewalType_Allow = 1;
+}
+
 enum EAuthTokenRevokeAction {
 	k_EAuthTokenRevokeLogout = 0;
 	k_EAuthTokenRevokePermanent = 1;
 	k_EAuthTokenRevokeReplaced = 2;
 	k_EAuthTokenRevokeSupport = 3;
 	k_EAuthTokenRevokeConsume = 4;
+	k_EAuthTokenRevokeNonRememberedLogout = 5;
+	k_EAuthTokenRevokeNonRememberedPermanent = 6;
+	k_EAuthTokenRevokeAutomatic = 7;
 }
 
 enum EAuthTokenState {
@@ -173,10 +181,12 @@ message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response {
 message CAuthentication_AccessToken_GenerateForApp_Request {
 	optional string refresh_token = 1;
 	optional fixed64 steamid = 2;
+	optional .ETokenRenewalType renewal_type = 3 [default = k_ETokenRenewalType_None];
 }
 
 message CAuthentication_AccessToken_GenerateForApp_Response {
 	optional string access_token = 1;
+	optional string refresh_token = 2;
 }
 
 message CAuthentication_RefreshToken_Enumerate_Request {

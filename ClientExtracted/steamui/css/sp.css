@@ -5364,7 +5364,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_ServerList_2_4_n
   ::-webkit-scrollbar {
-  width: 30px;
+  width: 18px;
   height: 100%;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
@@ -5397,15 +5397,27 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background: #3d4450;
   display: inline-block;
   cursor: col-resize;
+  width: 1px;
   top: 0;
   right: 0;
-  width: 1px;
-  border-right: 1px solid #67707b;
-  margin-right: 6px;
+  margin-left: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 0px;
   height: 100%;
   position: absolute;
   z-index: 1;
   touch-action: none;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_ServerList_2_4_n
+  .serverbrowserdialog_ColumnResizer_1XAm7
+  span {
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #67707b;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -7199,9 +7211,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .titlebarcontrols_AnnouncementWaveSVG_1B_GY {
   transition-property: opacity;
+  transition-duration: 0.16ms;
   opacity: 0;
   position: absolute;
-  animation: titlebarcontrols_AnnouncementWaves_2QXwl 1.5s linear;
+  animation: none 1.5s linear;
   animation-iteration-count: 40;
   transform-origin: 50% 50%;
   animation-fill-mode: both;
@@ -7240,9 +7253,12 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background-color: #1999ff;
   color: #fff;
 }
-.titlebarcontrols_AnnouncementsButton_5wILZ.titlebarcontrols_Active_1oEwi
+.titlebarcontrols_AnnouncementsButton_5wILZ.titlebarcontrols_Active_1oEwi:hover
+  .titlebarcontrols_AnnouncementWaveSVG_1B_GY,
+.titlebarcontrols_AnnouncementsButton_5wILZ.titlebarcontrols_Active_1oEwi.titlebarcontrols_ActiveAnimation_3HTKO
   .titlebarcontrols_AnnouncementWaveSVG_1B_GY {
   opacity: 1;
+  animation-name: titlebarcontrols_AnnouncementWaves_2QXwl;
 }
 .titlebarcontrols_AnnouncementsButton_5wILZ.titlebarcontrols_Active_1oEwi:hover {
   background-color: #4cb0ff;
@@ -7389,6 +7405,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .SVGIcon_Notification_Uvula {
   animation-iteration-count: infinite;
 }
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:hover
+  .titlebarcontrols_Icon_34bQc
+  g,
 .titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8.titlebarcontrols_ActiveAnimation_3HTKO
   .titlebarcontrols_Icon_34bQc
   g {
@@ -7396,6 +7415,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   animation-iteration-count: 12;
   transform-origin: 50% 0%;
 }
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:hover
+  .titlebarcontrols_Icon_34bQc
+  g
+  .SVGIcon_Notification_Uvula,
 .titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8.titlebarcontrols_ActiveAnimation_3HTKO
   .titlebarcontrols_Icon_34bQc
   g
@@ -8083,71 +8106,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .bottombar_FriendsButton_1TdaA.bottombar_Disabled_2Sdix .bottombar_Text_3OhUx {
   color: rgba(169, 169, 169, 0.5);
 }
-.browserviewfindinpage_FindBar_g9zNQ {
-  background-color: #0e141b;
-  padding: 5px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  overflow: hidden;
-}
-.browserviewfindinpage_FindBar_g9zNQ .browserviewfindinpage_SearchInput_2Lxss {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  padding: 5px;
-  height: 22px;
-  width: auto;
-}
-.browserviewfindinpage_FindBar_g9zNQ
-  .browserviewfindinpage_SearchInput_2Lxss:focus {
-  padding: 5px;
-}
-.browserviewfindinpage_FindBar_g9zNQ
-  .browserviewfindinpage_SearchResults_2LDhi {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  line-height: 32px;
-  margin: 0px 10px;
-  flex: 1;
-  text-align: center;
-}
-.browserviewfindinpage_FindBar_g9zNQ
-  .browserviewfindinpage_ControlButton_3R1Os {
-  min-width: unset;
-  width: 32px;
-  height: 32px;
-}
-.browserviewfindinpage_FindBar_g9zNQ
-  .browserviewfindinpage_ControlButton_3R1Os
-  > svg {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-}
 .desktopbrowser_LoadingThrobber_VicgW {
   flex: 1;
   display: flex;
@@ -8405,6 +8363,71 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .desktopbrowser_EditBookmarkDialog_ckvJI {
   min-width: 50vw;
   max-width: 90vw;
+}
+.browserviewfindinpage_FindBar_1xLWm {
+  background-color: #0e141b;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  overflow: hidden;
+}
+.browserviewfindinpage_FindBar_1xLWm .browserviewfindinpage_SearchInput_1zbol {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 5px;
+  height: 22px;
+  width: auto;
+}
+.browserviewfindinpage_FindBar_1xLWm
+  .browserviewfindinpage_SearchInput_1zbol:focus {
+  padding: 5px;
+}
+.browserviewfindinpage_FindBar_1xLWm
+  .browserviewfindinpage_SearchResults_1-vmR {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  line-height: 32px;
+  margin: 0px 10px;
+  flex: 1;
+  text-align: center;
+}
+.browserviewfindinpage_FindBar_1xLWm
+  .browserviewfindinpage_ControlButton_3to6U {
+  min-width: unset;
+  width: 32px;
+  height: 32px;
+}
+.browserviewfindinpage_FindBar_1xLWm
+  .browserviewfindinpage_ControlButton_3to6U
+  > svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 .broadcastfirsttime_BroadcastFirstTimeDialog_2bRIt {
   padding: 12px 12px;

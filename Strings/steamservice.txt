@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-`
-`
+P
+P
 __stubs
 __TEXT
 __stub_helper
@@ -41,6 +41,7 @@ HE/
 __data
 __DATA
 pE/
+U
 pE/
 __thread_vars
 __DATA
@@ -61,7 +62,7 @@ __LINKEDIT
 8
 @loader_path/steamservice.dylib
 "
-hL0
+`L0
 P
 
 *
@@ -87,27 +88,31 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-*
 )
-+g=/
-Hc5M6/
++gM/
+Hc5MF/
 0
 0
 
 
 
 !
-"
 
-e!
+m!
 Hi
 )
-)
+4
+L$
 H=
-,
+<$
+h
+j
+Q
+)
 Hc
 Hc
 Hc
+b+
 0
 0
 AT=
@@ -118,7 +123,20 @@ AT=
 D
 @
 @
+m#
+e#
+]#
+.
+(
+(
+(
+(
+(
+(
+(
+(
 $
++
 #
 @
 Hc
@@ -152,28 +170,18 @@ IcE
 @
 @
 ]
-8*
-9"
 '
 '
-'
-'
-'
-'
+*
+"
 "
 "
 V
-N!
+H;5"Y)
+k!
+`!
 =
-2!
-&
-!
-!
-!
-!
-!
-!
-!
+=
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -1436,22 +1444,21 @@ Logger
 14CFrameFunctionI21CScheduledFunctionMgrE
 14CUtlLinkedListIP22CBaseScheduledFunctioniE
 @
-P
-T
+X
+\
 (
-p
+x
 0
 @
-@X
-l
+@`
 t
-\
-h
-`
-x
-u
 |
+d
+p
+h
+}
 8
+H
 @
 
 
@@ -1554,14 +1561,14 @@ $
 8
 (
 (
-?
-^
-e
-(
+@
+`
 g
-m
-n
-|
+(
+i
+o
+p
+~
 P
 X
 0
@@ -1897,8 +1904,6 @@ CHECK failed: size > chunk_size:
 CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
 CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
 CHECK failed: (size) > (0):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 ./google/protobuf/repeated_field.h
 CHECK failed: (index) >= (0):
@@ -2225,7 +2230,6 @@ PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Type_IsValid(value)
 $0// $1
 $0option $1;
 Found invalid proto option data for:
-}
 (.
 remove_prefix
 length_ >= n
@@ -2490,7 +2494,6 @@ Message does not support reflection (type
 ).
 MapValueRef::MutableMessageValue
 (
-]
 google/protobuf/stubs/substitute.cc
 strings::Substitute format string invalid: asked for "$
 ", but only
@@ -2510,6 +2513,7 @@ not found
 : failed to parse contents
 Not supported.
 : [
+]
 ]
 CHECK failed: field->is_repeated() || (index == -1):
 Index must be -1 for non-repeated fields
@@ -2537,7 +2541,6 @@ Ignoring extension "
 Message type "
 " has no field named "
 CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field:
-{
 Non-repeated field "
 " is specified multiple times.
 Field "
@@ -8631,7 +8634,9 @@ ReadToken overflow
 {
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 }
+{
 ]
+}
 GetUint64FromString() did not get correct peCS parameter
 can't convert int64 to uint64 (negative number)
 RGBA: %.2X %.2X %.2X %.2X
@@ -8780,8 +8785,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-May  2 2023
-18:22:20
+May  4 2023
+14:46:05
 Jan
 Feb
 Mar
@@ -8841,7 +8846,6 @@ NULL == pValObjectPrev->m_pValObjectNext
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
-m_nRecursions > 0
 Avg Time/Frame (ms)
 [ func+child   func ]     Count
 ---------- ------      ------
@@ -8893,12 +8897,14 @@ Streaming
 ThreadWorkItem
 TenFoot
 tier1
+m_vecNodeMemBlocks.size() == 1
+m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
 m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
-m_pParent
+m_nRecursions > 0
 m_pszName
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
@@ -9370,25 +9376,30 @@ CWorkThread -- OnWorkItemCompleted - unordered
 CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
-+g=/
-Hc5M6/
++gM/
+Hc5MF/
 0
 0
 
 
 
 !
-"
 
-e!
+m!
 Hi
 )
-)
+4
+L$
 H=
-,
+<$
+h
+j
+Q
+)
 Hc
 Hc
 Hc
+b+
 0
 0
 AT=
@@ -9399,7 +9410,20 @@ AT=
 D
 @
 @
+m#
+e#
+]#
+.
+(
+(
+(
+(
+(
+(
+(
+(
 $
++
 #
 @
 Hc
@@ -9433,46 +9457,45 @@ IcE
 @
 @
 ]
-8*
-9"
 '
 '
-'
-'
-'
-'
+*
+"
 "
 "
 V
-N!
+H;5"Y)
+k!
+`!
 =
-2!
-&
-!
-!
-!
-!
-!
-!
-!
 =
 %
-0$
+%
+%
+!
+'
 !
 @
 @
+#
+#
 &
++"
+%
 "
 "
-"
-'
-'
-!
-!
+a!
 !
 $
-r
-#
+$
+$
+$
+$
+$
+$
+;!
+$
+[
 @
 M9e
 @
@@ -9498,9 +9521,11 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
+
 Pj
 ARj
 j
+3
 0
 0
 =
@@ -9805,10 +9830,12 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 @
 
+J
 @
 @
 @
 0
+
 H=
 Ic]
 j
@@ -9856,6 +9883,7 @@ rc4(8x,int)
 rc4(8x,char)
 rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
+
 j
 j
 $
@@ -9867,7 +9895,9 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
+Q
 @
+
 d
 @
 
@@ -9891,7 +9921,6 @@ H=
 @
 @
 @
-`
 @
 @
 @
@@ -9903,6 +9932,7 @@ H=
 =*.*
 @
 @
+0
 @
 @
 @
@@ -9925,7 +9955,6 @@ H=
 0
 H=
 
-
 0
 &
 @
@@ -9937,7 +9966,6 @@ Hi
 E
 0
 0
-0
 
 
 Hc
@@ -9947,13 +9975,11 @@ Hc
 Ic
 @
 @
-@
 ?
 ?
 ?
 @
 @
-V
 @
 @
 0

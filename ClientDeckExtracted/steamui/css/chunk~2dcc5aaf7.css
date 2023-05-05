@@ -1036,28 +1036,6 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
-.partnereventshared_BetaContainer_1KXQ4 {
-  background-image: radial-gradient(
-    circle at top left,
-    #056890 0%,
-    #143d4d 60%
-  );
-  border-bottom: 1px solid #09b8fe;
-  padding: 40px;
-  color: #e5e5e5;
-}
-.partnereventshared_BetaContainer_1KXQ4 a {
-  text-decoration: underline;
-}
-.partnereventshared_BetaContainer_1KXQ4
-  .partnereventshared_EventBetaTextTitle_3roRb {
-  font-size: 23px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  color: #78bbf2;
-  text-transform: none;
-  margin-bottom: 8px;
-}
 .partnereventshared_Clear_2BXhG {
   clear: left;
   display: block;
@@ -17360,7 +17338,8 @@ div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
 .settings_SettingsLink_RmxP9:hover {
   color: #fff;
 }
-:not(.BasicUI) .settings_SettingsDialogBodyFade_aFxOa {
+.settings_SettingsDialogBodyFade_aFxOa.DesktopUI,
+.DesktopUI .settings_SettingsDialogBodyFade_aFxOa {
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 25px),
     linear-gradient(to left, black 0px 14px, transparent 14px);
   padding-top: 12px;
@@ -18359,30 +18338,76 @@ button.keyboardsettings_ShowKeyboardButton_3vbFn svg {
   background: #fff;
   color: #23262e;
 }
-.systemsettings_RuntimeSystemInfoDialog_CVdE_ {
-  max-height: 500px;
-}
-.systemsettings_RuntimeSystemInfoDialog_CVdE_ .DialogBody {
+.systemsettings_SteamRuntimeSystemInfoDialogContent_q5OA- .DialogBody {
   min-height: 0;
 }
-.systemsettings_RuntimeSystemInfoDialog_CVdE_ .DialogBody .DialogBodyText {
+.systemsettings_SteamRuntimeSystemInfoDialogContent_q5OA-
+  .DialogBody
+  .DialogBodyText {
   display: flex;
   flex-direction: column;
   min-height: 0;
   flex: 1;
 }
-.systemsettings_RuntimeSystemInfoDialog_CVdE_
+.systemsettings_SteamRuntimeSystemInfoDialogContent_q5OA-
   .DialogBody
   .DialogBodyText
-  .systemsettings_RuntimeSystemInfo_1wHG0 {
-  flex: 1;
-  min-height: 0;
+  .systemsettings_SteamRuntimeSystemInfoContainer_isIfZ {
   margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.systemsettings_SteamRuntimeSystemInfoDialogContent_q5OA-
+  .DialogBody
+  .DialogBodyText
+  .systemsettings_SteamRuntimeSystemInfoContainer_isIfZ
+  .systemsettings_TextContainer_YvsXG {
+  width: 100%;
+  height: 100%;
   background-color: #3d4450;
-  border: 1px solid #67707b;
-  padding: 0px 20px;
-  overflow-y: scroll;
-  white-space: pre-wrap;
+  overflow: scroll;
+}
+.systemsettings_SteamRuntimeSystemInfoDialogContent_q5OA-
+  .DialogBody
+  .DialogBodyText
+  .systemsettings_SteamRuntimeSystemInfoContainer_isIfZ
+  .systemsettings_TextContainer_YvsXG.DesktopUI,
+.DesktopUI
+  .systemsettings_SteamRuntimeSystemInfoDialogContent_q5OA-
+  .DialogBody
+  .DialogBodyText
+  .systemsettings_SteamRuntimeSystemInfoContainer_isIfZ
+  .systemsettings_TextContainer_YvsXG {
+  background: #23262e;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.systemsettings_SteamRuntimeSystemInfoDialogContent_q5OA-
+  .DialogBody
+  .DialogBodyText
+  .systemsettings_SteamRuntimeSystemInfoContainer_isIfZ
+  .systemsettings_TextContainer_YvsXG
+  .systemsettings_Text_3ff2d {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Consolas", "Lucida Console", monospace;
+  color: #dcdedf;
+  padding: 15px;
+  white-space: pre;
 }
 .personanameandstatus_statusAndName_3n8q8 {
   display: flex;
@@ -24168,6 +24193,7 @@ html.responsive.touch .ContentHubSalePage {
   margin-bottom: 12px;
   text-align: center;
   padding: 4px 32px;
+  width: fit-content;
   max-width: 940px;
   color: rgba(255, 255, 255, 0.85);
   text-shadow: 1px 1px 3px #000;
@@ -24723,6 +24749,60 @@ html.responsive.touch
   background-color: hotpink;
   border: 1px solid;
   padding: 10px;
+}
+.screenshotpopout_PopupScreenshotContainer_2mYDh {
+  width: 80vw;
+  height: auto;
+}
+.PopupFullWindow .screenshotpopout_PopupScreenshotContainer_2mYDh {
+  width: calc(100vw - 48px);
+}
+.screenshotpopout_PopupScreenshot_1q7Ow {
+  width: 100%;
+  height: 100%;
+}
+.screenshotpopout_ButtonCtn_1Wwsx {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+.screenshotpopout_ButtonIcon_2gBfU {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border-radius: 50%;
+  margin: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.screenshotpopout_ButtonIcon_2gBfU:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.screenshotpopout_ButtonIcon_2gBfU.screenshotpopout_Disabled_1M3_p {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.expandableimage_PreviewCtn_3TAWD {
+  position: relative;
+}
+.expandableimage_PreviewCtn_3TAWD .expandableimage_SVG_3KS-f {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 5px 5px 1px 5px;
+}
+.expandableimage_PreviewCtn_3TAWD:hover {
+  cursor: pointer;
+}
+.expandableimage_PreviewCtn_3TAWD:hover .expandableimage_SVG_3KS-f {
+  opacity: 0.5;
 }
 .deckcompaticons_CompatIcon_25ILU {
   opacity: 1;
@@ -50206,6 +50286,13 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   margin-top: 20px;
 }
 .loginpanel_LoginStatusContainer_1TR3C
+  .loginpanel_UserContainer_6Z2AO.DesktopUI,
+.DesktopUI
+  .loginpanel_LoginStatusContainer_1TR3C
+  .loginpanel_UserContainer_6Z2AO {
+  background: none;
+}
+.loginpanel_LoginStatusContainer_1TR3C
   .loginpanel_UserContainer_6Z2AO
   .loginpanel_Avatar_3YzgV
   > img {
@@ -50569,6 +50656,10 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   transition-property: box-shadow, transform, border;
   transition-duration: 0.24s;
   transition-timing-function: ease-in-out;
+}
+.loginpanel_NewLogin_1mt2m .loginpanel_NewLoginIcon_IfVUb.DesktopUI,
+.DesktopUI .loginpanel_NewLogin_1mt2m .loginpanel_NewLoginIcon_IfVUb {
+  background: none;
 }
 .loginpanel_NewLogin_1mt2m:focus .loginpanel_NewLoginIcon_IfVUb,
 .loginpanel_NewLogin_1mt2m:hover .loginpanel_NewLoginIcon_IfVUb {
@@ -59452,6 +59543,29 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .partnereventdialog_WarningStylesBackground_2MAql
   .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.partnereventdialog_InfoStyles_2Zq0U,
+.partnereventdialog_InfoStylesWithIcon_2TYAo {
+  color: #556b2f;
+}
+.partnereventdialog_InfoIconLayout_qgVd4,
+.partnereventdialog_InfoStylesWithIcon_2TYAo,
+.partnereventdialog_InfoStylesBackground_3YqPi {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("<?=IMG_URL;?>/sharedfiles/icons/icon_spoiler_tag.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_InfoStylesBackground_3YqPi {
+  background-color: #556b2f;
+  color: #fff;
+}
+.partnereventdialog_InfoStylesBackground_3YqPi .partnereventdialog_Stuck_2JqXL {
   position: sticky;
   top: 89px;
   z-index: 1;
@@ -91733,6 +91847,81 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   overflow: hidden;
   background-color: transparent;
 }
+@keyframes backbutton_ItemFocusAnim-darkerGrey-nocolor_1yZh_ {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes backbutton_ItemFocusAnim-darkerGrey_1xQAr {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes backbutton_ItemFocusAnim-darkGrey_1E1d1 {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes backbutton_ItemFocusAnim-grey_95NG1 {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes backbutton_ItemFocusAnimBorder-darkGrey_3GFft {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes backbutton_ItemFocusAnim-green_1Ln5t {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+.backbutton_BackContainer_2B4W7 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  opacity: 0.7;
+}
+.backbutton_BackContainer_2B4W7:hover {
+  transition: "opacity 0.3s";
+  opacity: 1;
+}
+.backbutton_BackButton_2AbcG {
+  margin-left: 8px;
+  margin-right: 20px;
+}
+.backbutton_ArrowBack_3RbjU {
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+}
 @keyframes headerbrowser_ItemFocusAnim-darkerGrey-nocolor_ExWi9 {
   from {
     background: #3d4450;
@@ -91991,9 +92180,9 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .header_Header_1E_SL.header_VR_m2Zys {
   gap: 5px;
-}
-.header_Header_1E_SL.header_VR_m2Zys::before {
-  background-color: transparent;
+  background-color: #0e141b;
+  opacity: 1;
+  border-radius: 10px;
 }
 .header_Header_1E_SL.header_SuppressInteraction_3QJwU::after {
   content: "";
@@ -92027,17 +92216,8 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   padding: 0 10px;
 }
 .header_Header_1E_SL.header_VR_m2Zys .header_HeaderItem_2HnVd {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
   padding: 0 15px;
   color: #fff;
-}
-.header_Header_1E_SL.header_VR_m2Zys .header_HeaderItem_2HnVd:hover {
-  background-color: rgba(10, 10, 10, 0.3);
-}
-.header_Header_1E_SL.header_VR_m2Zys .header_HeaderItem_2HnVd#header_profile {
-  background-color: transparent;
-  padding-right: 0;
 }
 .header_HeaderItem_2HnVd.header_Clickable_8sPcK {
   cursor: pointer;
@@ -92889,7 +93069,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.controllerconfiguratorchoosebinding_LEDColorGroup_1d7XO
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5
   .controllerconfiguratorchoosebinding_KeyboardKeyLabel_eUq_I,
 .controllerconfiguratorchoosebinding_TriggerButton_2MjBd
   .controllerconfiguratorchoosebinding_KeyboardKeyLabel_eUq_I,
@@ -92908,13 +93088,6 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   flex-direction: row;
   justify-content: space-between;
 }
-.controllerconfiguratorchoosebinding_LEDColorGroup_1d7XO {
-  padding: 20px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.controllerconfiguratorchoosebinding_LEDButton_3U3h5,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV,
 .controllerconfiguratorchoosebinding_StartButton_3s28A {
   border: solid;
@@ -92926,37 +93099,53 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   display: flex;
   border-radius: 5px;
 }
-.controllerconfiguratorchoosebinding_LEDButton_3U3h5 img,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV img,
 .controllerconfiguratorchoosebinding_StartButton_3s28A img {
   max-width: 20px;
 }
-.controllerconfiguratorchoosebinding_LEDButton_3U3h5.gpfocus,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV.gpfocus,
 .controllerconfiguratorchoosebinding_StartButton_3s28A.gpfocus {
   border-color: #fff;
   background: #fff;
   filter: drop-shadow(0px 0px 10px #1a9fff90);
 }
-.controllerconfiguratorchoosebinding_LEDButton_3U3h5.gpfocus img,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV.gpfocus img,
 .controllerconfiguratorchoosebinding_StartButton_3s28A.gpfocus img {
   filter: brightness(0);
 }
-.controllerconfiguratorchoosebinding_LEDButton_3U3h5.controllerconfiguratorchoosebinding_SelectedBinding_CX4Dp,
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV.controllerconfiguratorchoosebinding_SelectedBinding_CX4Dp,
 .controllerconfiguratorchoosebinding_StartButton_3s28A.controllerconfiguratorchoosebinding_SelectedBinding_CX4Dp {
   background-color: #1a9fff;
   border-color: #1a9fff;
 }
-.controllerconfiguratorchoosebinding_LEDButton_3U3h5:not(:last-child),
 .controllerconfiguratorchoosebinding_SelectButton_3i-XV:not(:last-child),
 .controllerconfiguratorchoosebinding_StartButton_3s28A:not(:last-child) {
   margin-right: 3px;
 }
-.controllerconfiguratorchoosebinding_LEDColorGroup_1d7XO
-  .controllerconfiguratorchoosebinding_LEDButton_3U3h5 {
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5 {
+  border: solid;
+  border-color: #3d4450;
+  background-color: #3d4450;
+  border-radius: 2px;
   width: auto;
+  padding: 4px;
+  display: flex;
+  border-radius: 5px;
+}
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5 img {
+  max-width: 20px;
+}
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5.gpfocus {
+  border-color: #fff;
+  background: #fff;
+  filter: drop-shadow(0px 0px 10px #1a9fff90);
+}
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5.gpfocus img {
+  filter: brightness(0);
+}
+.controllerconfiguratorchoosebinding_LEDButton_3U3h5.controllerconfiguratorchoosebinding_SelectedBinding_CX4Dp {
+  background-color: #1a9fff;
+  border-color: #1a9fff;
 }
 .controllerconfiguratorchoosebinding_LEDIcon_3qLrs {
   width: 24px;

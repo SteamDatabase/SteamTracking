@@ -59,7 +59,7 @@
  SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
- SteamVProf::CVProfManager::StartProfilingAllThreads(float)
+ SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  T CreateInterface
  T SteamDllMain

@@ -550,7 +550,7 @@
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  SteamVProf::CVProfManager::EnableDumpSpikes(int)
  SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
- SteamVProf::CVProfManager::StartProfilingAllThreads(float)
+ SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  SteamVProf::CVProfNode::GetCurTimeLessChildren()
  SteamVProf::CVProfNode::GetTotalTimeLessChildren()
@@ -566,7 +566,7 @@
  SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
  SteamVProf::CVProfileArray::~CVProfileArray()
  SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
- SteamVProf::CVProfileThreadEntry::StartProfiling(float)
+ SteamVProf::CVProfileThreadEntry::StartProfiling(float, int)
  StringAfterPrefix
  StringAfterPrefixCaseSensitive
  StringFindSuffix
@@ -1172,6 +1172,7 @@
  V_IsSteamCloseProtocol
  V_IsValidURLCharacter
  V_JoinNumbersUint
+ V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&, char const*)
  V_MakeAbsolutePath
  V_MakeFileSafeName
  V_MatchWildcardDNSName

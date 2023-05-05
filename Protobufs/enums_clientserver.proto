@@ -1485,6 +1485,8 @@ enum EMsg {
 	k_EMsgChatServerGetPendingNotificationCountResponse = 12001;
 	k_EMsgBaseSecretServer = 12100;
 	k_EMsgServerSecretChanged = 12100;
+	k_EMsgBaseWG = 12200;
+	k_EMsgWGConnectionProtocolError = 12200;
 }
 
 enum EClientPersonaStateFlag {
