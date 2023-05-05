@@ -1348,6 +1348,7 @@
  atan2f
  atanf
  atexit
+ atof
  atoi
  atoll
  bcopy

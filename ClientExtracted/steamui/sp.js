@@ -8967,7 +8967,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, se.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1683250831),
+          s = parseInt(1683312196),
           c = s && (0, cr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == _.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -22499,7 +22499,7 @@
           t
             ? o.createElement(
                 Sg,
-                { cm: e.cm },
+                { cm: e.cm, bSmallMode: e.bSmallMode },
                 !e.bSmallMode && o.createElement(_g, null),
                 o.createElement(
                   D.ErrorBoundary,
@@ -22570,7 +22570,7 @@
             },
             o.createElement(
               Ja.ModalRoot,
-              { bCenterPopupsOnWindow: !0 },
+              { bCenterPopupsOnWindow: !0, bOnlyPopups: e.bSmallMode },
               o.createElement(xc, null, e.children)
             )
           )
