@@ -153,61 +153,62 @@
     },
     76320: (e, t, r) => {
       "use strict";
-      r.d(t, { c: () => P });
+      r.d(t, { c: () => k });
       var i = r(33940),
         a = r(50265),
         s = r(88464),
-        n = r(89526),
-        o = r(7297),
-        l = (r(87487), r(33161)),
-        c = r(52310),
-        d = (r(55923), r(68041)),
-        m = (r(39766), r(24437)),
-        u = r.n(m),
-        h = r(14100),
-        _ = r(57255),
-        p = r(46722),
-        g = r(4940),
-        b = r(76478),
-        B = r(83878),
-        S = r(44141),
-        y = r.n(S);
-      const w = () =>
-          n.createElement(
+        n = r(25125),
+        o = r(89526),
+        l = r(7297),
+        c = (r(87487), r(33161)),
+        d = r(52310),
+        m = (r(55923), r(68041)),
+        u = (r(39766), r(24437)),
+        h = r.n(u),
+        _ = r(14100),
+        p = r(57255),
+        g = r(46722),
+        b = r(4940),
+        B = r(76478),
+        S = r(83878),
+        y = r(44141),
+        w = r.n(y);
+      const f = () =>
+          o.createElement(
             "div",
-            { className: y().FriendsListInsetShadowCtn },
-            n.createElement("div", { className: y().FriendListInsetShadowTop })
+            { className: w().FriendsListInsetShadowCtn },
+            o.createElement("div", { className: w().FriendListInsetShadowTop })
           ),
-        f = () =>
-          n.createElement(
+        C = () =>
+          o.createElement(
             "div",
-            { className: y().FriendsListInsetShadowCtn },
-            n.createElement("div", {
-              className: y().FriendListInsetShadowBottom,
+            { className: w().FriendsListInsetShadowCtn },
+            o.createElement("div", {
+              className: w().FriendListInsetShadowBottom,
             })
           );
-      var C = r(86701),
-        M = r(13806),
-        v = r(31587),
-        F = r(31621),
-        T = r(70983),
-        R = r(35534),
-        E = r.n(R),
-        z = r(76553),
-        O = r(9050);
-      const x = new RegExp("ː([^ː]*)ː", "g"),
-        D = new RegExp(
+      var M = r(86701),
+        v = r(13806),
+        F = r(31587),
+        T = r(31621),
+        R = r(70983),
+        E = r(35534),
+        z = r.n(E),
+        O = r(76553),
+        x = r(9050);
+      const D = new RegExp("ː([^ː]*)ː", "g"),
+        W = new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
           "i"
         );
-      const W = (e) => {
+      const I = (e) => {
           const { userType: t, msg: r, presenterInfo: i } = e;
           if ("presenter" === t)
-            return n.createElement(
+            return o.createElement(
               "span",
               null,
-              n.createElement(
-                B.pj,
+              o.createElement(
+                S.pj,
                 {
                   name: i.name,
                   title: i.title,
@@ -215,11 +216,11 @@
                   company: i.company,
                   bioString: i.bio,
                 },
-                n.createElement(
+                o.createElement(
                   "a",
                   {
-                    className: (0, M.Z)(E().MessageName, E().MessagePresenter),
-                    href: T.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    className: (0, v.Z)(z().MessageName, z().MessagePresenter),
+                    href: R.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
@@ -231,16 +232,16 @@
             let e = null;
             return (
               "broadcaster" === t
-                ? (e = E().MessageBroadcaster)
-                : "moderator" === t && (e = E().MessageModerator),
-              n.createElement(
+                ? (e = z().MessageBroadcaster)
+                : "moderator" === t && (e = z().MessageModerator),
+              o.createElement(
                 "span",
                 null,
-                n.createElement(
+                o.createElement(
                   "a",
                   {
-                    className: (0, M.Z)(E().MessageName, e),
-                    href: T.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    className: (0, v.Z)(z().MessageName, e),
+                    href: R.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     "data-miniprofile": "s" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
@@ -251,50 +252,50 @@
             );
           }
         },
-        I = (e) => {
+        P = (e) => {
           switch (e.userType) {
             case "presenter":
-              return n.createElement(
+              return o.createElement(
                 "span",
                 {
-                  className: E().RoleFlairContainer,
-                  "data-tooltip-text": (0, v.Xx)(
+                  className: z().RoleFlairContainer,
+                  "data-tooltip-text": (0, F.Xx)(
                     "#BroadcastChat_Role_Presenter_ttip"
                   ),
                 },
-                n.createElement(C.x0L, null)
+                o.createElement(M.x0L, null)
               );
             case "moderator":
-              return n.createElement(
+              return o.createElement(
                 "span",
                 {
-                  className: E().RoleFlairContainer,
-                  "data-tooltip-text": (0, v.Xx)(
+                  className: z().RoleFlairContainer,
+                  "data-tooltip-text": (0, F.Xx)(
                     "#BroadcastChat_Role_Moderatorr_ttip"
                   ),
                 },
-                n.createElement(C.yTr, null)
+                o.createElement(M.yTr, null)
               );
             case "broadcaster":
-              return n.createElement(
+              return o.createElement(
                 "span",
                 {
-                  className: E().RoleFlairContainer,
-                  "data-tooltip-text": (0, v.Xx)(
+                  className: z().RoleFlairContainer,
+                  "data-tooltip-text": (0, F.Xx)(
                     "#BroadcastChat_Role_Broadcaster_ttip"
                   ),
                 },
-                n.createElement(C.miF, null)
+                o.createElement(M.miF, null)
               );
             default:
               return null;
           }
         };
-      let P = class extends n.Component {
+      let k = class extends o.Component {
         constructor() {
           super(...arguments),
             (this.m_chat = null),
-            (this.messagesContainer = n.createRef());
+            (this.messagesContainer = o.createRef());
         }
         componentDidMount() {
           this.StartChat();
@@ -314,7 +315,7 @@
         StartChat() {
           if (
             (this.m_chat && this.m_chat.Stop(),
-            (this.m_chat = l.Z.Get().GetOrCreateChat(
+            (this.m_chat = c.Z.Get().GetOrCreateChat(
               this.props.broadcastChannelID,
               this.props.steamID
             )),
@@ -332,18 +333,18 @@
           }
         }
         IsTrustedDomain(e) {
-          return !!e.match(D);
+          return !!e.match(W);
         }
         AddLinksEmoticons(e, t) {
-          let r = x;
+          let r = D;
           t && (r = this.m_chat.GetUserEmoticons());
-          let i = e.split(x);
+          let i = e.split(D);
           const a = [];
           for (let e = 0; e < i.length; e += 1)
             e % 2 == 1
               ? a.push(
-                  n.createElement(p.tk, {
-                    emoticonHoverStore: d.$,
+                  o.createElement(g.tk, {
+                    emoticonHoverStore: m.$,
                     key: e,
                     emoticon: i[e],
                     large: !0,
@@ -367,17 +368,17 @@
               : this.messagesContainer.current.scrollHeight);
         }
         OnContextMenu(e, t) {
-          if (t.type !== O.gK.Chat) return null;
+          if (t.type !== x.gK.Chat) return null;
           const r = [],
             i = this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()),
             a = this.m_chat.BIsUserBroadcastModerator(
               this.m_chat.GetUserSteamID()
             );
           if (
-            ((T.L7 && T.L7.is_support) || i || a
+            ((R.L7 && R.L7.is_support) || i || a
               ? r.push(
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "remove",
                       onSelected: () =>
@@ -386,10 +387,10 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_RemoveMessages")
+                    (0, F.Xx)("#BroadcastChat_RemoveMessages")
                   ),
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "updatebanh",
                       onSelected: () =>
@@ -401,10 +402,10 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_half_Mute")
+                    (0, F.Xx)("#BroadcastChat_half_Mute")
                   ),
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "updateband",
                       onSelected: () =>
@@ -416,10 +417,10 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_day_Mute")
+                    (0, F.Xx)("#BroadcastChat_day_Mute")
                   ),
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "updatebanw",
                       onSelected: () =>
@@ -431,10 +432,10 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_week_Mute")
+                    (0, F.Xx)("#BroadcastChat_week_Mute")
                   ),
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "updatebanp",
                       onSelected: () =>
@@ -446,10 +447,10 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_perm_Mute")
+                    (0, F.Xx)("#BroadcastChat_perm_Mute")
                   ),
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "removeban",
                       onSelected: () =>
@@ -462,13 +463,13 @@
                           !0
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_Unmute")
+                    (0, F.Xx)("#BroadcastChat_Unmute")
                   )
                 )
               : this.m_chat.IsUserMutedLocally(t.steamid)
               ? r.push(
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "unmuteuser",
                       onSelected: () =>
@@ -477,12 +478,12 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_UnmuteLocal")
+                    (0, F.Xx)("#BroadcastChat_UnmuteLocal")
                   )
                 )
               : r.push(
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "muteuser",
                       onSelected: () =>
@@ -491,17 +492,17 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_MuteLocal")
+                    (0, F.Xx)("#BroadcastChat_MuteLocal")
                   )
                 ),
-            ((T.L7 && T.L7.is_support) ||
+            ((R.L7 && R.L7.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
               t.steamid)
           ) {
             this.m_chat.BIsUserBroadcastModerator(t.steamid)
               ? r.push(
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "removemod",
                       onSelected: () =>
@@ -511,12 +512,12 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_Remove_Moderator")
+                    (0, F.Xx)("#BroadcastChat_Remove_Moderator")
                   )
                 )
               : r.push(
-                  n.createElement(
-                    h.Zo,
+                  o.createElement(
+                    _.Zo,
                     {
                       key: "addmod",
                       onSelected: () =>
@@ -526,23 +527,23 @@
                           t.persona_name
                         ),
                     },
-                    (0, v.Xx)("#BroadcastChat_Add_Moderator")
+                    (0, F.Xx)("#BroadcastChat_Add_Moderator")
                   )
                 );
           }
           return r.length
-            ? (0, o.yV)(
-                n.createElement(
-                  h.xV,
+            ? (0, l.yV)(
+                o.createElement(
+                  _.xV,
                   null,
-                  n.createElement(
+                  o.createElement(
                     "div",
-                    { className: E().SelectedUserNameCtn },
-                    (0, v.Xx)("#BroadcastChat_User"),
-                    n.createElement("br", null),
-                    n.createElement(
+                    { className: z().SelectedUserNameCtn },
+                    (0, F.Xx)("#BroadcastChat_User"),
+                    o.createElement("br", null),
+                    o.createElement(
                       "span",
-                      { className: E().SelectedUserName },
+                      { className: z().SelectedUserName },
                       t.persona_name
                     )
                   ),
@@ -553,14 +554,14 @@
             : null;
         }
         GetTypeClassName(e) {
-          return e.type === O.gK.Notification
-            ? E().MessageNotification
-            : e.type === O.gK.Error
-            ? E().MessageError
-            : E().MessageChat;
+          return e.type === x.gK.Notification
+            ? z().MessageNotification
+            : e.type === x.gK.Error
+            ? z().MessageError
+            : z().MessageChat;
         }
         FormatMessage(e, t) {
-          if (e.type === O.gK.Chat) {
+          if (e.type === x.gK.Chat) {
             let r = t ? t.FilterText(e.steamid, e.msg) : e.msg;
             return this.AddLinksEmoticons(r, !1);
           }
@@ -569,7 +570,7 @@
         RenderUserChatLine(e, t, r) {
           let i = r ? r.get(e.steamid) : void 0;
           const a =
-            e.type === O.gK.Chat
+            e.type === x.gK.Chat
               ? (function (e, t, r) {
                   return r
                     ? "presenter"
@@ -580,56 +581,56 @@
                     : "";
                 })(e.steamid, this.m_chat, i)
               : "";
-          return n.createElement(
+          return o.createElement(
             "div",
             {
               key: e.instance_id + "_" + e.client_ts + "_" + t,
               className: this.GetTypeClassName(e),
               onContextMenu: (t) => this.OnContextMenu(t, e),
             },
-            e.type === O.gK.Chat && n.createElement(I, { userType: a }),
+            e.type === x.gK.Chat && o.createElement(P, { userType: a }),
             e.flair &&
-              n.createElement(
+              o.createElement(
                 "span",
-                { className: E().FlairContainer },
+                { className: z().FlairContainer },
                 this.AddLinksEmoticons(e.flair, !1)
               ),
-            e.type === O.gK.Chat &&
-              n.createElement(W, { userType: a, msg: e, presenterInfo: i }),
-            e.type === O.gK.Chat &&
+            e.type === x.gK.Chat &&
+              o.createElement(I, { userType: a, msg: e, presenterInfo: i }),
+            e.type === x.gK.Chat &&
               this.m_chat.GetBroadcastSteamID() === e.steamid &&
-              n.createElement(
+              o.createElement(
                 "span",
                 {
-                  className: `${E().MessageNotification} ${
-                    E().MessageContents
+                  className: `${z().MessageNotification} ${
+                    z().MessageContents
                   }`,
                 },
-                ` (${(0, v.Xx)("#BroadcastChat_Broadcaster")})`
+                ` (${(0, F.Xx)("#BroadcastChat_Broadcaster")})`
               ),
-            e.type === O.gK.Chat &&
+            e.type === x.gK.Chat &&
               this.m_chat.m_mapChannelModeratorUsers.get(e.steamid) &&
-              n.createElement(
+              o.createElement(
                 "span",
                 {
-                  className: `${E().MessageNotification} ${
-                    E().MessageContents
+                  className: `${z().MessageNotification} ${
+                    z().MessageContents
                   }`,
                 },
-                ` (${(0, v.Xx)("#BroadcastChat_Moderator")})`
+                ` (${(0, F.Xx)("#BroadcastChat_Moderator")})`
               ),
-            n.createElement(
+            o.createElement(
               "span",
               {
-                className: `${E().MessageContents} ${
+                className: `${z().MessageContents} ${
                   this.AddLinksEmoticons(e.msg, !1).filter(
                     (e) => e && "string" == typeof e
                   ).length
                     ? ""
-                    : E().EmoticonsOnly
+                    : z().EmoticonsOnly
                 }`,
               },
-              e.type === O.gK.Chat ? " : " : "",
+              e.type === x.gK.Chat ? " : " : "",
               this.FormatMessage(e, this.m_chat.TextFilterStore)
             )
           );
@@ -643,31 +644,31 @@
             i = this.m_chat ? this.m_chat.m_rgChatMessages : [],
             a = r ? i.reverse() : i,
             s = this.m_chat
-              ? c.C.GetPresenterMapForBroadcasterSteamID(
+              ? d.C.GetPresenterMapForBroadcasterSteamID(
                   this.m_chat.GetBroadcastSteamID()
                 )
               : void 0,
-            o = this.m_chat ? this.m_chat.m_latestAnnouncement : null;
-          return n.createElement(
+            n = this.m_chat ? this.m_chat.m_latestAnnouncement : null;
+          return o.createElement(
             "div",
             {
-              className: (0, M.Z)(E().ChatPanel, "ChatPanel"),
+              className: (0, v.Z)(z().ChatPanel, "ChatPanel"),
               style: e ? { display: "none" } : void 0,
             },
-            n.createElement(z.E, { latestAnnouncement: o }),
+            o.createElement(O.E, { latestAnnouncement: n }),
             r &&
               !!this.m_chat &&
-              n.createElement(k, {
+              o.createElement(A, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
               }),
-            n.createElement(w, null),
-            n.createElement(
+            o.createElement(f, null),
+            o.createElement(
               "div",
               {
-                className: (0, M.Z)(
-                  `${E().ChatMessages} ${u().minHeightZero}`,
+                className: (0, v.Z)(
+                  `${z().ChatMessages} ${h().minHeightZero}`,
                   "ChatMessages"
                 ),
                 onScroll: this.HandleScroll,
@@ -675,10 +676,10 @@
               },
               a.map((e, t) => this.RenderUserChatLine(e, t, s))
             ),
-            n.createElement(f, null),
+            o.createElement(C, null),
             !r &&
               !!this.m_chat &&
-              n.createElement(k, {
+              o.createElement(A, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -686,23 +687,24 @@
           );
         }
       };
-      function k(e) {
+      function A(e) {
         const { oChat: t, emoticonStore: r, bPartnerMemberOnlyChat: i } = e;
         return !i ||
-          ((null === T.L7 || void 0 === T.L7 ? void 0 : T.L7.logged_in) &&
-            (null === T.L7 || void 0 === T.L7
+          ((null === R.L7 || void 0 === R.L7 ? void 0 : R.L7.logged_in) &&
+            (null === R.L7 || void 0 === R.L7
               ? void 0
-              : T.L7.is_partner_member))
-          ? (null === T.L7 || void 0 === T.L7 ? void 0 : T.L7.logged_in)
-            ? n.createElement(A, { oChat: t, emoticonStore: r })
+              : R.L7.is_partner_member))
+          ? (null === R.L7 || void 0 === R.L7 ? void 0 : R.L7.logged_in)
+            ? o.createElement(N, { oChat: t, emoticonStore: r })
             : null
-          : n.createElement(U, null);
+          : o.createElement(G, null);
       }
-      function A(e) {
+      function N(e) {
         const { oChat: t, emoticonStore: r } = e,
-          [i, a] = n.useState(""),
-          s = n.useRef(),
-          o = n.useCallback(
+          [i, a] = o.useState(""),
+          s = o.useRef(),
+          l = (0, n.SZ)(() => t.m_bRateLimited),
+          c = o.useCallback(
             (e) => {
               !!e.shiftKey ||
                 13 !== e.charCode ||
@@ -711,71 +713,73 @@
             },
             [t, i]
           ),
-          l = n.useCallback(
+          d = o.useCallback(
             (e, t = !1) => {
               a(i + `ː${e}ː`),
                 (null == s ? void 0 : s.current) && s.current.focus();
             },
             [i, s]
           );
-        return n.createElement(
+        let u = l || 0 == i.trim().length,
+          _ = (0, v.Z)(h().chatSubmitButton, 0 == i.length && h().disabled);
+        return o.createElement(
           "div",
-          { className: (0, M.Z)(E().ChatEntryCtn, "ChatEntryCtn") },
-          n.createElement(
+          { className: (0, v.Z)(z().ChatEntryCtn, "ChatEntryCtn") },
+          o.createElement(
             "div",
-            { className: (0, M.Z)(E().ChatEntry, "ChatEntry") },
-            n.createElement(
+            { className: (0, v.Z)(z().ChatEntry, "ChatEntry") },
+            o.createElement(
               "form",
-              { className: `${u().chatEntryControls}` },
-              n.createElement("textarea", {
-                className: u().chatTextarea,
-                placeholder: (0, v.Xx)("#BroadcastChat_EnterResponse"),
-                onKeyPress: o,
+              { className: `${h().chatEntryControls}` },
+              o.createElement("textarea", {
+                className: h().chatTextarea,
+                placeholder: (0, F.Xx)("#BroadcastChat_EnterResponse"),
+                onKeyPress: c,
                 onChange: (e) => a(e.target.value),
                 value: i,
                 ref: s,
               }),
-              Boolean(t.m_bRateLimited) &&
-                n.createElement(V, {
+              l &&
+                o.createElement(U, {
                   nSeconds: t.m_nRateLimitSeconds,
                   bRateLimited: t.m_bRateLimited,
                 }),
-              n.createElement(
+              o.createElement(
                 "button",
                 {
-                  className: `${u().chatSubmitButton} ${i ? "" : u().disabled}`,
-                  title: (0, v.Xx)("#ChatEntryButton_Submit"),
-                  disabled: t.m_bRateLimited || 0 == i.trim().length,
+                  className: _,
+                  title: (0, F.Xx)("#ChatEntryButton_Submit"),
+                  disabled: u,
                   onClick: () => {
                     t.SendMessage(i), a("");
                   },
                 },
-                n.createElement(C.k4K, null)
+                o.createElement(M.k4K, null)
               )
             ),
-            n.createElement(
+            o.createElement(
               "div",
               {
                 style: { height: "50px" },
-                className: `${u().chatEntryActionsContainer}`,
+                className: `${h().chatEntryActionsContainer}`,
               },
-              n.createElement(
+              o.createElement(
                 "div",
-                { className: u().chatEntryActionsGroup },
-                n.createElement(g.Z, {
+                { className: h().chatEntryActionsGroup },
+                o.createElement(b.Z, {
                   disabled: !1,
-                  OnEmoticonSelected: l,
+                  OnEmoticonSelected: d,
                   rtLastAckedNewEmoticons: Number.MAX_VALUE,
                   emoticonStore: r,
-                  emoticonHoverStore: d.$,
+                  emoticonHoverStore: m.$,
                 }),
-                n.createElement(N, Object.assign({}, e, { textInputRef: s }))
+                o.createElement(V, Object.assign({}, e, { textInputRef: s }))
               )
             )
           )
         );
       }
-      function N(e) {
+      function V(e) {
         var t;
         const { oChat: r, emoticonStore: i, textInputRef: a } = e;
         return r.m_strFlairGroupID &&
@@ -784,7 +788,7 @@
           void 0 === t
             ? void 0
             : t.length)
-          ? n.createElement(g.Z, {
+          ? o.createElement(b.Z, {
               disabled: !1,
               OnEmoticonSelected: (e) => {
                 r.UpdateChatMessageFlair(e),
@@ -792,57 +796,57 @@
               },
               rtLastAckedNewEmoticons: Number.MAX_VALUE,
               emoticonStore: i,
-              emoticonHoverStore: d.$,
+              emoticonHoverStore: m.$,
               strFlairGroupID: r.m_strFlairGroupID,
-              title: (0, v.Xx)("#ChatEntryButton_Flair"),
-              buttonIcon: n.createElement(C.yVt, null),
+              title: (0, F.Xx)("#ChatEntryButton_Flair"),
+              buttonIcon: o.createElement(M.yVt, null),
             })
           : null;
       }
-      (0, i.gn)([a.LO], P.prototype, "m_chat", void 0),
-        (0, i.gn)([F.ak], P.prototype, "StartChat", null),
-        (0, i.gn)([F.ak], P.prototype, "HandleScroll", null),
-        (0, i.gn)([F.ak], P.prototype, "OnContextMenu", null),
-        (0, i.gn)([F.ak], P.prototype, "RenderUserChatLine", null),
-        (P = (0, i.gn)([s.Pi], P));
-      class V extends n.Component {
+      (0, i.gn)([a.LO], k.prototype, "m_chat", void 0),
+        (0, i.gn)([T.ak], k.prototype, "StartChat", null),
+        (0, i.gn)([T.ak], k.prototype, "HandleScroll", null),
+        (0, i.gn)([T.ak], k.prototype, "OnContextMenu", null),
+        (0, i.gn)([T.ak], k.prototype, "RenderUserChatLine", null),
+        (k = (0, i.gn)([s.Pi], k));
+      class U extends o.Component {
         render() {
-          return n.createElement(
+          return o.createElement(
             "div",
-            { className: E().TimedProgressBarContainer },
-            n.createElement(
+            { className: z().TimedProgressBarContainer },
+            o.createElement(
               "div",
-              { className: E().wrapper },
-              n.createElement("div", {
-                className: `${E().spinner} ${E().pie}`,
+              { className: z().wrapper },
+              o.createElement("div", {
+                className: `${z().spinner} ${z().pie}`,
                 style: { animationDuration: `${this.props.nSeconds || 0}s` },
               }),
-              n.createElement("div", {
-                className: `${E().filler} ${E().pie}`,
+              o.createElement("div", {
+                className: `${z().filler} ${z().pie}`,
                 style: { animationDuration: `${this.props.nSeconds || 0}s` },
               }),
-              n.createElement("div", {
-                className: E().mask,
+              o.createElement("div", {
+                className: z().mask,
                 style: { animationDuration: `${this.props.nSeconds || 0}s` },
               })
             )
           );
         }
       }
-      function U(e) {
-        return n.createElement(
+      function G(e) {
+        return o.createElement(
           "div",
-          { className: E().Description },
-          n.createElement(
+          { className: z().Description },
+          o.createElement(
             "div",
-            { className: E().LogInPrompt },
-            (0, v.Xx)("#Broadcast_PartnerChat_Login")
+            { className: z().LogInPrompt },
+            (0, F.Xx)("#Broadcast_PartnerChat_Login")
           ),
-          !T.L7.logged_in &&
-            n.createElement(
-              _.zx,
-              { onClick: b.X, className: (0, M.Z)(E().SignInButton) },
-              (0, v.Xx)("#Login_SignIn")
+          !R.L7.logged_in &&
+            o.createElement(
+              p.zx,
+              { onClick: B.X, className: (0, v.Z)(z().SignInButton) },
+              (0, F.Xx)("#Login_SignIn")
             )
         );
       }

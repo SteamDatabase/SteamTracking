@@ -8967,7 +8967,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, se.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1683244231),
+          s = parseInt(1683250831),
           c = s && (0, cr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == _.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -9098,7 +9098,7 @@
                   onRestart:
                     6 == s
                       ? () => {
-                          SteamClient.User.StartRestart(), r(!0);
+                          SteamClient.User.StartRestart(!1), r(!0);
                         }
                       : null,
                   onClose: e.onClose,
@@ -17619,7 +17619,7 @@
               label: (0, se.Localize)("#ClientUpdate_ApplyAndRestart"),
               onClick: () => {
                 new ad.E().StoreString(Ed, "1"),
-                  SteamClient.User.StartRestart();
+                  SteamClient.User.StartRestart(!1);
               },
             },
             { label: (0, se.Localize)("#ClientUpdate_Defer"), onClick: t },
