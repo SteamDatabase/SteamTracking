@@ -1337,6 +1337,7 @@ ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
+${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
 ${STORE_ICON_BASE_URL}${appid}/${}
 ${STORE_ICON_BASE_URL}${appid}/header.jpg
 ${STORE_ICON_BASE_URL}${appid}/portrait.png
@@ -2124,10 +2125,12 @@ https://community.cloudflare.steamstatic.com/public/shared/javascript/crypto/rsa
 https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta
 https://confluence.valve.org/display/STEAM/How+to+Request+Moderation
 https://confluence.valve.org/display/STEAM/IM+Channel+Guidelines
+https://confluence.valve.org/display/STEAM/Marketing+Message+Template%3A+Featured+Video
 https://confluence.valve.org/display/STEAM/Opt-In+Tech+Custom+Event+type
 https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event
 https://confluence.valve.org/display/SteamBiz/New+Sales+Page+Feature+-+How+to+invite+partners
 https://confluence.valve.org/display/etc...
+https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://developer.valvesoftware.com/

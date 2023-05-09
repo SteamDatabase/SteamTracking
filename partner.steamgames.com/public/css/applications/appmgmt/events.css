@@ -8154,19 +8154,6 @@ button.rbc-input::-moz-focus-inner {
 .marketingmessagedashboard_HeaderButtons_1Q4Pq {
   float: right;
 }
-.marketingmessageassets_MMArtPreview_uaJWO {
-  width: 342px;
-  height: 360px;
-}
-.marketingmessageassets_MMArtNoArt_1oJlf {
-  width: 342px;
-  height: 360px;
-  border-style: dotted;
-}
-.marketingmessageassets_LegalPreview_3UR3E {
-  margin-top: 6px;
-  font-size: 12px;
-}
 .cloudlocalizedartdisplay_ArtPreview_2V4yU {
   width: 100%;
   height: auto;
@@ -8211,6 +8198,19 @@ select {
   font-size: 21px;
   color: #c93a3a;
   font-weight: 500;
+}
+.marketingmessageassets_MMArtPreview_uaJWO {
+  width: 342px;
+  height: 360px;
+}
+.marketingmessageassets_MMArtNoArt_1oJlf {
+  width: 342px;
+  height: 360px;
+  border-style: dotted;
+}
+.marketingmessageassets_LegalPreview_3UR3E {
+  margin-top: 6px;
+  font-size: 12px;
 }
 .userprofile_SmallAvatar_2cCH3 {
   max-width: 32px;

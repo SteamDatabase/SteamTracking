@@ -3231,7 +3231,7 @@
       (0, r.gn)([z.LO], j.prototype, "m_mapEventGIDToSolrData", void 0),
         (0, r.gn)([z.LO], j.prototype, "m_listEvents", void 0),
         (0, r.gn)([z.aD], j.prototype, "ClearAllSolrEvents", null);
-      var W = n(36764);
+      var W = n(81974);
       class V {
         constructor() {
           (this.m_backfill = void 0),
@@ -3302,8 +3302,8 @@
       var q = n(11110),
         Q = n(93982),
         K = n(80681),
-        Y = n(95895),
-        J = n(5833);
+        Y = n(5833),
+        J = n(95895);
       let $ = class extends p.Component {
         constructor() {
           super(...arguments),
@@ -3405,8 +3405,8 @@
                       n.bProcessing = !0;
                       let e = W.aN.GetHashFromHashAndExt(s),
                         t = W.aN.GetExtensionStringFromHashAndExt(s),
-                        r = Y.M.GetResizeDimension(a);
-                      yield J.S.SendResizeRequest(
+                        r = (0, J.eq)(a);
+                      yield Y.S.SendResizeRequest(
                         this.m_cancelSignal,
                         l,
                         e,

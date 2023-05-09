@@ -72,7 +72,7 @@
         ik: () => u,
         pA: () => b,
         rf: () => G,
-        u2: () => B,
+        u2: () => w,
         vc: () => _,
         xQ: () => a,
       });
@@ -1639,7 +1639,7 @@
           return "CPartnerMembershipInvite_GetInvites_Response";
         }
       }
-      var B, w;
+      var w, B;
       !(function (e) {
         (e.GetSinglePartnerAppOptIn = function (e, t) {
           return e.SendMsg("Publishing.GetSinglePartnerAppOptIn#1", t, k, {
@@ -1702,7 +1702,7 @@
               ePrivilege: 1,
             });
           });
-      })(B || (B = {})),
+      })(w || (w = {})),
         (function (e) {
           e.GetInvites = function (e, t) {
             return e.SendMsg("PartnerMembershipInvite.GetInvites#1", t, R, {
@@ -1710,7 +1710,7 @@
               ePrivilege: 11,
             });
           };
-        })(w || (w = {}));
+        })(B || (B = {}));
     },
     93523: (e, t, i) => {
       "use strict";
@@ -1748,31 +1748,77 @@
             (this.m_filesToUpload.splice(t, 1),
             (this.m_filesToUpload = [...this.m_filesToUpload]));
         }
+        isImageFile(e) {
+          return e.type.startsWith("image/");
+        }
+        isVideoFile(e) {
+          return e.type.startsWith("video/");
+        }
+        isSubtitleTextFile(e) {
+          return (
+            e.type.startsWith("text/") ||
+            ("" == e.type && e.name.split("?")[0].endsWith(".vtt")) ||
+            ("" == e.type && e.name.split("?")[0].endsWith(".srt"))
+          );
+        }
         AddImageForLanguage(e, t, i, r) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             let n = !1;
             return (
               yield new Promise((s) => {
-                const a = new FileReader();
-                (a.onload = () => {
-                  const o = new Image();
-                  (o.onload = () => {
-                    const a = new u.M(e, t, o, i, r);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, a]),
-                      (n = !0),
-                      s();
+                if (this.isImageFile(e)) {
+                  const a = new FileReader();
+                  (a.onload = () => {
+                    const o = new Image();
+                    (o.onload = () => {
+                      const a = new u.Mr(e, t, o, i, r);
+                      (this.m_filesToUpload = [...this.m_filesToUpload, a]),
+                        (n = !0),
+                        s();
+                    }),
+                      (o.onerror = (e) => {
+                        console.error(
+                          "CCloudImageUploader failed to load the image, details",
+                          e
+                        ),
+                          (n = !1),
+                          s();
+                      }),
+                      (o.src = a.result.toString());
                   }),
-                    (o.onerror = (e) => {
+                    a.readAsDataURL(e);
+                } else if (this.isVideoFile(e)) {
+                  const r = document.createElement("video");
+                  (r.preload = "metadata"),
+                    r.addEventListener("loadedmetadata", () => {
+                      const a = new u.RB(e, t, r, i);
+                      (this.m_filesToUpload = [...this.m_filesToUpload, a]),
+                        (n = !0),
+                        s();
+                    }),
+                    (r.onerror = (e) => {
                       console.error(
-                        "CCloudImageUploader failed to load the image, details",
+                        "CCloudImageUploader failed to load the video, details",
                         e
                       ),
                         (n = !1),
                         s();
                     }),
-                    (o.src = a.result.toString());
-                }),
-                  a.readAsDataURL(e);
+                    (r.src = URL.createObjectURL(e));
+                } else
+                  this.isSubtitleTextFile(e)
+                    ? ((this.m_filesToUpload = [
+                        ...this.m_filesToUpload,
+                        new u.nZ(e, t, i),
+                      ]),
+                      (n = !0),
+                      s())
+                    : (console.error(
+                        "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+                        e,
+                        e.type
+                      ),
+                      (n = !1));
               }),
               n
             );
@@ -1783,7 +1829,7 @@
             const n = {};
             for (const e of this.m_filesToUpload)
               if ("pending" === e.status) {
-                const t = e.IsValidImage(i, r, s);
+                const t = e.IsValidAssetType(i, r, s);
                 if (!t.error && !t.needsCrop) {
                   e.status = "uploading";
                   n[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
@@ -1820,9 +1866,15 @@
                             return "video/mp4";
                           case 5:
                             return "video/webm";
+                          case 6:
+                            return "text/vtt";
+                          case 7:
+                            return "text/srt";
                         }
                         return null;
-                      })(n.file_type)
+                      })(n.file_type),
+                      r.width,
+                      r.height
                     );
                   } else (r.status = "failed"), (r.message = n.message);
               }),
@@ -1844,6 +1896,8 @@
               if (t.endsWith(".gif")) return "image/gif";
               if (t.endsWith(".mp4")) return "video/mp4";
               if (t.endsWith(".webm")) return "video/webm";
+              if (t.endsWith(".srt")) return "text/srt";
+              if (t.endsWith(".vtt")) return "text/vtt";
               return null;
             })(t);
             if (!a)
@@ -1878,6 +1932,10 @@
             return ".mp4";
           case "video/webm":
             return ".webm";
+          case "text/vtt":
+            return ".vtt";
+          case "text/srt":
+            return ".srt";
         }
         return (
           console.error("ConvertMimeTypeToExtension:Unexepected mime type ", e),
@@ -5955,14 +6013,14 @@
     73797: (e, t, i) => {
       "use strict";
       i.d(t, {
-        EV: () => B,
+        EV: () => w,
         Fi: () => k,
         ID: () => E,
         LT: () => v,
         Qy: () => R,
         Su: () => S,
         XM: () => y,
-        Xj: () => w,
+        Xj: () => B,
         _J: () => h,
         b2: () => G,
         co: () => D,
@@ -6484,12 +6542,12 @@
       function R(e) {
         return p.Get().GetMaxDiscountPercentage(e);
       }
-      function B(e) {
+      function w(e) {
         return e.some(
           (e) => e.nDiscountPct > p.Get().GetMaxDiscountPercentage(e.packageID)
         );
       }
-      function w(e) {
+      function B(e) {
         return p.Get().GetMaxDiscountPercentageForGroup(e);
       }
     },
@@ -6616,10 +6674,10 @@
         dU: () => I,
         df: () => x,
         j_: () => q,
-        ju: () => w,
+        ju: () => B,
         np: () => K,
         on: () => A,
-        ps: () => B,
+        ps: () => w,
         rX: () => P,
         sN: () => X,
         uT: () => j,
@@ -7395,10 +7453,10 @@
           );
         }, []);
       }
-      function B(e) {
+      function w(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function w(e) {
+      function B(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
       function C(e) {
@@ -7410,7 +7468,7 @@
         return t;
       }
       function O(e) {
-        const t = B(e),
+        const t = w(e),
           i = [];
         for (const n of g.Get().m_rgKnownPriceKeys) {
           const r = t.prices[n],
@@ -7536,7 +7594,7 @@
     86371: (e, t, i) => {
       "use strict";
       i.d(t, {
-        B6: () => w,
+        B6: () => B,
         E5: () => U,
         E_: () => M,
         Eh: () => S,
@@ -7548,7 +7606,7 @@
         dy: () => N,
         hr: () => R,
         k: () => z,
-        pl: () => B,
+        pl: () => w,
         s$: () => O,
         yn: () => F,
         z$: () => j,
@@ -8066,13 +8124,13 @@
           E.Get();
         }, []);
       }
-      function B() {
+      function w() {
         const [e, t] = c.useState(E.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, p.Qg)(E.Get().GetLocalPackageDiscountOverrideCallbackList(), t), e
         );
       }
-      function w() {
+      function B() {
         return c.useCallback(() => {
           var e;
           return (

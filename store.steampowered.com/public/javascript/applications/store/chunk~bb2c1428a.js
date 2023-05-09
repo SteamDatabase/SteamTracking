@@ -791,7 +791,7 @@
         o = r(49194),
         l = r(23907),
         c = (r(67575), r(12568)),
-        d = r(36764),
+        d = r(81974),
         m = r(33920),
         u = r(55863),
         p = r(99363),
@@ -1784,70 +1784,165 @@
     },
     93982: (e, t, r) => {
       "use strict";
-      r.d(t, { $N: () => s, FR: () => a, bE: () => i, h1: () => n });
-      const n = {
-        capsule: { width: 800, height: 450 },
-        spotlight: { width: 2108, height: 460 },
-        background: { width: 1920, height: 622 },
-        hero: { width: 0, height: 0 },
-        email_full: { width: 800, height: 300 },
-        email_centered: { width: 644, height: 300 },
-        broadcast_left: { width: 155, height: 337 },
-        broadcast_right: { width: 155, height: 337 },
-        sale_header: { width: 0, height: 0, bDisableEnforceDimensions: !0 },
-        sale_overlay: { width: 0, height: 0, bDisableEnforceDimensions: !0 },
-        localized_image_group: {
-          width: 0,
-          height: 0,
-          bDisableEnforceDimensions: !0,
-        },
-        sale_section_background: {
-          width: 0,
-          height: 0,
-          bDisableEnforceDimensions: !0,
-        },
-        sale_section_title: {
-          width: 0,
-          height: 0,
-          bDisableEnforceDimensions: !0,
-        },
-        link_capsule: { width: 0, height: 0, bDisableEnforceDimensions: !0 },
-        product_banner: { width: 1100, height: 160 },
-        product_mobile_banner: { width: 500, height: 160 },
-        product_banner_override: { width: 1100, height: 160 },
-        product_mobile_banner_override: { width: 500, height: 160 },
-        schedule_track_art: { width: 196, height: 92 },
-        tab_bar_background: { width: 1500, height: 100 },
-        sale_logo: { width: 940, height: 460 },
-        bestofyear_banner: { width: 1100, height: 160 },
-        bestofyear_banner_mobile: { width: 500, height: 160 },
-        localized_marketing_message: { width: 570, height: 600 },
-        localized_optin_banner: { width: 1e3, height: 150 },
-        spotlight_art: { width: 306, height: 350 },
-        marketingmessage_art: { width: 570, height: 600 },
-        takeover_art: { width: 1850, height: 450 },
-        takeover_mobile_art: { width: 500, height: 350 },
-        takeunder_art: { width: 940, height: 150 },
-        takeunder_mobile_art: { width: 500, height: 160 },
-      };
-      function i(e, t, r) {
-        const i = n[r];
-        return (
-          !!i &&
-          (!!i.bDisableEnforceDimensions || (e === i.width && t === i.height))
-        );
-      }
-      function a(e, t, r) {
-        const i = n[r];
-        return (
-          !!i && !i.bDisableEnforceDimensions && e === i.width && t === i.height
-        );
-      }
+      r.d(t, {
+        $N: () => l,
+        FR: () => o,
+        Vy: () => c,
+        bE: () => s,
+        h1: () => a,
+      });
+      r(67237);
+      const n = [1, 3, 2],
+        i = [1, 3],
+        a = {
+          capsule: { width: 800, height: 450, rgAcceptableTypes: i },
+          spotlight: { width: 2108, height: 460, rgAcceptableTypes: i },
+          background: { width: 1920, height: 622, rgAcceptableTypes: i },
+          hero: { width: 0, height: 0, rgAcceptableTypes: i },
+          email_full: { width: 800, height: 300, rgAcceptableTypes: i },
+          email_centered: { width: 644, height: 300, rgAcceptableTypes: i },
+          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: i },
+          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: i },
+          sale_header: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: n,
+          },
+          sale_overlay: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: n,
+          },
+          localized_image_group: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: i,
+          },
+          sale_section_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: n,
+          },
+          sale_section_title: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: n,
+          },
+          link_capsule: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: i,
+          },
+          product_banner: { width: 1100, height: 160, rgAcceptableTypes: i },
+          product_mobile_banner: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: i,
+          },
+          product_banner_override: {
+            width: 1100,
+            height: 160,
+            rgAcceptableTypes: i,
+          },
+          product_mobile_banner_override: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: i,
+          },
+          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: i },
+          tab_bar_background: {
+            width: 1500,
+            height: 100,
+            rgAcceptableTypes: i,
+          },
+          sale_logo: { width: 940, height: 460, rgAcceptableTypes: i },
+          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: n },
+          bestofyear_banner_mobile: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: n,
+          },
+          localized_marketing_message: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: n,
+          },
+          localized_optin_banner: {
+            width: 1e3,
+            height: 150,
+            rgAcceptableTypes: i,
+          },
+          localized_marketingmessage_webm: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: [5],
+          },
+          localized_marketingmessage_mp4: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: [4],
+          },
+          localized_subtitles: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [6, 7],
+          },
+          localized_marketingmessage_poster: {
+            width: 528,
+            height: 297,
+            rgAcceptableTypes: [1, 3],
+          },
+          spotlight_art: { width: 306, height: 350, rgAcceptableTypes: n },
+          marketingmessage_art: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: n,
+          },
+          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: n },
+          takeover_mobile_art: {
+            width: 500,
+            height: 350,
+            rgAcceptableTypes: n,
+          },
+          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: n },
+          takeunder_mobile_art: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: n,
+          },
+        };
       function s(e, t, r) {
-        const i = n[r];
+        const n = a[r];
         return (
-          !!i &&
-          (!!i.bDisableEnforceDimensions || !(e < i.width || t < i.height))
+          !!n &&
+          (!!n.bDisableEnforceDimensions || (e === n.width && t === n.height))
+        );
+      }
+      function o(e, t, r) {
+        const n = a[r];
+        return (
+          !!n && !n.bDisableEnforceDimensions && e === n.width && t === n.height
+        );
+      }
+      function l(e, t, r) {
+        const n = a[r];
+        return (
+          !!n &&
+          (!!n.bDisableEnforceDimensions || !(e < n.width || t < n.height))
+        );
+      }
+      function c(e, t) {
+        return t.filter((t) =>
+          (function (e, t) {
+            return a[t].rgAcceptableTypes.includes(e);
+          })(e, t)
         );
       }
     },
@@ -2368,7 +2463,7 @@
         i = r(33940),
         a = r(50265),
         s = (r(6960), r(49969), r(66729)),
-        o = (r(82569), r(36764)),
+        o = (r(82569), r(81974)),
         l = r(31587),
         c = r(59821);
       !(function (e) {
@@ -2723,7 +2818,7 @@
         broadcast_whitelist: [],
       };
       var l = r(82569),
-        c = (r(82633), r(43735), r(13309), r(36764)),
+        c = (r(82633), r(43735), r(13309), r(81974)),
         d = r(29760),
         m = r(92801),
         u = (r(49734), r(73265)),
@@ -10235,7 +10330,7 @@
         c = r(49969),
         d = (r(93982), r(82569)),
         m = (r(67237), r(89526)),
-        u = r(36764);
+        u = r(81974);
       r(44479), r(44229);
       !(function (e) {
         (e[(e.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
@@ -10507,7 +10602,7 @@
                 (s.onload = () => {
                   const o = new Image();
                   (o.onload = () => {
-                    const s = new L.M(e, t, o, r, n);
+                    const s = new L.Mr(e, t, o, r, n);
                     (this.m_filesToUpload = [...this.m_filesToUpload, s]),
                       (i = !0),
                       a();
@@ -10588,7 +10683,7 @@
             const i = {};
             for (let e of this.m_filesToUpload)
               if (!this.BIsFileCompleted(e.file)) {
-                const t = e.IsValidImage(r, n, a);
+                const t = e.IsValidAssetType(r, n, a);
                 if (!t.error && !t.needsCrop) {
                   e.status = "uploading";
                   i[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
@@ -10719,58 +10814,116 @@
     },
     95895: (e, t, r) => {
       "use strict";
-      r.d(t, { M: () => c });
+      r.d(t, { Mr: () => h, eq: () => _ });
       var n = r(33940),
         i = r(50265),
         a = (r(6960), r(93982)),
         s = (r(67237), r(81052)),
         o = r(31587),
-        l = r(36764);
+        l = r(81974);
       r(5833);
-      class c {
-        constructor(e, t, r, n, i) {
+      const c = 960,
+        d = 311,
+        m = 480,
+        u = 156;
+      class p {
+        constructor(e, t, r, n, i, s) {
           if (
             ((this.fileType = 0),
-            (this.bCropped = !1),
             (this.file = e),
             (this.fileType = l.aN.GetExtensionTypeFromURL(e.name)),
             (this.language = t),
             (this.uploadTime = Date.now()),
-            (this.img = r),
-            (this.localizedImageGroupPrimaryImage = i),
-            n)
+            (this.status = "pending"),
+            r)
           ) {
-            let e = (0, l.S6)(r.width, r.height, n, !1);
-            void 0 === e && (e = (0, l.S6)(r.width, r.height, n, !0)),
-              (this.type = e || n[0]);
+            const e = (0, a.Vy)(this.fileType, r);
+            let t = (0, l.S6)(i, s, e, !1);
+            void 0 === t && (t = (0, l.S6)(i, s, e, !0)),
+              (this.type = t || r[0]);
           }
-          (this.status = "pending"), this.ResetImage();
+          (this.height = s), (this.width = i), (this.dataUrl = n);
+        }
+        IsValidAssetType(e, t, r) {
+          let n = 0,
+            i = 0,
+            s = !1,
+            c = !e || 0 === e.length || e.includes(this.type);
+          if (t) (n = t.width), (i = t.height), (s = !0);
+          else {
+            const e = a.h1[this.type];
+            e &&
+              ((n = e.width),
+              (i = e.height),
+              (s = !e.bDisableEnforceDimensions));
+          }
+          const d = this.width >= n && this.height >= i,
+            m = s ? this.width === n && this.height === i : d,
+            u = r && r != this.fileType,
+            p = 0 == (0, a.Vy)(this.fileType, e || []).length,
+            h = Boolean();
+          let _ = "",
+            g = !1;
+          return (
+            c
+              ? p
+                ? (_ = (0, o.Xx)("#ImageUpload_InvalidFileType"))
+                : u
+                ? (_ = (0, o.Xx)(
+                    "#ImageUpload_InvalidFormat",
+                    l.aN.GetExtensionStringForFileType(r)
+                  ))
+                : m || h
+                ? d
+                  ? !m &&
+                    h &&
+                    ((_ = (0, o.Xx)("#ImageUpload_InvalidDimensions", n, i)),
+                    (g = !0))
+                  : (_ = (0, o.Xx)("#ImageUpload_TooSmall", n, i))
+                : (_ = (0, o.Xx)("#ImageUpload_InvalidResolution", n, i))
+              : (_ = (0, o.Xx)("#ImageUpload_InvalidFormatSelected")),
+            { error: _, needsCrop: g }
+          );
+        }
+      }
+      (0, n.gn)([i.LO], p.prototype, "dataUrl", void 0),
+        (0, n.gn)([i.LO], p.prototype, "width", void 0),
+        (0, n.gn)([i.LO], p.prototype, "height", void 0),
+        (0, n.gn)([i.LO], p.prototype, "type", void 0),
+        (0, n.gn)([i.LO], p.prototype, "status", void 0),
+        (0, n.gn)([i.LO], p.prototype, "message", void 0);
+      class h extends p {
+        constructor(e, t, r, n, i) {
+          super(e, t, n, r.src, r.width, r.height),
+            (this.bCropped = !1),
+            (this.img = r),
+            (this.localizedImageGroupPrimaryImage = i);
         }
         ResetImage() {
           (this.height = this.img.height),
             (this.width = this.img.width),
             (this.dataUrl = this.img.src);
         }
-        static GetCropFormatDataURLType(e) {
-          switch (e) {
-            case 3:
-              return "image/png";
-            case 1:
-              return "image/jpeg";
-          }
-        }
         CropImage(e, t, r, i, a, o, l) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            return new Promise((n, d) => {
-              const m = c.GetCropFormatDataURLType(l);
-              if (!m) return void d("Invalid format provided");
-              const u = document.createElement("canvas");
-              (u.width = a), (u.height = o);
-              u.getContext("2d").drawImage(this.img, e, t, r, i, 0, 0, a, o),
-                u.toBlob((e) => {
-                  const t = u.toDataURL(m);
+            return new Promise((n, c) => {
+              const d = (function (e) {
+                switch (e) {
+                  case 3:
+                    return "image/png";
+                  case 1:
+                    return "image/jpeg";
+                }
+                return;
+              })(l);
+              if (!d) return void c("Invalid format provided");
+              const m = document.createElement("canvas");
+              (m.width = a), (m.height = o);
+              m.getContext("2d").drawImage(this.img, e, t, r, i, 0, 0, a, o),
+                m.toBlob((e) => {
+                  const t = m.toDataURL(d);
                   3 !== l && t.startsWith("data:image/png")
-                    ? d("Unable to encode into the requested file format")
+                    ? c("Unable to encode into the requested file format")
                     : ((this.file = (0, s.Lh)(e, this.file.name)),
                       (this.width = a),
                       (this.height = o),
@@ -10782,72 +10935,28 @@
             });
           });
         }
-        IsValidImage(e, t, r) {
-          let n = 0,
-            i = 0,
-            s = !1,
-            d = !e || 0 === e.length || e.includes(this.type);
-          if (t) (n = t.width), (i = t.height), (s = !0);
-          else {
-            const e = a.h1[this.type];
-            e &&
-              ((n = e.width),
-              (i = e.height),
-              (s = !e.bDisableEnforceDimensions));
-          }
-          const m = this.width >= n && this.height >= i,
-            u = s ? this.width === n && this.height === i : m,
-            p = r && r != this.fileType,
-            h = Boolean(c.GetCropFormatDataURLType(this.fileType));
-          let _ = "",
-            g = !1;
-          return (
-            d
-              ? p
-                ? (_ = (0, o.Xx)(
-                    "#ImageUpload_InvalidFormat",
-                    l.aN.GetExtensionStringForFileType(r)
-                  ))
-                : u || h
-                ? m
-                  ? !u &&
-                    h &&
-                    ((_ = (0, o.Xx)("#ImageUpload_InvalidDimensions", n, i)),
-                    (g = !0))
-                  : (_ = (0, o.Xx)("#ImageUpload_TooSmall", n, i))
-                : (_ = (0, o.Xx)("#ImageUpload_InvalidResolution", n, i))
-              : (_ = (0, o.Xx)("#ImageUpload_InvalidFormatSelected")),
-            { error: _, needsCrop: g }
-          );
-        }
         BIsOriginalMinimumDimensions(e) {
           return (0, a.$N)(this.img.width, this.img.height, e);
         }
         GetResizeDimension() {
-          return c.GetResizeDimension(this.type);
-        }
-        static GetResizeDimension(e) {
-          return "background" === e
-            ? [
-                { width: 960, height: 311 },
-                { width: 480, height: 156 },
-              ]
-            : "capsule" === e || "spotlight" === e
-            ? [{ width: a.h1[e].width / 2, height: a.h1[e].height / 2 }]
-            : void 0;
+          return _(this.type);
         }
       }
-      (0, n.gn)([i.LO], c.prototype, "dataUrl", void 0),
-        (0, n.gn)([i.LO], c.prototype, "width", void 0),
-        (0, n.gn)([i.LO], c.prototype, "height", void 0),
-        (0, n.gn)([i.LO], c.prototype, "type", void 0),
-        (0, n.gn)([i.LO], c.prototype, "status", void 0),
-        (0, n.gn)([i.LO], c.prototype, "message", void 0),
-        (0, n.gn)([i.LO], c.prototype, "bCropped", void 0);
+      function _(e) {
+        return "background" === e
+          ? [
+              { width: c, height: d },
+              { width: m, height: u },
+            ]
+          : "capsule" === e || "spotlight" === e
+          ? [{ width: a.h1[e].width / 2, height: a.h1[e].height / 2 }]
+          : void 0;
+      }
+      (0, n.gn)([i.LO], h.prototype, "bCropped", void 0);
     },
-    36764: (e, t, r) => {
+    81974: (e, t, r) => {
       "use strict";
-      r.d(t, { FN: () => v, S6: () => f, U8: () => S, aN: () => b });
+      r.d(t, { aN: () => b, S6: () => f, FN: () => v, U8: () => S });
       var n = r(33940),
         i = r(52868),
         a = r.n(i),
@@ -10910,19 +11019,40 @@
               return ".gif";
             case 3:
               return ".png";
+            case 5:
+              return ".webm";
+            case 4:
+              return ".mp4";
+            case 7:
+              return ".srt";
+            case 6:
+              return ".vtt";
           }
         }
         static GetExtensionString(e) {
           return b.GetExtensionStringForFileType(e.file_type) || ".jpg";
         }
         static GetExtensionTypeFromURL(e) {
-          return e.endsWith(".jpg")
-            ? 1
-            : e.endsWith(".png")
-            ? 3
-            : e.endsWith(".gif")
-            ? 2
-            : void 0;
+          return (function (e) {
+            return (
+              e.indexOf("?") > 0 && (e = e.split("?")[0]),
+              e.endsWith(".jpg")
+                ? 1
+                : e.endsWith(".png")
+                ? 3
+                : e.endsWith(".gif")
+                ? 2
+                : e.endsWith(".mp4")
+                ? 4
+                : e.endsWith(".webm")
+                ? 5
+                : e.endsWith(".vtt")
+                ? 6
+                : e.endsWith(".srt")
+                ? 7
+                : void 0
+            );
+          })(e);
         }
         static GetHashAndExt(e) {
           return e.image_hash + b.GetExtensionString(e);
@@ -16061,7 +16191,7 @@
         u = r(7297),
         p = r(66729),
         h = r(82569),
-        _ = r(36764),
+        _ = r(81974),
         g = (r(55923), r(68041)),
         v = r(96049),
         f = r(31621),
@@ -16775,7 +16905,7 @@
                   t && (g(!0), yield e.AddExistingClanImage(t, 0, c)))
                 ) {
                   u(t);
-                  const n = e.GetUploadImages()[0].IsValidImage(c, d);
+                  const n = e.GetUploadImages()[0].IsValidAssetType(c, d);
                   0 != n.error.length ||
                     n.needsCrop ||
                     (r && r.image_hash == t.image_hash) ||
@@ -16799,7 +16929,7 @@
           C = !1;
         if (v && v.GetFilesToUpload().length > 0) {
           B = v.GetUploadImages()[0];
-          const e = B.IsValidImage(c, d);
+          const e = B.IsValidAssetType(c, d);
           (I = e.error), (C = e.needsCrop);
         }
         return s.createElement(
@@ -19886,7 +20016,7 @@
         i = r(52868),
         a = r.n(i),
         s = r(89526),
-        o = (r(82569), r(36764)),
+        o = (r(82569), r(81974)),
         l = r(57255),
         c = r(22840),
         d = r(46085),

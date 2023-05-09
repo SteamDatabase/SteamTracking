@@ -2426,6 +2426,7 @@
     "ImageUpload_InvalidFormat": "The provided image does not match the expected format of %1$s",
     "ImageUpload_InvalidFormatSelected": "An invalid image type has been selected",
     "ImageUpload_InvalidResolution": "The image resolution must be exactly %1$sx%2$s",
+    "ImageUpload_InvalidFileType": "The file type is not supported for this asset",
     "ImageUpload_CropPreview": "Final image",
     "ImageDisplay_NoAssetUploaded": "No Assets Uploaded",
     "ImageDisplay_ShowAllAssets": "Show all %1$s language assets",
