@@ -70,6 +70,8 @@ message CAuthentication_DeviceDetails {
 	optional .EAuthTokenPlatformType platform_type = 2 [default = k_EAuthTokenPlatformType_Unknown, (description) = "EAuthTokenPlatformType, claimed, of device"];
 	optional int32 os_type = 3 [(description) = "EOSType, claimed, of authorized device"];
 	optional uint32 gaming_device_type = 4 [(description) = "EGamingDeviceType, claimed, of authorized device for steam client-type devices"];
+	optional uint32 client_count = 5 [(description) = "For desktop clients, quantized number of users in history"];
+	optional bytes machine_id = 6 [(description) = "Additional device context"];
 }
 
 message CAuthentication_BeginAuthSessionViaQR_Request {

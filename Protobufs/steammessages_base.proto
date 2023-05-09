@@ -320,3 +320,12 @@ message CMsgKeyValuePair {
 message CMsgKeyValueSet {
 	repeated .CMsgKeyValuePair pairs = 1;
 }
+
+message UserContentDescriptorPreferences {
+	message ContentDescriptor {
+		optional uint32 content_descriptorid = 1;
+		optional uint32 timestamp_added = 2;
+	}
+
+	repeated .UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;
+}

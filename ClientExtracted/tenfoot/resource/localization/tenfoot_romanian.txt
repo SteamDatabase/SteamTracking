@@ -2942,7 +2942,7 @@ Dacă ai reconfigurat tastele în joc, s-ar putea să necesite să resetezi acel
 	"Notification_NetworkDisconnected"		"Rețea deconectată"
 	"Notification_SteamUpdateAvailable"     "Actualizare Steam disponibilă"
 	"Notification_RestartToUpdate"          "Repornește pentru actualizare"
-	"Notification_FriendsInvites"		"Ai {d:InviteCount} de invitații de prietenie în așteptare."
+	"Notification_FriendsInvites"		"Ai {d:InviteCount} cereri de prietenie în așteptare."
 	"Notification_FriendsInviteCount"	"+{d:InviteCount}"
 	"Notification_ClanInvites"		"Ai {d:InviteCount} de invitații în grup în așteptare."
 	"Notification_ClansInviteCount"	"+{d:InviteCount}"
@@ -3196,11 +3196,11 @@ Dacă ai reconfigurat tastele în joc, s-ar putea să necesite să resetezi acel
 	"Friends_RemoveFriend_OkButton"		"ÎNLĂTURĂ"
 	"Friends_ProfileDetails_Action_JoinGame""Alătură-te la joc"
 	"Friends_ProfileDetails_Action_IgnoreJoinGame""Ignoră invitația de joc"
-	"Friends_ProfileDetails_Action_AcceptFriendship"	"Acceptă invitația de prietenie"
-	"Friends_ProfileDetails_Action_IgnoreFriendship"	"Ignoră invitația de prietenie"
+	"Friends_ProfileDetails_Action_AcceptFriendship"	"Acceptă cererea de prietenie"
+	"Friends_ProfileDetails_Action_IgnoreFriendship"	"Ignoră cererea de prietenie"
 	"Friends_ProfileDetails_Action_AcceptGroupInvite"	"Acceptă invitația de grup"
 	"Friends_ProfileDetails_Action_IgnoreGroupInvite"	"Refuză invitația de grup"
-	"Friends_ProfileDetails_Action_BlockFriendship"	"Blochează invitațiile de prietenie"
+	"Friends_ProfileDetails_Action_BlockFriendship"	"Blochează cererile de prietenie"
 	"Friends_FriendsActions"		"Prieteni"
 	"Friends_SetPersonaStatus"			"Setează starea"
 	"Friends_SetPersona_OfflineMsg"		"Nu se poate realiza conexiunea la Steam, starea persoanei nu este editabilă momentan."
@@ -4353,7 +4353,7 @@ Dacă ai reconfigurat tastele în joc, s-ar putea să necesite să resetezi acel
 	"SteamUI_AddController_Title"					"Se caută Steam Controllere..."
 	"SteamUI_AddController_HowToPair"	"Te rugăm să ții apăsat butonul X atunci când pornești Controller-ul Steam."
 
-	"BigPicture_YouHaveNPendingInvites"	"Vezi {d:InviteCount} invitații de prietenie în așteptare."
+	"BigPicture_YouHaveNPendingInvites"	"Vezi cele {d:InviteCount} cereri de prietenie aflate în așteptare."
 
 	"Screenshots_Screenshots" 	"CAPTURI DE ECRAN"
 	"Screenshots_Screenshots_lwr" 	"Capturi de ecran"
@@ -7417,8 +7417,8 @@ Dacă ai reconfigurat tastele în joc, s-ar putea să necesite să resetezi acel
 	"FriendsInvitesBP_AcceptAll"	"Acceptă toate"
 	"FriendsInvitesBP_IgnoreAll"	"Ignoră toate"
 
-	"FriendsInvites_AcceptAllFriends_Footer"	"ACCEPTĂ TOATE INVITAȚIILE DE PRIETENIE"
-	"FriendsInvites_IgnoreAllFriends_Footer"	"IGNORĂ TOATE INVITAȚIILE DE PRIETENIE"
+	"FriendsInvites_AcceptAllFriends_Footer"	"ACCEPTĂ TOATE CERERILE DE PRIETENIE"
+	"FriendsInvites_IgnoreAllFriends_Footer"	"IGNORĂ TOATE CERERILE DE PRIETENIE"
 	"FriendsInvites_AcceptAllGroups_Footer"		"ACCEPTĂ TOATE INVITAȚIILE DE GRUP"
 	"FriendsInvites_IgnoreAllGroups_Footer"		"IGNORĂ TOATE INVITAȚIILE DE GRUP"
 
@@ -7527,7 +7527,7 @@ Dacă ai reconfigurat tastele în joc, s-ar putea să necesite să resetezi acel
 
 	"SteamUI_NetworkLoginNeeded_Title"	"Autentifică-te pe rețeaua ta"
 
-	"Overlay_Friend_Notifications_Invites"		"Invitații de prietenie"
+	"Overlay_Friend_Notifications_Invites"		"Cereri de prietenie"
 	"Overlay_Friend_Notifications_More_Unread"		"Conversații"
 	"Overlay_Friend_Notifications_More_Unread_Chats_Plural"		"{d:unreadchats} chaturi suplimentare"
 	"Overlay_Friend_Notifications_More_Unread_Chats"			"1 discuție suplimentară"

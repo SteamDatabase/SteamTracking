@@ -1,7 +1,7 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [6109],
   {
-    90529: (n) => {
+    20111: (n) => {
       n.exports = {
         IconContainer: "awardicon_IconContainer_6TbQg",
         ButtonContainer: "awardicon_ButtonContainer_kaquA",
@@ -11,16 +11,16 @@
         IconList: "awardicon_IconList_1NEGw",
       };
     },
-    77986: (n, e, t) => {
+    14906: (n, e, t) => {
       "use strict";
       t.r(e), t.d(e, { AwardIcon: () => u, AwardIconList: () => l });
       var o = t(67294),
-        a = (t(16329), t(81603)),
-        r = t(22784),
-        c = t(90529),
+        a = (t(81235), t(52436)),
+        r = t(76023),
+        c = t(20111),
         i = t.n(c),
-        s = t(27194),
-        p = t(45520);
+        s = t(92312),
+        p = t(51878);
       class u extends o.PureComponent {
         render() {
           const n = (0, s.LocalizePlural)(

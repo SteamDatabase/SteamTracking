@@ -45,6 +45,7 @@
  AudioQueueAllocateBuffer
  AudioQueueDispose
  AudioQueueEnqueueBuffer
+ AudioQueueFlush
  AudioQueueNewInput
  AudioQueueNewOutput
  AudioQueueSetProperty
@@ -543,6 +544,7 @@
  T SDL_GetNumTouchFingers
  T SDL_GetNumVideoDrivers
  T SDL_GetOriginalMemoryFunctions
+ T SDL_GetPath
  T SDL_GetPerformanceCounter
  T SDL_GetPerformanceFrequency
  T SDL_GetPixelFormatEnumForMasks

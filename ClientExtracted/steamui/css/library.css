@@ -2258,11 +2258,13 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   margin-top: 0px;
   display: none;
 }
-.DesktopUI .contextmenu_contextMenu_LQkrb {
+.DesktopUI .contextmenu_contextMenu_LQkrb,
+.contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenu_LQkrb {
   box-shadow: 0 10px 32px 0px #000000ab;
   background: #3d4450;
 }
-.DesktopUI .contextmenu_contextMenuItem_pFo3k {
+.DesktopUI .contextmenu_contextMenuItem_pFo3k,
+.contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenuItem_pFo3k {
   padding: 8px 18px;
   font-size: 13px;
   color: #dcdedf;
@@ -2275,21 +2277,28 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   border-top: none;
   border-bottom: none;
 }
-.DesktopUI .contextmenu_contextMenuItem_pFo3k:first-child {
+.DesktopUI .contextmenu_contextMenuItem_pFo3k:first-child,
+.contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenuItem_pFo3k:first-child {
   border-top: none;
 }
 .DesktopUI .contextmenu_contextMenuItem_pFo3k:hover,
-.DesktopUI .contextmenu_contextMenuItem_pFo3k.contextmenu_active_1KPWU {
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.contextmenu_active_1KPWU,
+.contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenuItem_pFo3k:hover,
+.contextmenu_ForceDesktop_7K1n9
+  .contextmenu_contextMenuItem_pFo3k.contextmenu_active_1KPWU {
   background: #dcdedf;
   color: #3d4450;
 }
-.DesktopUI .contextmenu_contextMenuItem_pFo3k.disabled {
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.disabled,
+.contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenuItem_pFo3k.disabled {
   background: none;
   color: #67707b;
   cursor: default;
   pointer-events: none;
 }
-.DesktopUI .contextmenu_contextMenuItem_pFo3k.disabled:hover {
+.DesktopUI .contextmenu_contextMenuItem_pFo3k.disabled:hover,
+.contextmenu_ForceDesktop_7K1n9
+  .contextmenu_contextMenuItem_pFo3k.disabled:hover {
   background: none;
   color: #67707b;
   cursor: default;

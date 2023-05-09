@@ -4291,6 +4291,7 @@ Por favor, inténtalo de nuevo más tarde."
 	"Broadcast_Notification_Accept_Request" "Aceptar"
 	"Broadcast_Notification_Ignore_Request" "Ignorar" 
 	"Broadcast_Notification_AvailableToWatch_Title" "¡La retransmisión está activada!"
+	"Broadcast_Notification_AvailableToWatch_Friends" "Tus amigos pueden unirse a tu emisión cuando quieran."
 	"Broadcast_Notification_AvailableToWatch_Public" "Cualquier usuario de Steam puede unirse a tu retransmisión en cualquier momento."
 
 	"Broadcast_FirstTime_Title" "Retransmisión de Steam"

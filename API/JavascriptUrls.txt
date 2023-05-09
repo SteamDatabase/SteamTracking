@@ -105,7 +105,6 @@ ${CHAT_BASE_URL}miniprofile/${m_accountid}/json/?origin=${}
 ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_paris_2023_icon.png
-${CHAT_BASE_URL}public/images/broadcast/csgo_rio_2022_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CHAT_BASE_URL}public/javascript/webui/noisegate-audio-worklet.js?v=4
 ${COMMUNITY_BASE_URL}

@@ -221,6 +221,7 @@ message StoreItem {
 		optional bool should_suppress_discount_pct = 41 [(description) = "Don't show the discount percentage on a store capsule for this item."];
 		optional bool hide_discount_pct_for_compliance = 42 [default = false, (description) = "Don't show the discount percent because there was a discount in the last 30 days."];
 		optional int32 included_game_count = 43 [(description) = "How many games are included in this purchase option."];
+		optional int64 lowest_recent_price_in_cents = 44 [(description) = "Lowest recent price in cents.  If not set, then there is no data so we ignore."];
 	}
 
 	message Screenshots {

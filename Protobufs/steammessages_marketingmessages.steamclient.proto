@@ -16,6 +16,7 @@ enum EMarketingMessageType {
 	k_EMarketingMessageGifting = 8;
 	k_EMarketingMessageEJsKorner = 9;
 	k_EMarketingMessageUpdate = 10;
+	k_EMarketingMessageMidweekDeal = 11;
 }
 
 enum EMarketingMessageVisibility {

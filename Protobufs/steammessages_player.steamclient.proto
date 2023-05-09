@@ -633,6 +633,7 @@ message CPlayer_CommunityPreferences {
 
 message CPlayer_GetCommunityPreferences_Response {
 	optional .CPlayer_CommunityPreferences preferences = 1;
+	optional .UserContentDescriptorPreferences content_descriptor_preferences = 2;
 }
 
 message CPlayer_SetCommunityPreferences_Request {
@@ -744,6 +745,7 @@ message CPlayer_NewSteamAnnouncementState_Notification {
 
 message CPlayer_CommunityPreferencesChanged_Notification {
 	optional .CPlayer_CommunityPreferences preferences = 1;
+	optional .UserContentDescriptorPreferences content_descriptor_preferences = 2;
 }
 
 message CPlayer_TextFilterWordsChanged_Notification {

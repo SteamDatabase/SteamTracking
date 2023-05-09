@@ -68,7 +68,7 @@
 "Friends_SendInstantMessage"		"Trimite mesaj..."
 "Friends_Ignore"			"Blochează comunicarea..."
 "Friends_UnIgnore"			"Deblochează"
-"Friends_InviteFriendToGame"		"Invită în joc"
+"Friends_InviteFriendToGame"		"Invită la joc"
 "Friends_JoinGame"				"Alătură-te jocului"
 "Friends_LaunchGame"				"Lansează jocul"
 "Friends_ViewGameInfo"			"Vezi informații despre joc"

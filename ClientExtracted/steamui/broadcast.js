@@ -1,7 +1,7 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [4601],
   {
-    29336: (e) => {
+    17157: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -66,7 +66,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    49135: (e) => {
+    56052: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -79,7 +79,7 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    78566: (e, t, a) => {
+    91163: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -92,18 +92,18 @@
         o = a(29323),
         i = a(13271),
         l = a(67294),
-        c = a(38964),
-        d = a(28009),
-        m = a(18728),
-        _ = (a(26191), a(27566)),
-        p = a(93045),
-        b = a(92409),
-        h = a(76870),
-        u = a(79860),
-        g = a(3129),
-        S = a(45520),
-        v = a(78869),
-        E = (a(99824), a(49135)),
+        c = a(91148),
+        d = a(4687),
+        m = a(73185),
+        _ = (a(92355), a(17297)),
+        p = a(88335),
+        b = a(71367),
+        h = a(83631),
+        u = a(12633),
+        g = a(85660),
+        S = a(51878),
+        v = a(81673),
+        E = (a(14113), a(56052)),
         f = a.n(E);
       const C = (0, o.observer)((e) => {
         const { appid: t } = e,
@@ -187,17 +187,17 @@
           )
         );
       });
-      var B = a(65030),
-        y = (a(4778), a(77764)),
-        P = (a(33384), a(57301), a(66279), a(24454)),
-        w = a(3600),
-        N = a(22409),
-        I = (a(30174), a(75334)),
-        G = a(13583),
-        A = a(61701),
-        D = a(87478),
-        T = a(7952),
-        O = a(22784),
+      var B = a(14200),
+        y = (a(85106), a(34558)),
+        P = (a(70839), a(82767), a(36890), a(8164)),
+        w = a(82911),
+        N = a(58959),
+        I = (a(81082), a(81264)),
+        G = a(44742),
+        A = a(66249),
+        D = a(38973),
+        T = a(90437),
+        O = a(76023),
         k = a(80533);
       const L = (e) => {
         const { onPositionChange: t, onLeave: a } = e,
@@ -216,12 +216,12 @@
           Object.assign({}, e, { onPositionChange: r })
         );
       };
-      var x = a(27194),
-        R = a(13102),
-        W = a(31535),
-        V = (a(13796), a(79571)),
-        U = (a(58130), a(5071)),
-        M = a(29336),
+      var x = a(92312),
+        R = a(24934),
+        W = a(48287),
+        V = (a(70640), a(41353)),
+        U = (a(40706), a(74780)),
+        M = a(17157),
         F = a.n(M);
       const H = (0, o.observer)((e) => {
         const { event: t } = e,
@@ -285,16 +285,16 @@
           )
         );
       });
-      var j = a(42256),
+      var j = a(34133),
         z = a.n(j),
-        Z = a(9495),
-        Y = a(56175),
-        X = a(47077),
-        q = a(78853),
-        $ = a(22081),
-        Q = a(71488),
-        J = a(2280),
-        K = a(51990),
+        Z = a(92377),
+        Y = a(99212),
+        X = a(88393),
+        q = a(51751),
+        $ = a(57542),
+        Q = a(68503),
+        J = a(8410),
+        K = a(55285),
         ee = a.n(K);
       function te(e) {
         const { steamid: t, closeModal: a } = e;
@@ -441,9 +441,9 @@
           v.Config.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t
         );
       }
-      var se = a(40331),
-        oe = a(95002),
-        ie = a(87526);
+      var se = a(49358),
+        oe = a(23512),
+        ie = a(38078);
       const le = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
@@ -467,7 +467,7 @@
           {
             appid: 730,
             url: "https://steam.tv/csgo",
-            broadcasterAccountID: 927819071,
+            broadcasterAccountID: 1532096361,
           },
         ],
       };
@@ -1306,23 +1306,23 @@
           : null;
       }
     },
-    88273: (e, t, a) => {
+    79927: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => S });
       var r = a(70655),
         n = a(67294),
-        s = a(7952),
-        o = (a(99824), a(29323)),
+        s = a(90437),
+        o = (a(14113), a(29323)),
         i = a(22188),
-        l = a(41554),
-        c = a(27194),
-        d = a(79571),
-        m = a(31535),
-        _ = (a(33384), a(69144)),
-        p = a(89866),
+        l = a(81761),
+        c = a(92312),
+        d = a(41353),
+        m = a(48287),
+        _ = (a(70839), a(17257)),
+        p = a(95379),
         b = a.n(p),
-        h = (a(28912), a(28009)),
-        u = a(45520);
+        h = (a(43074), a(4687)),
+        u = a(51878);
       let g = class extends n.Component {
         constructor(e) {
           super(e),

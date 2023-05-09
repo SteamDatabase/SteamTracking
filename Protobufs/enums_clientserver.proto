@@ -1487,6 +1487,10 @@ enum EMsg {
 	k_EMsgServerSecretChanged = 12100;
 	k_EMsgBaseWG = 12200;
 	k_EMsgWGConnectionProtocolError = 12200;
+	k_EMsgWGConnectionValidateUserToken = 12201;
+	k_EMsgWGConnectionValidateUserTokenResponse = 12202;
+	k_EMsgWGConnectionLegacyWGRequest = 12203;
+	k_EMsgWGConnectionLegacyWGResponse = 12204;
 }
 
 enum EClientPersonaStateFlag {

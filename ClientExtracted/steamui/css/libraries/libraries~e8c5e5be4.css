@@ -25604,26 +25604,6 @@ body.in_global_drag .friendlist_titlebar {
   padding-top: 4px;
   transition: all 0.2s ease-in-out;
 }
-.chatTabDraggableSpace.ChromeClearance,
-.chatTabDraggableSpace {
-  width: 58px;
-  flex-shrink: 0;
-  -webkit-app-region: drag;
-  z-index: -1;
-  position: relative;
-  pointer-events: none;
-}
-.web_chat_frame .chatTabDraggableSpace {
-  display: none;
-}
-.chatTabDraggableSpace.ChromeClearance {
-  width: 70px;
-  height: 26px;
-  align-self: flex-end;
-}
-.compactView .chatTabDraggableSpace.ChromeClearance {
-  height: 15px;
-}
 .TheaterMode .ChatTabs.activeTabHasBroadcast {
   margin-top: -49px;
 }

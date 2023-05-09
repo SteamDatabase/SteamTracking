@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-P
-P
+@
+@
 __stubs
 __TEXT
 __stub_helper
@@ -14,8 +14,11 @@ __cstring
 __TEXT
 __objc_methname
 __TEXT
+M>,
+M>,
 __unwind_info
 __TEXT
+,q
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -28,21 +31,13 @@ __DATA
 __const
 __DATA
 __objc_imageinfo__DATA
-pD/
-pD/
 __objc_selrefs
 __DATA
-xD/
-xD/
 __objc_classrefs__DATA
-HE/
 (
-HE/
 __data
 __DATA
-pE/
-U
-pE/
+PU
 __thread_vars
 __DATA
 0
@@ -62,7 +57,6 @@ __LINKEDIT
 8
 @loader_path/steamservice.dylib
 "
-`L0
 P
 
 *
@@ -88,31 +82,44 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+H*
 )
-+gM/
-Hc5MF/
+G0
+/
+/
++g_/
+/
+Hc5MX/
 0
 0
 
 
+]%
 
 !
 
-m!
 Hi
 )
-4
+)
+)
+)
+)
+)
+)
 L$
 H=
-<$
-h
-j
-Q
+%
+%
+%
+%
+$
+$
+$
 )
 Hc
 Hc
 Hc
-b+
+r+
 0
 0
 AT=
@@ -123,20 +130,11 @@ AT=
 D
 @
 @
-m#
-e#
-]#
-.
-(
-(
-(
-(
 (
 (
 (
 (
 $
-+
 #
 @
 Hc
@@ -170,18 +168,29 @@ IcE
 @
 @
 ]
+;'
+7"
 '
 '
-*
-"
-"
-"
+'
+'
 V
-H;5"Y)
-k!
-`!
+k&
 =
+L(
+&
+"!
+!
+!
+!
+!
+!
+!
+!
+!
 =
+y
+X!
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -1598,6 +1607,8 @@ h
 25CPackageReservationStatus
 16CMsgKeyValuePair
 15CMsgKeyValueSet
+50UserContentDescriptorPreferences_ContentDescriptor
+32UserContentDescriptorPreferences
 N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 14CWSASendThread
@@ -1904,6 +1915,8 @@ CHECK failed: size > chunk_size:
 CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
 CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
 CHECK failed: (size) > (0):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 ./google/protobuf/repeated_field.h
 CHECK failed: (index) >= (0):
@@ -8785,8 +8798,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-May  5 2023
-11:01:56
+May  9 2023
+13:17:47
 Jan
 Feb
 Mar
@@ -9376,30 +9389,41 @@ CWorkThread -- OnWorkItemCompleted - unordered
 CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
-+gM/
-Hc5MF/
+/
+/
++g_/
+/
+Hc5MX/
 0
 0
 
 
+]%
 
 !
 
-m!
 Hi
 )
-4
+)
+)
+)
+)
+)
+)
 L$
 H=
-<$
-h
-j
-Q
+%
+%
+%
+%
+$
+$
+$
 )
 Hc
 Hc
 Hc
-b+
+r+
 0
 0
 AT=
@@ -9410,20 +9434,11 @@ AT=
 D
 @
 @
-m#
-e#
-]#
-.
-(
-(
-(
-(
 (
 (
 (
 (
 $
-+
 #
 @
 Hc
@@ -9457,45 +9472,46 @@ IcE
 @
 @
 ]
+;'
+7"
 '
 '
-*
-"
-"
-"
+'
+'
 V
-H;5"Y)
-k!
-`!
+k&
 =
+L(
+&
+"!
+!
+!
+!
+!
+!
+!
+!
+!
 =
-%
-%
+y
+X!
+O%
+]
 %
 !
-'
-!
 @
+G&
 @
-#
 #
 &
-+"
-%
+C"
 "
 "
-a!
+^!
+O!
 !
-$
-$
-$
-$
-$
-$
-$
-;!
-$
-[
+-"
+"
 @
 M9e
 @
@@ -9525,7 +9541,6 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 Pj
 ARj
 j
-3
 0
 0
 =
@@ -9830,12 +9845,10 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 @
 
-J
 @
 @
 @
 0
-
 H=
 Ic]
 j
@@ -9851,6 +9864,7 @@ W
 ,7~5d
 H
 0
+Z
 
 
 
@@ -9883,8 +9897,8 @@ rc4(8x,int)
 rc4(8x,char)
 rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
-
 j
+
 j
 $
 $
@@ -9895,7 +9909,6 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
-Q
 @
 
 d
@@ -9954,7 +9967,6 @@ H=
 0
 0
 H=
-
 0
 &
 @
@@ -9971,6 +9983,7 @@ E
 Hc
 Hc
 Hc
+
 0
 Ic
 @

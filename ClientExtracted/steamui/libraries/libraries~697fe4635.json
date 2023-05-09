@@ -897,6 +897,7 @@
     "RemotePlay_PlayerNoInputWarning": "Не е засечено въвеждане от този играч",
     "RemotePlay_PlayerNoInputWarning_Concise": "Няма въвеждане от играча",
     "RemotePlay_GameSettings": "Настройки за игра",
+    "RemotePlay_Player_Invited": "Поканени",
     "RemotePlay_Guest_CopyHint": "Копиране и споделяне!",
     "RemotePlay_Guest_CopyHint_Copied": "Връзката е копирана",
     "RemotePlay_AddGuest_ButtonText": "Добавяне",

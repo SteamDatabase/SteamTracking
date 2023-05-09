@@ -2,11 +2,11 @@
     "name": "IClientControllerSerializedMap",
     "functions": [ 
         {
-            "name": "Unknown_5433600",
+            "name": "Unknown_5435392",
             "argc": "0"
         },
         {
-            "name": "Unknown_6246816",
+            "name": "Unknown_6248320",
             "argc": "0"
         },
         {
@@ -527,11 +527,11 @@
         },
         {
             "name": "TriggerVibration",
-            "argc": "4"
+            "argc": "5"
         },
         {
             "name": "TriggerVibrationExtended",
-            "argc": "6"
+            "argc": "7"
         },
         {
             "name": "SetLEDColor",

@@ -243,19 +243,10 @@ message CStore_UserTagPreferences {
 	repeated .CStore_UserTagPreferences.Tag tags_to_exclude = 1;
 }
 
-message CStore_UserContentDescriptorPreferences {
-	message ContentDescriptor {
-		optional uint32 content_descriptorid = 1;
-		optional uint32 timestamp_added = 2;
-	}
-
-	repeated .CStore_UserContentDescriptorPreferences.ContentDescriptor content_descriptors_to_exclude = 1;
-}
-
 message CStore_GetStorePreferences_Response {
 	optional .CStore_UserPreferences preferences = 1;
 	optional .CStore_UserTagPreferences tag_preferences = 2;
-	optional .CStore_UserContentDescriptorPreferences content_descriptor_preferences = 3;
+	optional .UserContentDescriptorPreferences content_descriptor_preferences = 3;
 }
 
 message CStore_GetTrendingAppsAmongFriends_Request {
@@ -294,7 +285,7 @@ message CSteamDeckCompatibility_ShouldPrompt_Response {
 message CStore_StorePreferencesChanged_Notification {
 	optional .CStore_UserPreferences preferences = 1;
 	optional .CStore_UserTagPreferences tag_preferences = 2;
-	optional .CStore_UserContentDescriptorPreferences content_descriptor_preferences = 3;
+	optional .UserContentDescriptorPreferences content_descriptor_preferences = 3;
 }
 
 service Store {
