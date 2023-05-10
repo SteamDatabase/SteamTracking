@@ -1048,6 +1048,39 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	color: #7cb8e4;
 }
 
+.game_purchase_discount_countdown_pricehistorygrid {
+	display: flex;
+	justify-content: start;
+}
+
+.game_purchase_price_history {
+	border-spacing: 1px 1px;
+    margin-right: 6px;
+}
+
+.game_purchase_price_history tr {
+
+}
+
+.game_purchase_price_history td {
+    padding-left: 6px;
+    padding-right: 20px;
+    background-color: #67788980;
+}
+
+.game_purchase_price_history td.normal_price {
+	color: #ffffff;
+}
+
+.game_purchase_price_history thead {
+    color: #b4bdc9;
+	text-transform: uppercase;
+}
+
+.game_purchase_price_history tbody {
+    color: rgb(161,204,8);	
+}
+
 .game_purchase_discount_quantity {
 	color: #7cb8e4;
 }
@@ -1210,6 +1243,14 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	padding-top: 13px;
 	padding-right: 6px;
 	font-size: 14px;
+}
+
+.game_purchase_discount .generic_discount .discount_final_price {
+    padding-top: 9px;
+}
+
+.discount_icon img {
+    height: 22px;
 }
 
 .game_purchase_discount.suppress_discount_pct .discount_original_price,

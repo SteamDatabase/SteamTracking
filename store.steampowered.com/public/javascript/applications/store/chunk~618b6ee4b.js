@@ -6339,7 +6339,7 @@
           s = (0, A.id)();
         if (!a) return null;
         const o = a.GetBestPurchaseOption(),
-          r = (null == o ? void 0 : o.hide_discount_pct_for_compliance) && !1;
+          r = (null == o ? void 0 : o.hide_discount_pct_for_compliance) && !0;
         return l.createElement(
           u.s,
           Object.assign(
@@ -6572,7 +6572,7 @@
             return Boolean(t) && s.createElement("span", null, t);
         }
         const t = "reservation" == e.display_style,
-          n = e.bHideDiscountPercentForCompliance && !1;
+          n = e.bHideDiscountPercentForCompliance && !0;
         return s.createElement(
           "span",
           {
@@ -6971,7 +6971,7 @@
                   e.GetBestPurchaseOption().should_suppress_discount_pct),
                 (t.hide_discount_percent_for_compliance =
                   e.GetBestPurchaseOption().hide_discount_pct_for_compliance &&
-                  !1);
+                  !0);
           return t;
         });
       }
@@ -10730,7 +10730,7 @@
         Ke = (e) => {
           const { discountBlock: t, bIsSalePage: n } = e;
           if (!t) return null;
-          const i = e.discountBlock.hide_discount_percent_for_compliance && !1;
+          const i = e.discountBlock.hide_discount_percent_for_compliance && !0;
           return n
             ? null == t.discount_max || t.discount_max <= 0
               ? null

@@ -679,6 +679,9 @@
 	html.responsive .game_purchase_action_bg {
 		margin: 2px 0px;
 	}
+    html.responsive .game_purchase_discount_countdown_pricehistorygrid {
+        flex-direction: column;
+    }
 
 	/* wishlist */
 	html.responsive #add_to_wishlist_area, 

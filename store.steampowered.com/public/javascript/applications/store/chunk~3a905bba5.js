@@ -2825,7 +2825,7 @@
             strBestPurchasePriceFormatted: i,
             bHideDiscountPercentForCompliance: s,
           } = e,
-          c = s && !1;
+          c = s && !0;
         return l.createElement(
           "div",
           {
