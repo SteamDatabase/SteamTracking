@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2814],
   {
-    27978: (e) => {
+    36025: (e) => {
       e.exports = {
         LoginDialog: "login_LoginDialog_2y6W_",
         AccountPasswordPanel: "login_AccountPasswordPanel_3hiT2",
@@ -41,7 +41,7 @@
         LoginComplete: "login_LoginComplete_KmQja",
       };
     },
-    69701: (e) => {
+    65889: (e) => {
       e.exports = {
         AppSelector: "labssandbox_AppSelector_2Fikz",
         AppDisplay: "labssandbox_AppDisplay_3m6Sh",
@@ -79,7 +79,7 @@
         Active: "labssandbox_Active_2J9Kx",
       };
     },
-    33723: (e) => {
+    76339: (e) => {
       e.exports = {
         EntryError: "tagclustering_EntryError_1UGoD",
         ClusterConfig: "tagclustering_ClusterConfig_3Qp2u",
@@ -89,19 +89,19 @@
         SimilarTitle: "tagclustering_SimilarTitle_gRxJT",
       };
     },
-    10726: (e, t, a) => {
+    88337: (e, t, a) => {
       "use strict";
       a.d(t, { Q8: () => u });
       var s = a(33940),
         r = a(50265),
-        i = a(6960),
-        n = a(17922),
-        o = a(15781),
-        l = a(17339),
-        p = (a(20870), a(67237)),
-        m = a(32338),
-        c = a(23213),
-        d = a(70983);
+        i = a(46132),
+        n = a(54856),
+        o = a(57361),
+        l = a(56373),
+        p = (a(56020), a(53236)),
+        m = a(23801),
+        c = a(85246),
+        d = a(32765);
       class h {
         constructor() {
           (this.m_mapAppInfo = r.LO.map()),
@@ -388,16 +388,16 @@
         (0, s.gn)([r.aD], h.prototype, "OnRichPresenceLocUpdate", null);
       const u = new h();
     },
-    89013: (e, t, a) => {
+    4472: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => we });
-      var s = a(94629),
+      var s = a(96927),
         r = a(33940),
-        i = a(10726),
-        n = a(70657),
-        o = a(70983),
+        i = a(88337),
+        n = a(36597),
+        o = a(32765),
         l = a(50265),
-        p = a(31621),
+        p = a(4306),
         m = a(52868),
         c = a.n(m);
       class d {
@@ -637,11 +637,11 @@
       var _ = a(89526),
         f = a(565),
         b = a(59934),
-        S = a(69701),
-        C = a(57255),
-        y = a(49969),
+        S = a(65889),
+        C = a(57605),
+        y = a(51637),
         E = a(88464),
-        A = a(13806);
+        A = a(19304);
       class I extends _.Component {
         constructor(e) {
           super(e),
@@ -1322,12 +1322,12 @@
         (0, r.gn)([p.ak], P.prototype, "OnSelectedStartApp", null),
         (0, r.gn)([p.ak], P.prototype, "OnSelectedEndApp", null),
         (P = (0, r.gn)([E.Pi], P));
-      var F = a(82569),
-        N = (a(89252), a(23213)),
-        M = a(17922),
+      var F = a(47165),
+        N = (a(3641), a(85246)),
+        M = a(54856),
         x = a(45878),
-        k = a(19320),
-        D = a(82702);
+        k = a(29063),
+        D = a(53143);
       const G = x.Message;
       class T extends G {
         constructor(e = null) {
@@ -1797,8 +1797,8 @@
             );
           });
       })(X || (X = {}));
-      var Q = a(79983),
-        $ = (a(55449), a(63154));
+      var Q = a(11195),
+        $ = (a(36704), a(57858));
       class V {
         constructor(e) {
           this.m_SteamInterface = e;
@@ -1851,12 +1851,12 @@
           );
         }
       }
-      var Z = a(8392),
-        J = a(31587),
-        Y = a(33723),
-        ee = a(23708),
+      var Z = a(69338),
+        J = a(14826),
+        Y = a(76339),
+        ee = a(25871),
         te = a(74802),
-        ae = a(22840);
+        ae = a(17547);
       function se(e) {
         const { SteamInterface: t } = e,
           a = _.useRef();
@@ -2110,11 +2110,11 @@
           t.GetName()
         );
       }
-      var ce = a(86701),
-        de = a(27978),
+      var ce = a(701),
+        de = a(36025),
         he = a.n(de),
-        ue = a(94721),
-        ge = a(59821);
+        ue = a(97277),
+        ge = a(26464);
       var _e, fe;
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),

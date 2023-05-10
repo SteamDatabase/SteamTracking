@@ -4,7 +4,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [6364],
   {
-    32720: (t, i, r) => {
+    2229: (t, i, r) => {
       var o;
       r.d(i, { Z: () => N });
       function e(t, i, r) {
@@ -1053,12 +1053,12 @@
         },
       };
     },
-    94721: (t, i, r) => {
+    97277: (t, i, r) => {
       r.d(i, { He: () => c, IC: () => p, p1: () => a, yI: () => f });
       var o = r(33940),
         e = r(52868),
         s = r.n(e);
-      const n = r(32720).Z;
+      const n = r(2229).Z;
       function h(t, i) {
         return t.endsWith("/") || (t += "/"), `${t}login/${i}/`;
       }

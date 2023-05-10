@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2420],
   {
-    9217: (e) => {
+    6864: (e) => {
       e.exports = {
         SteamAwardContainer: "nominationandvote_SteamAwardContainer_jBtX5",
         InLibraryView: "nominationandvote_InLibraryView_1G81P",
@@ -43,7 +43,7 @@
         AwardCategoriesCtn: "nominationandvote_AwardCategoriesCtn_GCwk0",
       };
     },
-    65181: (e) => {
+    83809: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         EventDetailsPageContainer:
@@ -165,7 +165,7 @@
           "partnereventdisplay_VerticalLocalDateAndTime_1QFMN",
       };
     },
-    99018: (e, t, a) => {
+    4795: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -181,24 +181,24 @@
         o = a(50265),
         s = a(88464),
         l = a(89526),
-        d = (a(6960), a(49969), a(67575), a(13309), a(63154)),
-        p = a(57255),
-        m = a(65717),
+        d = (a(46132), a(51637), a(84770), a(99648), a(57858)),
+        p = a(57605),
+        m = a(17318),
         v = a.n(m),
-        c = a(47330),
-        _ = a(13806),
-        g = a(31587),
-        S = a(31621),
-        u = a(70983),
-        h = a(46085),
-        y = a(24868),
-        A = a(8392),
-        E = a(31041),
-        C = a(9217),
+        c = a(23217),
+        _ = a(19304),
+        g = a(14826),
+        S = a(4306),
+        u = a(32765),
+        h = a(99307),
+        y = a(57742),
+        A = a(69338),
+        E = a(5557),
+        C = a(6864),
         w = a.n(C),
-        D = a(65181),
+        D = a(83809),
         T = a.n(D),
-        k = a(76478);
+        k = a(32905);
       function N(e) {
         return u.L7.logged_in
           ? !u.L7.is_limited ||

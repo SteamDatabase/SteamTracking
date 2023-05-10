@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1614],
   {
-    37664: (e) => {
+    96469: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         BannerContainer: "deckverified_BannerContainer_2b4eh",
@@ -56,7 +56,7 @@
           "deckverified_DeveloperComments_LinkIcon_1cm6k",
       };
     },
-    70424: (e) => {
+    78942: (e) => {
       e.exports = {
         Dark: "footericons_Dark_2SV_e",
         Background: "footericons_Background_I3P4e",
@@ -69,14 +69,14 @@
         ChordSummary: "footericons_ChordSummary_2sFpI",
       };
     },
-    88735: (e, t, r) => {
+    81039: (e, t, r) => {
       "use strict";
       r.d(t, { ck: () => i, sC: () => s });
       var l = r(89526),
-        n = (r(82633), r(13806)),
-        o = r(86701),
-        a = r(55310),
-        c = (r(31587), r(70983));
+        n = (r(6681), r(19304)),
+        o = r(701),
+        a = r(59743),
+        c = (r(14826), r(32765));
       function i() {
         const e = (0, c.id)();
         return c.De.ON_DECK && e;
@@ -93,23 +93,23 @@
         },
         C = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
     },
-    81084: (e, t, r) => {
+    65786: (e, t, r) => {
       "use strict";
       r.d(t, { X: () => l });
-      r(54997);
+      r(10521);
       function l() {
         let e = window.GetUsabilityTracker;
         if (e) return e();
       }
     },
-    2202: (e, t, r) => {
+    23186: (e, t, r) => {
       "use strict";
       r.d(t, { FX: () => l });
       var l,
         n = r(33940),
-        o = (r(89526), r(14258), r(60587)),
-        a = (r(36178), r(43407), r(19038), r(23213), r(87256)),
-        c = r(31621);
+        o = (r(89526), r(58123), r(8179)),
+        a = (r(47927), r(16221), r(63587), r(85246), r(50454)),
+        c = r(4306);
       function i(e) {
         switch (e) {
           case o.eV.OK:
@@ -304,27 +304,27 @@
         (0, n.gn)([c.ak], s.prototype, "OnFocusNavigationChanged", null),
         (0, n.gn)([c.ak], s.prototype, "SetActionDescriptionsFromMap", null);
     },
-    10260: (e, t, r) => {
+    89915: (e, t, r) => {
       "use strict";
       r.d(t, { Rd: () => O, _R: () => j, $g: () => F, Ws: () => S });
       var l = r(89526),
-        n = (r(49969), r(49194)),
-        o = r(49920),
-        a = r(23907),
-        c = (r(14258), r(173)),
-        i = (r(84042), r(88735)),
-        s = r(81084),
-        C = (r(82633), r(45878));
-      r(19320);
+        n = (r(51637), r(44026)),
+        o = r(17589),
+        a = r(31782),
+        c = (r(58123), r(3787)),
+        i = (r(9501), r(81039)),
+        s = r(65786),
+        C = (r(6681), r(45878));
+      r(29063);
       C.Message;
-      r(82702), r(54997);
+      r(53143), r(10521);
       var m = r(33940),
         u = r(52868),
         d = r.n(u),
-        p = (r(6960), r(96158), r(47330)),
-        g = r(23213),
-        f = r(31621),
-        H = r(70983);
+        p = (r(46132), r(63403), r(23217)),
+        g = r(85246),
+        f = r(4306),
+        H = r(32765);
       class v {
         constructor() {
           if (
@@ -426,16 +426,16 @@
         }
       }
       (0, m.gn)([f.ak], v.prototype, "LoadAppCompabitilityResult", null);
-      r(55449);
-      var w = r(57255),
-        h = r(46085),
-        L = r(86701),
-        E = r(31587),
-        V = r(37664),
+      r(36704);
+      var w = r(57605),
+        h = r(99307),
+        L = r(701),
+        E = r(14826),
+        V = r(96469),
         k = r.n(V),
-        _ = r(76019),
-        b = r(34357),
-        M = r(2202);
+        _ = r(34329),
+        b = r(28183),
+        M = r(23186);
       function N(e) {
         var t, r;
         const {
@@ -669,11 +669,11 @@
             );
         }
       }
-      var R = r(8392),
-        Z = r(13806),
-        x = r(81052),
-        I = r(32448),
-        B = r(24868);
+      var R = r(69338),
+        Z = r(19304),
+        x = r(60161),
+        I = r(81349),
+        B = r(57742);
       function S(e) {
         var t;
         const { storeItem: r } = e;
@@ -968,17 +968,17 @@
         }
       }
     },
-    34357: (e, t, r) => {
+    28183: (e, t, r) => {
       "use strict";
       r.d(t, { VC: () => d, iM: () => n, yV: () => l });
       var l,
         n,
         o = r(33940),
         a = r(89526),
-        c = r(2202),
-        i = r(70424),
+        c = r(23186),
+        i = r(78942),
         s = r.n(i),
-        C = r(13806);
+        C = r(19304);
       function m(e) {
         switch (e) {
           case n.Small:

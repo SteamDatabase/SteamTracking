@@ -153,13 +153,38 @@ html.responsive
 .featurevideo_Dummy_Bz-g3 {
   background-color: hotpink;
 }
+.featurevideo_PosterCtn_24bJJ {
+  position: absolute;
+  bottom: 120px;
+  width: 528px;
+  height: 297px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease-out;
+}
+.featurevideo_PosterCtn_24bJJ:hover {
+  box-shadow: 0 0 10px #000;
+}
+.featurevideo_PosterCtn_24bJJ:hover svg {
+  opacity: 1;
+}
+.featurevideo_PosterCtn_24bJJ svg {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  fill: #fff;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-out;
+}
 .featurevideo_Poster_3Lbyx {
-  width: 528;
-  height: 297;
+  width: 528px;
+  height: 297px;
 }
 .featurevideo_Video_2bH_J {
-  width: 528;
-  height: 297;
+  width: 528px;
+  height: 297px;
 }
 .image_MessageContent_rohJ- {
   text-align: center;
@@ -168,6 +193,10 @@ html.responsive
   width: calc(100vh - 150px);
   padding: 0px 13px;
   user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .image_MessageContent_rohJ-:hover .image_IsBlur_2lGtR img {
   filter: brightness(1.6) saturate(1.2);

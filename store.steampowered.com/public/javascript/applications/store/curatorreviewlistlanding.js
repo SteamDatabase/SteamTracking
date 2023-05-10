@@ -3,23 +3,23 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3207],
   {
-    60641: (e) => {
+    16646: (e) => {
       e.exports = {
         VideoReviewCtn: "twitchembed_VideoReviewCtn_nNaTz",
         YouTubePreviewImage: "twitchembed_YouTubePreviewImage__mxmF",
         TwitchPlayer: "twitchembed_TwitchPlayer_Ny5PH",
       };
     },
-    8593: (e) => {
+    95771: (e) => {
       e.exports = { BreadContainer: "breadcrumbs_BreadContainer_1QPim" };
     },
-    85806: (e) => {
+    51857: (e) => {
       e.exports = {
         YoutubePreviewImage: "youtubepreviewimage_YoutubePreviewImage_MzScK",
         YoutubePlayer: "youtubepreviewimage_YoutubePlayer_3uK6c",
       };
     },
-    37411: (e) => {
+    94608: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CuratorListCtn: "curatorlist_CuratorListCtn_2gWFd",
@@ -54,19 +54,19 @@
         FullReviewDomain: "curatorlist_FullReviewDomain_2R37N",
       };
     },
-    74178: (e) => {
+    11581: (e) => {
       e.exports = { BreadContainer: "curatorminiheader_BreadContainer_GkVFI" };
     },
-    29979: (e, t, a) => {
+    66294: (e, t, a) => {
       "use strict";
       a.d(t, { p: () => u });
       var r = a(33940),
         n = a(89526),
-        l = a(49194),
-        o = a(49920),
-        i = a(31621),
-        s = a(70983),
-        c = a(38811);
+        l = a(44026),
+        o = a(17589),
+        i = a(4306),
+        s = a(32765),
+        c = a(94952);
       function u(e) {
         const { children: t, navTreeRef: a } = e,
           u = (0, r._T)(e, ["children", "navTreeRef"]),
@@ -94,15 +94,15 @@
         return n.createElement(n.Fragment, null, t);
       }
     },
-    13330: (e, t, a) => {
+    65858: (e, t, a) => {
       "use strict";
       a.d(t, { b: () => c });
       var r = a(89526),
-        n = a(8593),
-        l = a(13806),
+        n = a(95771),
+        l = a(19304),
         o = a(565),
-        i = a(49194),
-        s = a(23907);
+        i = a(44026),
+        s = a(31782);
       function c(e) {
         const { crumbs: t, className: a } = e;
         return t && 0 != t.length
@@ -142,16 +142,16 @@
           : null;
       }
     },
-    3529: (e, t, a) => {
+    6049: (e, t, a) => {
       "use strict";
       a.d(t, { C: () => d, q: () => m });
       var r = a(89526),
-        n = a(90043),
-        l = a(86701),
-        o = a(91096),
-        i = a(13806),
-        s = a(31587),
-        c = a(85806),
+        n = a(54297),
+        l = a(701),
+        o = a(86177),
+        i = a(19304),
+        s = a(14826),
+        c = a(51857),
         u = a.n(c);
       const m = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
@@ -237,26 +237,26 @@
           }
         };
     },
-    9487: (e, t, a) => {
+    45334: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { CuratorReviewListContainer: () => K, default: () => q });
       var r = a(88464),
         n = a(89526),
-        l = a(83799),
-        o = a(6960),
-        i = (a(49969), a(49194)),
-        s = a(29979),
-        c = a(23907),
-        u = a(66729),
-        m = (a(67575), a(83471)),
-        d = a(82569),
-        _ = a(12568),
+        l = a(14288),
+        o = a(46132),
+        i = (a(51637), a(44026)),
+        s = a(66294),
+        c = a(31782),
+        u = a(26412),
+        m = (a(84770), a(68818)),
+        d = a(47165),
+        _ = a(98009),
         p = a(33940),
-        v = a(66715),
+        v = a(58218),
         g = a(52868),
         b = a.n(g),
-        E = (a(96158), a(70983)),
-        h = a(47330);
+        E = (a(63403), a(32765)),
+        h = a(23217);
       function w(e, t) {
         const [a, r] = (0, n.useState)(
             (null == e ? void 0 : e.BUsesContentHubForItemSource())
@@ -316,19 +316,19 @@
           a
         );
       }
-      var C = a(12263),
-        f = a(31641),
-        I = a(15877),
-        S = a(2351),
-        N = a(63154),
-        R = a(55910),
-        y = a(23708),
-        T = a(87656),
-        F = a(60641),
+      var C = a(16468),
+        f = a(83145),
+        I = a(98210),
+        S = a(54671),
+        N = a(57858),
+        R = a(85886),
+        y = a(25871),
+        T = a(95408),
+        F = a(16646),
         B = a.n(F),
-        k = a(86701),
-        D = (a(55863), a(13806)),
-        P = a(85806);
+        k = a(701),
+        D = (a(4585), a(19304)),
+        P = a(51857);
       const G = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*"
       );
@@ -411,19 +411,19 @@
           )
         );
       }
-      var x = a(69362),
-        A = a(44029),
-        M = a(20186),
-        U = a(7920),
-        H = a(8392),
-        W = a(76473),
-        j = a(3529),
-        V = a(31587),
-        Z = a(98197),
-        O = a(37411),
+      var x = a(51441),
+        A = a(70750),
+        M = a(44421),
+        U = a(31245),
+        H = a(69338),
+        W = a(66615),
+        j = a(6049),
+        V = a(14826),
+        Z = a(207),
+        O = a(94608),
         X = a.n(O),
-        Q = (a(29760), a(13330)),
-        $ = a(74178);
+        Q = (a(82079), a(65858)),
+        $ = a(11581);
       function z(e) {
         const { clanInfo: t } = e,
           { curator_link: a, curator_medium_avatar: r } = (0, E.kQ)(

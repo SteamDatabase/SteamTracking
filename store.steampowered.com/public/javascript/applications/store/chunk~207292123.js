@@ -4,7 +4,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [477],
   {
-    51619: (e, r, t) => {
+    90210: (e, r, t) => {
       t.d(r, {
         BO: () => d,
         Re: () => a,
@@ -21,8 +21,8 @@
         _ = t.n(m),
         u = t(50265),
         S = t(89526),
-        s = (t(6960), t(37034), t(43735), t(96158), t(47330)),
-        n = t(70983);
+        s = (t(46132), t(20830), t(27143), t(63403), t(23217)),
+        n = t(32765);
       class i {
         constructor() {
           (this.m_mapGenreToStickerResponse = new Map()),

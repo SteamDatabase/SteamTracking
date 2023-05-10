@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1979],
   {
-    73401: (e) => {
+    43997: (e) => {
       e.exports = {
         Container: "discussionwidget_Container_3BVe_",
         VoteContainer: "discussionwidget_VoteContainer_1uhQY",
@@ -37,7 +37,7 @@
         VoteButtonSelected: "discussionwidget_VoteButtonSelected_2c_5V",
       };
     },
-    56675: (e) => {
+    72775: (e) => {
       e.exports = {
         Link: "salebanner_Link_26cHo",
         Banner: "salebanner_Banner_2df4N",
@@ -45,14 +45,14 @@
         Mobile: "salebanner_Mobile_2w3oX",
       };
     },
-    52310: (e, t, n) => {
+    52002: (e, t, n) => {
       "use strict";
       n.d(t, { C: () => d, R: () => c });
       var a = n(33940),
         i = n(50265),
-        s = (n(6960), n(67575), n(49969), n(82569)),
-        o = (n(18535), n(73265)),
-        r = n(68208);
+        s = (n(46132), n(84770), n(51637), n(47165)),
+        o = (n(91656), n(85651)),
+        r = n(10412);
       class c {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -205,7 +205,7 @@
       (0, a.gn)([i.LO], c.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const d = new c();
     },
-    2796: (e, t, n) => {
+    93883: (e, t, n) => {
       "use strict";
       n.d(t, { J: () => g });
       var a = n(33940),
@@ -214,10 +214,10 @@
         o = n(50265),
         r = n(25125),
         c = n(89526),
-        d = (n(49969), n(96158), n(59821)),
-        u = n(23213),
-        l = n(31621),
-        w = n(70983);
+        d = (n(51637), n(63403), n(26464)),
+        u = n(85246),
+        l = n(4306),
+        w = n(32765);
       class _ {
         BIsValid() {
           return void 0 !== this.giveaway_id && null !== this.giveaway_id;
@@ -429,17 +429,17 @@
         (0, a.gn)([d.a], m.prototype, "SetupRefreshDataInterval", null),
         (0, a.gn)([d.a], m.prototype, "SetupCountDown", null);
     },
-    76547: (e, t, n) => {
+    55330: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => l });
       var a = n(89526),
-        i = n(6960),
-        s = n(83471),
-        o = n(13806),
-        r = n(31587),
-        c = n(98197),
-        d = n(70983),
-        u = n(56675);
+        i = n(46132),
+        s = n(68818),
+        o = n(19304),
+        r = n(14826),
+        c = n(207),
+        d = n(32765),
+        u = n(72775);
       function l(e) {
         const { gidEvent: t } = e,
           n = (0, s.XC)(t),
@@ -500,7 +500,7 @@
           : null;
       }
     },
-    92377: (e, t, n) => {
+    37865: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =

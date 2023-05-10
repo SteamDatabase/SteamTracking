@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [938],
   {
-    52080: (e) => {
+    35350: (e) => {
       e.exports = {
         Frame: "replay2022_Frame_1C1Yh",
         SteamLogo: "replay2022_SteamLogo_1pv40",
@@ -260,7 +260,7 @@
       }
       e.exports = r;
     },
-    41580: (e, t, r) => {
+    20285: (e, t, r) => {
       "use strict";
       r.d(t, { F: () => d, t: () => m });
       var n = r(33940),
@@ -270,9 +270,9 @@
         i = r.n(o),
         l = r(89526),
         s = r(5615),
-        u = (r(49969), r(82569)),
-        C = (r(96158), r(47330)),
-        h = r(70983);
+        u = (r(51637), r(47165)),
+        C = (r(63403), r(23217)),
+        h = r(32765);
       const f = new (i())(
           (e) =>
             (function (e) {
@@ -368,18 +368,18 @@
         return n ? null : a;
       }
     },
-    96194: (e, t, r) => {
+    75176: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => h });
       var n = r(89526),
-        a = r(52080),
-        c = r(41580),
-        o = r(70983),
-        i = r(31587),
-        l = r(23907),
-        s = r(68910),
-        u = r(81052),
-        C = r(58390);
+        a = r(35350),
+        c = r(20285),
+        o = r(32765),
+        i = r(14826),
+        l = r(31782),
+        s = r(71161),
+        u = r(60161),
+        C = r(27734);
       function h(e) {
         const t = v();
         return n.createElement(

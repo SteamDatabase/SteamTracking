@@ -4,20 +4,20 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2529],
   {
-    44229: (e, t, r) => {
+    24174: (e, t, r) => {
       r.d(t, {
         Z6: () => c,
         p8: () => g,
-        NO: () => b,
+        NO: () => f,
         UC: () => p,
         A1: () => _,
         yp: () => d,
         iP: () => m,
       });
       var i = r(89526),
-        s = r(6960),
-        n = r(70983),
-        a = r(26371);
+        s = r(46132),
+        n = r(32765),
+        a = r(4116);
       class o {
         constructor() {
           (this.type = 0), (this.text = "");
@@ -349,17 +349,17 @@
         let s = new RegExp("\\[(" + i + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
         return e.replace(s, r);
       }
-      function b(e, t = null, r = "") {
+      function f(e, t = null, r = "") {
         let i = null == t ? void 0 : t.join("|");
         i || (i = d.join("|") + "|\\*");
         let s = "\\[\\/?(?:" + i + "){1,}.*?]";
         return e.replace(new RegExp(s, "gi"), r);
       }
     },
-    26371: (e, t, r) => {
+    4116: (e, t, r) => {
       r.d(t, { DX: () => a, LT: () => n, So: () => o });
       var i = r(89526),
-        s = r(32338);
+        s = r(23801);
       class n {
         constructor() {
           this.reactNodes = [];
@@ -426,12 +426,12 @@
         }
       }
     },
-    40632: (e, t, r) => {
-      r.d(t, { $2: () => d, Ax: () => b, e8: () => _ });
+    3609: (e, t, r) => {
+      r.d(t, { $2: () => d, Ax: () => f, e8: () => _ });
       var i = r(45878),
-        s = r(19320),
-        n = (r(11643), r(17169)),
-        a = r(82702);
+        s = r(29063),
+        n = (r(19471), r(23632)),
+        a = r(53143);
       const o = i.Message;
       class l extends o {
         constructor(e = null) {
@@ -1081,7 +1081,7 @@
           return "CStoreQuery_SearchSuggestions_Response";
         }
       }
-      var b;
+      var f;
       !(function (e) {
         (e.Query = function (e, t) {
           return e.SendMsg("StoreQuery.Query#1", t, p, {
@@ -1097,14 +1097,14 @@
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(b || (b = {}));
+      })(f || (f = {}));
     },
-    79983: (e, t, r) => {
+    11195: (e, t, r) => {
       r.d(t, { De: () => l, Fq: () => o, pA: () => a });
-      var i = r(82702),
-        s = r(70983),
-        n = (r(45878), r(17922), r(49969));
-      r(40632);
+      var i = r(53143),
+        s = r(32765),
+        n = (r(45878), r(54856), r(51637));
+      r(3609);
       function a(e, t) {
         e.Body().set_context(o(t));
       }
@@ -1122,15 +1122,15 @@
         e.Body().set_data_request(i.Qn.fromObject(t));
       }
     },
-    63154: (e, t, r) => {
+    57858: (e, t, r) => {
       r.d(t, { Z: () => I });
       var i = r(33940),
         s = r(50265),
-        n = (r(6960), r(49969), r(17922)),
-        a = r(70657),
-        o = (r(89252), r(45878)),
-        l = r(19320),
-        u = r(82702);
+        n = (r(46132), r(51637), r(54856)),
+        a = r(36597),
+        o = (r(3641), r(45878)),
+        l = r(29063),
+        u = r(53143);
       const c = o.Message;
       class d extends c {
         constructor(e = null) {
@@ -1199,12 +1199,12 @@
           });
         };
       })(m || (m = {}));
-      var h = r(32338),
-        _ = r(47330),
-        p = r(70983),
-        g = r(79983),
-        b = r(55449);
-      function f(e, t) {
+      var h = r(23801),
+        _ = r(23217),
+        p = r(32765),
+        g = r(11195),
+        f = r(36704);
+      function b(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -1223,6 +1223,8 @@
           include_basic_info: e.include_basic_info || t.include_basic_info,
           include_supported_languages:
             e.include_supported_languages || t.include_supported_languages,
+          include_full_description:
+            e.include_full_description || t.include_full_description,
         };
       }
       function B(e, t) {
@@ -1484,7 +1486,7 @@
                   () => this.FlushPendingInfo(),
                   this.k_QueueWaitUntilRequestMS
                 ))),
-              (this.m_setPendingDataRequest = f(
+              (this.m_setPendingDataRequest = b(
                 this.m_setPendingDataRequest,
                 r
               )),
@@ -1615,7 +1617,7 @@
             case 6:
               i = this.m_mapHubCategoriesInFlight.get(e);
           }
-          return i && b.Z.BDataRequestContainsOtherDataRequest(i.dataRequest, r)
+          return i && f.Z.BDataRequestContainsOtherDataRequest(i.dataRequest, r)
             ? i.promise
             : null;
         }
@@ -1630,9 +1632,9 @@
               if (t) m.push(t);
               else {
                 d.push(u.oY.fromObject({ appid: e }));
-                let t = f(this.GetStoreItemDataRequest(e, 0), l);
+                let t = b(this.GetStoreItemDataRequest(e, 0), l);
                 const r = this.m_mapAppsInFlight.get(e);
-                (t = f(null == r ? void 0 : r.dataRequest, t)),
+                (t = b(null == r ? void 0 : r.dataRequest, t)),
                   r && m.push(r.promise),
                   this.m_mapAppsInFlight.set(e, {
                     promise: r ? B(r.promise, c) : c,
@@ -1645,9 +1647,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ packageid: e }));
-                  let t = f(this.GetStoreItemDataRequest(e, 1), l);
+                  let t = b(this.GetStoreItemDataRequest(e, 1), l);
                   const r = this.m_mapPackageInFlight.get(e);
-                  (t = f(null == r ? void 0 : r.dataRequest, t)),
+                  (t = b(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapPackageInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1660,9 +1662,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ bundleid: e }));
-                  let t = f(this.GetStoreItemDataRequest(e, 2), l);
+                  let t = b(this.GetStoreItemDataRequest(e, 2), l);
                   const r = this.m_mapBundleInFlight.get(e);
-                  (t = f(null == r ? void 0 : r.dataRequest, t)),
+                  (t = b(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapBundleInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1675,9 +1677,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ tagid: e }));
-                  let t = f(this.GetStoreItemDataRequest(e, 4), l);
+                  let t = b(this.GetStoreItemDataRequest(e, 4), l);
                   const r = this.m_mapTagsInFlight.get(e);
-                  (t = f(null == r ? void 0 : r.dataRequest, t)),
+                  (t = b(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapTagsInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1690,9 +1692,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ creatorid: e }));
-                  let t = f(this.GetStoreItemDataRequest(e, 5), l);
+                  let t = b(this.GetStoreItemDataRequest(e, 5), l);
                   const r = this.m_mapCreatorsInFlight.get(e);
-                  (t = f(null == r ? void 0 : r.dataRequest, t)),
+                  (t = b(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapCreatorsInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1705,9 +1707,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ hubcategoryid: e }));
-                  let t = f(this.GetStoreItemDataRequest(e, 6), l);
+                  let t = b(this.GetStoreItemDataRequest(e, 6), l);
                   const r = this.m_mapHubCategoriesInFlight.get(e);
-                  (t = f(null == r ? void 0 : r.dataRequest, t)),
+                  (t = b(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapHubCategoriesInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1769,11 +1771,11 @@
                 p = null !== (i = t.appid()) && void 0 !== i ? i : 0;
               if (_ != p) return _ - p;
               let g = null !== (s = e.packageid()) && void 0 !== s ? s : 0,
-                b = null !== (n = t.packageid()) && void 0 !== n ? n : 0;
-              if (g != b) return g - b;
-              let f = null !== (a = e.bundleid()) && void 0 !== a ? a : 0,
+                f = null !== (n = t.packageid()) && void 0 !== n ? n : 0;
+              if (g != f) return g - f;
+              let b = null !== (a = e.bundleid()) && void 0 !== a ? a : 0,
                 B = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
-              if (f != B) return f - B;
+              if (b != B) return b - B;
               let I = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
                 y = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
               if (I != y) return I - y;
@@ -2116,7 +2118,7 @@
           }
           let s = i.get(e.id());
           return (
-            s ? s.MergeData(e, t) : ((s = new b.Z(e, t)), i.set(e.id(), s)), s
+            s ? s.MergeData(e, t) : ((s = new f.Z(e, t)), i.set(e.id(), s)), s
           );
         }
       }
@@ -2137,7 +2139,7 @@
           include_supported_languages: !0,
         });
     },
-    23708: (e, t, r) => {
+    25871: (e, t, r) => {
       r.d(t, {
         Vm: () => d,
         ie: () => c,
@@ -2149,8 +2151,8 @@
       var i = r(52868),
         s = r.n(i),
         n = r(89526),
-        a = (r(44229), r(49969), r(82702), r(31621)),
-        o = (r(55449), r(63154));
+        a = (r(24174), r(51637), r(53143), r(4306)),
+        o = (r(36704), r(57858));
       function l(e, t, r, i) {
         const l = (0, n.useRef)(),
           u = (0, n.useRef)(void 0),
@@ -2162,13 +2164,14 @@
             include_release: _,
             include_platforms: p,
             include_all_purchase_options: g,
-            include_screenshots: b,
-            include_trailers: f,
+            include_screenshots: f,
+            include_trailers: b,
             include_ratings: B,
             include_tag_count: I,
             include_reviews: y,
             include_basic_info: v,
             include_supported_languages: R,
+            include_full_description: w,
           } = r;
         if (
           ((0, n.useEffect)(() => {
@@ -2177,13 +2180,14 @@
               include_release: _,
               include_platforms: p,
               include_all_purchase_options: g,
-              include_screenshots: b,
-              include_trailers: f,
+              include_screenshots: f,
+              include_trailers: b,
               include_ratings: B,
               include_tag_count: I,
               include_reviews: y,
               include_basic_info: v,
               include_supported_languages: R,
+              include_full_description: w,
             };
             let n = null;
             return (
@@ -2199,15 +2203,15 @@
                   })),
               () => n && n.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, d, h, _, p, g, b, f, B, I, y, v, R, c]),
+          }, [e, t, i, d, h, _, p, g, f, b, B, I, y, v, R, c]),
           !e)
         )
           return [null, 2];
         if (!1 === d) return [void 0, 2];
         if (o.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.Z.Get().BHasStoreItem(e, t, r)) return [void 0, 1];
-        const w = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return w ? [w, 3] : [null, 2];
+        const S = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return S ? [S, 3] : [null, 2];
       }
       function u(e, t, r) {
         return l(e, 0, t, r);
@@ -2251,9 +2255,10 @@
             include_trailers: _,
             include_ratings: p,
             include_tag_count: g,
-            include_reviews: b,
-            include_basic_info: f,
+            include_reviews: f,
+            include_basic_info: b,
             include_supported_languages: B,
+            include_full_description: I,
           } = r;
         if (
           ((0, n.useEffect)(() => {
@@ -2267,9 +2272,10 @@
                 include_trailers: _,
                 include_ratings: p,
                 include_tag_count: g,
-                include_reviews: b,
-                include_basic_info: f,
+                include_reviews: f,
+                include_basic_info: b,
                 include_supported_languages: B,
+                include_full_description: I,
               },
               i = e.filter(
                 (e) =>
@@ -2287,7 +2293,7 @@
               }),
               () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, l, u, c, d, m, h, _, p, g, b, f, B]),
+          }, [e, t, i, l, u, c, d, m, h, _, p, g, f, b, B]),
           !e)
         )
           return 2;

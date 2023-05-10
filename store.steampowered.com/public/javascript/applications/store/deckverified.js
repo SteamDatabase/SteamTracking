@@ -4,9 +4,9 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1825],
   {
-    20065: (e, s, t) => {
+    74839: (e, s, t) => {
       t.r(s), t.d(s, { default: () => u });
-      const u = t(10260).$g;
+      const u = t(89915).$g;
     },
   },
 ]);

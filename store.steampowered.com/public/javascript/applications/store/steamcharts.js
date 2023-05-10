@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5331],
   {
-    16998: (e) => {
+    59046: (e) => {
       e.exports = {
         PageSection: "chartscommon_PageSection_3JAzR",
         SectionTitle: "chartscommon_SectionTitle_f7CCw",
@@ -48,7 +48,7 @@
         GameUnavailable: "chartscommon_GameUnavailable_eEqFi",
       };
     },
-    18285: (e) => {
+    50143: (e) => {
       e.exports = {
         ChartContainerPlaceholder:
           "onlineuserchart_ChartContainerPlaceholder_2XkUV",
@@ -62,7 +62,7 @@
         CurrentStats: "onlineuserchart_CurrentStats_3uEBR",
       };
     },
-    6309: (e) => {
+    25766: (e) => {
       e.exports = {
         PageContainer: "overviewpage_PageContainer_ACgX0",
         ChartItemsCtn: "overviewpage_ChartItemsCtn_3BNYF",
@@ -92,7 +92,7 @@
         Mobile: "overviewpage_Mobile_1cKll",
       };
     },
-    90569: (e) => {
+    39559: (e) => {
       e.exports = {
         SteamChartsPage: "steamchartsshell_SteamChartsPage_2aYDM",
         SteamChartsShell: "steamchartsshell_SteamChartsShell_2rArj",
@@ -121,7 +121,7 @@
         ChartNavNext: "steamchartsshell_ChartNavNext_27ASB",
       };
     },
-    39459: (e) => {
+    96571: (e) => {
       e.exports = {
         HelpRequestChartContainer:
           "supportstats_HelpRequestChartContainer_1dbAl",
@@ -134,12 +134,12 @@
         NumberCol: "supportstats_NumberCol_1GPA-",
       };
     },
-    77262: (e) => {
+    27617: (e) => {
       e.exports = {
         TopReleasesContainer: "topreleasespage_TopReleasesContainer_2ZjmC",
       };
     },
-    28763: (e) => {
+    2518: (e) => {
       e.exports = {
         PageSection: "weeklytopsellers_PageSection_2zGFB",
         SectionTitle: "weeklytopsellers_SectionTitle_1tl1E",
@@ -197,13 +197,13 @@
         TopReleasesContainer: "weeklytopsellers_TopReleasesContainer_HVGCL",
       };
     },
-    63682: (e, t, r) => {
+    69513: (e, t, r) => {
       "use strict";
       r.d(t, { C: () => s });
-      r(55449);
-      var a = r(2351),
+      r(36704);
+      var a = r(54671),
         n = r(89526);
-      r(82702);
+      r(53143);
       function s(e) {
         const t = a.jg.Get().BIsLoaded() && a.jg.Get();
         return n.useMemo(
@@ -226,17 +226,17 @@
         );
       }
     },
-    13138: (e, t, r) => {
+    66216: (e, t, r) => {
       "use strict";
       r.d(t, { cs: () => h, qX: () => _ });
       var a = r(33940),
         n = r(89526),
         s = r(5615),
-        l = (r(6960), r(17922)),
-        i = (r(11643), r(82702), r(40632)),
-        o = r(79983),
-        c = (r(55449), r(63154)),
-        m = r(32338);
+        l = (r(46132), r(54856)),
+        i = (r(19471), r(53143), r(3609)),
+        o = r(11195),
+        c = (r(36704), r(57858)),
+        m = r(23801);
       const u = n.createContext({}),
         d = () => n.useContext(u);
       function _(e) {
@@ -328,7 +328,7 @@
         }
       }
     },
-    54324: (e, t, r) => {
+    12360: (e, t, r) => {
       "use strict";
       r.d(t, { P: () => n, h: () => s });
       var a = r(89526);
@@ -361,21 +361,21 @@
         }, [e]);
       }
     },
-    25621: (e, t, r) => {
+    49747: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { SteamChartsRoutes: () => Sr, default: () => gr });
       var a = r(33940),
-        n = r(94629),
+        n = r(96927),
         s = r(52868),
         l = r.n(s),
-        i = r(13138),
+        i = r(66216),
         o = r(89526),
         c = r(5615),
-        m = r(6960),
-        u = r(17922),
-        d = (r(89252), r(82702)),
+        m = r(46132),
+        u = r(54856),
+        d = (r(3641), r(53143)),
         _ = r(45878),
-        p = r(19320);
+        p = r(29063);
       const h = _.Message;
       class C extends h {
         constructor(e = null) {
@@ -756,10 +756,10 @@
             });
           });
       })(B || (B = {}));
-      var T = r(79983),
-        f = (r(55449), r(63154)),
-        b = r(32338),
-        k = r(70983);
+      var T = r(11195),
+        f = (r(36704), r(57858)),
+        b = r(23801),
+        k = r(32765);
       const w = 20;
       class R {
         constructor(e, t) {
@@ -1685,7 +1685,7 @@
           staleTime: 3e5,
         });
       }
-      var K = r(23708);
+      var K = r(25871);
       class J {
         constructor(e) {
           this.m_WebAPI = e;
@@ -1719,11 +1719,11 @@
         const { data: t } = (0, c.useQuery)([ee], () => e.LoadTopReleases());
         return t;
       }
-      var re = r(2546),
-        ae = r(70657),
-        ne = (r(40632), r(2351)),
-        se = r(24808),
-        le = r(31587);
+      var re = r(65406),
+        ae = r(36597),
+        ne = (r(3609), r(54671)),
+        se = r(90415),
+        le = r(14826);
       class ie {
         constructor(e) {
           this.m_WebAPI = e;
@@ -1884,7 +1884,7 @@
         include_tag_count: 20,
       };
       var pe = r(59934),
-        he = r(5055);
+        he = r(72120);
       const Ce = 1079395200;
       function ye(e) {
         return (0, le.Xx)(
@@ -1930,9 +1930,9 @@
           t && ("global" == r || e.BIsValidTopSellersCountry(r))
         );
       }
-      var Te = r(13806),
-        fe = r(81171),
-        be = r(18285),
+      var Te = r(19304),
+        fe = r(88443),
+        be = r(50143),
         ke = r.n(be),
         we = r(30310),
         Re = r(77219),
@@ -1941,9 +1941,9 @@
         Ne = r(57317),
         Ge = r(75018),
         Ie = r(48586),
-        We = r(40108),
-        Oe = r(22840),
-        Le = r(16998),
+        We = r(84343),
+        Oe = r(17547),
+        Le = r(59046),
         De = r.n(Le);
       const xe = o.memo((e) => {
           const t = de();
@@ -2082,9 +2082,9 @@
       }
       var Fe = r(565),
         Ue = r(74802),
-        Xe = r(12568),
-        je = r(71906),
-        Ze = r(68910);
+        Xe = r(98009),
+        je = r(45437),
+        Ze = r(71161);
       function He(e) {
         const { item: t, feature: r, depth: n, children: s } = e,
           l = (0, a._T)(e, ["item", "feature", "depth", "children"]),
@@ -2111,10 +2111,10 @@
           p = o.createElement("a", Object.assign({}, l, { href: d }), s);
         return c ? o.createElement(Ue.h, { onEnter: _ }, p) : p;
       }
-      var Ve = r(54324),
-        Ye = r(90569),
+      var Ve = r(12360),
+        Ye = r(39559),
         qe = r.n(Ye),
-        $e = r(6309),
+        $e = r(25766),
         Qe = r.n($e);
       function Ke(e) {
         const { SteamCharts: t } = e;
@@ -2572,7 +2572,7 @@
         );
       }
       var it = r(73961),
-        ot = r(86701),
+        ot = r(701),
         ct = r(25125);
       function mt(e) {
         var t;
@@ -2808,11 +2808,11 @@
           o.createElement("div", { className: qe().MenuLinks }, a)
         );
       }
-      var ht = r(28763),
+      var ht = r(2518),
         Ct = r.n(ht),
-        yt = r(68155),
-        St = r(39588),
-        gt = r(63682);
+        yt = r(11985),
+        St = r(10178),
+        gt = r(69513);
       function vt(e) {
         const { Item: t } = e,
           r = (0, gt.C)(t),
@@ -2876,9 +2876,9 @@
           )
         );
       }
-      var Tt = r(16147),
-        ft = r(55910),
-        bt = r(69362);
+      var Tt = r(44865),
+        ft = r(85886),
+        bt = r(51441);
       function kt(e) {
         const { children: t, mostPlayedOption: r } = e;
         return o.createElement(
@@ -3098,8 +3098,8 @@
           })
         );
       }
-      var Nt = r(57255),
-        Gt = r(8392);
+      var Nt = r(57605),
+        Gt = r(69338);
       function It(e) {
         const { MostPlayedStore: t } = e,
           [r, a] = o.useState(V.ConcurrentUsers);
@@ -3646,7 +3646,7 @@
           )
         );
       }
-      var Xt = r(52380);
+      var Xt = r(45820);
       function jt(e) {
         const { TopSellersStore: t, week: r, country: a } = e;
         let n = (function (e) {
@@ -3910,8 +3910,8 @@
             })
           : null;
       });
-      var $t = r(83471),
-        Qt = r(77262),
+      var $t = r(68818),
+        Qt = r(27617),
         Kt = r.n(Qt);
       const Jt = o.lazy(() =>
         Promise.all([
@@ -3944,7 +3944,7 @@
           r.e(477),
           r.e(691),
           r.e(680),
-        ]).then(r.bind(r, 25893))
+        ]).then(r.bind(r, 11513))
       );
       function er(e) {
         var t, r;
@@ -3971,7 +3971,7 @@
           })
         );
       }
-      var tr = r(39459),
+      var tr = r(96571),
         rr = r.n(tr),
         ar = r(3397),
         nr = r(52339),

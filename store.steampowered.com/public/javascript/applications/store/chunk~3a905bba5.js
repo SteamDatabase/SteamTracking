@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4193],
   {
-    16972: (e) => {
+    93941: (e) => {
       e.exports = {
         GotSteamDialog: "gameactions_GotSteamDialog_3omvM",
         DownloadSteamUrl: "gameactions_DownloadSteamUrl_Glr7k",
@@ -17,7 +17,7 @@
         Logo: "gameactions_Logo_18ytK",
       };
     },
-    41037: (e) => {
+    72213: (e) => {
       e.exports = {
         DevSummaryCtn: "creatorhomeembed_DevSummaryCtn_ekp1E",
         LargeFormat: "creatorhomeembed_LargeFormat_2FqNe",
@@ -44,13 +44,13 @@
         MembersListLink: "creatorhomeembed_MembersListLink_Dh7u9",
       };
     },
-    89928: (e) => {
+    21857: (e) => {
       e.exports = {
         DemoButton: "demobutton_DemoButton_1GAs9",
         DisabledButton: "demobutton_DisabledButton_2TQ4l",
       };
     },
-    39613: (e) => {
+    55290: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         HoverContentTransition: "gamehover_HoverContentTransition_bHRhS",
@@ -95,7 +95,7 @@
           "gamehover_GameHoverCreatorFollowButtonCtn_O8IT4",
       };
     },
-    50390: (e) => {
+    48294: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SaleSection: "partnersaledisplay_SaleSection_2NfLq",
@@ -162,7 +162,7 @@
           "partnersaledisplay_EventSectionViewAllCtn_3RuY2",
       };
     },
-    30156: (e) => {
+    23715: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         headerCapsuleImgWidth: "460",
@@ -299,9 +299,10 @@
         RecommendationReason: "salepreviewwidgets_RecommendationReason_2bjeP",
         LocalizationSpan: "salepreviewwidgets_LocalizationSpan_3WrJ4",
         CapsuleName: "salepreviewwidgets_CapsuleName_3SHK9",
+        DiscountIconCtn: "salepreviewwidgets_DiscountIconCtn_LpnSX",
       };
     },
-    20688: (e) => {
+    65014: (e) => {
       e.exports = {
         PopupScreenshotContainer:
           "screenshotpopout_PopupScreenshotContainer_2mYDh",
@@ -311,29 +312,29 @@
         Disabled: "screenshotpopout_Disabled_1M3_p",
       };
     },
-    85506: (e) => {
+    5787: (e) => {
       e.exports = { CompatIcon: "deckcompaticons_CompatIcon_25ILU" };
     },
-    19143: (e) => {
+    43682: (e) => {
       e.exports = { ErrorDiv: "image_ErrorDiv_vIfbI" };
     },
-    21323: (e) => {
+    92852: (e) => {
       e.exports = {
         PreviewCtn: "expandableimage_PreviewCtn_3TAWD",
         SVG: "expandableimage_SVG_3KS-f",
       };
     },
-    32744: (e) => {
+    91244: (e) => {
       e.exports = { strMaxMobileWidth: "700px" };
     },
-    93373: (e, t, a) => {
+    84199: (e, t, a) => {
       "use strict";
       a.d(t, { hF: () => d, sR: () => c, z: () => m });
       var n = a(89526),
-        r = a(83799),
-        o = (a(67575), a(12568)),
-        l = a(98197),
-        i = a(70983);
+        r = a(14288),
+        o = (a(84770), a(98009)),
+        l = a(207),
+        i = a(32765);
       function s(e, t) {
         return (0, r.Ah)(
           e,
@@ -391,20 +392,20 @@
         );
       };
     },
-    56290: (e, t, a) => {
+    56172: (e, t, a) => {
       "use strict";
       a.d(t, { v: () => _ });
       var n = a(33940),
         r = a(89526),
-        o = (a(49969), a(63154)),
-        l = a(57255),
-        i = a(46085),
-        s = a(24868),
-        c = a(86701),
-        d = a(13806),
-        m = a(31587),
-        u = a(70983),
-        p = a(16972),
+        o = (a(51637), a(57858)),
+        l = a(57605),
+        i = a(99307),
+        s = a(57742),
+        c = a(701),
+        d = a(19304),
+        m = a(14826),
+        u = a(32765),
+        p = a(93941),
         g = a.n(p);
       function _(e) {
         return (0, n.mG)(this, void 0, void 0, function* () {
@@ -518,7 +519,7 @@
         );
       };
     },
-    15877: (e, t, a) => {
+    98210: (e, t, a) => {
       "use strict";
       a.d(t, { ZP: () => d, nQ: () => m });
       var n = a(33940),
@@ -526,7 +527,7 @@
         o = a.n(r),
         l = a(50265),
         i = a(89526),
-        s = (a(6960), a(49969), a(15781), a(96158), a(70983));
+        s = (a(46132), a(51637), a(57361), a(63403), a(32765));
       class c {
         constructor(e) {
           (this.appid = e.appid),
@@ -690,15 +691,15 @@
         (0, n.gn)([l.aD], d.prototype, "Init", null),
         (0, n.gn)([l.aD], d.prototype, "LoadAppIDsBatch", null);
     },
-    87656: (e, t, a) => {
+    95408: (e, t, a) => {
       "use strict";
       a.d(t, { Eq: () => m, NH: () => c, ue: () => u, wj: () => d });
       var n = a(33940),
         r = a(5615),
-        o = (a(49969), a(17922)),
-        l = a(60209),
-        i = a(54997),
-        s = (a(43886), a(70983));
+        o = (a(51637), a(54856)),
+        l = a(27070),
+        i = a(10521),
+        s = (a(86900), a(32765));
       function c(e = s.De.LANGUAGE) {
         const t = (0, l.lS)(),
           a = (0, l.y$)();
@@ -746,20 +747,20 @@
         return !!e;
       }
     },
-    41844: (e, t, a) => {
+    29265: (e, t, a) => {
       "use strict";
       a.d(t, { a: () => _ });
       var n = a(89526),
-        r = (a(49969), a(12568)),
-        o = (a(82702), a(2351)),
-        l = a(55910),
-        i = a(23708),
-        s = a(72745),
-        c = a(13806),
-        d = a(31587),
-        m = a(70983),
-        u = a(68910),
-        p = a(30156),
+        r = (a(51637), a(98009)),
+        o = (a(53143), a(54671)),
+        l = a(85886),
+        i = a(25871),
+        s = a(75962),
+        c = a(19304),
+        d = a(14826),
+        m = a(32765),
+        u = a(71161),
+        p = a(23715),
         g = a.n(p);
       function _(e) {
         var t;
@@ -840,19 +841,19 @@
         );
       }
     },
-    41796: (e, t, a) => {
+    6319: (e, t, a) => {
       "use strict";
       a.d(t, { f: () => g });
       var n = a(89526),
-        r = (a(49969), a(56290)),
-        o = (a(82702), a(15877)),
-        l = a(55910),
-        i = a(23708),
-        s = a(40108),
-        c = a(13806),
-        d = a(31587),
-        m = a(41844),
-        u = a(89928),
+        r = (a(51637), a(56172)),
+        o = (a(53143), a(98210)),
+        l = a(85886),
+        i = a(25871),
+        s = a(84343),
+        c = a(19304),
+        d = a(14826),
+        m = a(29265),
+        u = a(21857),
         p = a.n(u);
       function g(e) {
         const { info: t, className: a } = e,
@@ -898,31 +899,31 @@
             );
       }
     },
-    55745: (e, t, a) => {
+    79586: (e, t, a) => {
       "use strict";
       a.d(t, { C4: () => T, SE: () => P, Sm: () => G });
       var n = a(33940),
         r = a(88464),
         o = a(89526),
-        l = (a(49969), a(97303), a(82569)),
-        i = a(92801),
-        s = a(2351),
-        c = a(18535),
-        d = a(59649),
-        m = a(73265),
-        u = a(83983),
-        p = (a(96158), a(13806)),
-        g = a(31587),
-        _ = a(47330),
-        v = a(70983),
-        S = a(46085),
-        h = a(24868),
-        w = a(8392),
-        E = a(41037),
-        C = a(31041),
-        I = a(65717),
-        b = a(76478),
-        D = a(49194);
+        l = (a(51637), a(72119), a(47165)),
+        i = a(61218),
+        s = a(54671),
+        c = a(91656),
+        d = a(2308),
+        m = a(85651),
+        u = a(56368),
+        p = (a(63403), a(19304)),
+        g = a(14826),
+        _ = a(23217),
+        v = a(32765),
+        S = a(99307),
+        h = a(57742),
+        w = a(69338),
+        E = a(72213),
+        C = a(5557),
+        I = a(17318),
+        b = a(32905),
+        D = a(44026);
       const f = (0, r.Pi)((e) => {
         const { closeModal: t } = e;
         return o.createElement(S.uH, {
@@ -1123,7 +1124,7 @@
           });
         };
     },
-    69362: (e, t, a) => {
+    51441: (e, t, a) => {
       "use strict";
       a.d(t, { Hu: () => V, RJ: () => te, Yb: () => ee, ll: () => le });
       var n = a(33940),
@@ -1134,42 +1135,42 @@
         s = a(89526),
         c = a(73961),
         d = a(22171),
-        m = (a(49969), a(67575), a(64831)),
-        u = a(77515),
-        p = a(12568),
-        g = (a(82702), a(29760)),
-        _ = a(92801),
-        v = a(2351),
-        S = (a(55449), a(63154)),
-        h = a(55910),
-        w = a(23708),
-        E = a(10260),
-        C = a(22840),
-        I = a(55745),
-        b = a(99004),
-        D = a(45321),
-        f = a(16147),
-        A = a(3341),
-        B = a(56695),
-        y = a(741),
-        G = a(86701),
-        N = a(40108),
-        T = a(32338),
-        P = a(23213),
-        R = a(13806),
-        k = a(31587),
-        L = a(31621),
-        M = a(70983),
-        x = a(68910),
-        W = a(41796),
-        H = a(39613),
+        m = (a(51637), a(84770), a(69206)),
+        u = a(4556),
+        p = a(98009),
+        g = (a(53143), a(82079)),
+        _ = a(61218),
+        v = a(54671),
+        S = (a(36704), a(57858)),
+        h = a(85886),
+        w = a(25871),
+        E = a(89915),
+        C = a(17547),
+        I = a(79586),
+        b = a(67935),
+        D = a(80845),
+        f = a(44865),
+        A = a(49571),
+        B = a(43946),
+        y = a(33406),
+        G = a(701),
+        N = a(84343),
+        T = a(23801),
+        P = a(85246),
+        R = a(19304),
+        L = a(14826),
+        k = a(4306),
+        M = a(32765),
+        x = a(71161),
+        W = a(6319),
+        H = a(55290),
         F = a.n(H),
-        U = a(5253),
+        U = a(48410),
         O = a.n(U),
-        Z = a(76478),
-        j = a(30156),
+        Z = a(32905),
+        j = a(23715),
         Y = a.n(j),
-        X = a(35266);
+        X = a(98389);
       const z = "DEBUG_UseNewGameHover";
       function V() {
         return "none" !== J();
@@ -1198,7 +1199,7 @@
           r = (0, s.useRef)(n),
           [o, i] = (0, s.useState)([]),
           c = (0, s.useRef)(0),
-          d = (0, L.NW)(),
+          d = (0, k.NW)(),
           [m] = s.useState(new P.Ar()),
           u = (0, s.useCallback)(() => {
             if ((null == o ? void 0 : o.length) > 0) {
@@ -1365,7 +1366,7 @@
               { className: F().ReviewScoreCount },
               a
                 ? "(" + o.review_count.toLocaleString() + ")"
-                : (0, k.Xx)(
+                : (0, L.Xx)(
                     "#GameHover_UserReviewCount",
                     o.review_count.toLocaleString()
                   )
@@ -1375,7 +1376,7 @@
                 "div",
                 { className: F().ReviewScoreHeader },
                 " ",
-                (0, k.Xx)("#GameHover_UserReviewsHeader")
+                (0, L.Xx)("#GameHover_UserReviewsHeader")
               )
           );
         let d = "#ReviewScore_PercentPositive";
@@ -1406,7 +1407,7 @@
                 N.HP,
                 {
                   strTooltipClassname: O().HoverAboveModal,
-                  toolTipContent: (0, k.Xx)(
+                  toolTipContent: (0, L.Xx)(
                     d,
                     o.percent_positive,
                     o.review_count
@@ -1460,7 +1461,7 @@
                   c && F().WishlistLoadingText
                 ),
               },
-              (0, k.Xx)(l ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist")
+              (0, L.Xx)(l ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist")
             )
           );
         }),
@@ -1862,46 +1863,46 @@
         );
       }
     },
-    20186: (e, t, a) => {
+    44421: (e, t, a) => {
       "use strict";
       a.d(t, { Hl: () => j, S$: () => z, a4: () => X, ju: () => F });
       var n = a(88464),
         r = a(89526),
-        o = a(93373),
-        l = (a(6960), a(49969), a(49194)),
-        i = a(23907),
-        s = a(43407),
-        c = (a(67575), a(77515)),
-        d = a(88735),
-        m = a(12568),
-        u = (a(82702), a(29760)),
-        p = a(63154),
-        g = a(55910),
-        _ = a(23708),
-        v = a(39613),
+        o = a(84199),
+        l = (a(46132), a(51637), a(44026)),
+        i = a(31782),
+        s = a(16221),
+        c = (a(84770), a(4556)),
+        d = a(81039),
+        m = a(98009),
+        u = (a(53143), a(82079)),
+        p = a(57858),
+        g = a(85886),
+        _ = a(25871),
+        v = a(55290),
         S = a.n(v),
-        h = a(99004),
-        w = a(45321),
-        E = a(61720),
-        C = a(87973),
-        I = a(16147),
-        b = a(7746),
-        D = a(3341),
-        f = a(78205),
-        A = a(56695),
-        B = a(741),
-        y = a(24276),
-        G = a(96138),
-        N = a(90043),
-        T = a(13806),
-        P = a(31587),
-        R = a(70983),
-        k = a(68910),
-        L = a(8392),
-        M = a(69362),
-        x = a(30156),
+        h = a(67935),
+        w = a(80845),
+        E = a(21219),
+        C = a(59648),
+        I = a(44865),
+        b = a(87539),
+        D = a(49571),
+        f = a(3991),
+        A = a(43946),
+        B = a(33406),
+        y = a(20983),
+        G = a(42317),
+        N = a(54297),
+        T = a(19304),
+        P = a(14826),
+        R = a(32765),
+        L = a(71161),
+        k = a(69338),
+        M = a(51441),
+        x = a(23715),
         W = a.n(x),
-        H = a(35266);
+        H = a(98389);
       const F = (0, n.Pi)((e) => {
           var t;
           const {
@@ -1918,7 +1919,7 @@
               artworkStoreItem: N,
             } = (0, C.Q)(e),
             {
-              bShowDemoButton: L,
+              bShowDemoButton: k,
               bHidePrice: x,
               bUseSubscriptionLayout: H,
               bHidePlatforms: F,
@@ -1929,7 +1930,7 @@
               bAutoFocus: z,
               fnOnClickOverride: V,
             } = e,
-            J = (0, k.bJ)(),
+            J = (0, L.bJ)(),
             Q = r.useMemo(
               () => (null == u ? void 0 : u.GetIncludedAppIDsOrSelf()),
               [u]
@@ -2118,7 +2119,7 @@
                           ? r.createElement(B.r, { appid: g.id, bIsMuted: n })
                           : r.createElement(I.x1, {
                               info: _,
-                              bShowDemoButton: L,
+                              bShowDemoButton: k,
                               bHidePrice: x,
                               bHideWishlistButton: ie,
                               bShowDeckCompatibilityDialog: Y,
@@ -2285,7 +2286,7 @@
         const { info: t, imageType: a } = e,
           [n] = (0, _.jk)(t.id, (0, g.TM)(t.type), { include_assets: !0 });
         if (!n)
-          return r.createElement(L.V, {
+          return r.createElement(k.V, {
             size: "small",
             position: "center",
             string: (0, P.Xx)("#Loading"),
@@ -2348,14 +2349,14 @@
         );
       });
     },
-    99004: (e, t, a) => {
+    67935: (e, t, a) => {
       "use strict";
       a.d(t, { v: () => c });
       var n = a(89526),
-        r = (a(67575), a(82702), a(55910)),
-        o = a(23708),
-        l = a(70983),
-        i = a(30156),
+        r = (a(84770), a(53143), a(85886)),
+        o = a(25871),
+        l = a(32765),
+        i = a(23715),
         s = a.n(i);
       function c(e) {
         const { appInfo: t } = e,
@@ -2390,15 +2391,15 @@
           : null;
       }
     },
-    45321: (e, t, a) => {
+    80845: (e, t, a) => {
       "use strict";
       a.d(t, { a: () => d });
       var n = a(89526),
-        r = (a(67575), a(55910)),
-        o = a(23708),
-        l = a(86701),
-        i = a(13806),
-        s = a(30156),
+        r = (a(84770), a(85886)),
+        o = a(25871),
+        l = a(701),
+        i = a(19304),
+        s = a(23715),
         c = a.n(s);
       function d(e) {
         var t;
@@ -2421,19 +2422,19 @@
         );
       }
     },
-    61720: (e, t, a) => {
+    21219: (e, t, a) => {
       "use strict";
       a.d(t, { Bj: () => g, vs: () => p, xP: () => _ });
       var n = a(89526),
-        r = a(68155),
-        o = a(39588),
-        l = (a(49969), a(89400)),
-        i = a(2351),
-        s = a(63154),
-        c = a(30156),
+        r = a(11985),
+        o = a(10178),
+        l = (a(51637), a(98889)),
+        i = a(54671),
+        s = a(57858),
+        c = a(23715),
         d = a.n(c),
-        m = a(13806),
-        u = a(31587);
+        m = a(19304),
+        u = a(14826);
       function p(e) {
         const { appids: t, hide_status_banners: a } = e,
           l = t.every((e) => i.jg.Get().BOwnsApp(e)),
@@ -2478,17 +2479,17 @@
           (0, u.Xx)("#home_page_live_broadcast")
         );
     },
-    87973: (e, t, a) => {
+    59648: (e, t, a) => {
       "use strict";
       a.d(t, { Q: () => u });
       var n = a(52868),
         r = a.n(n),
         o = a(89526),
-        l = a(51684),
-        i = (a(67575), a(82702), a(2351)),
-        s = (a(55449), a(55910)),
-        c = a(23708),
-        d = (a(20186), a(78205));
+        l = a(62983),
+        i = (a(84770), a(53143), a(54671)),
+        s = (a(36704), a(85886)),
+        c = a(25871),
+        d = (a(44421), a(3991));
       class m {}
       function u(e, t) {
         const a = (0, o.useRef)(r().CancelToken.source()),
@@ -2571,7 +2572,7 @@
       }
       m.instance_count = 0;
     },
-    16147: (e, t, a) => {
+    44865: (e, t, a) => {
       "use strict";
       a.d(t, { Gh: () => D, Jc: () => f, nk: () => A, x1: () => I });
       var n = a(33940),
@@ -2579,20 +2580,20 @@
         o = a.n(r),
         l = a(89526),
         i = a(22171),
-        s = a(49969),
-        c = (a(52276), a(82702), a(15877)),
-        d = (a(55449), a(55910)),
-        m = a(23708),
-        u = a(10260),
-        p = a(41844),
-        g = a(41796),
-        _ = a(20186),
-        v = a(30156),
+        s = a(51637),
+        c = (a(18712), a(53143), a(98210)),
+        d = (a(36704), a(85886)),
+        m = a(25871),
+        u = a(89915),
+        p = a(29265),
+        g = a(6319),
+        _ = a(44421),
+        v = a(23715),
         S = a.n(v),
-        h = a(95489),
-        w = a(13806),
-        E = a(31587),
-        C = a(86701);
+        h = a(17325),
+        w = a(19304),
+        E = a(14826),
+        C = a(701);
       function I(e) {
         const {
             info: t,
@@ -2858,7 +2859,12 @@
               { className: S().StoreSaleDiscountBox },
               `-${a}%`
             ),
-          Boolean(c) && l.createElement(C.dCe, null),
+          Boolean(c) &&
+            l.createElement(
+              "div",
+              { className: S().DiscountIconCtn },
+              l.createElement(C.dCe, null)
+            ),
           Boolean(a && o && !c)
             ? l.createElement(
                 "div",
@@ -2888,16 +2894,16 @@
         );
       }
     },
-    7746: (e, t, a) => {
+    87539: (e, t, a) => {
       "use strict";
       a.d(t, { h: () => s });
-      a(14258);
-      var n = a(12568),
-        r = (a(55449), a(78205)),
-        o = a(32338),
-        l = a(81052),
-        i = a(31587);
-      a(70983);
+      a(58123);
+      var n = a(98009),
+        r = (a(36704), a(3991)),
+        o = a(23801),
+        l = a(60161),
+        i = a(14826);
+      a(32765);
       function s(e, t, a, s, c) {
         if (!a) return;
         if (!(0, r.$N)(e.GetStoreItemType()))
@@ -2919,18 +2925,18 @@
         };
       }
     },
-    3341: (e, t, a) => {
+    49571: (e, t, a) => {
       "use strict";
       a.d(t, { H: () => p, T: () => u });
       var n = a(89526),
-        r = a(6960),
-        o = a(87656),
-        l = a(30156),
+        r = a(46132),
+        o = a(95408),
+        l = a(23715),
         i = a.n(l),
-        s = a(56695),
-        c = a(13806),
-        d = a(31587),
-        m = a(70983);
+        s = a(43946),
+        c = a(19304),
+        d = a(14826),
+        m = a(32765);
       const u = (e) => {
         const { rgTagIDs: t, instanceNum: a, bShowEvenIfNoTags: r } = e,
           l = (0, o.Eq)(t);
@@ -2981,15 +2987,15 @@
         );
       }
     },
-    78205: (e, t, a) => {
+    3991: (e, t, a) => {
       "use strict";
       a.d(t, { $N: () => c, Dt: () => s, zw: () => d });
-      a(82702);
+      a(53143);
       var n = a(89526),
-        r = a(49969),
-        o = a(12568),
-        l = a(22151),
-        i = a(68910);
+        r = a(51637),
+        o = a(98009),
+        l = a(49633),
+        i = a(71161);
       function s(e) {
         return "bundle" == e
           ? "bundle"
@@ -3018,28 +3024,28 @@
           : n.createElement(n.Fragment, null, e.children);
       };
     },
-    95489: (e, t, a) => {
+    17325: (e, t, a) => {
       "use strict";
       a.d(t, { s: () => b });
       var n = a(33940),
         r = a(25125),
         o = a(89526),
-        l = (a(49969), a(12568)),
-        i = a(2351),
-        s = a(30156),
+        l = (a(51637), a(98009)),
+        i = a(54671),
+        s = a(23715),
         c = a.n(s),
-        d = a(65717),
+        d = a(17318),
         m = a.n(d),
-        u = a(76478),
-        p = a(46085),
-        g = a(24868),
-        _ = a(86701),
-        v = a(68910),
-        S = a(8392),
-        h = a(47330),
-        w = a(13806),
-        E = a(31587),
-        C = a(70983);
+        u = a(32905),
+        p = a(99307),
+        g = a(57742),
+        _ = a(701),
+        v = a(71161),
+        S = a(69338),
+        h = a(23217),
+        w = a(19304),
+        E = a(14826),
+        C = a(32765);
       function I(e) {
         (0, g.AM)(
           o.createElement(
@@ -3118,17 +3124,17 @@
             );
       }
     },
-    56695: (e, t, a) => {
+    43946: (e, t, a) => {
       "use strict";
       a.d(t, { K: () => u, r: () => p });
       var n = a(89526),
-        r = a(31587),
-        o = a(49194),
-        l = (a(67575), a(12568)),
-        i = a(68910),
-        s = a(98197),
-        c = a(70983),
-        d = a(50390),
+        r = a(14826),
+        o = a(44026),
+        l = (a(84770), a(98009)),
+        i = a(71161),
+        s = a(207),
+        c = a(32765),
+        d = a(48294),
         m = a.n(d);
       function u(e) {
         const { className: t, url: a, style: r, children: d } = e,
@@ -3164,16 +3170,16 @@
           : null;
       }
     },
-    741: (e, t, a) => {
+    33406: (e, t, a) => {
       "use strict";
       a.d(t, { r: () => m });
       var n = a(88464),
         r = a(89526),
-        o = (a(49969), a(56290)),
-        l = a(2351),
-        i = a(13806),
-        s = a(31587),
-        c = a(30156),
+        o = (a(51637), a(56172)),
+        l = a(54671),
+        i = a(19304),
+        s = a(14826),
+        c = a(23715),
         d = a.n(c);
       const m = (0, n.Pi)((e) => {
         const { appid: t, bIsMuted: a } = e,
@@ -3196,18 +3202,18 @@
         );
       });
     },
-    24276: (e, t, a) => {
+    20983: (e, t, a) => {
       "use strict";
       a.d(t, { N: () => u, q: () => p });
       var n = a(89526),
-        r = a(70983),
-        o = (a(67575), a(55449), a(63154)),
-        l = a(55910),
-        i = a(23708),
-        s = a(90043),
-        c = a(30156),
+        r = a(32765),
+        o = (a(84770), a(36704), a(57858)),
+        l = a(85886),
+        i = a(25871),
+        s = a(54297),
+        c = a(23715),
         d = a.n(c),
-        m = a(13806);
+        m = a(19304);
       function u(e) {
         var t;
         const { info: a } = e,
@@ -3324,17 +3330,17 @@
         }
       }
     },
-    12186: (e, t, a) => {
+    56491: (e, t, a) => {
       "use strict";
       a.d(t, { TZ: () => p, t0: () => m });
       var n = a(89526),
-        r = a(13806),
-        o = a(81671),
-        l = a(46085),
-        i = a(24868),
-        s = a(20688),
+        r = a(19304),
+        o = a(7029),
+        l = a(99307),
+        i = a(57742),
+        s = a(65014),
         c = a.n(s),
-        d = a(86701);
+        d = a(701);
       function m(e) {
         (0, i.x1)(n.createElement(u, { rgImageURL: e }), window);
       }
@@ -3427,15 +3433,15 @@
         );
       }
     },
-    35266: (e, t, a) => {
+    98389: (e, t, a) => {
       "use strict";
       a.d(t, { W: () => c, _: () => d });
       var n = a(89526),
-        r = a(49194),
-        o = a(12568),
-        l = a(68910),
-        i = a(32338),
-        s = a(70983);
+        r = a(44026),
+        o = a(98009),
+        l = a(71161),
+        i = a(23801),
+        s = a(32765);
       function c(e) {
         const {
             type: t,
@@ -3517,13 +3523,13 @@
         );
       }
     },
-    96138: (e, t, a) => {
+    42317: (e, t, a) => {
       "use strict";
       a.d(t, { y: () => i });
       var n = a(89526),
-        r = a(70983),
-        o = (a(82633), a(13806)),
-        l = a(85506);
+        r = a(32765),
+        o = (a(6681), a(19304)),
+        l = a(5787);
       function i(e) {
         const { bAllowOutsideOfDeck: t } = e;
         if (!(0, r.id)() && !t) return null;
@@ -3548,13 +3554,13 @@
         });
       }
     },
-    90043: (e, t, a) => {
+    54297: (e, t, a) => {
       "use strict";
       a.d(t, { J: () => i, e: () => s });
       var n = a(89526),
-        r = a(31587),
-        o = a(19143),
-        l = a(19769);
+        r = a(14826),
+        o = a(43682),
+        l = a(82124);
       function i(e) {
         const {
             className: t,
@@ -3622,15 +3628,15 @@
             });
       }
     },
-    19769: (e, t, a) => {
+    82124: (e, t, a) => {
       "use strict";
       a.d(t, { l: () => m });
       var n = a(89526),
-        r = a(86701),
-        o = a(13806),
-        l = a(12186),
-        i = a(76473),
-        s = a(21323);
+        r = a(701),
+        o = a(19304),
+        l = a(56491),
+        i = a(66615),
+        s = a(92852);
       const c = 1.3,
         d = 3;
       function m(e) {
@@ -3696,14 +3702,14 @@
         );
       }
     },
-    22151: (e, t, a) => {
+    49633: (e, t, a) => {
       "use strict";
       a.d(t, { Z: () => s });
       var n = a(33940),
         r = a(89526),
-        o = a(71906),
+        o = a(45437),
         l = a(74802),
-        i = a(31621);
+        i = a(4306);
       class s extends r.Component {
         OnEnter() {
           o.E.AddImpression(this.props.appID, this.props.snr);
@@ -3718,23 +3724,23 @@
       }
       (0, n.gn)([i.ak], s.prototype, "OnEnter", null);
     },
-    76473: (e, t, a) => {
+    66615: (e, t, a) => {
       "use strict";
       a.d(t, { p: () => o });
-      var n = a(32744),
+      var n = a(91244),
         r = a.n(n);
       function o() {
         return window.innerWidth < parseInt(r().strMaxMobileWidth);
       }
     },
-    71906: (e, t, a) => {
+    45437: (e, t, a) => {
       "use strict";
       a.d(t, { E: () => c });
       var n = a(33940),
-        r = a(2351),
-        o = a(70983),
-        l = a(6283),
-        i = a(63845);
+        r = a(54671),
+        o = a(32765),
+        l = a(87361),
+        i = a(37377);
       class s {
         constructor() {
           (this.m_mapAppToSNRs = new Map()), (this.m_rgImpressionsToAdd = []);
@@ -3766,7 +3772,7 @@
       const c = new s();
       window.g_ImpressionTracker = c;
     },
-    81671: (e, t, a) => {
+    7029: (e, t, a) => {
       "use strict";
       a.d(t, { P: () => r });
       var n = a(89526);
@@ -3782,13 +3788,13 @@
         }, [e, t]);
       }
     },
-    68155: (e, t, a) => {
+    11985: (e, t, a) => {
       "use strict";
       a.d(t, { Z: () => n });
       const n =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
     },
-    39588: (e, t, a) => {
+    10178: (e, t, a) => {
       "use strict";
       a.d(t, { Z: () => n });
       const n =

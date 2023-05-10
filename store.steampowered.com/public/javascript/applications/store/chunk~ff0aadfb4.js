@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [9211],
   {
-    50902: (t) => {
+    5089: (t) => {
       t.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -34,7 +34,7 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    12263: (t, e, n) => {
+    16468: (t, e, n) => {
       "use strict";
       n.d(e, {
         Bo: () => b,
@@ -49,17 +49,17 @@
         i = n.n(o),
         l = n(50265),
         r = n(89526),
-        s = (n(6960), n(49969), n(67575), n(82569)),
-        c = n(29760),
-        u = n(15877),
-        d = n(2351),
-        _ = n(68208),
-        p = n(44029),
-        m = (n(96158), n(99096)),
-        v = n(32338),
-        g = n(47330),
-        E = n(31621),
-        f = n(70983);
+        s = (n(46132), n(51637), n(84770), n(47165)),
+        c = n(82079),
+        u = n(98210),
+        d = n(54671),
+        _ = n(10412),
+        p = n(70750),
+        m = (n(63403), n(11837)),
+        v = n(23801),
+        g = n(23217),
+        E = n(4306),
+        f = n(32765);
       function h(t) {
         t.list_jsondata && "string" == typeof t.list_jsondata
           ? (t.list_jsondata = JSON.parse(t.list_jsondata))
@@ -380,34 +380,34 @@
       }
       (0, a.gn)([l.LO], b.prototype, "m_mapList", void 0);
     },
-    7920: (t, e, n) => {
+    31245: (t, e, n) => {
       "use strict";
       n.d(e, { B: () => w, O: () => G });
       var a = n(89526),
-        o = n(51684),
-        i = n(49194),
-        l = n(23907),
-        r = n(43407),
-        s = (n(67575), n(12568)),
-        c = (n(82702), n(2351)),
-        u = n(55910),
-        d = n(23708),
-        _ = n(50902),
-        p = n(69362),
-        m = n(20186),
-        v = n(30156),
+        o = n(62983),
+        i = n(44026),
+        l = n(31782),
+        r = n(16221),
+        s = (n(84770), n(98009)),
+        c = (n(53143), n(54671)),
+        u = n(85886),
+        d = n(25871),
+        _ = n(5089),
+        p = n(51441),
+        m = n(44421),
+        v = n(23715),
         g = n.n(v),
-        E = n(99004),
-        f = n(61720),
-        h = (n(87973), n(7746)),
-        C = n(78205),
-        L = n(741),
-        b = n(35266),
-        y = n(96138),
-        I = n(68910),
-        D = n(13806),
-        S = n(31587),
-        A = n(70983);
+        E = n(67935),
+        f = n(21219),
+        h = (n(59648), n(87539)),
+        C = n(3991),
+        L = n(33406),
+        b = n(98389),
+        y = n(42317),
+        I = n(71161),
+        D = n(19304),
+        S = n(14826),
+        A = n(32765);
       const G = "capsule_index_";
       function w(t) {
         const {

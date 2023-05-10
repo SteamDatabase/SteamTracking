@@ -4,7 +4,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8878],
   {
-    12568: (e, t, r) => {
+    98009: (e, t, r) => {
       r.d(t, {
         OL: () => o,
         Hf: () => l,
@@ -12,9 +12,9 @@
         B1: () => c,
         ZP: () => m,
       });
-      var i = r(32338),
-        n = r(98197),
-        s = r(70983);
+      var i = r(23801),
+        n = r(207),
+        s = r(32765);
       const a = JSON.parse(
         '{"store.steampowered.com":1,"default":4,"message":41,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201,"yearinreview":662}'
       );
@@ -139,10 +139,10 @@
         }
       }
     },
-    40574: (e, t, r) => {
+    54507: (e, t, r) => {
       r.d(t, { Fi: () => y, Ng: () => v, hu: () => a, it: () => z });
       var i = r(45878),
-        n = r(19320);
+        n = r(29063);
       const s = i.Message;
       class a extends s {
         constructor(e = null) {
@@ -1313,12 +1313,12 @@
           };
         })(F || (F = {}));
     },
-    10171: (e, t, r) => {
+    93908: (e, t, r) => {
       r.d(t, { Mr: () => o, tk: () => c });
       var i = r(89526),
-        n = r(86701),
-        s = r(89372),
-        a = r(70983);
+        n = r(701),
+        s = r(16826),
+        a = r(32765);
       function o() {
         return (0, a.id)(), i.createElement(n.MrB, null);
       }
@@ -1328,12 +1328,12 @@
           : i.createElement(n.tkI, null);
       }
     },
-    68910: (e, t, r) => {
+    71161: (e, t, r) => {
       r.d(t, { HC: () => l, YR: () => m, ZP: () => c, bJ: () => u });
       var i = r(33940),
         n = r(89526),
-        s = r(12568),
-        a = r(70983);
+        s = r(98009),
+        a = r(32765);
       const o = n.createContext({});
       function c(e) {
         const { children: t } = e,
@@ -1380,12 +1380,12 @@
         return n.useMemo(() => s.ZP.AddNavParamToURL(e, a), [e, a]);
       }
     },
-    85446: (e, t, r) => {
+    41576: (e, t, r) => {
       r.d(t, { U: () => o });
       var i = r(33940),
         n = r(89526),
-        s = r(81052),
-        a = r(31621);
+        s = r(60161),
+        a = r(4306);
       class o extends n.Component {
         constructor() {
           super(...arguments),
@@ -1490,7 +1490,7 @@
       }
       (0, i.gn)([a.ak], o.prototype, "OnIntersection", null);
     },
-    98197: (e, t, r) => {
+    207: (e, t, r) => {
       r.d(t, {
         FM: () => s,
         H7: () => n,
@@ -1503,8 +1503,8 @@
         md: () => g,
         xL: () => d,
       });
-      var i = r(70983);
-      r(49969), r(31587);
+      var i = r(32765);
+      r(51637), r(14826);
       const n =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
       function s(e) {
@@ -1617,7 +1617,7 @@
         }
       }
     },
-    98995: (e, t, r) => {
+    15628: (e, t, r) => {
       r.d(t, { Y: () => a });
       var i = r(33940),
         n = (r(89526), r(50265));
