@@ -1289,21 +1289,30 @@ function PositionMiniprofileHover( $Hover, $Target, oParams )
 	if ( !$HoverBox.length )
 		$HoverBox = $J( $Hover.children()[0] );
 
+	var $HoverArrowLeft = $Hover.children( '.hover_arrow.left' );
+	var $HoverArrowRight = $Hover.children( '.hover_arrow.right' );
+
 	var nWindowScrollTop = $J(window).scrollTop();
 	var nWindowScrollLeft = $J(window).scrollLeft();
 	var nViewportWidth = $J(window).width();
 	var nViewportHeight = $J(window).height();
 
-		var nBoxRightViewport = ( offset.left - nWindowScrollLeft ) + $Target.outerWidth() + $HoverBox.width() + 14;
+		var $HoverArrow = $HoverArrowRight;
+	var nBoxRightViewport = ( offset.left - nWindowScrollLeft ) + $Target.outerWidth() + $HoverBox.width() + 14;
 	var nSpaceRight = nViewportWidth - nBoxRightViewport;
 	var nSpaceLeft = offset.left - $Hover.width();
 	if ( ( ( nSpaceLeft > 0 || nSpaceLeft > nSpaceRight ) && !bPreferRightSide ) || ( bPreferRightSide && nSpaceRight < 14 && nSpaceLeft > nSpaceRight ) )
 	{
 				$Hover.css( 'left', ( offset.left - $Hover.width() + nPxArrowOverlap + 3 ) + 'px' );
+		$HoverArrowLeft.hide();
+		$HoverArrowRight.show();
 	}
 	else
 	{
 				$Hover.css( 'left', ( offset.left + $Target.outerWidth() - nPxArrowOverlap ) + 'px' );
+		$HoverArrow = $HoverArrowLeft;
+		$HoverArrowLeft.show();
+		$HoverArrowRight.hide();
 	}
 
 	var nTopAdjustment = 0;
@@ -1327,6 +1336,13 @@ function PositionMiniprofileHover( $Hover, $Target, oParams )
 
 		var nViewportAdjustedHoverTop = offset.top - nViewportAdjustment;
 		$Hover.css( 'top', nViewportAdjustedHoverTop + 'px' );
+
+		// arrow is normally offset 30pixels.  we move it down the same distance we moved the hover up, so it is "fixed" to where it was initially
+		$HoverArrow.css( 'top', ( 30 + nDesiredHoverTop - nViewportAdjustedHoverTop ) + 'px' );
+	}
+	else
+	{
+		$HoverArrow.css( 'top', '' );
 	}
 
 	$Hover.hide();

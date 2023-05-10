@@ -552,7 +552,7 @@ body.v6 .account_settings_container .h3_content {
 	height: 12px;
 	margin: 3px 0 4px 5px;
 	vertical-align: top;
-	background-image: url( '/store/public/images/v6/delete_search_term.png' );
+	background-image: url( '/public/images/v6/delete_search_term.png' );
 	margin-left: 5px;
 }
 
@@ -610,7 +610,7 @@ body.v6 .account_settings_container .h3_content {
 	height: 11px;
 	margin-right: 7px;
 	margin-top: 16px;
-	background: url('/store/public/images/v6/app/review_graph_expander.png');
+	background: url('/public/images/v6/app/review_graph_expander.png');
 	background-repeat: no-repeat;
 	background-size: 11px 20px;
 	display: inline-block;
@@ -740,7 +740,7 @@ input[type=date] {
 .app_age_gate_bypassed_remove {
 	display: inline-block;
 	cursor: pointer;
-	background: no-repeat center center url('/store/public/images/v6/delete_search_term.png');
+	background: no-repeat center center url('/public/images/v6/delete_search_term.png');
 	width: 12px;
 	height: 24px;
 	margin-left: 8px;
@@ -1008,4 +1008,30 @@ body.v6 h2.pageheader.youraccount_pageheader {
 .orderdetails_shippingdelay {
 	margin-top: 20px;
 	width: 300px;
+}
+
+.preference_row {
+    display: grid;
+    grid-template-columns: auto 80px 80px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "desc store_col community_col";
+	border-bottom: 1px solid #324a67;
+	margin-bottom: 4px;
+}
+
+.store_pref_desc {
+    grid-area: desc;
+}
+.store_pref_col {
+    grid-area: store_col;
+	font-size: 13px;
+	align-self: center;
+	text-align: center;
+}
+.community_pref_col {
+    grid-area: community_col;
+	font-size: 13px;
+	align-self: center;
+	text-align: center;
 }

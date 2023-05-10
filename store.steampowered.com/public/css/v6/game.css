@@ -1340,7 +1340,7 @@ body.v6 .game_description_column h2.gradientbg {
     border: 1px solid rgba( 103, 193, 245, 0.5 );
 }
 
-.game_description_column .block .block_content a img {
+.game_description_column .block .block_content .small_cap_img {
     width: 171px;
 }
 

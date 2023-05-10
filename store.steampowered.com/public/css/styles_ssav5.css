@@ -91,6 +91,10 @@
 	line-height: 18px;
 }
 
+#ssa_box.online_conduct li {
+	margin: 16px 0;
+}
+
 #ssa_box ul {
 	margin-left: 20px;
 }

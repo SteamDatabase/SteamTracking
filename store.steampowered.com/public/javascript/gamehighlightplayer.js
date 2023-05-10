@@ -45,15 +45,17 @@ function BIsUserGameHighlightAudioEnabled()
 
 function SetGameHighlightAudioEnabled( bEnabled )
 {
-	document.cookie = 'bGameHighlightAudioEnabled=' + (bEnabled ? 'true' : 'false') + '; path=/';
+	var dateExpires = new Date();
+	dateExpires.setTime( dateExpires.getTime() + 1000 * 60 * 60 * 24 * 365 * 10 );
+	document.cookie = 'bGameHighlightAudioEnabled=' + (bEnabled ? 'true' : 'false') + '; expires=' + dateExpires.toGMTString() + ';path=/';
 }
 
 function GetGameHighlightPlayerVolume()
 {
 	var rgMatches = document.cookie.match( /(^|; )flGameHighlightPlayerVolume=([^;]*)/ );
 
-	// default to 100
-	var flValue = rgMatches && rgMatches[2] ? rgMatches[2] : 100;
+	// default to 80
+	var flValue = rgMatches && rgMatches[2] ? rgMatches[2] : 80;
 
 	// clamp to 0-100
 	if ( flValue < 0 )
@@ -69,7 +71,7 @@ function SetGameHighlightPlayerVolume( flVolume )
 {
 	var dateExpires = new Date();
 	dateExpires.setTime( dateExpires.getTime() + 1000 * 60 * 60 * 24 * 365 * 10 );
-	document.cookie = 'flGameHighlightPlayerVolume=' + flVolume + '; path=/';
+	document.cookie = 'flGameHighlightPlayerVolume=' + flVolume + '; expires=' + dateExpires.toGMTString() + ';path=/';
 }
 
 function HighlightPlayer( args )

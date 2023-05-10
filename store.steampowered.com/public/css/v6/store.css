@@ -785,7 +785,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     padding: 4px 8px 4px 8px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 45px 75px 1fr 1fr;
+    grid-template-columns: 45px 75px auto 1fr;
     grid-template-rows: auto;
     grid-template-areas:
             "img img name name"
@@ -904,6 +904,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    justify-self: end;
 }
 .popup_body.search_v2 .match.match_tag.match_v2 .match_img {
     display: none;
@@ -1216,6 +1217,29 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	display: inline-block;
 }
 
+/* Discount Block Generic Icon Styles */
+.discount_icon {
+    color: #BEEE11;
+    background: #4c6b22;
+    display: inline-block;
+    padding: 5px;
+}
+
+.discount_icon img {
+    display: block;
+}
+
+.discount_block_inline .discount_icon {
+    padding: 1px;
+}
+
+.discount_block_inline .discount_icon img {
+    height: 15px;
+}
+
+/* ============================== */
+
+
 .discount_block .bundle_base_discount {
 	display: inline-block;
 	text-decoration: line-through;
@@ -1436,7 +1460,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 .small_cap .discount_block {
 	margin: 0;
 	text-align: right;
-	padding: 5px;
+	padding: 3px 0;
 	line-height: 17px;
 	min-height: 17px;
 	font-size: 12px;
