@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [145],
   {
-    37664: (e) => {
+    96469: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         BannerContainer: "deckverified_BannerContainer_2b4eh",
@@ -57,7 +57,7 @@
           "deckverified_DeveloperComments_LinkIcon_1cm6k",
       };
     },
-    70424: (e) => {
+    78942: (e) => {
       e.exports = {
         Dark: "footericons_Dark_2SV_e",
         Background: "footericons_Background_I3P4e",
@@ -70,14 +70,14 @@
         ChordSummary: "footericons_ChordSummary_2sFpI",
       };
     },
-    88735: (e, t, r) => {
+    81039: (e, t, r) => {
       "use strict";
       r.d(t, { sC: () => i });
       var l = r(89526),
-        n = (r(82633), r(13806)),
-        o = r(86701),
-        a = r(55310);
-      r(31587), r(70983);
+        n = (r(6681), r(19304)),
+        o = r(701),
+        a = r(59743);
+      r(14826), r(32765);
       const i = (e) => {
           const t = ((r = e.category), c[r] || o.z5E);
           var r;
@@ -90,35 +90,35 @@
         },
         c = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
     },
-    81084: (e, t, r) => {
+    65786: (e, t, r) => {
       "use strict";
       r.d(t, { X: () => l });
-      r(54997);
+      r(10521);
       function l() {
         let e = window.GetUsabilityTracker;
         if (e) return e();
       }
     },
-    68620: (e, t, r) => {
+    55069: (e, t, r) => {
       "use strict";
       var l = r(45878);
-      r(19320), r(82633);
+      r(29063), r(6681);
       l.Message;
     },
-    83883: (e, t, r) => {
+    34768: (e, t, r) => {
       "use strict";
       r.d(t, { Rd: () => y, _R: () => R, Ws: () => M });
       var l = r(89526),
-        n = (r(49969), r(49194)),
-        o = (r(49920), r(23907)),
-        a = (r(14258), r(173), r(84042), r(88735)),
-        i = (r(81084), r(82633), r(68620), r(82702), r(54997), r(33940)),
+        n = (r(51637), r(44026)),
+        o = (r(17589), r(31782)),
+        a = (r(58123), r(3787), r(9501), r(81039)),
+        i = (r(65786), r(6681), r(55069), r(53143), r(10521), r(33940)),
         c = r(52868),
         s = r.n(c),
-        C = (r(6960), r(96158), r(47330)),
-        u = r(23213),
-        m = r(31621),
-        d = r(70983);
+        C = (r(46132), r(63403), r(23217)),
+        u = r(85246),
+        m = r(4306),
+        d = r(32765);
       class p {
         constructor() {
           if (
@@ -220,19 +220,19 @@
         }
       }
       (0, i.gn)([m.ak], p.prototype, "LoadAppCompabitilityResult", null);
-      r(84413);
-      var g = r(77449),
-        f = r(7021),
-        H = r(86701),
-        v = r(82235),
-        w = r(8392),
-        h = r(13806),
-        L = r(81052),
-        V = r(31587),
-        E = r(32448),
-        k = r(37664),
+      r(74429);
+      var g = r(22444),
+        f = r(67736),
+        H = r(701),
+        v = r(14965),
+        w = r(69338),
+        h = r(19304),
+        L = r(60161),
+        V = r(14826),
+        E = r(81349),
+        k = r(96469),
         b = r.n(k),
-        _ = r(24868);
+        _ = r(57742);
       function M(e) {
         var t;
         const { storeItem: r } = e;
@@ -379,22 +379,22 @@
         }
       }
     },
-    82235: (e, t, r) => {
+    14965: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => re });
       var l,
         n = r(89526),
-        o = (r(82633), r(68620), r(31587)),
-        a = r(70983),
-        i = r(23907),
-        c = r(37664),
+        o = (r(6681), r(55069), r(14826)),
+        a = r(32765),
+        i = r(31782),
+        c = r(96469),
         s = r.n(c),
-        C = r(76019),
-        u = r(86701),
+        C = r(34329),
+        u = r(701),
         m = r(33940),
-        d = (r(14258), r(60587)),
-        p = (r(48870), r(43407), r(19038), r(23213), r(87256)),
-        g = r(31621);
+        d = (r(58123), r(8179)),
+        p = (r(77872), r(16221), r(63587), r(85246), r(50454)),
+        g = r(4306);
       function f(e) {
         switch (e) {
           case d.eV.OK:
@@ -590,9 +590,9 @@
         (0, m.gn)([g.ak], H.prototype, "SetActionDescriptionsFromMap", null);
       var v,
         w,
-        h = r(70424),
+        h = r(78942),
         L = r.n(h),
-        V = r(13806);
+        V = r(19304);
       function E(e) {
         switch (e) {
           case w.Small:
@@ -2158,7 +2158,7 @@
             (e[(e.Medium = 1)] = "Medium"),
             (e[(e.Large = 2)] = "Large");
         })(w || (w = {}));
-      var te = r(83883);
+      var te = r(34768);
       function re(e) {
         var t, r;
         const {

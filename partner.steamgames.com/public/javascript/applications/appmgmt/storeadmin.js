@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [8974],
   {
-    10500: (e) => {
+    69409: (e) => {
       e.exports = {
         EventTimeSection: "partnereventshareddates_EventTimeSection_27EoU",
         EventTimeTitle: "partnereventshareddates_EventTimeTitle_2sTdT",
@@ -31,7 +31,7 @@
         DateErrorCtn: "partnereventshareddates_DateErrorCtn_Bww9B",
       };
     },
-    58913: (e) => {
+    81104: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "releasedateinfo_ReleaseDateInfoCtn_2mHXb",
         GameEditCtn: "releasedateinfo_GameEditCtn_2JigU",
@@ -47,7 +47,7 @@
         Set: "releasedateinfo_Set_eEhAf",
       };
     },
-    1987: (e) => {
+    80238: (e) => {
       e.exports = {
         ReleaseDateModal: "releasedaterequest_ReleaseDateModal_RKE7g",
         ReleaseDateRequestBody:
@@ -62,11 +62,11 @@
         HTMLErrorBoxAppear: "releasedaterequest_HTMLErrorBoxAppear_bXT6n",
       };
     },
-    25659: (e, t, a) => {
+    81500: (e, t, a) => {
       "use strict";
       a.d(t, { M: () => s, y: () => r });
-      var n = a(31587),
-        i = a(5055);
+      var n = a(14826),
+        i = a(72120);
       function r(e) {
         return s(
           e.coming_soon_display,
@@ -93,7 +93,7 @@
         }
       }
     },
-    4955: (e, t, a) => {
+    82971: (e, t, a) => {
       "use strict";
       a.d(t, { A: () => C });
       var n = a(33940),
@@ -101,15 +101,15 @@
         r = (a(36105), a(89526)),
         s = a(5556),
         l = a.n(s),
-        o = a(51966),
-        m = a(73265),
-        d = a(65717),
+        o = a(28542),
+        m = a(85651),
+        d = a(17318),
         c = a.n(d),
-        u = a(13806),
-        p = a(31587),
-        _ = a(31621),
-        E = a(40108),
-        g = a(10500),
+        u = a(19304),
+        p = a(14826),
+        _ = a(4306),
+        E = a(84343),
+        g = a(69409),
         h = a.n(g),
         S = a(47812),
         D = a.n(S);
@@ -348,13 +348,13 @@
         (0, n.gn)([_.ak], C.prototype, "SetToNow", null),
         (C = (0, n.gn)([i.Pi], C));
     },
-    29577: (e, t, a) => {
+    70364: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => K });
       var n = a(89526),
-        i = a(25659),
-        r = a(77449),
-        s = a(31587);
+        i = a(81500),
+        r = a(22444),
+        s = a(14826);
       function l(e) {
         const { rtSteamReleaseDate: t, value: a, onChange: l } = e,
           o = !!t,
@@ -395,22 +395,22 @@
       };
       const m = ["edit", "diff", "revert", "prepare", "publish"];
       var d = a(59934),
-        c = a(20352),
-        u = a(5055),
-        p = a(58913),
-        _ = a(86701),
+        c = a(35993),
+        u = a(72120),
+        p = a(81104),
+        _ = a(701),
         E = a(33940),
         g = a(52868),
         h = a.n(g),
-        S = a(85797),
+        S = a(7164),
         D = a(5615),
-        C = (a(6960), a(4955)),
-        f = a(7021),
-        T = a(8392),
-        b = a(43886),
-        A = a(98197),
-        v = a(70983),
-        R = a(1987);
+        C = (a(46132), a(82971)),
+        f = a(67736),
+        T = a(69338),
+        b = a(86900),
+        A = a(207),
+        v = a(32765),
+        R = a(80238);
       function x(e) {
         const { appid: t, onClose: a, onCommit: i } = e,
           [r, l] = n.useState(null),
@@ -718,7 +718,7 @@
               )
             );
       }
-      var U = a(13806);
+      var U = a(19304);
       function O(e) {
         const { bIsGameEdit: t, unAppID: a } = e,
           [r, l] = n.useState(e.rtReleaseDate),
@@ -835,7 +835,7 @@
         );
       }
       var q = a(6531),
-        M = a(31621);
+        M = a(4306);
       class j extends n.Component {
         constructor() {
           super(...arguments),
@@ -858,7 +858,7 @@
         }
       }
       (0, E.gn)([M.ak], j.prototype, "OnColorChange", null);
-      var H = a(7297);
+      var H = a(40103);
       function J(e) {
         const { rgGameProfileColorDefs: t } = e,
           a = t.map((e) =>
@@ -951,7 +951,7 @@
         );
       }
     },
-    85797: (e, t, a) => {
+    7164: (e, t, a) => {
       "use strict";
       a.d(t, { $: () => n, _: () => i });
       const n = "America/Los_Angeles";
@@ -966,7 +966,7 @@
         );
       }
     },
-    51966: (e, t, a) => {
+    28542: (e, t, a) => {
       "use strict";
       a.d(t, { Z: () => n });
       const n =

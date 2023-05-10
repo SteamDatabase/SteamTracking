@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4601],
   {
-    24613: (e) => {
+    43628: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -69,7 +69,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    35534: (e) => {
+    61037: (e) => {
       e.exports = {
         BroadcastChat: "broadcastchat_BroadcastChat_37jsi",
         ChatEntry: "broadcastchat_ChatEntry_3o0ss",
@@ -108,7 +108,7 @@
         SignInButton: "broadcastchat_SignInButton_26lxf",
       };
     },
-    60669: (e) => {
+    91820: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
         GiveawayWinnerAnnounced:
@@ -132,7 +132,7 @@
           "broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy",
       };
     },
-    76014: (e) => {
+    25202: (e) => {
       e.exports = {
         BroadcastPlayerLite: "broadcastplayer_BroadcastPlayerLite_3YmNP",
         BroadcastPlayerLiteVideo:
@@ -142,7 +142,7 @@
           "broadcastplayer_BroadcastPlaceholderImg_3Hcqn",
       };
     },
-    20535: (e) => {
+    27618: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -155,7 +155,7 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    44141: (e) => {
+    36315: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FriendsListInsetShadowCtn:
@@ -165,7 +165,7 @@
           "insetshadow_FriendListInsetShadowBottom_2hL6s",
       };
     },
-    79729: (e, t, r) => {
+    12911: (e, t, r) => {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -179,17 +179,17 @@
         o = r(25125),
         l = r(89526),
         c = r(50265),
-        d = r(7297),
-        m = r(87487),
-        u = r(9050),
-        h = r(6960),
-        _ = r(49969),
-        p = r(17922),
-        g = r(2546),
-        b = r(70657),
-        B = r(82569),
+        d = r(40103),
+        m = r(89980),
+        u = r(20069),
+        h = r(46132),
+        _ = r(51637),
+        p = r(54856),
+        g = r(65406),
+        b = r(36597),
+        B = r(47165),
         S = r(45878),
-        y = r(19320);
+        y = r(29063);
       const v = S.Message;
       class w extends v {
         constructor(e = null) {
@@ -1724,18 +1724,109 @@
           return "CSteamTV_AddChatBan_Response";
         }
       }
+      class Z extends v {
+        constructor(e = null) {
+          super(),
+            Z.prototype.results || y.aR(Z.M()),
+            v.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            Z.sm_m ||
+              (Z.sm_m = {
+                proto: Z,
+                fields: { results: { n: 1, c: X, r: !0, q: !0 } },
+              }),
+            Z.sm_m
+          );
+        }
+        static MBF() {
+          return Z.sm_mbf || (Z.sm_mbf = y.Bh(Z.M())), Z.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return y.TA(Z.M(), e, t);
+        }
+        static fromObject(e) {
+          return y.aD(Z.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new S.BinaryReader(e),
+            r = new Z();
+          return Z.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return y.F(Z.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new S.BinaryWriter();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          y.l2(Z.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new S.BinaryWriter();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_GetChatBans_Response";
+        }
+      }
+      class K extends v {
+        constructor(e = null) {
+          super(), v.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return K.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new K();
+        }
+        static deserializeBinary(e) {
+          let t = new S.BinaryReader(e),
+            r = new K();
+          return K.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new S.BinaryWriter();
+          return K.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new S.BinaryWriter();
+          return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_AddChatModerator_Response";
+        }
+      }
       class $ extends v {
         constructor(e = null) {
           super(),
-            $.prototype.results || y.aR($.M()),
-            v.initialize(this, e, 0, -1, [1], null);
+            $.prototype.broadcast_channel_id || y.aR($.M()),
+            v.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             $.sm_m ||
               ($.sm_m = {
                 proto: $,
-                fields: { results: { n: 1, c: X, r: !0, q: !0 } },
+                fields: {
+                  broadcast_channel_id: {
+                    n: 1,
+                    br: y.FE.readFixed64String,
+                    bw: y.Xc.writeFixed64String,
+                  },
+                },
               }),
             $.sm_m
           );
@@ -1770,97 +1861,6 @@
         serializeBase64String() {
           var e = new S.BinaryWriter();
           return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetChatBans_Response";
-        }
-      }
-      class Z extends v {
-        constructor(e = null) {
-          super(), v.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return Z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new Z();
-        }
-        static deserializeBinary(e) {
-          let t = new S.BinaryReader(e),
-            r = new Z();
-          return Z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new S.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new S.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_AddChatModerator_Response";
-        }
-      }
-      class K extends v {
-        constructor(e = null) {
-          super(),
-            K.prototype.broadcast_channel_id || y.aR(K.M()),
-            v.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            K.sm_m ||
-              (K.sm_m = {
-                proto: K,
-                fields: {
-                  broadcast_channel_id: {
-                    n: 1,
-                    br: y.FE.readFixed64String,
-                    bw: y.Xc.writeFixed64String,
-                  },
-                },
-              }),
-            K.sm_m
-          );
-        }
-        static MBF() {
-          return K.sm_mbf || (K.sm_mbf = y.Bh(K.M())), K.sm_mbf;
-        }
-        toObject(e = !1) {
-          return K.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return y.TA(K.M(), e, t);
-        }
-        static fromObject(e) {
-          return y.aD(K.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new S.BinaryReader(e),
-            r = new K();
-          return K.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return y.F(K.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new S.BinaryWriter();
-          return K.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          y.l2(K.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new S.BinaryWriter();
-          return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetChatModerators_Request";
@@ -3340,14 +3340,14 @@
             });
           }),
           (e.GetChatBans = function (e, t) {
-            return e.SendMsg("SteamTV.GetChatBans#1", t, $, {
+            return e.SendMsg("SteamTV.GetChatBans#1", t, Z, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.AddChatModerator = function (e, t) {
-            return e.SendMsg("SteamTV.AddChatModerator#1", t, Z, {
+            return e.SendMsg("SteamTV.AddChatModerator#1", t, K, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
@@ -3417,13 +3417,13 @@
             });
           });
       })(ve || (ve = {}));
-      r(96158);
-      var we = r(59821),
-        fe = r(23213),
-        Ce = r(31587),
-        Me = r(70983),
-        Ee = (r(39396), r(37034)),
-        Te = r(1583);
+      r(63403);
+      var we = r(26464),
+        fe = r(85246),
+        Ce = r(14826),
+        Me = r(32765),
+        Ee = (r(97036), r(20830)),
+        Te = r(45464);
       class Fe {
         constructor(e) {
           (this.m_mapPlayerCache = new Map()),
@@ -4012,7 +4012,7 @@
         }
         FetchChatModerators() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            const e = p.gA.Init(K);
+            const e = p.gA.Init($);
             e.SetBodyFields({
               broadcast_channel_id: this.m_ulBroadcastChannelID,
             });
@@ -4451,9 +4451,9 @@
         (0, a.gn)([we.a], Oe.prototype, "FetchChatModerators", null),
         (0, a.gn)([we.a], Oe.prototype, "RequestLoop", null),
         (0, a.gn)([we.a], Oe.prototype, "MuteUserForSession", null);
-      r(65881), r(54721);
-      var xe = r(73265),
-        ze = r(20974);
+      r(29879), r(84066);
+      var xe = r(85651),
+        ze = r(13141);
       class Pe {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -4605,25 +4605,25 @@
       }
       (0, a.gn)([c.LO], Pe.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const Ne = new Pe();
-      r(55923);
-      var ke = r(68041),
-        We = r(24437),
+      r(72329);
+      var ke = r(90531),
+        We = r(62404),
         Ae = r.n(We),
-        Ge = r(14100),
-        Ve = r(77449),
-        Le = r(46722),
-        Ue = r(1221),
-        je = r(76478),
-        Xe = r(35258),
-        He = r(44141),
+        Ge = r(69159),
+        Ve = r(22444),
+        Le = r(50304),
+        Ue = r(38278),
+        je = r(32905),
+        Xe = r(77865),
+        He = r(36315),
         qe = r.n(He);
-      const $e = () =>
+      const Ze = () =>
           l.createElement(
             "div",
             { className: qe().FriendsListInsetShadowCtn },
             l.createElement("div", { className: qe().FriendListInsetShadowTop })
           ),
-        Ze = () =>
+        Ke = () =>
           l.createElement(
             "div",
             { className: qe().FriendsListInsetShadowCtn },
@@ -4631,13 +4631,13 @@
               className: qe().FriendListInsetShadowBottom,
             })
           );
-      var Ke = r(86701),
-        Je = r(13806),
-        Ye = r(31621),
-        Qe = r(35534),
+      var $e = r(701),
+        Je = r(19304),
+        Ye = r(4306),
+        Qe = r(61037),
         et = r.n(Qe),
-        tt = r(33927),
-        rt = r(89400);
+        tt = r(7311),
+        rt = r(98889);
       class at {
         BIsValid() {
           return void 0 !== this.giveaway_id && null !== this.giveaway_id;
@@ -4849,10 +4849,10 @@
         (0, a.gn)([we.a], st.prototype, "ClearCountDown", null),
         (0, a.gn)([we.a], st.prototype, "SetupRefreshDataInterval", null),
         (0, a.gn)([we.a], st.prototype, "SetupCountDown", null);
-      var lt = r(29818),
-        ct = r(72745),
-        dt = r(98197),
-        mt = r(60669),
+      var lt = r(20620),
+        ct = r(75962),
+        dt = r(207),
+        mt = r(91820),
         ut = r.n(mt);
       function ht(e) {
         const { latestAnnouncement: t } = e;
@@ -5090,7 +5090,7 @@
                     "#BroadcastChat_Role_Presenter_ttip"
                   ),
                 },
-                l.createElement(Ke.x0L, null)
+                l.createElement($e.x0L, null)
               );
             case "moderator":
               return l.createElement(
@@ -5101,7 +5101,7 @@
                     "#BroadcastChat_Role_Moderatorr_ttip"
                   ),
                 },
-                l.createElement(Ke.yTr, null)
+                l.createElement($e.yTr, null)
               );
             case "broadcaster":
               return l.createElement(
@@ -5112,7 +5112,7 @@
                     "#BroadcastChat_Role_Broadcaster_ttip"
                   ),
                 },
-                l.createElement(Ke.miF, null)
+                l.createElement($e.miF, null)
               );
             default:
               return null;
@@ -5490,7 +5490,7 @@
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
               }),
-            l.createElement($e, null),
+            l.createElement(Ze, null),
             l.createElement(
               "div",
               {
@@ -5503,7 +5503,7 @@
               },
               i.map((e, t) => this.RenderUserChatLine(e, t, s))
             ),
-            l.createElement(Ze, null),
+            l.createElement(Ke, null),
             !r &&
               !!this.m_chat &&
               l.createElement(vt, {
@@ -5530,7 +5530,8 @@
         const { oChat: t, emoticonStore: r } = e,
           [a, i] = l.useState(""),
           s = l.useRef(),
-          n = l.useCallback(
+          n = (0, o.SZ)(() => t.m_bRateLimited),
+          c = l.useCallback(
             (e) => {
               !!e.shiftKey ||
                 13 !== e.charCode ||
@@ -5539,13 +5540,15 @@
             },
             [t, a]
           ),
-          o = l.useCallback(
+          d = l.useCallback(
             (e, t = !1) => {
               i(a + `ː${e}ː`),
                 (null == s ? void 0 : s.current) && s.current.focus();
             },
             [a, s]
           );
+        let m = n || 0 == a.trim().length,
+          u = (0, Je.Z)(Ae().chatSubmitButton, 0 == a.length && Ae().disabled);
         return l.createElement(
           "div",
           { className: (0, Je.Z)(et().ChatEntryCtn, "ChatEntryCtn") },
@@ -5558,12 +5561,12 @@
               l.createElement("textarea", {
                 className: Ae().chatTextarea,
                 placeholder: (0, Ce.Xx)("#BroadcastChat_EnterResponse"),
-                onKeyPress: n,
+                onKeyPress: c,
                 onChange: (e) => i(e.target.value),
                 value: a,
                 ref: s,
               }),
-              Boolean(t.m_bRateLimited) &&
+              n &&
                 l.createElement(Ct, {
                   nSeconds: t.m_nRateLimitSeconds,
                   bRateLimited: t.m_bRateLimited,
@@ -5571,16 +5574,14 @@
               l.createElement(
                 "button",
                 {
-                  className: `${Ae().chatSubmitButton} ${
-                    a ? "" : Ae().disabled
-                  }`,
+                  className: u,
                   title: (0, Ce.Xx)("#ChatEntryButton_Submit"),
-                  disabled: t.m_bRateLimited || 0 == a.trim().length,
+                  disabled: m,
                   onClick: () => {
                     t.SendMessage(a), i("");
                   },
                 },
-                l.createElement(Ke.k4K, null)
+                l.createElement($e.k4K, null)
               )
             ),
             l.createElement(
@@ -5594,7 +5595,7 @@
                 { className: Ae().chatEntryActionsGroup },
                 l.createElement(Ue.Z, {
                   disabled: !1,
-                  OnEmoticonSelected: o,
+                  OnEmoticonSelected: d,
                   rtLastAckedNewEmoticons: Number.MAX_VALUE,
                   emoticonStore: r,
                   emoticonHoverStore: ke.$,
@@ -5625,7 +5626,7 @@
               emoticonHoverStore: ke.$,
               strFlairGroupID: r.m_strFlairGroupID,
               title: (0, Ce.Xx)("#ChatEntryButton_Flair"),
-              buttonIcon: l.createElement(Ke.yVt, null),
+              buttonIcon: l.createElement($e.yVt, null),
             })
           : null;
       }
@@ -5676,15 +5677,15 @@
             )
         );
       }
-      var Et = r(15398),
-        Tt = r(12568),
-        Ft = (r(82702), r(23708)),
-        Rt = r(30156),
-        Dt = r(67566),
-        It = r(35266),
-        Ot = r(68910),
-        xt = r(8392),
-        zt = r(20535),
+      var Et = r(90171),
+        Tt = r(98009),
+        Ft = (r(53143), r(25871)),
+        Rt = r(23715),
+        Dt = r(48541),
+        It = r(98389),
+        Ot = r(71161),
+        xt = r(69338),
+        zt = r(27618),
         Pt = r.n(zt);
       const Nt = (0, n.Pi)((e) => {
         const { appid: t } = e,
@@ -5768,13 +5769,13 @@
           )
         );
       });
-      r(43155);
-      var kt = r(81084),
-        Wt = (r(72634), r(54997), r(18376), r(63154)),
-        At = r(75751),
-        Gt = r(90043),
-        Vt = r(3660),
-        Lt = r(40108),
+      r(13112);
+      var kt = r(65786),
+        Wt = (r(9132), r(10521), r(75687), r(57858)),
+        At = r(27704),
+        Gt = r(54297),
+        Vt = r(46294),
+        Lt = r(84343),
         Ut = r(74802);
       const jt = (e) => {
         const { onPositionChange: t, onLeave: r } = e,
@@ -5793,11 +5794,11 @@
           Object.assign({}, e, { onPositionChange: a })
         );
       };
-      var Xt = r(81171),
-        Ht = (r(97303), r(92801)),
-        qt = r(24613),
-        $t = r.n(qt);
-      const Zt = (0, n.Pi)((e) => {
+      var Xt = r(88443),
+        Ht = (r(72119), r(61218)),
+        qt = r(43628),
+        Zt = r.n(qt);
+      const Kt = (0, n.Pi)((e) => {
         const { event: t } = e,
           r = t.clanSteamID.GetAccountID(),
           i = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
@@ -5831,7 +5832,7 @@
           t.jsondata.broadcast_item_drops_details_event_gid;
         return l.createElement(
           "div",
-          { className: $t().item_drop_ctn },
+          { className: Zt().item_drop_ctn },
           l.createElement(
             "div",
             null,
@@ -5859,15 +5860,15 @@
           )
         );
       });
-      var Kt = r(65717),
-        Jt = r.n(Kt),
-        Yt = r(92377),
-        Qt = r(99212),
-        er = r(88393),
-        tr = r(51751),
-        rr = r(7021),
-        ar = r(91965),
-        ir = r(73401),
+      var $t = r(17318),
+        Jt = r.n($t),
+        Yt = r(37865),
+        Qt = r(82248),
+        er = r(15164),
+        tr = r(75313),
+        rr = r(67736),
+        ar = r(20790),
+        ir = r(43997),
         sr = r.n(ir);
       function nr(e) {
         const { steamid: t, closeModal: r } = e;
@@ -6002,8 +6003,8 @@
       function cr(e, t) {
         return Me.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
-      var dr = r(81052),
-        mr = r(24868);
+      var dr = r(60161),
+        mr = r(57742);
       const ur = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
@@ -6027,7 +6028,7 @@
           {
             appid: 730,
             url: "https://steam.tv/csgo",
-            broadcasterAccountID: 927819071,
+            broadcasterAccountID: 1532096361,
           },
         ],
       };
@@ -6170,7 +6171,7 @@
           let i = tt.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
             s = l.createElement(
               "div",
-              { className: $t().rightPanel },
+              { className: Zt().rightPanel },
               l.createElement(Br, { key: "right" + i, ImgUrl: e.right_panel })
             ),
             n = l.createElement(Br, { key: "left" + i, ImgUrl: e.left_panel });
@@ -6268,8 +6269,8 @@
                   "div",
                   {
                     className: (0, Je.Z)({
-                      [$t().bordered_container]: !0,
-                      [$t().Event]: Boolean(r),
+                      [Zt().bordered_container]: !0,
+                      [Zt().Event]: Boolean(r),
                       broadcast_brd_ctn_trgt: !0,
                     }),
                   },
@@ -6277,7 +6278,7 @@
                     "div",
                     {
                       className: (0, Je.Z)(
-                        $t().bordered_title,
+                        Zt().bordered_title,
                         "bordered_title_trgt"
                       ),
                     },
@@ -6285,10 +6286,10 @@
                     n,
                     l.createElement(
                       "div",
-                      { className: $t().bordered_corner_container },
+                      { className: Zt().bordered_corner_container },
                       Boolean(!this.state.bExpanded) &&
                         l.createElement("div", {
-                          className: $t().broadcast_settings_icon,
+                          className: Zt().broadcast_settings_icon,
                           "data-tooltip-text": (0, Ce.Xx)(
                             "#StoreBroadcast_Change_store_Broadcast_settings"
                           ),
@@ -6299,8 +6300,8 @@
                         }),
                       l.createElement("div", {
                         className: this.state.bExpanded
-                          ? $t().bordered_corner_expanded
-                          : $t().bordered_corner_shrinked,
+                          ? Zt().bordered_corner_expanded
+                          : Zt().bordered_corner_shrinked,
                         "data-tooltip-text": (0, Ce.Xx)(
                           "#StoreBroadcast_Hide_Tooltip"
                         ),
@@ -6310,7 +6311,7 @@
                     Boolean(e.gamedata_subtitle) &&
                       l.createElement(
                         "div",
-                        { className: $t().bordered_subtitle },
+                        { className: Zt().bordered_subtitle },
                         e.gamedata_subtitle
                       )
                   ),
@@ -6319,7 +6320,7 @@
                       "div",
                       {
                         className: (0, Je.Z)({
-                          [$t().container]: !0,
+                          [Zt().container]: !0,
                           embeddable_ctn_trgt: !0,
                           multistream: o,
                           broadcast_right_panel_simple:
@@ -6350,14 +6351,14 @@
                 ),
                 Boolean(
                   r && r.jsondata && r.jsondata.broadcast_item_drops_enabled
-                ) && l.createElement(Zt, { event: r }),
+                ) && l.createElement(Kt, { event: r }),
                 Boolean(this.state.bExpanded) &&
                   l.createElement(
                     "div",
-                    { className: `${r ? $t().Event : ""}` },
+                    { className: `${r ? Zt().Event : ""}` },
                     l.createElement(br, { stream: e, bMultistream: o })
                   ),
-                l.createElement("div", { className: $t().clear_div })
+                l.createElement("div", { className: Zt().clear_div })
               )
             );
           }
@@ -6399,7 +6400,7 @@
         render() {
           return l.createElement(
             "div",
-            { className: $t().wrapper },
+            { className: Zt().wrapper },
             l.createElement(
               jt,
               { onEnter: this.OnEnter, onLeave: this.OnLeave },
@@ -6407,9 +6408,9 @@
                 "div",
                 {
                   className: (0, Je.Z)({
-                    [$t().video_placeholder]: !0,
+                    [Zt().video_placeholder]: !0,
                     video_placeholder_trgt: !0,
-                    [$t().WidePlayer]: this.props.bWidePlayer,
+                    [Zt().WidePlayer]: this.props.bWidePlayer,
                   }),
                   ref: this.m_iVideoContainerRef,
                 },
@@ -6417,8 +6418,8 @@
                   "div",
                   {
                     className: this.state.bPopout
-                      ? $t().broadcast_floating
-                      : $t().video_container,
+                      ? Zt().broadcast_floating
+                      : Zt().video_container,
                   },
                   this.state.bPopout &&
                     l.createElement(Sr, {
@@ -6427,7 +6428,7 @@
                     }),
                   l.createElement(
                     "div",
-                    { className: $t().BroadcastPlayerContainer },
+                    { className: Zt().BroadcastPlayerContainer },
                     l.createElement(Et.default, {
                       steamIDBroadcast: this.props.stream.steamid,
                       watchLocation: 6,
@@ -6477,8 +6478,8 @@
             },
             l.createElement(
               "a",
-              { href: e, className: $t().external_link },
-              l.createElement(Ke.dLw, null)
+              { href: e, className: Zt().external_link },
+              l.createElement($e.dLw, null)
             )
           );
         }
@@ -6517,25 +6518,25 @@
           );
           return l.createElement(
             "div",
-            { className: (0, Je.Z)($t().viewer_bar, "viewer_bar") },
+            { className: (0, Je.Z)(Zt().viewer_bar, "viewer_bar") },
             l.createElement(
               "div",
-              { className: (0, Je.Z)($t().viewer_count, "viewer_count") },
-              l.createElement(Ke.lsH, null),
+              { className: (0, Je.Z)(Zt().viewer_count, "viewer_count") },
+              l.createElement($e.lsH, null),
               (0, Xt.AV)(i)
             ),
             l.createElement(
               "div",
-              { className: (0, Je.Z)($t().viewer_links, "viewer_links") },
+              { className: (0, Je.Z)(Zt().viewer_links, "viewer_links") },
               Boolean(e && !t && this.props.bMultistream) &&
                 l.createElement(
                   "div",
-                  { className: $t().chat_link },
+                  { className: Zt().chat_link },
                   l.createElement(
                     "a",
                     {
                       href: "#",
-                      className: $t().ChatToggle,
+                      className: Zt().ChatToggle,
                       onClick: this.OnToggleChat,
                     },
                     (0, Ce.Xx)("#sale_three_section_show_streams")
@@ -6544,13 +6545,13 @@
               e &&
                 l.createElement(
                   "div",
-                  { className: $t().chat_link },
-                  l.createElement(Ke.IWH, null),
+                  { className: Zt().chat_link },
+                  l.createElement($e.IWH, null),
                   l.createElement(
                     "a",
                     {
                       href: "#",
-                      className: $t().ChatToggle,
+                      className: Zt().ChatToggle,
                       onClick: this.OnToggleChat,
                     },
                     (0, Ce.Xx)(
@@ -6563,13 +6564,13 @@
               a &&
                 l.createElement(
                   "div",
-                  { className: $t().chat_link },
-                  l.createElement(Ke.mBz, null),
+                  { className: Zt().chat_link },
+                  l.createElement($e.mBz, null),
                   l.createElement(
                     "a",
                     {
                       href: "#",
-                      className: $t().ChatToggle,
+                      className: Zt().ChatToggle,
                       onClick: (e) =>
                         (0, mr.AM)(
                           l.createElement(nr, {
@@ -6595,9 +6596,9 @@
                       Me.De.STORE_BASE_URL +
                       "account/preferences/#store_broadcast_settings",
                     target: Me.De.IN_CLIENT ? void 0 : "_blank",
-                    className: $t().settings_link,
+                    className: Zt().settings_link,
                   },
-                  l.createElement(Ke.Zrf, null)
+                  l.createElement($e.Zrf, null)
                 )
               ),
               r && l.createElement(gr, Object.assign({}, this.props))
@@ -6621,10 +6622,10 @@
             null,
             e &&
               l.createElement("img", {
-                className: $t().side_panels,
+                className: Zt().side_panels,
                 src: this.props.ImgUrl,
               }),
-            !e && l.createElement("div", { className: $t().side_panels })
+            !e && l.createElement("div", { className: Zt().side_panels })
           );
         }
       }
@@ -6634,28 +6635,28 @@
           [a] = (0, Ft.vs)(r, {});
         return l.createElement(
           "div",
-          { className: [$t().PopOutVideoTitleBar, $t().NoSeslect].join(" ") },
+          { className: [Zt().PopOutVideoTitleBar, Zt().NoSeslect].join(" ") },
           Boolean(a)
             ? l.createElement(
                 It._,
-                { type: "app", id: r, className: $t().PopOutVideoTitleText },
+                { type: "app", id: r, className: Zt().PopOutVideoTitleText },
                 (0, Ce.Xx)("#StoreBroadcast_Detault_popout_Title")
               )
             : l.createElement(
                 "div",
-                { className: $t().PopOutVideoTitleText },
+                { className: Zt().PopOutVideoTitleText },
                 (0, Ce.Xx)("#StoreBroadcast_Detault_popout_Title")
               ),
           l.createElement(
             "button",
             {
-              className: $t().PopOutVideoCloseButton,
+              className: Zt().PopOutVideoCloseButton,
               "data-tooltip-text": (0, Ce.Xx)(
                 "#StoreBroadcast_close_broadcast_popup"
               ),
               onClick: e.OnPreventPopup,
             },
-            l.createElement(Ke.X, null)
+            l.createElement($e.X, null)
           )
         );
       });
@@ -6667,8 +6668,8 @@
           (null === (r = null == i ? void 0 : i.GetAssets()) || void 0 === r
             ? void 0
             : r.GetHeaderURL())
-          ? parseInt($t().strStreamIconCapsuleArtHeight)
-          : parseInt($t().strStreamIconScreenshotArtHeight);
+          ? parseInt(Zt().strStreamIconCapsuleArtHeight)
+          : parseInt(Zt().strStreamIconScreenshotArtHeight);
       }
       function vr(e) {
         const {
@@ -6711,10 +6712,10 @@
             {
               ref: n,
               className: (0, Je.Z)({
-                [$t().side_panels]: !0,
+                [Zt().side_panels]: !0,
                 side_panels: !0,
-                [$t().multistream]: !0,
-                [$t().scrollingstreams]: o.length > 3,
+                [Zt().multistream]: !0,
+                [Zt().scrollingstreams]: o.length > 3,
               }),
             },
             o.map((e) => {
@@ -6753,10 +6754,10 @@
           "div",
           {
             className: (0, Je.Z)({
-              [$t().stream_icon_and_viewer_container]: !0,
-              [$t().stream_featured]:
+              [Zt().stream_icon_and_viewer_container]: !0,
+              [Zt().stream_featured]:
                 i.current_selection_priority == rt.VA.k_eFeatured,
-              [$t().display_capsule_art]: Boolean(d),
+              [Zt().display_capsule_art]: Boolean(d),
             }),
           },
           l.createElement(
@@ -6765,7 +6766,7 @@
             l.createElement(
               Vt.Y,
               {
-                className: $t().stream_icon_container,
+                className: Zt().stream_icon_container,
                 onClick: () => r && r(i),
                 rootMargin: "100px 0px 100px 0px",
               },
@@ -6774,17 +6775,17 @@
                 bSelected: a,
                 strCapsuleArtURL: d,
               }),
-              a && l.createElement("div", { className: $t().stream_icon_arrow })
+              a && l.createElement("div", { className: Zt().stream_icon_arrow })
             )
           ),
           l.createElement(
             "div",
-            { className: (0, Je.Z)($t().viewer_count, !u && $t().vod_title) },
+            { className: (0, Je.Z)(Zt().viewer_count, !u && Zt().vod_title) },
             u
               ? l.createElement(
                   l.Fragment,
                   null,
-                  l.createElement(Ke.lsH, null),
+                  l.createElement($e.lsH, null),
                   " ",
                   (0, Xt.AV)(m)
                 )
@@ -6794,18 +6795,18 @@
       }
       function fr(e) {
         const { strCapsuleArtURL: t, strThumbnail: r, bSelected: a } = e,
-          i = a ? $t().stream_icon_selected : $t().stream_icon;
+          i = a ? Zt().stream_icon_selected : Zt().stream_icon;
         if (t) {
           const e = [t];
           return l.createElement(
             l.Fragment,
             null,
             l.createElement("img", {
-              className: (0, Je.Z)(i, $t().stream_icon_hide_on_hover),
+              className: (0, Je.Z)(i, Zt().stream_icon_hide_on_hover),
               src: t,
             }),
             l.createElement(Gt.J, {
-              className: (0, Je.Z)(i, $t().stream_icon_show_on_hover),
+              className: (0, Je.Z)(i, Zt().stream_icon_show_on_hover),
               srcs: e,
             })
           );
@@ -6830,14 +6831,14 @@
               "div",
               {
                 className: (0, Je.Z)({
-                  [$t().chat_below_container]: a,
-                  [$t().chat_rightside_container]: !a,
-                  [$t().store_chat_ctn]: !0,
+                  [Zt().chat_below_container]: a,
+                  [Zt().chat_rightside_container]: !a,
+                  [Zt().store_chat_ctn]: !0,
                 }),
               },
               l.createElement(
                 "div",
-                { className: $t().ChatContainer },
+                { className: Zt().ChatContainer },
                 l.createElement(yt, {
                   emoticonStore: rt.D$,
                   watchLocation: 6,
@@ -6849,7 +6850,7 @@
           : null;
       }
     },
-    15398: (e, t, r) => {
+    90171: (e, t, r) => {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -6863,17 +6864,17 @@
         n = r(50265),
         o = r(88464),
         l = r(89526),
-        c = r(83799),
-        d = (r(49969), r(7297)),
-        m = r(12568),
-        u = (r(87487), r(33927)),
-        h = r(63154),
-        _ = r(37970),
-        p = r(14100),
-        g = r(43813),
+        c = r(14288),
+        d = (r(51637), r(40103)),
+        m = r(98009),
+        u = (r(89980), r(7311)),
+        h = r(57858),
+        _ = r(95872),
+        p = r(69159),
+        g = r(76476),
         b = r(32873),
         B = r(1981),
-        S = r(13806);
+        S = r(19304);
       class y extends l.Component {
         render() {
           let e = this.props,
@@ -6923,23 +6924,23 @@
           );
         }
       }
-      var w = r(12908),
-        f = r(76547),
-        C = r(62924),
-        M = r(86701),
-        E = r(72745),
-        T = r(23213),
-        F = r(81052),
-        R = r(31587),
-        D = r(81171),
-        I = r(46504),
-        O = r(31621),
-        x = r(70983),
-        z = r(56781),
-        P = r(1357),
-        N = r(76014),
+      var w = r(31936),
+        f = r(55330),
+        C = r(71937),
+        M = r(701),
+        E = r(75962),
+        T = r(85246),
+        F = r(60161),
+        R = r(14826),
+        D = r(88443),
+        I = r(36041),
+        O = r(4306),
+        x = r(32765),
+        z = r(73762),
+        P = r(80525),
+        N = r(25202),
         k = r.n(N),
-        W = r(8392);
+        W = r(69338);
       function A() {
         return l.createElement(
           "div",
@@ -6997,7 +6998,7 @@
         }
       }
       (0, a.gn)([O.ak], V.prototype, "OnClick", null);
-      r(31406);
+      r(56189);
       let L = class extends l.Component {
         constructor(e) {
           super(e);
@@ -7297,7 +7298,7 @@
         }
       };
       U = (0, a.gn)([o.Pi], U);
-      r(72524);
+      r(15363);
       const j = 15;
       let X = class extends l.Component {
         constructor(e) {
@@ -7654,7 +7655,7 @@
                 onShowStats: this.ToggleStatsView,
                 bIncludeClipEditor: this.props.bIncludeClipEditor,
               }),
-            u && l.createElement($, { onClick: this.props.onRequestClose }),
+            u && l.createElement(Z, { onClick: this.props.onRequestClose }),
             r &&
               l.createElement(L, {
                 stats: e.GetDASHPlayerStats(),
@@ -7709,8 +7710,8 @@
                 l.createElement("div", {
                   className: "videoControlsButtons LeftSpacer",
                 }),
-                l.createElement(Z, { video: e }),
                 l.createElement(K, { video: e }),
+                l.createElement($, { video: e }),
                 l.createElement(ee, {
                   video: e,
                   actions: this.props.actions,
@@ -7722,7 +7723,7 @@
         }
       };
       q = (0, a.gn)([o.Pi], q);
-      class $ extends l.PureComponent {
+      class Z extends l.PureComponent {
         render() {
           return this.props.onClick
             ? l.createElement(
@@ -7736,7 +7737,7 @@
             : null;
         }
       }
-      class Z extends l.Component {
+      class K extends l.Component {
         OnJumpBackward() {
           this.props.video.JumpTime(-15);
         }
@@ -7785,9 +7786,9 @@
           );
         }
       }
-      (0, a.gn)([O.ak], Z.prototype, "OnJumpBackward", null),
-        (0, a.gn)([O.ak], Z.prototype, "OnJumpForward", null);
-      const K = (0, o.Pi)((e) => {
+      (0, a.gn)([O.ak], K.prototype, "OnJumpBackward", null),
+        (0, a.gn)([O.ak], K.prototype, "OnJumpForward", null);
+      const $ = (0, o.Pi)((e) => {
         if (e.video.IsBroadcastClip() || e.video.IsBroadcastVOD()) return null;
         let t = e.video.IsOnLiveEdge();
         return l.createElement(
@@ -8937,13 +8938,13 @@
         (0, a.gn)([O.ak], le.prototype, "UpdatePanel", null),
         (le = (0, a.gn)([o.Pi], le));
     },
-    37970: (e, t, r) => {
+    95872: (e, t, r) => {
       "use strict";
       r.d(t, { x: () => o });
       var a = r(33940),
         i = r(89526),
-        s = r(31621),
-        n = r(23213);
+        s = r(4306),
+        n = r(85246);
       class o extends i.Component {
         constructor() {
           super(...arguments),

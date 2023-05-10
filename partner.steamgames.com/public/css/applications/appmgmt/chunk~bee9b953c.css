@@ -3643,6 +3643,16 @@ html.touch
   background: rgba(0, 0, 0, 0.7);
   padding: 8px;
 }
+.salepreviewwidgets_DiscountIconCtn_LpnSX {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #4c6b22;
+  padding: 5px;
+}
+.salepreviewwidgets_DiscountIconCtn_LpnSX svg path {
+  fill: #beee11;
+}
 .gameactions_GotSteamDialog_3omvM .gameactions_DownloadSteamUrl_Glr7k {
   color: #fff;
 }

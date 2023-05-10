@@ -5251,31 +5251,6 @@ hr.VO {
 .salelabels_SectionTitleInnerCtn_2R3H5 {
   margin-bottom: 10px;
 }
-.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ {
-  width: 100%;
-  display: flex;
-  background: rgba(0, 0, 0, 0.5);
-}
-.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ:nth-child(even) {
-  background: rgba(0, 0, 0, 0.25);
-}
-.debugmatchesdialog_DiscrepancyDialogHeaderRow_2W2_r {
-  width: 100%;
-  display: flex;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-.debugmatchesdialog_DiscrepancyDialogCell_LWAHl {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 50%;
-  text-align: left;
-  padding: 4px;
-}
-.debugmatchesdialog_DiscrepancyDialogTooltip_28KnO {
-  z-index: 2000;
-}
 .horizontalscrollcontainer_HorizontalScrollInDragForceCursor_1uftH {
   cursor: grabbing !important;
 }
@@ -6225,8 +6200,8 @@ html.responsive.touch
 }
 .artworkuploader_UploadPreviewDelete_341V_ {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 8px;
+  right: 8px;
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -6264,8 +6239,9 @@ html.responsive.touch
   margin-bottom: 8px;
 }
 .artworkuploader_PreviewImgInfo_3Iv_t {
+  position: absolute;
   padding: 1px;
-  float: left;
+  left: 10px;
   margin-bottom: 14px;
   border-top: 1px solid rgba(0, 0, 0, 0);
 }
@@ -7717,6 +7693,12 @@ button.rbc-input::-moz-focus-inner {
 .promotionplaneditor_OwnerCtn_3kmgL img {
   margin-top: 0;
 }
+.promotionplaneditor_TargetGamePlaceholder_QQLfN {
+  background-color: #232730;
+  padding: 46px;
+  margin-bottom: 24px;
+  color: #e7ae0c;
+}
 .planningdashboard_Container_1IVr1 {
   position: relative;
 }
@@ -8199,6 +8181,13 @@ select {
   color: #c93a3a;
   font-weight: 500;
 }
+.marketingmessagepreview_PreviewRow_Wog1G {
+  display: flex;
+  flex-direction: row;
+}
+.marketingmessagepreview_Spacer_1rAD1 {
+  margin-right: 20px;
+}
 .marketingmessageassets_MMArtPreview_uaJWO {
   width: 342px;
   height: 360px;
@@ -8211,6 +8200,19 @@ select {
 .marketingmessageassets_LegalPreview_3UR3E {
   margin-top: 6px;
   font-size: 12px;
+}
+.marketingmessageassets_legalSectionCtn_2Pr-j {
+  background: #31343b;
+  border-radius: 5px;
+}
+.marketingmessageassets_legalSectionCtn_2Pr-j
+  .marketingmessageassets_subSection_2W8Du {
+  padding: 12px;
+}
+.marketingmessageassets_legalSectionCtn_2Pr-j
+  .marketingmessageassets_previewSection_18ctS {
+  padding: 12px;
+  background: #000;
 }
 .userprofile_SmallAvatar_2cCH3 {
   max-width: 32px;

@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [1254],
   {
-    2508: (e) => {
+    23794: (e) => {
       e.exports = {
         LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
         Static: "throbber_Static_kwzRJ",
@@ -50,12 +50,12 @@
         NewThrobber: "throbber_NewThrobber_tAKvs",
       };
     },
-    8392: (e, r, t) => {
+    69338: (e, r, t) => {
       "use strict";
       t.d(r, { V: () => n });
       var o = t(89526),
-        c = t(13806),
-        b = t(2508),
+        c = t(19304),
+        b = t(23794),
         l = t.n(b);
       const s =
           t.p +

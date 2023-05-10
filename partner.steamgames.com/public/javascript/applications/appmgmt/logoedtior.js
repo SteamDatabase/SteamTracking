@@ -4,10 +4,10 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2522],
   {
-    19930: (e) => {
+    64738: (e) => {
       e.exports = { "duration-app-launch": "800ms" };
     },
-    72621: (e) => {
+    38735: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         TopCapsule: "sharedappdetailsheader_TopCapsule_2meE3",
@@ -68,7 +68,7 @@
         TopGradient: "sharedappdetailsheader_TopGradient_2qcOu",
       };
     },
-    88678: (e) => {
+    53738: (e) => {
       e.exports = {
         Container: "fakeappdetailsrow_Container_ImYU5",
         StickyHeader: "fakeappdetailsrow_StickyHeader_2C2bs",
@@ -122,7 +122,7 @@
         ButtonText: "fakeappdetailsrow_ButtonText_3PV-5",
       };
     },
-    23034: (e) => {
+    64122: (e) => {
       e.exports = {
         GameList: "fakegamelist_GameList_2Ke99",
         GameListEntry: "fakegamelist_GameListEntry_14lr0",
@@ -133,7 +133,7 @@
         GameIconPlaceholder: "fakegamelist_GameIconPlaceholder_2AyMQ",
       };
     },
-    24025: (e) => {
+    72201: (e) => {
       e.exports = {
         LogoEditorContainer: "logoeditor_LogoEditorContainer_3G8aW",
         LogoEditorHeaderContainer: "logoeditor_LogoEditorHeaderContainer_31GWs",
@@ -160,13 +160,13 @@
         Instructions: "logoeditor_Instructions_HQq3b",
       };
     },
-    37970: (e, t, o) => {
+    95872: (e, t, o) => {
       "use strict";
       o.d(t, { x: () => n });
       var s = o(33940),
         a = o(89526),
-        i = o(31621),
-        r = o(23213);
+        i = o(4306),
+        r = o(85246);
       class n extends a.Component {
         constructor() {
           super(...arguments),
@@ -225,12 +225,12 @@
       (0, s.gn)([i.ak], n.prototype, "BindCanvasRef", null),
         (0, s.gn)([i.ak], n.prototype, "updateCanvas", null);
     },
-    1633: (e, t, o) => {
+    87178: (e, t, o) => {
       "use strict";
       o.d(t, { j: () => r });
       var s = o(33940),
         a = o(89526),
-        i = o(31621);
+        i = o(4306);
       class r extends a.Component {
         constructor(e) {
           super(e),
@@ -294,7 +294,7 @@
       }
       (0, s.gn)([i.ak], r.prototype, "OnImageError", null);
     },
-    28699: (e, t, o) => {
+    37541: (e, t, o) => {
       "use strict";
       o.r(t),
         o.d(t, {
@@ -308,18 +308,18 @@
         r = o(52868),
         n = o.n(r),
         l = o(88464),
-        p = (o(49969), o(1981)),
-        d = o(31621),
-        c = o(1633),
-        h = o(32338),
-        g = o(13806),
-        m = o(37970),
-        u = o(23213),
-        _ = o(72621),
+        p = (o(51637), o(1981)),
+        d = o(4306),
+        c = o(87178),
+        h = o(23801),
+        g = o(19304),
+        m = o(95872),
+        u = o(85246),
+        _ = o(38735),
         P = o.n(_),
-        f = o(19930),
+        f = o(64738),
         L = o.n(f),
-        E = o(72745);
+        E = o(75962);
       const C = {
           exit: P().FullscreenExitStart,
           exitActive: P().FullscreenExitActive,
@@ -1342,11 +1342,11 @@
         }
       }
       (0, s.gn)([N.LO], A.prototype, "m_logoPosition", void 0);
-      var D = o(24025),
+      var D = o(72201),
         M = o.n(D),
-        H = o(88678),
+        H = o(53738),
         U = o.n(H),
-        G = o(86701);
+        G = o(701);
       function F() {
         return a.createElement(
           a.Fragment,
@@ -1488,7 +1488,7 @@
           )
         );
       }
-      var X = o(23034),
+      var X = o(64122),
         $ = o.n(X);
       class V extends a.Component {
         OnHighlightRef(e) {
@@ -1521,10 +1521,10 @@
           );
         }
       }
-      var J = o(31587),
-        j = o(70983),
-        K = o(8392),
-        Q = o(77449);
+      var J = o(14826),
+        j = o(32765),
+        K = o(69338),
+        Q = o(22444);
       function q(e, t) {
         const o = (0, j.kQ)("editorconfig", t);
         let s = new A(o);

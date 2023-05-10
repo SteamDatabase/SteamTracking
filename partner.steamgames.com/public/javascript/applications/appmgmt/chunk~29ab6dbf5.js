@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [7334],
   {
-    17110: (e) => {
+    65131: (e) => {
       e.exports = {
         DashboardPage: "discountdashboard_DashboardPage_353rn",
         DashTitleBar: "discountdashboard_DashTitleBar_2m-_V",
@@ -15,7 +15,7 @@
         ButtonGroup: "discountdashboard_ButtonGroup_2peTi",
       };
     },
-    93125: (e) => {
+    17661: (e) => {
       e.exports = {
         EventDetails: "discountgridheaders_EventDetails_3LMXj",
         Active: "discountgridheaders_Active_2BLec",
@@ -53,7 +53,7 @@
           "discountgridheaders_RelatedInfoDropDownItem_1ORam",
       };
     },
-    70138: (e) => {
+    91849: (e) => {
       e.exports = {
         UnknownValue: "gridcomponents_UnknownValue_3ovtf",
         PackageName: "gridcomponents_PackageName_t8fSj",
@@ -63,7 +63,7 @@
         PackageID: "gridcomponents_PackageID_1E3TV",
       };
     },
-    64222: (e, t, i) => {
+    29073: (e, t, i) => {
       "use strict";
       i.d(t, {
         Rg: () => l,
@@ -77,7 +77,7 @@
         xQ: () => a,
       });
       var n = i(45878),
-        r = i(19320);
+        r = i(29063);
       const s = n.Message;
       class a extends s {
         constructor(e = null) {
@@ -1712,20 +1712,20 @@
           };
         })(B || (B = {}));
     },
-    93523: (e, t, i) => {
+    15039: (e, t, i) => {
       "use strict";
       i.d(t, { U: () => _, _: () => p });
       var n = i(33940),
         r = i(52868),
         s = i.n(r),
         a = i(50265),
-        o = (i(6960), i(49969), i(93982), i(67237), i(47330)),
-        l = i(59821),
-        c = i(23213),
-        d = i(5545),
-        u = (i(78011), i(95895)),
-        m = i(50210);
-      i(36764);
+        o = (i(46132), i(51637), i(69678), i(53236), i(23217)),
+        l = i(26464),
+        c = i(85246),
+        d = i(44973),
+        u = (i(26281), i(17974)),
+        m = i(97334);
+      i(48616);
       class p {
         constructor(e, t) {
           (this.m_filesToUpload = a.LO.array()),
@@ -1873,6 +1873,7 @@
                         }
                         return null;
                       })(n.file_type),
+                      r.type,
                       r.width,
                       r.height
                     );
@@ -1949,16 +1950,16 @@
         (0, n.gn)([l.a], p.prototype, "AddImageForLanguage", null),
         (0, n.gn)([l.a], p.prototype, "UploadAllImages", null);
     },
-    94082: (e, t, i) => {
+    70903: (e, t, i) => {
       "use strict";
       i.d(t, { N: () => u, a: () => d });
       var n = i(33940),
         r = i(89526),
-        s = i(70657),
-        a = i(63154),
-        o = i(66715),
-        l = i(32338),
-        c = i(70983);
+        s = i(36597),
+        a = i(57858),
+        o = i(58218),
+        l = i(23801),
+        c = i(32765);
       function d(e = !1) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           if (e && a.Z.BIsInitialized()) return;
@@ -1994,7 +1995,7 @@
         );
       }
     },
-    75746: (e, t, i) => {
+    64368: (e, t, i) => {
       "use strict";
       i.d(t, {
         B7: () => a,
@@ -2006,8 +2007,8 @@
       });
       var n,
         r,
-        s = i(6960);
-      i(49969), i(93523), i(5390), i(52790);
+        s = i(46132);
+      i(51637), i(15039), i(12597), i(86121);
       function a(e, t) {
         var i, n, r, s, a;
         if (e) {
@@ -2100,7 +2101,7 @@
             (e[(e.k_Required = 2)] = "k_Required");
         })(r || (r = {}));
     },
-    5390: (e, t, i) => {
+    12597: (e, t, i) => {
       "use strict";
       i.d(t, {
         I_: () => b,
@@ -2115,13 +2116,13 @@
         up: () => u,
       });
       var n = i(33940),
-        r = i(75746),
-        s = i(89511),
+        r = i(64368),
+        s = i(23457),
         a = i(50265),
-        o = i(6960),
-        l = (i(49969), i(64222), i(69728)),
-        c = i(32338),
-        d = i(31621);
+        o = i(46132),
+        l = (i(51637), i(29073), i(7948)),
+        c = i(23801),
+        d = i(4306);
       const u = "email_",
         m = "email_section_";
       var p;
@@ -2746,15 +2747,15 @@
         (0, n.gn)([a.aD.bound], b.prototype, "SetTitle", null),
         (0, n.gn)([a.aD.bound], b.prototype, "SetDescription", null);
     },
-    52790: (e, t, i) => {
+    86121: (e, t, i) => {
       "use strict";
-      i(49969), i(64222);
+      i(51637), i(29073);
     },
-    53144: (e, t, i) => {
+    40490: (e, t, i) => {
       "use strict";
-      i(20614), i(49969), i(34275), i(75746);
+      i(20614), i(51637), i(99344), i(64368);
     },
-    78457: (e, t, i) => {
+    65395: (e, t, i) => {
       "use strict";
       i.d(t, {
         J7: () => D,
@@ -2770,12 +2771,12 @@
         r = i(52868),
         s = i.n(r),
         a = i(89526),
-        o = (i(6960), i(49969), i(73265)),
-        l = (i(96158), i(47330)),
-        c = i(59821),
-        d = i(23213),
-        u = i(31621),
-        m = i(70983);
+        o = (i(46132), i(51637), i(85651)),
+        l = (i(63403), i(23217)),
+        c = i(26464),
+        d = i(85246),
+        u = i(4306),
+        m = i(32765);
       const p = "SaleEvent_DurationDiscount_Tooltip",
         _ = "discount";
       class g {
@@ -3244,14 +3245,14 @@
           null
         );
     },
-    34275: (e, t, i) => {
+    99344: (e, t, i) => {
       "use strict";
       i.d(t, { o: () => l });
       var n = i(33940),
         r = i(52868),
         s = i.n(r),
-        a = (i(73797), i(50265), i(5615)),
-        o = (i(49969), i(96158), i(47330), i(70983));
+        a = (i(36998), i(50265), i(5615)),
+        o = (i(51637), i(63403), i(23217), i(32765));
       function l(e, t, i) {
         const { isLoading: r, data: l } = (0, a.useQuery)(
           ["useOptedInAppWithDiscounts", e, t, i],
@@ -3312,24 +3313,24 @@
         return r ? null : l;
       }
     },
-    89511: (e, t, i) => {
+    23457: (e, t, i) => {
       "use strict";
       i.d(t, { Hf: () => S, On: () => b, cf: () => y, tb: () => E });
       var n = i(33940),
         r = i(52868),
         s = i.n(r),
-        a = i(75746),
-        o = i(5390),
-        l = (i(53144), i(50265)),
+        a = i(64368),
+        o = i(12597),
+        l = (i(40490), i(50265)),
         c = i(89526),
-        d = i(49969),
-        u = (i(93523), i(69728)),
-        m = (i(77449), i(96158), i(99096)),
-        p = i(47330),
-        _ = i(23213),
-        g = i(31621),
-        h = i(70983),
-        v = i(15596);
+        d = i(51637),
+        u = (i(15039), i(7948)),
+        m = (i(22444), i(63403), i(11837)),
+        p = i(23217),
+        _ = i(85246),
+        g = i(4306),
+        h = i(32765),
+        v = i(33917);
       const D = "section_",
         y = "list_",
         S = "option_";
@@ -5098,16 +5099,16 @@
         (0, n.gn)([l.aD], f.prototype, "SetListTitle", null),
         (0, n.gn)([l.aD], f.prototype, "SetListTitleByListIndex", null);
     },
-    15596: (e, t, i) => {
+    33917: (e, t, i) => {
       "use strict";
       i.d(t, { r: () => u, v: () => d });
       var n = i(33940),
         r = i(52868),
         s = i.n(r),
-        a = i(75746),
-        o = (i(53144), i(50265)),
-        l = (i(6960), i(96158), i(47330)),
-        c = i(70983);
+        a = i(64368),
+        o = (i(40490), i(50265)),
+        l = (i(46132), i(63403), i(23217)),
+        c = i(32765);
       class d {
         constructor() {
           (this.m_optInDef = new Map()),
@@ -5274,7 +5275,7 @@
       (0, n.gn)([o.LO], d.prototype, "m_mapHasUnpublishedChanges", void 0),
         (0, n.gn)([o.aD], d.prototype, "Init", null);
     },
-    26808: (e, t, i) => {
+    16586: (e, t, i) => {
       "use strict";
       i.d(t, {
         A0: () => v,
@@ -5294,16 +5295,16 @@
       var n = i(33940),
         r = i(52868),
         s = i.n(r),
-        a = (i(75746), i(52790), i(50265)),
+        a = (i(64368), i(86121), i(50265)),
         o = i(89526),
         l = i(5615),
-        c = (i(49969), i(64222), i(96158), i(99096)),
-        d = i(32338),
-        u = i(47330),
-        m = i(59821),
-        p = i(23213),
-        _ = i(31621),
-        g = i(70983);
+        c = (i(51637), i(29073), i(63403), i(11837)),
+        d = i(23801),
+        u = i(23217),
+        m = i(26464),
+        p = i(85246),
+        _ = i(4306),
+        g = i(32765);
       class h {
         constructor() {
           (this.m_mapRegistrations = new Map()),
@@ -6010,7 +6011,7 @@
         (0, n.gn)([m.a], h.prototype, "UpdateAppealState", null),
         (0, n.gn)([a.aD], h.prototype, "Init", null);
     },
-    73797: (e, t, i) => {
+    36998: (e, t, i) => {
       "use strict";
       i.d(t, {
         EV: () => w,
@@ -6034,12 +6035,12 @@
         r = i(52868),
         s = i.n(r),
         a = i(89526),
-        o = (i(49969), i(73265)),
-        l = (i(96158), i(47330)),
-        c = i(23213),
-        d = i(31621),
-        u = i(32448),
-        m = i(70983);
+        o = (i(51637), i(85651)),
+        l = (i(63403), i(23217)),
+        c = i(85246),
+        d = i(4306),
+        u = i(81349),
+        m = i(32765);
       class p {
         constructor() {
           (this.m_mapPackageDiscountsById = new Map()),
@@ -6551,7 +6552,7 @@
         return p.Get().GetMaxDiscountPercentageForGroup(e);
       }
     },
-    64422: (e, t, i) => {
+    19533: (e, t, i) => {
       "use strict";
       i.d(t, {
         $D: () => g,
@@ -6564,9 +6565,9 @@
         z: () => d,
       });
       var n = i(89526),
-        r = (i(49969), i(23213)),
-        s = i(31621),
-        a = i(70983);
+        r = (i(51637), i(85246)),
+        s = i(4306),
+        a = i(32765);
       const o = "pn";
       class l {
         constructor() {
@@ -6652,7 +6653,7 @@
         );
       }
     },
-    65929: (e, t, i) => {
+    66104: (e, t, i) => {
       "use strict";
       i.d(t, {
         $w: () => O,
@@ -6689,12 +6690,12 @@
         s = i.n(r),
         a = i(89526),
         o = i(50265),
-        l = (i(49969), i(96158), i(47330)),
-        c = i(23213),
-        d = i(31621),
-        u = i(32448),
-        m = i(70983),
-        p = i(64422),
+        l = (i(51637), i(63403), i(23217)),
+        c = i(85246),
+        d = i(4306),
+        u = i(81349),
+        m = i(32765),
+        p = i(19533),
         _ = i(25125);
       class g {
         constructor() {
@@ -7591,7 +7592,7 @@
         return t;
       }
     },
-    86371: (e, t, i) => {
+    16169: (e, t, i) => {
       "use strict";
       i.d(t, {
         B6: () => B,
@@ -7611,22 +7612,22 @@
         yn: () => F,
         z$: () => j,
       });
-      i(52790);
-      var n = i(78457),
-        r = i(26808),
-        s = i(73797),
-        a = i(64422),
-        o = i(84935),
-        l = i(85797),
+      i(86121);
+      var n = i(65395),
+        r = i(16586),
+        s = i(36998),
+        a = i(19533),
+        o = i(2220),
+        l = i(7164),
         c = i(89526),
-        d = (i(49969), i(73265)),
-        u = (i(84413), i(63154)),
-        m = (i(86701), i(23213)),
-        p = i(31621),
-        _ = i(32448),
-        g = i(93958),
-        h = i(70983),
-        v = i(95486);
+        d = (i(51637), i(85651)),
+        u = (i(74429), i(57858)),
+        m = (i(701), i(85246)),
+        p = i(4306),
+        _ = i(81349),
+        g = i(25508),
+        h = i(32765),
+        v = i(86873);
       function D(e, t) {
         var i, n;
         return (
@@ -8326,7 +8327,7 @@
       }
       E.s_initializationCallbackList = new m.pB();
     },
-    95486: (e, t, i) => {
+    86873: (e, t, i) => {
       "use strict";
       i.d(t, {
         $f: () => y,
@@ -8342,13 +8343,13 @@
         y4: () => b,
       });
       var n = i(89526),
-        r = (i(49969), i(73265)),
-        s = i(23213),
-        a = i(31621),
-        o = i(70983),
-        l = i(78457),
-        c = i(73797),
-        d = i(86371);
+        r = (i(51637), i(85651)),
+        s = i(85246),
+        a = i(4306),
+        o = i(32765),
+        l = i(65395),
+        c = i(36998),
+        d = i(16169);
       const u = "related-discount-view";
       class m {
         constructor() {
@@ -8593,7 +8594,7 @@
         }, []);
       }
     },
-    58340: (e, t, i) => {
+    93923: (e, t, i) => {
       "use strict";
       i.d(t, {
         A$: () => h,
@@ -8606,13 +8607,13 @@
         zV: () => _,
       });
       var n = i(89526),
-        r = i(40108),
-        s = i(70983),
-        a = i(31587),
-        o = i(70138),
+        r = i(84343),
+        s = i(32765),
+        a = i(14826),
+        o = i(91849),
         l = i.n(o),
         c = i(20614),
-        d = i(47008);
+        d = i(61785);
       i(5615);
       function u(e) {
         var t;
@@ -8785,11 +8786,11 @@
         );
       }
     },
-    81898: (e, t, i) => {
+    62176: (e, t, i) => {
       "use strict";
       i.d(t, { j: () => s });
       var n = i(89526),
-        r = i(31587);
+        r = i(14826);
       function s(e) {
         const t = n.useCallback(
           (t) => {
@@ -8813,11 +8814,11 @@
         );
       }
     },
-    47008: (e, t, i) => {
+    61785: (e, t, i) => {
       "use strict";
       i.d(t, { $k: () => m, yh: () => s });
-      var n = i(81052),
-        r = i(31587);
+      var n = i(60161),
+        r = i(14826);
       function s(e, t, i, n) {
         const s = (0, r.Xx)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
           a = (0, r.Xx)("#PackageGrid_NoBaseGameFoundForPackage"),
@@ -8909,12 +8910,12 @@
         e.columnManager.scrollHorizontal(u), e.rowManager.scrollHorizontal(u);
       }
     },
-    84935: (e, t, i) => {
+    2220: (e, t, i) => {
       "use strict";
       i.d(t, { R1: () => l, Sx: () => a, xs: () => d });
       var n = i(33940),
-        r = (i(52868), i(49969), i(82702), i(84413), i(63154)),
-        s = i(31587);
+        r = (i(52868), i(51637), i(53143), i(74429), i(57858)),
+        s = i(14826);
       const a = new Set([0, 2, 6, 13]),
         o = new Set([4, 7, 11]);
       function l(e) {
@@ -8977,7 +8978,7 @@
         });
       }
     },
-    85797: (e, t, i) => {
+    7164: (e, t, i) => {
       "use strict";
       i.d(t, { $: () => n, _: () => r });
       const n = "America/Los_Angeles";

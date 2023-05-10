@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2055],
   {
-    65717: (e) => {
+    17318: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
@@ -405,7 +405,7 @@
         (e.exports = a),
         (a.id = 46700);
     },
-    73265: (e, t, n) => {
+    85651: (e, t, n) => {
       "use strict";
       n.d(t, { F_: () => v, JW: () => p, kl: () => j, zD: () => m });
       var r = n(33940),
@@ -413,8 +413,8 @@
         s = n(36105),
         o = n.n(s),
         i = n(89526),
-        l = n(66715),
-        d = n(70983);
+        l = n(58218),
+        d = n(32765);
       class _ {
         constructor() {
           (this.bOpenEventLandingPage = !1),
@@ -500,7 +500,7 @@
         return i.useMemo(() => j(), []);
       }
     },
-    66715: (e, t, n) => {
+    58218: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o });
       var r = n(52868),
@@ -517,7 +517,7 @@
         );
       }
     },
-    98197: (e, t, n) => {
+    207: (e, t, n) => {
       "use strict";
       n.d(t, {
         FM: () => o,
@@ -530,8 +530,8 @@
         iv: () => h,
         md: () => c,
       });
-      var r = n(70983),
-        a = (n(49969), n(31587));
+      var r = n(32765),
+        a = (n(51637), n(14826));
       const s =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
       function o(e) {

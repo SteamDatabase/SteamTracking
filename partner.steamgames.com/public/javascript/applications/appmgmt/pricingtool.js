@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2529],
   {
-    26161: (e) => {
+    71641: (e) => {
       e.exports = {
         PriceGuidelinesPicker: "guidelinespicker_PriceGuidelinesPicker_4Xo2k",
         GuidelinesPanel: "guidelinespicker_GuidelinesPanel_1vwM_",
@@ -14,10 +14,10 @@
         CurrentPrice: "guidelinespicker_CurrentPrice_2Addn",
       };
     },
-    90847: (e) => {
+    7751: (e) => {
       e.exports = { MoreDots: "pricingcomponents_MoreDots_2YpW8" };
     },
-    56625: (e) => {
+    54149: (e) => {
       e.exports = {
         DashboardPage: "pricingdashboard_DashboardPage_fIACD",
         DashTitle: "pricingdashboard_DashTitle_3GHz1",
@@ -29,7 +29,7 @@
         Instructions: "pricingdashboard_Instructions_1mz7G",
       };
     },
-    94967: (e) => {
+    26231: (e) => {
       e.exports = {
         PricingGridCtn: "pricinggrid_PricingGridCtn_2j-z9",
         PricingGridWrapper: "pricinggrid_PricingGridWrapper_185dc",
@@ -53,7 +53,7 @@
         ApprovedCanPublish: "pricinggrid_ApprovedCanPublish_2ejxC",
       };
     },
-    1556: (e) => {
+    22243: (e) => {
       e.exports = {
         PriceCell: "pricinggridcell_PriceCell_1sKIc",
         PricePrefix: "pricinggridcell_PricePrefix_gPcNw",
@@ -80,7 +80,7 @@
         HoverToolTip: "pricinggridcell_HoverToolTip_36qS7",
       };
     },
-    30258: (e) => {
+    74198: (e) => {
       e.exports = {
         Instructions: "pricingimportexport_Instructions_2A9me",
         ButtonRows: "pricingimportexport_ButtonRows_3Bpob",
@@ -93,7 +93,7 @@
         ParseErrors: "pricingimportexport_ParseErrors_1VTD4",
       };
     },
-    91792: (e) => {
+    46645: (e) => {
       e.exports = {
         ToolbarInfo: "saveprices_ToolbarInfo_1bPMN",
         Visible: "saveprices_Visible_CLKT9",
@@ -129,46 +129,46 @@
           "saveprices_PriceChangeSaveWarningArrow_B3-IB",
       };
     },
-    18128: (e, r, t) => {
+    93688: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, { PricingRoutes: () => Ke, default: () => Ue });
-      var n = t(94629),
-        i = t(83215),
+      var n = t(96927),
+        i = t(71209),
         a = t(89526),
         c = t(565),
         l = t(59934),
-        o = t(49551),
-        s = t(77449),
-        d = t(56625),
+        o = t(82988),
+        s = t(22444),
+        d = t(54149),
         u = t.n(d),
-        g = t(64422),
-        P = t(65929),
-        m = t(81898),
-        p = t(7021),
-        _ = t(24868),
-        h = t(72745),
-        b = t(81052),
-        E = t(31587),
-        D = t(70983),
-        v = t(13806),
-        C = t(94967),
+        g = t(19533),
+        P = t(66104),
+        m = t(62176),
+        p = t(67736),
+        _ = t(57742),
+        h = t(75962),
+        b = t(60161),
+        E = t(14826),
+        D = t(32765),
+        v = t(19304),
+        C = t(26231),
         x = t.n(C),
-        N = t(1556),
+        N = t(22243),
         f = t.n(N),
-        S = (t(84935), t(20614)),
+        S = (t(2220), t(20614)),
         I = t(3073),
-        k = t(96049),
-        T = t(22840),
-        w = t(40108),
-        X = t(58340),
-        B = t(47008),
-        y = (t(49969), t(35796)),
-        A = t(64831),
-        O = t(86701),
-        G = t(7297),
-        R = t(80346),
+        k = t(24448),
+        T = t(17547),
+        w = t(84343),
+        X = t(93923),
+        B = t(61785),
+        y = (t(51637), t(894)),
+        A = t(69206),
+        O = t(701),
+        G = t(40103),
+        R = t(93765),
         H = t.n(R),
-        M = t(26161),
+        M = t(71641),
         W = t.n(M);
       function L(e) {
         const { packageID: r } = e,
@@ -230,7 +230,7 @@
           )
         );
       }
-      var K = t(90847),
+      var K = t(7751),
         U = t.n(K);
       const V = new y.AN("price-grid-cell-popout-elements");
       function z(e) {
@@ -591,14 +591,14 @@
         );
       }
       var Q = t(33940),
-        ee = t(91792),
+        ee = t(46645),
         re = t.n(ee),
-        te = t(73797),
-        ne = t(86371),
-        ie = (t(6960), t(73265)),
-        ae = t(8392),
-        ce = t(66715),
-        le = t(93958);
+        te = t(36998),
+        ne = t(16169),
+        ie = (t(46132), t(85651)),
+        ae = t(69338),
+        ce = t(58218),
+        le = t(25508);
       const oe = 30,
         se = 40;
       function de(e) {
@@ -1177,7 +1177,7 @@
             (e[(e.OK = 2)] = "OK"),
             (e[(e.Failed = 3)] = "Failed");
         })(De || (De = {}));
-      t(17110), t(93125), t(90174);
+      t(65131), t(17661), t(1721);
       var Ce = t(5615);
       function xe(e) {
         return e.contains_game && e.contains_dlc
@@ -1547,8 +1547,8 @@
       }
       var Xe = t(36105),
         Be = t.n(Xe),
-        ye = t(5052),
-        Ae = t(30258),
+        ye = t(15254),
+        Ae = t(74198),
         Oe = t.n(Ae);
       function Ge(e) {
         const { closeModal: r } = e,
@@ -1940,7 +1940,7 @@
           )
         );
       }
-      var Fe = t(94082);
+      var Fe = t(70903);
       const Ke = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
       function Ue(e) {
         return (0, Fe.N)()

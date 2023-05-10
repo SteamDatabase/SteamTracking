@@ -5,10 +5,10 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6699],
   {
-    23711: (l, e, n) => {
+    96405: (l, e, n) => {
       n.r(e), n.d(e, { default: () => a });
       var t = n(89526),
-        u = (n(68620), n(82235));
+        u = (n(55069), n(14965));
       function a(l) {
         var e, n;
         const { dataprops: a, results: s } = l;
