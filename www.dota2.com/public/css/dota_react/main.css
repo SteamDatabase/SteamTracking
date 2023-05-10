@@ -188,11 +188,13 @@ html.contextmenu_ContextMenuPopup_152-v body {
   margin-top: 0px;
   display: none;
 }
-.DesktopUI .contextmenu_contextMenu_4fpUg {
+.DesktopUI .contextmenu_contextMenu_4fpUg,
+.contextmenu_ForceDesktop_1w_41 .contextmenu_contextMenu_4fpUg {
   box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   background: #3d4450;
 }
-.DesktopUI .contextmenu_contextMenuItem_3hJA5 {
+.DesktopUI .contextmenu_contextMenuItem_3hJA5,
+.contextmenu_ForceDesktop_1w_41 .contextmenu_contextMenuItem_3hJA5 {
   padding: 8px 18px;
   font-size: 13px;
   color: #dcdedf;
@@ -205,21 +207,28 @@ html.contextmenu_ContextMenuPopup_152-v body {
   border-top: none;
   border-bottom: none;
 }
-.DesktopUI .contextmenu_contextMenuItem_3hJA5:first-child {
+.DesktopUI .contextmenu_contextMenuItem_3hJA5:first-child,
+.contextmenu_ForceDesktop_1w_41 .contextmenu_contextMenuItem_3hJA5:first-child {
   border-top: none;
 }
 .DesktopUI .contextmenu_contextMenuItem_3hJA5:hover,
-.DesktopUI .contextmenu_contextMenuItem_3hJA5.contextmenu_active_1NWFM {
+.DesktopUI .contextmenu_contextMenuItem_3hJA5.contextmenu_active_1NWFM,
+.contextmenu_ForceDesktop_1w_41 .contextmenu_contextMenuItem_3hJA5:hover,
+.contextmenu_ForceDesktop_1w_41
+  .contextmenu_contextMenuItem_3hJA5.contextmenu_active_1NWFM {
   background: #dcdedf;
   color: #3d4450;
 }
-.DesktopUI .contextmenu_contextMenuItem_3hJA5.disabled {
+.DesktopUI .contextmenu_contextMenuItem_3hJA5.disabled,
+.contextmenu_ForceDesktop_1w_41 .contextmenu_contextMenuItem_3hJA5.disabled {
   background: none;
   color: #67707b;
   cursor: default;
   pointer-events: none;
 }
-.DesktopUI .contextmenu_contextMenuItem_3hJA5.disabled:hover {
+.DesktopUI .contextmenu_contextMenuItem_3hJA5.disabled:hover,
+.contextmenu_ForceDesktop_1w_41
+  .contextmenu_contextMenuItem_3hJA5.disabled:hover {
   background: none;
   color: #67707b;
   cursor: default;
@@ -732,6 +741,11 @@ html.contextmenu_ContextMenuPopup_152-v body {
   z-index: 5;
   width: 32px;
   height: 24px;
+  background-color: #3d4450;
+  border-radius: 2px;
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
   -webkit-app-region: no-drag;
   font-weight: bold;
   cursor: pointer;
@@ -744,7 +758,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
 }
 .pagedsettings_HidePageListButton_xhtqn:hover {
   color: #fff;
-  background: #3d4450;
+  background: #464d58;
   border-radius: 2px;
 }
 @keyframes gamepadui_svg_library_SpinnerSpokeFade_OIpeq {
@@ -32418,6 +32432,300 @@ a {
   flex-direction: column;
   margin: 8px 0px;
 }
+.dpcroot_DPCHeaderSummer2023League_3k0pF {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23EventPhaseBox_2K3GJ {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 16px 48px #000000);
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23EventPhaseBox_2K3GJ
+  .dpcroot_Summer23EventStartTitle_2Mphi,
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23EventPhaseBox_2K3GJ
+  .dpcroot_Summer23EventEndTitle_2QwQu {
+  margin-top: 25px;
+  margin-left: 150px;
+  font-family: "Radiance", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffdb5c;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2023League_3k0pF
+    .dpcroot_Summer23BannerContainer_17rDD
+    .dpcroot_Summer23BannerContent_2XKVY
+    .dpcroot_Summer23EventPhaseBox_2K3GJ
+    .dpcroot_Summer23EventStartTitle_2Mphi,
+  .dpcroot_DPCHeaderSummer2023League_3k0pF
+    .dpcroot_Summer23BannerContainer_17rDD
+    .dpcroot_Summer23BannerContent_2XKVY
+    .dpcroot_Summer23EventPhaseBox_2K3GJ
+    .dpcroot_Summer23EventEndTitle_2QwQu {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23EventPhaseBox_2K3GJ
+  .dpcroot_Summer23EventStartDate_ION5E,
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23EventPhaseBox_2K3GJ
+  .dpcroot_Summer23EventEndDate_1e1j6 {
+  margin-top: 3px;
+  margin-left: 150px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2023League_3k0pF
+    .dpcroot_Summer23BannerContainer_17rDD
+    .dpcroot_Summer23BannerContent_2XKVY
+    .dpcroot_Summer23EventPhaseBox_2K3GJ
+    .dpcroot_Summer23EventStartDate_ION5E,
+  .dpcroot_DPCHeaderSummer2023League_3k0pF
+    .dpcroot_Summer23BannerContainer_17rDD
+    .dpcroot_Summer23BannerContent_2XKVY
+    .dpcroot_Summer23EventPhaseBox_2K3GJ
+    .dpcroot_Summer23EventEndDate_1e1j6 {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23EventPhaseBox_2K3GJ
+  .dpcroot_Summer23EventStartDate_ION5E
+  time,
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23EventPhaseBox_2K3GJ
+  .dpcroot_Summer23EventEndDate_1e1j6
+  time {
+  font-family: "Radiance", sans-serif;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23CenterBox_3UZZT {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23CenterBox_3UZZT
+  .dpcroot_Summer23EventTitle_O84ax {
+  font-size: 40px;
+  font-family: "Reaver", serif;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23CenterBox_3UZZT
+  .dpcroot_Summer23EventSegment_3hWUI {
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23CenterBox_3UZZT
+  .dpcroot_Summer23Season_10rFT {
+  margin-top: 5px;
+  font-size: 18px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23PrizePoolBox_2YRra {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23PrizePoolBox_2YRra
+  .dpcroot_Summer23PrizePoolTitle_1puFR {
+  margin-right: 120px;
+  margin-left: 50px;
+  font-family: "Radiance", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffdb5c;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2023League_3k0pF
+    .dpcroot_Summer23BannerContainer_17rDD
+    .dpcroot_Summer23BannerContent_2XKVY
+    .dpcroot_Summer23PrizePoolBox_2YRra
+    .dpcroot_Summer23PrizePoolTitle_1puFR {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23PrizePoolBox_2YRra
+  .dpcroot_Summer23PrizePoolValue_3hYZ4 {
+  margin-right: 120px;
+  margin-left: 50px;
+  margin-top: 3px;
+  color: #fff;
+  font-family: "Reaver", serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2023League_3k0pF
+    .dpcroot_Summer23BannerContainer_17rDD
+    .dpcroot_Summer23BannerContent_2XKVY
+    .dpcroot_Summer23PrizePoolBox_2YRra
+    .dpcroot_Summer23PrizePoolValue_3hYZ4 {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23PrizePoolBox_2YRra
+  .dpcroot_Summer23EventResultsTitle_2n90I {
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-right: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Radiance", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2023League_3k0pF
+    .dpcroot_Summer23BannerContainer_17rDD
+    .dpcroot_Summer23BannerContent_2XKVY
+    .dpcroot_Summer23PrizePoolBox_2YRra
+    .dpcroot_Summer23EventResultsTitle_2n90I {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23PrizePoolBox_2YRra
+  .dpcroot_Summer23EventResultsButton_3PQ_D {
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 280px;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(90deg, #e58a2a 0%, #e58a2a 100%);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  border-radius: 4px;
+  transition: 0.15s;
+  transition-property: box-shadow, transform;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.dpcroot_DPCHeaderSummer2023League_3k0pF
+  .dpcroot_Summer23BannerContainer_17rDD
+  .dpcroot_Summer23BannerContent_2XKVY
+  .dpcroot_Summer23PrizePoolBox_2YRra
+  .dpcroot_Summer23EventResultsButton_3PQ_D:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderSummer2023League_3k0pF
+    .dpcroot_Summer23BannerContainer_17rDD
+    .dpcroot_Summer23BannerContent_2XKVY
+    .dpcroot_Summer23PrizePoolBox_2YRra
+    .dpcroot_Summer23EventResultsButton_3PQ_D {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Radiance", "Noto Sans", sans-serif;
@@ -40045,6 +40353,9 @@ a {
 }
 .throbber_ThrobberDelayAppear_2lV2G.throbber_Visible_2sPa3 {
   opacity: 1;
+}
+.throbber_NewThrobber_1t4Ks img {
+  width: 100%;
 }
 * {
   box-sizing: border-box;
@@ -58913,28 +59224,6 @@ html:not(.touch)
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
-.partnereventshared_BetaContainer_V9W-c {
-  background-image: radial-gradient(
-    circle at top left,
-    #056890 0%,
-    hsl(197, 59%, 19%) 60%
-  );
-  border-bottom: 1px solid #09b8fe;
-  padding: 40px;
-  color: #e5e5e5;
-}
-.partnereventshared_BetaContainer_V9W-c a {
-  text-decoration: underline;
-}
-.partnereventshared_BetaContainer_V9W-c
-  .partnereventshared_EventBetaTextTitle_1RBMY {
-  font-size: 23px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  color: #78bbf2;
-  text-transform: none;
-  margin-bottom: 8px;
-}
 .partnereventshared_Clear_2wTCS {
   clear: left;
   display: block;
@@ -59593,6 +59882,8 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .newlogindialog_Login_1sORI .newlogindialog_SideBySide_2b0ik {
   display: flex;
@@ -59884,11 +60175,10 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   background: #3d4450;
   color: #fff;
   padding: 12px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   font-family: inherit;
   text-align: center;
-  letter-spacing: 0.03em;
   border: none;
   border-radius: 2px;
 }
@@ -59913,11 +60203,10 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   outline: none;
   padding: 12px;
   color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   font-family: inherit;
   text-align: center;
-  letter-spacing: 0.03em;
   cursor: pointer;
 }
 .newlogindialog_Login_1sORI .newlogindialog_SubmitButton_1fgOu:hover {
@@ -60037,6 +60326,14 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   margin-top: 20px;
   padding-left: 20px;
 }
+.newlogindialog_Login_1sORI .newlogindialog_ConfirmationEntryContainer_2YAUJ {
+  background-color: #32353c;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0px 20px;
+  border-radius: 2px;
+  max-width: 500px;
+}
 .newlogindialog_Login_1sORI .newlogindialog_AwaitingMobileConfIcon_2-LaW {
   width: 40px;
   color: #1a99ff;
@@ -60060,7 +60357,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .newlogindialog_Login_1sORI .newlogindialog_EnterBackupCodeContainer_2CFo9,
 .newlogindialog_Login_1sORI .newlogindialog_EnterCodeFromMobileContainer_2hXVu,
 .newlogindialog_Login_1sORI .newlogindialog_EnterCodeFromEmailContainer_1_U2w {
-  padding: 0 12px;
+  padding: 12px 12px 24px 12px;
   gap: 24px;
 }
 .newlogindialog_Login_1sORI
@@ -60074,6 +60371,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   .newlogindialog_Label_2TD8Z {
   font-size: 12px;
   color: #afafaf;
+  text-align: center;
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_EnterBackupCodeContainer_2CFo9
@@ -60165,10 +60463,10 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   flex-direction: row;
   justify-content: center;
   max-width: 280px;
-  background-color: #32353c;
+  background-color: #2b2e33;
   border-radius: 2px;
   gap: 20px;
-  padding: 10px 28px;
+  padding: 10px 28px 20px;
   cursor: text;
   border: 1px solid rgba(0, 0, 0, 0);
   position: relative;
@@ -60292,14 +60590,17 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .newlogindialog_Login_1sORI
   .newlogindialog_StandardLayout_23HHn.newlogindialog_Embedded_uif43 {
   background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
-  padding: 40px 32px 15px 32px;
+  padding: 40px 40px 15px 40px;
   width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_StandardLayout_23HHn.newlogindialog_Embedded_uif43
   .newlogindialog_FormContainer_2kJQe {
   background: rgba(0, 0, 0, 0);
-  padding: 24px 0px;
+  padding: 14px 0px;
 }
 @media screen and (max-width: 796px) {
   .newlogindialog_Login_1sORI
@@ -60330,11 +60631,6 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .newlogindialog_Login_1sORI .newlogindialog_HeaderLogo_2Xzuj {
   height: 46px;
   width: 153px;
-}
-.newlogindialog_Login_1sORI
-  .newlogindialog_InClient_2_z8K
-  .newlogindialog_LogoContainer_Rp7yO {
-  margin-top: 10px;
 }
 .newlogindialog_Login_1sORI .newlogindialog_LogoContainer_Rp7yO {
   display: flex;
@@ -60466,10 +60762,8 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_FailureTitle_1eeXc {
   color: #fff;
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.055em;
-  font-weight: 200;
+  font-size: 22px;
+  font-weight: 700;
   text-align: center;
 }
 .newlogindialog_FailureDescription_9bAS3 {

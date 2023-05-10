@@ -3,7 +3,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [1510],
   {
-    80655: (e) => {
+    37233: (e) => {
       e.exports = {
         Tooltip: "teamdetails_Tooltip_31hC1",
         CarouselFade: "teamdetails_CarouselFade_2UcOF",
@@ -37,22 +37,22 @@
         SmoothLine: "teamdetails_SmoothLine_3YaqJ",
       };
     },
-    19944: (e, t, a) => {
+    88900: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => D });
       var n = a(33940),
         l = a(52868),
         m = a.n(l),
-        i = a(75427),
+        i = a(54013),
         r = a(65092),
         o = a(89526),
         c = a(53672),
-        s = a(44834),
-        d = a(9658),
-        u = a(92375),
-        _ = a(80448),
-        A = a(25559),
-        g = a(80655),
+        s = a(22396),
+        d = a(29706),
+        u = a(70894),
+        _ = a(36250),
+        A = a(39375),
+        g = a(37233),
         p = a.n(g);
       const E = "public",
         T = 5e3,
