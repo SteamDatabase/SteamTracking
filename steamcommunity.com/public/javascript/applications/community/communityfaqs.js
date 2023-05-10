@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3499],
   {
-    51566: (e) => {
+    30132: (e) => {
       e.exports = {
         FAQViewPage: "faqsharedviewpage_FAQViewPage_2c-Zv",
         SupportTitle: "faqsharedviewpage_SupportTitle_3nR_5",
@@ -17,10 +17,10 @@
         FAQContent: "faqsharedviewpage_FAQContent_NOvHU",
       };
     },
-    71120: (e) => {
+    74809: (e) => {
       e.exports = { InfoRow: "faqviewadmin_InfoRow_2IuXf" };
     },
-    26433: (e) => {
+    82755: (e) => {
       e.exports = {
         Section: "faqviewsidebar_Section_2GXm0",
         CommunityHelp: "faqviewsidebar_CommunityHelp_1aSK_",
@@ -30,10 +30,10 @@
         CenterButtonCtn: "faqviewsidebar_CenterButtonCtn_aAZul",
       };
     },
-    26888: (e) => {
+    77571: (e) => {
       e.exports = { SmallAvatar: "userprofile_SmallAvatar_2cCH3" };
     },
-    11795: (e) => {
+    54382: (e) => {
       e.exports = {
         ImportToolCtn: "bbcodeimporter_ImportToolCtn_TQZns",
         ToolHeader: "bbcodeimporter_ToolHeader_vr371",
@@ -51,7 +51,7 @@
         ImportFAQsButton: "bbcodeimporter_ImportFAQsButton_2CwpZ",
       };
     },
-    55728: (e) => {
+    79509: (e) => {
       e.exports = {
         FAQDashboardPage: "faqdashboard_FAQDashboardPage_59oO6",
         FAQDashboard: "faqdashboard_FAQDashboard_tIxuP",
@@ -78,7 +78,7 @@
         EntryInternalName: "faqdashboard_EntryInternalName_1sL5y",
       };
     },
-    57354: (e) => {
+    45090: (e) => {
       e.exports = {
         FAQEditPage: "faqeditor_FAQEditPage_2QALa",
         FAQMenuCtn: "faqeditor_FAQMenuCtn_1DISv",
@@ -95,7 +95,7 @@
         EscapeLink: "faqeditor_EscapeLink_3tlrR",
       };
     },
-    42003: (e) => {
+    59102: (e) => {
       e.exports = {
         LanguageListDialog: "faqlocalization_LanguageListDialog_vp5PF",
         ChecklistHeader: "faqlocalization_ChecklistHeader_1Vzmz",
@@ -115,7 +115,7 @@
         UrlCode: "faqlocalization_UrlCode_MxoxU",
       };
     },
-    18981: (e) => {
+    9275: (e) => {
       e.exports = {
         LeftMenu: "faqstatus_LeftMenu_1txme",
         Section: "faqstatus_Section_2j-hh",
@@ -133,13 +133,13 @@
         FaqStatusTable: "faqstatus_FaqStatusTable_pCBfT",
       };
     },
-    15328: (e) => {
+    24599: (e) => {
       e.exports = {
         Never: "faqtimestamp_Never_8rlUG",
         Warning: "faqtimestamp_Warning_pZM2L",
       };
     },
-    35990: (e) => {
+    13361: (e) => {
       e.exports = {
         FAQUnPublished: "faqtoolbar_FAQUnPublished_erZyI",
         FAQPublished: "faqtoolbar_FAQPublished_13Wz0",
@@ -147,14 +147,14 @@
         EditorInternalName: "faqtoolbar_EditorInternalName_3A9ci",
       };
     },
-    46770: (e) => {
+    6972: (e) => {
       e.exports = {
         ErrorCtn: "faqviewpage_ErrorCtn_2Dpwh",
         ErrorMsg: "faqviewpage_ErrorMsg_2dTNx",
         EscapeLink: "faqviewpage_EscapeLink_19Bjj",
       };
     },
-    11162: (e, t, a) => {
+    21290: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { FAQRoutes: () => Pt, default: () => Dt });
       var o,
@@ -163,12 +163,12 @@
         n = a(89526),
         r = a(82279),
         l = a.n(r),
-        p = a(49208),
-        d = a(6960),
-        h = (a(72002), a(57582)),
+        p = a(40993),
+        d = a(46132),
+        h = (a(52248), a(81630)),
         c = a(59934),
         u = a(565),
-        m = a(70983);
+        m = a(32765);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eCommunityView = "communityview"),
@@ -214,9 +214,9 @@
         }
         return a;
       }
-      var y = a(13806),
-        b = a(47330),
-        w = a(11795),
+      var y = a(19304),
+        b = a(23217),
+        w = a(54382),
         v = a.n(w);
       const S = [
           [
@@ -7544,29 +7544,29 @@
         0, 9, 8, 12, 14, 21, 2, 3, 20, 24, 13, 17, 16, 5, 6, 7, 15, 23, 11, 4,
         19, 25, 18, 1, 10, 28, 26, 22, 27, 29,
       ];
-      var C = a(57255),
-        T = a(46085),
-        P = a(24868),
-        D = a(86701),
-        q = a(8392),
-        M = a(40108),
-        z = a(31587),
-        E = a(32448),
-        F = a(55728),
+      var C = a(57605),
+        T = a(99307),
+        P = a(57742),
+        D = a(701),
+        q = a(69338),
+        M = a(84343),
+        z = a(14826),
+        E = a(81349),
+        F = a(79509),
         W = a.n(F),
         R = a(50265),
-        O = (a(60008), a(5253)),
+        O = (a(5902), a(48410)),
         N = a.n(O),
-        L = a(82569),
-        H = a(96049),
-        V = a(65717),
+        L = a(47165),
+        H = a(24448),
+        V = a(17318),
         G = a.n(V),
-        U = a(98604),
-        B = a(66715),
-        j = a(81052),
-        Y = a(5055),
-        X = a(95430),
-        $ = a(42003);
+        U = a(41200),
+        B = a(58218),
+        j = a(60161),
+        Y = a(72120),
+        X = a(11170),
+        $ = a(59102);
       const Q = "title",
         K = "content";
       const J = (e) => {
@@ -8043,10 +8043,10 @@
           })
         );
       }
-      var pe = a(23062),
-        de = a(84995),
+      var pe = a(21904),
+        de = a(86443),
         he = a.n(de),
-        ce = a(15328),
+        ce = a(24599),
         ue = a.n(ce);
       const me = (e) => {
           const { rtTimestamp: t, bShowAsWarning: a } = e;
@@ -8419,12 +8419,12 @@
               );
             },
           });
-      var Ie = a(80833),
-        _e = (a(36764), a(69728)),
-        Ae = a(68879),
-        Ce = a(22840),
-        Te = a(69015),
-        Pe = a(57354),
+      var Ie = a(26365),
+        _e = (a(1063), a(7948)),
+        Ae = a(12763),
+        Ce = a(17547),
+        Te = a(46834),
+        Pe = a(45090),
         De = a.n(Pe);
       const qe = (e) =>
           n.createElement(
@@ -8800,7 +8800,7 @@
             )
           );
         };
-      var Re = a(18981);
+      var Re = a(9275);
       const Oe = (0, s.Pi)((e) => {
           var t, a, o, i, s;
           const { draft: r, eLanguage: l } = e,
@@ -9009,12 +9009,12 @@
             )
           );
         });
-      var Le = a(49969),
-        He = a(29634),
-        Ve = a(89092),
-        Ge = a(26451),
-        Ue = a(37938),
-        Be = a(4390);
+      var Le = a(51637),
+        He = a(5386),
+        Ve = a(43929),
+        Ge = a(52582),
+        Ue = a(23722),
+        Be = a(43173);
       const je = (0, s.Pi)((e) => {
           const { draft: t } = e,
             a = t.BNeedsSaving();
@@ -9112,7 +9112,7 @@
             )
           );
         };
-      var Xe = a(35990),
+      var Xe = a(13361),
         $e = a.n(Xe);
       const Qe = (0, s.Pi)((e) => {
           const { draft: t, bPreview: a } = e,
@@ -9440,7 +9440,7 @@
               (0, z.Xx)("#FAQEditor_GoToDashboard")
             )
           );
-      var it = a(51566);
+      var it = a(30132);
       const st = (e) => {
           const { title: t, content: a, bIsPreview: o, elSideBars: i } = e,
             s = (0, c.TH)();
@@ -9506,7 +9506,7 @@
         pt = a(92994),
         dt = a.n(pt),
         ht = a(5615);
-      a(96158);
+      a(63403);
       const ct = new (dt())(
           (e) =>
             (function (e) {
@@ -9571,7 +9571,7 @@
           { cache: !1 }
         ),
         ut = "avatarandpersonas";
-      var mt = a(26888);
+      var mt = a(77571);
       function ft(e) {
         const { accountID: t, bHideWhenNotAvailable: a } = e,
           [o] = (function (e) {
@@ -9602,8 +9602,8 @@
               )
         );
       }
-      var gt = a(71120),
-        yt = a(26433);
+      var gt = a(74809),
+        yt = a(82755);
       const bt = (e) => {
           const { faqContent: t } = e,
             [a, i] = (0, h.Ky)(t.faq_id, t.version, t.language);
@@ -9752,7 +9752,7 @@
                 )
               )
           );
-      var St = a(46770),
+      var St = a(6972),
         kt = a.n(St);
       const xt = (e) => {
           const { faqid: t } = e,
@@ -9836,9 +9836,9 @@
                 })
               );
         });
-      var At = a(83983),
-        Ct = a(20352),
-        Tt = a(83215);
+      var At = a(56368),
+        Ct = a(35993),
+        Tt = a(71209);
       const Pt = {
           ViewFAQ: (e, t) => `/faqs/${e}/view/${t}*`,
           EditFAQ: (e, t) => `/faqs/${e}/edit/${t}*`,

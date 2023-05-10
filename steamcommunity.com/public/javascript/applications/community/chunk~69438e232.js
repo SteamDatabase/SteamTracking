@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [9348],
   {
-    30054: (e) => {
+    57489: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_1m-hJ",
@@ -54,7 +54,7 @@
         ReadMoreCnt: "apppartnereventspage_ReadMoreCnt_3OLsV",
       };
     },
-    73401: (e) => {
+    43997: (e) => {
       e.exports = {
         Container: "discussionwidget_Container_3BVe_",
         VoteContainer: "discussionwidget_VoteContainer_1uhQY",
@@ -88,7 +88,7 @@
         VoteButtonSelected: "discussionwidget_VoteButtonSelected_2c_5V",
       };
     },
-    9217: (e) => {
+    6864: (e) => {
       e.exports = {
         SteamAwardContainer: "nominationandvote_SteamAwardContainer_jBtX5",
         InLibraryView: "nominationandvote_InLibraryView_1G81P",
@@ -128,7 +128,7 @@
         AwardCategoriesCtn: "nominationandvote_AwardCategoriesCtn_GCwk0",
       };
     },
-    65181: (e) => {
+    83809: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         EventDetailsPageContainer:
@@ -250,12 +250,12 @@
           "partnereventdisplay_VerticalLocalDateAndTime_1QFMN",
       };
     },
-    90224: (e) => {
+    38279: (e) => {
       e.exports = {
         ReferencedApps: "partnereventreferencedapps_ReferencedApps_2xZM7",
       };
     },
-    56675: (e) => {
+    72775: (e) => {
       e.exports = {
         Link: "salebanner_Link_26cHo",
         Banner: "salebanner_Banner_2df4N",
@@ -263,7 +263,7 @@
         Mobile: "salebanner_Mobile_2w3oX",
       };
     },
-    92685: (e) => {
+    31038: (e) => {
       e.exports = {
         Container: "sharewithfriends_Container_8f6EQ",
         SmallAvatar: "sharewithfriends_SmallAvatar_kzjfl",
@@ -271,7 +271,7 @@
         ShareLink: "sharewithfriends_ShareLink_2DzSq",
       };
     },
-    25883: (e, t, n) => {
+    43690: (e, t, n) => {
       "use strict";
       n.d(t, { m$: () => $, v6: () => re, Xy: () => te });
       var a = n(33940),
@@ -279,29 +279,29 @@
         r = n(88464),
         i = n(89526),
         s = n(74802),
-        l = n(6960),
-        c = (n(49969), n(23907)),
-        d = n(50567),
-        p = n(82569),
-        m = (n(67237), n(36764)),
-        u = n(29760),
-        v = (n(55923), n(73265)),
-        _ = n(83983),
-        g = (n(70756), n(63154)),
-        h = n(14100),
-        E = n(2351),
-        S = n(86701),
-        D = n(66715),
-        A = n(13806),
-        C = n(31587),
-        y = n(98197),
-        N = n(70983),
-        L = n(30054),
+        l = n(46132),
+        c = (n(51637), n(31782)),
+        d = n(52502),
+        p = n(47165),
+        m = (n(53236), n(1063)),
+        u = n(82079),
+        v = (n(72329), n(85651)),
+        _ = n(56368),
+        g = (n(10412), n(57858)),
+        h = n(69159),
+        E = n(54671),
+        S = n(701),
+        D = n(58218),
+        A = n(19304),
+        C = n(14826),
+        y = n(207),
+        N = n(32765),
+        L = n(57489),
         T = n.n(L),
-        I = n(91965),
-        M = n(55745),
-        w = n(69362),
-        B = n(35266);
+        I = n(20790),
+        M = n(79586),
+        w = n(51441),
+        B = n(98389);
       const f = (0, r.Pi)((e) => {
         const { appId: t, clanId: n } = e,
           {
@@ -512,29 +512,29 @@
           )
         );
       });
-      var k = n(43890),
-        x = n(39598),
-        G = n(99018),
-        b = n(65181),
+      var k = n(85521),
+        x = n(86531),
+        G = n(4795),
+        b = n(83809),
         O = n.n(b),
-        R = n(71645),
-        j = n(65717),
+        R = n(92358),
+        j = n(17318),
         U = n.n(j),
-        z = n(1633),
-        V = n(8392),
-        P = n(72745),
-        F = n(89152),
-        Z = n(32338),
-        X = n(23213),
-        Q = n(81052),
-        H = n(31621),
-        W = n(46681),
-        Y = n(72188),
-        J = n(58297),
-        K = n(76547);
+        z = n(87178),
+        V = n(69338),
+        P = n(75962),
+        F = n(60729),
+        Z = n(23801),
+        X = n(85246),
+        Q = n(60161),
+        H = n(4306),
+        W = n(80361),
+        Y = n(63266),
+        J = n(72449),
+        K = n(55330);
       const q = i.lazy(() =>
         Promise.all([n.e(5119), n.e(2449), n.e(2832), n.e(4601)]).then(
-          n.bind(n, 49487)
+          n.bind(n, 532)
         )
       );
       let $ = class extends i.Component {
@@ -1320,36 +1320,36 @@
         )
       );
     },
-    43890: (e, t, n) => {
+    85521: (e, t, n) => {
       "use strict";
       n.d(t, { Q: () => U, L: () => V });
       var a = n(33940),
         o = n(89526),
         r = n(88464),
-        i = (n(50567), n(70983)),
-        s = n(31587),
-        l = (n(70756), n(31621)),
-        c = n(65717),
+        i = (n(52502), n(32765)),
+        s = n(14826),
+        l = (n(10412), n(4306)),
+        c = n(17318),
         d = n.n(c),
-        p = n(24868),
-        m = n(81052),
-        u = n(13806),
-        v = n(73401),
+        p = n(57742),
+        m = n(60161),
+        u = n(19304),
+        v = n(43997),
         _ = n.n(v),
-        g = n(46085),
-        h = (n(55923), n(46504)),
+        g = n(99307),
+        h = (n(72329), n(36041)),
         E = n(52868),
         S = n.n(E),
-        D = n(47330),
-        A = n(83983),
-        C = n(86701),
-        y = n(76478),
-        N = n(31041),
-        L = n(29760),
-        T = n(98197),
+        D = n(23217),
+        A = n(56368),
+        C = n(701),
+        y = n(32905),
+        N = n(5557),
+        L = n(82079),
+        T = n(207),
         I = n(50265),
-        M = (n(6960), n(49969), n(82569));
-      n(96158);
+        M = (n(46132), n(51637), n(47165));
+      n(63403);
       class w {
         constructor() {
           (this.m_mapClanReposted = new Set()),
@@ -1498,9 +1498,9 @@
         }
       }
       (0, a.gn)([I.LO], w.prototype, "m_mapClanReposted", void 0);
-      var B = n(57255),
-        f = n(22840),
-        k = n(8392);
+      var B = n(57605),
+        f = n(17547),
+        k = n(69338);
       const x = (0, r.Pi)((e) => {
         const { eventModel: t } = e,
           [n, r] = (0, o.useState)(!0),
@@ -1671,11 +1671,11 @@
           )
         );
       });
-      var G = n(23907),
-        b = n(49194),
-        O = n(81171),
-        R = n(38476),
-        j = n(91965);
+      var G = n(31782),
+        b = n(44026),
+        O = n(88443),
+        R = n(51326),
+        j = n(20790);
       function U(e, t) {
         if (!t.BIsUserLoggedIn())
           return (
@@ -1990,7 +1990,7 @@
         (0, a.gn)([l.ak], P.prototype, "OpenRepostDialogs", null),
         (P = (0, a.gn)([r.Pi], P));
     },
-    10904: (e, t, n) => {
+    1275: (e, t, n) => {
       "use strict";
       n.d(t, { x: () => E });
       var a = n(33940),
@@ -1998,16 +1998,16 @@
         r = n.n(o),
         i = n(88464),
         s = n(89526),
-        l = (n(49969), n(50567), n(82569), n(67237), n(83983)),
-        c = (n(70756), n(90806)),
-        d = n(25883),
-        p = n(46085),
-        m = n(6585),
-        u = n(90174),
+        l = (n(51637), n(52502), n(47165), n(53236), n(56368)),
+        c = (n(10412), n(52316)),
+        d = n(43690),
+        p = n(99307),
+        m = n(67122),
+        u = n(1721),
         v = n.n(u),
-        _ = n(8392),
-        g = n(47330),
-        h = n(70983);
+        _ = n(69338),
+        g = n(23217),
+        h = n(32765);
       const E = (e) => {
         let { bShowOnlyInitialEvent: t } = e;
         const n = (0, h.id)();
@@ -2148,7 +2148,7 @@
       };
       S = (0, a.gn)([i.Pi], S);
     },
-    31319: (e, t, n) => {
+    5029: (e, t, n) => {
       "use strict";
       n.d(t, { Ar: () => l, Wo: () => c, i9: () => s, ks: () => r });
       var a = n(89526),
@@ -2202,23 +2202,23 @@
         e.push(`?${n.toString()}`);
       }
     },
-    29634: (e, t, n) => {
+    5386: (e, t, n) => {
       "use strict";
       n.d(t, { Pi: () => E, uW: () => h });
       var a = n(33940),
         o = n(88464),
         r = n(25125),
         i = n(89526),
-        s = n(6960),
-        l = n(49969),
-        c = n(69728),
-        d = n(65717),
+        s = n(46132),
+        l = n(51637),
+        c = n(7948),
+        d = n(17318),
         p = n.n(d),
-        m = n(13806),
-        u = n(31587),
-        v = n(5055),
-        _ = n(31621),
-        g = n(40108);
+        m = n(19304),
+        u = n(14826),
+        v = n(72120),
+        _ = n(4306),
+        g = n(84343);
       let h = class extends i.Component {
         GenerateLanguageOptions() {
           let e = [];
@@ -2335,7 +2335,7 @@
       (0, a.gn)([_.ak], h.prototype, "OnLanguageChange", null),
         (h = (0, a.gn)([o.Pi], h));
     },
-    99018: (e, t, n) => {
+    4795: (e, t, n) => {
       "use strict";
       n.d(t, { WF: () => x, yi: () => w });
       var a = n(33940),
@@ -2344,24 +2344,24 @@
         i = n(50265),
         s = n(88464),
         l = n(89526),
-        c = (n(6960), n(49969), n(50567), n(13309), n(63154)),
-        d = n(57255),
-        p = n(65717),
+        c = (n(46132), n(51637), n(52502), n(99648), n(57858)),
+        d = n(57605),
+        p = n(17318),
         m = n.n(p),
-        u = n(47330),
-        v = n(13806),
-        _ = n(31587),
-        g = n(31621),
-        h = n(70983),
-        E = n(46085),
-        S = n(24868),
-        D = n(8392),
-        A = n(31041),
-        C = n(9217),
+        u = n(23217),
+        v = n(19304),
+        _ = n(14826),
+        g = n(4306),
+        h = n(32765),
+        E = n(99307),
+        S = n(57742),
+        D = n(69338),
+        A = n(5557),
+        C = n(6864),
         y = n.n(C),
-        N = n(65181),
+        N = n(83809),
         L = n.n(N),
-        T = n(76478);
+        T = n(32905);
       function I(e) {
         return h.L7.logged_in
           ? !h.L7.is_limited ||
@@ -3117,23 +3117,23 @@
       (0, a.gn)([i.LO], x.prototype, "m_awardEventDetails", void 0),
         (x = (0, a.gn)([s.Pi], x));
     },
-    71645: (e, t, n) => {
+    92358: (e, t, n) => {
       "use strict";
       n.d(t, { HQ: () => g, wM: () => E, jd: () => S });
       var a = n(25125),
         o = n(89526),
-        r = (n(49969), n(50567), n(40574)),
-        i = n(70983),
-        s = n(17922),
-        l = n(70657);
-      n(52276);
-      n(70756);
-      var c = n(65717),
+        r = (n(51637), n(52502), n(54507)),
+        i = n(32765),
+        s = n(54856),
+        l = n(36597);
+      n(18712);
+      n(10412);
+      var c = n(17318),
         d = n.n(c),
-        p = n(23062),
-        m = n(31587),
-        u = n(32078),
-        v = n(65181),
+        p = n(21904),
+        m = n(14826),
+        u = n(73406),
+        v = n(83809),
         _ = n.n(v);
       function g(e) {
         const { appid: t } = e,
@@ -3264,15 +3264,15 @@
         );
       }
     },
-    72188: (e, t, n) => {
+    63266: (e, t, n) => {
       "use strict";
       n.d(t, { D: () => d });
-      var a = n(63154),
+      var a = n(57858),
         o = n(25125),
         r = n(89526),
-        i = (n(50567), n(39598)),
-        s = n(31587),
-        l = n(90224),
+        i = (n(52502), n(86531)),
+        s = n(14826),
+        l = n(38279),
         c = n.n(l);
       function d(e) {
         const { event: t } = e,
@@ -3307,17 +3307,17 @@
         );
       }
     },
-    76547: (e, t, n) => {
+    55330: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => p });
       var a = n(89526),
-        o = n(6960),
-        r = n(83471),
-        i = n(13806),
-        s = n(31587),
-        l = n(98197),
-        c = n(70983),
-        d = n(56675);
+        o = n(46132),
+        r = n(68818),
+        i = n(19304),
+        s = n(14826),
+        l = n(207),
+        c = n(32765),
+        d = n(72775);
       function p(e) {
         const { gidEvent: t } = e,
           n = (0, r.XC)(t),
@@ -3378,44 +3378,44 @@
           : null;
       }
     },
-    38476: (e, t, n) => {
+    51326: (e, t, n) => {
       "use strict";
       n.d(t, { AH: () => F, t6: () => V });
       var a = n(33940),
         o = n(89526),
-        r = n(49969),
-        i = (n(55923), n(70756), n(91965)),
-        s = n(65717),
+        r = n(51637),
+        i = (n(72329), n(10412), n(20790)),
+        s = n(17318),
         l = n.n(s),
-        c = n(76478),
-        d = n(13806),
-        p = n(31587),
-        m = n(31621),
-        u = n(70983),
-        v = n(92377);
-      var _ = n(99212),
-        g = n(88393),
-        h = n(51751),
-        E = n(46085),
-        S = n(40108),
-        D = n(72745),
-        A = n(73401),
+        c = n(32905),
+        d = n(19304),
+        p = n(14826),
+        m = n(4306),
+        u = n(32765),
+        v = n(37865);
+      var _ = n(82248),
+        g = n(15164),
+        h = n(75313),
+        E = n(99307),
+        S = n(84343),
+        D = n(75962),
+        A = n(43997),
         C = n.n(A),
-        y = n(29634),
+        y = n(5386),
         N = n(52868),
         L = n.n(N),
         T = n(88464),
-        I = n(44229),
-        M = (n(6960), n(17922)),
-        w = n(10726),
-        B = n(82569),
-        f = n(37034),
-        k = n(96049),
-        x = n(68879),
-        G = n(47330),
-        b = n(8392),
-        O = n(39598),
-        R = n(92685),
+        I = n(24174),
+        M = (n(46132), n(54856)),
+        w = n(88337),
+        B = n(47165),
+        f = n(20830),
+        k = n(24448),
+        x = n(12763),
+        G = n(23217),
+        b = n(69338),
+        O = n(86531),
+        R = n(31038),
         j = n.n(R);
       const U = (0, T.Pi)((e) => {
         const { appid: t, eventLink: n } = e,
@@ -3603,7 +3603,7 @@
               )
             );
       });
-      var z = n(57255);
+      var z = n(57605);
       class V extends o.Component {
         constructor() {
           super(...arguments),
@@ -3856,26 +3856,26 @@
           );
         };
     },
-    92377: (e, t, n) => {
+    37865: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =
         "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTQwMHB4IiBoZWlnaHQ9IjE0MDlweCIgdmlld0JveD0iMCAxODAxLjUgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMTgwMS41IDE0MDAgMTQwOSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBpZD0iaWNvbm1vbnN0ci1saW5rLTFfMV8iIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zNjIuMzUzLDIzMTAuNTg4YzE0OC4yMzUtMTQ4LjIzNSwzODcuMDYtMTQ4LjIzNSw1MjcuMDYsMA0KCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NA0KCWMtNDEuMTc3LDguMjM1LTc0LjExOCwyNC43MDYtOTguODIzLDQ5LjQxMWwtMjQ3LjA1OSwyNDcuMDZjLTc0LjExOCw3NC4xMTctNzQuMTE4LDE5Ny42NDYsMCwyODANCgljNzQuMTE4LDc0LjExNywxOTcuNjQ3LDc0LjExNywyODAsMGwwLDBsNzQuMTE4LTc0LjExOGM3NC4xMTcsMjQuNzA2LDE0OC4yMzUsNDEuMTc3LDIyMi4zNTMsMzIuOTQxbC0xNzIuOTQsMTcyLjk0MQ0KCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4eg0KCSBNNzU3LjY0NiwxOTA3LjA1OUw1OTIuOTQxLDIwODBjNzQuMTE3LTguMjM1LDE0OC4yMzUsOC4yMzUsMjE0LjExNywzMi45NDFsNzQuMTE4LTc0LjExOGM3NC4xMTctNzQuMTE3LDE5Ny42NDYtNzQuMTE3LDI4MCwwDQoJYzgyLjM1Myw3NC4xMTgsNzQuMTE3LDE5Ny42NDcsMCwyODBsLTI1NS4yOTQsMjQ3LjA2Yy03NC4xMTgsNzQuMTE3LTE5Ny42NDcsNzQuMTE3LTI4MCwwDQoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0Nw0KCWMxNDguMjM1LDE0OC4yMzUsMzg3LjA1OSwxNDguMjM1LDUyNy4wNiwwbDAsMGwyNDcuMDU5LTI0Ny4wNmMxNDguMjM1LTE0OC4yMzUsMTQ4LjIzNS0zODcuMDU5LDAtNTI3LjA1OQ0KCVM5MDUuODgzLDE3NjcuMDU5LDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OUw3NTcuNjQ2LDE5MDcuMDU5eiIvPg0KPC9zdmc+DQo=";
     },
-    99212: (e, t, n) => {
+    82248: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
     },
-    88393: (e, t, n) => {
+    15164: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =
         n.p +
         "images/applications/community/reddit_large.png?v=valveisgoodatcaching";
     },
-    51751: (e, t, n) => {
+    75313: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =

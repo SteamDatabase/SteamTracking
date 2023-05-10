@@ -188,11 +188,13 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   margin-top: 0px;
   display: none;
 }
-.DesktopUI .contextmenu_contextMenu_PP7LM {
+.DesktopUI .contextmenu_contextMenu_PP7LM,
+.contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenu_PP7LM {
   box-shadow: 0 10px 32px 0px #000000ab;
   background: #3d4450;
 }
-.DesktopUI .contextmenu_contextMenuItem_1n7Wl {
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl,
+.contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenuItem_1n7Wl {
   padding: 8px 18px;
   font-size: 13px;
   color: #dcdedf;
@@ -205,21 +207,28 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   border-top: none;
   border-bottom: none;
 }
-.DesktopUI .contextmenu_contextMenuItem_1n7Wl:first-child {
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl:first-child,
+.contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenuItem_1n7Wl:first-child {
   border-top: none;
 }
 .DesktopUI .contextmenu_contextMenuItem_1n7Wl:hover,
-.DesktopUI .contextmenu_contextMenuItem_1n7Wl.contextmenu_active_18z-3 {
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl.contextmenu_active_18z-3,
+.contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenuItem_1n7Wl:hover,
+.contextmenu_ForceDesktop_3qIuY
+  .contextmenu_contextMenuItem_1n7Wl.contextmenu_active_18z-3 {
   background: #dcdedf;
   color: #3d4450;
 }
-.DesktopUI .contextmenu_contextMenuItem_1n7Wl.disabled {
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl.disabled,
+.contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenuItem_1n7Wl.disabled {
   background: none;
   color: #67707b;
   cursor: default;
   pointer-events: none;
 }
-.DesktopUI .contextmenu_contextMenuItem_1n7Wl.disabled:hover {
+.DesktopUI .contextmenu_contextMenuItem_1n7Wl.disabled:hover,
+.contextmenu_ForceDesktop_3qIuY
+  .contextmenu_contextMenuItem_1n7Wl.disabled:hover {
   background: none;
   color: #67707b;
   cursor: default;
@@ -42252,26 +42261,6 @@ body.in_global_drag .friendlist_titlebar {
   padding-top: 4px;
   transition: all 0.2s ease-in-out;
 }
-.chatTabDraggableSpace.ChromeClearance,
-.chatTabDraggableSpace {
-  width: 58px;
-  flex-shrink: 0;
-  -webkit-app-region: drag;
-  z-index: -1;
-  position: relative;
-  pointer-events: none;
-}
-.web_chat_frame .chatTabDraggableSpace {
-  display: none;
-}
-.chatTabDraggableSpace.ChromeClearance {
-  width: 70px;
-  height: 26px;
-  align-self: flex-end;
-}
-.compactView .chatTabDraggableSpace.ChromeClearance {
-  height: 15px;
-}
 .TheaterMode .ChatTabs.activeTabHasBroadcast {
   margin-top: -49px;
 }
@@ -42286,6 +42275,9 @@ body.in_global_drag .friendlist_titlebar {
 }
 .chatTabSetContainer {
   display: flex;
+}
+.chatTabSetContainer.inclient {
+  padding-right: 101px;
 }
 .chatTabSetContainer.gamepadui {
   justify-content: space-between;

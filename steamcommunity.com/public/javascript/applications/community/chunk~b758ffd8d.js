@@ -4,7 +4,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [8805],
   {
-    44229: (e, t, r) => {
+    24174: (e, t, r) => {
       r.d(t, {
         Z6: () => c,
         p8: () => b,
@@ -16,9 +16,9 @@
         iP: () => m,
       });
       var i = r(89526),
-        s = r(6960),
-        a = r(70983),
-        n = r(26371);
+        s = r(46132),
+        a = r(32765),
+        n = r(4116);
       class o {
         constructor() {
           (this.type = 0), (this.text = "");
@@ -358,10 +358,10 @@
         return e.replace(new RegExp(s, "gi"), r);
       }
     },
-    26371: (e, t, r) => {
+    4116: (e, t, r) => {
       r.d(t, { DX: () => n, LT: () => a, So: () => o });
       var i = r(89526),
-        s = r(32338);
+        s = r(23801);
       class a {
         constructor() {
           this.reactNodes = [];
@@ -428,10 +428,10 @@
         }
       }
     },
-    17169: (e, t, r) => {
+    23632: (e, t, r) => {
       r.d(t, { AY: () => l, KQ: () => o, _v: () => n, q8: () => u });
       var i = r(45878),
-        s = r(19320);
+        s = r(29063);
       const a = i.Message;
       class n extends a {
         constructor(e = null) {
@@ -741,12 +741,12 @@
         }
       }
     },
-    11643: (e, t, r) => {
+    19471: (e, t, r) => {
       var i = r(45878);
-      r(19320);
+      r(29063);
       i.Message;
     },
-    82702: (e, t, r) => {
+    53143: (e, t, r) => {
       r.d(t, {
         Qn: () => T,
         VJ: () => q,
@@ -758,8 +758,8 @@
         oY: () => E,
       });
       var i = r(45878),
-        s = r(19320),
-        a = (r(11643), r(82633), r(17169));
+        s = r(29063),
+        a = (r(19471), r(6681), r(23632));
       const n = i.Message;
       class o extends n {
         constructor(e = null) {
@@ -950,6 +950,11 @@
                   },
                   internal_name: {
                     n: 57,
+                    br: s.FE.readString,
+                    bw: s.Xc.writeString,
+                  },
+                  full_description: {
+                    n: 58,
                     br: s.FE.readString,
                     bw: s.Xc.writeString,
                   },
@@ -1857,6 +1862,16 @@
                     br: s.FE.readBool,
                     bw: s.Xc.writeBool,
                   },
+                  included_game_count: {
+                    n: 43,
+                    br: s.FE.readInt32,
+                    bw: s.Xc.writeInt32,
+                  },
+                  lowest_recent_price_in_cents: {
+                    n: 44,
+                    br: s.FE.readInt64String,
+                    bw: s.Xc.writeInt64String,
+                  },
                 },
               }),
             f.sm_m
@@ -2439,6 +2454,11 @@
                   },
                   include_supported_languages: {
                     n: 11,
+                    br: s.FE.readBool,
+                    bw: s.Xc.writeBool,
+                  },
+                  include_full_description: {
+                    n: 12,
                     br: s.FE.readBool,
                     bw: s.Xc.writeBool,
                   },
@@ -3245,12 +3265,12 @@
           });
       })(q || (q = {}));
     },
-    40632: (e, t, r) => {
+    3609: (e, t, r) => {
       r.d(t, { $2: () => d, Ax: () => b, e8: () => g });
       var i = r(45878),
-        s = r(19320),
-        a = (r(11643), r(17169)),
-        n = r(82702);
+        s = r(29063),
+        a = (r(19471), r(23632)),
+        n = r(53143);
       const o = i.Message;
       class l extends o {
         constructor(e = null) {
@@ -3918,12 +3938,12 @@
           });
       })(b || (b = {}));
     },
-    79983: (e, t, r) => {
+    11195: (e, t, r) => {
       r.d(t, { De: () => l, Fq: () => o, pA: () => n });
-      var i = r(82702),
-        s = r(70983),
-        a = (r(45878), r(17922), r(49969));
-      r(40632);
+      var i = r(53143),
+        s = r(32765),
+        a = (r(45878), r(54856), r(51637));
+      r(3609);
       function n(e, t) {
         e.Body().set_context(o(t));
       }
@@ -3941,14 +3961,14 @@
         e.Body().set_data_request(i.Qn.fromObject(t));
       }
     },
-    55449: (e, t, r) => {
+    36704: (e, t, r) => {
       r.d(t, { Z: () => c });
       var i = r(50265),
-        s = (r(6960), r(49969), r(11643), r(82702), r(51600)),
-        a = r(32338),
-        n = r(31587),
-        o = r(5055),
-        l = r(70983);
+        s = (r(46132), r(51637), r(19471), r(53143), r(8531)),
+        a = r(23801),
+        n = r(14826),
+        o = r(72120),
+        l = r(32765);
       function u(e) {
         return (function (e, t, r) {
           switch (e) {
@@ -4910,15 +4930,15 @@
         }
       }
     },
-    63154: (e, t, r) => {
+    57858: (e, t, r) => {
       r.d(t, { Z: () => f });
       var i = r(33940),
         s = r(50265),
-        a = (r(6960), r(49969), r(17922)),
-        n = r(70657),
-        o = (r(89252), r(45878)),
-        l = r(19320),
-        u = r(82702);
+        a = (r(46132), r(51637), r(54856)),
+        n = r(36597),
+        o = (r(3641), r(45878)),
+        l = r(29063),
+        u = r(53143);
       const c = o.Message;
       class d extends c {
         constructor(e = null) {
@@ -4987,11 +5007,11 @@
           });
         };
       })(m || (m = {}));
-      var _ = r(32338),
-        g = r(47330),
-        h = r(70983),
-        B = r(79983),
-        b = r(55449);
+      var _ = r(23801),
+        g = r(23217),
+        h = r(32765),
+        B = r(11195),
+        b = r(36704);
       function p(e, t) {
         if (!e) return t;
         if (!t) return e;
@@ -5011,6 +5031,8 @@
           include_basic_info: e.include_basic_info || t.include_basic_info,
           include_supported_languages:
             e.include_supported_languages || t.include_supported_languages,
+          include_full_description:
+            e.include_full_description || t.include_full_description,
         };
       }
       function y(e, t) {
@@ -5925,7 +5947,7 @@
           include_supported_languages: !0,
         });
     },
-    51600: (e, t, r) => {
+    8531: (e, t, r) => {
       r.d(t, {
         Ds: () => F,
         Hy: () => v,
@@ -5934,10 +5956,10 @@
         GV: () => w,
         $k: () => f,
       });
-      r(49969);
+      r(51637);
       var i = r(45878),
-        s = r(19320),
-        a = r(82702);
+        s = r(29063),
+        a = r(53143);
       const n = i.Message;
       class o extends n {
         constructor(e = null) {
@@ -6854,7 +6876,7 @@
             (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed");
         })(f || (f = {}));
     },
-    23708: (e, t, r) => {
+    25871: (e, t, r) => {
       r.d(t, {
         Vm: () => d,
         ie: () => c,
@@ -6865,8 +6887,8 @@
       var i = r(52868),
         s = r.n(i),
         a = r(89526),
-        n = (r(44229), r(49969), r(82702), r(31621)),
-        o = (r(55449), r(63154));
+        n = (r(24174), r(51637), r(53143), r(4306)),
+        o = (r(36704), r(57858));
       function l(e, t, r, i) {
         const l = (0, a.useRef)(),
           u = (0, a.useRef)(void 0),
@@ -6885,6 +6907,7 @@
             include_reviews: w,
             include_basic_info: R,
             include_supported_languages: M,
+            include_full_description: F,
           } = r;
         if (
           ((0, a.useEffect)(() => {
@@ -6900,6 +6923,7 @@
               include_reviews: w,
               include_basic_info: R,
               include_supported_languages: M,
+              include_full_description: F,
             };
             let a = null;
             return (
@@ -6922,8 +6946,8 @@
         if (!1 === d) return [void 0, 2];
         if (o.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.Z.Get().BHasStoreItem(e, t, r)) return [void 0, 1];
-        const F = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return F ? [F, 3] : [null, 2];
+        const v = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return v ? [v, 3] : [null, 2];
       }
       function u(e, t, r) {
         return l(e, 0, t, r);
@@ -6970,6 +6994,7 @@
             include_reviews: b,
             include_basic_info: p,
             include_supported_languages: y,
+            include_full_description: f,
           } = r;
         if (
           ((0, a.useEffect)(() => {
@@ -6986,6 +7011,7 @@
                 include_reviews: b,
                 include_basic_info: p,
                 include_supported_languages: y,
+                include_full_description: f,
               },
               i = e.filter(
                 (e) =>
@@ -7025,12 +7051,12 @@
         return m(e, 0, t, r);
       }
     },
-    47330: (e, t, r) => {
+    23217: (e, t, r) => {
       r.d(t, { l: () => n });
-      r(6960);
+      r(46132);
       var i = r(52868),
         s = r.n(i),
-        a = r(17922);
+        a = r(54856);
       function n(e) {
         if (s().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };

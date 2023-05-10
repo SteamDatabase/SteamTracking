@@ -2359,8 +2359,8 @@ input.clanimagepicker_SearchInput_lwt4u {
 }
 .artworkuploader_UploadPreviewDelete_341V_ {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 8px;
+  right: 8px;
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -2398,8 +2398,9 @@ input.clanimagepicker_SearchInput_lwt4u {
   margin-bottom: 8px;
 }
 .artworkuploader_PreviewImgInfo_3Iv_t {
+  position: absolute;
   padding: 1px;
-  float: left;
+  left: 10px;
   margin-bottom: 14px;
   border-top: 1px solid rgba(0, 0, 0, 0);
 }

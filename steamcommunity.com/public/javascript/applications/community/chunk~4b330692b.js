@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2805],
   {
-    20529: (e) => {
+    83965: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         GrantAwardModal: "awardmodal_GrantAwardModal_2vlF5",
@@ -48,28 +48,28 @@
         NotEnoughPoints: "awardmodal_NotEnoughPoints_140Wj",
       };
     },
-    36940: (e) => {
+    23814: (e) => {
       e.exports = { UnstyledButton: "unstyledbutton_UnstyledButton_1cWox" };
     },
-    80982: (e, t, a) => {
+    60588: (e, t, a) => {
       "use strict";
       a.d(t, { ZP: () => J });
       var n = a(33940),
-        r = (a(89252), a(52868)),
+        r = (a(3641), a(52868)),
         o = a.n(r),
         l = a(88464),
         s = a(89526),
-        i = (a(6960), a(17922)),
-        c = a(49194),
-        d = a(23907),
-        m = a(76019),
-        u = a(70657),
-        h = a(33787),
+        i = (a(46132), a(54856)),
+        c = a(44026),
+        d = a(31782),
+        m = a(34329),
+        u = a(36597),
+        h = a(16899),
         g = a(38072),
         w = a.n(g),
         C = a(50265),
-        p = a(70983);
-      a(49969);
+        p = a(32765);
+      a(51637);
       class E {
         constructor(e) {
           (this.m_lPointsAvailable = null),
@@ -180,15 +180,15 @@
           void 0
         ),
         (0, n.gn)([C.LO.deep], E.prototype, "m_mapExistingReactions", void 0);
-      var _ = a(57255),
-        f = a(46085),
-        y = a(86701),
-        v = a(8392),
-        L = a(13806),
-        b = a(31587),
-        A = a(31621),
+      var _ = a(57605),
+        f = a(99307),
+        y = a(701),
+        v = a(69338),
+        L = a(19304),
+        b = a(14826),
+        A = a(4306),
         R = a(15705),
-        M = a(46504);
+        M = a(36041);
       const x = 200;
       var S;
       function N(e) {
@@ -625,11 +625,11 @@
               })
             ),
         ];
-      var H = a(20529);
+      var H = a(83965);
       function $(e) {
         return (0, b.Xx)(`#RewardsReaction_${e}`);
       }
-      var U = a(36940);
+      var U = a(23814);
       const q = (e) => {
         const { className: t } = e,
           a = (0, n._T)(e, ["className"]);

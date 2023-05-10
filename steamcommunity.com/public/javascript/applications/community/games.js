@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3903],
   {
-    77620: (e) => {
+    12671: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Icon: "achievementiconbase_Icon_2bzHb",
@@ -22,7 +22,7 @@
         HiddenLabel: "achievementiconbase_HiddenLabel_2yMyP",
       };
     },
-    45752: (e) => {
+    21558: (e) => {
       e.exports = {
         ProgressBar: "progressbar_ProgressBar_yZ55N",
         AnimateProgress: "progressbar_AnimateProgress_1Ccdv",
@@ -30,7 +30,7 @@
         Indeterminate: "progressbar_Indeterminate_1sxT4",
       };
     },
-    57508: (e) => {
+    14461: (e) => {
       e.exports = {
         GameHeight: "140px",
         GamePadding: "10px",
@@ -38,7 +38,7 @@
         MobileBreakpoint: "30rem",
       };
     },
-    17627: (e) => {
+    37409: (e) => {
       e.exports = {
         GameHeight: "140px",
         GamePadding: "10px",
@@ -55,14 +55,14 @@
         PrivacySettingsLink: "gameslistapp_PrivacySettingsLink_mRoic",
       };
     },
-    12525: (e) => {
+    86519: (e) => {
       e.exports = {
         Filter: "gameslistfilter_Filter_ZQQNQ",
         ClearButton: "gameslistfilter_ClearButton_2iq6O",
         SearchIcon: "gameslistfilter_SearchIcon_QptTj",
       };
     },
-    26089: (e) => {
+    15267: (e) => {
       e.exports = {
         GameHeight: "140px",
         GamePadding: "10px",
@@ -131,7 +131,7 @@
         rotate: "gameslistitems_rotate_1TDtt",
       };
     },
-    71530: (e) => {
+    92038: (e) => {
       e.exports = {
         GameHeight: "140px",
         GamePadding: "10px",
@@ -164,7 +164,7 @@
         DownloadBarContainer: "gameslistremote_DownloadBarContainer_2Qx7n",
       };
     },
-    22454: (e) => {
+    77887: (e) => {
       e.exports = {
         WishlistTab: "gameslisttabs_WishlistTab_1BZR3",
         tabList: "gameslisttabs_tabList_1sHAC",
@@ -172,16 +172,16 @@
         SelectBaseline: "gameslisttabs_SelectBaseline_1qj0p",
       };
     },
-    29979: (e, t, r) => {
+    66294: (e, t, r) => {
       "use strict";
       r.d(t, { p: () => u });
       var i = r(33940),
         n = r(89526),
-        a = r(49194),
-        s = r(49920),
-        l = r(31621),
-        o = r(70983),
-        c = r(38811);
+        a = r(44026),
+        s = r(17589),
+        l = r(4306),
+        o = r(32765),
+        c = r(94952);
       function u(e) {
         const { children: t, navTreeRef: r } = e,
           u = (0, i._T)(e, ["children", "navTreeRef"]),
@@ -209,7 +209,7 @@
         return n.createElement(n.Fragment, null, t);
       }
     },
-    31319: (e, t, r) => {
+    5029: (e, t, r) => {
       "use strict";
       r.d(t, { Ar: () => o, Wo: () => c, i9: () => l, ks: () => a });
       var i = r(89526),
@@ -263,10 +263,10 @@
         e.push(`?${r.toString()}`);
       }
     },
-    59857: (e, t, r) => {
+    29551: (e, t, r) => {
       "use strict";
       r.d(t, { W: () => n });
-      var i = r(31587);
+      var i = r(14826);
       function n(e, t = "#Played_", r = !1) {
         if (e >= 120) {
           let r = e / 60;
@@ -283,25 +283,25 @@
           : (0, i.Xx)(t + "Minutes", e);
       }
     },
-    22963: (e, t, r) => {
+    66594: (e, t, r) => {
       "use strict";
       r.d(t, { _: () => i });
       let i = { ProfileURL: "" };
     },
-    6150: (e, t, r) => {
+    89317: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => Qi });
       var i = r(33940),
         n = r(89526),
         a = r(5615),
-        s = r(6960),
-        l = r(17922),
-        o = r(60209),
-        c = r(70657),
-        u = r(37034),
+        s = r(46132),
+        l = r(54856),
+        o = r(27070),
+        c = r(36597),
+        u = r(20830),
         m = r(45878),
-        d = r(19320);
-      r(11643), r(67737);
+        d = r(29063);
+      r(19471), r(84321);
       const b = m.Message;
       class p extends b {
         constructor(e = null) {
@@ -3968,7 +3968,7 @@
               request: _e,
             });
         })(ye || (ye = {}));
-      var fe = r(24403);
+      var fe = r(80381);
       const we = new Map(),
         he = new Map();
       function Fe(e) {
@@ -4014,9 +4014,9 @@
           enabled: e.enabled,
         });
       }
-      var ve = r(43886),
-        Re = r(70983),
-        ze = r(22963);
+      var ve = r(86900),
+        Re = r(32765),
+        ze = r(66594);
       function Ee(e) {
         let t = e
           .replace(/^the\s/i, "")
@@ -4391,21 +4391,21 @@
           r.GetUserFileCount(i, t, e)
         );
       }
-      var Ae = r(2546),
-        Le = r(31621),
-        Ne = r(29979),
-        De = r(23907),
-        Ie = r(31641),
-        xe = r(57255),
-        ke = r(31319),
-        $e = r(8392),
-        qe = r(40108),
-        He = r(13806);
-      var Qe = r(31587),
-        Ze = r(17627),
-        Ve = r(89372),
-        Ke = r(86701),
-        Ye = r(12525);
+      var Ae = r(65406),
+        Le = r(4306),
+        Ne = r(66294),
+        De = r(31782),
+        Ie = r(83145),
+        xe = r(57605),
+        ke = r(5029),
+        $e = r(69338),
+        qe = r(84343),
+        He = r(19304);
+      var Qe = r(14826),
+        Ze = r(37409),
+        Ve = r(16826),
+        Ke = r(701),
+        Ye = r(86519);
       function Je(e, t, r = !1) {
         return (0, n.useMemo)(() => {
           var i;
@@ -4547,12 +4547,12 @@
           })
         );
       }
-      var ot = r(49969),
-        ct = r(7297),
-        ut = r(49194),
-        mt = r(77989),
-        dt = (r(64831), r(5874));
-      r(36421);
+      var ot = r(51637),
+        ct = r(40103),
+        ut = r(44026),
+        mt = r(30928),
+        dt = (r(69206), r(47742));
+      r(26391);
       const bt = m.Message;
       class pt extends bt {
         constructor(e = null) {
@@ -6053,7 +6053,7 @@
           { onSuccess: n }
         );
       }
-      var qt = r(77620),
+      var qt = r(12671),
         Ht = r.n(qt);
       const Qt = n.forwardRef(
         ({ imgURL: e, glow: t, hidden: r, alt: i, className: a }, s) => {
@@ -6093,10 +6093,10 @@
           );
         }
       );
-      var Zt = r(14100),
-        Vt = r(22840),
-        Kt = r(69362),
-        Yt = r(45752);
+      var Zt = r(69159),
+        Vt = r(17547),
+        Kt = r(51441),
+        Yt = r(21558);
       function Jt({ nPercent: e, indeterminate: t, animate: r, className: i }) {
         return n.createElement("div", {
           className: (0, He.Z)(
@@ -6108,13 +6108,13 @@
           style: { "--percent": e / 100 },
         });
       }
-      var er = r(59857);
-      var tr = r(26089),
-        rr = r(46085),
-        ir = r(24868),
-        nr = r(5055),
-        ar = r(81171),
-        sr = r(71530);
+      var er = r(29551);
+      var tr = r(15267),
+        rr = r(99307),
+        ir = r(57742),
+        nr = r(72120),
+        ar = r(88443),
+        sr = r(92038);
       const lr = n.createContext(void 0);
       function or() {
         const e = (0, n.useContext)(lr);
@@ -6750,7 +6750,7 @@
         );
       }
       var Tr,
-        Or = r(22454);
+        Or = r(77887);
       function Gr(e) {
         var t;
         if (e.isLoading) return "";
@@ -6904,7 +6904,7 @@
       const Pr =
         r.p +
         "images/applications/community/defaultappheader.png?v=valveisgoodatcaching";
-      var Xr = r(57508);
+      var Xr = r(14461);
       const Ar = parseInt(Xr.GameHeight),
         Lr = parseInt(Xr.GamePadding),
         Nr = parseInt(Xr.RemoteControlsHeight),

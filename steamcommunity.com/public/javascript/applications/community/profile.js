@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [6845],
   {
-    20565: (e) => {
+    51964: (e) => {
       e.exports = {
         SnoozeContainer: "friendsnooze_SnoozeContainer_3EzTy",
         SnoozeZ: "friendsnooze_SnoozeZ_1DArl",
@@ -19,7 +19,7 @@
         Snoring: "friendsnooze_Snoring_YuCwj",
       };
     },
-    47198: (e) => {
+    92200: (e) => {
       e.exports = {
         miniProfile: "miniprofile_miniProfile_1AMAp",
         miniProfileContent: "miniprofile_miniProfileContent_3QoRR",
@@ -76,14 +76,14 @@
         featuredSubTitle: "miniprofile_featuredSubTitle_1IP-p",
       };
     },
-    9236: (e) => {
+    61204: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PersonaStatusIcon: "personastatusicons_PersonaStatusIcon_1YsWj",
         MobilePhoneIcon: "personastatusicons_MobilePhoneIcon_3pGV8",
       };
     },
-    87276: (e) => {
+    69005: (e) => {
       e.exports = {
         DefaultTheme: "profilethemecolors_DefaultTheme_1qSTn",
         CosmicTheme: "profilethemecolors_CosmicTheme_1H27L",
@@ -118,7 +118,7 @@
         SteamDeckTheme: "profilethemecolors_SteamDeckTheme_3TBj7",
       };
     },
-    16952: (e) => {
+    10476: (e) => {
       e.exports = {
         AvatarRow: "avatar_AvatarRow_2_WvK",
         Avatar: "avatar_Avatar_27tBX",
@@ -138,7 +138,7 @@
         HideDefaultAvatar: "avatar_HideDefaultAvatar_6zU6F",
       };
     },
-    93720: (e) => {
+    82311: (e) => {
       e.exports = {
         AvatarCollectionHeader: "avatarcollection_AvatarCollectionHeader_27Q-8",
         AvatarCollectionName: "avatarcollection_AvatarCollectionName_2pum1",
@@ -161,7 +161,7 @@
         CollectionGroupAvatars: "avatarcollection_CollectionGroupAvatars_wWso7",
       };
     },
-    70035: (e) => {
+    66187: (e) => {
       e.exports = {
         Badge: "favoritebadge_Badge_2ODUB",
         BadgeImage: "favoritebadge_BadgeImage_3M7FE",
@@ -172,7 +172,7 @@
         BadgeOption: "favoritebadge_BadgeOption_P1MG7",
       };
     },
-    819: (e) => {
+    38062: (e) => {
       e.exports = {
         Group: "favoritegroup_Group_1yHxt",
         GroupAvatar: "favoritegroup_GroupAvatar_1C_n6",
@@ -182,7 +182,7 @@
         GroupOption: "favoritegroup_GroupOption_3neyr",
       };
     },
-    18262: (e) => {
+    68485: (e) => {
       e.exports = {
         MiniProfilePreview: "miniprofilepreview_MiniProfilePreview_1MWlW",
         MiniProfileBackgroundOption:
@@ -197,7 +197,7 @@
         WithVideo: "miniprofilepreview_WithVideo_1BBIS",
       };
     },
-    62627: (e) => {
+    79112: (e) => {
       e.exports = {
         EquippedBackgroundBlock:
           "profilebackground_EquippedBackgroundBlock_1Pihr",
@@ -218,7 +218,7 @@
           "profilebackground_ProfileBackgroundEquipOption_3Hc2R",
       };
     },
-    63547: (e) => {
+    12209: (e) => {
       e.exports = {
         Shell: "profileeditshell_Shell_2kqKZ",
         Navigation: "profileeditshell_Navigation_33Kl1",
@@ -232,7 +232,7 @@
         BackToProfileCtn: "profileeditshell_BackToProfileCtn_1YOt2",
       };
     },
-    84206: (e) => {
+    59536: (e) => {
       e.exports = {
         ProfileModifierPreview: "profilemodifier_ProfileModifierPreview_OhBEt",
         ProfileModifierOption: "profilemodifier_ProfileModifierOption_3NIiY",
@@ -244,7 +244,7 @@
         App: "profilemodifier_App_2SYZ_",
       };
     },
-    60299: (e) => {
+    90375: (e) => {
       e.exports = {
         ProfilePreview: "profilepreview_ProfilePreview_sJ5St",
         PaintRadial0: "profilepreview_PaintRadial0_3ygvj",
@@ -258,7 +258,7 @@
         ProfilePreviewCtn: "profilepreview_ProfilePreviewCtn_uyN_g",
       };
     },
-    45812: (e) => {
+    94374: (e) => {
       e.exports = {
         ProfileThemePicker: "profiletheme_ProfileThemePicker_37I7q",
         ThemePickerDisabled: "profiletheme_ThemePickerDisabled_1gBl2",
@@ -277,14 +277,14 @@
         ProfilePreview: "profiletheme_ProfilePreview_MneEO",
       };
     },
-    14772: (e) => {
+    58349: (e) => {
       e.exports = {
         formattingButtons: "summary_formattingButtons_2T2D7",
         formattingButton: "summary_formattingButton_LhNoI",
         summaryTextArea: "summary_summaryTextArea_2ipSt",
       };
     },
-    90661: (e) => {
+    88909: (e) => {
       e.exports = {
         ProfileEditRoot: "profileedit_ProfileEditRoot_1lBbV",
         ItemPicker: "profileedit_ItemPicker_n1M1o",
@@ -307,16 +307,16 @@
         DisabledInputCtn: "profileedit_DisabledInputCtn_ZePu4",
       };
     },
-    31692: (e, t, r) => {
+    79271: (e, t, r) => {
       "use strict";
       r.d(t, { a: () => m });
       var i = r(33940),
         a = r(89526),
         o = r(88464),
-        n = r(13806),
-        s = r(20565),
+        n = r(19304),
+        s = r(51964),
         l = r.n(s);
-      r(69202);
+      r(11301);
       let m = class extends a.Component {
         static get hoverClass() {
           return l().hoverParent;
@@ -370,19 +370,19 @@
       };
       m = (0, i.gn)([o.Pi], m);
     },
-    97335: (e, t, r) => {
+    88763: (e, t, r) => {
       "use strict";
       r.d(t, { _: () => u });
       var i = r(33940),
         a = r(89526),
         o = r(88464),
-        n = r(31587),
-        s = (r(82633), r(69202)),
-        l = r(13806),
-        m = r(86701),
-        c = r(9236),
+        n = r(14826),
+        s = (r(6681), r(11301)),
+        l = r(19304),
+        m = r(701),
+        c = r(61204),
         d = r.n(c),
-        p = r(10171);
+        p = r(93908);
       const u = (0, o.Pi)((e) => {
         const { persona: t, className: r } = e,
           o = (0, i._T)(e, ["persona", "className"]);
@@ -448,33 +448,33 @@
         );
       });
     },
-    22963: (e, t, r) => {
+    66594: (e, t, r) => {
       "use strict";
       r.d(t, { _: () => i });
       let i = { ProfileURL: "" };
     },
-    25906: (e, t, r) => {
+    74182: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { ProfileEditRoutes: () => Xr, default: () => zr });
       var i = r(33940),
-        a = r(22963),
+        a = r(66594),
         o = r(52868),
         n = r.n(o),
         s = r(50265),
-        l = (r(6960), r(2546)),
-        m = r(10726),
+        l = (r(46132), r(65406)),
+        m = r(88337),
         c = r(89526),
         d = r(88464),
-        p = r(70983),
-        u = r(69202),
-        h = r(31587),
-        v = r(31692),
-        _ = r(22911),
-        f = r(97335),
-        g = r(13806),
-        P = r(47198),
+        p = r(32765),
+        u = r(11301),
+        h = r(14826),
+        v = r(79271),
+        _ = r(50355),
+        f = r(88763),
+        g = r(19304),
+        P = r(92200),
         E = r.n(P);
-      const y = r(93958)._H.PerMinute;
+      const y = r(25508)._H.PerMinute;
       class C {
         constructor(e) {
           (this.m_bLoadingData = !1),
@@ -997,12 +997,12 @@
               )
             : c.createElement(_.vV, Object.assign({ persona: t }, o, l), n);
         };
-      var L = r(82569),
-        b = (r(89252), r(37034)),
-        w = (r(55923), r(68041)),
-        O = r(90806),
-        D = r(17922),
-        x = r(67237);
+      var L = r(47165),
+        b = (r(3641), r(20830)),
+        w = (r(72329), r(90531)),
+        O = r(52316),
+        D = r(54856),
+        x = r(53236);
       class R {
         constructor(e) {
           this.m_SteamInterface = e;
@@ -1414,8 +1414,8 @@
           return 1 == this.m_unBorderColor;
         }
       }
-      var z = r(43735),
-        W = r(23213);
+      var z = r(27143),
+        W = r(85246);
       function j(e) {
         return Y(e.image_small);
       }
@@ -2218,7 +2218,7 @@
       }
       (0, i.gn)([s.LO], te.prototype, "m_ActiveTheme", void 0),
         (0, i.gn)([s.aD], te.prototype, "RevertActiveTheme", null);
-      var re = r(77515);
+      var re = r(4556);
       function ie(e, t) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           let r;
@@ -2620,13 +2620,13 @@
         (0, i.gn)([s.aD], se.prototype, "SetAvatarHash", null),
         (0, i.gn)([s.aD], se.prototype, "RevertToComittedAvatarHash", null);
       var le = r(59934),
-        me = r(49969),
-        ce = r(60209),
-        de = (r(90174), r(73961)),
-        pe = r(16952),
-        ue = r(57255),
-        he = r(31621),
-        ve = (r(46085), r(93720));
+        me = r(51637),
+        ce = r(27070),
+        de = (r(1721), r(73961)),
+        pe = r(10476),
+        ue = r(57605),
+        he = r(4306),
+        ve = (r(99307), r(82311));
       let _e = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
@@ -2943,7 +2943,7 @@
               )
             )
           );
-      var Be = r(22840);
+      var Be = r(17547);
       class Ie extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
@@ -3132,8 +3132,8 @@
               )
             )
           );
-      var be = r(90661),
-        we = r(5055);
+      var be = r(88909),
+        we = r(72120);
       const Oe = ({ title: e, className: t, children: r }) =>
           c.createElement(
             "div",
@@ -3434,7 +3434,7 @@
           );
         },
         He = c.lazy(() =>
-          Promise.all([r.e(8691), r.e(2329)]).then(r.bind(r, 39573))
+          Promise.all([r.e(8691), r.e(2329)]).then(r.bind(r, 93372))
         ),
         qe = !0;
       let Xe = class extends c.Component {
@@ -3827,7 +3827,7 @@
           )
         );
       });
-      var Je = r(39598);
+      var Je = r(86531);
       class et extends c.Component {
         render() {
           const {
@@ -3973,8 +3973,8 @@
       (0, i.gn)([he.ak], at.prototype, "GetCityList", null),
         (0, i.gn)([he.ak], at.prototype, "OnStateSelected", null),
         (at = (0, i.gn)([d.Pi], at));
-      var ot = r(4940),
-        nt = r(14772);
+      var ot = r(60866),
+        nt = r(58349);
       class st extends c.Component {
         constructor() {
           super(...arguments),
@@ -4327,7 +4327,7 @@
       };
       (0, i.gn)([he.ak], _t.prototype, "OnProfileAwardsCheckboxChecked", null),
         (_t = (0, i.gn)([d.Pi], _t));
-      var ft = r(70035);
+      var ft = r(66187);
       let gt = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -4465,7 +4465,7 @@
             )
           );
         };
-      var At = r(819);
+      var At = r(38062);
       let Gt = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -4567,7 +4567,7 @@
             )
           );
         };
-      var Lt = r(18262);
+      var Lt = r(68485);
       const bt = ({ Item: e, small: t }) => {
           let r = K(e, t);
           return 0 == Object.keys(r).length
@@ -4785,8 +4785,8 @@
                   r
                 )
               );
-      var qt = r(7297),
-        Xt = r(14100);
+      var qt = r(40103),
+        Xt = r(69159);
       let Zt = class extends c.Component {
         render() {
           let e = this.props.PrivacyStore;
@@ -5202,9 +5202,9 @@
           );
         }
       }
-      var tr = r(62627),
-        rr = r(60299),
-        ir = r(87276);
+      var tr = r(79112),
+        rr = r(90375),
+        ir = r(69005);
       const ar = ({ className: e, width: t, height: r, theme: i }) => (
           i || (i = "Default"),
           (i += "Theme"),
@@ -5804,7 +5804,7 @@
                 c.createElement(dr, { Background: null }, i)
               );
       var hr = r(565),
-        vr = r(63547);
+        vr = r(12209);
       class _r extends c.Component {
         render() {
           const {
@@ -5959,7 +5959,7 @@
             );
           }
         );
-      var Pr = r(84206);
+      var Pr = r(59536);
       let Er = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bDialogActive: !1 });
@@ -6117,7 +6117,7 @@
               t
             )
           );
-      var Ir = r(45812);
+      var Ir = r(94374);
       let Nr = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -6504,9 +6504,9 @@
       }
       (0, i.gn)([he.ak], xr.prototype, "OnSubmit", null),
         (0, i.gn)([he.ak], xr.prototype, "RevertChanges", null);
-      r(33787);
-      var Ur = r(80982),
-        Hr = r(20352);
+      r(16899);
+      var Ur = r(60588),
+        Hr = r(35993);
       const qr = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",

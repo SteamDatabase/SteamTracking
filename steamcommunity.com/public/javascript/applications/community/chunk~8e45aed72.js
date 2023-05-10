@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [8120],
   {
-    99670: (e) => {
+    17962: (e) => {
       e.exports = {
         FAQContainer: "faqbbcode_FAQContainer_1BWX4",
         Section: "faqbbcode_Section_NWJUH",
@@ -13,20 +13,20 @@
         FAQImage: "faqbbcode_FAQImage_1sKwB",
       };
     },
-    49208: (e, t, r) => {
+    40993: (e, t, r) => {
       "use strict";
       r.d(t, { R: () => f });
       var i = r(89526),
-        a = r(49969),
-        n = r(90043),
-        s = r(1633),
-        l = r(13806),
-        o = r(70983),
-        m = r(44229),
-        u = r(26371),
-        c = r(83799),
-        d = r(577),
-        _ = r(99670),
+        a = r(51637),
+        n = r(54297),
+        s = r(87178),
+        l = r(19304),
+        o = r(32765),
+        m = r(24174),
+        u = r(4116),
+        c = r(14288),
+        d = r(29667),
+        _ = r(17962),
         B = r.n(_);
       const g = new Map([
           ...Array.from(c.Be.entries()),
@@ -140,17 +140,17 @@
           );
         };
     },
-    60008: (e, t, r) => {
+    5902: (e, t, r) => {
       "use strict";
       r.d(t, { s: () => c });
       var i = r(33940),
         a = r(50265),
-        n = (r(6960), r(49969)),
-        s = (r(72002), r(57582)),
-        l = r(32338),
-        o = r(59821),
-        m = r(47330),
-        u = r(70983);
+        n = (r(46132), r(51637)),
+        s = (r(52248), r(81630)),
+        l = r(23801),
+        o = r(26464),
+        m = r(23217),
+        u = r(32765);
       class c {
         constructor(e, t) {
           (this.m_summary = e),
@@ -392,7 +392,7 @@
         (0, i.gn)([o.a], c.prototype, "BHasSomeTextForLanguage", null),
         (0, i.gn)([o.a], c.prototype, "GetLastTimeLanguageUpdated", null);
     },
-    72002: (e, t, r) => {
+    52248: (e, t, r) => {
       "use strict";
       r.d(t, {
         $H: () => c,
@@ -407,7 +407,7 @@
         tv: () => y,
       });
       var i = r(45878),
-        a = r(19320);
+        a = r(29063);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -1944,7 +1944,7 @@
         constructor(e = null) {
           super(),
             W.prototype.articleid || a.aR(W.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            n.initialize(this, e, 0, -1, [6], null);
         }
         static M() {
           return (
@@ -1965,6 +1965,13 @@
                     bw: a.Xc.writeUint32,
                   },
                   url_code: { n: 5, br: a.FE.readString, bw: a.Xc.writeString },
+                  localized_names: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeRepeatedString,
+                  },
                 },
               }),
             W.sm_m
@@ -2085,7 +2092,7 @@
           });
       })(E || (E = {}));
     },
-    57582: (e, t, r) => {
+    81630: (e, t, r) => {
       "use strict";
       r.d(t, {
         EH: () => S,
@@ -2104,12 +2111,12 @@
         l = r.n(s),
         o = r(50265),
         m = r(89526),
-        u = (r(6960), r(17922)),
-        c = r(60008),
-        d = r(70657),
-        _ = (r(89252), r(72002)),
-        B = (r(96158), r(47330)),
-        g = r(70983);
+        u = (r(46132), r(54856)),
+        c = r(5902),
+        d = r(36597),
+        _ = (r(3641), r(52248)),
+        B = (r(63403), r(23217)),
+        g = r(32765);
       class f {
         constructor() {
           (this.m_mapFAQSummaries = new Map()),

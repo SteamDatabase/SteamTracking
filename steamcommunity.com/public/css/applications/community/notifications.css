@@ -598,10 +598,6 @@
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU
   .standardtemplates_Timestamp_2vSvC {
-  color: #3d4450;
-}
-.standardtemplates_AllNotificationsTemplate_2m9JU.standardtemplates_Unread_2GC8q
-  .standardtemplates_Timestamp_2vSvC {
   color: #67707b;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU
@@ -756,6 +752,7 @@
 .standardtemplates_AvatarStatus_2yhOC.offline {
   background-color: #67707b;
 }
+.standardtemplates_StandardTemplate_3e_DB .standardtemplates_AvatarStatus_2yhOC,
 .standardtemplates_DesktopToastTemplate_3CGHg
   .standardtemplates_AvatarStatus_2yhOC,
 .standardtemplates_AllNotificationsTemplate_2m9JU
@@ -1426,10 +1423,6 @@
   font-size: 11px;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Timestamp_3OOgm {
-  color: #3d4450;
-}
-.shorttemplates_AllNotificationsTemplate_yn7qi.shorttemplates_Unread_3Kkjo
-  .shorttemplates_Timestamp_3OOgm {
   color: #67707b;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Content_23dSW {
@@ -1577,6 +1570,7 @@
 .shorttemplates_AvatarStatus_1wkTz.offline {
   background-color: #67707b;
 }
+.shorttemplates_StandardTemplate_WgSlJ .shorttemplates_AvatarStatus_1wkTz,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_AvatarStatus_1wkTz,
 .shorttemplates_AllNotificationsTemplate_yn7qi
   .shorttemplates_AvatarStatus_1wkTz,
@@ -2336,10 +2330,6 @@
   font-size: 11px;
 }
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Timestamp_3L215 {
-  color: #3d4450;
-}
-.steamtemplates_AllNotificationsTemplate_3diaj.steamtemplates_Unread_3E3kr
-  .steamtemplates_Timestamp_3L215 {
   color: #67707b;
 }
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Content_1MImw {
@@ -2487,6 +2477,7 @@
 .steamtemplates_AvatarStatus_3AcTa.offline {
   background-color: #67707b;
 }
+.steamtemplates_StandardTemplate_1zIGL .steamtemplates_AvatarStatus_3AcTa,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_AvatarStatus_3AcTa,
 .steamtemplates_AllNotificationsTemplate_3diaj
   .steamtemplates_AvatarStatus_3AcTa,

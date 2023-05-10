@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2449],
   {
-    24613: (e) => {
+    43628: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -68,7 +68,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    35534: (e) => {
+    61037: (e) => {
       e.exports = {
         BroadcastChat: "broadcastchat_BroadcastChat_37jsi",
         ChatEntry: "broadcastchat_ChatEntry_3o0ss",
@@ -107,7 +107,7 @@
         SignInButton: "broadcastchat_SignInButton_26lxf",
       };
     },
-    60669: (e) => {
+    91820: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
         GiveawayWinnerAnnounced:
@@ -131,7 +131,7 @@
           "broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy",
       };
     },
-    76014: (e) => {
+    25202: (e) => {
       e.exports = {
         BroadcastPlayerLite: "broadcastplayer_BroadcastPlayerLite_3YmNP",
         BroadcastPlayerLiteVideo:
@@ -141,7 +141,7 @@
           "broadcastplayer_BroadcastPlaceholderImg_3Hcqn",
       };
     },
-    44141: (e) => {
+    36315: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FriendsListInsetShadowCtn:
@@ -151,7 +151,7 @@
           "insetshadow_FriendListInsetShadowBottom_2hL6s",
       };
     },
-    76320: (e, t, r) => {
+    55844: (e, t, r) => {
       "use strict";
       r.d(t, { c: () => k });
       var i = r(33940),
@@ -159,19 +159,19 @@
         s = r(88464),
         n = r(25125),
         o = r(89526),
-        l = r(7297),
-        c = (r(87487), r(33161)),
-        d = r(52310),
-        m = (r(55923), r(68041)),
-        u = (r(39766), r(24437)),
+        l = r(40103),
+        c = (r(89980), r(96566)),
+        d = r(52002),
+        m = (r(72329), r(90531)),
+        u = (r(92874), r(62404)),
         h = r.n(u),
-        _ = r(14100),
-        p = r(57255),
-        g = r(46722),
-        b = r(4940),
-        B = r(76478),
-        S = r(83878),
-        y = r(44141),
+        _ = r(69159),
+        p = r(57605),
+        g = r(50304),
+        b = r(60866),
+        B = r(32905),
+        S = r(24591),
+        y = r(36315),
         w = r.n(y);
       const f = () =>
           o.createElement(
@@ -187,15 +187,15 @@
               className: w().FriendListInsetShadowBottom,
             })
           );
-      var M = r(86701),
-        v = r(13806),
-        F = r(31587),
-        T = r(31621),
-        R = r(70983),
-        E = r(35534),
+      var M = r(701),
+        v = r(19304),
+        F = r(14826),
+        T = r(4306),
+        R = r(32765),
+        E = r(61037),
         z = r.n(E),
-        O = r(76553),
-        x = r(9050);
+        O = r(50295),
+        x = r(20069);
       const D = new RegExp("ː([^ː]*)ː", "g"),
         W = new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
@@ -851,21 +851,21 @@
         );
       }
     },
-    76553: (e, t, r) => {
+    50295: (e, t, r) => {
       "use strict";
       r.d(t, { E: () => g, U: () => B });
       var i = r(25125),
         a = r(89526),
-        s = (r(49969), r(33161)),
-        n = r(33927),
-        o = (r(89400), r(2796)),
-        l = r(29818),
-        c = r(72745),
-        d = r(13806),
-        m = r(31587),
-        u = r(98197),
-        h = r(70983),
-        _ = r(60669),
+        s = (r(51637), r(96566)),
+        n = r(7311),
+        o = (r(98889), r(93883)),
+        l = r(20620),
+        c = r(75962),
+        d = r(19304),
+        m = r(14826),
+        u = r(207),
+        h = r(32765),
+        _ = r(91820),
         p = r.n(_);
       function g(e) {
         const { latestAnnouncement: t } = e;
@@ -1034,7 +1034,7 @@
         );
       }
     },
-    75467: (e, t, r) => {
+    28388: (e, t, r) => {
       "use strict";
       r.r(t),
         r.d(t, {
@@ -1048,13 +1048,13 @@
         n = r(50265),
         o = r(88464),
         l = r(89526),
-        c = r(83799),
-        d = (r(49969), r(7297)),
-        m = r(12568),
-        u = (r(87487), r(33927)),
-        h = r(63154),
-        _ = r(31621),
-        p = r(23213);
+        c = r(14288),
+        d = (r(51637), r(40103)),
+        m = r(98009),
+        u = (r(89980), r(7311)),
+        h = r(57858),
+        _ = r(4306),
+        p = r(85246);
       class g extends l.Component {
         constructor() {
           super(...arguments),
@@ -1112,11 +1112,11 @@
       }
       (0, i.gn)([_.ak], g.prototype, "BindCanvasRef", null),
         (0, i.gn)([_.ak], g.prototype, "updateCanvas", null);
-      var b = r(14100),
-        B = r(43813),
+      var b = r(69159),
+        B = r(76476),
         S = r(32873),
         y = r(26171),
-        w = r(13806);
+        w = r(19304);
       class f extends l.Component {
         render() {
           let e = this.props,
@@ -1166,21 +1166,21 @@
           );
         }
       }
-      var M = r(20186),
-        v = r(76547),
-        F = r(62924),
-        T = r(86701),
-        R = r(72745),
-        E = r(81052),
-        z = r(31587),
-        O = r(81171),
-        x = r(46504),
-        D = r(70983),
-        W = r(56781),
-        I = r(1357),
-        P = r(76014),
+      var M = r(44421),
+        v = r(55330),
+        F = r(71937),
+        T = r(701),
+        R = r(75962),
+        E = r(60161),
+        z = r(14826),
+        O = r(88443),
+        x = r(36041),
+        D = r(32765),
+        W = r(73762),
+        I = r(80525),
+        P = r(25202),
         k = r.n(P),
-        A = r(8392);
+        A = r(69338);
       function N() {
         return l.createElement(
           "div",
@@ -1238,7 +1238,7 @@
         }
       }
       (0, i.gn)([_.ak], U.prototype, "OnClick", null);
-      r(31406);
+      r(56189);
       let G = class extends l.Component {
         constructor(e) {
           super(e);
@@ -1538,7 +1538,7 @@
         }
       };
       L = (0, i.gn)([o.Pi], L);
-      r(72524);
+      r(15363);
       const j = 15;
       let X = class extends l.Component {
         constructor(e) {
@@ -3178,21 +3178,21 @@
         (0, i.gn)([_.ak], le.prototype, "UpdatePanel", null),
         (le = (0, i.gn)([o.Pi], le));
     },
-    33161: (e, t, r) => {
+    96566: (e, t, r) => {
       "use strict";
       r.d(t, { Z: () => we });
       var i = r(33940),
         a = r(52868),
         s = r.n(a),
         n = r(50265),
-        o = r(9050),
-        l = (r(6960), r(49969), r(17922)),
-        c = r(2546),
-        d = r(70657),
-        m = r(82569),
-        u = r(87487),
+        o = r(20069),
+        l = (r(46132), r(51637), r(54856)),
+        c = r(65406),
+        d = r(36597),
+        m = r(47165),
+        u = r(89980),
         h = r(45878),
-        _ = r(19320);
+        _ = r(29063);
       const p = h.Message;
       class g extends p {
         constructor(e = null) {
@@ -6420,12 +6420,12 @@
             });
           });
       })(pe || (pe = {}));
-      r(96158);
-      var ge = r(59821),
-        be = r(23213),
-        Be = r(31587),
-        Se = r(70983),
-        ye = r(39766);
+      r(63403);
+      var ge = r(26464),
+        be = r(85246),
+        Be = r(14826),
+        Se = r(32765),
+        ye = r(92874);
       class we {
         constructor() {
           this.m_mapChats = new Map();
@@ -7131,20 +7131,20 @@
         (0, i.gn)([ge.a], fe.prototype, "RequestLoop", null),
         (0, i.gn)([ge.a], fe.prototype, "MuteUserForSession", null);
     },
-    39766: (e, t, r) => {
+    92874: (e, t, r) => {
       "use strict";
       r.d(t, { V: () => g, l: () => _ });
       var i = r(33940),
         a = r(52868),
         s = r.n(a),
         n = r(50265),
-        o = r(6960),
-        l = r(49969),
-        c = r(17922),
-        d = r(82569),
-        m = (r(39396), r(37034)),
-        u = (r(96158), r(70983)),
-        h = r(1583);
+        o = r(46132),
+        l = r(51637),
+        c = r(54856),
+        d = r(47165),
+        m = (r(97036), r(20830)),
+        u = (r(63403), r(32765)),
+        h = r(45464);
       class _ {
         constructor(e) {
           (this.m_mapPlayerCache = new Map()),

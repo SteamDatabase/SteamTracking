@@ -3,10 +3,10 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [6272],
   {
-    11147: (e) => {
+    60361: (e) => {
       e.exports = { Main: "basicpartnereventrender_Main_2U6-V" };
     },
-    33333: (e) => {
+    70018: (e) => {
       e.exports = {
         GameTitleContainer: "eventcalendartile_GameTitleContainer_1bEUE",
         AppIcon: "eventcalendartile_AppIcon_3wvlH",
@@ -84,7 +84,7 @@
         VideoPlayerReady: "eventcalendartile_VideoPlayerReady_1K9tx",
       };
     },
-    66057: (e) => {
+    80122: (e) => {
       e.exports = {
         GraphicalAssetsTabs: "tabbar_GraphicalAssetsTabs_36r8g",
         GraphicalAssetsTab: "tabbar_GraphicalAssetsTab_K1_Tp",
@@ -96,18 +96,18 @@
         StatusCaution: "tabbar_StatusCaution_31Lxu",
       };
     },
-    85806: (e) => {
+    51857: (e) => {
       e.exports = {
         YoutubePreviewImage: "youtubepreviewimage_YoutubePreviewImage_MzScK",
         YoutubePlayer: "youtubepreviewimage_YoutubePlayer_3uK6c",
       };
     },
-    76873: (e) => {
+    75159: (e) => {
       e.exports = {
         BroadcastChatCtn: "conferencebroadcast_BroadcastChatCtn_28b1v",
       };
     },
-    14128: (e) => {
+    30292: (e) => {
       e.exports = {
         UpcomingEventsCtn: "conferenceevents_UpcomingEventsCtn_2bWup",
         SectionTitle: "conferenceevents_SectionTitle_7MpRs",
@@ -128,7 +128,7 @@
         HelpRequirements: "conferenceevents_HelpRequirements_3yMlx",
       };
     },
-    84352: (e) => {
+    33951: (e) => {
       e.exports = {
         ConferenceHome: "conferencepages_ConferenceHome_3tSqD",
         LeftCol: "conferencepages_LeftCol_19xFd",
@@ -158,7 +158,7 @@
         AboutTitle: "conferencepages_AboutTitle_3yWGo",
       };
     },
-    77123: (e) => {
+    92909: (e) => {
       e.exports = {
         ConferencePageCtn: "landing_ConferencePageCtn_oP_SP",
         ConferenceContentsCtn: "landing_ConferenceContentsCtn_1HPPR",
@@ -168,16 +168,16 @@
         ConferenceDateRange: "landing_ConferenceDateRange_2FSEt",
       };
     },
-    91658: (e, t, n) => {
+    24218: (e, t, n) => {
       "use strict";
       n.d(t, { M: () => s });
       var a = n(33940),
-        o = (n(82569), n(50265), n(49969), n(52868)),
+        o = (n(47165), n(50265), n(51637), n(52868)),
         l = n.n(o),
-        r = n(70983),
-        c = n(70756),
-        i = (n(96158), n(50567));
-      n(6960);
+        r = n(32765),
+        c = n(10412),
+        i = (n(63403), n(52502));
+      n(46132);
       class s extends c.cA {
         DeleteOldAnnouncement(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
@@ -202,20 +202,20 @@
         }
       }
     },
-    60366: (e, t, n) => {
+    74015: (e, t, n) => {
       "use strict";
       n.d(t, { h: () => _ });
       var a = n(33940),
         o = n(88464),
         l = n(89526),
-        r = (n(6960), n(50567), n(91658)),
-        c = n(70756),
-        i = n(90806),
-        s = n(25883),
-        m = n(24868),
-        d = n(31621),
-        u = n(11147),
-        v = n(46085);
+        r = (n(46132), n(52502), n(24218)),
+        c = n(10412),
+        i = n(52316),
+        s = n(43690),
+        m = n(57742),
+        d = n(4306),
+        u = n(60361),
+        v = n(99307);
       function p(e) {
         const { event: t, closeModal: n } = e;
         return l.createElement(
@@ -279,15 +279,15 @@
         (0, a.gn)([d.ak], E.prototype, "OnBackgroundClick", null),
         (E = (0, a.gn)([o.Pi], E));
     },
-    74834: (e, t, n) => {
+    5418: (e, t, n) => {
       "use strict";
       n.d(t, { I: () => d });
       var a = n(89526),
         o = n(74802),
-        l = (n(49969), n(23213)),
-        r = n(83983),
-        c = (n(67237), n(50567), n(49064)),
-        i = n(10717);
+        l = (n(51637), n(85246)),
+        r = n(56368),
+        c = (n(53236), n(52502), n(62505)),
+        i = n(61615);
       class s {
         constructor() {
           (this.m_bHasBeenTracked = !1), (this.m_fnSubmit = null);
@@ -338,18 +338,18 @@
           return null;
         };
     },
-    50230: (e, t, n) => {
+    43068: (e, t, n) => {
       "use strict";
       n.d(t, { n: () => v });
       var a = n(89526),
         o = n(59934),
-        l = n(13806),
-        r = n(31587),
-        c = n(31319),
-        i = n(66057),
+        l = n(19304),
+        r = n(14826),
+        c = n(5029),
+        i = n(80122),
         s = n.n(i),
-        m = n(40108),
-        d = n(72745);
+        m = n(84343),
+        d = n(75962);
       class u extends a.Component {
         constructor() {
           super(...arguments), (this.state = { activeTab: "" });
@@ -458,18 +458,18 @@
       }
       const v = (0, o.EN)(u);
     },
-    59032: (e, t, n) => {
+    45906: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { ConferenceRoutes: () => ut, default: () => vt });
       var a = n(89526),
         o = n(59934),
-        l = n(20352),
-        r = n(83799),
-        c = n(6960),
-        i = (n(49969), n(82569)),
-        s = (n(72002), n(57582)),
-        m = n(23213),
-        d = n(70983);
+        l = n(35993),
+        r = n(14288),
+        c = n(46132),
+        i = (n(51637), n(47165)),
+        s = (n(52248), n(81630)),
+        m = n(85246),
+        d = n(32765);
       class u {
         constructor() {
           (this.m_mapConferences = new Map()),
@@ -530,20 +530,20 @@
           );
         }
       }
-      var v = n(73265),
-        p = n(22840),
-        _ = n(23062),
-        E = n(1633),
-        C = n(50230),
-        g = n(31587),
+      var v = n(85651),
+        p = n(17547),
+        _ = n(21904),
+        E = n(87178),
+        C = n(43068),
+        g = n(14826),
         h = n(25125),
-        f = n(76320),
-        S = n(75467),
-        b = (n(87487), n(33927), n(89400)),
-        T = n(13806),
-        I = n(76873),
-        y = n(24613),
-        N = n(49487);
+        f = n(55844),
+        S = n(28388),
+        b = (n(89980), n(7311), n(98889)),
+        T = n(19304),
+        I = n(75159),
+        y = n(43628),
+        N = n(532);
       function k(e) {
         const { conferenceInfo: t } = e,
           n = t.broadcastSteamID.ConvertTo64BitString();
@@ -597,7 +597,7 @@
               a.createElement(k, { conferenceInfo: t })
             );
       }
-      var D = n(49551);
+      var D = n(82988);
       function w(e) {
         const { conferenceInfo: t } = e;
         return "dev" != d.De.WEB_UNIVERSE
@@ -611,14 +611,14 @@
               a.createElement(D.m, { strConfigID: "application_config" })
             );
       }
-      var M = n(52601),
-        x = n(49208),
-        L = n(86701),
-        P = n(40108),
-        F = n(93958),
+      var M = n(50857),
+        x = n(40993),
+        L = n(701),
+        P = n(84343),
+        F = n(25508),
         B = n(33940),
-        R = n(49064),
-        H = n(83983);
+        R = n(62505),
+        H = n(56368);
       class V {
         constructor() {
           this.m_inFlight = null;
@@ -656,33 +656,33 @@
           return V.m_singleton || (V.m_singleton = new V()), V.m_singleton;
         }
       }
-      var O = n(81319),
-        Z = (n(67237), n(52310)),
-        U = n(50567),
-        X = n(70756),
-        W = n(57255),
-        Y = n(60366),
+      var O = n(7569),
+        Z = (n(53236), n(52002)),
+        U = n(52502),
+        X = n(10412),
+        W = n(57605),
+        Y = n(74015),
         j = n(52868),
         Q = n.n(j),
         q = n(88464),
-        K = n(36764),
-        z = n(29760),
-        $ = n(10717),
-        J = n(59649),
-        ee = n(43890),
-        te = n(7297),
-        ne = n(2351),
-        ae = n(80316),
-        oe = n(14100),
-        le = n(55745),
-        re = n(81052),
-        ce = n(31621),
-        ie = n(98197),
-        se = n(46085),
-        me = n(24868),
-        de = n(33333),
+        K = n(1063),
+        z = n(82079),
+        $ = n(61615),
+        J = n(2308),
+        ee = n(85521),
+        te = n(40103),
+        ne = n(54671),
+        ae = n(23277),
+        oe = n(69159),
+        le = n(79586),
+        re = n(60161),
+        ce = n(4306),
+        ie = n(207),
+        se = n(99307),
+        me = n(57742),
+        de = n(70018),
         ue = n.n(de),
-        ve = n(91965);
+        ve = n(20790);
       let pe = class extends a.Component {
         OnMuteButton(e) {
           const { calendarEvent: t } = this.props;
@@ -946,12 +946,12 @@
         (0, B.gn)([ce.ak], pe.prototype, "CreateContextMenu", null),
         (pe = (0, B.gn)([q.Pi], pe));
       const _e = (0, o.EN)(pe);
-      var Ee = n(74834),
-        Ce = n(46681),
-        ge = n(76473),
-        he = n(90043),
-        fe = n(91096),
-        Se = n(85806),
+      var Ee = n(5418),
+        Ce = n(80361),
+        ge = n(66615),
+        he = n(54297),
+        fe = n(86177),
+        Se = n(51857),
         be = n.n(Se);
       const Te = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
@@ -1036,8 +1036,8 @@
             );
           }
         };
-      var ye = n(81171),
-        Ne = n(32078);
+      var ye = n(88443),
+        Ne = n(73406);
       let ke = class extends a.Component {
         constructor() {
           super(...arguments), (this.state = { bVideoPlayerReady: !1 });
@@ -1582,8 +1582,8 @@
       (0, B.gn)([ce.ak], xe.prototype, "OnPerformVoteUp", null),
         (0, B.gn)([ce.ak], xe.prototype, "OnDiscussionClicked", null),
         (xe = (0, B.gn)([q.Pi], xe));
-      var Le = n(10904),
-        Pe = n(31319);
+      var Le = n(1275),
+        Pe = n(5029);
       const Fe = "emclan",
         Be = "emgid";
       function Re(e) {
@@ -1618,11 +1618,11 @@
             : null
         );
       }
-      var He = n(83878),
-        Ve = n(8392),
-        Oe = n(66715),
-        Ze = n(5055),
-        Ue = n(14128);
+      var He = n(24591),
+        Ve = n(69338),
+        Oe = n(58218),
+        Ze = n(72120),
+        Ue = n(30292);
       const Xe = 10;
       function We(e) {
         const t = (0, R.vY)(),
@@ -1955,9 +1955,9 @@
           )
         );
       }
-      var et = n(84352),
-        tt = n(33920),
-        nt = n(55863);
+      var et = n(33951),
+        tt = n(50653),
+        nt = n(4585);
       const at = 30;
       function ot(e) {
         const { conferenceInfo: t, bShowYouTube: n } = e,
@@ -2169,7 +2169,7 @@
         const { conferenceInfo: t } = e;
         return a.createElement(ze, { conferenceInfo: t });
       }
-      var it = n(77123);
+      var it = n(92909);
       function st(e) {
         const { strVanity: t } = e,
           n = u.Get().GetConferenceInfo(t);
@@ -2273,7 +2273,7 @@
           )
         );
       }
-      var dt = n(83215);
+      var dt = n(71209);
       const ut = {
         LandingPage: (e) => `/(conference|steamworksvirtualconference)/${e}`,
       };

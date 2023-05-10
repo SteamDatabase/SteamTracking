@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2832],
   {
-    20535: (e) => {
+    27618: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -16,7 +16,7 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    49487: (e, t, a) => {
+    532: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -29,18 +29,18 @@
         o = a(88464),
         i = a(25125),
         l = a(89526),
-        c = a(76320),
-        d = a(75467),
-        m = a(12568),
-        p = (a(82702), a(23708)),
-        _ = a(30156),
-        u = a(16147),
-        h = a(35266),
-        b = a(68910),
-        E = a(8392),
-        g = a(13806),
-        S = a(70983),
-        v = (a(49969), a(20535)),
+        c = a(55844),
+        d = a(28388),
+        m = a(98009),
+        p = (a(53143), a(25871)),
+        _ = a(23715),
+        u = a(44865),
+        h = a(98389),
+        b = a(71161),
+        E = a(69338),
+        g = a(19304),
+        S = a(32765),
+        v = (a(51637), a(27618)),
         f = a.n(v);
       const C = (0, o.Pi)((e) => {
         const { appid: t } = e,
@@ -124,24 +124,24 @@
           )
         );
       });
-      var N = a(6960),
-        D = (a(43155), a(81084)),
-        y = (a(87487), a(72634), a(54997), a(52310)),
-        B = a(33927),
-        I = a(89400),
-        P = (a(18376), a(63154)),
-        G = a(75751),
-        w = a(90043),
-        x = a(3660),
-        A = a(86701),
-        O = a(40108),
-        k = a(20183),
-        T = a(31587),
-        L = a(81171),
-        R = a(31621),
-        V = (a(26105), a(82569)),
-        M = (a(50567), a(92801)),
-        W = a(24613),
+      var N = a(46132),
+        D = (a(13112), a(65786)),
+        y = (a(89980), a(9132), a(10521), a(52002)),
+        B = a(7311),
+        I = a(98889),
+        P = (a(75687), a(57858)),
+        G = a(27704),
+        w = a(54297),
+        x = a(46294),
+        A = a(701),
+        O = a(84343),
+        k = a(52550),
+        T = a(14826),
+        L = a(88443),
+        R = a(4306),
+        V = (a(24105), a(47165)),
+        M = (a(52502), a(61218)),
+        W = a(43628),
         H = a.n(W);
       const U = (0, o.Pi)((e) => {
         const { event: t } = e,
@@ -205,16 +205,16 @@
           )
         );
       });
-      var Z = a(65717),
+      var Z = a(17318),
         j = a.n(Z),
-        F = a(92377),
-        X = a(99212),
-        Y = a(88393),
-        q = a(51751),
-        $ = a(46085),
-        z = a(72745),
-        J = a(91965),
-        K = a(73401),
+        F = a(37865),
+        X = a(82248),
+        Y = a(15164),
+        q = a(75313),
+        $ = a(99307),
+        z = a(75962),
+        J = a(20790),
+        K = a(43997),
         Q = a.n(K);
       function ee(e) {
         const { steamid: t, closeModal: a } = e;
@@ -336,9 +336,9 @@
       function ne(e, t) {
         return S.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
-      var re = a(81052),
-        se = a(24868),
-        oe = a(76553);
+      var re = a(60161),
+        se = a(57742),
+        oe = a(50295);
       const ie = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
@@ -1181,7 +1181,7 @@
           : null;
       }
     },
-    20183: (e, t, a) => {
+    52550: (e, t, a) => {
       "use strict";
       a.d(t, { h: () => s });
       var n = a(89526),
