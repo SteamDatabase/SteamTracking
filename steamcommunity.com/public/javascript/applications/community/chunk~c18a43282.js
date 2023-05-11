@@ -24981,7 +24981,9 @@
           const d = this.width >= i && this.height >= n,
             m = s ? this.width === i && this.height === n : d,
             u = r && r != this.fileType,
-            p = !!e && 0 == (0, a.Vy)(this.fileType, e || []).length,
+            p =
+              !!(e && e.length > 0) &&
+              0 == (0, a.Vy)(this.fileType, e || []).length,
             h = Boolean(_(this.fileType));
           let g = "",
             b = !1;
