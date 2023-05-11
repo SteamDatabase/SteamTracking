@@ -25619,6 +25619,9 @@ body.in_global_drag .friendlist_titlebar {
 .chatTabSetContainer {
   display: flex;
 }
+.chatTabSetContainer.inclient {
+  padding-right: 101px;
+}
 .chatTabSetContainer.gamepadui {
   justify-content: space-between;
 }

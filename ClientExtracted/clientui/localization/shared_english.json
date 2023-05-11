@@ -2692,6 +2692,8 @@
   "ServerBrowser_ViewServerInfo": "View server info",
   "ServerBrowser_RefreshServer": "Refresh server",
   "ServerBrowser_AddServerToFavorites": "Add server to favorites",
+  "ServerBrowser_CopyIPAddressToClipboard": "Copy '%1$s' to clipboard",
+  "ServerBrowser_CopySteamJoinLinkToClipboard": "Copy link to clipboard",
   "ServerBrowser_RemoveServerFromHistory": "Remove server from history",
   "ServerBrowser_RemoveServerFromFavorites": "Remove server from favorites",
   "ServerBrowser_AddServerByIP": "Add server by IP address",

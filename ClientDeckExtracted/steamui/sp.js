@@ -8625,7 +8625,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, se.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1683664054),
+          s = parseInt(1683765467),
           c = s && (0, Ya.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == _.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -9936,56 +9936,83 @@
         return t;
       }
       function Ro(e) {
-        const { tab: t, server: n } = e;
-        return o.createElement(
-          x.ContextMenu,
-          null,
+        const { tab: t, server: n } = e,
+          { ownerWindow: r } = (0, m.useBrowserContext)(),
+          l = function (e) {
+            r.navigator.clipboard.writeText(e).catch((e) => {
+              console.error("Failed to copy to clipboard:", e);
+            });
+          };
+        let i = Eo(n),
+          s = "";
+        return (
+          i &&
+            ((s = `steam://connect/${i}`),
+            n.appid && (s += `?appid=${n.appid}`)),
           o.createElement(
-            x.ContextMenuItem,
-            {
-              onSelected: () =>
-                (function (e) {
-                  mo.mL.ShowServerGameInfoDialog(e);
-                })(n),
-            },
-            (0, se.Localize)("#ServerBrowser_ViewServerInfo")
-          ),
-          o.createElement(
-            x.ContextMenuItem,
-            { onSelected: () => Lo(n) },
-            (0, se.Localize)("#ServerBrowser_ConnectToServer")
-          ),
-          "favorites" != t.id &&
+            x.ContextMenu,
+            null,
             o.createElement(
               x.ContextMenuItem,
               {
                 onSelected: () =>
                   (function (e) {
-                    return (0, a.mG)(this, void 0, void 0, function* () {
-                      yield SteamClient.ServerBrowser.AddFavoriteServer(To(e));
-                    });
+                    mo.mL.ShowServerGameInfoDialog(e);
                   })(n),
               },
-              (0, se.Localize)("#ServerBrowser_AddServerToFavorites")
+              (0, se.Localize)("#ServerBrowser_ViewServerInfo")
             ),
-          "favorites" == t.id &&
             o.createElement(
               x.ContextMenuItem,
-              {
-                onSelected: () =>
-                  SteamClient.ServerBrowser.RemoveFavoriteServer(To(n)),
-              },
-              (0, se.Localize)("#ServerBrowser_RemoveServerFromFavorites")
+              { onSelected: () => Lo(n) },
+              (0, se.Localize)("#ServerBrowser_ConnectToServer")
             ),
-          "history" == t.id &&
-            o.createElement(
-              x.ContextMenuItem,
-              {
-                onSelected: () =>
-                  SteamClient.ServerBrowser.RemoveHistoryServer(To(n)),
-              },
-              (0, se.Localize)("#ServerBrowser_RemoveServerFromHistory")
-            )
+            i &&
+              o.createElement(
+                x.ContextMenuItem,
+                { onSelected: () => l(i) },
+                (0, se.Localize)("#ServerBrowser_CopyIPAddressToClipboard", i)
+              ),
+            s &&
+              o.createElement(
+                x.ContextMenuItem,
+                { onSelected: () => l(s) },
+                (0, se.Localize)("#ServerBrowser_CopySteamJoinLinkToClipboard")
+              ),
+            "favorites" != t.id &&
+              o.createElement(
+                x.ContextMenuItem,
+                {
+                  onSelected: () =>
+                    (function (e) {
+                      return (0, a.mG)(this, void 0, void 0, function* () {
+                        yield SteamClient.ServerBrowser.AddFavoriteServer(
+                          To(e)
+                        );
+                      });
+                    })(n),
+                },
+                (0, se.Localize)("#ServerBrowser_AddServerToFavorites")
+              ),
+            "favorites" == t.id &&
+              o.createElement(
+                x.ContextMenuItem,
+                {
+                  onSelected: () =>
+                    SteamClient.ServerBrowser.RemoveFavoriteServer(To(n)),
+                },
+                (0, se.Localize)("#ServerBrowser_RemoveServerFromFavorites")
+              ),
+            "history" == t.id &&
+              o.createElement(
+                x.ContextMenuItem,
+                {
+                  onSelected: () =>
+                    SteamClient.ServerBrowser.RemoveHistoryServer(To(n)),
+                },
+                (0, se.Localize)("#ServerBrowser_RemoveServerFromHistory")
+              )
+          )
         );
       }
       const Io = (0, D.WithErrorBoundary)(function (e) {
@@ -11282,13 +11309,13 @@
         const { initialListSelection: t } = e,
           [n, a] = (0, o.useState)(t || { type: "recents" });
         (0, o.useEffect)(() => a((e) => t || e), [t]);
-        const [r, l] = (0, Xo.uR)(
+        const [r, l, i, s] = (0, Xo.uR)(
             void 0,
             "app" === n.type ? n.appid : 0,
             Qo.by.NEWEST_FIRST,
-            1e3
+            50
           ),
-          i = (function (e) {
+          c = (function (e) {
             const [t, n] = (0, o.useState)({}),
               [a, r] = (0, o.useState)();
             return {
@@ -11325,10 +11352,10 @@
                 (null == t ? void 0 : t.length) &&
                 (r(!1), n({ [t[0]]: !0 }));
             }, [a, t, n]);
-        })(n, r, i.setSelected);
-        const s = i.onDeselectAll,
-          c = Object.keys(i.selected),
-          m = c.length;
+        })(n, r, c.setSelected);
+        const m = c.onDeselectAll,
+          d = Object.keys(c.selected),
+          u = d.length;
         return o.createElement(
           pl,
           { direction: "column", space: "md", grow: !0 },
@@ -11342,19 +11369,21 @@
             { direction: "row", space: "md", grow: !0 },
             o.createElement(
               al,
-              Object.assign({ handles: r }, i, {
+              Object.assign({ handles: r }, c, {
                 selectedList: n,
                 onSelectedListChange: a,
-                loading: l === Xo.Jg.Loading,
+                loadState: l,
+                onRequestLoad: i,
+                numTotal: s,
               })
             ),
             o.createElement(
               "div",
               { className: Yo.FocusedContainer },
-              0 === m && o.createElement(Fl, null),
-              1 === m &&
-                o.createElement(hl, { handle: c[0], onResetSelection: s }),
-              m > 1 && o.createElement(Gl, { handles: c, onResetSelection: s })
+              0 === u && o.createElement(Fl, null),
+              1 === u &&
+                o.createElement(hl, { handle: d[0], onResetSelection: m }),
+              u > 1 && o.createElement(Gl, { handles: d, onResetSelection: m })
             )
           )
         );
@@ -11375,14 +11404,26 @@
             onSelectAll: l,
             selectedList: i,
             onSelectedListChange: s,
-            loading: c,
+            loadState: c,
+            onRequestLoad: m,
+            numTotal: d,
           } = e,
-          [m, d] = (0, o.useState)(1),
-          u = 1 !== m,
-          p = Object.keys(a),
-          g = p.length,
-          _ = (0, ve.Q2)(),
-          h = ("app" === i.type && g > 0) || 1 === g;
+          [u, p] = (0, o.useState)(1),
+          g = 1 !== u,
+          _ = Object.keys(a),
+          h = _.length,
+          b = (0, ve.Q2)(),
+          v = ("app" === i.type && h > 0) || 1 === h,
+          S = c === Xo.Jg.Loading && 0 === t.length,
+          E = {
+            handles: t,
+            onSelect: n,
+            selected: a,
+            loadState: c,
+            onRequestLoad: m,
+            numTotal: d,
+            itemsPerRow: u,
+          };
         return o.createElement(
           "div",
           { className: Yo.LeftList },
@@ -11397,25 +11438,25 @@
                 const t =
                   "app" === i.type
                     ? i.appid
-                    : null === (e = (0, Xo.ST)(p[0])) || void 0 === e
+                    : null === (e = (0, Xo.ST)(_[0])) || void 0 === e
                     ? void 0
                     : e.nAppID;
                 t && SteamClient.Screenshots.ShowScreenshotsOnDisk(t);
               },
               title: (0, se.Localize)("#ScreenshotUploader_ShowOnDisk"),
-              disabled: !h,
+              disabled: !v,
             })
           ),
           o.createElement(
             zl,
             null,
-            g <= 1 &&
+            h <= 1 &&
               o.createElement(
                 jl,
                 { grow: !0, onClick: l },
                 (0, se.Localize)("#ScreenshotUploader_SelectAll")
               ),
-            g > 1 &&
+            h > 1 &&
               o.createElement(
                 jl,
                 { grow: !0, onClick: r },
@@ -11423,40 +11464,30 @@
               ),
             o.createElement(Vl, {
               icon: "gear",
-              onClick: () => _.Settings("InGame"),
+              onClick: () => b.Settings("InGame"),
               title: (0, se.Localize)("#ScreenshotUploader_Settings"),
             })
           ),
-          !c &&
+          !S &&
             "recents" !== i.type &&
-            o.createElement(ll, {
-              handles: t,
-              onSelect: n,
-              itemsPerRow: m,
-              selected: a,
-            }),
-          !c &&
+            o.createElement(ll, Object.assign({}, E)),
+          !S &&
             "recents" === i.type &&
-            o.createElement(il, {
-              handles: t,
-              onSelect: n,
-              itemsPerRow: m,
-              selected: a,
-            }),
-          c && o.createElement(ol, { itemsPerRow: m }),
+            o.createElement(il, Object.assign({}, E)),
+          S && o.createElement(ol, { itemsPerRow: u }),
           o.createElement(
             zl,
             null,
             o.createElement(Vl, {
-              active: !u,
+              active: !g,
               icon: "stackedrectangles",
-              onClick: () => d(1),
+              onClick: () => p(1),
               title: (0, se.Localize)("#ScreenshotUploader_View_List"),
             }),
             o.createElement(Vl, {
-              active: u,
+              active: g,
               icon: "grid",
-              onClick: () => d(3),
+              onClick: () => p(3),
               title: (0, se.Localize)("#ScreenshotUploader_View_Grid"),
             })
           )
@@ -11581,14 +11612,17 @@
             itemsPerRow: a,
             selected: r,
             handles: l,
+            loadState: i,
+            onRequestLoad: s,
+            numTotal: c,
           } = e,
-          i = (0, o.useRef)(),
-          s = 1 === a,
-          c = t.length,
-          m = s ? "single" : "multi",
-          d = (0, o.useCallback)(
-            (e) =>
-              (function (e) {
+          m = (0, o.useRef)(),
+          d = 1 === a,
+          u = d ? "single" : "multi",
+          p = (0, o.useCallback)(
+            (e) => {
+              var n;
+              return (function (e) {
                 switch (e) {
                   case "heading":
                     return Number(Yo.listSectionHeadingHeight);
@@ -11597,27 +11631,42 @@
                   case "single":
                     return Number(Yo.listSingleItemHeight);
                 }
-              })("heading" === t[e].type ? "heading" : m),
-            [t, m]
+              })(
+                "heading" ===
+                  (null === (n = t[e]) || void 0 === n ? void 0 : n.type)
+                  ? "heading"
+                  : u
+              );
+            },
+            [t, u]
           ),
-          u = (0, _o.oq)({ size: c, parentRef: i, estimateSize: d }),
-          p = {
-            position: "relative",
-            display: "grid",
-            alignContent: "start",
-            gridTemplateColumns: `repeat(${a}, 1fr)`,
-            gap: (s ? 4 : 8) + "px",
-            height: `${u.totalSize}px`,
-            width: "100%",
-          };
+          g = (0, _o.oq)({
+            size: i === Xo.Jg.Complete ? t.length : Math.ceil(c / a),
+            parentRef: m,
+            estimateSize: p,
+          });
+        (0, o.useEffect)(() => {
+          const e = g.virtualItems[g.virtualItems.length - 1];
+          e && e.index >= t.length - 1 && i === Xo.Jg.Loaded && s();
+        }, [g, t.length, i, s]);
+        const _ = {
+          position: "relative",
+          display: "grid",
+          alignContent: "start",
+          gridTemplateColumns: `repeat(${a}, 1fr)`,
+          gap: (d ? 4 : 8) + "px",
+          height: `${g.totalSize}px`,
+          width: "100%",
+        };
         return o.createElement(
           "div",
-          { className: Yo.ScreenshotList, ref: i, style: { overflow: "auto" } },
+          { className: Yo.ScreenshotList, ref: m, style: { overflow: "auto" } },
           o.createElement(
             "div",
-            { className: Yo.ScreenshotListInner, style: p },
-            u.virtualItems.map((e) =>
-              o.createElement(
+            { className: Yo.ScreenshotListInner, style: _ },
+            g.virtualItems.map((e) => {
+              const i = e.index > t.length - 1;
+              return o.createElement(
                 "div",
                 {
                   key: e.index,
@@ -11631,16 +11680,18 @@
                     transform: `translateY(${e.start}px)`,
                   },
                 },
-                o.createElement(cl, {
-                  item: t[e.index],
-                  itemsPerRow: a,
-                  selected: r,
-                  onSelect: n,
-                  rows: t,
-                  handles: l,
-                })
-              )
-            )
+                i
+                  ? o.createElement("div", null)
+                  : o.createElement(cl, {
+                      item: t[e.index],
+                      itemsPerRow: a,
+                      selected: r,
+                      onSelect: n,
+                      rows: t,
+                      handles: l,
+                    })
+              );
+            })
           )
         );
       }
@@ -15161,18 +15212,20 @@
                 (e.SteamClient.Window.SetModal(!0),
                 e.SteamClient.Window.SetForegroundWindow(),
                 a(e));
-            }, []);
-          if (7 != (0, s.tU)()) return null;
-          const l = (0, se.Localize)("#SSA_Title"),
-            i = () => {
+            }, []),
+            l = (0, s.tU)();
+          if (_.Config.EREALM != c.ESteamRealm.k_ESteamRealmGlobal) return null;
+          if (7 != l) return null;
+          const i = (0, se.Localize)("#SSA_Title"),
+            m = () => {
               SteamClient.User.StartShutdown(!0);
             };
           return o.createElement(
             ae.ModalDialogPopup,
             {
               refPopup: r,
-              strName: l,
-              onDismiss: i,
+              strName: i,
+              onDismiss: m,
               resizable: !0,
               popupWidth: 824,
               popupHeight: 620,
@@ -15182,9 +15235,9 @@
             },
             o.createElement(bc, {
               popup: n,
-              strName: l,
+              strName: i,
               strURL: e,
-              onClose: i,
+              onClose: m,
               className: pc().SSAContent,
             }),
             o.createElement(
@@ -15213,7 +15266,7 @@
               ),
               o.createElement(
                 ne.Button,
-                { onClick: i },
+                { onClick: m },
                 (0, se.Localize)("#SSA_ExitSteam")
               )
             )
@@ -19090,7 +19143,7 @@
             n == ee.k_nGameIDWinUI
               ? "Valve Steam Client"
               : "Valve Steam GameOverlay",
-          [h, b] = (0, Za.f)(t, g, a.strURL, _);
+          [h, b] = (0, Za.f)(t, g, a.strURL, _, void 0, !1);
         Fd(h);
         const v = qd(
             g,
@@ -21679,7 +21732,7 @@
           } = e,
           h = `OverlayPopupURL${t}_${n}`,
           b = (p ? window.localStorage.getItem(h) : null) || a,
-          [v, S] = (0, Za.f)(i, n, b, "Valve Steam GameOverlay"),
+          [v, S] = (0, Za.f)(i, n, b, "Valve Steam GameOverlay", void 0, !1),
           w = Jd(v, t, r),
           f = Wd(),
           y = (0, E.SZ)(() => (null == w ? void 0 : w.Title));
@@ -21848,7 +21901,7 @@
                 dimensions: t,
                 minWidth: n,
                 minHeight: a,
-              } = (0, Js.LU)(g, 1280, 1024, 600, 300);
+              } = (0, Js.LU)(g, 1280, 1024, 300, 300);
               return (
                 (e.dimensions = t),
                 (e.dimensions.left = void 0),
@@ -21860,7 +21913,7 @@
             },
             [g]
           ),
-          h = Rp(g, 1280, 1024, 600, 300),
+          h = Rp(g, 1280, 1024, 300, 300),
           b = r !== ee.k_nGameIDWinUI ? h : _;
         return o.createElement(
           Vr,

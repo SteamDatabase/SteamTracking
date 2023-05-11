@@ -53973,12 +53973,17 @@ body {
   height: 100%;
   background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
 }
-.login_Login_VZ6x_.login_AnimatedBackground_1NBr0.DesktopUI,
+.login_Login_VZ6x_.DesktopUI.login_AnimatedBackground_1NBr0,
 .DesktopUI .login_Login_VZ6x_.login_AnimatedBackground_1NBr0 {
   background: url(/images/client_login_bg_grid.jpg);
   background-position: 0px 800px;
   background-size: 160%;
   animation: login_BackgroundAnimation_3-0VU 60s linear infinite alternate;
+}
+.login_Login_VZ6x_.DesktopUI.login_AnimatedBackground_1NBr0.login_SteamChina_3CERU,
+.DesktopUI
+  .login_Login_VZ6x_.login_AnimatedBackground_1NBr0.login_SteamChina_3CERU {
+  background: url(/images/client_login_bg_grid_china.jpg);
 }
 @keyframes login_BackgroundAnimation_3-0VU {
   from {
@@ -55582,6 +55587,11 @@ body {
   font-size: 16px;
   font-weight: 500;
   flex: 1;
+}
+.achievementspage_MyAchievementsHeader_2UpV2
+  .achievementspage_SearchField_1BiMD {
+  padding-right: 10px;
+  min-width: 210px;
 }
 .achievementspage_HeaderContainer_36Dp_ {
   padding-left: 24px;
