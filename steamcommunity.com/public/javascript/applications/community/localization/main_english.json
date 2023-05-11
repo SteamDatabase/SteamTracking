@@ -1227,6 +1227,8 @@
     "Sale_VanityID_ValveLink": "Featured on Steam Store when Event is Live",
     "Sale_DontCapitalizeSectionTitles": "Don't capitalize section titles",
     "Sale_DontCapitalizeSectionTitles_ttip": "By default all section titles are made uppercase. Checking this will disable this, allowing for mixed case in section titles for appropriate languages",
+    "Sale_AdvertisingApp_ID": "Advertising App ID",
+    "Sale_AdvertisingApp_ID_ttip": "By specifying the Advertising App ID for this sale page, we then will track all Store Navigations to this Advertising App",
     "Sale_ValveTopSalePath": "(VO) Use steampowered.com/sale path",
     "Sale_ValveTopSalePath_ttip": "This will allow the partner chosen vanity (above) to be used in the Steam stores top level sale/ page. This means we are hosting, promoting and featuring their sales page instead of only their creator home page.",
     "Sale_SectionTitleFontSize": "Section Title Font Size",

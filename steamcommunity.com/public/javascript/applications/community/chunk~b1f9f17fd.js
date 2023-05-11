@@ -33595,6 +33595,19 @@
               });
             },
             checked: a,
+          }),
+          d.createElement(_.II, {
+            type: "number",
+            label: (0, E.Xx)("#Sale_AdvertisingApp_ID"),
+            tooltip: (0, E.Xx)("#Sale_AdvertisingApp_ID_ttip"),
+            onChange: (e) => {
+              (0, $.z)(() => {
+                (t.GetEventModel().jsondata.sale_associated_advertising_appid =
+                  Number(e.target.value)),
+                  t.SetDirty(l.jB.jsondata_sales);
+              });
+            },
+            value: n,
           })
         );
       }
@@ -35969,7 +35982,7 @@
           ]);
           if (s && !s.bOldAnnouncement && !r) return s.GID;
           let c;
-          (l.can_edit || l.support_user) &&
+          l.can_edit &&
             (c = yield h.wk.LoadClanEventLocalizationFromAnnouncementGID(a, e)),
             (function (e, t) {
               h.wk.ResetModel(e.GID, e.clanSteamID);

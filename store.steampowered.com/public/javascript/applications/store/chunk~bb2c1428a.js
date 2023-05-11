@@ -2823,7 +2823,7 @@
         broadcast_whitelist: [],
       };
       var l = r(47165),
-        c = (r(6681), r(27143), r(99648), r(1063)),
+        c = (r(6681), r(27143), r(99648), r(10521), r(1063)),
         d = r(82079),
         m = r(61218),
         u = (r(8894), r(85651)),
@@ -2852,7 +2852,7 @@
         "GetEventStartTime",
         null
       );
-      r(53215), r(10521), r(41068);
+      r(53215), r(41068);
       const E = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
       function B(e) {
         return (
@@ -10689,7 +10689,17 @@
             for (let e of this.m_filesToUpload)
               if (!this.BIsFileCompleted(e.file)) {
                 const t = e.IsValidAssetType(r, n, a);
-                if (!t.error && !t.needsCrop) {
+                if (
+                  (console.log("UploadAllFiles, status ", t, r, n, a),
+                  t.error || t.needsCrop)
+                )
+                  t.error &&
+                    (this.m_lastError = {
+                      file: e.file,
+                      message: t.error,
+                      status: 401,
+                    });
+                else {
                   e.status = "uploading";
                   i[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
                     e.file,
@@ -10819,7 +10829,7 @@
     },
     17974: (e, t, r) => {
       "use strict";
-      r.d(t, { Mr: () => h, eq: () => _ });
+      r.d(t, { Mr: () => h, eq: () => g });
       var n = r(33940),
         i = r(50265),
         a = (r(46132), r(69678)),
@@ -10855,7 +10865,7 @@
             s = !1,
             c = !e || 0 === e.length || e.includes(this.type);
           if (t) (n = t.width), (i = t.height), (s = !0);
-          else {
+          else if (this.type) {
             const e = a.h1[this.type];
             e &&
               ((n = e.width),
@@ -10865,16 +10875,16 @@
           const d = this.width >= n && this.height >= i,
             m = s ? this.width === n && this.height === i : d,
             u = r && r != this.fileType,
-            p = 0 == (0, a.Vy)(this.fileType, e || []).length,
-            h = Boolean();
-          let _ = "",
-            g = !1;
+            p = !!e && 0 == (0, a.Vy)(this.fileType, e || []).length,
+            h = Boolean(_(this.fileType));
+          let g = "",
+            v = !1;
           return (
             c
               ? p
-                ? (_ = (0, o.Xx)("#ImageUpload_InvalidFileType"))
+                ? (g = (0, o.Xx)("#ImageUpload_InvalidFileType"))
                 : u
-                ? (_ = (0, o.Xx)(
+                ? (g = (0, o.Xx)(
                     "#ImageUpload_InvalidFormat",
                     l.aN.GetExtensionStringForFileType(r)
                   ))
@@ -10882,12 +10892,12 @@
                 ? d
                   ? !m &&
                     h &&
-                    ((_ = (0, o.Xx)("#ImageUpload_InvalidDimensions", n, i)),
-                    (g = !0))
-                  : (_ = (0, o.Xx)("#ImageUpload_TooSmall", n, i))
-                : (_ = (0, o.Xx)("#ImageUpload_InvalidResolution", n, i))
-              : (_ = (0, o.Xx)("#ImageUpload_InvalidFormatSelected")),
-            { error: _, needsCrop: g }
+                    ((g = (0, o.Xx)("#ImageUpload_InvalidDimensions", n, i)),
+                    (v = !0))
+                  : (g = (0, o.Xx)("#ImageUpload_TooSmall", n, i))
+                : (g = (0, o.Xx)("#ImageUpload_InvalidResolution", n, i))
+              : (g = (0, o.Xx)("#ImageUpload_InvalidFormatSelected")),
+            { error: g, needsCrop: v }
           );
         }
       }
@@ -10912,15 +10922,7 @@
         CropImage(e, t, r, i, a, o, l) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             return new Promise((n, c) => {
-              const d = (function (e) {
-                switch (e) {
-                  case 3:
-                    return "image/png";
-                  case 1:
-                    return "image/jpeg";
-                }
-                return;
-              })(l);
+              const d = _(l);
               if (!d) return void c("Invalid format provided");
               const m = document.createElement("canvas");
               (m.width = a), (m.height = o);
@@ -10944,10 +10946,18 @@
           return (0, a.$N)(this.img.width, this.img.height, e);
         }
         GetResizeDimension() {
-          return _(this.type);
+          return g(this.type);
         }
       }
       function _(e) {
+        switch (e) {
+          case 3:
+            return "image/png";
+          case 1:
+            return "image/jpeg";
+        }
+      }
+      function g(e) {
         return "background" === e
           ? [
               { width: c, height: d },
