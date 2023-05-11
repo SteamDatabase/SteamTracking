@@ -24795,7 +24795,17 @@
             for (let e of this.m_filesToUpload)
               if (!this.BIsFileCompleted(e.file)) {
                 const t = e.IsValidAssetType(r, n, a);
-                if (!t.error && !t.needsCrop) {
+                if (
+                  (console.log("UploadAllFiles, status ", t, r, n, a),
+                  t.error || t.needsCrop)
+                )
+                  t.error &&
+                    (this.m_lastError = {
+                      file: e.file,
+                      message: t.error,
+                      status: 401,
+                    });
+                else {
                   e.status = "uploading";
                   i[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
                     e.file,
@@ -24961,7 +24971,7 @@
             s = !1,
             c = !e || 0 === e.length || e.includes(this.type);
           if (t) (i = t.width), (n = t.height), (s = !0);
-          else {
+          else if (this.type) {
             const e = a.h1[this.type];
             e &&
               ((i = e.width),
@@ -24971,16 +24981,16 @@
           const d = this.width >= i && this.height >= n,
             m = s ? this.width === i && this.height === n : d,
             u = r && r != this.fileType,
-            p = 0 == (0, a.Vy)(this.fileType, e || []).length,
-            h = Boolean();
-          let _ = "",
-            g = !1;
+            p = !!e && 0 == (0, a.Vy)(this.fileType, e || []).length,
+            h = Boolean(_(this.fileType));
+          let g = "",
+            b = !1;
           return (
             c
               ? p
-                ? (_ = (0, o.Xx)("#ImageUpload_InvalidFileType"))
+                ? (g = (0, o.Xx)("#ImageUpload_InvalidFileType"))
                 : u
-                ? (_ = (0, o.Xx)(
+                ? (g = (0, o.Xx)(
                     "#ImageUpload_InvalidFormat",
                     l.aN.GetExtensionStringForFileType(r)
                   ))
@@ -24988,12 +24998,12 @@
                 ? d
                   ? !m &&
                     h &&
-                    ((_ = (0, o.Xx)("#ImageUpload_InvalidDimensions", i, n)),
-                    (g = !0))
-                  : (_ = (0, o.Xx)("#ImageUpload_TooSmall", i, n))
-                : (_ = (0, o.Xx)("#ImageUpload_InvalidResolution", i, n))
-              : (_ = (0, o.Xx)("#ImageUpload_InvalidFormatSelected")),
-            { error: _, needsCrop: g }
+                    ((g = (0, o.Xx)("#ImageUpload_InvalidDimensions", i, n)),
+                    (b = !0))
+                  : (g = (0, o.Xx)("#ImageUpload_TooSmall", i, n))
+                : (g = (0, o.Xx)("#ImageUpload_InvalidResolution", i, n))
+              : (g = (0, o.Xx)("#ImageUpload_InvalidFormatSelected")),
+            { error: g, needsCrop: b }
           );
         }
       }
@@ -25018,15 +25028,7 @@
         CropImage(e, t, r, n, a, o, l) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             return new Promise((i, c) => {
-              const d = (function (e) {
-                switch (e) {
-                  case 3:
-                    return "image/png";
-                  case 1:
-                    return "image/jpeg";
-                }
-                return;
-              })(l);
+              const d = _(l);
               if (!d) return void c("Invalid format provided");
               const m = document.createElement("canvas");
               (m.width = a), (m.height = o);
@@ -25062,6 +25064,14 @@
               return [{ width: a.h1[e].width / 2, height: a.h1[e].height / 2 }];
             return;
           })(this.type);
+        }
+      }
+      function _(e) {
+        switch (e) {
+          case 3:
+            return "image/png";
+          case 1:
+            return "image/jpeg";
         }
       }
       (0, i.gn)([n.LO], h.prototype, "bCropped", void 0);
