@@ -3280,19 +3280,20 @@
             onDropFiles: t,
             renderDesciption: n,
             elAdditonalButtons: i,
+            strOverrideDragAndDropText: r,
           } = e,
-          [r] = (0, a.useState)(++E),
-          l = (0, a.useRef)(),
-          [s, o] = (0, a.useState)(!1),
-          c = (0, a.useRef)(0),
-          d = (0, a.useCallback)((e) => {
+          [l] = (0, a.useState)(++E),
+          s = (0, a.useRef)(),
+          [o, c] = (0, a.useState)(!1),
+          d = (0, a.useRef)(0),
+          m = (0, a.useCallback)((e) => {
             e.preventDefault(), e.stopPropagation();
           }, []),
-          m = (0, a.useCallback)(
+          u = (0, a.useCallback)(
             (e) => {
               let n = e.target.files;
               n && n.length > 0 && n[0] && t(n),
-                l.current && l.current.value && (l.current.value = null);
+                s.current && s.current.value && (s.current.value = null);
             },
             [t]
           );
@@ -3300,42 +3301,46 @@
           "div",
           {
             className: (0, h.Z)(
-              s ? v().DragAndDropContainerDragging : v().DragAndDropContainer,
+              o ? v().DragAndDropContainerDragging : v().DragAndDropContainer,
               "DragAndDropContainer"
             ),
-            onDrag: d,
-            onDragStart: d,
-            onDragEnd: d,
-            onDragOver: d,
+            onDrag: m,
+            onDragStart: m,
+            onDragEnd: m,
+            onDragOver: m,
             onDragEnter: (e) => {
               e.preventDefault(),
                 e.stopPropagation(),
-                (c.current += 1),
+                (d.current += 1),
                 ((e.dataTransfer.files && e.dataTransfer.files[0]) ||
                   (e.dataTransfer.types &&
                     "Files" === e.dataTransfer.types[0])) &&
-                  (s || o(!0));
+                  (o || c(!0));
             },
             onDragLeave: (e) => {
               e.preventDefault(),
                 e.stopPropagation(),
-                (c.current -= 1),
-                0 === c.current && s && o(!1);
+                (d.current -= 1),
+                0 === d.current && o && c(!1);
             },
             onDrop: (e) => {
-              e.preventDefault(), e.stopPropagation(), (c.current = 0), o(!1);
+              e.preventDefault(), e.stopPropagation(), (d.current = 0), c(!1);
               const n = e.dataTransfer.files;
               n && n.length > 0 && n[0] && t(n);
             },
           },
           Boolean(n) && n(),
-          a.createElement("div", null, (0, _.Xx)("#ImagePicker_DragAndDrop")),
+          a.createElement(
+            "div",
+            null,
+            r || (0, _.Xx)("#ImagePicker_DragAndDrop")
+          ),
           a.createElement(
             "div",
             { className: v().ImageUploadBar },
             a.createElement(
               "label",
-              { htmlFor: "imagepickerfilechoice" + r },
+              { htmlFor: "imagepickerfilechoice" + l },
               a.createElement(
                 "span",
                 null,
@@ -3349,12 +3354,12 @@
               )
             ),
             a.createElement("input", {
-              ref: l,
+              ref: s,
               style: { display: "none" },
-              id: "imagepickerfilechoice" + r,
+              id: "imagepickerfilechoice" + l,
               type: "file",
-              onSubmit: m,
-              onChange: m,
+              onSubmit: u,
+              onChange: u,
               multiple: !0,
               accept: "image/png, image/jpg, image/gif",
             })
@@ -3380,26 +3385,27 @@
         const {
             imageUploader: t,
             rgSupportArtwork: n,
-            forceResolution: l,
-            localizedPrimaryImage: s,
-            elAdditonalButtons: o,
-            rgRealmList: c,
+            strOverrideDragAndDropText: l,
+            forceResolution: s,
+            localizedPrimaryImage: o,
+            elAdditonalButtons: c,
+            rgRealmList: d,
           } = e,
-          [d, p] = (0, r.SZ)(() => [
+          [p, h] = (0, r.SZ)(() => [
             t.GetUploadImages(),
             u.U.Get().GetCurEditLanguage(),
           ]),
-          h = a.useCallback(
+          g = a.useCallback(
             (e) =>
               (0, i.mG)(this, void 0, void 0, function* () {
                 let i = Array.from(e),
                   r = !0;
                 for (let l = 0; l < i.length; l++) {
                   const i = e.item(l),
-                    o = (0, m.Z)(i.name, p);
+                    s = (0, m.Z)(i.name, h);
                   try {
-                    const e = (0, m.C)(o, p, c);
-                    (r = yield t.AddImageForLanguage(i, e, n, s)),
+                    const e = (0, m.C)(s, h, d);
+                    (r = yield t.AddImageForLanguage(i, e, n, o)),
                       r ||
                         (console.error(
                           "ArtworkUploader.OnDropFiles: failed on i=" +
@@ -3435,26 +3441,30 @@
                 }
                 return r;
               }),
-            [p, t, s, c, n]
+            [h, t, o, d, n]
           );
         return a.createElement(
           S,
-          { onDropFiles: h, elAdditonalButtons: o },
+          {
+            onDropFiles: g,
+            elAdditonalButtons: c,
+            strOverrideDragAndDropText: l,
+          },
           a.createElement(
             a.Fragment,
             null,
             a.createElement(
               "div",
               { className: N().UploadPreviewCtn },
-              d.map((e) =>
+              p.map((e) =>
                 a.createElement(G, {
                   key: "arttabupload_" + e.file + "_" + e.uploadTime,
                   asset: e,
                   supported: n,
-                  forceResolution: l,
-                  forceFileType: s && s.file_type,
+                  forceResolution: s,
+                  forceFileType: o && o.file_type,
                   fnOnRemove: () => t.DeleteUploadImage(e),
-                  languageRealms: c,
+                  languageRealms: d,
                 })
               )
             )
@@ -3463,7 +3473,7 @@
             imageUploader: t,
             fnOnUploadImageRequested: () =>
               (0, i.mG)(this, void 0, void 0, function* () {
-                yield t.UploadAllImages(c, p, n, l, s && s.file_type);
+                yield t.UploadAllImages(d, h, n, s, o && o.file_type);
               }),
           })
         );
@@ -3817,7 +3827,7 @@
               .catch((e) => {
                 console.error(e);
               });
-          }, []),
+          }, [t]),
           r.createElement("textarea", {
             className: n,
             value: a,
@@ -47642,9 +47652,8 @@
               S.createElement(
                 "h2",
                 { className: "inline" },
-                "MARKETING MESSAGE IMAGE "
+                "MARKETING MESSAGE ASSETS"
               ),
-              S.createElement("span", null, "570px by 600px"),
               S.createElement("hr", null),
               Boolean(l && (!a || !a.sc_schinese)) &&
                 S.createElement(
@@ -47685,6 +47694,8 @@
               S.createElement(Gn.j, {
                 rgSupportArtwork: s,
                 rgRealmList: o,
+                strOverrideDragAndDropText:
+                  "Drag any asset here to upload (max 5MB)",
                 strUploadAjaxURL: `${
                   oe.De.PARTNER_BASE_URL
                 }promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
@@ -47696,7 +47707,9 @@
                 S.createElement(
                   "div",
                   null,
-                  "Static Assets Only (.jpg,.png,.gif)"
+                  "Static Assets Only ",
+                  S.createElement("span", null, "570px by 600px"),
+                  " (.jpg,.png,.gif)"
                 ),
                 S.createElement(Il, {
                   oEditableMessage: t,
@@ -47722,9 +47735,21 @@
                 null,
                 "Animated Assets require both matching .webm/.mp4 files. Will fallback to static assets if animated asset is missing or client is setup for low-bandwidth mode."
               ),
-              S.createElement("div", null, ".WebM (requires for Steam Client)"),
+              S.createElement(
+                "div",
+                null,
+                ".WebM ",
+                S.createElement("span", null, "570px by 600px"),
+                " (requires for Steam Client)"
+              ),
               S.createElement(Il, { oEditableMessage: t, assetType: "webm" }),
-              S.createElement("div", null, ".Mp4 (requires for iOS)"),
+              S.createElement(
+                "div",
+                null,
+                ".Mp4  ",
+                S.createElement("span", null, "570px by 600px"),
+                " (requires for iOS)"
+              ),
               S.createElement(Il, { oEditableMessage: t, assetType: "mp4" })
             )
           : null;
@@ -47746,7 +47771,9 @@
               S.createElement(
                 "div",
                 null,
-                "Background Image (Video sits on top of this asset)"
+                "Background Image ",
+                S.createElement("span", null, "570px by 600px"),
+                " (Video sits on top of this asset; .png/.jpg) "
               ),
               S.createElement(Il, {
                 oEditableMessage: t,
@@ -47755,7 +47782,9 @@
               S.createElement(
                 "div",
                 null,
-                "Poster Image (The following is a localized poster image (528x297); shown on top of video prior to play.)"
+                "Poster Image ",
+                S.createElement("span", null, "528px by 297px"),
+                " (localized video poster image; shown on top of video prior to play; .png/.jpg)"
               ),
               S.createElement(Il, { oEditableMessage: t, assetType: "poster" }),
               S.createElement(
