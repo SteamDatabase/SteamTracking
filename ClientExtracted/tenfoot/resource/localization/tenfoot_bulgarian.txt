@@ -1593,7 +1593,7 @@
 
 	"Library_Details_ComingSoon"	"ОЧАКВАЙТЕ СКОРО"
 	"Library_Details_Preload"	"ПРЕДВАРИТЕЛНО СВАЛЯНЕ"
-	"Library_Details_Preloaded"	"ПРЕДВАРИТЕЛНО ЗАРЕДЕНО"
+	"Library_Details_Preloaded"	"ПРЕДВАРИТЕЛНО СВАЛЕНО"
 	"Library_Details_PrePurchase"	"ПРЕДПЛАЩАНЕ"
 	"Library_Details_ActivateGuestPass"	"АКТИВИРАНЕ"
 	"Library_Details_Install"		"ИНСТАЛИРАНЕ"

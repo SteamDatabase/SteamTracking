@@ -471,7 +471,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_WizardNext_Purchase"			"Acheter"
 "Steam_PurchasingProgress_Title"		"Steam - Traitement en cours"
 
-"Steam_DPIScaling_Option_Windows"		"Mise à l'échelle du texte et des icônes selon les paramètres de l'écran (redémarrage requis)"
+"Steam_DPIScaling_Option_Windows"		"Échelonner texte et icônes selon les paramètres de l'écran (redémarrage requis)"
 "Steam_DPIScaling_Option"				"Agrandir le texte et les icônes selon les paramètres de l'écran (redémarrage requis)"
 "Steam_LaunchSteamOnStartup_Option"		"Lancer Steam au démarrage de l'ordinateur"
 "Steam_BPMOnStartup_Option"				"Lancer Steam en mode Big Picture"
@@ -512,8 +512,8 @@ Cela devrait prendre moins d'une minute."
 "Steam_ConversionNotEnoughDiskSpace_Info"	"Vous n'avez pas assez d'espace libre sur le disque pour installer les jeux sélectionnés.\nLibérez de l'espace sur le disque ou cliquez sur « Retour » puis désélectionnez certains jeux."
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"Espace disque insuffisant pour la conversion vers Steam des jeux sélectionnés.\nLibérez %s1 Mo d'espace sur le disque, puis réessayez."
 "Steam_Interface"				"Interface"
-"Steam_EnableGPUWebViews_Option"		"Activer le rendu accéléré par GPU pour les affichages Web (nécessite un redémarrage)"
-"Steam_SmoothScrollWebViews_Option"		"Activer le défilement fluide pour les affichages Web (nécessite un redémarrage)"
+"Steam_EnableGPUWebViews_Option"		"Activer le rendu accéléré par GPU pour les affichages Web (redémarrage requis)"
+"Steam_SmoothScrollWebViews_Option"		"Activer le défilement fluide pour les affichages Web (redémarrage requis)"
 "Steam_SetJumplistOptions"		"Préférences de la barre des tâches"
 "Steam_ShowOnlineStatusOptions"	"Sélectionnez les options de connexion à afficher"
 "Steam_ShowDestinationOptions"	"Sélectionnez les destinations à afficher"
@@ -3174,7 +3174,7 @@ Pour jouer à ce jeu, vous devez effectuer une mise à niveau de votre système 
 "Steam_UserCantSetBeta" "%electedbeta%\n(Seul l'utilisateur ayant installé Steam peut changer la participation à la Bêta.)"
 "Steam_BetaReportBug"	"Signaler un bug"
 "Steam_ChooseBetaDlgTitle" "Programmes de test bêta - Steam"
-"Steam_ChooseBetaExplanation"	"Steam propose souvent aux joueurs d'essayer des mises à jour de jeux ou de Steam avant leur sortie officielle.
+"Steam_ChooseBetaExplanation"	"Steam propose souvent aux membres de la communauté d'essayer des mises à jour de jeux ou de Steam avant leur sortie officielle.
 
 Pour participer à un programme de test bêta, sélectionnez-le dans la liste et cliquez sur OK. (Pour ne participer à aucun test bêta, sélectionnez AUCUN.)"
 

@@ -25157,7 +25157,7 @@ and limitations under the License.
       OnBeforeUnloadEvent() {
         this.OnBeforeUnload();
       }
-      OnUnload() {
+      OnUnload(e) {
         this.RemoveEventListeners(),
           lo.RemoveTrackedPopup(this),
           this.OnClose(),
@@ -27505,4 +27505,4 @@ and limitations under the License.
       document.addEventListener("DOMContentLoaded", () => ci());
   })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=e7f8a6ab5618adf4575d
+//# sourceMappingURL=friends.js.map?contenthash=7edf4793853f413f2bad

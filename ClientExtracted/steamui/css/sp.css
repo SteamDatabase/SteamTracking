@@ -4310,12 +4310,15 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   height: fit-content;
 }
 .steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.GameNotes,
+.steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.Achievements,
 .steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.OverlayBrowser_Browser,
 .steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.OverlayBrowser_Discussions,
 .steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.OverlayBrowser_Guides {
   background: none;
 }
 .steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.GameNotes
+  .TitleBar,
+.steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.Achievements
   .TitleBar,
 .steamdesktopoverlay_OverlayPopup_C9tvu.steamdesktopoverlay_PinnedView_2OoAj.OverlayBrowser_Browser
   .TitleBar,
@@ -6289,6 +6292,11 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .gamenotes_NoteActions_3uGOy {
   visibility: hidden;
 }
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_EditorInput_3zWun {
+  overflow: hidden;
+}
 .gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
   width: 36px;
   height: 36px;
@@ -7668,13 +7676,26 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     transform: rotate(360deg);
   }
 }
+.updatealert_OptInUpdateIcon_3Zx5i {
+  width: 42px;
+  color: #fff;
+}
+.updatealert_BetaOptInMessages_2pcC9 {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.updatealert_BetaOptInMessages_2pcC9 .updatealert_FeedbackLink_25QO8 {
+  color: #fff;
+  text-decoration: underline;
+}
 .bottombar_BottomBarContainer_1_yS5 {
   display: flex;
   flex-direction: column;
   user-select: none;
 }
 .bottombar_BottomBar_3vCzS {
-  flex: 0 0 60px;
+  flex: 0 0 50px;
   background: radial-gradient(
     155.42% 100% at 0% 0%,
     #23262e 0 0%,
@@ -7749,8 +7770,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   position: relative;
 }
 .bottombar_DetailedDownloadProgress_2VtAq .bottombar_Icon_1KrJ3 {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   transition-property: filter;
   transition-duration: 0.1s;
@@ -7782,7 +7803,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
       rgba(0, 0, 0, 0.5) 100%
     );
   position: absolute;
-  width: 32px;
+  width: 26px;
   top: 0;
   bottom: 0;
   right: 0;

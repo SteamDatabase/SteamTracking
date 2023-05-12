@@ -241,6 +241,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/picojson/picojson.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/vjson/vjson.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/vjson/vjson.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/mathlib/mathlib_base.cpp

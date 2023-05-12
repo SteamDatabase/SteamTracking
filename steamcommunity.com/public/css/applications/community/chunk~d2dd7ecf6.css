@@ -7086,6 +7086,24 @@ td.rdtYear:hover {
     top: 0px;
   }
 }
+.partnersalesectionlayout_EventBannerCtn_2drT0 {
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.partnersalesectionlayout_EventBannerCtn_2drT0:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.partnersalesectionlayout_EventBannerCtn_2drT0:hover
+  .partnersalesectionlayout_EventBannerImg_MJdDH {
+  transform: scale(1.1);
+}
+.partnersalesectionlayout_EventBannerImg_MJdDH {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
 .partnereventshared_ErrorPage_1HZBl {
   padding: 24px;
   text-align: center;

@@ -39674,7 +39674,7 @@
                         "div",
                         { className: Bi().Summer23EventStartDate },
                         i.createElement(ai(), {
-                          date: 16841484e5,
+                          date: 1684062e6,
                           format: "DD MMMM YYYY",
                         })
                       ),
@@ -39687,7 +39687,7 @@
                         "div",
                         { className: Bi().Summer23EventEndDate },
                         i.createElement(ai(), {
-                          date: 16878636e5,
+                          date: 168795e7,
                           format: "DD MMMM YYYY",
                         })
                       )
@@ -39724,7 +39724,7 @@
                         { className: Bi().Summer23PrizePoolValue },
                         (0, E.Jr)("#dpc_event_league_prize_amt")
                       ),
-                      new Date().getTime() > 16879356e5 &&
+                      new Date().getTime() > 1688022e6 &&
                         i.createElement(
                           i.Fragment,
                           null,

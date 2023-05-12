@@ -47,7 +47,7 @@
 
 "Overlay_WebBrowserTitle"	"Browser da web dentro do jogo"
 "Overlay_WebBrowserTitleApp"	"Browser da web dentro da aplicação"
-"Overlay_Settings_Title"		"Steam - Definições"
+"Overlay_Settings_Title"		"Steam: Definições"
 "Overlay_WebBrowser_OpenInNewTab" "Abrir link num separador novo"
 "Overlay_SettingsHomepageLabel"	"Página inicial do browser"
 

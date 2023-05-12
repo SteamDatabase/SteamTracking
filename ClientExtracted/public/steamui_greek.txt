@@ -3926,7 +3926,7 @@
 "steam_menu_view_players" "Παίκτες"
 "steam_menu_add_friend" "Προσθήκη φίλου..."
 "steam_menu_friendsstatus" "Ορισμός κατάστασης φίλων"
-"steam_viewfriends"	"ΦΙΛΟΙ \n& ΣΥΝΟΜΙΛΙΑ"
+"steam_viewfriends"	"ΦΙΛΟΙ \nΚΑΙ ΣΥΝΟΜΙΛΙΑ"
 "steam_onlinefriends"	"%friends_online% σε σύνδεση"
 
 "Steam_Tooltip_Steam" "Steam"

@@ -9204,6 +9204,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .controllerconfiguratorsummary_ControlsListSection_nnOTT {
   font-size: 11px;
+  overflow: hidden;
   max-height: 18vh;
 }
 .controllerconfiguratorsummary_ControlsListSection_nnOTT
@@ -9232,7 +9233,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .controllerconfiguratorsummary_ControllerInputDisplay_27Q1T {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -9251,7 +9254,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   font-size: 11px;
 }
 .controllerconfiguratorsummary_ControllerInputDisplay_27Q1T.controllerconfiguratorsummary_IconOnRight_3dwo6 {
-  justify-content: flex-end;
+  flex-direction: row;
 }
 .controllerconfiguratorsummary_ControllerInputDisplay_27Q1T
   .controllerconfiguratorsummary_InputGlyph_3Fz8o {
@@ -9274,6 +9277,10 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   .controllerconfiguratorsummary_ShrinkList_3gn3o {
   font-size: 9px;
   line-height: 11px;
+}
+.controllerconfiguratorsummary_ControllerInputDisplay_27Q1T
+  .controllerconfiguratorsummary_Activator_1RkL0 {
+  width: 100%;
 }
 .controllerconfiguratorsummary_ControllerInputDisplay_27Q1T
   .controllerconfiguratorsummary_ActivatorText_2BHzj {
@@ -9357,14 +9364,13 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   flex: 1;
 }
 .controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   background: #0e141b;
   max-width: 100%;
   padding-top: 4px;
   position: relative;
-}
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV.controllerconfiguratorsummary_StandaloneConfigurator_SAcFI {
-  zoom: 2;
 }
 .controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV.controllerconfiguratorsummary_Overlay_1iLR- {
   max-height: max(800px, 50vh);
@@ -9396,6 +9402,17 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   color: #fff;
   background-color: #3d4450;
   border-color: #3d4450;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_ControlsListSection_nnOTT
+  .controllerconfiguratorsummary_DirectAccessButton_QAVEl {
+  padding: 0;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_ControlContainer_1KA4m {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 .controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
   .controllerconfiguratorsummary_FloatingControlsContainer_1xufc {
@@ -9443,7 +9460,60 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   left: 75%;
 }
 .controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
-  .controllerconfiguratorsummary_BottomControlsSections_2H5S6 {
+  .controllerconfiguratorsummary_ControllerLayout_3oKux {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_TopSection_2SnnS {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_Left_1cmUf,
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_Right_2_TQS {
+  width: 27.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_Left_1cmUf {
+  padding-left: 5px;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_Right_2_TQS {
+  align-items: flex-end;
+  padding-right: 5px;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_Center_3R2kU {
+  position: relative;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_Center_3R2kU
+  .controllerconfiguratorsummary_ControlContainer_1KA4m {
+  width: 100%;
+}
+.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+  .controllerconfiguratorsummary_Center_3R2kU
+  .controllerconfiguratorsummary_ControlContainer_1KA4m
+  > * {
+  min-width: 180px;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+}
+.controllerconfiguratorsummary_BottomControlsSections_2H5S6 {
   position: absolute;
   margin-top: auto;
   bottom: 0;
@@ -9456,34 +9526,48 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   width: calc(100% - 10px);
   min-height: 145px;
 }
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
+.controllerconfiguratorsummary_New_1OTVc
+  .controllerconfiguratorsummary_BottomControlsSections_2H5S6 {
+  position: relative;
+  justify-content: space-evenly;
+}
+.controllerconfiguratorsummary_New_1OTVc
   .controllerconfiguratorsummary_BottomControlsSections_2H5S6
+  .controllerconfiguratorsummary_ControlsListSection_nnOTT {
+  flex-grow: 0;
+  width: auto;
+  max-width: 20%;
+  padding: 0px;
+}
+.controllerconfiguratorsummary_New_1OTVc
+  .controllerconfiguratorsummary_BottomControlsSections_2H5S6
+  .controllerconfiguratorsummary_ControlsListSection_nnOTT
+  > .Focusable {
+  padding: 0px 5px 2px 5px;
+}
+.controllerconfiguratorsummary_BottomControlsSections_2H5S6
   .controllerconfiguratorsummary_ControlsListSection_nnOTT {
   width: 20%;
   padding-left: 10px;
   padding-right: 10px;
 }
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
-  .controllerconfiguratorsummary_BottomControlsSections_2H5S6
+.controllerconfiguratorsummary_BottomControlsSections_2H5S6
   .controllerconfiguratorsummary_ControlsListSection_nnOTT
   .controllerconfiguratorsummary_ControllerInputDisplay_27Q1T {
   margin-bottom: 2px;
 }
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
-  .controllerconfiguratorsummary_BottomControlsSections_2H5S6
+.controllerconfiguratorsummary_BottomControlsSections_2H5S6
   .controllerconfiguratorsummary_ControlsListSection_nnOTT
   .controllerconfiguratorsummary_InputGlyph_3Fz8o {
   margin: 0px 5px 0px 0px;
 }
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
-  .controllerconfiguratorsummary_BottomControlsSections_2H5S6
+.controllerconfiguratorsummary_BottomControlsSections_2H5S6
   .controllerconfiguratorsummary_ControlsListSection_nnOTT
   .controllerconfiguratorsummary_InputGlyph_3Fz8o
   div {
   display: flex;
 }
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
-  .controllerconfiguratorsummary_BottomControlsSections_2H5S6
+.controllerconfiguratorsummary_BottomControlsSections_2H5S6
   .controllerconfiguratorsummary_ConfigButton_1T2Rs {
   position: absolute;
   bottom: 0px;
@@ -9494,8 +9578,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   background-color: #23262e;
   color: #fff;
 }
-.controllerconfiguratorsummary_ControllerConfiguratorSummary_3TvBV
-  .controllerconfiguratorsummary_BottomControlsSections_2H5S6
+.controllerconfiguratorsummary_BottomControlsSections_2H5S6
   .controllerconfiguratorsummary_ConfigButton_1T2Rs.gpfocus {
   background-color: #fff;
   color: #0e141b;
@@ -9611,16 +9694,34 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 .controllerconfiguratorsummary_PillShapedIcon_1zIGH {
   transform: scale(1.125);
 }
+.controllerconfiguratorsummary_ControlContainer_1KA4m.controllerconfiguratorsummary_CenterTrackpad_2a4_j.controllerconfiguratorsummary_Empty_FVIEa {
+  opacity: 0;
+  pointer-events: none;
+}
+.controllerconfiguratorsummary_Center_3R2kU
+  .controllerconfiguratorsummary_ControlContainer_1KA4m {
+  position: absolute;
+  bottom: 0;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .controllerconfiguratorsummary_BackgroundController_rlz-U {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  background-image: url(/images/controller/cropped_controller_config_controller.png);
+}
+.controllerconfiguratorsummary_BackgroundController_rlz-U.controllerconfiguratorsummary_Absolute_2RMHH {
   position: absolute;
   left: 27.5%;
   width: 45%;
   height: 45%;
   margin-top: 100px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(/images/controller/cropped_controller_config_controller.png);
 }
 .controllerconfiguratorsummary_BackgroundController_rlz-U.controllerconfiguratorsummary_SmallPreview_2_yt8 {
   width: 45%;
@@ -9634,6 +9735,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .controller_ps4 .controllerconfiguratorsummary_BackgroundController_rlz-U {
   background-image: url(/images/controller/controller_config_controller_ps4.png);
+}
+.controller_ps4
+  .controllerconfiguratorsummary_BackgroundController_rlz-U.controllerconfiguratorsummary_Absolute_2RMHH {
   margin-top: 70px;
 }
 .controller_ps4
@@ -9663,6 +9767,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .controller_ps5 .controllerconfiguratorsummary_BackgroundController_rlz-U {
   background-image: url(/images/controller/controller_config_controller_ps5.png);
+}
+.controller_ps5
+  .controllerconfiguratorsummary_BackgroundController_rlz-U.controllerconfiguratorsummary_Absolute_2RMHH {
   margin-top: 70px;
 }
 .controller_ps5
@@ -9692,6 +9799,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .controller_ps5_edge .controllerconfiguratorsummary_BackgroundController_rlz-U {
   background-image: url(/images/controller/controller_config_controller_ps5.png);
+}
+.controller_ps5_edge
+  .controllerconfiguratorsummary_BackgroundController_rlz-U.controllerconfiguratorsummary_Absolute_2RMHH {
   margin-top: 70px;
 }
 .controller_ps5_edge
@@ -9811,6 +9921,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 .controller_switch_joycon_pair
   .controllerconfiguratorsummary_BackgroundController_rlz-U {
   background-image: url(/images/controller/controller_config_controller_switch_joycons.png);
+}
+.controller_switch_joycon_pair
+  .controllerconfiguratorsummary_BackgroundController_rlz-U.controllerconfiguratorsummary_Absolute_2RMHH {
   transform: translate(0px, -15%);
 }
 .controller_switch_joycon_pair
@@ -9852,9 +9965,26 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   .controllerconfiguratorsummary_BackgroundController_rlz-U {
   background-image: url(/images/controller/controller_config_controller_touch.png);
 }
+.controller_mobile_touch.controllerconfiguratorsummary_New_1OTVc
+  .controllerconfiguratorsummary_BackgroundController_rlz-U {
+  height: auto;
+  flex-grow: 1;
+  position: static;
+}
+.controller_mobile_touch
+  .controllerconfiguratorsummary_Center_3R2kU
+  .controllerconfiguratorsummary_ControlContainer_1KA4m {
+  position: static;
+  height: auto;
+  width: 100%;
+  margin-top: 5px;
+}
 .controller_steamcontroller_neptune
   .controllerconfiguratorsummary_BackgroundController_rlz-U {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQ5IiBoZWlnaHQ9IjE4MSIgdmlld0JveD0iMCAwIDQ0OSAxODEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNMC41MDE0NzcgMzYuNzg0OEMwLjUwMTQ3NyAxOS4yNjM1IDE0LjcwOTYgNS4wNTk1OCAzMi4yMzY0IDUuMDU5NThINDE2LjE4NkM0MzMuNzEyIDUuMDU5NTggNDQ3LjkyIDE5LjI2MzUgNDQ3LjkyIDM2Ljc4NDhWMTMyLjQ3NkM0NDcuOTIgMTU4LjgzOSA0MjYuNTQzIDE4MC4yMSA0MDAuMTczIDE4MC4yMUw0Ni40Njk5IDE4MC4yMUMyMS4wODIxIDE4MC4yMSAwLjUwMTQ3NyAxNTkuNjM1IDAuNTAxNDc3IDEzNC4yNTVWMzYuNzg0OFoiIGZpbGw9IiMwRDEzMUIiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU4MTA3OSIvPg0KPHBhdGggZD0iTTcxLjQ2NjkgMTI2LjkxQzcxLjY0NyAxMjYuOTEgNzEuODEzMiAxMjYuOTM2IDcxLjk2NTQgMTI2Ljk4NkM3Mi4xMTc2IDEyNy4wMzcgNzIuMjQ1NyAxMjcuMDk5IDcyLjM0OTggMTI3LjE3M0w3Mi4xMTM4IDEyNy41OTFDNzIuMDIgMTI3LjUyNSA3MS45MTQ3IDEyNy40NzIgNzEuNzk4IDEyNy40MzFDNzEuNjgzOCAxMjcuMzkxIDcxLjU3NDcgMTI3LjM3MSA3MS40NzA3IDEyNy4zNzFDNzEuMzQzOSAxMjcuMzcxIDcxLjI0NDkgMTI3LjM5NyA3MS4xNzM5IDEyNy40NUM3MS4xMDI5IDEyNy41MDEgNzEuMDY3MyAxMjcuNTcyIDcxLjA2NzMgMTI3LjY2NEM3MS4wNjczIDEyNy43NTUgNzEuMTA5MiAxMjcuODI3IDcxLjE5MjkgMTI3Ljg4QzcxLjI3NjYgMTI3LjkzMSA3MS40MDQ4IDEyNy45ODcgNzEuNTc3MyAxMjguMDQ4QzcxLjc1NDggMTI4LjExMSA3MS44OTY5IDEyOC4xNyA3Mi4wMDM1IDEyOC4yMjNDNzIuMTEgMTI4LjI3NiA3Mi4yMDI2IDEyOC4zNTUgNzIuMjgxMyAxMjguNDU5QzcyLjM2MjQgMTI4LjU2IDcyLjQwMyAxMjguNjkxIDcyLjQwMyAxMjguODUxQzcyLjQwMyAxMjkuMDIxIDcyLjM1ODYgMTI5LjE2OCA3Mi4yNjk4IDEyOS4yOTJDNzIuMTgzNiAxMjkuNDE3IDcyLjA2MTggMTI5LjUxMyA3MS45MDQ1IDEyOS41ODFDNzEuNzQ3MiAxMjkuNjQ3IDcxLjU2NzEgMTI5LjY4IDcxLjM2NDIgMTI5LjY4QzcxLjE5OTMgMTI5LjY4IDcxLjAzMDYgMTI5LjY1OSA3MC44NTgxIDEyOS42MTZDNzAuNjg4MSAxMjkuNTcgNzAuNTM4NCAxMjkuNTA5IDcwLjQwOSAxMjkuNDMzTDcwLjU4NDEgMTI4Ljk2OUM3MC43MDU4IDEyOS4wMzUgNzAuODM0IDEyOS4wODggNzAuOTY4NCAxMjkuMTI5QzcxLjEwNTQgMTI5LjE2NyA3MS4yMzk5IDEyOS4xODYgNzEuMzcxOCAxMjkuMTg2QzcxLjUxNjQgMTI5LjE4NiA3MS42MjQyIDEyOS4xNTggNzEuNjk1MiAxMjkuMTAyQzcxLjc2ODggMTI5LjA0NiA3MS44MDU2IDEyOC45NzMgNzEuODA1NiAxMjguODgxQzcxLjgwNTYgMTI4Ljc5IDcxLjc2NjMgMTI4LjcxOSA3MS42ODc2IDEyOC42NjhDNzEuNjA5IDEyOC42MTcgNzEuNDg4NSAxMjguNTY1IDcxLjMyNjEgMTI4LjUxMkM3MS4xNDM1IDEyOC40NTQgNzAuOTk2MyAxMjguMzk4IDcwLjg4NDcgMTI4LjM0NUM3MC43NzMxIDEyOC4yODkgNzAuNjc2NyAxMjguMjA5IDcwLjU5NTUgMTI4LjEwNUM3MC41MTY4IDEyNy45OTggNzAuNDc3NSAxMjcuODYgNzAuNDc3NSAxMjcuNjlDNzAuNDc3NSAxMjcuNTMzIDcwLjUxODEgMTI3LjM5NiA3MC41OTkzIDEyNy4yNzlDNzAuNjgzIDEyNy4xNiA3MC43OTk3IDEyNy4wNjkgNzAuOTQ5NCAxMjcuMDA1QzcxLjA5OTEgMTI2Ljk0MiA3MS4yNzE2IDEyNi45MSA3MS40NjY5IDEyNi45MVpNNzQuMzA5OCAxMjkuNjM1SDczLjc1MDRWMTI3LjQ1SDcyLjk0MzdWMTI2Ljk3MUg3NS4xMTY2VjEyNy40NUg3NC4zMDk4VjEyOS42MzVaTTc1LjgwMzcgMTI2Ljk3MUg3Ny41OTk4VjEyNy40NDdINzYuMzYzMVYxMjguMDQ4SDc3LjQyODZWMTI4LjUyN0g3Ni4zNjMxVjEyOS4xNTFINzcuNTk5OFYxMjkuNjM1SDc1LjgwMzdWMTI2Ljk3MVpNODAuNzgxIDEyOS42MzVIODAuMTc1OUw3OS45OTMyIDEyOS4xMTdINzguOTUwNkw3OC43NzU1IDEyOS42MzVINzguMTkzM0w3OS4xOTAzIDEyNi45NzFINzkuNzUzNUw4MC43ODEgMTI5LjYzNVpNNzkuNDY4MSAxMjcuNjA3TDc5LjEwMjggMTI4LjY3Mkg3OS44NDFMNzkuNDY4MSAxMjcuNjA3Wk04Mi44OTMxIDEyOC44NjJMODMuNzIyNiAxMjYuOTcxSDg0LjI4OTZWMTI5LjYzNUg4My43NTMxVjEyNy45NDFMODMuMDM3NyAxMjkuNTU5SDgyLjY5OUw4MS45Njg0IDEyNy45NlYxMjkuNjM1SDgxLjQ1ODRWMTI2Ljk3MUg4MS45OTVMODIuODkzMSAxMjguODYyWiIgZmlsbD0iIzhCOTI5QSIvPg0KPHBhdGggZD0iTTQzOS4yNDEgMzEuODA1OEM0MzkuMjQxIDM0Ljc1MiA0MzYuODM4IDM3LjE0MzMgNDMzLjg3IDM3LjE0MzNDNDMwLjkwMyAzNy4xNDMzIDQyOC41IDM0Ljc1MiA0MjguNSAzMS44MDU4QzQyOC41IDI4Ljg1OTYgNDMwLjkwMyAyNi40NjgzIDQzMy44NyAyNi40NjgzQzQzNi44MzggMjYuNDY4MyA0MzkuMjQxIDI4Ljg1OTYgNDM5LjI0MSAzMS44MDU4WiIgc3Ryb2tlPSIjOEI5MjlBIiBzdHJva2Utd2lkdGg9IjAuNTgxMDc5Ii8+DQo8cGF0aCBkPSJNNDI2LjEyMyA0NC44MjA0QzQyNi4xMjMgNDcuNzUxOCA0MjMuNzMyIDUwLjEzMTQgNDIwLjc3OSA1MC4xMzE0QzQxNy44MjUgNTAuMTMxNCA0MTUuNDM0IDQ3Ljc1MTggNDE1LjQzNCA0NC44MjA0QzQxNS40MzQgNDEuODg5IDQxNy44MjUgMzkuNTA5NSA0MjAuNzc5IDM5LjUwOTVDNDIzLjczMiAzOS41MDk1IDQyNi4xMjMgNDEuODg5IDQyNi4xMjMgNDQuODIwNFoiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjYzNDIyNSIvPg0KPHBhdGggZD0iTTQxMi44ODIgMzEuODA1OEM0MTIuODgyIDM0Ljc1MiA0MTAuNDc5IDM3LjE0MzMgNDA3LjUxMSAzNy4xNDMzQzQwNC41NDMgMzcuMTQzMyA0MDIuMTQgMzQuNzUyIDQwMi4xNCAzMS44MDU4QzQwMi4xNCAyOC44NTk2IDQwNC41NDMgMjYuNDY4MyA0MDcuNTExIDI2LjQ2ODNDNDEwLjQ3OSAyNi40NjgzIDQxMi44ODIgMjguODU5NiA0MTIuODgyIDMxLjgwNThaIiBzdHJva2U9IiM4QjkyOUEiIHN0cm9rZS13aWR0aD0iMC41ODEwNzkiLz4NCjxwYXRoIGQ9Ik00MjIuOTc5IDQ2Ljc3NTRINDIxLjk3MUw0MjEuNjY2IDQ1LjkxMjhINDE5LjkyOEw0MTkuNjM3IDQ2Ljc3NTRINDE4LjY2Nkw0MjAuMzI4IDQyLjMzNThINDIxLjI2N0w0MjIuOTc5IDQ2Ljc3NTRaTTQyMC43OTEgNDMuMzk1TDQyMC4xODIgNDUuMTcwOEg0MjEuNDEzTDQyMC43OTEgNDMuMzk1WiIgZmlsbD0iIzhCOTI5QSIvPg0KPHBhdGggZD0iTTQzNS4xMTIgMzEuODg5MkM0MzUuNjc4IDMyLjA2MjYgNDM1Ljk2MiAzMi40MjYyIDQzNS45NjIgMzIuOTgwMUM0MzUuOTYyIDMzLjM4MTggNDM1LjgxNiAzMy42OTQ3IDQzNS41MjQgMzMuOTE4N0M0MzUuMjMyIDM0LjE0MjggNDM0Ljg0MSAzNC4yNTQ5IDQzNC4zNTEgMzQuMjU0OUg0MzIuNTNWMjkuODE1M0g0MzQuMTczQzQzNC42OTMgMjkuODE1MyA0MzUuMDc4IDI5LjkxMjYgNDM1LjMyNyAzMC4xMDdDNDM1LjU3NyAzMC4zMDE1IDQzNS43MDEgMzAuNTc2NCA0MzUuNzAxIDMwLjkzMTVDNDM1LjcwMSAzMS4xMzAzIDQzNS42NTUgMzEuMzEyMSA0MzUuNTYyIDMxLjQ3N0M0MzUuNDY5IDMxLjY0MTkgNDM1LjMxOSAzMS43NzkzIDQzNS4xMTIgMzEuODg5MlpNNDMzLjQ3NSAzMC41ODkxVjMxLjY3MzZINDM0LjExNkM0MzQuMzI3IDMxLjY3MzYgNDM0LjQ5IDMxLjYyNSA0MzQuNjA0IDMxLjUyNzdDNDM0LjcxOCAzMS40MjYyIDQzNC43NzYgMzEuMjg0NiA0MzQuNzc2IDMxLjEwMjhDNDM0Ljc3NiAzMC43NjAzIDQzNC41NDkgMzAuNTg5MSA0MzQuMDk3IDMwLjU4OTFINDMzLjQ3NVpNNDM0LjI1NSAzMy40ODc1QzQzNC40OTIgMzMuNDg3NSA0MzQuNjcgMzMuNDM0NiA0MzQuNzg4IDMzLjMyODlDNDM0LjkxMSAzMy4yMjMyIDQzNC45NzIgMzMuMDgzNyA0MzQuOTcyIDMyLjkxMDNDNDM0Ljk3MiAzMi43MjQzIDQzNC45MTMgMzIuNTg0OCA0MzQuNzk1IDMyLjQ5MTdDNDM0LjY3NiAzMi4zOTQ1IDQzNC41MDUgMzIuMzQ1OSA0MzQuMjgxIDMyLjM0NTlINDMzLjQ3NVYzMy40ODc1SDQzNC4yNTVaIiBmaWxsPSIjOEI5MjlBIi8+DQo8cGF0aCBkPSJNNDA4LjM3MyAyOS44MTUzSDQwOS41NTNMNDA3Ljk5MyAzMS45MjczTDQwOS42OTMgMzQuMjU0OUg0MDguNTUxTDQwNy41MTEgMzIuNjM3Nkw0MDYuNTE1IDM0LjI1NDlINDA1LjM5OUw0MDYuOTc4IDMxLjk1OUw0MDUuNDYyIDI5LjgxNTNINDA2LjYxTDQwNy40OTIgMzEuMjQyM0w0MDguMzczIDI5LjgxNTNaIiBmaWxsPSIjOEI5MjlBIi8+DQo8cGF0aCBkPSJNNDI1LjY1MyAxOC45MzMyQzQyNS42NTMgMjEuODc5NCA0MjMuMjUgMjQuMjcwNyA0MjAuMjgzIDI0LjI3MDdDNDE3LjMxNSAyNC4yNzA3IDQxNC45MTIgMjEuODc5NCA0MTQuOTEyIDE4LjkzMzJDNDE0LjkxMiAxNS45ODcgNDE3LjMxNSAxMy41OTU3IDQyMC4yODMgMTMuNTk1N0M0MjMuMjUgMTMuNTk1NyA0MjUuNjUzIDE1Ljk4NyA0MjUuNjUzIDE4LjkzMzJaIiBzdHJva2U9IiM4QjkyOUEiIHN0cm9rZS13aWR0aD0iMC41ODEwNzkiLz4NCjxwYXRoIGQ9Ik00MjAuNzU5IDIxLjA2NDVINDE5LjgzM1YxOS4yOTVMNDE4LjI4NSAxNi42MjQ5SDQxOS4zNjRMNDIwLjMyOCAxOC40MDA3TDQyMS4yOTggMTYuNjI0OUg0MjIuMzA2TDQyMC43NTkgMTkuMzAxM1YyMS4wNjQ1WiIgZmlsbD0iIzhCOTI5QSIvPg0KPHBhdGggZD0iTTY4LjcxMDcgNC45NDY2NFYyLjI3ODY1QzY4LjcxMDcgMS4yOTYzMyA2Ny45MTQxIDAuNSA2Ni45MzE1IDAuNUgzNS4yOTc3QzI2Ljg1NTEgMC41IDguMjMwMzMgNS44NTE1MiA2LjI1MzkxIDE4LjI0MjZDMTIuMDcwMiAxMC4xODg0IDIxLjU0MTQgNC45NDY2NCAzMi4yMzczIDQuOTQ2NjRINjguNzEwN1oiIGZpbGw9IiMwRDEzMUIiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU4MTA3OSIvPg0KPHBhdGggZD0iTTM3OS4xNzggNC45NDY2NFYyLjI3ODY1QzM3OS4xNzggMS4yOTYzMyAzNzkuOTc0IDAuNSAzODAuOTU3IDAuNUg0MTIuNDAxQzQyMC42MjcgMC41IDQzOC41NzQgNS40NTUwMyA0NDEuMTQxIDE2Ljg5NjZDNDM1LjI3MSA5LjYwOTM5IDQyNi4yNzMgNC45NDY2NCA0MTYuMTg1IDQuOTQ2NjRIMzc5LjE3OFoiIGZpbGw9IiMwRDEzMUIiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU4MTA3OSIvPg0KPHJlY3QgeD0iNTEuMTY0MSIgeT0iMTQuOTQ5MiIgd2lkdGg9IjMuMjAzNjEiIGhlaWdodD0iMy4xODU2NSIgZmlsbD0iIzhCOTI5QSIvPg0KPHJlY3QgeD0iNDEuNDIzNCIgeT0iNjYuNjAwNiIgd2lkdGg9IjQ3LjgxMjkiIGhlaWdodD0iNDcuNzk4MyIgcng9IjYuNDg4NzIiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU4MTA3OSIvPg0KPHJlY3QgeD0iNjUuNjIwNiIgeT0iMTIzLjg3NCIgd2lkdGg9IjIzLjYxNTkiIGhlaWdodD0iOS4zNzkzOSIgcng9IjQuNjg5NjkiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU4MTA3OSIvPg0KPHJlY3QgeD0iMzU4LjY1MiIgeT0iNjYuNjAwNiIgd2lkdGg9IjQ3LjgxMjkiIGhlaWdodD0iNDcuNzk4MyIgcng9IjYuNDg4NzIiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU4MTA3OSIvPg0KPHJlY3QgeD0iMzU4LjY1MiIgeT0iMTIzLjg3NCIgd2lkdGg9IjIzLjYxNTkiIGhlaWdodD0iOS4zNzkzOSIgcng9IjQuNjg5NjkiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU4MTA3OSIvPg0KPGNpcmNsZSBjeD0iMzY2LjE5IiBjeT0iMTI4LjU2MyIgcj0iMS4yNDUwNiIgZmlsbD0iIzhCOTI5QSIvPg0KPGNpcmNsZSBjeD0iMzcwLjQ2IiBjeT0iMTI4LjU2MyIgcj0iMS4yNDUwNiIgZmlsbD0iIzhCOTI5QSIvPg0KPGNpcmNsZSBjeD0iMzc0LjcyOSIgY3k9IjEyOC41NjMiIHI9IjEuMjQ1MDYiIGZpbGw9IiM4QjkyOUEiLz4NCjxwYXRoIGQ9Ik0zOTAuMDk3IDQwLjUxOTlDMzkwLjA5NyA0Ny4yMzU2IDM4NC42NTEgNTIuNjggMzc3LjkzMyA1Mi42OEMzNzEuMjE1IDUyLjY4IDM2NS43NjkgNDcuMjM1NiAzNjUuNzY5IDQwLjUxOTlDMzY1Ljc2OSAzMy44MDQyIDM3MS4yMTUgMjguMzU5OSAzNzcuOTMzIDI4LjM1OTlDMzg0LjY1MSAyOC4zNTk5IDM5MC4wOTcgMzMuODA0MiAzOTAuMDk3IDQwLjUxOTlaIiBzdHJva2U9IiM4QjkyOUEiIHN0cm9rZS13aWR0aD0iMC41ODEwNzkiLz4NCjxwYXRoIGQ9Ik04MS41ODQ5IDQwLjUxOTlDODEuNTg0OSA0Ny4yMzU2IDc2LjEzOTEgNTIuNjggNjkuNDIxMSA1Mi42OEM2Mi43MDMyIDUyLjY4IDU3LjI1NzMgNDcuMjM1NiA1Ny4yNTczIDQwLjUxOTlDNTcuMjU3MyAzMy44MDQyIDYyLjcwMzIgMjguMzU5OSA2OS40MjExIDI4LjM1OTlDNzYuMTM5MSAyOC4zNTk5IDgxLjU4NDkgMzMuODA0MiA4MS41ODQ5IDQwLjUxOTlaIiBzdHJva2U9IiM4QjkyOUEiIHN0cm9rZS13aWR0aD0iMC41ODEwNzkiLz4NCjxwYXRoIGQ9Ik0zODYuNzE3IDQwLjUxOTlDMzg2LjcxNyA0NS4zNjkyIDM4Mi43ODQgNDkuMzAwNSAzNzcuOTMzIDQ5LjMwMDVDMzczLjA4MiA0OS4zMDA1IDM2OS4xNSA0NS4zNjkyIDM2OS4xNSA0MC41MTk5QzM2OS4xNSAzNS42NzA2IDM3My4wODIgMzEuNzM5MyAzNzcuOTMzIDMxLjczOTNDMzgyLjc4NCAzMS43MzkzIDM4Ni43MTcgMzUuNjcwNiAzODYuNzE3IDQwLjUxOTlaIiBzdHJva2U9IiM4QjkyOUEiIHN0cm9rZS13aWR0aD0iMC41ODEwNzkiLz4NCjxwYXRoIGQ9Ik03OC4yMDQ5IDQwLjUxOTlDNzguMjA0OSA0NS4zNjkyIDc0LjI3MjUgNDkuMzAwNSA2OS40MjE1IDQ5LjMwMDVDNjQuNTcwNSA0OS4zMDA1IDYwLjYzODIgNDUuMzY5MiA2MC42MzgyIDQwLjUxOTlDNjAuNjM4MiAzNS42NzA2IDY0LjU3MDUgMzEuNzM5MyA2OS40MjE1IDMxLjczOTNDNzQuMjcyNSAzMS43MzkzIDc4LjIwNDkgMzUuNjcwNiA3OC4yMDQ5IDQwLjUxOTlaIiBzdHJva2U9IiM4QjkyOUEiIHN0cm9rZS13aWR0aD0iMC41ODEwNzkiLz4NCjxwYXRoIGQ9Ik0xMDkuNzM0IDIuOTI0ODJIMTE3LjAxOEMxMTcuNDk5IDIuOTI0ODIgMTE3Ljg4OSAzLjMxNTA1IDExNy44ODkgMy43OTY0NFY0LjgzMzg1SDEwOC44NjNWMy43OTY0NEMxMDguODYzIDMuMzE1MDUgMTA5LjI1MyAyLjkyNDgyIDEwOS43MzQgMi45MjQ4MloiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU4MTA3OSIvPg0KPHBhdGggZD0iTTEyNi4xMDIgMi45MjQ4MkgxMzMuMzg1QzEzMy44NjYgMi45MjQ4MiAxMzQuMjU3IDMuMzE1MDUgMTM0LjI1NyAzLjc5NjQ0VjQuODMzODVIMTI1LjIzVjMuNzk2NDRDMTI1LjIzIDMuMzE1MDUgMTI1LjYyIDIuOTI0ODIgMTI2LjEwMiAyLjkyNDgyWiIgc3Ryb2tlPSIjOEI5MjlBIiBzdHJva2Utd2lkdGg9IjAuNTgxMDc5Ii8+DQo8cGF0aCBkPSJNMzI5LjA5NiAzLjgxNDQ3SDMzNi4zNzlDMzM2Ljg2IDMuODE0NDcgMzM3LjI1MSA0LjIwNDcgMzM3LjI1MSA0LjY4NjA4VjQuODM0MThIMzI4LjIyNFY0LjY4NjA4QzMyOC4yMjQgNC4yMDQ3IDMyOC42MTQgMy44MTQ0NyAzMjkuMDk2IDMuODE0NDdaIiBzdHJva2U9IiM4QjkyOUEiIHN0cm9rZS13aWR0aD0iMC41ODEwNzkiLz4NCjxwYXRoIGQ9Ik0zMC43MDEgNDguMTY4MUMzMC43MDEgNDguNDAwNCAzMC41MTI1IDQ4LjU4OSAzMC4yNzk5IDQ4LjU4OUgyMi44MDczQzIyLjU3NDYgNDguNTg5IDIyLjM4NjIgNDguNDAwNCAyMi4zODYyIDQ4LjE2ODFWNDAuNTc5NEMyMi4zODYyIDM4LjgxNDMgMjAuOTU1MyAzNy4zODM1IDE5LjE5MDIgMzcuMzgzNUgxMS41OTg0QzExLjM2NTcgMzcuMzgzNSAxMS4xNzczIDM3LjE5NDkgMTEuMTc3MyAzNi45NjI1VjI5LjQ5MjJDMTEuMTc3MyAyOS4yNTk4IDExLjM2NTcgMjkuMDcxMyAxMS41OTg0IDI5LjA3MTNIMTkuMTkwMkMyMC45NTUzIDI5LjA3MTMgMjIuMzg2MiAyNy42NDA0IDIyLjM4NjIgMjUuODc1M1YxOC4yODY3QzIyLjM4NjIgMTguMDU0MyAyMi41NzQ2IDE3Ljg2NTcgMjIuODA3MyAxNy44NjU3SDMwLjI3OTlDMzAuNTEyNSAxNy44NjU3IDMwLjcwMSAxOC4wNTQzIDMwLjcwMSAxOC4yODY3VjI1Ljg3NTNDMzAuNzAxIDI3LjY0MDQgMzIuMTMxOSAyOS4wNzEzIDMzLjg5NyAyOS4wNzEzSDQxLjQ4ODhDNDEuNzIxNSAyOS4wNzEzIDQxLjkwOTkgMjkuMjU5OCA0MS45MDk5IDI5LjQ5MjJWMzYuOTYyNUM0MS45MDk5IDM3LjE5NDkgNDEuNzIxNSAzNy4zODM1IDQxLjQ4ODggMzcuMzgzNUgzMy44OTdDMzIuMTMxOSAzNy4zODM1IDMwLjcwMSAzOC44MTQzIDMwLjcwMSA0MC41Nzk0VjQ4LjE2ODFaIiBzdHJva2U9IiM4QjkyOUEiIHN0cm9rZS13aWR0aD0iMC41ODEwNzkiLz4NCjxyZWN0IHg9IjExMC4wOTYiIHk9IjIxLjc3NTUiIHdpZHRoPSIyMjcuMTYyIiBoZWlnaHQ9IjE0MS43MTgiIHN0cm9rZT0iIzhCOTI5QSIgc3Ryb2tlLXdpZHRoPSIwLjU3NDQ2MyIvPg0KPHJlY3QgeD0iNDUuMDcxIiB5PSIxMi45OTA5IiB3aWR0aD0iMTUuMzg4NyIgaGVpZ2h0PSI3LjA1NDQ1IiByeD0iMy40ODgyNCIgc3Ryb2tlPSIjOEI5MjlBIiBzdHJva2Utd2lkdGg9IjAuNjM0MjI1Ii8+DQo8cmVjdCB4PSIzODguMjgyIiB5PSIxMi45OTA5IiB3aWR0aD0iMTUuMzg4NyIgaGVpZ2h0PSI3LjA1NDQ1IiByeD0iMy40ODgyNCIgc3Ryb2tlPSIjOEI5MjlBIiBzdHJva2Utd2lkdGg9IjAuNjM0MjI1Ii8+DQo8cGF0aCBkPSJNMzk0LjA2NCAxNC44NjU3SDM5Ny45NTdWMTUuNTY5MkgzOTQuMDY0TDM5NC4wNjQgMTQuODY1N1oiIGZpbGw9IiM4QjkyOUEiLz4NCjxwYXRoIGQ9Ik0zOTQuMDY0IDE2LjI3MjdIMzk3Ljk1N1YxNi45NzYySDM5NC4wNjRWMTYuMjcyN1oiIGZpbGw9IiM4QjkyOUEiLz4NCjxwYXRoIGQ9Ik0zOTQuMDY0IDE3LjY3OTdIMzk3Ljk1N1YxOC4zODMzSDM5NC4wNjRWMTcuNjc5N1oiIGZpbGw9IiM4QjkyOUEiLz4NCjwvc3ZnPg0K);
+}
+.controller_steamcontroller_neptune
+  .controllerconfiguratorsummary_BackgroundController_rlz-U.controllerconfiguratorsummary_Absolute_2RMHH {
   margin-top: 90px;
 }
 .controller_steamcontroller_neptune
@@ -10187,6 +10317,10 @@ body {
   .gamepadtabbedpage_TabHeaderRowWrapper_2Jobs.gamepadtabbedpage_Floating_3I3IM::after {
   opacity: 1;
 }
+.gamepadtabbedpage_OverlayPinnedView_25Oqw
+  .gamepadtabbedpage_TabHeaderRowWrapper_2Jobs {
+  visibility: hidden;
+}
 .gamepadtabbedpage_TabHeaderRowWrapper_2Jobs::after {
   content: "";
   position: absolute;
@@ -10374,6 +10508,10 @@ body {
 }
 .gamepadtabbedpage_Floating_3I3IM .gamepadtabbedpage_TabContentsScroll_1X4dt {
   clip: rect(58px, auto, auto, auto);
+}
+.gamepadtabbedpage_OverlayPinnedView_25Oqw
+  .gamepadtabbedpage_TabContentsScroll_1X4dt {
+  overflow-y: hidden;
 }
 .gamepadtabbedpage_Right_1-jlW
   > .gamepadtabbedpage_ContentTransition_L_ehQ.gamepadtabbedpage_Enter_11zfc {
@@ -13504,7 +13642,6 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
 .gamepadui_BasicUiRoot_gbo6E * {
   user-select: none;
 }
-.gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneConfigurator_1oZO8,
 .gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneKeyboard_1uyWM {
   zoom: 1.5;
 }
@@ -14077,6 +14214,7 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
   border: 1px solid #0e141b;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
+  user-select: text;
 }
 .hardwaresurveydialog_HardwareSurveyDialog_3v2Gg.hardwaresurveydialog_Desktop_hYVp3
   > .hardwaresurveydialog_HardwareSurveySections_3f3VJ
@@ -18408,6 +18546,7 @@ button.keyboardsettings_ShowKeyboardButton_3vbFn svg {
   height: 100%;
   background-color: #3d4450;
   overflow: scroll;
+  user-select: text;
 }
 .systemsettings_SteamRuntimeSystemInfoDialogContent_q5OA-
   .DialogBody
@@ -46882,6 +47021,7 @@ div.LowPerfMode
   opacity: 0;
   transition: opacity 0.1s cubic-bezier(0.16, 0.86, 0.43, 0.99);
   mix-blend-mode: overlay;
+  pointer-events: none;
 }
 .BasicUI .allcollections_Collection_3IWn-:focus::after {
   animation-name: allcollections_focusAnimation_1YxWh;
@@ -48203,6 +48343,7 @@ div.LowPerfMode
   opacity: 0;
   transform: translateY(-8px);
   visibility: hidden;
+  pointer-events: none;
 }
 .gpfocuswithin > .basicgamecarousel_CarouselGameLabelWrapper_ZkD6W,
 :hover ~ .basicgamecarousel_CarouselGameLabelWrapper_ZkD6W {
@@ -55582,6 +55723,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.achievementspage_MyAchievementsHeader_2UpV2.achievementspage_PinnedView_278LB {
+  visibility: hidden;
+}
 .achievementspage_MyAchievementsHeader_2UpV2 .achievementspage_Label_2LSKt {
   color: #dcdedf;
   font-size: 16px;
@@ -55590,14 +55734,21 @@ body {
 }
 .achievementspage_MyAchievementsHeader_2UpV2
   .achievementspage_SearchField_1BiMD {
-  padding-right: 10px;
-  min-width: 210px;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 220px;
 }
 .achievementspage_HeaderContainer_36Dp_ {
   padding-left: 24px;
   padding-right: 24px;
   scroll-margin-top: 68px;
   user-select: none;
+}
+.achievementspage_HeaderContainer_36Dp_.achievementspage_PinnedView_278LB {
+  visibility: hidden;
+}
+.achievementspage_PinnedViewTabs_22JRo {
+  visibility: hidden;
 }
 .achievementspage_LoadingContainer_2lhAp {
   padding: 24px;
@@ -55622,6 +55773,25 @@ body {
 }
 .achievementspage_CompareButtonContainer_1UeO0 {
   flex-basis: 220px;
+}
+.achievementspage_SortableAchievementsList_1bbP5 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.achievementspage_SortableUserAchievement_3RbiU {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #23262e;
+}
+.achievementspage_SortableUserAchievement_3RbiU > :first-child {
+  flex: 1;
+}
+.achievementspage_SortableUserAchievement_3RbiU svg {
+  height: 30px;
+  cursor: grabbing;
+  margin-right: 8px;
 }
 .sharedappdetailsheader_TopCapsule_2meE3 {
   --header-height: 24vw;
@@ -56350,6 +56520,8 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   z-index: 32;
   flex-wrap: wrap;
   justify-content: flex-end;
+  max-height: calc(100% - 16px);
+  overflow: hidden;
 }
 .BasicUI .appdetailsheader_HeaderFeatures_2b6Wk {
   display: none;
@@ -63475,6 +63647,8 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .notificationcontent_AvatarStatus_1d4A6.offline {
   background-color: #67707b;
 }
+.notificationcontent_StandardTemplate_5HZT7
+  .notificationcontent_AvatarStatus_1d4A6,
 .notificationcontent_DesktopToastTemplate_vW8HM
   .notificationcontent_AvatarStatus_1d4A6,
 .notificationcontent_AllNotificationsTemplate_3Ak7c
@@ -63571,6 +63745,17 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   line-height: 20px;
   font-size: 10px;
   text-align: center;
+}
+.notificationcontent_NewIndicator_1Gpzt {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
+}
+.notificationcontent_NewIndicator_1Gpzt svg {
+  width: 9px;
+  height: 9px;
+  color: #57a11c;
 }
 .notificationcontent_DownloadCompleteText_GiuEz,
 .notificationcontent_SystemUpdateText_1ToC5,
@@ -64679,6 +64864,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .standardtemplates_AvatarStatus_2yhOC.offline {
   background-color: #67707b;
 }
+.standardtemplates_StandardTemplate_3e_DB .standardtemplates_AvatarStatus_2yhOC,
 .standardtemplates_DesktopToastTemplate_3CGHg
   .standardtemplates_AvatarStatus_2yhOC,
 .standardtemplates_AllNotificationsTemplate_2m9JU
@@ -64775,6 +64961,17 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   line-height: 20px;
   font-size: 10px;
   text-align: center;
+}
+.standardtemplates_NewIndicator_3aotN {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
+}
+.standardtemplates_NewIndicator_3aotN svg {
+  width: 9px;
+  height: 9px;
+  color: #57a11c;
 }
 @keyframes shorttemplates_ItemFocusAnim-darkerGrey-nocolor_1kXW6 {
   from {
@@ -65496,6 +65693,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .shorttemplates_AvatarStatus_1wkTz.offline {
   background-color: #67707b;
 }
+.shorttemplates_StandardTemplate_WgSlJ .shorttemplates_AvatarStatus_1wkTz,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_AvatarStatus_1wkTz,
 .shorttemplates_AllNotificationsTemplate_yn7qi
   .shorttemplates_AvatarStatus_1wkTz,
@@ -65591,6 +65789,17 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   line-height: 20px;
   font-size: 10px;
   text-align: center;
+}
+.shorttemplates_NewIndicator_7k_rN {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
+}
+.shorttemplates_NewIndicator_7k_rN svg {
+  width: 9px;
+  height: 9px;
+  color: #57a11c;
 }
 .shorttemplates_ShortTemplate_29NLb {
   padding: 0;
@@ -66402,6 +66611,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .steamtemplates_AvatarStatus_3AcTa.offline {
   background-color: #67707b;
 }
+.steamtemplates_StandardTemplate_1zIGL .steamtemplates_AvatarStatus_3AcTa,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_AvatarStatus_3AcTa,
 .steamtemplates_AllNotificationsTemplate_3diaj
   .steamtemplates_AvatarStatus_3AcTa,
@@ -92687,6 +92897,11 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   height: 22px;
   margin-top: 1px;
 }
+.header_HeaderItem_2HnVd.header_NotificationsIcon_cieWw svg {
+  width: auto;
+  height: 18px;
+  margin-top: 1px;
+}
 .header_VolumePopin_2WOJ5 {
   position: absolute;
   z-index: 6000;
@@ -93695,6 +93910,142 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+}
+@keyframes controllerconfigurator_mouseposition_ItemFocusAnim-darkerGrey-nocolor_k84iz {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes controllerconfigurator_mouseposition_ItemFocusAnim-darkerGrey_Twc7J {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes controllerconfigurator_mouseposition_ItemFocusAnim-darkGrey_2d0-w {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes controllerconfigurator_mouseposition_ItemFocusAnim-grey_1Vuc- {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes controllerconfigurator_mouseposition_ItemFocusAnimBorder-darkGrey_3ILM7 {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes controllerconfigurator_mouseposition_ItemFocusAnim-green_2Takr {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes controllerconfigurator_mouseposition_focusAnimation_ujCVC {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes controllerconfigurator_mouseposition_hoverAnimation_2Nog5 {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.controllerconfigurator_mouseposition_Opaque_354c6 {
+  background-color: #23262e;
+}
+.controllerconfigurator_mouseposition_MouseCapturePanel_1iR8Q {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+}
+.controllerconfigurator_mouseposition_BackgroundScreenshot_2Dnb_ {
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.controllerconfigurator_mouseposition_BackgroundScreenshot_2Dnb_.controllerconfigurator_mouseposition_Opaque_354c6 {
+  background-color: #23262e;
+}
+.controllerconfigurator_mouseposition_BackgroundDiv_sQzgU {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+}
+.controllerconfigurator_mouseposition_BackgroundDiv_sQzgU.controllerconfigurator_mouseposition_Opaque_354c6 {
+  background-color: #23262e;
+}
+.controllerconfigurator_mouseposition_HintLabel_J3Ran {
+  width: 60%;
+  font-size: 24px;
+  padding: 8px;
+  opacity: 75%;
+  background-color: #0e141b;
+  border: 2px solid #23262e;
+}
+.controllerconfigurator_mouseposition_MouseControlPanelContainer_2zpFm {
+  display: flex;
+  overflow: visible;
+  position: relative;
+  margin: auto;
+  background-color: #0e141b;
+  border: 2px solid #23262e;
+  padding: calc(12px + 1.4vw) 2.8vw;
+  min-height: initial;
+  width: 660px;
+  box-sizing: border-box;
+}
+.controllerconfigurator_mouseposition_MouseControlPanelContainer_2zpFm
+  .controllerconfigurator_mouseposition_Footer_GZDte {
+  min-width: 500px;
+}
+.controllerconfigurator_mouseposition_Row_P4csN {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.controllerconfigurator_mouseposition_MouseControlPanel_2pg71 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  --field-negative-horizontal-margin: 32px;
 }
 @keyframes controllerconfiguratorchooseconfiguration_ItemFocusAnim-darkerGrey-nocolor_-A6lV {
   from {
@@ -95040,6 +95391,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   opacity: 0;
   transition: opacity 0.1s cubic-bezier(0.16, 0.86, 0.43, 0.99);
   mix-blend-mode: overlay;
+  pointer-events: none;
 }
 .BasicUI .appportrait_LibraryItemBox_WYgDg:focus::after {
   animation-name: appportrait_focusAnimation_8N-VO;
@@ -95095,6 +95447,17 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
   filter: brightness(1.2);
 }
+.appportrait_LibraryItemBox_WYgDg
+  .appportrait_LibraryItemOverlayOuterArea_2BOmk {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.appportrait_LibraryItemBox_WYgDg
+  .appportrait_LibraryItemOverlayInnerArea_2GRcK {
+  flex-grow: 1;
+  position: relative;
+}
 .appportrait_LibraryItemBox_WYgDg .appportrait_UninstalledIcon_8YrRm {
   width: 32px;
   height: 32px;
@@ -95130,6 +95493,10 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   right: 2%;
   opacity: 0;
 }
+.appportrait_LibraryItemBox_WYgDg
+  .appportrait_ControllerSupportIcon_1TaKf.appportrait_ContextMenuIndicatorEnabled_27dzj {
+  bottom: 32px;
+}
 .appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf {
   width: 20%;
   max-width: 34px;
@@ -95145,6 +95512,19 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf svg {
   max-height: 23px;
   width: 100%;
+}
+.appportrait_LibraryItemBox_WYgDg .appportrait_ContextMenuIndicator_2TLFh {
+  width: 100%;
+  height: 45px;
+  background-color: #0e141b;
+  text-align: center;
+  opacity: 0;
+  transform-origin: bottom;
+  transform: scaleY(0.5);
+}
+.appportrait_LibraryItemBox_WYgDg .appportrait_ContextMenuIndicator_2TLFh svg {
+  fill: #fff;
+  max-height: 100%;
 }
 .appportrait_LibraryItemBox_WYgDg.appportrait_InLibraryManager_6vZ6m
   .appportrait_SteamDeckCompatIcon_3kDT9 {
@@ -95188,6 +95568,27 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   transition-property: opacity;
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+}
+.appportrait_HoversEnabled_54PuC
+  .appportrait_LibraryItemBox_WYgDg:hover
+  .appportrait_ContextMenuIndicator_2TLFh,
+.appportrait_LibraryItemBox_WYgDg.gpfocus
+  .appportrait_ContextMenuIndicator_2TLFh {
+  transition-property: opacity transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  opacity: 0.4;
+  transform: scaleY(1);
+}
+.appportrait_HoversEnabled_54PuC
+  .appportrait_LibraryItemBox_WYgDg:hover
+  .appportrait_ContextMenuIndicator_2TLFh:hover,
+.appportrait_LibraryItemBox_WYgDg.gpfocus
+  .appportrait_ContextMenuIndicator_2TLFh:hover {
+  transition-property: opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+  opacity: 0.9;
 }
 .appportrait_HoversEnabled_54PuC
   .appportrait_LibraryItemBox_WYgDg:hover:not(.appportrait_Landscape_3VOR2) {
@@ -95307,6 +95708,13 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   box-shadow: none;
   border-top: none;
   border-bottom: none;
+}
+.appportrait_LibraryItemBox_WYgDg::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  width: 100%;
 }
 .appportrait_LibraryItemBoxSubscript_1LJqx {
   box-sizing: border-box;

@@ -130,6 +130,8 @@
 			{
 				"A"		"#Action_Select"
 				"B"		"#Action_Cancel"
+				"LSHOULDER"		"#Action_LSilo"
+				"RSHOULDER"		"#Action_RSilo"
 			}
 		}
 		"Keyboard"
@@ -3720,7 +3722,7 @@
 		"mode"		"switches"
 		"inputs"
 		{
-			"button_back_left_upper"
+			"left_bumper"
 			{
 				"activators"
 				{
@@ -3728,7 +3730,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Mouse B, Back"
+							"binding"		"game_action Mouse LSHOULDER, Backspace"
+						}
+					}
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Mouse RSHOULDER, Space"
 						}
 					}
 				}

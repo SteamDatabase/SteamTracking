@@ -420,6 +420,10 @@
         {
             "name": "DumpHTTPClients",
             "argc": "2"
+        },
+        {
+            "name": "BGetMachineID",
+            "argc": "2"
         }
     ]
 }

@@ -1797,6 +1797,16 @@
         a = {
           capsule: { width: 800, height: 450, rgAcceptableTypes: i },
           spotlight: { width: 2108, height: 460, rgAcceptableTypes: i },
+          localized_store_app_spotlight: {
+            width: 1100,
+            height: 240,
+            rgAcceptableTypes: i,
+          },
+          localized_store_app_spotlight_mobile: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: i,
+          },
           background: { width: 1920, height: 622, rgAcceptableTypes: i },
           hero: { width: 0, height: 0, rgAcceptableTypes: i },
           email_full: { width: 800, height: 300, rgAcceptableTypes: i },
@@ -3412,8 +3422,12 @@
               ? (t = this.jsondata.localized_sale_product_mobile_banner)
               : "bestofyear_banner" === e
               ? (t = this.jsondata.localized_bestofyear_banner)
-              : "bestofyear_banner_mobile" === e &&
-                (t = this.jsondata.localized_bestofyear_banner_mobile);
+              : "bestofyear_banner_mobile" === e
+              ? (t = this.jsondata.localized_bestofyear_banner_mobile)
+              : "localized_store_app_spotlight" === e
+              ? (t = this.jsondata.localized_store_app_spotlight)
+              : "localized_store_app_spotlight_mobile" === e &&
+                (t = this.jsondata.localized_store_app_spotlight_mobile);
           return t;
         }
         GetImageURL(e, t = 0, r = c.FN.full) {
@@ -10689,10 +10703,7 @@
             for (let e of this.m_filesToUpload)
               if (!this.BIsFileCompleted(e.file)) {
                 const t = e.IsValidAssetType(r, n, a);
-                if (
-                  (console.log("UploadAllFiles, status ", t, r, n, a),
-                  t.error || t.needsCrop)
-                )
+                if (t.error || t.needsCrop)
                   t.error &&
                     (this.m_lastError = {
                       file: e.file,
@@ -10875,7 +10886,9 @@
           const d = this.width >= n && this.height >= i,
             m = s ? this.width === n && this.height === i : d,
             u = r && r != this.fileType,
-            p = !!e && 0 == (0, a.Vy)(this.fileType, e || []).length,
+            p =
+              !!(e && e.length > 0) &&
+              0 == (0, a.Vy)(this.fileType, e || []).length,
             h = Boolean(_(this.fileType));
           let g = "",
             v = !1;

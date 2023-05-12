@@ -5007,6 +5007,9 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   .saleclaimitem_ClaimButton_2jLt9:enabled:active.saleclaimitem_gpfocus_dF9GZ {
   background: linear-gradient(0deg, #a12080, #6c0c53);
 }
+.saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9::before {
+  box-shadow: none;
+}
 .saleclaimitem_ClaimTitle_33gpG {
   font-size: 28px;
   color: #fff;

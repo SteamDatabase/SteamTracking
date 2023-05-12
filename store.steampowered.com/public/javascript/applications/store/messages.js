@@ -194,20 +194,22 @@
           return this.m_templateVars;
         }
         GetTemplateImage() {
-          let e = this.m_templateVars.ll_image[c.De.LANGUAGE];
+          let e = this.m_templateVars.ll_image[c.De.LANGUAGE],
+            t = (0, i.jM)(c.De.LANGUAGE);
           return (
             e ||
               c.De.LANGUAGE != (0, i.j_)(27) ||
-              (e = this.m_templateVars.ll_image.LATAM),
-            e || (e = this.m_templateVars.ll_image.english),
-            null == e ? void 0 : e.path
+              ((e = this.m_templateVars.ll_image.LATAM), (t = 27)),
+            e || ((e = this.m_templateVars.ll_image.english), (t = 0)),
+            [null == e ? void 0 : e.path, t]
           );
         }
         GetTemplateBackgroundImage() {
-          let e = this.m_templateVars.background[c.De.LANGUAGE];
+          let e = this.m_templateVars.background[c.De.LANGUAGE],
+            t = (0, i.jM)(c.De.LANGUAGE);
           return (
-            e || (e = this.m_templateVars.background.english),
-            null == e ? void 0 : e.path
+            e || ((e = this.m_templateVars.background.english), (t = 0)),
+            [null == e ? void 0 : e.path, t]
           );
         }
         GetFeaturedVideoMP4URL() {
@@ -217,10 +219,11 @@
           return this.m_templateVars.featured_video_webm;
         }
         GetPosterImage() {
-          let e = this.m_templateVars.poster[c.De.LANGUAGE];
+          let e = this.m_templateVars.poster[c.De.LANGUAGE],
+            t = (0, i.jM)(c.De.LANGUAGE);
           return (
-            e || (e = this.m_templateVars.poster.english),
-            null == e ? void 0 : e.path
+            e || ((e = this.m_templateVars.poster.english), (t = 0)),
+            [null == e ? void 0 : e.path, t]
           );
         }
         GetSubtitleObj() {
@@ -374,9 +377,49 @@
         }, [e]);
       }
     },
+    40442: (e, t, s) => {
+      "use strict";
+      s.d(t, { H: () => l, o: () => o });
+      var a = s(89526),
+        n = s(59934),
+        r = s(32765);
+      const i = a.createContext({ show_feature_video_template: !0 });
+      function l(e) {
+        const [t, s] = a.useState(),
+          l = (0, n.TH)(),
+          o = a.useMemo(() => {
+            const e = new URLSearchParams(l.search);
+            return {
+              show_feature_video_template: e.has("featured_video_cohort")
+                ? "1" === e.get("featured_video_cohort")
+                : void 0,
+            };
+          }, [l.search]);
+        return (
+          a.useLayoutEffect(() => {
+            const e = (0, r.kQ)(
+              "marketingmessage_config",
+              "application_config"
+            );
+            let t;
+            (t =
+              e && void 0 !== e.featured_video_cohort
+                ? 1 === e.featured_video_cohort
+                : 1 == Math.floor(2 * Math.random())),
+              void 0 !== o.show_feature_video_template &&
+                (t = o.show_feature_video_template),
+              s({ show_feature_video_template: t });
+          }, [o]),
+          t ? a.createElement(i.Provider, { value: t }, e.children, " ") : null
+        );
+      }
+      function o() {
+        return a.useContext(i).show_feature_video_template;
+      }
+    },
     27734: (e, t, s) => {
       "use strict";
-      s.d(t, { v: () => R, U: () => V });
+      s.d(t, { v: () => R, U: () => D });
       var a = s(89526),
         n = s(46132),
         r = (s(1362), s(39120)),
@@ -396,15 +439,14 @@
       }
       function d(e) {
         var t;
-        const { path: s, message: r } = e,
-          l = (0, u._T)(e, ["path", "message"]),
-          o =
-            null === (t = r.GetTemplateVars()) || void 0 === t
+        const { path: s, message: n, eLanguage: r } = e,
+          i = (0, u._T)(e, ["path", "message", "eLanguage"]),
+          l =
+            null === (t = n.GetTemplateVars()) || void 0 === t
               ? void 0
               : t.last_asset_mtime,
-          c = (0, n.jM)(i.De.LANGUAGE),
-          m = _(r.id, c, o, { type: "file", path: s });
-        return a.createElement("img", Object.assign({}, l, { src: m }));
+          o = _(n.id, r, l, { type: "file", path: s });
+        return a.createElement("img", Object.assign({}, i, { src: o }));
       }
       function p(e) {
         var t;
@@ -424,14 +466,15 @@
         );
       }
       var E = s(71161),
-        M = (s(75962), s(19304)),
-        v = s(60161),
-        f = s(14826),
-        h = s(207),
-        S = s(701),
-        A = s(3028);
+        v = (s(75962), s(19304)),
+        M = s(60161),
+        f = s(40442),
+        h = s(701),
+        A = s(14826),
+        S = s(207),
+        P = s(3028);
       function k(e) {
-        const t = V(),
+        const t = D(),
           [s, n] = (0, a.useState)(!1);
         return a.createElement(
           o.s,
@@ -439,7 +482,7 @@
             focusable: !0,
             noFocusRing: !0,
             onActivate: () => n(!0),
-            className: A.PosterCtn,
+            className: P.PosterCtn,
           },
           s
             ? a.createElement(
@@ -448,39 +491,38 @@
                   controls: !0,
                   muted: !0,
                   autoPlay: !0,
-                  className: A.Video,
+                  className: P.Video,
                   crossOrigin:
                     "dev" == g.De.WEB_UNIVERSE ? void 0 : "anonymous",
                 },
                 a.createElement("source", {
-                  src: (0, h.et)(t.GetFeaturedVideoWebMURL()),
+                  src: (0, S.et)(t.GetFeaturedVideoWebMURL()),
                   type: "video/webm",
                 }),
                 Boolean(!g.De.IN_CLIENT) &&
                   a.createElement("source", {
-                    src: (0, h.et)(t.GetFeaturedVideoMP4URL()),
+                    src: (0, S.et)(t.GetFeaturedVideoMP4URL()),
                     type: "video/mp4",
                   }),
                 a.createElement(G, { message: t })
               )
-            : a.createElement(P, { message: t })
+            : a.createElement(L, { message: t })
         );
       }
-      function P(e) {
+      function L(e) {
         var t;
         const { message: s } = e,
-          r = (0, n.jM)(g.De.LANGUAGE),
-          i =
+          n =
             null === (t = s.GetTemplateVars()) || void 0 === t
               ? void 0
               : t.last_asset_mtime,
-          l = s.GetPosterImage(),
-          o = _(s.id, r, i, { type: "file", path: l });
+          [r, i] = s.GetPosterImage(),
+          l = _(s.id, i, n, { type: "file", path: r });
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement("img", { src: o, className: A.Poster }),
-          a.createElement(S.GhU, null)
+          a.createElement("img", { src: l, className: P.Poster }),
+          a.createElement(h.GhU, null)
         );
       }
       function G(e) {
@@ -494,7 +536,7 @@
                   : e.last_asset_mtime,
               i = new Array();
             for (let e = 0; e < 30; ++e) {
-              if (!f.LJ.IsELanguageValidInRealm(e, g.De.EREALM)) continue;
+              if (!A.LJ.IsELanguageValidInRealm(e, g.De.EREALM)) continue;
               const l = (0, n.j_)(e);
               if (s && s[l]) {
                 const o = s[l].path,
@@ -506,7 +548,7 @@
                     kind: "subtitles",
                     srcLang: (0, n.dt)(e),
                     default: g.De.LANGUAGE == l,
-                    label: (0, f.Xx)("#language_selection_" + (0, n.j_)(e)),
+                    label: (0, A.Xx)("#language_selection_" + (0, n.j_)(e)),
                   })
                 );
               }
@@ -515,36 +557,46 @@
           }, [t]);
         return a.createElement(a.Fragment, null, s);
       }
-      var L = s(92894);
-      function b(e) {
-        const t = "featured_video" === V().GetTemplateVars().custom_display;
-        return a.createElement(
-          "div",
-          { className: L.All },
+      var b = s(92894);
+      function B(e) {
+        const t = D(),
+          s = (0, f.o)(),
+          n = "featured_video" === t.GetTemplateVars().custom_display;
+        let r;
+        return (
+          n && (r = s ? "featured_video_template" : "no_video_template"),
           a.createElement(
-            "div",
-            { className: L.MessageContent },
-            a.createElement(T, {
-              isBackgroundBlur: !0,
-              bOverrideUseBackgroundImage: t,
-            }),
-            a.createElement(T, { bOverrideUseBackgroundImage: t }),
-            t && a.createElement(k, null),
-            a.createElement(w, null),
-            a.createElement("div", { style: { clear: "both" } })
+            E.ZP,
+            { submethod: r },
+            a.createElement(
+              "div",
+              { className: b.All },
+              a.createElement(
+                "div",
+                { className: b.MessageContent },
+                a.createElement(C, {
+                  isBackgroundBlur: !0,
+                  bOverrideUseBackgroundImage: s && n,
+                }),
+                a.createElement(C, { bOverrideUseBackgroundImage: s && n }),
+                Boolean(s && n) && a.createElement(k, null),
+                a.createElement(N, null),
+                a.createElement("div", { style: { clear: "both" } })
+              )
+            )
           )
         );
       }
-      function B(e) {
+      function w(e) {
         return a.createElement(
           "div",
-          { className: L.All },
+          { className: b.All },
           a.createElement(
             "div",
-            { className: L.MessageContent },
-            a.createElement(T, { isBackgroundBlur: !0 }),
-            a.createElement(C, null),
-            a.createElement(w, null),
+            { className: b.MessageContent },
+            a.createElement(C, { isBackgroundBlur: !0 }),
+            a.createElement(T, null),
+            a.createElement(N, null),
             a.createElement("div", { style: { clear: "both" } })
           )
         );
@@ -566,30 +618,30 @@
           n.startsWith("steam://") || (n = `steam://openurl/${n}`),
           a.useCallback(
             (e) => {
-              (0, v.RA)(e).location.href = n;
+              (0, M.RA)(e).location.href = n;
             },
             [n]
           )
         );
       }
-      function T(e) {
+      function C(e) {
         const { isBackgroundBlur: t, bOverrideUseBackgroundImage: s } = e,
-          n = V(),
+          n = D(),
           r = y(n, "image"),
-          i = s ? n.GetTemplateBackgroundImage() : n.GetTemplateImage();
+          [i, l] = s ? n.GetTemplateBackgroundImage() : n.GetTemplateImage();
         return a.createElement(
           o.s,
           {
             focusable: !0,
             noFocusRing: !0,
-            className: (0, M.Z)(L.GameImage, t && L.IsBlur),
+            className: (0, v.Z)(b.GameImage, t && b.IsBlur),
             onActivate: r,
           },
-          i && a.createElement(d, { message: n, path: i })
+          i && a.createElement(d, { message: n, path: i, eLanguage: l })
         );
       }
-      function C(e) {
-        const t = V(),
+      function T(e) {
+        const t = D(),
           s = y(t, "image"),
           r = (0, n.jM)(i.De.LANGUAGE),
           l = t.GetTemplateMP4(r),
@@ -599,7 +651,7 @@
           {
             focusable: !0,
             noFocusRing: !0,
-            className: (0, M.Z)(L.GameImage),
+            className: (0, v.Z)(b.GameImage),
             onActivate: s,
           },
           a.createElement(p, {
@@ -614,35 +666,35 @@
           })
         );
       }
-      function w(e) {
-        const t = V(),
+      function N(e) {
+        const t = D(),
           s = y(t, "button"),
           n =
             t.GetTemplateVars().button_text_custom ||
             t.GetTemplateVars().button_text;
         return a.createElement(
           "div",
-          { className: (0, M.Z)(L.MessageFooter, !1) },
+          { className: (0, v.Z)(b.MessageFooter, !1) },
           a.createElement(
             "div",
-            { className: L.ButtonAndPriceCtn },
+            { className: b.ButtonAndPriceCtn },
             a.createElement(
               o.s,
               {
                 focusable: !0,
                 noFocusRing: !0,
-                className: L.Btn,
+                className: b.Btn,
                 onActivate: s,
               },
               n
             ),
-            a.createElement(c.SV, null, a.createElement(N, null))
+            a.createElement(c.SV, null, a.createElement(x, null))
           ),
           a.createElement(I, null)
         );
       }
-      function N() {
-        const e = V().associated_item;
+      function x() {
+        const e = D().associated_item;
         if (
           e &&
           e.GetBestPurchaseOption() &&
@@ -651,24 +703,24 @@
           e.GetBestPurchaseOption();
           return a.createElement(
             "div",
-            { className: L.MessagePriceCtn },
+            { className: b.MessagePriceCtn },
             a.createElement(m.nk, { storeItem: e })
           );
         }
-        return a.createElement("div", { className: L.NoPrice });
+        return a.createElement("div", { className: b.NoPrice });
       }
       function I(e) {
-        const t = V();
+        const t = D();
         return (0, r.KY)()
           ? null
           : a.createElement("div", {
-              className: L.Legal,
+              className: b.Legal,
               dangerouslySetInnerHTML: { __html: t.GetLegalHTML() },
             });
       }
-      const x = a.createContext(null);
-      function V() {
-        return a.useContext(x);
+      const V = a.createContext(null);
+      function D() {
+        return a.useContext(V);
       }
       function R(e) {
         const { message: t } = e,
@@ -679,27 +731,27 @@
             s && n(t.GetLegalHTML());
           }, [s, t, n]),
           a.createElement(
-            x.Provider,
+            V.Provider,
             { value: t },
             a.createElement(
               a.Suspense,
               { fallback: null },
-              a.createElement(U, { message: t, active: s })
+              a.createElement(F, { message: t, active: s })
             )
           )
         );
       }
-      const D = a.lazy(() => s.e(938).then(s.bind(s, 75176)));
-      function U(e) {
+      const U = a.lazy(() => s.e(938).then(s.bind(s, 75176)));
+      function F(e) {
         const { message: t, active: s } = e,
           r = (0, n.jM)(i.De.LANGUAGE),
           { bLowBandwidthMode: o } = (0, l.YW)();
         if ("replay2022" === t.GetTemplateVars().custom_display)
-          if (i.L7.logged_in) return a.createElement(D, { active: s });
+          if (i.L7.logged_in) return a.createElement(U, { active: s });
         return "image" === t.GetTemplateType()
           ? (0, l.p8)(t, r, o)
-            ? a.createElement(B, null)
-            : a.createElement(b, { active: s })
+            ? a.createElement(w, null)
+            : a.createElement(B, { active: s })
           : null;
       }
     },
@@ -744,9 +796,9 @@
         );
       }
     },
-    3296: (e, t, s) => {
+    28986: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { MarketingMessageRoutes: () => w, default: () => N });
+      s.r(t), s.d(t, { MarketingMessageRoutes: () => C, default: () => T });
       var a = s(89526),
         n = s(96927),
         r = s(59934),
@@ -761,8 +813,8 @@
         d = s(22171),
         p = s(12360),
         E = s(69338),
-        M = s(27734);
-      const v = 8;
+        v = s(27734);
+      const M = 8;
       function f(e) {
         const { MarketingMessagesStore: t } = e,
           s = (0, m.YW)(),
@@ -791,21 +843,21 @@
           i)
         )
           return a.createElement(
-            P,
+            k,
             null,
             (0, c.Xx)("#Error_ErrorCommunicatingWithNetwork")
           );
         if (o)
           return a.createElement(
-            P,
+            k,
             null,
             (0, c.Xx)("#MarketingMessages_NoneAvailable")
           );
-        const M = s.bIncludeSeenMessages
+        const v = s.bIncludeSeenMessages
           ? n
           : null == n
           ? void 0
-          : n.slice(0, v);
+          : n.slice(0, M);
         return a.createElement(
           "div",
           { className: u.MessageListPage },
@@ -814,12 +866,12 @@
             { className: u.MessageListScroll },
             a.createElement(h, {
               MarketingMessagesStore: t,
-              rgMessages: M,
+              rgMessages: v,
               iActiveMessage: _,
             })
           ),
-          a.createElement(S, {
-            cMessages: null == M ? void 0 : M.length,
+          a.createElement(A, {
+            cMessages: null == v ? void 0 : v.length,
             iMessage: _,
             setMessage: d,
           })
@@ -838,7 +890,7 @@
               null == s
                 ? void 0
                 : s.map((e, s) =>
-                    a.createElement(G, {
+                    a.createElement(L, {
                       key: e.id,
                       message: e,
                       MarketingMessagesStore: t,
@@ -853,14 +905,14 @@
               a.createElement(E.V, { size: "xxlarge", msDelayAppear: 500 })
             );
       }
-      function S(e) {
+      function A(e) {
         const { cMessages: t, iMessage: s, setMessage: n } = e,
           r = a.useCallback(() => n(s - 1), [n, s]),
           i = a.useCallback(() => n(s + 1), [n, s]),
           l = [];
         for (let e = 0; e < t; e++)
           l.push(
-            a.createElement(A, {
+            a.createElement(S, {
               key: e,
               active: e == s,
               iMessage: e,
@@ -900,7 +952,7 @@
           )
         );
       }
-      function A(e) {
+      function S(e) {
         const { active: t, iMessage: s, setMessage: n } = e,
           r = a.useCallback(() => n(s), [n, s]);
         return a.createElement("div", {
@@ -908,7 +960,7 @@
           onClick: r,
         });
       }
-      function k(e) {
+      function P(e) {
         const { MarketingMessagesStore: t, preview: s } = e,
           n = (0, r.$B)(),
           { message: i, isError: o } = (0, l.Q2)(t, n.params.messageid, s);
@@ -916,22 +968,22 @@
           (0, p.h)(u.MarketingMessagePage),
           o
             ? a.createElement(
-                P,
+                k,
                 null,
                 (0, c.Xx)("#Error_ErrorCommunicatingWithNetwork")
               )
             : n.params.messageid
             ? i
-              ? a.createElement(M.v, { message: i })
+              ? a.createElement(v.v, { message: i })
               : null
             : a.createElement(
-                P,
+                k,
                 null,
                 (0, c.Xx)("#MarketingMessages_NoneAvailable")
               )
         );
       }
-      function P(e) {
+      function k(e) {
         return a.createElement(
           o.VY,
           { style: { maxWidth: "400px", margin: "0 auto" } },
@@ -939,7 +991,7 @@
           a.createElement(o.uT, null, e.children)
         );
       }
-      function G(e) {
+      function L(e) {
         const { message: t, MarketingMessagesStore: s, active: n, next: r } = e,
           i = a.useRef(),
           l = a.useRef(n || r);
@@ -974,36 +1026,21 @@
           a.createElement(
             "div",
             { className: (0, _.Z)(u.MessageWrapper, n && u.Active), ref: i },
-            a.createElement(M.v, { message: t, active: n })
+            a.createElement(v.v, { message: t, active: n })
           )
         );
       }
-      var L = s(90415),
+      var G = s(90415),
         b = s(36597),
         B = s(32765),
-        y = s(39120);
-      const T = a.createContext({});
-      function C(e) {
-        const [t, s] = a.useState(),
-          n = (0, r.TH)(),
-          i = a.useMemo(() => {
-            new URLSearchParams(n.search);
-            return {};
-          }, [n.search]);
-        return (
-          a.useLayoutEffect(() => {
-            (0, B.kQ)("marketingmessage_config", "application_config");
-            s({});
-          }, [i]),
-          t ? a.createElement(T.Provider, { value: t }, e.children, " ") : null
-        );
-      }
-      const w = {
+        w = s(39120),
+        y = s(40442);
+      const C = {
         List: () => `${n.Z.MarketingMessages()}list/`,
         Message: (e) => `${n.Z.MarketingMessages()}${e}`,
         MessagePreview: (e) => `${n.Z.MarketingMessages()}preview/${e}`,
       };
-      function N(e) {
+      function T(e) {
         const t = (function () {
           const [e, t] = a.useState(null);
           return (
@@ -1011,25 +1048,25 @@
               e ||
                 t(
                   (function () {
-                    if (!I) {
-                      const e = (0, L.T)(),
+                    if (!N) {
+                      const e = (0, G.T)(),
                         t = (0, B.kQ)(
                           "marketingmessage_config",
                           "application_config"
                         ),
                         s = new b.J(B.De.WEBAPI_BASE_URL, e.webapi_token);
                       if (
-                        ((I = new l.N8(s)),
+                        ((N = new l.N8(s)),
                         null == t ? void 0 : t.promotion_operation_token)
                       ) {
                         const e = new b.J(
                           B.De.WEBAPI_BASE_URL,
                           t.promotion_operation_token
                         );
-                        I.SetSteamInterfacePromotions(e);
+                        N.SetSteamInterfacePromotions(e);
                       }
                     }
-                    return I;
+                    return N;
                   })()
                 );
             }, [e]),
@@ -1045,36 +1082,36 @@
                 method: "default",
               },
               a.createElement(
-                C,
+                y.H,
                 null,
                 a.createElement(
-                  y.Ks,
+                  w.Ks,
                   null,
                   a.createElement(
                     r.rs,
                     null,
                     a.createElement(
                       r.AW,
-                      { path: `${w.List()}` },
+                      { path: `${C.List()}` },
                       a.createElement(f, { MarketingMessagesStore: t })
                     ),
                     a.createElement(
                       r.AW,
-                      { path: `${w.MessagePreview(":messageid")}` },
-                      a.createElement(k, {
+                      { path: `${C.MessagePreview(":messageid")}` },
+                      a.createElement(P, {
                         MarketingMessagesStore: t,
                         preview: !0,
                       })
                     ),
                     a.createElement(
                       r.AW,
-                      { path: `${w.Message(":messageid")}` },
-                      a.createElement(k, { MarketingMessagesStore: t })
+                      { path: `${C.Message(":messageid")}` },
+                      a.createElement(P, { MarketingMessagesStore: t })
                     ),
                     a.createElement(
                       r.AW,
                       null,
-                      a.createElement(r.l_, { to: `${w.List()}` })
+                      a.createElement(r.l_, { to: `${C.List()}` })
                     )
                   )
                 )
@@ -1082,7 +1119,7 @@
             )
           : null;
       }
-      let I;
+      let N;
     },
   },
 ]);

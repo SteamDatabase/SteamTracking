@@ -3915,7 +3915,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "steam_menu_friends_showtagged" "Zobrazit všechny v sekci PŘÁTELÉ"
 "steam_menu_friends_add" "Přidat přítele..."
 "steam_menu_friends_settings" "Zobrazit nastavení"
-"steam_menu_friends_players" "Hráči"
+"steam_menu_friends_players" "Spoluhráči"
 "friends_searchOnline"	"Vyhledat členy komunity služby Steam"
 "steam_send_guestpass"		"Poslat zkušební nabídku"
 "steam_stats"		"Statistiky"

@@ -131,6 +131,8 @@
 			{
 				"A"		"#Action_Select"
 				"B"		"#Action_Cancel"
+				"LSHOULDER"		"#Action_LSilo"
+				"RSHOULDER"		"#Action_RSilo"
 			}
 		}
 		"Keyboard"
@@ -3899,7 +3901,7 @@
 		"mode"		"switches"
 		"inputs"
 		{
-			"button_back_left_upper"
+			"left_bumper"
 			{
 				"activators"
 				{
@@ -3907,7 +3909,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Mouse B, Back"
+							"binding"		"game_action Mouse LSHOULDER, Backspace"
+						}
+					}
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Mouse RSHOULDER, Space"
 						}
 					}
 				}
@@ -4205,6 +4220,19 @@
 			"Default"		"Scroll"
 		}
 	}
+	"group"
+	{
+		"id"		"65"
+		"mode"		"joystick_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"output_joystick"		"2"
+			"sensitivity"		"150"
+		}
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -4258,6 +4286,7 @@
 			"14"		"button_diamond active"
 			"23"		"left_trigger active"
 			"24"		"right_trigger active"
+			"65"		"joystick active"
 		}
 	}
 	"preset"

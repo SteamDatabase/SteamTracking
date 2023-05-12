@@ -2,11 +2,11 @@
     "name": "IClientControllerSerializedMap",
     "functions": [ 
         {
-            "name": "Unknown_5435488",
+            "name": "Unknown_5437216",
             "argc": "0"
         },
         {
-            "name": "Unknown_6248416",
+            "name": "Unknown_6250928",
             "argc": "0"
         },
         {
@@ -164,6 +164,10 @@
         {
             "name": "SetRumbleExtended",
             "argc": "8"
+        },
+        {
+            "name": "IdentifyControllerRumbleEffect",
+            "argc": "2"
         },
         {
             "name": "SetGyroAutoCalibrate",
@@ -699,7 +703,7 @@
         },
         {
             "name": "SetMousePosition",
-            "argc": "3"
+            "argc": "4"
         },
         {
             "name": "GetGamepadIndexChangeCounter",

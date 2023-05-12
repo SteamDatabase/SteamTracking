@@ -979,9 +979,6 @@
  std::logic_error::logic_error(char const*)
  std::nothrow
  std::out_of_range::~out_of_range()
- std::overflow_error::~overflow_error()
- std::runtime_error::runtime_error(char const*)
- std::runtime_error::~runtime_error()
  std::terminate()
  strcasecmp
  strchr
@@ -1040,8 +1037,6 @@
  typeinfo for std::exception
  typeinfo for std::length_error
  typeinfo for std::out_of_range
- typeinfo for std::overflow_error
- typeinfo for std::runtime_error
  typeinfo for unsigned char
  typeinfo for unsigned int
  typeinfo for unsigned long long
@@ -1076,7 +1071,6 @@
  vtable for std::__1::ios_base
  vtable for std::length_error
  vtable for std::out_of_range
- vtable for std::overflow_error
  wcscmp
  wcslen
  wcstol
