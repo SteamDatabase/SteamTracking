@@ -3592,6 +3592,16 @@
         s = {
           capsule: { width: 800, height: 450, rgAcceptableTypes: n },
           spotlight: { width: 2108, height: 460, rgAcceptableTypes: n },
+          localized_store_app_spotlight: {
+            width: 1100,
+            height: 240,
+            rgAcceptableTypes: n,
+          },
+          localized_store_app_spotlight_mobile: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: n,
+          },
           background: { width: 1920, height: 622, rgAcceptableTypes: n },
           hero: { width: 0, height: 0, rgAcceptableTypes: n },
           email_full: { width: 800, height: 300, rgAcceptableTypes: n },
@@ -3693,6 +3703,11 @@
             width: 528,
             height: 297,
             rgAcceptableTypes: [1, 3],
+          },
+          localized_marketingmessage_background: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: n,
           },
           spotlight_art: { width: 306, height: 350, rgAcceptableTypes: i },
           marketingmessage_art: {
@@ -4917,8 +4932,12 @@
               ? (t = this.jsondata.localized_sale_product_mobile_banner)
               : "bestofyear_banner" === e
               ? (t = this.jsondata.localized_bestofyear_banner)
-              : "bestofyear_banner_mobile" === e &&
-                (t = this.jsondata.localized_bestofyear_banner_mobile);
+              : "bestofyear_banner_mobile" === e
+              ? (t = this.jsondata.localized_bestofyear_banner_mobile)
+              : "localized_store_app_spotlight" === e
+              ? (t = this.jsondata.localized_store_app_spotlight)
+              : "localized_store_app_spotlight_mobile" === e &&
+                (t = this.jsondata.localized_store_app_spotlight_mobile);
           return t;
         }
         GetImageURL(e, t = 0, r = c.FN.full) {
@@ -24795,10 +24814,7 @@
             for (let e of this.m_filesToUpload)
               if (!this.BIsFileCompleted(e.file)) {
                 const t = e.IsValidAssetType(r, n, a);
-                if (
-                  (console.log("UploadAllFiles, status ", t, r, n, a),
-                  t.error || t.needsCrop)
-                )
+                if (t.error || t.needsCrop)
                   t.error &&
                     (this.m_lastError = {
                       file: e.file,

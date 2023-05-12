@@ -442,6 +442,8 @@
     "EventEditor_ArtworkType_capsule": "Cover Image",
     "EventEditor_ArtworkType_background": "Header Image",
     "EventEditor_ArtworkType_store_spotlight": "Store Spotlight Banner",
+    "EventEditor_ArtworkType_localized_store_app_spotlight": "Store Spotlight Banner",
+    "EventEditor_ArtworkType_localized_store_app_spotlight_mobile": "Store Spotlight Mobile Banner",
     "EventEditor_ArtworkType_bestofyear_banner": "Best of Year Banner",
     "EventEditor_ArtworkType_bestofyear_banner_mobile": "Best of Year Mobile Banner",
     "EventEditor_ArtworkType_hero": "Library Hero Image",

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8051921";
+var CLSTAMP = "8055064";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "8051921";
     n,
     o,
     i = {
-      76251: (e, t, r) => {
+      11800: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "8051921";
         }
         Object.create;
         Object.create;
-        r(69467);
+        r(71108);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
@@ -430,7 +430,7 @@ var CLSTAMP = "8051921";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(M || (M = {}));
         var b, B, N, L, U;
-        r(6332);
+        r(32604);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -2332,7 +2332,7 @@ var CLSTAMP = "8051921";
           }
         }
         var Ve = r(42238);
-        r(44734);
+        r(60784);
         class ke extends Te {
           BIsExpired() {
             return Pe.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -2700,7 +2700,7 @@ var CLSTAMP = "8051921";
             });
           });
       },
-      62825: (e, t, r) => {
+      12994: (e, t, r) => {
         "use strict";
         r.d(t, {
           Bh: () => a,
@@ -2867,7 +2867,7 @@ var CLSTAMP = "8051921";
               };
         }
       },
-      69467: (e, t, r) => {
+      71108: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -3388,6 +3388,6 @@ var CLSTAMP = "8051921";
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [3817, 5140, 5968], () => s(76251));
+  var _ = s.O(void 0, [3817, 5140, 5968], () => s(11800));
   _ = s.O(_);
 })();
