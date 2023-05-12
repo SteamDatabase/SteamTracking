@@ -5923,6 +5923,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   user-select: none;
   border-radius: 2px;
   margin-top: 2px;
+  overflow-y: auto;
 }
 .screenshotmanagerdialog_ComboboxSelector_1aTMG {
   display: flex;
@@ -5931,9 +5932,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   font-size: 14px;
   padding-top: 8px;
   padding-bottom: 8px;
-  overflow-y: auto;
-  box-sizing: border-box;
-  height: 100%;
 }
 .screenshotmanagerdialog_ComboboxSelector_1aTMG
   .screenshotmanagerdialog_Option_1IEWV {

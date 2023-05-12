@@ -11,8 +11,8 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
-`1+
-`1+
+p1+
+p1+
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -8197,6 +8197,8 @@ log_files_always_flush
 0
 ...
 %s
+%lld
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 arrURLs
 T@"NSArray",R,N,V_arrURLs
 Steam
@@ -8345,7 +8347,6 @@ InsertString
 string
 EmoticonMenuItemStyle
 economy/emoticonhover/%s?client=1&l=%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
 Menu
 MenuButton
@@ -9896,8 +9897,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-May 10 2023
-17:40:40
+May 11 2023
+19:26:09
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13246,7 +13247,6 @@ LOCK_SH
 fcntl failed to set F_NOCACHE
 *
 rb
-%lld
 %lf
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 BIsOpen()
@@ -13795,26 +13795,18 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-%
+.
+.
 0
-.
-7C
-*C
-;
-.
+6C
+)C
 .
 p
 0
 0
 p
 0
-Z&
 &
-&
-&
-&
-&
-*!
 &
 -
 j
@@ -13826,35 +13818,30 @@ j
 j
 j
 j
-t%
 Ic
-$
 0
-9%
-3%
+C%
 p
 0
+{%
 j
 j
 j
 j
 j
 j
+%
 %
 j
 j
 ]
-x#
-D#
-C#
+}#
 %
-:#
-j
-v$
-j
-j
-j
-j
+%
+%
+%
+%
+y$
 j
 j
 j
@@ -13898,13 +13885,16 @@ j
 j
 j
 j
-L%
 j
 j
 j
 j
-6$
-z"
+j
+j
+j
+j
+j
+$
 $
 j
 j
@@ -13920,16 +13910,25 @@ j
 j
 j
 j
-+@
 j
 j
 j
 j
 j
+@
+@
+@
+@
+@
+@
++
 0
++
 A9]
-O
+U
+;"
 d
+W#
 j
 j
 j
@@ -13942,12 +13941,9 @@ j
 j
 j
 j
-$
-#
-#
-#
-#
-#
+p?
+"
+."
 
 
 
@@ -13956,6 +13952,7 @@ $
 @
 
 0
+#
 p
 0
 p
@@ -13975,22 +13972,29 @@ p
 p
 0
 p
+#
 p
 p
 @
 !
 !
-!
 #
 #
 #
 #
 #
 #
+#
+#
+#
+#
+Y"
 Mce
 #
 
-?
+%"
+#
+"
 "
 !
 0
@@ -14015,6 +14019,7 @@ j
 j
 j
 j
+>
 j
 j
 j
@@ -14023,21 +14028,15 @@ j
 j
 j
 j
-V"
-\!
-S!
+C"
+w!
+v!
 Hi
-;!
-;!
+B!
+g
 "
-"
-"
-"
-"
-"
-!>
-!
-!
+>
+>
 !
 !
 j
@@ -14054,16 +14053,10 @@ j
 j
 j
 0
-=
-=
-=
-=
-=
-=
 p
 0
-/
-8
+Y
+2!
 #
 j
 j
@@ -14105,8 +14098,8 @@ AT=
 D
 @
 @
-'
-z
+s1
+=
 @
 Hc
 Hc
@@ -14138,14 +14131,16 @@ IcE
 IcE
 @
 @
+`"
 V
-H;5B'%
 %
 =
 =
-$
+"
 !
+7
 @
+z
 &
 @
 M9e
@@ -14284,6 +14279,7 @@ G
 @
 >
 0
+g.
 p
 =
 0
@@ -14343,32 +14339,35 @@ P
 @
 @
 !
-8
+U
+E
+3)
 d
-fD9%*t(
-fD9-vn(
+fD9%t(
+fD9-om(
 V
+v
 
 
 
+*
 A+M
 
 
 
 
-t7f9g,(
+t7f9O+(
 
-t7f9J$(
+q'
 j
 j
 j
-p'
 j
 j
 j
 =
 0
-8
+d
 j
 j
 j
@@ -14382,6 +14381,7 @@ j
 j
 
 
+
 j
 j
 j
@@ -14400,17 +14400,12 @@ j
 j
 j
 
-&
-&
-&
-&
-7&
-.&
 d
 &
 &
 d
 
+?&
 0
 A+4$A+u
 =
@@ -14427,7 +14422,6 @@ j
 j
 j
 j
-c$
 j
 j
 j

@@ -31,7 +31,7 @@ __mod_init_func
 __DATA
 __const
 __DATA
-H=
+8=
 __cfstring
 __DATA
 __objc_classlist__DATA
