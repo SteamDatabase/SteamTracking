@@ -55699,6 +55699,9 @@ body {
 .achievementspage_List_2kMZ9 {
   flex: 1;
 }
+.achievementspage_List_2kMZ9.achievementspage_PinnedView_278LB {
+  background: none;
+}
 .achievementspage_FriendAchievementsListHeader_39fNy {
   display: flex;
   flex-direction: row;
