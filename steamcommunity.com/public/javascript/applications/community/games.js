@@ -4033,15 +4033,16 @@
           (this.rgGameslistConfig = t),
             (this.setExcludedContentDescriptorIds = new Set()),
             e && Object.assign(ze._, e),
-            null ===
-              (n =
-                null ===
-                  (i =
-                    null === (r = this.rgGameslistConfig) || void 0 === r
-                      ? void 0
-                      : r.rgContentDescriptorPreferences) || void 0 === i
-                  ? void 0
-                  : i.content_descriptors_to_exclude) ||
+            this.BViewingOwnProfile() ||
+              null ===
+                (n =
+                  null ===
+                    (i =
+                      null === (r = this.rgGameslistConfig) || void 0 === r
+                        ? void 0
+                        : r.rgContentDescriptorPreferences) || void 0 === i
+                    ? void 0
+                    : i.content_descriptors_to_exclude) ||
               void 0 === n ||
               n.forEach((e) => {
                 this.setExcludedContentDescriptorIds.add(
