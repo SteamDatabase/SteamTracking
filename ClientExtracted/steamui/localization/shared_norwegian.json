@@ -2546,6 +2546,7 @@
     "SteamNotifications_Comment_Your_Profile": "Din profil",
     "SteamNotifications_Comment_Profile": "En profil du har abonnert på",
     "SteamNotifications_Comment_Player_Profile": "Profilen til %1$s",
+    "SteamNotifications_Comment_Player_Profile_By": "%1$s kommenterte på profilen til %2$s",
     "SteamNotifications_Comment": "Kommentar",
     "SteamNotifications_Comment_NewDiscussion": "En ny diskusjon i «%1$s»",
     "SteamNotifications_MajorSale": "Salg",

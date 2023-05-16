@@ -2715,7 +2715,7 @@
 	"Library_ScreenshotUploadErrorTitle"	"Σφάλμα"
 	"Library_ScreenshotUploadDescription"	"Παρουσιάστηκε σφάλμα κατά τη μεταφόρτωση των φωτογραφιών σας. Το Steam Cloud μπορεί να είναι προσωρινά μη διαθέσιμο."
 	"Library_UploadScreenshotSpoilerTag"	"Μαρκάρισμα ως πιθανό spoiler"
-	"Library_PromptScreenshotManagerTitle"	"Διαχείριση φωτογραφιών;"
+	"Library_PromptScreenshotManagerTitle"	"Διαχείριση στιγμιοτύπων;"
 	"Library_PromptScreenshotManagerDescription"	"Φαίνεται ότι έχετε μερικές νέες φωτογραφίες από το {s:gamename}, θέλετε να τις δείτε/διαχειριστείτε τώρα;"
 	"Library_UploadScreenshotTitle"		"Μεταφόρτωση φωτογραφίας"
 	"Library_UploadScreenshotAddComment"		"Προσθήκη σχολίου"

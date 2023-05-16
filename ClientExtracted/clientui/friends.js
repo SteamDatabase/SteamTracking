@@ -23286,7 +23286,7 @@ and limitations under the License.
           return t;
       }
     }
-    var Jt, er, tr, rr, or, nr, ir, ar, sr, lr, ur, gr, cr, pr;
+    var Jt, er, tr, rr, or, nr, ir, ar, sr, lr, ur, gr, cr, pr, dr;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -23442,6 +23442,12 @@ and limitations under the License.
             "k_EAppReleaseState_Disabled");
       })(cr || (cr = {})),
       (function (e) {
+        (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
+          (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
+          (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
+          (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+      })(pr || (pr = {})),
+      (function (e) {
         (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
           (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
           (e[(e.k_EInstallMgrStateWaitLicense = 2)] =
@@ -23473,11 +23479,11 @@ and limitations under the License.
           (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
           (e[(e.k_EInstallMgrStateCanceled = 16)] =
             "k_EInstallMgrStateCanceled");
-      })(pr || (pr = {}));
-    var dr, fr, hr;
+      })(dr || (dr = {}));
+    var fr, hr, _r;
     !(function (e) {
       (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-    })(dr || (dr = {})),
+    })(fr || (fr = {})),
       (function (e) {
         (e[(e.Input = 0)] = "Input"),
           (e[(e.AllOutput = 1)] = "AllOutput"),
@@ -23486,13 +23492,13 @@ and limitations under the License.
           (e[(e.Sub = 4)] = "Sub"),
           (e[(e.BackLeft = 5)] = "BackLeft"),
           (e[(e.BackRight = 6)] = "BackRight");
-      })(fr || (fr = {}));
+      })(hr || (hr = {}));
     !(function (e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    })(hr || (hr = {}));
-    var _r;
+    })(_r || (_r = {}));
+    var mr;
     !(function (e) {
       (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
         "k_BluetoothDeviceType_Invalid"),
@@ -23518,8 +23524,8 @@ and limitations under the License.
           "k_BluetoothDeviceType_Gamepad"),
         (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
           "k_BluetoothDeviceType_Keyboard");
-    })(_r || (_r = {}));
-    var mr, yr, br, Er;
+    })(mr || (mr = {}));
+    var yr, br, Er, Sr;
     !(function (e) {
       (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
         (e[(e.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
@@ -23546,18 +23552,18 @@ and limitations under the License.
           "EBrowserType_Offscreen_SteamUI"),
         (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
           "EBrowserType_OpenVROverlay_Subview");
-    })(mr || (mr = {})),
+    })(yr || (yr = {})),
       (function (e) {
         (e[(e.SystemKey0 = 0)] = "SystemKey0"),
           (e[(e.SystemKey1 = 1)] = "SystemKey1");
-      })(yr || (yr = {})),
+      })(br || (br = {})),
       (function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Notification = 1)] = "Notification"),
           (e[(e.Overlay = 2)] = "Overlay"),
           (e[(e.Opaque = 3)] = "Opaque"),
           (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-      })(br || (br = {})),
+      })(Er || (Er = {})),
       (function (e) {
         (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
           (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
@@ -23569,17 +23575,17 @@ and limitations under the License.
           (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
           (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
           (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
-      })(Er || (Er = {}));
-    var Sr;
+      })(Sr || (Sr = {}));
+    var vr;
     !(function (e) {
       (e[(e.k_EPending = 0)] = "k_EPending"),
         (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
         (e[(e.k_ERejected = 2)] = "k_ERejected");
-    })(Sr || (Sr = {}));
-    var vr = __webpack_require__(19);
-    vr.BinaryReader.prototype, vr.BinaryWriter.prototype;
-    vr.Message;
-    var Tr, Ir, Ar, Rr, wr;
+    })(vr || (vr = {}));
+    var Tr = __webpack_require__(19);
+    Tr.BinaryReader.prototype, Tr.BinaryWriter.prototype;
+    Tr.Message;
+    var Ir, Ar, Rr, wr, Cr;
     !(function (e) {
       (e[(e.k_EControllerBindingType_None = 0)] =
         "k_EControllerBindingType_None"),
@@ -23597,7 +23603,7 @@ and limitations under the License.
           "k_EControllerBindingType_GameAction"),
         (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
           "k_EControllerBindingType_ControllerAction");
-    })(Tr || (Tr = {})),
+    })(Ir || (Ir = {})),
       (function (e) {
         (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
           (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
@@ -23656,7 +23662,7 @@ and limitations under the License.
           (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
             "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
           (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
-      })(Ir || (Ir = {}));
+      })(Ar || (Ar = {}));
     !(function (e) {
       (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
         (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -23711,7 +23717,7 @@ and limitations under the License.
           "k_ERemoteClientLaunchInvisible"),
         (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
           "k_ERemoteClientLaunchRestrictedCountry");
-    })(Ar || (Ar = {}));
+    })(Rr || (Rr = {}));
     !(function (e) {
       (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
         "k_EClientUINotificationGroupChatMessage"),
@@ -23719,20 +23725,20 @@ and limitations under the License.
           "k_EClientUINotificationFriendChatMessage"),
         (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
           "k_EClientUINotificationFriendPersonaState");
-    })(Rr || (Rr = {}));
+    })(wr || (wr = {}));
     !(function (e) {
       (e[(e.AudioPlayback_Undefined = 0)] = "AudioPlayback_Undefined"),
         (e[(e.AudioPlayback_Playing = 1)] = "AudioPlayback_Playing"),
         (e[(e.AudioPlayback_Paused = 2)] = "AudioPlayback_Paused"),
         (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
-    })(wr || (wr = {}));
-    var Cr, Or, Pr, jr, Dr;
+    })(Cr || (Cr = {}));
+    var Or, Pr, jr, Dr, Nr;
     !(function (e) {
       (e[(e.Unknown = 0)] = "Unknown"),
         (e[(e.Wired = 1)] = "Wired"),
         (e[(e.Wireless = 2)] = "Wireless"),
         (e[(e.Virtual = 3)] = "Virtual");
-    })(Cr || (Cr = {})),
+    })(Or || (Or = {})),
       (function (e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
@@ -23741,14 +23747,14 @@ and limitations under the License.
           (e[(e.Connecting = 4)] = "Connecting"),
           (e[(e.Connected = 5)] = "Connected"),
           (e[(e.Retrying = 6)] = "Retrying");
-      })(Or || (Or = {})),
+      })(Pr || (Pr = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Weak = 1)] = "Weak"),
           (e[(e.Ok = 2)] = "Ok"),
           (e[(e.Good = 3)] = "Good"),
           (e[(e.Excellent = 4)] = "Excellent");
-      })(Pr || (Pr = {})),
+      })(jr || (jr = {})),
       (function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -23758,16 +23764,16 @@ and limitations under the License.
           (e[(e.Wpa2 = 16)] = "Wpa2"),
           (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
           (e[(e.Unsupported = 32768)] = "Unsupported");
-      })(jr || (jr = {})),
+      })(Dr || (Dr = {})),
       (function (e) {
         (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
           (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
           (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
           (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
             "k_EHTTPProxyMode_Automatic");
-      })(Dr || (Dr = {}));
-    var Nr, kr, Mr, Lr, Ur;
-    function xr() {
+      })(Nr || (Nr = {}));
+    var kr, Mr, Lr, Ur, xr;
+    function Br() {
       return !!window.document;
     }
     !(function (e) {
@@ -23776,7 +23782,7 @@ and limitations under the License.
         (e[(e.k_EComputerActiveStateActive = 1)] =
           "k_EComputerActiveStateActive"),
         (e[(e.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
-    })(Nr || (Nr = {})),
+    })(kr || (kr = {})),
       (function (e) {
         (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
           "k_EClientUsedInputTypeKeyboard"),
@@ -23785,7 +23791,7 @@ and limitations under the License.
           (e[(e.k_EClientUsedInputTypeController = 2)] =
             "k_EClientUsedInputTypeController"),
           (e[(e.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
-      })(kr || (kr = {})),
+      })(Mr || (Mr = {})),
       (function (e) {
         (e[(e.k_EVRError_None = 0)] = "k_EVRError_None"),
           (e[(e.k_EVRError_VRSkipParam = 1)] = "k_EVRError_VRSkipParam"),
@@ -23796,7 +23802,7 @@ and limitations under the License.
             "k_EVRError_CrashProtection"),
           (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
           (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
-      })(Mr || (Mr = {})),
+      })(Lr || (Lr = {})),
       (function (e) {
         (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
           (e[(e.VRInitError_Unknown = 1)] = "VRInitError_Unknown"),
@@ -24244,7 +24250,7 @@ and limitations under the License.
           (e[(e.VRInitError_Steam_SteamInstallationNotFound = 2e3)] =
             "VRInitError_Steam_SteamInstallationNotFound"),
           (e[(e.VRInitError_LastError = 2001)] = "VRInitError_LastError");
-      })(Lr || (Lr = {})),
+      })(Ur || (Ur = {})),
       (function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),
           (e[(e.TrackingSystemName_String = 1e3)] =
@@ -24553,18 +24559,18 @@ and limitations under the License.
             "VendorSpecific_Reserved_End"),
           (e[(e.TrackedDeviceProperty_Max = 1e6)] =
             "TrackedDeviceProperty_Max");
-      })(Ur || (Ur = {}));
-    let Br;
-    function Fr() {
-      if (!xr()) return Br || (Br = Vr()), Br;
+      })(xr || (xr = {}));
+    let Fr;
+    function Vr() {
+      if (!Br()) return Fr || (Fr = Wr()), Fr;
       let e = (function (e) {
-        if (!xr() || !window.document.cookie) return null;
+        if (!Br() || !window.document.cookie) return null;
         let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
         return t && t[2] ? decodeURIComponent(t[2]) : null;
       })("sessionid");
-      return e || (e = Vr()), e;
+      return e || (e = Wr()), e;
     }
-    function Vr() {
+    function Wr() {
       let e = (function () {
         let e = "";
         for (let o = 0; o < 24; o++)
@@ -24578,7 +24584,7 @@ and limitations under the License.
       })();
       return (
         (function (e, t, r, o) {
-          if (!xr()) return;
+          if (!Br()) return;
           o || (o = "/");
           let n = "";
           if (void 0 !== r && r) {
@@ -24597,7 +24603,7 @@ and limitations under the License.
         e
       );
     }
-    const Wr = {
+    const Hr = {
       EUNIVERSE: 0,
       WEB_UNIVERSE: "",
       LANGUAGE: "english",
@@ -24606,6 +24612,7 @@ and limitations under the License.
       AVATAR_BASE_URL: "",
       MEDIA_CDN_COMMUNITY_URL: "",
       MEDIA_CDN_URL: "",
+      CLAN_CDN_ASSET_URL: "",
       COMMUNITY_CDN_URL: "",
       COMMUNITY_CDN_ASSET_URL: "",
       BASE_URL_SHARED_CDN: "",
@@ -24644,7 +24651,7 @@ and limitations under the License.
       FROM_WEB: !1,
       WEBSITE_ID: "Unknown",
       get SESSIONID() {
-        return Fr();
+        return Vr();
       },
       FRIENDSUI_BETA: !1,
       STEAM_TV: !1,
@@ -24661,15 +24668,15 @@ and limitations under the License.
       USE_LONGEST_LOC_STRING: !1,
       SILENT_STARTUP: !1,
     };
-    Wr.FOO = !1;
+    Hr.FOO = !1;
     qt().createContext({});
-    function Hr(e, t) {
+    function Gr(e, t) {
       return (function (e, t) {
         let r = e.findIndex(t);
         return r >= 0 && (e.splice(r, 1), !0);
       })(e, (e) => t == e);
     }
-    class Gr {
+    class zr {
       constructor() {
         this.m_vecCallbacks = [];
       }
@@ -24677,7 +24684,7 @@ and limitations under the License.
         this.m_vecCallbacks.push(e);
         return {
           Unregister: () => {
-            Hr(this.m_vecCallbacks, e);
+            Gr(this.m_vecCallbacks, e);
           },
         };
       }
@@ -24725,7 +24732,7 @@ and limitations under the License.
           this.m_vecCallbacks.push(e);
         }
         PushArrayRemove(e, t) {
-          this.m_vecCallbacks.push(() => Hr(e, t));
+          this.m_vecCallbacks.push(() => Gr(e, t));
         }
         Unregister() {
           for (let e of this.m_vecCallbacks) e();
@@ -24738,20 +24745,20 @@ and limitations under the License.
       "Unregister",
       null
     );
-    var zr;
+    var Kr;
     !(function (e) {
       (e[(e.None = 0)] = "None"),
         (e[(e.Ago = 1)] = "Ago"),
         (e[(e.Remaining = 2)] = "Remaining");
-    })(zr || (zr = {}));
+    })(Kr || (Kr = {}));
     new Map();
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
-    class Kr {
+    class Yr {
       constructor() {
         (this.m_mapTokens = new Map()),
           (this.m_mapFallbackTokens = new Map()),
-          (this.m_cbkTokensChanged = new Gr());
+          (this.m_cbkTokensChanged = new zr());
       }
       static InstallErrorReportingStore(e) {
         this.sm_ErrorReportingStore = e;
@@ -24764,7 +24771,7 @@ and limitations under the License.
       }
       static IsELanguageValidInRealm(e, t) {
         return (
-          t === (29 === e ? hr.k_ESteamRealmChina : hr.k_ESteamRealmGlobal)
+          t === (29 === e ? _r.k_ESteamRealmChina : _r.k_ESteamRealmGlobal)
         );
       }
       static GetLanguageListForRealms(e) {
@@ -24812,13 +24819,13 @@ and limitations under the License.
       GetELanguageFallbackOrder(e = null) {
         let t = new Array();
         if (
-          (t.push(Qt(Wr.LANGUAGE)),
-          (Wr.SUPPORTED_LANGUAGES || []).forEach((e) => {
-            e.value != Wr.LANGUAGE && t.push(Qt(e.value));
+          (t.push(Qt(Hr.LANGUAGE)),
+          (Hr.SUPPORTED_LANGUAGES || []).forEach((e) => {
+            e.value != Hr.LANGUAGE && t.push(Qt(e.value));
           }),
           e)
         ) {
-          Kr.GetLanguageListForRealms(e).forEach((e) => {
+          Yr.GetLanguageListForRealms(e).forEach((e) => {
             -1 == t.indexOf(e) && t.push(e);
           });
         }
@@ -24838,10 +24845,10 @@ and limitations under the License.
         let r = this.m_mapTokens.get(e.substring(1));
         if (void 0 !== r) return r;
         !t &&
-          Kr.sm_ErrorReportingStore &&
-          Kr.sm_ErrorReportingStore.ReportError(
+          Yr.sm_ErrorReportingStore &&
+          Yr.sm_ErrorReportingStore.ReportError(
             new Error(
-              `Unable to find localization token '${e}' for language '${Wr.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`
+              `Unable to find localization token '${e}' for language '${Hr.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`
             ),
             { bIncludeMessageInIdentifier: !0 }
           );
@@ -24852,11 +24859,11 @@ and limitations under the License.
         return void 0 !== t ? t : void 0;
       }
     }
-    function Yr(e, ...t) {
-      let r = Xr.LocalizeString(e);
-      return void 0 === r ? e : qr(r, ...t);
-    }
     function qr(e, ...t) {
+      let r = Zr.LocalizeString(e);
+      return void 0 === r ? e : $r(r, ...t);
+    }
+    function $r(e, ...t) {
       return 0 == t.length
         ? e
         : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
@@ -24867,7 +24874,7 @@ and limitations under the License.
             return e;
           }));
     }
-    const $r = {
+    const Xr = {
       english: "en",
       german: "de",
       french: "fr",
@@ -24900,16 +24907,16 @@ and limitations under the License.
       sc_schinese: "zh-cn",
       koreana: "ko",
     };
-    const Xr = new Kr();
-    function Zr(e, t, ...r) {
+    const Zr = new Yr();
+    function Qr(e, t, ...r) {
       console.assert
         ? 0 == r.length
           ? console.assert(!!e, t)
           : console.assert(!!e, t, ...r)
         : e || console.warn(t, ...r);
     }
-    window.LocalizationManager = Xr;
-    class Qr {
+    window.LocalizationManager = Zr;
+    class Jr {
       constructor(e, t, r) {
         if (((this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []), r))
           for (let e = 0; e < r.length; e++) this.AddLink(r[e], !0);
@@ -24942,28 +24949,28 @@ and limitations under the License.
       }
       OnLinkLoad(e) {
         e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-          Hr(this.m_rgLoadingLinks, e.currentTarget),
+          Gr(this.m_rgLoadingLinks, e.currentTarget),
           0 == this.m_rgLoadingLinks.length &&
             (this.m_fnRender(), (this.m_fnRender = void 0));
       }
     }
-    var Jr;
-    e([Zt], Qr.prototype, "OnLinkLoad", null),
+    var eo;
+    e([Zt], Jr.prototype, "OnLinkLoad", null),
       (function (e) {
         (e[(e.k_ENoiseGateLevel_Off = 0)] = "k_ENoiseGateLevel_Off"),
           (e[(e.k_ENoiseGateLevel_Low = 1)] = "k_ENoiseGateLevel_Low"),
           (e[(e.k_ENoiseGateLevel_Medium = 2)] = "k_ENoiseGateLevel_Medium"),
           (e[(e.k_ENoiseGateLevel_High = 3)] = "k_ENoiseGateLevel_High");
-      })(Jr || (Jr = {}));
-    function eo(e, t) {
+      })(eo || (eo = {}));
+    function to(e, t) {
       return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
     }
-    function to(e, t) {
+    function ro(e, t) {
       if (!e) return !1;
       const [r, o] = t.split(".", 2);
-      return r && o && eo(e, r) && o in e.SteamClient[r];
+      return r && o && to(e, r) && o in e.SteamClient[r];
     }
-    var ro, oo;
+    var oo, no;
     !(function (e) {
       (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
         (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -24981,7 +24988,7 @@ and limitations under the License.
           "k_EPlatformTypeEmbeddedClient"),
         (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
         (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-    })(ro || (ro = {})),
+    })(oo || (oo = {})),
       (function (e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
@@ -25010,14 +25017,14 @@ and limitations under the License.
           (e[(e.Tooltip = 287500)] = "Tooltip"),
           (e[(e.PopupContextMenu = 344328)] = "PopupContextMenu"),
           (e[(e.StandaloneContextMenu = 1327368)] = "StandaloneContextMenu");
-      })(oo || (oo = {}));
+      })(no || (no = {}));
     Yt.createContext({ ownerWindow: window });
-    class no {
+    class io {
       constructor(e, t) {
         (this.m_bCreated = !1),
           (this.m_onCreateRender = null),
           (this.m_bFocused = !1),
-          Zr(
+          Qr(
             e,
             "Name is required.  This is an internal name, different from title."
           ),
@@ -25025,7 +25032,7 @@ and limitations under the License.
           (this.m_rgParams = t),
           this.m_rgParams.target_browser &&
             (this.m_strName += "_uid" + this.m_rgParams.target_browser.m_unPID),
-          (this.m_bCreateHidden = !!(t.eCreationFlags & oo.Hidden)),
+          (this.m_bCreateHidden = !!(t.eCreationFlags & no.Hidden)),
           (this.m_strTitle = t.title),
           delete this.m_rgParams.title;
       }
@@ -25049,8 +25056,8 @@ and limitations under the License.
       }
       Show(e = !0, t = !1) {
         var r, o;
-        window.SteamClient && (this.m_rgParams.eCreationFlags |= oo.Hidden),
-          this.m_rgParams.eCreationFlags & oo.NotFocusable && (e = !1),
+        window.SteamClient && (this.m_rgParams.eCreationFlags |= no.Hidden),
+          this.m_rgParams.eCreationFlags & no.NotFocusable && (e = !1),
           this.BIsValid() &&
             (this.BIsClosed()
               ? ((this.m_popup = void 0), (this.m_element = void 0))
@@ -25058,7 +25065,7 @@ and limitations under the License.
         let n,
           i,
           a,
-          s = lo.GetExistingPopup(this.m_strName);
+          s = uo.GetExistingPopup(this.m_strName);
         (s && !this.m_rgParams.replace_existing_popup) ||
           ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
           s
@@ -25066,7 +25073,7 @@ and limitations under the License.
               (n = s.m_popup),
               s.ReleasePopup(),
               (a = s.m_renderWhenReady),
-              lo.RemoveTrackedPopup(s),
+              uo.RemoveTrackedPopup(s),
               n.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
               n.removeEventListener("unload", s.OnUnload),
               n.removeEventListener("resize", s.OnResizeEvent),
@@ -25075,11 +25082,11 @@ and limitations under the License.
               n.removeEventListener("drop", s.OnDrop),
               n.removeEventListener("dragover", s.OnDragOver),
               n.removeEventListener("message", this.OnMessage))
-            : (({ popup: n, element: i } = ao.CreatePopup(
+            : (({ popup: n, element: i } = so.CreatePopup(
                 this.m_strName,
                 this.m_rgParams
               )),
-              (a = new Qr(n.document, i))),
+              (a = new Jr(n.document, i))),
           n &&
             i &&
             ((n.document.title = this.m_strTitle),
@@ -25091,10 +25098,10 @@ and limitations under the License.
             n.addEventListener("drop", this.OnDrop),
             n.addEventListener("dragover", this.OnDragOver),
             n.addEventListener("message", this.OnMessage),
-            Wr.LANGUAGE &&
+            Hr.LANGUAGE &&
               n.document.documentElement.setAttribute(
                 "lang",
-                $r[Wr.LANGUAGE] || null
+                Xr[Hr.LANGUAGE] || null
               ),
             (this.m_popup = n),
             (this.m_element = i),
@@ -25102,7 +25109,7 @@ and limitations under the License.
             this.m_renderWhenReady.SetTarget(() =>
               this.RenderInternal(this.m_popup, this.m_element, e)
             )),
-          lo.AddTrackedPopup(this),
+          uo.AddTrackedPopup(this),
           s
             ? (this.OnCreateInternal(), e && this.Focus())
             : (null ===
@@ -25127,21 +25134,31 @@ and limitations under the License.
           this.window.removeEventListener("message", this.OnMessage);
       }
       RenderInternal(e, t, r) {
-        var o;
-        this.m_bCreated
-          ? (this.browser_info &&
-              ((o = this.browser_info).m_eBrowserType ==
-                mr.EBrowserType_OpenVROverlay ||
-                o.m_eBrowserType == mr.EBrowserType_OpenVROverlay_Dashboard) &&
+        var o, n;
+        if (this.m_bCreated) {
+          if (
+            (this.browser_info &&
+              ((n = this.browser_info).m_eBrowserType ==
+                yr.EBrowserType_OpenVROverlay ||
+                n.m_eBrowserType == yr.EBrowserType_OpenVROverlay_Dashboard) &&
               (t.ownerDocument.body.className += " VR"),
             this.Render(e, t),
             this.OnLoad(),
-            e.SteamClient &&
-              !this.m_bCreateHidden &&
-              (r
-                ? e.SteamClient.Window.BringToFront()
-                : e.SteamClient.Window.ShowWindow()))
-          : (this.m_onCreateRender = () => this.RenderInternal(e, t, r));
+            e.SteamClient && !this.m_bCreateHidden)
+          ) {
+            r
+              ? e.SteamClient.Window.BringToFront()
+              : e.SteamClient.Window.ShowWindow(),
+              (this.m_rgParams.eCreationFlags & no.Maximized ||
+                (null === (o = this.m_rgParams.strRestoreDetails) ||
+                void 0 === o
+                  ? void 0
+                  : o.includes("max=1"))) &&
+                e.SteamClient.Window.IsWindowMaximized((t) => {
+                  t || e.SteamClient.Window.ToggleMaximize();
+                });
+          }
+        } else this.m_onCreateRender = () => this.RenderInternal(e, t, r);
       }
       OnCreateInternal() {
         this.m_bCreated ||
@@ -25159,7 +25176,7 @@ and limitations under the License.
       }
       OnUnload(e) {
         this.RemoveEventListeners(),
-          lo.RemoveTrackedPopup(this),
+          uo.RemoveTrackedPopup(this),
           this.OnClose(),
           (this.m_popup = void 0);
       }
@@ -25193,7 +25210,7 @@ and limitations under the License.
       }
       Close() {
         this.m_popup &&
-          (to(this.m_popup.window, "Window.Close")
+          (ro(this.m_popup.window, "Window.Close")
             ? this.m_popup.window.SteamClient.Window.Close()
             : this.m_popup.window.close());
       }
@@ -25259,16 +25276,16 @@ and limitations under the License.
       OnFocus() {}
       OnBlur() {}
     }
-    e([Y], no.prototype, "m_bFocused", void 0),
-      e([Zt], no.prototype, "OnMessage", null),
-      e([Zt], no.prototype, "RenderInternal", null),
-      e([Zt], no.prototype, "OnCreateInternal", null),
-      e([Zt], no.prototype, "OnResizeEvent", null),
-      e([Zt], no.prototype, "OnBeforeUnloadEvent", null),
-      e([Zt], no.prototype, "OnUnload", null),
-      e([Zt], no.prototype, "OnFocusInternal", null),
-      e([Zt], no.prototype, "OnBlurInternal", null);
-    class io extends no {
+    e([Y], io.prototype, "m_bFocused", void 0),
+      e([Zt], io.prototype, "OnMessage", null),
+      e([Zt], io.prototype, "RenderInternal", null),
+      e([Zt], io.prototype, "OnCreateInternal", null),
+      e([Zt], io.prototype, "OnResizeEvent", null),
+      e([Zt], io.prototype, "OnBeforeUnloadEvent", null),
+      e([Zt], io.prototype, "OnUnload", null),
+      e([Zt], io.prototype, "OnFocusInternal", null),
+      e([Zt], io.prototype, "OnBlurInternal", null);
+    class ao extends io {
       constructor(e, t, r, o) {
         super(e, r), this.SetSavedDimensionsKey(t), (this.m_bExpires = o);
       }
@@ -25290,14 +25307,14 @@ and limitations under the License.
             ? e.strRestoreDetails &&
               ((this.m_strInitialSavedDimensionsKey =
                 this.GetSavedDimensionsKey()),
-              lo.SetRestoreDetails(
+              uo.SetRestoreDetails(
                 this.m_strInitialSavedDimensionsKey,
                 e.strRestoreDetails,
                 this.m_bExpires
               ))
             : ((this.m_strInitialSavedDimensionsKey =
                 this.GetSavedDimensionsKey()),
-              (e.strRestoreDetails = lo.GetRestoreDetails(
+              (e.strRestoreDetails = uo.GetRestoreDetails(
                 this.m_strInitialSavedDimensionsKey
               ))),
           e
@@ -25324,7 +25341,7 @@ and limitations under the License.
                 this.m_strSavedDimensionsKey &&
                 t &&
                 !r &&
-                (lo.SetRestoreDetails(e, t, this.m_bExpires),
+                (uo.SetRestoreDetails(e, t, this.m_bExpires),
                 (this.m_rgParams.strRestoreDetails = t),
                 (this.m_strInitialSavedDimensionsKey = e),
                 this.OnResizeComplete(t));
@@ -25337,12 +25354,12 @@ and limitations under the License.
       }
       OnClose() {}
       SaveWindowPosition(e) {
-        lo.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+        uo.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
           (this.m_rgParams.strRestoreDetails = e);
       }
     }
-    e([Zt], io.prototype, "QueryAndStoreWindowPosition", null);
-    class ao {
+    e([Zt], ao.prototype, "QueryAndStoreWindowPosition", null);
+    class so {
       constructor() {
         if (
           ((this.m_bShuttingDown = !1),
@@ -25384,7 +25401,7 @@ and limitations under the License.
               this.m_mapPopups.clear();
           });
           let e = document.querySelector("head");
-          Zr(e, "Couldn't find head element"),
+          Qr(e, "Couldn't find head element"),
             e &&
               ((this.m_DynamicCSSObserver = new MutationObserver(() => {
                 const e = $t();
@@ -25401,7 +25418,7 @@ and limitations under the License.
       }
       BAnyMenuHasFocus() {
         for (const e of this.m_mapPopups.values())
-          if (e.focused && e.params.eCreationFlags & oo.NoTaskbarIcon)
+          if (e.focused && e.params.eCreationFlags & no.NoTaskbarIcon)
             return !0;
         return !1;
       }
@@ -25508,7 +25525,7 @@ and limitations under the License.
                     case 9:
                       return "gameserver";
                   }
-                })(Wr.LAUNCHER_TYPE)
+                })(Hr.LAUNCHER_TYPE)
             ),
           t.hwndParent && l.push("hwndParent=" + t.hwndParent),
           t.bPinned && l.push("pinned=true"),
@@ -25604,11 +25621,11 @@ and limitations under the License.
         }
       }
     }
-    var so;
+    var lo;
     e(
       [
         Zt,
-        ((so = 100),
+        ((lo = 100),
         function (e, t, r) {
           const o = r.value;
           r.value = function (...e) {
@@ -25622,19 +25639,19 @@ and limitations under the License.
                     r.nPending > 0
                       ? (o.apply(this, e), (r.nPending = 0))
                       : (window.clearInterval(r.hTimer), (r.hTimer = void 0));
-                  }, so)))
+                  }, lo)))
                 : (r.nPending += 1);
           };
         }),
       ],
-      ao.prototype,
+      so.prototype,
       "DebouncedSaveSavedDimensionStore",
       null
     );
-    let lo = (() => new ao())();
-    window.g_PopupManager = lo;
-    var uo = __webpack_require__(935);
-    function go(...e) {
+    let uo = (() => new so())();
+    window.g_PopupManager = uo;
+    var go = __webpack_require__(935);
+    function co(...e) {
       return e.reduce(
         (e, t) =>
           t
@@ -25644,21 +25661,21 @@ and limitations under the License.
                 : t
               : "object" == typeof t
               ? e
-                ? `${e} ${co(t)}`
-                : co(t)
+                ? `${e} ${po(t)}`
+                : po(t)
               : e
             : e,
         ""
       );
     }
-    function co(e) {
+    function po(e) {
       return Object.keys(e).reduce(
         (t, r) => (e[r] ? (t ? `${t} ${r}` : r) : t),
         ""
       );
     }
     __webpack_require__(808);
-    function po(e) {
+    function fo(e) {
       const t = e.color || "#FFFFFF";
       return qt().createElement(
         "svg",
@@ -25695,7 +25712,7 @@ and limitations under the License.
         })
       );
     }
-    function fo(e) {
+    function ho(e) {
       const { className: t, color: r = "#020202" } = e;
       return qt().createElement(
         "svg",
@@ -25703,7 +25720,7 @@ and limitations under the License.
           version: "1.1",
           id: "Layer_1",
           xmlns: "http://www.w3.org/2000/svg",
-          className: go("SVGIcon_Button", "SVGIcon_Caution", t),
+          className: co("SVGIcon_Button", "SVGIcon_Caution", t),
           x: "0px",
           y: "0px",
           width: "256px",
@@ -25752,7 +25769,7 @@ and limitations under the License.
         )
       );
     }
-    function ho() {
+    function _o() {
       return qt().createElement(
         "svg",
         {
@@ -25788,7 +25805,7 @@ and limitations under the License.
         })
       );
     }
-    function _o() {
+    function mo() {
       return qt().createElement(
         "svg",
         {
@@ -25814,7 +25831,7 @@ and limitations under the License.
         })
       );
     }
-    function mo() {
+    function yo() {
       return qt().createElement(
         "svg",
         {
@@ -25853,7 +25870,7 @@ and limitations under the License.
       throw new Error(
         "mobx-react-lite requires mobx at least version 4 to be available"
       );
-    var yo = function (e, t) {
+    var bo = function (e, t) {
       var r = "function" == typeof Symbol && e[Symbol.iterator];
       if (!r) return e;
       var o,
@@ -25874,86 +25891,86 @@ and limitations under the License.
       }
       return a;
     };
-    function bo() {
-      var e = yo((0, Yt.useState)(0), 2)[1];
+    function Eo() {
+      var e = bo((0, Yt.useState)(0), 2)[1];
       return (0, Yt.useCallback)(function () {
         e(function (e) {
           return e + 1;
         });
       }, []);
     }
-    var Eo = {};
-    var So,
-      vo =
-        ((So = "observerBatching"),
+    var So = {};
+    var vo,
+      To =
+        ((vo = "observerBatching"),
         "function" == typeof Symbol
-          ? Symbol.for(So)
-          : "__$mobx-react " + So + "__");
-    function To(e) {
+          ? Symbol.for(vo)
+          : "__$mobx-react " + vo + "__");
+    function Io(e) {
       e();
     }
-    var Io = !1;
-    function Ao() {
-      return Io;
+    var Ao = !1;
+    function Ro() {
+      return Ao;
     }
-    function Ro(e) {
+    function wo(e) {
       return rt(e);
     }
-    var wo,
-      Co = 1e4,
+    var Co,
       Oo = 1e4,
-      Po = new Set();
-    function jo() {
-      void 0 === wo && (wo = setTimeout(Do, Oo));
-    }
+      Po = 1e4,
+      jo = new Set();
     function Do() {
-      wo = void 0;
+      void 0 === Co && (Co = setTimeout(No, Po));
+    }
+    function No() {
+      Co = void 0;
       var e = Date.now();
-      Po.forEach(function (t) {
+      jo.forEach(function (t) {
         var r = t.current;
         r &&
           e >= r.cleanAt &&
-          (r.reaction.dispose(), (t.current = null), Po.delete(t));
+          (r.reaction.dispose(), (t.current = null), jo.delete(t));
       }),
-        Po.size > 0 && jo();
+        jo.size > 0 && Do();
     }
-    var No = !1,
-      ko = [];
-    var Mo = {};
-    function Lo(e) {
+    var ko = !1,
+      Mo = [];
+    var Lo = {};
+    function Uo(e) {
       return "observer" + e;
     }
-    function Uo(e, t, r) {
-      if ((void 0 === t && (t = "observed"), void 0 === r && (r = Mo), Ao()))
+    function xo(e, t, r) {
+      if ((void 0 === t && (t = "observed"), void 0 === r && (r = Lo), Ro()))
         return e();
       var o,
         n = (function (e) {
           return function () {
-            No ? ko.push(e) : e();
+            ko ? Mo.push(e) : e();
           };
-        })((r.useForceUpdate || bo)()),
+        })((r.useForceUpdate || Eo)()),
         i = qt().useRef(null);
       if (!i.current) {
-        var a = new Me(Lo(t), function () {
+        var a = new Me(Uo(t), function () {
             s.mounted ? n() : (a.dispose(), (i.current = null));
           }),
           s = (function (e) {
-            return { cleanAt: Date.now() + Co, reaction: e };
+            return { cleanAt: Date.now() + Oo, reaction: e };
           })(a);
-        (i.current = s), (o = i), Po.add(o), jo();
+        (i.current = s), (o = i), jo.add(o), Do();
       }
       var l = i.current.reaction;
       return (
-        qt().useDebugValue(l, Ro),
+        qt().useDebugValue(l, wo),
         qt().useEffect(function () {
           var e;
           return (
             (e = i),
-            Po.delete(e),
+            jo.delete(e),
             i.current
               ? (i.current.mounted = !0)
               : ((i.current = {
-                  reaction: new Me(Lo(t), function () {
+                  reaction: new Me(Uo(t), function () {
                     n();
                   }),
                   cleanAt: 1 / 0,
@@ -25965,11 +25982,11 @@ and limitations under the License.
           );
         }, []),
         (function (e) {
-          (No = !0), (ko = []);
+          (ko = !0), (Mo = []);
           try {
             var t = e();
-            No = !1;
-            var r = ko.length > 0 ? ko : void 0;
+            ko = !1;
+            var r = Mo.length > 0 ? Mo : void 0;
             return (
               qt().useLayoutEffect(
                 function () {
@@ -25983,7 +26000,7 @@ and limitations under the License.
               t
             );
           } finally {
-            No = !1;
+            ko = !1;
           }
         })(function () {
           var t, r;
@@ -26002,9 +26019,9 @@ and limitations under the License.
         })
       );
     }
-    var xo = function () {
+    var Bo = function () {
       return (
-        (xo =
+        (Bo =
           Object.assign ||
           function (e) {
             for (var t, r = 1, o = arguments.length; r < o; r++)
@@ -26012,18 +26029,18 @@ and limitations under the License.
                 Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
             return e;
           }),
-        xo.apply(this, arguments)
+        Bo.apply(this, arguments)
       );
     };
-    function Bo(e, t) {
-      if (Ao()) return e;
+    function Fo(e, t) {
+      if (Ro()) return e;
       var r,
         o,
         n,
-        i = xo({ forwardRef: !1 }, t),
+        i = Bo({ forwardRef: !1 }, t),
         a = e.displayName || e.name,
         s = function (t, r) {
-          return Uo(function () {
+          return xo(function () {
             return e(t, r);
           }, a);
         };
@@ -26035,21 +26052,21 @@ and limitations under the License.
         (o = e),
         (n = r),
         Object.keys(o).forEach(function (e) {
-          Fo[e] ||
+          Vo[e] ||
             Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
         }),
         (r.displayName = a),
         r
       );
     }
-    var Fo = { $$typeof: !0, render: !0, compare: !0, type: !0 };
-    function Vo(e) {
+    var Vo = { $$typeof: !0, render: !0, compare: !0, type: !0 };
+    function Wo(e) {
       var t = e.children,
         r = e.render,
         o = t || r;
-      return "function" != typeof o ? null : Uo(o);
+      return "function" != typeof o ? null : xo(o);
     }
-    function Wo(e, t, r, o, n) {
+    function Ho(e, t, r, o, n) {
       var i = "children" === t ? "render" : "children",
         a = "function" == typeof e[t],
         s = "function" == typeof e[i];
@@ -26070,10 +26087,10 @@ and limitations under the License.
               "`, expected `function`."
           );
     }
-    (Vo.propTypes = { children: Wo, render: Wo }),
-      (Vo.displayName = "Observer");
+    (Wo.propTypes = { children: Ho, render: Ho }),
+      (Wo.displayName = "Observer");
     !(function (e) {
-      e || (e = To),
+      e || (e = Io),
         Qe({ reactionScheduler: e }),
         (("undefined" != typeof window
           ? window
@@ -26081,23 +26098,23 @@ and limitations under the License.
           ? __webpack_require__.g
           : "undefined" != typeof self
           ? self
-          : Eo)[vo] = !0);
-    })(uo.unstable_batchedUpdates);
-    var Ho = 0;
-    var Go = {};
-    function zo(e) {
+          : So)[To] = !0);
+    })(go.unstable_batchedUpdates);
+    var Go = 0;
+    var zo = {};
+    function Ko(e) {
       return (
-        Go[e] ||
-          (Go[e] = (function (e) {
+        zo[e] ||
+          (zo[e] = (function (e) {
             if ("function" == typeof Symbol) return Symbol(e);
-            var t = "__$mobx-react " + e + " (" + Ho + ")";
-            return Ho++, t;
+            var t = "__$mobx-react " + e + " (" + Go + ")";
+            return Go++, t;
           })(e)),
-        Go[e]
+        zo[e]
       );
     }
-    function Ko(e, t) {
-      if (Yo(e, t)) return !0;
+    function Yo(e, t) {
+      if (qo(e, t)) return !0;
       if (
         "object" != typeof e ||
         null === e ||
@@ -26109,14 +26126,14 @@ and limitations under the License.
         o = Object.keys(t);
       if (r.length !== o.length) return !1;
       for (var n = 0; n < r.length; n++)
-        if (!Object.hasOwnProperty.call(t, r[n]) || !Yo(e[r[n]], t[r[n]]))
+        if (!Object.hasOwnProperty.call(t, r[n]) || !qo(e[r[n]], t[r[n]]))
           return !1;
       return !0;
     }
-    function Yo(e, t) {
+    function qo(e, t) {
       return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
     }
-    function qo(e, t, r) {
+    function $o(e, t, r) {
       Object.hasOwnProperty.call(e, t)
         ? (e[t] = r)
         : Object.defineProperty(e, t, {
@@ -26126,9 +26143,9 @@ and limitations under the License.
             value: r,
           });
     }
-    var $o = zo("patchMixins"),
-      Xo = zo("patchedDefinition");
-    function Zo(e, t) {
+    var Xo = Ko("patchMixins"),
+      Zo = Ko("patchedDefinition");
+    function Qo(e, t) {
       for (
         var r = this,
           o = arguments.length,
@@ -26150,39 +26167,39 @@ and limitations under the License.
             });
       }
     }
-    function Qo(e, t) {
+    function Jo(e, t) {
       return function () {
         for (var r = arguments.length, o = new Array(r), n = 0; n < r; n++)
           o[n] = arguments[n];
-        Zo.call.apply(Zo, [this, e, t].concat(o));
+        Qo.call.apply(Qo, [this, e, t].concat(o));
       };
     }
-    function Jo(e, t, r) {
+    function en(e, t, r) {
       var o = (function (e, t) {
-        var r = (e[$o] = e[$o] || {}),
+        var r = (e[Xo] = e[Xo] || {}),
           o = (r[t] = r[t] || {});
         return (o.locks = o.locks || 0), (o.methods = o.methods || []), o;
       })(e, t);
       o.methods.indexOf(r) < 0 && o.methods.push(r);
       var n = Object.getOwnPropertyDescriptor(e, t);
-      if (!n || !n[Xo]) {
+      if (!n || !n[Zo]) {
         var i = e[t],
-          a = en(e, t, n ? n.enumerable : void 0, o, i);
+          a = tn(e, t, n ? n.enumerable : void 0, o, i);
         Object.defineProperty(e, t, a);
       }
     }
-    function en(e, t, r, o, n) {
+    function tn(e, t, r, o, n) {
       var i,
-        a = Qo(n, o);
+        a = Jo(n, o);
       return (
-        ((i = {})[Xo] = !0),
+        ((i = {})[Zo] = !0),
         (i.get = function () {
           return a;
         }),
         (i.set = function (n) {
-          if (this === e) a = Qo(n, o);
+          if (this === e) a = Jo(n, o);
           else {
-            var i = en(this, t, r, o, n);
+            var i = tn(this, t, r, o, n);
             Object.defineProperty(this, t, i);
           }
         }),
@@ -26191,47 +26208,47 @@ and limitations under the License.
         i
       );
     }
-    var tn = E || "$mobx",
-      rn = zo("isMobXReactObserver"),
-      on = zo("isUnmounted"),
-      nn = zo("skipRender"),
-      an = zo("isForcingUpdate");
-    function sn(e) {
+    var rn = E || "$mobx",
+      on = Ko("isMobXReactObserver"),
+      nn = Ko("isUnmounted"),
+      an = Ko("skipRender"),
+      sn = Ko("isForcingUpdate");
+    function ln(e) {
       var t = e.prototype;
-      if (e[rn]) {
-        var r = ln(t);
+      if (e[on]) {
+        var r = un(t);
         console.warn(
           "The provided component class (" +
             r +
             ") \n                has already been declared as an observer component."
         );
-      } else e[rn] = !0;
+      } else e[on] = !0;
       if (t.componentWillReact)
         throw new Error(
           "The componentWillReact life-cycle event is no longer supported"
         );
       if (e.__proto__ !== Yt.PureComponent)
         if (t.shouldComponentUpdate) {
-          if (t.shouldComponentUpdate !== gn)
+          if (t.shouldComponentUpdate !== cn)
             throw new Error(
               "It is not allowed to use shouldComponentUpdate in observer based components."
             );
-        } else t.shouldComponentUpdate = gn;
-      cn(t, "props"), cn(t, "state");
+        } else t.shouldComponentUpdate = cn;
+      pn(t, "props"), pn(t, "state");
       var o = t.render;
       return (
         (t.render = function () {
-          return un.call(this, o);
+          return gn.call(this, o);
         }),
-        Jo(t, "componentWillUnmount", function () {
+        en(t, "componentWillUnmount", function () {
           var e;
           if (
-            !0 !== Ao() &&
-            (null === (e = this.render[tn]) || void 0 === e || e.dispose(),
-            (this[on] = !0),
-            !this.render[tn])
+            !0 !== Ro() &&
+            (null === (e = this.render[rn]) || void 0 === e || e.dispose(),
+            (this[nn] = !0),
+            !this.render[rn])
           ) {
-            var t = ln(this);
+            var t = un(this);
             console.warn(
               "The reactive render of an observer class component (" +
                 t +
@@ -26242,7 +26259,7 @@ and limitations under the License.
         e
       );
     }
-    function ln(e) {
+    function un(e) {
       return (
         e.displayName ||
         e.name ||
@@ -26250,22 +26267,22 @@ and limitations under the License.
         "<component>"
       );
     }
-    function un(e) {
+    function gn(e) {
       var t = this;
-      if (!0 === Ao()) return e.call(this);
-      qo(this, nn, !1), qo(this, an, !1);
-      var r = ln(this),
+      if (!0 === Ro()) return e.call(this);
+      $o(this, an, !1), $o(this, sn, !1);
+      var r = un(this),
         o = e.bind(this),
         n = !1,
         i = new Me(r + ".render()", function () {
-          if (!n && ((n = !0), !0 !== t[on])) {
+          if (!n && ((n = !0), !0 !== t[nn])) {
             var e = !0;
             try {
-              qo(t, an, !0),
-                t[nn] || Yt.Component.prototype.forceUpdate.call(t),
+              $o(t, sn, !0),
+                t[an] || Yt.Component.prototype.forceUpdate.call(t),
                 (e = !1);
             } finally {
-              qo(t, an, !1), e && i.dispose();
+              $o(t, sn, !1), e && i.dispose();
             }
           }
         });
@@ -26296,23 +26313,23 @@ and limitations under the License.
         return t;
       }
       return (
-        (i.reactComponent = this), (a[tn] = i), (this.render = a), a.call(this)
-      );
-    }
-    function gn(e, t) {
-      return (
-        Ao() &&
-          console.warn(
-            "[mobx-react] It seems that a re-rendering of a React component is triggered while in static (server-side) mode. Please make sure components are rendered only once server-side."
-          ),
-        this.state !== t || !Ko(this.props, e)
+        (i.reactComponent = this), (a[rn] = i), (this.render = a), a.call(this)
       );
     }
     function cn(e, t) {
-      var r = zo("reactProp_" + t + "_valueHolder"),
-        o = zo("reactProp_" + t + "_atomHolder");
+      return (
+        Ro() &&
+          console.warn(
+            "[mobx-react] It seems that a re-rendering of a React component is triggered while in static (server-side) mode. Please make sure components are rendered only once server-side."
+          ),
+        this.state !== t || !Yo(this.props, e)
+      );
+    }
+    function pn(e, t) {
+      var r = Ko("reactProp_" + t + "_valueHolder"),
+        o = Ko("reactProp_" + t + "_atomHolder");
       function n() {
-        return this[o] || qo(this, o, T("reactive " + t)), this[o];
+        return this[o] || $o(this, o, T("reactive " + t)), this[o];
       }
       Object.defineProperty(e, t, {
         configurable: !0,
@@ -26327,46 +26344,46 @@ and limitations under the License.
           );
         },
         set: function (e) {
-          this[an] || Ko(this[r], e)
-            ? qo(this, r, e)
-            : (qo(this, r, e),
-              qo(this, nn, !0),
+          this[sn] || Yo(this[r], e)
+            ? $o(this, r, e)
+            : ($o(this, r, e),
+              $o(this, an, !0),
               n.call(this).reportChanged(),
-              qo(this, nn, !1));
+              $o(this, an, !1));
         },
       });
     }
-    var pn = "function" == typeof Symbol && Symbol.for,
-      dn = pn
+    var dn = "function" == typeof Symbol && Symbol.for,
+      fn = dn
         ? Symbol.for("react.forward_ref")
         : "function" == typeof Yt.forwardRef &&
           (0, Yt.forwardRef)(function (e) {
             return null;
           }).$$typeof,
-      fn = pn
+      hn = dn
         ? Symbol.for("react.memo")
         : "function" == typeof Yt.memo &&
           (0, Yt.memo)(function (e) {
             return null;
           }).$$typeof;
-    function hn(e) {
+    function _n(e) {
       if (
         (!0 === e.isMobxInjector &&
           console.warn(
             "Mobx observer: You are trying to use 'observer' on a component that already has 'inject'. Please apply 'observer' before applying 'inject'"
           ),
-        fn && e.$$typeof === fn)
+        hn && e.$$typeof === hn)
       )
         throw new Error(
           "Mobx observer: You are trying to use 'observer' on a function component wrapped in either another observer or 'React.memo'. The observer already applies 'React.memo' for you."
         );
-      if (dn && e.$$typeof === dn) {
+      if (fn && e.$$typeof === fn) {
         var t = e.render;
         if ("function" != typeof t)
           throw new Error("render property of ForwardRef was not a function");
         return (0, Yt.forwardRef)(function () {
           var e = arguments;
-          return (0, Yt.createElement)(Vo, null, function () {
+          return (0, Yt.createElement)(Wo, null, function () {
             return t.apply(void 0, e);
           });
         });
@@ -26375,13 +26392,13 @@ and limitations under the License.
         (e.prototype && e.prototype.render) ||
         e.isReactClass ||
         Object.prototype.isPrototypeOf.call(Yt.Component, e)
-        ? sn(e)
-        : Bo(e);
+        ? ln(e)
+        : Fo(e);
     }
     if (!Yt.Component)
       throw new Error("mobx-react requires React to be available");
     if (!Y) throw new Error("mobx-react requires mobx to be available");
-    function _n(e) {
+    function mn(e) {
       const { popup: t } = e,
         r = qt().useRef();
       return (
@@ -26424,7 +26441,7 @@ and limitations under the License.
         qt().createElement("div", { className: "window_resize_grip", ref: r })
       );
     }
-    class mn extends Yt.Component {
+    class yn extends Yt.Component {
       constructor(e) {
         super(e), (this.state = { maximized: void 0 });
       }
@@ -26446,7 +26463,7 @@ and limitations under the License.
           e.removeEventListener("resize", this.UpdateMaximizeState);
       }
       UpdateMaximizeState() {
-        if (to(this.props.popup, "Window.IsWindowMaximized"))
+        if (ro(this.props.popup, "Window.IsWindowMaximized"))
           this.props.popup.SteamClient.Window.IsWindowMaximized((e) => {
             e != this.state.maximized && this.setState({ maximized: e });
           });
@@ -26488,12 +26505,12 @@ and limitations under the License.
                           ? e
                           : () => {
                               t &&
-                                (to(t, "Window.Close")
+                                (ro(t, "Window.Close")
                                   ? t.SteamClient.Window.Close()
                                   : t.close());
                             },
                     },
-                    Yt.createElement(po, null)
+                    Yt.createElement(fo, null)
                   ),
                 !this.props.hideMinMax &&
                   Yt.createElement(
@@ -26504,8 +26521,8 @@ and limitations under the License.
                         t.SteamClient.Window.ToggleMaximize();
                       },
                     },
-                    this.state.maximized && Yt.createElement(mo, null),
-                    !this.state.maximized && Yt.createElement(ho, null)
+                    this.state.maximized && Yt.createElement(yo, null),
+                    !this.state.maximized && Yt.createElement(_o, null)
                   ),
                 !this.props.hideMinMax &&
                   Yt.createElement(
@@ -26516,7 +26533,7 @@ and limitations under the License.
                         t.SteamClient.Window.Minimize();
                       },
                     },
-                    Yt.createElement(_o, null)
+                    Yt.createElement(mo, null)
                   ),
                 this.props.extraActions
               )
@@ -26524,13 +26541,13 @@ and limitations under the License.
         );
       }
     }
-    e([Zt], mn.prototype, "UpdateMaximizeState", null);
-    var yn = __webpack_require__(817),
-      bn = __webpack_require__.n(yn);
-    const En =
+    e([Zt], yn.prototype, "UpdateMaximizeState", null);
+    var bn = __webpack_require__(817),
+      En = __webpack_require__.n(bn);
+    const Sn =
         __webpack_require__.p +
         "../../client/clientui/images/8669e97b288da32670e77181618c3dfb.png",
-      Sn = qt().memo(function (e) {
+      vn = qt().memo(function (e) {
         const {
           className: t,
           size: r,
@@ -26539,7 +26556,7 @@ and limitations under the License.
           static: i,
           msDelayAppear: a,
         } = e;
-        let s = [bn().LoadingWrapper, "SteamLogoThrobber", vn(r)];
+        let s = [En().LoadingWrapper, "SteamLogoThrobber", Tn(r)];
         const [l, u] = qt().useState(!a);
         return (
           (0, Yt.useEffect)(() => {
@@ -26547,16 +26564,16 @@ and limitations under the License.
             const e = setTimeout(() => u(!0), a);
             return () => clearTimeout(e);
           }, [a, l]),
-          void 0 === o && s.push(bn().noString),
+          void 0 === o && s.push(En().noString),
           t && s.push(t),
-          i && s.push(bn().Static),
+          i && s.push(En().Static),
           qt().createElement(
             "div",
             {
-              className: go(
-                "center" == n && bn().throbber_center_wrapper,
-                a && bn().ThrobberDelayAppear,
-                l && bn().Visible
+              className: co(
+                "center" == n && En().throbber_center_wrapper,
+                a && En().ThrobberDelayAppear,
+                l && En().Visible
               ),
             },
             l &&
@@ -26565,12 +26582,12 @@ and limitations under the License.
                 { className: s.join(" ") },
                 qt().createElement(
                   "div",
-                  { className: bn().NewThrobber },
-                  qt().createElement("img", { src: En })
+                  { className: En().NewThrobber },
+                  qt().createElement("img", { src: Sn })
                 )
               ),
             Boolean(o) &&
-              qt().createElement("div", { className: bn().ThrobberText }, o)
+              qt().createElement("div", { className: En().ThrobberText }, o)
           )
         );
       });
@@ -26583,7 +26600,7 @@ and limitations under the License.
         static: i,
         msDelayAppear: a,
       } = e;
-      let s = [bn().LoadingWrapper, "SteamLogoThrobber", vn(r)];
+      let s = [En().LoadingWrapper, "SteamLogoThrobber", Tn(r)];
       const [l, u] = qt().useState(!a);
       return (
         (0, Yt.useEffect)(() => {
@@ -26591,16 +26608,16 @@ and limitations under the License.
           const e = setTimeout(() => u(!0), a);
           return () => clearTimeout(e);
         }, [a, l]),
-        void 0 === o && s.push(bn().noString),
+        void 0 === o && s.push(En().noString),
         t && s.push(t),
-        i && s.push(bn().Static),
+        i && s.push(En().Static),
         qt().createElement(
           "div",
           {
-            className: go(
-              "center" == n && bn().throbber_center_wrapper,
-              a && bn().ThrobberDelayAppear,
-              l && bn().Visible
+            className: co(
+              "center" == n && En().throbber_center_wrapper,
+              a && En().ThrobberDelayAppear,
+              l && En().Visible
             ),
           },
           l &&
@@ -26609,31 +26626,31 @@ and limitations under the License.
               { className: s.join(" ") },
               qt().createElement(
                 "div",
-                { className: bn().Throbber },
-                qt().createElement(Tn, { className: bn().base }),
-                qt().createElement(Tn, { className: bn().blur })
+                { className: En().Throbber },
+                qt().createElement(In, { className: En().base }),
+                qt().createElement(In, { className: En().blur })
               )
             ),
           Boolean(o) &&
-            qt().createElement("div", { className: bn().ThrobberText }, o)
+            qt().createElement("div", { className: En().ThrobberText }, o)
         )
       );
     });
-    function vn(e) {
+    function Tn(e) {
       switch (e) {
         case "small":
-          return bn().throbber_small;
+          return En().throbber_small;
         case "medium":
-          return bn().throbber_medium;
+          return En().throbber_medium;
         case "xlarge":
-          return bn().throbber_xlarge;
+          return En().throbber_xlarge;
         case "xxlarge":
-          return bn().throbber_xxlarge;
+          return En().throbber_xxlarge;
         default:
-          return bn().throbber_large;
+          return En().throbber_large;
       }
     }
-    function Tn(e) {
+    function In(e) {
       let t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -26652,9 +26669,9 @@ and limitations under the License.
           },
           qt().createElement(
             "g",
-            { className: bn().partCircle },
+            { className: En().partCircle },
             qt().createElement("path", {
-              className: bn().roundOuter,
+              className: En().roundOuter,
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -26662,7 +26679,7 @@ and limitations under the License.
               d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
             }),
             qt().createElement("path", {
-              className: bn().roundOuter,
+              className: En().roundOuter,
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -26670,7 +26687,7 @@ and limitations under the License.
               d: "M201.432,101.166",
             }),
             qt().createElement("path", {
-              className: bn().roundOuter,
+              className: En().roundOuter,
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -26680,9 +26697,9 @@ and limitations under the License.
           ),
           qt().createElement(
             "g",
-            { className: bn().mainOutline },
+            { className: En().mainOutline },
             qt().createElement("path", {
-              className: bn().roundFill,
+              className: En().roundFill,
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -26690,7 +26707,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundOuterOutline,
+              className: En().roundOuterOutline,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26699,7 +26716,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber01,
+              className: En().roundThrobber01,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26708,7 +26725,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber02,
+              className: En().roundThrobber02,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26717,7 +26734,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber03,
+              className: En().roundThrobber03,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26726,7 +26743,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber04,
+              className: En().roundThrobber04,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26735,7 +26752,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber05,
+              className: En().roundThrobber05,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26744,7 +26761,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber06,
+              className: En().roundThrobber06,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26753,7 +26770,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber07,
+              className: En().roundThrobber07,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26762,7 +26779,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber08,
+              className: En().roundThrobber08,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26771,7 +26788,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber09,
+              className: En().roundThrobber09,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26780,7 +26797,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber10,
+              className: En().roundThrobber10,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26789,7 +26806,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber11,
+              className: En().roundThrobber11,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26798,7 +26815,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber12,
+              className: En().roundThrobber12,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26807,7 +26824,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber13,
+              className: En().roundThrobber13,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26816,7 +26833,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber14,
+              className: En().roundThrobber14,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26825,7 +26842,7 @@ and limitations under the License.
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
             }),
             qt().createElement("path", {
-              className: bn().roundThrobber15,
+              className: En().roundThrobber15,
               strokeLinecap: "butt",
               fill: "none",
               stroke: "#ffffff",
@@ -26836,7 +26853,7 @@ and limitations under the License.
           ),
           qt().createElement(
             "g",
-            { className: bn().bottomCircle },
+            { className: En().bottomCircle },
             qt().createElement("path", {
               fill: "#ffffff",
               d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -26844,7 +26861,7 @@ and limitations under the License.
           ),
           qt().createElement(
             "g",
-            { className: bn().topCircle },
+            { className: En().topCircle },
             qt().createElement("circle", {
               fill: "none",
               stroke: "#ffffff",
@@ -26858,20 +26875,20 @@ and limitations under the License.
         )
       );
     }
-    var In;
+    var An;
     !(function (e) {
       (e[(e.SignIn = 0)] = "SignIn"),
         (e[(e.Loading = 1)] = "Loading"),
         (e[(e.Loaded = 2)] = "Loaded"),
         (e[(e.FailRetry = 3)] = "FailRetry"),
         (e[(e.OfflineMode = 4)] = "OfflineMode");
-    })(In || (In = {}));
-    class An {
+    })(An || (An = {}));
+    class Rn {
       constructor() {
-        this.m_eState = In.SignIn;
+        this.m_eState = An.SignIn;
       }
       Init() {
-        this.m_eState = In.SignIn;
+        this.m_eState = An.SignIn;
       }
       get loadingState() {
         return this.m_eState;
@@ -26880,8 +26897,8 @@ and limitations under the License.
         this.m_eState = e;
       }
     }
-    e([Y], An.prototype, "m_eState", void 0);
-    let Rn = class extends Yt.Component {
+    e([Y], Rn.prototype, "m_eState", void 0);
+    let wn = class extends Yt.Component {
       ContextMenu(e) {
         e.preventDefault(), e.stopPropagation();
       }
@@ -26911,7 +26928,7 @@ and limitations under the License.
               Yt.createElement(
                 "div",
                 { className: "friendlist" },
-                Yt.createElement(mn, { popup: this.props.popup.window }),
+                Yt.createElement(yn, { popup: this.props.popup.window }),
                 Yt.createElement(
                   "div",
                   { className: "currentUserContainer" },
@@ -26935,7 +26952,7 @@ and limitations under the License.
                         Yt.createElement(
                           "div",
                           { className: "gameName richPresenceLabel" },
-                          Yr("#FriendsList_Offline_Disconnected")
+                          qr("#FriendsList_Offline_Disconnected")
                         )
                       )
                     )
@@ -26951,29 +26968,29 @@ and limitations under the License.
                       className: "frienListInsetShadowTop",
                     })
                   ),
-                  e == In.SignIn && Yt.createElement(On, null),
-                  e == In.Loading && Yt.createElement(wn, null),
-                  e == In.FailRetry && Yt.createElement(Cn, null),
-                  e == In.OfflineMode && Yt.createElement(Pn, null)
+                  e == An.SignIn && Yt.createElement(Pn, null),
+                  e == An.Loading && Yt.createElement(Cn, null),
+                  e == An.FailRetry && Yt.createElement(On, null),
+                  e == An.OfflineMode && Yt.createElement(jn, null)
                 )
               ),
-              Yt.createElement(_n, { popup: this.props.popup.window })
+              Yt.createElement(mn, { popup: this.props.popup.window })
             )
           )
         );
       }
     };
-    function wn() {
+    function Cn() {
       return Yt.createElement(
         "div",
         null,
         Yt.createElement(
           "div",
           null,
-          Yt.createElement(Sn, {
+          Yt.createElement(vn, {
             className: "friendsThrobber",
             size: "large",
-            string: Yr("#FriendsList_StillLoadingSummary"),
+            string: qr("#FriendsList_StillLoadingSummary"),
             position: "center",
           })
         ),
@@ -26981,28 +26998,28 @@ and limitations under the License.
         Yt.createElement(
           "div",
           { className: "detailText" },
-          Yr("#FriendsList_StillLoadingDetail")
+          qr("#FriendsList_StillLoadingDetail")
         )
       );
     }
-    function Cn() {
+    function On() {
       return Yt.createElement(
         "div",
         null,
         Yt.createElement(
           "div",
           { className: "cautionIcon" },
-          Yt.createElement(fo, null)
+          Yt.createElement(ho, null)
         ),
         Yt.createElement(
           "div",
           { className: "summaryText" },
-          Yr("#FriendsList_OfflineOrFailure")
+          qr("#FriendsList_OfflineOrFailure")
         ),
         Yt.createElement(
           "div",
           { className: "detailText" },
-          Yr("#FriendsList_OfflineDetail")
+          qr("#FriendsList_OfflineDetail")
         ),
         Yt.createElement(
           "div",
@@ -27019,24 +27036,24 @@ and limitations under the License.
                   );
               },
             },
-            Yr("#Friends_RetryLoading")
+            qr("#Friends_RetryLoading")
           )
         )
       );
     }
-    function On() {
+    function Pn() {
       return Yt.createElement(
         "div",
         null,
         Yt.createElement(
           "div",
           { className: "summaryText" },
-          Yr("#FriendsList_SignedOut")
+          qr("#FriendsList_SignedOut")
         ),
         Yt.createElement(
           "div",
           { className: "detailText" },
-          Yr("#FriendsList_SignedOut_Detail")
+          qr("#FriendsList_SignedOut_Detail")
         ),
         Yt.createElement(
           "div",
@@ -27052,32 +27069,32 @@ and limitations under the License.
                 );
               },
             },
-            Yr("#Friends_SignIn")
+            qr("#Friends_SignIn")
           )
         )
       );
     }
-    function Pn() {
+    function jn() {
       return Yt.createElement(
         "div",
         null,
         Yt.createElement(
           "div",
           { className: "summaryText" },
-          Yr("#FriendsList_OfflineMode")
+          qr("#FriendsList_OfflineMode")
         ),
         Yt.createElement(
           "div",
           { className: "detailText" },
-          Yr("#FriendsList_OfflineMode_Detail")
+          qr("#FriendsList_OfflineMode_Detail")
         )
       );
     }
-    e([Y], Rn.prototype, "m_strPersonaName", void 0),
-      e([Y], Rn.prototype, "m_strAvatarSource", void 0),
-      e([Zt], Rn.prototype, "ContextMenu", null),
-      (Rn = e([hn], Rn));
-    class jn extends io {
+    e([Y], wn.prototype, "m_strPersonaName", void 0),
+      e([Y], wn.prototype, "m_strAvatarSource", void 0),
+      e([Zt], wn.prototype, "ContextMenu", null),
+      (wn = e([_n], wn));
+    class Dn extends ao {
       constructor(e, t) {
         super(
           "offlinefriendslist",
@@ -27086,11 +27103,11 @@ and limitations under the License.
             dimensions: { width: 300, height: 650 },
             minWidth: 226,
             minHeight: 400,
-            title: Yr("#WindowTitle_FriendsList"),
+            title: qr("#WindowTitle_FriendsList"),
             html_class:
               "friendsui-container client_chat_frame fullheight SavedDimensionsPopup",
             body_class: "fullheight",
-            eCreationFlags: oo.Resizable,
+            eCreationFlags: no.Resizable,
             target_browser: t,
           },
           !1
@@ -27108,8 +27125,8 @@ and limitations under the License.
       }
       Render(e, t) {
         t.setAttribute("class", "fullheight popup_chat_frame"),
-          uo.render(
-            Yt.createElement(Rn, {
+          go.render(
+            Yt.createElement(wn, {
               popup: this,
               offlineStore: this.m_offlineStore,
             }),
@@ -27118,16 +27135,16 @@ and limitations under the License.
       }
       OnClose() {
         super.OnClose(),
-          uo.unmountComponentAtNode(this.m_element),
+          go.unmountComponentAtNode(this.m_element),
           window.parent.postMessage(
             { message: "ErrorPopupClosed" },
             "https://steamloopback.host"
           );
       }
     }
-    var Dn = __webpack_require__(669),
-      Nn = __webpack_require__.n(Dn);
-    function kn(e, t) {
+    var Nn = __webpack_require__(669),
+      kn = __webpack_require__.n(Nn);
+    function Mn(e, t) {
       var r = document.createElement("link");
       (r.href = e), (r.type = "text/css"), (r.rel = "stylesheet");
       let o = t.parentElement;
@@ -27141,7 +27158,7 @@ and limitations under the License.
           !e._reactInternalInstance._currentElement._source
         )
           return;
-        let t = uo.findDOMNode(e);
+        let t = go.findDOMNode(e);
         if (!t) return;
         let r = "";
         (r =
@@ -27177,67 +27194,67 @@ and limitations under the License.
                 break;
               }
           }
-          for (let e of r) kn(e.newRelative, e.sheet);
+          for (let e of r) Mn(e.newRelative, e.sheet);
         });
       });
-    let Mn,
-      Ln,
+    let Ln,
       Un,
       xn,
       Bn,
       Fn,
       Vn,
-      Wn = "",
+      Wn,
       Hn = "",
-      Gn = 0,
-      zn = [],
-      Kn = "",
-      Yn = -1,
-      qn = 0,
+      Gn = "",
+      zn = 0,
+      Kn = [],
+      Yn = "",
+      qn = -1,
       $n = 0,
-      Xn = !1,
-      Zn = !1;
-    function Qn(e) {
+      Xn = 0,
+      Zn = !1,
+      Qn = !1;
+    function Jn(e) {
       if (
-        (SteamClient.WebChat.RegisterForFriendPostMessage(li),
-        void 0 !== Un && (clearInterval(Un), (Un = void 0)),
-        (Wn = e),
-        Vn.SetLoadingState(In.Loading),
-        (qn = 0),
-        Jn(),
-        Xn)
+        (SteamClient.WebChat.RegisterForFriendPostMessage(ui),
+        void 0 !== xn && (clearInterval(xn), (xn = void 0)),
+        (Hn = e),
+        Wn.SetLoadingState(An.Loading),
+        ($n = 0),
+        ei(),
+        Zn)
       )
-        return Vn.SetLoadingState(In.FailRetry), void gi();
-      Zn
-        ? gi()
-        : ((Ln = setTimeout(ri, 4e3)),
-          (Mn = setTimeout(ti, 1e3)),
+        return Wn.SetLoadingState(An.FailRetry), void ci();
+      Qn
+        ? ci()
+        : ((Un = setTimeout(oi, 4e3)),
+          (Ln = setTimeout(ri, 1e3)),
           SteamClient.WebChat.GetWebChatURL().then((e) => {
             if (
-              ((Hn = e), void 0 !== Mn && (clearTimeout(Mn), (Mn = void 0)), e)
+              ((Gn = e), void 0 !== Ln && (clearTimeout(Ln), (Ln = void 0)), e)
             ) {
               let t = new URL(e);
               t.searchParams.set("origin", window.origin),
-                (Hn = t.href),
+                (Gn = t.href),
                 console.log("Loading chat from url: ", t.href),
-                ei(t.href);
+                ti(t.href);
             } else
-              Jn(),
+              ei(),
                 console.log("Empty webchat URL, we are in offline mode"),
-                Vn.SetLoadingState(In.OfflineMode);
+                Wn.SetLoadingState(An.OfflineMode);
           }));
     }
-    function Jn() {
-      void 0 !== Mn && (clearTimeout(Mn), (Mn = void 0)),
-        void 0 !== Ln && (clearTimeout(Ln), (Ln = void 0));
+    function ei() {
+      void 0 !== Ln && (clearTimeout(Ln), (Ln = void 0)),
+        void 0 !== Un && (clearTimeout(Un), (Un = void 0));
     }
-    function ei(e) {
-      console.log("Checking network... " + Gn);
+    function ti(e) {
+      console.log("Checking network... " + zn);
       let t = 7500;
-      0 == Gn ? (t = 500) : 1 == Gn && (t = 2e3);
+      0 == zn ? (t = 500) : 1 == zn && (t = 2e3);
       let r = e;
-      ++Gn,
-        Nn()
+      ++zn,
+        kn()
           .head(e, { timeout: t })
           .then((e) => {
             void 0 === e.headers["x-buildtimestamp"] &&
@@ -27245,55 +27262,55 @@ and limitations under the License.
                 "Network check (head req) got 200, but no x-buildtimestamp, not valid? Proceeding anyway..."
               ),
               console.log(
-                "Network check (head req) passed after " + Gn + " tries..."
+                "Network check (head req) passed after " + zn + " tries..."
               ),
               (function (e) {
                 console.log("Loading chat from url: ", e),
-                  void 0 !== Mn && clearTimeout(Mn);
-                (Mn = setTimeout(ti, 15e3)),
-                  (document.getElementById(Wn).src = e);
+                  void 0 !== Ln && clearTimeout(Ln);
+                (Ln = setTimeout(ri, 15e3)),
+                  (document.getElementById(Hn).src = e);
               })(r);
           })
           .catch((e) => {
-            console.log("Network check try " + Gn + " failed..."),
-              Gn >= 3 ? ti() : ei(r);
+            console.log("Network check try " + zn + " failed..."),
+              zn >= 3 ? ri() : ti(r);
           });
     }
-    function ti() {
-      console.log("Failed to load chat!"),
-        Jn(),
-        Vn.SetLoadingState(In.FailRetry),
-        4 != Yn && gi();
-    }
     function ri() {
-      4 != Yn && Vn.loadingState != In.Loaded && gi(), (Ln = void 0);
+      console.log("Failed to load chat!"),
+        ei(),
+        Wn.SetLoadingState(An.FailRetry),
+        4 != qn && ci();
     }
     function oi() {
-      let e = document.getElementById(Wn);
-      e && null != e.src && (e.src = void 0),
-        SteamClient.WebChat.RegisterForFriendPostMessage(li),
-        SteamClient.WebChat.RegisterOverlayChatBrowserInfoChanged(si);
+      4 != qn && Wn.loadingState != An.Loaded && ci(), (Un = void 0);
     }
     function ni() {
-      (Gn = 0), Qn("tracked_frame_friends_chat");
+      let e = document.getElementById(Hn);
+      e && null != e.src && (e.src = void 0),
+        SteamClient.WebChat.RegisterForFriendPostMessage(ui),
+        SteamClient.WebChat.RegisterOverlayChatBrowserInfoChanged(li);
     }
     function ii() {
-      ai(!1);
+      (zn = 0), Jn("tracked_frame_friends_chat");
     }
-    function ai(e) {
+    function ai() {
+      si(!1);
+    }
+    function si(e) {
       SteamClient.WebChat.GetWebChatURL().then((t) => {
         console.log("Checking for updates from chat from url: ", t),
-          void 0 !== Mn && (clearTimeout(Mn), (Mn = void 0)),
-          Nn()
+          void 0 !== Ln && (clearTimeout(Ln), (Ln = void 0)),
+          kn()
             .head(t, { timeout: 1e4 })
             .then((r) => {
               if (void 0 !== r.headers["x-buildtimestamp"]) {
-                ($n = Number(r.headers["x-buildtimestamp"])),
-                  console.log("Currently available build: " + $n);
+                (Xn = Number(r.headers["x-buildtimestamp"])),
+                  console.log("Currently available build: " + Xn);
                 let o = 86400;
-                if ((e && (o = 0), 0 != $n && 0 != qn)) {
-                  let n = $n - qn;
-                  if (Vn.loadingState == In.Loaded && n > o) {
+                if ((e && (o = 0), 0 != Xn && 0 != $n)) {
+                  let n = Xn - $n;
+                  if (Wn.loadingState == An.Loaded && n > o) {
                     let o = n > 604800,
                       i = Number(r.headers["x-forceuiupdate"]) || e;
                     console.log(
@@ -27319,31 +27336,31 @@ and limitations under the License.
             });
       });
     }
-    function si() {
+    function li() {
       SteamClient.WebChat.GetOverlayChatBrowserInfo()
         .then((e) => {
           let t = new Map();
-          for (let e = 0; e < zn.length; ++e)
-            zn[e].browser_info &&
-              0 != zn[e].browser_info.m_unPID &&
-              t.set(zn[e].browser_info.m_unPID, !0);
+          for (let e = 0; e < Kn.length; ++e)
+            Kn[e].browser_info &&
+              0 != Kn[e].browser_info.m_unPID &&
+              t.set(Kn[e].browser_info.m_unPID, !0);
           for (let r of e) t.delete(r.unPID);
-          for (let e = zn.length - 1; e >= 0; e--)
-            null != zn[e].browser_info &&
-              t.has(zn[e].browser_info.m_unPID) &&
+          for (let e = Kn.length - 1; e >= 0; e--)
+            null != Kn[e].browser_info &&
+              t.has(Kn[e].browser_info.m_unPID) &&
               (console.log(
                 "Deleting error/offline dialog for: " +
-                  zn[e].browser_info.m_unPID
+                  Kn[e].browser_info.m_unPID
               ),
-              zn[e].Close(),
-              (zn[e] = void 0),
-              zn.pop());
+              Kn[e].Close(),
+              (Kn[e] = void 0),
+              Kn.pop());
         })
         .catch((e) => {
           console.log("Failed to load overlay browser info:", e);
         });
     }
-    function li(e) {
+    function ui(e) {
       let t = e.data;
       if (t && t.command)
         if ("ShowPopupFriendsList" == t.command) {
@@ -27351,29 +27368,29 @@ and limitations under the License.
           let t = { m_unPID: 0, m_nBrowserID: -1 };
           void 0 !== e.data.pid &&
             (t = { m_unPID: e.data.pid, m_nBrowserID: e.data.browserid }),
-            gi(t);
+            ci(t);
         } else if ("SetPersonaState" == t.command) {
           let e = t.persona_state;
-          0 != e && ((Bn = e), (Gn = 0), Qn("tracked_frame_friends_chat"));
+          0 != e && ((Fn = e), (zn = 0), Jn("tracked_frame_friends_chat"));
         }
     }
-    function ui(e, t, r) {
-      "SignInToFriends" == t && ni();
+    function gi(e, t, r) {
+      "SignInToFriends" == t && ii();
     }
-    function gi(e = void 0) {
+    function ci(e = void 0) {
       (null != e && null != e) || (e = { m_unPID: 0, m_nBrowserID: -1 });
-      for (let t = 0; t < zn.length; ++t)
+      for (let t = 0; t < Kn.length; ++t)
         if (
-          zn[t].browser_info.m_nBrowserID == e.m_nBrowserID &&
-          zn[t].browser_info.m_unPID == e.m_unPID
+          Kn[t].browser_info.m_nBrowserID == e.m_nBrowserID &&
+          Kn[t].browser_info.m_unPID == e.m_unPID
         )
-          return zn[t].Show(), void (xn = !0);
-      let t = new jn(Vn, e);
-      zn.push(t), t.Show(), (xn = !0);
+          return Kn[t].Show(), void (Bn = !0);
+      let t = new Dn(Wn, e);
+      Kn.push(t), t.Show(), (Bn = !0);
     }
-    function ci() {
+    function pi() {
       return t(this, void 0, void 0, function* () {
-        (Vn = new An()), Vn.Init();
+        (Wn = new Rn()), Wn.Init();
         let e = yield SteamClient.WebChat.GetWebChatLanguage();
         try {
           yield (function (e) {
@@ -27383,7 +27400,7 @@ and limitations under the License.
               n,
               i = [],
               a = (e, t, r) =>
-                Nn()
+                kn()
                   .get(`https://steamloopback.host/localization/${e}_${t}.json`)
                   .then((e) => {
                     r(e.data);
@@ -27401,7 +27418,7 @@ and limitations under the License.
                   o = e;
                 })
               );
-            let s = Kr.GetLanguageFallback(e);
+            let s = Yr.GetLanguageFallback(e);
             return (
               e != s &&
                 (i.push(
@@ -27415,7 +27432,7 @@ and limitations under the License.
                   })
                 )),
               Promise.all(i).then(() => {
-                Xr.InitFromObjects(t, r, o, n);
+                Zr.InitFromObjects(t, r, o, n);
               })
             );
           })(e);
@@ -27423,86 +27440,86 @@ and limitations under the License.
           console.log("Failed to load localization!");
         }
         if (
-          (SteamClient.WebChat.RegisterForFriendPostMessage(li),
-          SteamClient.WebChat.RegisterOverlayChatBrowserInfoChanged(si),
-          to(window, "Messaging.RegisterForMessages") &&
-            SteamClient.Messaging.RegisterForMessages("FriendsLoader", ui),
+          (SteamClient.WebChat.RegisterForFriendPostMessage(ui),
+          SteamClient.WebChat.RegisterOverlayChatBrowserInfoChanged(li),
+          ro(window, "Messaging.RegisterForMessages") &&
+            SteamClient.Messaging.RegisterForMessages("FriendsLoader", gi),
           !(yield SteamClient.WebChat.GetSignIntoFriendsOnStart()))
         )
           return (
             console.log("Don't sign in on start"),
-            void Vn.SetLoadingState(In.SignIn)
+            void Wn.SetLoadingState(An.SignIn)
           );
         let t = yield SteamClient.WebChat.GetCurrentUserAccountID();
-        lo.SetCurrentLoggedInAccountID(t),
-          (Yn = yield SteamClient.WebChat.GetUIMode()),
-          Qn("tracked_frame_friends_chat");
+        uo.SetCurrentLoggedInAccountID(t),
+          (qn = yield SteamClient.WebChat.GetUIMode()),
+          Jn("tracked_frame_friends_chat");
       });
     }
     window.addEventListener("message", function (e) {
       if ("object" != typeof e.data || null == e.data.message) return;
       if ("ShowFriendsErrorRetryDialog" == e.data.message)
-        Jn(), oi(), Vn.SetLoadingState(In.FailRetry), gi();
+        ei(), ni(), Wn.SetLoadingState(An.FailRetry), ci();
       else if ("ChatJavascriptInitialized" == e.data.message) {
-        Vn.SetLoadingState(In.Loaded), Jn();
-        let t = Hn.match(/(https:\/\/[^\/]+)\/.*/)[1];
+        Wn.SetLoadingState(An.Loaded), ei();
+        let t = Gn.match(/(https:\/\/[^\/]+)\/.*/)[1];
         if (
           (window.frames[0].postMessage(
-            { message: "LoaderWindowRestoreDetails", data: Kn, bVisible: xn },
+            { message: "LoaderWindowRestoreDetails", data: Yn, bVisible: Bn },
             t
           ),
-          void 0 !== Bn &&
+          void 0 !== Fn &&
             (window.frames[0].postMessage(
-              { message: "SetPersonaState", persona_state: Bn },
+              { message: "SetPersonaState", persona_state: Fn },
               t
             ),
-            (Bn = void 0)),
-          (qn = void 0 !== e.data.data ? e.data.data : 0),
-          null != Fn)
+            (Fn = void 0)),
+          ($n = void 0 !== e.data.data ? e.data.data : 0),
+          null != Vn)
         )
           try {
             window.frames[0].postMessage(
-              { message: "ReloadSerializedChatState", state: Fn },
+              { message: "ReloadSerializedChatState", state: Vn },
               t
             ),
-              (Fn = void 0);
+              (Vn = void 0);
           } catch (e) {
             console.log(
               "Failed trying to ask FriendsUI to restore chat state after reload"
             ),
-              (Fn = void 0);
+              (Vn = void 0);
           }
-        (Un = setInterval(ii, 144e5)),
+        (xn = setInterval(ai, 144e5)),
           (function () {
-            for (let e = 0; e < zn.length; ++e) zn[e].Close(), (zn[e] = void 0);
-            zn = [];
+            for (let e = 0; e < Kn.length; ++e) Kn[e].Close(), (Kn[e] = void 0);
+            Kn = [];
           })(),
-          console.log("Chat loaded! " + qn);
+          console.log("Chat loaded! " + $n);
       } else if ("ChatReloadRequest" == e.data.message) {
-        if (null == Wn || "" == Wn) return;
-        (Gn = 0), null != e.data.state && (Fn = e.data.state), Qn(Wn);
-      } else if ("CheckForAndForceUpdate" == e.data.message) ai(!0);
-      else if ("SignInRequest" == e.data.message) ni();
+        if (null == Hn || "" == Hn) return;
+        (zn = 0), null != e.data.state && (Vn = e.data.state), Jn(Hn);
+      } else if ("CheckForAndForceUpdate" == e.data.message) si(!0);
+      else if ("SignInRequest" == e.data.message) ii();
       else if ("SignOutRequest" == e.data.message) {
         if (
-          (Jn(),
-          oi(),
-          Vn.SetLoadingState(In.SignIn),
-          (xn = e.data.bShowLoaderWindow),
+          (ei(),
+          ni(),
+          Wn.SetLoadingState(An.SignIn),
+          (Bn = e.data.bShowLoaderWindow),
           e.data.bShowLoaderWindow)
         ) {
           let t;
-          e.data.browserContext && (t = e.data.browserContext), gi(t);
+          e.data.browserContext && (t = e.data.browserContext), ci(t);
         }
       } else if ("FriendsListRestoreDetailsChanged" == e.data.message) {
         let t = e.data.data;
-        new jn(Vn, void 0).SaveWindowPosition(t), (Kn = t);
+        new Dn(Wn, void 0).SaveWindowPosition(t), (Yn = t);
       } else
         "ErrorPopupRestoreDetailsChanged" == e.data.message
-          ? (Kn = e.data.data)
-          : "ErrorPopupClosed" == e.data.message && (xn = !1);
+          ? (Yn = e.data.data)
+          : "ErrorPopupClosed" == e.data.message && (Bn = !1);
     }),
-      document.addEventListener("DOMContentLoaded", () => ci());
+      document.addEventListener("DOMContentLoaded", () => pi());
   })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=7edf4793853f413f2bad
+//# sourceMappingURL=friends.js.map?contenthash=c2a8d17f4639b21519b0

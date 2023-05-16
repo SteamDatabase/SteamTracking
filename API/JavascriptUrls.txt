@@ -106,6 +106,8 @@ ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_paris_2023_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
+${CLAN_CDN_ASSET_URL}images
+${CLAN_CDN_ASSET_URL}images/
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
 ${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}

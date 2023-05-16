@@ -575,6 +575,8 @@
  vstdlib_wcsicmp
  vstdlib_wcsnicmp
  vtable for __cxxabiv1::__class_type_info
+ vtable for __cxxabiv1::__function_type_info
+ vtable for __cxxabiv1::__pointer_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  vtable for std::length_error

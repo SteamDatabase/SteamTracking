@@ -97,6 +97,7 @@
 	"Login_GoOffline_Description": "您可以尝试在离线模式下运行蒸汽平台。",
 	"Login_Error_Anonymous_Description": "网页端和桌面版蒸汽平台客户端均不支持匿名登录；仅 steamcmd 支持匿名登陆。",
 	"Login_ConnectingToSteam": "正在连接到蒸汽平台",
+	"SteamNotification_HelpRequest_Author": "蒸汽平台客服",
 	"ConnectionTrouble_FailedToConnect": "连接蒸汽平台失败",
 	"BroadcastWatch_ServerLoad": "蒸汽平台目前直播载入量过高，无法预留服务器空间开始此直播。请过几分钟后再试。",
 	"BroadcastWatch_SystemNotSupported": "此主播的系统目前不支持蒸汽平台直播",
@@ -143,5 +144,6 @@
 	"DiscoveryQueue_LabsHeader": "<1>蒸汽平台实验室</1> <2>留下反馈</2>",
 	"DiscoveryQueue_WidgetHeader": "全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
 	"DiscoveryQueue_WidgetHeader_LoggedOut": "登录以体验全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
-	"Notification_Item_RollupMore_Steam": "还有 %1$s 个蒸汽平台物品"
+	"Notification_Item_RollupMore_Steam": "还有 %1$s 个蒸汽平台物品",
+	"NotificationsList_EmptyBody": "您可以在此处看到有关您的愿望单、好友、游戏、库存等的蒸汽平台通知。"
 }

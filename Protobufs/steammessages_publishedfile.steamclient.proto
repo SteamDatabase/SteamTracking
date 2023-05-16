@@ -285,6 +285,7 @@ message CPublishedFile_GetUserFiles_Request {
 
 	optional fixed64 steamid = 1 [(description) = "Steam ID of the user whose files are being requested."];
 	optional uint32 appid = 2 [(description) = "App Id of the app that the files were published to."];
+	optional uint32 shortcutid = 3 [(description) = "(Optional) Shortcut Id to retrieve published files from."];
 	optional uint32 page = 4 [default = 1, (description) = "(Optional) Starting page for results."];
 	optional uint32 numperpage = 5 [default = 1, (description) = "(Optional) The number of results, per page to return."];
 	optional string type = 6 [default = "myfiles", (description) = "(Optional) Type of files to be returned."];

@@ -30477,12 +30477,8 @@ html.web_chat_frame .perf_timing_area {
   background-size: 80% 80%;
   background-position: 50% 50%;
 }
-.audioDebug:hover,
 .controlZoo:hover {
   filter: brightness(2);
-}
-.audioDebug {
-  background-image: url(/images/2bc7d8a8d809abae97d7.png);
 }
 #friendslist-droptarget {
   display: none;

@@ -3807,6 +3807,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .aboutsteamdialog_AboutSteamDialog_FFIKU
   .aboutsteamdialog_DialogBodyText_32eeZ {
   font-size: small;
+  user-select: text;
 }
 .aboutsteamdialog_AboutSteamDialog_FFIKU.aboutsteamdialog_Desktop_yXl6A
   .aboutsteamdialog_DialogHeader_3QhXB {

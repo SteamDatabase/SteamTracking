@@ -3826,6 +3826,9 @@ a.bbcodes_LinkButton_lMVeY:hover {
   color: #fff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
+.bbcodes_Image_1CmpC {
+  max-width: 100%;
+}
 .presenterpopup_SpeakerOuter_3KAg2 {
   display: block;
 }
@@ -37806,6 +37809,14 @@ div.NarrowWindow
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.mainbrowser_URLBar_1CwIx .mainbrowser_URL_2aM-J .mainbrowser_URLInput_kqOgj {
+  background: #000;
+}
+.mainbrowser_URLBar_1CwIx
+  .mainbrowser_URL_2aM-J
+  .mainbrowser_URLInput_kqOgj.gpfocus {
+  background: #fff;
+}
 .mainbrowser_URLBar_1CwIx .mainbrowser_InputSupportLevel_1aVPs {
   margin-left: auto;
   display: flex;
@@ -55750,6 +55761,9 @@ body {
 .achievementspage_HeaderContainer_36Dp_.achievementspage_PinnedView_278LB {
   visibility: hidden;
 }
+.achievementspage_HeaderContainer_36Dp_.achievementspage_PerfectGame_zzqW9 {
+  visibility: visible;
+}
 .achievementspage_PinnedViewTabs_22JRo {
   visibility: hidden;
 }
@@ -66728,6 +66742,15 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   color: #fff;
   font-weight: 400;
   font-size: 14px;
+}
+.steamtemplates_FriendIndicator_suNJh {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  cursor: pointer;
 }
 .quickaccesscontrollerorder_OptedOut_3NMs0 {
   color: #ffc82c;
