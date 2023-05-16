@@ -605,6 +605,12 @@
                     "description": "App Id of the app that the files were published to."
                 },
                 {
+                    "name": "shortcutid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "(Optional) Shortcut Id to retrieve published files from."
+                },
+                {
                     "name": "page",
                     "type": "uint32",
                     "optional": true,
@@ -815,6 +821,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "App Id of the app that the files were published to."
+                },
+                {
+                    "name": "shortcutid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "(Optional) Shortcut Id to retrieve published files from."
                 },
                 {
                     "name": "page",
