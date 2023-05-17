@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8063824";
+var CLSTAMP = "8065505";
 (() => {
   "use strict";
   var a,
@@ -209,11 +209,11 @@ var CLSTAMP = "8063824";
       {
         27: "598007c25a439f35700b",
         113: "4def9a4255c0759268a4",
-        131: "d16d9912d070d5cb9805",
+        131: "dee6e510e31c1cb7cc42",
         238: "460672809f1af1580567",
         301: "809b0afd610c19407eed",
         312: "3f30ebdbf2f711a21156",
-        400: "db5b6f83712d4b65aa71",
+        400: "e8fc96b8f2f7d04b81a8",
         483: "758dcd901b14baa37574",
         508: "7665cfa7c6b0d17ca987",
         543: "92596e2ccfaa7bc641ca",
@@ -230,7 +230,7 @@ var CLSTAMP = "8063824";
         1546: "c0deefd8c12becfec077",
         1579: "4ab92924f044df050ed5",
         1649: "4de0fa424ae9ed64f943",
-        1909: "d571bd801215eeb8ff6d",
+        1909: "7dad6cfc30982ed726ce",
         1953: "59bab32c041deaede759",
         2136: "2f94dfd52629c024461a",
         2138: "96e0de9a5b05ad5a5ca2",
@@ -320,7 +320,7 @@ var CLSTAMP = "8063824";
         8647: "1faa3bb1837c21eab976",
         8691: "5f8c6308e15a113f3e35",
         8805: "fdbb0bdb20e84b05dba9",
-        8931: "a04efe11f64f7271b34f",
+        8931: "87fc4968b9fd3ff3f9b8",
         9167: "81e3145cf3688ea25dbb",
         9233: "473b1b29f9b5be050045",
         9316: "bbc41c1dbdcf8b3dab55",
@@ -411,12 +411,12 @@ var CLSTAMP = "8063824";
             r < d.length;
             r++
           ) {
-            var f = d[r];
+            var b = d[r];
             if (
-              f.getAttribute("src") == a ||
-              f.getAttribute("data-webpack") == o + n
+              b.getAttribute("src") == a ||
+              b.getAttribute("data-webpack") == o + n
             ) {
-              s = f;
+              s = b;
               break;
             }
           }
@@ -428,7 +428,7 @@ var CLSTAMP = "8063824";
           s.setAttribute("data-webpack", o + n),
           (s.src = a)),
           (c[a] = [e]);
-        var b = (e, n) => {
+        var f = (e, n) => {
             (s.onerror = s.onload = null), clearTimeout(h);
             var o = c[a];
             if (
@@ -440,11 +440,11 @@ var CLSTAMP = "8063824";
               return e(n);
           },
           h = setTimeout(
-            b.bind(null, void 0, { type: "timeout", target: s }),
+            f.bind(null, void 0, { type: "timeout", target: s }),
             12e4
           );
-        (s.onerror = b.bind(null, s.onerror)),
-          (s.onload = b.bind(null, s.onload)),
+        (s.onerror = f.bind(null, s.onerror)),
+          (s.onload = f.bind(null, s.onload)),
           t && document.head.appendChild(s);
       }
     }),

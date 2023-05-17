@@ -35785,7 +35785,7 @@
               t.GetClanSteamID(),
               t.GetEventModel().vecTags,
               t.GetIncludedRealmList(),
-              t.GetAppID(),
+              34 === t.GetEventType(),
               ((e = t.GetEventModel().jsondata.localized_spotlight_image),
               e ? e.filter(Boolean).length : 0),
               t.BAllowedSteamStoreSpotlight(),
@@ -35793,169 +35793,187 @@
             var e;
           }),
           m = ["background", "capsule"];
-        return (
-          s > 0
-            ? m.push("spotlight")
-            : Boolean(S.JA.IS_OGG) &&
-              c &&
-              (m.push("localized_store_app_spotlight"),
-              m.push("localized_store_app_spotlight_mobile")),
-          n && m.push("bestofyear_banner", "bestofyear_banner_mobile"),
+        s > 0
+          ? m.push("spotlight")
+          : Boolean(S.JA.IS_OGG) &&
+            c &&
+            (m.push("localized_store_app_spotlight"),
+            m.push("localized_store_app_spotlight_mobile")),
+          n && m.push("bestofyear_banner", "bestofyear_banner_mobile");
+        const u = m.includes("spotlight"),
+          _ = m.includes("localized_store_app_spotlight"),
+          p = m.includes("localized_store_app_spotlight_mobile");
+        return d.createElement(
+          F.SV,
+          null,
           d.createElement(
-            F.SV,
-            null,
+            "div",
+            { className: Rt().ArtworkTipsCtn },
             d.createElement(
               "div",
-              { className: Rt().ArtworkTipsCtn },
+              { className: Rt().ArtworkTips },
               d.createElement(
-                "div",
-                { className: Rt().ArtworkTips },
+                "p",
+                null,
                 d.createElement(
-                  "p",
+                  "strong",
                   null,
-                  d.createElement(
-                    "strong",
-                    null,
-                    (0, E.Xx)("#selectimage_tip3_title")
-                  ),
-                  ": ",
-                  (0, E.kQ)(
-                    "#selectimage_tip3",
-                    d.createElement(
-                      "span",
-                      null,
-                      d.createElement("br", null),
-                      d.createElement(
-                        "a",
-                        {
-                          target: S.De.IN_CLIENT ? void 0 : "_blank",
-                          href: "https://partner.steamgames.com/doc/store/localization#supported_languages",
-                        },
-                        (0, E.Xx)("#selectimage_see_documentation")
-                      )
-                    )
-                  )
+                  (0, E.Xx)("#selectimage_tip3_title")
                 ),
-                d.createElement(
-                  "p",
-                  null,
+                ": ",
+                (0, E.kQ)(
+                  "#selectimage_tip3",
                   d.createElement(
-                    "a",
-                    {
-                      href: "https://partner.steamgames.com/public/marketing/steam_game_templates_2023.zip",
-                      download: !0,
-                    },
-                    (0, E.Xx)("#selectimage_downloadtemplate")
+                    "span",
+                    null,
+                    d.createElement("br", null),
+                    d.createElement(
+                      "a",
+                      {
+                        target: S.De.IN_CLIENT ? void 0 : "_blank",
+                        href: "https://partner.steamgames.com/doc/store/localization#supported_languages",
+                      },
+                      (0, E.Xx)("#selectimage_see_documentation")
+                    )
                   )
                 )
               ),
               d.createElement(
-                "a",
-                {
-                  href: "https://partner.steamgames.com/doc/marketing/event_tools/event_examples",
-                  className: Rt().ArtworkDocs,
-                  target: S.De.IN_CLIENT ? void 0 : "_blank",
-                },
+                "p",
+                null,
                 d.createElement(
-                  "div",
-                  { className: Rt().ArtworkExampleCtn },
-                  d.createElement("img", {
-                    className: Rt().ArtworkExampleThumbnail,
-                    src: S.De.IMG_URL + "events/thumb_library_home.jpg",
-                  })
-                ),
-                d.createElement(
-                  "div",
-                  { className: Rt().ArtworkExampleTitle },
-                  (0, E.Xx)("#selectimage_viewExamples")
+                  "a",
+                  {
+                    href: "https://partner.steamgames.com/public/marketing/steam_game_templates_2023.zip",
+                    download: !0,
+                  },
+                  (0, E.Xx)("#selectimage_downloadtemplate")
                 )
               )
             ),
-            d.createElement(j.p, {
-              clanSteamID: i,
-              rgSupportArtwork: m,
-              fnSetImageURL: t.SetImageURL,
-              bAllowPreviousClanImageSelection: !0,
-              rgRealmList: o,
-            }),
-            d.createElement(Ge.Yo, {
-              clanSteamID: i,
-              title: (0, E.Xx)("#EventEditor_ArtworkType_capsule"),
-              artworkType: "capsule",
-              headerHint: (0, W.pC)(a, r) ? Ge.KH.k_Required : void 0,
-              elEventArtworkExample: d.createElement(te, {
-                artworkType: "capsule",
-              }),
-            }),
-            d.createElement(Ge.Yo, {
-              clanSteamID: i,
-              title: (0, E.Xx)("#EventEditor_ArtworkType_background"),
-              artworkType: "background",
-              headerHint: Ge.KH.k_Suggested,
-              elEventArtworkExample: d.createElement(te, {
-                artworkType: "background",
-              }),
-            }),
-            Boolean(m.includes("localized_store_app_spotlight")) &&
-              d.createElement(Ge.Yo, {
-                clanSteamID: t.GetClanSteamID(),
-                title: (0, E.Xx)(
-                  "#EventEditor_ArtworkType_localized_store_app_spotlight"
-                ),
-                artworkType: "localized_store_app_spotlight",
-                elEventArtworkExample: d.createElement(te, {
-                  artworkType: "localized_store_app_spotlight",
-                }),
-                headerHint: Ge.KH.k_Requested,
-              }),
-            Boolean(m.includes("localized_store_app_spotlight_mobile")) &&
-              d.createElement(Ge.Yo, {
-                clanSteamID: t.GetClanSteamID(),
-                title: (0, E.Xx)(
-                  "#EventEditor_ArtworkType_localized_store_app_spotlight_mobile"
-                ),
-                artworkType: "localized_store_app_spotlight_mobile",
-                elEventArtworkExample: d.createElement(te, {
-                  artworkType: "localized_store_app_spotlight_mobile",
-                }),
-                headerHint: Ge.KH.k_Requested,
-              }),
-            Boolean(m.includes("spotlight")) &&
-              d.createElement(Ge.Yo, {
-                clanSteamID: t.GetClanSteamID(),
-                title: (0, E.Xx)("#EventEditor_ArtworkType_store_spotlight"),
-                artworkType: "spotlight",
-                headerHint: (0, W.KQ)(a) ? Ge.KH.k_Suggested : void 0,
-                elEventArtworkExample: d.createElement(te, {
-                  artworkType: "spotlight",
-                }),
-              }),
-            Boolean(S.JA.IS_OGG) &&
-              d.createElement(Ge.Yo, {
-                clanSteamID: t.GetClanSteamID(),
-                title: (0, E.Xx)("#EventEditor_ArtworkType_hero"),
-                artworkType: "hero",
-              }),
-            Boolean(n) &&
+            d.createElement(
+              "a",
+              {
+                href: "https://partner.steamgames.com/doc/marketing/event_tools/event_examples",
+                className: Rt().ArtworkDocs,
+                target: S.De.IN_CLIENT ? void 0 : "_blank",
+              },
               d.createElement(
-                d.Fragment,
-                null,
-                d.createElement(Ge.Yo, {
-                  clanSteamID: t.GetClanSteamID(),
-                  title: (0, E.Xx)(
-                    "#EventEditor_ArtworkType_bestofyear_banner"
-                  ),
-                  artworkType: "bestofyear_banner",
-                }),
-                d.createElement(Ge.Yo, {
-                  clanSteamID: t.GetClanSteamID(),
-                  title: (0, E.Xx)(
-                    "#EventEditor_ArtworkType_bestofyear_banner_mobile"
-                  ),
-                  artworkType: "bestofyear_banner_mobile",
+                "div",
+                { className: Rt().ArtworkExampleCtn },
+                d.createElement("img", {
+                  className: Rt().ArtworkExampleThumbnail,
+                  src: S.De.IMG_URL + "events/thumb_library_home.jpg",
                 })
+              ),
+              d.createElement(
+                "div",
+                { className: Rt().ArtworkExampleTitle },
+                (0, E.Xx)("#selectimage_viewExamples")
               )
-          )
+            )
+          ),
+          d.createElement(j.p, {
+            clanSteamID: i,
+            rgSupportArtwork: m,
+            fnSetImageURL: t.SetImageURL,
+            bAllowPreviousClanImageSelection: !0,
+            rgRealmList: o,
+          }),
+          d.createElement(Ge.Yo, {
+            clanSteamID: i,
+            title: (0, E.Xx)("#EventEditor_ArtworkType_capsule"),
+            artworkType: "capsule",
+            headerHint: (0, W.pC)(a, r) ? Ge.KH.k_Required : void 0,
+            elEventArtworkExample: d.createElement(te, {
+              artworkType: "capsule",
+            }),
+          }),
+          d.createElement(Ge.Yo, {
+            clanSteamID: i,
+            title: (0, E.Xx)("#EventEditor_ArtworkType_background"),
+            artworkType: "background",
+            headerHint: Ge.KH.k_Suggested,
+            elEventArtworkExample: d.createElement(te, {
+              artworkType: "background",
+            }),
+          }),
+          Boolean(l && (_ || p || u)) &&
+            d.createElement(
+              "div",
+              { className: ee().ArtworkSelectorContainer },
+              d.createElement(
+                "div",
+                { className: ee().Title },
+                (0, E.Xx)("#EventEditor_ArtworkType_store_spotlight")
+              ),
+              d.createElement(
+                "div",
+                { className: (0, V.Z)(ee().SelectImageBlock, ee().Tips) },
+                (0, E.Xx)(
+                  "#EventEditor_ArtworkType_SpotlightNotSupport",
+                  t.GetCategoryAsString()
+                )
+              ),
+              d.createElement("br", null)
+            ),
+          Boolean(_ && !l) &&
+            d.createElement(Ge.Yo, {
+              clanSteamID: t.GetClanSteamID(),
+              title: (0, E.Xx)(
+                "#EventEditor_ArtworkType_localized_store_app_spotlight"
+              ),
+              artworkType: "localized_store_app_spotlight",
+              elEventArtworkExample: d.createElement(te, {
+                artworkType: "localized_store_app_spotlight",
+              }),
+              headerHint: Ge.KH.k_Requested,
+            }),
+          Boolean(p && !l) &&
+            d.createElement(Ge.Yo, {
+              clanSteamID: t.GetClanSteamID(),
+              title: (0, E.Xx)(
+                "#EventEditor_ArtworkType_localized_store_app_spotlight_mobile"
+              ),
+              artworkType: "localized_store_app_spotlight_mobile",
+              elEventArtworkExample: d.createElement(te, {
+                artworkType: "localized_store_app_spotlight_mobile",
+              }),
+              headerHint: Ge.KH.k_Requested,
+            }),
+          Boolean(u && !l) &&
+            d.createElement(Ge.Yo, {
+              clanSteamID: t.GetClanSteamID(),
+              title: (0, E.Xx)("#EventEditor_ArtworkType_store_spotlight"),
+              artworkType: "spotlight",
+              headerHint: (0, W.KQ)(a) ? Ge.KH.k_Suggested : void 0,
+              elEventArtworkExample: d.createElement(te, {
+                artworkType: "spotlight",
+              }),
+            }),
+          Boolean(S.JA.IS_OGG) &&
+            d.createElement(Ge.Yo, {
+              clanSteamID: t.GetClanSteamID(),
+              title: (0, E.Xx)("#EventEditor_ArtworkType_hero"),
+              artworkType: "hero",
+            }),
+          Boolean(n) &&
+            d.createElement(
+              d.Fragment,
+              null,
+              d.createElement(Ge.Yo, {
+                clanSteamID: t.GetClanSteamID(),
+                title: (0, E.Xx)("#EventEditor_ArtworkType_bestofyear_banner"),
+                artworkType: "bestofyear_banner",
+              }),
+              d.createElement(Ge.Yo, {
+                clanSteamID: t.GetClanSteamID(),
+                title: (0, E.Xx)(
+                  "#EventEditor_ArtworkType_bestofyear_banner_mobile"
+                ),
+                artworkType: "bestofyear_banner_mobile",
+              })
+            )
         );
       }
     },

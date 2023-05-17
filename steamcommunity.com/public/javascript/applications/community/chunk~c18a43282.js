@@ -5044,7 +5044,7 @@
               e += 5;
               let t = r.indexOf("[/img]", e);
               if (-1 != t) {
-                let i = r.substring(e, t - e).trim();
+                let i = r.substring(e, t).trim();
                 if (0 != i.length) return (0, c.pd)(i);
               }
             }
