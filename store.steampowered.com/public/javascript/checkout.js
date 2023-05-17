@@ -49,8 +49,8 @@ function OpenUrlInNewBlankWindow( newURL )
 
 function CompleteCreditCardAuthentication()
 {
- if ( $('credit_card_authentication_form').firstChild )
- $('credit_card_authentication_form').firstChild.submit();
+	if ( $('credit_card_authentication_form').firstChild )
+		$('credit_card_authentication_form').firstChild.submit();
 }
 
 function SetUpCreditCardAuthentication( newUrl, postData )
