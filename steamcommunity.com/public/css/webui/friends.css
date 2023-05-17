@@ -9706,80 +9706,6 @@ html:not(.touch)
   background-color: #afafaf;
   opacity: 0.25;
 }
-.newlogindialog_Login_lat0M .newlogindialog_SegmentedCharacterInput_1l8pX {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 280px;
-  background-color: #2b2e33;
-  border-radius: 2px;
-  gap: 20px;
-  padding: 10px 28px 20px;
-  cursor: text;
-  border: 1px solid transparent;
-  position: relative;
-}
-.newlogindialog_Login_lat0M
-  .newlogindialog_SegmentedCharacterInput_1l8pX.newlogindialog_Disabled_1hdB9 {
-  background-color: #26272b;
-}
-.newlogindialog_Login_lat0M
-  .newlogindialog_SegmentedCharacterInput_1l8pX.newlogindialog_Danger_16BUa {
-  border-color: #c15755;
-}
-.newlogindialog_Login_lat0M
-  .newlogindialog_SegmentedCharacterInput_1l8pX.newlogindialog_BackupCode_2O8fh {
-  max-width: 392px;
-}
-@media screen and (max-width: 700px) {
-  .newlogindialog_Login_lat0M
-    .newlogindialog_SegmentedCharacterInput_1l8pX.newlogindialog_BackupCode_2O8fh {
-    padding: 10px 7px;
-    gap: 16px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .newlogindialog_Login_lat0M
-    .newlogindialog_SegmentedCharacterInput_1l8pX.newlogindialog_BackupCode_2O8fh
-    input {
-    width: 26px;
-  }
-}
-.newlogindialog_Login_lat0M
-  .newlogindialog_SegmentedCharacterInput_1l8pX
-  .newlogindialog_Loading_2NVQc {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #00000077;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.newlogindialog_Login_lat0M
-  .newlogindialog_SegmentedCharacterInput_1l8pX
-  input {
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid rgba(175, 175, 175, 0.25);
-  padding: 0;
-  color: #fff;
-  width: 40px;
-  font-size: 28px;
-  font-family: inherit;
-  font-weight: 500;
-  text-align: center;
-}
-@media screen and (max-width: 700px) {
-  .newlogindialog_Login_lat0M
-    .newlogindialog_SegmentedCharacterInput_1l8pX
-    input {
-    width: 20%;
-  }
-}
 .newlogindialog_Login_lat0M .newlogindialog_RefreshTitle_3yMMw {
   color: #fff;
   font-size: 26px;
@@ -10244,6 +10170,69 @@ html:not(.touch)
     transform: rotate(360deg);
   }
 }
+.segmentedinputs_SegmentedCharacterInput_1gzkm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 280px;
+  background-color: #2b2e33;
+  border-radius: 2px;
+  gap: 20px;
+  padding: 10px 28px 20px;
+  cursor: text;
+  border: 1px solid transparent;
+  position: relative;
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_Disabled_4Wrcv {
+  background-color: #26272b;
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_Danger_3lEvx {
+  border-color: #c15755;
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz {
+  max-width: 392px;
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz {
+    padding: 10px 7px;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_1gzkm.segmentedinputs_BackupCode_V5oAz
+    input {
+    width: 26px;
+  }
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Loading_3khV2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000077;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.segmentedinputs_SegmentedCharacterInput_1gzkm input {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(175, 175, 175, 0.25);
+  padding: 0;
+  color: #fff;
+  width: 40px;
+  font-size: 28px;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_1gzkm input {
+    width: 20%;
+  }
+}
 .saleeventbbcodeparser_ErrorDiv_XeZEx {
   background-color: hotpink;
   border: 1px solid;
@@ -10521,6 +10510,9 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background-color: #3691fa;
   color: #fff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.bbcodes_Image_38ivO {
+  max-width: 100%;
 }
 .presenterpopup_SpeakerOuter_3rRqP {
   display: block;
@@ -47134,12 +47126,8 @@ html.web_chat_frame .perf_timing_area {
   background-size: 80% 80%;
   background-position: 50% 50%;
 }
-.audioDebug:hover,
 .controlZoo:hover {
   filter: brightness(2);
-}
-.audioDebug {
-  background-image: url(../..images/webui/2bc7d8a8d809abae97d7239d8b09677a.png);
 }
 #friendslist-droptarget {
   display: none;

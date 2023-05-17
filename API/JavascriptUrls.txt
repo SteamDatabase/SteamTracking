@@ -1338,6 +1338,7 @@ ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
+${STORE_CHECKOUT_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_ICON_BASE_URL}${appid}/${}
 ${STORE_ICON_BASE_URL}${appid}/header.jpg
 ${STORE_ICON_BASE_URL}${appid}/portrait.png
@@ -1830,6 +1831,7 @@ https://avatars.akamai.steamstatic.com/e34e65ef2ef16093d4428c930fbcc42490522ed3_
 https://avatars.cloudflare.steamstatic.com/${hash}
 https://avatars.cloudflare.steamstatic.com/${strAvatarHash}${}.jpg
 https://avatars.cloudflare.steamstatic.com/${strHash}${strSize}.jpg
+https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg
 https://calendar.google.com/calendar/r/eventedit?text=
 https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif
 https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/56521811317a8298a7aff4a914be964b67dd0325.png
@@ -2057,14 +2059,6 @@ https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/${hat_image}
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/${shirt_image}
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/270880/2aec8af4b4b23cb6054d9aea06194621cdd66945.jpg
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars//${}/${avatar}.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/309cb650beb92e00ae352710387832aea78433ef.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/502e9a6d3bb266b4274a946192bb960f15e1d136.png
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/7375e5c0f2adb7241870acfa931e167ff13c669f.gif
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/8298b4d6ebf6f6dd2355054431d339ec9dcafdef.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/cc803d270bf7f47ee508bbadf14577bbfe5f6500.jpg
-https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/ecd819245dd4aca57aed76f714a28b2356ad90f2.jpg
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_attack_both_granted.png
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_boost_default.png
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_setback_attack.png
@@ -2372,6 +2366,7 @@ https://partner.steamgames.com/pub/ajaxselectvalvecontactsdialog
 https://partner.steamgames.com/pub/ajaxvalvecontactchange/${publisherID}/
 https://partner.steamgames.com/public/captcha.php?gid=${gid}
 https://partner.steamgames.com/public/marketing/steam_game_templates_2023.zip
+https://partner.steamgames.com/public/marketing/steam_sale_page_templates.zip
 https://partner.steamgames.com/store/ajaxpackagesave/${packageid}
 https://partner.steamgames.com/store/ajaxupdatef2pstore
 https://partner.steamgames.com/store/packagelanding/${packageid}
@@ -2409,13 +2404,6 @@ https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a24229e
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a87d1ba5946edaba49f377f698d4a39af9f327f3.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/${}/${}.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/27000850/dc17534edaabe8d351fdfb1c6186c4eb3e637c8d.png
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/31013613/a98ecca7730e4857cb5f83e50f3304ce13bf56bf.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/31721797/2ef00d65527edf9aecdaddee086b0f5ee0cc2fe6.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/31721797/77cbe3f768e16b149c78f127b09c047826646ba5.png
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/3703047/72feb03fa4eced13596f0ff7b9ec434865cb73e4.png
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/5193306/62436147b454715822a198a2767e5c7a8560617e.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/7614223/fe3aa1776d96e4aa215edbdacc363a9ed005213e.png
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/${appid}/${}
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/646570/85b510e2e164070a59947395ff91d250c010a5c9.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg
@@ -2455,7 +2443,6 @@ https://steamcommunity.com/actions/SearchApps/${}
 https://steamcommunity.com/actions/SetGroupState
 https://steamcommunity.com/actions/SetLanguage/
 https://steamcommunity.com/actions/StandardCommunityBan
-https://steamcommunity.com/actions/ajaxsetappagegatebypass/
 https://steamcommunity.com/actions/communitybandialog
 https://steamcommunity.com/actions/issuemodwarning
 https://steamcommunity.com/actions/modwarningdialog
@@ -2554,7 +2541,6 @@ https://steamcommunity.com/moderation/ajaxresetcontent
 https://steamcommunity.com/moderation/ajaxupdateclanannouncementtextcontentcheckresult/
 https://steamcommunity.com/moderation/ajaxupdateprofileshowcasecontentcheckresult/
 https://steamcommunity.com/moderation/ajaxupdateprofiletextcontentcheckresult/
-https://steamcommunity.com/my/ajaxgetappagegatesbypassed/
 https://steamcommunity.com/my/inventory
 https://steamcommunity.com/my/inventory/
 https://steamcommunity.com/my/inventory/#${appid}_${contextid}_${assetid}

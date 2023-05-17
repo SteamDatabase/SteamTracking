@@ -2710,6 +2710,9 @@ a.bbcodes_LinkButton_lMVeY:hover {
   color: #fff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
+.bbcodes_Image_1CmpC {
+  max-width: 100%;
+}
 .presenterpopup_SpeakerOuter_3KAg2 {
   display: block;
 }

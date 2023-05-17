@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    336: (e, t, n) => {
+    199: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(392),
-        s = n(600);
+        o = n(2),
+        s = n(3);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    423: (e, t, n) => {
+    188: (e, t, n) => {
       "use strict";
       n.d(t, {
         $G: () => d,
@@ -95,7 +95,7 @@
         x: () => a,
       });
       var i,
-        o = n(735);
+        o = n(960);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -184,10 +184,10 @@
         );
       }
     },
-    600: (e, t, n) => {
+    3: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
-      n(423), n(735);
+      n(188), n(960);
       const i = "GamepadInput";
       var o;
       !(function (e) {
@@ -198,14 +198,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    945: (e, t, n) => {
+    449: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ot });
       var i = n(655),
         o = n(311),
         s = n.n(o),
-        r = n(423),
-        a = n(735);
+        r = n(188),
+        a = n(960);
       const l = { x: "y", y: "x" };
       function c(e, t, ...n) {
         console.assert
@@ -214,8 +214,8 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var u = n(392),
-        h = n(487);
+      var u = n(2),
+        h = n(664);
       class d extends class {
         GetObject(e) {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -298,6 +298,9 @@
         }
         Assert(e, ...t) {
           e || this.Log(g.Error, "Assertion failed:", ...t);
+        }
+        IsDebugEnabled() {
+          return v.Get().IsDebugLogEnabled(this.m_sName);
         }
         Log(e, ...t) {
           var n, i;
@@ -610,12 +613,12 @@
           );
         }
       }
-      var N = n(168),
-        R = n(239);
-      function I(e) {
+      var N = n(881),
+        R = n(492);
+      function D(e) {
         return null != e && void 0 !== e.focus;
       }
-      function D(e) {
+      function I(e) {
         let t;
         return e && (t = e.ownerDocument.defaultView), t;
       }
@@ -1237,6 +1240,13 @@
           this.OnButtonDown(e, a.Rr.GAMEPAD, -1),
             this.OnButtonUp(e, a.Rr.GAMEPAD, -1);
         }
+        GetDeferredDispatchVirtualButtonClick(e) {
+          const [t, n] = this.GetEventTarget(e);
+          return () => {
+            this.OnButtonDown(e, a.Rr.GAMEPAD, -1, null, t, n),
+              this.OnButtonUp(e, a.Rr.GAMEPAD, -1, null, t);
+          };
+        }
         DispatchVirtualGamepad(e, t) {
           switch (e) {
             case "vgp_onbuttondown":
@@ -1286,37 +1296,37 @@
               (0, N.U5)("Browser.HideCursorUntilMouseEvent") &&
               SteamClient.Browser.HideCursorUntilMouseEvent();
         }
-        OnButtonDown(e, t, n, i) {
-          var o;
+        OnButtonDown(e, t, n, i, o, s) {
+          var l;
           if (this.m_fnCatchAllGamepadInput && this.m_fnCatchAllGamepadInput(e))
             return void k(
               "Ignoring button press - gamepad input is suppressed by parent window"
             );
           this.ChangeNavigationSource(t, n);
-          const [s, l] = this.GetEventTarget(e, !0);
+          const [c, u] = o && s ? [o, s] : this.GetEventTarget(e, !0);
           k(
             `Firing ${a.eV[e]} in tree ${
-              null === (o = null == l ? void 0 : l.m_LastActiveNavTree) ||
-              void 0 === o
+              null === (l = null == u ? void 0 : u.m_LastActiveNavTree) ||
+              void 0 === l
                 ? void 0
-                : o.id
+                : l.id
             } at `,
-            s
+            c
           ),
             this.BatchedUpdate(() =>
-              (0, r.Jb)(s, "vgp_onbuttondown", {
+              (0, r.Jb)(c, "vgp_onbuttondown", {
                 button: e,
                 source: t,
                 is_repeat: i,
               })
             );
         }
-        OnButtonUp(e, t, n) {
+        OnButtonUp(e, t, n, i, o) {
           if (this.m_fnCatchAllGamepadInput) return;
           this.ChangeNavigationSource(t, n);
-          const [i, o] = this.GetEventTarget();
+          const [s] = o ? [o] : this.GetEventTarget();
           this.BatchedUpdate(() =>
-            (0, r.Jb)(i, "vgp_onbuttonup", {
+            (0, r.Jb)(s, "vgp_onbuttonup", {
               button: e,
               source: t,
               is_repeat: !1,
@@ -1339,7 +1349,7 @@
             const e =
                 this.m_ActiveContext.m_LastActiveNavTree.GetLastFocusedNode(),
               t = (function (e) {
-                if (!I(e)) return !1;
+                if (!D(e)) return !1;
                 const t = e.tagName,
                   n = ((i = e), "INPUT" === i.nodeName ? e.type : null);
                 var i;
@@ -1812,7 +1822,7 @@
       }
       class te extends Z {
         constructor(e, t, n) {
-          super("ownerDocument" in e ? D(e) : e, n),
+          super("ownerDocument" in e ? I(e) : e, n),
             (this.m_props = {}),
             (this.m_object = e),
             (this.m_propTargets = t);
@@ -1943,7 +1953,7 @@
           l = null != o ? o : Number.MAX_VALUE;
         for (; r; ) {
           let e = T(r);
-          e || (e = D(r));
+          e || (e = I(r));
           let t = ce(r),
             n = ue(e, se(e)),
             c = ve(e),
@@ -3007,10 +3017,10 @@
       (0, i.gn)([u.a], we.prototype, "OnDOMFocus", null),
         (0, i.gn)([u.a], we.prototype, "OnDOMBlur", null),
         (0, i.gn)([u.a], we.prototype, "OnNavigationEvent", null);
-      var Fe = n(600),
-        Ne = n(230),
-        Re = n(336);
-      class Ie {
+      var Fe = n(3),
+        Ne = n(59),
+        Re = n(199);
+      class De {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
             (this.m_NavigationController = e),
@@ -3085,18 +3095,18 @@
           });
         }
       }
-      (0, i.gn)([u.a], Ie.prototype, "OnFocusChanged", null),
-        (0, i.gn)([u.a], Ie.prototype, "OnMessage", null),
-        (0, i.gn)([u.a], Ie.prototype, "PostPageUnloading", null);
-      n(898);
-      function De() {
+      (0, i.gn)([u.a], De.prototype, "OnFocusChanged", null),
+        (0, i.gn)([u.a], De.prototype, "OnMessage", null),
+        (0, i.gn)([u.a], De.prototype, "PostPageUnloading", null);
+      n(310);
+      function Ie() {
         return !!window.document;
       }
       let Te;
       function Ee() {
-        if (!De()) return Te || (Te = Oe()), Te;
+        if (!Ie()) return Te || (Te = Oe()), Te;
         let e = (function (e) {
-          if (!De() || !window.document.cookie) return null;
+          if (!Ie() || !window.document.cookie) return null;
           let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         })("sessionid");
@@ -3116,7 +3126,7 @@
         })();
         return (
           (function (e, t, n, i) {
-            if (!De()) return;
+            if (!Ie()) return;
             i || (i = "/");
             let o = "";
             if (void 0 !== n && n) {
@@ -3144,6 +3154,7 @@
         AVATAR_BASE_URL: "",
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
+        CLAN_CDN_ASSET_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
         BASE_URL_SHARED_CDN: "",
@@ -3238,7 +3249,7 @@
         BShouldSwallowEventForTextInputWorkaround(e) {
           if (
             !(
-              I(e.target) &&
+              D(e.target) &&
               ("INPUT" === e.target.nodeName ||
                 "TEXTAREA" === e.target.nodeName)
             )
@@ -3593,7 +3604,7 @@
       }
       function Xe(e) {
         const t = e.currentTarget;
-        if (!I(t)) return !1;
+        if (!D(t)) return !1;
         const n = e.detail.is_repeat ? 4.5 : 3.33,
           i = "smooth",
           o = t.ownerDocument,
@@ -3643,7 +3654,7 @@
         et ||
           ((tt = new U()),
           (window.legacyWebFocusNavController = tt),
-          (Ze = new Ie(tt)),
+          (Ze = new De(tt)),
           Ze.BIsGamepadInputExternallyControlled() || tt.RegisterInputSource(e),
           (Ze.BIsGamepadInputExternallyControlled() ||
             navigator.userAgent.includes("Valve Steam Gamepad")) &&
@@ -3853,8 +3864,8 @@
             onCancelActionDescription: F,
             onSecondaryActionDescription: N,
             onOptionsActionDescription: R,
-            onMenuActionDescription: I,
-            actionDescriptionMap: D,
+            onMenuActionDescription: D,
+            actionDescriptionMap: I,
             onOKButton: T,
             onCancelButton: E,
             onSecondaryButton: O,
@@ -3936,7 +3947,7 @@
           H && ut(d[0], (0, r.R3)(d[0], H)),
           K && N && ut(d[0], (0, r.n2)(d[0], K)),
           $ && R && ut(d[0], (0, r.DX)(d[0], $)),
-          j && I && ut(d[0], (0, r.WF)(d[0], j)),
+          j && D && ut(d[0], (0, r.WF)(d[0], j)),
           Y && ut(d[0], (0, r.$G)(d[0], Y));
         const X = (function (e, t, n, i) {
             const o = {};
@@ -4004,8 +4015,8 @@
             onCancelActionDescription: F,
             onSecondaryActionDescription: N,
             onOptionsActionDescription: R,
-            onMenuActionDescription: I,
-            actionDescriptionMap: D,
+            onMenuActionDescription: D,
+            actionDescriptionMap: I,
           }),
           Q = Object.assign(
             Object.assign({ fnCanTakeFocus: _t, actionDescriptionMap: J }, X),

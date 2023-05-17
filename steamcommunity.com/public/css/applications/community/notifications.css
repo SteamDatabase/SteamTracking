@@ -850,6 +850,17 @@
   font-size: 10px;
   text-align: center;
 }
+.standardtemplates_NewIndicator_3aotN {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
+}
+.standardtemplates_NewIndicator_3aotN svg {
+  width: 9px;
+  height: 9px;
+  color: #57a11c;
+}
 @keyframes shorttemplates_ItemFocusAnim-darkerGrey-nocolor_1kXW6 {
   from {
     background: #3d4450;
@@ -1666,6 +1677,17 @@
   line-height: 20px;
   font-size: 10px;
   text-align: center;
+}
+.shorttemplates_NewIndicator_7k_rN {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
+}
+.shorttemplates_NewIndicator_7k_rN svg {
+  width: 9px;
+  height: 9px;
+  color: #57a11c;
 }
 .shorttemplates_ShortTemplate_29NLb {
   padding: 0;
@@ -2591,6 +2613,15 @@
   color: #fff;
   font-weight: 400;
   font-size: 14px;
+}
+.steamtemplates_FriendIndicator_suNJh {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  cursor: pointer;
 }
 .notifications_NotificationPageCtn_2DCeN {
   position: relative;

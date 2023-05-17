@@ -682,6 +682,9 @@
     html.responsive .game_purchase_discount_countdown_pricehistorygrid {
         flex-direction: column;
     }
+    html.responsive .game_purchase_discount_countdown_pricehistorygrid .history_ttip {
+        display: none;
+    }
 
 	/* wishlist */
 	html.responsive #add_to_wishlist_area, 

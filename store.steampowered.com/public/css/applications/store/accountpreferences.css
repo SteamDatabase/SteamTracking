@@ -60,3 +60,58 @@
   line-height: 19px;
   color: #999c9f;
 }
+.notificationsettings_NotificationSettingsHeader_2XOzk {
+  position: relative;
+}
+.notificationsettings_SectionDescription_3K5HB {
+  padding: 0px 0px 10px 0px;
+}
+.notificationsettings_NotificationGroup_1_kCY {
+  padding: 20px 0px 0px 0px;
+}
+.notificationsettings_NotificationGroup_1_kCY h1 {
+  padding: 30px 0px 10px 0px;
+}
+.notificationsettings_NotificationSection_3Sbby {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2b303a;
+  padding: 10px 0 10px 1ex;
+}
+.notificationsettings_NotificationSection_3Sbby button.DialogButton {
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: #1a9fff;
+  height: 5ex;
+  width: 5ex;
+}
+.notificationsettings_NotificationSection_3Sbby
+  .notificationsettings_NotificationFeedToggle_30Nc3 {
+  flex-direction: inherit;
+  margin-right: 5px;
+}
+.notificationsettings_NotificationDescription_3FSzS {
+  flex: 5;
+}
+.notificationsettings_NotificationPrefDetails_152HT {
+  display: flex;
+  flex-direction: row;
+  background-color: #23262e;
+  padding: 1ex 0 0 5ex;
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.notificationsettings_NotificationPrefDetails_152HT .DialogCheckbox_Container {
+  flex: 1;
+}
+.notificationsettings_PrefDetailsToggle_3XAMD svg {
+  transition: transform 0.2s ease-in-out;
+  height: 18px;
+  margin-top: 4px;
+}
+.notificationsettings_PrefDetailsToggle_3XAMD.notificationsettings_Selected_3yrEI
+  svg {
+  transform: rotateZ(180deg);
+  transition: transform 0.2s ease-in-out;
+}

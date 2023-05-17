@@ -405,9 +405,450 @@
         (e.exports = a),
         (a.id = 46700);
     },
+    24174: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        Z6: () => c,
+        p8: () => m,
+        NO: () => g,
+        UC: () => v,
+        A1: () => h,
+        yp: () => p,
+        iP: () => u,
+      });
+      var r = n(89526),
+        a = n(46132),
+        s = n(32765),
+        o = n(4116);
+      class i {
+        constructor() {
+          (this.type = 0), (this.text = "");
+        }
+        ConvertMalformedNodeToText() {
+          3 == this.type
+            ? (this.text = "[/" + this.text)
+            : 2 == this.type && (this.text = "[" + this.text),
+            (this.type = 1);
+        }
+      }
+      class l {
+        constructor(e, t) {
+          (this.m_dictComponents = void 0),
+            (this.m_dictComponents = e),
+            (this.m_fnAccumulatorFactory = t);
+        }
+        Parse(e, t, n = !1) {
+          const r = (function (e, t) {
+            const n = [];
+            let r = new i(),
+              a = !1,
+              s = !1,
+              o = !1;
+            for (let i = 0; i < e.length; i++) {
+              let l = e[i];
+              switch (r.type) {
+                case 0:
+                  "[" == l
+                    ? ((r.type = 2), (s = !0))
+                    : ((r.type = 1), "\\" == l && t ? (a = !a) : (r.text += l));
+                  break;
+                case 2:
+                case 3:
+                  if ("/" == l && s) (r.type = 3), (r.text = ""), (s = !1);
+                  else if ("[" != l || a)
+                    if ("]" != l || a)
+                      "\\" == l && t
+                        ? ((r.text += l), (a = !a), (s = !1))
+                        : ((r.text += l), (a = !1), (s = !1));
+                    else {
+                      const e =
+                          2 == r.type &&
+                          "noparse" == r.text.toLocaleLowerCase(),
+                        t =
+                          3 == r.type &&
+                          "noparse" == r.text.toLocaleLowerCase();
+                      s || (o && !t)
+                        ? (r.ConvertMalformedNodeToText(), (r.text += l))
+                        : e
+                        ? (o = !0)
+                        : t && (o = !1),
+                        (r = d(n, r)),
+                        (s = !1);
+                    }
+                  else
+                    r.ConvertMalformedNodeToText(), (r = d(n, r, 2)), (s = !0);
+                  break;
+                case 1:
+                  "[" != l || a
+                    ? "\\" == l && t
+                      ? (a && (r.text += l), (a = !a))
+                      : ((r.text += l), (a = !1))
+                    : ((r = d(n, r, 2)), (s = !0));
+              }
+            }
+            0 != r.type &&
+              ((2 != r.type && 3 != r.type) || r.ConvertMalformedNodeToText(),
+              n.push(r));
+            return n;
+          })(e, n);
+          return this.Parse_BuildElements(r, t);
+        }
+        Parse_BuildElements(e, t) {
+          let n = this.m_fnAccumulatorFactory(void 0),
+            r = [],
+            a = function () {
+              return r.length < 1 ? void 0 : r[r.length - 1];
+            },
+            s = this.m_dictComponents,
+            o = !1,
+            i = !0,
+            l = function (e, a, l) {
+              if (e && e.node.tag === a.text && s.get(e.node.tag)) {
+                const a = s.get(e.node.tag),
+                  l = r.map((e) => e.node.tag),
+                  d = { parentTags: l, tagname: e.node.tag, args: e.node.args },
+                  c = t(a.Constructor, d, ...n.GetElements());
+                (n = e.accumulator),
+                  n.AppendNode(c),
+                  (o = a.skipFollowingNewline),
+                  (i = e.bWrapTextForCopying);
+              } else if (e) {
+                let t = e.accumulator;
+                t.AppendText("[" + e.node.text + "]", !1),
+                  n.GetElements().forEach((e) => t.AppendNode(e)),
+                  t.AppendText("[/" + a.text + "]", !1),
+                  (n = t),
+                  (i = e.bWrapTextForCopying);
+              }
+            };
+          for (
+            e.forEach((e, t) => {
+              var d, c;
+              if (1 == e.type) {
+                const t = o ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, i), (o = !1);
+              } else if (2 == e.type) {
+                const t = s.get(e.tag);
+                if (t) {
+                  const c = a();
+                  if (void 0 !== c) {
+                    const t = s.get(c.node.tag);
+                    t &&
+                      t.autocloses &&
+                      e.tag === c.node.tag &&
+                      l(r.pop(), c.node);
+                  }
+                  r.push({ accumulator: n, node: e, bWrapTextForCopying: i }),
+                    (n = this.m_fnAccumulatorFactory(e)),
+                    (o = t.skipInternalNewline),
+                    (i =
+                      null !== (d = t.allowWrapTextForCopying) &&
+                      void 0 !== d &&
+                      d);
+                } else n.AppendText("[" + e.text + "]", 0 == r.length);
+              } else if (3 == e.type) {
+                for (
+                  ;
+                  a() &&
+                  a().node.tag !== e.text &&
+                  s.get(a().node.tag) &&
+                  s.get(a().node.tag).autocloses;
+
+                ) {
+                  const e = r.pop();
+                  l(e, e.node);
+                }
+                if (
+                  (null === (c = a()) || void 0 === c ? void 0 : c.node.tag) ==
+                  e.text
+                ) {
+                  const t = r.pop();
+                  l(t, e);
+                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
+              }
+            });
+            r.length > 0;
+
+          ) {
+            let e = r.pop(),
+              t = e.accumulator;
+            t.AppendText("[" + e.node.text + "]", !1),
+              n.GetElements().forEach((e) => t.AppendNode(e)),
+              (n = t);
+          }
+          return n.GetElements();
+        }
+      }
+      function d(e, t, n = 0) {
+        if (2 == t.type) {
+          let e = t.text.indexOf("="),
+            n = t.text.indexOf(" ");
+          if ((-1 != n && (-1 == e || n < e) && (e = n), e > 0)) {
+            t.tag = t.text.substr(0, e).toLocaleLowerCase();
+            let n = t.text.substr(e);
+            t.args = (function (e) {
+              if (!e || e.length < 1) return {};
+              let t = {},
+                n = "",
+                r = "",
+                a = 0,
+                s = 0;
+              "=" == e[0] && (a = 2);
+              let o = !1;
+              for (s++; s < e.length; s++) {
+                let i = e[s],
+                  l = !0,
+                  d = !1;
+                switch (a) {
+                  case 0:
+                    if ("=" == i) return {};
+                    if (" " == i) continue;
+                    a = 1;
+                    break;
+                  case 1:
+                    ("=" != i && " " != i) ||
+                      o ||
+                      (" " == i ? ((a = 0), (d = !0)) : (a = 2), (l = !1));
+                    break;
+                  case 2:
+                    " " == i
+                      ? ((a = 0), (l = !1), (d = !0))
+                      : '"' == i
+                      ? ((a = 4), (l = !1))
+                      : (a = 3);
+                    break;
+                  case 3:
+                  case 4:
+                    ((" " == i && 4 != a && !o) ||
+                      ('"' == i && 4 == a && !o)) &&
+                      ((a = 0), (l = !1), (d = !0));
+                }
+                if (l)
+                  if ("\\" != i || o)
+                    if (((o = !1), 1 == a)) n += i;
+                    else {
+                      if (3 != a && 4 != a)
+                        throw new Error(
+                          "Not expecting to accumulate buffer in state " + a
+                        );
+                      r += i;
+                    }
+                  else o = !0;
+                d && ((t[n] = r), (n = ""), (r = ""));
+              }
+              0 != a && (t[n] = r);
+              return t;
+            })(n);
+          } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
+        }
+        e.push(t);
+        let r = new i();
+        return (r.type = n), r;
+      }
+      class c extends l {
+        constructor(e, t, n) {
+          super(e, null != t ? t : () => new o.LT()),
+            (this.m_renderingLanguage = n || (0, a.jM)(s.De.LANGUAGE));
+        }
+        UpdateOverrideLanguage(e) {
+          this.m_renderingLanguage = e || (0, a.jM)(s.De.LANGUAGE);
+        }
+        ParseBBCode(e, t, n = !1) {
+          let a = 0;
+          const s = this.Parse(
+            e,
+            (e, n, ...s) =>
+              r.createElement(
+                e,
+                Object.assign(Object.assign({}, n), {
+                  context: t,
+                  language: this.m_renderingLanguage,
+                  key: "bbnode_" + a++,
+                }),
+                ...s
+              ),
+            n
+          );
+          return s.length > 1
+            ? r.createElement(r.Fragment, null, ...s)
+            : 1 == s.length
+            ? s[0]
+            : null;
+        }
+      }
+      const p = [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "smalltext",
+          "b",
+          "u",
+          "hr",
+          "i",
+          "img",
+          "strike",
+          "spoiler",
+          "noparse",
+          "url",
+          "list",
+          "olist",
+          "quote",
+          "pullquote",
+          "code",
+          "table",
+          "tr",
+          "td",
+          "th",
+          "previewyoutube",
+          "looping_media",
+          "roomeffect",
+          "sticker",
+          "price",
+          "pricesavings",
+          "trailer",
+          "speaker",
+          "doclink",
+          "video",
+          "vod",
+          "youtubeorvideo",
+          "giveawayeligible",
+          "claimitem",
+          "packagepurchaseable",
+          "actiondialog",
+          "uploadfilebutton",
+          "docimg",
+        ],
+        u = [
+          "h1",
+          "h2",
+          "h3",
+          "b",
+          "u",
+          "i",
+          "strike",
+          "spoiler",
+          "noparse",
+          "url",
+        ],
+        _ = [
+          "img",
+          "previewyoutube",
+          "looping_media",
+          "roomeffect",
+          "video",
+          "vod",
+          "trailer",
+          "youtubeorvideo",
+          "docimg",
+        ],
+        h = (p.filter((e) => -1 == _.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
+        v = "{STEAM_CLAN_LOC_IMAGE}";
+      function m(e, t = null, n = " ") {
+        let r = null == t ? void 0 : t.join("|");
+        r || (r = p.join("|") + "|\\*");
+        let a = new RegExp("\\[(" + r + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
+        return e.replace(a, n);
+      }
+      function g(e, t = null, n = "") {
+        let r = null == t ? void 0 : t.join("|");
+        r || (r = p.join("|") + "|\\*");
+        let a = "\\[\\/?(?:" + r + "){1,}.*?]";
+        return e.replace(new RegExp(a, "gi"), n);
+      }
+    },
+    4116: (e, t, n) => {
+      "use strict";
+      n.d(t, { DX: () => o, LT: () => s, So: () => i });
+      var r = n(89526),
+        a = n(23801);
+      class s {
+        constructor() {
+          this.reactNodes = [];
+        }
+        AppendText(e, t = !1) {
+          e.length &&
+            (t
+              ? this.reactNodes.push(
+                  r.createElement(
+                    "span",
+                    {
+                      "data-copytext": "",
+                      "data-copystyle": "merge-adjacent",
+                      "bbcode-text": e,
+                    },
+                    e
+                  )
+                )
+              : this.reactNodes.push(e));
+        }
+        AppendNode(e) {
+          this.reactNodes.push(e);
+        }
+        GetElements() {
+          return this.reactNodes;
+        }
+      }
+      class o {
+        constructor(e) {
+          (0, a.X)(e, "decorated accumulator cannot be null"),
+            (this.m_decoratedAccumulator = e);
+        }
+        AppendText(e, t = !1) {
+          this.m_decoratedAccumulator.AppendText(e, t);
+        }
+        AppendNode(e) {
+          this.m_decoratedAccumulator.AppendNode(e);
+        }
+        GetElements() {
+          return this.m_decoratedAccumulator.GetElements();
+        }
+      }
+      class i extends o {
+        constructor(e, t, n) {
+          super(e),
+            (this.m_nStartCursor = 1),
+            (this.m_nStartCursor = void 0 !== t ? t : 1);
+        }
+        AppendText(e) {
+          let t = e,
+            n = [];
+          for (
+            let e = t.indexOf("\n", this.m_nStartCursor);
+            -1 !== e;
+            e = t.indexOf("\n")
+          )
+            n.push(t.substr(0, e)),
+              n.push(r.createElement("br")),
+              (t = t.substr(e + 1));
+          t.length && n.push(t),
+            n.forEach((e) => {
+              super.AppendNode(e);
+            });
+        }
+      }
+    },
+    13345: (e, t, n) => {
+      "use strict";
+      n.d(t, { HZ: () => i, OL: () => s, pd: () => o });
+      var r = n(24174),
+        a = (n(46132), n(44973));
+      function s() {
+        return 2 == a.De.EUNIVERSE || "dev" == a.De.WEB_UNIVERSE
+          ? `${a.De.CLAN_CDN_ASSET_URL}images/`
+          : `${a.De.MEDIA_CDN_COMMUNITY_URL}images/clans/`;
+      }
+      function o(e) {
+        return (e = e.replace(r.A1, s())).replace("http://", "https://");
+      }
+      function i(e) {
+        return e.replace(/{STEAM_CLAN_IMAGE}/g, s());
+      }
+    },
     85651: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => v, JW: () => p, kl: () => j, zD: () => m });
+      n.d(t, { F_: () => u, JW: () => p, kl: () => m, zD: () => g });
       var r = n(33940),
         a = n(50265),
         s = n(36105),
@@ -415,7 +856,7 @@
         i = n(89526),
         l = n(58218),
         d = n(32765);
-      class _ {
+      class c {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
@@ -465,13 +906,13 @@
           }
         }
       }
-      (0, r.gn)([a.LO], _.prototype, "nOverrideDateNow", void 0);
-      const p = new _();
-      function v(e = 1) {
-        const [t, n] = i.useState(() => u()),
+      (0, r.gn)([a.LO], c.prototype, "nOverrideDateNow", void 0);
+      const p = new c();
+      function u(e = 1) {
+        const [t, n] = i.useState(() => v()),
           r = (0, l.T)("useTimeNowWithOverride"),
           a = i.useCallback(() => {
-            r.token.reason || n(u());
+            r.token.reason || n(v());
           }, []);
         return (
           i.useEffect(() => {
@@ -486,18 +927,18 @@
         );
       }
       window.g_EventCalendarDevFeatures = p;
-      const c = new Date(),
-        h = Math.floor(c.getTime() / 1e3);
-      function u() {
+      const _ = new Date(),
+        h = Math.floor(_.getTime() / 1e3);
+      function v() {
         const e = Math.floor(Date.now() / 1e3);
         return p.nOverrideDateNow ? p.nOverrideDateNow + (e - h) : e;
       }
-      function j() {
+      function m() {
         var e;
         return null !== (e = p.nOverrideDateNow) && void 0 !== e ? e : h;
       }
-      function m() {
-        return i.useMemo(() => j(), []);
+      function g() {
+        return i.useMemo(() => m(), []);
       }
     },
     58218: (e, t, n) => {
@@ -520,21 +961,22 @@
     207: (e, t, n) => {
       "use strict";
       n.d(t, {
-        FM: () => o,
-        H7: () => s,
-        OL: () => v,
-        Pm: () => d,
-        XW: () => i,
-        dK: () => p,
-        et: () => _,
-        iv: () => h,
-        md: () => c,
+        FM: () => i,
+        H7: () => o,
+        OL: () => _,
+        Pm: () => c,
+        XW: () => l,
+        dK: () => u,
+        et: () => p,
+        iv: () => v,
+        md: () => h,
       });
       var r = n(32765),
-        a = (n(51637), n(14826));
-      const s =
+        a = (n(42770), n(14826)),
+        s = n(13345);
+      const o =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
-      function o(e) {
+      function i(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
             "im"
@@ -542,21 +984,21 @@
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
       }
-      function i(e) {
-        let t = o(e);
+      function l(e) {
+        let t = i(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      const l = /^(steam|ftp|https?):\/\//;
-      function d(e) {
-        return l.test(e) ? e : "https://" + e;
+      const d = /^(steam|ftp|https?):\/\//;
+      function c(e) {
+        return d.test(e) ? e : "https://" + e;
       }
-      function _(e) {
+      function p(e) {
         return e
           ? 1 != r.De.EUNIVERSE
             ? e
             : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
               (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
-                (e = (e = e.replace(
+                (e = (e = (e = e.replace(
                   /https:\/\/media.steampowered.com\//g,
                   r.De.MEDIA_CDN_URL
                 )).replace(
@@ -566,14 +1008,20 @@
                   /https:\/\/cdn.cloudflare.steamstatic.com\//g,
                   r.De.MEDIA_CDN_URL
                 )).replace(
-                /https:\/\/cdn.edgecast.steamstatic.com\//g,
-                r.De.MEDIA_CDN_URL
-              )).replace(
+                  /https:\/\/cdn.edgecast.steamstatic.com\//g,
+                  r.De.MEDIA_CDN_URL
+                )).replace(
                 /https:\/\/cdn.dota2.com\//g,
                 r.De.MEDIA_CDN_URL
               )).replace(
                 /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
                 r.De.MEDIA_CDN_URL + "steam/"
+              )).replace(
+                /https:\/\/clan.akamai.steamstatic.com\//g,
+                r.De.CLAN_CDN_ASSET_URL
+              )).replace(
+                /https:\/\/clan.cloudflare.steamstatic.com\//g,
+                r.De.CLAN_CDN_ASSET_URL
               )).replace(
                 /https:\/\/cdn.steamcommunity.com\//g,
                 r.De.COMMUNITY_CDN_URL
@@ -592,24 +1040,21 @@
               )).replace(
                 /{MEDIA_CDN_COMMUNITY_URL}/g,
                 r.De.MEDIA_CDN_COMMUNITY_URL
-              )).replace(
-                /{COMMUNITY_CDN_URL}/g,
-                r.De.COMMUNITY_CDN_URL
-              )).replace(
-                /{STEAM_CLAN_IMAGE}/g,
-                r.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
-              )))
+              )).replace(/{COMMUNITY_CDN_URL}/g, r.De.COMMUNITY_CDN_URL)),
+              (e = (0, s.HZ)(e)))
           : e;
       }
-      function p(e) {
+      function u(e) {
         if (!e) return !0;
-        const t = o(e).toLocaleLowerCase();
+        const t = i(e).toLocaleLowerCase();
         return (
           [
-            o(r.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            o(r.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            o(r.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            o(r.De.STORE_CDN_URL).toLocaleLowerCase(),
+            i(r.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            i(r.De.MEDIA_CDN_URL).toLocaleLowerCase(),
+            i(r.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            i(r.De.STORE_CDN_URL).toLocaleLowerCase(),
+            i(r.De.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
+            i(r.De.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -617,7 +1062,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function v(e) {
+      function _(e) {
         return r.De.SNR &&
           r.De.SNR.length > 0 &&
           e &&
@@ -625,7 +1070,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + r.De.SNR
           : e;
       }
-      function c(e, t) {
+      function h(e, t) {
         try {
           const n = new URL(t),
             r = new URL(e);
@@ -634,7 +1079,7 @@
           return "";
         }
       }
-      function h() {
+      function v() {
         return `${r.De.HELP_BASE_URL}${(0, a.CE)()}/`;
       }
     },

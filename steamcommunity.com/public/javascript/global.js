@@ -1085,11 +1085,17 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 		return;
 	}
 
+	if ( ( typeof( g_bViewingOwnProfile ) != 'undefined' && g_bViewingOwnProfile ) )
+	{
+		return;
+	}
+
 	e.data( 'processed_adult_content', true );
 
 	var bIsAnchor = e.is('a');
 
 	var publishedFileID = e.data( 'publishedfileid' );
+	var bCountryDisallowed = e.data( 'adult-disallowed' );
 	var rgContentDescriptorIDs = e.data( 'descids' ) ?? [];
 	var appid = e.data( 'appid' );
 	var bForceDeBlur = ( publishedFileID && g_UGCWithNoBlur.hasOwnProperty( publishedFileID ) ) || ( appid && g_UGCSkipAdultContentCheckForAppID == appid );
@@ -1106,7 +1112,7 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 		e.addClass( 'has_adult_content' );
 	}
 
-	if ( e.data( 'ugclinktextonly' ) === 1 )
+	if ( e.data( 'ugclinktextonly' ) === 1 || bCountryDisallowed )
 	{
 
 	}
@@ -1191,79 +1197,6 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 		{
 			e.addClass( "ugc_show_warning_image" );
 		}
-	}
-}
-
-function SetAppAgeGateBypass( appid, bBypass, callbackFunc )
-{
-	// force update
-	var strCookie = 'age_gate_' + appid;
-	WebStorage.SetLocal( strCookie, true, true );
-	WebStorage.SetLocal( 'unAppAgeGateBypassVersion', parseInt( WebStorage.GetLocal( 'unAppAgeGateBypassVersion', true ) || 0 ) + 1, true );
-
-	$J.post(
-		'https://steamcommunity.com/actions/ajaxsetappagegatebypass/',
-		{ 'sessionid': g_sessionID, 'appid' : appid, 'bypass' : bBypass ? 1 : 0 }
-	).done( function( data ) {
-		callbackFunc( data );
-	} );
-}
-
-function CheckAppAgeGateBypass( appid, bCheckAppAgeGateBypass, rgAppContentDescriptors, callbackFunc )
-{
-	var filteredArray = rgAppContentDescriptors.filter( function( descid ) { return g_ContentDescriptorPreferences.indexOf( descid ) !== -1; } );
-	var bHasExcludedContent = filteredArray.length != 0;
-
-	if ( !bHasExcludedContent )
-	{
-		callbackFunc( false );
-		return;
-	}
-
-	if ( bCheckAppAgeGateBypass && g_steamID )
-	{
-		var url = 'https://steamcommunity.com/my/ajaxgetappagegatesbypassed/';
-		var data = { 'sessionid' : g_sessionID, 'steamid' : g_steamID };
-		data['appids'] = [ appid ];
-
-		var unVersion = WebStorage.GetLocal( 'unAppAgeGateBypassVersion', true );
-		if ( unVersion )
-		{
-			data['v'] = parseInt( unVersion );
-		}
-		else
-		{
-			data['v'] = 1;
-		}
-
-		$J.get( url, data )
-		.done( function( data ) {
-			var bShowWarning = true;
-
-			if ( data.success == 1 )
-			{
-				for ( var i = 0; i < data.apps.length; ++i )
-				{
-					var a = data.apps[i];
-					if ( a.appid == appid )
-					{
-						bShowWarning = !a.bypassed;
-						break;
-					}
-				}
-			}
-
-			callbackFunc( bShowWarning );
-		} )
-		.fail( function( jqXHR ) {
-			callbackFunc( true );
-		} );
-	}
-	else
-	{
-		var strCookie = 'age_gate_' + appid;
-		var bShowWarning = !WebStorage.GetLocal( strCookie, true );
-		callbackFunc( bShowWarning );
 	}
 }
 

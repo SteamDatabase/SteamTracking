@@ -576,80 +576,6 @@
   background-color: #afafaf;
   opacity: 0.25;
 }
-.newlogindialog_Login_ZOBYq .newlogindialog_SegmentedCharacterInput_1kJ6q {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 280px;
-  background-color: #2b2e33;
-  border-radius: 2px;
-  gap: 20px;
-  padding: 10px 28px 20px;
-  cursor: text;
-  border: 1px solid rgba(0, 0, 0, 0);
-  position: relative;
-}
-.newlogindialog_Login_ZOBYq
-  .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_Disabled_2HFP7 {
-  background-color: #26272b;
-}
-.newlogindialog_Login_ZOBYq
-  .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_Danger_1-HwJ {
-  border-color: #c15755;
-}
-.newlogindialog_Login_ZOBYq
-  .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_BackupCode_1q02w {
-  max-width: 392px;
-}
-@media screen and (max-width: 700px) {
-  .newlogindialog_Login_ZOBYq
-    .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_BackupCode_1q02w {
-    padding: 10px 7px;
-    gap: 16px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .newlogindialog_Login_ZOBYq
-    .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_BackupCode_1q02w
-    input {
-    width: 26px;
-  }
-}
-.newlogindialog_Login_ZOBYq
-  .newlogindialog_SegmentedCharacterInput_1kJ6q
-  .newlogindialog_Loading_i9MK3 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.4666666667);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.newlogindialog_Login_ZOBYq
-  .newlogindialog_SegmentedCharacterInput_1kJ6q
-  input {
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid rgba(175, 175, 175, 0.25);
-  padding: 0;
-  color: #fff;
-  width: 40px;
-  font-size: 28px;
-  font-family: inherit;
-  font-weight: 500;
-  text-align: center;
-}
-@media screen and (max-width: 700px) {
-  .newlogindialog_Login_ZOBYq
-    .newlogindialog_SegmentedCharacterInput_1kJ6q
-    input {
-    width: 20%;
-  }
-}
 .newlogindialog_Login_ZOBYq .newlogindialog_RefreshTitle_2IXDr {
   color: #fff;
   font-size: 26px;
@@ -1514,4 +1440,67 @@
 }
 .throbber_NewThrobber_tAKvs img {
   width: 100%;
+}
+.segmentedinputs_SegmentedCharacterInput_3PDBF {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 280px;
+  background-color: #2b2e33;
+  border-radius: 2px;
+  gap: 20px;
+  padding: 10px 28px 20px;
+  cursor: text;
+  border: 1px solid rgba(0, 0, 0, 0);
+  position: relative;
+}
+.segmentedinputs_SegmentedCharacterInput_3PDBF.segmentedinputs_Disabled_2U3qy {
+  background-color: #26272b;
+}
+.segmentedinputs_SegmentedCharacterInput_3PDBF.segmentedinputs_Danger_3VXiO {
+  border-color: #c15755;
+}
+.segmentedinputs_SegmentedCharacterInput_3PDBF.segmentedinputs_BackupCode_3nMX- {
+  max-width: 392px;
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_3PDBF.segmentedinputs_BackupCode_3nMX- {
+    padding: 10px 7px;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_3PDBF.segmentedinputs_BackupCode_3nMX-
+    input {
+    width: 26px;
+  }
+}
+.segmentedinputs_SegmentedCharacterInput_3PDBF .segmentedinputs_Loading_3lU7S {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4666666667);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.segmentedinputs_SegmentedCharacterInput_3PDBF input {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(175, 175, 175, 0.25);
+  padding: 0;
+  color: #fff;
+  width: 40px;
+  font-size: 28px;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .segmentedinputs_SegmentedCharacterInput_3PDBF input {
+    width: 20%;
+  }
 }

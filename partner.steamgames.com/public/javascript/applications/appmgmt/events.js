@@ -3085,7 +3085,7 @@
         i = n(52868),
         r = n.n(i),
         l = n(89526),
-        s = (n(51637), n(63403), n(23217)),
+        s = (n(42770), n(63403), n(23217)),
         o = n(85246),
         c = n(4306),
         d = n(32765);
@@ -3264,7 +3264,7 @@
         r = n(25125),
         l = n(88464),
         s = n(46132),
-        o = n(51637),
+        o = n(42770),
         c = n(69678),
         d = (n(53236), n(17974)),
         m = n(97334),
@@ -3506,7 +3506,7 @@
           l = i.map((e) => {
             let n = (0, _.Xx)("#EventEditor_ArtworkType_" + e);
             "spotlight" == e &&
-              (n = (0, _.Xx)("#EventEditor_ArtworkType_store_" + e));
+              (n = (0, _.Xx)("#EventEditor_ArtworkType_store_spotlight"));
             const a = c.h1[e];
             let i;
             a &&
@@ -3687,7 +3687,7 @@
       var a = n(52868),
         i = n.n(a),
         r = n(89526),
-        l = n(51637),
+        l = n(42770),
         s = n(69678),
         o = n(71181),
         c = n(7948),
@@ -3919,8 +3919,8 @@
       "use strict";
       n.d(t, { oZ: () => w, pL: () => B });
       var a = n(89526),
-        i = (n(51637), n(44026)),
-        r = n(31782),
+        i = (n(42770), n(44026)),
+        r = n(51438),
         l = (n(72119), n(18712), n(54507), n(82079), n(61218)),
         s = n(54671),
         o = (n(25871), n(33940)),
@@ -4289,7 +4289,7 @@
       }
       var v = n(46132),
         E = n(4306),
-        S = (n(51637), n(26412)),
+        S = (n(42770), n(26412)),
         f = n(47165),
         D = n(19274),
         y = n(4585),
@@ -11468,7 +11468,7 @@
         r = n(25125),
         l = n(89526),
         s = n(46132),
-        o = n(51637),
+        o = n(42770),
         c = n(7948),
         d = n(17318),
         m = n.n(d),
@@ -11617,7 +11617,7 @@
       n.d(t, { HQ: () => g, jd: () => E });
       var a = n(25125),
         i = n(89526),
-        r = (n(51637), n(29879), n(54507)),
+        r = (n(42770), n(29879), n(54507)),
         l = n(32765),
         s = n(54856),
         o = n(36597);
@@ -11991,19 +11991,20 @@
     },
     55330: (e, t, n) => {
       "use strict";
-      n.d(t, { i: () => m });
+      n.d(t, { i: () => u });
       var a = n(89526),
         i = n(46132),
         r = n(68818),
-        l = n(19304),
-        s = n(14826),
-        o = n(207),
-        c = n(32765),
-        d = n(72775);
-      function m(e) {
+        l = n(13345),
+        s = n(19304),
+        o = n(14826),
+        c = n(207),
+        d = n(32765),
+        m = n(72775);
+      function u(e) {
         const { gidEvent: t } = e,
           n = (0, r.XC)(t),
-          [m, u] = (0, a.useMemo)(() => {
+          [u, p] = (0, a.useMemo)(() => {
             var e, t, a, r;
             if (
               (null ===
@@ -12021,12 +12022,12 @@
                 ? void 0
                 : r.length) > 0
             ) {
-              const e = (0, i.jM)(c.De.LANGUAGE),
-                t = s.LZ.GetWithFallback(
+              const e = (0, i.jM)(d.De.LANGUAGE),
+                t = o.LZ.GetWithFallback(
                   n.jsondata.localized_sale_product_banner,
                   e
                 ),
-                a = s.LZ.GetWithFallback(
+                a = o.LZ.GetWithFallback(
                   n.jsondata.localized_sale_product_mobile_banner,
                   e
                 );
@@ -12035,26 +12036,23 @@
                 (null == a ? void 0 : a.length) > 0
               ) {
                 const e = n.clanSteamID.GetAccountID();
-                return [
-                  c.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${t}`,
-                  c.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${a}`,
-                ];
+                return [`${(0, l.OL)()}${e}/${t}`, `${(0, l.OL)()}${e}/${a}`];
               }
             }
             return [null, null];
           }, [n]);
-        return (null == m ? void 0 : m.length) > 0 &&
-          (null == u ? void 0 : u.length) > 0
+        return (null == u ? void 0 : u.length) > 0 &&
+          (null == p ? void 0 : p.length) > 0
           ? a.createElement(
               "a",
-              { href: (0, o.OL)(n.GetSaleURL()), className: d.Link },
-              a.createElement("img", {
-                src: m,
-                className: (0, l.Z)(d.Banner, d.Big),
-              }),
+              { href: (0, c.OL)(n.GetSaleURL()), className: m.Link },
               a.createElement("img", {
                 src: u,
-                className: (0, l.Z)(d.Banner, d.Mobile),
+                className: (0, s.Z)(m.Banner, m.Big),
+              }),
+              a.createElement("img", {
+                src: p,
+                className: (0, s.Z)(m.Banner, m.Mobile),
               })
             )
           : null;
@@ -12062,9 +12060,9 @@
     },
     45429: (e, t, n) => {
       "use strict";
-      n.d(t, { AO: () => v, YK: () => h, _U: () => g });
+      n.d(t, { AO: () => E, YK: () => g, _U: () => v });
       var a = n(89526),
-        i = (n(46132), n(51637), n(29879), n(47165)),
+        i = (n(46132), n(42770), n(29879), n(47165)),
         r = n(61218),
         l = n(19304),
         s = n(32765),
@@ -12074,8 +12072,9 @@
         m = n(84343),
         u = n(14826),
         p = n(80298),
-        _ = n(48294);
-      function h(e, t) {
+        _ = n(48294),
+        h = n(13345);
+      function g(e, t) {
         return (
           u.LZ.GetWithFallback(e.localized_label, t) ||
           ("#Sale_default_label" === e.default_label
@@ -12083,8 +12082,8 @@
             : (0, u.Xx)(e.default_label))
         );
       }
-      function g(e, t, n, l) {
-        const o = (function (e) {
+      function v(e, t, n, l) {
+        const s = (function (e) {
           if ("items" === e.section_type)
             switch (e.smart_section_type) {
               case "wishlist":
@@ -12112,20 +12111,20 @@
             ? "#Sale_SaleEvent_Section"
             : null;
         })(e);
-        if (null !== o) return o && o.startsWith("#") ? (0, u.Xx)(o) : o;
-        const c =
+        if (null !== s) return s && s.startsWith("#") ? (0, u.Xx)(s) : s;
+        const o =
             u.LZ.GetWithFallback(e.localized_label, t) ||
             ("#Sale_default_label" === e.default_label
               ? ""
               : (0, u.Xx)(e.default_label)),
-          d = u.LZ.GetWithFallback(e.localized_label_image, t);
-        if (!l && d) {
-          const e = s.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${n}/${d}`;
-          return a.createElement("img", { loading: "lazy", src: e, alt: c });
+          c = u.LZ.GetWithFallback(e.localized_label_image, t);
+        if (!l && c) {
+          const e = `${(0, h.OL)()}${n}/${c}`;
+          return a.createElement("img", { loading: "lazy", src: e, alt: o });
         }
-        return c;
+        return o;
       }
-      const v = (e) => {
+      const E = (e) => {
         const {
             section: t,
             event: n,
@@ -12134,9 +12133,9 @@
             title: o,
             subtitle: h,
           } = e,
-          v = o || g(t, i, n.clanSteamID.GetAccountID());
-        if (!v) return null;
-        const f =
+          g = o || v(t, i, n.clanSteamID.GetAccountID());
+        if (!g) return null;
+        const E =
           h ||
           (function (e, t) {
             return (
@@ -12151,9 +12150,9 @@
             "div",
             {
               className: (0, l.Z)(c().SaleSectionHeader, "SaleSectionHeader"),
-              style: E(t, n, i),
+              style: S(t, n, i),
             },
-            v
+            g
           ),
           y = a.createElement(
             "div",
@@ -12163,9 +12162,9 @@
                 c().SaleSectionSubtitle,
                 "SaleSectionSubtitle"
               ),
-              style: S(t, n, i),
+              style: f(t, n, i),
             },
-            f
+            E
           );
         const b = e.link || t.label_link;
         let C = null;
@@ -12194,7 +12193,7 @@
             "div",
             { className: p.SectionTitleInnerCtn },
             D,
-            Boolean(f) && y
+            Boolean(E) && y
           ),
           a.createElement(
             "div",
@@ -12221,9 +12220,9 @@
           )
         );
       };
-      function E(e, t, n) {
+      function S(e, t, n) {
         return {
-          fontFamily: f(t.jsondata.sale_font, n),
+          fontFamily: D(t.jsondata.sale_font, n),
           fontWeight: t.jsondata.sale_font_weight,
           fontSize: `${t.jsondata.sale_section_font_size}px`,
           textTransform: t.jsondata.sale_section_disable_capitalize
@@ -12232,9 +12231,9 @@
           color: e.label_color,
         };
       }
-      function S(e, t, n) {
+      function f(e, t, n) {
         return {
-          fontFamily: f(t.jsondata.sale_font, n),
+          fontFamily: D(t.jsondata.sale_font, n),
           fontWeight: 300,
           fontSize: `${
             t.jsondata.sale_section_font_size &&
@@ -12249,7 +12248,7 @@
           opacity: "50%",
         };
       }
-      function f(e, t) {
+      function D(e, t) {
         return (
           (e = e || ""),
           12 === t
@@ -12279,7 +12278,7 @@
       "use strict";
       n.d(t, { N: () => g });
       var a = n(89526),
-        i = (n(51637), n(47165)),
+        i = (n(42770), n(47165)),
         r = n(33940),
         l = n(52868),
         s = n.n(l),
@@ -12391,7 +12390,7 @@
         r = n.n(i),
         l = n(89526),
         s = n(46132),
-        o = n(51637),
+        o = n(42770),
         c = n(97334),
         d = n(22444),
         m = n(17318),
@@ -12985,7 +12984,7 @@
       n.d(t, { C: () => c, i: () => d });
       var a = n(33940),
         i = (n(54905), n(46132)),
-        r = n(51637),
+        r = n(42770),
         l = n(11837),
         s = n(15254),
         o = n(14826);
@@ -13339,7 +13338,7 @@
         i = n(52868),
         r = n.n(i),
         l = n(89526),
-        s = (n(51637), n(63403), n(23217)),
+        s = (n(42770), n(63403), n(23217)),
         o = n(32765);
       function c() {
         return 2 == o.De.EUNIVERSE ? 12 : 1;
@@ -13462,7 +13461,7 @@
         i = n(52868),
         r = n.n(i),
         l = n(89526),
-        s = (n(46132), n(51637), n(47165)),
+        s = (n(46132), n(42770), n(47165)),
         o = (n(63403), n(23217)),
         c = n(26464),
         d = n(85246),
@@ -13641,7 +13640,7 @@
         i = n(52868),
         r = n.n(i),
         l = n(89526),
-        s = (n(51637), n(63403), n(85246)),
+        s = (n(42770), n(63403), n(85246)),
         o = n(23217),
         c = n(4306),
         d = n(32765);
@@ -14058,7 +14057,7 @@
         i = n(52868),
         r = n.n(i),
         l = n(89526),
-        s = (n(51637), n(63403), n(23217)),
+        s = (n(42770), n(63403), n(23217)),
         o = n(85246),
         c = n(4306),
         d = n(32765);
@@ -14181,7 +14180,7 @@
         i = n(52868),
         r = n.n(i),
         l = n(89526),
-        s = (n(51637), n(53143), n(63403), n(23217)),
+        s = (n(42770), n(53143), n(63403), n(23217)),
         o = n(32765);
       class c {
         constructor() {
@@ -14376,7 +14375,7 @@
       var a = n(33940),
         i = n(52868),
         r = n.n(i),
-        l = (n(51637), n(5017), n(63403), n(85246), n(23217)),
+        l = (n(42770), n(5017), n(63403), n(85246), n(23217)),
         s = n(32765),
         o = (n(25508), n(26464)),
         c = n(89526);
@@ -14484,7 +14483,7 @@
       var a = n(33940),
         i = n(50265),
         r = n(32765),
-        l = (n(51637), n(52868)),
+        l = (n(42770), n(52868)),
         s = n.n(l),
         o = (n(29879), n(23217)),
         c = (n(63403), n(13141)),
@@ -14606,7 +14605,7 @@
         r = n.n(i),
         l = n(89526),
         s = n(46132),
-        o = n(51637),
+        o = n(42770),
         c = n(29879),
         d = n(47165),
         m = n(52316),
@@ -14642,7 +14641,7 @@
         }
       }
       var f = n(74802),
-        D = n(31782),
+        D = n(51438),
         y = n(53236),
         b = n(48616),
         C = n(82079),
@@ -18369,7 +18368,7 @@
         oC: () => g,
         sN: () => h,
       });
-      n(64368), n(99344), n(51637), n(14826);
+      n(64368), n(99344), n(42770), n(14826);
       var a = n(32765);
       function i(e) {
         return e.getRow()._row.data;
@@ -18516,7 +18515,7 @@
         P = n(50265),
         M = n(5615),
         G = n(46132),
-        L = n(51637),
+        L = n(42770),
         O = n(54856),
         x = n(36597),
         F = (n(3641), n(29073)),
@@ -33259,7 +33258,7 @@
         i = n(18643),
         r = n(63280),
         l = n(89526),
-        s = (n(51637), n(53143), n(85886)),
+        s = (n(42770), n(53143), n(85886)),
         o = n(25871),
         c = n(22444),
         d = n(77557),
@@ -33603,7 +33602,7 @@
         i = n(78999),
         r = n(18643),
         l = n(89526),
-        s = (n(51637), n(53143), n(85886)),
+        s = (n(42770), n(53143), n(85886)),
         o = n(77557),
         c = n(17547),
         d = n(67736),
@@ -33760,7 +33759,7 @@
       var a = n(65395),
         i = n(36998),
         r = n(89526),
-        l = (n(51637), n(74429), n(25871)),
+        l = (n(42770), n(74429), n(25871)),
         s = n(22444),
         o = n(17547),
         c = n(51441),
@@ -34139,7 +34138,7 @@
       })(p || (p = {}));
       var h = n(33940),
         g = n(50265),
-        v = n(51637),
+        v = n(42770),
         E = (n(53143), n(5615)),
         S = n(89526),
         f = n(46132),
@@ -46814,7 +46813,7 @@
           n = (0, P.SZ)(() => t.BIsDirty());
         return S.createElement(
           "div",
-          { className: Bn().SectionCtn },
+          { className: (0, je.Z)(Bn().SectionCtn, Bn().ActionBar) },
           S.createElement(
             "div",
             { className: yi.ButtonRow },
@@ -47468,12 +47467,12 @@
                     },
                   }),
                   S.createElement(fl, { oEditableMessage: t })
-                )
+                ),
+                S.createElement(yl, { oEditableMessage: t })
               ),
               S.createElement(vl, { oEditableMessage: t })
             ),
-            S.createElement("br", null),
-            S.createElement(yl, { oEditableMessage: t })
+            S.createElement("br", null)
           )
         );
       }
@@ -47641,86 +47640,83 @@
             [t]
           );
         return S.createElement(
-          "div",
-          { className: Bn().ColumnCtn },
+          S.Fragment,
+          null,
           S.createElement(
             "div",
-            { className: Bn().LeftCol },
+            { className: Bn().SectionCtn },
             S.createElement(
-              "div",
-              { className: Bn().SectionCtn },
+              "h2",
+              { className: "inline" },
+              "MARKETING MESSAGE ASSETS"
+            ),
+            S.createElement("hr", null),
+            Boolean(l && (!a || !a.sc_schinese)) &&
               S.createElement(
-                "h2",
-                { className: "inline" },
-                "MARKETING MESSAGE ASSETS"
-              ),
-              S.createElement("hr", null),
-              Boolean(l && (!a || !a.sc_schinese)) &&
-                S.createElement(
-                  "div",
-                  { className: Dt.WarningStylesWithIcon },
-                  S.createElement(
-                    "div",
-                    null,
-                    "Marketing Message will appear in Steam China, we require a Steam China Simplified Chinese Asset. Please ensure the sc_schinese asset handles these two cases:"
-                  ),
-                  S.createElement(
-                    "ol",
-                    null,
-                    S.createElement(
-                      "li",
-                      null,
-                      "If we mention Steam, in Steam China has a specific name: ",
-                      S.createElement("img", {
-                        src:
-                          oe.De.STORE_CDN_URL +
-                          "public/shared/images/header/logo_steamchina.svg?t=962016",
-                        height: "40",
-                      })
-                    ),
-                    S.createElement(
-                      "li",
-                      null,
-                      "If there is a time in the artwork, then it must localized to China Standard Time"
-                    )
-                  )
-                ),
-              Boolean("dev" == oe.De.WEB_UNIVERSE) &&
-                S.createElement(
-                  "div",
-                  { className: Dt.WarningStylesWithIcon },
-                  "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK."
-                ),
-              S.createElement(Gn.j, {
-                rgSupportArtwork: s,
-                rgRealmList: o,
-                strOverrideDragAndDropText:
-                  "Drag any asset here to upload (max 5MB)",
-                strUploadAjaxURL: `${
-                  oe.De.PARTNER_BASE_URL
-                }promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
-                fnOnUploadSuccess: c,
-              }),
-              S.createElement(
-                lt.SV,
-                null,
+                "div",
+                { className: Dt.WarningStylesWithIcon },
                 S.createElement(
                   "div",
                   null,
-                  "Static Assets Only ",
-                  S.createElement("span", null, "570px by 600px"),
-                  " (.jpg,.png,.gif)"
+                  "Marketing Message will appear in Steam China, we require a Steam China Simplified Chinese Asset. Please ensure the sc_schinese asset handles these two cases:"
                 ),
-                S.createElement(Il, {
-                  oEditableMessage: t,
-                  assetType: "ll_image",
-                }),
-                S.createElement(bl, { oEditableMessage: t }),
-                S.createElement(Cl, { oEditableMessage: t })
-              )
-            ),
-            S.createElement(Jr, { oEditableMessage: t })
-          )
+                S.createElement(
+                  "ol",
+                  null,
+                  S.createElement(
+                    "li",
+                    null,
+                    "If we mention Steam, in Steam China has a specific name: ",
+                    S.createElement("img", {
+                      src:
+                        oe.De.STORE_CDN_URL +
+                        "public/shared/images/header/logo_steamchina.svg?t=962016",
+                      height: "40",
+                    })
+                  ),
+                  S.createElement(
+                    "li",
+                    null,
+                    "If there is a time in the artwork, then it must localized to China Standard Time"
+                  )
+                )
+              ),
+            Boolean("dev" == oe.De.WEB_UNIVERSE) &&
+              S.createElement(
+                "div",
+                { className: Dt.WarningStylesWithIcon },
+                "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK."
+              ),
+            S.createElement(Gn.j, {
+              rgSupportArtwork: s,
+              rgRealmList: o,
+              strOverrideDragAndDropText:
+                "Drag any asset here to upload (max 5MB)",
+              strUploadAjaxURL: `${
+                oe.De.PARTNER_BASE_URL
+              }promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
+              fnOnUploadSuccess: c,
+            }),
+            S.createElement(
+              lt.SV,
+              null,
+              S.createElement("br", null),
+              S.createElement("h3", null, "Static Assets Only"),
+              S.createElement(
+                "div",
+                null,
+                S.createElement("span", null, "570px by 600px"),
+                " (.jpg,.png,.gif)"
+              ),
+              S.createElement(Il, {
+                oEditableMessage: t,
+                assetType: "ll_image",
+              }),
+              S.createElement(bl, { oEditableMessage: t }),
+              S.createElement(Cl, { oEditableMessage: t })
+            )
+          ),
+          S.createElement(Jr, { oEditableMessage: t })
         );
       }
       function bl(e) {
@@ -47730,25 +47726,27 @@
           ? S.createElement(
               "div",
               null,
+              S.createElement("br", null),
+              S.createElement("h3", null, "Animated Assets"),
               S.createElement(
                 "div",
                 null,
                 "Animated Assets require both matching .webm/.mp4 files. Will fallback to static assets if animated asset is missing or client is setup for low-bandwidth mode."
               ),
+              S.createElement("br", null),
+              S.createElement(z.__, null, "WebM"),
               S.createElement(
                 "div",
                 null,
-                ".WebM ",
-                S.createElement("span", null, "570px by 600px"),
-                " (requires for Steam Client)"
+                ".Webm 570px by 600px (required for Steam Client)"
               ),
               S.createElement(Il, { oEditableMessage: t, assetType: "webm" }),
+              S.createElement("br", null),
+              S.createElement(z.__, null, "MP4"),
               S.createElement(
                 "div",
                 null,
-                ".Mp4  ",
-                S.createElement("span", null, "570px by 600px"),
-                " (requires for iOS)"
+                ".Mp4 570px by 600px (required for iOS)"
               ),
               S.createElement(Il, { oEditableMessage: t, assetType: "mp4" })
             )
@@ -47762,16 +47760,17 @@
           : S.createElement(
               "div",
               null,
+              S.createElement("br", null),
               S.createElement(
-                "div",
+                "h3",
                 null,
                 "Feature Video Template Specific Assets"
               ),
               S.createElement("br", null),
+              S.createElement(z.__, null, "Background Image"),
               S.createElement(
                 "div",
                 null,
-                "Background Image ",
                 S.createElement("span", null, "570px by 600px"),
                 " (Video sits on top of this asset; .png/.jpg) "
               ),
@@ -47779,18 +47778,21 @@
                 oEditableMessage: t,
                 assetType: "background",
               }),
+              S.createElement("br", null),
+              S.createElement(z.__, null, "Poster Image"),
               S.createElement(
                 "div",
                 null,
-                "Poster Image ",
                 S.createElement("span", null, "528px by 297px"),
                 " (localized video poster image; shown on top of video prior to play; .png/.jpg)"
               ),
               S.createElement(Il, { oEditableMessage: t, assetType: "poster" }),
+              S.createElement("br", null),
+              S.createElement(z.__, null, "Subtitles"),
               S.createElement(
                 "div",
                 null,
-                "Subtitles .vtt/.srt format (include extension or mapping will fail)"
+                ".vtt/.srt format (include extension or mapping will fail)"
               ),
               S.createElement(Il, {
                 oEditableMessage: t,
@@ -50765,7 +50767,8 @@
             {
               className: (0, je.Z)(
                 Bn().DefaultSectionCtn,
-                Bn().ValveOnlyBackground
+                Bn().ValveOnlyBackground,
+                Bn().ActionBar
               ),
             },
             S.createElement(Kl, { oEditablePlan: t })
@@ -51246,7 +51249,7 @@
                 ),
                 S.createElement(
                   "div",
-                  { className: Bn().SectionCtn },
+                  { className: (0, je.Z)(Bn().SectionCtn, Bn().ActionBar) },
                   S.createElement(Kl, { oEditablePlan: t })
                 )
               ),
@@ -52323,7 +52326,7 @@
         o = n(36105),
         c = n.n(o),
         d = n(89526),
-        m = (n(46132), n(51637), n(72119), n(29879), n(47165)),
+        m = (n(46132), n(42770), n(72119), n(29879), n(47165)),
         u = n(61218),
         p = n(4306),
         _ = (n(63403), n(26464)),
@@ -53162,7 +53165,7 @@
       n.d(t, { K: () => mn, n: () => un });
       var a = n(33940),
         i = n(50265),
-        r = n(51637),
+        r = n(42770),
         l = n(32765);
       const s = new RegExp(
           /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store)\/sale\/([a-zA-Z0-9\-_&]+)/i
@@ -53654,7 +53657,7 @@
         q = n(88464),
         Z = n(62983),
         K = n(44026),
-        Q = n(31782),
+        Q = n(51438),
         $ = (n(53143), n(57361), n(54671)),
         Y = n(25125),
         J = n(52102),
@@ -59112,7 +59115,7 @@
         s = n(59934),
         o = n(82988),
         c = (n(50265), n(32765));
-      n(51637), n(52868), n(23217), n(63403), n(13141), n(47165);
+      n(42770), n(52868), n(23217), n(63403), n(13141), n(47165);
       class d {
         constructor() {
           (this.m_mapSalePage = new Map()),
@@ -59272,7 +59275,7 @@
         i = n(52868),
         r = n.n(i),
         l = n(89526),
-        s = (n(46132), n(51637), n(53143), n(25871)),
+        s = (n(46132), n(42770), n(53143), n(25871)),
         o = n(22444),
         c = (n(63403), n(85246)),
         d = n(19304),

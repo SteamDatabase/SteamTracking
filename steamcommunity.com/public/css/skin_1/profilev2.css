@@ -2114,7 +2114,6 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	cursor: pointer;
 	border: 1px solid #000000;
 	display: block;
-	white-space: nowrap;
 	overflow: hidden;
 }
 

@@ -853,61 +853,62 @@
     },
     50295: (e, t, r) => {
       "use strict";
-      r.d(t, { E: () => g, U: () => B });
+      r.d(t, { E: () => b, U: () => S });
       var i = r(25125),
         a = r(89526),
-        s = (r(51637), r(96566)),
+        s = (r(42770), r(96566)),
         n = r(7311),
-        o = (r(98889), r(93883)),
-        l = r(20620),
-        c = r(75962),
-        d = r(19304),
-        m = r(14826),
-        u = r(207),
-        h = r(32765),
-        _ = r(91820),
-        p = r.n(_);
-      function g(e) {
+        o = (r(98889), r(13345)),
+        l = r(93883),
+        c = r(20620),
+        d = r(75962),
+        m = r(19304),
+        u = r(14826),
+        h = r(207),
+        _ = r(32765),
+        p = r(91820),
+        g = r.n(p);
+      function b(e) {
         const { latestAnnouncement: t } = e;
         return "giveaway_draw" == (null == t ? void 0 : t.type)
-          ? a.createElement(b, { latestWinner: t })
+          ? a.createElement(B, { latestWinner: t })
           : null;
       }
-      function b(e) {
+      function B(e) {
         var t, r;
         const {
             latestWinner: i,
             className: s,
             strActionButton: n,
-            strActionClassname: l,
+            strActionClassname: c,
           } = e,
-          _ =
+          p =
             (null === (t = i.winners_info) || void 0 === t
               ? void 0
               : t.length) > 0
               ? i.winners_info[0].accountid
               : 0,
-          [g, b] = a.useState(_),
-          B = (0, u.et)(
-            "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif"
+          [b, B] = a.useState(p),
+          S = (0, h.et)(
+            `${(0, o.OL)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`
           ),
-          S = (0, u.et)(
-            "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/56521811317a8298a7aff4a914be964b67dd0325.png"
+          y = (0, h.et)(
+            `${(0, o.OL)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`
           ),
-          y = (0, o.J)(i.giveaway_gid);
-        let w =
-          y.bLoadingGiveawayInfo || y.closed ? null : y.seconds_until_drawing;
-        const f = _ === h.L7.accountid;
+          w = (0, l.J)(i.giveaway_gid);
+        let f =
+          w.bLoadingGiveawayInfo || w.closed ? null : w.seconds_until_drawing;
+        const C = p === _.L7.accountid;
         a.useEffect(() => {
-          g != _ && setTimeout(() => b(_), 1500);
-        }, [_, g]);
-        const C =
+          b != p && setTimeout(() => B(p), 1500);
+        }, [p, b]);
+        const M =
           (null === (r = i.winners_info) || void 0 === r ? void 0 : r.length) >
             0 && Boolean(i.winners_info[0].persona)
             ? i.winners_info[0].persona
-            : (0, m.Xx)("#GA2022_UnknownPersonaName");
+            : (0, u.Xx)("#GA2022_UnknownPersonaName");
         return a.createElement(
-          c.ns,
+          d.ns,
           {
             href: "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
             className: s,
@@ -915,69 +916,69 @@
           a.createElement(
             "div",
             {
-              className: (0, d.Z)({
-                [p().GiveawayWinnerBox]: !0,
-                [p().GiveawayWinnerAnnounced]: g === _,
+              className: (0, m.Z)({
+                [g().GiveawayWinnerBox]: !0,
+                [g().GiveawayWinnerAnnounced]: b === p,
               }),
             },
             a.createElement(
               "div",
-              { className: p().GiveawayWinnerBoxLeft },
+              { className: g().GiveawayWinnerBoxLeft },
               a.createElement("img", {
-                className: p().GiveawayWinnerArt,
-                src: B,
+                className: g().GiveawayWinnerArt,
+                src: S,
               })
             ),
             a.createElement(
               "div",
-              { className: p().GiveawayWinnerBoxRight },
-              Boolean(g !== _) &&
+              { className: g().GiveawayWinnerBoxRight },
+              Boolean(b !== p) &&
                 a.createElement(
                   "div",
-                  { className: (0, d.Z)(p().GiveawayWinnerText) },
-                  (0, m.kQ)(
+                  { className: (0, m.Z)(g().GiveawayWinnerText) },
+                  (0, u.kQ)(
                     "#GA2022_Congrats_Deck_Unknown",
                     a.createElement("br", null)
                   )
                 ),
-              Boolean(g === _) &&
+              Boolean(b === p) &&
                 a.createElement(
                   "div",
                   {
-                    className: (0, d.Z)(
-                      p().GiveawayWinnerText,
-                      p().GiveawayWinnerAnnounced
+                    className: (0, m.Z)(
+                      g().GiveawayWinnerText,
+                      g().GiveawayWinnerAnnounced
                     ),
                   },
-                  (0, m.kQ)(
-                    f
+                  (0, u.kQ)(
+                    C
                       ? "#GA2022_Congrats_Deck_Me"
                       : "#GA2022_Congrats_Deck_OTher",
-                    C,
+                    M,
                     a.createElement("br", null)
                   )
                 ),
-              Boolean(w > 0) &&
+              Boolean(f > 0) &&
                 a.createElement(
                   "div",
-                  { className: p().GiveawayWinnerCountdown },
-                  (0, m.kQ)("#GA2022_Congrats_NextDraw", w)
+                  { className: g().GiveawayWinnerCountdown },
+                  (0, u.kQ)("#GA2022_Congrats_NextDraw", f)
                 )
             ),
             a.createElement("img", {
-              className: p().GiveawayWinnerQuestion,
-              src: S,
+              className: g().GiveawayWinnerQuestion,
+              src: y,
             }),
             Boolean(n) &&
               a.createElement(
                 "div",
-                { className: l },
-                f ? (0, m.Xx)("#GA2022_YouWonNextSteps") : n
+                { className: c },
+                C ? (0, u.Xx)("#GA2022_YouWonNextSteps") : n
               )
           )
         );
       }
-      function B(e) {
+      function S(e) {
         const { gidGiveaway: t, stream: r } = e,
           o = (function (e, t) {
             const [r, o] = (0, i.SZ)(() => {
@@ -1013,22 +1014,22 @@
             }
             return null;
           })(t, r),
-          c = (0, l.x)("GameAwardDrop2022");
+          l = (0, c.x)("GameAwardDrop2022");
         let d = null,
-          u = p().GiveawayRegisterButton;
+          m = g().GiveawayRegisterButton;
         return (
-          h.L7.logged_in
-            ? (null == c ? void 0 : c.registered)
-              ? ((d = (0, m.Xx)("#GA2022_AlreadyRegistered")),
-                (u = p().GiveawayAlreadyRegistered))
-              : (d = (0, m.Xx)("#GA2022_RegisterToWin"))
-            : (d = (0, m.Xx)("#GA2022_RegisterLoginToWin")),
+          _.L7.logged_in
+            ? (null == l ? void 0 : l.registered)
+              ? ((d = (0, u.Xx)("#GA2022_AlreadyRegistered")),
+                (m = g().GiveawayAlreadyRegistered))
+              : (d = (0, u.Xx)("#GA2022_RegisterToWin"))
+            : (d = (0, u.Xx)("#GA2022_RegisterLoginToWin")),
           o
-            ? a.createElement(b, {
+            ? a.createElement(B, {
                 latestWinner: o,
-                className: p().InViewerBar,
+                className: g().InViewerBar,
                 strActionButton: d,
-                strActionClassname: u,
+                strActionClassname: m,
               })
             : null
         );
@@ -1049,7 +1050,7 @@
         o = r(88464),
         l = r(89526),
         c = r(14288),
-        d = (r(51637), r(40103)),
+        d = (r(42770), r(40103)),
         m = r(98009),
         u = (r(89980), r(7311)),
         h = r(57858),
@@ -3186,7 +3187,7 @@
         s = r.n(a),
         n = r(50265),
         o = r(20069),
-        l = (r(46132), r(51637), r(54856)),
+        l = (r(46132), r(42770), r(54856)),
         c = r(65406),
         d = r(36597),
         m = r(47165),
@@ -7139,7 +7140,7 @@
         s = r.n(a),
         n = r(50265),
         o = r(46132),
-        l = r(51637),
+        l = r(42770),
         c = r(54856),
         d = r(47165),
         m = (r(97036), r(20830)),

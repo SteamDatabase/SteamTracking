@@ -4,430 +4,8 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2529],
   {
-    24174: (e, t, r) => {
-      r.d(t, {
-        Z6: () => c,
-        p8: () => g,
-        NO: () => f,
-        UC: () => p,
-        A1: () => _,
-        yp: () => d,
-        iP: () => m,
-      });
-      var i = r(89526),
-        s = r(46132),
-        n = r(32765),
-        a = r(4116);
-      class o {
-        constructor() {
-          (this.type = 0), (this.text = "");
-        }
-        ConvertMalformedNodeToText() {
-          3 == this.type
-            ? (this.text = "[/" + this.text)
-            : 2 == this.type && (this.text = "[" + this.text),
-            (this.type = 1);
-        }
-      }
-      class l {
-        constructor(e, t) {
-          (this.m_dictComponents = void 0),
-            (this.m_dictComponents = e),
-            (this.m_fnAccumulatorFactory = t);
-        }
-        Parse(e, t, r = !1) {
-          const i = (function (e, t) {
-            const r = [];
-            let i = new o(),
-              s = !1,
-              n = !1,
-              a = !1;
-            for (let o = 0; o < e.length; o++) {
-              let l = e[o];
-              switch (i.type) {
-                case 0:
-                  "[" == l
-                    ? ((i.type = 2), (n = !0))
-                    : ((i.type = 1), "\\" == l && t ? (s = !s) : (i.text += l));
-                  break;
-                case 2:
-                case 3:
-                  if ("/" == l && n) (i.type = 3), (i.text = ""), (n = !1);
-                  else if ("[" != l || s)
-                    if ("]" != l || s)
-                      "\\" == l && t
-                        ? ((i.text += l), (s = !s), (n = !1))
-                        : ((i.text += l), (s = !1), (n = !1));
-                    else {
-                      const e =
-                          2 == i.type &&
-                          "noparse" == i.text.toLocaleLowerCase(),
-                        t =
-                          3 == i.type &&
-                          "noparse" == i.text.toLocaleLowerCase();
-                      n || (a && !t)
-                        ? (i.ConvertMalformedNodeToText(), (i.text += l))
-                        : e
-                        ? (a = !0)
-                        : t && (a = !1),
-                        (i = u(r, i)),
-                        (n = !1);
-                    }
-                  else
-                    i.ConvertMalformedNodeToText(), (i = u(r, i, 2)), (n = !0);
-                  break;
-                case 1:
-                  "[" != l || s
-                    ? "\\" == l && t
-                      ? (s && (i.text += l), (s = !s))
-                      : ((i.text += l), (s = !1))
-                    : ((i = u(r, i, 2)), (n = !0));
-              }
-            }
-            0 != i.type &&
-              ((2 != i.type && 3 != i.type) || i.ConvertMalformedNodeToText(),
-              r.push(i));
-            return r;
-          })(e, r);
-          return this.Parse_BuildElements(i, t);
-        }
-        Parse_BuildElements(e, t) {
-          let r = this.m_fnAccumulatorFactory(void 0),
-            i = [],
-            s = function () {
-              return i.length < 1 ? void 0 : i[i.length - 1];
-            },
-            n = this.m_dictComponents,
-            a = !1,
-            o = !0,
-            l = function (e, s, l) {
-              if (e && e.node.tag === s.text && n.get(e.node.tag)) {
-                const s = n.get(e.node.tag),
-                  l = i.map((e) => e.node.tag),
-                  u = { parentTags: l, tagname: e.node.tag, args: e.node.args },
-                  c = t(s.Constructor, u, ...r.GetElements());
-                (r = e.accumulator),
-                  r.AppendNode(c),
-                  (a = s.skipFollowingNewline),
-                  (o = e.bWrapTextForCopying);
-              } else if (e) {
-                let t = e.accumulator;
-                t.AppendText("[" + e.node.text + "]", !1),
-                  r.GetElements().forEach((e) => t.AppendNode(e)),
-                  t.AppendText("[/" + s.text + "]", !1),
-                  (r = t),
-                  (o = e.bWrapTextForCopying);
-              }
-            };
-          for (
-            e.forEach((e, t) => {
-              var u, c;
-              if (1 == e.type) {
-                const t = a ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                r.AppendText(t, o), (a = !1);
-              } else if (2 == e.type) {
-                const t = n.get(e.tag);
-                if (t) {
-                  const c = s();
-                  if (void 0 !== c) {
-                    const t = n.get(c.node.tag);
-                    t &&
-                      t.autocloses &&
-                      e.tag === c.node.tag &&
-                      l(i.pop(), c.node);
-                  }
-                  i.push({ accumulator: r, node: e, bWrapTextForCopying: o }),
-                    (r = this.m_fnAccumulatorFactory(e)),
-                    (a = t.skipInternalNewline),
-                    (o =
-                      null !== (u = t.allowWrapTextForCopying) &&
-                      void 0 !== u &&
-                      u);
-                } else r.AppendText("[" + e.text + "]", 0 == i.length);
-              } else if (3 == e.type) {
-                for (
-                  ;
-                  s() &&
-                  s().node.tag !== e.text &&
-                  n.get(s().node.tag) &&
-                  n.get(s().node.tag).autocloses;
-
-                ) {
-                  const e = i.pop();
-                  l(e, e.node);
-                }
-                if (
-                  (null === (c = s()) || void 0 === c ? void 0 : c.node.tag) ==
-                  e.text
-                ) {
-                  const t = i.pop();
-                  l(t, e);
-                } else r.AppendText("[/" + e.text + "]", 0 == i.length);
-              }
-            });
-            i.length > 0;
-
-          ) {
-            let e = i.pop(),
-              t = e.accumulator;
-            t.AppendText("[" + e.node.text + "]", !1),
-              r.GetElements().forEach((e) => t.AppendNode(e)),
-              (r = t);
-          }
-          return r.GetElements();
-        }
-      }
-      function u(e, t, r = 0) {
-        if (2 == t.type) {
-          let e = t.text.indexOf("="),
-            r = t.text.indexOf(" ");
-          if ((-1 != r && (-1 == e || r < e) && (e = r), e > 0)) {
-            t.tag = t.text.substr(0, e).toLocaleLowerCase();
-            let r = t.text.substr(e);
-            t.args = (function (e) {
-              if (!e || e.length < 1) return {};
-              let t = {},
-                r = "",
-                i = "",
-                s = 0,
-                n = 0;
-              "=" == e[0] && (s = 2);
-              let a = !1;
-              for (n++; n < e.length; n++) {
-                let o = e[n],
-                  l = !0,
-                  u = !1;
-                switch (s) {
-                  case 0:
-                    if ("=" == o) return {};
-                    if (" " == o) continue;
-                    s = 1;
-                    break;
-                  case 1:
-                    ("=" != o && " " != o) ||
-                      a ||
-                      (" " == o ? ((s = 0), (u = !0)) : (s = 2), (l = !1));
-                    break;
-                  case 2:
-                    " " == o
-                      ? ((s = 0), (l = !1), (u = !0))
-                      : '"' == o
-                      ? ((s = 4), (l = !1))
-                      : (s = 3);
-                    break;
-                  case 3:
-                  case 4:
-                    ((" " == o && 4 != s && !a) ||
-                      ('"' == o && 4 == s && !a)) &&
-                      ((s = 0), (l = !1), (u = !0));
-                }
-                if (l)
-                  if ("\\" != o || a)
-                    if (((a = !1), 1 == s)) r += o;
-                    else {
-                      if (3 != s && 4 != s)
-                        throw new Error(
-                          "Not expecting to accumulate buffer in state " + s
-                        );
-                      i += o;
-                    }
-                  else a = !0;
-                u && ((t[r] = i), (r = ""), (i = ""));
-              }
-              0 != s && (t[r] = i);
-              return t;
-            })(r);
-          } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
-        }
-        e.push(t);
-        let i = new o();
-        return (i.type = r), i;
-      }
-      class c extends l {
-        constructor(e, t, r) {
-          super(e, null != t ? t : () => new a.LT()),
-            (this.m_renderingLanguage = r || (0, s.jM)(n.De.LANGUAGE));
-        }
-        UpdateOverrideLanguage(e) {
-          this.m_renderingLanguage = e || (0, s.jM)(n.De.LANGUAGE);
-        }
-        ParseBBCode(e, t, r = !1) {
-          let s = 0;
-          const n = this.Parse(
-            e,
-            (e, r, ...n) =>
-              i.createElement(
-                e,
-                Object.assign(Object.assign({}, r), {
-                  context: t,
-                  language: this.m_renderingLanguage,
-                  key: "bbnode_" + s++,
-                }),
-                ...n
-              ),
-            r
-          );
-          return n.length > 1
-            ? i.createElement(i.Fragment, null, ...n)
-            : 1 == n.length
-            ? n[0]
-            : null;
-        }
-      }
-      const d = [
-          "h1",
-          "h2",
-          "h3",
-          "h4",
-          "h5",
-          "smalltext",
-          "b",
-          "u",
-          "hr",
-          "i",
-          "img",
-          "strike",
-          "spoiler",
-          "noparse",
-          "url",
-          "list",
-          "olist",
-          "quote",
-          "pullquote",
-          "code",
-          "table",
-          "tr",
-          "td",
-          "th",
-          "previewyoutube",
-          "looping_media",
-          "roomeffect",
-          "sticker",
-          "price",
-          "pricesavings",
-          "trailer",
-          "speaker",
-          "doclink",
-          "video",
-          "vod",
-          "youtubeorvideo",
-          "giveawayeligible",
-          "claimitem",
-          "packagepurchaseable",
-          "actiondialog",
-          "uploadfilebutton",
-          "docimg",
-        ],
-        m = [
-          "h1",
-          "h2",
-          "h3",
-          "b",
-          "u",
-          "i",
-          "strike",
-          "spoiler",
-          "noparse",
-          "url",
-        ],
-        h = [
-          "img",
-          "previewyoutube",
-          "looping_media",
-          "roomeffect",
-          "video",
-          "vod",
-          "trailer",
-          "youtubeorvideo",
-          "docimg",
-        ],
-        _ = (d.filter((e) => -1 == h.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
-        p = "{STEAM_CLAN_LOC_IMAGE}";
-      function g(e, t = null, r = " ") {
-        let i = null == t ? void 0 : t.join("|");
-        i || (i = d.join("|") + "|\\*");
-        let s = new RegExp("\\[(" + i + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
-        return e.replace(s, r);
-      }
-      function f(e, t = null, r = "") {
-        let i = null == t ? void 0 : t.join("|");
-        i || (i = d.join("|") + "|\\*");
-        let s = "\\[\\/?(?:" + i + "){1,}.*?]";
-        return e.replace(new RegExp(s, "gi"), r);
-      }
-    },
-    4116: (e, t, r) => {
-      r.d(t, { DX: () => a, LT: () => n, So: () => o });
-      var i = r(89526),
-        s = r(23801);
-      class n {
-        constructor() {
-          this.reactNodes = [];
-        }
-        AppendText(e, t = !1) {
-          e.length &&
-            (t
-              ? this.reactNodes.push(
-                  i.createElement(
-                    "span",
-                    {
-                      "data-copytext": "",
-                      "data-copystyle": "merge-adjacent",
-                      "bbcode-text": e,
-                    },
-                    e
-                  )
-                )
-              : this.reactNodes.push(e));
-        }
-        AppendNode(e) {
-          this.reactNodes.push(e);
-        }
-        GetElements() {
-          return this.reactNodes;
-        }
-      }
-      class a {
-        constructor(e) {
-          (0, s.X)(e, "decorated accumulator cannot be null"),
-            (this.m_decoratedAccumulator = e);
-        }
-        AppendText(e, t = !1) {
-          this.m_decoratedAccumulator.AppendText(e, t);
-        }
-        AppendNode(e) {
-          this.m_decoratedAccumulator.AppendNode(e);
-        }
-        GetElements() {
-          return this.m_decoratedAccumulator.GetElements();
-        }
-      }
-      class o extends a {
-        constructor(e, t, r) {
-          super(e),
-            (this.m_nStartCursor = 1),
-            (this.m_nStartCursor = void 0 !== t ? t : 1);
-        }
-        AppendText(e) {
-          let t = e,
-            r = [];
-          for (
-            let e = t.indexOf("\n", this.m_nStartCursor);
-            -1 !== e;
-            e = t.indexOf("\n")
-          )
-            r.push(t.substr(0, e)),
-              r.push(i.createElement("br")),
-              (t = t.substr(e + 1));
-          t.length && r.push(t),
-            r.forEach((e) => {
-              super.AppendNode(e);
-            });
-        }
-      }
-    },
     3609: (e, t, r) => {
-      r.d(t, { $2: () => d, Ax: () => f, e8: () => _ });
+      r.d(t, { $2: () => d, Ax: () => b, e8: () => _ });
       var i = r(45878),
         s = r(29063),
         n = (r(19471), r(23632)),
@@ -1081,7 +659,7 @@
           return "CStoreQuery_SearchSuggestions_Response";
         }
       }
-      var f;
+      var b;
       !(function (e) {
         (e.Query = function (e, t) {
           return e.SendMsg("StoreQuery.Query#1", t, p, {
@@ -1097,13 +675,13 @@
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(f || (f = {}));
+      })(b || (b = {}));
     },
     11195: (e, t, r) => {
       r.d(t, { De: () => l, Fq: () => o, pA: () => a });
       var i = r(53143),
         s = r(32765),
-        n = (r(45878), r(54856), r(51637));
+        n = (r(45878), r(54856), r(42770));
       r(3609);
       function a(e, t) {
         e.Body().set_context(o(t));
@@ -1126,7 +704,7 @@
       r.d(t, { Z: () => I });
       var i = r(33940),
         s = r(50265),
-        n = (r(46132), r(51637), r(54856)),
+        n = (r(46132), r(42770), r(54856)),
         a = r(36597),
         o = (r(3641), r(45878)),
         l = r(29063),
@@ -1203,8 +781,8 @@
         _ = r(23217),
         p = r(32765),
         g = r(11195),
-        f = r(36704);
-      function b(e, t) {
+        b = r(36704);
+      function f(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -1486,7 +1064,7 @@
                   () => this.FlushPendingInfo(),
                   this.k_QueueWaitUntilRequestMS
                 ))),
-              (this.m_setPendingDataRequest = b(
+              (this.m_setPendingDataRequest = f(
                 this.m_setPendingDataRequest,
                 r
               )),
@@ -1617,7 +1195,7 @@
             case 6:
               i = this.m_mapHubCategoriesInFlight.get(e);
           }
-          return i && f.Z.BDataRequestContainsOtherDataRequest(i.dataRequest, r)
+          return i && b.Z.BDataRequestContainsOtherDataRequest(i.dataRequest, r)
             ? i.promise
             : null;
         }
@@ -1632,9 +1210,9 @@
               if (t) m.push(t);
               else {
                 d.push(u.oY.fromObject({ appid: e }));
-                let t = b(this.GetStoreItemDataRequest(e, 0), l);
+                let t = f(this.GetStoreItemDataRequest(e, 0), l);
                 const r = this.m_mapAppsInFlight.get(e);
-                (t = b(null == r ? void 0 : r.dataRequest, t)),
+                (t = f(null == r ? void 0 : r.dataRequest, t)),
                   r && m.push(r.promise),
                   this.m_mapAppsInFlight.set(e, {
                     promise: r ? B(r.promise, c) : c,
@@ -1647,9 +1225,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ packageid: e }));
-                  let t = b(this.GetStoreItemDataRequest(e, 1), l);
+                  let t = f(this.GetStoreItemDataRequest(e, 1), l);
                   const r = this.m_mapPackageInFlight.get(e);
-                  (t = b(null == r ? void 0 : r.dataRequest, t)),
+                  (t = f(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapPackageInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1662,9 +1240,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ bundleid: e }));
-                  let t = b(this.GetStoreItemDataRequest(e, 2), l);
+                  let t = f(this.GetStoreItemDataRequest(e, 2), l);
                   const r = this.m_mapBundleInFlight.get(e);
-                  (t = b(null == r ? void 0 : r.dataRequest, t)),
+                  (t = f(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapBundleInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1677,9 +1255,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ tagid: e }));
-                  let t = b(this.GetStoreItemDataRequest(e, 4), l);
+                  let t = f(this.GetStoreItemDataRequest(e, 4), l);
                   const r = this.m_mapTagsInFlight.get(e);
-                  (t = b(null == r ? void 0 : r.dataRequest, t)),
+                  (t = f(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapTagsInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1692,9 +1270,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ creatorid: e }));
-                  let t = b(this.GetStoreItemDataRequest(e, 5), l);
+                  let t = f(this.GetStoreItemDataRequest(e, 5), l);
                   const r = this.m_mapCreatorsInFlight.get(e);
-                  (t = b(null == r ? void 0 : r.dataRequest, t)),
+                  (t = f(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapCreatorsInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1707,9 +1285,9 @@
                 if (t) m.push(t);
                 else {
                   d.push(u.oY.fromObject({ hubcategoryid: e }));
-                  let t = b(this.GetStoreItemDataRequest(e, 6), l);
+                  let t = f(this.GetStoreItemDataRequest(e, 6), l);
                   const r = this.m_mapHubCategoriesInFlight.get(e);
-                  (t = b(null == r ? void 0 : r.dataRequest, t)),
+                  (t = f(null == r ? void 0 : r.dataRequest, t)),
                     r && m.push(r.promise),
                     this.m_mapHubCategoriesInFlight.set(e, {
                       promise: r ? B(r.promise, c) : c,
@@ -1771,20 +1349,20 @@
                 p = null !== (i = t.appid()) && void 0 !== i ? i : 0;
               if (_ != p) return _ - p;
               let g = null !== (s = e.packageid()) && void 0 !== s ? s : 0,
-                f = null !== (n = t.packageid()) && void 0 !== n ? n : 0;
-              if (g != f) return g - f;
-              let b = null !== (a = e.bundleid()) && void 0 !== a ? a : 0,
+                b = null !== (n = t.packageid()) && void 0 !== n ? n : 0;
+              if (g != b) return g - b;
+              let f = null !== (a = e.bundleid()) && void 0 !== a ? a : 0,
                 B = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
-              if (b != B) return b - B;
+              if (f != B) return f - B;
               let I = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
                 y = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
               if (I != y) return I - y;
               let v = null !== (c = e.creatorid()) && void 0 !== c ? c : 0,
                 R = null !== (d = t.creatorid()) && void 0 !== d ? d : 0;
               if (v != R) return v - R;
-              let w = null !== (m = e.hubcategoryid()) && void 0 !== m ? m : 0,
-                S = null !== (h = t.hubcategoryid()) && void 0 !== h ? h : 0;
-              return w != S ? w - S : 0;
+              let S = null !== (m = e.hubcategoryid()) && void 0 !== m ? m : 0,
+                w = null !== (h = t.hubcategoryid()) && void 0 !== h ? h : 0;
+              return S != w ? S - w : 0;
             }),
             t
           );
@@ -2118,7 +1696,7 @@
           }
           let s = i.get(e.id());
           return (
-            s ? s.MergeData(e, t) : ((s = new f.Z(e, t)), i.set(e.id(), s)), s
+            s ? s.MergeData(e, t) : ((s = new b.Z(e, t)), i.set(e.id(), s)), s
           );
         }
       }
@@ -2151,7 +1729,7 @@
       var i = r(52868),
         s = r.n(i),
         n = r(89526),
-        a = (r(24174), r(51637), r(53143), r(4306)),
+        a = (r(24174), r(42770), r(53143), r(4306)),
         o = (r(36704), r(57858));
       function l(e, t, r, i) {
         const l = (0, n.useRef)(),
@@ -2164,14 +1742,14 @@
             include_release: _,
             include_platforms: p,
             include_all_purchase_options: g,
-            include_screenshots: f,
-            include_trailers: b,
+            include_screenshots: b,
+            include_trailers: f,
             include_ratings: B,
             include_tag_count: I,
             include_reviews: y,
             include_basic_info: v,
             include_supported_languages: R,
-            include_full_description: w,
+            include_full_description: S,
           } = r;
         if (
           ((0, n.useEffect)(() => {
@@ -2180,14 +1758,14 @@
               include_release: _,
               include_platforms: p,
               include_all_purchase_options: g,
-              include_screenshots: f,
-              include_trailers: b,
+              include_screenshots: b,
+              include_trailers: f,
               include_ratings: B,
               include_tag_count: I,
               include_reviews: y,
               include_basic_info: v,
               include_supported_languages: R,
-              include_full_description: w,
+              include_full_description: S,
             };
             let n = null;
             return (
@@ -2203,15 +1781,15 @@
                   })),
               () => n && n.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, d, h, _, p, g, f, b, B, I, y, v, R, c]),
+          }, [e, t, i, d, h, _, p, g, b, f, B, I, y, v, R, c]),
           !e)
         )
           return [null, 2];
         if (!1 === d) return [void 0, 2];
         if (o.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.Z.Get().BHasStoreItem(e, t, r)) return [void 0, 1];
-        const S = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return S ? [S, 3] : [null, 2];
+        const w = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return w ? [w, 3] : [null, 2];
       }
       function u(e, t, r) {
         return l(e, 0, t, r);
@@ -2255,8 +1833,8 @@
             include_trailers: _,
             include_ratings: p,
             include_tag_count: g,
-            include_reviews: f,
-            include_basic_info: b,
+            include_reviews: b,
+            include_basic_info: f,
             include_supported_languages: B,
             include_full_description: I,
           } = r;
@@ -2272,8 +1850,8 @@
                 include_trailers: _,
                 include_ratings: p,
                 include_tag_count: g,
-                include_reviews: f,
-                include_basic_info: b,
+                include_reviews: b,
+                include_basic_info: f,
                 include_supported_languages: B,
                 include_full_description: I,
               },
@@ -2293,7 +1871,7 @@
               }),
               () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, l, u, c, d, m, h, _, p, g, f, b, B]),
+          }, [e, t, i, l, u, c, d, m, h, _, p, g, b, f, B]),
           !e)
         )
           return 2;

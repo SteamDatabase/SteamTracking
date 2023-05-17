@@ -280,7 +280,7 @@
         i = n(89526),
         s = n(74802),
         l = n(46132),
-        c = (n(51637), n(31782)),
+        c = (n(42770), n(51438)),
         d = n(52502),
         p = n(47165),
         m = (n(53236), n(1063)),
@@ -299,8 +299,8 @@
         L = n(57489),
         T = n.n(L),
         I = n(20790),
-        M = n(79586),
-        w = n(51441),
+        w = n(79586),
+        M = n(51441),
         B = n(98389);
       const f = (0, r.Pi)((e) => {
         const { appId: t, clanId: n } = e,
@@ -397,9 +397,9 @@
             "div",
             { className: (0, A.Z)(T().AppBannerGroup, m) },
             h
-              ? Boolean((0, w.Hu)() && t)
+              ? Boolean((0, M.Hu)() && t)
                 ? i.createElement(
-                    w.ll,
+                    M.ll,
                     {
                       item: { id: t, type: "game" },
                       className: T().AppBannerLogoCtn,
@@ -452,8 +452,8 @@
                   "div",
                   { className: T().HeaderFollowButton },
                   Boolean(t)
-                    ? i.createElement(M.SE, { appid: t })
-                    : i.createElement(M.C4, { clanAccountID: n })
+                    ? i.createElement(w.SE, { appid: t })
+                    : i.createElement(w.C4, { clanAccountID: n })
                 ),
                 i.createElement(
                   "a",
@@ -980,8 +980,8 @@
             m.FN.background_main
           );
           c && (L = c(L));
-          const M = e.GetCategoryAsString(),
-            w = e.type,
+          const w = e.GetCategoryAsString(),
+            M = e.type,
             B = e.BImageNeedScreenshotFallback("background", E);
           let f = "";
           if (e.appid) {
@@ -994,7 +994,7 @@
             f = t ? t.group_name : "";
           }
           const b = v.JW.GetTimeNowWithOverride(),
-            j = 28 !== w && b < e.GetStartTimeAndDateUnixSeconds() && !_;
+            j = 28 !== M && b < e.GetStartTimeAndDateUnixSeconds() && !_;
           return i.createElement(
             J.rC,
             null,
@@ -1009,7 +1009,7 @@
                   "editor" == D ? O().InEditor : ""
                 ),
               },
-              12 != w &&
+              12 != M &&
                 !B &&
                 i.createElement(z.j, {
                   className: (0, A.Z)(O().EventCoverImageBackground),
@@ -1040,7 +1040,7 @@
                     i.createElement(
                       "div",
                       { className: T().TimeandPostedBy },
-                      i.createElement("span", { className: T().EventType }, M),
+                      i.createElement("span", { className: T().EventType }, w),
                       i.createElement(
                         "span",
                         { className: T().PostedBy },
@@ -1348,18 +1348,18 @@
         L = n(82079),
         T = n(207),
         I = n(50265),
-        M = (n(46132), n(51637), n(47165));
+        w = (n(46132), n(42770), n(47165));
       n(63403);
-      class w {
+      class M {
         constructor() {
           (this.m_mapClanReposted = new Set()),
             (this.m_mapSourceEventGIDToPostedClans = new Map());
         }
         static Get() {
           return (
-            w.s_EventRepost ||
-              ((w.s_EventRepost = new w()), w.s_EventRepost.Initialize()),
-            w.s_EventRepost
+            M.s_EventRepost ||
+              ((M.s_EventRepost = new M()), M.s_EventRepost.Initialize()),
+            M.s_EventRepost
           );
         }
         static ValidateRepostData(e) {
@@ -1376,7 +1376,7 @@
         Initialize() {
           if (document.getElementById("application_config")) {
             let e = (0, i.kQ)("repostcontrols", "application_config");
-            w.ValidateRepostData(e) &&
+            M.ValidateRepostData(e) &&
               e.repost_clan_account_ids.forEach((e) =>
                 this.m_mapClanReposted.add(e)
               );
@@ -1497,7 +1497,7 @@
           });
         }
       }
-      (0, a.gn)([I.LO], w.prototype, "m_mapClanReposted", void 0);
+      (0, a.gn)([I.LO], M.prototype, "m_mapClanReposted", void 0);
       var B = n(57605),
         f = n(17547),
         k = n(69338);
@@ -1516,20 +1516,21 @@
               (0, a.mG)(void 0, void 0, void 0, function* () {
                 const e = S().CancelToken.source();
                 E.current = e.cancel;
-                const n = w
-                  .Get()
-                  .LoadClansAlreadyRepostedTo(t.clanSteamID, t.GID, e);
+                const n = M.Get().LoadClansAlreadyRepostedTo(
+                  t.clanSteamID,
+                  t.GID,
+                  e
+                );
                 n.then((e) => {
                   const t = new Set();
                   e.forEach((e) => t.add(e)), l(t);
                 });
                 let a = new Array();
                 a.push(n),
-                  w
-                    .Get()
+                  M.Get()
                     .GetRepostClanAccountID()
                     .forEach((e) => {
-                      const t = M.K.InitFromClanID(e);
+                      const t = w.K.InitFromClanID(e);
                       a.push(L.sV.LoadClanInfoForClanSteamID(t));
                     }),
                   yield Promise.all(a),
@@ -1540,8 +1541,7 @@
         }, [n, t.GID, t.clanSteamID]);
         const D = new Array();
         return (
-          w
-            .Get()
+          M.Get()
             .GetRepostClanAccountID()
             .forEach((e) => {
               const n = L.sV.GetClanInfoByClanAccountID(e);
@@ -1639,11 +1639,15 @@
                         let a = 1;
                         v((0, s.Xx)("#EventRepost_Dialog_Progress", a, n));
                         for (const o of Array.from(c)) {
-                          const r = M.K.InitFromClanID(o);
+                          const r = w.K.InitFromClanID(o);
                           if (
-                            !(yield w
-                              .Get()
-                              .RepostEvent(t.clanSteamID, t.GID, r, !0, e))
+                            !(yield M.Get().RepostEvent(
+                              t.clanSteamID,
+                              t.GID,
+                              r,
+                              !0,
+                              e
+                            ))
                           )
                             return void h(
                               (0, s.Xx)("#EventRepost_Dialog_ResultFail")
@@ -1651,11 +1655,15 @@
                           v((0, s.Xx)("#EventRepost_Dialog_Progress", ++a, n));
                         }
                         for (const o of Array.from(p)) {
-                          const r = M.K.InitFromClanID(o);
+                          const r = w.K.InitFromClanID(o);
                           if (
-                            !(yield w
-                              .Get()
-                              .RepostEvent(t.clanSteamID, t.GID, r, !1, e))
+                            !(yield M.Get().RepostEvent(
+                              t.clanSteamID,
+                              t.GID,
+                              r,
+                              !1,
+                              e
+                            ))
                           )
                             return void h(
                               (0, s.Xx)("#EventRepost_Dialog_ResultFail")
@@ -1671,7 +1679,7 @@
           )
         );
       });
-      var G = n(31782),
+      var G = n(51438),
         b = n(44026),
         O = n(88443),
         R = n(51326),
@@ -1820,7 +1828,7 @@
             n = e.GetForumTopicURL(),
             a = i.De.IN_CLIENT ? "steam://openurl/" + n : n,
             r = (0, i.h4)(),
-            l = i.L7.logged_in && w.Get().BCanRepostPartnerEvent();
+            l = i.L7.logged_in && M.Get().BCanRepostPartnerEvent();
           return o.createElement(
             G.s,
             { className: _().Container, "flow-children": "row", focusable: !1 },
@@ -1998,7 +2006,7 @@
         r = n.n(o),
         i = n(88464),
         s = n(89526),
-        l = (n(51637), n(52502), n(47165), n(53236), n(56368)),
+        l = (n(42770), n(52502), n(47165), n(53236), n(56368)),
         c = (n(10412), n(52316)),
         d = n(43690),
         p = n(99307),
@@ -2210,7 +2218,7 @@
         r = n(25125),
         i = n(89526),
         s = n(46132),
-        l = n(51637),
+        l = n(42770),
         c = n(7948),
         d = n(17318),
         p = n.n(d),
@@ -2337,14 +2345,14 @@
     },
     4795: (e, t, n) => {
       "use strict";
-      n.d(t, { WF: () => x, yi: () => w });
+      n.d(t, { WF: () => x, yi: () => M });
       var a = n(33940),
         o = n(52868),
         r = n.n(o),
         i = n(50265),
         s = n(88464),
         l = n(89526),
-        c = (n(46132), n(51637), n(52502), n(99648), n(57858)),
+        c = (n(46132), n(42770), n(52502), n(99648), n(57858)),
         d = n(57605),
         p = n(17318),
         m = n.n(p),
@@ -2387,7 +2395,7 @@
             ),
             !1);
       }
-      function M(e, t) {
+      function w(e, t) {
         var n, o;
         return (0, a.mG)(this, void 0, void 0, function* () {
           const a =
@@ -2420,7 +2428,7 @@
           return null;
         });
       }
-      let w = class extends l.Component {
+      let M = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = { eCategoryLoaded: null, nomineeAppID: null }),
@@ -2431,7 +2439,7 @@
         }
         componentDidMount() {
           this.FetchNominationState(),
-            M(
+            w(
               [this.props.event.GetSteamAwardCategory()],
               this.m_cancelSignal
             ).then((e) => {
@@ -2736,11 +2744,11 @@
           );
         }
       };
-      (0, a.gn)([i.LO], w.prototype, "m_strPreviousNomineeTitle", void 0),
-        (0, a.gn)([i.LO], w.prototype, "m_nominationEventDetails", void 0),
-        (0, a.gn)([g.ak], w.prototype, "OnNominateClick", null),
-        (0, a.gn)([g.ak], w.prototype, "SaveNomination", null),
-        (w = (0, a.gn)([s.Pi], w));
+      (0, a.gn)([i.LO], M.prototype, "m_strPreviousNomineeTitle", void 0),
+        (0, a.gn)([i.LO], M.prototype, "m_nominationEventDetails", void 0),
+        (0, a.gn)([g.ak], M.prototype, "OnNominateClick", null),
+        (0, a.gn)([g.ak], M.prototype, "SaveNomination", null),
+        (M = (0, a.gn)([s.Pi], M));
       let B = class extends l.Component {
         OnConfirm() {
           this.props.fnOnConfirm(), this.props.closeModal();
@@ -2997,7 +3005,7 @@
               c.Z.Get().BHasApp(this.props.appID) &&
                 this.setState({ bAppInfoLoaded: !0 });
             }),
-            M(this.props.voteCategories, this.m_cancelSignal).then((e) => {
+            w(this.props.voteCategories, this.m_cancelSignal).then((e) => {
               this.m_awardEventDetails = e;
             });
         }
@@ -3122,7 +3130,7 @@
       n.d(t, { HQ: () => g, wM: () => E, jd: () => S });
       var a = n(25125),
         o = n(89526),
-        r = (n(51637), n(52502), n(54507)),
+        r = (n(42770), n(52502), n(54507)),
         i = n(32765),
         s = n(54856),
         l = n(36597);
@@ -3309,19 +3317,20 @@
     },
     55330: (e, t, n) => {
       "use strict";
-      n.d(t, { i: () => p });
+      n.d(t, { i: () => m });
       var a = n(89526),
         o = n(46132),
         r = n(68818),
-        i = n(19304),
-        s = n(14826),
-        l = n(207),
-        c = n(32765),
-        d = n(72775);
-      function p(e) {
+        i = n(13345),
+        s = n(19304),
+        l = n(14826),
+        c = n(207),
+        d = n(32765),
+        p = n(72775);
+      function m(e) {
         const { gidEvent: t } = e,
           n = (0, r.XC)(t),
-          [p, m] = (0, a.useMemo)(() => {
+          [m, u] = (0, a.useMemo)(() => {
             var e, t, a, r;
             if (
               (null ===
@@ -3339,12 +3348,12 @@
                 ? void 0
                 : r.length) > 0
             ) {
-              const e = (0, o.jM)(c.De.LANGUAGE),
-                t = s.LZ.GetWithFallback(
+              const e = (0, o.jM)(d.De.LANGUAGE),
+                t = l.LZ.GetWithFallback(
                   n.jsondata.localized_sale_product_banner,
                   e
                 ),
-                a = s.LZ.GetWithFallback(
+                a = l.LZ.GetWithFallback(
                   n.jsondata.localized_sale_product_mobile_banner,
                   e
                 );
@@ -3353,26 +3362,23 @@
                 (null == a ? void 0 : a.length) > 0
               ) {
                 const e = n.clanSteamID.GetAccountID();
-                return [
-                  c.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${t}`,
-                  c.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${a}`,
-                ];
+                return [`${(0, i.OL)()}${e}/${t}`, `${(0, i.OL)()}${e}/${a}`];
               }
             }
             return [null, null];
           }, [n]);
-        return (null == p ? void 0 : p.length) > 0 &&
-          (null == m ? void 0 : m.length) > 0
+        return (null == m ? void 0 : m.length) > 0 &&
+          (null == u ? void 0 : u.length) > 0
           ? a.createElement(
               "a",
-              { href: (0, l.OL)(n.GetSaleURL()), className: d.Link },
-              a.createElement("img", {
-                src: p,
-                className: (0, i.Z)(d.Banner, d.Big),
-              }),
+              { href: (0, c.OL)(n.GetSaleURL()), className: p.Link },
               a.createElement("img", {
                 src: m,
-                className: (0, i.Z)(d.Banner, d.Mobile),
+                className: (0, s.Z)(p.Banner, p.Big),
+              }),
+              a.createElement("img", {
+                src: u,
+                className: (0, s.Z)(p.Banner, p.Mobile),
               })
             )
           : null;
@@ -3383,7 +3389,7 @@
       n.d(t, { AH: () => F, t6: () => V });
       var a = n(33940),
         o = n(89526),
-        r = n(51637),
+        r = n(42770),
         i = (n(72329), n(10412), n(20790)),
         s = n(17318),
         l = n.n(s),
@@ -3406,8 +3412,8 @@
         L = n.n(N),
         T = n(88464),
         I = n(24174),
-        M = (n(46132), n(54856)),
-        w = n(88337),
+        w = (n(46132), n(54856)),
+        M = n(88337),
         B = n(47165),
         f = n(20830),
         k = n(24448),
@@ -3451,10 +3457,10 @@
                 "/ajaxpostuserstatus";
               try {
                 if (u.De.IN_STEAMUI) {
-                  let e = M.gA.Init(f.Sv);
+                  let e = w.gA.Init(f.Sv);
                   e.Body().set_appid(t), e.Body().set_status_text(i);
                   let n = yield f.lk.PostStatusToFriends(
-                    w.Q8.CMInterface.GetServiceTransport(),
+                    M.Q8.CMInterface.GetServiceTransport(),
                     e
                   );
                   if (1 != n.GetEResult()) {

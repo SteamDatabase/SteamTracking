@@ -658,7 +658,7 @@
       "use strict";
       n.d(t, { F: () => a });
       var a;
-      n(51637);
+      n(42770);
       !(function (e) {
         (e[(e.k_EPurchaseReservationState_NotReserved = 0)] =
           "k_EPurchaseReservationState_NotReserved"),
@@ -691,7 +691,7 @@
         o = n(52868),
         r = n.n(o),
         l = n(89526),
-        c = (n(51637), n(62983)),
+        c = (n(42770), n(62983)),
         d = (n(84770), n(54671)),
         u = (n(36704), n(57858)),
         m = n(85886),
@@ -1528,7 +1528,7 @@
         i = (n(84770), n(52868)),
         s = n.n(i),
         o = n(89526),
-        r = (n(46132), n(51637), n(63403), n(23217)),
+        r = (n(46132), n(42770), n(63403), n(23217)),
         l = n(85246),
         c = n(4306),
         d = n(32765);
@@ -1842,7 +1842,7 @@
         i = n(52868),
         s = n.n(i),
         o = n(89526),
-        r = (n(46132), n(51637), n(84646)),
+        r = (n(46132), n(42770), n(84646)),
         l = (n(63403), n(23217)),
         c = n(85246),
         d = n(4306),
@@ -2579,7 +2579,7 @@
       "use strict";
       n.d(t, { M: () => c });
       var a = n(33940),
-        i = (n(47165), n(50265), n(51637), n(52868)),
+        i = (n(47165), n(50265), n(42770), n(52868)),
         s = n.n(i),
         o = n(32765),
         r = n(10412),
@@ -2622,7 +2622,7 @@
       var a,
         i = n(33940),
         s = n(50265),
-        o = (n(89526), n(51637), n(84770), n(23801)),
+        o = (n(89526), n(42770), n(84770), n(23801)),
         r = n(85246),
         l = n(4306),
         c = n(32765),
@@ -2921,7 +2921,7 @@
         o = n(89526),
         r = n(74802),
         l = n(46132),
-        c = (n(51637), n(31782)),
+        c = (n(42770), n(51438)),
         d = (n(84770), n(47165), n(53236), n(1063)),
         u = n(82079),
         m = (n(72329), n(85651)),
@@ -2969,9 +2969,9 @@
           n.e(149),
           n.e(9886),
           n.e(4881),
-          n.e(2529),
           n.e(5300),
           n.e(8878),
+          n.e(2529),
           n.e(5938),
           n.e(1614),
           n.e(4193),
@@ -3770,7 +3770,7 @@
       n.d(t, { n: () => y });
       var a = n(88464),
         i = n(89526),
-        s = (n(51637), n(84770)),
+        s = (n(42770), n(84770)),
         o = n(47165),
         r = n(82079),
         l = n(54671),
@@ -4080,8 +4080,8 @@
       "use strict";
       n.d(t, { oZ: () => I, sE: () => w });
       var a = n(89526),
-        i = (n(51637), n(44026)),
-        s = n(31782),
+        i = (n(42770), n(44026)),
+        s = n(51438),
         o = (n(72119), n(18712), n(54507), n(82079), n(61218)),
         r = n(54671),
         l = n(25871),
@@ -4384,7 +4384,7 @@
         I = n(82079),
         w = n(207),
         G = n(50265),
-        k = (n(46132), n(51637), n(47165));
+        k = (n(46132), n(42770), n(47165));
       n(63403);
       class L {
         constructor() {
@@ -4715,7 +4715,7 @@
           )
         );
       });
-      var P = n(31782),
+      var P = n(51438),
         R = n(44026),
         M = n(88443),
         x = n(82707),
@@ -5058,7 +5058,7 @@
         b = n(69338),
         C = n(32765),
         y = n(23217),
-        D = (n(51637), n(47165), n(50265));
+        D = (n(42770), n(47165), n(50265));
       n(63403);
       const I = new (class {
         DeleteForumTopic(e, t, n, i, o) {
@@ -5819,7 +5819,7 @@
       n.d(t, { I: () => u });
       var a = n(89526),
         i = n(74802),
-        s = (n(51637), n(85246)),
+        s = (n(42770), n(85246)),
         o = n(56368),
         r = (n(53236), n(84770), n(91656)),
         l = n(61615);
@@ -5881,7 +5881,7 @@
         s = n.n(i),
         o = n(88464),
         r = n(89526),
-        l = (n(51637), n(84770), n(47165), n(53236), n(56368)),
+        l = (n(42770), n(84770), n(47165), n(53236), n(56368)),
         c = (n(10412), n(52316)),
         d = n(88260),
         u = n(99307),
@@ -6041,8 +6041,8 @@
         r = n(25125),
         l = n(89526),
         c = n(46132),
-        d = (n(51637), n(62983)),
-        u = n(31782),
+        d = (n(42770), n(62983)),
+        u = n(51438),
         m = n(16221),
         p = n(84770),
         _ = n(47165),
@@ -6467,7 +6467,7 @@
         s = n(4306),
         o = n(73807),
         r = n.n(o),
-        l = n(31782);
+        l = n(51438);
       class c extends i.Component {
         constructor() {
           super(...arguments),
@@ -6551,7 +6551,7 @@
       var a,
         i = n(88464),
         s = n(89526),
-        o = (n(24174), n(51637), n(98009)),
+        o = (n(24174), n(42770), n(98009)),
         r = (n(36704), n(25871)),
         l = n(55290),
         c = n.n(l),
@@ -6724,7 +6724,7 @@
       n.d(t, { HQ: () => v, wM: () => S, jd: () => f });
       var a = n(25125),
         i = n(89526),
-        s = (n(51637), n(84770), n(54507)),
+        s = (n(42770), n(84770), n(54507)),
         o = n(32765),
         r = n(54856),
         l = n(36597);
@@ -6915,13 +6915,13 @@
       var a = n(89526),
         i = n(59934),
         s = n(46132),
-        o = n(31782),
+        o = n(51438),
         r = n(84770),
         l = n(5080),
         c = (n(75687), n(87108)),
         d = n(85651),
         u = n(74710),
-        m = n(51637),
+        m = n(42770),
         p = n(62983),
         _ = n(98009),
         g = n(25871),
@@ -11355,9 +11355,9 @@
             n.e(149),
             n.e(9886),
             n.e(4881),
-            n.e(2529),
             n.e(5300),
             n.e(8878),
+            n.e(2529),
             n.e(5938),
             n.e(1614),
             n.e(4193),
@@ -13328,8 +13328,9 @@
             )
           : null;
       }
-      var fa = n(24174),
-        Ea = (n(93134), n(60016)),
+      n(93134);
+      var fa = n(13345),
+        Ea = n(60016),
         ba = n(77557),
         Ca = n(34976),
         ya = n(58218),
@@ -13465,12 +13466,7 @@
           V = (0, a.useMemo)(
             () =>
               j
-                ? (0, Kn.et)(
-                    E.quiz.last_revealed_footer_img_url.replace(
-                      fa.A1,
-                      k.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
-                    )
-                  )
+                ? (0, Kn.et)((0, fa.pd)(E.quiz.last_revealed_footer_img_url))
                 : null,
             [
               j,
@@ -17579,7 +17575,7 @@
             const n = (0, s.jM)(k.De.LANGUAGE),
               a = M.LZ.GetWithFallback(t.localized_track_image, n),
               i = this.m_mapAnnounceGIDToSaleClanID.get(e.AnnouncementGID);
-            return k.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${i}/${a}`;
+            return `${(0, fa.OL)()}${i}/${a}`;
           }
         }
         BHasTracks() {
@@ -21653,7 +21649,7 @@
         tT: () => P,
       });
       var a = n(89526),
-        i = (n(46132), n(31782)),
+        i = (n(46132), n(51438)),
         s = n(16221),
         o = n(84770),
         r = (n(53236), n(56368)),
@@ -22134,7 +22130,7 @@
       "use strict";
       n.d(t, { E: () => I, T: () => D });
       var a = n(89526),
-        i = (n(51637), n(84770), n(84646)),
+        i = (n(42770), n(84770), n(84646)),
         s = n(98009),
         o = n(54671),
         r = n(79365),
@@ -22646,7 +22642,7 @@
       "use strict";
       n.d(t, { C: () => u, Y: () => d });
       var a = n(89526),
-        i = (n(51637), n(84770), n(84646), n(79365)),
+        i = (n(42770), n(84770), n(84646), n(79365)),
         s = n(14826),
         o = n(17547),
         r = n(69338),
@@ -23072,44 +23068,45 @@
     },
     34714: (e, t, n) => {
       "use strict";
-      n.d(t, { R: () => I, t: () => G });
+      n.d(t, { R: () => w, t: () => k });
       var a = n(89526),
-        i = (n(46132), n(51637), n(84770), n(5080)),
+        i = (n(46132), n(42770), n(84770), n(5080)),
         s = n(98009),
-        o = n(8894),
-        r = n(57605),
-        l = n(29054),
-        c = n.n(l),
-        d = n(61963),
-        u = n(17318),
-        m = n.n(u),
-        p = n(99028),
-        _ = n(45429),
-        g = n(23280),
-        v = n(43946),
-        h = n(46294),
-        S = n(71161),
-        f = n(19304),
-        E = n(14826),
-        b = n(32765),
-        C = n(48294),
-        y = n.n(C),
-        D = n(58298);
-      function I(e) {
+        o = n(13345),
+        r = n(8894),
+        l = n(57605),
+        c = n(29054),
+        d = n.n(c),
+        u = n(61963),
+        m = n(17318),
+        p = n.n(m),
+        _ = n(99028),
+        g = n(45429),
+        v = n(23280),
+        h = n(43946),
+        S = n(46294),
+        f = n(71161),
+        E = n(19304),
+        b = n(14826),
+        C = n(32765),
+        y = n(48294),
+        D = n.n(y),
+        I = n(58298);
+      function w(e) {
         const { event: t, activeTab: n, section: i } = e,
-          [s, r] = a.useState(null),
-          l = (0, o.wG)(i.itemdefs[0].nAppID, i.itemdefs);
+          [s, o] = a.useState(null),
+          l = (0, r.wG)(i.itemdefs[0].nAppID, i.itemdefs);
         return (
           a.useEffect(
-            () => r(i.itemdefs.filter((e) => n.ShouldShowOnTab(e.nAppID))),
+            () => o(i.itemdefs.filter((e) => n.ShouldShowOnTab(e.nAppID))),
             [i.itemdefs, n]
           ),
           (null == s ? void 0 : s.length) > 0 && l
-            ? a.createElement(w, Object.assign({ itemDefSettings: s }, e))
+            ? a.createElement(G, Object.assign({ itemDefSettings: s }, e))
             : null
         );
       }
-      function w(e) {
+      function G(e) {
         const {
             event: t,
             activeTab: n,
@@ -23117,8 +23114,8 @@
             itemDefSettings: o,
             language: r,
           } = e,
-          l = (0, b.id)(),
-          d = {
+          l = (0, C.id)(),
+          c = {
             saleEvent: t,
             section: s,
             itemdefs: o,
@@ -23129,106 +23126,105 @@
             bInGamepadUI: l,
             activeTab: n,
           };
-        let { content: u, bAdditionalContent: m } = (0, p.Rs)(d);
+        let { content: u, bAdditionalContent: m } = (0, _.Rs)(c);
         return a.createElement(
-          S.ZP,
+          f.ZP,
           { feature: "itemdef", depth: n.GetActiveTabUniqueID() },
           a.createElement(
-            h.Y,
+            S.Y,
             {
               placeholderHeight: 250,
               rootMargin: i.HG,
-              className: (0, f.Z)(
-                y().SaleSection,
-                s.show_as_carousel && y().CarouselDisplay,
-                c().SaleSectionCtn,
+              className: (0, E.Z)(
+                D().SaleSection,
+                s.show_as_carousel && D().CarouselDisplay,
+                d().SaleSectionCtn,
                 "SaleSectionForCustomCSS"
               ),
-              style: (0, g.V)(s, t, l),
+              style: (0, v.V)(s, t, l),
             },
             a.createElement(
               "div",
-              { className: y().SaleSectionTitleCtn },
+              { className: D().SaleSectionTitleCtn },
               a.createElement(
-                _.AO,
+                g.AO,
                 Object.assign({}, e, { nHiddenCapsules: 0 })
               )
             ),
             u,
-            a.createElement(v.r, { section: s })
+            a.createElement(h.r, { section: s })
           )
         );
       }
-      function G(e) {
+      function k(e) {
         const {
             itemDefSetting: t,
             language: n,
             clanAccountID: i,
-            strCallToAction: r,
+            strCallToAction: l,
           } = e,
-          l = (0, o.$4)(t.nAppID, t.nItemDefID),
-          [c, u] = a.useState(1),
-          m = (0, S.bJ)();
-        if (!l) return null;
-        let p = E.LZ.GetWithFallback(t.localized_itemdef_capsule, n);
-        (null == p ? void 0 : p.length) > 0 &&
-          (p = b.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${i}/${p}`);
-        const _ = (0, s.Hf)(
-          b.De.STORE_BASE_URL + `buyitem/${l.nAppID}/${l.nItemDefID}/${c}`,
-          m
+          c = (0, r.$4)(t.nAppID, t.nItemDefID),
+          [d, m] = a.useState(1),
+          p = (0, f.bJ)();
+        if (!c) return null;
+        let _ = b.LZ.GetWithFallback(t.localized_itemdef_capsule, n);
+        (null == _ ? void 0 : _.length) > 0 && (_ = `${(0, o.OL)()}/${i}/${_}`);
+        const g = (0, s.Hf)(
+          C.De.STORE_BASE_URL + `buyitem/${c.nAppID}/${c.nItemDefID}/${d}`,
+          p
         );
         return a.createElement(
           "div",
-          { className: (0, f.Z)(D.ItemDefCtn, "ItemDefCtn") },
+          { className: (0, E.Z)(I.ItemDefCtn, "ItemDefCtn") },
           a.createElement(
             "a",
-            { href: _, className: (0, f.Z)(D.ItemDefImgCtn, "ItemDefImgCtn") },
+            { href: g, className: (0, E.Z)(I.ItemDefImgCtn, "ItemDefImgCtn") },
             a.createElement(
               "div",
-              { style: { backgroundColor: l.strBackgroundColor } },
+              { style: { backgroundColor: c.strBackgroundColor } },
               a.createElement("img", {
-                src: (null == p ? void 0 : p.length) > 0 ? p : l.strImgURL,
+                src: (null == _ ? void 0 : _.length) > 0 ? _ : c.strImgURL,
               })
             )
           ),
           a.createElement(
             "a",
             {
-              href: _,
-              className: (0, f.Z)(D.ItemDefNameCtn, "ItemDefNameCtn"),
+              href: g,
+              className: (0, E.Z)(I.ItemDefNameCtn, "ItemDefNameCtn"),
             },
-            a.createElement("div", null, l.strName)
+            a.createElement("div", null, c.strName)
           ),
           a.createElement(
             "div",
-            { className: D.QuanityAndPrice },
+            { className: I.QuanityAndPrice },
             a.createElement(
               "div",
-              { className: D.PriceCtn },
-              a.createElement(d.nk, {
-                formatted_final_price: l.strFormattedFinalPrice,
-                formatted_orig_price: l.strFormattedOrigPrice,
-                discount_percent: l.nDiscountPercent,
+              { className: I.PriceCtn },
+              a.createElement(u.nk, {
+                formatted_final_price: c.strFormattedFinalPrice,
+                formatted_orig_price: c.strFormattedOrigPrice,
+                discount_percent: c.nDiscountPercent,
               })
             ),
-            a.createElement(k, {
-              nQuantity: c,
-              fnSetQuantity: u,
+            a.createElement(L, {
+              nQuantity: d,
+              fnSetQuantity: m,
               itemDefSetting: t,
             })
           ),
-          Boolean(r) &&
+          Boolean(l) &&
             a.createElement(
               "a",
               {
-                href: _,
-                className: (0, f.Z)(D.ItemActionBtn, "ItemActionBtn"),
+                href: g,
+                className: (0, E.Z)(I.ItemActionBtn, "ItemActionBtn"),
               },
-              r
+              l
             )
         );
       }
-      function k(e) {
+      function L(e) {
         const { nQuantity: t, fnSetQuantity: n, itemDefSetting: i } = e;
         if (Boolean(i.max_quantity > 1)) {
           const e = [];
@@ -23236,9 +23232,9 @@
             e.push({ label: "" + t, data: t });
           return a.createElement(
             "div",
-            { className: D.dropdown },
-            a.createElement(r.ry, {
-              strDropDownClassName: (0, f.Z)(m().DropDownScroll),
+            { className: I.dropdown },
+            a.createElement(l.ry, {
+              strDropDownClassName: (0, E.Z)(p().DropDownScroll),
               rgOptions: e,
               selectedOption: t,
               onChange: (e) => n(e.data),
@@ -23425,7 +23421,7 @@
       var a = n(89526),
         i = (n(84770), n(66615)),
         s = n(32765),
-        o = n(31782),
+        o = n(51438),
         r = n(98009),
         l = (n(53143), n(87108)),
         c = (n(36704), n(76315)),
@@ -23709,7 +23705,7 @@
       };
       var A = n(61141),
         T = n(88464),
-        N = (n(51637), n(55290)),
+        N = (n(42770), n(55290)),
         P = n.n(N),
         R = n(44865),
         M = n(12681),
@@ -23940,9 +23936,9 @@
     },
     45429: (e, t, n) => {
       "use strict";
-      n.d(t, { AO: () => h, YK: () => g, _U: () => v, iM: () => E });
+      n.d(t, { AO: () => S, YK: () => v, _U: () => h, iM: () => b });
       var a = n(89526),
-        i = (n(46132), n(51637), n(84770), n(47165)),
+        i = (n(46132), n(42770), n(84770), n(47165)),
         s = n(61218),
         o = n(19304),
         r = n(32765),
@@ -23952,8 +23948,9 @@
         u = n(84343),
         m = n(14826),
         p = n(80298),
-        _ = n(48294);
-      function g(e, t) {
+        _ = n(48294),
+        g = n(13345);
+      function v(e, t) {
         return (
           m.LZ.GetWithFallback(e.localized_label, t) ||
           ("#Sale_default_label" === e.default_label
@@ -23961,8 +23958,8 @@
             : (0, m.Xx)(e.default_label))
         );
       }
-      function v(e, t, n, o) {
-        const l = (function (e) {
+      function h(e, t, n, o) {
+        const r = (function (e) {
           if ("items" === e.section_type)
             switch (e.smart_section_type) {
               case "wishlist":
@@ -23990,20 +23987,20 @@
             ? "#Sale_SaleEvent_Section"
             : null;
         })(e);
-        if (null !== l) return l && l.startsWith("#") ? (0, m.Xx)(l) : l;
-        const c =
+        if (null !== r) return r && r.startsWith("#") ? (0, m.Xx)(r) : r;
+        const l =
             m.LZ.GetWithFallback(e.localized_label, t) ||
             ("#Sale_default_label" === e.default_label
               ? ""
               : (0, m.Xx)(e.default_label)),
-          d = m.LZ.GetWithFallback(e.localized_label_image, t);
-        if (!o && d) {
-          const e = r.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${n}/${d}`;
-          return a.createElement("img", { loading: "lazy", src: e, alt: c });
+          c = m.LZ.GetWithFallback(e.localized_label_image, t);
+        if (!o && c) {
+          const e = `${(0, g.OL)()}${n}/${c}`;
+          return a.createElement("img", { loading: "lazy", src: e, alt: l });
         }
-        return c;
+        return l;
       }
-      const h = (e) => {
+      const S = (e) => {
         const {
             section: t,
             event: n,
@@ -24012,9 +24009,9 @@
             title: l,
             subtitle: g,
           } = e,
-          h = l || v(t, i, n.clanSteamID.GetAccountID());
-        if (!h) return null;
-        const E =
+          v = l || h(t, i, n.clanSteamID.GetAccountID());
+        if (!v) return null;
+        const S =
           g ||
           (function (e, t) {
             return (
@@ -24029,9 +24026,9 @@
             "div",
             {
               className: (0, o.Z)(c().SaleSectionHeader, "SaleSectionHeader"),
-              style: S(t, n, i),
+              style: f(t, n, i),
             },
-            h
+            v
           ),
           C = a.createElement(
             "div",
@@ -24041,9 +24038,9 @@
                 c().SaleSectionSubtitle,
                 "SaleSectionSubtitle"
               ),
-              style: f(t, n, i),
+              style: E(t, n, i),
             },
-            E
+            S
           );
         const y = e.link || t.label_link;
         let D = null;
@@ -24072,7 +24069,7 @@
             "div",
             { className: p.SectionTitleInnerCtn },
             b,
-            Boolean(E) && C
+            Boolean(S) && C
           ),
           a.createElement(
             "div",
@@ -24099,9 +24096,9 @@
           )
         );
       };
-      function S(e, t, n) {
+      function f(e, t, n) {
         return {
-          fontFamily: E(t.jsondata.sale_font, n),
+          fontFamily: b(t.jsondata.sale_font, n),
           fontWeight: t.jsondata.sale_font_weight,
           fontSize: `${t.jsondata.sale_section_font_size}px`,
           textTransform: t.jsondata.sale_section_disable_capitalize
@@ -24110,9 +24107,9 @@
           color: e.label_color,
         };
       }
-      function f(e, t, n) {
+      function E(e, t, n) {
         return {
-          fontFamily: E(t.jsondata.sale_font, n),
+          fontFamily: b(t.jsondata.sale_font, n),
           fontWeight: 300,
           fontSize: `${
             t.jsondata.sale_section_font_size &&
@@ -24127,7 +24124,7 @@
           opacity: "50%",
         };
       }
-      function E(e, t) {
+      function b(e, t) {
         return (
           (e = e || ""),
           12 === t
@@ -24158,7 +24155,7 @@
       n.d(t, { j: () => w, r: () => k });
       var a = n(25125),
         i = n(89526),
-        s = (n(51637), n(84770), n(5080)),
+        s = (n(42770), n(84770), n(5080)),
         o = n(98009),
         r = (n(6681), n(16899), n(43658)),
         l = n(29054),
@@ -24330,7 +24327,7 @@
       n.d(t, { t6: () => w });
       var a = n(33940),
         i = n(89526),
-        s = n(51637),
+        s = n(42770),
         o = (n(72329), n(10412), n(45711)),
         r = n(17318),
         l = n.n(r),
@@ -24609,8 +24606,8 @@
       var a = n(33940),
         i = n(25125),
         s = n(89526),
-        o = (n(51637), n(36262)),
-        r = n(31782),
+        o = (n(42770), n(36262)),
+        r = n(51438),
         l = (n(11301), n(47165), n(53143), n(3609), n(10521), n(79149)),
         c = n(54671),
         d = n(57858),
@@ -24984,7 +24981,7 @@
         E = n(34714),
         b = n(69338),
         C = n(29054),
-        y = (n(51637), n(93883)),
+        y = (n(42770), n(93883)),
         D = n(16947);
       function I(e) {
         return e < 10 ? "0" + e : e;

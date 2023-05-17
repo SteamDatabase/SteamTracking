@@ -1601,6 +1601,24 @@ function OnChangeChildInheritRating()
 	$J( "#tab_ratings_content" ).addClass( "child_" + childInheritRating );
 }
 
+function OnChangeChildInheritSysReq()
+{
+	var childInheritSysReq = $J( "input[name='app[game][child_inherit_system_requirements]']:checked" ).val();
+	var SysReqWrapper = document.getElementById( 'SysReqWrapper'  );
+	var SysReqPlatforms = document.getElementById( 'SysReqPlatforms'  );
+
+	if ( 'inherit_sysreq' == childInheritSysReq )
+	{
+		SysReqWrapper.setAttribute( "hidden", "hidden" );
+		SysReqPlatforms.setAttribute( "hidden", "hidden" );
+	}
+	else
+	{
+		SysReqWrapper.removeAttribute( "hidden" );
+		SysReqPlatforms.removeAttribute( "hidden" );
+	}
+}
+
 function CopyRatingsFromParent( itemid )
 {
 	var waitDialog = ShowBlockingWaitDialog( 'Please Wait', 'Please wait while we copy the ratings from this item\'s parent...' );

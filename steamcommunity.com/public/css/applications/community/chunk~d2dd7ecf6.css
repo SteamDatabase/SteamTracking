@@ -339,6 +339,10 @@ strong {
   padding-left: 16px;
   border-left: 1px solid #505662;
 }
+.partnereventsale_SettingCtn_32UTR.partnereventsale_CustomCssCtn_3evFC
+  textarea {
+  font-family: monospace;
+}
 .partnereventsale_AddSectionBtnCtn_3afet {
   margin-bottom: 60px;
   background: #000;
@@ -7210,6 +7214,31 @@ td.rdtYear:hover {
 .salepointshopwidgeteditor_DropDown_u_cLt {
   width: 500px;
 }
+.importexportdialog_Label_RRbwy {
+  width: 100%;
+  height: 100%;
+  color: #ebebeb;
+}
+.importexportdialog_ImportLocSampleButtonCtn_2LkAY {
+  margin: 10px auto;
+  max-width: 450px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.importexportdialog_ImportLocSampleButtonCtn_2LkAY button {
+  padding: 0px 20px;
+}
+.importexportdialog_ImportLocSampleButtonCtn_2LkAY
+  .importexportdialog_SampleTitle_BnzCu {
+  margin: 10px auto;
+}
+.importexportdialog_ImportButton_3JC9N {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
 .partnereventsavebutton_SavedImage_1y3QV {
   height: 12px;
   width: 12px;
@@ -7245,29 +7274,4 @@ td.rdtYear:hover {
 }
 .partnereventcontrolbars_EventPublished_3zTXC {
   color: #a3cf06;
-}
-.importexportdialog_Label_RRbwy {
-  width: 100%;
-  height: 100%;
-  color: #ebebeb;
-}
-.importexportdialog_ImportLocSampleButtonCtn_2LkAY {
-  margin: 10px auto;
-  max-width: 450px;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.importexportdialog_ImportLocSampleButtonCtn_2LkAY button {
-  padding: 0px 20px;
-}
-.importexportdialog_ImportLocSampleButtonCtn_2LkAY
-  .importexportdialog_SampleTitle_BnzCu {
-  margin: 10px auto;
-}
-.importexportdialog_ImportButton_3JC9N {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
 }

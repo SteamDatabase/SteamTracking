@@ -50,7 +50,7 @@
       n.d(t, { C: () => d, R: () => c });
       var a = n(33940),
         i = n(50265),
-        s = (n(46132), n(84770), n(51637), n(47165)),
+        s = (n(46132), n(84770), n(42770), n(47165)),
         o = (n(91656), n(85651)),
         r = n(10412);
       class c {
@@ -214,7 +214,7 @@
         o = n(50265),
         r = n(25125),
         c = n(89526),
-        d = (n(51637), n(63403), n(26464)),
+        d = (n(42770), n(63403), n(26464)),
         u = n(85246),
         l = n(4306),
         w = n(32765);
@@ -431,19 +431,20 @@
     },
     55330: (e, t, n) => {
       "use strict";
-      n.d(t, { i: () => l });
+      n.d(t, { i: () => w });
       var a = n(89526),
         i = n(46132),
         s = n(68818),
-        o = n(19304),
-        r = n(14826),
-        c = n(207),
-        d = n(32765),
-        u = n(72775);
-      function l(e) {
+        o = n(13345),
+        r = n(19304),
+        c = n(14826),
+        d = n(207),
+        u = n(32765),
+        l = n(72775);
+      function w(e) {
         const { gidEvent: t } = e,
           n = (0, s.XC)(t),
-          [l, w] = (0, a.useMemo)(() => {
+          [w, _] = (0, a.useMemo)(() => {
             var e, t, a, s;
             if (
               (null ===
@@ -461,12 +462,12 @@
                 ? void 0
                 : s.length) > 0
             ) {
-              const e = (0, i.jM)(d.De.LANGUAGE),
-                t = r.LZ.GetWithFallback(
+              const e = (0, i.jM)(u.De.LANGUAGE),
+                t = c.LZ.GetWithFallback(
                   n.jsondata.localized_sale_product_banner,
                   e
                 ),
-                a = r.LZ.GetWithFallback(
+                a = c.LZ.GetWithFallback(
                   n.jsondata.localized_sale_product_mobile_banner,
                   e
                 );
@@ -475,26 +476,23 @@
                 (null == a ? void 0 : a.length) > 0
               ) {
                 const e = n.clanSteamID.GetAccountID();
-                return [
-                  d.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${t}`,
-                  d.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${a}`,
-                ];
+                return [`${(0, o.OL)()}${e}/${t}`, `${(0, o.OL)()}${e}/${a}`];
               }
             }
             return [null, null];
           }, [n]);
-        return (null == l ? void 0 : l.length) > 0 &&
-          (null == w ? void 0 : w.length) > 0
+        return (null == w ? void 0 : w.length) > 0 &&
+          (null == _ ? void 0 : _.length) > 0
           ? a.createElement(
               "a",
-              { href: (0, c.OL)(n.GetSaleURL()), className: u.Link },
-              a.createElement("img", {
-                src: l,
-                className: (0, o.Z)(u.Banner, u.Big),
-              }),
+              { href: (0, d.OL)(n.GetSaleURL()), className: l.Link },
               a.createElement("img", {
                 src: w,
-                className: (0, o.Z)(u.Banner, u.Mobile),
+                className: (0, r.Z)(l.Banner, l.Big),
+              }),
+              a.createElement("img", {
+                src: _,
+                className: (0, r.Z)(l.Banner, l.Mobile),
               })
             )
           : null;

@@ -390,7 +390,7 @@
     },
     4472: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => we });
+      a.r(t), a.d(t, { default: () => Le });
       var s = a(96927),
         r = a(33940),
         i = a(88337),
@@ -639,7 +639,7 @@
         b = a(59934),
         S = a(65889),
         C = a(57605),
-        y = a(51637),
+        y = a(42770),
         E = a(88464),
         A = a(19304);
       class I extends _.Component {
@@ -1797,8 +1797,8 @@
             );
           });
       })(X || (X = {}));
-      var Q = a(11195),
-        $ = (a(36704), a(57858));
+      var $ = a(11195),
+        Q = (a(36704), a(57858));
       class V {
         constructor(e) {
           this.m_SteamInterface = e;
@@ -1811,8 +1811,8 @@
         constructor(e, t, a, s, r) {
           this.m_callbacksLoaded = new N.pB();
           const i = M.gA.Init(H);
-          (0, Q.pA)(i),
-            r && (0, Q.De)(i, r),
+          (0, $.pA)(i),
+            r && (0, $.De)(i, r),
             i.Body().set_steamid(t || o.L7.steamid),
             s && i.Body().set_clusters_to_return(s),
             i.Body().set_sort(a),
@@ -1829,7 +1829,7 @@
         ReadCluster(e, t) {
           let a;
           return (
-            t && (a = e.similar_items().map((e) => $.Z.Get().ReadItem(e, t))),
+            t && (a = e.similar_items().map((e) => Q.Z.Get().ReadItem(e, t))),
             {
               nClusterID: e.cluster_id(),
               nPlaytimeMinutes: e.playtime_forever(),
@@ -2640,7 +2640,8 @@
       (0, r.gn)([p.ak], Ae.prototype, "OnSubmit", null),
         (0, r.gn)([p.ak], Ae.prototype, "OnChangeAuthCode", null),
         (Ae = (0, r.gn)([E.Pi], Ae));
-      const Ie = [
+      var Ie = a(27070);
+      const ve = [
         {
           path: "similarity",
           render: () => _.createElement(B, null),
@@ -2654,11 +2655,10 @@
           requires_login: !0,
         },
       ];
-      let ve = (0, o.kQ)("labs", "application_config"),
-        Le = new n.J(o.De.WEBAPI_BASE_URL, ve.webapi_token);
-      function we(e) {
+      function Le(e) {
         const [t, a] = _.useState(!1),
-          r = !!ve.webapi_token;
+          r = o.L7.logged_in,
+          i = (0, Ie.lS)();
         if (
           ((0, _.useEffect)(() => {
             g.Init(), a(!0);
@@ -2666,7 +2666,7 @@
           !t)
         )
           return _.createElement("div", { className: S.App });
-        const i = { SteamInterface: Le };
+        const n = { SteamInterface: i };
         return _.createElement(
           "div",
           { className: S.App },
@@ -2686,7 +2686,7 @@
             _.createElement(
               "div",
               { className: S.Tabs },
-              Ie.map((e) =>
+              ve.map((e) =>
                 _.createElement(
                   f.OL,
                   {
@@ -2708,14 +2708,14 @@
                 _.createElement(
                   b.rs,
                   null,
-                  Ie.map((e, t) =>
+                  ve.map((e, t) =>
                     _.createElement(b.AW, {
                       key: e.path,
                       path: `${s.Z.LabsSandbox()}/${e.path}`,
                       render: (t) =>
                         !e.requires_login || r
-                          ? e.render(Object.assign(Object.assign({}, t), i))
-                          : _.createElement(Re, null),
+                          ? e.render(Object.assign(Object.assign({}, t), n))
+                          : _.createElement(we, null),
                     })
                   )
                 )
@@ -2724,7 +2724,7 @@
           )
         );
       }
-      function Re() {
+      function we() {
         return _.createElement(
           "div",
           null,

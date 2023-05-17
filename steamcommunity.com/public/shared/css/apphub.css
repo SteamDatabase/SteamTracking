@@ -1519,6 +1519,7 @@ h3.apphub_responsive_menu_title {
 	background-color: rgba( 255, 255, 255, 0.1 );
 	box-shadow: 0 0 5px 0 #000000;
 	margin-top: -100px;
+	margin-bottom: 50px;
 }
 
 .contentcheck_header {
@@ -1557,10 +1558,6 @@ h3.apphub_responsive_menu_title {
 
 .contentcheck_settings_ctn > a {
 	text-decoration: underline;
-}
-
-.contentcheck_type_ctn {
-	margin-top: 50px;
 }
 
 .adultcontent_warningbar_ctn.iframe {

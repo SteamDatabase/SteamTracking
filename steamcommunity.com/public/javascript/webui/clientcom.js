@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8056171";
+var CLSTAMP = "8063824";
 (() => {
   "use strict";
   function e(e) {
@@ -20,6 +20,7 @@ var CLSTAMP = "8056171";
     AVATAR_BASE_URL: "",
     MEDIA_CDN_COMMUNITY_URL: "",
     MEDIA_CDN_URL: "",
+    CLAN_CDN_ASSET_URL: "",
     COMMUNITY_CDN_URL: "",
     COMMUNITY_CDN_ASSET_URL: "",
     BASE_URL_SHARED_CDN: "",
@@ -169,8 +170,8 @@ var CLSTAMP = "8056171";
     u && (Object.assign(i, u), (l.broadcastConfig = !0));
     const p = E("community", r);
     p && (Object.assign(a, p), (l.communityConfig = !0));
-    const d = E("event", r);
-    return d && (Object.assign(_, d), (l.eventConfig = !0)), l;
+    const k = E("event", r);
+    return k && (Object.assign(_, k), (l.eventConfig = !0)), l;
   }
   function E(e, t = s) {
     return m(e, t, !0);
@@ -199,7 +200,7 @@ var CLSTAMP = "8056171";
     else n && console.error("Missing config element #", t);
   }
   const S = "presentation_mode";
-  var u, p, d, k, C, g, I, A, y, R, h, M, T, P;
+  var u, p, k, d, I, C, g, A, y, T, h, R, M, P, N;
   !(function (e) {
     (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
       "k_EConnectivityTestResult_Unknown"),
@@ -243,7 +244,7 @@ var CLSTAMP = "8056171";
           "k_ESuspendResumeProgressState_WaitingForApp"),
         (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
           "k_ESuspendResumeProgressState_Working");
-    })(d || (d = {})),
+    })(k || (k = {})),
     (function (e) {
       (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
         "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -253,7 +254,7 @@ var CLSTAMP = "8056171";
           "k_EFloatingGamepadTextInputModeModeEmail"),
         (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
           "k_EFloatingGamepadTextInputModeModeNumeric");
-    })(k || (k = {})),
+    })(d || (d = {})),
     (function (e) {
       (e[(e.k_EAppUpdateContentType_Content = 0)] =
         "k_EAppUpdateContentType_Content"),
@@ -263,20 +264,20 @@ var CLSTAMP = "8056171";
           "k_EAppUpdateContentType_Shader"),
         (e[(e.k_EAppUpdateContentType_Max = 3)] =
           "k_EAppUpdateContentType_Max");
-    })(C || (C = {})),
+    })(I || (I = {})),
     (function (e) {
       (e[(e.k_EOverlayToStoreFlag_None = 0)] = "k_EOverlayToStoreFlag_None"),
         (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
           "k_EOverlayToStoreFlag_AddToCart"),
         (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
           "k_EOverlayToStoreFlag_AddToCartAndShow");
-    })(g || (g = {})),
+    })(C || (C = {})),
     (function (e) {
       (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
         "k_EActivateGameOverlayToWebPageMode_Default"),
         (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
           "k_EActivateGameOverlayToWebPageMode_Modal");
-    })(I || (I = {})),
+    })(g || (g = {})),
     (function (e) {
       (e[(e.k_EGamingDeviceType_Unknown = 0)] = "k_EGamingDeviceType_Unknown"),
         (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
@@ -323,7 +324,7 @@ var CLSTAMP = "8056171";
           "k_ECommunityProfileItemProperty_MovieWebMSmall"),
         (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
           "k_ECommunityProfileItemProperty_MovieMP4Small");
-    })(R || (R = {})),
+    })(T || (T = {})),
     (function (e) {
       (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
         "k_ERaiseGameWindowResult_NotRunning"),
@@ -338,7 +339,7 @@ var CLSTAMP = "8056171";
         (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
         (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
         (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-    })(M || (M = {})),
+    })(R || (R = {})),
     (function (e) {
       (e[(e.k_EAppReleaseState_Unknown = 0)] = "k_EAppReleaseState_Unknown"),
         (e[(e.k_EAppReleaseState_Unavailable = 1)] =
@@ -351,7 +352,13 @@ var CLSTAMP = "8056171";
           "k_EAppReleaseState_Released"),
         (e[(e.k_EAppReleaseState_Disabled = 5)] =
           "k_EAppReleaseState_Disabled");
-    })(T || (T = {})),
+    })(M || (M = {})),
+    (function (e) {
+      (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
+        (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
+        (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
+        (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+    })(P || (P = {})),
     (function (e) {
       (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
         (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -382,9 +389,9 @@ var CLSTAMP = "8056171";
         (e[(e.k_EInstallMgrStateComplete = 14)] = "k_EInstallMgrStateComplete"),
         (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
         (e[(e.k_EInstallMgrStateCanceled = 16)] = "k_EInstallMgrStateCanceled");
-    })(P || (P = {}));
-  let N = { success: !0, result: 1 };
-  class f {
+    })(N || (N = {}));
+  let f = { success: !0, result: 1 };
+  class L {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -495,9 +502,9 @@ var CLSTAMP = "8056171";
       );
     }
   }
-  let L = new (class {
+  let D = new (class {
     constructor() {
-      (this.m_connection = new f()),
+      (this.m_connection = new L()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -519,7 +526,7 @@ var CLSTAMP = "8056171";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => N,
+        () => f,
         () => this.FailureResult()
       );
     }
@@ -567,15 +574,15 @@ var CLSTAMP = "8056171";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? N : this.FailureResult(e.success)
+                  1 === e.success ? f : this.FailureResult(e.success)
                 )
             : { success: !1, result: 19, account_mismatch: !0 }
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = L),
+  (window.ClientConnectionAPI = D),
     document.addEventListener("DOMContentLoaded", function () {
-      c(), (window.ClientConnectionAPI = L);
+      c(), (window.ClientConnectionAPI = D);
     });
 })();

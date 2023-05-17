@@ -1051,15 +1051,22 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 .game_purchase_discount_countdown_pricehistorygrid {
 	display: flex;
 	justify-content: start;
+    margin-top: 8px;
 }
 
 .game_purchase_price_history {
 	border-spacing: 1px 1px;
     margin-right: 6px;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
-.game_purchase_price_history tr {
+.game_purchase_price_history tr span {
+    vertical-align: text-top;
+}
 
+.game_purchase_price_history tr span img {
+    display: inline-block;
 }
 
 .game_purchase_price_history td {
@@ -1075,6 +1082,9 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 .game_purchase_price_history thead {
     color: #b4bdc9;
 	text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .game_purchase_price_history tbody {

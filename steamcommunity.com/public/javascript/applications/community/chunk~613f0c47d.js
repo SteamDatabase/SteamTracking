@@ -7,11 +7,18 @@
     24105: (e, t, r) => {
       r.d(t, { W: () => l });
       var i = r(33940),
-        n = (r(47165), r(50265)),
-        a = (r(51637), r(18712), r(61218), r(32765)),
-        s = (r(26391), r(52868)),
-        o = r.n(s);
-      r(63403), r(46132);
+        n = r(52868),
+        a = r.n(n),
+        s = r(50265),
+        o =
+          (r(46132),
+          r(42770),
+          r(18712),
+          r(47165),
+          r(26391),
+          r(61218),
+          r(63403),
+          r(32765));
       class l {
         constructor(e) {
           (this.m_appidList = new Array()),
@@ -31,7 +38,7 @@
           (this.m_strName = e.name || ""),
             (this.m_strAvatarURLFullSize =
               e.avatar_url_full_size ||
-              "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg"),
+              "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg"),
             e.social && e.social.forEach((e) => this.m_socialList.push(e)),
             (this.m_strTagLineLoc = e.tag_line_localized || ""),
             (this.m_nFollowers = e.followers || 0),
@@ -91,17 +98,17 @@
             switch (e) {
               case "publisher":
                 return (
-                  a.De.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
+                  o.De.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
                 );
               case "franchise":
                 return (
-                  a.De.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
+                  o.De.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
                 );
             }
-            return a.De.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
+            return o.De.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
           }
           return (
-            a.De.STORE_BASE_URL +
+            o.De.STORE_BASE_URL +
             "curator/" +
             this.m_clanSteamID.GetAccountID() +
             "/"
@@ -127,7 +134,7 @@
         }
         UpdateGroupFlagsFeature(e, t) {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let r = a.De.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
+            let r = o.De.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
               i = this.m_clanAccountFlags;
             if (
               (e.forEach((e) => {
@@ -144,10 +151,10 @@
               16 & i && n.push(16),
               32 & i && n.push(32);
             let s = new FormData();
-            s.append("sessionid", a.De.SESSIONID),
+            s.append("sessionid", o.De.SESSIONID),
               s.append("clan_account_id", this.GetClanAccountID().toString()),
               s.append("accountflags", JSON.stringify(n));
-            let l = yield o().post(r, s);
+            let l = yield a().post(r, s);
             l &&
               200 == l.status &&
               1 == l.data.success &&
@@ -155,9 +162,9 @@
           });
         }
       }
-      (0, i.gn)([n.LO], l.prototype, "m_appidList", void 0),
-        (0, i.gn)([n.LO], l.prototype, "m_nFollowers", void 0),
-        (0, i.gn)([n.LO], l.prototype, "m_clanAccountFlags", void 0);
+      (0, i.gn)([s.LO], l.prototype, "m_appidList", void 0),
+        (0, i.gn)([s.LO], l.prototype, "m_nFollowers", void 0),
+        (0, i.gn)([s.LO], l.prototype, "m_clanAccountFlags", void 0);
     },
     57361: (e, t, r) => {
       r.d(t, { Am: () => l, x3: () => o });
@@ -262,7 +269,7 @@
     18712: (e, t, r) => {
       var i = r(33940),
         n = r(50265),
-        a = (r(46132), r(51637), r(6681), r(54507), r(54671), r(207)),
+        a = (r(46132), r(42770), r(6681), r(54507), r(54671), r(207)),
         s = r(32765);
       class o {
         InitFrom(e) {
@@ -1603,17 +1610,17 @@
           return "CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response";
         }
       }
-      class B extends a {
+      class C extends a {
         constructor(e = null) {
           super(),
-            B.prototype.steamid || n.aR(B.M()),
+            C.prototype.steamid || n.aR(C.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            B.sm_m ||
-              (B.sm_m = {
-                proto: B,
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
                 fields: {
                   steamid: {
                     n: 1,
@@ -1627,60 +1634,6 @@
                   },
                   expiry: { n: 3, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   deviceid: { n: 4, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                },
-              }),
-            B.sm_m
-          );
-        }
-        static MBF() {
-          return B.sm_mbf || (B.sm_mbf = n.Bh(B.M())), B.sm_mbf;
-        }
-        toObject(e = !1) {
-          return B.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(B.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(B.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new B();
-          return B.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(B.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(B.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEmbeddedClient_Token";
-        }
-      }
-      class C extends a {
-        constructor(e = null) {
-          super(),
-            C.prototype.result || n.aR(C.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
-                fields: {
-                  result: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  token: { n: 2, c: B },
                 },
               }),
             C.sm_m
@@ -1716,6 +1669,60 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEmbeddedClient_Token";
+        }
+      }
+      class B extends a {
+        constructor(e = null) {
+          super(),
+            B.prototype.result || n.aR(B.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
+                fields: {
+                  result: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  token: { n: 2, c: C },
+                },
+              }),
+            B.sm_m
+          );
+        }
+        static MBF() {
+          return B.sm_mbf || (B.sm_mbf = n.Bh(B.M())), B.sm_mbf;
+        }
+        toObject(e = !1) {
+          return B.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(B.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(B.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new B();
+          return B.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(B.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(B.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEmbeddedClient_AuthorizeDevice_Response";
@@ -1793,11 +1800,27 @@
         })(v || (v = {})),
         (function (e) {
           e.AuthorizeCurrentDevice = function (e, t) {
-            return e.SendMsg("EmbeddedClient.AuthorizeCurrentDevice#1", t, C, {
+            return e.SendMsg("EmbeddedClient.AuthorizeCurrentDevice#1", t, B, {
               ePrivilege: 1,
             });
           };
         })(L || (L = {}));
+    },
+    13345: (e, t, r) => {
+      r.d(t, { HZ: () => o, OL: () => a, pd: () => s });
+      var i = r(24174),
+        n = (r(46132), r(44973));
+      function a() {
+        return 2 == n.De.EUNIVERSE || "dev" == n.De.WEB_UNIVERSE
+          ? `${n.De.CLAN_CDN_ASSET_URL}images/`
+          : `${n.De.MEDIA_CDN_COMMUNITY_URL}images/clans/`;
+      }
+      function s(e) {
+        return (e = e.replace(i.A1, a())).replace("http://", "https://");
+      }
+      function o(e) {
+        return e.replace(/{STEAM_CLAN_IMAGE}/g, a());
+      }
     },
     82079: (e, t, r) => {
       r.d(t, { KU: () => _, sV: () => p, yh: () => h });
@@ -1806,7 +1829,7 @@
         a = r.n(n),
         s = r(50265),
         o = r(89526),
-        l = (r(46132), r(51637), r(47165)),
+        l = (r(46132), r(42770), r(47165)),
         c = (r(63403), r(23801)),
         m = r(32765),
         d = r(61218);
@@ -2150,7 +2173,7 @@
         s = r.n(a),
         o = r(50265),
         l = r(89526),
-        c = (r(51637), r(24105)),
+        c = (r(42770), r(24105)),
         m = (r(18712), r(47165)),
         d = (r(63403), r(32765));
       class u {
@@ -2340,7 +2363,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(50265),
-        o = (r(46132), r(51637), r(47165), r(63403), r(23217)),
+        o = (r(46132), r(42770), r(47165), r(63403), r(23217)),
         l = r(32765),
         c = r(89526);
       const m = "unUserdataVersion";
@@ -2865,7 +2888,7 @@
         a = r.n(n),
         s = r(50265),
         o = r(89526),
-        l = (r(46132), r(51637), r(4556)),
+        l = (r(46132), r(42770), r(4556)),
         c = r(47165),
         m = (r(63403), r(23801)),
         d = r(23217),
@@ -2998,21 +3021,21 @@
     },
     207: (e, t, r) => {
       r.d(t, {
-        Bg: () => u,
-        FM: () => a,
-        H7: () => n,
-        OL: () => p,
-        Pm: () => l,
-        XW: () => s,
-        dK: () => m,
-        et: () => c,
-        md: () => _,
+        Bg: () => p,
+        FM: () => s,
+        H7: () => a,
+        OL: () => _,
+        Pm: () => c,
+        XW: () => o,
+        dK: () => d,
+        et: () => m,
+        md: () => h,
       });
-      var i = r(32765);
-      r(51637), r(14826);
-      const n =
+      var i = r(32765),
+        n = (r(42770), r(14826), r(13345));
+      const a =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
-      function a(e) {
+      function s(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
             "im"
@@ -3020,21 +3043,21 @@
           r = e.match(t);
         return r && r.length > 5 ? r[6].toString() : e;
       }
-      function s(e) {
-        let t = a(e);
+      function o(e) {
+        let t = s(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      const o = /^(steam|ftp|https?):\/\//;
-      function l(e) {
-        return o.test(e) ? e : "https://" + e;
-      }
+      const l = /^(steam|ftp|https?):\/\//;
       function c(e) {
+        return l.test(e) ? e : "https://" + e;
+      }
+      function m(e) {
         return e
           ? 1 != i.De.EUNIVERSE
             ? e
             : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
               (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
-                (e = (e = e.replace(
+                (e = (e = (e = e.replace(
                   /https:\/\/media.steampowered.com\//g,
                   i.De.MEDIA_CDN_URL
                 )).replace(
@@ -3044,14 +3067,20 @@
                   /https:\/\/cdn.cloudflare.steamstatic.com\//g,
                   i.De.MEDIA_CDN_URL
                 )).replace(
-                /https:\/\/cdn.edgecast.steamstatic.com\//g,
-                i.De.MEDIA_CDN_URL
-              )).replace(
+                  /https:\/\/cdn.edgecast.steamstatic.com\//g,
+                  i.De.MEDIA_CDN_URL
+                )).replace(
                 /https:\/\/cdn.dota2.com\//g,
                 i.De.MEDIA_CDN_URL
               )).replace(
                 /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
                 i.De.MEDIA_CDN_URL + "steam/"
+              )).replace(
+                /https:\/\/clan.akamai.steamstatic.com\//g,
+                i.De.CLAN_CDN_ASSET_URL
+              )).replace(
+                /https:\/\/clan.cloudflare.steamstatic.com\//g,
+                i.De.CLAN_CDN_ASSET_URL
               )).replace(
                 /https:\/\/cdn.steamcommunity.com\//g,
                 i.De.COMMUNITY_CDN_URL
@@ -3070,24 +3099,21 @@
               )).replace(
                 /{MEDIA_CDN_COMMUNITY_URL}/g,
                 i.De.MEDIA_CDN_COMMUNITY_URL
-              )).replace(
-                /{COMMUNITY_CDN_URL}/g,
-                i.De.COMMUNITY_CDN_URL
-              )).replace(
-                /{STEAM_CLAN_IMAGE}/g,
-                i.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/"
-              )))
+              )).replace(/{COMMUNITY_CDN_URL}/g, i.De.COMMUNITY_CDN_URL)),
+              (e = (0, n.HZ)(e)))
           : e;
       }
-      function m(e) {
+      function d(e) {
         if (!e) return !0;
-        const t = a(e).toLocaleLowerCase();
+        const t = s(e).toLocaleLowerCase();
         return (
           [
-            a(i.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            a(i.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            a(i.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            a(i.De.STORE_CDN_URL).toLocaleLowerCase(),
+            s(i.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            s(i.De.MEDIA_CDN_URL).toLocaleLowerCase(),
+            s(i.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            s(i.De.STORE_CDN_URL).toLocaleLowerCase(),
+            s(i.De.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
+            s(i.De.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -3095,13 +3121,13 @@
           ].indexOf(t) >= 0
         );
       }
-      function d(e, t) {
+      function u(e, t) {
         return `${i.De.MEDIA_CDN_URL}steam/apps/${e}/${t}`;
       }
-      function u(e) {
-        return d(e, "header.jpg");
-      }
       function p(e) {
+        return u(e, "header.jpg");
+      }
+      function _(e) {
         return i.De.SNR &&
           i.De.SNR.length > 0 &&
           e &&
@@ -3109,7 +3135,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + i.De.SNR
           : e;
       }
-      function _(e, t) {
+      function h(e, t) {
         try {
           const r = new URL(t),
             i = new URL(e);

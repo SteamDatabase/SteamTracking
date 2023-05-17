@@ -1453,6 +1453,9 @@ html.tablet .game_area_purchase_game_wrapper .game_area_purchase_game h1 {
 html.tablet .game_purchase_discount_countdown_pricehistorygrid {
     flex-direction: column;
 }
+html.tablet .game_purchase_discount_countdown_pricehistorygrid .history_ttip {
+    display: none;
+}
 html.tablet .game_purchase_price_history {
     margin-right: 0;
 }

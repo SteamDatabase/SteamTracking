@@ -1,16 +1,16 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8056184";
+var CLSTAMP = "8063900";
 (() => {
   var __webpack_modules__ = {
       19: function (module, exports) {
         var $jscomp = $jscomp || {};
         ($jscomp.scope = {}),
-          ($jscomp.findInternal = function (e, t, o) {
+          ($jscomp.findInternal = function (e, t, r) {
             e instanceof String && (e = String(e));
-            for (var r = e.length, n = 0; n < r; n++) {
+            for (var o = e.length, n = 0; n < o; n++) {
               var i = e[n];
-              if (t.call(o, i, n, e)) return { i: n, v: i };
+              if (t.call(r, i, n, e)) return { i: n, v: i };
             }
             return { i: -1, v: void 0 };
           }),
@@ -21,10 +21,10 @@ var CLSTAMP = "8056184";
           ($jscomp.defineProperty =
             $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties
               ? Object.defineProperty
-              : function (e, t, o) {
+              : function (e, t, r) {
                   e != Array.prototype &&
                     e != Object.prototype &&
-                    (e[t] = o.value);
+                    (e[t] = r.value);
                 }),
           ($jscomp.getGlobal = function (e) {
             return "undefined" != typeof window && window === e
@@ -34,19 +34,19 @@ var CLSTAMP = "8056184";
               : e;
           }),
           ($jscomp.global = $jscomp.getGlobal(this)),
-          ($jscomp.polyfill = function (e, t, o, r) {
+          ($jscomp.polyfill = function (e, t, r, o) {
             if (t) {
               for (
-                o = $jscomp.global, e = e.split("."), r = 0;
-                r < e.length - 1;
-                r++
+                r = $jscomp.global, e = e.split("."), o = 0;
+                o < e.length - 1;
+                o++
               ) {
-                var n = e[r];
-                n in o || (o[n] = {}), (o = o[n]);
+                var n = e[o];
+                n in r || (r[n] = {}), (r = r[n]);
               }
-              (t = t((r = o[(e = e[e.length - 1])]))) != r &&
+              (t = t((o = r[(e = e[e.length - 1])]))) != o &&
                 null != t &&
-                $jscomp.defineProperty(o, e, {
+                $jscomp.defineProperty(r, e, {
                   configurable: !0,
                   writable: !0,
                   value: t,
@@ -66,17 +66,17 @@ var CLSTAMP = "8056184";
             "es6",
             "es3"
           ),
-          ($jscomp.checkStringArgs = function (e, t, o) {
+          ($jscomp.checkStringArgs = function (e, t, r) {
             if (null == e)
               throw new TypeError(
                 "The 'this' value for String.prototype." +
-                  o +
+                  r +
                   " must not be null or undefined"
               );
             if (t instanceof RegExp)
               throw new TypeError(
                 "First argument to String.prototype." +
-                  o +
+                  r +
                   " must not be a regular expression"
               );
             return e + "";
@@ -87,13 +87,13 @@ var CLSTAMP = "8056184";
               return (
                 e ||
                 function (e, t) {
-                  var o = $jscomp.checkStringArgs(this, e, "endsWith");
+                  var r = $jscomp.checkStringArgs(this, e, "endsWith");
                   (e += ""),
-                    void 0 === t && (t = o.length),
-                    (t = Math.max(0, Math.min(0 | t, o.length)));
-                  for (var r = e.length; 0 < r && 0 < t; )
-                    if (o[--t] != e[--r]) return !1;
-                  return 0 >= r;
+                    void 0 === t && (t = r.length),
+                    (t = Math.max(0, Math.min(0 | t, r.length)));
+                  for (var o = e.length; 0 < o && 0 < t; )
+                    if (r[--t] != e[--o]) return !1;
+                  return 0 >= o;
                 }
               );
             },
@@ -119,13 +119,13 @@ var CLSTAMP = "8056184";
               return (
                 e ||
                 function (e, t) {
-                  var o = $jscomp.checkStringArgs(this, e, "startsWith");
+                  var r = $jscomp.checkStringArgs(this, e, "startsWith");
                   e += "";
-                  var r = o.length,
+                  var o = r.length,
                     n = e.length;
-                  t = Math.max(0, Math.min(0 | t, o.length));
-                  for (var i = 0; i < n && t < r; )
-                    if (o[t++] != e[i++]) return !1;
+                  t = Math.max(0, Math.min(0 | t, r.length));
+                  for (var i = 0; i < n && t < o; )
+                    if (r[t++] != e[i++]) return !1;
                   return i >= n;
                 }
               );
@@ -143,9 +143,9 @@ var CLSTAMP = "8056184";
                   if (0 > e || 1342177279 < e)
                     throw new RangeError("Invalid count value");
                   e |= 0;
-                  for (var o = ""; e; )
-                    1 & e && (o += t), (e >>>= 1) && (t += t);
-                  return o;
+                  for (var r = ""; e; )
+                    1 & e && (r += t), (e >>>= 1) && (t += t);
+                  return r;
                 }
               );
             },
@@ -155,30 +155,30 @@ var CLSTAMP = "8056184";
         var COMPILED = !0,
           goog = goog || {};
         (goog.global = this || self),
-          (goog.exportPath_ = function (e, t, o) {
+          (goog.exportPath_ = function (e, t, r) {
             (e = e.split(".")),
-              (o = o || goog.global),
-              e[0] in o ||
-                void 0 === o.execScript ||
-                o.execScript("var " + e[0]);
-            for (var r; e.length && (r = e.shift()); )
+              (r = r || goog.global),
+              e[0] in r ||
+                void 0 === r.execScript ||
+                r.execScript("var " + e[0]);
+            for (var o; e.length && (o = e.shift()); )
               e.length || void 0 === t
-                ? (o =
-                    o[r] && o[r] !== Object.prototype[r] ? o[r] : (o[r] = {}))
-                : (o[r] = t);
+                ? (r =
+                    r[o] && r[o] !== Object.prototype[o] ? r[o] : (r[o] = {}))
+                : (r[o] = t);
           }),
           (goog.define = function (e, t) {
             if (!COMPILED) {
-              var o = goog.global.CLOSURE_UNCOMPILED_DEFINES,
-                r = goog.global.CLOSURE_DEFINES;
-              o &&
-              void 0 === o.nodeType &&
-              Object.prototype.hasOwnProperty.call(o, e)
-                ? (t = o[e])
-                : r &&
-                  void 0 === r.nodeType &&
-                  Object.prototype.hasOwnProperty.call(r, e) &&
-                  (t = r[e]);
+              var r = goog.global.CLOSURE_UNCOMPILED_DEFINES,
+                o = goog.global.CLOSURE_DEFINES;
+              r &&
+              void 0 === r.nodeType &&
+              Object.prototype.hasOwnProperty.call(r, e)
+                ? (t = r[e])
+                : o &&
+                  void 0 === o.nodeType &&
+                  Object.prototype.hasOwnProperty.call(o, e) &&
+                  (t = o[e]);
             }
             return t;
           }),
@@ -200,12 +200,12 @@ var CLSTAMP = "8056184";
             if (!COMPILED) {
               delete goog.implicitNamespaces_[e];
               for (
-                var o = e;
-                (o = o.substring(0, o.lastIndexOf("."))) &&
-                !goog.getObjectByName(o);
+                var r = e;
+                (r = r.substring(0, r.lastIndexOf("."))) &&
+                !goog.getObjectByName(r);
 
               )
-                goog.implicitNamespaces_[o] = !0;
+                goog.implicitNamespaces_[r] = !0;
             }
             goog.exportPath_(e, t);
           }),
@@ -348,17 +348,17 @@ var CLSTAMP = "8056184";
             (goog.implicitNamespaces_ = { "goog.module": !0 })),
           (goog.getObjectByName = function (e, t) {
             (e = e.split(".")), (t = t || goog.global);
-            for (var o = 0; o < e.length; o++)
-              if (null == (t = t[e[o]])) return null;
+            for (var r = 0; r < e.length; r++)
+              if (null == (t = t[e[r]])) return null;
             return t;
           }),
           (goog.globalize = function (e, t) {
-            for (var o in ((t = t || goog.global), e)) t[o] = e[o];
+            for (var r in ((t = t || goog.global), e)) t[r] = e[r];
           }),
-          (goog.addDependency = function (e, t, o, r) {
+          (goog.addDependency = function (e, t, r, o) {
             !COMPILED &&
               goog.DEPENDENCIES_ENABLED &&
-              goog.debugLoader_.addDependency(e, t, o, r);
+              goog.debugLoader_.addDependency(e, t, r, o);
           }),
           (goog.ENABLE_DEBUG_LOADER = !0),
           (goog.logToConsole_ = function (e) {
@@ -441,26 +441,26 @@ var CLSTAMP = "8056184";
                 }),
                 goog.isFunction(e))
               )
-                var o = e.call(void 0, {});
+                var r = e.call(void 0, {});
               else {
                 if ("string" != typeof e)
                   throw Error("Invalid module definition");
                 goog.useSafari10Workaround() &&
                   (e = goog.workaroundSafari10EvalBug(e)),
-                  (o = goog.loadModuleFromSource_.call(void 0, e));
+                  (r = goog.loadModuleFromSource_.call(void 0, e));
               }
-              var r = goog.moduleLoaderState_.moduleName;
-              if ("string" != typeof r || !r)
-                throw Error('Invalid module name "' + r + '"');
+              var o = goog.moduleLoaderState_.moduleName;
+              if ("string" != typeof o || !o)
+                throw Error('Invalid module name "' + o + '"');
               goog.moduleLoaderState_.declareLegacyNamespace
-                ? goog.constructNamespace_(r, o)
+                ? goog.constructNamespace_(o, r)
                 : goog.SEAL_MODULE_EXPORTS &&
                   Object.seal &&
-                  "object" == typeof o &&
-                  null != o &&
-                  Object.seal(o),
-                (goog.loadedModules_[r] = {
-                  exports: o,
+                  "object" == typeof r &&
+                  null != r &&
+                  Object.seal(r),
+                (goog.loadedModules_[o] = {
+                  exports: r,
                   type: goog.ModuleType.GOOG,
                   moduleId: goog.moduleLoaderState_.moduleName,
                 });
@@ -495,10 +495,10 @@ var CLSTAMP = "8056184";
               return null;
             }
           }),
-          (goog.transpile_ = function (e, t, o) {
-            var r = goog.global.$jscomp;
-            r || (goog.global.$jscomp = r = {});
-            var n = r.transpile;
+          (goog.transpile_ = function (e, t, r) {
+            var o = goog.global.$jscomp;
+            o || (goog.global.$jscomp = o = {});
+            var n = o.transpile;
             if (!n) {
               var i = goog.basePath + goog.TRANSPILER,
                 a = goog.loadFileSync_(i);
@@ -517,12 +517,12 @@ var CLSTAMP = "8056184";
                   );
                 (goog.global.$jscomp.transpile =
                   goog.global.$gwtExport.$jscomp.transpile),
-                  (n = (r = goog.global.$jscomp).transpile);
+                  (n = (o = goog.global.$jscomp).transpile);
               }
             }
             return (
               n ||
-                (n = r.transpile =
+                (n = o.transpile =
                   function (e, t) {
                     return (
                       goog.logToConsole_(
@@ -532,7 +532,7 @@ var CLSTAMP = "8056184";
                       e
                     );
                   }),
-              n(e, t, o)
+              n(e, t, r)
             );
           }),
           (goog.typeOf = function (e) {
@@ -541,10 +541,10 @@ var CLSTAMP = "8056184";
               if (!e) return "null";
               if (e instanceof Array) return "array";
               if (e instanceof Object) return t;
-              var o = Object.prototype.toString.call(e);
-              if ("[object Window]" == o) return "object";
+              var r = Object.prototype.toString.call(e);
+              if ("[object Window]" == r) return "object";
               if (
-                "[object Array]" == o ||
+                "[object Array]" == r ||
                 ("number" == typeof e.length &&
                   void 0 !== e.splice &&
                   void 0 !== e.propertyIsEnumerable &&
@@ -552,7 +552,7 @@ var CLSTAMP = "8056184";
               )
                 return "array";
               if (
-                "[object Function]" == o ||
+                "[object Function]" == r ||
                 (void 0 !== e.call &&
                   void 0 !== e.propertyIsEnumerable &&
                   !e.propertyIsEnumerable("call"))
@@ -606,29 +606,29 @@ var CLSTAMP = "8056184";
             var t = goog.typeOf(e);
             if ("object" == t || "array" == t) {
               if ("function" == typeof e.clone) return e.clone();
-              for (var o in ((t = "array" == t ? [] : {}), e))
-                t[o] = goog.cloneObject(e[o]);
+              for (var r in ((t = "array" == t ? [] : {}), e))
+                t[r] = goog.cloneObject(e[r]);
               return t;
             }
             return e;
           }),
-          (goog.bindNative_ = function (e, t, o) {
+          (goog.bindNative_ = function (e, t, r) {
             return e.call.apply(e.bind, arguments);
           }),
-          (goog.bindJs_ = function (e, t, o) {
+          (goog.bindJs_ = function (e, t, r) {
             if (!e) throw Error();
             if (2 < arguments.length) {
-              var r = Array.prototype.slice.call(arguments, 2);
+              var o = Array.prototype.slice.call(arguments, 2);
               return function () {
-                var o = Array.prototype.slice.call(arguments);
-                return Array.prototype.unshift.apply(o, r), e.apply(t, o);
+                var r = Array.prototype.slice.call(arguments);
+                return Array.prototype.unshift.apply(r, o), e.apply(t, r);
               };
             }
             return function () {
               return e.apply(t, arguments);
             };
           }),
-          (goog.bind = function (e, t, o) {
+          (goog.bind = function (e, t, r) {
             return (
               Function.prototype.bind &&
               -1 != Function.prototype.bind.toString().indexOf("native code")
@@ -638,14 +638,14 @@ var CLSTAMP = "8056184";
             );
           }),
           (goog.partial = function (e, t) {
-            var o = Array.prototype.slice.call(arguments, 1);
+            var r = Array.prototype.slice.call(arguments, 1);
             return function () {
-              var t = o.slice();
+              var t = r.slice();
               return t.push.apply(t, arguments), e.apply(this, t);
             };
           }),
           (goog.mixin = function (e, t) {
-            for (var o in t) e[o] = t[o];
+            for (var r in t) e[r] = t[r];
           }),
           (goog.now =
             (goog.TRUSTED_SITE && Date.now) ||
@@ -671,12 +671,12 @@ var CLSTAMP = "8056184";
               if (goog.evalWorksForGlobals_) goog.global.eval(e);
               else {
                 var t = goog.global.document,
-                  o = t.createElement("script");
-                (o.type = "text/javascript"),
-                  (o.defer = !1),
-                  o.appendChild(t.createTextNode(e)),
-                  t.head.appendChild(o),
-                  t.head.removeChild(o);
+                  r = t.createElement("script");
+                (r.type = "text/javascript"),
+                  (r.defer = !1),
+                  r.appendChild(t.createTextNode(e)),
+                  t.head.appendChild(r),
+                  t.head.removeChild(r);
               }
             }
           }),
@@ -687,23 +687,23 @@ var CLSTAMP = "8056184";
                 'className passed in goog.getCssName must not start with ".". You passed: ' +
                   e
               );
-            var o = function (e) {
+            var r = function (e) {
                 return goog.cssNameMapping_[e] || e;
               },
-              r = function (e) {
+              o = function (e) {
                 e = e.split("-");
-                for (var t = [], r = 0; r < e.length; r++) t.push(o(e[r]));
+                for (var t = [], o = 0; o < e.length; o++) t.push(r(e[o]));
                 return t.join("-");
               };
             return (
-              (r = goog.cssNameMapping_
+              (o = goog.cssNameMapping_
                 ? "BY_WHOLE" == goog.cssNameMappingStyle_
-                  ? o
-                  : r
+                  ? r
+                  : o
                 : function (e) {
                     return e;
                   }),
-              (e = t ? e + "-" + r(t) : r(e)),
+              (e = t ? e + "-" + o(t) : o(e)),
               goog.global.CLOSURE_CSS_NAME_MAP_FN
                 ? goog.global.CLOSURE_CSS_NAME_MAP_FN(e)
                 : e
@@ -715,12 +715,12 @@ var CLSTAMP = "8056184";
           !COMPILED &&
             goog.global.CLOSURE_CSS_NAME_MAPPING &&
             (goog.cssNameMapping_ = goog.global.CLOSURE_CSS_NAME_MAPPING),
-          (goog.getMsg = function (e, t, o) {
+          (goog.getMsg = function (e, t, r) {
             return (
-              o && o.html && (e = e.replace(/</g, "&lt;")),
+              r && r.html && (e = e.replace(/</g, "&lt;")),
               t &&
-                (e = e.replace(/\{\$([^}]+)}/g, function (e, o) {
-                  return null != t && o in t ? t[o] : e;
+                (e = e.replace(/\{\$([^}]+)}/g, function (e, r) {
+                  return null != t && r in t ? t[r] : e;
                 })),
               e
             );
@@ -728,26 +728,26 @@ var CLSTAMP = "8056184";
           (goog.getMsgWithFallback = function (e, t) {
             return e;
           }),
-          (goog.exportSymbol = function (e, t, o) {
-            goog.exportPath_(e, t, o);
+          (goog.exportSymbol = function (e, t, r) {
+            goog.exportPath_(e, t, r);
           }),
-          (goog.exportProperty = function (e, t, o) {
-            e[t] = o;
+          (goog.exportProperty = function (e, t, r) {
+            e[t] = r;
           }),
           (goog.inherits = function (e, t) {
-            function o() {}
-            (o.prototype = t.prototype),
+            function r() {}
+            (r.prototype = t.prototype),
               (e.superClass_ = t.prototype),
-              (e.prototype = new o()),
+              (e.prototype = new r()),
               (e.prototype.constructor = e),
-              (e.base = function (e, o, r) {
+              (e.base = function (e, r, o) {
                 for (
                   var n = Array(arguments.length - 2), i = 2;
                   i < arguments.length;
                   i++
                 )
                   n[i - 2] = arguments[i];
-                return t.prototype[o].apply(e, n);
+                return t.prototype[r].apply(e, n);
               });
           }),
           (goog.scope = function (e) {
@@ -757,43 +757,43 @@ var CLSTAMP = "8056184";
           }),
           COMPILED || (goog.global.COMPILED = COMPILED),
           (goog.defineClass = function (e, t) {
-            var o = t.constructor,
-              r = t.statics;
+            var r = t.constructor,
+              o = t.statics;
             return (
-              (o && o != Object.prototype.constructor) ||
-                (o = function () {
+              (r && r != Object.prototype.constructor) ||
+                (r = function () {
                   throw Error(
                     "cannot instantiate an interface (no constructor defined)."
                   );
                 }),
-              (o = goog.defineClass.createSealingConstructor_(o, e)),
-              e && goog.inherits(o, e),
+              (r = goog.defineClass.createSealingConstructor_(r, e)),
+              e && goog.inherits(r, e),
               delete t.constructor,
               delete t.statics,
-              goog.defineClass.applyProperties_(o.prototype, t),
-              null != r &&
-                (r instanceof Function
-                  ? r(o)
-                  : goog.defineClass.applyProperties_(o, r)),
-              o
+              goog.defineClass.applyProperties_(r.prototype, t),
+              null != o &&
+                (o instanceof Function
+                  ? o(r)
+                  : goog.defineClass.applyProperties_(r, o)),
+              r
             );
           }),
           (goog.defineClass.SEAL_CLASS_INSTANCES = goog.DEBUG),
           (goog.defineClass.createSealingConstructor_ = function (e, t) {
             if (!goog.defineClass.SEAL_CLASS_INSTANCES) return e;
-            var o = !goog.defineClass.isUnsealable_(t),
-              r = function () {
+            var r = !goog.defineClass.isUnsealable_(t),
+              o = function () {
                 var t = e.apply(this, arguments) || this;
                 return (
                   (t[goog.UID_PROPERTY_] = t[goog.UID_PROPERTY_]),
-                  this.constructor === r &&
-                    o &&
+                  this.constructor === o &&
+                    r &&
                     Object.seal instanceof Function &&
                     Object.seal(t),
                   t
                 );
               };
-            return r;
+            return o;
           }),
           (goog.defineClass.isUnsealable_ = function (e) {
             return (
@@ -807,15 +807,15 @@ var CLSTAMP = "8056184";
               " "
             )),
           (goog.defineClass.applyProperties_ = function (e, t) {
-            for (var o in t)
-              Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+            for (var r in t)
+              Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
             for (
-              var r = 0;
-              r < goog.defineClass.OBJECT_PROTOTYPE_FIELDS_.length;
-              r++
+              var o = 0;
+              o < goog.defineClass.OBJECT_PROTOTYPE_FIELDS_.length;
+              o++
             )
-              (o = goog.defineClass.OBJECT_PROTOTYPE_FIELDS_[r]),
-                Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+              (r = goog.defineClass.OBJECT_PROTOTYPE_FIELDS_[o]),
+                Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
           }),
           (goog.tagUnsealableClass = function (e) {
             !COMPILED &&
@@ -851,13 +851,13 @@ var CLSTAMP = "8056184";
                   0 <= t;
                   --t
                 ) {
-                  var o = e[t].src,
-                    r = o.lastIndexOf("?");
+                  var r = e[t].src,
+                    o = r.lastIndexOf("?");
                   if (
-                    ((r = -1 == r ? o.length : r),
-                    "base.js" == o.substr(r - 7, 7))
+                    ((o = -1 == o ? r.length : o),
+                    "base.js" == r.substr(o - 7, 7))
                   ) {
-                    goog.basePath = o.substr(0, r - 7);
+                    goog.basePath = r.substr(0, o - 7);
                     break;
                   }
                 }
@@ -870,10 +870,10 @@ var CLSTAMP = "8056184";
             }),
             (goog.Transpiler.prototype.createRequiresTranspilation_ =
               function () {
-                function a(t, o) {
+                function a(t, r) {
                   e
                     ? (d[t] = !0)
-                    : o()
+                    : r()
                     ? ((c = t), (d[t] = !1))
                     : (e = d[t] = !0);
                 }
@@ -922,10 +922,10 @@ var CLSTAMP = "8056184";
               if ("always" == goog.TRANSPILE) return !0;
               if ("never" == goog.TRANSPILE) return !1;
               if (!this.requiresTranspilation_) {
-                var o = this.createRequiresTranspilation_();
-                (this.requiresTranspilation_ = o.map),
+                var r = this.createRequiresTranspilation_();
+                (this.requiresTranspilation_ = r.map),
                   (this.transpilationTarget_ =
-                    this.transpilationTarget_ || o.target);
+                    this.transpilationTarget_ || r.target);
               }
               if (e in this.requiresTranspilation_)
                 return (
@@ -957,10 +957,10 @@ var CLSTAMP = "8056184";
                 (this.deferredQueue_ = []);
             }),
             (goog.DebugLoader_.prototype.bootstrap = function (e, t) {
-              function o() {
-                r && (goog.global.setTimeout(r, 0), (r = null));
+              function r() {
+                o && (goog.global.setTimeout(o, 0), (o = null));
               }
-              var r = t;
+              var o = t;
               if (e.length) {
                 t = [];
                 for (var n = 0; n < e.length; n++) {
@@ -973,9 +973,9 @@ var CLSTAMP = "8056184";
                 for (n = 0; n < e.length; n++)
                   i(e[n]),
                     t[n].onLoad(function () {
-                      ++a == e.length && o();
+                      ++a == e.length && r();
                     });
-              } else o();
+              } else r();
             }),
             (goog.DebugLoader_.prototype.loadClosureDeps = function () {
               this.depsToLoad_.push(
@@ -1007,8 +1007,8 @@ var CLSTAMP = "8056184";
                   Error(e))
                 );
               var t = this,
-                o = [],
-                r = function (e) {
+                r = [],
+                o = function (e) {
                   var n = t.getPathFromDeps_(e);
                   if (!n) throw Error("Bad dependency path or symbol: " + e);
                   if (!t.written_[n]) {
@@ -1017,13 +1017,13 @@ var CLSTAMP = "8056184";
                       n < e.requires.length;
                       n++
                     )
-                      goog.isProvided_(e.requires[n]) || r(e.requires[n]);
-                    o.push(e);
+                      goog.isProvided_(e.requires[n]) || o(e.requires[n]);
+                    r.push(e);
                   }
                 };
-              r(e),
+              o(e),
                 (e = !!this.depsToLoad_.length),
-                (this.depsToLoad_ = this.depsToLoad_.concat(o)),
+                (this.depsToLoad_ = this.depsToLoad_.concat(r)),
                 this.paused_ || e || this.loadDeps_();
             }),
             (goog.DebugLoader_.prototype.loadDeps_ = function () {
@@ -1033,28 +1033,28 @@ var CLSTAMP = "8056184";
 
               )
                 !(function () {
-                  var o = !1,
-                    r = e.depsToLoad_.shift(),
+                  var r = !1,
+                    o = e.depsToLoad_.shift(),
                     n = !1;
-                  e.loading_(r);
+                  e.loading_(o);
                   var i = {
                     pause: function () {
-                      if (o)
+                      if (r)
                         throw Error(
                           "Cannot call pause after the call to load."
                         );
                       t = !0;
                     },
                     resume: function () {
-                      o ? e.resume_() : (t = !1);
+                      r ? e.resume_() : (t = !1);
                     },
                     loaded: function () {
                       if (n) throw Error("Double call to loaded.");
-                      (n = !0), e.loaded_(r);
+                      (n = !0), e.loaded_(o);
                     },
                     pending: function () {
-                      for (var t = [], o = 0; o < e.loadingDeps_.length; o++)
-                        t.push(e.loadingDeps_[o]);
+                      for (var t = [], r = 0; r < e.loadingDeps_.length; r++)
+                        t.push(e.loadingDeps_[r]);
                       return t;
                     },
                     setModuleState: function (e) {
@@ -1064,12 +1064,12 @@ var CLSTAMP = "8056184";
                         declareLegacyNamespace: !1,
                       };
                     },
-                    registerEs6ModuleExports: function (e, t, o) {
-                      o &&
-                        (goog.loadedModules_[o] = {
+                    registerEs6ModuleExports: function (e, t, r) {
+                      r &&
+                        (goog.loadedModules_[r] = {
                           exports: t,
                           type: goog.ModuleType.ES6,
-                          moduleId: o || "",
+                          moduleId: r || "",
                         });
                     },
                     registerGoogModuleExports: function (e, t) {
@@ -1083,20 +1083,20 @@ var CLSTAMP = "8056184";
                       goog.moduleLoaderState_ = null;
                     },
                     defer: function (t) {
-                      if (o)
+                      if (r)
                         throw Error(
                           "Cannot register with defer after the call to load."
                         );
-                      e.defer_(r, t);
+                      e.defer_(o, t);
                     },
                     areDepsLoaded: function () {
-                      return e.areDepsLoaded_(r.requires);
+                      return e.areDepsLoaded_(o.requires);
                     },
                   };
                   try {
-                    r.load(i);
+                    o.load(i);
                   } finally {
-                    o = !0;
+                    r = !0;
                   }
                 })();
               t && this.pause_();
@@ -1131,10 +1131,10 @@ var CLSTAMP = "8056184";
             }),
             (goog.DebugLoader_.prototype.areDepsLoaded_ = function (e) {
               for (var t = 0; t < e.length; t++) {
-                var o = this.getPathFromDeps_(e[t]);
+                var r = this.getPathFromDeps_(e[t]);
                 if (
-                  !o ||
-                  (!(o in this.deferredCallbacks_) && !goog.isProvided_(e[t]))
+                  !r ||
+                  (!(r in this.deferredCallbacks_) && !goog.isProvided_(e[t]))
                 )
                   return !1;
               }
@@ -1159,17 +1159,17 @@ var CLSTAMP = "8056184";
             (goog.LoadController.prototype.registerEs6ModuleExports = function (
               e,
               t,
-              o
+              r
             ) {}),
             (goog.LoadController.prototype.setModuleState = function (e) {}),
             (goog.LoadController.prototype.clearModuleState = function () {}),
             (goog.LoadController.prototype.defer = function (e) {}),
             (goog.LoadController.prototype.areDepsLoaded = function () {}),
-            (goog.Dependency = function (e, t, o, r, n) {
+            (goog.Dependency = function (e, t, r, o, n) {
               (this.path = e),
                 (this.relativePath = t),
-                (this.provides = o),
-                (this.requires = r),
+                (this.provides = r),
+                (this.requires = o),
                 (this.loadFlags = n),
                 (this.loaded_ = !1),
                 (this.loadCallbacks_ = []);
@@ -1210,12 +1210,12 @@ var CLSTAMP = "8056184";
                     " does not exist (was base.js loaded more than once?)."
                 );
               for (
-                var o = goog.Dependency.callbackMap_[e], r = [], n = 1;
+                var r = goog.Dependency.callbackMap_[e], o = [], n = 1;
                 n < arguments.length;
                 n++
               )
-                r.push(arguments[n]);
-              o.apply(void 0, r);
+                o.push(arguments[n]);
+              r.apply(void 0, o);
             }),
             (goog.Dependency.prototype.load = function (e) {
               if (goog.global.CLOSURE_IMPORT_SCRIPT)
@@ -1237,16 +1237,16 @@ var CLSTAMP = "8056184";
                   !goog.ENABLE_CHROME_APP_SAFE_SCRIPT_LOADING &&
                   goog.isDocumentLoading_()
                 ) {
-                  var o = goog.Dependency.registerCallback_(function (t) {
+                  var r = goog.Dependency.registerCallback_(function (t) {
                       (goog.DebugLoader_.IS_OLD_IE_ &&
                         "complete" != t.readyState) ||
-                        (goog.Dependency.unregisterCallback_(o), e.loaded());
+                        (goog.Dependency.unregisterCallback_(r), e.loaded());
                     }),
-                    r =
+                    o =
                       !goog.DebugLoader_.IS_OLD_IE_ && goog.getScriptNonce()
                         ? ' nonce="' + goog.getScriptNonce() + '"'
                         : "";
-                  (r =
+                  (o =
                     '<script src="' +
                     this.path +
                     '" ' +
@@ -1254,22 +1254,22 @@ var CLSTAMP = "8056184";
                       ? "onreadystatechange"
                       : "onload") +
                     "=\"goog.Dependency.callback_('" +
-                    o +
+                    r +
                     '\', this)" type="text/javascript" ' +
                     (goog.Dependency.defer_ ? "defer" : "") +
-                    r +
+                    o +
                     "></script>"),
                     t.write(
                       goog.TRUSTED_TYPES_POLICY_
-                        ? goog.TRUSTED_TYPES_POLICY_.createHTML(r)
-                        : r
+                        ? goog.TRUSTED_TYPES_POLICY_.createHTML(o)
+                        : o
                     );
                 } else {
                   var n = t.createElement("script");
                   (n.defer = goog.Dependency.defer_),
                     (n.async = !1),
                     (n.type = "text/javascript"),
-                    (r = goog.getScriptNonce()) && n.setAttribute("nonce", r),
+                    (o = goog.getScriptNonce()) && n.setAttribute("nonce", o),
                     goog.DebugLoader_.IS_OLD_IE_
                       ? (e.pause(),
                         (n.onreadystatechange = function () {
@@ -1296,8 +1296,8 @@ var CLSTAMP = "8056184";
                       e.loaded())
                     : e.pause();
             }),
-            (goog.Es6ModuleDependency = function (e, t, o, r, n) {
-              goog.Dependency.call(this, e, t, o, r, n);
+            (goog.Es6ModuleDependency = function (e, t, r, o, n) {
+              goog.Dependency.call(this, e, t, r, o, n);
             }),
             goog.inherits(goog.Es6ModuleDependency, goog.Dependency),
             (goog.Es6ModuleDependency.prototype.load = function (e) {
@@ -1307,11 +1307,11 @@ var CLSTAMP = "8056184";
                   : e.pause();
               else if (goog.inHtmlDocument_()) {
                 var t = goog.global.document,
-                  o = this;
+                  r = this;
                 if (goog.isDocumentLoading_()) {
-                  var r = function (e, o) {
-                    (e = o
-                      ? '<script type="module" crossorigin>' + o + "</script>"
+                  var o = function (e, r) {
+                    (e = r
+                      ? '<script type="module" crossorigin>' + r + "</script>"
                       : '<script type="module" crossorigin src="' +
                         e +
                         '"></script>'),
@@ -1323,38 +1323,38 @@ var CLSTAMP = "8056184";
                   };
                   goog.Dependency.defer_ = !0;
                 } else
-                  r = function (e, o) {
-                    var r = t.createElement("script");
-                    (r.defer = !0),
-                      (r.async = !1),
-                      (r.type = "module"),
-                      r.setAttribute("crossorigin", !0);
+                  o = function (e, r) {
+                    var o = t.createElement("script");
+                    (o.defer = !0),
+                      (o.async = !1),
+                      (o.type = "module"),
+                      o.setAttribute("crossorigin", !0);
                     var n = goog.getScriptNonce();
-                    n && r.setAttribute("nonce", n),
-                      o
-                        ? (r.textContent = goog.TRUSTED_TYPES_POLICY_
-                            ? goog.TRUSTED_TYPES_POLICY_.createScript(o)
-                            : o)
-                        : (r.src = goog.TRUSTED_TYPES_POLICY_
+                    n && o.setAttribute("nonce", n),
+                      r
+                        ? (o.textContent = goog.TRUSTED_TYPES_POLICY_
+                            ? goog.TRUSTED_TYPES_POLICY_.createScript(r)
+                            : r)
+                        : (o.src = goog.TRUSTED_TYPES_POLICY_
                             ? goog.TRUSTED_TYPES_POLICY_.createScriptURL(e)
                             : e),
-                      t.head.appendChild(r);
+                      t.head.appendChild(o);
                   };
                 var n = goog.Dependency.registerCallback_(function () {
                   goog.Dependency.unregisterCallback_(n),
                     e.setModuleState(goog.ModuleType.ES6);
                 });
-                r(void 0, 'goog.Dependency.callback_("' + n + '")'),
-                  r(this.path, void 0);
+                o(void 0, 'goog.Dependency.callback_("' + n + '")'),
+                  o(this.path, void 0);
                 var i = goog.Dependency.registerCallback_(function (t) {
                   goog.Dependency.unregisterCallback_(i),
                     e.registerEs6ModuleExports(
-                      o.path,
+                      r.path,
                       t,
                       goog.moduleLoaderState_.moduleName
                     );
                 });
-                r(
+                o(
                   void 0,
                   'import * as m from "' +
                     this.path +
@@ -1367,15 +1367,15 @@ var CLSTAMP = "8056184";
                     e.clearModuleState(),
                     e.loaded();
                 });
-                r(void 0, 'goog.Dependency.callback_("' + a + '")');
+                o(void 0, 'goog.Dependency.callback_("' + a + '")');
               } else
                 goog.logToConsole_(
                   "Cannot use default debug loader outside of HTML documents."
                 ),
                   e.pause();
             }),
-            (goog.TransformedDependency = function (e, t, o, r, n) {
-              goog.Dependency.call(this, e, t, o, r, n),
+            (goog.TransformedDependency = function (e, t, r, o, n) {
+              goog.Dependency.call(this, e, t, r, o, n),
                 (this.contents_ = null),
                 (this.lazyFetch_ =
                   !goog.inHtmlDocument_() ||
@@ -1386,29 +1386,29 @@ var CLSTAMP = "8056184";
             goog.inherits(goog.TransformedDependency, goog.Dependency),
             (goog.TransformedDependency.prototype.load = function (e) {
               function t() {
-                (r.contents_ = goog.loadFileSync_(r.path)),
-                  r.contents_ &&
-                    ((r.contents_ = r.transform(r.contents_)),
-                    r.contents_ &&
-                      (r.contents_ += "\n//# sourceURL=" + r.path));
+                (o.contents_ = goog.loadFileSync_(o.path)),
+                  o.contents_ &&
+                    ((o.contents_ = o.transform(o.contents_)),
+                    o.contents_ &&
+                      (o.contents_ += "\n//# sourceURL=" + o.path));
               }
-              function o() {
-                if ((r.lazyFetch_ && t(), r.contents_)) {
+              function r() {
+                if ((o.lazyFetch_ && t(), o.contents_)) {
                   n && e.setModuleState(goog.ModuleType.ES6);
                   try {
-                    var o = r.contents_;
-                    if (((r.contents_ = null), goog.globalEval(o), n))
+                    var r = o.contents_;
+                    if (((o.contents_ = null), goog.globalEval(r), n))
                       var i = goog.moduleLoaderState_.moduleName;
                   } finally {
                     n && e.clearModuleState();
                   }
                   n &&
                     goog.global.$jscomp.require.ensure(
-                      [r.getPathName()],
+                      [o.getPathName()],
                       function () {
                         e.registerEs6ModuleExports(
-                          r.path,
-                          goog.global.$jscomp.require(r.getPathName()),
+                          o.path,
+                          goog.global.$jscomp.require(o.getPathName()),
                           i
                         );
                       }
@@ -1416,7 +1416,7 @@ var CLSTAMP = "8056184";
                     e.loaded();
                 }
               }
-              var r = this;
+              var o = this;
               if (goog.global.CLOSURE_IMPORT_SCRIPT)
                 t(),
                   this.contents_ &&
@@ -1434,7 +1434,7 @@ var CLSTAMP = "8056184";
                   a || i)
                 )
                   e.defer(function () {
-                    o();
+                    r();
                   });
                 else {
                   var s = goog.global.document;
@@ -1450,7 +1450,7 @@ var CLSTAMP = "8056184";
                     var g = s.onreadystatechange;
                     s.onreadystatechange = function () {
                       "interactive" == s.readyState &&
-                        ((s.onreadystatechange = g), o(), e.resume()),
+                        ((s.onreadystatechange = g), r(), e.resume()),
                         goog.isFunction(g) && g.apply(void 0, arguments);
                     };
                   } else
@@ -1460,9 +1460,9 @@ var CLSTAMP = "8056184";
                       ? (function () {
                           var e = goog.global.document,
                             t = goog.Dependency.registerCallback_(function () {
-                              goog.Dependency.unregisterCallback_(t), o();
+                              goog.Dependency.unregisterCallback_(t), r();
                             }),
-                            r =
+                            o =
                               '<script type="text/javascript">' +
                               goog.protectScriptTag_(
                                 'goog.Dependency.callback_("' + t + '");'
@@ -1470,17 +1470,17 @@ var CLSTAMP = "8056184";
                               "</script>";
                           e.write(
                             goog.TRUSTED_TYPES_POLICY_
-                              ? goog.TRUSTED_TYPES_POLICY_.createHTML(r)
-                              : r
+                              ? goog.TRUSTED_TYPES_POLICY_.createHTML(o)
+                              : o
                           );
                         })()
-                      : o();
+                      : r();
                 }
               }
             }),
             (goog.TransformedDependency.prototype.transform = function (e) {}),
-            (goog.TranspiledDependency = function (e, t, o, r, n, i) {
-              goog.TransformedDependency.call(this, e, t, o, r, n),
+            (goog.TranspiledDependency = function (e, t, r, o, n, i) {
+              goog.TransformedDependency.call(this, e, t, r, o, n),
                 (this.transpiler = i);
             }),
             goog.inherits(
@@ -1490,8 +1490,8 @@ var CLSTAMP = "8056184";
             (goog.TranspiledDependency.prototype.transform = function (e) {
               return this.transpiler.transpile(e, this.getPathName());
             }),
-            (goog.PreTranspiledEs6ModuleDependency = function (e, t, o, r, n) {
-              goog.TransformedDependency.call(this, e, t, o, r, n);
+            (goog.PreTranspiledEs6ModuleDependency = function (e, t, r, o, n) {
+              goog.TransformedDependency.call(this, e, t, r, o, n);
             }),
             goog.inherits(
               goog.PreTranspiledEs6ModuleDependency,
@@ -1501,8 +1501,8 @@ var CLSTAMP = "8056184";
               function (e) {
                 return e;
               }),
-            (goog.GoogModuleDependency = function (e, t, o, r, n, i, a) {
-              goog.TransformedDependency.call(this, e, t, o, r, n),
+            (goog.GoogModuleDependency = function (e, t, r, o, n, i, a) {
+              goog.TransformedDependency.call(this, e, t, r, o, n),
                 (this.needsTranspile_ = i),
                 (this.transpiler_ = a);
             }),
@@ -1532,26 +1532,26 @@ var CLSTAMP = "8056184";
               !goog.global.document ||
               !goog.global.document.all
             )),
-            (goog.DebugLoader_.prototype.addDependency = function (e, t, o, r) {
+            (goog.DebugLoader_.prototype.addDependency = function (e, t, r, o) {
               (t = t || []), (e = e.replace(/\\/g, "/"));
               var n = goog.normalizePath_(goog.basePath + e);
               for (
-                (r && "boolean" != typeof r) ||
-                  (r = r ? { module: goog.ModuleType.GOOG } : {}),
-                  o = this.factory_.createDependency(
+                (o && "boolean" != typeof o) ||
+                  (o = o ? { module: goog.ModuleType.GOOG } : {}),
+                  r = this.factory_.createDependency(
                     n,
                     e,
                     t,
-                    o,
                     r,
-                    goog.transpiler_.needsTranspile(r.lang || "es3", r.module)
+                    o,
+                    goog.transpiler_.needsTranspile(o.lang || "es3", o.module)
                   ),
-                  this.dependencies_[n] = o,
-                  o = 0;
-                o < t.length;
-                o++
+                  this.dependencies_[n] = r,
+                  r = 0;
+                r < t.length;
+                r++
               )
-                this.idToPath_[t[o]] = n;
+                this.idToPath_[t[r]] = n;
               this.idToPath_[e] = n;
             }),
             (goog.DependencyFactory = function (e) {
@@ -1560,8 +1560,8 @@ var CLSTAMP = "8056184";
             (goog.DependencyFactory.prototype.createDependency = function (
               e,
               t,
-              o,
               r,
+              o,
               n,
               i
             ) {
@@ -1569,19 +1569,19 @@ var CLSTAMP = "8056184";
                 ? new goog.GoogModuleDependency(
                     e,
                     t,
-                    o,
                     r,
+                    o,
                     n,
                     i,
                     this.transpiler
                   )
                 : i
-                ? new goog.TranspiledDependency(e, t, o, r, n, this.transpiler)
+                ? new goog.TranspiledDependency(e, t, r, o, n, this.transpiler)
                 : n.module == goog.ModuleType.ES6
                 ? "never" == goog.TRANSPILE && goog.ASSUME_ES_MODULES_TRANSPILED
-                  ? new goog.PreTranspiledEs6ModuleDependency(e, t, o, r, n)
-                  : new goog.Es6ModuleDependency(e, t, o, r, n)
-                : new goog.Dependency(e, t, o, r, n);
+                  ? new goog.PreTranspiledEs6ModuleDependency(e, t, r, o, n)
+                  : new goog.Es6ModuleDependency(e, t, r, o, n)
+                : new goog.Dependency(e, t, r, o, n);
             }),
             (goog.debugLoader_ = new goog.DebugLoader_()),
             (goog.loadClosureDeps = function () {
@@ -1600,10 +1600,10 @@ var CLSTAMP = "8056184";
           }),
           (goog.createTrustedTypesPolicy = function (e) {
             var t = null,
-              o = goog.global.trustedTypes || goog.global.TrustedTypes;
-            if (!o || !o.createPolicy) return t;
+              r = goog.global.trustedTypes || goog.global.TrustedTypes;
+            if (!r || !r.createPolicy) return t;
             try {
-              t = o.createPolicy(e, {
+              t = r.createPolicy(e, {
                 createHTML: goog.identity_,
                 createScript: goog.identity_,
                 createScriptURL: goog.identity_,
@@ -1623,34 +1623,34 @@ var CLSTAMP = "8056184";
           (goog.object.is = function (e, t) {
             return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
           }),
-          (goog.object.forEach = function (e, t, o) {
-            for (var r in e) t.call(o, e[r], r, e);
+          (goog.object.forEach = function (e, t, r) {
+            for (var o in e) t.call(r, e[o], o, e);
           }),
-          (goog.object.filter = function (e, t, o) {
-            var r,
+          (goog.object.filter = function (e, t, r) {
+            var o,
               n = {};
-            for (r in e) t.call(o, e[r], r, e) && (n[r] = e[r]);
+            for (o in e) t.call(r, e[o], o, e) && (n[o] = e[o]);
             return n;
           }),
-          (goog.object.map = function (e, t, o) {
-            var r,
+          (goog.object.map = function (e, t, r) {
+            var o,
               n = {};
-            for (r in e) n[r] = t.call(o, e[r], r, e);
+            for (o in e) n[o] = t.call(r, e[o], o, e);
             return n;
           }),
-          (goog.object.some = function (e, t, o) {
-            for (var r in e) if (t.call(o, e[r], r, e)) return !0;
+          (goog.object.some = function (e, t, r) {
+            for (var o in e) if (t.call(r, e[o], o, e)) return !0;
             return !1;
           }),
-          (goog.object.every = function (e, t, o) {
-            for (var r in e) if (!t.call(o, e[r], r, e)) return !1;
+          (goog.object.every = function (e, t, r) {
+            for (var o in e) if (!t.call(r, e[o], o, e)) return !1;
             return !0;
           }),
           (goog.object.getCount = function (e) {
             var t,
-              o = 0;
-            for (t in e) o++;
-            return o;
+              r = 0;
+            for (t in e) r++;
+            return r;
           }),
           (goog.object.getAnyKey = function (e) {
             for (var t in e) return t;
@@ -1663,24 +1663,24 @@ var CLSTAMP = "8056184";
           }),
           (goog.object.getValues = function (e) {
             var t,
-              o = [],
-              r = 0;
-            for (t in e) o[r++] = e[t];
-            return o;
+              r = [],
+              o = 0;
+            for (t in e) r[o++] = e[t];
+            return r;
           }),
           (goog.object.getKeys = function (e) {
             var t,
-              o = [],
-              r = 0;
-            for (t in e) o[r++] = t;
-            return o;
+              r = [],
+              o = 0;
+            for (t in e) r[o++] = t;
+            return r;
           }),
           (goog.object.getValueByKeys = function (e, t) {
-            var o = goog.isArrayLike(t),
-              r = o ? t : arguments;
-            for (o = o ? 0 : 1; o < r.length; o++) {
+            var r = goog.isArrayLike(t),
+              o = r ? t : arguments;
+            for (r = r ? 0 : 1; r < o.length; r++) {
               if (null == e) return;
-              e = e[r[o]];
+              e = e[o[r]];
             }
             return e;
           }),
@@ -1688,14 +1688,14 @@ var CLSTAMP = "8056184";
             return null !== e && t in e;
           }),
           (goog.object.containsValue = function (e, t) {
-            for (var o in e) if (e[o] == t) return !0;
+            for (var r in e) if (e[r] == t) return !0;
             return !1;
           }),
-          (goog.object.findKey = function (e, t, o) {
-            for (var r in e) if (t.call(o, e[r], r, e)) return r;
+          (goog.object.findKey = function (e, t, r) {
+            for (var o in e) if (t.call(r, e[o], o, e)) return o;
           }),
-          (goog.object.findValue = function (e, t, o) {
-            return (t = goog.object.findKey(e, t, o)) && e[t];
+          (goog.object.findValue = function (e, t, r) {
+            return (t = goog.object.findKey(e, t, r)) && e[t];
           }),
           (goog.object.isEmpty = function (e) {
             for (var t in e) return !1;
@@ -1705,63 +1705,63 @@ var CLSTAMP = "8056184";
             for (var t in e) delete e[t];
           }),
           (goog.object.remove = function (e, t) {
-            var o;
-            return (o = t in e) && delete e[t], o;
+            var r;
+            return (r = t in e) && delete e[t], r;
           }),
-          (goog.object.add = function (e, t, o) {
+          (goog.object.add = function (e, t, r) {
             if (null !== e && t in e)
               throw Error('The object already contains the key "' + t + '"');
-            goog.object.set(e, t, o);
+            goog.object.set(e, t, r);
           }),
-          (goog.object.get = function (e, t, o) {
-            return null !== e && t in e ? e[t] : o;
+          (goog.object.get = function (e, t, r) {
+            return null !== e && t in e ? e[t] : r;
           }),
-          (goog.object.set = function (e, t, o) {
-            e[t] = o;
+          (goog.object.set = function (e, t, r) {
+            e[t] = r;
           }),
-          (goog.object.setIfUndefined = function (e, t, o) {
-            return t in e ? e[t] : (e[t] = o);
+          (goog.object.setIfUndefined = function (e, t, r) {
+            return t in e ? e[t] : (e[t] = r);
           }),
-          (goog.object.setWithReturnValueIfNotSet = function (e, t, o) {
-            return t in e ? e[t] : ((o = o()), (e[t] = o));
+          (goog.object.setWithReturnValueIfNotSet = function (e, t, r) {
+            return t in e ? e[t] : ((r = r()), (e[t] = r));
           }),
           (goog.object.equals = function (e, t) {
-            for (var o in e) if (!(o in t) || e[o] !== t[o]) return !1;
-            for (var r in t) if (!(r in e)) return !1;
+            for (var r in e) if (!(r in t) || e[r] !== t[r]) return !1;
+            for (var o in t) if (!(o in e)) return !1;
             return !0;
           }),
           (goog.object.clone = function (e) {
             var t,
-              o = {};
-            for (t in e) o[t] = e[t];
-            return o;
+              r = {};
+            for (t in e) r[t] = e[t];
+            return r;
           }),
           (goog.object.unsafeClone = function (e) {
             var t = goog.typeOf(e);
             if ("object" == t || "array" == t) {
               if (goog.isFunction(e.clone)) return e.clone();
-              for (var o in ((t = "array" == t ? [] : {}), e))
-                t[o] = goog.object.unsafeClone(e[o]);
+              for (var r in ((t = "array" == t ? [] : {}), e))
+                t[r] = goog.object.unsafeClone(e[r]);
               return t;
             }
             return e;
           }),
           (goog.object.transpose = function (e) {
             var t,
-              o = {};
-            for (t in e) o[e[t]] = t;
-            return o;
+              r = {};
+            for (t in e) r[e[t]] = t;
+            return r;
           }),
           (goog.object.PROTOTYPE_FIELDS_ =
             "constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(
               " "
             )),
           (goog.object.extend = function (e, t) {
-            for (var o, r, n = 1; n < arguments.length; n++) {
-              for (o in (r = arguments[n])) e[o] = r[o];
+            for (var r, o, n = 1; n < arguments.length; n++) {
+              for (r in (o = arguments[n])) e[r] = o[r];
               for (var i = 0; i < goog.object.PROTOTYPE_FIELDS_.length; i++)
-                (o = goog.object.PROTOTYPE_FIELDS_[i]),
-                  Object.prototype.hasOwnProperty.call(r, o) && (e[o] = r[o]);
+                (r = goog.object.PROTOTYPE_FIELDS_[i]),
+                  Object.prototype.hasOwnProperty.call(o, r) && (e[r] = o[r]);
             }
           }),
           (goog.object.create = function (e) {
@@ -1769,16 +1769,16 @@ var CLSTAMP = "8056184";
             if (1 == t && Array.isArray(arguments[0]))
               return goog.object.create.apply(null, arguments[0]);
             if (t % 2) throw Error("Uneven number of arguments");
-            for (var o = {}, r = 0; r < t; r += 2)
-              o[arguments[r]] = arguments[r + 1];
-            return o;
+            for (var r = {}, o = 0; o < t; o += 2)
+              r[arguments[o]] = arguments[o + 1];
+            return r;
           }),
           (goog.object.createSet = function (e) {
             var t = arguments.length;
             if (1 == t && Array.isArray(arguments[0]))
               return goog.object.createSet.apply(null, arguments[0]);
-            for (var o = {}, r = 0; r < t; r++) o[arguments[r]] = !0;
-            return o;
+            for (var r = {}, o = 0; o < t; o++) r[arguments[o]] = !0;
+            return r;
           }),
           (goog.object.createImmutableView = function (e) {
             var t = e;
@@ -1792,15 +1792,15 @@ var CLSTAMP = "8056184";
           (goog.object.isImmutableView = function (e) {
             return !!Object.isFrozen && Object.isFrozen(e);
           }),
-          (goog.object.getAllPropertyNames = function (e, t, o) {
+          (goog.object.getAllPropertyNames = function (e, t, r) {
             if (!e) return [];
             if (!Object.getOwnPropertyNames || !Object.getPrototypeOf)
               return goog.object.getKeys(e);
             for (
-              var r = {};
+              var o = {};
               e &&
               (e !== Object.prototype || t) &&
-              (e !== Function.prototype || o);
+              (e !== Function.prototype || r);
 
             ) {
               for (
@@ -1808,10 +1808,10 @@ var CLSTAMP = "8056184";
                 i < n.length;
                 i++
               )
-                r[n[i]] = !0;
+                o[n[i]] = !0;
               e = Object.getPrototypeOf(e);
             }
-            return goog.object.getKeys(r);
+            return goog.object.getKeys(o);
           }),
           (goog.object.getSuperClass = function (e) {
             return (e = Object.getPrototypeOf(e.prototype)) && e.constructor;
@@ -1857,18 +1857,18 @@ var CLSTAMP = "8056184";
           (goog.asserts.errorHandler_ = goog.asserts.DEFAULT_ERROR_HANDLER),
           (goog.asserts.subs_ = function (e, t) {
             for (
-              var o = "", r = (e = e.split("%s")).length - 1, n = 0;
-              n < r;
+              var r = "", o = (e = e.split("%s")).length - 1, n = 0;
+              n < o;
               n++
             )
-              o += e[n] + (n < t.length ? t[n] : "%s");
-            return o + e[r];
+              r += e[n] + (n < t.length ? t[n] : "%s");
+            return r + e[o];
           }),
-          (goog.asserts.doAssertFailure_ = function (e, t, o, r) {
+          (goog.asserts.doAssertFailure_ = function (e, t, r, o) {
             var n = "Assertion failed";
-            if (o) {
-              n += ": " + o;
-              var i = r;
+            if (r) {
+              n += ": " + r;
+              var i = o;
             } else e && ((n += ": " + e), (i = t));
             (e = new goog.asserts.AssertionError("" + n, i || [])),
               goog.asserts.errorHandler_(e);
@@ -1876,7 +1876,7 @@ var CLSTAMP = "8056184";
           (goog.asserts.setErrorHandler = function (e) {
             goog.asserts.ENABLE_ASSERTS && (goog.asserts.errorHandler_ = e);
           }),
-          (goog.asserts.assert = function (e, t, o) {
+          (goog.asserts.assert = function (e, t, r) {
             return (
               goog.asserts.ENABLE_ASSERTS &&
                 !e &&
@@ -1889,7 +1889,7 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.asserts.assertExists = function (e, t, o) {
+          (goog.asserts.assertExists = function (e, t, r) {
             return (
               goog.asserts.ENABLE_ASSERTS &&
                 null == e &&
@@ -1911,7 +1911,7 @@ var CLSTAMP = "8056184";
                 )
               );
           }),
-          (goog.asserts.assertNumber = function (e, t, o) {
+          (goog.asserts.assertNumber = function (e, t, r) {
             return (
               goog.asserts.ENABLE_ASSERTS &&
                 "number" != typeof e &&
@@ -1924,7 +1924,7 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.asserts.assertString = function (e, t, o) {
+          (goog.asserts.assertString = function (e, t, r) {
             return (
               goog.asserts.ENABLE_ASSERTS &&
                 "string" != typeof e &&
@@ -1937,7 +1937,7 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.asserts.assertFunction = function (e, t, o) {
+          (goog.asserts.assertFunction = function (e, t, r) {
             return (
               goog.asserts.ENABLE_ASSERTS &&
                 !goog.isFunction(e) &&
@@ -1950,7 +1950,7 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.asserts.assertObject = function (e, t, o) {
+          (goog.asserts.assertObject = function (e, t, r) {
             return (
               goog.asserts.ENABLE_ASSERTS &&
                 !goog.isObject(e) &&
@@ -1963,7 +1963,7 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.asserts.assertArray = function (e, t, o) {
+          (goog.asserts.assertArray = function (e, t, r) {
             return (
               goog.asserts.ENABLE_ASSERTS &&
                 !Array.isArray(e) &&
@@ -1976,7 +1976,7 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.asserts.assertBoolean = function (e, t, o) {
+          (goog.asserts.assertBoolean = function (e, t, r) {
             return (
               goog.asserts.ENABLE_ASSERTS &&
                 "boolean" != typeof e &&
@@ -1989,7 +1989,7 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.asserts.assertElement = function (e, t, o) {
+          (goog.asserts.assertElement = function (e, t, r) {
             return (
               !goog.asserts.ENABLE_ASSERTS ||
                 (goog.isObject(e) && e.nodeType == goog.dom.NodeType.ELEMENT) ||
@@ -2002,20 +2002,20 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.asserts.assertInstanceof = function (e, t, o, r) {
+          (goog.asserts.assertInstanceof = function (e, t, r, o) {
             return (
               !goog.asserts.ENABLE_ASSERTS ||
                 e instanceof t ||
                 goog.asserts.doAssertFailure_(
                   "Expected instanceof %s but got %s.",
                   [goog.asserts.getType_(t), goog.asserts.getType_(e)],
-                  o,
+                  r,
                   Array.prototype.slice.call(arguments, 3)
                 ),
               e
             );
           }),
-          (goog.asserts.assertFinite = function (e, t, o) {
+          (goog.asserts.assertFinite = function (e, t, r) {
             return (
               !goog.asserts.ENABLE_ASSERTS ||
                 ("number" == typeof e && isFinite(e)) ||
@@ -2084,7 +2084,7 @@ var CLSTAMP = "8056184";
           }),
           (jspb.BinaryConstants.FieldTypeToWireType = function (e) {
             var t = jspb.BinaryConstants.FieldType,
-              o = jspb.BinaryConstants.WireType;
+              r = jspb.BinaryConstants.WireType;
             switch (e) {
               case t.INT32:
               case t.INT64:
@@ -2095,22 +2095,22 @@ var CLSTAMP = "8056184";
               case t.BOOL:
               case t.ENUM:
               case t.VHASH64:
-                return o.VARINT;
+                return r.VARINT;
               case t.DOUBLE:
               case t.FIXED64:
               case t.SFIXED64:
               case t.FHASH64:
-                return o.FIXED64;
+                return r.FIXED64;
               case t.STRING:
               case t.MESSAGE:
               case t.BYTES:
-                return o.DELIMITED;
+                return r.DELIMITED;
               case t.FLOAT:
               case t.FIXED32:
               case t.SFIXED32:
-                return o.FIXED32;
+                return r.FIXED32;
               default:
-                return o.INVALID;
+                return r.INVALID;
             }
           }),
           (jspb.BinaryConstants.INVALID_FIELD_NUMBER = -1),
@@ -2138,132 +2138,132 @@ var CLSTAMP = "8056184";
           (goog.array.indexOf =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.indexOf)
-              ? function (e, t, o) {
+              ? function (e, t, r) {
                   return (
                     goog.asserts.assert(null != e.length),
-                    Array.prototype.indexOf.call(e, t, o)
+                    Array.prototype.indexOf.call(e, t, r)
                   );
                 }
-              : function (e, t, o) {
+              : function (e, t, r) {
                   if (
-                    ((o =
-                      null == o ? 0 : 0 > o ? Math.max(0, e.length + o) : o),
+                    ((r =
+                      null == r ? 0 : 0 > r ? Math.max(0, e.length + r) : r),
                     "string" == typeof e)
                   )
                     return "string" != typeof t || 1 != t.length
                       ? -1
-                      : e.indexOf(t, o);
-                  for (; o < e.length; o++) if (o in e && e[o] === t) return o;
+                      : e.indexOf(t, r);
+                  for (; r < e.length; r++) if (r in e && e[r] === t) return r;
                   return -1;
                 }),
           (goog.array.lastIndexOf =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.lastIndexOf)
-              ? function (e, t, o) {
+              ? function (e, t, r) {
                   return (
                     goog.asserts.assert(null != e.length),
                     Array.prototype.lastIndexOf.call(
                       e,
                       t,
-                      null == o ? e.length - 1 : o
+                      null == r ? e.length - 1 : r
                     )
                   );
                 }
-              : function (e, t, o) {
+              : function (e, t, r) {
                   if (
-                    (0 > (o = null == o ? e.length - 1 : o) &&
-                      (o = Math.max(0, e.length + o)),
+                    (0 > (r = null == r ? e.length - 1 : r) &&
+                      (r = Math.max(0, e.length + r)),
                     "string" == typeof e)
                   )
                     return "string" != typeof t || 1 != t.length
                       ? -1
-                      : e.lastIndexOf(t, o);
-                  for (; 0 <= o; o--) if (o in e && e[o] === t) return o;
+                      : e.lastIndexOf(t, r);
+                  for (; 0 <= r; r--) if (r in e && e[r] === t) return r;
                   return -1;
                 }),
           (goog.array.forEach =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.forEach)
-              ? function (e, t, o) {
+              ? function (e, t, r) {
                   goog.asserts.assert(null != e.length),
-                    Array.prototype.forEach.call(e, t, o);
+                    Array.prototype.forEach.call(e, t, r);
                 }
-              : function (e, t, o) {
+              : function (e, t, r) {
                   for (
-                    var r = e.length,
+                    var o = e.length,
                       n = "string" == typeof e ? e.split("") : e,
                       i = 0;
-                    i < r;
+                    i < o;
                     i++
                   )
-                    i in n && t.call(o, n[i], i, e);
+                    i in n && t.call(r, n[i], i, e);
                 }),
-          (goog.array.forEachRight = function (e, t, o) {
-            var r = e.length,
+          (goog.array.forEachRight = function (e, t, r) {
+            var o = e.length,
               n = "string" == typeof e ? e.split("") : e;
-            for (--r; 0 <= r; --r) r in n && t.call(o, n[r], r, e);
+            for (--o; 0 <= o; --o) o in n && t.call(r, n[o], o, e);
           }),
           (goog.array.filter =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.filter)
-              ? function (e, t, o) {
+              ? function (e, t, r) {
                   return (
                     goog.asserts.assert(null != e.length),
-                    Array.prototype.filter.call(e, t, o)
+                    Array.prototype.filter.call(e, t, r)
                   );
                 }
-              : function (e, t, o) {
+              : function (e, t, r) {
                   for (
-                    var r = e.length,
+                    var o = e.length,
                       n = [],
                       i = 0,
                       a = "string" == typeof e ? e.split("") : e,
                       s = 0;
-                    s < r;
+                    s < o;
                     s++
                   )
                     if (s in a) {
                       var g = a[s];
-                      t.call(o, g, s, e) && (n[i++] = g);
+                      t.call(r, g, s, e) && (n[i++] = g);
                     }
                   return n;
                 }),
           (goog.array.map =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.map)
-              ? function (e, t, o) {
+              ? function (e, t, r) {
                   return (
                     goog.asserts.assert(null != e.length),
-                    Array.prototype.map.call(e, t, o)
+                    Array.prototype.map.call(e, t, r)
                   );
                 }
-              : function (e, t, o) {
+              : function (e, t, r) {
                   for (
-                    var r = e.length,
-                      n = Array(r),
+                    var o = e.length,
+                      n = Array(o),
                       i = "string" == typeof e ? e.split("") : e,
                       a = 0;
-                    a < r;
+                    a < o;
                     a++
                   )
-                    a in i && (n[a] = t.call(o, i[a], a, e));
+                    a in i && (n[a] = t.call(r, i[a], a, e));
                   return n;
                 }),
           (goog.array.reduce =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.reduce)
-              ? function (e, t, o, r) {
+              ? function (e, t, r, o) {
                   return (
                     goog.asserts.assert(null != e.length),
-                    r && (t = goog.bind(t, r)),
-                    Array.prototype.reduce.call(e, t, o)
+                    o && (t = goog.bind(t, o)),
+                    Array.prototype.reduce.call(e, t, r)
                   );
                 }
-              : function (e, t, o, r) {
-                  var n = o;
+              : function (e, t, r, o) {
+                  var n = r;
                   return (
-                    goog.array.forEach(e, function (o, i) {
-                      n = t.call(r, n, o, i, e);
+                    goog.array.forEach(e, function (r, i) {
+                      n = t.call(o, n, r, i, e);
                     }),
                     n
                   );
@@ -2271,19 +2271,19 @@ var CLSTAMP = "8056184";
           (goog.array.reduceRight =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.reduceRight)
-              ? function (e, t, o, r) {
+              ? function (e, t, r, o) {
                   return (
                     goog.asserts.assert(null != e.length),
                     goog.asserts.assert(null != t),
-                    r && (t = goog.bind(t, r)),
-                    Array.prototype.reduceRight.call(e, t, o)
+                    o && (t = goog.bind(t, o)),
+                    Array.prototype.reduceRight.call(e, t, r)
                   );
                 }
-              : function (e, t, o, r) {
-                  var n = o;
+              : function (e, t, r, o) {
+                  var n = r;
                   return (
-                    goog.array.forEachRight(e, function (o, i) {
-                      n = t.call(r, n, o, i, e);
+                    goog.array.forEachRight(e, function (r, i) {
+                      n = t.call(o, n, r, i, e);
                     }),
                     n
                   );
@@ -2291,86 +2291,86 @@ var CLSTAMP = "8056184";
           (goog.array.some =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.some)
-              ? function (e, t, o) {
+              ? function (e, t, r) {
                   return (
                     goog.asserts.assert(null != e.length),
-                    Array.prototype.some.call(e, t, o)
+                    Array.prototype.some.call(e, t, r)
                   );
                 }
-              : function (e, t, o) {
+              : function (e, t, r) {
                   for (
-                    var r = e.length,
+                    var o = e.length,
                       n = "string" == typeof e ? e.split("") : e,
                       i = 0;
-                    i < r;
+                    i < o;
                     i++
                   )
-                    if (i in n && t.call(o, n[i], i, e)) return !0;
+                    if (i in n && t.call(r, n[i], i, e)) return !0;
                   return !1;
                 }),
           (goog.array.every =
             goog.NATIVE_ARRAY_PROTOTYPES &&
             (goog.array.ASSUME_NATIVE_FUNCTIONS || Array.prototype.every)
-              ? function (e, t, o) {
+              ? function (e, t, r) {
                   return (
                     goog.asserts.assert(null != e.length),
-                    Array.prototype.every.call(e, t, o)
+                    Array.prototype.every.call(e, t, r)
                   );
                 }
-              : function (e, t, o) {
+              : function (e, t, r) {
                   for (
-                    var r = e.length,
+                    var o = e.length,
                       n = "string" == typeof e ? e.split("") : e,
                       i = 0;
-                    i < r;
+                    i < o;
                     i++
                   )
-                    if (i in n && !t.call(o, n[i], i, e)) return !1;
+                    if (i in n && !t.call(r, n[i], i, e)) return !1;
                   return !0;
                 }),
-          (goog.array.count = function (e, t, o) {
-            var r = 0;
+          (goog.array.count = function (e, t, r) {
+            var o = 0;
             return (
               goog.array.forEach(
                 e,
                 function (e, n, i) {
-                  t.call(o, e, n, i) && ++r;
+                  t.call(r, e, n, i) && ++o;
                 },
-                o
+                r
               ),
-              r
+              o
             );
           }),
-          (goog.array.find = function (e, t, o) {
-            return 0 > (t = goog.array.findIndex(e, t, o))
+          (goog.array.find = function (e, t, r) {
+            return 0 > (t = goog.array.findIndex(e, t, r))
               ? null
               : "string" == typeof e
               ? e.charAt(t)
               : e[t];
           }),
-          (goog.array.findIndex = function (e, t, o) {
+          (goog.array.findIndex = function (e, t, r) {
             for (
-              var r = e.length,
+              var o = e.length,
                 n = "string" == typeof e ? e.split("") : e,
                 i = 0;
-              i < r;
+              i < o;
               i++
             )
-              if (i in n && t.call(o, n[i], i, e)) return i;
+              if (i in n && t.call(r, n[i], i, e)) return i;
             return -1;
           }),
-          (goog.array.findRight = function (e, t, o) {
-            return 0 > (t = goog.array.findIndexRight(e, t, o))
+          (goog.array.findRight = function (e, t, r) {
+            return 0 > (t = goog.array.findIndexRight(e, t, r))
               ? null
               : "string" == typeof e
               ? e.charAt(t)
               : e[t];
           }),
-          (goog.array.findIndexRight = function (e, t, o) {
-            var r = e.length,
+          (goog.array.findIndexRight = function (e, t, r) {
+            var o = e.length,
               n = "string" == typeof e ? e.split("") : e;
-            for (--r; 0 <= r; r--)
-              if (r in n && t.call(o, n[r], r, e)) return r;
+            for (--o; 0 <= o; o--)
+              if (o in n && t.call(r, n[o], o, e)) return o;
             return -1;
           }),
           (goog.array.contains = function (e, t) {
@@ -2387,24 +2387,24 @@ var CLSTAMP = "8056184";
           (goog.array.insert = function (e, t) {
             goog.array.contains(e, t) || e.push(t);
           }),
-          (goog.array.insertAt = function (e, t, o) {
-            goog.array.splice(e, o, 0, t);
+          (goog.array.insertAt = function (e, t, r) {
+            goog.array.splice(e, r, 0, t);
           }),
-          (goog.array.insertArrayAt = function (e, t, o) {
-            goog.partial(goog.array.splice, e, o, 0).apply(null, t);
+          (goog.array.insertArrayAt = function (e, t, r) {
+            goog.partial(goog.array.splice, e, r, 0).apply(null, t);
           }),
-          (goog.array.insertBefore = function (e, t, o) {
-            var r;
-            2 == arguments.length || 0 > (r = goog.array.indexOf(e, o))
+          (goog.array.insertBefore = function (e, t, r) {
+            var o;
+            2 == arguments.length || 0 > (o = goog.array.indexOf(e, r))
               ? e.push(t)
-              : goog.array.insertAt(e, t, r);
+              : goog.array.insertAt(e, t, o);
           }),
           (goog.array.remove = function (e, t) {
-            var o;
+            var r;
             return (
-              (o = 0 <= (t = goog.array.indexOf(e, t))) &&
+              (r = 0 <= (t = goog.array.indexOf(e, t))) &&
                 goog.array.removeAt(e, t),
-              o
+              r
             );
           }),
           (goog.array.removeLast = function (e, t) {
@@ -2419,19 +2419,19 @@ var CLSTAMP = "8056184";
               1 == Array.prototype.splice.call(e, t, 1).length
             );
           }),
-          (goog.array.removeIf = function (e, t, o) {
+          (goog.array.removeIf = function (e, t, r) {
             return (
-              0 <= (t = goog.array.findIndex(e, t, o)) &&
+              0 <= (t = goog.array.findIndex(e, t, r)) &&
               (goog.array.removeAt(e, t), !0)
             );
           }),
-          (goog.array.removeAllIf = function (e, t, o) {
-            var r = 0;
+          (goog.array.removeAllIf = function (e, t, r) {
+            var o = 0;
             return (
               goog.array.forEachRight(e, function (n, i) {
-                t.call(o, n, i, e) && goog.array.removeAt(e, i) && r++;
+                t.call(r, n, i, e) && goog.array.removeAt(e, i) && o++;
               }),
-              r
+              o
             );
           }),
           (goog.array.concat = function (e) {
@@ -2443,68 +2443,68 @@ var CLSTAMP = "8056184";
           (goog.array.toArray = function (e) {
             var t = e.length;
             if (0 < t) {
-              for (var o = Array(t), r = 0; r < t; r++) o[r] = e[r];
-              return o;
+              for (var r = Array(t), o = 0; o < t; o++) r[o] = e[o];
+              return r;
             }
             return [];
           }),
           (goog.array.clone = goog.array.toArray),
           (goog.array.extend = function (e, t) {
-            for (var o = 1; o < arguments.length; o++) {
-              var r = arguments[o];
-              if (goog.isArrayLike(r)) {
+            for (var r = 1; r < arguments.length; r++) {
+              var o = arguments[r];
+              if (goog.isArrayLike(o)) {
                 var n = e.length || 0,
-                  i = r.length || 0;
+                  i = o.length || 0;
                 e.length = n + i;
-                for (var a = 0; a < i; a++) e[n + a] = r[a];
-              } else e.push(r);
+                for (var a = 0; a < i; a++) e[n + a] = o[a];
+              } else e.push(o);
             }
           }),
-          (goog.array.splice = function (e, t, o, r) {
+          (goog.array.splice = function (e, t, r, o) {
             return (
               goog.asserts.assert(null != e.length),
               Array.prototype.splice.apply(e, goog.array.slice(arguments, 1))
             );
           }),
-          (goog.array.slice = function (e, t, o) {
+          (goog.array.slice = function (e, t, r) {
             return (
               goog.asserts.assert(null != e.length),
               2 >= arguments.length
                 ? Array.prototype.slice.call(e, t)
-                : Array.prototype.slice.call(e, t, o)
+                : Array.prototype.slice.call(e, t, r)
             );
           }),
-          (goog.array.removeDuplicates = function (e, t, o) {
+          (goog.array.removeDuplicates = function (e, t, r) {
             t = t || e;
-            var r = function (e) {
+            var o = function (e) {
               return goog.isObject(e)
                 ? "o" + goog.getUid(e)
                 : (typeof e).charAt(0) + e;
             };
-            (o = o || r), (r = {});
+            (r = r || o), (o = {});
             for (var n = 0, i = 0; i < e.length; ) {
               var a = e[i++],
-                s = o(a);
-              Object.prototype.hasOwnProperty.call(r, s) ||
-                ((r[s] = !0), (t[n++] = a));
+                s = r(a);
+              Object.prototype.hasOwnProperty.call(o, s) ||
+                ((o[s] = !0), (t[n++] = a));
             }
             t.length = n;
           }),
-          (goog.array.binarySearch = function (e, t, o) {
+          (goog.array.binarySearch = function (e, t, r) {
             return goog.array.binarySearch_(
               e,
-              o || goog.array.defaultCompare,
+              r || goog.array.defaultCompare,
               !1,
               t
             );
           }),
-          (goog.array.binarySelect = function (e, t, o) {
-            return goog.array.binarySearch_(e, t, !0, void 0, o);
+          (goog.array.binarySelect = function (e, t, r) {
+            return goog.array.binarySearch_(e, t, !0, void 0, r);
           }),
-          (goog.array.binarySearch_ = function (e, t, o, r, n) {
+          (goog.array.binarySearch_ = function (e, t, r, o, n) {
             for (var i, a = 0, s = e.length; a < s; ) {
               var g = a + ((s - a) >>> 1),
-                l = o ? t.call(n, e[g], g, e) : t(r, e[g]);
+                l = r ? t.call(n, e[g], g, e) : t(o, e[g]);
               0 < l ? (a = g + 1) : ((s = g), (i = !l));
             }
             return i ? a : -a - 1;
@@ -2513,58 +2513,58 @@ var CLSTAMP = "8056184";
             e.sort(t || goog.array.defaultCompare);
           }),
           (goog.array.stableSort = function (e, t) {
-            for (var o = Array(e.length), r = 0; r < e.length; r++)
-              o[r] = { index: r, value: e[r] };
+            for (var r = Array(e.length), o = 0; o < e.length; o++)
+              r[o] = { index: o, value: e[o] };
             var n = t || goog.array.defaultCompare;
             for (
-              goog.array.sort(o, function (e, t) {
+              goog.array.sort(r, function (e, t) {
                 return n(e.value, t.value) || e.index - t.index;
               }),
-                r = 0;
-              r < e.length;
-              r++
+                o = 0;
+              o < e.length;
+              o++
             )
-              e[r] = o[r].value;
+              e[o] = r[o].value;
           }),
-          (goog.array.sortByKey = function (e, t, o) {
-            var r = o || goog.array.defaultCompare;
-            goog.array.sort(e, function (e, o) {
-              return r(t(e), t(o));
+          (goog.array.sortByKey = function (e, t, r) {
+            var o = r || goog.array.defaultCompare;
+            goog.array.sort(e, function (e, r) {
+              return o(t(e), t(r));
             });
           }),
-          (goog.array.sortObjectsByKey = function (e, t, o) {
+          (goog.array.sortObjectsByKey = function (e, t, r) {
             goog.array.sortByKey(
               e,
               function (e) {
                 return e[t];
               },
-              o
+              r
             );
           }),
-          (goog.array.isSorted = function (e, t, o) {
+          (goog.array.isSorted = function (e, t, r) {
             t = t || goog.array.defaultCompare;
-            for (var r = 1; r < e.length; r++) {
-              var n = t(e[r - 1], e[r]);
-              if (0 < n || (0 == n && o)) return !1;
+            for (var o = 1; o < e.length; o++) {
+              var n = t(e[o - 1], e[o]);
+              if (0 < n || (0 == n && r)) return !1;
             }
             return !0;
           }),
-          (goog.array.equals = function (e, t, o) {
+          (goog.array.equals = function (e, t, r) {
             if (
               !goog.isArrayLike(e) ||
               !goog.isArrayLike(t) ||
               e.length != t.length
             )
               return !1;
-            var r = e.length;
-            o = o || goog.array.defaultCompareEquality;
-            for (var n = 0; n < r; n++) if (!o(e[n], t[n])) return !1;
+            var o = e.length;
+            r = r || goog.array.defaultCompareEquality;
+            for (var n = 0; n < o; n++) if (!r(e[n], t[n])) return !1;
             return !0;
           }),
-          (goog.array.compare3 = function (e, t, o) {
-            o = o || goog.array.defaultCompare;
-            for (var r = Math.min(e.length, t.length), n = 0; n < r; n++) {
-              var i = o(e[n], t[n]);
+          (goog.array.compare3 = function (e, t, r) {
+            r = r || goog.array.defaultCompare;
+            for (var o = Math.min(e.length, t.length), n = 0; n < o; n++) {
+              var i = r(e[n], t[n]);
               if (0 != i) return i;
             }
             return goog.array.defaultCompare(e.length, t.length);
@@ -2578,61 +2578,61 @@ var CLSTAMP = "8056184";
           (goog.array.defaultCompareEquality = function (e, t) {
             return e === t;
           }),
-          (goog.array.binaryInsert = function (e, t, o) {
+          (goog.array.binaryInsert = function (e, t, r) {
             return (
-              0 > (o = goog.array.binarySearch(e, t, o)) &&
-              (goog.array.insertAt(e, t, -(o + 1)), !0)
+              0 > (r = goog.array.binarySearch(e, t, r)) &&
+              (goog.array.insertAt(e, t, -(r + 1)), !0)
             );
           }),
-          (goog.array.binaryRemove = function (e, t, o) {
+          (goog.array.binaryRemove = function (e, t, r) {
             return (
-              0 <= (t = goog.array.binarySearch(e, t, o)) &&
+              0 <= (t = goog.array.binarySearch(e, t, r)) &&
               goog.array.removeAt(e, t)
             );
           }),
-          (goog.array.bucket = function (e, t, o) {
-            for (var r = {}, n = 0; n < e.length; n++) {
+          (goog.array.bucket = function (e, t, r) {
+            for (var o = {}, n = 0; n < e.length; n++) {
               var i = e[n],
-                a = t.call(o, i, n, e);
-              void 0 !== a && (r[a] || (r[a] = [])).push(i);
+                a = t.call(r, i, n, e);
+              void 0 !== a && (o[a] || (o[a] = [])).push(i);
             }
-            return r;
+            return o;
           }),
-          (goog.array.toObject = function (e, t, o) {
-            var r = {};
+          (goog.array.toObject = function (e, t, r) {
+            var o = {};
             return (
               goog.array.forEach(e, function (n, i) {
-                r[t.call(o, n, i, e)] = n;
+                o[t.call(r, n, i, e)] = n;
               }),
-              r
+              o
             );
           }),
-          (goog.array.range = function (e, t, o) {
-            var r = [],
+          (goog.array.range = function (e, t, r) {
+            var o = [],
               n = 0,
               i = e;
             if (
-              (void 0 !== t && ((n = e), (i = t)), 0 > (o = o || 1) * (i - n))
+              (void 0 !== t && ((n = e), (i = t)), 0 > (r = r || 1) * (i - n))
             )
               return [];
-            if (0 < o) for (e = n; e < i; e += o) r.push(e);
-            else for (e = n; e > i; e += o) r.push(e);
-            return r;
-          }),
-          (goog.array.repeat = function (e, t) {
-            for (var o = [], r = 0; r < t; r++) o[r] = e;
+            if (0 < r) for (e = n; e < i; e += r) o.push(e);
+            else for (e = n; e > i; e += r) o.push(e);
             return o;
           }),
+          (goog.array.repeat = function (e, t) {
+            for (var r = [], o = 0; o < t; o++) r[o] = e;
+            return r;
+          }),
           (goog.array.flatten = function (e) {
-            for (var t = [], o = 0; o < arguments.length; o++) {
-              var r = arguments[o];
-              if (Array.isArray(r))
-                for (var n = 0; n < r.length; n += 8192) {
-                  var i = goog.array.slice(r, n, n + 8192);
+            for (var t = [], r = 0; r < arguments.length; r++) {
+              var o = arguments[r];
+              if (Array.isArray(o))
+                for (var n = 0; n < o.length; n += 8192) {
+                  var i = goog.array.slice(o, n, n + 8192);
                   i = goog.array.flatten.apply(null, i);
                   for (var a = 0; a < i.length; a++) t.push(i[a]);
                 }
-              else t.push(r);
+              else t.push(o);
             }
             return t;
           }),
@@ -2646,60 +2646,60 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (goog.array.moveItem = function (e, t, o) {
+          (goog.array.moveItem = function (e, t, r) {
             goog.asserts.assert(0 <= t && t < e.length),
-              goog.asserts.assert(0 <= o && o < e.length),
+              goog.asserts.assert(0 <= r && r < e.length),
               (t = Array.prototype.splice.call(e, t, 1)),
-              Array.prototype.splice.call(e, o, 0, t[0]);
+              Array.prototype.splice.call(e, r, 0, t[0]);
           }),
           (goog.array.zip = function (e) {
             if (!arguments.length) return [];
             for (
-              var t = [], o = arguments[0].length, r = 1;
-              r < arguments.length;
-              r++
+              var t = [], r = arguments[0].length, o = 1;
+              o < arguments.length;
+              o++
             )
-              arguments[r].length < o && (o = arguments[r].length);
-            for (r = 0; r < o; r++) {
+              arguments[o].length < r && (r = arguments[o].length);
+            for (o = 0; o < r; o++) {
               for (var n = [], i = 0; i < arguments.length; i++)
-                n.push(arguments[i][r]);
+                n.push(arguments[i][o]);
               t.push(n);
             }
             return t;
           }),
           (goog.array.shuffle = function (e, t) {
             t = t || Math.random;
-            for (var o = e.length - 1; 0 < o; o--) {
-              var r = Math.floor(t() * (o + 1)),
-                n = e[o];
-              (e[o] = e[r]), (e[r] = n);
+            for (var r = e.length - 1; 0 < r; r--) {
+              var o = Math.floor(t() * (r + 1)),
+                n = e[r];
+              (e[r] = e[o]), (e[o] = n);
             }
           }),
           (goog.array.copyByIndex = function (e, t) {
-            var o = [];
+            var r = [];
             return (
               goog.array.forEach(t, function (t) {
-                o.push(e[t]);
+                r.push(e[t]);
               }),
-              o
+              r
             );
           }),
-          (goog.array.concatMap = function (e, t, o) {
-            return goog.array.concat.apply([], goog.array.map(e, t, o));
+          (goog.array.concatMap = function (e, t, r) {
+            return goog.array.concat.apply([], goog.array.map(e, t, r));
           }),
           (goog.crypt = {}),
           (goog.crypt.stringToByteArray = function (e) {
-            for (var t = [], o = 0, r = 0; r < e.length; r++) {
-              var n = e.charCodeAt(r);
-              255 < n && ((t[o++] = 255 & n), (n >>= 8)), (t[o++] = n);
+            for (var t = [], r = 0, o = 0; o < e.length; o++) {
+              var n = e.charCodeAt(o);
+              255 < n && ((t[r++] = 255 & n), (n >>= 8)), (t[r++] = n);
             }
             return t;
           }),
           (goog.crypt.byteArrayToString = function (e) {
             if (8192 >= e.length) return String.fromCharCode.apply(null, e);
-            for (var t = "", o = 0; o < e.length; o += 8192) {
-              var r = goog.array.slice(e, o, o + 8192);
-              t += String.fromCharCode.apply(null, r);
+            for (var t = "", r = 0; r < e.length; r += 8192) {
+              var o = goog.array.slice(e, r, r + 8192);
+              t += String.fromCharCode.apply(null, o);
             }
             return t;
           }),
@@ -2715,54 +2715,54 @@ var CLSTAMP = "8056184";
               0 == e.length % 2,
               "Key string length must be multiple of 2"
             );
-            for (var t = [], o = 0; o < e.length; o += 2)
-              t.push(parseInt(e.substring(o, o + 2), 16));
+            for (var t = [], r = 0; r < e.length; r += 2)
+              t.push(parseInt(e.substring(r, r + 2), 16));
             return t;
           }),
           (goog.crypt.stringToUtf8ByteArray = function (e) {
-            for (var t = [], o = 0, r = 0; r < e.length; r++) {
-              var n = e.charCodeAt(r);
+            for (var t = [], r = 0, o = 0; o < e.length; o++) {
+              var n = e.charCodeAt(o);
               128 > n
-                ? (t[o++] = n)
+                ? (t[r++] = n)
                 : (2048 > n
-                    ? (t[o++] = (n >> 6) | 192)
+                    ? (t[r++] = (n >> 6) | 192)
                     : (55296 == (64512 & n) &&
-                      r + 1 < e.length &&
-                      56320 == (64512 & e.charCodeAt(r + 1))
+                      o + 1 < e.length &&
+                      56320 == (64512 & e.charCodeAt(o + 1))
                         ? ((n =
                             65536 +
                             ((1023 & n) << 10) +
-                            (1023 & e.charCodeAt(++r))),
-                          (t[o++] = (n >> 18) | 240),
-                          (t[o++] = ((n >> 12) & 63) | 128))
-                        : (t[o++] = (n >> 12) | 224),
-                      (t[o++] = ((n >> 6) & 63) | 128)),
-                  (t[o++] = (63 & n) | 128));
+                            (1023 & e.charCodeAt(++o))),
+                          (t[r++] = (n >> 18) | 240),
+                          (t[r++] = ((n >> 12) & 63) | 128))
+                        : (t[r++] = (n >> 12) | 224),
+                      (t[r++] = ((n >> 6) & 63) | 128)),
+                  (t[r++] = (63 & n) | 128));
             }
             return t;
           }),
           (goog.crypt.utf8ByteArrayToString = function (e) {
-            for (var t = [], o = 0, r = 0; o < e.length; ) {
-              var n = e[o++];
-              if (128 > n) t[r++] = String.fromCharCode(n);
+            for (var t = [], r = 0, o = 0; r < e.length; ) {
+              var n = e[r++];
+              if (128 > n) t[o++] = String.fromCharCode(n);
               else if (191 < n && 224 > n) {
-                var i = e[o++];
-                t[r++] = String.fromCharCode(((31 & n) << 6) | (63 & i));
+                var i = e[r++];
+                t[o++] = String.fromCharCode(((31 & n) << 6) | (63 & i));
               } else if (239 < n && 365 > n) {
-                i = e[o++];
-                var a = e[o++];
+                i = e[r++];
+                var a = e[r++];
                 (n =
                   (((7 & n) << 18) |
                     ((63 & i) << 12) |
                     ((63 & a) << 6) |
-                    (63 & e[o++])) -
+                    (63 & e[r++])) -
                   65536),
-                  (t[r++] = String.fromCharCode(55296 + (n >> 10))),
-                  (t[r++] = String.fromCharCode(56320 + (1023 & n)));
+                  (t[o++] = String.fromCharCode(55296 + (n >> 10))),
+                  (t[o++] = String.fromCharCode(56320 + (1023 & n)));
               } else
-                (i = e[o++]),
-                  (a = e[o++]),
-                  (t[r++] = String.fromCharCode(
+                (i = e[r++]),
+                  (a = e[r++]),
+                  (t[o++] = String.fromCharCode(
                     ((15 & n) << 12) | ((63 & i) << 6) | (63 & a)
                   ));
             }
@@ -2773,8 +2773,8 @@ var CLSTAMP = "8056184";
               e.length == t.length,
               "XOR array lengths must match"
             );
-            for (var o = [], r = 0; r < e.length; r++) o.push(e[r] ^ t[r]);
-            return o;
+            for (var r = [], o = 0; o < e.length; o++) r.push(e[o] ^ t[o]);
+            return r;
           }),
           (goog.dom.asserts = {}),
           (goog.dom.asserts.assertIsLocation = function (e) {
@@ -2792,12 +2792,12 @@ var CLSTAMP = "8056184";
           }),
           (goog.dom.asserts.assertIsElementType_ = function (e, t) {
             if (goog.asserts.ENABLE_ASSERTS) {
-              var o = goog.dom.asserts.getWindow_(e);
-              o &&
-                void 0 !== o[t] &&
+              var r = goog.dom.asserts.getWindow_(e);
+              r &&
+                void 0 !== r[t] &&
                 ((e &&
-                  (e instanceof o[t] ||
-                    !(e instanceof o.Location || e instanceof o.Element))) ||
+                  (e instanceof r[t] ||
+                    !(e instanceof r.Location || e instanceof r.Element))) ||
                   goog.asserts.fail(
                     "Argument is not a %s (or a non-Element, non-Location mock); got: %s",
                     t,
@@ -2892,8 +2892,8 @@ var CLSTAMP = "8056184";
           (goog.dom.asserts.getWindow_ = function (e) {
             try {
               var t = e && e.ownerDocument,
-                o = t && (t.defaultView || t.parentWindow);
-              if ((o = o || goog.global).Element && o.Location) return o;
+                r = t && (t.defaultView || t.parentWindow);
+              if ((r = r || goog.global).Element && r.Location) return r;
             } catch (e) {}
             return null;
           }),
@@ -2942,52 +2942,52 @@ var CLSTAMP = "8056184";
             };
           }),
           (goog.functions.partialRight = function (e, t) {
-            var o = Array.prototype.slice.call(arguments, 1);
+            var r = Array.prototype.slice.call(arguments, 1);
             return function () {
               var t = Array.prototype.slice.call(arguments);
-              return t.push.apply(t, o), e.apply(this, t);
+              return t.push.apply(t, r), e.apply(this, t);
             };
           }),
           (goog.functions.withReturnValue = function (e, t) {
             return goog.functions.sequence(e, goog.functions.constant(t));
           }),
           (goog.functions.equalTo = function (e, t) {
-            return function (o) {
-              return t ? e == o : e === o;
+            return function (r) {
+              return t ? e == r : e === r;
             };
           }),
           (goog.functions.compose = function (e, t) {
-            var o = arguments,
-              r = o.length;
+            var r = arguments,
+              o = r.length;
             return function () {
               var e;
-              r && (e = o[r - 1].apply(this, arguments));
-              for (var t = r - 2; 0 <= t; t--) e = o[t].call(this, e);
+              o && (e = r[o - 1].apply(this, arguments));
+              for (var t = o - 2; 0 <= t; t--) e = r[t].call(this, e);
               return e;
             };
           }),
           (goog.functions.sequence = function (e) {
             var t = arguments,
-              o = t.length;
+              r = t.length;
             return function () {
-              for (var e, r = 0; r < o; r++) e = t[r].apply(this, arguments);
+              for (var e, o = 0; o < r; o++) e = t[o].apply(this, arguments);
               return e;
             };
           }),
           (goog.functions.and = function (e) {
             var t = arguments,
-              o = t.length;
+              r = t.length;
             return function () {
-              for (var e = 0; e < o; e++)
+              for (var e = 0; e < r; e++)
                 if (!t[e].apply(this, arguments)) return !1;
               return !0;
             };
           }),
           (goog.functions.or = function (e) {
             var t = arguments,
-              o = t.length;
+              r = t.length;
             return function () {
-              for (var e = 0; e < o; e++)
+              for (var e = 0; e < r; e++)
                 if (t[e].apply(this, arguments)) return !0;
               return !1;
             };
@@ -2998,21 +2998,21 @@ var CLSTAMP = "8056184";
             };
           }),
           (goog.functions.create = function (e, t) {
-            var o = function () {};
+            var r = function () {};
             return (
-              (o.prototype = e.prototype),
-              (o = new o()),
-              e.apply(o, Array.prototype.slice.call(arguments, 1)),
-              o
+              (r.prototype = e.prototype),
+              (r = new r()),
+              e.apply(r, Array.prototype.slice.call(arguments, 1)),
+              r
             );
           }),
           (goog.functions.CACHE_RETURN_VALUE = !0),
           (goog.functions.cacheReturnValue = function (e) {
             var t,
-              o = !1;
+              r = !1;
             return function () {
               return goog.functions.CACHE_RETURN_VALUE
-                ? (o || ((t = e()), (o = !0)), t)
+                ? (r || ((t = e()), (r = !0)), t)
                 : e();
             };
           }),
@@ -3025,37 +3025,37 @@ var CLSTAMP = "8056184";
               }
             };
           }),
-          (goog.functions.debounce = function (e, t, o) {
-            var r = 0;
+          (goog.functions.debounce = function (e, t, r) {
+            var o = 0;
             return function (n) {
-              goog.global.clearTimeout(r);
+              goog.global.clearTimeout(o);
               var i = arguments;
-              r = goog.global.setTimeout(function () {
-                e.apply(o, i);
+              o = goog.global.setTimeout(function () {
+                e.apply(r, i);
               }, t);
             };
           }),
-          (goog.functions.throttle = function (e, t, o) {
-            var r = 0,
+          (goog.functions.throttle = function (e, t, r) {
+            var o = 0,
               n = !1,
               i = [],
               a = function () {
-                (r = 0), n && ((n = !1), s());
+                (o = 0), n && ((n = !1), s());
               },
               s = function () {
-                (r = goog.global.setTimeout(a, t)), e.apply(o, i);
+                (o = goog.global.setTimeout(a, t)), e.apply(r, i);
               };
             return function (e) {
-              (i = arguments), r ? (n = !0) : s();
+              (i = arguments), o ? (n = !0) : s();
             };
           }),
-          (goog.functions.rateLimit = function (e, t, o) {
-            var r = 0,
+          (goog.functions.rateLimit = function (e, t, r) {
+            var o = 0,
               n = function () {
-                r = 0;
+                o = 0;
               };
             return function (i) {
-              r || ((r = goog.global.setTimeout(n, t)), e.apply(o, arguments));
+              o || ((o = goog.global.setTimeout(n, t)), e.apply(r, arguments));
             };
           }),
           (goog.dom.HtmlElement = function () {}),
@@ -3284,10 +3284,10 @@ var CLSTAMP = "8056184";
                 );
           }),
           (goog.html.SafeScript.fromConstantAndArgs = function (e, t) {
-            for (var o = [], r = 1; r < arguments.length; r++)
-              o.push(goog.html.SafeScript.stringify_(arguments[r]));
+            for (var r = [], o = 1; o < arguments.length; o++)
+              r.push(goog.html.SafeScript.stringify_(arguments[o]));
             return goog.html.SafeScript.createSafeScriptSecurityPrivateDoNotAccessOrElse(
-              "(" + goog.string.Const.unwrap(e) + ")(" + o.join(", ") + ");"
+              "(" + goog.string.Const.unwrap(e) + ")(" + r.join(", ") + ");"
             );
           }),
           (goog.html.SafeScript.fromJson = function (e) {
@@ -3383,26 +3383,26 @@ var CLSTAMP = "8056184";
             var t = goog.global.BlobBuilder || goog.global.WebKitBlobBuilder;
             if (void 0 !== t) {
               t = new t();
-              for (var o = 0; o < arguments.length; o++) t.append(arguments[o]);
+              for (var r = 0; r < arguments.length; r++) t.append(arguments[r]);
               return t.getBlob();
             }
             return goog.fs.blob.getBlobWithProperties(
               goog.array.toArray(arguments)
             );
           }),
-          (goog.fs.blob.getBlobWithProperties = function (e, t, o) {
-            var r = goog.global.BlobBuilder || goog.global.WebKitBlobBuilder;
-            if (void 0 !== r) {
-              r = new r();
-              for (var n = 0; n < e.length; n++) r.append(e[n], o);
-              return r.getBlob(t);
+          (goog.fs.blob.getBlobWithProperties = function (e, t, r) {
+            var o = goog.global.BlobBuilder || goog.global.WebKitBlobBuilder;
+            if (void 0 !== o) {
+              o = new o();
+              for (var n = 0; n < e.length; n++) o.append(e[n], r);
+              return o.getBlob(t);
             }
             if (void 0 !== goog.global.Blob)
               return (
-                (r = {}),
-                t && (r.type = t),
-                o && (r.endings = o),
-                new Blob(e, r)
+                (o = {}),
+                t && (o.type = t),
+                r && (o.endings = r),
+                new Blob(e, o)
               );
             throw Error("This browser doesn't seem to support creating Blobs");
           }),
@@ -3631,8 +3631,8 @@ var CLSTAMP = "8056184";
           (goog.i18n.bidi.hasNumeralsRe_ = /[\d\u06f0-\u06f9]/),
           (goog.i18n.bidi.rtlDetectionThreshold_ = 0.4),
           (goog.i18n.bidi.estimateDirection = function (e, t) {
-            var o = 0,
-              r = 0,
+            var r = 0,
+              o = 0,
               n = !1;
             for (
               e = goog.i18n.bidi
@@ -3644,18 +3644,18 @@ var CLSTAMP = "8056184";
             ) {
               var i = e[t];
               goog.i18n.bidi.startsWithRtl(i)
-                ? (o++, r++)
+                ? (r++, o++)
                 : goog.i18n.bidi.isRequiredLtrRe_.test(i)
                 ? (n = !0)
                 : goog.i18n.bidi.hasAnyLtr(i)
-                ? r++
+                ? o++
                 : goog.i18n.bidi.hasNumeralsRe_.test(i) && (n = !0);
             }
-            return 0 == r
+            return 0 == o
               ? n
                 ? goog.i18n.bidi.Dir.LTR
                 : goog.i18n.bidi.Dir.NEUTRAL
-              : o / r > goog.i18n.bidi.rtlDetectionThreshold_
+              : r / o > goog.i18n.bidi.rtlDetectionThreshold_
               ? goog.i18n.bidi.Dir.RTL
               : goog.i18n.bidi.Dir.LTR;
           }),
@@ -3709,19 +3709,19 @@ var CLSTAMP = "8056184";
             e,
             t
           ) {
-            var o = goog.html.TrustedResourceUrl.unwrap(this),
-              r =
-                (o =
-                  goog.html.TrustedResourceUrl.URL_PARAM_PARSER_.exec(o))[3] ||
+            var r = goog.html.TrustedResourceUrl.unwrap(this),
+              o =
+                (r =
+                  goog.html.TrustedResourceUrl.URL_PARAM_PARSER_.exec(r))[3] ||
                 "";
             return goog.html.TrustedResourceUrl.createTrustedResourceUrlSecurityPrivateDoNotAccessOrElse(
-              o[1] +
+              r[1] +
                 goog.html.TrustedResourceUrl.stringifyParams_(
                   "?",
-                  o[2] || "",
+                  r[2] || "",
                   e
                 ) +
-                goog.html.TrustedResourceUrl.stringifyParams_("#", r, t)
+                goog.html.TrustedResourceUrl.stringifyParams_("#", o, t)
             );
           }),
           goog.DEBUG &&
@@ -3753,23 +3753,23 @@ var CLSTAMP = "8056184";
                 "type_error:TrustedResourceUrl");
           }),
           (goog.html.TrustedResourceUrl.format = function (e, t) {
-            var o = goog.string.Const.unwrap(e);
-            if (!goog.html.TrustedResourceUrl.BASE_URL_.test(o))
-              throw Error("Invalid TrustedResourceUrl format: " + o);
+            var r = goog.string.Const.unwrap(e);
+            if (!goog.html.TrustedResourceUrl.BASE_URL_.test(r))
+              throw Error("Invalid TrustedResourceUrl format: " + r);
             return (
-              (e = o.replace(
+              (e = r.replace(
                 goog.html.TrustedResourceUrl.FORMAT_MARKER_,
-                function (e, r) {
-                  if (!Object.prototype.hasOwnProperty.call(t, r))
+                function (e, o) {
+                  if (!Object.prototype.hasOwnProperty.call(t, o))
                     throw Error(
                       'Found marker, "' +
-                        r +
-                        '", in format string, "' +
                         o +
+                        '", in format string, "' +
+                        r +
                         '", but no valid label mapping found in args: ' +
                         JSON.stringify(t)
                     );
-                  return (e = t[r]) instanceof goog.string.Const
+                  return (e = t[o]) instanceof goog.string.Const
                     ? goog.string.Const.unwrap(e)
                     : encodeURIComponent(String(e));
                 }
@@ -3787,12 +3787,12 @@ var CLSTAMP = "8056184";
           (goog.html.TrustedResourceUrl.formatWithParams = function (
             e,
             t,
-            o,
-            r
+            r,
+            o
           ) {
             return goog.html.TrustedResourceUrl.format(e, t).cloneWithParams(
-              o,
-              r
+              r,
+              o
             );
           }),
           (goog.html.TrustedResourceUrl.fromConstant = function (e) {
@@ -3801,8 +3801,8 @@ var CLSTAMP = "8056184";
             );
           }),
           (goog.html.TrustedResourceUrl.fromConstants = function (e) {
-            for (var t = "", o = 0; o < e.length; o++)
-              t += goog.string.Const.unwrap(e[o]);
+            for (var t = "", r = 0; r < e.length; r++)
+              t += goog.string.Const.unwrap(e[r]);
             return goog.html.TrustedResourceUrl.createTrustedResourceUrlSecurityPrivateDoNotAccessOrElse(
               t
             );
@@ -3835,11 +3835,11 @@ var CLSTAMP = "8056184";
                 )
               );
             }),
-          (goog.html.TrustedResourceUrl.stringifyParams_ = function (e, t, o) {
-            if (null == o) return t;
-            if ("string" == typeof o) return o ? e + encodeURIComponent(o) : "";
-            for (var r in o) {
-              var n = o[r];
+          (goog.html.TrustedResourceUrl.stringifyParams_ = function (e, t, r) {
+            if (null == r) return t;
+            if ("string" == typeof r) return r ? e + encodeURIComponent(r) : "";
+            for (var o in r) {
+              var n = r[o];
               n = Array.isArray(n) ? n : [n];
               for (var i = 0; i < n.length; i++) {
                 var a = n[i];
@@ -3847,7 +3847,7 @@ var CLSTAMP = "8056184";
                   (t || (t = e),
                   (t +=
                     (t.length > e.length ? "&" : "") +
-                    encodeURIComponent(r) +
+                    encodeURIComponent(o) +
                     "=" +
                     encodeURIComponent(String(a))));
               }
@@ -3860,8 +3860,8 @@ var CLSTAMP = "8056184";
             return 0 == e.lastIndexOf(t, 0);
           }),
           (goog.string.internal.endsWith = function (e, t) {
-            var o = e.length - t.length;
-            return 0 <= o && e.indexOf(t, o) == o;
+            var r = e.length - t.length;
+            return 0 <= r && e.indexOf(t, r) == r;
           }),
           (goog.string.internal.caseInsensitiveStartsWith = function (e, t) {
             return (
@@ -3957,12 +3957,12 @@ var CLSTAMP = "8056184";
             );
           }),
           (goog.string.internal.compareVersions = function (e, t) {
-            var o = 0;
+            var r = 0;
             (e = goog.string.internal.trim(String(e)).split(".")),
               (t = goog.string.internal.trim(String(t)).split("."));
             for (
-              var r = Math.max(e.length, t.length), n = 0;
-              0 == o && n < r;
+              var o = Math.max(e.length, t.length), n = 0;
+              0 == r && n < o;
               n++
             ) {
               var i = e[n] || "",
@@ -3974,10 +3974,10 @@ var CLSTAMP = "8056184";
                   0 == i[0].length && 0 == a[0].length)
                 )
                   break;
-                o = 0 == i[1].length ? 0 : parseInt(i[1], 10);
+                r = 0 == i[1].length ? 0 : parseInt(i[1], 10);
                 var s = 0 == a[1].length ? 0 : parseInt(a[1], 10);
-                (o =
-                  goog.string.internal.compareElements_(o, s) ||
+                (r =
+                  goog.string.internal.compareElements_(r, s) ||
                   goog.string.internal.compareElements_(
                     0 == i[2].length,
                     0 == a[2].length
@@ -3985,9 +3985,9 @@ var CLSTAMP = "8056184";
                   goog.string.internal.compareElements_(i[2], a[2])),
                   (i = i[3]),
                   (a = a[3]);
-              } while (0 == o);
+              } while (0 == r);
             }
-            return o;
+            return r;
           }),
           (goog.string.internal.compareElements_ = function (e, t) {
             return e < t ? -1 : e > t ? 1 : 0;
@@ -4158,14 +4158,14 @@ var CLSTAMP = "8056184";
               t
             );
           }),
-          (goog.html.SafeUrl.sanitizeExtensionUrl_ = function (e, t, o) {
+          (goog.html.SafeUrl.sanitizeExtensionUrl_ = function (e, t, r) {
             return (
               (e = e.exec(t))
                 ? ((e = e[1]),
                   -1 ==
-                    (o instanceof goog.string.Const
-                      ? [goog.string.Const.unwrap(o)]
-                      : o.map(function (e) {
+                    (r instanceof goog.string.Const
+                      ? [goog.string.Const.unwrap(r)]
+                      : r.map(function (e) {
                           return goog.string.Const.unwrap(e);
                         })
                     ).indexOf(e) && (t = goog.html.SafeUrl.INNOCUOUS_STRING))
@@ -4295,25 +4295,25 @@ var CLSTAMP = "8056184";
           (goog.html.SafeStyle.INNOCUOUS_STRING = "zClosurez"),
           (goog.html.SafeStyle.create = function (e) {
             var t,
-              o = "";
+              r = "";
             for (t in e) {
               if (!/^[-_a-zA-Z0-9]+$/.test(t))
                 throw Error("Name allows only [-_a-zA-Z0-9], got: " + t);
-              var r = e[t];
-              null != r &&
-                (o +=
+              var o = e[t];
+              null != o &&
+                (r +=
                   t +
                   ":" +
-                  (r = Array.isArray(r)
+                  (o = Array.isArray(o)
                     ? goog.array
-                        .map(r, goog.html.SafeStyle.sanitizePropertyValue_)
+                        .map(o, goog.html.SafeStyle.sanitizePropertyValue_)
                         .join(" ")
-                    : goog.html.SafeStyle.sanitizePropertyValue_(r)) +
+                    : goog.html.SafeStyle.sanitizePropertyValue_(o)) +
                   ";");
             }
-            return o
+            return r
               ? goog.html.SafeStyle.createSafeStyleSecurityPrivateDoNotAccessOrElse(
-                  o
+                  r
                 )
               : goog.html.SafeStyle.EMPTY;
           }),
@@ -4373,22 +4373,22 @@ var CLSTAMP = "8056184";
                 goog.html.SafeStyle.INNOCUOUS_STRING);
           }),
           (goog.html.SafeStyle.hasBalancedQuotes_ = function (e) {
-            for (var t = !0, o = !0, r = 0; r < e.length; r++) {
-              var n = e.charAt(r);
-              "'" == n && o ? (t = !t) : '"' == n && t && (o = !o);
+            for (var t = !0, r = !0, o = 0; o < e.length; o++) {
+              var n = e.charAt(o);
+              "'" == n && r ? (t = !t) : '"' == n && t && (r = !r);
             }
-            return t && o;
+            return t && r;
           }),
           (goog.html.SafeStyle.hasBalancedSquareBrackets_ = function (e) {
-            for (var t = !0, o = /^[-_a-zA-Z0-9]$/, r = 0; r < e.length; r++) {
-              var n = e.charAt(r);
+            for (var t = !0, r = /^[-_a-zA-Z0-9]$/, o = 0; o < e.length; o++) {
+              var n = e.charAt(o);
               if ("]" == n) {
                 if (t) return !1;
                 t = !0;
               } else if ("[" == n) {
                 if (!t) return !1;
                 t = !1;
-              } else if (!t && !o.test(n)) return !1;
+              } else if (!t && !r.test(n)) return !1;
             }
             return t;
           }),
@@ -4413,27 +4413,27 @@ var CLSTAMP = "8056184";
           (goog.html.SafeStyle.sanitizeUrl_ = function (e) {
             return e.replace(
               goog.html.SafeStyle.URL_RE_,
-              function (e, t, o, r) {
+              function (e, t, r, o) {
                 var n = "";
                 return (
-                  (o = o.replace(/^(['"])(.*)\1$/, function (e, t, o) {
-                    return (n = t), o;
+                  (r = r.replace(/^(['"])(.*)\1$/, function (e, t, r) {
+                    return (n = t), r;
                   })),
-                  (e = goog.html.SafeUrl.sanitize(o).getTypedStringValue()),
-                  t + n + e + n + r
+                  (e = goog.html.SafeUrl.sanitize(r).getTypedStringValue()),
+                  t + n + e + n + o
                 );
               }
             );
           }),
           (goog.html.SafeStyle.concat = function (e) {
             var t = "",
-              o = function (e) {
+              r = function (e) {
                 Array.isArray(e)
-                  ? goog.array.forEach(e, o)
+                  ? goog.array.forEach(e, r)
                   : (t += goog.html.SafeStyle.unwrap(e));
               };
             return (
-              goog.array.forEach(arguments, o),
+              goog.array.forEach(arguments, r),
               t
                 ? goog.html.SafeStyle.createSafeStyleSecurityPrivateDoNotAccessOrElse(
                     t
@@ -4453,13 +4453,13 @@ var CLSTAMP = "8056184";
           (goog.html.SafeStyleSheet.createRule = function (e, t) {
             if (goog.string.internal.contains(e, "<"))
               throw Error("Selector does not allow '<', got: " + e);
-            var o = e.replace(/('|")((?!\1)[^\r\n\f\\]|\\[\s\S])*\1/g, "");
-            if (!/^[-_a-zA-Z0-9#.:* ,>+~[\]()=^$|]+$/.test(o))
+            var r = e.replace(/('|")((?!\1)[^\r\n\f\\]|\\[\s\S])*\1/g, "");
+            if (!/^[-_a-zA-Z0-9#.:* ,>+~[\]()=^$|]+$/.test(r))
               throw Error(
                 "Selector allows only [-_a-zA-Z0-9#.:* ,>+~[\\]()=^$|] and strings, got: " +
                   e
               );
-            if (!goog.html.SafeStyleSheet.hasBalancedBrackets_(o))
+            if (!goog.html.SafeStyleSheet.hasBalancedBrackets_(r))
               throw Error("() and [] in selector must be balanced, got: " + e);
             return (
               t instanceof goog.html.SafeStyle ||
@@ -4476,25 +4476,25 @@ var CLSTAMP = "8056184";
           }),
           (goog.html.SafeStyleSheet.hasBalancedBrackets_ = function (e) {
             for (
-              var t = { "(": ")", "[": "]" }, o = [], r = 0;
-              r < e.length;
-              r++
+              var t = { "(": ")", "[": "]" }, r = [], o = 0;
+              o < e.length;
+              o++
             ) {
-              var n = e[r];
-              if (t[n]) o.push(t[n]);
-              else if (goog.object.contains(t, n) && o.pop() != n) return !1;
+              var n = e[o];
+              if (t[n]) r.push(t[n]);
+              else if (goog.object.contains(t, n) && r.pop() != n) return !1;
             }
-            return 0 == o.length;
+            return 0 == r.length;
           }),
           (goog.html.SafeStyleSheet.concat = function (e) {
             var t = "",
-              o = function (e) {
+              r = function (e) {
                 Array.isArray(e)
-                  ? goog.array.forEach(e, o)
+                  ? goog.array.forEach(e, r)
                   : (t += goog.html.SafeStyleSheet.unwrap(e));
               };
             return (
-              goog.array.forEach(arguments, o),
+              goog.array.forEach(arguments, r),
               goog.html.SafeStyleSheet.createSafeStyleSheetSecurityPrivateDoNotAccessOrElse(
                 t
               )
@@ -4583,12 +4583,12 @@ var CLSTAMP = "8056184";
           }),
           (goog.labs.userAgent.util.extractVersionTuples = function (e) {
             for (
-              var t, o = /(\w[\w ]+)\/([^\s]+)\s*(?:\((.*?)\))?/g, r = [];
-              (t = o.exec(e));
+              var t, r = /(\w[\w ]+)\/([^\s]+)\s*(?:\((.*?)\))?/g, o = [];
+              (t = r.exec(e));
 
             )
-              r.push([t[1], t[2], t[3] || void 0]);
-            return r;
+              o.push([t[1], t[2], t[3] || void 0]);
+            return o;
           }),
           (goog.labs.userAgent.browser = {}),
           (goog.labs.userAgent.browser.matchOpera_ = function () {
@@ -4690,17 +4690,17 @@ var CLSTAMP = "8056184";
           }),
           (goog.labs.userAgent.browser.getVersion = function () {
             function e(e) {
-              return (e = goog.array.find(e, r)), o[e] || "";
+              return (e = goog.array.find(e, o)), r[e] || "";
             }
             var t = goog.labs.userAgent.util.getUserAgent();
             if (goog.labs.userAgent.browser.isIE())
               return goog.labs.userAgent.browser.getIEVersion_(t);
             t = goog.labs.userAgent.util.extractVersionTuples(t);
-            var o = {};
+            var r = {};
             goog.array.forEach(t, function (e) {
-              o[e[0]] = e[1];
+              r[e[0]] = e[1];
             });
-            var r = goog.partial(goog.object.containsKey, o);
+            var o = goog.partial(goog.object.containsKey, r);
             return goog.labs.userAgent.browser.isOpera()
               ? e(["Version", "Opera"])
               : goog.labs.userAgent.browser.isEdge()
@@ -4724,9 +4724,9 @@ var CLSTAMP = "8056184";
             var t = /rv: *([\d\.]*)/.exec(e);
             if (t && t[1]) return t[1];
             t = "";
-            var o = /MSIE +([\d\.]+)/.exec(e);
-            if (o && o[1])
-              if (((e = /Trident\/(\d.\d)/.exec(e)), "7.0" == o[1]))
+            var r = /MSIE +([\d\.]+)/.exec(e);
+            if (r && r[1])
+              if (((e = /Trident\/(\d.\d)/.exec(e)), "7.0" == r[1]))
                 if (e && e[1])
                   switch (e[1]) {
                     case "4.0":
@@ -4742,7 +4742,7 @@ var CLSTAMP = "8056184";
                       t = "11.0";
                   }
                 else t = "7.0";
-              else t = o[1];
+              else t = r[1];
             return t;
           }),
           (goog.html.SafeHtml = function () {
@@ -4790,18 +4790,18 @@ var CLSTAMP = "8056184";
           (goog.html.SafeHtml.htmlEscape = function (e) {
             if (e instanceof goog.html.SafeHtml) return e;
             var t = "object" == typeof e,
-              o = null;
+              r = null;
             return (
               t &&
                 e.implementsGoogI18nBidiDirectionalString &&
-                (o = e.getDirection()),
+                (r = e.getDirection()),
               (e =
                 t && e.implementsGoogStringTypedString
                   ? e.getTypedStringValue()
                   : String(e)),
               goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse(
                 goog.string.internal.htmlEscape(e),
-                o
+                r
               )
             );
           }),
@@ -4861,13 +4861,13 @@ var CLSTAMP = "8056184";
             SVG: !0,
             TEMPLATE: !0,
           }),
-          (goog.html.SafeHtml.create = function (e, t, o) {
+          (goog.html.SafeHtml.create = function (e, t, r) {
             return (
               goog.html.SafeHtml.verifyTagName(String(e)),
               goog.html.SafeHtml.createSafeHtmlTagSecurityPrivateDoNotAccessOrElse(
                 String(e),
                 t,
-                o
+                r
               )
             );
           }),
@@ -4885,21 +4885,21 @@ var CLSTAMP = "8056184";
                   : ""
               );
           }),
-          (goog.html.SafeHtml.createIframe = function (e, t, o, r) {
+          (goog.html.SafeHtml.createIframe = function (e, t, r, o) {
             e && goog.html.TrustedResourceUrl.unwrap(e);
             var n = {};
             return (
               (n.src = e || null),
               (n.srcdoc = t && goog.html.SafeHtml.unwrap(t)),
-              (e = goog.html.SafeHtml.combineAttributes(n, { sandbox: "" }, o)),
+              (e = goog.html.SafeHtml.combineAttributes(n, { sandbox: "" }, r)),
               goog.html.SafeHtml.createSafeHtmlTagSecurityPrivateDoNotAccessOrElse(
                 "iframe",
                 e,
-                r
+                o
               )
             );
           }),
-          (goog.html.SafeHtml.createSandboxIframe = function (e, t, o, r) {
+          (goog.html.SafeHtml.createSandboxIframe = function (e, t, r, o) {
             if (!goog.html.SafeHtml.canUseSandboxIframe())
               throw Error(
                 goog.html.SafeHtml.ENABLE_ERROR_MESSAGES
@@ -4913,11 +4913,11 @@ var CLSTAMP = "8056184";
                 : null),
               (n.srcdoc = t || null),
               (n.sandbox = ""),
-              (e = goog.html.SafeHtml.combineAttributes(n, {}, o)),
+              (e = goog.html.SafeHtml.combineAttributes(n, {}, r)),
               goog.html.SafeHtml.createSafeHtmlTagSecurityPrivateDoNotAccessOrElse(
                 "iframe",
                 e,
-                r
+                o
               )
             );
           }),
@@ -4938,21 +4938,21 @@ var CLSTAMP = "8056184";
             );
           }),
           (goog.html.SafeHtml.createScript = function (e, t) {
-            for (var o in t) {
-              var r = o.toLowerCase();
-              if ("language" == r || "src" == r || "text" == r || "type" == r)
+            for (var r in t) {
+              var o = r.toLowerCase();
+              if ("language" == o || "src" == o || "text" == o || "type" == o)
                 throw Error(
                   goog.html.SafeHtml.ENABLE_ERROR_MESSAGES
-                    ? 'Cannot set "' + r + '" attribute'
+                    ? 'Cannot set "' + o + '" attribute'
                     : ""
                 );
             }
-            for (o = "", e = goog.array.concat(e), r = 0; r < e.length; r++)
-              o += goog.html.SafeScript.unwrap(e[r]);
+            for (r = "", e = goog.array.concat(e), o = 0; o < e.length; o++)
+              r += goog.html.SafeScript.unwrap(e[o]);
             return (
               (e =
                 goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse(
-                  o,
+                  r,
                   goog.i18n.bidi.Dir.NEUTRAL
                 )),
               goog.html.SafeHtml.createSafeHtmlTagSecurityPrivateDoNotAccessOrElse(
@@ -4968,14 +4968,14 @@ var CLSTAMP = "8056184";
               {},
               t
             );
-            var o = "";
+            var r = "";
             e = goog.array.concat(e);
-            for (var r = 0; r < e.length; r++)
-              o += goog.html.SafeStyleSheet.unwrap(e[r]);
+            for (var o = 0; o < e.length; o++)
+              r += goog.html.SafeStyleSheet.unwrap(e[o]);
             return (
               (e =
                 goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse(
-                  o,
+                  r,
                   goog.i18n.bidi.Dir.NEUTRAL
                 )),
               goog.html.SafeHtml.createSafeHtmlTagSecurityPrivateDoNotAccessOrElse(
@@ -4998,8 +4998,8 @@ var CLSTAMP = "8056184";
               )
             );
           }),
-          (goog.html.SafeHtml.getAttrNameAndValue_ = function (e, t, o) {
-            if (o instanceof goog.string.Const) o = goog.string.Const.unwrap(o);
+          (goog.html.SafeHtml.getAttrNameAndValue_ = function (e, t, r) {
+            if (r instanceof goog.string.Const) r = goog.string.Const.unwrap(r);
             else if ("style" == t.toLowerCase()) {
               if (!goog.html.SafeHtml.SUPPORT_STYLE_ATTRIBUTE)
                 throw Error(
@@ -5007,7 +5007,7 @@ var CLSTAMP = "8056184";
                     ? 'Attribute "style" not supported.'
                     : ""
                 );
-              o = goog.html.SafeHtml.getStyleValue_(o);
+              r = goog.html.SafeHtml.getStyleValue_(r);
             } else {
               if (/^on/i.test(t))
                 throw Error(
@@ -5015,17 +5015,17 @@ var CLSTAMP = "8056184";
                     ? 'Attribute "' +
                         t +
                         '" requires goog.string.Const value, "' +
-                        o +
+                        r +
                         '" given.'
                     : ""
                 );
               if (t.toLowerCase() in goog.html.SafeHtml.URL_ATTRIBUTES_)
-                if (o instanceof goog.html.TrustedResourceUrl)
-                  o = goog.html.TrustedResourceUrl.unwrap(o);
-                else if (o instanceof goog.html.SafeUrl)
-                  o = goog.html.SafeUrl.unwrap(o);
+                if (r instanceof goog.html.TrustedResourceUrl)
+                  r = goog.html.TrustedResourceUrl.unwrap(r);
+                else if (r instanceof goog.html.SafeUrl)
+                  r = goog.html.SafeUrl.unwrap(r);
                 else {
-                  if ("string" != typeof o)
+                  if ("string" != typeof r)
                     throw Error(
                       goog.html.SafeHtml.ENABLE_ERROR_MESSAGES
                         ? 'Attribute "' +
@@ -5033,24 +5033,24 @@ var CLSTAMP = "8056184";
                             '" on tag "' +
                             e +
                             '" requires goog.html.SafeUrl, goog.string.Const, or string, value "' +
-                            o +
+                            r +
                             '" given.'
                         : ""
                     );
-                  o = goog.html.SafeUrl.sanitize(o).getTypedStringValue();
+                  r = goog.html.SafeUrl.sanitize(r).getTypedStringValue();
                 }
             }
             return (
-              o.implementsGoogStringTypedString &&
-                (o = o.getTypedStringValue()),
+              r.implementsGoogStringTypedString &&
+                (r = r.getTypedStringValue()),
               goog.asserts.assert(
-                "string" == typeof o || "number" == typeof o,
+                "string" == typeof r || "number" == typeof r,
                 "String or number value expected, got " +
-                  typeof o +
+                  typeof r +
                   " with value: " +
-                  o
+                  r
               ),
-              t + '="' + goog.string.internal.htmlEscape(String(o)) + '"'
+              t + '="' + goog.string.internal.htmlEscape(String(r)) + '"'
             );
           }),
           (goog.html.SafeHtml.getStyleValue_ = function (e) {
@@ -5069,29 +5069,29 @@ var CLSTAMP = "8056184";
               goog.html.SafeStyle.unwrap(e)
             );
           }),
-          (goog.html.SafeHtml.createWithDir = function (e, t, o, r) {
-            return ((t = goog.html.SafeHtml.create(t, o, r)).dir_ = e), t;
+          (goog.html.SafeHtml.createWithDir = function (e, t, r, o) {
+            return ((t = goog.html.SafeHtml.create(t, r, o)).dir_ = e), t;
           }),
           (goog.html.SafeHtml.join = function (e, t) {
-            var o = (e = goog.html.SafeHtml.htmlEscape(e)).getDirection(),
-              r = [],
+            var r = (e = goog.html.SafeHtml.htmlEscape(e)).getDirection(),
+              o = [],
               n = function (e) {
                 Array.isArray(e)
                   ? goog.array.forEach(e, n)
                   : ((e = goog.html.SafeHtml.htmlEscape(e)),
-                    r.push(goog.html.SafeHtml.unwrap(e)),
+                    o.push(goog.html.SafeHtml.unwrap(e)),
                     (e = e.getDirection()),
-                    o == goog.i18n.bidi.Dir.NEUTRAL
-                      ? (o = e)
+                    r == goog.i18n.bidi.Dir.NEUTRAL
+                      ? (r = e)
                       : e != goog.i18n.bidi.Dir.NEUTRAL &&
-                        o != e &&
-                        (o = null));
+                        r != e &&
+                        (r = null));
               };
             return (
               goog.array.forEach(t, n),
               goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse(
-                r.join(goog.html.SafeHtml.unwrap(e)),
-                o
+                o.join(goog.html.SafeHtml.unwrap(e)),
+                r
               )
             );
           }),
@@ -5102,8 +5102,8 @@ var CLSTAMP = "8056184";
             );
           }),
           (goog.html.SafeHtml.concatWithDir = function (e, t) {
-            var o = goog.html.SafeHtml.concat(goog.array.slice(arguments, 1));
-            return (o.dir_ = e), o;
+            var r = goog.html.SafeHtml.concat(goog.array.slice(arguments, 1));
+            return (r.dir_ = e), r;
           }),
           (goog.html.SafeHtml.TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = {}),
           (goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse =
@@ -5127,71 +5127,71 @@ var CLSTAMP = "8056184";
               );
             }),
           (goog.html.SafeHtml.createSafeHtmlTagSecurityPrivateDoNotAccessOrElse =
-            function (e, t, o) {
-              var r = null,
+            function (e, t, r) {
+              var o = null,
                 n = "<" + e + goog.html.SafeHtml.stringifyAttributes(e, t);
               return (
-                null == o ? (o = []) : Array.isArray(o) || (o = [o]),
+                null == r ? (r = []) : Array.isArray(r) || (r = [r]),
                 goog.dom.tags.isVoidTag(e.toLowerCase())
                   ? (goog.asserts.assert(
-                      !o.length,
+                      !r.length,
                       "Void tag <" + e + "> does not allow content."
                     ),
                     (n += ">"))
-                  : ((r = goog.html.SafeHtml.concat(o)),
-                    (n += ">" + goog.html.SafeHtml.unwrap(r) + "</" + e + ">"),
-                    (r = r.getDirection())),
+                  : ((o = goog.html.SafeHtml.concat(r)),
+                    (n += ">" + goog.html.SafeHtml.unwrap(o) + "</" + e + ">"),
+                    (o = o.getDirection())),
                 (e = t && t.dir) &&
-                  (r = /^(ltr|rtl|auto)$/i.test(e)
+                  (o = /^(ltr|rtl|auto)$/i.test(e)
                     ? goog.i18n.bidi.Dir.NEUTRAL
                     : null),
                 goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse(
                   n,
-                  r
+                  o
                 )
               );
             }),
           (goog.html.SafeHtml.stringifyAttributes = function (e, t) {
-            var o = "";
+            var r = "";
             if (t)
-              for (var r in t) {
-                if (!goog.html.SafeHtml.VALID_NAMES_IN_TAG_.test(r))
+              for (var o in t) {
+                if (!goog.html.SafeHtml.VALID_NAMES_IN_TAG_.test(o))
                   throw Error(
                     goog.html.SafeHtml.ENABLE_ERROR_MESSAGES
-                      ? 'Invalid attribute name "' + r + '".'
+                      ? 'Invalid attribute name "' + o + '".'
                       : ""
                   );
-                var n = t[r];
+                var n = t[o];
                 null != n &&
-                  (o += " " + goog.html.SafeHtml.getAttrNameAndValue_(e, r, n));
+                  (r += " " + goog.html.SafeHtml.getAttrNameAndValue_(e, o, n));
               }
-            return o;
+            return r;
           }),
-          (goog.html.SafeHtml.combineAttributes = function (e, t, o) {
-            var r,
+          (goog.html.SafeHtml.combineAttributes = function (e, t, r) {
+            var o,
               n = {};
-            for (r in e)
-              goog.asserts.assert(r.toLowerCase() == r, "Must be lower case"),
-                (n[r] = e[r]);
-            for (r in t)
-              goog.asserts.assert(r.toLowerCase() == r, "Must be lower case"),
-                (n[r] = t[r]);
-            if (o)
-              for (r in o) {
-                var i = r.toLowerCase();
+            for (o in e)
+              goog.asserts.assert(o.toLowerCase() == o, "Must be lower case"),
+                (n[o] = e[o]);
+            for (o in t)
+              goog.asserts.assert(o.toLowerCase() == o, "Must be lower case"),
+                (n[o] = t[o]);
+            if (r)
+              for (o in r) {
+                var i = o.toLowerCase();
                 if (i in e)
                   throw Error(
                     goog.html.SafeHtml.ENABLE_ERROR_MESSAGES
                       ? 'Cannot override "' +
                           i +
                           '" attribute, got "' +
-                          r +
+                          o +
                           '" with value "' +
-                          o[r] +
+                          r[o] +
                           '"'
                       : ""
                   );
-                i in t && delete n[i], (n[r] = o[r]);
+                i in t && delete n[i], (n[o] = r[o]);
               }
             return n;
           }),
@@ -5212,7 +5212,7 @@ var CLSTAMP = "8056184";
             )),
           (goog.html.uncheckedconversions = {}),
           (goog.html.uncheckedconversions.safeHtmlFromStringKnownToSatisfyTypeContract =
-            function (e, t, o) {
+            function (e, t, r) {
               return (
                 goog.asserts.assertString(
                   goog.string.Const.unwrap(e),
@@ -5226,7 +5226,7 @@ var CLSTAMP = "8056184";
                 ),
                 goog.html.SafeHtml.createSafeHtmlSecurityPrivateDoNotAccessOrElse(
                   t,
-                  o || null
+                  r || null
                 )
               );
             }),
@@ -5327,8 +5327,8 @@ var CLSTAMP = "8056184";
             BEFOREBEGIN: "beforebegin",
             BEFOREEND: "beforeend",
           }),
-          (goog.dom.safe.insertAdjacentHtml = function (e, t, o) {
-            e.insertAdjacentHTML(t, goog.html.SafeHtml.unwrapTrustedHTML(o));
+          (goog.dom.safe.insertAdjacentHtml = function (e, t, r) {
+            e.insertAdjacentHTML(t, goog.html.SafeHtml.unwrapTrustedHTML(r));
           }),
           (goog.dom.safe.SET_INNER_HTML_DISALLOWED_TAGS_ = {
             MATH: !0,
@@ -5360,8 +5360,8 @@ var CLSTAMP = "8056184";
           }),
           (goog.dom.safe.setInnerHtml = function (e, t) {
             if (goog.asserts.ENABLE_ASSERTS) {
-              var o = e.tagName.toUpperCase();
-              if (goog.dom.safe.SET_INNER_HTML_DISALLOWED_TAGS_[o])
+              var r = e.tagName.toUpperCase();
+              if (goog.dom.safe.SET_INNER_HTML_DISALLOWED_TAGS_[r])
                 throw Error(
                   "goog.dom.safe.setInnerHtml cannot be used to set content of " +
                     e.tagName +
@@ -5416,8 +5416,8 @@ var CLSTAMP = "8056184";
               (goog.dom.asserts.assertIsHTMLImageElement(e),
               !(t instanceof goog.html.SafeUrl))
             ) {
-              var o = /^data:image\//i.test(t);
-              t = goog.html.SafeUrl.sanitizeAssertUnchanged(t, o);
+              var r = /^data:image\//i.test(t);
+              t = goog.html.SafeUrl.sanitizeAssertUnchanged(t, r);
             }
             e.src = goog.html.SafeUrl.unwrap(t);
           }),
@@ -5426,8 +5426,8 @@ var CLSTAMP = "8056184";
               (goog.dom.asserts.assertIsHTMLAudioElement(e),
               !(t instanceof goog.html.SafeUrl))
             ) {
-              var o = /^data:audio\//i.test(t);
-              t = goog.html.SafeUrl.sanitizeAssertUnchanged(t, o);
+              var r = /^data:audio\//i.test(t);
+              t = goog.html.SafeUrl.sanitizeAssertUnchanged(t, r);
             }
             e.src = goog.html.SafeUrl.unwrap(t);
           }),
@@ -5436,8 +5436,8 @@ var CLSTAMP = "8056184";
               (goog.dom.asserts.assertIsHTMLVideoElement(e),
               !(t instanceof goog.html.SafeUrl))
             ) {
-              var o = /^data:video\//i.test(t);
-              t = goog.html.SafeUrl.sanitizeAssertUnchanged(t, o);
+              var r = /^data:video\//i.test(t);
+              t = goog.html.SafeUrl.sanitizeAssertUnchanged(t, r);
             }
             e.src = goog.html.SafeUrl.unwrap(t);
           }),
@@ -5457,10 +5457,10 @@ var CLSTAMP = "8056184";
             goog.dom.asserts.assertIsHTMLIFrameElement(e),
               (e.srcdoc = goog.html.SafeHtml.unwrapTrustedHTML(t));
           }),
-          (goog.dom.safe.setLinkHrefAndRel = function (e, t, o) {
+          (goog.dom.safe.setLinkHrefAndRel = function (e, t, r) {
             goog.dom.asserts.assertIsHTMLLinkElement(e),
-              (e.rel = o),
-              goog.string.internal.caseInsensitiveContains(o, "stylesheet")
+              (e.rel = r),
+              goog.string.internal.caseInsensitiveContains(r, "stylesheet")
                 ? (goog.asserts.assert(
                     t instanceof goog.html.TrustedResourceUrl,
                     'URL must be TrustedResourceUrl because "rel" contains "stylesheet"'
@@ -5512,27 +5512,27 @@ var CLSTAMP = "8056184";
                 : goog.html.SafeUrl.sanitizeAssertUnchanged(t)),
               e.replace(goog.html.SafeUrl.unwrap(t));
           }),
-          (goog.dom.safe.openInWindow = function (e, t, o, r, n) {
+          (goog.dom.safe.openInWindow = function (e, t, r, o, n) {
             return (
               (e =
                 e instanceof goog.html.SafeUrl
                   ? e
                   : goog.html.SafeUrl.sanitizeAssertUnchanged(e)),
               (t = t || goog.global),
-              (o =
-                o instanceof goog.string.Const
-                  ? goog.string.Const.unwrap(o)
-                  : o || ""),
-              t.open(goog.html.SafeUrl.unwrap(e), o, r, n)
+              (r =
+                r instanceof goog.string.Const
+                  ? goog.string.Const.unwrap(r)
+                  : r || ""),
+              t.open(goog.html.SafeUrl.unwrap(e), r, o, n)
             );
           }),
           (goog.dom.safe.parseFromStringHtml = function (e, t) {
             return goog.dom.safe.parseFromString(e, t, "text/html");
           }),
-          (goog.dom.safe.parseFromString = function (e, t, o) {
+          (goog.dom.safe.parseFromString = function (e, t, r) {
             return e.parseFromString(
               goog.html.SafeHtml.unwrapTrustedHTML(t),
-              o
+              r
             );
           }),
           (goog.dom.safe.createImageFromBlob = function (e) {
@@ -5568,14 +5568,14 @@ var CLSTAMP = "8056184";
             goog.string.internal.caseInsensitiveEquals),
           (goog.string.subs = function (e, t) {
             for (
-              var o = e.split("%s"),
-                r = "",
+              var r = e.split("%s"),
+                o = "",
                 n = Array.prototype.slice.call(arguments, 1);
-              n.length && 1 < o.length;
+              n.length && 1 < r.length;
 
             )
-              r += o.shift() + n.shift();
-            return r + o.join("%s");
+              o += r.shift() + n.shift();
+            return o + r.join("%s");
           }),
           (goog.string.collapseWhitespace = function (e) {
             return e.replace(/[\s\xa0]+/g, " ").replace(/^\s+|\s+$/g, "");
@@ -5636,31 +5636,31 @@ var CLSTAMP = "8056184";
           }),
           (goog.string.caseInsensitiveCompare =
             goog.string.internal.caseInsensitiveCompare),
-          (goog.string.numberAwareCompare_ = function (e, t, o) {
+          (goog.string.numberAwareCompare_ = function (e, t, r) {
             if (e == t) return 0;
             if (!e) return -1;
             if (!t) return 1;
             for (
-              var r = e.toLowerCase().match(o),
-                n = t.toLowerCase().match(o),
-                i = Math.min(r.length, n.length),
+              var o = e.toLowerCase().match(r),
+                n = t.toLowerCase().match(r),
+                i = Math.min(o.length, n.length),
                 a = 0;
               a < i;
               a++
             ) {
-              o = r[a];
+              r = o[a];
               var s = n[a];
-              if (o != s)
+              if (r != s)
                 return (
-                  (e = parseInt(o, 10)),
+                  (e = parseInt(r, 10)),
                   !isNaN(e) && ((t = parseInt(s, 10)), !isNaN(t) && e - t)
                     ? e - t
-                    : o < s
+                    : r < s
                     ? -1
                     : 1
                 );
             }
-            return r.length != n.length ? r.length - n.length : e < t ? -1 : 1;
+            return o.length != n.length ? o.length - n.length : e < t ? -1 : 1;
           }),
           (goog.string.intAwareCompare = function (e, t) {
             return goog.string.numberAwareCompare_(e, t, /\d+|\D+/g);
@@ -5699,12 +5699,12 @@ var CLSTAMP = "8056184";
               : e;
           }),
           (goog.string.unescapeEntitiesUsingDom_ = function (e, t) {
-            var o = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"' },
-              r = t
+            var r = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"' },
+              o = t
                 ? t.createElement("div")
                 : goog.global.document.createElement("div");
             return e.replace(goog.string.HTML_ENTITY_PATTERN_, function (e, t) {
-              var n = o[e];
+              var n = r[e];
               return (
                 n ||
                 ("#" == t.charAt(0) &&
@@ -5712,14 +5712,14 @@ var CLSTAMP = "8056184";
                   isNaN(t) || (n = String.fromCharCode(t))),
                 n ||
                   (goog.dom.safe.setInnerHtml(
-                    r,
+                    o,
                     goog.html.uncheckedconversions.safeHtmlFromStringKnownToSatisfyTypeContract(
                       goog.string.Const.from("Single HTML entity."),
                       e + " "
                     )
                   ),
-                  (n = r.firstChild.nodeValue.slice(0, -1))),
-                (o[e] = n))
+                  (n = o.firstChild.nodeValue.slice(0, -1))),
+                (r[e] = n))
               );
             });
           }),
@@ -5750,34 +5750,34 @@ var CLSTAMP = "8056184";
             return e.replace(/(^|[\n ]) /g, "$1" + goog.string.Unicode.NBSP);
           }),
           (goog.string.stripQuotes = function (e, t) {
-            for (var o = t.length, r = 0; r < o; r++) {
-              var n = 1 == o ? t : t.charAt(r);
+            for (var r = t.length, o = 0; o < r; o++) {
+              var n = 1 == r ? t : t.charAt(o);
               if (e.charAt(0) == n && e.charAt(e.length - 1) == n)
                 return e.substring(1, e.length - 1);
             }
             return e;
           }),
-          (goog.string.truncate = function (e, t, o) {
+          (goog.string.truncate = function (e, t, r) {
             return (
-              o && (e = goog.string.unescapeEntities(e)),
+              r && (e = goog.string.unescapeEntities(e)),
               e.length > t && (e = e.substring(0, t - 3) + "..."),
-              o && (e = goog.string.htmlEscape(e)),
+              r && (e = goog.string.htmlEscape(e)),
               e
             );
           }),
-          (goog.string.truncateMiddle = function (e, t, o, r) {
+          (goog.string.truncateMiddle = function (e, t, r, o) {
             if (
-              (o && (e = goog.string.unescapeEntities(e)), r && e.length > t)
+              (r && (e = goog.string.unescapeEntities(e)), o && e.length > t)
             ) {
-              r > t && (r = t);
-              var n = e.length - r;
-              e = e.substring(0, t - r) + "..." + e.substring(n);
+              o > t && (o = t);
+              var n = e.length - o;
+              e = e.substring(0, t - o) + "..." + e.substring(n);
             } else
               e.length > t &&
-                ((r = Math.floor(t / 2)),
-                (n = e.length - r),
-                (e = e.substring(0, r + (t % 2)) + "..." + e.substring(n)));
-            return o && (e = goog.string.htmlEscape(e)), e;
+                ((o = Math.floor(t / 2)),
+                (n = e.length - o),
+                (e = e.substring(0, o + (t % 2)) + "..." + e.substring(n)));
+            return r && (e = goog.string.htmlEscape(e)), e;
           }),
           (goog.string.specialEscapeChars_ = {
             "\0": "\\0",
@@ -5794,18 +5794,18 @@ var CLSTAMP = "8056184";
           (goog.string.jsEscapeCache_ = { "'": "\\'" }),
           (goog.string.quote = function (e) {
             e = String(e);
-            for (var t = ['"'], o = 0; o < e.length; o++) {
-              var r = e.charAt(o),
-                n = r.charCodeAt(0);
-              t[o + 1] =
-                goog.string.specialEscapeChars_[r] ||
-                (31 < n && 127 > n ? r : goog.string.escapeChar(r));
+            for (var t = ['"'], r = 0; r < e.length; r++) {
+              var o = e.charAt(r),
+                n = o.charCodeAt(0);
+              t[r + 1] =
+                goog.string.specialEscapeChars_[o] ||
+                (31 < n && 127 > n ? o : goog.string.escapeChar(o));
             }
             return t.push('"'), t.join("");
           }),
           (goog.string.escapeString = function (e) {
-            for (var t = [], o = 0; o < e.length; o++)
-              t[o] = goog.string.escapeChar(e.charAt(o));
+            for (var t = [], r = 0; r < e.length; r++)
+              t[r] = goog.string.escapeChar(e.charAt(r));
             return t.join("");
           }),
           (goog.string.escapeChar = function (e) {
@@ -5815,13 +5815,13 @@ var CLSTAMP = "8056184";
               return (goog.string.jsEscapeCache_[e] =
                 goog.string.specialEscapeChars_[e]);
             var t = e.charCodeAt(0);
-            if (31 < t && 127 > t) var o = e;
+            if (31 < t && 127 > t) var r = e;
             else
               256 > t
-                ? ((o = "\\x"), (16 > t || 256 < t) && (o += "0"))
-                : ((o = "\\u"), 4096 > t && (o += "0")),
-                (o += t.toString(16).toUpperCase());
-            return (goog.string.jsEscapeCache_[e] = o);
+                ? ((r = "\\x"), (16 > t || 256 < t) && (r += "0"))
+                : ((r = "\\u"), 4096 > t && (r += "0")),
+                (r += t.toString(16).toUpperCase());
+            return (goog.string.jsEscapeCache_[e] = r);
           }),
           (goog.string.contains = goog.string.internal.contains),
           (goog.string.caseInsensitiveContains =
@@ -5829,14 +5829,14 @@ var CLSTAMP = "8056184";
           (goog.string.countOf = function (e, t) {
             return e && t ? e.split(t).length - 1 : 0;
           }),
-          (goog.string.removeAt = function (e, t, o) {
-            var r = e;
+          (goog.string.removeAt = function (e, t, r) {
+            var o = e;
             return (
               0 <= t &&
                 t < e.length &&
-                0 < o &&
-                (r = e.substr(0, t) + e.substr(t + o, e.length - t - o)),
-              r
+                0 < r &&
+                (o = e.substr(0, t) + e.substr(t + r, e.length - t - r)),
+              o
             );
           }),
           (goog.string.remove = function (e, t) {
@@ -5848,10 +5848,10 @@ var CLSTAMP = "8056184";
               e.replace(t, "")
             );
           }),
-          (goog.string.replaceAll = function (e, t, o) {
+          (goog.string.replaceAll = function (e, t, r) {
             return (
               (t = new RegExp(goog.string.regExpEscape(t), "g")),
-              e.replace(t, o.replace(/\$/g, "$$$$"))
+              e.replace(t, r.replace(/\$/g, "$$$$"))
             );
           }),
           (goog.string.regExpEscape = function (e) {
@@ -5866,13 +5866,13 @@ var CLSTAMP = "8056184";
             : function (e, t) {
                 return Array(t + 1).join(e);
               }),
-          (goog.string.padNumber = function (e, t, o) {
+          (goog.string.padNumber = function (e, t, r) {
             return (
               -1 ==
-                (o = (e = void 0 !== o ? e.toFixed(o) : String(e)).indexOf(
+                (r = (e = void 0 !== r ? e.toFixed(r) : String(e)).indexOf(
                   "."
-                )) && (o = e.length),
-              goog.string.repeat("0", Math.max(0, t - o)) + e
+                )) && (r = e.length),
+              goog.string.repeat("0", Math.max(0, t - r)) + e
             );
           }),
           (goog.string.makeSafe = function (e) {
@@ -5891,8 +5891,8 @@ var CLSTAMP = "8056184";
           }),
           (goog.string.compareVersions = goog.string.internal.compareVersions),
           (goog.string.hashCode = function (e) {
-            for (var t = 0, o = 0; o < e.length; ++o)
-              t = (31 * t + e.charCodeAt(o)) >>> 0;
+            for (var t = 0, r = 0; r < e.length; ++r)
+              t = (31 * t + e.charCodeAt(r)) >>> 0;
             return t;
           }),
           (goog.string.uniqueStringCounter_ = (2147483648 * Math.random()) | 0),
@@ -5924,8 +5924,8 @@ var CLSTAMP = "8056184";
               (t = "string" == typeof t ? goog.string.regExpEscape(t) : "\\s"),
               e.replace(
                 new RegExp("(^" + (t ? "|[" + t + "]+" : "") + ")([a-z])", "g"),
-                function (e, t, o) {
-                  return t + o.toUpperCase();
+                function (e, t, r) {
+                  return t + r.toUpperCase();
                 }
               )
             );
@@ -5946,38 +5946,38 @@ var CLSTAMP = "8056184";
                 : NaN
             );
           }),
-          (goog.string.splitLimit = function (e, t, o) {
+          (goog.string.splitLimit = function (e, t, r) {
             e = e.split(t);
-            for (var r = []; 0 < o && e.length; ) r.push(e.shift()), o--;
-            return e.length && r.push(e.join(t)), r;
+            for (var o = []; 0 < r && e.length; ) o.push(e.shift()), r--;
+            return e.length && o.push(e.join(t)), o;
           }),
           (goog.string.lastComponent = function (e, t) {
             if (!t) return e;
             "string" == typeof t && (t = [t]);
-            for (var o = -1, r = 0; r < t.length; r++)
-              if ("" != t[r]) {
-                var n = e.lastIndexOf(t[r]);
-                n > o && (o = n);
+            for (var r = -1, o = 0; o < t.length; o++)
+              if ("" != t[o]) {
+                var n = e.lastIndexOf(t[o]);
+                n > r && (r = n);
               }
-            return -1 == o ? e : e.slice(o + 1);
+            return -1 == r ? e : e.slice(r + 1);
           }),
           (goog.string.editDistance = function (e, t) {
-            var o = [],
-              r = [];
+            var r = [],
+              o = [];
             if (e == t) return 0;
             if (!e.length || !t.length) return Math.max(e.length, t.length);
-            for (var n = 0; n < t.length + 1; n++) o[n] = n;
+            for (var n = 0; n < t.length + 1; n++) r[n] = n;
             for (n = 0; n < e.length; n++) {
-              r[0] = n + 1;
+              o[0] = n + 1;
               for (var i = 0; i < t.length; i++)
-                r[i + 1] = Math.min(
-                  r[i] + 1,
-                  o[i + 1] + 1,
-                  o[i] + Number(e[n] != t[i])
+                o[i + 1] = Math.min(
+                  o[i] + 1,
+                  r[i + 1] + 1,
+                  r[i] + Number(e[n] != t[i])
                 );
-              for (i = 0; i < o.length; i++) o[i] = r[i];
+              for (i = 0; i < r.length; i++) r[i] = o[i];
             }
-            return r[t.length];
+            return o[t.length];
           }),
           (goog.labs.userAgent.engine = {}),
           (goog.labs.userAgent.engine.isPresto = function () {
@@ -6011,11 +6011,11 @@ var CLSTAMP = "8056184";
             if (e) {
               e = goog.labs.userAgent.util.extractVersionTuples(e);
               var t,
-                o = goog.labs.userAgent.engine.getEngineTuple_(e);
-              if (o)
-                return "Gecko" == o[0]
+                r = goog.labs.userAgent.engine.getEngineTuple_(e);
+              if (r)
+                return "Gecko" == r[0]
                   ? goog.labs.userAgent.engine.getVersionForKey_(e, "Firefox")
-                  : o[1];
+                  : r[1];
               if (
                 (e = e[0]) &&
                 (t = e[2]) &&
@@ -6028,8 +6028,8 @@ var CLSTAMP = "8056184";
           (goog.labs.userAgent.engine.getEngineTuple_ = function (e) {
             if (!goog.labs.userAgent.engine.isEdge()) return e[1];
             for (var t = 0; t < e.length; t++) {
-              var o = e[t];
-              if ("Edge" == o[0]) return o;
+              var r = e[t];
+              if ("Edge" == r[0]) return r;
             }
           }),
           (goog.labs.userAgent.engine.isVersionOrHigher = function (e) {
@@ -6147,10 +6147,10 @@ var CLSTAMP = "8056184";
             } catch (e) {}
             return !1;
           }),
-          (goog.reflect.cache = function (e, t, o, r) {
+          (goog.reflect.cache = function (e, t, r, o) {
             return (
-              (r = r ? r(t) : t),
-              Object.prototype.hasOwnProperty.call(e, r) ? e[r] : (e[r] = o(t))
+              (o = o ? o(t) : t),
+              Object.prototype.hasOwnProperty.call(e, o) ? e[o] : (e[o] = r(t))
             );
           }),
           (goog.userAgent = {}),
@@ -6422,20 +6422,20 @@ var CLSTAMP = "8056184";
               void 0 === t && (t = goog.crypt.base64.Alphabet.DEFAULT),
               goog.crypt.base64.init_(),
               (t = goog.crypt.base64.byteToCharMaps_[t]);
-            for (var o = [], r = 0; r < e.length; r += 3) {
-              var n = e[r],
-                i = r + 1 < e.length,
-                a = i ? e[r + 1] : 0,
-                s = r + 2 < e.length,
-                g = s ? e[r + 2] : 0,
+            for (var r = [], o = 0; o < e.length; o += 3) {
+              var n = e[o],
+                i = o + 1 < e.length,
+                a = i ? e[o + 1] : 0,
+                s = o + 2 < e.length,
+                g = s ? e[o + 2] : 0,
                 l = n >> 2;
               (n = ((3 & n) << 4) | (a >> 4)),
                 (a = ((15 & a) << 2) | (g >> 6)),
                 (g &= 63),
                 s || ((g = 64), i || (a = 64)),
-                o.push(t[l], t[n], t[a] || "", t[g] || "");
+                r.push(t[l], t[n], t[a] || "", t[g] || "");
             }
-            return o.join("");
+            return r.join("");
           }),
           (goog.crypt.base64.encodeString = function (e, t) {
             return goog.crypt.base64.HAS_NATIVE_ENCODE_ && !t
@@ -6448,21 +6448,21 @@ var CLSTAMP = "8056184";
           (goog.crypt.base64.decodeString = function (e, t) {
             if (goog.crypt.base64.HAS_NATIVE_DECODE_ && !t)
               return goog.global.atob(e);
-            var o = "";
+            var r = "";
             return (
               goog.crypt.base64.decodeStringInternal_(e, function (e) {
-                o += String.fromCharCode(e);
+                r += String.fromCharCode(e);
               }),
-              o
+              r
             );
           }),
           (goog.crypt.base64.decodeStringToByteArray = function (e, t) {
-            var o = [];
+            var r = [];
             return (
               goog.crypt.base64.decodeStringInternal_(e, function (e) {
-                o.push(e);
+                r.push(e);
               }),
-              o
+              r
             );
           }),
           (goog.crypt.base64.decodeStringToUint8Array = function (e) {
@@ -6471,37 +6471,37 @@ var CLSTAMP = "8056184";
               "Browser does not support typed arrays"
             );
             var t = e.length,
-              o = (3 * t) / 4;
-            o % 3
-              ? (o = Math.floor(o))
+              r = (3 * t) / 4;
+            r % 3
+              ? (r = Math.floor(r))
               : goog.crypt.base64.isPadding_(e[t - 1]) &&
-                (o = goog.crypt.base64.isPadding_(e[t - 2]) ? o - 2 : o - 1);
-            var r = new Uint8Array(o),
+                (r = goog.crypt.base64.isPadding_(e[t - 2]) ? r - 2 : r - 1);
+            var o = new Uint8Array(r),
               n = 0;
             return (
               goog.crypt.base64.decodeStringInternal_(e, function (e) {
-                r[n++] = e;
+                o[n++] = e;
               }),
-              r.subarray(0, n)
+              o.subarray(0, n)
             );
           }),
           (goog.crypt.base64.decodeStringInternal_ = function (e, t) {
-            function o(t) {
-              for (; r < e.length; ) {
-                var o = e.charAt(r++),
-                  n = goog.crypt.base64.charToByteMap_[o];
+            function r(t) {
+              for (; o < e.length; ) {
+                var r = e.charAt(o++),
+                  n = goog.crypt.base64.charToByteMap_[r];
                 if (null != n) return n;
-                if (!goog.string.isEmptyOrWhitespace(o))
-                  throw Error("Unknown base64 encoding at char: " + o);
+                if (!goog.string.isEmptyOrWhitespace(r))
+                  throw Error("Unknown base64 encoding at char: " + r);
               }
               return t;
             }
             goog.crypt.base64.init_();
-            for (var r = 0; ; ) {
-              var n = o(-1),
-                i = o(0),
-                a = o(64),
-                s = o(64);
+            for (var o = 0; ; ) {
+              var n = r(-1),
+                i = r(0),
+                a = r(64),
+                s = r(64);
               if (64 === s && -1 === n) break;
               t((n << 2) | (i >> 4)),
                 64 != a &&
@@ -6515,14 +6515,14 @@ var CLSTAMP = "8056184";
               for (
                 var e = goog.crypt.base64.DEFAULT_ALPHABET_COMMON_.split(""),
                   t = ["+/=", "+/", "-_=", "-_.", "-_"],
-                  o = 0;
-                5 > o;
-                o++
+                  r = 0;
+                5 > r;
+                r++
               ) {
-                var r = e.concat(t[o].split(""));
-                goog.crypt.base64.byteToCharMaps_[o] = r;
-                for (var n = 0; n < r.length; n++) {
-                  var i = r[n],
+                var o = e.concat(t[r].split(""));
+                goog.crypt.base64.byteToCharMaps_[r] = o;
+                for (var n = 0; n < o.length; n++) {
+                  var i = o[n],
                     a = goog.crypt.base64.charToByteMap_[i];
                   void 0 === a
                     ? (goog.crypt.base64.charToByteMap_[i] = n)
@@ -6542,14 +6542,14 @@ var CLSTAMP = "8056184";
           }),
           (jspb.utils.splitInt64 = function (e) {
             var t = 0 > e,
-              o = (e = Math.abs(e)) >>> 0;
-            (e = Math.floor((e - o) / jspb.BinaryConstants.TWO_TO_32)),
+              r = (e = Math.abs(e)) >>> 0;
+            (e = Math.floor((e - r) / jspb.BinaryConstants.TWO_TO_32)),
               (e >>>= 0),
               t &&
                 ((e = ~e >>> 0),
-                4294967295 < (o = 1 + (~o >>> 0)) &&
-                  ((o = 0), 4294967295 < ++e && (e = 0))),
-              (jspb.utils.split64Low = o),
+                4294967295 < (r = 1 + (~r >>> 0)) &&
+                  ((r = 0), 4294967295 < ++e && (e = 0))),
+              (jspb.utils.split64Low = r),
               (jspb.utils.split64High = e);
           }),
           (jspb.utils.splitZigzag64 = function (e) {
@@ -6557,15 +6557,15 @@ var CLSTAMP = "8056184";
             (e = 2 * Math.abs(e)),
               jspb.utils.splitUint64(e),
               (e = jspb.utils.split64Low);
-            var o = jspb.utils.split64High;
+            var r = jspb.utils.split64High;
             t &&
               (0 == e
-                ? 0 == o
-                  ? (o = e = 4294967295)
-                  : (o--, (e = 4294967295))
+                ? 0 == r
+                  ? (r = e = 4294967295)
+                  : (r--, (e = 4294967295))
                 : e--),
               (jspb.utils.split64Low = e),
-              (jspb.utils.split64High = o);
+              (jspb.utils.split64High = r);
           }),
           (jspb.utils.splitFloat32 = function (e) {
             var t = 0 > e ? 1 : 0;
@@ -6585,13 +6585,13 @@ var CLSTAMP = "8056184";
                 (jspb.utils.split64High = 0),
                 (jspb.utils.split64Low = ((t << 31) | e) >>> 0);
             else {
-              var o = Math.floor(Math.log(e) / Math.LN2);
-              (e *= Math.pow(2, -o)),
+              var r = Math.floor(Math.log(e) / Math.LN2);
+              (e *= Math.pow(2, -r)),
                 16777216 <=
-                  (e = Math.round(e * jspb.BinaryConstants.TWO_TO_23)) && ++o,
+                  (e = Math.round(e * jspb.BinaryConstants.TWO_TO_23)) && ++r,
                 (jspb.utils.split64High = 0),
                 (jspb.utils.split64Low =
-                  ((t << 31) | ((o + 127) << 23) | (8388607 & e)) >>> 0);
+                  ((t << 31) | ((r + 127) << 23) | (8388607 & e)) >>> 0);
             }
           }),
           (jspb.utils.splitFloat64 = function (e) {
@@ -6606,34 +6606,34 @@ var CLSTAMP = "8056184";
               (jspb.utils.split64High = ((t << 31) | 2146435072) >>> 0),
                 (jspb.utils.split64Low = 0);
             else if (e < jspb.BinaryConstants.FLOAT64_MIN) {
-              var o = e / Math.pow(2, -1074);
-              (e = o / jspb.BinaryConstants.TWO_TO_32),
+              var r = e / Math.pow(2, -1074);
+              (e = r / jspb.BinaryConstants.TWO_TO_32),
                 (jspb.utils.split64High = ((t << 31) | e) >>> 0),
-                (jspb.utils.split64Low = o >>> 0);
+                (jspb.utils.split64Low = r >>> 0);
             } else {
-              var r = 0;
-              if (2 <= (o = e)) for (; 2 <= o && 1023 > r; ) r++, (o /= 2);
-              else for (; 1 > o && -1022 < r; ) (o *= 2), r--;
+              var o = 0;
+              if (2 <= (r = e)) for (; 2 <= r && 1023 > o; ) o++, (r /= 2);
+              else for (; 1 > r && -1022 < o; ) (r *= 2), o--;
               (e =
-                ((o = e * Math.pow(2, -r)) * jspb.BinaryConstants.TWO_TO_20) &
+                ((r = e * Math.pow(2, -o)) * jspb.BinaryConstants.TWO_TO_20) &
                 1048575),
-                (o = (o * jspb.BinaryConstants.TWO_TO_52) >>> 0),
+                (r = (r * jspb.BinaryConstants.TWO_TO_52) >>> 0),
                 (jspb.utils.split64High =
-                  ((t << 31) | ((r + 1023) << 20) | e) >>> 0),
-                (jspb.utils.split64Low = o);
+                  ((t << 31) | ((o + 1023) << 20) | e) >>> 0),
+                (jspb.utils.split64Low = r);
             }
           }),
           (jspb.utils.splitHash64 = function (e) {
             var t = e.charCodeAt(0),
-              o = e.charCodeAt(1),
-              r = e.charCodeAt(2),
+              r = e.charCodeAt(1),
+              o = e.charCodeAt(2),
               n = e.charCodeAt(3),
               i = e.charCodeAt(4),
               a = e.charCodeAt(5),
               s = e.charCodeAt(6);
             (e = e.charCodeAt(7)),
               (jspb.utils.split64Low =
-                (t + (o << 8) + (r << 16) + (n << 24)) >>> 0),
+                (t + (r << 8) + (o << 16) + (n << 24)) >>> 0),
               (jspb.utils.split64High =
                 (i + (a << 8) + (s << 16) + (e << 24)) >>> 0);
           }),
@@ -6641,53 +6641,53 @@ var CLSTAMP = "8056184";
             return t * jspb.BinaryConstants.TWO_TO_32 + (e >>> 0);
           }),
           (jspb.utils.joinInt64 = function (e, t) {
-            var o = 2147483648 & t;
+            var r = 2147483648 & t;
             return (
-              o &&
+              r &&
                 ((t = ~t >>> 0),
                 0 == (e = (1 + ~e) >>> 0) && (t = (t + 1) >>> 0)),
               (e = jspb.utils.joinUint64(e, t)),
-              o ? -e : e
+              r ? -e : e
             );
           }),
-          (jspb.utils.toZigzag64 = function (e, t, o) {
-            var r = t >> 31;
-            return o((e << 1) ^ r, ((t << 1) | (e >>> 31)) ^ r);
+          (jspb.utils.toZigzag64 = function (e, t, r) {
+            var o = t >> 31;
+            return r((e << 1) ^ o, ((t << 1) | (e >>> 31)) ^ o);
           }),
           (jspb.utils.joinZigzag64 = function (e, t) {
             return jspb.utils.fromZigzag64(e, t, jspb.utils.joinInt64);
           }),
-          (jspb.utils.fromZigzag64 = function (e, t, o) {
-            var r = -(1 & e);
-            return o(((e >>> 1) | (t << 31)) ^ r, (t >>> 1) ^ r);
+          (jspb.utils.fromZigzag64 = function (e, t, r) {
+            var o = -(1 & e);
+            return r(((e >>> 1) | (t << 31)) ^ o, (t >>> 1) ^ o);
           }),
           (jspb.utils.joinFloat32 = function (e, t) {
             t = 2 * (e >> 31) + 1;
-            var o = (e >>> 23) & 255;
+            var r = (e >>> 23) & 255;
             return (
               (e &= 8388607),
-              255 == o
+              255 == r
                 ? e
                   ? NaN
                   : (1 / 0) * t
-                : 0 == o
+                : 0 == r
                 ? t * Math.pow(2, -149) * e
-                : t * Math.pow(2, o - 150) * (e + Math.pow(2, 23))
+                : t * Math.pow(2, r - 150) * (e + Math.pow(2, 23))
             );
           }),
           (jspb.utils.joinFloat64 = function (e, t) {
-            var o = 2 * (t >> 31) + 1,
-              r = (t >>> 20) & 2047;
+            var r = 2 * (t >> 31) + 1,
+              o = (t >>> 20) & 2047;
             return (
               (e = jspb.BinaryConstants.TWO_TO_32 * (1048575 & t) + e),
-              2047 == r
+              2047 == o
                 ? e
                   ? NaN
-                  : (1 / 0) * o
-                : 0 == r
-                ? o * Math.pow(2, -1074) * e
-                : o *
-                  Math.pow(2, r - 1075) *
+                  : (1 / 0) * r
+                : 0 == o
+                ? r * Math.pow(2, -1074) * e
+                : r *
+                  Math.pow(2, o - 1075) *
                   (e + jspb.BinaryConstants.TWO_TO_52)
             );
           }),
@@ -6707,62 +6707,62 @@ var CLSTAMP = "8056184";
           (jspb.utils.ZERO_CHAR_CODE_ = 48),
           (jspb.utils.A_CHAR_CODE_ = 97),
           (jspb.utils.joinUnsignedDecimalString = function (e, t) {
-            function o(e, t) {
+            function r(e, t) {
               return (
                 (e = e ? String(e) : ""), t ? "0000000".slice(e.length) + e : e
               );
             }
             if (2097151 >= t) return "" + jspb.utils.joinUint64(e, t);
-            var r = (((e >>> 24) | (t << 8)) >>> 0) & 16777215;
+            var o = (((e >>> 24) | (t << 8)) >>> 0) & 16777215;
             return (
               (e =
                 (16777215 & e) +
-                6777216 * r +
+                6777216 * o +
                 6710656 * (t = (t >> 16) & 65535)),
-              (r += 8147497 * t),
+              (o += 8147497 * t),
               (t *= 2),
-              1e7 <= e && ((r += Math.floor(e / 1e7)), (e %= 1e7)),
-              1e7 <= r && ((t += Math.floor(r / 1e7)), (r %= 1e7)),
-              o(t, 0) + o(r, t) + o(e, 1)
+              1e7 <= e && ((o += Math.floor(e / 1e7)), (e %= 1e7)),
+              1e7 <= o && ((t += Math.floor(o / 1e7)), (o %= 1e7)),
+              r(t, 0) + r(o, t) + r(e, 1)
             );
           }),
           (jspb.utils.joinSignedDecimalString = function (e, t) {
-            var o = 2147483648 & t;
+            var r = 2147483648 & t;
             return (
-              o && (t = (~t + (0 == (e = (1 + ~e) >>> 0) ? 1 : 0)) >>> 0),
+              r && (t = (~t + (0 == (e = (1 + ~e) >>> 0) ? 1 : 0)) >>> 0),
               (e = jspb.utils.joinUnsignedDecimalString(e, t)),
-              o ? "-" + e : e
+              r ? "-" + e : e
             );
           }),
           (jspb.utils.hash64ToDecimalString = function (e, t) {
             jspb.utils.splitHash64(e), (e = jspb.utils.split64Low);
-            var o = jspb.utils.split64High;
+            var r = jspb.utils.split64High;
             return t
-              ? jspb.utils.joinSignedDecimalString(e, o)
-              : jspb.utils.joinUnsignedDecimalString(e, o);
+              ? jspb.utils.joinSignedDecimalString(e, r)
+              : jspb.utils.joinUnsignedDecimalString(e, r);
           }),
           (jspb.utils.hash64ArrayToDecimalStrings = function (e, t) {
-            for (var o = Array(e.length), r = 0; r < e.length; r++)
-              o[r] = jspb.utils.hash64ToDecimalString(e[r], t);
-            return o;
+            for (var r = Array(e.length), o = 0; o < e.length; o++)
+              r[o] = jspb.utils.hash64ToDecimalString(e[o], t);
+            return r;
           }),
           (jspb.utils.decimalStringToHash64 = function (e) {
             function t(e, t) {
-              for (var o = 0; 8 > o && (1 !== e || 0 < t); o++)
-                (t = e * r[o] + t), (r[o] = 255 & t), (t >>>= 8);
+              for (var r = 0; 8 > r && (1 !== e || 0 < t); r++)
+                (t = e * o[r] + t), (o[r] = 255 & t), (t >>>= 8);
             }
             goog.asserts.assert(0 < e.length);
-            var o = !1;
-            "-" === e[0] && ((o = !0), (e = e.slice(1)));
-            for (var r = [0, 0, 0, 0, 0, 0, 0, 0], n = 0; n < e.length; n++)
+            var r = !1;
+            "-" === e[0] && ((r = !0), (e = e.slice(1)));
+            for (var o = [0, 0, 0, 0, 0, 0, 0, 0], n = 0; n < e.length; n++)
               t(10, e.charCodeAt(n) - jspb.utils.ZERO_CHAR_CODE_);
             return (
-              o &&
+              r &&
                 ((function () {
-                  for (var e = 0; 8 > e; e++) r[e] = 255 & ~r[e];
+                  for (var e = 0; 8 > e; e++) o[e] = 255 & ~o[e];
                 })(),
                 t(1, 1)),
-              goog.crypt.byteArrayToString(r)
+              goog.crypt.byteArrayToString(o)
             );
           }),
           (jspb.utils.splitDecimalString = function (e) {
@@ -6783,10 +6783,10 @@ var CLSTAMP = "8056184";
           (jspb.utils.hash64ToHexString = function (e) {
             var t = Array(18);
             (t[0] = "0"), (t[1] = "x");
-            for (var o = 0; 8 > o; o++) {
-              var r = e.charCodeAt(7 - o);
-              (t[2 * o + 2] = jspb.utils.toHexDigit_(r >> 4)),
-                (t[2 * o + 3] = jspb.utils.toHexDigit_(15 & r));
+            for (var r = 0; 8 > r; r++) {
+              var o = e.charCodeAt(7 - r);
+              (t[2 * r + 2] = jspb.utils.toHexDigit_(o >> 4)),
+                (t[2 * r + 3] = jspb.utils.toHexDigit_(15 & o));
             }
             return t.join("");
           }),
@@ -6795,17 +6795,17 @@ var CLSTAMP = "8056184";
               goog.asserts.assert(18 == e.length),
               goog.asserts.assert("0" == e[0]),
               goog.asserts.assert("x" == e[1]);
-            for (var t = "", o = 0; 8 > o; o++) {
-              var r = jspb.utils.fromHexCharCode_(e.charCodeAt(2 * o + 2)),
-                n = jspb.utils.fromHexCharCode_(e.charCodeAt(2 * o + 3));
-              t = String.fromCharCode(16 * r + n) + t;
+            for (var t = "", r = 0; 8 > r; r++) {
+              var o = jspb.utils.fromHexCharCode_(e.charCodeAt(2 * r + 2)),
+                n = jspb.utils.fromHexCharCode_(e.charCodeAt(2 * r + 3));
+              t = String.fromCharCode(16 * o + n) + t;
             }
             return t;
           }),
           (jspb.utils.hash64ToNumber = function (e, t) {
             jspb.utils.splitHash64(e), (e = jspb.utils.split64Low);
-            var o = jspb.utils.split64High;
-            return t ? jspb.utils.joinInt64(e, o) : jspb.utils.joinUint64(e, o);
+            var r = jspb.utils.split64High;
+            return t ? jspb.utils.joinInt64(e, r) : jspb.utils.joinUint64(e, r);
           }),
           (jspb.utils.numberToHash64 = function (e) {
             return (
@@ -6816,21 +6816,21 @@ var CLSTAMP = "8056184";
               )
             );
           }),
-          (jspb.utils.countVarints = function (e, t, o) {
-            for (var r = 0, n = t; n < o; n++) r += e[n] >> 7;
-            return o - t - r;
+          (jspb.utils.countVarints = function (e, t, r) {
+            for (var o = 0, n = t; n < r; n++) o += e[n] >> 7;
+            return r - t - o;
           }),
-          (jspb.utils.countVarintFields = function (e, t, o, r) {
+          (jspb.utils.countVarintFields = function (e, t, r, o) {
             var n = 0;
-            if (128 > (r = 8 * r + jspb.BinaryConstants.WireType.VARINT))
-              for (; t < o && e[t++] == r; )
+            if (128 > (o = 8 * o + jspb.BinaryConstants.WireType.VARINT))
+              for (; t < r && e[t++] == o; )
                 for (n++; ; ) {
                   var i = e[t++];
                   if (0 == (128 & i)) break;
                 }
             else
-              for (; t < o; ) {
-                for (i = r; 128 < i; ) {
+              for (; t < r; ) {
+                for (i = o; 128 < i; ) {
                   if (e[t] != ((127 & i) | 128)) return n;
                   t++, (i >>= 7);
                 }
@@ -6839,12 +6839,12 @@ var CLSTAMP = "8056184";
               }
             return n;
           }),
-          (jspb.utils.countFixedFields_ = function (e, t, o, r, n) {
+          (jspb.utils.countFixedFields_ = function (e, t, r, o, n) {
             var i = 0;
-            if (128 > r) for (; t < o && e[t++] == r; ) i++, (t += n);
+            if (128 > o) for (; t < r && e[t++] == o; ) i++, (t += n);
             else
-              for (; t < o; ) {
-                for (var a = r; 128 < a; ) {
+              for (; t < r; ) {
+                for (var a = o; 128 < a; ) {
                   if (e[t++] != ((127 & a) | 128)) return i;
                   a >>= 7;
                 }
@@ -6853,28 +6853,28 @@ var CLSTAMP = "8056184";
               }
             return i;
           }),
-          (jspb.utils.countFixed32Fields = function (e, t, o, r) {
+          (jspb.utils.countFixed32Fields = function (e, t, r, o) {
             return jspb.utils.countFixedFields_(
               e,
               t,
-              o,
-              8 * r + jspb.BinaryConstants.WireType.FIXED32,
+              r,
+              8 * o + jspb.BinaryConstants.WireType.FIXED32,
               4
             );
           }),
-          (jspb.utils.countFixed64Fields = function (e, t, o, r) {
+          (jspb.utils.countFixed64Fields = function (e, t, r, o) {
             return jspb.utils.countFixedFields_(
               e,
               t,
-              o,
-              8 * r + jspb.BinaryConstants.WireType.FIXED64,
+              r,
+              8 * o + jspb.BinaryConstants.WireType.FIXED64,
               8
             );
           }),
-          (jspb.utils.countDelimitedFields = function (e, t, o, r) {
+          (jspb.utils.countDelimitedFields = function (e, t, r, o) {
             var n = 0;
-            for (r = 8 * r + jspb.BinaryConstants.WireType.DELIMITED; t < o; ) {
-              for (var i = r; 128 < i; ) {
+            for (o = 8 * o + jspb.BinaryConstants.WireType.DELIMITED; t < r; ) {
+              for (var i = o; 128 < i; ) {
                 if (e[t++] != ((127 & i) | 128)) return n;
                 i >>= 7;
               }
@@ -6893,8 +6893,8 @@ var CLSTAMP = "8056184";
             var t = '"';
             if (e) {
               e = jspb.utils.byteSourceToUint8Array(e);
-              for (var o = 0; o < e.length; o++)
-                (t += "\\x"), 16 > e[o] && (t += "0"), (t += e[o].toString(16));
+              for (var r = 0; r < e.length; r++)
+                (t += "\\x"), 16 > e[r] && (t += "0"), (t += e[r].toString(16));
             }
             return t + '"';
           }),
@@ -6902,13 +6902,13 @@ var CLSTAMP = "8056184";
             return "string" == typeof e ? goog.string.quote(e) : e.toString();
           }),
           (jspb.utils.stringToByteArray = function (e) {
-            for (var t = new Uint8Array(e.length), o = 0; o < e.length; o++) {
-              var r = e.charCodeAt(o);
-              if (255 < r)
+            for (var t = new Uint8Array(e.length), r = 0; r < e.length; r++) {
+              var o = e.charCodeAt(r);
+              if (255 < o)
                 throw Error(
                   "Conversion error: string contains codepoint outside of byte range"
                 );
-              t[o] = r;
+              t[r] = o;
             }
             return t;
           }),
@@ -6924,19 +6924,19 @@ var CLSTAMP = "8056184";
               : (goog.asserts.fail("Type not convertible to Uint8Array."),
                 new Uint8Array(0));
           }),
-          (jspb.BinaryDecoder = function (e, t, o) {
+          (jspb.BinaryDecoder = function (e, t, r) {
             (this.bytes_ = null),
               (this.cursor_ = this.end_ = this.start_ = 0),
               (this.error_ = !1),
-              e && this.setBlock(e, t, o);
+              e && this.setBlock(e, t, r);
           }),
           (jspb.BinaryDecoder.instanceCache_ = []),
-          (jspb.BinaryDecoder.alloc = function (e, t, o) {
+          (jspb.BinaryDecoder.alloc = function (e, t, r) {
             if (jspb.BinaryDecoder.instanceCache_.length) {
-              var r = jspb.BinaryDecoder.instanceCache_.pop();
-              return e && r.setBlock(e, t, o), r;
+              var o = jspb.BinaryDecoder.instanceCache_.pop();
+              return e && o.setBlock(e, t, r), o;
             }
-            return new jspb.BinaryDecoder(e, t, o);
+            return new jspb.BinaryDecoder(e, t, r);
           }),
           (jspb.BinaryDecoder.prototype.free = function () {
             this.clear(),
@@ -6958,10 +6958,10 @@ var CLSTAMP = "8056184";
           (jspb.BinaryDecoder.prototype.getBuffer = function () {
             return this.bytes_;
           }),
-          (jspb.BinaryDecoder.prototype.setBlock = function (e, t, o) {
+          (jspb.BinaryDecoder.prototype.setBlock = function (e, t, r) {
             (this.bytes_ = jspb.utils.byteSourceToUint8Array(e)),
               (this.start_ = void 0 !== t ? t : 0),
-              (this.end_ = void 0 !== o ? this.start_ + o : this.bytes_.length),
+              (this.end_ = void 0 !== r ? this.start_ + r : this.bytes_.length),
               (this.cursor_ = this.start_);
           }),
           (jspb.BinaryDecoder.prototype.getEnd = function () {
@@ -6992,32 +6992,32 @@ var CLSTAMP = "8056184";
             return this.error_ || 0 > this.cursor_ || this.cursor_ > this.end_;
           }),
           (jspb.BinaryDecoder.prototype.readSplitVarint64 = function (e) {
-            for (var t = 128, o = 0, r = 0, n = 0; 4 > n && 128 <= t; n++)
-              o |= (127 & (t = this.bytes_[this.cursor_++])) << (7 * n);
+            for (var t = 128, r = 0, o = 0, n = 0; 4 > n && 128 <= t; n++)
+              r |= (127 & (t = this.bytes_[this.cursor_++])) << (7 * n);
             if (
               (128 <= t &&
-                ((o |= (127 & (t = this.bytes_[this.cursor_++])) << 28),
-                (r |= (127 & t) >> 4)),
+                ((r |= (127 & (t = this.bytes_[this.cursor_++])) << 28),
+                (o |= (127 & t) >> 4)),
               128 <= t)
             )
               for (n = 0; 5 > n && 128 <= t; n++)
-                r |= (127 & (t = this.bytes_[this.cursor_++])) << (7 * n + 3);
-            if (128 > t) return e(o >>> 0, r >>> 0);
+                o |= (127 & (t = this.bytes_[this.cursor_++])) << (7 * n + 3);
+            if (128 > t) return e(r >>> 0, o >>> 0);
             goog.asserts.fail("Failed to read varint, encoding is invalid."),
               (this.error_ = !0);
           }),
           (jspb.BinaryDecoder.prototype.readSplitZigzagVarint64 = function (e) {
-            return this.readSplitVarint64(function (t, o) {
-              return jspb.utils.fromZigzag64(t, o, e);
+            return this.readSplitVarint64(function (t, r) {
+              return jspb.utils.fromZigzag64(t, r, e);
             });
           }),
           (jspb.BinaryDecoder.prototype.readSplitFixed64 = function (e) {
             var t = this.bytes_,
-              o = this.cursor_;
+              r = this.cursor_;
             this.cursor_ += 8;
-            for (var r = 0, n = 0, i = o + 7; i >= o; i--)
-              (r = (r << 8) | t[i]), (n = (n << 8) | t[i + 4]);
-            return e(r, n);
+            for (var o = 0, n = 0, i = r + 7; i >= r; i--)
+              (o = (o << 8) | t[i]), (n = (n << 8) | t[i + 4]);
+            return e(o, n);
           }),
           (jspb.BinaryDecoder.prototype.skipVarint = function () {
             for (; 128 & this.bytes_[this.cursor_]; ) this.cursor_++;
@@ -7030,31 +7030,31 @@ var CLSTAMP = "8056184";
           (jspb.BinaryDecoder.prototype.readUnsignedVarint32 = function () {
             var e = this.bytes_,
               t = e[this.cursor_ + 0],
-              o = 127 & t;
+              r = 127 & t;
             return 128 > t
               ? ((this.cursor_ += 1),
                 goog.asserts.assert(this.cursor_ <= this.end_),
-                o)
-              : ((o |= (127 & (t = e[this.cursor_ + 1])) << 7),
+                r)
+              : ((r |= (127 & (t = e[this.cursor_ + 1])) << 7),
                 128 > t
                   ? ((this.cursor_ += 2),
                     goog.asserts.assert(this.cursor_ <= this.end_),
-                    o)
-                  : ((o |= (127 & (t = e[this.cursor_ + 2])) << 14),
+                    r)
+                  : ((r |= (127 & (t = e[this.cursor_ + 2])) << 14),
                     128 > t
                       ? ((this.cursor_ += 3),
                         goog.asserts.assert(this.cursor_ <= this.end_),
-                        o)
-                      : ((o |= (127 & (t = e[this.cursor_ + 3])) << 21),
+                        r)
+                      : ((r |= (127 & (t = e[this.cursor_ + 3])) << 21),
                         128 > t
                           ? ((this.cursor_ += 4),
                             goog.asserts.assert(this.cursor_ <= this.end_),
-                            o)
-                          : ((o |= (15 & (t = e[this.cursor_ + 4])) << 28),
+                            r)
+                          : ((r |= (15 & (t = e[this.cursor_ + 4])) << 28),
                             128 > t
                               ? ((this.cursor_ += 5),
                                 goog.asserts.assert(this.cursor_ <= this.end_),
-                                o >>> 0)
+                                r >>> 0)
                               : ((this.cursor_ += 5),
                                 128 <= e[this.cursor_++] &&
                                   128 <= e[this.cursor_++] &&
@@ -7063,7 +7063,7 @@ var CLSTAMP = "8056184";
                                   128 <= e[this.cursor_++] &&
                                   goog.asserts.assert(!1),
                                 goog.asserts.assert(this.cursor_ <= this.end_),
-                                o)))));
+                                r)))));
           }),
           (jspb.BinaryDecoder.prototype.readSignedVarint32 =
             jspb.BinaryDecoder.prototype.readUnsignedVarint32),
@@ -7124,12 +7124,12 @@ var CLSTAMP = "8056184";
           (jspb.BinaryDecoder.prototype.readUint32 = function () {
             var e = this.bytes_[this.cursor_ + 0],
               t = this.bytes_[this.cursor_ + 1],
-              o = this.bytes_[this.cursor_ + 2],
-              r = this.bytes_[this.cursor_ + 3];
+              r = this.bytes_[this.cursor_ + 2],
+              o = this.bytes_[this.cursor_ + 3];
             return (
               (this.cursor_ += 4),
               goog.asserts.assert(this.cursor_ <= this.end_),
-              ((e << 0) | (t << 8) | (o << 16) | (r << 24)) >>> 0
+              ((e << 0) | (t << 8) | (r << 16) | (o << 24)) >>> 0
             );
           }),
           (jspb.BinaryDecoder.prototype.readUint64 = function () {
@@ -7162,12 +7162,12 @@ var CLSTAMP = "8056184";
           (jspb.BinaryDecoder.prototype.readInt32 = function () {
             var e = this.bytes_[this.cursor_ + 0],
               t = this.bytes_[this.cursor_ + 1],
-              o = this.bytes_[this.cursor_ + 2],
-              r = this.bytes_[this.cursor_ + 3];
+              r = this.bytes_[this.cursor_ + 2],
+              o = this.bytes_[this.cursor_ + 3];
             return (
               (this.cursor_ += 4),
               goog.asserts.assert(this.cursor_ <= this.end_),
-              (e << 0) | (t << 8) | (o << 16) | (r << 24)
+              (e << 0) | (t << 8) | (r << 16) | (o << 24)
             );
           }),
           (jspb.BinaryDecoder.prototype.readInt64 = function () {
@@ -7197,35 +7197,35 @@ var CLSTAMP = "8056184";
           }),
           (jspb.BinaryDecoder.prototype.readString = function (e) {
             var t = this.bytes_,
-              o = this.cursor_;
-            e = o + e;
-            for (var r = [], n = ""; o < e; ) {
-              var i = t[o++];
-              if (128 > i) r.push(i);
+              r = this.cursor_;
+            e = r + e;
+            for (var o = [], n = ""; r < e; ) {
+              var i = t[r++];
+              if (128 > i) o.push(i);
               else {
                 if (192 > i) continue;
                 if (224 > i) {
-                  var a = t[o++];
-                  r.push(((31 & i) << 6) | (63 & a));
+                  var a = t[r++];
+                  o.push(((31 & i) << 6) | (63 & a));
                 } else if (240 > i) {
-                  a = t[o++];
-                  var s = t[o++];
-                  r.push(((15 & i) << 12) | ((63 & a) << 6) | (63 & s));
+                  a = t[r++];
+                  var s = t[r++];
+                  o.push(((15 & i) << 12) | ((63 & a) << 6) | (63 & s));
                 } else if (248 > i) {
                   (i =
                     ((7 & i) << 18) |
-                    ((63 & (a = t[o++])) << 12) |
-                    ((63 & (s = t[o++])) << 6) |
-                    (63 & t[o++])),
+                    ((63 & (a = t[r++])) << 12) |
+                    ((63 & (s = t[r++])) << 6) |
+                    (63 & t[r++])),
                     (i -= 65536),
-                    r.push(55296 + ((i >> 10) & 1023), 56320 + (1023 & i));
+                    o.push(55296 + ((i >> 10) & 1023), 56320 + (1023 & i));
                 }
               }
-              8192 <= r.length &&
-                ((n += String.fromCharCode.apply(null, r)), (r.length = 0));
+              8192 <= o.length &&
+                ((n += String.fromCharCode.apply(null, o)), (o.length = 0));
             }
             return (
-              (n += goog.crypt.byteArrayToString(r)), (this.cursor_ = o), n
+              (n += goog.crypt.byteArrayToString(o)), (this.cursor_ = r), n
             );
           }),
           (jspb.BinaryDecoder.prototype.readStringWithLength = function () {
@@ -7252,8 +7252,8 @@ var CLSTAMP = "8056184";
           (jspb.BinaryDecoder.prototype.readFixedHash64 = function () {
             var e = this.bytes_,
               t = this.cursor_,
-              o = e[t + 0],
-              r = e[t + 1],
+              r = e[t + 0],
+              o = e[t + 1],
               n = e[t + 2],
               i = e[t + 3],
               a = e[t + 4],
@@ -7262,11 +7262,11 @@ var CLSTAMP = "8056184";
             return (
               (e = e[t + 7]),
               (this.cursor_ += 8),
-              String.fromCharCode(o, r, n, i, a, s, g, e)
+              String.fromCharCode(r, o, n, i, a, s, g, e)
             );
           }),
-          (jspb.BinaryReader = function (e, t, o) {
-            (this.decoder_ = jspb.BinaryDecoder.alloc(e, t, o)),
+          (jspb.BinaryReader = function (e, t, r) {
+            (this.decoder_ = jspb.BinaryDecoder.alloc(e, t, r)),
               (this.fieldCursor_ = this.decoder_.getCursor()),
               (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
               (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID),
@@ -7274,12 +7274,12 @@ var CLSTAMP = "8056184";
               (this.readCallbacks_ = null);
           }),
           (jspb.BinaryReader.instanceCache_ = []),
-          (jspb.BinaryReader.alloc = function (e, t, o) {
+          (jspb.BinaryReader.alloc = function (e, t, r) {
             if (jspb.BinaryReader.instanceCache_.length) {
-              var r = jspb.BinaryReader.instanceCache_.pop();
-              return e && r.decoder_.setBlock(e, t, o), r;
+              var o = jspb.BinaryReader.instanceCache_.pop();
+              return e && o.decoder_.setBlock(e, t, r), o;
             }
-            return new jspb.BinaryReader(e, t, o);
+            return new jspb.BinaryReader(e, t, r);
           }),
           (jspb.BinaryReader.prototype.alloc = jspb.BinaryReader.alloc),
           (jspb.BinaryReader.prototype.free = function () {
@@ -7319,8 +7319,8 @@ var CLSTAMP = "8056184";
           (jspb.BinaryReader.prototype.getError = function () {
             return this.error_ || this.decoder_.getError();
           }),
-          (jspb.BinaryReader.prototype.setBlock = function (e, t, o) {
-            this.decoder_.setBlock(e, t, o),
+          (jspb.BinaryReader.prototype.setBlock = function (e, t, r) {
+            this.decoder_.setBlock(e, t, r),
               (this.nextField_ = jspb.BinaryConstants.INVALID_FIELD_NUMBER),
               (this.nextWireType_ = jspb.BinaryConstants.WireType.INVALID);
           }),
@@ -7505,20 +7505,20 @@ var CLSTAMP = "8056184";
             goog.asserts.assert(
               this.nextWireType_ == jspb.BinaryConstants.WireType.DELIMITED
             );
-            var o = this.decoder_.getEnd(),
-              r = this.decoder_.readUnsignedVarint32();
-            (r = this.decoder_.getCursor() + r),
-              this.decoder_.setEnd(r),
+            var r = this.decoder_.getEnd(),
+              o = this.decoder_.readUnsignedVarint32();
+            (o = this.decoder_.getCursor() + o),
+              this.decoder_.setEnd(o),
               t(e, this),
-              this.decoder_.setCursor(r),
-              this.decoder_.setEnd(o);
+              this.decoder_.setCursor(o),
+              this.decoder_.setEnd(r);
           }),
-          (jspb.BinaryReader.prototype.readGroup = function (e, t, o) {
+          (jspb.BinaryReader.prototype.readGroup = function (e, t, r) {
             goog.asserts.assert(
               this.nextWireType_ == jspb.BinaryConstants.WireType.START_GROUP
             ),
               goog.asserts.assert(this.nextField_ == e),
-              o(t, this),
+              r(t, this),
               this.error_ ||
                 this.nextWireType_ == jspb.BinaryConstants.WireType.END_GROUP ||
                 (goog.asserts.fail(
@@ -7532,10 +7532,10 @@ var CLSTAMP = "8056184";
             );
             var e = this.decoder_.readUnsignedVarint32(),
               t = this.decoder_.getCursor(),
-              o = t + e;
+              r = t + e;
             return (
               (e = jspb.BinaryDecoder.alloc(this.decoder_.getBuffer(), t, e)),
-              this.decoder_.setCursor(o),
+              this.decoder_.setCursor(r),
               e
             );
           }),
@@ -7758,8 +7758,8 @@ var CLSTAMP = "8056184";
               goog.asserts.assert(
                 this.nextWireType_ == jspb.BinaryConstants.WireType.VARINT
               ),
-              this.decoder_.readSplitVarint64(function (t, o) {
-                return jspb.utils.fromZigzag64(t, o, e);
+              this.decoder_.readSplitVarint64(function (t, r) {
+                return jspb.utils.fromZigzag64(t, r, e);
               })
             );
           }),
@@ -7785,9 +7785,9 @@ var CLSTAMP = "8056184";
             );
             var t = this.decoder_.readUnsignedVarint32();
             t = this.decoder_.getCursor() + t;
-            for (var o = []; this.decoder_.getCursor() < t; )
-              o.push(e.call(this.decoder_));
-            return o;
+            for (var r = []; this.decoder_.getCursor() < t; )
+              r.push(e.call(this.decoder_));
+            return r;
           }),
           (jspb.BinaryReader.prototype.readPackedInt32 = function () {
             return this.readPackedField_(this.decoder_.readSignedVarint32);
@@ -7984,8 +7984,8 @@ var CLSTAMP = "8056184";
               jspb.utils.toZigzag64(
                 jspb.utils.split64Low,
                 jspb.utils.split64High,
-                function (e, o) {
-                  t.writeSplitVarint64(e >>> 0, o >>> 0);
+                function (e, r) {
+                  t.writeSplitVarint64(e >>> 0, r >>> 0);
                 }
               );
           }),
@@ -8114,27 +8114,27 @@ var CLSTAMP = "8056184";
           (jspb.BinaryEncoder.prototype.writeString = function (e) {
             var t = this.buffer_.length;
             goog.asserts.assertString(e);
-            for (var o = 0; o < e.length; o++) {
-              var r = e.charCodeAt(o);
-              if (128 > r) this.buffer_.push(r);
-              else if (2048 > r)
-                this.buffer_.push((r >> 6) | 192),
-                  this.buffer_.push((63 & r) | 128);
-              else if (65536 > r)
-                if (55296 <= r && 56319 >= r && o + 1 < e.length) {
-                  var n = e.charCodeAt(o + 1);
+            for (var r = 0; r < e.length; r++) {
+              var o = e.charCodeAt(r);
+              if (128 > o) this.buffer_.push(o);
+              else if (2048 > o)
+                this.buffer_.push((o >> 6) | 192),
+                  this.buffer_.push((63 & o) | 128);
+              else if (65536 > o)
+                if (55296 <= o && 56319 >= o && r + 1 < e.length) {
+                  var n = e.charCodeAt(r + 1);
                   56320 <= n &&
                     57343 >= n &&
-                    ((r = 1024 * (r - 55296) + n - 56320 + 65536),
-                    this.buffer_.push((r >> 18) | 240),
-                    this.buffer_.push(((r >> 12) & 63) | 128),
-                    this.buffer_.push(((r >> 6) & 63) | 128),
-                    this.buffer_.push((63 & r) | 128),
-                    o++);
+                    ((o = 1024 * (o - 55296) + n - 56320 + 65536),
+                    this.buffer_.push((o >> 18) | 240),
+                    this.buffer_.push(((o >> 12) & 63) | 128),
+                    this.buffer_.push(((o >> 6) & 63) | 128),
+                    this.buffer_.push((63 & o) | 128),
+                    r++);
                 } else
-                  this.buffer_.push((r >> 12) | 224),
-                    this.buffer_.push(((r >> 6) & 63) | 128),
-                    this.buffer_.push((63 & r) | 128);
+                  this.buffer_.push((o >> 12) | 224),
+                    this.buffer_.push(((o >> 6) & 63) | 128),
+                    this.buffer_.push((63 & o) | 128);
             }
             return this.buffer_.length - t;
           }),
@@ -8187,20 +8187,20 @@ var CLSTAMP = "8056184";
             );
           }),
           (jspb.arith.UInt64.mul32x32 = function (e, t) {
-            var o = 65535 & e,
-              r = 65535 & t,
+            var r = 65535 & e,
+              o = 65535 & t,
               n = t >>> 16;
             for (
               t =
-                o * r +
-                65536 * ((o * n) & 65535) +
-                65536 * (((e >>>= 16) * r) & 65535),
-                o = e * n + ((o * n) >>> 16) + ((e * r) >>> 16);
+                r * o +
+                65536 * ((r * n) & 65535) +
+                65536 * (((e >>>= 16) * o) & 65535),
+                r = e * n + ((r * n) >>> 16) + ((e * o) >>> 16);
               4294967296 <= t;
 
             )
-              (t -= 4294967296), (o += 1);
-            return new jspb.arith.UInt64(t >>> 0, o >>> 0);
+              (t -= 4294967296), (r += 1);
+            return new jspb.arith.UInt64(t >>> 0, r >>> 0);
           }),
           (jspb.arith.UInt64.prototype.mul = function (e) {
             var t = jspb.arith.UInt64.mul32x32(this.lo, e);
@@ -8213,34 +8213,34 @@ var CLSTAMP = "8056184";
           (jspb.arith.UInt64.prototype.div = function (e) {
             if (0 == e) return [];
             var t = new jspb.arith.UInt64(0, 0),
-              o = new jspb.arith.UInt64(this.lo, this.hi);
+              r = new jspb.arith.UInt64(this.lo, this.hi);
             e = new jspb.arith.UInt64(e, 0);
-            for (var r = new jspb.arith.UInt64(1, 0); !e.msb(); )
-              (e = e.leftShift()), (r = r.leftShift());
-            for (; !r.zero(); )
-              0 >= e.cmp(o) && ((t = t.add(r)), (o = o.sub(e))),
+            for (var o = new jspb.arith.UInt64(1, 0); !e.msb(); )
+              (e = e.leftShift()), (o = o.leftShift());
+            for (; !o.zero(); )
+              0 >= e.cmp(r) && ((t = t.add(o)), (r = r.sub(e))),
                 (e = e.rightShift()),
-                (r = r.rightShift());
-            return [t, o];
+                (o = o.rightShift());
+            return [t, r];
           }),
           (jspb.arith.UInt64.prototype.toString = function () {
             for (var e = "", t = this; !t.zero(); ) {
-              var o = (t = t.div(10))[0];
-              (e = t[1].lo + e), (t = o);
+              var r = (t = t.div(10))[0];
+              (e = t[1].lo + e), (t = r);
             }
             return "" == e && (e = "0"), e;
           }),
           (jspb.arith.UInt64.fromString = function (e) {
             for (
               var t = new jspb.arith.UInt64(0, 0),
-                o = new jspb.arith.UInt64(0, 0),
-                r = 0;
-              r < e.length;
-              r++
+                r = new jspb.arith.UInt64(0, 0),
+                o = 0;
+              o < e.length;
+              o++
             ) {
-              if ("0" > e[r] || "9" < e[r]) return null;
-              var n = parseInt(e[r], 10);
-              (o.lo = n), (t = t.mul(10).add(o));
+              if ("0" > e[o] || "9" < e[o]) return null;
+              var n = parseInt(e[o], 10);
+              (r.lo = n), (t = t.mul(10).add(r));
             }
             return t;
           }),
@@ -8326,19 +8326,19 @@ var CLSTAMP = "8056184";
           (jspb.BinaryWriter.prototype.writeSerializedMessage = function (
             e,
             t,
-            o
+            r
           ) {
-            this.appendUint8Array_(e.subarray(t, o));
+            this.appendUint8Array_(e.subarray(t, r));
           }),
           (jspb.BinaryWriter.prototype.maybeWriteSerializedMessage = function (
             e,
             t,
-            o
+            r
           ) {
             null != e &&
               null != t &&
-              null != o &&
-              this.writeSerializedMessage(e, t, o);
+              null != r &&
+              this.writeSerializedMessage(e, t, r);
           }),
           (jspb.BinaryWriter.prototype.reset = function () {
             (this.blocks_ = []),
@@ -8353,20 +8353,20 @@ var CLSTAMP = "8056184";
                   this.totalLength_ + this.encoder_.length()
                 ),
                 t = this.blocks_,
-                o = t.length,
-                r = 0,
+                r = t.length,
+                o = 0,
                 n = 0;
-              n < o;
+              n < r;
               n++
             ) {
               var i = t[n];
-              e.set(i, r), (r += i.length);
+              e.set(i, o), (o += i.length);
             }
             return (
               (t = this.encoder_.end()),
-              e.set(t, r),
-              (r += t.length),
-              goog.asserts.assert(r == e.length),
+              e.set(t, o),
+              (o += t.length),
+              goog.asserts.assert(o == e.length),
               (this.blocks_ = [e]),
               e
             );
@@ -8385,72 +8385,72 @@ var CLSTAMP = "8056184";
             goog.asserts.assert(1 <= e && e == Math.floor(e)),
               this.encoder_.writeUnsignedVarint32(8 * e + t);
           }),
-          (jspb.BinaryWriter.prototype.writeAny = function (e, t, o) {
-            var r = jspb.BinaryConstants.FieldType;
+          (jspb.BinaryWriter.prototype.writeAny = function (e, t, r) {
+            var o = jspb.BinaryConstants.FieldType;
             switch (e) {
-              case r.DOUBLE:
-                this.writeDouble(t, o);
+              case o.DOUBLE:
+                this.writeDouble(t, r);
                 break;
-              case r.FLOAT:
-                this.writeFloat(t, o);
+              case o.FLOAT:
+                this.writeFloat(t, r);
                 break;
-              case r.INT64:
-                this.writeInt64(t, o);
+              case o.INT64:
+                this.writeInt64(t, r);
                 break;
-              case r.UINT64:
-                this.writeUint64(t, o);
+              case o.UINT64:
+                this.writeUint64(t, r);
                 break;
-              case r.INT32:
-                this.writeInt32(t, o);
+              case o.INT32:
+                this.writeInt32(t, r);
                 break;
-              case r.FIXED64:
-                this.writeFixed64(t, o);
+              case o.FIXED64:
+                this.writeFixed64(t, r);
                 break;
-              case r.FIXED32:
-                this.writeFixed32(t, o);
+              case o.FIXED32:
+                this.writeFixed32(t, r);
                 break;
-              case r.BOOL:
-                this.writeBool(t, o);
+              case o.BOOL:
+                this.writeBool(t, r);
                 break;
-              case r.STRING:
-                this.writeString(t, o);
+              case o.STRING:
+                this.writeString(t, r);
                 break;
-              case r.GROUP:
+              case o.GROUP:
                 goog.asserts.fail(
                   "Group field type not supported in writeAny()"
                 );
                 break;
-              case r.MESSAGE:
+              case o.MESSAGE:
                 goog.asserts.fail(
                   "Message field type not supported in writeAny()"
                 );
                 break;
-              case r.BYTES:
-                this.writeBytes(t, o);
+              case o.BYTES:
+                this.writeBytes(t, r);
                 break;
-              case r.UINT32:
-                this.writeUint32(t, o);
+              case o.UINT32:
+                this.writeUint32(t, r);
                 break;
-              case r.ENUM:
-                this.writeEnum(t, o);
+              case o.ENUM:
+                this.writeEnum(t, r);
                 break;
-              case r.SFIXED32:
-                this.writeSfixed32(t, o);
+              case o.SFIXED32:
+                this.writeSfixed32(t, r);
                 break;
-              case r.SFIXED64:
-                this.writeSfixed64(t, o);
+              case o.SFIXED64:
+                this.writeSfixed64(t, r);
                 break;
-              case r.SINT32:
-                this.writeSint32(t, o);
+              case o.SINT32:
+                this.writeSint32(t, r);
                 break;
-              case r.SINT64:
-                this.writeSint64(t, o);
+              case o.SINT64:
+                this.writeSint64(t, r);
                 break;
-              case r.FHASH64:
-                this.writeFixedHash64(t, o);
+              case o.FHASH64:
+                this.writeFixedHash64(t, r);
                 break;
-              case r.VHASH64:
-                this.writeVarintHash64(t, o);
+              case o.VHASH64:
+                this.writeVarintHash64(t, r);
                 break;
               default:
                 goog.asserts.fail("Invalid field type in writeAny()");
@@ -8676,13 +8676,13 @@ var CLSTAMP = "8056184";
               this.encoder_.writeUnsignedVarint32(t.length),
               this.appendUint8Array_(t));
           }),
-          (jspb.BinaryWriter.prototype.writeMessage = function (e, t, o) {
+          (jspb.BinaryWriter.prototype.writeMessage = function (e, t, r) {
             null != t &&
               ((e = this.beginDelimited_(e)),
-              o(t, this),
+              r(t, this),
               this.endDelimited_(e));
           }),
-          (jspb.BinaryWriter.prototype.writeMessageSet = function (e, t, o) {
+          (jspb.BinaryWriter.prototype.writeMessageSet = function (e, t, r) {
             null != t &&
               (this.writeFieldHeader_(
                 1,
@@ -8691,20 +8691,20 @@ var CLSTAMP = "8056184";
               this.writeFieldHeader_(2, jspb.BinaryConstants.WireType.VARINT),
               this.encoder_.writeSignedVarint32(e),
               (e = this.beginDelimited_(3)),
-              o(t, this),
+              r(t, this),
               this.endDelimited_(e),
               this.writeFieldHeader_(
                 1,
                 jspb.BinaryConstants.WireType.END_GROUP
               ));
           }),
-          (jspb.BinaryWriter.prototype.writeGroup = function (e, t, o) {
+          (jspb.BinaryWriter.prototype.writeGroup = function (e, t, r) {
             null != t &&
               (this.writeFieldHeader_(
                 e,
                 jspb.BinaryConstants.WireType.START_GROUP
               ),
-              o(t, this),
+              r(t, this),
               this.writeFieldHeader_(
                 e,
                 jspb.BinaryConstants.WireType.END_GROUP
@@ -8722,202 +8722,202 @@ var CLSTAMP = "8056184";
               this.writeFieldHeader_(e, jspb.BinaryConstants.WireType.VARINT),
               this.encoder_.writeVarintHash64(t));
           }),
-          (jspb.BinaryWriter.prototype.writeSplitFixed64 = function (e, t, o) {
+          (jspb.BinaryWriter.prototype.writeSplitFixed64 = function (e, t, r) {
             this.writeFieldHeader_(e, jspb.BinaryConstants.WireType.FIXED64),
-              this.encoder_.writeSplitFixed64(t, o);
+              this.encoder_.writeSplitFixed64(t, r);
           }),
-          (jspb.BinaryWriter.prototype.writeSplitVarint64 = function (e, t, o) {
+          (jspb.BinaryWriter.prototype.writeSplitVarint64 = function (e, t, r) {
             this.writeFieldHeader_(e, jspb.BinaryConstants.WireType.VARINT),
-              this.encoder_.writeSplitVarint64(t, o);
+              this.encoder_.writeSplitVarint64(t, r);
           }),
           (jspb.BinaryWriter.prototype.writeSplitZigzagVarint64 = function (
             e,
             t,
-            o
+            r
           ) {
             this.writeFieldHeader_(e, jspb.BinaryConstants.WireType.VARINT);
-            var r = this.encoder_;
-            jspb.utils.toZigzag64(t, o, function (e, t) {
-              r.writeSplitVarint64(e >>> 0, t >>> 0);
+            var o = this.encoder_;
+            jspb.utils.toZigzag64(t, r, function (e, t) {
+              o.writeSplitVarint64(e >>> 0, t >>> 0);
             });
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedInt32 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeSignedVarint32_(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeSignedVarint32_(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedInt32String = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeInt32String(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeInt32String(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedInt64 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeSignedVarint64_(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeSignedVarint64_(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSplitFixed64 = function (
             e,
             t,
-            o,
-            r
+            r,
+            o
           ) {
             if (null != t)
               for (var n = 0; n < t.length; n++)
-                this.writeSplitFixed64(e, o(t[n]), r(t[n]));
+                this.writeSplitFixed64(e, r(t[n]), o(t[n]));
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSplitVarint64 = function (
             e,
             t,
-            o,
-            r
+            r,
+            o
           ) {
             if (null != t)
               for (var n = 0; n < t.length; n++)
-                this.writeSplitVarint64(e, o(t[n]), r(t[n]));
+                this.writeSplitVarint64(e, r(t[n]), o(t[n]));
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSplitZigzagVarint64 =
-            function (e, t, o, r) {
+            function (e, t, r, o) {
               if (null != t)
                 for (var n = 0; n < t.length; n++)
-                  this.writeSplitZigzagVarint64(e, o(t[n]), r(t[n]));
+                  this.writeSplitZigzagVarint64(e, r(t[n]), o(t[n]));
             }),
           (jspb.BinaryWriter.prototype.writeRepeatedInt64String = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeInt64String(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeInt64String(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedUint32 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeUnsignedVarint32_(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeUnsignedVarint32_(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedUint32String = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeUint32String(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeUint32String(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedUint64 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeUnsignedVarint64_(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeUnsignedVarint64_(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedUint64String = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeUint64String(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeUint64String(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSint32 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeZigzagVarint32_(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeZigzagVarint32_(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSint64 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeZigzagVarint64_(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeZigzagVarint64_(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSint64String = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeZigzagVarint64String_(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeZigzagVarint64String_(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSintHash64 = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeZigzagVarintHash64_(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeZigzagVarintHash64_(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedFixed32 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeFixed32(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeFixed32(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedFixed64 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeFixed64(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeFixed64(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedFixed64String = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeFixed64String(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeFixed64String(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSfixed32 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeSfixed32(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeSfixed32(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSfixed64 = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeSfixed64(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeSfixed64(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedSfixed64String = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeSfixed64String(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeSfixed64String(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedFloat = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeFloat(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeFloat(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedDouble = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeDouble(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeDouble(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedBool = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeBool(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeBool(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedEnum = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeEnum(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeEnum(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedString = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeString(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeString(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedBytes = function (e, t) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeBytes(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeBytes(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedMessage = function (
             e,
             t,
-            o
+            r
           ) {
             if (null != t)
-              for (var r = 0; r < t.length; r++) {
+              for (var o = 0; o < t.length; o++) {
                 var n = this.beginDelimited_(e);
-                o(t[r], this), this.endDelimited_(n);
+                r(t[o], this), this.endDelimited_(n);
               }
           }),
-          (jspb.BinaryWriter.prototype.writeRepeatedGroup = function (e, t, o) {
+          (jspb.BinaryWriter.prototype.writeRepeatedGroup = function (e, t, r) {
             if (null != t)
-              for (var r = 0; r < t.length; r++)
+              for (var o = 0; o < t.length; o++)
                 this.writeFieldHeader_(
                   e,
                   jspb.BinaryConstants.WireType.START_GROUP
                 ),
-                  o(t[r], this),
+                  r(t[o], this),
                   this.writeFieldHeader_(
                     e,
                     jspb.BinaryConstants.WireType.END_GROUP
@@ -8928,21 +8928,21 @@ var CLSTAMP = "8056184";
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++) this.writeFixedHash64(e, t[o]);
+              for (var r = 0; r < t.length; r++) this.writeFixedHash64(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writeRepeatedVarintHash64 = function (
             e,
             t
           ) {
             if (null != t)
-              for (var o = 0; o < t.length; o++)
-                this.writeVarintHash64(e, t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.writeVarintHash64(e, t[r]);
           }),
           (jspb.BinaryWriter.prototype.writePackedInt32 = function (e, t) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeSignedVarint32(t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeSignedVarint32(t[r]);
               this.endDelimited_(e);
             }
           }),
@@ -8952,51 +8952,51 @@ var CLSTAMP = "8056184";
           ) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeSignedVarint32(parseInt(t[o], 10));
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeSignedVarint32(parseInt(t[r], 10));
               this.endDelimited_(e);
             }
           }),
           (jspb.BinaryWriter.prototype.writePackedInt64 = function (e, t) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeSignedVarint64(t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeSignedVarint64(t[r]);
               this.endDelimited_(e);
             }
           }),
           (jspb.BinaryWriter.prototype.writePackedSplitFixed64 = function (
             e,
             t,
-            o,
-            r
+            r,
+            o
           ) {
             if (null != t) {
               e = this.beginDelimited_(e);
               for (var n = 0; n < t.length; n++)
-                this.encoder_.writeSplitFixed64(o(t[n]), r(t[n]));
+                this.encoder_.writeSplitFixed64(r(t[n]), o(t[n]));
               this.endDelimited_(e);
             }
           }),
           (jspb.BinaryWriter.prototype.writePackedSplitVarint64 = function (
             e,
             t,
-            o,
-            r
+            r,
+            o
           ) {
             if (null != t) {
               e = this.beginDelimited_(e);
               for (var n = 0; n < t.length; n++)
-                this.encoder_.writeSplitVarint64(o(t[n]), r(t[n]));
+                this.encoder_.writeSplitVarint64(r(t[n]), o(t[n]));
               this.endDelimited_(e);
             }
           }),
           (jspb.BinaryWriter.prototype.writePackedSplitZigzagVarint64 =
-            function (e, t, o, r) {
+            function (e, t, r, o) {
               if (null != t) {
                 e = this.beginDelimited_(e);
                 for (var n = this.encoder_, i = 0; i < t.length; i++)
-                  jspb.utils.toZigzag64(o(t[i]), r(t[i]), function (e, t) {
+                  jspb.utils.toZigzag64(r(t[i]), o(t[i]), function (e, t) {
                     n.writeSplitVarint64(e >>> 0, t >>> 0);
                   });
                 this.endDelimited_(e);
@@ -9008,9 +9008,9 @@ var CLSTAMP = "8056184";
           ) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++) {
-                var r = jspb.arith.Int64.fromString(t[o]);
-                this.encoder_.writeSplitVarint64(r.lo, r.hi);
+              for (var r = 0; r < t.length; r++) {
+                var o = jspb.arith.Int64.fromString(t[r]);
+                this.encoder_.writeSplitVarint64(o.lo, o.hi);
               }
               this.endDelimited_(e);
             }
@@ -9018,8 +9018,8 @@ var CLSTAMP = "8056184";
           (jspb.BinaryWriter.prototype.writePackedUint32 = function (e, t) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeUnsignedVarint32(t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeUnsignedVarint32(t[r]);
               this.endDelimited_(e);
             }
           }),
@@ -9029,16 +9029,16 @@ var CLSTAMP = "8056184";
           ) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeUnsignedVarint32(parseInt(t[o], 10));
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeUnsignedVarint32(parseInt(t[r], 10));
               this.endDelimited_(e);
             }
           }),
           (jspb.BinaryWriter.prototype.writePackedUint64 = function (e, t) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeUnsignedVarint64(t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeUnsignedVarint64(t[r]);
               this.endDelimited_(e);
             }
           }),
@@ -9048,9 +9048,9 @@ var CLSTAMP = "8056184";
           ) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++) {
-                var r = jspb.arith.UInt64.fromString(t[o]);
-                this.encoder_.writeSplitVarint64(r.lo, r.hi);
+              for (var r = 0; r < t.length; r++) {
+                var o = jspb.arith.UInt64.fromString(t[r]);
+                this.encoder_.writeSplitVarint64(o.lo, o.hi);
               }
               this.endDelimited_(e);
             }
@@ -9058,16 +9058,16 @@ var CLSTAMP = "8056184";
           (jspb.BinaryWriter.prototype.writePackedSint32 = function (e, t) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeZigzagVarint32(t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeZigzagVarint32(t[r]);
               this.endDelimited_(e);
             }
           }),
           (jspb.BinaryWriter.prototype.writePackedSint64 = function (e, t) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeZigzagVarint64(t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeZigzagVarint64(t[r]);
               this.endDelimited_(e);
             }
           }),
@@ -9077,9 +9077,9 @@ var CLSTAMP = "8056184";
           ) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
+              for (var r = 0; r < t.length; r++)
                 this.encoder_.writeZigzagVarintHash64(
-                  jspb.utils.decimalStringToHash64(t[o])
+                  jspb.utils.decimalStringToHash64(t[r])
                 );
               this.endDelimited_(e);
             }
@@ -9087,8 +9087,8 @@ var CLSTAMP = "8056184";
           (jspb.BinaryWriter.prototype.writePackedSintHash64 = function (e, t) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeZigzagVarintHash64(t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeZigzagVarintHash64(t[r]);
               this.endDelimited_(e);
             }
           }),
@@ -9135,8 +9135,8 @@ var CLSTAMP = "8056184";
                 e < t.length;
                 e++
               ) {
-                var o = jspb.arith.UInt64.fromString(t[e]);
-                this.encoder_.writeSplitFixed64(o.lo, o.hi);
+                var r = jspb.arith.UInt64.fromString(t[e]);
+                this.encoder_.writeSplitFixed64(r.lo, r.hi);
               }
           }),
           (jspb.BinaryWriter.prototype.writePackedSfixed32 = function (e, t) {
@@ -9229,7 +9229,7 @@ var CLSTAMP = "8056184";
           (jspb.BinaryWriter.prototype.writePackedEnum = function (e, t) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++) this.encoder_.writeEnum(t[o]);
+              for (var r = 0; r < t.length; r++) this.encoder_.writeEnum(t[r]);
               this.endDelimited_(e);
             }
           }),
@@ -9256,8 +9256,8 @@ var CLSTAMP = "8056184";
           ) {
             if (null != t && t.length) {
               e = this.beginDelimited_(e);
-              for (var o = 0; o < t.length; o++)
-                this.encoder_.writeVarintHash64(t[o]);
+              for (var r = 0; r < t.length; r++)
+                this.encoder_.writeVarintHash64(t[r]);
               this.endDelimited_(e);
             }
           }),
@@ -9271,8 +9271,8 @@ var CLSTAMP = "8056184";
           (jspb.Map.prototype.loadFromArray_ = function () {
             for (var e = 0; e < this.arr_.length; e++) {
               var t = this.arr_[e],
-                o = t[0];
-              this.map_[o.toString()] = new jspb.Map.Entry_(o, t[1]);
+                r = t[0];
+              this.map_[r.toString()] = new jspb.Map.Entry_(r, t[1]);
             }
             this.arrClean = !0;
           }),
@@ -9283,8 +9283,8 @@ var CLSTAMP = "8056184";
                   t = this.map_;
                 for (e in t)
                   if (Object.prototype.hasOwnProperty.call(t, e)) {
-                    var o = t[e].valueWrapper;
-                    o && o.toArray();
+                    var r = t[e].valueWrapper;
+                    r && r.toArray();
                   }
               }
             } else {
@@ -9293,30 +9293,30 @@ var CLSTAMP = "8056184";
                 e < t.length;
                 e++
               ) {
-                var r = this.map_[t[e]];
-                (o = r.valueWrapper) && o.toArray(),
-                  this.arr_.push([r.key, r.value]);
+                var o = this.map_[t[e]];
+                (r = o.valueWrapper) && r.toArray(),
+                  this.arr_.push([o.key, o.value]);
               }
               this.arrClean = !0;
             }
             return this.arr_;
           }),
           (jspb.Map.prototype.toObject = function (e, t) {
-            for (var o = this.toArray(), r = [], n = 0; n < o.length; n++) {
-              var i = this.map_[o[n][0].toString()];
+            for (var r = this.toArray(), o = [], n = 0; n < r.length; n++) {
+              var i = this.map_[r[n][0].toString()];
               this.wrapEntry_(i);
               var a = i.valueWrapper;
               a
-                ? (goog.asserts.assert(t), r.push([i.key, t(e, a)]))
-                : r.push([i.key, i.value]);
+                ? (goog.asserts.assert(t), o.push([i.key, t(e, a)]))
+                : o.push([i.key, i.value]);
             }
-            return r;
+            return o;
           }),
-          (jspb.Map.fromObject = function (e, t, o) {
+          (jspb.Map.fromObject = function (e, t, r) {
             t = new jspb.Map([], t);
-            for (var r = 0; r < e.length; r++) {
-              var n = e[r][0],
-                i = o(e[r][1]);
+            for (var o = 0; o < e.length; o++) {
+              var n = e[o][0],
+                i = r(e[o][1]);
               t.set(n, i);
             }
             return t;
@@ -9349,9 +9349,9 @@ var CLSTAMP = "8056184";
             var e = [],
               t = this.stringKeys_();
             t.sort();
-            for (var o = 0; o < t.length; o++) {
-              var r = this.map_[t[o]];
-              e.push([r.key, r.value]);
+            for (var r = 0; r < t.length; r++) {
+              var o = this.map_[t[r]];
+              e.push([o.key, o.value]);
             }
             return e;
           }),
@@ -9359,9 +9359,9 @@ var CLSTAMP = "8056184";
             var e = [],
               t = this.stringKeys_();
             t.sort();
-            for (var o = 0; o < t.length; o++) {
-              var r = this.map_[t[o]];
-              e.push([r.key, this.wrapEntry_(r)]);
+            for (var r = 0; r < t.length; r++) {
+              var o = this.map_[t[r]];
+              e.push([o.key, this.wrapEntry_(o)]);
             }
             return new jspb.Map.ArrayIteratorIterable_(e);
           }),
@@ -9369,32 +9369,32 @@ var CLSTAMP = "8056184";
             var e = [],
               t = this.stringKeys_();
             t.sort();
-            for (var o = 0; o < t.length; o++) e.push(this.map_[t[o]].key);
+            for (var r = 0; r < t.length; r++) e.push(this.map_[t[r]].key);
             return new jspb.Map.ArrayIteratorIterable_(e);
           }),
           (jspb.Map.prototype.values = function () {
             var e = [],
               t = this.stringKeys_();
             t.sort();
-            for (var o = 0; o < t.length; o++)
-              e.push(this.wrapEntry_(this.map_[t[o]]));
+            for (var r = 0; r < t.length; r++)
+              e.push(this.wrapEntry_(this.map_[t[r]]));
             return new jspb.Map.ArrayIteratorIterable_(e);
           }),
           (jspb.Map.prototype.forEach = function (e, t) {
-            var o = this.stringKeys_();
-            o.sort();
-            for (var r = 0; r < o.length; r++) {
-              var n = this.map_[o[r]];
+            var r = this.stringKeys_();
+            r.sort();
+            for (var o = 0; o < r.length; o++) {
+              var n = this.map_[r[o]];
               e.call(t, this.wrapEntry_(n), n.key, this);
             }
           }),
           (jspb.Map.prototype.set = function (e, t) {
-            var o = new jspb.Map.Entry_(e);
+            var r = new jspb.Map.Entry_(e);
             return (
               this.valueCtor_
-                ? ((o.valueWrapper = t), (o.value = t.toArray()))
-                : (o.value = t),
-              (this.map_[e.toString()] = o),
+                ? ((r.valueWrapper = t), (r.value = t.toArray()))
+                : (r.value = t),
+              (this.map_[e.toString()] = r),
               (this.arrClean = !1),
               this
             );
@@ -9412,30 +9412,30 @@ var CLSTAMP = "8056184";
           (jspb.Map.prototype.has = function (e) {
             return e.toString() in this.map_;
           }),
-          (jspb.Map.prototype.serializeBinary = function (e, t, o, r, n) {
+          (jspb.Map.prototype.serializeBinary = function (e, t, r, o, n) {
             var i = this.stringKeys_();
             i.sort();
             for (var a = 0; a < i.length; a++) {
               var s = this.map_[i[a]];
               t.beginSubMessage(e),
-                o.call(t, 1, s.key),
+                r.call(t, 1, s.key),
                 this.valueCtor_
-                  ? r.call(t, 2, this.wrapEntry_(s), n)
-                  : r.call(t, 2, s.value),
+                  ? o.call(t, 2, this.wrapEntry_(s), n)
+                  : o.call(t, 2, s.value),
                 t.endSubMessage();
             }
           }),
-          (jspb.Map.deserializeBinary = function (e, t, o, r, n, i, a) {
+          (jspb.Map.deserializeBinary = function (e, t, r, o, n, i, a) {
             for (; t.nextField() && !t.isEndGroup(); ) {
               var s = t.getFieldNumber();
               1 == s
-                ? (i = o.call(t))
+                ? (i = r.call(t))
                 : 2 == s &&
                   (e.valueCtor_
                     ? (goog.asserts.assert(n),
                       a || (a = new e.valueCtor_()),
-                      r.call(t, a, n))
-                    : (a = r.call(t)));
+                      o.call(t, a, n))
+                    : (a = o.call(t)));
             }
             goog.asserts.assert(null != i),
               goog.asserts.assert(null != a),
@@ -9444,26 +9444,26 @@ var CLSTAMP = "8056184";
           (jspb.Map.prototype.stringKeys_ = function () {
             var e,
               t = this.map_,
-              o = [];
+              r = [];
             for (e in t)
-              Object.prototype.hasOwnProperty.call(t, e) && o.push(e);
-            return o;
+              Object.prototype.hasOwnProperty.call(t, e) && r.push(e);
+            return r;
           }),
           (jspb.Map.Entry_ = function (e, t) {
             (this.key = e), (this.value = t), (this.valueWrapper = void 0);
           }),
-          (jspb.ExtensionFieldInfo = function (e, t, o, r, n) {
+          (jspb.ExtensionFieldInfo = function (e, t, r, o, n) {
             (this.fieldIndex = e),
               (this.fieldName = t),
-              (this.ctor = o),
-              (this.toObjectFn = r),
+              (this.ctor = r),
+              (this.toObjectFn = o),
               (this.isRepeated = n);
           }),
-          (jspb.ExtensionFieldBinaryInfo = function (e, t, o, r, n, i) {
+          (jspb.ExtensionFieldBinaryInfo = function (e, t, r, o, n, i) {
             (this.fieldInfo = e),
               (this.binaryReaderFn = t),
-              (this.binaryWriterFn = o),
-              (this.binaryMessageSerializeFn = r),
+              (this.binaryWriterFn = r),
+              (this.binaryMessageSerializeFn = o),
               (this.binaryMessageDeserializeFn = n),
               (this.isPacked = i);
           }),
@@ -9487,27 +9487,27 @@ var CLSTAMP = "8056184";
           (jspb.Message.getFieldNumber_ = function (e, t) {
             return t - e.arrayIndexOffset_;
           }),
-          (jspb.Message.initialize = function (e, t, o, r, n, i) {
+          (jspb.Message.initialize = function (e, t, r, o, n, i) {
             if (
               ((e.wrappers_ = null),
-              t || (t = o ? [o] : []),
-              (e.messageId_ = o ? String(o) : void 0),
-              (e.arrayIndexOffset_ = 0 === o ? -1 : 0),
+              t || (t = r ? [r] : []),
+              (e.messageId_ = r ? String(r) : void 0),
+              (e.arrayIndexOffset_ = 0 === r ? -1 : 0),
               (e.array = t),
-              jspb.Message.initPivotAndExtensionObject_(e, r),
+              jspb.Message.initPivotAndExtensionObject_(e, o),
               (e.convertedPrimitiveFields_ = {}),
               jspb.Message.SERIALIZE_EMPTY_TRAILING_FIELDS ||
                 (e.repeatedFields = n),
               n)
             )
               for (t = 0; t < n.length; t++)
-                (o = n[t]) < e.pivot_
-                  ? ((o = jspb.Message.getIndex_(e, o)),
-                    (e.array[o] =
-                      e.array[o] || jspb.Message.EMPTY_LIST_SENTINEL_))
+                (r = n[t]) < e.pivot_
+                  ? ((r = jspb.Message.getIndex_(e, r)),
+                    (e.array[r] =
+                      e.array[r] || jspb.Message.EMPTY_LIST_SENTINEL_))
                   : (jspb.Message.maybeInitEmptyExtensionObject_(e),
-                    (e.extensionObject_[o] =
-                      e.extensionObject_[o] ||
+                    (e.extensionObject_[r] =
+                      e.extensionObject_[r] ||
                       jspb.Message.EMPTY_LIST_SENTINEL_));
             if (i && i.length)
               for (t = 0; t < i.length; t++)
@@ -9529,22 +9529,22 @@ var CLSTAMP = "8056184";
             );
           }),
           (jspb.Message.initPivotAndExtensionObject_ = function (e, t) {
-            var o = e.array.length,
-              r = -1;
+            var r = e.array.length,
+              o = -1;
             if (
-              o &&
-              ((r = o - 1),
-              (o = e.array[r]),
-              jspb.Message.isExtensionObject_(o))
+              r &&
+              ((o = r - 1),
+              (r = e.array[o]),
+              jspb.Message.isExtensionObject_(r))
             )
               return (
-                (e.pivot_ = jspb.Message.getFieldNumber_(e, r)),
-                void (e.extensionObject_ = o)
+                (e.pivot_ = jspb.Message.getFieldNumber_(e, o)),
+                void (e.extensionObject_ = r)
               );
             -1 < t
               ? ((e.pivot_ = Math.max(
                   t,
-                  jspb.Message.getFieldNumber_(e, r + 1)
+                  jspb.Message.getFieldNumber_(e, o + 1)
                 )),
                 (e.extensionObject_ = null))
               : (e.pivot_ = Number.MAX_VALUE);
@@ -9553,15 +9553,15 @@ var CLSTAMP = "8056184";
             var t = jspb.Message.getIndex_(e, e.pivot_);
             e.array[t] || (e.extensionObject_ = e.array[t] = {});
           }),
-          (jspb.Message.toObjectList = function (e, t, o) {
-            for (var r = [], n = 0; n < e.length; n++)
-              r[n] = t.call(e[n], o, e[n]);
-            return r;
+          (jspb.Message.toObjectList = function (e, t, r) {
+            for (var o = [], n = 0; n < e.length; n++)
+              o[n] = t.call(e[n], r, e[n]);
+            return o;
           }),
-          (jspb.Message.toObjectExtension = function (e, t, o, r, n) {
-            for (var i in o) {
-              var a = o[i],
-                s = r.call(e, a);
+          (jspb.Message.toObjectExtension = function (e, t, r, o, n) {
+            for (var i in r) {
+              var a = r[i],
+                s = o.call(e, a);
               if (null != s) {
                 for (var g in a.fieldName)
                   if (a.fieldName.hasOwnProperty(g)) break;
@@ -9573,15 +9573,15 @@ var CLSTAMP = "8056184";
               }
             }
           }),
-          (jspb.Message.serializeBinaryExtensions = function (e, t, o, r) {
-            for (var n in o) {
-              var i = o[n],
+          (jspb.Message.serializeBinaryExtensions = function (e, t, r, o) {
+            for (var n in r) {
+              var i = r[n],
                 a = i.fieldInfo;
               if (!i.binaryWriterFn)
                 throw Error(
                   "Message extension present that was generated without binary serialization support"
                 );
-              var s = r.call(e, a);
+              var s = o.call(e, a);
               if (null != s)
                 if (a.isMessageType()) {
                   if (!i.binaryMessageSerializeFn)
@@ -9597,37 +9597,37 @@ var CLSTAMP = "8056184";
                 } else i.binaryWriterFn.call(t, a.fieldIndex, s);
             }
           }),
-          (jspb.Message.readBinaryExtension = function (e, t, o, r, n) {
-            var i = o[t.getFieldNumber()];
+          (jspb.Message.readBinaryExtension = function (e, t, r, o, n) {
+            var i = r[t.getFieldNumber()];
             if (i) {
-              if (((o = i.fieldInfo), !i.binaryReaderFn))
+              if (((r = i.fieldInfo), !i.binaryReaderFn))
                 throw Error(
                   "Deserializing extension whose generated code does not support binary format"
                 );
-              if (o.isMessageType()) {
-                var a = new o.ctor();
+              if (r.isMessageType()) {
+                var a = new r.ctor();
                 i.binaryReaderFn.call(t, a, i.binaryMessageDeserializeFn);
               } else a = i.binaryReaderFn.call(t);
-              o.isRepeated && !i.isPacked
-                ? (t = r.call(e, o))
+              r.isRepeated && !i.isPacked
+                ? (t = o.call(e, r))
                   ? t.push(a)
-                  : n.call(e, o, [a])
-                : n.call(e, o, a);
+                  : n.call(e, r, [a])
+                : n.call(e, r, a);
             } else t.skipField();
           }),
           (jspb.Message.getField = function (e, t) {
             if (t < e.pivot_) {
               t = jspb.Message.getIndex_(e, t);
-              var o = e.array[t];
-              return o === jspb.Message.EMPTY_LIST_SENTINEL_
+              var r = e.array[t];
+              return r === jspb.Message.EMPTY_LIST_SENTINEL_
                 ? (e.array[t] = [])
-                : o;
+                : r;
             }
             if (e.extensionObject_)
-              return (o = e.extensionObject_[t]) ===
+              return (r = e.extensionObject_[t]) ===
                 jspb.Message.EMPTY_LIST_SENTINEL_
                 ? (e.extensionObject_[t] = [])
-                : o;
+                : r;
           }),
           (jspb.Message.getRepeatedField = function (e, t) {
             return jspb.Message.getField(e, t);
@@ -9639,28 +9639,28 @@ var CLSTAMP = "8056184";
             return null == (e = jspb.Message.getField(e, t)) ? e : !!e;
           }),
           (jspb.Message.getRepeatedFloatingPointField = function (e, t) {
-            var o = jspb.Message.getRepeatedField(e, t);
+            var r = jspb.Message.getRepeatedField(e, t);
             if (
               (e.convertedPrimitiveFields_ ||
                 (e.convertedPrimitiveFields_ = {}),
               !e.convertedPrimitiveFields_[t])
             ) {
-              for (var r = 0; r < o.length; r++) o[r] = +o[r];
+              for (var o = 0; o < r.length; o++) r[o] = +r[o];
               e.convertedPrimitiveFields_[t] = !0;
             }
-            return o;
+            return r;
           }),
           (jspb.Message.getRepeatedBooleanField = function (e, t) {
-            var o = jspb.Message.getRepeatedField(e, t);
+            var r = jspb.Message.getRepeatedField(e, t);
             if (
               (e.convertedPrimitiveFields_ ||
                 (e.convertedPrimitiveFields_ = {}),
               !e.convertedPrimitiveFields_[t])
             ) {
-              for (var r = 0; r < o.length; r++) o[r] = !!o[r];
+              for (var o = 0; o < r.length; o++) r[o] = !!r[o];
               e.convertedPrimitiveFields_[t] = !0;
             }
-            return o;
+            return r;
           }),
           (jspb.Message.bytesAsB64 = function (e) {
             return null == e || "string" == typeof e
@@ -9712,65 +9712,65 @@ var CLSTAMP = "8056184";
               });
             }
           }),
-          (jspb.Message.getFieldWithDefault = function (e, t, o) {
-            return null == (e = jspb.Message.getField(e, t)) ? o : e;
+          (jspb.Message.getFieldWithDefault = function (e, t, r) {
+            return null == (e = jspb.Message.getField(e, t)) ? r : e;
           }),
-          (jspb.Message.getBooleanFieldWithDefault = function (e, t, o) {
-            return null == (e = jspb.Message.getBooleanField(e, t)) ? o : e;
+          (jspb.Message.getBooleanFieldWithDefault = function (e, t, r) {
+            return null == (e = jspb.Message.getBooleanField(e, t)) ? r : e;
           }),
-          (jspb.Message.getFloatingPointFieldWithDefault = function (e, t, o) {
+          (jspb.Message.getFloatingPointFieldWithDefault = function (e, t, r) {
             return null ==
               (e = jspb.Message.getOptionalFloatingPointField(e, t))
-              ? o
+              ? r
               : e;
           }),
           (jspb.Message.getFieldProto3 = jspb.Message.getFieldWithDefault),
-          (jspb.Message.getMapField = function (e, t, o, r) {
+          (jspb.Message.getMapField = function (e, t, r, o) {
             if ((e.wrappers_ || (e.wrappers_ = {}), t in e.wrappers_))
               return e.wrappers_[t];
             var n = jspb.Message.getField(e, t);
             if (!n) {
-              if (o) return;
+              if (r) return;
               (n = []), jspb.Message.setField(e, t, n);
             }
-            return (e.wrappers_[t] = new jspb.Map(n, r));
+            return (e.wrappers_[t] = new jspb.Map(n, o));
           }),
-          (jspb.Message.setField = function (e, t, o) {
+          (jspb.Message.setField = function (e, t, r) {
             return (
               goog.asserts.assertInstanceof(e, jspb.Message),
               t < e.pivot_
-                ? (e.array[jspb.Message.getIndex_(e, t)] = o)
+                ? (e.array[jspb.Message.getIndex_(e, t)] = r)
                 : (jspb.Message.maybeInitEmptyExtensionObject_(e),
-                  (e.extensionObject_[t] = o)),
+                  (e.extensionObject_[t] = r)),
               e
             );
           }),
-          (jspb.Message.setProto3IntField = function (e, t, o) {
-            return jspb.Message.setFieldIgnoringDefault_(e, t, o, 0);
+          (jspb.Message.setProto3IntField = function (e, t, r) {
+            return jspb.Message.setFieldIgnoringDefault_(e, t, r, 0);
           }),
-          (jspb.Message.setProto3FloatField = function (e, t, o) {
-            return jspb.Message.setFieldIgnoringDefault_(e, t, o, 0);
+          (jspb.Message.setProto3FloatField = function (e, t, r) {
+            return jspb.Message.setFieldIgnoringDefault_(e, t, r, 0);
           }),
-          (jspb.Message.setProto3BooleanField = function (e, t, o) {
-            return jspb.Message.setFieldIgnoringDefault_(e, t, o, !1);
+          (jspb.Message.setProto3BooleanField = function (e, t, r) {
+            return jspb.Message.setFieldIgnoringDefault_(e, t, r, !1);
           }),
-          (jspb.Message.setProto3StringField = function (e, t, o) {
-            return jspb.Message.setFieldIgnoringDefault_(e, t, o, "");
+          (jspb.Message.setProto3StringField = function (e, t, r) {
+            return jspb.Message.setFieldIgnoringDefault_(e, t, r, "");
           }),
-          (jspb.Message.setProto3BytesField = function (e, t, o) {
-            return jspb.Message.setFieldIgnoringDefault_(e, t, o, "");
+          (jspb.Message.setProto3BytesField = function (e, t, r) {
+            return jspb.Message.setFieldIgnoringDefault_(e, t, r, "");
           }),
-          (jspb.Message.setProto3EnumField = function (e, t, o) {
-            return jspb.Message.setFieldIgnoringDefault_(e, t, o, 0);
+          (jspb.Message.setProto3EnumField = function (e, t, r) {
+            return jspb.Message.setFieldIgnoringDefault_(e, t, r, 0);
           }),
-          (jspb.Message.setProto3StringIntField = function (e, t, o) {
-            return jspb.Message.setFieldIgnoringDefault_(e, t, o, "0");
+          (jspb.Message.setProto3StringIntField = function (e, t, r) {
+            return jspb.Message.setFieldIgnoringDefault_(e, t, r, "0");
           }),
-          (jspb.Message.setFieldIgnoringDefault_ = function (e, t, o, r) {
+          (jspb.Message.setFieldIgnoringDefault_ = function (e, t, r, o) {
             return (
               goog.asserts.assertInstanceof(e, jspb.Message),
-              o !== r
-                ? jspb.Message.setField(e, t, o)
+              r !== o
+                ? jspb.Message.setField(e, t, r)
                 : t < e.pivot_
                 ? (e.array[jspb.Message.getIndex_(e, t)] = null)
                 : (jspb.Message.maybeInitEmptyExtensionObject_(e),
@@ -9778,95 +9778,95 @@ var CLSTAMP = "8056184";
               e
             );
           }),
-          (jspb.Message.addToRepeatedField = function (e, t, o, r) {
+          (jspb.Message.addToRepeatedField = function (e, t, r, o) {
             return (
               goog.asserts.assertInstanceof(e, jspb.Message),
               (t = jspb.Message.getRepeatedField(e, t)),
-              null != r ? t.splice(r, 0, o) : t.push(o),
+              null != o ? t.splice(o, 0, r) : t.push(r),
               e
             );
           }),
-          (jspb.Message.setOneofField = function (e, t, o, r) {
+          (jspb.Message.setOneofField = function (e, t, r, o) {
             return (
               goog.asserts.assertInstanceof(e, jspb.Message),
-              (o = jspb.Message.computeOneofCase(e, o)) &&
-                o !== t &&
-                void 0 !== r &&
-                (e.wrappers_ && o in e.wrappers_ && (e.wrappers_[o] = void 0),
-                jspb.Message.setField(e, o, void 0)),
-              jspb.Message.setField(e, t, r)
+              (r = jspb.Message.computeOneofCase(e, r)) &&
+                r !== t &&
+                void 0 !== o &&
+                (e.wrappers_ && r in e.wrappers_ && (e.wrappers_[r] = void 0),
+                jspb.Message.setField(e, r, void 0)),
+              jspb.Message.setField(e, t, o)
             );
           }),
           (jspb.Message.computeOneofCase = function (e, t) {
-            for (var o, r, n = 0; n < t.length; n++) {
+            for (var r, o, n = 0; n < t.length; n++) {
               var i = t[n],
                 a = jspb.Message.getField(e, i);
               null != a &&
-                ((o = i), (r = a), jspb.Message.setField(e, i, void 0));
+                ((r = i), (o = a), jspb.Message.setField(e, i, void 0));
             }
-            return o ? (jspb.Message.setField(e, o, r), o) : 0;
+            return r ? (jspb.Message.setField(e, r, o), r) : 0;
           }),
-          (jspb.Message.getWrapperField = function (e, t, o, r) {
-            if ((e.wrappers_ || (e.wrappers_ = {}), !e.wrappers_[o])) {
-              var n = jspb.Message.getField(e, o);
-              (r || n) && (e.wrappers_[o] = new t(n));
+          (jspb.Message.getWrapperField = function (e, t, r, o) {
+            if ((e.wrappers_ || (e.wrappers_ = {}), !e.wrappers_[r])) {
+              var n = jspb.Message.getField(e, r);
+              (o || n) && (e.wrappers_[r] = new t(n));
             }
-            return e.wrappers_[o];
+            return e.wrappers_[r];
           }),
-          (jspb.Message.getRepeatedWrapperField = function (e, t, o) {
+          (jspb.Message.getRepeatedWrapperField = function (e, t, r) {
             return (
-              jspb.Message.wrapRepeatedField_(e, t, o),
-              (t = e.wrappers_[o]) == jspb.Message.EMPTY_LIST_SENTINEL_ &&
-                (t = e.wrappers_[o] = []),
+              jspb.Message.wrapRepeatedField_(e, t, r),
+              (t = e.wrappers_[r]) == jspb.Message.EMPTY_LIST_SENTINEL_ &&
+                (t = e.wrappers_[r] = []),
               t
             );
           }),
-          (jspb.Message.wrapRepeatedField_ = function (e, t, o) {
-            if ((e.wrappers_ || (e.wrappers_ = {}), !e.wrappers_[o])) {
+          (jspb.Message.wrapRepeatedField_ = function (e, t, r) {
+            if ((e.wrappers_ || (e.wrappers_ = {}), !e.wrappers_[r])) {
               for (
-                var r = jspb.Message.getRepeatedField(e, o), n = [], i = 0;
-                i < r.length;
+                var o = jspb.Message.getRepeatedField(e, r), n = [], i = 0;
+                i < o.length;
                 i++
               )
-                n[i] = new t(r[i]);
-              e.wrappers_[o] = n;
+                n[i] = new t(o[i]);
+              e.wrappers_[r] = n;
             }
           }),
-          (jspb.Message.setWrapperField = function (e, t, o) {
+          (jspb.Message.setWrapperField = function (e, t, r) {
             goog.asserts.assertInstanceof(e, jspb.Message),
               e.wrappers_ || (e.wrappers_ = {});
-            var r = o ? o.toArray() : o;
-            return (e.wrappers_[t] = o), jspb.Message.setField(e, t, r);
+            var o = r ? r.toArray() : r;
+            return (e.wrappers_[t] = r), jspb.Message.setField(e, t, o);
           }),
-          (jspb.Message.setOneofWrapperField = function (e, t, o, r) {
+          (jspb.Message.setOneofWrapperField = function (e, t, r, o) {
             goog.asserts.assertInstanceof(e, jspb.Message),
               e.wrappers_ || (e.wrappers_ = {});
-            var n = r ? r.toArray() : r;
-            return (e.wrappers_[t] = r), jspb.Message.setOneofField(e, t, o, n);
+            var n = o ? o.toArray() : o;
+            return (e.wrappers_[t] = o), jspb.Message.setOneofField(e, t, r, n);
           }),
-          (jspb.Message.setRepeatedWrapperField = function (e, t, o) {
+          (jspb.Message.setRepeatedWrapperField = function (e, t, r) {
             goog.asserts.assertInstanceof(e, jspb.Message),
               e.wrappers_ || (e.wrappers_ = {}),
-              (o = o || []);
-            for (var r = [], n = 0; n < o.length; n++) r[n] = o[n].toArray();
-            return (e.wrappers_[t] = o), jspb.Message.setField(e, t, r);
+              (r = r || []);
+            for (var o = [], n = 0; n < r.length; n++) o[n] = r[n].toArray();
+            return (e.wrappers_[t] = r), jspb.Message.setField(e, t, o);
           }),
-          (jspb.Message.addToRepeatedWrapperField = function (e, t, o, r, n) {
-            jspb.Message.wrapRepeatedField_(e, r, t);
+          (jspb.Message.addToRepeatedWrapperField = function (e, t, r, o, n) {
+            jspb.Message.wrapRepeatedField_(e, o, t);
             var i = e.wrappers_[t];
             return (
               i || (i = e.wrappers_[t] = []),
-              (o = o || new r()),
+              (r = r || new o()),
               (e = jspb.Message.getRepeatedField(e, t)),
               null != n
-                ? (i.splice(n, 0, o), e.splice(n, 0, o.toArray()))
-                : (i.push(o), e.push(o.toArray())),
-              o
+                ? (i.splice(n, 0, r), e.splice(n, 0, r.toArray()))
+                : (i.push(r), e.push(r.toArray())),
+              r
             );
           }),
-          (jspb.Message.toMap = function (e, t, o, r) {
+          (jspb.Message.toMap = function (e, t, r, o) {
             for (var n = {}, i = 0; i < e.length; i++)
-              n[t.call(e[i])] = o ? o.call(e[i], r, e[i]) : e[i];
+              n[t.call(e[i])] = r ? r.call(e[i], o, e[i]) : e[i];
             return n;
           }),
           (jspb.Message.prototype.syncMapFields_ = function () {
@@ -9874,7 +9874,7 @@ var CLSTAMP = "8056184";
               for (var e in this.wrappers_) {
                 var t = this.wrappers_[e];
                 if (Array.isArray(t))
-                  for (var o = 0; o < t.length; o++) t[o] && t[o].toArray();
+                  for (var r = 0; r < t.length; r++) t[r] && t[r].toArray();
                 else t && t.toArray();
               }
           }),
@@ -9914,41 +9914,41 @@ var CLSTAMP = "8056184";
           (jspb.Message.prototype.setExtension = function (e, t) {
             this.wrappers_ || (this.wrappers_ = {}),
               jspb.Message.maybeInitEmptyExtensionObject_(this);
-            var o = e.fieldIndex;
+            var r = e.fieldIndex;
             return (
               e.isRepeated
                 ? ((t = t || []),
                   e.isMessageType()
-                    ? ((this.wrappers_[o] = t),
-                      (this.extensionObject_[o] = goog.array.map(
+                    ? ((this.wrappers_[r] = t),
+                      (this.extensionObject_[r] = goog.array.map(
                         t,
                         function (e) {
                           return e.toArray();
                         }
                       )))
-                    : (this.extensionObject_[o] = t))
+                    : (this.extensionObject_[r] = t))
                 : e.isMessageType()
-                ? ((this.wrappers_[o] = t),
-                  (this.extensionObject_[o] = t ? t.toArray() : t))
-                : (this.extensionObject_[o] = t),
+                ? ((this.wrappers_[r] = t),
+                  (this.extensionObject_[r] = t ? t.toArray() : t))
+                : (this.extensionObject_[r] = t),
               this
             );
           }),
           (jspb.Message.difference = function (e, t) {
             if (!(e instanceof t.constructor))
               throw Error("Messages have different types.");
-            var o = e.toArray();
+            var r = e.toArray();
             t = t.toArray();
-            var r = [],
+            var o = [],
               n = 0,
-              i = o.length > t.length ? o.length : t.length;
+              i = r.length > t.length ? r.length : t.length;
             for (
-              e.getJsPbMessageId() && ((r[0] = e.getJsPbMessageId()), (n = 1));
+              e.getJsPbMessageId() && ((o[0] = e.getJsPbMessageId()), (n = 1));
               n < i;
               n++
             )
-              jspb.Message.compareFields(o[n], t[n]) || (r[n] = t[n]);
-            return new e.constructor(r);
+              jspb.Message.compareFields(r[n], t[n]) || (o[n] = t[n]);
+            return new e.constructor(o);
           }),
           (jspb.Message.equals = function (e, t) {
             return (
@@ -9960,11 +9960,11 @@ var CLSTAMP = "8056184";
           }),
           (jspb.Message.compareExtensions = function (e, t) {
             (e = e || {}), (t = t || {});
-            var o,
-              r = {};
-            for (o in e) r[o] = 0;
-            for (o in t) r[o] = 0;
-            for (o in r) if (!jspb.Message.compareFields(e[o], t[o])) return !1;
+            var r,
+              o = {};
+            for (r in e) o[r] = 0;
+            for (r in t) o[r] = 0;
+            for (r in o) if (!jspb.Message.compareFields(e[r], t[r])) return !1;
             return !0;
           }),
           (jspb.Message.compareFields = function (e, t) {
@@ -9982,27 +9982,27 @@ var CLSTAMP = "8056184";
               e.constructor === Uint8Array
             ) {
               if (e.length != t.length) return !1;
-              for (var o = 0; o < e.length; o++) if (e[o] != t[o]) return !1;
+              for (var r = 0; r < e.length; r++) if (e[r] != t[r]) return !1;
               return !0;
             }
             if (e.constructor === Array) {
-              var r = void 0,
+              var o = void 0,
                 n = void 0,
                 i = Math.max(e.length, t.length);
-              for (o = 0; o < i; o++) {
-                var a = e[o],
-                  s = t[o];
+              for (r = 0; r < i; r++) {
+                var a = e[r],
+                  s = t[r];
                 if (
                   (a &&
                     a.constructor == Object &&
-                    (goog.asserts.assert(void 0 === r),
-                    goog.asserts.assert(o === e.length - 1),
-                    (r = a),
+                    (goog.asserts.assert(void 0 === o),
+                    goog.asserts.assert(r === e.length - 1),
+                    (o = a),
                     (a = void 0)),
                   s &&
                     s.constructor == Object &&
                     (goog.asserts.assert(void 0 === n),
-                    goog.asserts.assert(o === t.length - 1),
+                    goog.asserts.assert(r === t.length - 1),
                     (n = s),
                     (s = void 0)),
                   !jspb.Message.compareFields(a, s))
@@ -10010,10 +10010,10 @@ var CLSTAMP = "8056184";
                   return !1;
               }
               return (
-                (!r && !n) ||
-                ((r = r || {}),
+                (!o && !n) ||
+                ((o = o || {}),
                 (n = n || {}),
-                jspb.Message.compareExtensions(r, n))
+                jspb.Message.compareExtensions(o, n))
               );
             }
             if (e.constructor === Object)
@@ -10041,34 +10041,34 @@ var CLSTAMP = "8056184";
               ),
               (e = jspb.Message.clone(e));
             for (
-              var o = t.toArray(), r = e.toArray(), n = (o.length = 0);
-              n < r.length;
+              var r = t.toArray(), o = e.toArray(), n = (r.length = 0);
+              n < o.length;
               n++
             )
-              o[n] = r[n];
+              r[n] = o[n];
             (t.wrappers_ = e.wrappers_),
               (t.extensionObject_ = e.extensionObject_);
           }),
           (jspb.Message.clone_ = function (e) {
             if (Array.isArray(e)) {
-              for (var t = Array(e.length), o = 0; o < e.length; o++) {
-                var r = e[o];
-                null != r &&
-                  (t[o] =
-                    "object" == typeof r
-                      ? jspb.Message.clone_(goog.asserts.assert(r))
-                      : r);
+              for (var t = Array(e.length), r = 0; r < e.length; r++) {
+                var o = e[r];
+                null != o &&
+                  (t[r] =
+                    "object" == typeof o
+                      ? jspb.Message.clone_(goog.asserts.assert(o))
+                      : o);
               }
               return t;
             }
             if (jspb.Message.SUPPORTS_UINT8ARRAY_ && e instanceof Uint8Array)
               return new Uint8Array(e);
-            for (o in ((t = {}), e))
-              null != (r = e[o]) &&
-                (t[o] =
-                  "object" == typeof r
-                    ? jspb.Message.clone_(goog.asserts.assert(r))
-                    : r);
+            for (r in ((t = {}), e))
+              null != (o = e[r]) &&
+                (t[r] =
+                  "object" == typeof o
+                    ? jspb.Message.clone_(goog.asserts.assert(o))
+                    : o);
             return t;
           }),
           (jspb.Message.registerMessageType = function (e, t) {
@@ -10089,12 +10089,12 @@ var CLSTAMP = "8056184";
             (exports.object = { extend: goog.object.extend }),
             (exports.typeOf = goog.typeOf));
       },
-      898: (e, t, o) => {
+      310: (e, t, r) => {
         "use strict";
-        o.d(t, { B: () => s });
-        var r = o(655),
-          n = o(735),
-          i = o(392);
+        r.d(t, { B: () => s });
+        var o = r(655),
+          n = r(960),
+          i = r(2);
         let a = [
           { index: 0, type: n.eV.OK, category: "action" },
           { index: 1, type: n.eV.CANCEL, category: "action" },
@@ -10128,22 +10128,22 @@ var CLSTAMP = "8056184";
           PollGamepads() {
             let e = navigator.getGamepads(),
               t = !1;
-            for (let o = 0; o < e.length; o++) {
-              let r = e[o];
-              if (!r) continue;
-              this.m_rgGamepadStatus[o] ||
-                (this.m_rgGamepadStatus[o] = { buttons: [] });
-              let n = this.m_rgGamepadStatus[o];
+            for (let r = 0; r < e.length; r++) {
+              let o = e[r];
+              if (!o) continue;
+              this.m_rgGamepadStatus[r] ||
+                (this.m_rgGamepadStatus[r] = { buttons: [] });
+              let n = this.m_rgGamepadStatus[r];
               for (let e = 0; e < a.length; e++) {
-                let o = a[e],
-                  i = o.index;
-                r.buttons[i] &&
-                  (r.buttons[i].pressed
+                let r = a[e],
+                  i = r.index;
+                o.buttons[i] &&
+                  (o.buttons[i].pressed
                     ? ((t = !0),
                       n.buttons[i] ||
-                        ((n.buttons[i] = !0), this.OnButtonDown(o.type)))
+                        ((n.buttons[i] = !0), this.OnButtonDown(r.type)))
                     : n.buttons[i] &&
-                      (this.OnButtonUp(o.type), (n.buttons[i] = !1)));
+                      (this.OnButtonUp(r.type), (n.buttons[i] = !1)));
               }
             }
             document.hasFocus() || t
@@ -10156,15 +10156,15 @@ var CLSTAMP = "8056184";
               this.PollGamepads();
           }
         }
-        (0, r.gn)([i.a], s.prototype, "PollGamepads", null),
-          (0, r.gn)([i.a], s.prototype, "OnWindowRegainedFocus", null);
+        (0, o.gn)([i.a], s.prototype, "PollGamepads", null),
+          (0, o.gn)([i.a], s.prototype, "OnWindowRegainedFocus", null);
       },
-      735: (e, t, o) => {
+      960: (e, t, r) => {
         "use strict";
-        o.d(t, { eV: () => r, Rr: () => n, oH: () => g });
-        var r,
+        r.d(t, { eV: () => o, Rr: () => n, oH: () => g });
+        var o,
           n,
-          i = o(487);
+          i = r(664);
         class a {
           constructor(e) {
             this.m_config = e;
@@ -10178,7 +10178,7 @@ var CLSTAMP = "8056184";
           HandleInputButtonDown(e, t) {
             if (this.m_ActiveInputId !== e && null != t) {
               this.Reset(), (this.m_ActiveInputId = e);
-              const o = () => {
+              const r = () => {
                 this.m_ActiveInputTimeout = window.setInterval(() => {
                   t();
                 }, this.m_config.repeatInterval_ms);
@@ -10186,9 +10186,9 @@ var CLSTAMP = "8056184";
               null == this.m_config.firstRepeatInterval_ms ||
               this.m_config.firstRepeatInterval_ms ===
                 this.m_config.repeatInterval_ms
-                ? o()
+                ? r()
                 : (this.m_ActiveInputTimeout = window.setTimeout(() => {
-                    t(), o();
+                    t(), r();
                   }, this.m_config.firstRepeatInterval_ms));
             }
           }
@@ -10239,7 +10239,7 @@ var CLSTAMP = "8056184";
             (e[(e.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
             (e[(e.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
             (e[(e.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
-        })(r || (r = {})),
+        })(o || (o = {})),
           (function (e) {
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
               (e[(e.GAMEPAD = 1)] = "GAMEPAD"),
@@ -10259,10 +10259,10 @@ var CLSTAMP = "8056184";
               (this.m_nLastActiveControllerIndex = -1),
               (this.m_ButtonRepeatHandler = new s({
                 inputsThatRepeat: new Set([
-                  r.DIR_UP,
-                  r.DIR_DOWN,
-                  r.DIR_LEFT,
-                  r.DIR_RIGHT,
+                  o.DIR_UP,
+                  o.DIR_DOWN,
+                  o.DIR_LEFT,
+                  o.DIR_RIGHT,
                 ]),
                 firstRepeatInterval_ms: 400,
                 repeatInterval_ms: 50,
@@ -10331,14 +10331,14 @@ var CLSTAMP = "8056184";
               t
             );
           }
-          OnAnalogPad(e, t, o, r) {
-            void 0 === r && (r = -1),
-              this.SetControllerActive(r),
+          OnAnalogPad(e, t, r, o) {
+            void 0 === o && (o = -1),
+              this.SetControllerActive(o),
               this.m_AnalogCallbacks.Dispatch(
                 e,
                 this.m_nLastActiveControllerIndex,
                 t,
-                o
+                r
               );
           }
           OnNavigationTypeChanged(e) {
@@ -10346,11 +10346,11 @@ var CLSTAMP = "8056184";
           }
         }
       },
-      168: (e, t, o) => {
+      881: (e, t, r) => {
         "use strict";
-        o.d(t, { U5: () => n.U5 });
-        var r,
-          n = o(230);
+        r.d(t, { U5: () => n.U5 });
+        var o,
+          n = r(59);
         !(function (e) {
           (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
             (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -10368,8 +10368,8 @@ var CLSTAMP = "8056184";
               "k_EPlatformTypeEmbeddedClient"),
             (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
             (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-        })(r || (r = {}));
-        var i, a, s, g, l, u, p, c, _, d, f, h, m, y;
+        })(o || (o = {}));
+        var i, a, s, g, l, u, p, _, c, d, f, m, h, y, S;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -10465,13 +10465,13 @@ var CLSTAMP = "8056184";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(c || (c = {})),
+          })(_ || (_ = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(_ || (_ = {})),
+          })(c || (c = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -10512,7 +10512,7 @@ var CLSTAMP = "8056184";
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(h || (h = {})),
+          })(m || (m = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -10526,7 +10526,13 @@ var CLSTAMP = "8056184";
                 "k_EAppReleaseState_Released"),
               (e[(e.k_EAppReleaseState_Disabled = 5)] =
                 "k_EAppReleaseState_Disabled");
-          })(m || (m = {})),
+          })(h || (h = {})),
+          (function (e) {
+            (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
+              (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
+              (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
+              (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+          })(y || (y = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -10560,8 +10566,8 @@ var CLSTAMP = "8056184";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })(y || (y = {}));
-        var E, S, b;
+          })(S || (S = {}));
+        var E, T, b;
         !(function (e) {
           (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
         })(E || (E = {})),
@@ -10573,13 +10579,13 @@ var CLSTAMP = "8056184";
               (e[(e.Sub = 4)] = "Sub"),
               (e[(e.BackLeft = 5)] = "BackLeft"),
               (e[(e.BackRight = 6)] = "BackRight");
-          })(S || (S = {}));
+          })(T || (T = {}));
         !(function (e) {
           (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
             (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
         })(b || (b = {}));
-        var T;
+        var I;
         !(function (e) {
           (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
             "k_BluetoothDeviceType_Invalid"),
@@ -10605,8 +10611,8 @@ var CLSTAMP = "8056184";
               "k_BluetoothDeviceType_Gamepad"),
             (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
               "k_BluetoothDeviceType_Keyboard");
-        })(T || (T = {}));
-        var I, A, R, C;
+        })(I || (I = {}));
+        var A, R, C, D;
         !(function (e) {
           (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
             (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -10634,18 +10640,18 @@ var CLSTAMP = "8056184";
               "EBrowserType_Offscreen_SteamUI"),
             (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
               "EBrowserType_OpenVROverlay_Subview");
-        })(I || (I = {})),
+        })(A || (A = {})),
           (function (e) {
             (e[(e.SystemKey0 = 0)] = "SystemKey0"),
               (e[(e.SystemKey1 = 1)] = "SystemKey1");
-          })(A || (A = {})),
+          })(R || (R = {})),
           (function (e) {
             (e[(e.Hidden = 0)] = "Hidden"),
               (e[(e.Notification = 1)] = "Notification"),
               (e[(e.Overlay = 2)] = "Overlay"),
               (e[(e.Opaque = 3)] = "Opaque"),
               (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-          })(R || (R = {})),
+          })(C || (C = {})),
           (function (e) {
             (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
               (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
@@ -10657,17 +10663,17 @@ var CLSTAMP = "8056184";
               (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
               (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
               (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
-          })(C || (C = {}));
-        var D;
+          })(D || (D = {}));
+        var v;
         !(function (e) {
           (e[(e.k_EPending = 0)] = "k_EPending"),
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
-        })(D || (D = {}));
-        var O = o(19);
+        })(v || (v = {}));
+        var O = r(19);
         O.BinaryReader.prototype, O.BinaryWriter.prototype;
         O.Message;
-        var v, N, U, w, M;
+        var N, U, M, w, P;
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -10685,7 +10691,7 @@ var CLSTAMP = "8056184";
               "k_EControllerBindingType_GameAction"),
             (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
               "k_EControllerBindingType_ControllerAction");
-        })(v || (v = {})),
+        })(N || (N = {})),
           (function (e) {
             (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
               (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
@@ -10754,7 +10760,7 @@ var CLSTAMP = "8056184";
               (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
                 "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
               (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
-          })(N || (N = {}));
+          })(U || (U = {}));
         !(function (e) {
           (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
             (e[(e.k_ERemoteClientLaunchFail = 2)] =
@@ -10811,7 +10817,7 @@ var CLSTAMP = "8056184";
               "k_ERemoteClientLaunchInvisible"),
             (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
               "k_ERemoteClientLaunchRestrictedCountry");
-        })(U || (U = {}));
+        })(M || (M = {}));
         !(function (e) {
           (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
             "k_EClientUINotificationGroupChatMessage"),
@@ -10825,14 +10831,14 @@ var CLSTAMP = "8056184";
             (e[(e.AudioPlayback_Playing = 1)] = "AudioPlayback_Playing"),
             (e[(e.AudioPlayback_Paused = 2)] = "AudioPlayback_Paused"),
             (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
-        })(M || (M = {}));
-        var P, L, j, B, F;
+        })(P || (P = {}));
+        var B, L, F, j, V;
         !(function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Wired = 1)] = "Wired"),
             (e[(e.Wireless = 2)] = "Wireless"),
             (e[(e.Virtual = 3)] = "Virtual");
-        })(P || (P = {})),
+        })(B || (B = {})),
           (function (e) {
             (e[(e.NotPresent = 0)] = "NotPresent"),
               (e[(e.Failed = 1)] = "Failed"),
@@ -10848,7 +10854,7 @@ var CLSTAMP = "8056184";
               (e[(e.Ok = 2)] = "Ok"),
               (e[(e.Good = 3)] = "Good"),
               (e[(e.Excellent = 4)] = "Excellent");
-          })(j || (j = {})),
+          })(F || (F = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -10858,15 +10864,15 @@ var CLSTAMP = "8056184";
               (e[(e.Wpa2 = 16)] = "Wpa2"),
               (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
               (e[(e.Unsupported = 32768)] = "Unsupported");
-          })(B || (B = {})),
+          })(j || (j = {})),
           (function (e) {
             (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
               (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
               (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
               (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
                 "k_EHTTPProxyMode_Automatic");
-          })(F || (F = {}));
-        var V, k, H, x, W;
+          })(V || (V = {}));
+        var k, H, x, G, W, K;
         !(function (e) {
           (e[(e.k_EComputerActiveStateInvalid = 0)] =
             "k_EComputerActiveStateInvalid"),
@@ -10874,7 +10880,7 @@ var CLSTAMP = "8056184";
               "k_EComputerActiveStateActive"),
             (e[(e.k_EComputerActiveStateIdle = 2)] =
               "k_EComputerActiveStateIdle");
-        })(V || (V = {})),
+        })(k || (k = {})),
           (function (e) {
             (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
               "k_EClientUsedInputTypeKeyboard"),
@@ -10884,7 +10890,7 @@ var CLSTAMP = "8056184";
                 "k_EClientUsedInputTypeController"),
               (e[(e.k_EClientUsedInputTypeMax = 3)] =
                 "k_EClientUsedInputTypeMax");
-          })(k || (k = {})),
+          })(H || (H = {})),
           (function (e) {
             (e[(e.k_EVRError_None = 0)] = "k_EVRError_None"),
               (e[(e.k_EVRError_VRSkipParam = 1)] = "k_EVRError_VRSkipParam"),
@@ -10896,7 +10902,7 @@ var CLSTAMP = "8056184";
                 "k_EVRError_CrashProtection"),
               (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
               (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
-          })(H || (H = {})),
+          })(x || (x = {})),
           (function (e) {
             (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
               (e[(e.VRInitError_Unknown = 1)] = "VRInitError_Unknown"),
@@ -11374,7 +11380,7 @@ var CLSTAMP = "8056184";
               (e[(e.VRInitError_Steam_SteamInstallationNotFound = 2e3)] =
                 "VRInitError_Steam_SteamInstallationNotFound"),
               (e[(e.VRInitError_LastError = 2001)] = "VRInitError_LastError");
-          })(x || (x = {})),
+          })(G || (G = {})),
           (function (e) {
             (e[(e.Invalid = 0)] = "Invalid"),
               (e[(e.TrackingSystemName_String = 1e3)] =
@@ -11697,38 +11703,361 @@ var CLSTAMP = "8056184";
                 "VendorSpecific_Reserved_End"),
               (e[(e.TrackedDeviceProperty_Max = 1e6)] =
                 "TrackedDeviceProperty_Max");
-          })(W || (W = {}));
+          })(W || (W = {})),
+          (function (e) {
+            (e[(e.Invalid = 0)] = "Invalid"),
+              (e[(e.TrackingSystemName_String = 1e3)] =
+                "TrackingSystemName_String"),
+              (e[(e.ModelNumber_String = 1001)] = "ModelNumber_String"),
+              (e[(e.SerialNumber_String = 1002)] = "SerialNumber_String"),
+              (e[(e.RenderModelName_String = 1003)] = "RenderModelName_String"),
+              (e[(e.WillDriftInYaw_Bool = 1004)] = "WillDriftInYaw_Bool"),
+              (e[(e.ManufacturerName_String = 1005)] =
+                "ManufacturerName_String"),
+              (e[(e.TrackingFirmwareVersion_String = 1006)] =
+                "TrackingFirmwareVersion_String"),
+              (e[(e.HardwareRevision_String = 1007)] =
+                "HardwareRevision_String"),
+              (e[(e.AllWirelessDongleDescriptions_String = 1008)] =
+                "AllWirelessDongleDescriptions_String"),
+              (e[(e.ConnectedWirelessDongle_String = 1009)] =
+                "ConnectedWirelessDongle_String"),
+              (e[(e.DeviceIsWireless_Bool = 1010)] = "DeviceIsWireless_Bool"),
+              (e[(e.DeviceIsCharging_Bool = 1011)] = "DeviceIsCharging_Bool"),
+              (e[(e.DeviceBatteryPercentage_Float = 1012)] =
+                "DeviceBatteryPercentage_Float"),
+              (e[(e.StatusDisplayTransform_Matrix34 = 1013)] =
+                "StatusDisplayTransform_Matrix34"),
+              (e[(e.Firmware_UpdateAvailable_Bool = 1014)] =
+                "Firmware_UpdateAvailable_Bool"),
+              (e[(e.Firmware_ManualUpdate_Bool = 1015)] =
+                "Firmware_ManualUpdate_Bool"),
+              (e[(e.Firmware_ManualUpdateURL_String = 1016)] =
+                "Firmware_ManualUpdateURL_String"),
+              (e[(e.HardwareRevision_Uint64 = 1017)] =
+                "HardwareRevision_Uint64"),
+              (e[(e.FirmwareVersion_Uint64 = 1018)] = "FirmwareVersion_Uint64"),
+              (e[(e.FPGAVersion_Uint64 = 1019)] = "FPGAVersion_Uint64"),
+              (e[(e.VRCVersion_Uint64 = 1020)] = "VRCVersion_Uint64"),
+              (e[(e.RadioVersion_Uint64 = 1021)] = "RadioVersion_Uint64"),
+              (e[(e.DongleVersion_Uint64 = 1022)] = "DongleVersion_Uint64"),
+              (e[(e.BlockServerShutdown_Bool = 1023)] =
+                "BlockServerShutdown_Bool"),
+              (e[(e.CanUnifyCoordinateSystemWithHmd_Bool = 1024)] =
+                "CanUnifyCoordinateSystemWithHmd_Bool"),
+              (e[(e.ContainsProximitySensor_Bool = 1025)] =
+                "ContainsProximitySensor_Bool"),
+              (e[(e.DeviceProvidesBatteryStatus_Bool = 1026)] =
+                "DeviceProvidesBatteryStatus_Bool"),
+              (e[(e.DeviceCanPowerOff_Bool = 1027)] = "DeviceCanPowerOff_Bool"),
+              (e[(e.Firmware_ProgrammingTarget_String = 1028)] =
+                "Firmware_ProgrammingTarget_String"),
+              (e[(e.DeviceClass_Int32 = 1029)] = "DeviceClass_Int32"),
+              (e[(e.HasCamera_Bool = 1030)] = "HasCamera_Bool"),
+              (e[(e.DriverVersion_String = 1031)] = "DriverVersion_String"),
+              (e[(e.Firmware_ForceUpdateRequired_Bool = 1032)] =
+                "Firmware_ForceUpdateRequired_Bool"),
+              (e[(e.ViveSystemButtonFixRequired_Bool = 1033)] =
+                "ViveSystemButtonFixRequired_Bool"),
+              (e[(e.ParentDriver_Uint64 = 1034)] = "ParentDriver_Uint64"),
+              (e[(e.ResourceRoot_String = 1035)] = "ResourceRoot_String"),
+              (e[(e.RegisteredDeviceType_String = 1036)] =
+                "RegisteredDeviceType_String"),
+              (e[(e.InputProfilePath_String = 1037)] =
+                "InputProfilePath_String"),
+              (e[(e.NeverTracked_Bool = 1038)] = "NeverTracked_Bool"),
+              (e[(e.NumCameras_Int32 = 1039)] = "NumCameras_Int32"),
+              (e[(e.CameraFrameLayout_Int32 = 1040)] =
+                "CameraFrameLayout_Int32"),
+              (e[(e.CameraStreamFormat_Int32 = 1041)] =
+                "CameraStreamFormat_Int32"),
+              (e[(e.AdditionalDeviceSettingsPath_String = 1042)] =
+                "AdditionalDeviceSettingsPath_String"),
+              (e[(e.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
+              (e[(e.ReportsTimeSinceVSync_Bool = 2e3)] =
+                "ReportsTimeSinceVSync_Bool"),
+              (e[(e.SecondsFromVsyncToPhotons_Float = 2001)] =
+                "SecondsFromVsyncToPhotons_Float"),
+              (e[(e.DisplayFrequency_Float = 2002)] = "DisplayFrequency_Float"),
+              (e[(e.UserIpdMeters_Float = 2003)] = "UserIpdMeters_Float"),
+              (e[(e.CurrentUniverseId_Uint64 = 2004)] =
+                "CurrentUniverseId_Uint64"),
+              (e[(e.PreviousUniverseId_Uint64 = 2005)] =
+                "PreviousUniverseId_Uint64"),
+              (e[(e.DisplayFirmwareVersion_Uint64 = 2006)] =
+                "DisplayFirmwareVersion_Uint64"),
+              (e[(e.IsOnDesktop_Bool = 2007)] = "IsOnDesktop_Bool"),
+              (e[(e.DisplayMCType_Int32 = 2008)] = "DisplayMCType_Int32"),
+              (e[(e.DisplayMCOffset_Float = 2009)] = "DisplayMCOffset_Float"),
+              (e[(e.DisplayMCScale_Float = 2010)] = "DisplayMCScale_Float"),
+              (e[(e.EdidVendorID_Int32 = 2011)] = "EdidVendorID_Int32"),
+              (e[(e.DisplayMCImageLeft_String = 2012)] =
+                "DisplayMCImageLeft_String"),
+              (e[(e.DisplayMCImageRight_String = 2013)] =
+                "DisplayMCImageRight_String"),
+              (e[(e.DisplayGCBlackClamp_Float = 2014)] =
+                "DisplayGCBlackClamp_Float"),
+              (e[(e.EdidProductID_Int32 = 2015)] = "EdidProductID_Int32"),
+              (e[(e.CameraToHeadTransform_Matrix34 = 2016)] =
+                "CameraToHeadTransform_Matrix34"),
+              (e[(e.DisplayGCType_Int32 = 2017)] = "DisplayGCType_Int32"),
+              (e[(e.DisplayGCOffset_Float = 2018)] = "DisplayGCOffset_Float"),
+              (e[(e.DisplayGCScale_Float = 2019)] = "DisplayGCScale_Float"),
+              (e[(e.DisplayGCPrescale_Float = 2020)] =
+                "DisplayGCPrescale_Float"),
+              (e[(e.DisplayGCImage_String = 2021)] = "DisplayGCImage_String"),
+              (e[(e.LensCenterLeftU_Float = 2022)] = "LensCenterLeftU_Float"),
+              (e[(e.LensCenterLeftV_Float = 2023)] = "LensCenterLeftV_Float"),
+              (e[(e.LensCenterRightU_Float = 2024)] = "LensCenterRightU_Float"),
+              (e[(e.LensCenterRightV_Float = 2025)] = "LensCenterRightV_Float"),
+              (e[(e.UserHeadToEyeDepthMeters_Float = 2026)] =
+                "UserHeadToEyeDepthMeters_Float"),
+              (e[(e.CameraFirmwareVersion_Uint64 = 2027)] =
+                "CameraFirmwareVersion_Uint64"),
+              (e[(e.CameraFirmwareDescription_String = 2028)] =
+                "CameraFirmwareDescription_String"),
+              (e[(e.DisplayFPGAVersion_Uint64 = 2029)] =
+                "DisplayFPGAVersion_Uint64"),
+              (e[(e.DisplayBootloaderVersion_Uint64 = 2030)] =
+                "DisplayBootloaderVersion_Uint64"),
+              (e[(e.DisplayHardwareVersion_Uint64 = 2031)] =
+                "DisplayHardwareVersion_Uint64"),
+              (e[(e.AudioFirmwareVersion_Uint64 = 2032)] =
+                "AudioFirmwareVersion_Uint64"),
+              (e[(e.CameraCompatibilityMode_Int32 = 2033)] =
+                "CameraCompatibilityMode_Int32"),
+              (e[(e.ScreenshotHorizontalFieldOfViewDegrees_Float = 2034)] =
+                "ScreenshotHorizontalFieldOfViewDegrees_Float"),
+              (e[(e.ScreenshotVerticalFieldOfViewDegrees_Float = 2035)] =
+                "ScreenshotVerticalFieldOfViewDegrees_Float"),
+              (e[(e.DisplaySuppressed_Bool = 2036)] = "DisplaySuppressed_Bool"),
+              (e[(e.DisplayAllowNightMode_Bool = 2037)] =
+                "DisplayAllowNightMode_Bool"),
+              (e[(e.DisplayMCImageWidth_Int32 = 2038)] =
+                "DisplayMCImageWidth_Int32"),
+              (e[(e.DisplayMCImageHeight_Int32 = 2039)] =
+                "DisplayMCImageHeight_Int32"),
+              (e[(e.DisplayMCImageNumChannels_Int32 = 2040)] =
+                "DisplayMCImageNumChannels_Int32"),
+              (e[(e.DisplayMCImageData_Binary = 2041)] =
+                "DisplayMCImageData_Binary"),
+              (e[(e.SecondsFromPhotonsToVblank_Float = 2042)] =
+                "SecondsFromPhotonsToVblank_Float"),
+              (e[(e.DriverDirectModeSendsVsyncEvents_Bool = 2043)] =
+                "DriverDirectModeSendsVsyncEvents_Bool"),
+              (e[(e.DisplayDebugMode_Bool = 2044)] = "DisplayDebugMode_Bool"),
+              (e[(e.GraphicsAdapterLuid_Uint64 = 2045)] =
+                "GraphicsAdapterLuid_Uint64"),
+              (e[(e.DriverProvidedChaperonePath_String = 2048)] =
+                "DriverProvidedChaperonePath_String"),
+              (e[(e.ExpectedTrackingReferenceCount_Int32 = 2049)] =
+                "ExpectedTrackingReferenceCount_Int32"),
+              (e[(e.ExpectedControllerCount_Int32 = 2050)] =
+                "ExpectedControllerCount_Int32"),
+              (e[(e.NamedIconPathControllerLeftDeviceOff_String = 2051)] =
+                "NamedIconPathControllerLeftDeviceOff_String"),
+              (e[(e.NamedIconPathControllerRightDeviceOff_String = 2052)] =
+                "NamedIconPathControllerRightDeviceOff_String"),
+              (e[(e.NamedIconPathTrackingReferenceDeviceOff_String = 2053)] =
+                "NamedIconPathTrackingReferenceDeviceOff_String"),
+              (e[(e.DoNotApplyPrediction_Bool = 2054)] =
+                "DoNotApplyPrediction_Bool"),
+              (e[(e.CameraToHeadTransforms_Matrix34_Array = 2055)] =
+                "CameraToHeadTransforms_Matrix34_Array"),
+              (e[(e.DistortionMeshResolution_Int32 = 2056)] =
+                "DistortionMeshResolution_Int32"),
+              (e[(e.DriverIsDrawingControllers_Bool = 2057)] =
+                "DriverIsDrawingControllers_Bool"),
+              (e[(e.DriverRequestsApplicationPause_Bool = 2058)] =
+                "DriverRequestsApplicationPause_Bool"),
+              (e[(e.DriverRequestsReducedRendering_Bool = 2059)] =
+                "DriverRequestsReducedRendering_Bool"),
+              (e[(e.MinimumIpdStepMeters_Float = 2060)] =
+                "MinimumIpdStepMeters_Float"),
+              (e[(e.AudioBridgeFirmwareVersion_Uint64 = 2061)] =
+                "AudioBridgeFirmwareVersion_Uint64"),
+              (e[(e.ImageBridgeFirmwareVersion_Uint64 = 2062)] =
+                "ImageBridgeFirmwareVersion_Uint64"),
+              (e[(e.ImuToHeadTransform_Matrix34 = 2063)] =
+                "ImuToHeadTransform_Matrix34"),
+              (e[(e.ImuFactoryGyroBias_Vector3 = 2064)] =
+                "ImuFactoryGyroBias_Vector3"),
+              (e[(e.ImuFactoryGyroScale_Vector3 = 2065)] =
+                "ImuFactoryGyroScale_Vector3"),
+              (e[(e.ImuFactoryAccelerometerBias_Vector3 = 2066)] =
+                "ImuFactoryAccelerometerBias_Vector3"),
+              (e[(e.ImuFactoryAccelerometerScale_Vector3 = 2067)] =
+                "ImuFactoryAccelerometerScale_Vector3"),
+              (e[(e.ConfigurationIncludesLighthouse20Features_Bool = 2069)] =
+                "ConfigurationIncludesLighthouse20Features_Bool"),
+              (e[(e.Prop_AdditionalRadioFeatures_Uint64 = 2070)] =
+                "Prop_AdditionalRadioFeatures_Uint64"),
+              (e[(e.Prop_CameraWhiteBalance_Vector4_Array = 2071)] =
+                "Prop_CameraWhiteBalance_Vector4_Array"),
+              (e[(e.Prop_CameraDistortionFunction_Int32_Array = 2072)] =
+                "Prop_CameraDistortionFunction_Int32_Array"),
+              (e[(e.Prop_CameraDistortionCoefficients_Float_Array = 2073)] =
+                "Prop_CameraDistortionCoefficients_Float_Array"),
+              (e[(e.Prop_ExpectedControllerType_String = 2074)] =
+                "Prop_ExpectedControllerType_String"),
+              (e[(e.HmdTrackingStyle_Int32 = 2075)] = "HmdTrackingStyle_Int32"),
+              (e[(e.DriverProvidedChaperoneVisibility_Bool = 2076)] =
+                "DriverProvidedChaperoneVisibility_Bool"),
+              (e[(e.HmdColumnCorrectionSettingPrefix_String = 2077)] =
+                "HmdColumnCorrectionSettingPrefix_String"),
+              (e[(e.CameraSupportsCompatibilityModes_Bool = 2078)] =
+                "CameraSupportsCompatibilityModes_Bool"),
+              (e[(e.SupportsRoomViewDepthProjection_Bool = 2079)] =
+                "SupportsRoomViewDepthProjection_Bool"),
+              (e[(e.DisplayAvailableFrameRates_Float_Array = 2080)] =
+                "DisplayAvailableFrameRates_Float_Array"),
+              (e[(e.DisplaySupportsRuntimeFramerateChange_Bool = 2084)] =
+                "DisplaySupportsRuntimeFramerateChange_Bool"),
+              (e[(e.DisplaySupportsAnalogGain_Bool = 2085)] =
+                "DisplaySupportsAnalogGain_Bool"),
+              (e[(e.DisplayMinAnalogGain_Float = 2086)] =
+                "DisplayMinAnalogGain_Float"),
+              (e[(e.DisplayMaxAnalogGain_Float = 2087)] =
+                "DisplayMaxAnalogGain_Float"),
+              (e[(e.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
+              (e[(e.PeerButtonInfo_String = 2092)] = "PeerButtonInfo_String"),
+              (e[(e.IpdUIRangeMinMeters_Float = 2100)] =
+                "IpdUIRangeMinMeters_Float"),
+              (e[(e.IpdUIRangeMaxMeters_Float = 2101)] =
+                "IpdUIRangeMaxMeters_Float"),
+              (e[(e.Hmd_SupportsHDCP14LegacyCompat_Bool = 2102)] =
+                "Hmd_SupportsHDCP14LegacyCompat_Bool"),
+              (e[(e.Hmd_SupportsMicMonitoring_Bool = 2103)] =
+                "Hmd_SupportsMicMonitoring_Bool"),
+              (e[(e.Hmd_SupportsDisplayPortTrainingMode_Bool = 2104)] =
+                "Hmd_SupportsDisplayPortTrainingMode_Bool"),
+              (e[(e.Hmd_SupportsRoomViewDirect_Bool = 2105)] =
+                "Hmd_SupportsRoomViewDirect_Bool"),
+              (e[(e.Hmd_SupportsAppThrottling_Bool = 2106)] =
+                "Hmd_SupportsAppThrottling_Bool"),
+              (e[(e.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
+                "Hmd_SupportsGpuBusMonitoring_Bool"),
+              (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
+                "DriverRequestedMuraCorrectionMode_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
+                "DriverRequestedMuraFeather_InnerLeft_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerRight_Int32 = 2202)] =
+                "DriverRequestedMuraFeather_InnerRight_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerTop_Int32 = 2203)] =
+                "DriverRequestedMuraFeather_InnerTop_Int32"),
+              (e[(e.DriverRequestedMuraFeather_InnerBottom_Int32 = 2204)] =
+                "DriverRequestedMuraFeather_InnerBottom_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterLeft_Int32 = 2205)] =
+                "DriverRequestedMuraFeather_OuterLeft_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterRight_Int32 = 2206)] =
+                "DriverRequestedMuraFeather_OuterRight_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterTop_Int32 = 2207)] =
+                "DriverRequestedMuraFeather_OuterTop_Int32"),
+              (e[(e.DriverRequestedMuraFeather_OuterBottom_Int32 = 2208)] =
+                "DriverRequestedMuraFeather_OuterBottom_Int32"),
+              (e[(e.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
+                "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+              (e[(e.AttachedDeviceId_String = 3e3)] =
+                "AttachedDeviceId_String"),
+              (e[(e.SupportedButtons_Uint64 = 3001)] =
+                "SupportedButtons_Uint64"),
+              (e[(e.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
+              (e[(e.Axis1Type_Int32 = 3003)] = "Axis1Type_Int32"),
+              (e[(e.Axis2Type_Int32 = 3004)] = "Axis2Type_Int32"),
+              (e[(e.Axis3Type_Int32 = 3005)] = "Axis3Type_Int32"),
+              (e[(e.Axis4Type_Int32 = 3006)] = "Axis4Type_Int32"),
+              (e[(e.ControllerRoleHint_Int32 = 3007)] =
+                "ControllerRoleHint_Int32"),
+              (e[(e.FieldOfViewLeftDegrees_Float = 4e3)] =
+                "FieldOfViewLeftDegrees_Float"),
+              (e[(e.FieldOfViewRightDegrees_Float = 4001)] =
+                "FieldOfViewRightDegrees_Float"),
+              (e[(e.FieldOfViewTopDegrees_Float = 4002)] =
+                "FieldOfViewTopDegrees_Float"),
+              (e[(e.FieldOfViewBottomDegrees_Float = 4003)] =
+                "FieldOfViewBottomDegrees_Float"),
+              (e[(e.TrackingRangeMinimumMeters_Float = 4004)] =
+                "TrackingRangeMinimumMeters_Float"),
+              (e[(e.TrackingRangeMaximumMeters_Float = 4005)] =
+                "TrackingRangeMaximumMeters_Float"),
+              (e[(e.ModeLabel_String = 4006)] = "ModeLabel_String"),
+              (e[(e.IconPathName_String = 5e3)] = "IconPathName_String"),
+              (e[(e.NamedIconPathDeviceOff_String = 5001)] =
+                "NamedIconPathDeviceOff_String"),
+              (e[(e.NamedIconPathDeviceSearching_String = 5002)] =
+                "NamedIconPathDeviceSearching_String"),
+              (e[(e.NamedIconPathDeviceSearchingAlert_String = 5003)] =
+                "NamedIconPathDeviceSearchingAlert_String"),
+              (e[(e.NamedIconPathDeviceReady_String = 5004)] =
+                "NamedIconPathDeviceReady_String"),
+              (e[(e.NamedIconPathDeviceReadyAlert_String = 5005)] =
+                "NamedIconPathDeviceReadyAlert_String"),
+              (e[(e.NamedIconPathDeviceNotReady_String = 5006)] =
+                "NamedIconPathDeviceNotReady_String"),
+              (e[(e.NamedIconPathDeviceStandby_String = 5007)] =
+                "NamedIconPathDeviceStandby_String"),
+              (e[(e.NamedIconPathDeviceAlertLow_String = 5008)] =
+                "NamedIconPathDeviceAlertLow_String"),
+              (e[(e.DisplayHiddenArea_Binary_Start = 5100)] =
+                "DisplayHiddenArea_Binary_Start"),
+              (e[(e.DisplayHiddenArea_Binary_End = 5150)] =
+                "DisplayHiddenArea_Binary_End"),
+              (e[(e.ParentContainer = 5151)] = "ParentContainer"),
+              (e[(e.UserConfigPath_String = 6e3)] = "UserConfigPath_String"),
+              (e[(e.InstallPath_String = 6001)] = "InstallPath_String"),
+              (e[(e.HasDisplayComponent_Bool = 6002)] =
+                "HasDisplayComponent_Bool"),
+              (e[(e.HasControllerComponent_Bool = 6003)] =
+                "HasControllerComponent_Bool"),
+              (e[(e.HasCameraComponent_Bool = 6004)] =
+                "HasCameraComponent_Bool"),
+              (e[(e.HasDriverDirectModeComponent_Bool = 6005)] =
+                "HasDriverDirectModeComponent_Bool"),
+              (e[(e.HasVirtualDisplayComponent_Bool = 6006)] =
+                "HasVirtualDisplayComponent_Bool"),
+              (e[(e.HasSpatialAnchorsSupport_Bool = 6007)] =
+                "HasSpatialAnchorsSupport_Bool"),
+              (e[(e.ControllerType_String = 7e3)] = "ControllerType_String"),
+              (e[(e.LegacyInputProfile_String = 7001)] =
+                "LegacyInputProfile_String"),
+              (e[(e.VendorSpecific_Reserved_Start = 1e4)] =
+                "VendorSpecific_Reserved_Start"),
+              (e[(e.VendorSpecific_Reserved_End = 10999)] =
+                "VendorSpecific_Reserved_End"),
+              (e[(e.TrackedDeviceProperty_Max = 1e6)] =
+                "TrackedDeviceProperty_Max");
+          })(K || (K = {}));
       },
-      230: (e, t, o) => {
+      59: (e, t, r) => {
         "use strict";
-        function r(e, t) {
+        function o(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
         }
         function n(e) {
           return (function (e, t) {
             if (!e) return !1;
-            const [o, n] = t.split(".", 2);
-            return o && n && r(e, o) && n in e.SteamClient[o];
+            const [r, n] = t.split(".", 2);
+            return r && n && o(e, r) && n in e.SteamClient[r];
           })(window, e);
         }
-        o.d(t, { U5: () => n });
+        r.d(t, { U5: () => n });
       },
-      239: (e, t, o) => {
+      492: (e, t, r) => {
         "use strict";
-        function r(e, t) {
+        function o(e, t) {
           return (function (e, t) {
-            let o = e.findIndex(t);
-            return o >= 0 && (e.splice(o, 1), !0);
+            let r = e.findIndex(t);
+            return r >= 0 && (e.splice(r, 1), !0);
           })(e, (e) => t == e);
         }
-        o.d(t, { Zf: () => r });
+        r.d(t, { Zf: () => o });
       },
-      392: (e, t, o) => {
+      2: (e, t, r) => {
         "use strict";
-        function r(e, t, o) {
+        function o(e, t, r) {
           return {
             get() {
-              let e = o.value.bind(this);
+              let e = r.value.bind(this);
               return (
                 this.hasOwnProperty(t) ||
                   Object.defineProperty(this, t, { value: e }),
@@ -11737,14 +12066,14 @@ var CLSTAMP = "8056184";
             },
           };
         }
-        o.d(t, { a: () => r });
+        r.d(t, { a: () => o });
       },
-      487: (e, t, o) => {
+      664: (e, t, r) => {
         "use strict";
-        o.d(t, { Ar: () => l, Hf: () => u, pB: () => a, vq: () => g });
-        var r = o(655),
-          n = o(239),
-          i = o(392);
+        r.d(t, { Ar: () => l, Hf: () => u, pB: () => a, vq: () => g });
+        var o = r(655),
+          n = r(492),
+          i = r(2);
         class a {
           constructor() {
             this.m_vecCallbacks = [];
@@ -11803,7 +12132,7 @@ var CLSTAMP = "8056184";
             (this.m_fnCallback = void 0), e();
           }
         }
-        (0, r.gn)([i.a], l.prototype, "ScheduledInternal", null);
+        (0, o.gn)([i.a], l.prototype, "ScheduledInternal", null);
         class u {
           constructor() {
             this.m_vecCallbacks = [];
@@ -11822,12 +12151,12 @@ var CLSTAMP = "8056184";
             return this.Unregister;
           }
         }
-        (0, r.gn)([i.a], u.prototype, "Unregister", null);
+        (0, o.gn)([i.a], u.prototype, "Unregister", null);
       },
-      7: (e, t, o) => {
+      475: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
-          ? (o.p = window.VALVE_PUBLIC_PATH)
+          ? (r.p = window.VALVE_PUBLIC_PATH)
           : console.error(
               "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet"
             ),
@@ -11836,56 +12165,56 @@ var CLSTAMP = "8056184";
             "Should not include prototypejs."
           );
       },
-      655: (e, t, o) => {
+      655: (e, t, r) => {
         "use strict";
-        o.d(t, { _T: () => r, gn: () => n, mG: () => i });
-        function r(e, t) {
-          var o = {};
-          for (var r in e)
-            Object.prototype.hasOwnProperty.call(e, r) &&
-              t.indexOf(r) < 0 &&
-              (o[r] = e[r]);
+        r.d(t, { _T: () => o, gn: () => n, mG: () => i });
+        function o(e, t) {
+          var r = {};
+          for (var o in e)
+            Object.prototype.hasOwnProperty.call(e, o) &&
+              t.indexOf(o) < 0 &&
+              (r[o] = e[o]);
           if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
             var n = 0;
-            for (r = Object.getOwnPropertySymbols(e); n < r.length; n++)
-              t.indexOf(r[n]) < 0 &&
-                Object.prototype.propertyIsEnumerable.call(e, r[n]) &&
-                (o[r[n]] = e[r[n]]);
+            for (o = Object.getOwnPropertySymbols(e); n < o.length; n++)
+              t.indexOf(o[n]) < 0 &&
+                Object.prototype.propertyIsEnumerable.call(e, o[n]) &&
+                (r[o[n]] = e[o[n]]);
           }
-          return o;
+          return r;
         }
-        function n(e, t, o, r) {
+        function n(e, t, r, o) {
           var n,
             i = arguments.length,
             a =
               i < 3
                 ? t
-                : null === r
-                ? (r = Object.getOwnPropertyDescriptor(t, o))
-                : r;
+                : null === o
+                ? (o = Object.getOwnPropertyDescriptor(t, r))
+                : o;
           if (
             "object" == typeof Reflect &&
             "function" == typeof Reflect.decorate
           )
-            a = Reflect.decorate(e, t, o, r);
+            a = Reflect.decorate(e, t, r, o);
           else
             for (var s = e.length - 1; s >= 0; s--)
               (n = e[s]) &&
-                (a = (i < 3 ? n(a) : i > 3 ? n(t, o, a) : n(t, o)) || a);
-          return i > 3 && a && Object.defineProperty(t, o, a), a;
+                (a = (i < 3 ? n(a) : i > 3 ? n(t, r, a) : n(t, r)) || a);
+          return i > 3 && a && Object.defineProperty(t, r, a), a;
         }
-        function i(e, t, o, r) {
-          return new (o || (o = Promise))(function (n, i) {
+        function i(e, t, r, o) {
+          return new (r || (r = Promise))(function (n, i) {
             function a(e) {
               try {
-                g(r.next(e));
+                g(o.next(e));
               } catch (e) {
                 i(e);
               }
             }
             function s(e) {
               try {
-                g(r.throw(e));
+                g(o.throw(e));
               } catch (e) {
                 i(e);
               }
@@ -11895,13 +12224,13 @@ var CLSTAMP = "8056184";
               e.done
                 ? n(e.value)
                 : ((t = e.value),
-                  t instanceof o
+                  t instanceof r
                     ? t
-                    : new o(function (e) {
+                    : new r(function (e) {
                         e(t);
                       })).then(a, s);
             }
-            g((r = r.apply(e, t || [])).next());
+            g((o = o.apply(e, t || [])).next());
           });
         }
         Object.create;
@@ -11920,10 +12249,10 @@ var CLSTAMP = "8056184";
   function __webpack_require__(e) {
     var t = __webpack_module_cache__[e];
     if (void 0 !== t) return t.exports;
-    var o = (__webpack_module_cache__[e] = { exports: {} });
+    var r = (__webpack_module_cache__[e] = { exports: {} });
     return (
-      __webpack_modules__[e].call(o.exports, o, o.exports, __webpack_require__),
-      o.exports
+      __webpack_modules__[e].call(r.exports, r, r.exports, __webpack_require__),
+      r.exports
     );
   }
   (__webpack_require__.m = __webpack_modules__),
@@ -11932,16 +12261,16 @@ var CLSTAMP = "8056184";
       return __webpack_require__.d(t, { a: t }), t;
     }),
     (__webpack_require__.d = (e, t) => {
-      for (var o in t)
-        __webpack_require__.o(t, o) &&
-          !__webpack_require__.o(e, o) &&
-          Object.defineProperty(e, o, { enumerable: !0, get: t[o] });
+      for (var r in t)
+        __webpack_require__.o(t, r) &&
+          !__webpack_require__.o(e, r) &&
+          Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
     }),
     (__webpack_require__.f = {}),
     (__webpack_require__.e = (e) =>
       Promise.all(
         Object.keys(__webpack_require__.f).reduce(
-          (t, o) => (__webpack_require__.f[o](e, t), t),
+          (t, r) => (__webpack_require__.f[r](e, t), t),
           []
         )
       )),
@@ -11949,7 +12278,7 @@ var CLSTAMP = "8056184";
       "javascript/legacy_web/" +
       { 380: "desktop", 511: "gamepad" }[e] +
       ".js?contenthash=" +
-      { 380: "cb2013b4846896f2c10d", 511: "b08be145ed03efa38d79" }[e]),
+      { 380: "828c953a8cad49757d1c", 511: "951e8b4152582d1199d2" }[e]),
     (__webpack_require__.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
     (__webpack_require__.g = (function () {
@@ -11964,11 +12293,11 @@ var CLSTAMP = "8056184";
       Object.prototype.hasOwnProperty.call(e, t)),
     (inProgress = {}),
     (dataWebpackPrefix = "legacy_web:"),
-    (__webpack_require__.l = (e, t, o, r) => {
+    (__webpack_require__.l = (e, t, r, o) => {
       if (inProgress[e]) inProgress[e].push(t);
       else {
         var n, i;
-        if (void 0 !== o)
+        if (void 0 !== r)
           for (
             var a = document.getElementsByTagName("script"), s = 0;
             s < a.length;
@@ -11977,7 +12306,7 @@ var CLSTAMP = "8056184";
             var g = a[s];
             if (
               g.getAttribute("src") == e ||
-              g.getAttribute("data-webpack") == dataWebpackPrefix + o
+              g.getAttribute("data-webpack") == dataWebpackPrefix + r
             ) {
               n = g;
               break;
@@ -11989,19 +12318,19 @@ var CLSTAMP = "8056184";
           (n.timeout = 120),
           __webpack_require__.nc &&
             n.setAttribute("nonce", __webpack_require__.nc),
-          n.setAttribute("data-webpack", dataWebpackPrefix + o),
+          n.setAttribute("data-webpack", dataWebpackPrefix + r),
           (n.src = e)),
           (inProgress[e] = [t]);
-        var l = (t, o) => {
+        var l = (t, r) => {
             (n.onerror = n.onload = null), clearTimeout(u);
-            var r = inProgress[e];
+            var o = inProgress[e];
             if (
               (delete inProgress[e],
               n.parentNode && n.parentNode.removeChild(n),
-              r && r.forEach((e) => e(o)),
+              o && o.forEach((e) => e(r)),
               t)
             )
-              return t(o);
+              return t(r);
           },
           u = setTimeout(
             l.bind(null, void 0, { type: "timeout", target: n }),
@@ -12024,8 +12353,8 @@ var CLSTAMP = "8056184";
         (e = __webpack_require__.g.location + "");
       var t = __webpack_require__.g.document;
       if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
-        var o = t.getElementsByTagName("script");
-        o.length && (e = o[o.length - 1].src);
+        var r = t.getElementsByTagName("script");
+        r.length && (e = r[r.length - 1].src);
       }
       if (!e)
         throw new Error(
@@ -12038,36 +12367,36 @@ var CLSTAMP = "8056184";
         (__webpack_require__.p = e + "../../");
     })(),
     (loadStylesheet = (e) =>
-      new Promise((t, o) => {
-        var r = __webpack_require__.miniCssF(e),
-          n = __webpack_require__.p + r;
+      new Promise((t, r) => {
+        var o = __webpack_require__.miniCssF(e),
+          n = __webpack_require__.p + o;
         if (
           ((e, t) => {
             for (
-              var o = document.getElementsByTagName("link"), r = 0;
-              r < o.length;
-              r++
+              var r = document.getElementsByTagName("link"), o = 0;
+              o < r.length;
+              o++
             ) {
               var n =
-                (a = o[r]).getAttribute("data-href") || a.getAttribute("href");
+                (a = r[o]).getAttribute("data-href") || a.getAttribute("href");
               if ("stylesheet" === a.rel && (n === e || n === t)) return a;
             }
             var i = document.getElementsByTagName("style");
-            for (r = 0; r < i.length; r++) {
+            for (o = 0; o < i.length; o++) {
               var a;
-              if ((n = (a = i[r]).getAttribute("data-href")) === e || n === t)
+              if ((n = (a = i[o]).getAttribute("data-href")) === e || n === t)
                 return a;
             }
-          })(r, n)
+          })(o, n)
         )
           return t();
-        ((e, t, o, r) => {
+        ((e, t, r, o) => {
           var n = document.createElement("link");
           (n.rel = "stylesheet"),
             (n.type = "text/css"),
             (n.onerror = n.onload =
               (i) => {
-                if (((n.onerror = n.onload = null), "load" === i.type)) o();
+                if (((n.onerror = n.onload = null), "load" === i.type)) r();
                 else {
                   var a = i && ("load" === i.type ? "missing" : i.type),
                     s = (i && i.target && i.target.href) || t,
@@ -12078,12 +12407,12 @@ var CLSTAMP = "8056184";
                     (g.type = a),
                     (g.request = s),
                     n.parentNode.removeChild(n),
-                    r(g);
+                    o(g);
                 }
               }),
             (n.href = t),
             document.head.appendChild(n);
-        })(e, n, t, o);
+        })(e, n, t, r);
       })),
     (installedCssChunks = { 179: 0 }),
     (__webpack_require__.f.miniCss = (e, t) => {
@@ -12104,30 +12433,30 @@ var CLSTAMP = "8056184";
     }),
     (() => {
       var e = { 179: 0 };
-      __webpack_require__.f.j = (t, o) => {
-        var r = __webpack_require__.o(e, t) ? e[t] : void 0;
-        if (0 !== r)
-          if (r) o.push(r[2]);
+      __webpack_require__.f.j = (t, r) => {
+        var o = __webpack_require__.o(e, t) ? e[t] : void 0;
+        if (0 !== o)
+          if (o) r.push(o[2]);
           else {
-            var n = new Promise((o, n) => (r = e[t] = [o, n]));
-            o.push((r[2] = n));
+            var n = new Promise((r, n) => (o = e[t] = [r, n]));
+            r.push((o[2] = n));
             var i = __webpack_require__.p + __webpack_require__.u(t),
               a = new Error();
             __webpack_require__.l(
               i,
-              (o) => {
+              (r) => {
                 if (
                   __webpack_require__.o(e, t) &&
-                  (0 !== (r = e[t]) && (e[t] = void 0), r)
+                  (0 !== (o = e[t]) && (e[t] = void 0), o)
                 ) {
-                  var n = o && ("load" === o.type ? "missing" : o.type),
-                    i = o && o.target && o.target.src;
+                  var n = r && ("load" === r.type ? "missing" : r.type),
+                    i = r && r.target && r.target.src;
                   (a.message =
                     "Loading chunk " + t + " failed.\n(" + n + ": " + i + ")"),
                     (a.name = "ChunkLoadError"),
                     (a.type = n),
                     (a.request = i),
-                    r[1](a);
+                    o[1](a);
                 }
               },
               "chunk-" + t,
@@ -12135,45 +12464,45 @@ var CLSTAMP = "8056184";
             );
           }
       };
-      var t = (t, o) => {
-          var r,
+      var t = (t, r) => {
+          var o,
             n,
-            [i, a, s] = o,
+            [i, a, s] = r,
             g = 0;
           if (i.some((t) => 0 !== e[t])) {
-            for (r in a)
-              __webpack_require__.o(a, r) && (__webpack_require__.m[r] = a[r]);
+            for (o in a)
+              __webpack_require__.o(a, o) && (__webpack_require__.m[o] = a[o]);
             if (s) s(__webpack_require__);
           }
-          for (t && t(o); g < i.length; g++)
+          for (t && t(r); g < i.length; g++)
             (n = i[g]),
               __webpack_require__.o(e, n) && e[n] && e[n][0](),
               (e[n] = 0);
         },
-        o = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
-      o.forEach(t.bind(null, 0)), (o.push = t.bind(null, o.push.bind(o)));
+        r = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
+      r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
   var __webpack_exports__ = {};
   (() => {
     "use strict";
     var e = __webpack_require__(655),
-      t = (__webpack_require__(7), __webpack_require__(311)),
-      o = __webpack_require__.n(t),
-      r = __webpack_require__(898),
-      n = __webpack_require__(168);
+      t = (__webpack_require__(475), __webpack_require__(311)),
+      r = __webpack_require__.n(t),
+      o = __webpack_require__(310),
+      n = __webpack_require__(881);
     function i(t) {
       return (0, e.mG)(this, void 0, void 0, function* () {
         const { InitializeGamepadNavigation: e } = yield __webpack_require__
           .e(511)
-          .then(__webpack_require__.bind(__webpack_require__, 945));
+          .then(__webpack_require__.bind(__webpack_require__, 449));
         e(t);
       });
     }
     __webpack_require__.p.endsWith("shared/") ||
       (__webpack_require__.p = __webpack_require__.p + "shared/"),
-      o()(function () {
+      r()(function () {
         !(function () {
-          const t = new r.B();
+          const t = new o.B();
           navigator.userAgent.includes("Valve Steam Gamepad")
             ? i(t)
             : (0, n.U5)("BrowserView.RegisterForMessageFromParent") &&
@@ -12182,7 +12511,7 @@ var CLSTAMP = "8056184";
                 (0, e.mG)(this, void 0, void 0, function* () {
                   const { InitializeForDesktop: e } = yield __webpack_require__
                     .e(380)
-                    .then(__webpack_require__.bind(__webpack_require__, 206));
+                    .then(__webpack_require__.bind(__webpack_require__, 243));
                   e();
                 });
               })()

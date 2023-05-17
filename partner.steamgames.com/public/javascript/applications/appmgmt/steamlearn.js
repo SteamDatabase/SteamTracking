@@ -5774,7 +5774,7 @@
       var Ze = r(5615),
         Ke = r(54856),
         qe =
-          (r(51637),
+          (r(42770),
           r(52868),
           r(23217),
           r(63403),
@@ -7025,7 +7025,7 @@
         };
       var fr = r(67736),
         Br = r(58127);
-      r(31782);
+      r(51438);
       const br = (e) => {
           const [t, r] = n.useState(e.arrVersions[0]);
           return n.createElement(
@@ -7310,6 +7310,7 @@
                   (0, Ht.Xx)("#SteamLearn_Project_Discard")
                 ),
               0 == c &&
+                s.published_configs().length > 0 &&
                 !E &&
                 n.createElement(
                   "div",
@@ -13986,7 +13987,7 @@
                 M &&
                   n.createElement(
                     "div",
-                    { className: Ea.TrainLive },
+                    { onClick: () => _(0), className: Ea.TrainLive },
                     (0, Ht.Xx)("#SteamLearn_Status_InferenceLive")
                   ),
                 n.createElement(

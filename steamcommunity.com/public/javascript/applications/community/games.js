@@ -1700,6 +1700,11 @@
                     bw: d.Xc.writeFixed64String,
                   },
                   appid: { n: 2, br: d.FE.readUint32, bw: d.Xc.writeUint32 },
+                  shortcutid: {
+                    n: 3,
+                    br: d.FE.readUint32,
+                    bw: d.Xc.writeUint32,
+                  },
                   page: {
                     n: 4,
                     d: 1,
@@ -4395,7 +4400,7 @@
       var Ae = r(65406),
         Le = r(4306),
         Ne = r(66294),
-        De = r(31782),
+        De = r(51438),
         Ie = r(83145),
         xe = r(57605),
         ke = r(5029),
@@ -4548,7 +4553,7 @@
           })
         );
       }
-      var ot = r(51637),
+      var ot = r(42770),
         ct = r(40103),
         ut = r(44026),
         mt = r(30928),

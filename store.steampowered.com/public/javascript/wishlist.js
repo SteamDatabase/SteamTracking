@@ -294,6 +294,7 @@ CWishlistController.prototype.BuildElements = function()
 				// @todo inject placeholder app info here so users can remove dead apps from their wishlists?
 				continue
 			}
+			var subForPurchase = rgAppInfo.subs && rgAppInfo.subs.length ? rgAppInfo.subs[0] : undefined;
 
 			var strScreenshots = '';
 			for( var i=0; i<rgAppInfo.screenshots.length; i++ )
@@ -308,16 +309,22 @@ CWishlistController.prototype.BuildElements = function()
 			}
 
 			var strEarlyAccess = rgAppInfo.early_access ? '<span class="earlyaccess">'+"Early Access"+'</span>' : '';
-			var strPurchaseArea = '<div class="purchase_area">' + ( rgAppInfo['subs'][0] ? rgAppInfo['subs'][0]['discount_block'] : '' );
+			var strPurchaseArea = '<div class="purchase_area">';
+
+			// output the discount block HTML returned from PHP
+			if ( subForPurchase )
+				strPurchaseArea += subForPurchase['discount_block'];
+
 			var strInCartLabel = ( GDynamicStore.s_rgAppsInCart[ wishlist.appid ] ) ? "In Cart" : ( rgAppInfo['free_promo'] ? "Add to Account" : "Add to Cart");
 
-			if( rgAppInfo['subs'] && rgAppInfo['subs'].length == 1 && ( rgAppInfo['subs'][0].price > 0 || rgAppInfo['free_promo'] ) )
+			if( subForPurchase && ( subForPurchase.price > 0 || rgAppInfo['free_promo'] ) )
 			{
-				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"https:\/\/store.steampowered.com\/%5$s\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium noicon\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium icon\" href=\"javascript:addToCart(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/ico\/wishlist\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"			.replace(/%1\$s/g,rgAppInfo.subs[0].id)
+				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"https:\/\/store.steampowered.com\/%5$s\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium noicon\" href=\"javascript:%6$s(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium icon\" href=\"javascript:%6$s(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/ico\/wishlist\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form>"				.replace(/%1\$s/g, subForPurchase.packageid ? subForPurchase.packageid : subForPurchase.bundleid )
 				.replace(/%2\$s/g,g_sessionID)
 				.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
 				.replace(/%4\$s/g,strInCartLabel)
-				.replace(/%5\$s/g, rgAppInfo['free_promo']?'checkout/addfreelicense':'cart');
+				.replace(/%5\$s/g, rgAppInfo['free_promo']?'checkout/addfreelicense':'cart')
+				.replace(/%6\$s/g, subForPurchase.packageid ? 'addToCart' : 'addBundleToCart' );
 			}
 			else if( rgAppInfo['prerelease'] )
 			{
@@ -338,15 +345,17 @@ CWishlistController.prototype.BuildElements = function()
 					strURL = 'javascript:ShowGotSteamModal(\''+strURL+'\', %2$s, &quot;Play this game now&quot; )';
 				}
 
-				strPurchaseArea += "<a class=\"btn_green_steamui btn_medium\" href=\"%4$s\"><span>%3$s<\/span><\/a><\/div>"					.replace ( /%4\$s/g, strURL  )
+				strPurchaseArea += "<a class=\"btn_green_steamui btn_medium\" href=\"%4$s\"><span>%3$s<\/span><\/a>"					.replace ( /%4\$s/g, strURL  )
 					.replace ( /%1\$s/g, wishlist.appid  )
 					.replace ( /%2\$s/g, V_EscapeHTML( JSON.stringify( rgAppInfo.name ) ) )
 					.replace ( /%3\$s/g, rgAppInfo['type'] == 'Video' ? "Watch Now" : strPlayButton )
 			}
 			else
 			{
-				strPurchaseArea += '<a class="btn_blue_steamui btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"View Details"+'</span></a><a class="btn_blue_steamui btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://store.cloudflare.steamstatic.com/public/images/v6/ico/wishlist/ico_info.png"></span></a></div>';
+				strPurchaseArea += '<a class="btn_blue_steamui btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"View Details"+'</span></a><a class="btn_blue_steamui btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://store.cloudflare.steamstatic.com/public/images/v6/ico/wishlist/ico_info.png"></span></a>';
 			}
+
+			strPurchaseArea += '</div>'; // div class="purchase_area opened above
 
 			var options = {  year: 'numeric', month: 'numeric', day: 'numeric' };
 			var date = new Date(rgAppInfo['added'] * 1000);
