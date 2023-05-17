@@ -425,7 +425,9 @@
  T SDL_GetBasePath
  T SDL_GetCPUCacheLineSize
  T SDL_GetCPUCount
+ T SDL_GetClipboardData
  T SDL_GetClipboardText
+ T SDL_GetClipboardUserdata
  T SDL_GetClosestFullscreenDisplayMode
  T SDL_GetCurrentAudioDriver
  T SDL_GetCurrentDisplayMode
@@ -678,6 +680,7 @@
  T SDL_HasAVX2
  T SDL_HasAVX512F
  T SDL_HasAltiVec
+ T SDL_HasClipboardData
  T SDL_HasClipboardText
  T SDL_HasEvent
  T SDL_HasEvents
@@ -830,6 +833,7 @@
  T SDL_SendJoystickEffect
  T SDL_SetAssertionHandler
  T SDL_SetAudioStreamFormat
+ T SDL_SetClipboardData
  T SDL_SetClipboardText
  T SDL_SetCursor
  T SDL_SetError

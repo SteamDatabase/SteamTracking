@@ -32851,6 +32851,28 @@ div.NarrowRightPanel
   max-height: 700px;
   height: 76vh;
 }
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 18px;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown:hover,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown:hover {
+  background: #464d58;
+  color: #fff;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown_Arrow,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown_Arrow {
+  position: unset;
+  height: 18px;
+}
 .euladialog_EULAThrobber_1gwU6 {
   flex: 1;
 }
@@ -46791,6 +46813,9 @@ div.LowPerfMode
   margin-left: 12px;
   padding: 0.25em 0;
   cursor: pointer;
+}
+.appdetailsnotessection_NoteLink_2L6II.appdetailsnotessection_Untitled_AvA0n {
+  font-style: italic;
 }
 .appdetailsnotessection_NoteLink_2L6II.appdetailsnotessection_ViewAllLink_2AEMZ {
   margin-top: 12px;

@@ -2626,6 +2626,8 @@
   "UserGameNotes_WindowOpacity": "Set window opacity",
   "UserGameNotes_NotesListView": "Notes list",
   "UserGameNotes_ClickToOpenLink": "Middle-click to open",
+  "UserGameNotes_ImageTooLarge": "The pasted image was too large",
+  "UserGameNotes_Untitled": "Untitled",
 
   "FormattingToolbar_Undo": "Undo",
   "FormattingToolbar_Redo": "Redo",
