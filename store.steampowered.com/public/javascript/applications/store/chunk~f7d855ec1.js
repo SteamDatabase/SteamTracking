@@ -5068,7 +5068,7 @@
               )
             : null;
         }
-        return A.L7.logged_in
+        return A.L7.logged_in || "test" == t || "nologinrequired" == t
           ? a.createElement(
               ht.zx,
               {
