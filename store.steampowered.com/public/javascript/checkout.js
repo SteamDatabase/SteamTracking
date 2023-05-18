@@ -5702,7 +5702,7 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 			}
 			else if ( g_bIsInSteamDeck )
 			{
-				SetUpCreditCardAuthentication( 'https://store.steampowered.com/checkout/beginauthentication/?transid='+txnid, params );
+				OpenUrlInNewBlankWindow( 'https://store.steampowered.com/checkout/beginauthentication/?transid='+txnid )
 			}
 			else
 			{
