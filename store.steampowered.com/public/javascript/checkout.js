@@ -5689,9 +5689,30 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
   		return;
 
 		case 2:
-										var params = [];
+						var params = [];
+			if ( g_bInMobile )
+			{
+				ShowAlertDialog( 'Your transaction requires authentication',
+				'You will now be redirected to authenticate this purchase with your issuing bank.',
+				'OK'
+				).done( function() {
+				var auth_url = encodeURIComponent( 'https://store.steampowered.com/checkout/beginauthentication/?transid='+txnid );
+				window.location = "steammobile://openurl?url=" + encodeURIComponent( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + txnid + '&authurl='+auth_url + '&s=' + g_sessionID );
+				});
+			}
+			else if ( g_bIsInSteamDeck )
+			{
 				SetUpCreditCardAuthentication( 'https://store.steampowered.com/checkout/beginauthentication/?transid='+txnid, params );
-						g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 15*1000 );
+			}
+			else
+			{
+				params.push( { name: "MD", value: authentication_data.md } );
+				params.push( { name: "PaReq", value: authentication_data.pa_request } );
+				params.push( { name: "TermUrl", value: authentication_data.term_url } );
+
+				SetUpCreditCardAuthentication( authentication_data.issuer_url, params );
+			}
+			g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 15*1000 );
 			return;
 
 		case 3:
