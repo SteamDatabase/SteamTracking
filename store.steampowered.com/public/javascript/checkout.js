@@ -5690,11 +5690,7 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 
 		case 2:
 										var params = [];
-				params.push( { name: "MD", value: authentication_data.md } );
-				params.push( { name: "PaReq", value: authentication_data.pa_request } );
-				params.push( { name: "TermUrl", value: authentication_data.term_url } );
-
-				SetUpCreditCardAuthentication( authentication_data.issuer_url, params );
+				SetUpCreditCardAuthentication( 'https://store.steampowered.com/checkout/beginauthentication/?transid='+txnid, params );
 						g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 15*1000 );
 			return;
 
