@@ -616,3 +616,7 @@ message CMsgMonitorInfo {
 	required string selected_display_name = 1;
 	repeated .CMsgMonitorInfo.MonitorInfo monitors = 2;
 }
+
+message CMsgGenerateSystemReportReply {
+	optional string report_id = 1;
+}

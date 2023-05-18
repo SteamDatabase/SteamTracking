@@ -188,6 +188,9 @@
  CompareAndSwap
  CopyPlane
  Coroutine_Continue
+ Coroutine_Create
+ Coroutine_IsActive
+ Coroutine_IsAddressInOurStack
  Coroutine_YieldToMain
  CreateAudioResampler
  CreateVideoPlayer
@@ -1130,6 +1133,7 @@
  Test_TerminateThread
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
+ ThreadGetProcessExitCode
  ThreadImplOneTimeInit
  ThreadInMainThread
  ThreadInterlockedAssignIf
@@ -1151,6 +1155,7 @@
  ThreadShellExecute
  ThreadShellExecuteNoWindow
  ThreadSleep
+ ThreadTerminateProcessCode
  VProfInternalEnterScopeCurrentThread
  VProfInternalGetProfileForCurrentThread
  V_AppendParamToURL
@@ -1402,6 +1407,7 @@
  dlopen
  dlsym
  dup
+ dup2
  dyld_stub_binder
  ecp_nistz256_from_mont
  ecp_nistz256_gather_w5
@@ -1434,6 +1440,7 @@
  fmodf
  fnmatch
  fopen
+ fork
  fprintf
  fputc
  fputs
@@ -1604,6 +1611,7 @@
  memset_pattern16
  mkdir
  mkstemp
+ mktemp
  mktime
  mlock
  mmap
@@ -1698,6 +1706,7 @@
  rc4_md5_enc
  read
  readdir$INODE64
+ readlink
  realloc
  reallocf
  realpath$DARWIN_EXTSN
@@ -1850,8 +1859,10 @@
  strtoull
  strtouq
  swprintf
+ symlink
  sysctl
  sysctlbyname
+ system
  tcgetattr
  tcsetattr
  thread_info
@@ -1880,6 +1891,7 @@
  typeinfo for void*
  umask
  unlink
+ unsetenv
  usleep
  utime
  v8::Array::Length() const

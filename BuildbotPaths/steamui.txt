@@ -54,6 +54,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/pipes.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processworkitem.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
@@ -77,6 +78,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/htmlwindow/htmlwindow.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/htmlwindow/htmlwindowcontroller.cpp
@@ -191,6 +193,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsortvector.h
@@ -291,6 +294,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemaudiocontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemdevkitcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemreportcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/avatarimage.cpp

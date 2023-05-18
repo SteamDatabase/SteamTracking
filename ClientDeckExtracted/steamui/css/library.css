@@ -818,6 +818,7 @@ button.TextButton.gpfocus {
   position: absolute;
   z-index: 1600;
   overflow: auto;
+  -webkit-app-region: none;
 }
 .DialogMenuPosition:not(.visible) {
   opacity: 0;

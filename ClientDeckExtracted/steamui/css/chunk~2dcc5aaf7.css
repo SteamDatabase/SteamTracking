@@ -18590,6 +18590,160 @@ button.keyboardsettings_ShowKeyboardButton_3vbFn svg {
   padding: 15px;
   white-space: pre;
 }
+@keyframes systemreport_ItemFocusAnim-darkerGrey-nocolor_3Rgz_ {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes systemreport_ItemFocusAnim-darkerGrey_JNNHS {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes systemreport_ItemFocusAnim-darkGrey_2OYB3 {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes systemreport_ItemFocusAnim-grey_3iewN {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes systemreport_ItemFocusAnimBorder-darkGrey_31DDk {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes systemreport_ItemFocusAnim-green_7MWRF {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes systemreport_focusAnimation_1E5XF {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes systemreport_hoverAnimation_37MtJ {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.systemreport_SystemReportDialog_2TAQY .DialogBody {
+  min-height: 0;
+}
+.systemreport_SystemReportDialog_2TAQY .DialogBody .DialogBodyText {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+.systemreport_SystemReportDialog_2TAQY
+  .DialogBody
+  .DialogBodyText
+  .systemreport_SystemReportContainer_7jaC6 {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.systemreport_SystemReportDialog_2TAQY
+  .DialogBody
+  .DialogBodyText
+  .systemreport_SystemReportContainer_7jaC6
+  .systemreport_TextContainer_Cw--c {
+  min-width: 200px;
+  min-height: 200px;
+  width: 100%;
+  height: 100%;
+  background-color: #3d4450;
+  overflow: scroll;
+  user-select: text;
+}
+.systemreport_SystemReportDialog_2TAQY
+  .DialogBody
+  .DialogBodyText
+  .systemreport_SystemReportContainer_7jaC6
+  .systemreport_TextContainer_Cw--c.DesktopUI,
+.DesktopUI
+  .systemreport_SystemReportDialog_2TAQY
+  .DialogBody
+  .DialogBodyText
+  .systemreport_SystemReportContainer_7jaC6
+  .systemreport_TextContainer_Cw--c {
+  background: #23262e;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.BasicUI
+  .systemreport_SystemReportDialog_2TAQY
+  .DialogBody
+  .DialogBodyText
+  .systemreport_SystemReportContainer_7jaC6
+  .systemreport_TextContainer_Cw--c {
+  max-height: 40vh;
+}
+.systemreport_SystemReportDialog_2TAQY
+  .DialogBody
+  .DialogBodyText
+  .systemreport_SystemReportContainer_7jaC6
+  .systemreport_TextContainer_Cw--c
+  .systemreport_Text_keUMR {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Consolas", "Lucida Console", monospace;
+  color: #dcdedf;
+  padding: 15px;
+  white-space: pre;
+}
 .personanameandstatus_statusAndName_3n8q8 {
   display: flex;
 }
@@ -32880,6 +33034,7 @@ div.NarrowRightPanel
   display: flex;
   flex-direction: column;
   min-height: 0;
+  flex: 1;
 }
 .BasicUI .euladialog_EULAScrolling__7lXD {
   margin: 0 -2.8vw;
@@ -32890,6 +33045,7 @@ div.NarrowRightPanel
   background: #23262e;
   overflow-wrap: anywhere;
   border-radius: 2px;
+  flex: 1;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);

@@ -934,6 +934,7 @@ BOffScreenRendererBrowser( eBrowserType )
 BDirectRendererBrowser( eBrowserType )
 pchVROverlayKey && pchVROverlayKey[0]
 CreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
+pOptions
 widevine
 !m_ChromeIPCClient.BInitialized()
 CHTMLController::CIPCTaskPost Thread
@@ -1153,6 +1154,8 @@ WebContentsOcclusion
 --disable-smooth-scrolling
 --disable-gpu-compositing --disable-gpu
 --disable-accelerated-video-decode
+--use-gl=desktop
+--use-cmd-decoder=passthrough
 --enable-gpu-debugging
 --disablehighdpi --force-device-scale-factor=1 --device-scale-factor=1
 --no-sandbox
@@ -1203,8 +1206,8 @@ m_fdShMem > 0
 iRet == 0
 res > 0
 m_tsQueueResponses
-m_sHTMLCacheDir
-m_strProxy
+m_options.strHTMLCacheDir
+m_options.strProxy
 m_ChromeConnection
 cef_log.txt
 SteamBootstrapper_GetLoggingDir
@@ -2373,13 +2376,18 @@ sc_schinese
 @
 
 
+
+
 @
 Ic
-H
+j
+"
+5
 
 
 0
 0
+;
 Hi
 `
 0
@@ -2425,7 +2433,6 @@ IcE
 IcE
 @
 @
-h
 V
 =
 =

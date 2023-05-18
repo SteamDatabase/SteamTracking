@@ -1269,6 +1269,7 @@ button.TextButton.gpfocus {
   position: absolute;
   z-index: 1600;
   overflow: auto;
+  -webkit-app-region: none;
 }
 .DialogMenuPosition:not(.visible) {
   opacity: 0;
@@ -2280,4 +2281,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=9e829a43125e3c6840c4*/
+/*# sourceMappingURL=friends.css.map?contenthash=0dcc54f835180225228a*/

@@ -2726,6 +2726,7 @@ https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreemen
 https://store.steampowered.com/checkout/addfreebundle/${bundleid}
 https://store.steampowered.com/checkout/addfreelicense/${}
 https://store.steampowered.com/checkout/authenticationdetails/
+https://store.steampowered.com/checkout/beginauthentication/?transid=${txnid}
 https://store.steampowered.com/checkout/canceltransaction/
 https://store.steampowered.com/checkout/cvv2explain/?webbasedpurchasing=1&type=${type}
 https://store.steampowered.com/checkout/emailvalidationstatus
@@ -2785,6 +2786,7 @@ https://store.steampowered.com/mobile
 https://store.steampowered.com/news/app/${appid}/view/${announcementid}/
 https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${transID}&authurl=${escapedUrl}&s=${g_sessionID}
 https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${transID}&authurl=${paypal_url}${}&s=${g_sessionID}
+https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${txnid}&authurl=${auth_url}&s=${g_sessionID}
 https://store.steampowered.com/pitstop
 https://store.steampowered.com/promotion/opencottagedoorajax
 https://store.steampowered.com/pub/${vanity_url}
@@ -3006,6 +3008,7 @@ steam://open/settings/customization
 steam://open/settings/friends
 steam://open/settings/voice
 steam://open/systeminfo
+steam://open/systemreport
 steam://open/workshop
 steam://openexternalforpid/
 steam://openurl/
