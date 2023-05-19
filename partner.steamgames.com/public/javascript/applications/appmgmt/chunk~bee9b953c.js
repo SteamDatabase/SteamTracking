@@ -3860,6 +3860,13 @@
             this.m_mapAppSaleSummaryChange.has(e.appid) &&
               this.m_mapAppSaleSummaryChange.get(e.appid).Dispatch(e);
         }
+        GetTopNApps(e) {
+          const t = Array.from(this.m_mapAppSaleSummary.values());
+          return (
+            t.sort((e, t) => (t.gross_sales_usd || 0) - e.gross_sales_usd),
+            t.slice(0, e)
+          );
+        }
         LoadApps(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             let t = [...e];

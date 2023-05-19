@@ -72,7 +72,7 @@
         ik: () => u,
         pA: () => b,
         rf: () => G,
-        u2: () => w,
+        u2: () => R,
         vc: () => _,
         xQ: () => a,
       });
@@ -1588,58 +1588,58 @@
           return "MembershipInvite";
         }
       }
-      class R extends s {
+      class w extends s {
         constructor(e = null) {
           super(),
-            R.prototype.invites || r.aR(R.M()),
+            w.prototype.invites || r.aR(w.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
                 fields: { invites: { n: 1, c: P, r: !0, q: !0 } },
               }),
-            R.sm_m
+            w.sm_m
           );
         }
         static MBF() {
-          return R.sm_mbf || (R.sm_mbf = r.Bh(R.M())), R.sm_mbf;
+          return w.sm_mbf || (w.sm_mbf = r.Bh(w.M())), w.sm_mbf;
         }
         toObject(e = !1) {
-          return R.toObject(e, this);
+          return w.toObject(e, this);
         }
         static toObject(e, t) {
-          return r.TA(R.M(), e, t);
+          return r.TA(w.M(), e, t);
         }
         static fromObject(e) {
-          return r.aD(R.M(), e);
+          return r.aD(w.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
-            i = new R();
-          return R.deserializeBinaryFromReader(i, t);
+            i = new w();
+          return w.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return r.F(R.MBF(), e, t);
+          return r.F(w.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          r.l2(R.M(), e, t);
+          r.l2(w.M(), e, t);
         }
         serializeBase64String() {
           var e = new n.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPartnerMembershipInvite_GetInvites_Response";
         }
       }
-      var w, B;
+      var R, B;
       !(function (e) {
         (e.GetSinglePartnerAppOptIn = function (e, t) {
           return e.SendMsg("Publishing.GetSinglePartnerAppOptIn#1", t, k, {
@@ -1702,10 +1702,10 @@
               ePrivilege: 1,
             });
           });
-      })(w || (w = {})),
+      })(R || (R = {})),
         (function (e) {
           e.GetInvites = function (e, t) {
-            return e.SendMsg("PartnerMembershipInvite.GetInvites#1", t, R, {
+            return e.SendMsg("PartnerMembershipInvite.GetInvites#1", t, w, {
               bConstMethod: !0,
               ePrivilege: 11,
             });
@@ -3315,7 +3315,13 @@
     },
     23457: (e, t, i) => {
       "use strict";
-      i.d(t, { Hf: () => S, On: () => b, cf: () => y, tb: () => E });
+      i.d(t, {
+        Hf: () => S,
+        On: () => b,
+        cf: () => y,
+        tb: () => E,
+        y7: () => k,
+      });
       var n = i(33940),
         r = i(52868),
         s = i.n(r),
@@ -5078,6 +5084,45 @@
         const [e, t] = (0, c.useState)(b.Get().GetActiveStats());
         return (0, g.Qg)(b.Get().GetActiveStatsChangeCallaback(), t), e;
       }
+      function k() {
+        const e = E();
+        return (0, c.useMemo)(() => {
+          const t = JSON.parse((null == e ? void 0 : e.json_eligible) || "[]"),
+            i = {
+              jsonEligible: Array.isArray(t) ? t : [],
+              jsonOptedIn: JSON.parse(
+                (null == e ? void 0 : e.json_opted_in) || "[]"
+              ),
+              jsonOptedOut: JSON.parse(
+                (null == e ? void 0 : e.json_opted_out) || "[]"
+              ),
+              jsonInvited: JSON.parse(
+                (null == e ? void 0 : e.json_invited) || "[]"
+              ),
+              jsonPruned: JSON.parse(
+                (null == e ? void 0 : e.json_pruned) || "[]"
+              ),
+              jsonFeatured: JSON.parse(
+                (null == e ? void 0 : e.json_featured) || "[]"
+              ),
+              jsonPendingReview: JSON.parse(
+                (null == e ? void 0 : e.json_pending_review) || "[]"
+              ),
+            };
+          return (
+            (i.setEligible = new Set(i.jsonEligible.map((e) => e.appid))),
+            (i.setOptedIn = new Set(i.jsonOptedIn.map((e) => e.appid))),
+            (i.setOptedOut = new Set(i.jsonOptedOut.map((e) => e.appid))),
+            (i.setInvited = new Set(i.jsonInvited.map((e) => e.appid))),
+            (i.setPruned = new Set(i.jsonPruned.map((e) => e.appid))),
+            (i.setFeatured = new Set(i.jsonFeatured.map((e) => e.appid))),
+            (i.setPendingReview = new Set(
+              i.jsonPendingReview.map((e) => e.appid)
+            )),
+            i
+          );
+        }, [e]);
+      }
       (0, n.gn)([g.ak], f.prototype, "GetName", null),
         (0, n.gn)([g.ak], f.prototype, "GetDescription", null),
         (0, n.gn)([l.aD.bound], f.prototype, "SetName", null),
@@ -5287,7 +5332,7 @@
         ZW: () => S,
         _l: () => I,
         dS: () => P,
-        du: () => R,
+        du: () => w,
         nw: () => E,
         py: () => k,
         qh: () => h,
@@ -5991,7 +6036,7 @@
           fnUpdateOptInRegistrationJson: h.Get().UpdateOptInRegistrationJson,
         };
       }
-      function R() {
+      function w() {
         return { fnUpdateAppealState: h.Get().UpdateAppealState };
       }
       (0, n.gn)(
@@ -6014,11 +6059,11 @@
     36998: (e, t, i) => {
       "use strict";
       i.d(t, {
-        EV: () => w,
+        EV: () => R,
         Fi: () => k,
         ID: () => E,
         LT: () => v,
-        Qy: () => R,
+        Qy: () => w,
         Su: () => S,
         XM: () => y,
         Xj: () => B,
@@ -6540,10 +6585,10 @@
         const [t, i] = a.useState(p.Get().GetAllDiscountsForDiscountEvent(e));
         return (0, d.Qg)(p.Get().GetCallbackListForDiscountEvent(e), i), t;
       }
-      function R(e) {
+      function w(e) {
         return p.Get().GetMaxDiscountPercentage(e);
       }
-      function w(e) {
+      function R(e) {
         return e.some(
           (e) => e.nDiscountPct > p.Get().GetMaxDiscountPercentage(e.packageID)
         );
@@ -6669,7 +6714,7 @@
         Rs: () => T,
         Tj: () => f,
         We: () => W,
-        X1: () => R,
+        X1: () => w,
         _w: () => v,
         bS: () => M,
         dU: () => I,
@@ -6678,7 +6723,7 @@
         ju: () => B,
         np: () => K,
         on: () => A,
-        ps: () => w,
+        ps: () => R,
         rX: () => P,
         sN: () => X,
         uT: () => j,
@@ -7438,7 +7483,7 @@
             : null,
         };
       }
-      function R() {
+      function w() {
         return a.useCallback((e, t, i) => {
           const n = g.Get().GetPrice(e, t);
           return (
@@ -7454,7 +7499,7 @@
           );
         }, []);
       }
-      function w(e) {
+      function R(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
       function B(e) {
@@ -7469,7 +7514,7 @@
         return t;
       }
       function O(e) {
-        const t = w(e),
+        const t = R(e),
           i = [];
         for (const n of g.Get().m_rgKnownPriceKeys) {
           const r = t.prices[n],
@@ -7605,9 +7650,9 @@
         TB: () => A,
         _9: () => C,
         dy: () => N,
-        hr: () => R,
+        hr: () => w,
         k: () => z,
-        pl: () => w,
+        pl: () => R,
         s$: () => O,
         yn: () => F,
         z$: () => j,
@@ -8120,12 +8165,12 @@
             : e.rtStartDate - t.rtStartDate;
         }
       }
-      function R() {
+      function w() {
         return c.useCallback(() => {
           E.Get();
         }, []);
       }
-      function w() {
+      function R() {
         const [e, t] = c.useState(E.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, p.Qg)(E.Get().GetLocalPackageDiscountOverrideCallbackList(), t), e
