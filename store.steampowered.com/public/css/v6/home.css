@@ -4423,6 +4423,10 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	margin-top: 0px;
 }
 
+.store_main_capsule.no_screenshots .reason .main.default {
+    line-height: 24px;
+}
+
 .store_main_capsule .screenshots > div {
 	width: 162px;
 	height: 69px;
