@@ -4739,7 +4739,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Screenshots_UploadImage" "Carica"
 "Steam_Screenshots_DeleteImage" "Elimina"
 "Steam_Screenshots_CancelUpload" "Annulla"
-"Steam_Screenshots_ShowOnDisk" "Mostra sul disco"
+"Steam_Screenshots_ShowOnDisk" "Apri cartella"
 "Steam_Screenshots_ShowOnline" "Mostra online"
 "Steam_Screenshots_IsSpoiler" "Contrassegna come spoiler"
 "Steam_Screenshots_Private" "Privata"

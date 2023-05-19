@@ -1441,6 +1441,7 @@
   "Sale_SeeEventDetails": "See Event Details",
   "Sale_WatchNow": "Watch Now",
   "Sale_PlayNow": "Play Now",
+  "Sale_WatchTheNewVideo": "Watch our new video  ▶",
   "Sale_EventSchedule": "Event Schedule",
   "Sale_SaleEvent_Section": "Special Events",
   "Sale_BroadcastSchedule": "Broadcast Schedule",
@@ -2627,6 +2628,7 @@
   "UserGameNotes_NotesListView": "Notes list",
   "UserGameNotes_ClickToOpenLink": "Middle-click to open",
   "UserGameNotes_ImageTooLarge": "The pasted image was too large",
+  "UserGameNotes_Edit": "Edit",
   "UserGameNotes_Untitled": "Untitled",
 
   "FormattingToolbar_Undo": "Undo",
@@ -2717,6 +2719,16 @@
   "ServerBrowser_SecureOnly": "Secure",
   "ServerBrowser_InsecureOnly": "Not secure",
 
+  "SteamNotificationTypeDesc_2": "I receive a gift",
+  "SteamNotificationTypeDesc_3": "A discussion I subscribed to has a reply",
+  "SteamNotificationTypeDesc_4": "I receive a new item in my inventory",
+  "SteamNotificationTypeDesc_5": "I receive a friend invitation",
+  "SteamNotificationTypeDesc_6": "There's a major sale",
+  "SteamNotificationTypeDesc_8": "An item on my wishlist is on sale",
+  "SteamNotificationTypeDesc_9": "I receive a new trade offer",
+  "SteamNotificationTypeDesc_11": "I receive a reply from Steam Support",
+  "SteamNotificationTypeDesc_12": "I receive a Steam Turn notification",
+
   "NotificationsMenu_Title": "Notifications",
   "NotificationsMenu_ViewAll": "View All",
   "Notification_NewGiftsPinned_Body": "%1$s New Gift",
@@ -2737,6 +2749,8 @@
   "SteamNotifications_Wishlist_OnSale_PlusMany_Short": "%1$s and %2$s other games are on sale!",
   "SteamNotifications_Wishlist_Generic": "Games on your wishlist are on sale!",
 
+  "SteamNotifications_MajorSale": "Sale",
+
   "SteamNotifications_Comment_Your_Profile": "Your profile",
   "SteamNotifications_Comment_Your_Profile_By": "%1$s commented on your profile",
   "SteamNotifications_Comment_Profile": "A profile you subscribed to",
@@ -2744,14 +2758,16 @@
   "SteamNotifications_Comment_Player_Profile_By": "%1$s commented on %2$s's profile",
   "SteamNotifications_Comment": "Comment",
   "SteamNotifications_Comment_NewDiscussion": "A new discussion in '%1$s'",
-
-  "SteamNotifications_MajorSale": "Sale",
+  "SteamNotifications_Comment_Your_Screenshot": "Your screenshot",
+  "SteamNotifications_Comment_Your_Screenshot_Game": "Your %1$s screenshot",
+  "SteamNotifications_Comment_Screenshot": "Screenshot",
+  "SteamNotifications_Comment_Screenshot_Game": "%1$s screenshot",
 
   "Notification_ItemAnnouncement_Title": "Item",
   "Notification_ItemAnnouncement_TitleLong": "New inventory item",
   "Notification_ItemAnnouncement_Body": "You have a new inventory item",
   "Notification_ItemAnnouncement_Body_Plural": "You have %1$s new inventory items",
-  
+
   "Notification_Item_Body": "You received: %1$s",
   "Notification_Item_Body_Short": "You received an item for %1$s",
   "Notification_Item_Body_Short_Plural": "You received new items for %1$s",
@@ -2760,7 +2776,7 @@
   "Notification_Item_RollupMore_Steam": "and %1$s more Steam items",
   "Notification_Item_RollupMore": "and %1$s more for this game",
   "Notification_Item_Single_GameName": "for %1$s",
-  
+
   "SteamNotifications_FriendInvite_Body_Generic": "You received a friend request",
   "SteamNotifications_FriendInvite_Description": "sent you a friend request",
   "SteamNotifications_FriendInvite_Description_AwaitingResponse": "is awaiting your response",

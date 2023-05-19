@@ -1195,7 +1195,7 @@
     "changeLog_UpdateItem10": "È stata aggiunta la possibilità di usare i pulsanti del mouse per il push-to-talk.",
     "changeLog_UpdateItem11": "È stato risolto un altro bug nella nuova chat per cui a volte, dopo aver smesso di giocare, le chat si chiudevano automaticamente subito dopo essere state aperte.",
     "changeLog_UpdateItem12": "Il menu degli amici è stato corretto per mostrare l'opzione \"Unisciti alla partita\" se l'amico è in una lobby o in un server con IP valido.",
-    "changeLog_UpdateItem13": "Ctrl-Tab e Ctrl-Maiusc-Tab sono stati corretti per funzionare correttamente anche quando premuti rapidamente.",
+    "changeLog_UpdateItem13": "Ctrl+Tab e Ctrl+Maiusc+Tab sono stati corretti per funzionare correttamente anche quando premuti rapidamente.",
     "changeLog_UpdateItem14": "È stata aggiunta la possibilità di usare Ctrl-pag↑ e Ctrl-pag↓ per passare da una scheda all'altra.",
     "changeLog_UpdateItem15": "Sono stati aggiunti dei pulsanti per nascondere YouTube e i video incorporati.",
     "changeLog_UpdateItem16": "La chat si ricorderà le dimensioni dei contenuti multimediali e se sono stati nascosti o meno.",

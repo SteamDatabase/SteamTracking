@@ -39,12 +39,6 @@ __message_refs
 __OBJC
 __class
 __OBJC
-__cls_meth
-__OBJC
-__meta_class
-__OBJC
-__inst_meth
-__OBJC
 __cat_inst_meth
 __OBJC
 __property
@@ -53,11 +47,17 @@ __protocol
 __OBJC
 __cat_cls_meth
 __OBJC
+__meta_class
+__OBJC
 __instance_vars
+__OBJC
+__inst_meth
 __OBJC
 __class_ext
 __OBJC
 __symbols
+__OBJC
+__cls_meth
 __OBJC
 __category
 __OBJC
@@ -276,8 +276,8 @@ WVRQ
 ^_[]
 ^_[]
 ^_[]
-^_[]
-tA9G<t<
+,^_[]
+tA9G4t<
 ^_[]
 ^_[]
 ^_[]
@@ -335,8 +335,8 @@ xy9p
 t7B9
 ^_[]
 ^_[]
-BL9Z
-BT9J
+BT9Z
+B\9J
 ^_[]
 ,^_[]
 ^_[]
@@ -1059,6 +1059,7 @@ H^_]
 ,^_[]
 ^_[]
 ^_[]
+^_[]
 ,^_[]
 t#;M
 taA9
@@ -1373,8 +1374,13 @@ t$;A
 ^_[]
 ^_[]
 ,^_[]
+,^_[]
 ^_[]
 ^_[]
+uKF;u
+^_[]
+,^_[]
+,^_[]
 ^_[]
 ^_[]
 RPSQW
@@ -1413,18 +1419,17 @@ L^_[]
 <^_[]
 L^_[]
 ^_[]
-u59}
+u59u
 \^_[]
 tPC;]
 ^_[]
 L^_[]
 PPPh
- ;s4
+ ;s,
 QQQQQ
 t#VVVVVh
 ^_[]
 ^_[]
-L389A 
 ^_[]
 u[zY
 @^_]
@@ -1514,7 +1519,6 @@ QQQQQ
 ^_[]
 ^_[]
 @8 t
-@9 u@
 ^_[]
 l^_[]
 ^_[]
@@ -1909,8 +1913,7 @@ j<PV
 ,^_[]
 ^_[]
 ^_[]
-jLPV
-j$WP
+jHPV
 `^_]
 L^_[]
 ^_[]
@@ -1919,22 +1922,21 @@ L^_[]
 ^_[]
 ^_[]
 ^_[]
-<^_[]
-SWVP
+.N@u
+,^_[]
 ^_[]
 ^_[]
 u,z*
 ,^_[]
 <^_[]
-^_[]
-j$QS
-j$PS
-j$PS
+ ^_]
 ,^_[]
 ^_[]
-9O@tJB
-tE9T7@u?
-9L2@uB
+^_[]
+^_[]
+9O<tJB
+tE9T7<u?
+9L2<uB
 yPRh
 ^_[]
 /t	1
@@ -1958,10 +1960,10 @@ L^_[]
 ^_[]
 ^_[]
 RVQP
-,^_[]
 ^_[]
 9~$~*
 91t!
+91t"
 ^_[]
 9>t#
 ^_[]
@@ -1972,9 +1974,9 @@ V8t
 ^_[]
 ^_[]
 ^_[]
-j$PQ
 ^_[]
-;FDu
+^_[]
+;FLu
 ^_[]
 ^_[]
 ^_[]
@@ -1988,7 +1990,7 @@ j$PQ
 L^_[]
 92t#
 WVRQ
-;_8t8
+;_0t8
 ^_[]
 ^_[]
 YUY2t!
@@ -2966,7 +2968,6 @@ Sample rate exceeds limit of %d
 Invalid fact chunk in WAVE file
 Missing fact chunk in WAVE file
 Invalid bits per sample
-Invalid block alignment
 MPEG formats not supported
 Unknown WAVE format GUID: %08x-%04x-%04x-%02x%02x%02x%02x%02x%02x%02x%02x
 Unknown WAVE format tag: 0x%04x
@@ -3006,7 +3007,7 @@ HygonGenuine
 Unknown
 SDL3_DYNAMIC_API
 SDL_DYNAPI_entry
-Couldn't load overriding SDL library. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
+Couldn't load an overriding SDL library. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
 Couldn't override SDL library. Using a newer SDL build might help. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
 Failed to initialize internal SDL dynapi. As this would otherwise crash, we have to abort now.
 SDL Dynamic API Failure!
@@ -3041,13 +3042,14 @@ SDL_EVENT_DISPLAY_ORIENTATION
 SDL_EVENT_DISPLAY_CONNECTED
 SDL_EVENT_DISPLAY_DISCONNECTED
 SDL_EVENT_DISPLAY_MOVED
-SDL_EVENT_DISPLAY_SCALE_CHANGED
+SDL_EVENT_DISPLAY_CONTENT_SCALE_CHANGED
 SDL_EVENT_WINDOW_SHOWN
  (timestamp=%u windowid=%u event=%s data1=%d data2=%d)
 SDL_EVENT_WINDOW_HIDDEN
 SDL_EVENT_WINDOW_EXPOSED
 SDL_EVENT_WINDOW_MOVED
 SDL_EVENT_WINDOW_RESIZED
+SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED
 SDL_EVENT_WINDOW_MINIMIZED
 SDL_EVENT_WINDOW_MAXIMIZED
 SDL_EVENT_WINDOW_RESTORED
@@ -3060,7 +3062,8 @@ SDL_EVENT_WINDOW_TAKE_FOCUS
 SDL_EVENT_WINDOW_HIT_TEST
 SDL_EVENT_WINDOW_ICCPROF_CHANGED
 SDL_EVENT_WINDOW_DISPLAY_CHANGED
-SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED
+SDL_EVENT_WINDOW_DISPLAY_SCALE_CHANGED
+SDL_EVENT_WINDOW_DESTROYED
 SDL_EVENT_SYSWM
 SDL_EVENT_KEY_DOWN
  (timestamp=%u windowid=%u state=%s repeat=%s scancode=%u keycode=%u mod=%u)
@@ -4508,7 +4511,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-1519-g642504bc5
+SDL-prerelease-3.0.0-1540-gd5f07730b
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -4585,6 +4588,60 @@ pthread_setspecific() failed
 SDL_THREAD_STACK_SIZE
 SDLTimer
 SDL_TIMER_RESOLUTION
+init
+NSData
+dataWithBytes:length:
+setData:forType:
+pasteboardFinishedWithDataProvider:
+v12@0:4@8
+v20@0:4@"NSPasteboard"8@"NSPasteboardItem"12@"NSString"16
+v12@0:4@"NSPasteboard"8
+NSPasteboardItemDataProvider
+debugDescription
+@8@0:4
+c12@0:4@8
+#8@0:4
+@12@0:4:8
+@16@0:4:8@12
+@20@0:4:8@12@16
+c8@0:4
+c12@0:4#8
+c12@0:4@"Protocol"8
+c12@0:4:8
+Vv8@0:4
+I8@0:4
+^{_NSZone=}8@0:4
+@"NSString"8@0:4
+hash
+TI,R
+superclass
+T#,R
+description
+T@"NSString",R,C
+NSObject
+isEqual:
+class
+self
+performSelector:
+performSelector:withObject:
+performSelector:withObject:withObject:
+isProxy
+isKindOfClass:
+isMemberOfClass:
+conformsToProtocol:
+respondsToSelector:
+retain
+release
+autorelease
+retainCount
+zone
+pasteboard:item:provideDataForType:
+v20@0:4@8@12@16
+Cocoa_PasteboardDataProvider
+m_callback
+m_userdata
+initWith:userData:
+@16@0:4^?8^v12
 NSString
 stringWithUTF8String:
 Couldn't create NSString; is your string data in UTF-8 format?
@@ -4600,9 +4657,24 @@ isEqualToString:
 stringForType:
 changeCount
 clipboard_count
+pasteboardItems
+countByEnumeratingWithState:objects:count:
+dataForType:
+length
+getBytes:length:
+arrayWithObjects:count:
+canReadItemWithDataConformingToTypes:
+NSPasteboardItem
+NSMutableArray
+alloc
+addObject:
+setDataProvider:forTypes:
+Unable to set clipboard item data
+clearContents
+writeObjects:
+Unable to set clipboard data
 sendEvent:
 NSDictionary
-alloc
 NSNumber
 numberWithBool:
 AppleMomentumScrollSupported
@@ -4612,14 +4684,11 @@ initWithObjectsAndKeys:
 NSUserDefaults
 standardUserDefaults
 registerDefaults:
-NSObject
 NSApplication
 SDLApplication
 registerUserDefaults
 v8@0:4
 terminate:
-v12@0:4@8
-init
 NSNotificationCenter
 defaultCenter
 windowWillClose:
@@ -4638,7 +4707,6 @@ dealloc
 object
 isKeyWindow
 orderedWindows
-countByEnumeratingWithState:objects:count:
 canBecomeKeyWindow
 isOnActiveSpace
 makeKeyAndOrderFront:
@@ -4663,7 +4731,6 @@ application:openFiles:
 v16@0:4@8@12
 application:openTempFile:
 applicationShouldOpenUntitledFile:
-c12@0:4@8
 applicationOpenUntitledFile:
 application:openFileWithoutUI:
 application:printFile:
@@ -4685,7 +4752,6 @@ application:willContinueUserActivityWithType:
 application:continueUserActivity:restorationHandler:
 c20@0:4@8@12@?16
 application:didFailToContinueUserActivityWithType:error:
-v20@0:4@8@12@16
 application:didUpdateUserActivity:
 applicationWillFinishLaunching:
 applicationDidFinishLaunching:
@@ -4720,42 +4786,6 @@ v20@0:4@"NSApplication"8@"NSString"12@"NSError"16
 v16@0:4@"NSApplication"8@"NSUserActivity"12
 v12@0:4@"NSNotification"8
 NSApplicationDelegate
-debugDescription
-@8@0:4
-#8@0:4
-@12@0:4:8
-@16@0:4:8@12
-@20@0:4:8@12@16
-c8@0:4
-c12@0:4#8
-c12@0:4@"Protocol"8
-c12@0:4:8
-Vv8@0:4
-I8@0:4
-^{_NSZone=}8@0:4
-@"NSString"8@0:4
-hash
-TI,R
-superclass
-T#,R
-description
-T@"NSString",R,C
-isEqual:
-class
-self
-performSelector:
-performSelector:withObject:
-performSelector:withObject:withObject:
-isProxy
-isKindOfClass:
-isMemberOfClass:
-conformsToProtocol:
-respondsToSelector:
-retain
-release
-autorelease
-retainCount
-zone
 SDLAppDelegate
 seenFirstActivate
 observeValueForKeyPath:ofObject:change:context:
@@ -4821,7 +4851,6 @@ setWindowsMenu:
 CFBundleDisplayName
 objectForInfoDictionaryKey:
 CFBundleName
-length
 NSProcessInfo
 processInfo
 processName
@@ -4904,7 +4933,7 @@ SDLMessageBoxPresenter
 clicked
 @"NSWindow"
 initWithParentWindow:
-@12@0:4^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8
+@12@0:4^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8
 showAlert:
 NSThread
 isMainThread
@@ -4942,7 +4971,6 @@ allKeys
 --------RRRRRRRRGGGGGGGGBBBBBBBB
 -RRRRRGGGGGBBBBB
 --RRRRRRRRRRGGGGGGGGGGBBBBBBBBBB
-NSData
 dataWithBytesNoCopy:length:freeWhenDone:
 NSImage
 initWithData:
@@ -5006,7 +5034,6 @@ updateIfNeeded
 nscontexts
 removeObject:
 sdlContentView
-addObject:
 view
 setView:
 NSOpenGLContext
@@ -5016,7 +5043,7 @@ setWindow:
 SDLOpenGLContext
 dirty
 {?="value"i}
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
 displayLink
 ^{__CVDisplayLink=}
 swapIntervalMutex
@@ -5026,8 +5053,8 @@ swapIntervalCond
 swapIntervalSetting
 swapIntervalsPassed
 movedToNewScreen
-v12@0:4^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8@0:4
+v12@0:4^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8@0:4
 cleanup
 T@"NSOpenGLPixelFormat",&,N
 SDL_OPENGL_LIBRARY
@@ -5063,7 +5090,7 @@ SDL_CocoaClosure
 T@"NSView",&,N
 path
 T@"NSBezierPath",&,N
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N
 setOpaque:
 setStyleMask:
 graphicsContext
@@ -5120,7 +5147,6 @@ windowDidFinishMoving
 draggingSourceOperationMask
 draggingLocation
 draggingPasteboard
-dataForType:
 NSFilenamesPboardType
 propertyListForType:
 NSURL
@@ -5343,7 +5369,6 @@ colorSpace
 Could not get colorspace information of screen.
 ICCProfileData
 Could not get ICC profile data.
-getBytes:length:
 setListener:
 copy
 setInWindowFullscreenTransition:
@@ -5363,7 +5388,6 @@ setCreated:
 setVideodata:
 windowNumber
 setWindow_number:
-NSMutableArray
 setNscontexts:
 setSdlContentView:
 styleMask
@@ -5655,7 +5679,6 @@ Conflicting window type flags specified: 0x%.8x
 Tooltip and popup menu windows must specify a parent window
 Window is too large.
 Conflicting window graphics flags specified: 0x%.8x
-SDL_VIDEO_HIGHDPI_DISABLED
 %s support is either not configured in SDL or not available in current SDL video driver (%s) or platform
 SDL_FRAMEBUFFER_ACCELERATION
 Requested renderer for SDL_FRAMEBUFFER_ACCELERATION is not available
@@ -5704,7 +5727,7 @@ GIF87a
  $(,048<@DHLPUY]aeimquy}
  )19AJRZbjs{
 "3DUfw
-p0`A0\`
+p4`D0\`
 BXAXAXAXAXAXAXA^0
 A`#B`;B
 VAVBp
@@ -5715,27 +5738,28 @@ CR0H\K`.BX0d`"0
 `<Ap
 A`'0Xp
 R0PR0Xp
-B`%Ap
+BRAp
+RA`%Ap
 p<\Ap
 RA`3Ap
-RBRBRBp
+RBRBRBRBp
 RBRBp
 RBRBp
+CRAp
 SCRAp
 TCRARASCRBp
 SCRCTHTHTHTHTDp
 TCRAp
-TCRFVDp
-SISISISISISISFp
-SKVB`
-B`*BYB`
-A`JARA`&AZA`
-ARA`&A`fBXBXBRBVBVB`
+TCRERARA`&ARA`JARA`&AZA`
+ARA`&A`fBXBXBXBXBRBVBVB`
 BXBXBZAp
+TARAp
 SBRAp
 SBSD
-RBRARARARBRARBRARARARARARARBRARARARARARARARARARARARBRC
-RCRC
+SISISISISISISFp
+SJRARBRBRARARARBRARBRARARARARARARBRARARARARARARARARARARARBRCVBVB`
+B`*BYB`
+TBUAQ
 @_kIOMasterPortDefault
 @_kTISPropertyUnicodeKeyLayoutData
 @_kCGColorBlack
@@ -5785,6 +5809,7 @@ RCRC
 @_kCFTypeArrayCallBacks
 @_kCFTypeDictionaryKeyCallBacks
 @_kCFTypeDictionaryValueCallBacks
+@_kUTTagClassMIMEType
 @_kUTTypeFileURL
 @_AudioObjectAddPropertyListener
 @_AudioObjectGetPropertyData
@@ -5950,6 +5975,8 @@ RCRC
 @_TISCopyCurrentKeyboardLayoutInputSource
 @_TISGetInputSourceProperty
 @_UCKeyTranslate
+@_UTTypeCopyPreferredTagWithClass
+@_UTTypeCreatePreferredIdentifierForTag
 @__Block_object_assign
 @__Block_object_dispose
 @__Exit
@@ -6146,12 +6173,12 @@ AJoystick
 FNumHaptics
 bVulkan_
 fbsearch
-gexp
-hgetenv
+hexp
+igetenv
 ihid_
 opow
 pqsort
-twcs
+uwcs
 reate
 aptureMouse
 ursorVisible
@@ -6194,7 +6221,7 @@ IMDGetAlignment
 SaveBMP_RW
 Screen
 Thow
-_oftStretch
+`oftStretch
 `urfaceHas
 rite
 	rpMouse
@@ -6207,7 +6234,7 @@ Timeout
 Pixels
 Surface
 AudioSamples
-vEventToRenderCoordinates
+wEventToRenderCoordinates
 Format
 ursor
 lorCursor
@@ -6333,6 +6360,7 @@ Bounds
 Name
 Orientation
 UsableBounds
+wContentScale
 Point
 Rect
 Window
@@ -6365,12 +6393,12 @@ GUID
 !Type
 "Vendor
 !layerIndex
-!roduct
+"roduct
 Version
 GUID
 "Index
 Gamepad
-*Joystick
++Joystick
 +RenderDrivers
 +Touch
 +VideoDrivers
@@ -6387,12 +6415,12 @@ Rate
 Axis
 $Button
 ouchpadFinger
-$ype
+%ype
 Boolean
 Axis
 &Button
 &GUID
-&Hat
+'Hat
 'Instance
 'Name
 (Serial
@@ -6415,7 +6443,7 @@ GUID
 Version
 (layerIndex
 (owerLevel
-(roduct
+)roduct
 Version
 From
 )Name
@@ -6423,7 +6451,7 @@ From
 Name
 )Scancode
 Focus
-)State
+*State
 asksForPixelFormatEnum
 *emoryFunctions
 dState
@@ -6438,10 +6466,10 @@ Axes
 +Buttons
 +Hats
 Devices
-+Fingers
+,Fingers
 erformance
 ,ixelFormat
-,latform
+-latform
 -owerInfo
 -ath
 Counter
@@ -6452,7 +6480,7 @@ EnumForMasks
 Path
 -erredLocales
 SelectionText
--Display
+.Display
 .lativeMouse
 /nder
 /vision
@@ -6475,12 +6503,11 @@ ClipRect
 wScale
 0iver
 BlendMode
-0Color
+1Color
 CommandEncoder
 1Layer
 iewport
 1Sync
-Size
 Info
 cancode
 2hapedWindowMode
@@ -6490,7 +6517,7 @@ From
 2Name
 2Name
 nsor
-2maphoreValue
+3maphoreValue
 Data
 3FromInstanceID
 3Instance
@@ -6516,17 +6543,17 @@ AlphaMod
 6Name
 Device
 6Finger
-6Name
+7Name
 Type
 ersion
 7ideoDriver
 BordersSize
-8Data
 8Grab
 8KeyboardGrab
-8Opacity
-9Title
+9Opacity
+:Title
 :WMInfo
+8isplayScale
 ullscreenMode
 8lags
 8romID
@@ -6536,53 +6563,55 @@ aximumSize
 9ouse
 Grab
 9Rect
-ixelFormat
+ixel
 9osition
-9arent
+:arent
+Format
+:Density
 :urface
 InPixels
 ForResolution
-:ide
+;ide
 ptic
 Close
 ;DestroyEffect
-;EffectSupported
-;GetEffectStatus
-;Index
-;Open
+<EffectSupported
+<GetEffectStatus
+<Index
+<Open
 <Pause
-<Query
+=Query
 <ewEffect
 Axes
 <Effects
 Playing
 From
 Joystick
-<Mouse
+=Mouse
 mble
 =nEffect
 Init
 =Play
 =upported
-=top
+>top
 Autocenter
 >Gain
 >Effect
 npause
 >pdateEffect
 ?Clipboard
-?Event
+@Event
 @MMX
 @NEON
 @PrimarySelectionText
 @RectIntersection
 RMSIMD
 ?ltiVec
-?512F
+@512F
 Text
-?Data
+@Data
 Float
-@creenKeyboardSupport
+AcreenKeyboardSupport
 Cursor
 AWindow
 SubSystem
@@ -6591,51 +6620,51 @@ BJoystickVirtual
 BShapedWindow
 BTablet
 Connected
-BEventsEnabled
-BHas
-BIsHaptic
+CEventsEnabled
+CHas
+CIsHaptic
 CRumble
 Triggers
 BMP_RW
-CObject
+DObject
 DWAV_RW
-Cunction
+Dunction
 AudioDevice
-DJoysticks
-DMutex
-DSurface
-DTexture
-DRWLockFor
+EJoysticks
+EMutex
+ESurface
+ETexture
+ERWLockFor
 ToSurface
 EMessage
-EResetPriorities
-ESet
+FResetPriorities
+FSet
 OutputFunction
-EPriority
+FPriority
 AllPriority
 FOutputFunction
 FPriority
 HouseIsHaptic
 pRGB
-FximizeWindow
+GximizeWindow
 moryBarrier
 Gtal_
 AcquireFunction
 GReleaseFunction
 CreateView
-GDestroyView
-GGetLayer
+HDestroyView
+HGetLayer
 nimizeWindow
 HxAudioFormat
 nApplication
 Hpen
-HWill
+IWill
 BecomeActive
 IEnterBackground
 IReceiveMemoryWarning
 EnterForeground
-IResignActive
-ITerminate
+JResignActive
+JTerminate
 AudioDevice
 JGamepad
 JJoystick
@@ -6648,17 +6677,17 @@ KlayAudioDevice
 llEvent
 KstSemaphore
 mpEvents
-KshEvent
-KtAudioStreamData
+LshEvent
+LtAudioStreamData
 ryTexture
 LueAudio
 SubSystem
-LaiseWindow
+MaiseWindow
 From
 Mclose
 Mread
 Mtell
-Mwrite
+Nwrite
 ConstMem
 MFile
 MMem
@@ -6667,20 +6696,20 @@ NgisterEvents
 OmoveTimer
 Onder
 OportAssertion
-OGeometry
+PGeometry
 PLine
 QTexture
 Ooordinates
-OipEnabled
+PipEnabled
 illRect
 Plush
 ToWindow
-PFromWindow
+QFromWindow
 oint
-Present
+Qresent
 adPixels
 Rotated
-QtoreWindow
+RtoreWindow
 AssertionReport
 RHint
 RKeyboard
@@ -6704,9 +6733,9 @@ VHint
 WJoystick
 YSurface
 [Window
-\YUVConversionMode
+]YUVConversionMode
 ssertionHandler
-UudioStreamFormat
+VudioStreamFormat
 lipboard
 Vursor
 Text
@@ -6721,9 +6750,9 @@ WPlayerIndex
 WSensorEnabled
 WithPriority
 EventsEnabled
-WLED
-WPlayerIndex
-WVirtual
+XLED
+XPlayerIndex
+XVirtual
 Axis
 XButton
 XHat
@@ -6751,7 +6780,7 @@ AlphaMod
 lipRect
 [olor
 [Mod
-[hreadPriority
+\hreadPriority
 InputRect
 \ure
 AlphaMod
@@ -6760,10 +6789,10 @@ AlphaMod
 \ScaleMode
 \UserData
 AlwaysOnTop
-]Bordered
-]Data
-]Fullscreen
-]Grab
+^Bordered
+^Data
+^Fullscreen
+^Grab
 ^HitTest
 ^KeyboardGrab
 ^Opacity
@@ -6773,7 +6802,7 @@ _Title
 Mode
 ^nputFocus
 aximumSize
-^inimumSize
+_inimumSize
 dalFor
 _use
 Grab
@@ -6786,47 +6815,47 @@ Cursor
 `Window
 Linear
 artTextInput
-`opTextInput
+aopTextInput
 ColorKey
-`RLE
+aRLE
 aGet
 aSet
 leanup
 areate
 Active
-aShown
+bShown
 Mutex
 bRWLockFor
 bpdate
 adObject
 AudioDevice
-bJoysticks
-bMutex
-bSurface
+cJoysticks
+cMutex
+cSurface
 cTexture
 cRWLock
 Gamepads
-cJoysticks
-cNVTexture
-cSensors
-cTexture
-cWindowSurface
+dJoysticks
+dNVTexture
+dSensors
+dTexture
+dWindowSurface
 dYUVTexture
 Rects
 CreateSurface
 dGet
-dLoadLibrary
+eLoadLibrary
 eUnloadLibrary
 InstanceExtensions
 eVkGetInstanceProcAddr
 Timeout
 Global
 eInWindow
-fcos
+gcos
 gligned_
 gprintf
 alloc
-geil
+heil
 pysign
 iloor
 imod
@@ -6835,10 +6864,10 @@ ble_scan
 jclose
 jdevice_change_count
 jfree_enumeration
-jget_
-jinit
-kopen
-kread
+kget_
+kinit
+lopen
+lread
 lwrite
 numerate
 jxit
@@ -6854,46 +6883,46 @@ lt_nonblocking
 conv
 mtoa
 close
-lopen
+mopen
 mstring
-mblank
-mcntrl
-mdigit
+nblank
+ncntrl
+ndigit
 ngraph
 nlower
 nspace
 nupper
 nxdigit
-mpha
+npha
 rint
 nunct
 ltoa
-nround
+oround
 otoa
 alloc
 oodf
 omove
-oset
+pset
 ealloc
 pound
 calbn
-petenv
+qetenv
 qqrt
 qscanf
-xnprintf
+ynprintf
 qdup
-rstr
+sstr
 supr
-qstr
+rstr
 asecmp
-srunc
+trunc
 lower
-supper
+tupper
 itoa
 ttf8str
 ltoa
 ttoa
-tnlen
+unlen
 asprintf
 nprintf
 uscanf
@@ -6902,7 +6931,7 @@ vstr
 asecmp
 asecmp
 alloc
-vfree
+wfree
 Reading
 xWriting
 Reading
@@ -6913,23 +6942,26 @@ yInfo
 yWarn
 yError
 yCritical
-yCocoa_WindowListener
-zTranslatorResponder
-zMessageBoxPresenter
-zOpenGLContext
-zWindow
-{View
+Cocoa_
+zSDL
+PasteboardDataProvider
+zWindowListener
+{TranslatorResponder
+{MessageBoxPresenter
+{OpenGLContext
+{Window
+|View
 lication
-zDelegate
+{Delegate
 ShapeData
 {Cocoa
 Closure
-{VideoData
-{WindowData
+|VideoData
+|WindowData
 ^zz\@>
 ]Gj#l167:BB5:;>FFQa|LPTPd
 ).)&.((((((
-L/3333433
+M/3333433
 i1/v
 ''S&z
 ,@'Nt
@@ -6966,6 +6998,7 @@ jjjq
 jjjb`
 Rigg
 aggB`b
+EMze
 rfNNfNKE
 	  f
 	}^|
@@ -6982,19 +7015,21 @@ GTU6												32				$#											C
 											"	8."
 	[#JJ
 #6@6k#JJPPJ]n
+uljZ
 ($$'
 %%%b
 I"3"
 SqqI]]DOO;
 Xv:!
 Q\DJ"
-;]@;
-;Y:: 
-!I7LI
+>]@;
+?Y:: 
+RRr!I7LI
 0YY&
 &ObM
 ;;BBTa|
 8[oJ
+.objc_class_name_Cocoa_PasteboardDataProvider
 .objc_class_name_Cocoa_WindowListener
 .objc_class_name_SDLAppDelegate
 .objc_class_name_SDLApplication
@@ -7163,6 +7198,7 @@ _SDL_GetDefaultAudioInfo
 _SDL_GetDefaultCursor
 _SDL_GetDesktopDisplayMode
 _SDL_GetDisplayBounds
+_SDL_GetDisplayContentScale
 _SDL_GetDisplayForPoint
 _SDL_GetDisplayForRect
 _SDL_GetDisplayForWindow
@@ -7307,7 +7343,6 @@ _SDL_GetRenderTarget
 _SDL_GetRenderVSync
 _SDL_GetRenderViewport
 _SDL_GetRenderWindow
-_SDL_GetRenderWindowSize
 _SDL_GetRenderer
 _SDL_GetRendererInfo
 _SDL_GetRevision
@@ -7350,6 +7385,7 @@ _SDL_GetVersion
 _SDL_GetVideoDriver
 _SDL_GetWindowBordersSize
 _SDL_GetWindowData
+_SDL_GetWindowDisplayScale
 _SDL_GetWindowFlags
 _SDL_GetWindowFromID
 _SDL_GetWindowFullscreenMode
@@ -7363,6 +7399,7 @@ _SDL_GetWindowMouseGrab
 _SDL_GetWindowMouseRect
 _SDL_GetWindowOpacity
 _SDL_GetWindowParent
+_SDL_GetWindowPixelDensity
 _SDL_GetWindowPixelFormat
 _SDL_GetWindowPosition
 _SDL_GetWindowSize
@@ -7860,6 +7897,7 @@ _SDL_wcsstr
 .objc_class_name_NSOpenGLContext
 .objc_class_name_NSOpenGLPixelFormat
 .objc_class_name_NSPasteboard
+.objc_class_name_NSPasteboardItem
 .objc_class_name_NSProcessInfo
 .objc_class_name_NSResponder
 .objc_class_name_NSRunningApplication
@@ -8061,6 +8099,8 @@ _NSZeroRect
 _TISCopyCurrentKeyboardLayoutInputSource
 _TISGetInputSourceProperty
 _UCKeyTranslate
+_UTTypeCopyPreferredTagWithClass
+_UTTypeCreatePreferredIdentifierForTag
 __Block_object_assign
 __Block_object_dispose
 __DefaultRuneLocale
@@ -8143,6 +8183,7 @@ _kCGColorClear
 _kCGDisplayShowDuplicateLowResolutionModes
 _kIOMasterPortDefault
 _kTISPropertyUnicodeKeyLayoutData
+_kUTTagClassMIMEType
 _kUTTypeFileURL
 _log
 _log10
@@ -8277,185 +8318,185 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-rWqBn
-V]!Hd
-8d-K
-[_#8
-i&	V
-f{{j;
-w`M'
-(wnB:
-"`	c
-sWyof
-v5d;
-~Mrn
-uzgNe
-48YA
-qQy$
-=2<.
-*iV$
-N0O.F
-26;&m
-X=cwV(
-KI ;
-eskM
-3_b]
-J*_@
-({T5
-C#~,p*
-'{VM
-WF:Vp
-R*Iz
-v5'E
-#	>1*
-4s E37
-9P\u2%
-ix-j0
-%pJV
-a\A!RI
-(TaL
-rnsy
-m!_D
-+Gkv
->3iL{b
-JPY|
-[0wu
-*')O
-\;E{
-isJY
-I.}+
-s:{00
-jZCWhe
-Gnx3
-fU3,#
-yb['>L
-&o`.Sz
-M;0P
-N@@J
-oCb-
-rkj~z,3
-N'e7a5
-VV3y% 
-736Rea
-	sF5T9
-TZB=
-\?!N8
-`{W:
-cTx*+
-GTnmx
+/J;S_
+bE'l
+<i1_
+^8-aGdj
+hokV
+:^8G
+7:8X;9
+'g)W
+`k !
+	ji=IG
+$J16B>
+/nL%
+(\IZJ
+EimW
+K_im
+422L
+I)1/MHgcM
+bOISv5
+cMj|
+64h=
+hj#$
+1zuo
+|$TN
+3u|D8
+aj1u
+CC\;
+2#t0
+0Fi,wu@
+%9RV
+0xUz
+6!Y_
+=	,E
+8rx4e
+V^s.z
+3%Ew
+g*mf
+?L|9
+WkB	
+Qc 	
+&eUfI
+:{	=
+SPa,
+lG"/
+	QtI
+sb:5z
+ 04\jN
+NMY/1
+&e*g?
+nA.).t
+v!`54
+|lXqX
+8$ifL
+;MS't
+ILaI
+~\cr\[-
+q:w:
+px]1c
+i8#8Gu
+Ycv0
+Z#vc7
+< ~<
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Y>@C
-7HV7
-RTa(,
-_o0],V1
-i\Zp
-42%J
-)9~y
--9lW
-C59U(4[m
-&&'mq
-u0i|
-v`o(N<
-Pef6
->C)4
-v	wgvv
-I5"|
-R]"V
-H g4
-Xzv 
-5$,q*
-c0^g
-0QXN
-SCF}
-~bjSV
-TRpV
-,%IR
-W:7L
-Y[Q+
-t?Hc5
-"-hp
-	Pv*
-&M#A
-$9L7r~
-[&-s
-<a	P
-J_>_
-Hh`Y
-y=@K1
-}&:f
-fBm K
-yb&Z
-r;+(V
-8PPj
-AmPz
-tiy1"
-8x#t'
-#ooT
-3_O`
-p&J(
-1oV9^
-n=~l$d
-s};!9
-,rY]
-Y^0p
-|U!j
-DC`;t
-bUc.
-&)tb
-spfy
-z(#w
-s4`2r
-gBU\$
-e7#:
-+8<H
-VA|Xf^
-54B}
-UiaQ
-1X?.
-AmGw
-zO]mU
-%I\_
-yy8B+@zS
-PI&0
-!Alm
-e0=#'
-BptF
-W4"{1^
-SOi'HD9
-+O43Lv
-bvD]
-qy7g
-}7h@
-8zKj
-j>gD
-P:s\d
-KNHGAjm
-<Q}C
-x-}8
-@Ym8	
-p	M)
-\\^6r
-~b[yg
-36=mY
-T+\Q
-bm6F
-l:-F
-;<-a
-^Y_a
-T PIK
-(tQM1
-rG!g
-S/p(
-!36G
-.,#*
-oCE<
-+<{:.e
-@6/a
-C<Bm
-3vpM4MM
+DPBj[1
+*]$(
+-8DM8W
+6F#p\
+x0ym
+-p$>uQ
+7BjY
+]qY/k
+d(v#H
+S/4ah0
+$D2#E
+e$)L
+<sV$
+(,TyE
+'zsq
+\Bwz"
+6Fb2o
+yv*,_
+x"@g6
+K*fL
+/z^U%
+28^];
+Ld74
+m"q!
+RW_Q
+iT,Y
+7dK<
+Mcm:6U
+"05e
+pZ(N
+)&fd|
+0Tr~R
+_ Uf
+&wfH
+KkE%
+5A_r
+g-Er7
+_M\G
+eSY.Y+
+1bOj
+V=2k
+_ fJ
+}v"3"!?
+BfGI;z
+kRKa
+'N|o!
+0"Go5v
+;EQ<rY
+s2`{
+!+4rZ
+o=GOr
+cAd{
+m%;{
+RD Fm
+S/1P
+^U&Z
+Om,8
+$Meh*iN
+vyGlF
+#}~$(N
+S5&\\,w
+Yjck9o,
+m+YE=I
+``SO~
+=+6t
+rQho
+h+1U
+dg?"
+?3v 
+~egS
+Rucp
+n1A 
+f"#N
+|$Sw
+GsE{
+uael*
+KF4X+^
+WBYy
+8T+1fI
+J4-|
+"_=3AQ
+ecYc!
+'gxtK
+zTY6
+sl:Mir
+;4p^
+{.e0
+9,+H-e
+XTP&
+=<NoW
+udf~
+[o\s
+kekUlo
+)q""
++kQt
+l'pw
+fo`?
+'%@Y
+bFN,$
+"' g#
+<.Uq
+yiIGd
++zmk
+4l#V
+3C|2
+$XaG
+|4hZ
+NW.$p
+WBH%
+f=ok9
+dWd{
++K2L
+4j%_
+EFn;X
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -8511,9 +8552,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230517203506Z0/
-UZtjd|
-zr1t
+230519215927Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -8521,38 +8560,30 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		RWGZVVp0amR8sgcKwIt++u3QsrY=
+		91/IQ+htuSkn719GCdyWM+9Rxdg=
 		</data>
 		<data>
-		mCirmeAU4VF2Zbiw7NLXPv3lenI=
+		0uVCVjbkMvn6ZbDFwwfp/blKZtU=
 		</data>
 	</array>
 </dict>
 </plist>
-0A#I
-20230517203512Z0
-5oL 
-WwW>
-+!20
+_!0~
+20230519215946Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230419204020Z
-230531204019Z0B1
+230517203509Z
+230628203508Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-=&9!GD
-iVd+
-0odL
-g}g/
+7bc<
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-!YHt
-f5ND9
-7I~6
+-a[>
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -8591,9 +8622,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-WwW>
-+!20	
-230517203512Z0#
+230519215946Z0#
+zf0+
 __TEXT
 __text
 __TEXT
@@ -9582,14 +9612,12 @@ AWAVAUATSPD
 [A\A]A^A_]
 AVSI
 [A^]
-AWAVSP
-[A^A_]
+AWAVATSH
+[A\A^A_]
 AWAVSPI
 [A^A_]
 AVSI
 [A^]
-AWAVSPI
-[A^A_]
 AWAVSPI
 [A^A_]
 AWAVAUATSPD
@@ -9604,11 +9632,11 @@ AWAVAUATSPL
 [A\A]A^A_]
 AWAVAUATSPD
 [A\A]A^A_]
-AVSH
-[A^]
+AWAVAUATSPH
+[A\A]A^A_]
 	H;M
 AWAVATSH
-t?D9sPt9D
+t?D9sHt9D
 [A\A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -9646,7 +9674,7 @@ AVSH
 AWAVAUATSH
 [A\A]A^A_]
 AWAVATSI
-uuLc=EL
+uuLc=
 t0Hc
 [A\A^A_]
 AVSI
@@ -9698,7 +9726,6 @@ AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
 *J(A
-D95t9
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -9726,6 +9753,7 @@ AVSH
 [A^]
 AVSH
 [A^]
+95J:
 AVSH
 [A^]
 AWAVAUATSPI
@@ -9734,12 +9762,13 @@ L9!t
 [A\A]A^A_]
 AWAVAUATSH
 ]L9%
-u+L9-
+u+L9-u6
+L9%>6
+L9-=6
 L9.t
 L9.t
 [A\A]A^A_]
 AWAVAUATSH
-L9=x"
 [A\A]A^A_]
 u$z"
 [A\A]A^A_]
@@ -9749,10 +9778,10 @@ H9>t
 SPHc
 AWAVAUATSH
 [A\A]A^A_]
-K\D9k u	9K$
-KdD9k(
+KdD9k u	9K$
+KlD9k(
 D9k@u	9KD
-D9kT
+D9k\
 AWAVAUATSH
 ([A\A]A^A_]
 AWAVSPH
@@ -10973,7 +11002,6 @@ u:Mcg
 AWAVSPH
 [A^A_]
 AWAVAUATSH
--5|	
 F E1
 [A\A]A^A_]
 AWAVAUATSH
@@ -11126,8 +11154,8 @@ AVSM
 [A^]
 AWAVAUATSPH
 [A\A]A^A_]
-AVSH
-[A^]
+AWAVSPH
+[A^A_]
 AWAVSP
 [A^A_]
 AVSI
@@ -11148,15 +11176,11 @@ D$xH
 AWAVAUATSH
 [A\A]A^A_]
 t?Ic
-=%}	
 uhIc
-5!O	
 D;(u
 T$ A
 AWAVAUATSH
 8[A\A]A^A_]
-=Yy	
-=Iy	
 YUY2
 UYVY
 YVYUA
@@ -11166,23 +11190,15 @@ YVYUA
 AWPH
 t3L9
 t+H9
-=;v	
 AWAVATSA
 tHL9;uCH
 [A\A^A_]
 [A\A^A_]
-=xu	
-='t	
-=ys	
+=.}	
+=]|	
 AWAVAUATSH
-=*s	
 =YV12t
 =IYUV
-=yq	
-=iq	
-=Yq	
-=Iq	
-=9q	
 8[A\A]A^A_]
 YUY2t
 UYVYt
@@ -11190,13 +11206,13 @@ YVYUA
 AWAVAUATSH
 =NV21t
 =NV12
-=,n	
+=sv	
+=cv	
 H[A\A]A^A_]
 YUY2t
 UYVYt
 YVYUA
 AWAVAUATSH
-=|l	
 [A\A]A^A_]
 IcL$
 YUY2tZ
@@ -11205,54 +11221,53 @@ YVYU@
 AWAVSH
 ([A^A_]
 AWAVAUATSH
-=0j	
 ([A\A]A^A_]
 sht_1
 =YUY2t+=UYVYt$E1
 =YVYUA
 ([A\A]A^A_]
 AWAVSPH
-=Uh	
 [A^A_]
 H9^`t	H
 [A^A_]
 [A^A_]
-=0g	
 AWAVAUATSPH
+=>o	
 [A\A]A^A_]
-=cf	
-lD9o
+HD9o
 [A\A]A^A_]
-AWAVATSH
-[A\A^A_]
-=`a	
+AVSH
+ [A^]
+=.k	
+=mj	
 AWAVSPH
 [A^A_]
 YO$I
 AWAVSH
 [A^A_]
 AWAVSPH
-=0]	
 [A^A_]
+=Bf	
 AVSH
 [A^]
-=SZ	
+=^d	
 AVSH
 [A^]
 [A^]
-=~Y	
-='Y	
+=?c	
 AVSH
-=hX	
+=)b	
 [A^]
 [A^]
-=~V	
+=ra	
+=?`	
 AWAVAUATSPH
 [A\A]A^A_]
 AWAVATSA
 [A\A^A_]
 	H;M
 AWAVAUATSH
+=A^	
 [A\A]A^A_]
 [A\A]A^A_]
 u-z+
@@ -11268,25 +11283,25 @@ u(AS
 AWAVATSH
 [A\A^A_]
 t#E1
-=nJ	
+=/T	
 [A\A^A_]
-=8J	
 ^@0H
 AWAVAUATSPH
+=HS	
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
 PARASj
 [A\A]A^A_]
 AWAVAUATSH
+=QO	
 h[A\A]A^A_]
-=;E	
 L9{`t
 oPE1
 D$$I
 ARPj
 AWAVAUATSH
-=mB	
+=.L	
 	H;M
 [A\A]A^A_]
 M9w`t
@@ -11294,24 +11309,23 @@ AWSj
 t8UH
 ASPARj
 AWAVAUATSH
-=f=	
+='G	
 [A\A]A^A_]
 [A\A]A^A_]
 L9v`t3H
 [A\A]A^A_]
-=f<	
-=?<	
+='F	
 *=UUUUrHH
 [A\A]A^A_]
 ASAT
 [A\A]A^A_]
+=bC	
 [A\A]A^A_]
 u-z+
 u&z$
-=l2	
-=G2	
+=-<	
 AWAVAUATSH
-=g0	
+=(:	
 [A\A]A^A_]
 YUY2t$A
 UYVYt
@@ -11320,14 +11334,15 @@ AVSH
 [A^]
 AWAVAUATSH
 L9't-H
-=j.	
+=+8	
 [A\A]A^A_]
 L9#t1H
+=p7	
 L9#t!H
+=V7	
 L9#t
-=g,	
+=(6	
 AWAVSPH
-=C+	
 [A^A_]
 [A^A_]
 AVSH
@@ -11335,16 +11350,19 @@ AVSH
 [A^]
 AWAVATSI
 [A\A^A_]
+=q2	
 [A\A^A_]
 [A\A^A_]
 AVSH
 [A^]
 [A^]
 [A^]
-=~'	
+=?1	
 AWAVSPH
+=w/	
 [A^A_]
 [A^A_]
+=|.	
 AVSI
 [A^]
 AWAVAUATSPI
@@ -11952,7 +11970,6 @@ AWAVAUATSH
 AWAVAUATSPD
 [A\A]A^A_]
 AWAVAUATSH
-(5VA
 upzn
 [A\A]A^A_]
 AWAVAUATSH
@@ -12185,53 +12202,69 @@ D9;u
 [A^A_]
 AVSH
  [A^]
+AWAVSH
+[A^A_]
 AWAVAUATSH
-=a1	
-=>1	
-=$1	
-5}%	
-5f%	
-5]%	
-5E%	
+([A\A]A^A_]
+AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSP
-=A0	
-=&0	
-5k$	
-5_$	
 [A\A]A^A_]
 AWAVAUATSP
-5;#	
-5_#	
-5W#	
-5B#	
+5[2	
 [A\A]A^A_]
+AWAVAUATSH
+)F A
+)F0H
+%m1	
+5j0	
+[A\A]A^A_]
+AWAVAUATSH
+=D;	
+5]/	
+5z/	
+5h/	
+[A\A]A^A_]
+AWAVAUATSH
+=&:	
+5?.	
+5}.	
+5x-	
+X[A\A]A^A_]
 AVSH
 [A^]
 [A^]
 AWAVAUATSPH
-=w-	
-=p-	
--	"	
-=I-	
-=0-	
+=I7	
+=B7	
 ARSA
-5g!	
-5W!	
+5I+	
+59+	
 [A\A]A^A_]
 AWAVATSH
-=D,	
+5f*	
 [A\A^A_]
 AWAVAUATSH
-=b+	
+=45	
+5|)	
+5o)	
 LRUG
 LRUGA
+5<)	
 [A\A]A^A_]
 AWAVAUATSH
 )F0A
 )F A
+5M(	
+=W2	
+5F&	
+=4'	
+-5'	
+5U%	
+58&	
 [A\A]A^A_]
 AWAVAUATSP
+5Z&	
 [A\A]A^A_]
 AWAVAUATSPH
 tHHc
@@ -12239,19 +12272,28 @@ GH@u
 @H@t
 [A\A]A^A_]
 AVSH
+5&"	
 [A^]
 AWAVSH
 )F0A
 )F A
-=S$	
+=%.	
+5v#	
+5/#	
 [A^A_]
 AWAVATSH
 ----A
+5V 	
 [A\A^A_]
 AWAVAUATSH
-=e!	
-=>!	
-=, 	
+=b*	
+5s 	
+5f 	
+=Z)	
+=Z(	
+=4'	
+=.&	
+=V$	
 LRUGA
 LRUGA
 H[A\A]A^A_]
@@ -12259,6 +12301,7 @@ AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSPH
 UtmL
+=Z"	
 [A\A]A^A_]
 [A^]
 AWAVATSH
@@ -12266,7 +12309,6 @@ AWAVATSH
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSPH
-5m		
 [A\A]A^A_]
 AWAVATSI
 [A\A^A_]
@@ -12305,9 +12347,9 @@ H[A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
-u-H9]
-u'H9M
-u!H9u
+u+I9
+u&H9M
+u I9
 z	E9
 [A\A]A^A_]
 AVSH
@@ -12319,18 +12361,17 @@ AWAVAUATSH
 AWAVAUATSH
 H[A\A]A^A_]
 AWAVSPH
-?L;s@t
+?L;s8t
 [A^A_]
 AWAVATSI
 [A\A^A_]
 AWAVAUATSP
-HH9A t
+@H9A
 [A\A]A^A_]
 uBz@
 [A^]
 AWAVSPH
-=V_	
-=2_	
+=3j	
 [A^A_]
 AWAVATS
 [A\A^A_]
@@ -12374,6 +12415,7 @@ AVSH
 [A^]
 AVSH
 [A^]
+=IP	
 AVSH
 [A^]
 AVSI
@@ -12560,7 +12602,6 @@ AWAVAUATSH
 )G fA
 L98t
 CH t
-CI uBH
 x`E1
 [A\A]A^A_]
 AWAVAUATSH
@@ -12691,7 +12732,7 @@ HcG,H
 ([A\A]A^A_]
 AVSD
 [A^]
-#Ph1
+#rh1
 AWAVAUATS
 HcG,H
 L$(H
@@ -12864,6 +12905,7 @@ AWAVAUATSD
 AWAVAUATSD
 [A\A]A^A_]
 AWAVATSD
+o%x?
 w[A\A^A_]
 AWAVAUATSD
 [A\A]A^A_]
@@ -13878,13 +13920,16 @@ t)Ik
 [A^]
 AWAVAUATSH
 tyHc
-D7`I
-|7 C
+H;J u
+D7XI
+D7 C
 \7 K
+D7@C
+.D70r
 8[A\A]A^A_]
 AWAVAUATSPA
-|+@J
-|+hH
+|+8J
+|+`H
 [A\A]A^A_]
 t.Hc
 9:t$H
@@ -13900,13 +13945,14 @@ AWAVAUATSPI
 [A\A]A^A_]
 [A\A]A^A_]
 [A\A]A^A_]
+.KPu
 AWAVAUATSH
 8[A\A]A^A_]
 AWAVSPI
 [A^A_]
 AWAVAUATSH
-u1z/
-[A\A]A^A_]
+u2z0D
+([A\A]A^A_]
 [A^]
 +p +P$H
 AWAVAUATSH
@@ -13914,18 +13960,20 @@ AWAVAUATSH
 AVSH
 ~H f
 [A^]
+AWAVATSH
+[A\A^A_]
 AVSH
 [A^]
 [A^]
 AWAVATSH
-0[A\A^A_]
+ [A\A^A_]
 AWAVAUATSH
 [A\A]A^A_]
 t-Hc
-I9wXtJH
+I9wPtJH
 tGI9T
-Xu@M
-XuBH
+Pu@M
+PuBH
 AVSH
 [A^]
 AWAVAUATSH
@@ -13943,7 +13991,7 @@ AWAVAUATSP
 [A\A]A^A_]
 AVSI
 [A^]
-AWAVSP
+AWAVSPA
 [A^A_]
 [A^A_]
 AWAVSPH
@@ -13959,15 +14007,15 @@ $t,H
 t&E1
 AWAVAUATSH
 [A\A]A^A_]
-+C`A
-+CdA
-AWAVATSH
-[A\A^A_]
++ChA
++ClA
 AWAVATSH
 [A\A^A_]
 x.9s0
 9S4~?H
 AVSH
+[A^]
+[A^]
 [A^]
 AVSI
 [A^]
@@ -13986,7 +14034,7 @@ AVSH
 AWAVSPH
 [A^A_]
 AWAVATSI
-A;GTu	[A\A^A_]
+A;G\u	[A\A^A_]
 L9;t
 t'Hk
 [A\A^A_]
@@ -14016,7 +14064,7 @@ AWAVSPH
 [A^A_]
 [A^A_]
 AWAVSPI
-I;_Ht:H
+I;_@t:H
 [A^A_]
 AWAVSPH
 [A^A_]
@@ -14255,26 +14303,26 @@ AWAVAUATSH
 AWAVAUATSH
 @[A\A]A^A_]
 AWAVAUATSH
-`-d.
-h%3.
-h=&-
-`-s,
-h-=,
+`-x.
+h%G.
+h=:-
+h%&-
+h-Q,
 ATAWSP
 ATAWS
 [A\A]A^A_]
 AWAVAUATSH
 o4'fD
-`%J(
-h-B(
-`=I'
+`%^(
+h-V(
+`=]'
 T8@f
 t8PI
 AUATARP
 AUATAR
 [A\A]A^A_]
 AWAVAUATSH
-o5R@
+o5f@
 ATAWSP
 ATAWS
 [A\A]A^A_]
@@ -14287,7 +14335,7 @@ ATAWSP
 ATAWS
 [A\A]A^A_]
 AWAVAUATSH
-o5D*
+o5X*
 ATAWSP
 ATAWS
 [A\A]A^A_]
@@ -14296,17 +14344,16 @@ oLs
 o\s0fA
 oLv 
 o\v0fE
-o=T'
+o=h'
 odr fD
 oLr0f
-o%v%
-o-^%
+o-r%
 Lr0I
 u(AVPASAR
 E PAR
 [A\A]A^A_]
 AWAVAUATSH
-o%=!
+o%Q!
 oLS 
 oTS0fD
 oTV 
@@ -14386,6 +14433,7 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
+D95g
 UAWAVAUATSH
 D$`H
 D$8H
@@ -15085,7 +15133,6 @@ Sample rate exceeds limit of %d
 Invalid fact chunk in WAVE file
 Missing fact chunk in WAVE file
 Invalid bits per sample
-Invalid block alignment
 MPEG formats not supported
 Unknown WAVE format GUID: %08x-%04x-%04x-%02x%02x%02x%02x%02x%02x%02x%02x
 Unknown WAVE format tag: 0x%04x
@@ -15125,7 +15172,7 @@ HygonGenuine
 Unknown
 SDL3_DYNAMIC_API
 SDL_DYNAPI_entry
-Couldn't load overriding SDL library. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
+Couldn't load an overriding SDL library. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
 Couldn't override SDL library. Using a newer SDL build might help. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
 Failed to initialize internal SDL dynapi. As this would otherwise crash, we have to abort now.
 SDL Dynamic API Failure!
@@ -15160,13 +15207,14 @@ SDL_EVENT_DISPLAY_ORIENTATION
 SDL_EVENT_DISPLAY_CONNECTED
 SDL_EVENT_DISPLAY_DISCONNECTED
 SDL_EVENT_DISPLAY_MOVED
-SDL_EVENT_DISPLAY_SCALE_CHANGED
+SDL_EVENT_DISPLAY_CONTENT_SCALE_CHANGED
 SDL_EVENT_WINDOW_SHOWN
  (timestamp=%u windowid=%u event=%s data1=%d data2=%d)
 SDL_EVENT_WINDOW_HIDDEN
 SDL_EVENT_WINDOW_EXPOSED
 SDL_EVENT_WINDOW_MOVED
 SDL_EVENT_WINDOW_RESIZED
+SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED
 SDL_EVENT_WINDOW_MINIMIZED
 SDL_EVENT_WINDOW_MAXIMIZED
 SDL_EVENT_WINDOW_RESTORED
@@ -15179,7 +15227,8 @@ SDL_EVENT_WINDOW_TAKE_FOCUS
 SDL_EVENT_WINDOW_HIT_TEST
 SDL_EVENT_WINDOW_ICCPROF_CHANGED
 SDL_EVENT_WINDOW_DISPLAY_CHANGED
-SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED
+SDL_EVENT_WINDOW_DISPLAY_SCALE_CHANGED
+SDL_EVENT_WINDOW_DESTROYED
 SDL_EVENT_SYSWM
 SDL_EVENT_KEY_DOWN
  (timestamp=%u windowid=%u state=%s repeat=%s scancode=%u keycode=%u mod=%u)
@@ -16608,7 +16657,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-1519-g642504bc5
+SDL-prerelease-3.0.0-1540-gd5f07730b
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -16685,13 +16734,6 @@ pthread_setspecific() failed
 SDL_THREAD_STACK_SIZE
 SDLTimer
 SDL_TIMER_RESOLUTION
-Couldn't create NSString; is your string data in UTF-8 format?
-AppleMomentumScrollSupported
-ApplePressAndHoldEnabled
-ApplePersistenceIgnoreState
-effectiveAppearance
-SDL_MAC_BACKGROUND_APP
-com.apple.dock
 hash
 TQ,R
 superclass
@@ -16699,6 +16741,15 @@ T#,R
 description
 T@"NSString",R,C
 debugDescription
+Couldn't create NSString; is your string data in UTF-8 format?
+Unable to set clipboard item data
+Unable to set clipboard data
+AppleMomentumScrollSupported
+ApplePressAndHoldEnabled
+ApplePersistenceIgnoreState
+effectiveAppearance
+SDL_MAC_BACKGROUND_APP
+com.apple.dock
  using SDL_DisableScreenSaver
 PreventUserIdleDisplaySleep
 NSMainNibFile
@@ -16780,7 +16831,7 @@ view
 T@"NSView",&,N,V_view
 path
 T@"NSBezierPath",&,N,V_path
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_window
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_window
 allow_spaces
 Ti,N,V_allow_spaces
 trackpad_is_touch_only
@@ -16819,7 +16870,7 @@ Tq,N,V_window_number
 flash_request
 Tq,N,V_flash_request
 keyboard_focus
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_keyboard_focus
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_keyboard_focus
 listener
 T@"Cocoa_WindowListener",&,N,V_listener
 videodata
@@ -17121,7 +17172,6 @@ Conflicting window type flags specified: 0x%.8x
 Tooltip and popup menu windows must specify a parent window
 Window is too large.
 Conflicting window graphics flags specified: 0x%.8x
-SDL_VIDEO_HIGHDPI_DISABLED
 %s support is either not configured in SDL or not available in current SDL video driver (%s) or platform
 SDL_FRAMEBUFFER_ACCELERATION
 Requested renderer for SDL_FRAMEBUFFER_ACCELERATION is not available
@@ -17171,53 +17221,9 @@ count
 objectAtIndex:
 preferredLanguages
 getCString:maxLength:encoding:
-stringWithUTF8String:
-generalPasteboard
-arrayWithObject:
-declareTypes:owner:
-setClipboard_count:
-setString:forType:
-availableTypeFromArray:
-isEqualToString:
-stringForType:
-changeCount
-clipboard_count
-sendEvent:
-numberWithBool:
-initWithObjectsAndKeys:
-standardUserDefaults
-registerDefaults:
-registerUserDefaults
-terminate:
 init
-defaultCenter
-windowWillClose:
-addObserver:selector:name:object:
-focusSomeWindow:
-localeDidChange:
-addObserver:forKeyPath:options:context:
-removeObserver:name:object:
-removeObserver:forKeyPath:
-delegate
-sharedAppleEventManager
-removeEventHandlerForEventClass:andEventID:
-dealloc
-object
-isKeyWindow
-orderedWindows
-countByEnumeratingWithState:objects:count:
-canBecomeKeyWindow
-isOnActiveSpace
-makeKeyAndOrderFront:
-windowNumbersWithOptions:
-integerValue
-windowWithWindowNumber:
-keyWindow
-runningApplicationsWithBundleIdentifier:
-activateWithOptions:
-activateIgnoringOtherApps:
-paramDescriptorForKeyword:
-stringValue
+dataWithBytes:length:
+setData:forType:
 isEqual:
 class
 self
@@ -17238,6 +17244,67 @@ hash
 superclass
 description
 debugDescription
+pasteboard:item:provideDataForType:
+pasteboardFinishedWithDataProvider:
+initWith:userData:
+m_callback
+m_userdata
+stringWithUTF8String:
+generalPasteboard
+arrayWithObject:
+declareTypes:owner:
+setClipboard_count:
+setString:forType:
+availableTypeFromArray:
+isEqualToString:
+stringForType:
+changeCount
+clipboard_count
+pasteboardItems
+countByEnumeratingWithState:objects:count:
+dataForType:
+length
+getBytes:length:
+arrayWithObjects:count:
+canReadItemWithDataConformingToTypes:
+addObject:
+setDataProvider:forTypes:
+clearContents
+writeObjects:
+sendEvent:
+numberWithBool:
+initWithObjectsAndKeys:
+standardUserDefaults
+registerDefaults:
+registerUserDefaults
+terminate:
+defaultCenter
+windowWillClose:
+addObserver:selector:name:object:
+focusSomeWindow:
+localeDidChange:
+addObserver:forKeyPath:options:context:
+removeObserver:name:object:
+removeObserver:forKeyPath:
+delegate
+sharedAppleEventManager
+removeEventHandlerForEventClass:andEventID:
+dealloc
+object
+isKeyWindow
+orderedWindows
+canBecomeKeyWindow
+isOnActiveSpace
+makeKeyAndOrderFront:
+windowNumbersWithOptions:
+integerValue
+windowWithWindowNumber:
+keyWindow
+runningApplicationsWithBundleIdentifier:
+activateWithOptions:
+activateIgnoringOtherApps:
+paramDescriptorForKeyword:
+stringValue
 applicationShouldTerminate:
 application:openURLs:
 application:openFile:
@@ -17321,7 +17388,6 @@ performZoom:
 toggleFullScreen:
 setWindowsMenu:
 objectForInfoDictionaryKey:
-length
 processInfo
 processName
 string
@@ -17434,7 +17500,6 @@ updateIfNeeded
 nscontexts
 removeObject:
 sdlContentView
-addObject:
 view
 setView:
 currentContext
@@ -17535,7 +17600,6 @@ windowDidFinishMoving
 draggingSourceOperationMask
 draggingLocation
 draggingPasteboard
-dataForType:
 propertyListForType:
 fileURLWithPath:
 getResourceValue:forKey:error:
@@ -17707,7 +17771,6 @@ deminiaturize:
 setContentSize:
 colorSpace
 ICCProfileData
-getBytes:length:
 copy
 registerForDraggedTypes:
 unregisterDraggedTypes
@@ -17724,10 +17787,12 @@ setIgnoresMouseEvents:
 isOpaque
 setReleasedWhenClosed:
 setOneShot:
+Cocoa_PasteboardDataProvider
+NSPasteboardItemDataProvider
+NSObject
 SDLApplication
 SDLAppDelegate
 NSApplicationDelegate
-NSObject
 SDLTranslatorResponder
 NSTextInputClient
 SDLMessageBoxPresenter
@@ -17742,8 +17807,6 @@ NSDraggingDestination
 Cocoa_WindowListener
 NSWindowDelegate
 SDLView
-v16@0:8
-v24@0:8@16
 c24@0:8@16
 #16@0:8
 @16@0:8
@@ -17758,6 +17821,12 @@ Q16@0:8
 ^{_NSZone=}16@0:8
 c24@0:8@"Protocol"16
 @"NSString"16@0:8
+v40@0:8@16@24@32
+v24@0:8@16
+v40@0:8@"NSPasteboard"16@"NSPasteboardItem"24@"NSString"32
+v24@0:8@"NSPasteboard"16
+@32@0:8^?16^v24
+v16@0:8
 Q24@0:8@16
 v32@0:8@16@24
 c32@0:8@16@24
@@ -17766,7 +17835,6 @@ c28@0:8@16c24
 @24@0:8@16
 @32@0:8@16@24
 c40@0:8@16@24@?32
-v40@0:8@16@24@32
 Q24@0:8@"NSApplication"16
 v32@0:8@"NSApplication"16@"NSArray"24
 c32@0:8@"NSApplication"16@"NSString"24
@@ -17804,12 +17872,12 @@ v24@0:8r^{SDL_Rect=iiii}16
 @"NSString"
 {_NSRange="location"Q"length"Q}
 {SDL_Rect="x"i"y"i"w"i"h"i}
-@24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
+@24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
 @"NSWindow"
-v24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16@0:8
+v24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16@0:8
 {?="value"i}
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
 ^{__CVDisplayLink=}
 ^{SDL_Mutex=}
 ^{SDL_Condition=}
@@ -17882,11 +17950,14 @@ GIF87a
  $(,048<@DHLPUY]aeimquy}
  )19AJRZbjs{
 "3DUfw
-BXAXAXAXAXAXAXA^0
+ASBXAXAXAXAXAXAXA^0
 B`#C`;B
 VBVBp
 RBSA\BSCSCTBTBTBTATD
-BSCREVCRERARARARARARARARARARARARARARARARARARARBRB`
+BRARARARARARARARARARARARARARARARARARARBRB`
+RBRARAp p
+p VASASBXCTAp
+SCREVCRERARARARARARARARARARARARARARARARARARARBRB`
 RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARA`(Ap p
 ASBXCTAp
 RARARARARARARARARARARBRARARARARA`
@@ -17905,10 +17976,11 @@ AXCSBp
 RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARA`3Ap p
 ASASASASASASASASASASASASBXCVCp0`
 ASDRAp
-MRGp
-p0RBp
-p RCp p RCRCp RCp p RCp RCp RCp RCRCRC
- RCTASAS0
+Ip8RGp
+p(RBp
+p RCp RCp p RCRCp RCp p RCp RCp RCp RCRCRC
+ RCp
+SASAS0
 F``A`
 \K`.BX0
 `<Ap
@@ -17975,6 +18047,7 @@ pHSARBp
 @_OBJC_CLASS_$_NSOpenGLContext
 @_OBJC_CLASS_$_NSOpenGLPixelFormat
 @_OBJC_CLASS_$_NSPasteboard
+@_OBJC_CLASS_$_NSPasteboardItem
 @_OBJC_CLASS_$_NSResponder
 @_OBJC_CLASS_$_NSRunningApplication
 @_OBJC_CLASS_$_NSScreen
@@ -18006,6 +18079,7 @@ pHSARBp
 @_kCFTypeArrayCallBacks
 @_kCFTypeDictionaryKeyCallBacks
 @_kCFTypeDictionaryValueCallBacks
+@_kUTTagClassMIMEType
 @_kUTTypeFileURL
 @_OBJC_CLASS_$_NSObject
 @_OBJC_METACLASS_$_NSObject
@@ -18177,6 +18251,8 @@ pHSARBp
 @_TISCopyCurrentKeyboardLayoutInputSource
 @_TISGetInputSourceProperty
 @_UCKeyTranslate
+@_UTTypeCopyPreferredTagWithClass
+@_UTTypeCreatePreferredIdentifierForTag
 @__Block_object_assign
 @__Block_object_dispose
 @__Exit
@@ -18361,14 +18437,14 @@ A_dispatch_once_f
 _SDL_
 AJoystick
 FNumHaptics
-aVulkan_
+bVulkan_
 fbsearch
 gexp
 hgetenv
 ihid_
 opow
-oqsort
-twcs
+pqsort
+uwcs
 reate
 aptureMouse
 ursorVisible
@@ -18408,8 +18484,8 @@ mposeCustomBlendMode
 nvert
 	ignalCondition
 IMDGetAlignment
-RaveBMP_RW
-Rcreen
+SaveBMP_RW
+Screen
 Thow
 _oftStretch
 `urfaceHas
@@ -18418,13 +18494,13 @@ rpMouse
 esInit
 Condition
 	Semaphore
-SEvent
+TEvent
 eThread
 Timeout
 Pixels
 	Surface
 	AudioSamples
-vEventToRenderCoordinates
+wEventToRenderCoordinates
 Format
 ursor
 lorCursor
@@ -18550,6 +18626,7 @@ Bounds
 Name
 Orientation
 UsableBounds
+wContentScale
 Point
 Rect
 Window
@@ -18557,9 +18634,9 @@ rror
 ventFilter
 amepad
 lobalMouseState
-$rabbedWindow
+%rabbedWindow
  Instance
- Joystick
+!Joystick
 "Mapping
 "Name
 $Vendor
@@ -18568,7 +18645,7 @@ Axis
 Button
 FromString
 indFor
-utton
+ utton
 Axis
  Button
 FromString
@@ -18580,7 +18657,7 @@ GUID
 !Mapping
 !Name
 !Type
-!Vendor
+"Vendor
 !layerIndex
 !roduct
 Version
@@ -18607,13 +18684,13 @@ ouchpadFinger
 $ype
 Boolean
 Axis
-%Button
+&Button
 &GUID
 &Hat
 'Instance
 'Name
 (Serial
-(Type
+)Type
 )Vendor
 InitialState
 irmwareVersion
@@ -18627,8 +18704,8 @@ GUID
 'Name
 'Type
 (Vendor
-'layerIndex
-'roduct
+(layerIndex
+(roduct
 Version
 (layerIndex
 (owerLevel
@@ -18648,7 +18725,7 @@ dState
 Focus
 *State
 llocations
-*udioD
++udioD
 evices
 +rivers
 Axes
@@ -18664,7 +18741,7 @@ erformance
 Counter
 ,Frequency
 EnumForMasks
-,Name
+-Name
 -imary
 Path
 -erredLocales
@@ -18685,11 +18762,11 @@ Mode
 /State
 ClipRect
 0LogicalPresentation
-0Metal
-0Target
+1Metal
+1Target
 1Window
 1OutputSize
-vScale
+wScale
 0iver
 BlendMode
 0Color
@@ -18697,7 +18774,6 @@ CommandEncoder
 1Layer
 iewport
 1Sync
-Size
 Info
 cancode
 2hapedWindowMode
@@ -18727,8 +18803,8 @@ exture
 6ouch
 AlphaMod
 5BlendMode
-5ColorMod
-5ScaleMode
+6ColorMod
+6ScaleMode
 6UserData
 6Name
 Device
@@ -18738,12 +18814,12 @@ Type
 ersion
 7ideoDriver
 BordersSize
-7Data
 8Grab
 8KeyboardGrab
 8Opacity
-9Title
+:Title
 :WMInfo
+8isplayScale
 ullscreenMode
 8lags
 8romID
@@ -18753,10 +18829,12 @@ aximumSize
 9ouse
 Grab
 9Rect
-ixelFormat
+ixel
 9osition
-9arent
-9urface
+:arent
+Format
+:Density
+:urface
 InPixels
 ForResolution
 :ide
@@ -18766,30 +18844,30 @@ Close
 ;EffectSupported
 ;GetEffectStatus
 ;Index
-;Open
+<Open
 <Pause
-<Query
-;ewEffect
+=Query
+<ewEffect
 Axes
 <Effects
 Playing
 From
 Joystick
-<Mouse
+=Mouse
 mble
 =nEffect
 Init
 =Play
 =upported
-=top
+>top
 Autocenter
-=Gain
+>Gain
 >Effect
 npause
 >pdateEffect
 ?Clipboard
-?Event
-?MMX
+@Event
+@MMX
 @NEON
 @PrimarySelectionText
 @RectIntersection
@@ -18797,9 +18875,9 @@ RMSIMD
 ?ltiVec
 ?512F
 Text
-?Data
+@Data
 Float
-@creenKeyboardSupport
+AcreenKeyboardSupport
 Cursor
 AWindow
 SubSystem
@@ -18808,40 +18886,40 @@ BJoystickVirtual
 BShapedWindow
 BTablet
 Connected
-BEventsEnabled
-BHas
-BIsHaptic
-BRumble
+CEventsEnabled
+CHas
+CIsHaptic
+CRumble
 Triggers
 BMP_RW
 CObject
-CWAV_RW
-Cunction
+DWAV_RW
+Dunction
 AudioDevice
 DJoysticks
 DMutex
 DSurface
-DTexture
-DRWLockFor
+ETexture
+ERWLockFor
 ToSurface
 EMessage
 EResetPriorities
-ESet
+FSet
 OutputFunction
 EPriority
 AllPriority
 FOutputFunction
 FPriority
-GouseIsHaptic
+HouseIsHaptic
 pRGB
-FximizeWindow
+GximizeWindow
 moryBarrier
 Gtal_
 AcquireFunction
 GReleaseFunction
 CreateView
-GDestroyView
-GGetLayer
+HDestroyView
+HGetLayer
 nimizeWindow
 HxAudioFormat
 nApplication
@@ -18859,20 +18937,20 @@ JJoystick
 JSensor
 JURL
 auseAudioDevice
-JeepEvents
+KeepEvents
 KremultiplyAlpha
 KlayAudioDevice
 llEvent
 KstSemaphore
 mpEvents
 KshEvent
-KtAudioStreamData
+LtAudioStreamData
 ryTexture
 LueAudio
 SubSystem
 LaiseWindow
 From
-Lclose
+Mclose
 Mread
 Mtell
 Mwrite
@@ -18881,26 +18959,26 @@ MFile
 MMem
 Mize
 NgisterEvents
-NmoveTimer
-Nnder
-NportAssertion
-OGeometry
+OmoveTimer
+Onder
+OportAssertion
+PGeometry
 PLine
-PTexture
+QTexture
 Ooordinates
 OipEnabled
 illRect
-Olush
+Plush
 ToWindow
 PFromWindow
 oint
-Present
+Qresent
 adPixels
 Rotated
 QtoreWindow
 AssertionReport
-QHint
-QKeyboard
+RHint
+RKeyboard
 mble
 RnApp
 Gamepad
@@ -18909,10 +18987,10 @@ Triggers
 Triggers
 KeyboardShown
 SSaverEnabled
-`extInput
+aextInput
 ahreadID
 WaitSemaphore
-SLock
+TLock
 Timeout
 GamepadEffect
 TJoystickEffect
@@ -18925,24 +19003,24 @@ YSurface
 ssertionHandler
 UudioStreamFormat
 lipboard
-Uursor
+Vursor
 Text
-UData
+VData
 vent
 Vrror
 Enabled
 VFilter
 EventsEnabled
-VLED
-VPlayerIndex
-VSensorEnabled
+WLED
+WPlayerIndex
+WSensorEnabled
 WithPriority
 EventsEnabled
 WLED
-WPlayerIndex
-WVirtual
+XPlayerIndex
+XVirtual
 Axis
-WButton
+XButton
 XHat
 ainReady
 XemoryFunctions
@@ -18953,8 +19031,8 @@ YrimarySelectionText
 lativeMouseMode
 Ynder
 ClipRect
-YDraw
-YLogicalPresentation
+ZDraw
+ZLogicalPresentation
 ZTarget
 ZScale
 BlendMode
@@ -18962,15 +19040,15 @@ ZColor
 Sync
 Ziewport
 AlphaMod
-ZBlendMode
+[BlendMode
 [Palette
 [RLE
 lipRect
 [olor
 [Mod
-[hreadPriority
+\hreadPriority
 InputRect
-[ure
+\ure
 AlphaMod
 \BlendMode
 \ColorMod
@@ -18978,10 +19056,10 @@ AlphaMod
 \UserData
 AlwaysOnTop
 ]Bordered
-]Data
-]Fullscreen
-]Grab
-]HitTest
+^Data
+^Fullscreen
+^Grab
+^HitTest
 ^KeyboardGrab
 ^Opacity
 _Position
@@ -18992,20 +19070,20 @@ Mode
 aximumSize
 ^inimumSize
 dalFor
-^use
+_use
 Grab
 _Rect
 hape
 _ize
 Cursor
-_MessageBox
+`MessageBox
 `SimpleMessageBox
 `Window
 Linear
 artTextInput
 `opTextInput
 ColorKey
-`RLE
+aRLE
 aGet
 aSet
 leanup
@@ -19013,40 +19091,40 @@ areate
 Active
 aShown
 Mutex
-aRWLockFor
+bRWLockFor
 bpdate
 adObject
 AudioDevice
-bJoysticks
-bMutex
-bSurface
-bTexture
-bRWLock
+cJoysticks
+cMutex
+cSurface
+cTexture
+cRWLock
 Gamepads
 cJoysticks
 cNVTexture
-cSensors
-cTexture
-cWindowSurface
-cYUVTexture
+dSensors
+dTexture
+dWindowSurface
+dYUVTexture
 Rects
 CreateSurface
 dGet
 dLoadLibrary
-dUnloadLibrary
+eUnloadLibrary
 InstanceExtensions
-dVkGetInstanceProcAddr
+eVkGetInstanceProcAddr
 Timeout
 Global
 eInWindow
 fcos
 gligned_
-fprintf
+gprintf
 alloc
-geil
+heil
 pysign
-hloor
-hmod
+iloor
+imod
 iree
 ble_scan
 jclose
@@ -19056,7 +19134,7 @@ jget_
 jinit
 kopen
 kread
-kwrite
+lwrite
 numerate
 jxit
 feature_report
@@ -19069,43 +19147,43 @@ _timeout
 nd_feature_report
 lt_nonblocking
 conv
-ltoa
+mtoa
 close
-lopen
-lstring
+mopen
+mstring
 mblank
-mcntrl
-mdigit
-mgraph
-mlower
+ncntrl
+ndigit
+ngraph
+nlower
 nspace
 nupper
 nxdigit
-mpha
+npha
 rint
 nunct
 ltoa
-nround
-ntoa
+oround
+otoa
 alloc
 oodf
 omove
-oset
+pset
 ealloc
 pound
 calbn
-petenv
-pqrt
+qetenv
+qqrt
 qscanf
 xnprintf
 qdup
 rstr
-rupr
-qstr
+supr
+rstr
 asecmp
 srunc
 lower
-supper
+tupper
 itoa
 ttf8str
 ltoa
@@ -19121,7 +19199,7 @@ asecmp
 alloc
 vfree
 Reading
-wWriting
+xWriting
 Reading
 xWriting
 Verbose
@@ -19167,7 +19245,7 @@ H%""//""22""""""//
 ""2444
 %494%%
 44%**%
-#<4%444
+#I4%44
 a2'}
  @%Gk
 --LL #?8 
@@ -19193,7 +19271,7 @@ hNDN3
 aNDNXXu
 S{}}
 dqqIso
-ALdaV
+AL^V
 ^S??S?<A
 WOj{=
 VVz++!++$
@@ -19206,6 +19284,7 @@ h_[M\
 D=00
 H"99
 "$/$X"99AA9ac
+gSqd
 						
 				
 GRRDZZ2
@@ -19376,6 +19455,7 @@ _SDL_GetDefaultAudioInfo
 _SDL_GetDefaultCursor
 _SDL_GetDesktopDisplayMode
 _SDL_GetDisplayBounds
+_SDL_GetDisplayContentScale
 _SDL_GetDisplayForPoint
 _SDL_GetDisplayForRect
 _SDL_GetDisplayForWindow
@@ -19520,7 +19600,6 @@ _SDL_GetRenderTarget
 _SDL_GetRenderVSync
 _SDL_GetRenderViewport
 _SDL_GetRenderWindow
-_SDL_GetRenderWindowSize
 _SDL_GetRenderer
 _SDL_GetRendererInfo
 _SDL_GetRevision
@@ -19563,6 +19642,7 @@ _SDL_GetVersion
 _SDL_GetVideoDriver
 _SDL_GetWindowBordersSize
 _SDL_GetWindowData
+_SDL_GetWindowDisplayScale
 _SDL_GetWindowFlags
 _SDL_GetWindowFromID
 _SDL_GetWindowFullscreenMode
@@ -19576,6 +19656,7 @@ _SDL_GetWindowMouseGrab
 _SDL_GetWindowMouseRect
 _SDL_GetWindowOpacity
 _SDL_GetWindowParent
+_SDL_GetWindowPixelDensity
 _SDL_GetWindowPixelFormat
 _SDL_GetWindowPosition
 _SDL_GetWindowSize
@@ -20259,6 +20340,7 @@ _OBJC_CLASS_$_NSObject
 _OBJC_CLASS_$_NSOpenGLContext
 _OBJC_CLASS_$_NSOpenGLPixelFormat
 _OBJC_CLASS_$_NSPasteboard
+_OBJC_CLASS_$_NSPasteboardItem
 _OBJC_CLASS_$_NSProcessInfo
 _OBJC_CLASS_$_NSResponder
 _OBJC_CLASS_$_NSRunningApplication
@@ -20279,6 +20361,8 @@ _OBJC_METACLASS_$_NSWindow
 _TISCopyCurrentKeyboardLayoutInputSource
 _TISGetInputSourceProperty
 _UCKeyTranslate
+_UTTypeCopyPreferredTagWithClass
+_UTTypeCreatePreferredIdentifierForTag
 __Block_object_assign
 __Block_object_dispose
 __DefaultRuneLocale
@@ -20360,6 +20444,7 @@ _kCGColorClear
 _kCGDisplayShowDuplicateLowResolutionModes
 _kIOMasterPortDefault
 _kTISPropertyUnicodeKeyLayoutData
+_kUTTagClassMIMEType
 _kUTTypeFileURL
 _log
 _log10
@@ -20491,194 +20576,202 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
->Ts[
-/x$*
-k'f5
-g>L;
-m[T7
-"JLi
-CY2+
-_N'_=
-3gpd
-*Ec:
-V~'w)
-4@y<#
-{*tKY]
-~2aU
-0qx5
-d0/<
-?R|Yt#
-h{3,
-Nmzh2K
-/w3L
->wkW
-TO<I!
-Y,QC
-6id*
-JiuB
-#C	{&R~T
-2n<-
-T}^8
-Ht-\
-g],Q
-_W?*7o"
-^/hq
-8V 6
-R-jh
-BI*'7
- < Km
-6J3q
-)u38
-)I%8
->Bl@
-rY:g9
-K^[+
-|%LA2)
-:MveD
-F+od
-Q{dK
-(S(~
-}r8h
-InE^
-Sn-b
-S7'7
-~B~V
-i4JZ
-NUc!C
-z)R-a]
-z0zqn
-OWw]Yy@
-WtF7
-|2.d
-D"L.
-kYBP
-K64m
-3> z
-[QO@
-dfQe
-Jo$X
-yZWD
-(uL63
-hWTq6P
-sIEe
-g>'z
+oT3B
+0Lf_q9
+W:G0W
+Kx<^
+yd!;h
+s>Is
+)S5y+
+b0rKF
+0ZJB
+eg1}
+f_bt
+0i\'"
+nqnHkrs'nA
+=kyt
+/.Te
+yY~]|
+=RH8,j
+AQ{e
+G&/2f
+}}?x
+4KmwM&
+=&yL2Fo
+m"/:
+[SC:
+f,lV/
+$$UT0g}fJ:
+l"jx]6`
+f9MW
+yqKc
+989P
+% e&U?
+yzb6;
+!mGN
+I&jh
+d_1r
+2p\)`
+v5zy
+Bs~*
+F`5i
+)@Y{0Xa
+AEhf:
+Pg`C)s
+`E#b
+(;I2
+>2_i
+5%q]
+1t:A
+xRpW
+QbG=
+Hc4(N-uu
+XtN:
+&M~D
+9Yrr3
+aV@?
+u$j\
+Py3C
+0jXl=
+*i)rr?
+nt4+
+|Bl8Gz
+}UDL
+Cd6*
+;sJ/PX
+4H=3
+(pRd
+vmRDDYw
+zK[D-
+YOA^A
+9.MJz
+dG9H
+M{e[
+R]Ys/8o
+xiqe
+d!`>
+$b<k
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-vve2
-v<*)T
-buFz[q
-7]9t
- }e$]
-U{wP
-uo4A
-O'-F
-fgvd
-ggT.TIJ
-4"Fn
-AeW	
-7#}H#
-.JL%b
-ndyE
-SW*&?
-R>}Y
-eL(E
-^~CG{h
-eB*c~F
-Z:12=
-LNLN~\
-H eZ
-M)Ri)
-QJ	*
-Rk`#
-de	 
-Y<:km
-ptwM?
-&EbK
-,Pri
-Ld`F
-300.
-v49^g
-`7a8?e
-7ayt
-6)Y.
-0C8C+4
-k.'[
-Vq{I
-CCiW
-%H=[
-pO.$
-zec~
-u1RV
-n`c@
-8|f-
-(z}a5
-qvB;r
-LgWO
-^^JU
-&%2s
-bK = 
-&CXw
-fAe	
-(CG4
-pui3
-2kpx
-t+c1
-}lAgN
-<tbe<k
-.{Fo
-]Rh0n
-+B_>
-1s\E
-S%u)
-y^zDU
-QZ	0
-K3	P
- d+Q
-<av=
-qi;X%
-~2cl<
-E:<":s-
-A&])
-n# 280
-?NR,
-en0J
-%!fv
-cyj.
-{CYQ
-^u`Gs\A
->sm+
-UzNj
-O]MP
-by3g
-$YD^
-C0MN
-i;QO
-CcZj
-|D$q
-~& o`
-	?l 9
-^h^B
-I[K[
-51H?
-]WRUaC
-a@2 
-Bjk8%
-<+-ew
-*pR(Ou
-9:cE
-iHL:-
-&ypd
-VONJ6
-?>hD
-pUX2
-!HeqA2
-1!S(x
-baG1
-I|^K e
-xP-3?
-Lt4Fr2
+@Y378
+Eb^)
+jAhJd
+~&(Z
+,67 T
+&,!/
+}Aq1
+/!\{
+a#"7
+4qko(<
+>"<i
+\ZWY;
+]F(v
+L(8u^
+p\b\
+H+k'w
+' }B
+R? L
+Uuzi
+ Qtz
+f;P;
+	coB
+NivV
+uJAH
+^%+k
+%{w+
+K3O)
+f:,S*
+f`jaF3!W
+ofTb]W
+?\?`
+23M,%
+}Mb]J
+mih"f
+-6g][
+78zp
+<<hU
+b4u0
+o'^V*
+?::D
+~nF^_
+HQ&J
+}Viy
+ =FK^
+`y=>
+NR>w
+w[N	
+\O;H
+^<wp
+[4tQ
+YNWLf
+`~Q,
+%;"~
+<Pez;$E=
+d\]x
+&uZ@
+I 8`
+o{*	
+4gZf
+uE:x
+.u&~
+9VJ$5%	
+e"m"/
+a=vfK
+3K@=@*
+{Sjvd
+e):x
+}r(w
+j; 	{:nNL
+8'6`c
+	>2U
+aNr^E
+iy5Aj:8
+ugjtl
+>sDY
+jPYT
+iZfY	
+M^	el
+qhTt
+k\2	
+,riQ
+l,&s!
+R?8^`
+Q^f)
+p\ 2
+_5ud
+=c:)
+$vV}
+b|a7n
+5\;w
+`Exa
+%,Di
+fdm6
+F|3n!9
+WYc3
+@)oD
+ZA=n#Y
++V#gX
+)$n]T
+o<Y}[
+}6yB
+7s,8
+>g8r
+Q.q;0Rp
+a,Z/
+ ./a
+Dwbk
+qq;h
+@vcR,$
+]F1	
+W{!|
+3Sqk`
+?fMv
+nz'O>
+eTf\
+20R3
+9uYR++G
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -20734,10 +20827,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230517203506Z0/
-T80-
-C;WG
-BDZ{
+230519215927Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -20745,39 +20835,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		o4i3CdocLP60Pdxvvm+rI0v/VDg=
+		HDPLpv+aGYuWEQia8Wbz6KZtK9k=
 		</data>
 		<data>
-		z75DO1dH9FO6TmMLAFOd2BnO7UI=
+		jUBPG3tZ+Ded5S319FLsbEPakfU=
 		</data>
 	</array>
 </dict>
 </plist>
-{2&T*t
-\sUa
-:On,Uk
-20230517203512Z0
-WwW>
-+!20
+-N'x;;
+hlk1#
+:.]iA
+$0$O"+
+TX^F
+BnO3
+20230519215946Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230419204020Z
-230531204019Z0B1
-Timestamp Signer NWK21
+230517205008Z
+230628205007Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-=&9!GD
-iVd+
-0odL
-g}g/
+SD}l
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-!YHt
-f5ND9
-7I~6
+%{!u
+.:E7)&V
+Ghpj
+f?fJf[
+3y\G
+1W'n
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -20816,13 +20907,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-WwW>
-+!20	
-230517203512Z0#
-AO0+
-n\a=E|
-LtBS9
-C5Wr
+230519215946Z0#
+]$s*
+`ODOh[
+Q|@!
+r1usb
 __TEXT
 __text
 __TEXT
@@ -20906,19 +20995,16 @@ T*ih8
 4hN@
 h:@9
 +ih8J	
-@|gP
 ShJ@
 a>@9
 5hJ@
 4h^@
 a~a2@=!
 a:@=!
-h.a\
 4hJ@
 4hJ@
 4hJ@
 a>@9
-4(kgP
 	)E)J
 	)E))
 a>@9
@@ -20927,44 +21013,44 @@ a>@9
 4hJ@
 RhJ@
 4hJ@
+pYwX
+WwX)
 cW8L
-	0gP
+	{gP
 "@y	}
-!&gP
+!qgP
  @y	}
 >@9b~@
-HIvX
+T@KgP
+@Hgp
+(9gP
+`-g0
 S?!(k
 @y?!
-~X)V
+	zvX)
 "@y 
 @@qJ
- ifp
-Tic~
-h[fP
-Ti`~
-g~X 
-@^fp
-QiY~
 T?y(
 Kiix
 @9(}
-hGfp
-!,fp
-h3~X
+!wfp
 T`&@
 T`2@
 a>@9
 5a2@
 5b6@
-R: ~
-4h{G
-4h{G
+4h[B
+4h[B
 Ta>@9
 h"@y
 h"@y
 4h"@y	}
+T``fP
 R(}@
+h7f0
+Th/fP
+h.fP
+T ,fP
 i2O)
 M))}@
 i^Q)
@@ -21006,25 +21092,13 @@ Nc@b
 Q#D@
 Nc@b
 !@1k
-4!~dP
-@|dP
-A|dP
-4Azdp
-4!xd0
-4AwdP
-`wdp
- sdP
-`qd0
+(etX
+]tX)
 4+A*
-T fdp
-T edP
 hkzx
 #Sx?E
-T`Pd0
 #SxI
 Lyixk	
-`LdP
-R.[`
 Ax+x+
 g{gx
 Yyyx
@@ -21036,266 +21110,746 @@ gk:x
 izxZh0x
 hq81
 x.xc
+T sdp
+T qdp
+#Tx*
+Tke`
 mij8
 #Tx?!
 #Sx?
 #Tx?a
 #Tx*!
+ Xd0
 #Tx?
 Tx+q
+4`Xd0
+@Ndp
 iy8K
 #Tx_
+T`Pd
+CTx_	
+J%@y
 CS8h
 #Sx(
 +ih8J	
 #Tx	!
-CTx_	
-J%@y
+T@5d0
+ Fd0
+T@6d0
 TNy)x)
+T`3d0
+ 1d0
 H@y	
 `@y.
 )CzA
+` d0
 H@y	
 `@y,
-	Q~9i
-R	Q>9 ~{
-4 {{
-4`z{
-*Q~9j
-R*Q>9
-	yX`
-	yX 
-b	yX@
-D	yX
-%	yX
-	yX 
-h~xX
-h6xX
-(1xX
-h/xX
-H*wX
-)SpX)
-h.wX
-BfvX
-#bvX
-C`vX
-c\vX
-"TvX
-$PvX
-@BvX
-a=vX
-A<vX
-F:vX
-A8vX
+lsX)
+	QU9i
+a dp
+*QU9j
+~yX 
+~yX 
+~yX 
+a~yX 
+A~yX 
+!~yX 
+~yX@
+}yX 
+}yX@
+}yX@
+c}yX`
+B}yX@
+!}yX 
+}yX 
+|yX 
+|yX 
+|yX 
+d|yX
+B|yX@
+!|yX 
+|yX 
+{yX 
+{yX 
+{yX 
+{yX 
+a{yX 
+A{yX 
+!{yX 
+{yX 
+zyX 
+zyX 
+zyX 
+zyX 
+azyX 
+AzyX 
+!zyX 
+zyX 
+yyX 
+yyX 
+yyX 
+yyX 
+`yyX
+AyyX 
+&yyX
+xyX@
+axyX 
+@xyX
+ xyX
+xyX 
+wyX 
+wyX 
+awyX 
+@wyX
+$wyX
+vyX 
+bvyX@
+BvyX@
+ vyX
+uyX 
+euyX
+DuyX
+$uyX
+uyX`
+tyX`
+tyX`
+tyX`
+btyX@
+BtyX@
+"tyX@
+syX 
+syX 
+syX 
+asyX 
+BsyX@
+!syX 
+syX 
+ryX@
+ryX`
+ryX 
+aryX 
+AryX 
+#ryX`
+ryX 
+qyX 
+qyX 
+qyX 
+qyX 
+aqyX 
+AqyX 
+!qyX 
+qyX 
+pyX@
+pyX@
+pyX@
+pyX@
+bpyX@
+DpyX
+ pyX
+pyX@
+oyX@
+oyX@
+oyX 
+aoyX 
+AoyX 
+ oyX
+nyX 
+nyX 
+nyX@
+nyX 
+anyX 
+AnyX 
+%nyX
+nyX@
+myX 
+myX 
+myX 
+myX 
+amyX 
+BmyX@
+!myX 
+myX 
+lyX`
+lyX`
+lyX 
+lyX 
+blyX@
+AlyX 
+#lyX`
+lyX`
+kyX`
+kyX 
+kyX 
+kyX`
+`kyX
+BkyX@
+!kyX 
+kyX@
+jyX@
+jyX@
+jyX 
+jyX 
+bjyX@
+AjyX 
+!jyX 
+jyX 
+iyX 
+iyX 
+iyX 
+aiyX 
+AiyX 
+!iyX 
+iyX@
+hyX 
+hyX 
+hyX`
+hyX@
+bhyX@
+AhyX 
+"hyX@
+hyX 
+gyX`
+`gyX
+@gyX
+ gyX
+gyX 
+fyX@
+`fyX
+@fyX
+"fyX@
+fyX@
+`eyX
+@eyX
+ eyX
+eyX 
+dyX 
+dyX 
+dyX 
+dyX 
+adyX 
+@dyX
+!dyX 
+cyX 
+cyX 
+cyX 
+cyX 
+bcyX@
+BcyX@
+#cyX`
+cyX@
+byX 
+byX 
+abyX 
+AbyX 
+$byX
+byX`
+ayX@
+ayX 
+aayX 
+BayX@
+"ayX@
+`yX 
+a`yX 
+A`yX 
+!`yX 
+`yX 
+`_yX
+@_yX
+ _yX
+^yX 
+^yX 
+a^yX 
+A^yX 
+!^yX 
+]yX 
+]yX 
+c]yX`
+E]yX
+#]yX`
+\yX 
+\yX@
+\yX@
+\yX@
+a\yX 
+C\yX`
+#\yX`
+\yX 
+[yX 
+[yX`
+[yX 
+[yX 
+a[yX 
+A[yX 
+![yX 
+[yX 
+ZyX 
+ZyX 
+ZyX 
+ZyX 
+aZyX 
+AZyX 
+"ZyX@
+ZyX`
+YyX 
+LYyX
+XyX 
+XyX`
+XyX`
+aXyX 
+CXyX`
+!XyX 
+WyX@
+WyX`
+cWyX`
+DWyX
+ WyX
+WyX 
+VyX 
+dVyX
+DVyX
+$VyX
+UyX`
+UyX 
+aUyX 
+AUyX 
+!UyX 
+UyX 
+TyX@
+TyX`
+TyX`
+TyX@
+aTyX 
+ATyX 
+"TyX@
+TyX@
+SyX 
+SyX@
+SyX`
+bSyX@
+CSyX`
+!SyX 
+RyX@
+RyX`
+RyX`
+RyX`
+`RyX
+DRyX
+!RyX 
+QyX@
+QyX 
+QyX 
+QyX@
+bQyX@
+EQyX
+%QyX
+QyX@
+PyX@
+PyX@
+PyX@
+PyX@
+bPyX@
+CPyX`
+$PyX
+PyX@
+OyX@
+OyX 
+OyX@
+OyX@
+dOyX
+BOyX@
+"OyX@
+OyX 
+NyX@
+NyX@
+NyX`
+NyX@
+bNyX@
+BNyX@
+#NyX`
+NyX@
+MyX 
+MyX@
+MyX`
+MyX`
+bMyX@
+BMyX@
+"MyX@
+MyX 
+LyX`
+LyX@
+LyX`
+LyX`
+bLyX@
+ALyX 
+ LyX
+LyX@
+KyX 
+`KyX
+@KyX
+!KyX 
+KyX 
+JyX 
+JyX`
+`JyX
+@JyX
+ JyX
+JyX 
+IyX 
+IyX 
+IyX 
+aIyX 
+AIyX 
+ IyX
+HyX 
+cHyX`
+HHyX
+#HyX`
+HyX@
+GyX 
+GyX 
+bGyX@
+BGyX@
+ GyX
+GyX 
+FyX 
+FyX@
+FyX@
+FyX@
+bFyX@
+BFyX@
+"FyX@
+FyX@
+EyX 
+`EyX
+@EyX
+ EyX
+DyX 
+DyX 
+bDyX@
+@DyX
+ DyX
+CyX`
+cCyX`
+@CyX
+ CyX
+`ByX
+AByX 
+!ByX 
+ByX 
+AyX 
+AyX@
+aAyX 
+CAyX`
+$AyX
+AyX`
+@yX`
+@yX`
+@yX`
+b@yX@
+C@yX`
+$@yX
+@yX`
+?yX@
+?yX`
+?yX 
+b?yX@
+D?yX
+!?yX 
+?yX 
+>yX 
+>yX 
+>yX 
+>yX 
+a>yX 
+A>yX 
+!>yX 
+>yX 
+=yX 
+=yX 
+=yX`
+=yX`
+`=yX
+@=yX
+ =yX
+<yX`
+<yX 
+c<yX`
+C<yX`
+#<yX`
+<yX`
+;yX`
+b;yX@
+@;yX
+ ;yX
+;yX 
+:yX 
+:yX`
+`:yX
+@:yX
+":yX@
+:yX@
+9yX@
+9yX@
+9yX 
+9yX`
+c9yX`
+A9yX 
+!9yX 
+9yX`
+8yX`
+8yX@
+8yX 
+8yX@
+b8yX@
+C8yX`
+#8yX`
+8yX`
+7yX`
+7yX`
+7yX 
+`7yX
+A7yX 
+!7yX 
+6yX`
+6yX`
+6yX`
+c6yX`
+A6yX 
+"6yX@
+6yX`
+5yX`
+5yX@
+5yX@
+a5yX 
+C5yX`
+#5yX`
+5yX 
+4yX`
+4yX`
+4yX@
+4yX 
+a4yX 
+B4yX@
+!4yX 
+4yX@
+3yX 
+a3yX 
+@3yX
+"3yX@
+2yX`
+2yX@
+2yX 
+2yX`
+`2yX
+F2yX
+!2yX 
+1yX@
+1yX 
+g1yX
+G1yX
+ 1yX
+1yX 
+0yX 
+0yX 
+0yX 
+0yX 
+a0yX 
+A0yX 
+!0yX 
+0yX 
+/yX 
+H^xX
+`Abp
+H{wX
+HvwX
+hnwX
+ zvX
+CqvX
+DovX
+"lvX
+AgvX
+!fvX
+!cvX
+!]vX
+aVvX
+AUvX
+!TvX
+@SvX
+aRvX
+!OvX
+@NvX
+BMvX
+aHvX
+"GvX
+a>vX
+A=vX
+@9vX
 !7vX
-C4vX
-#)vX
-&&vX
-`$vX
-a"vX
-#	vX
-A~uX
-!}uX
-dzuX
-awuX
-AvuX
-!uuX
-anuX
-"muX
- luX
-AkuX
-beuX
-!duX
-$[uX
-bYuX
-!XuX
+@6vX
+b0vX
+!/vX
+"'vX
+b$vX
+#uuX
+aquX
+ApuX
+!ouX
+biuX
+BeuX
+$buX
+b^uX
+aWuX
 aQuX
 APuX
 !OuX
-aHuX
-AGuX
-!FuX
-D:uX
-@8uX
-B7uX
-@6uX
-a5uX
-@/uX
-a.uX
-$,uX
- *uX
-b#uX
-`"uX
-`~tX
- }tX
-"ztX
- ytX
-@wtX
-`utX
-astX
-ArtX
-!qtX
-!mtX
-@ltX
-aktX
-AjtX
-!itX
-betX
-"btX
-!]tX
-@\tX
-a[tX
-AZtX
-$RtX
-BMtX
-%ItX
-AGtX
-`FtX
-`=tX
- <tX
-@:tX
-!6tX
-`)tX
-@!tX
-a tX
-!	tX
-B}sX
-bysX
-"vsX
-bssX
-"psX
-#jsX
-"gsX
-AdsX
-C_sX
-c]sX
-AUsX
- PsX
-!KsX
-`HsX
- GsX
-AFsX
-!EsX
- CsX
-ABsX
-!AsX
- ?sX
-b/sX
-`.sX
-")sX
-'sX 
-!&sX
-b#sX
-#~rX
-C|rX
-czrX
-atrX
-@srX
- rrX
-BhrX
-a^rX
-#VrX
-aQrX
-bMrX
-!LrX
-#CrX
-b?rX
- /rX
-".rX
-G'rX
-@%rX
-a$rX
-A#rX
-!"rX
-3-kX`
-(kXh
-H&kX
-i$kX)
-gsX(
-esX5
+EMuX
+BKuX
+BDuX
+c@uX
+a9uX
+#4uX
+B+uX
+A'uX
+!&uX
+a!uX
+A uX
+a}tX
+#{tX
+AstX
+eqtX
+botX
+@btX
+aatX
+d]tX
+D[tX
+$YtX
+CRtX
+bJtX
+BEtX
+B@tX
+d=tX
+b8tX
+A5tX
+C0tX
+c.tX
+@+tX
+A(tX
+B!tX
+"	tX
+|sX 
+`{sX 
+!zsX
+CgsX
+b^sX
+bWsX
+aNsX
+AMsX
+!LsX
+#FsX
+CDsX
+`?sX
+@>sX
+ =sX
+!:sX
+#1sX
+/sX 
+ .sX 
+d,sX
+`)sX
+@(sX
+A%sX
+"	sX
+bU9h
+7 C\p
+!J\p
+~kXh
+IE\P
+)zkX)
+HxkX
+itkX)
+IekX)
+hHkX
 TuS@
 kB#Xz
-@ZsX*V
-	k@g
+	k@h
 ?!@q
 jyix
 jyhx)	
 jyix
 jyix
 jyix
-TkzWP
 jyix
 jii8
+!,\P
+Rb+\0
+RbI\0
 jyhx)	
+! \p
 Q@9_
 	D-!
 Q@9_
-ljX)
+hsX&R
+_sX 
 !SzH
 TiN@
-(^jX
-)ZjX)
-hWjX
-)AjX)
+usXh
 r)|)
  	Az
-rXaa
+k_sXaa
+	kjX)
+`3[p
+@&[p
+`&[0
+TH7s
+iMjX)
+T(_q
+,sXH
 i)H9	
+8jX)
 Lii8k	
-T`L[p
-|rXH
-({rXH
+H"jX
+4@M[p
+T(D[0
+Th;[p
+$qX%
+T(7[0
+h*qX
+!qX	
+h qXI3[P
+@][P
+`][p
+'sX?
+T	's
 h&A9
 07(! 
 T`*@
 T`.@
-4(|r
 	@-	8!
 @- ) 
-{rXJ
 T(! 
 'B)	)
-YsrX_
-#B)	pr
 @- ) 
-rrX@
-HlrXH
-nrXJ
-IiX)
 @-a8!
-(AiX
-)5iX)
-T:Hr
-ErXI
-BrXH
-H9rXH
-@8rX
-(0rX
-&rXh
-$rXJ
+(siX
+niX)
 	*J!
-		rX)
 ) A9i
-HRZp
-`QZp
+@zrX@
 /A)*
- GZ0
-qXKyi
+(SrX
+PrXKyi
 T@yi
-`1Zp
-qX	xv
+ErX	xv
+(%ZP
+i5rX?
+4rX?
 TYyi
-)zhX)
-HvhX
 $	@zd
 Th&E)
-)nhX)
 THyi
 A-L9 
 Th! 
-IhhX)
-(ZhX
-IXhX)
 iw8)	
 h"A9H
 )h"@
@@ -21304,33 +21858,17 @@ h"A9H
 )h*@
 Th.@
 ThF@
-Th;UP
+TH~UP
 iw8)	
-4hV@
-`"nX
-!hmX
-ahmX
-4AuYP
-AdmX
-AbmX
-YmXD
-VmX7
-"cYp
+4h^@
+!<nX
+a;nX
+A8nX
+a7nXr
 +ih8J	
-`ZYp
-`[Y0
-@\Yp
-@XYP
-T UYp
-`UY0
-T _Y0
-4@eYp
-TaUi
-4`XYp
-@EY0
- EY0
- DYp
-`AT\
+@qXs
+H8qX
+#qXh
 (!@9
 T*%@9
 T))@9	
@@ -21371,98 +21909,76 @@ h2@y
 hJ@y
 +ih8J	
 +ih8J	
+Ti;T
 +ih8J	
 +ih8J	
 Ts>@
 7h*@
 4hf@9
+hbpX
 5s>@
 4h*@
 T+=@
- tX0
 Thf@9
 4hf@9H
 4hf@9
 4hb@9
 4h.@
-7 ]Xp
 4a.@
 7a.@
 4a.@
-`QX0
-XfX)
-hTfX
-`voX
->fX)
-(9fX
-)1fX)
-H%fX
-GoXmx
+9`Gh
+oXiz
+qfX)
+(QP\h
 h&N)
 bl@8d
-h"W9
-	!W9
-I{eX)
-`dR\`:
-geX)
-4aQWP
-4!PWP
-IReX)
->R\`
-?R\`
+(7fX
+h"n9
+~oX@
+	!n9
+R	!.9
+ )Vp
+H"oX
+R\`:
+@yVp
 r	})
-AeX)
-T sWp
-4?eX(
-@mW0
-I9eX)
 R	aA
-I-eX)
-hSnX
 Ri~	
-`YWP
-@ZW0
-`YWp
 4hn@
+(UeX
+hUeX
+	OeX)
+	LeX)
 #@yu
+I8eX)
 +ih8J	
 +ih8J	
 +ih8J	
 6<q@
 T	}@
-RX9h
+Ro9h
 T`B@
 5sV@
-HkmX
 1@y_
 5@y_
 5@y_e
-cmXS
 4sV@
-	9dX)
-(7dX
-^mXS
 4sV@
-4dX)
 RhJ@
-H%dX
-	#dX)
- _V0
-@KVp
-@RVP
+wdX)
 :@y`
 i2@y?
 Ti6@y
 4hB@
 5h.@
-TtMk
 5h2@y
 c2@yd6@ye:@yf
 G)i*H)
+kmX`
 h2@y
 5`:@
 T`:@
-|cX)
 g@9#	
 _8#	
 @9KY@9
@@ -21471,14 +21987,12 @@ _8#
 Thj:8
 jm@9
 ThV@
-)1cX)
 *Q@9
 )!A9
 Kih8
 TIi(8(
 KQ@9k
 5J!A9
- jUp
 R6|5
 '@9?
 +@9?
@@ -21490,9 +22004,12 @@ c@9?
 K@9(
 S@9(
 6hB@
+`]UP
+aXUP
 h2@y
 7u:@
 5`:@
+!QUp
 C@9?
 G@9?
 ;@9?
@@ -21500,10 +22017,6 @@ G@9?
 C@9?
 (kh8
 6hB@
-izbX)
-(rbX
-inbX)
-ebX)
 h2@y
 Th6@y)Z
 #@9?
@@ -21517,7 +22030,11 @@ y'1!
 +@9?
 (kh8
 6hB@
-i%bX)
+)zbX)
+hsbX
+obX)
+HkbX
+)gbX)
 9h2@y
 Th6@y
 Tu:@
@@ -21526,11 +22043,12 @@ Tu:@
 Tu:@
 7A9i
 ;A9	
+TMGO
 h2@yI
 h6@y	
 i2@y?
 Ti6@y?
-4!RT0
+	FbX)
 ThB@
 @9	E
 T`:@
@@ -21542,6 +22060,8 @@ RhN@
 ThB@
 6h~@
 ThB@
+'bX)
+`[Tp
 @9)]
 @9)]
 @9J]
@@ -21556,8 +22076,6 @@ _	Hj)
 h"@9
 4hv@9
 2Ay	
-YaX)
-IaX)
 9`:@
 #A9)
 yu:@
@@ -21565,7 +22083,7 @@ h2@y
 +A9?
 Ti6@yJ
 Ta6@y
-,aX)
+h}aX
 ThB@
 T`:@
 Tx2@
@@ -21573,10 +22091,14 @@ RhN@
 4h~@
 6h~@
 ThB@
+RaX)
 yh.@
 4	!C)?
+(?aX
+)3aX)
+-aX)
++aX)
 {@91^
- 'Sp
 ThN@
 #@9)
 B9J}
@@ -21592,9 +22114,7 @@ b@9J]
 j@9J]
 h~@9
 4hN@
-IziX
 Tb~@
-wiXm
 /@9?
 '@9?
 +@9?
@@ -21604,9 +22124,13 @@ oH
 /@9?
 3@9?
 g@9?
+TiGM
 6hB@
+	G`X)
 h6@y	B
 4@y	B
+(2`X
++`X)
 '@9?
 +@9?
 /@9?
@@ -21616,36 +22140,27 @@ T(#@y
 7G@9
 !N C
 ={:@
-X_X)
-HU_X
-J_X)
-)5_X)
-H3_X
-._X)
-T@fQ0
+C@9`
 @yj>
 _!@1J
 ?!@1)
-@zQP
- ?Qp
+V_X)
+hM_X
 `2@y
 i6@y
 5@y)
 	A@9
 TI5@y*
 	5@y
-!kQP
 Kih8+
 I5@y
 TI9@
 +ih8J	
-AgQP
-!gQ0
+	1_X)
 vC9?
 4 7@
 4 7@
 4h.@
-CK\`
 2@y?
 Th.@
 	M@9?
@@ -21665,30 +22180,27 @@ QBxh?
 (1@y)5@y*
 5<qa
 Ti.@
-K\`J
- fP0
-JZP0
- GPp
-@EPp
+FK\`J
 A@9h
 5@y)
 	5@y
-AJP0
-A0Pp
+ ~P0
+@|P0
 R*|@
 RH *
 =Byh
-	~]X)
 T@hA
 5!@!
-iu]X)
 *ihx_
 	@9	
 Kiix
 @yI}
+`7Pp
+`6Pp
 h2@y
+Ra(P0
 {@y	m
-TL[J
+Ra!P
 ii8J	
 ikh8?
 ikh8?
@@ -21697,12 +22209,14 @@ ikh8?
 	kh8?
 jh8?
 4hB@
-@?J\`B
+	n]X)
+J\`B
 @y	m
- VOp
 ;@9h
-@pOp
+*]X)
 4	(@
+)8JP
+94JP
 #kw8
 >@9	
 *@9i-
@@ -21712,6 +22226,7 @@ jh8?
 3)	@Q
 3k	@Q
 	@Q_
+")JP
 *@9*}
 "@9)u
 &@9Ju
@@ -21720,21 +22235,16 @@ jh8?
 @9J}
 R	8@
 j{8_
- )O0
- &OP
+`mOp
 	k@9
 +@9?
 	o@9
 /@9?
 6hB@
-X\X)
-(Q\X
 0@ya6@y
-K\X)
-@|Np
-!3NP
-)2\X)
-(/\X
+`0Op
+ ,OP
+@)OP
 ThB@
 '@9	
 7h~@
@@ -21746,6 +22256,10 @@ q@	@z
 ?@9?
 6h~@
 ThB@
+f\X)
+\\X)
+X\X)
+S\X)
 `2@y
 ya6@y
 @y0"
@@ -21754,12 +22268,10 @@ PzK[
 {A9_C
 SA9?
 WA9?
-voN0
 WA9(%
 ?!@q
 @y	e
 #(k(
-RVON0
 JQ@9?
 JU@9?
 ?i88
@@ -21776,19 +22288,16 @@ i{8?
 (k{8
 (k{8
 6hB@
-r[X)
+@bNp
 J}	S
 )}	S	)
 J}	S
 )}	S	1
-a[X)
-`[X)
+T@ZNp
+HTNp
 Ikix
-R[X)
-HP[X
 Th.@
 4hR@
-IL[X)
 h.A9
 9h2A9
 9h&A9
@@ -21797,18 +22306,26 @@ h.A9
 9h2A9
 9h&A9
 9h*A9
-TH^\
-	%[X)
+` NP
+y[X)
+@'N0
 -ih8
 _i(8*ih8_
-41dX
+`[X)
+I[X)
+!/NP
 +ih8J	
+A2NP
+4a N0
 #@y@
 +ih8J	
+)([X)
 #@y(
 #@y	B
-@xM0
+RtN\
 +ih8J	
+TadX
+4]dX
 vR@9sV@9Q
 vR@9w2
 Tl.A)
@@ -21816,105 +22333,107 @@ i*C)
 vR@9sV@9
 		B)?	
 i68$
-a?MP
-!8Mp
-a7Mp
-!7MP
-A6MP
-A4MP
-A-M0
-a,M0
-A+Mp
-jZX)
-	`ZX)
+h0dX
+!{Mp
+azM0
+!yMp
+axMp
+!rMP
+AqMP
+b`M0
 @y?y
 @y(=
-cXlyj
+dXlyj
 Ts*@
 C@9(
-;ZX)
-`zRP
+TH&M
 (+A)I
 	!C)
 4h*@
 T	iu
 *A)I
+3tcX
 Ts*@
 T+)@
-@aL0
+ VcX 
 T!(@
-@QLp
+/cX4
 ! k`
-rYX)
 h&@)
-)cYX)
-(aYX
 @9	}
-ZYX)
->@8/
-7`bC
-7`bC
- gbX
-h`bX
-]bXk
-TbX!
+7`BF
+7`BF
 RH#@
-JFbXKyi
+bXKyi
 Tsv@
 Th"@
 Th*@
 Th2@
-* cC
+* CF
 Th>@
-TH?QP
 ThJ@
 T+u@
 Rh:@
 T`:@
+	AYX)
+ThaQp
+TH\Qp
+ThJQp
+nbX~
+T(FQp
 Rh")
+hbXP
+Th@Qp
 ijxj
+`bbX
+ ]bX
+LbXq
+HLbX
+sKbX
 Tsv@
-aXlyi
+HbXO
+TH Qp
+DbX.
+=bXlyi
+(4bX
+I1bX
 *+yh
-aX?Y(
-aX*y`
+/bX?Y(
+,bX*y`
+@(bXL
 Thj@
 hBAy
 ThFAy
 Thj@
-~aXl
-(CXX
-naX*y`
-I=XX)
+ 	bXS
+aX*y`
 Rj"@
 ThZ@
 ThJ@
 Thj@
 Ri:@
 Thj@
-(0XX
-)&XX)
+zXX)
+pXX)
+IjXX)
 i48W
+heXX
 T(  
 N(  
 oH  
 T 	@
-4/aXT
-$aX3
+XXX)
+)PXX)
 4hj@
 Thj@
-I'I0
+)lIP
 )kx8
  kx8
 *ijh8?
 +ih8J	
-`$Jp
-@KJP
-a>Jp
 +ih8J	
+T`&P
 sr@y
-(TWX
-)SWX)
 hF@y
 hF@y
 Ti2@
@@ -21930,39 +22449,61 @@ T+Q@
 7	I@y?
 7	M@y?
 7	Q@y?
-hN`X
+hnWX
+lWX)
 H@yh>
 L@yhZ
 P@yhJ
-@AIp
- HI0
 L@yh
 H@yh
-AJ\X
+`rO0
+ ]Op
 R	}	
 'D))
 +B)_
 Bz@	Az
-ItVX)
-`kC\
+y>Op
+`<OP
+y=O0
+y<O0
+`9OP
+Y:O0
+`6OP
+99OP
+`3OP
+`0OP
+`-OP
+`*OP
+y/OP
+`'OP
+Y.Op
+`$OP
+`!OP
+y%Op
+Y$Op
+9#Op
+9"OP
+`	OP
 r	Y*
-RvZN0
-;[NP
-ZZNP
+4yjGP
 jh8)	
-hXNP
-RVKN0
-R{FN0
+RxYG
+taCP
 jh8)	
-hKNP
-Rv-N0
-{1Np
-R[(N0
-\,Np
-s.NP
+RVrNP
+RX;G
+R;mNP
+SsNp
 jh8)	
-H-NP
+(sN0
+(rNp
+T@KNp
+V>Np
+V=Np
+7>N0
+S<Np
 *kh8)	
+k(>N0
 *@)?
 *A)+
 *@)?
@@ -21985,18 +22526,25 @@ J,@)k}@
 {hx)	
 G@9	K@9
 O@9l=
-RX$M0
+R8iMP
+y9FP
 TUKA
+4T6FP
+ztM0
 *kh8)	
-H$MP
+hjM0
+(iMp
 T;KA
+4UEM0
+tHM0
+yMMp
 jh8)	
+HBMP
+HCMP
 4hw@
-IoTX)
 4hv@
 jih8)	
 4Hw@
-AqDp
 7sJA
 4hv@
 Kc"B
@@ -22008,39 +22556,32 @@ KjZB
 KcbB
 Kb^B
 4hf@
-T)lA
-T	iA
 4hj@
 Thj@
-5 rLP
-5`rLp
-RZ_U
 7h.@
 Th6@
-8YL0
-xTLp
-8TLp
-xQLP
+)GTX)
+0;TX
+7TX)
 #A9h
-R\vM0
+*A\`
+7ULp
 	k))
 J_<)X
 *K3?)
 SI}	
+3&Lp
 *B)+
 4h^@
 *B)+
-VGM0
-Ry+M0
+RYpMP
 *B)+
-V=M0
-Ry!M0
-44tDp
-W/M0
-45oD0
-45ODp
-4u0Dp
-ShKP
+RYfMP
+7tMP
+RYXMP
+WPM0
+RY3MP
+4uuD
 J,@)k}@
 @9k])
 @9N	@9J
@@ -22049,15 +22590,11 @@ J,@)k}@
 *kh8(O@9l=
 *A)J}@
 4hg@
-ZRX)
-R70L0
+s(Kp
 4hf@
+T(	T
 4hJ4
-`=Lp
-p1RX
-`9LP
- 9Lp
-)-RX)
+@~Lp
 7sJA
 4hf@
 KcNB
@@ -22068,104 +22605,96 @@ KbJB
 4hvB
 Kj~B
 YkB)
-Ti`?
 +ih8J	
 4hJ8
 4{NA
 )h.@
 4hz@
+AGL0
+!FLP
 Th6@
 4hN@
-h%C0
+HjCP
+`.L0
+4a.L
 T`>A
-`[@\
 'A)?
+!.hr
 7h&B
-T)I@
 +ih8J	
+h3[0
 T-\T
 i*B)
 i"B)
 7`:@
-h[Kp
-H[KP
 2I-	
-(FKp
-RWTZ0
-INZ0
-	JZ0
-TH5Kp
-TH1Kp
-T(.Kp
-*<Z0
-Th'Kp
-TH$Kp
-I6Z0
+T(pK
+THjK
 i*B)
 4`:@
 u"B)
 7`:@
+(]Kp
+@[Kp
+T(NK
 i*B)
 4`:@
 u"B)
 7`:@
+hEK0
+T(7K
 .@)k}@
+IvZ0
 7`:@
 7h&B
 T(4@
-	!B)
-ThzA
+1B)k
+j@Z0
 !^c8$
 7aNB
 4a"	
 7`"	
-T(pJ0
 7h&B
 Tab	
-THYJ0
-T(VJ0
-T(SJ0
 Th&B
 `H9(
 dH9H
 hH9h
 	lH9
-T(BJ0
 hbH9
 9hfH9
 9hjH9
 9hnH9
 9h&B
 7h&B
-H<Jp
-($JP
+qPX)
+IkPX)
+ThlJP
+fPX)
+`PX)
+p^PX
 -&)"
 T` !
 T` !
 7h&B
+hAPX
+0?PX
 T  #
 5  #
 R ) 
+/PX)
+H&PX
 ($@)
+h,J0
 7h&B
 H-B(&
 E-e(%
 7h&B
-IzOX)
-IvOX)
-an<\
+`m>\
 H-c(&
 GD-c(0
 -!82
 7h&B
-	XOX)
-iUOX)
-iQOX)
-	OOX)
-(tI0
-T(sI0
-	IOX)
-ThpIP
 -@  
 T(  
 TH  
@@ -22174,12 +22703,10 @@ k{ix
 kki8K
 4iBB
 7h&B
-i=OX)
 hbH9
 hfH9
 hjH9
 /hnH9
-6OX)
 	@92
 	@y-
 R*ji
@@ -22193,18 +22720,19 @@ T` $
 -a8!
 ^H  
 o-(  
-T(#I0
 T"@!
 7h&B
+THhIP
 .@))
 vbH9wfH9xjH9ynH9h
 !^ 8 
 !^ 8 
+ThCI
+H~X0
 T`6@
 4hf@
 R	TA
 	!@)?
-{NX)
 S)}@
 RJ}A
 *@)_
@@ -22320,6 +22848,7 @@ if8G(E
 ig8B
 B*B%
 F*F%
+RJ\<
 Lyixk	
 kE@9K
 il81
@@ -22337,9 +22866,7 @@ JE@9*
 kE@9K
 @9Wym
 @9[yl
-@9J.U
 @9Wyg
-@9J+U
 @9Wyg
 ujt86
 jv8'
@@ -22369,6 +22896,7 @@ Kkk8
 mii8
 @9vyn
 @9zym
+@9iMU
 @96yf
 @96yf
 Eke8
@@ -22376,8 +22904,10 @@ Kkk8
 Kkk8
 ho8f
 Kkk8
+@9J2U
 @9Xyt
 @9Jyu
+@9*/U
 @9Xys
 @9Xys
 ks8E
@@ -22392,10 +22922,8 @@ ik81
 hn8%
 ik81
 hn8%
-@9L/T
 jd8Z
 	E@9?
-R+V:
 myjx
 @)J}
 im8J	
@@ -22419,6 +22947,7 @@ ii8k
 @95yg
 @98ym
 @9:yk
+@9IbT
 @95yb
 @95yb
 #hc8
@@ -22437,10 +22966,12 @@ Iki8"
 @)K}
 @)L}
 ii8k	
+@9	1T
 @95yg
 @98ym
 @9:yk
 @95ya
+@9)*T
 @95ya
 Chc8
 Ika8a|
@@ -22470,10 +23001,10 @@ Ckc8
 @9c$
 Ckc8[
 lA@9
+T`uEp
+HtE0
 Tk!@
-0SX/
 ip8q}
-.(SX
 @y :J
 i`8!&E
 ia81
@@ -22501,17 +23032,21 @@ ip8Q}
 i`8C}
 E@9k
 E@9k
+mlSX
 ip8Q
 E@9k
 ip8Q}
 i`8C}
 E@9k
+ISX3
 rT|@
 hu8v}
 RS|@
 ht8U
+f:SX'
 rS|@
 ht8U}
+'3SX3
 RU|@
 hv8Y}
 *I|@
@@ -22519,8 +23054,8 @@ i`8!*E
 ia81
 iq8`}
 i`8a}
+T0#9
 zox1
-4N~R
 i`8a}
 yox1
 E@9k
@@ -22531,16 +23066,13 @@ ip8Q}
 i`8C}
 E@9k
 E@9o
-TNZR
 i`8!*E
 ia81
 iq8@
 E@9o
-TNSR
 i`8!*E
 ia81
 iq8@}
-TOLR
 ib8#(E
 ic8!
 ia8D}
@@ -22550,7 +23082,6 @@ i`8!*E
 ia81
 iq8@
 E@9k
-4N6R
 i`8!*E
 ia81
 iq8@}
@@ -22569,8 +23100,8 @@ RV|@
 xjx8
 wjw8Z}
 *I|@
-TNH8
 oE@9
+@9&~R
 jv8w
 7hw8
 ypx1
@@ -22579,9 +23110,12 @@ pE@9
 jw8x
 &zpx
 qE@9
+4EhR
 @9s~
 iw8x
+Tou8
 nE@9
+@9e\R
 iu8V
 hv8t
 ht8U
@@ -22598,6 +23132,7 @@ nE@9
 @9)%
 @9)!
 oE@9
+Td;R
 iv8W
 7jw8
 hu8V
@@ -22606,6 +23141,7 @@ iv8W
 7jw8
 hu8V}
 pE@9
+@9f)R
 @9s~
 jx8y
 9hy8
@@ -22650,7 +23186,6 @@ dkd8@}
 @9)%
 @9'!
 *K|@
-T.}7
 ypx1
 &zpx
 1F@9
@@ -22665,7 +23200,10 @@ E@9k
 E@9k
 E@9k
 F@9k
+Tm;7
+Tp+7
 zox1
+T.#7
 yox1
 E@9k
 E@9k
@@ -22677,7 +23215,6 @@ E@9k
 E@9k
 E@9k
 E@9k
-T/b6
 @9bZa
 @9eZd
 @9sZg
@@ -22695,6 +23232,7 @@ zqx!
 hz8w
 wjw8
 E@91
+43yP
 @9pZo
 @9aZ`
 @9eZd
@@ -22707,6 +23245,7 @@ whw8
 ht8u
 whw8
 ht8u}
+T'YP
 hy8V
 hv8z}
 @9k%
@@ -22763,12 +23302,10 @@ hq8c$
 @9)!
 @9h!
 4ht8
-TPw5
 zox1
 5hu8s&
 &zox
 5hu8s&
-TP`5
 @9`Xq
 @9cXb
 ig8s&
@@ -22777,6 +23314,7 @@ fhf8g
 @9cXb
 ig8s&
 fhf8g}
+@9D}O
 5hu8
 hs8v}
 @9k%
@@ -22788,9 +23326,11 @@ hs8v}
 @9`Xq
 @9cXb
 ghg8s
+@9#dO
 @9`Xq
 @9cXb
 ghg8s}
+@9$[O
 6hv8
 ht8w}
 @9k%
@@ -22802,6 +23342,7 @@ ht8w}
 @9`Xq
 @9cXb
 ghg8s
+@9C@O
 @9`Xq
 @9cXb
 ghg8s}
@@ -22821,7 +23362,6 @@ Qkq8
 @99[x
 jo8l
 /ko8
-@9YzN
 @96[u
 @99[x
 jo8l}
@@ -22835,10 +23375,8 @@ Pkp8d}
 @9)%
 @9)!
 A@9_
-T`0@
 T	D@
 Lii8k	
-*NNX+
 axl9J
 Lil8m%E
 Mim8k
@@ -22847,12 +23385,10 @@ axK9J
 +ik8L%E
 ,il8J
 )ij8j
-iENX
 axK9J
 +ik8L%E
 ,il8J
 )ij8j}
-ANX+
 axl9J
 Lil8m%E
 Mim8k
@@ -22883,10 +23419,12 @@ kim8
 @9J!
 @9k!
 @9k!
+@9KzN
 @9qyn
 /jo8
 @9kyq
 kim8
+@9/tN
 @91&
 @9B$
 1jb8
@@ -22901,6 +23439,7 @@ kim8
 /jo8
 @9kyq
 kim8
+@9o]N
 @91&
 @9B$
 1jb8
@@ -22909,6 +23448,7 @@ mij8
 @9s&
 chs8
 in8-}
+@9kJN
 @9qyn
 /jo8
 @9byq
@@ -22919,6 +23459,7 @@ kim8
 @9J!
 @9k!
 @9k!
+@9kAN
 @9qyn
 /jo8
 @9byq
@@ -22926,13 +23467,12 @@ kim8
 Bhc8
 @9kyc
 kim8
+@9O:N
 Bhn8
 chg8
 lA@9
 Tk!@
 	E@9?
-T@i?p
-Hh?P
 )E@9
 JE@9)
 K*)"
@@ -22948,9 +23488,9 @@ JE@9)
 4J}~
 TI#@
 	A@9?
-(	?p
 T	D@
 +ih8J	
+T@T?p
 ,I)J
 1F@91
 iq8!
@@ -22976,14 +23516,11 @@ zhx)
 (%@)
 Tj.@)I
 kE@9#)
-I-50
-W(>P
-x(>p
+`H>p
 ) Aa
 	A@9?!
 T	!@
 &A)!	
-!x2\A
 znB)
 j.B)J
 :O@8
@@ -23002,25 +23539,27 @@ KI}
 7hv~
 ($@)J,@)
 4@)_
+H3CX
 M'@)h/@)
 l6@)
 &@ivS@iK+@i
 +yhxJ	
 /E@9
-TvP1
 jn8c
 jn8c
 jn8^
 jt8J
+@9WqK
 @9C#
 @9u#
+hKXs
 wjc8
+@9seK
 whv8#
 @9czc
 vhv8#
 @9c$
 cjc8
-T751
 jc8s
 whv8#
 vhv8#
@@ -23060,386 +23599,388 @@ j.8.
 @9c 
 X{'x
 :kx8
-*\9	
-&\9	
-"\9	
-.\9	
-"\9H
-)q\9?
-.\9h
-)q\9?
-&\9h
-)q\9?
-)q\9?
-"\9h
-)q\9?
-)q\9?
-)q\9?
-h*\9
-)q\9?
-h*\9h
+	iBX)
+*s9	
+*39h
+&s9	
+&39h
+"s9	
+"39h
+.s9	
+.39h
+*39%
+"s9H
+)qs9?
+.s9h
+)qs9?
+&s9h
+)qs9?
+)qs9?
+"s9h
+)qs9?
+)qs9?
+)qs9?
+h*s9
+)qs9?
+h*s9h
+Qh*39
 ij8n!
-h%<P
-9`$<P
- #<0
-4a32P
+Rhr39 F
+@t<p
+(8JX
+H2JX
+T g<0
+W]3P
+ S4P
+Bd<p
+ \<P
+4AZ<
+4!Y<P
+9U<p
+ cKX
+ 	JX
+H7<p
 Lih8
 mim8M
 mil8L
-IfAX)
-)eAX)
-(cAX
 jjh8K
-\AX)
-}JXt
-uxJX
-TAO20
 ji8_)
 jh8?5
 j(8 
-h6JX(
-(.JX
+)pAX)
+hmIX
+HfIX
 Ts:@
 Ts:@
-`6;P
-@1;P
 Th.@
 T+9@
+ };p
+h,IX
 R+hh8k
 @!KJ
 +hh8J
-Xw/P
 kh8)	
-hzHX
-h}@X
-h{@X
-hy@X
-hw@X
-(r@X
 ju8I
 jk8L	
 Lil8
+ja/P
 Lil8
-h(@X
-	%@X)
 h&@)*
-4 i:P
-4@h:0
-h%IXH
-`c:P
-4@c:P
-4!b:0
-4!a:P
-"^9?
+)T@X)
+"u9?
+"59	
+ GHXxJ
 R	}|
+7 ~I
+59@|I
 4`"@
 6`"@
 r(|(
 rH|(
-R	A	
-hBe9
-R%9(
-RhB%9
-hBe9
-R%9(
-RhB%9
+a_:0
+hJIX(
+sHIX
+`5IX]
+`):P
+hB|9
+7`/I
+R<9(
+RhB<9
+hB|9
+7 +I
+R<9(
+RhB<9
 	!@)
- /EX
-`'EX
-DX`B
-DXZB
-DX_A
-DX6A
-DX+A
+REXHE
+AREX
+AMEX
+ALEX
+AJEX
+!CEX
+!BEX
+7EXWD
+8EXQD
+0EX D
+a1EX
+s?X)
+(q?X
+! EX
+Ij?X)
+EXEC
+sEXKC
+rEXGC
+`kEX
+iW?X)
+hlEX
+`[EX^B
+DXIB
+DX&B
+(8?X
+h7?X
+h5?X
+(0?X
+5.?X
+@CEX
+hJEX
+DXrA
+DXy#D
+`4EX
 "@9H
 	!A9i
-alDX
-qDXB
-pDX"
-ApDX
-^DXo?
-UhDX
-R	a%9
-TfDX
-7UDX
-UDX-?
-!gDX
-!aDX
-8`DXV
-9\DX
-CRDX
-#QDXB
-#ODX
-xIDX
-DDXb
-CDX"
-#ADX
-A;DX
-!)DX
-,DX{=
-DXW=
-%DXj=
- |DX
-a$DX\=
-a(DXH=
-v"DX
-Hce9h
-dDX`
-DXB>@
-@RDX
-CX^;
-CX3;
-CX-;
+DXd@
+R	a<9@m9p
+DXv?
+DX_>
+asDX
+weDX
+Hc|9h
+Ac-\
+aiDXh=
+4hDXW
+dDX?=
+cDX3=
+A`DX
+XDXbs@
+ATDXy<
+DXa<
+a3DXL<
+A2DXC<
+!MDX
+a&DX
+A=DX
 !^!8"
 	!A)
-(@>X
-I5>X)
-CXF:
+A:DX
+@zDX
+he>X
+a2DX
+Z>X)
+a DX
+@fDX
+DX>:
+DX<:
+`DDX
 +ih8J	
-CXcu?
-CXs8
-uvCX
-`l8P
-@d8p
-(ZCX
-hXCX
-(zCX
-(VCX
-T)4?
-(R80
- R8p
-ADCX
-a:CX
-CX"KE
-@JCX
-!	CX
-CXe3
- ;CX
-BXH3
- ;CX
+CXF9
+CX%9
+DX28
+CXL8
+hj80
+`j8p
+4@#8p
+ !8P
+AWCX
 +ih8J	
-BX@2?
-@4CX
-BX 1?
-BX@2?
- /CX
-4 GG
+!CCX.
+BCX)
+aBCX$
+ABCX`W?
+AACX X?
+@}CX
+!?CXX3
+7CX9
 !^@( 
 !^A(!
-BX@2
+52CX
+!0CX 
 !^A(!
 !^ 9 
-BXf1
-BX`1
+A$CXg2
+#CXa2
+#CXW2
+a"CXP2
+ CX;2
+CX62
 +ih8J	
 7H!`
 N(!`
-ayBX
-nBX~.
-akBX
-aiBXL.
-UBX).
-AeBX
-ATBX
+BX}0
+BXE0
+BXF/
+BX:/
 +\H	
-~+\(
-aUBX
-!LBX
-aJBX
-AIBX
-)	$@
+BX".
+)	 @
 RKY)
 RKY)
- N+\@
-]BX",
-A)BX
- [BX
-A"BX
+c+\@
+!wBX
+apBX
 R(yh
-b<X)
-@HBX
-AX6*
-AX2)
-AXC)
-AXZ(
-AXb(
-AXA(
-sbAX
+ ,70
+MBX;,
+!dBX
+bBX$,
+vPBX
+5LBX
+BXy*
+!'BX>*
+BX@)
+z9BX
+BX%)
+`%BXq(
+BXK'
 JA@9
+AXR'
 Bi"}
 h&B)
 r+	@9,
 h&B)
-!rAX
-!iAX
-alAX
-(;AX
-aZAXz%
-XAXl%
-A!AX
-AXD%
-!RAX
-APAX!%
-ADAX
-AEAX
-!DAX
-ABAX
+AX)'
+AX%&
+!yAX
+XAX]%
 !^(  
-hs;X	
-4`wG
-d;X)
+HAX`
 Rij(8
+alAX
 `j(8
-@Xk#
-hP;X
-hO;X
-hJ;X
-(H;X
-hI;X
-(E;X
-(E;X
-AXD<=
-AX$<=
-@XC;=
+hm;X
+(k;X
+hj;X
+hj;X
+(g;X
+(h;X
 jh8h
-@Xt"
-@XB1=
-@XU"
-@XL"
-@X)"
-@X#"
+AXBW=
+a AX
 `j(8
 Rij(8
 hjv8
+AXv"
 uj68
+AXX"
+AXO"
+a8AXF"
+7AX@"
 jh8)
-@Xi!
-@XX!
-(	;X
+h3;X
+(2;X
+h0;X
+h.;X
+h,;X
+(*;X
+@XC"=
 hh8h
 **J}@
-@Xl 
 	hh8
-@X] 
-@XO 
 5{.@
-!z@X
 &A9h
-v@Xh
-At@XS
-!j@X>
 Rij(8
-ai@X
 &D)	
-uq@X
-aq@X
-VH@X
-AA@X
 "A9h
 (7AA
-!h@X
-!9@Xz
-6@Xa
-9a@X
-!r@X
-!'@X&
-Z@X 
+at@X
 !^(  
 jh8(
- p@X
-aT@X
 hjh8h
-!G@X"
-D@Xk
-Hn:X
 jh8h
-!%@X
-@@XE
-)_:X)
+!r@X
+AY@X
+T;@X
+AJ@X!
 Rij(8
 ij(8
+!?@X
+xo@X
+A[@X
+0@XV
+AZ@X
+aQ@X
 Rij(8
 Rij(8
+aI@X
+AG@X
+AB@X
+AC@X"
+a:@X
+aB@X
+!F@X:
+D@X.
+!C@X
+A	@X
 jh8i
+%@X"
+!"@X
 j(8w
 j(87
 jh8i
 j(8v
-ay?X|
 !^!)!
 /@m@
 c.@xa
 T`  
-A]?X
-AZ?X
-At?XB
-!o?X
-hk?X
-H=?X
- r?X
-a<?X
-t;?X
-i}9X
-3a4P
- K?Xx
-@I?X
-A.?X
-A!?X
-a)?X
-@@?X
-@??X
-a$?X
-a!?X
-?9X)
-`&?XM
-`"?X+
-(9*0
+sx4P
+z??X
+a|?X
+A{?X	
+3z?X
+!n?X
+ap?X
+!??X
+ap?X
+ao?X
+[d?X
+aO?X
+ah?X
+d9X)
+!^?X"
+`s?X
+ab?X
+Aa?X
+!`?X
+!)?X
+aQ?X
+!K?X
+!I?X
+`G?X
+*?X"
+!8?X
+!0?X
+i&9X)
+ 3?X6
+9?X'
 &E)	
 h&F)
-l>X_
 h&G)
-g>X;
-A^>X
 *A9H
-aW>X
-Vo>X
-M>X"
-N>Xs
-!J>X
-x>Xb
 "A9h
-!R>X
-Ai>X
-ay>X
-!f>X
-/>Xk
-*>XD
+!x>X
 #D)	
-A)>X
-!B>X
-!O>X
-#K)	
-!<>X
-a!>X
-!B>X
-J>X:
-H>X*
-a5>X
-XD>X
-!@>X
-a(>X
-=XB?:
+Av>X
+#L)	
+an>X
+AP>X
+z<>X
+!;>X
+AC>X
+!+>X
 "A9(
-,>X9
-!!>X
-V	>X
-h!8X
-AS(p
+!P>X
+i>Xv
+m>Xh
+k>XJ
+vk>X
+7?>X
+8Z>X
+he>X
+@b>X
+!Y>X
+aX>X
+AT>X
+R>XB
+(C8X
+L>X?
+I78X)
+58X)
 	A@9?
 4hj@
 @9?!
 T	A@9?
 	E@9?
+4({E
+4({E
+4({E
 TK	@
 T`*@
 E@9j)
@@ -23480,7 +24021,6 @@ j&8F
 @9s"
 4	 @
 NE@9/
-r"`&
 whu8
 jv8V
 jw8W
@@ -23693,11 +24233,8 @@ j*8*
 0i~8
 0y~x
 0y~x
-Ti}%
 0y~x
-T	|%
 0y~x
-T	|%
 0y~x
 @9^	@9
 0yjx
@@ -24017,6 +24554,7 @@ Wkw88
 8kx8y
 5iu8
 nE@9
+T0,$
 @9-zm
 @9-zm
 @9-zm
@@ -24095,7 +24633,6 @@ jm8;
 |	S!
 @@*A
 LE@9
-r%T#
 Uxax
 @99'
 @99'
@@ -24111,6 +24648,7 @@ xjv8
 @99'
 6iv8
 Pxkx
+T",#
 Pha8
 @9nxn
 @9pxp
@@ -24119,6 +24657,7 @@ Pha8
 @9pxp
 @9gxg
 @9B$
+T6$#
 @9gxg
 @9uxu
 @9yxy
@@ -24268,7 +24807,7 @@ Ziv8
 @9J%
 @9J	
 @9J	@9
-TwX"
+TWk"
 jv8J	
 @9*{j
 @9s&
@@ -24311,7 +24850,6 @@ jv8J
 @9J%
 @9J	
 @9J	@9
-T7/"
 jv8J	
 @9*{j
 @9s&
@@ -24326,7 +24864,7 @@ jv8J
 @9J%
 @9J	
 @9J	@9
-Tw!"
+TW4"
 jv8J	
 @9*{j
 @9s&
@@ -24371,7 +24909,6 @@ jv8J
 @9J	@9
 4	 @
 nE@9
-Q0m;
 Dko8
 hf8d
 hf8d
@@ -24427,7 +24964,7 @@ TbD@
 gih8
 	 A)
 (D)A
-SmX!
+SMk!
 	@A9
 6!|	
 	@A9
@@ -24462,7 +24999,7 @@ hc81
 gih8
 	 A)
 (D)A
-SMb 
+S-u 
 	@A9
 6B|	
 	@A9
@@ -24478,6 +25015,7 @@ gih8
 6c|	
 	@A9
 	@A9
+rC	 
 yho8
 	@A9
 	 A)
@@ -24630,7 +25168,7 @@ B@9?!
 ThF@9
 iF@9?	
 4h"@
-RhF@9	g-
+RhF@9
 iF@9?
 F@9?
 Th"@
@@ -24889,7 +25427,7 @@ ljl8
 mjm8
 mjm8
 mjm8
-j~8y#
+j~8Y6
 8ks8
 5j68
 4j58T
@@ -24902,7 +25440,7 @@ j~8y#
 5j68
 4j58T
 %j48
-jx8Y
+jx89
 8ks8
 5j68
 4j58T
@@ -24911,6 +25449,7 @@ jx8Y
 5j68
 4j58T
 %j48
+jx8y
 8ks8
 5j68
 4j58T
@@ -24923,6 +25462,7 @@ ykw8
 5j68
 4j58T
 %j48
+rxr2
 jh8Z
 @9{'
 @9Z'
@@ -25024,7 +25564,6 @@ mjm8
 mjm8
  jn8!
  D)	
-QWh1
 0{qx
 Yku8
 @9Z'
@@ -25497,7 +26036,6 @@ njn8
 njn8
 njn8
 njn8
-Q%Q/
 xkxc
 fkd8c
 chk8
@@ -25528,7 +26066,7 @@ id8k
 @9c$
 cic8
 fif8
-~i|8H
+~i|8(
 ygxk	
 @9k$
 @9k!
@@ -25537,54 +26075,6 @@ ygxk
 @9C'
 @9c 
 id8k	
-@9c$
-cic8
-fif8
-~i|8H
-ygxk	
-@9k$
-@9k!
-@9c 
-@9c 
-@9C'
-@9c 
-id8k	
-@9c$
-cic8
-fif8
-~i|8H
-ygxk	
-@9k$
-@9k!
-@9c 
-@9c 
-@9C'
-@9c 
-id8k	
-@9c$
-cic8
-fif8
-~i|8H
-ygxk	
-@9k$
-@9k!
-@9c 
-@9c 
-@9C'
-@9c 
-id8k	
-@9c$
-cic8
-fif8
-~i|8H
-ygxk	
-@9k$
-@9k!
-@9c 
-@9c 
-@9C'
-@9c 
-ic8k	
 @9c$
 cic8
 fif8
@@ -25596,10 +26086,58 @@ ygxk
 @9c 
 @9C'
 @9c 
+id8k	
 @9c$
 cic8
 fif8
-~i|8h
+~i|8(
+ygxk	
+@9k$
+@9k!
+@9c 
+@9c 
+@9C'
+@9c 
+id8k	
+@9c$
+cic8
+fif8
+~i|8(
+ygxk	
+@9k$
+@9k!
+@9c 
+@9c 
+@9C'
+@9c 
+id8k	
+@9c$
+cic8
+fif8
+~i|8(
+ygxk	
+@9k$
+@9k!
+@9c 
+@9c 
+@9C'
+@9c 
+ic8k	
+@9c$
+cic8
+fif8
+~i|8
+ygxk	
+@9k$
+@9k!
+@9c 
+@9c 
+@9C'
+@9c 
+@9c$
+cic8
+fif8
+~i|8H
 ygxk	
 @9k$
 @9k!
@@ -25774,7 +26312,6 @@ kin8
 @9(%
 Z	(A)
 ,D)c
-QxC.
 'B))
 ~is8
 Iiv8
@@ -25856,26 +26393,31 @@ D))}@
 ?A9)
 B))}@
 KE@8
+ T P
+HV%X
 	A@9?!
-	%X)
+4 O p
+`F p
+	.%X)
+@' P
 	)E)UA	*
 T	-@
-@. 0
-4, 0
-a+ 0
-A, 0
-A- 0
-!. p
-a4 p
-a< p
-@= p
-`< P
- < p
- " 0
-@# p
-`$ P
-`* p
-`. p
+TTC 0
+hB 0
+A, p
+!! P
+AP 0
+AQ 0
+`R 0
+ R p
+@+ p
+`) P
+ , p
+@/ 0
+`0 p
+@3 P
+ ? P
+ B p
 T	-@
 4(!@
 RhNC
@@ -25894,11 +26436,14 @@ R*Y4
 4	Y@
 T	Y@
 ThBC
-	Z$X)
+i~$X)
 RKY7
 7	)@
-)?$X)
+c$X)
+HO$X
 RKY6
+C$X)
+>$X)
 jA@9_
 hE@9
 +ih8J	
@@ -25951,8 +26496,9 @@ ii8H
 9( @
 @9Iyi
 (ih8
+h\#X
 C@9)C@9
-+#X)
+IP#X)
 (G@9
 ,G@9J
 il8!
@@ -26004,6 +26550,7 @@ hs8S
 $id8
 tkt8&
 )if8
+@9I~*
 @9%Yd
 @96Yu
 @93xq
@@ -26016,6 +26563,7 @@ h{8)%
 	*	x1
 +yhxJ	
 *!z0
+@9NT*
 @9^!@
 xcx.ycxq
 sks8p
@@ -26068,7 +26616,7 @@ Wiw8
 @9'D@
 @9'D@
 @9%D@
-hP@9l5)
+hP@9
 i`@9jT@9
 kd@9mX@9
 mh@9
@@ -26080,19 +26628,19 @@ kd@9mX@9
 mh@9
 @94D@
 Wiw8x
-ThP@9
+ThP@9ly)
 i`@9jT@9
 kd@9mX@9
 mh@9
 @94D@
 Viv8w
-9h~@
+9hz@
 )D@9(
 jh8k	
 @ii8
 @iix
 jkh8)	
-5h~@
+5hz@
 4)E@9
 j.B)
 T?A@qj
@@ -26142,46 +26690,48 @@ mi*8
 )A@y)=
 oynx/
 Tjy.x
-@m(X`
 ($A9
-(f(Xh
-hd(X
-Hc(Xh
-3(X(
  A9h
-h0(X
-(.(X
+(m(X
 hZB)
-T		@
-N@9+
+@Z(X
+N@9,
+hG(X
+HE(X
 	)D)!
 	)D)!
 /B)J
 ;C)_
 D)i*A9?
 *-D)H
+-(XH
+'(X(
 h*A9
 h"A9
 Th.@
-4hR@
+4hZ@
 4hJ@
-x'X*
 h&A9h
 X6hJ@
 h"A9H
-+'X@
-*'X@
-h''X
-h!'X
- 'X(
+h'X@
+ f'X@
+^'X(
+I\'XI
+HZ'X(
+W'X(
 h*A9
+O'X(
+C'X(
 AUkA
-TuZ@
+Tub@
 ATkA
-Tt^@
-ThN@
+Ttf@
+ThV@
+h)'X(
  A9(
 R	$@
+ "'X 
 T	)F)?
 1G)?
 )	8@
@@ -26196,41 +26746,34 @@ G)h&E)
 h"A9h
 5h"A9
 ( A9
-7`f@
-Ho&XH
-j&X 
-f&X 
-a&XI
-^&X 
+R(L@
+RhN@
+RhN@
+7`b@
 T((A9
 TH(A9
-Y&X 
 ((A9
 T(H@
-hM&XH
-hH&X(
 ?!Jk
-C&X(
+R	L@
 ?QJk
-=&X(
-9&X(
-0&X(
-@-&X 
+R	L@
+}&X(
+t&X(
+ q&X 
 ((A9
- A9H
+Q-@ !
+	b&X+
 h"A9h
 $A9h
+@?&X
 Lii8k	
 Lii8k	
 #C)(
 h"A9
 h"A9
 ($A9
-(|%XH
-@m%X
-j%X 
 (,A9
-@`%X
 Hzo!
 +Bic.Cih 
 T*|@
@@ -26378,11 +26921,9 @@ $kd8)}
 ,kl8j
 *kj8J]
 )ki8
-2$e	
 he8g>
 l	@yn
 ii8)]
-2YS	
 "kb8
 7kw8
 S'kg8W<
@@ -26402,10 +26943,9 @@ $kd8J}
 )ki8l
 ,kl8
 *kj8,=
-2$6	
 l	@yn
 	ji8
-RP&	
+2U)	
 /kw8
 QPkw8
 js8s^
@@ -27375,7 +27915,6 @@ Sample rate exceeds limit of %d
 Invalid fact chunk in WAVE file
 Missing fact chunk in WAVE file
 Invalid bits per sample
-Invalid block alignment
 MPEG formats not supported
 Unknown WAVE format GUID: %08x-%04x-%04x-%02x%02x%02x%02x%02x%02x%02x%02x
 Unknown WAVE format tag: 0x%04x
@@ -27415,7 +27954,7 @@ HygonGenuine
 Unknown
 SDL3_DYNAMIC_API
 SDL_DYNAPI_entry
-Couldn't load overriding SDL library. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
+Couldn't load an overriding SDL library. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
 Couldn't override SDL library. Using a newer SDL build might help. Please fix or remove the SDL3_DYNAMIC_API environment variable. Using the default SDL.
 Failed to initialize internal SDL dynapi. As this would otherwise crash, we have to abort now.
 SDL Dynamic API Failure!
@@ -27450,13 +27989,14 @@ SDL_EVENT_DISPLAY_ORIENTATION
 SDL_EVENT_DISPLAY_CONNECTED
 SDL_EVENT_DISPLAY_DISCONNECTED
 SDL_EVENT_DISPLAY_MOVED
-SDL_EVENT_DISPLAY_SCALE_CHANGED
+SDL_EVENT_DISPLAY_CONTENT_SCALE_CHANGED
 SDL_EVENT_WINDOW_SHOWN
  (timestamp=%u windowid=%u event=%s data1=%d data2=%d)
 SDL_EVENT_WINDOW_HIDDEN
 SDL_EVENT_WINDOW_EXPOSED
 SDL_EVENT_WINDOW_MOVED
 SDL_EVENT_WINDOW_RESIZED
+SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED
 SDL_EVENT_WINDOW_MINIMIZED
 SDL_EVENT_WINDOW_MAXIMIZED
 SDL_EVENT_WINDOW_RESTORED
@@ -27469,7 +28009,8 @@ SDL_EVENT_WINDOW_TAKE_FOCUS
 SDL_EVENT_WINDOW_HIT_TEST
 SDL_EVENT_WINDOW_ICCPROF_CHANGED
 SDL_EVENT_WINDOW_DISPLAY_CHANGED
-SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED
+SDL_EVENT_WINDOW_DISPLAY_SCALE_CHANGED
+SDL_EVENT_WINDOW_DESTROYED
 SDL_EVENT_SYSWM
 SDL_EVENT_KEY_DOWN
  (timestamp=%u windowid=%u state=%s repeat=%s scancode=%u keycode=%u mod=%u)
@@ -28898,7 +29439,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-1519-g642504bc5
+SDL-prerelease-3.0.0-1540-gd5f07730b
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -28975,13 +29516,6 @@ pthread_setspecific() failed
 SDL_THREAD_STACK_SIZE
 SDLTimer
 SDL_TIMER_RESOLUTION
-Couldn't create NSString; is your string data in UTF-8 format?
-AppleMomentumScrollSupported
-ApplePressAndHoldEnabled
-ApplePersistenceIgnoreState
-effectiveAppearance
-SDL_MAC_BACKGROUND_APP
-com.apple.dock
 hash
 TQ,R
 superclass
@@ -28989,6 +29523,15 @@ T#,R
 description
 T@"NSString",R,C
 debugDescription
+Couldn't create NSString; is your string data in UTF-8 format?
+Unable to set clipboard item data
+Unable to set clipboard data
+AppleMomentumScrollSupported
+ApplePressAndHoldEnabled
+ApplePersistenceIgnoreState
+effectiveAppearance
+SDL_MAC_BACKGROUND_APP
+com.apple.dock
  using SDL_DisableScreenSaver
 PreventUserIdleDisplaySleep
 NSMainNibFile
@@ -29070,7 +29613,7 @@ view
 T@"NSView",&,N,V_view
 path
 T@"NSBezierPath",&,N,V_path
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_window
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_window
 allow_spaces
 Ti,N,V_allow_spaces
 trackpad_is_touch_only
@@ -29109,7 +29652,7 @@ Tq,N,V_window_number
 flash_request
 Tq,N,V_flash_request
 keyboard_focus
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_keyboard_focus
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_keyboard_focus
 listener
 T@"Cocoa_WindowListener",&,N,V_listener
 videodata
@@ -29412,7 +29955,6 @@ Conflicting window type flags specified: 0x%.8x
 Tooltip and popup menu windows must specify a parent window
 Window is too large.
 Conflicting window graphics flags specified: 0x%.8x
-SDL_VIDEO_HIGHDPI_DISABLED
 %s support is either not configured in SDL or not available in current SDL video driver (%s) or platform
 SDL_FRAMEBUFFER_ACCELERATION
 Requested renderer for SDL_FRAMEBUFFER_ACCELERATION is not available
@@ -29462,53 +30004,9 @@ count
 objectAtIndex:
 preferredLanguages
 getCString:maxLength:encoding:
-stringWithUTF8String:
-generalPasteboard
-arrayWithObject:
-declareTypes:owner:
-setClipboard_count:
-setString:forType:
-availableTypeFromArray:
-isEqualToString:
-stringForType:
-changeCount
-clipboard_count
-sendEvent:
-numberWithBool:
-initWithObjectsAndKeys:
-standardUserDefaults
-registerDefaults:
-registerUserDefaults
-terminate:
 init
-defaultCenter
-windowWillClose:
-addObserver:selector:name:object:
-focusSomeWindow:
-localeDidChange:
-addObserver:forKeyPath:options:context:
-removeObserver:name:object:
-removeObserver:forKeyPath:
-delegate
-sharedAppleEventManager
-removeEventHandlerForEventClass:andEventID:
-dealloc
-object
-isKeyWindow
-orderedWindows
-countByEnumeratingWithState:objects:count:
-canBecomeKeyWindow
-isOnActiveSpace
-makeKeyAndOrderFront:
-windowNumbersWithOptions:
-integerValue
-windowWithWindowNumber:
-keyWindow
-runningApplicationsWithBundleIdentifier:
-activateWithOptions:
-activateIgnoringOtherApps:
-paramDescriptorForKeyword:
-stringValue
+dataWithBytes:length:
+setData:forType:
 isEqual:
 class
 self
@@ -29529,6 +30027,67 @@ hash
 superclass
 description
 debugDescription
+pasteboard:item:provideDataForType:
+pasteboardFinishedWithDataProvider:
+initWith:userData:
+m_callback
+m_userdata
+stringWithUTF8String:
+generalPasteboard
+arrayWithObject:
+declareTypes:owner:
+setClipboard_count:
+setString:forType:
+availableTypeFromArray:
+isEqualToString:
+stringForType:
+changeCount
+clipboard_count
+pasteboardItems
+countByEnumeratingWithState:objects:count:
+dataForType:
+length
+getBytes:length:
+arrayWithObjects:count:
+canReadItemWithDataConformingToTypes:
+addObject:
+setDataProvider:forTypes:
+clearContents
+writeObjects:
+sendEvent:
+numberWithBool:
+initWithObjectsAndKeys:
+standardUserDefaults
+registerDefaults:
+registerUserDefaults
+terminate:
+defaultCenter
+windowWillClose:
+addObserver:selector:name:object:
+focusSomeWindow:
+localeDidChange:
+addObserver:forKeyPath:options:context:
+removeObserver:name:object:
+removeObserver:forKeyPath:
+delegate
+sharedAppleEventManager
+removeEventHandlerForEventClass:andEventID:
+dealloc
+object
+isKeyWindow
+orderedWindows
+canBecomeKeyWindow
+isOnActiveSpace
+makeKeyAndOrderFront:
+windowNumbersWithOptions:
+integerValue
+windowWithWindowNumber:
+keyWindow
+runningApplicationsWithBundleIdentifier:
+activateWithOptions:
+activateIgnoringOtherApps:
+paramDescriptorForKeyword:
+stringValue
 applicationShouldTerminate:
 application:openURLs:
 application:openFile:
@@ -29612,7 +30171,6 @@ performZoom:
 toggleFullScreen:
 setWindowsMenu:
 objectForInfoDictionaryKey:
-length
 processInfo
 processName
 string
@@ -29725,7 +30283,6 @@ updateIfNeeded
 nscontexts
 removeObject:
 sdlContentView
-addObject:
 view
 setView:
 currentContext
@@ -29826,7 +30383,6 @@ windowDidFinishMoving
 draggingSourceOperationMask
 draggingLocation
 draggingPasteboard
-dataForType:
 propertyListForType:
 fileURLWithPath:
 getResourceValue:forKey:error:
@@ -29998,7 +30554,6 @@ deminiaturize:
 setContentSize:
 colorSpace
 ICCProfileData
-getBytes:length:
 copy
 registerForDraggedTypes:
 unregisterDraggedTypes
@@ -30015,10 +30570,12 @@ setIgnoresMouseEvents:
 isOpaque
 setReleasedWhenClosed:
 setOneShot:
+Cocoa_PasteboardDataProvider
+NSPasteboardItemDataProvider
+NSObject
 SDLApplication
 SDLAppDelegate
 NSApplicationDelegate
-NSObject
 SDLTranslatorResponder
 NSTextInputClient
 SDLMessageBoxPresenter
@@ -30033,8 +30590,6 @@ NSDraggingDestination
 Cocoa_WindowListener
 NSWindowDelegate
 SDLView
-v16@0:8
-v24@0:8@16
 B24@0:8@16
 #16@0:8
 @16@0:8
@@ -30049,6 +30604,12 @@ Q16@0:8
 ^{_NSZone=}16@0:8
 B24@0:8@"Protocol"16
 @"NSString"16@0:8
+v40@0:8@16@24@32
+v24@0:8@16
+v40@0:8@"NSPasteboard"16@"NSPasteboardItem"24@"NSString"32
+v24@0:8@"NSPasteboard"16
+@32@0:8^?16^v24
+v16@0:8
 Q24@0:8@16
 v32@0:8@16@24
 B32@0:8@16@24
@@ -30057,7 +30618,6 @@ B28@0:8@16B24
 @24@0:8@16
 @32@0:8@16@24
 B40@0:8@16@24@?32
-v40@0:8@16@24@32
 Q24@0:8@"NSApplication"16
 v32@0:8@"NSApplication"16@"NSArray"24
 B32@0:8@"NSApplication"16@"NSString"24
@@ -30095,12 +30655,12 @@ v24@0:8r^{SDL_Rect=iiii}16
 @"NSString"
 {_NSRange="location"Q"length"Q}
 {SDL_Rect="x"i"y"i"w"i"h"i}
-@24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
+@24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
 @"NSWindow"
-v24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16@0:8
+v24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16@0:8
 {?="value"i}
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIiII{SDL_Rect=iiii}ii{?=IIiiiiff^v}{?=IIiiiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiII{SDL_Rect=iiii}ii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiii{SDL_Rect=iiii}^{SDL_WindowShaper}^?^v^{SDL_WindowUserData}^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
 ^{__CVDisplayLink=}
 ^{SDL_Mutex=}
 ^{SDL_Condition=}
@@ -30177,7 +30737,10 @@ SBXAXAXAXAXAXAXA^0
 A`#B`;A
 VAVBp
 RBSA\BSCSBTATATAXD
-CRGRERARARARARARARARARARARARARARARARARARARBRB`
+ARARARARARARARARARARARARARARARARARARARBRB`
+RBRARAp p
+p SASBXCTAp
+RGRERARARARARARARARARARARARARARARARARARARBRB`
 RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARA`(Ap p
 p SBXCTAp
 RARARARARARARARARARARBRARARARARA`
@@ -30195,9 +30758,9 @@ RARARARARARARARARAYAp p
 p XCSBp
 RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARA`3Ap p
 p SASASASASASASASASASASASBXCVCp0SDRAp
-MRGp
-p0RBp
-p RCp p RCRCp RCp p RCp RCp RCp RCRCRC
+Ip8RGp
+p(RBp
+p RCp RCp p RCRCp RCp p RCp RCp RCp RCRCRC
  RCp
 SASAS0
 F``A`
@@ -30267,6 +30830,7 @@ pHSARBp
 @_OBJC_CLASS_$_NSOpenGLContext
 @_OBJC_CLASS_$_NSOpenGLPixelFormat
 @_OBJC_CLASS_$_NSPasteboard
+@_OBJC_CLASS_$_NSPasteboardItem
 @_OBJC_CLASS_$_NSResponder
 @_OBJC_CLASS_$_NSRunningApplication
 @_OBJC_CLASS_$_NSScreen
@@ -30298,6 +30862,7 @@ pHSARBp
 @_kCFTypeArrayCallBacks
 @_kCFTypeDictionaryKeyCallBacks
 @_kCFTypeDictionaryValueCallBacks
+@_kUTTagClassMIMEType
 @_kUTTypeFileURL
 @_OBJC_CLASS_$_NSObject
 @_OBJC_METACLASS_$_NSObject
@@ -30466,6 +31031,8 @@ pHSARBp
 @_TISCopyCurrentKeyboardLayoutInputSource
 @_TISGetInputSourceProperty
 @_UCKeyTranslate
+@_UTTypeCopyPreferredTagWithClass
+@_UTTypeCreatePreferredIdentifierForTag
 @__Block_object_assign
 @__Block_object_dispose
 @__Exit
@@ -30549,6 +31116,7 @@ A_dispatch_once_f
 @_objc_msgSendSuper2
 @_objc_opt_class
 @_objc_opt_isKindOfClass
+@_objc_opt_new
 @_objc_opt_respondsToSelector
 @_objc_release
 @_objc_retain
@@ -30647,14 +31215,14 @@ A_dispatch_once_f
 _SDL_
 AJoystick
 FNumHaptics
-aVulkan_
+bVulkan_
 fbsearch
 gexp
 hgetenv
 ihid_
 opow
-oqsort
-twcs
+pqsort
+uwcs
 reate
 aptureMouse
 ursorVisible
@@ -30694,8 +31262,8 @@ mposeCustomBlendMode
 nvert
 	ignalCondition
 IMDGetAlignment
-RaveBMP_RW
-Rcreen
+SaveBMP_RW
+Screen
 Thow
 _oftStretch
 `urfaceHas
@@ -30704,13 +31272,13 @@ rpMouse
 esInit
 Condition
 	Semaphore
-SEvent
+TEvent
 eThread
 Timeout
 Pixels
 	Surface
 	AudioSamples
-vEventToRenderCoordinates
+wEventToRenderCoordinates
 Format
 ursor
 lorCursor
@@ -30836,6 +31404,7 @@ Bounds
 Name
 Orientation
 UsableBounds
+wContentScale
 Point
 Rect
 Window
@@ -30843,9 +31412,9 @@ rror
 ventFilter
 amepad
 lobalMouseState
-$rabbedWindow
+%rabbedWindow
  Instance
- Joystick
+!Joystick
 "Mapping
 "Name
 $Vendor
@@ -30854,7 +31423,7 @@ Axis
 Button
 FromString
 indFor
-utton
+ utton
 Axis
  Button
 FromString
@@ -30866,7 +31435,7 @@ GUID
 !Mapping
 !Name
 !Type
-!Vendor
+"Vendor
 !layerIndex
 !roduct
 Version
@@ -30893,13 +31462,13 @@ ouchpadFinger
 $ype
 Boolean
 Axis
-%Button
+&Button
 &GUID
 &Hat
 'Instance
 'Name
 (Serial
-(Type
+)Type
 )Vendor
 InitialState
 irmwareVersion
@@ -30913,8 +31482,8 @@ GUID
 'Name
 'Type
 (Vendor
-'layerIndex
-'roduct
+(layerIndex
+(roduct
 Version
 (layerIndex
 (owerLevel
@@ -30934,7 +31503,7 @@ dState
 Focus
 *State
 llocations
-*udioD
++udioD
 evices
 +rivers
 Axes
@@ -30950,7 +31519,7 @@ erformance
 Counter
 ,Frequency
 EnumForMasks
-,Name
+-Name
 -imary
 Path
 -erredLocales
@@ -30971,11 +31540,11 @@ Mode
 /State
 ClipRect
 0LogicalPresentation
-0Metal
-0Target
+1Metal
+1Target
 1Window
 1OutputSize
-vScale
+wScale
 0iver
 BlendMode
 0Color
@@ -30983,7 +31552,6 @@ CommandEncoder
 1Layer
 iewport
 1Sync
-Size
 Info
 cancode
 2hapedWindowMode
@@ -31013,8 +31581,8 @@ exture
 6ouch
 AlphaMod
 5BlendMode
-5ColorMod
-5ScaleMode
+6ColorMod
+6ScaleMode
 6UserData
 6Name
 Device
@@ -31024,12 +31592,12 @@ Type
 ersion
 7ideoDriver
 BordersSize
-7Data
 8Grab
 8KeyboardGrab
 8Opacity
-9Title
+:Title
 :WMInfo
+8isplayScale
 ullscreenMode
 8lags
 8romID
@@ -31039,10 +31607,12 @@ aximumSize
 9ouse
 Grab
 9Rect
-ixelFormat
+ixel
 9osition
-9arent
-9urface
+:arent
+Format
+:Density
+:urface
 InPixels
 ForResolution
 :ide
@@ -31052,30 +31622,30 @@ Close
 ;EffectSupported
 ;GetEffectStatus
 ;Index
-;Open
+<Open
 <Pause
-<Query
-;ewEffect
+=Query
+<ewEffect
 Axes
 <Effects
 Playing
 From
 Joystick
-<Mouse
+=Mouse
 mble
 =nEffect
 Init
 =Play
 =upported
-=top
+>top
 Autocenter
-=Gain
+>Gain
 >Effect
 npause
 >pdateEffect
 ?Clipboard
-?Event
-?MMX
+@Event
+@MMX
 @NEON
 @PrimarySelectionText
 @RectIntersection
@@ -31083,9 +31653,9 @@ RMSIMD
 ?ltiVec
 ?512F
 Text
-?Data
+@Data
 Float
-@creenKeyboardSupport
+AcreenKeyboardSupport
 Cursor
 AWindow
 SubSystem
@@ -31094,40 +31664,40 @@ BJoystickVirtual
 BShapedWindow
 BTablet
 Connected
-BEventsEnabled
-BHas
-BIsHaptic
-BRumble
+CEventsEnabled
+CHas
+CIsHaptic
+CRumble
 Triggers
 BMP_RW
 CObject
-CWAV_RW
-Cunction
+DWAV_RW
+Dunction
 AudioDevice
 DJoysticks
 DMutex
 DSurface
-DTexture
-DRWLockFor
+ETexture
+ERWLockFor
 ToSurface
 EMessage
 EResetPriorities
-ESet
+FSet
 OutputFunction
 EPriority
 AllPriority
 FOutputFunction
 FPriority
-GouseIsHaptic
+HouseIsHaptic
 pRGB
-FximizeWindow
+GximizeWindow
 moryBarrier
 Gtal_
 AcquireFunction
 GReleaseFunction
 CreateView
-GDestroyView
-GGetLayer
+HDestroyView
+HGetLayer
 nimizeWindow
 HxAudioFormat
 nApplication
@@ -31145,20 +31715,20 @@ JJoystick
 JSensor
 JURL
 auseAudioDevice
-JeepEvents
+KeepEvents
 KremultiplyAlpha
 KlayAudioDevice
 llEvent
 KstSemaphore
 mpEvents
 KshEvent
-KtAudioStreamData
+LtAudioStreamData
 ryTexture
 LueAudio
 SubSystem
 LaiseWindow
 From
-Lclose
+Mclose
 Mread
 Mtell
 Mwrite
@@ -31167,26 +31737,26 @@ MFile
 MMem
 Mize
 NgisterEvents
-NmoveTimer
-Nnder
-NportAssertion
-OGeometry
+OmoveTimer
+Onder
+OportAssertion
+PGeometry
 PLine
-PTexture
+QTexture
 Ooordinates
 OipEnabled
 illRect
-Olush
+Plush
 ToWindow
 PFromWindow
 oint
-Present
+Qresent
 adPixels
 Rotated
 QtoreWindow
 AssertionReport
-QHint
-QKeyboard
+RHint
+RKeyboard
 mble
 RnApp
 Gamepad
@@ -31195,10 +31765,10 @@ Triggers
 Triggers
 KeyboardShown
 SSaverEnabled
-`extInput
+aextInput
 ahreadID
 WaitSemaphore
-SLock
+TLock
 Timeout
 GamepadEffect
 TJoystickEffect
@@ -31211,24 +31781,24 @@ YSurface
 ssertionHandler
 UudioStreamFormat
 lipboard
-Uursor
+Vursor
 Text
-UData
+VData
 vent
 Vrror
 Enabled
 VFilter
 EventsEnabled
-VLED
-VPlayerIndex
-VSensorEnabled
+WLED
+WPlayerIndex
+WSensorEnabled
 WithPriority
 EventsEnabled
 WLED
-WPlayerIndex
-WVirtual
+XPlayerIndex
+XVirtual
 Axis
-WButton
+XButton
 XHat
 ainReady
 XemoryFunctions
@@ -31239,8 +31809,8 @@ YrimarySelectionText
 lativeMouseMode
 Ynder
 ClipRect
-YDraw
-YLogicalPresentation
+ZDraw
+ZLogicalPresentation
 ZTarget
 ZScale
 BlendMode
@@ -31248,15 +31818,15 @@ ZColor
 Sync
 Ziewport
 AlphaMod
-ZBlendMode
+[BlendMode
 [Palette
 [RLE
 lipRect
 [olor
 [Mod
-[hreadPriority
+\hreadPriority
 InputRect
-[ure
+\ure
 AlphaMod
 \BlendMode
 \ColorMod
@@ -31264,10 +31834,10 @@ AlphaMod
 \UserData
 AlwaysOnTop
 ]Bordered
-]Data
-]Fullscreen
-]Grab
-]HitTest
+^Data
+^Fullscreen
+^Grab
+^HitTest
 ^KeyboardGrab
 ^Opacity
 _Position
@@ -31278,20 +31848,20 @@ Mode
 aximumSize
 ^inimumSize
 dalFor
-^use
+_use
 Grab
 _Rect
 hape
 _ize
 Cursor
-_MessageBox
+`MessageBox
 `SimpleMessageBox
 `Window
 Linear
 artTextInput
 `opTextInput
 ColorKey
-`RLE
+aRLE
 aGet
 aSet
 leanup
@@ -31299,40 +31869,40 @@ areate
 Active
 aShown
 Mutex
-aRWLockFor
+bRWLockFor
 bpdate
 adObject
 AudioDevice
-bJoysticks
-bMutex
-bSurface
-bTexture
-bRWLock
+cJoysticks
+cMutex
+cSurface
+cTexture
+cRWLock
 Gamepads
 cJoysticks
 cNVTexture
-cSensors
-cTexture
-cWindowSurface
-cYUVTexture
+dSensors
+dTexture
+dWindowSurface
+dYUVTexture
 Rects
 CreateSurface
 dGet
 dLoadLibrary
-dUnloadLibrary
+eUnloadLibrary
 InstanceExtensions
-dVkGetInstanceProcAddr
+eVkGetInstanceProcAddr
 Timeout
 Global
 eInWindow
 fcos
 gligned_
-fprintf
+gprintf
 alloc
-geil
+heil
 pysign
-hloor
-hmod
+iloor
+imod
 iree
 ble_scan
 jclose
@@ -31342,7 +31912,7 @@ jget_
 jinit
 kopen
 kread
-kwrite
+lwrite
 numerate
 jxit
 feature_report
@@ -31355,43 +31925,43 @@ _timeout
 nd_feature_report
 lt_nonblocking
 conv
-ltoa
+mtoa
 close
-lopen
-lstring
+mopen
+mstring
 mblank
-mcntrl
-mdigit
-mgraph
-mlower
+ncntrl
+ndigit
+ngraph
+nlower
 nspace
 nupper
 nxdigit
-mpha
+npha
 rint
 nunct
 ltoa
-nround
-ntoa
+oround
+otoa
 alloc
 oodf
 omove
-oset
+pset
 ealloc
 pound
 calbn
-petenv
-pqrt
+qetenv
+qqrt
 qscanf
 xnprintf
 qdup
 rstr
-rupr
-qstr
+supr
+rstr
 asecmp
 srunc
 lower
-supper
+tupper
 itoa
 ttf8str
 ltoa
@@ -31407,7 +31977,7 @@ asecmp
 alloc
 vfree
 Reading
-wWriting
+xWriting
 Reading
 xWriting
 Verbose
@@ -31419,7 +31989,7 @@ yCritical
 (04488<8HHLLPL<TpPPXP@ptT\
 <D<@\`\`
 000<0888888
-LLPPPP\PP
+MLPPPP\PP
 L\LDL4,4DD
 4DD,,,44,,L,LLLL,,
 ,,,,,d,,4D|44dD
@@ -31457,10 +32027,10 @@ L,D|D4
 ,444D,4444444,,,,,,44,,,\4,,44,,DD,,,,,,44,,,,
 ,DLDDD
 D4DLD4D\,4L,,,,,,,,,,,,DD,,,,,,D,DDDDD44L4,,<<D,,,,4444,DD,,DD4,44DDDDD,,,,,,,DDDD,4DLD44,DD,DD4<<4,4,
-4TD4DDD
+4\D4DD
 d,dL
 4,tt
-,,,,,,,
+,,,,,,,,,,
 $$d$t
  P4`
 <<LL,,LH,
@@ -31658,6 +32228,7 @@ _SDL_GetDefaultAudioInfo
 _SDL_GetDefaultCursor
 _SDL_GetDesktopDisplayMode
 _SDL_GetDisplayBounds
+_SDL_GetDisplayContentScale
 _SDL_GetDisplayForPoint
 _SDL_GetDisplayForRect
 _SDL_GetDisplayForWindow
@@ -31802,7 +32373,6 @@ _SDL_GetRenderTarget
 _SDL_GetRenderVSync
 _SDL_GetRenderViewport
 _SDL_GetRenderWindow
-_SDL_GetRenderWindowSize
 _SDL_GetRenderer
 _SDL_GetRendererInfo
 _SDL_GetRevision
@@ -31845,6 +32415,7 @@ _SDL_GetVersion
 _SDL_GetVideoDriver
 _SDL_GetWindowBordersSize
 _SDL_GetWindowData
+_SDL_GetWindowDisplayScale
 _SDL_GetWindowFlags
 _SDL_GetWindowFromID
 _SDL_GetWindowFullscreenMode
@@ -31858,6 +32429,7 @@ _SDL_GetWindowMouseGrab
 _SDL_GetWindowMouseRect
 _SDL_GetWindowOpacity
 _SDL_GetWindowParent
+_SDL_GetWindowPixelDensity
 _SDL_GetWindowPixelFormat
 _SDL_GetWindowPosition
 _SDL_GetWindowSize
@@ -32541,6 +33113,7 @@ _OBJC_CLASS_$_NSObject
 _OBJC_CLASS_$_NSOpenGLContext
 _OBJC_CLASS_$_NSOpenGLPixelFormat
 _OBJC_CLASS_$_NSPasteboard
+_OBJC_CLASS_$_NSPasteboardItem
 _OBJC_CLASS_$_NSProcessInfo
 _OBJC_CLASS_$_NSResponder
 _OBJC_CLASS_$_NSRunningApplication
@@ -32561,6 +33134,8 @@ _OBJC_METACLASS_$_NSWindow
 _TISCopyCurrentKeyboardLayoutInputSource
 _TISGetInputSourceProperty
 _UCKeyTranslate
+_UTTypeCopyPreferredTagWithClass
+_UTTypeCreatePreferredIdentifierForTag
 __Block_object_assign
 __Block_object_dispose
 __DefaultRuneLocale
@@ -32639,6 +33214,7 @@ _kCGColorClear
 _kCGDisplayShowDuplicateLowResolutionModes
 _kIOMasterPortDefault
 _kTISPropertyUnicodeKeyLayoutData
+_kUTTagClassMIMEType
 _kUTTypeFileURL
 _log
 _log10
@@ -32669,6 +33245,7 @@ _objc_msgSend
 _objc_msgSendSuper2
 _objc_opt_class
 _objc_opt_isKindOfClass
+_objc_opt_new
 _objc_opt_respondsToSelector
 _objc_release
 _objc_retain
@@ -32768,168 +33345,183 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-PWq%
-q%V$R+N
-B;Sy
-{~/0
-/&Aa
-B	*:d
-7rfWe
-dfHi
-@t,i[
-^v}m4
-.D'$!
-j}k`
-*'N&
-k]PN
-5*thdV
-SpRuXX
-N']/
-:=G)
-f4E;
-n 8Up
-Tm0}k
-a%5m
-pvt'
-R~J}
-K.Ne'
-wvfm
-RvN7
-v $z
-,G-j
-~Y~(
-Ad`tr
-fSS$
-nc:}m
--#0\x
-pwv8
-[swJ
-U ~05
-8oqX
-6}2_/
-gKf\
-=K,M
-[cg1
-:g<3m
-At y
-5KTf
-g,`[
-o\@A
-W3{|
-"aZ^(
-8n|>2
-+V]J
-b'TQ!x
-wRZ_
--EvNme
-uoea
-[]Ar
-'fK]
+S!bL
+'apm
+7,d;
+p[lke
+1b,`
+XPnF
+'Z]#<
+DdU[*
+	?;h
+t*n8
+PI%*G{
+''P]
+a2	xC
+>>s#
+nq;6
+48h,
+c@K+,
+N0KL
+Agfw
+0|Iw
+9?(=RAY
+OM8d
+(B %
+HJg?
+1fF=
+bIcJ
+U.&j
+KW	f
+H9C'(
+xWpJ6
+Z~A2
+(=p2
+nqY%1u]qi
+}5!v
+@5KK
+$kt?v
+oIVV
+[q)u/Q#&
+fS!$
+RO9|+&
+6vF_;
+fFL<"
+BT"t
+CNNE
+dx u
+cU5_z}
+|!XW
+99Yq
+K={<,5
+I`sK
+J6sm
+$@MdP
+]Q),2
+?Wv2?g;
+sajh'
+&9QZ
+[{k$D`
+S!37
+d	-FP
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-B;	SA
-M 5K
-2RgWH
-i&=FB
-T>gm5a
-f+Jx
-KnBP
-.kimc
-cA}2
-Aa23
-[X]sW4
-XM<\
-80wBao
-+f y
-q#J~y
-6xah\QC
-tQ5H?r
-\p'-
-w'(z
-CtER
-$;`N
-<&q5Z
-!Rr<
-:FJz
-12T~]
-d7t(
-{1d<
-;fj~
-{{9h
-{w@D
-rex/t]
-V7n`HX
-&a/_F
-}kaZ
-);t;bz
-<`\)
-/;3$
-qjIt	
-|9SB
-`	Dk!
-y<GLL
-Gf/uVQqO
-0,}Z
-1Dmm
-*(T@
-x}?4
-) aj:\
-]hb7
-B2|i
-;TdWIl=N
-eqb9
-U\Q'
-=@'W
-:$o 
-Pe5B
-NNkcj
-Sd2tP
-I->f
-6F2]}
-q`b}
-Et9/[
-TwLd
-}6;T
->N	n
-tLaH
-gOi9
-.(im
-{'tV
-|UzlAm:
-P)Ep
-K>JAL
-4?~x
-d3XKs
-Fv#e
-qd|W
-vh'9
-Gl G
-Q5n)
-[0ZT
-k8#1
-[b#z
-i^ao
-uEI;(
-+Rg&0
-Bn8Nh
-{0qg/
-:z3:'
-'WsG
-`Az?`
-fS1 -
-3&>i
-%S]'6
-)%yl7
-Y;sr4
-wGfk{
-4pg6
-{lcVj9
-,nT.
-$N*w
-(,(4
-[)|xj_
+yk:'
+/>Za[}Q
+^N{#
+qXzC
+Y^<'
+ZFIKi
+rd9Y
+M8h{)Zj!r
+Fb8>A1
+2c2W
+`Y99d
+WSv\
+9q6i
+.s`n
+l=`L
+Bm3w
+t,)4	
+BLdzU
+j@(a8
+:I4Ja
+LH5r
+Fue0
+J!X'@
+<*Z@
+N,-S
+Nho/
+6of9j~
+a@l:
+SVq<
+bQtB
+]ZD2
+)7[X
+\8gU]
+-&VQ
+NnA>
+w_ S
+$8Oj2
+}?tJ
+wc9p
+b%Azz
+A*ge
+(7"r
+a;RPUvcF
+!7U9+a
+o])o
+1}\{
+;nFiD
+ymsR
+uh,e
+|'TX
+Q]E`
+$'&N5v
+2##$
+?0Mu
+*0Xu
+ou):
+	8ZM
+%'v_
+]~3{c
+FXWUa
+=gMM%>
+N]I^Ec
+SIA|'9
+j;-u
+AY03V
+>Q%c
+3*2x
+{[SJ
+iMy, 
+<MRM*r
+i\3Y
+k}~ba`
+JFRp'
+-jP-#
+%@FiAtt
+dRMo%
+q6>i
+quy;
+7Z6:
+0yb1
+*K.	(
+0.~I|
+XOgj
+4 K&
+mr>C
+&yf6
+#m%q
+F^_"H
+nrly
+{0K?F5
+PEli
+AIJ\
+A@^r
+lCw[
+>X|w
+jlJr
+$:pD2<Z
+!1H'
+\+-E
+LbkFM0FOJ
+Sl S
+c93{U
+aDt-
+e_1o
+<j6fKZ
+H/;^Y
+Eafh
+m*H,c5
+?SA,
+e#x$Nc
+IU<'
+l9PDl
+4xrn
+GYgn
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -32985,9 +33577,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230517203506Z0/
-sae0[
-e=\\
+230519215927Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -32995,39 +33585,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		mKxMvGsNZT1cXOuKiuiVNO3T/9o=
+		atUT3B0kHrzFZQ+kscjhTn4bXdo=
 		</data>
 		<data>
-		09b1ZBD8Kde/pyCMvrrWOHNh6uM=
+		kyK2S1e9MZ+8Zz976Qq0dc6zwgM=
 		</data>
 	</array>
 </dict>
 </plist>
-]Ydy
-av.\
-u4Vh
-20230517203512Z0
-WwW>
-+!20
+Erf8
+uYps
+20230519215946Z0
+\r:A)nl
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230419204020Z
-230531204019Z0B1
-Timestamp Signer NWK21
+230517205008Z
+230628205007Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-=&9!GD
-iVd+
-0odL
-g}g/
+SD}l
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-!YHt
-f5ND9
-7I~6
+%{!u
+.:E7)&V
+Ghpj
+f?fJf[
+3y\G
+1W'n
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -33066,8 +33654,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-WwW>
-+!20	
-230517203512Z0#
-9{m=1^~
-["rB
+230519215946Z0#
+Ily+I`
+_xx0
+}r.x
+?x1p

@@ -620,3 +620,8 @@ message CMsgMonitorInfo {
 message CMsgGenerateSystemReportReply {
 	optional string report_id = 1;
 }
+
+message CMsgWebUITransportInfo {
+	optional uint32 port = 1;
+	optional string auth_key = 2;
+}

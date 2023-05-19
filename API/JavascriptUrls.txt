@@ -106,7 +106,6 @@ ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_paris_2023_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
-${CLAN_CDN_ASSET_URL}images
 ${CLAN_CDN_ASSET_URL}images/
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
@@ -1079,6 +1078,7 @@ ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/languagepreferences/
+${STORE_BASE_URL}account/notificationsettings
 ${STORE_BASE_URL}account/notinterested
 ${STORE_BASE_URL}account/optoutappcommunication/
 ${STORE_BASE_URL}account/preferences
@@ -1833,8 +1833,6 @@ https://avatars.cloudflare.steamstatic.com/${strAvatarHash}${}.jpg
 https://avatars.cloudflare.steamstatic.com/${strHash}${strSize}.jpg
 https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg
 https://calendar.google.com/calendar/r/eventedit?text=
-https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif
-https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/56521811317a8298a7aff4a914be964b67dd0325.png
 https://cdn.beta.steampowered.com/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/${filename}

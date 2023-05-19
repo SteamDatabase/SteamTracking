@@ -28,6 +28,7 @@
  .objc_class_name_NSOpenGLContext
  .objc_class_name_NSOpenGLPixelFormat
  .objc_class_name_NSPasteboard
+ .objc_class_name_NSPasteboardItem
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSResponder
  .objc_class_name_NSRunningApplication
@@ -129,6 +130,7 @@
  CVDisplayLinkSetCurrentCGDisplayFromOpenGLContext
  CVDisplayLinkSetOutputCallback
  CVDisplayLinkStart
+ D .objc_class_name_Cocoa_PasteboardDataProvider
  D .objc_class_name_Cocoa_WindowListener
  D .objc_class_name_SDLAppDelegate
  D .objc_class_name_SDLApplication
@@ -266,6 +268,7 @@
  OBJC_CLASS_$_NSOpenGLContext
  OBJC_CLASS_$_NSOpenGLPixelFormat
  OBJC_CLASS_$_NSPasteboard
+ OBJC_CLASS_$_NSPasteboardItem
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSResponder
  OBJC_CLASS_$_NSRunningApplication
@@ -439,6 +442,7 @@
  T SDL_GetDefaultCursor
  T SDL_GetDesktopDisplayMode
  T SDL_GetDisplayBounds
+ T SDL_GetDisplayContentScale
  T SDL_GetDisplayForPoint
  T SDL_GetDisplayForRect
  T SDL_GetDisplayForWindow
@@ -583,7 +587,6 @@
  T SDL_GetRenderVSync
  T SDL_GetRenderViewport
  T SDL_GetRenderWindow
- T SDL_GetRenderWindowSize
  T SDL_GetRenderer
  T SDL_GetRendererInfo
  T SDL_GetRevision
@@ -626,6 +629,7 @@
  T SDL_GetVideoDriver
  T SDL_GetWindowBordersSize
  T SDL_GetWindowData
+ T SDL_GetWindowDisplayScale
  T SDL_GetWindowFlags
  T SDL_GetWindowFromID
  T SDL_GetWindowFullscreenMode
@@ -639,6 +643,7 @@
  T SDL_GetWindowMouseRect
  T SDL_GetWindowOpacity
  T SDL_GetWindowParent
+ T SDL_GetWindowPixelDensity
  T SDL_GetWindowPixelFormat
  T SDL_GetWindowPosition
  T SDL_GetWindowSize
@@ -1110,6 +1115,8 @@
  TISCopyCurrentKeyboardLayoutInputSource
  TISGetInputSourceProperty
  UCKeyTranslate
+ UTTypeCopyPreferredTagWithClass
+ UTTypeCreatePreferredIdentifierForTag
  _Block_object_assign
  _Block_object_dispose
  _DefaultRuneLocale
@@ -1197,6 +1204,7 @@
  kCGDisplayShowDuplicateLowResolutionModes
  kIOMasterPortDefault
  kTISPropertyUnicodeKeyLayoutData
+ kUTTagClassMIMEType
  kUTTypeFileURL
  log
  log10

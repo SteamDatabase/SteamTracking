@@ -3741,6 +3741,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "steam_downloads_launch"		"%name% spielen   "
 "steam_downloads_launch_app"	"%app% starten"
+"steam_downloads_updatenews"	"Update-Neuigkeiten anzeigen"
 "steam_downloads_showinlibrary"	"In Bibliothek anzeigen"
 "steam_downloads_auto_update_high_priority" "Hohe Priorität"
 "steam_downloads_auto_update_default" "Automatische Updates aktiviert"

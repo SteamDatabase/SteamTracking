@@ -4509,8 +4509,6 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Music_Settings_ResetDatabase_Title" "Réinitialiser la base de données musicale"
 "Music_Settings_ResetDatabase_Text" "Voulez-vous vraiment réinitialiser la base de données musicale ?"
 "Music_Settings_AdditionalFiles_Header" "Autres fichiers"
-"Music_Settings_AdditionalFiles_HighQuality" "Télécharger les fichiers audio HQ"
-
 "Music_Playlist_Defaultname" "Playlist"
 "Music_Playlist_Details_Menu_Play" "Écouter"
 "Music_Playlist_Details_Menu_PlayNext" "Écouter le suivant"

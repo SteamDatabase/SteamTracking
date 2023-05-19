@@ -24611,7 +24611,20 @@
           Math.max(r, o)
         );
       }
-      n.d(t, { LO: () => r, Lh: () => i, bU: () => s, r4: () => o });
+      function a(e) {
+        return (
+          "string" == typeof e &&
+          !Number.isNaN(e) &&
+          !Number.isNaN(Number.parseFloat(e))
+        );
+      }
+      n.d(t, {
+        LO: () => r,
+        Lh: () => i,
+        bU: () => s,
+        kE: () => a,
+        r4: () => o,
+      });
     },
     4306: (e, t, n) => {
       "use strict";
@@ -25504,7 +25517,7 @@
           Promise.all([n.e(6576), n.e(8805), n.e(312)]).then(n.bind(n, 15844))
         ),
         O = i.lazy(() =>
-          Promise.all([n.e(8805), n.e(5663), n.e(1909)]).then(n.bind(n, 45938))
+          Promise.all([n.e(8805), n.e(5663), n.e(1909)]).then(n.bind(n, 2183))
         ),
         L = () => (f.JA.IS_OGG ? "games" : "groups"),
         F = {},

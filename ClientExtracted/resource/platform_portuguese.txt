@@ -8,7 +8,7 @@
 "App_Games"		"Biblioteca"
 "App_Servers"	"Servidores"
 "App_Browser"	"Browser da web"
-"Admin_Servers" 	"Os Meus Servidores"
+"Admin_Servers" 	"Os meus servidores"
 "App_Account"	"Conta"
 "App_Settings"	"Definições"
 "App_Monitor"	"Monitor"
@@ -37,7 +37,7 @@
 "Steam_NeverConnectedNoConnection"				"Esta conta '%account%' nunca foi acedida nesta máquina antes e uma ligação aos servidores do Steam não pode ser feita.\nAlguns serviços não estarão disponíveis. O Steam continuará a tentar a ligação e os serviços estarão disponíveis quando a ligação for establecida."
 "Steam_RefreshEnterTwoFactorCode"				"Introduz o código atual do teu autenticador do Steam Guard"
 "Steam_RefreshLogin_RateLimited"		"Ocorreram demasiadas tentativas falhadas de início de sessão na tua rede num curto espaço de tempo. Aguarda e tenta mais tarde."
-"Steam_RefreshLogin_Title"			"Steam - Atualizar Sessão"
+"Steam_RefreshLogin_Title"			"Steam - Atualizar sessão"
 "Steam_RefreshLogin_InfoTicketExpired"	"Esta sessão expirou.\nReintroduz a palavra-passe para continuar."
 "Steam_RefreshLogin_InvalidPassword"	"As credenciais da tua conta mudaram.\nVolta a introduzir a tua palavra-passe para continuar."
 

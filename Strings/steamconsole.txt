@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-n
-n
 __stubs
 __TEXT
 __stub_helper
@@ -96,6 +94,7 @@ N11CAppUpdater40CCallback_OnCheckAppBetaPasswordResponseE
 13CCallbackImplILi200EE
 N12CAppLauncher29CCallback_OnAppLifetimeNoticeE
 9CCallbackI12CAppLauncher19AppLifetimeNotice_tLb0EE
+13CCallbackImplILi20EE
 10CSteamUser
 N10CSteamUser36CCallbackInternal_OnShutdownLauncherE
 13CCallbackImplILi2EE
@@ -1330,5 +1329,7 @@ Ic
 0
 0
 0
+|
+q
 0
 0

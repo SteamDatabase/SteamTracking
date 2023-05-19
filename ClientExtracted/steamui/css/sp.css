@@ -4365,13 +4365,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   display: flex;
   flex-direction: row;
 }
-.ModalDialogPopup:not(.steamdesktopoverlay_NoTitlebarSpacer_20pOd)
-  .steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_WindowControls_2O7tj
-  .title-area
-  .title-area-icon.closeButton {
-  margin-top: 7px;
-}
 .steamdesktopoverlay_OverlayPopup_C9tvu
   .steamdesktopoverlay_PinWindowButton_3EcEd {
   color: #b8bcbf;
@@ -4830,6 +4823,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .steamdesktopoverlay_RecentNewsItem_3eNE5:hover {
   color: #23262e;
   background-color: #dcdedf;
+}
+.steamdesktopoverlay_ResizeGrip_3eAwo.steamdesktopoverlay_PinnedView_2OoAj {
+  visibility: hidden;
 }
 .shutdowndialog_ShutdownDialog_3StXN .shutdowndialog_Body_2Se5J {
   align-items: center;
@@ -6171,233 +6167,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .broadcaststatus_Icon_3sx3e.broadcaststatus_Requests_2mpTK svg line {
   stroke: #969696;
 }
-.prosemirror_Container_3lEt5 {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-.prosemirror_Container_3lEt5 > .ProseMirror {
-  padding: 12px;
-}
-.prosemirror_ToolbarRow_2H40R {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 4px;
-}
-.prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
-  margin-right: 4px;
-  width: 30px;
-  height: 30px;
-}
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
-  .SVGIcon_Button {
-  width: 20px;
-  height: 20px;
-  padding-bottom: 4px;
-  padding-left: 1px;
-}
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
-  .SVGIcon_Button.SVGIcon_TextBold,
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
-  .SVGIcon_Button.SVGIcon_TextItalic,
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
-  .SVGIcon_Button.SVGIcon_TextUnderline,
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
-  .SVGIcon_Button.SVGIcon_TextStrikethrough {
-  width: 18px;
-  height: 18px;
-}
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
-  .SVGIcon_Button.SVGIcon_SpellCheck {
-  width: 20px;
-  height: 20px;
-  margin-left: 1px;
-  margin-top: 1px;
-}
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
-  .SVGIcon_Button.SVGIcon_TextUnderline {
-  padding-bottom: 5px;
-}
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.prosemirror_Toggled_41y1p {
-  background: #626c7f;
-  color: #fff;
-}
-.prosemirror_ToolbarRow_2H40R .prosemirror_Gap_2BPaP {
-  width: 12px;
-}
-.prosemirror_ToolbarRow_2H40R .prosemirror_Spacer_2Zt31 {
-  flex: 1;
-}
-.prosemirror_ExpandButton_3454x svg {
-  width: 21px;
-  height: 21px;
-  padding-top: 6px;
-}
-.prosemirror_ExpandButton_3454x.prosemirror_Toggled_41y1p svg {
-  transform: rotate(180deg);
-  margin-top: 3px;
-  margin-right: 1px;
-}
-.pmhover_Hover_3tNcT {
-  position: absolute;
-  background: #ccc;
-  color: #000;
-  padding: 4px;
-}
-.pmhover_Link_ovQsF {
-  font-size: 12px;
-}
-.pmhover_LinkHelp_2Az4l {
-  font-size: 10px;
-  font-weight: italic;
-}
-.gamenotes_Page_ZUB8z {
-  display: flex;
-  flex-direction: row;
-  margin: 12px 2%;
-  min-height: 50vh;
-  max-height: 90vh;
-}
-.gamenotes_Page_ZUB8z .gamenotes_Content_1aZdz {
-  flex: 1;
-  display: flex;
-  min-width: 0;
-}
-.gamenotes_NotesPagedSettings_1dBCP {
-  flex: 1;
-  height: auto;
-}
-.gamenotes_NotesPagedSettings_1dBCP .DialogContentTransition {
-  width: auto;
-  max-width: none;
-}
-.gamenotes_NotesPagedSettings_1dBCP
-  .gamenotes_NotePage_2r0iB
-  > .DialogContent_InnerWidth {
-  max-width: none;
-}
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .DialogContentTransition {
-  background: none;
-}
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft .PageListColumn {
-  visibility: hidden;
-}
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .gamenotes_NotePage_2r0iB {
-  background: none;
-}
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .gamenotes_Toolbar_A6mhR,
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .gamenotes_NoteActions_3uGOy {
-  visibility: hidden;
-}
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_EditorInput_3zWun {
-  overflow: hidden;
-}
-.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
-  width: 36px;
-  height: 36px;
-  margin: 0px 0px 10px 10px;
-  padding: 0px;
-}
-.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv svg {
-  margin-bottom: 4px;
-}
-.gamenotes_NoteEditorArea_3WOF4 {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  min-height: 0;
-  min-width: 0;
-  margin: 0px 10px 25px 0px;
-  position: relative;
-  color: #c1c6cf;
-}
-.gamenotes_NoteEditorArea_3WOF4 .gamenotes_EditorInput_3zWun {
-  flex: 1;
-  overflow: auto;
-  min-height: 0;
-}
-.gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy {
-  position: absolute;
-  right: 8px;
-  bottom: 8px;
-  display: flex;
-  flex-direction: row;
-}
-.gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy .DialogButton {
-  width: 22px;
-  height: 30px;
-  padding: 8px 8px 0px 8px;
-  opacity: 0.5;
-}
-.gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
-  .DialogButton:hover {
-  opacity: 0.8;
-}
-.gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
-  .gamenotes_CloseWindowButton_G0Fgh {
-  margin-left: 8px;
-  width: fit-content;
-  padding: 0px 8px;
-  height: 38px;
-}
-.gamenotes_Toolbar_A6mhR {
-  padding: 12px 0;
-  -webkit-app-region: no-drag;
-  position: relative;
-  z-index: 3;
-}
-.gamenotes_EditorInput_3zWun {
-  background: #111;
-  box-shadow: inset 0 8px 6px -6px #000;
-  display: flex;
-  flex-direction: column;
-}
-.gamenotes_EditorInput_3zWun > .ProseMirror {
-  flex: 1;
-}
-.gamenotes_EditorInput_3zWun > .ProseMirror:focus-visible {
-  outline: none;
-}
-.gamenotes_EditorInput_3zWun a {
-  color: #aad8ec;
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
-}
-.gamenotes_EditorInput_3zWun a:hover {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
-}
-.gamenotes_EditorInput_3zWun h1,
-.gamenotes_EditorInput_3zWun h2,
-.gamenotes_EditorInput_3zWun h3,
-.gamenotes_EditorInput_3zWun h4,
-.gamenotes_EditorInput_3zWun h5 {
-  margin: 0.5em 0;
-}
-.gamenotes_EditorInput_3zWun ul,
-.gamenotes_EditorInput_3zWun ol {
-  margin: 0.5em 0;
-}
-.gamenotes_EditorInput_3zWun li > p:first-of-type {
-  margin: 0;
-}
 .ModalDialogPopup
   .gamenotespopups_GameNotesPopup_3hIt9.ModalDialogBody
   .title-area {
@@ -6848,6 +6617,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   font-size: 12px;
   padding: 6px 4px;
   transition: color 0.15s ease-out;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
 }
 .rootmenu_RootMenuButton_2UyOB.rootmenu_Disabled_2hcbl {
   color: rgba(169, 169, 169, 0.5);
@@ -6863,6 +6636,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   align-items: center;
   padding-left: 9px;
   gap: 6px;
+  box-sizing: border-box;
 }
 .rootmenu_StatusEntry_1GNJU {
   display: flex;
@@ -6879,11 +6653,11 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  padding-top: 1px;
 }
 .rootmenu_SteamButton_bSKGl .rootmenu_Logo_GG9wV {
   width: 18px;
   height: 18px;
+  margin-top: 1px;
 }
 .parentalunlockdialog_Body_2Tzz8 {
   align-items: center;
@@ -7713,7 +7487,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background: #171d25;
   box-shadow: inset rgba(61, 68, 80, 0.65) 1px 1px 0px 0px,
     inset rgba(61, 68, 80, 0.45) -1px -1px 0px 0px;
-  padding: 0px 16px;
+  padding: 0px 11px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -7737,6 +7511,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   align-items: center;
   max-width: 30vw;
   gap: 10px;
+  padding: 5px;
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition-duration: 0.1s;
@@ -7879,11 +7654,17 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
 }
+.bottombar_AddGameButton_2foCk {
+  padding: 5px 10px 5px 5px;
+}
 .bottombar_AddGameButton_2foCk:hover .bottombar_Icon_1KrJ3 {
   color: #fff;
 }
 .bottombar_AddGameButton_2foCk:hover .bottombar_Text_3OhUx {
   color: #fff;
+}
+.bottombar_FriendsButton_1TdaA {
+  padding: 5px 5px 5px 10px;
 }
 .bottombar_FriendsButton_1TdaA.bottombar_Disabled_2Sdix .bottombar_Icon_1KrJ3 {
   stroke: rgba(169, 169, 169, 0.5);
@@ -8325,6 +8106,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   width: 100%;
   background-color: #000;
   display: none;
+  pointer-events: none;
 }
 .steamdesktop_Wrapper_1ENHE.WindowFocus .steamdesktop_FocusBar_3pXas,
 .WindowFocus .steamdesktop_Wrapper_1ENHE .steamdesktop_FocusBar_3pXas {
@@ -8335,6 +8117,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     #1aa0ff53 50%,
     transparent 90%
   );
+}
+.steamdesktop_Wrapper_1ENHE.Maximized,
+.Maximized .steamdesktop_Wrapper_1ENHE {
+  border: none;
 }
 .steamdesktop_OuterFrame_3mz8w {
   width: 100%;
@@ -8397,7 +8183,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .steamdesktop_TitleBar_39oUC .steamdesktop_RootMenuBar_3s0lk {
   flex: 0 0 auto;
-  padding-top: 2px;
+  margin-top: 2px;
 }
 .steamdesktop_TitleBar_39oUC .steamdesktop_DragArea_30vB9 {
   flex: 1 0 auto;

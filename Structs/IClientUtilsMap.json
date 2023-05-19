@@ -410,6 +410,14 @@
             "argc": "1"
         },
         {
+            "name": "SetWebUITransportWebhelperPID",
+            "argc": "2"
+        },
+        {
+            "name": "GetWebUITransportInfo",
+            "argc": "2"
+        },
+        {
             "name": "RecordFakeReactRouteMetric",
             "argc": "2"
         },
