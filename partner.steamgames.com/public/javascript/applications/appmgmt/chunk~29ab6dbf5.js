@@ -8597,14 +8597,14 @@
     93923: (e, t, i) => {
       "use strict";
       i.d(t, {
-        A$: () => h,
-        Eg: () => S,
-        Ii: () => D,
-        JP: () => y,
-        O7: () => g,
-        UA: () => p,
+        A$: () => v,
+        Eg: () => b,
+        Ii: () => y,
+        JP: () => S,
+        O7: () => h,
+        UA: () => _,
         zQ: () => m,
-        zV: () => _,
+        zV: () => g,
       });
       var n = i(89526),
         r = i(84343),
@@ -8628,7 +8628,7 @@
                   (0, a.Xx)("#PackageGrid_PackageID", c)
                 );
         return n.createElement(
-          S,
+          b,
           {
             fnBLocalChangesExist: i,
             fnWarnUser: r,
@@ -8641,7 +8641,7 @@
       function m(e) {
         return n.useMemo(
           () => ({
-            visible: !1,
+            visible: !0,
             title: (0, a.Xx)("#PackageGrid_Column_PackageID"),
             field: "packageID",
             headerSort: !1,
@@ -8656,7 +8656,16 @@
           [e]
         );
       }
-      function p(e) {
+      function p(e, t, i, n) {
+        return (
+          !!(
+            /^\d+$/.test(e) &&
+            i.packageID &&
+            i.packageID.toString().startsWith(e)
+          ) || e == t
+        );
+      }
+      function _(e) {
         return n.useMemo(
           () => ({
             title: (0, a.Xx)("#PackageGrid_Column_PackageName"),
@@ -8674,11 +8683,12 @@
             headerFilterPlaceholder: (0, a.Xx)(
               "#PackageGrid_PackageNameFilterInputPrompt"
             ),
+            headerFilterFunc: p,
           }),
           [e]
         );
       }
-      function _(e) {
+      function g(e) {
         return n.useMemo(
           () => ({
             visible: !1,
@@ -8690,7 +8700,7 @@
           []
         );
       }
-      function g(e) {
+      function h(e) {
         return n.useMemo(
           () => ({
             visible: !1,
@@ -8704,13 +8714,13 @@
           []
         );
       }
-      function h(e) {
+      function v(e) {
         const t = e.getCell("packageType"),
           i = t && "function" == typeof t.getValue && t.getValue();
         i && e.getElement().classList.add(i),
           e.getNextRow() || e.getElement().classList.add(l().LastRow);
       }
-      function v(e) {
+      function D(e) {
         var t;
         const { fnBLocalChangesExist: i, fnWarnUser: r, cell: o } = e,
           l = o.getRow().getData().appids,
@@ -8720,7 +8730,7 @@
               : 0,
           d = o.getRow().getData().packageID;
         return n.createElement(
-          S,
+          b,
           {
             fnBLocalChangesExist: i,
             fnWarnUser: r,
@@ -8730,7 +8740,7 @@
           1 == c ? "1 appid" : c + " appids"
         );
       }
-      function D(e) {
+      function y(e) {
         return n.useMemo(
           () => ({
             title: (0, a.Xx)("#PackageGrid_Column_AppName"),
@@ -8738,7 +8748,7 @@
             sorter: d.yh,
             headerSort: !1,
             formatter: (0, c.reactFormatter)(
-              n.createElement(v, Object.assign({}, e))
+              n.createElement(D, Object.assign({}, e))
             ),
             cssClass: l().AppCount,
             width: 80,
@@ -8748,7 +8758,7 @@
           [e]
         );
       }
-      function y(e, t, i, n) {
+      function S(e, t, i, n) {
         return e == (0, a.Xx)("#PackageGrid_NoBaseGameFoundForPackage")
           ? `<div title='${(0, a.Xx)(
               "#PackageGrid_NoBaseGameExplanation"
@@ -8761,7 +8771,7 @@
               t
             )})</span></div>`;
       }
-      function S(e) {
+      function b(e) {
         const {
           fnBLocalChangesExist: t,
           fnWarnUser: i,
