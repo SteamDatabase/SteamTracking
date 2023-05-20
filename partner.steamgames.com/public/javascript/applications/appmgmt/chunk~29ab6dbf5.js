@@ -8707,7 +8707,7 @@
             /^\d+$/.test(e) &&
             i.packageID &&
             i.packageID.toString().startsWith(e)
-          ) || e == t
+          ) || t.toLowerCase().includes(e.toLowerCase())
         );
       }
       function _(e) {
