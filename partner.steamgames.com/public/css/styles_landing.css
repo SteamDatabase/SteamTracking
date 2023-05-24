@@ -1292,17 +1292,16 @@ div + #landingFooter.nonconfidential {
 	display: block;
 	padding: 5px !important;
 	color: #e1e1e1 !important;
-	background: -webkit-linear-gradient( top, #82a6d7 5%, #3c6091 95%);
-	background: linear-gradient( to bottom, #82a6d7 5%, #3c6091 95%);
+	background-color: #1aafff;
 }
 
 .fancyLink > span {
-	color: #e1e1e1 !important;
+	color: #ffffff !important;
 }	
 	
 .fancyLinkBox {
 	display: block;
-	background-color: #3c6091;
+	background-color: #1a92e2;
 	width: 305px;
 	border-top: 1px solid black;
 	border-left: 1px solid black;
@@ -1311,7 +1310,7 @@ div + #landingFooter.nonconfidential {
 .fancyLinkBox > a {
 	display: block;
 	padding: 5px;
-	color: #e1e1e1;
+	color: #ffffff;
 	text-decoration: none;
 	text-align: center;
 	float: left;
@@ -1320,14 +1319,14 @@ div + #landingFooter.nonconfidential {
 	border-right: 1px solid black;
 }
 .fancyLinkBox > a:hover {
-	background-color: #5c80b1;
+	background-color: #1aafff;
 }	
 
 .fancyCurrencyInput {
 	display: inline-block;
 	background-color: #1d1d1d;
 	font-family: tahoma, arial, helvetica, trebuchet ms, sans-serif;
-	color: #e1e1e1;
+	color: #ffffff;
 	font-size: 13px;
     border: 1px #464b53 solid;
 	padding: 2px 3px !important;
@@ -1411,6 +1410,19 @@ div + #landingFooter.nonconfidential {
 .packagePriceFormSelectPriceDropdown
 {
 	width: 250px;
+    position: relative;
+}
+.packagePriceFormSelectPriceDropdown:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 8px 6px;
+    border-color: transparent transparent #ffffff transparent;
+    transform: rotate(180deg);
 }
 
 .fancySelectBox {
@@ -1421,7 +1433,7 @@ div + #landingFooter.nonconfidential {
 	.fancySelectBox > a {
 		display: block;
 		padding: 5px;
-		color: #e1e1e1;
+		color: #ffffff;
 		text-decoration: none;
 		text-align: center;
 	}
@@ -2975,7 +2987,7 @@ ul.transfer_rights li {
 .cdkey_request {
 	padding: 10px 0px 10px 0px;
 	cursor: pointer;
-	background-color: #333333;
+	background-color: #2a2d32;
 	border: 2px solid #262626;
 	border-bottom-style: hidden;
 }
@@ -3397,19 +3409,41 @@ div .cdkey_request_details_row
 	white-space: pre-line;
 }
 
+.healthcheck_trailersOkayCtn {
+    background: linear-gradient(177deg, #3c4048 0%, #25272c 37%);
+    padding: 24px;
+    color: white;
+}
+.healthcheck_trailersOkayCtn h1 {
+    font-weight: 600;
+}
+
 .healthcheck_table {
     font-size: 13px;
     border-spacing: 0;
 }
+.healthcheck_table th {
+    padding: 10px 16px 10px 16px;
+}
+
 .healthcheck_table td {
     padding: 10px 16px 10px 16px;
-    background: #4a4a4a;
-    border-bottom: 1px solid black;
+    background: #2a2d32;
+    border-top: 1px solid #1b1e22;
 }
 
 .event_past {
-    opacity: 0.6;
-    filter: saturate(0);
+    color: #555555;
+    background-color: #2b2f36;
+    border: 1px solid #2b2f36;
+    background-blend-mode: multiply;
+}
+.event_past .event_end_date,
+.event_past .optedout_text {
+    color: #555555;
+}
+.event_past .available_text {
+    background-color: #40454f;
 }
 
 .joined_text {

@@ -59,31 +59,31 @@
     },
     66294: (e, t, a) => {
       "use strict";
-      a.d(t, { p: () => u });
+      a.d(t, { p: () => c });
       var r = a(33940),
         n = a(89526),
         l = a(44026),
         o = a(17589),
         i = a(4306),
         s = a(32765),
-        c = a(94952);
-      function u(e) {
+        u = a(94952);
+      function c(e) {
         const { children: t, navTreeRef: a } = e,
-          u = (0, r._T)(e, ["children", "navTreeRef"]),
+          c = (0, r._T)(e, ["children", "navTreeRef"]),
           m = n.useRef(),
           d = (0, i.BE)(m, a),
-          _ = (0, s.id)(),
-          p = window.__virtual_keyboard_client;
+          p = (0, s.id)(),
+          _ = window.__virtual_keyboard_client;
         if (
           ((0, n.useEffect)(() => {
-            c.Wz.SetHookFactory(() => p);
-          }, [p]),
-          _)
+            u.Wz.SetHookFactory(() => _);
+          }, [_]),
+          p)
         ) {
           const e = window.__nav_tree_root;
           return n.createElement(
             l.Fe,
-            Object.assign({}, u, {
+            Object.assign({}, c, {
               navTreeRef: d,
               secondary: !0,
               parentEmbeddedNavTree: e,
@@ -94,16 +94,68 @@
         return n.createElement(n.Fragment, null, t);
       }
     },
+    26412: (e, t, a) => {
+      "use strict";
+      a.d(t, { HO: () => u, S6: () => m });
+      const r = 20,
+        n = /^.*youtube[^v]+v=(.{11}).*/,
+        l = /^.*youtu\.be\/(.{11}).*/,
+        o = /^.*youtube.*\/embed\/(.{11}).*/,
+        i = /^.*[?&]t=([^&]+)(?:&|$)/,
+        s = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
+      function u(e) {
+        return !!c(e);
+      }
+      function c(e) {
+        const t =
+          (null == e ? void 0 : e.length) < r
+            ? void 0
+            : n.exec(e) || l.exec(e) || o.exec(e);
+        return null == t ? void 0 : t[1];
+      }
+      function m(e) {
+        const t = c(e);
+        if (!t) return;
+        const a = (function (e) {
+            const t = i.exec(e);
+            return null == t ? void 0 : t[1];
+          })(e),
+          r = a
+            ? (function (e) {
+                const t = s.exec(e);
+                if (
+                  !(
+                    (null == t ? void 0 : t[1]) ||
+                    (null == t ? void 0 : t[2]) ||
+                    (null == t ? void 0 : t[3]) ||
+                    (null == t ? void 0 : t[4])
+                  )
+                )
+                  return;
+                if (null == t ? void 0 : t[4])
+                  return parseInt(null == t ? void 0 : t[4]);
+                let a = 0;
+                return (
+                  (null == t ? void 0 : t[1]) && (a += 3600 * parseInt(t[1])),
+                  (null == t ? void 0 : t[2]) && (a += 60 * parseInt(t[2])),
+                  (null == t ? void 0 : t[3]) && (a += parseInt(t[3])),
+                  a
+                );
+              })(a)
+            : void 0;
+        return { strVideoID: t, nStartSeconds: r };
+      }
+    },
     65858: (e, t, a) => {
       "use strict";
-      a.d(t, { b: () => c });
+      a.d(t, { b: () => u });
       var r = a(89526),
         n = a(95771),
         l = a(19304),
         o = a(565),
         i = a(44026),
-        s = a(51438);
-      function c(e) {
+        s = a(90699);
+      function u(e) {
         const { crumbs: t, className: a } = e;
         return t && 0 != t.length
           ? r.createElement(
@@ -151,8 +203,8 @@
         o = a(86177),
         i = a(19304),
         s = a(14826),
-        c = a(51857),
-        u = a.n(c);
+        u = a(51857),
+        c = a.n(u);
       const m = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
             [a, l] = r.useState(0);
@@ -174,15 +226,15 @@
               s = () => {
                 a + 1 < t.length && l(a + 1);
               },
-              c = () => {
+              u = () => {
                 o.current && o.current.naturalHeight < 91 && s();
               };
             return r.createElement("img", {
               ref: o,
-              onLoad: c,
+              onLoad: u,
               onError: s,
               src: n,
-              className: (0, i.Z)(u().YoutubePreviewImage, e.className),
+              className: (0, i.Z)(c().YoutubePreviewImage, e.className),
             });
           }
         },
@@ -197,7 +249,7 @@
             return r.createElement(
               o.e,
               Object.assign({}, e, {
-                classnames: (0, i.Z)(u().YoutubePlayer, e.classnames),
+                classnames: (0, i.Z)(c().YoutubePlayer, e.classnames),
               })
             );
           {
@@ -212,7 +264,7 @@
               {
                 className: (0, i.Z)(
                   "YoutubePreviewContainer",
-                  u().YoutubePreviewImage,
+                  c().YoutubePreviewImage,
                   e.imageClassnames
                 ),
                 onClick: t,
@@ -244,20 +296,20 @@
         n = a(89526),
         l = a(14288),
         o = a(46132),
-        i = (a(42770), a(44026)),
+        i = a(44026),
         s = a(66294),
-        c = a(51438),
-        u = a(26412),
-        m = (a(84770), a(68818)),
+        u = a(90699),
+        c = a(26412),
+        m = a(68818),
         d = a(47165),
-        _ = a(98009),
-        p = a(33940),
+        p = a(98009),
+        _ = a(33940),
         v = a(58218),
-        g = a(52868),
-        b = a.n(g),
-        E = (a(63403), a(32765)),
+        b = a(52868),
+        g = a.n(b),
+        E = a(32765),
         h = a(23217);
-      function w(e, t) {
+      function f(e, t) {
         const [a, r] = (0, n.useState)(
             (null == e ? void 0 : e.BUsesContentHubForItemSource())
               ? new Set()
@@ -270,7 +322,7 @@
               !a &&
               (function (e, t) {
                 var a;
-                return (0, p.mG)(this, void 0, void 0, function* () {
+                return (0, _.mG)(this, void 0, void 0, function* () {
                   const r =
                       E.De.STORE_BASE_URL +
                       "contenthub/ajaxfilterappsbycontenthub",
@@ -287,7 +339,7 @@
                   let l = null;
                   const o = new Set();
                   try {
-                    const e = yield b().get(r, { params: n });
+                    const e = yield g().get(r, { params: n });
                     if (
                       1 ==
                       (null === (a = null == e ? void 0 : e.data) ||
@@ -316,8 +368,8 @@
           a
         );
       }
-      var C = a(16468),
-        f = a(83145),
+      var w = a(16468),
+        C = a(83145),
         I = a(98210),
         S = a(54671),
         N = a(57858),
@@ -327,7 +379,7 @@
         F = a(16646),
         B = a.n(F),
         k = a(701),
-        D = (a(4585), a(19304)),
+        D = a(19304),
         P = a(51857);
       const G = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*"
@@ -336,7 +388,7 @@
         const t = G.exec(e);
         return (null == t ? void 0 : t.length) > 1 ? t[1] : null;
       }
-      function L(e) {
+      function x(e) {
         const {
             posterURL: t,
             videoid: a,
@@ -345,11 +397,11 @@
             bIsClipID: o,
             time: i,
             width: s,
-            height: c,
+            height: u,
           } = e,
-          [u, m] = n.useState(Boolean(t)),
+          [c, m] = n.useState(Boolean(t)),
           d = null != l && null != l && l;
-        if (u)
+        if (c)
           return n.createElement(
             "div",
             {
@@ -373,14 +425,14 @@
               n.createElement(k.GhU, null)
             )
           );
-        let _ = (0, E.Kc)().replace("https://", "");
-        const p = _.indexOf("/");
-        p >= 0 && (_ = _.substring(0, p));
+        let p = (0, E.Kc)().replace("https://", "");
+        const _ = p.indexOf("/");
+        _ >= 0 && (p = p.substring(0, _));
         let v = o
           ? `https://clips.twitch.tv/embed?clip=${a}`
           : `https://player.twitch.tv/?video=${a}`;
         return (
-          (v += `&parent=${_}&autoplay=${d}&muted=${Boolean(r)}`),
+          (v += `&parent=${p}&autoplay=${d}&muted=${Boolean(r)}`),
           i &&
             (v += `&time=${(function (e) {
               const t = Math.floor(e / 3600);
@@ -406,12 +458,12 @@
               allowFullScreen: !0,
               frameBorder: 0,
               width: s || 460,
-              height: c || 300,
+              height: u || 300,
             })
           )
         );
       }
-      var x = a(51441),
+      var L = a(51441),
         A = a(70750),
         M = a(44421),
         U = a(31245),
@@ -422,8 +474,8 @@
         Z = a(207),
         O = a(94608),
         X = a.n(O),
-        Q = (a(82079), a(65858)),
-        $ = a(11581);
+        $ = a(65858),
+        Q = a(11581);
       function z(e) {
         const { clanInfo: t } = e,
           { curator_link: a, curator_medium_avatar: r } = (0, E.kQ)(
@@ -431,7 +483,7 @@
             "application_config"
           );
         return n.createElement(
-          c.s,
+          u.s,
           {
             className: "page_content_ctn",
             "flow-children": "column",
@@ -441,7 +493,7 @@
             "div",
             { className: "page_content" },
             n.createElement(
-              c.s,
+              u.s,
               { className: "list_header_area", "flow-children": "row" },
               n.createElement(
                 "div",
@@ -458,8 +510,8 @@
               n.createElement(
                 "div",
                 { className: "curator_details" },
-                n.createElement(Q.b, {
-                  className: $.BreadContainer,
+                n.createElement($.b, {
+                  className: Q.BreadContainer,
                   crumbs: (0, E.kQ)("breadcrumbs", "application_config"),
                 }),
                 n.createElement(
@@ -473,7 +525,7 @@
         );
       }
       const q = function (e) {
-        const t = (0, f.L)();
+        const t = (0, C.L)();
         return n.createElement(
           s.p,
           { navID: "StoreCuratorPageRoot", NavigationManager: t },
@@ -484,8 +536,8 @@
         const t = parseInt(
             (0, E.kQ)("curator_account_id", "application_config")
           ),
-          a = (0, C.P4)(t),
-          r = (0, C.N)(null == a ? void 0 : a.clanSteamID, e.listid);
+          a = (0, w.P4)(t),
+          r = (0, w.N)(null == a ? void 0 : a.clanSteamID, e.listid);
         return (
           (0, T.ue)(),
           r
@@ -503,7 +555,7 @@
                       "div",
                       { className: X().CuratorListCtn },
                       n.createElement(te, { listDetails: r }),
-                      (0, C.FG)(r)
+                      (0, w.FG)(r)
                         ? n.createElement(J, { listDetails: r })
                         : n.createElement(ee, {
                             listDetails: r,
@@ -539,7 +591,7 @@
             () => (t.apps || []).map((e) => e.recommended_app.appid),
             [t]
           ),
-          s = w(o, i);
+          s = f(o, i);
         return (
           (0, n.useEffect)(() => {
             var e, a;
@@ -581,7 +633,7 @@
         const { listDetails: t, rgListItems: a } = e,
           [r, l] = (0, n.useState)(0),
           [o, s] = (0, n.useState)(null),
-          u = (0, v.T)("CuratorAppListDisplay");
+          c = (0, v.T)("CuratorAppListDisplay");
         if (
           (n.useEffect(() => {
             a &&
@@ -594,7 +646,7 @@
                   N.Z.Get()
                     .QueueMultipleAppRequests(e, A.NC)
                     .then(() => {
-                      u.token.reason ||
+                      c.token.reason ||
                         s(
                           a.filter(
                             (e) =>
@@ -605,10 +657,10 @@
                         );
                     })
                     .catch(() => {
-                      u.token.reason || s([]);
+                      c.token.reason || s([]);
                     });
                 }));
-          }, [a, u]),
+          }, [a, c]),
           null == o)
         )
           return n.createElement(H.V, {
@@ -621,7 +673,7 @@
           n.Fragment,
           null,
           n.createElement(
-            c.s,
+            u.s,
             {
               className: (0, D.Z)(X().CuratorList, m && X().CuratorListGrid),
               "flow-children": "grid",
@@ -655,17 +707,17 @@
       }
       function te(e) {
         const { listDetails: t } = e,
-          a = (0, C.yS)(t),
+          a = (0, w.yS)(t),
           r = (0, E.kQ)("showlisttitle", "application_config"),
           l = (0, E.kQ)("titleareaheight", "application_config"),
           s =
             t.list_jsondata.youtube_link &&
-            (0, u.S6)(t.list_jsondata.youtube_link),
-          c = t.list_jsondata.youtube_link && Y(t.list_jsondata.youtube_link),
+            (0, c.S6)(t.list_jsondata.youtube_link),
+          u = t.list_jsondata.youtube_link && Y(t.list_jsondata.youtube_link),
           m = (0, o.jM)(E.De.LANGUAGE),
           d = V.LZ.GetWithFallback(t.localized_flat_title, m),
-          _ = V.LZ.GetWithFallback(t.localized_flat_blurb, m),
-          p = V.LZ.GetWithFallback(t.localized_flat_link, m),
+          p = V.LZ.GetWithFallback(t.localized_flat_blurb, m),
+          _ = V.LZ.GetWithFallback(t.localized_flat_link, m),
           v =
             a &&
             a.GetImageURL(
@@ -682,7 +734,7 @@
               n.createElement("img", { className: X().SaleBanner, src: v })
             ),
           r && d && n.createElement("div", { className: X().Title }, d),
-          r && _ && n.createElement("div", { className: X().Blurb }, _),
+          r && p && n.createElement("div", { className: X().Blurb }, p),
           Boolean(l > 0) && n.createElement("div", { style: { height: l } }),
           s &&
             n.createElement(
@@ -700,24 +752,24 @@
                 imageClassnames: X().YouTubePreviewImage,
               })
             ),
-          Boolean(c) &&
+          Boolean(u) &&
             n.createElement(
               "div",
               { className: X().VideoReviewCtn },
-              n.createElement(L, {
-                videoid: c,
+              n.createElement(x, {
+                videoid: u,
                 posterURL: "",
                 imageClassnames: X().YouTubePreviewImage,
               })
             ),
-          p && n.createElement(le, { url: p })
+          _ && n.createElement(le, { url: _ })
         );
       }
       const ae = (0, r.Pi)((e) => {
         var t, a;
         const { item: r, listDetails: l, bAutoFocus: o } = e,
           i = parseInt((0, E.kQ)("curator_account_id", "application_config")),
-          s = (0, C.P4)(i),
+          s = (0, w.P4)(i),
           [m] = (0, y.vs)(
             null === (t = null == r ? void 0 : r.recommended_app) ||
               void 0 === t
@@ -737,33 +789,33 @@
           );
         if (!s || !m) return null;
         const {
-            appid: _,
-            link_url: p,
+            appid: p,
+            link_url: _,
             blurb: v,
-            time_recommended: g,
-            recommendation_state: b,
+            time_recommended: b,
+            recommendation_state: g,
           } = r.recommended_app,
           h = s.is_creator_home && !s.is_ogg,
-          w =
+          f =
             null === (a = l.list_jsondata.app_data) || void 0 === a
               ? void 0
-              : a[_],
-          f = p && (0, u.S6)(p),
-          S = p && Y(p),
-          N = v != C.mb && v,
-          T = I.ZP.Get().BHasDemoAppID(_),
-          F = null == w ? void 0 : w.img_url,
+              : a[p],
+          C = _ && (0, c.S6)(_),
+          S = _ && Y(_),
+          N = v != w.mb && v,
+          T = I.ZP.Get().BHasDemoAppID(p),
+          F = null == f ? void 0 : f.img_url,
           B = `curator_clanid=${s.clanAccountID}&curator_listid=${l.listid}`;
         return n.createElement(
-          c.s,
+          u.s,
           { className: X().CuratorReview, autoFocus: o },
           n.createElement(
             "div",
             { className: X().CapsuleCtn },
-            Boolean(f || S)
+            Boolean(C || S)
               ? n.createElement(re, {
-                  strVideoID: (null == f ? void 0 : f.strVideoID) || S,
-                  nStartSeconds: null == f ? void 0 : f.nStartSeconds,
+                  strVideoID: (null == C ? void 0 : C.strVideoID) || S,
+                  nStartSeconds: null == C ? void 0 : C.nStartSeconds,
                   info: d,
                   strImgOverrideUrl: F,
                   bShowDemoButton: T,
@@ -784,16 +836,16 @@
             n.createElement(
               "div",
               { className: X().RecommendationTypeAndDate },
-              n.createElement(ne, { type: b }),
+              n.createElement(ne, { type: g }),
               n.createElement(
                 "div",
                 { className: X().ReviewDate },
-                h || !Boolean(g)
+                h || !Boolean(b)
                   ? (0, V.Xx)(
                       "#EventModTile_ReleaseDate",
                       m.GetFormattedSteamReleaseDate()
                     )
-                  : (0, V.vX)(g)
+                  : (0, V.vX)(b)
               )
             ),
             Boolean(N) &&
@@ -802,7 +854,7 @@
                 { className: X().ReviewBlurb },
                 (0, V.Xx)("#SteamCurator_ReviewTextQuoted", N)
               ),
-            Boolean(p) && n.createElement(le, { url: p })
+            Boolean(_) && n.createElement(le, { url: _ })
           )
         );
       });
@@ -816,7 +868,7 @@
             strExtraParams: i,
             bTwitchVideo: s,
           } = e,
-          [c] = (0, y.jk)(r.id, (0, R.TM)(r.type), { include_assets: !0 });
+          [u] = (0, y.jk)(r.id, (0, R.TM)(r.type), { include_assets: !0 });
         return n.createElement(
           "div",
           { className: X().YouTubeCapsule },
@@ -824,9 +876,9 @@
             "div",
             { className: X().YouTubeCtn },
             s
-              ? n.createElement(L, {
+              ? n.createElement(x, {
                   videoid: t,
-                  posterURL: null == c ? void 0 : c.GetAssets().GetHeaderURL(),
+                  posterURL: null == u ? void 0 : u.GetAssets().GetHeaderURL(),
                   imageClassnames: X().YouTubePreviewImage,
                   autoplay: !0,
                 })
@@ -850,7 +902,7 @@
               "div",
               { className: X().GameImageCtn },
               n.createElement(
-                x.ll,
+                L.ll,
                 {
                   item: r,
                   bShowDemoButton: o,
@@ -864,7 +916,7 @@
                 n.createElement("img", {
                   className: X().GameImage,
                   src:
-                    null == c ? void 0 : c.GetAssets().GetLibraryCapsuleURL(),
+                    null == u ? void 0 : u.GetAssets().GetLibraryCapsuleURL(),
                 })
               )
             ),
@@ -897,7 +949,7 @@
         }
       }
       function le(e) {
-        let t = (0, _.B1)(e.url);
+        let t = (0, p.B1)(e.url);
         (0, l.Ah)(t) &&
           (t =
             (E.De.IN_CLIENT ? "steam://openurl_external/" : "") +
@@ -905,7 +957,7 @@
             "linkfilter/?url=" +
             t);
         const a = (0, Z.FM)(e.url),
-          r = (0, u.HO)(e.url);
+          r = (0, c.HO)(e.url);
         return n.createElement(
           "div",
           { className: X().FullReviewLink },

@@ -88,15 +88,15 @@
         l = n(32765),
         o = n(46132),
         s = n(47165),
-        c = (n(96927), n(14482)),
+        c = n(14482),
         d = n(13394),
         m = n(73846),
         u = n(51059),
         v = n(96798),
         E = n(49234),
         p = n(52316),
-        _ = (n(53236), n(17547)),
-        h = n(1533),
+        _ = n(17547),
+        h = n(91970),
         g = n(74314);
       let b = class extends i.Component {
         constructor() {
@@ -182,7 +182,7 @@
         c = n(88464),
         d = n(89526),
         m = n(565),
-        u = (n(42770), n(52502)),
+        u = n(81245),
         v = n(47165),
         E = n(82079),
         p = n(6172),
@@ -190,7 +190,7 @@
         h = n(17318),
         g = n.n(h),
         b = n(10340),
-        S = n(99307),
+        S = n(2647),
         D = n(57742),
         C = n(69338),
         y = n(23801),
@@ -205,7 +205,7 @@
         L = n(97567),
         N = n(46132),
         G = n(57605),
-        P = (n(11170), n(61555));
+        P = n(61555);
       function B(e) {
         const { eventModel: t, fnOnGotoPage: n } = e;
         return t.bOldAnnouncement
@@ -320,7 +320,7 @@
       var U = n(35809),
         W = n(59934),
         V = n(85651),
-        R = n(57858),
+        R = n(43707),
         j = n(17547),
         H = n(52932),
         F = n(20790),
@@ -1445,21 +1445,11 @@
       var _e = n(61557),
         he = n(4114),
         ge = n(74314),
-        be = n(36597),
-        Se = n(88337),
+        be = n(19094),
+        Se = n(58961),
         De = n(56368),
-        Ce = (n(24174), n(14288));
-      n(6681), n(63403);
+        Ce = n(14288);
       class ye {
-        constructor() {
-          if (
-            ((this.m_counts = null),
-            document.getElementById("application_config"))
-          ) {
-            let e = (0, k.kQ)("deckcompatcount", "application_config");
-            ye.ValidateListCompat(e) && (this.m_counts = e);
-          }
-        }
         GetCounts() {
           return this.m_counts;
         }
@@ -1511,6 +1501,15 @@
                 (window.g_DeckCompatCountStores = ye.s_globalSingletonStore)),
             ye.s_globalSingletonStore
           );
+        }
+        constructor() {
+          if (
+            ((this.m_counts = null),
+            document.getElementById("application_config"))
+          ) {
+            let e = (0, k.kQ)("deckcompatcount", "application_config");
+            ye.ValidateListCompat(e) && (this.m_counts = e);
+          }
         }
         static ValidateListCompat(e) {
           const t = e;
@@ -1607,7 +1606,7 @@
         Ge = n(32870),
         Pe = n(701),
         Be = n(32905),
-        Oe = n(1533),
+        Oe = n(91970),
         Xe = n(20993),
         Ue = n(81362),
         We = n(4170),
@@ -1881,7 +1880,7 @@
         }
         return d.createElement(d.Fragment, null);
       }
-      var ot = n(86531),
+      var ot = n(92307),
         st = (n(1721), n(88026), n(78443)),
         ct = n(71209),
         dt = n(95408);

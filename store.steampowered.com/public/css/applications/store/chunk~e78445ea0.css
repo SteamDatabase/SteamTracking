@@ -1,159 +1,3 @@
-.steamavatar_avatarHolder_1YGAH {
-  height: 36px;
-  width: 36px;
-  display: flex;
-  margin: 0px 0px;
-  transform: scale(0.86, 0.86) translateX(0px);
-  transition-property: transform;
-  transition-duration: 0.34s;
-  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
-  flex-direction: row;
-  flex-shrink: 0;
-}
-.steamavatar_avatarHolder_1YGAH.X-Small {
-  height: 28px;
-  width: 28px;
-}
-.steamavatar_avatarHolder_1YGAH.Medium {
-  height: 36px;
-  width: 36px;
-}
-.steamavatar_avatarHolder_1YGAH.MediumLarge {
-  height: 48px;
-  width: 48px;
-}
-.steamavatar_avatarHolder_1YGAH.Large {
-  height: 84px;
-  width: 84px;
-}
-.steamavatar_avatarHolder_1YGAH.X-Large {
-  height: 92px;
-  width: 92px;
-}
-.steamavatar_avatarHolder_1YGAH.FillArea {
-  height: 100%;
-  width: 100%;
-}
-.ChatSpeaker.ChatRoomSpeaker .steamavatar_avatarHolder_1YGAH {
-  transform: scale(1, 1) translateX(0px);
-}
-.steamavatar_avatarHolder_1YGAH .steamavatar_avatarStatus_1yIzy.right,
-.steamavatar_avatarHolder_1YGAH .steamavatar_avatarStatus_1yIzy.bottom {
-  display: block !important;
-}
-.ingame .steamavatar_avatarStatus_1yIzy {
-  background: linear-gradient(
-    to bottom,
-    rgb(140, 214, 29) 0%,
-    rgb(161, 244, 16) 30%,
-    rgb(161, 244, 16) 70%,
-    rgb(140, 214, 29) 100%
-  );
-}
-.ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
-.GamepadMode .ingame .steamavatar_avatarStatus_1yIzy {
-  background: #59bf40;
-}
-.offline .steamavatar_avatarStatus_1yIzy.GamepadMode,
-.GamepadMode .offline .steamavatar_avatarStatus_1yIzy {
-  background: #67707b;
-}
-.ingame .X-Large .steamavatar_avatarStatus_1yIzy {
-  background: #bff02b;
-}
-.watchingbroadcast .steamavatar_avatarStatus_1yIzy {
-  background: linear-gradient(
-    to bottom,
-    rgb(156, 143, 212) 0%,
-    rgb(156, 143, 212) 30%,
-    rgb(156, 143, 212) 70%,
-    rgb(156, 143, 212) 100%
-  );
-}
-.online .steamavatar_avatarStatus_1yIzy {
-  background: linear-gradient(
-    to bottom,
-    rgb(109, 207, 246) 0%,
-    rgb(109, 207, 246) 30%,
-    rgb(109, 207, 246) 70%,
-    rgb(109, 207, 246) 100%
-  );
-}
-.online .steamavatar_avatarStatus_1yIzy.GamepadMode,
-.GamepadMode .online .steamavatar_avatarStatus_1yIzy {
-  background: #4cb4ff;
-}
-.awayOrSnooze .steamavatar_avatarStatus_1yIzy {
-  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-y;
-  -webkit-mask-size: 5px 5px;
-  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-y;
-  mask-size: 5px 5px;
-  opacity: 0.75;
-}
-.awayOrSnooze .steamavatar_avatarStatus_1yIzy.GamepadMode,
-.GamepadMode .awayOrSnooze .steamavatar_avatarStatus_1yIzy {
-  opacity: 1;
-}
-.steamavatar_avatarStatus_1yIzy.right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 2px;
-}
-.steamavatar_avatarStatus_1yIzy.right.GamepadMode,
-.GamepadMode .steamavatar_avatarStatus_1yIzy.right {
-  width: 3px;
-  right: -3px;
-}
-.steamavatar_avatarStatus_1yIzy.bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-}
-.steamavatar_avatarStatus_1yIzy.bottom.GamepadMode,
-.GamepadMode .steamavatar_avatarStatus_1yIzy.bottom {
-  height: 3px;
-  bottom: -3px;
-}
-.awayOrSnooze .steamavatar_avatarStatus_1yIzy.bottom {
-  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-x;
-  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-x;
-}
-.awayOrSnooze .X-Large .steamavatar_avatarStatus_1yIzy.bottom {
-  mask-size: 6px 6px;
-  opacity: 1;
-}
-.steamavatar_avatar_1p_Qr {
-  border: 1px solid #383c43;
-  height: calc(100% - 2px);
-  width: calc(100% - 2px);
-  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter 0.24s ease-in-out;
-}
-.steamavatar_avatar_1p_Qr.GamepadMode,
-.GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid rgba(0, 0, 0, 0);
-  height: 100%;
-  width: 100%;
-}
-.steamavatar_avatarFrame_3atbN {
-  position: absolute;
-  top: 0;
-}
-.steamavatar_avatarFrame_3atbN .steamavatar_avatarFrameImg_338kJ {
-  width: 100%;
-  height: 100%;
-}
-.steamavatar_avatarHolder_1YGAH .steamavatar_avatarFrame_3atbN {
-  transform: scale(1.2);
-}
 .friendsnooze_SnoozeContainer_3EzTy {
   position: relative;
   overflow: hidden;
@@ -1227,4 +1071,798 @@
 .personanameandstatus_PendingPersona_ifetn svg {
   height: 12px;
   width: 12px;
+}
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  backdrop-filter: blur(6px);
+  color: #dcdedf;
+  scrollbar-width: none;
+}
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6
+  .discoveryqueuewizard_TextLink_1hQVC {
+  color: #1a9fff;
+  cursor: pointer;
+  transition: color 0.1s ease;
+}
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6
+  .discoveryqueuewizard_TextLink_1hQVC:hover {
+  color: #fff;
+}
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 ::-webkit-scrollbar {
+  display: none;
+}
+.BasicUI .discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 {
+  height: calc(100vh - 40px);
+}
+.discoveryqueuewizard_DiscoveryQueueCarousel_2swWH {
+  height: 100%;
+  width: 100%;
+}
+.discoveryqueuewizard_DiscoveryQueueApp_2o_YH {
+  background: var(--gpGradient-StoreBackground);
+  display: flex;
+  scroll-snap-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  outline: none;
+  transition: transform ease;
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 960px) {
+  .discoveryqueuewizard_DiscoveryQueueApp_2o_YH {
+    transform: scale(0.92);
+  }
+}
+.discoveryqueuewizard_DiscoveryQueueApp_2o_YH.discoveryqueuewizard_Focused_2Xpm2 {
+  transition-duration: 0.6s;
+  transform: scale(1);
+}
+.discoveryqueuewizard_DiscoveryQueueWrapper_1s3BJ {
+  position: relative;
+  margin: auto 0px;
+  animation-name: discoveryqueuewizard_revealDiscoveryQueueWrapper_308QK;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  animation-delay: 0s;
+}
+.BasicUI .discoveryqueuewizard_DiscoveryQueueWrapper_1s3BJ {
+  max-width: initial;
+}
+@keyframes discoveryqueuewizard_revealDiscoveryQueueWrapper_308QK {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5 {
+  position: relative;
+  width: 70%;
+  min-width: 70%;
+  height: 100%;
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5
+  .discoveryqueuewizard_WishlistBadge_2vb6r {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 2px;
+  z-index: 1;
+  background-color: #99d4ff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2px 6px;
+  opacity: 0;
+  transform: translateX(calc(-100% - 8px));
+  transition: opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
+    transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5
+  .discoveryqueuewizard_WishlistBadge_2vb6r.discoveryqueuewizard_Active_2EDE0 {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 0.1s ease, transform 0.2s ease;
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5
+  .discoveryqueuewizard_DeckVerifiedLogo_2mYU2 {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
+.discoveryqueuewizard_AppDetailsCtn_2E1O4 {
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  cursor: default;
+}
+.discoveryqueuewizard_AppDetailsCtn_2E1O4
+  .discoveryqueuewizard_AppDetailsCtnTop_3LnWP {
+  padding: calc(8px + 0.6vw);
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  row-gap: 8px;
+  overflow: scroll;
+  -webkit-mask-image: linear-gradient(black 94%, transparent);
+  scrollbar-width: none;
+}
+.BasicUI
+  .discoveryqueuewizard_AppDetailsCtn_2E1O4
+  .discoveryqueuewizard_AppDetailsCtnTop_3LnWP {
+  padding: 12px;
+}
+.discoveryqueuewizard_AppDetailsHeader_1Qn-x {
+  color: #fff;
+  display: flex;
+}
+.discoveryqueuewizard_AppDetailsHeader_1Qn-x
+  .discoveryqueuewizard_AppLibraryHero_1TDRh {
+  width: calc(20px + 3vw);
+  height: calc(30px + 4.5vw);
+  margin-right: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppDetailsHeader_1Qn-x
+    .discoveryqueuewizard_AppLibraryHero_1TDRh {
+    display: none;
+  }
+}
+.discoveryqueuewizard_AppDetailsHeader_1Qn-x
+  .discoveryqueuewizard_RightColumn_35mWv {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.discoveryqueuewizard_AppDetailsHeader_1Qn-x
+  .discoveryqueuewizard_RightColumn_35mWv
+  .discoveryqueuewizard_AppName_3KC4W {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppDetailsHeader_1Qn-x
+    .discoveryqueuewizard_RightColumn_35mWv {
+    font-size: 15px;
+  }
+}
+.discoveryqueuewizard_AppTagsCtn_1t4JV {
+  display: flex;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  margin-right: -16px;
+  overflow: hidden;
+  min-height: 21px;
+}
+.BasicUI .discoveryqueuewizard_AppTagsCtn_1t4JV {
+  margin-right: -12px;
+}
+.discoveryqueuewizard_AppTagsCtn_1t4JV .discoveryqueuewizard_TagEntry_UNDKT {
+  background: rgba(14, 20, 27, 0.3);
+  border-radius: 2px;
+  font-size: 12px;
+  margin-right: 4px;
+  padding: 2px 6px;
+  color: var(--gpStoreLighterGrey);
+}
+.discoveryqueuewizard_AppReviews_2lVXS .ReviewScore {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  padding: unset;
+}
+.BasicUI .discoveryqueuewizard_AppReviews_2lVXS .ReviewScore {
+  font-size: 14px;
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppReviews_2lVXS .ReviewScore {
+    font-size: 12px;
+  }
+}
+.discoveryqueuewizard_RelevantCtn_FGuCn {
+  padding: 0;
+  border-top: 1px solid rgba(172, 178, 201, 0.1411764706);
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+  overflow: hidden;
+}
+.discoveryqueuewizard_RelevantColumn_1HcOX {
+  flex-grow: 1;
+}
+.discoveryqueuewizard_RelevantItem_3I77j {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  margin-bottom: 2px;
+  margin-top: 0px;
+  display: flex;
+}
+.discoveryqueuewizard_RelevantCheck_qKF9P {
+  align-self: flex-start;
+}
+.discoveryqueuewizard_RelevantCheck_qKF9P svg {
+  width: 12px;
+  fill: var(--gpStoreLighterGrey);
+  vertical-align: text-top;
+  margin-right: 5px;
+}
+.discoveryqueuewizard_IgnoreLink_2OinP {
+  font-size: 12px;
+  margin-bottom: -8px;
+}
+.BasicUI .discoveryqueuewizard_IgnoreLink_2OinP {
+  display: none;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_2bIsf {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  padding: calc(8px + 0.6vw);
+  padding-top: 0px;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_2bIsf
+  .discoveryqueuewizard_AppActionJustButtonsCtn_10l0M {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_2bIsf
+  .discoveryqueuewizard_AppActionJustButtonsCtn_10l0M
+  .discoveryqueuewizard_QueueButton_19cHb {
+  flex-grow: 1;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_2bIsf
+  .discoveryqueuewizard_ButtonsRowWrap_1XcPE {
+  display: flex;
+  gap: 3%;
+}
+.discoveryqueuewizard_MainCapBlur_2TOx2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+.discoveryqueuewizard_MainCapBlur_2TOx2::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(64px);
+}
+.discoveryqueuewizard_DiscoveryQueuePlaceholder_3ZUUI {
+  width: 100%;
+  height: 100%;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  z-index: 0;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 16px;
+  background-color: rgba(33, 52, 71, 0.6);
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity 0.2s ease 0.1s;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o.discoveryqueuewizard_Active_2EDE0 {
+  opacity: 1;
+  backdrop-filter: blur(40px);
+  transition: opacity 0.2s ease;
+  z-index: 100;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o .discoveryqueuewizard_IgnoredInfo_130E6 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+  position: absolute;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.1s ease-in, transform 0.15s ease-in;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o
+  .discoveryqueuewizard_IgnoredInfo_130E6
+  .discoveryqueuewizard_IgnoredTitle_1QXC5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o
+  .discoveryqueuewizard_IgnoredInfo_130E6
+  .discoveryqueuewizard_IgnoredDescription_3RVP5 {
+  font-size: 14px;
+  opacity: 0.8;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(172, 178, 201, 0.1411764706);
+  width: 50%;
+  text-align: center;
+}
+.BasicUI
+  .discoveryqueuewizard_IgnoredCtn_2e3_o
+  .discoveryqueuewizard_IgnoredInfo_130E6
+  .discoveryqueuewizard_UndoIgnoreButton_wC564 {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: unset;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o
+  .discoveryqueuewizard_IgnoredInfo_130E6.discoveryqueuewizard_Active_2EDE0 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+.discoveryqueuewizard_AppDesc_3bAqJ {
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.discoveryqueuewizard_YGlyph_1SpsG {
+  vertical-align: text-top;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o {
+  display: flex;
+  flex-direction: column;
+  color: var(--gpStoreLighterGrey);
+  justify-content: center;
+  align-items: center;
+  row-gap: 12px;
+  user-select: none;
+  flex: auto;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryTitle_W4ekX {
+  font-size: calc(12px + 0.8vw);
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_YourStats_8PO3T {
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  max-width: 720px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab:nth-child(2) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  padding-bottom: 0px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab
+  .discoveryqueuewizard_GridTitle_1vnt8 {
+  font-weight: 700;
+  font-size: 12px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab
+  .discoveryqueuewizard_GridNumber_-Q4Ax {
+  font-size: calc(22px + 0.4vw);
+  color: #fff;
+  font-weight: 800;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab
+  .discoveryqueuewizard_GridSubTitle_1FQzN {
+  font-size: 14px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryActionButtonsCtn_1hRNc {
+  display: flex;
+  column-gap: 8px;
+  margin-top: 1vw;
+}
+.discoveryqueuewizard_TopBarCtn_24gmm {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  padding-left: 16px;
+  align-items: center;
+  align-self: normal;
+  animation-name: discoveryqueuewizard_revealTopBarCtn_2Gt6G;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+.discoveryqueuewizard_TopBarCtn_24gmm.discoveryqueuewizard_TopMargin_2xo1m {
+  margin-top: 40px;
+}
+.discoveryqueuewizard_BotomBarCtn_YW9Pr {
+  display: flex;
+  padding: 8px;
+  padding-left: 16px;
+  align-items: center;
+  align-self: normal;
+  font-size: 12px;
+  opacity: 0.7;
+}
+.discoveryqueuewizard_BotomBarCtn_YW9Pr
+  .discoveryqueuewizard_LearnMoreLink_3bCDZ {
+  color: #fff;
+  text-decoration: underline;
+}
+@keyframes discoveryqueuewizard_revealTopBarCtn_2Gt6G {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.discoveryqueuewizard_LearnMoreLink_3bCDZ {
+  display: inline-block;
+  color: #1a9fff;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: color 0.1s ease, background-color 0.1s ease;
+}
+.discoveryqueuewizard_LearnMoreLink_3bCDZ:hover {
+  color: #fff;
+  background-color: rgba(172, 178, 201, 0.1411764706);
+  border-radius: 2px;
+}
+.discoveryqueuewizard_LearnMoreLink_3bCDZ:visited {
+  color: #1a9fff;
+}
+.discoveryqueuewizard_LearnMoreLink_3bCDZ.gpfocus {
+  color: #fff;
+  background-color: rgba(172, 178, 201, 0.1411764706);
+}
+.discoveryqueuewizard_ControlsCtn_3UbRl {
+  display: flex;
+  column-gap: 8px;
+}
+.discoveryqueuewizard_QueueButton_19cHb {
+  min-width: 10px;
+  color: #dcdedf;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 2px;
+  box-shadow: none;
+  box-sizing: border-box;
+  position: relative;
+  background-color: rgba(172, 178, 201, 0.1411764706);
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 8px 16px;
+  transition: background-color 0.1s ease, border-radius 0.1s ease;
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Disabled_1yh4o {
+  opacity: 0.4;
+  cursor: default;
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE {
+  background-color: #1a9fff;
+  color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
+  background-color: #0bf;
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Launch_uZjq4 {
+  background-color: #59bf40;
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Wide_SD-xU {
+  padding: 12px 40px;
+}
+.discoveryqueuewizard_QueueButton_19cHb svg {
+  width: 16px;
+  transition: fill 0.1s ease;
+}
+.discoveryqueuewizard_QueueButton_19cHb:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
+  background-color: rgba(172, 178, 201, 0.2784313725);
+}
+.discoveryqueuewizard_QueueButton_19cHb.gpfocus {
+  background-color: #fff;
+  border-radius: 0px;
+}
+.discoveryqueuewizard_QueueButton_19cHb.gpfocus svg {
+  fill: #0e141b;
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_QueueButton_19cHb {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%) scale(0.92);
+  border-radius: 50%;
+  display: none;
+  background-color: rgba(103, 112, 123, 0.6);
+  backdrop-filter: blur(24px);
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: background-color ease, box-shadow ease, transform ease,
+    opacity ease;
+  transition-duration: 0.3s;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo svg {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  transition: color ease;
+  transition-duration: 0.3s;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo:hover {
+  background-color: #fff;
+  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%) scale(1);
+  transition-duration: 0.06s;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo:hover svg {
+  transition-duration: 0.06s;
+  color: #0e141b;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_Enable_1hqwM {
+  display: flex;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo:active {
+  opacity: 0.9;
+  transform: translateY(-50%) scale(0.96);
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_RightArrow_1ZHCC {
+  right: 2vw;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_RightArrow_1ZHCC
+  svg {
+  margin: 20px 18px 20px 22px;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_LeftArrow_3Bctd {
+  left: 2vw;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_LeftArrow_3Bctd
+  svg {
+  margin: 20px 22px 20px 18px;
+}
+.BasicUI .discoveryqueuewizard_QueueNavArrow_1kgdo {
+  display: none;
+}
+.discoveryqueuewizard_ReleventSimilarAppsCtn_3wqiW {
+  display: flex;
+  margin: 4px 0px 0px 0px;
+  column-gap: 4px;
+}
+.discoveryqueuewizard_RecommendingCuratorsCtn_II031 img {
+  width: 28px;
+}
+.discoveryqueuewizard_WhyRelevant_WBWfZ {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.discoveryqueuewizard_SimilarAppCtn_2oeoS {
+  display: flex;
+}
+.discoveryqueuewizard_SimilarAppImg_2eNyY {
+  width: 80px;
+  box-shadow: var(--gpShadow-Small);
+  margin-right: 5px;
+  display: block;
+}
+.discoveryqueuewizard_SimilarAppText_3MS2G {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+}
+.discoveryqueuewizard_FriendAvatarsCtn_kOfo- {
+  display: flex;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  margin-right: -16px;
+  margin-top: 2px;
+}
+.discoveryqueuewizard_RelevantTextBold_2FiP4 {
+  font-weight: bold;
+}
+.discoveryqueuewizard_AppDescription_Kzj5I {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  padding: 0;
+  line-height: 18px;
+}
+.discoveryqueuewizard_TradingCardCtn_36Qbj {
+  display: flex;
+  background: rgba(131, 190, 236, 0.1215686275);
+  padding: 16px 1vw;
+  align-items: center;
+  color: var(--gpStoreLighterGrey);
+  width: 28%;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.discoveryqueuewizard_TradingCardCtn_36Qbj
+  .discoveryqueuewizard_TradingCardImage_3wa0d {
+  transform: rotate(-10deg);
+  filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.1333333333));
+}
+@media screen and (max-width: 1400px) {
+  .discoveryqueuewizard_TradingCardCtn_36Qbj
+    .discoveryqueuewizard_TradingCardImage_3wa0d {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .discoveryqueuewizard_TradingCardCtn_36Qbj {
+    font-size: 14px;
+  }
+}
+.discoveryqueuewizard_Bold_1SxI5 {
+  font-weight: 700;
+}
+.discoveryqueuewizard_FriendBlockCtn_2a8Fg {
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  min-width: 200px;
+  border-radius: 3px;
+  padding: 3px 20px 3px 3px;
+}
+.discoveryqueuewizard_FriendBlockCtn_2a8Fg
+  .discoveryqueuewizard_PersonaStatus_3HMhz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 4px;
+}
+.ContentHubMainCarouselCapsule .discoveryqueuewizard_WhyRelevant_WBWfZ {
+  font-size: 15px;
+}
+.discoveryqueuewizard_ProgressCtn_1IvtA {
+  text-align: center;
+  margin-top: 16px;
+}
+.discoveryqueuewizard_ProgressCtn_1IvtA
+  .discoveryqueuewizard_ProgressDot_2f92W {
+  margin-left: 4px;
+  margin-right: 4px;
+  opacity: 30%;
+}
+.discoveryqueuewizard_ProgressCtn_1IvtA
+  .discoveryqueuewizard_ProgressDotActive_2oIov {
+  opacity: 80%;
+}
+.discoveryqueuewizard_ProgressCtn_1IvtA
+  .discoveryqueuewizard_ProgressDotHidden_n2UAY {
+  opacity: 0%;
+}
+.discoveryqueuewizard_DiscoveryQueueName_1hDU6 {
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+  font-weight: bold;
+  opacity: 80%;
+}
+.appcarouseltrailer_AppCarouselTrailerCtn_3hJp_ {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appcarouseltrailer_AppCarouselTrailerCtn_3hJp_:hover
+  .appcarouseltrailer_AutoplayCheckbox_36Ep1 {
+  display: block;
+}
+.appcarouseltrailer_AppVideo_2ykD7 {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.6s ease 1s;
+  opacity: 0;
+  position: absolute;
+}
+.appcarouseltrailer_AppMainCap_2SJkc {
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.6s ease 1s;
+  opacity: 1;
+  position: absolute;
+}
+.appcarouseltrailer_PlayButton_2b7SF {
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+}
+.appcarouseltrailer_PlayButton_2b7SF svg {
+  width: 130px;
+  height: auto;
+}
+.appcarouseltrailer_AutoplayCheckbox_36Ep1 {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  font-size: 13px;
+  color: #fff;
+  display: none;
 }

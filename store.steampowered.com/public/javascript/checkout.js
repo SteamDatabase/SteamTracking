@@ -975,7 +975,7 @@ function OnInitializeTransactionSuccess( result )
 
 			return;
 		}
-		else if ( ( result.paymentmethod == 4 && method.value != 'storedpaypal' ) || result.paymentmethod == 3					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11 || result.paymentmethod == 78					|| result.paymentmethod == 12					|| result.paymentmethod == 14					|| result.paymentmethod == 33					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29					|| result.paymentmethod == 45 || result.paymentmethod == 46					|| result.paymentmethod == 47 || result.paymentmethod == 121					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 127					|| result.paymentmethod == 135					|| result.paymentmethod == 136					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 137					|| result.paymentmethod == 138					|| result.paymentmethod == 139					|| result.paymentmethod == 140					|| result.paymentmethod == 141					|| result.paymentmethod == 142					|| result.paymentmethod == 143					|| result.paymentmethod == 144					|| result.paymentmethod == 145					|| result.paymentmethod == 146					|| result.paymentmethod == 147					|| result.paymentmethod == 148					|| result.paymentmethod == 149					|| result.paymentmethod == 150					|| result.paymentmethod == 151					|| result.paymentmethod == 152					|| result.paymentmethod == 153					|| result.paymentmethod == 122				)
+		else if ( ( result.paymentmethod == 4 && method.value != 'storedpaypal' ) || result.paymentmethod == 3					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11 || result.paymentmethod == 78					|| result.paymentmethod == 12					|| result.paymentmethod == 14					|| result.paymentmethod == 33					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29					|| result.paymentmethod == 45 || result.paymentmethod == 46					|| result.paymentmethod == 47 || result.paymentmethod == 121					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 127					|| result.paymentmethod == 135					|| result.paymentmethod == 136					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 137					|| result.paymentmethod == 138					|| result.paymentmethod == 139					|| result.paymentmethod == 140					|| result.paymentmethod == 141					|| result.paymentmethod == 142					|| result.paymentmethod == 143					|| result.paymentmethod == 144					|| result.paymentmethod == 145					|| result.paymentmethod == 146					|| result.paymentmethod == 147					|| result.paymentmethod == 148					|| result.paymentmethod == 149					|| result.paymentmethod == 150					|| result.paymentmethod == 151					|| result.paymentmethod == 152					|| result.paymentmethod == 153					|| result.paymentmethod == 154					|| result.paymentmethod == 155					|| result.paymentmethod == 156					|| result.paymentmethod == 157					|| result.paymentmethod == 158					|| result.paymentmethod == 159					|| result.paymentmethod == 160					|| result.paymentmethod == 122				)
 		{
 			
 						$('is_external_finalize_transaction').value = 1;
@@ -2706,6 +2706,76 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the AliPayHK website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the AliPayHK window before the process is complete.';
 					}
 				}
+				else if ( method.value == 'naverpay' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'NaverPay transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for NaverPay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'linkaja' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Linkaja transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Linkaja customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'shopeepay' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'ShopeePay transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for ShopeePay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'grabpay' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'GrabPay transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for GrabPay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'paynow' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PayNow transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PayNow customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'onlinebankingthailand' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Online Banking transactions are authorized through the Smart2Pay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Online Banking customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'cashmethodsthailand' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = '#cashmethodsthailand_authorization_explanation';
+					$('purchase_button_bottom_text').innerHTML = '#cashmethodsthailand_authorization_btn';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = '#cashmethodsthailand_payment_tips_header';
+						$('col_right_review_payment_tips_info_text').innerHTML = '#cashmethodsthailand_payment_tips_text';
+					}
+				}
 			}
 			else
 			{
@@ -3484,7 +3554,9 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'gcash' || method.value == 'kakaopay' || method.value == 'dana' || method.value == 'truemoney'
 			|| method.value == 'touchngo' || method.value == 'linepay' || method.value == 'merpay' || method.value == 'paypay'
 			|| method.value == 'sberbank' || method.value == 'yoomoney' || method.value == 'tinkoff' || method.value == 'cashincis'
-			|| method.value == 'aupay' || method.value == 'alipayhk'
+			|| method.value == 'aupay' || method.value == 'alipayhk' || method.value == 'naverpay' || method.value == 'linkaja'
+			|| method.value == 'shopeepay' || method.value == 'grabpay' || method.value == 'paynow' || method.value == 'onlinebankingthailand'
+			|| method.value == 'cashoptionsthailand'
 		)
 		{
 			bShowCountryVerification = true;
@@ -4761,6 +4833,34 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			{
 				$('payment_method_review_text').innerHTML = 'AliPayHK';
 			}
+			else if ( method.value == 'naverpay' && providerPaymentMethod == 154 )
+			{
+				$('payment_method_review_text').innerHTML = 'NaverPay';
+			}
+			else if ( method.value == 'linkaja' && providerPaymentMethod == 155 )
+			{
+				$('payment_method_review_text').innerHTML = 'Linkaja';
+			}
+			else if ( method.value == 'shopeepay' && providerPaymentMethod == 156 )
+			{
+				$('payment_method_review_text').innerHTML = 'ShopeePay';
+			}
+			else if ( method.value == 'grabpay' && providerPaymentMethod == 157 )
+			{
+				$('payment_method_review_text').innerHTML = 'GrabPay';
+			}
+			else if ( method.value == 'paynow' && providerPaymentMethod == 158 )
+			{
+				$('payment_method_review_text').innerHTML = 'PayNow';
+			}
+			else if ( method.value == 'onlinebankingthailand' && providerPaymentMethod == 159 )
+			{
+				$('payment_method_review_text').innerHTML = 'Online Banking';
+			}
+			else if ( method.value == 'cashoptionsthailand' && providerPaymentMethod == 160 )
+			{
+				$('payment_method_review_text').innerHTML = 'Cash Options';
+			}
 		}
 
 		$J('#review_address_body').text( $('first_name').value+' '+$('last_name').value+' ' );
@@ -5385,12 +5485,12 @@ function NukeCartCookie()
 {
 	try
 	{
-		var date = new Date();
-		date.setTime(date.getTime()+(-10*24*60*60*1000));
-		var expires = "expires="+date.toGMTString();
-		document.cookie = 'shoppingCartGID'+"=-1; "+expires+"; path=/";
-		document.cookie = 'workshopShoppingCartGID'+"=-1; "+expires+"; path=/";
-	}
+					var date = new Date();
+			date.setTime(date.getTime()+(-10*24*60*60*1000));
+			var expires = "expires="+date.toGMTString();
+			document.cookie = 'shoppingCartGID'+"=-1; "+expires+"; path=/";
+			document.cookie = 'workshopShoppingCartGID'+"=-1; "+expires+"; path=/";
+			}
 	catch ( e )
 	{
 		ReportCheckoutJSError( 'Failed nuking cart cookie', e );

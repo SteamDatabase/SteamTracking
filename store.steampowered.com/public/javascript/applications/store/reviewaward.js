@@ -57,21 +57,20 @@
           default: () => P,
         });
       var n = a(33940),
-        r = (a(3641), a(52868)),
+        r = a(52868),
         o = a.n(r),
         s = a(88464),
         i = a(89526),
-        l = (a(46132), a(54856)),
-        c = a(44026),
-        d = a(51438),
-        m = a(34329),
-        u = a(36597),
-        _ = a(16899),
-        g = a(38072),
-        E = a.n(g),
-        h = a(50265),
-        w = a(32765);
-      a(42770);
+        l = a(44026),
+        c = a(90699),
+        d = a(34329),
+        m = a(19094),
+        u = a(38072),
+        _ = a.n(u),
+        g = a(50265),
+        E = a(54856),
+        h = a(32765),
+        w = a(16899);
       class p {
         constructor(e) {
           (this.m_lPointsAvailable = null),
@@ -82,7 +81,7 @@
             (this.m_transport = e);
         }
         BIsLoggedIn() {
-          return w.L7.logged_in;
+          return h.L7.logged_in;
         }
         SetTarget(e, t) {
           (this.m_targetID = e),
@@ -93,14 +92,14 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn())
               return { eResult: 21, strMessage: "Not logged on" };
-            let t = l.gA.Init(_.HW);
+            let t = E.gA.Init(w.HW);
             t.Body().set_target_type(this.m_eTargetType),
               t.Body().set_targetid(this.m_targetID),
               t.Body().set_reactionid(e),
               console.log(" ProtoBuf sending..."),
               console.log(t),
               console.log("Target ID is..." + t.Body().targetid());
-            let a = yield _.pQ.AddReaction(this.m_transport, t);
+            let a = yield w.pQ.AddReaction(this.m_transport, t);
             return (
               1 != a.GetEResult()
                 ? console.error(
@@ -122,11 +121,11 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn()) return Promise.resolve(null);
             this.m_bPointsBalanceLoadedOrInFlight = !0;
-            const e = l.gA.Init(_.aO);
-            e.SetBodyFields({ steamid: w.L7.steamid });
-            let t = yield _.pQ.GetSummary(this.m_transport, e);
+            const e = E.gA.Init(w.aO);
+            e.SetBodyFields({ steamid: h.L7.steamid });
+            let t = yield w.pQ.GetSummary(this.m_transport, e);
             1 == t.GetEResult()
-              ? (this.m_lPointsAvailable = E().fromString(
+              ? (this.m_lPointsAvailable = _().fromString(
                   t.Body().summary().points()
                 ))
               : console.error(
@@ -144,8 +143,8 @@
         LoadAwardsConfiguration() {
           return (0, n.mG)(this, void 0, void 0, function* () {
             this.m_bReactionConfigurationLoadedOrInFlight = !0;
-            const e = l.gA.Init(_.f_);
-            let t = yield _.pQ.GetReactionConfig(this.m_transport, e);
+            const e = E.gA.Init(w.f_);
+            let t = yield w.pQ.GetReactionConfig(this.m_transport, e);
             if (1 == t.GetEResult()) {
               let e = t.Body().toObject().reactions;
               for (const t of e)
@@ -159,10 +158,10 @@
         LoadExistingReactions() {
           return (0, n.mG)(this, void 0, void 0, function* () {
             this.m_mapExistingReactions.clear();
-            const e = l.gA.Init(_.Yl);
+            const e = E.gA.Init(w.Yl);
             e.Body().set_target_type(this.m_eTargetType),
               e.Body().set_targetid(this.m_targetID);
-            let t = yield _.pQ.GetReactions(this.m_transport, e);
+            let t = yield w.pQ.GetReactions(this.m_transport, e);
             1 == t.GetEResult()
               ? t
                   .Body()
@@ -174,16 +173,16 @@
           });
         }
       }
-      (0, n.gn)([h.LO.ref], p.prototype, "m_lPointsAvailable", void 0),
+      (0, n.gn)([g.LO.ref], p.prototype, "m_lPointsAvailable", void 0),
         (0, n.gn)(
-          [h.LO.deep],
+          [g.LO.deep],
           p.prototype,
           "m_mapReactionConfiguration",
           void 0
         ),
-        (0, n.gn)([h.LO.deep], p.prototype, "m_mapExistingReactions", void 0);
+        (0, n.gn)([g.LO.deep], p.prototype, "m_mapExistingReactions", void 0);
       var y = a(57605),
-        A = a(99307),
+        A = a(2647),
         v = a(701),
         C = a(69338),
         R = a(19304),
@@ -239,7 +238,7 @@
             (a =
               !this.props.bDisableAnimation &&
               (this.state.bHovered || this.props.bForceAnimated)),
-            `${w.De.STORE_CDN_URL}public/images/loyalty/reactions/${
+            `${h.De.STORE_CDN_URL}public/images/loyalty/reactions/${
               a ? "animated" : "still"
             }/${t}.png`);
           var t, a;
@@ -274,12 +273,12 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             if (G.s_LoyaltyAwardModalStore) return;
             if (e) return void (G.s_LoyaltyAwardModalStore = new p(e));
-            const t = (0, w.kQ)("loyaltystore", "application_config"),
+            const t = (0, h.kQ)("loyaltystore", "application_config"),
               a = yield (function () {
                 return (0, n.mG)(this, void 0, void 0, function* () {
                   try {
                     const e = yield o().get(
-                      `${(0, w.Kc)()}pointssummary/ajaxgetasyncconfig`,
+                      `${(0, h.Kc)()}pointssummary/ajaxgetasyncconfig`,
                       { withCredentials: !0 }
                     );
                     return 1 === e.data.success
@@ -299,7 +298,7 @@
                 });
               })(),
               r = Object.assign(Object.assign({}, t), a),
-              s = new u.J(w.De.WEBAPI_BASE_URL, r.webapi_token);
+              s = new m.J(h.De.WEBAPI_BASE_URL, r.webapi_token);
             (G.s_LoyaltyAwardModalStore = new p(s.GetServiceTransport())),
               this.setState({ bLoading: !1 });
           });
@@ -353,12 +352,12 @@
       (k.defaultProps = { targetType: 1 }), (k = G = (0, n.gn)([s.Pi], k));
       const P = k;
       let O = (T = class extends i.Component {
-        constructor(e) {
-          super(e);
-        }
         static Initialize(e) {
           null === this.s_LoyaltyAwardModalStore &&
             (this.s_LoyaltyAwardModalStore = new p(e.GetServiceTransport()));
+        }
+        constructor(e) {
+          super(e);
         }
         render() {
           const {
@@ -404,9 +403,9 @@
               store: n,
               onDismiss: r,
             } = this.props,
-            { selectedReaction: o, ePhase: s, celebrate: l } = this.state;
+            { selectedReaction: o, ePhase: s, celebrate: c } = this.state;
           if (!e) return null;
-          const d = n.GetExistingReactions(),
+          const m = n.GetExistingReactions(),
             u = n.GetAwardConfigurations(),
             _ = n.GetUserPointBalance(),
             g = (function (e, t, a) {
@@ -429,7 +428,7 @@
               );
             })(u, t, a),
             E = 0 === o ? null : u.get(o),
-            h = E ? E.points_cost : 0,
+            w = E ? E.points_cost : 0,
             p = E ? E.points_transferred : 0;
           let v,
             C = "";
@@ -452,8 +451,8 @@
           switch (s) {
             case I.SELECTING:
               {
-                const e = 0 === o || d.get(o),
-                  t = !_ || _.greaterThanOrEqual(h),
+                const e = 0 === o || m.get(o),
+                  t = !_ || _.greaterThanOrEqual(w),
                   a = i.createElement(
                     y.KM,
                     {
@@ -486,7 +485,7 @@
                       )
                     ),
                   i.createElement(
-                    m.P8,
+                    d.P8,
                     {
                       className: f.ButtonContainer,
                       scrollDirection: "y",
@@ -497,11 +496,11 @@
                         autoFocus: 0 == t,
                         key: e,
                         reaction: e,
-                        selected: e === o && !d.get(e),
+                        selected: e === o && !m.get(e),
                         cost: u.get(e).points_cost,
-                        alreadyAwarded: d.get(e),
+                        alreadyAwarded: m.get(e),
                         onClick: () => {
-                          d.get(e) ||
+                          m.get(e) ||
                             this.setState({
                               selectedReaction: e === o ? 0 : e,
                             });
@@ -521,14 +520,14 @@
                             { key: "msg", className: f.NotEnoughPoints },
                             (0, S.Xx)(
                               "#GrantAward_CantAfford",
-                              _.negate().add(h).toNumber().toLocaleString()
+                              _.negate().add(w).toNumber().toLocaleString()
                             )
                           ),
                           i.createElement(
-                            c.IS,
+                            l.IS,
                             {
                               key: "button",
-                              href: `${w.De.STORE_BASE_URL}points/howitworks`,
+                              href: `${h.De.STORE_BASE_URL}points/howitworks`,
                             },
                             i.createElement(
                               y.zx,
@@ -572,7 +571,7 @@
                         { className: f.ConfirmText },
                         (0, S.kQ)(
                           "#GrantAward_Confirm",
-                          i.createElement($, null, h.toLocaleString()),
+                          i.createElement($, null, w.toLocaleString()),
                           i.createElement(
                             "span",
                             { className: f.AwardName },
@@ -708,7 +707,7 @@
             i.createElement(
               A.Pv,
               { navID: "GrantAward", closeModal: r },
-              l && i.createElement(b.DI, { eType: b.sS.Default }),
+              c && i.createElement(b.DI, { eType: b.sS.Default }),
               v
             )
           );
@@ -768,7 +767,7 @@
               "div",
               { className: f.Right },
               i.createElement(
-                d.s,
+                c.s,
                 { className: f.Actions, "flow-children": "row" },
                 i.Children.map(t, (e) =>
                   i.createElement("div", { className: f.Action }, e)
@@ -778,7 +777,7 @@
                 "a",
                 {
                   className: f.FooterLink,
-                  href: `${w.De.STORE_BASE_URL}points/howitworks`,
+                  href: `${h.De.STORE_BASE_URL}points/howitworks`,
                 },
                 (0, S.Xx)("#GrantAward_PointsLink")
               )

@@ -96,40 +96,106 @@
     49633: (e, t, i) => {
       "use strict";
       i.d(t, { Z: () => l });
-      var a = i(33940),
-        n = i(89526),
-        s = i(45437),
-        o = i(74802),
-        r = i(4306);
-      class l extends n.Component {
+      var s = i(33940),
+        a = i(89526),
+        n = i(45437),
+        r = i(74802),
+        o = i(4306);
+      class l extends a.Component {
         OnEnter() {
-          s.E.AddImpression(this.props.appID, this.props.snr);
+          n.E.AddImpression(this.props.appID, this.props.snr);
         }
         render() {
-          return n.createElement(
-            o.h,
+          return a.createElement(
+            r.h,
             { onEnter: this.OnEnter },
             this.props.children
           );
         }
       }
-      (0, a.gn)([r.ak], l.prototype, "OnEnter", null);
+      (0, s.gn)([o.ak], l.prototype, "OnEnter", null);
+    },
+    23217: (e, t, i) => {
+      "use strict";
+      i.d(t, { l: () => r });
+      var s = i(52868),
+        a = i.n(s),
+        n = i(54856);
+      function r(e) {
+        if (a().isCancel(e))
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
+        if (
+          void 0 !== e.response &&
+          e.response.data &&
+          "object" == typeof e.response.data
+        ) {
+          if ("msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.msg,
+              errorCode: e.response.data.success,
+            };
+          if ("err_msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.err_msg,
+              errorCode: e.response.data.success,
+            };
+          if ("message" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.message,
+              errorCode: e.response.data.success,
+            };
+        } else if ("object" == typeof e.data) {
+          if ("msg" in e.data)
+            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
+          if ("err_msg" in e.data)
+            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
+          if ("message" in e.response.data)
+            return { strErrorMsg: e.data.message, errorCode: e.data.success };
+        } else {
+          if (void 0 !== e.success && void 0 !== e.msg)
+            return { strErrorMsg: e.msg, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.message)
+            return { strErrorMsg: e.message, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.err_msg)
+            return { strErrorMsg: e.err_msg, errorCode: e.success };
+          if ("string" == typeof e && e.length > 1024)
+            console.groupCollapsed(
+              "GetMsgAndErrorCodeFromResponse cannot parse: "
+            ),
+              console.error(e),
+              console.groupEnd();
+          else {
+            if ("object" == typeof e && e instanceof n.gA)
+              return {
+                strErrorMsg: "" + e.GetEResult(),
+                errorCode: e.GetEResult(),
+              };
+            console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+          }
+        }
+        return "object" == typeof e && "status" in e
+          ? {
+              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
+              errorCode: 2,
+            }
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
+      }
     },
     45437: (e, t, i) => {
       "use strict";
       i.d(t, { E: () => c });
-      var a = i(33940),
-        n = i(54671),
-        s = i(32765),
-        o = i(87361),
-        r = i(37377);
+      var s = i(33940),
+        a = i(54671),
+        n = i(32765),
+        r = i(87361),
+        o = i(37377);
       class l {
         constructor() {
           (this.m_mapAppToSNRs = new Map()), (this.m_rgImpressionsToAdd = []);
         }
         AddImpression(e, t) {
           let i = !1;
-          n.jg.Get().BAppImpressionsAllowed()
+          a.jg.Get().BAppImpressionsAllowed()
             ? (this.m_mapAppToSNRs.has(e)
                 ? -1 == this.m_mapAppToSNRs.get(e).indexOf(t) &&
                   (this.m_mapAppToSNRs.get(e).push(t), (i = !0))
@@ -137,31 +203,31 @@
               i &&
                 (this.m_rgImpressionsToAdd.push(`${e}@${t}`),
                 this.UpdateCookie()))
-            : "dev" === s.De.WEB_UNIVERSE &&
+            : "dev" === n.De.WEB_UNIVERSE &&
               console.log("Cookie Prefs: Not allowing App Impressions");
         }
         UpdateCookie() {
           const e = [
-            (0, o.bG)("app_impressions") || "",
+            (0, r.bG)("app_impressions") || "",
             ...this.m_rgImpressionsToAdd,
           ].join("|");
           this.m_rgImpressionsToAdd = [];
           encodeURIComponent(e).length <= 3200 &&
-            (0, o.I1)("app_impressions", e);
+            (0, r.I1)("app_impressions", e);
         }
       }
-      (0, a.gn)([(0, r.D)(1e3)], l.prototype, "UpdateCookie", null);
+      (0, s.gn)([(0, o.D)(1e3)], l.prototype, "UpdateCookie", null);
       const c = new l();
       window.g_ImpressionTracker = c;
     },
     42591: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => M });
-      var a,
-        n = i(33940),
-        s = i(32765),
-        o = i(88464),
-        r = i(50265),
+      i.r(t), i.d(t, { default: () => k });
+      var s,
+        a = i(33940),
+        n = i(32765),
+        r = i(88464),
+        o = i(50265),
         l = i(89526),
         c = i(49633),
         d = i(701),
@@ -179,45 +245,45 @@
           (e[(e.Valid = 2)] = "Valid"),
           (e[(e.Failed = 3)] = "Failed"),
           (e[(e.Rerequest = 4)] = "Rerequest");
-      })(a || (a = {}));
+      })(s || (s = {}));
       class S {
         constructor() {
-          (this.eState = a.Unrequested), (this.nExpirationTime = 0);
+          (this.eState = s.Unrequested), (this.nExpirationTime = 0);
         }
         getData(e, t, i) {
-          const n = this.eState == a.Pending || this.eState == a.Rerequest;
+          const a = this.eState == s.Pending || this.eState == s.Rerequest;
           return (
             this.isExpired() &&
-              !n &&
-              ((this.eState = a.Pending),
+              !a &&
+              ((this.eState = s.Pending),
               t()
-                .then((n) => {
-                  if (this.eState == a.Rerequest)
+                .then((a) => {
+                  if (this.eState == s.Rerequest)
                     return this.expireData(), void this.getData(e, t, i);
-                  (this.data = i ? i(n) : n),
-                    n
-                      ? (this.delayNewData(e), (this.eState = a.Valid))
-                      : (this.eState = a.Failed);
+                  (this.data = i ? i(a) : a),
+                    a
+                      ? (this.delayNewData(e), (this.eState = s.Valid))
+                      : (this.eState = s.Failed);
                 })
                 .catch((e) => {
-                  (this.data = i(void 0)), (this.eState = a.Failed);
+                  (this.data = i(void 0)), (this.eState = s.Failed);
                 })),
             this.data
           );
         }
         clearData() {
-          (this.eState = a.Unrequested),
+          (this.eState = s.Unrequested),
             (this.data = null),
             (this.nExpirationTime = 0);
         }
         setDataPending() {
-          this.eState = a.Pending;
+          this.eState = s.Pending;
         }
         isDataPending() {
-          return this.eState == a.Pending;
+          return this.eState == s.Pending;
         }
         setData(e, t) {
-          (this.data = t), this.delayNewData(e), (this.eState = a.Valid);
+          (this.data = t), this.delayNewData(e), (this.eState = s.Valid);
         }
         expireData() {
           this.nExpirationTime = 0;
@@ -234,16 +300,16 @@
           }
         }
         rerequestDataIfPending() {
-          this.eState == a.Pending && (this.eState = a.Rerequest);
+          this.eState == s.Pending && (this.eState = s.Rerequest);
         }
         getCachedData() {
           return this.data;
         }
       }
-      (0, n.gn)([r.LO], S.prototype, "data", void 0),
-        (0, n.gn)([r.LO], S.prototype, "nExpirationTime", void 0);
-      (0, n.gn)(
-        [r.LO],
+      (0, a.gn)([o.LO], S.prototype, "data", void 0),
+        (0, a.gn)([o.LO], S.prototype, "nExpirationTime", void 0);
+      (0, a.gn)(
+        [o.LO],
         class {
           constructor() {
             this.m_mapKeyToDataWrapper = new Map();
@@ -389,7 +455,7 @@
             this.m_mapAppDetailsCache.get(e).getData(
               60,
               () =>
-                (0, n.mG)(this, void 0, void 0, function* () {
+                (0, a.mG)(this, void 0, void 0, function* () {
                   return yield v().get(
                     `${T.BASE_URL}recommender/${T.STEAM_ID}/details?appid=${e}&sessionid=${T.SESSION_ID}`
                   );
@@ -398,11 +464,11 @@
             )
           );
         }
-        getResults(e, t, i, a) {
-          const s = e ? "1" : "0",
-            o = t ? `${t}` : "0",
-            r = i ? "1" : "0",
-            l = a ? `${a}` : "0";
+        getResults(e, t, i, s) {
+          const n = e ? "1" : "0",
+            r = t ? `${t}` : "0",
+            o = i ? "1" : "0",
+            l = s ? `${s}` : "0";
           let c = "";
           const d = this.getInputApps();
           if (!d) return;
@@ -415,9 +481,9 @@
             this.m_ResultDataCache.getData(
               9999999,
               () =>
-                (0, n.mG)(this, void 0, void 0, function* () {
+                (0, a.mG)(this, void 0, void 0, function* () {
                   return yield v().get(
-                    `${T.BASE_URL}recommender/${T.STEAM_ID}/results?sessionid=${T.SESSION_ID}&steamid=${T.STEAM_ID}&include_played=${s}&algorithm=${o}&reinference=${r}&model_version=${l}${c}`
+                    `${T.BASE_URL}recommender/${T.STEAM_ID}/results?sessionid=${T.SESSION_ID}&steamid=${T.STEAM_ID}&include_played=${n}&algorithm=${r}&reinference=${o}&model_version=${l}${c}`
                   );
                 }),
               (e) => e.data
@@ -428,7 +494,7 @@
           return this.m_ResultDataCache.isExpired();
         }
         getRecommendations() {
-          const e = L.getResults(
+          const e = f.getResults(
             T.INCLUDE_PLAYED,
             T.ALGORITHM,
             T.REINFERENCE,
@@ -440,7 +506,7 @@
           return this.m_InputAppsCache.getData(
             9999999,
             () =>
-              (0, n.mG)(this, void 0, void 0, function* () {
+              (0, a.mG)(this, void 0, void 0, function* () {
                 return yield v().get(
                   `${T.BASE_URL}recommender/${T.STEAM_ID}/inputs?sessionid=${T.SESSION_ID}&steamid=${T.STEAM_ID}`
                 );
@@ -449,7 +515,7 @@
           );
         }
         getAppInfo() {
-          const e = L.getResults(
+          const e = f.getResults(
             T.INCLUDE_PLAYED,
             T.ALGORITHM,
             T.REINFERENCE,
@@ -461,7 +527,7 @@
           return this.m_TagsCache.getData(
             9999999,
             () =>
-              (0, n.mG)(this, void 0, void 0, function* () {
+              (0, a.mG)(this, void 0, void 0, function* () {
                 return yield v().get(
                   `${T.BASE_URL}recommender/${T.STEAM_ID}/tags?sessionid=${T.SESSION_ID}`
                 );
@@ -525,7 +591,7 @@
             (this.m_bStateUpdated = !0);
         }
         onSaveUserSettings(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             let e = [];
             const t = this.getInputApps();
             for (let i of t) (i.i || i.ip) && e.push(i.a);
@@ -566,7 +632,7 @@
           });
         }
         onToggleIgnore(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             const t = this.getInputApps();
             for (let i of t)
               if (i.a == e) {
@@ -580,7 +646,7 @@
           this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
         }
         onAppClicked(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             let i = {
               account_id: T.ACCOUNT_ID,
               session_id: T.SESSION_ID,
@@ -595,14 +661,14 @@
           });
         }
         onAddToWishlist(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            L.getAppInfo()[e].w = !0;
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            f.getAppInfo()[e].w = !0;
             let i = { sessionid: T.SESSION_ID, appid: e };
-            const a = yield v().post(
+            const s = yield v().post(
               `${T.BASE_URL}recommender/${T.STEAM_ID}/wishlist?snr=${T.LINK_PARAM}`,
               i
             );
-            let n = {
+            let a = {
               account_id: T.ACCOUNT_ID,
               session_id: T.SESSION_ID,
               app_id: e,
@@ -613,8 +679,8 @@
               setting_2: 100 * this.m_fRecencyValue,
             };
             return (
-              yield v().post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, n),
-              a
+              yield v().post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, a),
+              s
             );
           });
         }
@@ -622,13 +688,13 @@
           window.location.href = `${T.COMMUNITY_BASE_URL}profiles/${T.STEAM_ID}/wishlist`;
         }
         onAddToCart(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             let i = { sessionid: T.SESSION_ID, appid: e };
             yield v().post(
               `${T.BASE_URL}recommender/${T.STEAM_ID}/cart?snr=${T.LINK_PARAM}`,
               i
             );
-            let a = {
+            let s = {
               account_id: T.ACCOUNT_ID,
               session_id: T.SESSION_ID,
               app_id: e,
@@ -638,8 +704,8 @@
               setting_1: 100 * this.m_fPopularityValue,
               setting_2: 100 * this.m_fRecencyValue,
             };
-            yield v().post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, a),
-              (window.location.href = `${s.De.STORE_BASE_URL}cart`);
+            yield v().post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, s),
+              (window.location.href = `${n.De.STORE_BASE_URL}cart`);
           });
         }
         onMuteClicked() {
@@ -655,51 +721,51 @@
           return this.m_bUseMicrotrailers;
         }
       }
-      (0, n.gn)([r.LO], R.prototype, "m_fPopularityValue", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_fRecencyValue", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_rgFilterTags", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_rgExcludeTags", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_fQueuedPopularityValue", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_fQueuedRecencyValue", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_bExcludeWishlisted", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_bShouldMute", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_bUseMicrotrailers", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_bIgnoredEdited", void 0),
-        (0, n.gn)([_.ak], R.prototype, "getTagHeight", null),
-        (0, n.gn)([_.ak], R.prototype, "onPopularityChanged", null),
-        (0, n.gn)([_.ak], R.prototype, "onRecencyChanged", null),
-        (0, n.gn)([_.ak], R.prototype, "onTagFilterAdd", null),
-        (0, n.gn)([_.ak], R.prototype, "onTagFilterRemove", null),
-        (0, n.gn)([_.ak], R.prototype, "onTagExcludeAdd", null),
-        (0, n.gn)([_.ak], R.prototype, "onTagExcludeRemove", null),
-        (0, n.gn)([_.ak], R.prototype, "doTagsPassFilter", null),
-        (0, n.gn)([_.ak], R.prototype, "doTagsFailExclusion", null),
-        (0, n.gn)([_.ak], R.prototype, "onExcludeWishlistedToggled", null),
-        (0, n.gn)([_.ak], R.prototype, "onSaveUserSettings", null),
-        (0, n.gn)([_.ak], R.prototype, "onToggleIgnore", null),
-        (0, n.gn)([_.ak], R.prototype, "onUpdateWithIgnored", null),
-        (0, n.gn)([_.ak], R.prototype, "onAppClicked", null),
-        (0, n.gn)([_.ak], R.prototype, "onAddToWishlist", null),
-        (0, n.gn)([_.ak], R.prototype, "onGoToWishlist", null),
-        (0, n.gn)([_.ak], R.prototype, "onAddToCart", null),
-        (0, n.gn)([_.ak], R.prototype, "onMuteClicked", null),
-        (0, n.gn)([_.ak], R.prototype, "onUnMuteClicked", null),
-        (0, n.gn)([_.ak], R.prototype, "shouldMute", null),
-        (0, n.gn)([_.ak], R.prototype, "shouldUseMicrotrailers", null);
-      const L = new R();
-      window.g_InteractiveRecommender = L;
+      (0, a.gn)([o.LO], R.prototype, "m_fPopularityValue", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_fRecencyValue", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_rgFilterTags", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_rgExcludeTags", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_fQueuedPopularityValue", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_fQueuedRecencyValue", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_bExcludeWishlisted", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_bShouldMute", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_bUseMicrotrailers", void 0),
+        (0, a.gn)([o.LO], R.prototype, "m_bIgnoredEdited", void 0),
+        (0, a.gn)([_.ak], R.prototype, "getTagHeight", null),
+        (0, a.gn)([_.ak], R.prototype, "onPopularityChanged", null),
+        (0, a.gn)([_.ak], R.prototype, "onRecencyChanged", null),
+        (0, a.gn)([_.ak], R.prototype, "onTagFilterAdd", null),
+        (0, a.gn)([_.ak], R.prototype, "onTagFilterRemove", null),
+        (0, a.gn)([_.ak], R.prototype, "onTagExcludeAdd", null),
+        (0, a.gn)([_.ak], R.prototype, "onTagExcludeRemove", null),
+        (0, a.gn)([_.ak], R.prototype, "doTagsPassFilter", null),
+        (0, a.gn)([_.ak], R.prototype, "doTagsFailExclusion", null),
+        (0, a.gn)([_.ak], R.prototype, "onExcludeWishlistedToggled", null),
+        (0, a.gn)([_.ak], R.prototype, "onSaveUserSettings", null),
+        (0, a.gn)([_.ak], R.prototype, "onToggleIgnore", null),
+        (0, a.gn)([_.ak], R.prototype, "onUpdateWithIgnored", null),
+        (0, a.gn)([_.ak], R.prototype, "onAppClicked", null),
+        (0, a.gn)([_.ak], R.prototype, "onAddToWishlist", null),
+        (0, a.gn)([_.ak], R.prototype, "onGoToWishlist", null),
+        (0, a.gn)([_.ak], R.prototype, "onAddToCart", null),
+        (0, a.gn)([_.ak], R.prototype, "onMuteClicked", null),
+        (0, a.gn)([_.ak], R.prototype, "onUnMuteClicked", null),
+        (0, a.gn)([_.ak], R.prototype, "shouldMute", null),
+        (0, a.gn)([_.ak], R.prototype, "shouldUseMicrotrailers", null);
+      const f = new R();
+      window.g_InteractiveRecommender = f;
       var A = i(32905);
       !(function () {
-        let e = (0, s.kQ)("ir_config", "application_config");
-        e && (Object.assign(T, e), L.Init());
+        let e = (0, n.kQ)("ir_config", "application_config");
+        e && (Object.assign(T, e), f.Init());
       })();
-      const N = ({ accountID: e }) => {
-          const t = L.getInputApps(),
+      const L = ({ accountID: e }) => {
+          const t = f.getInputApps(),
             i = Object.keys(t).length;
-          let a = 0;
+          let s = 0;
           return (
             Object.keys(t).map((e) => {
-              a += t[e].p;
+              s += t[e].p;
             }),
             l.createElement(
               "div",
@@ -724,32 +790,32 @@
                 l.createElement(
                   "div",
                   { className: u.TotalTime },
-                  (0, p.Xx)("#PlaytimeList_HoursTotal", a)
+                  (0, p.Xx)("#PlaytimeList_HoursTotal", s)
                 )
               )
             )
           );
         },
-        f = ({ appID: e, name: t, hours: i, lastPlayed: a, ignored: n }) => {
-          const s = `${T.CDN_URL}apps/${e}/header.jpg`,
-            o = Date.now() / 1e3 - a;
-          let r = "",
+        C = ({ appID: e, name: t, hours: i, lastPlayed: s, ignored: a }) => {
+          const n = `${T.CDN_URL}apps/${e}/header.jpg`,
+            r = Date.now() / 1e3 - s;
+          let o = "",
             c = "";
           return (
-            a <= 86400
+            s <= 86400
               ? (c = (0, p.Xx)("#PlaytimeList_LastPlayedMax"))
-              : o > 31449600
-              ? ((r = (0, p.vX)(a)),
-                (c = (0, p.Xx)("#PlaytimeList_LastPlayed", r)))
-              : ((r = (0, p.yW)(o)),
-                (c = (0, p.Xx)("#PlaytimeList_LastPlayed", r))),
+              : r > 31449600
+              ? ((o = (0, p.vX)(s)),
+                (c = (0, p.Xx)("#PlaytimeList_LastPlayed", o)))
+              : ((o = (0, p.yW)(r)),
+                (c = (0, p.Xx)("#PlaytimeList_LastPlayed", o))),
             l.createElement(
               "div",
-              { className: (0, m.Z)(u.PlayedGame, n && u.Ignored) },
+              { className: (0, m.Z)(u.PlayedGame, a && u.Ignored) },
               l.createElement(
                 "a",
                 { href: `${T.BASE_URL}app/${e}?snr=${T.LINK_PARAM}` },
-                l.createElement("img", { className: u.Logo, src: s })
+                l.createElement("img", { className: u.Logo, src: n })
               ),
               l.createElement(
                 "div",
@@ -765,22 +831,22 @@
                   "div",
                   {
                     className: u.IgnoreToggle,
-                    onClick: () => L.onToggleIgnore(e),
+                    onClick: () => f.onToggleIgnore(e),
                   },
                   (0, p.Xx)(
-                    n ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore"
+                    a ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore"
                   )
                 )
               )
             )
           );
         };
-      let I = class extends l.Component {
+      let N = class extends l.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
         render() {
-          const e = L.getInputApps();
+          const e = f.getInputApps();
           let t = [];
           if (!e)
             return l.createElement(
@@ -793,19 +859,19 @@
               ),
               l.createElement("div", { className: u.Loading })
             );
-          L.getAppInfo();
+          f.getAppInfo();
           const i = e.slice().sort((e, t) => t.l - e.l);
           return (
             Object.keys(i).map((e) => {
-              const a = i[e];
+              const s = i[e];
               t.push(
-                l.createElement(f, {
-                  key: "PlayedGame_" + a.a,
-                  appID: a.a,
-                  name: a.t,
-                  hours: a.p,
-                  lastPlayed: a.l,
-                  ignored: a.i || a.ip,
+                l.createElement(C, {
+                  key: "PlayedGame_" + s.a,
+                  appID: s.a,
+                  name: s.t,
+                  hours: s.p,
+                  lastPlayed: s.l,
+                  ignored: s.i || s.ip,
                 })
               );
             }),
@@ -817,27 +883,27 @@
                 { className: u.Header },
                 (0, p.Xx)("#PlaytimeList_Header")
               ),
-              l.createElement(N, { accountID: this.props.accountID }),
+              l.createElement(L, { accountID: this.props.accountID }),
               l.createElement("div", { className: u.List }, t)
             )
           );
         }
       };
-      I = (0, n.gn)([o.Pi], I);
-      const D = ({
+      N = (0, a.gn)([r.Pi], N);
+      const I = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: i,
-          minValue: a,
-          maxValue: n,
-          value: s,
-          onChange: o,
-          sliderLabels: r,
+          minValue: s,
+          maxValue: a,
+          value: n,
+          onChange: r,
+          sliderLabels: o,
         }) => {
-          const c = r
-              ? Math.round((r.length - 1) * ((s - a) / (n - a)))
+          const c = o
+              ? Math.round((o.length - 1) * ((n - s) / (a - s)))
               : void 0,
-            d = r ? r[c] : "";
+            d = o ? o[c] : "";
           return l.createElement(
             "div",
             { className: u.OptionSlider },
@@ -850,16 +916,16 @@
             ),
             l.createElement("input", {
               type: "range",
-              min: a,
-              max: n,
-              step: (n - a) / 100,
-              value: s,
-              onChange: o,
+              min: s,
+              max: a,
+              step: (a - s) / 100,
+              value: n,
+              onChange: r,
             }),
             l.createElement("div", { className: u.OptionalLabel }, d)
           );
         },
-        C = ({ className: e, titleLabel: t, checked: i, onChange: a }) =>
+        D = ({ className: e, titleLabel: t, checked: i, onChange: s }) =>
           l.createElement(
             "label",
             { className: (0, m.Z)(u.OptionCheckbox, e && e) },
@@ -867,7 +933,7 @@
               type: "checkbox",
               className: u.Checkbox,
               checked: i,
-              onChange: a,
+              onChange: s,
             }),
             t
           );
@@ -880,7 +946,7 @@
             (this.state = { value: "", suggestions: [] });
         }
         componentDidMount() {
-          const e = L.getTags();
+          const e = f.getTags();
           if (e)
             for (const t of e)
               this.rgTags.push({ id: parseInt(t.tagid), name: t.name });
@@ -888,13 +954,13 @@
         onFetchRequested(e) {
           const t = e.value.trim().toLowerCase(),
             i = t.length,
-            a =
+            s =
               0 === i
                 ? this.props.tagoptions.slice(0, 10)
                 : this.props.tagoptions.filter(
                     (e) => e.name.toLowerCase().slice(0, i) === t
                   );
-          this.setState({ suggestions: a });
+          this.setState({ suggestions: s });
         }
         onClearRequested() {}
         onChange(e, t) {
@@ -940,7 +1006,7 @@
           };
           let t = [];
           for (const e of this.selectedtags) {
-            let i = L.m_TagNameMap.get(e);
+            let i = f.m_TagNameMap.get(e);
             t.push(
               l.createElement(
                 "div",
@@ -978,17 +1044,17 @@
           );
         }
       };
-      (0, n.gn)([r.LO], x.prototype, "selectedtags", void 0),
-        (0, n.gn)([_.ak], x.prototype, "onFetchRequested", null),
-        (0, n.gn)([_.ak], x.prototype, "onClearRequested", null),
-        (0, n.gn)([_.ak], x.prototype, "onChange", null),
-        (0, n.gn)([_.ak], x.prototype, "onKeyDown", null),
-        (0, n.gn)([_.ak], x.prototype, "shouldRenderSuggestions", null),
-        (0, n.gn)([_.ak], x.prototype, "onSuggestionSelected", null),
-        (0, n.gn)([_.ak], x.prototype, "onRemoveSelectedTag", null),
-        (x = (0, n.gn)([o.Pi], x));
-      const P = (0, o.Pi)(() => {
-        const e = L.getTags();
+      (0, a.gn)([o.LO], x.prototype, "selectedtags", void 0),
+        (0, a.gn)([_.ak], x.prototype, "onFetchRequested", null),
+        (0, a.gn)([_.ak], x.prototype, "onClearRequested", null),
+        (0, a.gn)([_.ak], x.prototype, "onChange", null),
+        (0, a.gn)([_.ak], x.prototype, "onKeyDown", null),
+        (0, a.gn)([_.ak], x.prototype, "shouldRenderSuggestions", null),
+        (0, a.gn)([_.ak], x.prototype, "onSuggestionSelected", null),
+        (0, a.gn)([_.ak], x.prototype, "onRemoveSelectedTag", null),
+        (x = (0, a.gn)([r.Pi], x));
+      const P = (0, r.Pi)(() => {
+        const e = f.getTags();
         let t = [];
         if (e)
           for (const i of e) t.push({ id: parseInt(i.tagid), name: i.name });
@@ -1000,31 +1066,31 @@
           (0, p.Xx)("#FilterAge_12"),
           (0, p.Xx)("#FilterAge_6"),
         ];
-        let a = L.m_rgSavedExcludeTags,
-          n = L.m_rgSavedFilterTags;
+        let s = f.m_rgSavedExcludeTags,
+          a = f.m_rgSavedFilterTags;
         return l.createElement(
           "div",
           { className: u.RecommendationOptions },
           l.createElement(
             "div",
             { className: (0, m.Z)(u.Row, u.FirstRow) },
-            l.createElement(D, {
+            l.createElement(I, {
               minLabel: (0, p.Xx)("#Popularity_Popular"),
               titleLabel: (0, p.Xx)("#Popularity_Title"),
               maxLabel: (0, p.Xx)("#Popularity_Niche"),
               minValue: 0,
               maxValue: 1,
-              value: L.m_fQueuedPopularityValue,
-              onChange: L.onPopularityChanged,
+              value: f.m_fQueuedPopularityValue,
+              onChange: f.onPopularityChanged,
             }),
-            l.createElement(D, {
+            l.createElement(I, {
               minLabel: (0, p.Xx)("#Recency_Older"),
               titleLabel: (0, p.Xx)("#Recency_Title"),
               maxLabel: (0, p.Xx)("#Recency_Newer"),
               minValue: 0,
               maxValue: 1,
-              value: L.m_fQueuedRecencyValue,
-              onChange: L.onRecencyChanged,
+              value: f.m_fQueuedRecencyValue,
+              onChange: f.onRecencyChanged,
               sliderLabels: i,
             })
           ),
@@ -1034,30 +1100,30 @@
             l.createElement(x, {
               title: (0, p.Xx)("#TagFilterMultiple_Title"),
               tagoptions: t,
-              selectedtags: n,
-              key: "Filter" + n.toString(),
-              onAddTag: L.onTagFilterAdd,
-              onRemoveTag: L.onTagFilterRemove,
+              selectedtags: a,
+              key: "Filter" + a.toString(),
+              onAddTag: f.onTagFilterAdd,
+              onRemoveTag: f.onTagFilterRemove,
             }),
             l.createElement(x, {
               title: (0, p.Xx)("#TagExcludeMultiple_Title"),
               tagoptions: t,
-              selectedtags: a,
-              key: "Exclude" + a.toString(),
-              onAddTag: L.onTagExcludeAdd,
-              onRemoveTag: L.onTagExcludeRemove,
+              selectedtags: s,
+              key: "Exclude" + s.toString(),
+              onAddTag: f.onTagExcludeAdd,
+              onRemoveTag: f.onTagExcludeRemove,
             }),
-            l.createElement(C, {
+            l.createElement(D, {
               className: u.WishlistCheckbox,
               titleLabel: (0, p.Xx)("#ExcludeWishlisted"),
-              checked: L.m_bExcludeWishlisted,
-              onChange: L.onExcludeWishlistedToggled,
+              checked: f.m_bExcludeWishlisted,
+              onChange: f.onExcludeWishlistedToggled,
             }),
             l.createElement(
               "button",
               {
                 className: u.SaveUserSettingsButton,
-                onClick: L.onSaveUserSettings,
+                onClick: f.onSaveUserSettings,
                 title: (0, p.Xx)("#SaveUserSettingsTooltip"),
               },
               (0, p.Xx)("#SaveUserSettings")
@@ -1071,7 +1137,7 @@
             (this.m_videoRef = l.createRef()),
             (this.state = {
               hovered: !1,
-              wishlisted: L.getAppInfo()[e.appID].w,
+              wishlisted: f.getAppInfo()[e.appID].w,
             });
         }
         componentDidMount() {
@@ -1103,12 +1169,12 @@
               this.m_videoRef.current.pause());
         }
         onMuteToggle(e) {
-          L.shouldMute()
-            ? (L.onUnMuteClicked(),
+          f.shouldMute()
+            ? (f.onUnMuteClicked(),
               this.m_videoRef &&
                 this.m_videoRef.current &&
                 (this.m_videoRef.current.muted = !1))
-            : (L.onMuteClicked(),
+            : (f.onMuteClicked(),
               this.m_videoRef &&
                 this.m_videoRef.current &&
                 (this.m_videoRef.current.muted = !0)),
@@ -1116,40 +1182,40 @@
             e.stopPropagation();
         }
         onAddToWishlist(e) {
-          L.onAddToWishlist(this.props.appID, this.props.rank),
+          f.onAddToWishlist(this.props.appID, this.props.rank),
             this.setState({ wishlisted: !0 }),
             e.preventDefault(),
             e.stopPropagation();
         }
         onGoToWishlist(e) {
-          L.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
+          f.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
         }
         onAddToCart(e) {
-          L.onAddToCart(this.props.appID, this.props.rank),
+          f.onAddToCart(this.props.appID, this.props.rank),
             e.preventDefault(),
             e.stopPropagation();
         }
         render() {
-          const { appID: e, score: t, rank: i, width: a } = this.props,
-            n =
+          const { appID: e, score: t, rank: i, width: s } = this.props,
+            a =
               "https://steamcdn-a.akamaihd.net/steam/apps/" + e + "/header.jpg",
-            s = L.getAppInfo()[e];
-          if (!s) return l.createElement("div", null);
-          const o = s.n,
-            r =
-              s.r > 0
-                ? (0, p.Xx)("#Recommendation_ReleasedOn", (0, p.vX)(s.r))
+            n = f.getAppInfo()[e];
+          if (!n) return l.createElement("div", null);
+          const r = n.n,
+            o =
+              n.r > 0
+                ? (0, p.Xx)("#Recommendation_ReleasedOn", (0, p.vX)(n.r))
                 : "";
           let _ = [];
-          if (s.t) {
+          if (n.t) {
             let t = 0;
-            for (const i of s.t)
+            for (const i of n.t)
               if (
                 (_.push(
                   l.createElement(
                     "div",
                     { key: `${e}_${i}`, className: u.Tag },
-                    L.getTagName(i)
+                    f.getTagName(i)
                   )
                 ),
                 t++,
@@ -1161,42 +1227,42 @@
             h = parseInt(u.optionswrapwidth);
           let E = 112,
             v = !0;
-          a < g ? ((E = 66), (v = !1)) : a < h && ((E = 87), (v = !1));
+          s < g ? ((E = 66), (v = !1)) : s < h && ((E = 87), (v = !1));
           const S = v && this.state.hovered,
             y = Math.min(Number(t) / 10, 1e3);
           Math.max(1, t);
           let R = !1,
             A = !1,
-            N = !0,
-            f = "",
+            L = !0,
+            C = "",
+            N = "",
             I = "",
-            D = "",
-            C = "";
+            D = "";
           let x = "",
             P = !1,
             U = !0;
           if (S) {
-            const e = L.getDetails(this.props.appID);
+            const e = f.getDetails(this.props.appID);
             e &&
               ((R = !0),
               (A = e.discount_pct > 0),
-              (N = "0" == e.discount_price),
+              (L = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
                 .canPlayType('video/webm; codecs="vp8, vorbis"')
-                ? L.shouldUseMicrotrailers() && e.microtrailer_webm
+                ? f.shouldUseMicrotrailers() && e.microtrailer_webm
                   ? ((x = e.microtrailer_webm), (P = !0), (U = !1))
                   : (x = e.video_webm)
-                : L.shouldUseMicrotrailers() && e.microtrailer_mp4
+                : f.shouldUseMicrotrailers() && e.microtrailer_mp4
                 ? ((x = e.microtrailer_mp4), (P = !0), (U = !1))
                 : (x = e.video_mp4),
-              (f = `-${e.discount_pct}%`),
-              (I = e.base_price),
-              (D = N ? (0, p.Xx)("#FreeToPlay") : e.discount_price),
-              (C = e.description));
+              (C = `-${e.discount_pct}%`),
+              (N = e.base_price),
+              (I = L ? (0, p.Xx)("#FreeToPlay") : e.discount_price),
+              (D = e.description));
           }
-          const w = x && x.length > 0;
+          const M = x && x.length > 0;
           return l.createElement(
             c.Z,
             { appID: e, snr: T.LINK_PARAM },
@@ -1204,7 +1270,7 @@
               "a",
               {
                 href: `${T.BASE_URL}app/${e}?snr=${T.LINK_PARAM}`,
-                onClick: () => L.onAppClicked(e, i),
+                onClick: () => f.onAppClicked(e, i),
                 className: (0, m.Z)(
                   u.RecommendationEntry,
                   "ds_flagged",
@@ -1223,8 +1289,8 @@
                   "div",
                   { className: u.LeftSection },
                   l.createElement("img", {
-                    className: (0, m.Z)(u.Logo, (!w || !S) && u.Revealed),
-                    src: n,
+                    className: (0, m.Z)(u.Logo, (!M || !S) && u.Revealed),
+                    src: a,
                   }),
                   l.createElement("video", {
                     ref: this.m_videoRef,
@@ -1232,11 +1298,11 @@
                       "highlight_player_item",
                       "highlight_movie",
                       u.Video,
-                      w && S && u.Revealed
+                      M && S && u.Revealed
                     ),
                     playsInline: !0,
                     autoPlay: !0,
-                    muted: U && L.shouldMute(),
+                    muted: U && f.shouldMute(),
                     src: x,
                     loop: P,
                   }),
@@ -1244,10 +1310,10 @@
                     l.createElement(
                       "div",
                       {
-                        className: (0, m.Z)(u.UnMute, w && u.Revealed),
+                        className: (0, m.Z)(u.UnMute, M && u.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
-                      l.createElement(d.ffh, { muted: L.shouldMute() })
+                      l.createElement(d.ffh, { muted: f.shouldMute() })
                     ),
                   this.state.wishlisted &&
                     l.createElement(
@@ -1265,7 +1331,7 @@
                 l.createElement(
                   "div",
                   { className: u.RightSection },
-                  l.createElement("div", { className: u.Name }, o),
+                  l.createElement("div", { className: u.Name }, r),
                   l.createElement(
                     "div",
                     { className: u.CenterSection },
@@ -1278,7 +1344,7 @@
                           S && u.Hidden
                         ),
                       },
-                      l.createElement("div", { className: u.Released }, r),
+                      l.createElement("div", { className: u.Released }, o),
                       l.createElement(
                         "div",
                         { className: u.BarContainer },
@@ -1298,7 +1364,7 @@
                           !S && u.Hidden
                         ),
                       },
-                      C
+                      D
                     )
                   ),
                   R &&
@@ -1331,7 +1397,7 @@
                               l.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                f
+                                C
                               ),
                               l.createElement(
                                 "div",
@@ -1339,12 +1405,12 @@
                                 l.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  I
+                                  N
                                 ),
                                 l.createElement(
                                   "div",
                                   { className: "discount_final_price" },
-                                  D
+                                  I
                                 )
                               )
                             ),
@@ -1358,9 +1424,9 @@
                                   u.Price
                                 ),
                               },
-                              D
+                              I
                             ),
-                          !N &&
+                          !L &&
                             l.createElement(
                               "div",
                               {
@@ -1383,7 +1449,7 @@
                         )
                       ),
                       !this.state.wishlisted &&
-                        !N &&
+                        !L &&
                         l.createElement(
                           "div",
                           {
@@ -1402,7 +1468,7 @@
                           )
                         ),
                       this.state.wishlisted &&
-                        !N &&
+                        !L &&
                         l.createElement(
                           "div",
                           {
@@ -1433,65 +1499,65 @@
           );
         }
       };
-      (0, n.gn)([_.ak], U.prototype, "OnHover", null),
-        (0, n.gn)([_.ak], U.prototype, "OnUnHover", null),
-        (0, n.gn)([_.ak], U.prototype, "onMuteToggle", null),
-        (0, n.gn)([_.ak], U.prototype, "onAddToWishlist", null),
-        (0, n.gn)([_.ak], U.prototype, "onGoToWishlist", null),
-        (0, n.gn)([_.ak], U.prototype, "onAddToCart", null),
-        (U = (0, n.gn)([o.Pi], U));
-      let w = class extends l.Component {
+      (0, a.gn)([_.ak], U.prototype, "OnHover", null),
+        (0, a.gn)([_.ak], U.prototype, "OnUnHover", null),
+        (0, a.gn)([_.ak], U.prototype, "onMuteToggle", null),
+        (0, a.gn)([_.ak], U.prototype, "onAddToWishlist", null),
+        (0, a.gn)([_.ak], U.prototype, "onGoToWishlist", null),
+        (0, a.gn)([_.ak], U.prototype, "onAddToCart", null),
+        (U = (0, a.gn)([r.Pi], U));
+      let M = class extends l.Component {
         constructor(e) {
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
         render() {
-          const e = L.m_fRecencyValue * (T.NUM_RECENCY_STEPS - 1 - 0.001),
+          const e = f.m_fRecencyValue * (T.NUM_RECENCY_STEPS - 1 - 0.001),
             t = Math.floor(e),
             i = t + 1,
-            a = 1 - (e - t),
-            n = 1 - a,
-            s = L.m_fPopularityValue * (T.NUM_POPULARITY_STEPS - 1 - 0.001),
-            o = Math.floor(s),
-            r = o + 1,
-            c = 1 - (s - o),
+            s = 1 - (e - t),
+            a = 1 - s,
+            n = f.m_fPopularityValue * (T.NUM_POPULARITY_STEPS - 1 - 0.001),
+            r = Math.floor(n),
+            o = r + 1,
+            c = 1 - (n - r),
             d = 1 - c;
           let _ = [];
-          _.push({ index: o * T.NUM_RECENCY_STEPS + t, weight: c * a }),
-            _.push({ index: r * T.NUM_RECENCY_STEPS + t, weight: d * a }),
-            _.push({ index: o * T.NUM_RECENCY_STEPS + i, weight: c * n }),
-            _.push({ index: r * T.NUM_RECENCY_STEPS + i, weight: d * n });
+          _.push({ index: r * T.NUM_RECENCY_STEPS + t, weight: c * s }),
+            _.push({ index: o * T.NUM_RECENCY_STEPS + t, weight: d * s }),
+            _.push({ index: r * T.NUM_RECENCY_STEPS + i, weight: c * a }),
+            _.push({ index: o * T.NUM_RECENCY_STEPS + i, weight: d * a });
           let g = new Map(),
             h = 0;
-          const E = L.getRecommendations(),
-            v = L.getAppInfo();
+          const E = f.getRecommendations(),
+            v = f.getAppInfo();
           let S = [];
           if (E) {
             for (const e of _) {
               const t = E[e.index];
               if (((h = Math.max(h, t.score_scale)), t))
                 for (let i = 0; i < t.app_ids.length; i++) {
-                  const a = t.app_ids[i];
+                  const s = t.app_ids[i];
                   if (
-                    !v[a] ||
-                    v[a].o ||
-                    v[a].i ||
-                    v[a].ti ||
-                    (v[a].w && L.m_bExcludeWishlisted)
+                    !v[s] ||
+                    v[s].o ||
+                    v[s].i ||
+                    v[s].ti ||
+                    (v[s].w && f.m_bExcludeWishlisted)
                   )
                     continue;
-                  const n =
-                    (g.get(a) || 0) + t.scores[i] * e.weight * t.score_scale;
-                  g.set(a, n);
+                  const a =
+                    (g.get(s) || 0) + t.scores[i] * e.weight * t.score_scale;
+                  g.set(s, a);
                 }
             }
             g.forEach((e, t) => g.set(t, e / h));
             let e = [];
             g.forEach((t, i) => e.push({ appid: i, score: t })),
               (e = e.filter(
-                (e) => v[e.appid].t && L.doTagsPassFilter(v[e.appid].t)
+                (e) => v[e.appid].t && f.doTagsPassFilter(v[e.appid].t)
               )),
               (e = e.filter(
-                (e) => v[e.appid].t && !L.doTagsFailExclusion(v[e.appid].t)
+                (e) => v[e.appid].t && !f.doTagsFailExclusion(v[e.appid].t)
               )),
               (e = e.filter((e) => e.score > 0));
             let t = e.sort((e, t) => t.score - e.score);
@@ -1541,7 +1607,7 @@
               {
                 className: (0, m.Z)(
                   u.List,
-                  L.areResultsExpired() && u.Updating
+                  f.areResultsExpired() && u.Updating
                 ),
               },
               S
@@ -1549,8 +1615,8 @@
           );
         }
       };
-      w = (0, n.gn)([o.Pi], w);
-      let k = class extends l.Component {
+      M = (0, a.gn)([r.Pi], M);
+      let w = class extends l.Component {
         constructor() {
           super(...arguments), (this.state = { width: window.innerWidth });
         }
@@ -1564,12 +1630,12 @@
           (0, A.X)();
         }
         render() {
-          return s.L7.logged_in
+          return n.L7.logged_in
             ? l.createElement(
                 "div",
                 {
                   className: u.App,
-                  style: { height: 3840 + 26 * L.getTagHeight() },
+                  style: { height: 3840 + 26 * f.getTagHeight() },
                 },
                 l.createElement(
                   "div",
@@ -1591,9 +1657,9 @@
                   l.createElement(
                     "div",
                     { className: u.BottomSection },
-                    l.createElement(I, { accountID: s.L7.accountid }),
+                    l.createElement(N, { accountID: n.L7.accountid }),
                     l.createElement("div", { className: u.VerticalBar }),
-                    l.createElement(w, { width: this.state.width })
+                    l.createElement(M, { width: this.state.width })
                   )
                 )
               )
@@ -1623,10 +1689,10 @@
               );
         }
       };
-      (0, n.gn)([_.ak], k.prototype, "updateDimensions", null),
-        (0, n.gn)([_.ak], k.prototype, "ShowLoginDialog", null),
-        (k = (0, n.gn)([o.Pi], k));
-      const M = k;
+      (0, a.gn)([_.ak], w.prototype, "updateDimensions", null),
+        (0, a.gn)([_.ak], w.prototype, "ShowLoginDialog", null),
+        (w = (0, a.gn)([r.Pi], w));
+      const k = w;
     },
   },
 ]);

@@ -258,7 +258,6 @@ ${COMMUNITY_BASE_URL}ogg/${}/selectAvatar
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxgetprivatedata
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxsetprivatedata
 ${COMMUNITY_BASE_URL}profiles/${STEAM_ID}/wishlist
-${COMMUNITY_BASE_URL}profiles/${_ ? _ : _}?previewprofile=1&appid=${}
 ${COMMUNITY_BASE_URL}profiles/${steamid64}/
 ${COMMUNITY_BASE_URL}profiles/${steamid64}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${steamid}
@@ -897,7 +896,7 @@ ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
 ${PARTNER_BASE_URL}doc/marketing/event_tools/sales/livestream
 ${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
-${PARTNER_BASE_URL}doc/store/assets/promo
+${PARTNER_BASE_URL}doc/store/assets/promos
 ${PARTNER_BASE_URL}doc/store/coming_soon
 ${PARTNER_BASE_URL}doc/store/discounting/csv
 ${PARTNER_BASE_URL}doc/store/pricing

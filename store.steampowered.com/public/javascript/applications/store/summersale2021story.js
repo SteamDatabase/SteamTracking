@@ -45,304 +45,370 @@
         Column: "summersale2021story_Column_1TnJ8",
       };
     },
-    39070: (e, a, r) => {
+    23217: (e, r, a) => {
       "use strict";
-      r.r(a), r.d(a, { default: () => d });
-      var t = r(89526),
-        m = (r(20830), r(27143), r(90210)),
-        s = r(19304),
-        l = r(14826),
-        _ = r(32765),
-        n = r(65053);
+      a.d(r, { l: () => o });
+      var s = a(52868),
+        t = a.n(s),
+        m = a(54856);
+      function o(e) {
+        if (t().isCancel(e))
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
+        if (
+          void 0 !== e.response &&
+          e.response.data &&
+          "object" == typeof e.response.data
+        ) {
+          if ("msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.msg,
+              errorCode: e.response.data.success,
+            };
+          if ("err_msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.err_msg,
+              errorCode: e.response.data.success,
+            };
+          if ("message" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.message,
+              errorCode: e.response.data.success,
+            };
+        } else if ("object" == typeof e.data) {
+          if ("msg" in e.data)
+            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
+          if ("err_msg" in e.data)
+            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
+          if ("message" in e.response.data)
+            return { strErrorMsg: e.data.message, errorCode: e.data.success };
+        } else {
+          if (void 0 !== e.success && void 0 !== e.msg)
+            return { strErrorMsg: e.msg, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.message)
+            return { strErrorMsg: e.message, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.err_msg)
+            return { strErrorMsg: e.err_msg, errorCode: e.success };
+          if ("string" == typeof e && e.length > 1024)
+            console.groupCollapsed(
+              "GetMsgAndErrorCodeFromResponse cannot parse: "
+            ),
+              console.error(e),
+              console.groupEnd();
+          else {
+            if ("object" == typeof e && e instanceof m.gA)
+              return {
+                strErrorMsg: "" + e.GetEResult(),
+                errorCode: e.GetEResult(),
+              };
+            console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+          }
+        }
+        return "object" == typeof e && "status" in e
+          ? {
+              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
+              errorCode: 2,
+            }
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
+      }
+    },
+    39070: (e, r, a) => {
+      "use strict";
+      a.r(r), a.d(r, { default: () => d });
+      var s = a(89526),
+        t = a(90210),
+        m = a(19304),
+        o = a(14826),
+        n = a(32765),
+        l = a(65053);
       const d = () => {
-          (0, m.jM)();
-          const e = (0, m.Tv)(),
-            a = (0, m.h1)(),
-            r = (0, m.rO)(),
-            d = (0, m.bM)(),
+          (0, t.jM)();
+          const e = (0, t.Tv)(),
+            r = (0, t.h1)(),
+            a = (0, t.rO)(),
+            d = (0, t.bM)(),
             i = [],
             u = [];
-          a.forEach((a) => {
-            const r = a.eGenre,
-              m = _.De.STORE_BASE_URL + "sale/" + a.strSalePage;
-            let s = (0, l.kQ)(
+          r.forEach((r) => {
+            const a = r.eGenre,
+              t = n.De.STORE_BASE_URL + "sale/" + r.strSalePage;
+            let m = (0, o.kQ)(
               "#Summer_21_Story_Enter",
-              t.createElement("span", null, (0, l.Xx)(a.strGenreName))
+              s.createElement("span", null, (0, o.Xx)(r.strGenreName))
             );
-            if (e.has(r)) {
-              let l = "";
-              1 == e.get(r).choice
-                ? (l = a.strResultA + "_Summary")
-                : 2 == e.get(r).choice && (l = a.strResultB + "_Summary"),
+            if (e.has(a)) {
+              let o = "";
+              1 == e.get(a).choice
+                ? (o = r.strResultA + "_Summary")
+                : 2 == e.get(a).choice && (o = r.strResultB + "_Summary"),
                 i.push(
-                  t.createElement(c, {
-                    key: r,
-                    strSubheader: s,
+                  s.createElement(c, {
+                    key: a,
+                    strSubheader: m,
                     bClaimed: !0,
-                    strBackgroundColor: a.strBackgroundColor,
-                    eGenre: a.eGenre,
-                    strTitle: a.strPageTitle,
-                    strSaleURL: m,
-                    strSummary: l,
+                    strBackgroundColor: r.strBackgroundColor,
+                    eGenre: r.eGenre,
+                    strTitle: r.strPageTitle,
+                    strSaleURL: t,
+                    strSummary: o,
                   })
                 );
             } else {
               let e = "";
               u.length || (e = "next"),
                 u.push(
-                  t.createElement(c, {
-                    key: r,
+                  s.createElement(c, {
+                    key: a,
                     strID: e,
-                    strSubheader: s,
+                    strSubheader: m,
                     strBackgroundColor: "#7C5F5A",
                     bClaimed: !1,
-                    eGenre: a.eGenre,
-                    strTitle: a.strPageTitle,
-                    strSaleURL: m,
+                    eGenre: r.eGenre,
+                    strTitle: r.strPageTitle,
+                    strSaleURL: t,
                     strSummary: "#Summer_21_Story_Next_Intro",
                   })
                 );
             }
           });
           let g = i.concat(u);
-          return t.createElement(
+          return s.createElement(
             "div",
-            { className: (0, s.Z)(n.PageOuterContainer, _.De.LANGUAGE) },
-            t.createElement(
+            { className: (0, m.Z)(l.PageOuterContainer, n.De.LANGUAGE) },
+            s.createElement(
               "div",
-              { className: n.PageInnerContainer },
-              t.createElement(
+              { className: l.PageInnerContainer },
+              s.createElement(
                 "a",
-                { href: _.De.STORE_BASE_URL },
-                r &&
-                  t.createElement("img", {
-                    className: n.LocalizedHeaderImg,
-                    src: r,
+                { href: n.De.STORE_BASE_URL },
+                a &&
+                  s.createElement("img", {
+                    className: l.LocalizedHeaderImg,
+                    src: a,
                   }),
                 d &&
-                  t.createElement("img", {
-                    className: n.LocalizedHeaderMobileImg,
+                  s.createElement("img", {
+                    className: l.LocalizedHeaderMobileImg,
                     src: d,
                   })
               ),
-              t.createElement(
+              s.createElement(
                 "div",
-                { className: n.PageInnerBG },
-                t.createElement(
+                { className: l.PageInnerBG },
+                s.createElement(
                   "div",
-                  { className: n.PageInnerContent },
-                  t.createElement(
+                  { className: l.PageInnerContent },
+                  s.createElement(
                     "div",
-                    { className: n.HeaderContainer },
-                    t.createElement(
+                    { className: l.HeaderContainer },
+                    s.createElement(
                       "div",
-                      { className: n.HeaderPrefix },
-                      (0, l.Xx)("#Summer_21_Overview_Title_Prefix")
+                      { className: l.HeaderPrefix },
+                      (0, o.Xx)("#Summer_21_Overview_Title_Prefix")
                     ),
-                    (0, l.Xx)("#Summer_21_Overview_Title")
+                    (0, o.Xx)("#Summer_21_Overview_Title")
                   ),
-                  t.createElement(
+                  s.createElement(
                     "div",
-                    { className: (0, s.Z)(n.HeaderDesc, n.Noto) },
-                    (0, l.Xx)("#Summer_21_Overview_Description1")
+                    { className: (0, m.Z)(l.HeaderDesc, l.Noto) },
+                    (0, o.Xx)("#Summer_21_Overview_Description1")
                   ),
-                  t.createElement(
+                  s.createElement(
                     "div",
-                    { className: (0, s.Z)(n.HeaderDesc, n.Noto) },
-                    (0, l.Xx)("#Summer_21_Overview_Description3")
+                    { className: (0, m.Z)(l.HeaderDesc, l.Noto) },
+                    (0, o.Xx)("#Summer_21_Overview_Description3")
                   ),
-                  t.createElement(
+                  s.createElement(
                     "div",
-                    { className: (0, s.Z)(n.HeaderDesc, n.Noto) },
-                    (0, l.Xx)("#Summer_21_Overview_Description4")
+                    { className: (0, m.Z)(l.HeaderDesc, l.Noto) },
+                    (0, o.Xx)("#Summer_21_Overview_Description4")
                   ),
-                  t.createElement(
+                  s.createElement(
                     "a",
                     {
                       id: "wallpapers",
                       href:
-                        _.De.MEDIA_CDN_URL +
+                        n.De.MEDIA_CDN_URL +
                         "store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip",
-                      className: (0, s.Z)(n.HeaderDesc, n.Noto, n.Wallpapers),
+                      className: (0, m.Z)(l.HeaderDesc, l.Noto, l.Wallpapers),
                     },
                     "*",
-                    (0, l.Xx)("#Summer21_Story_DownloadWallpaper")
+                    (0, o.Xx)("#Summer21_Story_DownloadWallpaper")
                   ),
-                  t.createElement(
+                  s.createElement(
                     "div",
-                    { className: (0, s.Z)(n.HeaderIntro, n.Noto) },
-                    (0, l.Xx)("#Summer_21_Overview_Description2")
+                    { className: (0, m.Z)(l.HeaderIntro, l.Noto) },
+                    (0, o.Xx)("#Summer_21_Overview_Description2")
                   ),
-                  t.createElement(
+                  s.createElement(
                     "div",
-                    { className: (0, s.Z)(n.HeaderIntro, n.Noto) },
-                    (0, l.Xx)("#Summer_21_Story_Intro")
+                    { className: (0, m.Z)(l.HeaderIntro, l.Noto) },
+                    (0, o.Xx)("#Summer_21_Story_Intro")
                   ),
-                  t.createElement(
+                  s.createElement(
                     "div",
-                    { className: (0, s.Z)(n.ListHeader, n.Noto) },
-                    (0, l.Xx)("#Summer_21_Story_Next")
+                    { className: (0, m.Z)(l.ListHeader, l.Noto) },
+                    (0, o.Xx)("#Summer_21_Story_Next")
                   ),
-                  t.createElement(
+                  s.createElement(
                     "div",
-                    { className: (0, s.Z)(n.GenreListContainer) },
+                    { className: (0, m.Z)(l.GenreListContainer) },
                     g
                   )
                 ),
-                t.createElement(o, null)
+                s.createElement(_, null)
               )
             )
           );
         },
-        o = (e) => {
-          const a = (0, m.Re)();
-          let r;
-          if (51 == a)
-            r = {
+        _ = (e) => {
+          const r = (0, t.Re)();
+          let a;
+          if (51 == r)
+            a = {
               badge_name: "#Summer21_Badge_Outcome1_Title",
               badge_desc: "#Summer21_Badge_Outcome1_Description",
-              badge_class: n.Badge_51,
+              badge_class: l.Badge_51,
             };
-          else if (52 == a)
-            r = {
+          else if (52 == r)
+            a = {
               badge_name: "#Summer21_Badge_Outcome2_Title",
               badge_desc: "#Summer21_Badge_Outcome2_Description",
-              badge_class: n.Badge_52,
+              badge_class: l.Badge_52,
             };
-          else if (53 == a)
-            r = {
+          else if (53 == r)
+            a = {
               badge_name: "#Summer21_Badge_Outcome3_Title",
               badge_desc: "#Summer21_Badge_Outcome3_Description",
-              badge_class: n.Badge_53,
+              badge_class: l.Badge_53,
             };
-          else if (54 == a)
-            r = {
+          else if (54 == r)
+            a = {
               badge_name: "#Summer21_Badge_Outcome4_Title",
               badge_desc: "#Summer21_Badge_Outcome4_Description",
-              badge_class: n.Badge_54,
+              badge_class: l.Badge_54,
             };
           else {
-            if (55 != a) return null;
-            r = {
+            if (55 != r) return null;
+            a = {
               badge_name: "#Summer21_Badge_Outcome5_Title",
               badge_desc: "#Summer21_Badge_Outcome5_Description",
-              badge_class: n.Badge_55,
+              badge_class: l.Badge_55,
             };
           }
-          return t.createElement(
-            t.Fragment,
+          return s.createElement(
+            s.Fragment,
             null,
-            t.createElement(
+            s.createElement(
               "div",
               {
-                className: (0, s.Z)(
-                  n.HeaderDesc,
-                  n.Noto,
-                  n.CompletedSummaryText
+                className: (0, m.Z)(
+                  l.HeaderDesc,
+                  l.Noto,
+                  l.CompletedSummaryText
                 ),
               },
-              (0, l.Xx)("#Summer21_Badge_Unlocked_Description")
+              (0, o.Xx)("#Summer21_Badge_Unlocked_Description")
             ),
-            t.createElement(
+            s.createElement(
               "div",
-              { id: "badge", className: (0, s.Z)(n.BadgeContainer, n.Noto) },
-              t.createElement(
+              { id: "badge", className: (0, m.Z)(l.BadgeContainer, l.Noto) },
+              s.createElement(
                 "div",
-                { className: n.Column },
-                t.createElement(
+                { className: l.Column },
+                s.createElement(
                   "div",
-                  { className: n.SubHeader },
-                  (0, l.Xx)("#Summer21_Badge_Prelude")
+                  { className: l.SubHeader },
+                  (0, o.Xx)("#Summer21_Badge_Prelude")
                 ),
-                t.createElement(
+                s.createElement(
                   "div",
-                  { className: n.BadgeName },
-                  (0, l.Xx)(r.badge_name)
+                  { className: l.BadgeName },
+                  (0, o.Xx)(a.badge_name)
                 ),
-                t.createElement(
+                s.createElement(
                   "div",
-                  { className: n.BadgeDesc },
-                  (0, l.Xx)(r.badge_desc)
+                  { className: l.BadgeDesc },
+                  (0, o.Xx)(a.badge_desc)
                 )
               ),
-              t.createElement(
+              s.createElement(
                 "div",
-                { className: n.Column },
-                t.createElement("a", {
-                  className: (0, s.Z)(n.BadgeImg, r.badge_class),
-                  href: _.De.COMMUNITY_BASE_URL + "my/badges/" + a,
+                { className: l.Column },
+                s.createElement("a", {
+                  className: (0, m.Z)(l.BadgeImg, a.badge_class),
+                  href: n.De.COMMUNITY_BASE_URL + "my/badges/" + r,
                 }),
-                t.createElement(
+                s.createElement(
                   "div",
-                  { className: n.BadgeText },
-                  (0, l.Xx)("#Summer21_Badge_Congrats1")
+                  { className: l.BadgeText },
+                  (0, o.Xx)("#Summer21_Badge_Congrats1")
                 ),
-                t.createElement(
+                s.createElement(
                   "div",
-                  { className: n.BadgeText },
-                  (0, l.Xx)("#Summer21_Badge_Congrats2")
+                  { className: l.BadgeText },
+                  (0, o.Xx)("#Summer21_Badge_Congrats2")
                 ),
-                t.createElement(
+                s.createElement(
                   "a",
                   {
-                    className: n.BadgeLink,
-                    href: _.De.COMMUNITY_BASE_URL + "my/edit/avatar/" + a,
+                    className: l.BadgeLink,
+                    href: n.De.COMMUNITY_BASE_URL + "my/edit/avatar/" + r,
                   },
-                  (0, l.Xx)("#Summer21_Badge_View")
+                  (0, o.Xx)("#Summer21_Badge_View")
                 ),
-                t.createElement("a", {
-                  className: n.FrameExample,
-                  href: _.De.COMMUNITY_BASE_URL + "my/edit/avatar/" + a,
+                s.createElement("a", {
+                  className: l.FrameExample,
+                  href: n.De.COMMUNITY_BASE_URL + "my/edit/avatar/" + r,
                 })
               )
             ),
-            t.createElement(
+            s.createElement(
               "div",
-              { className: (0, s.Z)(n.TheEnd, n.Noto) },
-              (0, l.Xx)("#Summer21_Story_End")
+              { className: (0, m.Z)(l.TheEnd, l.Noto) },
+              (0, o.Xx)("#Summer21_Story_End")
             )
           );
         },
         c = (e) => {
-          const a = (0, m.BO)(e.eGenre);
-          return t.createElement(
+          const r = (0, t.BO)(e.eGenre);
+          return s.createElement(
             "a",
             {
               id: e.strID,
               href: e.strSaleURL,
               style: { backgroundColor: `${e.strBackgroundColor}` },
-              className: (0, s.Z)(n.GenreContainer, n.Claimed),
+              className: (0, m.Z)(l.GenreContainer, l.Claimed),
             },
-            t.createElement(
+            s.createElement(
               "div",
-              { className: n.LeftColumn },
-              t.createElement(
+              { className: l.LeftColumn },
+              s.createElement(
                 "div",
-                { className: (0, s.Z)(n.GenreSubheader, n.Noto) },
+                { className: (0, m.Z)(l.GenreSubheader, l.Noto) },
                 e.strSubheader
               ),
-              t.createElement(
+              s.createElement(
                 "div",
-                { className: n.GenreTitle },
-                (0, l.Xx)(e.strTitle)
+                { className: l.GenreTitle },
+                (0, o.Xx)(e.strTitle)
               ),
-              t.createElement(
+              s.createElement(
                 "div",
-                { className: (0, s.Z)(n.GenreStory, n.Noto) },
-                (0, l.Xx)(e.strSummary)
+                { className: (0, m.Z)(l.GenreStory, l.Noto) },
+                (0, o.Xx)(e.strSummary)
               )
             ),
-            t.createElement(
+            s.createElement(
               "div",
-              { className: n.RightColumn },
-              a &&
-                t.createElement("div", {
-                  className: n.StickerPreview,
-                  style: { backgroundImage: `url(${a})` },
+              { className: l.RightColumn },
+              r &&
+                s.createElement("div", {
+                  className: l.StickerPreview,
+                  style: { backgroundImage: `url(${r})` },
                 }),
               !e.bClaimed &&
-                t.createElement("div", {
-                  className: (0, s.Z)(n.StickerPreview, n.Unclaimed),
+                s.createElement("div", {
+                  className: (0, m.Z)(l.StickerPreview, l.Unclaimed),
                 })
             )
           );

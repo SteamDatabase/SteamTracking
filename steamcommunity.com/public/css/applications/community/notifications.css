@@ -622,6 +622,7 @@
 }
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Content_1MZiz {
   justify-content: center;
+  flex: 1;
 }
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Title_1WlRE {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -1454,6 +1455,7 @@
 }
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Content_23dSW {
   justify-content: center;
+  flex: 1;
 }
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Title_BkpSl {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -2372,6 +2374,7 @@
 }
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Content_1MImw {
   justify-content: center;
+  flex: 1;
 }
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Title_1GZ_n {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;

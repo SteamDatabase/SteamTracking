@@ -2247,6 +2247,60 @@ a {
   display: flex;
   flex-direction: column;
 }
+.projectscheduledtrain_StatusMessage_1qQt0 {
+  font-size: 20px;
+  color: #aaa;
+}
+.projectscheduledtrain_ProjectTrain_1h7Ic {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  padding-left: 30px;
+}
+.projectscheduledtrain_ProjectTrain_1h7Ic .projectscheduledtrain_Heading_2OBI3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #67c1f5;
+}
+.projectscheduledtrain_ProjectTrain_1h7Ic .projectscheduledtrain_Desc_1A02c {
+  font-size: 20px;
+  color: #aaa;
+}
+.projectscheduledtrain_ProjectTrain_1h7Ic
+  .projectscheduledtrain_OptionBlock_2giaA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+.projectscheduledtrain_ProjectTrain_1h7Ic
+  .projectscheduledtrain_OptionBlock_2giaA
+  .projectscheduledtrain_OptionDetails_1WVpE {
+  font-size: 14px;
+  color: #ac966a;
+}
+.projectscheduledtrain_ProjectTrain_1h7Ic
+  .projectscheduledtrain_OptionBlock_2giaA
+  .projectscheduledtrain_ValueInput_b99J4 {
+  width: 70px;
+  height: 20px;
+  text-align: right;
+}
+.projectscheduledtrain_ProjectTrain_1h7Ic
+  .projectscheduledtrain_OptionBlock_2giaA
+  .projectscheduledtrain_ValueInput_b99J4
+  .projectscheduledtrain_Wide_3nqBj {
+  width: 100px;
+}
+.projectscheduledtrain_ProjectTrain_1h7Ic
+  .projectscheduledtrain_OptionBlock_2giaA
+  .projectscheduledtrain_ValueInput_b99J4.projectscheduledtrain_Invalid_1lBiR {
+  color: red;
+}
 * {
   box-sizing: border-box;
 }

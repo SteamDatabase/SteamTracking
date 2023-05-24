@@ -78,7 +78,7 @@
 	padding: 0px;
 	padding-left: 8px;
 	padding-right: 8px;
-	height: 27px;
+	min-height: 27px;
 	line-height: 27px;
 	color: #ffffff;
 	background-color: #ca5029;

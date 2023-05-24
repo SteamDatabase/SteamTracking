@@ -157,9 +157,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   text-transform: uppercase;
 }
 .contextmenu_contextMenuItem_pFo3k .SVGIcon_Button {
-  height: 10px;
-  width: 10px;
-  margin-right: 4px;
+  height: 15px;
+  width: 15px;
+  margin-right: 6px;
 }
 .contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T {
   display: flex;
@@ -2377,6 +2377,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .scrollpanel_ScrollPanel_1CXdi {
   position: relative;
 }
+.scrollpanel_ScrollY_313lB {
+  overflow-x: hidden;
+}
+.scrollpanel_ScrollX_1oRGo {
+  overflow-y: hidden;
+}
 .scrollpanel_ScrollY_313lB,
 .BasicUI .DialogContent_InnerWidth > .scrollpanel_ScrollY_313lB,
 .scrollpanel_ScrollBoth_3S2Ko,
@@ -3838,6 +3844,7 @@ button.TextButton.gpfocus {
   position: absolute;
   z-index: 1600;
   overflow: auto;
+  -webkit-app-region: none;
 }
 .DialogMenuPosition:not(.visible) {
   opacity: 0;
@@ -4588,10 +4595,6 @@ body.in_global_drag .title-area {
   color: #fff;
   text-decoration: underline;
 }
-.DesktopUI .title-area .title-bar-actions,
-.friendsui-container .title-area .title-bar-actions {
-  margin-right: 5px;
-}
 .DesktopUI .title-area-icon,
 .friendsui-container .title-area-icon {
   display: flex;
@@ -4600,8 +4603,12 @@ body.in_global_drag .title-area {
   cursor: default;
   transition: stroke 0.15s ease-out;
   width: 32px;
-  height: 24px;
-  margin-top: 7px;
+  height: 32px;
+}
+.DesktopUI .title-bar-actions,
+.friendsui-container .title-bar-actions {
+  max-height: 32px;
+  right: 0;
 }
 .DesktopUI .title-area-icon .SVGIcon_Minimize,
 .DesktopUI .title-area-icon .SVGIcon_Maximize,
@@ -4618,11 +4625,14 @@ body.in_global_drag .title-area {
 .DesktopUI .title-area-icon:hover,
 .friendsui-container .title-area-icon:hover {
   background: #3d4450;
-  border-radius: 2px;
   transition: background 0.15s ease-out;
 }
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
   background: #e22a27;
   transition: background 0.15s ease-out;
+}
+.DesktopUI .title-area-icon.minimizeButton svg,
+.friendsui-container .title-area-icon.minimizeButton svg {
+  transform: translateY(-4px);
 }

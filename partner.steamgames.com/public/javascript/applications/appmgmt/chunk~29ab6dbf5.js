@@ -4,8 +4,8 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [7334],
   {
-    65131: (e) => {
-      e.exports = {
+    65131: (t) => {
+      t.exports = {
         DashboardPage: "discountdashboard_DashboardPage_353rn",
         DashTitleBar: "discountdashboard_DashTitleBar_2m-_V",
         DashTitle: "discountdashboard_DashTitle_1FK58",
@@ -15,8 +15,8 @@
         ButtonGroup: "discountdashboard_ButtonGroup_2peTi",
       };
     },
-    17661: (e) => {
-      e.exports = {
+    17661: (t) => {
+      t.exports = {
         EventDetails: "discountgridheaders_EventDetails_3LMXj",
         Active: "discountgridheaders_Active_2BLec",
         RestrictedEligibility:
@@ -53,8 +53,8 @@
           "discountgridheaders_RelatedInfoDropDownItem_1ORam",
       };
     },
-    91849: (e) => {
-      e.exports = {
+    91849: (t) => {
+      t.exports = {
         UnknownValue: "gridcomponents_UnknownValue_3ovtf",
         PackageName: "gridcomponents_PackageName_t8fSj",
         PackageType: "gridcomponents_PackageType_3LZvj",
@@ -63,2739 +63,238 @@
         PackageID: "gridcomponents_PackageID_1E3TV",
       };
     },
-    29073: (e, t, i) => {
+    24448: (t, e, n) => {
       "use strict";
-      i.d(t, {
-        Rg: () => l,
-        XB: () => h,
-        XD: () => D,
-        ik: () => u,
-        pA: () => b,
-        rf: () => G,
-        u2: () => R,
-        vc: () => _,
-        xQ: () => a,
-      });
-      var n = i(45878),
-        r = i(29063);
-      const s = n.Message;
-      class a extends s {
-        constructor(e = null) {
-          super(),
-            a.prototype.opt_in_name || r.aR(a.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            a.sm_m ||
-              (a.sm_m = {
-                proto: a,
-                fields: {
-                  opt_in_name: {
-                    n: 1,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                  targeting_flag: {
-                    n: 2,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  settings_flag: {
-                    n: 3,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  email_templates: {
-                    n: 4,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                  start_rtime: {
-                    n: 5,
-                    d: 0,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  end_rtime: {
-                    n: 6,
-                    d: 0,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                },
-              }),
-            a.sm_m
-          );
-        }
-        static MBF() {
-          return a.sm_mbf || (a.sm_mbf = r.Bh(a.M())), a.sm_mbf;
-        }
-        toObject(e = !1) {
-          return a.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(a.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(a.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new a();
-          return a.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(a.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return a.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(a.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return a.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_CreatePartnerAppOptInEmail_Request";
-        }
-      }
-      class o extends s {
-        constructor(e = null) {
-          super(),
-            o.prototype.email_def_id || r.aR(o.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            o.sm_m ||
-              (o.sm_m = {
-                proto: o,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                },
-              }),
-            o.sm_m
-          );
-        }
-        static MBF() {
-          return o.sm_mbf || (o.sm_mbf = r.Bh(o.M())), o.sm_mbf;
-        }
-        toObject(e = !1) {
-          return o.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(o.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(o.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new o();
-          return o.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(o.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(o.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_CreatePartnerAppOptInEmail_Response";
-        }
-      }
-      class l extends s {
-        constructor(e = null) {
-          super(),
-            l.prototype.email_def_id || r.aR(l.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            l.sm_m ||
-              (l.sm_m = {
-                proto: l,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  targeting_flag: {
-                    n: 2,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  settings_flag: {
-                    n: 3,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  email_templates: {
-                    n: 4,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                  start_rtime: {
-                    n: 5,
-                    d: 0,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  end_rtime: {
-                    n: 6,
-                    d: 0,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  reviewed: {
-                    n: 7,
-                    d: !1,
-                    br: r.FE.readBool,
-                    bw: r.Xc.writeBool,
-                  },
-                },
-              }),
-            l.sm_m
-          );
-        }
-        static MBF() {
-          return l.sm_mbf || (l.sm_mbf = r.Bh(l.M())), l.sm_mbf;
-        }
-        toObject(e = !1) {
-          return l.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(l.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(l.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new l();
-          return l.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(l.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(l.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_UpdatePartnerAppOptInEmail_Request";
-        }
-      }
-      class c extends s {
-        constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return c.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new c();
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new c();
-          return c.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_UpdatePartnerAppOptInEmail_Response";
-        }
-      }
-      class d extends s {
-        constructor(e = null) {
-          super(),
-            d.prototype.accounts_examined || r.aR(d.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            d.sm_m ||
-              (d.sm_m = {
-                proto: d,
-                fields: {
-                  accounts_examined: {
-                    n: 1,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  accounts_emailed: {
-                    n: 2,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  accounts_not_emailed_opted_out: {
-                    n: 3,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  accounts_email_failed: {
-                    n: 4,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  completed: { n: 5, br: r.FE.readBool, bw: r.Xc.writeBool },
-                  rt_last_updated: {
-                    n: 6,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                },
-              }),
-            d.sm_m
-          );
-        }
-        static MBF() {
-          return d.sm_mbf || (d.sm_mbf = r.Bh(d.M())), d.sm_mbf;
-        }
-        toObject(e = !1) {
-          return d.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(d.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(d.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new d();
-          return d.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(d.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(d.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerAppOptInEmailStats";
-        }
-      }
-      class u extends s {
-        constructor(e = null) {
-          super(),
-            u.prototype.email_def_id || r.aR(u.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            u.sm_m ||
-              (u.sm_m = {
-                proto: u,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  force_resend: { n: 2, br: r.FE.readBool, bw: r.Xc.writeBool },
-                },
-              }),
-            u.sm_m
-          );
-        }
-        static MBF() {
-          return u.sm_mbf || (u.sm_mbf = r.Bh(u.M())), u.sm_mbf;
-        }
-        toObject(e = !1) {
-          return u.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(u.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(u.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new u();
-          return u.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(u.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(u.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_SendPartnerAppOptInEmailAndWait_Request";
-        }
-      }
-      class m extends s {
-        constructor(e = null) {
-          super(),
-            m.prototype.results || r.aR(m.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            m.sm_m ||
-              (m.sm_m = { proto: m, fields: { results: { n: 1, c: d } } }),
-            m.sm_m
-          );
-        }
-        static MBF() {
-          return m.sm_mbf || (m.sm_mbf = r.Bh(m.M())), m.sm_mbf;
-        }
-        toObject(e = !1) {
-          return m.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(m.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(m.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new m();
-          return m.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(m.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(m.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_SendPartnerAppOptInEmailAndWait_Response";
-        }
-      }
-      class p extends s {
-        constructor(e = null) {
-          super(),
-            p.prototype.opt_in_name || r.aR(p.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  opt_in_name: {
-                    n: 1,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                  targeting_flag: {
-                    n: 2,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  settings_flag: {
-                    n: 3,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  email_templates: {
-                    n: 4,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                  start_rtime: {
-                    n: 5,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  end_rtime: {
-                    n: 6,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  stats: { n: 7, c: d },
-                  creator_accountid: {
-                    n: 8,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  create_time: {
-                    n: 9,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  last_update_time: {
-                    n: 10,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  email_def_id: {
-                    n: 11,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  completed: { n: 12, br: r.FE.readBool, bw: r.Xc.writeBool },
-                  aborted: { n: 13, br: r.FE.readBool, bw: r.Xc.writeBool },
-                  deleted: { n: 14, br: r.FE.readBool, bw: r.Xc.writeBool },
-                  reviewed: { n: 15, br: r.FE.readBool, bw: r.Xc.writeBool },
-                },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = r.Bh(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(p.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new p();
-          return p.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(p.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(p.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerAppOptInEmailDef";
-        }
-      }
-      class _ extends s {
-        constructor(e = null) {
-          super(),
-            _.prototype.opt_in_name || r.aR(_.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  opt_in_name: {
-                    n: 1,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = r.Bh(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(_.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new _();
-          return _.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(_.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(_.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_GetPartnerAppOptInEmailDefAndStats_Request";
-        }
-      }
-      class g extends s {
-        constructor(e = null) {
-          super(),
-            g.prototype.defs || r.aR(g.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            g.sm_m ||
-              (g.sm_m = {
-                proto: g,
-                fields: { defs: { n: 1, c: p, r: !0, q: !0 } },
-              }),
-            g.sm_m
-          );
-        }
-        static MBF() {
-          return g.sm_mbf || (g.sm_mbf = r.Bh(g.M())), g.sm_mbf;
-        }
-        toObject(e = !1) {
-          return g.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(g.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(g.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new g();
-          return g.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(g.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(g.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_GetPartnerAppOptInEmailDefAndStats_Response";
-        }
-      }
-      class h extends s {
-        constructor(e = null) {
-          super(),
-            h.prototype.email_def_id || r.aR(h.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = r.Bh(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new h();
-          return h.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_GetEstimatePartnerAppOptInEmail_Request";
-        }
-      }
-      class v extends s {
-        constructor(e = null) {
-          super(),
-            v.prototype.stats || r.aR(v.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            v.sm_m ||
-              (v.sm_m = { proto: v, fields: { stats: { n: 1, c: d } } }),
-            v.sm_m
-          );
-        }
-        static MBF() {
-          return v.sm_mbf || (v.sm_mbf = r.Bh(v.M())), v.sm_mbf;
-        }
-        toObject(e = !1) {
-          return v.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(v.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(v.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new v();
-          return v.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(v.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(v.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_GetEstimatePartnerAppOptInEmail_Response";
-        }
-      }
-      class D extends s {
-        constructor(e = null) {
-          super(),
-            D.prototype.email_def_id || r.aR(D.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  appid: { n: 2, br: r.FE.readUint32, bw: r.Xc.writeUint32 },
-                  partnerid: {
-                    n: 3,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                },
-              }),
-            D.sm_m
-          );
-        }
-        static MBF() {
-          return D.sm_mbf || (D.sm_mbf = r.Bh(D.M())), D.sm_mbf;
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(D.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(D.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new D();
-          return D.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(D.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(D.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_TestFirePartnerAppOptInEmail_Request";
-        }
-      }
-      class y extends s {
-        constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new y();
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new y();
-          return y.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_TestFirePartnerAppOptInEmail_Response";
-        }
-      }
-      class S extends s {
-        constructor(e = null) {
-          super(),
-            S.prototype.accountid || r.aR(S.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            S.sm_m ||
-              (S.sm_m = {
-                proto: S,
-                fields: {
-                  accountid: {
-                    n: 1,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  appid: { n: 2, br: r.FE.readUint32, bw: r.Xc.writeUint32 },
-                  partnerid: {
-                    n: 3,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  rtime_notified: {
-                    n: 4,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  ignored_unverified_email: {
-                    n: 5,
-                    br: r.FE.readBool,
-                    bw: r.Xc.writeBool,
-                  },
-                  ignored_email_optout: {
-                    n: 6,
-                    br: r.FE.readBool,
-                    bw: r.Xc.writeBool,
-                  },
-                  status: { n: 7, br: r.FE.readUint32, bw: r.Xc.writeUint32 },
-                  send_rtime: {
-                    n: 8,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                },
-              }),
-            S.sm_m
-          );
-        }
-        static MBF() {
-          return S.sm_mbf || (S.sm_mbf = r.Bh(S.M())), S.sm_mbf;
-        }
-        toObject(e = !1) {
-          return S.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(S.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(S.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new S();
-          return S.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(S.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(S.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerOptInEmailTracking";
-        }
-      }
-      class b extends s {
-        constructor(e = null) {
-          super(),
-            b.prototype.email_def_id || r.aR(b.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            b.sm_m ||
-              (b.sm_m = {
-                proto: b,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                },
-              }),
-            b.sm_m
-          );
-        }
-        static MBF() {
-          return b.sm_mbf || (b.sm_mbf = r.Bh(b.M())), b.sm_mbf;
-        }
-        toObject(e = !1) {
-          return b.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(b.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(b.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new b();
-          return b.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(b.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(b.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_GetOptInEmailTracking_Request";
-        }
-      }
-      class f extends s {
-        constructor(e = null) {
-          super(),
-            f.prototype.email_def_id || r.aR(f.M()),
-            s.initialize(this, e, 0, -1, [2], null);
-        }
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: r.FE.readFixed64String,
-                    bw: r.Xc.writeFixed64String,
-                  },
-                  results: { n: 2, c: S, r: !0, q: !0 },
-                },
-              }),
-            f.sm_m
-          );
-        }
-        static MBF() {
-          return f.sm_mbf || (f.sm_mbf = r.Bh(f.M())), f.sm_mbf;
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(f.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(f.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new f();
-          return f.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(f.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(f.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_GetOptInEmailTracking_Response";
-        }
-      }
-      class E extends s {
-        constructor(e = null) {
-          super(),
-            E.prototype.appid || r.aR(E.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
-                fields: {
-                  appid: { n: 1, br: r.FE.readUint32, bw: r.Xc.writeUint32 },
-                  opt_in: { n: 2, br: r.FE.readBool, bw: r.Xc.writeBool },
-                  opt_in_name: {
-                    n: 3,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                  jsondata: { n: 4, br: r.FE.readString, bw: r.Xc.writeString },
-                  type: { n: 5, br: r.FE.readEnum, bw: r.Xc.writeEnum },
-                  accountid_add: {
-                    n: 6,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  time_opted_in: {
-                    n: 7,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  time_updated: {
-                    n: 8,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  accountid_lastmod: {
-                    n: 9,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  invited: { n: 10, br: r.FE.readBool, bw: r.Xc.writeBool },
-                  accountid_remove: {
-                    n: 11,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  time_opted_out: {
-                    n: 12,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  pruned: { n: 13, br: r.FE.readBool, bw: r.Xc.writeBool },
-                  accountid_prune: {
-                    n: 14,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  time_pruned: {
-                    n: 15,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  additional_featuring: {
-                    n: 16,
-                    br: r.FE.readBool,
-                    bw: r.Xc.writeBool,
-                  },
-                  feature_day: {
-                    n: 17,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  accountid_invited: {
-                    n: 18,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  no_planned_discount: {
-                    n: 19,
-                    br: r.FE.readBool,
-                    bw: r.Xc.writeBool,
-                  },
-                  pending_review: {
-                    n: 20,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  appeal_state: {
-                    n: 21,
-                    br: r.FE.readEnum,
-                    bw: r.Xc.writeEnum,
-                  },
-                  accountid_appeal: {
-                    n: 22,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = r.Bh(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new E();
-          return E.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerAppOptInData";
-        }
-      }
-      class k extends s {
-        constructor(e = null) {
-          super(),
-            k.prototype.data || r.aR(k.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            k.sm_m ||
-              (k.sm_m = {
-                proto: k,
-                fields: { data: { n: 1, c: E, r: !0, q: !0 } },
-              }),
-            k.sm_m
-          );
-        }
-        static MBF() {
-          return k.sm_mbf || (k.sm_mbf = r.Bh(k.M())), k.sm_mbf;
-        }
-        toObject(e = !1) {
-          return k.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(k.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(k.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new k();
-          return k.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(k.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(k.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_GetSinglePartnerAppOptIns_Response";
-        }
-      }
-      class G extends s {
-        constructor(e = null) {
-          super(),
-            G.prototype.appids || r.aR(G.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            G.sm_m ||
-              (G.sm_m = {
-                proto: G,
-                fields: {
-                  appids: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: r.FE.readUint32,
-                    pbr: r.FE.readPackedUint32,
-                    bw: r.Xc.writeRepeatedUint32,
-                  },
-                  additional_featuring: {
-                    n: 2,
-                    d: !0,
-                    br: r.FE.readBool,
-                    bw: r.Xc.writeBool,
-                  },
-                  opt_in_name: {
-                    n: 3,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                },
-              }),
-            G.sm_m
-          );
-        }
-        static MBF() {
-          return G.sm_mbf || (G.sm_mbf = r.Bh(G.M())), G.sm_mbf;
-        }
-        toObject(e = !1) {
-          return G.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(G.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(G.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new G();
-          return G.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(G.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(G.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_SetFeaturingOnPartnerAppOptIn_Request";
-        }
-      }
-      class I extends s {
-        constructor(e = null) {
-          super(),
-            I.prototype.appids || r.aR(I.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: {
-                  appids: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: r.FE.readUint32,
-                    pbr: r.FE.readPackedUint32,
-                    bw: r.Xc.writeRepeatedUint32,
-                  },
-                },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = r.Bh(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new I();
-          return I.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_SetFeaturingOnPartnerAppOptIn_Response";
-        }
-      }
-      class P extends s {
-        constructor(e = null) {
-          super(),
-            P.prototype.inviteid || r.aR(P.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            P.sm_m ||
-              (P.sm_m = {
-                proto: P,
-                fields: {
-                  inviteid: {
-                    n: 1,
-                    br: r.FE.readUint64String,
-                    bw: r.Xc.writeUint64String,
-                  },
-                  accountid_sender: {
-                    n: 2,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  email: { n: 3, br: r.FE.readString, bw: r.Xc.writeString },
-                  real_name: {
-                    n: 4,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                  note: { n: 5, br: r.FE.readString, bw: r.Xc.writeString },
-                  time_sent: {
-                    n: 6,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  current_state: {
-                    n: 7,
-                    br: r.FE.readEnum,
-                    bw: r.Xc.writeEnum,
-                  },
-                  pub_rights: {
-                    n: 8,
-                    br: r.FE.readUint64String,
-                    bw: r.Xc.writeUint64String,
-                  },
-                  app_rights: {
-                    n: 9,
-                    br: r.FE.readUint64String,
-                    bw: r.Xc.writeUint64String,
-                  },
-                  time_receiver_responded: {
-                    n: 10,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  accountid: {
-                    n: 11,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  time_partner_responded: {
-                    n: 12,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  accountid_partner: {
-                    n: 13,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  partnerid: {
-                    n: 14,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  time_last_updated: {
-                    n: 15,
-                    br: r.FE.readUint32,
-                    bw: r.Xc.writeUint32,
-                  },
-                  sender_ip: {
-                    n: 16,
-                    br: r.FE.readString,
-                    bw: r.Xc.writeString,
-                  },
-                },
-              }),
-            P.sm_m
-          );
-        }
-        static MBF() {
-          return P.sm_mbf || (P.sm_mbf = r.Bh(P.M())), P.sm_mbf;
-        }
-        toObject(e = !1) {
-          return P.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(P.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(P.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new P();
-          return P.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(P.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(P.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "MembershipInvite";
-        }
-      }
-      class w extends s {
-        constructor(e = null) {
-          super(),
-            w.prototype.invites || r.aR(w.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: { invites: { n: 1, c: P, r: !0, q: !0 } },
-              }),
-            w.sm_m
-          );
-        }
-        static MBF() {
-          return w.sm_mbf || (w.sm_mbf = r.Bh(w.M())), w.sm_mbf;
-        }
-        toObject(e = !1) {
-          return w.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return r.TA(w.M(), e, t);
-        }
-        static fromObject(e) {
-          return r.aD(w.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            i = new w();
-          return w.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return r.F(w.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          r.l2(w.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMembershipInvite_GetInvites_Response";
-        }
-      }
-      var R, B;
-      !(function (e) {
-        (e.GetSinglePartnerAppOptIn = function (e, t) {
-          return e.SendMsg("Publishing.GetSinglePartnerAppOptIn#1", t, k, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
-        }),
-          (e.SetFeaturingOnPartnerAppOptIn = function (e, t) {
-            return e.SendMsg(
-              "Publishing.SetFeaturingOnPartnerAppOptIn#1",
-              t,
-              I,
-              { ePrivilege: 1 }
+      n.d(e, { Gr: () => v, Jq: () => h, si: () => D, y$: () => m });
+      var i = n(33940),
+        a = n(52868),
+        s = n.n(a),
+        o = n(50265),
+        r = n(89526),
+        c = n(4556),
+        l = n(47165),
+        u = n(23801),
+        d = n(23217),
+        p = n(32765);
+      class g {
+        constructor() {
+          (this.m_mapProfiles = new Map()),
+            (this.m_mapProfilesLoading = new Map());
+        }
+        LoadProfiles(t, e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            (0,
+            u.X)(t.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            let n = t.filter(
+              (t) =>
+                !this.m_mapProfiles.has(t) && !this.m_mapProfilesLoading.has(t)
             );
-          }),
-          (e.CreatePartnerAppOptInEmails = function (e, t) {
-            return e.SendMsg("Publishing.CreatePartnerAppOptInEmails#1", t, o, {
-              ePrivilege: 1,
-            });
-          }),
-          (e.UpdatePartnerAppOptInEmails = function (e, t) {
-            return e.SendMsg("Publishing.UpdatePartnerAppOptInEmails#1", t, c, {
-              ePrivilege: 1,
-            });
-          }),
-          (e.SendPartnerOptInEmailAndWait = function (e, t) {
-            return e.SendMsg(
-              "Publishing.SendPartnerOptInEmailAndWait#1",
-              t,
-              m,
-              { ePrivilege: 1 }
-            );
-          }),
-          (e.GetPartnerAppOptInEmailDefAndStats = function (e, t) {
-            return e.SendMsg(
-              "Publishing.GetPartnerAppOptInEmailDefAndStats#1",
-              t,
-              g,
-              { ePrivilege: 1 }
-            );
-          }),
-          (e.GetEstimatePartnerAppOptInEmail = function (e, t) {
-            return e.SendMsg(
-              "Publishing.GetEstimatePartnerAppOptInEmail#1",
-              t,
-              v,
-              { ePrivilege: 1 }
-            );
-          }),
-          (e.TestFirePartnerAppOptInEmail = function (e, t) {
-            return e.SendMsg(
-              "Publishing.TestFirePartnerAppOptInEmail#1",
-              t,
-              y,
-              { ePrivilege: 1 }
-            );
-          }),
-          (e.GetOptInEmailTracking = function (e, t) {
-            return e.SendMsg("Publishing.GetOptInEmailTracking#1", t, f, {
-              ePrivilege: 1,
-            });
-          });
-      })(R || (R = {})),
-        (function (e) {
-          e.GetInvites = function (e, t) {
-            return e.SendMsg("PartnerMembershipInvite.GetInvites#1", t, w, {
-              bConstMethod: !0,
-              ePrivilege: 11,
-            });
-          };
-        })(B || (B = {}));
-    },
-    15039: (e, t, i) => {
-      "use strict";
-      i.d(t, { U: () => _, _: () => p });
-      var n = i(33940),
-        r = i(52868),
-        s = i.n(r),
-        a = i(50265),
-        o = (i(46132), i(42770), i(69678), i(53236), i(23217)),
-        l = i(26464),
-        c = i(85246),
-        d = i(44973),
-        u = (i(26281), i(17974)),
-        m = i(97334);
-      i(48616);
-      class p {
-        constructor(e, t) {
-          (this.m_filesToUpload = a.LO.array()),
-            (this.m_strUploadPath = null),
-            (this.m_fnUploadSuccessCallback = null),
-            (this.m_strUploadPath = e),
-            (this.m_fnUploadSuccessCallback = t);
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        ClearImages() {
-          this.m_filesToUpload = a.LO.array();
-        }
-        DeleteUploadImage(e) {
-          const t = this.m_filesToUpload.findIndex(
-            (t) => e.file == t.file && e.uploadTime == t.uploadTime
-          );
-          t >= 0 &&
-            (this.m_filesToUpload.splice(t, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]));
-        }
-        isImageFile(e) {
-          return e.type.startsWith("image/");
-        }
-        isVideoFile(e) {
-          return e.type.startsWith("video/");
-        }
-        isSubtitleTextFile(e) {
-          return (
-            e.type.startsWith("text/") ||
-            ("" == e.type && e.name.split("?")[0].endsWith(".vtt")) ||
-            ("" == e.type && e.name.split("?")[0].endsWith(".srt"))
-          );
-        }
-        AddImageForLanguage(e, t, i, r) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = !1;
-            return (
-              yield new Promise((s) => {
-                if (this.isImageFile(e)) {
-                  const a = new FileReader();
-                  (a.onload = () => {
-                    const o = new Image();
-                    (o.onload = () => {
-                      const a = new u.Mr(e, t, o, i, r);
-                      (this.m_filesToUpload = [...this.m_filesToUpload, a]),
-                        (n = !0),
-                        s();
-                    }),
-                      (o.onerror = (e) => {
-                        console.error(
-                          "CCloudImageUploader failed to load the image, details",
-                          e
-                        ),
-                          (n = !1),
-                          s();
-                      }),
-                      (o.src = a.result.toString());
-                  }),
-                    a.readAsDataURL(e);
-                } else if (this.isVideoFile(e)) {
-                  const r = document.createElement("video");
-                  (r.preload = "metadata"),
-                    r.addEventListener("loadedmetadata", () => {
-                      const a = new u.RB(e, t, r, i);
-                      (this.m_filesToUpload = [...this.m_filesToUpload, a]),
-                        (n = !0),
-                        s();
-                    }),
-                    (r.onerror = (e) => {
-                      console.error(
-                        "CCloudImageUploader failed to load the video, details",
-                        e
-                      ),
-                        (n = !1),
-                        s();
-                    }),
-                    (r.src = URL.createObjectURL(e));
-                } else
-                  this.isSubtitleTextFile(e)
-                    ? ((this.m_filesToUpload = [
-                        ...this.m_filesToUpload,
-                        new u.nZ(e, t, i),
-                      ]),
-                      (n = !0),
-                      s())
-                    : (console.error(
-                        "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-                        e,
-                        e.type
-                      ),
-                      (n = !1));
-              }),
-              n
-            );
-          });
-        }
-        UploadAllImages(e, t, i, r, s) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = {};
-            for (const e of this.m_filesToUpload)
-              if ("pending" === e.status) {
-                const t = e.IsValidAssetType(i, r, s);
-                if (!t.error && !t.needsCrop) {
-                  e.status = "uploading";
-                  n[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
-                    e.file,
-                    e.file.name,
-                    e.language
-                  );
-                }
-              }
-            const a = yield (0, c.bX)(n);
-            return (
-              Object.keys(a).forEach((i) => {
-                const n = a[i],
-                  r = this.m_filesToUpload.find(
-                    (e) => `${e.uploadTime}/${e.file.name}` === i
-                  );
-                if (r)
-                  if (n && 1 === n.success) {
-                    r.status = "success";
-                    const i = (0, m.C)(n.language, t, e);
-                    this.m_fnUploadSuccessCallback(
-                      n.image_hash,
-                      n.file_name,
-                      i,
-                      (function (e) {
-                        switch (e) {
-                          case 2:
-                            return "image/gif";
-                          case 1:
-                            return "image/jpeg";
-                          case 3:
-                            return "image/png";
-                          case 4:
-                            return "video/mp4";
-                          case 5:
-                            return "video/webm";
-                          case 6:
-                            return "text/vtt";
-                          case 7:
-                            return "text/srt";
-                        }
-                        return null;
-                      })(n.file_type),
-                      r.type,
-                      r.width,
-                      r.height
-                    );
-                  } else (r.status = "failed"), (r.message = n.message);
-              }),
-              a
-            );
-          });
-        }
-        UploadFile(e, t, i, r, a) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = null;
-            const r = new FormData();
-            r.append("assetfile", e, t),
-              r.append("sessionid", d.De.SESSIONID),
-              r.append("elangauge", "" + i);
-            const a = (function (e) {
-              const t = e.toLowerCase();
-              if (t.endsWith(".jpg")) return "image/jpeg";
-              if (t.endsWith(".png")) return "image/png";
-              if (t.endsWith(".gif")) return "image/gif";
-              if (t.endsWith(".mp4")) return "video/mp4";
-              if (t.endsWith(".webm")) return "video/webm";
-              if (t.endsWith(".srt")) return "text/srt";
-              if (t.endsWith(".vtt")) return "text/vtt";
-              return null;
-            })(t);
-            if (!a)
-              return {
-                success: 8,
-                message: "Invalid file extension, cannot determine mimetype",
-              };
-            r.append("mimetype", a);
-            try {
-              n = yield s().post(this.m_strUploadPath, r, {
+            if (0 == n.length) return this.m_mapProfilesLoading.get(t[0]);
+            let i = p.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              a = s().get(i, {
+                params: { steamids: n.join(",") },
                 withCredentials: !0,
-                headers: { "Content-Type": "multipart/form-data" },
+                cancelToken: null == e ? void 0 : e.token,
               });
-            } catch (e) {
-              const t = (0, o.l)(e);
-              console.log("CCloudImageUploader.UploadFile failed ", t, e),
-                (n = e.response);
-            }
-            return null == n ? void 0 : n.data;
+            n.forEach((t) => this.m_mapProfilesLoading.set(t, a));
+            let o = yield a;
+            o.data &&
+              200 == o.status &&
+              o.data.forEach((t) => {
+                (t.avatar_hash = t.avatar_url),
+                  (t.avatar_url_medium = (0, c.U)(t.avatar_url, "medium")),
+                  (t.avatar_url_full = (0, c.U)(t.avatar_url, "full")),
+                  (t.avatar_url = (0, c.U)(t.avatar_url)),
+                  this.m_mapProfiles.set(t.steamid, t),
+                  this.m_mapProfilesLoading.delete(t.steamid);
+              });
           });
         }
-      }
-      function _(e) {
-        switch (e) {
-          case "image/jpeg":
-            return ".jpg";
-          case "image/png":
-            return ".png";
-          case "image/gif":
-            return ".gif";
-          case "video/mp4":
-            return ".mp4";
-          case "video/webm":
-            return ".webm";
-          case "text/vtt":
-            return ".vtt";
-          case "text/srt":
-            return ".srt";
+        GetProfile(t) {
+          return this.m_mapProfiles.get(t);
         }
-        return (
-          console.error("ConvertMimeTypeToExtension:Unexepected mime type ", e),
-          ".jpg"
-        );
+        GetProfileByAccountID(t) {
+          return this.m_mapProfiles.get(
+            l.K.InitFromAccountID(t).ConvertTo64BitString()
+          );
+        }
+        GetProfileBySteamID(t) {
+          return this.m_mapProfiles.get(t.ConvertTo64BitString());
+        }
+        BHasProfile(t) {
+          return this.m_mapProfiles.has(t);
+        }
+        BHasProfileByAccountID(t) {
+          return this.m_mapProfiles.has(
+            l.K.InitFromAccountID(t).ConvertTo64BitString()
+          );
+        }
+        BHasProfileBySteamID(t) {
+          return this.m_mapProfiles.has(t.ConvertTo64BitString());
+        }
+        BHasAllProfilesBySteamID(t) {
+          return !t.some((t) => !this.BHasProfileBySteamID(t));
+        }
+        GetProfileURLBySteamID(t) {
+          const e = this.GetProfileBySteamID(t);
+          return e && e.profile_url
+            ? p.De.COMMUNITY_BASE_URL + "id/" + e.profile_url
+            : p.De.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString();
+        }
+        GetPersonaNameBySteamID(t) {
+          const e = this.GetProfileBySteamID(t);
+          return e && e.persona_name ? e.persona_name : "";
+        }
       }
-      (0, n.gn)([a.LO], p.prototype, "m_filesToUpload", void 0),
-        (0, n.gn)([l.a], p.prototype, "GetUploadImages", null),
-        (0, n.gn)([l.a], p.prototype, "ClearImages", null),
-        (0, n.gn)([l.a], p.prototype, "DeleteUploadImage", null),
-        (0, n.gn)([l.a], p.prototype, "AddImageForLanguage", null),
-        (0, n.gn)([l.a], p.prototype, "UploadAllImages", null);
+      (0, i.gn)([o.LO], g.prototype, "m_mapProfiles", void 0);
+      const m = new g();
+      function v(t) {
+        const e = r.useMemo(
+            () => (t ? ("string" == typeof t ? new l.K(t) : t) : null),
+            [t]
+          ),
+          [n, i] = (0, r.useState)(!!e && !m.BHasProfileBySteamID(e));
+        (0, r.useEffect)(() => {
+          const t = s().CancelToken.source();
+          return (
+            e &&
+              !m.BHasProfileBySteamID(e) &&
+              m
+                .LoadProfiles([e.ConvertTo64BitString()])
+                .catch((t) => {
+                  const n = (0, d.l)(t);
+                  console.error(
+                    "useUserProfile failed to load profile for " +
+                      e.ConvertTo64BitString() +
+                      ": " +
+                      n.strErrorMsg,
+                    n
+                  );
+                })
+                .finally(() => {
+                  t.token.reason || i(!1);
+                }),
+            () => t.cancel("unmounting useUserProfile")
+          );
+        }, [t]);
+        return [n, !!e && m.GetProfileBySteamID(e)];
+      }
+      function h(t) {
+        return v(r.useMemo(() => l.K.InitFromAccountID(t), [t]));
+      }
+      function D(t) {
+        return (function (t) {
+          const e = r.useMemo(
+              () =>
+                t
+                  ? t.map((t) => ("string" == typeof t ? new l.K(t) : t))
+                  : null,
+              [t]
+            ),
+            [n, i] = (0, r.useState)(!!e && !m.BHasAllProfilesBySteamID(e));
+          return (
+            (0, r.useEffect)(() => {
+              const t = s().CancelToken.source();
+              return (
+                e &&
+                  !m.BHasAllProfilesBySteamID(e) &&
+                  m
+                    .LoadProfiles(e.map((t) => t.ConvertTo64BitString()))
+                    .catch((t) => {
+                      const n = (0, d.l)(t);
+                      console.error(
+                        "useUserProfile failed to load profile for list: " +
+                          n.strErrorMsg,
+                        (0, o.ZN)(e),
+                        n
+                      );
+                    })
+                    .finally(() => {
+                      t.token.reason || i(!1);
+                    }),
+                () => t.cancel("unmounting useAllUserProfile")
+              );
+            }, [e]),
+            [n, !!e && e.map((t) => m.GetProfileBySteamID(t))]
+          );
+        })(r.useMemo(() => t.map((t) => l.K.InitFromAccountID(t)), [t]));
+      }
+      window.g_ProfileStore = m;
     },
-    70903: (e, t, i) => {
+    70903: (t, e, n) => {
       "use strict";
-      i.d(t, { N: () => u, a: () => d });
-      var n = i(33940),
-        r = i(89526),
-        s = i(36597),
-        a = i(57858),
-        o = i(58218),
-        l = i(23801),
-        c = i(32765);
-      function d(e = !1) {
-        return (0, n.mG)(this, void 0, void 0, function* () {
-          if (e && a.Z.BIsInitialized()) return;
-          const t = (0, c.kQ)(
+      n.d(e, { N: () => d, a: () => u });
+      var i = n(33940),
+        a = n(89526),
+        s = n(19094),
+        o = n(57858),
+        r = n(58218),
+        c = n(23801),
+        l = n(32765);
+      function u(t = !1) {
+        return (0, i.mG)(this, void 0, void 0, function* () {
+          if (t && o.Z.BIsInitialized()) return;
+          const e = (0, l.kQ)(
             "partnerbrowse_webapi_token",
             "application_config"
           );
-          (0, l.X)(Boolean(t), "require partnerbrowse_webapi_token");
-          const i = new s.J(c.De.WEBAPI_BASE_URL, t);
+          (0, c.X)(Boolean(e), "require partnerbrowse_webapi_token");
+          const n = new s.J(l.De.WEBAPI_BASE_URL, e);
           return (
-            ("dev" != c.De.WEB_UNIVERSE && "beta" != c.De.WEB_UNIVERSE) ||
+            ("dev" != l.De.WEB_UNIVERSE && "beta" != l.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                t
+                e
               ),
-            a.Z.Initialize(i, c.L7.is_partner_member)
+            o.Z.Initialize(n, l.L7.is_partner_member)
           );
         });
       }
-      function u() {
-        const e = (0, o.T)("usePartnerStoreBrowseAPI"),
-          [t, i] = (0, r.useState)(!1);
+      function d() {
+        const t = (0, r.T)("usePartnerStoreBrowseAPI"),
+          [e, n] = (0, a.useState)(!1);
         return (
-          (0, r.useEffect)(() => {
-            d().then(() => {
-              var t;
-              (null === (t = null == e ? void 0 : e.token) || void 0 === t
+          (0, a.useEffect)(() => {
+            u().then(() => {
+              var e;
+              (null === (e = null == t ? void 0 : t.token) || void 0 === e
                 ? void 0
-                : t.reason) || i(!0);
+                : e.reason) || n(!0);
             });
           }, []),
-          t
+          e
         );
       }
     },
-    64368: (e, t, i) => {
+    65395: (t, e, n) => {
       "use strict";
-      i.d(t, {
-        B7: () => a,
-        JA: () => c,
-        MH: () => d,
-        Sc: () => n,
-        Xj: () => o,
-        pM: () => l,
-      });
-      var n,
-        r,
-        s = i(46132);
-      i(42770), i(15039), i(12597), i(86121);
-      function a(e, t) {
-        var i, n, r, s, a;
-        if (e) {
-          const o =
-            e.collect_trailer_permissions ||
-            e.collect_demo_permissions ||
-            e.collect_game_profile_intent;
-          return Boolean(
-            (null === (i = e.categories) || void 0 === i
-              ? void 0
-              : i.enabled) ||
-              (null === (n = e.artist_statement) || void 0 === n
-                ? void 0
-                : n.enabled) ||
-              (null === (r = e.primary_country) || void 0 === r
-                ? void 0
-                : r.enabled) ||
-              (null === (s = e.press_contact) || void 0 === s
-                ? void 0
-                : s.enabled) ||
-              (null === (a = e.dynamic_sections) || void 0 === a
-                ? void 0
-                : a.length) > 0 ||
-              (e.additional_featuring_section_enabled &&
-                o &&
-                (!t || t.additional_featuring))
-          );
-        }
-        return !1;
-      }
-      function o(e, t, i = "") {
-        if (e) {
-          const n = (0, s.j_)(t);
-          return e[n] ? e[n] : e.english ? e.english : i;
-        }
-        return i;
-      }
-      function l(e, t, i = "") {
-        if (e) {
-          const n = (0, s.j_)(t);
-          return e[n] ? e[n] : i;
-        }
-        return i;
-      }
-      function c(e, t) {
-        var i;
-        const n = (0, s.j_)(t);
-        return (
-          (null === (i = null == e ? void 0 : e[n]) || void 0 === i
-            ? void 0
-            : i.length) > 0
-        );
-      }
-      function d(e) {
-        var t;
-        null === (t = e.dynamic_sections) ||
-          void 0 === t ||
-          t.forEach((e) => {
-            var t;
-            null === (t = e.lists) ||
-              void 0 === t ||
-              t.forEach((e) => {
-                var t;
-                null === (t = e.options) ||
-                  void 0 === t ||
-                  t.forEach((e, t) => {
-                    u(e.text), u(e.tooltip);
-                  });
-              });
-          });
-      }
-      function u(e) {
-        if (e)
-          for (let t = 0; t < 30; ++t) {
-            const i = (0, s.j_)(t);
-            null == e[i] ||
-              null == e[i] ||
-              Number.isNaN(e[i]) ||
-              (e[i] = "" + e[i]);
-          }
-      }
-      !(function (e) {
-        (e[(e[""] = 0)] = ""),
-          (e[(e["Steam Game Festival"] = 1)] = "Steam Game Festival"),
-          (e[(e["Tabletop Festival"] = 2)] = "Tabletop Festival");
-      })(n || (n = {})),
-        (function (e) {
-          (e[(e.k_Optional = 0)] = "k_Optional"),
-            (e[(e.k_Suggested = 1)] = "k_Suggested"),
-            (e[(e.k_Required = 2)] = "k_Required");
-        })(r || (r = {}));
-    },
-    12597: (e, t, i) => {
-      "use strict";
-      i.d(t, {
-        I_: () => b,
-        S4: () => S,
-        UT: () => D,
-        Ys: () => p,
-        Zu: () => _,
-        mj: () => h,
-        n: () => y,
-        rN: () => g,
-        rg: () => v,
-        up: () => u,
-      });
-      var n = i(33940),
-        r = i(64368),
-        s = i(23457),
-        a = i(50265),
-        o = i(46132),
-        l = (i(42770), i(29073), i(7948)),
-        c = i(23801),
-        d = i(4306);
-      const u = "email_",
-        m = "email_section_";
-      var p;
-      !(function (e) {
-        (e[(e.k_RegistrationConfirmation = 0)] = "k_RegistrationConfirmation"),
-          (e[(e.k_Reminder = 1)] = "k_Reminder"),
-          (e[(e.k_Invite = 2)] = "k_Invite"),
-          (e[(e.k_Followup = 3)] = "k_Followup"),
-          (e[(e.k_Starting = 4)] = "k_Starting"),
-          (e[(e.k_InviteReminder = 5)] = "k_InviteReminder"),
-          (e[(e.k_Update = 6)] = "k_Update"),
-          (e[(e.k_PermissionRequest = 7)] = "k_PermissionRequest");
-      })(p || (p = {}));
-      const _ = [
-        p.k_Invite,
-        p.k_InviteReminder,
-        p.k_RegistrationConfirmation,
-        p.k_Update,
-        p.k_Reminder,
-        p.k_Starting,
-        p.k_Followup,
-        p.k_PermissionRequest,
-      ];
-      function g(e) {
-        switch (e) {
-          case p.k_Invite:
-            return "Invitation Email";
-          case p.k_InviteReminder:
-            return "Invitation Reminder Email";
-          case p.k_RegistrationConfirmation:
-            return "Registration Success Email";
-          case p.k_Update:
-            return "General Update";
-          case p.k_Reminder:
-            return "Reminder Email - Just Days Until It Starts";
-          case p.k_Starting:
-            return "Event Starts Today Email";
-          case p.k_Followup:
-            return "Follow-up Email";
-          case p.k_PermissionRequest:
-            return "Media Permission Request";
-        }
-        return "unknown";
-      }
-      function h(e) {
-        switch (e) {
-          case p.k_Invite:
-          case p.k_InviteReminder:
-            return "Here's what you need to know and how to get registered:";
-          case p.k_RegistrationConfirmation:
-          case p.k_Update:
-            return "Below are some general things to keep in mind and make use of while you prepare for your participation.";
-          case p.k_Reminder:
-            return "We're here to help connect you with everything you need to have a successful event.";
-          case p.k_Starting:
-          case p.k_Followup:
-          case p.k_PermissionRequest:
-            return null;
-        }
-        return "unknown";
-      }
-      var v;
-      !(function (e) {
-        (e[(e.k_Custom = 0)] = "k_Custom"),
-          (e[(e.k_AssetKit = 1)] = "k_AssetKit"),
-          (e[(e.k_DemoPressPreview = 2)] = "k_DemoPressPreview"),
-          (e[(e.k_ScheduleLiveStream = 3)] = "k_ScheduleLiveStream"),
-          (e[(e.k_CancelSection = 4)] = "k_CancelSection"),
-          (e[(e.k_DemoNotReady = 5)] = "k_DemoNotReady"),
-          (e[(e.k_ReviewCategorization = 6)] = "k_ReviewCategorization"),
-          (e[(e.k_DemoReview = 7)] = "k_DemoReview"),
-          (e[(e.k_PressPreviewDetails = 8)] = "k_PressPreviewDetails"),
-          (e[(e.k_StatsSummary = 9)] = "k_StatsSummary"),
-          (e[(e.k_SurveyButton = 10)] = "k_SurveyButton"),
-          (e[(e.k_DemoLaunch = 11)] = "k_DemoLaunch"),
-          (e[(e.k_CallForRegistration = 12)] = "k_CallForRegistration"),
-          (e[(e.k_EnterDiscount = 13)] = "k_EnterDiscount"),
-          (e[(e.k_EnterDiscountReminder = 14)] = "k_EnterDiscountReminder"),
-          (e[(e.k_LearnMore = 15)] = "k_LearnMore"),
-          (e[(e.k_MediaUsePermission = 16)] = "k_MediaUsePermission"),
-          (e[(e.k_MeasureResults = 17)] = "k_MeasureResults"),
-          (e[(e.k_TrailerOrDemoPermissions = 18)] =
-            "k_TrailerOrDemoPermissions"),
-          (e[(e.k_NextFestQASession = 19)] = "k_NextFestQASession"),
-          (e[(e.k_NextFestReturns = 20)] = "k_NextFestReturns"),
-          (e[(e.k_NextFestWhatNext = 21)] = "k_NextFestWhatNext"),
-          (e[(e.k_NextFestTips = 22)] = "k_NextFestTips"),
-          (e[(e.k_NextFestStartsNow = 23)] = "k_NextFestStartsNow"),
-          (e[(e.k_MeasureResultsFree = 24)] = "k_MeasureResultsFree"),
-          (e[(e.k_NextFestThankYou = 25)] = "k_NextFestThankYou"),
-          (e[(e.k_MediaPermissionReminder = 26)] = "k_MediaPermissionReminder"),
-          (e[(e.k_SaleThankYou = 27)] = "k_SaleThankYou");
-      })(v || (v = {}));
-      const D = [
-        v.k_Custom,
-        v.k_CallForRegistration,
-        v.k_AssetKit,
-        v.k_DemoPressPreview,
-        v.k_PressPreviewDetails,
-        v.k_DemoReview,
-        v.k_DemoLaunch,
-        v.k_EnterDiscount,
-        v.k_EnterDiscountReminder,
-        v.k_ScheduleLiveStream,
-        v.k_ReviewCategorization,
-        v.k_DemoNotReady,
-        v.k_LearnMore,
-        v.k_CancelSection,
-        v.k_StatsSummary,
-        v.k_SurveyButton,
-        v.k_MediaUsePermission,
-        v.k_TrailerOrDemoPermissions,
-        v.k_MeasureResults,
-        v.k_MeasureResultsFree,
-        v.k_NextFestQASession,
-        v.k_NextFestReturns,
-        v.k_NextFestWhatNext,
-        v.k_NextFestTips,
-        v.k_NextFestStartsNow,
-        v.k_NextFestThankYou,
-        v.k_MediaPermissionReminder,
-        v.k_SaleThankYou,
-      ];
-      function y(e) {
-        switch (e) {
-          case v.k_Custom:
-            return "Custom text section";
-          case v.k_CallForRegistration:
-            return "Register now by dateX";
-          case v.k_AssetKit:
-            return "Asset kit section";
-          case v.k_ScheduleLiveStream:
-            return "You can schedule a live stream + see schedule";
-          case v.k_CancelSection:
-            return "Cancel any time";
-          case v.k_DemoNotReady:
-            return "Cancel by this date, please";
-          case v.k_ReviewCategorization:
-            return "Review your game's categorization";
-          case v.k_DemoReview:
-            return "Demo Reminder: Get your demo reviewed";
-          case v.k_DemoLaunch:
-            return "Demo Reminder: Launch your demo";
-          case v.k_DemoPressPreview:
-            return "Press Preview Reminder: Register Now";
-          case v.k_PressPreviewDetails:
-            return "Press Preview details";
-          case v.k_EnterDiscount:
-            return "Discount, Enter Now";
-          case v.k_EnterDiscountReminder:
-            return "Discount, Reminder";
-          case v.k_SurveyButton:
-            return "Survey button";
-          case v.k_MeasureResults:
-            return "Measuring Your Results (sales, wishlists, demos)";
-          case v.k_MeasureResultsFree:
-            return "Measuring Your Results (wishlists, demos, livestreams)";
-          case v.k_StatsSummary:
-            return "Game Stats; demos, wishlists, views, etc.";
-          case v.k_LearnMore:
-            return "Learn More Link";
-          case v.k_MediaUsePermission:
-            return "Permission Request: Media Usage";
-          case v.k_TrailerOrDemoPermissions:
-            return "Permission Request: Trailer and/or Demo";
-          case v.k_MediaPermissionReminder:
-            return "Permission Reminder: Trailer and/or Demo";
-          case v.k_NextFestReturns:
-            return "Next Fest:  Returns on _date_";
-          case v.k_NextFestQASession:
-            return "Next Fest: Join Us For A Live Q&A Session";
-          case v.k_NextFestWhatNext:
-            return "Next Fest: What's Next";
-          case v.k_NextFestTips:
-            return "Next Fest: Tips & Best Practices";
-          case v.k_NextFestStartsNow:
-            return "Next Fest: Starts Today!";
-          case v.k_NextFestThankYou:
-            return "Next Fest: Concludes. Thank You";
-          case v.k_SaleThankYou:
-            return "Sale Over: Thank You";
-        }
-        return "unknown";
-      }
-      class S {
-        constructor(e, t) {
-          (this.m_bReadOnly = !1),
-            (this.m_strOptInName = e),
-            (this.m_email = t),
-            (this.m_sections = this.m_email.sections.map((e) => new b(e))),
-            (this.m_email.custom_app_list = (
-              this.m_email.custom_app_list || []
-            ).map((e) => ("string" == typeof e ? Number.parseInt(e) : e)));
-        }
-        GetOwningOptInName() {
-          return this.m_strOptInName;
-        }
-        SetReadOnly(e) {
-          this.m_bReadOnly != e &&
-            ((this.m_bReadOnly = e),
-            this.m_sections.forEach((t) => t.SetReadOnly(e)));
-        }
-        BIsReadOnly() {
-          return this.m_bReadOnly;
-        }
-        BHasLanguageData(e) {
-          var t, i, n;
-          const r = (0, o.j_)(e);
-          return (
-            (null ===
-              (i =
-                null === (t = this.m_email.subject) || void 0 === t
-                  ? void 0
-                  : t[r]) || void 0 === i
-              ? void 0
-              : i.length) > 0 ||
-            (null === (n = this.m_sections) || void 0 === n
-              ? void 0
-              : n.some((t) => t.BHasLangData(e)))
-          );
-        }
-        BIsDraftEmail() {
-          return (
-            null === this.m_email.email_def_id ||
-            void 0 === this.m_email.email_def_id
-          );
-        }
-        BHasSectionType(e) {
-          return this.m_sections.some((t) => t.GetType() == e);
-        }
-        GetModel() {
-          return this.m_email;
-        }
-        GetUniqueID() {
-          return this.m_email.unique_id;
-        }
-        GetType() {
-          return this.m_email.type;
-        }
-        GetNumberSections() {
-          return this.m_sections.length;
-        }
-        GetEmailTargeting() {
-          return this.m_email.targeting || 1;
-        }
-        GetServerEmailDefID() {
-          return this.m_email.email_def_id
-            ? "" + this.m_email.email_def_id
-            : this.m_email.email_def_id;
-        }
-        GetInternalName() {
-          return this.m_email.internal_name;
-        }
-        GetAssetKitURL() {
-          return this.m_email.asset_kit_url;
-        }
-        GetWikiDocURL() {
-          return this.m_email.wiki_doc_url;
-        }
-        GetSurveyLinkURL() {
-          return this.m_email.survey_link_url;
-        }
-        GetSalePreviewPage() {
-          return this.m_email.sale_preview_page;
-        }
-        GetScheduleMaxItems() {
-          return this.m_email.schedule_max_items || 2;
-        }
-        GetDemoPressPreviewDate() {
-          return this.m_email.demo_press_preview_date;
-        }
-        GetNextEditionDate() {
-          return this.m_email.next_edition_date;
-        }
-        GetCancelDate() {
-          return this.m_email.cancel_date;
-        }
-        GetPreviewDate() {
-          return this.m_email.preview_date;
-        }
-        GetPermissionDate() {
-          return this.m_email.permission_date;
-        }
-        GetPressPreviewVisibleDate() {
-          return this.m_email.press_preview_visible_date;
-        }
-        GetQASessionDate() {
-          return this.m_email.qasession_date;
-        }
-        GetQASessionLink() {
-          return this.m_email.qasession_link;
-        }
-        GetRecordedQASessionLink() {
-          return this.m_email.recorded_qa_session_link;
-        }
-        GetCustomAppTargetList() {
-          return this.m_email.custom_app_list || [];
-        }
-        GetTrailerDemoDeadlineDate() {
-          return this.m_email.trailer_demo_deadline_date;
-        }
-        GetDemoTrailerRegLink() {
-          return this.m_email.trailer_demo_reg_link;
-        }
-        GetSubject(e) {
-          var t;
-          return null !== (t = (0, r.pM)(this.m_email.subject, e, "")) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        GetSubjectWithFallback(e) {
-          var t;
-          return null !==
-            (t = (0, r.Xj)(
-              this.m_email.subject,
-              l.U.Get().GetCurEditLanguage(),
-              e
-            )) && void 0 !== t
-            ? t
-            : "";
-        }
-        GetSections() {
-          return this.m_sections;
-        }
-        GetSection(e) {
-          return this.m_sections[e];
-        }
-        GetSectionByID(e) {
-          for (let t = 0; t < this.m_sections.length; ++t)
-            if (this.m_sections[t].GetUniqueID() == e)
-              return this.m_sections[t];
-          return null;
-        }
-        AddSection(e) {
-          if (this.m_bReadOnly) return;
-          let t = Math.floor(1 + 1e5 * Math.random());
-          for (; this.GetSectionByID(m + t); )
-            t = Math.floor(1 + 1e5 * Math.random());
-          const i = { unique_id: m + t, type: e };
-          this.m_email.sections || (this.m_email.sections = []),
-            this.m_email.sections.push(i);
-          const n = new b(
-            this.m_email.sections[this.m_email.sections.length - 1]
-          );
-          this.m_sections.push(n), s.On.Get().SetDirty(!0);
-        }
-        SetServerEmailDefID(e) {
-          this.m_email.email_def_id == e ||
-            this.m_bReadOnly ||
-            ((0, c.X)(
-              null == this.m_email.email_def_id ||
-                null == this.m_email.email_def_id,
-              "Error: Reseting emailed def id from " +
-                this.m_email.email_def_id +
-                " to " +
-                e
-            ),
-            (this.m_email.email_def_id = "" + e),
-            s.On.Get().SetDirty(!0));
-        }
-        SetType(e) {
-          this.m_email.type == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.type = e), s.On.Get().SetDirty(!0));
-        }
-        SetEmailTargeting(e) {
-          this.m_email.targeting == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.targeting = e), s.On.Get().SetDirty(!0));
-        }
-        SetInternalName(e) {
-          this.m_email.internal_name == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.internal_name = e), s.On.Get().SetDirty(!0));
-        }
-        SetAssetKitURL(e) {
-          this.m_email.asset_kit_url == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.asset_kit_url = e), s.On.Get().SetDirty(!0));
-        }
-        SetWikiDocURL(e) {
-          this.m_email.wiki_doc_url == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.wiki_doc_url = e), s.On.Get().SetDirty(!0));
-        }
-        SetSurveyLinkURL(e) {
-          this.m_email.survey_link_url == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.survey_link_url = e), s.On.Get().SetDirty(!0));
-        }
-        SetSalePreviewURL(e) {
-          this.m_email.sale_preview_page == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.sale_preview_page = e), s.On.Get().SetDirty(!0));
-        }
-        SetDemoPreviewDate(e) {
-          this.m_email.demo_press_preview_date == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.demo_press_preview_date = e),
-            s.On.Get().SetDirty(!0));
-        }
-        SetCancelDate(e) {
-          this.m_email.cancel_date == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.cancel_date = e), s.On.Get().SetDirty(!0));
-        }
-        SetPreviewDate(e) {
-          this.m_email.preview_date != e &&
-            ((this.m_email.preview_date = e), s.On.Get().SetDirty(!0));
-        }
-        SetPermissionDate(e) {
-          this.m_email.permission_date != e &&
-            ((this.m_email.permission_date = e), s.On.Get().SetDirty(!0));
-        }
-        SetPressPreviewVisibleDate(e) {
-          this.m_email.press_preview_visible_date != e &&
-            ((this.m_email.press_preview_visible_date = e),
-            s.On.Get().SetDirty(!0));
-        }
-        SetScheduleMaxItems(e) {
-          this.m_email.schedule_max_items == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.schedule_max_items = e), s.On.Get().SetDirty(!0));
-        }
-        SetNextEditionDate(e) {
-          this.m_email.next_edition_date == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.next_edition_date = e), s.On.Get().SetDirty(!0));
-        }
-        SetQASessionDate(e) {
-          this.m_email.qasession_date == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.qasession_date = e), s.On.Get().SetDirty(!0));
-        }
-        SetTrailerDemoDeadlineDate(e) {
-          this.m_email.trailer_demo_deadline_date == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.trailer_demo_deadline_date = e),
-            s.On.Get().SetDirty(!0));
-        }
-        SetQASessionLink(e) {
-          this.m_email.qasession_link == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.qasession_link = e), s.On.Get().SetDirty(!0));
-        }
-        SetDemoTrailerRegLink(e) {
-          this.m_email.trailer_demo_reg_link == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.trailer_demo_reg_link = e), s.On.Get().SetDirty(!0));
-        }
-        SetRecordedQASessionLink(e) {
-          this.m_email.recorded_qa_session_link == e ||
-            this.m_bReadOnly ||
-            ((this.m_email.recorded_qa_session_link = e),
-            s.On.Get().SetDirty(!0));
-        }
-        SetSubject(e, t) {
-          if (
-            (0, r.pM)(this.m_email.subject, t, void 0) != e &&
-            !this.m_bReadOnly
-          ) {
-            const i = (0, o.j_)(t, "english");
-            this.m_email.subject || (this.m_email.subject = {}),
-              (this.m_email.subject[i] = e),
-              s.On.Get().SetDirty(!0);
-          }
-        }
-        AddAppToCustomList(e) {
-          this.m_email.custom_app_list || (this.m_email.custom_app_list = []),
-            this.m_email.custom_app_list.includes(e) ||
-              (this.m_email.custom_app_list.push(e), s.On.Get().SetDirty(!0));
-        }
-        RemoveAppToCustomList(e) {
-          if (this.m_email.custom_app_list) {
-            const t = this.m_email.custom_app_list.findIndex((t) => e == t);
-            if (t >= 0)
-              return (
-                this.m_email.custom_app_list.splice(t, 1),
-                s.On.Get().SetDirty(!0),
-                !0
-              );
-          }
-          return !1;
-        }
-      }
-      (0, n.gn)([a.LO], S.prototype, "m_email", void 0),
-        (0, n.gn)([a.LO], S.prototype, "m_sections", void 0),
-        (0, n.gn)([d.ak], S.prototype, "BHasLanguageData", null),
-        (0, n.gn)([d.ak], S.prototype, "GetSubject", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "AddSection", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetServerEmailDefID", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetType", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetEmailTargeting", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetInternalName", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetAssetKitURL", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetWikiDocURL", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetSurveyLinkURL", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetSalePreviewURL", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetDemoPreviewDate", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetCancelDate", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetPreviewDate", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetPermissionDate", null),
-        (0, n.gn)(
-          [a.aD.bound],
-          S.prototype,
-          "SetPressPreviewVisibleDate",
-          null
-        ),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetScheduleMaxItems", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetNextEditionDate", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetQASessionDate", null),
-        (0, n.gn)(
-          [a.aD.bound],
-          S.prototype,
-          "SetTrailerDemoDeadlineDate",
-          null
-        ),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetQASessionLink", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetDemoTrailerRegLink", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetRecordedQASessionLink", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "SetSubject", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "AddAppToCustomList", null),
-        (0, n.gn)([a.aD.bound], S.prototype, "RemoveAppToCustomList", null);
-      class b {
-        constructor(e) {
-          (this.m_bReadOnly = !1), (this.m_section = e);
-        }
-        SetReadOnly(e) {
-          this.m_bReadOnly = e;
-        }
-        BIsReadOnly() {
-          return this.m_bReadOnly;
-        }
-        GetUniqueID() {
-          return this.m_section.unique_id;
-        }
-        GetType() {
-          return this.m_section.type;
-        }
-        GetModel() {
-          return this.m_section;
-        }
-        BHasLangData(e) {
-          return (
-            (0, r.JA)(this.m_section.title, e) ||
-            (0, r.JA)(this.m_section.description, e)
-          );
-        }
-        GetTitle(e) {
-          var t;
-          return null !== (t = (0, r.pM)(this.m_section.title, e, "")) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        GetTitleWithFallback(e) {
-          var t;
-          return null !==
-            (t = (0, r.Xj)(
-              this.m_section.title,
-              l.U.Get().GetCurEditLanguage(),
-              e
-            )) && void 0 !== t
-            ? t
-            : "";
-        }
-        GetDescription(e) {
-          var t;
-          return null !== (t = (0, r.pM)(this.m_section.description, e, "")) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        GetDescriptionWithFallback(e) {
-          var t;
-          return null !==
-            (t = (0, r.Xj)(
-              this.m_section.description,
-              l.U.Get().GetCurEditLanguage(),
-              e
-            )) && void 0 !== t
-            ? t
-            : "";
-        }
-        SetType(e) {
-          this.m_section.type == e ||
-            this.m_bReadOnly ||
-            (this.m_section.type == v.k_Custom &&
-              e != v.k_Custom &&
-              ((this.m_section.title = {}), (this.m_section.description = {})),
-            (this.m_section.type = e),
-            s.On.Get().SetDirty(!0));
-        }
-        SetTitle(e, t) {
-          if (
-            (0, r.pM)(this.m_section.title, t, void 0) != e &&
-            !this.m_bReadOnly
-          ) {
-            const i = (0, o.j_)(t, "english");
-            this.m_section.title || (this.m_section.title = {}),
-              (this.m_section.title[i] = e),
-              s.On.Get().SetDirty(!0);
-          }
-        }
-        SetDescription(e, t) {
-          if (
-            (0, r.pM)(this.m_section.description, t, void 0) != e &&
-            !this.m_bReadOnly
-          ) {
-            const i = (0, o.j_)(t, "english");
-            this.m_section.description || (this.m_section.description = {}),
-              (this.m_section.description[i] = e),
-              s.On.Get().SetDirty(!0);
-          }
-        }
-      }
-      (0, n.gn)([a.LO], b.prototype, "m_section", void 0),
-        (0, n.gn)([d.ak], b.prototype, "GetTitle", null),
-        (0, n.gn)([d.ak], b.prototype, "GetDescription", null),
-        (0, n.gn)([a.aD.bound], b.prototype, "SetType", null),
-        (0, n.gn)([a.aD.bound], b.prototype, "SetTitle", null),
-        (0, n.gn)([a.aD.bound], b.prototype, "SetDescription", null);
-    },
-    86121: (e, t, i) => {
-      "use strict";
-      i(42770), i(29073);
-    },
-    40490: (e, t, i) => {
-      "use strict";
-      i(20614), i(42770), i(99344), i(64368);
-    },
-    65395: (e, t, i) => {
-      "use strict";
-      i.d(t, {
-        J7: () => D,
-        K$: () => b,
-        Lr: () => E,
-        fH: () => y,
-        i4: () => v,
+      n.d(e, {
+        J7: () => _,
+        K$: () => E,
+        Lr: () => I,
+        fH: () => f,
+        i4: () => D,
         o: () => h,
-        vc: () => S,
-        z8: () => f,
+        vc: () => P,
+        z8: () => k,
       });
-      var n = i(33940),
-        r = i(52868),
-        s = i.n(r),
-        a = i(89526),
-        o = (i(46132), i(42770), i(85651)),
-        l = (i(63403), i(23217)),
-        c = i(26464),
-        d = i(85246),
-        u = i(4306),
-        m = i(32765);
-      const p = "SaleEvent_DurationDiscount_Tooltip",
-        _ = "discount";
-      class g {
-        constructor() {
-          (this.m_mapDiscountEvents = new Map()),
-            (this.m_discountEventsListCallback = new d.pB()),
-            (this.m_mapDiscountEventCallback = new Map()),
-            (this.m_mapAppList = new Map()),
-            (this.m_mapAppListCallback = new Map()),
-            (this.m_bLoadedViaInitOrFullLoad = !1),
-            (this.m_bLoadEventsRequestInFlight = !1),
-            (this.m_mapInflightDiscountLoadRequest = new Map()),
-            (this.m_mapInflightDiscountAndAppListLoadRequest = new Map()),
-            "dev" == m.De.WEB_UNIVERSE && (window.g_DiscountEventStore = this);
-        }
+      var i = n(33940),
+        a = n(52868),
+        s = n.n(a),
+        o = n(89526),
+        r = n(85651),
+        c = n(23217),
+        l = n(26464),
+        u = n(85246),
+        d = n(4306),
+        p = n(32765);
+      const g = "SaleEvent_DurationDiscount_Tooltip",
+        m = "discount";
+      class v {
         GetFutureDiscountEvents() {
-          const e = (0, o.kl)();
-          return Array.from(g.Get().m_mapDiscountEvents.values()).filter(
-            (t) => t.end_date > e
+          const t = (0, r.kl)();
+          return Array.from(v.Get().m_mapDiscountEvents.values()).filter(
+            (e) => e.end_date > t
           );
         }
         GetFutureDiscountEventListCallback() {
@@ -2804,53 +303,53 @@
         BLoadedViaInitOrFullLoad() {
           return this.m_bLoadedViaInitOrFullLoad;
         }
-        GetDiscountEvent(e) {
-          return this.m_mapDiscountEvents.get(e);
+        GetDiscountEvent(t) {
+          return this.m_mapDiscountEvents.get(t);
         }
-        GetAppList(e) {
-          return this.m_mapAppList.get(e);
+        GetAppList(t) {
+          return this.m_mapAppList.get(t);
         }
-        GetDiscountEventCallback(e) {
+        GetDiscountEventCallback(t) {
           return (
-            this.m_mapDiscountEventCallback.has(e) ||
-              this.m_mapDiscountEventCallback.set(e, new d.pB()),
-            this.m_mapDiscountEventCallback.get(e)
+            this.m_mapDiscountEventCallback.has(t) ||
+              this.m_mapDiscountEventCallback.set(t, new u.pB()),
+            this.m_mapDiscountEventCallback.get(t)
           );
         }
-        GetAppListCallback(e) {
+        GetAppListCallback(t) {
           return (
-            this.m_mapAppListCallback.has(e) ||
-              this.m_mapAppListCallback.set(e, new d.pB()),
-            this.m_mapAppListCallback.get(e)
+            this.m_mapAppListCallback.has(t) ||
+              this.m_mapAppListCallback.set(t, new u.pB()),
+            this.m_mapAppListCallback.get(t)
           );
         }
-        LoadAllDiscountEvents(e, t) {
-          var i, r, a, o;
-          return (0, n.mG)(this, void 0, void 0, function* () {
+        LoadAllDiscountEvents(t, e) {
+          var n, a, o, r;
+          return (0, i.mG)(this, void 0, void 0, function* () {
             if (this.m_bLoadEventsRequestInFlight) return 29;
-            const n =
-                m.De.PARTNER_BASE_URL +
+            const i =
+                p.De.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetalldiscountevents/" +
-                e,
-              c = {};
-            let d = null;
+                t,
+              l = {};
+            let u = null;
             try {
               this.m_bLoadEventsRequestInFlight = !0;
-              const e = yield s().get(n, {
-                params: c,
-                cancelToken: null == t ? void 0 : t.token,
+              const t = yield s().get(i, {
+                params: l,
+                cancelToken: null == e ? void 0 : e.token,
               });
               if (
                 ((this.m_bLoadEventsRequestInFlight = !1),
-                200 == (null == e ? void 0 : e.status) &&
+                200 == (null == t ? void 0 : t.status) &&
                   1 ==
-                    (null === (i = e.data) || void 0 === i
+                    (null === (n = t.data) || void 0 === n
                       ? void 0
-                      : i.success) &&
-                  e.data.events)
+                      : n.success) &&
+                  t.data.events)
               ) {
-                for (const t of e.data.events)
-                  this.m_mapDiscountEvents.set(t.id, t);
+                for (const e of t.data.events)
+                  this.m_mapDiscountEvents.set(e.id, e);
                 return (
                   (this.m_bLoadedViaInitOrFullLoad = !0),
                   this.m_discountEventsListCallback.Dispatch(
@@ -2859,282 +358,282 @@
                   1
                 );
               }
-              d = { response: e };
-            } catch (e) {
-              d = e;
+              u = { response: t };
+            } catch (t) {
+              u = t;
             }
-            const u = (0, l.l)(d);
+            const d = (0, c.l)(u);
             return (
-              console.error("Could not load Discount Events", u.strErrorMsg, u),
+              console.error("Could not load Discount Events", d.strErrorMsg, d),
               null !==
-                (o =
+                (r =
                   null ===
-                    (a =
-                      null === (r = null == d ? void 0 : d.response) ||
-                      void 0 === r
+                    (o =
+                      null === (a = null == u ? void 0 : u.response) ||
+                      void 0 === a
                         ? void 0
-                        : r.data) || void 0 === a
+                        : a.data) || void 0 === o
                     ? void 0
-                    : a.success) && void 0 !== o
-                ? o
+                    : o.success) && void 0 !== r
+                ? r
                 : 2
             );
           });
         }
-        CreateDiscountEvent(e, t, i, r, a, o, c, d) {
-          var u;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n =
-                m.De.PARTNER_BASE_URL +
+        CreateDiscountEvent(t, e, n, a, o, r, l, u) {
+          var d;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i =
+                p.De.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxupdatediscountevent",
-              g = new FormData();
-            g.append("sessionid", m.De.SESSIONID),
-              g.append("name", i),
-              g.append("start_time", e.toString()),
-              g.append("end_time", t.toString()),
-              g.append("allowed_appids", c.join(",")),
-              g.append("allowed_publisherids", o.join(",")),
-              g.append("description", a),
-              g.append("collision_type", "proximity"),
-              g.append("event", "1"),
-              g.append("header", r),
-              g.append("tooltip", p),
-              g.append("type", _),
-              g.append("prevent_weeklong", "");
+              v = new FormData();
+            v.append("sessionid", p.De.SESSIONID),
+              v.append("name", n),
+              v.append("start_time", t.toString()),
+              v.append("end_time", e.toString()),
+              v.append("allowed_appids", l.join(",")),
+              v.append("allowed_publisherids", r.join(",")),
+              v.append("description", o),
+              v.append("collision_type", "proximity"),
+              v.append("event", "1"),
+              v.append("header", a),
+              v.append("tooltip", g),
+              v.append("type", m),
+              v.append("prevent_weeklong", "");
             let h = null;
             try {
-              const l = yield s().post(n, g, {
+              const c = yield s().post(i, v, {
                 withCredentials: !0,
-                cancelToken: null == d ? void 0 : d.token,
+                cancelToken: null == u ? void 0 : u.token,
               });
               if (
-                200 == (null == l ? void 0 : l.status) &&
+                200 == (null == c ? void 0 : c.status) &&
                 1 ==
-                  (null === (u = l.data) || void 0 === u
+                  (null === (d = c.data) || void 0 === d
                     ? void 0
-                    : u.success) &&
-                l.data.eventid
+                    : d.success) &&
+                c.data.eventid
               ) {
-                const n = {
-                  id: l.data.eventid,
-                  name: i,
-                  start_date: e,
-                  end_date: t,
-                  appids: c,
-                  publisherids: o,
-                  description: a,
+                const i = {
+                  id: c.data.eventid,
+                  name: n,
+                  start_date: t,
+                  end_date: e,
+                  appids: l,
+                  publisherids: r,
+                  description: o,
                   collision_type: "proximity",
                   event: "1",
-                  header: r,
-                  tooltip: p,
-                  type: _,
+                  header: a,
+                  tooltip: g,
+                  type: m,
                   prevent_weeklong: "",
                 };
                 return (
-                  this.m_mapDiscountEvents.set(n.id, n),
+                  this.m_mapDiscountEvents.set(i.id, i),
                   this.m_discountEventsListCallback.Dispatch(
                     this.GetFutureDiscountEvents()
                   ),
-                  n
+                  i
                 );
               }
-              h = { response: l };
-            } catch (e) {
-              h = e;
+              h = { response: c };
+            } catch (t) {
+              h = t;
             }
-            const v = (0, l.l)(h);
+            const D = (0, c.l)(h);
             return (
               console.error(
                 "CDiscountEventStore.CreateDiscountEvent: failed",
-                v.strErrorMsg,
-                v
+                D.strErrorMsg,
+                D
               ),
               null
             );
           });
         }
-        UpdateDiscountEventPublisherAndAppList(e, t, i, r) {
-          var a;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = this.m_mapDiscountEvents.get(e);
-            if (!n)
+        UpdateDiscountEventPublisherAndAppList(t, e, n, a) {
+          var o;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i = this.m_mapDiscountEvents.get(t);
+            if (!i)
               return (
                 console.error(
                   "UpdateDiscountEventPublisherAndAppList: updating discount event that we have not loaded",
-                  e
+                  t
                 ),
                 null
               );
-            const o =
-                m.De.PARTNER_BASE_URL +
+            const r =
+                p.De.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxupdatediscountevent",
-              c = new FormData();
-            c.append("sessionid", m.De.SESSIONID),
-              c.append("eventid", e),
-              c.append("name", n.name),
-              c.append("start_time", n.start_date.toString()),
-              c.append("end_time", n.end_date.toString()),
-              c.append("allowed_appids", i.join(",")),
-              c.append("allowed_publisherids", t.join(",")),
-              c.append("description", n.description),
-              c.append("collision_type", n.collision_type),
-              c.append("event", n.event),
-              c.append("header", n.header),
-              c.append("tooltip", n.tooltip),
-              c.append("type", n.type),
-              c.append("prevent_weeklong", n.prevent_weeklong);
-            let d = null;
+              l = new FormData();
+            l.append("sessionid", p.De.SESSIONID),
+              l.append("eventid", t),
+              l.append("name", i.name),
+              l.append("start_time", i.start_date.toString()),
+              l.append("end_time", i.end_date.toString()),
+              l.append("allowed_appids", n.join(",")),
+              l.append("allowed_publisherids", e.join(",")),
+              l.append("description", i.description),
+              l.append("collision_type", i.collision_type),
+              l.append("event", i.event),
+              l.append("header", i.header),
+              l.append("tooltip", i.tooltip),
+              l.append("type", i.type),
+              l.append("prevent_weeklong", i.prevent_weeklong);
+            let u = null;
             try {
-              const e = yield s().post(o, c, {
+              const t = yield s().post(r, l, {
                 withCredentials: !0,
-                cancelToken: null == r ? void 0 : r.token,
+                cancelToken: null == a ? void 0 : a.token,
               });
               if (
-                200 == (null == e ? void 0 : e.status) &&
+                200 == (null == t ? void 0 : t.status) &&
                 1 ==
-                  (null === (a = e.data) || void 0 === a
+                  (null === (o = t.data) || void 0 === o
                     ? void 0
-                    : a.success) &&
-                e.data.eventid
+                    : o.success) &&
+                t.data.eventid
               ) {
-                const e = Object.assign(Object.assign({}, n), {
-                  appids: i,
-                  publisherids: t,
+                const t = Object.assign(Object.assign({}, i), {
+                  appids: n,
+                  publisherids: e,
                 });
                 return (
-                  this.m_mapDiscountEvents.set(e.id, e),
+                  this.m_mapDiscountEvents.set(t.id, t),
                   this.m_discountEventsListCallback.Dispatch(
                     this.GetFutureDiscountEvents()
                   ),
-                  e
+                  t
                 );
               }
-              d = { response: e };
-            } catch (e) {
-              d = e;
+              u = { response: t };
+            } catch (t) {
+              u = t;
             }
-            const u = (0, l.l)(d);
+            const d = (0, c.l)(u);
             return (
               console.error(
                 "CDiscountEventStore.UpdateDiscountEventPublisherAndAppList: failed",
-                u.strErrorMsg,
-                u
+                d.strErrorMsg,
+                d
               ),
               null
             );
           });
         }
-        LoadSingleDiscountEvent(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            return this.m_mapDiscountEvents.has(e)
-              ? this.m_mapDiscountEvents.get(e)
-              : (this.m_mapInflightDiscountLoadRequest.has(e) ||
+        LoadSingleDiscountEvent(t) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            return this.m_mapDiscountEvents.has(t)
+              ? this.m_mapDiscountEvents.get(t)
+              : (this.m_mapInflightDiscountLoadRequest.has(t) ||
                   this.m_mapInflightDiscountLoadRequest.set(
-                    e,
-                    this.InternalLoadSingleDiscountEvent(e)
+                    t,
+                    this.InternalLoadSingleDiscountEvent(t)
                   ),
-                this.m_mapInflightDiscountLoadRequest.get(e));
+                this.m_mapInflightDiscountLoadRequest.get(t));
           });
         }
-        InternalLoadSingleDiscountEvent(e) {
-          var t, i;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = null;
-            if (!e || 0 == e.length) return null;
+        InternalLoadSingleDiscountEvent(t) {
+          var e, n;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
+            if (!t || 0 == t.length) return null;
             try {
-              const r =
-                  m.De.PARTNER_BASE_URL +
+              const a =
+                  p.De.PARTNER_BASE_URL +
                   "promotion/discounts/ajaxgetdiscounteventbyid",
-                a = { sessionid: m.De.SESSIONID, discountid: e },
-                o = yield s().get(r, { params: a, withCredentials: !0 });
+                o = { sessionid: p.De.SESSIONID, discountid: t },
+                r = yield s().get(a, { params: o, withCredentials: !0 });
               if (
-                200 == (null == o ? void 0 : o.status) &&
+                200 == (null == r ? void 0 : r.status) &&
                 1 ==
-                  (null === (t = null == o ? void 0 : o.data) || void 0 === t
+                  (null === (e = null == r ? void 0 : r.data) || void 0 === e
                     ? void 0
-                    : t.success) &&
-                (null === (i = null == o ? void 0 : o.data) || void 0 === i
+                    : e.success) &&
+                (null === (n = null == r ? void 0 : r.data) || void 0 === n
                   ? void 0
-                  : i.discount_event)
+                  : n.discount_event)
               )
                 return (
-                  this.m_mapDiscountEvents.set(e, o.data.discount_event),
-                  this.GetDiscountEventCallback(e).Dispatch(
-                    o.data.discount_event
+                  this.m_mapDiscountEvents.set(t, r.data.discount_event),
+                  this.GetDiscountEventCallback(t).Dispatch(
+                    r.data.discount_event
                   ),
-                  o.data.discount_event
+                  r.data.discount_event
                 );
-              n = (0, l.l)(o);
-            } catch (e) {
-              n = (0, l.l)(e);
+              i = (0, c.l)(r);
+            } catch (t) {
+              i = (0, c.l)(t);
             }
             return (
               console.error(
                 "CPromotionInviteStore.InternalLoadSingleDiscountEvent failed: " +
-                  (null == n ? void 0 : n.strErrorMsg),
-                n
+                  (null == i ? void 0 : i.strErrorMsg),
+                i
               ),
               null
             );
           });
         }
-        LoadSingleDiscountEventsAppList(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            return this.m_mapAppList.has(e)
+        LoadSingleDiscountEventsAppList(t) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            return this.m_mapAppList.has(t)
               ? {
-                  oDiscountEvent: this.m_mapDiscountEvents.get(e),
-                  rgAppList: this.m_mapAppList.get(e),
+                  oDiscountEvent: this.m_mapDiscountEvents.get(t),
+                  rgAppList: this.m_mapAppList.get(t),
                 }
-              : (this.m_mapInflightDiscountAndAppListLoadRequest.has(e) ||
+              : (this.m_mapInflightDiscountAndAppListLoadRequest.has(t) ||
                   this.m_mapInflightDiscountAndAppListLoadRequest.set(
-                    e,
-                    this.InternalLoadSingleDiscountEventsAppList(e)
+                    t,
+                    this.InternalLoadSingleDiscountEventsAppList(t)
                   ),
-                this.m_mapInflightDiscountAndAppListLoadRequest.get(e));
+                this.m_mapInflightDiscountAndAppListLoadRequest.get(t));
           });
         }
-        InternalLoadSingleDiscountEventsAppList(e) {
-          var t, i;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = null;
-            if (!e || 0 == e.length) return null;
+        InternalLoadSingleDiscountEventsAppList(t) {
+          var e, n;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
+            if (!t || 0 == t.length) return null;
             try {
-              const r =
-                  m.De.PARTNER_BASE_URL +
+              const a =
+                  p.De.PARTNER_BASE_URL +
                   "promotion/discounts/ajaxgetdiscounteventapplist",
-                a = { sessionid: m.De.SESSIONID, discountid: e },
-                o = yield s().get(r, { params: a, withCredentials: !0 });
+                o = { sessionid: p.De.SESSIONID, discountid: t },
+                r = yield s().get(a, { params: o, withCredentials: !0 });
               if (
-                200 == (null == o ? void 0 : o.status) &&
+                200 == (null == r ? void 0 : r.status) &&
                 1 ==
-                  (null === (t = null == o ? void 0 : o.data) || void 0 === t
+                  (null === (e = null == r ? void 0 : r.data) || void 0 === e
                     ? void 0
-                    : t.success) &&
-                (null === (i = null == o ? void 0 : o.data) || void 0 === i
+                    : e.success) &&
+                (null === (n = null == r ? void 0 : r.data) || void 0 === n
                   ? void 0
-                  : i.discount_event)
+                  : n.discount_event)
               )
                 return (
-                  this.m_mapDiscountEvents.set(e, o.data.discount_event),
-                  this.m_mapAppList.set(e, o.data.appid_list),
-                  this.GetDiscountEventCallback(e).Dispatch(
-                    o.data.discount_event
+                  this.m_mapDiscountEvents.set(t, r.data.discount_event),
+                  this.m_mapAppList.set(t, r.data.appid_list),
+                  this.GetDiscountEventCallback(t).Dispatch(
+                    r.data.discount_event
                   ),
-                  this.GetAppListCallback(e).Dispatch(o.data.appid_list),
+                  this.GetAppListCallback(t).Dispatch(r.data.appid_list),
                   {
-                    oDiscountEvent: o.data.discount_event,
-                    rgAppList: o.data.appid_list,
+                    oDiscountEvent: r.data.discount_event,
+                    rgAppList: r.data.appid_list,
                   }
                 );
-              n = (0, l.l)(o);
-            } catch (e) {
-              n = (0, l.l)(e);
+              i = (0, c.l)(r);
+            } catch (t) {
+              i = (0, c.l)(t);
             }
             return (
               console.error(
                 "CPromotionInviteStore.InternalLoadSingleDiscountEventsAppList failed: " +
-                  (null == n ? void 0 : n.strErrorMsg),
-                n
+                  (null == i ? void 0 : i.strErrorMsg),
+                i
               ),
               null
             );
@@ -3142,2214 +641,151 @@
         }
         static Get() {
           return (
-            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
-            g.s_Singleton
+            v.s_Singleton || ((v.s_Singleton = new v()), v.s_Singleton.Init()),
+            v.s_Singleton
           );
         }
+        constructor() {
+          (this.m_mapDiscountEvents = new Map()),
+            (this.m_discountEventsListCallback = new u.pB()),
+            (this.m_mapDiscountEventCallback = new Map()),
+            (this.m_mapAppList = new Map()),
+            (this.m_mapAppListCallback = new Map()),
+            (this.m_bLoadedViaInitOrFullLoad = !1),
+            (this.m_bLoadEventsRequestInFlight = !1),
+            (this.m_mapInflightDiscountLoadRequest = new Map()),
+            (this.m_mapInflightDiscountAndAppListLoadRequest = new Map()),
+            "dev" == p.De.WEB_UNIVERSE && (window.g_DiscountEventStore = this);
+        }
         Init() {
-          const e = (0, m.kQ)("discount_events", "application_config");
+          const t = (0, p.kQ)("discount_events", "application_config");
           if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CDiscountEventStore loading payload: ",
-                e
+                t
               ),
-            this.BIsConfigValid(e))
+            this.BIsConfigValid(t))
           ) {
-            for (const t of e) this.m_mapDiscountEvents.set(t.id, t);
+            for (const e of t) this.m_mapDiscountEvents.set(e.id, e);
             this.m_bLoadedViaInitOrFullLoad = !0;
           } else
-            "dev" == m.De.WEB_UNIVERSE &&
-              e &&
+            "dev" == p.De.WEB_UNIVERSE &&
+              t &&
               console.error("CDiscountEventStore Invalid payload");
         }
-        BIsConfigValid(e) {
-          const t = e;
-          return !(!t || !Array.isArray(t));
+        BIsConfigValid(t) {
+          const e = t;
+          return !(!e || !Array.isArray(e));
         }
       }
       function h() {
-        return g.Get().GetFutureDiscountEvents();
+        return v.Get().GetFutureDiscountEvents();
       }
-      function v() {
-        return g.Get().GetFutureDiscountEventListCallback();
+      function D() {
+        return v.Get().GetFutureDiscountEventListCallback();
       }
-      function D(e) {
-        const t = g.Get().BLoadedViaInitOrFullLoad(),
-          [i, n] = a.useState(t ? g.Get().GetFutureDiscountEvents() : null),
-          [r, s] = a.useState(null),
-          o =
-            e ||
-            Number.parseInt((0, m.kQ)("publisherid", "application_config"));
-        (0, u.Qg)(g.Get().GetFutureDiscountEventListCallback(), n),
-          a.useEffect(() => {
-            g.Get().BLoadedViaInitOrFullLoad() ||
-              g.Get().LoadAllDiscountEvents(o).then(s);
-          }, [i, o]);
-        const l = null != r ? r : (null == i ? void 0 : i.length) ? 1 : null;
-        return a.useMemo(() => ({ rgDiscountEvents: i, eResult: l }), [i, l]);
+      function _(t) {
+        const e = v.Get().BLoadedViaInitOrFullLoad(),
+          [n, i] = o.useState(e ? v.Get().GetFutureDiscountEvents() : null),
+          [a, s] = o.useState(null),
+          r =
+            t ||
+            Number.parseInt((0, p.kQ)("publisherid", "application_config"));
+        (0, d.Qg)(v.Get().GetFutureDiscountEventListCallback(), i),
+          o.useEffect(() => {
+            v.Get().BLoadedViaInitOrFullLoad() ||
+              v.Get().LoadAllDiscountEvents(r).then(s);
+          }, [n, r]);
+        const c = null != a ? a : (null == n ? void 0 : n.length) ? 1 : null;
+        return o.useMemo(() => ({ rgDiscountEvents: n, eResult: c }), [n, c]);
       }
-      function y(e) {
-        return g.Get().GetDiscountEvent(e);
+      function f(t) {
+        return v.Get().GetDiscountEvent(t);
       }
-      function S(e) {
-        const [t, i] = (0, a.useState)(g.Get().GetDiscountEvent(e));
+      function P(t) {
+        const [e, n] = (0, o.useState)(v.Get().GetDiscountEvent(t));
         return (
-          a.useEffect(() => {
-            ((!t && e) || ((null == t ? void 0 : t.id) != e && e)) &&
-              g
+          o.useEffect(() => {
+            ((!e && t) || ((null == e ? void 0 : e.id) != t && t)) &&
+              v
                 .Get()
-                .LoadSingleDiscountEvent(e)
-                .then((e) => {
-                  e && i(e);
+                .LoadSingleDiscountEvent(t)
+                .then((t) => {
+                  t && n(t);
                 });
-          }, [e, t]),
-          (0, u.Qg)(g.Get().GetDiscountEventCallback(e), i),
-          t
+          }, [t, e]),
+          (0, d.Qg)(v.Get().GetDiscountEventCallback(t), n),
+          e
         );
       }
-      function b(e) {
-        const [t, i] = (0, a.useState)(g.Get().GetDiscountEvent(e)),
-          [n, r] = (0, a.useState)(g.Get().GetAppList(e));
+      function E(t) {
+        const [e, n] = (0, o.useState)(v.Get().GetDiscountEvent(t)),
+          [i, a] = (0, o.useState)(v.Get().GetAppList(t));
         return (
-          (0, a.useEffect)(() => {
-            ((!n && e) || ((null == t ? void 0 : t.id) != e && e)) &&
-              g
+          (0, o.useEffect)(() => {
+            ((!i && t) || ((null == e ? void 0 : e.id) != t && t)) &&
+              v
                 .Get()
-                .LoadSingleDiscountEventsAppList(e)
-                .then((e) => {
-                  e && (i(e.oDiscountEvent), r(e.rgAppList));
+                .LoadSingleDiscountEventsAppList(t)
+                .then((t) => {
+                  t && (n(t.oDiscountEvent), a(t.rgAppList));
                 });
-          }, [null == t ? void 0 : t.id, n, e]),
-          (0, u.Qg)(g.Get().GetDiscountEventCallback(e), i),
-          (0, u.Qg)(g.Get().GetAppListCallback(e), r),
-          n ? { oDiscountEvent: t, rgAppList: n } : null
+          }, [null == e ? void 0 : e.id, i, t]),
+          (0, d.Qg)(v.Get().GetDiscountEventCallback(t), n),
+          (0, d.Qg)(v.Get().GetAppListCallback(t), a),
+          i ? { oDiscountEvent: e, rgAppList: i } : null
         );
       }
-      function f() {
-        return { fnCreateDiscountEvent: g.Get().CreateDiscountEvent };
+      function k() {
+        return { fnCreateDiscountEvent: v.Get().CreateDiscountEvent };
       }
-      function E() {
+      function I() {
         return {
           fnUpdateDiscountEventAppAndPublisherList:
-            g.Get().UpdateDiscountEventPublisherAndAppList,
+            v.Get().UpdateDiscountEventPublisherAndAppList,
         };
       }
-      (0, n.gn)([c.a], g.prototype, "GetDiscountEvent", null),
-        (0, n.gn)([c.a], g.prototype, "GetAppList", null),
-        (0, n.gn)([c.a], g.prototype, "CreateDiscountEvent", null),
-        (0, n.gn)(
-          [c.a],
-          g.prototype,
+      (0, i.gn)([l.a], v.prototype, "GetDiscountEvent", null),
+        (0, i.gn)([l.a], v.prototype, "GetAppList", null),
+        (0, i.gn)([l.a], v.prototype, "CreateDiscountEvent", null),
+        (0, i.gn)(
+          [l.a],
+          v.prototype,
           "UpdateDiscountEventPublisherAndAppList",
           null
         );
     },
-    99344: (e, t, i) => {
+    16586: (t, e, n) => {
       "use strict";
-      i.d(t, { o: () => l });
-      var n = i(33940),
-        r = i(52868),
-        s = i.n(r),
-        a = (i(36998), i(50265), i(5615)),
-        o = (i(42770), i(63403), i(23217), i(32765));
-      function l(e, t, i) {
-        const { isLoading: r, data: l } = (0, a.useQuery)(
-          ["useOptedInAppWithDiscounts", e, t, i],
-          () =>
-            (function (e) {
-              return (0, n.mG)(this, void 0, void 0, function* () {
-                const t =
-                    o.De.PARTNER_BASE_URL + "discounts/ajaxgetdiscountbyapp",
-                  i = new Map();
-                if (!e || 0 == e.length) return i;
-                const n = [...e],
-                  r = (n.length, []);
-                for (; n.length > 0; ) {
-                  const e = n.splice(0, 250),
-                    i = new FormData();
-                  i.append("sessionid", o.De.SESSIONID),
-                    i.append("rgAppIDs", e.join(",")),
-                    i.append("bExcludeExpired", "1"),
-                    r.push(s().post(t, i, { withCredentials: !0 }));
-                }
-                return (
-                  (yield Promise.all(r)).forEach((e) => {
-                    var t, n, r;
-                    if (
-                      200 == (null == e ? void 0 : e.status) &&
-                      1 ==
-                        (null === (t = null == e ? void 0 : e.data) ||
-                        void 0 === t
-                          ? void 0
-                          : t.success) &&
-                      (null === (n = null == e ? void 0 : e.data) ||
-                      void 0 === n
-                        ? void 0
-                        : n.map)
-                    )
-                      for (let t in e.data.map) {
-                        const n = Number.parseInt(t);
-                        n && i.set(n, e.data.map[n]);
-                      }
-                    else
-                      console.log(
-                        "Error: Failed on FetchDiscountByApp request " +
-                          (null == e ? void 0 : e.status) +
-                          " " +
-                          (null == e ? void 0 : e.statusText) +
-                          " " +
-                          (null === (r = null == e ? void 0 : e.data) ||
-                          void 0 === r
-                            ? void 0
-                            : r.success)
-                      );
-                  }),
-                  i
-                );
-              });
-            })(t)
-        );
-        return r ? null : l;
-      }
-    },
-    23457: (e, t, i) => {
-      "use strict";
-      i.d(t, {
-        Hf: () => S,
-        On: () => b,
-        cf: () => y,
-        tb: () => E,
-        y7: () => k,
-      });
-      var n = i(33940),
-        r = i(52868),
-        s = i.n(r),
-        a = i(64368),
-        o = i(12597),
-        l = (i(40490), i(50265)),
-        c = i(89526),
-        d = i(42770),
-        u = (i(15039), i(7948)),
-        m = (i(22444), i(63403), i(11837)),
-        p = i(23217),
-        _ = i(85246),
-        g = i(4306),
-        h = i(32765),
-        v = i(33917);
-      const D = "section_",
-        y = "list_",
-        S = "option_";
-      class b {
-        constructor() {
-          (this.m_bDirty = !1),
-            (this.m_mapDynamicSection = new Map()),
-            (this.m_mapEmails = new Map()),
-            (this.m_activeStatsChange = new _.pB()),
-            (this.rgOptionalSuggestedRequired = []),
-            (this.rgEventTypes = []),
-            (this.rgGameTokens = []);
-        }
-        static Get() {
-          return (
-            b.s_Editor ||
-              ((b.s_Editor = new b()),
-              ("dev" != h.De.WEB_UNIVERSE && "beta" != h.De.WEB_UNIVERSE) ||
-                (window.g_OptInAdminEditModel = b.s_Editor)),
-            b.s_Editor
-          );
-        }
-        GetActiveStatsChangeCallaback() {
-          return this.m_activeStatsChange;
-        }
-        GetOptInPageID() {
-          return this.m_model.pageid;
-        }
-        GetDynamicOptionByID(e) {
-          let t = null;
-          return (
-            this.GetDynamicSections().forEach((i) => {
-              i.unique_id == e.section_id &&
-                i.lists.forEach((i) => {
-                  i.unique_id == e.list_id &&
-                    i.options.forEach((i) => {
-                      i.unique_id == e.option_id && (t = i);
-                    });
-                });
-            }),
-            t
-          );
-        }
-        BContainDyanmicOptionByIDs(e) {
-          return null != this.GetDynamicOptionByID(e);
-        }
-        GetOptionNameByID(e, t = 0) {
-          const i = this.GetDynamicOptionByID(e);
-          return i ? this.GetKVLang(i.text, t) : "";
-        }
-        AddDemoPackage(e) {
-          this.m_model.demo_packages || (this.m_model.demo_packages = []),
-            this.m_model.demo_packages.push(e),
-            this.SetDirty(!0);
-        }
-        GetDemoPackages() {
-          return this.m_model.demo_packages;
-        }
-        GetName() {
-          return this.m_model && this.m_model.pageid
-            ? -1 != this.m_model.pageid.indexOf("sale_", 0)
-              ? this.m_model.pageid.substring(5)
-              : this.m_model.pageid
-            : "";
-        }
-        GetFullName() {
-          return this.m_model && this.m_model.pageid ? this.m_model.pageid : "";
-        }
-        BHasSpecialEventType() {
-          var e;
-          return Boolean(
-            null === (e = this.m_model) || void 0 === e
-              ? void 0
-              : e.special_event_type
-          );
-        }
-        GetSpecialEventType() {
-          return this.m_model.special_event_type;
-        }
-        SetSpecialEventType(e) {
-          e !== this.m_model.special_event_type &&
-            ((this.m_model.special_event_type = e), this.SetDirty(!0));
-        }
-        GetCurSpecialEventName() {
-          return this.GetSpecialEventName(u.U.Get().GetCurEditLanguage());
-        }
-        GetSpecialEventName(e) {
-          var t;
-          return null !==
-            (t = this.GetKVLang(this.m_model.special_event_name, e)) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        SetCurSpecialEventName(e) {
-          this.SetSpecialEventName(u.U.Get().GetCurEditLanguage(), e);
-        }
-        SetSpecialEventName(e, t) {
-          this.SetKVLang(this.m_model.special_event_name, e, t);
-        }
-        GetCurSpecialEventDescription() {
-          return this.GetSpecialEventDescription(
-            u.U.Get().GetCurEditLanguage()
-          );
-        }
-        GetSpecialEventDescription(e) {
-          var t;
-          return null !==
-            (t = this.GetKVLang(this.m_model.special_event_description, e)) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        SetCurSpecialEventDescription(e) {
-          this.SetSpecialEventDescription(u.U.Get().GetCurEditLanguage(), e);
-        }
-        SetSpecialEventDescription(e, t) {
-          this.SetKVLang(this.m_model.special_event_description, e, t);
-        }
-        GetSpecialEventDocLink() {
-          return this.m_model.special_event_doc_link;
-        }
-        SetSpecialEventDocLink(e) {
-          e != this.m_model.special_event_doc_link &&
-            ((this.m_model.special_event_doc_link = e), this.SetDirty(!0));
-        }
-        GetSpecialEventTypeMax() {
-          return this.m_model.special_event_type_max || 0;
-        }
-        SetSpecialEventTypeMax(e) {
-          e != this.m_model.special_event_type_max &&
-            ((this.m_model.special_event_type_max = e), this.SetDirty(!0));
-        }
-        GetSpecialEventStartTime() {
-          return this.m_model.special_event_rt_start || 0;
-        }
-        SetSpecialEventStartTime(e) {
-          e != this.m_model.special_event_rt_start &&
-            ((this.m_model.special_event_rt_start = e), this.SetDirty(!0));
-        }
-        GetSpecialEventEndTime() {
-          return this.m_model.special_event_rt_end || 0;
-        }
-        SetSpecialEventEndTime(e) {
-          e != this.m_model.special_event_rt_end &&
-            ((this.m_model.special_event_rt_end = e), this.SetDirty(!0));
-        }
-        BHasSpecialEventTimeSet() {
-          return (
-            Boolean(this.m_model.special_event_rt_start) ||
-            Boolean(this.m_model.special_event_rt_end)
-          );
-        }
-        NCountSpecialEventBlocks() {
-          var e;
-          return (
-            (null === (e = this.m_model.special_event_time_blocks) ||
-            void 0 === e
-              ? void 0
-              : e.length) || 0
-          );
-        }
-        AddSpecialEventBlock() {
-          this.m_model.special_event_time_blocks ||
-            (this.m_model.special_event_time_blocks = []),
-            this.m_model.special_event_time_blocks.push({ block_reason: {} }),
-            this.SetDirty(!0);
-        }
-        RemoveSpecialEventBlock(e) {
-          var t;
-          return (
-            e <
-              (null === (t = this.m_model.special_event_time_blocks) ||
-              void 0 === t
-                ? void 0
-                : t.length) &&
-            (this.m_model.special_event_time_blocks.splice(e),
-            this.SetDirty(!0),
-            !0)
-          );
-        }
-        SetSpecialEventBlock(e, t) {
-          var i;
-          return (
-            e <
-              (null === (i = this.m_model.special_event_time_blocks) ||
-              void 0 === i
-                ? void 0
-                : i.length) &&
-            ((this.m_model.special_event_time_blocks[e] = t),
-            this.SetDirty(!0),
-            !0)
-          );
-        }
-        GetAllSpecialEventBlocks() {
-          return this.m_model.special_event_time_blocks || [];
-        }
-        MoveSpecialEventblock(e, t) {
-          var i, n;
-          return (
-            e <
-              (null === (i = this.m_model.special_event_time_blocks) ||
-              void 0 === i
-                ? void 0
-                : i.length) &&
-            t <
-              (null === (n = this.m_model.special_event_time_blocks) ||
-              void 0 === n
-                ? void 0
-                : n.length) &&
-            e != t &&
-            ((0, m.hV)(this.m_model.special_event_time_blocks, e, t),
-            this.SetDirty(!0),
-            !0)
-          );
-        }
-        BIsInSpecialEventBlockedTime(e) {
-          var t, i;
-          return Boolean(
-            e &&
-              (null ===
-                (i =
-                  null === (t = this.m_model.special_event_time_blocks) ||
-                  void 0 === t
-                    ? void 0
-                    : t.filter(
-                        (t) => e >= t.block_rt_start && e < t.block_rt_end
-                      )) || void 0 === i
-                ? void 0
-                : i.length) > 0
-          );
-        }
-        BRequiresRemotePlayTogether() {
-          return this.m_model.required_app_features.remote_play_together || !1;
-        }
-        SetRequiresRemotePlayTogether(e) {
-          e !==
-            (this.m_model.required_app_features.remote_play_together || !1) &&
-            ((this.m_model.required_app_features.remote_play_together = e),
-            this.SetDirty(!0));
-        }
-        BRequiresVR() {
-          return this.m_model.required_app_features.vr || !1;
-        }
-        SetRequiresVR(e) {
-          e !== (this.m_model.required_app_features.vr || !1) &&
-            ((this.m_model.required_app_features.vr = e), this.SetDirty(!0));
-        }
-        BOptInRegistationOnlyShowSaveButton() {
-          return this.m_model.opt_in_registration_only_show_save;
-        }
-        SetOptInRegistationOnlyShowSaveButton(e) {
-          e != this.m_model.opt_in_registration_only_show_save &&
-            ((this.m_model.opt_in_registration_only_show_save = e),
-            this.SetDirty(!0));
-        }
-        BIsAdditionalFeaturingSectionEnabled() {
-          return this.m_model.additional_featuring_section_enabled;
-        }
-        SetAdditionalFeaturingSectionEnabled(e) {
-          e != this.m_model.additional_featuring_section_enabled &&
-            ((this.m_model.additional_featuring_section_enabled = e),
-            this.SetDirty(!0));
-        }
-        BIsCollectTrailerPermissions() {
-          return this.m_model.collect_trailer_permissions;
-        }
-        SetCollectTrailerPermissions(e) {
-          e != this.m_model.collect_trailer_permissions &&
-            ((this.m_model.collect_trailer_permissions = e), this.SetDirty(!0));
-        }
-        BIsCollectDemoPermissions() {
-          return this.m_model.collect_demo_permissions;
-        }
-        SetCollectDemoPermissions(e) {
-          e != this.m_model.collect_demo_permissions &&
-            ((this.m_model.collect_demo_permissions = e), this.SetDirty(!0));
-        }
-        BIsCollectGameProfileIntent() {
-          return this.m_model.collect_game_profile_intent;
-        }
-        SetCollectGameProfileIntent(e) {
-          e != this.m_model.collect_game_profile_intent &&
-            ((this.m_model.collect_game_profile_intent = e), this.SetDirty(!0));
-        }
-        BHasCollectDemoDeadlineDate() {
-          return Boolean(this.m_model.collect_demo_deadline);
-        }
-        GetCollectDemoDeadlineDate() {
-          return this.m_model.collect_demo_deadline;
-        }
-        SetCollectDemoDeadlineDate(e) {
-          e != this.m_model.collect_demo_deadline &&
-            ((this.m_model.collect_demo_deadline = e), this.SetDirty(!0));
-        }
-        GetCurEventTitle() {
-          var e;
-          return null !==
-            (e = this.GetEventTitle(u.U.Get().GetCurEditLanguage())) &&
-            void 0 !== e
-            ? e
-            : "";
-        }
-        GetEventTitle(e) {
-          var t;
-          return null !== (t = this.GetKVLang(this.m_model.event_title, e)) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        SetCurEventTitle(e) {
-          this.SetEventTitle(u.U.Get().GetCurEditLanguage(), e);
-        }
-        SetEventTitle(e, t) {
-          this.SetKVLang(this.m_model.event_title, e, t);
-        }
-        GetCurOptInRegistrationTitle() {
-          var e;
-          return null !==
-            (e = this.GetOptInRegistrationTitle(
-              u.U.Get().GetCurEditLanguage()
-            )) && void 0 !== e
-            ? e
-            : "";
-        }
-        GetOptInRegistrationTitle(e) {
-          var t;
-          return null !==
-            (t = this.GetKVLang(this.m_model.opt_in_registration_title, e)) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        SetCurOptInRegistrationTitle(e) {
-          this.SetOptInRegistrationTitle(u.U.Get().GetCurEditLanguage(), e);
-        }
-        SetOptInRegistrationTitle(e, t) {
-          this.m_model.opt_in_registration_title ||
-            (this.m_model.opt_in_registration_title = {}),
-            this.SetKVLang(this.m_model.opt_in_registration_title, e, t);
-        }
-        GetCurOptInRegistrationCheckbox() {
-          var e;
-          return null !==
-            (e = this.GetOptInRegistrationCheckbox(
-              u.U.Get().GetCurEditLanguage()
-            )) && void 0 !== e
-            ? e
-            : "";
-        }
-        GetOptInRegistrationCheckbox(e) {
-          var t;
-          return null !==
-            (t = this.GetKVLang(
-              this.m_model.opt_in_registration_checkbox,
-              e
-            )) && void 0 !== t
-            ? t
-            : "";
-        }
-        SetCurOptInRegistrationCheckbox(e) {
-          this.SetOptInRegistrationCheckbox(u.U.Get().GetCurEditLanguage(), e);
-        }
-        SetOptInRegistrationCheckbox(e, t) {
-          this.m_model.opt_in_registration_checkbox ||
-            (this.m_model.opt_in_registration_checkbox = {}),
-            this.SetKVLang(this.m_model.opt_in_registration_checkbox, e, t);
-        }
-        BHasOptInRegistrationTitleOrCheckbox() {
-          return (
-            Boolean(this.m_model.opt_in_registration_title) ||
-            Boolean(this.m_model.opt_in_registration_checkbox)
-          );
-        }
-        BIsOptInEnabled() {
-          return this.m_model.sale_optin_enabled;
-        }
-        SetOptInEnabled(e) {
-          e !== this.m_model.sale_optin_enabled &&
-            ((this.m_model.sale_optin_enabled = e), this.SetDirty(!0));
-        }
-        GetPublicEventURL() {
-          return this.m_model.public_event_url;
-        }
-        SetPublicEventURL(e) {
-          e != this.m_model.public_event_url &&
-            ((this.m_model.public_event_url = e), this.SetDirty(!0));
-        }
-        GetPublicDocumentationWikiURL() {
-          return this.m_model.public_doc_wiki_url;
-        }
-        SetPublicDocumentationWikiURL(e) {
-          e != this.m_model.public_doc_wiki_url &&
-            ((this.m_model.public_doc_wiki_url = e), this.SetDirty(!0));
-        }
-        GetPublicEventID() {
-          return this.m_model.public_event_id;
-        }
-        SetPublicEventID(e) {
-          e != this.m_model.public_event_id &&
-            ((this.m_model.public_event_id = e), this.SetDirty(!0));
-        }
-        GetEventStartTime() {
-          return this.m_model.event_start_date;
-        }
-        SetEventStartTime(e) {
-          e !== this.m_model.event_start_date &&
-            ((this.m_model.event_start_date = e), this.SetDirty(!0));
-        }
-        GetEventEndTime() {
-          return this.m_model.event_end_date;
-        }
-        SetEventEndTime(e) {
-          e !== this.m_model.event_end_date &&
-            ((this.m_model.event_end_date = e), this.SetDirty(!0));
-        }
-        GetOptInDeadlineTime() {
-          return this.m_model.optin_deadline_date;
-        }
-        SetOptInDeadlineTime(e) {
-          e !== this.m_model.optin_deadline_date &&
-            ((this.m_model.optin_deadline_date = e), this.SetDirty(!0));
-        }
-        BIsInvitationOnly() {
-          return this.m_model.invitation_only;
-        }
-        SetInvititationOnly(e) {
-          e !== this.m_model.invitation_only &&
-            ((this.m_model.invitation_only = e), this.SetDirty(!0));
-        }
-        BIsReleaseGamesEligible() {
-          return this.m_model.release_date_eligibility.include_released_games;
-        }
-        SetReleaseGameEligible(e) {
-          e !== this.m_model.release_date_eligibility.include_released_games &&
-            ((this.m_model.release_date_eligibility.include_released_games = e),
-            this.SetDirty(!0));
-        }
-        BIsUnreleaseGamesEligible() {
-          return this.m_model.release_date_eligibility.include_unreleased_games;
-        }
-        SetUnreleaseGameEligible(e) {
-          e !==
-            this.m_model.release_date_eligibility.include_unreleased_games &&
-            ((this.m_model.release_date_eligibility.include_unreleased_games =
-              e),
-            this.SetDirty(!0));
-        }
-        GetEligibleReleaseBeforeDate() {
-          return this.m_model.release_date_eligibility.release_before_date;
-        }
-        SetEligibleReleaseBeforeDate(e) {
-          e !== this.m_model.release_date_eligibility.release_before_date &&
-            ((this.m_model.release_date_eligibility.release_before_date = e),
-            this.SetDirty(!0));
-        }
-        GetEligibleReleaseAfterDate() {
-          return this.m_model.release_date_eligibility.release_after_date;
-        }
-        SetEligibleReleaseAfterDate(e) {
-          e !== this.m_model.release_date_eligibility.release_after_date &&
-            ((this.m_model.release_date_eligibility.release_after_date = e),
-            this.SetDirty(!0));
-        }
-        GetCooldownGroupType() {
-          return this.m_model.cooldown_group.group_id || 0;
-        }
-        SetCooldownGroupType(e) {
-          (this.m_model.cooldown_group &&
-            e === this.m_model.cooldown_group.group_id) ||
-            (this.m_model.cooldown_group || (this.m_model.cooldown_group = {}),
-            (this.m_model.cooldown_group.group_id = e),
-            this.SetDirty(!0));
-        }
-        GetCooldownRequired() {
-          return this.m_model.cooldown_group.cooldown_required || !1;
-        }
-        SetCooldownRequired(e) {
-          (this.m_model.cooldown_group &&
-            e === this.m_model.cooldown_group.cooldown_required) ||
-            (this.m_model.cooldown_group || (this.m_model.cooldown_group = {}),
-            (this.m_model.cooldown_group.cooldown_required = e),
-            this.SetDirty(!0));
-        }
-        GetCooldownDays() {
-          return this.m_model.cooldown_group.cooldown_time || 0;
-        }
-        SetCooldownDays(e) {
-          e !== this.m_model.cooldown_group.cooldown_time &&
-            ((this.m_model.cooldown_group.cooldown_time = e),
-            this.SetDirty(!0));
-        }
-        GetRequiredTags() {
-          let e = [];
-          if (this.m_model && this.m_model.required_tags) {
-            let t = v.v.Get().GetGameTags();
-            Object.keys(this.m_model.required_tags).forEach((i) => {
-              const n = t.find((e) => e.value == i);
-              n && e.push({ label: n.label, value: n.value });
-            });
-          }
-          return e;
-        }
-        OnChangeRequiredTags(e) {
-          (this.m_model.required_tags = {}),
-            e &&
-              e.forEach((e) => {
-                let t = parseInt(e.value);
-                this.m_model.required_tags[t] = !0;
-              }),
-            this.SetDirty(!0);
-        }
-        GetAppOfficialWeightedTagRankToInclude() {
-          return this.m_model.app_official_weighted_tag_rank_to_include || 20;
-        }
-        SetAppOfficialWeightedTagRankToInclude(e) {
-          e !== this.m_model.app_official_weighted_tag_rank_to_include &&
-            ((this.m_model.app_official_weighted_tag_rank_to_include = e),
-            this.SetDirty(!0));
-        }
-        GetModel() {
-          return this.m_model;
-        }
-        GetDynamicSections() {
-          return this.m_model.dynamic_sections || [];
-        }
-        GetEditableDynamicSections() {
-          return this.m_dynamicSections || [];
-        }
-        GetDynamicSectionByID(e) {
-          return this.m_mapDynamicSection.get(e);
-        }
-        GetEmailDefinitionByID(e) {
-          return this.m_mapEmails.get(e);
-        }
-        GetFirstEmail() {
-          var e;
-          return (null === (e = this.m_EmailDefinitions) || void 0 === e
-            ? void 0
-            : e.length) > 0
-            ? this.m_EmailDefinitions[0]
-            : void 0;
-        }
-        GetEmailDefinitions() {
-          return this.m_EmailDefinitions;
-        }
-        GetCurDescription() {
-          return this.GetDescription(u.U.Get().GetCurEditLanguage());
-        }
-        GetDescription(e) {
-          var t;
-          return null !== (t = this.GetKVLang(this.m_model.description, e)) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        SetCurDescription(e) {
-          this.SetDescription(u.U.Get().GetCurEditLanguage(), e);
-        }
-        SetDescription(e, t) {
-          this.SetKVLang(this.m_model.description, e, t);
-        }
-        GetCurHelpText() {
-          return this.GetHelpText(u.U.Get().GetCurEditLanguage());
-        }
-        GetHelpText(e) {
-          var t;
-          return null !== (t = this.GetKVLang(this.m_model.help_text, e)) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        SetCurHelpText(e) {
-          this.SetHelpText(u.U.Get().GetCurEditLanguage(), e);
-        }
-        SetHelpText(e, t) {
-          this.SetKVLang(this.m_model.help_text, e, t);
-        }
-        GetCurAppealsText() {
-          return this.GetAppealsText(u.U.Get().GetCurEditLanguage());
-        }
-        GetAppealsText(e) {
-          var t;
-          return null !== (t = this.GetKVLang(this.m_model.appeals_text, e)) &&
-            void 0 !== t
-            ? t
-            : "";
-        }
-        SetCurAppealsText(e) {
-          this.SetAppealsText(u.U.Get().GetCurEditLanguage(), e);
-        }
-        SetAppealsText(e, t) {
-          this.SetKVLang(this.m_model.appeals_text, e, t);
-        }
-        GetAllLocalizedOptInBanner() {
-          var e;
-          return null !== (e = this.m_model.localized_optin_banner) &&
-            void 0 !== e
-            ? e
-            : {};
-        }
-        GetLocalizedOptInBanner(e) {
-          var t, i;
-          return null !==
-            (i =
-              null === (t = this.m_model.localized_optin_banner) || void 0 === t
-                ? void 0
-                : t[(0, d.j_)(e)]) && void 0 !== i
-            ? i
-            : "";
-        }
-        SetLocalizedOptInBanner(e, t) {
-          this.m_model.localized_optin_banner ||
-            (this.m_model.localized_optin_banner = {});
-          const i = (0, d.j_)(e);
-          this.m_model.localized_optin_banner[i] != t &&
-            ((this.m_model.localized_optin_banner[i] = t), this.SetDirty(!0));
-        }
-        DeleteLocalizedOptInBanner(e) {
-          var t;
-          const i = (0, d.j_)(e);
-          (null === (t = this.m_model.localized_optin_banner) || void 0 === t
-            ? void 0
-            : t[i]) &&
-            (delete this.m_model.localized_optin_banner[i], this.SetDirty(!0));
-        }
-        BIsCategoriesEnabled() {
-          return this.m_model.categories.enabled;
-        }
-        SetCategoriesEnabled(e) {
-          e != this.m_model.categories.enabled &&
-            ((this.m_model.categories.enabled = e), this.SetDirty(!0));
-        }
-        GetCategoriesRequired() {
-          return this.m_model.categories.required || 0;
-        }
-        SetCategoriesRequired(e) {
-          e != this.m_model.categories.required &&
-            ((this.m_model.categories.required = e), this.SetDirty(!0));
-        }
-        GetCategoryTags() {
-          let e = [];
-          if (this.m_model && this.m_model.categories.tags) {
-            let t = v.v.Get().GetGameTags();
-            Object.keys(this.m_model.categories.tags).forEach((i) => {
-              const n = t.find((e) => e.value == i);
-              e.push({ label: n.label, value: n.value });
-            });
-          }
-          return e;
-        }
-        OnChangeCategoryTags(e) {
-          (this.m_model.categories.tags = {}),
-            e &&
-              e.forEach((e) => {
-                let t = parseInt(e.value);
-                this.m_model.categories.tags[t] = !0;
-              }),
-            this.SetDirty(!0);
-        }
-        BIsArtistStatementEnabled() {
-          return this.m_model.artist_statement.enabled || !1;
-        }
-        SetArtistStatementEnabled(e) {
-          e !== this.m_model.artist_statement.enabled &&
-            ((this.m_model.artist_statement.enabled = e), this.SetDirty(!0));
-        }
-        GetArtistStatementRequired() {
-          return this.m_model.artist_statement.required || 0;
-        }
-        SetArtistStatementRequired(e) {
-          e !== this.m_model.artist_statement.required &&
-            ((this.m_model.artist_statement.required = e), this.SetDirty(!0));
-        }
-        BIsPrimaryCountryEnabled() {
-          return this.m_model.primary_country.enabled || !1;
-        }
-        SetPrimaryCountryEnabled(e) {
-          e !== this.m_model.primary_country.enabled &&
-            ((this.m_model.primary_country.enabled = e), this.SetDirty(!0));
-        }
-        GetPrimaryCountryRequired() {
-          return this.m_model.primary_country.required || 0;
-        }
-        SetPrimaryCountryRequired(e) {
-          e !== this.m_model.primary_country.required &&
-            ((this.m_model.primary_country.required = e), this.SetDirty(!0));
-        }
-        BIsPressContactEnabled() {
-          return this.m_model.press_contact.enabled || !1;
-        }
-        SetPressContactEnabled(e) {
-          var t;
-          e !==
-            (null === (t = this.m_model) || void 0 === t
-              ? void 0
-              : t.press_contact.enabled) &&
-            ((this.m_model.press_contact.enabled = e), this.SetDirty(!0));
-        }
-        GetPressContactRequired() {
-          return this.m_model.press_contact.required || 0;
-        }
-        SetPressContactRequired(e) {
-          var t;
-          e !==
-            (null === (t = this.m_model) || void 0 === t
-              ? void 0
-              : t.press_contact.required) &&
-            ((this.m_model.press_contact.required = e), this.SetDirty(!0));
-        }
-        BIsBeforeYouOptInEnabled() {
-          return this.m_model.before_you_opt_in || !1;
-        }
-        SetBeforeYouOptInEnabled(e) {
-          e !== this.m_model.before_you_opt_in &&
-            ((this.m_model.before_you_opt_in = e), this.SetDirty(!0));
-        }
-        BIsBuildYourStorePageEnabled() {
-          return this.m_model.build_store_page.enabled || !1;
-        }
-        SetBuildYourStorePageEnabled(e) {
-          e !== this.m_model.build_store_page.enabled &&
-            ((this.m_model.build_store_page.enabled = e), this.SetDirty(!0));
-        }
-        GetBuildYourStorePageRequired() {
-          return this.m_model.build_store_page.required || 0;
-        }
-        SetBuildYourStorePageRequired(e) {
-          e !== this.m_model.build_store_page.required &&
-            ((this.m_model.build_store_page.required = e), this.SetDirty(!0));
-        }
-        GetStorePageText() {
-          var e;
-          return null !==
-            (e = this.GetKVLang(
-              this.m_model.build_store_page.description,
-              u.U.Get().GetCurEditLanguage()
-            )) && void 0 !== e
-            ? e
-            : "";
-        }
-        SetStorePageText(e) {
-          this.m_model.build_store_page || (this.m_model.build_store_page = {}),
-            this.m_model.build_store_page.description ||
-              (this.m_model.build_store_page.description = {}),
-            this.SetKVLang(
-              this.m_model.build_store_page.description,
-              u.U.Get().GetCurEditLanguage(),
-              e
-            );
-        }
-        BIsTaggingWizardEnabled() {
-          return this.m_model.tagging_wizard || !1;
-        }
-        SetTaggingWizardEnabled(e) {
-          e !== this.m_model.tagging_wizard &&
-            ((this.m_model.tagging_wizard = e), this.SetDirty(!0));
-        }
-        BIsLaunchYourDemoEnabled() {
-          return this.m_model.launch_demo.enabled || !1;
-        }
-        SetLaunchYourDemoEnabled(e) {
-          e !== this.m_model.launch_demo.enabled &&
-            ((this.m_model.launch_demo.enabled = e), this.SetDirty(!0));
-        }
-        GetLaunchYourDemoRequired() {
-          return this.m_model.launch_demo.required || 0;
-        }
-        SetLaunchYourDemoRequired(e) {
-          e !== this.m_model.launch_demo.required &&
-            ((this.m_model.launch_demo.required = e), this.SetDirty(!0));
-        }
-        GetLaunchYourDemoDueDate() {
-          return this.m_model.launch_demo.due_date || 0;
-        }
-        SetLaunchYourDemoDueDate(e) {
-          e !== this.m_model.launch_demo.due_date &&
-            ((this.m_model.launch_demo.due_date = e), this.SetDirty(!0));
-        }
-        BIsDoAnytimeEnabled() {
-          return this.m_model.do_anytime.enabled || !1;
-        }
-        SetDoAnytimeEnabled(e) {
-          e !== this.m_model.do_anytime.enabled &&
-            ((this.m_model.do_anytime.enabled = e), this.SetDirty(!0));
-        }
-        BIsLivestreamEnabled() {
-          return this.m_model.do_anytime.livestream || !1;
-        }
-        SetLivestreamEnabled(e) {
-          e !== this.m_model.do_anytime.livestream &&
-            ((this.m_model.do_anytime.livestream = e), this.SetDirty(!0));
-        }
-        BIsChatSessionEnabled() {
-          return this.m_model.do_anytime.chat_session || !1;
-        }
-        SetChatSessionEnabled(e) {
-          e !== this.m_model.do_anytime.chat_session &&
-            ((this.m_model.do_anytime.chat_session = e), this.SetDirty(!0));
-        }
-        BIsAnytimeTaggingWizardEnabled() {
-          return this.m_model.do_anytime.tagging_wizard || !1;
-        }
-        SetAnytimeTaggingWizardEnabled(e) {
-          e !== this.m_model.do_anytime.tagging_wizard &&
-            ((this.m_model.do_anytime.tagging_wizard = e), this.SetDirty(!0));
-        }
-        BIsEnterDiscountsEnabled() {
-          return this.m_model.do_anytime.enter_discounts || !1;
-        }
-        SetEnterDiscountsEnabled(e) {
-          e !== this.m_model.do_anytime.enter_discounts &&
-            ((this.m_model.do_anytime.enter_discounts = e), this.SetDirty(!0));
-        }
-        GetDiscountEventID() {
-          return this.m_model.do_anytime.discount_event_id || "";
-        }
-        SetDiscountEventID(e) {
-          e !== this.m_model.do_anytime.discount_event_id &&
-            ((this.m_model.do_anytime.discount_event_id = e),
-            this.SetDirty(!0));
-        }
-        GetExternalAppReviewers() {
-          return this.m_model.external_app_reviewer || [];
-        }
-        SetExternalAppReviewers(e) {
-          JSON.stringify(e) !==
-            JSON.stringify(this.m_model.external_app_reviewer) &&
-            ((this.m_model.external_app_reviewer = e), this.SetDirty(!0));
-        }
-        RemoveExternalAppReviewAt(e) {
-          var t;
-          e <
-            (null === (t = this.m_model.external_app_reviewer) || void 0 === t
-              ? void 0
-              : t.length) &&
-            (this.m_model.external_app_reviewer.splice(e, 1),
-            this.SetDirty(!0));
-        }
-        BAddExternalAppReviewAt(e) {
-          this.m_model.external_app_reviewer ||
-            (this.m_model.external_app_reviewer = []);
-          return (
-            -1 == this.m_model.external_app_reviewer.findIndex((t) => t == e) &&
-            (this.m_model.external_app_reviewer.push(e), this.SetDirty(!0), !0)
-          );
-        }
-        GetKVLang(e, t) {
-          const i = (0, d.j_)(t);
-          return e ? e[i] : "";
-        }
-        SetKVLang(e, t, i) {
-          const n = (0, d.j_)(t);
-          e[n] != i && ((e[n] = i), this.SetDirty(!0));
-        }
-        AddDynamicSection() {
-          this.m_model.dynamic_sections || (this.m_model.dynamic_sections = []),
-            this.m_model.dynamic_sections.push(b.CreateDefaultDynamicSection());
-          const e = new f(
-            this.m_model.dynamic_sections[
-              this.m_model.dynamic_sections.length - 1
-            ]
-          );
-          this.m_mapDynamicSection.set(e.GetUniqueID(), e),
-            this.m_dynamicSections.push(e),
-            this.SetDirty(!0);
-        }
-        static CreateDefaultDynamicSection() {
-          return {
-            unique_id: b.Get().GenerateUniqueIDForOptInSection(),
-            input_style: "radio",
-            columns: 1,
-            lists: [
-              {
-                options: [],
-                unique_id: b.GenerateUniqueIDForOptionListSection(),
-              },
-            ],
-          };
-        }
-        DeleteDynamicSection(e) {
-          const t = this.GetDynamicSectionByID(e);
-          if (!t) return console.log("Could not find section with ID " + e), !1;
-          this.m_mapDynamicSection.delete(t.GetUniqueID());
-          let i = this.m_dynamicSections.findIndex((t) => t.GetUniqueID() == e);
-          if (-1 === i) throw `dynamic section unique id ${e} missing: editing`;
-          if (
-            (this.m_dynamicSections.splice(i, 1),
-            (i = this.m_model.dynamic_sections.findIndex(
-              (t) => t.unique_id === e
-            )),
-            -1 === i)
-          )
-            throw `dynamic section unique id ${e} missing: source model`;
-          return (
-            this.m_model.dynamic_sections.splice(i, 1), this.SetDirty(!0), !0
-          );
-        }
-        GenerateUniqueIDForOptInSection() {
-          let e = Math.floor(1 + 1e5 * Math.random());
-          for (; this.GetDynamicSectionByID(D + e); )
-            e = Math.floor(1 + 1e5 * Math.random());
-          return D + e;
-        }
-        static GenerateUniqueIDForOptionListSection(e) {
-          let t = Math.floor(1 + 1e5 * Math.random());
-          for (; e && e.some((e) => e.unique_id === y + t); )
-            t = Math.floor(1 + 1e5 * Math.random());
-          return y + t;
-        }
-        static GenerateUniqueIDForListItem(e) {
-          let t = Math.floor(1 + 1e5 * Math.random());
-          for (; e && e.some((e) => e.unique_id === S + t); )
-            t = Math.floor(1 + 1e5 * Math.random());
-          return S + t;
-        }
-        BIsDirty() {
-          return this.m_bDirty;
-        }
-        SetDirty(e) {
-          this.m_bDirty != e &&
-            ((this.m_bDirty = e),
-            v.v.Get().SetUnpublishedChanges(this.GetFullName()));
-        }
-        Save(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let t = h.De.PARTNER_BASE_URL + "optin/ajaxadminupdate";
-            const i = new FormData();
-            i.append("sessionid", h.De.SESSIONID),
-              i.append("pageid", this.m_model.pageid),
-              i.append("jsondata", JSON.stringify(this.m_model));
-            try {
-              let n = yield s().post(t, i, {
-                withCredentials: !0,
-                cancelToken: e,
-              });
-              if (e.reason)
-                return (
-                  console.log(
-                    "COptInAdminEditModel.Save Cancelled: " + e.reason
-                  ),
-                  null
-                );
-              if (200 != n.status || !n.data || 1 != n.data.success) {
-                let e =
-                  "Save Error: (" +
-                  (n.data
-                    ? "erseult: " + n.data.success
-                    : "status: " + n.status) +
-                  ")";
-                return (
-                  n.data &&
-                    n.data.err_msg &&
-                    (e += " Error Message: " + n.data.err_msg),
-                  console.error("COptInAdminEditModel.Save: " + e),
-                  e
-                );
-              }
-              v.v.Get().SetOptInDefinition(this.m_model), this.SetDirty(!1);
-            } catch (e) {
-              let t = (0, p.l)(e);
-              return (
-                console.error(
-                  "COptInAdminEditModel save error: " + t.strErrorMsg,
-                  t
-                ),
-                "Save Error: " + e.strErrorMsg
-              );
-            }
-            return null;
-          });
-        }
-        BInitialized() {
-          return Boolean(this.m_model);
-        }
-        BHasLanguageData(e) {
-          const t = (0, d.j_)(e);
-          return (
-            (this.m_model.description &&
-              this.m_model.description[t] &&
-              this.m_model.description[t].length > 0) ||
-            (this.m_model.help_text &&
-              this.m_model.help_text[t] &&
-              this.m_model.help_text[t].length > 0) ||
-            (this.m_model.appeals_text &&
-              this.m_model.appeals_text[t] &&
-              this.m_model.appeals_text[t].length > 0) ||
-            (this.m_model.special_event_name &&
-              this.m_model.special_event_name[t] &&
-              this.m_model.special_event_name[t].length > 0) ||
-            (this.m_model.special_event_description &&
-              this.m_model.special_event_description[t] &&
-              this.m_model.special_event_description[t].length > 0) ||
-            (this.m_model.build_store_page &&
-              this.m_model.build_store_page.description &&
-              this.m_model.build_store_page.description[t] &&
-              this.m_model.build_store_page.description[t].length > 0) ||
-            (this.m_model.artist_statement &&
-              this.m_model.artist_statement.description &&
-              this.m_model.artist_statement.description[t] &&
-              this.m_model.artist_statement.description[t].length > 0)
-          );
-        }
-        Reset(e, t) {
-          var i, n;
-          if (
-            ((this.m_model = e ? JSON.parse(JSON.stringify(e)) : null),
-            (this.m_bDirty = !1),
-            u.U.Get().SetCurEditLanguage(0),
-            this.SetActiveStats(t),
-            this.m_model &&
-              ((this.m_model.required_tags &&
-                !Array.isArray(this.m_model.required_tags)) ||
-                (this.m_model.required_tags = {}),
-              (this.m_model.categories &&
-                !Array.isArray(this.m_model.categories)) ||
-                (this.m_model.categories = {}),
-              (this.m_model.categories.tags &&
-                !Array.isArray(this.m_model.categories.tags)) ||
-                (this.m_model.categories.tags = {}),
-              (this.m_model.artist_statement &&
-                !Array.isArray(this.m_model.artist_statement)) ||
-                (this.m_model.artist_statement = {}),
-              (this.m_model.primary_country &&
-                !Array.isArray(this.m_model.primary_country)) ||
-                (this.m_model.primary_country = {}),
-              (this.m_model.press_contact &&
-                !Array.isArray(this.m_model.press_contact)) ||
-                (this.m_model.press_contact = {}),
-              (this.m_model.build_store_page &&
-                !Array.isArray(this.m_model.build_store_page)) ||
-                (this.m_model.build_store_page = {}),
-              (this.m_model.launch_demo &&
-                !Array.isArray(this.m_model.launch_demo)) ||
-                (this.m_model.launch_demo = {}),
-              (this.m_model.do_anytime &&
-                !Array.isArray(this.m_model.do_anytime)) ||
-                (this.m_model.do_anytime = {}),
-              (this.m_model.release_date_eligibility &&
-                !Array.isArray(this.m_model.release_date_eligibility)) ||
-                (this.m_model.release_date_eligibility = {}),
-              (this.m_model.cooldown_group &&
-                !Array.isArray(this.m_model.cooldown_group)) ||
-                (this.m_model.cooldown_group = {}),
-              (this.m_model.description &&
-                !Array.isArray(this.m_model.description)) ||
-                (this.m_model.description = {}),
-              (this.m_model.help_text &&
-                !Array.isArray(this.m_model.help_text)) ||
-                (this.m_model.help_text = {}),
-              (this.m_model.appeals_text &&
-                !Array.isArray(this.m_model.appeals_text)) ||
-                (this.m_model.appeals_text = {}),
-              (this.m_model.special_event_description &&
-                !Array.isArray(this.m_model.special_event_description)) ||
-                (this.m_model.special_event_description = {}),
-              (this.m_model.special_event_name &&
-                !Array.isArray(this.m_model.special_event_name)) ||
-                (this.m_model.special_event_name = {}),
-              (this.m_model.event_title &&
-                !Array.isArray(this.m_model.event_title)) ||
-                (this.m_model.event_title = {}),
-              (this.m_model.required_app_features &&
-                !Array.isArray(this.m_model.required_app_features)) ||
-                (this.m_model.required_app_features = {})),
-            this.m_model && !this.m_model.event_start_date)
-          ) {
-            let e = new Date();
-            e.setHours(10),
-              e.setMinutes(0),
-              e.setSeconds(0),
-              (this.m_model.event_start_date = Math.floor(e.getTime() / 1e3));
-          }
-          if (this.m_model && !this.m_model.event_end_date) {
-            let e = new Date();
-            e.setDate(e.getDate() + 1),
-              e.setHours(10),
-              e.setMinutes(0),
-              e.setSeconds(0),
-              (this.m_model.event_end_date = Math.floor(e.getTime() / 1e3));
-          }
-          (this.m_dynamicSections = []),
-            (this.m_mapDynamicSection = new Map()),
-            this.m_model &&
-              this.m_model.dynamic_sections &&
-              this.m_model.dynamic_sections.forEach((e) => {
-                let t = new f(e);
-                this.m_dynamicSections.push(t),
-                  this.m_mapDynamicSection.set(t.GetUniqueID(), t);
-              }),
-            (this.m_EmailDefinitions = []),
-            (this.m_mapEmails = new Map()),
-            (null ===
-              (n =
-                null === (i = this.m_model) || void 0 === i
-                  ? void 0
-                  : i.emails) || void 0 === n
-              ? void 0
-              : n.length) > 0 &&
-              this.m_model.emails.forEach((e) => {
-                const t = new o.S4(this.GetFullName(), e);
-                this.m_EmailDefinitions.push(t),
-                  this.m_mapEmails.set(t.GetUniqueID(), t);
-              }),
-            this.LoadActiveStatsDetails();
-        }
-        AddEmailDraft(e) {
-          this.m_model.emails || (this.m_model.emails = []),
-            this.m_model.emails.push(e);
-          const t = new o.S4(
-            this.GetFullName(),
-            this.m_model.emails[this.m_model.emails.length - 1]
-          );
-          return (
-            this.m_EmailDefinitions.push(t),
-            this.m_mapEmails.set(t.GetUniqueID(), t),
-            this.SetDirty(!0),
-            t
-          );
-        }
-        SetActiveStats(e) {
-          (this.rgActiveStats = e),
-            this.GetActiveStatsChangeCallaback().Dispatch(e);
-        }
-        GetActiveStats() {
-          return this.rgActiveStats;
-        }
-        LoadActiveStatsDetails() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            if (!this.m_model) return null;
-            let e = h.De.PARTNER_BASE_URL + "optin/ajaxgetoptinstats";
-            e +=
-              "?active=true&pageids=" + encodeURIComponent(this.m_model.pageid);
-            try {
-              let t = yield s().get(e, { withCredentials: !0, timeout: 2e4 });
-              if (200 != t.status || !t.data || 1 != t.data.success) {
-                return (
-                  "LoadActiveStatsDetails error: (" +
-                  (t.data
-                    ? "result: " + t.data.success
-                    : "status: " + t.status) +
-                  ")"
-                );
-              }
-              if (t.data.msg) {
-                const e = t.data.msg
-                  ? JSON.parse(JSON.stringify(t.data.msg))
-                  : null;
-                this.SetActiveStats(e ? e[0] : null);
-              }
-            } catch (e) {
-              return "Loading active stats returned " + e.strErrorMsg;
-            }
-            return null;
-          });
-        }
-        RefreshActiveStats(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            if (!this.m_model) return null;
-            let t = h.De.PARTNER_BASE_URL + "optin/ajaxrefreshoptinstats";
-            const i = new FormData();
-            i.append("sessionid", h.De.SESSIONID),
-              i.append("pageids", this.m_model.pageid);
-            try {
-              let n = yield s().post(t, i, {
-                withCredentials: !0,
-                cancelToken: e || void 0,
-                timeout: 12e4,
-              });
-              if (e && e.reason)
-                return (
-                  console.log("RefreshingActiveStats Cancelled: " + e.reason),
-                  null
-                );
-              if (200 != n.status || !n.data || 1 != n.data.success) {
-                let e =
-                  "Refresh optin stats error: (" +
-                  (n.data
-                    ? "result: " + n.data.success
-                    : "status: " + n.status) +
-                  ")";
-                return (
-                  console.log("COptInAdminEditModel.RefresActiveStats: " + e), e
-                );
-              }
-              if (n.data.msg) {
-                let e = n.data.msg
-                  ? JSON.parse(JSON.stringify(n.data.msg))
-                  : null;
-                this.SetActiveStats(e ? e[0] : null);
-              }
-            } catch (e) {
-              let t = (0, p.l)(e);
-              return (
-                console.error(
-                  "COptInAdminEditModel.RefreshActiveStats error: " +
-                    t.strErrorMsg,
-                  t
-                ),
-                "Save Error: " + e.strErrorMsg
-              );
-            }
-            return null;
-          });
-        }
-        GetRequiredOptions() {
-          return (
-            this.rgOptionalSuggestedRequired.length ||
-              (this.rgOptionalSuggestedRequired.push({
-                label: "Optional",
-                data: 0,
-              }),
-              this.rgOptionalSuggestedRequired.push({
-                label: "Suggested",
-                data: 1,
-              }),
-              this.rgOptionalSuggestedRequired.push({
-                label: "Required",
-                data: 2,
-              })),
-            this.rgOptionalSuggestedRequired
-          );
-        }
-        GetCooldownGroupOptions() {
-          if (!this.rgEventTypes.length)
-            for (let e = 0; null != a.Sc[e]; e++)
-              this.rgEventTypes.push({ label: a.Sc[e], data: e });
-          return this.rgEventTypes;
-        }
-        GetGameTagOptions() {
-          if (!this.rgGameTokens.length) {
-            v.v
-              .Get()
-              .GetGameTags()
-              .forEach((e) => {
-                this.rgGameTokens.push({ label: e.label, value: e.value });
-              });
-          }
-          return this.rgGameTokens;
-        }
-      }
-      (0, n.gn)([l.LO], b.prototype, "m_model", void 0),
-        (0, n.gn)([l.LO], b.prototype, "m_bDirty", void 0),
-        (0, n.gn)([l.LO], b.prototype, "rgActiveStats", void 0),
-        (0, n.gn)([l.LO], b.prototype, "m_dynamicSections", void 0),
-        (0, n.gn)([l.LO], b.prototype, "m_EmailDefinitions", void 0),
-        (0, n.gn)([g.ak], b.prototype, "GetSpecialEventType", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetSpecialEventType", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCurSpecialEventName", null),
-        (0, n.gn)([g.ak], b.prototype, "GetSpecialEventName", null),
-        (0, n.gn)([g.ak], b.prototype, "SetCurSpecialEventName", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetSpecialEventName", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCurSpecialEventDescription", null),
-        (0, n.gn)([g.ak], b.prototype, "GetSpecialEventDescription", null),
-        (0, n.gn)([g.ak], b.prototype, "SetCurSpecialEventDescription", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetSpecialEventDescription",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "GetSpecialEventDocLink", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetSpecialEventDocLink", null),
-        (0, n.gn)([g.ak], b.prototype, "GetSpecialEventTypeMax", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetSpecialEventTypeMax", null),
-        (0, n.gn)([g.ak], b.prototype, "GetSpecialEventStartTime", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetSpecialEventStartTime", null),
-        (0, n.gn)([g.ak], b.prototype, "GetSpecialEventEndTime", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetSpecialEventEndTime", null),
-        (0, n.gn)([g.ak], b.prototype, "BHasSpecialEventTimeSet", null),
-        (0, n.gn)([g.ak], b.prototype, "NCountSpecialEventBlocks", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "AddSpecialEventBlock", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "RemoveSpecialEventBlock", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetSpecialEventBlock", null),
-        (0, n.gn)([g.ak], b.prototype, "GetAllSpecialEventBlocks", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "MoveSpecialEventblock", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsInSpecialEventBlockedTime", null),
-        (0, n.gn)([g.ak], b.prototype, "BRequiresRemotePlayTogether", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetRequiresRemotePlayTogether",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "BRequiresVR", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetRequiresVR", null),
-        (0, n.gn)(
-          [g.ak],
-          b.prototype,
-          "BOptInRegistationOnlyShowSaveButton",
-          null
-        ),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetOptInRegistationOnlyShowSaveButton",
-          null
-        ),
-        (0, n.gn)(
-          [g.ak],
-          b.prototype,
-          "BIsAdditionalFeaturingSectionEnabled",
-          null
-        ),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetAdditionalFeaturingSectionEnabled",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "BIsCollectTrailerPermissions", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetCollectTrailerPermissions",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "BIsCollectDemoPermissions", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetCollectDemoPermissions", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsCollectGameProfileIntent", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetCollectGameProfileIntent",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "BHasCollectDemoDeadlineDate", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCollectDemoDeadlineDate", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetCollectDemoDeadlineDate",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "GetCurEventTitle", null),
-        (0, n.gn)([g.ak], b.prototype, "GetEventTitle", null),
-        (0, n.gn)([g.ak], b.prototype, "SetCurEventTitle", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetEventTitle", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCurOptInRegistrationTitle", null),
-        (0, n.gn)([g.ak], b.prototype, "GetOptInRegistrationTitle", null),
-        (0, n.gn)([g.ak], b.prototype, "SetCurOptInRegistrationTitle", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetOptInRegistrationTitle", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCurOptInRegistrationCheckbox", null),
-        (0, n.gn)([g.ak], b.prototype, "GetOptInRegistrationCheckbox", null),
-        (0, n.gn)([g.ak], b.prototype, "SetCurOptInRegistrationCheckbox", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetOptInRegistrationCheckbox",
-          null
-        ),
-        (0, n.gn)(
-          [g.ak],
-          b.prototype,
-          "BHasOptInRegistrationTitleOrCheckbox",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "BIsOptInEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetOptInEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetPublicEventURL", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetPublicDocumentationWikiURL",
-          null
-        ),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetPublicEventID", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetEventStartTime", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetEventEndTime", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetOptInDeadlineTime", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsInvitationOnly", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetInvititationOnly", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetReleaseGameEligible", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetUnreleaseGameEligible", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetEligibleReleaseBeforeDate",
-          null
-        ),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetEligibleReleaseAfterDate",
-          null
-        ),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetCooldownGroupType", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetCooldownRequired", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetCooldownDays", null),
-        (0, n.gn)([g.ak], b.prototype, "OnChangeRequiredTags", null),
-        (0, n.gn)(
-          [g.ak],
-          b.prototype,
-          "GetAppOfficialWeightedTagRankToInclude",
-          null
-        ),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetAppOfficialWeightedTagRankToInclude",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "GetCurDescription", null),
-        (0, n.gn)([g.ak], b.prototype, "GetDescription", null),
-        (0, n.gn)([g.ak], b.prototype, "SetCurDescription", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetDescription", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCurHelpText", null),
-        (0, n.gn)([g.ak], b.prototype, "GetHelpText", null),
-        (0, n.gn)([g.ak], b.prototype, "SetCurHelpText", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetHelpText", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCurAppealsText", null),
-        (0, n.gn)([g.ak], b.prototype, "GetAppealsText", null),
-        (0, n.gn)([g.ak], b.prototype, "SetCurAppealsText", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetAppealsText", null),
-        (0, n.gn)([g.ak], b.prototype, "GetLocalizedOptInBanner", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetLocalizedOptInBanner", null),
-        (0, n.gn)([g.ak], b.prototype, "DeleteLocalizedOptInBanner", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsCategoriesEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetCategoriesEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCategoriesRequired", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetCategoriesRequired", null),
-        (0, n.gn)([g.ak], b.prototype, "OnChangeCategoryTags", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsArtistStatementEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetArtistStatementEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "GetArtistStatementRequired", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetArtistStatementRequired",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "BIsPrimaryCountryEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetPrimaryCountryEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "GetPrimaryCountryRequired", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetPrimaryCountryRequired", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsPressContactEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetPressContactEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "GetPressContactRequired", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetPressContactRequired", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsBeforeYouOptInEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetBeforeYouOptInEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsBuildYourStorePageEnabled", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetBuildYourStorePageEnabled",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "GetBuildYourStorePageRequired", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetBuildYourStorePageRequired",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "GetStorePageText", null),
-        (0, n.gn)([g.ak], b.prototype, "SetStorePageText", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsTaggingWizardEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetTaggingWizardEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsLaunchYourDemoEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetLaunchYourDemoEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "GetLaunchYourDemoRequired", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetLaunchYourDemoRequired", null),
-        (0, n.gn)([g.ak], b.prototype, "GetLaunchYourDemoDueDate", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetLaunchYourDemoDueDate", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsDoAnytimeEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetDoAnytimeEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsLivestreamEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetLivestreamEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsChatSessionEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetChatSessionEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "BIsAnytimeTaggingWizardEnabled", null),
-        (0, n.gn)(
-          [l.aD.bound],
-          b.prototype,
-          "SetAnytimeTaggingWizardEnabled",
-          null
-        ),
-        (0, n.gn)([g.ak], b.prototype, "BIsEnterDiscountsEnabled", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetEnterDiscountsEnabled", null),
-        (0, n.gn)([g.ak], b.prototype, "GetDiscountEventID", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetDiscountEventID", null),
-        (0, n.gn)([g.ak], b.prototype, "GetExternalAppReviewers", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "SetExternalAppReviewers", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "RemoveExternalAppReviewAt", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "BAddExternalAppReviewAt", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "AddDynamicSection", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "DeleteDynamicSection", null),
-        (0, n.gn)([g.ak], b.prototype, "BHasLanguageData", null),
-        (0, n.gn)([l.aD], b.prototype, "Reset", null),
-        (0, n.gn)([l.aD.bound], b.prototype, "AddEmailDraft", null),
-        (0, n.gn)([g.ak], b.prototype, "GetRequiredOptions", null),
-        (0, n.gn)([g.ak], b.prototype, "GetCooldownGroupOptions", null),
-        (0, n.gn)([g.ak], b.prototype, "GetGameTagOptions", null);
-      class f {
-        constructor(e) {
-          this.m_section = e;
-        }
-        GetUniqueID() {
-          return this.m_section.unique_id;
-        }
-        GetName() {
-          var e;
-          return null !==
-            (e = (0, a.Xj)(
-              this.m_section.name,
-              u.U.Get().GetCurEditLanguage(),
-              ""
-            )) && void 0 !== e
-            ? e
-            : "";
-        }
-        GetNameWithFallback(e) {
-          var t;
-          return null !==
-            (t = (0, a.Xj)(
-              this.m_section.name,
-              u.U.Get().GetCurEditLanguage(),
-              e
-            )) && void 0 !== t
-            ? t
-            : "";
-        }
-        GetDescription() {
-          var e;
-          return null !==
-            (e = (0, a.Xj)(
-              this.m_section.description,
-              u.U.Get().GetCurEditLanguage(),
-              ""
-            )) && void 0 !== e
-            ? e
-            : "";
-        }
-        GetInputStyle() {
-          return this.m_section.input_style;
-        }
-        GetColumnCount() {
-          return this.m_section.columns;
-        }
-        GetLists() {
-          return this.m_section.lists;
-        }
-        GetListTitle(e) {
-          var t;
-          return null !==
-            (t = (0, a.Xj)(
-              this.m_section.lists[e].option_title,
-              u.U.Get().GetCurEditLanguage()
-            )) && void 0 !== t
-            ? t
-            : "";
-        }
-        GetListByIndex(e) {
-          return this.m_section.lists[e];
-        }
-        GetListByID(e) {
-          const t = this.m_section.lists.filter((t) => t.unique_id == e);
-          return t.length > 0 ? t[0] : null;
-        }
-        GetItemAtListAndIndex(e, t) {
-          return this.m_section.lists[e].options[t];
-        }
-        GetModel() {
-          return this.m_section;
-        }
-        GetListCount() {
-          return this.m_section.lists ? this.m_section.lists.length : 0;
-        }
-        BIsValveOnlySection() {
-          return this.m_section.valve_only;
-        }
-        SetName(e, t) {
-          if ((0, a.Xj)(this.m_section.name, t) != e) {
-            const i = (0, d.j_)(t, "english");
-            this.m_section.name || (this.m_section.name = {}),
-              (this.m_section.name[i] = e),
-              b.Get().SetDirty(!0);
-          }
-        }
-        SetDescription(e, t) {
-          if ((0, a.Xj)(this.m_section.description, t) != e) {
-            const i = (0, d.j_)(t, "english");
-            this.m_section.description || (this.m_section.description = {}),
-              (this.m_section.description[i] = e),
-              b.Get().SetDirty(!0);
-          }
-        }
-        SetDescriptionWithCurLang(e) {
-          this.SetDescription(e, u.U.Get().GetCurEditLanguage());
-        }
-        SetInputStyle(e) {
-          this.m_section.input_style != e &&
-            ((this.m_section.input_style = e),
-            "text_input" == e &&
-              ((this.m_section.lists = this.m_section.lists.splice(
-                1,
-                this.m_section.lists.length
-              )),
-              0 == this.m_section.lists.length && this.AddOptionList()),
-            b.Get().SetDirty(!0));
-        }
-        SetColumnCount(e) {
-          this.m_section.columns != e &&
-            ((this.m_section.columns = e), b.Get().SetDirty(!0));
-        }
-        SetValveOnly(e) {
-          this.m_section.valve_only != e &&
-            ((this.m_section.valve_only = e), b.Get().SetDirty(!0));
-        }
-        AddItemToList(e, t, i, n) {
-          let r = this.m_section.lists.findIndex((t) => t.unique_id === e);
-          this.AddItemToListByIndex(r, t, i);
-        }
-        AddItemToListByIndex(e, t, i, n) {
-          if (!(e >= 0 && e <= this.m_section.lists.length))
-            throw "Adding item to a list that does not exist: " + e;
-          {
-            const r = (0, d.j_)(i, "english");
-            this.m_section.lists[e].options ||
-              (this.m_section.lists[e].options = []);
-            const s = {
-              text: {},
-              unique_id: b.GenerateUniqueIDForListItem(
-                this.m_section.lists[e].options
-              ),
-            };
-            (s.text[r] = t),
-              n && ((s.tooltip = {}), (s.tooltip[r] = n)),
-              this.m_section.lists[e].options.push(s),
-              b.Get().SetDirty(!0);
-          }
-        }
-        RemoveListItemByID(e, t) {
-          let i = this.m_section.lists.findIndex((t) => t.unique_id === e);
-          -1 !== i &&
-            t < this.m_section.lists[i].options.length &&
-            (this.m_section.lists[i].options.splice(t, 1),
-            b.Get().SetDirty(!0));
-        }
-        RemoveListItem(e, t) {
-          e < this.m_section.lists.length &&
-            t < this.m_section.lists[e].options.length &&
-            (this.m_section.lists[e].options.splice(t, 1),
-            b.Get().SetDirty(!0));
-        }
-        MoveListItem(e, t, i) {
-          e < this.m_section.lists.length &&
-            ((0, m.hV)(this.m_section.lists[e].options, t, i),
-            b.Get().SetDirty(!0));
-        }
-        UpdateListItemText(e, t, i, n) {
-          let r = this.m_section.lists.findIndex((t) => t.unique_id === e);
-          if (
-            -1 !== r &&
-            t < this.m_section.lists[r].options.length &&
-            (0, a.Xj)(this.m_section.lists[r].options[t].text, n) != i
-          ) {
-            const e = (0, d.j_)(n, "english");
-            (this.m_section.lists[r].options[t].text[e] = i),
-              b.Get().SetDirty(!0);
-          }
-        }
-        UpdateListItemTooltip(e, t, i, n) {
-          let r = this.m_section.lists.findIndex((t) => t.unique_id === e);
-          if (
-            -1 !== r &&
-            t < this.m_section.lists[r].options.length &&
-            (0, a.Xj)(this.m_section.lists[r].options[t].tooltip, n) != i
-          ) {
-            const e = (0, d.j_)(n, "english");
-            this.m_section.lists[r].options[t].tooltip ||
-              (this.m_section.lists[r].options[t].tooltip = {}),
-              (this.m_section.lists[r].options[t].tooltip[e] = i),
-              b.Get().SetDirty(!0);
-          }
-        }
-        UpdateListItemTextByKV(e, t, i, n) {
-          if (
-            e >= 0 &&
-            e < this.m_section.lists.length &&
-            t >= 0 &&
-            t < this.m_section.lists[e].options.length
-          ) {
-            let r = this.m_section.lists[e].options[t],
-              s = !1;
-            for (let e = 0; e < 30; ++e) {
-              if ((0, a.Xj)(i, e) != (0, a.Xj)(r.text, e)) {
-                const t = (0, d.j_)(e);
-                (r.text[t] = i[t]), (s = !0);
-              }
-              if (
-                n &&
-                (r.tooltip || (r.tooltip = {}),
-                (0, a.Xj)(n, e) != (0, a.Xj)(r.tooltip, e))
-              ) {
-                const t = (0, d.j_)(e);
-                (r.tooltip[t] = n[t]), (s = !0);
-              }
-            }
-            s && b.Get().SetDirty(!0);
-          }
-        }
-        AddOptionList() {
-          const e = {
-            options: [],
-            unique_id: b.GenerateUniqueIDForOptionListSection(
-              this.m_section.lists
-            ),
-          };
-          this.m_section.lists.push(e), b.Get().SetDirty(!0);
-        }
-        DeleteOptionList(e) {
-          let t = this.m_section.lists.findIndex((t) => t.unique_id === e);
-          t &&
-            (this.m_section.lists.splice(t, 1),
-            0 == this.m_section.lists.length &&
-              (this.m_section.lists = [
-                {
-                  options: [],
-                  unique_id: b.GenerateUniqueIDForOptionListSection(),
-                },
-              ]),
-            b.Get().SetDirty(!0));
-        }
-        SetListTitle(e, t, i) {
-          let n = this.m_section.lists.findIndex((t) => t.unique_id === e);
-          this.SetListTitleByListIndex(n, t, i);
-        }
-        SetListTitleByListIndex(e, t, i) {
-          if (
-            e >= 0 &&
-            e < this.m_section.lists.length &&
-            (0, a.Xj)(this.m_section.lists[e].option_title, i) != t
-          ) {
-            const n = (0, d.j_)(i, "english");
-            this.m_section.lists[e].option_title ||
-              (this.m_section.lists[e].option_title = {}),
-              (this.m_section.lists[e].option_title[n] = t),
-              b.Get().SetDirty(!0);
-          }
-        }
-      }
-      function E() {
-        const [e, t] = (0, c.useState)(b.Get().GetActiveStats());
-        return (0, g.Qg)(b.Get().GetActiveStatsChangeCallaback(), t), e;
-      }
-      function k() {
-        const e = E();
-        return (0, c.useMemo)(() => {
-          const t = JSON.parse((null == e ? void 0 : e.json_eligible) || "[]"),
-            i = {
-              jsonEligible: Array.isArray(t) ? t : [],
-              jsonOptedIn: JSON.parse(
-                (null == e ? void 0 : e.json_opted_in) || "[]"
-              ),
-              jsonOptedOut: JSON.parse(
-                (null == e ? void 0 : e.json_opted_out) || "[]"
-              ),
-              jsonInvited: JSON.parse(
-                (null == e ? void 0 : e.json_invited) || "[]"
-              ),
-              jsonPruned: JSON.parse(
-                (null == e ? void 0 : e.json_pruned) || "[]"
-              ),
-              jsonFeatured: JSON.parse(
-                (null == e ? void 0 : e.json_featured) || "[]"
-              ),
-              jsonPendingReview: JSON.parse(
-                (null == e ? void 0 : e.json_pending_review) || "[]"
-              ),
-            };
-          return (
-            (i.setEligible = new Set(i.jsonEligible.map((e) => e.appid))),
-            (i.setOptedIn = new Set(i.jsonOptedIn.map((e) => e.appid))),
-            (i.setOptedOut = new Set(i.jsonOptedOut.map((e) => e.appid))),
-            (i.setInvited = new Set(i.jsonInvited.map((e) => e.appid))),
-            (i.setPruned = new Set(i.jsonPruned.map((e) => e.appid))),
-            (i.setFeatured = new Set(i.jsonFeatured.map((e) => e.appid))),
-            (i.setPendingReview = new Set(
-              i.jsonPendingReview.map((e) => e.appid)
-            )),
-            i
-          );
-        }, [e]);
-      }
-      (0, n.gn)([g.ak], f.prototype, "GetName", null),
-        (0, n.gn)([g.ak], f.prototype, "GetDescription", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "SetName", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "SetDescription", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "SetDescriptionWithCurLang", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "SetInputStyle", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "SetColumnCount", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "SetValveOnly", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "AddItemToList", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "AddItemToListByIndex", null),
-        (0, n.gn)([l.aD], f.prototype, "RemoveListItemByID", null),
-        (0, n.gn)([l.aD], f.prototype, "RemoveListItem", null),
-        (0, n.gn)([l.aD], f.prototype, "MoveListItem", null),
-        (0, n.gn)([l.aD], f.prototype, "UpdateListItemText", null),
-        (0, n.gn)([l.aD], f.prototype, "UpdateListItemTooltip", null),
-        (0, n.gn)([l.aD], f.prototype, "UpdateListItemTextByKV", null),
-        (0, n.gn)([l.aD.bound], f.prototype, "AddOptionList", null),
-        (0, n.gn)([l.aD], f.prototype, "DeleteOptionList", null),
-        (0, n.gn)([l.aD], f.prototype, "SetListTitle", null),
-        (0, n.gn)([l.aD], f.prototype, "SetListTitleByListIndex", null);
-    },
-    33917: (e, t, i) => {
-      "use strict";
-      i.d(t, { r: () => u, v: () => d });
-      var n = i(33940),
-        r = i(52868),
-        s = i.n(r),
-        a = i(64368),
-        o = (i(40490), i(50265)),
-        l = (i(46132), i(63403), i(23217)),
-        c = i(32765);
-      class d {
-        constructor() {
-          (this.m_optInDef = new Map()),
-            (this.m_activeOptInDef = new Array()),
-            (this.m_archivedOptInDef = new Array()),
-            (this.m_game_tags = []),
-            (this.m_optin_stats = {}),
-            (this.m_mapHasUnpublishedChanges = new Map());
-        }
-        GetActiveOptIn() {
-          return this.m_activeOptInDef;
-        }
-        GetArchivedOptIn() {
-          return this.m_archivedOptInDef;
-        }
-        GetGameTags() {
-          return this.m_game_tags;
-        }
-        GetOptInStats() {
-          return this.m_optin_stats;
-        }
-        BHasUnpublishedChagnes(e) {
-          return this.m_mapHasUnpublishedChanges.get(e);
-        }
-        SetUnpublishedChanges(e) {
-          this.m_mapHasUnpublishedChanges.set(e, !0);
-        }
-        GetDefinition(e) {
-          return this.m_optInDef.get(e);
-        }
-        SetOptInDefinition(e) {
-          this.m_optInDef.set(e.pageid, e);
-          let t = this.m_activeOptInDef.findIndex((t) => t.pageid == e.pageid);
-          -1 != t &&
-            (this.m_activeOptInDef.splice(t, 1),
-            this.m_activeOptInDef.unshift(e)),
-            (t = this.m_archivedOptInDef.findIndex(
-              (t) => t.pageid == e.pageid
-            )),
-            -1 != t &&
-              (this.m_archivedOptInDef.splice(t, 1),
-              this.m_archivedOptInDef.unshift(e));
-        }
-        GetCreatedPageId() {
-          return this.createdPageId;
-        }
-        GetCreatePageErrMsg() {
-          return this.createPageErrMsg;
-        }
-        CreatePage(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            (this.createdPageId = ""), (this.createPageErrMsg = "");
-            let i = c.De.PARTNER_BASE_URL + "/admin/store/pagecreate";
-            const n = new FormData();
-            n.append("sessionid", c.De.SESSIONID),
-              n.append("action", "createsale"),
-              n.append("id", e),
-              n.append("is_optin", "true");
-            try {
-              let e = yield s().post(i, n, {
-                withCredentials: !0,
-                cancelToken: t,
-              });
-              if (t.reason)
-                return (
-                  console.log(
-                    "COptInAdminStore.CreatePage cancelled: " + t.reason
-                  ),
-                  null
-                );
-              if (200 != e.status || !e.data || 1 != e.data.success) {
-                let t =
-                  "Save Error: (" +
-                  (e.data
-                    ? "result: " + e.data.success
-                    : "status: " + e.status) +
-                  ")";
-                return (
-                  e.data &&
-                    e.data.msg &&
-                    (t += " Error Message: " + e.data.msg),
-                  (this.createPageErrMsg = e.data.msg),
-                  t
-                );
-              }
-              this.createdPageId = e.data.msg;
-            } catch (e) {
-              let t = (0, l.l)(e);
-              return (
-                console.error(
-                  "OptinAdminStore.CreatePage error: " + t.strErrorMsg,
-                  t
-                ),
-                (this.createPageErrMsg = t.strErrorMsg),
-                "Page creation error: " + e.strErrorMsg
-              );
-            }
-            return null;
-          });
-        }
-        static Get() {
-          return (
-            d.s_OptInAdmin ||
-              ((d.s_OptInAdmin = new d()),
-              ("dev" != c.De.WEB_UNIVERSE && "beta" != c.De.WEB_UNIVERSE) ||
-                (window.g_OptInAdminStore = d.s_OptInAdmin),
-              d.s_OptInAdmin.Init()),
-            d.s_OptInAdmin
-          );
-        }
-        Init() {
-          let e = JSON.parse(
-            JSON.stringify((0, c.kQ)("optin_game_tags", "application_config"))
-          );
-          if (e)
-            for (let t of Object.keys(e))
-              this.m_game_tags.push({ label: e[t], value: t });
-          let t = JSON.parse(
-            JSON.stringify((0, c.kQ)("optin_page_stats", "application_config"))
-          );
-          if (t)
-            for (let e of Object.keys(t)) {
-              let i = t[e].pageid;
-              this.m_optin_stats[i] = t[e];
-            }
-          let i = (0, c.kQ)("optin_admin_pages", "application_config");
-          if (this.ValidateStoreDefault(i)) {
-            i.forEach((e) => {
-              (0, a.MH)(e);
-            });
-            const e = Math.floor(Date.now() / 1e3);
-            i.map((t) => {
-              this.m_optInDef.set(t.pageid, t),
-                t.event_end_date < e
-                  ? this.m_archivedOptInDef.push(t)
-                  : this.m_activeOptInDef.push(t);
-            }),
-              "dev" == c.De.WEB_UNIVERSE &&
-                console.log(
-                  "Loading OptIn Definitions: " + this.m_optInDef.size,
-                  this.m_optInDef
-                );
-          } else
-            "dev" == c.De.WEB_UNIVERSE &&
-              console.error("COptInAdmin.Init: Failed to load defintion", i);
-          const n = (0, c.kQ)("optin_has_in_progress", "application_config");
-          for (let e in n) this.m_mapHasUnpublishedChanges.set(e, n[e]);
-        }
-        ValidateStoreDefault(e) {
-          const t = e;
-          return (
-            !!(
-              t &&
-              Array.isArray(t) &&
-              t.length > 0 &&
-              "object" == typeof t[0]
-            ) && "string" == typeof t[0].pageid
-          );
-        }
-      }
-      function u(e) {
-        return d.Get().GetDefinition(e);
-      }
-      (0, n.gn)([o.LO], d.prototype, "m_mapHasUnpublishedChanges", void 0),
-        (0, n.gn)([o.aD], d.prototype, "Init", null);
-    },
-    16586: (e, t, i) => {
-      "use strict";
-      i.d(t, {
-        A0: () => v,
-        Cy: () => f,
-        PV: () => D,
-        QQ: () => y,
-        Rz: () => G,
-        V7: () => b,
-        ZW: () => S,
-        _l: () => I,
-        dS: () => P,
-        du: () => w,
-        nw: () => E,
-        py: () => k,
+      n.d(e, {
+        A0: () => D,
+        Cy: () => k,
+        PV: () => _,
+        QQ: () => f,
+        Rz: () => S,
+        V7: () => E,
+        ZW: () => P,
+        _l: () => b,
+        dS: () => C,
+        du: () => y,
+        nw: () => I,
+        py: () => G,
         qh: () => h,
       });
-      var n = i(33940),
-        r = i(52868),
-        s = i.n(r),
-        a = (i(64368), i(86121), i(50265)),
-        o = i(89526),
-        l = i(5615),
-        c = (i(42770), i(29073), i(63403), i(11837)),
-        d = i(23801),
-        u = i(23217),
-        m = i(26464),
-        p = i(85246),
-        _ = i(4306),
-        g = i(32765);
+      var i = n(33940),
+        a = n(52868),
+        s = n.n(a),
+        o = n(50265),
+        r = n(89526),
+        c = n(5615),
+        l = n(11837),
+        u = n(23801),
+        d = n(23217),
+        p = n(26464),
+        g = n(85246),
+        m = n(4306),
+        v = n(32765);
       class h {
         constructor() {
           (this.m_mapRegistrations = new Map()),
@@ -5357,483 +793,483 @@
             (this.m_mapOptInNameCallback = new Map()),
             (this.m_mapSingleAppRegistrationChange = new Map());
         }
-        BHasOptInRegistration(e, t) {
-          var i;
+        BHasOptInRegistration(t, e) {
+          var n;
           return Boolean(
-            null === (i = this.m_mapRegistrations.get(e)) || void 0 === i
+            null === (n = this.m_mapRegistrations.get(t)) || void 0 === n
               ? void 0
-              : i.has(t)
+              : n.has(e)
           );
         }
-        GetOptInRegistrationPromise(e, t) {
-          var i;
-          return null === (i = this.m_mapRequestedAppIDs.get(t)) || void 0 === i
+        GetOptInRegistrationPromise(t, e) {
+          var n;
+          return null === (n = this.m_mapRequestedAppIDs.get(e)) || void 0 === n
             ? void 0
-            : i.get(e);
+            : n.get(t);
         }
-        GetOptInRegistrationAndEligibilityForApp(e) {
-          return this.m_mapRegistrations.get(e);
+        GetOptInRegistrationAndEligibilityForApp(t) {
+          return this.m_mapRegistrations.get(t);
         }
-        GetSingleAppRegistrationKey(e, t) {
-          return `single_${e}_${t}`;
+        GetSingleAppRegistrationKey(t, e) {
+          return `single_${t}_${e}`;
         }
-        GetSingleAppRegistrationChange(e, t) {
-          const i = this.GetSingleAppRegistrationKey(e, t);
+        GetSingleAppRegistrationChange(t, e) {
+          const n = this.GetSingleAppRegistrationKey(t, e);
           return (
-            this.m_mapSingleAppRegistrationChange.has(i) ||
-              this.m_mapSingleAppRegistrationChange.set(i, new p.pB()),
-            this.m_mapSingleAppRegistrationChange.get(i)
+            this.m_mapSingleAppRegistrationChange.has(n) ||
+              this.m_mapSingleAppRegistrationChange.set(n, new g.pB()),
+            this.m_mapSingleAppRegistrationChange.get(n)
           );
         }
-        GetExistingOptInRegistartion(e, t) {
-          return this.m_mapRegistrations.has(e)
-            ? this.m_mapRegistrations.get(e).get(t)
+        GetExistingOptInRegistartion(t, e) {
+          return this.m_mapRegistrations.has(t)
+            ? this.m_mapRegistrations.get(t).get(e)
             : null;
         }
-        GetOptInRegistrationAndEligibilityForApps(e) {
-          if (0 == e.length) return null;
-          let t = new Map();
-          for (let i of e) {
-            let e = this.m_mapRegistrations.get(i);
-            if (e)
-              for (let i of e.keys()) {
-                let e = t.get(i);
-                e || (e = 0), t.set(i, e + 1);
+        GetOptInRegistrationAndEligibilityForApps(t) {
+          if (0 == t.length) return null;
+          let e = new Map();
+          for (let n of t) {
+            let t = this.m_mapRegistrations.get(n);
+            if (t)
+              for (let n of t.keys()) {
+                let t = e.get(n);
+                t || (t = 0), e.set(n, t + 1);
               }
           }
-          let i = new Map(),
-            n = e[0];
+          let n = new Map(),
+            i = t[0];
           return (
-            t.forEach((t, r) => {
-              if (t == e.length) {
-                let e = this.m_mapRegistrations.get(n).get(r);
-                (0, d.X)(e, "Missing OptIn Restration"), i.set(r, e);
+            e.forEach((e, a) => {
+              if (e == t.length) {
+                let t = this.m_mapRegistrations.get(i).get(a);
+                (0, u.X)(t, "Missing OptIn Restration"), n.set(a, t);
               }
             }),
-            i.size > 0 ? i : null
+            n.size > 0 ? n : null
           );
         }
-        BHasOptionOnRegistration(e, t, i) {
-          var n, r;
-          const s = this.GetRegistration(e, t);
+        BHasOptionOnRegistration(t, e, n) {
+          var i, a;
+          const s = this.GetRegistration(t, e);
           return (
             !(!s || !s.opt_in) &&
-            (!i ||
+            (!n ||
               (null ===
-                (r =
-                  null === (n = null == s ? void 0 : s.jsondata) || void 0 === n
+                (a =
+                  null === (i = null == s ? void 0 : s.jsondata) || void 0 === i
                     ? void 0
-                    : n.dynamic_selection) || void 0 === r
+                    : i.dynamic_selection) || void 0 === a
                 ? void 0
-                : r.some((e) => {
-                    var t;
+                : a.some((t) => {
+                    var e;
                     return (
-                      e &&
-                      e.section_id == i.section_id &&
-                      (null === (t = e.list_selection) || void 0 === t
+                      t &&
+                      t.section_id == n.section_id &&
+                      (null === (e = t.list_selection) || void 0 === e
                         ? void 0
-                        : t.some((e) => {
-                            var t;
+                        : e.some((t) => {
+                            var e;
                             return (
-                              e &&
-                              e.list_id == i.list_id &&
-                              (null === (t = e.selected_item_id) || void 0 === t
+                              t &&
+                              t.list_id == n.list_id &&
+                              (null === (e = t.selected_item_id) || void 0 === e
                                 ? void 0
-                                : t.includes(i.option_id))
+                                : e.includes(n.option_id))
                             );
                           }))
                     );
                   })))
           );
         }
-        CreateRegistrationNotSaved(e, t) {
+        CreateRegistrationNotSaved(t, e) {
           console.log("CreateOrGetRegistration: Creating new registration");
           return {
-            opt_in_name: t,
+            opt_in_name: e,
             opt_in: !1,
-            appid: e,
-            jsondata: { opt_in_name: t, opt_in: !1 },
+            appid: t,
+            jsondata: { opt_in_name: e, opt_in: !1 },
           };
         }
-        CreateOrGetRegistration(e, t) {
-          let i = this.m_mapRegistrations.get(e);
-          i || ((i = new Map()), this.m_mapRegistrations.set(e, i));
-          let n = i.get(t);
+        CreateOrGetRegistration(t, e) {
+          let n = this.m_mapRegistrations.get(t);
+          n || ((n = new Map()), this.m_mapRegistrations.set(t, n));
+          let i = n.get(e);
           return (
-            n
+            i
               ? console.log(
                   "CreateOrGetRegistration: Re-using Previous Registration:",
-                  n
+                  i
                 )
-              : (n = this.CreateRegistrationNotSaved(e, t)),
-            n
-          );
-        }
-        GetOptInRegistrationAndEligibilityForAppOrCreate(e, t) {
-          let i = this.m_mapRegistrations.get(e);
-          i || ((i = new Map()), this.m_mapRegistrations.set(e, i));
-          let n = i.get(t);
-          return (
-            n
-              ? console.log(
-                  "CreateOrGetRegistration: Re-using Previous Registration:",
-                  n
-                )
-              : ((n = this.CreateRegistrationNotSaved(e, t)), i.set(t, n)),
-            n
-          );
-        }
-        GetRegistration(e, t) {
-          return this.m_mapRegistrations.has(e) &&
-            this.m_mapRegistrations.get(e).has(t)
-            ? this.m_mapRegistrations.get(e).get(t)
-            : null;
-        }
-        GetAllOptInRegistrations(e) {
-          const t = this.m_mapRequestedAppIDs.get(e) || new Map();
-          return Array.from(t.keys())
-            .map((t) => {
-              var i;
-              return null === (i = this.m_mapRegistrations.get(t)) ||
-                void 0 === i
-                ? void 0
-                : i.get(e);
-            })
-            .filter(Boolean);
-        }
-        GetOptInNameRegistrationsCallbackList(e) {
-          return e
-            ? (this.m_mapOptInNameCallback.has(e) ||
-                this.m_mapOptInNameCallback.set(e, new p.pB()),
-              this.m_mapOptInNameCallback.get(e))
-            : null;
-        }
-        UpdateRegAndTrackInStore(e, t) {
-          const i = t.map((t) =>
-            t.jsondata && "" !== t.jsondata
-              ? Object.assign(Object.assign({}, t), {
-                  jsondata: JSON.parse(t.jsondata),
-                })
-              : Object.assign(Object.assign({}, t), {
-                  jsondata: { opt_in_name: e },
-                })
-          );
-          return (
-            i.forEach((t) => {
-              this.m_mapRegistrations.has(t.appid) ||
-                this.m_mapRegistrations.set(t.appid, new Map()),
-                this.m_mapRegistrations.get(t.appid).set(e, t);
-            }),
+              : (i = this.CreateRegistrationNotSaved(t, e)),
             i
           );
         }
-        FetchOptInRegistrationForOptIn(e, t) {
-          var i, r;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n =
-                g.De.PARTNER_BASE_URL + "optin/ajaxgetalloptinregistrations",
-              a = { sessionid: g.De.SESSIONID, opt_in_name: e, opt_in_only: t },
-              o = yield s().get(n, { params: a, withCredentials: !0 });
-            return (
-              null === (i = null == o ? void 0 : o.data) || void 0 === i
+        GetOptInRegistrationAndEligibilityForAppOrCreate(t, e) {
+          let n = this.m_mapRegistrations.get(t);
+          n || ((n = new Map()), this.m_mapRegistrations.set(t, n));
+          let i = n.get(e);
+          return (
+            i
+              ? console.log(
+                  "CreateOrGetRegistration: Re-using Previous Registration:",
+                  i
+                )
+              : ((i = this.CreateRegistrationNotSaved(t, e)), n.set(e, i)),
+            i
+          );
+        }
+        GetRegistration(t, e) {
+          return this.m_mapRegistrations.has(t) &&
+            this.m_mapRegistrations.get(t).has(e)
+            ? this.m_mapRegistrations.get(t).get(e)
+            : null;
+        }
+        GetAllOptInRegistrations(t) {
+          const e = this.m_mapRequestedAppIDs.get(t) || new Map();
+          return Array.from(e.keys())
+            .map((e) => {
+              var n;
+              return null === (n = this.m_mapRegistrations.get(e)) ||
+                void 0 === n
                 ? void 0
-                : i.data
+                : n.get(t);
+            })
+            .filter(Boolean);
+        }
+        GetOptInNameRegistrationsCallbackList(t) {
+          return t
+            ? (this.m_mapOptInNameCallback.has(t) ||
+                this.m_mapOptInNameCallback.set(t, new g.pB()),
+              this.m_mapOptInNameCallback.get(t))
+            : null;
+        }
+        UpdateRegAndTrackInStore(t, e) {
+          const n = e.map((e) =>
+            e.jsondata && "" !== e.jsondata
+              ? Object.assign(Object.assign({}, e), {
+                  jsondata: JSON.parse(e.jsondata),
+                })
+              : Object.assign(Object.assign({}, e), {
+                  jsondata: { opt_in_name: t },
+                })
+          );
+          return (
+            n.forEach((e) => {
+              this.m_mapRegistrations.has(e.appid) ||
+                this.m_mapRegistrations.set(e.appid, new Map()),
+                this.m_mapRegistrations.get(e.appid).set(t, e);
+            }),
+            n
+          );
+        }
+        FetchOptInRegistrationForOptIn(t, e) {
+          var n, a;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i =
+                v.De.PARTNER_BASE_URL + "optin/ajaxgetalloptinregistrations",
+              o = { sessionid: v.De.SESSIONID, opt_in_name: t, opt_in_only: e },
+              r = yield s().get(i, { params: o, withCredentials: !0 });
+            return (
+              null === (n = null == r ? void 0 : r.data) || void 0 === n
+                ? void 0
+                : n.data
             )
-              ? this.UpdateRegAndTrackInStore(e, o.data.data)
-              : null === (r = null == o ? void 0 : o.data) || void 0 === r
+              ? this.UpdateRegAndTrackInStore(t, r.data.data)
+              : null === (a = null == r ? void 0 : r.data) || void 0 === a
               ? void 0
-              : r.data;
+              : a.data;
           });
         }
-        FetchPendingReviewOptInRegistrationn(e) {
-          var t, i;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n =
-                g.De.PARTNER_BASE_URL +
+        FetchPendingReviewOptInRegistrationn(t) {
+          var e, n;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i =
+                v.De.PARTNER_BASE_URL +
                 "optin/ajaxgetpendingreviewregistrations",
-              r = { sessionid: g.De.SESSIONID, opt_in_name: e },
-              a = yield s().get(n, { params: r, withCredentials: !0 });
+              a = { sessionid: v.De.SESSIONID, opt_in_name: t },
+              o = yield s().get(i, { params: a, withCredentials: !0 });
             return (
-              null === (t = null == a ? void 0 : a.data) || void 0 === t
+              null === (e = null == o ? void 0 : o.data) || void 0 === e
                 ? void 0
-                : t.data
+                : e.data
             )
-              ? this.UpdateRegAndTrackInStore(e, a.data.data)
-              : null === (i = null == a ? void 0 : a.data) || void 0 === i
+              ? this.UpdateRegAndTrackInStore(t, o.data.data)
+              : null === (n = null == o ? void 0 : o.data) || void 0 === n
               ? void 0
-              : i.data;
+              : n.data;
           });
         }
-        LoadOptInRegistration(e, t, i) {
-          var r, a;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            if (this.GetRegistration(t, e)) return !0;
-            const n =
-              null === (r = this.m_mapRequestedAppIDs.get(e)) || void 0 === r
+        LoadOptInRegistration(t, e, n) {
+          var a, o;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (this.GetRegistration(e, t)) return !0;
+            const i =
+              null === (a = this.m_mapRequestedAppIDs.get(t)) || void 0 === a
                 ? void 0
-                : r.get(t);
-            if (n) return n;
+                : a.get(e);
+            if (i) return i;
             try {
-              const n = g.De.PARTNER_BASE_URL + "optin/ajaxgetoptinregistation",
-                r = { sessionid: g.De.SESSIONID, appid: t, opt_in_name: e },
-                o = yield s().get(n, {
-                  params: r,
+              const i = v.De.PARTNER_BASE_URL + "optin/ajaxgetoptinregistation",
+                a = { sessionid: v.De.SESSIONID, appid: e, opt_in_name: t },
+                r = yield s().get(i, {
+                  params: a,
                   withCredentials: !0,
-                  cancelToken: null == i ? void 0 : i.token,
+                  cancelToken: null == n ? void 0 : n.token,
                 });
               if (
                 1 ==
-                  (null === (a = null == o ? void 0 : o.data) || void 0 === a
+                  (null === (o = null == r ? void 0 : r.data) || void 0 === o
                     ? void 0
-                    : a.success) &&
-                o.data.optin_registration
+                    : o.success) &&
+                r.data.optin_registration
               ) {
                 if (
-                  ("string" == typeof o.data.optin_registration.jsondata &&
-                    (o.data.optin_registration.jsondata = JSON.parse(
-                      o.data.optin_registration.jsondata
+                  ("string" == typeof r.data.optin_registration.jsondata &&
+                    (r.data.optin_registration.jsondata = JSON.parse(
+                      r.data.optin_registration.jsondata
                     )),
-                  this.m_mapRegistrations.has(t))
+                  this.m_mapRegistrations.has(e))
                 )
                   this.m_mapRegistrations
-                    .get(t)
-                    .set(e, o.data.optin_registration);
+                    .get(e)
+                    .set(t, r.data.optin_registration);
                 else {
-                  const i = new Map();
-                  i.set(e, o.data.optin_registration),
-                    this.m_mapRegistrations.set(t, i);
+                  const n = new Map();
+                  n.set(t, r.data.optin_registration),
+                    this.m_mapRegistrations.set(e, n);
                 }
                 return !0;
               }
               {
-                const e = (0, u.l)(o);
+                const t = (0, d.l)(r);
                 console.error(
                   "LoadOptInRegistration : failed with a response and: " +
-                    e.strErrorMsg,
-                  e
+                    t.strErrorMsg,
+                  t
                 );
               }
-            } catch (e) {
-              const t = (0, u.l)(e);
+            } catch (t) {
+              const e = (0, d.l)(t);
               console.error(
-                "LoadOptInRegistration : failed with " + t.strErrorMsg,
-                t
+                "LoadOptInRegistration : failed with " + e.strErrorMsg,
+                e
               );
             }
             return !1;
           });
         }
-        LoadMultiOptInRegistration(e, t, i) {
-          var r, a;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            if (0 == t.length || 0 == e.length) return !1;
-            let n = null;
-            const o = new Promise((e, t) => {
-              n = e;
+        LoadMultiOptInRegistration(t, e, n) {
+          var a, o;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (0 == e.length || 0 == t.length) return !1;
+            let i = null;
+            const r = new Promise((t, e) => {
+              i = t;
             });
-            (e = c.kp(e).sort()),
-              (t = c.kp(t).sort()),
-              e.forEach((e) => {
-                this.m_mapRequestedAppIDs.has(e) ||
-                  this.m_mapRequestedAppIDs.set(e, new Map());
+            (t = l.kp(t).sort()),
+              (e = l.kp(e).sort()),
+              t.forEach((t) => {
+                this.m_mapRequestedAppIDs.has(t) ||
+                  this.m_mapRequestedAppIDs.set(t, new Map());
               });
-            let l = new Array();
+            let c = new Array();
             if (
-              (t.forEach((t) => {
-                e.some(
-                  (e) =>
-                    !this.BHasOptInRegistration(t, e) &&
-                    !this.GetOptInRegistrationPromise(t, e)
+              (e.forEach((e) => {
+                t.some(
+                  (t) =>
+                    !this.BHasOptInRegistration(e, t) &&
+                    !this.GetOptInRegistrationPromise(e, t)
                 ) &&
-                  (l.push(t),
-                  e.forEach((e) => this.m_mapRequestedAppIDs.get(e).set(t, o)));
+                  (c.push(e),
+                  t.forEach((t) => this.m_mapRequestedAppIDs.get(t).set(e, r)));
               }),
-              0 == l.length)
+              0 == c.length)
             )
               return !0;
-            const d =
-              g.De.PARTNER_BASE_URL + "optin/ajaxbatchgetoptinregistation";
-            let m = null;
+            const u =
+              v.De.PARTNER_BASE_URL + "optin/ajaxbatchgetoptinregistation";
+            let p = null;
             try {
-              const t = [];
-              for (; l.length > 0; ) {
-                const n = l.splice(0, 50),
-                  r = {
-                    rgOptInNames: e.join(","),
-                    rgAppIDs: n.join(","),
+              const e = [];
+              for (; c.length > 0; ) {
+                const i = c.splice(0, 50),
+                  a = {
+                    rgOptInNames: t.join(","),
+                    rgAppIDs: i.join(","),
                     origin: self.origin,
                   };
-                t.push(
-                  s().get(d, {
-                    params: r,
+                e.push(
+                  s().get(u, {
+                    params: a,
                     withCredentials: !0,
-                    cancelToken: null == i ? void 0 : i.token,
+                    cancelToken: null == n ? void 0 : n.token,
                   })
                 );
               }
-              const n = yield Promise.all(t);
-              for (const e of n) {
+              const i = yield Promise.all(e);
+              for (const t of i) {
                 if (
-                  200 != (null == e ? void 0 : e.status) ||
+                  200 != (null == t ? void 0 : t.status) ||
                   1 !=
-                    (null === (r = e.data) || void 0 === r
+                    (null === (a = t.data) || void 0 === a
                       ? void 0
-                      : r.success) ||
-                  !(null === (a = e.data.optin_registrations) || void 0 === a
+                      : a.success) ||
+                  !(null === (o = t.data.optin_registrations) || void 0 === o
                     ? void 0
-                    : a.length)
+                    : o.length)
                 ) {
-                  m = { response: e };
+                  p = { response: t };
                   break;
                 }
-                this.InternalAddRegistrations(e.data.optin_registrations);
+                this.InternalAddRegistrations(t.data.optin_registrations);
               }
-            } catch (e) {
-              m = e;
+            } catch (t) {
+              p = t;
             }
-            if (null == m) n(!0);
+            if (null == p) i(!0);
             else {
-              const i = (0, u.l)(m);
+              const n = (0, d.l)(p);
               console.error(
                 "Could not load OptIn for Apps",
-                t,
                 e,
-                i.strErrorMsg,
-                i
+                t,
+                n.strErrorMsg,
+                n
               ),
-                n(!1);
+                i(!1);
             }
-            return o;
+            return r;
           });
         }
-        RegisterAppForOptIn(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const i = {
-              opt_in_name: t.startsWith("sale_") ? t : "sale_" + t,
+        RegisterAppForOptIn(t, e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const n = {
+              opt_in_name: e.startsWith("sale_") ? e : "sale_" + e,
               opt_in: !0,
             };
-            return this.UpdateOptInRegistration(e, i);
+            return this.UpdateOptInRegistration(t, n);
           });
         }
-        UpdateOptInRegistration(e, t) {
-          var i;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = null;
+        UpdateOptInRegistration(t, e) {
+          var n;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
             try {
-              const r = new FormData();
-              r.append("sessionid", g.De.SESSIONID),
-                Object.keys(t).forEach((e) => r.append(e, t[e]));
-              const a =
-                  g.De.PARTNER_BASE_URL +
+              const a = new FormData();
+              a.append("sessionid", v.De.SESSIONID),
+                Object.keys(e).forEach((t) => a.append(t, e[t]));
+              const o =
+                  v.De.PARTNER_BASE_URL +
                   "optin/ajaxupdateoptinregistration/" +
-                  e,
-                o = yield s().post(a, r, { withCredentials: !0 });
+                  t,
+                r = yield s().post(o, a, { withCredentials: !0 });
               if (
-                200 == (null == o ? void 0 : o.status) &&
+                200 == (null == r ? void 0 : r.status) &&
                 1 ==
-                  (null === (i = o.data) || void 0 === i ? void 0 : i.success)
+                  (null === (n = r.data) || void 0 === n ? void 0 : n.success)
               )
                 return null;
-              n = (0, u.l)(o);
-            } catch (e) {
-              n = (0, u.l)(e);
+              i = (0, d.l)(r);
+            } catch (t) {
+              i = (0, d.l)(t);
             }
             return (
               console.error(
                 "COptInRegistrations::UpdateOptInRegistration error " +
-                  n.strErrorMsg,
-                n
+                  i.strErrorMsg,
+                i
               ),
-              n.strErrorMsg
+              i.strErrorMsg
             );
           });
         }
-        UpdateOptInRegistrationJson(e, t, i = !1) {
-          var r;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = null;
+        UpdateOptInRegistrationJson(t, e, n = !1) {
+          var a;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
             try {
-              const a = new FormData();
-              a.append("sessionid", g.De.SESSIONID),
-                a.append("appid", "" + e),
-                a.append("opt_in_name", t.opt_in_name),
-                a.append("jsondata", JSON.stringify(t)),
-                i && a.append("bCreatePendingInvite", "true");
-              const o =
-                  g.De.PARTNER_BASE_URL +
+              const o = new FormData();
+              o.append("sessionid", v.De.SESSIONID),
+                o.append("appid", "" + t),
+                o.append("opt_in_name", e.opt_in_name),
+                o.append("jsondata", JSON.stringify(e)),
+                n && o.append("bCreatePendingInvite", "true");
+              const r =
+                  v.De.PARTNER_BASE_URL +
                   "optin/ajaxupdateoptinregistrationpayload/" +
-                  e,
-                l = yield s().post(o, a, { withCredentials: !0 });
+                  t,
+                c = yield s().post(r, o, { withCredentials: !0 });
               if (
-                200 == (null == l ? void 0 : l.status) &&
+                200 == (null == c ? void 0 : c.status) &&
                 1 ==
-                  (null === (r = l.data) || void 0 === r ? void 0 : r.success)
+                  (null === (a = c.data) || void 0 === a ? void 0 : a.success)
               ) {
-                const i = this.m_mapRegistrations.get(e).get(t.opt_in_name);
-                i.jsondata = t;
-                const n = Object.assign({}, i);
+                const n = this.m_mapRegistrations.get(t).get(e.opt_in_name);
+                n.jsondata = e;
+                const i = Object.assign({}, n);
                 return (
-                  this.m_mapRegistrations.get(e).set(t.opt_in_name, n),
+                  this.m_mapRegistrations.get(t).set(e.opt_in_name, i),
                   this.GetSingleAppRegistrationChange(
-                    e,
-                    t.opt_in_name
-                  ).Dispatch(n),
+                    t,
+                    e.opt_in_name
+                  ).Dispatch(i),
                   null
                 );
               }
-              n = (0, u.l)(l);
-            } catch (e) {
-              n = (0, u.l)(e);
+              i = (0, d.l)(c);
+            } catch (t) {
+              i = (0, d.l)(t);
             }
             return (
               console.error(
                 "COptInRegistrations::UpdateOptInRegistrationJson error " +
-                  n.strErrorMsg,
-                n
+                  i.strErrorMsg,
+                i
               ),
-              n.strErrorMsg
+              i.strErrorMsg
             );
           });
         }
-        UpdateAppealState(e, t, i) {
-          var r;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = null;
+        UpdateAppealState(t, e, n) {
+          var a;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
             try {
-              const a = t.jsondata.opt_in_name,
-                o = new FormData();
-              o.append("sessionid", g.De.SESSIONID),
-                o.append("appid", "" + e),
-                o.append("opt_in_name", a),
-                o.append("approved", "" + i);
-              const l =
-                  g.De.PARTNER_BASE_URL + "optin/ajaxsetappealsdecision/" + e,
-                c = yield s().post(l, o, { withCredentials: !0 });
+              const o = e.jsondata.opt_in_name,
+                r = new FormData();
+              r.append("sessionid", v.De.SESSIONID),
+                r.append("appid", "" + t),
+                r.append("opt_in_name", o),
+                r.append("approved", "" + n);
+              const c =
+                  v.De.PARTNER_BASE_URL + "optin/ajaxsetappealsdecision/" + t,
+                l = yield s().post(c, r, { withCredentials: !0 });
               if (
-                200 == (null == c ? void 0 : c.status) &&
+                200 == (null == l ? void 0 : l.status) &&
                 1 ==
-                  (null === (r = c.data) || void 0 === r ? void 0 : r.success)
+                  (null === (a = l.data) || void 0 === a ? void 0 : a.success)
               ) {
-                const t = Object.assign(
+                const e = Object.assign(
                   {},
-                  this.m_mapRegistrations.get(e).get(a)
+                  this.m_mapRegistrations.get(t).get(o)
                 );
                 return (
-                  (t.accountid_appeal = g.L7.accountid),
-                  (t.appeal_state = i ? 1 : 2),
-                  this.m_mapRegistrations.get(e).set(a, t),
-                  this.GetSingleAppRegistrationChange(e, a).Dispatch(t),
+                  (e.accountid_appeal = v.L7.accountid),
+                  (e.appeal_state = n ? 1 : 2),
+                  this.m_mapRegistrations.get(t).set(o, e),
+                  this.GetSingleAppRegistrationChange(t, o).Dispatch(e),
                   !0
                 );
               }
-              n = (0, u.l)(c);
-            } catch (e) {
-              n = (0, u.l)(e);
+              i = (0, d.l)(l);
+            } catch (t) {
+              i = (0, d.l)(t);
             }
             return (
               console.error(
-                "COptInRegistrations::UpdateAppealState error " + n.strErrorMsg,
-                n
+                "COptInRegistrations::UpdateAppealState error " + i.strErrorMsg,
+                i
               ),
               !1
             );
@@ -5848,245 +1284,251 @@
             h.s_OptInRegs
           );
         }
-        InternalAddRegistrations(e) {
-          const t = new Set();
-          e.forEach((e) => {
-            if (!Number.isNaN(e.appid)) {
-              let i = this.m_mapRegistrations.get(e.appid);
+        InternalAddRegistrations(t) {
+          const e = new Set();
+          t.forEach((t) => {
+            if (!Number.isNaN(t.appid)) {
+              let n = this.m_mapRegistrations.get(t.appid);
               if (
-                (i ||
-                  ((i = new Map()), this.m_mapRegistrations.set(e.appid, i)),
-                e.jsondata && "string" == typeof e.jsondata)
+                (n ||
+                  ((n = new Map()), this.m_mapRegistrations.set(t.appid, n)),
+                t.jsondata && "string" == typeof t.jsondata)
               ) {
-                const t = e.jsondata;
-                0 == t.trim().length
-                  ? (e.jsondata = {})
-                  : (e.jsondata = JSON.parse(t));
+                const e = t.jsondata;
+                0 == e.trim().length
+                  ? (t.jsondata = {})
+                  : (t.jsondata = JSON.parse(e));
               }
-              i.set(e.opt_in_name, e), t.add(e.opt_in_name);
+              n.set(t.opt_in_name, t), e.add(t.opt_in_name);
             }
           }),
-            Array.from(t).forEach((e) => {
-              this.GetOptInNameRegistrationsCallbackList(e).Dispatch(
-                this.GetAllOptInRegistrations(e)
+            Array.from(e).forEach((t) => {
+              this.GetOptInNameRegistrationsCallbackList(t).Dispatch(
+                this.GetAllOptInRegistrations(t)
               );
             });
         }
         Init() {
-          let e = JSON.parse(
+          let t = JSON.parse(
             JSON.stringify(
-              (0, g.kQ)("optin_registrations", "application_config")
+              (0, v.kQ)("optin_registrations", "application_config")
             )
           );
-          this.ValidateStoreDefault(e) &&
-            (this.InternalAddRegistrations(e),
-            "dev" == g.De.WEB_UNIVERSE &&
-              console.log("COptInRegistrations: " + e.length, e));
+          this.ValidateStoreDefault(t) &&
+            (this.InternalAddRegistrations(t),
+            "dev" == v.De.WEB_UNIVERSE &&
+              console.log("COptInRegistrations: " + t.length, t));
         }
-        ValidateStoreDefault(e) {
-          const t = e;
+        ValidateStoreDefault(t) {
+          const e = t;
           return (
             !!(
-              t &&
-              Array.isArray(t) &&
-              t.length > 0 &&
-              "object" == typeof t[0]
+              e &&
+              Array.isArray(e) &&
+              e.length > 0 &&
+              "object" == typeof e[0]
             ) &&
-            "number" == typeof t[0].appid &&
-            "string" == typeof t[0].opt_in_name
+            "number" == typeof e[0].appid &&
+            "string" == typeof e[0].opt_in_name
           );
         }
       }
-      function v(e, t) {
-        var i;
-        const n =
-          null === (i = e.jsondata) || void 0 === i
+      function D(t, e) {
+        var n;
+        const i =
+          null === (n = t.jsondata) || void 0 === n
             ? void 0
-            : i.dynamic_selection;
+            : n.dynamic_selection;
         try {
-          if (n) {
-            const e = n
-              .filter((e) => e.section_id == t.section_id)
-              .map((e) => e.list_selection);
-            if (e.length > 0 && e[0]) {
-              const i = e[0]
-                .filter((e) => e.list_id == t.list_id)
-                .map((e) => e.selected_item_id);
-              if (i.length > 0) return i[0];
+          if (i) {
+            const t = i
+              .filter((t) => t.section_id == e.section_id)
+              .map((t) => t.list_selection);
+            if (t.length > 0 && t[0]) {
+              const n = t[0]
+                .filter((t) => t.list_id == e.list_id)
+                .map((t) => t.selected_item_id);
+              if (n.length > 0) return n[0];
             }
           }
-        } catch (t) {
-          console.log("error: dynamic section", n, e, t);
+        } catch (e) {
+          console.log("error: dynamic section", i, t, e);
         }
         return [];
       }
-      function D() {
-        return o.useMemo(
+      function _() {
+        return r.useMemo(
           () => ({
             fnLoadMultiOptInRegistration: h.Get().LoadMultiOptInRegistration,
           }),
           []
         );
       }
-      function y(e, t) {
-        const [i, n] = o.useState(null);
+      function f(t, e) {
+        const [n, i] = r.useState(null);
         return (
-          (0, o.useEffect)(() => {
-            const i = t.filter(Boolean);
-            i.length > 0
+          (0, r.useEffect)(() => {
+            const n = e.filter(Boolean);
+            n.length > 0
               ? h
                   .Get()
                   .LoadMultiOptInRegistration(
-                    i.map(() => e),
-                    i
+                    n.map(() => t),
+                    n
                   )
                   .then(() => {
-                    const t = new Map();
-                    i.forEach((i) => {
-                      const n = h.Get().GetRegistration(i, e);
-                      n && t.set(i, n);
+                    const e = new Map();
+                    n.forEach((n) => {
+                      const i = h.Get().GetRegistration(n, t);
+                      i && e.set(n, i);
                     }),
-                      n(t);
+                      i(e);
                   })
-              : n(new Map());
-          }, [e, t]),
-          i
+              : i(new Map());
+          }, [t, e]),
+          n
         );
       }
-      function S(e) {
-        const [t, i] = o.useState(h.Get().GetAllOptInRegistrations(e));
+      function P(t) {
+        const [e, n] = r.useState(h.Get().GetAllOptInRegistrations(t));
         return (
-          (0, _.Qg)(h.Get().GetOptInNameRegistrationsCallbackList(e), i), t
+          (0, m.Qg)(h.Get().GetOptInNameRegistrationsCallbackList(t), n), e
         );
       }
-      function b(e) {
-        const t = S(e),
-          [i, n] = o.useState({
+      function E(t) {
+        const e = P(t),
+          [n, i] = r.useState({
             nAppOptedIn: 0,
             nAppEligible: 0,
             nAppOptedOut: 0,
             nAppIneligible: 0,
           });
         return (
-          o.useEffect(() => {
-            if ((null == t ? void 0 : t.length) > 0) {
-              const e = {
+          r.useEffect(() => {
+            if ((null == e ? void 0 : e.length) > 0) {
+              const t = {
                 nAppOptedIn: 0,
                 nAppEligible: 0,
                 nAppOptedOut: 0,
                 nAppIneligible: 0,
               };
-              t.forEach((t) => {
-                t.restricted || t.pruned
-                  ? (e.nAppIneligible += 1)
-                  : t.opt_in
-                  ? ((e.nAppOptedIn += 1), (e.nAppEligible += 1))
-                  : !t.time_opted_in || t.invited
-                  ? (e.nAppEligible += 1)
-                  : (e.nAppOptedOut += 1);
+              e.forEach((e) => {
+                e.restricted || e.pruned
+                  ? (t.nAppIneligible += 1)
+                  : e.opt_in
+                  ? ((t.nAppOptedIn += 1), (t.nAppEligible += 1))
+                  : !e.time_opted_in || e.invited
+                  ? (t.nAppEligible += 1)
+                  : (t.nAppOptedOut += 1);
               }),
-                JSON.stringify(e) != JSON.stringify(i) && n(e);
+                JSON.stringify(t) != JSON.stringify(n) && i(t);
             }
-          }, [t, i]),
-          i
+          }, [e, n]),
+          n
         );
       }
-      function f(e, t) {
-        const i = (0, l.useQuery)(
-          ["useAllOptInRegistrationByName", e, Boolean(t)],
-          () => h.Get().FetchOptInRegistrationForOptIn(e, t),
+      function k(t, e) {
+        const n = (0, c.useQuery)(
+          ["useAllOptInRegistrationByName", t, Boolean(e)],
+          () => h.Get().FetchOptInRegistrationForOptIn(t, e),
           { staleTime: 36e5 }
         );
-        return i.isLoading ? null : i.data;
+        return n.isLoading ? null : n.data;
       }
-      function E(e) {
-        const t = (0, l.useQuery)({
-          queryKey: ["useAllPendingReviewOptInRegistrationByName", e],
-          queryFn: () => h.Get().FetchPendingReviewOptInRegistrationn(e),
+      function I(t) {
+        const e = (0, c.useQuery)({
+          queryKey: ["useAllPendingReviewOptInRegistrationByName", t],
+          queryFn: () => h.Get().FetchPendingReviewOptInRegistrationn(t),
           retry: !1,
           staleTime: 36e5,
-          enabled: (null == e ? void 0 : e.length) > 0,
+          enabled: (null == t ? void 0 : t.length) > 0,
         });
         return {
-          rgPendingReviewRegistrations: t.isLoading ? null : t.data,
-          bIsInError: t.isError,
+          rgPendingReviewRegistrations: e.isLoading ? null : e.data,
+          bIsInError: e.isError,
         };
       }
-      function k(e, t) {
-        const i = f(e, !1),
-          [n, r] = (0, o.useState)(
-            null == i ? void 0 : i.find((e) => e.appid == t)
+      function G(t, e) {
+        const n = k(t, !1),
+          [i, a] = (0, r.useState)(
+            null == n ? void 0 : n.find((t) => t.appid == e)
           );
-        return (0, _.Qg)(h.Get().GetSingleAppRegistrationChange(t, e), r), n;
+        return (0, m.Qg)(h.Get().GetSingleAppRegistrationChange(e, t), a), i;
       }
-      function G(e, t) {
-        const [i, n] = (0, o.useState)(
-          h.Get().GetOptInRegistrationAndEligibilityForAppOrCreate(e, t)
+      function S(t, e) {
+        const [n, i] = (0, r.useState)(
+          h.Get().GetOptInRegistrationAndEligibilityForAppOrCreate(t, e)
         );
-        return (0, _.Qg)(h.Get().GetSingleAppRegistrationChange(e, t), n), i;
+        return (0, m.Qg)(h.Get().GetSingleAppRegistrationChange(t, e), i), n;
       }
-      function I(e, t) {
-        const [i, n] = (0, o.useState)(
-          h.Get().GetExistingOptInRegistartion(e, t)
+      function b(t, e) {
+        const [n, i] = (0, r.useState)(
+          h.Get().GetExistingOptInRegistartion(t, e)
         );
-        return (0, _.Qg)(h.Get().GetSingleAppRegistrationChange(e, t), n), i;
+        return (0, m.Qg)(h.Get().GetSingleAppRegistrationChange(t, e), i), n;
       }
-      function P() {
+      function C() {
         return {
           fnUpdateOptInRegistrationJson: h.Get().UpdateOptInRegistrationJson,
         };
       }
-      function w() {
+      function y() {
         return { fnUpdateAppealState: h.Get().UpdateAppealState };
       }
-      (0, n.gn)(
-        [m.a],
+      (0, i.gn)(
+        [p.a],
         h.prototype,
         "GetOptInRegistrationAndEligibilityForApp",
         null
       ),
-        (0, n.gn)(
-          [m.a],
+        (0, i.gn)(
+          [p.a],
           h.prototype,
           "GetOptInRegistrationAndEligibilityForApps",
           null
         ),
-        (0, n.gn)([m.a], h.prototype, "LoadMultiOptInRegistration", null),
-        (0, n.gn)([m.a], h.prototype, "UpdateOptInRegistrationJson", null),
-        (0, n.gn)([m.a], h.prototype, "UpdateAppealState", null),
-        (0, n.gn)([a.aD], h.prototype, "Init", null);
+        (0, i.gn)([p.a], h.prototype, "LoadMultiOptInRegistration", null),
+        (0, i.gn)([p.a], h.prototype, "UpdateOptInRegistrationJson", null),
+        (0, i.gn)([p.a], h.prototype, "UpdateAppealState", null),
+        (0, i.gn)([o.aD], h.prototype, "Init", null);
     },
-    36998: (e, t, i) => {
+    36998: (t, e, n) => {
       "use strict";
-      i.d(t, {
-        EV: () => R,
-        Fi: () => k,
-        ID: () => E,
-        LT: () => v,
-        Qy: () => w,
-        Su: () => S,
-        XM: () => y,
-        Xj: () => B,
+      n.d(e, {
+        EV: () => L,
+        Fi: () => G,
+        ID: () => I,
+        LT: () => D,
+        Qy: () => y,
+        Su: () => P,
+        XM: () => f,
+        Xj: () => R,
         _J: () => h,
-        b2: () => G,
-        co: () => D,
-        hd: () => P,
-        k1: () => I,
-        kk: () => g,
-        v6: () => b,
-        yI: () => f,
+        b2: () => S,
+        co: () => _,
+        hd: () => C,
+        k1: () => b,
+        kk: () => v,
+        v6: () => E,
+        yI: () => k,
       });
-      var n = i(33940),
-        r = i(52868),
-        s = i.n(r),
-        a = i(89526),
-        o = (i(42770), i(85651)),
-        l = (i(63403), i(23217)),
-        c = i(85246),
-        d = i(4306),
-        u = i(81349),
-        m = i(32765);
-      class p {
+      var i = n(33940),
+        a = n(52868),
+        s = n.n(a),
+        o = n(89526),
+        r = n(85651),
+        c = n(23217),
+        l = n(85246),
+        u = n(4306),
+        d = n(81349),
+        p = n(32765);
+      class g {
+        static Get() {
+          return (
+            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
+            g.s_Singleton
+          );
+        }
         constructor() {
           (this.m_mapPackageDiscountsById = new Map()),
             (this.m_mapDiscountCallbackList = new Map()),
@@ -6094,280 +1536,1217 @@
             (this.m_mapPackageCallbackList = new Map()),
             (this.m_mapPackageDiscountsByDiscountEventId = new Map()),
             (this.m_mapDiscountEventCallbackList = new Map()),
-            (this.m_allDiscountCallbackList = new c.pB()),
+            (this.m_allDiscountCallbackList = new l.pB()),
             (this.m_mapMaxDiscountPercentageByPackageId = new Map()),
-            "dev" == m.De.WEB_UNIVERSE &&
+            "dev" == p.De.WEB_UNIVERSE &&
               (window.g_PackageDiscountStore = this);
         }
-        static Get() {
-          return (
-            p.s_Singleton || ((p.s_Singleton = new p()), p.s_Singleton.Init()),
-            p.s_Singleton
-          );
-        }
         Init() {
-          const e = (0, m.kQ)("package_discounts", "application_config");
-          ("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
+          const t = (0, p.kQ)("package_discounts", "application_config");
+          ("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
             console.log(
               "DEV_DEBUG: CPackageDiscountStore loading discount payload: ",
-              e
+              t
             ),
-            this.BIsDiscountPayloadValid(e)
-              ? this.InternalAddDiscounts(e)
-              : "dev" == m.De.WEB_UNIVERSE &&
-                e &&
+            this.BIsDiscountPayloadValid(t)
+              ? this.InternalAddDiscounts(t)
+              : "dev" == p.De.WEB_UNIVERSE &&
+                t &&
                 console.error("Invalid discount payload");
-          const t = (0, m.kQ)("max_discount_percentages", "application_config");
+          const e = (0, p.kQ)("max_discount_percentages", "application_config");
           if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CDiscountGridStore loading max-discount-% payload: ",
-                t
+                e
               ),
-            this.BIsMaxDiscountPayloadValid(t))
+            this.BIsMaxDiscountPayloadValid(e))
           )
-            for (let e in t)
-              this.m_mapMaxDiscountPercentageByPackageId.set(Number(e), t[e]);
+            for (let t in e)
+              this.m_mapMaxDiscountPercentageByPackageId.set(Number(t), e[t]);
           else
-            "dev" == m.De.WEB_UNIVERSE &&
-              t &&
+            "dev" == p.De.WEB_UNIVERSE &&
+              e &&
               console.error("Invalid max-discount-% payload");
         }
-        InternalAddDiscounts(e, t) {
-          var i;
-          const n = new Set(),
-            r = new Set();
-          for (const t of e)
-            (null === (i = t.discountEventID) || void 0 === i
+        InternalAddDiscounts(t, e) {
+          var n;
+          const i = new Set(),
+            a = new Set();
+          for (const e of t)
+            (null === (n = e.discountEventID) || void 0 === n
               ? void 0
-              : i.length) || (t.discountEventID = _(t)),
-              this.m_mapPackageDiscountsById.set(t.nDiscountID, t),
-              this.GetCallbackListForDiscount(t.nDiscountID).Dispatch(t),
-              this.m_mapPackageDiscountsByPackageId.has(t.packageID) ||
+              : n.length) || (e.discountEventID = m(e)),
+              this.m_mapPackageDiscountsById.set(e.nDiscountID, e),
+              this.GetCallbackListForDiscount(e.nDiscountID).Dispatch(e),
+              this.m_mapPackageDiscountsByPackageId.has(e.packageID) ||
                 this.m_mapPackageDiscountsByPackageId.set(
-                  t.packageID,
+                  e.packageID,
                   new Map()
                 ),
               this.m_mapPackageDiscountsByPackageId
-                .get(t.packageID)
-                .set(t.nDiscountID, t),
-              n.add(t.packageID),
+                .get(e.packageID)
+                .set(e.nDiscountID, e),
+              i.add(e.packageID),
               this.m_mapPackageDiscountsByDiscountEventId.has(
-                t.discountEventID
+                e.discountEventID
               ) ||
                 this.m_mapPackageDiscountsByDiscountEventId.set(
-                  t.discountEventID,
+                  e.discountEventID,
                   new Map()
                 ),
               this.m_mapPackageDiscountsByDiscountEventId
-                .get(t.discountEventID)
-                .set(t.nDiscountID, t),
-              r.add(t.discountEventID);
-          for (const e of null != t ? t : [])
-            this.m_mapPackageDiscountsByPackageId.has(e) ||
-              this.m_mapPackageDiscountsByPackageId.set(e, new Map()),
-              n.add(e);
-          n.forEach((e) =>
-            this.GetCallbackListForPackage(e).Dispatch(
-              this.GetAllDiscountsForPackage(e)
+                .get(e.discountEventID)
+                .set(e.nDiscountID, e),
+              a.add(e.discountEventID);
+          for (const t of null != e ? e : [])
+            this.m_mapPackageDiscountsByPackageId.has(t) ||
+              this.m_mapPackageDiscountsByPackageId.set(t, new Map()),
+              i.add(t);
+          i.forEach((t) =>
+            this.GetCallbackListForPackage(t).Dispatch(
+              this.GetAllDiscountsForPackage(t)
             )
           ),
-            r.forEach((e) =>
-              this.GetCallbackListForDiscountEvent(e).Dispatch(
-                this.GetAllDiscountsForDiscountEvent(e)
+            a.forEach((t) =>
+              this.GetCallbackListForDiscountEvent(t).Dispatch(
+                this.GetAllDiscountsForDiscountEvent(t)
               )
             ),
             this.GetGlobalCallbackList().Dispatch(
               this.GetAllDiscountsForAllPackages()
             );
         }
-        InternalDeleteDiscount(e, t, i) {
-          var n, r;
-          this.m_mapPackageDiscountsById.delete(e),
-            null === (n = this.m_mapPackageDiscountsByPackageId.get(t)) ||
-              void 0 === n ||
-              n.delete(e),
-            null === (r = this.m_mapPackageDiscountsByDiscountEventId.get(i)) ||
-              void 0 === r ||
-              r.delete(e),
-            this.GetCallbackListForDiscount(e).Dispatch(null),
-            this.GetCallbackListForPackage(t).Dispatch(
-              this.GetAllDiscountsForPackage(t)
+        InternalDeleteDiscount(t, e, n) {
+          var i, a;
+          this.m_mapPackageDiscountsById.delete(t),
+            null === (i = this.m_mapPackageDiscountsByPackageId.get(e)) ||
+              void 0 === i ||
+              i.delete(t),
+            null === (a = this.m_mapPackageDiscountsByDiscountEventId.get(n)) ||
+              void 0 === a ||
+              a.delete(t),
+            this.GetCallbackListForDiscount(t).Dispatch(null),
+            this.GetCallbackListForPackage(e).Dispatch(
+              this.GetAllDiscountsForPackage(e)
             ),
-            this.GetCallbackListForDiscountEvent(i).Dispatch(
-              this.GetAllDiscountsForDiscountEvent(i)
+            this.GetCallbackListForDiscountEvent(n).Dispatch(
+              this.GetAllDiscountsForDiscountEvent(n)
             ),
             this.GetGlobalCallbackList().Dispatch(
               this.GetAllDiscountsForAllPackages()
             );
         }
-        BIsDiscountPayloadValid(e) {
-          const t = e;
-          if (t && Array.isArray(t)) {
-            if (0 == t.length) return !0;
-            const e = t[0];
+        BIsDiscountPayloadValid(t) {
+          const e = t;
+          if (e && Array.isArray(e)) {
+            if (0 == e.length) return !0;
+            const t = e[0];
             if (
-              e.nDiscountID &&
-              "number" == typeof e.nDiscountID &&
-              e.packageID &&
-              "number" == typeof e.packageID
+              t.nDiscountID &&
+              "number" == typeof t.nDiscountID &&
+              t.packageID &&
+              "number" == typeof t.packageID
             )
               return !0;
           }
           return !1;
         }
-        BIsMaxDiscountPayloadValid(e) {
-          const t = e;
-          if (t && "object" == typeof t) {
-            for (let e in t)
+        BIsMaxDiscountPayloadValid(t) {
+          const e = t;
+          if (e && "object" == typeof e) {
+            for (let t in e)
               if (
-                isNaN(parseInt(e)) ||
-                (null !== t[e] && "number" != typeof t[e])
+                isNaN(parseInt(t)) ||
+                (null !== e[t] && "number" != typeof e[t])
               )
                 return !1;
             return !0;
           }
           return !1;
         }
-        LoadPackageDiscounts(e, t, i = 0) {
-          var r, a, o, c;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = null;
-            const d = new Promise((e, t) => {
-                n = e;
+        LoadPackageDiscounts(t, e, n = 0) {
+          var a, o, r, l;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
+            const u = new Promise((t, e) => {
+                i = t;
               }),
-              u = new Set();
-            for (const t of e)
-              this.m_mapPackageDiscountsByPackageId.has(t) || u.add(t);
-            const p = Array.from(u).sort();
-            if (0 == p.length) return 1;
-            const _ = (0, m.kQ)("publisherid", "application_config"),
-              g =
-                m.De.PARTNER_BASE_URL +
+              d = new Set();
+            for (const e of t)
+              this.m_mapPackageDiscountsByPackageId.has(e) || d.add(e);
+            const g = Array.from(d).sort();
+            if (0 == g.length) return 1;
+            const m = (0, p.kQ)("publisherid", "application_config"),
+              v =
+                p.De.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetpackagediscounts/" +
-                _;
+                m;
             let h = null,
-              v = null;
+              D = null;
             try {
-              const e = [],
-                n = new Array();
-              for (; p.length > 0; ) {
-                const r = p.splice(0, 50);
-                n.push(r);
-                const a = { packageids: r.join(","), origin: self.origin };
-                e.push(
-                  s().get(g, {
-                    params: a,
+              const t = [],
+                i = new Array();
+              for (; g.length > 0; ) {
+                const a = g.splice(0, 50);
+                i.push(a);
+                const o = { packageids: a.join(","), origin: self.origin };
+                t.push(
+                  s().get(v, {
+                    params: o,
                     withCredentials: !0,
-                    cancelToken: null == t ? void 0 : t.token,
-                    timeout: i,
+                    cancelToken: null == e ? void 0 : e.token,
+                    timeout: n,
                   })
                 );
               }
-              const a = yield Promise.all(e),
-                o = [];
-              for (const e of a) {
+              const o = yield Promise.all(t),
+                r = [];
+              for (const t of o) {
                 if (
-                  ((v = n.unshift()),
-                  200 != (null == e ? void 0 : e.status) ||
+                  ((D = i.unshift()),
+                  200 != (null == t ? void 0 : t.status) ||
                     1 !=
-                      (null === (r = e.data) || void 0 === r
+                      (null === (a = t.data) || void 0 === a
                         ? void 0
-                        : r.success) ||
-                    !e.data.discounts)
+                        : a.success) ||
+                    !t.data.discounts)
                 ) {
-                  h = { response: e };
+                  h = { response: t };
                   break;
                 }
-                e.data.discounts.forEach((e) => o.push(e));
+                t.data.discounts.forEach((t) => r.push(t));
               }
-              null == h && this.InternalAddDiscounts(o, Array.from(u));
-            } catch (e) {
-              h = e;
+              null == h && this.InternalAddDiscounts(r, Array.from(d));
+            } catch (t) {
+              h = t;
             }
-            if (null == h) n(1);
+            if (null == h) i(1);
             else {
-              const e = (0, l.l)(h);
+              const t = (0, c.l)(h);
               console.error(
                 "Could not load Discounts for packages",
-                v,
-                e.strErrorMsg,
-                e
+                D,
+                t.strErrorMsg,
+                t
               ),
-                n(
+                i(
                   null !==
-                    (c =
+                    (l =
                       null ===
-                        (o =
-                          null === (a = null == h ? void 0 : h.response) ||
-                          void 0 === a
+                        (r =
+                          null === (o = null == h ? void 0 : h.response) ||
+                          void 0 === o
                             ? void 0
-                            : a.data) || void 0 === o
+                            : o.data) || void 0 === r
                         ? void 0
-                        : o.success) && void 0 !== c
-                    ? c
+                        : r.success) && void 0 !== l
+                    ? l
                     : 2
                 );
             }
-            return d;
+            return u;
           });
         }
-        SaveDiscountToServer(e, t) {
-          var i, r, a, o;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n =
-                m.De.PARTNER_BASE_URL +
+        SaveDiscountToServer(t, e) {
+          var n, a, o, r;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i =
+                p.De.PARTNER_BASE_URL +
                 "packages/createoreditdiscount/" +
-                e.packageID,
-              c = new FormData();
-            c.append("sessionid", m.De.SESSIONID),
-              e.nDiscountID && c.append("id", e.nDiscountID.toString()),
-              c.append("name", e.strDiscountName),
-              c.append("description", e.strDiscountDescription),
-              e.discountEventID &&
-                !g(e.discountEventID) &&
-                c.append("type", e.discountEventID),
-              c.append("percent", e.nDiscountPct.toString()),
-              c.append(
+                t.packageID,
+              l = new FormData();
+            l.append("sessionid", p.De.SESSIONID),
+              t.nDiscountID && l.append("id", t.nDiscountID.toString()),
+              l.append("name", t.strDiscountName),
+              l.append("description", t.strDiscountDescription),
+              t.discountEventID &&
+                !v(t.discountEventID) &&
+                l.append("type", t.discountEventID),
+              l.append("percent", t.nDiscountPct.toString()),
+              l.append(
                 "start_date",
-                new Date(1e3 * e.rtStartDate).toISOString()
+                new Date(1e3 * t.rtStartDate).toISOString()
               ),
-              c.append("end_date", new Date(1e3 * e.rtEndDate).toISOString());
-            let d = null;
+              l.append("end_date", new Date(1e3 * t.rtEndDate).toISOString());
+            let u = null;
             try {
-              const a = yield s().post(n, c, {
+              const o = yield s().post(i, l, {
                 withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
+                cancelToken: null == e ? void 0 : e.token,
               });
               if (
-                ((a.data.msg =
-                  null !== (i = a.data.msg) && void 0 !== i
-                    ? i
-                    : a.data.message),
-                200 == (null == a ? void 0 : a.status) &&
+                ((o.data.msg =
+                  null !== (n = o.data.msg) && void 0 !== n
+                    ? n
+                    : o.data.message),
+                200 == (null == o ? void 0 : o.status) &&
                   1 ==
-                    (null === (r = a.data) || void 0 === r
+                    (null === (a = o.data) || void 0 === a
                       ? void 0
-                      : r.success) &&
-                  a.data.discountid)
+                      : a.success) &&
+                  o.data.discountid)
               )
                 return (
-                  (e.bChangedLocally = !1),
-                  (e.nDiscountID = a.data.discountid),
-                  (e.nDiscountPct = a.data.percentage),
-                  this.InternalAddDiscounts([e]),
-                  a.data
+                  (t.bChangedLocally = !1),
+                  (t.nDiscountID = o.data.discountid),
+                  (t.nDiscountPct = o.data.percentage),
+                  this.InternalAddDiscounts([t]),
+                  o.data
                 );
-              d = { response: a };
-            } catch (e) {
-              d = e;
+              u = { response: o };
+            } catch (t) {
+              u = t;
             }
-            const u = (0, l.l)(d);
+            const d = (0, c.l)(u);
             return (
               console.error(
                 "CPackageDiscountStore.SaveDiscountToServer: failed",
-                u.strErrorMsg,
-                u
+                d.strErrorMsg,
+                d
+              ),
+              null !==
+                (r =
+                  null === (o = null == u ? void 0 : u.response) || void 0 === o
+                    ? void 0
+                    : o.data) && void 0 !== r
+                ? r
+                : { success: 2 }
+            );
+          });
+        }
+        DeleteDiscountOnServer(t, e, n, a) {
+          var o, r, l;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i =
+                p.De.PARTNER_BASE_URL + "packages/removepackagediscount/" + e,
+              u = new FormData();
+            u.append("sessionid", p.De.SESSIONID),
+              u.append("discountid", t.toString());
+            let d = null;
+            try {
+              const r = yield s().post(i, u, {
+                withCredentials: !0,
+                cancelToken: null == a ? void 0 : a.token,
+              });
+              if (
+                200 == (null == r ? void 0 : r.status) &&
+                1 ==
+                  (null === (o = r.data) || void 0 === o ? void 0 : o.success)
+              )
+                return this.InternalDeleteDiscount(t, e, n), r.data;
+              d = { response: r };
+            } catch (t) {
+              d = t;
+            }
+            const g = (0, c.l)(d);
+            return (
+              console.error(
+                "CPackageDiscountStore.DeleteDiscountOnServer: failed",
+                g.strErrorMsg,
+                g
+              ),
+              null !==
+                (l =
+                  null === (r = null == d ? void 0 : d.response) || void 0 === r
+                    ? void 0
+                    : r.data) && void 0 !== l
+                ? l
+                : { success: 2 }
+            );
+          });
+        }
+        GetCallbackListForDiscount(t) {
+          return (
+            this.m_mapDiscountCallbackList.has(t) ||
+              this.m_mapDiscountCallbackList.set(t, new l.pB()),
+            this.m_mapDiscountCallbackList.get(t)
+          );
+        }
+        GetCallbackListForPackage(t) {
+          return (
+            this.m_mapPackageCallbackList.has(t) ||
+              this.m_mapPackageCallbackList.set(t, new l.pB()),
+            this.m_mapPackageCallbackList.get(t)
+          );
+        }
+        GetCallbackListForDiscountEvent(t) {
+          return (
+            this.m_mapDiscountEventCallbackList.has(t) ||
+              this.m_mapDiscountEventCallbackList.set(t, new l.pB()),
+            this.m_mapDiscountEventCallbackList.get(t)
+          );
+        }
+        GetGlobalCallbackList() {
+          return this.m_allDiscountCallbackList;
+        }
+        GetDiscountByID(t) {
+          return this.m_mapPackageDiscountsById.get(t);
+        }
+        GetAllDiscountsForPackage(t) {
+          var e, n;
+          return this.m_mapPackageDiscountsByPackageId.has(t)
+            ? Array.from(
+                null !==
+                  (n =
+                    null ===
+                      (e = this.m_mapPackageDiscountsByPackageId.get(t)) ||
+                    void 0 === e
+                      ? void 0
+                      : e.values()) && void 0 !== n
+                  ? n
+                  : []
+              )
+            : null;
+        }
+        GetAllDiscountsForAllPackages() {
+          return Array.from(this.m_mapPackageDiscountsById.values());
+        }
+        GetAllDiscountsForDiscountEvent(t) {
+          var e, n;
+          return Array.from(
+            null !==
+              (n =
+                null ===
+                  (e = this.m_mapPackageDiscountsByDiscountEventId.get(t)) ||
+                void 0 === e
+                  ? void 0
+                  : e.values()) && void 0 !== n
+              ? n
+              : []
+          );
+        }
+        GetMaxDiscountPercentage(t) {
+          var e;
+          return null !==
+            (e = this.m_mapMaxDiscountPercentageByPackageId.get(t)) &&
+            void 0 !== e
+            ? e
+            : 90;
+        }
+        GetMaxDiscountPercentageForGroup(t) {
+          const e = t.map((t) => this.GetMaxDiscountPercentage(t));
+          return Math.min(...e);
+        }
+      }
+      function m(t) {
+        return `custom-event-${t.rtStartDate}-${t.rtEndDate}-${(0, d.JD)(
+          t.strDiscountName
+        )}`;
+      }
+      function v(t) {
+        return t.startsWith("custom-event-");
+      }
+      function h(t) {
+        return g.Get().GetDiscountByID(t);
+      }
+      function D(t) {
+        return g.Get().GetAllDiscountsForDiscountEvent(t);
+      }
+      function _(t) {
+        return g.Get().GetAllDiscountsForPackage(t);
+      }
+      function f(t) {
+        return g.Get().GetCallbackListForPackage(t);
+      }
+      function P() {
+        return g.Get().GetAllDiscountsForAllPackages();
+      }
+      function E() {
+        return g.Get().GetGlobalCallbackList();
+      }
+      function k() {
+        return o.useCallback(
+          (t, e, n) => g.Get().LoadPackageDiscounts(t, e, n),
+          []
+        );
+      }
+      function I() {
+        const t = (t) => g.Get().SaveDiscountToServer(t),
+          e = (t, e, n) => g.Get().DeleteDiscountOnServer(t, e, n);
+        return o.useMemo(
+          () => ({ fnSaveDiscount: t, fnDeleteDiscount: e }),
+          []
+        );
+      }
+      function G(t) {
+        return new Map(
+          Array.from(t.map((t) => [t, g.Get().GetDiscountByID(t)]))
+        );
+      }
+      function S(t) {
+        const e = (0, r.zD)(),
+          [n, i] = o.useState(g.Get().GetAllDiscountsForPackage(t));
+        return (
+          (0, u.Qg)(g.Get().GetCallbackListForPackage(t), i),
+          o.useMemo(() => {
+            let t = null;
+            if (null == n) return { deepestDiscount: t, bLoading: !0 };
+            if ((null == n ? void 0 : n.length) > 0)
+              for (const i of n)
+                i.rtEndDate > e ||
+                  i.nDiscountPct <= 0 ||
+                  ((null == t ||
+                    i.nDiscountPct > t.nDiscountPct ||
+                    (i.nDiscountPct == t.nDiscountPct &&
+                      i.rtEndDate > t.rtEndDate)) &&
+                    (t = i));
+            return { deepestDiscount: t, bLoading: !1 };
+          }, [t, e, n])
+        );
+      }
+      function b(t) {
+        const e = (0, r.zD)(),
+          [n, i] = o.useState(g.Get().GetAllDiscountsForAllPackages());
+        return (
+          (0, u.Qg)(g.Get().GetGlobalCallbackList(), i),
+          o.useMemo(() => {
+            var i;
+            let a = null;
+            if (null == n) return { mostRecentDiscount: a, bLoading: !0 };
+            for (const n of t) {
+              const t =
+                null !== (i = g.Get().GetAllDiscountsForPackage(n)) &&
+                void 0 !== i
+                  ? i
+                  : [];
+              for (const n of t)
+                n.rtEndDate < e && (!a || a.rtEndDate < n.rtEndDate) && (a = n);
+            }
+            return { mostRecentDiscount: a, bLoading: !1 };
+          }, [e, t, n])
+        );
+      }
+      function C(t) {
+        const [e, n] = o.useState(g.Get().GetAllDiscountsForDiscountEvent(t));
+        return (0, u.Qg)(g.Get().GetCallbackListForDiscountEvent(t), n), e;
+      }
+      function y(t) {
+        return g.Get().GetMaxDiscountPercentage(t);
+      }
+      function L(t) {
+        return t.some(
+          (t) => t.nDiscountPct > g.Get().GetMaxDiscountPercentage(t.packageID)
+        );
+      }
+      function R(t) {
+        return g.Get().GetMaxDiscountPercentageForGroup(t);
+      }
+    },
+    19533: (t, e, n) => {
+      "use strict";
+      n.d(e, {
+        $D: () => v,
+        AM: () => m,
+        Gd: () => g,
+        MQ: () => l,
+        NR: () => d,
+        ew: () => r,
+        vB: () => p,
+        z: () => u,
+      });
+      var i = n(89526),
+        a = n(85246),
+        s = n(4306),
+        o = n(32765);
+      const r = "pn";
+      class c {
+        static Get() {
+          return (
+            c.s_Singleton || ((c.s_Singleton = new c()), c.s_Singleton.Init()),
+            c.s_Singleton
+          );
+        }
+        constructor() {
+          (this.m_rgVisiblePackageIDs = []),
+            (this.m_visiblePackageIDsCallbackList = new a.pB()),
+            "dev" == o.De.WEB_UNIVERSE && (window.g_PackageGridStore = this);
+        }
+        Init() {
+          let t = (0, o.kQ)("package_data", "application_config");
+          t
+            ? ((this.m_rgPackageIDs = t.map((t) => t.packageid)),
+              (this.m_rgPackageData = t),
+              (this.m_mapPackageData = new Map(t.map((t) => [t.packageid, t]))))
+            : ((this.m_rgPackageIDs = (0, o.kQ)(
+                "package_ids",
+                "application_config"
+              )),
+              (this.m_mapPackageData = new Map())),
+            ("dev" != o.De.WEB_UNIVERSE && "beta" != o.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackageGridStore loading payload: ",
+                this.m_rgPackageIDs
+              ),
+            "dev" != o.De.WEB_UNIVERSE ||
+              Array.isArray(this.m_rgPackageIDs) ||
+              console.error("CPackageGridStore Invalid payload");
+        }
+        UpdatePackageNameSearchState(t) {
+          const e = t.getHeaderFilterValue("packageName"),
+            n = new URL(window.location.href);
+          e != decodeURIComponent(n.searchParams.get(r)) &&
+            (e
+              ? n.searchParams.set(r, encodeURIComponent(e))
+              : n.searchParams.delete(r),
+            window.history.replaceState({}, "", n.toString()));
+        }
+        UpdateVisiblePackageList(t) {
+          const e = t.getGroups("visible").filter((t) => t.isVisible());
+          (this.m_rgVisiblePackageIDs = []),
+            e.forEach((t) =>
+              t
+                .getRows()
+                .forEach((t) =>
+                  this.m_rgVisiblePackageIDs.push(t.getData().packageID)
+                )
+            ),
+            this.m_visiblePackageIDsCallbackList.Dispatch(
+              this.m_rgVisiblePackageIDs
+            ),
+            this.UpdatePackageNameSearchState(t);
+        }
+      }
+      function l() {
+        return c.Get().m_rgPackageIDs;
+      }
+      function u() {
+        return c.Get().m_rgPackageIDs;
+      }
+      function d() {
+        return c.Get().m_rgPackageData;
+      }
+      function p(t) {
+        let e = c.Get().m_mapPackageData.get(t);
+        return e ? e.package_name : t.toString();
+      }
+      function g() {
+        return i.useCallback((t) => c.Get().UpdateVisiblePackageList(t), []);
+      }
+      function m() {
+        const [t, e] = i.useState(c.Get().m_rgVisiblePackageIDs);
+        return (0, s.Qg)(c.Get().m_visiblePackageIDsCallbackList, e), t;
+      }
+      function v() {
+        return i.useMemo(
+          () => (0, o.kQ)("publisherid", "application_config"),
+          []
+        );
+      }
+    },
+    66104: (t, e, n) => {
+      "use strict";
+      n.d(e, {
+        $w: () => w,
+        AN: () => Q,
+        FR: () => E,
+        HV: () => _,
+        HX: () => T,
+        OB: () => F,
+        OG: () => x,
+        Ol: () => S,
+        PP: () => I,
+        R2: () => O,
+        Rs: () => U,
+        Tj: () => k,
+        We: () => j,
+        X1: () => y,
+        _w: () => D,
+        bS: () => M,
+        dU: () => b,
+        df: () => V,
+        j_: () => W,
+        ju: () => R,
+        np: () => q,
+        on: () => B,
+        ps: () => L,
+        rX: () => C,
+        sN: () => H,
+        uT: () => K,
+        xm: () => z,
+        yh: () => N,
+      });
+      var i = n(33940),
+        a = n(52868),
+        s = n.n(a),
+        o = n(89526),
+        r = n(50265),
+        c = n(23217),
+        l = n(85246),
+        u = n(4306),
+        d = n(81349),
+        p = n(32765),
+        g = n(19533),
+        m = n(25125);
+      class v {
+        static Get() {
+          return (
+            v.s_Singleton || ((v.s_Singleton = new v()), v.s_Singleton.Init()),
+            v.s_Singleton
+          );
+        }
+        constructor() {
+          (this.m_mapPackagePrice = new Map()),
+            (this.m_setRecurringSubscriptions = new Set()),
+            (this.m_mapPriceProposals = new Map()),
+            (this.m_mapLocalPackagePriceOverrides = new Map()),
+            (this.m_mapPriceGridCellCallbackList = new Map()),
+            (this.m_allPriceOverridesCallbackList = new l.pB()),
+            (this.m_mapOverridesPerPriceKey = new Map()),
+            (this.m_mapCurrencyData = new Map()),
+            (this.m_mapPriceKeyDescriptions = new Map()),
+            (this.m_mapPriceGuidelines = new Map()),
+            (this.m_rgPriceLevels = []),
+            (this.m_mapMinPrices = new Map()),
+            (this.m_mapMinDiscountedPrices = new Map()),
+            (this.m_strDisplayPriceKey = "USD"),
+            (this.m_displayPriceKeyCallbackList = new l.pB()),
+            "dev" == p.De.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
+        }
+        Init() {
+          var t, e, n, i, a, s, o, r, c, l;
+          const u = new Set(),
+            g = (0, p.kQ)("base_prices", "application_config");
+          if (
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading base price payload: ",
+                g
+              ),
+            g)
+          )
+            if (this.BIsPricePayloadValid(g))
+              for (let t in g) {
+                const e = g[t],
+                  n = parseInt(t),
+                  i = new Map();
+                this.m_mapPackagePrice.set(n, i);
+                for (let t in e) u.add(t.toUpperCase()), i.set(t, e[t]);
+              }
+            else
+              "dev" == p.De.WEB_UNIVERSE &&
+                console.error("Invalid base price payload");
+          const m = (0, p.kQ)("recurring_subs", "application_config");
+          if (
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading recurring subscriptions payload: ",
+                m
+              ),
+            m)
+          )
+            if (Array.isArray(m))
+              for (const t of m) this.m_setRecurringSubscriptions.add(t);
+            else
+              "dev" == p.De.WEB_UNIVERSE &&
+                console.error("Invalid recurring subscriptions payload");
+          const v = (0, p.kQ)("pending_proposals", "application_config");
+          if (
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
+                v
+              ),
+            v)
+          )
+            if (this.BIsPendingPricePayloadValid(v))
+              for (let t in v) {
+                const e = v[t],
+                  n = parseInt(t);
+                this.m_mapPriceProposals.set(n, e);
+              }
+            else
+              "dev" == p.De.WEB_UNIVERSE &&
+                console.error("Invalid pending price proposal payload");
+          const h = (0, p.kQ)("pricing_guidelines", "application_config");
+          if (
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading pricing guidelines payload: ",
+                h
+              ),
+            h)
+          )
+            if (this.BIsGuidelinesPayloadValid(h)) {
+              for (let t in h) {
+                const e = h[t],
+                  n = new Map(),
+                  i = 100 * parseInt(t.substring(3));
+                this.m_rgPriceLevels.push(i),
+                  this.m_mapPriceGuidelines.set(i, n);
+                for (let t in e)
+                  u.add(t.toUpperCase()),
+                    n.set(t.toUpperCase(), parseInt(e[t]));
+              }
+              this.m_rgPriceLevels.sort((t, e) => t - e);
+            } else
+              "dev" == p.De.WEB_UNIVERSE &&
+                console.error("Invalid pricing guidelines payload");
+          this.m_rgKnownPriceKeys = Array.from(u).sort((t, e) =>
+            (0, d.eT)(P(t), P(e))
+          );
+          for (const u of this.m_rgKnownPriceKeys) {
+            const d =
+                null !==
+                  (e =
+                    null === (t = this.m_mapPriceGuidelines.get(100)) ||
+                    void 0 === t
+                      ? void 0
+                      : t.get(u)) && void 0 !== e
+                  ? e
+                  : 0,
+              p =
+                null !==
+                  (i =
+                    null === (n = this.m_mapPriceGuidelines.get(200)) ||
+                    void 0 === n
+                      ? void 0
+                      : n.get(u)) && void 0 !== i
+                  ? i
+                  : 0,
+              g =
+                null !==
+                  (s =
+                    null === (a = this.m_mapPriceGuidelines.get(300)) ||
+                    void 0 === a
+                      ? void 0
+                      : a.get(u)) && void 0 !== s
+                  ? s
+                  : 0,
+              m =
+                null !==
+                  (r =
+                    null === (o = this.m_mapPriceGuidelines.get(400)) ||
+                    void 0 === o
+                      ? void 0
+                      : o.get(u)) && void 0 !== r
+                  ? r
+                  : 0,
+              v =
+                null !==
+                  (l =
+                    null === (c = this.m_mapPriceGuidelines.get(500)) ||
+                    void 0 === c
+                      ? void 0
+                      : c.get(u)) && void 0 !== l
+                  ? l
+                  : 0;
+            this.m_mapMinPrices.set(u, Math.ceil(0.9 * d));
+            const h = Math.floor(Math.min(d / 2, p / 4, g / 6, m / 8, v / 10));
+            this.m_mapMinDiscountedPrices.set(u, h);
+          }
+          const D = (0, p.kQ)("currency_data", "application_config");
+          if (
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading currency payload: ",
+                D
+              ),
+            D)
+          )
+            if (this.BIsCurrencyPayloadValid(D))
+              for (let t in D) {
+                const e = D[t];
+                this.m_mapCurrencyData.set(t, e);
+              }
+            else
+              "dev" == p.De.WEB_UNIVERSE &&
+                console.error("Invalid currency payload");
+          const _ = (0, p.kQ)("currency_descriptions", "application_config");
+          if (
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading currency descriptions: ",
+                D
+              ),
+            _)
+          )
+            if (this.BIsCurrencyDescriptionPayloadValid(_))
+              for (let t in _) {
+                const e = _[t];
+                this.m_mapPriceKeyDescriptions.set(t, e);
+              }
+            else
+              "dev" == p.De.WEB_UNIVERSE &&
+                console.error("Invalid currency description payload");
+        }
+        BIsPricePayloadValid(t) {
+          const e = t;
+          if (!e || "object" != typeof e) return !1;
+          for (let t in e) {
+            if (isNaN(parseInt(t))) return !1;
+            const n = e[t];
+            if (!n || "object" != typeof n) return !1;
+            for (let t in n)
+              if ("string" != typeof t || "number" != typeof n[t]) return !1;
+          }
+          return !0;
+        }
+        BIsPendingPricePayloadValid(t) {
+          const e = t;
+          if (!e || "object" != typeof e) return !1;
+          for (let t in e) {
+            if (isNaN(parseInt(t))) return !1;
+            const n = e[t];
+            if (
+              !n ||
+              "object" != typeof n ||
+              n.packageID !== parseInt(t) ||
+              "object" != typeof n.prices
+            )
+              return !1;
+          }
+          return !0;
+        }
+        BIsGuidelinesPayloadValid(t) {
+          const e = t;
+          if (!e || "object" != typeof e) return !1;
+          for (let t in e) {
+            const n = e[t];
+            if (!n || "object" != typeof n) return !1;
+            for (let t in n)
+              if ("string" != typeof t || isNaN(parseInt(n[t]))) return !1;
+          }
+          return !0;
+        }
+        BIsCurrencyPayloadValid(t) {
+          const e = t;
+          if (!e || "object" != typeof e) return !1;
+          for (let t in e) {
+            const n = e[t];
+            if (!n || "object" != typeof n || n.strCode != t) return !1;
+          }
+          return !0;
+        }
+        BIsCurrencyDescriptionPayloadValid(t) {
+          const e = t;
+          if (!e || "object" != typeof e) return !1;
+          for (let t in e) {
+            const n = e[t];
+            if (
+              !n ||
+              "object" != typeof n ||
+              void 0 === n.bRequired ||
+              void 0 === n.strDescription
+            )
+              return !1;
+          }
+          return !0;
+        }
+        BPriceKeyRequired(t) {
+          var e, n;
+          return (
+            null !==
+              (n =
+                null === (e = this.m_mapPriceKeyDescriptions.get(t)) ||
+                void 0 === e
+                  ? void 0
+                  : e.bRequired) &&
+            void 0 !== n &&
+            n
+          );
+        }
+        GetPublishedPrice(t, e) {
+          var n;
+          return null === (n = this.m_mapPackagePrice.get(t)) || void 0 === n
+            ? void 0
+            : n.get(e);
+        }
+        GetProposedPrice(t, e) {
+          var n;
+          return null === (n = this.m_mapPriceProposals.get(t)) || void 0 === n
+            ? void 0
+            : n.prices[e];
+        }
+        GetSavedPrice(t, e) {
+          var n;
+          return null !== (n = this.GetProposedPrice(t, e)) && void 0 !== n
+            ? n
+            : this.GetPublishedPrice(t, e);
+        }
+        GetPrice(t, e) {
+          var n, i;
+          return null !==
+            (i =
+              null === (n = this.m_mapLocalPackagePriceOverrides.get(t)) ||
+              void 0 === n
+                ? void 0
+                : n.get(e)) && void 0 !== i
+            ? i
+            : this.GetSavedPrice(t, e);
+        }
+        GetPriceGridCellCallbackList(t, e) {
+          if (!t || !e) return null;
+          this.m_mapPriceGridCellCallbackList.has(t) ||
+            this.m_mapPriceGridCellCallbackList.set(t, new Map());
+          const n = this.m_mapPriceGridCellCallbackList.get(t);
+          return n.has(e) || n.set(e, new l.pB()), n.get(e);
+        }
+        OverridePrice(t, e, n) {
+          n != this.GetPrice(t, e) &&
+            (this.m_mapLocalPackagePriceOverrides.has(t) ||
+              this.m_mapLocalPackagePriceOverrides.set(t, new Map()),
+            n == this.GetSavedPrice(t, e)
+              ? this.m_mapLocalPackagePriceOverrides.get(t).delete(e)
+              : this.m_mapLocalPackagePriceOverrides.get(t).set(e, n),
+            this.GetPriceGridCellCallbackList(t, e).Dispatch(n),
+            this.DispatchPriceOverridesCallbacks());
+        }
+        DispatchPriceOverridesCallbacks() {
+          this.m_allPriceOverridesCallbackList.Dispatch(
+            this.GetAllLocalPriceOverrides()
+          ),
+            this.UpdateOverridesPerPriceKey();
+        }
+        BHasLocalPriceOverrides(t) {
+          var e;
+          return (
+            (null === (e = this.m_mapLocalPackagePriceOverrides.get(t)) ||
+            void 0 === e
+              ? void 0
+              : e.size) > 0
+          );
+        }
+        GetAllLocalPriceOverrides() {
+          const t = [];
+          return (
+            this.m_mapLocalPackagePriceOverrides.forEach((e, n) =>
+              e.forEach((e, i) => {
+                const a = this.GetSavedPrice(n, i);
+                t.push({
+                  packageID: n,
+                  strPriceKey: i,
+                  nPriceInCents: e,
+                  nOldPriceInCents: a,
+                });
+              })
+            ),
+            t.sort(h),
+            t
+          );
+        }
+        BHasLocalPriceOverride(t, e) {
+          let n = this.m_mapLocalPackagePriceOverrides.get(t);
+          return !!n && n.has(e);
+        }
+        UpdateOverridesPerPriceKey() {
+          this.m_mapOverridesPerPriceKey.clear(),
+            this.m_mapLocalPackagePriceOverrides.forEach((t, e) => {
+              t.forEach((t, e) => {
+                let n = this.m_mapOverridesPerPriceKey.get(e);
+                n || (n = 0), n++, this.m_mapOverridesPerPriceKey.set(e, n);
+              });
+            });
+        }
+        DiscardAllLocalPriceOverrides() {
+          const t = this.GetAllLocalPriceOverrides();
+          this.m_mapLocalPackagePriceOverrides.clear();
+          for (const e of t) {
+            const { packageID: t, strPriceKey: n } = e;
+            this.GetPriceGridCellCallbackList(t, n).Dispatch(
+              this.GetPrice(t, n)
+            );
+          }
+          this.DispatchPriceOverridesCallbacks();
+        }
+        DiscardAllLocalPriceOverridesForKey(t) {
+          let e = !1;
+          this.m_mapLocalPackagePriceOverrides.forEach((n, i) => {
+            this.m_mapPriceKeyDescriptions.has(t) &&
+              ((e = !0),
+              this.m_mapLocalPackagePriceOverrides.get(i).delete(t),
+              this.GetPriceGridCellCallbackList(i, t).Dispatch(
+                this.GetPrice(i, t)
+              ));
+          }),
+            e && this.DispatchPriceOverridesCallbacks();
+        }
+        DiscardLocalPriceOverridesForPackage(t) {
+          var e;
+          null === (e = this.m_mapLocalPackagePriceOverrides.get(t)) ||
+            void 0 === e ||
+            e.forEach((e, n) => {
+              this.GetPriceGridCellCallbackList(t, n).Dispatch(
+                this.GetSavedPrice(t, n)
+              );
+            }),
+            this.m_mapLocalPackagePriceOverrides.delete(t),
+            this.DispatchPriceOverridesCallbacks();
+        }
+        BuildNewPricingProposal(t, e) {
+          const n = {
+            packageID: t,
+            rtSubmitted: Math.floor(Date.now() / 1e3),
+            submitterID: p.L7.accountid,
+            prices: {},
+            eState: 1,
+            bPartnerWillPublish: e,
+          };
+          for (const e of this.m_rgKnownPriceKeys)
+            n.prices[e] = this.GetPrice(t, e);
+          return n;
+        }
+        SubmitProposalToServer(t, e, n) {
+          var a, o, r;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i = this.BuildNewPricingProposal(t, e),
+              l = JSON.stringify(i.prices),
+              u = (0, p.kQ)("publisherid", "application_config"),
+              d =
+                p.De.PARTNER_BASE_URL +
+                "pricing/ajaxsubmitproposal/" +
+                u +
+                "/" +
+                t,
+              g = new FormData();
+            g.append("sessionid", p.De.SESSIONID),
+              g.append("partner_will_publish", e ? "1" : "0"),
+              g.append("prices", l);
+            let m = null;
+            try {
+              const e = yield s().post(d, g, {
+                withCredentials: !0,
+                cancelToken: null == n ? void 0 : n.token,
+              });
+              if (
+                200 == (null == e ? void 0 : e.status) &&
+                1 ==
+                  (null === (a = e.data) || void 0 === a
+                    ? void 0
+                    : a.success) &&
+                0 != e.data.eState
+              ) {
+                if (3 == e.data.eState) {
+                  this.m_mapPriceProposals.delete(t);
+                  for (const e of this.m_rgKnownPriceKeys)
+                    this.m_mapPackagePrice.get(t).set(e, i.prices[e]);
+                } else
+                  (i.eState = e.data.eState),
+                    (i.proposalKey = e.data.proposalKey),
+                    this.m_mapPriceProposals.set(t, i);
+                return this.DiscardLocalPriceOverridesForPackage(t), e.data;
+              }
+            } catch (t) {
+              m = t;
+            }
+            const v = (0, c.l)(m);
+            return (
+              console.error(
+                "CPackagePricingStore.SubmitProposalToServer: failed",
+                v.strErrorMsg,
+                v
+              ),
+              null !==
+                (r =
+                  null === (o = null == m ? void 0 : m.response) || void 0 === o
+                    ? void 0
+                    : o.data) && void 0 !== r
+                ? r
+                : { success: 2 }
+            );
+          });
+        }
+        PublishApprovedProposal(t, e, n = 0) {
+          var a, o, r;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i = this.m_mapPriceProposals.get(t);
+            if (
+              4 != (null == i ? void 0 : i.eState) ||
+              !(null == i ? void 0 : i.proposalKey)
+            )
+              return { success: 8 };
+            const l = (0, p.kQ)("publisherid", "application_config"),
+              u =
+                p.De.PARTNER_BASE_URL +
+                "pricing/ajaxpublishproposal/" +
+                l +
+                "/" +
+                t,
+              d = new FormData();
+            d.append("sessionid", p.De.SESSIONID),
+              d.append("proposal_key", i.proposalKey);
+            let g = null;
+            try {
+              const o = yield s().post(u, d, {
+                withCredentials: !0,
+                cancelToken: null == e ? void 0 : e.token,
+                timeout: n,
+              });
+              if (
+                200 == (null == o ? void 0 : o.status) &&
+                1 ==
+                  (null === (a = o.data) || void 0 === a ? void 0 : a.success)
+              ) {
+                this.m_mapPriceProposals.delete(t);
+                for (const e of this.m_rgKnownPriceKeys)
+                  this.m_mapPackagePrice.get(t).set(e, i.prices[e]),
+                    this.GetPriceGridCellCallbackList(t, e).Dispatch(
+                      this.GetSavedPrice(t, e)
+                    );
+                return this.DispatchPriceOverridesCallbacks(), o.data;
+              }
+            } catch (t) {
+              g = t;
+            }
+            const m = (0, c.l)(g);
+            return (
+              console.error(
+                "CPackagePricingStore.PublishApprovedProposal: failed",
+                m.strErrorMsg,
+                m
+              ),
+              null !==
+                (r =
+                  null === (o = null == g ? void 0 : g.response) || void 0 === o
+                    ? void 0
+                    : o.data) && void 0 !== r
+                ? r
+                : { success: 2 }
+            );
+          });
+        }
+        CancelProposal(t, e) {
+          var n, a, o;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i = this.m_mapPriceProposals.get(t);
+            if (!(null == i ? void 0 : i.proposalKey)) return { success: 8 };
+            const r = (0, p.kQ)("publisherid", "application_config"),
+              l =
+                p.De.PARTNER_BASE_URL +
+                "pricing/ajaxcancelproposal/" +
+                r +
+                "/" +
+                t,
+              u = new FormData();
+            u.append("sessionid", p.De.SESSIONID),
+              u.append("proposal_key", i.proposalKey);
+            let d = null;
+            try {
+              const i = yield s().post(l, u, {
+                withCredentials: !0,
+                cancelToken: null == e ? void 0 : e.token,
+              });
+              if (
+                200 == (null == i ? void 0 : i.status) &&
+                1 ==
+                  (null === (n = i.data) || void 0 === n ? void 0 : n.success)
+              ) {
+                this.m_mapPriceProposals.delete(t);
+                for (const e of this.m_rgKnownPriceKeys)
+                  this.GetPriceGridCellCallbackList(t, e).Dispatch(
+                    this.GetSavedPrice(t, e)
+                  );
+                return this.DispatchPriceOverridesCallbacks(), i.data;
+              }
+            } catch (t) {
+              d = t;
+            }
+            const g = (0, c.l)(d);
+            return (
+              console.error(
+                "CPackagePricingStore.CancelProposal: failed",
+                g.strErrorMsg,
+                g
               ),
               null !==
                 (o =
@@ -6379,996 +2758,53 @@
             );
           });
         }
-        DeleteDiscountOnServer(e, t, i, r) {
-          var a, o, c;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n =
-                m.De.PARTNER_BASE_URL + "packages/removepackagediscount/" + t,
-              d = new FormData();
-            d.append("sessionid", m.De.SESSIONID),
-              d.append("discountid", e.toString());
-            let u = null;
-            try {
-              const o = yield s().post(n, d, {
-                withCredentials: !0,
-                cancelToken: null == r ? void 0 : r.token,
-              });
-              if (
-                200 == (null == o ? void 0 : o.status) &&
-                1 ==
-                  (null === (a = o.data) || void 0 === a ? void 0 : a.success)
-              )
-                return this.InternalDeleteDiscount(e, t, i), o.data;
-              u = { response: o };
-            } catch (e) {
-              u = e;
-            }
-            const p = (0, l.l)(u);
-            return (
-              console.error(
-                "CPackageDiscountStore.DeleteDiscountOnServer: failed",
-                p.strErrorMsg,
-                p
-              ),
-              null !==
-                (c =
-                  null === (o = null == u ? void 0 : u.response) || void 0 === o
-                    ? void 0
-                    : o.data) && void 0 !== c
-                ? c
-                : { success: 2 }
-            );
-          });
-        }
-        GetCallbackListForDiscount(e) {
-          return (
-            this.m_mapDiscountCallbackList.has(e) ||
-              this.m_mapDiscountCallbackList.set(e, new c.pB()),
-            this.m_mapDiscountCallbackList.get(e)
-          );
-        }
-        GetCallbackListForPackage(e) {
-          return (
-            this.m_mapPackageCallbackList.has(e) ||
-              this.m_mapPackageCallbackList.set(e, new c.pB()),
-            this.m_mapPackageCallbackList.get(e)
-          );
-        }
-        GetCallbackListForDiscountEvent(e) {
-          return (
-            this.m_mapDiscountEventCallbackList.has(e) ||
-              this.m_mapDiscountEventCallbackList.set(e, new c.pB()),
-            this.m_mapDiscountEventCallbackList.get(e)
-          );
-        }
-        GetGlobalCallbackList() {
-          return this.m_allDiscountCallbackList;
-        }
-        GetDiscountByID(e) {
-          return this.m_mapPackageDiscountsById.get(e);
-        }
-        GetAllDiscountsForPackage(e) {
-          var t, i;
-          return this.m_mapPackageDiscountsByPackageId.has(e)
-            ? Array.from(
-                null !==
-                  (i =
-                    null ===
-                      (t = this.m_mapPackageDiscountsByPackageId.get(e)) ||
-                    void 0 === t
-                      ? void 0
-                      : t.values()) && void 0 !== i
-                  ? i
-                  : []
-              )
-            : null;
-        }
-        GetAllDiscountsForAllPackages() {
-          return Array.from(this.m_mapPackageDiscountsById.values());
-        }
-        GetAllDiscountsForDiscountEvent(e) {
-          var t, i;
-          return Array.from(
-            null !==
-              (i =
-                null ===
-                  (t = this.m_mapPackageDiscountsByDiscountEventId.get(e)) ||
-                void 0 === t
-                  ? void 0
-                  : t.values()) && void 0 !== i
-              ? i
-              : []
-          );
-        }
-        GetMaxDiscountPercentage(e) {
-          var t;
-          return null !==
-            (t = this.m_mapMaxDiscountPercentageByPackageId.get(e)) &&
-            void 0 !== t
-            ? t
-            : 90;
-        }
-        GetMaxDiscountPercentageForGroup(e) {
-          const t = e.map((e) => this.GetMaxDiscountPercentage(e));
-          return Math.min(...t);
-        }
-      }
-      function _(e) {
-        return `custom-event-${e.rtStartDate}-${e.rtEndDate}-${(0, u.JD)(
-          e.strDiscountName
-        )}`;
-      }
-      function g(e) {
-        return e.startsWith("custom-event-");
-      }
-      function h(e) {
-        return p.Get().GetDiscountByID(e);
-      }
-      function v(e) {
-        return p.Get().GetAllDiscountsForDiscountEvent(e);
-      }
-      function D(e) {
-        return p.Get().GetAllDiscountsForPackage(e);
-      }
-      function y(e) {
-        return p.Get().GetCallbackListForPackage(e);
-      }
-      function S() {
-        return p.Get().GetAllDiscountsForAllPackages();
-      }
-      function b() {
-        return p.Get().GetGlobalCallbackList();
-      }
-      function f() {
-        return a.useCallback(
-          (e, t, i) => p.Get().LoadPackageDiscounts(e, t, i),
-          []
-        );
-      }
-      function E() {
-        const e = (e) => p.Get().SaveDiscountToServer(e),
-          t = (e, t, i) => p.Get().DeleteDiscountOnServer(e, t, i);
-        return a.useMemo(
-          () => ({ fnSaveDiscount: e, fnDeleteDiscount: t }),
-          []
-        );
-      }
-      function k(e) {
-        return new Map(
-          Array.from(e.map((e) => [e, p.Get().GetDiscountByID(e)]))
-        );
-      }
-      function G(e) {
-        const t = (0, o.zD)(),
-          [i, n] = a.useState(p.Get().GetAllDiscountsForPackage(e));
-        return (
-          (0, d.Qg)(p.Get().GetCallbackListForPackage(e), n),
-          a.useMemo(() => {
-            let e = null;
-            if (null == i) return { deepestDiscount: e, bLoading: !0 };
-            if ((null == i ? void 0 : i.length) > 0)
-              for (const n of i)
-                n.rtEndDate > t ||
-                  n.nDiscountPct <= 0 ||
-                  ((null == e ||
-                    n.nDiscountPct > e.nDiscountPct ||
-                    (n.nDiscountPct == e.nDiscountPct &&
-                      n.rtEndDate > e.rtEndDate)) &&
-                    (e = n));
-            return { deepestDiscount: e, bLoading: !1 };
-          }, [e, t, i])
-        );
-      }
-      function I(e) {
-        const t = (0, o.zD)(),
-          [i, n] = a.useState(p.Get().GetAllDiscountsForAllPackages());
-        return (
-          (0, d.Qg)(p.Get().GetGlobalCallbackList(), n),
-          a.useMemo(() => {
-            var n;
-            let r = null;
-            if (null == i) return { mostRecentDiscount: r, bLoading: !0 };
-            for (const i of e) {
-              const e =
-                null !== (n = p.Get().GetAllDiscountsForPackage(i)) &&
-                void 0 !== n
-                  ? n
-                  : [];
-              for (const i of e)
-                i.rtEndDate < t && (!r || r.rtEndDate < i.rtEndDate) && (r = i);
-            }
-            return { mostRecentDiscount: r, bLoading: !1 };
-          }, [t, e, i])
-        );
-      }
-      function P(e) {
-        const [t, i] = a.useState(p.Get().GetAllDiscountsForDiscountEvent(e));
-        return (0, d.Qg)(p.Get().GetCallbackListForDiscountEvent(e), i), t;
-      }
-      function w(e) {
-        return p.Get().GetMaxDiscountPercentage(e);
-      }
-      function R(e) {
-        return e.some(
-          (e) => e.nDiscountPct > p.Get().GetMaxDiscountPercentage(e.packageID)
-        );
-      }
-      function B(e) {
-        return p.Get().GetMaxDiscountPercentageForGroup(e);
-      }
-    },
-    19533: (e, t, i) => {
-      "use strict";
-      i.d(t, {
-        $D: () => g,
-        AM: () => _,
-        Gd: () => p,
-        MQ: () => c,
-        NR: () => u,
-        ew: () => o,
-        vB: () => m,
-        z: () => d,
-      });
-      var n = i(89526),
-        r = (i(42770), i(85246)),
-        s = i(4306),
-        a = i(32765);
-      const o = "pn";
-      class l {
-        constructor() {
-          (this.m_rgVisiblePackageIDs = []),
-            (this.m_visiblePackageIDsCallbackList = new r.pB()),
-            "dev" == a.De.WEB_UNIVERSE && (window.g_PackageGridStore = this);
-        }
-        static Get() {
-          return (
-            l.s_Singleton || ((l.s_Singleton = new l()), l.s_Singleton.Init()),
-            l.s_Singleton
-          );
-        }
-        Init() {
-          let e = (0, a.kQ)("package_data", "application_config");
-          e
-            ? ((this.m_rgPackageIDs = e.map((e) => e.packageid)),
-              (this.m_rgPackageData = e),
-              (this.m_mapPackageData = new Map(e.map((e) => [e.packageid, e]))))
-            : ((this.m_rgPackageIDs = (0, a.kQ)(
-                "package_ids",
-                "application_config"
-              )),
-              (this.m_mapPackageData = new Map())),
-            ("dev" != a.De.WEB_UNIVERSE && "beta" != a.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackageGridStore loading payload: ",
-                this.m_rgPackageIDs
-              ),
-            "dev" != a.De.WEB_UNIVERSE ||
-              Array.isArray(this.m_rgPackageIDs) ||
-              console.error("CPackageGridStore Invalid payload");
-        }
-        UpdatePackageNameSearchState(e) {
-          const t = e.getHeaderFilterValue("packageName"),
-            i = new URL(window.location.href);
-          t != decodeURIComponent(i.searchParams.get(o)) &&
-            (t
-              ? i.searchParams.set(o, encodeURIComponent(t))
-              : i.searchParams.delete(o),
-            window.history.replaceState({}, "", i.toString()));
-        }
-        UpdateVisiblePackageList(e) {
-          const t = e.getGroups("visible").filter((e) => e.isVisible());
-          (this.m_rgVisiblePackageIDs = []),
-            t.forEach((e) =>
-              e
-                .getRows()
-                .forEach((e) =>
-                  this.m_rgVisiblePackageIDs.push(e.getData().packageID)
-                )
-            ),
-            this.m_visiblePackageIDsCallbackList.Dispatch(
-              this.m_rgVisiblePackageIDs
-            ),
-            this.UpdatePackageNameSearchState(e);
-        }
-      }
-      function c() {
-        return l.Get().m_rgPackageIDs;
-      }
-      function d() {
-        return l.Get().m_rgPackageIDs;
-      }
-      function u() {
-        return l.Get().m_rgPackageData;
-      }
-      function m(e) {
-        let t = l.Get().m_mapPackageData.get(e);
-        return t ? t.package_name : e.toString();
-      }
-      function p() {
-        return n.useCallback((e) => l.Get().UpdateVisiblePackageList(e), []);
-      }
-      function _() {
-        const [e, t] = n.useState(l.Get().m_rgVisiblePackageIDs);
-        return (0, s.Qg)(l.Get().m_visiblePackageIDsCallbackList, t), e;
-      }
-      function g() {
-        return n.useMemo(
-          () => (0, a.kQ)("publisherid", "application_config"),
-          []
-        );
-      }
-    },
-    66104: (e, t, i) => {
-      "use strict";
-      i.d(t, {
-        $w: () => O,
-        AN: () => V,
-        FR: () => b,
-        HV: () => D,
-        HX: () => N,
-        OB: () => U,
-        OG: () => z,
-        Ol: () => G,
-        PP: () => E,
-        R2: () => L,
-        Rs: () => T,
-        Tj: () => f,
-        We: () => W,
-        X1: () => w,
-        _w: () => v,
-        bS: () => M,
-        dU: () => I,
-        df: () => x,
-        j_: () => q,
-        ju: () => B,
-        np: () => K,
-        on: () => A,
-        ps: () => R,
-        rX: () => P,
-        sN: () => X,
-        uT: () => j,
-        xm: () => Q,
-        yh: () => F,
-      });
-      var n = i(33940),
-        r = i(52868),
-        s = i.n(r),
-        a = i(89526),
-        o = i(50265),
-        l = (i(42770), i(63403), i(23217)),
-        c = i(85246),
-        d = i(4306),
-        u = i(81349),
-        m = i(32765),
-        p = i(19533),
-        _ = i(25125);
-      class g {
-        constructor() {
-          (this.m_mapPackagePrice = new Map()),
-            (this.m_setRecurringSubscriptions = new Set()),
-            (this.m_mapPriceProposals = new Map()),
-            (this.m_mapLocalPackagePriceOverrides = new Map()),
-            (this.m_mapPriceGridCellCallbackList = new Map()),
-            (this.m_allPriceOverridesCallbackList = new c.pB()),
-            (this.m_mapOverridesPerPriceKey = new Map()),
-            (this.m_mapCurrencyData = new Map()),
-            (this.m_mapPriceKeyDescriptions = new Map()),
-            (this.m_mapPriceGuidelines = new Map()),
-            (this.m_rgPriceLevels = []),
-            (this.m_mapMinPrices = new Map()),
-            (this.m_mapMinDiscountedPrices = new Map()),
-            (this.m_strDisplayPriceKey = "USD"),
-            (this.m_displayPriceKeyCallbackList = new c.pB()),
-            "dev" == m.De.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
-        }
-        static Get() {
-          return (
-            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
-            g.s_Singleton
-          );
-        }
-        Init() {
-          var e, t, i, n, r, s, a, o, l, c;
-          const d = new Set(),
-            p = (0, m.kQ)("base_prices", "application_config");
-          if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading base price payload: ",
-                p
-              ),
-            p)
-          )
-            if (this.BIsPricePayloadValid(p))
-              for (let e in p) {
-                const t = p[e],
-                  i = parseInt(e),
-                  n = new Map();
-                this.m_mapPackagePrice.set(i, n);
-                for (let e in t) d.add(e.toUpperCase()), n.set(e, t[e]);
-              }
-            else
-              "dev" == m.De.WEB_UNIVERSE &&
-                console.error("Invalid base price payload");
-          const _ = (0, m.kQ)("recurring_subs", "application_config");
-          if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading recurring subscriptions payload: ",
-                _
-              ),
-            _)
-          )
-            if (Array.isArray(_))
-              for (const e of _) this.m_setRecurringSubscriptions.add(e);
-            else
-              "dev" == m.De.WEB_UNIVERSE &&
-                console.error("Invalid recurring subscriptions payload");
-          const g = (0, m.kQ)("pending_proposals", "application_config");
-          if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
-                g
-              ),
-            g)
-          )
-            if (this.BIsPendingPricePayloadValid(g))
-              for (let e in g) {
-                const t = g[e],
-                  i = parseInt(e);
-                this.m_mapPriceProposals.set(i, t);
-              }
-            else
-              "dev" == m.De.WEB_UNIVERSE &&
-                console.error("Invalid pending price proposal payload");
-          const h = (0, m.kQ)("pricing_guidelines", "application_config");
-          if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading pricing guidelines payload: ",
-                h
-              ),
-            h)
-          )
-            if (this.BIsGuidelinesPayloadValid(h)) {
-              for (let e in h) {
-                const t = h[e],
-                  i = new Map(),
-                  n = 100 * parseInt(e.substring(3));
-                this.m_rgPriceLevels.push(n),
-                  this.m_mapPriceGuidelines.set(n, i);
-                for (let e in t)
-                  d.add(e.toUpperCase()),
-                    i.set(e.toUpperCase(), parseInt(t[e]));
-              }
-              this.m_rgPriceLevels.sort((e, t) => e - t);
-            } else
-              "dev" == m.De.WEB_UNIVERSE &&
-                console.error("Invalid pricing guidelines payload");
-          this.m_rgKnownPriceKeys = Array.from(d).sort((e, t) =>
-            (0, u.eT)(S(e), S(t))
-          );
-          for (const d of this.m_rgKnownPriceKeys) {
-            const u =
-                null !==
-                  (t =
-                    null === (e = this.m_mapPriceGuidelines.get(100)) ||
-                    void 0 === e
-                      ? void 0
-                      : e.get(d)) && void 0 !== t
-                  ? t
-                  : 0,
-              m =
-                null !==
-                  (n =
-                    null === (i = this.m_mapPriceGuidelines.get(200)) ||
-                    void 0 === i
-                      ? void 0
-                      : i.get(d)) && void 0 !== n
-                  ? n
-                  : 0,
-              p =
-                null !==
-                  (s =
-                    null === (r = this.m_mapPriceGuidelines.get(300)) ||
-                    void 0 === r
-                      ? void 0
-                      : r.get(d)) && void 0 !== s
-                  ? s
-                  : 0,
-              _ =
-                null !==
-                  (o =
-                    null === (a = this.m_mapPriceGuidelines.get(400)) ||
-                    void 0 === a
-                      ? void 0
-                      : a.get(d)) && void 0 !== o
-                  ? o
-                  : 0,
-              g =
-                null !==
-                  (c =
-                    null === (l = this.m_mapPriceGuidelines.get(500)) ||
-                    void 0 === l
-                      ? void 0
-                      : l.get(d)) && void 0 !== c
-                  ? c
-                  : 0;
-            this.m_mapMinPrices.set(d, Math.ceil(0.9 * u));
-            const h = Math.floor(Math.min(u / 2, m / 4, p / 6, _ / 8, g / 10));
-            this.m_mapMinDiscountedPrices.set(d, h);
-          }
-          const v = (0, m.kQ)("currency_data", "application_config");
-          if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading currency payload: ",
-                v
-              ),
-            v)
-          )
-            if (this.BIsCurrencyPayloadValid(v))
-              for (let e in v) {
-                const t = v[e];
-                this.m_mapCurrencyData.set(e, t);
-              }
-            else
-              "dev" == m.De.WEB_UNIVERSE &&
-                console.error("Invalid currency payload");
-          const D = (0, m.kQ)("currency_descriptions", "application_config");
-          if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading currency descriptions: ",
-                v
-              ),
-            D)
-          )
-            if (this.BIsCurrencyDescriptionPayloadValid(D))
-              for (let e in D) {
-                const t = D[e];
-                this.m_mapPriceKeyDescriptions.set(e, t);
-              }
-            else
-              "dev" == m.De.WEB_UNIVERSE &&
-                console.error("Invalid currency description payload");
-        }
-        BIsPricePayloadValid(e) {
-          const t = e;
-          if (!t || "object" != typeof t) return !1;
-          for (let e in t) {
-            if (isNaN(parseInt(e))) return !1;
-            const i = t[e];
-            if (!i || "object" != typeof i) return !1;
-            for (let e in i)
-              if ("string" != typeof e || "number" != typeof i[e]) return !1;
-          }
-          return !0;
-        }
-        BIsPendingPricePayloadValid(e) {
-          const t = e;
-          if (!t || "object" != typeof t) return !1;
-          for (let e in t) {
-            if (isNaN(parseInt(e))) return !1;
-            const i = t[e];
-            if (
-              !i ||
-              "object" != typeof i ||
-              i.packageID !== parseInt(e) ||
-              "object" != typeof i.prices
-            )
-              return !1;
-          }
-          return !0;
-        }
-        BIsGuidelinesPayloadValid(e) {
-          const t = e;
-          if (!t || "object" != typeof t) return !1;
-          for (let e in t) {
-            const i = t[e];
-            if (!i || "object" != typeof i) return !1;
-            for (let e in i)
-              if ("string" != typeof e || isNaN(parseInt(i[e]))) return !1;
-          }
-          return !0;
-        }
-        BIsCurrencyPayloadValid(e) {
-          const t = e;
-          if (!t || "object" != typeof t) return !1;
-          for (let e in t) {
-            const i = t[e];
-            if (!i || "object" != typeof i || i.strCode != e) return !1;
-          }
-          return !0;
-        }
-        BIsCurrencyDescriptionPayloadValid(e) {
-          const t = e;
-          if (!t || "object" != typeof t) return !1;
-          for (let e in t) {
-            const i = t[e];
-            if (
-              !i ||
-              "object" != typeof i ||
-              void 0 === i.bRequired ||
-              void 0 === i.strDescription
-            )
-              return !1;
-          }
-          return !0;
-        }
-        BPriceKeyRequired(e) {
-          var t, i;
-          return (
-            null !==
-              (i =
-                null === (t = this.m_mapPriceKeyDescriptions.get(e)) ||
-                void 0 === t
-                  ? void 0
-                  : t.bRequired) &&
-            void 0 !== i &&
-            i
-          );
-        }
-        GetPublishedPrice(e, t) {
-          var i;
-          return null === (i = this.m_mapPackagePrice.get(e)) || void 0 === i
-            ? void 0
-            : i.get(t);
-        }
-        GetProposedPrice(e, t) {
-          var i;
-          return null === (i = this.m_mapPriceProposals.get(e)) || void 0 === i
-            ? void 0
-            : i.prices[t];
-        }
-        GetSavedPrice(e, t) {
-          var i;
-          return null !== (i = this.GetProposedPrice(e, t)) && void 0 !== i
-            ? i
-            : this.GetPublishedPrice(e, t);
-        }
-        GetPrice(e, t) {
-          var i, n;
-          return null !==
-            (n =
-              null === (i = this.m_mapLocalPackagePriceOverrides.get(e)) ||
-              void 0 === i
-                ? void 0
-                : i.get(t)) && void 0 !== n
-            ? n
-            : this.GetSavedPrice(e, t);
-        }
-        GetPriceGridCellCallbackList(e, t) {
-          if (!e || !t) return null;
-          this.m_mapPriceGridCellCallbackList.has(e) ||
-            this.m_mapPriceGridCellCallbackList.set(e, new Map());
-          const i = this.m_mapPriceGridCellCallbackList.get(e);
-          return i.has(t) || i.set(t, new c.pB()), i.get(t);
-        }
-        OverridePrice(e, t, i) {
-          i != this.GetPrice(e, t) &&
-            (this.m_mapLocalPackagePriceOverrides.has(e) ||
-              this.m_mapLocalPackagePriceOverrides.set(e, new Map()),
-            i == this.GetSavedPrice(e, t)
-              ? this.m_mapLocalPackagePriceOverrides.get(e).delete(t)
-              : this.m_mapLocalPackagePriceOverrides.get(e).set(t, i),
-            this.GetPriceGridCellCallbackList(e, t).Dispatch(i),
-            this.DispatchPriceOverridesCallbacks());
-        }
-        DispatchPriceOverridesCallbacks() {
-          this.m_allPriceOverridesCallbackList.Dispatch(
-            this.GetAllLocalPriceOverrides()
-          ),
-            this.UpdateOverridesPerPriceKey();
-        }
-        BHasLocalPriceOverrides(e) {
-          var t;
-          return (
-            (null === (t = this.m_mapLocalPackagePriceOverrides.get(e)) ||
-            void 0 === t
-              ? void 0
-              : t.size) > 0
-          );
-        }
-        GetAllLocalPriceOverrides() {
-          const e = [];
-          return (
-            this.m_mapLocalPackagePriceOverrides.forEach((t, i) =>
-              t.forEach((t, n) => {
-                const r = this.GetSavedPrice(i, n);
-                e.push({
-                  packageID: i,
-                  strPriceKey: n,
-                  nPriceInCents: t,
-                  nOldPriceInCents: r,
-                });
-              })
-            ),
-            e.sort(h),
-            e
-          );
-        }
-        BHasLocalPriceOverride(e, t) {
-          let i = this.m_mapLocalPackagePriceOverrides.get(e);
-          return !!i && i.has(t);
-        }
-        UpdateOverridesPerPriceKey() {
-          this.m_mapOverridesPerPriceKey.clear(),
-            this.m_mapLocalPackagePriceOverrides.forEach((e, t) => {
-              e.forEach((e, t) => {
-                let i = this.m_mapOverridesPerPriceKey.get(t);
-                i || (i = 0), i++, this.m_mapOverridesPerPriceKey.set(t, i);
-              });
-            });
-        }
-        DiscardAllLocalPriceOverrides() {
-          const e = this.GetAllLocalPriceOverrides();
-          this.m_mapLocalPackagePriceOverrides.clear();
-          for (const t of e) {
-            const { packageID: e, strPriceKey: i } = t;
-            this.GetPriceGridCellCallbackList(e, i).Dispatch(
-              this.GetPrice(e, i)
-            );
-          }
-          this.DispatchPriceOverridesCallbacks();
-        }
-        DiscardAllLocalPriceOverridesForKey(e) {
-          let t = !1;
-          this.m_mapLocalPackagePriceOverrides.forEach((i, n) => {
-            this.m_mapPriceKeyDescriptions.has(e) &&
-              ((t = !0),
-              this.m_mapLocalPackagePriceOverrides.get(n).delete(e),
-              this.GetPriceGridCellCallbackList(n, e).Dispatch(
-                this.GetPrice(n, e)
-              ));
-          }),
-            t && this.DispatchPriceOverridesCallbacks();
-        }
-        DiscardLocalPriceOverridesForPackage(e) {
-          var t;
-          null === (t = this.m_mapLocalPackagePriceOverrides.get(e)) ||
-            void 0 === t ||
-            t.forEach((t, i) => {
-              this.GetPriceGridCellCallbackList(e, i).Dispatch(
-                this.GetSavedPrice(e, i)
-              );
-            }),
-            this.m_mapLocalPackagePriceOverrides.delete(e),
-            this.DispatchPriceOverridesCallbacks();
-        }
-        BuildNewPricingProposal(e, t) {
-          const i = {
-            packageID: e,
-            rtSubmitted: Math.floor(Date.now() / 1e3),
-            submitterID: m.L7.accountid,
-            prices: {},
-            eState: 1,
-            bPartnerWillPublish: t,
-          };
-          for (const t of this.m_rgKnownPriceKeys)
-            i.prices[t] = this.GetPrice(e, t);
-          return i;
-        }
-        SubmitProposalToServer(e, t, i) {
-          var r, a, o;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = this.BuildNewPricingProposal(e, t),
-              c = JSON.stringify(n.prices),
-              d = (0, m.kQ)("publisherid", "application_config"),
-              u =
-                m.De.PARTNER_BASE_URL +
-                "pricing/ajaxsubmitproposal/" +
-                d +
-                "/" +
-                e,
-              p = new FormData();
-            p.append("sessionid", m.De.SESSIONID),
-              p.append("partner_will_publish", t ? "1" : "0"),
-              p.append("prices", c);
-            let _ = null;
-            try {
-              const t = yield s().post(u, p, {
-                withCredentials: !0,
-                cancelToken: null == i ? void 0 : i.token,
-              });
-              if (
-                200 == (null == t ? void 0 : t.status) &&
-                1 ==
-                  (null === (r = t.data) || void 0 === r
-                    ? void 0
-                    : r.success) &&
-                0 != t.data.eState
-              ) {
-                if (3 == t.data.eState) {
-                  this.m_mapPriceProposals.delete(e);
-                  for (const t of this.m_rgKnownPriceKeys)
-                    this.m_mapPackagePrice.get(e).set(t, n.prices[t]);
-                } else
-                  (n.eState = t.data.eState),
-                    (n.proposalKey = t.data.proposalKey),
-                    this.m_mapPriceProposals.set(e, n);
-                return this.DiscardLocalPriceOverridesForPackage(e), t.data;
-              }
-            } catch (e) {
-              _ = e;
-            }
-            const g = (0, l.l)(_);
-            return (
-              console.error(
-                "CPackagePricingStore.SubmitProposalToServer: failed",
-                g.strErrorMsg,
-                g
-              ),
-              null !==
-                (o =
-                  null === (a = null == _ ? void 0 : _.response) || void 0 === a
-                    ? void 0
-                    : a.data) && void 0 !== o
-                ? o
-                : { success: 2 }
-            );
-          });
-        }
-        PublishApprovedProposal(e, t, i = 0) {
-          var r, a, o;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = this.m_mapPriceProposals.get(e);
-            if (
-              4 != (null == n ? void 0 : n.eState) ||
-              !(null == n ? void 0 : n.proposalKey)
-            )
-              return { success: 8 };
-            const c = (0, m.kQ)("publisherid", "application_config"),
-              d =
-                m.De.PARTNER_BASE_URL +
-                "pricing/ajaxpublishproposal/" +
-                c +
-                "/" +
-                e,
-              u = new FormData();
-            u.append("sessionid", m.De.SESSIONID),
-              u.append("proposal_key", n.proposalKey);
-            let p = null;
-            try {
-              const a = yield s().post(d, u, {
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-                timeout: i,
-              });
-              if (
-                200 == (null == a ? void 0 : a.status) &&
-                1 ==
-                  (null === (r = a.data) || void 0 === r ? void 0 : r.success)
-              ) {
-                this.m_mapPriceProposals.delete(e);
-                for (const t of this.m_rgKnownPriceKeys)
-                  this.m_mapPackagePrice.get(e).set(t, n.prices[t]),
-                    this.GetPriceGridCellCallbackList(e, t).Dispatch(
-                      this.GetSavedPrice(e, t)
-                    );
-                return this.DispatchPriceOverridesCallbacks(), a.data;
-              }
-            } catch (e) {
-              p = e;
-            }
-            const _ = (0, l.l)(p);
-            return (
-              console.error(
-                "CPackagePricingStore.PublishApprovedProposal: failed",
-                _.strErrorMsg,
-                _
-              ),
-              null !==
-                (o =
-                  null === (a = null == p ? void 0 : p.response) || void 0 === a
-                    ? void 0
-                    : a.data) && void 0 !== o
-                ? o
-                : { success: 2 }
-            );
-          });
-        }
-        CancelProposal(e, t) {
-          var i, r, a;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = this.m_mapPriceProposals.get(e);
-            if (!(null == n ? void 0 : n.proposalKey)) return { success: 8 };
-            const o = (0, m.kQ)("publisherid", "application_config"),
-              c =
-                m.De.PARTNER_BASE_URL +
-                "pricing/ajaxcancelproposal/" +
-                o +
-                "/" +
-                e,
-              d = new FormData();
-            d.append("sessionid", m.De.SESSIONID),
-              d.append("proposal_key", n.proposalKey);
-            let u = null;
-            try {
-              const n = yield s().post(c, d, {
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-              });
-              if (
-                200 == (null == n ? void 0 : n.status) &&
-                1 ==
-                  (null === (i = n.data) || void 0 === i ? void 0 : i.success)
-              ) {
-                this.m_mapPriceProposals.delete(e);
-                for (const t of this.m_rgKnownPriceKeys)
-                  this.GetPriceGridCellCallbackList(e, t).Dispatch(
-                    this.GetSavedPrice(e, t)
-                  );
-                return this.DispatchPriceOverridesCallbacks(), n.data;
-              }
-            } catch (e) {
-              u = e;
-            }
-            const p = (0, l.l)(u);
-            return (
-              console.error(
-                "CPackagePricingStore.CancelProposal: failed",
-                p.strErrorMsg,
-                p
-              ),
-              null !==
-                (a =
-                  null === (r = null == u ? void 0 : u.response) || void 0 === r
-                    ? void 0
-                    : r.data) && void 0 !== a
-                ? a
-                : { success: 2 }
-            );
-          });
-        }
-        GetLocalOverrideCountForPriceKey(e) {
-          var t;
-          return null !== (t = this.m_mapOverridesPerPriceKey.get(e)) &&
-            void 0 !== t
-            ? t
+        GetLocalOverrideCountForPriceKey(t) {
+          var e;
+          return null !== (e = this.m_mapOverridesPerPriceKey.get(t)) &&
+            void 0 !== e
+            ? e
             : 0;
         }
       }
-      function h(e, t) {
-        if (e.strPriceKey == t.strPriceKey) {
-          const i = (0, p.vB)(e.packageID),
-            n = (0, p.vB)(t.packageID);
-          return (0, u.eT)(i, n);
+      function h(t, e) {
+        if (t.strPriceKey == e.strPriceKey) {
+          const n = (0, g.vB)(t.packageID),
+            i = (0, g.vB)(e.packageID);
+          return (0, d.eT)(n, i);
         }
-        return (0, u.eT)(S(e.strPriceKey), S(t.strPriceKey));
+        return (0, d.eT)(P(t.strPriceKey), P(e.strPriceKey));
       }
-      function v(e) {
-        const t = e.split("_")[0];
-        return g.Get().m_mapCurrencyData.get(t);
+      function D(t) {
+        const e = t.split("_")[0];
+        return v.Get().m_mapCurrencyData.get(e);
       }
-      function D(e, t) {
-        var i;
-        if (void 0 === t) return ["", "", ""];
-        const n = null !== (i = v(t)) && void 0 !== i ? i : v("USD");
-        let r = "";
-        if ("number" == typeof e) {
-          let t = e.toString();
-          t.length < 3 && (t = (1 == t.length ? "0" : "") + "0" + t);
-          const i = t.length - 2;
-          for (let e = 0; e < i; e++) {
-            const s = t.charAt(e);
-            (r += s),
-              e < i - 1 &&
-                (i - e - 1) % 3 == 0 &&
+      function _(t, e) {
+        var n;
+        if (void 0 === e) return ["", "", ""];
+        const i = null !== (n = D(e)) && void 0 !== n ? n : D("USD");
+        let a = "";
+        if ("number" == typeof t) {
+          let e = t.toString();
+          e.length < 3 && (e = (1 == e.length ? "0" : "") + "0" + e);
+          const n = e.length - 2;
+          for (let t = 0; t < n; t++) {
+            const s = e.charAt(t);
+            (a += s),
+              t < n - 1 &&
+                (n - t - 1) % 3 == 0 &&
                 "-" != s &&
-                (r += n.strThousandsSeparator);
+                (a += i.strThousandsSeparator);
           }
-          n.bWholeUnitsOnly ||
-            ((r += n.strDecimalSymbol), (r += t.substr(t.length - 2)));
+          i.bWholeUnitsOnly ||
+            ((a += i.strDecimalSymbol), (a += e.substr(e.length - 2)));
         }
-        return n.bSymbolIsPrefix
-          ? [n.strSymbol + n.strSymbolAndNumberSeparator, r, ""]
-          : ["", r, n.strSymbolAndNumberSeparator + n.strSymbol];
+        return i.bSymbolIsPrefix
+          ? [i.strSymbol + i.strSymbolAndNumberSeparator, a, ""]
+          : ["", a, i.strSymbolAndNumberSeparator + i.strSymbol];
       }
-      (0, n.gn)([o.LO], g.prototype, "m_mapOverridesPerPriceKey", void 0),
-        (0, n.gn)([o.aD], g.prototype, "UpdateOverridesPerPriceKey", null);
-      const y = new Map([
+      (0, i.gn)([r.LO], v.prototype, "m_mapOverridesPerPriceKey", void 0),
+        (0, i.gn)([r.aD], v.prototype, "UpdateOverridesPerPriceKey", null);
+      const f = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
         ["EUR", "@3"],
@@ -7379,1024 +2815,1029 @@
         ["KRW", "@8"],
         ["RUB", "@9"],
       ]);
-      function S(e) {
-        return y.has(e) ? y.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
+      function P(t) {
+        return f.has(t) ? f.get(t) : t.indexOf("_") > 0 ? "ZZZ" + t : t;
       }
-      function b(e, t) {
-        return g.Get().GetPrice(e, t);
+      function E(t, e) {
+        return v.Get().GetPrice(t, e);
       }
-      function f(e) {
-        const t = g.Get().m_strDisplayPriceKey;
-        return D(g.Get().GetPrice(e, t), t).join("");
+      function k(t) {
+        const e = v.Get().m_strDisplayPriceKey;
+        return _(v.Get().GetPrice(t, e), e).join("");
       }
-      function E(e) {
-        const [t, i] = a.useState(g.Get().m_strDisplayPriceKey);
+      function I(t) {
+        const [e, n] = o.useState(v.Get().m_strDisplayPriceKey);
         return (
-          (0, d.Qg)(g.Get().m_displayPriceKeyCallbackList, i),
-          (function (e, t) {
-            const [i, n] = a.useState(g.Get().GetPrice(e, t));
+          (0, u.Qg)(v.Get().m_displayPriceKeyCallbackList, n),
+          (function (t, e) {
+            const [n, i] = o.useState(v.Get().GetPrice(t, e));
             return (
-              (0, d.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), n),
-              a.useEffect(() => n(g.Get().GetPrice(e, t)), [e, t]),
-              D(i, t).join("")
+              (0, u.Qg)(v.Get().GetPriceGridCellCallbackList(t, e), i),
+              o.useEffect(() => i(v.Get().GetPrice(t, e)), [t, e]),
+              _(n, e).join("")
             );
-          })(e, t)
+          })(t, e)
         );
       }
-      function k(e, t) {
-        const i = g.Get().GetPrice(e, "USD");
-        let n = null;
-        for (let e of g.Get().m_rgPriceLevels)
-          if (e > i) {
-            n = e;
+      function G(t, e) {
+        const n = v.Get().GetPrice(t, "USD");
+        let i = null;
+        for (let t of v.Get().m_rgPriceLevels)
+          if (t > n) {
+            i = t;
             break;
           }
-        if ("USD" == t || !n)
+        if ("USD" == e || !i)
           return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
-        let r = g.Get().m_mapPriceGuidelines.get(n).get(t);
-        const s = g.Get().m_mapPriceGuidelines.get(n).get("USD");
-        if (s != i) {
-          const e = i / s;
-          (n *= e), (r = Math.ceil(r * e));
+        let a = v.Get().m_mapPriceGuidelines.get(i).get(e);
+        const s = v.Get().m_mapPriceGuidelines.get(i).get("USD");
+        if (s != n) {
+          const t = n / s;
+          (i *= t), (a = Math.ceil(a * t));
         }
-        return { nSuggestedPriceInCents: r, nGuidelinesLevel: n };
+        return { nSuggestedPriceInCents: a, nGuidelinesLevel: i };
       }
-      function G() {
-        const e = (0, p.AM)();
-        return a.useCallback(
+      function S() {
+        const t = (0, g.AM)();
+        return o.useCallback(
           () =>
-            (function (e) {
-              for (const t of e)
-                for (const e of g.Get().m_rgKnownPriceKeys) {
-                  if ("USD" == e) continue;
-                  const { nSuggestedPriceInCents: i, nGuidelinesLevel: n } = k(
-                    t,
-                    e
+            (function (t) {
+              for (const e of t)
+                for (const t of v.Get().m_rgKnownPriceKeys) {
+                  if ("USD" == t) continue;
+                  const { nSuggestedPriceInCents: n, nGuidelinesLevel: i } = G(
+                    e,
+                    t
                   );
-                  g.Get().OverridePrice(t, e, i);
+                  v.Get().OverridePrice(e, t, n);
                 }
-            })(e),
-          [e]
+            })(t),
+          [t]
         );
       }
-      function I(e, t) {
-        var i;
-        const n = (0, d.NW)();
-        (0, d.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), n);
-        const r = g.Get().GetPrice(e, t);
-        (0, d.Qg)(g.Get().GetPriceGridCellCallbackList(e, "USD"), n);
-        const { nSuggestedPriceInCents: s, nGuidelinesLevel: o } = k(e, t),
-          l = a.useCallback((i) => g.Get().OverridePrice(e, t, i), [e, t]),
-          c = g.Get().GetPublishedPrice(e, t),
-          u = g.Get().GetProposedPrice(e, t),
-          { nMinPriceInCents: m, nMaxPriceInCents: p } = P(e, t),
-          _ =
-            null !== (i = g.Get().m_mapMinDiscountedPrices.get(t)) &&
-            void 0 !== i
-              ? i
+      function b(t, e) {
+        var n;
+        const i = (0, u.NW)();
+        (0, u.Qg)(v.Get().GetPriceGridCellCallbackList(t, e), i);
+        const a = v.Get().GetPrice(t, e);
+        (0, u.Qg)(v.Get().GetPriceGridCellCallbackList(t, "USD"), i);
+        const { nSuggestedPriceInCents: s, nGuidelinesLevel: r } = G(t, e),
+          c = o.useCallback((n) => v.Get().OverridePrice(t, e, n), [t, e]),
+          l = v.Get().GetPublishedPrice(t, e),
+          d = v.Get().GetProposedPrice(t, e),
+          { nMinPriceInCents: p, nMaxPriceInCents: g } = C(t, e),
+          m =
+            null !== (n = v.Get().m_mapMinDiscountedPrices.get(e)) &&
+            void 0 !== n
+              ? n
               : 0,
-          h = r ? Math.floor((100 * (r - _)) / r) : 90,
-          v = h < Math.min(90, Math.floor((100 * (o - 50)) / o)) ? h : null;
-        return a.useMemo(
+          h = a ? Math.floor((100 * (a - m)) / a) : 90,
+          D = h < Math.min(90, Math.floor((100 * (r - 50)) / r)) ? h : null;
+        return o.useMemo(
           () => ({
-            nPriceInCents: r,
-            nProposedPriceInCents: u,
-            nPublishedPriceInCents: c,
-            nMinPriceInCents: m,
-            nMaxPriceInCents: p,
-            nMaxDiscountPercentage: v,
+            nPriceInCents: a,
+            nProposedPriceInCents: d,
+            nPublishedPriceInCents: l,
+            nMinPriceInCents: p,
+            nMaxPriceInCents: g,
+            nMaxDiscountPercentage: D,
             nSuggestedPriceInCents: s,
-            fnSetPrice: l,
+            fnSetPrice: c,
           }),
-          [r, u, c, m, p, v, s, l]
+          [a, d, l, p, g, D, s, c]
         );
       }
-      function P(e, t) {
-        var i;
+      function C(t, e) {
+        var n;
         return {
           nMinPriceInCents:
-            null !== (i = g.Get().m_mapMinPrices.get(t)) && void 0 !== i
-              ? i
+            null !== (n = v.Get().m_mapMinPrices.get(e)) && void 0 !== n
+              ? n
               : 0,
-          nMaxPriceInCents: g.Get().m_setRecurringSubscriptions.has(e)
-            ? g.Get().GetPublishedPrice(e, t)
+          nMaxPriceInCents: v.Get().m_setRecurringSubscriptions.has(t)
+            ? v.Get().GetPublishedPrice(t, e)
             : null,
         };
       }
-      function w() {
-        return a.useCallback((e, t, i) => {
-          const n = g.Get().GetPrice(e, t);
+      function y() {
+        return o.useCallback((t, e, n) => {
+          const i = v.Get().GetPrice(t, e);
           return (
-            g.Get().OverridePrice(e, t, i),
-            n == i
+            v.Get().OverridePrice(t, e, n),
+            i == n
               ? null
               : {
-                  packageID: e,
-                  strPriceKey: t,
-                  nPriceInCents: i,
-                  nOldPriceInCents: n,
+                  packageID: t,
+                  strPriceKey: e,
+                  nPriceInCents: n,
+                  nOldPriceInCents: i,
                 }
           );
         }, []);
       }
-      function R(e) {
-        return g.Get().m_mapPriceProposals.get(e);
+      function L(t) {
+        return v.Get().m_mapPriceProposals.get(t);
       }
-      function B(e) {
-        return g.Get().m_mapPriceProposals.get(e);
+      function R(t) {
+        return v.Get().m_mapPriceProposals.get(t);
       }
-      function C(e) {
-        let t = !1;
-        for (const i of g.Get().m_rgKnownPriceKeys) {
-          let n = g.Get().GetPublishedPrice(e, i);
-          t = t || (0 != n && void 0 !== n);
+      function A(t) {
+        let e = !1;
+        for (const n of v.Get().m_rgKnownPriceKeys) {
+          let i = v.Get().GetPublishedPrice(t, n);
+          e = e || (0 != i && void 0 !== i);
         }
-        return t;
+        return e;
       }
-      function O(e) {
-        const t = R(e),
-          i = [];
-        for (const n of g.Get().m_rgKnownPriceKeys) {
-          const r = t.prices[n],
-            s = g.Get().GetPublishedPrice(e, n);
-          r != s &&
-            i.push({
-              packageID: e,
-              strPriceKey: n,
-              nPriceInCents: r,
+      function w(t) {
+        const e = L(t),
+          n = [];
+        for (const i of v.Get().m_rgKnownPriceKeys) {
+          const a = e.prices[i],
+            s = v.Get().GetPublishedPrice(t, i);
+          a != s &&
+            n.push({
+              packageID: t,
+              strPriceKey: i,
+              nPriceInCents: a,
               nOldPriceInCents: s,
             });
         }
-        return i;
+        return n;
       }
-      function A() {
-        return g.Get().m_rgKnownPriceKeys;
+      function B() {
+        return v.Get().m_rgKnownPriceKeys;
       }
-      function L(e) {
-        let t = g.Get().m_mapPriceKeyDescriptions.get(e);
-        return t ? t.strDescription : "";
+      function O(t) {
+        let e = v.Get().m_mapPriceKeyDescriptions.get(t);
+        return e ? e.strDescription : "";
       }
-      function F(e) {
-        return a.useCallback(() => {
-          g.Get().DiscardAllLocalPriceOverridesForKey(e);
-        }, [e]);
+      function N(t) {
+        return o.useCallback(() => {
+          v.Get().DiscardAllLocalPriceOverridesForKey(t);
+        }, [t]);
       }
-      function M(e) {
-        return a.useCallback(() => {
-          g.Get().DiscardLocalPriceOverridesForPackage(e);
-        }, [e]);
+      function M(t) {
+        return o.useCallback(() => {
+          v.Get().DiscardLocalPriceOverridesForPackage(t);
+        }, [t]);
       }
-      function T(e) {
-        return a.useCallback(() => {
-          g.Get().CancelProposal(e);
-        }, [e]);
+      function U(t) {
+        return o.useCallback(() => {
+          v.Get().CancelProposal(t);
+        }, [t]);
       }
-      function U() {
-        const [e, t] = a.useState(g.Get().m_strDisplayPriceKey),
-          i = g.Get().m_rgKnownPriceKeys,
-          n = a.useCallback((e) => {
-            t(e),
-              (g.Get().m_strDisplayPriceKey = e),
-              g.Get().m_displayPriceKeyCallbackList.Dispatch(e);
+      function F() {
+        const [t, e] = o.useState(v.Get().m_strDisplayPriceKey),
+          n = v.Get().m_rgKnownPriceKeys,
+          i = o.useCallback((t) => {
+            e(t),
+              (v.Get().m_strDisplayPriceKey = t),
+              v.Get().m_displayPriceKeyCallbackList.Dispatch(t);
           }, []);
-        return { strPriceKey: e, rgSupportedPriceKeys: i, fnSetPriceKey: n };
+        return { strPriceKey: t, rgSupportedPriceKeys: n, fnSetPriceKey: i };
       }
-      function x(e) {
-        const t = (0, d.NW)();
+      function V(t) {
+        const e = (0, u.NW)();
         return (
-          (0, d.Qg)(g.Get().m_allPriceOverridesCallbackList, t),
-          g.Get().BHasLocalPriceOverrides(e)
+          (0, u.Qg)(v.Get().m_allPriceOverridesCallbackList, e),
+          v.Get().BHasLocalPriceOverrides(t)
         );
       }
-      function N(e) {
-        return g.Get().BHasLocalPriceOverrides(e);
+      function T(t) {
+        return v.Get().BHasLocalPriceOverrides(t);
       }
-      function z() {
-        const [e, t] = a.useState(() => g.Get().GetAllLocalPriceOverrides());
-        return (0, d.Qg)(g.Get().m_allPriceOverridesCallbackList, t), e;
+      function x() {
+        const [t, e] = o.useState(() => v.Get().GetAllLocalPriceOverrides());
+        return (0, u.Qg)(v.Get().m_allPriceOverridesCallbackList, e), t;
       }
-      function j(e) {
-        return (0, _.SZ)(() => g.Get().GetLocalOverrideCountForPriceKey(e));
+      function K(t) {
+        return (0, m.SZ)(() => v.Get().GetLocalOverrideCountForPriceKey(t));
       }
-      function W() {
-        return a.useCallback(() => {
-          var e;
+      function j() {
+        return o.useCallback(() => {
+          var t;
           return (
-            (null === (e = g.Get().GetAllLocalPriceOverrides()) || void 0 === e
+            (null === (t = v.Get().GetAllLocalPriceOverrides()) || void 0 === t
               ? void 0
-              : e.length) > 0
+              : t.length) > 0
           );
         }, []);
       }
-      function q() {
-        return a.useCallback(() => g.Get().DiscardAllLocalPriceOverrides(), []);
+      function W() {
+        return o.useCallback(() => v.Get().DiscardAllLocalPriceOverrides(), []);
       }
-      function V() {
-        const e = [],
-          t = a.useRef(new Map());
-        g.Get().m_mapPriceGuidelines.forEach((i, n) => {
-          const r = i.get("USD");
-          e.push(r), t.current.set(r, n);
+      function Q() {
+        const t = [],
+          e = o.useRef(new Map());
+        v.Get().m_mapPriceGuidelines.forEach((n, i) => {
+          const a = n.get("USD");
+          t.push(a), e.current.set(a, i);
         }),
-          e.sort((e, t) => e - t);
-        const i = a.useCallback((e, i) => {
-          const n = t.current.get(i);
-          g.Get()
-            .m_mapPriceGuidelines.get(n)
-            .forEach((t, i) => g.Get().OverridePrice(e, i, t));
+          t.sort((t, e) => t - e);
+        const n = o.useCallback((t, n) => {
+          const i = e.current.get(n);
+          v.Get()
+            .m_mapPriceGuidelines.get(i)
+            .forEach((e, n) => v.Get().OverridePrice(t, n, e));
         }, []);
-        return { rgUSDPricesInCents: e, fnApplyGuidelines: i };
+        return { rgUSDPricesInCents: t, fnApplyGuidelines: n };
       }
-      function X() {
-        return a.useCallback(
-          (e, t, i) => g.Get().SubmitProposalToServer(e, t, i),
+      function H() {
+        return o.useCallback(
+          (t, e, n) => v.Get().SubmitProposalToServer(t, e, n),
           []
         );
       }
-      function K() {
-        return a.useCallback(
-          (e, t) => g.Get().PublishApprovedProposal(e, t, 6e4),
+      function q() {
+        return o.useCallback(
+          (t, e) => v.Get().PublishApprovedProposal(t, e, 6e4),
           []
         );
       }
-      function Q(e) {
-        let t = [];
-        const i = g.Get().m_rgKnownPriceKeys;
-        for (let n of e) {
-          if (C(n)) continue;
-          let e = !1;
-          for (const t of i) {
-            if (!g.Get().BPriceKeyRequired(t)) continue;
-            if (!g.Get().GetPrice(n, t)) {
-              e = !0;
+      function z(t) {
+        let e = [];
+        const n = v.Get().m_rgKnownPriceKeys;
+        for (let i of t) {
+          if (A(i)) continue;
+          let t = !1;
+          for (const e of n) {
+            if (!v.Get().BPriceKeyRequired(e)) continue;
+            if (!v.Get().GetPrice(i, e)) {
+              t = !0;
               break;
             }
           }
-          e && t.push(n);
+          t && e.push(i);
         }
-        return t;
+        return e;
       }
     },
-    16169: (e, t, i) => {
+    16169: (t, e, n) => {
       "use strict";
-      i.d(t, {
-        B6: () => B,
-        E5: () => U,
+      n.d(e, {
+        B6: () => R,
+        E5: () => F,
         E_: () => M,
-        Eh: () => S,
-        HU: () => L,
-        JW: () => T,
-        LX: () => b,
-        TB: () => A,
-        _9: () => C,
-        dy: () => N,
-        hr: () => w,
-        k: () => z,
-        pl: () => R,
-        s$: () => O,
-        yn: () => F,
-        z$: () => j,
+        Eh: () => P,
+        HU: () => O,
+        JW: () => U,
+        LX: () => E,
+        TB: () => B,
+        _9: () => A,
+        dy: () => T,
+        hr: () => y,
+        k: () => x,
+        pl: () => L,
+        s$: () => w,
+        yn: () => N,
+        z$: () => K,
       });
-      i(86121);
-      var n = i(65395),
-        r = i(16586),
-        s = i(36998),
-        a = i(19533),
-        o = i(2220),
-        l = i(7164),
-        c = i(89526),
-        d = (i(42770), i(85651)),
-        u = (i(74429), i(57858)),
-        m = (i(701), i(85246)),
-        p = i(4306),
-        _ = i(81349),
-        g = i(25508),
-        h = i(32765),
-        v = i(86873);
-      function D(e, t) {
-        var i, n;
+      var i = n(65395),
+        a = n(16586),
+        s = n(36998),
+        o = n(19533),
+        r = n(2220),
+        c = n(7164),
+        l = n(89526),
+        u = n(85651),
+        d = n(57858),
+        p = n(85246),
+        g = n(4306),
+        m = n(81349),
+        v = n(25508),
+        h = n(32765),
+        D = n(86873);
+      function _(t, e) {
+        var n, i;
         return (
-          !!e == !!t &&
-          (null == e ? void 0 : e.packageID) ==
-            (null == t ? void 0 : t.packageID) &&
-          (null == e ? void 0 : e.discountEventID) ==
-            (null == t ? void 0 : t.discountEventID) &&
-          (null == e ? void 0 : e.eState) == (null == t ? void 0 : t.eState) &&
-          (null === (i = null == e ? void 0 : e.rgConflictDetails) ||
-          void 0 === i
+          !!t == !!e &&
+          (null == t ? void 0 : t.packageID) ==
+            (null == e ? void 0 : e.packageID) &&
+          (null == t ? void 0 : t.discountEventID) ==
+            (null == e ? void 0 : e.discountEventID) &&
+          (null == t ? void 0 : t.eState) == (null == e ? void 0 : e.eState) &&
+          (null === (n = null == t ? void 0 : t.rgConflictDetails) ||
+          void 0 === n
             ? void 0
-            : i.length) ==
-            (null === (n = null == t ? void 0 : t.rgConflictDetails) ||
-            void 0 === n
+            : n.length) ==
+            (null === (i = null == e ? void 0 : e.rgConflictDetails) ||
+            void 0 === i
               ? void 0
-              : n.length) &&
-          (null == e ? void 0 : e.optInReg) ==
-            (null == t ? void 0 : t.optInReg) &&
-          y(null == e ? void 0 : e.discount, null == t ? void 0 : t.discount) &&
-          (null == e ? void 0 : e.nBaseAppID) ==
-            (null == t ? void 0 : t.nBaseAppID) &&
-          (null == e ? void 0 : e.bChangedLocally) ==
-            (null == t ? void 0 : t.bChangedLocally)
+              : i.length) &&
+          (null == t ? void 0 : t.optInReg) ==
+            (null == e ? void 0 : e.optInReg) &&
+          f(null == t ? void 0 : t.discount, null == e ? void 0 : e.discount) &&
+          (null == t ? void 0 : t.nBaseAppID) ==
+            (null == e ? void 0 : e.nBaseAppID) &&
+          (null == t ? void 0 : t.bChangedLocally) ==
+            (null == e ? void 0 : e.bChangedLocally)
         );
       }
-      function y(e, t) {
-        var i;
+      function f(t, e) {
+        var n;
         return (
-          (!t &&
+          (!e &&
             0 ==
-              (null !== (i = null == e ? void 0 : e.nDiscountPct) &&
-              void 0 !== i
-                ? i
+              (null !== (n = null == t ? void 0 : t.nDiscountPct) &&
+              void 0 !== n
+                ? n
                 : 0)) ||
-          (!!t && t.nDiscountPct == (null == e ? void 0 : e.nDiscountPct))
+          (!!e && e.nDiscountPct == (null == t ? void 0 : t.nDiscountPct))
         );
       }
-      const S = 30,
-        b = S * g._H.PerDay - 1.5 * g._H.PerHour,
-        f = 10 * g._H.PerMinute;
-      class E {
+      const P = 30,
+        E = P * v._H.PerDay - 1.5 * v._H.PerHour,
+        k = 10 * v._H.PerMinute;
+      class I {
+        static Get() {
+          return (
+            I.s_Singleton || ((I.s_Singleton = new I()), I.s_Singleton.Init()),
+            I.s_Singleton
+          );
+        }
+        static IsInitialized() {
+          return !!I.s_Singleton;
+        }
         constructor() {
           (this.m_mapPackageStateForDiscountEvents = new Map()),
             (this.m_mapLocalPackageDiscountOverrides = new Map()),
             (this.m_mapDiscountGridCellCallbackList = new Map()),
             (this.m_mapDiscountEventColumnCallbackList = new Map()),
-            (this.m_localPackageDiscountOverrideCallbackList = new m.pB()),
+            (this.m_localPackageDiscountOverrideCallbackList = new p.pB()),
             "dev" == h.De.WEB_UNIVERSE &&
               (window.g_DiscountGridEditStore = this);
         }
-        static Get() {
-          return (
-            E.s_Singleton || ((E.s_Singleton = new E()), E.s_Singleton.Init()),
-            E.s_Singleton
-          );
-        }
-        static IsInitialized() {
-          return !!E.s_Singleton;
-        }
         Init() {
-          for (const e of (0, a.MQ)())
-            E.Get().ComputePackageState(e),
-              (0, s.XM)(e).Register(() => {
-                E.Get().ComputePackageState(e);
+          for (const t of (0, o.MQ)())
+            I.Get().ComputePackageState(t),
+              (0, s.XM)(t).Register(() => {
+                I.Get().ComputePackageState(t);
               });
-          (0, v.ix)().Register(() => {
-            for (const e of (0, a.MQ)()) E.Get().ComputePackageState(e, !0);
+          (0, D.ix)().Register(() => {
+            for (const t of (0, o.MQ)()) I.Get().ComputePackageState(t, !0);
           }),
-            E.s_initializationCallbackList.Dispatch(!0);
+            I.s_initializationCallbackList.Dispatch(!0);
         }
-        OverridePackageDiscountPct(e, t, i) {
-          var n;
-          const r =
-            null === (n = E.Get().m_mapPackageStateForDiscountEvents.get(e)) ||
-            void 0 === n
+        OverridePackageDiscountPct(t, e, n) {
+          var i;
+          const a =
+            null === (i = I.Get().m_mapPackageStateForDiscountEvents.get(t)) ||
+            void 0 === i
               ? void 0
-              : n.get(t);
-          if (1 != (null == r ? void 0 : r.eState))
+              : i.get(e);
+          if (1 != (null == a ? void 0 : a.eState))
             return (
               console.error(
                 "Cannot change discount in current state:",
-                r.eState
+                a.eState
               ),
               null
             );
-          const s = r.discount,
-            a = (0, v.f0)(t),
-            o = {
+          const s = a.discount,
+            o = (0, D.f0)(e),
+            r = {
               nDiscountID: null == s ? void 0 : s.nDiscountID,
-              packageID: e,
-              nDiscountPct: i,
-              strDiscountName: a.name,
-              strDiscountDescription: a.description,
-              rtStartDate: a.start_date,
-              rtEndDate: a.end_date,
-              discountEventID: a.id,
+              packageID: t,
+              nDiscountPct: n,
+              strDiscountName: o.name,
+              strDiscountDescription: o.description,
+              rtStartDate: o.start_date,
+              rtEndDate: o.end_date,
+              discountEventID: o.id,
               bChangedLocally: !0,
             };
-          return y(o, s)
+          return f(r, s)
             ? null
-            : (this.m_mapLocalPackageDiscountOverrides.has(e) ||
-                this.m_mapLocalPackageDiscountOverrides.set(e, new Map()),
-              this.m_mapLocalPackageDiscountOverrides.get(e).set(t, o),
-              this.ComputePackageState(e),
+            : (this.m_mapLocalPackageDiscountOverrides.has(t) ||
+                this.m_mapLocalPackageDiscountOverrides.set(t, new Map()),
+              this.m_mapLocalPackageDiscountOverrides.get(t).set(e, r),
+              this.ComputePackageState(t),
               this.GetLocalPackageDiscountOverrideCallbackList().Dispatch(
                 this.GetLocalPackageDiscountOverrides()
               ),
-              o);
+              r);
         }
         GetLocalPackageDiscountOverrides() {
-          const e = [];
+          const t = [];
           return (
-            this.m_mapLocalPackageDiscountOverrides.forEach((t) =>
-              t.forEach((t) => {
-                y(t, t.nDiscountID && (0, s._J)(t.nDiscountID)) || e.push(t);
+            this.m_mapLocalPackageDiscountOverrides.forEach((e) =>
+              e.forEach((e) => {
+                f(e, e.nDiscountID && (0, s._J)(e.nDiscountID)) || t.push(e);
               })
             ),
-            e.sort(P),
-            e
+            t.sort(C),
+            t
           );
         }
-        DiscardAllLocalPackageDiscountOverrides(e) {
+        DiscardAllLocalPackageDiscountOverrides(t) {
           this.m_mapLocalPackageDiscountOverrides.clear();
-          for (const t of e) this.ComputePackageState(t);
+          for (const e of t) this.ComputePackageState(e);
           this.GetLocalPackageDiscountOverrideCallbackList().Dispatch([]);
         }
-        DiscardLocalPackageDiscountOverride(e, t) {
-          var i;
-          null === (i = this.m_mapLocalPackageDiscountOverrides.get(e)) ||
-            void 0 === i ||
-            i.delete(t),
-            this.ComputePackageState(e),
+        DiscardLocalPackageDiscountOverride(t, e) {
+          var n;
+          null === (n = this.m_mapLocalPackageDiscountOverrides.get(t)) ||
+            void 0 === n ||
+            n.delete(e),
+            this.ComputePackageState(t),
             this.GetLocalPackageDiscountOverrideCallbackList().Dispatch(
               this.GetLocalPackageDiscountOverrides()
             );
         }
-        OptInRegistrationUpdatedForApp(e, t) {
-          const i = Array.from(this.m_mapPackageStateForDiscountEvents.values())
-            .map((e) => e.get(t))
-            .filter((t) => (null == t ? void 0 : t.nBaseAppID) == e)
-            .map((e) => e.packageID);
-          null == i || i.forEach((e) => this.ComputePackageState(e));
+        OptInRegistrationUpdatedForApp(t, e) {
+          const n = Array.from(this.m_mapPackageStateForDiscountEvents.values())
+            .map((t) => t.get(e))
+            .filter((e) => (null == e ? void 0 : e.nBaseAppID) == t)
+            .map((t) => t.packageID);
+          null == n || n.forEach((t) => this.ComputePackageState(t));
         }
-        GetPackageDiscountsIncludingOverrides(e) {
-          var t;
-          const i = (0, d.kl)() - b,
-            n = (0, s.co)(e);
-          if (!n) return null;
-          const r = new Map(
-            n.filter((e) => e.rtEndDate > i).map((e) => [e.discountEventID, e])
+        GetPackageDiscountsIncludingOverrides(t) {
+          var e;
+          const n = (0, u.kl)() - E,
+            i = (0, s.co)(t);
+          if (!i) return null;
+          const a = new Map(
+            i.filter((t) => t.rtEndDate > n).map((t) => [t.discountEventID, t])
           );
           return (
-            null === (t = this.m_mapLocalPackageDiscountOverrides.get(e)) ||
-              void 0 === t ||
-              t.forEach((e, t) => {
-                y(e, r.get(t)) || r.set(t, e);
+            null === (e = this.m_mapLocalPackageDiscountOverrides.get(t)) ||
+              void 0 === e ||
+              e.forEach((t, e) => {
+                f(t, a.get(e)) || a.set(e, t);
               }),
-            r
+            a
           );
         }
-        GetDiscountGridCellCallbackList(e, t) {
-          if (!e || !t) return null;
-          this.m_mapDiscountGridCellCallbackList.has(e) ||
-            this.m_mapDiscountGridCellCallbackList.set(e, new Map());
-          const i = this.m_mapDiscountGridCellCallbackList.get(e);
-          return i.has(t) || i.set(t, new m.pB()), i.get(t);
+        GetDiscountGridCellCallbackList(t, e) {
+          if (!t || !e) return null;
+          this.m_mapDiscountGridCellCallbackList.has(t) ||
+            this.m_mapDiscountGridCellCallbackList.set(t, new Map());
+          const n = this.m_mapDiscountGridCellCallbackList.get(t);
+          return n.has(e) || n.set(e, new p.pB()), n.get(e);
         }
-        GetDiscountEventColumnCallbackList(e) {
-          return e
-            ? (this.m_mapDiscountEventColumnCallbackList.has(e) ||
-                this.m_mapDiscountEventColumnCallbackList.set(e, new m.pB()),
-              this.m_mapDiscountEventColumnCallbackList.get(e))
+        GetDiscountEventColumnCallbackList(t) {
+          return t
+            ? (this.m_mapDiscountEventColumnCallbackList.has(t) ||
+                this.m_mapDiscountEventColumnCallbackList.set(t, new p.pB()),
+              this.m_mapDiscountEventColumnCallbackList.get(t))
             : null;
         }
         GetLocalPackageDiscountOverrideCallbackList() {
           return this.m_localPackageDiscountOverrideCallbackList;
         }
-        GetAllPackageStatesForDiscountEvent(e) {
-          const t = [];
+        GetAllPackageStatesForDiscountEvent(t) {
+          const e = [];
           return (
-            E.Get().m_mapPackageStateForDiscountEvents.forEach((i, n) =>
-              t.push(i.get(e))
+            I.Get().m_mapPackageStateForDiscountEvents.forEach((n, i) =>
+              e.push(n.get(t))
             ),
-            t
+            e
           );
         }
-        ComputePackageState(e, t) {
-          var i, s;
-          const a = u.Z.Get().GetPackage(e);
-          if (!a) return;
-          const l = (0, v.wQ)(),
-            c = (0, o.R1)(a),
-            d = c.nBaseAppID;
-          let m = d && r.qh.Get().GetOptInRegistrationAndEligibilityForApp(d);
-          d ||
-            m ||
-            (m = r.qh
+        ComputePackageState(t, e) {
+          var n, s;
+          const o = d.Z.Get().GetPackage(t);
+          if (!o) return;
+          const c = (0, D.wQ)(),
+            l = (0, r.R1)(o),
+            u = l.nBaseAppID;
+          let p = u && a.qh.Get().GetOptInRegistrationAndEligibilityForApp(u);
+          u ||
+            p ||
+            (p = a.qh
               .Get()
               .GetOptInRegistrationAndEligibilityForApps(
-                a.GetIncludedAppIDs()
+                o.GetIncludedAppIDs()
               ));
-          const p = this.GetPackageDiscountsIncludingOverrides(e),
-            _ = !p,
-            g = _
+          const g = this.GetPackageDiscountsIncludingOverrides(t),
+            m = !g,
+            v = m
               ? null
-              : Array.from(p.values()).sort(
-                  (e, t) => e.rtStartDate - t.rtStartDate
+              : Array.from(g.values()).sort(
+                  (t, e) => t.rtStartDate - e.rtStartDate
                 );
-          this.m_mapPackageStateForDiscountEvents.has(e) ||
-            this.m_mapPackageStateForDiscountEvents.set(e, new Map());
-          const h = this.m_mapPackageStateForDiscountEvents.get(e);
-          for (const r of l) {
-            if (t && h.has(r.id)) continue;
-            const o = { packageID: e, discountEventID: r.id, nBaseAppID: d };
+          this.m_mapPackageStateForDiscountEvents.has(t) ||
+            this.m_mapPackageStateForDiscountEvents.set(t, new Map());
+          const h = this.m_mapPackageStateForDiscountEvents.get(t);
+          for (const a of c) {
+            if (e && h.has(a.id)) continue;
+            const r = { packageID: t, discountEventID: a.id, nBaseAppID: u };
             if (
-              ((o.discount = null == p ? void 0 : p.get(r.id)),
-              (o.bChangedLocally = !!(null === (i = o.discount) || void 0 === i
+              ((r.discount = null == g ? void 0 : g.get(a.id)),
+              (r.bChangedLocally = !!(null === (n = r.discount) || void 0 === n
                 ? void 0
-                : i.bChangedLocally)),
-              _)
+                : n.bChangedLocally)),
+              m)
             )
-              o.eState = 0;
+              r.eState = 0;
             else if (
-              (null === (s = o.discount) || void 0 === s
+              (null === (s = r.discount) || void 0 === s
                 ? void 0
                 : s.nDiscountPct) > 0
             ) {
-              o.eState = 1;
-              const e =
-                r.opt_in_name && (null == m ? void 0 : m.get(r.opt_in_name));
-              e && (o.optInReg = e);
+              r.eState = 1;
+              const t =
+                a.opt_in_name && (null == p ? void 0 : p.get(a.opt_in_name));
+              t && (r.optInReg = t);
             } else {
-              if (((o.eState = 1), I(r, a))) o.eState = 10;
-              else if (r.opt_in_name) {
-                const { ePackageDiscountState: e, optInRegistration: t } = G(
-                  r.opt_in_name,
-                  m,
-                  a,
-                  c,
-                  r
+              if (((r.eState = 1), b(a, o))) r.eState = 10;
+              else if (a.opt_in_name) {
+                const { ePackageDiscountState: t, optInRegistration: e } = S(
+                  a.opt_in_name,
+                  p,
+                  o,
+                  l,
+                  a
                 );
-                (o.eState = e), (o.optInReg = t);
+                (r.eState = t), (r.optInReg = e);
               }
-              if (10 != o.eState && 4 != o.eState && 5 != o.eState) {
-                const t = k(e, r, g);
-                1 != t.ePackageDiscountState &&
-                  ((o.eState = t.ePackageDiscountState),
-                  (o.rgConflictDetails = t.rgConflictingDiscounts.map((e) => {
-                    var t, i;
+              if (10 != r.eState && 4 != r.eState && 5 != r.eState) {
+                const e = G(t, a, v);
+                1 != e.ePackageDiscountState &&
+                  ((r.eState = e.ePackageDiscountState),
+                  (r.rgConflictDetails = e.rgConflictingDiscounts.map((t) => {
+                    var e, n;
                     return null !==
-                      (i =
-                        null === (t = (0, n.fH)(e.discountEventID)) ||
-                        void 0 === t
+                      (n =
+                        null === (e = (0, i.fH)(t.discountEventID)) ||
+                        void 0 === e
                           ? void 0
-                          : t.name) && void 0 !== i
-                      ? i
-                      : e.strDiscountName;
+                          : e.name) && void 0 !== n
+                      ? n
+                      : t.strDiscountName;
                   })));
               }
             }
-            D(o, h.get(r.id)) ||
-              (h.set(r.id, o),
-              this.GetDiscountGridCellCallbackList(e, r.id).Dispatch(o),
-              this.GetDiscountEventColumnCallbackList(r.id).Dispatch(
-                this.GetAllPackageStatesForDiscountEvent(r.id)
+            _(r, h.get(a.id)) ||
+              (h.set(a.id, r),
+              this.GetDiscountGridCellCallbackList(t, a.id).Dispatch(r),
+              this.GetDiscountEventColumnCallbackList(a.id).Dispatch(
+                this.GetAllPackageStatesForDiscountEvent(a.id)
               ));
           }
         }
-        GetAvailableDiscountEventsInRange(e, t, i) {
-          const n = this.m_mapPackageStateForDiscountEvents.get(e),
-            r = new Set([1, 11, 2, 3]);
-          return (0, v.wQ)()
+        GetAvailableDiscountEventsInRange(t, e, n) {
+          const i = this.m_mapPackageStateForDiscountEvents.get(t),
+            a = new Set([1, 11, 2, 3]);
+          return (0, D.wQ)()
             .filter(
-              (e) =>
-                t <= e.start_date &&
-                e.end_date <= i &&
-                r.has(n.get(e.id).eState)
+              (t) =>
+                e <= t.start_date &&
+                t.end_date <= n &&
+                a.has(i.get(t.id).eState)
             )
-            .map((e) => e.id);
+            .map((t) => t.id);
         }
-        GetFutureDiscountRanges(e) {
-          const t = u.Z.Get().GetPackage(e),
-            i = this.GetPackageDiscountsIncludingOverrides(e);
-          if (!t || !i) return [];
-          const r = Array.from(i.values()).sort(
-              (e, t) => e.rtStartDate - t.rtStartDate
+        GetFutureDiscountRanges(t) {
+          const e = d.Z.Get().GetPackage(t),
+            n = this.GetPackageDiscountsIncludingOverrides(t);
+          if (!e || !n) return [];
+          const a = Array.from(n.values()).sort(
+              (t, e) => t.rtStartDate - e.rtStartDate
             ),
-            s = (0, d.kl)(),
-            a = Math.max(s, t.GetReleaseDateRTime() + b, (0, v.QM)(e) + b),
-            o = [],
-            c = new Set();
-          let m = a;
-          for (let t = 0; t < r.length; t++) {
-            const i = r[t];
-            if (0 == i.nDiscountPct) continue;
-            const s = (0, n.fH)(i.discountEventID);
-            let a = i.rtStartDate - b;
-            const d = "unique" == (null == s ? void 0 : s.collision_type);
-            if (d && ((a = i.rtStartDate + f), t + 1 < r.length)) {
-              const e = r[t + 1],
-                i = (0, v.f0)(e.discountEventID);
-              "unique" != (null == i ? void 0 : i.collision_type) &&
-                (a = Math.min(a, e.rtStartDate - b));
+            s = (0, u.kl)(),
+            o = Math.max(s, e.GetReleaseDateRTime() + E, (0, D.QM)(t) + E),
+            r = [],
+            l = new Set();
+          let p = o;
+          for (let e = 0; e < a.length; e++) {
+            const n = a[e];
+            if (0 == n.nDiscountPct) continue;
+            const s = (0, i.fH)(n.discountEventID);
+            let o = n.rtStartDate - E;
+            const u = "unique" == (null == s ? void 0 : s.collision_type);
+            if (u && ((o = n.rtStartDate + k), e + 1 < a.length)) {
+              const t = a[e + 1],
+                n = (0, D.f0)(t.discountEventID);
+              "unique" != (null == n ? void 0 : n.collision_type) &&
+                (o = Math.min(o, t.rtStartDate - E));
             }
-            if (m + g._H.PerDay < a) {
-              const t = {
+            if (p + v._H.PerDay < o) {
+              const e = {
                 bIsAvailable: !0,
-                rtStartDate: m,
-                rtEndDate: a,
+                rtStartDate: p,
+                rtEndDate: o,
                 rgDiscountEventIDs: this.GetAvailableDiscountEventsInRange(
-                  e,
-                  m,
-                  a
+                  t,
+                  p,
+                  o
                 ),
               };
-              o.push(t), t.rgDiscountEventIDs.forEach((e) => c.add(e));
+              r.push(e), e.rgDiscountEventIDs.forEach((t) => l.add(t));
             }
-            const u = {
+            const d = {
               bIsAvailable: !1,
-              rtStartDate: i.rtStartDate,
-              rtEndDate: i.rtEndDate,
-              discount: i,
-              rgDiscountEventIDs: [i.discountEventID],
+              rtStartDate: n.rtStartDate,
+              rtEndDate: n.rtEndDate,
+              discount: n,
+              rgDiscountEventIDs: [n.discountEventID],
             };
             if (
-              (o.push(u),
-              c.add(i.discountEventID),
-              (m = i.rtEndDate + b),
-              d && ((m = i.rtEndDate - f), t - 1 >= 0))
+              (r.push(d),
+              l.add(n.discountEventID),
+              (p = n.rtEndDate + E),
+              u && ((p = n.rtEndDate - k), e - 1 >= 0))
             ) {
-              const e = r[t - 1],
-                i = (0, v.f0)(e.discountEventID);
-              "unique" != (null == i ? void 0 : i.collision_type) &&
-                (m = Math.max(m, e.rtEndDate + b));
+              const t = a[e - 1],
+                n = (0, D.f0)(t.discountEventID);
+              "unique" != (null == n ? void 0 : n.collision_type) &&
+                (p = Math.max(p, t.rtEndDate + E));
             }
-            const p = (0, l._)(m);
-            p - m <= 2 * g._H.PerHour && (m = p);
+            const g = (0, c._)(p);
+            g - p <= 2 * v._H.PerHour && (p = g);
           }
-          const p = (0, l._)(s + g._H.PerYear / 2);
-          if (m + g._H.PerDay < p) {
-            const t = {
+          const g = (0, c._)(s + v._H.PerYear / 2);
+          if (p + v._H.PerDay < g) {
+            const e = {
               bIsAvailable: !0,
-              rtStartDate: m,
-              rtEndDate: p,
+              rtStartDate: p,
+              rtEndDate: g,
               rgDiscountEventIDs: this.GetAvailableDiscountEventsInRange(
-                e,
-                m,
-                p
+                t,
+                p,
+                g
               ),
             };
-            o.push(t), t.rgDiscountEventIDs.forEach((e) => c.add(e));
+            r.push(e), e.rgDiscountEventIDs.forEach((t) => l.add(t));
           }
-          const _ = (0, v.wQ)().filter(
-            (t) =>
-              "unique" == t.collision_type &&
-              !c.has(t.id) &&
+          const m = (0, D.wQ)().filter(
+            (e) =>
+              "unique" == e.collision_type &&
+              !l.has(e.id) &&
               1 ==
-                this.m_mapPackageStateForDiscountEvents.get(e).get(t.id).eState
+                this.m_mapPackageStateForDiscountEvents.get(t).get(e.id).eState
           );
-          for (const e of _)
-            for (let t = 0; t < o.length; t++)
+          for (const t of m)
+            for (let e = 0; e < r.length; e++)
               if (
-                o[t].rtStartDate <= e.start_date &&
-                (t == o.length - 1 || e.start_date < o[t + 1].rtStartDate)
+                r[e].rtStartDate <= t.start_date &&
+                (e == r.length - 1 || t.start_date < r[e + 1].rtStartDate)
               ) {
-                const i = {
+                const n = {
                   bIsAvailable: !0,
                   bMajorSaleOnly: !0,
-                  rtStartDate: e.start_date,
-                  rtEndDate: e.end_date,
-                  rgDiscountEventIDs: [e.id],
+                  rtStartDate: t.start_date,
+                  rtEndDate: t.end_date,
+                  rgDiscountEventIDs: [t.id],
                 };
-                o.splice(t + 1, 0, i);
+                r.splice(e + 1, 0, n);
                 break;
               }
-          return o;
+          return r;
         }
       }
-      function k(e, t, i) {
-        let r = 1;
+      function G(t, e, n) {
+        let a = 1;
         const s = [];
-        let a = !1;
-        const o = u.Z.Get().GetPackage(e);
-        if ((null == o ? void 0 : o.GetReleaseDateRTime()) > t.start_date - b)
+        let o = !1;
+        const r = d.Z.Get().GetPackage(t);
+        if ((null == r ? void 0 : r.GetReleaseDateRTime()) > e.start_date - E)
           return (
-            (r = 6),
+            (a = 6),
             {
-              ePackageDiscountState: r,
+              ePackageDiscountState: a,
               rgConflictingDiscounts: s,
-              bChangedLocally: a,
+              bChangedLocally: o,
             }
           );
-        if ((0, v.QM)(e) > t.start_date - b)
+        if ((0, D.QM)(t) > e.start_date - E)
           return (
-            (r = 7),
+            (a = 7),
             {
-              ePackageDiscountState: r,
+              ePackageDiscountState: a,
               rgConflictingDiscounts: s,
-              bChangedLocally: a,
+              bChangedLocally: o,
             }
           );
-        for (const e of i) {
-          if (t.id == e.discountEventID) continue;
-          const i = (0, n.fH)(e.discountEventID),
-            o =
-              "unique" == t.collision_type ||
-              "unique" == (null == i ? void 0 : i.collision_type),
-            l = o ? t.start_date + f : t.start_date - b,
-            c = o ? t.end_date - f : t.end_date + b;
-          if (e.rtEndDate > l && c > e.rtStartDate) {
-            if (((a = a || e.bChangedLocally), 0 == e.nDiscountPct)) continue;
-            s.push(e), (r = o ? 9 : 8);
+        for (const t of n) {
+          if (e.id == t.discountEventID) continue;
+          const n = (0, i.fH)(t.discountEventID),
+            r =
+              "unique" == e.collision_type ||
+              "unique" == (null == n ? void 0 : n.collision_type),
+            c = r ? e.start_date + k : e.start_date - E,
+            l = r ? e.end_date - k : e.end_date + E;
+          if (t.rtEndDate > c && l > t.rtStartDate) {
+            if (((o = o || t.bChangedLocally), 0 == t.nDiscountPct)) continue;
+            s.push(t), (a = r ? 9 : 8);
           }
         }
         return {
-          ePackageDiscountState: r,
+          ePackageDiscountState: a,
           rgConflictingDiscounts: s,
-          bChangedLocally: a,
+          bChangedLocally: o,
         };
       }
-      function G(e, t, i, n, s) {
-        let a,
-          o = 5;
-        if (t)
-          (a = t.get(e)),
-            !a || a.restricted || a.pruned
-              ? ((o = 4), (a = { restricted: !0 }))
-              : (o = a.opt_in ? 1 : a.invited || !a.time_opted_in ? 2 : 3);
-        else if (!n.nBaseAppID) {
-          const e = i
+      function S(t, e, n, i, s) {
+        let o,
+          r = 5;
+        if (e)
+          (o = e.get(t)),
+            !o || o.restricted || o.pruned
+              ? ((r = 4), (o = { restricted: !0 }))
+              : (r = o.opt_in ? 1 : o.invited || !o.time_opted_in ? 2 : 3);
+        else if (!i.nBaseAppID) {
+          const t = n
             .GetIncludedAppIDs()
-            .map((e) => {
-              var t;
+            .map((t) => {
+              var e;
               return null ===
-                (t = r.qh.Get().GetOptInRegistrationAndEligibilityForApp(e)) ||
-                void 0 === t
+                (e = a.qh.Get().GetOptInRegistrationAndEligibilityForApp(t)) ||
+                void 0 === e
                 ? void 0
-                : t.get(s.opt_in_name);
+                : e.get(s.opt_in_name);
             })
             .filter(Boolean);
-          e.some((e) => e.opt_in)
-            ? (o = 1)
-            : e.some((e) => !e.restricted && !e.pruned) && (o = 11);
+          t.some((t) => t.opt_in)
+            ? (r = 1)
+            : t.some((t) => !t.restricted && !t.pruned) && (r = 11);
         }
-        return { ePackageDiscountState: o, optInRegistration: a };
+        return { ePackageDiscountState: r, optInRegistration: o };
       }
-      function I(e, t) {
-        var i, n, r;
-        if ((null === (i = e.appids) || void 0 === i ? void 0 : i.length) > 0) {
+      function b(t, e) {
+        var n, i, a;
+        if ((null === (n = t.appids) || void 0 === n ? void 0 : n.length) > 0) {
           if (
-            null === (n = null == t ? void 0 : t.GetIncludedAppIDs()) ||
-            void 0 === n
+            null === (i = null == e ? void 0 : e.GetIncludedAppIDs()) ||
+            void 0 === i
               ? void 0
-              : n.length
+              : i.length
           ) {
-            const i = new Set(e.appids);
-            for (const e of t.GetIncludedAppIDs()) {
-              if (i.has(e)) return !1;
-              const t =
-                null === (r = u.Z.Get().GetApp(e)) || void 0 === r
+            const n = new Set(t.appids);
+            for (const t of e.GetIncludedAppIDs()) {
+              if (n.has(t)) return !1;
+              const e =
+                null === (a = d.Z.Get().GetApp(t)) || void 0 === a
                   ? void 0
-                  : r.GetParentAppID();
-              if (t && i.has(t)) return !1;
+                  : a.GetParentAppID();
+              if (e && n.has(e)) return !1;
             }
           }
           return !0;
         }
         return !1;
       }
-      function P(e, t) {
-        var i, n;
-        if (e.packageID != t.packageID) {
-          const r =
-              null === (i = u.Z.Get().GetPackage(e.packageID)) || void 0 === i
+      function C(t, e) {
+        var n, i;
+        if (t.packageID != e.packageID) {
+          const a =
+              null === (n = d.Z.Get().GetPackage(t.packageID)) || void 0 === n
                 ? void 0
-                : i.GetName(),
+                : n.GetName(),
             s =
-              null === (n = u.Z.Get().GetPackage(t.packageID)) || void 0 === n
+              null === (i = d.Z.Get().GetPackage(e.packageID)) || void 0 === i
                 ? void 0
-                : n.GetName();
-          return (0, _.eT)(r, s);
+                : i.GetName();
+          return (0, m.eT)(a, s);
         }
         {
-          const i = 0 == e.nDiscountPct;
-          return i != (0 == t.nDiscountPct)
-            ? i
+          const n = 0 == t.nDiscountPct;
+          return n != (0 == e.nDiscountPct)
+            ? n
               ? -1
               : 1
-            : e.rtStartDate - t.rtStartDate;
+            : t.rtStartDate - e.rtStartDate;
         }
       }
-      function w() {
-        return c.useCallback(() => {
-          E.Get();
+      function y() {
+        return l.useCallback(() => {
+          I.Get();
         }, []);
       }
-      function R() {
-        const [e, t] = c.useState(E.Get().GetLocalPackageDiscountOverrides());
+      function L() {
+        const [t, e] = l.useState(I.Get().GetLocalPackageDiscountOverrides());
         return (
-          (0, p.Qg)(E.Get().GetLocalPackageDiscountOverrideCallbackList(), t), e
+          (0, g.Qg)(I.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
         );
       }
-      function B() {
-        return c.useCallback(() => {
-          var e;
+      function R() {
+        return l.useCallback(() => {
+          var t;
           return (
-            (null === (e = E.Get().GetLocalPackageDiscountOverrides()) ||
-            void 0 === e
+            (null === (t = I.Get().GetLocalPackageDiscountOverrides()) ||
+            void 0 === t
               ? void 0
-              : e.length) > 0
+              : t.length) > 0
           );
         }, []);
       }
-      function C() {
-        return c.useCallback(
-          (e) => E.Get().DiscardAllLocalPackageDiscountOverrides(e),
-          []
-        );
-      }
-      function O() {
-        return c.useCallback(
-          (e, t) => E.Get().OptInRegistrationUpdatedForApp(e, t),
-          []
-        );
-      }
       function A() {
-        return c.useCallback(
-          (e, t) => E.Get().DiscardLocalPackageDiscountOverride(e, t),
+        return l.useCallback(
+          (t) => I.Get().DiscardAllLocalPackageDiscountOverrides(t),
           []
         );
       }
-      function L(e, t) {
-        var i, n, r;
+      function w() {
+        return l.useCallback(
+          (t, e) => I.Get().OptInRegistrationUpdatedForApp(t, e),
+          []
+        );
+      }
+      function B() {
+        return l.useCallback(
+          (t, e) => I.Get().DiscardLocalPackageDiscountOverride(t, e),
+          []
+        );
+      }
+      function O(t, e) {
+        var n, i, a;
         const s =
-          null === (i = E.Get().m_mapPackageStateForDiscountEvents.get(e)) ||
-          void 0 === i
+          null === (n = I.Get().m_mapPackageStateForDiscountEvents.get(t)) ||
+          void 0 === n
             ? void 0
-            : i.get(t);
+            : n.get(e);
         return 1 == (null == s ? void 0 : s.eState)
           ? null !==
-              (r =
-                null === (n = null == s ? void 0 : s.discount) || void 0 === n
+              (a =
+                null === (i = null == s ? void 0 : s.discount) || void 0 === i
                   ? void 0
-                  : n.nDiscountPct) && void 0 !== r
-            ? r
+                  : i.nDiscountPct) && void 0 !== a
+            ? a
             : 0
           : null;
       }
-      function F(e, t) {
-        const [i, n] = c.useState(() => {
-          var i;
+      function N(t, e) {
+        const [n, i] = l.useState(() => {
+          var n;
           return null ===
-            (i = E.Get().m_mapPackageStateForDiscountEvents.get(e)) ||
-            void 0 === i
+            (n = I.Get().m_mapPackageStateForDiscountEvents.get(t)) ||
+            void 0 === n
             ? void 0
-            : i.get(t);
+            : n.get(e);
         });
-        (0, p.Qg)(E.Get().GetDiscountGridCellCallbackList(e, t), n);
+        (0, g.Qg)(I.Get().GetDiscountGridCellCallbackList(t, e), i);
         return {
-          packageState: i,
-          fnSetDiscountPct: c.useCallback(
-            (i) => {
-              E.Get().OverridePackageDiscountPct(e, t, i);
+          packageState: n,
+          fnSetDiscountPct: l.useCallback(
+            (n) => {
+              I.Get().OverridePackageDiscountPct(t, e, n);
             },
-            [e, t]
+            [t, e]
           ),
         };
       }
       function M() {
-        return c.useCallback((e, t, i) => {
-          const n = [];
-          for (const r of i) {
-            const i = E.Get().OverridePackageDiscountPct(r, t, e);
-            i && n.push(i);
+        return l.useCallback((t, e, n) => {
+          const i = [];
+          for (const a of n) {
+            const n = I.Get().OverridePackageDiscountPct(a, e, t);
+            n && i.push(n);
           }
-          return n;
+          return i;
         }, []);
       }
-      function T(e) {
-        const t = U(e);
-        return c.useMemo(
+      function U(t) {
+        const e = F(t);
+        return l.useMemo(
           () => ({
-            nAlreadySet: t.alreadySet.size,
-            nAvailable: t.available.size,
-            nConflicts: t.conflicts.size,
-            nNeedRegistration: t.needRegistration.size,
-            nIneligibile: t.ineligibile.size,
+            nAlreadySet: e.alreadySet.size,
+            nAvailable: e.available.size,
+            nConflicts: e.conflicts.size,
+            nNeedRegistration: e.needRegistration.size,
+            nIneligibile: e.ineligibile.size,
           }),
-          [t]
+          [e]
         );
       }
-      function U(e) {
-        const [t, i] = c.useState(() => x(e)),
-          n = c.useCallback(() => {
-            i(x(e));
-          }, [e]);
+      function F(t) {
+        const [e, n] = l.useState(() => V(t)),
+          i = l.useCallback(() => {
+            n(V(t));
+          }, [t]);
         return (
-          c.useEffect(n, [e, n]),
-          (0, p.Qg)(E.Get().GetDiscountEventColumnCallbackList(e), n),
-          t
+          l.useEffect(i, [t, i]),
+          (0, g.Qg)(I.Get().GetDiscountEventColumnCallbackList(t), i),
+          e
         );
       }
-      function x(e) {
-        var t, i;
-        const n = E.Get().GetAllPackageStatesForDiscountEvent(e),
-          r = {
+      function V(t) {
+        var e, n;
+        const i = I.Get().GetAllPackageStatesForDiscountEvent(t),
+          a = {
             alreadySet: new Set(),
             available: new Set(),
             conflicts: new Set(),
             needRegistration: new Set(),
             ineligibile: new Set(),
           };
-        for (const e of n)
-          switch (null == e ? void 0 : e.eState) {
+        for (const t of i)
+          switch (null == t ? void 0 : t.eState) {
             case 0:
               break;
             case 1:
               (null !==
-                (i =
-                  null === (t = e.discount) || void 0 === t
+                (n =
+                  null === (e = t.discount) || void 0 === e
                     ? void 0
-                    : t.nDiscountPct) && void 0 !== i
-                ? i
+                    : e.nDiscountPct) && void 0 !== n
+                ? n
                 : 0) > 0
-                ? r.alreadySet.add(e.packageID)
-                : r.available.add(e.packageID);
+                ? a.alreadySet.add(t.packageID)
+                : a.available.add(t.packageID);
               break;
             case 6:
             case 7:
             case 8:
             case 9:
-              r.conflicts.add(e.packageID);
+              a.conflicts.add(t.packageID);
               break;
             case 2:
             case 3:
-              r.needRegistration.add(e.packageID);
+              a.needRegistration.add(t.packageID);
               break;
             case 4:
             case 5:
             case 10:
-              r.ineligibile.add(e.packageID);
+              a.ineligibile.add(t.packageID);
           }
-        return r;
+        return a;
       }
-      function N(e) {
+      function T(t) {
         return (
-          !!(0, s.LT)(e).some((e) => e.nDiscountPct > 0) ||
+          !!(0, s.LT)(t).some((t) => t.nDiscountPct > 0) ||
           !(
-            !E.IsInitialized() ||
-            !E.Get()
-              .GetAllPackageStatesForDiscountEvent(e)
-              .some((e) => {
-                var t, i;
+            !I.IsInitialized() ||
+            !I.Get()
+              .GetAllPackageStatesForDiscountEvent(t)
+              .some((t) => {
+                var e, n;
                 return (
                   (null !==
-                    (i =
-                      null === (t = e.discount) || void 0 === t
+                    (n =
+                      null === (e = t.discount) || void 0 === e
                         ? void 0
-                        : t.nDiscountPct) && void 0 !== i
-                    ? i
+                        : e.nDiscountPct) && void 0 !== n
+                    ? n
                     : 0) > 0
                 );
               })
           )
         );
       }
-      function z(e) {
-        if ((0, s.kk)(e)) return !0;
-        const t = (0, n.fH)(e);
-        if (!(null == t ? void 0 : t.opt_in_name)) return !0;
-        const i = r.qh.Get().GetAllOptInRegistrations(t.opt_in_name);
+      function x(t) {
+        if ((0, s.kk)(t)) return !0;
+        const e = (0, i.fH)(t);
+        if (!(null == e ? void 0 : e.opt_in_name)) return !0;
+        const n = a.qh.Get().GetAllOptInRegistrations(e.opt_in_name);
         return (
-          !!(null == i ? void 0 : i.length) &&
-          i.some((e) => !e.restricted && !e.pruned)
+          !!(null == n ? void 0 : n.length) &&
+          n.some((t) => !t.restricted && !t.pruned)
         );
       }
-      function j(e) {
-        const t = (function () {
-            const [e, t] = c.useState(E.IsInitialized());
-            return (0, p.Qg)(E.s_initializationCallbackList, t), e;
+      function K(t) {
+        const e = (function () {
+            const [t, e] = l.useState(I.IsInitialized());
+            return (0, g.Qg)(I.s_initializationCallbackList, e), t;
           })(),
-          [i, n] = c.useState(t ? E.Get().GetFutureDiscountRanges(e) : []),
-          r = c.useCallback(
-            () => n(t ? E.Get().GetFutureDiscountRanges(e) : []),
-            [e, t]
+          [n, i] = l.useState(e ? I.Get().GetFutureDiscountRanges(t) : []),
+          a = l.useCallback(
+            () => i(e ? I.Get().GetFutureDiscountRanges(t) : []),
+            [t, e]
           );
         return (
-          (0, p.Qg)(
-            t && E.Get().GetLocalPackageDiscountOverrideCallbackList(),
-            r
+          (0, g.Qg)(
+            e && I.Get().GetLocalPackageDiscountOverrideCallbackList(),
+            a
           ),
-          (0, p.Qg)(t && (0, s.XM)(e), r),
-          c.useEffect(r, [e, t, r]),
-          i
+          (0, g.Qg)(e && (0, s.XM)(t), a),
+          l.useEffect(a, [t, e, a]),
+          n
         );
       }
-      E.s_initializationCallbackList = new m.pB();
+      I.s_initializationCallbackList = new p.pB();
     },
-    86873: (e, t, i) => {
+    86873: (t, e, n) => {
       "use strict";
-      i.d(t, {
-        $f: () => y,
-        D_: () => E,
-        P6: () => f,
-        QM: () => p,
-        Zq: () => S,
-        f0: () => g,
-        im: () => v,
+      n.d(e, {
+        $f: () => f,
+        D_: () => I,
+        P6: () => k,
+        QM: () => g,
+        Zq: () => P,
+        f0: () => v,
+        im: () => D,
         ix: () => h,
-        wQ: () => _,
-        x9: () => D,
-        y4: () => b,
+        wQ: () => m,
+        x9: () => _,
+        y4: () => E,
       });
-      var n = i(89526),
-        r = (i(42770), i(85651)),
-        s = i(85246),
-        a = i(4306),
-        o = i(32765),
-        l = i(65395),
-        c = i(36998),
-        d = i(16169);
-      const u = "related-discount-view";
-      class m {
+      var i = n(89526),
+        a = n(85651),
+        s = n(85246),
+        o = n(4306),
+        r = n(32765),
+        c = n(65395),
+        l = n(36998),
+        u = n(16169);
+      const d = "related-discount-view";
+      class p {
+        static Get() {
+          return (
+            p.s_Singleton || ((p.s_Singleton = new p()), p.s_Singleton.Init()),
+            p.s_Singleton
+          );
+        }
         constructor() {
           (this.m_mapDiscountEventsByID = new Map()),
             (this.m_discountEventsCallbackList = new s.pB()),
@@ -8411,65 +3852,59 @@
             (this.m_gridEventSelectionParametersCallbackList = new s.pB()),
             (this.m_setVisibleDiscountEventIDs = new Set()),
             (this.m_visibleDiscountEventIDsCallbackList = new s.pB()),
-            "dev" == o.De.WEB_UNIVERSE && (window.g_DiscountGridStore = this);
-        }
-        static Get() {
-          return (
-            m.s_Singleton || ((m.s_Singleton = new m()), m.s_Singleton.Init()),
-            m.s_Singleton
-          );
+            "dev" == r.De.WEB_UNIVERSE && (window.g_DiscountGridStore = this);
         }
         Init() {
-          var e;
-          const t = (0, o.kQ)("price_increase_times", "application_config");
+          var t;
+          const e = (0, r.kQ)("price_increase_times", "application_config");
           if (
-            (("dev" != o.De.WEB_UNIVERSE && "beta" != o.De.WEB_UNIVERSE) ||
-              console.log("DEV_DEBUG: CDiscountGridStore loading payload: ", t),
-            this.BIsPriceIncreasePayloadValid(t))
+            (("dev" != r.De.WEB_UNIVERSE && "beta" != r.De.WEB_UNIVERSE) ||
+              console.log("DEV_DEBUG: CDiscountGridStore loading payload: ", e),
+            this.BIsPriceIncreasePayloadValid(e))
           )
-            for (let e in t)
-              this.m_mapLastTimeRaisedPrices.set(Number(e), t[e]);
+            for (let t in e)
+              this.m_mapLastTimeRaisedPrices.set(Number(t), e[t]);
           else
-            "dev" == o.De.WEB_UNIVERSE &&
+            "dev" == r.De.WEB_UNIVERSE &&
               console.error("CDiscountGridStore Invalid payload");
           (this.m_eRelatedDiscountView =
-            null !== (e = window.localStorage.getItem(u)) && void 0 !== e
-              ? e
+            null !== (t = window.localStorage.getItem(d)) && void 0 !== t
+              ? t
               : "deepest-past"),
             this.UpdateDiscountEventsForGrid(),
-            (0, l.i4)().Register(() => this.UpdateDiscountEventsForGrid()),
-            (0, c.v6)().Register(() => this.UpdateDiscountEventsForGrid()),
+            (0, c.i4)().Register(() => this.UpdateDiscountEventsForGrid()),
+            (0, l.v6)().Register(() => this.UpdateDiscountEventsForGrid()),
             this.SetEventSelectionParametersFromURL(),
             this.UpdateVisibleDiscountEventIDs();
         }
         UpdateDiscountEventsForGrid() {
-          const e = (0, l.o)(),
-            t = (0, c.Su)(),
-            i = new Set(e.map((e) => e.id)),
-            n = [],
-            s = (0, r.kl)();
-          for (const e of t)
-            e.rtEndDate > s &&
-              (i.has(e.discountEventID) ||
-                (n.push({
-                  id: e.discountEventID,
-                  name: e.strDiscountName,
-                  start_date: e.rtStartDate,
-                  end_date: e.rtEndDate,
-                  description: e.strDiscountDescription,
+          const t = (0, c.o)(),
+            e = (0, l.Su)(),
+            n = new Set(t.map((t) => t.id)),
+            i = [],
+            s = (0, a.kl)();
+          for (const t of e)
+            t.rtEndDate > s &&
+              (n.has(t.discountEventID) ||
+                (i.push({
+                  id: t.discountEventID,
+                  name: t.strDiscountName,
+                  start_date: t.rtStartDate,
+                  end_date: t.rtEndDate,
+                  description: t.strDiscountDescription,
                 }),
-                i.add(e.discountEventID)));
+                n.add(t.discountEventID)));
           (this.m_rgDiscountEvents &&
-            i.size == this.m_rgDiscountEvents.length &&
-            !this.m_rgDiscountEvents.some((e) => !i.has(e.id))) ||
-            ((this.m_rgDiscountEvents = n.concat(e)),
-            this.m_rgDiscountEvents.sort((e, t) =>
-              e.start_date == t.start_date
-                ? e.end_date - t.end_date
-                : e.start_date - t.start_date
+            n.size == this.m_rgDiscountEvents.length &&
+            !this.m_rgDiscountEvents.some((t) => !n.has(t.id))) ||
+            ((this.m_rgDiscountEvents = i.concat(t)),
+            this.m_rgDiscountEvents.sort((t, e) =>
+              t.start_date == e.start_date
+                ? t.end_date - e.end_date
+                : t.start_date - e.start_date
             ),
             (this.m_mapDiscountEventsByID = new Map(
-              this.m_rgDiscountEvents.map((e) => [e.id, e])
+              this.m_rgDiscountEvents.map((t) => [t.id, t])
             )),
             this.UpdateVisibleDiscountEventIDs(),
             this.m_discountEventsCallbackList.Dispatch(
@@ -8479,72 +3914,72 @@
         UpdateVisibleDiscountEventIDs() {
           this.SetEventSelectionParametersFromURL(),
             (this.m_setVisibleDiscountEventIDs = new Set());
-          for (const e of this.m_rgDiscountEvents) {
-            let t = null == this.m_strSelectedDiscountEventID;
-            t && !this.m_bIncludeCustomEvents && (0, c.kk)(e.id) && (t = !1),
-              t &&
+          for (const t of this.m_rgDiscountEvents) {
+            let e = null == this.m_strSelectedDiscountEventID;
+            e && !this.m_bIncludeCustomEvents && (0, l.kk)(t.id) && (e = !1),
+              e &&
                 !this.m_bIncludeWeeklongEvents &&
-                e.id.startsWith("weeklongdeal_") &&
-                !(0, d.dy)(e.id) &&
-                (t = !1),
-              !t ||
+                t.id.startsWith("weeklongdeal_") &&
+                !(0, u.dy)(t.id) &&
+                (e = !1),
+              !e ||
                 this.m_bIncludeIneligibleEvents ||
-                (0, d.k)(e.id) ||
-                (t = !1),
-              this.m_strSelectedDiscountEventID == e.id && (t = !0),
-              t && this.m_setVisibleDiscountEventIDs.add(e.id);
+                (0, u.k)(t.id) ||
+                (e = !1),
+              this.m_strSelectedDiscountEventID == t.id && (e = !0),
+              e && this.m_setVisibleDiscountEventIDs.add(t.id);
           }
           this.m_visibleDiscountEventIDsCallbackList.Dispatch(
             this.m_setVisibleDiscountEventIDs
           );
         }
-        BIsPriceIncreasePayloadValid(e) {
-          const t = e;
-          if (t && "object" == typeof t) {
-            for (let e in t)
-              if (isNaN(parseInt(e)) || "number" != typeof t[e]) return !1;
+        BIsPriceIncreasePayloadValid(t) {
+          const e = t;
+          if (e && "object" == typeof e) {
+            for (let t in e)
+              if (isNaN(parseInt(t)) || "number" != typeof e[t]) return !1;
             return !0;
           }
           return !1;
         }
         SetEventSelectionParametersFromURL() {
-          const e = new URLSearchParams(window.location.search);
-          if (e.has("de")) {
-            const t = decodeURIComponent(e.get("de"));
-            this.m_mapDiscountEventsByID.has(t) &&
-              (this.m_strSelectedDiscountEventID = t);
+          const t = new URLSearchParams(window.location.search);
+          if (t.has("de")) {
+            const e = decodeURIComponent(t.get("de"));
+            this.m_mapDiscountEventsByID.has(e) &&
+              (this.m_strSelectedDiscountEventID = e);
           }
-          if (e.has("wd")) {
-            const t = e.get("wd");
-            this.m_bIncludeWeeklongEvents = "0" != t;
+          if (t.has("wd")) {
+            const e = t.get("wd");
+            this.m_bIncludeWeeklongEvents = "0" != e;
           }
-          if (e.has("cd")) {
-            const t = e.get("cd");
-            this.m_bIncludeCustomEvents = "0" != t;
+          if (t.has("cd")) {
+            const e = t.get("cd");
+            this.m_bIncludeCustomEvents = "0" != e;
           }
-          if (e.has("cf")) {
-            const t = e.get("cf");
-            this.m_bIncludeConflictsInSingleEventView = "0" != t;
+          if (t.has("cf")) {
+            const e = t.get("cf");
+            this.m_bIncludeConflictsInSingleEventView = "0" != e;
           }
         }
         HandleEventSelectionChangeAndNotifyListeners() {
-          const e = new URL(window.location.href);
+          const t = new URL(window.location.href);
           this.m_strSelectedDiscountEventID
-            ? e.searchParams.set(
+            ? t.searchParams.set(
                 "de",
                 encodeURIComponent(this.m_strSelectedDiscountEventID)
               )
-            : e.searchParams.delete("de"),
+            : t.searchParams.delete("de"),
             this.m_bIncludeWeeklongEvents
-              ? e.searchParams.set("wd", "1")
-              : e.searchParams.delete("wd"),
+              ? t.searchParams.set("wd", "1")
+              : t.searchParams.delete("wd"),
             this.m_bIncludeCustomEvents
-              ? e.searchParams.delete("cd")
-              : e.searchParams.set("cd", "0"),
+              ? t.searchParams.delete("cd")
+              : t.searchParams.set("cd", "0"),
             this.m_bIncludeConflictsInSingleEventView
-              ? e.searchParams.delete("cf")
-              : e.searchParams.set("cf", "0"),
-            window.history.replaceState({}, "", e.toString()),
+              ? t.searchParams.delete("cf")
+              : t.searchParams.set("cf", "0"),
+            window.history.replaceState({}, "", t.toString()),
             this.UpdateVisibleDiscountEventIDs(),
             this.m_gridEventSelectionParametersCallbackList.Dispatch(
               this.GetEventSelectionParameters()
@@ -8554,187 +3989,186 @@
           return {
             bSingleDiscountEventView: null != this.m_strSelectedDiscountEventID,
             strSelectedEvent: this.m_strSelectedDiscountEventID,
-            fnSelectEvent: (e) => {
-              (this.m_strSelectedDiscountEventID = e),
+            fnSelectEvent: (t) => {
+              (this.m_strSelectedDiscountEventID = t),
                 this.HandleEventSelectionChangeAndNotifyListeners();
             },
             bIncludeWeeklongEvents: this.m_bIncludeWeeklongEvents,
-            fnSetIncludeWeeklongEvents: (e) => {
-              (this.m_bIncludeWeeklongEvents = e),
+            fnSetIncludeWeeklongEvents: (t) => {
+              (this.m_bIncludeWeeklongEvents = t),
                 this.HandleEventSelectionChangeAndNotifyListeners();
             },
             bIncludeCustomEvents: this.m_bIncludeCustomEvents,
-            fnSetIncludeCustomEvents: (e) => {
-              (this.m_bIncludeCustomEvents = e),
+            fnSetIncludeCustomEvents: (t) => {
+              (this.m_bIncludeCustomEvents = t),
                 this.HandleEventSelectionChangeAndNotifyListeners();
             },
             bIncludeConflictsInSingleEventView:
               this.m_bIncludeConflictsInSingleEventView,
-            fnSetIncludeConflictsInSingleEventView: (e) => {
-              (this.m_bIncludeConflictsInSingleEventView = e),
+            fnSetIncludeConflictsInSingleEventView: (t) => {
+              (this.m_bIncludeConflictsInSingleEventView = t),
                 this.HandleEventSelectionChangeAndNotifyListeners();
             },
           };
         }
       }
-      function p(e) {
-        var t;
-        return null !== (t = m.Get().m_mapLastTimeRaisedPrices.get(e)) &&
-          void 0 !== t
-          ? t
+      function g(t) {
+        var e;
+        return null !== (e = p.Get().m_mapLastTimeRaisedPrices.get(t)) &&
+          void 0 !== e
+          ? e
           : 0;
       }
-      function _() {
-        return m.Get().m_rgDiscountEvents;
+      function m() {
+        return p.Get().m_rgDiscountEvents;
       }
-      function g(e) {
-        return m.Get().m_mapDiscountEventsByID.get(e);
+      function v(t) {
+        return p.Get().m_mapDiscountEventsByID.get(t);
       }
       function h() {
-        return m.Get().m_discountEventsCallbackList;
-      }
-      function v() {
-        const [e, t] = n.useState(m.Get().m_rgDiscountEvents);
-        return (0, a.Qg)(m.Get().m_discountEventsCallbackList, t), e;
+        return p.Get().m_discountEventsCallbackList;
       }
       function D() {
-        const [e, t] = n.useState(m.Get().m_setVisibleDiscountEventIDs);
-        return (0, a.Qg)(m.Get().m_visibleDiscountEventIDsCallbackList, t), e;
+        const [t, e] = i.useState(p.Get().m_rgDiscountEvents);
+        return (0, o.Qg)(p.Get().m_discountEventsCallbackList, e), t;
       }
-      function y(e = !0) {
-        return m.Get().m_setVisibleDiscountEventIDs;
+      function _() {
+        const [t, e] = i.useState(p.Get().m_setVisibleDiscountEventIDs);
+        return (0, o.Qg)(p.Get().m_visibleDiscountEventIDsCallbackList, e), t;
       }
-      function S(e) {
-        const [t, i] = n.useState(m.Get().m_mapDiscountEventsByID.get(e)),
-          r = n.useCallback(
-            () => i(m.Get().m_mapDiscountEventsByID.get(e)),
-            [e]
+      function f(t = !0) {
+        return p.Get().m_setVisibleDiscountEventIDs;
+      }
+      function P(t) {
+        const [e, n] = i.useState(p.Get().m_mapDiscountEventsByID.get(t)),
+          a = i.useCallback(
+            () => n(p.Get().m_mapDiscountEventsByID.get(t)),
+            [t]
           );
         return (
-          (0, a.Qg)(m.Get().m_discountEventsCallbackList, r),
-          n.useEffect(r, [e, r]),
-          t
+          (0, o.Qg)(p.Get().m_discountEventsCallbackList, a),
+          i.useEffect(a, [t, a]),
+          e
         );
       }
-      function b(e = !0) {
-        const [t, i] = n.useState(m.Get().GetEventSelectionParameters()),
-          r = e ? m.Get().m_gridEventSelectionParametersCallbackList : null;
-        return (0, a.Qg)(r, i), t;
+      function E(t = !0) {
+        const [e, n] = i.useState(p.Get().GetEventSelectionParameters()),
+          a = t ? p.Get().m_gridEventSelectionParametersCallbackList : null;
+        return (0, o.Qg)(a, n), e;
       }
-      function f() {
-        const [e, t] = n.useState(m.Get().m_eRelatedDiscountView);
-        (0, a.Qg)(m.Get().m_RelatedDiscountViewCallbackList, t);
+      function k() {
+        const [t, e] = i.useState(p.Get().m_eRelatedDiscountView);
+        (0, o.Qg)(p.Get().m_RelatedDiscountViewCallbackList, e);
         return [
-          e,
-          n.useCallback((e) => {
-            (m.Get().m_eRelatedDiscountView = e),
-              window.localStorage.setItem(u, e),
-              m.Get().m_RelatedDiscountViewCallbackList.Dispatch(e);
+          t,
+          i.useCallback((t) => {
+            (p.Get().m_eRelatedDiscountView = t),
+              window.localStorage.setItem(d, t),
+              p.Get().m_RelatedDiscountViewCallbackList.Dispatch(t);
           }, []),
         ];
       }
-      function E() {
-        return n.useCallback(() => {
-          m.Get().UpdateVisibleDiscountEventIDs();
+      function I() {
+        return i.useCallback(() => {
+          p.Get().UpdateVisibleDiscountEventIDs();
         }, []);
       }
     },
-    93923: (e, t, i) => {
+    93923: (t, e, n) => {
       "use strict";
-      i.d(t, {
-        A$: () => v,
-        Eg: () => b,
-        Ii: () => y,
-        JP: () => S,
+      n.d(e, {
+        A$: () => D,
+        Eg: () => E,
+        Ii: () => f,
+        JP: () => P,
         O7: () => h,
-        UA: () => _,
-        zQ: () => m,
-        zV: () => g,
+        UA: () => m,
+        zQ: () => p,
+        zV: () => v,
       });
-      var n = i(89526),
-        r = i(84343),
-        s = i(32765),
-        a = i(14826),
-        o = i(91849),
-        l = i.n(o),
-        c = i(20614),
-        d = i(61785);
-      i(5615);
-      function u(e) {
-        var t;
-        const { fnBLocalChangesExist: i, fnWarnUser: r, cell: o } = e,
-          c = o.getRow().getData().packageID,
-          d =
-            null !== (t = o.getValue()) && void 0 !== t
-              ? t
-              : n.createElement(
+      var i = n(89526),
+        a = n(84343),
+        s = n(32765),
+        o = n(14826),
+        r = n(91849),
+        c = n.n(r),
+        l = n(20614),
+        u = n(61785);
+      function d(t) {
+        var e;
+        const { fnBLocalChangesExist: n, fnWarnUser: a, cell: r } = t,
+          l = r.getRow().getData().packageID,
+          u =
+            null !== (e = r.getValue()) && void 0 !== e
+              ? e
+              : i.createElement(
                   "span",
-                  { className: l().UnknownValue },
-                  (0, a.Xx)("#PackageGrid_PackageID", c)
+                  { className: c().UnknownValue },
+                  (0, o.Xx)("#PackageGrid_PackageID", l)
                 );
-        return n.createElement(
-          b,
+        return i.createElement(
+          E,
           {
-            fnBLocalChangesExist: i,
-            fnWarnUser: r,
-            href: `${s.De.PARTNER_BASE_URL}store/packagelanding/${c}`,
-            strToolTip: (0, a.Xx)("#PackageGrid_VisitPackagePricing_Tooltip"),
+            fnBLocalChangesExist: n,
+            fnWarnUser: a,
+            href: `${s.De.PARTNER_BASE_URL}store/packagelanding/${l}`,
+            strToolTip: (0, o.Xx)("#PackageGrid_VisitPackagePricing_Tooltip"),
           },
-          d
+          u
         );
       }
-      function m(e) {
-        return n.useMemo(
+      function p(t) {
+        return i.useMemo(
           () => ({
             visible: !0,
-            title: (0, a.Xx)("#PackageGrid_Column_PackageID"),
+            title: (0, o.Xx)("#PackageGrid_Column_PackageID"),
             field: "packageID",
             headerSort: !1,
-            formatter: (0, c.reactFormatter)(
-              n.createElement(u, Object.assign({}, e))
+            formatter: (0, l.reactFormatter)(
+              i.createElement(d, Object.assign({}, t))
             ),
-            cssClass: l().PackageID,
+            cssClass: c().PackageID,
             hozAlign: "right",
             frozen: !0,
-            headerTooltip: (0, a.Xx)("#PackageGrid_Column_PackageID_ttip"),
+            headerTooltip: (0, o.Xx)("#PackageGrid_Column_PackageID_ttip"),
           }),
-          [e]
+          [t]
         );
       }
-      function p(e, t, i, n) {
+      function g(t, e, n, i) {
         return (
           !!(
-            /^\d+$/.test(e) &&
-            i.packageID &&
-            i.packageID.toString().startsWith(e)
-          ) || t.toLowerCase().includes(e.toLowerCase())
+            /^\d+$/.test(t) &&
+            n.packageID &&
+            n.packageID.toString().startsWith(t)
+          ) || e.toLowerCase().includes(t.toLowerCase())
         );
       }
-      function _(e) {
-        return n.useMemo(
+      function m(t) {
+        return i.useMemo(
           () => ({
-            title: (0, a.Xx)("#PackageGrid_Column_PackageName"),
+            title: (0, o.Xx)("#PackageGrid_Column_PackageName"),
             field: "packageName",
             headerSort: !1,
-            formatter: (0, c.reactFormatter)(
-              n.createElement(u, Object.assign({}, e))
+            formatter: (0, l.reactFormatter)(
+              i.createElement(d, Object.assign({}, t))
             ),
-            cssClass: l().PackageName,
+            cssClass: c().PackageName,
             width: 300,
             frozen: !0,
             variableHeight: !0,
-            headerTooltip: (0, a.Xx)("#PackageGrid_Column_PackageName_ttip"),
+            headerTooltip: (0, o.Xx)("#PackageGrid_Column_PackageName_ttip"),
             headerFilter: "input",
-            headerFilterPlaceholder: (0, a.Xx)(
+            headerFilterPlaceholder: (0, o.Xx)(
               "#PackageGrid_PackageNameFilterInputPrompt"
             ),
-            headerFilterFunc: p,
+            headerFilterFunc: g,
           }),
-          [e]
+          [t]
         );
       }
-      function g(e) {
-        return n.useMemo(
+      function v(t) {
+        return i.useMemo(
           () => ({
             visible: !1,
             title: "App IDs - hidden column",
@@ -8745,306 +4179,306 @@
           []
         );
       }
-      function h(e) {
-        return n.useMemo(
+      function h(t) {
+        return i.useMemo(
           () => ({
             visible: !1,
-            title: (0, a.Xx)("#PackageGrid_Column_PackageType"),
+            title: (0, o.Xx)("#PackageGrid_Column_PackageType"),
             field: "packageType",
             headerSort: !1,
-            cssClass: l().PackageType,
-            headerTooltip: (0, a.Xx)("#PackageGrid_Column_PackageType_ttip"),
+            cssClass: c().PackageType,
+            headerTooltip: (0, o.Xx)("#PackageGrid_Column_PackageType_ttip"),
             frozen: !0,
           }),
           []
         );
       }
-      function v(e) {
-        const t = e.getCell("packageType"),
-          i = t && "function" == typeof t.getValue && t.getValue();
-        i && e.getElement().classList.add(i),
-          e.getNextRow() || e.getElement().classList.add(l().LastRow);
+      function D(t) {
+        const e = t.getCell("packageType"),
+          n = e && "function" == typeof e.getValue && e.getValue();
+        n && t.getElement().classList.add(n),
+          t.getNextRow() || t.getElement().classList.add(c().LastRow);
       }
-      function D(e) {
-        var t;
-        const { fnBLocalChangesExist: i, fnWarnUser: r, cell: o } = e,
-          l = o.getRow().getData().appids,
-          c =
-            null !== (t = null == l ? void 0 : l.length) && void 0 !== t
-              ? t
+      function _(t) {
+        var e;
+        const { fnBLocalChangesExist: n, fnWarnUser: a, cell: r } = t,
+          c = r.getRow().getData().appids,
+          l =
+            null !== (e = null == c ? void 0 : c.length) && void 0 !== e
+              ? e
               : 0,
-          d = o.getRow().getData().packageID;
-        return n.createElement(
-          b,
+          u = r.getRow().getData().packageID;
+        return i.createElement(
+          E,
           {
-            fnBLocalChangesExist: i,
-            fnWarnUser: r,
-            href: `${s.De.PARTNER_BASE_URL}store/packagelanding/${d}`,
-            strToolTip: (0, a.Xx)("#PackageGrid_VisitPackagePricing_Tooltip"),
+            fnBLocalChangesExist: n,
+            fnWarnUser: a,
+            href: `${s.De.PARTNER_BASE_URL}store/packagelanding/${u}`,
+            strToolTip: (0, o.Xx)("#PackageGrid_VisitPackagePricing_Tooltip"),
           },
-          1 == c ? "1 appid" : c + " appids"
+          1 == l ? "1 appid" : l + " appids"
         );
       }
-      function y(e) {
-        return n.useMemo(
+      function f(t) {
+        return i.useMemo(
           () => ({
-            title: (0, a.Xx)("#PackageGrid_Column_AppName"),
+            title: (0, o.Xx)("#PackageGrid_Column_AppName"),
             field: "appName",
-            sorter: d.yh,
+            sorter: u.yh,
             headerSort: !1,
-            formatter: (0, c.reactFormatter)(
-              n.createElement(D, Object.assign({}, e))
+            formatter: (0, l.reactFormatter)(
+              i.createElement(_, Object.assign({}, t))
             ),
-            cssClass: l().AppCount,
+            cssClass: c().AppCount,
             width: 80,
             frozen: !0,
-            headerTooltip: (0, a.Xx)("#PackageGrid_Column_AppName_ttip"),
+            headerTooltip: (0, o.Xx)("#PackageGrid_Column_AppName_ttip"),
           }),
-          [e]
-        );
-      }
-      function S(e, t, i, n) {
-        return e == (0, a.Xx)("#PackageGrid_NoBaseGameFoundForPackage")
-          ? `<div title='${(0, a.Xx)(
-              "#PackageGrid_NoBaseGameExplanation"
-            )}' >${e} (?) <span>(${(0, a.kb)(
-              "#PackageGrid_PackageCount",
-              t
-            )})</span></div>`
-          : `<div>${e} <span>(${(0, a.kb)(
-              "#PackageGrid_PackageCount",
-              t
-            )})</span></div>`;
-      }
-      function b(e) {
-        const {
-          fnBLocalChangesExist: t,
-          fnWarnUser: i,
-          href: s,
-          children: a,
-          strToolTip: o,
-          strClassName: l,
-        } = e;
-        return n.createElement(
-          r.HP,
-          { toolTipContent: o, className: l },
-          n.createElement(
-            "a",
-            {
-              onClick: (e) => {
-                t() && (e.preventDefault(), i(e, s));
-              },
-              href: s,
-            },
-            a
-          )
-        );
-      }
-    },
-    62176: (e, t, i) => {
-      "use strict";
-      i.d(t, { j: () => s });
-      var n = i(89526),
-        r = i(14826);
-      function s(e) {
-        const t = n.useCallback(
-          (t) => {
-            if (e())
-              return (
-                t.preventDefault(),
-                (t.returnValue = (0, r.Xx)(
-                  "#PackageGrid_NavigationWarning_Title"
-                )),
-                t.returnValue
-              );
-          },
-          [e]
-        );
-        n.useEffect(
-          () => (
-            window.addEventListener("beforeunload", t),
-            () => window.removeEventListener("beforeunload", t)
-          ),
           [t]
         );
       }
+      function P(t, e, n, i) {
+        return t == (0, o.Xx)("#PackageGrid_NoBaseGameFoundForPackage")
+          ? `<div title='${(0, o.Xx)(
+              "#PackageGrid_NoBaseGameExplanation"
+            )}' >${t} (?) <span>(${(0, o.kb)(
+              "#PackageGrid_PackageCount",
+              e
+            )})</span></div>`
+          : `<div>${t} <span>(${(0, o.kb)(
+              "#PackageGrid_PackageCount",
+              e
+            )})</span></div>`;
+      }
+      function E(t) {
+        const {
+          fnBLocalChangesExist: e,
+          fnWarnUser: n,
+          href: s,
+          children: o,
+          strToolTip: r,
+          strClassName: c,
+        } = t;
+        return i.createElement(
+          a.HP,
+          { toolTipContent: r, className: c },
+          i.createElement(
+            "a",
+            {
+              onClick: (t) => {
+                e() && (t.preventDefault(), n(t, s));
+              },
+              href: s,
+            },
+            o
+          )
+        );
+      }
     },
-    61785: (e, t, i) => {
+    62176: (t, e, n) => {
       "use strict";
-      i.d(t, { $k: () => m, yh: () => s });
-      var n = i(60161),
-        r = i(14826);
-      function s(e, t, i, n) {
-        const s = (0, r.Xx)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
-          a = (0, r.Xx)("#PackageGrid_NoBaseGameFoundForPackage"),
-          o = e == s,
-          l = e == a,
-          c = !o && !l,
-          d = t == s,
-          u = t == a,
-          m = !d && !u;
-        if (c && m) return e.localeCompare(t);
-        if (c || m) return c ? -1 : 1;
-        if (o == d && l == u) {
-          const e = i.getData().packageName,
-            t = n.getData().packageName;
-          return e && t
-            ? e.localeCompare(t)
-            : e || t
-            ? e
+      n.d(e, { j: () => s });
+      var i = n(89526),
+        a = n(14826);
+      function s(t) {
+        const e = i.useCallback(
+          (e) => {
+            if (t())
+              return (
+                e.preventDefault(),
+                (e.returnValue = (0, a.Xx)(
+                  "#PackageGrid_NavigationWarning_Title"
+                )),
+                e.returnValue
+              );
+          },
+          [t]
+        );
+        i.useEffect(
+          () => (
+            window.addEventListener("beforeunload", e),
+            () => window.removeEventListener("beforeunload", e)
+          ),
+          [e]
+        );
+      }
+    },
+    61785: (t, e, n) => {
+      "use strict";
+      n.d(e, { $k: () => p, yh: () => s });
+      var i = n(60161),
+        a = n(14826);
+      function s(t, e, n, i) {
+        const s = (0, a.Xx)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
+          o = (0, a.Xx)("#PackageGrid_NoBaseGameFoundForPackage"),
+          r = t == s,
+          c = t == o,
+          l = !r && !c,
+          u = e == s,
+          d = e == o,
+          p = !u && !d;
+        if (l && p) return t.localeCompare(e);
+        if (l || p) return l ? -1 : 1;
+        if (r == u && c == d) {
+          const t = n.getData().packageName,
+            e = i.getData().packageName;
+          return t && e
+            ? t.localeCompare(e)
+            : t || e
+            ? t
               ? -1
               : 1
-            : i.getData().packageID - n.getData().packageID;
+            : n.getData().packageID - i.getData().packageID;
         }
-        return o ? -1 : 1;
+        return r ? -1 : 1;
       }
-      const a = (e) => e.nextElementSibling,
-        o = (e) => e.previousElementSibling,
-        l = (e, t) => {
-          const i = e.getAttribute("tabulator-field"),
-            n = e.parentElement;
-          let r = n && t(n);
-          for (; i && r; ) {
-            for (const e of Array.from(r.children))
-              if (i == e.getAttribute("tabulator-field")) return e;
-            r = t(r);
+      const o = (t) => t.nextElementSibling,
+        r = (t) => t.previousElementSibling,
+        c = (t, e) => {
+          const n = t.getAttribute("tabulator-field"),
+            i = t.parentElement;
+          let a = i && e(i);
+          for (; n && a; ) {
+            for (const t of Array.from(a.children))
+              if (n == t.getAttribute("tabulator-field")) return t;
+            a = e(a);
           }
           return null;
         },
-        c = new Map([
-          [38, (e) => l(e, o)],
-          [39, a],
-          [40, (e) => l(e, a)],
-          [37, o],
-          [9, (e) => l(e, a)],
-          [13, (e) => l(e, a)],
+        l = new Map([
+          [38, (t) => c(t, r)],
+          [39, o],
+          [40, (t) => c(t, o)],
+          [37, r],
+          [9, (t) => c(t, o)],
+          [13, (t) => c(t, o)],
         ]);
-      function d(e) {
-        return (0, n.Jk)(e, (e) => e.classList.contains("tabulator-cell"));
+      function u(t) {
+        return (0, i.Jk)(t, (t) => t.classList.contains("tabulator-cell"));
       }
-      function u(e) {
-        const t = Array.prototype.slice.call(e.children).reverse();
-        for (; t.length > 0; ) {
-          const e = t.pop();
-          if ("input" === e.tagName.toLowerCase()) return e;
-          t.push(...Array.prototype.slice.call(e.children).reverse());
+      function d(t) {
+        const e = Array.prototype.slice.call(t.children).reverse();
+        for (; e.length > 0; ) {
+          const t = e.pop();
+          if ("input" === t.tagName.toLowerCase()) return t;
+          e.push(...Array.prototype.slice.call(t.children).reverse());
         }
         return null;
       }
-      function m(e, t) {
-        var i;
-        const n = c.get(e.keyCode);
-        if (!n) return;
-        let r = n(d(e.currentTarget));
-        for (; r; ) {
+      function p(t, e) {
+        var n;
+        const i = l.get(t.keyCode);
+        if (!i) return;
+        let a = i(u(t.currentTarget));
+        for (; a; ) {
           if (
             "none" !=
-              (null === (i = r.style) || void 0 === i ? void 0 : i.display) &&
-            !r.classList.contains("tabulator-frozen")
+              (null === (n = a.style) || void 0 === n ? void 0 : n.display) &&
+            !a.classList.contains("tabulator-frozen")
           ) {
-            const i = u(r);
-            if (i) {
-              return p(t, d(i)), i.focus(), void e.preventDefault();
+            const n = d(a);
+            if (n) {
+              return g(e, u(n)), n.focus(), void t.preventDefault();
             }
           }
-          r = n(r);
+          a = i(a);
         }
       }
-      function p(e, t) {
-        const i = e.columnManager.scrollLeft,
-          n = t.offsetWidth,
-          r = t.offsetLeft,
-          s = r + n,
-          a = e.columnManager.element.clientWidth,
-          o = e.columnManager.headersElement.clientWidth,
-          l = i + a;
-        if (r >= l - o && s <= l) return;
-        const c = (r + s) / 2 - (a - o / 2),
-          d = (o - n) / 4,
-          u = c + (c > i ? d : -1 * d);
-        e.columnManager.scrollHorizontal(u), e.rowManager.scrollHorizontal(u);
+      function g(t, e) {
+        const n = t.columnManager.scrollLeft,
+          i = e.offsetWidth,
+          a = e.offsetLeft,
+          s = a + i,
+          o = t.columnManager.element.clientWidth,
+          r = t.columnManager.headersElement.clientWidth,
+          c = n + o;
+        if (a >= c - r && s <= c) return;
+        const l = (a + s) / 2 - (o - r / 2),
+          u = (r - i) / 4,
+          d = l + (l > n ? u : -1 * u);
+        t.columnManager.scrollHorizontal(d), t.rowManager.scrollHorizontal(d);
       }
     },
-    2220: (e, t, i) => {
+    2220: (t, e, n) => {
       "use strict";
-      i.d(t, { R1: () => l, Sx: () => a, xs: () => d });
-      var n = i(33940),
-        r = (i(52868), i(42770), i(53143), i(74429), i(57858)),
-        s = i(14826);
-      const a = new Set([0, 2, 6, 13]),
-        o = new Set([4, 7, 11]);
-      function l(e) {
-        var t, i;
-        let n,
-          l = !1,
-          c = !1;
-        const d = new Set();
-        for (const i of null !==
-          (t = null == e ? void 0 : e.GetIncludedAppIDs()) && void 0 !== t
-          ? t
+      n.d(e, { R1: () => c, Sx: () => o, xs: () => u });
+      var i = n(33940),
+        a = n(57858),
+        s = n(14826);
+      const o = new Set([0, 2, 6, 13]),
+        r = new Set([4, 7, 11]);
+      function c(t) {
+        var e, n;
+        let i,
+          c = !1,
+          l = !1;
+        const u = new Set();
+        for (const n of null !==
+          (e = null == t ? void 0 : t.GetIncludedAppIDs()) && void 0 !== e
+          ? e
           : []) {
-          const e = r.Z.Get().GetApp(i);
-          if (e && a.has(e.GetAppType())) (l = !0), d.add(e.GetID());
-          else if (e && o.has(e.GetAppType())) {
-            c = !0;
-            const t = e.GetParentAppID();
-            t && d.add(t);
+          const t = a.Z.Get().GetApp(n);
+          if (t && o.has(t.GetAppType())) (c = !0), u.add(t.GetID());
+          else if (t && r.has(t.GetAppType())) {
+            l = !0;
+            const e = t.GetParentAppID();
+            e && u.add(e);
           }
         }
-        let u = null;
-        1 == d.size
-          ? ((n = Array.from(d)[0]),
-            (u =
-              null === (i = r.Z.Get().GetApp(n)) || void 0 === i
+        let d = null;
+        1 == u.size
+          ? ((i = Array.from(u)[0]),
+            (d =
+              null === (n = a.Z.Get().GetApp(i)) || void 0 === n
                 ? void 0
-                : i.GetName()))
-          : d.size > 1 &&
-            (u = (0, s.Xx)("#PackageGrid_MultipleBaseGamesFoundForPackage")),
-          u || (u = (0, s.Xx)("#PackageGrid_NoBaseGameFoundForPackage"));
+                : n.GetName()))
+          : u.size > 1 &&
+            (d = (0, s.Xx)("#PackageGrid_MultipleBaseGamesFoundForPackage")),
+          d || (d = (0, s.Xx)("#PackageGrid_NoBaseGameFoundForPackage"));
         return {
-          baseAppName: u,
-          contents: l && c ? "BOTH" : l ? "GAME" : c ? "DLC" : null,
-          nBaseAppID: n,
+          baseAppName: d,
+          contents: c && l ? "BOTH" : c ? "GAME" : l ? "DLC" : null,
+          nBaseAppID: i,
         };
       }
-      const c = { include_release: !0 };
-      function d(e, t) {
-        return (0, n.mG)(this, void 0, void 0, function* () {
+      const l = { include_release: !0 };
+      function u(t, e) {
+        return (0, i.mG)(this, void 0, void 0, function* () {
           if (
-            1 != (yield r.Z.Get().HintLoadStorePackages(e, c)) ||
-            t.token.reason
+            1 != (yield a.Z.Get().HintLoadStorePackages(t, l)) ||
+            e.token.reason
           )
             return null;
-          const i = [];
-          e.map((e) => r.Z.Get().GetPackage(e))
-            .filter((e) => !!e)
-            .forEach((e) => i.push(...e.GetIncludedAppIDs()));
-          const n = Array.from(new Set(i));
-          if (1 != (yield r.Z.Get().HintLoadStoreApps(n, c)) || t.token.reason)
+          const n = [];
+          t.map((t) => a.Z.Get().GetPackage(t))
+            .filter((t) => !!t)
+            .forEach((t) => n.push(...t.GetIncludedAppIDs()));
+          const i = Array.from(new Set(n));
+          if (1 != (yield a.Z.Get().HintLoadStoreApps(i, l)) || e.token.reason)
             return null;
-          const s = n
-              .map((e) => r.Z.Get().GetApp(e))
-              .filter((e) => !!(null == e ? void 0 : e.GetParentAppID()))
-              .map((e) => e.GetParentAppID()),
-            a = Array.from(new Set(s));
-          if (1 != (yield r.Z.Get().HintLoadStoreApps(a, c)) || t.token.reason)
+          const s = i
+              .map((t) => a.Z.Get().GetApp(t))
+              .filter((t) => !!(null == t ? void 0 : t.GetParentAppID()))
+              .map((t) => t.GetParentAppID()),
+            o = Array.from(new Set(s));
+          if (1 != (yield a.Z.Get().HintLoadStoreApps(o, l)) || e.token.reason)
             return null;
-          return Array.from(new Set(n.concat(a)));
+          return Array.from(new Set(i.concat(o)));
         });
       }
     },
-    7164: (e, t, i) => {
+    7164: (t, e, n) => {
       "use strict";
-      i.d(t, { $: () => n, _: () => r });
-      const n = "America/Los_Angeles";
-      function r(e) {
-        const t = i(47812).unix(e).tz(n);
+      n.d(e, { $: () => i, _: () => a });
+      const i = "America/Los_Angeles";
+      function a(t) {
+        const e = n(47812).unix(t).tz(i);
         return (
-          t.seconds(0),
-          t.minutes(0),
-          t.hours(10),
-          t.unix() < e && t.hours(34),
-          t.unix()
+          e.seconds(0),
+          e.minutes(0),
+          e.hours(10),
+          e.unix() < t && e.hours(34),
+          e.unix()
         );
       }
     },

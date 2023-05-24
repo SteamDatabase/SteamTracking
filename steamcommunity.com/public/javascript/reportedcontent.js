@@ -244,6 +244,16 @@ function BanReview( id )
 	);
 }
 
+function UnbanReview( id )
+{
+	UserReview_Moderate_SetBanStatus( id, 0, 'https://steamcommunity.com',
+		function( results ) {
+			ShowWithFade( $( 'unbanned_' + id ) );
+		},
+		'Mass unbanned from reported content page'
+	);
+}
+
 function BanReviewVoters( id )
 {
 	UserReview_Moderate_VoteBanUsers( id, 'https://steamcommunity.com',
@@ -287,6 +297,11 @@ function ViewReviewReports( id )
 function SelectedReviews_Ban()
 {
 	ApplyFuncOnSelectedItems( BanReview );
+}
+
+function SelectedReviews_Unban()
+{
+    ApplyFuncOnSelectedItems( UnbanReview );
 }
 
 function SelectedReviews_BanVoters()

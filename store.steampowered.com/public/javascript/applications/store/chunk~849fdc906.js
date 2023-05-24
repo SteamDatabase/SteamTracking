@@ -2,7 +2,7 @@
  ****/
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [4881],
+  [7440],
   {
     54671: (e, t, s) => {
       s.d(t, { LA: () => u, jg: () => l });
@@ -10,38 +10,11 @@
         a = s(52868),
         n = s.n(a),
         o = s(50265),
-        i = (s(46132), s(42770), s(47165), s(63403), s(23217)),
+        i = s(23217),
         d = s(32765),
         m = s(89526);
       const p = "unUserdataVersion";
       class l {
-        constructor() {
-          (this.m_setWishList = new Set()),
-            (this.m_wishlistInOrder = Array()),
-            (this.m_setOwnedPackages = new Set()),
-            (this.m_setOwnedApps = new Set()),
-            (this.m_setFollowedApps = new Set()),
-            (this.m_setExcludedTagsIds = new Set()),
-            (this.m_setExcludedContentDescriptors = new Set()),
-            (this.m_setRecommendedApps = new Set()),
-            (this.m_recAppInOrder = new Array()),
-            (this.m_mapIgnoredApps = new Map()),
-            (this.m_mapIgnoredPackages = new Map()),
-            (this.m_setCuratorsFollowed = new Set()),
-            (this.m_setCuratorsIgnored = new Set()),
-            (this.m_bShowFilteredUserReviewScores = !0),
-            (this.m_setPreferredPlatforms = new Set()),
-            (this.m_bAllowAppImpressions = !1),
-            (this.m_primaryLanguage = -1),
-            (this.m_secondaryLanguages = new Set()),
-            (this.m_setRecommendedTags = new Set()),
-            (this.m_mapRecommendingCuratorsForApp = new Map()),
-            (this.m_setPackagesInCart = new Set()),
-            (this.m_setAppsInCart = new Set()),
-            (this.m_nCartLineItemCount = 0),
-            (this.m_bIsLoaded = !1),
-            (this.m_bAjaxInFlight = !1);
-        }
         BIsLoaded() {
           return this.m_bIsLoaded;
         }
@@ -476,6 +449,33 @@
             l.s_globalSingletonStore
           );
         }
+        constructor() {
+          (this.m_setWishList = new Set()),
+            (this.m_wishlistInOrder = Array()),
+            (this.m_setOwnedPackages = new Set()),
+            (this.m_setOwnedApps = new Set()),
+            (this.m_setFollowedApps = new Set()),
+            (this.m_setExcludedTagsIds = new Set()),
+            (this.m_setExcludedContentDescriptors = new Set()),
+            (this.m_setRecommendedApps = new Set()),
+            (this.m_recAppInOrder = new Array()),
+            (this.m_mapIgnoredApps = new Map()),
+            (this.m_mapIgnoredPackages = new Map()),
+            (this.m_setCuratorsFollowed = new Set()),
+            (this.m_setCuratorsIgnored = new Set()),
+            (this.m_bShowFilteredUserReviewScores = !0),
+            (this.m_setPreferredPlatforms = new Set()),
+            (this.m_bAllowAppImpressions = !1),
+            (this.m_primaryLanguage = -1),
+            (this.m_secondaryLanguages = new Set()),
+            (this.m_setRecommendedTags = new Set()),
+            (this.m_mapRecommendingCuratorsForApp = new Map()),
+            (this.m_setPackagesInCart = new Set()),
+            (this.m_setAppsInCart = new Set()),
+            (this.m_nCartLineItemCount = 0),
+            (this.m_bIsLoaded = !1),
+            (this.m_bAjaxInFlight = !1);
+        }
       }
       function u() {
         const [e, t] = (0, m.useState)(!l.Get().BIsLoaded());
@@ -534,8 +534,8 @@
         a = s(57742),
         n = s(14826),
         o = s(32765),
-        i = s(90580),
-        d = (s(62055), s(36597)),
+        i = s(44839),
+        d = s(19094),
         m = s(79925);
       function p(e) {
         return r.createElement(

@@ -316,7 +316,6 @@
         n = r(19304),
         s = r(51964),
         l = r.n(s);
-      r(11301);
       let m = class extends a.Component {
         static get hoverClass() {
           return l().hoverParent;
@@ -377,7 +376,7 @@
         a = r(89526),
         o = r(88464),
         n = r(14826),
-        s = (r(6681), r(11301)),
+        s = r(11301),
         l = r(19304),
         m = r(701),
         c = r(61204),
@@ -461,8 +460,8 @@
         o = r(52868),
         n = r.n(o),
         s = r(50265),
-        l = (r(46132), r(65406)),
-        m = r(88337),
+        l = r(65406),
+        m = r(58961),
         c = r(89526),
         d = r(88464),
         p = r(32765),
@@ -998,12 +997,11 @@
             : c.createElement(_.vV, Object.assign({ persona: t }, o, l), n);
         };
       var L = r(47165),
-        b = (r(3641), r(20830)),
-        w = (r(72329), r(90531)),
-        O = r(52316),
-        D = r(54856),
-        x = r(53236);
-      class R {
+        b = r(90531),
+        w = r(52316),
+        O = r(46875),
+        D = r(53236);
+      class x {
         constructor(e) {
           this.m_SteamInterface = e;
         }
@@ -1024,12 +1022,12 @@
         }
         LoadAvatarHistory() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = D.gA.Init(x.Er);
+            const e = O.gA.Init(D.Er);
             e.SetBodyFields({
               steamid: p.L7.steamid,
               filter_user_uploaded_only: !0,
             });
-            let t = yield x.AE.GetAvatarHistory(
+            let t = yield D.AE.GetAvatarHistory(
               this.m_SteamInterface.GetServiceTransport(),
               e
             );
@@ -1076,8 +1074,8 @@
           });
         }
       }
-      (0, i.gn)([s.LO], R.prototype, "m_rgPreviousAvatars", void 0);
-      class T {
+      (0, i.gn)([s.LO], x.prototype, "m_rgPreviousAvatars", void 0);
+      class R {
         GetRecentGameAvatars() {
           return (
             this.StartLoadIfNeeded(),
@@ -1147,7 +1145,7 @@
           });
         }
       }
-      function M(e) {
+      function T(e) {
         switch (e) {
           case 1:
             return (0, h.Xx)("#Privacy_Private");
@@ -1159,11 +1157,11 @@
             return "";
         }
       }
-      function F(e, t) {
+      function M(e, t) {
         return e < t ? e : t;
       }
-      (0, i.gn)([s.LO.shallow], T.prototype, "m_AvatarData", void 0);
-      class U {
+      (0, i.gn)([s.LO.shallow], R.prototype, "m_AvatarData", void 0);
+      class F {
         constructor(e, t) {
           (this.m_eSaveStateByKey = new Map()),
             (this.m_eCommentSaveState = 0),
@@ -1172,27 +1170,27 @@
         }
         GetPrivacySetting(e) {
           return "PrivacyOwnedGames" == e
-            ? F(
+            ? M(
                 this.m_PrivacySettings.PrivacyProfile,
                 this.m_PrivacySettings.PrivacyOwnedGames
               )
             : "PrivacyPlaytime" == e
-            ? F(
+            ? M(
                 this.GetPrivacySetting("PrivacyOwnedGames"),
                 this.m_PrivacySettings.PrivacyPlaytime
               )
             : "PrivacyInventory" == e
-            ? F(
+            ? M(
                 this.m_PrivacySettings.PrivacyProfile,
                 this.m_PrivacySettings.PrivacyInventory
               )
             : "PrivacyInventoryGifts" == e
-            ? F(
+            ? M(
                 this.GetPrivacySetting("PrivacyInventory"),
                 this.m_PrivacySettings.PrivacyInventoryGifts
               )
             : "PrivacyFriendsList" == e
-            ? F(
+            ? M(
                 this.m_PrivacySettings.PrivacyProfile,
                 this.m_PrivacySettings.PrivacyFriendsList
               )
@@ -1277,10 +1275,11 @@
           );
         }
       }
-      (0, i.gn)([s.LO], U.prototype, "m_PrivacySettings", void 0),
-        (0, i.gn)([s.LO], U.prototype, "m_eCommentPermission", void 0),
-        (0, i.gn)([s.LO], U.prototype, "m_eSaveStateByKey", void 0),
-        (0, i.gn)([s.LO], U.prototype, "m_eCommentSaveState", void 0);
+      (0, i.gn)([s.LO], F.prototype, "m_PrivacySettings", void 0),
+        (0, i.gn)([s.LO], F.prototype, "m_eCommentPermission", void 0),
+        (0, i.gn)([s.LO], F.prototype, "m_eSaveStateByKey", void 0),
+        (0, i.gn)([s.LO], F.prototype, "m_eCommentSaveState", void 0);
+      var U = r(20830);
       class H {
         constructor(e, t, r) {
           (this.m_rgBadges = []),
@@ -1326,12 +1325,12 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return 1;
             let e = this.FavoriteBadgeID,
-              t = D.gA.Init(b.nZ);
+              t = O.gA.Init(U.nZ);
             e.badgeid
               ? t.Body().set_badgeid(e.badgeid)
               : e.communityitemid &&
                 t.Body().set_communityitemid(e.communityitemid);
-            let r = yield b.lk.SetFavoriteBadge(
+            let r = yield U.lk.SetFavoriteBadge(
               this.m_CMInterface.GetServiceTransport(),
               t
             );
@@ -1513,12 +1512,12 @@
               this.m_Backgrounds.BIsUncomitted())
             ) {
               {
-                let e = D.gA.Init(b.DN);
+                let e = O.gA.Init(U.DN);
                 e.Body().set_communityitemid(
                   this.m_Backgrounds.m_EquippedItem &&
                     this.m_Backgrounds.m_EquippedItem.communityitemid
                 );
-                let t = yield b.lk.SetProfileBackground(
+                let t = yield U.lk.SetProfileBackground(
                   this.m_SteamInterface.GetServiceTransport(),
                   e
                 );
@@ -1528,14 +1527,14 @@
                 this.m_Backgrounds.m_EquippedItem &&
                 this.m_Backgrounds.m_EquippedItem.communityitemid
               ) {
-                let e = D.gA.Init(b.jZ);
+                let e = O.gA.Init(U.jZ);
                 e
                   .Body()
                   .set_communityitemid(
                     this.m_Backgrounds.m_EquippedItem.communityitemid
                   ),
                   e.Body().set_flags(this.m_Backgrounds.m_EquipFlags);
-                let t = yield b.lk.SetEquippedProfileItemFlags(
+                let t = yield U.lk.SetEquippedProfileItemFlags(
                   this.m_SteamInterface.GetServiceTransport(),
                   e
                 );
@@ -1586,12 +1585,12 @@
         CommitMiniProfileChanges() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (this.m_MiniProfileBackgrounds.BIsUncomitted()) {
-              let e = D.gA.Init(b.N$);
+              let e = O.gA.Init(U.N$);
               e.Body().set_communityitemid(
                 this.m_MiniProfileBackgrounds.m_EquippedItem &&
                   this.m_MiniProfileBackgrounds.m_EquippedItem.communityitemid
               );
-              let t = yield b.lk.SetMiniProfileBackground(
+              let t = yield U.lk.SetMiniProfileBackground(
                 this.m_SteamInterface.GetServiceTransport(),
                 e
               );
@@ -1617,27 +1616,27 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             let e, t;
             if (this.m_Avatars.BIsUncomitted()) {
-              let t = D.gA.Init(b.RR);
+              let t = O.gA.Init(U.RR);
               t
                 .Body()
                 .set_communityitemid(
                   this.m_Avatars.m_EquippedItem &&
                     this.m_Avatars.m_EquippedItem.communityitemid
                 ),
-                (e = b.lk.SetAnimatedAvatar(
+                (e = U.lk.SetAnimatedAvatar(
                   this.m_SteamInterface.GetServiceTransport(),
                   t
                 ));
             }
             if (this.m_AvatarFrames.BIsUncomitted()) {
-              let e = D.gA.Init(b.Dq);
+              let e = O.gA.Init(U.Dq);
               e
                 .Body()
                 .set_communityitemid(
                   this.m_AvatarFrames.m_EquippedItem &&
                     this.m_AvatarFrames.m_EquippedItem.communityitemid
                 ),
-                (t = b.lk.SetAvatarFrame(
+                (t = U.lk.SetAvatarFrame(
                   this.m_SteamInterface.GetServiceTransport(),
                   e
                 ));
@@ -1789,10 +1788,10 @@
           this.m_ProfileModifiers.Revert();
         }
         ReloadEquippedItems() {
-          let e = D.gA.Init(b.cy);
+          let e = O.gA.Init(U.cy);
           e.Body().set_steamid(p.L7.steamid),
             e.Body().set_language(p.De.LANGUAGE),
-            (this.m_promiseEquipped = b.lk.GetProfileItemsEquipped(
+            (this.m_promiseEquipped = U.lk.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
               e
             )),
@@ -1815,7 +1814,7 @@
                 this.m_ProfileModifiers.m_CommittedEquippedItem !=
                   this.m_ProfileModifiers.m_EquippedItem
               ) {
-                let t = D.gA.Init(z.yg);
+                let t = O.gA.Init(z.yg);
                 t
                   .Body()
                   .set_communityitemid(
@@ -1836,7 +1835,7 @@
                 e = !0;
               }
               if (this.m_ProfileModifiers.m_EquippedItem) {
-                let t = D.gA.Init(z.yg);
+                let t = O.gA.Init(z.yg);
                 t
                   .Body()
                   .set_communityitemid(
@@ -1885,16 +1884,16 @@
         }
         Initialize() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = D.gA.Init(b.XF);
+            let e = O.gA.Init(U.XF);
             e.Body().set_language(p.De.LANGUAGE),
-              (this.m_promiseOwned = b.lk.GetProfileItemsOwned(
+              (this.m_promiseOwned = U.lk.GetProfileItemsOwned(
                 this.m_SteamInterface.GetServiceTransport(),
                 e
               ));
-            let t = D.gA.Init(b.cy);
+            let t = O.gA.Init(U.cy);
             t.Body().set_steamid(p.L7.steamid),
               t.Body().set_language(p.De.LANGUAGE),
-              (this.m_promiseEquipped = b.lk.GetProfileItemsEquipped(
+              (this.m_promiseEquipped = U.lk.GetProfileItemsEquipped(
                 this.m_SteamInterface.GetServiceTransport(),
                 t
               ));
@@ -2198,13 +2197,13 @@
         }
         CommitActiveTheme() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = D.gA.Init(b.tf);
+            let e = O.gA.Init(U.tf);
             e.Body().set_theme_id(
               "Default" == this.ActiveTheme.theme_id
                 ? ""
                 : this.ActiveTheme.theme_id
             );
-            const t = yield b.lk.SetProfileTheme(
+            const t = yield U.lk.SetProfileTheme(
               this.m_CMInterface.GetServiceTransport(),
               e
             );
@@ -2347,9 +2346,9 @@
       }
       class ne {
         constructor(e, t, r) {
-          (this.m_OGGAvatars = new T()),
-            (this.m_EmoticonStore = new O.M()),
-            (this.m_EmoticonHoverStore = new w.Q()),
+          (this.m_OGGAvatars = new R()),
+            (this.m_EmoticonStore = new w.M()),
+            (this.m_EmoticonHoverStore = new b.Q()),
             (this.m_Profile = new se(e)),
             (this.m_WebAPI = r),
             (this.m_AppInfoStore = new m.md()),
@@ -2370,11 +2369,11 @@
               e.ActiveTheme,
               e.rgAvailableThemes
             )),
-            (this.m_ProfilePrivacy = new U(
+            (this.m_ProfilePrivacy = new F(
               e.Privacy.PrivacySettings,
               e.Privacy.eCommentPermission
             )),
-            (this.m_AvatarHistory = new R(this.m_WebAPI)),
+            (this.m_AvatarHistory = new x(this.m_WebAPI)),
             this.m_ProfileItems.AddOnAvatarEquipmentChangedCallback(() => {
               this.m_Profile.MiniProfileData.Reload(),
                 this.m_AvatarHistory.RefreshAvatarHistory();
@@ -2620,13 +2619,13 @@
         (0, i.gn)([s.aD], se.prototype, "SetAvatarHash", null),
         (0, i.gn)([s.aD], se.prototype, "RevertToComittedAvatarHash", null);
       var le = r(59934),
-        me = r(42770),
+        me = r(86283),
         ce = r(27070),
         de = (r(1721), r(73961)),
         pe = r(10476),
         ue = r(57605),
         he = r(4306),
-        ve = (r(99307), r(82311));
+        ve = r(82311);
       let _e = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
@@ -3133,7 +3132,7 @@
             )
           );
       var be = r(88909),
-        we = r(72120);
+        we = (r(2647), r(72120));
       const Oe = ({ title: e, className: t, children: r }) =>
           c.createElement(
             "div",
@@ -3827,7 +3826,7 @@
           )
         );
       });
-      var Je = r(86531);
+      var Je = r(92307);
       class et extends c.Component {
         render() {
           const {
@@ -4798,7 +4797,7 @@
               {
                 PrivacyStore: e,
                 strLabel: (0, h.Xx)("#ProfilePrivacy_BasicDetails"),
-                strReadOnlySetting: M(3),
+                strReadOnlySetting: T(3),
               },
               (0, h.Xx)("#ProfilePrivacy_BasicDetails_Desc")
             ),
@@ -4985,7 +4984,7 @@
             );
         }
         render() {
-          let e = M(
+          let e = T(
             this.props.PrivacyStore.GetPrivacySetting(this.props.PrivacyKey)
           );
           return c.createElement(
@@ -6504,7 +6503,6 @@
       }
       (0, i.gn)([he.ak], xr.prototype, "OnSubmit", null),
         (0, i.gn)([he.ak], xr.prototype, "RevertChanges", null);
-      r(16899);
       var Ur = r(60588),
         Hr = r(35993);
       const qr = {

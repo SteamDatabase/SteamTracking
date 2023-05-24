@@ -61,7 +61,7 @@
         r = n(89526),
         o = n(59934),
         c = (n(4306), n(60142)),
-        s = (n(47927), n(51438));
+        s = n(90699);
       let i = !1,
         u = !1,
         l = !1,
@@ -170,25 +170,24 @@
       var a = n(89526),
         r = n(44026),
         o = n(66294),
-        c = n(51438),
+        c = n(90699),
         s = n(34329),
         i = n(16221),
-        u = (n(9501), n(28710)),
+        u = n(28710),
         l = n(83145),
         g = n(46294),
         m = n(19304),
         d = n(32765),
         _ = n(93181);
-      n(84770);
       class f {
-        constructor() {
-          this.m_rgSections = (0, d.kQ)("categories", "application_config");
-        }
         GetSections() {
           return this.m_rgSections;
         }
         static Get() {
           return f.s_singleton || (f.s_singleton = new f()), f.s_singleton;
+        }
+        constructor() {
+          this.m_rgSections = (0, d.kQ)("categories", "application_config");
         }
       }
       function v(e) {
@@ -301,13 +300,13 @@
       "use strict";
       n.r(t), n.d(t, { default: () => E });
       var a = n(89526),
-        r = (n(46132), n(66294)),
+        r = n(66294),
         o = n(28710),
         c = n(84770),
         s = n(47165),
         i = n(83145),
         u = n(10412),
-        l = n(13058),
+        l = n(53900),
         g = n(1721),
         m = n.n(g),
         d = n(69338),

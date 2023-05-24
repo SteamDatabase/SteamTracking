@@ -166,7 +166,7 @@
       n.d(t, { A: () => P, EI: () => K, kF: () => W });
       var s = n(33940),
         o = n(89526),
-        i = (n(42770), n(47165)),
+        i = n(47165),
         a = n(85651),
         r = n(26464),
         l = n(85246),
@@ -182,14 +182,14 @@
         "touchmove",
       ];
       class m {
+        static Get() {
+          return m.s_Singleton || (m.s_Singleton = new m()), m.s_Singleton;
+        }
         constructor() {
           (this.m_callbackList = new l.pB()),
             (this.m_timer = null),
             (this.m_bAreEventListenersRegistered = !1),
             "dev" == d.De.WEB_UNIVERSE && (window.g_FidgetStore = this);
-        }
-        static Get() {
-          return m.s_Singleton || (m.s_Singleton = new m()), m.s_Singleton;
         }
         ResetFidgetTimer(e) {
           this.m_timer && window.clearTimeout(this.m_timer);
@@ -228,9 +228,12 @@
       var _ = n(24448),
         v = n(52868),
         Q = n.n(v),
-        p = (n(46132), n(58218)),
-        g = (n(63403), n(23217));
+        p = n(58218),
+        g = n(23217);
       class C {
+        static Get() {
+          return C.s_Singleton || (C.s_Singleton = new C()), C.s_Singleton;
+        }
         constructor() {
           (this.m_mapQAndASessions = new Map()),
             (this.m_mapQAndAChangeCallbackList = new Map()),
@@ -239,9 +242,6 @@
             (this.m_mapQuestionCallbackList = new Map()),
             (this.m_rgPendingQuestionGIDs = []),
             "dev" == d.De.WEB_UNIVERSE && (window.g_QAndAStore = this);
-        }
-        static Get() {
-          return C.s_Singleton || (C.s_Singleton = new C()), C.s_Singleton;
         }
         GetQAndACallbackList(e) {
           return (
@@ -1055,7 +1055,7 @@
       var b = n(57605),
         D = n(32905),
         I = n(21904),
-        f = n(99307),
+        f = n(2647),
         w = n(57742),
         T = n(701),
         q = n(69338),

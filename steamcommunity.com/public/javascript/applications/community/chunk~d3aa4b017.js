@@ -16,7 +16,7 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    532: (e, t, a) => {
+    94170: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -32,7 +32,7 @@
         c = a(55844),
         d = a(28388),
         m = a(98009),
-        p = (a(53143), a(25871)),
+        p = a(25871),
         _ = a(23715),
         u = a(44865),
         h = a(98389),
@@ -40,7 +40,7 @@
         E = a(69338),
         g = a(19304),
         S = a(32765),
-        v = (a(42770), a(27618)),
+        v = a(27618),
         f = a.n(v);
       const C = (0, o.Pi)((e) => {
         const { appid: t } = e,
@@ -124,12 +124,15 @@
           )
         );
       });
-      var N = a(46132),
-        D = (a(13112), a(65786)),
-        y = (a(89980), a(9132), a(10521), a(52002)),
-        B = a(7311),
+      var N = a(46132);
+      function y() {
+        let e = window.GetUsabilityTracker;
+        if (e) return e();
+      }
+      var D = a(52002),
+        B = a(45475),
         I = a(98889),
-        P = (a(75687), a(57858)),
+        P = a(43707),
         G = a(27704),
         w = a(54297),
         x = a(46294),
@@ -139,8 +142,8 @@
         T = a(14826),
         L = a(88443),
         R = a(4306),
-        V = (a(24105), a(47165)),
-        M = (a(52502), a(61218)),
+        V = a(47165),
+        M = a(74831),
         W = a(43628),
         H = a.n(W);
       const U = (0, o.Pi)((e) => {
@@ -211,7 +214,7 @@
         X = a(82248),
         Y = a(15164),
         q = a(75313),
-        $ = a(99307),
+        $ = a(2647),
         z = a(75962),
         J = a(20790),
         K = a(43997),
@@ -446,7 +449,7 @@
           const t = this.state.bExpanded,
             a = B.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
           (0, I.wx)(a, t ? 2 : 3, e.snr),
-            t && (0, D.X)() && (0, D.X)().AddEvent(1005),
+            t && y() && y().AddEvent(1005),
             window.setTimeout(
               () =>
                 this.setState({
@@ -510,7 +513,7 @@
             ),
             o = l.createElement(_e, { key: "left" + r, ImgUrl: e.left_panel });
           if (r < 11) {
-            const t = y.C.GetAppIDListForBroadcasterSteamID(e.steamid);
+            const t = D.C.GetAppIDListForBroadcasterSteamID(e.steamid);
             t && 1 === t.length && (r = t[0]);
           }
           return (
@@ -551,8 +554,7 @@
         }
         MarkBroadcastSeen() {
           this.m_bMarkedUsabilitySeen ||
-            ((this.m_bMarkedUsabilitySeen = !0),
-            (0, D.X)() && (0, D.X)().AddEvent(1004));
+            ((this.m_bMarkedUsabilitySeen = !0), y() && y().AddEvent(1004));
         }
         render() {
           if (this.state.bLoadingPreference) return null;
@@ -716,7 +718,7 @@
             this.props.stream.steamid
           ).m_nAppID;
           (0, I.wx)(e, 7, this.props.stream.snr),
-            (0, D.X)() && (0, D.X)().AddEvent(1006),
+            y() && y().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
         }
         OnEnter() {

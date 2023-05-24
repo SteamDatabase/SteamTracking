@@ -2349,69 +2349,6 @@ input.clanimagepicker_SearchInput_lwt4u {
 .clanimagepicker_UploadDismissButton_3j1zt {
   align-self: right;
 }
-.artworkuploader_ArtworkDimensionTooSmall_8JWUN {
-  color: #999;
-}
-.artworkuploader_UploadPreviewCtn_ei0wW {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.artworkuploader_UploadPreviewButtonsCtn_26B6A {
-  width: 50%;
-  margin: 0px auto;
-}
-.artworkuploader_UploadPreviewDelete_341V_ {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-.artworkuploader_UploadPreviewButton_2cbB1 {
-  margin: 8px;
-}
-.artworkuploader_UploadPreviewError_2v0gp {
-  color: #943636;
-  font-size: 12px;
-  font-weight: bold;
-}
-.artworkuploader_UploadPreviewWarning_3AsII {
-  color: #ffba70;
-  font-size: 12px;
-}
-.artworkuploader_UploadPreview_3pASZ {
-  width: 300px;
-  background-color: gray;
-  border-radius: 4px;
-  padding: 8px;
-  box-shadow: 0px 0px 10px #000;
-  margin: 8px;
-  position: relative;
-}
-.artworkuploader_UploadPreview_3pASZ > div {
-  margin-bottom: 8px;
-}
-.artworkuploader_PreviewImgCtn_3cUm3 {
-  height: 120px;
-  background: #000;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-bottom: 8px;
-}
-.artworkuploader_PreviewImgInfo_3Iv_t {
-  position: absolute;
-  padding: 1px;
-  left: 10px;
-  margin-bottom: 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0);
-}
-.artworkuploader_PreviewImgInfo_3Iv_t:hover {
-  background-color: #000;
-  border: 1px solid #fff;
-}
 .clanlocalizedimage_titleimg_rjdSm {
   width: 100px;
   max-height: 200px;
@@ -3536,6 +3473,237 @@ p a:hover {
 }
 .partnereventartwork_AssetExampleSpotlightCtn_taJSe {
   position: relative;
+}
+.imagedraganddroptarget_DragAndDropContainer_1BEPN,
+.imagedraganddroptarget_DragAndDropContainerDragging_2pUkO {
+  border: 1px dashed #06beff;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  margin-top: 10px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(88vw - 48px);
+}
+.imagedraganddroptarget_DragAndDropContainerDragging_2pUkO {
+  border-color: #add8e6;
+  background: rgba(6, 190, 255, 0.2);
+  box-shadow: 0 0 10px #06beff inset;
+}
+.imagedraganddroptarget_ImageUploadBar_3qMiP {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 12px;
+}
+.imagedraganddroptarget_SelectImageButton_39lgc {
+  color: #dfe3e6;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 25%;
+  background-size: 330% 100%;
+  padding: 8px 25px;
+  line-height: 32px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.imagedraganddroptarget_SelectImageButton_39lgc:hover {
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 0%;
+  background-size: 330% 100%;
+  color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.artworkuploader_ArtworkDimensionTooSmall_8JWUN {
+  color: #999;
+}
+.artworkuploader_UploadPreviewCtn_ei0wW {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.artworkuploader_UploadPreviewButtonsCtn_26B6A {
+  width: 50%;
+  margin: 0px auto;
+}
+.artworkuploader_UploadPreviewDelete_341V_ {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.artworkuploader_UploadPreviewButton_2cbB1 {
+  margin: 8px;
+}
+.artworkuploader_UploadPreviewError_2v0gp {
+  color: #943636;
+  font-size: 12px;
+  font-weight: bold;
+}
+.artworkuploader_UploadPreviewWarning_3AsII {
+  color: #ffba70;
+  font-size: 12px;
+}
+.artworkuploader_UploadPreview_3pASZ {
+  width: 300px;
+  background-color: gray;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 10px #000;
+  margin: 8px;
+  position: relative;
+}
+.artworkuploader_UploadPreview_3pASZ > div {
+  margin-bottom: 8px;
+}
+.artworkuploader_PreviewImgCtn_3cUm3 {
+  height: 120px;
+  background: #000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 8px;
+}
+.artworkuploader_PreviewImgInfo_3Iv_t {
+  position: absolute;
+  padding: 1px;
+  left: 10px;
+  margin-bottom: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0);
+}
+.artworkuploader_PreviewImgInfo_3Iv_t:hover {
+  background-color: #000;
+  border: 1px solid #fff;
+}
+.clanimagelist_ImageWrapperContainer_GXVrk {
+  text-align: center;
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  max-height: 168px;
+  overflow: hidden;
+  padding: 4px;
+}
+.clanimagelist_ImageWrapper_mUjPw {
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-drag: element;
+}
+.clanimagelist_ImageWrapperFilename_pk7bn {
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 12px;
+}
+.clanimagelist_ResultNotification_1-HZj {
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.clanimagelist_ErrorCode_3rw-6 {
+  color: red;
+}
+.clanimagelist_Hilight_1vRwL {
+  font-weight: bold;
+  color: green;
+}
+.clanimagelist_ImageButton_3Z046 {
+  cursor: pointer;
+}
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Thumb_1bjzr,
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Full_3L9Qz,
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Delete_28wLj,
+.clanimagelist_ImageButton_3Z046 .clanimagelist_FloatingThrobber_30_OR,
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Localized_1kXpA {
+  position: absolute;
+  color: #67c1f5;
+  font-size: 10px;
+  padding: 1px 5px;
+  visibility: hidden;
+}
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Thumb_1bjzr,
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Full_3L9Qz,
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Localized_1kXpA {
+  left: 0px;
+  left: -100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Thumb_1bjzr {
+  top: 25px;
+}
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Full_3L9Qz {
+  top: 5px;
+}
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Localized_1kXpA {
+  top: 45px;
+}
+.clanimagelist_ImageButton_3Z046 .clanimagelist_FloatingThrobber_30_OR {
+  left: 0px;
+  opacity: 1;
+  visibility: visible;
+  top: 5px;
+}
+.clanimagelist_ImageButton_3Z046 .clanimagelist_Delete_28wLj {
+  background-image: url(data:image/gif;base64,R0lGODlhEgASANUkALS4r7W5sLzAt7a6sbq+trO3r7u/t73BuLK2roCCfb7Cubm9tbe7sri8tLe7s4GEf4GDfnt+eXx+ebG1rX+Cfb7Cunl8d3t9eXh7doKEf3+BfXx/end6dX1/en1/e4CCfnh6dn6BfHp8eH6AfCYmJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACQALAAAAAASABIAAAaYQBIpkREaj6RMwvipVB5I48P5GSquCijygVUkIIdwGHIEiw/khGC9Xg7ZbSPFQKdT5nUDBakh+P+AGlEkIQuGh4Yhg0IjDY6PI4tCHg6Vlh6SHQybnJsdgxsDoqOkG0gSAampEqiqARJGEQCzsxFCsrQAthcFvb0XR7y+BRcYCMcIIlEiyAgYJCATExaLFtIgRhzUkhYcQkEAOw==);
+  right: 2px;
+  right: -100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 18px;
+}
+.clanimagelist_ImageButton_3Z046:hover {
+  background: #222;
+}
+.clanimagelist_ImageButton_3Z046:hover .clanimagelist_Thumb_1bjzr,
+.clanimagelist_ImageButton_3Z046:hover .clanimagelist_Full_3L9Qz,
+.clanimagelist_ImageButton_3Z046:hover .clanimagelist_Localized_1kXpA {
+  left: 0px;
+  opacity: 1;
+  visibility: visible;
+}
+.clanimagelist_ImageButton_3Z046:hover .clanimagelist_Delete_28wLj {
+  right: 2px;
+  opacity: 1;
+  visibility: visible;
+}
+.clanimagelist_ImageButton_3Z046:hover .clanimagelist_Thumb_1bjzr:hover,
+.clanimagelist_ImageButton_3Z046:hover .clanimagelist_Full_3L9Qz:hover,
+.clanimagelist_ImageButton_3Z046:hover .clanimagelist_Delete_28wLj:hover,
+.clanimagelist_ImageButton_3Z046:hover .clanimagelist_Localized_1kXpA:hover {
+  opacity: 0.7;
+}
+input.imageseachinput_SearchInput_1MoNl {
+  width: -webkit-fill-available;
+  width: calc(100% - 24px);
+  height: 11px;
+  margin-bottom: 4px;
+  padding: 12px;
+  border: none;
+  background: var(#30333b);
+  outline-width: 0;
+  color: var(#d3e0ea);
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 18px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #000 inset;
+}
+.imageseachinput_PickerTitle_2GOa_ {
+  padding: 3px 0px;
 }
 .partnereventshareddates_EventTimeSection_27EoU:first-child {
   margin-bottom: 12px;

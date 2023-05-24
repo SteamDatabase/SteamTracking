@@ -78,7 +78,7 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: #2b303a;
-  padding: 10px 0 10px 1ex;
+  padding: 10px 1ex 10px 1ex;
 }
 .notificationsettings_NotificationSection_3Sbby button.DialogButton {
   justify-content: center;
@@ -104,6 +104,8 @@
 }
 .notificationsettings_NotificationPrefDetails_152HT .DialogCheckbox_Container {
   flex: 1;
+  align-items: center;
+  display: flex;
 }
 .notificationsettings_PrefDetailsToggle_3XAMD svg {
   transition: transform 0.2s ease-in-out;

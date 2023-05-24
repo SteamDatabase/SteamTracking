@@ -49,13 +49,13 @@
         i = n.n(o),
         l = n(50265),
         r = n(89526),
-        s = (n(46132), n(42770), n(84770), n(47165)),
+        s = n(47165),
         c = n(82079),
         u = n(98210),
         d = n(54671),
         _ = n(10412),
         p = n(70750),
-        m = (n(63403), n(11837)),
+        m = n(11837),
         v = n(23801),
         g = n(23217),
         E = n(4306),
@@ -101,29 +101,6 @@
           });
       }
       class b {
-        constructor() {
-          (this.m_mapList = new Map()),
-            (this.m_mapEventGIDToLists = new Map()),
-            (this.m_mapListIDToClanAccount = new Map()),
-            "dev" == f.De.WEB_UNIVERSE && (window.g_curatorListStore = this);
-          let t = (0, f.kQ)("curatorlistdata", "application_config");
-          ("dev" != f.De.WEB_UNIVERSE && "beta" != f.De.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: CCuratorListStore loading list payload: " +
-                (null == t ? void 0 : t.length),
-              t
-            ),
-            this.ValidateStoreDefault(t) &&
-              (0, l.z)(() => {
-                t.forEach((t) => {
-                  t.multi_detail_lists.forEach((e) => {
-                    h(e),
-                      L(t.curation_language, e),
-                      this.m_mapList.set(e.listid, e);
-                  });
-                });
-              });
-        }
         GetListDetails(t) {
           return this.m_mapList.get(t);
         }
@@ -271,6 +248,29 @@
         static Get() {
           return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
         }
+        constructor() {
+          (this.m_mapList = new Map()),
+            (this.m_mapEventGIDToLists = new Map()),
+            (this.m_mapListIDToClanAccount = new Map()),
+            "dev" == f.De.WEB_UNIVERSE && (window.g_curatorListStore = this);
+          let t = (0, f.kQ)("curatorlistdata", "application_config");
+          ("dev" != f.De.WEB_UNIVERSE && "beta" != f.De.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: CCuratorListStore loading list payload: " +
+                (null == t ? void 0 : t.length),
+              t
+            ),
+            this.ValidateStoreDefault(t) &&
+              (0, l.z)(() => {
+                t.forEach((t) => {
+                  t.multi_detail_lists.forEach((e) => {
+                    h(e),
+                      L(t.curation_language, e),
+                      this.m_mapList.set(e.listid, e);
+                  });
+                });
+              });
+        }
         ValidateStoreDefault(t) {
           const e = t;
           return e &&
@@ -386,10 +386,10 @@
       var a = n(89526),
         o = n(62983),
         i = n(44026),
-        l = n(51438),
+        l = n(90699),
         r = n(16221),
-        s = (n(84770), n(98009)),
-        c = (n(53143), n(54671)),
+        s = n(98009),
+        c = n(54671),
         u = n(85886),
         d = n(25871),
         _ = n(5089),
@@ -399,7 +399,7 @@
         g = n.n(v),
         E = n(67935),
         f = n(21219),
-        h = (n(59648), n(87539)),
+        h = n(87539),
         C = n(3991),
         L = n(33406),
         b = n(98389),

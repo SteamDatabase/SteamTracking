@@ -21,9 +21,12 @@
         _ = t.n(m),
         u = t(50265),
         S = t(89526),
-        s = (t(46132), t(20830), t(27143), t(63403), t(23217)),
+        s = t(23217),
         n = t(32765);
       class i {
+        static Get() {
+          return i.s_Singleton || (i.s_Singleton = new i()), i.s_Singleton;
+        }
         constructor() {
           (this.m_mapGenreToStickerResponse = new Map()),
             (this.m_eStoryBadgeGranted = 0),
@@ -42,9 +45,6 @@
               e.header_mobile &&
                 (this.m_strLocalizedStoryHeaderMobile = e.header_mobile);
           }
-        }
-        static Get() {
-          return i.s_Singleton || (i.s_Singleton = new i()), i.s_Singleton;
         }
         GetStoryBadgeGranted() {
           return this.m_eStoryBadgeGranted;

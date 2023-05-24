@@ -10759,6 +10759,162 @@ body.v6.rewards .ModalPosition_Content {
     visibility: collapse;
   }
 }
+.steamavatar_avatarHolder_1YGAH {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  margin: 0px 0px;
+  transform: scale(0.86, 0.86) translateX(0px);
+  transition-property: transform;
+  transition-duration: 0.34s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.steamavatar_avatarHolder_1YGAH.X-Small {
+  height: 28px;
+  width: 28px;
+}
+.steamavatar_avatarHolder_1YGAH.Medium {
+  height: 36px;
+  width: 36px;
+}
+.steamavatar_avatarHolder_1YGAH.MediumLarge {
+  height: 48px;
+  width: 48px;
+}
+.steamavatar_avatarHolder_1YGAH.Large {
+  height: 84px;
+  width: 84px;
+}
+.steamavatar_avatarHolder_1YGAH.X-Large {
+  height: 92px;
+  width: 92px;
+}
+.steamavatar_avatarHolder_1YGAH.FillArea {
+  height: 100%;
+  width: 100%;
+}
+.ChatSpeaker.ChatRoomSpeaker .steamavatar_avatarHolder_1YGAH {
+  transform: scale(1, 1) translateX(0px);
+}
+.steamavatar_avatarHolder_1YGAH .steamavatar_avatarStatus_1yIzy.right,
+.steamavatar_avatarHolder_1YGAH .steamavatar_avatarStatus_1yIzy.bottom {
+  display: block !important;
+}
+.ingame .steamavatar_avatarStatus_1yIzy {
+  background: linear-gradient(
+    to bottom,
+    rgb(140, 214, 29) 0%,
+    rgb(161, 244, 16) 30%,
+    rgb(161, 244, 16) 70%,
+    rgb(140, 214, 29) 100%
+  );
+}
+.ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
+.GamepadMode .ingame .steamavatar_avatarStatus_1yIzy {
+  background: #59bf40;
+}
+.offline .steamavatar_avatarStatus_1yIzy.GamepadMode,
+.GamepadMode .offline .steamavatar_avatarStatus_1yIzy {
+  background: #67707b;
+}
+.ingame .X-Large .steamavatar_avatarStatus_1yIzy {
+  background: #bff02b;
+}
+.watchingbroadcast .steamavatar_avatarStatus_1yIzy {
+  background: linear-gradient(
+    to bottom,
+    rgb(156, 143, 212) 0%,
+    rgb(156, 143, 212) 30%,
+    rgb(156, 143, 212) 70%,
+    rgb(156, 143, 212) 100%
+  );
+}
+.online .steamavatar_avatarStatus_1yIzy {
+  background: linear-gradient(
+    to bottom,
+    rgb(109, 207, 246) 0%,
+    rgb(109, 207, 246) 30%,
+    rgb(109, 207, 246) 70%,
+    rgb(109, 207, 246) 100%
+  );
+}
+.online .steamavatar_avatarStatus_1yIzy.GamepadMode,
+.GamepadMode .online .steamavatar_avatarStatus_1yIzy {
+  background: #4cb4ff;
+}
+.awayOrSnooze .steamavatar_avatarStatus_1yIzy {
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-y;
+  -webkit-mask-size: 5px 5px;
+  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-y;
+  mask-size: 5px 5px;
+  opacity: 0.75;
+}
+.awayOrSnooze .steamavatar_avatarStatus_1yIzy.GamepadMode,
+.GamepadMode .awayOrSnooze .steamavatar_avatarStatus_1yIzy {
+  opacity: 1;
+}
+.steamavatar_avatarStatus_1yIzy.right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+}
+.steamavatar_avatarStatus_1yIzy.right.GamepadMode,
+.GamepadMode .steamavatar_avatarStatus_1yIzy.right {
+  width: 3px;
+  right: -3px;
+}
+.steamavatar_avatarStatus_1yIzy.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.steamavatar_avatarStatus_1yIzy.bottom.GamepadMode,
+.GamepadMode .steamavatar_avatarStatus_1yIzy.bottom {
+  height: 3px;
+  bottom: -3px;
+}
+.awayOrSnooze .steamavatar_avatarStatus_1yIzy.bottom {
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-x;
+  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-x;
+}
+.awayOrSnooze .X-Large .steamavatar_avatarStatus_1yIzy.bottom {
+  mask-size: 6px 6px;
+  opacity: 1;
+}
+.steamavatar_avatar_1p_Qr {
+  border: 1px solid #383c43;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
+  transition: filter 0.24s ease-in-out;
+}
+.steamavatar_avatar_1p_Qr.GamepadMode,
+.GamepadMode .steamavatar_avatar_1p_Qr {
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+}
+.steamavatar_avatarFrame_3atbN {
+  position: absolute;
+  top: 0;
+}
+.steamavatar_avatarFrame_3atbN .steamavatar_avatarFrameImg_338kJ {
+  width: 100%;
+  height: 100%;
+}
+.steamavatar_avatarHolder_1YGAH .steamavatar_avatarFrame_3atbN {
+  transform: scale(1.2);
+}
 .copylinkbutton_Icon_1rXAQ {
   width: 16px;
   height: 16px;
@@ -12046,95 +12202,6 @@ body.v6.rewards .ModalPosition_Content {
 .scrollabletabs_ItemContainer_25fHe::-webkit-scrollbar {
   height: 0;
   background: rgba(0, 0, 0, 0);
-}
-.goldenprofile_ProfileFrame_2SyjH {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
-}
-.goldenprofile_ProfileThrobber_DEqbY {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  transition: opacity 300ms ease-in-out;
-}
-.goldenprofile_ProfileContainer_3XMzf {
-  width: 100%;
-  max-width: 1300px;
-  height: 800px;
-  pointer-events: none;
-  position: relative;
-  border: 5px solid #6ac7ce;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
-}
-.goldenprofile_BlueButton_2fUe5,
-.goldenprofile_BlueButtonSmall_14c5j {
-  font-size: 18px;
-  text-align: center;
-  color: #efeaea;
-  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
-  border-radius: 2px;
-  background-position: 25%;
-  background-size: 330% 100%;
-  padding: 5px 20px;
-}
-.goldenprofile_BlueButtonSmall_14c5j {
-  font-size: 12px;
-  padding: 5px 10px;
-}
-.goldenprofile_BlueButton_2fUe5:hover {
-  background-position: 0%;
-  color: #fff;
-}
-.goldenprofile_GoldenProfileTitle_NQHuf {
-  font-weight: bold;
-  font-size: 48px;
-  letter-spacing: 0.075em;
-  color: #fff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 20px;
-}
-.goldenprofile_GoldenProfileDesc_3sA5L {
-  font-size: 20px;
-  line-height: 130.2%;
-  color: #c5cbd8;
-  margin-bottom: 20px;
-}
-.goldenprofile_PersonaPreviewContainer_2eBHX {
-  background: url(../../../images/applications/store/goldenpersona_preview.png?v=valveisgoodatcaching)
-    center no-repeat;
-  max-width: 380px;
-  height: 285px;
-  width: 100%;
-  margin-right: 30px;
-  position: relative;
-  flex: 1 1 100%;
-}
-.goldenprofile_GoldenProfileHeaderContainer_2rQ4m {
-  max-width: 1000px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.goldenprofile_AvatarAndPersonaContainer_f6Cly {
-  display: flex;
-  position: absolute;
-  top: 47%;
-  left: 6%;
-}
-.goldenprofile_AvatarHolder_22fux {
-  width: 45px;
-  height: 45px;
-  margin-right: 10px;
-}
-.goldenprofile_CurrentAvatar_2k8zo {
-  border: 2px solid #6ac7ce;
-  box-sizing: border-box;
-}
-.goldenprofile_GoldenProfileCost_2td9S {
-  cursor: pointer;
 }
 body.v6.rewards {
   background-color: #161a1f;

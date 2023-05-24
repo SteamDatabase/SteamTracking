@@ -8,6 +8,17 @@
 	min-height: calc( 100vh - 409px );
 }
 
+.AdminPageContent.MultiPart {
+    min-height: unset;
+}
+
+.AdminPageContent.FullWidth {
+    max-width: 100%;
+}
+.AdminPageContent.AppStatsOneColLayout {
+    max-width: 1280px;
+}
+
 .AdminPageContent strong {
 	color: #ddd;
 }
