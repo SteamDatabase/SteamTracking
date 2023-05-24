@@ -1508,12 +1508,12 @@
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Если эта настройка включена, Steam ограничит скорость загрузки, чтобы поддерживать высокое качество трансляции Steam Remote Play."
 "Steam_DownloadRatesInBits"			"Отображать скорость в битах в секунду"
 
-"Steam_PeerContentTitle"			"Передача игровых файлов по локальной сети"
-"Steam_PeerContentInfo"			"Эта функция позволяет передавать игровые файлы между ПК и Steam Deck в вашей локальной сети, чтобы не использовать интернет для скачивания или обновления игры"
+"Steam_PeerContentTitle"			"Обмен игровыми файлами по локальной сети"
+"Steam_PeerContentInfo"			"Эта функция позволяет получать файлы игр от других ПК в вашей локальной сети, тем самым снижая интернет-трафик. Вы также можете разрешить другим пользователям скачивать игры с этого ПК."
 "Steam_PeerContentOff"			"Выключено — не разрешать обмен файлами"
-"Steam_PeerContentSameUser"		"Разрешать обмен файлами только со своими устройствами"
-"Steam_PeerContentFriends"		"Разрешать обмен файлами только с друзьями из Steam"
-"Steam_PeerContentAnyUser"		"Разрешать обмен файлами со всеми пользователями"
+"Steam_PeerContentSameUser"		"Разрешить обмен только с моими устройствами"
+"Steam_PeerContentFriends"		"Разрешить обмен с друзьями"
+"Steam_PeerContentAnyUser"		"Разрешить обмен со всеми пользователями"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud хранит ваши данные продукта, чтобы они совпадали на любом ПК."

@@ -16,9 +16,9 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-B,
+DC,
 8q
-B,
+DC,
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -107,13 +107,13 @@ H=
 %
 %
 %
-$
+%
+%
 $
 $
 Hc
 Hc
 Hc
-j(
 0
 0
 AT=
@@ -124,6 +124,8 @@ AT=
 D
 @
 @
+.(
+(
 (
 (
 (
@@ -164,10 +166,6 @@ IcE
 @
 @
 ]
-b'
-T'
-9'
-'
 '
 '
 "
@@ -176,7 +174,8 @@ H;5ri)
 =
 !
 =
-]%
+g%
+q
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -8781,8 +8780,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-May 19 2023
-14:59:16
+May 23 2023
+14:38:46
 Jan
 Feb
 Mar
@@ -9227,6 +9226,11 @@ m_pMemoryPoolRecord
 4000
 @cNetEncryptionHandshakeWorkMax_HighPri
 8000
+@bFreeCNetPacketOnThread
+Should we move freeing netpackets to a threaded workitem
+@nFreeCNetPacketOnThreadMaxBatch
+2048
+How many max packets to free per-workitem
 EINTR
 ABADF
 EACCES
@@ -9394,13 +9398,13 @@ H=
 %
 %
 %
-$
+%
+%
 $
 $
 Hc
 Hc
 Hc
-j(
 0
 0
 AT=
@@ -9411,6 +9415,8 @@ AT=
 D
 @
 @
+.(
+(
 (
 (
 (
@@ -9451,10 +9457,6 @@ IcE
 @
 @
 ]
-b'
-T'
-9'
-'
 '
 '
 "
@@ -9463,16 +9465,19 @@ H;5ri)
 =
 !
 =
-]%
+g%
+q
+j
+g%
+2
 !
 @
 @
 #
 &
 "
-"
-"
 N$
+!
 !
 @
 M9e
@@ -9490,6 +9495,7 @@ M9e
 ?
 ?
 :
+!
 ?
 ?
 ?
@@ -9872,7 +9878,8 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
-P
+X
+c
 @
 d
 @
@@ -9929,8 +9936,11 @@ H=
 0
 0
 0
+K
 0
 H=
+
+
 0
 
 

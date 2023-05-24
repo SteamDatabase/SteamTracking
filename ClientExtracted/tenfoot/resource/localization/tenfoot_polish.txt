@@ -922,9 +922,9 @@
 	"SettingsNetwork_Finished"				"ZAKOŃCZ"
 
 	// Settings, Steam Play
-	"SettingsSteamPlay_Enable_Label"		"Steam Play automatycznie zainstaluje narzędzia kompatybilności, które pozwolą ci na granie w gry z twojej biblioteki, które stworzono z myślą o innych systemach operacyjnych."
+	"SettingsSteamPlay_Enable_Label"		"Steam Play automatycznie zainstaluje narzędzia zgodności, które pozwolą ci na granie w gry z twojej biblioteki stworzone z myślą o innych systemach operacyjnych."
 	"SettingsSteamPlay_Enable"			"Włącz Steam Play dla obsługiwanych produktów"
-	"SettingsSteamPlay_EnableTool_Label"		"Możesz użyć Steam Play, by przetestować gry w twojej bibliotece, które nie zostały zweryfikowane obsługiwanym narzędziem kompatybilności."
+	"SettingsSteamPlay_EnableTool_Label"		"Możesz użyć Steam Play, by przetestować gry w twojej bibliotece, które nie zostały zweryfikowane obsługiwanym narzędziem zgodności."
 	"SettingsSteamPlay_EnableTool"			"Włącz Steam Play dla wszystkich pozostałych produktów"
 	"SettingsSteamPlay_Tool"			"Uruchamiaj inne tytuły za pomocą:"
 	"SettingsSteamPlay_RestartNow"			"Zrestartować Steam teraz, aby zastosować twoje ustawienia Steam Play?"

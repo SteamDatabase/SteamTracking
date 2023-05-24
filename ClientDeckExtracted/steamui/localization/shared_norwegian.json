@@ -2444,6 +2444,7 @@
     "UserGameNotes_WindowOpacity": "Angi vinduets ugjennomsiktighet",
     "UserGameNotes_NotesListView": "Merknadsliste",
     "UserGameNotes_ClickToOpenLink": "Trykk på midtre museknapp for å åpne",
+    "UserGameNotes_ImageTooLarge": "Bildet som ble limt inn, var for stort",
     "UserGameNotes_Edit": "Rediger",
     "UserGameNotes_Untitled": "Uten navn",
     "FormattingToolbar_Undo": "Angre",

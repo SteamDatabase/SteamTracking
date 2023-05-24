@@ -2789,7 +2789,7 @@
 	"Library_AllGamesOptions" "MOŽNOSTI"
 	"Library_AllGamesSearch" "HLEDAT"
 	"Library_AllGamesFilter" "FILTR"
-	"Library_HintSearch" "Hledat..."
+	"Library_HintSearch" "hledat..."
 	"Library_Suggested_Empty" "Vaše knihovna je prázdná"
 	"Library_Suggested_EmptyDetails" "Ale nezoufejte, ve službě Steam můžete i tak dělat spoustu věcí"
 	"Library_Suggested_FreeGames_Header" "Populární hry zdarma"

@@ -17041,12 +17041,22 @@ div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
   width: 75%;
   max-width: 848px;
   flex: 1;
-  margin: 56px auto 16px auto;
+  margin: 56px auto 0px auto;
+}
+div.NarrowWindow
+  .library_AchievementsOverlayContainer_HruWV
+  .library_AchievementsPageContainer_gioyP {
+  width: 90%;
+  margin-top: 20px;
 }
 .library_AchievementsOverlayContainer_HruWV
   .library_AchievementsPageContainer_gioyP
   > div {
   height: 100%;
+  border-radius: 4px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 0 0 32px #000;
+  border: 1px solid transparent;
 }
 .library_AchievementsOverlayContainer_HruWV
   .library_AchievementsPageContainer_gioyP
@@ -17589,6 +17599,9 @@ div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
   overflow: visible;
   padding: 0;
 }
+.settings_OverlayTabSetting_34sgF {
+  background-color: #171d25;
+}
 .bluetoothsettings_NotConnectedLabel_31Z4e {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -18009,7 +18022,7 @@ div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
   text-align: right;
 }
 .quickaccesscontrols_EmptyNotifications_1g1_n {
-  margin-top: 40px;
+  padding-top: 40px;
   text-align: center;
 }
 .quickaccesscontrols_BatterySectionContainer_3h5MR {
@@ -55958,7 +55971,7 @@ body {
 .achievementslist_AchievementList_1UXC2 {
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 8px 20px;
   gap: 8px;
   background-color: #0e141b;
 }
@@ -56069,6 +56082,16 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.achievementslist_GlobalAchievementsListHeader_2q8Mm
+  .achievementslist_Avatar_86H_Y {
+  flex: 1;
+}
+.achievementslist_GlobalAchievementsListHeader_2q8Mm
+  .achievementslist_SearchField_1WeL3 {
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 220px;
 }
 .achievementslist_GlobalAchievementsListHeader_2q8Mm
   .achievementslist_HeaderText_OAV6Q {
@@ -56218,6 +56241,12 @@ body {
   align-self: flex-end;
   min-width: 200px;
 }
+.achievementsheader_Container_2iGYY .achievementsheader_Content_Pr0VC.DesktopUI,
+.DesktopUI
+  .achievementsheader_Container_2iGYY
+  .achievementsheader_Content_Pr0VC {
+  gap: 5px;
+}
 .achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl {
   color: #fff;
   font-size: 22px;
@@ -56226,6 +56255,19 @@ body {
 .achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl.DesktopUI,
 .DesktopUI .achievementsheader_Container_2iGYY .achievementsheader_Title_3wNyl {
   font-weight: 700;
+}
+div.NarrowRightPanel
+  .achievementsheader_Container_2iGYY
+  .achievementsheader_Title_3wNyl {
+  display: none;
+}
+.achievementsheader_Container_2iGYY
+  .achievementsheader_Title_3wNyl
+  .achievementsheader_GameIcon_2R_ac {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 .achievementsheader_Container_2iGYY.achievementsheader_PinnedView_2Q5Xp
   .achievementsheader_Title_3wNyl {
@@ -56302,6 +56344,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+.achievementspage_Page_3FQHg .achievementspage_Container_11Z-t.DesktopUI,
+.DesktopUI .achievementspage_Page_3FQHg .achievementspage_Container_11Z-t {
+  padding-top: 24px;
+}
 .achievementspage_Page_3FQHg .achievementspage_Nav_15Sq7 {
   display: flex;
   flex-direction: row;
@@ -56334,6 +56380,10 @@ body {
 .achievementspage_AchievementTabs_gxNvE {
   flex: 1 1 454px;
   user-select: none;
+}
+.achievementspage_AchievementTabs_gxNvE ._TabContentsScroll {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .achievementspage_Background_ODpLj {
   position: absolute;
@@ -63119,7 +63169,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   text-align: right;
 }
 .quickaccessmenu_EmptyNotifications_2pgiB {
-  margin-top: 40px;
+  padding-top: 40px;
   text-align: center;
 }
 .quickaccessmenu_BatterySectionContainer_3N-ap {
@@ -64577,13 +64627,18 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .notificationcontent_AchievementTextSection_mJ3Nu
   .notificationcontent_Name_1juF1 {
-  color: #ffffffe0;
-  font-weight: 300;
-  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
   line-height: 16px;
+}
+.BasicUI
+  .notificationcontent_AchievementTextSection_mJ3Nu
+  .notificationcontent_Name_1juF1 {
+  font-weight: 500;
 }
 .notificationcontent_AchievementTextSection_mJ3Nu
   .notificationcontent_Name_1juF1.notificationcontent_NoWrap_2ghro {
@@ -64593,12 +64648,18 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   .notificationcontent_Desc_2zm3G {
   flex-grow: 1 1 auto;
   font-weight: 300;
-  color: #ffffff80;
-  font-size: 13px;
+  color: #8b929a;
+  font-size: 12px;
   line-height: 16px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+.BasicUI
+  .notificationcontent_AchievementTextSection_mJ3Nu
+  .notificationcontent_Desc_2zm3G {
+  color: #b8bcbf;
+  font-weight: 400;
 }
 .notificationcontent_AchievementTextSection_mJ3Nu
   .notificationcontent_ProgressLine_Q3phZ {
@@ -96221,10 +96282,6 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   right: 2%;
   opacity: 0;
 }
-.appportrait_LibraryItemBox_WYgDg
-  .appportrait_ControllerSupportIcon_1TaKf.appportrait_ContextMenuIndicatorEnabled_27dzj {
-  bottom: 32px;
-}
 .appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf {
   width: 20%;
   max-width: 34px;
@@ -96240,19 +96297,6 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .appportrait_LibraryItemBox_WYgDg .appportrait_ControllerSupportIcon_1TaKf svg {
   max-height: 23px;
   width: 100%;
-}
-.appportrait_LibraryItemBox_WYgDg .appportrait_ContextMenuIndicator_2TLFh {
-  width: 100%;
-  height: 45px;
-  background-color: #0e141b;
-  text-align: center;
-  opacity: 0;
-  transform-origin: bottom;
-  transform: scaleY(0.5);
-}
-.appportrait_LibraryItemBox_WYgDg .appportrait_ContextMenuIndicator_2TLFh svg {
-  fill: #fff;
-  max-height: 100%;
 }
 .appportrait_LibraryItemBox_WYgDg.appportrait_InLibraryManager_6vZ6m
   .appportrait_SteamDeckCompatIcon_3kDT9 {
@@ -96296,27 +96340,6 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   transition-property: opacity;
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
-}
-.appportrait_HoversEnabled_54PuC
-  .appportrait_LibraryItemBox_WYgDg:hover
-  .appportrait_ContextMenuIndicator_2TLFh,
-.appportrait_LibraryItemBox_WYgDg.gpfocus
-  .appportrait_ContextMenuIndicator_2TLFh {
-  transition-property: opacity transform;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
-  opacity: 0.4;
-  transform: scaleY(1);
-}
-.appportrait_HoversEnabled_54PuC
-  .appportrait_LibraryItemBox_WYgDg:hover
-  .appportrait_ContextMenuIndicator_2TLFh:hover,
-.appportrait_LibraryItemBox_WYgDg.gpfocus
-  .appportrait_ContextMenuIndicator_2TLFh:hover {
-  transition-property: opacity;
-  transition-duration: 0.6s;
-  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
-  opacity: 0.9;
 }
 .appportrait_HoversEnabled_54PuC
   .appportrait_LibraryItemBox_WYgDg:hover:not(.appportrait_Landscape_3VOR2) {

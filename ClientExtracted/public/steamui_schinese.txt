@@ -1514,11 +1514,11 @@
 "Steam_DownloadRatesInBits"			"以 bit/s 的形式显示下载速率"
 
 "Steam_PeerContentTitle"			"通过本地网络转移游戏文件"
-"Steam_PeerContentInfo"			"此功能允许您的 PC 通过本地网络将游戏文件转出或转入其他 PC 或 Steam Deck，以便在下载或更新游戏时降低互联网流量。"
+"Steam_PeerContentInfo"			"此功能允许从您本地网络上的其他 PC 转移游戏文件，从而减少下载游戏时的互联网流量。您还可以允许其他用户从这台 PC 转移游戏。"
 "Steam_PeerContentOff"			"关闭 - 不允许任何转移"
-"Steam_PeerContentSameUser"		"允许转入/出我自己的设备"
-"Steam_PeerContentFriends"		"允许转入/出我 Steam 好友的设备"
-"Steam_PeerContentAnyUser"		"允许转入/出任何用户"
+"Steam_PeerContentSameUser"		"只允许转入我的设备"
+"Steam_PeerContentFriends"		"允许转入我 Steam 好友的设备"
+"Steam_PeerContentAnyUser"		"允许转入任何用户"
 
 "Steam_CloudLabel"					"Steam 云"
 "Steam_CloudInfo"					"Steam 云会储存您的信息，以便您在不同的计算机也能享受到一致的产品体验。"

@@ -1512,11 +1512,11 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_DownloadRatesInBits"			"ダウンロード速度をビット／秒の単位で表示"
 
 "Steam_PeerContentTitle"			"ゲームファイルをローカルネットワーク経由で転送"
-"Steam_PeerContentInfo"			"この機能により、お使いのPCで、ローカルネットワーク上の他のPCやSteam Deckとの間でゲームファイルを転送できるようになり、ゲームのダウンロードやアップデート時のインターネットトラフィックを削減することができます。"
+"Steam_PeerContentInfo"			"この機能により、Steamはローカルネットワーク上の他のPCからのゲームファイルの転送を許可し、ゲームのダウンロードやアップデート時のインターネットトラフィックを削減することができます。また、他のユーザーがこのPCからゲームを転送できるようにすることもできます。"
 "Steam_PeerContentOff"			"オフ－転送を一切許可しない"
-"Steam_PeerContentSameUser"		"自分のデバイス間での転送を許可する"
-"Steam_PeerContentFriends"		"Steamフレンドとの転送を許可する"
-"Steam_PeerContentAnyUser"		"すべてユーザーとの転送を許可する"
+"Steam_PeerContentSameUser"		"自分のデバイスへの転送のみを許可"
+"Steam_PeerContentFriends"		"Steamフレンドへの転送を許可"
+"Steam_PeerContentAnyUser"		"すべてユーザーへの転送を許可"
 
 "Steam_CloudLabel"					"Steamクラウド"
 "Steam_CloudInfo"					"Steamクラウドに情報を保存することで、すべてのPC上であなたの製品体験を共有することができます。"

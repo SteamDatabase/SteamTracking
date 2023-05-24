@@ -1516,11 +1516,11 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_DownloadRatesInBits"			"İndirme hızını saniyede bit cinsinden göster"
 
 "Steam_PeerContentTitle"			"Yerel ağ üzerinden oyun dosyalarının aktarılması"
-"Steam_PeerContentInfo"			"Bu özellik, yerel ağınızda bulunan bilgisayarların veya Steam Deck'lerin kendi aralarında oyun dosyalarını aktarabilmesine olanak tanır, böylece bir oyunu güncellerken veya indirirken internet trafiğiniz de azalmış olur."
+"Steam_PeerContentInfo"			"Bu özellik yerel ağınıza bağlı diğer bilgisayarlardan dosya aktarımına olanak tanır. Bu, oyun indirirken internet trafiğinizi azaltır. Diğer kullanıcıların da bu bilgisayardan aktarım yapmasını sağlayabilirsiniz."
 "Steam_PeerContentOff"			"Kapalı - Aktarıma izin verme"
-"Steam_PeerContentSameUser"		"Aygıtlarım arasında dosya aktarımlarına izin ver"
-"Steam_PeerContentFriends"		"Steam arkadaşlarım arasında dosya aktarımlarına izin ver"
-"Steam_PeerContentAnyUser"		"Tüm kullanıcılar arasında dosya aktarımlarına izin ver"
+"Steam_PeerContentSameUser"		"Sadece kendi aygıtlarıma aktarıma izin ver"
+"Steam_PeerContentFriends"		"Steam arkadaşlarıma aktarıma izin ver"
+"Steam_PeerContentAnyUser"		"Tüm kullanıcılara aktarıma izin ver"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud, farklı bilgisayarlarda aynı ürün deneyimini yaşamanız için bilgilerinizi saklar."

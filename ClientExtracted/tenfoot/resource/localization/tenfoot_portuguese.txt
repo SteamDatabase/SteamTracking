@@ -3540,8 +3540,8 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 
 	"DeviceAuth_Authorized_Notification" "Os jogos de {s:owner} podem agora ser jogados neste computador."
 	"DeviceAuth_Deauthorized_Notification" "{s:owner} revogou a partilha aqui. Alguns jogos podem não estar disponíveis."
-	"DeviceAuth_StopPlaying_Notification" "Ei, {s:owner} precisa deste jogo partilhado! Tens {s:minutes} minuto(s) de jogo restante(s)..."
-	"DeviceAuth_SharedLibraryAvaliable_Notification" "Viva! Os jogos partilhados de {s:owner} estão agora disponíveis para ti..."
+	"DeviceAuth_StopPlaying_Notification" "{s:owner} precisa deste jogo! Tens mais {s:minutes} min de jogo."
+	"DeviceAuth_SharedLibraryAvaliable_Notification" "Os jogos partilhados de {s:owner} estão agora disponíveis para ti."
 
 	"DeviceAuth_StoppedSharedGame_Title" "Aviso de Biblioteca Partilhada"
 	"DeviceAuth_StoppedSharedGame_Text" "O Steam terminou o jogo \"{s:game}\" porque {s:owner} está a utilizar esta biblioteca de momento."

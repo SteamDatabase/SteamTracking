@@ -1504,11 +1504,11 @@
 "Steam_DownloadRatesInBits"			"Letöltési sebesség bit/másodpercben mutatása"
 
 "Steam_PeerContentTitle"			"Játékfájl-átvitel helyi hálózaton keresztül"
-"Steam_PeerContentInfo"			"E funkció lehetővé teszi, hogy a PC-d játékfájlokat cseréljen a helyi hálózatodon levő más PC-kkel vagy Steam Deckekkel, csökkentve az internetforgalmat játékok letöltésekor vagy frissítésekor."
+"Steam_PeerContentInfo"			"Ez a funkció lehetővé teszi játékfájlok átvitelét más PC-kről a helyi hálózatodon, csökkentve az internetforgalmat játékok letöltésekor. Más felhasználóknak is engedélyezheted játékok átvitelét erről a PC-ről."
 "Steam_PeerContentOff"			"Kikapcsolva – Ne engedélyezzen átvitelt"
-"Steam_PeerContentSameUser"		"Átvitel a saját eszközeim között"
-"Steam_PeerContentFriends"		"Átvitel a Steames barátaimmal"
-"Steam_PeerContentAnyUser"		"Átvitel bármely felhasználóval"
+"Steam_PeerContentSameUser"		"Átvitel csak az én eszközeimre"
+"Steam_PeerContentFriends"		"Átvitel a Steames barátaimnak"
+"Steam_PeerContentAnyUser"		"Átvitel bármely felhasználónak"
 
 "Steam_CloudLabel"					"Steam Felhő"
 "Steam_CloudInfo"					"A Steam Felhő információkat tárol, melyekkel a termék használata különböző PC-ken ugyanolyan lesz."

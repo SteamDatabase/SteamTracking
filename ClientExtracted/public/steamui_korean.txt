@@ -1516,7 +1516,7 @@
 "Steam_DownloadRatesInBits"			"다운로드 속도를 초당 비트 수로 표시"
 
 "Steam_PeerContentTitle"			"로컬 네트워크를 통한 게임 파일 전송"
-"Steam_PeerContentInfo"			"이 기능은 주로 사용하는 PC와 로컬 네트워크에 있는 다른 PC 또는 Steam Deck 사이에 게임 파일 전송을 가능하게 하는 기능으로, 게임을 다운로드 또는 업데이트하는 동안 인터넷 트래픽을 줄입니다."
+"Steam_PeerContentInfo"			"이 기능을 사용하면 로컬 네트워크에 있는 다른 PC에 저장된 Steam 게임 파일을 원하는 PC로 전송할 수 있으며, 게임을 다운로드 또는 업데이트하는 동안 인터넷 트래픽이 감소합니다. 또한 다른 사용자가 이 PC에서 게임 파일을 전송할 수 있도록 허용할 수 있습니다."
 "Steam_PeerContentOff"			"끄기 - 허용 안 함"
 "Steam_PeerContentSameUser"		"내 기기만 허용"
 "Steam_PeerContentFriends"		"Steam 친구만 허용"

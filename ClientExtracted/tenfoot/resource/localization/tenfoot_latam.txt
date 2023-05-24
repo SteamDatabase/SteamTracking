@@ -4326,7 +4326,7 @@ Por favor, inténtalo de nuevo más tarde."
 	"SettingsAudio_Profile_ToDo"		"Por favor, selecciona un tipo de presentación de audio de la lista de abajo:"
 
 	"SettingsAudio_Codec"	"Pass-through de códecs digitales"
-	"SettingsAudio_Codec_Information"	"Si tu sistema de sonido puede gestionar los códecs digitales de forma nativa, puedes elegir qué códecs nativos no quieres que sean transcodificados. Las señales digitales codificadas en los formatos que selecciones abajo no serán transcodificadas por el sistema. Esto es utilizado por aplicaciones mutlimedia. Para determinar estos parámetros, deberías consultar los manuales de tus aplicaciones multimedia. "
+	"SettingsAudio_Codec_Information"	"Si tu sistema de sonido puede gestionar los códecs digitales de forma nativa, puedes elegir qué códecs nativos no quieres que sean transcodificados. Las señales digitales codificadas en los formatos que selecciones abajo no serán transcodificadas por el sistema. Esto es utilizado por aplicaciones multimedia. Para determinar estos parámetros, deberías consultar los manuales de tus aplicaciones multimedia. "
 	"SettingsAudio_Codec_NoDigital"		"No se ha seleccionado ninguna salida digital. Por favor, retrocede y selecciona una salida digital para habilitar estos códecs."
 	"SettingsAudio_Codec_ToDo"			"Por favor, indica qué códecs no deberían ser transcodificados: "
 

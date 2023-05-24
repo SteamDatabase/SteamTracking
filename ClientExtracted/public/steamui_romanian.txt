@@ -1130,7 +1130,7 @@ Te rugăm să reintroduci parola dorită."
 "SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nÎți mulțumim că ai acceptat să completezi acest chestionar.\n\nSe pare că ai început deja să-l completezi, așa că nu mai e nevoie să strângem informații despre PC-ul tău. Apasă pe \"Finalizare\" pentru a deschide o pagină web unde vei termina de completat chestionarul."
 "SteamUI_SpecialSurvey_ForwardToWeb"	"Prima parte, obținerea datelor despre PC, s-a încheiat.\n\nApasă pe \"Finalizare\" pentru a deschide o pagină web ca să treci la partea a doua. Chestionarul nu va fi completat până nu termini și partea a doua."
 "SteamUI_SpecialSurvey_Complete"		"Îți mulțumim că ai participat la acest sondaj. Răspunsul tău a fost înregistrat."
-"SteamUI_SpecialSurvey_Sending_Data"	"Trimitere informații obținute..."
+"SteamUI_SpecialSurvey_Sending_Data"	"Se trimit informațiile obținute..."
 "SteamUI_SpecialSurvey_Cancel"			"Anulează"
 
 "SteamUI_CZ_SellPage" "http://www.steampowered.com/platform/game_info/czero/"
@@ -1507,11 +1507,11 @@ Te rugăm să reintroduci parola dorită."
 "Steam_DownloadRatesInBits"			"Afișează viteza de descărcare în biți pe secundă"
 
 "Steam_PeerContentTitle"			"Transferul fișierelor de joc prin rețeaua locală"
-"Steam_PeerContentInfo"			"Această funcționalitate permite calculatorului tău să transfere fișierele jocului de la sau către un alt calculator sau dispozitiv Steam Deck prin rețeaua ta locală, reducând traficul de internet la descărcarea sau actualizarea unui joc."
+"Steam_PeerContentInfo"			"Această funcționalitate îți permite să transferi fișiere de joc de pe alte calculatoare din rețeaua ta locală, reducând traficul de internet la descărcarea unui joc. De asemenea, le poți permite altor utilizatori să transfere jocuri de pe acest calculator."
 "Steam_PeerContentOff"			"Dezactivat – nu permite niciun transfer"
-"Steam_PeerContentSameUser"		"Permite transfer către/de pe dispozitivele mele"
-"Steam_PeerContentFriends"		"Permite transfer către/de la prietenii mei de pe Steam"
-"Steam_PeerContentAnyUser"		"Permite transfer către/de la orice utilizator"
+"Steam_PeerContentSameUser"		"Permite transferuri doar către dispozitivele mele"
+"Steam_PeerContentFriends"		"Permite transferuri către prietenii mei de pe Steam"
+"Steam_PeerContentAnyUser"		"Permite transferuri către orice utilizator"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud stochează informații pentru ca utilizarea să rămână consistentă de pe un PC pe altul."
@@ -3168,7 +3168,7 @@ Pentru a juca acest joc trebuie fie să faci upgrade de sistem, fie să foloseș
 Pentru a participa la unul dintre testele beta, alege-l din lista de mai jos și dă clic pe 'OK'. (Pentru a părăsi toate programele beta, alege FĂRĂ)."
 
 "Steam_ReadMoreAboutBetas"	"Află mai multe despre testele beta Steam"
-"Steam_SelectNoBeta"	"NICIUNUL - Părăsește toate programele beta"
+"Steam_SelectNoBeta"	"NICIUNA - Părăsește toate programele beta"
 "Steam_BetaIsOver" "Mulțumim pentru participarea la programul beta %betaname% din Steam.  
 
 Acum beta s-a încheiat - te rugăm restartează Steam pentru a te reîntoarce la starea inițială."

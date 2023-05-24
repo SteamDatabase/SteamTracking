@@ -1513,11 +1513,11 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_DownloadRatesInBits"			"Hiển thị tốc độ tải xuống ở dạng bit trên giây"
 
 "Steam_PeerContentTitle"			"Truyền file trò chơi trên mạng nội bộ"
-"Steam_PeerContentInfo"			"Tính năng này cho phép máy PC của bạn truyền file trò chơi tới/từ máy PC khác hoặc Steam Deck trên mạng nội bộ, giảm lưu lượng dùng Internet khi đang tải xuống/lên một trò chơi"
+"Steam_PeerContentInfo"			"Tính năng này cho phép chuyển file trò chơi từ máy tính khác trên mạng nội bộ của bạn, giảm lưu lượng dùng Internet khi đang tải trò chơi. Bạn cũng có thể cho phép người dùng khác chuyển file trò chơi từ máy tính này."
 "Steam_PeerContentOff"			"Tắt - không cho phép truyền dữ liệu"
-"Steam_PeerContentSameUser"		"Cho phép truyền tới/từ thiết bị của tôi"
-"Steam_PeerContentFriends"		"Cho phép truyền tới/từ bạn bè tôi trên Steam"
-"Steam_PeerContentAnyUser"		"Cho phép truyền tới/từ người dùng bất kỳ"
+"Steam_PeerContentSameUser"		"Chỉ cho phép chuyển trên thiết bị của tôi"
+"Steam_PeerContentFriends"		"Cho phép chuyển tới bạn bè Steam"
+"Steam_PeerContentAnyUser"		"Cho phép chuyển tới người dùng bất kỳ"
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud lưu trữ thông tin dữ liệu, giúp cho trải nghiệm của bạn đồng nhất xuyên suốt các máy tính khác nhau."

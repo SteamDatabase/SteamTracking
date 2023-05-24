@@ -2445,6 +2445,7 @@
   "UserGameNotes_NotesListView": "รายการโน้ต",
   "UserGameNotes_ClickToOpenLink": "คลิกกลางเพื่อเปิด",
   "UserGameNotes_ImageTooLarge": "รูปภาพที่วางมีขนาดใหญ่เกินไป",
+  "UserGameNotes_Edit": "แก้ไข",
   "UserGameNotes_Untitled": "ไม่กำหนดชื่อ",
   "FormattingToolbar_Undo": "ยกเลิก",
   "FormattingToolbar_Redo": "ทำซ้ำ",

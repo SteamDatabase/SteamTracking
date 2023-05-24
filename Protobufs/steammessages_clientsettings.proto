@@ -85,6 +85,7 @@ message CMsgClientSettings {
 	optional .CMsgHotkey voice_push_to_talk_key = 4018 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool overlay_toolbar_list_view = 4019 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "OverlayToolBarListView"];
 	optional bool always_use_gamepadui_overlay = 4020 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\EnableSCTenFootOverlayCheckNew"];
+	optional string overlay_tabs = 4021 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "OverlayTabs"];
 	optional bool smooth_scroll_webviews = 5000 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\SmoothScrollWebViews", (setting_default_bool) = true];
 	optional bool enable_gpu_accelerated_webviews = 5001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_hardware_video_decoding = 5003 [(setting_store) = k_EClientSettingStore_CustomFunc];

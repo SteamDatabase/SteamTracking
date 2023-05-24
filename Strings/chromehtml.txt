@@ -1095,6 +1095,8 @@ Treat unspecified samesite as samesite=lax
 Disable auto-restart of renderer process for existing browsers
 -cef-disable-gpu-compositing
 Disable GPU accelerated compositing in browsers
+-cef-use-shell-exec
+Launch CEF process via sub-shell
 -store
 -community
 -clientui
@@ -1152,21 +1154,22 @@ SameSiteByDefaultCookies
 WebContentsOcclusion
 --enable-smooth-scrolling
 --disable-smooth-scrolling
---disable-gpu-compositing --disable-gpu
+--disable-gpu-compositing
+--disable-gpu
 --disable-accelerated-video-decode
 --use-gl=desktop
 --use-cmd-decoder=passthrough
 --enable-gpu-debugging
---disablehighdpi --force-device-scale-factor=1 --device-scale-factor=1
+--disablehighdpi
+--force-device-scale-factor=1
+--device-scale-factor=1
 --no-sandbox
 -force-sandbox
 --disable-winh264
--dev
 --single-process
 --in-process-gpu
 --ignore-gpu-blocklist
 --ignore-gpu-blacklist
---disable-gpu-compositing
 --disable-d3d11
 -disablejslogging
 -verbosejslogging
@@ -1174,17 +1177,20 @@ WebContentsOcclusion
 --v=%s
 --v=1
 -delaypageload
---log-file=%s
+--log-file='%s'
 BREAKPAD_DUMP_LOCATION
 --full-memory-crash-report
 --disable-breakpad
---disable-hang-monitor --disable-gpu-watchdog
+--disable-hang-monitor
+--disable-gpu-watchdog
 --disable-quick-menu
 --enable-features=
 ,
 --disable-features=
 --enable-blink-features=
 --disable-blink-features=
+--proxy-server
+%s
 bValidHandle == true
 Failed to connect to master html process, created shared memory (spawn time %0.2f)
 %s_%u_%u
@@ -1213,8 +1219,8 @@ cef_log.txt
 SteamBootstrapper_GetLoggingDir
 GenerateCEFLogDir in unknown process
 logs
-!pszString || pszString[nChars] == '\0'
 %s.previous.txt
+!pszString || pszString[nChars] == '\0'
 %s_server
 %s_client
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_shared.cpp
@@ -2375,11 +2381,18 @@ sc_schinese
 @
 @
 
+N
 
 
 @
+
 Ic
-\
+p
+
+7
+?
+I
+
 0
 0
 Hi
@@ -2394,6 +2407,7 @@ AT=
 D
 @
 @
+
 @
 Hc
 Hc
@@ -2447,6 +2461,7 @@ M9e
 ?
 ?
 :
+L
 ?
 ?
 ?
@@ -2457,6 +2472,7 @@ M9e
 @
 @
 @
+0
 0
 0
 0

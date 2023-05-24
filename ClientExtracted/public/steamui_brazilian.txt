@@ -1512,11 +1512,11 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_DownloadRatesInBits"			"Exibir taxas de download em bits/segundo"
 
 "Steam_PeerContentTitle"			"Transferências de arquivos de jogos pela rede local"
-"Steam_PeerContentInfo"			"Esse recurso permite que o seu computador transfira arquivos de jogos de/para outros computadores ou Steam Decks na sua rede local, reduzindo o uso da internet para baixar ou atualizar um jogo."
+"Steam_PeerContentInfo"			"Este recurso permite a transferência de arquivos de jogos de outros computadores na sua rede local, reduzindo o uso da internet para baixar um jogo. Você também pode permitir que outros usuários transfiram jogos a partir deste computador."
 "Steam_PeerContentOff"			"Não permitir transferências locais"
-"Steam_PeerContentSameUser"		"Permitir entre os meus dispositivos"
-"Steam_PeerContentFriends"		"Permitir com amigos Steam"
-"Steam_PeerContentAnyUser"		"Permitir com qualquer usuário"
+"Steam_PeerContentSameUser"		"Permitir transferências apenas para os meus dispositivos"
+"Steam_PeerContentFriends"		"Permitir transferências apenas para os meus amigos no Steam"
+"Steam_PeerContentAnyUser"		"Permitir transferências para qualquer usuário"
 
 "Steam_CloudLabel"					"Nuvem Steam"
 "Steam_CloudInfo"					"A Nuvem Steam armazena informações para que a sua experiência nos produtos seja constante entre computadores."
