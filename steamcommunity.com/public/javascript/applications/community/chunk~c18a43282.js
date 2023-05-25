@@ -19191,9 +19191,7 @@
       var i = r(24174),
         n = r(44973);
       function a() {
-        return 2 == n.De.EUNIVERSE || "dev" == n.De.WEB_UNIVERSE
-          ? `${n.De.CLAN_CDN_ASSET_URL}images/`
-          : `${n.De.MEDIA_CDN_COMMUNITY_URL}images/clans/`;
+        return `${n.De.CLAN_CDN_ASSET_URL}images/`;
       }
       function s(e) {
         return (e = e.replace(i.A1, a())).replace("http://", "https://");
