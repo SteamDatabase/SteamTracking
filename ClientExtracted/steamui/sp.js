@@ -8738,7 +8738,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, ve.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1685049557),
+          s = parseInt(1685071401),
           c = s && (0, $n.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == _.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -19135,7 +19135,7 @@
         let l = `durationcontrolinit_uid${t}`;
         const { popup: s, element: c } = (0, d.usePopup)(l, {
             title: l,
-            dimensions: { width: 1, height: 1 },
+            dimensions: { width: r.m_nWidth, height: r.m_nHeight },
             body_class: _u().DurationControlInit,
             browserType: void 0,
             target_browser: a.params.browserInfo,
