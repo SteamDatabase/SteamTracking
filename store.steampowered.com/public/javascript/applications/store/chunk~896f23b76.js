@@ -144,9 +144,7 @@
       var r = s(24174),
         a = s(44973);
       function n() {
-        return 2 == a.De.EUNIVERSE || "dev" == a.De.WEB_UNIVERSE
-          ? `${a.De.CLAN_CDN_ASSET_URL}images/`
-          : `${a.De.MEDIA_CDN_COMMUNITY_URL}images/clans/`;
+        return `${a.De.CLAN_CDN_ASSET_URL}images/`;
       }
       function o(e) {
         return (e = e.replace(r.A1, n())).replace("http://", "https://");
@@ -211,13 +209,13 @@
       s.d(t, {
         FM: () => o,
         H7: () => n,
-        OL: () => D,
+        OL: () => L,
         Pm: () => i,
         XW: () => c,
         dK: () => u,
         et: () => m,
         k6: () => _,
-        md: () => L,
+        md: () => D,
         xL: () => p,
       });
       var r = s(32765),
@@ -319,7 +317,7 @@
       function _(e) {
         return d(e, "page_bg_generated_v6b.jpg");
       }
-      function D(e) {
+      function L(e) {
         return r.De.SNR &&
           r.De.SNR.length > 0 &&
           e &&
@@ -327,7 +325,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + r.De.SNR
           : e;
       }
-      function L(e, t) {
+      function D(e, t) {
         try {
           const s = new URL(t),
             r = new URL(e);
