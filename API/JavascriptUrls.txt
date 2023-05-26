@@ -2971,7 +2971,6 @@ steam://gamewebcallback/
 steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/details/${}
-steam://newsettings/broadcast
 steam://oldsettings
 steam://open/about
 steam://open/bigpicture
@@ -3035,6 +3034,7 @@ steam://rungameid/${}
 steam://settings
 steam://settings/account
 steam://settings/account${}
+steam://settings/broadcast
 steam://settings/downloads
 steam://settings/ingame
 steam://stopstreaming

@@ -1,4 +1,4 @@
-var CLSTAMP = "8078717";
+var CLSTAMP = "8083981";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4383,9 +4383,9 @@ var CLSTAMP = "8078717";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "May 23 2023 : 16:27:54",
-                BUILD_TIME_UTC: "May 23 2023 : 23:27:54",
-                BUILD_RTIME_UTC: 1684884474,
+                BUILD_TIME_LOCAL: "May 25 2023 : 14:19:17",
+                BUILD_TIME_UTC: "May 25 2023 : 21:19:17",
+                BUILD_RTIME_UTC: 1685049557,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -41809,215 +41809,215 @@ var CLSTAMP = "8078717";
         "use strict";
         r.r(t),
           r.d(t, {
-            Achievement: () => Rt,
-            AddFriend: () => Q,
-            AdvancedSearch: () => Yt,
-            AppleLogo: () => Ut,
-            Arrow: () => ke,
-            ArrowGamepadUI: () => xe,
-            AsyncGameTurn: () => d,
-            Avatar: () => Br,
-            AwardIcon: () => Dr,
-            Backgrounds: () => Sr,
-            Badge: () => xr,
-            Bell: () => Se,
-            BigPicture: () => at,
-            Bookmark: () => tr,
-            BroadcastAdminOfficer: () => Pr,
-            BroadcastBroadcaster: () => Nr,
-            BroadcastContributor: () => Ar,
-            BroadcastModerator: () => Or,
-            Burger: () => fr,
-            CSGO: () => Et,
-            Calendar: () => _e,
-            Caution: () => Ee,
-            Chart: () => we,
-            ChatBubble: () => Qe,
-            ChatEffect: () => Lr,
-            ChatEmoticon: () => br,
-            ChatListView: () => oe,
-            ChatNotification: () => w,
-            ChatSettings: () => v,
-            ChatSticker: () => Er,
-            Check: () => fe,
-            ChevronNoPadding: () => h,
-            Circle: () => $r,
-            Clock: () => y,
-            ClosedCaption: () => Mt,
-            CloudDownload: () => Bt,
-            Collapse: () => rr,
-            Comment: () => sr,
-            CommentThread: () => ur,
-            CopyToClipboard: () => E,
-            CornerRibbon: () => yt,
-            Coupon: () => Mr,
-            Crown: () => se,
-            CutArrow: () => Re,
-            DLCIcon: () => qr,
-            DeleteUserNews: () => dr,
-            DialogCheck: () => ve,
-            Discord: () => _t,
-            DoNotDisturb: () => Ke,
-            DoubleArrow: () => He,
-            DownArrowContextMenu: () => M,
-            Download: () => St,
-            DownloadsFilled: () => N,
-            DynamicCollection: () => Pt,
-            Edit: () => Tt,
-            Effect: () => yr,
-            Emoticon: () => k,
-            EmoticonBow: () => vr,
-            Envelope: () => dt,
-            ExitIcon: () => G,
-            Expand: () => nr,
-            ExpanderArrow: () => b,
-            ExternalLink: () => ir,
-            Facebook: () => pt,
-            FavoriteFriends: () => je,
-            Filter: () => It,
-            Flag: () => At,
-            Flair: () => lr,
-            FlatArrow: () => ze,
-            Font: () => Qr,
-            FriendFilled: () => A,
-            FriendIcon: () => Ue,
-            FriendRequest: () => ee,
-            GenericDiscount: () => en,
-            Gift: () => C,
-            Globe: () => et,
-            Group: () => K,
-            Headphones: () => W,
-            HeadphonesGamepadUI: () => z,
-            Help: () => or,
-            Hidden: () => bt,
-            HideShowChat: () => it,
-            Home: () => Dt,
-            Hyperlink: () => g,
-            Image: () => ye,
-            IncomingVoiceCall: () => U,
-            Info: () => ht,
-            Information: () => Ot,
-            Instagram: () => ft,
-            Installed: () => kt,
-            Invalid: () => Qt,
-            Inventory: () => p,
-            Invite: () => te,
-            InviteFriend: () => f,
-            LanguageOptions: () => H,
-            LargeMobilePhone: () => ut,
-            LeaveVoiceChat: () => Yr,
-            Library: () => xt,
-            LightBulb: () => rn,
-            LinuxLogo: () => jt,
-            LinuxLogo2: () => Xt,
-            Lock: () => be,
-            LoyaltyCoinIcon: () => Fr,
-            MagnifyingGlass: () => L,
-            Maximize: () => Fe,
-            MediaControls: () => Ye,
-            MenuMoreDots: () => $t,
-            MenuMoreDotsVertical: () => Jt,
-            Microphone: () => S,
-            MicrophoneGamepadUI: () => B,
-            Minimize: () => Ve,
-            MobilePhone: () => lt,
-            MouseAndKB: () => ct,
-            MultiPlayer: () => ne,
-            NavArrow: () => er,
-            NewChatGroup: () => ae,
-            NewChatGroupGamepadUI: () => le,
-            Notification: () => ge,
-            OutgoingVoiceCall: () => j,
-            PSD: () => Jr,
-            Paperclip: () => re,
-            PartyPopper: () => _r,
-            Patch: () => zt,
-            Pause: () => Ce,
-            Person: () => ar,
-            Pin: () => $,
-            Play: () => ue,
-            PlayCircle: () => de,
-            PlayTime: () => Ht,
-            PlayerList: () => tn,
-            Plus: () => T,
-            PlusCircle: () => J,
-            PlusFilled: () => O,
-            Popout: () => D,
-            Profile: () => kr,
-            ProgressCircle: () => Ft,
-            RSS: () => Vr,
-            ReadyToPlay: () => Vt,
-            RecentChats: () => Y,
-            RecentClock: () => pe,
-            Reload: () => Ne,
-            ResizeIcon: () => I,
-            Restore: () => Te,
-            ReviewHelp: () => hr,
-            Reviews: () => Wt,
-            RewardsIcon: () => Hr,
-            Rules: () => Ct,
-            STVTimelineGrabber: () => rt,
-            STVTimelineMarker: () => nt,
-            Schedule: () => mt,
-            ScratchPad: () => q,
-            Scroll: () => We,
-            Settings: () => _,
-            Share: () => Zr,
-            ShowBothChats: () => ot,
-            SingleWindowToggle: () => Ae,
-            SketchArrowTopLeft: () => Zt,
-            Sliders: () => Nt,
-            SmallMediumLarge: () => Gt,
-            SmallX: () => tt,
-            Snowball: () => wr,
-            SortBy: () => me,
-            SortBy_V2: () => he,
-            Star: () => Lt,
-            SteamDeckCompatLogo: () => zr,
-            SteamDeckCompatPlayable: () => jr,
-            SteamDeckCompatUnknown: () => Kr,
-            SteamDeckCompatUnsupported: () => Xr,
-            SteamDeckCompatVerified: () => Ur,
-            SteamGuard: () => m,
-            SteamLogo: () => $e,
-            SteamLogo_Piston: () => qt,
-            SteamSupport: () => u,
-            SteamTV: () => qe,
-            Store: () => cr,
-            StoryWidgetBookmarkPage: () => Wr,
-            Submit: () => x,
-            TextButtonDoubleArrow: () => De,
-            TextChat: () => R,
-            TextRoom: () => Z,
-            ThickChevron: () => Ie,
-            ThumbsUp: () => mr,
-            ThumbsUpUserNews: () => Cr,
-            TimeWarning: () => Rr,
-            Toast: () => Be,
-            TopOfQueue: () => Ir,
-            Trade: () => Pe,
-            Trash: () => Ge,
-            TrashCan: () => Ze,
-            TwitchTV: () => vt,
-            Twitter: () => gt,
-            Undo: () => Oe,
-            Update: () => gr,
-            Upgrade: () => Me,
-            User: () => Xe,
-            VACShield: () => Gr,
-            VR: () => st,
-            Video: () => Le,
-            VideoPlay: () => ce,
-            Viewers: () => Je,
-            VoiceCallOnHold: () => X,
-            VoiceRoom: () => P,
-            Volume: () => ie,
-            WindowsLogo: () => Kt,
-            Wishlist: () => Tr,
-            WriteReview: () => pr,
-            X: () => F,
-            X_Line: () => V,
-            YouTube: () => wt,
+            Achievement: () => It,
+            AddFriend: () => te,
+            AdvancedSearch: () => $t,
+            AppleLogo: () => Xt,
+            Arrow: () => Re,
+            ArrowGamepadUI: () => He,
+            AsyncGameTurn: () => m,
+            Avatar: () => xr,
+            AwardIcon: () => Vr,
+            Backgrounds: () => kr,
+            Badge: () => Hr,
+            Bell: () => ke,
+            BigPicture: () => st,
+            Bookmark: () => nr,
+            BroadcastAdminOfficer: () => Zr,
+            BroadcastBroadcaster: () => Gr,
+            BroadcastContributor: () => Pr,
+            BroadcastModerator: () => Nr,
+            Burger: () => wr,
+            CSGO: () => bt,
+            Calendar: () => ve,
+            Caution: () => be,
+            Chart: () => Ee,
+            ChatBubble: () => tt,
+            ChatEffect: () => Sr,
+            ChatEmoticon: () => yr,
+            ChatListView: () => le,
+            ChatNotification: () => E,
+            ChatSettings: () => M,
+            ChatSticker: () => br,
+            Check: () => we,
+            ChevronNoPadding: () => g,
+            Circle: () => Qr,
+            Clock: () => B,
+            ClosedCaption: () => Lt,
+            CloudDownload: () => xt,
+            Collapse: () => ir,
+            Comment: () => ur,
+            CommentThread: () => Cr,
+            CopyToClipboard: () => b,
+            CornerRibbon: () => Bt,
+            Coupon: () => Lr,
+            Crown: () => ue,
+            CutArrow: () => Ie,
+            DLCIcon: () => Jr,
+            DeleteUserNews: () => mr,
+            DialogCheck: () => Me,
+            Discord: () => vt,
+            DoNotDisturb: () => qe,
+            DoubleArrow: () => De,
+            DownArrowContextMenu: () => L,
+            Download: () => kt,
+            DownloadsFilled: () => G,
+            DynamicCollection: () => Zt,
+            Edit: () => At,
+            Effect: () => Br,
+            Emoticon: () => R,
+            EmoticonBow: () => Mr,
+            Envelope: () => mt,
+            ExitIcon: () => W,
+            Expand: () => or,
+            ExpanderArrow: () => y,
+            ExternalLink: () => ar,
+            Facebook: () => ft,
+            FavoriteFriends: () => Ke,
+            Filter: () => Ft,
+            Flag: () => Pt,
+            Flair: () => cr,
+            FlatArrow: () => je,
+            Font: () => tn,
+            FriendFilled: () => P,
+            FriendIcon: () => Xe,
+            FriendRequest: () => re,
+            GenericDiscount: () => rn,
+            Gift: () => h,
+            Globe: () => rt,
+            Group: () => q,
+            Headphones: () => U,
+            HeadphonesGamepadUI: () => j,
+            Help: () => lr,
+            Hidden: () => yt,
+            HideShowChat: () => at,
+            Home: () => Vt,
+            Hyperlink: () => _,
+            Image: () => Be,
+            IncomingVoiceCall: () => X,
+            Info: () => gt,
+            Information: () => Nt,
+            Instagram: () => wt,
+            Installed: () => Rt,
+            Invalid: () => tr,
+            Inventory: () => f,
+            Invite: () => ne,
+            InviteFriend: () => w,
+            LanguageOptions: () => D,
+            LargeMobilePhone: () => Ct,
+            LeaveVoiceChat: () => $r,
+            Library: () => Ht,
+            LightBulb: () => on,
+            LinuxLogo: () => Kt,
+            LinuxLogo2: () => Yt,
+            Lock: () => ye,
+            LoyaltyCoinIcon: () => Tr,
+            MagnifyingGlass: () => S,
+            Maximize: () => Te,
+            MediaControls: () => $e,
+            MenuMoreDots: () => Qt,
+            MenuMoreDotsVertical: () => er,
+            Microphone: () => k,
+            MicrophoneGamepadUI: () => x,
+            Minimize: () => Oe,
+            MobilePhone: () => ct,
+            MouseAndKB: () => dt,
+            MultiPlayer: () => oe,
+            NavArrow: () => rr,
+            NewChatGroup: () => se,
+            NewChatGroupGamepadUI: () => ce,
+            Notification: () => _e,
+            OutgoingVoiceCall: () => K,
+            PSD: () => en,
+            Paperclip: () => ie,
+            PartyPopper: () => vr,
+            Patch: () => jt,
+            Pause: () => he,
+            Person: () => sr,
+            Pin: () => Q,
+            Play: () => Ce,
+            PlayCircle: () => me,
+            PlayTime: () => Dt,
+            PlayerList: () => nn,
+            Plus: () => A,
+            PlusCircle: () => ee,
+            PlusFilled: () => N,
+            Popout: () => V,
+            Profile: () => Rr,
+            ProgressCircle: () => Tt,
+            RSS: () => Or,
+            ReadyToPlay: () => Ot,
+            RecentChats: () => $,
+            RecentClock: () => fe,
+            Reload: () => Ge,
+            ResizeIcon: () => F,
+            Restore: () => Ae,
+            ReviewHelp: () => gr,
+            Reviews: () => Ut,
+            RewardsIcon: () => Dr,
+            Rules: () => ht,
+            STVTimelineGrabber: () => it,
+            STVTimelineMarker: () => ot,
+            Schedule: () => pt,
+            ScratchPad: () => J,
+            Scroll: () => Ue,
+            Settings: () => v,
+            Share: () => zr,
+            ShowBothChats: () => lt,
+            SingleWindowToggle: () => Pe,
+            SketchArrowTopLeft: () => zt,
+            Sliders: () => Gt,
+            SmallMediumLarge: () => Wt,
+            SmallX: () => nt,
+            Snowball: () => Er,
+            SortBy: () => pe,
+            SortBy_V2: () => ge,
+            Star: () => St,
+            SteamDeckCompatLogo: () => jr,
+            SteamDeckCompatPlayable: () => Kr,
+            SteamDeckCompatUnknown: () => qr,
+            SteamDeckCompatUnsupported: () => Yr,
+            SteamDeckCompatVerified: () => Xr,
+            SteamGuard: () => p,
+            SteamLogo: () => Qe,
+            SteamLogo_Piston: () => Jt,
+            SteamSupport: () => C,
+            SteamTV: () => Je,
+            Store: () => dr,
+            StoryWidgetBookmarkPage: () => Ur,
+            Submit: () => H,
+            TextButtonDoubleArrow: () => Ve,
+            TextChat: () => I,
+            TextRoom: () => z,
+            ThickChevron: () => Fe,
+            ThumbsUp: () => pr,
+            ThumbsUpUserNews: () => hr,
+            TimeWarning: () => Ir,
+            Toast: () => xe,
+            TopOfQueue: () => Fr,
+            Trade: () => Ze,
+            Trash: () => We,
+            TrashCan: () => ze,
+            TwitchTV: () => Mt,
+            Twitter: () => _t,
+            Undo: () => Ne,
+            Update: () => _r,
+            Upgrade: () => Le,
+            User: () => Ye,
+            VACShield: () => Wr,
+            VR: () => ut,
+            Video: () => Se,
+            VideoPlay: () => de,
+            Viewers: () => et,
+            VoiceCallOnHold: () => Y,
+            VoiceRoom: () => Z,
+            Volume: () => ae,
+            WindowsLogo: () => qt,
+            Wishlist: () => Ar,
+            WriteReview: () => fr,
+            X: () => T,
+            X_Line: () => O,
+            YouTube: () => Et,
           });
         var n = r(70655),
           i = r(67294),
@@ -42026,7 +42026,15 @@ var CLSTAMP = "8078717";
           l = r(58985),
           s = r.n(l),
           c = r(81673);
-        function u(e) {
+        let u = 0;
+        function d() {
+          const e = i.useRef();
+          return (
+            void 0 === e.current && (e.current = "svgid_" + u++),
+            [e.current, `url(#${e.current})`]
+          );
+        }
+        function C(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -42045,7 +42053,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function d(e) {
+        function m(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -42077,7 +42085,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function C(e) {
+        function h(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -42096,7 +42104,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function m(e) {
+        function p(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -42123,7 +42131,8 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function h(e) {
+        function g(e) {
+          const [t, r] = d();
           return i.createElement(
             "svg",
             Object.assign(
@@ -42136,7 +42145,7 @@ var CLSTAMP = "8078717";
             ),
             i.createElement(
               "g",
-              { clipPath: "url(#clip0_3155_4178)" },
+              { clipPath: r },
               i.createElement("path", {
                 fill: "currentColor",
                 fillRule: "evenodd",
@@ -42149,7 +42158,7 @@ var CLSTAMP = "8078717";
               null,
               i.createElement(
                 "clipPath",
-                { id: "clip0_3155_4178" },
+                { id: t },
                 i.createElement("rect", {
                   fill: "currentColor",
                   width: "15",
@@ -42159,7 +42168,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function p(e) {
+        function f(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -42176,7 +42185,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function g(e) {
+        function _(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -42211,7 +42220,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function f() {
+        function w() {
           return i.createElement(
             "svg",
             {
@@ -42236,7 +42245,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function _(e) {
+        function v(e) {
           const t = (0, o.default)(
             "SVGIcon_Button",
             "SVGIcon_Settings",
@@ -42262,7 +42271,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function w(e) {
+        function E(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -42281,7 +42290,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function v() {
+        function M() {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -42323,7 +42332,7 @@ var CLSTAMP = "8078717";
                 )
               );
         }
-        function E() {
+        function b() {
           return i.createElement(
             "svg",
             {
@@ -42372,7 +42381,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function M() {
+        function L() {
           return i.createElement(
             "svg",
             {
@@ -42389,7 +42398,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function b(e) {
+        function y(e) {
           return i.createElement(
             "svg",
             {
@@ -42408,7 +42417,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function L(e) {
+        function S(e) {
           let t = "SVGIcon_Button SVGIcon_MagnifyingGlass";
           return (
             e.className && (t += ` ${e.className}`),
@@ -42439,7 +42448,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function y() {
+        function B() {
           return i.createElement(
             "svg",
             {
@@ -42456,7 +42465,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function S(e) {
+        function k(e) {
           let t = "SVGIcon_Button SVGIcon_Microphone";
           return (
             e.className && (t += ` ${e.className}`),
@@ -42584,7 +42593,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function B(e) {
+        function x(e) {
           const { off: t } = e,
             r = (0, n._T)(e, ["off"]);
           return t
@@ -42627,7 +42636,7 @@ var CLSTAMP = "8078717";
                 })
               );
         }
-        function k() {
+        function R() {
           return i.createElement(
             "svg",
             {
@@ -42682,7 +42691,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function x(e) {
+        function H(e) {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -42731,7 +42740,7 @@ var CLSTAMP = "8078717";
                 )
               );
         }
-        function R() {
+        function I() {
           return i.createElement(
             "svg",
             {
@@ -42753,7 +42762,8 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function H() {
+        function D() {
+          const [e, t] = d();
           return i.createElement(
             "svg",
             {
@@ -42771,13 +42781,13 @@ var CLSTAMP = "8078717";
               "g",
               null,
               i.createElement("path", {
-                clipPath: "url(#SVGID_2_)",
+                clipPath: t,
                 d: "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\r\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\r\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\r\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\r\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\r\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\r\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\r\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\r\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\r\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\r\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\r\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\r\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\r\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\r\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\r\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\r\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\r\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\r\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\r\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\r\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\r\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\r\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\r\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\r\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\r\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\r\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\r\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z",
               })
             )
           );
         }
-        function I() {
+        function F() {
           return i.createElement(
             "svg",
             {
@@ -42806,7 +42816,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function D() {
+        function V() {
           return i.createElement(
             "svg",
             {
@@ -42822,7 +42832,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function F(e) {
+        function T(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -42847,7 +42857,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function V(e) {
+        function O(e) {
           const t = e.color || "#FFFFFF";
           return i.createElement(
             "svg",
@@ -42884,7 +42894,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function T(e) {
+        function A(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -42924,7 +42934,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function O(e) {
+        function N(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -42944,7 +42954,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function A(e) {
+        function P(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -42964,8 +42974,9 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function N(e) {
-          const { className: t } = e;
+        function G(e) {
+          const { className: t } = e,
+            [r, n] = d();
           return i.createElement(
             "svg",
             {
@@ -42975,7 +42986,7 @@ var CLSTAMP = "8078717";
             },
             i.createElement(
               "g",
-              { clipPath: "url(#clip0_23_130)" },
+              { clipPath: n },
               i.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
@@ -42988,7 +42999,7 @@ var CLSTAMP = "8078717";
               null,
               i.createElement(
                 "clipPath",
-                { id: "clip0_23_130" },
+                { id: r },
                 i.createElement("rect", {
                   width: "36",
                   height: "36",
@@ -42998,7 +43009,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function P(e) {
+        function Z(e) {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -43103,7 +43114,7 @@ var CLSTAMP = "8078717";
                   )
               );
         }
-        function G() {
+        function W() {
           return i.createElement(
             "svg",
             {
@@ -43152,7 +43163,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Z() {
+        function z() {
           return i.createElement(
             "svg",
             {
@@ -43238,7 +43249,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function W(e) {
+        function U(e) {
           let t = "SVGIcon_Button SVGIcon_Headphones";
           return (
             e.className && (t += ` ${e.className}`),
@@ -43296,7 +43307,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function z(e) {
+        function j(e) {
           const { off: t } = e,
             r = (0, n._T)(e, ["off"]);
           return t
@@ -43335,7 +43346,7 @@ var CLSTAMP = "8078717";
                 })
               );
         }
-        function U(e) {
+        function X(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -43356,7 +43367,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function j(e) {
+        function K(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -43377,7 +43388,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function X(e) {
+        function Y(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -43402,7 +43413,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function K(e) {
+        function q(e) {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -43442,7 +43453,7 @@ var CLSTAMP = "8078717";
                 )
               );
         }
-        function Y(e) {
+        function $(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -43462,7 +43473,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function q() {
+        function J() {
           return i.createElement(
             "svg",
             {
@@ -43529,7 +43540,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function $(e) {
+        function Q(e) {
           let t = "SVGIcon_Button SVGIcon_Pin";
           return (
             e.bPinned && (t += " Pinned"),
@@ -43569,7 +43580,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function J(e) {
+        function ee(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -43617,7 +43628,7 @@ var CLSTAMP = "8078717";
               })
           );
         }
-        function Q(e) {
+        function te(e) {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -43679,7 +43690,7 @@ var CLSTAMP = "8078717";
                 })
               );
         }
-        function ee() {
+        function re() {
           return i.createElement(
             "svg",
             {
@@ -43723,7 +43734,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function te(e) {
+        function ne(e) {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -43794,7 +43805,7 @@ var CLSTAMP = "8078717";
                 )
               );
         }
-        function re() {
+        function ie() {
           return i.createElement(
             "svg",
             {
@@ -43817,7 +43828,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ne(e) {
+        function oe(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -43834,7 +43845,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ie(e) {
+        function ae(e) {
           const { muted: t, className: r } = e;
           return i.createElement(
             "svg",
@@ -43902,7 +43913,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function oe() {
+        function le() {
           return i.createElement(
             "svg",
             {
@@ -44031,7 +44042,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function ae() {
+        function se() {
           return i.createElement(
             "svg",
             {
@@ -44068,7 +44079,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function le(e) {
+        function ce(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -44089,7 +44100,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function se() {
+        function ue() {
           return i.createElement(
             "svg",
             {
@@ -44112,7 +44123,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function ce() {
+        function de() {
           return i.createElement(
             "svg",
             { width: "50px", height: "25px", viewBox: "0 0 50 25" },
@@ -44121,7 +44132,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ue() {
+        function Ce() {
           return i.createElement(
             "svg",
             {
@@ -44141,7 +44152,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function de() {
+        function me() {
           return i.createElement(
             "svg",
             {
@@ -44161,7 +44172,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ce() {
+        function he() {
           return i.createElement(
             "svg",
             {
@@ -44183,7 +44194,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function me() {
+        function pe() {
           return i.createElement(
             "svg",
             {
@@ -44270,7 +44281,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function he(e) {
+        function ge(e) {
           return i.createElement(
             "svg",
             {
@@ -44299,7 +44310,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function pe() {
+        function fe() {
           return i.createElement(
             "svg",
             {
@@ -44334,7 +44345,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function ge() {
+        function _e() {
           return i.createElement(
             "svg",
             {
@@ -44407,7 +44418,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function fe(e) {
+        function we(e) {
           var t;
           return i.createElement(
             "svg",
@@ -44436,7 +44447,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function _e() {
+        function ve() {
           return i.createElement(
             "svg",
             {
@@ -44463,7 +44474,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function we() {
+        function Ee() {
           return i.createElement(
             "svg",
             {
@@ -44479,10 +44490,12 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ve(e) {
+        function Me(e) {
           let t = e.highlightColor || "#00ccff",
             r = e.color || "#2d73ff";
-          const [n] = (0, i.useState)(Math.random().toString());
+          const [n, o] = d(),
+            [a, l] = d(),
+            [s] = (0, i.useState)(Math.random().toString());
           return i.createElement(
             "svg",
             {
@@ -44501,25 +44514,13 @@ var CLSTAMP = "8078717";
               null,
               i.createElement(
                 "linearGradient",
-                {
-                  id: `${n}_linear`,
-                  x1: "0%",
-                  y1: "0%",
-                  x2: "100%",
-                  y2: "100%",
-                },
+                { id: n, x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
                 i.createElement("stop", { offset: "0%", stopColor: t }),
                 i.createElement("stop", { offset: "100%", stopColor: r })
               ),
               i.createElement(
                 "filter",
-                {
-                  id: `${n}_f1`,
-                  x: "0",
-                  y: "0",
-                  width: "200%",
-                  height: "200%",
-                },
+                { id: a, x: "0", y: "0", width: "200%", height: "200%" },
                 i.createElement("feOffset", {
                   result: "offOut",
                   in: "SourceAlpha",
@@ -44540,7 +44541,7 @@ var CLSTAMP = "8078717";
             ),
             i.createElement("path", {
               fill: "none",
-              stroke: `url(#${n}_linear)`,
+              stroke: o,
               strokeWidth: "24",
               strokeLinecap: "round",
               strokeLinejoin: "miter",
@@ -44552,8 +44553,8 @@ var CLSTAMP = "8078717";
             i.createElement("path", {
               fill: "none",
               opacity: ".2",
-              filter: `url(#${n}_f1)`,
-              stroke: `url(#${n}_linear)`,
+              filter: l,
+              stroke: o,
               strokeWidth: "24",
               strokeLinecap: "round",
               strokeLinejoin: "miter",
@@ -44564,7 +44565,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ee(e) {
+        function be(e) {
           const { className: t, color: r = "#020202" } = e;
           return i.createElement(
             "svg",
@@ -44621,7 +44622,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Me(e) {
+        function Le(e) {
           return i.createElement(
             "svg",
             {
@@ -44698,7 +44699,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function be() {
+        function ye() {
           return i.createElement(
             "svg",
             {
@@ -44726,7 +44727,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Le() {
+        function Se() {
           return i.createElement(
             "svg",
             {
@@ -44749,7 +44750,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ye() {
+        function Be() {
           return i.createElement(
             "svg",
             {
@@ -44773,7 +44774,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Se(e) {
+        function ke(e) {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -44811,7 +44812,7 @@ var CLSTAMP = "8078717";
                 })
               );
         }
-        function Be() {
+        function xe() {
           return i.createElement(
             "svg",
             {
@@ -44885,7 +44886,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ke(e) {
+        function Re(e) {
           return i.createElement(
             "svg",
             {
@@ -44920,7 +44921,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function xe(e) {
+        function He(e) {
           const { direction: t } = e,
             r = (0, n._T)(e, ["direction"]);
           switch (t) {
@@ -44998,7 +44999,7 @@ var CLSTAMP = "8078717";
               );
           }
         }
-        function Re() {
+        function Ie() {
           return i.createElement(
             "svg",
             {
@@ -45018,7 +45019,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function He(e) {
+        function De(e) {
           return i.createElement(
             "svg",
             {
@@ -45054,7 +45055,7 @@ var CLSTAMP = "8078717";
               })
           );
         }
-        function Ie(e) {
+        function Fe(e) {
           const { angle: t } = e,
             r = (0, n._T)(e, ["angle"]);
           return i.createElement(
@@ -45076,7 +45077,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function De() {
+        function Ve() {
           return i.createElement(
             "svg",
             {
@@ -45110,7 +45111,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Fe() {
+        function Te() {
           return i.createElement(
             "svg",
             {
@@ -45146,7 +45147,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ve() {
+        function Oe() {
           return i.createElement(
             "svg",
             {
@@ -45172,7 +45173,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Te() {
+        function Ae() {
           return i.createElement(
             "svg",
             {
@@ -45205,7 +45206,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Oe() {
+        function Ne() {
           return i.createElement(
             "svg",
             {
@@ -45227,7 +45228,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Ae() {
+        function Pe() {
           return i.createElement(
             "svg",
             {
@@ -45291,7 +45292,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Ne() {
+        function Ge() {
           return i.createElement(
             "svg",
             {
@@ -45318,7 +45319,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Pe() {
+        function Ze() {
           return i.createElement(
             "svg",
             {
@@ -45340,7 +45341,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ge() {
+        function We() {
           return i.createElement(
             "svg",
             {
@@ -45417,7 +45418,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Ze() {
+        function ze() {
           return i.createElement(
             "svg",
             {
@@ -45494,7 +45495,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function We() {
+        function Ue() {
           return i.createElement(
             "svg",
             {
@@ -45517,7 +45518,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function ze(e) {
+        function je(e) {
           return i.createElement(
             "svg",
             {
@@ -45538,7 +45539,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ue(e) {
+        function Xe(e) {
           let { bPending: t, bShowArm: r } = e,
             o = (0, n._T)(e, ["bPending", "bShowArm"]);
           return (0, c.useInGamepadUI)()
@@ -45635,7 +45636,7 @@ var CLSTAMP = "8078717";
                 )
               );
         }
-        function je(e) {
+        function Ke(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -45653,7 +45654,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Xe(e) {
+        function Ye(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -45671,7 +45672,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ke() {
+        function qe() {
           return i.createElement(
             "svg",
             {
@@ -45706,7 +45707,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ye(e) {
+        function $e(e) {
           return i.createElement(
             "svg",
             {
@@ -45745,7 +45746,9 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function qe() {
+        function Je() {
+          const [e, t] = d(),
+            [r, n] = d();
           return i.createElement(
             "svg",
             {
@@ -45764,7 +45767,7 @@ var CLSTAMP = "8078717";
               null,
               i.createElement(
                 "linearGradient",
-                { id: "gradient", x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
+                { id: e, x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
                 i.createElement("stop", {
                   offset: "0%",
                   stopColor: "rgb(55, 102, 251)",
@@ -45776,13 +45779,7 @@ var CLSTAMP = "8078717";
               ),
               i.createElement(
                 "linearGradient",
-                {
-                  id: "gradientText",
-                  x1: "0%",
-                  y1: "0%",
-                  x2: "100%",
-                  y2: "0%",
-                },
+                { id: r, x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
                 i.createElement("stop", {
                   offset: "0%",
                   stopColor: "rgb(91, 106, 219)",
@@ -45805,7 +45802,7 @@ var CLSTAMP = "8078717";
               "g",
               { id: "logo" },
               i.createElement("path", {
-                fill: "url(#gradient)",
+                fill: t,
                 d: "M156.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.016,1.934,0.051l29.226-42.355c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.239,20.745,46.239,46.241c0,25.494-20.741,46.241-46.239,46.241 c-0.352,0-0.698-0.01-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.14-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.991-34.026-27.87l-46.993-19.429c14.55,51.464,61.831,89.19,117.957,89.19 c67.713,0,122.605-54.893,122.605-122.604C278.978,60.244,224.086,5.355,156.374,5.355",
               }),
               i.createElement("path", {
@@ -45860,7 +45857,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function $e(e) {
+        function Qe(e) {
           const t = (0, o.default)(
             "SVGIcon_Button",
             "SVGIcon_SteamLogo",
@@ -45892,7 +45889,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Je() {
+        function et() {
           return i.createElement(
             "svg",
             {
@@ -45918,7 +45915,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Qe() {
+        function tt() {
           return i.createElement(
             "svg",
             {
@@ -45939,7 +45936,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function et() {
+        function rt() {
           return i.createElement(
             "svg",
             {
@@ -45960,7 +45957,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function tt() {
+        function nt() {
           return i.createElement(
             "svg",
             {
@@ -45980,7 +45977,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function rt() {
+        function it() {
           return i.createElement(
             "svg",
             {
@@ -46017,7 +46014,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function nt() {
+        function ot() {
           return i.createElement(
             "svg",
             {
@@ -46045,7 +46042,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function it(e) {
+        function at(e) {
           return i.createElement(
             "svg",
             {
@@ -46158,7 +46155,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function ot() {
+        function lt() {
           return i.createElement(
             "svg",
             {
@@ -46224,7 +46221,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function at() {
+        function st() {
           return i.createElement(
             "svg",
             {
@@ -46244,7 +46241,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function lt(e) {
+        function ct(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -46268,7 +46265,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function st(e) {
+        function ut(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -46292,7 +46289,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ct(e) {
+        function dt(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -46320,7 +46317,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ut() {
+        function Ct() {
           return i.createElement(
             "svg",
             {
@@ -46365,7 +46362,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function dt() {
+        function mt() {
           return i.createElement(
             "svg",
             {
@@ -46398,7 +46395,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ct() {
+        function ht() {
           return i.createElement(
             "svg",
             {
@@ -46510,7 +46507,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function mt() {
+        function pt() {
           return i.createElement(
             "svg",
             {
@@ -46618,7 +46615,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ht() {
+        function gt() {
           return i.createElement(
             "svg",
             {
@@ -46659,7 +46656,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function pt() {
+        function ft() {
           return i.createElement(
             "svg",
             {
@@ -46678,7 +46675,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function gt() {
+        function _t() {
           return i.createElement(
             "svg",
             {
@@ -46697,7 +46694,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ft() {
+        function wt() {
           return i.createElement(
             "svg",
             {
@@ -46722,7 +46719,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function _t() {
+        function vt() {
           return i.createElement(
             "svg",
             {
@@ -46744,7 +46741,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function wt() {
+        function Et() {
           return i.createElement(
             "svg",
             {
@@ -46763,7 +46760,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function vt() {
+        function Mt() {
           return i.createElement(
             "svg",
             {
@@ -46782,7 +46779,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Et() {
+        function bt() {
           return i.createElement(
             "svg",
             {
@@ -46803,7 +46800,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Mt() {
+        function Lt() {
           return i.createElement(
             "svg",
             {
@@ -46834,7 +46831,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function bt() {
+        function yt() {
           return i.createElement(
             "svg",
             {
@@ -46900,7 +46897,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Lt(e) {
+        function St(e) {
           const t = (0, o.default)(
             "SVGIcon_Button",
             e.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled"
@@ -46926,7 +46923,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function yt() {
+        function Bt() {
           return i.createElement(
             "svg",
             {
@@ -46946,7 +46943,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function St() {
+        function kt() {
           return i.createElement(
             "svg",
             {
@@ -46972,7 +46969,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Bt(e) {
+        function xt(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -46991,7 +46988,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function kt() {
+        function Rt() {
           return i.createElement(
             "svg",
             {
@@ -47019,7 +47016,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function xt() {
+        function Ht() {
           return i.createElement(
             "svg",
             {
@@ -47097,9 +47094,11 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Rt(e) {
+        function It(e) {
           const { fullcolor: t } = e,
-            r = (0, n._T)(e, ["fullcolor"]);
+            r = (0, n._T)(e, ["fullcolor"]),
+            [o, a] = d(),
+            [l, s] = d();
           return t
             ? i.createElement(
                 "svg",
@@ -47112,8 +47111,8 @@ var CLSTAMP = "8078717";
                   r
                 ),
                 i.createElement("path", {
-                  stroke: "url(#paint1_linear_4685_5327)",
-                  fill: "url(#paint0_linear_4685_5327)",
+                  stroke: a,
+                  fill: s,
                   d: "M10.1777 10.0258L10.3929 9.80693V9.49999V5.52777H14.2857H14.6001L14.8205 5.30358L18 2.06976L21.1795 5.30358L21.3999 5.52777H21.7143H25.6071V9.50001V9.80696L25.8223 10.0258L28.5553 12.8055L25.8223 15.5853L25.6071 15.8041V16.1111V20.0833H21.7143H21.3999L21.1795 20.3075L18 23.5413L14.8205 20.3075L14.6001 20.0833H14.2857H10.3929V16.1111V15.8042L10.1777 15.5853L7.44464 12.8055L10.1777 10.0258ZM14.7399 28.0317L11.56 33.4221L9.85164 29.9469L9.6456 29.5278H9.17857H6.29474L8.68445 25.3611H12.1142L14.7399 28.0317ZM26.8214 29.5278H26.3544L26.1484 29.9469L24.44 33.4221L21.2601 28.0317L23.8858 25.3611H27.3155L29.7053 29.5278H26.8214Z",
                   strokeWidth: "1.5",
                 }),
@@ -47130,7 +47129,7 @@ var CLSTAMP = "8078717";
                   i.createElement(
                     "linearGradient",
                     {
-                      id: "paint0_linear_4685_5327",
+                      id: l,
                       x1: "7.08",
                       y1: "3.72",
                       x2: "33.6694",
@@ -47146,7 +47145,7 @@ var CLSTAMP = "8078717";
                   i.createElement(
                     "linearGradient",
                     {
-                      id: "paint1_linear_4685_5327",
+                      id: o,
                       x1: "7.08",
                       y1: "3.72",
                       x2: "33.6694",
@@ -47187,7 +47186,7 @@ var CLSTAMP = "8078717";
                 })
               );
         }
-        function Ht() {
+        function Dt() {
           return i.createElement(
             "svg",
             {
@@ -47251,7 +47250,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function It() {
+        function Ft() {
           return i.createElement(
             "svg",
             {
@@ -47270,7 +47269,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Dt() {
+        function Vt() {
           return i.createElement(
             "svg",
             {
@@ -47290,7 +47289,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ft(e) {
+        function Tt(e) {
           const { percentComplete: t, startOffset: r } = e;
           let n = a.RemapVal(t, 0, 100, 800, 0),
             l = r ? r + 270 : 270;
@@ -47323,7 +47322,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Vt() {
+        function Ot() {
           return i.createElement(
             "svg",
             {
@@ -47350,7 +47349,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Tt() {
+        function At() {
           return i.createElement(
             "svg",
             {
@@ -47388,7 +47387,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ot() {
+        function Nt() {
           return i.createElement(
             "svg",
             {
@@ -47424,7 +47423,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function At() {
+        function Pt() {
           return i.createElement(
             "svg",
             {
@@ -47443,7 +47442,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Nt() {
+        function Gt() {
           return i.createElement(
             "svg",
             {
@@ -47462,7 +47461,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Pt(e) {
+        function Zt(e) {
           return i.createElement(
             "svg",
             {
@@ -47492,7 +47491,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Gt(e) {
+        function Wt(e) {
           return i.createElement(
             "svg",
             {
@@ -47545,7 +47544,7 @@ var CLSTAMP = "8078717";
               )
           );
         }
-        function Zt() {
+        function zt() {
           return i.createElement(
             "svg",
             {
@@ -47580,7 +47579,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Wt() {
+        function Ut() {
           return i.createElement(
             "svg",
             {
@@ -47604,7 +47603,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function zt() {
+        function jt() {
           return i.createElement(
             "svg",
             {
@@ -47629,7 +47628,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ut() {
+        function Xt() {
           return i.createElement(
             "svg",
             {
@@ -47651,7 +47650,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function jt() {
+        function Kt() {
           return i.createElement(
             "svg",
             {
@@ -47670,7 +47669,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Xt() {
+        function Yt() {
           return i.createElement(
             "svg",
             {
@@ -47692,7 +47691,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Kt() {
+        function qt() {
           return i.createElement(
             "svg",
             {
@@ -47732,7 +47731,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Yt() {
+        function $t() {
           return i.createElement(
             "svg",
             {
@@ -47760,7 +47759,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function qt() {
+        function Jt() {
           return i.createElement(
             "svg",
             {
@@ -47780,7 +47779,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function $t() {
+        function Qt() {
           return i.createElement(
             "svg",
             {
@@ -47796,7 +47795,7 @@ var CLSTAMP = "8078717";
             i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
           );
         }
-        function Jt() {
+        function er() {
           return i.createElement(
             "svg",
             {
@@ -47827,7 +47826,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Qt() {
+        function tr() {
           return i.createElement(
             "svg",
             {
@@ -47846,7 +47845,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function er() {
+        function rr() {
           return i.createElement(
             "svg",
             {
@@ -47861,7 +47860,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function tr() {
+        function nr() {
           return i.createElement(
             "svg",
             {
@@ -47876,7 +47875,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function rr() {
+        function ir() {
           return i.createElement(
             "svg",
             {
@@ -47904,7 +47903,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function nr() {
+        function or() {
           return i.createElement(
             "svg",
             {
@@ -47932,7 +47931,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function ir() {
+        function ar() {
           return i.createElement(
             "svg",
             {
@@ -47951,7 +47950,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function or() {
+        function lr() {
           return i.createElement(
             "svg",
             {
@@ -47974,7 +47973,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ar() {
+        function sr() {
           return i.createElement(
             "svg",
             {
@@ -48010,7 +48009,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function lr() {
+        function cr() {
           return i.createElement(
             "svg",
             {
@@ -48114,7 +48113,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function sr(e) {
+        function ur(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -48133,7 +48132,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function cr(e) {
+        function dr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -48152,7 +48151,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function ur(e, t) {
+        function Cr(e, t) {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -48189,7 +48188,7 @@ var CLSTAMP = "8078717";
                 })
               );
         }
-        function dr(e) {
+        function mr(e) {
           return i.createElement(
             "svg",
             {
@@ -48208,7 +48207,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Cr(e) {
+        function hr(e) {
           return i.createElement(
             "svg",
             {
@@ -48227,7 +48226,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function mr(e) {
+        function pr(e) {
           return i.createElement(
             "svg",
             {
@@ -48247,7 +48246,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function hr(e) {
+        function gr(e) {
           return i.createElement(
             "svg",
             {
@@ -48270,7 +48269,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function pr(e) {
+        function fr(e) {
           return i.createElement(
             "svg",
             {
@@ -48293,7 +48292,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function gr(e) {
+        function _r(e) {
           return i.createElement(
             "svg",
             {
@@ -48330,7 +48329,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function fr(e) {
+        function wr(e) {
           return i.createElement(
             "svg",
             { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -48357,7 +48356,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function _r() {
+        function vr() {
           return i.createElement(
             "svg",
             { xmlns: "http://www.w3.org/2000/svg", viewBox: "-8 -8 80 80" },
@@ -48449,7 +48448,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function wr() {
+        function Er() {
           return i.createElement(
             "svg",
             {
@@ -48480,7 +48479,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function vr(e) {
+        function Mr(e) {
           let t = s().EmoticonBow;
           return (
             e.className && (t += " " + e.className),
@@ -48556,7 +48555,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Er(e) {
+        function br(e) {
           const { className: t } = e;
           (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -48577,7 +48576,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Mr(e) {
+        function Lr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -48598,7 +48597,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function br(e) {
+        function yr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -48622,7 +48621,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Lr(e) {
+        function Sr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -48646,7 +48645,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function yr(e) {
+        function Br(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -48670,7 +48669,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Sr(e) {
+        function kr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -48694,7 +48693,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Br(e) {
+        function xr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -48718,9 +48717,10 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function kr(e) {
+        function Rr(e) {
           const { className: t } = e,
-            r = (0, n._T)(e, ["className"]);
+            r = (0, n._T)(e, ["className"]),
+            [a, l] = d();
           return i.createElement(
             "svg",
             Object.assign(
@@ -48736,7 +48736,7 @@ var CLSTAMP = "8078717";
             i.createElement(
               "mask",
               {
-                id: "prefix__a",
+                id: a,
                 maskUnits: "userSpaceOnUse",
                 x: -0.2,
                 y: 0.333,
@@ -48757,11 +48757,11 @@ var CLSTAMP = "8078717";
             }),
             i.createElement("path", {
               d: "M2.277 2.82l-.355-.352.355.353zm0 51.426l-.355.353.355-.352zm35.513 0l-.355-.352.355.352zm0-51.425l.355-.353-.355.353zm-1.185 1.193l-.355.352.355-.352zm0 49.039l-.355-.352.355.352zM3.463 4.014l.354.352-.354-.352zm22.563 24.862l-.199-.458.2.458zm4.98-3.495l-.175-.468-.108.04-.08.084.364.344zm-16.964 3.495l-.2.46.2-.46zm-5.024-3.54l.364-.343-.345-.367-.364.347.345.362zm-.002 0l-.364.343.344.367.365-.347-.345-.363zm-.164-.905l.462.191.007-.017.006-.019-.475-.155zm3.373-4.664l-.296-.403.296.403zm4.391-1.745l.06.496 1.143-.136-.88-.742-.323.382zm-.349-.322l.355-.352-.355.352zm0-7.584l.355.352-.355-.352zm7.533 0l.355-.353-.355.353zm0 7.584l.355.352-.355-.352zm-.349.322l-.322-.382-.88.742 1.143.136.06-.496zm4.392 1.745l.296-.403-.296.403zm3.395 4.733l.154.475.474-.153-.151-.474-.477.152zm-.796.257l-.153-.476.307.952-.154-.476zm.799-.258l.476-.151-.152-.479-.478.154.154.476zm-.234.882l.175.468.091-.034.072-.066-.338-.368zm-1.528-.838l.352.355.234-.231-.12-.307-.466.183zm-4.114 2.784v.5h.103l.096-.042-.2-.458zm1.488-6.202l.297-.402-.297.402zm-13.639 0l-.296-.402.296.402zm-2.626 3.418l-.465-.183-.12.307.234.231.351-.355zm4.115 2.784l.2-.459-.2.459zm10.662 0v-.5h-.104l-.095.041.198.459zm-2.75-16.018l.355-.352-.355.352zm0 5.197l.355.353-.355-.353zm-5.162 0l.354-.352-.354.352zm0-5.197l.354.353-.355-.353zM5.83 1.834h28.407v-1H5.83v1zM2.632 3.173a4.498 4.498 0 013.198-1.34v-1a5.498 5.498 0 00-3.908 1.635l.71.705zM1.3 6.398c0-1.256.51-2.397 1.332-3.225l-.71-.705A5.567 5.567 0 00.3 6.398h1zm0 44.271V6.398h-1v44.271h1zm1.332 3.225A4.566 4.566 0 011.3 50.67h-1c0 1.532.622 2.923 1.622 3.93l.71-.705zm3.198 1.34a4.498 4.498 0 01-3.198-1.34l-.71.705a5.498 5.498 0 003.908 1.635v-1zm28.407 0H5.83v1h28.407v-1zm3.198-1.34a4.498 4.498 0 01-3.198 1.34v1a5.498 5.498 0 003.908-1.635l-.71-.705zm1.332-3.225c0 1.256-.51 2.397-1.332 3.225l.71.705a5.566 5.566 0 001.622-3.93h-1zm0-44.271v44.271h1V6.398h-1zm-1.332-3.225a4.566 4.566 0 011.332 3.225h1a5.566 5.566 0 00-1.622-3.93l-.71.705zm-3.198-1.34c1.244 0 2.376.512 3.198 1.34l.71-.705A5.498 5.498 0 0034.237.833v1zm0 .689H5.83v1h28.407v-1zm2.722 1.14a3.831 3.831 0 00-2.722-1.14v1c.781 0 1.493.321 2.013.844l.71-.704zm1.131 2.736a3.877 3.877 0 00-1.13-2.736l-.71.704c.52.524.84 1.242.84 2.032h1zm0 44.271V6.398h-1v44.271h1zm-1.13 2.736a3.877 3.877 0 001.13-2.736h-1c0 .79-.32 1.509-.84 2.032l.71.704zm-2.723 1.14a3.832 3.832 0 002.722-1.14l-.709-.704a2.832 2.832 0 01-2.013.844v1zm-28.407 0h28.407v-1H5.83v1zm-2.722-1.14a3.832 3.832 0 002.722 1.14v-1c-.78 0-1.493-.321-2.013-.844l-.71.704zM1.977 50.67c0 1.066.434 2.035 1.13 2.736l.71-.704a2.877 2.877 0 01-.84-2.032h-1zm0-44.271v44.271h1V6.398h-1zm1.13-2.736a3.877 3.877 0 00-1.13 2.736h1c0-.79.32-1.508.84-2.032l-.71-.704zm2.723-1.14a3.832 3.832 0 00-2.722 1.14l.71.704a2.832 2.832 0 012.012-.844v-1zm1.505 29.191c-.743 0-1.339.605-1.339 1.344h1c0-.193.155-.344.339-.344v-1zm25.398 0H7.335v1h25.398v-1zm1.338 1.344c0-.739-.596-1.344-1.338-1.344v1c.184 0 .338.151.338.344h1zm-1.338 1.344c.742 0 1.338-.605 1.338-1.344h-1a.341.341 0 01-.338.344v1zm-25.398 0h25.398v-1H7.335v1zm-1.339-1.344c0 .74.596 1.344 1.339 1.344v-1a.341.341 0 01-.339-.344h-1zm1 7.31c0-.192.155-.343.339-.343v-1c-.743 0-1.339.605-1.339 1.344h1zm.339.345a.341.341 0 01-.339-.344h-1c0 .739.596 1.344 1.339 1.344v-1zm25.398 0H7.335v1h25.398v-1zm.338-.344a.341.341 0 01-.338.344v1c.742 0 1.338-.605 1.338-1.344h-1zm-.338-.344c.184 0 .338.15.338.344h1c0-.74-.596-1.344-1.338-1.344v1zm-25.398 0h25.398v-1H7.335v1zm0 6.31c-.743 0-1.339.605-1.339 1.344h1c0-.193.155-.344.339-.344v-1zm25.398 0H7.335v1h25.398v-1zm1.338 1.344c0-.739-.596-1.344-1.338-1.344v1c.184 0 .338.151.338.344h1zm-1.338 1.344c.742 0 1.338-.605 1.338-1.344h-1a.341.341 0 01-.338.344v1zm-25.398 0h25.398v-1H7.335v1zm-1.339-1.344c0 .74.596 1.344 1.339 1.344v-1a.341.341 0 01-.339-.344h-1zm20.23-18.343a15.697 15.697 0 005.144-3.61l-.726-.688a14.698 14.698 0 01-4.817 3.38l.398.918zm-6.192 1.281c2.197 0 4.29-.456 6.191-1.28l-.398-.918a14.52 14.52 0 01-5.793 1.198v1zm-6.191-1.28a15.52 15.52 0 006.19 1.28v-1a14.52 14.52 0 01-5.792-1.198l-.398.917zm-5.19-3.659a15.7 15.7 0 005.19 3.658l.398-.917a14.7 14.7 0 01-4.859-3.425l-.729.684zm.708.022l.001-.002-.69-.724v.001l.689.725zm-.971-1.46a1.349 1.349 0 00.262 1.44l.729-.685a.349.349 0 01-.067-.372l-.924-.383zm3.539-4.875a9.948 9.948 0 00-3.553 4.912l.951.31a8.949 8.949 0 013.195-4.417l-.593-.805zm4.628-1.839a9.744 9.744 0 00-4.628 1.84l.593.804a8.745 8.745 0 014.153-1.65l-.118-.994zm.381.115a4.884 4.884 0 01-.316-.292l-.71.704c.122.123.25.24.382.352l.644-.764zm-.316-.292a4.864 4.864 0 01-1.415-3.44h-1c0 1.618.652 3.084 1.705 4.144l.71-.704zm-1.415-3.44c0-1.344.54-2.56 1.415-3.44l-.71-.705a5.864 5.864 0 00-1.705 4.145h1zm1.415-3.44a4.792 4.792 0 013.412-1.423v-1c-1.61 0-3.068.657-4.122 1.718l.71.705zm3.412-1.423c1.331 0 2.537.543 3.412 1.423l.709-.705a5.793 5.793 0 00-4.121-1.718v1zm3.411 1.423a4.865 4.865 0 011.415 3.44h1a5.865 5.865 0 00-1.705-4.145l-.71.705zm1.415 3.44c0 1.344-.54 2.56-1.415 3.44l.71.704a5.865 5.865 0 001.705-4.144h-1zm-1.415 3.44c-.1.102-.206.199-.316.292l.644.764c.133-.111.26-.229.382-.352l-.71-.704zm4.694 2.016a9.745 9.745 0 00-4.629-1.839l-.118.993a8.745 8.745 0 014.154 1.651l.593-.805zm3.576 4.984a9.946 9.946 0 00-3.576-4.984l-.593.805a8.947 8.947 0 013.216 4.482l.953-.303zm-1.119.884l.796-.257-.308-.951-.795.257.307.951zm.491-1.209l-.798.258.307.952.798-.258-.307-.952zm.258 1.726c.373-.343.537-.885.372-1.401l-.953.303a.348.348 0 01-.095.362l.676.736zm-.163.1l-.35-.936.35.936zm-2.054-1.662a13.002 13.002 0 01-3.962 2.681l.398.917a14.002 14.002 0 004.267-2.887l-.703-.711zm-2.571-2.66a7.275 7.275 0 012.457 3.198l.931-.365a8.275 8.275 0 00-2.795-3.637l-.593.805zm-4.2-1.382c1.568 0 3.02.514 4.2 1.383l.593-.805a8.058 8.058 0 00-4.793-1.578v1zm-4.646 0h4.646v-1h-4.646v1zm-4.2 1.383a7.059 7.059 0 014.2-1.383v-1c-1.79 0-3.449.587-4.793 1.578l.593.805zm-2.457 3.197a7.275 7.275 0 012.457-3.197l-.593-.805a8.275 8.275 0 00-2.795 3.637l.93.365zm3.848 2.143a13.003 13.003 0 01-3.962-2.681l-.703.711a14.002 14.002 0 004.267 2.887l.398-.917zm5.132 1.06a12.86 12.86 0 01-5.132-1.06l-.398.917a13.86 13.86 0 005.53 1.143v-1zm5.132-1.06a12.858 12.858 0 01-5.132 1.06v1a13.86 13.86 0 005.53-1.143l-.398-.917zm.199-.041v1-1zm-2.396-15.87a4.127 4.127 0 00-2.935-1.224v1c.869 0 1.655.354 2.226.928l.71-.704zm1.215 2.95a4.177 4.177 0 00-1.215-2.95l-.71.704c.572.575.925 1.369.925 2.247h1zm-1.215 2.952a4.176 4.176 0 001.215-2.951h-1c0 .878-.353 1.671-.924 2.246l.71.705zm-2.935 1.224a4.127 4.127 0 002.936-1.224l-.71-.705a3.126 3.126 0 01-2.226.929v1zm-2.936-1.224a4.127 4.127 0 002.936 1.224v-1a3.126 3.126 0 01-2.227-.929l-.71.705zm-1.215-2.951c0 1.152.465 2.196 1.215 2.95l.71-.704a3.176 3.176 0 01-.925-2.246h-1zm1.215-2.951a4.176 4.176 0 00-1.215 2.95h1c0-.877.353-1.67.924-2.245l-.71-.705zm2.936-1.224a4.127 4.127 0 00-2.936 1.224l.71.705a3.127 3.127 0 012.226-.93v-1z",
-              mask: "url(#prefix__a)",
+              mask: l,
             })
           );
         }
-        function xr(e) {
+        function Hr(e) {
           const { className: t } = e;
           (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -48781,7 +48781,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Rr(e) {
+        function Ir(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -48804,9 +48804,17 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Hr(e) {
+        function Dr(e) {
           const { className: t } = e,
-            r = (0, n._T)(e, ["className"]);
+            r = (0, n._T)(e, ["className"]),
+            [a, l] = d(),
+            [s, c] = d(),
+            [u, C] = d(),
+            [m, h] = d(),
+            [p, g] = d(),
+            [f, _] = d(),
+            [w, v] = d(),
+            [E, M] = d();
           return i.createElement(
             "svg",
             Object.assign(
@@ -48825,11 +48833,11 @@ var CLSTAMP = "8078717";
             }),
             i.createElement("path", {
               d: "M151.309 62.585L87.852.305 25.31 63.348l12.204 12.365 50.338-49.458 63.457 61.059V62.585z",
-              fill: "url(#prefix__paint0_linear)",
+              fill: l,
             }),
             i.createElement("path", {
               d: "M151.309 62.585L87.852.305 25.31 63.348l12.204 12.365 50.338-49.458 63.457 61.059V62.585z",
-              fill: "url(#prefix__paint1_linear)",
+              fill: c,
             }),
             i.createElement("path", {
               d: "M88.31 0H63.444L.294 63.501l62.236 62.891 13.424-12.823L25.31 63.501 88.31 0z",
@@ -48837,11 +48845,11 @@ var CLSTAMP = "8078717";
             }),
             i.createElement("path", {
               d: "M88.31 0H63.444L.294 63.501l62.236 62.891 13.424-12.823L25.31 63.501 88.31 0z",
-              fill: "url(#prefix__paint2_linear)",
+              fill: C,
             }),
             i.createElement("path", {
               d: "M88.31 0H63.444L.294 63.501l62.236 62.891 13.424-12.823L25.31 63.501 88.31 0z",
-              fill: "url(#prefix__paint3_linear)",
+              fill: h,
             }),
             i.createElement("path", {
               d: "M87.547 26.255L75.954 38.162l50.033 49.152-63.457 63.501h25.017l63.914-63.501-63.914-61.059z",
@@ -48849,11 +48857,11 @@ var CLSTAMP = "8078717";
             }),
             i.createElement("path", {
               d: "M87.547 26.255L75.954 38.162l50.033 49.152-63.457 63.501h25.017l63.914-63.501-63.914-61.059z",
-              fill: "url(#prefix__paint4_linear)",
+              fill: g,
             }),
             i.createElement("path", {
               d: "M87.547 26.255L75.954 38.162l50.033 49.152-63.457 63.501h25.017l63.914-63.501-63.914-61.059z",
-              fill: "url(#prefix__paint5_linear)",
+              fill: _,
             }),
             i.createElement("path", {
               d: "M.904 88.23V63.5l61.931 62.585 51.406-50.22 11.746 11.448-63.152 63.196L.904 88.23z",
@@ -48861,11 +48869,11 @@ var CLSTAMP = "8078717";
             }),
             i.createElement("path", {
               d: "M.904 88.23V63.5l61.931 62.585 51.406-50.22 11.746 11.448-63.152 63.196L.904 88.23z",
-              fill: "url(#prefix__paint6_linear)",
+              fill: v,
             }),
             i.createElement("path", {
               d: "M.904 88.23V63.5l61.931 62.585 51.406-50.22 11.746 11.448-63.152 63.196L.904 88.23z",
-              fill: "url(#prefix__paint7_linear)",
+              fill: M,
             }),
             i.createElement(
               "defs",
@@ -48873,7 +48881,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "prefix__paint0_linear",
+                  id: a,
                   x1: 88.309,
                   y1: 0.305,
                   x2: 39.697,
@@ -48890,7 +48898,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "prefix__paint1_linear",
+                  id: s,
                   x1: 151.461,
                   y1: 63.725,
                   x2: 113.241,
@@ -48914,7 +48922,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "prefix__paint2_linear",
+                  id: u,
                   x1: 72.598,
                   y1: 0,
                   x2: 151.522,
@@ -48935,7 +48943,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "prefix__paint3_linear",
+                  id: m,
                   x1: 65.886,
                   y1: 141.046,
                   x2: 80.542,
@@ -48952,7 +48960,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "prefix__paint4_linear",
+                  id: p,
                   x1: 72.598,
                   y1: 0,
                   x2: 151.522,
@@ -48973,7 +48981,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "prefix__paint5_linear",
+                  id: f,
                   x1: 65.886,
                   y1: 141.046,
                   x2: 80.542,
@@ -48990,7 +48998,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "prefix__paint6_linear",
+                  id: w,
                   x1: 0.904,
                   y1: 81.208,
                   x2: 80.116,
@@ -49016,7 +49024,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "prefix__paint7_linear",
+                  id: E,
                   x1: 126.031,
                   y1: 88.506,
                   x2: 75.005,
@@ -49040,7 +49048,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Ir(e) {
+        function Fr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -49095,7 +49103,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Dr(e) {
+        function Vr(e) {
           const { className: t, color: r } = e;
           return i.createElement(
             "svg",
@@ -49121,9 +49129,13 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Fr(e) {
-          const { className: t } = e;
-          (0, n._T)(e, ["className"]);
+        function Tr(e) {
+          const { className: t } = e,
+            [r, o] = ((0, n._T)(e, ["className"]), d()),
+            [a, l] = d(),
+            [s, c] = d(),
+            [u, C] = d(),
+            [m, h] = d();
           return i.createElement(
             "svg",
             {
@@ -49140,12 +49152,7 @@ var CLSTAMP = "8078717";
               r: "16",
               fill: "#BDCCDB",
             }),
-            i.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "16",
-              fill: "url(#paint0_linear)",
-            }),
+            i.createElement("circle", { cx: "16", cy: "16", r: "16", fill: o }),
             i.createElement("circle", {
               cx: "16",
               cy: "16",
@@ -49156,7 +49163,7 @@ var CLSTAMP = "8078717";
               cx: "16",
               cy: "16",
               r: "14.2745",
-              fill: "url(#paint1_linear)",
+              fill: l,
             }),
             i.createElement("circle", {
               cx: "16",
@@ -49174,7 +49181,7 @@ var CLSTAMP = "8078717";
               cx: "16",
               cy: "16",
               r: "11.1309",
-              fill: "url(#paint2_linear)",
+              fill: c,
             }),
             i.createElement("circle", {
               cx: "16",
@@ -49186,7 +49193,7 @@ var CLSTAMP = "8078717";
               cx: "16",
               cy: "16",
               r: "10.2107",
-              fill: "url(#paint3_linear)",
+              fill: C,
             }),
             i.createElement("path", {
               fillRule: "evenodd",
@@ -49198,7 +49205,7 @@ var CLSTAMP = "8078717";
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M20.6016 17.9523C22.8425 17.9523 24.6591 16.1357 24.6591 13.8948C24.6591 11.6539 22.8425 9.83727 20.6016 9.83727C18.3607 9.83727 16.5441 11.6539 16.5441 13.8948C16.5441 13.9609 16.5457 14.0266 16.5488 14.0919L14.0477 17.6314C14.0205 17.6306 13.9933 17.6303 13.966 17.6303C13.2606 17.6303 12.6127 17.8767 12.1038 18.2882L6.33398 15.9235C6.33398 17.4638 6.62381 19.1438 6.97803 19.5302C7.16531 19.7345 9.1256 20.4564 11.0502 21.127C11.3013 22.5093 12.5112 23.5574 13.966 23.5574C15.6027 23.5574 16.9296 22.2306 16.9296 20.5939C16.9296 20.5326 16.9277 20.4717 16.924 20.4113L20.2613 17.9382C20.3735 17.9475 20.487 17.9523 20.6016 17.9523ZM12.1995 21.5232C12.5338 22.1572 13.1994 22.5894 13.966 22.5894C15.0681 22.5894 15.9615 21.696 15.9615 20.5939C15.9615 19.4917 15.0681 18.5983 13.966 18.5983C13.7007 18.5983 13.4475 18.65 13.216 18.744L14.1914 19.1438L14.1886 19.1617C14.8832 19.2688 15.4151 19.8692 15.4151 20.5939C15.4151 21.3942 14.7663 22.043 13.966 22.043C13.8901 22.043 13.8157 22.0371 13.743 22.0259L13.7405 22.042L13.6136 21.9998C13.5414 21.9818 13.4713 21.9583 13.4038 21.9299C13.0402 21.8084 12.6309 21.6704 12.1995 21.5232ZM20.6016 16.5998C22.0956 16.5998 23.3066 15.3887 23.3066 13.8948C23.3066 12.4008 22.0956 11.1898 20.6016 11.1898C19.1077 11.1898 17.8966 12.4008 17.8966 13.8948C17.8966 15.3887 19.1077 16.5998 20.6016 16.5998ZM22.4 13.8948C22.4 14.888 21.5948 15.6932 20.6016 15.6932C19.6083 15.6932 18.8032 14.888 18.8032 13.8948C18.8032 12.9015 19.6083 12.0964 20.6016 12.0964C21.5948 12.0964 22.4 12.9015 22.4 13.8948Z",
-              fill: "url(#paint4_linear)",
+              fill: h,
             }),
             i.createElement(
               "defs",
@@ -49206,7 +49213,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "paint0_linear",
+                  id: r,
                   x1: "8.4375",
                   y1: "1.75",
                   x2: "23.1875",
@@ -49226,7 +49233,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "paint1_linear",
+                  id: a,
                   x1: "9",
                   y1: "3.125",
                   x2: "22.4375",
@@ -49246,7 +49253,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "paint2_linear",
+                  id: s,
                   x1: "10.3125",
                   y1: "6.375",
                   x2: "19.6875",
@@ -49266,7 +49273,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "paint3_linear",
+                  id: u,
                   x1: "10",
                   y1: "8",
                   x2: "20.5",
@@ -49279,7 +49286,7 @@ var CLSTAMP = "8078717";
               i.createElement(
                 "linearGradient",
                 {
-                  id: "paint4_linear",
+                  id: m,
                   x1: "12.1875",
                   y1: "13.5625",
                   x2: "18.5625",
@@ -49299,7 +49306,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Vr() {
+        function Or() {
           return i.createElement(
             "svg",
             {
@@ -49330,7 +49337,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Tr(e) {
+        function Ar(e) {
           return i.createElement(
             "svg",
             Object.assign({}, e, {
@@ -49346,7 +49353,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Or() {
+        function Nr() {
           return i.createElement(
             "svg",
             {
@@ -49364,7 +49371,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ar() {
+        function Pr() {
           return i.createElement(
             "svg",
             {
@@ -49386,7 +49393,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Nr() {
+        function Gr() {
           return i.createElement(
             "svg",
             {
@@ -49424,7 +49431,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Pr() {
+        function Zr() {
           return i.createElement(
             "svg",
             {
@@ -49450,7 +49457,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function Gr() {
+        function Wr() {
           return i.createElement(
             "svg",
             {
@@ -49471,7 +49478,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Zr(e) {
+        function zr(e) {
           return i.createElement(
             "svg",
             Object.assign({}, e, {
@@ -49489,7 +49496,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Wr() {
+        function Ur() {
           return i.createElement(
             "svg",
             {
@@ -49523,7 +49530,7 @@ var CLSTAMP = "8078717";
             )
           );
         }
-        function zr(e) {
+        function jr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -49546,7 +49553,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Ur(e) {
+        function Xr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -49574,7 +49581,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function jr(e) {
+        function Kr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -49602,7 +49609,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Xr(e) {
+        function Yr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -49630,7 +49637,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Kr(e) {
+        function qr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -49658,7 +49665,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Yr(e) {
+        function $r(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -49675,7 +49682,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function qr(e) {
+        function Jr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -49693,7 +49700,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function $r(e) {
+        function Qr(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -49714,7 +49721,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Jr(e) {
+        function en(e) {
           const { className: t } = e;
           (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -49744,7 +49751,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function Qr(e) {
+        function tn(e) {
           const { className: t } = e;
           (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -49778,7 +49785,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function en(e) {
+        function rn(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -49799,7 +49806,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function tn(e) {
+        function nn(e) {
           return i.createElement(
             "svg",
             {
@@ -49821,7 +49828,7 @@ var CLSTAMP = "8078717";
             })
           );
         }
-        function rn(e) {
+        function on(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -54132,9 +54139,9 @@ var CLSTAMP = "8078717";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "May 23 2023 : 16:27:54",
-                    BUILD_TIME_UTC: "May 23 2023 : 23:27:54",
-                    BUILD_RTIME_UTC: 1684884474,
+                    BUILD_TIME_LOCAL: "May 25 2023 : 14:19:17",
+                    BUILD_TIME_UTC: "May 25 2023 : 21:19:17",
+                    BUILD_RTIME_UTC: 1685049557,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54280,7 +54287,7 @@ var CLSTAMP = "8078717";
           ),
           k = n.lazy(() =>
             Promise.all([r.e(7962), r.e(8553), r.e(58), r.e(5742)]).then(
-              r.bind(r, 12225)
+              r.bind(r, 12793)
             )
           );
         function x() {
@@ -54584,7 +54591,7 @@ var CLSTAMP = "8078717";
       ".js?contenthash=" +
       {
         27: "86d315eba099174080b4",
-        58: "f75f6d29d0f11b480852",
+        58: "d7d369bff3449efd9f63",
         131: "5be5ffc08294faa190eb",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -54642,7 +54649,7 @@ var CLSTAMP = "8078717";
         5175: "f8ab30e8970b95581e9d",
         5279: "fa7b43bac4a3307f0861",
         5590: "31f08d8b4f890d503338",
-        5742: "25ca1f94f4bf5c50c946",
+        5742: "fb2dd170d13147d1bb27",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
         6006: "daa3ee8e6fac8a06111a",
@@ -54661,7 +54668,7 @@ var CLSTAMP = "8078717";
         7660: "9a0b77cee7221bf794a5",
         7781: "b3231dcfd3b55a2cf832",
         7832: "35e371c703d65c6c518c",
-        7962: "370e95a79e40720c1302",
+        7962: "762506c2d6757e3e498e",
         8011: "2bad8c957b2510d4af07",
         8085: "aab8bfb5e0e3ad66b60c",
         8232: "e744700e1b7f949622a5",
@@ -54669,13 +54676,13 @@ var CLSTAMP = "8078717";
         8282: "8e9f7ff76dae21d6ccc9",
         8319: "777f22d8a73b0f44f743",
         8433: "5694f0cc1c4ddbc0fcc3",
-        8467: "539fdc90370aeec4e4b0",
+        8467: "648774ce541f5fc2e993",
         8553: "d8e6576615824304daa8",
         8778: "4cbf770ef497dcb5254b",
         8956: "4efc9c100871bd7c995c",
         9547: "a55657504b54215802b6",
         9548: "0ec235b840bf028e96bf",
-        9722: "68f8b55027630362521e",
+        9722: "e274a296cd8cb6afa9e6",
         9746: "e57327bec44fff08ee32",
         9854: "b09e3075cf17f952f816",
         9925: "c346de4224501a2b6884",

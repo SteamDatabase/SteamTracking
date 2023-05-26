@@ -56378,7 +56378,7 @@ div.NarrowRightPanel
   font-weight: 400;
 }
 .achievementspage_AchievementTabs_gxNvE {
-  flex: 1 1 454px;
+  flex: 1 1;
   user-select: none;
 }
 .achievementspage_AchievementTabs_gxNvE ._TabContentsScroll {
@@ -61646,6 +61646,9 @@ img {
 .mainmenu_Menu_23IDi.mainmenu_VR_1ABsh {
   border-radius: 20px;
   width: 100%;
+}
+.mainmenu_Menu_23IDi.mainmenu_IsVirtualKeyboardShown_2V0dd {
+  visibility: hidden;
 }
 .mainmenu_Menu_23IDi > * {
   transition-property: transform;

@@ -4532,11 +4532,11 @@
                 "rohg" == goog.LOCALE.substring(4, 8).toLowerCase() ||
                 "thaa" == goog.LOCALE.substring(4, 8).toLowerCase()))),
           (goog.i18n.bidi.Format = {
-            LRE: "‪",
-            RLE: "‫",
-            PDF: "‬",
-            LRM: "‎",
-            RLM: "‏",
+            LRE: "\u202a",
+            RLE: "\u202b",
+            PDF: "\u202c",
+            LRM: "\u200e",
+            RLM: "\u200f",
           }),
           (goog.i18n.bidi.Dir = { LTR: 1, RTL: -1, NEUTRAL: 0 }),
           (goog.i18n.bidi.RIGHT = "right"),
@@ -4563,9 +4563,9 @@
               : goog.i18n.bidi.Dir.LTR;
           }),
           (goog.i18n.bidi.ltrChars_ =
-            "A-Za-zÀ-ÖØ-öø-ʸ̀-֐ऀ-῿‎Ⰰ-\ud801\ud804-\ud839\ud83c-\udbff豈-﬜︀-﹯﻽-￿"),
+            "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-\u02b8\u0300-\u0590\u0900-\u1fff\u200e\u2c00-\ud801\ud804-\ud839\ud83c-\udbff\uf900-\ufb1c\ufe00-\ufe6f\ufefd-\uffff"),
           (goog.i18n.bidi.rtlChars_ =
-            "֑-ۯۺ-ࣿ‏\ud802-\ud803\ud83a-\ud83bיִ-﷿ﹰ-ﻼ"),
+            "\u0591-\u06ef\u06fa-\u08ff\u200f\ud802-\ud803\ud83a-\ud83b\ufb1d-\ufdff\ufe70-\ufefc"),
           (goog.i18n.bidi.htmlSkipReg_ = /<[^>]*>|&[^;]+;/g),
           (goog.i18n.bidi.stripHtmlIfNeeded_ = function (e, t) {
             return t ? e.replace(goog.i18n.bidi.htmlSkipReg_, "") : e;
@@ -4709,8 +4709,8 @@
           (goog.i18n.bidi.singleQuoteSubstituteRe_ = /([\u0591-\u05f2])'/g),
           (goog.i18n.bidi.normalizeHebrewQuote = function (e) {
             return e
-              .replace(goog.i18n.bidi.doubleQuoteSubstituteRe_, "$1״")
-              .replace(goog.i18n.bidi.singleQuoteSubstituteRe_, "$1׳");
+              .replace(goog.i18n.bidi.doubleQuoteSubstituteRe_, "$1\u05f4")
+              .replace(goog.i18n.bidi.singleQuoteSubstituteRe_, "$1\u05f3");
           }),
           (goog.i18n.bidi.wordSeparatorRe_ = /\s+/),
           (goog.i18n.bidi.hasNumeralsRe_ = /[\d\u06f0-\u06f9]/),
@@ -6642,7 +6642,7 @@
           }),
           (goog.string.DETECT_DOUBLE_ESCAPING = !1),
           (goog.string.FORCE_NON_DOM_HTML_UNESCAPING = !1),
-          (goog.string.Unicode = { NBSP: " " }),
+          (goog.string.Unicode = { NBSP: "\xa0" }),
           (goog.string.startsWith = goog.string.internal.startsWith),
           (goog.string.endsWith = goog.string.internal.endsWith),
           (goog.string.caseInsensitiveStartsWith =
@@ -6692,7 +6692,8 @@
           }),
           (goog.string.isUnicodeChar = function (e) {
             return (
-              (1 == e.length && " " <= e && "~" >= e) || ("" <= e && "�" >= e)
+              (1 == e.length && " " <= e && "~" >= e) ||
+              ("\x80" <= e && "\ufffd" >= e)
             );
           }),
           (goog.string.stripNewlines = function (e) {
@@ -27853,4 +27854,4 @@ and limitations under the License.
       document.addEventListener("DOMContentLoaded", () => fi());
   })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=ce988a871fc971a26921
+//# sourceMappingURL=friends.js.map?contenthash=ccd885951a10d942224c
