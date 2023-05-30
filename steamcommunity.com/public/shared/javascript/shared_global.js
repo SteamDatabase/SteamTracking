@@ -4910,7 +4910,7 @@ function ViewTitlesWithDescriptors( descid )
 
 	$J.get( 'https://store.steampowered.com/search/results/',
 		{
-			'filter' : 'globaltopsellers',
+			'filter' : 'examplesforcontentdescriptors',
 			'ignore_preferences' : 1,
 			'category1' : '992,994,998', 			'descids[]' : descid,
 			'json' : 1,

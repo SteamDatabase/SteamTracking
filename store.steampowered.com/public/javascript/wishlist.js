@@ -328,7 +328,7 @@ CWishlistController.prototype.BuildElements = function()
 			}
 			else if( rgAppInfo['prerelease'] )
 			{
-				strPurchaseArea = '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"Coming soon"+'</span></a>';
+				strPurchaseArea += '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"Coming soon"+'</span></a>';
 			}
 			else if( rgAppInfo['free'] )
 			{

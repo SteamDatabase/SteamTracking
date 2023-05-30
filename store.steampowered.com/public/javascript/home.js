@@ -553,7 +553,7 @@ GHomepage = {
 				if( !rgItemData || !rgItemData.name )
 					continue;
 
-				var eleRow = $J('<a/>', params ).text( rgItemData.name );
+								var eleRow = $J('<a/>', params ).html( rgItemData.name );
 
 				$J('#home_gutter_recentlyviewed .gutter_items').append(eleRow);
 			}
@@ -1612,7 +1612,8 @@ GHomepage = {
 				}
 
 				var $image = $J( '<img/>', {
-					"src": "https://store.steampowered.com/" + "categories/homepageimage/" + strImageURL + "?cc=" + cc + "&l=" + l,
+					'src': "https://store.cloudflare.steamstatic.com/public/images/blank.gif",
+					"data-image-url": "https://store.steampowered.com/" + "categories/homepageimage/" + strImageURL + "?cc=" + cc + "&l=" + l,
 				} );
 				$capsule.append( $image );
 

@@ -1436,48 +1436,26 @@
         return i.createElement(i.Fragment, null, t);
       }
     },
-    28710: (e, t, r) => {
+    64197: (e, t, r) => {
       "use strict";
-      r.d(t, { g: () => g });
+      r.d(t, { g: () => m });
       var n = r(33940),
         i = r(89526),
         a = r(59934),
         o = (r(4306), r(60142)),
-        s = r(90699);
-      let l = !1,
-        c = !1,
-        m = !1,
-        d = !1;
-      function p() {
-        return l || _(), c || m;
-      }
-      function u(e, t) {
-        return (
-          !!window.location.href.match("[?&]" + t + "=") ||
-          !(
-            "undefined" == typeof navigator ||
-            !navigator.userAgent ||
-            -1 == navigator.userAgent.indexOf(e)
-          )
-        );
-      }
-      function _() {
-        (d = u("Valve Steam Tenfoot", "force_tenfoot_client_view")),
-          (m = u("Valve Steam GameOverlay", "force_overlay_view")),
-          (c = d || u("Valve Steam Client", "force_client_view")),
-          (l = !0);
-      }
-      const h = "FocusNavHistoryID";
-      function g(e) {
+        s = r(51438),
+        l = r(87458);
+      const c = "FocusNavHistoryID";
+      function m(e) {
         const { children: t, timeoutMS: r } = e,
-          l = (0, n._T)(e, ["children", "timeoutMS"]),
-          c = (function (e = 2) {
+          m = (0, n._T)(e, ["children", "timeoutMS"]),
+          d = (function (e = 2) {
             const t = (0, a.k6)(),
               r = i.useRef(),
               n = (0, a.TH)(),
-              s = p(),
-              l = n.state && n.state[h],
-              c = i.useRef();
+              s = (0, l.k0)(),
+              m = n.state && n.state[c],
+              d = i.useRef();
             return (
               i.useLayoutEffect(() => {
                 if (!r.current) return;
@@ -1487,20 +1465,20 @@
                   .Tree.WindowContext.FocusChangedCallbacks.Register(
                     (r, n, i) => {
                       const a = t.location;
-                      let l = a.state && a.state[h];
+                      let l = a.state && a.state[c];
                       l ||
                         ((l = s
                           ? `State_${a.key}`
                           : `State_${e.Node().Tree.id}`),
-                        (c.current = l),
+                        (d.current = l),
                         t.replace(
                           Object.assign(Object.assign({}, t.location), {
                             state: Object.assign(Object.assign({}, a.state), {
-                              [h]: l,
+                              [c]: l,
                             }),
                           })
                         )),
-                        c.current == l &&
+                        d.current == l &&
                           (s
                             ? e.SaveState(l)
                             : window.history.replaceState(
@@ -1515,33 +1493,33 @@
               }, [t, s]),
               i.useLayoutEffect(() => {
                 var t;
-                if (r.current && c.current != l) {
+                if (r.current && d.current != m) {
                   const n = r.current.NavTree().DeferredFocus;
                   n.SuppressFocus();
                   const i = s
                       ? null
                       : null === (t = window.history.state) || void 0 === t
                       ? void 0
-                      : t[l],
+                      : t[m],
                     a = window.setTimeout(() => {
                       let e = !1;
                       s
-                        ? (e = r.current.RestoreState(l, 1))
+                        ? (e = r.current.RestoreState(m, 1))
                         : i && ((0, o.$y)(r.current.Node(), i, 0), (e = !0)),
                         e ? n.Reset() : n.ExecuteQueuedFocus(),
-                        (c.current = l);
+                        (d.current = m);
                     }, e);
                   return () => {
                     window.clearTimeout(a), n.ExecuteQueuedFocus();
                   };
                 }
-              }, [l, t, s, e]),
+              }, [m, t, s, e]),
               r
             );
           })(r);
         return i.createElement(
           s.s,
-          Object.assign(Object.assign({}, l), { navRef: c }),
+          Object.assign(Object.assign({}, m), { navRef: d }),
           t
         );
       }
@@ -4369,7 +4347,7 @@
         i = r(89526),
         a = r(63888),
         o = r(19304),
-        s = r(90699);
+        s = r(51438);
       const l = (e) => {
           const { className: t, children: r, onClick: l } = e,
             c = (0, n._T)(e, ["className", "children", "onClick"]);
@@ -4426,7 +4404,7 @@
         i = r(89526),
         a = r(49350),
         o = r(19304),
-        s = r(90699);
+        s = r(51438);
       const l = (0, i.forwardRef)(function (e, t) {
           const {
               component: r,
@@ -6020,7 +5998,7 @@
         i,
         a = r(33940),
         o = r(89526),
-        s = r(90699),
+        s = r(51438),
         l = r(50265),
         c = r(25125),
         m = r(88464),
@@ -10631,7 +10609,7 @@
         });
       }
       var w = r(41576),
-        E = r(90699);
+        E = r(51438);
       const S = "none";
       function M(e, t, r = {}) {
         const {
@@ -11346,7 +11324,7 @@
       var oe = r(58961),
         se = r(86146),
         le = r(66294),
-        ce = r(28710),
+        ce = r(64197),
         me = r(83145),
         de = r(701),
         pe = r(88443),
@@ -11589,7 +11567,7 @@
       });
       const be = Ne(ne);
       var xe = r(11585),
-        Ae = r(86283),
+        Ae = r(67727),
         De = r(38975);
       const Be = i.createContext(() => {}),
         Pe = (e) => {

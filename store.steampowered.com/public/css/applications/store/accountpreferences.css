@@ -92,6 +92,10 @@
   flex-direction: inherit;
   margin-right: 5px;
 }
+.notificationsettings_NotificationSection_3Sbby
+  .notificationsettings_NotificationFeedToggle_30Nc3::after {
+  background: none;
+}
 .notificationsettings_NotificationDescription_3FSzS {
   flex: 5;
 }

@@ -454,7 +454,7 @@
     },
     74182: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { ProfileEditRoutes: () => Xr, default: () => zr });
+      r.r(t), r.d(t, { ProfileEditRoutes: () => Zr, default: () => Wr });
       var i = r(33940),
         a = r(66594),
         o = r(52868),
@@ -2619,7 +2619,7 @@
         (0, i.gn)([s.aD], se.prototype, "SetAvatarHash", null),
         (0, i.gn)([s.aD], se.prototype, "RevertToComittedAvatarHash", null);
       var le = r(59934),
-        me = r(86283),
+        me = r(67727),
         ce = r(27070),
         de = (r(1721), r(73961)),
         pe = r(10476),
@@ -5203,11 +5203,13 @@
       }
       var tr = r(79112),
         rr = r(90375),
-        ir = r(69005);
-      const ar = ({ className: e, width: t, height: r, theme: i }) => (
-          i || (i = "Default"),
-          (i += "Theme"),
-          c.createElement(
+        ir = r(69005),
+        ar = r(99825);
+      const or = ({ className: e, width: t, height: r, theme: i }) => {
+          i || (i = "Default"), (i += "Theme");
+          const [a, o] = (0, ar.y)(),
+            [n, s] = (0, ar.y)();
+          return c.createElement(
             "svg",
             {
               width: t || "401",
@@ -5522,14 +5524,14 @@
               y: "13",
               width: "401",
               height: "382",
-              fill: "url(#paint0_radial)",
+              fill: o,
               className: rr.PaintRadial0,
             }),
             c.createElement("rect", {
               y: "13",
               width: "401",
               height: "382",
-              fill: "url(#paint1_radial)",
+              fill: s,
               className: rr.PaintRadial1,
             }),
             c.createElement(
@@ -5538,7 +5540,7 @@
               c.createElement(
                 "radialGradient",
                 {
-                  id: "paint0_radial",
+                  id: a,
                   cx: "0",
                   cy: "0",
                   r: "1",
@@ -5556,7 +5558,7 @@
               c.createElement(
                 "radialGradient",
                 {
-                  id: "paint1_radial",
+                  id: n,
                   cx: "0",
                   cy: "0",
                   r: "1",
@@ -5575,9 +5577,9 @@
                 })
               )
             )
-          )
-        ),
-        or = (0, d.Pi)(({ ProfileItems: e, Background: t, theme: r }) => {
+          );
+        },
+        nr = (0, d.Pi)(({ ProfileItems: e, Background: t, theme: r }) => {
           void 0 === t && (t = e.GetEquippedBackground());
           let i = t && t.movie_webm,
             a = t ? $(t) : V(null);
@@ -5601,7 +5603,7 @@
               c.createElement(
                 "div",
                 { className: rr.ProfilePreviewCtn },
-                c.createElement(ar, {
+                c.createElement(or, {
                   className: rr.ProfilePreview,
                   width: "50%",
                   height: "auto",
@@ -5611,7 +5613,7 @@
             )
           );
         });
-      let nr = class extends c.Component {
+      let sr = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { equipFlags: 0 });
         }
@@ -5656,9 +5658,9 @@
                 getItems: () => e.GetOwnedBackgrounds(),
                 fnCommitChanges: this.CommitChanges,
                 fnRevertChanges: this.RevertChanges,
-                ItemComponent: pr,
+                ItemComponent: ur,
                 RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                  c.createElement(ur, {
+                  c.createElement(hr, {
                     Modifier: r,
                     onSelected: e,
                     active: t,
@@ -5666,7 +5668,7 @@
                 ActiveItem: e.GetEquippedBackground(),
                 fnIsSameItem: xt,
                 fnRenderPreview: (r) =>
-                  c.createElement(cr, {
+                  c.createElement(dr, {
                     Background: r,
                     ProfileItems: e,
                     theme: t.ActiveTheme.theme_id,
@@ -5676,11 +5678,11 @@
           );
         }
       };
-      (0, i.gn)([he.ak], nr.prototype, "CommitChanges", null),
-        (0, i.gn)([he.ak], nr.prototype, "RevertChanges", null),
-        (nr = (0, i.gn)([d.Pi], nr));
-      const sr = nr,
-        lr = ({ label: e, currentFlag: t, flag: r, onSelect: i }) =>
+      (0, i.gn)([he.ak], sr.prototype, "CommitChanges", null),
+        (0, i.gn)([he.ak], sr.prototype, "RevertChanges", null),
+        (sr = (0, i.gn)([d.Pi], sr));
+      const lr = sr,
+        mr = ({ label: e, currentFlag: t, flag: r, onSelect: i }) =>
           c.createElement(
             "div",
             { className: tr.ProfileBackgroundEquipOption },
@@ -5693,20 +5695,20 @@
               label: e,
             })
           );
-      let mr = class extends c.Component {
+      let cr = class extends c.Component {
         OnChange(e) {
           this.props.ProfileItems.SetEquippedBackgroundFlags(e);
         }
         render() {
           let { Background: e, ProfileItems: t } = this.props;
           const r = t.GetEquippedBackgroundFlags();
-          let i = c.createElement(lr, {
+          let i = c.createElement(mr, {
               flag: 1,
               currentFlag: r,
               onSelect: this.OnChange,
               label: (0, h.Xx)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
             }),
-            a = c.createElement(lr, {
+            a = c.createElement(mr, {
               flag: 0,
               currentFlag: r,
               onSelect: this.OnChange,
@@ -5727,22 +5729,22 @@
           );
         }
       };
-      (0, i.gn)([he.ak], mr.prototype, "OnChange", null),
-        (mr = (0, i.gn)([d.Pi], mr));
-      const cr = (0, d.Pi)(({ Background: e, ProfileItems: t, theme: r }) =>
+      (0, i.gn)([he.ak], cr.prototype, "OnChange", null),
+        (cr = (0, i.gn)([d.Pi], cr));
+      const dr = (0, d.Pi)(({ Background: e, ProfileItems: t, theme: r }) =>
           c.createElement(
             "div",
             null,
-            c.createElement(or, {
+            c.createElement(nr, {
               Background: e,
               ProfileItems: t,
               key: e && e.communityitemid,
               theme: r,
             }),
-            c.createElement(mr, { ProfileItems: t, Background: e })
+            c.createElement(cr, { ProfileItems: t, Background: e })
           )
         ),
-        dr = ({ Background: e, children: t }) =>
+        pr = ({ Background: e, children: t }) =>
           c.createElement(
             "div",
             { className: tr.Details },
@@ -5760,7 +5762,7 @@
             ),
             t
           ),
-        pr = ({ Item: e, onSelected: t, active: r, children: i }) => {
+        ur = ({ Item: e, onSelected: t, active: r, children: i }) => {
           let a = !!e.movie_webm;
           return c.createElement(
             "div",
@@ -5783,12 +5785,12 @@
                 small: !0,
               })
             ),
-            c.createElement(dr, { Background: e }, i)
+            c.createElement(pr, { Background: e }, i)
           );
         },
-        ur = ({ onSelected: e, Modifier: t, active: r, children: i }) =>
+        hr = ({ onSelected: e, Modifier: t, active: r, children: i }) =>
           t
-            ? c.createElement(pr, { Item: t, onSelected: e, active: r })
+            ? c.createElement(ur, { Item: t, onSelected: e, active: r })
             : c.createElement(
                 "div",
                 {
@@ -5800,11 +5802,11 @@
                   { className: tr.Preview },
                   c.createElement("img", { src: V(null) })
                 ),
-                c.createElement(dr, { Background: null }, i)
+                c.createElement(pr, { Background: null }, i)
               );
-      var hr = r(565),
-        vr = r(12209);
-      class _r extends c.Component {
+      var vr = r(565),
+        _r = r(12209);
+      class fr extends c.Component {
         render() {
           const {
             root: e,
@@ -5817,7 +5819,7 @@
             null,
             c.createElement(
               "div",
-              { className: vr.BackToProfileCtn },
+              { className: _r.BackToProfileCtn },
               c.createElement(
                 "a",
                 { href: a._.ProfileURL },
@@ -5826,54 +5828,54 @@
             ),
             c.createElement(
               "div",
-              { className: vr.Shell },
-              c.createElement(fr, {
+              { className: _r.Shell },
+              c.createElement(gr, {
                 root: e,
                 currentPath: t,
                 linksAvailable: r,
               }),
               c.createElement(
                 "div",
-                { className: vr.PageContent },
+                { className: _r.PageContent },
                 c.createElement(Be.SV, null, i)
               )
             )
           );
         }
       }
-      const fr = ({ root: e, currentPath: t, linksAvailable: r }) => {
+      const gr = ({ root: e, currentPath: t, linksAvailable: r }) => {
           const i = { root: e, currentPath: t },
-            a = Xr;
+            a = Zr;
           return c.createElement(
             "div",
-            { className: vr.Navigation },
+            { className: _r.Navigation },
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, { to: a.Info() }),
               (0, h.Xx)("#Profile_Edit_BasicInfo")
             ),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, { to: a.Avatar() }),
               (0, h.Xx)("#Profile_FieldAvatar")
             ),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, { to: a.Background() }),
               (0, h.Xx)("#Profile_FieldProfileBackground")
             ),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, { to: a.MiniProfile() }),
               (0, h.Xx)("#Profile_Edit_MiniProfile")
             ),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, { to: a.Theme() }),
               (0, h.Xx)("#Profile_Edit_Theme")
             ),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, {
                 to: a.ProfileModifier(),
                 fnVisible: r.ProfileModifierAvailable,
@@ -5881,7 +5883,7 @@
               (0, h.Xx)("#Profile_Edit_ProfileModifier")
             ),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, {
                 to: a.FavoriteBadge(),
                 fnVisible: r.BadgesAvailable,
@@ -5889,7 +5891,7 @@
               (0, h.Xx)("#Profile_Edit_FavoriteBadge")
             ),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, {
                 to: a.FavoriteGroup(),
                 fnVisible: r.GroupsAvailable,
@@ -5897,26 +5899,26 @@
               (0, h.Xx)("#Profile_Edit_FavoriteGroup")
             ),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, {
                 to: a.Showcases(),
                 fnVisible: r.ShowcasesAvailable,
               }),
               (0, h.Xx)("#Profile_Edit_FeaturedShowcase")
             ),
-            c.createElement("div", { className: vr.ProfileEditLine }),
+            c.createElement("div", { className: _r.ProfileEditLine }),
             c.createElement(
-              gr,
+              Pr,
               Object.assign({}, i, { to: a.Privacy() }),
               (0, h.Xx)("#Profile_EditPrivacySettings")
             ),
             c.createElement(
               "div",
-              { className: vr.ProfileEditStoreLink },
+              { className: _r.ProfileEditStoreLink },
               c.createElement(
                 "a",
                 {
-                  className: (0, g.Z)(vr.ExternalLink),
+                  className: (0, g.Z)(_r.ExternalLink),
                   href: `${p.De.STORE_BASE_URL}points/`,
                 },
                 (0, h.Xx)("#SteamPointsShop")
@@ -5924,7 +5926,7 @@
             )
           );
         },
-        gr = (0, d.Pi)(
+        Pr = (0, d.Pi)(
           ({
             root: e,
             currentPath: t,
@@ -5942,12 +5944,12 @@
             return (
               l && (d = (e) => e.preventDefault()),
               c.createElement(
-                hr.OL,
+                vr.OL,
                 {
                   className: (0, g.Z)(
-                    vr.NavLink,
-                    s && vr.Active,
-                    m && vr.Disabled
+                    _r.NavLink,
+                    s && _r.Active,
+                    m && _r.Disabled
                   ),
                   to: n,
                   onClick: d,
@@ -5958,8 +5960,8 @@
             );
           }
         );
-      var Pr = r(59536);
-      let Er = class extends c.Component {
+      var Er = r(59536);
+      let yr = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bDialogActive: !1 });
         }
@@ -5972,7 +5974,7 @@
         render() {
           const { ProfileItems: e } = this.props;
           return e.BHasAnyProfileModifiers()
-            ? c.createElement(Ar, {
+            ? c.createElement(Gr, {
                 active: this.state.bDialogActive,
                 ProfileItems: e,
                 onDismiss: this.HideDialog,
@@ -5980,11 +5982,11 @@
             : null;
         }
       };
-      (0, i.gn)([he.ak], Er.prototype, "ShowDialog", null),
-        (0, i.gn)([he.ak], Er.prototype, "HideDialog", null),
-        (Er = (0, i.gn)([d.Pi], Er));
-      const yr = Er,
-        Cr = (0, d.Pi)(({ ProfileItems: e }) => {
+      (0, i.gn)([he.ak], yr.prototype, "ShowDialog", null),
+        (0, i.gn)([he.ak], yr.prototype, "HideDialog", null),
+        (yr = (0, i.gn)([d.Pi], yr));
+      const Cr = yr,
+        Sr = (0, d.Pi)(({ ProfileItems: e }) => {
           let t = e.GetProfileModifierCSSURL();
           return t
             ? c.createElement("link", {
@@ -5994,7 +5996,7 @@
               })
             : null;
         }),
-        Sr = ({ ProfileModifier: e }) => {
+        Ar = ({ ProfileModifier: e }) => {
           const t = e
               ? $(e)
               : `${p.De.COMMUNITY_CDN_URL}public/images/trans.gif`,
@@ -6007,17 +6009,17 @@
             null,
             c.createElement(
               "div",
-              { className: Pr.ProfileModifierBody },
+              { className: Er.ProfileModifierBody },
               c.createElement("img", {
-                className: Pr.GoldenProfileItemImage,
+                className: Er.GoldenProfileItemImage,
                 src: t,
               }),
-              c.createElement("div", { className: Pr.GoldenProfileTitle }, r),
-              c.createElement("div", { className: Pr.GoldenProfileApp }, i)
+              c.createElement("div", { className: Er.GoldenProfileTitle }, r),
+              c.createElement("div", { className: Er.GoldenProfileApp }, i)
             )
           );
         };
-      let Ar = class extends c.Component {
+      let Gr = class extends c.Component {
         OnDismiss() {
           this.props.ProfileItems.RevertProfileModifierChanges(),
             this.props.onDismiss();
@@ -6048,53 +6050,53 @@
                     e.CommitProfileModifierChanges()
                   );
                 }),
-              ItemComponent: Gr,
+              ItemComponent: Br,
               RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                c.createElement(Br, { onSelected: e, active: t }),
+                c.createElement(Ir, { onSelected: e, active: t }),
               ActiveItem: e.GetEquippedProfileModifier(),
               fnIsSameItem: xt,
               fnRenderPreview: (e) =>
-                c.createElement(Sr, { ProfileModifier: e }),
+                c.createElement(Ar, { ProfileModifier: e }),
             })
           );
         }
       };
-      (0, i.gn)([he.ak], Ar.prototype, "OnDismiss", null),
-        (Ar = (0, i.gn)([d.Pi], Ar));
-      const Gr = ({ Item: e, onSelected: t, children: r, active: i }) =>
+      (0, i.gn)([he.ak], Gr.prototype, "OnDismiss", null),
+        (Gr = (0, i.gn)([d.Pi], Gr));
+      const Br = ({ Item: e, onSelected: t, children: r, active: i }) =>
           c.createElement(
             "div",
             {
-              className: (0, g.Z)(Pr.ProfileModifierOption, i && Pr.Active),
+              className: (0, g.Z)(Er.ProfileModifierOption, i && Er.Active),
               onClick: t,
             },
             c.createElement(
               "div",
-              { className: Pr.Preview },
+              { className: Er.Preview },
               c.createElement("img", { src: $(e), loading: "lazy" })
             ),
             c.createElement(
               "div",
-              { className: Pr.Details },
+              { className: Er.Details },
               c.createElement(
                 "div",
                 null,
-                c.createElement("div", { className: Pr.Title }, e.item_title),
-                c.createElement("div", { className: Pr.App }, e.app_name)
+                c.createElement("div", { className: Er.Title }, e.item_title),
+                c.createElement("div", { className: Er.App }, e.app_name)
               ),
               r
             )
           ),
-        Br = ({ onSelected: e, children: t, active: r }) =>
+        Ir = ({ onSelected: e, children: t, active: r }) =>
           c.createElement(
             "div",
             {
-              className: (0, g.Z)(Pr.ProfileModifierOption, r && Pr.Active),
+              className: (0, g.Z)(Er.ProfileModifierOption, r && Er.Active),
               onClick: e,
             },
             c.createElement(
               "div",
-              { className: (0, g.Z)(Pr.Preview, Pr.BlankBackground) },
+              { className: (0, g.Z)(Er.Preview, Er.BlankBackground) },
               c.createElement("img", {
                 src: `${p.De.COMMUNITY_CDN_URL}public/images/trans.gif`,
                 loading: "lazy",
@@ -6102,22 +6104,22 @@
             ),
             c.createElement(
               "div",
-              { className: Pr.Details },
+              { className: Er.Details },
               c.createElement(
                 "div",
                 null,
                 c.createElement(
                   "div",
-                  { className: Pr.Title },
+                  { className: Er.Title },
                   (0, h.Xx)("#ProfileModifier_DisabledTitle")
                 ),
-                c.createElement("div", { className: Pr.App })
+                c.createElement("div", { className: Er.App })
               ),
               t
             )
           );
-      var Ir = r(94374);
-      let Nr = class extends c.Component {
+      var Nr = r(94374);
+      let kr = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -6154,7 +6156,7 @@
               (0, h.Xx)("#Profile_Edit_Theme_Instructions")
             ),
             c.createElement(Fe, { strHTMLError: this.state.strHTMLError }),
-            r && c.createElement(Dr, null),
+            r && c.createElement(xr, null),
             c.createElement(Re, {
               getSearchFields: null,
               ActiveItem: e.ActiveTheme,
@@ -6165,20 +6167,20 @@
               fnCommitChanges: this.CommitChanges,
               fnRevertChanges: this.RevertChanges,
               fnRenderPreview: (e) =>
-                c.createElement(br, { Theme: e, ProfileItems: t }),
-              fnIsSameItem: wr,
-              ItemComponent: Or,
-              classNameItemPicker: Ir.ProfileThemePicker,
-              className: (0, g.Z)(r && Ir.ThemePickerDisabled),
+                c.createElement(wr, { Theme: e, ProfileItems: t }),
+              fnIsSameItem: Or,
+              ItemComponent: Dr,
+              classNameItemPicker: Nr.ProfileThemePicker,
+              className: (0, g.Z)(r && Nr.ThemePickerDisabled),
             })
           );
         }
       };
-      (0, i.gn)([he.ak], Nr.prototype, "CommitChanges", null),
-        (0, i.gn)([he.ak], Nr.prototype, "RevertChanges", null),
-        (Nr = (0, i.gn)([d.Pi], Nr));
-      const kr = Nr,
-        Lr = ({ Theme: e, children: t }) => {
+      (0, i.gn)([he.ak], kr.prototype, "CommitChanges", null),
+        (0, i.gn)([he.ak], kr.prototype, "RevertChanges", null),
+        (kr = (0, i.gn)([d.Pi], kr));
+      const Lr = kr,
+        br = ({ Theme: e, children: t }) => {
           let r;
           return (
             (r =
@@ -6188,35 +6190,35 @@
             c.createElement("div", { className: ir[r] }, t)
           );
         },
-        br = (0, d.Pi)(({ Theme: e, ProfileItems: t }) =>
+        wr = (0, d.Pi)(({ Theme: e, ProfileItems: t }) =>
           c.createElement(
             "div",
-            { className: Ir.ProfileThemePreviewCtn },
-            c.createElement(or, { ProfileItems: t, theme: e.theme_id })
+            { className: Nr.ProfileThemePreviewCtn },
+            c.createElement(nr, { ProfileItems: t, theme: e.theme_id })
           )
         ),
-        wr = (e, t) => (e && e.theme_id) === (t && t.theme_id),
-        Or = ({ Item: e, onSelected: t, active: r, children: i }) => {
+        Or = (e, t) => (e && e.theme_id) === (t && t.theme_id),
+        Dr = ({ Item: e, onSelected: t, active: r, children: i }) => {
           const a = e.theme_id + "Theme",
             o = `ThemeOption${a}`;
           return c.createElement(
             "div",
             {
               className: (0, g.Z)(
-                Ir.ProfileTheme,
-                t && Ir.Option,
-                r && Ir.Active,
+                Nr.ProfileTheme,
+                t && Nr.Option,
+                r && Nr.Active,
                 ir[a]
               ),
               onClick: t,
             },
             c.createElement(
               "div",
-              { className: Ir.PreviewCtn },
+              { className: Nr.PreviewCtn },
               c.createElement(
                 "svg",
                 {
-                  className: (0, g.Z)(Ir.Preview),
+                  className: (0, g.Z)(Nr.Preview),
                   viewBox: "0 0 382 382",
                   width: "100%",
                   height: "100%",
@@ -6225,26 +6227,26 @@
                   width: "382",
                   height: "382",
                   fill: "var(--edit-background)",
-                  className: Ir.EditBackground,
+                  className: Nr.EditBackground,
                 }),
                 c.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: "var(--gradient-background)",
                   fillOpacity: "0.23",
-                  className: Ir.ThemeBackground,
+                  className: Nr.ThemeBackground,
                 }),
                 c.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: `url(#${o}paint0_radial)`,
-                  className: Ir.PaintRadial0,
+                  className: Nr.PaintRadial0,
                 }),
                 c.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: `url(#${o}paint1_radial)`,
-                  className: Ir.PaintRadial1,
+                  className: Nr.PaintRadial1,
                 }),
                 c.createElement(
                   "defs",
@@ -6295,23 +6297,23 @@
             ),
             c.createElement(
               "div",
-              { className: Ir.Details },
-              c.createElement("div", { className: Ir.Title }, e.title),
+              { className: Nr.Details },
+              c.createElement("div", { className: Nr.Title }, e.title),
               i
             )
           );
         },
-        Dr = ({ children: e }) =>
+        xr = ({ children: e }) =>
           c.createElement(
             "div",
-            { className: Ir.ThemesDisabledNotice },
+            { className: Nr.ThemesDisabledNotice },
             c.createElement(
               "div",
-              { className: Ir.Notice },
+              { className: Nr.Notice },
               (0, h.Xx)("#Profile_Edit_GoldenProfileOverridesTheme")
             )
           );
-      class xr extends c.Component {
+      class Rr extends c.Component {
         constructor() {
           super(...arguments),
             (this.m_refDiv = c.createRef()),
@@ -6342,7 +6344,7 @@
           const { bSaving: e, strHTMLError: t } = this.state,
             { ProfileTheme: r } = this.props;
           return c.createElement(
-            Lr,
+            br,
             { Theme: r.ActiveTheme },
             c.createElement(
               "form",
@@ -6364,28 +6366,28 @@
           );
         }
       }
-      let Rr, Tr, Mr;
-      function Fr(e) {
+      let Tr, Mr, Fr;
+      function Ur(e) {
         const [t, r] = c.useState(!1),
           o = (0, ce.lS)();
         if (
           (c.useEffect(() => {
-            Mr ||
-              (Mr = (function (e) {
+            Fr ||
+              (Fr = (function (e) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
                   let t = (0, p.kQ)("config", "profile_config");
                   t && Object.assign(a._, t),
-                    (Rr = new ne(
+                    (Tr = new ne(
                       (0, p.kQ)("profile-edit", "profile_edit_config"),
                       (0, p.kQ)("profile-badges", "profile_edit_config"),
                       e
                     )),
                     (0, me.e7)(p.De.EREALM) ||
-                      Rr.Profile.GroupList.GetUserGroups(),
-                    (Tr = document.getElementById("showcases"));
+                      Tr.Profile.GroupList.GetUserGroups(),
+                    (Mr = document.getElementById("showcases"));
                 });
               })(o)),
-              Mr.then(() => r(!0));
+              Fr.then(() => r(!0));
           }, [o]),
           c.useLayoutEffect(() => {
             if (t)
@@ -6401,7 +6403,7 @@
         )
           return null;
         const n = e.match.url,
-          s = Rr,
+          s = Tr,
           {
             Profile: l,
             ProfileItems: m,
@@ -6409,7 +6411,7 @@
             EmoticonStore: u,
             EmoticonHoverStore: h,
           } = s,
-          v = Xr,
+          v = Zr,
           _ = {
             ProfileModifierAvailable: () => m.BHasAnyProfileModifiers(),
             BadgesAvailable: () =>
@@ -6417,16 +6419,16 @@
             GroupsAvailable: () =>
               !(0, me.e7)(p.De.EREALM) &&
               (!l.GroupList.BGroupsLoaded() || l.GroupList.BHasAnyGroups()),
-            ShowcasesAvailable: () => null != Tr,
+            ShowcasesAvailable: () => null != Mr,
           };
         return c.createElement(
           c.Fragment,
           null,
-          c.createElement(Cr, { ProfileItems: m }),
+          c.createElement(Sr, { ProfileItems: m }),
           c.createElement(vt, { Profile: l }),
           c.createElement(ze, { Profile: l, ProfileItems: m }),
           c.createElement(
-            _r,
+            fr,
             { root: n, currentPath: e.location.pathname, linksAvailable: _ },
             c.createElement(
               le.rs,
@@ -6453,7 +6455,7 @@
               c.createElement(
                 le.AW,
                 { path: `${n}${v.Background()}` },
-                c.createElement(sr, { ProfileTheme: d, ProfileItems: m })
+                c.createElement(lr, { ProfileTheme: d, ProfileItems: m })
               ),
               c.createElement(
                 le.AW,
@@ -6463,12 +6465,12 @@
               c.createElement(
                 le.AW,
                 { path: `${n}${v.Theme()}` },
-                c.createElement(kr, { ProfileTheme: d, ProfileItems: m })
+                c.createElement(Lr, { ProfileTheme: d, ProfileItems: m })
               ),
               c.createElement(
                 le.AW,
                 { path: `${n}${v.ProfileModifier()}` },
-                c.createElement(yr, { ProfileItems: m })
+                c.createElement(Cr, { ProfileItems: m })
               ),
               !(0, me.e7)(p.De.EREALM) &&
                 c.createElement(
@@ -6490,7 +6492,7 @@
               c.createElement(
                 le.AW,
                 { path: `${n}${v.Showcases()}` },
-                c.createElement(xr, { elShowcases: Tr, ProfileTheme: d })
+                c.createElement(Rr, { elShowcases: Mr, ProfileTheme: d })
               ),
               c.createElement(
                 le.AW,
@@ -6501,16 +6503,16 @@
           )
         );
       }
-      (0, i.gn)([he.ak], xr.prototype, "OnSubmit", null),
-        (0, i.gn)([he.ak], xr.prototype, "RevertChanges", null);
-      var Ur = r(60588),
-        Hr = r(35993);
-      const qr = {
+      (0, i.gn)([he.ak], Rr.prototype, "OnSubmit", null),
+        (0, i.gn)([he.ak], Rr.prototype, "RevertChanges", null);
+      var Hr = r(60588),
+        qr = r(35993);
+      const Xr = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",
           Games: () => "games",
         },
-        Xr = {
+        Zr = {
           Info: () => "/info",
           Avatar: () => "/avatar",
           Background: () => "/background",
@@ -6522,29 +6524,29 @@
           Privacy: () => "/settings",
           Showcases: () => "/showcases",
         };
-      function Zr(e) {
+      function zr(e) {
         return c.createElement(
           "div",
           null,
-          c.createElement(Ur.ZP, { targetType: 3 })
+          c.createElement(Hr.ZP, { targetType: 3 })
         );
       }
-      function zr(e) {
+      function Wr(e) {
         const t = e.match.path;
         return c.createElement(
           le.rs,
           null,
           c.createElement(le.AW, {
-            path: `${t}/${qr.ProfileEdit()}`,
-            render: (e) => c.createElement(Fr, Object.assign({}, e)),
+            path: `${t}/${Xr.ProfileEdit()}`,
+            render: (e) => c.createElement(Ur, Object.assign({}, e)),
           }),
           c.createElement(le.AW, {
             path: `${t}`,
             render: (e) =>
-              c.createElement(Hr.d, {
+              c.createElement(qr.d, {
                 config: {
                   "profile-rewards": () =>
-                    c.createElement(Zr, Object.assign({}, e)),
+                    c.createElement(zr, Object.assign({}, e)),
                 },
               }),
           })
