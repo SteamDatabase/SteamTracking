@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+ini_set( 'memory_limit', '256M' ); // Some files may be big
+
 // Enable error tracking
 if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 {
@@ -520,14 +522,8 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					$Handle = $Done[ 'handle' ];
 					$URL   = curl_getinfo( $Handle, CURLINFO_EFFECTIVE_URL );
 					$Code  = curl_getinfo( $Handle, CURLINFO_HTTP_CODE );
-					$Data  = curl_multi_getcontent( $Handle );
 
 					$Request = $this->Requests[ (int)$Handle ];
-
-					$HeaderSize = curl_getinfo( $Handle, CURLINFO_HEADER_SIZE );
-
-					$Header = substr( $Data, 0, $HeaderSize );
-					$Data   = substr( $Data, $HeaderSize );
 
 					if( isset( $Done[ 'error' ] ) )
 					{
@@ -574,6 +570,9 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						else
 						{
 							$HandleResponse = true;
+							$HeaderSize = curl_getinfo( $Handle, CURLINFO_HEADER_SIZE );
+							$Data = curl_multi_getcontent( $Handle );
+							$Header = substr( $Data, 0, $HeaderSize );
 
 							if( preg_match( '/^ETag: (.+)$/im', $Header, $Test ) === 1 )
 							{
@@ -592,6 +591,8 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 							if( $HandleResponse )
 							{
+								$Data = substr( $Data, $HeaderSize );
+
 								if( $this->HandleResponse( $Request, $Data ) === true )
 								{
 									$this->Log( '{lightblue}Fetched     {normal} - ' . $URL );
