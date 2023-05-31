@@ -602,6 +602,8 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 									$this->Log( '{green}Not Modified{normal} - ' . $URL );
 								}
 							}
+
+							unset( $Data, $Header );
 						}
 					}
 

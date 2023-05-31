@@ -585,7 +585,6 @@ API/SupportedAPIList.json                       @ https://api.steampowered.com/I
 // Other
 //
 Random/ControllerFirmware.vdf                   @ https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf
-Random/NetworkDatagramConfig.json               @ https://steamcdn-a.akamaihd.net/apps/sdr/network_config.json
 Random/JobPostings.html                         @ https://www.valvesoftware.com/en/
 Random/Publications.html                        @ https://www.valvesoftware.com/en/publications
 Random/People.html                              @ https://www.valvesoftware.com/en/people
