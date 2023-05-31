@@ -63,119 +63,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .tabbar_StatusCaution_31Lxu {
   color: #e76e34;
 }
-.requirevalvepublishapproval_ApprovalRequiredCtn_800dA {
-  background-color: #abb2bd;
-  padding: 12px;
-  color: #000;
-  display: flex;
-  flex-direction: row;
-}
-.requirevalvepublishapproval_ApprovalRequiredCtn_800dA
-  .requirevalvepublishapproval_Right_184Cy {
-  border-left: 1px solid #000;
-  padding-left: 18px;
-  margin-left: 18px;
-  min-width: 200px;
-}
-.requirevalvepublishapproval_Title_1TI4b {
-  font-weight: bold;
-}
-.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
-  background-color: #2e3138;
-  border: 1px solid #761f28;
-  padding: 12px;
-  color: #969696;
-}
-.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
-  .saleguidelinedialog_GuidelinesDoneCtn_-bMPu {
-  border-left: 2px solid #a4d007;
-}
-.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
-  .saleguidelinedialog_SignedBy_aFTva {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  margin-right: 16px;
-}
-.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8 {
-  width: 100%;
-  height: 300px;
-  padding: 24px;
-  box-sizing: border-box;
-  background-color: #2e3138;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8
-  .saleguidelinedialog_OpenGuidelinesBtnCtn_1xJdi {
-  width: 50%;
-}
-.saleguidelinedialog_GuidelinesDoneCtn_-bMPu {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px;
-  background-color: #2e3138;
-}
-.saleguidelinedialog_GuidelinesDoneCtn_-bMPu button {
-  flex-basis: 30%;
-}
-.saleguidelinedialog_GuidelinesDoneCtn_-bMPu .saleguidelinedialog_Text_1yrjm {
-  flex-basis: 70%;
-}
-.saleguidelinedialog_GuidelinesDoneCtn_-bMPu
-  .saleguidelinedialog_ProcessButtons_3d-Yu {
-  display: flex;
-  flex-direction: column;
-}
-.saleguidelinedialog_PresenterInfoCtn_Ltbsl {
-  display: flex;
-}
-.saleguidelinedialog_PresenterInfoCtn_Ltbsl .DialogInputLabelGroup {
-  margin-right: 4px;
-  margin-bottom: 2px;
-}
-.saleguidelinedialog_PresenterPreviewCtn_2Hk4r {
-  border-top: 1px solid #444955;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-.saleguidelinedialog_PresenterPreviewCtn_2Hk4r
-  .saleguidelinedialog_PresenterPreviewDesc_3pwOK {
-  margin-bottom: 20px;
-}
-.saleguidelinedialog_Intro_yYvoX {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-}
-.saleguidelinedialog_Intro_yYvoX svg {
-  width: 32px;
-}
-.saleguidelinedialog_AgreementsCtn_1TWap {
-  margin: 12px 0px;
-}
-.saleguidelinedialog_ContactSectionCtn_3gDWx {
-  display: flex;
-  flex-direction: column;
-}
-.saleguidelinedialog_ContactSectionCtn_3gDWx div {
-  margin-top: 8px;
-}
-.saleguidelinedialog_SectionTitle_3HeMo {
-  font-size: 13px;
-  color: #cacaca;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding-top: 24px;
-}
 Body.v6.tag_page.contenthub_page {
   background-color: #202327;
 }
@@ -4000,6 +3887,122 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .saleclaimitem_NextStop_35VNz .saleclaimitem_Timer_2zqp4 {
   color: #94f6c3;
   font-weight: 600;
+}
+.requirevalvepublishapproval_ApprovalRequiredCtn_800dA {
+  background-color: #abb2bd;
+  padding: 12px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+}
+.requirevalvepublishapproval_ApprovalRequiredCtn_800dA
+  .requirevalvepublishapproval_Right_184Cy {
+  border-left: 1px solid #000;
+  padding-left: 18px;
+  margin-left: 18px;
+  min-width: 200px;
+}
+.requirevalvepublishapproval_Title_1TI4b {
+  font-weight: bold;
+}
+.requirevalvepublishapproval_RequireText_rZkfY {
+  color: #888;
+}
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
+  background-color: #2e3138;
+  border: 1px solid #761f28;
+  padding: 12px;
+  color: #969696;
+}
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
+  .saleguidelinedialog_GuidelinesDoneCtn_-bMPu {
+  border-left: 2px solid #a4d007;
+}
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
+  .saleguidelinedialog_SignedBy_aFTva {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 16px;
+}
+.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8 {
+  width: 100%;
+  height: 300px;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #2e3138;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8
+  .saleguidelinedialog_OpenGuidelinesBtnCtn_1xJdi {
+  width: 50%;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #2e3138;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu button {
+  flex-basis: 30%;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu .saleguidelinedialog_Text_1yrjm {
+  flex-basis: 70%;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu
+  .saleguidelinedialog_ProcessButtons_3d-Yu {
+  display: flex;
+  flex-direction: column;
+}
+.saleguidelinedialog_PresenterInfoCtn_Ltbsl {
+  display: flex;
+}
+.saleguidelinedialog_PresenterInfoCtn_Ltbsl .DialogInputLabelGroup {
+  margin-right: 4px;
+  margin-bottom: 2px;
+}
+.saleguidelinedialog_PresenterPreviewCtn_2Hk4r {
+  border-top: 1px solid #444955;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.saleguidelinedialog_PresenterPreviewCtn_2Hk4r
+  .saleguidelinedialog_PresenterPreviewDesc_3pwOK {
+  margin-bottom: 20px;
+}
+.saleguidelinedialog_Intro_yYvoX {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.saleguidelinedialog_Intro_yYvoX svg {
+  width: 32px;
+}
+.saleguidelinedialog_AgreementsCtn_1TWap {
+  margin: 12px 0px;
+}
+.saleguidelinedialog_ContactSectionCtn_3gDWx {
+  display: flex;
+  flex-direction: column;
+}
+.saleguidelinedialog_ContactSectionCtn_3gDWx div {
+  margin-top: 8px;
+}
+.saleguidelinedialog_SectionTitle_3HeMo {
+  font-size: 13px;
+  color: #cacaca;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-top: 24px;
 }
 .partnereventdates_EventTimeSection_O7lDS:first-child {
   margin-bottom: 12px;

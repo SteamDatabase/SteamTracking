@@ -5950,8 +5950,12 @@ td.rdtYear:hover {
   margin-top: -1px;
 }
 .ChatTabs
-  .personanameandstatus_compactView_34CCB:not(.personanameandstatus_twoLine_27M2G)
-  .personanameandstatus_richPresenceLabel_1k82N:not(.personanameandstatus_gameName_2wpap) {
+  .personanameandstatus_compactView_34CCB:not(
+    .personanameandstatus_twoLine_27M2G
+  )
+  .personanameandstatus_richPresenceLabel_1k82N:not(
+    .personanameandstatus_gameName_2wpap
+  ) {
   display: none;
 }
 .ChatTabs
@@ -5998,7 +6002,9 @@ td.rdtYear:hover {
 }
 .titleBarContainer
   .currentUserContainer
-  .personanameandstatus_richPresenceLabel_1k82N:not(.personanameandstatus_gameName_2wpap) {
+  .personanameandstatus_richPresenceLabel_1k82N:not(
+    .personanameandstatus_gameName_2wpap
+  ) {
   font-size: 10px;
   margin-top: -1px;
   margin-bottom: 1px;
@@ -6662,7 +6668,9 @@ td.rdtYear:hover {
   color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 }
-.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE:hover:not(
+    .discoveryqueuewizard_Disabled_1yh4o
+  ) {
   background-color: #0bf;
 }
 .discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Launch_uZjq4 {
@@ -6675,7 +6683,9 @@ td.rdtYear:hover {
   width: 16px;
   transition: fill 0.1s ease;
 }
-.discoveryqueuewizard_QueueButton_19cHb:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
+.discoveryqueuewizard_QueueButton_19cHb:hover:not(
+    .discoveryqueuewizard_Disabled_1yh4o
+  ) {
   background-color: rgba(172, 178, 201, 0.2784313725);
 }
 .discoveryqueuewizard_QueueButton_19cHb.gpfocus {
@@ -7276,6 +7286,9 @@ td.rdtYear:hover {
   display: block;
   transition: transform 0.3s ease-in-out;
 }
+.salepointshopwidgeteditor_DropDown_u_cLt {
+  width: 500px;
+}
 .partnereventshared_ErrorPage_1HZBl {
   padding: 24px;
   text-align: center;
@@ -7334,10 +7347,6 @@ td.rdtYear:hover {
   .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL:first-child {
   flex-grow: 4;
 }
-.socialshareeditor_InputCtn_32aXg {
-  padding: 8px;
-  width: 100%;
-}
 .saleeditorlocationcontrolwidget_DisplayWarning_162UW {
   padding: 5px;
   font-weight: bolder;
@@ -7357,6 +7366,10 @@ td.rdtYear:hover {
 }
 .salelinksectioneditor_DialogSize_37mjY {
   min-width: 500px;
+}
+.socialshareeditor_InputCtn_32aXg {
+  padding: 8px;
+  width: 100%;
 }
 .partnereventdescriptiontab_ToolContainer_1YUip {
   padding: 10px 0px;
@@ -7378,9 +7391,6 @@ td.rdtYear:hover {
 }
 .partnereventdescriptiontab_DescEditorPadding_3mLVV.partnereventdescriptiontab_ImagePickerCtn_Mc28x {
   width: 395px;
-}
-.salepointshopwidgeteditor_DropDown_u_cLt {
-  width: 500px;
 }
 .importexportdialog_Label_RRbwy {
   width: 100%;

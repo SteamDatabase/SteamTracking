@@ -1096,9 +1096,9 @@
         R = n(17318),
         G = n.n(R),
         F = n(2647),
-        U = n(57742),
-        P = n(45123),
-        z = n.n(P),
+        P = n(57742),
+        U = n(45123),
+        z = n.n(U),
         H = n(60161),
         j = n(32765);
       var X = n(69159),
@@ -1191,7 +1191,7 @@
                 onClick: (e) => {
                   const t = (0, H.RA)(e);
                   let n = _.GetUploadImages()[0];
-                  (0, U.AM)(
+                  (0, P.AM)(
                     l.createElement(q.e, {
                       ownerWin: t,
                       uploadFile: n,
@@ -1277,7 +1277,7 @@
             {
               onClick: (e) => {
                 const t = new m.K(j.JA.CLANSTEAMID);
-                (0, U.AM)(
+                (0, P.AM)(
                   l.createElement($.k, {
                     clanSteamID: t,
                     fnImageSelectCallBack: (e) => C(_, e),
@@ -1570,27 +1570,27 @@
           }
         }
         OnAddLink(e) {
-          (0, U.BR)(
+          (0, P.BR)(
             l.createElement(ge, { textareaRef: this.props.fnTextareaRef() }),
             (0, H.RA)(e)
           );
         }
         ShowHelpDialog(e) {
           this.props.showFormatHelp &&
-            (0, U.BR)(
+            (0, P.BR)(
               l.createElement(le, { formatType: this.props.showFormatHelp }),
               (0, H.RA)(e)
             );
         }
         OnConvertHTMLToBBCodeDialog(e) {
-          (0, U.BR)(
+          (0, P.BR)(
             l.createElement(Ee, { textareaRef: this.props.fnTextareaRef() }),
             (0, H.RA)(e)
           );
         }
         OnOpenYoutubeDialog(e) {
           let t = j.De.IMG_URL + "applications/community/";
-          (0, U.BR)(
+          (0, P.BR)(
             l.createElement(he, {
               textareaRef: this.props.fnTextareaRef(),
               pathToImages: t,
@@ -1599,13 +1599,13 @@
           );
         }
         OnOpenImageDialog(e) {
-          (0, U.BR)(
+          (0, P.BR)(
             l.createElement(_e, { textareaRef: this.props.fnTextareaRef() }),
             (0, H.RA)(e)
           );
         }
         OnOpenSpeakerDialog(e) {
-          (0, U.AM)(
+          (0, P.AM)(
             l.createElement(ve, {
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
@@ -2565,7 +2565,7 @@
                   this.setState({ bConverting: !1, bFinishedConverting: !0 }));
               })
               .catch((e) => {
-                (0, U.AM)(
+                (0, P.AM)(
                   l.createElement(F.JX, {
                     strTitle: (0, L.Xx)("#EventEditor_ConvertHTML_Error"),
                     strDescription: (0, L.Xx)(
@@ -2972,8 +2972,8 @@
         R = n.n(O),
         G = n(65352),
         F = n(17318),
-        U = n.n(F),
-        P = n(87178),
+        P = n.n(F),
+        U = n(87178),
         z = n(69338),
         H = n(75962),
         j = n(60729),
@@ -3468,13 +3468,13 @@
               },
               12 != M &&
                 !w &&
-                o.createElement(P.j, {
+                o.createElement(U.j, {
                   className: (0, C.Z)(R().EventCoverImageBackground),
                   rgSources: B,
                   onIncrementalError: (e, t, n) => u && u(t),
                 }),
               B.length > 0 &&
-                o.createElement(P.j, {
+                o.createElement(U.j, {
                   className: R().EventBackgroundBlur,
                   rgSources: B,
                   onIncrementalError: (e, t, n) => u && u(t),
@@ -3595,7 +3595,7 @@
                     partnerEventStore: n,
                     event: e,
                   }),
-                  o.createElement("span", { className: U().Clear })
+                  o.createElement("span", { className: P().Clear })
                 ),
                 o.createElement(K.D, { event: this.props.event }),
                 Boolean(e.jsondata.read_more_link) &&
@@ -3605,7 +3605,7 @@
                     o.createElement(
                       H.ns,
                       {
-                        className: (0, C.Z)(U().Button),
+                        className: (0, C.Z)(P().Button),
                         href: e.jsondata.read_more_link,
                       },
                       (0, f.Xx)("#EventEmail_Button_ClickForMoreDetails")
@@ -3619,7 +3619,7 @@
                     o.createElement(
                       "a",
                       {
-                        className: (0, C.Z)(U().Button, "LinkButton"),
+                        className: (0, C.Z)(P().Button, "LinkButton"),
                         href: (0, D.OL)(e.GetSaleURL()),
                       },
                       (0, f.Xx)("#Event_Button_VisitSalePage")
@@ -3944,7 +3944,7 @@
     },
     85521: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => U, L: () => z });
+      n.d(t, { Q: () => P, L: () => z });
       var r = n(33940),
         a = n(89526),
         i = n(88464),
@@ -4305,7 +4305,7 @@
         R = n(88443),
         G = n(51326),
         F = n(20790);
-      function U(e, t) {
+      function P(e, t) {
         if (!t.BIsUserLoggedIn())
           return (
             o.De.IN_CLIENT
@@ -4330,7 +4330,7 @@
           ((0, p.AM)(a.createElement(T.r, null), window), !1)
         );
       }
-      function P(e) {
+      function U(e) {
         let t;
         return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
       }
@@ -4343,7 +4343,7 @@
           super(e), (this.m_cancelSignal = S().CancelToken.source());
           const t = C.cb.Get().BHasMyVote(e.eventModel);
           let n;
-          t && (n = P(C.cb.Get().GetPreviouslyLoadedVote(e.eventModel))),
+          t && (n = U(C.cb.Get().GetPreviouslyLoadedVote(e.eventModel))),
             (this.state = { bLoadedVote: !!t, myVote: n });
         }
         HandleRefreshMyVotingInformation() {
@@ -4354,7 +4354,7 @@
                 .Get()
                 .LoadMyVote(e, this.m_cancelSignal)
                 .then((e) => {
-                  let t = P(e);
+                  let t = U(e);
                   this.setState({ myVote: t, bLoadedVote: !0 });
                 })
                 .catch((e) => {
@@ -4387,7 +4387,7 @@
         }
         Vote(e) {
           const { eventModel: t } = this.props;
-          U(t, C.cb.Get()) &&
+          P(t, C.cb.Get()) &&
             this.state.myVote != e &&
             null != e &&
             this.state.bLoadedVote &&
@@ -4833,22 +4833,20 @@
     },
     5386: (e, t, n) => {
       "use strict";
-      n.d(t, { Pi: () => E, uW: () => v });
+      n.d(t, { uW: () => g });
       var r = n(33940),
         a = n(88464),
-        i = n(25125),
-        o = n(89526),
-        s = n(46132),
-        l = n(67727),
-        c = n(7948),
-        d = n(17318),
-        p = n.n(d),
-        m = n(19304),
-        u = n(14826),
-        h = n(72120),
-        g = n(4306),
-        _ = n(84343);
-      let v = class extends o.Component {
+        i = n(89526),
+        o = n(46132),
+        s = n(67727),
+        l = (n(7948), n(17318)),
+        c = n.n(l),
+        d = n(19304),
+        p = n(14826),
+        m = n(72120),
+        u = n(4306),
+        h = n(84343);
+      let g = class extends i.Component {
         GenerateLanguageOptions() {
           let e = [];
           const {
@@ -4859,68 +4857,68 @@
           } = this.props;
           this.props.bAllowUnsetOption &&
             e.push(
-              o.createElement(
+              i.createElement(
                 "option",
                 { key: "langpicker_unset", value: -1 },
-                (0, u.Xx)("#language_selection_none")
+                (0, p.Xx)("#language_selection_none")
               )
             );
-          let i = new Array();
-          const c = this.props.realms || [l.IN.k_ESteamRealmGlobal];
-          for (const e of u.LJ.GetLanguageListForRealms(c)) {
+          let l = new Array();
+          const u = this.props.realms || [s.IN.k_ESteamRealmGlobal];
+          for (const e of p.LJ.GetLanguageListForRealms(u)) {
             if (t && !t(e)) continue;
-            const n = (0, s.j_)(e),
-              r = (0, u.Xx)("#Language_" + n),
-              o = Boolean(a) && a(e);
-            i.push({ eLang: e, sLocName: r, bSupported: o });
+            const n = (0, o.j_)(e),
+              r = (0, p.Xx)("#Language_" + n),
+              i = Boolean(a) && a(e);
+            l.push({ eLang: e, sLocName: r, bSupported: i });
           }
-          i.sort((e, t) =>
+          l.sort((e, t) =>
             e.bSupported != t.bSupported
               ? e.bSupported
                 ? -1
                 : 1
               : e.sLocName.localeCompare(t.sLocName)
           );
-          let d = !1;
-          for (const t of i) {
-            t.bSupported != d &&
+          let h = !1;
+          for (const t of l) {
+            t.bSupported != h &&
               (e.push(
-                o.createElement(
+                i.createElement(
                   "option",
                   {
                     key: t.bSupported ? "SupportedGroup" : "UnsupportedGroup",
-                    className: p().SupportedGroupLabel,
+                    className: c().SupportedGroupLabel,
                     disabled: !0,
                   },
-                  (0, u.Xx)(
+                  (0, p.Xx)(
                     t.bSupported
                       ? "#LanguageGroup_Supported"
                       : "#LanguageGroup_Unsupported"
                   )
                 )
               ),
-              (d = t.bSupported));
+              (h = t.bSupported));
             const a = n && n(t.eLang),
-              i = r && r(t.eLang);
+              o = r && r(t.eLang);
             let s = t.sLocName;
-            i &&
-              0 !== i &&
+            o &&
+              0 !== o &&
               ((s += " "),
-              (s += (0, u.Xx)(
+              (s += (0, p.Xx)(
                 "#Language_Last_Update",
-                (0, u.vX)(i) + " @ " + (0, h.Sc)(i, { bForce24HourClock: !1 })
+                (0, p.vX)(o) + " @ " + (0, m.Sc)(o, { bForce24HourClock: !1 })
               ))),
               e.push(
-                o.createElement(
+                i.createElement(
                   "option",
                   {
                     key: "langpicker" + t.eLang + (a ? "_hasdata" : ""),
                     value: t.eLang,
-                    className: (0, m.Z)(
-                      { [p().LanguageWithContent]: a },
+                    className: (0, d.Z)(
+                      { [c().LanguageWithContent]: a },
                       t.bSupported
-                        ? p().SupportedLanguage
-                        : p().UnsupportedLanguage
+                        ? c().SupportedLanguage
+                        : c().UnsupportedLanguage
                     ),
                   },
                   s
@@ -4937,10 +4935,10 @@
         render() {
           const { selectedLang: e, bDisabled: t, strTooltip: n } = this.props;
           let r = this.GenerateLanguageOptions();
-          return o.createElement(
-            _.HP,
+          return i.createElement(
+            h.HP,
             { toolTipContent: n },
-            o.createElement(
+            i.createElement(
               "select",
               { value: e, onChange: this.OnLanguageChange, disabled: t },
               r
@@ -4948,21 +4946,8 @@
           );
         }
       };
-      function E(e) {
-        const [t, n] = (0, i.SZ)(() => [
-          c.U.Get().GetHasLocalizationContext(),
-          c.U.Get().GetCurEditLanguage(),
-        ]);
-        return o.createElement(v, {
-          selectedLang: n,
-          fnLangHasData: c.U.Get().BHasLanguageData,
-          fnOnLanguageChanged: c.U.Get().SetCurEditLanguage,
-          bDisabled: !t,
-          strTooltip: t ? void 0 : (0, u.Xx)("#Localization_EditorNotInFocus"),
-        });
-      }
-      (0, r.gn)([g.ak], v.prototype, "OnLanguageChange", null),
-        (v = (0, r.gn)([a.Pi], v));
+      (0, r.gn)([u.ak], g.prototype, "OnLanguageChange", null),
+        (g = (0, r.gn)([a.Pi], g));
     },
     4795: (e, t, n) => {
       "use strict";
@@ -5729,7 +5714,7 @@
     },
     65352: (e, t, n) => {
       "use strict";
-      n.d(t, { HQ: () => F, wM: () => P, jd: () => z });
+      n.d(t, { HQ: () => F, wM: () => U, jd: () => z });
       var r = n(25125),
         a = n(89526),
         i = n(45878),
@@ -6907,7 +6892,7 @@
                 n
                   .filter((e) => 3 != e.external_type)
                   .map((e) =>
-                    a.createElement(U, {
+                    a.createElement(P, {
                       key: "app_social_link_" + t + "_" + e.external_type,
                       social: e,
                     })
@@ -6916,7 +6901,7 @@
             )
           : null;
       }
-      function U(e) {
+      function P(e) {
         const { social: t } = e,
           n =
             A.De.IMG_URL +
@@ -6936,7 +6921,7 @@
           a.createElement("img", { className: G().AppSocialLink, src: n })
         );
       }
-      function P(e) {
+      function U(e) {
         const { event: t, nOverrideStartTime: n, nOverrideEndTime: i } = e,
           o = e.stylesmodule
             ? Object.assign(Object.assign({}, G()), e.stylesmodule)
@@ -7167,7 +7152,7 @@
         R = n(92307),
         G = n(31038),
         F = n.n(G);
-      const U = (0, I.Pi)((e) => {
+      const P = (0, I.Pi)((e) => {
         const { appid: t, eventLink: n } = e,
           i = a.useRef(null),
           [o, s] = (0, x.Gr)(u.L7.steamid),
@@ -7353,7 +7338,7 @@
               )
             );
       });
-      var P = n(57605);
+      var U = n(57605);
       class z extends a.Component {
         constructor() {
           super(...arguments),
@@ -7391,7 +7376,7 @@
                 onOK: () => (0, c.X)(),
               })
             : this.state.bShareOnSteamDialog
-            ? a.createElement(U, {
+            ? a.createElement(P, {
                 eventLink: e,
                 appid: n,
                 emoticonStore: i,
@@ -7445,7 +7430,7 @@
                   "div",
                   { className: f().ShareLanguagePicker },
                   a.createElement(
-                    P.__,
+                    U.__,
                     { className: f().LanguageLabel },
                     (0, p.Xx)("#EventDisplay_Share_LanguageLabel")
                   ),
