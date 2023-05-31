@@ -4147,7 +4147,7 @@
 
 	"Library_SelectBeta_CodeLabel" "Изберете бетата, в която бихте искали да участвате."
 	"Library_SelectBeta_Title"	"Избиране на бета"
-	"Library_SelectBeta_PrivateTitle"	"Въведете код за достъп, така че да отключите частни бети."
+	"Library_SelectBeta_PrivateTitle"	"Въведете код за достъп, така че да отключите лични бети."
 	"Library_SelectBeta_BetaPassword"	"КОД ЗА ДОСТЪП"
 	"Library_SelectBeta_PrivateButton"	"ОТМЕТКА"
 	"Library_SelectBeta_NoBeta" "Няма публични бети за тази игра."

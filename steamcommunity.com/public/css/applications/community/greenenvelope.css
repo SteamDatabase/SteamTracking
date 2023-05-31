@@ -1,0 +1,71 @@
+.greenenvelope_NotificationsMenu_DHpNP {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.greenenvelope_NotificationsMenuScrollable_3t5NP {
+  overflow-y: auto;
+  max-height: 350px;
+  margin-left: 4px;
+}
+.greenenvelope_NotificationsMenuScrollable_3t5NP.greenenvelope_MenuScrollbarHidden_20aP8 {
+  margin-right: 4px;
+}
+.greenenvelope_NotificationMenuHeader_lTdQS {
+  padding: 5px 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 160px;
+}
+.greenenvelope_NotificationMenuHeader_lTdQS.greenenvelope_ResponsiveViewAll_3jVNI {
+  justify-content: end;
+}
+.greenenvelope_NotificationMenuHeader_lTdQS
+  .greenenvelope_AllNotificationsTitle_nyDUh {
+  font-size: 14px;
+  align-self: center;
+}
+.greenenvelope_NotificationMenuHeader_lTdQS
+  .greenenvelope_AllNotificationsButton__Oohj {
+  background-color: #454953;
+  color: #fff;
+  border-style: none;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.greenenvelope_NotificationsButton_2Z7Ed {
+  padding: 0px 8px;
+  background-color: #5c7e10;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0px 3px 0px 8px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  z-index: 402;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M {
+  background-color: #262625;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M:not(.greenenvelope_Disabled_3KMlw):hover {
+  background-color: #575451;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S {
+  background-color: #5c7e10;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:not(.greenenvelope_Disabled_3KMlw):hover {
+  background-color: #7ea64b;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S
+  .greenenvelope_NotificationImageCtn_k6OOc {
+  margin-left: 7px;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Disabled_3KMlw {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(169, 169, 169, 0.5);
+  color: #d3d3d3;
+}

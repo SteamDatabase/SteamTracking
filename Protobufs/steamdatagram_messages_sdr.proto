@@ -93,6 +93,7 @@ message CMsgSteamDatagramRouterPingReply {
 	optional uint32 flags = 12;
 	repeated .CMsgSteamDatagramRouterPingReply.RouteException route_exceptions = 10;
 	repeated .CMsgSteamDatagramRouterPingReply.AltAddress alt_addresses = 13;
+	optional bytes dummy_pad = 99;
 }
 
 message CMsgSteamDatagramGameserverPingRequestBody {

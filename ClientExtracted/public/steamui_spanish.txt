@@ -88,7 +88,7 @@
 "Steam_ErrorPasswordsDontMatch" "Las contraseñas introducidas no coinciden.\nIntroduce la misma contraseña en cada campo."
 "Steam_ErrorCantStartGame" "Este juego no está disponible actualmente.\nPor favor, inténtalo de nuevo en otro momento."
 "Steam_ErrorCantStartGameDetailed" "No se ha podido iniciar el juego (%error%)."
-"Steam_ErrorCantRunBecauseRequires64bitOS"	"No se ha podido iniciar el juego porque estás usando una versión de Windows de 32 bits y se requiere una versión de 64 bits.\n\nSi el juego tiene una opción de ejecución de 32 bits, seleccionala, si no, necesitarás un equipo con una versión de Windows de 64 bits.\nSi no tienes dicho equipo disponible haz clic abajo para saber cómo solicitar un rembolso.\n"
+"Steam_ErrorCantRunBecauseRequires64bitOS"	"No se ha podido iniciar el juego porque estás usando una versión de Windows de 32 bits y se requiere una versión de 64 bits.\n\nSi el juego tiene una opción de ejecución de 32 bits, selecciónala, si no, necesitarás un equipo con una versión de Windows de 64 bits.\nSi no tienes dicho equipo disponible haz clic abajo para saber cómo solicitar un rembolso.\n"
 "Steam_ErrorCantStartGameDependency" "No se ha podido iniciar el juego con contenido compartido. Por favor, actualiza estos juegos primero:\n\n %detail%"
 "Steam_ErrorUsernameTooShort" "Debes introducir un nombre de 3 caracteres como mínimo."
 "Steam_ErrorPasswordTooShort2" "Tu contraseña debe contener al menos 8 caracteres."
@@ -1313,7 +1313,7 @@
 "Steam_Storefront_Title"	"Steam - Buscar partidas"
 "Steam_RegisterProductCode"	"Activar un producto en Steam..."
 "Steam_RedeemWalletVoucher"	"Canjear un código de la Cartera de Steam..."
-"Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% pendientes)"
+"Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% pendiente)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"Ya tienes una %subscription%."
 "Steam_UpdateNews_Title"	"Steam - Noticias"
@@ -3500,7 +3500,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_ManageSecurity_Title" "Administrar Steam Guard"
 
 "SteamUI_Settings_Security_Status_Label" "Estado de seguridad:"
-"SteamUI_Settings_Security_Status_State_0" "Correo electrónico aún sin verficar"
+"SteamUI_Settings_Security_Status_State_0" "Correo electrónico aún sin verificar"
 "SteamUI_Settings_Security_Status_State_1" "Protegido por Steam Guard"
 "SteamUI_Settings_Security_Status_State_2" "Steam Guard desactivado"
 "SteamUI_Settings_Security_Status_State_3" "Desconocido, desconectado"

@@ -79,7 +79,7 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    91163: (e, t, a) => {
+    61931: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -95,7 +95,7 @@
         c = a(91148),
         d = a(4687),
         m = a(73185),
-        _ = (a(92355), a(17297)),
+        _ = a(17297),
         p = a(88335),
         b = a(71367),
         h = a(83631),
@@ -103,7 +103,7 @@
         g = a(85660),
         S = a(51878),
         v = a(81673),
-        E = (a(47520), a(56052)),
+        E = a(56052),
         f = a.n(E);
       const C = (0, o.observer)((e) => {
         const { appid: t } = e,
@@ -187,24 +187,27 @@
           )
         );
       });
-      var B = a(14200),
-        y = (a(85106), a(34558)),
-        P = (a(70839), a(82767), a(36890), a(8164)),
-        w = a(82911),
+      var B = a(14200);
+      function y() {
+        let e = window.GetUsabilityTracker;
+        if (e) return e();
+      }
+      var P = a(8164),
+        w = a(38180),
         N = a(58959),
-        I = (a(81082), a(81264)),
+        I = a(81264),
         G = a(44742),
         A = a(66249),
         D = a(38973),
         T = a(90437),
-        O = a(76023),
-        k = a(80533);
+        k = a(76023),
+        O = a(80533);
       const L = (e) => {
         const { onPositionChange: t, onLeave: a } = e,
           r = l.useCallback(
             (e) => (
               void 0 === e.previousPosition &&
-                e.currentPosition === k.Waypoint.above &&
+                e.currentPosition === O.Waypoint.above &&
                 a &&
                 a(e),
               t && t(e)
@@ -212,15 +215,15 @@
             [t, a]
           );
         return l.createElement(
-          k.Waypoint,
+          O.Waypoint,
           Object.assign({}, e, { onPositionChange: r })
         );
       };
       var x = a(92312),
         R = a(24934),
         W = a(48287),
-        V = (a(70640), a(41353)),
-        U = (a(40706), a(74780)),
+        V = a(41353),
+        U = a(13416),
         M = a(17157),
         F = a.n(M);
       const H = (0, o.observer)((e) => {
@@ -289,17 +292,17 @@
         z = a.n(j),
         Z = a(92377),
         Y = a(99212),
-        X = a(88393),
-        q = a(51751),
-        $ = a(57542),
-        Q = a(68503),
+        q = a(88393),
+        $ = a(51751),
+        Q = a(57542),
+        X = a(68503),
         J = a(8410),
         K = a(55285),
         ee = a.n(K);
       function te(e) {
         const { steamid: t, closeModal: a } = e;
         return l.createElement(
-          $.GenericConfirmDialog,
+          Q.GenericConfirmDialog,
           {
             strDescription: "",
             strTitle: (0, x.Localize)("#Button_Share"),
@@ -323,12 +326,12 @@
             ),
           },
           l.createElement(
-            O.HP,
+            k.HP,
             {
               toolTipContent: (0, x.Localize)("#EventDisplay_Share_OnFaceBook"),
             },
             l.createElement(
-              Q.LinkInNewWindow,
+              X.LinkInNewWindow,
               { href: ne(t, J.u_.k_eFacebook), className: ee().ShareBtn },
               l.createElement("img", {
                 className: (0, S.default)(z().Button),
@@ -337,28 +340,28 @@
             )
           ),
           l.createElement(
-            O.HP,
+            k.HP,
             {
               toolTipContent: (0, x.Localize)("#EventDisplay_Share_OnTwitter"),
             },
             l.createElement(
-              Q.LinkInNewWindow,
+              X.LinkInNewWindow,
               { href: ne(t, J.u_.k_eTwitter), className: ee().ShareBtn },
               l.createElement("img", {
                 className: (0, S.default)(z().Button),
-                src: q.Z,
+                src: $.Z,
               })
             )
           ),
           l.createElement(
-            O.HP,
+            k.HP,
             { toolTipContent: (0, x.Localize)("#EventDisplay_Share_OnReddit") },
             l.createElement(
-              Q.LinkInNewWindow,
+              X.LinkInNewWindow,
               { href: ne(t, J.u_.k_eReddit), className: ee().ShareBtn },
               l.createElement("img", {
                 className: (0, S.default)(z().Button),
-                src: X.Z,
+                src: q.Z,
               })
             )
           )
@@ -411,7 +414,7 @@
             }),
             Boolean(document.queryCommandSupported("copy")) &&
               l.createElement(
-                O.HP,
+                k.HP,
                 {
                   toolTipContent: (0, x.Localize)(
                     "#ToolTip_CopyLinkToClipboard"
@@ -553,7 +556,7 @@
               e.steamid
             ).m_nAppID;
           (0, N.wx)(a, t ? 2 : 3, e.snr),
-            t && (0, y.X)() && (0, y.X)().AddEvent(1005),
+            t && y() && y().AddEvent(1005),
             window.setTimeout(
               () =>
                 this.setState({
@@ -660,8 +663,7 @@
         }
         MarkBroadcastSeen() {
           this.m_bMarkedUsabilitySeen ||
-            ((this.m_bMarkedUsabilitySeen = !0),
-            (0, y.X)() && (0, y.X)().AddEvent(1004));
+            ((this.m_bMarkedUsabilitySeen = !0), y() && y().AddEvent(1004));
         }
         render() {
           if (this.state.bLoadingPreference) return null;
@@ -827,7 +829,7 @@
             this.props.stream.steamid
           ).m_nAppID;
           (0, N.wx)(e, 7, this.props.stream.snr),
-            (0, y.X)() && (0, y.X)().AddEvent(1006),
+            y() && y().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
         }
         OnEnter() {
@@ -915,7 +917,7 @@
         {
           const e = v.Config.COMMUNITY_BASE_URL + "broadcast/watch/" + a;
           return l.createElement(
-            O.HP,
+            k.HP,
             {
               toolTipContent: (0, x.Localize)(
                 "#BroadcastWatch_View_Broadcast_Page"
@@ -1029,7 +1031,7 @@
                   )
                 ),
               l.createElement(
-                O.HP,
+                k.HP,
                 {
                   toolTipContent: (0, x.Localize)(
                     "#StoreBroadcast_Change_store_Broadcast_settings"
@@ -1312,16 +1314,16 @@
       var r = a(70655),
         n = a(67294),
         s = a(90437),
-        o = (a(47520), a(29323)),
+        o = a(29323),
         i = a(22188),
         l = a(81761),
         c = a(92312),
         d = a(41353),
         m = a(48287),
-        _ = (a(70839), a(17257)),
+        _ = a(17257),
         p = a(95379),
         b = a.n(p),
-        h = (a(43074), a(4687)),
+        h = a(4687),
         u = a(51878);
       let g = class extends n.Component {
         constructor(e) {

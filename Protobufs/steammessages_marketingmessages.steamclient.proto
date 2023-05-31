@@ -33,6 +33,16 @@ enum EMarketingMessageAssociationType {
 	k_EMarketingMessageBundleAssociation = 5;
 }
 
+enum EMarketingMessageTemplateType {
+	k_EMarketingMessageTemplate_Unknown = 0;
+	k_EMarketingMessageTemplate_Image = 1;
+	k_EMarketingMessageTemplate_Animated = 2;
+	k_EMarketingMessageTemplate_Featured_Video = 3;
+	k_EMarketingMessageTemplate_DLC_Override = 4;
+	k_EMarketingMessageTemplate_Replay = 5;
+	k_EMarketingMessageTemplate_MAX = 6;
+}
+
 enum EMarketingMessageLookupType {
 	k_EMarketingMessageLookupInvalid = 0;
 	k_EMarketingMessageLookupByGID = 1;
@@ -132,6 +142,8 @@ message CMarketingMessages_GetDisplayMarketingMessage_Response {
 
 message CMarketingMessages_MarkMessageSeen_Notification {
 	optional fixed64 gid = 1;
+	optional uint32 display_index = 2 [default = 0, (description) = "Where in the stack was the marketing message, 1-based, zero means we don't know"];
+	optional .EMarketingMessageTemplateType template_type = 3 [default = k_EMarketingMessageTemplate_Unknown, (description) = "Which type of template did they see"];
 }
 
 message CMarketingMessages_GetMarketingMessage_Request {

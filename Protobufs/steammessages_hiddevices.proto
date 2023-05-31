@@ -34,6 +34,7 @@ message CHIDDeviceInfo {
 	optional uint32 eControllerType_OBSOLETE = 17 [default = 0];
 	optional bool is_xinput_device_OBSOLETE = 18 [default = false];
 	optional uint32 session_remote_play_together_appid = 19;
+	optional bool is_steamvr_device = 20 [default = false];
 }
 
 message CHIDDeviceInputReport {

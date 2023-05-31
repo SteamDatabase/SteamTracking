@@ -37,7 +37,7 @@
     16468: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Bo: () => b,
+        Bo: () => L,
         FG: () => D,
         N: () => y,
         P4: () => I,
@@ -71,7 +71,7 @@
             (t.list_jsondata = {}));
       }
       const C = "0";
-      function L(t, e) {
+      function b(t, e) {
         (e.localized_flat_title = (0, m.LG)([], 30, null)),
           (e.localized_flat_blurb = (0, m.LG)([], 30, null)),
           (e.localized_flat_link = (0, m.LG)([], 30, null)),
@@ -100,7 +100,7 @@
               (e.localized_flat_link[t.language] = t.localized_string);
           });
       }
-      class b {
+      class L {
         GetListDetails(t) {
           return this.m_mapList.get(t);
         }
@@ -138,7 +138,7 @@
                     "Wanted" + e + "but got" + (null == n ? void 0 : n.listid)
                   ),
                   h(n),
-                  L(r.data.curation_language, n),
+                  b(r.data.curation_language, n),
                   this.m_mapList.set(e, n),
                   this.m_mapListIDToClanAccount.set(e, t.GetAccountID()),
                   n
@@ -228,7 +228,7 @@
                             e.clan_account_id
                           ),
                             h(n),
-                            L(e.curation_language, n),
+                            b(e.curation_language, n),
                             this.m_mapList.set(n.listid, n),
                             t.push(n);
                         });
@@ -246,7 +246,7 @@
           });
         }
         static Get() {
-          return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
+          return L.s_Singleton || (L.s_Singleton = new L()), L.s_Singleton;
         }
         constructor() {
           (this.m_mapList = new Map()),
@@ -265,7 +265,7 @@
                 t.forEach((t) => {
                   t.multi_detail_lists.forEach((e) => {
                     h(e),
-                      L(t.curation_language, e),
+                      b(t.curation_language, e),
                       this.m_mapList.set(e.listid, e);
                   });
                 });
@@ -290,13 +290,13 @@
         const n = (0, E.NW)();
         return (
           (0, r.useEffect)(() => {
-            if (b.Get().GetListDetails(e) || !t) return;
+            if (L.Get().GetListDetails(e) || !t) return;
             const o = i().CancelToken.source();
             return (
               (() => {
                 (0, a.mG)(this, void 0, void 0, function* () {
                   var a, i;
-                  const l = yield b.Get().LoadListDetails(t, e);
+                  const l = yield L.Get().LoadListDetails(t, e);
                   if (!o.token.reason)
                     if (
                       null === (a = null == l ? void 0 : l.apps) || void 0 === a
@@ -328,7 +328,7 @@
               () => o.cancel("unmounting CuratorList")
             );
           }, [t, e, n]),
-          b.Get().GetListDetails(e)
+          L.Get().GetListDetails(e)
         );
       }
       function I(t) {
@@ -378,7 +378,7 @@
           o
         );
       }
-      (0, a.gn)([l.LO], b.prototype, "m_mapList", void 0);
+      (0, a.gn)([l.LO], L.prototype, "m_mapList", void 0);
     },
     31245: (t, e, n) => {
       "use strict";
@@ -386,7 +386,7 @@
       var a = n(89526),
         o = n(62983),
         i = n(44026),
-        l = n(90699),
+        l = n(51438),
         r = n(16221),
         s = n(98009),
         c = n(54671),
@@ -401,8 +401,8 @@
         f = n(21219),
         h = n(87539),
         C = n(3991),
-        L = n(33406),
-        b = n(98389),
+        b = n(33406),
+        L = n(98389),
         y = n(42317),
         I = n(71161),
         D = n(19304),
@@ -417,14 +417,23 @@
             elElementToAppendToHover: c,
             index: m,
             navKey: v,
+            bHideStoreHover: E,
           } = t,
-          [E, f] = a.useState(!1),
-          [L] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
-          [y] = (0, d.vs)(n && (null == L ? void 0 : L.GetParentAppID()), o.bk),
-          w = (0, I.bJ)(),
-          O = (0, A.id)();
-        if (!L) return null;
-        const P = Boolean(y);
+          [f, b] = a.useState(!1),
+          [y] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
+          [w] = (0, d.vs)(n && (null == y ? void 0 : y.GetParentAppID()), o.bk),
+          O = (0, I.bJ)(),
+          P = (0, A.id)();
+        if (!y) return null;
+        const H = Boolean(w),
+          z = a.createElement(
+            T,
+            Object.assign({}, t, {
+              info: e,
+              bIsHovered: f,
+              bHasParentAppToDisplay: H,
+            })
+          );
         return a.createElement(
           l.s,
           {
@@ -437,56 +446,52 @@
           },
           a.createElement(
             C.zw,
-            { appid: L.GetAppID() },
-            a.createElement(
-              p.ll,
-              {
-                className: g().CapsuleContainer,
-                item: e,
-                elElementToAppend: t.elElementToAppendToHover,
-                bShowDemoButton: t.bShowDemoButton,
-                bShowDeckCompatibilityDialog: t.bShowDeckCompatibilityDialog,
-                bHidePrice: t.bHidePrice,
-                bUseSubscriptionLayout: t.bUseSubscriptionLayout,
-                strExtraParams: t.strExtraParams,
-                fnOnHoverStateChange: !O && f,
-                nCreatorAccountID: t.creatorAccountID,
-              },
-              a.createElement(
-                T,
-                Object.assign({}, t, {
-                  info: e,
-                  bIsHovered: E,
-                  bHasParentAppToDisplay: P,
-                })
-              )
-            ),
+            { appid: y.GetAppID() },
+            Boolean(E)
+              ? a.createElement(a.Fragment, null, z)
+              : a.createElement(
+                  p.ll,
+                  {
+                    className: g().CapsuleContainer,
+                    item: e,
+                    elElementToAppend: t.elElementToAppendToHover,
+                    bShowDemoButton: t.bShowDemoButton,
+                    bShowDeckCompatibilityDialog:
+                      t.bShowDeckCompatibilityDialog,
+                    bHidePrice: t.bHidePrice,
+                    bUseSubscriptionLayout: t.bUseSubscriptionLayout,
+                    strExtraParams: t.strExtraParams,
+                    fnOnHoverStateChange: !P && b,
+                    nCreatorAccountID: t.creatorAccountID,
+                  },
+                  z
+                ),
             Boolean(c) && a.createElement("div", null, c)
           ),
-          P &&
+          H &&
             a.createElement(
               i.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, h.h)(y, w, O, t.strExtraParams)
+                (0, h.h)(w, O, P, t.strExtraParams)
               ),
               a.createElement(
                 C.zw,
-                { appid: y.GetAppID() },
+                { appid: w.GetAppID() },
                 a.createElement(
                   "div",
                   { className: g().ParentType },
                   (0, S.Xx)(
-                    11 == L.GetAppType()
+                    11 == y.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC"
                   )
                 ),
                 a.createElement(
-                  b._,
+                  L._,
                   {
                     type: "app",
-                    id: y.GetAppID(),
+                    id: w.GetAppID(),
                     strExtraParams: t.strExtraParams,
                   },
                   a.createElement(
@@ -495,8 +500,8 @@
                       {
                         loading: "lazy",
                         className: _.AppCapsuleImage,
-                        alt: y.GetName(),
-                        src: y.GetAssets().GetSmallCapsuleURL(),
+                        alt: w.GetName(),
+                        src: w.GetAssets().GetSmallCapsuleURL(),
                       },
                       (0, o.fn)()
                     )
@@ -517,7 +522,7 @@
             bHasParentAppToDisplay: v,
             bUseSubscriptionLayout: g,
             elElementToAppendToHover: h,
-            bHidePrice: b,
+            bHidePrice: L,
             bHidePlatforms: D,
             creatorAccountID: S,
             bIsHovered: A,
@@ -539,11 +544,11 @@
                 ));
         if (!G) return null;
         const P = O && !l,
-          z = (0, s.Hf)(`${G.GetStorePageURL()}${r || ""}`, w);
-        let H,
+          H = (0, s.Hf)(`${G.GetStorePageURL()}${r || ""}`, w);
+        let z,
           j = null;
         if (g && 0 == (null == G ? void 0 : G.GetStoreItemType()))
-          j = a.createElement(L.r, { appid: G.GetAppID(), bIsMuted: A });
+          j = a.createElement(b.r, { appid: G.GetAppID(), bIsMuted: A });
         else if (h);
         else {
           const e = O && o,
@@ -551,7 +556,7 @@
           j = a.createElement(m.Hl, {
             info: n,
             bShowAsMuted: i,
-            bHidePrice: b,
+            bHidePrice: L,
             bShowInLibraryInsteadOfPrice: e,
             bHidePlatforms: D,
             creatorAccountID: S,
@@ -560,7 +565,7 @@
         }
         return (
           "overrideNavigation" in n &&
-            (H = (t) => (
+            (z = (t) => (
               n.overrideNavigation(),
               t.preventDefault(),
               t.stopPropagation(),
@@ -569,10 +574,10 @@
           a.createElement(
             i.IS,
             {
-              href: H ? null : z,
+              href: z ? null : H,
               style: { display: "block" },
               preferredFocus: v,
-              onClick: H,
+              onClick: z,
             },
             a.createElement(f.vs, { appids: T, hide_status_banners: l }),
             a.createElement(m.a4, { imageType: _, info: n }),

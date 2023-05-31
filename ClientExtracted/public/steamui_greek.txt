@@ -1118,7 +1118,7 @@
 "SteamUI_SpecialSurvey_Error_Title"		"Σφάλμα έρευνας"
 "SteamUI_SpecialSurvey_Error_InvalidID"	"Μη έγκυρο ID έρευνας"
 "SteamUI_SpecialSurvey_Error_TryAgain"	"Παρουσιάστηκε πρόβλημα κατά την επικοινωνία με τους διακομιστές του Steam. Δοκιμάστε ξανά αργότερα."
-"SteamUI_SpecialSurvey_Error_NotOnline"	"Πρέπει να είστε συνδεδεμένος για να συμμετάσχετε σε αυτή τη δημοσκόπηση."
+"SteamUI_SpecialSurvey_Error_NotOnline"	"Πρέπει να είστε σε σύνδεση για να συμμετάσχετε σε αυτή τη δημοσκόπηση."
 "SteamUI_SpecialSurvey_Error_SurveyUnavailable"	"Η δημοσκόπηση στην οποία προσπαθείτε να συμμετάσχετε δεν υπάρχει ή δεν είναι πλέον διαθέσιμη."
 "SteamUI_SpecialSurvey_Error_Denied"	"Δεν έχετε προσκληθεί να συμμετάσχετε σε αυτή τη δημοσκόπηση."
 "SteamUI_SpecialSurvey_Error_AlreadyComplete"	"Έχετε ήδη πάρει μέρος σε αυτή τη δημοσκόπηση. Ευχαριστούμε για τη συμμετοχή σας."
@@ -1314,7 +1314,7 @@
 "Steam_Storefront_Title"	"Steam - Περιήγηση στα παιχνίδια"
 "Steam_RegisterProductCode"	"Ενεργοποίηση προϊόντος στο Steam..."
 "Steam_RedeemWalletVoucher"	"Εξαργύρωση κωδικού Πορτοφολιού Steam…"
-"Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% εκκρεμούν)"
+"Steam_Wallet_PendingBalance" "%amount% (εκκρεμούν %amount_delayed%)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"Σας ανήκει ήδη το %subscription%."
 "Steam_UpdateNews_Title"	"Steam - Νέα"
@@ -1678,7 +1678,7 @@
 "SteamUI_SSA_Agree"				"Διαβάστε ολόκληρο το συμφωνητικό. Πρέπει να συμφωνείτε με τους όρους του Συμφωνητικού συνδρομητή του Steam για να συνεχίσετε."
 "SteamUI_SSA_CybercafeAgree"		"Είμαι ένας πιστοποιημένος χειριστής Cybercafe και συμφωνώ σε αυτούς τους όρους"
 "SteamUI_SSA_ActivateProduct"		"Για να ενεργοποιήσετε το προϊόν σας και να το προσθέσετε στη Συλλογή Steam σας, εισαγάγετε τον κωδικό προϊόντος που παρέχεται μαζί με CD/DVD λιανικής ή έναν άλλον κωδικό προϊόντος Steam εδώ. Κάντε κλικ στο κουμπί «Επόμενο» για να συνεχίσετε."
-"SteamUI_ActivateProductLockedDown"		"Ο λογαριασμός σας είναι αυτή τη στιγμή κλειδωμένος από εσάς ή από την Υποστήριξη Steam. Δεν μπορείτε να ενεργοποιήσετε νέα προϊόντα σε αυτόν τον λογαριασμό μέχρι να επιλυθεί το ζήτημα."
+"SteamUI_ActivateProductLockedDown"		"Ο λογαριασμός σας είναι αυτή τη στιγμή κλειδωμένος από εσάς ή από την Υποστήριξη Steam. Δεν μπορείτε να ενεργοποιήσετε νέα προϊόντα σε αυτόν τον λογαριασμό μέχρι να επιλυθεί το πρόβλημα."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Προβολή ενεργών ειδοποιήσεων από την Υποστήριξη Steam"
 
 "SteamUI_PPA_Agree"				"Παρακαλούμε διαβάστε το παρακάτω συμφωνητικό στο σύνολό του. Πρέπει να συμφωνείτε με τους όρους της πολιτικής απορρήτου της Valve για να συνεχίσετε."
@@ -4053,7 +4053,7 @@
 "Steam_Login_ErrorTitle"			"Steam - Σφάλμα"
 "Steam_Login_DisabledTitle"			"Steam - Επικοινωνήστε μαζί μας"
 "Steam_ErrorAccountDisabled"		"Η Υποστήριξη Steam έχει αναστείλει αυτό τον λογαριασμό.\n\nΟι λογαριασμοί συνήθως αναστέλλονται όταν έχει γίνει σύνδεση στον λογαριασμό από\nκάποιον άλλο ή μια διαφορά πληρωμής είναι σε εξέλιξη."
-"Steam_Login_ContactSupport"		"Επικοινωνήστε με την Υποστήριξη Steam για την επίλυση αυτού του ζητήματος."
+"Steam_Login_ContactSupport"		"Επικοινωνήστε με την Υποστήριξη Steam για την επίλυση αυτού του προβλήματος."
 "Steam_ErrorAccountIPLoginRestricted"		"Δεν είναι δυνατή ή πρόσβαση σε αυτόν το λογαριασμό από αυτή την τοποθεσία.\n"
 
 "steam_tradedialog_title"			"Ανταλλαγή"

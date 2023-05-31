@@ -58,11 +58,17 @@
  CFArrayCreateMutable
  CFArrayExchangeValuesAtIndices
  CFArrayGetCount
+ CFArrayGetTypeID
  CFArrayGetValueAtIndex
  CFDataGetBytePtr
+ CFDataGetLength
+ CFDataGetTypeID
  CFDictionaryCreate
+ CFDictionaryCreateMutable
+ CFDictionaryGetTypeID
  CFDictionaryGetValue
  CFDictionaryGetValueIfPresent
+ CFDictionarySetValue
  CFEqual
  CFGetTypeID
  CFNumberCreate
@@ -88,6 +94,7 @@
  CFStringGetMaximumSizeForEncoding
  CFStringGetSystemEncoding
  CFStringGetTypeID
+ CFStringHasPrefix
  CFURLCreateWithBytes
  CFUUIDGetConstantUUIDWithBytes
  CGAcquireDisplayFadeReservation
@@ -160,6 +167,7 @@
  IODisplayCreateInfoDictionary
  IOHIDDeviceClose
  IOHIDDeviceCopyMatchingElements
+ IOHIDDeviceCreate
  IOHIDDeviceGetProperty
  IOHIDDeviceGetReport
  IOHIDDeviceGetService
@@ -183,8 +191,8 @@
  IOHIDManagerCreate
  IOHIDManagerOpen
  IOHIDManagerRegisterDeviceMatchingCallback
- IOHIDManagerRegisterDeviceRemovalCallback
  IOHIDManagerScheduleWithRunLoop
+ IOHIDManagerSetDeviceMatching
  IOHIDManagerSetDeviceMatchingMultiple
  IOHIDManagerUnscheduleFromRunLoop
  IOHIDValueGetIntegerValue
@@ -202,8 +210,13 @@
  IOPSCopyPowerSourcesList
  IOPSGetPowerSourceDescription
  IORegistryEntryCreateCFProperties
+ IORegistryEntryCreateCFProperty
+ IORegistryEntryFromPath
  IORegistryEntryGetParentEntry
+ IORegistryEntryGetRegistryEntryID
+ IORegistryEntryIDMatching
  IOServiceAddMatchingNotification
+ IOServiceGetMatchingService
  IOServiceGetMatchingServices
  IOServiceMatching
  KBGetLayoutType
@@ -220,6 +233,7 @@
  NSLog
  NSMouseInRect
  NSPasteboardTypeString
+ NSPointInRect
  NSRectFill
  NSSearchPathForDirectoriesInDomains
  NSURLIsAliasFileKey
@@ -309,6 +323,7 @@
  T SDL_BlitSurfaceUncheckedScaled
  T SDL_BroadcastCondition
  T SDL_CaptureMouse
+ T SDL_CleanupTLS
  T SDL_ClearAudioStream
  T SDL_ClearComposition
  T SDL_ClearError
@@ -341,6 +356,7 @@
  T SDL_CreateSurface
  T SDL_CreateSurfaceFrom
  T SDL_CreateSystemCursor
+ T SDL_CreateTLS
  T SDL_CreateTexture
  T SDL_CreateTextureFromSurface
  T SDL_CreateThread
@@ -612,6 +628,7 @@
  T SDL_GetSurfaceColorMod
  T SDL_GetSystemRAM
  T SDL_GetSystemTheme
+ T SDL_GetTLS
  T SDL_GetTextureAlphaMod
  T SDL_GetTextureBlendMode
  T SDL_GetTextureColorMod
@@ -878,6 +895,7 @@
  T SDL_SetSurfaceColorMod
  T SDL_SetSurfacePalette
  T SDL_SetSurfaceRLE
+ T SDL_SetTLS
  T SDL_SetTextInputRect
  T SDL_SetTextureAlphaMod
  T SDL_SetTextureBlendMode
@@ -918,10 +936,6 @@
  T SDL_StopTextInput
  T SDL_SurfaceHasColorKey
  T SDL_SurfaceHasRLE
- T SDL_TLSCleanup
- T SDL_TLSCreate
- T SDL_TLSGet
- T SDL_TLSSet
  T SDL_TextInputActive
  T SDL_TextInputShown
  T SDL_ThreadID
@@ -1006,10 +1020,13 @@
  T SDL_hid_enumerate
  T SDL_hid_exit
  T SDL_hid_free_enumeration
+ T SDL_hid_get_device_info
  T SDL_hid_get_feature_report
  T SDL_hid_get_indexed_string
+ T SDL_hid_get_input_report
  T SDL_hid_get_manufacturer_string
  T SDL_hid_get_product_string
+ T SDL_hid_get_report_descriptor
  T SDL_hid_get_serial_number_string
  T SDL_hid_init
  T SDL_hid_open
@@ -1088,6 +1105,7 @@
  T SDL_strtoul
  T SDL_strtoull
  T SDL_strupr
+ T SDL_swprintf
  T SDL_tan
  T SDL_tanf
  T SDL_tolower
@@ -1103,6 +1121,7 @@
  T SDL_vasprintf
  T SDL_vsnprintf
  T SDL_vsscanf
+ T SDL_vswprintf
  T SDL_wcscasecmp
  T SDL_wcscmp
  T SDL_wcsdup
@@ -1112,6 +1131,7 @@
  T SDL_wcsncasecmp
  T SDL_wcsncmp
  T SDL_wcsstr
+ T SDL_wcstol
  TISCopyCurrentKeyboardLayoutInputSource
  TISGetInputSourceProperty
  UCKeyTranslate
@@ -1213,6 +1233,7 @@
  lround
  lroundf
  mach_absolute_time
+ mach_error_string
  mach_msg
  mach_timebase_info
  malloc
@@ -1323,6 +1344,8 @@
  strchr
  strcmp
  strdup
+ strerror
+ strerror$UNIX2003
  strlcat
  strlcpy
  strlen
@@ -1354,4 +1377,6 @@
  wcslen
  wcsncasecmp
  wcsncmp
+ wcsncpy
  wcsstr
+ wcstol

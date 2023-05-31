@@ -812,7 +812,7 @@
 	"SettingsDisplay_Brightness"				"Налаштувати яскравість"
 
 	// Settings, language
-	"SettingsLanguage_Intro"				"Оберіть бажану мову взаємодії зі Steam:"
+	"SettingsLanguage_Intro"				"Оберіть мову, яка використовуватиметься у Steam:"
 	"SettingsLanguage_Change_Title"			"Зміна мови"
 	"SettingsLanguage_Change_Description"	"Перезапустити Steam з цією мовою?"
 

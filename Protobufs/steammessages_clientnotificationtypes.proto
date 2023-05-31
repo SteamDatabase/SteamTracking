@@ -40,6 +40,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_TimedTrialRemaining = 35;
 	k_EClientNotificationType_LoginRefresh = 36;
 	k_EClientNotificationType_MajorSale = 37;
+	k_EClientNotificationType_TimerExpired = 38;
 }
 
 enum ESystemUpdateNotificationType {
@@ -197,4 +198,7 @@ message CClientNotificationTimedTrialRemaining {
 }
 
 message CClientNotificationLoginRefresh {
+}
+
+message CClientNotificationTimerExpired {
 }

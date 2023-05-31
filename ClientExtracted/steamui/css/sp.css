@@ -6476,6 +6476,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: row;
   margin: 10px 20px;
   gap: 20px;
+  font-weight: 400;
 }
 .gamelaunchingdialog_Layout_1ONMa .gamelaunchingdialog_LeftColumn_A9SsS {
   flex-shrink: 0;
@@ -6484,10 +6485,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   min-width: 0;
   overflow: hidden;
-  padding: 8px 0px 4px 0px;
+  padding: 8px 0px 20px 0px;
 }
 .gamelaunchingdialog_PortraitContainer_3_yzj {
   position: relative;
@@ -6500,7 +6501,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   margin-top: auto;
 }
 .gamelaunchingdialog_Launching_2Ylu2 {
-  font-size: 18px;
+  font-size: 16px;
 }
 .gamelaunchingdialog_GameName_20PFw {
   font-size: 28px;
@@ -6509,9 +6510,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  font-weight: 700;
 }
 .gamelaunchingdialog_StatusWrapper_2FC4Z {
   margin-top: 16px;
+}
+.gamelaunchingdialog_StatusWrapper_2FC4Z
+  .gamelaunchingdialog_StatusOverride_2GoT7 {
+  padding-left: 0px;
 }
 .menu_MenuWrapper_2Lu3d {
   height: fit-content;
@@ -8142,6 +8148,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   gap: 4px;
   align-items: center;
   justify-content: center;
+  font-size: 24pt;
 }
 .overlaytimer_OverlayTimer_2iKbt
   .overlaytimer_Remaining_1BfvG
@@ -8152,7 +8159,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .overlaytimer_OverlayTimer_2iKbt
   .overlaytimer_Remaining_1BfvG
   .overlaytimer_Seconds_2i6yY {
-  width: 35px;
+  width: 40px;
+  text-align: center;
 }
 .overlaytimer_OverlayTimer_2iKbt .overlaytimer_TimeButtons_3TJqF {
   display: flex;

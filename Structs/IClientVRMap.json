@@ -96,6 +96,10 @@
         {
             "name": "BServeTenfootOverlay",
             "argc": "1"
+        },
+        {
+            "name": "BSuppressDesktopBPM",
+            "argc": "1"
         }
     ]
 }

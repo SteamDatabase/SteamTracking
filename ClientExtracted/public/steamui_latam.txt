@@ -88,7 +88,7 @@
 "Steam_ErrorPasswordsDontMatch" "Las contraseñas introducidas no coinciden.\nIntroduce la misma contraseña en cada campo."
 "Steam_ErrorCantStartGame" "Este juego no está disponible en este momento.\nVuelve a intentarlo más tarde."
 "Steam_ErrorCantStartGameDetailed" "No se ha podido iniciar el juego (%error%)."
-"Steam_ErrorCantRunBecauseRequires64bitOS"	"No se ha podido iniciar el juego porque estás usando una versión de Windows de 32 bits y se requiere una versión de 64 bits.\n\nSi el juego tiene una opción de ejecución de 32 bits, seleccionala, si no, necesitarás un equipo con una versión de Windows de 64 bits.\nSi no tienes dicho equipo disponible haz clic abajo para saber cómo solicitar un rembolso.\n"
+"Steam_ErrorCantRunBecauseRequires64bitOS"	"No se pudo iniciar el juego porque estás usando una versión de Windows de 32 bits y se requiere una versión de 64 bits.\n\nSi el juego tiene una opción de ejecución de 32 bits, selecciónala, si no, necesitarás un equipo con una versión de Windows de 64 bits.\nSi no tienes dicho equipo disponible haz clic abajo para saber cómo solicitar un rembolso.\n"
 "Steam_ErrorCantStartGameDependency" "No se ha podido iniciar el juego con contenido compartido. Por favor, actualiza estos juegos primero:\n\n %detail%"
 "Steam_ErrorUsernameTooShort" "Debes introducir un nombre de 3 caracteres como mínimo."
 "Steam_ErrorPasswordTooShort2" "Tu contraseña debe contener al menos 8 caracteres."

@@ -2573,7 +2573,7 @@
     },
     16468: (e, t, a) => {
       "use strict";
-      a.d(t, { Bo: () => S, P4: () => E });
+      a.d(t, { Bo: () => v, P4: () => S });
       var n = a(33940),
         i = a(52868),
         l = a.n(i),
@@ -2596,14 +2596,13 @@
             ),
             (e.list_jsondata = {}));
       }
-      const h = "0";
-      function v(e, t) {
+      function h(e, t) {
         (t.localized_flat_title = (0, u.LG)([], 30, null)),
           (t.localized_flat_blurb = (0, u.LG)([], 30, null)),
           (t.localized_flat_link = (0, u.LG)([], 30, null)),
-          t.title !== h && (t.localized_flat_title[e] = t.title),
-          t.blurb !== h && (t.localized_flat_blurb[e] = t.blurb),
-          t.link !== h && (t.localized_flat_link[e] = t.link),
+          "0" !== t.title && (t.localized_flat_title[e] = t.title),
+          "0" !== t.blurb && (t.localized_flat_blurb[e] = t.blurb),
+          "0" !== t.link && (t.localized_flat_link[e] = t.link),
           t.title_localization.forEach((e) => {
             var a;
             (null === (a = e.localized_string) || void 0 === a
@@ -2626,7 +2625,7 @@
               (t.localized_flat_link[e.language] = e.localized_string);
           });
       }
-      class S {
+      class v {
         GetListDetails(e) {
           return this.m_mapList.get(e);
         }
@@ -2664,7 +2663,7 @@
                     "Wanted" + t + "but got" + (null == a ? void 0 : a.listid)
                   ),
                   g(a),
-                  v(o.data.curation_language, a),
+                  h(o.data.curation_language, a),
                   this.m_mapList.set(t, a),
                   this.m_mapListIDToClanAccount.set(t, e.GetAccountID()),
                   a
@@ -2754,7 +2753,7 @@
                             t.clan_account_id
                           ),
                             g(a),
-                            v(t.curation_language, a),
+                            h(t.curation_language, a),
                             this.m_mapList.set(a.listid, a),
                             e.push(a);
                         });
@@ -2772,7 +2771,7 @@
           });
         }
         static Get() {
-          return S.s_Singleton || (S.s_Singleton = new S()), S.s_Singleton;
+          return v.s_Singleton || (v.s_Singleton = new v()), v.s_Singleton;
         }
         constructor() {
           (this.m_mapList = new Map()),
@@ -2791,7 +2790,7 @@
                 e.forEach((e) => {
                   e.multi_detail_lists.forEach((t) => {
                     g(t),
-                      v(e.curation_language, t),
+                      h(e.curation_language, t),
                       this.m_mapList.set(t.listid, t);
                   });
                 });
@@ -2812,7 +2811,7 @@
             : t && Array.isArray(t) && 0 == t.length;
         }
       }
-      function E(e) {
+      function S(e) {
         const t = e && c.sV.GetClanInfoByClanAccountID(e),
           [a, n] = (0, o.useState)(!!t);
         return (
@@ -2827,7 +2826,7 @@
           t
         );
       }
-      (0, n.gn)([r.LO], S.prototype, "m_mapList", void 0);
+      (0, n.gn)([r.LO], v.prototype, "m_mapList", void 0);
     },
     82588: (e, t, a) => {
       "use strict";
@@ -4432,7 +4431,7 @@
       a.d(t, { oZ: () => I, sE: () => D });
       var n = a(89526),
         i = a(44026),
-        l = a(90699),
+        l = a(51438),
         r = a(74831),
         o = a(54671),
         s = a(25871),
@@ -4777,7 +4776,7 @@
         s = a(89526),
         c = a(46132),
         d = a(62983),
-        u = a(90699),
+        u = a(51438),
         m = a(16221),
         _ = a(81245),
         p = a(47165),
@@ -5213,7 +5212,7 @@
         s = a(25125),
         c = a(89526),
         d = a(46132),
-        u = a(86283),
+        u = a(67727),
         m = a(52102),
         _ = a(81245),
         p = a(54671),
@@ -6752,7 +6751,7 @@
         l = a(4306),
         r = a(73807),
         o = a.n(r),
-        s = a(90699);
+        s = a(51438);
       class c extends i.Component {
         constructor() {
           super(...arguments),
@@ -6838,7 +6837,7 @@
         l = a(88464),
         r = a(89526),
         o = a(46132),
-        s = a(86283),
+        s = a(67727),
         c = a(69678),
         d = a(17974),
         u = a(97334),
@@ -8206,7 +8205,7 @@
         tT: () => B,
       });
       var n = a(89526),
-        i = a(90699),
+        i = a(51438),
         l = a(16221),
         r = a(81245),
         o = a(56368),
@@ -9090,7 +9089,7 @@
       var n = a(89526),
         i = a(66615),
         l = a(32765),
-        r = a(90699),
+        r = a(51438),
         o = a(98009),
         s = a(87108),
         c = a(76315),
@@ -10003,7 +10002,7 @@
       var n = a(89526),
         i = a(62983),
         l = a(44026),
-        r = a(90699),
+        r = a(51438),
         o = a(16221),
         s = a(98009),
         c = a(54671),
@@ -10034,14 +10033,23 @@
             elElementToAppendToHover: c,
             index: p,
             navKey: g,
+            bHideStoreHover: v,
           } = e,
-          [v, S] = n.useState(!1),
-          [b] = (0, u.jk)(t.id, (0, d.TM)(t.type), i.bk),
-          [C] = (0, u.vs)(a && (null == b ? void 0 : b.GetParentAppID()), i.bk),
-          A = (0, T.bJ)(),
-          G = (0, w.id)();
-        if (!b) return null;
-        const M = Boolean(C);
+          [S, b] = n.useState(!1),
+          [C] = (0, u.jk)(t.id, (0, d.TM)(t.type), i.bk),
+          [A] = (0, u.vs)(a && (null == C ? void 0 : C.GetParentAppID()), i.bk),
+          G = (0, T.bJ)(),
+          M = (0, w.id)();
+        if (!C) return null;
+        const L = Boolean(A),
+          B = n.createElement(
+            k,
+            Object.assign({}, e, {
+              info: t,
+              bIsHovered: S,
+              bHasParentAppToDisplay: L,
+            })
+          );
         return n.createElement(
           r.s,
           {
@@ -10054,47 +10062,43 @@
           },
           n.createElement(
             f.zw,
-            { appid: b.GetAppID() },
-            n.createElement(
-              _.ll,
-              {
-                className: h().CapsuleContainer,
-                item: t,
-                elElementToAppend: e.elElementToAppendToHover,
-                bShowDemoButton: e.bShowDemoButton,
-                bShowDeckCompatibilityDialog: e.bShowDeckCompatibilityDialog,
-                bHidePrice: e.bHidePrice,
-                bUseSubscriptionLayout: e.bUseSubscriptionLayout,
-                strExtraParams: e.strExtraParams,
-                fnOnHoverStateChange: !G && S,
-                nCreatorAccountID: e.creatorAccountID,
-              },
-              n.createElement(
-                k,
-                Object.assign({}, e, {
-                  info: t,
-                  bIsHovered: v,
-                  bHasParentAppToDisplay: M,
-                })
-              )
-            ),
+            { appid: C.GetAppID() },
+            Boolean(v)
+              ? n.createElement(n.Fragment, null, B)
+              : n.createElement(
+                  _.ll,
+                  {
+                    className: h().CapsuleContainer,
+                    item: t,
+                    elElementToAppend: e.elElementToAppendToHover,
+                    bShowDemoButton: e.bShowDemoButton,
+                    bShowDeckCompatibilityDialog:
+                      e.bShowDeckCompatibilityDialog,
+                    bHidePrice: e.bHidePrice,
+                    bUseSubscriptionLayout: e.bUseSubscriptionLayout,
+                    strExtraParams: e.strExtraParams,
+                    fnOnHoverStateChange: !M && b,
+                    nCreatorAccountID: e.creatorAccountID,
+                  },
+                  B
+                ),
             Boolean(c) && n.createElement("div", null, c)
           ),
-          M &&
+          L &&
             n.createElement(
               l.Ks,
               Object.assign(
                 { className: h().CapsuleParentInfo },
-                (0, E.h)(C, A, G, e.strExtraParams)
+                (0, E.h)(A, G, M, e.strExtraParams)
               ),
               n.createElement(
                 f.zw,
-                { appid: C.GetAppID() },
+                { appid: A.GetAppID() },
                 n.createElement(
                   "div",
                   { className: h().ParentType },
                   (0, D.Xx)(
-                    11 == b.GetAppType()
+                    11 == C.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC"
                   )
@@ -10103,7 +10107,7 @@
                   y._,
                   {
                     type: "app",
-                    id: C.GetAppID(),
+                    id: A.GetAppID(),
                     strExtraParams: e.strExtraParams,
                   },
                   n.createElement(
@@ -10112,8 +10116,8 @@
                       {
                         loading: "lazy",
                         className: m.AppCapsuleImage,
-                        alt: C.GetName(),
-                        src: C.GetAssets().GetSmallCapsuleURL(),
+                        alt: A.GetName(),
+                        src: A.GetAssets().GetSmallCapsuleURL(),
                       },
                       (0, i.fn)()
                     )
@@ -10383,7 +10387,7 @@
       a.d(t, { Y3: () => C, em: () => I, fm: () => A, w4: () => x });
       var n = a(25125),
         i = a(89526),
-        l = a(90699),
+        l = a(51438),
         r = a(1063),
         o = a(54671),
         s = a(651),
@@ -10697,7 +10701,7 @@
         l = a.n(i),
         r = a(89526),
         o = a(46132),
-        s = a(86283),
+        s = a(67727),
         c = a(97334),
         d = a(57605),
         u = a(17318),
@@ -11080,7 +11084,7 @@
       "use strict";
       a.d(t, { S: () => h });
       var n = a(89526),
-        i = a(90699),
+        i = a(51438),
         l = a(96164),
         r = a.n(l),
         o = a(701),
@@ -11261,7 +11265,7 @@
         i = a(89526),
         l = a(5615),
         r = a(44026),
-        o = a(90699),
+        o = a(51438),
         s = a(50355),
         c = a(88464),
         d = a(14826),
@@ -12039,7 +12043,7 @@
         i = a(25125),
         l = a(89526),
         r = a(36262),
-        o = a(90699),
+        o = a(51438),
         s = a(95501),
         c = a(54671),
         d = a(43707),
@@ -14083,7 +14087,7 @@
       a.d(t, { C: () => c, i: () => d });
       var n = a(33940),
         i = a(46132),
-        l = a(86283),
+        l = a(67727),
         r = a(11837),
         o = a(15254),
         s = a(14826);
@@ -14823,7 +14827,7 @@
         }
         SetButtonDestinationStoreURL(e) {
           if (m.IsValidStoreURL(e)) {
-            let t = e.substr("https://store.steampowered.com/".length);
+            let t = e.substr(31);
             t != this.m_section.button_store_path &&
               ((this.m_section.button_store_path = t),
               this.m_editModel.SetDirty(c.jB.jsondata_email));
@@ -14916,7 +14920,7 @@
         s = a(13394),
         c = a(50265),
         d = a(46132),
-        u = a(86283),
+        u = a(67727),
         m = a(53215),
         _ = a(81245),
         p = a(47165),
@@ -16476,7 +16480,7 @@
         l = a(91920),
         r = a(46616),
         o = a(50265),
-        s = a(86283),
+        s = a(67727),
         c = a(98210),
         d = a(43707),
         u = a(85886),
@@ -18392,7 +18396,7 @@
         l = a(89526),
         r = a(28542),
         o = a(46132),
-        s = a(86283),
+        s = a(67727),
         c = a(1063),
         d = a(2647),
         u = a(57742),
@@ -22517,7 +22521,7 @@
         E = a(17318),
         f = a.n(E),
         b = a(25125),
-        y = a(90699),
+        y = a(51438),
         C = a(19304),
         T = a(32765),
         I = a(87178),
@@ -23753,7 +23757,7 @@
             });
       });
       var V = a(20790),
-        Z = a(86283),
+        Z = a(67727),
         W = a(82079),
         q = a(74831);
       class Q {

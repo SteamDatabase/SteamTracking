@@ -1817,8 +1817,8 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"Library_Details_IncorrectVRPlayAreaWarning_NotEnoughRoom"		"Ihr Spielbereich erfüllt nicht die Spielbereichanforderungen für dieses Spiel. Sie können eventuell nicht spielen."
 	"Library_Details_IncorrectVRPlayAreaWarning_RoomSetup"			"RAUMVERMESSUNG AUSFÜHREN"
 
-	"Library_Details_WorkshopWhatIsIt"	"Erstellen, entdecken und spielen Sie von der Steam Community erstellte Inhalte ({d:wscount} Objekte)."
-	"Library_Details_CommunityHubWhatIsIt"	"Von der Community erstellte Inhalte ({d:ugccount} Objekte)."
+	"Library_Details_WorkshopWhatIsIt"	"Erstellen, entdecken und spielen Sie von der Steam Community erstellte Inhalte: {d:wscount}"
+	"Library_Details_CommunityHubWhatIsIt"	"Von der Community erstellte Inhalte ({d:ugccount})."
 	"Library_Details_ControllerSupport"	"CONTROLLER"
 	"Library_Details_FullController"	"Controllerunterstützung"
 	"Library_Details_PartialController"	"Unterstützung für klassische Steuerung"

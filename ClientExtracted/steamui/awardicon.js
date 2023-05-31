@@ -15,7 +15,7 @@
       "use strict";
       t.r(e), t.d(e, { AwardIcon: () => u, AwardIconList: () => l });
       var o = t(67294),
-        a = (t(81235), t(52436)),
+        a = t(52436),
         r = t(76023),
         c = t(20111),
         i = t.n(c),

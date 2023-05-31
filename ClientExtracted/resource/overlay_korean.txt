@@ -118,7 +118,7 @@
 "steam_menu_friends_add"					 "친구 추가..."
 "steam_menu_friends_settings"      "설정"
 
-"friends_searchOnline"				 "Steam 커뮤니티 회원 검색"
+"friends_searchOnline"				 "Steam 커뮤니티 멤버 검색"
 
 "Overlay_LowBattery_Message"	"배터리 잔량이 %batteryTime%분 남았습니다."
 

@@ -577,14 +577,14 @@ StoreAddFundsMicroTxnPage
 
 StoreAddCachedPmtMethodPage
 {
-	url			"%store%/checkout/?purchasetype=updatebillinginfo&microtxn=%p1%"
+	url			"%checkout%/checkout/?purchasetype=updatebillinginfo&microtxn=%p1%"
 	method		"internal"
 	filter		"store"
 }
 
 StoreWebMicroTxnPage
 {
-	url			"%store%/checkout/approvetxn/%p1%/?returnurl=steam"
+	url			"%checkout%/checkout/approvetxn/%p1%/?returnurl=steam"
 	method		"internal"
 	filter		"store"
 }

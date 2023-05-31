@@ -210,8 +210,8 @@
 "Overlay_Delete_Screenshot_Error" "Beim Löschen des Screenshots ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
 "Overlay_Tag_As_Potential_Spoiler" "Als Spoiler markieren"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Juristische Vereinbarung für den Steam Workshop"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Sie müssen die aktuelle juristische Vereinbarung für den Steam Workshop akzeptieren, bevor Ihr Objekt vollständig veröffentlicht werden kann."
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "Objekt anzeigen"
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Sie müssen die aktuelle juristische Vereinbarung für den Steam Workshop akzeptieren, bevor Ihr Inhalt vollständig veröffentlicht werden kann."
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "Inhalt anzeigen"
 
 "Overlay_Share"						"Auf Facebook teilen"
 "Overlay_ToBeSharedToFacebook"		"Wenn dieser Screenshot über Facebook geteilt wird, wird er für jeden sichtbar sein."

@@ -229,7 +229,7 @@
 
 "Friends_Chat_ToggleAvatars"			"Εμφάνιση εικόνων"
 "Friends_Chat_ToggleBeeps"            "Αναπαραγωγή ήχου όταν χρήστες στέλνουν μηνύματα"
-"Friends_Chat_ToggleTimestamp"        "Εμφάνιση χρονοσφραγίδας σε κάθε μήνυμα"
+"Friends_Chat_ToggleTimestamp"        "Εμφάνιση χρονικής σήμανσης σε κάθε μήνυμα"
 
 "Friends_Chat_ManageBanList"			"Διαχείριση λίστας αποκλεισμένων"
 "Friends_Chat_LockRoom"				"Κλείδωμα δωματίου συνομιλίας (μετατροπή σε ιδιωτικό)"
@@ -370,7 +370,7 @@
 "Friends_Nickname"					"Όνομα προφίλ"
 "Friends_Avatar"						"Άβαταρ"
 "Friends_AutoSignIntoFriendsOnStartup"	"Αυτόματη είσοδος στους φίλους με την εκκίνηση του Steam"
-"Friends_ShowTimeInChatLog"	"Εμφάνιση χρονοσφραγίδας στη συνομιλία"
+"Friends_ShowTimeInChatLog"	"Εμφάνιση χρονικής σήμανσης στη συνομιλία"
 "Friends_AlwaysNewChatCheck" "Πάντα άνοιγμα νέου παραθύρου συνομιλίας αντί για μια καρτέλα"
 "Friends_NotificationsAndSounds"		"Ειδοποιήσεις και ήχοι"
 "Friends_WhenFriendJoinsGame"			"Όταν κάποιος φίλος συνδέεται σε παιχνίδι"

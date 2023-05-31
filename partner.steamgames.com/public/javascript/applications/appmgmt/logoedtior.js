@@ -1346,7 +1346,7 @@
         M = o.n(D),
         H = o(53738),
         U = o.n(H),
-        G = o(701);
+        G = o(28106);
       function F() {
         return a.createElement(
           a.Fragment,

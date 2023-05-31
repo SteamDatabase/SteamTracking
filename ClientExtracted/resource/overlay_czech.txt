@@ -254,12 +254,12 @@
 "Overlay_Broadcast_Chat_Title" "Přenos – konverzace (%numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kb/s, %videosendfps% FPS"
 
-"SteamChina_Overlay_DurationControl_MessageA"		"You've been playing for one hour."
-"SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."
-"SteamChina_Overlay_DurationControl_MessageC"		"You've been playing for over three hours.\nYour XP / progress has been reduced by half."
-"SteamChina_Overlay_DurationControl_MessageD"		"You've been playing for over five hours.\nYour XP / progress has been reduced to zero."
-"SteamChina_Overlay_DurationControl_ExitSoon_3h"	"You have reached your limit of online time for today.\nPlease take a break and try tomorrow after 8AM."
-"SteamChina_Overlay_DurationControl_ExitSoon_5h"	"You have reached your limit of online time for today.\nPlease take a break and try tomorrow after 8AM."
-"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Players under 18 can't play this game between 10PM\nand 8AM the following day. Please take a break."
+"SteamChina_Overlay_DurationControl_MessageA"		"Hrajete už 1 hodinu."
+"SteamChina_Overlay_DurationControl_MessageB"		"Hrajete už 3 hodiny.\nNechtěli byste si odpočinout?"
+"SteamChina_Overlay_DurationControl_MessageC"		"Hrajete už více než 3 hodiny.\nVámi získávané zkušenosti (příp. postup) byly sníženy na polovinu běžné hodnoty."
+"SteamChina_Overlay_DurationControl_MessageD"		"Hrajete už více než 5 hodin.\nVámi získávané zkušenosti (příp. postup) byly sníženy na nulu."
+"SteamChina_Overlay_DurationControl_ExitSoon_3h"	"Pro dnešek už Váš čas strávený online dosáhl povoleného limitu.\nOdpočiňte si a vraťte se zítra po 8.00."
+"SteamChina_Overlay_DurationControl_ExitSoon_5h"	"Pro dnešek už Váš čas strávený online dosáhl povoleného limitu.\nOdpočiňte si a vraťte se zítra po 8.00."
+"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Hráči mladší 18 let nemohou hrát tuto hru mezi 22.00\na 8.00 následujícího dne. Odpočiňte si, prosím."
 }
 }  

@@ -1318,7 +1318,7 @@ Tämä kestää alle minuutin."
 "Steam_Storefront_Title"	"Steam - Selaa pelejä"
 "Steam_RegisterProductCode"	"Aktivoi tuote Steamissä..."
 "Steam_RedeemWalletVoucher"	"Lunasta Steam-lompakkokoodi..."
-"Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% vireillä)"
+"Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% odottaa)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"Omistat jo pelin %subscription%."
 "Steam_UpdateNews_Title"	"Steam - Uutiset"

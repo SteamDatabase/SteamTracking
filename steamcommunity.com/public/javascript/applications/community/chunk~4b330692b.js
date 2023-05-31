@@ -53,14 +53,14 @@
     },
     60588: (e, t, a) => {
       "use strict";
-      a.d(t, { ZP: () => J });
+      a.d(t, { ZP: () => K });
       var n = a(33940),
         r = a(52868),
         o = a.n(r),
         l = a(88464),
         s = a(89526),
         i = a(44026),
-        c = a(90699),
+        c = a(51438),
         d = a(34329),
         m = a(19094),
         u = a(38072),
@@ -188,19 +188,18 @@
         A = a(4306),
         R = a(15705),
         M = a(36041);
-      const x = 200;
-      var S;
-      function N(e) {
+      var x;
+      function S(e) {
         switch (e) {
-          case S.Gold:
-          case S.LNY2020:
+          case x.Gold:
+          case x.LNY2020:
             return `hsl(${51 + -16 * Math.random()}, 93%, 54%)`;
           default:
             return `hsl(${360 * Math.random()}, 100%, 40%)`;
         }
       }
-      function G(e) {
-        return e == S.LNY2020
+      function N(e) {
+        return e == x.LNY2020
           ? `hue-rotate(${360 + (0, M.LO)(-30, 10)}deg)`
           : "";
       }
@@ -208,8 +207,8 @@
         (e[(e.Default = 0)] = "Default"),
           (e[(e.Gold = 1)] = "Gold"),
           (e[(e.LNY2020 = 2)] = "LNY2020");
-      })(S || (S = {}));
-      const T = (e, t) => {
+      })(x || (x = {}));
+      const G = (e, t) => {
           const { anim: a } = (0, R.q_)({
               anim: 1,
               from: { anim: 0 },
@@ -220,7 +219,7 @@
                   const a = [];
                   if (!e) return a;
                   const { width: n, height: r } = e;
-                  for (let e = 0; e < x; e++) {
+                  for (let e = 0; e < 200; e++) {
                     const e = Math.random(),
                       o = Math.random() * e,
                       l = Math.random() * o,
@@ -230,12 +229,12 @@
                         Math.random() * r - r - 20,
                         r + 20 + Math.random() * r * i,
                       ],
-                      d = i * (n <= 1e3 ? 1 : n / 1e3) * (t == S.Gold ? 2 : 1),
+                      d = i * (n <= 1e3 ? 1 : n / 1e3) * (t == x.Gold ? 2 : 1),
                       m = (Math.random() - 0.5) * n,
                       u = (Math.random() - 0.5) * n,
                       h = [u, m + u],
-                      g = N(t),
-                      w = G(t);
+                      g = S(t),
+                      w = N(t);
                     a.push({
                       rotationCoefficient: s,
                       rotationRatioY: o,
@@ -252,7 +251,7 @@
                 })(e, t),
                 r = n.map((e) =>
                   (function (e, t, a) {
-                    S.Default;
+                    x.Default;
                     const {
                       rotationCoefficient: n,
                       rotationRatioY: r,
@@ -314,15 +313,15 @@
             }, [e, t, a]);
           return n;
         },
-        O = { position: "absolute", left: "50%", top: 0 },
-        B = Object.assign(Object.assign({}, O), {
+        T = { position: "absolute", left: "50%", top: 0 },
+        O = Object.assign(Object.assign({}, T), {
           width: 10,
           height: 5,
           borderWidth: 1,
           borderColor: "black",
         }),
-        I = ({ eType: e }) => {
-          S.Gold, S.LNY2020;
+        B = ({ eType: e }) => {
+          x.Gold, x.LNY2020;
           const [t, a] = (function () {
             const [e, t] = (0, s.useState)(null),
               a = (0, s.useCallback)((e) => {
@@ -333,20 +332,20 @@
             return [e, a];
           })();
           let n,
-            { rgParticleStyles: r, rgStreamerStyles: o } = T(t, e);
+            { rgParticleStyles: r, rgStreamerStyles: o } = G(t, e);
           switch (e) {
-            case S.Gold:
-              n = r.map((e, t) => s.createElement(P, { key: t, style: e }));
+            case x.Gold:
+              n = r.map((e, t) => s.createElement(k, { key: t, style: e }));
               break;
-            case S.LNY2020:
+            case x.LNY2020:
               n = r.map((e, t) =>
                 t % 2
-                  ? s.createElement(k, { key: t, style: e })
-                  : s.createElement(D, { key: t, style: e })
+                  ? s.createElement(I, { key: t, style: e })
+                  : s.createElement(P, { key: t, style: e })
               );
               break;
-            case S.Default:
-              n = r.map((e, t) => s.createElement(k, { key: t, style: e }));
+            case x.Default:
+              n = r.map((e, t) => s.createElement(I, { key: t, style: e }));
           }
           return s.createElement(
             "div",
@@ -364,34 +363,34 @@
             n,
             o.map((e, t) =>
               e.flRandom > 0.5
-                ? s.createElement(F, { key: t, style: e })
-                : s.createElement(Z, { key: t, style: e })
+                ? s.createElement(Z, { key: t, style: e })
+                : s.createElement(D, { key: t, style: e })
             )
           );
         },
-        k = ({ style: e }) =>
+        I = ({ style: e }) =>
           s.createElement(R.q.div, {
-            style: Object.assign(Object.assign({}, B), e),
+            style: Object.assign(Object.assign({}, O), e),
           }),
+        k = ({ style: e }) => {
+          const [t] = (0, s.useState)(Math.floor(Math.random() * F.length)),
+            a = F[t];
+          return s.createElement(a, {
+            style: Object.assign(Object.assign(Object.assign({}, T), e), {
+              backgroundColor: void 0,
+            }),
+          });
+        },
         P = ({ style: e }) => {
           const [t] = (0, s.useState)(Math.floor(Math.random() * j.length)),
             a = j[t];
           return s.createElement(a, {
-            style: Object.assign(Object.assign(Object.assign({}, O), e), {
+            style: Object.assign(Object.assign(Object.assign({}, T), e), {
               backgroundColor: void 0,
             }),
           });
         },
-        D = ({ style: e }) => {
-          const [t] = (0, s.useState)(Math.floor(Math.random() * X.length)),
-            a = X[t];
-          return s.createElement(a, {
-            style: Object.assign(Object.assign(Object.assign({}, O), e), {
-              backgroundColor: void 0,
-            }),
-          });
-        },
-        Z = ({ style: e }) =>
+        D = ({ style: e }) =>
           s.createElement(
             R.q.svg,
             {
@@ -407,7 +406,7 @@
               fill: e.fill,
             })
           ),
-        F = ({ style: e }) =>
+        Z = ({ style: e }) =>
           s.createElement(
             R.q.svg,
             {
@@ -423,7 +422,7 @@
               fill: e.fill,
             })
           ),
-        j = [
+        F = [
           ({ style: e }) =>
             s.createElement(
               R.q.svg,
@@ -573,7 +572,7 @@
               })
             ),
         ],
-        X = [
+        j = [
           ({ style: e }) =>
             s.createElement(
               R.q.svg,
@@ -624,28 +623,28 @@
               })
             ),
         ];
-      var H = a(83965);
-      function $(e) {
+      var X = a(83965);
+      function H(e) {
         return (0, b.Xx)(`#RewardsReaction_${e}`);
       }
-      var U = a(23814);
-      const q = (e) => {
+      var $ = a(23814);
+      const U = (e) => {
         const { className: t } = e,
           a = (0, n._T)(e, ["className"]);
         return s.createElement(
           i.wl,
-          Object.assign({ className: (0, L.Z)(t, U.UnstyledButton) }, a)
+          Object.assign({ className: (0, L.Z)(t, $.UnstyledButton) }, a)
         );
       };
-      var z, V, Y;
+      var q, z, V;
       !(function (e) {
         (e[(e.SELECTING = 0)] = "SELECTING"),
           (e[(e.CONFIRM = 1)] = "CONFIRM"),
           (e[(e.SUBMITTING = 2)] = "SUBMITTING"),
           (e[(e.DONE = 3)] = "DONE"),
           (e[(e.ERROR = 4)] = "ERROR");
-      })(Y || (Y = {}));
-      const Q = (e) =>
+      })(V || (V = {}));
+      const Y = (e) =>
         s.createElement(
           "svg",
           Object.assign(
@@ -663,7 +662,7 @@
             d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
           })
         );
-      class W extends s.PureComponent {
+      class Q extends s.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -691,9 +690,9 @@
           });
         }
       }
-      (0, n.gn)([A.ak], W.prototype, "handleMouseOver", null),
-        (0, n.gn)([A.ak], W.prototype, "handleMouseOut", null);
-      let K = (z = class extends s.Component {
+      (0, n.gn)([A.ak], Q.prototype, "handleMouseOver", null),
+        (0, n.gn)([A.ak], Q.prototype, "handleMouseOut", null);
+      let W = (q = class extends s.Component {
         constructor(e) {
           super(e),
             (window.fnLoyalty_ShowAwardModal = (t, a, n, r, o) => {
@@ -712,8 +711,8 @@
         }
         Init(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            if (z.s_LoyaltyAwardModalStore) return;
-            if (e) return void (z.s_LoyaltyAwardModalStore = new E(e));
+            if (q.s_LoyaltyAwardModalStore) return;
+            if (e) return void (q.s_LoyaltyAwardModalStore = new E(e));
             const t = (0, C.kQ)("loyaltystore", "application_config"),
               a = yield (function () {
                 return (0, n.mG)(this, void 0, void 0, function* () {
@@ -740,7 +739,7 @@
               })(),
               r = Object.assign(Object.assign({}, t), a),
               l = new m.J(C.De.WEBAPI_BASE_URL, r.webapi_token);
-            (z.s_LoyaltyAwardModalStore = new E(l.GetServiceTransport())),
+            (q.s_LoyaltyAwardModalStore = new E(l.GetServiceTransport())),
               this.setState({ bLoading: !1 });
           });
         }
@@ -754,30 +753,30 @@
               ugcType: o,
               initialSelectedReaction: l,
             } = this.state,
-            i = z.s_LoyaltyAwardModalStore;
+            i = q.s_LoyaltyAwardModalStore;
           if (!t) return null;
           if (e)
             return s.createElement(
               f.On,
               {
-                className: H.GrantAwardModal,
+                className: X.GrantAwardModal,
                 active: !0,
                 onDismiss: () => this.setState({ bShowModal: !1 }),
               },
-              s.createElement(ae, null),
-              s.createElement(re, null),
+              s.createElement(te, null),
+              s.createElement(ne, null),
               s.createElement(
                 "div",
-                { className: H.InitialLoading },
+                { className: X.InitialLoading },
                 s.createElement(
                   "div",
-                  { className: (0, L.Z)(H.LoadingContainer, H.Visible) },
-                  s.createElement(le, null)
+                  { className: (0, L.Z)(X.LoadingContainer, X.Visible) },
+                  s.createElement(oe, null)
                 )
               )
             );
           i.GetAwardConfigurations();
-          return s.createElement(te, {
+          return s.createElement(ee, {
             key: r,
             targetid: r,
             active: t,
@@ -785,14 +784,14 @@
             ugcType: o,
             onDismiss: () => this.setState({ bShowModal: !1 }),
             onSuccess: n,
-            store: z.s_LoyaltyAwardModalStore,
+            store: q.s_LoyaltyAwardModalStore,
             initialSelectedReaction: l,
           });
         }
       });
-      (K.defaultProps = { targetType: 1 }), (K = z = (0, n.gn)([l.Pi], K));
-      const J = K;
-      let ee = (V = class extends s.Component {
+      (W.defaultProps = { targetType: 1 }), (W = q = (0, n.gn)([l.Pi], W));
+      const K = W;
+      let J = (z = class extends s.Component {
         static Initialize(e) {
           null === this.s_LoyaltyAwardModalStore &&
             (this.s_LoyaltyAwardModalStore = new E(e.GetServiceTransport()));
@@ -809,11 +808,11 @@
               initialSelectedReaction: r,
               onDismiss: o,
             } = this.props,
-            l = V.s_LoyaltyAwardModalStore;
+            l = z.s_LoyaltyAwardModalStore;
           if (null === l)
             return console.log("Store not initialized yet."), null;
           l.GetAwardConfigurations();
-          return s.createElement(te, {
+          return s.createElement(ee, {
             key: t,
             targetid: t,
             active: a,
@@ -821,19 +820,19 @@
             ugcType: n,
             onDismiss: o,
             onSuccess: o,
-            store: V.s_LoyaltyAwardModalStore,
+            store: z.s_LoyaltyAwardModalStore,
             initialSelectedReaction: r,
           });
         }
       });
-      (ee.s_LoyaltyAwardModalStore = null), (ee = V = (0, n.gn)([l.Pi], ee));
-      let te = class extends s.Component {
+      (J.s_LoyaltyAwardModalStore = null), (J = z = (0, n.gn)([l.Pi], J));
+      let ee = class extends s.Component {
         constructor(e) {
           super(e),
             e.store.SetTarget(e.targetid, e.targetType),
             (this.state = {
               selectedReaction: e.initialSelectedReaction || 0,
-              ePhase: Y.SELECTING,
+              ePhase: V.SELECTING,
             });
         }
         render() {
@@ -890,14 +889,14 @@
               v = (0, b.Xx)("#GrantAwardDescription_Comment");
           }
           switch (l) {
-            case Y.SELECTING:
+            case V.SELECTING:
               {
                 const e = 0 === o || m.get(o),
                   t = !h || h.greaterThanOrEqual(p),
                   a = s.createElement(
                     _.KM,
                     {
-                      onClick: () => this.setState({ ePhase: Y.CONFIRM }),
+                      onClick: () => this.setState({ ePhase: V.CONFIRM }),
                       disabled: e,
                       focusable: !e,
                       title: (0, b.Xx)(
@@ -913,27 +912,27 @@
                 y = s.createElement(
                   s.Fragment,
                   null,
-                  s.createElement(ae, { description: v }),
-                  s.createElement(re, null),
+                  s.createElement(te, { description: v }),
+                  s.createElement(ne, null),
                   0 === g.length &&
                     s.createElement(
                       "div",
-                      { className: H.InitialLoading },
+                      { className: X.InitialLoading },
                       s.createElement(
                         "div",
-                        { className: (0, L.Z)(H.LoadingContainer, H.Visible) },
-                        s.createElement(le, null)
+                        { className: (0, L.Z)(X.LoadingContainer, X.Visible) },
+                        s.createElement(oe, null)
                       )
                     ),
                   s.createElement(
                     d.P8,
                     {
-                      className: H.ButtonContainer,
+                      className: X.ButtonContainer,
                       scrollDirection: "y",
                       "flow-children": "grid",
                     },
                     g.map((e, t) =>
-                      s.createElement(oe, {
+                      s.createElement(re, {
                         autoFocus: 0 == t,
                         key: e,
                         reaction: e,
@@ -949,16 +948,16 @@
                       })
                     )
                   ),
-                  s.createElement(re, null),
+                  s.createElement(ne, null),
                   s.createElement(
-                    ne,
+                    ae,
                     { store: n },
                     e || t
                       ? a
                       : [
                           s.createElement(
                             "div",
-                            { key: "msg", className: H.NotEnoughPoints },
+                            { key: "msg", className: X.NotEnoughPoints },
                             (0, b.Xx)(
                               "#GrantAward_CantAfford",
                               h.negate().add(p).toNumber().toLocaleString()
@@ -981,14 +980,14 @@
                 );
               }
               break;
-            case Y.CONFIRM:
-            case Y.SUBMITTING:
-            case Y.DONE:
+            case V.CONFIRM:
+            case V.SUBMITTING:
+            case V.DONE:
               y = s.createElement(
                 s.Fragment,
                 null,
-                s.createElement(ae, { description: v }),
-                s.createElement(re, null),
+                s.createElement(te, { description: v }),
+                s.createElement(ne, null),
                 s.createElement(
                   "div",
                   { style: { position: "relative" } },
@@ -996,39 +995,39 @@
                     "div",
                     {
                       className: (0, L.Z)(
-                        H.ConfirmContainer,
-                        l === Y.CONFIRM && H.Visible
+                        X.ConfirmContainer,
+                        l === V.CONFIRM && X.Visible
                       ),
                     },
-                    s.createElement(W, {
-                      className: H.ConfirmAwardImage,
+                    s.createElement(Q, {
+                      className: X.ConfirmAwardImage,
                       reactionType: o,
                     }),
                     s.createElement(
                       "div",
-                      { className: H.ConfirmTextCtn },
+                      { className: X.ConfirmTextCtn },
                       s.createElement(
                         "div",
-                        { className: H.ConfirmText },
+                        { className: X.ConfirmText },
                         (0, b.kQ)(
                           "#GrantAward_Confirm",
-                          s.createElement(se, null, p.toLocaleString()),
+                          s.createElement(le, null, p.toLocaleString()),
                           s.createElement(
                             "span",
-                            { className: H.AwardName },
-                            $(o)
+                            { className: X.AwardName },
+                            H(o)
                           )
                         )
                       ),
                       s.createElement(
                         "div",
-                        { className: H.ConfirmText },
+                        { className: X.ConfirmText },
                         (0, b.kQ)(
                           "#GrantAward_Confirm_Details",
-                          s.createElement(se, null, E.toLocaleString()),
+                          s.createElement(le, null, E.toLocaleString()),
                           s.createElement(
                             "span",
-                            { className: H.TimePeriod },
+                            { className: X.TimePeriod },
                             (0, b.Xx)("#GrantAward_Confirm_DetailsTimePeriod")
                           )
                         )
@@ -1039,40 +1038,40 @@
                     "div",
                     {
                       className: (0, L.Z)(
-                        H.LoadingContainer,
-                        l === Y.SUBMITTING && H.Visible
+                        X.LoadingContainer,
+                        l === V.SUBMITTING && X.Visible
                       ),
                     },
-                    s.createElement(le, null)
+                    s.createElement(oe, null)
                   ),
                   s.createElement(
                     "div",
                     {
                       className: (0, L.Z)(
-                        H.SuccessContainer,
-                        l === Y.DONE && H.Visible
+                        X.SuccessContainer,
+                        l === V.DONE && X.Visible
                       ),
                     },
-                    s.createElement(W, {
-                      className: H.ConfirmAwardImage,
+                    s.createElement(Q, {
+                      className: X.ConfirmAwardImage,
                       reactionType: o,
                     }),
                     s.createElement(
                       "div",
-                      { className: H.SuccessText },
+                      { className: X.SuccessText },
                       (0, b.Xx)("#GrantAward_Success")
                     )
                   )
                 ),
-                s.createElement(re, null),
+                s.createElement(ne, null),
                 s.createElement(
-                  ne,
+                  ae,
                   { store: n },
                   s.createElement(
                     _.zx,
                     {
-                      onClick: () => this.setState({ ePhase: Y.SELECTING }),
-                      disabled: l !== Y.CONFIRM,
+                      onClick: () => this.setState({ ePhase: V.SELECTING }),
+                      disabled: l !== V.CONFIRM,
                     },
                     (0, b.Xx)("#GrantAward_Back")
                   ),
@@ -1081,14 +1080,14 @@
                     {
                       onClick: this.GrantAward,
                       title: (0, b.Xx)("#GrantAward_SubmitTooltip"),
-                      disabled: l !== Y.CONFIRM,
+                      disabled: l !== V.CONFIRM,
                     },
                     (0, b.Xx)("#GrantAwardNowButton")
                   )
                 )
               );
               break;
-            case Y.ERROR: {
+            case V.ERROR: {
               let e = "";
               switch (this.state.eResult) {
                 case 10:
@@ -1118,24 +1117,24 @@
               y = s.createElement(
                 s.Fragment,
                 null,
-                s.createElement(ae, { description: v }),
-                s.createElement(re, null),
+                s.createElement(te, { description: v }),
+                s.createElement(ne, null),
                 s.createElement(
                   "div",
                   { style: { position: "relative" } },
                   s.createElement(
                     "div",
-                    { className: H.ErrorContainer },
-                    s.createElement("div", { className: H.ErrorText }, e)
+                    { className: X.ErrorContainer },
+                    s.createElement("div", { className: X.ErrorText }, e)
                   )
                 ),
-                s.createElement(re, null),
+                s.createElement(ne, null),
                 s.createElement(
-                  ne,
+                  ae,
                   { store: n },
                   s.createElement(
                     _.zx,
-                    { onClick: () => this.setState({ ePhase: Y.SELECTING }) },
+                    { onClick: () => this.setState({ ePhase: V.SELECTING }) },
                     (0, b.Xx)("#GrantAward_Back")
                   )
                 )
@@ -1144,11 +1143,11 @@
           }
           return s.createElement(
             f.On,
-            { className: H.GrantAwardModal, active: e, onDismiss: r },
+            { className: X.GrantAwardModal, active: e, onDismiss: r },
             s.createElement(
               f.Pv,
               { navID: "GrantAward", closeModal: r },
-              c && s.createElement(I, { eType: S.Default }),
+              c && s.createElement(B, { eType: x.Default }),
               y
             )
           );
@@ -1158,66 +1157,66 @@
             { selectedReaction: n } = this.state;
           null !== n &&
             0 != n &&
-            (this.setState({ ePhase: Y.SUBMITTING }),
+            (this.setState({ ePhase: V.SUBMITTING }),
             t.AddReaction(n).then(({ eResult: t, strMessage: r }) => {
               1 == t
-                ? this.setState({ ePhase: Y.DONE, celebrate: !0 }, () =>
+                ? this.setState({ ePhase: V.DONE, celebrate: !0 }, () =>
                     setTimeout(() => {
                       a && a(e, n);
                     }, 2e3)
                   )
-                : this.setState({ ePhase: Y.ERROR, eResult: t });
+                : this.setState({ ePhase: V.ERROR, eResult: t });
             }));
         }
       };
-      (0, n.gn)([A.ak], te.prototype, "GrantAward", null),
-        (te = (0, n.gn)([l.Pi], te));
-      const ae = ({ description: e }) =>
+      (0, n.gn)([A.ak], ee.prototype, "GrantAward", null),
+        (ee = (0, n.gn)([l.Pi], ee));
+      const te = ({ description: e }) =>
           s.createElement(
             "div",
-            { className: H.Header },
+            { className: X.Header },
             s.createElement(
               "div",
-              { className: H.Title },
+              { className: X.Title },
               (0, b.Xx)("#GrantAwardTitle")
             ),
-            s.createElement("div", { className: H.Description }, e)
+            s.createElement("div", { className: X.Description }, e)
           ),
-        ne = (0, l.Pi)(({ store: e, children: t }) => {
+        ae = (0, l.Pi)(({ store: e, children: t }) => {
           const a = e.GetUserPointBalance(),
             n = a && a.toNumber().toLocaleString();
           return s.createElement(
             "div",
-            { className: H.Footer },
+            { className: X.Footer },
             s.createElement(
               "div",
-              { className: H.Left },
-              s.createElement(y.doA, { className: H.BalanceIcon }),
+              { className: X.Left },
+              s.createElement(y.doA, { className: X.BalanceIcon }),
               s.createElement(
                 "div",
-                { className: H.BalanceDetails },
+                { className: X.BalanceDetails },
                 s.createElement(
                   "div",
-                  { className: H.BalanceLabel },
+                  { className: X.BalanceLabel },
                   (0, b.Xx)("#YourBalance")
                 ),
-                s.createElement("div", { className: H.BalanceAmount }, n)
+                s.createElement("div", { className: X.BalanceAmount }, n)
               )
             ),
             s.createElement(
               "div",
-              { className: H.Right },
+              { className: X.Right },
               s.createElement(
                 c.s,
-                { className: H.Actions, "flow-children": "row" },
+                { className: X.Actions, "flow-children": "row" },
                 s.Children.map(t, (e) =>
-                  s.createElement("div", { className: H.Action }, e)
+                  s.createElement("div", { className: X.Action }, e)
                 )
               ),
               s.createElement(
                 "a",
                 {
-                  className: H.FooterLink,
+                  className: X.FooterLink,
                   href: `${C.De.STORE_BASE_URL}points/howitworks`,
                 },
                 (0, b.Xx)("#GrantAward_PointsLink")
@@ -1225,8 +1224,8 @@
             )
           );
         }),
-        re = () => s.createElement("div", { className: H.Divider });
-      class oe extends s.PureComponent {
+        ne = () => s.createElement("div", { className: X.Divider });
+      class re extends s.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -1253,21 +1252,21 @@
               "autoFocus",
             ]);
           return s.createElement(
-            q,
+            U,
             Object.assign(
               {
                 type: "button",
                 onMouseEnter: this.handleMouseOver,
                 onMouseLeave: this.handleMouseOut,
-                className: (0, L.Z)(H.Button, a && H.Selected, r && H.Disabled),
+                className: (0, L.Z)(X.Button, a && X.Selected, r && X.Disabled),
                 autoFocus: l,
               },
               i
             ),
             s.createElement(
               "div",
-              { className: H.IconCtn },
-              s.createElement(W, {
+              { className: X.IconCtn },
+              s.createElement(Q, {
                 reactionType: t,
                 bForceAnimated: this.state.bHovered,
                 bDisableAnimation: r,
@@ -1275,25 +1274,25 @@
             ),
             s.createElement(
               "div",
-              { className: H.LabelCtn },
-              s.createElement("div", { className: H.Label }, $(t)),
-              s.createElement(se, { className: H.Points }, o.toLocaleString())
+              { className: X.LabelCtn },
+              s.createElement("div", { className: X.Label }, H(t)),
+              s.createElement(le, { className: X.Points }, o.toLocaleString())
             ),
-            r && s.createElement(Q, { className: H.IconCheckMark })
+            r && s.createElement(Y, { className: X.IconCheckMark })
           );
         }
       }
-      (0, n.gn)([A.ak], oe.prototype, "handleMouseOver", null),
-        (0, n.gn)([A.ak], oe.prototype, "handleMouseOut", null);
-      const le = () =>
-          s.createElement(v.V, { size: "large", className: H.Loading }),
-        se = (e) => {
+      (0, n.gn)([A.ak], re.prototype, "handleMouseOver", null),
+        (0, n.gn)([A.ak], re.prototype, "handleMouseOut", null);
+      const oe = () =>
+          s.createElement(v.V, { size: "large", className: X.Loading }),
+        le = (e) => {
           const { children: t, className: a } = e,
             r = (0, n._T)(e, ["children", "className"]);
           return s.createElement(
             "span",
-            Object.assign({}, r, { className: (0, L.Z)(a, H.PointsAmount) }),
-            s.createElement(y.doA, { className: H.PointsAmountIcon }),
+            Object.assign({}, r, { className: (0, L.Z)(a, X.PointsAmount) }),
+            s.createElement(y.doA, { className: X.PointsAmountIcon }),
             t
           );
         };

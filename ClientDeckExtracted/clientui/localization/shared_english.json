@@ -2729,6 +2729,9 @@
   "SteamNotificationTypeDesc_11": "I receive a reply from Steam Support",
   "SteamNotificationTypeDesc_12": "I receive a Steam Turn notification",
 
+  "NotificationSettings_SendToast":"Show an alert in the Steam Client",
+  "NotificationSettings_PushNotification":"Mobile App Alert",
+
   "NotificationsMenu_Title": "Notifications",
   "NotificationsMenu_ViewAll": "View All",
   "Notification_NewGiftsPinned_Body": "%1$s New Gift",
@@ -2739,6 +2742,12 @@
   "Notification_FriendInvitePinned_Body_Plural": "%1$s New Friend Requests",
   "Notification_NewItemAnnouncementPinned_Body": "%1$s New Item in Your Inventory",
   "Notification_NewItemAnnouncementPinned_Body_Plural": "%1$s New Items in Your Inventory",
+  "Notification_NewTradeOffersPinned_Body": "%1$s Pending Trade Offer",
+  "Notification_NewTradeOffersPinned_Body_Plural": "%1$s Pending Trade Offers",
+  "Notification_NewAsyncGamePinned_Body": "%1$s New Turn Waiting",
+  "Notification_NewAsyncGamePinned_Body_Plural": "%1$s New Turns Waiting",
+  "Notification_NewHelpRequestRepliesPinned_Body": "%1$s Reply from Steam Support",
+  "Notification_NewHelpRequestRepliesPinned_Body_Plural": "%1$s Replies from Steam Support",
 
   "SteamNotifications_Wishlist": "Wishlist Sale",
   "SteamNotifications_Wishlist_OnSale_Single": "Is on sale for %1$s",

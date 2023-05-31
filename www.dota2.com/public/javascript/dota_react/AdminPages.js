@@ -549,7 +549,13 @@
                   style: {
                     color:
                       "" +
-                      ("Win" === e ? "green" : "Loss" === e ? "red" : "yellow"),
+                      ("Win" === e
+                        ? "green"
+                        : "Loss" === e
+                        ? "red"
+                        : "Tie" === e
+                        ? "yellow"
+                        : "skyblue"),
                   },
                 },
                 e

@@ -3476,7 +3476,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_TextFilterStatus_Disabled"								"Momentálně jsou povoleny hrubé vulgarismy a urážky"
 "Steam_TextFilterSettingURL"									"Změnit nastavení filtrování konverzací"
 
-"Steam_SettingsInGameScreenshotFolder"	"Složka se snímky obrazovky"
+"Steam_SettingsInGameScreenshotFolder"	"Složka se snímky"
 "Steam_SettingsInGameTitle"	"Překrytí služby Steam"
 
 "SteamUI_JoinDialog_PreparingToPlay" 	"Připravuje se spuštění hry %game%%dots%"

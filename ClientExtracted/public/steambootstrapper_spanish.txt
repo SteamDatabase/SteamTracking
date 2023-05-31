@@ -2,7 +2,7 @@
 "Tokens" 
 { 
 "SteamBootstrapper_UpdatingSteam"				"Actualizando %appname%..."
-"SteamBootstrapper_ElevationPrompt"			"%appname% debe auto-actualizarse antes de iniciarse."
+"SteamBootstrapper_ElevationPrompt"			"%appname% debe actualizarse antes de iniciarse."
 "SteamBootstrapper_ReadOnlyInstallOSX"		"%appname% no puede escribir en su directorio de instalación. Asegúrate de que no estás intentando ejecutarlo desde la imagen del disco."
 "SteamBootstrapper_RunFromDiskImageOSX"		"Por favor, arrastra %appname% a la carpeta Aplicaciones antes de iniciarlo."
 "SteamBootstrapper_ReadOnlyInstall"			"%appname% no puede escribir en su directorio de instalación."

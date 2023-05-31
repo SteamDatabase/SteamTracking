@@ -1096,9 +1096,9 @@
         R = n(17318),
         G = n.n(R),
         F = n(2647),
-        P = n(57742),
-        U = n(45123),
-        z = n.n(U),
+        U = n(57742),
+        P = n(45123),
+        z = n.n(P),
         H = n(60161),
         j = n(32765);
       var X = n(69159),
@@ -1114,7 +1114,7 @@
         ee = n(79472),
         te = n(93414),
         ne = n(7948),
-        re = n(86283),
+        re = n(67727),
         ae = n(13345);
       const ie = (0, s.Pi)((e) => {
         const {
@@ -1191,7 +1191,7 @@
                 onClick: (e) => {
                   const t = (0, H.RA)(e);
                   let n = _.GetUploadImages()[0];
-                  (0, P.AM)(
+                  (0, U.AM)(
                     l.createElement(q.e, {
                       ownerWin: t,
                       uploadFile: n,
@@ -1277,7 +1277,7 @@
             {
               onClick: (e) => {
                 const t = new m.K(j.JA.CLANSTEAMID);
-                (0, P.AM)(
+                (0, U.AM)(
                   l.createElement($.k, {
                     clanSteamID: t,
                     fnImageSelectCallBack: (e) => C(_, e),
@@ -1570,27 +1570,27 @@
           }
         }
         OnAddLink(e) {
-          (0, P.BR)(
+          (0, U.BR)(
             l.createElement(ge, { textareaRef: this.props.fnTextareaRef() }),
             (0, H.RA)(e)
           );
         }
         ShowHelpDialog(e) {
           this.props.showFormatHelp &&
-            (0, P.BR)(
+            (0, U.BR)(
               l.createElement(le, { formatType: this.props.showFormatHelp }),
               (0, H.RA)(e)
             );
         }
         OnConvertHTMLToBBCodeDialog(e) {
-          (0, P.BR)(
+          (0, U.BR)(
             l.createElement(Ee, { textareaRef: this.props.fnTextareaRef() }),
             (0, H.RA)(e)
           );
         }
         OnOpenYoutubeDialog(e) {
           let t = j.De.IMG_URL + "applications/community/";
-          (0, P.BR)(
+          (0, U.BR)(
             l.createElement(he, {
               textareaRef: this.props.fnTextareaRef(),
               pathToImages: t,
@@ -1599,13 +1599,13 @@
           );
         }
         OnOpenImageDialog(e) {
-          (0, P.BR)(
+          (0, U.BR)(
             l.createElement(_e, { textareaRef: this.props.fnTextareaRef() }),
             (0, H.RA)(e)
           );
         }
         OnOpenSpeakerDialog(e) {
-          (0, P.AM)(
+          (0, U.AM)(
             l.createElement(ve, {
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
@@ -2565,7 +2565,7 @@
                   this.setState({ bConverting: !1, bFinishedConverting: !0 }));
               })
               .catch((e) => {
-                (0, P.AM)(
+                (0, U.AM)(
                   l.createElement(F.JX, {
                     strTitle: (0, L.Xx)("#EventEditor_ConvertHTML_Error"),
                     strDescription: (0, L.Xx)(
@@ -2733,7 +2733,7 @@
         o = n(89526),
         s = n(74802),
         l = n(46132),
-        c = n(90699),
+        c = n(51438),
         d = n(1063),
         p = n(82079),
         m = n(85651),
@@ -2972,8 +2972,8 @@
         R = n.n(O),
         G = n(65352),
         F = n(17318),
-        P = n.n(F),
-        U = n(87178),
+        U = n.n(F),
+        P = n(87178),
         z = n(69338),
         H = n(75962),
         j = n(60729),
@@ -3468,13 +3468,13 @@
               },
               12 != M &&
                 !w &&
-                o.createElement(U.j, {
+                o.createElement(P.j, {
                   className: (0, C.Z)(R().EventCoverImageBackground),
                   rgSources: B,
                   onIncrementalError: (e, t, n) => u && u(t),
                 }),
               B.length > 0 &&
-                o.createElement(U.j, {
+                o.createElement(P.j, {
                   className: R().EventBackgroundBlur,
                   rgSources: B,
                   onIncrementalError: (e, t, n) => u && u(t),
@@ -3595,7 +3595,7 @@
                     partnerEventStore: n,
                     event: e,
                   }),
-                  o.createElement("span", { className: P().Clear })
+                  o.createElement("span", { className: U().Clear })
                 ),
                 o.createElement(K.D, { event: this.props.event }),
                 Boolean(e.jsondata.read_more_link) &&
@@ -3605,7 +3605,7 @@
                     o.createElement(
                       H.ns,
                       {
-                        className: (0, C.Z)(P().Button),
+                        className: (0, C.Z)(U().Button),
                         href: e.jsondata.read_more_link,
                       },
                       (0, f.Xx)("#EventEmail_Button_ClickForMoreDetails")
@@ -3619,7 +3619,7 @@
                     o.createElement(
                       "a",
                       {
-                        className: (0, C.Z)(P().Button, "LinkButton"),
+                        className: (0, C.Z)(U().Button, "LinkButton"),
                         href: (0, D.OL)(e.GetSaleURL()),
                       },
                       (0, f.Xx)("#Event_Button_VisitSalePage")
@@ -3944,7 +3944,7 @@
     },
     85521: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => P, L: () => z });
+      n.d(t, { Q: () => U, L: () => z });
       var r = n(33940),
         a = n(89526),
         i = n(88464),
@@ -4300,12 +4300,12 @@
           )
         );
       });
-      var k = n(90699),
+      var k = n(51438),
         O = n(44026),
         R = n(88443),
         G = n(51326),
         F = n(20790);
-      function P(e, t) {
+      function U(e, t) {
         if (!t.BIsUserLoggedIn())
           return (
             o.De.IN_CLIENT
@@ -4330,7 +4330,7 @@
           ((0, p.AM)(a.createElement(T.r, null), window), !1)
         );
       }
-      function U(e) {
+      function P(e) {
         let t;
         return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
       }
@@ -4343,7 +4343,7 @@
           super(e), (this.m_cancelSignal = S().CancelToken.source());
           const t = C.cb.Get().BHasMyVote(e.eventModel);
           let n;
-          t && (n = U(C.cb.Get().GetPreviouslyLoadedVote(e.eventModel))),
+          t && (n = P(C.cb.Get().GetPreviouslyLoadedVote(e.eventModel))),
             (this.state = { bLoadedVote: !!t, myVote: n });
         }
         HandleRefreshMyVotingInformation() {
@@ -4354,7 +4354,7 @@
                 .Get()
                 .LoadMyVote(e, this.m_cancelSignal)
                 .then((e) => {
-                  let t = U(e);
+                  let t = P(e);
                   this.setState({ myVote: t, bLoadedVote: !0 });
                 })
                 .catch((e) => {
@@ -4387,7 +4387,7 @@
         }
         Vote(e) {
           const { eventModel: t } = this.props;
-          P(t, C.cb.Get()) &&
+          U(t, C.cb.Get()) &&
             this.state.myVote != e &&
             null != e &&
             this.state.bLoadedVote &&
@@ -4839,7 +4839,7 @@
         i = n(25125),
         o = n(89526),
         s = n(46132),
-        l = n(86283),
+        l = n(67727),
         c = n(7948),
         d = n(17318),
         p = n.n(d),
@@ -4966,7 +4966,7 @@
     },
     4795: (e, t, n) => {
       "use strict";
-      n.d(t, { WF: () => N, yi: () => M });
+      n.d(t, { WF: () => x, yi: () => M });
       var r = n(33940),
         a = n(52868),
         i = n.n(a),
@@ -5592,27 +5592,8 @@
         (0, r.gn)([_.ak], L.prototype, "OnVoteClick", null),
         (0, r.gn)([_.ak], L.prototype, "SaveVote", null),
         (L = (0, r.gn)([s.Pi], L));
-      class x extends l.Component {
-        constructor(e) {
-          super(e);
-          let t = GetConfigJSON("steamwawards", "application_config");
-          this.m_voteCategories = null == t ? void 0 : t.votecategories;
-        }
-        render() {
-          return this.m_voteCategories
-            ? React.createElement(N, {
-                appID: this.props.appID,
-                bRenderFromStorePage: !0,
-                bIsEventActionEnabled: !0,
-                voteCategories: this.m_voteCategories,
-              })
-            : (console.error(
-                `SteamAwardStorePageVoteWidget: Missing Steam Awards config for app ${this.props.appID}`
-              ),
-              null);
-        }
-      }
-      let N = class extends l.Component {
+      l.Component;
+      let x = class extends l.Component {
         constructor(e) {
           super(e),
             (this.m_cancelSignal = i().CancelToken.source()),
@@ -5743,12 +5724,12 @@
           );
         }
       };
-      (0, r.gn)([o.LO], N.prototype, "m_awardEventDetails", void 0),
-        (N = (0, r.gn)([s.Pi], N));
+      (0, r.gn)([o.LO], x.prototype, "m_awardEventDetails", void 0),
+        (x = (0, r.gn)([s.Pi], x));
     },
     65352: (e, t, n) => {
       "use strict";
-      n.d(t, { HQ: () => F, wM: () => U, jd: () => z });
+      n.d(t, { HQ: () => F, wM: () => P, jd: () => z });
       var r = n(25125),
         a = n(89526),
         i = n(45878),
@@ -6926,7 +6907,7 @@
                 n
                   .filter((e) => 3 != e.external_type)
                   .map((e) =>
-                    a.createElement(P, {
+                    a.createElement(U, {
                       key: "app_social_link_" + t + "_" + e.external_type,
                       social: e,
                     })
@@ -6935,7 +6916,7 @@
             )
           : null;
       }
-      function P(e) {
+      function U(e) {
         const { social: t } = e,
           n =
             A.De.IMG_URL +
@@ -6955,7 +6936,7 @@
           a.createElement("img", { className: G().AppSocialLink, src: n })
         );
       }
-      function U(e) {
+      function P(e) {
         const { event: t, nOverrideStartTime: n, nOverrideEndTime: i } = e,
           o = e.stylesmodule
             ? Object.assign(Object.assign({}, G()), e.stylesmodule)
@@ -7050,7 +7031,7 @@
       "use strict";
       n.d(t, { Cu: () => g, eX: () => h, rC: () => y });
       var r = n(89526),
-        a = n(90699),
+        a = n(51438),
         i = n(34329),
         o = n(47165),
         s = n(82079),
@@ -7152,7 +7133,7 @@
       n.d(t, { AH: () => j, t6: () => z });
       var r = n(33940),
         a = n(89526),
-        i = n(86283),
+        i = n(67727),
         o = n(20790),
         s = n(17318),
         l = n.n(s),
@@ -7186,7 +7167,7 @@
         R = n(92307),
         G = n(31038),
         F = n.n(G);
-      const P = (0, I.Pi)((e) => {
+      const U = (0, I.Pi)((e) => {
         const { appid: t, eventLink: n } = e,
           i = a.useRef(null),
           [o, s] = (0, x.Gr)(u.L7.steamid),
@@ -7372,7 +7353,7 @@
               )
             );
       });
-      var U = n(57605);
+      var P = n(57605);
       class z extends a.Component {
         constructor() {
           super(...arguments),
@@ -7410,7 +7391,7 @@
                 onOK: () => (0, c.X)(),
               })
             : this.state.bShareOnSteamDialog
-            ? a.createElement(P, {
+            ? a.createElement(U, {
                 eventLink: e,
                 appid: n,
                 emoticonStore: i,
@@ -7464,7 +7445,7 @@
                   "div",
                   { className: f().ShareLanguagePicker },
                   a.createElement(
-                    U.__,
+                    P.__,
                     { className: f().LanguageLabel },
                     (0, p.Xx)("#EventDisplay_Share_LanguageLabel")
                   ),

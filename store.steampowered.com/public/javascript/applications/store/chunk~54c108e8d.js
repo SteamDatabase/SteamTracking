@@ -427,13 +427,14 @@
       }
     },
     57361: (e, r, t) => {
-      t.d(r, { Am: () => l, x3: () => o });
+      t.d(r, { Am: () => u, kI: () => s, x3: () => l });
       var i = t(32765),
         n = t(4556),
         a = t(23801);
-      const s = "061818254b2c99ac49e6626adb128ed1282a392f",
-        o = 120;
-      class l {
+      const s = 0,
+        o = "061818254b2c99ac49e6626adb128ed1282a392f",
+        l = 120;
+      class u {
         constructor(e) {
           (this.m_bInitialized = !1), (this.m_unAppID = e);
         }
@@ -453,10 +454,10 @@
           return i.De.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
         }
         get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, s);
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
         }
         get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, s);
+          return this.BuildAppURL(this.m_strIconURL, o);
         }
         get logo_url() {
           return (

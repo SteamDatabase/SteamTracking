@@ -2,7 +2,7 @@
  ****/
 "use strict";
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8805],
+  [4040],
   {
     24174: (e, t, r) => {
       r.d(t, {
@@ -3255,7 +3255,8 @@
           (e.GetDLCForAppsSolr = function (e, t) {
             return e.SendMsg("StoreBrowse.GetDLCForAppsSolr#1", t, k, {
               bConstMethod: !0,
-              ePrivilege: 1,
+              ePrivilege: 0,
+              eWebAPIKeyRequirement: 1,
             });
           });
       })(q || (q = {}));
@@ -3937,7 +3938,7 @@
       r.d(t, { De: () => l, Fq: () => o, pA: () => n });
       var i = r(53143),
         s = r(32765),
-        a = r(86283);
+        a = r(67727);
       r(3609);
       function n(e, t) {
         e.Body().set_context(o(t));

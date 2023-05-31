@@ -235,7 +235,7 @@
 	"SteamUI_FSMode_StartInOffline" "在离线模式下运行蒸汽平台"
 	"Steam_AllowDownloadsDuringGameplayDetails" "若勾选此选项，那么蒸汽平台将可以在您运行游戏或其它 \n蒸汽平台应用程序时开始或继续下载更新。您也可以在各游戏的属性页面中针对该游戏单独设置"
 	"Steam_ThrottleDownloadsWhileStreamingDetails" "如果勾选此选项，蒸汽平台会限制下载速度，以保持蒸汽平台远程畅玩的高质量体验。"
-	"Steam_PeerContentFriends" "允许转入/出我蒸汽平台好友的设备"
+	"Steam_PeerContentFriends" "允许转入我蒸汽平台好友的设备"
 	"Steam_CloudLabel" "蒸汽平台云"
 	"Steam_CloudInfo" "蒸汽平台云会储存您的信息，以便您在不同的计算机也能享受到一致的产品体验。"
 	"Steam_EnableCloud" "为支持的应用程序启用蒸汽平台云同步"

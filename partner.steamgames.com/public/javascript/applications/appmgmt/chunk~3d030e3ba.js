@@ -544,9 +544,7 @@
       var r = n(24174),
         a = n(44973);
       function o() {
-        return 2 == a.De.EUNIVERSE || "dev" == a.De.WEB_UNIVERSE
-          ? `${a.De.CLAN_CDN_ASSET_URL}images/`
-          : `${a.De.MEDIA_CDN_COMMUNITY_URL}images/clans/`;
+        return `${a.De.CLAN_CDN_ASSET_URL}images/`;
       }
       function s(e) {
         return (e = e.replace(r.A1, o())).replace("http://", "https://");

@@ -4,15 +4,17 @@ __TEXT
 
 __text
 __TEXT
-@
-@
+0
+0
 __stubs
 __TEXT
+R?4
+R?4
 __stub_helper
 __TEXT
+4H4
+4H4
 __gcc_except_tab__TEXT
-`e4
-`e4
 __const
 __TEXT
 __objc_methname
@@ -120,14 +122,20 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-H=
+P=
 )
 4
-n>
+~>
+4
+4
 0
-v9
+x9
+G
+G
+G
 9
 0
+G
 @
 @
 >
@@ -138,37 +146,32 @@ v9
 s
 9
 9
+9
+9
+9
+9
 $
-*
 Hi
-*
-*
 *
 Hi
 Hi
 (
-3
-3
-3
 P)
-.
-+
 )
 
 %
 (
 (
-98
-^2
+=
+;8
+8
+8
 (
-8
-8
-8
-8
-8
+)
 '
 '
 j(
+2
 (
 
 |'
@@ -176,15 +179,10 @@ j(
 (
 (
 5
-3
+n?
 <
-^?
-M(
 
-@
-q1
 0
-T1
 Ic
 0
 0
@@ -196,11 +194,12 @@ AT=
 D
 @
 @
+51
 7
 7
 7
 7
-h2
+/2
 @
 Hc
 Hc
@@ -232,8 +231,7 @@ IcE
 IcE
 @
 @
-6
-6
+O0
 6
 0
 15CBaseFileSystem
@@ -2399,7 +2397,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built May 25 2023 20:25:46
+Startup - updater built May 30 2023 14:38:26
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2690,8 +2688,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-May 25 2023
-20:25:47
+May 30 2023
+14:38:26
 crashhandler004
 steam
 Steam Executable Crash
@@ -2788,7 +2786,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-20:25:45
+14:38:25
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10904,8 +10902,11 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 %u
+steamwebhelper
+Steam Helper
+cefwebhelper
 1.0
-20:23:40
+14:36:18
 Jan
 Feb
 Mar
@@ -12670,6 +12671,10 @@ CStructNetPacket->SetGCRouting() not valid.
 When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
 @bLogMessageToProtobufClass
 We we first discover the protobuf class used for a particular EMsg, log it
+@bEnableProtobufArenaAllocation
+Kill switch for arena allocation globally
+@bCheckMsgProtobufOnJobStackForArenaAlloc
+Should we only use the arena allocator if the protobuf is on the job stack
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
 Unparseable protobuf message arrived, emsg=%u, size=%u
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
@@ -13060,6 +13065,8 @@ cubData >= 8
 IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%02X%02X%02X%02X%02X%02X, %d bytes recv'd so far) discarding packet and closing connection
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection
 *pcubMsgSizeMax >= 0 && *pcubMsgSizeMax < k_cubMaxMsgDataSize * 2
+BHandleTCPMessageData - unbuffered
+BHandleTCPMessageData - buffered
 unDataLen < INT_MAX
 cubMsgSizeMax >= 0
 cubIncoming >= 0
@@ -13331,22 +13338,21 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-:
 
-(,:
-z,:
-.,:
-N,:
-e,:
 
-p,:
 0
 4
-n>
+~>
+4
+4
 0
-v9
+x9
+G
+G
+G
 9
 0
+G
 @
 @
 >
@@ -13357,37 +13363,32 @@ v9
 s
 9
 9
+9
+9
+9
+9
 $
-*
 Hi
-*
-*
 *
 Hi
 Hi
 (
-3
-3
-3
 P)
-.
-+
 )
 
 %
 (
 (
-98
-^2
+=
+;8
+8
+8
 (
-8
-8
-8
-8
-8
+)
 '
 '
 j(
+2
 (
 
 |'
@@ -13395,15 +13396,10 @@ j(
 (
 (
 5
-3
+n?
 <
-^?
-M(
 
-@
-q1
 0
-T1
 Ic
 0
 0
@@ -13415,11 +13411,12 @@ AT=
 D
 @
 @
+51
 7
 7
 7
 7
-h2
+/2
 @
 Hc
 Hc
@@ -13451,55 +13448,51 @@ IcE
 IcE
 @
 @
-6
-6
+O0
 6
 0
 V
-N/
+Q/
 =
-/
 5
 5
 5
-5
-69
-b.
 =
-.
-.
+<
 4
-]-
-V-
+8
+^-
+-
 -
 !
 @
-$
+7
 @
 &
 6
+F+
+1
 +
+t5
 ,
-*
-*
+,
+00
+/0
 0
 0
 0
 0
-O)
-x/
-O/
-)
-)
-)
-)
-z1
+y)
 /
 /
+/
+/
+o(
 @
 M9e
 @
 @
+-.
 ?
 ?
 ?
@@ -13517,30 +13510,30 @@ M9e
 ?
 .
 
-C)
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-t(
 @
 -
 -
 -
 -
-1
+-
+-
 %
 `
 `
 @
 j
 j
-}.
 Pj
 ARj
 j
-#0
+
+
+?0
 0
 0
 IcU
@@ -13551,6 +13544,7 @@ M)u
 =
 @
 =
+2$
 =
 %
 =
@@ -13850,9 +13844,8 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 @
-
 0
-K)
+-
 H=
 Ic]
 j
@@ -13861,19 +13854,23 @@ j
 j
 j
 j
+'$
+!
+!
 
-#
+'
 '
 t$I;M
+K(
 e
 W
 ,7~5d
-#-/
 H
 0
 
 
 
+.
 
 
 
@@ -13881,19 +13878,19 @@ H
 
 
 
-R
+T
 Hc
-z'
-L)5kq'
-L95`m'
-m'
-l'
+%
+%
+L95`}'
+}'
+|'
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
-j"
+z"
 @
 ,
 *
@@ -13901,6 +13898,8 @@ j"
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
+&
+&
 0
 0
 N
@@ -13912,6 +13911,7 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
+!
 $
 $
 
@@ -14149,8 +14149,9 @@ H=
 =*.*
 @
 @
-E
+1
 0
+
 @
 @
 @
@@ -14175,6 +14176,8 @@ E
 0
 H=
 0
+
+
 &
 E
 0
@@ -14202,14 +14205,18 @@ j
 
 
 Hc
-*
+s
 0
+A
+
 
 
 @
 @
+-
 &
 %
+
 
 @
 =h2
@@ -14219,6 +14226,7 @@ P
 @
 @
 @
+"
 ?
 ?
 ?
@@ -14226,6 +14234,7 @@ P
 @
 @
 @
+O
 0
 =a
 0

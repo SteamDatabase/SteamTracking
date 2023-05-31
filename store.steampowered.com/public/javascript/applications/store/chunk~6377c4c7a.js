@@ -25,24 +25,23 @@
     },
     28133: (e, t, c) => {
       "use strict";
-      c.d(t, { DI: () => f, VL: () => s, sS: () => i });
+      c.d(t, { DI: () => d, VL: () => s, sS: () => o });
       var l = c(89526),
         a = c(15705),
         n = c(36041);
-      const s = 8e3,
-        o = 200;
-      var i;
-      function r(e) {
+      const s = 8e3;
+      var o;
+      function i(e) {
         switch (e) {
-          case i.Gold:
-          case i.LNY2020:
+          case o.Gold:
+          case o.LNY2020:
             return `hsl(${51 + -16 * Math.random()}, 93%, 54%)`;
           default:
             return `hsl(${360 * Math.random()}, 100%, 40%)`;
         }
       }
-      function C(e) {
-        return e == i.LNY2020
+      function r(e) {
+        return e == o.LNY2020
           ? `hue-rotate(${360 + (0, n.LO)(-30, 10)}deg)`
           : "";
       }
@@ -50,8 +49,8 @@
         (e[(e.Default = 0)] = "Default"),
           (e[(e.Gold = 1)] = "Gold"),
           (e[(e.LNY2020 = 2)] = "LNY2020");
-      })(i || (i = {}));
-      const h = (e, t) => {
+      })(o || (o = {}));
+      const C = (e, t) => {
           const { anim: c } = (0, a.q_)({
               anim: 1,
               from: { anim: 0 },
@@ -62,24 +61,24 @@
                   const c = [];
                   if (!e) return c;
                   const { width: l, height: a } = e;
-                  for (let e = 0; e < o; e++) {
+                  for (let e = 0; e < 200; e++) {
                     const e = Math.random(),
                       n = Math.random() * e,
                       s = Math.random() * n,
-                      o = 4 * (Math.random() - 0.5) * Math.PI * 20,
+                      C = 4 * (Math.random() - 0.5) * Math.PI * 20,
                       h = Math.random() + 0.5,
                       g = [
                         Math.random() * a - a - 20,
                         a + 20 + Math.random() * a * h,
                       ],
-                      d = h * (l <= 1e3 ? 1 : l / 1e3) * (t == i.Gold ? 2 : 1),
+                      d = h * (l <= 1e3 ? 1 : l / 1e3) * (t == o.Gold ? 2 : 1),
                       f = (Math.random() - 0.5) * l,
                       m = (Math.random() - 0.5) * l,
                       w = [m, f + m],
-                      u = r(t),
-                      v = C(t);
+                      u = i(t),
+                      v = r(t);
                     c.push({
-                      rotationCoefficient: o,
+                      rotationCoefficient: C,
                       rotationRatioY: n,
                       rotationRatioX: e,
                       rotationRatioZ: s,
@@ -94,13 +93,13 @@
                 })(e, t),
                 a = l.map((e) =>
                   (function (e, t, c) {
-                    i.Default;
+                    o.Default;
                     const {
                       rotationCoefficient: l,
                       rotationRatioY: a,
                       rotationRatioX: n,
                       rotationRatioZ: s,
-                      yRange: o,
+                      yRange: i,
                       xRange: r,
                       scale: C,
                       colorHue: h,
@@ -114,11 +113,11 @@
                       transform: t.interpolate((e) => {
                         const t = e * l * a,
                           c = e * l * n,
-                          i = e * l * s,
-                          h = e * (o[1] - o[0]) + o[0];
+                          o = e * l * s,
+                          h = e * (i[1] - i[0]) + i[0];
                         return `translate(${
                           e * (r[1] - r[0]) + r[0]
-                        }px, ${h}px) rotateY(${t}rad) rotateX(${c}rad) rotateZ(${i}rad) scale(${C})`;
+                        }px, ${h}px) rotateY(${t}rad) rotateX(${c}rad) rotateZ(${o}rad) scale(${C})`;
                       }),
                     };
                   })(e, c)
@@ -156,15 +155,15 @@
             }, [e, t, c]);
           return n;
         },
-        g = { position: "absolute", left: "50%", top: 0 },
-        d = Object.assign(Object.assign({}, g), {
+        h = { position: "absolute", left: "50%", top: 0 },
+        g = Object.assign(Object.assign({}, h), {
           width: 10,
           height: 5,
           borderWidth: 1,
           borderColor: "black",
         }),
-        f = ({ eType: e }) => {
-          i.Gold, i.LNY2020;
+        d = ({ eType: e }) => {
+          o.Gold, o.LNY2020;
           const [t, c] = (function () {
             const [e, t] = (0, l.useState)(null),
               c = (0, l.useCallback)((e) => {
@@ -175,20 +174,20 @@
             return [e, c];
           })();
           let a,
-            { rgParticleStyles: n, rgStreamerStyles: s } = h(t, e);
+            { rgParticleStyles: n, rgStreamerStyles: s } = C(t, e);
           switch (e) {
-            case i.Gold:
-              a = n.map((e, t) => l.createElement(w, { key: t, style: e }));
+            case o.Gold:
+              a = n.map((e, t) => l.createElement(m, { key: t, style: e }));
               break;
-            case i.LNY2020:
+            case o.LNY2020:
               a = n.map((e, t) =>
                 t % 2
-                  ? l.createElement(m, { key: t, style: e })
-                  : l.createElement(u, { key: t, style: e })
+                  ? l.createElement(f, { key: t, style: e })
+                  : l.createElement(w, { key: t, style: e })
               );
               break;
-            case i.Default:
-              a = n.map((e, t) => l.createElement(m, { key: t, style: e }));
+            case o.Default:
+              a = n.map((e, t) => l.createElement(f, { key: t, style: e }));
           }
           return l.createElement(
             "div",
@@ -206,34 +205,34 @@
             a,
             s.map((e, t) =>
               e.flRandom > 0.5
-                ? l.createElement(y, { key: t, style: e })
-                : l.createElement(v, { key: t, style: e })
+                ? l.createElement(v, { key: t, style: e })
+                : l.createElement(u, { key: t, style: e })
             )
           );
         },
-        m = ({ style: e }) =>
+        f = ({ style: e }) =>
           l.createElement(a.q.div, {
-            style: Object.assign(Object.assign({}, d), e),
+            style: Object.assign(Object.assign({}, g), e),
           }),
+        m = ({ style: e }) => {
+          const [t] = (0, l.useState)(Math.floor(Math.random() * y.length)),
+            c = y[t];
+          return l.createElement(c, {
+            style: Object.assign(Object.assign(Object.assign({}, h), e), {
+              backgroundColor: void 0,
+            }),
+          });
+        },
         w = ({ style: e }) => {
           const [t] = (0, l.useState)(Math.floor(Math.random() * L.length)),
             c = L[t];
           return l.createElement(c, {
-            style: Object.assign(Object.assign(Object.assign({}, g), e), {
+            style: Object.assign(Object.assign(Object.assign({}, h), e), {
               backgroundColor: void 0,
             }),
           });
         },
-        u = ({ style: e }) => {
-          const [t] = (0, l.useState)(Math.floor(Math.random() * p.length)),
-            c = p[t];
-          return l.createElement(c, {
-            style: Object.assign(Object.assign(Object.assign({}, g), e), {
-              backgroundColor: void 0,
-            }),
-          });
-        },
-        v = ({ style: e }) =>
+        u = ({ style: e }) =>
           l.createElement(
             a.q.svg,
             {
@@ -249,7 +248,7 @@
               fill: e.fill,
             })
           ),
-        y = ({ style: e }) =>
+        v = ({ style: e }) =>
           l.createElement(
             a.q.svg,
             {
@@ -265,7 +264,7 @@
               fill: e.fill,
             })
           ),
-        L = [
+        y = [
           ({ style: e }) =>
             l.createElement(
               a.q.svg,
@@ -415,7 +414,7 @@
               })
             ),
         ],
-        p = [
+        L = [
           ({ style: e }) =>
             l.createElement(
               a.q.svg,

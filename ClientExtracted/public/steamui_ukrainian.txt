@@ -1318,7 +1318,7 @@
 "Steam_Storefront_Title"	"Steam — Огляд ігор"
 "Steam_RegisterProductCode"	"Активувати продукт у Steam…"
 "Steam_RedeemWalletVoucher"	"Активувати код гаманця Steam…"
-"Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% на розгляді)"
+"Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% утримується)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"Ви вже маєте %subscription%."
 "Steam_UpdateNews_Title"	"Steam — Новини"

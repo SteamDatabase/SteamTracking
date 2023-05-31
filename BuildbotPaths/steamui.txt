@@ -1,3 +1,4 @@
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/include/clientcommon/webui_job_dispatcher.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/webui_job_dispatcher.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/webui_transport.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.cpp
@@ -247,7 +248,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/cudawrapper.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/desktopcaptureosx.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/desktopstreamthread.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamerecordsession.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamebroadcastsession.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamaudioencoder.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamaudiomixer.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreammanager.cpp

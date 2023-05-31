@@ -233,7 +233,7 @@
 "Overlay_View_CommunityDiscussions" "Discussies weergeven"
 "Overlay_CommunityDiscussions_Panel_NumDiscussions" "%num_discussions% actieve discussies"
 
-"Overlay_SaveUncompressed" "Een ongecomprimeerde kopie opslaan"
+"Overlay_SaveUncompressed" "Een niet-gecomprimeerde kopie opslaan"
 "Overlay_SetScreenshotFolder" "Kies een map voor opgeslagen screenshots"
 
 

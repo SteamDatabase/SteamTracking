@@ -1288,8 +1288,8 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 	"Store_FriendsOfficialWebsite"	"Visitar o site oficial"
 
 	"Store_PackagePurchaseSection_IndividualPrice"	"Preço dos jogos individualmente"
-	"Store_PackagePurchaseSection_Bundle"			"Preço do pacote"
-	"Store_PackagePurchaseSection_BundleSavings"	"Com este pacote você economiza"
+	"Store_PackagePurchaseSection_Bundle"			"Preço do conjunto"
+	"Store_PackagePurchaseSection_BundleSavings"	"Com este conjunto você economiza"
 
 	"Store_AppPurchaseSection_Options"			"Opções de compra ({i:purchase_option_count})"
 	"Store_NotAvailableForPurchase"				"Não disponível para compra"
@@ -1342,7 +1342,7 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 	"Store_Cart_PurchaseForSelf"				"Comprar para você"
 	"Store_Cart_PurchaseAsGift"					"Comprar como presente"
 	"Store_Cart_ContinueShopping"				"Continuar comprando"
-	"Store_Cart_PartiallyOwned"					"Você já possui alguns itens deste pacote"
+	"Store_Cart_PartiallyOwned"					"Você já possui alguns itens deste conjunto"
 	"Store_Cart_EmptyCart"						"O seu carrinho está vazio"
 	"Store_Cart_FailedToLoad"					"Falha ao obter informações do carrinho de compras"
 	"Store_Cart_UpdatingCart"					"Atualizando carrinho"

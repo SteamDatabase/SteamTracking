@@ -22,6 +22,10 @@
             "argc": "1"
         },
         {
+            "name": "PostAppSummaryUpdates",
+            "argc": "1"
+        },
+        {
             "name": "GotLocationString",
             "argc": "2"
         }

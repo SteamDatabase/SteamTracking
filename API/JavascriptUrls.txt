@@ -264,7 +264,13 @@ ${COMMUNITY_BASE_URL}profiles/${steamid}
 ${COMMUNITY_BASE_URL}profiles/${steamid}/
 ${COMMUNITY_BASE_URL}profiles/${steamid}/edit/goldenprofile
 ${COMMUNITY_BASE_URL}profiles/${steamid}/friendscommon
+${COMMUNITY_BASE_URL}profiles/${steamid}/gamenotifications
+${COMMUNITY_BASE_URL}profiles/${steamid}/home/invites
 ${COMMUNITY_BASE_URL}profiles/${steamid}/inventory
+${COMMUNITY_BASE_URL}profiles/${steamid}/inventory/#pending_gifts
+${COMMUNITY_BASE_URL}profiles/${steamid}/notifications
+${COMMUNITY_BASE_URL}profiles/${steamid}/notifications#comments
+${COMMUNITY_BASE_URL}profiles/${steamid}/tradeoffers
 ${COMMUNITY_BASE_URL}profiles/${}
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
 ${COMMUNITY_BASE_URL}profiles/${}/friends/pending
@@ -371,6 +377,7 @@ ${HELP_BASE_URL}faqs/view/${url_code}
 ${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
 ${HELP_BASE_URL}faqs/view/548F-BC55-89EB-1BC8
 ${HELP_BASE_URL}wizard/HelpRequest/${ticket}
+${HELP_BASE_URL}wizard/HelpRequests
 ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
 ${HELP_BASE_URL}wizard/HelpWithLogin
 ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
@@ -910,7 +917,7 @@ ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
 ${PARTNER_BASE_URL}marketing/messagelist
-${PARTNER_BASE_URL}marketing/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}
+${PARTNER_BASE_URL}marketing/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
@@ -1017,6 +1024,7 @@ ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
 ${PARTNER_BASE_URL}user/ajaxgetusers
 ${PUBLIC_SHARED_URL}images/
+${PUBLIC_SHARED_URL}images/responsive/header_menu_notifications.png
 ${PUBLIC_SHARED_URL}images/responsive/youtube_16x9_placeholder.gif
 ${ProfileURL}ajaxgroupinvite?select_primary=1&json=1
 ${ProfileURL}ajaxsetprivacy/

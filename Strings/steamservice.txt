@@ -16,9 +16,9 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-DC,
-8q
-DC,
+tE,
+Dq
+tE,
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -94,12 +94,10 @@ Hc5MX/
 0
 
 
+`%
 
 
 Hi
-)
-)
-)
 H=
 0
 %
@@ -107,10 +105,8 @@ H=
 %
 %
 %
-%
-%
 $
-$
+]
 Hc
 Hc
 Hc
@@ -124,10 +120,6 @@ AT=
 D
 @
 @
-.(
-(
-(
-(
 (
 (
 (
@@ -165,17 +157,24 @@ IcE
 IcE
 @
 @
+q'
 ]
+'
+'
 '
 '
 "
 V
 H;5ri)
 =
+(&
+!
+!
+!
+!
+!
 !
 =
-g%
-q
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -8779,9 +8778,12 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 %u
+steamwebhelper
+Steam Helper
+cefwebhelper
 1.0
-May 25 2023
-20:23:40
+May 30 2023
+14:36:18
 Jan
 Feb
 Mar
@@ -9209,6 +9211,10 @@ Comma separated list of metrics catalogs to disable.  This is the last check.
 When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
 @bLogMessageToProtobufClass
 We we first discover the protobuf class used for a particular EMsg, log it
+@bEnableProtobufArenaAllocation
+Kill switch for arena allocation globally
+@bCheckMsgProtobufOnJobStackForArenaAlloc
+Should we only use the arena allocator if the protobuf is on the job stack
 @nSpewThrottlePeriodMs
 1000
 @nSpewThrottleTriggerThreshold
@@ -9385,12 +9391,10 @@ Hc5MX/
 0
 
 
+`%
 
 
 Hi
-)
-)
-)
 H=
 0
 %
@@ -9398,10 +9402,8 @@ H=
 %
 %
 %
-%
-%
 $
-$
+]
 Hc
 Hc
 Hc
@@ -9415,10 +9417,6 @@ AT=
 D
 @
 @
-.(
-(
-(
-(
 (
 (
 (
@@ -9456,29 +9454,40 @@ IcE
 IcE
 @
 @
+q'
 ]
+'
+'
 '
 '
 "
 V
 H;5ri)
 =
+(&
+!
+!
+!
+!
+!
 !
 =
-g%
-q
-j
-g%
-2
+"
+%
+%
+%
+%
+$
 !
 @
 @
-#
 &
++"
 "
 N$
 !
-!
+8
+B
 @
 M9e
 @
@@ -9495,7 +9504,6 @@ M9e
 ?
 ?
 :
-!
 ?
 ?
 ?
@@ -9844,6 +9852,7 @@ H
 
 
 
+
 *
 Hc
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -9878,9 +9887,9 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
-X
-c
+8
 @
+
 d
 @
 
@@ -9910,6 +9919,7 @@ H=
 @
 0
 H=
+Ic
 
 =
 @
@@ -9936,12 +9946,15 @@ H=
 0
 0
 0
-K
 0
 H=
-
-
 0
+
+
+
+
+
+
 
 
 &
@@ -9958,9 +9971,7 @@ E
 Hc
 Hc
 Hc
-
 0
-Ic
 @
 @
 @

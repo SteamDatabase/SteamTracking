@@ -534,9 +534,9 @@
       var i = r(33940),
         n = r(89526),
         a = r(46132),
-        s = r(86283),
+        s = r(67727),
         o = r(44026),
-        l = r(90699),
+        l = r(51438),
         d = r(26412),
         c = r(98009),
         m = r(13345),
@@ -1410,7 +1410,7 @@
         ml: () => u,
         q2: () => c,
       });
-      var i = r(86283),
+      var i = r(67727),
         n = r(54671),
         a = r(43707),
         s = r(85886),
@@ -2029,7 +2029,7 @@
       var i = r(33940),
         n = r(50265),
         a = r(24174),
-        s = r(86283),
+        s = r(67727),
         o = r(38512),
         l = r(47165),
         d = r(13345),
@@ -15755,9 +15755,7 @@
                   (i.strClosedCaptionFile =
                     v.De.STORE_BASE_URL +
                     "vtt/video/" +
-                    i.strClosedCaptionFile.substr(
-                      "https://steamvideo-a.akamaihd.net/video/".length
-                    )),
+                    i.strClosedCaptionFile.substr(40)),
                   n.rgRepresentations.push(i);
               }
               continue;
@@ -18929,7 +18927,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(50265),
-        o = r(86283),
+        o = r(67727),
         l = r(23217),
         d = r(26464),
         c = r(85246),
@@ -19202,18 +19200,14 @@
     },
     17974: (e, t, r) => {
       "use strict";
-      r.d(t, { Mr: () => _ });
+      r.d(t, { Mr: () => c });
       var i = r(33940),
         n = r(50265),
         a = r(69678),
         s = r(60161),
         o = r(14826),
         l = r(1063);
-      const d = 960,
-        c = 311,
-        m = 480,
-        u = 156;
-      class p {
+      class d {
         constructor(e, t, r, i, n, s) {
           if (
             ((this.fileType = 0),
@@ -19245,27 +19239,27 @@
               (s = !e.bDisableEnforceDimensions));
           }
           const c = this.width >= i && this.height >= n,
-            m = s ? this.width === i && this.height === n : c,
-            u = r && r != this.fileType,
-            p =
+            u = s ? this.width === i && this.height === n : c,
+            p = r && r != this.fileType,
+            _ =
               !!(e && e.length > 0) &&
               0 == (0, a.Vy)(this.fileType, e || []).length,
-            _ = Boolean(h(this.fileType));
+            h = Boolean(m(this.fileType));
           let g = "",
             y = !1;
           return (
             d
-              ? p
+              ? _
                 ? (g = (0, o.Xx)("#ImageUpload_InvalidFileType"))
-                : u
+                : p
                 ? (g = (0, o.Xx)(
                     "#ImageUpload_InvalidFormat",
                     l.aN.GetExtensionStringForFileType(r)
                   ))
-                : m || _
+                : u || h
                 ? c
-                  ? !m &&
-                    _ &&
+                  ? !u &&
+                    h &&
                     ((g = (0, o.Xx)("#ImageUpload_InvalidDimensions", i, n)),
                     (y = !0))
                   : (g = (0, o.Xx)("#ImageUpload_TooSmall", i, n))
@@ -19275,13 +19269,13 @@
           );
         }
       }
-      (0, i.gn)([n.LO], p.prototype, "dataUrl", void 0),
-        (0, i.gn)([n.LO], p.prototype, "width", void 0),
-        (0, i.gn)([n.LO], p.prototype, "height", void 0),
-        (0, i.gn)([n.LO], p.prototype, "type", void 0),
-        (0, i.gn)([n.LO], p.prototype, "status", void 0),
-        (0, i.gn)([n.LO], p.prototype, "message", void 0);
-      class _ extends p {
+      (0, i.gn)([n.LO], d.prototype, "dataUrl", void 0),
+        (0, i.gn)([n.LO], d.prototype, "width", void 0),
+        (0, i.gn)([n.LO], d.prototype, "height", void 0),
+        (0, i.gn)([n.LO], d.prototype, "type", void 0),
+        (0, i.gn)([n.LO], d.prototype, "status", void 0),
+        (0, i.gn)([n.LO], d.prototype, "message", void 0);
+      class c extends d {
         constructor(e, t, r, i, n) {
           super(e, t, i, r.src, r.width, r.height),
             (this.bCropped = !1),
@@ -19296,13 +19290,13 @@
         CropImage(e, t, r, n, a, o, l) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             return new Promise((i, d) => {
-              const c = h(l);
+              const c = m(l);
               if (!c) return void d("Invalid format provided");
-              const m = document.createElement("canvas");
-              (m.width = a), (m.height = o);
-              m.getContext("2d").drawImage(this.img, e, t, r, n, 0, 0, a, o),
-                m.toBlob((e) => {
-                  const t = m.toDataURL(c);
+              const u = document.createElement("canvas");
+              (u.width = a), (u.height = o);
+              u.getContext("2d").drawImage(this.img, e, t, r, n, 0, 0, a, o),
+                u.toBlob((e) => {
+                  const t = u.toDataURL(c);
                   3 !== l && t.startsWith("data:image/png")
                     ? d("Unable to encode into the requested file format")
                     : ((this.file = (0, s.Lh)(e, this.file.name)),
@@ -19323,8 +19317,8 @@
           return (function (e) {
             if ("background" === e)
               return [
-                { width: d, height: c },
-                { width: m, height: u },
+                { width: 960, height: 311 },
+                { width: 480, height: 156 },
               ];
             if ("capsule" === e)
               return [{ width: a.h1[e].width / 2, height: a.h1[e].height / 2 }];
@@ -19334,7 +19328,7 @@
           })(this.type);
         }
       }
-      function h(e) {
+      function m(e) {
         switch (e) {
           case 3:
             return "image/png";
@@ -19342,13 +19336,13 @@
             return "image/jpeg";
         }
       }
-      (0, i.gn)([n.LO], _.prototype, "bCropped", void 0);
+      (0, i.gn)([n.LO], c.prototype, "bCropped", void 0);
     },
     97334: (e, t, r) => {
       "use strict";
       r.d(t, { C: () => s, Z: () => o });
       var i = r(46132),
-        n = r(86283),
+        n = r(67727),
         a = r(14826);
       function s(e, t, r) {
         if (((null != e && null != e) || (e = t), !r || 0 === r.length))
@@ -19362,7 +19356,7 @@
         -1 != r && (e = e.slice(0, r).toLowerCase());
         let n = null,
           a = 0;
-        e.endsWith("korean") && ((n = 4), (a = "korean".length));
+        e.endsWith("korean") && ((n = 4), (a = 6));
         for (let t = 0; t < 30; ++t) {
           const r = (0, i.j_)(t);
           r.length <= a || (e.endsWith(r) && ((n = t), (a = r.length)));
@@ -20852,7 +20846,7 @@
     },
     62505: (e, t, r) => {
       "use strict";
-      r.d(t, { EV: () => G, vY: () => A, PC: () => F });
+      r.d(t, { EV: () => A, vY: () => F, PC: () => M });
       var i,
         n = r(33940),
         a = r(52868),
@@ -20888,19 +20882,18 @@
       new Map();
       var S = r(85651),
         C = r(23277);
-      const E = 2500;
-      function R(e, t, r, i) {
+      function E(e, t, r, i) {
         return {
           strId: "section-" + t,
           strSectionLabel: t,
           rtSectionStart: r,
           rtSectionEnd: i,
           bIsFutureSection: r >= e,
-          nRenderedHeight: E,
+          nRenderedHeight: 2500,
           nTopOffset: 0,
         };
       }
-      class I {
+      class R {
         constructor(e, t) {
           (this.m_nForwardStuckCount = 0),
             (this.m_nBackwardStuckCount = 0),
@@ -21016,7 +21009,7 @@
           const r = this.m_currentView.get();
           r && r.dispose();
           const i = this.BIsSingleSourceMuted(),
-            n = new D(
+            n = new I(
               () => this.m_rgSortedCalendarEvents,
               this.LoadAdditionalEvents,
               this.BHitEventHorizon,
@@ -21073,15 +21066,15 @@
           const e = this.GetStoreInitializationTimestamp(),
             t = [],
             r = e.getTime() / 1e3;
-          t.push(R(r, (0, f.Xx)("#EventCalendar_FutureEventsHeader"), r));
+          t.push(E(r, (0, f.Xx)("#EventCalendar_FutureEventsHeader"), r));
           const i = new Date(e);
           i.setHours(0, 0, 0, 1);
           let n = i.getTime() / 1e3;
-          t.push(R(r, (0, f.Xx)("#Time_Today"), n, r)),
+          t.push(E(r, (0, f.Xx)("#Time_Today"), n, r)),
             i.setDate(i.getDate() - 1);
           let a = n;
           (n = i.getTime() / 1e3),
-            t.push(R(r, (0, f.Xx)("#Time_Yesterday"), n, a));
+            t.push(E(r, (0, f.Xx)("#Time_Yesterday"), n, a));
           const s =
               this.m_rgSortedCalendarEvents[
                 this.m_rgSortedCalendarEvents.length - 1
@@ -21092,14 +21085,14 @@
             i.setDate(i.getDate() - 1),
               (a = n),
               (n = i.getTime() / 1e3),
-              t.push(R(r, (0, f.Mh)(i), n, a)),
+              t.push(E(r, (0, f.Mh)(i), n, a)),
               (l = o > n);
           const d = new Date(i);
           let c = n;
           for (; d.getMonth() == e.getMonth() && 1 != d.getDate() && !l; ) {
             d.setDate(d.getDate() - 7);
             const e = d.getTime() / 1e3;
-            t.push(R(r, (0, f.jr)(c - 1), e, c)), (l = o > e), (c = e);
+            t.push(E(r, (0, f.jr)(c - 1), e, c)), (l = o > e), (c = e);
           }
           const m = new Date(e);
           m.setHours(0, 0, 0, 1), m.setDate(1);
@@ -21108,7 +21101,7 @@
             const n = new Date(m);
             n.setMonth(e.getMonth() - i, 1);
             const a = n.getTime() / 1e3;
-            t.push(R(r, (0, f.jr)(a), a, u)), (l = o > a), (u = a);
+            t.push(E(r, (0, f.jr)(a), a, u)), (l = o > a), (u = a);
           }
           this.m_rgCalendarSections.length > t.length
             ? this.m_rgCalendarSections.splice(
@@ -21133,7 +21126,7 @@
           a.setHours(24, 0, 0, 0);
           let s = a.getTime() / 1e3;
           t.push(
-            R(
+            E(
               n,
               (0, f.Xx)(
                 this.m_key.bSectionByDay ? "#Time_UpNext" : "#Time_Today"
@@ -21146,7 +21139,7 @@
             d = s;
           a.setDate(a.getDate() + 1),
             (s = a.getTime() / 1e3),
-            o || t.push(R(n, (0, f.Xx)("#Time_Tomorrow"), d, s)),
+            o || t.push(E(n, (0, f.Xx)("#Time_Tomorrow"), d, s)),
             (o = r <= s);
           const c = 6 - l(e).weekday();
           for (let e = 2; e <= c && !o; e++) {
@@ -21154,7 +21147,7 @@
             const e = (0, f.Mh)(a);
             a.setDate(a.getDate() + 1),
               (s = a.getTime() / 1e3),
-              t.push(R(n, e, d, s)),
+              t.push(E(n, e, d, s)),
               (o = r <= s);
           }
           if (this.m_key.bSectionByDay)
@@ -21163,7 +21156,7 @@
               const e = (0, f.XG)(a);
               a.setDate(a.getDate() + 1),
                 (s = a.getTime() / 1e3),
-                t.push(R(n, e, d, s)),
+                t.push(E(n, e, d, s)),
                 (o = r <= s);
             }
           else {
@@ -21173,7 +21166,7 @@
             if (i.getMonth() == e.getMonth() && i.getDate() != c && !o) {
               i.setDate(i.getDate() + 7);
               const e = i.getTime() / 1e3;
-              t.push(R(n, (0, f.Xx)("#EventCalendar_NextWeek"), d, e)),
+              t.push(E(n, (0, f.Xx)("#EventCalendar_NextWeek"), d, e)),
                 (o = r <= e),
                 (d = e);
             }
@@ -21186,7 +21179,7 @@
               i < m && !o)
             ) {
               const e = m.getTime() / 1e3;
-              t.push(R(n, (0, f.Xx)("#EventCalendar_LaterThisMonth"), d, e)),
+              t.push(E(n, (0, f.Xx)("#EventCalendar_LaterThisMonth"), d, e)),
                 (o = r <= e),
                 (u = e);
             } else u = d;
@@ -21194,7 +21187,7 @@
               const a = new Date(m);
               a.setMonth(e.getMonth() + i);
               const s = a.getTime() / 1e3;
-              t.push(R(n, (0, f.jr)(u), u, s)), (o = r <= s), (u = s);
+              t.push(E(n, (0, f.jr)(u), u, s)), (o = r <= s), (u = s);
             }
           }
           this.m_rgFutureSections.length > t.length
@@ -21282,7 +21275,7 @@
             ? this.m_bFinishedSearchingForward
             : this.m_bFinishedSearchingBackward;
         }
-        GetTimeEdgeForDirection(e, t = undefined) {
+        GetTimeEdgeForDirection(e, t = void 0) {
           return "forward" === e
             ? this.m_rgSortedCalendarEvents.length > 0
               ? this.m_rgSortedCalendarEvents[0].start_time
@@ -21473,32 +21466,32 @@
           return Array.from(this.m_mapCalendarAppsByID.keys());
         }
       }
-      (0, n.gn)([o.LO], I.prototype, "m_mapCalendarAppsByID", void 0),
-        (0, n.gn)([o.LO], I.prototype, "m_mapCalendarClansByID", void 0),
-        (0, n.gn)([o.LO], I.prototype, "m_mapCalendarEventsByGid", void 0),
-        (0, n.gn)([o.LO], I.prototype, "m_rgSortedCalendarEvents", void 0),
-        (0, n.gn)([o.LO], I.prototype, "m_bFinishedSearchingForward", void 0),
-        (0, n.gn)([o.LO], I.prototype, "m_bFinishedSearchingBackward", void 0),
-        (0, n.gn)([o.LO], I.prototype, "m_rgCalendarSections", void 0),
-        (0, n.gn)([o.LO], I.prototype, "m_rgFutureSections", void 0),
-        (0, n.gn)([o.LO], I.prototype, "m_collectionMetaData", void 0),
-        (0, n.gn)([o.aD], I.prototype, "InitCalendarSections", null),
-        (0, n.gn)([o.aD], I.prototype, "InitFutureCalendarSections", null),
-        (0, n.gn)([o.aD], I.prototype, "RegisterCalendarEventsAndModels", null),
-        (0, n.gn)([o.aD], I.prototype, "RegisterCalendarApps", null),
-        (0, n.gn)([o.aD], I.prototype, "RegisterCalendarClans", null),
-        (0, n.gn)([o.aD], I.prototype, "RegisterReadEvents", null),
-        (0, n.gn)([o.aD], I.prototype, "RegisterEventVotes", null),
-        (0, n.gn)([o.aD], I.prototype, "RegisterCalendarEvents", null),
-        (0, n.gn)([y.a], I.prototype, "BHitEventHorizon", null),
-        (0, n.gn)([o.aD.bound], I.prototype, "LoadAdditionalEvents", null),
+      (0, n.gn)([o.LO], R.prototype, "m_mapCalendarAppsByID", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_mapCalendarClansByID", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_mapCalendarEventsByGid", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_rgSortedCalendarEvents", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_bFinishedSearchingForward", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_bFinishedSearchingBackward", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_rgCalendarSections", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_rgFutureSections", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_collectionMetaData", void 0),
+        (0, n.gn)([o.aD], R.prototype, "InitCalendarSections", null),
+        (0, n.gn)([o.aD], R.prototype, "InitFutureCalendarSections", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterCalendarEventsAndModels", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterCalendarApps", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterCalendarClans", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterReadEvents", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterEventVotes", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterCalendarEvents", null),
+        (0, n.gn)([y.a], R.prototype, "BHitEventHorizon", null),
+        (0, n.gn)([o.aD.bound], R.prototype, "LoadAdditionalEvents", null),
         (0, n.gn)(
           [o.aD],
-          I.prototype,
+          R.prototype,
           "UpdateEventBlockFromCalendarEvent",
           null
         );
-      class D {
+      class I {
         constructor(e, t, r, i, a, s) {
           (this.m_rgLoadedEventsBox = o.LO.box([])),
             (this.m_lastLoadLatch = null),
@@ -21622,11 +21615,11 @@
             });
         }
       }
-      (0, n.gn)([o.Fl.struct], D.prototype, "viewFilteredEvents", null),
-        (0, n.gn)([o.Fl.struct], D.prototype, "filteredAndCheckedEvents", null);
-      const T = o.LO.box(null),
-        M = new Map();
-      function F(e, t) {
+      (0, n.gn)([o.Fl.struct], I.prototype, "viewFilteredEvents", null),
+        (0, n.gn)([o.Fl.struct], I.prototype, "filteredAndCheckedEvents", null);
+      const D = o.LO.box(null),
+        T = new Map();
+      function M(e, t) {
         let r = "";
         return (
           e.appids &&
@@ -21650,17 +21643,17 @@
               e.category_or_language +
               "_" +
               e.tag_name),
-          T.get() !== r && (T.set(r), M.has(r) || M.set(r, new I(e, t))),
+          D.get() !== r && (D.set(r), T.has(r) || T.set(r, new R(e, t))),
           r
         );
       }
+      function F() {
+        return null == D.get() && M({}), T.get(D.get());
+      }
       function A() {
-        return null == T.get() && F({}), M.get(T.get());
+        return null !== D;
       }
-      function G() {
-        return null !== T;
-      }
-      window.g_EventCalendarMap = M;
+      window.g_EventCalendarMap = T;
     },
     61615: (e, t, r) => {
       "use strict";
@@ -25031,7 +25024,7 @@
       r.d(t, { Rd: () => k, _R: () => L, Ws: () => A });
       var i = r(89526),
         n = r(44026),
-        a = (r(17589), r(90699)),
+        a = (r(17589), r(51438)),
         s = (r(96572), r(81039)),
         o = r(33940),
         l = r(52868),
@@ -26712,10 +26705,10 @@
       "use strict";
       r.d(t, {
         Hu: () => q,
-        RJ: () => te,
-        Yb: () => ee,
-        ll: () => se,
-        tl: () => de,
+        RJ: () => J,
+        Yb: () => Q,
+        ll: () => ne,
+        tl: () => oe,
       });
       var i = r(33940),
         n = r(52868),
@@ -26776,9 +26769,7 @@
       window.SetHoverPresentation = function (e) {
         window.sessionStorage.setItem(Z, e);
       };
-      const Y = 5500,
-        $ = 2e3;
-      function Q(e) {
+      function Y(e) {
         const { info: t } = e,
           r = (0, l.useRef)({
             include_assets: !0,
@@ -26812,7 +26803,7 @@
                     rctImage: l.createElement(S.v, {
                       appInfo: { id: t.GetID(), type: "game" },
                     }),
-                    nDurationMs: Y,
+                    nDurationMs: 5500,
                   }),
                   t
                     .GetOnlyAllAgesSafeScreenshots()
@@ -26826,7 +26817,7 @@
                           src: e,
                           alt: "screenshot " + (t + 1),
                         }),
-                        nDurationMs: $,
+                        nDurationMs: 2e3,
                       });
                     });
               }
@@ -26847,7 +26838,7 @@
                         src: n,
                         alt: e.GetName(),
                       }),
-                      nDurationMs: $,
+                      nDurationMs: 2e3,
                     });
                 }
               i.length > 0
@@ -26906,7 +26897,7 @@
           )
         );
       }
-      function J(e) {
+      function $(e) {
         const { rgTagIDs: t } = e;
         return l.createElement(
           "div",
@@ -26924,7 +26915,7 @@
           )
         );
       }
-      function ee(e) {
+      function Q(e) {
         const { appInfo: t, bTruncateTotalReviews: r, bShowTooltip: i } = e,
           [n] = (0, b.jk)(
             null == t ? void 0 : t.id,
@@ -27008,7 +26999,7 @@
             : d
         );
       }
-      const te = (0, o.Pi)((e) => {
+      const J = (0, o.Pi)((e) => {
           const { appID: t, snr: r, classOverride: n } = e,
             s = t && g.jg.Get().BIsGameWishlisted(t),
             o = t && g.jg.Get().BOwnsApp(t),
@@ -27055,7 +27046,7 @@
             )
           );
         }),
-        re = (e) => {
+        ee = (e) => {
           const { nCreatorAccountID: t } = e,
             [r, i] = (0, _.KU)(t),
             n = (0, h.iG)(t);
@@ -27072,7 +27063,7 @@
             l.createElement(w.C4, { clanAccountID: t })
           );
         },
-        ie = (0, o.Pi)((e) => {
+        te = (0, o.Pi)((e) => {
           const {
               info: t,
               strStoreUrl: r,
@@ -27163,8 +27154,8 @@
                     null == g ? void 0 : g.GetName()
                   )
                 ),
-                Boolean(g) && l.createElement(J, { rgTagIDs: g.GetTagIDs() }),
-                Boolean(!o && g) && l.createElement(ee, { appInfo: t }),
+                Boolean(g) && l.createElement($, { rgTagIDs: g.GetTagIDs() }),
+                Boolean(!o && g) && l.createElement(Q, { appInfo: t }),
                 Boolean(!o && y) &&
                   l.createElement(
                     "div",
@@ -27188,12 +27179,12 @@
                 Boolean(i) && i,
                 Boolean(d && v) &&
                   l.createElement(D.r, { appid: t.id, bIsMuted: !1 }),
-                c && l.createElement(re, { nCreatorAccountID: c })
+                c && l.createElement(ee, { nCreatorAccountID: c })
               )
             )
           );
         }),
-        ne = (0, o.Pi)((e) => {
+        re = (0, o.Pi)((e) => {
           l.useEffect(() => {
             g.jg.Get().HintLoad();
           }, []);
@@ -27224,28 +27215,28 @@
                   className: U().TrailerAnchorStoreLink,
                 },
                 Boolean(!n && !a) &&
-                  l.createElement(te, { appID: t.id, snr: e.strSNR }),
-                l.createElement(Q, { info: t })
+                  l.createElement(J, { appID: t.id, snr: e.strSNR }),
+                l.createElement(Y, { info: t })
               ),
               l.createElement(
-                ie,
+                te,
                 Object.assign({}, e, { bPreventNavigation: Boolean(a) })
               )
             )
           );
         }),
-        ae = 150;
-      function se(e) {
+        ie = 150;
+      function ne(e) {
         const { item: t } = e,
           [r] = (0, b.jk)(t.id, (0, f.TM)(t.type), {});
         if (!r) return null;
         if (1 == r.GetStoreItemType() && 1 == r.GetIncludedAppIDs().length) {
           const t = { id: r.GetIncludedAppIDs()[0], type: "game" };
-          return l.createElement(oe, Object.assign({}, e, { item: t }));
+          return l.createElement(ae, Object.assign({}, e, { item: t }));
         }
-        return l.createElement(oe, Object.assign({}, e));
+        return l.createElement(ae, Object.assign({}, e));
       }
-      function oe(e) {
+      function ae(e) {
         const {
             item: t,
             elElementToAppend: r,
@@ -27289,7 +27280,7 @@
         const B = "hiding" == K(),
           v = (0, p.Hf)(`${_.GetStorePageURL()}${o ? `?${o}` : ""}`, h),
           w = l.createElement(
-            ne,
+            re,
             Object.assign(
               {},
               {
@@ -27307,12 +27298,12 @@
             )
           );
         return l.createElement(
-          de,
+          oe,
           Object.assign({ hoverContent: w, strClickUrl: v }, u),
           e.children
         );
       }
-      const le = l.forwardRef((e, t) => {
+      const se = l.forwardRef((e, t) => {
         const { hoverProps: r, children: i } = e,
           n = l.useCallback((e) => (null == e ? void 0 : e.focus()), []);
         return l.createElement(
@@ -27334,7 +27325,7 @@
           )
         );
       });
-      function de(e) {
+      function oe(e) {
         const {
             hoverContent: t,
             hoverProps: r,
@@ -27379,17 +27370,17 @@
           }),
           c &&
             l.createElement(
-              ce,
+              le,
               { visible: u, target: _, nDelayShowMs: n, hoverProps: r },
               t
             ),
           l.createElement(v.SV, null, s)
         );
       }
-      function ce(e) {
+      function le(e) {
         const {
             hoverProps: t,
-            nDelayShowMs: r = ae,
+            nDelayShowMs: r = ie,
             target: i,
             visible: n,
             children: a,
@@ -27445,7 +27436,7 @@
           );
         return d.createPortal(
           l.createElement(
-            le,
+            se,
             { hoverProps: m },
             l.createElement(v.SV, null, a)
           ),
@@ -27501,7 +27492,7 @@
       var i = r(33940),
         n = r(62983),
         a = r(85886),
-        s = r(86283),
+        s = r(67727),
         o = r(54671),
         l = r(43707),
         d = r(32765),
@@ -27691,7 +27682,7 @@
         n = r(89526),
         a = r(84199),
         s = r(44026),
-        o = r(90699),
+        o = r(51438),
         l = r(16221),
         d = r(4556),
         c = r(81039),
@@ -28402,7 +28393,7 @@
         a = r.n(n),
         s = r(89526),
         o = r(26171),
-        l = r(86283),
+        l = r(67727),
         d = r(98210),
         c = r(85886),
         m = r(25871),
@@ -28811,7 +28802,7 @@
       "use strict";
       r.d(t, { zw: () => _, Dt: () => u, $N: () => p });
       var i = r(89526),
-        n = r(86283),
+        n = r(67727),
         a = r(98009),
         s = r(33940),
         o = r(45437),
@@ -29364,7 +29355,7 @@
       var i = r(33940),
         n = r(89526),
         a = r(46132),
-        s = r(86283),
+        s = r(67727),
         o = r(14826),
         l = r(207),
         d = r(32765),

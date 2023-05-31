@@ -2442,65 +2442,11 @@
           return "CStoreBrowse_GetStoreCategories_Response_Category";
         }
       }
-      class U extends n {
-        constructor(e = null) {
-          super(),
-            U.prototype.dlc_data || s.aR(U.M()),
-            n.initialize(this, e, 0, -1, [1, 2], null);
-        }
-        static M() {
-          return (
-            U.sm_m ||
-              (U.sm_m = {
-                proto: U,
-                fields: {
-                  dlc_data: { n: 1, c: A, r: !0, q: !0 },
-                  playtime: { n: 2, c: P, r: !0, q: !0 },
-                },
-              }),
-            U.sm_m
-          );
-        }
-        static MBF() {
-          return U.sm_mbf || (U.sm_mbf = s.Bh(U.M())), U.sm_mbf;
-        }
-        toObject(e = !1) {
-          return U.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.TA(U.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.aD(U.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new U();
-          return U.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.F(U.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.l2(U.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetDLCForApps_Response";
-        }
-      }
       class A extends n {
         constructor(e = null) {
           super(),
-            A.prototype.appid || s.aR(A.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            A.prototype.dlc_data || s.aR(A.M()),
+            n.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -2508,25 +2454,8 @@
               (A.sm_m = {
                 proto: A,
                 fields: {
-                  appid: { n: 1, br: s.FE.readUint32, bw: s.Xc.writeUint32 },
-                  parentappid: {
-                    n: 2,
-                    br: s.FE.readUint32,
-                    bw: s.Xc.writeUint32,
-                  },
-                  release_date: {
-                    n: 3,
-                    br: s.FE.readUint32,
-                    bw: s.Xc.writeUint32,
-                  },
-                  coming_soon: { n: 4, br: s.FE.readBool, bw: s.Xc.writeBool },
-                  price: {
-                    n: 5,
-                    br: s.FE.readInt64String,
-                    bw: s.Xc.writeInt64String,
-                  },
-                  discount: { n: 6, br: s.FE.readUint32, bw: s.Xc.writeUint32 },
-                  free: { n: 7, br: s.FE.readBool, bw: s.Xc.writeBool },
+                  dlc_data: { n: 1, c: U, r: !0, q: !0 },
+                  playtime: { n: 2, c: P, r: !0, q: !0 },
                 },
               }),
             A.sm_m
@@ -2562,6 +2491,77 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetDLCForApps_Response";
+        }
+      }
+      class U extends n {
+        constructor(e = null) {
+          super(),
+            U.prototype.appid || s.aR(U.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            U.sm_m ||
+              (U.sm_m = {
+                proto: U,
+                fields: {
+                  appid: { n: 1, br: s.FE.readUint32, bw: s.Xc.writeUint32 },
+                  parentappid: {
+                    n: 2,
+                    br: s.FE.readUint32,
+                    bw: s.Xc.writeUint32,
+                  },
+                  release_date: {
+                    n: 3,
+                    br: s.FE.readUint32,
+                    bw: s.Xc.writeUint32,
+                  },
+                  coming_soon: { n: 4, br: s.FE.readBool, bw: s.Xc.writeBool },
+                  price: {
+                    n: 5,
+                    br: s.FE.readInt64String,
+                    bw: s.Xc.writeInt64String,
+                  },
+                  discount: { n: 6, br: s.FE.readUint32, bw: s.Xc.writeUint32 },
+                  free: { n: 7, br: s.FE.readBool, bw: s.Xc.writeBool },
+                },
+              }),
+            U.sm_m
+          );
+        }
+        static MBF() {
+          return U.sm_mbf || (U.sm_mbf = s.Bh(U.M())), U.sm_mbf;
+        }
+        toObject(e = !1) {
+          return U.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.TA(U.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.aD(U.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new U();
+          return U.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.F(U.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.l2(U.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreBrowse_GetDLCForApps_Response_DLCData";
@@ -2823,7 +2823,7 @@
             });
           }),
           (e.GetDLCForApps = function (e, t) {
-            return e.SendMsg("StoreBrowse.GetDLCForApps#1", t, U, {
+            return e.SendMsg("StoreBrowse.GetDLCForApps#1", t, A, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -2831,7 +2831,8 @@
           (e.GetDLCForAppsSolr = function (e, t) {
             return e.SendMsg("StoreBrowse.GetDLCForAppsSolr#1", t, k, {
               bConstMethod: !0,
-              ePrivilege: 1,
+              ePrivilege: 0,
+              eWebAPIKeyRequirement: 1,
             });
           });
       })(q || (q = {}));
@@ -3513,7 +3514,7 @@
       r.d(t, { De: () => l, Fq: () => o, pA: () => n });
       var i = r(53143),
         s = r(32765),
-        a = r(86283);
+        a = r(67727);
       r(3609);
       function n(e, t) {
         e.Body().set_context(o(t));

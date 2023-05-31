@@ -64,7 +64,7 @@
 "LoginIPTNotEnabledOnAccount"	"IPT no habilitado para esta cuenta..."
 "LoginIPTAuthenticatingWithSteam" "Autenticando IPT con Steam..."
 "LoginIPTConfirmed"				"Autenticación confirmada, iniciando sesión..."
-"LoginIPTNotConfirmed"			"IPT no pudo verficarse. Esta cuenta\nno puede ser utilizada en este equipo."
+"LoginIPTNotConfirmed"			"IPT no pudo verificarse. Esta cuenta\nno puede ser utilizada en este equipo."
 "LoginIPTConnectFailed"		"No se ha podido contactar con los servidores de Steam.\nPor favor, inténtalo de nuevo más tarde."
 
 

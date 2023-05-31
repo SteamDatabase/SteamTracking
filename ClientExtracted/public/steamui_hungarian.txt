@@ -2902,7 +2902,7 @@
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Elérted a mai online idő limitedet. Kérjük, tarts szünetet, és próbáld meg holnap reggel 8 óra után."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"18 éven aluli játékosok nem játszhatnak ezzel a játékkal 22:00 és másnap reggel 08:00 óra között. Tarts szünetet."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Fiókod valódi név ellenőrzés alatt áll, próbáld újra később."
-"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"A játék műszaki frissítése zajlik, és kiskorúak azok befejeződéséig nem fognak tudni játszani. Elnézést a kellemetlenségért, és köszönjük megértésedet."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"A játék műszaki frissítése zajlik, és kiskorúak annak befejeződéséig nem fognak tudni játszani. Elnézést a kellemetlenségért, és köszönjük megértésedet."
 
 
 "Steam_GuestPassesColumn" 		"Ajándékok"

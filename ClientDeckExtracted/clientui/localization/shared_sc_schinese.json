@@ -144,6 +144,8 @@
 	"DiscoveryQueue_LabsHeader": "<1>蒸汽平台实验室</1> <2>留下反馈</2>",
 	"DiscoveryQueue_WidgetHeader": "全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
 	"DiscoveryQueue_WidgetHeader_LoggedOut": "登录以体验全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
+	"SteamNotificationTypeDesc_11": "我收到了蒸汽平台客服的回复",
+	"SteamNotificationTypeDesc_12": "我收到了蒸汽平台回合通知",
 	"Notification_Item_RollupMore_Steam": "还有 %1$s 个蒸汽平台物品",
 	"NotificationsList_EmptyBody": "您可以在此处看到有关您的愿望单、好友、游戏、库存等的蒸汽平台通知。"
 }
