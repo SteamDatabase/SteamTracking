@@ -270,7 +270,7 @@ a.store_header_btn_content {
 /* we have one image with all the gradients, and reference points in the image with background-position */
 
 .store_header_btn .store_header_btn_content, .store_header_btn .store_header_btn_caps {
-	background-image: url( '/store/public/images/v5/store_header_gradients.png' );
+	background-image: url( '/public/images/v5/store_header_gradients.png' );
 	background-repeat: repeat-x;
 }
 
@@ -310,7 +310,7 @@ a#store_search_link img {
 
 .searchbox {
 
-	background-image: url( '/store/public/images/v5/store_header_search.png?v=2' );
+	background-image: url( '/public/images/v5/store_header_search.png?v=2' );
 	
 	color: #a6a5a2;
 	width: 253px;
@@ -347,7 +347,7 @@ a#store_search_link img {
 	height: 49px;
 	width: 6px;
 	top: 0px;
-	background-image: url( '/store/public/images/v5/store_header_shadow_caps.png' );
+	background-image: url( '/public/images/v5/store_header_shadow_caps.png' );
 	background-repeat: no-repeat;
 }
 
@@ -364,7 +364,7 @@ a#store_search_link img {
 #store_nav_area .store_nav_bg {
 	height: 35px;
 	padding: 7px 0px;
-	background-image: url( '/store/public/images/v5/store_header_gradients.png' );
+	background-image: url( '/public/images/v5/store_header_gradients.png' );
 	background-repeat: repeat-x;
 	background-position: 0px -115px;
 }
@@ -483,7 +483,7 @@ a#store_search_link img {
 
 
 div#main {
-	background-image: url('/store/public/images/v5/content_bg.png');
+	background-image: url('/public/images/v5/content_bg.png');
 	background-repeat: repeat-x;
 	background-color: #000000;
 }
@@ -584,7 +584,7 @@ div.rightcol {
 
 .rightcol .block_flipped_gradient {
 	border: none;
-	background-image: url( '/store/public/images/v5/rightcol_bg_block_flipped.png' );
+	background-image: url( '/public/images/v5/rightcol_bg_block_flipped.png' );
 	background-position: top left;
 	background-repeat: no-repeat;
 	height: 1px;	
@@ -593,13 +593,13 @@ div.rightcol {
 .rightcol .block_content {
 	border: none;
 	border-left: 1px solid #262626;
-	background-image: url( '/store/public/images/v5/rightcol_bg_block.png' );
+	background-image: url( '/public/images/v5/rightcol_bg_block.png' );
 	background-position: bottom right;
 	background-repeat: no-repeat;
 }
 
 .rightcol #col_right_review_payment_tips .block_content {
-	background-image: url( '/store/public/images/v5/rightcol_bg_block_green.png' );
+	background-image: url( '/public/images/v5/rightcol_bg_block_green.png' );
 }
 
 .block_content.nopad {
@@ -675,25 +675,25 @@ div.rightcol {
 }
 
 .block .block_header {
-	/* background-image: url('/store/public/images/v5/full_bg_gray.png'); */
+	/* background-image: url('/public/images/v5/full_bg_gray.png'); */
 	background-repeat: no-repeat;
 	background-color: #303030;
 }
 
 .leftcol .block .block_header {
-	background-image: url('/store/public/images/v5/maincol_bg_gray.png');
+	background-image: url('/public/images/v5/maincol_bg_gray.png');
 	background-repeat: no-repeat;
 	background-color: #303030;
 }
 
 .rightcol .block .block_header {
-	/* background-image: url('/store/public/images/v5/rightcol_bg_blue.png'); */
+	/* background-image: url('/public/images/v5/rightcol_bg_blue.png'); */
 	background-repeat: no-repeat;
 	background-color: #3C3D3E;
 }
 
 .rightcol .block .block_header_green {
-	background-image: url('/store/public/images/v5/rightcol_bg_green.png');
+	background-image: url('/public/images/v5/rightcol_bg_green.png');
 }
 
 .block_content h4 {
@@ -786,7 +786,7 @@ div.footer_content {
 	padding-left: 6px;
 	padding-right: 35px;
 	
-	background-image: url( '/store/public/images/v5/ico_search_dropdown.gif' );
+	background-image: url( '/public/images/v5/ico_search_dropdown.gif' );
 	
 	position: relative;
 	/* z-index: 250; */
@@ -1275,7 +1275,7 @@ div#main_cluster_control_ctn a:hover {
         width: 4px;
         height: 5px;
         display: block;
-        background-image: url('/store/public/images/v5/arrow_next_prev.png');
+        background-image: url('/public/images/v5/arrow_next_prev.png');
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFBAMAAACKv7BmAAAAJFBMVEX////////////////////////////////////////////////Vd7HLAAAAC3RSTlMA/tScEUBBnRLNyydRu+0AAAAfSURBVAjXY2AIUmVgcJbeaMIwe/fuXQztIBZDkioDAFBWBpQWwSH5AAAAAElFTkSuQmCC');
     }
 
@@ -1346,7 +1346,7 @@ div.slider div.handle {
     height: 13px;
     cursor: pointer;
 
-    background-image: url( '/store/public/images/v5/control_slider.png' );
+    background-image: url( '/public/images/v5/control_slider.png' );
     background-repeat: no-repeat;
     background-position: left;
 }
@@ -1357,7 +1357,7 @@ div#main_cluster_control.slider div.handle {
 	height: 22px;
 	cursor: pointer; 
 	
-	background-image: url( '/store/public/images/v5/slider_button.png' );
+	background-image: url( '/public/images/v5/slider_button.png' );
 	background-repeat: no-repeat; 
 	background-position: left;
 }
@@ -1456,7 +1456,7 @@ a.btn_browse {
 	display: block;
 	width: 150px;
 	height: 49px;
-	background-image: url('/store/public/images/v5/btn_browse.png');
+	background-image: url('/public/images/v5/btn_browse.png');
 	background-repeat: no-repeat;
 	margin-bottom: 12px;
 	position: relative;
@@ -1546,7 +1546,7 @@ a.btn_browse:hover {
  */
  
 #home_install_steam {
-	background-image: url( '/store/public/images/v5/about/btn_download_nobg.png' );
+	background-image: url( '/public/images/v5/about/btn_download_nobg.png' );
 	width: 277px;
 	height: 42px;
 	
@@ -1587,7 +1587,7 @@ a#home_install_steam_link:hover {
 	display: block;
 	width: 219px;
 	height: 48px;
-	background-image: url('/store/public/images/v5/btn_white.png');
+	background-image: url('/public/images/v5/btn_white.png');
 	background-repeat: no-repeat;
 }
 
@@ -1625,7 +1625,7 @@ a.btn_white:hover, a.btn_white:hover h3, a.btn_white:hover h5 {
 }
 
 .btn_gray {
-	background-image: url( '/store/public/images/v5/btn_gray.png' );
+	background-image: url( '/public/images/v5/btn_gray.png' );
 	width: 276px;
 	height: 41px;
 	
@@ -1660,7 +1660,7 @@ a.btn_white:hover, a.btn_white:hover h3, a.btn_white:hover h5 {
 	display: block;
 	width: 219px;
 	height: 48px;
-	background-image: url('/store/public/images/v5/btn_green.png');
+	background-image: url('/public/images/v5/btn_green.png');
 	background-repeat: no-repeat;
 }
 
@@ -1755,7 +1755,7 @@ div.hover {
 .hover_arrow_left {
 	width: 13px;
 	height: 26px;
-	background-image: url( '/store/public/images/v5/hover_arrow_both.gif' );
+	background-image: url( '/public/images/v5/hover_arrow_both.gif' );
 	background-repeat: no-repeat;
 	background-position: left top;
 	
@@ -1767,7 +1767,7 @@ div.hover {
 .hover_arrow_right {
 	width: 13px;
 	height: 26px;
-	background-image: url( '/store/public/images/v5/hover_arrow_both.gif' );
+	background-image: url( '/public/images/v5/hover_arrow_both.gif' );
 	background-repeat: no-repeat;
 	background-position: right top;
 	
@@ -1816,7 +1816,7 @@ div.hover {
 .tabbar {
 	border-bottom: 1px solid #000000;
 	
-	background-image: url('/store/public/images/v5/maincol_bg_gray.png');
+	background-image: url('/public/images/v5/maincol_bg_gray.png');
 	background-repeat: no-repeat;
 	background-position: bottom;
 	
@@ -2106,23 +2106,23 @@ span.platform_img {
 
 span.platform_img.steamplay {
 	width: 72px;
-	background-image: url( '/store/public/images/v5/platforms/platform_steamplay_only.png' );
+	background-image: url( '/public/images/v5/platforms/platform_steamplay_only.png' );
 }
 
 span.platform_img.win {
-	background-image: url( '/store/public/images/v5/platforms/platform_win.png' );
+	background-image: url( '/public/images/v5/platforms/platform_win.png' );
 }
 
 span.platform_img.mac {
-	background-image: url( '/store/public/images/v5/platforms/platform_mac.png' );
+	background-image: url( '/public/images/v5/platforms/platform_mac.png' );
 }
 
 span.platform_img.linux {
-	background-image: url( '/store/public/images/v5/platforms/platform_linux.png' );
+	background-image: url( '/public/images/v5/platforms/platform_linux.png' );
 }
 
 span.platform_img.streamingvideo {
-	background-image: url( '/store/public/images/v5/platforms/icon_streamingvideo_v5.png' );
+	background-image: url( '/public/images/v5/platforms/icon_streamingvideo_v5.png' );
 }
 
 img.platform_small, .platform_img {
@@ -2209,7 +2209,7 @@ img.platform_small, .platform_img {
  
 .dailydeal {
 	position: relative;
-	background-image: url( '/store/public/images/v5/dailydeal.png' );
+	background-image: url( '/public/images/v5/dailydeal.png' );
 	background-repeat: no-repeat;
 	width: 308px;
 	height: 175px;
@@ -2290,15 +2290,15 @@ img.platform_small, .platform_img {
 }
 
 .friend_status_offline .friend_block_avatar {
-	background-image: url( '/store/public/images/communitylink/iconholder_offline.jpg' );
+	background-image: url( '/public/images/communitylink/iconholder_offline.jpg' );
 }
 
 .friend_status_online .friend_block_avatar {
-	background-image: url( '/store/public/images/communitylink/iconholder_online.jpg' );
+	background-image: url( '/public/images/communitylink/iconholder_online.jpg' );
 }
 
 .friend_status_in-game .friend_block_avatar {
-	background-image: url( '/store/public/images/communitylink/iconholder_ingame.jpg' );
+	background-image: url( '/public/images/communitylink/iconholder_ingame.jpg' );
 }
 
 .friend_block_text {
@@ -2407,7 +2407,7 @@ a.linkbar {
 	display: block;
 	position: relative;
 	height: 22px;
-	background-image: url( '/store/public/images/v5/bg_link_bar.png' );
+	background-image: url( '/public/images/v5/bg_link_bar.png' );
 	background-repeat: no-repeat;
 	background-position: right;
 	padding-top: 8px;
@@ -2480,7 +2480,7 @@ h1.blue, h2.blue {
 .pulldown {
 	padding-left: 5px;
 	padding-right: 18px;
-	background-image: url( '/store/public/images/v5/btn_arrow_down_padded.png' );
+	background-image: url( '/public/images/v5/btn_arrow_down_padded.png' );
 	background-position: right center;
 	background-repeat: no-repeat;
 	
@@ -2497,7 +2497,7 @@ h1.blue, h2.blue {
 	position: relative;
 	
 	background-color: #3b3938;
-	background-image: url( '/store/public/images/v5/bg_popup.png' );
+	background-image: url( '/public/images/v5/bg_popup.png' );
 	background-repeat: repeat-x;
 	background-position: top;
 }
@@ -2510,7 +2510,7 @@ h1.blue, h2.blue {
 	font-weight: bold;
 	color: #d6d7d8;
 	
-	background-image: url('/store/public/images/v5/maincol_bg_gray.png');
+	background-image: url('/public/images/v5/maincol_bg_gray.png');
 	background-repeat: no-repeat;
 	background-color: #303030;
 }
@@ -2545,7 +2545,7 @@ h1.blue, h2.blue {
 	position: absolute;
 	height: 12px;
 	width: 12px;
-	background-image: url( '/store/public/images/v5/shadow_corners.png' );
+	background-image: url( '/public/images/v5/shadow_corners.png' );
 }
 
 .shadow_ul {
@@ -2578,7 +2578,7 @@ h1.blue, h2.blue {
 	height: 12px;
 	left: 0px;
 	right: 0px;
-	background-image: url( '/store/public/images/v5/shadow_topbottom.png' );
+	background-image: url( '/public/images/v5/shadow_topbottom.png' );
 	background-repeat: repeat-x; 
 }
 .shadow_top {
@@ -2595,7 +2595,7 @@ h1.blue, h2.blue {
 	bottom: 0px;
 	margin: 12px 0px;
 	width: 12px;
-	background-image: url( '/store/public/images/v5/shadow_leftright.png' );
+	background-image: url( '/public/images/v5/shadow_leftright.png' );
 	background-repeat: repeat-y;
 }
 .shadow_left {
@@ -2764,21 +2764,21 @@ div.autocomplete ul li {
 }
 
 .btn_checkout_green {
-	background-image: url('/store/public/images/v5/btn_checkout_active_bg.png');
+	background-image: url('/public/images/v5/btn_checkout_active_bg.png');
 }
 .btn_checkout_green .leftcap, .btn_checkout_green .rightcap {
-	background-image: url('/store/public/images/v5/btn_checkout_active_corners.png');
+	background-image: url('/public/images/v5/btn_checkout_active_corners.png');
 }
 
 .btn_checkout_blue {
-	background-image: url('/store/public/images/v5/btn_checkout_blue_bg.png');
+	background-image: url('/public/images/v5/btn_checkout_blue_bg.png');
 }
 .btn_checkout_blue .leftcap, .btn_checkout_blue .rightcap {
-	background-image: url('/store/public/images/v5/btn_checkout_blue_corners.png');
+	background-image: url('/public/images/v5/btn_checkout_blue_corners.png');
 }
 
 .btn_checkout_gray, .btn_checkout_gray .leftcap, .btn_checkout_gray .rightcap {
-	background-image: url('/store/public/images/v5/btn_checkout_gray_comp.png');
+	background-image: url('/public/images/v5/btn_checkout_gray_comp.png');
 }
 
 
@@ -2811,14 +2811,14 @@ a.btn_checkout_gray, a.btn_checkout_gray:hover {
 }
 
 .btn_checkout_green.disabled, .btn_checkout_gray.disabled {
-	background-image: url('/store/public/images/v5/btn_checkout_inactive_bg.png');
+	background-image: url('/public/images/v5/btn_checkout_inactive_bg.png');
 	color: #626467;
 	cursor: default;
 }
 
 .btn_checkout_green.disabled .leftcap, .btn_checkout_green.disabled .rightcap,
  .btn_checkout_gray.disabled .leftcap, .btn_checkout_gray.disabled .rightcap {
-	background-image: url('/store/public/images/v5/btn_checkout_inactive_corners.png');
+	background-image: url('/public/images/v5/btn_checkout_inactive_corners.png');
 }
 
 .iepopupfix {
@@ -2863,7 +2863,7 @@ img.iepopupfix_img {
 
 .recommendation_imgbtn
 {
-	background-image: url( '/store/public/images/recommended/recommended_buttons.png' );
+	background-image: url( '/public/images/recommended/recommended_buttons.png' );
 	background-repeat: no-repeat;
 	width: 22px;
 	height: 22px;
@@ -3050,19 +3050,19 @@ ul.squares li {
 	height: 34px;
 	top: 0px;
 	
-	background-image: url( '/store/public/images/v5/btn_addtocart_corners.gif' );
+	background-image: url( '/public/images/v5/btn_addtocart_corners.gif' );
 }
 
 .btn_addtocart.btn_packageinfo .btn_addtocart_left, .btn_addtocart.btn_packageinfo .btn_addtocart_right {
-	background-image: url( '/store/public/images/v5/btn_packageinfo_corners.gif' );
+	background-image: url( '/public/images/v5/btn_packageinfo_corners.gif' );
 }
 
 .btn_addtocart.btn_addtocart_blue .btn_addtocart_left, .btn_addtocart.btn_addtocart_blue .btn_addtocart_right {
-	background-image: url( '/store/public/images/v5/btn_addtocart_blue_corners.jpg' );
+	background-image: url( '/public/images/v5/btn_addtocart_blue_corners.jpg' );
 }
 
 .btn_addtocart.btn_clickfordetails .btn_addtocart_left, .btn_addtocart.btn_clickfordetails .btn_addtocart_right {
-	background-image: url( '/store/public/images/v5/btn_clickfordetails_corners.gif' );
+	background-image: url( '/public/images/v5/btn_clickfordetails_corners.gif' );
 }
 
 
@@ -3087,7 +3087,7 @@ ul.squares li {
 	padding: 0px 11px;
 	line-height: 34px;
 	
-	background-image: url( '/store/public/images/v5/btn_addtocart_repeat.gif' );
+	background-image: url( '/public/images/v5/btn_addtocart_repeat.gif' );
 	background-repeat: repeat-x;
 	
 	text-transform: uppercase;
@@ -3095,15 +3095,15 @@ ul.squares li {
 }
 
 .btn_addtocart.btn_packageinfo .btn_addtocart_content {
-	background-image: url( '/store/public/images/v5/btn_packageinfo_repeat.gif' );
+	background-image: url( '/public/images/v5/btn_packageinfo_repeat.gif' );
 }
 
 .btn_addtocart.btn_addtocart_blue .btn_addtocart_content {
-	background-image: url( '/store/public/images/v5/btn_addtocart_blue_repeat.jpg' );
+	background-image: url( '/public/images/v5/btn_addtocart_blue_repeat.jpg' );
 }
 
 .btn_addtocart.btn_clickfordetails .btn_addtocart_content {
-	background-image: url( '/store/public/images/v5/btn_clickfordetails_repeat.gif' );
+	background-image: url( '/public/images/v5/btn_clickfordetails_repeat.gif' );
 }
 
 .btn_addtocart a.btn_addtocart_content:hover {
@@ -3168,7 +3168,7 @@ ul.squares li {
 	background-repeat: repeat-x;
 
 	background-color: #e5e2df;
-	background-image: url('/store/public/images/v5/client_btn.png');
+	background-image: url('/public/images/v5/client_btn.png');
 	background-position: top;
 }
 
@@ -3217,7 +3217,7 @@ ul.squares li {
 	background-repeat: repeat-x;
 
 	background-color: #e5e2df;
-	background-image: url('/store/public/images/v5/client_btn.png');
+	background-image: url('/public/images/v5/client_btn.png');
 	background-position: top;
 }
 
@@ -3237,7 +3237,7 @@ ul.squares li {
 
 .store_checkbox_button {
 	display: inline-block;
-	background: url('/store/public/images/v5/store_checkbox.png') no-repeat top left;
+	background: url('/public/images/v5/store_checkbox.png') no-repeat top left;
 	cursor: pointer;
 	height: 12px;
 	font-size: 10px;
@@ -3276,7 +3276,7 @@ ul.squares li {
 	float: right;
 	font-size: 14px;
 	padding: 8px;
-	background: url(/store/public/images/v5/package_arrow.png) top left no-repeat;
+	background: url(/public/images/v5/package_arrow.png) top left no-repeat;
 }
 
 
@@ -3314,7 +3314,7 @@ a.item_action {
     background-repeat: repeat-x;
 
     background-color: #5c5957;
-    background-image: url('/store/public/images/account/item_action_btn.png');
+    background-image: url('/public/images/account/item_action_btn.png');
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpiyExLZvr//z8G/vcPRP8D0/+A9H8o/e8fMhuhBk0/QIABALdaQAnvsp4ZAAAAAElFTkSuQmCC');
 }
 
@@ -3390,7 +3390,7 @@ a.item_action {
 		height: 12px;
 		padding: 0;
 		display: inline-block;
-		background-image: url( '/store/public/images/v5/btn_arrow_down_padded.png' );
+		background-image: url( '/public/images/v5/btn_arrow_down_padded.png' );
 		background-position: center;
 		background-repeat: no-repeat;
 		cursor: pointer;
@@ -3429,7 +3429,7 @@ a.item_action {
 		top: 74px;
 		width: 582px;
 		height: 148px;
-		background-image: url(/store/public/images/v5/StoreHomeBanner_slice.png);
+		background-image: url(/public/images/v5/StoreHomeBanner_slice.png);
 	}
 
 	.block_greenlight .container > a {
@@ -3439,7 +3439,7 @@ a.item_action {
 	}
 
 .leftcol .block .block_header.green {
-	background-image: url(/store/public/images/v5/green_header.png);
+	background-image: url(/public/images/v5/green_header.png);
 }
 
 .block_header.green .right a {
@@ -3473,11 +3473,11 @@ a.item_action {
 }
 
 .osrestricted_alternate_mac {
-    background-image: url(/store/public/images/v5/platforms/platform_mac_large.png);
+    background-image: url(/public/images/v5/platforms/platform_mac_large.png);
 }
 
 .osrestricted_alternate_windows  {
-    background-image: url(/store/public/images/v5/platforms/platform_pc_large.png);
+    background-image: url(/public/images/v5/platforms/platform_pc_large.png);
 }
 
 .game_purchase_subscription {

@@ -4,7 +4,7 @@ div#main, div#footer, body {
 }
 
 div#main {
-	background-image: url(/store/public/images/promo/earlyaccess/bg.png);
+	background-image: url(/public/images/promo/earlyaccess/bg.png);
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 }
@@ -20,7 +20,7 @@ div#main_content {
 #header_callout {
 	width: 978px;
 	height: 101px;
-	background-image: url(/store/public/images/promo/earlyaccess/header_splash.png);
+	background-image: url(/public/images/promo/earlyaccess/header_splash.png);
 	box-shadow: 0px 3px 8px -3px #000;
 	z-index: 10;
 	position: relative;
@@ -51,7 +51,7 @@ div#main_content {
 	width: 949px;
 	height: 267px;
 	margin: 0 15px;
-	background-image: url(/store/public/images/promo/earlyaccess/screenshots.jpg);
+	background-image: url(/public/images/promo/earlyaccess/screenshots.jpg);
 }
 
 	#screenshots .info {
@@ -149,11 +149,11 @@ div#main_content {
 			margin-top: 20px;
 			width: 275px;
 			height: 101px;
-			background: #141414 url(/store/public/images/promo/earlyaccess/icons_bg.png) bottom left no-repeat;
+			background: #141414 url(/public/images/promo/earlyaccess/icons_bg.png) bottom left no-repeat;
 		}
 
 			#content .rightcol .box > div.icon {
-				background-image: url(/store/public/images/promo/earlyaccess/ico_sprite.png);
+				background-image: url(/public/images/promo/earlyaccess/ico_sprite.png);
 			}
 
 			#content .rightcol .box > span {

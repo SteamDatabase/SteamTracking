@@ -1079,16 +1079,6 @@ td.wht_total {
 	display: none;
 }
 
-.account_setting_descendent_1 {
-	padding-left: 20px;
-}
-.account_setting_descendent_2 {
-	padding-left: 40px;
-}
-.account_setting_descendent_3 {
-	padding-left: 60px;
-}
-
 .account_manage_link {
 	margin: 5px 0;
 	display: inline-block;

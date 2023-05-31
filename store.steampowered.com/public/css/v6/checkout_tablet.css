@@ -1175,7 +1175,7 @@ html.tablet .checkout_tab.checkout_content .rule {
 
 /* Confirmation title */
 html.tablet h2.purchase_confirmation_title {
-	background-image: url('/store/public/images/ico_gamepad/check-circle.svg');
+	background-image: url('/public/images/ico_gamepad/check-circle.svg');
 	background-repeat: no-repeat;
 	background-size: 36px 36px;
 	background-position: 0px 2px;

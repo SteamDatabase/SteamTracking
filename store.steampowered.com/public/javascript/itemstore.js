@@ -19,7 +19,7 @@ function FilterSelect( url, filter )
 function AddMtxItemToCart( appid, assetclassid, quantity )
 {
 	$J.post(
-		'https://store.steampowered.com/store/cart/addtocart',
+		'https://store.steampowered.com/cart/addtocart',
 		{
 			'sessionid' : g_sessionID,
 			'action' : 'add_to_cart',
@@ -53,7 +53,7 @@ function AddMtxItemToCart( appid, assetclassid, quantity )
 function StartCheckout( appid )
 {
 	$J.post(
-		'https://store.steampowered.com/store/itemstore/' + appid + '/ajaxcheckout/',
+		'https://store.steampowered.com/itemstore/' + appid + '/ajaxcheckout/',
 		{
 			'sessionid' : g_sessionID
 		}
@@ -84,7 +84,7 @@ function ContinueCheckout( checkoutParams )
 {
 	var params = {
 		'method' : 'POST',
-		'action' : 'https://store.steampowered.com/store/itemcart/checkout/',
+		'action' : 'https://store.steampowered.com/itemcart/checkout/',
 		'style' : 'display: none'
 	};
 

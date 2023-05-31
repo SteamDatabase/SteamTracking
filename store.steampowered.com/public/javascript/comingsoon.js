@@ -132,7 +132,7 @@ function InitTabPreview()
 
 				for( var i=0; i<rgData.tags.length; i++)
 				{
-					var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/store/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab-preview' );
+					var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab-preview' );
 					$elTagContainer.append($J('<a>').attr('href',url).text( rgData.tags[i] ));
 				}
 				$elInfoDiv.append($elTagContainer);

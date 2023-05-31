@@ -33,7 +33,7 @@ function OnCuratorsRendered()
 function FollowCurator( clanID )
 {
 	$J.post(
-		'https://store.steampowered.com/store/curators/ajaxfollow',
+		'https://store.steampowered.com/curators/ajaxfollow',
 		{ 'clanid' : clanID, 'sessionid' : g_sessionID },
 		function( data )
 		{
@@ -77,7 +77,7 @@ function HandleHashChangeCurators( bClearResults )
 
 function InitCuratorsPagingControls( oPagingData )
 {
-	g_oCurators = new CAjaxPagingControls( oPagingData, 'https://store.steampowered.com/store/curators/ajaxgetcurators/' );
+	g_oCurators = new CAjaxPagingControls( oPagingData, 'https://store.steampowered.com/curators/ajaxgetcurators/' );
 	g_oCurators.SetResponseHandler( function( response ) {
 		OnCuratorsRendered();
 	});
@@ -98,7 +98,7 @@ function InitCuratorsPagingControls( oPagingData )
 
 function InitCuratorsInfinitScrolling( oPagingData )
 {
-	g_oCurators = new CAjaxInfiniteScrollingControls( oPagingData, 'https://store.steampowered.com/store/curators/ajaxgetcurators/' );
+	g_oCurators = new CAjaxInfiniteScrollingControls( oPagingData, 'https://store.steampowered.com/curators/ajaxgetcurators/' );
 
 	var staticParams = { 'keywords' : oPagingData['keywords'], 'filter' : oPagingData['filter'], "appid" : oPagingData['appid' ] };
 	g_oCurators.SetStaticParameters( staticParams );

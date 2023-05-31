@@ -146,7 +146,7 @@ CComicViewer.prototype.GoToPage = function( nPage, bNoPush )
 	WebStorage.SetLocal(this.strLocalStorageKey + '-page', this.nCurrentPage);
 	if( this.nLastPage != this.nCurrentPage && !bNoPush )
 	{
-		history.pushState({comic_page: this.nCurrentPage}, "Page " + this.nCurrentPage, "https://store.steampowered.com/store/wintercomic/");
+		history.pushState({comic_page: this.nCurrentPage}, "Page " + this.nCurrentPage, "https://store.steampowered.com/wintercomic/");
 	}
 
 	this.nLastPage = this.nCurrentPage;
