@@ -113,8 +113,12 @@ for (const file of files) {
 							throw new Error("Failed to find key name");
 						}
 
+						if (currentModule === "get" || currentModule === "set" || currentModule === "object") {
+							return;
+						}
+
 						if (crossModuleExportedMessages.has(currentModule)) {
-							throw new Error("Module already exported");
+							throw new Error(`Module already exported: ${currentModule}`);
 						}
 
 						crossModuleExportedMessages.set(currentModule, result.exportedIds);
@@ -391,8 +395,12 @@ function OutputEnums(enums, stream = process.stdout) {
 }
 
 function SplitRpcString(rpc) {
+	if (rpc == "Test_TransportError.InvalidService") {
+		rpc += "#1";
+	}
+
 	if (!rpc.endsWith("#1")) {
-		throw new Error("Unexpected service name");
+		throw new Error(`Unexpected service name: ${rpc}`);
 	}
 
 	const [serviceName, methodName] = rpc.substring(0, rpc.length - 2).split(".", 2);
