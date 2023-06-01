@@ -3710,10 +3710,12 @@
           );
         return {
           bLoading: i,
-          bPublishRequiresValveApproval:
-            null == a ? void 0 : a.jsonData.bPublishRequiresValveApproval,
-          bRequiresHostDisclaimer:
-            null == a ? void 0 : a.jsonData.bRequiresHostDisclaimer,
+          bPublishRequiresValveApproval: Boolean(
+            null == a ? void 0 : a.jsonData.bPublishRequiresValveApproval
+          ),
+          bRequiresHostDisclaimer: Boolean(
+            null == a ? void 0 : a.jsonData.bRequiresHostDisclaimer
+          ),
           nAccountApproved: null == a ? void 0 : a.jsonData.nAccountApproved,
           rtApprovalTime: null == a ? void 0 : a.jsonData.rtApprovalTime,
           fnSetStorePublishingRequiresValveApproval: o,
@@ -3723,14 +3725,8 @@
       }
       function E(e, t) {
         const { oPrivateData: a, fnSetPrivateJon: n, bLoading: i } = h(e, t),
-          l = g.Get();
-        return [
-          i,
-          null == a ? void 0 : a.jsonData.nAcceptingGuidelineAccount,
-          null == a ? void 0 : a.jsonData.rtAcceptanceTime,
-          null == a ? void 0 : a.jsonData.strPrimaryContactName,
-          null == a ? void 0 : a.jsonData.strPrimaryContactEmail,
-          (a) => {
+          l = g.Get(),
+          o = (0, r.useCallback)((a) => {
             n(
               Object.assign(
                 Object.assign({}, l.GetPrivateData(e, t).jsonData),
@@ -3740,16 +3736,30 @@
                 }
               )
             );
-          },
-          (a, i) => {
+          }, []),
+          s = (0, r.useCallback)((a, i) => {
             n(
               Object.assign(
                 Object.assign({}, l.GetPrivateData(e, t).jsonData),
                 { strPrimaryContactName: a, strPrimaryContactEmail: i }
               )
             );
-          },
-        ];
+          }, []);
+        return {
+          bLoading: i,
+          bRequiresHostDisclaimer: Boolean(
+            null == a ? void 0 : a.jsonData.bRequiresHostDisclaimer
+          ),
+          nAcceptingGuidelineAccount:
+            null == a ? void 0 : a.jsonData.nAcceptingGuidelineAccount,
+          rtAcceptanceTime: null == a ? void 0 : a.jsonData.rtAcceptanceTime,
+          strPrimaryContactName:
+            null == a ? void 0 : a.jsonData.strPrimaryContactName,
+          strPrimaryContactEmail:
+            null == a ? void 0 : a.jsonData.strPrimaryContactEmail,
+          fnSetAcceptingGuideLine: o,
+          fnSetContactEmailAndName: s,
+        };
       }
       (0, n.gn)([d.a], g.prototype, "BIsEventDirty", null),
         (0, n.gn)([d.a], g.prototype, "DiscardChanges", null),
