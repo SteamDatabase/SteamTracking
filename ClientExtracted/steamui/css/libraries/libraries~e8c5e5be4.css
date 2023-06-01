@@ -11025,7 +11025,9 @@
   color: inherit;
   width: auto;
 }
-.remoteplay_PlayerController_14Xjj.remoteplay_QuickAccessPlayerController_wHOHE:not(.remoteplay_Enabled_2T1ZK) {
+.remoteplay_PlayerController_14Xjj.remoteplay_QuickAccessPlayerController_wHOHE:not(
+    .remoteplay_Enabled_2T1ZK
+  ) {
   opacity: 0.2;
 }
 .remoteplay_BoxButton_hewCY {
@@ -11284,7 +11286,9 @@ svg.remoteplay_IconMobile_2371n {
 .remoteplay_QuickAccessControllerOrderSlot_bA_5P > svg {
   height: 26px;
 }
-.remoteplay_QuickAccessControllerOrderSlot_bA_5P:not(.remoteplay_SlotFilled_xQywn)
+.remoteplay_QuickAccessControllerOrderSlot_bA_5P:not(
+    .remoteplay_SlotFilled_xQywn
+  )
   > svg {
   opacity: 0.2;
 }
@@ -13329,7 +13333,9 @@ svg.remoteplay_IconMobile_2371n {
   border-bottom: 1px dotted transparent;
   margin-top: 1px;
 }
-.bbcode_ChatMessageSteamStore_tdVvE:not(.bbcode_ChatMessagesSteamStore_FilteredContent_3D-qb)
+.bbcode_ChatMessageSteamStore_tdVvE:not(
+    .bbcode_ChatMessagesSteamStore_FilteredContent_3D-qb
+  )
   .bbcode_ChatMessageSteamStore_GameNameAndIcon_4GpSr:hover
   .bbcode_ChatMessageSteamStore_Name_ihXhe {
   color: #fff;

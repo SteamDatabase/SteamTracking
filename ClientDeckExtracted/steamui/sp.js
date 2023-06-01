@@ -8922,7 +8922,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, he.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1685479248),
+          s = parseInt(1685563246),
           c = s && (0, er.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == _.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -21072,7 +21072,7 @@
             },
             [a]
           );
-        return r && 0 != g.length
+        return r
           ? o.createElement(hp, {
               strName: `OverlayBrowser_${n.toString()}`,
               appid: t,

@@ -2580,20 +2580,26 @@ div.LowPerfMode
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
 }
-.collectionbanner_CollectionShelfBannerCtn_1UWjF:not(.collectionbanner_DisableHover_TLEKR):hover
+.collectionbanner_CollectionShelfBannerCtn_1UWjF:not(
+    .collectionbanner_DisableHover_TLEKR
+  ):hover
   .collectionbanner_CollectionShelfBanner_1qou9 {
   transform: rotateX(3deg) translateZ(15px) scale(1.06);
   filter: brightness(1.1) contrast(0.95) saturate(1);
   box-shadow: 0px 14px 12px 0px rgba(0, 0, 0, 0.3);
   z-index: 12;
 }
-.collectionbanner_CollectionShelfBannerCtn_1UWjF:not(.collectionbanner_DisableHover_TLEKR):hover
+.collectionbanner_CollectionShelfBannerCtn_1UWjF:not(
+    .collectionbanner_DisableHover_TLEKR
+  ):hover
   .collectionbanner_CollectionShelfBanner_1qou9:active {
   transition-duration: 0.05s;
   transition-timing-function: ease-out;
   filter: brightness(0.8) contrast(1.05) saturate(1);
 }
-.collectionbanner_CollectionShelfBannerCtn_1UWjF:not(.collectionbanner_DisableHover_TLEKR):hover
+.collectionbanner_CollectionShelfBannerCtn_1UWjF:not(
+    .collectionbanner_DisableHover_TLEKR
+  ):hover
   .collectionbanner_LinkToLandingPage_2EnMa {
   transform: translateY(5px);
   box-shadow: 0px 14px 12px 0px rgba(0, 0, 0, 0.3);
@@ -6599,7 +6605,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   transition: color 0.15s ease-out, text-shadow 0.15s ease-out;
   cursor: pointer;
 }
-.supernav_SuperNavMenu_7AlhC.supernav_Selected_1gqEj:not(.supernav_Disabled_2cO0H)
+.supernav_SuperNavMenu_7AlhC.supernav_Selected_1gqEj:not(
+    .supernav_Disabled_2cO0H
+  )
   .supernav_MenuButton_19axK {
   color: #1a9fff;
   text-shadow: 0px 0px 1px #1a9fff;
@@ -6607,7 +6615,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   font-weight: 500;
   cursor: pointer;
 }
-.supernav_SuperNavMenu_7AlhC.supernav_Selected_1gqEj:not(.supernav_Disabled_2cO0H)
+.supernav_SuperNavMenu_7AlhC.supernav_Selected_1gqEj:not(
+    .supernav_Disabled_2cO0H
+  )
   .supernav_MenuButton_19axK::after {
   content: "";
   display: block;
@@ -6995,16 +7005,22 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8 {
   background-color: #5c7e10;
 }
-.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:not(.titlebarcontrols_Disabled_1QQWj):hover {
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:not(
+    .titlebarcontrols_Disabled_1QQWj
+  ):hover {
   background-color: #7ea64b;
   transition: background-color 0.15s ease-out;
 }
-.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:not(.titlebarcontrols_Disabled_1QQWj):hover
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:not(
+    .titlebarcontrols_Disabled_1QQWj
+  ):hover
   .titlebarcontrols_Icon_34bQc
   g {
   animation-iteration-count: infinite;
 }
-.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:not(.titlebarcontrols_Disabled_1QQWj):hover
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_HasNew_3L1c8:not(
+    .titlebarcontrols_Disabled_1QQWj
+  ):hover
   .titlebarcontrols_Icon_34bQc
   g
   .SVGIcon_Notification_Uvula {
@@ -7058,14 +7074,22 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_NoNew_3qhGk {
   background-color: rgba(103, 112, 123, 0.2);
 }
-.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_WasNew_9YK5I:not(.titlebarcontrols_Disabled_1QQWj):hover,
-.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_NoNew_3qhGk:not(.titlebarcontrols_Disabled_1QQWj):hover {
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_WasNew_9YK5I:not(
+    .titlebarcontrols_Disabled_1QQWj
+  ):hover,
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_NoNew_3qhGk:not(
+    .titlebarcontrols_Disabled_1QQWj
+  ):hover {
   background-color: #3d4450;
   transition: background-color 0.15s ease-out;
 }
-.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_WasNew_9YK5I:not(.titlebarcontrols_Disabled_1QQWj):hover
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_WasNew_9YK5I:not(
+    .titlebarcontrols_Disabled_1QQWj
+  ):hover
   .titlebarcontrols_Icon_34bQc,
-.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_NoNew_3qhGk:not(.titlebarcontrols_Disabled_1QQWj):hover
+.titlebarcontrols_NotificationsButton_RtSv3.titlebarcontrols_NoNew_3qhGk:not(
+    .titlebarcontrols_Disabled_1QQWj
+  ):hover
   .titlebarcontrols_Icon_34bQc {
   color: #b8bcbf;
   transition: color 0.15s ease-out;

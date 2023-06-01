@@ -2764,14 +2764,20 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9,
 .pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9:hover,
-.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9:not(.pagedsettings_Active_Myra7):hover {
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn.pagedsettings_DisabledItem_1RDp9:not(
+    .pagedsettings_Active_Myra7
+  ):hover {
   background-color: #23262e;
 }
-.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn:not(.pagedsettings_Active_Myra7):hover {
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn:not(
+    .pagedsettings_Active_Myra7
+  ):hover {
   background-color: #dcdedf;
   color: #3d4450;
 }
-.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn:not(.pagedsettings_Active_Myra7):hover
+.pagedsettings_PagedSettingsDialog_PageListItem_bkfjn:not(
+    .pagedsettings_Active_Myra7
+  ):hover
   .pagedsettings_PageListItem_Icon_U6HcK {
   color: #3d4450;
 }
@@ -3465,7 +3471,9 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   cursor: default;
   color: #67707b;
 }
-.gamepaddialog_Field_S-_La.gamepaddialog_Clickable_27UVY:not(.gamepaddialog_Disabled_1pmyx) {
+.gamepaddialog_Field_S-_La.gamepaddialog_Clickable_27UVY:not(
+    .gamepaddialog_Disabled_1pmyx
+  ) {
   cursor: pointer;
 }
 .gamepaddialog_Field_S-_La .Focusable {
@@ -4022,7 +4030,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   box-sizing: content-box;
   pointer-events: none;
 }
-.gamepadslider_SliderControlAndNotches_1Cccx:not(.gamepadslider_Disabled_1lI1N).gpfocus
+.gamepadslider_SliderControlAndNotches_1Cccx:not(
+    .gamepadslider_Disabled_1lI1N
+  ).gpfocus
   .gamepadslider_SliderHandle_2yVKj {
   border: solid 3px #0e141b;
   margin: -3px;
@@ -4668,7 +4678,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r.gamepadpagedsettings_DisabledItem_3Lp2f,
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r.gamepadpagedsettings_DisabledItem_3Lp2f:hover,
-.gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r.gamepadpagedsettings_DisabledItem_3Lp2f:not(.gamepadpagedsettings_Active_22LLB):hover {
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r.gamepadpagedsettings_DisabledItem_3Lp2f:not(
+    .gamepadpagedsettings_Active_22LLB
+  ):hover {
   color: #414141;
   cursor: default;
 }

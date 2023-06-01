@@ -4544,7 +4544,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-1634-g85f33fe86
+SDL-prerelease-3.0.0-1653-gb6a88b033
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -8400,50 +8400,50 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-\ 5&D
-&Z_a
-YCKM4
-t>mK
-j_lv%e
-jHi4
-Bd-fu
-|0w@V
-)Jfs
-G	_N
-5g[FJ
-`Cny
-DeQ@
+4WIT
+Dyp%
+zikc
+tFW9P
+	aQx
+vb]0
+8ie}{
+Jru]
+,cD6
+W&e<
+0w1l
+\r~`
+d*^L
+L>nZMd
+BK_bCI3
 j>d)]L
 ` h0nj
-])-#
+iWKy
 ;hL_w$
 4rc(J(
 an=iB
 "X@m
 31~d
 1'9Bg>
-]"=\
-'QTgx;
+KG{t$
 dq"$\T
 `^$*
-~^M{
-Mi@H"
-w4R 
-]Ldj
-S5{x
+MD8|
+v>b5
+n?H,9
+B|?I
 A;B}Cm]n{
 4@14
 wU:I
 Xy7?tt
 yWuq
+YEi=
+Hrw0
 {ltwH
-	5`X
-V.k|i
-.\30
-e$[P
-N1+U
+2DZq
+7[-P
+jSqAR
+"[x#
 K(Vm
-z^?9
 hI]je
 aj_c3O|C}
 {{pz
@@ -8456,9 +8456,11 @@ TcCs
 qj?S
 0HdVX
 SdKcR
+Ixb	
 B4Uq
 L]l	
-T!a'
+c/I2J1
+*XJh4Hk
 V%mC
 _I{7
 subject.OU
@@ -8466,41 +8468,33 @@ MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
 \q'87
-[2Pw
-UC&F
-=&wj!<
-6hZe
-8/Tp
-{QZQ
-W2L|_6
-ZC)0
-$p8p
-e/0FF
-%S2.
-*0gQ
-*eX]
-#P&{D
-C@qm
- i=Ac
-91tD[
-O<Td
-fu\k
-hF51c
-OxnLV
-XSVV
-enZE]
-,)hO
-o!W4P
-,e,>:
-'sSio
-Xl8t
-~[^y
-v1qc
+G!?MK
+sq-7[
+Q_Qy
+d7@&
+n3(_qP
+PaAi
+/=e%
+aPsY
+#/b>y
+d6':R
+H,DZ
+{zN{
+7:?l
+bjPT,
+JzY)
+yju)
+N:j3
+[%;xj
+T#!B
+5aVg
+n=5L
 M0 (
 6T"o
 .ZuQ
-54Ff
-VQPe
+VEFe
+7!Pla
+_; Bsq
 0JaW,H
 0^-F
 6DX,
@@ -8512,17 +8506,23 @@ oa,=
 oV}u
 O6oO
 x{Nx
-mt4$
-q%'%[
+b *!HusN
+c#.e
+hq%'%[
 w*0l
 `h>n
-.b(#,
-Yg	I
-i-+J
-\hjU
-~zzb
-=\;{
-{5>^?@;
+U)ecw
+=p"	
+?O7m
+,.RU
+-9$1
+M 2A
+|C1C
+;FKa
+"0?'f4Z
+mQK^
+~*1D9;
+	+-!
 'qJM
 8OH}
 - M#
@@ -8531,21 +8531,18 @@ ANciF
 0~_]x/I
 {oKIENq
 O<4b
-/n0#
-.B@$
-h[xc#-
-}%)G
+xS:u\
 i[;D
-.l;%
+F5Iv*
 Hjoh
-/EB0
-?x%k
-eJI<
-OM>^
-~X7w
+Qk)M
+F6FS
+ULZB
+7r&PY
+[hu9
+KU3*K{
+_rr`
 O>,_
-]1u!m
-oo<J
 (GRV
 *$(l
 6h.6l
@@ -8572,13 +8569,11 @@ L2Jx
 9_}o
 <z@i
 QYeX
-( D%
+$wX{
+t"u`
 ;_qj_z
-662_
-L$Iq'
-ELFZ
-V!x+
-k $=}V
+0r*6
+j=dD
 "Hho
 :E8le
 Apple Inc.1&0$
@@ -8636,8 +8631,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230530213629Z0/
-=3WBZ
+230531215540Z0/
+ Ju+d
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -8645,31 +8640,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		nTBk1VKOsns4gan0n+xw9UMGFp0=
+		boHzGMnJspL1WdsuB2jgViROyn8=
 		</data>
 		<data>
-		B2BCh2nI0D0zV0JaGU+TR6vNSao=
+		dirJsUazL/H0OuDTH7Oj3MLZ95A=
 		</data>
 	</array>
 </dict>
 </plist>
-wQvx
-/"C?
-20230530213654Z0
+2<zl
+*o		
+3xP+
+,soB
+m9id
+20230531215611Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230517203509Z
-230628203508Z0B1
-Timestamp Signer NWK21
+230517205008Z
+230628205007Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-7bc<
+SD}l
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
--a[>
+%{!u
+.:E7)&V
+Ghpj
+f?fJf[
+3y\G
+1W'n
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -8708,9 +8711,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230530213654Z0#
-D1|\ 
-AY>c$
+230531215611Z0#
+eyhn3sy~&0+
+5kV9
+Z.N9
+_R+!
 __TEXT
 __text
 __TEXT
@@ -9772,7 +9777,7 @@ AWAVAUATSH
 t}E1
 [A\A]A^A_]
 AWAVATSI
-uuLc=SW
+uuLc=3W
 t0Hc
 [A\A^A_]
 AVSI
@@ -9824,6 +9829,7 @@ AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
 *J(A
+Lc-`C
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -9851,7 +9857,7 @@ AVSH
 [A^]
 AVSH
 [A^]
-95F4
+95&4
 AVSH
 [A^]
 AWAVAUATSPI
@@ -9859,10 +9865,8 @@ L9!t
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
-]L9%~0
-u+L9-q0
-L9%:0
-L9-90
+]L9%^0
+u+L9-Q0
 L9.t
 L9.t
 [A\A]A^A_]
@@ -10084,8 +10088,8 @@ f0fE
 [A\A]A^A_]
 AVSI
 [A^]
-AWAVATSH
-[A\A^A_]
+AWAVSPI
+[A^A_]
 AVSH
 [A^]
 AWAVAUATSH
@@ -16800,7 +16804,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-1634-g85f33fe86
+SDL-prerelease-3.0.0-1653-gb6a88b033
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -20765,32 +20769,31 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-D	qG
-b3<T
-Z+r`
-txQ,'L
-1z g
-}8\{S
-caQKAT2
-sXY[2v
-BW8q
-.W@#nu
-~Io)YH
-lLa?
-(Ds[]i5
-uiD0
-Q0W#
-1xj3_t
-CqDx
-bF$e+e
-Ux'E{Ja
+,P",J
+m2#W
+IfTV&
+^KO`E
+D</@
+F!mrC
+|EIP
+QCj5
+X&L'
+bF$e+
+'JL4iE
+Umi/
+h>"~
+'3h3
 7ZN%
 tY[Z
 2F#i&
 s@N`	w
+Y=13
 6qb`
-HO^8
-9$6w
+rHHIX@t
+'_DZu_Q
+|si]M
+8t8d
+JhdQD>Yn{w
 BJY&
 S`3e
 |FN#'Dp
@@ -20801,17 +20804,14 @@ cDq&
 dA{0=
 /f3%
 qGB7vX._
-@-9P
-OmMk
-j*&3
+s{P\f:
+9-@B
 lDKKV
-V2KD(g
-CqkS
-~G|.
-!#>gi
+(N#":uB
+9]6v
+!'a'K
+$X]%
 5*tg?l?
-A7m^
-` +D
 <A~D*
 l=I0V
 Wvr]
@@ -20824,46 +20824,56 @@ oA@9
 )S;7
 #V)u
 "JhU
+bI26
 Ih0+[
+@oSF
 ""?:l8
 t8s=)
-/!N	
-!nhm
+" .-
 XtzS~~&
 vy\$>
- iYn
+A&^+
+s+'c2
+{-7-
+Q,)`
+0:O+
 ^Ygz7m#
 Saxc
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+X8I3
 yB-MO 
- '$r
-cir;
-CA<<IY`(,u
-HK+jx
-a`ed
-p1s_
-0}8h*
-ofet
-VPvb
-f`7_~
-M<6:
-=&6>
-dr%"
-[.OC)k7
-~}j2
-DG/d
-CmMC
-=0ZjL
-T+L/K
+-;{+
+|#aV
+5w!8
+m4'_
+8'%S
+}%vf1
+DNs\$
+xDkqCo
+k)%&
+Dr&q
+2b _
+b{&g
+coomM
+sJ<C
+$<.u
+?4bB|=t3*
+W]l~[
+/hn7
+/$Bl@
+7mNn*J
+(v	\=
 *U>7
 6gJ?
 .v/+dD%
 	.4u
 Jh9>2>
 }f*K
+F5=[
+=2pN
 Un?|
 ]9Ms
 `f(*L
@@ -20875,35 +20885,32 @@ $Vg.n
 O`o6`
 m'Y7
 so0W
-l]!?y
-bN2'
-H8lV>%.@/;
-\*^+n=w)
-Ud_v1
-Kr%T
-QNw0
+RcPR3
+kmdo
+8(W^
+RB?T5v
+ >YF`g|+D
+34lqT
+UZA-+
+cI1.
+_"Zx
 0z/;
 ,]~.
-RC\an]
 fF^Z
 `;o?
 bNkpL(
 +$+du
 qnM.
 el]X
-mIr]
-%o@Jy
 E `q
-+w=0Uq
 Xh|f
 Ccio7)
+L|psW
+i-(%
 l+d=
-Sn4`
-*P/*
-urtF
+Dv(neM5ZtY
+YM+%
 LMCa
-	E[]1#
-f>"`=
 n1m<
 '	[e
 SmZG
@@ -20921,18 +20928,16 @@ F+Fh
 g"G0
 a<|ZT
 =X!\
+l%|J
 :rq9c
 7ecr7
 ]jC.Qms
-Yqxz
+k0r\
+9jdX!
 MTNL
- #L>%
-/2@T
-xwOmX
-^s?;
-X0T[F
-Oxsg
-ahqp
+_ixVv
+(]2W
+&1hqp
 =xi=Zg$(
 4HjEdy{
 F6mW
@@ -20992,7 +20997,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230530213629Z0/
+230531215541Z0/
+hCYLF
+ +[w
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -21000,17 +21007,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		hufSMApoCZjPx7t/QleSb2J+rv0=
+		TtpXwLkVXkMVbRc5S3DH5ytIRoY=
 		</data>
 		<data>
-		C/G1CqnsgBRaXZjh7dAA39fG8Ic=
+		K1t3r6YcefRs+y51AmfyO6F1DOQ=
 		</data>
 	</array>
 </dict>
 </plist>
-q(KnR
-keH+
-20230530213654Z0
+D$jQ
+AMfnA
+20230531215611Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -21063,10 +21070,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230530213654Z0#
- Q5m
-. eQ
-A-8w
+230531215611Z0#
+E4~S
+WanU
+%YVsq
 __TEXT
 __text
 __TEXT
@@ -21147,9 +21154,10 @@ __LINKEDIT
 /usr/lib/libobjc.A.dylib
 h:@9
 T*ih8
-`Ya\
+@Xa\
 4hN@
 h:@9
+TiPa
 +ih8J	
 ShJ@
 a>@9
@@ -21157,12 +21165,11 @@ a>@9
 4h^@
 a~a2@=!
 a:@=!
-(:a\
 4hJ@
 4hJ@
 4hJ@
 a>@9
-4hvgp
+4Hugp
 	)E)J
 	)E))
 a>@9
@@ -21171,30 +21178,31 @@ a>@9
 4hJ@
 RhJ@
 4hJ@
-H>wX
-):wX)
+(=wX
+	9wX)
 cW8L
-`6g0
+h;gP
+@5g0
 "@y	}
-H4gp
-a)gp
+(3gp
+A(gp
+a(gP
  @y	}
 >@9b~@
 S?!(k
 @y?!
-I\vX)
+)[vX)
 "@y 
 @@qJ
-HofP
-@pfp
-(gfP
+(nfP
+ ofp
 T?y(
 Kiix
 @9(}
-hSfP
-HSfP
-(Sfp
-bHfp
+hRf0
+HRfP
+(RfP
+BGfp
 T`&@
 T`2@
 a>@9
@@ -21204,8 +21212,7 @@ Ta>@9
 h"@y
 h"@y
 4h"@y	}
-H fp
-H fP
+Th&fp
 R(}@
 i2O)
 M))}@
@@ -21248,21 +21255,22 @@ Nc@b
 Q#D@
 Nc@b
 !@1k
-(KtX
-CtX)
+BtX)
 4+A*
-`wdp
-`sd0
-`kdp
-`hdp
+`qdp
+`tdP
+@vdp
+@rd0
+`pdp
+@jdp
+@gdp
 hkzx
-T`nd
- md0
+T@md
 #Sx?E
-T`nd
+T@md
 #SxI
 Lyixk	
-Rje`P
+RJd`P
 Ax+x+
 g{gx
 Yyyx
@@ -21272,23 +21280,23 @@ gk:x
 [k{x
 3G[{x
 izxZh0x
-`adP
+@`dP
 hq81
+f8`P
 x.xc
+T`!d0
 #Tx*
-Tk*`
+TK)`
 mij8
 #Tx?!
-T@$d
+T #d
 #Sx?
 #Tx?a
 #Tx*!
 #Tx?
 Tx+q
-@ d0
-T@/dP
+T .dP
 iy8K
- +dP
 #Tx_
 CTx_	
 J%@y
@@ -21302,140 +21310,135 @@ H@y
 )CzA
 H@y	
 `@y,
-RsX)
+hSsX
+QsX)
 	QX9i
 *QX9j
 ~yX 
-~yX 
-~yX 
-a~yX 
+d~yX
 A~yX 
-&~yX
-~yX 
+!~yX 
 }yX 
-}yX@
-}yX`
-b}yX@
-B}yX@
-&}yX
-}yX`
+}yX 
+a}yX 
+A}yX 
+!}yX 
 |yX 
-a|yX 
-C|yX`
-!|yX 
-{yX 
+|yX 
+|yX@
+|yX`
+h|yX
+B|yX@
+"|yX@
 {yX`
+a{yX 
+A{yX 
+#{yX`
 {yX 
-e{yX
-B{yX@
-${yX
 zyX 
-zyX@
 zyX`
 azyX 
-AzyX 
-#zyX`
-zyX 
+EzyX
+"zyX@
 yyX 
-yyX 
-yyX 
-yyX 
-ayyX 
+yyX@
+cyyX`
 AyyX 
 !yyX 
-yyX 
+yyX`
+xyX 
 xyX 
 xyX 
 xyX 
 axyX 
-@xyX
- xyX
+AxyX 
+!xyX 
 xyX 
 wyX 
-wyX`
 wyX 
-awyX 
-CwyX`
-$wyX
-wyX@
-vyX@
+wyX 
+wyX 
+`wyX
+AwyX 
+ wyX
 vyX 
 vyX 
-vyX@
+vyX`
 avyX 
 AvyX 
 #vyX`
-vyX 
-uyX 
-uyX 
 uyX@
-`uyX
+uyX@
+uyX 
+uyX 
+buyX@
 AuyX 
 !uyX 
-uyX 
-tyX@
-tyX@
+uyX`
 tyX 
-atyX 
-AtyX 
- tyX
+tyX 
+tyX 
+tyX@
+`tyX
+@tyX
+!tyX 
 tyX 
 syX 
 syX@
-bsyX@
+syX@
+asyX 
 AsyX 
 !syX 
-syX 
-ryX@
-ryX@
+ryX 
 ryX 
 bryX@
-CryX`
+BryX@
 !ryX 
 ryX 
 qyX 
-qyX`
-`qyX
-@qyX
- qyX
+qyX@
+qyX@
 qyX 
+`qyX
+BqyX@
+#qyX`
+qyX 
+pyX 
+pyX 
 pyX`
 `pyX
-ApyX 
-"pyX@
-pyX 
+@pyX
+ pyX
 oyX 
-oyX 
-oyX 
+coyX`
+@oyX
+!oyX 
 oyX@
-`oyX
-BoyX@
-"oyX@
-oyX@
-nyX@
-nyX@
 nyX 
-HnyX
+nyX 
+nyX 
+nyX 
+bnyX@
+@nyX
+"nyX@
+nyX@
 myX@
-lyX 
-lyX 
-lyX 
-lyX 
-alyX 
-AlyX 
-!lyX 
-lyX 
-kyX 
+myX@
+myX@
+myX 
+(myX
+hlyX
+kyX@
 kyX 
 kyX 
 kyX 
 akyX 
 AkyX 
 !kyX 
-kyX@
+kyX 
 jyX 
 jyX 
-jyX@
+jyX 
 jyX 
 ajyX 
 AjyX 
@@ -21444,34 +21447,33 @@ jyX
 iyX@
 iyX 
 iyX 
+iyX@
 aiyX 
-GiyX
+AiyX 
 !iyX 
 iyX 
 hyX 
 hyX@
 hyX 
-bhyX@
-BhyX@
-#hyX`
-hyX@
+ahyX 
+AhyX 
+'hyX
+hyX 
 gyX 
 gyX 
-gyX 
-gyX 
-agyX 
-FgyX
-$gyX
 gyX@
-fyX 
+agyX 
+BgyX@
+"gyX@
+gyX`
+fyX@
 fyX 
 fyX 
 fyX 
 afyX 
 AfyX 
-!fyX 
-fyX 
-eyX 
+&fyX
+eyX@
 eyX 
 eyX 
 eyX 
@@ -21485,557 +21487,564 @@ dyX
 dyX 
 adyX 
 AdyX 
- dyX
+!dyX 
 dyX 
-bcyX@
-@cyX
+cyX 
+cyX 
+cyX 
+cyX 
+acyX 
+AcyX 
 !cyX 
 byX 
-byX 
-byX 
 `byX
-@byX
-!byX 
+BbyX@
+ byX
+byX 
+ayX 
+ayX 
 aayX 
 @ayX
-"ayX@
-ayX@
-`yX 
-f`yX
-E`yX
-%`yX
-_yX`
-_yX`
-_yX`
-c_yX`
-@_yX
-"_yX@
+ ayX
+ayX 
+e`yX
+A`yX 
+ `yX
+`yX@
 _yX@
+_yX 
+e_yX
+F_yX
+%_yX
+^yX`
+^yX`
+c^yX`
+C^yX`
+ ^yX
 ^yX@
-^yX 
-a^yX 
-A^yX 
-!^yX 
-^yX@
-]yX 
-]yX 
 ]yX@
-]yX`
-`]yX
+]yX@
+]yX 
+e]yX
 A]yX 
 !]yX 
 ]yX 
-\yX`
+\yX@
 \yX 
 \yX 
-\yX 
-a\yX 
-A\yX 
+\yX@
+c\yX`
+@\yX
 !\yX 
 \yX 
 [yX 
+[yX`
 [yX 
-[yX@
-[yX@
-b[yX@
-B[yX@
-"[yX@
-ZyX@
+[yX 
+a[yX 
+A[yX 
+![yX 
+[yX 
+ZyX 
+ZyX 
+ZyX 
 ZyX@
 bZyX@
-AZyX 
-!ZyX 
-ZyX 
-YyX 
-YyX 
-bYyX@
-AYyX 
+BZyX@
+"ZyX@
+ZyX@
+YyX@
+YyX@
+dYyX
+BYyX@
 !YyX 
 YyX 
-XyX@
 XyX 
 XyX 
 aXyX 
-AXyX 
+BXyX@
 !XyX 
-XyX@
+XyX 
 WyX 
+WyX@
 WyX 
-WyX`
-WyX`
 aWyX 
 AWyX 
-"WyX@
+!WyX 
 WyX 
-VyX`
-VyX`
-VyX`
+VyX@
 VyX 
-aVyX 
-CVyX`
- VyX
+VyX 
+VyX`
+cVyX`
+AVyX 
+!VyX 
 VyX@
 UyX 
-UyX@
-UyX@
-UyX@
+UyX`
+UyX`
+UyX`
 aUyX 
 AUyX 
-"UyX@
-UyX 
+#UyX`
+TyX@
 TyX 
-TyX 
-TyX 
-TyX 
-`TyX
+TyX@
+TyX@
+bTyX@
 ATyX 
 !TyX 
-TyX 
-SyX 
-SyX@
+TyX@
 SyX 
 SyX 
-cSyX`
-BSyX@
-"SyX@
 SyX 
+SyX 
+aSyX 
+@SyX
+!SyX 
+SyX 
+RyX 
+RyX 
 RyX@
 RyX 
-RyX`
-`RyX
-@RyX
- RyX
+aRyX 
+CRyX`
+"RyX@
+RyX@
 QyX 
 QyX@
+QyX 
+QyX`
 `QyX
 @QyX
  QyX
-PyX@
+PyX 
 PyX@
 `PyX
 @PyX
  PyX
-OyX 
-OyX 
-OyX 
-aOyX 
-AOyX 
-!OyX 
-NyX 
+OyX@
+OyX@
+`OyX
+@OyX
+ OyX
 NyX 
 NyX 
 aNyX 
 ANyX 
-"NyX@
-NyX@
-MyX`
-MyX@
+!NyX 
+NyX 
+MyX 
 MyX 
 aMyX 
-@MyX
+AMyX 
 !MyX 
-MyX 
+MyX@
+LyX@
 LyX`
 LyX@
 LyX 
-dLyX
-@LyX
-!LyX 
-LyX@
+eLyX
+ALyX 
+ LyX
+LyX 
+KyX 
+KyX`
 KyX@
+aKyX 
+DKyX
+ KyX
 KyX 
-`KyX
-@KyX
-!KyX 
-KyX 
-JyX 
-JyX 
-`JyX
+JyX@
+JyX@
+aJyX 
 @JyX
  JyX
-aIyX 
-AIyX 
-!IyX 
+JyX 
 IyX 
-HyX 
-HyX 
-`HyX
+IyX 
+IyX 
+`IyX
+@IyX
+ IyX
+eHyX
 AHyX 
-#HyX`
-GyX`
+!HyX 
+HyX 
 GyX 
-GyX@
-bGyX@
-BGyX@
+GyX 
+GyX 
+hGyX
+@GyX
 !GyX 
 GyX`
 FyX`
 FyX 
+bFyX@
+BFyX@
+"FyX@
 FyX 
-FyX`
-aFyX 
-AFyX 
-!FyX 
-FyX 
+EyX`
+EyX`
 EyX 
 EyX 
-EyX 
-EyX 
-aEyX 
+cEyX`
 AEyX 
 !EyX 
 EyX 
-DyX@
-DyX`
+DyX 
+DyX 
+DyX 
+DyX 
+aDyX 
+ADyX 
+!DyX 
 DyX 
 CyX 
-cCyX`
-CCyX`
-!CyX 
+CyX@
 CyX`
-ByX 
-ByX@
-ByX`
-dByX
-FByX
+CyX 
+fCyX
+aByX 
+CByX`
 #ByX`
+ByX 
+AyX`
 AyX 
-aAyX 
+AyX@
+cAyX`
 DAyX
-$AyX
-@yX`
-a@yX 
-@@yX
-!@yX 
+&AyX
+AyX`
 @yX 
-?yX 
-?yX 
-?yX@
-?yX`
+`@yX
+A@yX 
+$@yX
 c?yX`
-B?yX@
-!?yX 
+A?yX 
+ ?yX
 ?yX 
->yX@
->yX@
 >yX 
-b>yX@
+>yX 
+>yX 
+>yX@
+c>yX`
 C>yX`
 ">yX@
->yX`
+>yX 
 =yX 
 =yX@
-=yX`
-c=yX`
-C=yX`
- =yX
+=yX@
+=yX 
+d=yX
+B=yX@
+#=yX`
+=yX@
+<yX`
 <yX 
 <yX@
-<yX 
-a<yX 
-B<yX@
-"<yX@
+c<yX`
+C<yX`
+#<yX`
+;yX 
 ;yX@
-;yX@
-;yX@
-b;yX@
-B;yX@
+a;yX 
+A;yX 
 ";yX@
-;yX`
+;yX@
 :yX@
 :yX@
-:yX 
 b:yX@
 B:yX@
-$:yX
+":yX@
 :yX@
+9yX`
 9yX@
-9yX 
 9yX@
-9yX@
-c9yX`
+a9yX 
 B9yX@
 "9yX@
-9yX@
-8yX`
+8yX@
 8yX@
 8yX 
 8yX@
-c8yX`
+b8yX@
 C8yX`
 "8yX@
 8yX@
 7yX@
-7yX 
 7yX`
 7yX@
-c7yX`
-C7yX`
-"7yX@
 7yX 
+b7yX@
+C7yX`
+#7yX`
+7yX@
+6yX@
 6yX@
 6yX 
-d6yX
-D6yX
- 6yX
+6yX`
+b6yX@
+C6yX`
+#6yX`
+6yX@
 5yX 
-5yX 
+5yX@
 a5yX 
-C5yX`
- 5yX
-4yX 
+D5yX
+$5yX
 4yX 
 4yX 
 `4yX
 A4yX 
-!4yX 
-4yX 
-d3yX
-A3yX 
-#3yX`
-2yX`
-2yX@
+#4yX`
+3yX 
+3yX 
+a3yX 
+@3yX
+!3yX 
+3yX 
 2yX 
 `2yX
-A2yX 
-"2yX@
-2yX@
-1yX 
-1yX 
+D2yX
+!2yX 
+2yX`
+1yX`
 1yX@
-b1yX@
-B1yX@
-"1yX@
+a1yX 
+@1yX
+!1yX 
 1yX@
-0yX@
 0yX@
 0yX 
-`0yX
-@0yX
- 0yX
+0yX 
+b0yX@
+B0yX@
+"0yX@
+0yX@
+/yX@
+/yX@
+/yX@
 /yX 
-a/yX 
-E/yX
-"/yX@
-`.yX
-C.yX`
-#.yX`
+`/yX
+@/yX
+ /yX
+a.yX 
+A.yX 
+%.yX
+.yX@
 `-yX
 @-yX
- -yX
--yX 
-,yX 
-,yX 
-,yX 
-b,yX@
+#-yX`
+-yX`
+`,yX
 @,yX
-!,yX 
-,yX`
-+yX`
-+yX`
-+yX`
+ ,yX
++yX 
++yX 
++yX 
++yX 
 `+yX
-C+yX`
-!+yX 
-+yX`
+B+yX@
+ +yX
++yX 
 *yX`
-*yX@
 *yX`
-e*yX
-A*yX 
-"*yX@
-)yX 
-)yX 
-)yX 
-)yX 
-a)yX 
-A)yX 
+*yX`
+c*yX`
+@*yX
+#*yX`
+*yX 
+)yX`
+)yX`
+)yX@
+c)yX`
+E)yX
 !)yX 
-)yX 
+)yX@
 (yX 
 (yX 
 (yX 
+a(yX 
+A(yX 
+!(yX 
 (yX 
-c(yX`
-C(yX`
- (yX
-c'yX`
-A'yX 
+'yX 
+'yX 
+'yX 
+'yX 
+a'yX 
+C'yX`
 #'yX`
-'yX`
-&yX`
-&yX`
-&yX`
 `&yX
-D&yX
-"&yX@
-%yX 
-%yX 
+C&yX`
+!&yX 
+&yX`
+%yX`
+%yX`
+%yX`
 %yX`
 `%yX
 @%yX
- %yX
-$yX@
-$yX@
-$yX@
-$yX@
-a$yX 
-C$yX`
-#$yX`
+$%yX
+%yX@
 $yX 
-#yX 
-#yX`
-#yX`
+$yX 
+c$yX`
+@$yX
+ $yX
 #yX@
-a#yX 
-B#yX@
-"#yX@
+#yX@
+#yX@
+b#yX@
+A#yX 
+##yX`
 #yX`
-"yX`
-"yX`
-"yX`
-"yX`
-a"yX 
-@"yX
- "yX
 "yX 
-!yX 
+"yX 
+"yX`
+"yX`
+b"yX@
+A"yX 
+""yX@
+"yX@
+!yX`
+!yX`
+!yX`
 !yX`
 c!yX`
-C!yX`
-#!yX`
-!yX 
- yX@
- yX`
- yX`
-b yX@
-B yX@
-! yX 
+A!yX 
+ !yX
+ yX 
+ yX 
+c yX`
+C yX`
+# yX`
  yX`
 *	aK
-HVwX
-(QwX
-#qvX
+h_wX
+hZwX
+(UwX
+a}vX
+euvX
+amvX
 ajvX
 AivX
 !hvX
 aavX
 A`vX
 !_vX
-@^vX
-a]vX
-cXvX
- WvX
-AVvX
+ ]vX
+A\vX
+`[vX
+CWvX
 !UvX
-AMvX
+bMvX
 !LvX
+aGvX
 aDvX
 ACvX
-`@vX
+!BvX
+@?vX
 a>vX
 A=vX
-$3vX
-B.vX
-"(vX
-c#vX
-dzuX
-cxuX
-"ouX
-!fuX
-aauX
+!<vX
+a5vX
+a0vX
+"-vX
+b(vX
+C"vX
+d{uX
+DyuX
+CwuX
+cuuX
+`puX
+bouX
 A`uX
-c]uX
- \uX
-A[uX
+!_uX
+C\uX
 !ZuX
+cVuX
 aPuX
 AOuX
 !NuX
-bJuX
-BFuX
- CuX
-"BuX
-B=uX
-@8uX
-a7uX
+BIuX
+"EuX
+dCuX
+"<uX
+ 7uX
 A6uX
-a,uX
+!5uX
+a0uX
 A+uX
 !*uX
-a%uX
 A$uX
-A~tX
+!#uX
 !}tX
-!ztX
 astX
 ArtX
 !qtX
-aitX
-fgtX
-C[tX
-#WtX
-#PtX
-$NtX
-fKtX
-cHtX
-@BtX
-aAtX
-d9tX
-D7tX
-!3tX
-@2tX
-a1tX
+bktX
+AhtX
+FftX
+hbtX
+c\tX
+#ZtX
+FJtX
+CGtX
+ AtX
+A@tX
+d:tX
+D8tX
+$6tX
+ 1tX
 A0tX
 !/tX
-#+tX
-C)tX
-a&tX
+#(tX
 A%tX
-a!tX
+!$tX
+A tX
 `}sX
 @|sX
-{sX 
+ {sX
 ysX 
-`xsX
-AwsX
+xsX 
+@wsX
 !vsX
-EtsX
-BrsX
-nsX 
-@msX 
-cisX
+%ssX
+"qsX
+msX 
+ lsX 
+ChsX
+cfsX
 ``sX
- _sX 
-]sX 
+@_sX
+^sX 
+\sX 
 a[sX
 AZsX
 !YsX
-@XsX
-BWsX
-@VsX
-aUsX
-#LsX
-!HsX
-c?sX
-%=sX
-A;sX
-D8sX
+ WsX
+"VsX
+ UsX
+ATsX
+C>sX
+!:sX
+$7sX
 a4sX
 A3sX
 !2sX
 a+sX
 A*sX
-`%sX
+!)sX
 @$sX
  #sX
-!}rX
 bX9h
-VkX`
-sRkXh
-MkX)
-)HkX)
-	9kX)
+UkX`
+SQkXh
+LkX)
+	GkX)
+7kX)
 TuS@
 kB#Xz
 T@5C
@@ -22044,32 +22053,32 @@ T@5C
 jyix
 jyhx)	
 jyix
-TKuW
+T+tW
 jyix
 jyix
 jyix
 jii8
+TkhW
 jyhx)	
-!x[0
-R"y[P
+a}[P
 Q@9_
-ar[p
+Aq[p
 	D-!
 Q@9_
-T@Is
-8sX 
+T Hs
+7sX 
 !SzH
 TiN@
-OsXh
-h~jX
-fjX)
+hNsXh
+H}jX
+iejX)
 r)|)
  	Az
-6sXaa
-(?jX
-i<jX)
+5sXaa
+I;jX)
 i)H9	
 Lii8k	
+T`;[
 4`^G
 h&A9
 07(! 
@@ -22079,34 +22088,32 @@ T`.@
 @- ) 
 T(! 
 'B)	)
-#B)i
+#B)I
 @- ) 
-	kiX)
+iiX)
 @-a8!
-ViX)
-;iX)
-@|ZP
-@|Z0
- |Zp
-h{rXh
-(xrX
-zrXJ
+haiX
+iUiX)
+i:iX)
+ {ZP
+ {Z0
+HzrXh
+xrXJ
 	*J!
+7`qZ0
 hdrX
-i^rX)
-I[rX)
-(UrX
-ISrX
+HcrX
+I]rX)
+)ZrX)
+)RrX
 ) A9i
-07JSr
-LrX@
-h9rX
- ?rX
+07*Rr
+KrX@
+H8rX
+`=rX
 /A)*
- 7ZP
-H(rX
- *Z0
-*#rXKyi
+('rX
+"rXKyi
 T@yi
 rX	xv
 TYyi
@@ -22115,7 +22122,8 @@ Th&E)
 THyi
 A-L9 
 Th! 
-yhX)
+hzhX
+xhX)
 iw8)	
 h"A9H
 )h"@
@@ -22126,23 +22134,25 @@ Th.@
 ThF@
 iw8)	
 4h^@
-@onX
-a	nX
-@pYp
-4AeYp
+ nnX
+`mnX
+ oYp
+4!dYp
+hSYP
 +ih8J	
-`KYP
-@HYp
-T@EY
-`EYP
-S'qX
-T OYP
-4`UY
-TAwi
-4 IY
-@5YP
- 5YP
- 0T\
+`KYp
+@JYP
+ GYp
+T DY
+@DYP
+3&qX
+`<YP
+aNY0
+4@TY
+T!vi
+5`8Y0
+4`GY
+ 4YP
 (!@9
 T*%@9
 T))@9	
@@ -22188,58 +22198,54 @@ hJ@y
 Ts>@
 7h*@
 4hf@9
+h8pX
 5s>@
-@vX0
-@uX0
+ uX0
+ tX0
 4h*@
 T+=@
- dXP
+`gXP
 Thf@9
 4hf@9H
+87`TXp
 4hf@9
 4hb@9
 4h.@
-7@MX
+7 LX
 4a.@
+`EXP
 7a.@
 4a.@
-`AXP
-h~fX
-(>S\
-(|fX
-B}fX
-C}fX
+@@XP
+H}fX
+"|fX
+#|fX
 ;@y(
-"7X0
-i_fX)
-@VVp
-` Xp
-HBfX
-i:fX)
-h2fX
- =Vp
-)0fX)
-h'fX
+4h*X
+)^fX)
+HEfX
+@JVp
+`GVp
+)9fX)
+(1fX
+.fX)
+(&fX
 h&N)
 hbq9
-&oX@
-b19J
+@%oX@
+b19I
 	aq9
 R	a19
- -WP
 2@yh2
 b@yhb
 f@yhf
-T@sW0
-T lW0
-T`gW0
-T`bW0
-T \W0
-T`WW0
-ya'g
-T!'g
-heX)
-"@WP
+T@mW0
+T fW0
+T aW0
+T@]W0
+T VW0
+y!&g
+geX)
 R\`:
 `WUp
 iJeX)
@@ -29712,7 +29718,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-1634-g85f33fe86
+SDL-prerelease-3.0.0-1653-gb6a88b033
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -33667,27 +33673,37 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-r8WB
-N72R
-.@\*R
-E:dx
-[h_c
-eGEP2	
-J9Z1
-Tr{+fS
+8'!Z[
+WA7G
+5#\hed+
+k&	/
+6cVH
+*>Kzw
+Ny&39
+9J|\
+B-6~<^
+8Ei~M
+f<Ht
+o<Nd
+F`Ug
 EQJ[
+lt	H
+QR+-
+7i&]
+akY\
++_iQ
  Sw^
 [l;gp
 sk8#F
 ms?9
 W)tj`
 qjrd&
-e6zi=b
-.@6[
-D"}R
-SjzO=
-MGwG
-#f%BHD
+(Sj3y4
+G"Tm
+==1:
+9.CM
+;l|E
+KtntS\
 }R_@
 y-9O,)
 /#n"
@@ -33695,15 +33711,16 @@ b)chk
 *h@m
 i=T@
 hP/dW
-was0
+_K2i
 T\Kn]
 GVOc
 7{}R
 ,zk[
 PuHT
 ]Hc|4
-zG+3
-]~KL
+aEt?
+J?gL
+;?wL
 VL.g
 8c!1s<
 1Q}`H,
@@ -33722,17 +33739,17 @@ MhiJ
 #>VPT
 ?$ZN%
 .z<4
+2<PA
 =e&d
 mAHZ~(
 ca*;
 )o	|
 ;ob^
-3E3?
-'Zfhc
+#Aj3
+@7IX
 ]@D4
-nn{%'
-&V=Y
->eqG
+K']/
+3{ia
 eJ\[
 %-[xL
 GC8JS
@@ -33740,38 +33757,40 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-PYG1
-284VK8
-[Tx|S
-%`.b
-t/k&
-wc__
-f}?VP
-~"	!
-Sbp<'K
-<>)_
-X\w~~
-`F9I2U{
-NT~i[x|VB
-"3c1}
-kG26
-V@	T
-8X&6
-3pd5
-M#Oa
-D{]:
-fTE$D
-<KaNr
-'@ R
-g=_K
++lH|
+D{ks
+4@~0
+S77Z
+6Ho\
+<4Q|zM
+P{FaYV
+~r,V
+J6Al
+gV,j
+6|Ly$
+]N~j
+,KmB
+]n#\.
+yuZn
+sZxr
+)e=MD
+|YK+
+W	[b
+?~4o
+&PD;
+O.&X
+MBNU6
+W^fd
+hu: ,
+GXD7a|
+H2g}
 x<MV
+-|t"O
 %VVC4
 [(J	
 -4c\
 <!Ah
 I= T
-o.Q"&9
-2_l5?
 ,}M$n
 $'Q~
 i[5o
@@ -33783,30 +33802,33 @@ fk|:
 A}n=
 x3/k
 >C))
-$l63
-|EnK
 IT0\
 j>4~
 k[Q4
-$UiE
-E%I d
+Jun#
+'UvD
+{p(a7
+)(W&W
+2zBx
+u"I<
 Va#v
 3"<aO
 A\0}uj
-jTS6/
+}k	Y
 Aq]u
 uJUQ
 k+tX
+cW%]
 '<idB
-V,-s
-qr(_/
 g\	[Wv
-I^"`
 ~Fei'}
 0~>~
-'=VH.
-7}|}
-TYnx!\
+$7}|}
+q`=y
+pR[Y
+W6c.
+\>l3
+^[!\
 gQZm
 '{a	
 l* ~
@@ -33825,23 +33847,24 @@ ZB`v
 +72oU
 $R>7
 5R!oY)4w7
-3T?g~
+3T?g
+.N7	F
+>\t>
 7:xFea
 f]=mP
-`8*<
-(_<US
-*W l
+9?T{
+73h[
 ?a 5
 -Akg
 #v:b
 c|nv
 Ak<Q}
+AH-f[`
+\|ti8
 *<.,t
-G<NH~
-t"1 
-8`"j
-8xh9
-=7X]
+u5%\
+O<vU
+&Jv{
 @N	L@
 $TR 
 3<.r
@@ -33900,7 +33923,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230530213629Z0/
+230531215541Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -33908,19 +33931,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		SKorXzTxhK37KCGnZ8+eAtzHhDM=
+		2cHFPP23SGMAfuuQy3oGNaOLQbc=
 		</data>
 		<data>
-		60DnJcVsU6iu5B7zTHi8A7y5FhE=
+		2o701U35qfFXqR7ZJ9YjQT/YHXc=
 		</data>
 	</array>
 </dict>
 </plist>
-SQ>%v
-VQzO*
-bHi4
-`Sx=
-20230530213654Z0
+1Y|q
+r`xD
+*r5#J2y
+zi31
+]W@(
+20230531215611Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -33978,7 +34002,6 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230530213654Z0#
- v6=
->7L7
-nU"$
+230531215611Z0#
+d_a	C
+#1ff

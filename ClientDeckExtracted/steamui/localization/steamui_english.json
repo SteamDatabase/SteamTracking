@@ -793,6 +793,8 @@
     "ContentManagement_LowDiskSpaceDialog_Desc": "You are running out of disk space on your local drive. To ensure proper performance and functionality of Steam Deck, you may want to free up space by uninstalling some games. You can do this in %1$s > %2$s, or by selecting the option below.",
     "ContentManagement_LowDiskSpaceNotification_Title": "Low Disk Space",
     "ContentManagement_LowDiskSpaceNotification_Body": "You are running out of disk space on your local drive.",
+    "ContentManagement_OtherToolTip_Header": "What is this?",
+    "ContentManagement_OtherToolTip_Description": "Content on this drive not managed by Steam. This could include your operating system, documents, other applications, etc.",
     "BackupApps_Title": "Backup Game Files",
     "BackupApps_Description": "Create a backup of the game installation files that you can use to restore from later. This will not include game saves, configurations, or other clouded files.",
     "BackupApps_ChooseBackupDirectory": "Choose a directory to create the backup files:",
