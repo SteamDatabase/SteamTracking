@@ -1793,6 +1793,8 @@
     "SalePage_WatchForDrop_LearnMore": "Öğe düşürmeleri hakkında daha fazlasını buradan öğrenebilirsiniz.",
     "SalePresented_By": "Bu üçüncü taraf etkinliği %1$s tarafından sunuluyor",
     "SalePresented_By_Multi": "Bu üçüncü taraf etkinliği %1$s ve %2$s tarafından sunuluyor",
+    "SalePresented_By_Admin": "Organizatörün bu etkinliğe hangi üçüncü tarafların ev sahipliği yapacağını girmesini gerektirir.",
+    "SalePresneted_By_Admin_ttip": "true olarak ayarlandığında, etkinlik organizatörlerinin etkinliğe kimlerin ev sahipliği yaptığını belirtmesi gerekir. Bu, etkinliği kimin düzenlediğinin açıkça bilinmesi ve müşterilerin etkinliğin Valve tarafından düzenlendiğini sanmansını önlemek adına müşteriye dönük satış sayfasında görüntülenir.",
     "ContentHub_Recommendation_Curator": "%1$s Tarafından Önerildi",
     "ContentHub_Recommendation_Curators": "Takip ettiğiniz küratörler tarafından önerildi",
     "ContentHub_Recommendation_FollowedDeveloper": "Geliştiren: %1$s",

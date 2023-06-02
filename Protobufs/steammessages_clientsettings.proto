@@ -102,6 +102,7 @@ message CMsgClientSettings {
 	optional bool library_low_perf_mode = 7005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "LibraryLowPerfMode"];
 	optional bool library_disable_community_content = 7006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "LibraryDisableCommunityContent"];
 	optional bool library_display_icon_in_game_list = 7007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "LibraryDisplayIconInGameList", (setting_default_bool) = true];
+	optional bool ready_to_play_includes_streaming = 7008 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_name) = "ReadyToPlayIncludesStreaming"];
 	optional bool enable_shader_precache = 8000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_shader_background_processing = 8001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional uint64 shader_precached_size = 8002 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_readonly) = true];

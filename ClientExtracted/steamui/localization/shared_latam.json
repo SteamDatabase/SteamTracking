@@ -1793,6 +1793,8 @@
     "SalePage_WatchForDrop_LearnMore": "Obtener más información sobre los objetos aleatorios aquí.",
     "SalePresented_By": "Este evento de terceros es presentado por %1$s",
     "SalePresented_By_Multi": "Este evento de terceros es presentado por %1$s y %2$s",
+    "SalePresented_By_Admin": "Requiere que el organizador ingrese qué terceros organizan este evento",
+    "SalePresneted_By_Admin_ttip": "Cuando se establece en \"true\", los organizadores del evento deben especificar quiénes son los organizadores del evento. Lo cual se muestra en la página de ofertas de cara al cliente, por lo que queda claro quiénes son los organizadores y evita que el cliente se confunda pensando que lo organiza Valve.",
     "ContentHub_Recommendation_Curator": "Recomendado por %1$s",
     "ContentHub_Recommendation_Curators": "Recomendado por mentores a los que sigues",
     "ContentHub_Recommendation_FollowedDeveloper": "Desarrollado por %1$s",

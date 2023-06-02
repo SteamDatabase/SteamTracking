@@ -7568,6 +7568,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   align-items: center;
   -webkit-app-region: drag;
 }
+.bottombar_BottomBar_3vCzS.Maximized,
+.Maximized .bottombar_BottomBar_3vCzS {
+  box-shadow: inset rgba(61, 68, 80, 0.65) 0px 1px 0px 0px;
+}
 .bottombar_BottomBar_3vCzS > * {
   -webkit-app-region: none;
 }
@@ -8432,6 +8436,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-direction: column;
   user-select: none;
 }
+.steamdesktop_TopBar_3Z7VQ.Maximized,
+.Maximized .steamdesktop_TopBar_3Z7VQ {
+  box-shadow: inset rgba(61, 68, 80, 0.25) 0px 0px 1px 0px;
+}
 .steamdesktop_TitleBar_39oUC {
   width: 100%;
   height: 32px;
@@ -8475,6 +8483,13 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background: #171d25;
   box-shadow: inset rgba(61, 68, 80, 0.75) 1px 0px 0px 0px,
     inset rgba(61, 68, 80, 0.25) -1px -1px 0px 0px;
+}
+.steamdesktop_LocalContentContainer_RGNMW
+  .steamdesktop_URLBarReplacement_2Cmrn.Maximized,
+.Maximized
+  .steamdesktop_LocalContentContainer_RGNMW
+  .steamdesktop_URLBarReplacement_2Cmrn {
+  box-shadow: none;
 }
 .steamdesktop_BrowserWrapper_1bGew {
   display: flex;

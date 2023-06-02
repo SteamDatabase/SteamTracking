@@ -1793,6 +1793,8 @@
     "SalePage_WatchForDrop_LearnMore": "Více informací naleznete zde.",
     "SalePresented_By": "Tuto neoficiální událost pořádá %1$s",
     "SalePresented_By_Multi": "Tuto neoficiální událost pořádají %1$s a %2$s",
+    "SalePresented_By_Admin": "Vyžaduje, aby byly určeny třetí strany pořádající tuto událost",
+    "SalePresneted_By_Admin_ttip": "Je-li tato možnost povolena, je nutné určit pořadatele události. Ti jsou následně uvedeni na veřejně dostupné stránce výprodeje, takže je hned jasné, kdo výprodej pořádá, a zákazníci se nemohou mylně domnívat, že jde o oficiální výprodej společnosti Valve.",
     "ContentHub_Recommendation_Curator": "Doporučeno kurátorem %1$s",
     "ContentHub_Recommendation_Curators": "Doporučují ji Vámi sledovaní kurátoři",
     "ContentHub_Recommendation_FollowedDeveloper": "Vývojář: %1$s",

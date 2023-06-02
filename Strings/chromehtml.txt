@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+`Z
+`Z
 __stubs
 __TEXT
 __stub_helper
@@ -1177,7 +1179,7 @@ WebContentsOcclusion
 --v=%s
 --v=1
 -delaypageload
---log-file='%s'
+--log-file=%s
 BREAKPAD_DUMP_LOCATION
 --full-memory-crash-report
 --disable-breakpad
@@ -2381,17 +2383,17 @@ sc_schinese
 @
 @
 
-N
+y
 
 
 @
-
 Ic
-p
-
-7
-?
-I
+|
+u
+V
+X
+_
+2
 
 0
 0
@@ -2439,6 +2441,7 @@ IcE
 IcE
 @
 @
+p
 V
 =
 =

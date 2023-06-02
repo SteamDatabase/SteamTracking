@@ -33,7 +33,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-+0!e
+z(u6=
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -441,8 +441,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-May 31 2023
-14:55:48
+Jun  1 2023
+16:34:02
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -901,7 +901,7 @@ ctivate
 ndLog
 Activate
 ChangeIfStillDefault
-%V16SteamThreadTools15CThreadSpinLock4LockEj
+&V16SteamThreadTools15CThreadSpinLock4LockEj
 .6CTier015ValidateGlobalsER10CValidator
 431CAdHocValidation_SimpleCallbackC
 5AssertMsgHelperILb
@@ -958,14 +958,15 @@ bsoluteTime
 lloc
 ttachDebuggerToProcess
 ToFloat
+ExecutablePath
+StackBackTrace
+OSIXClockSource
+rocessArgv
+ackageName
 Protect
 Free
 ccessFlags
 lloc
-ExecutablePath
-StackBackTrace
-rocessArgv
-ackageName
 Exists
 Value
 ConsoleMode
@@ -986,7 +987,7 @@ CAdHocValidation
 7CThread
 8CreateSimpleThreadEPFjPvES0_Pjj
 7CThreadSyncObject
-#2CThread
+$2CThread
 (6CThread
 *3CThreadRWLock1
 MicroSleepPOSIX
@@ -1002,7 +1003,7 @@ pinWaitForValue
 #hellExecute
 mplOneTimeInit
 terlocked
-MainThread
+ MainThread
 Assign
  Increment
 -Decrement
@@ -1038,7 +1039,7 @@ $1Ev
 *7IsSemaphoreOrphanedInternalEii
 &31CAdHocValidation_SimpleCallback10DoValidateER10CValidator
 6SteamThreadTools
-&7CThread
+'7CThread
 7CThreadSyncObjectntEv
 '6CThread
 3AssertUseableEv
@@ -1056,7 +1057,7 @@ SignalThreadSyncObjectInternalEv
 ResetEv
 *CheckEv
 Semaphore
-*FullMutex
++FullMutex
 +LocalBase
 +7ReleaseEl
 2Ell
@@ -1070,7 +1071,7 @@ FullMutex9IsCreatorEv
 ,1Ev
 ,1Ev
 3GetEv
-,8BIsValidEv
+-8BIsValidEv
 -Pointer
 Pointer
 .1Ev
@@ -1080,8 +1081,8 @@ WaitForReadEv
 /UnlockWriteEv
 	C2Ev
 39TerminateEi
-/1Ev
-10Ev
+01Ev
+20Ev
 09GetResultEv
 07IsAliveEv
 7BHasValidThreadIDEv
@@ -1091,7 +1092,7 @@ GetNameEv
 7GetCurrentCThreadEv
 11SetPriorityEi
 33GetThreadProcEv
-30ThreadProcEPv
+40ThreadProcEPv
 JoinEj
 1StopEi
 3InitEv
@@ -1115,10 +1116,10 @@ Init
 PopIntoFreeList
 5UnsafeDebugCheck
 Peek
-5Dummy
+6Dummy
 CValidator
 6SteamVProf
-74PushEPKcPvS1_
+84PushEPKcPvS1_
 2EibP20IMemBlockClaimedList
 71EibP20IMemBlockClaimedList
 71Ev
@@ -1126,10 +1127,10 @@ CValidator
 70ClaimUntrackedMemoryEm
 8SetAllocSizeFilterEi
 :9ClaimMemory_AlignedEPKv
-:6ClaimArrayMemoryEPKv
+;6ClaimArrayMemoryEPKv
 ;5Claim
 ;3RenderObjectsEm
-;0FindObjectEPv
+<0FindObjectEPv
 <7AddValidationLockEPN16SteamThreadTools12CThreadMutexE
 PopEv
 90BExcludeAllocationFromTrackingEPKci
@@ -1137,28 +1138,28 @@ CValidator9IsClaimedEPKv
 :SteamVProf9CVProfile
 Claim
 :RenderLeaksEm
-;DiffAgainstEPS_
+<DiffAgainstEPS_
 MemoryEPKv
-:SocketEi
+;SocketEi
 ;OsFileEi
 TrackedKeyEP11CTrackItemsPvPm
 ;ConnectionEj
 FinalizeEv
-;ValidateERS_PKc
+<ValidateERS_PKc
 C2Ev
 <17StaticValidateAllER10CValidator
 =8s_pFirstE
-<1Ev
+=1Ev
 2EPFvR10CValidatorE
 =1EPFvR10CValidatorE
-=9CVProfile
+>9CVProfile
 ?20CVProfileThreadEntry
 3CVProfManager
 >4CVProfileArrayD
 C0CVProfNode
 O8ValidateER10CValidatorPKc
 >2Ev
->2Ev
+?2Ev
 GetProfileForCurrentThread
 ?EnterScopeCurrentThread
 H6ResumeEv
@@ -1171,7 +1172,7 @@ F2OutputReportEiPKci
 N1GetThreadIDEv
 O9GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
 EnterScopeEPKc17EVProfBugdetGroupPv
-BResetPeaksEv
+CResetPeaksEv
 JDumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
 ExitScopeEv
 CMarkFrameEPKc
@@ -1188,51 +1189,51 @@ E1Ev
 0GetSubNodeEPKc17EVProfBugdetGroup
 F5SetCurFrameTimeEm
 AllocVProfNodeEPS0_PKcPNS_10CVProfNodeE17EVProfBugdetGroup
-FDumpSingleNodeEPNS_10CVProfNodeES2_ib
+GDumpSingleNodeEPNS_10CVProfNodeES2_ib
 4GetTotalTimeLessChildrenEv
-G2GetCurTimeLessChildrenEv
-G3GetPrevTimeLessChildrenEv
+H2GetCurTimeLessChildrenEv
+H3GetPrevTimeLessChildrenEv
 StartEv
 HPauseEv
 JResetEv
 StopEv
 IDumpEPKcz
-M4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
-M0GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
+N4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+N0GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
 NTermEv
 18GetBudgetGroupNameE17EVProfBugdetGroup
 J30BudgetGroupNameToBudgetGroupIDEPKc
 K22SetDumpSpikesThresholdEi
 6OnFrameCompletedEv
-K7OnNewFrameEnteredEv
+L7OnNewFrameEnteredEv
 P4StartProfilingEfi
 Q1DumpProfileEi
 3RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-L5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+M5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
 FindNodeEPNS_10CVProfNodeEPKc
 MSumTimesEPNS_10CVProfNodeEi
 MValidateER10CValidatorPKc
 CreateBudgetGroupsEv
 NAddBudgetGroupNameE17EVProfBugdetGroupiPKc
-N1Ev
+O1Ev
 P4StartProfilingAllThreadsEfi
 Q3StopProfilingAllThreadsEv
 Q0GetAllThreadProfilesEPNS_14CVProfileArrayE
 CleanupUnusedProfilesEv
 PDumpAllThreadProfilesEi
 DeleteProfileEv
-PStopProfilingEv
+QStopProfilingEv
 1EPNS_9CVProfileEjP17_opaque_pthread_t
 R2EPNS_9CVProfileEjP17_opaque_pthread_t
-R31CAdHocValidation_SimpleCallback
+S31CAdHocValidation_SimpleCallback
 S16CAdHocValidation
 6SteamThreadTools7CThreadE
 S0SteamVProf13CVProfManagerE
 N16SteamThreadTools7CThreadE
 T31CAdHocValidation_SimpleCallback
 N16SteamThreadTools7CThreadE
-T16CAdHocValidation
-T31CAdHocValidation_SimpleCallback
+U16CAdHocValidation
+U31CAdHocValidation_SimpleCallback
 ClockSpeed
 UpMemAllocSteam
 VbInException
@@ -1251,7 +1252,7 @@ yI#WnI
 ){c$TII
 789>>8$@'
 RO""@HF
-			BA"
+			BA
 Y@@@E88
 ]W m(
 iF=+
@@ -1329,6 +1330,7 @@ _Plat_FloatTime
 _Plat_Free
 _Plat_GetExecutablePath
 _Plat_GetExecutablePathUTF8
+_Plat_GetPOSIXClockSource
 _Plat_GetPackageName
 _Plat_GetProcessArgv
 _Plat_GetStackBackTrace
@@ -1841,40 +1843,37 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-?Ag 
-F\J2G}%-
-^bVV
-uVU#c
-u~I7
-w(14m
-Uxa1E
-,w0\$
+QYB)
+z{=%
+L{--K
+PI7R
+KVQ+
+AOg /
+t%*\P
 %|,W8
-D5csD
-2r[/
+Z.]i
+r9i	N
+8SZa
+mbW*
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-(929
-bz-]<
-B	:~
-;qb+
-`s.D
-s#{,
-yY`x
-wAEt
-DCa_
-X.Aq
-Ua&M
-D##@0;w
+}K^,4
+(hNT
+Z.x/
+0@~SEnf7
+-W4,
+jS5i
+H%Q.
+]c8i
 GMDBtu@=1w
-"N#"?9
+9p(%
+!6:/
 }h`~f
-1ULy
->t@(
-x+{]
-bX,s"
+Vy4"
+5I4A
+Pl<3P*
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1930,8 +1929,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230531215550Z0/
-[,G1
+230601233404Z0/
+]9e=
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1939,20 +1938,16 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		jMPAAZV9km/BgwuE91VhNKm0EMc=
+		tbOhz0LHeZSe6ooQAIvELYt43YU=
 		</data>
 		<data>
-		05NyqxzF8tpZE7bX2ggxUdhy4vA=
+		y6Dw9O6oD9r5wt3Ps105ZT3Y/6k=
 		</data>
 	</array>
 </dict>
 </plist>
-w[{Y
-rw8O
-HA$-
-xs6|^=
-v]"C
-20230531215621Z0
+".9Z
+20230601233441Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2005,10 +2000,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230531215621Z0#
-YHm,
-F`5V@{"s
-*UZ-
+230601233441Z0#
+Wjl`Y#
+R`4-S
+exo6
+hVLf
 __TEXT
 __text
 __TEXT
@@ -2044,6 +2040,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+(Wza
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -2761,8 +2758,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-May 31 2023
-14:55:48
+Jun  1 2023
+16:34:03
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -3275,14 +3272,15 @@ bsoluteTime
 lloc
 ttachDebuggerToProcess
 ToFloat
+ExecutablePath
+StackBackTrace
+OSIXClockSource
+rocessArgv
+ackageName
 Protect
 Free
 ccessFlags
 lloc
-ExecutablePath
-StackBackTrace
-rocessArgv
-ackageName
 Exists
 Value
 ConsoleMode
@@ -3303,14 +3301,14 @@ CAdHocValidation
 7CThread
 8CreateSimpleThreadEPFjPvES0_Pjj
 7CThreadSyncObject
-#2CThread
+$2CThread
 (6CThread
 *3CThreadRWLock1
 MicroSleepPOSIX
  Terminate
 "OpenProcess
 "CloseProcess
-"ResumeProcess
+#ResumeProcess
 #WaitForProcessExit
 #FindProcessByName
 leep
@@ -3319,7 +3317,7 @@ pinWaitForValue
 #hellExecute
 mplOneTimeInit
 terlocked
-MainThread
+ MainThread
 Assign
  Increment
 -Decrement
@@ -3356,7 +3354,7 @@ $1Ev
 *7IsSemaphoreOrphanedInternalEii
 &31CAdHocValidation_SimpleCallback10DoValidateER10CValidator
 6SteamThreadTools
-&7CThread
+'7CThread
 7CThreadSyncObjectntEv
 '6CThread
 3AssertUseableEv
@@ -3374,7 +3372,7 @@ SignalThreadSyncObjectInternalEv
 ResetEv
 *CheckEv
 Semaphore
-*FullMutex
++FullMutex
 +LocalBase
 +7ReleaseEl
 2Ell
@@ -3388,18 +3386,18 @@ FullMutex9IsCreatorEv
 ,1Ev
 ,1Ev
 3GetEv
-,8BIsValidEv
+-8BIsValidEv
 -Pointer
 Pointer
 .1Ev
 .1Ev
-.2LockForWriteEv
+/2LockForWriteEv
 WaitForReadEv
 /UnlockWriteEv
 	C2Ev
 39TerminateEi
-/1Ev
-10Ev
+01Ev
+20Ev
 09GetResultEv
 07IsAliveEv
 7BHasValidThreadIDEv
@@ -3409,9 +3407,9 @@ GetNameEv
 7GetCurrentCThreadEv
 11SetPriorityEi
 33GetThreadProcEv
-30ThreadProcEPv
+40ThreadProcEPv
 JoinEj
-1StopEi
+2StopEi
 3InitEv
 etNameEPKc
 2uspendEv
@@ -3426,22 +3424,22 @@ ListBase_
 4Queue
 Init
 4SwapList
-4UnsafePeek
+5UnsafePeek
 Base_
 Init
 5Unsafe
 PopIntoFreeList
 5UnsafeDebugCheck
 Peek
-5Dummy
+6Dummy
 CValidator
 6SteamVProf
-74PushEPKcPvS1_
+84PushEPKcPvS1_
 2EibP20IMemBlockClaimedList
 71EibP20IMemBlockClaimedList
 71Ev
 1UnlockValidationLocksEv
-70ClaimUntrackedMemoryEm
+80ClaimUntrackedMemoryEm
 8SetAllocSizeFilterEi
 :9ClaimMemory_AlignedEPKv
 ;6ClaimArrayMemoryEPKv
@@ -3450,7 +3448,7 @@ CValidator
 <0FindObjectEPv
 <7AddValidationLockEPN16SteamThreadTools12CThreadMutexE
 PopEv
-90BExcludeAllocationFromTrackingEPKci
+:0BExcludeAllocationFromTrackingEPKci
 CValidator9IsClaimedEPKv
 :SteamVProf9CVProfile
 Claim
@@ -3462,20 +3460,20 @@ MemoryEPKv
 TrackedKeyEP11CTrackItemsPvPm
 ;ConnectionEj
 FinalizeEv
-;ValidateERS_PKc
+<ValidateERS_PKc
 C2Ev
-<17StaticValidateAllER10CValidator
+=17StaticValidateAllER10CValidator
 =8s_pFirstE
 =1Ev
 2EPFvR10CValidatorE
 =1EPFvR10CValidatorE
-=9CVProfile
+>9CVProfile
 ?20CVProfileThreadEntry
 3CVProfManager
 >4CVProfileArrayD
 C0CVProfNode
 O8ValidateER10CValidatorPKc
->2Ev
+?2Ev
 ?2Ev
 GetProfileForCurrentThread
 ?EnterScopeCurrentThread
@@ -3490,10 +3488,10 @@ N1GetThreadIDEv
 O9GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
 EnterScopeEPKc17EVProfBugdetGroupPv
 CResetPeaksEv
-JDumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+KDumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
 ExitScopeEv
 CMarkFrameEPKc
-JDumpNodesEPNS_10CVProfNodeES2_ib
+KDumpNodesEPNS_10CVProfNodeES2_ib
 C1Ev
 E6ResumeEv
 G9ResetPeakEv
@@ -3514,22 +3512,22 @@ StartEv
 HPauseEv
 JResetEv
 StopEv
-IDumpEPKcz
-M4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+JDumpEPKcz
+N4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
 N0GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
 NTermEv
 18GetBudgetGroupNameE17EVProfBugdetGroup
 J30BudgetGroupNameToBudgetGroupIDEPKc
 K22SetDumpSpikesThresholdEi
 6OnFrameCompletedEv
-K7OnNewFrameEnteredEv
+L7OnNewFrameEnteredEv
 P4StartProfilingEfi
 Q1DumpProfileEi
 3RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-L5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+M5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
 FindNodeEPNS_10CVProfNodeEPKc
 MSumTimesEPNS_10CVProfNodeEi
-MValidateER10CValidatorPKc
+NValidateER10CValidatorPKc
 CreateBudgetGroupsEv
 NAddBudgetGroupNameE17EVProfBugdetGroupiPKc
 O1Ev
@@ -3542,14 +3540,14 @@ DeleteProfileEv
 QStopProfilingEv
 1EPNS_9CVProfileEjP17_opaque_pthread_t
 R2EPNS_9CVProfileEjP17_opaque_pthread_t
-R31CAdHocValidation_SimpleCallback
+S31CAdHocValidation_SimpleCallback
 S16CAdHocValidation
 6SteamThreadTools7CThreadE
 S0SteamVProf13CVProfManagerE
 N16SteamThreadTools7CThreadE
 T31CAdHocValidation_SimpleCallback
 N16SteamThreadTools7CThreadE
-T16CAdHocValidation
+U16CAdHocValidation
 U31CAdHocValidation_SimpleCallback
 ClockSpeed
 UpMemAllocSteam
@@ -3560,7 +3558,7 @@ crosecondsMultiplier
 VllisecondsMultiplier
 ProfilesRunningCount
 VManager
-Vile
+Wile
 @jtt
 Bvvh
 LAA~{
@@ -3642,6 +3640,7 @@ _Plat_FloatTime
 _Plat_Free
 _Plat_GetExecutablePath
 _Plat_GetExecutablePathUTF8
+_Plat_GetPOSIXClockSource
 _Plat_GetPackageName
 _Plat_GetProcessArgv
 _Plat_GetStackBackTrace
@@ -4152,26 +4151,29 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-QgGQ
-G`U,
+T"q<
 YP=h
+%~Q	.
+#N"!
 QHVS
 :/?.B
 Q1{[
 1L~|
-68MP
+VEy^e
+9>_.k,
+zyy4
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-`93$D
-x[fa
-Y>b<
-[OUv
-]*O6
-/4_\7>
-h,i}
-Rnk.
+T%gN
+DjP5
+jJ;[\
+ ^#g
+^|_X4
+UD.k
+n5,j
+cUx:
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4227,8 +4229,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230531215550Z0/
- LN#f
+230601233404Z0/
+0a=)
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4236,31 +4238,36 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		4jzM+HQVcBFpN0j7db3xaghB4EQ=
+		cyKUDLxE3HZ8Za5FqEmNelL7uGs=
 		</data>
 		<data>
-		AkJT5NL02iCNd+9zfkyyGTSSpAU=
+		xfcXXUqXNb/ON+F6e5nZcQtoH88=
 		</data>
 	</array>
 </dict>
 </plist>
-h:u(
-20230531215621Z0
-0Qu=
+Oq::
+|PPs
+20230601233441Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230517203509Z
-230628203508Z0B1
-Timestamp Signer NWK21
+230517205008Z
+230628205007Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-7bc<
+SD}l
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
--a[>
+%{!u
+.:E7)&V
+Ghpj
+f?fJf[
+3y\G
+1W'n
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4299,10 +4306,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230531215621Z0#
-H<8FZ
-Y>j$=
-z}zptL
+230601233441Z0#
+F?	L
+b7).
+OhdTS
 __TEXT
 __text
 __TEXT
@@ -4339,16 +4346,21 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-\=O?Q
+i?3,
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+ t	P
+Hk	P
+(k	0
 bU9(
 bU9(
 T		@9?
 5'qHs
+T .	P
+".	P
 	(B)J
 ?i(8
 kjh8k
@@ -4356,8 +4368,8 @@ kjh8k
 i+8,
 (a@9
 5(	@
+t	\!
 s	\!
-as	\!
 1[9h
 ThZ@
 ThZ@
@@ -4377,7 +4389,7 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-09`a
+09@f
 @9?q
 @9_q
 @3	X
@@ -4517,8 +4529,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-May 31 2023
-14:55:48
+Jun  1 2023
+16:34:03
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5028,14 +5040,15 @@ bsoluteTime
 lloc
 ttachDebuggerToProcess
 ToFloat
+ExecutablePath
+StackBackTrace
+OSIXClockSource
+rocessArgv
+ackageName
 Protect
 Free
 ccessFlags
 lloc
-ExecutablePath
-StackBackTrace
-rocessArgv
-ackageName
 Exists
 Value
 ConsoleMode
@@ -5056,14 +5069,14 @@ CAdHocValidation
 7CThread
 8CreateSimpleThreadEPFjPvES0_Pjj
 7CThreadSyncObject
-#2CThread
+$2CThread
 (6CThread
 *3CThreadRWLock1
 MicroSleepPOSIX
  Terminate
 "OpenProcess
 "CloseProcess
-"ResumeProcess
+#ResumeProcess
 #WaitForProcessExit
 #FindProcessByName
 leep
@@ -5072,7 +5085,7 @@ pinWaitForValue
 #hellExecute
 mplOneTimeInit
 terlocked
-MainThread
+ MainThread
 Assign
  Increment
 -Decrement
@@ -5109,7 +5122,7 @@ $1Ev
 *7IsSemaphoreOrphanedInternalEii
 &31CAdHocValidation_SimpleCallback10DoValidateER10CValidator
 6SteamThreadTools
-&7CThread
+'7CThread
 7CThreadSyncObjectntEv
 '6CThread
 3AssertUseableEv
@@ -5127,7 +5140,7 @@ SignalThreadSyncObjectInternalEv
 ResetEv
 *CheckEv
 Semaphore
-*FullMutex
++FullMutex
 +LocalBase
 +7ReleaseEl
 2Ell
@@ -5141,18 +5154,18 @@ FullMutex9IsCreatorEv
 ,1Ev
 ,1Ev
 3GetEv
-,8BIsValidEv
+-8BIsValidEv
 -Pointer
 Pointer
 .1Ev
 .1Ev
-.2LockForWriteEv
+/2LockForWriteEv
 WaitForReadEv
 /UnlockWriteEv
 	C2Ev
 39TerminateEi
-/1Ev
-10Ev
+01Ev
+20Ev
 09GetResultEv
 07IsAliveEv
 7BHasValidThreadIDEv
@@ -5162,9 +5175,9 @@ GetNameEv
 7GetCurrentCThreadEv
 11SetPriorityEi
 33GetThreadProcEv
-30ThreadProcEPv
+40ThreadProcEPv
 JoinEj
-1StopEi
+2StopEi
 3InitEv
 etNameEPKc
 2uspendEv
@@ -5179,22 +5192,22 @@ ListBase_
 4Queue
 Init
 4SwapList
-4UnsafePeek
+5UnsafePeek
 Base_
 Init
 5Unsafe
 PopIntoFreeList
 5UnsafeDebugCheck
 Peek
-5Dummy
+6Dummy
 CValidator
 6SteamVProf
-74PushEPKcPvS1_
+84PushEPKcPvS1_
 2EibP20IMemBlockClaimedList
 71EibP20IMemBlockClaimedList
 71Ev
 1UnlockValidationLocksEv
-70ClaimUntrackedMemoryEm
+80ClaimUntrackedMemoryEm
 8SetAllocSizeFilterEi
 :9ClaimMemory_AlignedEPKv
 ;6ClaimArrayMemoryEPKv
@@ -5203,7 +5216,7 @@ CValidator
 <0FindObjectEPv
 <7AddValidationLockEPN16SteamThreadTools12CThreadMutexE
 PopEv
-90BExcludeAllocationFromTrackingEPKci
+:0BExcludeAllocationFromTrackingEPKci
 CValidator9IsClaimedEPKv
 :SteamVProf9CVProfile
 Claim
@@ -5215,20 +5228,20 @@ MemoryEPKv
 TrackedKeyEP11CTrackItemsPvPm
 ;ConnectionEj
 FinalizeEv
-;ValidateERS_PKc
+<ValidateERS_PKc
 C2Ev
-<17StaticValidateAllER10CValidator
+=17StaticValidateAllER10CValidator
 =8s_pFirstE
 =1Ev
 2EPFvR10CValidatorE
 =1EPFvR10CValidatorE
-=9CVProfile
+>9CVProfile
 ?20CVProfileThreadEntry
 3CVProfManager
 >4CVProfileArrayD
 C0CVProfNode
 O8ValidateER10CValidatorPKc
->2Ev
+?2Ev
 ?2Ev
 GetProfileForCurrentThread
 ?EnterScopeCurrentThread
@@ -5243,10 +5256,10 @@ N1GetThreadIDEv
 O9GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
 EnterScopeEPKc17EVProfBugdetGroupPv
 CResetPeaksEv
-JDumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+KDumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
 ExitScopeEv
 CMarkFrameEPKc
-JDumpNodesEPNS_10CVProfNodeES2_ib
+KDumpNodesEPNS_10CVProfNodeES2_ib
 C1Ev
 E6ResumeEv
 G9ResetPeakEv
@@ -5267,22 +5280,22 @@ StartEv
 HPauseEv
 JResetEv
 StopEv
-IDumpEPKcz
-M4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+JDumpEPKcz
+N4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
 N0GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
 NTermEv
 18GetBudgetGroupNameE17EVProfBugdetGroup
 J30BudgetGroupNameToBudgetGroupIDEPKc
 K22SetDumpSpikesThresholdEi
 6OnFrameCompletedEv
-K7OnNewFrameEnteredEv
+L7OnNewFrameEnteredEv
 P4StartProfilingEfi
 Q1DumpProfileEi
 3RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-L5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+M5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
 FindNodeEPNS_10CVProfNodeEPKc
 MSumTimesEPNS_10CVProfNodeEi
-MValidateER10CValidatorPKc
+NValidateER10CValidatorPKc
 CreateBudgetGroupsEv
 NAddBudgetGroupNameE17EVProfBugdetGroupiPKc
 O1Ev
@@ -5302,7 +5315,7 @@ S31CAdHocValidation_SimpleCallback
 N16SteamThreadTools7CThreadE
 T31CAdHocValidation_SimpleCallback
 ClockSpeed
-TpMemAllocSteam
+UpMemAllocSteam
 UbInException
 UVProf
 USecondsMultiplier
@@ -5392,6 +5405,7 @@ _Plat_FloatTime
 _Plat_Free
 _Plat_GetExecutablePath
 _Plat_GetExecutablePathUTF8
+_Plat_GetPOSIXClockSource
 _Plat_GetPackageName
 _Plat_GetProcessArgv
 _Plat_GetStackBackTrace
@@ -5898,23 +5912,32 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-9h]V
-CV#}!
-k)Ds
-w|v-
+  t)
+} qJ
+1L\*
+R[Z|
+(+Q3
+vS6O"
+'Hp4
+NQx*h
+0^@'[
+DG.n
+V/uX4
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-cx5-
-;k(IH
-Wh\!0
-7Rc'
-{d$[
-u{3~
-"Tiq
-]~![MoD
-/ib 
+dlG,
+cRDP
+[xZG
+fhaL
+=?X'
+&#`^p@
+U%/"?
+{XpV
+%}Z(&L
+Nh' oJ
+a$w5
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -5970,8 +5993,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230531215550Z0/
-`n$.{7
+230601233404Z0/
+:@I`
+h'"$~
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5979,35 +6003,31 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		WvdVT5gv+s94Mb0x2QvsYd8mK4s=
+		zT3vIbofLXmsXV1WCL5oNTDrvLw=
 		</data>
 		<data>
-		/Nl7XczAjJEPWgUt7rCEioRH3UE=
+		gHPBaVAX7w/hKvrhHDpASWC4iFg=
 		</data>
 	</array>
 </dict>
 </plist>
-8SaG
-20230531215621Z0
+4_"{
+BV &y
+20230601233441Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230517205008Z
-230628205007Z0B1
-Timestamp Signer NWK11
+230517203509Z
+230628203508Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-SD}l
+7bc<
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-%{!u
-.:E7)&V
-Ghpj
-f?fJf[
-3y\G
-1W'n
+-a[>
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6046,7 +6066,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230531215621Z0#
-K7A	$u@
-nsug
-va&u
+230601233441Z0#
+"V>7
+\fd'~
+lz3b
+)`|`%@
