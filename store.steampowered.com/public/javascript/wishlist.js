@@ -319,11 +319,11 @@ CWishlistController.prototype.BuildElements = function()
 
 			if( subForPurchase && ( subForPurchase.price > 0 || rgAppInfo['free_promo'] ) )
 			{
-				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"https:\/\/store.steampowered.com\/%5$s\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium noicon\" href=\"javascript:%6$s(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium icon\" href=\"javascript:%6$s(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/ico\/wishlist\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form>"				.replace(/%1\$s/g, subForPurchase.packageid ? subForPurchase.packageid : subForPurchase.bundleid )
+				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"%5$s\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium noicon\" href=\"javascript:%6$s(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium icon\" href=\"javascript:%6$s(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/ico\/wishlist\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form>"				.replace(/%1\$s/g, subForPurchase.packageid ? subForPurchase.packageid : subForPurchase.bundleid )
 				.replace(/%2\$s/g,g_sessionID)
 				.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
 				.replace(/%4\$s/g,strInCartLabel)
-				.replace(/%5\$s/g, rgAppInfo['free_promo']?'checkout/addfreelicense':'cart')
+				.replace(/%5\$s/g, rgAppInfo['free_promo']? 'https://store.steampowered.com/checkout/addfreelicense' : 'https://store.steampowered.com/cart' )
 				.replace(/%6\$s/g, subForPurchase.packageid ? 'addToCart' : 'addBundleToCart' );
 			}
 			else if( rgAppInfo['prerelease'] )

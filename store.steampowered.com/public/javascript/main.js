@@ -1438,7 +1438,7 @@ function AddFreeLicense( subid, strDisplayName )
 
 	for ( var i = 0; i < subids.length; i++ )
 	{
-		posts.push( $J.post( 'https://store.steampowered.com/checkout/addfreelicense/' + subids[i], { ajax: true, sessionid: g_sessionID }) );
+		posts.push( CrossDomainPost( 'https://store.steampowered.com/checkout/addfreelicense/' + subids[i], { ajax: true, sessionid: g_sessionID }) );
 	}
 
 	$J.when.apply( $J, posts ).done( function() {
@@ -1472,7 +1472,7 @@ function AddFreeBundle( bundleid, strDisplayName )
 	window.g_bAddFreeLicenseInFlight = true;
 
 	var posts = [];
-	posts.push( $J.post( 'https://store.steampowered.com/checkout/addfreebundle/' + bundleid, { ajax: true, sessionid: g_sessionID }) );
+	posts.push( CrossDomainPost( 'https://store.steampowered.com/checkout/addfreebundle/' + bundleid, { ajax: true, sessionid: g_sessionID }) );
 
 	$J.when.apply( $J, posts ).done( function() {
 		ShowAlertDialog(
