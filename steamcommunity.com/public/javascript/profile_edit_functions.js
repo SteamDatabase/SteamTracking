@@ -410,24 +410,45 @@ function ShowcaseRecommendationPicker( elSlot, eShowcase, purchaseid, level, iSl
 	var Modal = ShowDialog( 'Select a Game You\'ve Publicly Reviewed', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
-	$J.get( g_rgProfileData['url'] + 'ajaxgetrecommendedgames?public_only=1', function(html) {
+	var url = g_rgProfileData['url'] + 'ajaxgetrecommendedgames?public_only=1';
+	$J.get( url, function( responseJSON ) {
+		if ( !responseJSON || !responseJSON.success )
+			return;
+
 		Modal.GetContent().find( '.newmodal_content').html('');	// erase the throbber
 		Modal.GetContent().find( '.newmodal_content').append( $ListElement );
-		$ListElement.html( html );
-		Modal.AdjustSizing();
-		$ListElement.children( '.game_list_results' ).children().each( function () {
-			var appid = this.getAttribute( 'data-appid' );
-			var strAppLogoURL = this.getAttribute( 'data-applogo' );
-			var strGroupName = $J(this).children('.group_list_groupname').text();
-			if ( appid )
-			{
-				$J(this).click( function() {
-					Modal.Dismiss();
-					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">');
-					PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: appid } );
-				} );
-			}
-		});
+		$ListElement.html( responseJSON.results_html );
+
+		var rgPagingData = {
+			'query': 'paging',
+			'action': '',
+			'total_count': responseJSON.total_count,
+			'pagesize': responseJSON.pagesize,
+			'prefix': 'ReviewedGames'
+		};
+		var gReviewedGames = new CAjaxPagingControls( rgPagingData, url );
+
+		var funcHandleResponse = function( response ) {
+			Modal.AdjustSizing();
+
+			var rows = $ListElement.find( '.group_list_option' );
+			rows.each( function () {
+				var appid = this.getAttribute( 'data-appid' );
+				var strAppLogoURL = this.getAttribute( 'data-applogo' );
+				var strGroupName = $J(this).children('.group_list_groupname').text();
+				if ( appid )
+				{
+					$J(this).click( function() {
+						Modal.Dismiss();
+						$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif">');
+						PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: appid } );
+					} );
+				}
+			});
+		};
+
+		gReviewedGames.SetResponseHandler( funcHandleResponse );
+		funcHandleResponse( responseJSON );
 	});
 }
 

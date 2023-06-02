@@ -570,3 +570,41 @@ select.gray_bevel {
 		opacity: 0;
 	}
 }
+
+.ReviewedGames_paging
+{
+	position: relative;
+}
+
+.ReviewedGames_paging_summary
+{
+	color: #969696;
+}
+
+.ReviewedGames_paging_controls
+{
+}
+
+.ReviewedGames_paging_controls .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.ReviewedGames_paging_pagelink {
+	color: #999999;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.ReviewedGames_paging_pagelink:hover {
+	text-decoration: underline;
+}
+
+.ReviewedGames_paging_pagelink.active {
+	color: #ffffff;
+	cursor: default;
+}
+
+.ReviewedGames_paging_pagelink.active:hover {
+	text-decoration: none;
+}
