@@ -23785,14 +23785,13 @@
         v = a.n(h);
       function S(e) {
         const { saleSection: t, editModel: a } = e,
-          [n, i, l, o, s] = (0, c.SZ)(() => [
-            t.hide_section,
+          [n, i, l, o] = (0, c.SZ)(() => [
             t.disable_section,
             t.disable_localization,
             t.visibility_by_door_index_state,
             t.door_index_visibility,
           ]),
-          m = [
+          s = [
             {
               label: (0, _.Xx)("#Sale_Section_DoorIndexVisibility_none"),
               data: "none",
@@ -23814,18 +23813,9 @@
           d.Fragment,
           null,
           d.createElement(u.ji, {
-            label: (0, _.Xx)("#Sale_Section_Hide"),
-            tooltip: (0, _.Xx)("#Sale_Section_Hide_ttip"),
-            checked: n,
-            onChange: (e) => {
-              t.hide_section != e &&
-                ((t.hide_section = e), a.SetDirty(r.jB.jsondata_sales));
-            },
-          }),
-          d.createElement(u.ji, {
             label: (0, _.Xx)("#Sale_Section_Disable"),
             tooltip: (0, _.Xx)("#Sale_Section_Disable_ttip"),
-            checked: i,
+            checked: n,
             onChange: (e) => {
               t.disable_section != e &&
                 ((t.disable_section = e), a.SetDirty(r.jB.jsondata_sales));
@@ -23834,7 +23824,7 @@
           d.createElement(u.ji, {
             label: (0, _.Xx)("#Sale_Section_DisableLocalization"),
             tooltip: (0, _.Xx)("#Sale_Section_DisableLocalization_ttip"),
-            checked: l,
+            checked: i,
             onChange: (e) => {
               t.disable_localization != e &&
                 ((t.disable_localization = e), a.SetDirty(r.jB.jsondata_sales));
@@ -23844,10 +23834,10 @@
             strDropDownClassName: (0, g.Z)(v().DropDownScroll),
             label: (0, _.Xx)("#Sale_Section_DoorIndexVisibility"),
             tooltip: (0, _.Xx)("#Sale_Section_DoorIndexVisibility_ttip"),
-            rgOptions: m,
-            selectedOption: o || "none",
+            rgOptions: s,
+            selectedOption: l || "none",
             onChange: (e) => {
-              o != e.data &&
+              l != e.data &&
                 ("none" == e.data
                   ? ((t.visibility_by_door_index_state = void 0),
                     (t.door_index_visibility = void 0))
@@ -23860,16 +23850,16 @@
             bDisableMouseOverlay: !0,
             contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
           }),
-          Boolean(null != o && null != o) &&
+          Boolean(null != l && null != l) &&
             d.createElement(u.II, {
               type: "number",
               min: "0",
               max: "63",
               label: (0, _.Xx)("#Sale_Section_DoorIndex_Value"),
-              value: s || 0,
+              value: o || 0,
               onChange: (e) => {
                 let n = Number.parseInt(e.target.value);
-                s != n && (t.door_index_visibility = n),
+                o != n && (t.door_index_visibility = n),
                   a.SetDirty(r.jB.jsondata_sales);
               },
             })
@@ -31501,15 +31491,6 @@
                             { className: qe.EditorCtn },
                             d.createElement($e, Object.assign({}, this.props))
                           ),
-                        d.createElement(
-                          P.s,
-                          {
-                            clanSteamID: e.GetClanSteamID(),
-                            requireAdmin: !0,
-                            className: qe.SectionOverrideCtn,
-                          },
-                          d.createElement(Ua, Object.assign({}, this.props))
-                        ),
                         d.createElement(rn, {
                           saleSection: t,
                           editModel: e,
@@ -31548,7 +31529,12 @@
                             rootMargin: "0px 0px 100% 0px",
                           },
                           d.createElement(bn, Object.assign({}, this.props))
-                        )
+                        ),
+                      d.createElement(
+                        "div",
+                        { className: qe.EditorCtn },
+                        d.createElement(Ua, Object.assign({}, this.props))
+                      )
                     )
                 )
           );
