@@ -215,7 +215,7 @@
                     "name": "time_historical_cutoff",
                     "type": "uint32",
                     "optional": false,
-                    "description": "When active_only is set, offers updated since this time will also be returned"
+                    "description": "When active_only is set, offers updated since this time will also be returned. When historical_only is set, only offers updated since this time are included."
                 },
                 {
                     "name": "cursor",
