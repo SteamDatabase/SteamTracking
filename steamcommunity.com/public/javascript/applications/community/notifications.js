@@ -376,14 +376,12 @@
               (0, s.RY)(e)
             );
           })(),
-          e = t > 0 ? (0, p.Xx)("#NotificationsList_Unread", t) : "";
-        return t
-          ? o.createElement(
-              "span",
-              { className: y().NotificationsHeaderUnread },
-              e
-            )
-          : null;
+          e = (0, p.Xx)("#NotificationsList_Unread", t);
+        return o.createElement(
+          "span",
+          { className: y().NotificationsHeaderUnread },
+          e
+        );
       }
       function P() {
         const t = b();

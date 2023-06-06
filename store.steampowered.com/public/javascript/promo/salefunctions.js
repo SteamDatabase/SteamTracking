@@ -196,7 +196,7 @@ function fnRenderHeroCapsule( oItem )
 	var url = GStoreItemData.GetAppURL( oItem.appid, 'sale_hero' );
 	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
-	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': oItem.appid, 'style': 'max-height: 450px', 'src': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
+	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': oItem.appid, 'style': 'max-height: 450px', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
 
 	if ( rgItemData.has_live_broadcast )
 	{
@@ -625,7 +625,7 @@ function TagBoxTopDecoration()
 
 function SaleTagTexture( suffix )
 {
-	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/spring2023/' + suffix + '_page.webp"); background-repeat: repeat;';
+	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2023/' + suffix + '_page.webp"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )

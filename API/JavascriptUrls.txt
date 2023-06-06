@@ -1171,6 +1171,7 @@ ${STORE_BASE_URL}curators/ajaxfindcuratorlists
 ${STORE_BASE_URL}curators/ajaxgetmycuratorsalelists
 ${STORE_BASE_URL}developer/${m_strVanity}/
 ${STORE_BASE_URL}dlc/${}
+${STORE_BASE_URL}dlc/${}/ajaxgetdlccount
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlclist
 ${STORE_BASE_URL}dynamicstore/userdata/
 ${STORE_BASE_URL}email/PartnerAppOptIn/?
@@ -1571,8 +1572,6 @@ ${g_szBaseURL}/apps/deleteachievement/${appid}/${statid}/${bitid}
 ${g_szBaseURL}/apps/deleteavatar/${appid}/${id}
 ${g_szBaseURL}/apps/deleteavatar/${appid}/${screenid}
 ${g_szBaseURL}/apps/deleteleaderboardentry/${appid}
-${g_szBaseURL}/apps/deletescreen/${appid}/${id}
-${g_szBaseURL}/apps/deletescreen/${appid}/${screenid}
 ${g_szBaseURL}/apps/deletestat/${appid}/${statid}
 ${g_szBaseURL}/apps/diff/${appid}
 ${g_szBaseURL}/apps/diff/${g_AppId}
@@ -2402,7 +2401,6 @@ https://steam.tv/smite
 https://steam.tv/steamawards
 https://steamcdn-a.akamaihd.net/steam/apps/${appid}/capsule_sm_120.jpg
 https://steamcdn-a.akamaihd.net/steam/apps/${}/header.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/${appid}/
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/5c9fb117629ca3e0812a1dec824505fea8982fc9.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/92a08788e62ec08c84036cacb60524e16d56d9ed.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a24229e0772b333e8e374c22cffd8619998bb19b.jpg

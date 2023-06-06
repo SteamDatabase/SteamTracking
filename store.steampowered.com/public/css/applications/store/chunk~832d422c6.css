@@ -588,7 +588,7 @@ html.tablet .partnereventdisplay_LibraryEventTitleContainer_2gdgU {
 .partnereventdisplay_EventDetailTitleDesc_AxPxb {
   text-align: left;
   width: 280px;
-  padding: 3px 24px 24px 0px;
+  padding: 20px 24px 24px 0px;
   align-items: flex-start;
 }
 @media screen and (max-width: 940px) {
@@ -750,6 +750,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   font-size: 22px;
   line-height: 25px;
   color: #adaeb2;
+  margin-top: 4px;
 }
 .partnereventdisplay_EventDetailsBody_3v0cw {
   padding-right: 24px;

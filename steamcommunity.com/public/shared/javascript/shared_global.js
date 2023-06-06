@@ -928,6 +928,17 @@ function GetDefaultCommunityAJAXParams( path, method )
 	return rgParams;
 }
 
+function CrossDomainPost( url, params )
+{
+		return $J.ajax( {
+		type: 'post',
+		url: url,
+		data: params,
+		crossDomain: true,
+		xhrFields: { withCredentials: true }
+	} );
+}
+
 // spped of the miniprofile fading in and out
 var MINIPROFILE_ANIM_SPEED = 150;
 // how long the mouse must remain over an element before we'll make an AJAX call

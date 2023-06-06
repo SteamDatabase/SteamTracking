@@ -2674,7 +2674,7 @@
     },
     27070: (e, t, n) => {
       "use strict";
-      n.d(t, { Ub: () => s, lS: () => c, y$: () => l });
+      n.d(t, { Ub: () => s, lS: () => u, sG: () => l, y$: () => c });
       var r = n(89526);
       const i = r.createContext(void 0),
         o = i.Provider,
@@ -2703,8 +2703,10 @@
         );
         return r.createElement(o, { value: s }, n);
       }
-      const l = () => a().useStorage(),
-        c = () => a().useActiveSteamInterface();
+      const l = () =>
+          a().useActiveSteamInterface().GetAnonymousServiceTransport(),
+        c = () => a().useStorage(),
+        u = () => a().useActiveSteamInterface();
     },
     27527: (e, t, n) => {
       "use strict";
@@ -2858,7 +2860,11 @@
           (null == a ? void 0 : a.preventDefault) &&
           (null == a ? void 0 : a.stopPropagation)
         ) {
-          if (a.shiftKey || (a.altKey && !n.bRootContextMenu)) return null;
+          if (
+            a.shiftKey ||
+            (a.altKey && !(null == n ? void 0 : n.bRootContextMenu))
+          )
+            return null;
           a.preventDefault(),
             a.stopPropagation(),
             (o = a.currentTarget),
@@ -6295,7 +6301,7 @@
       n.d(t, {
         Vp: () => V,
         zE: () => x,
-        gj: () => L,
+        gj: () => F,
         c4: () => N,
         mz: () => P,
       });
@@ -6725,8 +6731,8 @@
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const F = new c.s("FocusNavigationMovement").Debug;
-      var L, N, P, x;
+      const L = new c.s("FocusNavigationMovement").Debug;
+      var F, N, P, x;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -6735,7 +6741,7 @@
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(L || (L = {})),
+      })(F || (F = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.LAST = 1)] = "LAST"),
@@ -6980,7 +6986,7 @@
             (this.m_bMounted = !1);
           const t = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.m_bFocused || t) &&
-            (F(
+            (L(
               `The focused node is unmounting, ${
                 this.m_RetainFocusParent
                   ? "will transfer to retain focus ancestor"
@@ -7003,7 +7009,7 @@
         RegisterDOMEvents() {
           !this.m_rgNavigationHandlers.length &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties.layout != L.NONE ||
+              this.m_Properties.layout != F.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -7165,8 +7171,8 @@
               const e = this.GetLayout();
               l =
                 l >= this.m_rgChildren.length ||
-                e == L.ROW_REVERSE ||
-                e == L.COLUMN_REVERSE ||
+                e == F.ROW_REVERSE ||
+                e == F.COLUMN_REVERSE ||
                 i == N.LAST
                   ? this.m_rgChildren.length - 1
                   : 0;
@@ -7176,11 +7182,11 @@
               i == N.MAINTAIN_X ? (r = "x") : i == N.MAINTAIN_Y && (r = "y"),
                 r == o.TP[n] &&
                   (a = this.m_Tree.GetLastFocusedMovementRect(o.TP[n])),
-                F(
+                L(
                   `Taking focus while preserving ${N[i]} preserved: ${r} movement: ${n}, node:`,
                   a || t
                 );
-              const l = this.ComputeRelativeDirection(e, L.GRID);
+              const l = this.ComputeRelativeDirection(e, F.GRID);
               if (a || t) {
                 const i = l == x.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                 s = this.FindClosestChildInNextAxiallyAlignedSet(
@@ -7243,7 +7249,7 @@
               bottom: o.innerHeight,
             });
           return (
-            F(
+            L(
               `Focusing visible child, best child match is ${
                 null === (i = null == a ? void 0 : a.child) || void 0 === i
                   ? void 0
@@ -7255,7 +7261,7 @@
         }
         GetLayout() {
           if (this.m_Properties.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return L.NONE;
+          if (this.m_rgChildren.length < 2) return F.NONE;
           return (0, d.Ii)(this.m_element);
         }
         OnNavigationEvent(e) {
@@ -7292,16 +7298,16 @@
           let o,
             a = this.ComputeRelativeDirection(e, r);
           if (
-            (F(
-              `Handling navigation event ${i.eV[e]} - ${L[r]} - ${x[a]}`,
+            (L(
+              `Handling navigation event ${i.eV[e]} - ${F[r]} - ${x[a]}`,
               this.m_element
             ),
             a == x.INVALID)
           )
             return !1;
           if (this.m_Properties.focusable && this.m_bFocused)
-            return F("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), r == L.GRID))
+            return L("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), r == F.GRID))
             o = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               a,
@@ -7330,7 +7336,7 @@
                 (a.right < 0 && a.left < -i)
               )
                 return (
-                  F(`Element too far away, scrolling ${i} on ${r} axis `),
+                  L(`Element too far away, scrolling ${i} on ${r} axis `),
                   T(o.Element, o.Element, "smooth", r, i),
                   !0
                 );
@@ -7355,10 +7361,10 @@
           return this.ComputeRelativeDirection(e, this.GetLayout());
         }
         ComputeRelativeDirection(e, t) {
-          let n = t == L.ROW_REVERSE || t == L.COLUMN_REVERSE;
+          let n = t == F.ROW_REVERSE || t == F.COLUMN_REVERSE;
           switch (t) {
-            case L.ROW:
-            case L.ROW_REVERSE:
+            case F.ROW:
+            case F.ROW_REVERSE:
               switch (e) {
                 case i.eV.DIR_LEFT:
                   return n ? x.FORWARD : x.BACKWARD;
@@ -7367,8 +7373,8 @@
                 default:
                   return x.INVALID;
               }
-            case L.COLUMN:
-            case L.COLUMN_REVERSE:
+            case F.COLUMN:
+            case F.COLUMN_REVERSE:
               switch (e) {
                 case i.eV.DIR_UP:
                   return n ? x.FORWARD : x.BACKWARD;
@@ -7377,7 +7383,7 @@
                 default:
                   return x.INVALID;
               }
-            case L.GRID:
+            case F.GRID:
               switch (e) {
                 case i.eV.DIR_LEFT:
                 case i.eV.DIR_UP:
@@ -7533,7 +7539,7 @@
                 ),
                 this.m_element.focus({ preventScroll: !0 }))
               : this.m_Tree.BUseVirtualFocus() ||
-                F(
+                L(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`
                 ),
             (function (e, t) {
@@ -11358,7 +11364,7 @@
         __: () => D,
         o9: () => P,
         $0: () => x,
-        KM: () => L,
+        KM: () => F,
         EU: () => se,
         SY: () => ae,
         BQ: () => H,
@@ -11491,7 +11497,7 @@
         );
       }
       (0, r.gn)([u.a], O.prototype, "OnSubmit", null);
-      const F = i.forwardRef(function (e, t) {
+      const L = i.forwardRef(function (e, t) {
           const n = m(),
             { svgicon: a } = e,
             s = (0, r._T)(e, ["svgicon"]),
@@ -11529,9 +11535,9 @@
             e.children
           );
         }),
-        L = i.forwardRef(function (e, t) {
+        F = i.forwardRef(function (e, t) {
           return i.createElement(
-            F,
+            L,
             Object.assign(
               { preferredFocus: !0, type: e.onClick ? "button" : "submit" },
               e,
@@ -11549,7 +11555,7 @@
         }),
         N = i.forwardRef(function (e, t) {
           return i.createElement(
-            F,
+            L,
             Object.assign({ type: "button" }, e, {
               ref: t,
               className: (0, l.Z)(
@@ -11563,7 +11569,7 @@
         });
       i.forwardRef(function (e, t) {
         return i.createElement(
-          F,
+          L,
           Object.assign({ type: "button" }, e, {
             ref: t,
             className: (0, l.Z)(
@@ -11575,7 +11581,7 @@
       }),
         i.forwardRef(function (e, t) {
           return i.createElement(
-            F,
+            L,
             Object.assign({ type: "button" }, e, {
               ref: t,
               className: (0, l.Z)(e.className, "TextButton"),
@@ -11587,7 +11593,7 @@
           R,
           null,
           i.createElement(
-            L,
+            F,
             {
               onClick: e.onOK,
               disabled: e.bOKDisabled,
@@ -11612,13 +11618,13 @@
           M,
           null,
           i.createElement(
-            L,
+            F,
             { onClick: e.onOK, disabled: e.bOKDisabled },
             e.strOKText || (0, c.Xx)("#Button_Confirm"),
             " "
           ),
           i.createElement(
-            L,
+            F,
             { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
             e.strUpdateText || (0, c.Xx)("#Button_Update"),
             " "
@@ -12928,7 +12934,7 @@
       const Oe = new (n(50454).s)("DragDrop").Debug;
       class ke extends i.Component {
         constructor() {
-          super(...arguments), (this.m_coordinator = new Le());
+          super(...arguments), (this.m_coordinator = new Fe());
         }
         OnDrop(e, t) {
           t > e && t--, t != e && this.props.onReorder(e, t);
@@ -12967,13 +12973,13 @@
           );
         }
       }
-      function Fe(e, t, n, r) {
+      function Le(e, t, n, r) {
         return r
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
       (0, r.gn)([z.ak], ke.prototype, "OnDrop", null);
-      class Le {
+      class Fe {
         constructor() {
           (this.m_embeddedElement = new Te.AN("DragGhosts")),
             (this.m_rgDropRegions = []),
@@ -13111,7 +13117,7 @@
             const t = r + o,
               n = i + a,
               s = e.GetDragDocument().body.getBoundingClientRect();
-            if (Fe(r, i, s) && !Fe(t, n, s, !0)) {
+            if (Le(r, i, s) && !Le(t, n, s, !0)) {
               const r = Be.r4(t, s.left, s.right, s.left - 200, s.right + 200),
                 i = Be.r4(n, s.top, s.bottom, s.top - 100, s.bottom + 100),
                 o = 50;
@@ -13138,7 +13144,7 @@
               this.m_activeDropRegion.OnDragMove(r, i, this.m_activeDraggable);
         }
       }
-      (0, r.gn)([z.ak], Le.prototype, "OnDragGhostRef", null);
+      (0, r.gn)([z.ak], Fe.prototype, "OnDragGhostRef", null);
       class Ne extends i.Component {
         constructor() {
           super(...arguments),
@@ -13482,7 +13488,7 @@
           );
         }
         BDraggableInRegion(e, t, n) {
-          return Fe(e, t, this.GetClientRect());
+          return Le(e, t, this.GetClientRect());
         }
         GetElement() {
           return this.m_divRef.current;
@@ -13911,8 +13917,8 @@
           B = null != h ? h : "standard",
           O = null != p ? p : "standard",
           k = null != g ? g : "standard",
-          F = null == C || C,
-          L = null != f ? f : 0,
+          L = null == C || C,
+          F = null != f ? f : 0,
           N = null != E ? E : "center",
           P = i.useRef(),
           x = (0, z.BE)(P, e.navRef),
@@ -13957,9 +13963,9 @@
                 "standard" == O && rt().StandardPadding,
                 "compact" == O && rt().CompactPadding,
                 M && rt().Clickable,
-                F && rt().HighlightOnFocus
+                L && rt().HighlightOnFocus
               ),
-              style: { "--indent-level": L },
+              style: { "--indent-level": F },
             }
           ),
           T &&
@@ -15063,7 +15069,7 @@
         Bt = n.n(At),
         Ot = n(32873),
         kt = n(1981);
-      function Ft(e) {
+      function Lt(e) {
         const {
             childrenKey: t,
             childrenClasses: n,
@@ -15075,10 +15081,10 @@
         return i.createElement(
           Ot.Z,
           { className: s, appear: !1, enter: a, exit: a },
-          i.createElement(Lt, { key: t, childrenClasses: n }, r)
+          i.createElement(Ft, { key: t, childrenClasses: n }, r)
         );
       }
-      function Lt(e) {
+      function Ft(e) {
         const { sizeClass: t, children: n, childrenClasses: o } = e,
           s = (0, r._T)(e, ["sizeClass", "children", "childrenClasses"]),
           [c, u, d, m] = (function () {
@@ -15247,7 +15253,7 @@
             : "");
         var r, o;
         return i.createElement(
-          Ft,
+          Lt,
           {
             childrenKey: e.activePage.identifier,
             childrenClasses: Nt(xt(), xt().ContentTransition),
@@ -15588,7 +15594,6 @@
         (0, r._T)(e, ["direction"]);
         switch (t) {
           case "up":
-          case "down":
             return i.createElement(
               "svg",
               Object.assign(
@@ -15602,6 +15607,22 @@
               i.createElement("path", {
                 fill: "currentColor",
                 d: "M31 15.6394L18.0204 3L5 15.6394L8.60376 19.1432L18.0204 10.0076L27.4166 19.1432L31 15.6394ZM27.3962 33L18.0204 23.8644L8.62412 33L5 29.4962L18.0204 16.8568L31 29.4962L27.3962 33Z",
+              })
+            );
+          case "down":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                e
+              ),
+              i.createElement("path", {
+                fill: "currentColor",
+                d: "M31 20.3606L18.0204 33L5 20.3606L8.60376 16.8568L18.0204 25.9924L27.4166 16.8568L31 20.3606ZM27.3962 3L18.0204 12.1356L8.62412 3L5 6.50379L18.0204 19.1432L31 6.50379L27.3962 3Z",
               })
             );
           case "left":
@@ -16995,6 +17016,7 @@
             u &&
               (t.visible
                 ? (a.current && a.current.PositionMenu(),
+                  a.current && a.current.PositionPopupWindow(),
                   t.options.bRetainOnHide
                     ? u.window.SteamClient.Window.BringToFront()
                     : u.window.SteamClient.Window.SetForegroundWindow(),
@@ -17668,14 +17690,14 @@
         x0L: () => ge,
         yTr: () => _e,
         yVt: () => ne,
-        ge: () => L,
+        ge: () => F,
         IWH: () => Y,
         JrY: () => k,
         lBf: () => C,
         SUY: () => D,
         Vgm: () => re,
         thP: () => V,
-        mKE: () => F,
+        mKE: () => L,
         $gZ: () => E,
         I8b: () => oe,
         tkI: () => I,
@@ -18248,7 +18270,7 @@
           })
         );
       }
-      function F(e) {
+      function L(e) {
         let t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         const [r, o] = (0, c.y)(),
@@ -18323,7 +18345,7 @@
           })
         );
       }
-      function L(e) {
+      function F(e) {
         const { className: t, color: n = "#020202" } = e;
         return i.createElement(
           "svg",
@@ -22668,10 +22690,10 @@
           )
         ),
         k = c.lazy(() => n.e(7762).then(n.bind(n, 30215))),
-        F = c.lazy(() =>
+        L = c.lazy(() =>
           Promise.all([n.e(1254), n.e(145), n.e(6699)]).then(n.bind(n, 14965))
         ),
-        L = c.lazy(() =>
+        F = c.lazy(() =>
           Promise.all([n.e(1254), n.e(145), n.e(6699)]).then(n.bind(n, 96405))
         ),
         N = c.lazy(() =>
@@ -22892,7 +22914,7 @@
                       c.createElement(R.d, {
                         config: {
                           "deck-verified-results": (e) =>
-                            c.createElement(L, {
+                            c.createElement(F, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility",
@@ -22908,7 +22930,7 @@
                       c.createElement(R.d, {
                         config: {
                           "deck-verified-results-inflight": (e) =>
-                            c.createElement(L, {
+                            c.createElement(F, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility_inflight",
@@ -22916,7 +22938,7 @@
                               ),
                             }),
                           "deck-verified-results-submitted": (e) =>
-                            c.createElement(L, {
+                            c.createElement(F, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility_submitted",
@@ -22924,7 +22946,7 @@
                               ),
                             }),
                           "deck-verified-results-published": (e) =>
-                            c.createElement(L, {
+                            c.createElement(F, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility_published",
@@ -22940,7 +22962,7 @@
                       c.createElement(R.d, {
                         config: {
                           "deck-verified-results-reports": (e) =>
-                            c.createElement(L, {
+                            c.createElement(F, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility_reports",
@@ -22956,7 +22978,7 @@
                       c.createElement(R.d, {
                         config: {
                           "deck-verified-results": () =>
-                            c.createElement(F, {
+                            c.createElement(L, {
                               results: (0, p.kQ)(
                                 "deckcompatibility",
                                 "application_config"

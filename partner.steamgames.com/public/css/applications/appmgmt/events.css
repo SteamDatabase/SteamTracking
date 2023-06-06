@@ -577,7 +577,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
 .chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx:focus {
   background-color: #3d424b;
 }
-.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus.GamepadMode,
+.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus.GamepadMode,
 .GamepadMode
   .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus {
   background: #fff;
@@ -658,17 +660,25 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   .chatentry_AudioLines_1Hw30 {
   fill: #f5ffd7;
 }
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus
   .SVGIcon_VoiceRoom,
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):hover
   .SVGIcon_VoiceRoom {
   fill: #fff;
   stroke: #000;
 }
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1Hw30,
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):hover
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1Hw30 {
   fill: #000;
@@ -777,7 +787,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   color: #fff;
 }
 .chatentry_chatEntryControls_2gP0D
-  .chatentry_chatSubmitButton_1IEiK.GamepadMode:not(.chatentry_disabled_2GM2k).gpfocus,
+  .chatentry_chatSubmitButton_1IEiK.GamepadMode:not(
+    .chatentry_disabled_2GM2k
+  ).gpfocus,
 .GamepadMode
   .chatentry_chatEntryControls_2gP0D
   .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k).gpfocus {
@@ -3375,7 +3387,7 @@ html.tablet .partnereventdisplay_LibraryEventTitleContainer_2gdgU {
 .partnereventdisplay_EventDetailTitleDesc_AxPxb {
   text-align: left;
   width: 280px;
-  padding: 3px 24px 24px 0px;
+  padding: 20px 24px 24px 0px;
   align-items: flex-start;
 }
 @media screen and (max-width: 940px) {
@@ -3537,6 +3549,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   font-size: 22px;
   line-height: 25px;
   color: #adaeb2;
+  margin-top: 4px;
 }
 .partnereventdisplay_EventDetailsBody_3v0cw {
   padding-right: 24px;
@@ -5216,22 +5229,30 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(.discountgrid_HasDiscount_16Z51)
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(
+    .discountgrid_HasDiscount_16Z51
+  )
   .discountgrid_DiscountValueCtn_At0eU
   div,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(.discountgrid_HasDiscount_16Z51)
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(
+    .discountgrid_HasDiscount_16Z51
+  )
   .discountgrid_DiscountValueCtn_At0eU
   svg,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(.discountgrid_HasDiscount_16Z51)
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(
+    .discountgrid_HasDiscount_16Z51
+  )
   .discountgrid_ConflictWarning_3ypGB
   div,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(.discountgrid_HasDiscount_16Z51)
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(
+    .discountgrid_HasDiscount_16Z51
+  )
   .discountgrid_ConflictWarning_3ypGB
   svg {
   filter: opacity(0);
@@ -5367,7 +5388,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooHigh_GACCx,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(:focus-within) {
+  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(
+    :focus-within
+  ) {
   color: #e5af37;
   border: 1px dashed #e5af37;
 }
@@ -5377,7 +5400,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   .discountgrid_DiscountRangeWarning_2_w-X,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(:focus-within)
+  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(
+    :focus-within
+  )
   .discountgrid_DiscountRangeWarning_2_w-X {
   display: block;
 }
@@ -6043,6 +6068,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 .requirevalvepublishapproval_Title_1TI4b {
   font-weight: bold;
+}
+.requirevalvepublishapproval_RequireText_rZkfY {
+  color: #888;
 }
 .search_curator_SearchResults_3ao90 {
   overflow: scroll;
@@ -8092,6 +8120,18 @@ html.responsive.touch
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 16px;
+}
+.dailydealeditor_DailyDealAdminNotes__nOD9 {
+  width: 100%;
+  height: 80px;
+  padding: 8px;
+}
+.dailydealeditor_OverrideURLCtn_2sA84 div {
+  flex-grow: 1;
+}
+.dailydealeditor_OverrideURLCtn_2sA84 div.dailydealeditor_TestLink_1ywZO {
+  padding-top: 31px;
+  flex-shrink: 1;
 }
 .dailydealeditor_SectionHdr_14AcV {
   font-weight: bold;

@@ -339,10 +339,10 @@
         fw: () => X,
         QN: () => K,
         ZJ: () => Q,
-        dh: () => j,
+        dh: () => x,
         gs: () => te,
         sS: () => ee,
-        fH: () => x,
+        fH: () => j,
         VE: () => ie,
         S6: () => V,
         RY: () => ne,
@@ -864,18 +864,18 @@
           };
         })(g || (g = {}));
       var y = i(46875);
-      const B = a.Message;
-      class b extends B {
+      const b = a.Message;
+      class B extends b {
         constructor(e = null) {
           super(),
-            b.prototype.type || n.aR(b.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            B.prototype.type || n.aR(B.M()),
+            b.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            b.sm_m ||
-              (b.sm_m = {
-                proto: b,
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
                 fields: {
                   type: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
                   value: { n: 2, br: n.FE.readString, bw: n.Xc.writeString },
@@ -883,49 +883,49 @@
                   label: { n: 4, br: n.FE.readString, bw: n.Xc.writeString },
                 },
               }),
-            b.sm_m
+            B.sm_m
           );
         }
         static MBF() {
-          return b.sm_mbf || (b.sm_mbf = n.Bh(b.M())), b.sm_mbf;
+          return B.sm_mbf || (B.sm_mbf = n.Bh(B.M())), B.sm_mbf;
         }
         toObject(e = !1) {
-          return b.toObject(e, this);
+          return B.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(b.M(), e, t);
+          return n.TA(B.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(b.M(), e);
+          return n.aD(B.M(), e);
         }
         static deserializeBinary(e) {
           let t = new a.BinaryReader(e),
-            i = new b();
-          return b.deserializeBinaryFromReader(i, t);
+            i = new B();
+          return B.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(b.MBF(), e, t);
+          return n.F(B.MBF(), e, t);
         }
         serializeBinary() {
           var e = new a.BinaryWriter();
-          return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(b.M(), e, t);
+          n.l2(B.M(), e, t);
         }
         serializeBase64String() {
           var e = new a.BinaryWriter();
-          return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEconItem_DescriptionLine";
         }
       }
-      class S extends B {
+      class S extends b {
         constructor(e = null) {
           super(),
             S.prototype.link || n.aR(S.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            b.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -975,11 +975,11 @@
           return "CEconItem_Action";
         }
       }
-      class h extends B {
+      class h extends b {
         constructor(e = null) {
           super(),
             h.prototype.appid || n.aR(h.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            b.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1045,11 +1045,11 @@
           return "CEconItem_Tag";
         }
       }
-      class v extends B {
+      class v extends b {
         constructor(e = null) {
           super(),
             v.prototype.appid || n.aR(v.M()),
-            B.initialize(this, e, 0, -1, [8, 10, 11, 12, 13, 21, 26], null);
+            b.initialize(this, e, 0, -1, [8, 10, 11, 12, 13, 21, 26], null);
         }
         static M() {
           return (
@@ -1080,10 +1080,10 @@
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
                   },
-                  descriptions: { n: 8, c: b, r: !0, q: !0 },
+                  descriptions: { n: 8, c: B, r: !0, q: !0 },
                   tradable: { n: 9, br: n.FE.readBool, bw: n.Xc.writeBool },
                   actions: { n: 10, c: S, r: !0, q: !0 },
-                  owner_descriptions: { n: 11, c: b, r: !0, q: !0 },
+                  owner_descriptions: { n: 11, c: B, r: !0, q: !0 },
                   owner_actions: { n: 12, c: S, r: !0, q: !0 },
                   fraudwarnings: {
                     n: 13,
@@ -1189,11 +1189,11 @@
           return "CEconItem_Description";
         }
       }
-      class w extends B {
+      class w extends b {
         constructor(e = null) {
           super(),
             w.prototype.appid || n.aR(w.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            b.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1278,11 +1278,11 @@
           return "CEcon_Asset";
         }
       }
-      class N extends B {
+      class N extends b {
         constructor(e = null) {
           super(),
             N.prototype.steamid || n.aR(N.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            b.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1359,11 +1359,11 @@
           return "CEcon_GetInventoryItemsWithDescriptions_Request";
         }
       }
-      class T extends B {
+      class T extends b {
         constructor(e = null) {
           super(),
             T.prototype.assetids || n.aR(T.M()),
-            B.initialize(this, e, 0, -1, [1, 2], null);
+            b.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -1437,11 +1437,11 @@
           return "CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions";
         }
       }
-      class E extends B {
+      class E extends b {
         constructor(e = null) {
           super(),
             E.prototype.assets || n.aR(E.M()),
-            B.initialize(this, e, 0, -1, [1, 2, 3], null);
+            b.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -1503,11 +1503,68 @@
           return "CEcon_GetInventoryItemsWithDescriptions_Response";
         }
       }
-      class I extends B {
+      class M extends b {
         constructor(e = null) {
           super(),
-            I.prototype.trade_offer_access_token || n.aR(I.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            M.prototype.trade_offer_access_token || n.aR(M.M()),
+            b.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            M.sm_m ||
+              (M.sm_m = {
+                proto: M,
+                fields: {
+                  trade_offer_access_token: {
+                    n: 1,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
+                },
+              }),
+            M.sm_m
+          );
+        }
+        static MBF() {
+          return M.sm_mbf || (M.sm_mbf = n.Bh(M.M())), M.sm_mbf;
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(M.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(M.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new a.BinaryReader(e),
+            i = new M();
+          return M.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(M.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(M.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEcon_GetTradeOfferAccessToken_Response";
+        }
+      }
+      class I extends b {
+        constructor(e = null) {
+          super(),
+            I.prototype.url || n.aR(I.M()),
+            b.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1515,11 +1572,7 @@
               (I.sm_m = {
                 proto: I,
                 fields: {
-                  trade_offer_access_token: {
-                    n: 1,
-                    br: n.FE.readString,
-                    bw: n.Xc.writeString,
-                  },
+                  url: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
                 },
               }),
             I.sm_m
@@ -1557,23 +1610,21 @@
           return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CEcon_GetTradeOfferAccessToken_Response";
+          return "CEcon_ClientGetItemShopOverlayAuthURL_Response";
         }
       }
-      class F extends B {
+      class F extends b {
         constructor(e = null) {
           super(),
-            F.prototype.url || n.aR(F.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            F.prototype.descriptions || n.aR(F.M()),
+            b.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             F.sm_m ||
               (F.sm_m = {
                 proto: F,
-                fields: {
-                  url: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
-                },
+                fields: { descriptions: { n: 1, c: v, r: !0, q: !0 } },
               }),
             F.sm_m
           );
@@ -1610,57 +1661,6 @@
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CEcon_ClientGetItemShopOverlayAuthURL_Response";
-        }
-      }
-      class M extends B {
-        constructor(e = null) {
-          super(),
-            M.prototype.descriptions || n.aR(M.M()),
-            B.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
-                fields: { descriptions: { n: 1, c: v, r: !0, q: !0 } },
-              }),
-            M.sm_m
-          );
-        }
-        static MBF() {
-          return M.sm_mbf || (M.sm_mbf = n.Bh(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(M.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new a.BinaryReader(e),
-            i = new M();
-          return M.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(M.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(M.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CEcon_GetAssetClassInfo_Response";
         }
       }
@@ -1674,17 +1674,17 @@
           });
         }),
           (e.GetTradeOfferAccessToken = function (e, t) {
-            return e.SendMsg("Econ.GetTradeOfferAccessToken#1", t, I, {
+            return e.SendMsg("Econ.GetTradeOfferAccessToken#1", t, M, {
               ePrivilege: 1,
             });
           }),
           (e.ClientGetItemShopOverlayAuthURL = function (e, t) {
-            return e.SendMsg("Econ.ClientGetItemShopOverlayAuthURL#1", t, F, {
+            return e.SendMsg("Econ.ClientGetItemShopOverlayAuthURL#1", t, I, {
               ePrivilege: 1,
             });
           }),
           (e.GetAssetClassInfo = function (e, t) {
-            return e.SendMsg("Econ.GetAssetClassInfo#1", t, M, {
+            return e.SendMsg("Econ.GetAssetClassInfo#1", t, F, {
               ePrivilege: 1,
             });
           });
@@ -1940,7 +1940,7 @@
           switch (n) {
             case 3:
               {
-                const s = j(t.body_data);
+                const s = x(t.body_data);
                 if (!s) return;
                 const o =
                   "comment_" +
@@ -1986,7 +1986,7 @@
               break;
             case 4:
               {
-                const i = x(t.body_data);
+                const i = j(t.body_data);
                 if (!i) return;
                 const r = "item_" + i.appid;
                 let s = e.findIndex((e) => e.key == r);
@@ -2084,7 +2084,7 @@
         (0, r.gn)([G.LO], C.prototype, "m_bLoaded", void 0);
       const W = "ItemMetadata";
       function L(e, t, i) {
-        let a = x(e.body_data);
+        let a = j(e.body_data);
         a.steamid = t;
         let n = (0, k.useQuery)(
           (function (e) {
@@ -2141,7 +2141,7 @@
         );
         return n.isSuccess ? n.data : null;
       }
-      function x(e) {
+      function j(e) {
         let t = "",
           i = "",
           r = "";
@@ -2153,7 +2153,7 @@
         }
         return { appid: t, assetid: i, contextid: r };
       }
-      function j(e) {
+      function x(e) {
         if (!e) return null;
         try {
           let t = JSON.parse(e),
@@ -2283,10 +2283,10 @@
             "k_EAsyncGameSessionUserStateDone");
       })(K || (K = {}));
       const re = {
-        3: { fnGet: j, bBasic: !1 },
+        3: { fnGet: x, bBasic: !1 },
         5: { fnGet: te, bBasic: !1 },
         2: { fnGet: ee, bBasic: !1 },
-        4: { fnGet: x, bBasic: !1 },
+        4: { fnGet: j, bBasic: !1 },
         8: { fnGet: V, bBasic: !1 },
         9: { fnGet: ie, bBasic: !1 },
         10: {
@@ -2414,7 +2414,7 @@
       i.d(t, {
         IS: () => _,
         a$: () => g,
-        bc: () => b,
+        bc: () => B,
         gd: () => y,
         pv: () => w,
         ur: () => v,
@@ -2514,18 +2514,19 @@
               : t || f != c().Unread || g(c().MarkedRead);
           }, [t, i, f]);
         let y = e.onActivate;
-        y || (y = () => console.log("Missing activate function")),
-          d == p.loadingActive && (y = null);
-        let b = c().StandardTemplate;
+        y || (y = () => console.log("Missing activate function"));
+        let B = e.onActivateMiddleMouseClick;
+        d == p.loadingActive && (y = null);
+        let S = c().StandardTemplate;
         i == _.AllNotificationsTray
-          ? (b = c().AllNotificationsTemplate)
+          ? (S = c().AllNotificationsTemplate)
           : i == _.DesktopToast
-          ? (b = c().DesktopToastTemplate)
-          : 7 == s && (b = c().StandardTemplateDesktop);
-        let S = null;
+          ? (S = c().DesktopToastTemplate)
+          : 7 == s && (S = c().StandardTemplateDesktop);
+        let h = null;
         if (d != p.none && i != _.DesktopToast && i != _.GamepadToast) {
           let e = d == p.loadingComplete ? c().Hide : null;
-          S = r.createElement(
+          h = r.createElement(
             "div",
             { className: (0, n.Z)(c().LoadingTemplate, e) },
             r.createElement("div", {
@@ -2543,6 +2544,12 @@
             )
           );
         }
+        const v = r.useCallback(
+          (e) => {
+            1 == e.button && B && B();
+          },
+          [B]
+        );
         return r.createElement(
           a.s,
           {
@@ -2550,10 +2557,11 @@
             className: c().StandardTemplateContainer,
             onOptionsButton: e.onOptionsButton,
             onOptionsActionDescription: e.onOptionsButtonDesc,
+            onMouseDown: v,
           },
           r.createElement(
             "div",
-            { className: (0, n.Z)(b, f) },
+            { className: (0, n.Z)(S, f) },
             r.createElement(
               "div",
               { className: c().StandardLogoDimensions },
@@ -2564,13 +2572,13 @@
                 className: (0, n.Z)(c().AvatarStatus, e.personaStatus),
               }),
             r.createElement("div", { className: c().Content }, e.children),
-            S,
-            m && r.createElement(B, { location: i })
+            h,
+            m && r.createElement(b, { location: i })
           ),
           l || null
         );
       }
-      function B(e) {
+      function b(e) {
         const { location: t } = e;
         return u && t == _.Tray
           ? r.createElement(
@@ -2580,7 +2588,7 @@
             )
           : null;
       }
-      function b(e) {
+      function B(e) {
         let {
           icon: t,
           title: i,
@@ -2659,8 +2667,8 @@
         return e == f.IS.GamepadToast;
       }
       var y = i(76239),
-        B = i.n(y);
-      function b(e) {
+        b = i.n(y);
+      function B(e) {
         let {
             onActivate: t,
             onDismiss: i,
@@ -2682,27 +2690,27 @@
         return r.createElement(
           d.s,
           {
-            className: (0, u.Z)(B().ShortTemplate, m),
+            className: (0, u.Z)(b().ShortTemplate, m),
             onActivate: c,
             onMouseDown: (e) => {
               1 == e.button && i && i();
             },
           },
-          r.createElement("div", { className: B().ShortLogoDimensions }, a),
+          r.createElement("div", { className: b().ShortLogoDimensions }, a),
           e.personaStatus &&
             r.createElement("div", {
-              className: (0, u.Z)(B().AvatarStatus, l),
+              className: (0, u.Z)(b().AvatarStatus, l),
             }),
           r.createElement(
             "div",
-            { className: B().Content },
+            { className: b().Content },
             r.createElement(
               "div",
-              { className: B().Header },
-              r.createElement("div", { className: B().Icon }, n),
-              r.createElement("div", { className: B().Title }, s)
+              { className: b().Header },
+              r.createElement("div", { className: b().Icon }, n),
+              r.createElement("div", { className: b().Title }, s)
             ),
-            r.createElement("div", { className: B().Body }, o)
+            r.createElement("div", { className: b().Body }, o)
           )
         );
       }
@@ -2736,7 +2744,7 @@
           _ = null !== (i = s.title) && void 0 !== i ? i : s.body,
           p = s.title ? s.body : null,
           y = g(o),
-          B = d && !n,
+          b = d && !n,
           [S, v] = r.useState(!1),
           w = () => v(!0);
         let N = null;
@@ -2753,10 +2761,13 @@
               : a;
         }
         return y
-          ? r.createElement(b, { logo: N, icon: l, title: u, body: _ })
+          ? r.createElement(
+              B,
+              Object.assign({}, e, { logo: N, icon: l, title: u, body: _ })
+            )
           : r.createElement(
               f.gd,
-              Object.assign({ logo: N, bLoading: B }, e),
+              Object.assign({ logo: N, bLoading: b }, e),
               r.createElement(f.bc, {
                 icon: l,
                 title: u,
@@ -2784,12 +2795,15 @@
           c = (0, _.Xx)("#SteamNotifications_TradeOffer_Description", t),
           d = !t;
         return o
-          ? r.createElement(b, {
-              logo: e.logo,
-              icon: e.icon,
-              title: l,
-              body: m,
-            })
+          ? r.createElement(
+              B,
+              Object.assign({}, e, {
+                logo: e.logo,
+                icon: e.icon,
+                title: l,
+                body: m,
+              })
+            )
           : r.createElement(
               f.gd,
               Object.assign({ bLoading: d }, e),
@@ -2804,7 +2818,7 @@
               r.createElement(f.pv, null, c)
             );
       }
-      function I(e) {
+      function M(e) {
         let {
           senderName: t,
           location: i,
@@ -2820,12 +2834,15 @@
           c = (0, _.Xx)("#Notification_GiftReceived_Title"),
           d = !t;
         return o
-          ? r.createElement(b, {
-              logo: e.logo,
-              icon: e.icon,
-              title: c,
-              body: l,
-            })
+          ? r.createElement(
+              B,
+              Object.assign({}, e, {
+                logo: e.logo,
+                icon: e.icon,
+                title: c,
+                body: l,
+              })
+            )
           : r.createElement(
               f.gd,
               Object.assign({ bLoading: d }, e),
@@ -2840,7 +2857,7 @@
               !!m && r.createElement(f.pv, null, m)
             );
       }
-      function F(e) {
+      function I(e) {
         let {
           requestorName: t,
           requestorAvatarURL: i,
@@ -2864,7 +2881,7 @@
           : t &&
             (u = (0, _.Xx)("#SteamNotifications_FriendInvite_Description"));
         const [p, y] = r.useState(!1),
-          B = () => y(!0);
+          b = () => y(!0);
         let S = a;
         if (i && !p) {
           const e = 3 == n.state && s != f.IS.GamepadToast,
@@ -2873,19 +2890,22 @@
             d.s,
             { style: { position: "relative" } },
             e && r.createElement(w.Fsn, { className: h().FriendIndicator }),
-            r.createElement("img", { className: t, src: i, onError: B })
+            r.createElement("img", { className: t, src: i, onError: b })
           );
         }
         const v =
             t || (0, _.Xx)("#SteamNotifications_FriendInvite_Body_Generic"),
           N = !t;
         return c
-          ? r.createElement(b, {
-              logo: S,
-              icon: e.icon,
-              title: (0, _.Xx)("#Notification_FriendInvite_Title"),
-              body: v,
-            })
+          ? r.createElement(
+              B,
+              Object.assign({}, e, {
+                logo: S,
+                icon: e.icon,
+                title: (0, _.Xx)("#Notification_FriendInvite_Title"),
+                body: v,
+              })
+            )
           : r.createElement(
               f.gd,
               Object.assign({ logo: S, bLoading: N }, e),
@@ -2900,7 +2920,7 @@
               !!u && r.createElement(f.pv, null, u)
             );
       }
-      function M(e) {
+      function F(e) {
         var t, i;
         let {
           itemState: a,
@@ -2912,8 +2932,8 @@
           fnRenderTimestamp: c,
           nUnread: u,
         } = e;
-        const [y, B] = r.useState(!1),
-          S = () => B(!0),
+        const [y, b] = r.useState(!1),
+          S = () => b(!0),
           v = g(o);
         let w = n;
         if (
@@ -2959,7 +2979,7 @@
           )
             ? a.item_data.name
             : (0, _.Xx)("#Notification_Item_Body_Generic"),
-          I = !a || !a.item_data;
+          M = !a || !a.item_data;
         if (v) {
           let t = "";
           return (
@@ -2974,17 +2994,20 @@
                     null == a ? void 0 : a.app_name
                   )
               : (0, _.Xx)("#Notification_Item_Body_Generic")),
-            r.createElement(b, {
-              logo: w,
-              icon: e.icon,
-              title: (0, _.Xx)("#Notification_ItemAnnouncement_Body"),
-              body: t,
-            })
+            r.createElement(
+              B,
+              Object.assign({}, e, {
+                logo: w,
+                icon: e.icon,
+                title: (0, _.Xx)("#Notification_ItemAnnouncement_Body"),
+                body: t,
+              })
+            )
           );
         }
         return r.createElement(
           f.gd,
-          Object.assign({ logo: w, bLoading: I }, e),
+          Object.assign({ logo: w, bLoading: M }, e),
           r.createElement(f.bc, {
             icon: l,
             title: (0, _.Xx)("#Notification_ItemAnnouncement_TitleLong"),
@@ -3028,12 +3051,15 @@
                     )
                   : (0, _.Xx)("#SteamNotification_AsyncGame_Done")),
           c
-            ? r.createElement(b, {
-                logo: d,
-                icon: e.icon,
-                title: (0, _.Xx)("#SteamNotification_AsyncGame_Title"),
-                body: p,
-              })
+            ? r.createElement(
+                B,
+                Object.assign({}, e, {
+                  logo: d,
+                  icon: e.icon,
+                  title: (0, _.Xx)("#SteamNotification_AsyncGame_Title"),
+                  body: p,
+                })
+              )
             : r.createElement(
                 f.gd,
                 Object.assign({ logo: d, bLoading: u }, e),
@@ -3060,15 +3086,15 @@
             data: u,
             location: p,
             icon: y,
-            timestamp: B,
+            timestamp: b,
             fnRenderTimestamp: S,
             nUnread: N,
             app: T,
           } = e,
           E = u.title;
-        const I = g(p),
-          [F, M] = r.useState(!1),
-          R = () => M(!0),
+        const M = g(p),
+          [I, F] = r.useState(!1),
+          R = () => F(!0),
           [A, k] = (0, v.KU)(
             u.bclan_account ? u.owner_steam_id.GetAccountID() : void 0
           ),
@@ -3115,7 +3141,7 @@
           : !E &&
             (null === (n = u.json_data) || void 0 === n ? void 0 : n.title) &&
             (E = u.json_data.title);
-        let D = u.comment;
+        let D = JSON.stringify(u.comment);
         7 == u.comment_type &&
           u.bis_forum &&
           u.comment &&
@@ -3136,8 +3162,8 @@
             : (U = U + " " + e);
         }
         let C = o;
-        if (!F) {
-          const e = I ? h().ShortLogoDimensions : h().StandardLogoDimensions;
+        if (!I) {
+          const e = M ? h().ShortLogoDimensions : h().StandardLogoDimensions;
           if (c && (0, l.rc)(u)) {
             const t = u.bhas_friend && p != f.IS.GamepadToast;
             C = r.createElement(
@@ -3154,15 +3180,18 @@
                 onError: R,
               }));
         }
-        return I
-          ? r.createElement(b, { logo: C, icon: e.icon, title: U, body: E })
+        return M
+          ? r.createElement(
+              B,
+              Object.assign({}, e, { logo: C, icon: e.icon, title: U, body: E })
+            )
           : r.createElement(
               f.gd,
               Object.assign({ logo: C }, e),
               r.createElement(f.bc, {
                 icon: y,
                 title: U,
-                timestamp: B,
+                timestamp: b,
                 location: p,
                 fnRenderTimestamp: S,
               }),
@@ -3229,12 +3258,15 @@
                   )))
             : (u = (0, _.Xx)("#SteamNotifications_Wishlist_Generic")),
           m
-            ? r.createElement(b, {
-                logo: c,
-                icon: e.icon,
-                title: (0, _.Xx)("#SteamNotifications_Wishlist"),
-                body: u,
-              })
+            ? r.createElement(
+                B,
+                Object.assign({}, e, {
+                  logo: c,
+                  icon: e.icon,
+                  title: (0, _.Xx)("#SteamNotifications_Wishlist"),
+                  body: u,
+                })
+              )
             : r.createElement(
                 f.gd,
                 Object.assign({ logo: c, bLoading: d }, e),
@@ -3304,7 +3336,7 @@
                 ? void 0
                 : t.GetAccountID()
               : null,
-            [B, b] = (0, o.Jq)(y),
+            [b, B] = (0, o.Jq)(y),
             S = (0, l.g1)(p)
               ? null === (i = null == p ? void 0 : p.owner_steam_id) ||
                 void 0 === i
@@ -3320,14 +3352,16 @@
             fallbackLogo: r.createElement(w.ui7, null),
             icon: r.createElement(w.svY, null),
             onActivate: () => d(() => window.location.assign(g), s.item),
+            onActivateMiddleMouseClick: () =>
+              d(() => window.open(g, "_blank"), s.item),
             location: u,
             currentUserSteamID: f,
             eUIMode: _,
             data: p,
             timestamp: s.timestamp,
             nUnread: s.rgunread.length,
-            postedByAvatarURL: null == b ? void 0 : b.avatar_url_medium,
-            postedByDisplayName: null == b ? void 0 : b.persona_name,
+            postedByAvatarURL: null == B ? void 0 : B.avatar_url_medium,
+            postedByDisplayName: null == B ? void 0 : B.persona_name,
             ownerDisplayName: null == v ? void 0 : v.persona_name,
             bNewIndicator: !1,
             app: N,
@@ -3358,6 +3392,8 @@
             fallbackLogo: r.createElement(w.ui7, null),
             icon: r.createElement(w.yh4, null),
             onActivate: () => i(() => window.location.assign(_), t.item),
+            onActivateMiddleMouseClick: () =>
+              i(() => window.open(_, "_blank"), t.item),
             app: u,
             location: n,
             data: d,
@@ -3379,10 +3415,12 @@
             _ = (0, l.gs)(t.item.body_data),
             p = new s.K(_.requestorID),
             [f, g] = (0, o.Jq)(p.GetAccountID());
-          return r.createElement(F, {
+          return r.createElement(I, {
             fallbackLogo: r.createElement(w.pUF, null),
             icon: r.createElement(w.yBp, null),
             onActivate: () => i(() => window.location.assign(u), t.item),
+            onActivateMiddleMouseClick: () =>
+              i(() => window.open(u, "_blank"), t.item),
             location: n,
             eUIMode: m,
             data: _,
@@ -3405,10 +3443,12 @@
             u = (0, l.NR)(t.item, m, d),
             _ = (0, l.fH)(t.item.body_data),
             p = `${c.De.COMMUNITY_BASE_URL}profiles/${m}/inventory`;
-          return r.createElement(M, {
+          return r.createElement(F, {
             icon: r.createElement(w.F8F, null),
             fallbackLogo: r.createElement(w.ui7, null),
             onActivate: () => i(() => window.location.assign(p), t.item),
+            onActivateMiddleMouseClick: () =>
+              i(() => window.open(p, "_blank"), t.item),
             location: s,
             eUIMode: o,
             data: _,
@@ -3430,10 +3470,12 @@
             _ = (0, l.sS)(t.item.body_data),
             p = new s.K(_),
             [f, g] = (0, o.Jq)(p.GetAccountID());
-          return r.createElement(I, {
+          return r.createElement(M, {
             logo: r.createElement(w.ui7, null),
             icon: r.createElement(w.ncs, null),
             onActivate: () => i(() => window.location.assign(u), t.item),
+            onActivateMiddleMouseClick: () =>
+              i(() => window.open(u, "_blank"), t.item),
             location: n,
             eUIMode: m,
             timestamp: t.timestamp,
@@ -3458,6 +3500,8 @@
             logo: r.createElement(w.ui7, null),
             icon: r.createElement(w.hoX, null),
             onActivate: () => i(() => window.location.assign(_), t.item),
+            onActivateMiddleMouseClick: () =>
+              i(() => window.open(_, "_blank"), t.item),
             location: n,
             eUIMode: m,
             timestamp: t.timestamp,
@@ -3483,6 +3527,8 @@
             icon: r.createElement(w.ui7, null),
             fallbackLogo: r.createElement(w.ydL, null),
             onActivate: () => i(() => window.location.assign(s), t.item),
+            onActivateMiddleMouseClick: () =>
+              i(() => window.open(s, "_blank"), t.item),
             location: a,
             eUIMode: n,
             data: o,

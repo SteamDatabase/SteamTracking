@@ -3418,13 +3418,14 @@
     },
     57361: (e, t, r) => {
       "use strict";
-      r.d(t, { Am: () => l, x3: () => o });
+      r.d(t, { Am: () => d, kI: () => s, x3: () => l });
       var i = r(32765),
         n = r(4556),
         a = r(23801);
-      const s = "061818254b2c99ac49e6626adb128ed1282a392f",
-        o = 120;
-      class l {
+      const s = 0,
+        o = "061818254b2c99ac49e6626adb128ed1282a392f",
+        l = 120;
+      class d {
         constructor(e) {
           (this.m_bInitialized = !1), (this.m_unAppID = e);
         }
@@ -3444,10 +3445,10 @@
           return i.De.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
         }
         get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, s);
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
         }
         get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, s);
+          return this.BuildAppURL(this.m_strIconURL, o);
         }
         get logo_url() {
           return (
@@ -25526,9 +25527,9 @@
         }
       }
     },
-    29265: (e, t, r) => {
+    17133: (e, t, r) => {
       "use strict";
-      r.d(t, { a: () => h });
+      r.d(t, { a: () => M });
       var i = r(89526),
         n = r(98009),
         a = r(54671),
@@ -25540,30 +25541,255 @@
         m = r(32765),
         u = r(71161),
         p = r(23715),
-        _ = r.n(p);
-      function h(e) {
+        _ = r.n(p),
+        h = r(33940),
+        g = r(5615),
+        y = r(46875),
+        f = r(27070),
+        b = r(57361),
+        B = r(45878),
+        v = r(29063);
+      const w = B.Message;
+      class S extends w {
+        constructor(e = null) {
+          super(),
+            S.prototype.packageid || v.aR(S.M()),
+            w.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            S.sm_m ||
+              (S.sm_m = {
+                proto: S,
+                fields: {
+                  packageid: { n: 1, br: v.FE.readInt32, bw: v.Xc.writeInt32 },
+                  country_code: {
+                    n: 2,
+                    br: v.FE.readString,
+                    bw: v.Xc.writeString,
+                  },
+                },
+              }),
+            S.sm_m
+          );
+        }
+        static MBF() {
+          return S.sm_mbf || (S.sm_mbf = v.Bh(S.M())), S.sm_mbf;
+        }
+        toObject(e = !1) {
+          return S.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return v.TA(S.M(), e, t);
+        }
+        static fromObject(e) {
+          return v.aD(S.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new B.BinaryReader(e),
+            r = new S();
+          return S.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return v.F(S.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new B.BinaryWriter();
+          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          v.l2(S.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new B.BinaryWriter();
+          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPhysicalGoods_CheckInventoryAvailableByPackage_Request";
+        }
+      }
+      class C extends w {
+        constructor(e = null) {
+          super(),
+            C.prototype.inventory_available || v.aR(C.M()),
+            w.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
+                fields: {
+                  inventory_available: {
+                    n: 1,
+                    br: v.FE.readBool,
+                    bw: v.Xc.writeBool,
+                  },
+                  high_pending_orders: {
+                    n: 2,
+                    br: v.FE.readBool,
+                    bw: v.Xc.writeBool,
+                  },
+                },
+              }),
+            C.sm_m
+          );
+        }
+        static MBF() {
+          return C.sm_mbf || (C.sm_mbf = v.Bh(C.M())), C.sm_mbf;
+        }
+        toObject(e = !1) {
+          return C.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return v.TA(C.M(), e, t);
+        }
+        static fromObject(e) {
+          return v.aD(C.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new B.BinaryReader(e),
+            r = new C();
+          return C.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return v.F(C.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new B.BinaryWriter();
+          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          v.l2(C.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new B.BinaryWriter();
+          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPhysicalGoods_CheckInventoryAvailableByPackage_Response";
+        }
+      }
+      var E;
+      !(function (e) {
+        e.CheckInventoryAvailableByPackage = function (e, t) {
+          return e.SendMsg(
+            "PhysicalGoods.CheckInventoryAvailableByPackage#1",
+            t,
+            C,
+            { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+          );
+        };
+      })(E || (E = {}));
+      var R = r(44973);
+      const I = { high_pending_orders: !1, inventory_available: !0 };
+      function D(e) {
+        const t = (0, f.sG)(),
+          r = (0, g.useQuery)(
+            [
+              (null == e ? void 0 : e.GetID()) || b.kI,
+              (null == e ? void 0 : e.GetStoreItemType()) || "invalid",
+            ],
+            () =>
+              (function (e, t) {
+                return (0, h.mG)(this, void 0, void 0, function* () {
+                  if (!e || 1 !== e.GetStoreItemType() || 10 !== e.GetAppType())
+                    return I;
+                  const r = y.gA.Init(S);
+                  r.Body().set_packageid(e.GetID()),
+                    r.Body().set_country_code(R.L7.country_code);
+                  const i = yield E.CheckInventoryAvailableByPackage(t, r);
+                  if (1 !== i.GetEResult())
+                    throw (
+                      (console.error(
+                        "Received error from FetchPhysicalGoodsStock",
+                        i.GetEResult()
+                      ),
+                      new Error(
+                        `Error from FetchPhysicalGoodsStock: ${i.GetEResult()}`
+                      ))
+                    );
+                  return i.Body().toObject();
+                });
+              })(e, t),
+            {
+              enabled: Boolean(
+                (null == e ? void 0 : e.GetID()) && 10 === e.GetAppType()
+              ),
+            }
+          );
+        return r.isLoading ? null : r.data;
+      }
+      var T = r(69338);
+      function M(e) {
         var t;
         const { info: r, className: p } = e,
           h = (0, u.bJ)(),
           g = (0, i.useRef)({ include_release: !0 }),
-          [y] = (0, o.jk)(r.id, (0, s.TM)(r.type), g.current);
-        if (
-          ((0, i.useEffect)(() => {
-            a.jg.Get().HintLoad();
-          }, []),
-          !y)
-        )
-          return null;
-        const f = () => {
-          (0, l.R6)(window, "steam://run/" + y.GetAppIDToRun());
-        };
-        if (8 == y.GetAppType()) return null;
-        const b =
+          [y] = (0, o.jk)(r.id, (0, s.TM)(r.type), g.current),
+          f = D(y);
+        (0, i.useEffect)(() => {
+          a.jg.Get().HintLoad();
+        }, []);
+        const b = (0, i.useCallback)(
+            (e) => {
+              const t = `${m.De.STORE_BASE_URL}cart`,
+                i = `${m.De.STORE_BASE_URL}cart/addtocart`,
+                s = (0, n.mY)(h);
+              if (
+                2 == (null == y ? void 0 : y.GetStoreItemType()) ||
+                (null == y ? void 0 : y.GetBestPurchaseOption().bundleid)
+              ) {
+                const n =
+                  2 == (null == y ? void 0 : y.GetStoreItemType())
+                    ? r.id
+                    : null == y
+                    ? void 0
+                    : y.GetBestPurchaseOption().bundleid;
+                a.jg.Get().AddToCart(e, null, i, t, s, n);
+              } else
+                a.jg
+                  .Get()
+                  .AddToCart(
+                    e,
+                    null == y ? void 0 : y.GetBestPurchaseOption().packageid,
+                    i,
+                    t,
+                    s
+                  );
+            },
+            [y, h]
+          ),
+          B = (0, i.useCallback)(() => {
+            (0, l.R6)(
+              window,
+              `steam://run/${null == y ? void 0 : y.GetAppIDToRun()}`
+            );
+          }, [y]);
+        if (!y || 8 == y.GetAppType()) return null;
+        const v =
           y.BIsFree() ||
           "0" == y.GetBestPurchasePriceFormatted() ||
           y.GetBestPurchaseOption().discount_pct >= 100;
-        if (1 == y.GetStoreItemType() && b && y.GetIncludedAppIDs().length > 1)
-          return null;
+        if (1 == y.GetStoreItemType())
+          if (10 == y.GetAppType()) {
+            if (!f)
+              return i.createElement(T.V, {
+                size: "small",
+                position: "center",
+              });
+            if (!f.inventory_available)
+              return i.createElement(
+                "div",
+                { className: (0, d.Z)(_().Action, p) },
+                i.createElement(
+                  "span",
+                  null,
+                  " ",
+                  (0, c.Xx)("#Sale_ReserveExhausted")
+                )
+              );
+          } else if (v && y.GetIncludedAppIDs().length > 1) return null;
         if (0 == y.GetStoreItemType()) {
           if (
             y.BIsComingSoon() &&
@@ -25574,13 +25800,13 @@
             return null;
           const e = a.jg.Get().BOwnsApp(y.GetAppID());
           if (e && 10 === y.GetAppType()) return null;
-          if (e || b) {
+          if (e || v) {
             const t =
               (e && (0, c.Xx)("#EventDisplay_CallToAction_PlayNow")) ||
               (0, c.Xx)("#EventDisplay_CallToAction_PlayNowForFree");
             return i.createElement(
               "div",
-              { className: (0, d.Z)(_().Action, p), onClick: f },
+              { className: (0, d.Z)(_().Action, p), onClick: B },
               i.createElement("span", null, t)
             );
           }
@@ -25595,27 +25821,7 @@
         }
         return i.createElement(
           "div",
-          {
-            className: (0, d.Z)(_().Action, p),
-            onClick: (e) => {
-              const t = `${m.De.STORE_BASE_URL}cart`,
-                i = `${m.De.STORE_BASE_URL}cart/addtocart`,
-                s = (0, n.mY)(h);
-              if (
-                2 == y.GetStoreItemType() ||
-                y.GetBestPurchaseOption().bundleid
-              ) {
-                const n =
-                  2 == y.GetStoreItemType()
-                    ? r.id
-                    : y.GetBestPurchaseOption().bundleid;
-                a.jg.Get().AddToCart(e, null, i, t, s, n);
-              } else
-                a.jg
-                  .Get()
-                  .AddToCart(e, y.GetBestPurchaseOption().packageid, i, t, s);
-            },
-          },
+          { className: (0, d.Z)(_().Action, p), onClick: b },
           i.createElement("span", null, (0, c.Xx)("#Store_AddToCart"))
         );
       }
@@ -25631,7 +25837,7 @@
         l = r(84343),
         d = r(19304),
         c = r(14826),
-        m = r(29265),
+        m = r(17133),
         u = r(21857),
         p = r.n(u);
       function _(e) {
@@ -28398,7 +28604,7 @@
         c = r(85886),
         m = r(25871),
         u = r(53913),
-        p = r(29265),
+        p = r(17133),
         _ = r(6319),
         h = r(44421),
         g = r(23715),

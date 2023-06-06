@@ -23120,25 +23120,38 @@
         );
       }
       function D(e) {
-        const { eventVisibilityStartTime: t, eventStartTime: a } = e,
-          n = s.JW.GetTimeNowWithOverride();
-        let i = null;
-        if (a === t || t < 1) {
+        const {
+            eventVisibilityStartTime: t,
+            eventStartTime: a,
+            bVisibleNow: n,
+          } = e,
+          i = s.JW.GetTimeNowWithOverride();
+        let o = null;
+        if (n && !t) {
           const e =
-            n >= a
+            a > i
+              ? "#EventEditor_EventVisibleButWillStartFuture"
+              : "#EventEditor_EventVisibleAndStarted";
+          o = (0, v.kQ)(
+            e,
+            l.createElement(_.H6, { dateAndTime: a, bSingleLine: !0 })
+          );
+        } else if (!n && (a === t || t < 1)) {
+          const e =
+            i >= a
               ? "#EventEditor_EventStartedAndPublished"
               : "#EventEditor_EventStartedAndPublishedFuture";
-          i = (0, v.kQ)(
+          o = (0, v.kQ)(
             e,
             l.createElement(_.H6, { dateAndTime: a, bSingleLine: !0 })
           );
         } else {
           let e = "#EventEditor_EventPublishedThenStarted";
-          t > n
+          t > i
             ? (e = "#EventEditor_EventPublishedThenStartedBothFuture")
-            : a > n &&
+            : a > i &&
               (e = "#EventEditor_EventPublishedThenStartedStartFuture"),
-            (i = (0, v.kQ)(
+            (o = (0, v.kQ)(
               e,
               l.createElement(_.H6, { dateAndTime: t, bSingleLine: !0 }),
               l.createElement(_.H6, { dateAndTime: a, bSingleLine: !0 })
@@ -23152,7 +23165,7 @@
               m().EventStartPublic
             ),
           },
-          i,
+          o,
           l.createElement(
             "span",
             {
@@ -23228,6 +23241,7 @@
             ? l.createElement(D, {
                 eventVisibilityStartTime: i,
                 eventStartTime: n,
+                bVisibleNow: o,
               })
             : l.createElement(I, { editModel: t })
         );
@@ -25393,15 +25407,20 @@
         );
       }
       function Oe(e) {
-        const { clanSteamID: t, gidClanEvent: a } = e,
+        const {
+            clanSteamID: t,
+            gidClanEvent: a,
+            rgSalePresenters: n,
+            fnCleanSaleEventPresenters: i,
+          } = e,
           {
-            bLoading: n,
-            bPublishRequiresValveApproval: i,
-            nAccountApproved: o,
-            bRequiresHostDisclaimer: r,
-            fnSetStoreRequireHostDisclaimer: l,
+            bLoading: o,
+            bPublishRequiresValveApproval: r,
+            nAccountApproved: l,
+            bRequiresHostDisclaimer: s,
+            fnSetStoreRequireHostDisclaimer: c,
           } = (0, b.bA)(t.GetAccountID(), a);
-        if (!n && i && !o) {
+        if (!o && r && !l) {
           const e = (e) => {
             (0, q.AM)(
               d.createElement(Pe, { clanSteamID: t, gidClanEvent: a }),
@@ -25458,9 +25477,15 @@
                   className: Le.RequireText,
                   label: (0, v.Xx)("#SalePresented_By_Admin"),
                   tooltip: (0, v.Xx)("#SalePresneted_By_Admin_ttip"),
-                  onChange: (e) => l(e),
-                  checked: r,
-                })
+                  onChange: (e) => c(e),
+                  checked: s,
+                }),
+                Boolean((null == n ? void 0 : n.length) > 0) &&
+                  d.createElement(
+                    u.zx,
+                    { onClick: i },
+                    (0, v.Xx)("#SalePresented_By_ClearPresenters")
+                  )
               )
             )
           );
@@ -28107,8 +28132,9 @@
               (0, ee.Q6)();
         }, [t]);
         const i = d.useCallback((e) => {
-          (0, ee.Uy)(e.strSectionId) && (0, ee.r2)(e.strSectionId);
-        }, []);
+            (0, ee.Uy)(e.strSectionId) && (0, ee.r2)(e.strSectionId);
+          }, []),
+          [o] = (0, I.SZ)(() => [t.GetEventModel().jsondata.sale_presenters]);
         return t.BIsSourceEventSaleEnabled() ||
           !a.clone_from_event_gid ||
           !a.clone_from_sale_enabled ||
@@ -28120,6 +28146,11 @@
               d.createElement(Oe, {
                 clanSteamID: t.GetClanSteamID(),
                 gidClanEvent: t.GetGID(),
+                rgSalePresenters: o,
+                fnCleanSaleEventPresenters: () => {
+                  (t.GetEventModel().jsondata.sale_presenters = void 0),
+                    t.SetDirty(s.jB.jsondata_sales);
+                },
               }),
               d.createElement(Ve, null),
               d.createElement(
@@ -33725,7 +33756,8 @@
         Init() {}
       }
       function oi(e) {
-        const { editModel: t } = e;
+        const { editModel: t } = e,
+          [a] = (0, I.SZ)(() => [t.GetEventModel().jsondata.sale_presenters]);
         return d.createElement(
           "div",
           { className: (0, H.Z)(ni.PublishContainer) },
@@ -33738,6 +33770,11 @@
               d.createElement(Oe, {
                 clanSteamID: t.GetClanSteamID(),
                 gidClanEvent: t.GetGID(),
+                rgSalePresenters: a,
+                fnCleanSaleEventPresenters: () => {
+                  (t.GetEventModel().jsondata.sale_presenters = void 0),
+                    t.SetDirty(s.jB.jsondata_sales);
+                },
               }),
               d.createElement(si, { editModel: t }),
               d.createElement(ti, { editModel: t, bTakePublishAction: !1 }),

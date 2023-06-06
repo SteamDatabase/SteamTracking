@@ -15854,7 +15854,11 @@
           (null == s ? void 0 : s.preventDefault) &&
           (null == s ? void 0 : s.stopPropagation)
         ) {
-          if (s.shiftKey || (s.altKey && !r.bRootContextMenu)) return null;
+          if (
+            s.shiftKey ||
+            (s.altKey && !(null == r ? void 0 : r.bRootContextMenu))
+          )
+            return null;
           s.preventDefault(),
             s.stopPropagation(),
             (a = s.currentTarget),
@@ -17366,7 +17370,6 @@
         (0, n._T)(e, ["direction"]);
         switch (t) {
           case "up":
-          case "down":
             return i.createElement(
               "svg",
               Object.assign(
@@ -17380,6 +17383,22 @@
               i.createElement("path", {
                 fill: "currentColor",
                 d: "M31 15.6394L18.0204 3L5 15.6394L8.60376 19.1432L18.0204 10.0076L27.4166 19.1432L31 15.6394ZM27.3962 33L18.0204 23.8644L8.62412 33L5 29.4962L18.0204 16.8568L31 29.4962L27.3962 33Z",
+              })
+            );
+          case "down":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                e
+              ),
+              i.createElement("path", {
+                fill: "currentColor",
+                d: "M31 20.3606L18.0204 33L5 20.3606L8.60376 16.8568L18.0204 25.9924L27.4166 16.8568L31 20.3606ZM27.3962 3L18.0204 12.1356L8.62412 3L5 6.50379L18.0204 19.1432L31 6.50379L27.3962 3Z",
               })
             );
           case "left":
@@ -21383,6 +21402,7 @@
             u &&
               (t.visible
                 ? (s.current && s.current.PositionMenu(),
+                  s.current && s.current.PositionPopupWindow(),
                   t.options.bRetainOnHide
                     ? u.window.SteamClient.Window.BringToFront()
                     : u.window.SteamClient.Window.SetForegroundWindow(),

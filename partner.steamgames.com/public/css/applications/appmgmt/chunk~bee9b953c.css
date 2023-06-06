@@ -1118,7 +1118,9 @@ a.eventreminder_ReminderOption_RNhWc {
   align-items: center;
 }
 .eventreminder_ReminderOption_RNhWc:not(.eventreminder_Unverified_PNHvX):hover,
-a.eventreminder_ReminderOption_RNhWc:not(.eventreminder_Unverified_PNHvX):hover {
+a.eventreminder_ReminderOption_RNhWc:not(
+    .eventreminder_Unverified_PNHvX
+  ):hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 .eventreminder_ReminderOption_RNhWc.eventreminder_Unverified_PNHvX,
@@ -1534,6 +1536,9 @@ p.bbcodes_Paragraph_3zjkn {
 .bbcodes_OrderedList_3Ve1E {
   display: block;
   padding-inline-start: 40px;
+}
+.bbcodes_OrderedList_3Ve1E .bbcodes_OrderedList_3Ve1E {
+  margin-top: 4px;
 }
 .bbcodes_ListItem_3DlO0 {
   list-style-position: outside;
@@ -2227,7 +2232,9 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   z-index: 1;
 }
 @media screen and (max-width: 620px) {
-  .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:not(.salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA) {
+  .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:not(
+      .salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA
+    ) {
     flex-direction: column;
   }
 }

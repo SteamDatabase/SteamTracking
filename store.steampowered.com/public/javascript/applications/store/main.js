@@ -5427,7 +5427,13 @@
     },
     27070: (e, t, n) => {
       "use strict";
-      n.d(t, { Ub: () => s, bY: () => l, lS: () => d, y$: () => c });
+      n.d(t, {
+        Ub: () => s,
+        bY: () => l,
+        lS: () => u,
+        sG: () => c,
+        y$: () => d,
+      });
       var r = n(89526);
       const i = r.createContext(void 0),
         o = i.Provider,
@@ -5457,8 +5463,9 @@
         return r.createElement(o, { value: s }, n);
       }
       const l = () => a().useActiveSteamInterface().GetServiceTransport(),
-        c = () => a().useStorage(),
-        d = () => a().useActiveSteamInterface();
+        c = () => a().useActiveSteamInterface().GetAnonymousServiceTransport(),
+        d = () => a().useStorage(),
+        u = () => a().useActiveSteamInterface();
     },
     27527: (e, t, n) => {
       "use strict";
@@ -5612,7 +5619,11 @@
           (null == a ? void 0 : a.preventDefault) &&
           (null == a ? void 0 : a.stopPropagation)
         ) {
-          if (a.shiftKey || (a.altKey && !n.bRootContextMenu)) return null;
+          if (
+            a.shiftKey ||
+            (a.altKey && !(null == n ? void 0 : n.bRootContextMenu))
+          )
+            return null;
           a.preventDefault(),
             a.stopPropagation(),
             (o = a.currentTarget),
@@ -18429,7 +18440,6 @@
         (0, r._T)(e, ["direction"]);
         switch (t) {
           case "up":
-          case "down":
             return i.createElement(
               "svg",
               Object.assign(
@@ -18443,6 +18453,22 @@
               i.createElement("path", {
                 fill: "currentColor",
                 d: "M31 15.6394L18.0204 3L5 15.6394L8.60376 19.1432L18.0204 10.0076L27.4166 19.1432L31 15.6394ZM27.3962 33L18.0204 23.8644L8.62412 33L5 29.4962L18.0204 16.8568L31 29.4962L27.3962 33Z",
+              })
+            );
+          case "down":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                e
+              ),
+              i.createElement("path", {
+                fill: "currentColor",
+                d: "M31 20.3606L18.0204 33L5 20.3606L8.60376 16.8568L18.0204 25.9924L27.4166 16.8568L31 20.3606ZM27.3962 3L18.0204 12.1356L8.62412 3L5 6.50379L18.0204 19.1432L31 6.50379L27.3962 3Z",
               })
             );
           case "left":
@@ -19445,6 +19471,7 @@
             d &&
               (t.visible
                 ? (a.current && a.current.PositionMenu(),
+                  a.current && a.current.PositionPopupWindow(),
                   t.options.bRetainOnHide
                     ? d.window.SteamClient.Window.BringToFront()
                     : d.window.SteamClient.Window.SetForegroundWindow(),

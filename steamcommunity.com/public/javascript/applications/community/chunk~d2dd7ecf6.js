@@ -3662,9 +3662,12 @@
         }, [e, t, a]);
         return {
           oPrivateData: n,
-          fnSetPrivateJon: (0, r.useCallback)((n) => {
-            a.UpdatePrivateData(e, t, n);
-          }, []),
+          fnSetPrivateJon: (0, r.useCallback)(
+            (n) => {
+              a.UpdatePrivateData(e, t, n);
+            },
+            [e, t, a]
+          ),
           bLoading: l,
         };
       }
@@ -3726,25 +3729,31 @@
       function E(e, t) {
         const { oPrivateData: a, fnSetPrivateJon: n, bLoading: i } = h(e, t),
           l = g.Get(),
-          o = (0, r.useCallback)((a) => {
-            n(
-              Object.assign(
-                Object.assign({}, l.GetPrivateData(e, t).jsonData),
-                {
-                  nAcceptingGuidelineAccount: a,
-                  rtAcceptanceTime: Math.floor(Date.now() / 1e3),
-                }
-              )
-            );
-          }, []),
-          s = (0, r.useCallback)((a, i) => {
-            n(
-              Object.assign(
-                Object.assign({}, l.GetPrivateData(e, t).jsonData),
-                { strPrimaryContactName: a, strPrimaryContactEmail: i }
-              )
-            );
-          }, []);
+          o = (0, r.useCallback)(
+            (a) => {
+              n(
+                Object.assign(
+                  Object.assign({}, l.GetPrivateData(e, t).jsonData),
+                  {
+                    nAcceptingGuidelineAccount: a,
+                    rtAcceptanceTime: Math.floor(Date.now() / 1e3),
+                  }
+                )
+              );
+            },
+            [e, n, t, l]
+          ),
+          s = (0, r.useCallback)(
+            (a, i) => {
+              n(
+                Object.assign(
+                  Object.assign({}, l.GetPrivateData(e, t).jsonData),
+                  { strPrimaryContactName: a, strPrimaryContactEmail: i }
+                )
+              );
+            },
+            [e, n, t, l]
+          );
         return {
           bLoading: i,
           bRequiresHostDisclaimer: Boolean(
@@ -24407,25 +24416,30 @@
         );
       }
       function re(e) {
-        const { editModel: t, saleSection: a, fnIsValidEvent: n } = e,
-          i = (0, c.SZ)(() => {
+        const {
+            editModel: t,
+            saleSection: a,
+            fnIsValidEvent: n,
+            strLocalizedInvalidTooltip: i,
+          } = e,
+          l = (0, c.SZ)(() => {
             var e;
             return null === (e = a.events) || void 0 === e
               ? void 0
               : e.filter((e) => Boolean(e));
           });
         return d.createElement(m.R, {
-          items: i,
+          items: l,
           onDelete: (e) => {
             (0, k.z)(() => {
-              (a.events = i),
+              (a.events = l),
                 a.events.splice(e, 1),
                 t.SetDirty(r.jB.jsondata_sales);
             });
           },
           onMove: (e, n) => {
             (0, k.z)(() => {
-              (a.events = i),
+              (a.events = l),
                 (0, X.hV)(a.events, e, n),
                 t.SetDirty(r.jB.jsondata_sales);
             });
@@ -24452,9 +24466,13 @@
               n &&
                 !n(t) &&
                 d.createElement(
-                  "div",
-                  { className: y.ErrorStylesWithIcon },
-                  (0, _.Xx)("#Sale_EventInvalid")
+                  R.HP,
+                  { toolTipContent: i },
+                  d.createElement(
+                    "div",
+                    { className: y.ErrorStylesWithIcon },
+                    (0, _.Xx)("#Sale_EventInvalid")
+                  )
                 )
             );
           },
@@ -25096,6 +25114,9 @@
                       ))
                 );
               })(e, t.event_schedule_categories, t.event_schedule_tracks),
+            strLocalizedInvalidTooltip: (0, _.Xx)(
+              "#Sale_EventInvalid_Schedule_ttip"
+            ),
           })
         );
       });

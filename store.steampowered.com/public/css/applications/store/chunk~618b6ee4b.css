@@ -4310,6 +4310,8 @@ html.responsive.touch
   margin: 0 auto;
   font-size: 24px;
   padding: 8px;
+  color: #fff;
+  text-shadow: 2px 2px 6px #000;
 }
 .salesocialsharedisplay_ShareButton_2kekt {
   margin: 0 auto;

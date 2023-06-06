@@ -1943,14 +1943,20 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn,
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:hover,
-.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:not(.pagedsettings_Active_2DpXj):hover {
+.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:not(
+    .pagedsettings_Active_2DpXj
+  ):hover {
   background-color: #23262e;
 }
-.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(.pagedsettings_Active_2DpXj):hover {
+.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(
+    .pagedsettings_Active_2DpXj
+  ):hover {
   background-color: #dcdedf;
   color: #3d4450;
 }
-.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(.pagedsettings_Active_2DpXj):hover
+.pagedsettings_PagedSettingsDialog_PageListItem_1-vlr:not(
+    .pagedsettings_Active_2DpXj
+  ):hover
   .pagedsettings_PageListItem_Icon_1rD8X {
   color: #3d4450;
 }
@@ -2527,7 +2533,9 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   cursor: default;
   color: #67707b;
 }
-.gamepaddialog_Field_eKmEX.gamepaddialog_Clickable_2Huzv:not(.gamepaddialog_Disabled_aIeh3) {
+.gamepaddialog_Field_eKmEX.gamepaddialog_Clickable_2Huzv:not(
+    .gamepaddialog_Disabled_aIeh3
+  ) {
   cursor: pointer;
 }
 .gamepaddialog_Field_eKmEX .Focusable {
@@ -3084,7 +3092,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   box-sizing: content-box;
   pointer-events: none;
 }
-.gamepadslider_SliderControlAndNotches_23hjX:not(.gamepadslider_Disabled_35GyZ).gpfocus
+.gamepadslider_SliderControlAndNotches_23hjX:not(
+    .gamepadslider_Disabled_35GyZ
+  ).gpfocus
   .gamepadslider_SliderHandle_11PBf {
   border: solid 3px #0e141b;
   margin: -3px;
@@ -3730,7 +3740,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H.gamepadpagedsettings_DisabledItem_1G3wh,
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H.gamepadpagedsettings_DisabledItem_1G3wh:hover,
-.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H.gamepadpagedsettings_DisabledItem_1G3wh:not(.gamepadpagedsettings_Active_1ELdD):hover {
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H.gamepadpagedsettings_DisabledItem_1G3wh:not(
+    .gamepadpagedsettings_Active_1ELdD
+  ):hover {
   color: #414141;
   cursor: default;
 }
@@ -7109,8 +7121,12 @@ body.modals_BodyNoScrollDialog_3jhMI {
   margin-top: -1px;
 }
 .ChatTabs
-  .personanameandstatus_compactView_3bbRZ:not(.personanameandstatus_twoLine_1BbOe)
-  .personanameandstatus_richPresenceLabel_2Ri00:not(.personanameandstatus_gameName_1cB0q) {
+  .personanameandstatus_compactView_3bbRZ:not(
+    .personanameandstatus_twoLine_1BbOe
+  )
+  .personanameandstatus_richPresenceLabel_2Ri00:not(
+    .personanameandstatus_gameName_1cB0q
+  ) {
   display: none;
 }
 .ChatTabs
@@ -7157,7 +7173,9 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .titleBarContainer
   .currentUserContainer
-  .personanameandstatus_richPresenceLabel_2Ri00:not(.personanameandstatus_gameName_1cB0q) {
+  .personanameandstatus_richPresenceLabel_2Ri00:not(
+    .personanameandstatus_gameName_1cB0q
+  ) {
   font-size: 10px;
   margin-top: -1px;
   margin-bottom: 1px;
@@ -7389,7 +7407,9 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe:focus {
   background-color: #3d424b;
 }
-.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus.GamepadMode,
+.chatentry_chatSubmitButton_RVIs8:not(
+    .chatentry_disabled_jaQN2
+  ):focus.GamepadMode,
 .GamepadMode
   .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus {
   background: #fff;
@@ -7470,17 +7490,25 @@ body.modals_BodyNoScrollDialog_3jhMI {
   .chatentry_AudioLines_IWaba {
   fill: #f5ffd7;
 }
-.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
+.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(
+    .chatentry_disabled_jaQN2
+  ):focus
   .SVGIcon_VoiceRoom,
-.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(
+    .chatentry_disabled_jaQN2
+  ):hover
   .SVGIcon_VoiceRoom {
   fill: #fff;
   stroke: #000;
 }
-.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
+.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(
+    .chatentry_disabled_jaQN2
+  ):focus
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_IWaba,
-.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+.chatentry_Active_37tPt.chatentry_chatSubmitButton_RVIs8:not(
+    .chatentry_disabled_jaQN2
+  ):hover
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_IWaba {
   fill: #000;
@@ -7589,7 +7617,9 @@ body.modals_BodyNoScrollDialog_3jhMI {
   color: #fff;
 }
 .chatentry_chatEntryControls_3Ule3
-  .chatentry_chatSubmitButton_RVIs8.GamepadMode:not(.chatentry_disabled_jaQN2).gpfocus,
+  .chatentry_chatSubmitButton_RVIs8.GamepadMode:not(
+    .chatentry_disabled_jaQN2
+  ).gpfocus,
 .GamepadMode
   .chatentry_chatEntryControls_3Ule3
   .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2).gpfocus {
@@ -9125,14 +9155,18 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .newlogindialog_Login_lat0M
   .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2.newlogindialog_Compact_3FB9K
   .newlogindialog_Login_lat0M
-  .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2:not(.IN_CLIENT) {
+  .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2:not(
+    .IN_CLIENT
+  ) {
   background: linear-gradient(321.58deg, #212629 47.91%, #333841 91.08%);
   width: 500px;
 }
 .newlogindialog_Login_lat0M
   .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2.newlogindialog_Compact_3FB9K
   .newlogindialog_Login_lat0M
-  .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2:not(.IN_CLIENT)
+  .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2:not(
+    .IN_CLIENT
+  )
   .newlogindialog_FormContainer_3XCnc {
   background: #21232880;
 }
@@ -9992,7 +10026,9 @@ a.eventreminder_ReminderOption_26nnh {
   align-items: center;
 }
 .eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover,
-a.eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover {
+a.eventreminder_ReminderOption_26nnh:not(
+    .eventreminder_Unverified_1dcmA
+  ):hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 .eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA,
@@ -11068,6 +11104,9 @@ p.bbcodes_Paragraph_KPN-t {
 .bbcodes_OrderedList_1DQ9h {
   display: block;
   padding-inline-start: 40px;
+}
+.bbcodes_OrderedList_1DQ9h .bbcodes_OrderedList_1DQ9h {
+  margin-top: 4px;
 }
 .bbcodes_ListItem_3FrNm {
   list-style-position: outside;
@@ -24158,7 +24197,9 @@ a.bbcodes_LinkButton_jPpgc:hover {
   color: inherit;
   width: auto;
 }
-.remoteplay_PlayerController_14Xjj.remoteplay_QuickAccessPlayerController_wHOHE:not(.remoteplay_Enabled_2T1ZK) {
+.remoteplay_PlayerController_14Xjj.remoteplay_QuickAccessPlayerController_wHOHE:not(
+    .remoteplay_Enabled_2T1ZK
+  ) {
   opacity: 0.2;
 }
 .remoteplay_BoxButton_hewCY {
@@ -24417,7 +24458,9 @@ svg.remoteplay_IconMobile_2371n {
 .remoteplay_QuickAccessControllerOrderSlot_bA_5P > svg {
   height: 26px;
 }
-.remoteplay_QuickAccessControllerOrderSlot_bA_5P:not(.remoteplay_SlotFilled_xQywn)
+.remoteplay_QuickAccessControllerOrderSlot_bA_5P:not(
+    .remoteplay_SlotFilled_xQywn
+  )
   > svg {
   opacity: 0.2;
 }
@@ -24672,7 +24715,9 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   background: #fff;
   color: #000;
 }
-.reorderablelist_ReorderableListItem_ZO8-r.reorderablelist_Selected_3HlFd:not(.gpfocus) {
+.reorderablelist_ReorderableListItem_ZO8-r.reorderablelist_Selected_3HlFd:not(
+    .gpfocus
+  ) {
   background: #23262e;
 }
 .footericons_Dark_2UAf_ .footericons_Background_yjs9m {
@@ -26738,7 +26783,9 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   border-bottom: 1px dotted transparent;
   margin-top: 1px;
 }
-.bbcode_ChatMessageSteamStore_tdVvE:not(.bbcode_ChatMessagesSteamStore_FilteredContent_3D-qb)
+.bbcode_ChatMessageSteamStore_tdVvE:not(
+    .bbcode_ChatMessagesSteamStore_FilteredContent_3D-qb
+  )
   .bbcode_ChatMessageSteamStore_GameNameAndIcon_4GpSr:hover
   .bbcode_ChatMessageSteamStore_Name_ihXhe {
   color: #fff;

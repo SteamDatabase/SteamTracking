@@ -2280,33 +2280,6 @@ function InstallScriptUploadCallback(appid, jsonResponse)
 	LoadInstallScript( appid );
 }
 
-function ScreenshotUploadCallback( appid, jsonResponse )
-{
-	var results = jsonResponse.evalJSON( true );
-
-	StandardCallback( results, 'screenshot_upload_response' );
-	document.forms['screenshot_upload_form'].reset();
-	LoadScreens( appid );
-}
-
-function CommunityCapsuleUploadCallback( appid, jsonResponse )
-{
-	var results = jsonResponse.evalJSON( true );
-
-	StandardCallback( results, 'capsule_upload_response' );
-
-	// poke the image in there
-	if ( 'images' in results )
-	{
-		if ( 'community_capsule' in results.images )
-		{
-			var url = unescape( results.images.community_capsule );
-			$( 'appCapsule' ).src = url;
-			$( 'appCapsuleInfo' ).innerHTML = '';
-		}
-	}
-}
-
 function ShowHideDiff( bShow )
 {
 	if ( bShow )
@@ -2698,67 +2671,6 @@ function LoadSigningInfo( appid )
 		}, 'get'
 		);
 }
-
-
-function DeleteScreenClosure( appid, screenid )
-{
-	var theClosure =
-	function()
-		{
-			AppsAjaxRequest( g_szBaseURL + "/apps/deletescreen/" + appid + "/" + screenid,
-				{},
-				function( results )
-				{
-					StandardCallback( results, 'screenshot_upload_response' );
-					LoadScreens( appid );
-				} );
-			return false;
-		};
-	return theClosure;
-}
-
-
-// populate document from set of screenshots
-function SetScreens( appid, screens )
-{
-	if ( screens.length == 0 )
-	{
-		$('screenshots').innerHTML = 'Your group has no community screen shots. You can upload some above.';
-		return;
-	}
-
-	$('screenshots').innerHTML = '';
-
-	for ( var id = 0; id < screens.length; id++ )
-	{
-		var divScreen = document.createElement( 'div' );
-		divScreen.className = 'screenshot';
-
-		var imageBase = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/' + appid + '/';
-
-		var anchor = document.createElement( 'a' );
-		anchor.href = imageBase + screens[id]['screen'] + ".jpg";
-
-		var img = document.createElement( 'img' );
-		img.src = imageBase + screens[id]['screen_thumb'] + ".jpg";
-		img.border = 0;
-
-		anchor.appendChild( img );
-		divScreen.appendChild( anchor );
-		divScreen.appendChild( document.createElement( 'br' ) );
-
-		var anchor2 = document.createElement( 'a' );
-		anchor2.onclick = DeleteScreenClosure( appid, id );
-		var deleteUrl = g_szBaseURL + "/apps/deletescreen/" + appid + "/" + id;
-		anchor2.href = deleteUrl;
-		anchor2.innerHTML = "Delete";
-
-		divScreen.appendChild( anchor2 );
-
-		$('screenshots').appendChild( divScreen );
-	}
-}
-
 
 //
 // startup function for the community page
