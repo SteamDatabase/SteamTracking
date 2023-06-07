@@ -49424,7 +49424,7 @@
           null == t ? void 0 : t.GetButtonToken(),
           null == t ? void 0 : t.BExplicitNoAssociationItem(),
           (null == t ? void 0 : t.BHasLegalLinePartner()) ||
-            t.BExplicitNoLegalPartnerNeeded(),
+            (null == t ? void 0 : t.BExplicitNoLegalPartnerNeeded()),
         ]);
         if ((null == t ? void 0 : t.GetGID()) == e) {
           const e = D(d, c);
