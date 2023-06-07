@@ -2610,5 +2610,6 @@
   "Notification_GiftReceived_Description": "de %1$s",
   "NotificationsList_EmptyTitle": "Nenhuma notificação de momento.",
   "NotificationsList_EmptyTitle_New": "Nenhuma notificação nova de momento.",
-  "NotificationsList_EmptyBody": "Aqui poderás encontrar notificações acerca da tua lista de desejos, amigos, jogos, inventário e muito mais."
+  "NotificationsList_EmptyBody": "Aqui poderás encontrar notificações acerca da tua lista de desejos, amigos, jogos, inventário e muito mais.",
+  "SDRPOPID_GenericCode": "Datacenter \"%1$s\""
 }

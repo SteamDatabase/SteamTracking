@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "(niestandardowy podtytuł)",
     "Sale_default_subtitle_1": "Na podstawie tego, w co grasz",
     "Sale_default_subtitle_2": "Od znajomych wydawców i producentów",
+    "Sale_default_subtitle_3": "Gry z obsługą VR",
+    "Sale_default_subtitle_4": "Gry zweryfikowane na Decku",
+    "Sale_default_subtitle_5": "Gry zweryfikowane i grywalne na Decku",
     "Sale_Section_PointShop_class_3": "Tło profilu",
     "Sale_Section_PointShop_class_4": "Emotikona",
     "Sale_Section_PointShop_class_8": "Profil gry",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "Dowiedz się więcej tutaj.",
     "SalePresented_By": "To wydarzenie zewnętrzne jest organizowane przez %1$s",
     "SalePresented_By_Multi": "To wydarzenie zewnętrzne jest organizowane przez %1$s i %2$s",
+    "SalePresented_By_Admin": "Organizator musi podać, kto z zewnątrz organizuje to wydarzenie.",
+    "SalePresneted_By_Admin_ttip": "Gdy wartość jest ustawiona na true, organizatorzy muszą określić, kto jest gospodarzem wydarzenia, tak by zapobiec złudnemu wrażeniu, że to Valve jest gospodarzem. Informacja ta jest wyświetlana na stronie wyprzedaży widocznej dla klientów.",
     "ContentHub_Recommendation_Curator": "Polecane przez %1$s",
     "ContentHub_Recommendation_Curators": "Polecane przez obserwowanych kuratorów",
     "ContentHub_Recommendation_FollowedDeveloper": "Producent: %1$s",
@@ -2605,5 +2610,6 @@
     "Notification_GiftReceived_Description": "od: %1$s",
     "NotificationsList_EmptyTitle": "W tej chwili nie masz powiadomień.",
     "NotificationsList_EmptyTitle_New": "W tej chwili nie masz nowych powiadomień.",
-    "NotificationsList_EmptyBody": "Tutaj możesz zobaczyć powiadomienia Steam dotyczące listy życzeń, znajomych, gier, ekwipunku i nie tylko."
+    "NotificationsList_EmptyBody": "Tutaj możesz zobaczyć powiadomienia Steam dotyczące listy życzeń, znajomych, gier, ekwipunku i nie tylko.",
+    "SDRPOPID_GenericCode": "Centrum danych „%1$s”"
 }

@@ -69359,12 +69359,16 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   background-color: #3d4450;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
+.notificationcontent_AllNotificationsTemplate_3Ak7c.notificationcontent_Unread_1X5wH.notificationcontent_StandardNotificationDescription_zB56A {
+  color: #fff;
+  font-weight: 400;
+}
 .notificationcontent_AllNotificationsTemplate_3Ak7c.notificationcontent_Unread_1X5wH:hover {
   background: #474f5c;
 }
 .notificationcontent_AllNotificationsTemplate_3Ak7c
   .notificationcontent_StandardNotificationDescription_zB56A {
-  color: #fff;
+  color: #dcdedf;
   font-weight: 400;
   letter-spacing: none;
   font-size: 14px;
@@ -69652,12 +69656,12 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .notificationcontent_NewIndicator_1Gpzt {
   position: absolute;
   right: 10px;
-  top: 7px;
+  top: 8px;
   filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
 }
 .notificationcontent_NewIndicator_1Gpzt svg {
-  width: 9px;
-  height: 9px;
+  width: 6px;
+  height: 6px;
   color: #57a11c;
 }
 .notificationcontent_DownloadCompleteText_GiuEz,
@@ -70647,12 +70651,16 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   background-color: #3d4450;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
+.standardtemplates_AllNotificationsTemplate_2m9JU.standardtemplates_Unread_2GC8q.standardtemplates_StandardNotificationDescription_1Ldq1 {
+  color: #fff;
+  font-weight: 400;
+}
 .standardtemplates_AllNotificationsTemplate_2m9JU.standardtemplates_Unread_2GC8q:hover {
   background: #474f5c;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU
   .standardtemplates_StandardNotificationDescription_1Ldq1 {
-  color: #fff;
+  color: #dcdedf;
   font-weight: 400;
   letter-spacing: none;
   font-size: 14px;
@@ -70936,12 +70944,12 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .standardtemplates_NewIndicator_3aotN {
   position: absolute;
   right: 10px;
-  top: 7px;
+  top: 8px;
   filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
 }
 .standardtemplates_NewIndicator_3aotN svg {
-  width: 9px;
-  height: 9px;
+  width: 6px;
+  height: 6px;
   color: #57a11c;
 }
 @keyframes shorttemplates_ItemFocusAnim-darkerGrey-nocolor_1kXW6 {
@@ -71518,12 +71526,16 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   background-color: #3d4450;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
+.shorttemplates_AllNotificationsTemplate_yn7qi.shorttemplates_Unread_3Kkjo.shorttemplates_StandardNotificationDescription_Dacpy {
+  color: #fff;
+  font-weight: 400;
+}
 .shorttemplates_AllNotificationsTemplate_yn7qi.shorttemplates_Unread_3Kkjo:hover {
   background: #474f5c;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi
   .shorttemplates_StandardNotificationDescription_Dacpy {
-  color: #fff;
+  color: #dcdedf;
   font-weight: 400;
   letter-spacing: none;
   font-size: 14px;
@@ -71793,12 +71805,12 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .shorttemplates_NewIndicator_7k_rN {
   position: absolute;
   right: 10px;
-  top: 7px;
+  top: 8px;
   filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
 }
 .shorttemplates_NewIndicator_7k_rN svg {
-  width: 9px;
-  height: 9px;
+  width: 6px;
+  height: 6px;
   color: #57a11c;
 }
 .shorttemplates_ShortTemplate_29NLb {
@@ -72465,12 +72477,16 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   background-color: #3d4450;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
+.steamtemplates_AllNotificationsTemplate_3diaj.steamtemplates_Unread_3E3kr.steamtemplates_StandardNotificationDescription_3Zk4B {
+  color: #fff;
+  font-weight: 400;
+}
 .steamtemplates_AllNotificationsTemplate_3diaj.steamtemplates_Unread_3E3kr:hover {
   background: #474f5c;
 }
 .steamtemplates_AllNotificationsTemplate_3diaj
   .steamtemplates_StandardNotificationDescription_3Zk4B {
-  color: #fff;
+  color: #dcdedf;
   font-weight: 400;
   letter-spacing: none;
   font-size: 14px;
@@ -72740,12 +72756,12 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .steamtemplates_NewIndicator_1UBge {
   position: absolute;
   right: 10px;
-  top: 7px;
+  top: 8px;
   filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
 }
 .steamtemplates_NewIndicator_1UBge svg {
-  width: 9px;
-  height: 9px;
+  width: 6px;
+  height: 6px;
   color: #57a11c;
 }
 .steamtemplates_AllNotificationsCommentPlus_kFdHt {
@@ -72757,12 +72773,17 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 svg.steamtemplates_FriendIndicator_suNJh {
   position: absolute;
-  left: 30px;
+  left: 32px;
   top: 28px;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   z-index: 2;
-  color: #fff;
+  color: #dcdedf;
+}
+svg.steamtemplates_FriendIndicator_suNJh .Outline {
+  stroke: #1b2838;
+  fill: #1b2838;
+  stroke-width: 2;
 }
 @keyframes virtualkeyboard_ItemFocusAnim-darkerGrey-nocolor_pL31G {
   from {

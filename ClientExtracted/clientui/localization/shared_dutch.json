@@ -1692,6 +1692,9 @@
   "Sale_default_subtitle_custom": "(aangepaste ondertitel)",
   "Sale_default_subtitle_1": "Gebaseerd op wat je hebt gespeeld",
   "Sale_default_subtitle_2": "Van bekende uitgevers en ontwikkelaars",
+  "Sale_default_subtitle_3": "Spellen met VR-ondersteuning",
+  "Sale_default_subtitle_4": "Geverifieerde spellen voor Steam Deck",
+  "Sale_default_subtitle_5": "Geverifieerde en speelbare spellen voor Steam Deck",
   "Sale_Section_PointShop_class_3": "Profielachtergrond",
   "Sale_Section_PointShop_class_4": "Emoticon",
   "Sale_Section_PointShop_class_8": "Spelprofiel",
@@ -1793,6 +1796,8 @@
   "SalePage_WatchForDrop_LearnMore": "Meer informatie over de vondsten vind je hier.",
   "SalePresented_By": "Dit externe evenement wordt gepresenteerd door %1$s",
   "SalePresented_By_Multi": "Dit externe evenement wordt gepresenteerd door %1$s en %2$s",
+  "SalePresented_By_Admin": "Vereist dat de organisator opgeeft door welke derde partijen dit evenement wordt aangeboden.",
+  "SalePresneted_By_Admin_ttip": "Wanneer deze optie is ingesteld, moeten de organisatoren van het evenement aangeven door wie het evenement wordt aangeboden. Deze informatie wordt getoond op de verkooppagina voor de klant, zodat het duidelijk is wie de organisatoren zijn. Dit voorkomt dat klanten in de war raken en denken dat het evenement door Valve wordt aangeboden.",
   "ContentHub_Recommendation_Curator": "Aanbevolen door %1$s",
   "ContentHub_Recommendation_Curators": "Aanbevolen door curators die jij volgt",
   "ContentHub_Recommendation_FollowedDeveloper": "Ontwikkeld door %1$s",
@@ -2605,5 +2610,6 @@
   "Notification_GiftReceived_Description": "van %1$s",
   "NotificationsList_EmptyTitle": "Je hebt op dit moment geen meldingen.",
   "NotificationsList_EmptyTitle_New": "Je hebt op dit moment geen nieuwe meldingen.",
-  "NotificationsList_EmptyBody": "Hier zullen Steam-meldingen worden weergegeven over je verlanglijst, vrienden, spellen, inventaris en meer."
+  "NotificationsList_EmptyBody": "Hier zullen Steam-meldingen worden weergegeven over je verlanglijst, vrienden, spellen, inventaris en meer.",
+  "SDRPOPID_GenericCode": "Datacenter '%1$s'"
 }

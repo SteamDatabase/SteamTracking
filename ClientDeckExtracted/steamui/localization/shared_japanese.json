@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "（カスタムサブタイトル）",
     "Sale_default_subtitle_1": "プレイ情報に基づいたおすすめ",
     "Sale_default_subtitle_2": "おなじみのパブリッシャーと開発者からのおすすめ",
+    "Sale_default_subtitle_3": "VR対応ゲーム",
+    "Sale_default_subtitle_4": "Deckで確認済みのゲーム",
+    "Sale_default_subtitle_5": "「Steam Deckで確認済み」と「プレイ可能」のゲーム",
     "Sale_Section_PointShop_class_3": "プロフィール背景",
     "Sale_Section_PointShop_class_4": "絵文字",
     "Sale_Section_PointShop_class_8": "ゲームプロフィール",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "ドロップに関する詳細",
     "SalePresented_By": "このサードパーティーイベントは%1$sの主催です",
     "SalePresented_By_Multi": "このサードパーティイベントは%1$sと%2$sの主催です",
+    "SalePresented_By_Admin": "主催者はこのイベントを主催するサードパーティーを入力する必要があります",
+    "SalePresneted_By_Admin_ttip": "trueに設定すると、イベント主催者は誰がイベントを主催しているかを指定する必要があります。これは顧客向けのセールページに表示されるため、誰が主催しているかが明確になり、顧客がValveを主催者だと誤解するのを防ぎます。",
     "ContentHub_Recommendation_Curator": "推薦者：%1$s",
     "ContentHub_Recommendation_Curators": "フォロー中のキュレーターのおすすめ",
     "ContentHub_Recommendation_FollowedDeveloper": "開発元：%1$s",
@@ -2605,5 +2610,6 @@
     "Notification_GiftReceived_Description": "送り主：%1$s",
     "NotificationsList_EmptyTitle": "現在通知はありません。",
     "NotificationsList_EmptyTitle_New": "現在新しい通知はありません。",
-    "NotificationsList_EmptyBody": "ここでは、ウィッシュリスト、フレンド、ゲーム、インベントリなどに関するSteam通知を確認できます。"
+    "NotificationsList_EmptyBody": "ここでは、ウィッシュリスト、フレンド、ゲーム、インベントリなどに関するSteam通知を確認できます。",
+    "SDRPOPID_GenericCode": "データセンター「%1$s」"
 }

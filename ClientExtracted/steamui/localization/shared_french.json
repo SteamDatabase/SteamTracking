@@ -432,7 +432,7 @@
     "EventDisplay_TimeEventActive": "Cet évènement est en cours",
     "EventDisplay_TimeEventOnNow": "En ce moment !",
     "EventDisplay_Share_WithFriendsHeader": "Partager avec vos contacts",
-    "EventDisplay_Share_LanguageLabel": "Partager du contenu en :",
+    "EventDisplay_Share_LanguageLabel": "Partager ce contenu en :",
     "EventDisplay_Share_Link": "Lien : ",
     "EventDisplay_Share_OnMyStatus": "Partager comme statut",
     "EventDisplay_Share_OnMyStatus_Details": "Publiez ce statut dans le flux d'activités de vos contacts. Steam inclura le message et l'aperçu du contenu montré ci-dessous.",
@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "(sous-titre personnalisé)",
     "Sale_default_subtitle_1": "D'après les jeux auxquels vous avez joué",
     "Sale_default_subtitle_2": "Créations d'équipes que vous connaissez",
+    "Sale_default_subtitle_3": "Jeux avec prise en charge de la VR",
+    "Sale_default_subtitle_4": "Jeux compatibles avec Steam Deck",
+    "Sale_default_subtitle_5": "Jeux compatibles et jouables sur Steam Deck",
     "Sale_Section_PointShop_class_3": "Arrière-plan de profil",
     "Sale_Section_PointShop_class_4": "Émoticône",
     "Sale_Section_PointShop_class_8": "Profil de jeu",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "Pour plus d'informations sur la distribution d'items, cliquez ici.",
     "SalePresented_By": "Cet évènement tiers est organisé par %1$s",
     "SalePresented_By_Multi": "Cet évènement tiers est organisé par %1$s et %2$s",
+    "SalePresented_By_Admin": "L'entité organisatrice doit indiquer quels tiers présentent cet évènement.",
+    "SalePresneted_By_Admin_ttip": "Quand cette option est activée, les entités organisatrices de l'évènement doivent indiquer qui le présente. Cette information est ensuite visible de la clientèle sur la page de l'évènement. Cela permet d'identifier clairement les responsables de l'évènement et de clarifier que Valve n'est pas en charge de l'évènement.",
     "ContentHub_Recommendation_Curator": "Recommandé par %1$s",
     "ContentHub_Recommendation_Curators": "Recommandé par des groupes de curation que vous suivez",
     "ContentHub_Recommendation_FollowedDeveloper": "Développé par %1$s",
@@ -2605,5 +2610,6 @@
     "Notification_GiftReceived_Description": "de la part de %1$s",
     "NotificationsList_EmptyTitle": "Vous n'avez aucune notification pour le moment.",
     "NotificationsList_EmptyTitle_New": "Vous n'avez aucune nouvelle notification pour le moment.",
-    "NotificationsList_EmptyBody": "Toutes les notifications Steam vous concernant s'afficheront ici : liste de souhaits, contacts, jeux, inventaire et plus encore."
+    "NotificationsList_EmptyBody": "Toutes les notifications Steam vous concernant s'afficheront ici : liste de souhaits, contacts, jeux, inventaire et plus encore.",
+    "SDRPOPID_GenericCode": "Centre de données « %1$s »"
 }

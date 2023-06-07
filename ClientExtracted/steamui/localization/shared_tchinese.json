@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "（自訂副標題）",
     "Sale_default_subtitle_1": "根據您玩過的遊戲",
     "Sale_default_subtitle_2": "熟悉的發行商和開發者所推出",
+    "Sale_default_subtitle_3": "支援 VR 的遊戲",
+    "Sale_default_subtitle_4": "Deck 驗證遊戲",
+    "Sale_default_subtitle_5": "Steam Deck 驗證和可遊玩遊戲",
     "Sale_Section_PointShop_class_3": "個人檔案背景",
     "Sale_Section_PointShop_class_4": "表情符號",
     "Sale_Section_PointShop_class_8": "遊戲個人檔案",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "掉落詳情請於此檢視。",
     "SalePresented_By": "此第三方活動由 %1$s 主持",
     "SalePresented_By_Multi": "此第三方活動由 %1$s 和 %2$s 主持",
+    "SalePresented_By_Admin": "要求主辦人輸入主持這場活動的第三方名稱",
+    "SalePresneted_By_Admin_ttip": "當此值設為真，則活動主辦人需標明活動主持人的名稱。此名稱會顯示在供顧客瀏覽的特賣頁面上，因此可清楚看出誰為主辦單位，避免顧客誤以為是由 Valve 主持。",
     "ContentHub_Recommendation_Curator": "由 %1$s 推薦",
     "ContentHub_Recommendation_Curators": "由您關注的鑑賞家所推薦",
     "ContentHub_Recommendation_FollowedDeveloper": "開發者：%1$s",
@@ -2605,5 +2610,6 @@
     "Notification_GiftReceived_Description": "來自 %1$s",
     "NotificationsList_EmptyTitle": "您目前沒有任何通知。",
     "NotificationsList_EmptyTitle_New": "您目前沒有任何新通知。",
-    "NotificationsList_EmptyBody": "在此處您可見到與願望清單、好友、遊戲、物品庫和其它內容相關的 Steam 通知。"
+    "NotificationsList_EmptyBody": "在此處您可見到與願望清單、好友、遊戲、物品庫和其它內容相關的 Steam 通知。",
+    "SDRPOPID_GenericCode": "資料中心「%1$s」"
 }

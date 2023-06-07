@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "(subtítulo personalizado)",
     "Sale_default_subtitle_1": "Según a lo que has estado jugando",
     "Sale_default_subtitle_2": "De editores y desarrolladores conocidos",
+    "Sale_default_subtitle_3": "Juegos compatibles con RV",
+    "Sale_default_subtitle_4": "Juegos verificados en Deck",
+    "Sale_default_subtitle_5": "Juegos verificados y jugables en Steam Deck",
     "Sale_Section_PointShop_class_3": "Fondo del perfil",
     "Sale_Section_PointShop_class_4": "Emoticono",
     "Sale_Section_PointShop_class_8": "Perfil de juego",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "Obtener más información sobre objetos aleatorios aquí.",
     "SalePresented_By": "Este evento de terceros está presentado por %1$s",
     "SalePresented_By_Multi": "Este evento de terceros está presentado por %1$s y %2$s",
+    "SalePresented_By_Admin": "El organizador debe indicar quién presenta este evento",
+    "SalePresneted_By_Admin_ttip": "Cuando se activa esta opción, los organizadores del evento deben especificar quién presenta el evento. Esta información se muestra en la página de ofertas que ven los clientes para que quede claro quién organiza el evento y evitar que los clientes crean que lo organiza Valve.",
     "ContentHub_Recommendation_Curator": "Recomendado por %1$s",
     "ContentHub_Recommendation_Curators": "Recomendado por mentores a los que sigues",
     "ContentHub_Recommendation_FollowedDeveloper": "Desarrollado por %1$s",
@@ -2605,5 +2610,6 @@
     "Notification_GiftReceived_Description": "de %1$s",
     "NotificationsList_EmptyTitle": "En este momento no tienes notificaciones.",
     "NotificationsList_EmptyTitle_New": "En este momento no tienes notificaciones nuevas.",
-    "NotificationsList_EmptyBody": "Aquí es donde puedes ver las notificaciones de Steam sobre la lista de deseados, tus amigos, tus juegos, el inventario, etc."
+    "NotificationsList_EmptyBody": "Aquí es donde puedes ver las notificaciones de Steam sobre la lista de deseados, tus amigos, tus juegos, el inventario, etc.",
+    "SDRPOPID_GenericCode": "Centro de datos «%1$s»"
 }

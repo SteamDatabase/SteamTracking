@@ -1692,6 +1692,9 @@
   "Sale_default_subtitle_custom": "(คำบรรยายแบบกำหนดเอง)",
   "Sale_default_subtitle_1": "อ้างอิงจากสิ่งที่คุณเล่นมาโดยตลอด",
   "Sale_default_subtitle_2": "จากผู้จัดจำหน่ายและผู้พัฒนาที่คุณคุ้นเคย",
+  "Sale_default_subtitle_3": "เกมที่รองรับ VR",
+  "Sale_default_subtitle_4": "เกมที่เล่นได้ดีบน Steam Deck",
+  "Sale_default_subtitle_5": "เกมที่เล่นได้ดีและเล่นได้บน Steam Deck",
   "Sale_Section_PointShop_class_3": "พื้นหลังโปรไฟล์",
   "Sale_Section_PointShop_class_4": "อีโมติคอน",
   "Sale_Section_PointShop_class_8": "โปรไฟล์เกม",
@@ -1793,6 +1796,8 @@
   "SalePage_WatchForDrop_LearnMore": "เรียนรู้เพิ่มเติมเกี่ยวกับการดรอปที่นี่",
   "SalePresented_By": "กิจกรรมของบุคคลภายนอกนี้นำเสนอโดย %1$s",
   "SalePresented_By_Multi": "กิจกรรมของบุคคลภายนอกนี้นำเสนอโดย %1$s และ %2$s",
+  "SalePresented_By_Admin": "กำหนดให้ผู้จัดงานต้องระบุว่าบุคคลภายนอกรายใดที่จะจัดกิจกรรมนี้",
+  "SalePresneted_By_Admin_ttip": "เมื่อตั้งค่าให้เป็น \"true\" แล้ว ผู้จัดงานต้องระบุว่าใครเป็นผู้จัดกิจกรรม ซึ่งจะปรากฏบนหน้าการลดราคาให้ลูกค้าเห็น เพื่อให้เข้าใจชัดเจนว่าใครเป็นผู้จัดงานและป้องกันไม่ให้ลูกค้าเข้าใจผิดว่า Valve เป็นผู้จัด",
   "ContentHub_Recommendation_Curator": "แนะนำโดย %1$s",
   "ContentHub_Recommendation_Curators": "แนะนำโดยผู้แนะนำที่คุณติดตาม",
   "ContentHub_Recommendation_FollowedDeveloper": "พัฒนาโดย %1$s",
@@ -2605,5 +2610,6 @@
   "Notification_GiftReceived_Description": "จาก %1$s",
   "NotificationsList_EmptyTitle": "คุณไม่มีการแจ้งเตือนในขณะนี้",
   "NotificationsList_EmptyTitle_New": "คุณไม่มีการแจ้งเตือนใหม่ในขณะนี้",
-  "NotificationsList_EmptyBody": "นี่คือจุดที่คุณจะเห็นการแจ้งเตือนจาก Steam เกี่ยวกับสิ่งที่อยากได้ เพื่อน เกม ช่องเก็บของ และอื่น ๆ อีกมากมายของคุณ"
+  "NotificationsList_EmptyBody": "นี่คือจุดที่คุณจะเห็นการแจ้งเตือนจาก Steam เกี่ยวกับสิ่งที่อยากได้ เพื่อน เกม ช่องเก็บของ และอื่น ๆ อีกมากมายของคุณ",
+  "SDRPOPID_GenericCode": "ศูนย์ข้อมูล \"%1$s\""
 }

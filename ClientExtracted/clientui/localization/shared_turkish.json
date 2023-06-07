@@ -1692,6 +1692,9 @@
   "Sale_default_subtitle_custom": "(özel alt başlık)",
   "Sale_default_subtitle_1": "Oynadığınız oyunlar temel alındı",
   "Sale_default_subtitle_2": "Benzer yayıncı ve geliştiricilerden",
+  "Sale_default_subtitle_3": "VR Desteğine Sahip Oyunlar",
+  "Sale_default_subtitle_4": "Deck'te Onaylanmış Oyunlar",
+  "Sale_default_subtitle_5": "Steam Deck için \"Onaylı\" ve \"Oynanabilir\" Oyunlar",
   "Sale_Section_PointShop_class_3": "Profil Arka Planı",
   "Sale_Section_PointShop_class_4": "İfade",
   "Sale_Section_PointShop_class_8": "Oyun Profili",
@@ -2607,5 +2610,6 @@
   "Notification_GiftReceived_Description": "gönderen: %1$s",
   "NotificationsList_EmptyTitle": "An itibarıyla bir bildiriminiz yok.",
   "NotificationsList_EmptyTitle_New": "An itibarıyla yeni bir bildiriminiz yok.",
-  "NotificationsList_EmptyBody": "Burada istek listenize, arkadaşlarınıza, oyunlarınıza, envanterinize ve daha fazlasına dair Steam bildirimlerini görüntülersiniz."
+  "NotificationsList_EmptyBody": "Burada istek listenize, arkadaşlarınıza, oyunlarınıza, envanterinize ve daha fazlasına dair Steam bildirimlerini görüntülersiniz.",
+  "SDRPOPID_GenericCode": "Veri merkezi \"%1$s\""
 }

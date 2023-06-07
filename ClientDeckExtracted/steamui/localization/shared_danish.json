@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "(tilpasset undertitel)",
     "Sale_default_subtitle_1": "Baseret på, hvad du har spillet",
     "Sale_default_subtitle_2": "Fra udgivere og udviklere, du kender",
+    "Sale_default_subtitle_3": "Spil med VR-understøttelse",
+    "Sale_default_subtitle_4": "Spil, som er bekræftet på Deck",
+    "Sale_default_subtitle_5": "Spil, som er bekræftede og spilbare på Steam Deck",
     "Sale_Section_PointShop_class_3": "Profilbaggrund",
     "Sale_Section_PointShop_class_4": "Emotikon",
     "Sale_Section_PointShop_class_8": "Spilprofil",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "Lær mere om genstanddrops her.",
     "SalePresented_By": "Denne tredjepartsbegivenhed præsenteres af %1$s",
     "SalePresented_By_Multi": "Denne tredjepartsbegivenhed præsenteres af %1$s og %2$s",
+    "SalePresented_By_Admin": "Kræver, at arrangøren indtaster, hvilke tredjeparter der præsenterer denne begivenhed",
+    "SalePresneted_By_Admin_ttip": "Når dette er sat til true, skal begivenhedsarrangørerne angive, hvem der er vært for begivenheden. Dette vises for kunderne på udsalgssiden, så det er tydeligt, hvem arrangørerne er, og det forhindrer, at kunderne bliver forvirrede og tror, at det er Valve.",
     "ContentHub_Recommendation_Curator": "Anbefalet af %1$s",
     "ContentHub_Recommendation_Curators": "Anbefalet af kuratorer, du følger",
     "ContentHub_Recommendation_FollowedDeveloper": "Udviklet af %1$s",
@@ -2605,5 +2610,6 @@
     "Notification_GiftReceived_Description": "fra %1$s",
     "NotificationsList_EmptyTitle": "Du har ingen notifikationer lige nu.",
     "NotificationsList_EmptyTitle_New": "Du har ingen nye notifikationer lige nu.",
-    "NotificationsList_EmptyBody": "Her kan du se Steam-notifikationer om din ønskeliste, dine venner, dit inventar og meget mere."
+    "NotificationsList_EmptyBody": "Her kan du se Steam-notifikationer om din ønskeliste, dine venner, dit inventar og meget mere.",
+    "SDRPOPID_GenericCode": "Datacenter \"%1$s\""
 }

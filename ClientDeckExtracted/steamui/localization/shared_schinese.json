@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "（自定义副标题）",
     "Sale_default_subtitle_1": "基于您最近在玩的游戏",
     "Sale_default_subtitle_2": "来自熟悉的发行商和开发者",
+    "Sale_default_subtitle_3": "支持 VR 的游戏",
+    "Sale_default_subtitle_4": "通过 Deck 验证的游戏",
+    "Sale_default_subtitle_5": "通过 Steam Deck 验证且可玩的游戏",
     "Sale_Section_PointShop_class_3": "个人资料背景",
     "Sale_Section_PointShop_class_4": "表情",
     "Sale_Section_PointShop_class_8": "游戏个人资料",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "在此处对物品掉落了解更多。",
     "SalePresented_By": "此第三方活动由 %1$s 举办",
     "SalePresented_By_Multi": "此第三方活动由 %1$s 及 %2$s 举办",
+    "SalePresented_By_Admin": "要求组织者输入是哪些第三方举办此活动",
+    "SalePresneted_By_Admin_ttip": "设置为 true 时，活动组织者需要指定活动举办方。信息将在面向顾客的特卖页面上显示，顾客从而可以清楚知晓谁是组织者，避免误以为是 Valve 举办此活动。",
     "ContentHub_Recommendation_Curator": "推荐人：%1$s",
     "ContentHub_Recommendation_Curators": "由您关注的鉴赏家推荐",
     "ContentHub_Recommendation_FollowedDeveloper": "开发团队：%1$s",
@@ -2606,5 +2611,6 @@
     "Notification_GiftReceived_Description": "来自 %1$s",
     "NotificationsList_EmptyTitle": "您当前没有任何通知。",
     "NotificationsList_EmptyTitle_New": "您当前没有任何新通知。",
-    "NotificationsList_EmptyBody": "您可以在此处看到有关您的愿望单、好友、游戏、库存等的 Steam 通知。"
+    "NotificationsList_EmptyBody": "您可以在此处看到有关您的愿望单、好友、游戏、库存等的 Steam 通知。",
+    "SDRPOPID_GenericCode": "“%1$s”数据中心"
 }

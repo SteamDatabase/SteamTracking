@@ -1692,6 +1692,9 @@
   "Sale_default_subtitle_custom": "(subtitrare personalizată)",
   "Sale_default_subtitle_1": "În funcție de ce ai jucat",
   "Sale_default_subtitle_2": "De la editori și dezvoltatori pe care îi cunoști",
+  "Sale_default_subtitle_3": "Jocuri compatibile cu RV",
+  "Sale_default_subtitle_4": "Jocuri verificate pentru Deck",
+  "Sale_default_subtitle_5": "Jocuri verificate și jucabile pentru Steam Deck",
   "Sale_Section_PointShop_class_3": "Fundal de profil",
   "Sale_Section_PointShop_class_4": "Emoticon",
   "Sale_Section_PointShop_class_8": "Profil de joc",
@@ -1793,6 +1796,8 @@
   "SalePage_WatchForDrop_LearnMore": "Află mai multe despre acordarea de obiecte aici.",
   "SalePresented_By": "Acest eveniment terț este prezentat de %1$s",
   "SalePresented_By_Multi": "Acest eveniment terț este prezentat de %1$s și %2$s",
+  "SalePresented_By_Admin": "Necesită ca organizatorul să introducă părțile terțe care găzduiesc evenimentul acesta",
+  "SalePresneted_By_Admin_ttip": "Când această opțiune este activă, organizatorii evenimentului trebuie să specifice care sunt gazdele evenimentului. Aceste informații vor fi afișate ulterior clienților pe pagina principală a evenimentului. Astfel, clienții vor ști cu exactitate care sunt organizatorii evenimentului și va fi clarificat faptul că Valve nu se ocupă de organizarea acestuia.",
   "ContentHub_Recommendation_Curator": "Recomandat de %1$s",
   "ContentHub_Recommendation_Curators": "Recomandate de curatorii pe care-i urmărești",
   "ContentHub_Recommendation_FollowedDeveloper": "Dezvoltat de: %1$s",
@@ -2605,5 +2610,6 @@
   "Notification_GiftReceived_Description": "de la %1$s",
   "NotificationsList_EmptyTitle": "Momentan nu ai nicio notificare.",
   "NotificationsList_EmptyTitle_New": "Momentan nu ai nicio notificare nouă.",
-  "NotificationsList_EmptyBody": "Aici vei vedea notificările tale Steam despre lista de dorințe, prieteni, jocuri, inventar și multe altele."
+  "NotificationsList_EmptyBody": "Aici vei vedea notificările tale Steam despre lista de dorințe, prieteni, jocuri, inventar și multe altele.",
+  "SDRPOPID_GenericCode": "Centrul de date „%1$s”"
 }

@@ -1692,6 +1692,9 @@
   "Sale_default_subtitle_custom": "(anpassad undertext)",
   "Sale_default_subtitle_1": "Baserat på vad du spelat",
   "Sale_default_subtitle_2": "Från bekanta utgivare och utvecklare",
+  "Sale_default_subtitle_3": "Spel med VR-stöd",
+  "Sale_default_subtitle_4": "Spel som är verifierade på Steam Deck",
+  "Sale_default_subtitle_5": "Spel som är verifierade och spelbara på Steam Deck",
   "Sale_Section_PointShop_class_3": "Profilbakgrund",
   "Sale_Section_PointShop_class_4": "Uttryckssymbol",
   "Sale_Section_PointShop_class_8": "Spelprofil",
@@ -1793,6 +1796,8 @@
   "SalePage_WatchForDrop_LearnMore": "Läs mer om hittade föremål här.",
   "SalePresented_By": "Detta tredjepartsevent presenteras av %1$s",
   "SalePresented_By_Multi": "Detta tredjepartsevent presenteras av %1$s och %2$s",
+  "SalePresented_By_Admin": "Kräver att arrangören anger vilka tredje parter som arrangerar eventet",
+  "SalePresneted_By_Admin_ttip": "När det har angivits måste eventarrangörerna specificera vilka eventvärdarna är. Detta visas för kunderna på reasidan för att göra det tydligt vem som är arrangör, så att kunderna inte tror att det är Valve som är värd.",
   "ContentHub_Recommendation_Curator": "Rekommenderas av %1$s",
   "ContentHub_Recommendation_Curators": "Rekommenderas av kuratorer du följer",
   "ContentHub_Recommendation_FollowedDeveloper": "Utvecklat av %1$s",
@@ -2606,5 +2611,6 @@
   "NotificationsList_EmptyTitle": "Du har inga aviseringar för tillfället.",
   "NotificationsList_EmptyTitle_New": "Du har inga nya aviseringar för tillfället.",
   "NotificationsList_EmptyBody": "Här kommer du att kunna se Steam-aviseringar om din önskelista, vänner, spel, förråd och mer.",
+  "SDRPOPID_GenericCode": "Datacenter: %1$s",
   "shared_dummy": "dont translate"
 }

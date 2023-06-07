@@ -4869,7 +4869,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Don't show this again"
 
 "RescueDialog_Title" "Steamwebhelper is not responding"
-"RescueDialog_Explanation" "steamwebhelper.exe, a critical Steam component, is not responding. The Steam UI will not be usable.  Click <a href=\"about:blank\">here</a> for more information."
+"RescueDialog_Explanation" "steamwebhelper.exe, a critical Steam component, is not responding. The Steam UI will not be usable.  Click <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>here</a> for more information."
 "RescueDialog_RadioHeader" "Let's try to help:"
 "RescueDialog_RestartSteam" "Restart Steam"
 "RescueDialog_RestartSteam_NoGPU" "Restart Steam with GPU Acceleration disabled"

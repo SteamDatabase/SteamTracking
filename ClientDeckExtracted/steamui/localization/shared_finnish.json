@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "(oma alaotsikko)",
     "Sale_default_subtitle_1": "Pelaamiesi pelien perusteella",
     "Sale_default_subtitle_2": "Tutuilta julkaisijoilta ja kehittäjiltä",
+    "Sale_default_subtitle_3": "Pelit, joissa on VR-tuki",
+    "Sale_default_subtitle_4": "Deckille vahvistetut pelit",
+    "Sale_default_subtitle_5": "Steam Deckin vahvistetut ja sillä pelattavissa olevat pelit",
     "Sale_Section_PointShop_class_3": "Profiilin taustakuva",
     "Sale_Section_PointShop_class_4": "Hymiö",
     "Sale_Section_PointShop_class_8": "Peliprofiili",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "Lisätietoja saatavista esineistä löydät täältä.",
     "SalePresented_By": "Kolmannen osapuolen tapahtuman tarjoaa %1$s",
     "SalePresented_By_Multi": "Kolmannen osapuolen tapahtuman tarjoavat %1$s ja %2$s",
+    "SalePresented_By_Admin": "Järjestäjän tulee syöttää tapahtumaa isännöivät kolmannet osapuolet.",
+    "SalePresneted_By_Admin_ttip": "Kun totuusarvomuuttujaksi asetetaan totta, tapahtuman järjestäjien tulee ilmoittaa, kuka tapahtumaa isännöi. Tieto näkyy asiakkaille kauppasivulla, jotta vältytään väärinkäsitykseltä, että Valve isännöisi tapahtumaa.",
     "ContentHub_Recommendation_Curator": "%1$s suosittelee",
     "ContentHub_Recommendation_Curators": "Seuraamasi kuraattorit suosittelevat",
     "ContentHub_Recommendation_FollowedDeveloper": "Kehittäjä: %1$s",
@@ -2606,5 +2611,6 @@
     "NotificationsList_EmptyTitle": "Ei ilmoituksia.",
     "NotificationsList_EmptyTitle_New": "Ei uusia ilmoituksia.",
     "NotificationsList_EmptyBody": "Täällä näkyvät mm. toivelistaa, kavereita, pelejä ja tavaraluetteloa koskevat Steam-imoitukset.",
+    "SDRPOPID_GenericCode": "Palvelinkeskus %1$s",
     "shared_dummy": "dont translate"
 }

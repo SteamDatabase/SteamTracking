@@ -99,10 +99,8 @@
  CFUUIDGetConstantUUIDWithBytes
  CGAcquireDisplayFadeReservation
  CGAssociateMouseAndMouseCursorPosition
- CGCaptureAllDisplays
  CGColorGetConstantColor
  CGDisplayBounds
- CGDisplayCapture
  CGDisplayCopyAllDisplayModes
  CGDisplayCopyDisplayMode
  CGDisplayFade
@@ -121,13 +119,10 @@
  CGDisplayModeRelease
  CGDisplayMoveCursorToPoint
  CGDisplayPixelsHigh
- CGDisplayRelease
  CGDisplaySetDisplayMode
  CGGetOnlineDisplayList
  CGMainDisplayID
- CGReleaseAllDisplays
  CGReleaseDisplayFadeReservation
- CGShieldingWindowLevel
  CGWarpMouseCursorPosition
  CGWindowLevelForKey
  CVDisplayLinkCreateWithActiveCGDisplays

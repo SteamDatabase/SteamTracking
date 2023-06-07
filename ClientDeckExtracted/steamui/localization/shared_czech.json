@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "(vlastní podnadpis)",
     "Sale_default_subtitle_1": "Založené na hrách, které jste hráli",
     "Sale_default_subtitle_2": "Od vývojářů a vydavatelů, které už znáte",
+    "Sale_default_subtitle_3": "Hry s podporou VR",
+    "Sale_default_subtitle_4": "Hry plně kompatibilní se zařízením Steam Deck",
+    "Sale_default_subtitle_5": "Hry plně a částečně kompatibilní se zařízením Steam Deck",
     "Sale_Section_PointShop_class_3": "Pozadí profilu",
     "Sale_Section_PointShop_class_4": "Emotikon",
     "Sale_Section_PointShop_class_8": "Herní profil",
@@ -2607,5 +2610,6 @@
     "Notification_GiftReceived_Description": "Od uživatele %1$s",
     "NotificationsList_EmptyTitle": "Momentálně nemáte žádná upozornění.",
     "NotificationsList_EmptyTitle_New": "Momentálně nemáte žádná nová upozornění.",
-    "NotificationsList_EmptyBody": "Zde uvidíte upozornění služby Steam týkající se Vašeho seznamu přání, přátel, her, inventáře a všeho dalšího."
+    "NotificationsList_EmptyBody": "Zde uvidíte upozornění služby Steam týkající se Vašeho seznamu přání, přátel, her, inventáře a všeho dalšího.",
+    "SDRPOPID_GenericCode": "Datové centrum „%1$s“"
 }

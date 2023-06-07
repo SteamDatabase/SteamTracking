@@ -48551,7 +48551,8 @@
         SetExplicitNoLegalPartnerNeeded(e) {
           this.m_oAdditionalRestrictions.explicit_no_partner_name_needed !==
             e &&
-            ((this.m_oAdditionalRestrictions.explicit_no_partner_name_needed =
+            (e && (this.m_oTemplateVars.partner = void 0),
+            (this.m_oAdditionalRestrictions.explicit_no_partner_name_needed =
               e),
             this.Dispatch());
         }
@@ -57016,7 +57017,9 @@
                 oDiscountEvent: a,
               }),
               className: Bi.HoverCtn,
-              strClickUrl: `${ye.De.PARTNER_BASE_URL}admin/editdiscountevent/${a.id}`,
+              strClickUrl: `${ye.De.PARTNER_BASE_URL}admin/editdiscountevent/${
+                null == a ? void 0 : a.id
+              }`,
             },
             m.createElement(
               "div",
@@ -65882,19 +65885,16 @@
                 : m.createElement(
                     m.Fragment,
                     null,
-                    m.createElement(
-                      _e.__,
-                      null,
-                      "PARTNER NAME TO INSERT INTO LEGAL LINE"
-                    ),
-                    m.createElement(_e.II, {
-                      type: "text",
-                      value: i,
-                      onChange: (e) =>
-                        t.SetLegalTextPartnerName(e.target.value),
-                      placeholder:
-                        "Enter company name; preview will update below",
-                    }),
+                    Boolean(!r) &&
+                      m.createElement(_e.II, {
+                        type: "text",
+                        label: "PARTNER NAME TO INSERT INTO LEGAL LINE",
+                        value: i,
+                        onChange: (e) =>
+                          t.SetLegalTextPartnerName(e.target.value),
+                        placeholder:
+                          "Enter company name; preview will update below",
+                      }),
                     m.createElement(_e.ji, {
                       checked: r,
                       onChange: (e) => t.SetExplicitNoLegalPartnerNeeded(e),

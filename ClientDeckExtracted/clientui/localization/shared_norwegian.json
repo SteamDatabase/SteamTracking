@@ -1693,6 +1693,7 @@
   "Sale_default_subtitle_1": "Basert på det du har spilt",
   "Sale_default_subtitle_2": "Fra utgivere og utviklere du er kjent med",
   "Sale_default_subtitle_3": "Spill med VR-støtte",
+  "Sale_default_subtitle_4": "Spill som er verifisert på Steam Deck",
   "Sale_default_subtitle_5": "Verifiserte og spillbare spill på Steam Deck",
   "Sale_Section_PointShop_class_3": "Profilbakgrunn",
   "Sale_Section_PointShop_class_4": "Uttrykksikon",
@@ -1796,6 +1797,7 @@
   "SalePresented_By": "Denne tredjepartsbegivenheten presenteres av %1$s",
   "SalePresented_By_Multi": "Denne tredjepartsbegivenheten presenteres av %1$s og %2$s",
   "SalePresented_By_Admin": "Arrangøren må angi hvilke tredjeparter som er vertskap for denne begivenheten",
+  "SalePresneted_By_Admin_ttip": "Når dette er angitt, må arrangøren av begivenheten spesifisere hvem som er vertene for begivenheten. Dette vises til kundene på salgssiden for å gjøre det tydelig hvem som er arrangør, slik at kunder ikke tror at det er Valve som er vert.",
   "ContentHub_Recommendation_Curator": "Anbefalt av %1$s",
   "ContentHub_Recommendation_Curators": "Anbefalt av kuratorer du følger",
   "ContentHub_Recommendation_FollowedDeveloper": "Utviklet av %1$s",
@@ -2608,5 +2610,6 @@
   "Notification_GiftReceived_Description": "fra %1$s",
   "NotificationsList_EmptyTitle": "Du har ingen varsler akkurat nå.",
   "NotificationsList_EmptyTitle_New": "Du har ingen nye varsler akkurat nå.",
-  "NotificationsList_EmptyBody": "Her kan du se Steam-varsler som omhandler ønskelisten, venner, spill, lager og mer."
+  "NotificationsList_EmptyBody": "Her kan du se Steam-varsler som omhandler ønskelisten, venner, spill, lager og mer.",
+  "SDRPOPID_GenericCode": "Datasenter: %1$s"
 }

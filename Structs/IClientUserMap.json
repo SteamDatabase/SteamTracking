@@ -2,7 +2,7 @@
     "name": "IClientUserMap",
     "functions": [ 
         {
-            "name": "Unknown_5531936",
+            "name": "Unknown_5533824",
             "argc": "0"
         },
         {
@@ -51,6 +51,10 @@
         },
         {
             "name": "GetClientInstanceID",
+            "argc": "1"
+        },
+        {
+            "name": "GetUserCountry",
             "argc": "1"
         },
         {

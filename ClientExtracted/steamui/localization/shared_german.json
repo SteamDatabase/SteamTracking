@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "(benutzerdefinierter Untertitel)",
     "Sale_default_subtitle_1": "Basierend auf Spielen, die Sie gespielt haben",
     "Sale_default_subtitle_2": "Von bekannten Publishern und Entwicklern",
+    "Sale_default_subtitle_3": "Spiele mit VR-Unterstützung",
+    "Sale_default_subtitle_4": "Für das Steam Deck verifizierte Spiele",
+    "Sale_default_subtitle_5": "Für das Steam Deck verifizierte und darauf spielbare Spiele",
     "Sale_Section_PointShop_class_3": "Profilhintergrund",
     "Sale_Section_PointShop_class_4": "Emoticon",
     "Sale_Section_PointShop_class_8": "Spielprofil",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "Weitere Informationen zu den Gewinnen finden Sie hier.",
     "SalePresented_By": "Dieses Drittanbieter-Event wird von %1$s veranstaltet",
     "SalePresented_By_Multi": "Dieses Drittanbieter-Event wird von %1$s und %2$s veranstaltet",
+    "SalePresented_By_Admin": "Erfordert vom Organisator die Angabe, welche Drittparteien dieses Event veranstalten",
+    "SalePresneted_By_Admin_ttip": "Wenn diese Option auf „true“ gesetzt ist, müssen die Organisatoren angeben, wer das Event veranstaltet. Diese Angabe wird den Kunden auf der Aktionsseite angezeigt, damit diese nicht versehentlich Valve als Veranstalter betrachten.",
     "ContentHub_Recommendation_Curator": "Empfohlen von %1$s",
     "ContentHub_Recommendation_Curators": "Von Kuratoren empfohlen, denen Sie folgen",
     "ContentHub_Recommendation_FollowedDeveloper": "Entwickelt von %1$s",
@@ -2605,5 +2610,6 @@
     "Notification_GiftReceived_Description": "von %1$s",
     "NotificationsList_EmptyTitle": "Sie haben zurzeit keine Benachrichtigungen.",
     "NotificationsList_EmptyTitle_New": "Sie haben zurzeit keine neuen Benachrichtigungen.",
-    "NotificationsList_EmptyBody": "Hier finden Sie Benachrichtigungen bezüglich Ihrer Wunschliste, Freunde, Spiele etc."
+    "NotificationsList_EmptyBody": "Hier finden Sie Benachrichtigungen bezüglich Ihrer Wunschliste, Freunde, Spiele etc.",
+    "SDRPOPID_GenericCode": "Datenzentrum „%1$s“"
 }

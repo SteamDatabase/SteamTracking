@@ -858,6 +858,7 @@ ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
+${PARTNER_BASE_URL}admin/editdiscountevent/${_ ? _ : _}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${id}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${}
 ${PARTNER_BASE_URL}admin/game/edit/${}?activetab=tab_graphicalassets

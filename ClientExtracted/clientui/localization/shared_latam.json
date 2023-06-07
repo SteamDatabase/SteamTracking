@@ -1692,6 +1692,9 @@
   "Sale_default_subtitle_custom": "(subtítulo personalizado)",
   "Sale_default_subtitle_1": "Basado en lo que has estado jugando",
   "Sale_default_subtitle_2": "De editores y Desarrolladores conocidos",
+  "Sale_default_subtitle_3": "Juegos compatibles con RV",
+  "Sale_default_subtitle_4": "Juegos verificados en Deck",
+  "Sale_default_subtitle_5": "Juegos verificados y jugables en Steam Deck",
   "Sale_Section_PointShop_class_3": "Fondo del perfil",
   "Sale_Section_PointShop_class_4": "Emoticono",
   "Sale_Section_PointShop_class_8": "Perfil de juego",
@@ -2607,5 +2610,6 @@
   "Notification_GiftReceived_Description": "de %1$s",
   "NotificationsList_EmptyTitle": "En este momento no tienes notificaciones.",
   "NotificationsList_EmptyTitle_New": "En este momento no tienes notificaciones nuevas.",
-  "NotificationsList_EmptyBody": "Aquí podrás ver las notificaciones de Steam sobre tu lista de deseados, tus amigos, tus juegos, el inventario y mucho más."
+  "NotificationsList_EmptyBody": "Aquí podrás ver las notificaciones de Steam sobre tu lista de deseados, tus amigos, tus juegos, el inventario y mucho más.",
+  "SDRPOPID_GenericCode": "Centro de datos \"%1$s\""
 }

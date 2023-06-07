@@ -1692,6 +1692,9 @@
     "Sale_default_subtitle_custom": "(phụ đề tùy chỉnh)",
     "Sale_default_subtitle_1": "Dựa trên những gì bạn đã chơi",
     "Sale_default_subtitle_2": "Từ nhà phát hành và phát triển quen thuộc",
+    "Sale_default_subtitle_3": "Trò chơi hỗ trợ VR",
+    "Sale_default_subtitle_4": "Trò chơi hợp chuẩn Deck",
+    "Sale_default_subtitle_5": "Trò chơi hợp chuẩn và chơi được trên Steam Deck",
     "Sale_Section_PointShop_class_3": "Ảnh nền hồ sơ",
     "Sale_Section_PointShop_class_4": "Biểu tượng cảm xúc",
     "Sale_Section_PointShop_class_8": "Hồ sơ trò chơi",
@@ -1793,6 +1796,8 @@
     "SalePage_WatchForDrop_LearnMore": "Tìm hiểu thêm về vật phẩm rơi ra tại đây.",
     "SalePresented_By": "Sự kiện bên thứ ba này được tổ chức bởi %1$s",
     "SalePresented_By_Multi": "Sự kiện bên thứ ba này được tổ chức bởi %1$s và %2$s",
+    "SalePresented_By_Admin": "Yêu cầu người tổ chức nhập thông tin bên thứ 3 tổ chức sự kiện này",
+    "SalePresneted_By_Admin_ttip": "Khi đặt thành \"true\", người tổ chức sự kiện cần chỉ định ai là người chủ trì sự kiện. Sẽ được hiển thị trên trang ưu đãi để khách hàng nhìn thấy rõ ràng người tổ chức là ai, và tránh cho khách hàng nhầm lẫn rằng Valve đang tổ chức sự kiện đó.",
     "ContentHub_Recommendation_Curator": "Khuyên dùng bởi %1$s",
     "ContentHub_Recommendation_Curators": "Khuyên dùng bởi thẩm định viên bạn theo dõi",
     "ContentHub_Recommendation_FollowedDeveloper": "Phát triển bởi %1$s",
@@ -2605,5 +2610,6 @@
     "Notification_GiftReceived_Description": "từ %1$s",
     "NotificationsList_EmptyTitle": "Bạn không có thông báo nào vào lúc này.",
     "NotificationsList_EmptyTitle_New": "Bạn không có thông báo mới nào vào lúc này.",
-    "NotificationsList_EmptyBody": "Đây là nơi bạn sẽ tìm thấy thông báo Steam về danh sách ước, bạn bè, trò chơi, kho đồ, và nhiều nữa."
+    "NotificationsList_EmptyBody": "Đây là nơi bạn sẽ tìm thấy thông báo Steam về danh sách ước, bạn bè, trò chơi, kho đồ, và nhiều nữa.",
+    "SDRPOPID_GenericCode": "Trung tâm dữ liệu '%1$s'"
 }

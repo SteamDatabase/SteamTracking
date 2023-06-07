@@ -1694,7 +1694,7 @@
     "Sale_default_subtitle_2": "От знакомых издателей и разработчиков",
     "Sale_default_subtitle_3": "Игры с поддержкой VR",
     "Sale_default_subtitle_4": "Игры, полностью совместимые со Steam Deck",
-    "Sale_default_subtitle_5": "Полностью совместимые и играбельные на Steam Deck игры",
+    "Sale_default_subtitle_5": "Играбельные на Steam Deck и полностью совместимые с ним",
     "Sale_Section_PointShop_class_3": "Фон профиля",
     "Sale_Section_PointShop_class_4": "Смайлик",
     "Sale_Section_PointShop_class_8": "Игровой профиль",
@@ -2610,5 +2610,6 @@
     "Notification_GiftReceived_Description": "от %1$s",
     "NotificationsList_EmptyTitle": "Уведомлений нет.",
     "NotificationsList_EmptyTitle_New": "Новых уведомлений нет.",
-    "NotificationsList_EmptyBody": "Здесь вы найдёте уведомления Steam — о списке желаемого, друзьях, играх, инвентаре и не только."
+    "NotificationsList_EmptyBody": "Здесь вы найдёте уведомления Steam — о списке желаемого, друзьях, играх, инвентаре и не только.",
+    "SDRPOPID_GenericCode": "Дата-центр «%1$s»"
 }

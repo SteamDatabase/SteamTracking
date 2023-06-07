@@ -1692,6 +1692,9 @@
   "Sale_default_subtitle_custom": "(власний підзаголовок)",
   "Sale_default_subtitle_1": "На основі ігор, у які ви граєте",
   "Sale_default_subtitle_2": "Від знайомих видавців і розробників",
+  "Sale_default_subtitle_3": "Ігри з підтримкою ВР",
+  "Sale_default_subtitle_4": "Ігри, сумісні зі Steam Deck",
+  "Sale_default_subtitle_5": "Ігри, сумісні зі Steam Deck і в які можна грати на Steam Deck",
   "Sale_Section_PointShop_class_3": "Тло профілю",
   "Sale_Section_PointShop_class_4": "Смайлик",
   "Sale_Section_PointShop_class_8": "Ігровий профіль",
@@ -1793,6 +1796,8 @@
   "SalePage_WatchForDrop_LearnMore": "Докладніше про отримання предметів.",
   "SalePresented_By": "Це подія від нашого партнера %1$s",
   "SalePresented_By_Multi": "Це подія від наших партнерів %1$s та %2$s",
+  "SalePresented_By_Admin": "Організатор повинен вказати, які сторонні компанії проводять цю подію",
+  "SalePresneted_By_Admin_ttip": "Якщо встановлено значення true, організатори події повинні вказати, хто проводить подію. Це показується на сторінці розпродажу для покупців, щоби вони розуміли, хто є організатором, і не думали, що подію проводить Valve.",
   "ContentHub_Recommendation_Curator": "%1$s рекомендує",
   "ContentHub_Recommendation_Curators": "Рекомендовано кураторами, яких ви відстежуєте",
   "ContentHub_Recommendation_FollowedDeveloper": "Розробник: %1$s",
@@ -2605,5 +2610,6 @@
   "Notification_GiftReceived_Description": "від %1$s",
   "NotificationsList_EmptyTitle": "Наразі у вас немає жодних сповіщень.",
   "NotificationsList_EmptyTitle_New": "Наразі у вас немає нових сповіщень.",
-  "NotificationsList_EmptyBody": "Тут будуть з’являтися сповіщення Steam про список бажаного, друзів, ігри, інвентар та інше."
+  "NotificationsList_EmptyBody": "Тут будуть з’являтися сповіщення Steam про список бажаного, друзів, ігри, інвентар та інше.",
+  "SDRPOPID_GenericCode": "Центр даних: «%1$s»"
 }
