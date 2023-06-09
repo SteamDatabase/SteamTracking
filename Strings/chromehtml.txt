@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-`Z
-`Z
+@Y
+@Y
 __stubs
 __TEXT
 __stub_helper
@@ -1122,6 +1122,7 @@ https://crash.steampowered.com/submit
 -steamdeck
 -steamos3
 -chromeos
+-vgui
 "
 --proxy-server="%s"
 -html-perf-monitor
@@ -2383,17 +2384,12 @@ sc_schinese
 @
 @
 
-y
-
+i
 
 @
 Ic
-|
-u
-V
-X
-_
-2
+W
+@
 
 0
 0
@@ -2441,7 +2437,6 @@ IcE
 IcE
 @
 @
-p
 V
 =
 =

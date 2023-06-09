@@ -509,7 +509,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/streaming/streamingoverlay.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_bluetoothupgrade.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_calibration.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootfileselector.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootgameactions.cpp

@@ -25881,24 +25881,14 @@
       function Me(e) {
         const { saleSection: t, bSmartSection: a, editModel: n } = e,
           [i, l] = (0, d.useState)((0, ke.eu)(t).toString()),
-          [o, s, m, p, g, v] = (0, c.SZ)(() => {
-            var e, a;
-            return [
-              t.section_type,
-              t.smart_section_type,
-              t.single_item_style,
-              t.capsules_per_row_array,
-              t.smart_section,
-              null ===
-                (a =
-                  null === (e = n.GetEventModel().jsondata) || void 0 === e
-                    ? void 0
-                    : e.sorting_tiers) || void 0 === a
-                ? void 0
-                : a.length,
-              t.show_as_carousel,
-            ];
-          }),
+          [o, s, m, p, g, v] = (0, c.SZ)(() => [
+            t.section_type,
+            t.smart_section_type,
+            t.single_item_style,
+            t.capsules_per_row_array,
+            t.smart_section,
+            Boolean(t.show_as_carousel),
+          ]),
           S = a && "items" === o && ("tag" === s || "category" === s),
           E = "items" === o,
           f = "items" === o || "events" === o || "sale_events" === o,
@@ -25924,7 +25914,7 @@
             d.createElement(
               "div",
               { className: h.HalfColumn },
-              v &&
+              Boolean(v) &&
                 d.createElement(u.DS, {
                   label: (0, _.Xx)("#Sale_Section_CarouselRows"),
                   showValue: !0,
@@ -25960,7 +25950,7 @@
                 textToken: "#Sale_Section_ShowAsCarousel",
                 ttipToken: "#Sale_Section_ShowAsCarousel_Tooltip",
               }),
-              !v &&
+              Boolean(!v) &&
                 d.createElement(
                   d.Fragment,
                   null,
@@ -25991,7 +25981,7 @@
                     value: i,
                   })
                 ),
-              v &&
+              Boolean(v) &&
                 d.createElement(V, {
                   varName: "carousel_auto_advance",
                   valveOnly: !0,

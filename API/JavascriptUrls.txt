@@ -1713,6 +1713,7 @@ ${url}
 ${url}${g_strActiveURL}
 ${url}${location}
 ${url}${question ? "?" : "&"}${uri}
+${url}${url}
 ${url}${}
 ${url}/
 ${url}?filter=${filter}
@@ -2949,6 +2950,7 @@ steam://${}
 steam://AddNonSteamGame
 steam://broadcast/watch/${steamid64}
 steam://cdkeys/${appid}
+steam://changeuser
 steam://checkforupdates
 steam://checkout_return/paypal_cancel/
 steam://checkout_return/paypal_success/
@@ -2960,6 +2962,7 @@ steam://close/bigpicture
 steam://close/cancel
 steam://controllerconfig/${appid}/${publishedFileID}
 steam://currentcontrollerconfig/${}
+steam://exit
 steam://friends/add
 steam://friends/joinchat/${steamid}
 steam://friends/message/${steamid}
@@ -2993,6 +2996,7 @@ steam://open/library/details/${id}
 steam://open/library/shared-apps/${}
 steam://open/library/view/home
 steam://open/library/view/soundtracks
+steam://open/library/view/tools
 steam://open/minigameslist
 steam://open/newforyou
 steam://open/oldservers
@@ -3039,6 +3043,7 @@ steam://settings/account${}
 steam://settings/broadcast
 steam://settings/downloads
 steam://settings/ingame
+steam://signout
 steam://stopstreaming
 steam://store
 steam://store/${appid}

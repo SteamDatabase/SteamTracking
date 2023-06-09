@@ -122,6 +122,8 @@
  NSApp
  NSBeep
  NSDefaultRunLoopMode
+ NSMenuDidBeginTrackingNotification
+ NSMenuDidEndTrackingNotification
  NSWorkspaceActiveSpaceDidChangeNotification
  NSWorkspaceDidActivateApplicationNotification
  NSWorkspaceDidDeactivateApplicationNotification
@@ -139,6 +141,7 @@
  OBJC_CLASS_$_NSCursor
  OBJC_CLASS_$_NSDate
  OBJC_CLASS_$_NSDictionary
+ OBJC_CLASS_$_NSDistributedNotificationCenter
  OBJC_CLASS_$_NSEvent
  OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSFont
@@ -148,6 +151,7 @@
  OBJC_CLASS_$_NSMenu
  OBJC_CLASS_$_NSMenuItem
  OBJC_CLASS_$_NSMutableArray
+ OBJC_CLASS_$_NSNotificationCenter
  OBJC_CLASS_$_NSNull
  OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSOpenPanel

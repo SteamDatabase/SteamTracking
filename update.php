@@ -510,12 +510,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			do
 			{
-				while( ( $Exec = curl_multi_exec( $Master, $Running ) ) === CURLM_CALL_MULTI_PERFORM );
-
-				if( $Exec !== CURLM_OK )
-				{
-					break;
-				}
+				curl_multi_exec( $Master, $Running );
 
 				while( $Done = curl_multi_info_read( $Master ) )
 				{
@@ -650,6 +645,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					$Options[ CURLOPT_HTTPHEADER ] =
 					[
 						'If-None-Match: ' . implode( ', ', $this->ETags[ $File ] ),
+						'If-Modified-Since: ' . gmdate( 'D, d M Y H:i:s \G\M\T', array_key_last( $this->ETags[ $File ] ) ),
 					];
 				}
 				else if( file_exists( $File ) )

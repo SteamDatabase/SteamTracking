@@ -149,4 +149,5 @@ message CMsgClientSettings {
 	optional bool startup_movie_shuffle = 16002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/Shuffle", (setting_pre_login) = true];
 	optional bool startup_movie_used_for_resume = 16003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Customization/StartupMovie/UsedForResume"];
 	optional bool game_notes_enable_spellcheck = 17001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "GameNotesEnableSpellcheck", (setting_default_bool) = true];
+	optional int32 screenshot_items_per_row = 18000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "ScreenshotViewItemsPerRow", (setting_default_int) = 1];
 }

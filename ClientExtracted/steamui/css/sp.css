@@ -5438,6 +5438,13 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .serverbrowserdialog_DialogBody_2SvsK
   .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_BottomControlsRow_341md
+  .serverbrowserdialog_AddFavoriteButton_Lm4rP {
+  margin-right: 14px;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_BottomControlsRow_341md
   .serverbrowserdialog_CurrentFiltersSummaryText_9Ah3c {
   flex-basis: 50em;
   flex-grow: 1;
@@ -6525,6 +6532,18 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .gamelaunchingdialog_StatusOverride_2GoT7 {
   padding-left: 0px;
 }
+.changeuserdialog_Prompt_2TZKv {
+  margin-top: 20px;
+}
+.changeuserdialog_Prompt_2TZKv.changeuserdialog_Warning_2attl {
+  color: #ffc82c;
+}
+.changeuserdialog_Dialog_4076W .DialogCheckbox_Container {
+  margin-top: 12px;
+}
+.changeuserdialog_Dialog_4076W .DialogToggle_Label {
+  color: #969696;
+}
 .menu_MenuWrapper_2Lu3d {
   height: fit-content;
   -webkit-app-region: no-drag;
@@ -6660,18 +6679,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .supernav_Arrow_25lBL.supernav_Disabled_2cO0H {
   color: #3d4450;
-}
-.changeuserdialog_Prompt_2TZKv {
-  margin-top: 20px;
-}
-.changeuserdialog_Prompt_2TZKv.changeuserdialog_Warning_2attl {
-  color: #ffc82c;
-}
-.changeuserdialog_Dialog_4076W .DialogCheckbox_Container {
-  margin-top: 12px;
-}
-.changeuserdialog_Dialog_4076W .DialogToggle_Label {
-  color: #969696;
 }
 .rootmenu_RootMenuButton_2UyOB {
   color: #8b929a;
@@ -6888,18 +6895,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   height: 16px;
 }
 .titlebarcontrols_SupportAlertsButton_32TmR {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
   font-size: 12px;
   line-height: 16px;
   padding: 0px 12px;
@@ -6909,6 +6904,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   cursor: pointer;
   display: flex;
   justify-content: center;
+  height: 24px;
 }
 .titlebarcontrols_SupportAlertsButton_32TmR:hover {
   background-color: #d75a5a;
