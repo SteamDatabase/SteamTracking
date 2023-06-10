@@ -138,6 +138,7 @@ h
 &
 )
 Y
+LZ
 b
 0
 Ic
@@ -153,6 +154,7 @@ H=
 0
 @
 =
+lX
 15WebUINoResponse
 
 &
@@ -23264,9 +23266,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Jun  8 2023
+Jun  9 2023
 build_time
-18:27:43
+21:59:37
 package_version
 local
 SteamClient020
@@ -28587,7 +28589,7 @@ Check360GuideButton
 RunSteamPlatform
 !"Chrome interface missing"
 %s/config/htmlcache
-GPUAccelWebViewsV2
+GPUAccelWebViewsV3
 H264HWAccel
 SmoothScrollWebViews
 Unknown proxy setting: %d
@@ -29943,7 +29945,7 @@ start_page
 Software\Valve\Steam\SteamDefaultDialog
 run_at_startup
 enable_gpu_accelerated_webviews
-HKEY_CURRENT_USER\Software\Valve\Steam\GPUAccelWebViewsV2
+HKEY_CURRENT_USER\Software\Valve\Steam\GPUAccelWebViewsV3
 enable_dpi_scaling
 HKEY_CURRENT_USER\Software\Valve\Steam\DPIScaling
 screenshots_path
@@ -30965,7 +30967,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-18:28:16
+22:00:12
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -33178,7 +33180,7 @@ sOSVersionId
 sOSBuildId
 nSteamVersion
 sSteamBuildDate
-Jun  8 2023 18:28:22
+Jun  9 2023 22:00:17
 sSteamAPI
 sCPUVendor
 sCPUName
@@ -49157,6 +49159,7 @@ SSE is required.
 
 0
 Y
+LZ
 b
 0
 Ic
@@ -49172,9 +49175,10 @@ H=
 0
 @
 =
+lX
 =
 =
-W
+&W
 ?
 ?
 ?
@@ -49187,9 +49191,10 @@ V
 x
 x
 \
+S
+~W
 @
 x
-W8
 J
 2
 =
@@ -49668,7 +49673,6 @@ m
 +
 j
 }
-63
 @
 @
 @
@@ -49699,6 +49703,7 @@ p
 @
 @
 @
+w|
 @
 @
 @
@@ -49725,9 +49730,10 @@ m
 @
 @
 @
-2{
 m
 +
+{
+{
 {
 @
 @
@@ -49773,6 +49779,7 @@ e
 @
 1
 =
+(-
 @
 @
 @
@@ -49843,7 +49850,6 @@ e
 J
 p
 0
-x
 @
 @
 @
@@ -49944,7 +49950,6 @@ j
 @
 @
 @
-.
 @
 @
 @
@@ -49973,7 +49978,6 @@ j
 @
 @
 @
-Rv
 0
 @
 @
@@ -50044,7 +50048,6 @@ j
 @
 @
 @
-i(
 @
 @
 @
@@ -50079,6 +50082,7 @@ j
 @
 p
 0
+(
 p
 0
 @
@@ -50107,6 +50111,7 @@ p
 @
 @
 @
+s
 s
 s
 s
@@ -50575,6 +50580,7 @@ j
 j
 p
 0
+Sm
 m
 +
 4
@@ -50672,7 +50678,6 @@ p
 @
 %
 %
-%
 @
 @
 @
@@ -50751,6 +50756,7 @@ j
 @
 @
 j
+E{
 0
 
 @
@@ -50838,6 +50844,7 @@ j
 @
 j
 j
+.~
 @
 @
 @
@@ -50850,7 +50857,6 @@ j
 @
 @
 @
-"~
 @
 @
 @
@@ -50873,38 +50879,6 @@ j
 @
 @
 @
-@
-@
-j
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-j
 @
 @
 j
@@ -50937,15 +50911,44 @@ j
 @
 @
 j
-ag
+@
+@
+j
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+j
 p
 0
 p
 0
-}f
 f
 f
-ut
 f
 f
 f
@@ -50990,7 +50993,6 @@ p
 @
 @
 @
-e
 e
 e
 e
@@ -51068,6 +51070,7 @@ p
 p
 0
 4
+Wc
 
 
 
@@ -51210,6 +51213,8 @@ p
 @
 @
 0
+!`
+G`
 @
 @
 @
@@ -51295,7 +51300,6 @@ p
 @
 @
 j
-w
 @
 @
 j
@@ -51303,6 +51307,7 @@ _
 [
 j
 ASh
+t
 t
 @
 @
@@ -51356,8 +51361,10 @@ t
 @
 @
 @
+L~
 $
 +
+,^
 @
 @
 @
@@ -51388,6 +51395,7 @@ $
 @
 @
 @
+i
 @
 @
 j
@@ -51400,6 +51408,7 @@ j
 @
 @
 @
+
 
 @
 @
@@ -51464,12 +51473,14 @@ j
 @
 @
 @
+z|
+M~
 p
 0
 X
 \
 \
-!~
+~
 ~
 ~
 ~
@@ -51490,11 +51501,11 @@ p
 0
 p
 0
-`}
+[
 [
-[
+5}
+b[
 ASj
-}
 }
 p
 0
@@ -51544,7 +51555,6 @@ j
 j
 j
 Y
-n{
 j
 j
 j
@@ -51553,16 +51563,14 @@ j
 j
 j
 j
+N{
 Y
 Y
-@{
 U
 U
 U
-wY
 Y
 OO
-${
 {
 {
 {
@@ -51588,7 +51596,7 @@ I
 I
 I
 I
-wz
+kz
 d
 ~m=
 =
@@ -51598,7 +51606,6 @@ z
 z
 z
 }M
-(W
 k
 k
 H
@@ -51685,7 +51692,6 @@ j
 j
 j
 j
-&y
 y
 y
 @
@@ -51704,6 +51710,7 @@ j
 j
 j
 j
+Dx
 j
 j
 j
@@ -51715,27 +51722,31 @@ j
 j
 j
 j
-fV
-$x
+CV
+x
 x
 E8}
 
+ew
 K
 Q
 Q
+w
 w
 w
 Hc
 U
 p
 0
-T
 p
 0
 K
++v
+-v
 A#E
 A#E
 A#u
+s
 "
 "
 S
@@ -51745,13 +51756,15 @@ S
 p
 0
 T
+SS
+S
 j
 j
 ]
-eS
 u
 u
 u
+u
 j
 j
 j
@@ -51804,7 +51817,6 @@ j
 j
 j
 j
-uP
 j
 j
 j
@@ -51824,12 +51836,16 @@ j
 j
 j
 j
-bt
+7J
 H
 N
 t
 t
 t
+t
+t
+QB
+RB
 j
 j
 j
@@ -51856,16 +51872,13 @@ j
 j
 j
 j
-`s
-^s
 j
 @
 @
-<s
 @
 @
 Q
-s
+)s
 s
 s
 s
@@ -51876,22 +51889,17 @@ p
 0
 p
 0
-Md
 p
 0
-+A
 p
 0
-'A
 p
 0
 p
 0
 A
-kr
-jP
-dP
-8
+Ur
+:r
 =
 =
 @
@@ -51899,12 +51907,13 @@ r
 r
 r
 r
-P
+r
+r
 P
 N
 A9]
 d
-Uq
+yF
 j
 j
 j
@@ -51918,7 +51927,7 @@ j
 j
 j
 K
-q
+u?
 p
 0
 p
@@ -51927,21 +51936,21 @@ p
 0
 p
 0
+E?
 O
 p
 0
 ?
 ?
-?
-?
+lp
 H=
 H=
 E
 i
+Xp
 {
 {
-{
-.p
++p
 p
 0
 p
@@ -51949,19 +51958,17 @@ p
 0
 N
 =
-pH
-1o
-o
 o
 L
 @
-cL
+<L
 =
 p
 0
+bn
 L
 n
-3Z
+/Z
 =
 =
 =
@@ -51969,7 +51976,7 @@ n
 =
 0
 0
-vK
+wK
 p
 0
 j
@@ -51983,8 +51990,8 @@ p
 0
 
 F
-Jm
 A
+m
 m
 j
 j
@@ -52059,9 +52066,12 @@ j
 j
 j
 j
+RF
 j
+yI
 p
 0
+?l
 0
 @
 @
@@ -52074,12 +52084,10 @@ A#u
 E
 p
 0
-Fk
 _
 _
 P
 I
-5I
 =
 p
 0
@@ -52095,14 +52103,13 @@ Hc
 9
 9
 9
-9
 =
+(j
 j
 Hc
 p
 0
 H
-H
 Hc
 Hc
 Hc
@@ -52112,30 +52119,25 @@ p
 8
 8
 8
-xi
-Hi
-tG
-hG
+kt
+Ni
+oG
 F
 F
-*i
-{7
 i
-T7
-#|
-F
-F
+Ih
 <
 <
+YF
 
 
 
-TF
 
 
 h
 h
-5F
+h
+h
 
 
 
@@ -52144,14 +52146,15 @@ h
 
 
 
++F
 Hi
 
 Hc
 6
-|
 6
-lg
-.g
+6
+6
+Yg
 g
 g
 g
@@ -52161,69 +52164,74 @@ E
 5
 @
 @
-]D
->z
+)f
 f
 f
 f
-he
+y
 y
 &
 &
 e
 e
-6C
-mx
+pV
 3
+
 H=
-Rd
 @
 B
 B
 @
 p
 0
+JB
+d
+d
 d
 d
 p
 0
-}A
 /
+B
 p
 0
+
 AVj
--c
 p
 0
-!c
+7A
 =
 A#u
 @
 @
 j
 7
-s@
+h6
 @
 @
-{
-V@
 |
 |
+7<
 @
 @
+ob
 }
-.b
+}
+}
+}
+}
+}
 b
 b
 b
-F0
-!S
+b
+b
+v|
 0
 0
 0
 0
-xa
-.a
+v
 F
 a
 a
@@ -52232,10 +52240,9 @@ a
 a
 :w
 :w
-Kl
-5>
-0{
+7{
 .
+8`
 p
 0
 @
@@ -52273,13 +52280,15 @@ j
 L
 L
 L
+L
+L
 0
 @
 @
 j
 {
 {
-Q=
+Mz
 4
 p
 0
@@ -52287,29 +52296,19 @@ p
 0
 ~
 _
-_
 8
-p
-K-
-ir
+=
 s
 L
 Q
 z
 <
 <
-<
-^
-6<
 H=
 p
 0
 `
 <
-<
-<
-y;
-Jy
 E
 =
 =
@@ -52318,10 +52317,14 @@ p
 p
 0
 I
-=
 0
+=
+]
+a;
 ]
 ]
+'I
+[
 @
 @
 @
@@ -52340,15 +52343,15 @@ I
 @
 @
 @
-G\
+40
+N\
+a5
+)\
 =
 p
 0
 \
 \
-]o
-j9
-c8
 0
 0
 AT=
@@ -52359,8 +52362,8 @@ AT=
 D
 @
 @
-'[
-Jv
+Ug
+ov
 [
 @
 Hc
@@ -52399,53 +52402,55 @@ v
 v
 v
 v
-tu
+v
+PZ
+XZ
 V
 Z
 Z
-Z
-Z
+&m
 =
 Y
 Y
 Y
 Y
 Y
+Y
+Y
 =
+{X
+lX
+]X
+EX
+'X
 X
 X
 X
 X
+MW
 !
--W
+.W
 W
 r
 r
-HV
 @
 V
 &
 q
-OU
+~U
+JU
+a
 U
-3p
-#p
+U
 p
 p
-p
-p
-p
-T
+YT
 o
 o
 o
-o
-WS
-2S
+KS
 y
-h
 S
-~n
 @
 M9e
 @
@@ -52465,13 +52470,11 @@ M9e
 ?
 ?
 ?
-R
 -
 R
 R
 R
 H=
-{Q
 
 
 
@@ -52481,9 +52484,11 @@ H=
 Q
 Q
 Q
+`l
 @
 @
-|P
+xP
+{P
 d
 e
 H
@@ -52492,9 +52497,10 @@ P
 P
 (
 P
+P
+P
+P
 (
-P
-P
 P
 P
 P
@@ -52508,12 +52514,15 @@ P
 P
 
 \
-\
+$\
 @
 %
+|u
+xu
 `
 `
 @
+k
 j
 j
 Pj
@@ -52524,13 +52533,12 @@ O
 0
 IcU
 E;e
-b
 M)u
+(t
 =
 =
 @
 =
-;M
 =
 @
 
@@ -52539,8 +52547,7 @@ M)u
 @
 0
 `
-k
-gh
+Y
 H=
 Ic]
 j
@@ -52549,12 +52556,17 @@ j
 j
 j
 j
+NK
+MK
+LK
+<K
+:K
+8K
 q
 K
 
-X
-f
-f
+ap
+0f
 f
 f
 f
@@ -52564,12 +52576,7 @@ f
 f
 f
 t$I;M
-dV
-V
-V
-Lc
 H
-m
 0
 G
 
@@ -52583,9 +52590,8 @@ G
 
 
 Hc
-@a
-^E
-a
+b
+b
 a
 @
 ,
@@ -52599,16 +52605,15 @@ Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 N
 N
 N
-f`
 j
 j
-`
 `
 $
 $
 0
 @
 @
+WB
 E
 B
 A
@@ -52637,14 +52642,13 @@ $
 @
 =
 =
-f^
 )
 .
 .
 .
 .
 )
-BA
+DA
 )
 )
 .
@@ -52654,6 +52658,7 @@ BA
 .
 .
 .
+^
 ^
 ^
 ?
@@ -52684,6 +52689,7 @@ HcU
 ?
 
 ?
+VM
 ?
 ?
 
@@ -52812,6 +52818,7 @@ B
 @
 @
 @
+J=
 @
 @
 @
@@ -52826,9 +52833,9 @@ B
 }
 =
 =
-=
 E
 E
+XK
 @
 @
 d
@@ -52855,7 +52862,6 @@ x
 
 
 =
-UJ
 @
 $
 $
@@ -52864,7 +52870,7 @@ $
 
 J
 J
-;C
+J
 ;
 ;
 =
@@ -52884,7 +52890,6 @@ x
 @
 8
 8
-dC
 U
 U
 U
@@ -52906,7 +52911,7 @@ S
 @
 S
 4
-~H
+kH
 9
 E
 4
@@ -52960,6 +52965,7 @@ H
 0
 =_
 0
+NG
 >
 0
 G
@@ -53009,10 +53015,12 @@ P
 ?
 `
 `
+_7
 !
 A
-nT
+pT
 @
+IT
 "
 B
 "
@@ -53112,6 +53120,7 @@ IcU
 IcE
 IcE
 IcE
+WR
 @
 `
 `
@@ -53120,6 +53129,7 @@ IcE
 @
 >
 =
+:R
 >
 =
 
@@ -53129,8 +53139,6 @@ P
 @
 @
 G
-R
-R
 R
 R
 j
@@ -53201,12 +53209,12 @@ H=LA
 @
 |`=
 =
-$P
 =
 V
 |^=
 |Z=
 |4=
+P
 P
 j
 j
@@ -53239,24 +53247,21 @@ to=
 u
 @
 v
-W-
 d
-I-
-8-
 
 
 
-vE
 A+M
-GH
-P
+kJ
+%=
 @
 @
 @
 @
 A
-PJ
+r,
 8t
+
 j
 j
 j
@@ -53264,7 +53269,7 @@ j
 j
 j
 L
-B
+
 
 J
 ,
@@ -53272,7 +53277,7 @@ J
 
 
 
-w?
+\?
 j
 j
 j
@@ -53284,7 +53289,8 @@ j
 j
 j
 j
-@?
+~+
+r+
 
 j
 j
@@ -53304,8 +53310,6 @@ j
 j
 j
 
-I
-I
 +
 +
 +
@@ -53317,7 +53321,8 @@ d
 0
 A+4$A+u
 *u
-FB
+4*
+'K
 =
 =
 @
@@ -53333,8 +53338,6 @@ j
 j
 j
 4t
-k)
-M)
 j
 j
 j
@@ -53351,7 +53354,6 @@ j
 j
 j
 ?
-<A
 j
 j
 j
@@ -53363,14 +53365,12 @@ j
 j
 j
 j
-t4
 G
 G
 G
 G
 j
 j
-J
 j
 j
 j
@@ -53383,7 +53383,6 @@ j
 =
 
 
-~(
 
 A
 j
@@ -53396,6 +53395,8 @@ j
 j
 j
 j
+F
+F
 F
 F
 F
@@ -53410,11 +53411,13 @@ j
 j
 j
 j
+H'
 D
 j
 j
 j
 j
+'
 j
 j
 j
@@ -53459,6 +53462,7 @@ j
 j
 j
 j
+D
 I{
 <
 &
@@ -53475,6 +53479,7 @@ j
 j
 @
 D
+|>
 {
 {
 {
@@ -53493,10 +53498,10 @@ j
 j
 j
 j
+WK
 @
 @
 &
-`C
 @
 @
 @
@@ -53507,7 +53512,7 @@ j
 @
 @
 @
-K
+7F
 @
 @
 %%
@@ -53518,6 +53523,7 @@ j
 j
 j
 j
+&z
 C
 C
 C
@@ -53529,7 +53535,6 @@ C
 @
 @
 @
-UJ
 @
 @
 @
@@ -53560,14 +53565,15 @@ j
 j
 j
 j
+%B
 j
 j
 j
 j
 .
-J
 d
 $
+W7
 j
 j
 j
@@ -53575,13 +53581,11 @@ j
 j
 j
 7
-iz
 =
 #
 #
 #
 #
-Lc%{z
 
 =
 @
@@ -53591,6 +53595,7 @@ Lc%{z
 @
 @
 @
+3=
 "
 @
 @
@@ -53619,11 +53624,10 @@ Hc
 Hc
 E
 2
-2
 0
 0
-}F
 0
+q
 <
 <
 z
@@ -53639,6 +53643,8 @@ Hi
 E
 ;
 3
+`v
+i=
 
 
 
@@ -53655,7 +53661,6 @@ W
 @
 @
 @
-\<
 @
 @
 Hc
@@ -53671,12 +53676,9 @@ Hc
 0
 0
 Hc
-0
 Hc
 Hc
 8
-8
-w.
 D
 ;
 ;
@@ -53685,22 +53687,25 @@ D
 @
 @
 @
-]-
 u
 u
 u
 u
 u
-z:
+u
+@6
 &
+f:
 %
+S:
 @
-|"
+.
+:
 =h2
 P
 P
 @
-?q
+Sq
 @
 `
 0
@@ -53725,16 +53730,16 @@ p
 @
 @
 @
-Hh
 @
 @
 @
 h
 @
-~5
+~g
 0
-h5
+`5
 g
+vo
 =a
 ;
 ;
@@ -53745,21 +53750,20 @@ g
 Hi
 0
 n
-n
-Lc5s>k
+Nk
 @
 @
 j
-l9
 @
 @
-~m
 (
 (
 (
 j
 -
 /
+(3
+m
 @
 @
 @
@@ -53772,13 +53776,14 @@ j
 @
 @
 @
+ah
 @
 @
 @
 @
 @
 @
-yl
+Sl
 @
 @
 @
@@ -53805,15 +53810,16 @@ yl
 @
 @
 @
-Og
+Qg
 @
 @
+tyH;0V7
+^k
 0
 @
 @
 @
 @
-k
 @
 @
 @
@@ -53826,10 +53832,7 @@ j
 @
 @
 @
-@
-@
-/%
-7f
+};
 @
 @
 @
@@ -53838,7 +53841,9 @@ j
 @
 @
 @
-`j
+@
+@
+aj
 #
 @
 @
@@ -53861,10 +53866,8 @@ j
 @
 @
 @
-E9
-{a
+i
 0
-5a
 @
 @
 @
@@ -53895,7 +53898,6 @@ E9
 @
 @
 @
-4
 @
 @
 @
@@ -53917,7 +53919,11 @@ E9
 d
 d
 d
+Xh
 d
+d
+Th
+o.
 @
 @
 @
@@ -53981,11 +53987,13 @@ c
 c
 c
 c
+c
+Zg
 j
 @
+J-
 )
 g
-g
 @
 @
 
@@ -54015,34 +54023,26 @@ g
 @
 @
 @
-\!
-jb
 @
 @
 @
 @
 @
 @
+Gb
 !
 !
 !
-lf
 
 j
 +
-Af
-,
-lc
 ,
 ,
-,
-,e
 @
 @
 j
 e
 e
-z!
 @
 @
 @
@@ -54054,10 +54054,12 @@ z!
 @
 @
 @
+J`
 @
 @
 @
 @
+k*
 .
 @
 @
@@ -54080,19 +54082,17 @@ z!
 @
 @
 @
-d
 
 @
 @
 @
 @
-t6f;aMa
-t-f;hMa
-t$f;oMa
+[_
+T_
 @
 @
+>_
 j
->\
 @
 @
 @
@@ -54145,6 +54145,7 @@ j
 d
 Uk/
 K
+a)
 @
 @
 @
@@ -54176,31 +54177,31 @@ K
 0
 @
 @
+D^
 $
-B`
-:^
 H=
-)^
-!^
+xb
 @
 =
 @
 @
+pJ
+Y
 @
 @
 ?
-MI
 X
 X
 X
 X
-X
-p$
-0$
+_%
+r\
+g\
+Y$
+E\
+C\
 @
 @
-C]
-A]
 
 @
 @
@@ -54223,17 +54224,18 @@ $
 @
 @
 @
-^X
+`X
 @
 @
 @
 @
-WV
-y\
+_#
 @
 @
 @
 @
+ZZ
+xW
 @
 @
 @
@@ -54247,7 +54249,6 @@ Z
 Z
 Z
 Z
-MW
 @
 @
 @
@@ -54310,6 +54311,7 @@ MW
 @
 @
 @
+|[
 @
 @
 @
@@ -54379,7 +54381,6 @@ U
 @
 @
 @
-,
 @
 @
 ,
@@ -54527,11 +54528,8 @@ U
 @
 @
 @
-@
-@
-xZ
-@
-@
+aV
+nV
 @
 @
 @
@@ -54552,22 +54550,28 @@ xZ
 @
 @
 @
+iZ
 @
 @
 @
 @
-T
-@
-@
-@
-@
-@
-@
+6&
 @
 @
 @
 @
 @
 @
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+=Z
 L
 @

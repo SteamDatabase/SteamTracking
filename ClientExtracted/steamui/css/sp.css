@@ -5148,6 +5148,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -5346,6 +5348,12 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
   .serverbrowserdialog_ServerTabPane_2YSm1
+  .serverbrowserdialog_DropdownLabel_iLldO {
+  font-size: 14px;
+}
+.serverbrowserdialog_ServerBrowserDialog_2rxrV
+  .serverbrowserdialog_DialogBody_2SvsK
+  .serverbrowserdialog_ServerTabPane_2YSm1
   .serverbrowserdialog_FilterOptionsCtr_1EKWP {
   flex-grow: 0;
   height: 134px;
@@ -5449,6 +5457,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex-basis: 50em;
   flex-grow: 1;
   overflow-y: hidden;
+  display: flex;
+  align-items: center;
 }
 .serverbrowserdialog_ServerBrowserDialog_2rxrV
   .serverbrowserdialog_DialogBody_2SvsK
@@ -6704,6 +6714,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   align-items: center;
   padding-left: 9px;
   gap: 6px;
+  max-width: calc(100% - 99px);
+  overflow: hidden;
   box-sizing: border-box;
 }
 .rootmenu_StatusEntry_1GNJU {
@@ -8435,6 +8447,17 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .steamdesktop_TopBar_3Z7VQ.Maximized,
 .Maximized .steamdesktop_TopBar_3Z7VQ {
   box-shadow: inset rgba(61, 68, 80, 0.25) 0px 0px 1px 0px;
+}
+.steamdesktop_TopBar_3Z7VQ.steamdesktop_OSX_m_zdw
+  .steamdesktop_WindowControls_qP17e {
+  order: 1;
+}
+.steamdesktop_TopBar_3Z7VQ.steamdesktop_OSX_m_zdw .steamdesktop_DragArea_30vB9 {
+  order: 2;
+}
+.steamdesktop_TopBar_3Z7VQ.steamdesktop_OSX_m_zdw
+  .steamdesktop_TitleBarControls_1-9si {
+  order: 3;
 }
 .steamdesktop_TitleBar_39oUC {
   width: 100%;

@@ -1913,7 +1913,7 @@
   "SalePresented_By_Multi": "This third-party event is presented by %1$s and %2$s",
   "SalePresented_By_Admin": "Requires the organizer to enter which 3rd parties are hosting this event",
   "SalePresneted_By_Admin_ttip": "When set to true, then event organizers need to specify who the event hosts are. Which is displayed on the customer facing sale page, so it is clear who the organizers are and prevents customer being confused that Valve is hosting it.",
-  "SalePresented_By_ClearPresenters": "Clear All entered presenters",
+  "SalePresented_By_ClearPresenters": "Clear All entered event organizers",
 
   "ContentHub_Recommendation_Curator": "Recommended by %1$s",
   "ContentHub_Recommendation_Curators": "Recommended by curators you follow",
