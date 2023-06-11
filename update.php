@@ -96,6 +96,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			}
 
 			$Tries = 5;
+			$WindowSize = 10;
 
 			do
 			{
@@ -103,7 +104,8 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				$this->URLsToFetch = [];
 
 				$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
-				$this->Fetch( $URLs );
+				$this->Fetch( $URLs, $WindowSize );
+				$WindowSize = 1;
 			}
 			while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 
@@ -486,13 +488,11 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		}
 
 		/** @param array<int, array{URL: string, File: string}> $URLs */
-		private function Fetch( array $URLs ) : void
+		private function Fetch( array $URLs, int $WindowSize ) : void
 		{
 			$this->Requests = [];
 
 			$Master = curl_multi_init( );
-
-			$WindowSize = 10;
 
 			if( $WindowSize > count( $URLs ) )
 			{

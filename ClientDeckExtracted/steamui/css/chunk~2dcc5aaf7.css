@@ -69404,6 +69404,22 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   color: #8b929a;
   fill: #8b929a;
 }
+.notificationcontent_PlayerNickName_szPt8 {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.notificationcontent_PlayerNickName_szPt8.notificationcontent_FullName_1ob83 {
+  margin-left: 5px;
+}
 .notificationcontent_DesktopToastTemplate_vW8HM {
   background: none;
 }
@@ -70696,6 +70712,22 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   color: #8b929a;
   fill: #8b929a;
 }
+.standardtemplates_PlayerNickName_1Egvz {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.standardtemplates_PlayerNickName_1Egvz.standardtemplates_FullName_1a-HJ {
+  margin-left: 5px;
+}
 .standardtemplates_DesktopToastTemplate_3CGHg {
   background: none;
 }
@@ -71564,6 +71596,22 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Icon_2TlJy svg {
   color: #8b929a;
   fill: #8b929a;
+}
+.shorttemplates_PlayerNickName_3YT0t {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.shorttemplates_PlayerNickName_3YT0t.shorttemplates_FullName_7_Lny {
+  margin-left: 5px;
 }
 .shorttemplates_DesktopToastTemplate_PhN5d {
   background: none;
@@ -72515,6 +72563,22 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Icon_17goX svg {
   color: #8b929a;
   fill: #8b929a;
+}
+.steamtemplates_PlayerNickName_32cEf {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.steamtemplates_PlayerNickName_32cEf.steamtemplates_FullName_2GX0l {
+  margin-left: 5px;
 }
 .steamtemplates_DesktopToastTemplate_NDrdY {
   background: none;
