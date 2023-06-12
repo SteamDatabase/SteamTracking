@@ -119,7 +119,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					$this->URLsToFetch = [];
 
 					$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
-					$this->Fetch( $URLs );
+					$this->Fetch( $URLs, 5 );
 				}
 				while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 			}

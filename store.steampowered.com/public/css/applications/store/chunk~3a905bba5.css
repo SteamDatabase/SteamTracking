@@ -1446,14 +1446,14 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   -webkit-box-orient: vertical;
   overflow: hidden;
   cursor: pointer;
+  font-size: 22px;
   line-height: 28px;
+  font-weight: 500;
   width: fit-content;
   color: #e5e5e5;
   flex-shrink: 0;
   margin-top: 2px;
   text-align: left;
-  font-size: 22px;
-  font-weight: 500;
 }
 @media screen and (max-width: 620px) {
   .salepreviewwidgets_StoreSaleWidgetTitle_3jI46 {
@@ -2103,6 +2103,8 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  flex-grow: 1;
+  align-items: flex-end;
   min-height: 44px;
 }
 .BasicUI .salepreviewwidgets_StoreActionWidgetContainer_1gO7r {

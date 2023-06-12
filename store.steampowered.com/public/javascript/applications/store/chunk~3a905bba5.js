@@ -16922,7 +16922,12 @@
                       },
                       r.createElement(
                         "div",
-                        { className: U().StoreSaleWidgetTitle },
+                        {
+                          className: (0, R.Z)(
+                            U().StoreSaleWidgetTitle,
+                            "StoreSaleWidgetTitle"
+                          ),
+                        },
                         u.GetName()
                       )
                     )
@@ -17192,7 +17197,7 @@
             (l = U().HeaderCapsuleImageContainer);
         return r.createElement(
           "div",
-          { className: l },
+          { className: (0, R.Z)(l, "CapsuleImageCtn") },
           r.createElement(k.J, {
             lazyLoad: !0,
             srcs: i,
@@ -18095,37 +18100,42 @@
         m = n(19304);
       function u(e) {
         var t;
-        const { info: n } = e,
-          [r] = (0, o.jk)(n.id, (0, s.TM)(n.type), { include_assets: !0 }),
-          [d, u] = a.useState(0);
-        if (!r)
+        const { info: n, bPreferLibrary: r } = e,
+          [d] = (0, o.jk)(n.id, (0, s.TM)(n.type), { include_assets: !0 }),
+          [u, _] = a.useState(0);
+        if (!d)
           return a.createElement("div", {
             className: c().HeroCapsuleImageContainer,
           });
-        let _ = r.GetAssets().GetHeroCapsuleURL(),
-          h = r.GetAssets().GetLibraryCapsuleURL();
+        let h = d.GetAssets().GetHeroCapsuleURL(),
+          g = d.GetAssets().GetLibraryCapsuleURL();
         if (
-          (null === (t = r.GetIncludedAppIDs()) || void 0 === t
+          (null === (t = d.GetIncludedAppIDs()) || void 0 === t
             ? void 0
             : t.length) > 0 &&
-          !_
+          !h
         ) {
-          const e = i.Z.Get().GetApp(r.GetIncludedAppIDs()[0]);
+          const e = i.Z.Get().GetApp(d.GetIncludedAppIDs()[0]);
           e &&
-            (_ || (_ = e.GetAssets().GetHeroCapsuleURL()),
-            h || (h = e.GetAssets().GetLibraryCapsuleURL()));
+            (h || (h = e.GetAssets().GetHeroCapsuleURL()),
+            g || (g = e.GetAssets().GetLibraryCapsuleURL()));
         }
-        if (_)
+        if (h && (!r || g))
           return a.createElement(
             "div",
-            { className: c().HeroCapsuleImageContainer },
+            {
+              className: (0, m.Z)(
+                c().HeroCapsuleImageContainer,
+                "HeroCapsuleImageContainer"
+              ),
+            },
             a.createElement("img", {
-              src: _,
+              src: h,
               className: c().CapsuleImage,
-              alt: r.GetName(),
+              alt: d.GetName(),
             })
           );
-        if (h)
+        if (g)
           return a.createElement(
             "div",
             {
@@ -18136,23 +18146,23 @@
             },
             a.createElement("div", {
               className: c().FallbackBackground,
-              style: { backgroundImage: `url(${h})` },
+              style: { backgroundImage: `url(${g})` },
             }),
             a.createElement("img", {
-              src: h,
+              src: g,
               className: c().CapsuleImage,
-              alt: r.GetName(),
+              alt: d.GetName(),
             })
           );
-        const g = new Array();
-        p(r, !0, g);
-        const v = g.length - 1,
-          y = (e) => {
-            const t = g.indexOf(e);
-            t >= v && t < g.length - 1 && u(t + 1);
+        const v = new Array();
+        p(d, !0, v);
+        const y = v.length - 1,
+          S = (e) => {
+            const t = v.indexOf(e);
+            t >= y && t < v.length - 1 && _(t + 1);
           };
-        if (d < g.length) {
-          const e = g[d];
+        if (u < v.length) {
+          const e = v[u];
           return a.createElement(
             "div",
             { className: c().LibraryFallbackAssetImageContainer },
@@ -18162,10 +18172,10 @@
             }),
             a.createElement(l.J, {
               lazyLoad: !0,
-              srcs: g,
+              srcs: v,
               className: c().CapsuleImage,
-              alt: r.GetName(),
-              onImageError: y,
+              alt: d.GetName(),
+              onImageError: S,
             })
           );
         }
