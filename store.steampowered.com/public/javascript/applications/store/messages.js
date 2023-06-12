@@ -930,7 +930,7 @@
                   ),
                   (0, d.m9)(n.rtime_last_played)
                 ),
-              Boolean(n.playtime_forever) &&
+              Boolean(null == n ? void 0 : n.playtime_forever) &&
                 a.createElement(
                   "div",
                   { className: _.PlayDetailCtn },
@@ -952,28 +952,25 @@
       }
       function re(e) {
         const { messageType: t } = e;
-        return (
-          console.log("adil", t),
-          a.createElement(
-            a.Fragment,
-            null,
-            Boolean(2 === t) &&
-              a.createElement(
-                "div",
-                { className: _.Type },
-                (0, d.Xx)("#spotlight_weekend_deal")
-              ),
-            Boolean(11 === t) &&
-              a.createElement(
-                "div",
-                { className: _.Type },
-                (0, d.Xx)("#spotlight_midweek_madness")
-              ),
+        return a.createElement(
+          a.Fragment,
+          null,
+          Boolean(2 === t) &&
             a.createElement(
               "div",
-              { className: _.DealDesc },
-              (0, d.Xx)("#MarketingMessages_DLC_desc")
-            )
+              { className: _.Type },
+              (0, d.Xx)("#spotlight_weekend_deal")
+            ),
+          Boolean(11 === t) &&
+            a.createElement(
+              "div",
+              { className: _.Type },
+              (0, d.Xx)("#spotlight_midweek_madness")
+            ),
+          a.createElement(
+            "div",
+            { className: _.DealDesc },
+            (0, d.Xx)("#MarketingMessages_DLC_desc")
           )
         );
       }
