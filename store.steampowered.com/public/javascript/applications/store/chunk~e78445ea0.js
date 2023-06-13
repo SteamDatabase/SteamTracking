@@ -3084,7 +3084,7 @@
         (0, r.gn)([D.ak], M.prototype, "MoveRight", null),
         (0, r.gn)([D.ak], M.prototype, "OnGamepadButtonDown", null),
         (0, r.gn)([D.ak], M.prototype, "OnGamepadDirection", null);
-      var x = n(2647),
+      var x = n(99307),
         O = n(701),
         Q = n(84291),
         W = n(71161),

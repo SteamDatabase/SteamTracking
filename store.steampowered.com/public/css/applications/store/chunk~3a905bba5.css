@@ -177,6 +177,31 @@ iframe.eventbbcodeparser_MedalTVWidget_1Ysh1 {
 .eventbbcodeparser_CheckMark_1nwMV {
   height: 32px;
 }
+.eventbbcodeparser_ScreenshotCarousel_3LgCS .SliderBody {
+  background: #000;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS .carousel__inner-slide,
+.eventbbcodeparser_ScreenshotCarousel_3LgCS .carousel__inner-slide > div {
+  height: 100%;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS button.CarouselBtnRight,
+.eventbbcodeparser_ScreenshotCarousel_3LgCS button.CarouselBtnLeft {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0.1;
+  transition: opacity 0.2s ease-in;
+  height: 50%;
+  top: 25%;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS button.CarouselBtnRight {
+  right: 0px;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS button.CarouselBtnLeft {
+  left: 0px;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS:hover button.CarouselBtnRight,
+.eventbbcodeparser_ScreenshotCarousel_3LgCS:hover button.CarouselBtnLeft {
+  opacity: 1;
+}
 .youtubeembed_DynamicLinkBox_5Ycv2 {
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
@@ -6243,6 +6268,11 @@ html.tablet
   border: 1px solid;
   padding: 10px;
 }
+.screenshotpopout_PopupScreenshotModal_Q9ps-
+  .DialogContentFullSize
+  .DialogContent_InnerWidth {
+  overflow: hidden;
+}
 .screenshotpopout_PopupScreenshotContainer_2mYDh {
   width: 80vw;
   height: auto;
@@ -6279,6 +6309,13 @@ html.tablet
 
 .expandableimage_PreviewCtn_3TAWD {
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.expandableimage_PreviewCtn_3TAWD img {
+  display: block;
 }
 .expandableimage_PreviewCtn_3TAWD .expandableimage_SVG_3KS-f {
   position: absolute;

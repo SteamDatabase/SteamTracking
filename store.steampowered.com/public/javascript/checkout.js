@@ -803,15 +803,15 @@ function InitializeTransaction()
 				'CardExpirationMonth' : $('expiration_month').value,
 
 				// address info, which may go unused depending on payment method
-				'FirstName' : $('first_name').value,
-				'LastName' : $('last_name').value,
-				'Address' : $('billing_address').value,
-				'AddressTwo' : $('billing_address_two').value,
+				'FirstName' : g_bShowAddressForm ? $('first_name').value : '',
+				'LastName' : g_bShowAddressForm ? $('last_name').value : '',
+				'Address' : g_bShowAddressForm ? $('billing_address').value : '',
+				'AddressTwo' : g_bShowAddressForm ? $('billing_address_two').value : '',
 				'Country' : $('billing_country').value,
-				'City' : $('billing_city').value,
-				'State' : ( g_bHasBillingStates ? $('billing_state_select').value : $('billing_state_text').value),
-				'PostalCode' : $('billing_postal_code').value,
-				'Phone' : $('billing_phone').value,
+				'City' : g_bShowAddressForm ? $('billing_city').value : '',
+				'State' : g_bShowAddressForm ? ( g_bHasBillingStates ? $('billing_state_select').value : $('billing_state_text').value) : '',
+				'PostalCode' : g_bShowAddressForm ? $('billing_postal_code').value : '',
+				'Phone' : g_bShowAddressForm ? $('billing_phone').value : '',
 
 				'ShippingFirstName' : $('shipping_first_name') ? $('shipping_first_name').value : '',
 				'ShippingLastName' : $('shipping_last_name').value,

@@ -3563,6 +3563,9 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
     flex-basis: 200px;
     padding-right: 20px;
     margin-right: 16px;
+    position: sticky;
+    top: 0;
+    height: fit-content;
   }
 }
 .BasicUI .facetedbrowse_FacetedBrowseControls_3fHFf {

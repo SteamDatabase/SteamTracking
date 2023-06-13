@@ -134,6 +134,7 @@
         SocialIcon: "eventbbcodeparser_SocialIcon_1wyn6",
         LocalizeBlock: "eventbbcodeparser_LocalizeBlock_hXuYi",
         CheckMark: "eventbbcodeparser_CheckMark_1nwMV",
+        ScreenshotCarousel: "eventbbcodeparser_ScreenshotCarousel_3LgCS",
       };
     },
     40465: (e) => {
@@ -530,6 +531,7 @@
     },
     65014: (e) => {
       e.exports = {
+        PopupScreenshotModal: "screenshotpopout_PopupScreenshotModal_Q9ps-",
         PopupScreenshotContainer:
           "screenshotpopout_PopupScreenshotContainer_2mYDh",
         PopupScreenshot: "screenshotpopout_PopupScreenshot_1q7Ow",
@@ -3690,7 +3692,7 @@
         r = n(89526),
         i = n(57858),
         s = n(57605),
-        o = n(2647),
+        o = n(99307),
         l = n(57742),
         d = n(701),
         c = n(19304),
@@ -14933,7 +14935,9 @@
           a = (0, s.k6)();
         if (!e.eventModel) return null;
         const r = n && u(e.route, e.eventModel),
-          l = y(e.eventModel, e.route, r ? "relative" : "absolute");
+          l =
+            (d.De.IN_CLIENT && !r ? "steam://openurl/" : "") +
+            y(e.eventModel, e.route, r ? "relative" : "absolute");
         return r
           ? i.createElement(
               o.IS,
@@ -15053,7 +15057,7 @@
       var b = n(93765),
         E = n(57605),
         I = n(21904),
-        w = n(2647),
+        w = n(99307),
         B = n(57742),
         C = n(701),
         D = n(69338),
@@ -15591,7 +15595,7 @@
         _ = n(14826),
         h = n(23217),
         g = n(32765),
-        v = n(2647),
+        v = n(99307),
         y = n(57742),
         S = n(69338),
         f = n(72213),
@@ -16540,7 +16544,7 @@
       "use strict";
       n.d(t, { r: () => o });
       var a = n(89526),
-        r = n(2647),
+        r = n(99307),
         i = n(14826),
         s = n(32765);
       const o = (e) => {
@@ -17942,7 +17946,7 @@
         c = n(17318),
         m = n.n(c),
         u = n(32905),
-        p = n(2647),
+        p = n(99307),
         _ = n(57742),
         h = n(701),
         g = n(71161),
@@ -18246,7 +18250,7 @@
       var a = n(89526),
         r = n(19304),
         i = n(7029),
-        s = n(2647),
+        s = n(99307),
         o = n(57742),
         l = n(65014),
         d = n.n(l),
@@ -18270,6 +18274,7 @@
             bOKDisabled: !0,
             closeModal: t,
             bHideCloseIcon: !0,
+            modalClassName: d().PopupScreenshotModal,
           },
           a.createElement(p, {
             index: r,

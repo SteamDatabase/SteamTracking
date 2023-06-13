@@ -1671,6 +1671,14 @@ a.pagelink:hover {
 	color: #70ba24;
 }
 
+.header_notification_btn.header_notification_bell {
+	background-color: #171a21;
+	width: 46px;
+	height: 24px;
+	padding: 0px;
+	margin: 0px;
+}
+
 .notification_ctn.hide_when_empty:not(.active_inbox_item) {
 	display: none;
 }

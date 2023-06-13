@@ -2,70 +2,113 @@
   width: 300px;
   display: flex;
   flex-direction: column;
+  color: #fff;
+  background: radial-gradient(
+      circle at top left,
+      rgba(74, 81, 92, 0.4) 0%,
+      rgba(75, 81, 92, 0) 60%
+    ),
+    #25282e;
+}
+.greenenvelope_NotificationsMenu_DHpNP svg {
+  fill: #8b929a;
+}
+.greenenvelope_NotificationsMenuEntriesContainer_1UQTO {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 6px;
 }
 .greenenvelope_NotificationsMenuScrollable_3t5NP {
   overflow-y: auto;
   max-height: 350px;
   margin-left: 4px;
+  padding-bottom: 4px;
 }
 .greenenvelope_NotificationsMenuScrollable_3t5NP.greenenvelope_MenuScrollbarHidden_20aP8 {
   margin-right: 4px;
 }
-.greenenvelope_NotificationMenuHeader_lTdQS {
-  padding: 5px 2px;
+.greenenvelope_NotificationHeader_2CF6o {
+  padding: 5px 15px 10px 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   min-width: 160px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
 }
-.greenenvelope_NotificationMenuHeader_lTdQS.greenenvelope_ResponsiveViewAll_3jVNI {
+.greenenvelope_NotificationHeader_2CF6o.greenenvelope_ResponsiveViewAll_3jVNI {
   justify-content: end;
 }
-.greenenvelope_NotificationMenuHeader_lTdQS
+.greenenvelope_NotificationHeader_2CF6o
   .greenenvelope_AllNotificationsTitle_nyDUh {
-  font-size: 14px;
+  font-size: 16px;
   align-self: center;
 }
-.greenenvelope_NotificationMenuHeader_lTdQS
+.greenenvelope_NotificationHeader_2CF6o
   .greenenvelope_AllNotificationsButton__Oohj {
   background-color: #454953;
   color: #fff;
   border-style: none;
   padding: 5px 10px;
   font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.greenenvelope_NotificationHeader_2CF6o
+  .greenenvelope_AllNotificationsButton__Oohj:hover {
+  background-color: #67707b;
+  transition-property: background;
+  transition-duration: 250ms;
 }
 .greenenvelope_NotificationsButton_2Z7Ed {
-  padding: 0px 8px;
-  background-color: #5c7e10;
-  color: #fff;
+  width: 46px;
+  height: 24px;
   font-size: 12px;
   font-weight: bold;
   cursor: pointer;
-  margin: 0px 3px 0px 8px;
   position: absolute;
   left: 0;
   top: 0;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 402;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M {
-  background-color: #262625;
+.greenenvelope_NotificationsButton_2Z7Ed .greenenvelope_SVGNotifications_D68s6 {
+  width: 14px;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M:not(.greenenvelope_Disabled_3KMlw):hover {
-  background-color: #575451;
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M {
+  background-color: rgba(103, 112, 123, 0.2);
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M:not(
+    .greenenvelope_Disabled_3KMlw
+  ):hover {
+  background-color: #3d4450;
+  transition-property: background;
+  transition-duration: 250ms;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M svg {
+  fill: #8b929a;
 }
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S {
   background-color: #5c7e10;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:not(.greenenvelope_Disabled_3KMlw):hover {
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:not(
+    .greenenvelope_Disabled_3KMlw
+  ):hover {
   background-color: #7ea64b;
+  transition-property: background;
+  transition-duration: 250ms;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S
-  .greenenvelope_NotificationImageCtn_k6OOc {
-  margin-left: 7px;
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S svg {
+  fill: #fff;
 }
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Disabled_3KMlw {
   background-color: rgba(0, 0, 0, 0);
   color: rgba(169, 169, 169, 0.5);
-  color: #d3d3d3;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Disabled_3KMlw svg {
+  fill: #d3d3d3;
 }

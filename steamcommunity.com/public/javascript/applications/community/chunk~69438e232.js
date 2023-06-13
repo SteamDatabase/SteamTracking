@@ -1095,7 +1095,7 @@
         O = n(60866),
         R = n(17318),
         G = n.n(R),
-        F = n(2647),
+        F = n(99307),
         P = n(57742),
         U = n(45123),
         z = n.n(U),
@@ -1583,9 +1583,13 @@
             );
         }
         OnConvertHTMLToBBCodeDialog(e) {
+          const t = (0, H.RA)(e);
           (0, P.BR)(
-            l.createElement(Ee, { textareaRef: this.props.fnTextareaRef() }),
-            (0, H.RA)(e)
+            l.createElement(Ee, {
+              ownerWindow: t,
+              textareaRef: this.props.fnTextareaRef(),
+            }),
+            t
           );
         }
         OnOpenYoutubeDialog(e) {
@@ -2575,7 +2579,7 @@
                     bAlertDialog: !0,
                     bDestructiveWarning: !0,
                   }),
-                  window,
+                  this.props.ownerWindow,
                   { strTitle: (0, L.Xx)("#EventEditor_ConvertHTML_Error") }
                 );
               });
@@ -3787,7 +3791,7 @@
         s = n(1063),
         l = n(57605),
         c = n(17547),
-        d = n(2647),
+        d = n(99307),
         p = n(14826),
         m = n(69338),
         u = n(36320);
@@ -3958,7 +3962,7 @@
         u = n(19304),
         h = n(43997),
         g = n.n(h),
-        _ = n(2647),
+        _ = n(99307),
         v = n(36041),
         E = n(52868),
         S = n.n(E),
@@ -4630,7 +4634,7 @@
         l = n(56368),
         c = n(52316),
         d = n(43690),
-        p = n(2647),
+        p = n(99307),
         m = n(67122),
         u = n(1721),
         h = n.n(u),
@@ -4967,7 +4971,7 @@
         g = n(14826),
         _ = n(4306),
         v = n(32765),
-        E = n(2647),
+        E = n(99307),
         S = n(57742),
         y = n(69338),
         C = n(5557),
@@ -7131,7 +7135,7 @@
       var g = n(82248),
         _ = n(15164),
         v = n(75313),
-        E = n(2647),
+        E = n(99307),
         S = n(84343),
         y = n(75962),
         C = n(43997),
@@ -7599,7 +7603,7 @@
         i = n(69678),
         o = n(57605),
         s = n(71937),
-        l = n(2647),
+        l = n(99307),
         c = n(19304),
         d = n(14826),
         p = n(4306),

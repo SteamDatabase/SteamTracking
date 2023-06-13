@@ -6288,7 +6288,7 @@
         Wa = a(82248),
         Xa = a(15164),
         Oa = a(75313),
-        ja = a(2647);
+        ja = a(99307);
       class Za {
         get SteamInterface() {
           return this.m_SteamInterface;

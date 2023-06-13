@@ -833,11 +833,10 @@
   margin-bottom: -2px;
 }
 .currentUserContainer .personanameandstatus_playerName_r62qz {
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   transition: color 0.94s ease-in-out;
-  text-shadow: 1px 1px 4px #000;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -899,8 +898,12 @@
   margin-top: -1px;
 }
 .ChatTabs
-  .personanameandstatus_compactView_34CCB:not(.personanameandstatus_twoLine_27M2G)
-  .personanameandstatus_richPresenceLabel_1k82N:not(.personanameandstatus_gameName_2wpap) {
+  .personanameandstatus_compactView_34CCB:not(
+    .personanameandstatus_twoLine_27M2G
+  )
+  .personanameandstatus_richPresenceLabel_1k82N:not(
+    .personanameandstatus_gameName_2wpap
+  ) {
   display: none;
 }
 .ChatTabs
@@ -923,7 +926,6 @@
   font-size: 12px;
   display: inline-block;
   transition: color 0.94s ease-in-out;
-  text-shadow: 1px 1px 3px #000;
 }
 .titleBarContainer
   .currentUserContainer
@@ -947,7 +949,9 @@
 }
 .titleBarContainer
   .currentUserContainer
-  .personanameandstatus_richPresenceLabel_1k82N:not(.personanameandstatus_gameName_2wpap) {
+  .personanameandstatus_richPresenceLabel_1k82N:not(
+    .personanameandstatus_gameName_2wpap
+  ) {
   font-size: 10px;
   margin-top: -1px;
   margin-bottom: 1px;
@@ -1611,7 +1615,9 @@
   color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 }
-.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE:hover:not(
+    .discoveryqueuewizard_Disabled_1yh4o
+  ) {
   background-color: #0bf;
 }
 .discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Launch_uZjq4 {
@@ -1624,7 +1630,9 @@
   width: 16px;
   transition: fill 0.1s ease;
 }
-.discoveryqueuewizard_QueueButton_19cHb:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
+.discoveryqueuewizard_QueueButton_19cHb:hover:not(
+    .discoveryqueuewizard_Disabled_1yh4o
+  ) {
   background-color: rgba(172, 178, 201, 0.2784313725);
 }
 .discoveryqueuewizard_QueueButton_19cHb.gpfocus {

@@ -72,14 +72,18 @@
   opacity: 1;
   object-fit: contain;
 }
-.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(.sharedappdetailsheader_FullscreenEnterActive_2FlTp),
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(
+    .sharedappdetailsheader_FullscreenEnterActive_2FlTp
+  ),
 .sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenExitActive_1yfFC,
 .sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenExitDone_K6WfG {
   height: var(--header-height);
 }
 .sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
 .sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterDone_1PRtu,
-.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenExitStart_1sphg:not(.sharedappdetailsheader_FullscreenExitActive_1yfFC) {
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenExitStart_1sphg:not(
+    .sharedappdetailsheader_FullscreenExitActive_1yfFC
+  ) {
   height: calc(100vh - 40px);
 }
 .sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
@@ -174,14 +178,18 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   transform-origin: 0 0;
   transform: translateZ(-1px) scale(2);
 }
-.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(.sharedappdetailsheader_FullscreenEnterActive_2FlTp),
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(
+    .sharedappdetailsheader_FullscreenEnterActive_2FlTp
+  ),
 .sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitActive_1yfFC,
 .sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitDone_K6WfG {
   opacity: 1;
 }
 .sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
 .sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterDone_1PRtu,
-.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitStart_1sphg:not(.sharedappdetailsheader_FullscreenExitActive_1yfFC) {
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitStart_1sphg:not(
+    .sharedappdetailsheader_FullscreenExitActive_1yfFC
+  ) {
   opacity: 0.2;
 }
 .sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
@@ -314,7 +322,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
 }
 .sharedappdetailsheader_BoxSizerContainer_P_15e {
   position: absolute;
-  -webkit-app-region: no-drag;
   display: flex;
   flex-direction: column;
   top: 16px;
@@ -325,7 +332,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
 .sharedappdetailsheader_BoxSizerValidRegion_3IAVE {
   width: 100%;
   height: 85%;
-  -webkit-app-region: no-drag;
   position: relative;
 }
 .sharedappdetailsheader_BoxSizer_30GVp {
@@ -341,7 +347,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   left: 32px;
   right: 32px;
   bottom: 32px;
-  -webkit-app-region: no-drag;
   transition-property: left, top, right, bottom;
   transition-duration: 0.16s;
   transition-timing-function: ease-in-out;
@@ -361,13 +366,11 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   grid-row-gap: 0;
   margin-left: -16px;
   margin-top: -16px;
-  -webkit-app-region: no-drag;
 }
 .sharedappdetailsheader_BoxSizerEdge_1pW2c {
   background-color: rgba(92, 191, 230, 0.192);
   width: 100%;
   height: 100%;
-  -webkit-app-region: no-drag;
 }
 .sharedappdetailsheader_EdgeDown_2GhIW
   .sharedappdetailsheader_BoxSizerEdge_1pW2c {
@@ -427,7 +430,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   top: 8px;
   cursor: default;
   opacity: 0;
-  -webkit-app-region: no-drag;
   transition-property: opacity;
   transition-duration: 0.21s;
   transition-timing-function: ease-in-out;
@@ -443,7 +445,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   top: 8px;
   cursor: default;
   opacity: 0;
-  -webkit-app-region: no-drag;
   transition-property: opacity;
   transition-duration: 0.21s;
   transition-timing-function: ease-in-out;
@@ -607,10 +608,14 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   .sharedappdetailsheader_Features_P_lFf {
   display: none;
 }
-.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(.sharedappdetailsheader_FullscreenEnterActive_2FlTp),
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(
+    .sharedappdetailsheader_FullscreenEnterActive_2FlTp
+  ),
 .sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitActive_1yfFC,
 .sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitDone_K6WfG,
-.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(.sharedappdetailsheader_FullscreenEnterActive_2FlTp),
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(
+    .sharedappdetailsheader_FullscreenEnterActive_2FlTp
+  ),
 .sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitActive_1yfFC,
 .sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitDone_K6WfG {
   opacity: 1;
@@ -618,10 +623,14 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
 }
 .sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
 .sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterDone_1PRtu,
-.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitStart_1sphg:not(.sharedappdetailsheader_FullscreenExitActive_1yfFC),
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitStart_1sphg:not(
+    .sharedappdetailsheader_FullscreenExitActive_1yfFC
+  ),
 .sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
 .sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterDone_1PRtu,
-.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitStart_1sphg:not(.sharedappdetailsheader_FullscreenExitActive_1yfFC) {
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitStart_1sphg:not(
+    .sharedappdetailsheader_FullscreenExitActive_1yfFC
+  ) {
   opacity: 0;
   transform: translateY(100px);
 }

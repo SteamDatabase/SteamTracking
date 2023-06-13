@@ -180,6 +180,7 @@
         SocialIcon: "eventbbcodeparser_SocialIcon_1wyn6",
         LocalizeBlock: "eventbbcodeparser_LocalizeBlock_hXuYi",
         CheckMark: "eventbbcodeparser_CheckMark_1nwMV",
+        ScreenshotCarousel: "eventbbcodeparser_ScreenshotCarousel_3LgCS",
       };
     },
     40465: (e) => {
@@ -466,6 +467,7 @@
     },
     65014: (e) => {
       e.exports = {
+        PopupScreenshotModal: "screenshotpopout_PopupScreenshotModal_Q9ps-",
         PopupScreenshotContainer:
           "screenshotpopout_PopupScreenshotContainer_2mYDh",
         PopupScreenshot: "screenshotpopout_PopupScreenshot_1q7Ow",
@@ -3125,7 +3127,7 @@
         n = r(89526),
         a = r(57858),
         s = r(22444),
-        o = r(26521),
+        o = r(67736),
         l = r(57742),
         d = r(28106),
         m = r(19304),
@@ -11098,10 +11100,10 @@
           (this.m_rtUnlockTime = 0), (this.m_schUnlockTimeout = new g.Ar());
         }
         UnlockH264(e, t) {
-          (0, te.U5)("RemotePlay.UnlockH264")
+          this.BCanUnlockH264()
             ? (e.SetState(ie.Unlocking, ""),
               console.log("Unlocking H.264 for broadcast video playback"),
-              SteamClient.RemotePlay.UnlockH264(),
+              this.RequestUnlockH264(),
               (this.m_broadcast = e),
               (this.m_video = t),
               (this.m_rtUnlockTime = Date.now()),
@@ -11109,6 +11111,27 @@
                 this.CheckUnlockState()
               ))
             : e.SetState(ie.Error, (0, S.Xx)("#BroadcastWatch_MinBrowser"));
+        }
+        BCanUnlockH264() {
+          return (0, te.U5)("RemotePlay.UnlockH264")
+            ? (console.log("Client supports direct H.264 unlock"), !0)
+            : (0, te.U5)("BrowserView.PostMessageToParent")
+            ? (console.log("Client supports browserview H.264 unlock"), !0)
+            : (console.log("Client does not support H.264 unlock"), !1);
+        }
+        RequestUnlockH264() {
+          (0, te.U5)("RemotePlay.UnlockH264")
+            ? (console.log("Requesting direct H.264 unlock"),
+              SteamClient.RemotePlay.UnlockH264())
+            : (0, te.U5)("BrowserView.PostMessageToParent")
+            ? (console.log("Requesting browserview unlock"),
+              SteamClient.BrowserView.PostMessageToParent(
+                "UnlockH264Request",
+                "CUnlockH264Helper"
+              ))
+            : console.log(
+                "Failed to request H.264 unlock: no method supported"
+              );
         }
         CheckUnlockState() {
           if (this.m_broadcast.m_eWatchState != ie.Unlocking) return;
@@ -18687,19 +18710,21 @@
           { bCanUseLink: r } = i.useContext(l),
           s = (0, n.k6)();
         if (!e.eventModel) return null;
-        const o = r && u(e.route, e.eventModel),
-          d = S(e.eventModel, e.route, o ? "relative" : "absolute");
-        return o
+        const d = r && u(e.route, e.eventModel),
+          m =
+            (o.De.IN_CLIENT && !d ? "steam://openurl/" : "") +
+            S(e.eventModel, e.route, d ? "relative" : "absolute");
+        return d
           ? i.createElement(
               a.IS,
               {
                 style: e.style,
                 className: e.className,
-                href: s.createHref({ pathname: d }),
+                href: s.createHref({ pathname: m }),
                 onClick: (t) => {
                   var r;
                   null === (r = e.onClick) || void 0 === r || r.call(e, t),
-                    s.push(d),
+                    s.push(m),
                     t.preventDefault();
                 },
                 preferredFocus: t,
@@ -18709,7 +18734,7 @@
           : i.createElement(
               a.IS,
               {
-                href: d,
+                href: m,
                 style: e.style,
                 className: e.className,
                 onClick: e.onClick,
@@ -18808,7 +18833,7 @@
       var b = r(93765),
         w = r(22444),
         B = r(21904),
-        E = r(26521),
+        E = r(67736),
         C = r(57742),
         I = r(28106),
         D = r(69338),
@@ -20239,7 +20264,7 @@
       }
       window.g_EventCalendarMap = k;
       var F = r(19304),
-        M = r(26521),
+        M = r(67736),
         O = r(57742),
         P = r(69338),
         N = r(72213),
@@ -21176,7 +21201,7 @@
       "use strict";
       r.d(t, { r: () => o });
       var i = r(89526),
-        n = r(26521),
+        n = r(67736),
         a = r(14826),
         s = r(32765);
       const o = (e) => {
@@ -21545,37 +21570,42 @@
         q = r(19304);
       function Y(e) {
         var t;
-        const { info: r } = e,
-          [i] = (0, h.jk)(r.id, (0, p.TM)(r.type), { include_assets: !0 }),
-          [a, s] = n.useState(0);
-        if (!i)
+        const { info: r, bPreferLibrary: i } = e,
+          [a] = (0, h.jk)(r.id, (0, p.TM)(r.type), { include_assets: !0 }),
+          [s, o] = n.useState(0);
+        if (!a)
           return n.createElement("div", {
             className: Z().HeroCapsuleImageContainer,
           });
-        let o = i.GetAssets().GetHeroCapsuleURL(),
-          l = i.GetAssets().GetLibraryCapsuleURL();
+        let l = a.GetAssets().GetHeroCapsuleURL(),
+          d = a.GetAssets().GetLibraryCapsuleURL();
         if (
-          (null === (t = i.GetIncludedAppIDs()) || void 0 === t
+          (null === (t = a.GetIncludedAppIDs()) || void 0 === t
             ? void 0
             : t.length) > 0 &&
-          !o
+          !l
         ) {
-          const e = u.Z.Get().GetApp(i.GetIncludedAppIDs()[0]);
+          const e = u.Z.Get().GetApp(a.GetIncludedAppIDs()[0]);
           e &&
-            (o || (o = e.GetAssets().GetHeroCapsuleURL()),
-            l || (l = e.GetAssets().GetLibraryCapsuleURL()));
+            (l || (l = e.GetAssets().GetHeroCapsuleURL()),
+            d || (d = e.GetAssets().GetLibraryCapsuleURL()));
         }
-        if (o)
+        if (l && (!i || !d))
           return n.createElement(
             "div",
-            { className: Z().HeroCapsuleImageContainer },
+            {
+              className: (0, q.Z)(
+                Z().HeroCapsuleImageContainer,
+                "HeroCapsuleImageContainer"
+              ),
+            },
             n.createElement("img", {
-              src: o,
+              src: l,
               className: Z().CapsuleImage,
-              alt: i.GetName(),
+              alt: a.GetName(),
             })
           );
-        if (l)
+        if (d)
           return n.createElement(
             "div",
             {
@@ -21586,23 +21616,23 @@
             },
             n.createElement("div", {
               className: Z().FallbackBackground,
-              style: { backgroundImage: `url(${l})` },
+              style: { backgroundImage: `url(${d})` },
             }),
             n.createElement("img", {
-              src: l,
+              src: d,
               className: Z().CapsuleImage,
-              alt: i.GetName(),
+              alt: a.GetName(),
             })
           );
-        const d = new Array();
-        $(i, !0, d);
-        const m = d.length - 1,
-          c = (e) => {
-            const t = d.indexOf(e);
-            t >= m && t < d.length - 1 && s(t + 1);
+        const m = new Array();
+        $(a, !0, m);
+        const c = m.length - 1,
+          _ = (e) => {
+            const t = m.indexOf(e);
+            t >= c && t < m.length - 1 && o(t + 1);
           };
-        if (a < d.length) {
-          const e = d[a];
+        if (s < m.length) {
+          const e = m[s];
           return n.createElement(
             "div",
             { className: Z().LibraryFallbackAssetImageContainer },
@@ -21612,10 +21642,10 @@
             }),
             n.createElement(H.J, {
               lazyLoad: !0,
-              srcs: d,
+              srcs: m,
               className: Z().CapsuleImage,
-              alt: i.GetName(),
-              onImageError: c,
+              alt: a.GetName(),
+              onImageError: _,
             })
           );
         }
@@ -21926,7 +21956,12 @@
                       },
                       n.createElement(
                         "div",
-                        { className: Z().StoreSaleWidgetTitle },
+                        {
+                          className: (0, q.Z)(
+                            Z().StoreSaleWidgetTitle,
+                            "StoreSaleWidgetTitle"
+                          ),
+                        },
                         u.GetName()
                       )
                     )
@@ -22129,7 +22164,7 @@
             (l = Z().HeaderCapsuleImageContainer);
         return n.createElement(
           "div",
-          { className: l },
+          { className: (0, q.Z)(l, "CapsuleImageCtn") },
           n.createElement(H.J, {
             lazyLoad: !0,
             srcs: a,
@@ -22324,7 +22359,7 @@
         y = r(17318),
         f = r.n(y),
         b = r(32905),
-        w = r(26521),
+        w = r(67736),
         B = r(57742),
         E = r(28106),
         C = r(71161),
@@ -23060,7 +23095,7 @@
           );
         }, [e, t]);
       }
-      var o = r(26521),
+      var o = r(67736),
         l = r(57742),
         d = r(65014),
         m = r.n(d);
@@ -23080,6 +23115,7 @@
             bOKDisabled: !0,
             closeModal: t,
             bHideCloseIcon: !0,
+            modalClassName: m().PopupScreenshotModal,
           },
           i.createElement(u, {
             index: n,
@@ -24893,7 +24929,7 @@
         o = r(13364),
         l = r.n(o),
         d = r(22444),
-        m = r(26521),
+        m = r(67736),
         c = r(57742),
         u = r(49985),
         p = r(28106),

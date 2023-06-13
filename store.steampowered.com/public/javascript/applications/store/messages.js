@@ -2470,6 +2470,7 @@
                 N.sm_DefaultDataRequest
               )),
             (this.m_templateVars = (function (e) {
+              if (!e) return null;
               try {
                 const t = JSON.parse(e);
                 return (

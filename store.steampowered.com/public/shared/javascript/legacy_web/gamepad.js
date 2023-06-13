@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    644: (e, t, n) => {
+    70: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(237),
-        s = n(99);
+        o = n(281),
+        s = n(325);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    99: (e, t, n) => {
+    325: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -93,14 +93,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    281: (e, t, n) => {
+    693: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ut });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(102);
+        a = n(504);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -160,10 +160,10 @@
           l
         );
       }
-      var g = n(237),
-        _ = n(99),
-        v = n(272),
-        p = n(644);
+      var g = n(281),
+        _ = n(325),
+        v = n(265),
+        p = n(70);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -572,7 +572,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(805);
+      var y = n(673);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -970,7 +970,7 @@
           );
         }
       }
-      var Y = n(980);
+      var Y = n(702);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {
@@ -2367,7 +2367,7 @@
         }
         scrollTo(e) {
           var t, n;
-          if ("auto" == e.behavior)
+          if ("smooth" != e.behavior)
             this.m_animation &&
               (this.m_animation.Cancel(), (this.m_animation = void 0)),
               this.m_window
@@ -3442,8 +3442,11 @@
       (0, o.gn)(
         [g.a],
         class {
-          constructor(e, t) {
-            (this.m_refKeyboard = t), e.on("message", this.OnMessage);
+          constructor(e, t, n, i) {
+            (this.m_showKeyboard = t),
+              (this.m_showModalKeyboard = n),
+              (this.m_hideKeyboard = i),
+              e.on("message", this.OnMessage);
           }
           OnMessage(e, t, n) {
             if (e == Ue) {
@@ -3451,13 +3454,13 @@
               if (We(e))
                 switch (e.message) {
                   case "ShowVirtualKeyboard":
-                    this.m_refKeyboard.ShowVirtualKeyboard();
+                    this.m_showKeyboard();
                     break;
                   case "ShowModalKeyboard":
-                    this.m_refKeyboard.ShowModalKeyboard();
+                    this.m_showModalKeyboard();
                     break;
                   case "HideVirtualKeyboard":
-                    this.m_refKeyboard.DelayHideVirtualKeyboard(e.msDelay);
+                    this.m_hideKeyboard();
                 }
             }
           }

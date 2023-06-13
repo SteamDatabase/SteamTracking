@@ -1038,6 +1038,31 @@ iframe.eventbbcodeparser_MedalTVWidget_1Ysh1 {
 .eventbbcodeparser_CheckMark_1nwMV {
   height: 32px;
 }
+.eventbbcodeparser_ScreenshotCarousel_3LgCS .SliderBody {
+  background: #000;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS .carousel__inner-slide,
+.eventbbcodeparser_ScreenshotCarousel_3LgCS .carousel__inner-slide > div {
+  height: 100%;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS button.CarouselBtnRight,
+.eventbbcodeparser_ScreenshotCarousel_3LgCS button.CarouselBtnLeft {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0.1;
+  transition: opacity 0.2s ease-in;
+  height: 50%;
+  top: 25%;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS button.CarouselBtnRight {
+  right: 0px;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS button.CarouselBtnLeft {
+  left: 0px;
+}
+.eventbbcodeparser_ScreenshotCarousel_3LgCS:hover button.CarouselBtnRight,
+.eventbbcodeparser_ScreenshotCarousel_3LgCS:hover button.CarouselBtnLeft {
+  opacity: 1;
+}
 .eventreminder_FlexColumnContainer_1WvmG {
   display: flex;
   flex-direction: column;
@@ -1920,6 +1945,11 @@ a.bbcodes_LinkButton_lMVeY:hover {
 .bbcodes_Image_1CmpC {
   max-width: 100%;
 }
+.screenshotpopout_PopupScreenshotModal_Q9ps-
+  .DialogContentFullSize
+  .DialogContent_InnerWidth {
+  overflow: hidden;
+}
 .screenshotpopout_PopupScreenshotContainer_2mYDh {
   width: 80vw;
   height: auto;
@@ -2434,14 +2464,14 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   -webkit-box-orient: vertical;
   overflow: hidden;
   cursor: pointer;
+  font-size: 22px;
   line-height: 28px;
+  font-weight: 500;
   width: fit-content;
   color: #e5e5e5;
   flex-shrink: 0;
   margin-top: 2px;
   text-align: left;
-  font-size: 22px;
-  font-weight: 500;
 }
 @media screen and (max-width: 620px) {
   .salepreviewwidgets_StoreSaleWidgetTitle_3jI46 {
@@ -3091,6 +3121,8 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  flex-grow: 1;
+  align-items: flex-end;
   min-height: 44px;
 }
 .BasicUI .salepreviewwidgets_StoreActionWidgetContainer_1gO7r {
@@ -6277,6 +6309,13 @@ html.tablet
 }
 .expandableimage_PreviewCtn_3TAWD {
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.expandableimage_PreviewCtn_3TAWD img {
+  display: block;
 }
 .expandableimage_PreviewCtn_3TAWD .expandableimage_SVG_3KS-f {
   position: absolute;

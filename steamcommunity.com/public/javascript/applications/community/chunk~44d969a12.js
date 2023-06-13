@@ -14,10 +14,10 @@
     },
     11301: (e, t, a) => {
       "use strict";
-      a.d(t, { Pv: () => _, U0: () => A.U, sB: () => l });
-      var r = a(33940),
-        s = a(50265),
-        i = a(39818),
+      a.d(t, { Pv: () => p, U0: () => A.U, sB: () => l });
+      var i = a(33940),
+        r = a(50265),
+        s = a(39818),
         n = a(58961),
         o = a(14826),
         m = a(32765),
@@ -35,7 +35,7 @@
           t
         );
       }
-      class _ {
+      class p {
         constructor(e) {
           (this.m_bInitialized = !1),
             (this.m_ePersonaState = 0),
@@ -52,7 +52,7 @@
             (this.m_game_lobby_id = ""),
             (this.m_bPlayerNamePending = !1),
             (this.m_bAvatarPending = !1),
-            (this.m_mapRichPresence = s.LO.map()),
+            (this.m_mapRichPresence = r.LO.map()),
             (this.m_bNameInitialized = !1),
             (this.m_bStatusInitialized = !1),
             (this.m_steamid = e);
@@ -184,7 +184,7 @@
           if (0 == this.last_seen_online)
             return (0, o.Xx)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!m.De.IN_MOBILE || e <= 60) && (0, i.zO)(e);
+          (!m.De.IN_MOBILE || e <= 60) && (0, s.zO)(e);
           let t = n.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? (0, o.Xx)("#PersonaStateLastSeen_JustNow")
@@ -270,34 +270,34 @@
           return 0;
         }
       }
-      (0, r.gn)([s.LO], _.prototype, "m_bInitialized", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_ePersonaState", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_unGamePlayedAppID", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_gameid", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_unPersonaStateFlags", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_strPlayerName", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_strAvatarHash", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_strAccountName", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_rtLastSeenOnline", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_strGameExtraInfo", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_unGameServerIP", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_unGameServerPort", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_game_lobby_id", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_bPlayerNamePending", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_bAvatarPending", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_broadcastId", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_broadcastAccountId", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_broadcastAppId", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_broadcastViewerCount", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_strBroadcastTitle", void 0),
-        (0, r.gn)([s.LO], _.prototype, "m_bCommunityBanned", void 0);
+      (0, i.gn)([r.LO], p.prototype, "m_bInitialized", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_ePersonaState", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_unGamePlayedAppID", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_gameid", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_unPersonaStateFlags", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strPlayerName", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strAvatarHash", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strAccountName", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_rtLastSeenOnline", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strGameExtraInfo", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_unGameServerIP", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_unGameServerPort", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_game_lobby_id", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_bPlayerNamePending", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_bAvatarPending", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_broadcastId", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_broadcastAccountId", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_broadcastAppId", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_broadcastViewerCount", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strBroadcastTitle", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_bCommunityBanned", void 0);
     },
     50355: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => c, vV: () => h });
-      var r = a(33940),
-        s = a(89526),
-        i = a(88464),
+      a.d(t, { o: () => h, vV: () => c });
+      var i = a(33940),
+        r = a(89526),
+        s = a(88464),
         n = a(11301),
         o = a(19304),
         m = a(32765),
@@ -305,20 +305,20 @@
       const l =
         a.p +
         "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = a(30120),
-        p = a.n(_);
-      class c extends s.Component {
+      var p = a(30120),
+        _ = a.n(p);
+      class h extends r.Component {
         render() {
           const e = this.props,
             {
               strAvatarURL: t,
               size: a,
-              className: i,
+              className: s,
               statusStyle: n,
               statusPosition: m,
-              children: _,
+              children: p,
             } = e,
-            c = (0, r._T)(e, [
+            h = (0, i._T)(e, [
               "strAvatarURL",
               "size",
               "className",
@@ -326,10 +326,10 @@
               "statusPosition",
               "children",
             ]),
-            h = [];
+            c = [];
           return (
-            t && h.push(t),
-            h.push(
+            t && c.push(t),
+            c.push(
               (function (e) {
                 switch (e) {
                   case "X-Small":
@@ -345,59 +345,59 @@
                 }
               })(a)
             ),
-            s.createElement(
+            r.createElement(
               "div",
               Object.assign(
                 {
                   className: (0, o.Z)(
-                    p().avatarHolder,
+                    _().avatarHolder,
                     "avatarHolder",
                     "no-drag",
                     a || "Medium",
-                    i
+                    s
                   ),
                 },
-                c
+                h
               ),
-              s.createElement("div", {
-                className: (0, o.Z)(p().avatarStatus, "avatarStatus", m),
+              r.createElement("div", {
+                className: (0, o.Z)(_().avatarStatus, "avatarStatus", m),
                 style: n,
               }),
-              s.createElement(A.j, {
-                className: (0, o.Z)(p().avatar, "avatar"),
-                rgSources: h,
+              r.createElement(A.j, {
+                className: (0, o.Z)(_().avatar, "avatar"),
+                rgSources: c,
                 draggable: !1,
               }),
-              _
+              p
             )
           );
         }
       }
-      let h = class extends s.Component {
+      let c = class extends r.Component {
         render() {
           const e = this.props,
-            { persona: t, size: a, animatedAvatar: i, className: A } = e,
-            l = (0, r._T)(e, [
+            { persona: t, size: a, animatedAvatar: s, className: A } = e,
+            l = (0, i._T)(e, [
               "persona",
               "size",
               "animatedAvatar",
               "className",
             ]);
-          let _ = "";
+          let p = "";
           return (
-            i && i.image_small && 0 != i.image_small.length
-              ? (_ = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + i.image_small)
+            s && s.image_small && 0 != s.image_small.length
+              ? (p = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + s.image_small)
               : t &&
-                ((_ = t.avatar_url_medium),
+                ((p = t.avatar_url_medium),
                 "Small" == a || "X-Small" == a
-                  ? (_ = t.avatar_url)
+                  ? (p = t.avatar_url)
                   : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
-                    (_ = t.avatar_url_full)),
-            s.createElement(
-              c,
+                    (p = t.avatar_url_full)),
+            r.createElement(
+              h,
               Object.assign(
                 {
-                  strAvatarURL: _,
+                  strAvatarURL: p,
                   size: a,
                   className: (0, o.Z)((0, n.sB)(t), A),
                 },
@@ -407,34 +407,34 @@
           );
         }
       };
-      h = (0, r.gn)([i.Pi], h);
-      const u = (0, i.Pi)((e) => {
-        const { profileItem: t, className: a, bDisableAnimation: i } = e,
-          n = (0, r._T)(e, ["profileItem", "className", "bDisableAnimation"]);
+      c = (0, i.gn)([s.Pi], c);
+      const u = (0, s.Pi)((e) => {
+        const { profileItem: t, className: a, bDisableAnimation: s } = e,
+          n = (0, i._T)(e, ["profileItem", "className", "bDisableAnimation"]);
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
-        let A = i ? t.image_large : t.image_small;
+        let A = s ? t.image_large : t.image_small;
         return (
           A || (A = t.image_small),
           A.startsWith("https://") ||
             (A = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + A),
-          s.createElement(
+          r.createElement(
             "div",
             Object.assign(
-              { className: (0, o.Z)(p().avatarFrame, a, "avatarFrame") },
+              { className: (0, o.Z)(_().avatarFrame, a, "avatarFrame") },
               n
             ),
-            s.createElement("img", { className: p().avatarFrameImg, src: A })
+            r.createElement("img", { className: _().avatarFrameImg, src: A })
           )
         );
       });
-      let g = class extends s.Component {
+      let g = class extends r.Component {
         constructor(e) {
           super(e),
             (this.state = { bAnimate: "None" != this.props.loopDuration }),
             (this.m_timer = 0);
         }
         componentDidMount() {
-          this.SetupAnimationTimer();
+          this.props.bParentHovered || this.SetupAnimationTimer();
         }
         SetupAnimationTimer() {
           let e = 0;
@@ -449,14 +449,18 @@
               e = 1e4;
           }
           0 != e &&
+            (this.setState({ bAnimate: "None" != this.props.loopDuration }),
             (this.m_timer = window.setTimeout(
               () => this.setState({ bAnimate: !1 }),
               e
-            ));
+            )));
         }
         StopAnimationTimer() {
           this.m_timer &&
             (window.clearTimeout(this.m_timer), (this.m_timer = 0));
+        }
+        onHover() {
+          this.SetupAnimationTimer();
         }
         componentWillUnmount() {
           this.StopAnimationTimer();
@@ -465,42 +469,63 @@
           this.props.loopDuration != e.loopDuration &&
             ("None" == this.props.loopDuration
               ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
-              : "Infinite" == this.props.loopDuration &&
-                (this.setState({ bAnimate: !0 }), this.StopAnimationTimer()));
+              : "Infinite" == this.props.loopDuration
+              ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+              : (this.setState({ bAnimate: !0 }), this.SetupAnimationTimer())),
+            this.props.bParentHovered != e.bParentHovered &&
+              (this.props.bParentHovered &&
+              "None" != this.props.loopDuration &&
+              "Infinite" != this.props.loopDuration
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : this.state.bAnimate && this.SetupAnimationTimer());
         }
         render() {
           let e = this.props,
             {
               loopDuration: t,
               animatedAvatar: a,
-              avatarFrame: i,
+              avatarFrame: s,
               children: n,
               style: o,
+              bLimitProfileFrameAnimationTime: m,
+              bParentHovered: A,
             } = e,
-            m = (0, r._T)(e, [
+            l = (0, i._T)(e, [
               "loopDuration",
               "animatedAvatar",
               "avatarFrame",
               "children",
               "style",
+              "bLimitProfileFrameAnimationTime",
+              "bParentHovered",
             ]);
           return (
-            m.onClick &&
+            l.onClick &&
               (o = Object.assign(Object.assign({}, o), { cursor: "pointer" })),
             this.state.bAnimate || (a = null),
-            s.createElement(
-              h,
-              Object.assign({ animatedAvatar: a }, m),
-              n,
-              s.createElement(u, {
-                profileItem: i,
-                bDisableAnimation: "None" === this.props.loopDuration,
-              })
+            r.createElement(
+              "div",
+              {
+                onMouseEnter: () =>
+                  this.setState({
+                    bAnimate: "None" != this.props.loopDuration,
+                  }),
+                onMouseLeave: () => this.SetupAnimationTimer(),
+              },
+              r.createElement(
+                c,
+                Object.assign({ animatedAvatar: a }, l),
+                n,
+                r.createElement(u, {
+                  profileItem: s,
+                  bDisableAnimation: m && !this.state.bAnimate,
+                })
+              )
             )
           );
         }
       };
-      g = (0, r.gn)([i.Pi], g);
+      g = (0, i.gn)([s.Pi], g);
     },
   },
 ]);

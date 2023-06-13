@@ -6663,6 +6663,9 @@ hr.VO {
     flex-basis: 200px;
     padding-right: 20px;
     margin-right: 16px;
+    position: sticky;
+    top: 0;
+    height: fit-content;
   }
 }
 .BasicUI .facetedbrowse_FacetedBrowseControls_3fHFf {
@@ -9630,6 +9633,14 @@ button.rbc-input::-moz-focus-inner {
 .promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P::before {
   content: "STAGED";
   color: #ad8e05;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx {
+  background: #4f525f;
+  border-left: 20px solid #8afb84;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx::before {
+  content: "READY";
+  color: #0d2600;
 }
 .promoagendarow_RowCtn_1Cq0N:hover {
   cursor: pointer;

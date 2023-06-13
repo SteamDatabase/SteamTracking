@@ -7585,7 +7585,7 @@
               )
             : n.createElement(vr, { steamLearnContext: {} }, e.children);
         };
-      var Nr = r(26521),
+      var Nr = r(67736),
         jr = r(58127);
       const Mr = (e) => {
           const [t, r] = n.useState(e.arrVersions[0]);

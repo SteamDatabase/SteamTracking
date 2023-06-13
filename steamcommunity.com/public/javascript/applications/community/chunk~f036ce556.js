@@ -3245,18 +3245,21 @@
         _e = r.n(ge);
       function fe(e) {
         const {
-            length: t,
-            value: r,
-            onChange: i,
-            onPaste: s,
-            tone: o,
-            autoFocus: l,
-            disabled: c,
-            loading: u,
-            backupCode: m,
-            allowCharacter: d,
-          } = e,
-          h = (0, n.useRef)([]),
+          length: t,
+          value: r,
+          onChange: i,
+          onPaste: s,
+          tone: o,
+          autoFocus: l,
+          disabled: c,
+          loading: u,
+          backupCode: m,
+          allowCharacter: d,
+        } = e;
+        (0, n.useEffect)(() => {
+          l && p();
+        }, []);
+        const h = (0, n.useRef)([]),
           g = () => i(h.current.map((e) => e.value)),
           _ = (e) => {
             const t = e.target.value;
@@ -3270,7 +3273,11 @@
               ? null === (t = h.current[0]) || void 0 === t || t.select()
               : e.target.select();
           },
-          p = (e) => {
+          p = () => {
+            const e = h.current.find((e) => !e.value);
+            e ? e.focus() : h.current[h.current.length - 1].focus();
+          },
+          b = (e) => {
             const t = e.target;
             if ("Backspace" === e.key || "Delete" === e.key) {
               const r =
@@ -3293,7 +3300,7 @@
               r && (r.focus(), e.preventDefault());
             }
           },
-          b = (e) => {
+          y = (e) => {
             const t = e.clipboardData.getData("Text");
             let r = e.target,
               i = 0;
@@ -3304,9 +3311,9 @@
                 i++;
             g(), e.preventDefault(), s && s();
           },
-          y = [];
+          B = [];
         for (let e = 0; e < t; e++)
-          y.push(
+          B.push(
             n.createElement(de.bX, {
               noFocusRing: !0,
               type: "text",
@@ -3316,8 +3323,8 @@
               onChange: _,
               onFocus: f,
               onClick: (e) => e.stopPropagation(),
-              onKeyDown: p,
-              onPaste: b,
+              onKeyDown: b,
+              onPaste: y,
               value: r[e] ? r[e][0] : "",
               autoComplete: "none",
               autoFocus: 0 === e && l,
@@ -3333,10 +3340,7 @@
               c && _e().Disabled,
               m && _e().BackupCode
             ),
-            onClick: () => {
-              const e = h.current.find((e) => !e.value);
-              e ? e.focus() : h.current[h.current.length - 1].focus();
-            },
+            onClick: p,
           },
           u &&
             n.createElement(
@@ -3344,7 +3348,7 @@
               { className: _e().Loading },
               n.createElement($e, { size: "small" })
             ),
-          y
+          B
         );
       }
       const pe = (0, n.createContext)(!1),

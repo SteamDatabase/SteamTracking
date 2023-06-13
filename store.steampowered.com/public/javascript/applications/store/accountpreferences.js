@@ -139,7 +139,7 @@
     },
     14491: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { AccountPreferencesRoutes: () => M, default: () => B });
+      r.r(t), r.d(t, { AccountPreferencesRoutes: () => B, default: () => R });
       var s = r(89526),
         i = r(59934),
         n = r(33940),
@@ -902,6 +902,7 @@
                 padding: "compact",
                 onChange: i,
                 disabled: l,
+                bottomSeparator: "none",
                 checked: m,
               }),
               s.createElement(
@@ -941,27 +942,38 @@
               )
           );
           var u;
-        }),
-        M = {
+        });
+      var M = r(35993);
+      const B = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
         },
-        B = (e) => {
+        R = (e) => {
           const t = e.match.url,
-            r = M;
+            r = B;
           return s.createElement(
             i.rs,
             null,
-            s.createElement(
-              i.AW,
-              { path: `${t}${r.CookieSettings()}` },
-              s.createElement(y, null)
-            ),
-            s.createElement(
-              i.AW,
-              { path: `${t}${r.NotificationSettings()}` },
-              s.createElement(A, null)
-            )
+            s.createElement(i.AW, {
+              path: `${t}${r.CookieSettings()}`,
+              render: () =>
+                s.createElement(M.d, {
+                  config: {
+                    "cookie-preferences": () => s.createElement(y, null),
+                  },
+                }),
+            }),
+            ";",
+            s.createElement(i.AW, {
+              path: `${t}${r.NotificationSettings()}`,
+              render: () =>
+                s.createElement(M.d, {
+                  config: {
+                    "notification-settings": () => s.createElement(A, null),
+                  },
+                }),
+            }),
+            ";"
           );
         };
     },

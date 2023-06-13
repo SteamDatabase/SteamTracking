@@ -247,6 +247,7 @@ ${COMMUNITY_BASE_URL}my/edit/miniprofile
 ${COMMUNITY_BASE_URL}my/friends/add
 ${COMMUNITY_BASE_URL}my/gamenotifications/
 ${COMMUNITY_BASE_URL}my/groups/
+${COMMUNITY_BASE_URL}my/moderatormessages
 ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${appid}/announcements/ajaxgetmyvote/${AnnouncementGID}
@@ -1026,7 +1027,6 @@ ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
 ${PARTNER_BASE_URL}user/ajaxgetusers
 ${PUBLIC_SHARED_URL}images/
-${PUBLIC_SHARED_URL}images/responsive/header_menu_notifications.png
 ${PUBLIC_SHARED_URL}images/responsive/youtube_16x9_placeholder.gif
 ${ProfileURL}ajaxgroupinvite?select_primary=1&json=1
 ${ProfileURL}ajaxsetprivacy/
@@ -2325,6 +2325,8 @@ https://partner.steamgames.com/doc/store/creator_homepage
 https://partner.steamgames.com/doc/store/localization#supported_languages
 https://partner.steamgames.com/doc/store/news/rss
 https://partner.steamgames.com/doc/store/pricing
+https://partner.steamgames.com/doc/store/promo/midweek
+https://partner.steamgames.com/doc/store/promo/weekend
 https://partner.steamgames.com/docadmin/${method}/${}
 https://partner.steamgames.com/externalapptesting/${bPass ? 'forcepassapp/' : 'forcefailapp/'}
 https://partner.steamgames.com/externalapptesting/ajaxclosetestingrequest/${appid}

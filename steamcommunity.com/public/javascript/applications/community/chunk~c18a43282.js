@@ -187,6 +187,7 @@
         SocialIcon: "eventbbcodeparser_SocialIcon_1wyn6",
         LocalizeBlock: "eventbbcodeparser_LocalizeBlock_hXuYi",
         CheckMark: "eventbbcodeparser_CheckMark_1nwMV",
+        ScreenshotCarousel: "eventbbcodeparser_ScreenshotCarousel_3LgCS",
       };
     },
     40465: (e) => {
@@ -473,6 +474,7 @@
     },
     65014: (e) => {
       e.exports = {
+        PopupScreenshotModal: "screenshotpopout_PopupScreenshotModal_Q9ps-",
         PopupScreenshotContainer:
           "screenshotpopout_PopupScreenshotContainer_2mYDh",
         PopupScreenshot: "screenshotpopout_PopupScreenshot_1q7Ow",
@@ -3525,7 +3527,7 @@
         n = r(89526),
         a = r(43707),
         s = r(57605),
-        o = r(2647),
+        o = r(99307),
         l = r(57742),
         d = r(701),
         c = r(19304),
@@ -6023,6 +6025,11 @@
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
+                  playtime_disconnected: {
+                    n: 15,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
                 },
               }),
             l.sm_m
@@ -6415,6 +6422,11 @@
                     br: n.FE.readUint32,
                     pbr: n.FE.readPackedUint32,
                     bw: n.Xc.writeRepeatedUint32,
+                  },
+                  playtime_disconnected: {
+                    n: 19,
+                    br: n.FE.readInt32,
+                    bw: n.Xc.writeInt32,
                   },
                 },
               }),
@@ -17830,10 +17842,10 @@
           (this.m_rtUnlockTime = 0), (this.m_schUnlockTimeout = new g.Ar());
         }
         UnlockH264(e, t) {
-          (0, te.U5)("RemotePlay.UnlockH264")
+          this.BCanUnlockH264()
             ? (e.SetState(ie.Unlocking, ""),
               console.log("Unlocking H.264 for broadcast video playback"),
-              SteamClient.RemotePlay.UnlockH264(),
+              this.RequestUnlockH264(),
               (this.m_broadcast = e),
               (this.m_video = t),
               (this.m_rtUnlockTime = Date.now()),
@@ -17841,6 +17853,27 @@
                 this.CheckUnlockState()
               ))
             : e.SetState(ie.Error, (0, y.Xx)("#BroadcastWatch_MinBrowser"));
+        }
+        BCanUnlockH264() {
+          return (0, te.U5)("RemotePlay.UnlockH264")
+            ? (console.log("Client supports direct H.264 unlock"), !0)
+            : (0, te.U5)("BrowserView.PostMessageToParent")
+            ? (console.log("Client supports browserview H.264 unlock"), !0)
+            : (console.log("Client does not support H.264 unlock"), !1);
+        }
+        RequestUnlockH264() {
+          (0, te.U5)("RemotePlay.UnlockH264")
+            ? (console.log("Requesting direct H.264 unlock"),
+              SteamClient.RemotePlay.UnlockH264())
+            : (0, te.U5)("BrowserView.PostMessageToParent")
+            ? (console.log("Requesting browserview unlock"),
+              SteamClient.BrowserView.PostMessageToParent(
+                "UnlockH264Request",
+                "CUnlockH264Helper"
+              ))
+            : console.log(
+                "Failed to request H.264 unlock: no method supported"
+              );
         }
         CheckUnlockState() {
           if (this.m_broadcast.m_eWatchState != ie.Unlocking) return;
@@ -25136,7 +25169,7 @@
       }
       (0, o.gn)([u.ak], _.prototype, "LoadAppCompabitilityResult", null);
       var h = r(57605),
-        g = r(2647),
+        g = r(99307),
         y = r(701),
         f = r(14826),
         b = r(96469),
@@ -26110,19 +26143,21 @@
           { bCanUseLink: r } = i.useContext(l),
           s = (0, n.k6)();
         if (!e.eventModel) return null;
-        const o = r && u(e.route, e.eventModel),
-          d = f(e.eventModel, e.route, o ? "relative" : "absolute");
-        return o
+        const d = r && u(e.route, e.eventModel),
+          c =
+            (o.De.IN_CLIENT && !d ? "steam://openurl/" : "") +
+            f(e.eventModel, e.route, d ? "relative" : "absolute");
+        return d
           ? i.createElement(
               a.IS,
               {
                 style: e.style,
                 className: e.className,
-                href: s.createHref({ pathname: d }),
+                href: s.createHref({ pathname: c }),
                 onClick: (t) => {
                   var r;
                   null === (r = e.onClick) || void 0 === r || r.call(e, t),
-                    s.push(d),
+                    s.push(c),
                     t.preventDefault();
                 },
                 preferredFocus: t,
@@ -26132,7 +26167,7 @@
           : i.createElement(
               a.IS,
               {
-                href: d,
+                href: c,
                 style: e.style,
                 className: e.className,
                 onClick: e.onClick,
@@ -26161,7 +26196,7 @@
         g = r(93765),
         y = r(57605),
         f = r(21904),
-        b = r(2647),
+        b = r(99307),
         B = r(57742),
         v = r(701),
         w = r(69338),
@@ -26699,7 +26734,7 @@
         _ = r(14826),
         h = r(23217),
         g = r(32765),
-        y = r(2647),
+        y = r(99307),
         f = r(57742),
         b = r(69338),
         B = r(72213),
@@ -27654,7 +27689,7 @@
       "use strict";
       r.d(t, { r: () => o });
       var i = r(89526),
-        n = r(2647),
+        n = r(99307),
         a = r(14826),
         s = r(32765);
       const o = (e) => {
@@ -28057,7 +28092,12 @@
                       },
                       n.createElement(
                         "div",
-                        { className: N().StoreSaleWidgetTitle },
+                        {
+                          className: (0, A.Z)(
+                            N().StoreSaleWidgetTitle,
+                            "StoreSaleWidgetTitle"
+                          ),
+                        },
                         u.GetName()
                       )
                     )
@@ -28327,7 +28367,7 @@
             (l = N().HeaderCapsuleImageContainer);
         return n.createElement(
           "div",
-          { className: l },
+          { className: (0, A.Z)(l, "CapsuleImageCtn") },
           n.createElement(F.J, {
             lazyLoad: !0,
             srcs: a,
@@ -29069,7 +29109,7 @@
         c = r(17318),
         m = r.n(c),
         u = r(32905),
-        p = r(2647),
+        p = r(99307),
         _ = r(57742),
         h = r(701),
         g = r(71161),
@@ -29248,37 +29288,42 @@
         m = r(19304);
       function u(e) {
         var t;
-        const { info: r } = e,
-          [n] = (0, o.jk)(r.id, (0, s.TM)(r.type), { include_assets: !0 }),
-          [d, u] = i.useState(0);
-        if (!n)
+        const { info: r, bPreferLibrary: n } = e,
+          [d] = (0, o.jk)(r.id, (0, s.TM)(r.type), { include_assets: !0 }),
+          [u, _] = i.useState(0);
+        if (!d)
           return i.createElement("div", {
             className: c().HeroCapsuleImageContainer,
           });
-        let _ = n.GetAssets().GetHeroCapsuleURL(),
-          h = n.GetAssets().GetLibraryCapsuleURL();
+        let h = d.GetAssets().GetHeroCapsuleURL(),
+          g = d.GetAssets().GetLibraryCapsuleURL();
         if (
-          (null === (t = n.GetIncludedAppIDs()) || void 0 === t
+          (null === (t = d.GetIncludedAppIDs()) || void 0 === t
             ? void 0
             : t.length) > 0 &&
-          !_
+          !h
         ) {
-          const e = a.Z.Get().GetApp(n.GetIncludedAppIDs()[0]);
+          const e = a.Z.Get().GetApp(d.GetIncludedAppIDs()[0]);
           e &&
-            (_ || (_ = e.GetAssets().GetHeroCapsuleURL()),
-            h || (h = e.GetAssets().GetLibraryCapsuleURL()));
+            (h || (h = e.GetAssets().GetHeroCapsuleURL()),
+            g || (g = e.GetAssets().GetLibraryCapsuleURL()));
         }
-        if (_)
+        if (h && (!n || !g))
           return i.createElement(
             "div",
-            { className: c().HeroCapsuleImageContainer },
+            {
+              className: (0, m.Z)(
+                c().HeroCapsuleImageContainer,
+                "HeroCapsuleImageContainer"
+              ),
+            },
             i.createElement("img", {
-              src: _,
+              src: h,
               className: c().CapsuleImage,
-              alt: n.GetName(),
+              alt: d.GetName(),
             })
           );
-        if (h)
+        if (g)
           return i.createElement(
             "div",
             {
@@ -29289,23 +29334,23 @@
             },
             i.createElement("div", {
               className: c().FallbackBackground,
-              style: { backgroundImage: `url(${h})` },
+              style: { backgroundImage: `url(${g})` },
             }),
             i.createElement("img", {
-              src: h,
+              src: g,
               className: c().CapsuleImage,
-              alt: n.GetName(),
+              alt: d.GetName(),
             })
           );
-        const g = new Array();
-        p(n, !0, g);
-        const y = g.length - 1,
-          f = (e) => {
-            const t = g.indexOf(e);
-            t >= y && t < g.length - 1 && u(t + 1);
+        const y = new Array();
+        p(d, !0, y);
+        const f = y.length - 1,
+          b = (e) => {
+            const t = y.indexOf(e);
+            t >= f && t < y.length - 1 && _(t + 1);
           };
-        if (d < g.length) {
-          const e = g[d];
+        if (u < y.length) {
+          const e = y[u];
           return i.createElement(
             "div",
             { className: c().LibraryFallbackAssetImageContainer },
@@ -29315,10 +29360,10 @@
             }),
             i.createElement(l.J, {
               lazyLoad: !0,
-              srcs: g,
+              srcs: y,
               className: c().CapsuleImage,
-              alt: n.GetName(),
-              onImageError: f,
+              alt: d.GetName(),
+              onImageError: b,
             })
           );
         }
@@ -29368,7 +29413,7 @@
       var i = r(89526),
         n = r(19304),
         a = r(7029),
-        s = r(2647),
+        s = r(99307),
         o = r(57742),
         l = r(65014),
         d = r.n(l),
@@ -29392,6 +29437,7 @@
             bOKDisabled: !0,
             closeModal: t,
             bHideCloseIcon: !0,
+            modalClassName: d().PopupScreenshotModal,
           },
           i.createElement(p, {
             index: n,

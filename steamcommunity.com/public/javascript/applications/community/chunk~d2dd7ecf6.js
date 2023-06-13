@@ -4402,7 +4402,7 @@
         d = a(57742),
         u = a(4306),
         m = a(60361),
-        _ = a(2647);
+        _ = a(99307);
       function p(e) {
         const { event: t, closeModal: a } = e;
         return l.createElement(
@@ -6886,7 +6886,7 @@
         p = a(93675),
         g = a(17318),
         h = a.n(g),
-        v = a(2647),
+        v = a(99307),
         S = a(57742),
         E = a(1721),
         f = a.n(E),
@@ -7221,7 +7221,7 @@
         r = a(93414),
         o = a(97334),
         s = a(7948),
-        c = a(2647),
+        c = a(99307),
         d = a(57742),
         u = a(69338),
         m = a(23217),
@@ -7318,7 +7318,7 @@
         d = a(17318),
         u = a.n(d),
         m = a(46294),
-        _ = a(2647),
+        _ = a(99307),
         p = a(57742),
         g = a(69338),
         h = a(23217),
@@ -8733,7 +8733,7 @@
         s = a(66615),
         c = a(19304),
         d = a(60161),
-        u = a(2647),
+        u = a(99307),
         m = a(57742),
         _ = a(69338),
         p = a(24334),
@@ -10745,7 +10745,7 @@
         c = a(97334),
         d = a(57605),
         u = a(17318),
-        m = a(2647),
+        m = a(99307),
         _ = a(57742),
         p = a(69338),
         g = a(23217),
@@ -12720,7 +12720,7 @@
         (0, n.gn)([M.ak], z.prototype, "MoveRight", null),
         (0, n.gn)([M.ak], z.prototype, "OnGamepadButtonDown", null),
         (0, n.gn)([M.ak], z.prototype, "OnGamepadDirection", null);
-      var H = a(2647),
+      var H = a(99307),
         U = a(84291),
         V = a(71161),
         Z = a(58218),
@@ -17943,7 +17943,7 @@
         u = a(1063),
         m = a(17318),
         _ = a.n(m),
-        p = a(2647),
+        p = a(99307),
         g = a(57742),
         h = a(69338),
         v = a(23217),
@@ -18438,7 +18438,7 @@
         o = a(46132),
         s = a(67727),
         c = a(1063),
-        d = a(2647),
+        d = a(99307),
         u = a(57742),
         m = a(701),
         _ = a(60161),
@@ -18610,7 +18610,7 @@
         s = a(5386),
         c = a(17318),
         d = a.n(c),
-        u = a(2647),
+        u = a(99307),
         m = a(19304),
         _ = a(14826),
         p = a(4306),
@@ -18855,7 +18855,7 @@
         p = a(57605),
         g = a(17547),
         h = a(21904),
-        v = a(2647),
+        v = a(99307),
         S = a(69338),
         E = a(24166),
         f = a(14826);
@@ -19533,7 +19533,7 @@
         s = a(34976),
         c = a(17318),
         d = a(70750),
-        u = a(2647),
+        u = a(99307),
         m = a(69338),
         _ = a(19304),
         p = a(14826),
@@ -19694,7 +19694,7 @@
         E = a(17318),
         f = a(70750),
         b = a(21904),
-        y = a(2647),
+        y = a(99307),
         C = a(57742),
         T = a(49985),
         I = a(69338),
@@ -20396,7 +20396,7 @@
         f = a(45429),
         b = a(81362),
         y = a(32777),
-        C = a(2647),
+        C = a(99307),
         T = a(57742),
         I = a(49985),
         D = a(69338),
@@ -20996,7 +20996,7 @@
         E = a(27915),
         f = a(5386),
         b = a(70750),
-        y = a(2647),
+        y = a(99307),
         C = a(57742),
         T = a(49985),
         I = a(69338),
@@ -22684,7 +22684,7 @@
           )
         );
       }
-      var k = a(2647),
+      var k = a(99307),
         G = a(57742),
         M = a(701),
         L = a(60161),
@@ -23878,7 +23878,7 @@
         f = a(88464),
         b = a(1063),
         y = a(34976),
-        C = a(2647),
+        C = a(99307),
         T = a(4306),
         I = a(86276),
         D = a(35427);
@@ -25881,20 +25881,21 @@
       function Me(e) {
         const { saleSection: t, bSmartSection: a, editModel: n } = e,
           [i, l] = (0, d.useState)((0, ke.eu)(t).toString()),
-          [o, s, m, p, g, v] = (0, c.SZ)(() => [
+          [o, s, m, p, g, v, S] = (0, c.SZ)(() => [
             t.section_type,
             t.smart_section_type,
             t.single_item_style,
             t.capsules_per_row_array,
             t.smart_section,
             Boolean(t.show_as_carousel),
+            (0, ke.qH)(t),
           ]),
-          S = a && "items" === o && ("tag" === s || "category" === s),
-          E = "items" === o,
-          f = "items" === o || "events" === o || "sale_events" === o,
-          b = "items" === o,
-          y = "library" === m,
-          C =
+          E = a && "items" === o && ("tag" === s || "category" === s),
+          f = "items" === o,
+          b = "items" === o || "events" === o || "sale_events" === o,
+          y = "items" === o,
+          C = "library" === m,
+          T =
             "items" === o &&
             (!p || (1 == (null == p ? void 0 : p.length) && 1 == p[0]));
         return d.createElement(
@@ -25920,7 +25921,7 @@
                   showValue: !0,
                   min: 1,
                   max: 3,
-                  value: (0, ke.qH)(t),
+                  value: S,
                   onChange: (e) => {
                     (t.carousel_rows = e), n.SetDirty(r.jB.jsondata_sales);
                   },
@@ -25935,7 +25936,7 @@
                 Le,
                 Object.assign({}, e, { setMaxRowsString: l })
               ),
-              S &&
+              E &&
                 d.createElement(V, {
                   varName: "random_from_entire_set",
                   editModel: n,
@@ -25990,15 +25991,15 @@
                   textToken: "#Sale_Section_CarouselAutoAdvance",
                   ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
                 }),
-              E &&
+              f &&
                 d.createElement(
                   d.Fragment,
                   null,
                   d.createElement(Be, { editModel: n, section: t }),
                   d.createElement(Oe, { editModel: n, section: t })
                 ),
-              d.createElement(Ne, { editModel: n, section: t, bDisabled: !C }),
-              y &&
+              d.createElement(Ne, { editModel: n, section: t, bDisabled: !T }),
+              C &&
                 d.createElement(V, {
                   varName: "show_purchase_options",
                   editModel: n,
@@ -26006,7 +26007,7 @@
                   textToken: "#Sale_Section_ShowPurchaseOptions",
                   ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
                 }),
-              f &&
+              b &&
                 d.createElement(V, {
                   valveOnly: !0,
                   varName: "hide_prices",
@@ -26023,7 +26024,7 @@
                 varName: "hide_section_if_too_few_items",
                 valveOnly: !0,
               }),
-              b &&
+              y &&
                 d.createElement(V, {
                   valveOnly: !0,
                   varName: "show_deck_compability_details",
@@ -33002,7 +33003,7 @@
         w = a(17318),
         x = a(70750),
         A = a(46294),
-        k = a(2647),
+        k = a(99307),
         G = a(57742),
         M = a(1721),
         L = a.n(M),

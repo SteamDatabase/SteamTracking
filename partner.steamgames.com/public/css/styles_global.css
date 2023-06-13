@@ -143,17 +143,16 @@ a.tooltip:hover span { /*the span will display just on :hover state*/
 }
 
 table {
-	font-size: 11px; 
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
-	text-align: left;
-}
-table .normal_text {
 	font-size: 13px;
-	font-family: Arial, Helvetica, sans-serif;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			text-align: left;
 }
 
 td {
-	padding: 2px 6px 2px 0px;
+    padding: 7px 7px 7px 7px;
+    vertical-align: middle;
 }
 
 td.dim {
@@ -162,8 +161,10 @@ td.dim {
 }
 
 th {
-	padding: 2px 12px 2px 0px; 
-	background: #353841;
+	padding: 2px 12px 2px 7px;
+    font-weight: normal;
+    position: sticky;
+    top: 0;
 }
 
 tr.dirty {

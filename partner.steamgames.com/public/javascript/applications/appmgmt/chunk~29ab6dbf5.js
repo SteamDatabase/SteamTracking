@@ -882,6 +882,42 @@
                   })))
           );
         }
+        BHasOptInTrailer(t, e) {
+          var n;
+          const i = this.GetRegistration(t, e);
+          return Boolean(
+            i &&
+              i.opt_in &&
+              (null === (n = i.jsondata) || void 0 === n
+                ? void 0
+                : n.trailer_permission) &&
+              i.jsondata.rtime_granting_trailer
+          );
+        }
+        BHasOptInDemo(t, e) {
+          var n;
+          const i = this.GetRegistration(t, e);
+          return Boolean(
+            i &&
+              i.opt_in &&
+              (null === (n = i.jsondata) || void 0 === n
+                ? void 0
+                : n.demo_permission) &&
+              i.jsondata.rtime_granting_demo
+          );
+        }
+        BHasOptInGameProfile(t, e) {
+          var n;
+          const i = this.GetRegistration(t, e);
+          return Boolean(
+            i &&
+              i.opt_in &&
+              (null === (n = i.jsondata) || void 0 === n
+                ? void 0
+                : n.game_profile_intent) &&
+              i.jsondata.rtime_granting_profile
+          );
+        }
         CreateRegistrationNotSaved(t, e) {
           console.log("CreateOrGetRegistration: Creating new registration");
           return {
@@ -2143,13 +2179,13 @@
         HV: () => _,
         HX: () => T,
         OB: () => F,
-        OG: () => x,
+        OG: () => j,
         Ol: () => S,
         PP: () => I,
         R2: () => O,
         Rs: () => U,
         Tj: () => k,
-        We: () => j,
+        We: () => K,
         X1: () => y,
         _w: () => D,
         bS: () => M,
@@ -2162,7 +2198,7 @@
         ps: () => L,
         rX: () => C,
         sN: () => H,
-        uT: () => K,
+        uT: () => x,
         xm: () => z,
         yh: () => N,
       });
@@ -3007,14 +3043,14 @@
       function T(t) {
         return v.Get().BHasLocalPriceOverrides(t);
       }
-      function x() {
+      function j() {
         const [t, e] = o.useState(() => v.Get().GetAllLocalPriceOverrides());
         return (0, u.Qg)(v.Get().m_allPriceOverridesCallbackList, e), t;
       }
-      function K(t) {
+      function x(t) {
         return (0, m.SZ)(() => v.Get().GetLocalOverrideCountForPriceKey(t));
       }
-      function j() {
+      function K() {
         return o.useCallback(() => {
           var t;
           return (
@@ -3087,11 +3123,11 @@
         _9: () => A,
         dy: () => T,
         hr: () => y,
-        k: () => x,
+        k: () => j,
         pl: () => L,
         s$: () => w,
         yn: () => N,
-        z$: () => K,
+        z$: () => x,
       });
       var i = n(65395),
         a = n(16586),
@@ -3775,7 +3811,7 @@
           )
         );
       }
-      function x(t) {
+      function j(t) {
         if ((0, s.kk)(t)) return !0;
         const e = (0, i.fH)(t);
         if (!(null == e ? void 0 : e.opt_in_name)) return !0;
@@ -3785,7 +3821,7 @@
           n.some((t) => !t.restricted && !t.pruned)
         );
       }
-      function K(t) {
+      function x(t) {
         const e = (function () {
             const [t, e] = l.useState(I.IsInitialized());
             return (0, g.Qg)(I.s_initializationCallbackList, e), t;
