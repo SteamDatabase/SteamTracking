@@ -1,22 +1,3 @@
- ATSFontActivateFromFileReference
- ATSFontFindFromName
- ATSFontFindFromPostScriptName
- ATSFontGetHorizontalMetrics
- ATSUCreateAndCopyStyle
- ATSUCreateStyle
- ATSUCreateTextLayoutWithTextPtr
- ATSUDirectGetLayoutDataArrayPtrFromTextLayout
- ATSUDirectReleaseLayoutDataArrayPtr
- ATSUDisposeStyle
- ATSUDisposeTextLayout
- ATSUDrawText
- ATSUGetGlyphBounds
- ATSUGlyphGetScreenMetrics
- ATSUMatchFontsToText
- ATSUMeasureTextImage
- ATSUSetAttributes
- ATSUSetLayoutControls
- ATSUSetTransientFontMatching
  AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
  AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
  AudioHardwareAddPropertyListener
@@ -170,6 +151,7 @@
  OBJC_METACLASS_$_NSView
  OBJC_METACLASS_$_NSWindow
  OSIsCompatible
+ OSTypesAreCompatible
  PasteboardClear
  PasteboardCopyItemFlavorData
  PasteboardCreate

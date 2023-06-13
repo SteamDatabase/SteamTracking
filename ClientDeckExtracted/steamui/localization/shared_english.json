@@ -1158,6 +1158,7 @@
     "SteamNotification_HelpRequest_Author": "Steam Support",
     "SteamNotification_HelpRequest_Title": "New response to your help request",
     "SteamNotification_HelpRequest_Body": "Ticket %1$s",
+    "SteamNotification_ModeratorMessage_Title": "You've received a new community message",
     "SteamNotification_AsyncGame_Title": "Game Session",
     "SteamNotification_AsyncGame_Action": "New turn waiting",
     "SteamNotification_AsyncGame_Action_Short": "New turn waiting in %1$s",

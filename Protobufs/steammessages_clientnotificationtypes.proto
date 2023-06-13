@@ -41,6 +41,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_LoginRefresh = 36;
 	k_EClientNotificationType_MajorSale = 37;
 	k_EClientNotificationType_TimerExpired = 38;
+	k_EClientNotificationType_ModeratorMsg = 39;
 }
 
 enum ESystemUpdateNotificationType {

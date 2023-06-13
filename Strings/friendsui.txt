@@ -14,12 +14,10 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-dE
-dE
+@dE
+@dE
 __unwind_info
 __TEXT
-LfE
-LfE
 __eh_frame
 __TEXT
 __DATA

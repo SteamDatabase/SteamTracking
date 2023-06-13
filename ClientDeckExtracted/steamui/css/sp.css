@@ -3906,14 +3906,22 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   margin: auto;
   user-select: none;
 }
-.steamdesktopoverlay_TopSection_fi6UD .steamdesktopoverlay_BackToGame_2LJMR {
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TopSectionRightSide_2uM3o {
   flex: 1 1 0;
   width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TopSectionRightSide_2uM3o
+  .steamdesktopoverlay_BackToGame_2LJMR {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 .steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TopSectionRightSide_2uM3o
   .steamdesktopoverlay_BackToGame_2LJMR
   .steamdesktopoverlay_BackToGameBtn_mh8m9 {
   width: 50px;
@@ -3922,11 +3930,13 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   background-color: #23262e;
 }
 .steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TopSectionRightSide_2uM3o
   .steamdesktopoverlay_BackToGame_2LJMR
   .steamdesktopoverlay_BackToGameBtn_mh8m9:hover {
   background-color: #3d4450;
 }
 .steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TopSectionRightSide_2uM3o
   .steamdesktopoverlay_BackToGame_2LJMR
   .steamdesktopoverlay_BackToGameBtn_mh8m9
   > svg {
@@ -3934,11 +3944,13 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   vertical-align: middle;
 }
 .steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TopSectionRightSide_2uM3o
   .steamdesktopoverlay_BackToGame_2LJMR
   .steamdesktopoverlay_TextContainer_rgGY_ {
   max-width: calc(100% - 60px);
 }
 .steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TopSectionRightSide_2uM3o
   .steamdesktopoverlay_BackToGame_2LJMR
   .steamdesktopoverlay_GameName_3mi5H {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -3962,6 +3974,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   text-align: right;
 }
 .steamdesktopoverlay_TopSection_fi6UD
+  .steamdesktopoverlay_TopSectionRightSide_2uM3o
   .steamdesktopoverlay_BackToGame_2LJMR
   .steamdesktopoverlay_KBShortcut_2EuLv {
   margin-top: 5px;
@@ -4083,6 +4096,91 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .steamdesktopoverlay_TopSection_fi6UD
   .steamdesktopoverlay_ExitGameBtn_Boygo:hover {
   background-color: #e22a27;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b8bcbf;
+  font-size: 14px;
+  line-height: 20px;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz div {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz svg {
+  height: 1em;
+  width: 1em;
+  margin-bottom: -0.1em;
+  padding-top: 0.1em;
+  padding-right: 0.1em;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_IPShareStatus_2rHRb
+  .steamdesktopoverlay_IPShareLearnMore_dltVz {
+  cursor: pointer;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_IPShareStatus_2rHRb
+  .steamdesktopoverlay_IPShareLearnMore_dltVz:hover {
+  color: #fff;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_IPShareStatus_2rHRb
+  .steamdesktopoverlay_IPShareLearnMore_dltVz
+  svg {
+  margin-left: 0.5ex;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_PingReduced_1Eg0m {
+  color: #90ee90;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz .steamdesktopoverlay_PingMS_3vn58,
+.steamdesktopoverlay_NetworkStatus_1QRGz .steamdesktopoverlay_Loss_1TtP6 {
+  padding-left: 0.5em;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_PingMS_3vn58.steamdesktopoverlay_Great_9GwWY,
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_Loss_1TtP6.steamdesktopoverlay_Great_9GwWY {
+  color: #90ee90;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_PingMS_3vn58.steamdesktopoverlay_Good_2W7pg,
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_Loss_1TtP6.steamdesktopoverlay_Good_2W7pg {
+  color: green;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_PingMS_3vn58.steamdesktopoverlay_OK_D5kBR,
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_Loss_1TtP6.steamdesktopoverlay_OK_D5kBR {
+  color: #ff0;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_PingMS_3vn58.steamdesktopoverlay_Poor_3h3ey,
+.steamdesktopoverlay_NetworkStatus_1QRGz
+  .steamdesktopoverlay_Loss_1TtP6.steamdesktopoverlay_Poor_3h3ey {
+  color: red;
+}
+.steamdesktopoverlay_NetworkStatus_1QRGz .steamdesktopoverlay_SDRPOPID_1gyfR {
+  color: #fff;
 }
 .steamdesktopoverlay_ToolbarMaxWidthContainer_1EI98 {
   flex: 1;
@@ -4389,7 +4487,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   color: #fff;
 }
 .steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_OpacityButton_2J5BI
+  .steamdesktopoverlay_CloudSyncButton_2yvoV
   svg {
   height: 15px;
 }
@@ -6777,6 +6875,8 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .titlebarcontrols_TitleBarControls_3cykd
   .titlebarcontrols_SupportAlertsButton_32TmR,
 .titlebarcontrols_TitleBarControls_3cykd
+  .titlebarcontrols_OSEndOfLifeAlertsButton_1AcQ7,
+.titlebarcontrols_TitleBarControls_3cykd
   .titlebarcontrols_ParentalToggleButton_13vrq,
 .titlebarcontrols_TitleBarControls_3cykd
   .titlebarcontrols_AnnouncementsButton_5wILZ,
@@ -6919,6 +7019,22 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   height: 24px;
 }
 .titlebarcontrols_SupportAlertsButton_32TmR:hover {
+  background-color: #d75a5a;
+  transition: background-color 0.15s ease-out;
+}
+.titlebarcontrols_OSEndOfLifeAlertsButton_1AcQ7 {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0px 12px;
+  border-radius: 2px;
+  background-color: #9a3130;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 24px;
+}
+.titlebarcontrols_OSEndOfLifeAlertsButton_1AcQ7:hover {
   background-color: #d75a5a;
   transition: background-color 0.15s ease-out;
 }
@@ -8370,7 +8486,11 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   box-sizing: border-box;
   display: flex;
 }
-.steamdesktop_Wrapper_1ENHE .steamdesktop_FocusBar_3pXas {
+.steamdesktop_Wrapper_1ENHE.Maximized,
+.Maximized .steamdesktop_Wrapper_1ENHE {
+  border: none;
+}
+.steamdesktop_FocusBar_3pXas {
   position: absolute;
   height: 1px;
   width: 100%;
@@ -8378,8 +8498,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   display: none;
   pointer-events: none;
 }
-.steamdesktop_Wrapper_1ENHE.WindowFocus .steamdesktop_FocusBar_3pXas,
-.WindowFocus .steamdesktop_Wrapper_1ENHE .steamdesktop_FocusBar_3pXas {
+.steamdesktop_FocusBar_3pXas.steamdesktop_Focused_2MkHZ {
   display: block;
   background: linear-gradient(
     to right,
@@ -8387,10 +8506,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     #1aa0ff53 50%,
     transparent 90%
   );
-}
-.steamdesktop_Wrapper_1ENHE.Maximized,
-.Maximized .steamdesktop_Wrapper_1ENHE {
-  border: none;
 }
 .steamdesktop_OuterFrame_3mz8w {
   width: 100%;

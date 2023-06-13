@@ -1,4 +1,4 @@
-var CLSTAMP = "8118551";
+var CLSTAMP = "8123714";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4152,8 +4152,7 @@ var CLSTAMP = "8118551";
           }
           OnMessage(e) {
             "window_moved" == e.data && this.OnResize(),
-              "popup-created" == e.data && this.OnCreateInternal(),
-              "steam_shutdown" == e.data && SteamClient.User.StartShutdown(!1);
+              "popup-created" == e.data && this.OnCreateInternal();
           }
           Show(e = d.EWindowBringToFront.k_EWindowBringToFrontAndForceOS) {
             var t, r;
@@ -4476,9 +4475,9 @@ var CLSTAMP = "8118551";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 10 2023 : 00:02:04",
-                BUILD_TIME_UTC: "Jun 10 2023 : 07:02:04",
-                BUILD_RTIME_UTC: 1686380524,
+                BUILD_TIME_LOCAL: "Jun 12 2023 : 21:09:58",
+                BUILD_TIME_UTC: "Jun 13 2023 : 04:09:58",
+                BUILD_RTIME_UTC: 1686629398,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -10768,9 +10767,15 @@ var CLSTAMP = "8118551";
                         this.ResolveAwaitWithTransportError(r, t, 2, e);
                       });
               } else
-                console.warn(
-                  "shared connection handle is empty, dropping traffic"
-                );
+                this.ResolveAwaitWithTransportError(
+                  r,
+                  t,
+                  102,
+                  "Shared connection handle is empty, dropping traffic"
+                ),
+                  console.warn(
+                    "Shared connection handle is empty, dropping traffic"
+                  );
             });
           }
           SendInternal(e) {
@@ -27367,6 +27372,7 @@ var CLSTAMP = "8118551";
             RightStickScroll: () => Kn,
             RollAxisOverlay: () => Ui,
             Rows: () => Xe,
+            SDR: () => yo,
             Schedule: () => Ft,
             Scratchpad: () => Dt,
             Screenshot: () => I,
@@ -40298,6 +40304,25 @@ var CLSTAMP = "8118551";
             })
           );
         }
+        function yo(e) {
+          return i.createElement(
+            "svg",
+            {
+              width: "36",
+              height: "36",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_SDR",
+            },
+            i.createElement("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M7.72842 4.7124C8.6669 4.8761 9.22437 4.90553 10.2063 4.90553L10.2065 4.9057C11.758 4.9057 13.3913 4.50303 14.5144 4.05381C14.8327 3.92663 15.1281 3.7991 15.4273 3.64909C15.4613 3.63207 15.4948 3.61534 15.5278 3.59881C15.784 3.47074 16.0157 3.35489 16.2659 3.20717C16.4064 3.12409 16.5438 3.03309 16.6803 2.94266C17.3731 2.48382 18.0435 2.03979 18.9788 2.72008C19.6082 3.17809 20.8182 3.81266 21.4904 4.05027L22.4691 4.38917C23.954 4.86609 26.0313 5.04347 27.6353 4.80723C27.7854 4.78512 27.9326 4.75773 28.0771 4.73085C28.8169 4.59325 29.4854 4.4689 30.1037 5.13347C30.3622 5.41133 30.5146 5.84175 30.5146 6.36943V17.3831C30.5146 18.5456 30.424 19.73 30.2067 20.6975C30.0937 21.2005 29.9876 21.6543 29.8337 22.1178C29.4651 23.2276 29.0207 24.2119 28.4138 25.1984L27.687 26.2644C26.5961 27.7249 25.4204 28.7211 23.95 29.736L21.3453 31.5953C21.1704 31.7159 21.0059 31.8356 20.8424 31.9546C20.6642 32.0843 20.4871 32.2133 20.2986 32.3417C20.1167 32.4655 19.9446 32.591 19.7725 32.7166C19.6021 32.8409 19.4317 32.9652 19.2519 33.0877C19.2041 33.1203 19.1564 33.1542 19.1082 33.1885C18.8081 33.4021 18.4884 33.6295 18.0005 33.6295C17.4169 33.6295 16.7331 33.1116 16.1628 32.6796C15.9982 32.555 15.843 32.4374 15.7024 32.3416C15.5132 32.2128 15.3355 32.0834 15.1568 31.9533C14.9938 31.8347 14.83 31.7154 14.6557 31.5952C14.0783 31.1961 11.4072 29.3139 10.9864 28.9712C10.916 28.9135 10.8627 28.8705 10.7998 28.8196C10.7823 28.8054 10.7639 28.7906 10.7442 28.7747C10.6957 28.7354 10.6567 28.7023 10.6187 28.6699C10.5823 28.639 10.5468 28.6088 10.5046 28.5746C10.1642 28.2999 9.89733 28.033 9.58925 27.7249L9.57523 27.7109C9.52929 27.665 9.48045 27.6182 9.43103 27.571C9.32164 27.4663 9.20943 27.359 9.11962 27.2518L9.11769 27.2495C8.5097 26.5229 8.09586 26.0284 7.58717 25.1983C7.27281 24.6849 6.9056 23.9996 6.67255 23.442C6.21843 22.3542 6.07265 21.9039 5.80139 20.7272C5.58409 19.7834 5.48633 18.5948 5.48633 17.4562V6.36928C5.48633 5.8279 5.64467 5.39614 5.91525 5.11472C6.51092 4.49473 7.03068 4.58774 7.6148 4.69227C7.6524 4.69899 7.69026 4.70577 7.72842 4.7124ZM13.4207 9.35834C14.7763 8.45258 16.37 7.96913 18.0003 7.96913C19.0828 7.96913 20.1547 8.18234 21.1548 8.5966C22.1549 9.01085 23.0636 9.61804 23.8291 10.3835C24.5945 11.1489 25.2017 12.0576 25.616 13.0577C26.0302 14.0578 26.2434 15.1298 26.2434 16.2123C26.2434 17.8426 25.76 19.4363 24.8542 20.7919C23.9485 22.1475 22.6611 23.204 21.1548 23.8279C19.6486 24.4518 17.9912 24.6151 16.3922 24.297C14.7931 23.9789 13.3244 23.1939 12.1715 22.041C11.0187 20.8882 10.2336 19.4194 9.91557 17.8204C9.59751 16.2214 9.76075 14.564 10.3847 13.0577C11.0086 11.5515 12.0651 10.2641 13.4207 9.35834ZM21.4899 15.1681H23.9464C23.7856 14.2463 23.4131 13.3744 22.8581 12.6211C22.3031 11.8677 21.5808 11.2535 20.748 10.8267C21.1938 12.2329 21.4435 13.6938 21.4899 15.1681ZM17.9509 22.2572H18.0498C18.4619 21.9 19.2478 20.2184 19.4016 17.2564H16.599C16.7529 20.2184 17.5387 21.9 17.9509 22.2572ZM17.9509 10.1673C17.5387 10.5245 16.7529 12.2061 16.599 15.1681H19.4016C19.2478 12.2061 18.4619 10.5245 18.0498 10.1673H17.9509ZM14.4887 15.1681C14.5423 13.6927 14.7993 12.2318 15.2526 10.8267C14.4199 11.2535 13.6975 11.8677 13.1425 12.6211C12.5875 13.3744 12.215 14.2463 12.0543 15.1681H14.4887ZM14.5107 17.2564H12.0543C12.215 18.1782 12.5875 19.0501 13.1425 19.8035C13.6975 20.5568 14.4199 21.171 15.2526 21.5978C14.8068 20.1917 14.5572 18.7307 14.5107 17.2564ZM21.5119 17.2564C21.4583 18.7318 21.2013 20.1927 20.748 21.5978C21.5849 21.1737 22.3115 20.5606 22.8705 19.8071C23.4294 19.0536 23.8053 18.1803 23.9683 17.2564H21.5119Z",
+              fill: "currentColor",
+            })
+          );
+        }
       },
       8285: (e, t, r) => {
         "use strict";
@@ -50276,78 +50301,65 @@ var CLSTAMP = "8118551";
       },
       3918: (e, t, r) => {
         "use strict";
-        r.r(t), r.d(t, { TitleBar: () => d });
+        r.r(t), r.d(t, { TitleBar: () => m, TitleBarActionButton: () => C });
         var n = r(67294),
           i = r(91276),
           o = r(90437),
           a = r(51878),
-          l = r(81673);
-        function s(e) {
+          l = r(92266),
+          s = r(81673);
+        function c(e) {
           const { popup: t, bOSX: r } = e,
-            [l, s] = n.useState(),
-            c = n.useCallback(() => {
+            [a, l] = n.useState(),
+            s = n.useCallback(() => {
               t.SteamClient.Window.ToggleMaximize();
             }, [t]),
-            u = n.useCallback(() => {
+            c = n.useCallback(() => {
               let e = t.screen.availWidth - t.innerWidth,
                 r = t.screen.availHeight - t.innerHeight;
               return 0 === e && 0 === r;
             }, [t]),
-            d = n.useCallback(() => {
+            u = n.useCallback(() => {
               if ((0, i.w3)(t, "Window.IsWindowMaximized"))
                 t.SteamClient.Window.IsWindowMaximized((e) => {
-                  e != l && s(e);
+                  e != a && l(e);
                 });
               else {
-                let e = u();
-                e != l && s(e);
+                let e = c();
+                e != a && l(e);
               }
-            }, [t, u, l]);
+            }, [t, c, a]);
           return (
             n.useEffect(
               () => (
-                d(),
-                t.addEventListener("resize", d),
-                () => t.removeEventListener("resize", d)
+                u(),
+                t.addEventListener("resize", u),
+                () => t.removeEventListener("resize", u)
               ),
-              [t, d]
+              [t, u]
             ),
             n.createElement(
-              "div",
-              {
-                className: (0, a.default)(
-                  "title-area-icon",
-                  l ? "restoreButton" : "maximizeButton"
-                ),
-                onClick: c,
-              },
-              n.createElement(
-                "div",
-                { className: "title-area-icon-inner" },
-                !r &&
-                  (l
-                    ? n.createElement(o.Restore, null)
-                    : n.createElement(o.Maximize, null))
-              )
+              C,
+              { className: a ? "restoreButton" : "maximizeButton", onClick: s },
+              !r &&
+                (a
+                  ? n.createElement(o.Restore, null)
+                  : n.createElement(o.Maximize, null))
             )
           );
         }
-        function c(e) {
+        function u(e) {
           const { popup: t, bOSX: r } = e,
             i = n.useCallback(() => {
               t.SteamClient.Window.Minimize();
             }, [t]);
           return n.createElement(
-            "div",
-            { className: "title-area-icon minimizeButton", onClick: i },
-            n.createElement(
-              "div",
-              { className: "title-area-icon-inner" },
-              !r && n.createElement(o.Minimize, null)
-            )
+            C,
+            { className: "minimizeButton", onClick: i },
+            !r && n.createElement(o.Minimize, null)
           );
         }
-        function u(e) {
+        function d(e) {
           const { popup: t, onClose: r, bOSX: a } = e,
             l = n.useCallback(() => {
               t &&
@@ -50356,52 +50368,56 @@ var CLSTAMP = "8118551";
                   : t.close());
             }, [t]);
           return n.createElement(
-            "div",
-            {
-              className: "title-area-icon closeButton",
-              onClick: null != r ? r : l,
-            },
-            n.createElement(
-              "div",
-              { className: "title-area-icon-inner" },
-              !a && n.createElement(o.X_Line, null)
-            )
+            C,
+            { className: "closeButton", onClick: null != r ? r : l },
+            !a && n.createElement(o.X_Line, null)
           );
         }
-        function d(e) {
-          let {
-            className: t,
-            style: r,
-            hideActions: i,
-            hideClose: o,
-            hideMinMax: d,
-            bOSX: C = "macos" == l.Config.PLATFORM,
-            onClose: m,
-            extraActions: h,
-            popup: p,
-            children: g,
-          } = e;
+        function C(e) {
+          const { className: t, onClick: r, children: i } = e;
+          return n.createElement(
+            "div",
+            { className: (0, a.default)("title-area-icon", t), onClick: r },
+            n.createElement("div", { className: "title-area-icon-inner" }, i)
+          );
+        }
+        function m(e) {
+          const {
+              className: t,
+              style: r,
+              hideActions: i,
+              hideClose: o,
+              hideMinMax: C,
+              bOSX: m = "macos" == s.Config.PLATFORM,
+              bForceWindowFocused: h,
+              onClose: p,
+              extraActions: g,
+              popup: f,
+              children: _,
+            } = e,
+            w = (0, l.n)(f);
           return n.createElement(
             "div",
             {
               className: (0, a.default)(
                 "TitleBar",
                 "title-area",
-                C && "OSX",
+                m && "OSX",
+                (w || h) && "WindowFocus",
                 t
               ),
               style: r,
             },
             n.createElement("div", { className: "title-area-highlight" }),
-            n.createElement("div", { className: "title-area-children" }, g),
+            n.createElement("div", { className: "title-area-children" }, _),
             !i &&
               n.createElement(
                 "div",
                 { className: "title-bar-actions" },
-                !o && n.createElement(u, { popup: p, onClose: m, bOSX: C }),
-                !d && n.createElement(s, { popup: p, bOSX: C }),
-                !d && n.createElement(c, { popup: p, bOSX: C }),
-                h
+                !o && n.createElement(d, { popup: f, onClose: p, bOSX: m }),
+                !C && n.createElement(c, { popup: f, bOSX: m }),
+                !C && n.createElement(u, { popup: f, bOSX: m }),
+                g
               )
           );
         }
@@ -53903,7 +53919,7 @@ var CLSTAMP = "8118551";
       },
       92266: (e, t, r) => {
         "use strict";
-        r.d(t, { b: () => a });
+        r.d(t, { b: () => a, n: () => l });
         var n = r(67294),
           i = r(91276),
           o = r(48287);
@@ -53921,13 +53937,33 @@ var CLSTAMP = "8118551";
             }, [e]);
           return (0, o.useGlobalEventListener)(e, "resize", a), t;
         }
+        function l(e, t = 100) {
+          const [r, i] = n.useState(!1),
+            a = n.useCallback(() => i(!0), [i]),
+            l = n.useCallback(() => i(!1), [i]);
+          return (
+            n.useEffect(
+              () =>
+                e
+                  ? (e.addEventListener("focus", a),
+                    e.addEventListener("blur", l),
+                    () => {
+                      e.removeEventListener("focus", a),
+                        e.removeEventListener("blur", l);
+                    })
+                  : void 0,
+              [e, a, l]
+            ),
+            (0, o.useValueWasTrueRecentlyOrNow)(r, t)
+          );
+        }
       },
       81673: (e, t, r) => {
         "use strict";
         r.r(t),
           r.d(t, {
-            BBaseURLMatches: () => _,
-            BConfigContextInGamepadUI: () => g,
+            BBaseURLMatches: () => E,
+            BConfigContextInGamepadUI: () => w,
             BIsInPresentationMode: () => s.y9,
             BroadcastConfig: () => l.BroadcastConfig,
             CommunityConfig: () => l.CommunityConfig,
@@ -53935,14 +53971,17 @@ var CLSTAMP = "8118551";
             ConfigContext: () => c,
             ConfigContextRoot: () => d,
             EventConfig: () => l.EventConfig,
-            GET_BASE_URL: () => w,
-            GET_BASE_WEB_PROPERTY: () => v,
+            GET_BASE_URL: () => M,
+            GET_BASE_WEB_PROPERTY: () => b,
             GenerateNewSessionID: () => s.Tl,
             GetConfigJSON: () => s.kQ,
             GetOptionalConfigJSON: () => s.ip,
             GetSessionID: () => s.c9,
             InitConfig: () => s.Ek,
-            InitConfigAsync: () => f,
+            InitConfigAsync: () => v,
+            IsPlatformLinux: () => _,
+            IsPlatformMac: () => f,
+            IsPlatformWindows: () => g,
             IsSteamChina: () => p,
             UserConfig: () => l.UserConfig,
             useConfigContext: () => u,
@@ -53993,10 +54032,19 @@ var CLSTAMP = "8118551";
         function p() {
           return l.Config.EREALM === o.ESteamRealm.k_ESteamRealmChina;
         }
-        function g(e) {
+        function g() {
+          return "windows" == l.Config.PLATFORM;
+        }
+        function f() {
+          return "macos" == l.Config.PLATFORM;
+        }
+        function _() {
+          return "linux" == l.Config.PLATFORM;
+        }
+        function w(e) {
           return null == e ? void 0 : e.IN_GAMEPADUI;
         }
-        function f(e, t, r) {
+        function v(e, t, r) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             if (r.config) {
               const r = (yield e.get(t + "ajaxgetconfig")).data;
@@ -54010,50 +54058,50 @@ var CLSTAMP = "8118551";
             }
           });
         }
-        function _(e, t) {
+        function E(e, t) {
           return 0 != t.length && e.startsWith(t);
         }
-        function w() {
+        function M() {
           if (!window || !window.location || !window.location.href)
             return console.warn("Unable to determine base url!"), "unknown";
           const e = window.location.href;
-          return _(e, l.Config.STORE_BASE_URL)
+          return E(e, l.Config.STORE_BASE_URL)
             ? l.Config.STORE_BASE_URL
-            : _(e, l.Config.COMMUNITY_BASE_URL)
+            : E(e, l.Config.COMMUNITY_BASE_URL)
             ? l.Config.COMMUNITY_BASE_URL
-            : _(e, l.Config.CHAT_BASE_URL)
+            : E(e, l.Config.CHAT_BASE_URL)
             ? l.Config.CHAT_BASE_URL
-            : _(e, l.Config.PARTNER_BASE_URL)
+            : E(e, l.Config.PARTNER_BASE_URL)
             ? l.Config.PARTNER_BASE_URL
-            : _(e, l.Config.HELP_BASE_URL)
+            : E(e, l.Config.HELP_BASE_URL)
             ? l.Config.HELP_BASE_URL
-            : _(e, l.Config.STEAMTV_BASE_URL)
+            : E(e, l.Config.STEAMTV_BASE_URL)
             ? l.Config.STEAMTV_BASE_URL
-            : _(e, l.Config.STATS_BASE_URL)
+            : E(e, l.Config.STATS_BASE_URL)
             ? l.Config.STATS_BASE_URL
-            : _(e, l.Config.INTERNAL_STATS_BASE_URL)
+            : E(e, l.Config.INTERNAL_STATS_BASE_URL)
             ? l.Config.INTERNAL_STATS_BASE_URL
-            : _(e, l.Config.STORE_CHECKOUT_BASE_URL)
+            : E(e, l.Config.STORE_CHECKOUT_BASE_URL)
             ? l.Config.STORE_CHECKOUT_BASE_URL
-            : _(e, "https://steamloopback.host")
+            : E(e, "https://steamloopback.host")
             ? "https://steamloopback.host"
             : "";
         }
-        function v() {
+        function b() {
           const e = window.location.href;
-          return _(e, l.Config.STORE_BASE_URL) ||
-            _(e, l.Config.STORE_CHECKOUT_BASE_URL)
+          return E(e, l.Config.STORE_BASE_URL) ||
+            E(e, l.Config.STORE_CHECKOUT_BASE_URL)
             ? "store"
-            : _(e, l.Config.COMMUNITY_BASE_URL)
+            : E(e, l.Config.COMMUNITY_BASE_URL)
             ? "community"
-            : _(e, l.Config.PARTNER_BASE_URL)
+            : E(e, l.Config.PARTNER_BASE_URL)
             ? "partnerweb"
-            : _(e, l.Config.HELP_BASE_URL)
+            : E(e, l.Config.HELP_BASE_URL)
             ? "help"
-            : _(e, l.Config.STEAMTV_BASE_URL)
+            : E(e, l.Config.STEAMTV_BASE_URL)
             ? "steamtv"
-            : _(e, l.Config.STATS_BASE_URL) ||
-              _(e, l.Config.INTERNAL_STATS_BASE_URL)
+            : E(e, l.Config.STATS_BASE_URL) ||
+              E(e, l.Config.INTERNAL_STATS_BASE_URL)
             ? "stats"
             : "";
         }
@@ -54232,9 +54280,9 @@ var CLSTAMP = "8118551";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 10 2023 : 00:02:04",
-                    BUILD_TIME_UTC: "Jun 10 2023 : 07:02:04",
-                    BUILD_RTIME_UTC: 1686380524,
+                    BUILD_TIME_LOCAL: "Jun 12 2023 : 21:09:58",
+                    BUILD_TIME_UTC: "Jun 13 2023 : 04:09:58",
+                    BUILD_RTIME_UTC: 1686629398,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54421,17 +54469,16 @@ var CLSTAMP = "8118551";
           M = r(48287),
           b = r(94193),
           L = r(83630),
-          y = r(71388),
-          S = r(91276);
-        const B = n.lazy(() =>
+          y = r(71388);
+        const S = n.lazy(() =>
             Promise.all([r.e(7962), r.e(58), r.e(4535)]).then(r.bind(r, 343))
           ),
-          k = n.lazy(() =>
+          B = n.lazy(() =>
             Promise.all([r.e(7962), r.e(8553), r.e(58), r.e(5742)]).then(
-              r.bind(r, 60909)
+              r.bind(r, 12677)
             )
           );
-        function x() {
+        function k() {
           return n.createElement(
             "div",
             { className: (0, o.default)(s().Container, s().PreloadThrobber) },
@@ -54451,19 +54498,14 @@ var CLSTAMP = "8118551";
             )
           );
         }
-        function R(e) {
-          "steam_shutdown" == e.data &&
-            (0, S.U5)("User.StartShutdown") &&
-            SteamClient.User.StartShutdown(!1);
-        }
-        function H(e) {
+        function x(e) {
           const { cm: t } = e;
           let r = null;
           return (
             u.Config.IN_LOGIN || u.Config.IN_LOGIN_REFRESH
               ? (r = n.createElement(
                   n.Suspense,
-                  { fallback: n.createElement(x, null) },
+                  { fallback: n.createElement(k, null) },
                   n.createElement(
                     v.ErrorBoundary,
                     null,
@@ -54473,7 +54515,7 @@ var CLSTAMP = "8118551";
                       n.createElement(
                         y.ModalRoot,
                         null,
-                        n.createElement(B, { cm: t })
+                        n.createElement(S, { cm: t })
                       )
                     )
                   )
@@ -54485,16 +54527,16 @@ var CLSTAMP = "8118551";
                 (r = n.createElement(
                   n.Suspense,
                   { fallback: null },
-                  n.createElement(k, { cm: t })
+                  n.createElement(B, { cm: t })
                 ))),
             n.createElement(
               w.ReactQueryRoot,
               null,
-              n.createElement(I, { cm: t }, r)
+              n.createElement(R, { cm: t }, r)
             )
           );
         }
-        function I(e) {
+        function R(e) {
           const { cm: t, children: r } = e,
             i = n.useCallback(() => t, [t]),
             o = (0, M.useLazyMemoizedValue)(() => new b.E());
@@ -54562,10 +54604,9 @@ var CLSTAMP = "8118551";
                     ? h.IN.k_ESteamRealmChina
                     : h.IN.k_ESteamRealmGlobal);
               })(),
-              (u.Config.IN_STEAMUI = !0),
-              window.addEventListener("message", R);
+              (u.Config.IN_STEAMUI = !0);
             const e = document.getElementById("root");
-            i.render(n.createElement(H, { cm: window.cm }), e);
+            i.render(n.createElement(x, { cm: window.cm }), e);
           })();
       },
     },
@@ -54632,17 +54673,21 @@ var CLSTAMP = "8118551";
     (l.u = (e) =>
       ({
         27: "localization/shared_japanese-json",
+        33: "localization/steamui_portuguese-json",
         58: "chunk~2dcc5aaf7",
         131: "localization/shared_english-json",
         200: "libraries/libraries~114e7a4e2",
         220: "localization/friendsui_sc_schinese-json",
         224: "localization/steamui_arabic-json",
         271: "localization/steamui_sc_schinese-json",
+        503: "localization/steampops_schinese-json",
         578: "libraries/libraries~b89b244e2",
+        662: "localization/steampops_russian-json",
         740: "localization/steamui_hungarian-json",
         755: "localization/shared_schinese-json",
         932: "libraries/libraries~c2593e398",
         1079: "localization/steamui_swedish-json",
+        1102: "localization/steampops_english-json",
         1160: "localization/steamui_romanian-json",
         1261: "localization/shared_norwegian-json",
         1365: "localization/steamui_tchinese-json",
@@ -54652,9 +54697,11 @@ var CLSTAMP = "8118551";
         1579: "localization/shared_ukrainian-json",
         1617: "localization/steamui_german-json",
         1686: "libraries/libraries~3fde5681b",
+        1926: "localization/steampops_polish-json",
         1953: "localization/shared_finnish-json",
         2028: "localization/steamui_latam-json",
         2029: "localization/steamui_japanese-json",
+        2055: "localization/steampops_portuguese-json",
         2138: "localization/shared_thai-json",
         2307: "localization/steamui_thai-json",
         2387: "libraries/libraries~697fe4635",
@@ -54663,6 +54710,7 @@ var CLSTAMP = "8118551";
         2543: "libraries/libraries~05c32d390",
         2822: "localization/shared_greek-json",
         2847: "localization/steamui_danish-json",
+        2915: "localization/steampops_swedish-json",
         3015: "libraries/libraries~074e593a7",
         3061: "libraries/libraries~a5790b328",
         3093: "libraries/libraries~d147bc30b",
@@ -54670,6 +54718,8 @@ var CLSTAMP = "8118551";
         3298: "localization/shared_brazilian-json",
         3357: "localization/steamui_italian-json",
         3403: "libraries/libraries~32b5733f1",
+        3468: "localization/steampops_norwegian-json",
+        3530: "localization/steampops_ukrainian-json",
         3602: "localization/shared_dutch-json",
         3858: "libraries/libraries~b0b780556",
         4061: "localization/steamui_bulgarian-json",
@@ -54679,6 +54729,7 @@ var CLSTAMP = "8118551";
         4331: "libraries/libraries~f78c6dc44",
         4358: "localization/shared_sc_schinese-json",
         4372: "libraries/libraries~7119318ec",
+        4386: "localization/steampops_tchinese-json",
         4401: "libraries/libraries~9531c3ca1",
         4445: "localization/shared_german-json",
         4469: "localization/shared_koreana-json",
@@ -54686,11 +54737,18 @@ var CLSTAMP = "8118551";
         4513: "localization/shared_italian-json",
         4535: "login",
         4601: "broadcast",
+        4725: "localization/steampops_czech-json",
         4729: "localization/shared_french-json",
-        5175: "localization/steamui_portuguese-json",
+        5065: "localization/steampops_french-json",
+        5175: "localization/steampops_turkish-json",
+        5225: "localization/steampops_dutch-json",
         5279: "localization/shared_hungarian-json",
+        5505: "localization/steampops_thai-json",
+        5513: "localization/steampops_spanish-json",
+        5547: "localization/steampops_italian-json",
         5590: "localization/steamui_vietnamese-json",
         5742: "sp",
+        5895: "localization/steampops_german-json",
         5984: "libraries/libraries~13bdaad06",
         6002: "libraries/libraries~643d02cb5",
         6006: "libraries/libraries~d432c02e4",
@@ -54703,24 +54761,35 @@ var CLSTAMP = "8118551";
         6844: "localization/shared_polish-json",
         6877: "localization/steamui_greek-json",
         6964: "localization/steamui_dutch-json",
+        6973: "localization/steampops_japanese-json",
+        7036: "localization/steampops_romanian-json",
         7235: "libraries/libraries~57063afaa",
         7541: "libraries/libraries~1e47f672e",
         7656: "localization/steamui_ukrainian-json",
         7660: "localization/shared_romanian-json",
+        7725: "localization/steampops_hungarian-json",
         7781: "localization/shared_bulgarian-json",
         7832: "localization/shared_arabic-json",
+        7850: "localization/steampops_finnish-json",
         7962: "libraries/libraries~2dcc5aaf7",
         8011: "libraries/libraries~d653ab458",
+        8052: "localization/steampops_bulgarian-json",
         8085: "localization/shared_czech-json",
         8232: "localization/steamui_polish-json",
         8238: "libraries/libraries~4bfd2d106",
+        8240: "localization/steampops_koreana-json",
         8282: "localization/shared_turkish-json",
         8319: "localization/steamui_czech-json",
         8433: "localization/shared_vietnamese-json",
         8467: "localization/steamui_english-json",
+        8490: "localization/steampops_latam-json",
         8553: "libraries/libraries~e8c5e5be4",
         8778: "localization/steamui_french-json",
         8956: "localization/steamui_spanish-json",
+        9125: "localization/steampops_danish-json",
+        9365: "localization/steampops_brazilian-json",
+        9399: "localization/steampops_vietnamese-json",
+        9520: "localization/steampops_greek-json",
         9547: "localization/shared_tchinese-json",
         9548: "localization/steamui_norwegian-json",
         9722: "localization/steamui_schinese-json",
@@ -54732,17 +54801,21 @@ var CLSTAMP = "8118551";
       ".js?contenthash=" +
       {
         27: "a6a01b818de1a8d8f8fe",
-        58: "394a4486aae6678443c3",
-        131: "a47cd43d14977673f3fa",
+        33: "f7e8bc986ee646e32a3a",
+        58: "b2d65c8004845008017f",
+        131: "a572a79b1d030601e84b",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
         224: "9f8948d140fdee081d66",
         271: "2b7ef920d4bd7ce9478c",
+        503: "e856133fa7839545df40",
         578: "c902d35ea381395e6614",
+        662: "5f6dc6c5ecd945872053",
         740: "17b0a94d38d765ccc5fd",
         755: "608e535b843fd1847ec0",
         932: "f282bbf7aafe65529b01",
         1079: "375273ff0bb3618e695a",
+        1102: "9df49d25731ef645f2f9",
         1160: "fbc767b20e7943eaa290",
         1261: "4f6e1c33ce510e40568c",
         1365: "7e2882cfbc30ae82ba70",
@@ -54752,9 +54825,11 @@ var CLSTAMP = "8118551";
         1579: "a36af7b0337411b1726e",
         1617: "c1c3b5abea37b8e8a57e",
         1686: "e1d3d3c79b693d46e4ef",
+        1926: "9d689d7bc6332255f636",
         1953: "e72a619d780b2d7efbe5",
         2028: "580fa7fbc3c1c68a9c39",
         2029: "ee7358ae303ef889ff23",
+        2055: "94b343239aa17cd5ac02",
         2138: "b60789944f4e1e112793",
         2307: "aeef24a084d46960cc93",
         2387: "4023428528fa228ebdd2",
@@ -54763,6 +54838,7 @@ var CLSTAMP = "8118551";
         2543: "0362c2f7aa2d469fffa5",
         2822: "e87faabea168c06aac3a",
         2847: "78186777f96376b8ddf8",
+        2915: "996a761e80b49ac53aea",
         3015: "510d5c15ead77069f782",
         3061: "28aa9b35545e2427b6da",
         3093: "a4dced6ab76b8ce9db92",
@@ -54770,6 +54846,8 @@ var CLSTAMP = "8118551";
         3298: "be246092bb92eeac5f32",
         3357: "942194e0b8335e641b90",
         3403: "a87a0fd820563d54ca6b",
+        3468: "ed4dab4c8b73331c8fc7",
+        3530: "2a187555daab0a3ce8e3",
         3602: "77a2b7e9275e4533e306",
         3858: "6d2ad781814ce26cb7b8",
         4061: "62cdc7a1abbc6bc8a33e",
@@ -54779,6 +54857,7 @@ var CLSTAMP = "8118551";
         4331: "39a727ef134d90bb1ecb",
         4358: "e8b6ba9972d3f546e956",
         4372: "b29accfedbc5f7e459b0",
+        4386: "a371cf5fef13d02a73f9",
         4401: "dc9bb5c89c46b954c72c",
         4445: "e227ba24e831dabb7c51",
         4469: "d1e398184123169e8e64",
@@ -54786,11 +54865,18 @@ var CLSTAMP = "8118551";
         4513: "fbad5a3136d9b94c4d38",
         4535: "9ba89b326b8219a1c936",
         4601: "2a91e0d23548013905c0",
+        4725: "37bad80c360e85b47086",
         4729: "d777c45ec0a047c485c3",
-        5175: "dad05b37047abe6a8104",
+        5065: "276fc60a608acbd73afd",
+        5175: "5e74fb4ec227cff583d4",
+        5225: "7cc47a53e2d2d096479e",
         5279: "bfcd30b819a71be97397",
+        5505: "f694f26290ae266333cc",
+        5513: "ec0071187919eb9c037e",
+        5547: "4a099cabe4e49f89668c",
         5590: "30b3c357eb22890d0c54",
-        5742: "5c768baeb0f5ee6a4869",
+        5742: "558d919326e782443620",
+        5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
         6006: "daa3ee8e6fac8a06111a",
@@ -54803,24 +54889,35 @@ var CLSTAMP = "8118551";
         6844: "28b3e27d67b67ecbf24b",
         6877: "40aeb3f6588a2c6c2a20",
         6964: "68ec944938a22abecb89",
+        6973: "836a98750bf96902a6d1",
+        7036: "195722967ecb005c6299",
         7235: "d15b14e92e06a9f1155f",
         7541: "712934ad3a4723eb8c73",
         7656: "1340865f4258776a9793",
         7660: "44122521c0aae167febb",
+        7725: "0a6429844e89cc14c4c0",
         7781: "8f81ffc8006e0a1632c8",
         7832: "35e371c703d65c6c518c",
-        7962: "fe66c4e8bd97930e0f4e",
+        7850: "68b0792d044c44ae4211",
+        7962: "e9192aa8c348bd490e72",
         8011: "2bad8c957b2510d4af07",
+        8052: "6f4de79f989a0248e10b",
         8085: "649331716e05de884b12",
         8232: "af3832ca538f146fee90",
         8238: "171e23d01197780453de",
+        8240: "fe99f8233189ad2c1c4d",
         8282: "f06d5a55a58d71b9a42c",
         8319: "6ece6eaffb65dc3a0856",
         8433: "ab23e3d121a371cbca24",
-        8467: "2f24a52f36c46334e100",
+        8467: "33d700cc1ef80fe9ad31",
+        8490: "a6f9565ec428a556c271",
         8553: "d8e6576615824304daa8",
         8778: "b29333dda10ad0bea61b",
         8956: "ce7a557d4de6478a2722",
+        9125: "6dda54697421891ea10b",
+        9365: "28d83d50cbc622d62f8f",
+        9399: "686e599aa6750d58e976",
+        9520: "2eee41872648a9ed7a62",
         9547: "d38b98b52f237ef9307b",
         9548: "a3a9a1c45b65fa5b3714",
         9722: "2a5338ec898dd59b044c",

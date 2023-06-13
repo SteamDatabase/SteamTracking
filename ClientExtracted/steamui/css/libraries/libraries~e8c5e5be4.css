@@ -23564,8 +23564,10 @@ body.in_global_drag .friendlist_titlebar {
 }
 .friendListHeaderContainer {
   min-height: 84px;
-  background-color: #0e0f11;
-  background-color: #23262c;
+  background-color: #1c232c;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: none;
+  box-shadow: inset 1px 1px 0px rgba(71, 71, 71, 0.3);
   position: relative;
   user-select: none;
   cursor: default;
@@ -23589,6 +23591,7 @@ body.in_global_drag .friendlist_titlebar {
 }
 .currentUserContainer {
   padding-right: 24px;
+  border-bottom: 1px solid rgba(67, 73, 83, 0.3);
 }
 .currentUserContainer.ingame .statusHeaderGlow stop:first-child {
   stop-color: rgba(140, 188, 84, 0.3);
@@ -23599,9 +23602,6 @@ body.in_global_drag .friendlist_titlebar {
 }
 .currentUserContainer.offline .statusHeaderGlow {
   opacity: 0;
-}
-.currentUserContainer {
-  border-bottom: 1px solid rgba(67, 73, 83, 0.5);
 }
 .persona_menu_descriptor {
   font-size: 11px;
@@ -23623,7 +23623,6 @@ body.in_global_drag .friendlist_titlebar {
 .currentUserAvatar {
   width: 48px;
   height: 48px;
-  box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.3);
   transition-property: box-shadow, filter, transform;
   transition-duration: 0.24s, 0.16s;
   transition-timing-function: ease-in-out;
@@ -23664,7 +23663,7 @@ body.in_global_drag .friendlist_titlebar {
   margin-left: 8px;
 }
 .compactView .AvatarAndUser {
-  padding: 8px;
+  padding: 18px 8px 8px 8px;
 }
 .largeAvatar {
   width: 256px;
@@ -23970,14 +23969,14 @@ body.in_global_drag .friendlist_titlebar {
 .socialListTab {
   flex-grow: 1;
   height: 30px;
-  padding-top: 2px;
   user-select: none;
   cursor: default;
   margin-top: 6px;
-  letter-spacing: 2px;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
+  font-weight: 500;
   padding-left: 16px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 20px;
   text-align: left;
   color: #40474a;
@@ -24922,6 +24921,8 @@ body.in_global_drag .friendlist_titlebar {
 }
 .recentChatsGroup .friendGroup .groupName {
   position: relative;
+  padding-bottom: 0px;
+  line-height: 20px;
 }
 .recentChatsGroup .friendGroup .groupName hr {
   margin-right: 8px;
@@ -24996,6 +24997,8 @@ body.in_global_drag .friendlist_titlebar {
 .CompactFriendsList .friendGroup.taggedGroup .groupName,
 .CompactFriendsList .friendGroup.gameGroup .groupName {
   font-size: 12px;
+  padding-bottom: 0px;
+  line-height: 20px;
 }
 .compactQuickAccess .FavoriteFriend_GameIcon {
   width: 16px;
@@ -25542,7 +25545,7 @@ body.in_global_drag .friendlist_titlebar {
   display: flex;
   flex-direction: row;
   padding-left: 8px;
-  padding-top: 8px;
+  padding-top: 18px;
   padding-bottom: 8px;
 }
 .currentUserContainer .labelHolder {
@@ -25552,8 +25555,8 @@ body.in_global_drag .friendlist_titlebar {
   flex-shrink: 1;
   flex-grow: 1;
   flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: -4px;
+  justify-content: center;
+  margin-top: 2px;
   margin-right: 10px;
 }
 .singlewindow .currentUserContainer .labelHolder {
@@ -26973,7 +26976,6 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   color: #b5bec8;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 6px 14px 1px #00000063;
   border-radius: 8px;
   position: relative;
   text-align: left;
@@ -30057,10 +30059,18 @@ html.web_chat_frame .perf_timing_area {
   min-height: 45px;
 }
 .titleBarContainer.ChatTabs {
-  background-color: #151a22;
+  background-color: #1c232c;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: none;
+  border-left: none;
+  box-shadow: inset 1px 1px 0px rgba(71, 71, 71, 0.3);
 }
 .singlewindow .titleBarContainer.ChatTabs {
   padding-left: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: none;
+  border-left: none;
+  box-shadow: inset 1px 1px 0px rgba(71, 71, 71, 0.3);
 }
 .TheaterMode .titleBarContainer.ChatTabs {
   padding-left: 0;
@@ -32312,6 +32322,14 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   flex-direction: row;
   cursor: ns-resize;
 }
+.groupChatSectionTitle {
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+}
 .friendsListSectionTitle.chatSectionTitle .groupChatSectionTitle {
   padding-left: 0px;
   padding-top: 5px;
@@ -33018,10 +33036,12 @@ button.chatRoomHeaderButton:hover {
   width: 10px;
   height: 10px;
   padding-left: 4px;
+  margin-bottom: 2px;
 }
 .currentUserContainer .ContextMenuButton .SVGIcon_DownArrowContextMenu {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
+  margin-top: 5px;
 }
 :not(.friendInviteContainer)
   .online
@@ -33237,8 +33257,8 @@ button.chatRoomHeaderButton:hover {
 }
 .ChatRoomGroupAvatar {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   border: 2px solid #535c68;
   background-color: #222;
@@ -33251,7 +33271,6 @@ button.chatRoomHeaderButton:hover {
     #212329 50%,
     #1b1d22 100%
   );
-  box-shadow: 0 3px 9px rgba(10, 11, 13, 0.5), inset 0 0 9px rgba(0, 0, 0, 0.5);
 }
 .ChatRoomGroupAvatar.Large {
   width: 92px;
@@ -33522,15 +33541,15 @@ img.ChatRoomGroupAvatar_Avatar {
   color: #778494;
 }
 .chatRoomGroupHeaderName {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   margin-left: 8px;
   color: #ccc;
-  text-shadow: 1px 1px 2px #0006;
   margin-bottom: -3px;
   margin-top: -3px;
 }
 .namedGroup .chatRoomGroupHeaderName {
-  font-size: 28px;
+  font-size: 22px;
 }
 .chatRoomGroupHeaderName,
 .chatRoomGroupHeaderTagline {

@@ -247,6 +247,7 @@ ${COMMUNITY_BASE_URL}my/edit/miniprofile
 ${COMMUNITY_BASE_URL}my/friends/add
 ${COMMUNITY_BASE_URL}my/gamenotifications/
 ${COMMUNITY_BASE_URL}my/groups/
+${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${appid}/announcements/ajaxgetmyvote/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappbranches

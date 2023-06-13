@@ -50,7 +50,6 @@ __data
 __DATA
 __bss
 __DATA
-P8
 __common
 __DATA
 H
@@ -110,7 +109,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-(
+0
 )
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
 7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
@@ -844,6 +843,24 @@ IsValid()
 failed to copy style
 COSXFont
 m_ExtendedABCWidthsCache
+ATSUCreateStyle
+ATSUCreateAndCopyStyle
+ATSUDisposeStyle
+ATSUSetAttributes
+ATSUCreateTextLayoutWithTextPtr
+ATSUDisposeTextLayout
+ATSUSetTransientFontMatching
+ATSUSetLayoutControls
+ATSUDrawText
+ATSUGetGlyphBounds
+ATSUMatchFontsToText
+ATSUGlyphGetScreenMetrics
+ATSUDirectGetLayoutDataArrayPtrFromTextLayout
+ATSUDirectReleaseLayoutDataArrayPtr
+ATSUMeasureTextImage
+ATSFontFindFromName
+ATSFontFindFromPostScriptName
+ATSFontGetHorizontalMetrics
 Helvetica Bold
 vgui::Bitmap
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vector2d.h
@@ -1326,6 +1343,7 @@ OnScreenSizeChanged
 oldwide
 oldtall
 Valve Steam GameOverlay
+ATSFontActivateFromFileReference
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nBytes
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.h
