@@ -2374,6 +2374,15 @@ HelpRequestPage = {
 		$J('#system_report_throbber').removeClass( 'working' );
 	},
 
+	BrowserViewHandleMessageFromParent: function( strMessage, strArguments )
+	{
+		if ( strMessage == 'SupportSystemReport' )
+		{
+			var obj = JSON.parse( strArguments );
+			HelpRequestPage.SystemReportCallback( obj );
+		}
+	},
+
 	CollectSystemReport: function()
 	{
 		// If we haven't already gathered it and the checkbox is now checked, then gather now
@@ -2382,7 +2391,20 @@ HelpRequestPage = {
 			var $Form = $J('#create_help_request_form');
 			$Form.find('button').addClass( 'btn_disabled' ).prop( 'disabled', true );
 			$J('#system_report_throbber').addClass( 'working' );
-			SteamClient.RequestSupportSystemReport(HelpRequestPage.SystemReportCallback);
+			if ( typeof window.SteamClient === 'object' )
+			{
+				// @note Tom Bui: this is the old way, using the method registered in CSteamAuthedHTML.
+				// desktopui will use the BrowserView message passing
+				if ( window.SteamClient.RequestSupportSystemReport )
+				{
+					SteamClient.RequestSupportSystemReport(HelpRequestPage.SystemReportCallback);
+				}
+				else if ( ( 'BrowserView' in window.SteamClient ) && ( 'PostMessageToParent' in window.SteamClient.BrowserView ) )
+				{
+					window.SteamClient.BrowserView.RegisterForMessageFromParent( HelpRequestPage.BrowserViewHandleMessageFromParent );
+					window.SteamClient.BrowserView.PostMessageToParent( 'RequestSupportSystemReport', '' );
+				}
+			}
 		}
 	},
 

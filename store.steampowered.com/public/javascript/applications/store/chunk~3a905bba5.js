@@ -6950,10 +6950,10 @@
           (this.m_rtUnlockTime = 0), (this.m_schUnlockTimeout = new y.Ar());
         }
         UnlockH264(e, t) {
-          (0, C.U5)("RemotePlay.UnlockH264")
+          this.BCanUnlockH264()
             ? (e.SetState(G.Unlocking, ""),
               console.log("Unlocking H.264 for broadcast video playback"),
-              SteamClient.RemotePlay.UnlockH264(),
+              this.RequestUnlockH264(),
               (this.m_broadcast = e),
               (this.m_video = t),
               (this.m_rtUnlockTime = Date.now()),
@@ -6961,6 +6961,27 @@
                 this.CheckUnlockState()
               ))
             : e.SetState(G.Error, (0, E.Xx)("#BroadcastWatch_MinBrowser"));
+        }
+        BCanUnlockH264() {
+          return (0, C.U5)("RemotePlay.UnlockH264")
+            ? (console.log("Client supports direct H.264 unlock"), !0)
+            : (0, C.U5)("BrowserView.PostMessageToParent")
+            ? (console.log("Client supports browserview H.264 unlock"), !0)
+            : (console.log("Client does not support H.264 unlock"), !1);
+        }
+        RequestUnlockH264() {
+          (0, C.U5)("RemotePlay.UnlockH264")
+            ? (console.log("Requesting direct H.264 unlock"),
+              SteamClient.RemotePlay.UnlockH264())
+            : (0, C.U5)("BrowserView.PostMessageToParent")
+            ? (console.log("Requesting browserview unlock"),
+              SteamClient.BrowserView.PostMessageToParent(
+                "UnlockH264Request",
+                "CUnlockH264Helper"
+              ))
+            : console.log(
+                "Failed to request H.264 unlock: no method supported"
+              );
         }
         CheckUnlockState() {
           if (this.m_broadcast.m_eWatchState != G.Unlocking) return;
@@ -18120,7 +18141,7 @@
             (h || (h = e.GetAssets().GetHeroCapsuleURL()),
             g || (g = e.GetAssets().GetLibraryCapsuleURL()));
         }
-        if (h && (!r || g))
+        if (h && (!r || !g))
           return a.createElement(
             "div",
             {
