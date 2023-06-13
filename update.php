@@ -30,7 +30,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			'ClientManifest/steam_cmd_publicbeta_osx'         => 'archives',
 			'ClientManifest/steam_client_publicbeta_ubuntu12' => 'linux_archives',
 			'ClientManifest/steam_cmd_publicbeta_linux'       => 'linux_archives',
-			'ClientManifest/steamdeck_publicbeta'             => 'steampal_archives',
 		];
 
 		/** @var array<string, string> */

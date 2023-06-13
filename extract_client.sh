@@ -14,7 +14,6 @@ echo Deleting existing files
 
 # Scary!
 rm -rf "$DIR"/ClientExtracted/*
-rm -rf "$DIR"/ClientDeckExtracted/*
 rm -rf bins/*
 rm -rf linux_bins/*
 rm -f "$DIR"/BuildbotPaths/*
@@ -43,9 +42,6 @@ do
 		unzip -q -n "$z" -d linux_bins/
 	fi
 done
-
-unzip -q -o "steampal_archives/friendsui_all.zip" -d "$DIR/ClientDeckExtracted/"
-unzip -q -o "steampal_archives/steamui_websrc_all.zip" -d "$DIR/ClientDeckExtracted/"
 
 #
 # PROTOBUF DUMP
@@ -134,7 +130,4 @@ ProcessClientFolder()
 }
 
 cd "$DIR/ClientExtracted/" || exit 1
-ProcessClientFolder
-
-cd "$DIR/ClientDeckExtracted/" || exit 1
 ProcessClientFolder
