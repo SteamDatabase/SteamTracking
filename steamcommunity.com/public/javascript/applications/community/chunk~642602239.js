@@ -132,6 +132,12 @@
         dynamiclink_author: "eventbbcodesketchfab_dynamiclink_author_e66Tt",
       };
     },
+    77555: (e) => {
+      e.exports = {
+        AppSummaryWidgetCtn:
+          "eventdescriptionstorecapsule_AppSummaryWidgetCtn_2WIqq",
+      };
+    },
     49245: (e) => {
       e.exports = { Ctn: "loyaltyrewarditemembed_Ctn_2di0m" };
     },
@@ -4941,14 +4947,13 @@
       };
       (0, i.gn)([c.ak], z.prototype, "OnSketchFabClick", null),
         (z = (0, i.gn)([_.Pi], z));
-      var X = r(44421),
-        W = r(43658),
-        H = r(84343),
-        j = r(49245),
-        V = r.n(j);
-      function Z(e) {
+      var X = r(43658),
+        W = r(84343),
+        H = r(49245),
+        j = r.n(H);
+      function V(e) {
         const { defid: t, url: r } = e,
-          i = (0, W.O)(t);
+          i = (0, X.O)(t);
         if (!i || !i.community_item_data) return null;
         const a = i.appid,
           o = i.community_item_data.item_image_large,
@@ -4958,9 +4963,9 @@
             console.log("reward itemdef", (0, S.ZN)(i)),
           n.createElement(
             "div",
-            { className: V().Ctn },
+            { className: j().Ctn },
             n.createElement(
-              H.HP,
+              W.HP,
               { toolTipContent: i.community_item_data.item_description },
               n.createElement("img", {
                 src: s,
@@ -4970,6 +4975,7 @@
           )
         );
       }
+      var Z = r(5877);
       const Q =
           /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store|store\.\S+\.steam\.dev|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
         Y =
@@ -5060,23 +5066,7 @@
           if (t && t.length > 2) {
             let e = t[1],
               r = Number(t[2]);
-            if (r > 0) {
-              let t = "bundle" == e ? "bundle" : "sub" == e ? "sub" : "game";
-              return n.createElement(
-                "div",
-                {
-                  className: (0, w.Z)(
-                    P.AppSummaryWidgetCtn,
-                    "AppSummaryWidgetCtn"
-                  ),
-                },
-                n.createElement(X.ju, {
-                  id: r,
-                  type: t,
-                  bAllowTwoLinesForHeader: !0,
-                })
-              );
-            }
+            if (r > 0) return n.createElement(Z.X, { id: r, inputType: e });
           }
         }
         return (0, L.hF)(e, null == t ? void 0 : t.event);
@@ -5090,7 +5080,7 @@
               return n.createElement(
                 "div",
                 { className: (0, w.Z)(P.LoyaltyRewardCtn) },
-                n.createElement(Z, { defid: r, url: e })
+                n.createElement(V, { defid: r, url: e })
               );
           }
         }
@@ -6428,6 +6418,23 @@
         ),
       ])),
         (0, i.gn)([c.ak], Ct.prototype, "ElementAccumulator", null);
+    },
+    5877: (e, t, r) => {
+      "use strict";
+      r.d(t, { X: () => s });
+      var i = r(89526),
+        n = r(19304),
+        a = r(44421),
+        o = r(77555);
+      function s(e) {
+        const { inputType: t, id: r } = e;
+        let s = "bundle" == t ? "bundle" : "sub" == t ? "sub" : "game";
+        return i.createElement(
+          "div",
+          { className: (0, n.Z)(o.AppSummaryWidgetCtn, "AppSummaryWidgetCtn") },
+          i.createElement(a.ju, { id: r, type: s, bAllowTwoLinesForHeader: !0 })
+        );
+      }
     },
     24591: (e, t, r) => {
       "use strict";

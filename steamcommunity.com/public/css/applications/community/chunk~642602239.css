@@ -448,6 +448,10 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .loyaltyrewarditemembed_Ctn_2di0m {
   width: 100px;
 }
+.eventdescriptionstorecapsule_AppSummaryWidgetCtn_2WIqq {
+  flex-grow: 2;
+  flex-basis: 0;
+}
 .presenterpopup_SpeakerOuter_3KAg2 {
   display: block;
 }
@@ -1184,7 +1188,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx:focus {
   background-color: #3d424b;
 }
-.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus.GamepadMode,
+.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus.GamepadMode,
 .GamepadMode
   .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus {
   background: #fff;
@@ -1265,17 +1271,25 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .chatentry_AudioLines_1Hw30 {
   fill: #f5ffd7;
 }
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus
   .SVGIcon_VoiceRoom,
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):hover
   .SVGIcon_VoiceRoom {
   fill: #fff;
   stroke: #000;
 }
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1Hw30,
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):hover
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1Hw30 {
   fill: #000;
@@ -1384,7 +1398,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   color: #fff;
 }
 .chatentry_chatEntryControls_2gP0D
-  .chatentry_chatSubmitButton_1IEiK.GamepadMode:not(.chatentry_disabled_2GM2k).gpfocus,
+  .chatentry_chatSubmitButton_1IEiK.GamepadMode:not(
+    .chatentry_disabled_2GM2k
+  ).gpfocus,
 .GamepadMode
   .chatentry_chatEntryControls_2gP0D
   .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k).gpfocus {

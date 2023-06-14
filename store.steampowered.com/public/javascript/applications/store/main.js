@@ -27290,7 +27290,13 @@
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.CuratorAdminPage(),
-                      component: ue,
+                      render: (e) =>
+                        o.createElement(S.d, {
+                          config: {
+                            "curator-admin-rss": () =>
+                              o.createElement(ue, null),
+                          },
+                        }),
                     }),
                     o.createElement(p.AW, {
                       exact: !0,

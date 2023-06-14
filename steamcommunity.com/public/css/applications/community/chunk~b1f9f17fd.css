@@ -2537,6 +2537,7 @@ html.responsive.touch
 }
 .salesectioneventschedule_SaleSchedCtn_3yzeu
   .salesectioneventschedule_SectionCtn_22qs5 {
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

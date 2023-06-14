@@ -500,6 +500,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   color: #95a6b2;
   margin-bottom: 4px;
 }
+.loyaltyrewarditemembed_Ctn_2di0m {
+  width: 100px;
+}
 .buttonBack___1mlaL,
 .buttonFirst___2rhFr,
 .buttonLast___2yuh0,
@@ -651,8 +654,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   left: 0;
   background-color: #f4f4f4;
 }
-.loyaltyrewarditemembed_Ctn_2di0m {
-  width: 100px;
+.eventdescriptionstorecapsule_AppSummaryWidgetCtn_2WIqq {
+  flex-grow: 2;
+  flex-basis: 0;
 }
 .carousel_carouselNavButton_1KK5N {
   border: none;
