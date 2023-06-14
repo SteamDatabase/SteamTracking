@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Bỏ qua",
     "BetaOptIn_Updated": "Phần mềm Steam đã được cập nhật",
     "BetaOptIn_ThankYou": "Cảm ơn đã tham gia beta -<1>để lại phản hồi</1>",
+    "BetaOptIn_WeShipped": "Các tính năng mới đã ra mắt! Cảm ơn đã tham gia bản beta. <1>Sau đây là cách để tham gia phiên bản tiếp theo</1>.",
     "SP_WindowTitle_Configurator": "Bố cục tay cầm - %1$s",
     "SP_WindowTitle_BigPicture": "Chế độ Big Picture trên Steam",
     "SP_WindowTitle_Keyboard": "Steam Input - Bàn phím ảo",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "Địa chỉ IP của bạn được bảo vệ",
     "OverlayNetworkStatus_IPShared_Friends": "Địa chỉ IP của bạn đã được chia sẻ với một hoặc nhiều bạn bè",
     "OverlayNetworkStatus_IPShared_Yes": "Địa chỉ IP của bạn đã được chia sẻ",
+    "Steam_EOLAlert": "Steam sẽ dừng hoạt động trên %2$s sau %1$s ngày.",
+    "Steam_EOLAlert_Plural": "Steam sẽ dừng hoạt động trên %2$s sau %1$s ngày.",
     "steamui_dummy": "DO NOT USE ME"
 }

@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Mellőzés",
     "BetaOptIn_Updated": "Steam kliensed frissítve lett",
     "BetaOptIn_ThankYou": "Köszönjük, hogy részt veszel a bétában. <1>Adj visszajelzést.</1>",
+    "BetaOptIn_WeShipped": "Az új funkciók kiadásra kerültek! Köszönjük, hogy részt vettél a bétában. <1>Így csatlakozhatsz a következőhöz.</1>",
     "SP_WindowTitle_Configurator": "%1$s játékvezérlő-elrendezés",
     "SP_WindowTitle_BigPicture": "Steam Nagy Kép mód",
     "SP_WindowTitle_Keyboard": "Steam Bevitel képernyő-billentyűzet",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "IP-címed védve van.",
     "OverlayNetworkStatus_IPShared_Friends": "IP-címed meg van osztva egy vagy több baráttal.",
     "OverlayNetworkStatus_IPShared_Yes": "IP-címed meg van osztva.",
+    "Steam_EOLAlert": "A Steam %1$s nap múlva, %2$s után nem fog működni.",
+    "Steam_EOLAlert_Plural": "A Steam %1$s nap múlva, %2$s után nem fog működni.",
     "steamui_dummy": "DO NOT USE ME"
 }

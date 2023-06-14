@@ -7447,6 +7447,7 @@
     "BetaOptIn_Dismiss": "Закрити",
     "BetaOptIn_Updated": "Клієнт Steam оновлено",
     "BetaOptIn_ThankYou": "Дякуємо за участь у бета-тестуванні. <1>Залиште відгук тут.</1>",
+    "BetaOptIn_WeShipped": "Нові функції випущено! Дякуємо за участь у бета-тестуванні. <1>Ось як приєднатися до наступного</1>.",
     "SP_WindowTitle_Configurator": "%1$s: розкладка контролера",
     "SP_WindowTitle_BigPicture": "Steam у режимі Big Picture",
     "SP_WindowTitle_Keyboard": "Екранна клавіатура введення Steam",
@@ -7535,5 +7536,7 @@
     "OverlayNetworkStatus_IPShared_No": "Ваша IP-адреса захищена",
     "OverlayNetworkStatus_IPShared_Friends": "Ваша IP-адреса відома принаймні одному другу",
     "OverlayNetworkStatus_IPShared_Yes": "Ваша IP-адреса відома іншим",
+    "Steam_EOLAlert": "Steam перестане працювати на ОС %2$s через %1$s дн.",
+    "Steam_EOLAlert_Plural": "Steam перестане працювати на ОС %2$s через %1$s дн.",
     "steamui_dummy": "DO NOT USE ME"
 }

@@ -2571,6 +2571,8 @@
   "Notification_NewAsyncGamePinned_Body_Plural": "Ожидаемых от вас ходов: %1$s",
   "Notification_NewHelpRequestRepliesPinned_Body": "Ответов от службы поддержки: %1$s",
   "Notification_NewHelpRequestRepliesPinned_Body_Plural": "Ответов от службы поддержки: %1$s",
+  "Notification_NewModeratorMessagePinned_Body": "Уведомлений в сообществе: %1$s",
+  "Notification_NewModeratorMessagePinned_Body_Plural": "Уведомлений в сообществе: %1$s",
   "SteamNotifications_Wishlist": "Скидки на игры из желаемого",
   "SteamNotifications_Wishlist_OnSale_Single": "Продаётся со скидкой за %1$s",
   "SteamNotifications_Wishlist_OnSale_Single_Short": "%1$s продаётся со скидкой за %2$s",

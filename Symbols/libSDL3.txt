@@ -380,6 +380,7 @@
  T SDL_DestroySurface
  T SDL_DestroyTexture
  T SDL_DestroyWindow
+ T SDL_DestroyWindowSurface
  T SDL_DetachThread
  T SDL_DetachVirtualJoystick
  T SDL_DisableScreenSaver
@@ -714,6 +715,7 @@
  T SDL_HasSSE41
  T SDL_HasSSE42
  T SDL_HasScreenKeyboardSupport
+ T SDL_HasWindowSurface
  T SDL_HideCursor
  T SDL_HideWindow
  T SDL_Init

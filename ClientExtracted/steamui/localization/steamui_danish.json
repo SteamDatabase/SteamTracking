@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Luk",
     "BetaOptIn_Updated": "Steam-klienten er blevet opdateret",
     "BetaOptIn_ThankYou": "Tak, fordi du deltager i betaen – <1>giv feedback</1>",
+    "BetaOptIn_WeShipped": "De nye funktioner er udgivet! Tak, fordi du deltog i betaen. <1>Se her, hvordan du deltager i den næste</1>.",
     "SP_WindowTitle_Configurator": "%1$s-controllerlayout",
     "SP_WindowTitle_BigPicture": "Steam Big Picture-tilstand",
     "SP_WindowTitle_Keyboard": "Steam Input-skærmtastatur",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "Din IP-adresse er beskyttet",
     "OverlayNetworkStatus_IPShared_Friends": "Din IP-adresse blev delt med en eller flere venner",
     "OverlayNetworkStatus_IPShared_Yes": "Din IP-adresse blev delt",
+    "Steam_EOLAlert": "Steam vil stoppe med at køre på %2$s om %1$s dag.",
+    "Steam_EOLAlert_Plural": "Steam vil stoppe med at køre på %2$s om %1$s dage.",
     "steamui_dummy": "DO NOT USE ME"
 }

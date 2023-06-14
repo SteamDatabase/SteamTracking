@@ -7537,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "Η IP σας προστατεύεται",
     "OverlayNetworkStatus_IPShared_Friends": "Η IP σας κοινοποιήθηκε σε έναν ή περισσότερους φίλους",
     "OverlayNetworkStatus_IPShared_Yes": "Η IP σας κοινοποιήθηκε",
+    "Steam_EOLAlert": "Το Steam θα σταματήσει να λειτουργεί σε %2$s σε %1$s ημέρα.",
+    "Steam_EOLAlert_Plural": "Το Steam θα σταματήσει να λειτουργεί σε %2$s σε %1$s ημέρες.",
     "steamui_dummy": "DO NOT USE ME"
 }

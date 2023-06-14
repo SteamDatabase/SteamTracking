@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Negeren",
     "BetaOptIn_Updated": "Je Steam-client is bijgewerkt",
     "BetaOptIn_ThankYou": "Bedankt voor je deelname aan de bèta. <1>Feedback geven</1>",
+    "BetaOptIn_WeShipped": "De nieuwe functies zijn gelanceerd! Bedankt voor je deelname aan de bèta.<1>Klik hier om mee te doen aan de volgende</1>.",
     "SP_WindowTitle_Configurator": "Controllerlay-out %1$s",
     "SP_WindowTitle_BigPicture": "Steam: Big Picture-modus",
     "SP_WindowTitle_Keyboard": "Steam Input: schermtoetsenbord",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "Je IP-adres is beschermd",
     "OverlayNetworkStatus_IPShared_Friends": "Je IP-adres is gedeeld met één of meer vrienden",
     "OverlayNetworkStatus_IPShared_Yes": "Je IP-adres is gedeeld",
+    "Steam_EOLAlert": "Steam werkt over %1$s dag niet meer op %2$s.",
+    "Steam_EOLAlert_Plural": "Steam werkt over %1$s dagen niet meer op %2$s.",
     "steamui_dummy": "DO NOT USE ME"
 }

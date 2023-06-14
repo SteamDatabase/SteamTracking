@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "닫기",
     "BetaOptIn_Updated": "Steam 클라이언트가 업데이트되었습니다.",
     "BetaOptIn_ThankYou": "베타에 참여해 주셔서 감사합니다. - <1>피드백을 남겨주세요</1>",
+    "BetaOptIn_WeShipped": "새로운 기능이 출시되었습니다! 베타 테스트에 참여해 주신 모든 분들께 감사드립니다. <1>다음 베타 테스트에 참여하는 방법을 여기에서 확인하세요</1>.",
     "SP_WindowTitle_Configurator": "%1$s 컨트롤러 레이아웃",
     "SP_WindowTitle_BigPicture": "Steam Big Picture 모드",
     "SP_WindowTitle_Keyboard": "Steam Input 가상 키보드",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "IP가 보호되고 있습니다.",
     "OverlayNetworkStatus_IPShared_Friends": "IP를 한 명 이상의 친구와 공유했습니다.",
     "OverlayNetworkStatus_IPShared_Yes": "IP가 공유되었습니다.",
+    "Steam_EOLAlert": "Steam은 %1$s일 후 %2$s에서 실행되지 않습니다.",
+    "Steam_EOLAlert_Plural": "Steam은 %1$s일 후 %2$s에서 실행되지 않습니다.",
     "steamui_dummy": "DO NOT USE ME"
 }

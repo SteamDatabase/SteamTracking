@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "閉じる",
     "BetaOptIn_Updated": "Steamクライアントが更新されました",
     "BetaOptIn_ThankYou": "ベータにご参加いただきありがとうございます－<1>フィードバックを送信</1>",
+    "BetaOptIn_WeShipped": "新機能がリリースされました！ベータ版へのご参加ありがとうございました。<1>次回のベータへの参加方法は次のとおりです</1>。",
     "SP_WindowTitle_Configurator": "%1$sコントローラレイアウト",
     "SP_WindowTitle_BigPicture": "Steam Big Pictureモード ",
     "SP_WindowTitle_Keyboard": "Steam入力オンスクリーンキーボード",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "あなたのIPは保護されています",
     "OverlayNetworkStatus_IPShared_Friends": "あなたのIPは1人以上のフレンドと共有されました",
     "OverlayNetworkStatus_IPShared_Yes": "IPが共有されました",
+    "Steam_EOLAlert": "Steamはあと%1$s日で%2$sで実行できなくなります。",
+    "Steam_EOLAlert_Plural": "Steamはあと%1$s日で%2$sで実行できなくなります。",
     "steamui_dummy": "使用しないでください"
 }

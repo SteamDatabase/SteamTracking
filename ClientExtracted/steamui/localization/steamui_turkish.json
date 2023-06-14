@@ -2553,7 +2553,7 @@
     "AppOverlay_Toolbar_RestoreMinimizeWindows": "Pencereleri geri yükle",
     "AppOverlay_Toolbar_Controller": "Kontrolcü Ayarları",
     "AppOverlay_Toolbar_SoundtrackPlayer": "Albüm Çalar",
-    "AppOverlay_Toolbar_AppSpotlight": "Oyun Genel Bakışı",
+    "AppOverlay_Toolbar_AppSpotlight": "Oyuna Genel Bakış",
     "AppOverlay_Toolbar_Browser": "İnternet Tarayıcısı",
     "AppOverlay_Toolbar_Screenshots": "Ekran Görüntüleri",
     "AppOverlay_Toolbar_Workshop": "Steam Atölyesi",
@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Kapat",
     "BetaOptIn_Updated": "Steam istemciniz güncellendi",
     "BetaOptIn_ThankYou": "Betaya katıldığınız için teşekkürler. <1>Geri bildirim bırakın.</1>",
+    "BetaOptIn_WeShipped": "Yeni özellikler çıktı! Betaya katıldığınız için teşekkürler. <1>Bir sonraki betaya nasıl katılacağınızı buradan öğrenin.</1>.",
     "SP_WindowTitle_Configurator": "Kontrolcü Düzeni - %1$s",
     "SP_WindowTitle_BigPicture": "Steam Geniş Ekran Modu",
     "SP_WindowTitle_Keyboard": "Steam Girdisi Ekran Klavyesi",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "IP adresiniz korunuyor.",
     "OverlayNetworkStatus_IPShared_Friends": "IP'niz bir veya daha fazla arkadaşla paylaşılmış.",
     "OverlayNetworkStatus_IPShared_Yes": "IP'niz paylaşılmış.",
+    "Steam_EOLAlert": "Steam %2$s için çalışmayı %1$s gün sonra durduracak.",
+    "Steam_EOLAlert_Plural": "Steam %2$s için çalışmayı %1$s gün sonra durduracak.",
     "steamui_dummy": "DO NOT USE ME"
 }

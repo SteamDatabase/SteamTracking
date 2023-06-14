@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Закрыть",
     "BetaOptIn_Updated": "Ваш клиент Steam обновлён",
     "BetaOptIn_ThankYou": "Благодарим за участие в бета-тестировании! Оставьте <1>отзыв</1>",
+    "BetaOptIn_WeShipped": "Новые функции добавлены в стабильную версию клиента! Спасибо за участие в бета-тестировании. <1>Вот как поучаствовать в следующем</1>.",
     "SP_WindowTitle_Configurator": "Раскладка контроллера для %1$s",
     "SP_WindowTitle_BigPicture": "Режим Big Picture",
     "SP_WindowTitle_Keyboard": "Экранная клавиатура системы ввода Steam",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "Ваш IP-адрес никому не был раскрыт",
     "OverlayNetworkStatus_IPShared_Friends": "Ваш IP-адрес был раскрыт как минимум одному другу",
     "OverlayNetworkStatus_IPShared_Yes": "Ваш IP-адрес был раскрыт",
+    "Steam_EOLAlert": "Steam прекратит работу на %2$s через %1$s день.",
+    "Steam_EOLAlert_Plural": "Steam прекратит работу на %2$s через %1$s дн.",
     "steamui_dummy": "DO NOT USE ME"
 }

@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Hylkää",
     "BetaOptIn_Updated": "Steam-asiakasohjelma on päivitetty",
     "BetaOptIn_ThankYou": "Kiitos, että osallistuit betaan. <1>Anna palautetta.</1>",
+    "BetaOptIn_WeShipped": "Uudet ominaisuudet on julkaistu! Kiitos betaan osallistumisesta.<1>Näin voit liittyä seuraavaan.</1>",
     "SP_WindowTitle_Configurator": "Ohjaimen %1$s asettelu",
     "SP_WindowTitle_BigPicture": "Steamin televisiotila",
     "SP_WindowTitle_Keyboard": "Steam-syötteen näyttönäppäimistö",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "IP-osoitteesi on suojattu",
     "OverlayNetworkStatus_IPShared_Friends": "IP-osoitteesi jaettiin yhden tai useamman kaverin kanssa",
     "OverlayNetworkStatus_IPShared_Yes": "IP-osoitteesi jaettiin",
+    "Steam_EOLAlert": "Steam lakkaa toimimasta käyttöjärjestelmässä %2$s %1$s päivän päästä.",
+    "Steam_EOLAlert_Plural": "Steam lakkaa toimimasta käyttöjärjestelmässä %2$s %1$s päivän päästä.",
     "steamui_dummy": "ÄLÄ KÄYTÄ TÄTÄ"
 }

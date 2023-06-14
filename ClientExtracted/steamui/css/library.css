@@ -1704,6 +1704,10 @@ body.in_global_drag .title-area {
   padding: 0;
   margin-left: 8px;
 }
+.friendsui-container .title-area .title-bar-actions,
+.DesktopUI .title-area .title-bar-actions {
+  margin-right: 0px;
+}
 div:focus,
 a:focus,
 span:focus {

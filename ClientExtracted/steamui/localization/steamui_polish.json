@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Zamknij",
     "BetaOptIn_Updated": "Twój klient Steam został zaktualizowany",
     "BetaOptIn_ThankYou": "Dziękujemy za uczestnictwo w testach beta – <1>podziel się opinią</1>",
+    "BetaOptIn_WeShipped": "Nowe funkcje zostały wydane! Dziękujemy za udział w becie. <1>Oto jak dołączyć do kolejnej</1>.",
     "SP_WindowTitle_Configurator": "Układ kontrolera: %1$s",
     "SP_WindowTitle_BigPicture": "Tryb Big Picture Steam",
     "SP_WindowTitle_Keyboard": "Klawiatura ekranowa korzystająca ze Steam Input",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "Twój adres IP jest chroniony",
     "OverlayNetworkStatus_IPShared_Friends": "Twój adres IP został udostępniony co najmniej jednemu znajomemu",
     "OverlayNetworkStatus_IPShared_Yes": "Twój adres IP został udostępniony",
+    "Steam_EOLAlert": "Steam przestanie działać na systemie %2$s za %1$s dzień.",
+    "Steam_EOLAlert_Plural": "Steam przestanie działać na systemie %2$s za %1$s dni.",
     "steamui_dummy": "DO NOT USE ME"
 }

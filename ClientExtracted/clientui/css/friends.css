@@ -2155,6 +2155,10 @@ body.in_global_drag .title-area {
   padding: 0;
   margin-left: 8px;
 }
+.friendsui-container .title-area .title-bar-actions,
+.DesktopUI .title-area .title-bar-actions {
+  margin-right: 0px;
+}
 @font-face {
   font-family: "Motiva Sans";
   src: url("/custom_fonts/clientui.uifont?MotivaSans-Regular")
@@ -2378,4 +2382,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=f3321712a19e2ee27b39*/
+/*# sourceMappingURL=friends.css.map?contenthash=d27b620103ed5c3c5f8a*/

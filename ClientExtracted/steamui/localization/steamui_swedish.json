@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Avvisa",
     "BetaOptIn_Updated": "Steam-klienten har uppdaterats",
     "BetaOptIn_ThankYou": "Tack för att du deltar i betan – <1>ge feedback</1>",
+    "BetaOptIn_WeShipped": "De nya funktionerna har lanserats! Tack för att du deltog i betan. <1>Så här går du med i nästa</1>.",
     "SP_WindowTitle_Configurator": "%1$s kontrollayout",
     "SP_WindowTitle_BigPicture": "Steams Big Picture-läge",
     "SP_WindowTitle_Keyboard": "Steam Input-skärmtangentbord",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "Din IP-adress är skyddad",
     "OverlayNetworkStatus_IPShared_Friends": "Din IP-adress delades med en eller flera vänner",
     "OverlayNetworkStatus_IPShared_Yes": "Din IP-adress delades",
+    "Steam_EOLAlert": "Steam slutar att fungera på %2$s om %1$s dag.",
+    "Steam_EOLAlert_Plural": "Steam slutar att fungera på %2$s om %1$s dagar.",
     "steamui_dummy": "DO NOT USE ME"
 }

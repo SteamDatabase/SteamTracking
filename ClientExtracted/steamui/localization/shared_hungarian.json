@@ -2570,6 +2570,8 @@
     "Notification_NewAsyncGamePinned_Body_Plural": "%1$s új kör várakozik",
     "Notification_NewHelpRequestRepliesPinned_Body": "%1$s válasz a Steam Támogatástól",
     "Notification_NewHelpRequestRepliesPinned_Body_Plural": "%1$s válasz a Steam Támogatástól",
+    "Notification_NewModeratorMessagePinned_Body": "%1$s közösségi üzenet",
+    "Notification_NewModeratorMessagePinned_Body_Plural": "%1$s közösségi üzenet",
     "SteamNotifications_Wishlist": "Akciós a kívánságlistáról",
     "SteamNotifications_Wishlist_OnSale_Single": "Akciós %1$s-ért.",
     "SteamNotifications_Wishlist_OnSale_Single_Short": "A(z) %1$s akciós %2$s-ért.",

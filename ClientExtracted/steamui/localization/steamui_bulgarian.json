@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "Отхвърляне",
     "BetaOptIn_Updated": "Steam клиентът Ви беше обновен",
     "BetaOptIn_ThankYou": "Благодарим Ви за участието в бетата — <1>оставете отзиви</1>",
+    "BetaOptIn_WeShipped": "Новите характеристики излязоха! Благодарим Ви за участието в бетата! <1>Ето как да се присъедините към следващата</1>.",
     "SP_WindowTitle_Configurator": "Оформление на контролера за %1$s",
     "SP_WindowTitle_BigPicture": "Steam режим „Голям екран“",
     "SP_WindowTitle_Keyboard": "Steam въвеждане — екранна клавиатура",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "IP адресът Ви е защитен",
     "OverlayNetworkStatus_IPShared_Friends": "IP адресът Ви беше споделен с един или повече приятели",
     "OverlayNetworkStatus_IPShared_Yes": "IP адресът Ви беше споделен",
+    "Steam_EOLAlert": "Steam ще спре да работи на %2$s след %1$s ден.",
+    "Steam_EOLAlert_Plural": "Steam ще спре да работи на %2$s след %1$s дни.",
     "steamui_dummy": "НЕ МЕ ИЗПОЛЗВАЙТЕ"
 }

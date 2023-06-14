@@ -7448,6 +7448,7 @@
     "BetaOptIn_Dismiss": "關閉",
     "BetaOptIn_Updated": "您的 Steam 用戶端已更新",
     "BetaOptIn_ThankYou": "感謝參與測試 - <1>留下意見回饋</1>",
+    "BetaOptIn_WeShipped": "新功能已推出！感謝參與測試。<1>此處提供參與下一輪測試的方法</1>。",
     "SP_WindowTitle_Configurator": "%1$s 控制器配置",
     "SP_WindowTitle_BigPicture": "Steam Big Picture 模式",
     "SP_WindowTitle_Keyboard": "Steam 輸入螢幕鍵盤",
@@ -7536,5 +7537,7 @@
     "OverlayNetworkStatus_IPShared_No": "您的 IP 受到保護",
     "OverlayNetworkStatus_IPShared_Friends": "您的 IP 與一位或多位好友分享",
     "OverlayNetworkStatus_IPShared_Yes": "正在分享您的 IP",
+    "Steam_EOLAlert": "Steam 將於 %1$s 天後停止在 %2$s 上運作。",
+    "Steam_EOLAlert_Plural": "Steam 將於 %1$s 天後停止在 %2$s 上運作。",
     "steamui_dummy": "DO NOT USE ME"
 }

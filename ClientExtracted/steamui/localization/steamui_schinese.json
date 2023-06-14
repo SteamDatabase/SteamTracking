@@ -7539,5 +7539,7 @@
     "OverlayNetworkStatus_IPShared_No": "您的 IP 受到保护",
     "OverlayNetworkStatus_IPShared_Friends": "您的 IP 已与一个或多个好友共享",
     "OverlayNetworkStatus_IPShared_Yes": "您的 IP 已共享",
+    "Steam_EOLAlert": "Steam 将于 %1$s 天后结束对 %2$s 的支持。",
+    "Steam_EOLAlert_Plural": "Steam 将于 %1$s 天后结束对 %2$s 的支持。",
     "steamui_dummy": "DO NOT USE ME"
 }

@@ -2571,6 +2571,8 @@
   "Notification_NewAsyncGamePinned_Body_Plural": "%1$s nuevos turnos en espera",
   "Notification_NewHelpRequestRepliesPinned_Body": "%1$s respuesta del Soporte de Steam",
   "Notification_NewHelpRequestRepliesPinned_Body_Plural": "%1$s respuestas del Soporte de Steam",
+  "Notification_NewModeratorMessagePinned_Body": "%1$s mensaje de la comunidad",
+  "Notification_NewModeratorMessagePinned_Body_Plural": "%1$s mensajes de la comunidad",
   "SteamNotifications_Wishlist": "Ofertas en la lista de deseados",
   "SteamNotifications_Wishlist_OnSale_Single": "está en oferta por %1$s",
   "SteamNotifications_Wishlist_OnSale_Single_Short": "«%1$s» está en oferta por %2$s",
