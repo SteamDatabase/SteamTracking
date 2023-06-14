@@ -27488,11 +27488,22 @@
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.SteamCharts(),
-                      render: (e) => o.createElement(J, Object.assign({}, e)),
+                      render: (e) =>
+                        o.createElement(S.d, {
+                          config: {
+                            "react-root": () =>
+                              o.createElement(J, Object.assign({}, e)),
+                          },
+                        }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.Loyalty(),
-                      render: () => o.createElement(te, null),
+                      render: () =>
+                        o.createElement(S.d, {
+                          config: {
+                            "points-shop": () => o.createElement(te, null),
+                          },
+                        }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.ContentHubHome(),
@@ -27516,7 +27527,12 @@
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.Categories(),
-                      render: (e) => o.createElement(pe, null),
+                      render: () =>
+                        o.createElement(S.d, {
+                          config: {
+                            categories: () => o.createElement(pe, null),
+                          },
+                        }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.AccountPreferences(),
