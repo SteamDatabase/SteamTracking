@@ -2572,6 +2572,8 @@
     "Notification_NewAsyncGamePinned_Body_Plural": "%1$s New Turns Waiting",
     "Notification_NewHelpRequestRepliesPinned_Body": "%1$s Reply from Steam Support",
     "Notification_NewHelpRequestRepliesPinned_Body_Plural": "%1$s Replies from Steam Support",
+    "Notification_NewModeratorMessagePinned_Body": "%1$s Community Message",
+    "Notification_NewModeratorMessagePinned_Body_Plural": "%1$s Community Messages",
     "SteamNotifications_Wishlist": "Wishlist Sale",
     "SteamNotifications_Wishlist_OnSale_Single": "Is on sale for %1$s",
     "SteamNotifications_Wishlist_OnSale_Single_Short": "%1$s is on sale for %2$s",

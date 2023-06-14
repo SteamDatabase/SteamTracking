@@ -1993,5 +1993,10 @@
         "id": 1300006,
         "name": "StreamClientControllerMessageQueuedForLocal_t",
         "size": 1
+    },
+    {
+        "id": 1350001,
+        "name": "32UserAchievementProgressChanged_t",
+        "size": 8
     }
 ]

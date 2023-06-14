@@ -2591,7 +2591,7 @@
     "SteamNotifications_Comment_Screenshot": "Skærmbillede",
     "SteamNotifications_Comment_Screenshot_Game": "Skærmbillede fra %1$s",
     "Notification_ItemAnnouncement_Title": "Genstand",
-    "Notification_ItemAnnouncement_TitleLong": "ny inventargenstand",
+    "Notification_ItemAnnouncement_TitleLong": "Ny inventargenstand",
     "Notification_ItemAnnouncement_Body": "Du har en ny genstand i dit inventar",
     "Notification_ItemAnnouncement_Body_Plural": "Du har %1$s nye genstande i dit inventar",
     "Notification_Item_Body": "Du modtog: %1$s",

@@ -2522,7 +2522,7 @@
   "ServerBrowser_CopySteamJoinLinkToClipboard": "复制链接至剪贴板",
   "ServerBrowser_RemoveServerFromHistory": "从历史记录中删除服务器",
   "ServerBrowser_RemoveServerFromFavorites": "从收藏夹中删除服务器",
-  "ServerBrowser_AddFavoriteServerByIP": "按 IP 地址添加最爱的服务器",
+  "ServerBrowser_AddFavoriteServerByIP": "按 IP 地址添加要收藏的服务器",
   "ServerBrowser_IPAddressPlaceholder": "域名或 IP 和可选端口",
   "ServerBrowser_ChangeFilters": "调整过滤器",
   "ServerBrowser_Search": "搜索",

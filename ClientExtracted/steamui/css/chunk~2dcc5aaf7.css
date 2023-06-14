@@ -23822,6 +23822,7 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR {
   height: 100%;
   margin: 0;
   overflow: hidden;
+  user-select: none;
 }
 body.gamepadui_SteamUIPopupWindowBody_QsvsR.gamepadui_GamepadUIPopupWindowBody_l25Af
   ::-webkit-scrollbar {

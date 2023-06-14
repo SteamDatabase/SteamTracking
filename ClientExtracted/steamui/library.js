@@ -1,4 +1,4 @@
-var CLSTAMP = "8123714";
+var CLSTAMP = "8126825";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4475,9 +4475,9 @@ var CLSTAMP = "8123714";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 12 2023 : 21:09:58",
-                BUILD_TIME_UTC: "Jun 13 2023 : 04:09:58",
-                BUILD_RTIME_UTC: 1686629398,
+                BUILD_TIME_LOCAL: "Jun 13 2023 : 19:37:49",
+                BUILD_TIME_UTC: "Jun 14 2023 : 02:37:49",
+                BUILD_RTIME_UTC: 1686710269,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -41690,7 +41690,7 @@ var CLSTAMP = "8123714";
                   },
                   n.createElement(l.TitleBar, {
                     className: v,
-                    hideMinMax: !0,
+                    hideMinMax: !e.resizable,
                     popup: S,
                     hideActions: !g,
                   }),
@@ -50310,39 +50310,45 @@ var CLSTAMP = "8123714";
           s = r(81673);
         function c(e) {
           const { popup: t, bOSX: r } = e,
-            [a, l] = n.useState(),
-            s = n.useCallback(() => {
+            [l, s] = n.useState(),
+            c = n.useCallback(() => {
               t.SteamClient.Window.ToggleMaximize();
             }, [t]),
-            c = n.useCallback(() => {
+            u = n.useCallback(() => {
               let e = t.screen.availWidth - t.innerWidth,
                 r = t.screen.availHeight - t.innerHeight;
               return 0 === e && 0 === r;
             }, [t]),
-            u = n.useCallback(() => {
+            d = n.useCallback(() => {
               if ((0, i.w3)(t, "Window.IsWindowMaximized"))
                 t.SteamClient.Window.IsWindowMaximized((e) => {
-                  e != a && l(e);
+                  e != l && s(e);
                 });
               else {
-                let e = c();
-                e != a && l(e);
+                let e = u();
+                e != l && s(e);
               }
-            }, [t, c, a]);
+            }, [t, u, l]);
           return (
             n.useEffect(
               () => (
-                u(),
-                t.addEventListener("resize", u),
-                () => t.removeEventListener("resize", u)
+                d(),
+                t.addEventListener("resize", d),
+                () => t.removeEventListener("resize", d)
               ),
-              [t, u]
+              [t, d]
             ),
             n.createElement(
               C,
-              { className: a ? "restoreButton" : "maximizeButton", onClick: s },
+              {
+                className: (0, a.default)(
+                  l ? "restoreButton" : "maximizeButton",
+                  "windowControlButton"
+                ),
+                onClick: c,
+              },
               !r &&
-                (a
+                (l
                   ? n.createElement(o.Restore, null)
                   : n.createElement(o.Maximize, null))
             )
@@ -50355,7 +50361,7 @@ var CLSTAMP = "8123714";
             }, [t]);
           return n.createElement(
             C,
-            { className: "minimizeButton", onClick: i },
+            { className: "minimizeButton windowControlButton", onClick: i },
             !r && n.createElement(o.Minimize, null)
           );
         }
@@ -50369,7 +50375,10 @@ var CLSTAMP = "8123714";
             }, [t]);
           return n.createElement(
             C,
-            { className: "closeButton", onClick: null != r ? r : l },
+            {
+              className: "closeButton windowControlButton",
+              onClick: null != r ? r : l,
+            },
             !a && n.createElement(o.X_Line, null)
           );
         }
@@ -50412,12 +50421,21 @@ var CLSTAMP = "8123714";
             n.createElement("div", { className: "title-area-children" }, _),
             !i &&
               n.createElement(
-                "div",
-                { className: "title-bar-actions" },
-                !o && n.createElement(d, { popup: f, onClose: p, bOSX: m }),
-                !C && n.createElement(c, { popup: f, bOSX: m }),
-                !C && n.createElement(u, { popup: f, bOSX: m }),
-                g
+                n.Fragment,
+                null,
+                g &&
+                  n.createElement(
+                    "div",
+                    { className: "title-bar-actions extra-actions" },
+                    g
+                  ),
+                n.createElement(
+                  "div",
+                  { className: "title-bar-actions window-controls" },
+                  !o && n.createElement(d, { popup: f, onClose: p, bOSX: m }),
+                  !C && n.createElement(c, { popup: f, bOSX: m }),
+                  !C && n.createElement(u, { popup: f, bOSX: m })
+                )
               )
           );
         }
@@ -54280,9 +54298,9 @@ var CLSTAMP = "8123714";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 12 2023 : 21:09:58",
-                    BUILD_TIME_UTC: "Jun 13 2023 : 04:09:58",
-                    BUILD_RTIME_UTC: 1686629398,
+                    BUILD_TIME_LOCAL: "Jun 13 2023 : 19:37:49",
+                    BUILD_TIME_UTC: "Jun 14 2023 : 02:37:49",
+                    BUILD_RTIME_UTC: 1686710269,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54801,9 +54819,9 @@ var CLSTAMP = "8123714";
       ".js?contenthash=" +
       {
         27: "a6a01b818de1a8d8f8fe",
-        33: "f7e8bc986ee646e32a3a",
-        58: "b2d65c8004845008017f",
-        131: "a572a79b1d030601e84b",
+        33: "80be52ce827324b50a40",
+        58: "83ca8cdc34e991d7d17d",
+        131: "a20004cabe570df19a56",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
         224: "9f8948d140fdee081d66",
@@ -54811,48 +54829,48 @@ var CLSTAMP = "8123714";
         503: "e856133fa7839545df40",
         578: "c902d35ea381395e6614",
         662: "5f6dc6c5ecd945872053",
-        740: "17b0a94d38d765ccc5fd",
-        755: "608e535b843fd1847ec0",
+        740: "33194b96e347cb3c3265",
+        755: "1755b82da7a36baf847d",
         932: "f282bbf7aafe65529b01",
-        1079: "375273ff0bb3618e695a",
+        1079: "64bc6d27f5cbb01c50ad",
         1102: "9df49d25731ef645f2f9",
-        1160: "fbc767b20e7943eaa290",
-        1261: "4f6e1c33ce510e40568c",
-        1365: "7e2882cfbc30ae82ba70",
+        1160: "f287771525b38ecfdcd4",
+        1261: "acdb6c74878ad2cbf1e9",
+        1365: "49e7175b1a34def2271f",
         1399: "93ea8269d88395c7feea",
         1493: "7a678c98bc1ce17428b4",
-        1573: "329d0620bb33497429a6",
+        1573: "23a01f4ec97fc9e3b7a7",
         1579: "a36af7b0337411b1726e",
-        1617: "c1c3b5abea37b8e8a57e",
+        1617: "730a090529fe7b163c14",
         1686: "e1d3d3c79b693d46e4ef",
         1926: "9d689d7bc6332255f636",
         1953: "e72a619d780b2d7efbe5",
-        2028: "580fa7fbc3c1c68a9c39",
-        2029: "ee7358ae303ef889ff23",
+        2028: "aae3ba21975cca7b7adf",
+        2029: "95d053c23f25aa900cd0",
         2055: "94b343239aa17cd5ac02",
         2138: "b60789944f4e1e112793",
-        2307: "aeef24a084d46960cc93",
+        2307: "6654c026aa1b18aadb86",
         2387: "4023428528fa228ebdd2",
-        2450: "ab89ea8ec4e8d545d8e8",
-        2499: "1b8029edcbe149470661",
+        2450: "a893a936a875db3fb304",
+        2499: "6d05336e3fdfffef31c9",
         2543: "0362c2f7aa2d469fffa5",
         2822: "e87faabea168c06aac3a",
-        2847: "78186777f96376b8ddf8",
+        2847: "ca3a2572ad3cec0b56dc",
         2915: "996a761e80b49ac53aea",
         3015: "510d5c15ead77069f782",
         3061: "28aa9b35545e2427b6da",
         3093: "a4dced6ab76b8ce9db92",
         3225: "af9782eb3010fd0cbc16",
         3298: "be246092bb92eeac5f32",
-        3357: "942194e0b8335e641b90",
+        3357: "78968cb564066c6e4d56",
         3403: "a87a0fd820563d54ca6b",
         3468: "ed4dab4c8b73331c8fc7",
         3530: "2a187555daab0a3ce8e3",
         3602: "77a2b7e9275e4533e306",
         3858: "6d2ad781814ce26cb7b8",
-        4061: "62cdc7a1abbc6bc8a33e",
-        4097: "963ab9dc96f141924bc5",
-        4183: "907fa26422d5335c1f0d",
+        4061: "a4bfc2319bde11bd872c",
+        4097: "74f45540793468d62ef9",
+        4183: "3d0d22a516402e873e15",
         4325: "bc1019bbb5890aab2337",
         4331: "39a727ef134d90bb1ecb",
         4358: "e8b6ba9972d3f546e956",
@@ -54862,7 +54880,7 @@ var CLSTAMP = "8123714";
         4445: "e227ba24e831dabb7c51",
         4469: "d1e398184123169e8e64",
         4487: "bc1af461a5f2c4dafcaa",
-        4513: "fbad5a3136d9b94c4d38",
+        4513: "63bd931fc93ee9334e91",
         4535: "9ba89b326b8219a1c936",
         4601: "2a91e0d23548013905c0",
         4725: "37bad80c360e85b47086",
@@ -54870,61 +54888,61 @@ var CLSTAMP = "8123714";
         5065: "276fc60a608acbd73afd",
         5175: "5e74fb4ec227cff583d4",
         5225: "7cc47a53e2d2d096479e",
-        5279: "bfcd30b819a71be97397",
+        5279: "262aa401065f710a02ce",
         5505: "f694f26290ae266333cc",
         5513: "ec0071187919eb9c037e",
         5547: "4a099cabe4e49f89668c",
-        5590: "30b3c357eb22890d0c54",
-        5742: "558d919326e782443620",
+        5590: "3c0496f5a05504874d19",
+        5742: "4cad23818cd18bc5831f",
         5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
         6006: "daa3ee8e6fac8a06111a",
         6109: "9d6d01a06d58a9c3f35e",
         6112: "e8cd52eaf9ea6333dfd5",
-        6255: "5681090be76ed40bb493",
-        6403: "960e2158f067c518dbf3",
+        6255: "7518da463019d52abcda",
+        6403: "6062e25ee66ef2c828f6",
         6678: "3838c20d12de4043cdb1",
         6703: "c1cf96faa61ac7e5a39f",
-        6844: "28b3e27d67b67ecbf24b",
-        6877: "40aeb3f6588a2c6c2a20",
-        6964: "68ec944938a22abecb89",
+        6844: "b6ed19959569f8af3033",
+        6877: "8b2fa37818adf0ae8961",
+        6964: "101da9374c906421fe0d",
         6973: "836a98750bf96902a6d1",
         7036: "195722967ecb005c6299",
         7235: "d15b14e92e06a9f1155f",
         7541: "712934ad3a4723eb8c73",
-        7656: "1340865f4258776a9793",
+        7656: "a30623007e18bedcd2df",
         7660: "44122521c0aae167febb",
         7725: "0a6429844e89cc14c4c0",
-        7781: "8f81ffc8006e0a1632c8",
+        7781: "87c2e1ea4151f25775d7",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "e9192aa8c348bd490e72",
+        7962: "c3de770bd130b15012c6",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
-        8085: "649331716e05de884b12",
-        8232: "af3832ca538f146fee90",
+        8085: "e820a5f472482fc395d7",
+        8232: "2f2181e0f662358bc8d8",
         8238: "171e23d01197780453de",
         8240: "fe99f8233189ad2c1c4d",
         8282: "f06d5a55a58d71b9a42c",
-        8319: "6ece6eaffb65dc3a0856",
+        8319: "9fb8f9b16b057f4c7abb",
         8433: "ab23e3d121a371cbca24",
-        8467: "33d700cc1ef80fe9ad31",
+        8467: "72afcfc4b8ef2d826496",
         8490: "a6f9565ec428a556c271",
         8553: "d8e6576615824304daa8",
-        8778: "b29333dda10ad0bea61b",
-        8956: "ce7a557d4de6478a2722",
+        8778: "28bd1c5f4e32f627c6cc",
+        8956: "811a48ddfbbbe14117de",
         9125: "6dda54697421891ea10b",
         9365: "28d83d50cbc622d62f8f",
         9399: "686e599aa6750d58e976",
         9520: "2eee41872648a9ed7a62",
         9547: "d38b98b52f237ef9307b",
-        9548: "a3a9a1c45b65fa5b3714",
-        9722: "2a5338ec898dd59b044c",
-        9746: "075ac6b32a52a1442b9b",
+        9548: "dbe0267f87e424f2605f",
+        9722: "c5083d06dc4b7ebdd05c",
+        9746: "9a85f00031d0b05f62b5",
         9854: "489d86c1f10a541f0ca5",
         9925: "c346de4224501a2b6884",
-        9951: "bda0f9804dd28dd063d8",
+        9951: "1a36892da1657d1d6817",
       }[e])),
     (l.miniCssF = (e) =>
       "css\\" +

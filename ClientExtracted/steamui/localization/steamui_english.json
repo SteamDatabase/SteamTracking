@@ -6658,8 +6658,6 @@
     "Notification_CloudSyncConflict_Title": "Cloud Conflict",
     "Notification_SteamDeckRewards_Title": "Steam Deck Rewards",
     "Notification_SteamDeckRewards_Body": "You have unclaimed rewards!",
-    "Notification_NewModeratorMessagePinned_Body": "%1$s Community Message",
-    "Notification_NewModeratorMessagePinned_Body_Plural": "%1$s Community Messages",
     "Notification_NewOfflineMessagesPinned_Body": "%1$s Unread Chat Message",
     "Notification_NewOfflineMessagesPinned_Body_Plural": "%1$s Unread Chat Messages",
     "Notification_GiftReceived_Title": "Gift",

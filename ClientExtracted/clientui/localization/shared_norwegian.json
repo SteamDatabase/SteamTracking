@@ -1158,6 +1158,7 @@
   "SteamNotification_HelpRequest_Author": "Steams kundestøtte",
   "SteamNotification_HelpRequest_Title": "Nytt svar på en støtteforespørsel",
   "SteamNotification_HelpRequest_Body": "Sak %1$s",
+  "SteamNotification_ModeratorMessage_Title": "Du har mottatt en ny samfunnsmelding",
   "SteamNotification_AsyncGame_Title": "Spilløkt",
   "SteamNotification_AsyncGame_Action": "Ny tur venter",
   "SteamNotification_AsyncGame_Action_Short": "Ny tur i %1$s",

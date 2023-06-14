@@ -1215,6 +1215,9 @@ ul {
   min-height: 18px;
   -webkit-app-region: drag;
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 body.in_global_drag .title-area {
   -webkit-app-region: no-drag;
@@ -1229,10 +1232,8 @@ body.in_global_drag .title-area {
 .title-area .title-bar-actions {
   display: flex;
   flex-direction: row-reverse;
-  position: absolute;
-  top: 0px;
-  right: 2px;
-  bottom: 0;
+  align-items: center;
+  margin-right: 2px;
   max-height: 24px;
   -webkit-app-region: no-drag;
   pointer-events: auto;
@@ -1269,6 +1270,10 @@ body.in_global_drag .title-area {
   z-index: 15;
 }
 .title-area-highlight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   height: 24px;
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
@@ -1308,14 +1313,8 @@ body.in_global_drag .title-area {
   height: 100%;
 }
 .title-area-children {
-  float: right;
-  margin-right: 84px;
-  -webkit-app-region: no-drag;
-  pointer-events: auto;
-  position: absolute;
-  top: 4px;
-  right: 0px;
   text-align: right;
+  flex-grow: 1;
 }
 .title-area-icon .SVGIcon_Minimize {
   width: 14px;
@@ -1577,6 +1576,10 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area-icon {
   width: 32px;
   height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 .DesktopUI .title-area-icon-inner,
 .friendsui-container .title-area-icon-inner {
@@ -1600,8 +1603,8 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area-icon .SVGIcon_X_Line,
 .friendsui-container .title-area-icon .SVGIcon_Restore {
   margin: 0px;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
 }
 .DesktopUI .title-area-icon:hover,
 .friendsui-container .title-area-icon:hover {
@@ -1666,9 +1669,15 @@ body.in_global_drag .title-area {
 .OSX .title-bar-actions .closeButton:active .title-area-icon-inner {
   background-image: url(data:image/png;base64,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);
 }
-.DesktopUI
-  .OSX:not(.WindowFocus)
+.friendsui-container
+  .TitleBar.OSX:not(.WindowFocus)
   .title-bar-actions:not(:hover)
+  .windowControlButton
+  .title-area-icon-inner,
+.DesktopUI
+  .TitleBar.OSX:not(.WindowFocus)
+  .title-bar-actions:not(:hover)
+  .windowControlButton
   .title-area-icon-inner {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAAC+W0ztAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAACtElEQVRYCe2Wy4oTQRSGK/cLWQZcD+5EcZGEBMQXkFnIvIH6DmpwLaPzDuobDC7EFxAhIclCFHcy64EsQy6Tm/8f+w+nu6sncaGzmCnonFPn1PnO31WQauduxnXfgdTfbEC3272fyWQepVKpB6i7jaca1A9hf63X66/L5fJzs9n8FsR3mr0E9Hq9u+l0+gUaPy6VSpVsNusgxGG+aYDGDo3dYrFwk8lkhPnH1Wr1ttFo/NilYKcANH+GZq8rlcqtfD4famrhVszFxYUbjUbnEPUKIt7ZdVH/UgH9fv9luVw+LhQKjm/NN91nUAx3YzabufF43K7X62+S6hIFDAaDJ8Vi8T0EOGy/t7kE6e1tE8ZwDBTgptPp01qt9sHm5aflWNvpdO5gfgIBseZsqkc1mksQ4/QpnAyMk4BJPzS8AnK5XBtnXo1uuxrYhtYnWWvkk0EWmaHOwSQmAOd+D7kjnnsUJqgPZHPROrIwjgJ2qDwmANlDnHvZnquAsiTQt4+oWiPLOFlkwj3UOtmYAJzbQ25bdFig9bXOxqyvPJlkay4bE4DiA/7J+CAsSopflmNNwDxQY9mYACSqvu1XgbUE7ysoYOqve4vxCdgm/4fjEzC0b2V3IyqIuV151QRMXlqhERMA4BkvliRwUpzUpBzjAfMs1B2TmAD8fX7h/3h0WLj1tc7GrK88mWRrLhsTgMQn/H+PfcdgwfTtI6DWyDJOFplka51sTABuru9InvImsxD5sgJYq5wsc/TJwjgN2PS3IyaAmfl8foz7fMhti8KYZ8z3KEfLwTVkkEXmn2j41yug1Wr9xLLnuEY3V2pUhJoLpXl0Ha9jMsgKmCrZWq8AZnl/4/OqjWfzFhauajXWXJZxvjlryUj6FuD6xA8Swa70k8yIuLqPUomg/Ref5ZZ/41/PHfgNF2emIio7BFgAAAAASUVORK5CYII=);
 }
@@ -1676,15 +1685,24 @@ body.in_global_drag .title-area {
 .friendsui-container .OSX .title-area-icon:hover {
   background: initial;
 }
-.DesktopUI .OSX .title-bar-actions {
-  left: 0;
-  padding-left: 16px;
-  padding-top: 8px;
+.friendsui-container .OSX .title-bar-actions,
+.DesktopUI .OSX .title-bar-actions.window-controls {
+  margin-left: 8px;
+  order: 1;
   justify-content: flex-end;
 }
+.friendsui-container .OSX .title-area-children,
+.DesktopUI .OSX .title-area-children {
+  order: 2;
+}
+.friendsui-container .OSX .title-bar-actions.extra-actions,
+.DesktopUI .OSX .title-bar-actions.extra-actions {
+  order: 3;
+  margin-right: 8px;
+}
 .DesktopUI .PopupFullWindow .OSX .title-bar-actions {
-  left: unset;
   padding: 0;
+  margin-left: 8px;
 }
 div:focus,
 a:focus,

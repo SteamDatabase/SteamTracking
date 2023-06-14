@@ -15970,7 +15970,13 @@ and limitations under the License.
           ),
           $t.createElement(
             ko,
-            { className: n ? "restoreButton" : "maximizeButton", onClick: i },
+            {
+              className: _n(
+                n ? "restoreButton" : "maximizeButton",
+                "windowControlButton"
+              ),
+              onClick: i,
+            },
             !r && (n ? $t.createElement(En, null) : $t.createElement(yn, null))
           )
         );
@@ -15982,7 +15988,7 @@ and limitations under the License.
           }, [t]);
         return $t.createElement(
           ko,
-          { className: "minimizeButton", onClick: n },
+          { className: "minimizeButton windowControlButton", onClick: n },
           !r && $t.createElement(bn, null)
         );
       }
@@ -15996,7 +16002,10 @@ and limitations under the License.
           }, [t]);
         return $t.createElement(
           ko,
-          { className: "closeButton", onClick: null != r ? r : o },
+          {
+            className: "closeButton windowControlButton",
+            onClick: null != r ? r : o,
+          },
           !n && $t.createElement(vn, null)
         );
       }
@@ -16058,12 +16067,21 @@ and limitations under the License.
           $t.createElement("div", { className: "title-area-children" }, d),
           !n &&
             $t.createElement(
-              "div",
-              { className: "title-bar-actions" },
-              !o && $t.createElement(wo, { popup: c, onClose: s, bOSX: a }),
-              !i && $t.createElement(Co, { popup: c, bOSX: a }),
-              !i && $t.createElement(Io, { popup: c, bOSX: a }),
-              u
+              $t.Fragment,
+              null,
+              u &&
+                $t.createElement(
+                  "div",
+                  { className: "title-bar-actions extra-actions" },
+                  u
+                ),
+              $t.createElement(
+                "div",
+                { className: "title-bar-actions window-controls" },
+                !o && $t.createElement(wo, { popup: c, onClose: s, bOSX: a }),
+                !i && $t.createElement(Co, { popup: c, bOSX: a }),
+                !i && $t.createElement(Io, { popup: c, bOSX: a })
+              )
             )
         );
       }
@@ -17057,4 +17075,4 @@ and limitations under the License.
         document.addEventListener("DOMContentLoaded", () => Ei());
     })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=9dd44a6618712e16231e
+//# sourceMappingURL=friends.js.map?contenthash=30eafc4a587f80f54337

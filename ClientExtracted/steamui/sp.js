@@ -345,9 +345,11 @@
         PinnedViewURLBar: "steamdesktopoverlay_PinnedViewURLBar_3QtXR",
         NoTitlebarSpacer: "steamdesktopoverlay_NoTitlebarSpacer_20pOd",
         WindowControls: "steamdesktopoverlay_WindowControls_2O7tj",
+        WindowButtonTooltip: "steamdesktopoverlay_WindowButtonTooltip_2o4H5",
         PinWindowButton: "steamdesktopoverlay_PinWindowButton_3EcEd",
         Pinned: "steamdesktopoverlay_Pinned_1dJ6y",
         CloudSyncButton: "steamdesktopoverlay_CloudSyncButton_2yvoV",
+        OpacityButton: "steamdesktopoverlay_OpacityButton_2J5BI",
         FocusIndicator: "steamdesktopoverlay_FocusIndicator_25FUF",
         ControllerConfiguratorWrapper:
           "steamdesktopoverlay_ControllerConfiguratorWrapper_2RTmc",
@@ -1408,7 +1410,7 @@
     },
     12677: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => W_ });
+      n.r(t), n.d(t, { default: () => z_ });
       var a = n(70655),
         r = n(61859),
         o = n(67294),
@@ -8936,7 +8938,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, he.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1686629398),
+          s = parseInt(1686710269),
           c = s && (0, tr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = i.sSteamBuildDate,
           d = "linux" == g.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -9409,37 +9411,39 @@
                 o.Fragment,
                 null,
                 o.createElement(
-                  se.HP,
+                  Gr.TitleBarActionButton,
                   {
-                    toolTipContent: "#UserGameNotes_PinWindow",
-                    direction: "top",
+                    className: (0, U.default)(
+                      zr().PinWindowButton,
+                      S && zr().Pinned
+                    ),
+                    onClick: v,
                   },
                   o.createElement(
-                    Gr.TitleBarActionButton,
+                    se.HP,
                     {
-                      className: (0, U.default)(
-                        zr().PinWindowButton,
-                        S && zr().Pinned
-                      ),
-                      onClick: v,
+                      className: zr().WindowButtonTooltip,
+                      toolTipContent: "#UserGameNotes_PinWindow",
+                      direction: "top",
                     },
                     o.createElement(or.Pin, null)
                   )
                 ),
-                o.createElement(
-                  se.HP,
-                  {
-                    toolTipContent: "#UserGameNotes_WindowOpacity",
-                    direction: "top",
-                  },
-                  S &&
-                    !w &&
+                S &&
+                  !w &&
+                  o.createElement(
+                    Gr.TitleBarActionButton,
+                    { className: zr().OpacityButton, onClick: E },
                     o.createElement(
-                      Gr.TitleBarActionButton,
-                      { className: zr().OpacityButton, onClick: E },
+                      se.HP,
+                      {
+                        className: zr().WindowButtonTooltip,
+                        toolTipContent: "#UserGameNotes_WindowOpacity",
+                        direction: "top",
+                      },
                       o.createElement(or.Opacity, null)
                     )
-                ),
+                  ),
                 y
               ))
             : y && (H = y);
@@ -18201,7 +18205,7 @@
           b = a.GoForward,
           S = o.useRef(),
           v = (0, E.SZ)(() => r && r.BIsBookmarked(d));
-        let [w, y, f] = a_(n, d);
+        let [w, y, f] = r_(n, d);
         const k = o.useCallback(() => {
             a.Browser.LoadURL(l);
           }, [a.Browser, l]),
@@ -18303,7 +18307,7 @@
             o.createElement(
               "div",
               { className: ed.URLBarText, onClick: i ? void 0 : y },
-              !i && o.createElement(r_, { data: w, onAnimationComplete: f }),
+              !i && o.createElement(o_, { data: w, onAnimationComplete: f }),
               o.createElement(
                 se.HP,
                 {
@@ -19090,7 +19094,7 @@
         Kd = 500;
       function Qd(e) {
         const [t, n] = o.useState(),
-          a = pp((0, T.p)(), Xd, Kd);
+          a = _p((0, T.p)(), Xd, Kd);
         return o.createElement(
           Zr,
           {
@@ -19669,10 +19673,10 @@
           l = Nl._v.GameOverview,
           s = (0, E.SZ)(() => i.BWindowVisible(l)),
           [c, m] = o.useState(),
-          d = up(l),
+          d = pp(l),
           u = (0, C.useMultipleRefs)(m, d),
           p = (0, E.SZ)(() => i.game_overview_sections),
-          _ = pp(r, 350, 475, 250, 300),
+          _ = _p(r, 350, 475, 250, 300),
           g = o.useCallback(() => {
             i.SetWindowVisibility(l, Nl.fC.Closed);
           }, [l, i]),
@@ -20136,7 +20140,16 @@
         );
       }
       var $u;
-      function Ju(e) {
+      !(function (e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.Connecting = 1)] = "Connecting"),
+          (e[(e.FindingRoute = 2)] = "FindingRoute"),
+          (e[(e.Connected = 3)] = "Connected"),
+          (e[(e.ClosedByPeer = 4)] = "ClosedByPeer"),
+          (e[(e.ProblemDetectedLocally = 5)] = "ProblemDetectedLocally");
+      })($u || ($u = {}));
+      let Ju = !1;
+      function ep(e) {
         var t;
         const { summary: n } = e,
           [a, r] = o.useState(0);
@@ -20152,7 +20165,14 @@
             mt.k_ESteamNetTransport_SDRHostedServer
               ? i
               : null;
-        console.assert(!(null == l ? void 0 : l.ip_was_shared));
+        (null == l ? void 0 : l.ip_was_shared) &&
+          (console.assert(
+            Ju,
+            `SDR connection shared our IP?  transport_kind=${
+              null == l ? void 0 : l.transport_kind
+            } appid=${null == n ? void 0 : n.appid}`
+          ),
+          (Ju = !0));
         const s =
           i &&
           i.ping_ms >= 0 &&
@@ -20315,7 +20335,7 @@
           )
         );
       }
-      function ep(e) {
+      function tp(e) {
         const { appid: t } = e;
         o.useEffect(
           () => (
@@ -20326,16 +20346,16 @@
         );
         let n = ((a = t), (0, E.SZ)(() => pt.Get().GetAppSummaryObserved(a)));
         var a;
-        return n ? o.createElement(Ju, { summary: n }) : null;
+        return n ? o.createElement(ep, { summary: n }) : null;
       }
-      function tp() {
+      function np() {
         return (0, T.p)().DesktopOverlay;
       }
-      function np(e) {
+      function ap(e) {
         const { children: t } = e;
         return (
           (function () {
-            const e = tp();
+            const e = np();
             o.useEffect(
               () => (e.EnterMinimalMode(), () => e.ExitMinimalMode()),
               [e]
@@ -20344,22 +20364,14 @@
           o.createElement(o.Fragment, null, t)
         );
       }
-      function ap(e) {
+      function rp(e) {
         const { children: t } = e,
-          n = tp();
+          n = np();
         return (0, E.SZ)(() => n.minimal_mode)
           ? null
           : o.createElement(o.Fragment, null, t);
       }
-      !(function (e) {
-        (e[(e.None = 0)] = "None"),
-          (e[(e.Connecting = 1)] = "Connecting"),
-          (e[(e.FindingRoute = 2)] = "FindingRoute"),
-          (e[(e.Connected = 3)] = "Connected"),
-          (e[(e.ClosedByPeer = 4)] = "ClosedByPeer"),
-          (e[(e.ProblemDetectedLocally = 5)] = "ProblemDetectedLocally");
-      })($u || ($u = {}));
-      const rp = function (e) {
+      const op = function (e) {
         const { gameid: t, width: n, height: a } = e,
           r = (0, T.p)(),
           i = (function () {
@@ -20398,7 +20410,7 @@
                   browserInfo: r.params.browserInfo,
                   bRegisterManagersWithWindow: !1,
                 },
-                o.createElement(ip, { appid: d })
+                o.createElement(lp, { appid: d })
               ),
               o.createElement(
                 ja.ModalRoot,
@@ -20407,24 +20419,24 @@
                   browserInfo: r.params.browserInfo,
                   bOnlyPopups: !0,
                 },
-                o.createElement(wp, { appid: d }),
+                o.createElement(yp, { appid: d }),
                 o.createElement(jm.W, { appid: d }),
                 o.createElement(Hu, { appid: d }),
                 o.createElement(ml, { bDesktopBanner: !1 }),
                 o.createElement(
-                  ap,
+                  rp,
                   null,
-                  o.createElement(lp, { appid: d }),
                   o.createElement(sp, { appid: d }),
-                  o.createElement(bp, { appid: d, overview: m }),
-                  o.createElement(Ep, { appid: d })
+                  o.createElement(cp, { appid: d }),
+                  o.createElement(Sp, { appid: d, overview: m }),
+                  o.createElement(Cp, { appid: d })
                 )
               )
             )
           )
         );
       };
-      function op(e) {
+      function ip(e) {
         return o.useCallback(
           (t, n) => {
             const a = {
@@ -20444,9 +20456,9 @@
           [e]
         );
       }
-      const ip = (0, D.WithErrorBoundary)((e) => {
+      const lp = (0, D.WithErrorBoundary)((e) => {
           const { appid: t } = e,
-            n = op(t),
+            n = ip(t),
             a = (0, xd.C)(t);
           if (0 == a.length) return null;
           let r = a[0],
@@ -20474,14 +20486,14 @@
               i = o.createElement(Td.se, { request: r });
           }
           return i
-            ? o.createElement(np, null, i)
+            ? o.createElement(ap, null, i)
             : o.createElement(
-                np,
+                ap,
                 null,
                 a.map((e) => {
                   if (e.bWebPage) {
                     let a = () => xd.H.RemoveDialogRequest(e);
-                    return o.createElement(zp, {
+                    return o.createElement(Hp, {
                       appid: t,
                       key: `OverlayBrowser_${t}_${e.strDialog}`,
                       strName: `OverlayBrowser_${t}_${e.strDialog}`,
@@ -20498,7 +20510,7 @@
                 })
               );
         }),
-        lp = (0, D.WithErrorBoundary)((e) => {
+        sp = (0, D.WithErrorBoundary)((e) => {
           const { appid: t } = e,
             n = (0, E.SZ)(
               () => -1 == Md.iB.AppsWithTouchMenusEnabled.indexOf(t)
@@ -20508,13 +20520,13 @@
             );
           return n ? null : o.createElement(Id.i5, { appID: t, bVisible: a });
         });
-      function sp(e) {
+      function cp(e) {
         const { appid: t } = e,
           n = (0, E.SZ)(() => gt.AppStore.GetAppOverviewByAppID(t));
         return o.createElement(
           "div",
           { className: Wr.TopSection },
-          o.createElement(mp, { app: n }),
+          o.createElement(dp, { app: n }),
           o.createElement(me.A, {
             className: Wr.CurrentGameLogoContainer,
             eAssetType: 2,
@@ -20524,12 +20536,12 @@
           o.createElement(
             "div",
             { className: Wr.TopSectionRightSide },
-            o.createElement(cp, { appid: t }),
-            o.createElement(ep, { appid: t })
+            o.createElement(mp, { appid: t }),
+            o.createElement(tp, { appid: t })
           )
         );
       }
-      function cp(e) {
+      function mp(e) {
         const { appid: t } = e,
           [n] = (0, Z.HQ)("overlay_key"),
           a = (0, E.SZ)(() => gt.AppStore.GetAppOverviewByAppID(t)),
@@ -20566,14 +20578,14 @@
           })
         );
       }
-      function mp(e) {
+      function dp(e) {
         const { app: t } = e,
           n = (0, Dd.fj)(),
           a = (function () {
             const e = (0, Dd.cB)();
             return (0, he.LocalizeDateHumanReadable)(e.getTime() / 1e3);
           })(),
-          r = tp(),
+          r = np(),
           i = (0, E.SZ)(() => r.time_session_start),
           [l, c] = o.useState(""),
           m = s.nm.BIsStreamingRemotePlayTogetherGame(t.appid)
@@ -20599,7 +20611,7 @@
           o.createElement("div", { className: Wr.CurrentTime }, n),
           o.createElement("div", { className: Wr.CurrentDate }, a),
           o.createElement("div", { className: Wr.PlaytimeCurrentSession }, l),
-          o.createElement(dp, null),
+          o.createElement(up, null),
           o.createElement(
             de.Button,
             {
@@ -20619,8 +20631,8 @@
           )
         );
       }
-      function dp(e) {
-        const t = tp(),
+      function up(e) {
+        const t = np(),
           n = (0, Nl.KQ)(t);
         if (!n || 0 == n.unSecondsAllowed) return null;
         let a = Math.max(0, n.unSecondsAllowed - n.unSecondsPlayed),
@@ -20634,8 +20646,8 @@
           );
         return o.createElement("div", { className: Wr.TimeTrialRemaining }, r);
       }
-      function up(e) {
-        const t = tp();
+      function pp(e) {
+        const t = np();
         return o.useCallback(
           (n) => {
             t.SetPopupForWindow(e, n);
@@ -20643,7 +20655,7 @@
           [t, e]
         );
       }
-      function pp(e, t, n, a, r, i, l) {
+      function _p(e, t, n, a, r, i, l) {
         return o.useCallback(
           (o) => {
             let s = (0, Nl.LU)(e, t, n, a, r),
@@ -20723,11 +20735,11 @@
           [e, t, n, a, r, i, l]
         );
       }
-      function _p(e) {
+      function gp(e) {
         const { windowType: t, onToggleOn: n } = e,
           r = (0, a._T)(e, ["windowType", "onToggleOn"]);
         let i = o.useRef();
-        const l = tp(),
+        const l = np(),
           s = (0, E.SZ)(() => l.BWindowVisible(t)),
           c = o.useCallback(() => {
             l.ToggleWindowVisibility(t) && n && n();
@@ -20745,7 +20757,7 @@
             0 != i.current && (window.clearTimeout(i.current), (i.current = 0));
           }, []);
         return o.createElement(
-          hp,
+          bp,
           Object.assign(
             {
               windowType: t,
@@ -20758,13 +20770,13 @@
           )
         );
       }
-      function gp(e) {
-        const t = tp(),
+      function hp(e) {
+        const t = np(),
           n = (0, E.SZ)(() => t.has_minimized_windows),
           a = o.useCallback(() => {
             n ? t.RestoreMinimizedWindows() : t.MinimizeAllWindows();
           }, [t, n]),
-          r = vp(),
+          r = Ep(),
           i = (0, he.Localize)(
             n
               ? "#AppOverlay_Toolbar_RestoreMinimizeWindows"
@@ -20809,7 +20821,7 @@
               })
             );
       }
-      function hp(e) {
+      function bp(e) {
         const {
             windowType: t,
             bToggled: n,
@@ -20821,7 +20833,7 @@
           } = e,
           c = (0, Mu.v)(t),
           m = (0, fa.lE)(c.parentalFeature),
-          d = vp();
+          d = Ep();
         return (0, g.IsSteamChina)() && !(0, Nl.eS)(t)
           ? null
           : d
@@ -20872,49 +20884,49 @@
               })
             );
       }
-      const bp = (0, D.WithErrorBoundary)((e) => {
+      const Sp = (0, D.WithErrorBoundary)((e) => {
           const { appid: t, overview: n } = e;
           return o.createElement(
             o.Fragment,
             null,
             o.createElement(Iu, { appid: t }),
-            o.createElement(Mp, { appid: t }),
-            o.createElement(Np, { appid: t }),
-            o.createElement(fp, { appid: t }),
-            o.createElement(Pp, { appid: t }),
-            o.createElement(Up, { appid: t }),
-            o.createElement(Tp, { appid: t }),
-            o.createElement(Dp, { overview: n }),
-            o.createElement(Gp, { appid: t }),
             o.createElement(Fp, { appid: t }),
-            o.createElement(xp, { appid: t }),
-            o.createElement(Op, { appid: t }),
+            o.createElement(Rp, { appid: t }),
             o.createElement(kp, { appid: t }),
+            o.createElement(Ap, { appid: t }),
+            o.createElement(Mp, { appid: t }),
+            o.createElement(Ip, { appid: t }),
+            o.createElement(Pp, { overview: n }),
+            o.createElement(Wp, { appid: t }),
+            o.createElement(Op, { appid: t }),
+            o.createElement(Up, { appid: t }),
+            o.createElement(Gp, { appid: t }),
             o.createElement(Lp, { appid: t }),
             o.createElement(Bp, { appid: t }),
+            o.createElement(Np, { appid: t }),
             o.createElement($r, null),
             o.createElement(Gl, null),
             o.createElement(Ho, null),
-            o.createElement(Rp, { appid: t })
+            o.createElement(Tp, { appid: t })
           );
         }),
-        Sp = (0, D.WithErrorBoundary)((e) => {
+        vp = (0, D.WithErrorBoundary)((e) => {
           const { appid: t } = e,
             n = (0, Ad.vf)().length > 0;
-          return o.createElement(hp, {
+          return o.createElement(bp, {
             windowType: Nl._v.Controller,
             onToggle: () => SteamClient.Apps.ShowControllerConfigurator(t),
             bToggled: !1,
             disabled: !n,
           });
         });
-      function vp() {
+      function Ep() {
         const [e] = (0, Z.HQ)("overlay_toolbar_list_view");
         return e;
       }
-      const Ep = (0, D.WithErrorBoundary)((e) => {
+      const Cp = (0, D.WithErrorBoundary)((e) => {
         const { appid: t } = e,
-          n = ((0, r.gV)().BIsOfflineMode(), (0, Ud.S9)(), tp(), (0, gt.kC)(t)),
+          n = ((0, r.gV)().BIsOfflineMode(), (0, Ud.S9)(), np(), (0, gt.kC)(t)),
           a = (0, ya.i)(t),
           i = (function () {
             const [e] = (0, Z.HQ)("overlay_toolbar_list_view");
@@ -20933,35 +20945,35 @@
               l.map(
                 (e) =>
                   e.visible &&
-                  o.createElement(Cp, {
+                  o.createElement(wp, {
                     key: e.window,
                     app: n,
                     details: a,
                     window: e.window,
                   })
               ),
-              o.createElement(Cp, {
+              o.createElement(wp, {
                 app: n,
                 details: a,
                 window: Nl._v.Settings,
               }),
-              o.createElement(gp, null)
+              o.createElement(hp, null)
             )
           )
         );
       });
-      function Cp(e) {
+      function wp(e) {
         var t, n, a, r;
         const { app: i, details: l, window: s } = e,
           c = (0, Mu.v)(s),
           m = (0, T.p)(),
-          d = tp(),
+          d = np(),
           [u] = (0, Z.HQ)("web_browser_home"),
           p = o.useCallback(() => {
             0 == d.web_requests.length && d.AddWebPageRequest(u);
           }, [d, u]);
         if (e.window == Nl._v.Controller && m.BrowserWindow.innerWidth <= 1280)
-          return o.createElement(Sp, { appid: i.appid });
+          return o.createElement(vp, { appid: i.appid });
         const _ =
             null ===
               (n =
@@ -20979,7 +20991,7 @@
             void 0 !== r &&
             r;
         return _
-          ? o.createElement(_p, {
+          ? o.createElement(gp, {
               windowType: s,
               className: s,
               disabled: g,
@@ -20987,7 +20999,7 @@
             })
           : null;
       }
-      const wp = (0, D.WithErrorBoundary)((e) => {
+      const yp = (0, D.WithErrorBoundary)((e) => {
         const { appid: t } = e,
           [n, a] = o.useState(null),
           r = o.useRef(),
@@ -21045,7 +21057,7 @@
             () => e.forEach((e) => e.unregister())
           );
         }, [s, m]);
-        const d = op(t),
+        const d = ip(t),
           u = o.useCallback(
             (e) => {
               if (0 == e.indexOf("steam://close/authorize"))
@@ -21145,9 +21157,9 @@
         );
         return n
           ? o.createElement(
-              np,
+              ap,
               null,
-              o.createElement(zp, {
+              o.createElement(Hp, {
                 appid: t,
                 strName: `MTXOverlayBrowser_${t}`,
                 strInitialURL: n,
@@ -21163,7 +21175,7 @@
             )
           : null;
       });
-      function yp(e) {
+      function fp(e) {
         const {
             appid: t,
             windowType: n,
@@ -21171,9 +21183,9 @@
             bCanChangeURL: r,
             bPinnable: i,
           } = e,
-          l = tp(),
+          l = np(),
           s = (0, E.SZ)(() => l.BWindowVisible(n)),
-          c = up(n),
+          c = pp(n),
           m = o.useCallback(() => {
             l.SetWindowVisibility(n, Nl.fC.Closed);
           }, [l, n]),
@@ -21183,11 +21195,11 @@
             },
             [l]
           );
-        let u = Ip(n);
+        let u = Dp(n);
         return (
           i || (u = {}),
           s
-            ? o.createElement(zp, {
+            ? o.createElement(Hp, {
                 appid: t,
                 refPopup: c,
                 strName: `OverlayBrowser_${n.toString()}`,
@@ -21203,14 +21215,14 @@
             : null
         );
       }
-      function fp(e) {
+      function kp(e) {
         const { appid: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.Settings,
           r = (0, E.SZ)(() => n.settings_page),
           i = (0, E.SZ)(() => n.BWindowVisible(a)),
-          l = up(a),
-          s = pp((0, T.p)(), 850, 696),
+          l = pp(a),
+          s = _p((0, T.p)(), 850, 696),
           c = o.useCallback(() => {
             n.SetWindowVisibility(a, Nl.fC.Closed);
           }, [a, n]);
@@ -21234,9 +21246,9 @@
             )
           : null;
       }
-      function kp(e) {
+      function Lp(e) {
         const { appid: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.Broadcast,
           i = jr(1, 1),
           l = (0, r.xJ)(),
@@ -21309,12 +21321,12 @@
             )
           : null;
       }
-      function Lp(e) {
+      function Bp(e) {
         const { appid: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.BroadcastChat,
           i = (0, E.SZ)(() => n.BWindowVisible(a)),
-          l = pp((0, T.p)(), 400, 150, 400, 150),
+          l = _p((0, T.p)(), 400, 150, 400, 150),
           s = (0, r.xJ)(),
           [c, m] = o.useState(),
           d = null == c ? void 0 : c.bIsBroadcasting;
@@ -21354,9 +21366,9 @@
             )
           : null;
       }
-      function Bp(e) {
+      function Np(e) {
         const { appid: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.BroadcastFirstTime,
           r = (0, E.SZ)(() => n.BWindowVisible(a)),
           i = jr(400, 450, 400, 450),
@@ -21395,13 +21407,13 @@
             )
           : null;
       }
-      function Np(e) {
+      function Rp(e) {
         const { appid: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.SoundtrackPlayer,
           r = (0, E.SZ)(() => n.BWindowVisible(a)),
-          i = up(a),
-          l = pp((0, T.p)(), 278, 169),
+          i = pp(a),
+          l = _p((0, T.p)(), 278, 169),
           s = o.useCallback(() => {
             n.SetWindowVisibility(a, Nl.fC.Closed);
           }, [a, n]);
@@ -21421,14 +21433,14 @@
             )
           : null;
       }
-      function Rp(e) {
+      function Tp(e) {
         const { appid: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.Timer,
           r = (0, E.SZ)(() => n.BWindowVisible(a)),
-          i = up(a),
-          l = pp((0, T.p)(), 278, 169),
-          s = Ip(a),
+          i = pp(a),
+          l = _p((0, T.p)(), 278, 169),
+          s = Dp(a),
           c = o.useCallback(() => {
             n.SetWindowVisibility(a, Nl.fC.Closed);
           }, [a, n]);
@@ -21451,17 +21463,17 @@
             )
           : null;
       }
-      function Tp(e) {
+      function Ip(e) {
         const { appid: t } = e,
           n = (0, ya.i)(t),
           a = (0, E.SZ)(() => n && ya.d.GetAchievements(t)),
           r = a && a.nTotal > 0,
-          i = tp(),
+          i = np(),
           l = Nl._v.Achievements,
           s = (0, E.SZ)(() => i.BWindowVisible(l)),
-          c = up(l),
-          m = pp((0, T.p)(), 560, 500, 300, 100),
-          d = Ip(l),
+          c = pp(l),
+          m = _p((0, T.p)(), 560, 500, 300, 100),
+          d = Dp(l),
           u = (0, E.SZ)(() => i.GetPinnedWindowData(l)),
           p = o.useCallback(() => {
             i.SetWindowVisibility(l, Nl.fC.Closed);
@@ -21496,8 +21508,8 @@
             )
           : null;
       }
-      function Ip(e) {
-        const t = tp();
+      function Dp(e) {
+        const t = np();
         let n = o.useRef();
         const a = (0, E.SZ)(() => t.BWindowPinned(e)),
           r = (0, E.SZ)(() => t.GetPinnedWindowOpacity(e)),
@@ -21536,7 +21548,7 @@
               let i = o.createElement(
                 x.ContextMenu,
                 { onCancel: r },
-                [1, 0.9, 0.8, 0.7, 0.6, 0.5].map((n, r) =>
+                [1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1].map((n, r) =>
                   o.createElement(
                     x.ContextMenuItem,
                     {
@@ -21575,14 +21587,14 @@
           refPinnedPopup: c,
         };
       }
-      function Dp(e) {
+      function Pp(e) {
         const { overview: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.Notes,
           r = (0, E.SZ)(() => n.BWindowVisible(a)),
-          i = up(a),
+          i = pp(a),
           l = (0, T.p)(),
-          s = pp(l, 600, 500, 250, 255),
+          s = _p(l, 600, 500, 250, 255),
           m = (function () {
             const e = (0, Bd.Q2)();
             return (
@@ -21693,17 +21705,17 @@
           }, [d, l, _]),
           h = (0, hl.PC)(t.appid, t.BIsShortcut() ? t.display_name : void 0),
           b = o.useMemo(() => [(0, gl.q)(h)], [h]),
-          S = Ip(a);
+          S = Dp(a);
         let v = null;
         if (r) {
           const e = (0, $l.xK)(d),
             t = (0, $l.LS)(d);
           v = o.createElement(
-            se.HP,
-            { toolTipContent: t },
+            Gr.TitleBarActionButton,
+            { className: Wr.CloudSyncButton, onClick: g },
             o.createElement(
-              Gr.TitleBarActionButton,
-              { className: Wr.CloudSyncButton, onClick: g },
+              se.HP,
+              { className: Wr.WindowButtonTooltip, toolTipContent: t },
               o.createElement(or.CloudSync, Object.assign({}, e))
             )
           );
@@ -21734,14 +21746,14 @@
           )
         );
       }
-      function Pp(e) {
+      function Ap(e) {
         const { appid: t } = e,
           n = (0, T.p)(),
-          a = tp(),
+          a = np(),
           r = Nl._v.Screenshots,
           i = (0, E.SZ)(() => a.BWindowVisible(r)),
-          l = up(r),
-          s = pp(n, 1024, 768, 800, 600),
+          l = pp(r),
+          s = _p(n, 1024, 768, 800, 600),
           c = o.useCallback(() => {
             a.SetWindowVisibility(r, Nl.fC.Closed);
           }, [r, a]);
@@ -21760,7 +21772,7 @@
             )
           : null;
       }
-      function Ap(e) {
+      function xp(e) {
         const { appid: t, onClose: n } = e,
           a = (0, r.gV)().cm,
           i = (0, T.p)(),
@@ -21787,10 +21799,10 @@
                   s.nm.SetConfiguratorWidth(e.outerWidth);
                 },
               };
-            const { popup: p, element: _ } = k_(
+            const { popup: p, element: _ } = L_(
                 "ControllerConfigurator",
                 i.current,
-                f_.GamepadUI,
+                k_.GamepadUI,
                 {
                   title: (0, he.Localize)("#SP_WindowTitle_Configurator", r),
                   dimensions: d,
@@ -21816,7 +21828,7 @@
               popup: p,
               element: _,
               configurator: o.createElement(
-                L_,
+                B_,
                 { ownerWindow: p, instance: i.current },
                 o.createElement(
                   N.PU,
@@ -21866,37 +21878,37 @@
             : null
         );
       }
-      function xp(e) {
+      function Up(e) {
         const { appid: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.Controller,
           r = (0, E.SZ)(() => n.BWindowVisible(a)),
           i = o.useCallback(() => {
             n.SetWindowVisibility(a, Nl.fC.Closed);
           }, [a, n]);
-        return r ? o.createElement(Ap, { appid: t, onClose: i }) : null;
+        return r ? o.createElement(xp, { appid: t, onClose: i }) : null;
       }
-      function Up(e) {
+      function Mp(e) {
         const { appid: t } = e,
           n = Ht.de.ResolveURL("GameHubGuides", t);
-        return o.createElement(yp, {
+        return o.createElement(fp, {
           appid: t,
           windowType: Nl._v.Guides,
           strURL: n,
           bPinnable: !0,
         });
       }
-      function Mp(e) {
+      function Fp(e) {
         const { appid: t } = e,
-          n = tp(),
+          n = np(),
           a = Nl._v.Browser,
           r = (0, E.SZ)(() => n.BWindowVisible(a)),
           [i] = (0, Z.HQ)("web_browser_home"),
           l = o.useRef(),
-          s = up(a),
+          s = pp(a),
           c = (0, C.useMultipleRefs)(l, s),
           m = (0, C.useForceUpdate)(),
-          d = Ip(a),
+          d = Dp(a),
           u = o.useCallback(() => {
             n.SetWindowVisibility(a, Nl.fC.Closed);
           }, [n, a]),
@@ -21945,7 +21957,7 @@
             [n]
           );
         return r
-          ? o.createElement(Hp, {
+          ? o.createElement(Vp, {
               strName: `OverlayBrowser_${a.toString()}`,
               appid: t,
               strHomeURL: i,
@@ -21963,35 +21975,35 @@
             })
           : null;
       }
-      function Fp(e) {
+      function Op(e) {
         const { appid: t } = e,
           n = Ht.de.ResolveURL("GameHubDiscussions", t);
-        return o.createElement(yp, {
+        return o.createElement(fp, {
           appid: t,
           windowType: Nl._v.Discussions,
           strURL: n,
           bPinnable: !0,
         });
       }
-      function Op(e) {
+      function Gp(e) {
         const { appid: t } = e,
           n = Ht.de.ResolveURL("SteamWorkshopPage", t);
-        return o.createElement(yp, {
+        return o.createElement(fp, {
           appid: t,
           windowType: Nl._v.Workshop,
           strURL: n,
         });
       }
-      function Gp(e) {
+      function Wp(e) {
         const { appid: t } = e,
           n = Ht.de.ResolveURL("StoreDlcPage", t);
-        return o.createElement(yp, {
+        return o.createElement(fp, {
           appid: t,
           windowType: Nl._v.DLC,
           strURL: n,
         });
       }
-      function Wp(e) {
+      function zp(e) {
         const {
             appid: t,
             strName: n,
@@ -22080,7 +22092,7 @@
           )
         );
       }
-      function zp(e) {
+      function Hp(e) {
         const {
             strName: t,
             appid: n,
@@ -22118,7 +22130,7 @@
             },
             [_]
           ),
-          h = pp(_, 1280, 1024, 600, 300),
+          h = _p(_, 1280, 1024, 600, 300),
           b = r ? h : g;
         return o.createElement(
           Zr,
@@ -22136,7 +22148,7 @@
             s
           ),
           o.createElement(
-            Wp,
+            zp,
             Object.assign({ appid: n }, c, {
               strName: t,
               onTitleChange: p,
@@ -22148,7 +22160,7 @@
           )
         );
       }
-      function Hp(e) {
+      function Vp(e) {
         const {
             strName: t,
             strTitle: n,
@@ -22186,7 +22198,7 @@
             },
             [_]
           ),
-          h = pp(_, 1280, 1024, 300, 300),
+          h = _p(_, 1280, 1024, 300, 300),
           b = r !== Ge.k_nGameIDWinUI ? h : g,
           S = r == Ge.k_nGameIDWinUI;
         return o.createElement(
@@ -22217,9 +22229,9 @@
           )
         );
       }
-      function Vp(e, t) {
-        const n = t ? Zp : Xp,
-          a = t ? qp : Kp;
+      function jp(e, t) {
+        const n = t ? qp : Kp,
+          a = t ? Xp : Qp;
         let r = !1,
           o = (0, Ld.E)(e, {
             beforeNavigate: () => {
@@ -22266,39 +22278,39 @@
           },
         });
       }
-      function jp(e) {
+      function Zp(e) {
         const { children: t, webNavigationsUseSteamURL: n } = e,
-          a = (0, o.useCallback)((e) => Vp(e, n), [n]);
+          a = (0, o.useCallback)((e) => jp(e, n), [n]);
         return (0, o.createElement)(
           Ld.Y,
           { buildNavigator: a, type: "desktop" },
           t
         );
       }
-      function Zp(e, t) {
+      function qp(e, t) {
         0 == t.indexOf("steam://")
           ? (e.location.href = t)
           : (e.location.href = "steam://openurl/" + t);
       }
-      function qp(e, t) {
+      function Xp(e, t) {
         0 == t.indexOf("steam://")
           ? (e.location.href = t)
           : (e.location.href = "steam://openurl_external/" + t);
       }
-      function Xp(e, t, n) {
+      function Kp(e, t, n) {
         0 == t.indexOf("steam://") ? (e.location.href = t) : Is(t, n);
       }
-      function Kp(e, t) {
+      function Qp(e, t) {
         0 == t.indexOf("steam://")
           ? (e.location.href = t)
           : SteamClient.System.OpenInSystemBrowser(t);
       }
-      var Qp = n(98744),
-        Yp = n.n(Qp),
-        $p = (n(69491), n(92266));
-      const Jp = o.createContext(!1),
-        e_ = () => o.useContext(Jp);
-      function t_(e) {
+      var Yp = n(98744),
+        $p = n.n(Yp),
+        Jp = (n(69491), n(92266));
+      const e_ = o.createContext(!1),
+        t_ = () => o.useContext(e_);
+      function n_(e) {
         const [t] = (0, Z.HQ)("start_page"),
           n = (function () {
             const e = (0, Bd.Q2)();
@@ -22342,12 +22354,12 @@
           }
         }, [e]);
       }
-      function n_(e) {
+      function a_(e) {
         const { loading: t, pageSecurity: n, displayURL: a, reload: r } = Ts(),
           i = a,
           l = t;
         let s = (0, T.p)(),
-          [c, m, d] = a_(s.BrowserWindow, i),
+          [c, m, d] = r_(s.BrowserWindow, i),
           u = l
             ? o.createElement(or.Spinner, null)
             : o.createElement(or.Globe, null),
@@ -22359,32 +22371,32 @@
             (null == n ? void 0 : n.bIsSecure) &&
             ((null == n ? void 0 : n.bHasCertError)
               ? ((u = o.createElement(or.Caution, {
-                  className: Yp().CertError,
+                  className: $p().CertError,
                 })),
                 (p = (0, he.Localize)("#Browser_NotSecure")))
               : ((u = o.createElement(or.Lock, { locked: !0 })),
                 (p = null == n ? void 0 : n.certName))),
           o.createElement(
             "div",
-            { className: Yp().URLBar },
+            { className: $p().URLBar },
             !l &&
               i &&
               o.createElement(
                 "div",
                 {
-                  className: (0, U.default)(Yp().StatusIcon, Yp().ReloadButton),
+                  className: (0, U.default)($p().StatusIcon, $p().ReloadButton),
                   onClick: () => r(),
                 },
                 o.createElement(or.Refresh, null)
               ),
             o.createElement(
               "div",
-              { className: Yp().URLBarText, onClick: m },
-              o.createElement(r_, { data: c, onAnimationComplete: d }),
+              { className: $p().URLBarText, onClick: m },
+              o.createElement(o_, { data: c, onAnimationComplete: d }),
               o.createElement(
                 se.HP,
                 {
-                  className: (0, U.default)(Yp().StatusIcon, Yp().LockIcon),
+                  className: (0, U.default)($p().StatusIcon, $p().LockIcon),
                   toolTipContent: p,
                 },
                 u
@@ -22393,8 +22405,8 @@
                 "div",
                 {
                   className: (0, U.default)(
-                    Yp().URL,
-                    (null == n ? void 0 : n.bHasCertError) && Yp().CertError
+                    $p().URL,
+                    (null == n ? void 0 : n.bHasCertError) && $p().CertError
                   ),
                 },
                 i
@@ -22403,7 +22415,7 @@
           )
         );
       }
-      function a_(e, t) {
+      function r_(e, t) {
         let [n, a] = o.useState(null),
           r = o.useCallback(
             (r) => {
@@ -22417,12 +22429,12 @@
           }, [a]);
         return [n, r, i];
       }
-      function r_(e) {
+      function o_(e) {
         let { data: t, onAnimationComplete: n } = e;
         const a = (0, T.p)();
         let r = o.useCallback(
           (e) => {
-            e.animationName == Yp().URLBarCopiedAnimation && n();
+            e.animationName == $p().URLBarCopiedAnimation && n();
           },
           [n]
         );
@@ -22431,13 +22443,13 @@
         return l.createPortal(
           o.createElement(
             "div",
-            { style: i, className: Yp().URLBarCopied, onAnimationEnd: r },
+            { style: i, className: $p().URLBarCopied, onAnimationEnd: r },
             (0, he.Localize)("#Browser_URLCopied")
           ),
           a.BrowserWindow.document.body
         );
       }
-      function o_(e) {
+      function i_(e) {
         const { match: t, bSmallMode: n } = e,
           { tabbedBrowserStore: a } = Ts(),
           [r, i] = o.useState(),
@@ -22459,7 +22471,7 @@
               [t, n]
             );
           })(null == r ? void 0 : r.ownerDocument.defaultView);
-        t_(c);
+        n_(c);
         const m = (0, qm.bs)(null == r ? void 0 : r.ownerDocument.defaultView),
           d = !!t,
           u = c && d && !m;
@@ -22485,17 +22497,17 @@
             "div",
             {
               ref: i,
-              className: Yp().BrowserWrapper,
+              className: $p().BrowserWrapper,
               style: !d || n ? { display: "none" } : void 0,
             },
             !n &&
               o.createElement(
                 o.Fragment,
                 null,
-                l && o.createElement(n_, null),
+                l && o.createElement(a_, null),
                 l &&
                   o.createElement(qa.z4, {
-                    className: Yp().Browser,
+                    className: $p().Browser,
                     browser: l,
                     visible: u,
                   }),
@@ -22503,10 +22515,10 @@
                 g
               )
           ),
-          a && o.createElement(i_, { tabbedBrowserStore: a })
+          a && o.createElement(l_, { tabbedBrowserStore: a })
         );
       }
-      function i_(e) {
+      function l_(e) {
         const { tabbedBrowserStore: t } = e,
           [n] = (0, Z.HQ)("web_browser_home"),
           a = o.useRef(),
@@ -22558,7 +22570,7 @@
           );
         return 0 == l.length
           ? null
-          : o.createElement(Hp, {
+          : o.createElement(Vp, {
               strName: "TabbedPopupBrowser",
               strTitle: (0, he.Localize)("#WindowName_SteamBrowser"),
               appid: Ge.k_nGameIDWinUI,
@@ -22583,24 +22595,24 @@
           }
         });
       })();
-      const l_ = (e) => {
+      const s_ = (e) => {
           const t = (0, T.p)(),
             n = "macos" == g.Config.PLATFORM,
-            a = e_();
+            a = t_();
           return o.createElement(
             "div",
-            { className: (0, U.default)(Yp().TopBar, n && Yp().OSX) },
+            { className: (0, U.default)($p().TopBar, n && $p().OSX) },
             o.createElement(
               "div",
-              { className: Yp().TitleBar },
+              { className: $p().TitleBar },
               !n &&
-                o.createElement(hc, { className: Yp().RootMenuBar, bOSX: n }),
-              o.createElement("div", { className: Yp().DragArea }),
+                o.createElement(hc, { className: $p().RootMenuBar, bOSX: n }),
+              o.createElement("div", { className: $p().DragArea }),
               e.bShowTitleBarControls &&
-                o.createElement(rm, { className: Yp().TitleBarControls }),
+                o.createElement(rm, { className: $p().TitleBarControls }),
               o.createElement(
                 "div",
-                { className: Yp().WindowControls },
+                { className: $p().WindowControls },
                 o.createElement(Gr.TitleBar, {
                   popup: t.BrowserWindow,
                   bOSX: n,
@@ -22611,12 +22623,12 @@
             e.bShowSuperNav &&
               o.createElement(
                 "div",
-                { className: Yp().SuperNavBar },
+                { className: $p().SuperNavBar },
                 o.createElement(qs, null)
               )
           );
         },
-        s_ = (e) => {
+        c_ = (e) => {
           const t = (0, T.p)();
           !(function () {
             const e = (0, N.nk)(),
@@ -22641,18 +22653,18 @@
             g.Config.IN_STEAMUI_SHARED_CONTEXT && t.IsMainDesktopWindow();
           return o.createElement(
             "div",
-            { className: Yp().OuterFrame },
+            { className: $p().OuterFrame },
             n &&
-              o.createElement(l_, {
+              o.createElement(s_, {
                 bShowTitleBarControls: !e.bSmallMode,
                 bShowSuperNav: !e.bSmallMode,
               }),
             o.createElement(
               Ae.p,
-              { className: Yp().ContentFrame },
+              { className: $p().ContentFrame },
               !e.bSmallMode &&
-                o.createElement(c_, { cm: e.cm, bShowDesktopUIContent: n }),
-              n && o.createElement(m_, { bSmallMode: e.bSmallMode }),
+                o.createElement(m_, { cm: e.cm, bShowDesktopUIContent: n }),
+              n && o.createElement(d_, { bSmallMode: e.bSmallMode }),
               !e.bSmallMode &&
                 n &&
                 o.createElement(
@@ -22665,12 +22677,12 @@
             n && !e.bSmallMode && o.createElement(Wm, null)
           );
         },
-        c_ = o.memo(function (e) {
+        m_ = o.memo(function (e) {
           const { cm: t, bShowDesktopUIContent: n } = e,
             { location: a, bActive: r } = zs(),
             i = (0, g.useInGamepadUI)();
           return o.createElement(
-            d_,
+            u_,
             { visible: r || !n },
             o.createElement(
               P.rs,
@@ -22688,27 +22700,27 @@
             )
           );
         }),
-        m_ = o.memo(function (e) {
+        d_ = o.memo(function (e) {
           return o.createElement(N._n, { path: N.Z5.Browser() }, (t) =>
             o.createElement(
-              o_,
+              i_,
               Object.assign({}, t, { bSmallMode: e.bSmallMode })
             )
           );
         });
-      function d_(e) {
+      function u_(e) {
         let { visible: t, children: n } = e,
           a = t ? {} : { display: "none" },
           r = (0, g.useInDesktopUI)();
         return o.createElement(
           "div",
-          { style: a, className: Yp().LocalContentContainer },
-          r && o.createElement("div", { className: Yp().URLBarReplacement }),
+          { style: a, className: $p().LocalContentContainer },
+          r && o.createElement("div", { className: $p().URLBarReplacement }),
           n
         );
       }
-      const u_ = !1,
-        p_ = () => {
+      const p_ = !1,
+        __ = () => {
           const e = (0, m.useBrowserContext)(),
             t = o.useCallback((e) => {
               3 == e.button
@@ -22737,7 +22749,7 @@
             null
           );
         };
-      function __(e) {
+      function g_(e) {
         const t = (0, r.gl)(),
           n = (0, g.useInDesktopUI)(),
           i = (0, T.p)(),
@@ -22796,9 +22808,9 @@
           }, [p, _]),
           t
             ? o.createElement(
-                S_,
+                v_,
                 { cm: e.cm, bSmallMode: e.bSmallMode },
-                !e.bSmallMode && o.createElement(p_, null),
+                !e.bSmallMode && o.createElement(__, null),
                 o.createElement(
                   D.ErrorBoundary,
                   null,
@@ -22807,31 +22819,31 @@
                 o.createElement(
                   D.ErrorBoundary,
                   null,
-                  m && c && !u_ && o.createElement(jm.W, null)
+                  m && c && !p_ && o.createElement(jm.W, null)
                 ),
                 o.createElement(
-                  h_,
+                  b_,
                   { onContextMenu: h },
-                  o.createElement(g_, null),
+                  o.createElement(h_, null),
                   l &&
-                    o.createElement(s_, { cm: e.cm, bSmallMode: e.bSmallMode }),
-                  !l && o.createElement(b_, { onContextMenu: h }),
+                    o.createElement(c_, { cm: e.cm, bSmallMode: e.bSmallMode }),
+                  !l && o.createElement(S_, { onContextMenu: h }),
                   !1
                 )
               )
             : null
         );
       }
-      function g_(e) {
-        const t = e_();
+      function h_(e) {
+        const t = t_();
         return o.createElement("div", {
-          className: (0, U.default)(Yp().FocusBar, t && Yp().Focused),
+          className: (0, U.default)($p().FocusBar, t && $p().Focused),
         });
       }
-      function h_(e) {
+      function b_(e) {
         const { children: t, onContextMenu: n } = e,
           [a, r] = o.useState(),
-          i = (0, $p.b)(a),
+          i = (0, Jp.b)(a),
           l = (e) => {
             e.preventDefault(), e.stopPropagation();
           },
@@ -22847,25 +22859,25 @@
           }, []),
           c = (0, E.SZ)(() => m.g_PopupManager.BAnyMenuHasFocus()),
           d = (0, C.useValueWasTrueRecentlyOrNow)(c, 100),
-          u = (0, $p.n)(a, 100);
+          u = (0, Jp.n)(a, 100);
         return o.createElement(
           "div",
           {
-            className: (0, U.default)(Yp().Wrapper, i && "Maximized"),
+            className: (0, U.default)($p().Wrapper, i && "Maximized"),
             ref: s,
             onContextMenu: n,
           },
-          o.createElement(Jp.Provider, { value: d || u }, t)
-        );
-      }
-      function b_(e) {
-        return o.createElement(
-          "div",
-          { className: Yp().InitContainer, onContextMenu: e.onContextMenu },
-          o.createElement(ro.t, { background: "transparent" })
+          o.createElement(e_.Provider, { value: d || u }, t)
         );
       }
       function S_(e) {
+        return o.createElement(
+          "div",
+          { className: $p().InitContainer, onContextMenu: e.onContextMenu },
+          o.createElement(ro.t, { background: "transparent" })
+        );
+      }
+      function v_(e) {
         const t = (0, T.p)();
         return o.createElement(
           B.FocusNavigationWindowRoot,
@@ -22873,7 +22885,7 @@
           o.createElement(
             B.FocusNavigationRoot,
             {
-              className: Yp().FocusNavigationRoot,
+              className: $p().FocusNavigationRoot,
               NavigationManager: s.nm.NavigationManager,
               navID: "SteamDesktop",
             },
@@ -22885,12 +22897,12 @@
           )
         );
       }
-      var v_ = n(48393);
+      var E_ = n(48393);
       n(58734);
       new Ll.CLog("VR");
-      const E_ = -2147483648,
-        C_ = "DesktopUI";
-      function w_(e) {
+      const C_ = -2147483648,
+        w_ = "DesktopUI";
+      function y_(e) {
         const { cm: t } = e,
           n = (0, E.SZ)(() => s.nm.WindowStore.SteamUIWindows),
           a = (0, Z.rV)().bSmallMode;
@@ -22900,47 +22912,47 @@
           n.map((e) => {
             const n = e.params.browserInfo;
             return e.IsMainGamepadUIWindow()
-              ? o.createElement(R_, { key: "Main", cm: t, instance: e })
+              ? o.createElement(T_, { key: "Main", cm: t, instance: e })
               : e.IsGamepadUIOverlayWindow()
-              ? o.createElement(O_, {
+              ? o.createElement(G_, {
                   key: `overlay_${n.m_unPID}`,
                   cm: t,
                   instance: e,
                 })
               : e.IsStandaloneKeyboardWindow()
-              ? o.createElement(U_, { key: "keyboard", cm: t, instance: e })
+              ? o.createElement(M_, { key: "keyboard", cm: t, instance: e })
               : e.IsControllerConfiguratorWindow()
-              ? o.createElement(M_, {
+              ? o.createElement(F_, {
                   key: "controllerconfigurator",
                   cm: t,
                   instance: e,
                 })
               : e.IsVRWindow()
-              ? o.createElement(T_, { key: "vr", cm: t, instance: e })
+              ? o.createElement(I_, { key: "vr", cm: t, instance: e })
               : e.IsSteamLibraryWindow()
-              ? o.createElement(I_, { key: "SteamLibrary", cm: t, instance: e })
+              ? o.createElement(D_, { key: "SteamLibrary", cm: t, instance: e })
               : e.IsMainDesktopWindow()
-              ? o.createElement(A_, {
+              ? o.createElement(x_, {
                   key: "SteamDesktop",
                   cm: t,
                   instance: e,
                   bSmallMode: a,
                 })
               : e.IsDesktopOverlayWindow()
-              ? o.createElement(G_, {
+              ? o.createElement(W_, {
                   key: `overlay_${n.m_unPID}`,
                   cm: t,
                   instance: e,
                 })
               : e.IsDesktopLoginWindow()
-              ? o.createElement(x_, { key: "DesktopLogin", cm: t, instance: e })
+              ? o.createElement(U_, { key: "DesktopLogin", cm: t, instance: e })
               : null;
           })
         );
       }
-      const y_ = m.EPopupCreationFlags.Resizable;
-      var f_;
-      function k_(e, t, n, a, r) {
+      const f_ = m.EPopupCreationFlags.Resizable;
+      var k_;
+      function L_(e, t, n, a, r) {
         (0, ho.AssertMsg)(
           a.target_browser && -1 != a.target_browser.m_eUIMode,
           "useSteamUIPopup - target browser should be specified, along with UI mode!",
@@ -22955,11 +22967,11 @@
                   html_class: b().SteamUIPopupHTML,
                   body_class: (0, U.default)(
                     b().SteamUIPopupWindowBody,
-                    n == f_.GamepadUI && b().GamepadUIPopupWindowBody,
-                    n == f_.DesktopUI && C_
+                    n == k_.GamepadUI && b().GamepadUIPopupWindowBody,
+                    n == k_.DesktopUI && w_
                   ),
                   popup_class: b().SteamUIPopupWindow,
-                  eCreationFlags: y_,
+                  eCreationFlags: f_,
                 },
                 a
               ),
@@ -22970,15 +22982,15 @@
         return (
           o.useLayoutEffect(() => {
             if (!c) return;
-            n != f_.Library && (c.browserInfo = t.params.browserInfo),
+            n != k_.Library && (c.browserInfo = t.params.browserInfo),
               t.SetBrowserWindow(c),
               l(!0);
-            const e = new v_.CUnregisterList();
+            const e = new E_.CUnregisterList();
             return (
               s.nm.NavigationManager &&
                 (e.Push(s.nm.NavigationManager.RegisterInputSource(new p.f(c))),
                 e.Push(s.nm.NavigationManager.RegisterInputSource(new _.Q(c))),
-                n == f_.GamepadUI &&
+                n == k_.GamepadUI &&
                   e.Push(
                     s.nm.NavigationManager.RegisterInputSource(
                       new u.CKeyboardGamepadSimulator(c)
@@ -22992,7 +23004,7 @@
           { popup: c, element: i ? m : void 0 }
         );
       }
-      function L_(e) {
+      function B_(e) {
         const { instance: t, ownerWindow: n, children: a, vr: r } = e;
         o.useEffect(() => t.Init(), [t]),
           o.useEffect(() => {
@@ -23038,37 +23050,37 @@
           (e[(e.Library = 1)] = "Library"),
           (e[(e.GamepadUI = 2)] = "GamepadUI"),
           (e[(e.DesktopUI = 3)] = "DesktopUI");
-      })(f_ || (f_ = {}));
-      const B_ = (function () {
+      })(k_ || (k_ = {}));
+      const N_ = (function () {
         const e = "steam-firstclientrun";
         return (
           null == sessionStorage.getItem(e) &&
           (sessionStorage.setItem(e, "ran"), !0)
         );
       })();
-      const N_ = { width: 1280, height: 800, left: 0, top: 0 };
-      function R_(e) {
+      const R_ = { width: 1280, height: 800, left: 0, top: 0 };
+      function T_(e) {
         const { cm: t, instance: n } = e,
           a = (0, r.xY)(),
           i = (0, E.SZ)(() => s.nm.RemainInBigPictureModeOnClose),
           d = g.Config.ON_DECK ? y.Z : f.Z,
           u = (0, L.rZ)(),
           p = (0, k.dh)(d),
-          [_, h] = o.useState((B_ || !g.Config.ON_DECK) && null != d),
+          [_, h] = o.useState((N_ || !g.Config.ON_DECK) && null != d),
           b = o.useCallback(() => h(!1), []);
         (0, C.useTimeout)(b, 3e4, []);
         let v = c.EBrowserType.EBrowserType_DirectHWND_Borderless,
-          B = N_;
+          B = R_;
         (g.Config.ON_DECK && "linux" === g.Config.PLATFORM) ||
-          ((B.left = E_),
-          (B.top = E_),
+          ((B.left = C_),
+          (B.top = C_),
           (v = c.EBrowserType.EBrowserType_DirectHWND));
-        let T = y_ | m.EPopupCreationFlags.BackgroundTransparent;
+        let T = f_ | m.EPopupCreationFlags.BackgroundTransparent;
         (0, E.SZ)(() => Z.cS.WindowedMode && !g.Config.IN_GAMESCOPE) ||
           (T |= m.EPopupCreationFlags.FullScreen),
           g.Config.DECK_DISPLAY_MODE &&
-            ((B.width = N_.width),
-            (B.height = N_.height),
+            ((B.width = R_.width),
+            (B.height = R_.height),
             (T &= ~m.EPopupCreationFlags.Resizable));
         let I = {
           onResize: (e, t) => {
@@ -23080,10 +23092,10 @@
               SteamClient.UI.ExitBigPictureMode();
           },
         };
-        const { popup: D, element: P } = k_(
+        const { popup: D, element: P } = L_(
           "SP BPM",
           n,
-          f_.GamepadUI,
+          k_.GamepadUI,
           {
             title: (0, he.Localize)("#SP_WindowTitle_BigPicture"),
             dimensions: B,
@@ -23138,7 +23150,7 @@
         let x = (null == A ? void 0 : A.bIsOverride) || !g.Config.ON_DECK;
         return l.createPortal(
           o.createElement(
-            L_,
+            B_,
             { ownerWindow: D, instance: e.instance },
             o.createElement(
               N.Br,
@@ -23162,18 +23174,18 @@
           P
         );
       }
-      const T_ = (e) => null;
-      function I_(e) {
+      const I_ = (e) => null;
+      function D_(e) {
         const { cm: t, instance: n } = e;
         let a = c.EBrowserType.EBrowserType_ChildHWNDNative;
         "macos" === g.Config.PLATFORM &&
           7 != s.nm.UIMode &&
           4 != s.nm.UIMode &&
           (a = void 0);
-        const { popup: i, element: d } = k_(
+        const { popup: i, element: d } = L_(
           "SteamLibraryWindow",
           n,
-          f_.Library,
+          k_.Library,
           {
             title: "SteamLibraryWindow",
             dimensions: { width: 1280, height: 800, left: 0, top: 0 },
@@ -23226,9 +23238,9 @@
                           D.ErrorBoundary,
                           null,
                           o.createElement(
-                            jp,
+                            Zp,
                             { webNavigationsUseSteamURL: !0 },
-                            o.createElement(__, { cm: t, bSmallMode: !1 })
+                            o.createElement(g_, { cm: t, bSmallMode: !1 })
                           )
                         )
                       )
@@ -23240,9 +23252,9 @@
             : null
         );
       }
-      const D_ = { width: 1280, height: 800, left: E_, top: E_ },
-        P_ = { width: 400, height: 800, left: E_, top: E_ },
-        A_ = function (e) {
+      const P_ = { width: 1280, height: 800, left: C_, top: C_ },
+        A_ = { width: 400, height: 800, left: C_, top: C_ },
+        x_ = function (e) {
           const { cm: t, instance: n, bSmallMode: a } = e;
           let r = c.EBrowserType.EBrowserType_DirectHWND_Borderless,
             i = (0, he.Localize)(
@@ -23250,7 +23262,7 @@
                 ? "#WindowName_SteamDesktopMini"
                 : "#WindowName_SteamDesktop"
             ),
-            u = a ? P_ : D_;
+            u = a ? A_ : P_;
           const p = e.bSmallMode ? 230 : 1010,
             _ = e.bSmallMode ? 100 : 600,
             h = e.bSmallMode
@@ -23258,7 +23270,7 @@
               : "Window_SteamDesktop",
             b = (0, d.useSavedDimensionPopupCallbacks)(t, h),
             S =
-              y_ |
+              f_ |
               m.EPopupCreationFlags.BackgroundTransparent |
               (g.Config.SILENT_STARTUP ? m.EPopupCreationFlags.Hidden : 0),
             v = b,
@@ -23277,7 +23289,7 @@
               }),
               [n, r, S, u, i, p, _]
             ),
-            { popup: C, element: w } = k_("SP Desktop", n, f_.DesktopUI, E, v);
+            { popup: C, element: w } = L_("SP Desktop", n, k_.DesktopUI, E, v);
           o.useEffect(() => {
             C &&
               (C.ConfigContext = {
@@ -23322,7 +23334,7 @@
                     { IN_DESKTOPUI: !0, IN_GAMEPADUI: !1, IN_VR: !1 },
                     o.createElement(
                       _l.PopupStyleContextRoot,
-                      { body_class: C_ },
+                      { body_class: w_ },
                       o.createElement(
                         N.R,
                         { initialPath: N.Z5.Init() },
@@ -23336,9 +23348,9 @@
                               D.ErrorBoundary,
                               null,
                               o.createElement(
-                                jp,
+                                Zp,
                                 null,
-                                o.createElement(__, {
+                                o.createElement(g_, {
                                   cm: t,
                                   bSmallMode: e.bSmallMode,
                                 })
@@ -23354,16 +23366,16 @@
               : null
           );
         };
-      function x_(e) {
+      function U_(e) {
         const { cm: t, instance: n } = e;
         c.EBrowserType.EBrowserType_DirectHWND_Borderless;
-        let a = { width: 705, height: 440, left: E_, top: E_ },
+        let a = { width: 705, height: 440, left: C_, top: C_ },
           r = (0, he.Localize)("#SignIn_Title"),
           i = o.useRef(!1);
-        const { popup: d, element: u } = k_(
+        const { popup: d, element: u } = L_(
           "SP DesktopLoginWindow",
           n,
-          f_.DesktopUI,
+          k_.DesktopUI,
           {
             title: r,
             dimensions: a,
@@ -23391,7 +23403,7 @@
                 { IN_DESKTOPUI: !0, IN_GAMEPADUI: !1, IN_VR: !1 },
                 o.createElement(
                   _l.PopupStyleContextRoot,
-                  { body_class: C_ },
+                  { body_class: w_ },
                   o.createElement(
                     m.BrowserContextRoot,
                     { ownerWindow: d },
@@ -23405,7 +23417,7 @@
                           D.ErrorBoundary,
                           null,
                           o.createElement(
-                            jp,
+                            Zp,
                             { webNavigationsUseSteamURL: !0 },
                             o.createElement(Mr.FullLogin, {
                               cm: t,
@@ -23426,10 +23438,10 @@
             )
           : null;
       }
-      function U_(e) {
+      function M_(e) {
         const { cm: t, instance: n } = e,
           { initialX: a, initialY: r } = n.params,
-          { popup: i, element: s } = k_("SP Keyboard", n, f_.GamepadUI, {
+          { popup: i, element: s } = L_("SP Keyboard", n, k_.GamepadUI, {
             title: (0, he.Localize)("#SP_WindowTitle_Keyboard"),
             dimensions: { width: 1280, height: 360, left: a, top: r },
             replace_existing_popup: !1,
@@ -23446,7 +23458,7 @@
         return s
           ? l.createPortal(
               o.createElement(
-                L_,
+                B_,
                 { ownerWindow: i, instance: e.instance },
                 o.createElement(S.wJ, { cm: t, mode: R.iZ.StandaloneKeyboard })
               ),
@@ -23454,15 +23466,15 @@
             )
           : null;
       }
-      function M_(e) {
+      function F_(e) {
         const { cm: t, instance: n } = e,
           { appid: a, strAppName: r } = n.params;
         (0, E.SZ)(() => n.BIsGamepadApplicationUIInitialized());
         let i = c.EBrowserType.EBrowserType_DirectHWND_Borderless,
           m = { width: 1280, height: 800, left: 0, top: 0 };
         (g.Config.ON_DECK && "linux" === g.Config.PLATFORM) ||
-          ((m.left = E_),
-          (m.top = E_),
+          ((m.left = C_),
+          (m.top = C_),
           (i = c.EBrowserType.EBrowserType_DirectHWND));
         let d = {
           onClose: () =>
@@ -23471,10 +23483,10 @@
             s.nm.SetConfiguratorWidth(e.outerWidth);
           },
         };
-        const { popup: u, element: p } = k_(
+        const { popup: u, element: p } = L_(
           "SP Controller Configurator",
           n,
-          f_.GamepadUI,
+          k_.GamepadUI,
           {
             title: (0, he.Localize)("#SP_WindowTitle_Configurator", r),
             dimensions: m,
@@ -23504,7 +23516,7 @@
         return p
           ? l.createPortal(
               o.createElement(
-                L_,
+                B_,
                 { ownerWindow: u, instance: e.instance },
                 o.createElement(
                   N.PU,
@@ -23520,7 +23532,7 @@
             )
           : null;
       }
-      const F_ = o.memo(function (e) {
+      const O_ = o.memo(function (e) {
         const { children: t } = e,
           n = o.useContext(T.S).params;
         let a = n.browserInfo.m_unAppID,
@@ -23532,7 +23544,7 @@
           t
         );
       });
-      function O_(e) {
+      function G_(e) {
         const { cm: t, instance: n } = e,
           a = n.params;
         let r = c.EBrowserType.EBrowserType_OffScreen,
@@ -23552,10 +23564,10 @@
               s.nm.WindowStore.RemoveTestWindowsOverlayBrowser(a.appid),
           }));
         const u = n.params.browserInfo,
-          { popup: p, element: _ } = k_(
+          { popup: p, element: _ } = L_(
             "overlay",
             n,
-            f_.GamepadUI,
+            k_.GamepadUI,
             {
               title:
                 "SP Overlay: " +
@@ -23591,10 +23603,10 @@
           _
             ? l.createPortal(
                 o.createElement(
-                  L_,
+                  B_,
                   { ownerWindow: p, instance: n },
                   o.createElement(
-                    F_,
+                    O_,
                     null,
                     o.createElement(S.wJ, {
                       cm: t,
@@ -23608,7 +23620,7 @@
             : null
         );
       }
-      const G_ = function (e) {
+      const W_ = function (e) {
         const { cm: t, instance: n } = e,
           a = n.params,
           r = c.EBrowserType.EBrowserType_OffScreen,
@@ -23619,10 +23631,10 @@
             top: 0,
           },
           s = n.params.browserInfo,
-          { popup: d, element: u } = k_(
+          { popup: d, element: u } = L_(
             "overlay",
             n,
-            f_.DesktopUI,
+            k_.DesktopUI,
             {
               title:
                 "SP Overlay: " +
@@ -23674,12 +23686,12 @@
                   { IN_DESKTOPUI: !0, IN_GAMEPADUI: !1, IN_VR: !1 },
                   o.createElement(
                     _l.PopupStyleContextRoot,
-                    { body_class: C_ },
+                    { body_class: w_ },
                     o.createElement(
                       T.S.Provider,
                       { value: n },
                       o.createElement(
-                        F_,
+                        O_,
                         null,
                         o.createElement(
                           m.BrowserContextRoot,
@@ -23690,7 +23702,7 @@
                             o.createElement(
                               Rd,
                               null,
-                              o.createElement(rp, {
+                              o.createElement(op, {
                                 gameid: a.gameid,
                                 width: p,
                                 height: h,
@@ -23720,7 +23732,7 @@
           yield e.Init(window.cm);
         });
       })();
-      const W_ = function (e) {
+      const z_ = function (e) {
         const t = (0, r.gl)();
         return (
           (0, i.pJ)(1920, 1080),
@@ -23730,7 +23742,7 @@
             o.createElement(
               ja.ModalRoot,
               { bOnlyPopups: !0 },
-              t && o.createElement(w_, { cm: e.cm })
+              t && o.createElement(y_, { cm: e.cm })
             )
           )
         );

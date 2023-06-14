@@ -23579,6 +23579,9 @@ body.in_global_drag .friendlist_titlebar {
   transition: opacity 0.92s ease-in-out;
   pointer-events: none;
 }
+.OSX .statusHeaderGlow {
+  top: 0;
+}
 .statusHeaderGlow stop {
   transition: stop-color 1s ease;
 }
@@ -23592,6 +23595,9 @@ body.in_global_drag .friendlist_titlebar {
 .currentUserContainer {
   padding-right: 24px;
   border-bottom: 1px solid rgba(67, 73, 83, 0.3);
+}
+.OSX .currentUserContainer {
+  padding-top: 10px;
 }
 .currentUserContainer.ingame .statusHeaderGlow stop:first-child {
   stop-color: rgba(140, 188, 84, 0.3);
@@ -25602,6 +25608,10 @@ body.in_global_drag .friendlist_titlebar {
 }
 .chatTabSetContainer.inclient {
   padding-right: 101px;
+}
+.OSX .chatTabSetContainer.inclient {
+  padding-left: 101px;
+  padding-right: 0px;
 }
 .chatTabSetContainer.gamepadui {
   justify-content: space-between;
