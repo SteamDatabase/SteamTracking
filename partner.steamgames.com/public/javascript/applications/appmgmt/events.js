@@ -49655,8 +49655,12 @@
       function Ie(e) {
         const t = Se(e),
           [n, a] = (0, m.useState)(e),
-          [i, r] = (0, m.useState)(re(t.template_vars_json)),
-          [s, l] = (0, m.useState)(me(e, t.additional_restrictions_json));
+          [i, r] = (0, m.useState)(
+            re(null == t ? void 0 : t.template_vars_json)
+          ),
+          [s, l] = (0, m.useState)(
+            me(e, null == t ? void 0 : t.additional_restrictions_json)
+          );
         (0, m.useEffect)(() => {
           n != e &&
             t &&
@@ -49739,8 +49743,12 @@
       function Ae(e) {
         const t = Se(e),
           [n, a] = (0, m.useState)(e),
-          [i, r] = (0, m.useState)(re(t.template_vars_json)),
-          [l, o] = (0, m.useState)(me(e, t.additional_restrictions_json));
+          [i, r] = (0, m.useState)(
+            re(null == t ? void 0 : t.template_vars_json)
+          ),
+          [l, o] = (0, m.useState)(
+            me(e, null == t ? void 0 : t.additional_restrictions_json)
+          );
         (0, m.useEffect)(() => {
           n != e &&
             t &&
@@ -69100,72 +69108,81 @@
                 "div",
                 { className: Pa().LeftCol },
                 m.createElement(
-                  "div",
-                  { className: Pa().SectionCtn },
-                  m.createElement(fe.II, {
-                    type: "text",
-                    label: "Promotion Name",
-                    className: ls.PromoName,
-                    value: t.GetName(),
-                    onChange: (e) => {
-                      var n;
-                      return t.SetName(
-                        (null === (n = null == e ? void 0 : e.currentTarget) ||
-                        void 0 === n
-                          ? void 0
-                          : n.value) || ""
-                      );
-                    },
-                  }),
+                  dn.SV,
+                  null,
                   m.createElement(
                     "div",
-                    {
-                      className: (0, Vt.Z)(
-                        pn().FlexRowContainer,
-                        ls.EventDetailsCtn
+                    { className: Pa().SectionCtn },
+                    m.createElement(fe.II, {
+                      type: "text",
+                      label: "Promotion Name",
+                      className: ls.PromoName,
+                      value: t.GetName(),
+                      onChange: (e) => {
+                        var n;
+                        return t.SetName(
+                          (null ===
+                            (n = null == e ? void 0 : e.currentTarget) ||
+                          void 0 === n
+                            ? void 0
+                            : n.value) || ""
+                        );
+                      },
+                    }),
+                    m.createElement(
+                      "div",
+                      {
+                        className: (0, Vt.Z)(
+                          pn().FlexRowContainer,
+                          ls.EventDetailsCtn
+                        ),
+                      },
+                      m.createElement(
+                        "div",
+                        { className: ls.TypeCtn },
+                        m.createElement(fe.__, null, "Promotion Type:"),
+                        m.createElement(Ms, {
+                          type: t.GetType(),
+                          setType: t.SetType,
+                        }),
+                        m.createElement(Ps, {
+                          type: t.GetType(),
+                          rtStartTime: t.GetStartDate(),
+                          rtEndTime: t.GetEndDate(),
+                          setStartTime: t.SetStartDate,
+                          setEndTime: t.SetEndDate,
+                        })
                       ),
-                    },
-                    m.createElement(
-                      "div",
-                      { className: ls.TypeCtn },
-                      m.createElement(fe.__, null, "Promotion Type:"),
-                      m.createElement(Ms, {
-                        type: t.GetType(),
-                        setType: t.SetType,
-                      }),
-                      m.createElement(Ps, {
-                        type: t.GetType(),
-                        rtStartTime: t.GetStartDate(),
-                        rtEndTime: t.GetEndDate(),
-                        setStartTime: t.SetStartDate,
-                        setEndTime: t.SetEndDate,
-                      })
-                    ),
-                    m.createElement(
-                      "div",
-                      { className: ls.AdminNotesCtn },
-                      m.createElement(fe.__, null, "Admin Notes:"),
-                      m.createElement("textarea", {
-                        className: "DialogTextInputBase",
-                        value: t.GetAdminNotes() || "",
-                        onChange: (e) => {
-                          var n;
-                          return t.SetAdminNote(
-                            (null ===
-                              (n = null == e ? void 0 : e.currentTarget) ||
-                            void 0 === n
-                              ? void 0
-                              : n.value) || ""
-                          );
-                        },
-                      })
+                      m.createElement(
+                        "div",
+                        { className: ls.AdminNotesCtn },
+                        m.createElement(fe.__, null, "Admin Notes:"),
+                        m.createElement("textarea", {
+                          className: "DialogTextInputBase",
+                          value: t.GetAdminNotes() || "",
+                          onChange: (e) => {
+                            var n;
+                            return t.SetAdminNote(
+                              (null ===
+                                (n = null == e ? void 0 : e.currentTarget) ||
+                              void 0 === n
+                                ? void 0
+                                : n.value) || ""
+                            );
+                          },
+                        })
+                      )
                     )
                   )
                 ),
                 m.createElement(
-                  "div",
-                  { className: Pa().SectionCtn },
-                  m.createElement(am, { oEditablePlan: t })
+                  dn.SV,
+                  null,
+                  m.createElement(
+                    "div",
+                    { className: Pa().SectionCtn },
+                    m.createElement(am, { oEditablePlan: t })
+                  )
                 ),
                 Boolean(t.BHasDiscountEventID()) &&
                   m.createElement(
@@ -69180,22 +69197,38 @@
                     })
                   ),
                 m.createElement(
-                  "div",
-                  { className: Pa().SectionCtn },
-                  m.createElement(im, { oEditablePlan: t })
+                  dn.SV,
+                  null,
+                  m.createElement(
+                    "div",
+                    { className: Pa().SectionCtn },
+                    m.createElement(im, { oEditablePlan: t })
+                  )
                 ),
                 m.createElement(
-                  "div",
-                  { className: Pa().SectionCtn },
-                  m.createElement(Cc, { oEditablePlan: t })
+                  dn.SV,
+                  null,
+                  m.createElement(
+                    "div",
+                    { className: Pa().SectionCtn },
+                    m.createElement(Cc, { oEditablePlan: t })
+                  )
                 ),
                 m.createElement(
-                  "div",
-                  { className: (0, Vt.Z)(Pa().SectionCtn, Pa().ActionBar) },
-                  m.createElement(zo, { oEditablePlan: t })
+                  dn.SV,
+                  null,
+                  m.createElement(
+                    "div",
+                    { className: (0, Vt.Z)(Pa().SectionCtn, Pa().ActionBar) },
+                    m.createElement(zo, { oEditablePlan: t })
+                  )
                 )
               ),
-              m.createElement(cc, { oEditablePlan: t })
+              m.createElement(
+                dn.SV,
+                null,
+                m.createElement(cc, { oEditablePlan: t })
+              )
             ),
             m.createElement(
               "span",
@@ -69273,7 +69306,8 @@
             fnGetURL: Ja.GetMarketingMesssageEditURL,
             fnGetReviewed: t.GetMarketingMessageReviewed,
             fnSetReviewed: t.SetMarketingMessageReviewed,
-            fnDisplayStatus: (e) => m.createElement(em, { gid: e }),
+            fnDisplayStatus: (e) =>
+              m.createElement(dn.SV, null, m.createElement(em, { gid: e })),
           }),
           m.createElement(Qs, {
             name: r ? `: ${r.title}` : "",
@@ -69283,6 +69317,8 @@
             fnGetURL: Ja.GetMarketingMesssageEditURL,
             fnGetReviewed: t.GetMarketingMessageReviewed,
             fnSetReviewed: t.SetMarketingMessageReviewed,
+            fnDisplayStatus: (e) =>
+              m.createElement(dn.SV, null, m.createElement(em, { gid: e })),
           }),
           m.createElement(Qs, {
             name: n ? `: ${n.name}` : "",
