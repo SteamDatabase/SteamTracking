@@ -1,4 +1,4 @@
-var CLSTAMP = "8128550";
+var CLSTAMP = "8129386";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4372,8 +4372,28 @@ var CLSTAMP = "8128550";
                 })
               : Promise.resolve(!1);
           }
+          IsMaximized() {
+            return this.m_popup &&
+              !this.m_popup.closed &&
+              this.m_popup.SteamClient &&
+              this.m_popup.SteamClient.Window &&
+              this.m_popup.SteamClient.Window.IsWindowMinimized
+              ? new Promise((e, t) => {
+                  this.m_popup.SteamClient.Window.IsWindowMaximized((t) => {
+                    e(t);
+                  });
+                })
+              : Promise.resolve(!1);
+          }
           ReleasePopup() {
             this.OnClose(), (this.m_popup = null);
+          }
+          OnResize() {
+            this.IsMaximized().then((e) => {
+              e
+                ? this.m_popup.document.body.classList.add("Maximized")
+                : this.m_popup.document.body.classList.remove("Maximized");
+            });
           }
           OnBeforeUnload() {}
           OnFocus() {}
@@ -4429,7 +4449,7 @@ var CLSTAMP = "8128550";
             });
           }
           OnResize() {
-            this.QueryAndStoreWindowPosition();
+            super.OnResize(), this.QueryAndStoreWindowPosition();
           }
           OnResizeComplete(e) {}
           QueryAndStoreWindowPosition() {
@@ -4438,7 +4458,7 @@ var CLSTAMP = "8128550";
               this.m_popup.setTimeout(() => {
                 this.GetWindowRestoreDetails().then((t) => {
                   let r =
-                    this.m_strInitialRestoreDetails == t &&
+                    this.m_rgParams.strRestoreDetails == t &&
                     e == this.m_strInitialSavedDimensionsKey;
                   this.m_popup &&
                     this.m_strSavedDimensionsKey &&
@@ -4475,9 +4495,9 @@ var CLSTAMP = "8128550";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 14 2023 : 13:05:34",
-                BUILD_TIME_UTC: "Jun 14 2023 : 20:05:34",
-                BUILD_RTIME_UTC: 1686773134,
+                BUILD_TIME_LOCAL: "Jun 14 2023 : 14:41:40",
+                BUILD_TIME_UTC: "Jun 14 2023 : 21:41:40",
+                BUILD_RTIME_UTC: 1686778900,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -7346,7 +7366,7 @@ var CLSTAMP = "8128550";
           DispatchVirtualButtonClick(e, t) {
             var r;
             let n = null;
-            null !== t &&
+            t &&
               (n =
                 null !== (r = this.GetActiveContext()) && void 0 !== r
                   ? r
@@ -41807,7 +41827,7 @@ var CLSTAMP = "8128550";
               g.width / t.innerWidth < 0.8;
             if (c || (!s && f)) return d(e, t);
             {
-              const n = {
+              const i = {
                   strTitle:
                     (null == r ? void 0 : r.strTitle) ||
                     (0, l.Localize)("#Dialog_DefaultWindowTitle"),
@@ -41822,9 +41842,9 @@ var CLSTAMP = "8128550";
                     null == r ? void 0 : r.bHideMainWindowForPopouts,
                   className: null == r ? void 0 : r.className,
                 },
-                i = { bHideActions: null == r ? void 0 : r.bHideActionIcons },
-                o = (null == r ? void 0 : r.browserContext) || t.browserInfo;
-              return d(e, t, n.strTitle, n, o, i);
+                o = { bHideActions: null == r ? void 0 : r.bHideActionIcons },
+                a = (null == r ? void 0 : r.browserContext) || t.browserInfo;
+              return d(e, t, i.strTitle, i, a, o, n);
             }
           });
         }
@@ -54298,9 +54318,9 @@ var CLSTAMP = "8128550";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 14 2023 : 13:05:34",
-                    BUILD_TIME_UTC: "Jun 14 2023 : 20:05:34",
-                    BUILD_RTIME_UTC: 1686773134,
+                    BUILD_TIME_LOCAL: "Jun 14 2023 : 14:41:40",
+                    BUILD_TIME_UTC: "Jun 14 2023 : 21:41:40",
+                    BUILD_RTIME_UTC: 1686778900,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54820,7 +54840,7 @@ var CLSTAMP = "8128550";
       {
         27: "b706157360c0d512694c",
         33: "80be52ce827324b50a40",
-        58: "6e73f0f69b1305d46d30",
+        58: "d3c9dca030fbd2c1b0cd",
         131: "a20004cabe570df19a56",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -54893,7 +54913,7 @@ var CLSTAMP = "8128550";
         5513: "ec0071187919eb9c037e",
         5547: "4a099cabe4e49f89668c",
         5590: "29a2fd485d240d20731a",
-        5742: "405b05834469222b128a",
+        5742: "d46cbf3f54c439384ba5",
         5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
@@ -54917,7 +54937,7 @@ var CLSTAMP = "8128550";
         7781: "7e2822a033213ca15cd6",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "17995cd12cf22e004299",
+        7962: "0ba19c31907977d742c9",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "e820a5f472482fc395d7",

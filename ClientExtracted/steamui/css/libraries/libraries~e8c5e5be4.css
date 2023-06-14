@@ -30085,6 +30085,9 @@ html.web_chat_frame .perf_timing_area {
 .TheaterMode .titleBarContainer.ChatTabs {
   padding-left: 0;
 }
+.Maximized .popup_chat_frame {
+  border: none;
+}
 .popup_chat_frame .title-area {
   position: absolute;
   right: 0;
