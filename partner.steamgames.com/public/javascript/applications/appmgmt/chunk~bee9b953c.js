@@ -170,7 +170,6 @@
         OrderedList: "eventbbcodeparser_OrderedList_60l9Y",
         StoreWidget: "eventbbcodeparser_StoreWidget_3TYlQ",
         MedalTVWidget: "eventbbcodeparser_MedalTVWidget_1Ysh1",
-        AppSummaryWidgetCtn: "eventbbcodeparser_AppSummaryWidgetCtn_3Mdza",
         LoyaltyRewardCtn: "eventbbcodeparser_LoyaltyRewardCtn_2SGke",
         SaleSectionCtn: "eventbbcodeparser_SaleSectionCtn_2Xrw_",
         SaleTextCtn: "eventbbcodeparser_SaleTextCtn_2Z1dC",

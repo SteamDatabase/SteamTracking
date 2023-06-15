@@ -1344,42 +1344,42 @@
   margin-right: 12px;
   margin-bottom: 12px;
 }
-body {
+body.profile_edit_page {
   background: linear-gradient(180deg, #262d33 -3.38%, #1d1e20 78.58%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: auto 100%;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
-.rightcol {
+body.profile_edit_page .rightcol {
   display: none;
 }
-.leftcol.hasContentBoxes {
+body.profile_edit_page .leftcol.hasContentBoxes {
   display: block;
   float: none;
   width: auto;
   max-width: none;
 }
-.showcase_preview_ctn {
+body.profile_edit_page .showcase_preview_ctn {
   width: 652px;
 }
-.MiniProfilePreview {
+body.profile_edit_page .MiniProfilePreview {
   margin: 0 auto 12px;
 }
-.ProfileShowcaseSelectorHeader {
+body.profile_edit_page .ProfileShowcaseSelectorHeader {
   display: none;
 }
-.customization_controls_nextprev {
+body.profile_edit_page .customization_controls_nextprev {
   display: block;
 }
-.DialogHeader {
+body.profile_edit_page .DialogHeader {
   display: flex;
   justify-content: flex-start;
   font-size: 24px;
   letter-spacing: 1px;
   margin: 0px 5px 0px 5px;
 }
-.DialogBodyText {
+body.profile_edit_page .DialogBodyText {
   display: flex;
   justify-content: flex-start;
   margin-left: 5px;
@@ -1387,26 +1387,35 @@ body {
   padding-bottom: 5px;
   line-height: normal;
 }
-input.DialogTextInputBase,
-input.DialogTextInputBase:not(:disabled):hover,
-input.DialogTextInputBase:disabled:hover,
-input.DialogTextInputBase:focus {
+body.profile_edit_page input.DialogTextInputBase,
+body.profile_edit_page input.DialogTextInputBase:not(:disabled):hover,
+body.profile_edit_page input.DialogTextInputBase:disabled:hover,
+body.profile_edit_page input.DialogTextInputBase:focus {
   box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.6666666667);
   border: none;
   background-color: rgba(0, 0, 0, 0.25);
 }
+body.profile_edit_page .SaveActions {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 12px;
+}
+body.profile_edit_page .SaveActions button.DialogButton {
+  width: 200px;
+  margin-left: 12px;
+}
 @media screen and (max-width: 910px) {
-  html.responsive .profile_showcase_selector {
+  html.responsive body.profile_edit_page .profile_showcase_selector {
     display: block;
   }
-  html.responsive .showcase_preview_ctn {
+  html.responsive body.profile_edit_page .showcase_preview_ctn {
     max-width: 636px;
     width: auto;
   }
-  html.responsive .customization_controls {
+  html.responsive body.profile_edit_page .customization_controls {
     margin-left: 0;
   }
-  html.responsive .leftcol.hasContentBoxes {
+  html.responsive body.profile_edit_page .leftcol.hasContentBoxes {
     max-width: none;
   }
 }
@@ -1414,15 +1423,6 @@ input.DialogTextInputBase:focus {
   width: 80%;
   padding-left: 10%;
   padding-right: 10%;
-}
-.SaveActions {
-  display: flex;
-  flex-direction: row-reverse;
-  padding-top: 12px;
-}
-.SaveActions button.DialogButton {
-  width: 200px;
-  margin-left: 12px;
 }
 .profileedit_ItemPicker_n1M1o {
   margin-bottom: 15px;

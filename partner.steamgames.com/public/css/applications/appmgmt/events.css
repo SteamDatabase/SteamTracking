@@ -2545,6 +2545,10 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .loyaltyrewarditemembed_Ctn_2di0m {
   width: 100px;
 }
+.eventdescriptionstorecapsule_AppSummaryWidgetCtn_2WIqq {
+  flex-grow: 2;
+  flex-basis: 0;
+}
 .vodplayer_BroadcastCtn_3YzMi {
   position: relative;
   margin: 0 auto;
