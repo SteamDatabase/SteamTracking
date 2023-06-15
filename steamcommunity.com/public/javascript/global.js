@@ -33,6 +33,7 @@ function RegisterSteamOnWebPanelHiddenHandler( f )
 
 function RefreshNotificationArea()
 {
+	
 	// the new way - updates both the old envelope and responsive menu
 	UpdateNotificationCounts();
 }
