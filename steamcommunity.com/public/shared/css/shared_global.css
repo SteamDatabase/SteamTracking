@@ -1672,6 +1672,7 @@ a.pagelink:hover {
 }
 
 .header_notification_btn.header_notification_bell {
+	display: block;
 	background-color: #171a21;
 	width: 46px;
 	height: 24px;

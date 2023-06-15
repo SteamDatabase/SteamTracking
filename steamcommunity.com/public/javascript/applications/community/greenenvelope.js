@@ -60,7 +60,7 @@
               i.Fragment,
               null,
               i.createElement(S, null),
-              i.createElement(b, null)
+              i.createElement(U, null)
             )
           : i.createElement(g, { nTotalUnviewed: l.nUnviewed });
       }
@@ -84,7 +84,11 @@
             ((t.current = (0, c.yV)(
               i.createElement(y, { popupRef: t }),
               document.getElementById("green_envelope_menu_root"),
-              { bPreferPopLeft: !0, bOverlapHorizontal: !0 }
+              {
+                bPreferPopLeft: !0,
+                bOverlapHorizontal: !0,
+                strClassName: "GreenEnvelopeMenu",
+              }
             )),
             t.current.Hide());
         }, []);
@@ -173,12 +177,12 @@
               (0, a.Xx)("#NotificationsMenu_ViewAll")
             )
           ),
-        b = () =>
+        U = () =>
           i.createElement(
             "div",
             {
               className: (0, l.Z)(
-                s().NotificationMenuHeader,
+                s().NotificationHeader,
                 s().ResponsiveViewAll
               ),
             },
@@ -186,13 +190,15 @@
               "button",
               {
                 className: s().AllNotificationsButton,
-                disabled: !0,
-                onClick: () => {},
+                onClick: () =>
+                  window.location.assign(
+                    `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/notifications`
+                  ),
               },
               (0, a.Xx)("#NotificationsMenu_ViewAll")
             )
           );
-      function U(e, n) {
+      function b(e, n) {
         n.read
           ? console.log("Not marking notification read")
           : (console.log("Marking notification read"),
@@ -209,7 +215,7 @@
                 i.createElement(v.RW, {
                   key: n,
                   rollup: e,
-                  onNotificationClick: U,
+                  onNotificationClick: b,
                   uimode: 3,
                   location: m.IS.Tray,
                 })
@@ -222,9 +228,9 @@
           "div",
           null,
           i.createElement(B, null),
-          i.createElement(I, null),
-          i.createElement(T, null),
           i.createElement($, null),
+          i.createElement(T, null),
+          i.createElement(I, null),
           i.createElement(R, null),
           i.createElement(k, null),
           i.createElement(H, null),
@@ -261,7 +267,7 @@
           visible: !0,
         });
       }
-      function I() {
+      function $() {
         const e = w();
         return i.createElement(m.a$, {
           icon: i.createElement(f.yBp, null),
@@ -276,7 +282,7 @@
           visible: !0,
         });
       }
-      function $() {
+      function I() {
         const e = w();
         return i.createElement(m.a$, {
           icon: i.createElement(d.F8F, null),

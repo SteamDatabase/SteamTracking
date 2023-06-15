@@ -591,7 +591,7 @@
     },
     24448: (e, t, n) => {
       "use strict";
-      n.d(t, { Gr: () => g, y$: () => h });
+      n.d(t, { Gr: () => g, Jq: () => _, y$: () => h });
       var a = n(33940),
         i = n(52868),
         r = n.n(i),
@@ -704,6 +704,9 @@
           );
         }, [e]);
         return [n, !!t && h.GetProfileBySteamID(t)];
+      }
+      function _(e) {
+        return g(s.useMemo(() => c.K.InitFromAccountID(e), [e]));
       }
       window.g_ProfileStore = h;
     },
@@ -2677,10 +2680,12 @@
             n.e(2675),
             n.e(6364),
             n.e(4134),
-            n.e(2529),
+            n.e(7404),
+            n.e(5394),
             n.e(990),
             n.e(7440),
             n.e(1614),
+            n.e(9057),
             n.e(4994),
             n.e(4193),
             n.e(615),

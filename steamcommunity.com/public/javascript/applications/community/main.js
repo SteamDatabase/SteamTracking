@@ -24337,20 +24337,27 @@
                         },
                       }),
                   }),
-                  i.createElement(
-                    a.AW,
-                    {
-                      path: [x.ManageFriendsApp(), x.ManageFriendsProfileApp()],
-                    },
-                    i.createElement(D, null)
-                  ),
                   i.createElement(a.AW, {
-                    path: x.ProfileVanityGamesList(":vanity_url"),
-                    render: (e) => i.createElement(A, Object.assign({}, e)),
+                    path: [x.ManageFriendsApp(), x.ManageFriendsProfileApp()],
+                    render: () =>
+                      i.createElement(h.d, {
+                        config: {
+                          "manage-friends": () => i.createElement(D, null),
+                        },
+                      }),
                   }),
                   i.createElement(a.AW, {
-                    path: x.ProfileSteamIDGamesLIst(":steamid"),
-                    render: (e) => i.createElement(A, Object.assign({}, e)),
+                    path: [
+                      x.ProfileVanityGamesList(":vanity_url"),
+                      x.ProfileSteamIDGamesLIst(":steamid"),
+                    ],
+                    render: (e) =>
+                      i.createElement(h.d, {
+                        config: {
+                          "gameslist-root": () =>
+                            i.createElement(A, Object.assign({}, e)),
+                        },
+                      }),
                   }),
                   i.createElement(a.AW, {
                     path: x.ProfileVanityNotifications(":vanity_url"),
@@ -24420,10 +24427,14 @@
       }
       function G(e) {
         const t = (0, _.kD)(V),
-          n = (0, _.kD)(i.useCallback(() => new c.Z(), []));
+          n = (0, _.kD)(i.useCallback(() => new c.Z(), [])),
+          r = (0, i.useMemo)(
+            () => ({ useActiveAccount: () => f.L7.steamid }),
+            []
+          );
         return i.createElement(
           s.B,
-          { value: { useActiveAccount: () => f.L7.steamid } },
+          { value: r },
           i.createElement(
             l.Ub,
             { useActiveSteamInterface: t, useStorage: n },

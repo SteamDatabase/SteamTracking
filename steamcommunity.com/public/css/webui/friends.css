@@ -1431,6 +1431,7 @@
 .contextmenu_ContextMenuFocusContainer_1S6CC:focus {
   outline: none;
 }
+.GreenEnvelopeMenu,
 .contextmenu_contextMenu_PP7LM {
   position: absolute;
   background: radial-gradient(
@@ -1452,6 +1453,12 @@
   max-height: calc(100% - 128px);
   overflow-y: auto;
   overflow-x: hidden;
+}
+.GreenEnvelopeMenu {
+  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
+  border: 1px solid #000;
+  padding: 1px;
 }
 html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenu_PP7LM {
   position: static;

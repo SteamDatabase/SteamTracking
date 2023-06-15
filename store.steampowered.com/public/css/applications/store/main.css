@@ -52,6 +52,7 @@ body.rewards .app_App_2uHYt {
 .contextmenu_ContextMenuFocusContainer_2qyBZ:focus {
   outline: none;
 }
+.GreenEnvelopeMenu,
 .contextmenu_contextMenu_LQkrb {
   position: absolute;
   background: radial-gradient(
@@ -73,6 +74,12 @@ body.rewards .app_App_2uHYt {
   max-height: calc(100% - 128px);
   overflow-y: auto;
   overflow-x: hidden;
+}
+.GreenEnvelopeMenu {
+  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
+  border: 1px solid #000;
+  padding: 1px;
 }
 html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenu_LQkrb {
   position: static;
