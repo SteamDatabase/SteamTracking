@@ -31510,7 +31510,7 @@
                           i.createElement(
                             "div",
                             { className: zi().PointPenalty },
-                            (0, E.Jr)("#dpc_penalty_15pct")
+                            (0, E.Jr)("#dpc_penalty_20pct")
                           )
                         );
                       }

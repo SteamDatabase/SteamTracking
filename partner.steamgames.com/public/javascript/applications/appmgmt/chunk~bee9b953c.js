@@ -23814,7 +23814,7 @@
     },
     88443: (e, t, r) => {
       "use strict";
-      r.d(t, { AV: () => a, l: () => n });
+      r.d(t, { AV: () => a, X_: () => s, l: () => n });
       var i = r(14826);
       function n(e, t, r, n) {
         let a = t;
@@ -23867,6 +23867,15 @@
       }
       function a(e) {
         return e ? e.toLocaleString(i.Yt.GetPreferredLocales()) : "" + e;
+      }
+      function s(e) {
+        return e > 1e9
+          ? Math.trunc(e / 1e9).toString() + "B"
+          : e > 1e6
+          ? Math.trunc(e / 1e6).toString() + "M"
+          : e > 1e3
+          ? Math.trunc(e / 1e3).toString() + "K"
+          : e.toString();
       }
     },
     73406: (e, t, r) => {

@@ -9853,6 +9853,100 @@ button.rbc-input::-moz-focus-inner {
 .marketingmessagedashboard_HeaderButtons_1Q4Pq {
   float: right;
 }
+.marketingmessagerow_GroupIcon_3gk0n {
+  width: 20px;
+}
+.marketingmessagestats_DashStatsContainerPlaceholder_2NZrJ {
+  height: 210px;
+  width: 940px;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG {
+  background-image: linear-gradient(
+    180deg,
+    rgba(144, 153, 161, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+  height: 210px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 16px 0px 0px;
+}
+@media all and (max-width: 700px) {
+  .marketingmessagestats_DashStatsContainer_2QKKG {
+    flex-direction: column-reverse;
+  }
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Chart_1aib0 {
+  flex: 1;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Chart_1aib0
+  .recharts-cartesian-grid-horizontal
+  line {
+  stroke: #4c5661;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA {
+  min-width: 25%;
+  margin-left: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media all and (max-width: 700px) {
+  .marketingmessagestats_DashStatsContainer_2QKKG
+    .marketingmessagestats_Stats_ANrNA {
+    flex-direction: row;
+  }
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_StatsTitle_3PO4S {
+  color: #fff;
+  letter-spacing: 0px;
+  font-size: 27px;
+  font-weight: 300;
+}
+@media all and (max-width: 700px) {
+  .marketingmessagestats_DashStatsContainer_2QKKG
+    .marketingmessagestats_Stats_ANrNA
+    .marketingmessagestats_StatsTitle_3PO4S {
+    font-size: 21px;
+  }
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_StatSubtitle_1sGxv {
+  font-size: 10px;
+  color: #b6b6b6;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_StatSubtitle_1sGxv
+  .marketingmessagestats_Concurrent_1mHgM {
+  color: #82ff01;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_StatSubtitle_1sGxv
+  .marketingmessagestats_Now_2gkN3 {
+  color: #70c3ff;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_CurrentStats_20pLu {
+  padding-bottom: 30px;
+}
+@media all and (max-width: 700px) {
+  .marketingmessagestats_DashStatsContainer_2QKKG
+    .marketingmessagestats_Stats_ANrNA
+    .marketingmessagestats_CurrentStats_20pLu {
+    padding-bottom: 0px;
+  }
+}
 .cloudlocalizedartdisplay_ArtPreview_2V4yU {
   width: 100%;
   height: auto;
