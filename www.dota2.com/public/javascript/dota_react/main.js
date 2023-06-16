@@ -40473,6 +40473,9 @@
                           break;
                         case 2:
                           a = "intelligence";
+                          break;
+                        case 3:
+                          a = "universal";
                       }
                       return i.createElement(
                         d.rU,
@@ -59442,8 +59445,12 @@
             a = e.damage_max;
           return (
             3 == e.primary_attr &&
-              ((t += 0.7 * Math.floor(e.str_base + e.agi_base + e.int_base)),
-              (a += 0.7 * Math.floor(e.str_base + e.agi_base + e.int_base))),
+              ((t += Math.floor(
+                0.7 * Math.floor(e.str_base + e.agi_base + e.int_base)
+              )),
+              (a += Math.floor(
+                0.7 * Math.floor(e.str_base + e.agi_base + e.int_base)
+              ))),
             r.createElement(
               "div",
               { className: l().DetailsStats },
