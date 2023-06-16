@@ -2623,6 +2623,6 @@
     "NotificationsList_EmptyTitle": "현재 알림이 없습니다.",
     "NotificationsList_EmptyTitle_New": "현재 새로운 알림이 없습니다.",
     "NotificationsList_EmptyBody": "찜 목록, 친구, 게임, 보관함 등에 대한 Steam 알림이 여기에 표시됩니다.",
-    "SDRPOPID_GenericCode": "'%1$s' 데이터센터",
+    "SDRPOPID_GenericCode": "데이터센터: %1$s",
     "shared_dummy": "dont translate"
 }

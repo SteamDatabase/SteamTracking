@@ -6665,6 +6665,48 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .changeuserdialog_Dialog_4076W .DialogToggle_Label {
   color: #969696;
 }
+.DialogContent.durationcontroldialog_DurationControlDialogBackground_2iwqV {
+  background: linear-gradient(to bottom right, #6383b1, #273f65);
+}
+.durationcontroldialog_DurationControlDialog_3iEiQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.durationcontroldialog_TimerContainer_2j4TN {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+.durationcontroldialog_TimerDisplay_2M3Zm {
+  height: 2em;
+  width: 2em;
+  align-items: center;
+  border-radius: 50%;
+}
+.durationcontroldialog_TimerText_25RpV {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.25em;
+}
+.durationcontroldialog_InfoContainer_1rF2O {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.durationcontroldialog_InfoContent_2hVYi div {
+  color: #fff;
+  text-align: center;
+  font-size: 2vw;
+  line-height: 4vw;
+  user-select: none;
+}
 .menu_MenuWrapper_2Lu3d {
   height: fit-content;
   -webkit-app-region: no-drag;

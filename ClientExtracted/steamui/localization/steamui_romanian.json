@@ -3419,7 +3419,7 @@
     "Settings_Beta_Participation": "Participare la versiunea beta",
     "Settings_Beta_OSUpdateChannel": "Canalul de actualizare pentru sistemul de operare",
     "Settings_Beta_SteamUpdateChannel": "Canalul de actualizare pentru clientul Steam",
-    "Settings_Beta_None": "Nu a fost aleasă nicio versiune beta",
+    "Settings_Beta_None": "Nicio versiune beta",
     "Settings_Beta_NeedsRestart": "Va trebui să repornești Steam pentru a selecta o nouă versiune beta.",
     "Settings_Beta_Restart": "Repornește acum",
     "Settings_OSBranch_Release": "Stabilă",

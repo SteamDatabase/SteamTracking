@@ -7523,7 +7523,7 @@
     "GameInfoDialog_JoinError_AppNotFound": "Não foi possível se conectar ao servidor,\n o AppID especificado pelo servidor é inválido.",
     "GameInfoDialog_JoinError_NotInitialized": "O Steam não foi inicializado. Tente novamente.",
     "OverlayNetworkStatus_ConnectedToGameserverIn": "Local do servidor: %1$s",
-    "OverlayNetworkStatus_ServerProtectedBySDR": "Servidor protegido pelo Steam Datagram Relay (SDR)",
+    "OverlayNetworkStatus_ServerProtectedBySDR": "Servidor protegido pela rede de retransmissão de datagramas do Steam (SDR)",
     "OverlayNetworkStatus_ViaRelay": "Com retransmissão via: %1$s",
     "OverlayNetworkStatus_PingImproved": "(%1$s ms mais rápido)",
     "OverlayNetworkStatus_PingImprovedTooltip": "Esta rota tem uma latência menor",
