@@ -6054,12 +6054,12 @@
               t ? "+" : ""
             )
           ),
-        O = ({ heroName: e }) =>
+        x = ({ heroName: e }) =>
           i.createElement("img", {
             className: h().BPHeroImage,
             src: `${p.Y.IMG_URL}heroes/wide/${e}.png`,
           }),
-        x = ({ video: e }) =>
+        O = ({ video: e }) =>
           i.createElement(
             "video",
             {
@@ -6205,7 +6205,7 @@
                 r && h().CosmicallyRare
               ),
             },
-            i.createElement(O, { heroName: e })
+            i.createElement(x, { heroName: e })
           ),
         W = () => {
           const e = (0, i.useContext)(w.ro),
@@ -9983,132 +9983,132 @@
                     i.createElement(
                       w.Mi,
                       { index: 0 },
-                      i.createElement(x, { video: "high_five_lvl1" })
+                      i.createElement(O, { video: "high_five_lvl1" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 1 },
-                      i.createElement(x, { video: "fountain" })
+                      i.createElement(O, { video: "fountain" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 2 },
-                      i.createElement(x, { video: "teleport" })
+                      i.createElement(O, { video: "teleport" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 3 },
-                      i.createElement(x, { video: "blink_lvl1" })
+                      i.createElement(O, { video: "blink_lvl1" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 4 },
-                      i.createElement(x, { video: "level_up" })
+                      i.createElement(O, { video: "level_up" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 5 },
-                      i.createElement(x, { video: "euls_cyclone" })
+                      i.createElement(O, { video: "euls_cyclone" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 6 },
-                      i.createElement(x, { video: "fountain2" })
+                      i.createElement(O, { video: "fountain2" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 7 },
-                      i.createElement(x, { video: "agh_lvl1" })
+                      i.createElement(O, { video: "agh_lvl1" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 8 },
-                      i.createElement(x, { video: "teleport_lvl2" })
+                      i.createElement(O, { video: "teleport_lvl2" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 9 },
-                      i.createElement(x, { video: "force_staff" })
+                      i.createElement(O, { video: "force_staff" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 10 },
-                      i.createElement(x, { video: "blink_lvl2" })
+                      i.createElement(O, { video: "blink_lvl2" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 11 },
-                      i.createElement(x, { video: "bottle" })
+                      i.createElement(O, { video: "bottle" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 12 },
-                      i.createElement(x, { video: "high_five_lvl2" })
+                      i.createElement(O, { video: "high_five_lvl2" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 13 },
-                      i.createElement(x, { video: "killstreak_fire" })
+                      i.createElement(O, { video: "killstreak_fire" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 14 },
-                      i.createElement(x, { video: "fountain3" })
+                      i.createElement(O, { video: "fountain3" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 15 },
-                      i.createElement(x, { video: "deny" })
+                      i.createElement(O, { video: "deny" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 16 },
-                      i.createElement(x, { video: "phase_boots" })
+                      i.createElement(O, { video: "phase_boots" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 17 },
-                      i.createElement(x, { video: "agh_lvl2" })
+                      i.createElement(O, { video: "agh_lvl2" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 18 },
-                      i.createElement(x, { video: "mekansm" })
+                      i.createElement(O, { video: "mekansm" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 19 },
-                      i.createElement(x, { video: "teleport_lvl3" })
+                      i.createElement(O, { video: "teleport_lvl3" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 20 },
-                      i.createElement(x, { video: "killstreak_gold" })
+                      i.createElement(O, { video: "killstreak_gold" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 21 },
-                      i.createElement(x, { video: "high_five_lvl3" })
+                      i.createElement(O, { video: "high_five_lvl3" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 22 },
-                      i.createElement(x, { video: "maelstrom_mjollnir" })
+                      i.createElement(O, { video: "maelstrom_mjollnir" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 23 },
-                      i.createElement(x, { video: "shivas_guard" })
+                      i.createElement(O, { video: "shivas_guard" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 24 },
-                      i.createElement(x, { video: "radiance" })
+                      i.createElement(O, { video: "radiance" })
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 25 },
-                      i.createElement(x, { video: "attack_modifier" })
+                      i.createElement(O, { video: "attack_modifier" })
                     )
                   ),
                   i.createElement(
@@ -11596,8 +11596,8 @@
         Me = a(71481),
         Ge = a.n(Me);
       const { detect: ke } = a(68843),
-        Oe = ke(),
-        xe = "BattlepassPage2022",
+        xe = ke(),
+        Oe = "BattlepassPage2022",
         Fe = 1665799200,
         Ue = [
           "marci_omnom",
@@ -11865,7 +11865,7 @@
                       loop: !0,
                       playsInline: !0,
                     },
-                    "edge" != Oe.name &&
+                    "edge" != xe.name &&
                       i.createElement("source", {
                         type: "video/webm",
                         src: `${p.Y.VIDEO_URL}${c}.webm`,
@@ -12186,7 +12186,7 @@
               t &&
                 setTimeout(() => {
                   const e = t.replace("#", "");
-                  (0, me.Z)(e, xe);
+                  (0, me.Z)(e, Oe);
                 }, 500);
             }, [t]),
             null
@@ -12553,7 +12553,7 @@
             t = Be(Fe);
           return i.createElement(
             "div",
-            { id: xe, className: Ge().BattlepassPage2022 },
+            { id: Oe, className: Ge().BattlepassPage2022 },
             i.createElement(Pe.j, { bOverlapping: !0 }),
             i.createElement(
               R.q,
@@ -12585,8 +12585,8 @@
                       playsInline: !0,
                       poster: `${p.Y.VIDEO_URL}international2022/diretide/diretide_snow_loop.jpg`,
                     },
-                    "edge" != Oe.name &&
-                      "edge-chromium" != Oe.name &&
+                    "edge" != xe.name &&
+                      "edge-chromium" != xe.name &&
                       i.createElement("source", {
                         type: "video/webm",
                         src:
@@ -13945,8 +13945,8 @@
                     "data-aos": "fade-in",
                     "data-aos-duration": "1000",
                   },
-                  "edge" != Oe.name &&
-                    "edge-chromium" != Oe.name &&
+                  "edge" != xe.name &&
+                    "edge-chromium" != xe.name &&
                     i.createElement("source", {
                       type: "video/webm",
                       src:
@@ -14248,8 +14248,8 @@
                     "data-aos": "fade-in",
                     "data-aos-duration": "1000",
                   },
-                  "edge" != Oe.name &&
-                    "edge-chromium" != Oe.name &&
+                  "edge" != xe.name &&
+                    "edge-chromium" != xe.name &&
                     i.createElement("source", {
                       type: "video/webm",
                       src: p.Y.VIDEO_URL + "international2022/misc/shader.webm",
@@ -14328,8 +14328,8 @@
                     playsInline: !0,
                     poster: `${p.Y.VIDEO_URL}international2022/aegis_loop.jpg`,
                   },
-                  "edge" != Oe.name &&
-                    "edge-chromium" != Oe.name &&
+                  "edge" != xe.name &&
+                    "edge-chromium" != xe.name &&
                     i.createElement("source", {
                       type: "video/webm",
                       src: p.Y.VIDEO_URL + "international2022/aegis_loop.webm",
@@ -17598,7 +17598,7 @@
           "uploadfilebutton",
           "docimg",
         ],
-        Ot = [
+        xt = [
           "img",
           "previewyoutube",
           "looping_media",
@@ -17609,8 +17609,8 @@
           "youtubeorvideo",
           "docimg",
         ];
-      kt.filter((e) => -1 == Ot.indexOf(e));
-      function xt(e, t = null, a = " ") {
+      kt.filter((e) => -1 == xt.indexOf(e));
+      function Ot(e, t = null, a = " ") {
         let n = null == t ? void 0 : t.join("|");
         n || (n = kt.join("|") + "|\\*");
         let r = new RegExp("\\[(" + n + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
@@ -18934,7 +18934,7 @@
           if (
             ((this.fileType = 0),
             (this.file = e),
-            (this.fileType = Oa.GetExtensionTypeFromURL(e.name)),
+            (this.fileType = xa.GetExtensionTypeFromURL(e.name)),
             (this.language = t),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
@@ -18973,7 +18973,7 @@
                 : c
                 ? (_ = (0, Na.Xx)(
                     "#ImageUpload_InvalidFormat",
-                    Oa.GetExtensionStringForFileType(a)
+                    xa.GetExtensionStringForFileType(a)
                   ))
                 : l || m
                 ? o
@@ -19126,8 +19126,8 @@
         }
         AddExistingClanImage(e, t = 0, a, r) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = Oa.GetHashAndExt(e),
-              i = Oa.GenerateEditableArtworkURLFromHashAndExtension(
+            let n = xa.GetHashAndExt(e),
+              i = xa.GenerateEditableArtworkURLFromHashAndExtension(
                 this.m_clanSteamID,
                 n
               ),
@@ -19209,9 +19209,9 @@
                   else if (((r.status = "success"), this.m_fnSetImageURL))
                     if (n.origimagehash) {
                       const a = Pa(n.language, t, e);
-                      xa.AddLocalizeImageUploaded(n.origimagehash, a);
+                      Oa.AddLocalizeImageUploaded(n.origimagehash, a);
                     } else {
-                      const a = xa.GetClanImageByImageHash(
+                      const a = Oa.GetClanImageByImageHash(
                         this.m_clanSteamID,
                         n.image_hash
                       );
@@ -19236,7 +19236,7 @@
         }
         handleUploadRefresh(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            yield xa.LoadClanImages(this.m_clanSteamID, !0, e);
+            yield Oa.LoadClanImages(this.m_clanSteamID, !0, e);
           });
         }
         UploadFile(e, t, a, r, i) {
@@ -19326,7 +19326,7 @@
           (e.capsule_main = "_400x225"),
           (e.spotlight_main = "_1054x230");
       })(Ga || (Ga = {}));
-      class Oa {
+      class xa {
         constructor() {
           (this.m_mapClanToImages = new Map()),
             (this.m_imageListChangeCallback = new Map()),
@@ -19371,7 +19371,7 @@
           }
         }
         static GetExtensionString(e) {
-          return Oa.GetExtensionStringForFileType(e.file_type) || ".jpg";
+          return xa.GetExtensionStringForFileType(e.file_type) || ".jpg";
         }
         static GetExtensionTypeFromURL(e) {
           return (function (e) {
@@ -19396,10 +19396,10 @@
           })(e);
         }
         static GetHashAndExt(e) {
-          return e.image_hash + Oa.GetExtensionString(e);
+          return e.image_hash + xa.GetExtensionString(e);
         }
         static GetThumbHashAndExt(e) {
-          return e.thumbnail_hash + Oa.GetExtensionString(e);
+          return e.thumbnail_hash + xa.GetExtensionString(e);
         }
         AddClanImageDragListener(e) {
           -1 == this.m_vecClanImageDragListener.indexOf(e) &&
@@ -19457,7 +19457,7 @@
           return t || new Array();
         }
         GetFilteredClanImages(e, t) {
-          let a = xa.GetClanImages(e);
+          let a = Oa.GetClanImages(e);
           return this.GetFilteredClanImagesList(a, t);
         }
         GetFilteredClanImagesList(e, t) {
@@ -19584,8 +19584,8 @@
         }
         AsyncGetImageResolution(e, t, a, r, i) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = t + Oa.GetExtensionString({ file_type: a }),
-              s = Oa.GenerateEditableArtworkURLFromHashAndExtension(e, n);
+            const n = t + xa.GetExtensionString({ file_type: a }),
+              s = xa.GenerateEditableArtworkURLFromHashAndExtension(e, n);
             return yield this.AsyncGetImageResolutionInternal(s, r, i);
           });
         }
@@ -19684,7 +19684,7 @@
               throw (console.log(n), { success: 2, err_msg: n });
             let d = new Ma(e),
               m = yield d.UploadFile(o, r);
-            return m.image_hash + Oa.GetExtensionString(m);
+            return m.image_hash + xa.GetExtensionString(m);
           });
         }
         BDoesClanImageFileExistsOnCDNOrOrigin(e, t, a, r) {
@@ -19728,9 +19728,9 @@
           let a = this.m_curLocImageGroup.primaryImage;
           return this.m_curLocImageGroup.localized_images[t]
             ? this.m_curLocImageGroup.localized_images[t]
-            : Oa.GenerateArtworkURLFromHashAndExtensions(
+            : xa.GenerateArtworkURLFromHashAndExtensions(
                 e,
-                Oa.GetHashAndExt(a)
+                xa.GetHashAndExt(a)
               );
         }
         GetLocalizedImageGroupForEditAsImgArray(e) {
@@ -19740,7 +19740,7 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             let t = this.m_curLocImageGroup.primaryImage,
               a = Wt.InitFromClanID(t.clanAccountID),
-              n = Oa.GetHashAndExt(t),
+              n = xa.GetHashAndExt(t),
               r = [];
             for (let t = 0; t < 30; ++t)
               r.push(this.BDoesClanImageFileExistsOnCDNOrOrigin(e, a, n, t));
@@ -19749,7 +19749,7 @@
               for (let e = 0; e < 30; ++e)
                 i[e] &&
                   (this.m_curLocImageGroup.localized_images[e] =
-                    Oa.GenerateArtworkURLFromHashAndExtensions(
+                    xa.GenerateArtworkURLFromHashAndExtensions(
                       a,
                       n,
                       Ga.full,
@@ -19762,7 +19762,7 @@
         SetLocalizedImageGroupAtLang(e, t, a) {
           this.m_curLocImageGroup &&
             (this.m_curLocImageGroup.localized_images[e] = a
-              ? Oa.GenerateArtworkURLFromHashAndExtensions(
+              ? xa.GenerateArtworkURLFromHashAndExtensions(
                   t,
                   a,
                   Ga.full,
@@ -19775,9 +19775,9 @@
           let a = this.m_curLocImageGroup.primaryImage;
           if (a.image_hash == e) {
             let e = Wt.InitFromClanID(a.clanAccountID),
-              n = Oa.GetHashAndExt(a);
+              n = xa.GetHashAndExt(a);
             this.m_curLocImageGroup.localized_images[t] =
-              Oa.GenerateArtworkURLFromHashAndExtensions(
+              xa.GenerateArtworkURLFromHashAndExtensions(
                 e,
                 n,
                 Ga.full,
@@ -19794,10 +19794,10 @@
           );
         }
       }
-      (0, n.gn)([It.LO], Oa.prototype, "m_mapClanToImages", void 0),
-        (0, n.gn)([It.LO], Oa.prototype, "m_mapClanImageLoadState", void 0),
-        (0, n.gn)([It.LO], Oa.prototype, "m_curLocImageGroup", void 0);
-      const xa = new Oa();
+      (0, n.gn)([It.LO], xa.prototype, "m_mapClanToImages", void 0),
+        (0, n.gn)([It.LO], xa.prototype, "m_mapClanImageLoadState", void 0),
+        (0, n.gn)([It.LO], xa.prototype, "m_curLocImageGroup", void 0);
+      const Oa = new xa();
       function Fa(e) {
         const t = i.useRef(Tt().CancelToken.source());
         return (
@@ -22850,79 +22850,18 @@
           return "CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp";
         }
       }
-      class On extends nn {
-        constructor(e = null) {
-          super(),
-            On.prototype.dlc_lists || sa(On.M()),
-            nn.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            On.sm_m ||
-              (On.sm_m = {
-                proto: On,
-                fields: { dlc_lists: { n: 1, c: xn, r: !0, q: !0 } },
-              }),
-            On.sm_m
-          );
-        }
-        static MBF() {
-          return On.sm_mbf || (On.sm_mbf = ta(On.M())), On.sm_mbf;
-        }
-        toObject(e = !1) {
-          return On.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return na(On.M(), e, t);
-        }
-        static fromObject(e) {
-          return aa(On.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new Qt.BinaryReader(e),
-            a = new On();
-          return On.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return ra(On.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new Qt.BinaryWriter();
-          return On.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          ia(On.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new Qt.BinaryWriter();
-          return On.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetDLCForAppsSolr_Response";
-        }
-      }
       class xn extends nn {
         constructor(e = null) {
           super(),
-            xn.prototype.parent_appid || sa(xn.M()),
-            nn.initialize(this, e, 0, -1, [2], null);
+            xn.prototype.dlc_lists || sa(xn.M()),
+            nn.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             xn.sm_m ||
               (xn.sm_m = {
                 proto: xn,
-                fields: {
-                  parent_appid: { n: 1, br: Xt.readUint32, bw: ea.writeUint32 },
-                  dlc_appids: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: Xt.readUint32,
-                    pbr: Xt.readPackedUint32,
-                    bw: ea.writeRepeatedUint32,
-                  },
-                },
+                fields: { dlc_lists: { n: 1, c: On, r: !0, q: !0 } },
               }),
             xn.sm_m
           );
@@ -22959,6 +22898,67 @@
           return xn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreBrowse_GetDLCForAppsSolr_Response";
+        }
+      }
+      class On extends nn {
+        constructor(e = null) {
+          super(),
+            On.prototype.parent_appid || sa(On.M()),
+            nn.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            On.sm_m ||
+              (On.sm_m = {
+                proto: On,
+                fields: {
+                  parent_appid: { n: 1, br: Xt.readUint32, bw: ea.writeUint32 },
+                  dlc_appids: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: Xt.readUint32,
+                    pbr: Xt.readPackedUint32,
+                    bw: ea.writeRepeatedUint32,
+                  },
+                },
+              }),
+            On.sm_m
+          );
+        }
+        static MBF() {
+          return On.sm_mbf || (On.sm_mbf = ta(On.M())), On.sm_mbf;
+        }
+        toObject(e = !1) {
+          return On.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return na(On.M(), e, t);
+        }
+        static fromObject(e) {
+          return aa(On.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new Qt.BinaryReader(e),
+            a = new On();
+          return On.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return ra(On.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new Qt.BinaryWriter();
+          return On.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          ia(On.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new Qt.BinaryWriter();
+          return On.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreBrowse_GetDLCForAppsSolr_Response_DLCList";
         }
       }
@@ -22985,7 +22985,7 @@
             });
           }),
           (e.GetDLCForAppsSolr = function (e, t) {
-            return e.SendMsg("StoreBrowse.GetDLCForAppsSolr#1", t, On, {
+            return e.SendMsg("StoreBrowse.GetDLCForAppsSolr#1", t, xn, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -25593,7 +25593,7 @@
                 "product_mobile_banner_override" === e ||
                 "sale_section_title" === e ||
                 "schedule_track_art" === e
-              ? (t = xa.GetLocalizedImageGroupForEditAsImgArray(
+              ? (t = Oa.GetLocalizedImageGroupForEditAsImgArray(
                   this.clanSteamID
                 ))
               : "product_banner" === e
@@ -25612,7 +25612,7 @@
           return r && n[t].startsWith("http")
             ? n[t]
             : r
-            ? Oa.GenerateArtworkURLFromHashAndExtensions(
+            ? xa.GenerateArtworkURLFromHashAndExtensions(
                 this.clanSteamID,
                 n[t],
                 a
@@ -25958,7 +25958,7 @@
                     let r = "\\[\\/?(?:" + n + "){1,}.*?]";
                     return e.replace(new RegExp(r, "gi"), a);
                   })(
-                    (e = xt(e, [
+                    (e = Ot(e, [
                       "img",
                       "h1",
                       "h2",
@@ -27528,7 +27528,7 @@
       const Rr = ({ event: e }) => {
         const t = new Date(1e3 * e.GetStartTimeAndDateUnixSeconds()),
           a = (0, St.jM)(p.Y.LANGUAGE),
-          n = xt(e.GetDescriptionWithFallback(a), ["img"]);
+          n = Ot(e.GetDescriptionWithFallback(a), ["img"]);
         return i.createElement(
           "div",
           { className: Dr().UpdateCapsule, key: e.GID },
@@ -27839,8 +27839,8 @@
         );
       });
       var kr = a(24870),
-        Or = a(6669),
-        xr = a.n(Or),
+        xr = a(6669),
+        Or = a.n(xr),
         Fr = a(13180),
         Ur = a.n(Fr),
         Hr = a(25263);
@@ -28033,23 +28033,23 @@
             "div",
             {
               className: (0, v.Z)(
-                xr().DPCSpoilerBlock,
-                n && xr().Blocked,
-                a && xr().Hidden
+                Or().DPCSpoilerBlock,
+                n && Or().Blocked,
+                a && Or().Hidden
               ),
               onClick: () => Yr.f.Get().SetSpoilerBlockEnabled(!n),
             },
             i.createElement(
               "div",
-              { className: xr().SpoilerText },
+              { className: Or().SpoilerText },
               i.createElement(
                 "div",
-                { className: xr().SpoilerLabel },
+                { className: Or().SpoilerLabel },
                 (0, E.Jr)("#dpc_header_spoiler_block")
               ),
               i.createElement(
                 "div",
-                { className: xr().SpoilerValue },
+                { className: Or().SpoilerValue },
                 (0, E.Jr)(
                   n
                     ? "#dpc_header_spoiler_block_on"
@@ -28066,19 +28066,19 @@
                   (0, E.Jr)("#dpc_header_spoiler_tooltip")
                 ),
                 direction: "top",
-                strTooltipClassname: xr().ToolTip,
+                strTooltipClassname: Or().ToolTip,
               },
               i.createElement(
                 "div",
-                { className: (0, v.Z)(xr().Switch) },
+                { className: (0, v.Z)(Or().Switch) },
                 i.createElement(
                   "div",
-                  { className: xr().ShowContainer },
+                  { className: Or().ShowContainer },
                   i.createElement(kr.Hs, null)
                 ),
                 i.createElement(
                   "div",
-                  { className: xr().HideContainer },
+                  { className: Or().HideContainer },
                   i.createElement(kr.mD, null)
                 )
               )
@@ -28197,17 +28197,17 @@
             "div",
             {
               className: (0, v.Z)(
-                xr().DPCMenuBar,
+                Or().DPCMenuBar,
                 (a.is_event_completed || a.is_event_upcoming) &&
-                  xr().IsEventInactive
+                  Or().IsEventInactive
               ),
             },
             i.createElement(
               "div",
-              { className: xr().DPCHeaderContents },
+              { className: Or().DPCHeaderContents },
               i.createElement(
                 "div",
-                { className: xr().DPCEventSelector },
+                { className: Or().DPCEventSelector },
                 i.createElement(Wr, {
                   eStyle: Vr.HIGHLIGHTED,
                   options: c,
@@ -28238,7 +28238,7 @@
               ),
               i.createElement(
                 "div",
-                { className: xr().DPCOptions },
+                { className: Or().DPCOptions },
                 !a.is_event_upcoming &&
                   i.createElement(
                     d.rU,
@@ -28256,13 +28256,13 @@
                         ),
                       },
                       className: (0, v.Z)(
-                        xr().DPCLink,
-                        o == $r.RU.WATCH && xr().Active
+                        Or().DPCLink,
+                        o == $r.RU.WATCH && Or().Active
                       ),
                     },
                     i.createElement(
                       "div",
-                      { className: xr().Label },
+                      { className: Or().Label },
                       (0, E.Jr)("#dpc_header_watch")
                     )
                   ),
@@ -28275,13 +28275,13 @@
                         pathname: l._.dpc_schedule(s, "0", "0"),
                       },
                       className: (0, v.Z)(
-                        xr().DPCLink,
-                        o == $r.RU.SCHEDULE && xr().Active
+                        Or().DPCLink,
+                        o == $r.RU.SCHEDULE && Or().Active
                       ),
                     },
                     i.createElement(
                       "div",
-                      { className: xr().Label },
+                      { className: Or().Label },
                       (0, E.Jr)("#dpc_header_schedule")
                     )
                   ),
@@ -28294,13 +28294,13 @@
                         pathname: l._.dpc_standings(s),
                       },
                       className: (0, v.Z)(
-                        xr().DPCLink,
-                        o == $r.RU.STANDINGS && xr().Active
+                        Or().DPCLink,
+                        o == $r.RU.STANDINGS && Or().Active
                       ),
                     },
                     i.createElement(
                       "div",
-                      { className: xr().Label },
+                      { className: Or().Label },
                       (0, E.Jr)("#dpc_header_standings")
                     )
                   ),
@@ -28312,13 +28312,13 @@
                       pathname: l._.dpc_about(s),
                     },
                     className: (0, v.Z)(
-                      xr().DPCLink,
-                      o == $r.RU.ABOUT && xr().Active
+                      Or().DPCLink,
+                      o == $r.RU.ABOUT && Or().Active
                     ),
                   },
                   i.createElement(
                     "div",
-                    { className: xr().Label },
+                    { className: Or().Label },
                     (0, E.Jr)("#dpc_header_about")
                   )
                 )
@@ -28704,10 +28704,10 @@
                 : C || T
                 ? `${null == u ? void 0 : u.team_2_wins}`
                 : M,
-              O = Yr.f.Get().GetTeamNames(h),
-              x = Yr.f.Get().GetTeamNames(b);
-            let F = O ? O.name : "#dpc_tbd",
-              U = x ? x.name : "#dpc_tbd";
+              x = Yr.f.Get().GetTeamNames(h),
+              O = Yr.f.Get().GetTeamNames(b);
+            let F = x ? x.name : "#dpc_tbd",
+              U = O ? O.name : "#dpc_tbd";
             L && !A && ((F = "#dpc_hidden"), (U = "#dpc_hidden"));
             const H =
                 ((null == c ? void 0 : c.nLeagueID) == e &&
@@ -30462,7 +30462,7 @@
         Mi = a(72333),
         Gi = a(24193),
         ki = a.n(Gi);
-      const Oi = (0, c.Pi)(({ bCenterElements: e = !1 }) => {
+      const xi = (0, c.Pi)(({ bCenterElements: e = !1 }) => {
           const t = Mo();
           return i.createElement(
             "div",
@@ -30510,7 +30510,7 @@
             )
           );
         }),
-        xi = (0, c.Pi)((e) => {
+        Oi = (0, c.Pi)((e) => {
           const t = Mo(),
             a = Yr.f.Get().GetEventInfo(t),
             n = Yr.f.Get().GetEventDates(t).sort();
@@ -31391,7 +31391,7 @@
                   backgroundImage: `url( ${p.Y.IMG_URL}backgrounds/bg_granite_texture_sched.jpg )`,
                 },
               },
-              i.createElement(xi, {
+              i.createElement(Oi, {
                 eDivision: n,
                 setDivision: r,
                 eRegion: s,
@@ -31418,7 +31418,7 @@
                 },
                 (0, E.Jr)("#dpc_scroll_to_top")
               ),
-              i.createElement(Oi, null)
+              i.createElement(xi, null)
             )
           );
         });
@@ -33555,7 +33555,7 @@
             i.createElement(Ss, null),
             i.createElement(ys, null),
             i.createElement(Ts, null),
-            i.createElement(Oi, null)
+            i.createElement(xi, null)
           )
         );
       var Ns = a(35861),
@@ -34349,7 +34349,7 @@
             )
           );
         }),
-        Os =
+        xs =
           ((0, c.Pi)(() => {
             var e;
             const t = Mo(),
@@ -34988,7 +34988,7 @@
                   )
                 );
           })),
-        xs = (0, c.Pi)(({ nTeamID: e, strName: t, strRegion: a }) =>
+        Os = (0, c.Pi)(({ nTeamID: e, strName: t, strRegion: a }) =>
           i.createElement(
             "div",
             {
@@ -35162,7 +35162,7 @@
                   "data-aos-duration": "1500",
                 },
                 t.map((e) =>
-                  i.createElement(xs, {
+                  i.createElement(Os, {
                     key: e.nTeamID,
                     nTeamID: e.nTeamID,
                     strName: e.strTeamName,
@@ -35178,7 +35178,7 @@
             i.Fragment,
             null,
             i.createElement(ks, null),
-            i.createElement(Os, null),
+            i.createElement(xs, null),
             i.createElement(Fs, null)
           )
         );
@@ -36866,8 +36866,8 @@
                 : null == R
                 ? void 0
                 : R.team_1_wins,
-            O = null == n ? void 0 : n.includes(e),
-            x = 0 != p.Y.ACCOUNT_ID,
+            x = null == n ? void 0 : n.includes(e),
+            O = 0 != p.Y.ACCOUNT_ID,
             F = Yr.f.Get().GetSpoilerBlockState(t) == $r.rE.BLOCKED,
             U =
               F &&
@@ -36926,11 +36926,11 @@
                   {
                     className: (0, v.Z)(
                       po().FollowingLine,
-                      O && po().IsFollowing,
-                      x && po().CanFollow
+                      x && po().IsFollowing,
+                      O && po().CanFollow
                     ),
                     onClick: () => {
-                      x && Yr.f.Get().ToggleFavoriteTeam(e);
+                      O && Yr.f.Get().ToggleFavoriteTeam(e);
                     },
                   },
                   i.createElement(
@@ -36940,7 +36940,7 @@
                         "div",
                         null,
                         (0, E.Jr)(
-                          x ? "#dpc_favorite" : "#dpc_login_to_favorite"
+                          O ? "#dpc_favorite" : "#dpc_login_to_favorite"
                         )
                       ),
                       direction: "top",
@@ -36950,7 +36950,7 @@
                       className: po().Star,
                       style: {
                         backgroundImage: `url( ${p.Y.IMG_URL}icons/${
-                          O ? "star_gold" : "star_black"
+                          x ? "star_gold" : "star_black"
                         }.png )`,
                       },
                     })
@@ -37425,7 +37425,7 @@
             i.createElement(go, null),
             i.createElement(As, null),
             i.createElement(Us, null),
-            i.createElement(Oi, null)
+            i.createElement(xi, null)
           )
         );
       });
@@ -37969,7 +37969,7 @@
                 )
               );
         }),
-        Oo = (0, c.Pi)(() => {
+        xo = (0, c.Pi)(() => {
           const e = Mo();
           return e != $r._A.SPRING_2021_MAJOR
             ? null
@@ -38108,7 +38108,7 @@
                 )
               );
         }),
-        xo = (0, c.Pi)(() => {
+        Oo = (0, c.Pi)(() => {
           const e = Mo();
           return e != $r._A.INTERNATIONAL_2021_QUALIFIERS
             ? null
@@ -39824,8 +39824,8 @@
               },
             },
             i.createElement(ko, null),
-            i.createElement(Oo, null),
             i.createElement(xo, null),
+            i.createElement(Oo, null),
             i.createElement(Fo, null),
             i.createElement(Uo, null),
             i.createElement(Ho, null),
@@ -42521,8 +42521,8 @@
           i.createElement(T.U, null)
         );
       };
-      var Ol = a(52222),
-        xl = a.n(Ol);
+      var xl = a(52222),
+        Ol = a.n(xl);
       const Fl = [
           {
             imageName: "sign-signature-postit-note.jpg",
@@ -42585,29 +42585,29 @@
         Hl = ({ rowInfo: e, orderedListStart: t }) =>
           i.createElement(
             "div",
-            { className: xl().ImagePreparationContainer },
+            { className: Ol().ImagePreparationContainer },
             i.createElement(
               "div",
-              { className: xl().ClickZoom },
+              { className: Ol().ClickZoom },
               i.createElement(
                 "label",
                 null,
                 i.createElement("input", { type: "checkbox" }),
                 i.createElement("img", {
                   src: `${p.Y.IMG_URL}dpc/autograph_guidelines/${e.imageName}`,
-                  className: xl().ImagePreparationImage,
+                  className: Ol().ImagePreparationImage,
                 })
               )
             ),
             i.createElement(
               "div",
-              { className: xl().ImagePreparationDetails },
+              { className: Ol().ImagePreparationDetails },
               i.createElement(
                 "ol",
                 { start: t },
                 i.createElement(
                   "li",
-                  { className: xl().ImagePreparationHeader },
+                  { className: Ol().ImagePreparationHeader },
                   (0, E.Jr)(`#autograph_preparation_${e.locIdentifier}_header`)
                 )
               ),
@@ -42622,7 +42622,7 @@
                         "li",
                         {
                           key: `${e}-${n}`,
-                          className: xl().ImagePreparationBulletText,
+                          className: Ol().ImagePreparationBulletText,
                         },
                         (0, E.Jr)(`#autograph_preparation_${e}_bullet_${n}`)
                       )
@@ -42635,7 +42635,7 @@
         Vl = () =>
           i.createElement(
             "div",
-            { className: xl().AutographGuidelines },
+            { className: Ol().AutographGuidelines },
             i.createElement(Pe.j, { bOverlapping: !1 }),
             i.createElement(
               R.q,
@@ -42649,62 +42649,62 @@
             i.createElement(Mr.Z, null),
             i.createElement(
               "div",
-              { className: xl().Background },
+              { className: Ol().Background },
               i.createElement(
                 "div",
-                { className: xl().ContentFrame },
+                { className: Ol().ContentFrame },
                 i.createElement(
                   "div",
-                  { className: xl().Page },
+                  { className: Ol().Page },
                   i.createElement("img", {
                     src: `${p.Y.IMG_URL}dpc/dpc_logo.png`,
-                    className: xl().DPCLogo,
+                    className: Ol().DPCLogo,
                   }),
                   i.createElement(
                     "div",
-                    { className: xl().Header },
+                    { className: Ol().Header },
                     (0, E.Jr)("#autograph_guidelines_top_header")
                   ),
-                  i.createElement("div", { className: xl().SmoothLine }),
+                  i.createElement("div", { className: Ol().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: xl().Subheader },
+                    { className: Ol().Subheader },
                     (0, E.Jr)("#autograph_examples_header")
                   ),
                   i.createElement(
                     "div",
-                    { className: xl().ExamplesRow },
+                    { className: Ol().ExamplesRow },
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/example-signature-1.jpg`,
-                      className: xl().ExamplesImage,
+                      className: Ol().ExamplesImage,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: xl().CheckMarkLeft,
+                      className: Ol().CheckMarkLeft,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/example-signature-2.jpg`,
-                      className: xl().ExamplesImage,
+                      className: Ol().ExamplesImage,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: xl().CheckMarkRight,
+                      className: Ol().CheckMarkRight,
                     })
                   ),
                   i.createElement(
                     "div",
-                    { className: xl().ExamplesDescription },
+                    { className: Ol().ExamplesDescription },
                     (0, E.Jr)("#autograph_examples_format_and_details")
                   ),
                   i.createElement(
                     "div",
-                    { className: xl().ExamplesDescription },
+                    { className: Ol().ExamplesDescription },
                     (0, E.Jr)("#autograph_examples_size")
                   ),
-                  i.createElement("div", { className: xl().SmoothLine }),
+                  i.createElement("div", { className: Ol().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: xl().Subheader },
+                    { className: Ol().Subheader },
                     (0, E.Jr)("#autograph_creation_header")
                   ),
                   Fl.map((e, t) =>
@@ -42716,51 +42716,51 @@
                   ),
                   i.createElement(
                     "div",
-                    { className: xl().SignatureCreationRules },
+                    { className: Ol().SignatureCreationRules },
                     i.createElement(
                       "div",
-                      { className: xl().SignatureRulesContainer },
+                      { className: Ol().SignatureRulesContainer },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}dpc/autograph_guidelines/guidelines-clarity.jpg`,
-                        className: xl().SignatureRulesImage,
+                        className: Ol().SignatureRulesImage,
                       }),
                       i.createElement(
                         "div",
-                        { className: xl().SignatureRulesDetails },
+                        { className: Ol().SignatureRulesDetails },
                         (0, E.Jr)("#autograph_creation_rule_1")
                       )
                     ),
                     i.createElement(
                       "div",
-                      { className: xl().SignatureRulesContainer },
+                      { className: Ol().SignatureRulesContainer },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}dpc/autograph_guidelines/guidelines-thickness.jpg`,
-                        className: xl().SignatureRulesImage,
+                        className: Ol().SignatureRulesImage,
                       }),
                       i.createElement(
                         "div",
-                        { className: xl().SignatureRulesDetails },
+                        { className: Ol().SignatureRulesDetails },
                         (0, E.Jr)("#autograph_creation_rule_2")
                       )
                     ),
                     i.createElement(
                       "div",
-                      { className: xl().SignatureRulesContainerLast },
+                      { className: Ol().SignatureRulesContainerLast },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}dpc/autograph_guidelines/guidelines-imagery.jpg`,
-                        className: xl().SignatureRulesImage,
+                        className: Ol().SignatureRulesImage,
                       }),
                       i.createElement(
                         "div",
-                        { className: xl().SignatureRulesDetails },
+                        { className: Ol().SignatureRulesDetails },
                         (0, E.Jr)("#autograph_creation_rule_3")
                       )
                     )
                   ),
-                  i.createElement("div", { className: xl().SmoothLine }),
+                  i.createElement("div", { className: Ol().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: xl().Subheader },
+                    { className: Ol().Subheader },
                     (0, E.Jr)("#autograph_preparation_header")
                   ),
                   Ul.map((e, t) =>
@@ -44898,7 +44898,7 @@
           return (0, Na.Xx)("#EventCalendar_MuteApp_Unknown");
         }
       }
-      var Oc;
+      var xc;
       !(function (e) {
         (e.k_ERecent = "recent"),
           (e.k_ELibrary = "library"),
@@ -44908,17 +44908,17 @@
           (e.k_ESteam = "steam"),
           (e.k_EFeatured = "featured"),
           (e.k_ECurator = "curator");
-      })(Oc || (Oc = {}));
-      const xc = [
-          Oc.k_ELibrary,
-          Oc.k_EWishlist,
-          Oc.k_EFollowing,
-          Oc.k_ERecommended,
-          Oc.k_ESteam,
-          Oc.k_ECurator,
+      })(xc || (xc = {}));
+      const Oc = [
+          xc.k_ELibrary,
+          xc.k_EWishlist,
+          xc.k_EFollowing,
+          xc.k_ERecommended,
+          xc.k_ESteam,
+          xc.k_ECurator,
         ],
-        Fc = [...xc, Oc.k_EFeatured],
-        Uc = [Oc.k_EFeatured];
+        Fc = [...Oc, xc.k_EFeatured],
+        Uc = [xc.k_EFeatured];
       var Hc;
       !(function (e) {
         (e.k_ENews = "news"),
@@ -44995,9 +44995,9 @@
         InitDefaultCheckboxes(e, t, a) {
           (this.m_bInitializedForUpdatesOnly = t),
             (this.m_mapEventTypeGroupsAllowed = zc(t ? [Hc.k_EUpdates] : Vc));
-          const n = (0, wt.h4)() ? Fc : xc;
+          const n = (0, wt.h4)() ? Fc : Oc;
           (this.m_mapGameSources = zc(e ? n : Uc)),
-            a && this.m_mapGameSources.set(Oc.k_EFeatured, !0);
+            a && this.m_mapGameSources.set(xc.k_EFeatured, !0);
         }
         Init(e, t, a, n, r) {
           (this.m_eStorageType = r), (this.m_strStorageKey = n);
@@ -45045,8 +45045,8 @@
         }
         BIsGameSourceAllowed(e) {
           return (
-            !(e === Oc.k_EFollowing && !$a.bIsFollowingEnabled) &&
-            !(e === Oc.k_ECurator && !$a.bIsCuratorsEnabled) &&
+            !(e === xc.k_EFollowing && !$a.bIsFollowingEnabled) &&
+            !(e === xc.k_ECurator && !$a.bIsCuratorsEnabled) &&
             this.m_mapGameSources.has(e)
           );
         }
@@ -45060,19 +45060,19 @@
         SetGameSourceAllowed(e, t) {
           t
             ? (this.m_mapGameSources.set(e, !0),
-              e == Oc.k_ERecent
-                ? this.m_mapGameSources.delete(Oc.k_ELibrary)
-                : e == Oc.k_ELibrary &&
+              e == xc.k_ERecent
+                ? this.m_mapGameSources.delete(xc.k_ELibrary)
+                : e == xc.k_ELibrary &&
                   ((0, Dt.X)(
-                    !this.m_mapGameSources.has(Oc.k_ERecent),
+                    !this.m_mapGameSources.has(xc.k_ERecent),
                     "Setting Library although Recent already set - illusion was broken"
                   ),
-                  this.m_mapGameSources.delete(Oc.k_ERecent)))
+                  this.m_mapGameSources.delete(xc.k_ERecent)))
             : (this.m_mapGameSources.delete(e),
-              e == Oc.k_ERecent
-                ? this.m_mapGameSources.set(Oc.k_ELibrary, !0)
-                : e == Oc.k_ELibrary &&
-                  this.m_mapGameSources.delete(Oc.k_ERecent)),
+              e == xc.k_ERecent
+                ? this.m_mapGameSources.set(xc.k_ELibrary, !0)
+                : e == xc.k_ELibrary &&
+                  this.m_mapGameSources.delete(xc.k_ERecent)),
             this.SaveFilterPreferences(),
             Jc.RecordFilterChangeEvent(this);
         }
@@ -45095,19 +45095,19 @@
             !this.m_mapHiddenClans.has(e.clanid) &&
             (!!(t & Mc.k_eRequired || t & Mc.k_eReposted) ||
               Boolean(
-                (this.BIsGameSourceAllowed(Oc.k_ERecent) && a) ||
-                  (this.BIsGameSourceAllowed(Oc.k_ELibrary) &&
+                (this.BIsGameSourceAllowed(xc.k_ERecent) && a) ||
+                  (this.BIsGameSourceAllowed(xc.k_ELibrary) &&
                     t & Mc.k_eLibrary) ||
-                  (this.BIsGameSourceAllowed(Oc.k_EWishlist) &&
+                  (this.BIsGameSourceAllowed(xc.k_EWishlist) &&
                     t & Mc.k_eWishlist) ||
-                  (this.BIsGameSourceAllowed(Oc.k_EFollowing) &&
+                  (this.BIsGameSourceAllowed(xc.k_EFollowing) &&
                     t & Mc.k_eFollowing) ||
-                  (this.BIsGameSourceAllowed(Oc.k_ERecommended) &&
+                  (this.BIsGameSourceAllowed(xc.k_ERecommended) &&
                     t & Mc.k_eRecommended) ||
-                  (this.BIsGameSourceAllowed(Oc.k_ESteam) && t & Mc.k_eSteam) ||
-                  (this.BIsGameSourceAllowed(Oc.k_EFeatured) &&
+                  (this.BIsGameSourceAllowed(xc.k_ESteam) && t & Mc.k_eSteam) ||
+                  (this.BIsGameSourceAllowed(xc.k_EFeatured) &&
                     t & Mc.k_eFeatured) ||
-                  (this.BIsGameSourceAllowed(Oc.k_ECurator) &&
+                  (this.BIsGameSourceAllowed(xc.k_ECurator) &&
                     t & Mc.k_eCurator)
               ))
           );
@@ -45119,7 +45119,7 @@
           );
         }
         BAreAnyEventsFiltered(e) {
-          const t = (0, wt.h4)() ? Fc : xc;
+          const t = (0, wt.h4)() ? Fc : Oc;
           return (
             (e ? t : Uc).some((e) => !this.BIsGameSourceAllowed(e)) ||
             Vc.some((e) => !this.BIsEventTypeGroupAllowed(e))
@@ -45244,13 +45244,13 @@
         RecordFilterChangeEvent(e) {
           this.m_scheduledFilterChange.Schedule(1e3, () => {
             let t = 0;
-            e.BIsGameSourceAllowed(Oc.k_ELibrary) && (t |= 1),
-              e.BIsGameSourceAllowed(Oc.k_EWishlist) && (t |= 2),
-              e.BIsGameSourceAllowed(Oc.k_EFollowing) && (t |= 4),
-              e.BIsGameSourceAllowed(Oc.k_ERecommended) && (t |= 8),
-              e.BIsGameSourceAllowed(Oc.k_ESteam) && (t |= 16),
-              e.BIsGameSourceAllowed(Oc.k_EFeatured) && (t |= 32),
-              e.BIsGameSourceAllowed(Oc.k_ERecent) && (t |= 64),
+            e.BIsGameSourceAllowed(xc.k_ELibrary) && (t |= 1),
+              e.BIsGameSourceAllowed(xc.k_EWishlist) && (t |= 2),
+              e.BIsGameSourceAllowed(xc.k_EFollowing) && (t |= 4),
+              e.BIsGameSourceAllowed(xc.k_ERecommended) && (t |= 8),
+              e.BIsGameSourceAllowed(xc.k_ESteam) && (t |= 16),
+              e.BIsGameSourceAllowed(xc.k_EFeatured) && (t |= 32),
+              e.BIsGameSourceAllowed(xc.k_ERecent) && (t |= 64),
               e.BIsEventTypeGroupAllowed(Hc.k_ENews) && (t |= 1024),
               e.BIsEventTypeGroupAllowed(Hc.k_EEvents) && (t |= 2048),
               e.BIsEventTypeGroupAllowed(Hc.k_EStreaming) && (t |= 4096),
@@ -47735,10 +47735,10 @@
         Md = a(50038),
         Gd = a(39672),
         kd = a.n(Gd);
-      const Od = a(47812);
-      function xd(e, t) {
-        const a = Od.tz.guess(),
-          n = Od.unix(e).tz(a),
+      const xd = a(47812);
+      function Od(e, t) {
+        const a = xd.tz.guess(),
+          n = xd.unix(e).tz(a),
           r = (0, Na.CE)();
         return (
           r && n.locale(r),
@@ -47776,7 +47776,7 @@
                 { className: n || r ? c.DateAndTimeInline : c.DateAndTime },
                 s && l,
                 i.createElement("span", null, " "),
-                Boolean(t && o) && xd(t, !0)
+                Boolean(t && o) && Od(t, !0)
               )
             : i.createElement(
                 "div",
@@ -47792,7 +47792,7 @@
                 i.createElement(
                   "div",
                   { className: c.LocalizedTime },
-                  Boolean(t && o) && xd(t, !0)
+                  Boolean(t && o) && Od(t, !0)
                 )
               );
         }),
@@ -47976,7 +47976,7 @@
                     i.createElement(
                       "div",
                       { className: n.ShortDateAndTime },
-                      xd(e),
+                      Od(e),
                       " "
                     )
                   )
@@ -50135,7 +50135,7 @@
           return "CCloudGaming_GetTimeRemaining_Response";
         }
       }
-      var Gm, km, Om;
+      var Gm, km, xm;
       !(function (e) {
         (e.GetPasswordRSAPublicKey = function (e, t) {
           return e.SendMsg("Authentication.GetPasswordRSAPublicKey#1", t, rm, {
@@ -50269,8 +50269,8 @@
                 ePrivilege: 1,
               });
             });
-        })(Om || (Om = {}));
-      var xm,
+        })(xm || (xm = {}));
+      var Om,
         Fm,
         Um = a(77362);
       !(function (e) {
@@ -50281,7 +50281,7 @@
           (e[(e.MoveAuthenticator = 4)] = "MoveAuthenticator"),
           (e[(e.RateLimitExceeded = 5)] = "RateLimitExceeded"),
           (e[(e.AnonymousLogin = 6)] = "AnonymousLogin");
-      })(xm || (xm = {})),
+      })(Om || (Om = {})),
         (function (e) {
           (e[(e.k_Success = 0)] = "k_Success"),
             (e[(e.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
@@ -50290,7 +50290,7 @@
       class Hm {
         constructor(e, t, a) {
           (this.m_bRemoteInteraction = !1),
-            (this.m_eFailureState = xm.None),
+            (this.m_eFailureState = Om.None),
             (this.m_strExtendedErrorMessage = ""),
             (this.m_transport = e),
             (this.m_onCompleteCallback = t),
@@ -50338,8 +50338,8 @@
                       1
                     );
                 }
-                if (9 === a || 27 === a) this.m_eFailureState = xm.Expired;
-                else if (84 === a) this.m_eFailureState = xm.RateLimitExceeded;
+                if (9 === a || 27 === a) this.m_eFailureState = Om.Expired;
+                else if (84 === a) this.m_eFailureState = Om.RateLimitExceeded;
                 else {
                   if (118 == a) {
                     if ((0, Um.U5)("LoginUI.ShowAgreementPopup"))
@@ -50356,7 +50356,7 @@
                     return this.m_onCompleteCallback({ bSuccess: !1 }), a;
                   }
                   console.error(`Failed to poll auth session. Result: ${a}`),
-                    (this.m_eFailureState = xm.Generic);
+                    (this.m_eFailureState = Om.Generic);
                 }
                 return this.m_onCompleteCallback({ bSuccess: !1 }), a;
               }
@@ -50391,7 +50391,7 @@
             } catch (e) {
               return (
                 console.error(`Failed to poll auth session. ${e}`),
-                (this.m_eFailureState = xm.Generic),
+                (this.m_eFailureState = Om.Generic),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
               );
@@ -51370,7 +51370,7 @@
               "anonymous" == e)
             )
               return (
-                this.SetFailureState(xm.AnonymousLogin, m_.EResult(12)), 12
+                this.SetFailureState(Om.AnonymousLogin, m_.EResult(12)), 12
               );
             try {
               const t = yield (function (e, t) {
@@ -51417,7 +51417,7 @@
                   console.error(
                     "Cannot start auth session without a valid RSA key"
                   ),
-                  this.SetFailureState(xm.Network, m_.EResult(20)),
+                  this.SetFailureState(Om.Network, m_.EResult(20)),
                   20
                 );
               const s = jm(i, t),
@@ -51459,12 +51459,12 @@
                         case 20:
                         case 3:
                           return (
-                            this.SetFailureState(xm.Network, m_.EResult(20)), t
+                            this.SetFailureState(Om.Network, m_.EResult(20)), t
                           );
                         case 84:
                           return (
                             this.SetFailureState(
-                              xm.RateLimitExceeded,
+                              Om.RateLimitExceeded,
                               m_.EResult(t)
                             ),
                             t
@@ -51488,7 +51488,7 @@
                               `Failed to start auth session. Result: ${t} Transport: ${a}`
                             ),
                             this.SetFailureState(
-                              xm.Generic,
+                              Om.Generic,
                               m_.EResult(t),
                               l.Body().extended_error_message()
                             ),
@@ -51536,18 +51536,18 @@
                           const t = e;
                           return t.response
                             ? (this.SetFailureState(
-                                xm.Network,
+                                Om.Network,
                                 m_.AjaxFailureWithCode(t.response.status)
                               ),
                               20)
                             : (this.SetFailureState(
-                                xm.Network,
+                                Om.Network,
                                 m_.AjaxFailureNoCode()
                               ),
                               20);
                         }
                         return (
-                          this.SetFailureState(xm.Network, m_.EResult(79)), 79
+                          this.SetFailureState(Om.Network, m_.EResult(79)), 79
                         );
                       }
                     }
@@ -51591,7 +51591,7 @@
                   )}`
                 ),
                 console.log(e),
-                this.SetFailureState(xm.Generic, m_.FailedToStart()),
+                this.SetFailureState(Om.Generic, m_.FailedToStart()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
               );
@@ -51666,13 +51666,13 @@
                     return (this.m_eStatus = a ? 10 : 11), i;
                   case 27:
                     return (
-                      this.SetFailureState(xm.Expired, m_.EResult(i)),
+                      this.SetFailureState(Om.Expired, m_.EResult(i)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       i
                     );
                   case 84:
                     return (
-                      this.SetFailureState(xm.RateLimitExceeded, m_.EResult(i)),
+                      this.SetFailureState(Om.RateLimitExceeded, m_.EResult(i)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       i
                     );
@@ -51694,7 +51694,7 @@
                       console.error(
                         `Failed to update auth session with SG code. Result: ${i}`
                       ),
-                      this.SetFailureState(xm.Generic, m_.EResult(i)),
+                      this.SetFailureState(Om.Generic, m_.EResult(i)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       i
                     );
@@ -51706,7 +51706,7 @@
                 console.error(
                   `Failed to update auth session with SG code. ${e}`
                 ),
-                this.SetFailureState(xm.Generic, m_.FailedToAddCode()),
+                this.SetFailureState(Om.Generic, m_.FailedToAddCode()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
               );
@@ -51751,7 +51751,7 @@
                     t.GetEResult()
                   ),
                   this.SetFailureState(
-                    xm.MoveAuthenticator,
+                    Om.MoveAuthenticator,
                     m_.EResult(t.GetEResult())
                   ))
                 : (this.m_eStatus = 8);
@@ -51760,7 +51760,7 @@
                 "An unexpected error occured while moving an authenticator",
                 e
               ),
-                this.SetFailureState(xm.MoveAuthenticator, m_.EResult(2));
+                this.SetFailureState(Om.MoveAuthenticator, m_.EResult(2));
             }
           });
         }
@@ -51778,7 +51778,7 @@
                   t.GetEResult()
                 ),
                 this.SetFailureState(
-                  xm.MoveAuthenticator,
+                  Om.MoveAuthenticator,
                   m_.EResult(t.GetEResult())
                 ))
               : (this.m_eStatus = 8);
@@ -51832,7 +51832,7 @@
                   a.GetEResult()
                 ),
                 this.SetFailureState(
-                  xm.MoveAuthenticator,
+                  Om.MoveAuthenticator,
                   m_.EResult(a.GetEResult())
                 ));
           });
@@ -52020,7 +52020,7 @@
                   console.error(
                     `Failed to start auth session. Result: ${a} Transport: ${n}`
                   ),
-                  (this.m_eFailureState = xm.Generic),
+                  (this.m_eFailureState = Om.Generic),
                   this.m_onCompleteCallback({ bSuccess: !1 }),
                   a
                 );
@@ -52044,7 +52044,7 @@
                 console.error(
                   `Failed to start auth session: ${JSON.stringify(e)}`
                 ),
-                (this.m_eFailureState = xm.Generic),
+                (this.m_eFailureState = Om.Generic),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
               );
@@ -52232,7 +52232,7 @@
           { className: p_().Login },
           i.createElement(_u, {
             reset: () => window.location.reload(),
-            failure: xm.Generic,
+            failure: Om.Generic,
           })
         );
       }
@@ -52341,7 +52341,7 @@
               (0, Na.Xx)("#Login_Help_SignIn")
             );
       }
-      function O_(e) {
+      function x_(e) {
         const { style: t } = e;
         if ("function" == typeof t)
           return i.createElement(
@@ -52367,7 +52367,7 @@
             return null;
         }
       }
-      function x_(e) {
+      function O_(e) {
         const { launcherType: t, style: a } = e;
         if (8 === t) return null;
         if ("none" == a) return null;
@@ -52389,7 +52389,7 @@
             { className: p_().AccountCreationPrompt },
             (0, Na.Xx)(r)
           ),
-          i.createElement(O_, { style: a })
+          i.createElement(x_, { style: a })
         );
       }
       function F_() {
@@ -52590,7 +52590,7 @@
             { className: p_().Login },
             i.createElement(_u, {
               reset: () => window.location.reload(),
-              failure: xm.Generic,
+              failure: Om.Generic,
               errorReference: l.toString(),
               extendedErrorMessage: u.password.strExtendedErrorMessage,
             })
@@ -52652,7 +52652,7 @@
                   launcherType: n,
                   style: e.helpLinkStyle,
                 }),
-                i.createElement(x_, { launcherType: n, style: c })
+                i.createElement(O_, { launcherType: n, style: c })
               )
             );
           }
@@ -52722,7 +52722,7 @@
               console.error(`Unknown Phase: ${h}`),
               i.createElement(_u, {
                 reset: u.password.reset,
-                failure: xm.Generic,
+                failure: Om.Generic,
                 onRequestOffline: u.onTryOffline,
                 errorReference: u.password.strErrorReference,
                 extendedErrorMessage: u.password.strExtendedErrorMessage,
@@ -53210,21 +53210,21 @@
           { title: o, description: l } = (function (e, t = "") {
             let a = { title: "", description: "" };
             switch (e) {
-              case xm.None:
+              case Om.None:
                 return { title: "", description: "" };
-              case xm.Expired:
+              case Om.Expired:
                 a = {
                   title: (0, Na.Xx)("#Login_Error_Expired_Title"),
                   description: (0, Na.Xx)("#Login_Error_Expired_Description"),
                 };
                 break;
-              case xm.Network:
+              case Om.Network:
                 a = {
                   title: (0, Na.Xx)("#Login_Error_Network_Title"),
                   description: (0, Na.Xx)("#Login_Error_Network_Description"),
                 };
                 break;
-              case xm.MoveAuthenticator:
+              case Om.MoveAuthenticator:
                 a = {
                   title: (0, Na.Xx)("#Error_Generic"),
                   description: (0, Na.Xx)(
@@ -53232,19 +53232,19 @@
                   ),
                 };
                 break;
-              case xm.RateLimitExceeded:
+              case Om.RateLimitExceeded:
                 a = {
                   title: (0, Na.Xx)("#Login_Error_RateLimit_Title"),
                   description: (0, Na.Xx)("#Login_Error_RateLimit_Description"),
                 };
                 break;
-              case xm.AnonymousLogin:
+              case Om.AnonymousLogin:
                 a = {
                   title: (0, Na.Xx)("#Login_Error_Anonymous_Title"),
                   description: (0, Na.Xx)("#Login_Error_Anonymous_Description"),
                 };
                 break;
-              case xm.Generic:
+              case Om.Generic:
               default:
                 a = {
                   title: (0, Na.Xx)("#Error_Generic"),
@@ -53254,7 +53254,7 @@
             t && (a.description = t);
             return a;
           })(a, s),
-          c = wt.De.IN_STEAMUI && a == xm.Network;
+          c = wt.De.IN_STEAMUI && a == Om.Network;
         return i.createElement(
           Lu,
           { compact: !0 },
@@ -53290,7 +53290,7 @@
       }
       function uu(e) {
         const { reset: t } = e;
-        return i.createElement(_u, { reset: t, failure: xm.Generic });
+        return i.createElement(_u, { reset: t, failure: Om.Generic });
       }
       function pu(e) {
         const {
@@ -53951,14 +53951,14 @@
           i.createElement(Bc.V, null)
         );
       }
-      function Ou(e) {
+      function xu(e) {
         return i.createElement(
           zd.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          i.createElement(xu, { redirectURL: e.redirectURL })
+          i.createElement(Ou, { redirectURL: e.redirectURL })
         );
       }
-      function xu(e) {
+      function Ou(e) {
         const { redirectURL: t } = e,
           [a] = (0, i.useState)(
             new an(wt.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
@@ -54037,7 +54037,7 @@
                   strOKButtonText: (0, Na.Xx)("#MobileLogin_SignIn"),
                   onOK: () => {
                     (0, zd.AM)(
-                      i.createElement(Ou, {
+                      i.createElement(xu, {
                         ownerWin: window,
                         redirectURL: window.location.href,
                       }),
@@ -54374,7 +54374,7 @@
                         $a.GetTimeNowWithOverrideAsDate()
                       )
                     ),
-                    xd(c, !0)
+                    Od(c, !0)
                   )
                 ),
               i.createElement(
@@ -58857,7 +58857,7 @@
     },
     77108: (e, t, a) => {
       "use strict";
-      a.d(t, { Z: () => y, q: () => O });
+      a.d(t, { Z: () => y, q: () => x });
       var n = a(54013),
         r = a(89526),
         i = a(565),
@@ -59093,6 +59093,9 @@
               break;
             case 2:
               t = "intelligence";
+              break;
+            case 3:
+              t = "universal";
           }
           return r.createElement(
             "div",
@@ -59433,135 +59436,142 @@
                 )
               )
             : null,
-        B = ({ heroData: e }) =>
-          e
-            ? r.createElement(
+        B = ({ heroData: e }) => {
+          if (!e) return null;
+          let t = e.damage_min,
+            a = e.damage_max;
+          return (
+            3 == e.primary_attr &&
+              ((t += 0.7 * Math.floor(e.str_base + e.agi_base + e.int_base)),
+              (a += 0.7 * Math.floor(e.str_base + e.agi_base + e.int_base))),
+            r.createElement(
+              "div",
+              { className: l().DetailsStats },
+              r.createElement(
                 "div",
-                { className: l().DetailsStats },
+                { className: l().StatsList },
                 r.createElement(
                   "div",
-                  { className: l().StatsList },
+                  { className: l().HeroValuesSection },
                   r.createElement(
                     "div",
-                    { className: l().HeroValuesSection },
-                    r.createElement(
-                      "div",
-                      { className: l().HeroValueTitle },
-                      (0, u.Jr)("#hero_attack")
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: l().ValueElement },
-                      r.createElement("img", {
-                        className: l().SwordIcon,
-                        src: `${n.Y.IMG_URL}/heroes/stats/icon_damage.png`,
-                      }),
-                      e.damage_min.toFixed(0) + "-" + e.damage_max.toFixed(0)
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: l().ValueElement },
-                      r.createElement("img", {
-                        className: l().SwordIcon,
-                        src: `${n.Y.IMG_URL}/heroes/stats/icon_attack_time.png`,
-                      }),
-                      e.attack_rate.toFixed(1)
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: l().ValueElement },
-                      r.createElement("img", {
-                        className: l().SwordIcon,
-                        src: `${n.Y.IMG_URL}/heroes/stats/icon_attack_range.png`,
-                      }),
-                      e.attack_range.toFixed(0)
-                    ),
-                    e &&
-                      e.projectile_speed > 0 &&
-                      r.createElement(
-                        "div",
-                        { className: l().ValueElement },
-                        r.createElement("img", {
-                          className: l().SwordIcon,
-                          src: `${n.Y.IMG_URL}/heroes/stats/icon_projectile_speed.png`,
-                        }),
-                        e.projectile_speed.toFixed(0),
-                        " "
-                      )
+                    { className: l().HeroValueTitle },
+                    (0, u.Jr)("#hero_attack")
                   ),
                   r.createElement(
                     "div",
-                    { className: (0, c.Z)(l().HeroValuesSection, l().Lighter) },
-                    r.createElement(
-                      "div",
-                      { className: l().HeroValueTitle },
-                      (0, u.Jr)("#hero_defense")
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: l().ValueElement },
-                      r.createElement("img", {
-                        className: l().SwordIcon,
-                        src: `${n.Y.IMG_URL}/heroes/stats/icon_armor.png`,
-                      }),
-                      e.armor.toFixed(1)
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: l().ValueElement },
-                      r.createElement("img", {
-                        className: l().SwordIcon,
-                        src: `${n.Y.IMG_URL}/heroes/stats/icon_magic_resist.png`,
-                      }),
-                      e.magic_resistance.toFixed(0) + "%"
-                    )
+                    { className: l().ValueElement },
+                    r.createElement("img", {
+                      className: l().SwordIcon,
+                      src: `${n.Y.IMG_URL}/heroes/stats/icon_damage.png`,
+                    }),
+                    t.toFixed(0) + "-" + a.toFixed(0)
                   ),
                   r.createElement(
                     "div",
-                    { className: l().HeroValuesSection },
-                    r.createElement(
-                      "div",
-                      { className: l().HeroValueTitle },
-                      (0, u.Jr)("#hero_mobility")
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: l().ValueElement },
-                      r.createElement("img", {
-                        className: l().SwordIcon,
-                        src: `${n.Y.IMG_URL}/heroes/stats/icon_movement_speed.png`,
-                      }),
-                      e.movement_speed.toFixed(0)
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: l().ValueElement },
-                      r.createElement("img", {
-                        className: l().SwordIcon,
-                        src: `${n.Y.IMG_URL}/heroes/stats/icon_turn_rate.png`,
-                      }),
-                      e.turn_rate.toFixed(1)
-                    ),
+                    { className: l().ValueElement },
+                    r.createElement("img", {
+                      className: l().SwordIcon,
+                      src: `${n.Y.IMG_URL}/heroes/stats/icon_attack_time.png`,
+                    }),
+                    e.attack_rate.toFixed(1)
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: l().ValueElement },
+                    r.createElement("img", {
+                      className: l().SwordIcon,
+                      src: `${n.Y.IMG_URL}/heroes/stats/icon_attack_range.png`,
+                    }),
+                    e.attack_range.toFixed(0)
+                  ),
+                  e &&
+                    e.projectile_speed > 0 &&
                     r.createElement(
                       "div",
                       { className: l().ValueElement },
                       r.createElement("img", {
                         className: l().SwordIcon,
-                        src: `${n.Y.IMG_URL}/heroes/stats/icon_vision.png`,
+                        src: `${n.Y.IMG_URL}/heroes/stats/icon_projectile_speed.png`,
                       }),
-                      e.sight_range_day.toFixed(0) +
-                        " / " +
-                        e.sight_range_night.toFixed(0)
+                      e.projectile_speed.toFixed(0),
+                      " "
                     )
+                ),
+                r.createElement(
+                  "div",
+                  { className: (0, c.Z)(l().HeroValuesSection, l().Lighter) },
+                  r.createElement(
+                    "div",
+                    { className: l().HeroValueTitle },
+                    (0, u.Jr)("#hero_defense")
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: l().ValueElement },
+                    r.createElement("img", {
+                      className: l().SwordIcon,
+                      src: `${n.Y.IMG_URL}/heroes/stats/icon_armor.png`,
+                    }),
+                    e.armor.toFixed(1)
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: l().ValueElement },
+                    r.createElement("img", {
+                      className: l().SwordIcon,
+                      src: `${n.Y.IMG_URL}/heroes/stats/icon_magic_resist.png`,
+                    }),
+                    e.magic_resistance.toFixed(0) + "%"
                   )
                 ),
                 r.createElement(
                   "div",
-                  { className: l().DetailsSectionHeader },
-                  (0, u.Jr)("#hero_stats")
+                  { className: l().HeroValuesSection },
+                  r.createElement(
+                    "div",
+                    { className: l().HeroValueTitle },
+                    (0, u.Jr)("#hero_mobility")
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: l().ValueElement },
+                    r.createElement("img", {
+                      className: l().SwordIcon,
+                      src: `${n.Y.IMG_URL}/heroes/stats/icon_movement_speed.png`,
+                    }),
+                    e.movement_speed.toFixed(0)
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: l().ValueElement },
+                    r.createElement("img", {
+                      className: l().SwordIcon,
+                      src: `${n.Y.IMG_URL}/heroes/stats/icon_turn_rate.png`,
+                    }),
+                    e.turn_rate.toFixed(1)
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: l().ValueElement },
+                    r.createElement("img", {
+                      className: l().SwordIcon,
+                      src: `${n.Y.IMG_URL}/heroes/stats/icon_vision.png`,
+                    }),
+                    e.sight_range_day.toFixed(0) +
+                      " / " +
+                      e.sight_range_night.toFixed(0)
+                  )
                 )
+              ),
+              r.createElement(
+                "div",
+                { className: l().DetailsSectionHeader },
+                (0, u.Jr)("#hero_stats")
               )
-            : null,
+            )
+          );
+        },
         L = ({ heroData: e }) =>
           r.createElement(
             "div",
@@ -59676,6 +59686,42 @@
           s.special_values.forEach((e) => {
             let t =
               e.values_float.length > 0 ? e.values_float[0].toFixed(1) : "0";
+            if (e.values_shard.length > 0) {
+              let t = e.values_shard[0].toString();
+              (y = y.replace(
+                new RegExp("%" + e.name.toLowerCase() + "%", "g"),
+                t
+              )),
+                (y = y.replace(new RegExp("%" + e.name + "%", "g"), t)),
+                (y = y.replace(
+                  new RegExp("%bonus_" + e.name.toLowerCase() + "%", "g"),
+                  t
+                )),
+                (y = y.replace(new RegExp("%bonus_" + e.name + "%", "g"), t)),
+                (y = y.replace(
+                  new RegExp("%shard_" + e.name.toLowerCase() + "%", "g"),
+                  t
+                )),
+                (y = y.replace(new RegExp("%shard_" + e.name + "%", "g"), t));
+            }
+            if (e.values_scepter.length > 0) {
+              let t = e.values_scepter[0].toString();
+              (S = S.replace(
+                new RegExp("%" + e.name.toLowerCase() + "%", "g"),
+                t
+              )),
+                (S = S.replace(new RegExp("%" + e.name + "%", "g"), t)),
+                (S = S.replace(
+                  new RegExp("%bonus_" + e.name.toLowerCase() + "%", "g"),
+                  t
+                )),
+                (S = S.replace(new RegExp("%bonus_" + e.name + "%", "g"), t)),
+                (S = S.replace(
+                  new RegExp("%scepter_" + e.name.toLowerCase() + "%", "g"),
+                  t
+                )),
+                (S = S.replace(new RegExp("%scepter_" + e.name + "%", "g"), t));
+            }
             (f = f.replace(
               new RegExp("%" + e.name.toLowerCase() + "%", "g"),
               t
@@ -59687,12 +59733,14 @@
               (y = y.replace(
                 new RegExp("%" + e.name.toLowerCase() + "%", "g"),
                 t
-              ));
+              )),
+              (f = f.replace(new RegExp("%" + e.name + "%", "g"), t)),
+              (S = S.replace(new RegExp("%" + e.name + "%", "g"), t)),
+              (y = y.replace(new RegExp("%" + e.name + "%", "g"), t));
           }),
             (f = f.replace(/\%\%/g, "%")),
             (S = S.replace(/\%\%/g, "%")),
-            (y = y.replace(/\%\%/g, "%")),
-            console.log(f);
+            (y = y.replace(/\%\%/g, "%"));
           const C = e.name.replace("npc_dota_hero_", "");
           let T = s.name;
           E && (T = C + "_aghanims_shard"), b && (T = C + "_aghanims_scepter");
@@ -60091,6 +60139,9 @@
               break;
             case 2:
               a = "intelligence";
+              break;
+            case 3:
+              a = "universal";
           }
           let s = "";
           switch (e.attack_capability) {
@@ -60182,7 +60233,7 @@
               )
             : null;
         },
-        O = (0, m.Pi)((e) => {
+        x = (0, m.Pi)((e) => {
           const t = (0, s.UO)().id,
             a = b.L.Get().getHeroList();
           let i = 0;
@@ -65986,8 +66037,8 @@
       a.d(t, {
         Vp: () => H,
         zE: () => U,
-        gj: () => O,
-        c4: () => x,
+        gj: () => x,
+        c4: () => O,
         mz: () => F,
       });
       var n = a(33940),
@@ -66419,7 +66470,7 @@
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
       const k = new c.s("FocusNavigationMovement").Debug;
-      var O, x, F, U;
+      var x, O, F, U;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -66428,14 +66479,14 @@
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(O || (O = {})),
+      })(x || (x = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.LAST = 1)] = "LAST"),
             (e[(e.MAINTAIN_X = 2)] = "MAINTAIN_X"),
             (e[(e.MAINTAIN_Y = 3)] = "MAINTAIN_Y"),
             (e[(e.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
-        })(x || (x = {})),
+        })(O || (O = {})),
         (function (e) {
           (e[(e.Standard = 0)] = "Standard"),
             (e[(e.NoTransform = 1)] = "NoTransform"),
@@ -66696,7 +66747,7 @@
         RegisterDOMEvents() {
           !this.m_rgNavigationHandlers.length &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties.layout != O.NONE ||
+              this.m_Properties.layout != x.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -66858,22 +66909,22 @@
               const e = this.GetLayout();
               l =
                 l >= this.m_rgChildren.length ||
-                e == O.ROW_REVERSE ||
-                e == O.COLUMN_REVERSE ||
-                r == x.LAST
+                e == x.ROW_REVERSE ||
+                e == x.COLUMN_REVERSE ||
+                r == O.LAST
                   ? this.m_rgChildren.length - 1
                   : 0;
             }
-            if ((r == x.MAINTAIN_X || r == x.MAINTAIN_Y || t) && a) {
+            if ((r == O.MAINTAIN_X || r == O.MAINTAIN_Y || t) && a) {
               let n, s;
-              r == x.MAINTAIN_X ? (n = "x") : r == x.MAINTAIN_Y && (n = "y"),
+              r == O.MAINTAIN_X ? (n = "x") : r == O.MAINTAIN_Y && (n = "y"),
                 n == i.TP[a] &&
                   (s = this.m_Tree.GetLastFocusedMovementRect(i.TP[a])),
                 k(
-                  `Taking focus while preserving ${x[r]} preserved: ${n} movement: ${a}, node:`,
+                  `Taking focus while preserving ${O[r]} preserved: ${n} movement: ${a}, node:`,
                   s || t
                 );
-              const l = this.ComputeRelativeDirection(e, O.GRID);
+              const l = this.ComputeRelativeDirection(e, x.GRID);
               if (s || t) {
                 const r = l == U.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                 o = this.FindClosestChildInNextAxiallyAlignedSet(
@@ -66888,14 +66939,14 @@
                 const t = l == U.BACKWARD ? this.m_rgChildren.length : -1;
                 o = this.FindNextFocusableChildInDirection(t, l, e);
               }
-            } else if (r == x.PREFERRED_CHILD) {
+            } else if (r == O.PREFERRED_CHILD) {
               for (const t of this.m_rgChildren)
                 if (
                   ((o = t.BWantsPreferredFocus() && t.FindFocusableNode(e)), o)
                 )
                   return o;
             } else
-              r == x.LAST &&
+              r == O.LAST &&
                 (o = this.FindNextFocusableChildInDirection(
                   l + 1,
                   U.BACKWARD,
@@ -66948,7 +66999,7 @@
         }
         GetLayout() {
           if (this.m_Properties.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return O.NONE;
+          if (this.m_rgChildren.length < 2) return x.NONE;
           return (0, m.Ii)(this.m_element);
         }
         OnNavigationEvent(e) {
@@ -66986,7 +67037,7 @@
             s = this.ComputeRelativeDirection(e, n);
           if (
             (k(
-              `Handling navigation event ${r.eV[e]} - ${O[n]} - ${U[s]}`,
+              `Handling navigation event ${r.eV[e]} - ${x[n]} - ${U[s]}`,
               this.m_element
             ),
             s == U.INVALID)
@@ -66994,7 +67045,7 @@
             return !1;
           if (this.m_Properties.focusable && this.m_bFocused)
             return k("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), n == O.GRID))
+          if ((this.EnsureChildrenSorted(!0), n == x.GRID))
             i = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               s,
@@ -67048,10 +67099,10 @@
           return this.ComputeRelativeDirection(e, this.GetLayout());
         }
         ComputeRelativeDirection(e, t) {
-          let a = t == O.ROW_REVERSE || t == O.COLUMN_REVERSE;
+          let a = t == x.ROW_REVERSE || t == x.COLUMN_REVERSE;
           switch (t) {
-            case O.ROW:
-            case O.ROW_REVERSE:
+            case x.ROW:
+            case x.ROW_REVERSE:
               switch (e) {
                 case r.eV.DIR_LEFT:
                   return a ? U.FORWARD : U.BACKWARD;
@@ -67060,8 +67111,8 @@
                 default:
                   return U.INVALID;
               }
-            case O.COLUMN:
-            case O.COLUMN_REVERSE:
+            case x.COLUMN:
+            case x.COLUMN_REVERSE:
               switch (e) {
                 case r.eV.DIR_UP:
                   return a ? U.FORWARD : U.BACKWARD;
@@ -67070,7 +67121,7 @@
                 default:
                   return U.INVALID;
               }
-            case O.GRID:
+            case x.GRID:
               switch (e) {
                 case r.eV.DIR_LEFT:
                 case r.eV.DIR_UP:
@@ -68281,7 +68332,7 @@
         V5: () => C,
         Ac: () => y,
         zx: () => A,
-        ji: () => O,
+        ji: () => x,
         oX: () => R,
         Vh: () => Je,
         $_: () => S,
@@ -68687,7 +68738,7 @@
           );
         }
       }
-      class O extends G {
+      class x extends G {
         render() {
           return r.createElement(
             u.T,
@@ -68695,18 +68746,18 @@
           );
         }
       }
-      O.contextType = m;
+      x.contextType = m;
       r.forwardRef(function (e, t) {
         const a = _();
         return r.createElement(
           u.T,
           Object.assign(
-            { component: a.ToggleField, fallback: x, componentRef: t },
+            { component: a.ToggleField, fallback: O, componentRef: t },
             e
           )
         );
       });
-      class x extends G {
+      class O extends G {
         OnOffKeyDown(e) {
           (37 == e.keyCode && this.checked) ||
           (39 == e.keyCode && !this.checked)
@@ -68796,8 +68847,8 @@
           );
         }
       }
-      (0, n.gn)([d.a], x.prototype, "OnOffKeyDown", null),
-        (0, n.gn)([d.a], x.prototype, "OnNewUIToggle", null);
+      (0, n.gn)([d.a], O.prototype, "OnOffKeyDown", null),
+        (0, n.gn)([d.a], O.prototype, "OnNewUIToggle", null);
       var F = a(97545),
         U = a(73961),
         H = a(81512),
@@ -70470,7 +70521,7 @@
         Ge = a.n(Me),
         ke = a(17213);
       a(42361), a(62499);
-      function Oe(e) {
+      function xe(e) {
         const { direction: t } = e,
           a = (0, n._T)(e, ["direction"]);
         switch (t) {
@@ -70540,7 +70591,7 @@
             );
         }
       }
-      function xe(e) {
+      function Oe(e) {
         const { direction: t } = e;
         (0, n._T)(e, ["direction"]);
         switch (t) {
@@ -70883,8 +70934,8 @@
             onClick: a,
           },
           t
-            ? r.createElement(xe, { direction: "right" })
-            : r.createElement(xe, { direction: "left" })
+            ? r.createElement(Oe, { direction: "right" })
+            : r.createElement(Oe, { direction: "left" })
         );
       }
       function Ze(e) {
@@ -71046,15 +71097,15 @@
           M = null == E || E,
           G = null != b ? b : 0,
           k = null != f ? f : "center",
-          O = r.useRef(),
-          x = (0, F.BE)(O, e.navRef),
+          x = r.useRef(),
+          O = (0, F.BE)(x, e.navRef),
           U = r.useCallback(
             (e) => {
               var t;
-              null === (t = O.current) || void 0 === t || t.TakeFocus(),
+              null === (t = x.current) || void 0 === t || t.TakeFocus(),
                 e.preventDefault();
             },
-            [O]
+            [x]
           );
         return r.createElement(
           s.s,
@@ -71069,7 +71120,7 @@
             },
             y,
             {
-              navRef: x,
+              navRef: O,
               className: (0, l.Z)(
                 v,
                 Qe().Field,
@@ -71230,7 +71281,7 @@
             { className: Qe().DropDownControlButtonContents },
             e.children,
             r.createElement("div", { className: Qe().Spacer }),
-            r.createElement(Oe, { direction: "down" })
+            r.createElement(xe, { direction: "down" })
           )
         );
       });
@@ -72204,7 +72255,7 @@
                       r.createElement(
                         "div",
                         { className: lt().DefaultValueTick },
-                        r.createElement(Oe, { direction: "down" })
+                        r.createElement(xe, { direction: "down" })
                       )
                     ),
                   this.validRange &&
@@ -72439,7 +72490,7 @@
         Mt = a.n(Pt),
         Gt = a(50539),
         kt = a(26171);
-      function Ot(e) {
+      function xt(e) {
         const {
             childrenKey: t,
             childrenClasses: a,
@@ -72451,10 +72502,10 @@
         return r.createElement(
           Gt.Z,
           { className: o, appear: !1, enter: s, exit: s },
-          r.createElement(xt, { key: t, childrenClasses: a }, n)
+          r.createElement(Ot, { key: t, childrenClasses: a }, n)
         );
       }
-      function xt(e) {
+      function Ot(e) {
         const { sizeClass: t, children: a, childrenClasses: i } = e,
           o = (0, n._T)(e, ["sizeClass", "children", "childrenClasses"]),
           [c, d, m, _] = (function () {
@@ -72623,7 +72674,7 @@
             : "");
         var n, i;
         return r.createElement(
-          Ot,
+          xt,
           {
             childrenKey: e.activePage.identifier,
             childrenClasses: Ft(Ht(), Ht().ContentTransition),
@@ -73437,13 +73488,13 @@
       function k(e) {
         return G.GetModalManager(e);
       }
-      var O = a(3221);
-      function x(e) {
+      var x = a(3221);
+      function O(e) {
         n.useEffect(() => {
           if (e)
             return (
-              document.body.classList.add(O.BodyNoScrollDialog),
-              () => document.body.classList.remove(O.BodyNoScrollDialog)
+              document.body.classList.add(x.BodyNoScrollDialog),
+              () => document.body.classList.remove(x.BodyNoScrollDialog)
             );
         }, [e]);
       }
@@ -73463,7 +73514,7 @@
         const o = t.modals,
           c = o && !!o.length,
           d = t.active_modal;
-        x(c),
+        O(c),
           (function (e) {
             const t = (0, l.Wy)().ownerWindow,
               a = (0, y.NW)(),
