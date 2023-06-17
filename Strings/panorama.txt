@@ -6,29 +6,27 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
-$(2
-$(2
 __cstring
 __TEXT
-0D2
-0D2
 __const
 __TEXT
 __gcc_except_tab__TEXT
 __objc_methname
 __TEXT
-|=:
-|=:
+\=:
+\=:
 __objc_classname__TEXT
-ND:
-ND:
+.D:
+.D:
 __objc_methtype
 __TEXT
-YD:
+9D:
 (
-YD:
+9D:
 __unwind_info
 __TEXT
+dD:
+dD:
 __eh_frame
 __TEXT
 __DATA
@@ -156,8 +154,8 @@ h
 &
 )
 HB
-*3
-a:
+B=
+24
 1
 1
 0
@@ -5352,8 +5350,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jun 15 2023
-18:43:35
+Jun 16 2023
+16:37:56
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -7700,6 +7698,7 @@ music
 client
 optional
 PS3
+cloud
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
@@ -7717,7 +7716,6 @@ job
 crypto
 network
 content
-cloud
 logon
 clping
 threads
@@ -8245,13 +8243,15 @@ q.IsValid()
 angles.IsValid()
 SSE is required.
 src.IsValid()
-;H2
-tH2
-~H2
+TH2
+^H2
 
+iH2
+sH2
+yH2
 HB
-*3
-a:
+B=
+24
 1
 1
 0
@@ -8266,7 +8266,6 @@ a:
 @
 @
 3'
-\;
 0
 9
 9
@@ -8274,11 +8273,9 @@ a:
 ]&
 /
 &
-:
 |%
-8
+d.
 .
-8
 $
 9
 -
@@ -8289,16 +8286,16 @@ $
 -
 -
 -
+J,
 j
 ,
 ,
 ,
 6
-:,
 "
 "
-</
 ?
+)/
 )
 >
 ;
@@ -8318,16 +8315,6 @@ F
 +
 j
 s'
-|*
-w*
-]*
-@
-@
-@
-@
-@
-@
-c6
 @
 @
 @
@@ -8346,6 +8333,7 @@ c6
 @
 @
 @
+7*
 @
 @
 @
@@ -8356,7 +8344,12 @@ c6
 @
 @
 @
-0*
+@
+@
+@
+@
+@
+@
 @
 @
 @
@@ -8393,17 +8386,16 @@ K
 @
 @
 @
+j3
+@
+@
 @
 @
 @
 @
 *
 @
-*
 @
-@
-@
-04
 @
 @
 @
@@ -8412,9 +8404,8 @@ K
 @
 @
 *
-g)
+@)
 &
-#)
 &
 &
 &
@@ -8427,7 +8418,6 @@ g)
 )
 )
 )
-C2
 @
 @
 @
@@ -8442,7 +8432,9 @@ C2
 0
 0
 ,
+y(
 =
+)
 )
 )
 )
@@ -8453,32 +8445,35 @@ C2
 +
 H=
 1
-1
->)
+C(
+='
+1-
+s1
 $
 '
 '
 '
+'
+'
+z3
 1
 @
-{&
 =
 &
 @
 @
 0
 %
+@$
 @
 @
 ?
 $
-9#
 ^
 .
 .
 .
 @
-)#
 P
 #
 #
@@ -8492,7 +8487,7 @@ A
 A
 A
 (
-V.
+T"
 @
 #
 E9u
@@ -8501,9 +8496,6 @@ E9u
 @
 A
 A
-"
-&
-&
 &
 &
 &
@@ -8514,37 +8506,39 @@ A
 A
 A
 A
-Z,
 Ic
-V"
-4,
+@.
 !
-E"
-t-
-p-
-n-
-m-
+I"
+I"
+d!
+-
 !
-!
-S
-C,
-X#
-M#
+Y#
+K
+E
++
+?
+.
++
 +
 @
 #
 -
--
-R"
+[,
+H,
+7*
 [
-!
-%!
+,
 }
--
+4
 "
-$&
 @
+%(
 '
+'
+A%
+%
 $
 Hi
 (
@@ -8556,15 +8550,14 @@ $
 0
 
 
+L9%D'&
 
 0
-l!
 
 
 0
+?%
 $
-$
-%
 IcE
 @
 @
@@ -8687,7 +8680,6 @@ IcE
 @
 @
 @
-A#
 @
 @
 @
@@ -8859,12 +8851,15 @@ A#
 @
 @
 @
+_!
+!
 !
 @
 j
 @
 @
 j
+@
 @
 @
 @
@@ -8959,12 +8954,14 @@ V
 !
 @
 &
+K
 
 
 
 
-T
-%
+
+[
+S
 
 
 

@@ -13877,6 +13877,7 @@ controller_xboxelite
 controller_ps5_edge
 optional
 Windows
+cloud
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 LoadFileIntoBuffer: NULL parameters
 publish
@@ -13891,7 +13892,6 @@ job
 crypto
 network
 content
-cloud
 logon
 clping
 threads

@@ -110,6 +110,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/ugcmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/unified_messages_client.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/user.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/userauth.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/userfriends.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/userinterface.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/usermatchmaking.cpp

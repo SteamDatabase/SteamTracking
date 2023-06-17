@@ -8782,8 +8782,8 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Jun 15 2023
-18:40:22
+Jun 16 2023
+16:34:52
 Jan
 Feb
 Mar
@@ -8992,6 +8992,7 @@ audio
 client
 host
 optional
+cloud
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
@@ -9018,7 +9019,6 @@ job
 crypto
 network
 content
-cloud
 logon
 clping
 threads

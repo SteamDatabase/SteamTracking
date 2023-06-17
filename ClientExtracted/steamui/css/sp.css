@@ -7545,6 +7545,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .updatealert_Alert_2iJsg.updatealert_Error_2T873 {
   background-color: #c15755;
 }
+.updatealert_Alert_2iJsg.updatealert_SmallMode_25YQ- {
+  padding: 12px;
+}
 .updatealert_ActionAlert_1sMxt {
   display: flex;
   flex-direction: row;
@@ -7552,6 +7555,12 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   align-items: center;
   min-height: 68px;
   gap: 24px;
+}
+.updatealert_Alert_2iJsg.updatealert_SmallMode_25YQ-
+  .updatealert_ActionAlert_1sMxt {
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-start;
 }
 .updatealert_ActionAlert_1sMxt .updatealert_Content_2ZNEa {
   flex: 1;

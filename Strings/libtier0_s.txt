@@ -33,7 +33,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-ob;(
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -441,8 +440,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jun 15 2023
-18:40:39
+Jun 16 2023
+16:35:11
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1927,9 +1926,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230616014040Z0/
-*o<ww
-bl0[
+230616233512Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1937,20 +1934,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		7IH694oh9Nt0ZrH7127KHt2O5Rk=
+		iw1Nhgvl6e3lWn36kZOp7EXf/Xk=
 		</data>
 		<data>
-		B60WOiMglfCeY3P8wVpBg5UE5Js=
+		ZQOieDfXLgpNjak5K3XJ0YfTlFo=
 		</data>
 	</array>
 </dict>
 </plist>
-$t-&
-TasE
-~DUa6
-I;ez
-[_-$
-20230616014055Z0
+FJ{]
+F?'0J
+7AnG
+20230616233533Z0
 v):0
 0|100.
 'Apple Timestamp Certification Authority1&0$
@@ -2009,9 +2004,14 @@ uu!1
 Apple Certification Authority1
 Apple Inc.1
 v):0	
-230616014055Z0#
-r$AT-
-\t|Tr
+230616233533Z0#
+mtad
+YG_}
+cuz6
+	"!8
+ncypmN
+r%DW
+tmd 
 __TEXT
 __text
 __TEXT
@@ -2764,8 +2764,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jun 15 2023
-18:40:39
+Jun 16 2023
+16:35:11
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4157,6 +4157,8 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+ssJr!
+d_|P#
 YP=h
 %~Q	.
 #N"!
@@ -4171,7 +4173,7 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-gzw~
+n4%X 
 DjP5
 jJ;[\
  ^#g
@@ -4234,9 +4236,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230616014040Z0/
- 7aI
-zA%L
+230616233512Z0/
+b#+-dc
+Yl0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4244,43 +4246,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		g+FUQDqHrz3FekElTOgXyRr4I7Q=
+		92IjKy1kY6jJrIsWJStczneFWWw=
 		</data>
 		<data>
-		DkaQPyGf3A3Isc2KxtxjY8qCTO8=
+		qTWFUdShGnwCc0KQhGAQZEBc0fM=
 		</data>
 	</array>
 </dict>
 </plist>
- z}5^g.z
-I&;+
-v(]\
-uJ}##J
-20230616014055Z0
+'RdV{
+l4C\]
+MG{j
+20230616233533Z0
+v):0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230614204508Z
-230726204507Z0B1
-Timestamp Signer NWK11
+230614203010Z
+230726203009Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-s76rn
-#tP$
-(3Y2
-{ou_
-ecsT0E5]
+z	>3
+r	8/
+`%?/
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-N8_`
-99K9
-`HBk
-dd^4
-\v"~b
-.eYiR
-Cg>g
+:F)D
+tE"#
+.M^S_
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4319,9 +4315,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230616014055Z0#
-<(#r
-8G8L
+v):0	
+230616233533Z0#
+5rui
+#`x\
+\6kMEQ
 __TEXT
 __text
 __TEXT
@@ -4540,8 +4538,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jun 15 2023
-18:40:39
+Jun 16 2023
+16:35:11
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5923,13 +5921,14 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-+dqHFM
   t)
 } qJ
 1L\*
 R[Z|
 (+Q3
 vS6O"
+uW@R4
+4?E:
 'Hp4
 NQx*h
 0^@'[
@@ -5939,7 +5938,6 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-1SAY
 dlG,
 cRDP
 [xZG
@@ -6005,11 +6003,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230616014040Z0/
- l	u
-FY(%_0,
-%=0-
-&t"B
+230616233512Z0/
+d\Qi
+!ki0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6017,21 +6013,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		vkZZKCVfMCwf+AAkRZR6EUYKJT0=
+		0SSDmCaHPsBUXFT0Vzg0iWVj030=
 		</data>
 		<data>
-		NK1kTV/yJnQiQp9hUc9IiairbAE=
+		zMyDXZPNAcZQ7SWqdtcGjk53o8o=
 		</data>
 	</array>
 </dict>
 </plist>
-!_>[
-pzEuE
-8!7t
-'9Ku
-e1jZ
-pIX1
-20230616014055Z0
+zc"nC
+BkRB
+C1c~
+AKbk:
+20230616233533Z0
+m$ j
 v):0
 0|100.
 'Apple Timestamp Certification Authority1&0$
@@ -6090,9 +6085,8 @@ uu!1
 Apple Certification Authority1
 Apple Inc.1
 v):0	
-230616014055Z0#
-a#n2=
-BA`s
-.[wH3
-Z#nN
-W ` 
+230616233533Z0#
+Sf?$
+ets4Fe
+[?JR
+2[-u

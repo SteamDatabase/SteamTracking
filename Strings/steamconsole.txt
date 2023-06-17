@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+0k
+0k
 __stubs
 __TEXT
 __stub_helper
@@ -632,7 +634,7 @@ You can also type "find <string>" to see a list of all commands and convars that
 sign_install_script
 sign_install_script <appid> <input filename> <output filename> : upload install script to back end for signing
 drm_wrap
-drm_wrap <appid> <input filename> <output filename> <toolname> <flags> : upload executable to back end for DRM wrapping
+drm_wrap <appid> <input filename> <output filename> <toolname> <flags> [<destination>]: upload executable to back end for DRM wrapping
 ceg_wrap
 ceg_wrap <appid> <orig filename> <stripped filename> <strips filename> : upload executable to back end for CEG wrapping
 Install script signing completed; output is in %s
@@ -649,7 +651,9 @@ CEG wrap completed successfully
 CEG wrap failed with EResult %d (%s)
 Usage: sign_install_script <appid> <filename> <output filename>
 Sign installscript failed to start job
-Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags>
+Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags> [<destination>]
+documentation here: https://partner.steamgames.com/doc/features/drm
+Unknown destination '%s' - use 'local' or 'cloud'
 DRM wrap failed to start job
 Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>
 CEG wrap failed to start job
@@ -1209,6 +1213,7 @@ Logged On
 Logging Off
 broadcast
 PS3
+unspecified
 @bEnableSpewThrottle
 @bEnableLogTearOff
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
