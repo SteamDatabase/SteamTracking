@@ -16323,9 +16323,9 @@
                   "sub" == e.type ||
                   t.add(e.id);
             };
-          this.m_curModel.jsondata.sale_sections.forEach((e) =>
-            e.capsules.forEach(i)
-          );
+          this.m_curModel.jsondata.sale_sections.forEach((e) => {
+            (null == e ? void 0 : e.capsules) && e.capsules.forEach(i);
+          });
           let l = this.GetTabSaleSection();
           return l && l.tabs.forEach((e) => e.capsules.forEach(i)), t;
         }

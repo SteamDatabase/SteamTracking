@@ -27526,55 +27526,65 @@
                           };
                         e.GetEventModel().jsondata.sale_sections.forEach(
                           (e) => {
-                            e.capsules.filter(o).forEach(l);
+                            if (e.capsules) {
+                              e.capsules.filter(o).forEach(l);
+                            }
                           }
                         );
                         const c = e.GetTabSaleSection();
                         c &&
-                          c.tabs.forEach((e) =>
-                            e.capsules.filter(o).forEach(l)
-                          );
+                          c.tabs.forEach((e) => {
+                            e.capsules && e.capsules.filter(o).forEach(l);
+                          });
                         const m = (a) => {
-                          var n, i;
-                          const o = (e) => a.id == e.id && a.type == e.type;
-                          let r = new Array();
+                          var n, i, o;
+                          const r = (e) => a.id == e.id && a.type == e.type;
+                          let l = new Array();
                           e.GetEventModel().jsondata.sale_sections.forEach(
                             (e) => {
-                              e.capsules.filter(o).length > 0 && r.push(e);
+                              var t;
+                              (null === (t = e.capsules) || void 0 === t
+                                ? void 0
+                                : t.filter(r).length) > 0 && l.push(e);
                             }
                           );
-                          let l = new Array();
-                          c &&
-                            c.tabs.forEach((e) => {
-                              e.capsules.filter(o).length > 0 && l.push(e);
-                            });
                           let s = new Array();
+                          c &&
+                            (null === (n = c.tabs) ||
+                              void 0 === n ||
+                              n.forEach((e) => {
+                                e.capsules.filter(r).length > 0 && s.push(e);
+                              }));
+                          let d = new Array();
                           null ===
-                            (n = e.GetEventModel().jsondata.sorting_tiers) ||
-                            void 0 === n ||
-                            n.forEach((e, t) => {
+                            (i = e.GetEventModel().jsondata.sorting_tiers) ||
+                            void 0 === i ||
+                            i.forEach((e, t) => {
+                              var n;
                               if (
-                                (null == e
+                                (null ===
+                                  (n = null == e ? void 0 : e.capsules) ||
+                                void 0 === n
                                   ? void 0
-                                  : e.capsules.filter(o).length) > 0
+                                  : n.filter(r).length) > 0
                               )
-                                s.push(t);
+                                d.push(t);
                               else if (null == e ? void 0 : e.sale_tag_filter) {
                                 const n = new Array();
                                 n.push(a);
                                 (0, Nt.Dq)(new Array(), e.sale_tag_filter, n)
-                                  .length > 0 && s.push(t);
+                                  .length > 0 && d.push(t);
                               }
                             });
-                          const d =
+                          const m =
                             (null ===
-                              (i = e.GetEventModel().jsondata.tagged_items) ||
-                            void 0 === i
+                              (o = e.GetEventModel().jsondata.tagged_items) ||
+                            void 0 === o
                               ? void 0
-                              : i.findIndex(
-                                  (e) => e && o(null == e ? void 0 : e.capsule)
+                              : o.findIndex(
+                                  (e) => e && r(null == e ? void 0 : e.capsule)
                                 )) >= 0;
-                          t(a, r, l, s, d);
+                          t(a, l, s, d, m);
                         };
                         i.current = (0, pe.yV)(
                           d.createElement(Ut, { list: n, fnChooseCapsule: m }),
