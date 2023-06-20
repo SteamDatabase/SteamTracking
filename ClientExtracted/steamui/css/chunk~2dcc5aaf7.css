@@ -39658,11 +39658,23 @@ div.LowPerfMode
 .gamepadtabbedpage_Floating_3I3IM .gamepadtabbedpage_TabContentsScroll_1X4dt {
   clip: rect(58px, auto, auto, auto);
 }
+.gamepadtabbedpage_Floating_3I3IM
+  .gamepadtabbedpage_TabContentsScroll_1X4dt.DesktopUI,
+.DesktopUI
+  .gamepadtabbedpage_Floating_3I3IM
+  .gamepadtabbedpage_TabContentsScroll_1X4dt {
+  clip: initial;
+}
 .gamepadtabbedpage_OverlayPinnedView_25Oqw
   .gamepadtabbedpage_TabContentsScroll_1X4dt::-webkit-scrollbar,
 .gamepadtabbedpage_OverlayPinnedView_25Oqw
   .gamepadtabbedpage_TabContentsScroll_1X4dt::-webkit-scrollbar-thumb {
   visibility: hidden;
+}
+.gamepadtabbedpage_TabContentsScroll_1X4dt.DesktopUI,
+.DesktopUI .gamepadtabbedpage_TabContentsScroll_1X4dt {
+  padding-top: 0px;
+  margin-top: 58px;
 }
 .gamepadtabbedpage_Right_1-jlW
   > .gamepadtabbedpage_ContentTransition_L_ehQ.gamepadtabbedpage_Enter_11zfc {

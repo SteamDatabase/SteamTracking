@@ -33,6 +33,7 @@ ${BASE_URL}oauth/logout
 ${BASE_URL}oauth/logout?goto=${}
 ${BASE_URL}patches
 ${BASE_URL}persona/showplayer/${}?u=${}&appid=${DOTA_APP_ID}
+${BASE_URL}persona/showplayerreact/
 ${BASE_URL}play
 ${BASE_URL}quiz
 ${BASE_URL}react/getfavoriteteams
@@ -74,6 +75,7 @@ ${BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${}&appid=${DOTA_APP_ID}&
 ${BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${}&appid=${DOTA_APP_ID}&team_id=${}&account_id=${account_id}
 ${BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${}&appid=${DOTA_APP_ID}
 ${BASE_URL}workshop/builds
+${CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${}.png
 ${CDN_URL}apps/${}/header.jpg
 ${CDN_URL}apps/dota2/images/leagues/${leagueID}/images/image_8.png
 ${CDN_URL}apps/dota2/images/leagues/${league_id}/images/image_9.png
@@ -820,7 +822,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/
 ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/${}_${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${clanAccountID}/${}
-${MEDIA_CDN_COMMUNITY_URL}images/clans/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/${}${}${}

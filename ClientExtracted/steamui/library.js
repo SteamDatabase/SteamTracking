@@ -1,4 +1,4 @@
-var CLSTAMP = "8136432";
+var CLSTAMP = "8139287";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4495,9 +4495,9 @@ var CLSTAMP = "8136432";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 16 2023 : 17:51:10",
-                BUILD_TIME_UTC: "Jun 17 2023 : 00:51:10",
-                BUILD_RTIME_UTC: 1686963070,
+                BUILD_TIME_LOCAL: "Jun 19 2023 : 16:59:05",
+                BUILD_TIME_UTC: "Jun 19 2023 : 23:59:05",
+                BUILD_RTIME_UTC: 1687219145,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -54020,8 +54020,8 @@ var CLSTAMP = "8136432";
         "use strict";
         r.r(t),
           r.d(t, {
-            BBaseURLMatches: () => E,
-            BConfigContextInGamepadUI: () => w,
+            BBaseURLMatches: () => M,
+            BConfigContextInGamepadUI: () => v,
             BIsInPresentationMode: () => s.y9,
             BroadcastConfig: () => l.BroadcastConfig,
             CommunityConfig: () => l.CommunityConfig,
@@ -54029,18 +54029,19 @@ var CLSTAMP = "8136432";
             ConfigContext: () => c,
             ConfigContextRoot: () => d,
             EventConfig: () => l.EventConfig,
-            GET_BASE_URL: () => M,
-            GET_BASE_WEB_PROPERTY: () => b,
+            GET_BASE_URL: () => b,
+            GET_BASE_WEB_PROPERTY: () => L,
             GenerateNewSessionID: () => s.Tl,
             GetConfigJSON: () => s.kQ,
             GetOptionalConfigJSON: () => s.ip,
             GetSessionID: () => s.c9,
             InitConfig: () => s.Ek,
-            InitConfigAsync: () => v,
-            IsPlatformLinux: () => _,
-            IsPlatformMac: () => f,
-            IsPlatformWindows: () => g,
-            IsSteamChina: () => p,
+            InitConfigAsync: () => E,
+            IsOnDeck: () => p,
+            IsPlatformLinux: () => w,
+            IsPlatformMac: () => _,
+            IsPlatformWindows: () => f,
+            IsSteamChina: () => g,
             UserConfig: () => l.UserConfig,
             useConfigContext: () => u,
             useInDesktopUI: () => m,
@@ -54088,21 +54089,24 @@ var CLSTAMP = "8136432";
           return l.Config.ON_DECK;
         }
         function p() {
-          return l.Config.EREALM === o.ESteamRealm.k_ESteamRealmChina;
+          return l.Config.ON_DECK;
         }
         function g() {
-          return "windows" == l.Config.PLATFORM;
+          return l.Config.EREALM === o.ESteamRealm.k_ESteamRealmChina;
         }
         function f() {
-          return "macos" == l.Config.PLATFORM;
+          return "windows" == l.Config.PLATFORM;
         }
         function _() {
+          return "macos" == l.Config.PLATFORM;
+        }
+        function w() {
           return "linux" == l.Config.PLATFORM;
         }
-        function w(e) {
+        function v(e) {
           return null == e ? void 0 : e.IN_GAMEPADUI;
         }
-        function v(e, t, r) {
+        function E(e, t, r) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             if (r.config) {
               const r = (yield e.get(t + "ajaxgetconfig")).data;
@@ -54116,50 +54120,50 @@ var CLSTAMP = "8136432";
             }
           });
         }
-        function E(e, t) {
+        function M(e, t) {
           return 0 != t.length && e.startsWith(t);
         }
-        function M() {
+        function b() {
           if (!window || !window.location || !window.location.href)
             return console.warn("Unable to determine base url!"), "unknown";
           const e = window.location.href;
-          return E(e, l.Config.STORE_BASE_URL)
+          return M(e, l.Config.STORE_BASE_URL)
             ? l.Config.STORE_BASE_URL
-            : E(e, l.Config.COMMUNITY_BASE_URL)
+            : M(e, l.Config.COMMUNITY_BASE_URL)
             ? l.Config.COMMUNITY_BASE_URL
-            : E(e, l.Config.CHAT_BASE_URL)
+            : M(e, l.Config.CHAT_BASE_URL)
             ? l.Config.CHAT_BASE_URL
-            : E(e, l.Config.PARTNER_BASE_URL)
+            : M(e, l.Config.PARTNER_BASE_URL)
             ? l.Config.PARTNER_BASE_URL
-            : E(e, l.Config.HELP_BASE_URL)
+            : M(e, l.Config.HELP_BASE_URL)
             ? l.Config.HELP_BASE_URL
-            : E(e, l.Config.STEAMTV_BASE_URL)
+            : M(e, l.Config.STEAMTV_BASE_URL)
             ? l.Config.STEAMTV_BASE_URL
-            : E(e, l.Config.STATS_BASE_URL)
+            : M(e, l.Config.STATS_BASE_URL)
             ? l.Config.STATS_BASE_URL
-            : E(e, l.Config.INTERNAL_STATS_BASE_URL)
+            : M(e, l.Config.INTERNAL_STATS_BASE_URL)
             ? l.Config.INTERNAL_STATS_BASE_URL
-            : E(e, l.Config.STORE_CHECKOUT_BASE_URL)
+            : M(e, l.Config.STORE_CHECKOUT_BASE_URL)
             ? l.Config.STORE_CHECKOUT_BASE_URL
-            : E(e, "https://steamloopback.host")
+            : M(e, "https://steamloopback.host")
             ? "https://steamloopback.host"
             : "";
         }
-        function b() {
+        function L() {
           const e = window.location.href;
-          return E(e, l.Config.STORE_BASE_URL) ||
-            E(e, l.Config.STORE_CHECKOUT_BASE_URL)
+          return M(e, l.Config.STORE_BASE_URL) ||
+            M(e, l.Config.STORE_CHECKOUT_BASE_URL)
             ? "store"
-            : E(e, l.Config.COMMUNITY_BASE_URL)
+            : M(e, l.Config.COMMUNITY_BASE_URL)
             ? "community"
-            : E(e, l.Config.PARTNER_BASE_URL)
+            : M(e, l.Config.PARTNER_BASE_URL)
             ? "partnerweb"
-            : E(e, l.Config.HELP_BASE_URL)
+            : M(e, l.Config.HELP_BASE_URL)
             ? "help"
-            : E(e, l.Config.STEAMTV_BASE_URL)
+            : M(e, l.Config.STEAMTV_BASE_URL)
             ? "steamtv"
-            : E(e, l.Config.STATS_BASE_URL) ||
-              E(e, l.Config.INTERNAL_STATS_BASE_URL)
+            : M(e, l.Config.STATS_BASE_URL) ||
+              M(e, l.Config.INTERNAL_STATS_BASE_URL)
             ? "stats"
             : "";
         }
@@ -54338,9 +54342,9 @@ var CLSTAMP = "8136432";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 16 2023 : 17:51:10",
-                    BUILD_TIME_UTC: "Jun 17 2023 : 00:51:10",
-                    BUILD_RTIME_UTC: 1686963070,
+                    BUILD_TIME_LOCAL: "Jun 19 2023 : 16:59:05",
+                    BUILD_TIME_UTC: "Jun 19 2023 : 23:59:05",
+                    BUILD_RTIME_UTC: 1687219145,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54860,7 +54864,7 @@ var CLSTAMP = "8136432";
       {
         27: "b706157360c0d512694c",
         33: "80be52ce827324b50a40",
-        58: "002fe41b9edb0752ee26",
+        58: "8a5ec818d57c4aa9a0bc",
         131: "a20004cabe570df19a56",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -54933,7 +54937,7 @@ var CLSTAMP = "8136432";
         5513: "ec0071187919eb9c037e",
         5547: "4a099cabe4e49f89668c",
         5590: "29a2fd485d240d20731a",
-        5742: "6352cc7325c75fbeabe4",
+        5742: "24d223d719c9387b19f7",
         5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
@@ -54957,7 +54961,7 @@ var CLSTAMP = "8136432";
         7781: "7e2822a033213ca15cd6",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "7ba9b219002b753b838a",
+        7962: "66683a0e2b89113be9fe",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "e820a5f472482fc395d7",
@@ -54967,7 +54971,7 @@ var CLSTAMP = "8136432";
         8282: "ec2edab8f124dbc2ad95",
         8319: "9fb8f9b16b057f4c7abb",
         8433: "da1f94773540857e0a43",
-        8467: "72afcfc4b8ef2d826496",
+        8467: "c4c62ffadb78fa1181b1",
         8490: "a6f9565ec428a556c271",
         8553: "d8e6576615824304daa8",
         8778: "da128522d92a2d424eb7",

@@ -8954,7 +8954,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, he.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1686963070),
+          s = parseInt(1687219145),
           c = s && (0, tr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = i.sSteamBuildDate,
           d = "linux" == g.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -15157,6 +15157,7 @@
               "Attempted to show a URL in the main window browser without a browser manager available!"
             ),
           Z.cS.settings.bSmallMode && SteamClient.Settings.SetSmallMode(!1),
+          s.nm.WindowStore.EnsureMainWindowCreated(!0),
           xs.ShowURL(e, t)
         );
       }
@@ -19655,7 +19656,7 @@
           i = o.useCallback(() => {
             n.SetWindowVisibility(Nl._v.Achievements, Nl.fC.Visible);
           }, [n]);
-        if (r.loading) return null;
+        if (r.loading || r.error) return null;
         const l = a - 604800,
           { achieved: s } = r.data,
           c = Object.keys(s)

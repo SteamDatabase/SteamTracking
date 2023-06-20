@@ -23520,7 +23520,7 @@ html.web_chat_frame body {
   width: auto;
   flex-grow: 1;
 }
-.chat_main.singlewindow .friendlist .title-bar-actions {
+.chat_main.singlewindow .friendlist .title-area:not(.OSX) .title-bar-actions {
   display: none;
 }
 .FriendsListContent {
@@ -25590,6 +25590,15 @@ body.in_global_drag .friendlist_titlebar {
   padding-right: 2px;
   padding-top: 4px;
   transition: all 0.2s ease-in-out;
+}
+.singlewindow .ChatTabs.OSX:not(.friendsListCollapsed) .title-bar-actions {
+  display: none;
+}
+.singlewindow .OSX .chatTabSetContainer.inclient {
+  padding-left: 0px;
+}
+.singlewindow .ChatTabs.OSX.friendsListCollapsed .chatTabOpenFriendsList {
+  margin-left: 101px;
 }
 .TheaterMode .ChatTabs.activeTabHasBroadcast {
   margin-top: -49px;

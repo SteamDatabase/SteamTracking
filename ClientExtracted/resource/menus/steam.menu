@@ -28,7 +28,7 @@
 		text="#steam_menu_view"
 
 		Library							{	text="#steam_menu_library"				shellcmd="steam://open/library/view/home" }
-		Hidden							{	text="#steam_menu_hidden_games"			shellcmd="steam://nav/library/collection/hidden" }
+		Hidden							{	text="#steam_menu_hidden_games"			shellcmd="steam://open/library/collection/hidden" }
 		Soundtracks						{	text="#steam_menu_soundtracks"			shellcmd="steam://open/library/view/soundtracks" }
 		Downloads						{	text="#steam_menu_downloads"			shellcmd="steam://open/downloads" }
 		Divider							{}
