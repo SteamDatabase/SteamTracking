@@ -82,6 +82,8 @@ function HighlightPlayer( args )
 	this.m_rgScreenshotURLs = args.rgScreenshotURLs || new Array();
 	this.m_bVideoOnlyMode = args.bVideoOnlyMode;
 
+	this.m_bPausedForHidden = false;
+
 	// sniff support
 	this.m_bSupportsWebM = BCanPlayWebm();
 	this.m_bSupportsMPEG4 = BCanPlayMPEG4();
@@ -636,13 +638,22 @@ HighlightPlayer.prototype.OnWebPanelHidden = function()
 			$Movie.trigger( 'pause' );
 		else
 			$Movie.trigger( 'callPauseVideo' );
+
+		this.m_bPausedForHidden = true;
 	}
- }
+}
 
 HighlightPlayer.prototype.OnWebPanelShown = function()
 {
 	this.StartCycle();
- }
+	if ( this.m_bPausedForHidden && this.m_activeItem && this.BIsMovie( this.m_activeItem ) )
+	{
+		var id = this.GetMovieId( this.m_activeItem );
+		var $Movie = $JFromIDOrElement( 'movie_' + id );
+		$Movie.trigger( 'play' );
+		this.m_bPausedForHidden = false;
+	}
+}
 
 HighlightPlayer.prototype.mouseOver = function( event )
 {

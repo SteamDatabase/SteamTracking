@@ -3441,6 +3441,7 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   position: relative;
   overflow: hidden;
   padding: 46.7391304348% 0 0 0;
+  min-width: 250px;
 }
 .salepreviewwidgets_MainCapsuleImageContainer_31Zak {
   padding: 57.3051948052% 0 0 0;
@@ -4037,6 +4038,7 @@ html.touch
     height: unset;
     position: unset;
     padding: unset;
+    min-width: unset;
   }
 }
 .salepreviewwidgets_SaleItemBrowserRow_y9MSd

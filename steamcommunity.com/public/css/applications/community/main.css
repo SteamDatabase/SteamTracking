@@ -12,20 +12,18 @@
 .GreenEnvelopeMenu,
 .contextmenu_contextMenu_LQkrb {
   position: absolute;
+  opacity: 1;
   background: radial-gradient(
     ellipse farthest-corner at 50% 0%,
     rgb(60, 64, 71) 0%,
     rgb(60, 64, 71) 50%,
     rgb(51, 54, 61) 100%
   );
-  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
-    inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
-  border: 1px solid #000;
-  padding: 1px;
-  opacity: 1;
   transition: opacity 200ms;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   z-index: 1600;
   user-select: none;
+  padding: 4px;
 }
 .web_chat_frame .contextmenu_contextMenu_LQkrb {
   max-height: calc(100% - 128px);
@@ -4646,4 +4644,8 @@ body.in_global_drag .title-area {
 .DesktopUI .PopupFullWindow .OSX .title-bar-actions {
   padding: 0;
   margin-left: 8px;
+}
+.friendsui-container .title-area .title-bar-actions,
+.DesktopUI .title-area .title-bar-actions {
+  margin-right: 0px;
 }

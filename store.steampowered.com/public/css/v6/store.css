@@ -374,12 +374,6 @@ div.rightcol.large {
 	padding-left: 15px;
 }
 
-
-body.v6 .supernav_content, body.v6 #global_header, body.v6 #global_header .content
-{
-	background: #171a21;
-}
-
 body.v6.sale_page_n_section #global_header
 {
 	position: relative;

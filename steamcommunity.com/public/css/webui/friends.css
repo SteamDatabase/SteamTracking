@@ -1434,20 +1434,18 @@
 .GreenEnvelopeMenu,
 .contextmenu_contextMenu_PP7LM {
   position: absolute;
+  opacity: 1;
   background: radial-gradient(
     ellipse farthest-corner at 50% 0%,
     #3c4047 0%,
     #3c4047 50%,
     #33363d 100%
   );
-  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
-    inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
-  border: 1px solid #000;
-  padding: 1px;
-  opacity: 1;
   transition: opacity 200ms;
+  box-shadow: 0 10px 32px 0px #000000ab;
   z-index: 1600;
   user-select: none;
+  padding: 4px;
 }
 .web_chat_frame .contextmenu_contextMenu_PP7LM {
   max-height: calc(100% - 128px);
@@ -9478,6 +9476,27 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
   font-size: 16px;
+}
+.qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton,
+.qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton:enabled,
+.qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton:disabled {
+  min-width: 10px;
+  padding: 5px 5px 2px 5px;
+  background: none;
+}
+.qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton.gpfocus,
+.qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton:enabled.gpfocus,
+.qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton:disabled.gpfocus {
+  outline: outset #fff 2px;
+}
+.qrlogin_Overlay_464mF
+  .qrlogin_Box_2ltn2
+  button.DialogButton:enabled:active.gpfocus {
+  background-color: #3d4450;
+}
+.qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton:disabled {
+  background-color: none;
+  opacity: 0;
 }
 .qrlogin_Column_2u8B9 {
   display: flex;
@@ -37791,6 +37810,10 @@ body.in_global_drag .title-area {
   padding: 0;
   margin-left: 8px;
 }
+.friendsui-container .title-area .title-bar-actions,
+.DesktopUI .title-area .title-bar-actions {
+  margin-right: 0px;
+}
 @keyframes ItemFocusAnim-darkerGrey-nocolor {
   from {
     background: #3d4450;
@@ -39647,7 +39670,7 @@ html.web_chat_frame body {
   width: auto;
   flex-grow: 1;
 }
-.chat_main.singlewindow .friendlist .title-bar-actions {
+.chat_main.singlewindow .friendlist .title-area:not(.OSX) .title-bar-actions {
   display: none;
 }
 .FriendsListContent {
@@ -41717,6 +41740,15 @@ body.in_global_drag .friendlist_titlebar {
   padding-right: 2px;
   padding-top: 4px;
   transition: all 0.2s ease-in-out;
+}
+.singlewindow .ChatTabs.OSX:not(.friendsListCollapsed) .title-bar-actions {
+  display: none;
+}
+.singlewindow .OSX .chatTabSetContainer.inclient {
+  padding-left: 0px;
+}
+.singlewindow .ChatTabs.OSX.friendsListCollapsed .chatTabOpenFriendsList {
+  margin-left: 101px;
 }
 .TheaterMode .ChatTabs.activeTabHasBroadcast {
   margin-top: -49px;
@@ -46212,9 +46244,8 @@ html.web_chat_frame .perf_timing_area {
 .TheaterMode .titleBarContainer.ChatTabs {
   padding-left: 0;
 }
-.popup_chat_frame {
-  border: 0.5px solid #171d25;
-  border-top: none;
+.Maximized .popup_chat_frame {
+  border: none;
 }
 .popup_chat_frame .title-area {
   position: absolute;

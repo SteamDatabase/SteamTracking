@@ -5517,14 +5517,20 @@
       function s(e) {
         return "app" == e ? 0 : "sub" == e ? 1 : 2;
       }
-      function a(e) {
+      function a(e, t = -1) {
         return (null == e ? void 0 : e.appid)
           ? 0
           : (null == e ? void 0 : e.packageid)
           ? 1
           : (null == e ? void 0 : e.bundleid)
           ? 2
-          : -1;
+          : (null == e ? void 0 : e.creatorid)
+          ? 5
+          : (null == e ? void 0 : e.hubcategoryid)
+          ? 6
+          : (null == e ? void 0 : e.tagid)
+          ? 4
+          : t;
       }
       function n(e) {
         switch (e) {
@@ -5613,6 +5619,12 @@
           ? e.packageid
           : (null == e ? void 0 : e.bundleid)
           ? e.bundleid
+          : (null == e ? void 0 : e.hubcategoryid)
+          ? e.hubcategoryid
+          : (null == e ? void 0 : e.creatorid)
+          ? e.creatorid
+          : (null == e ? void 0 : e.tagid)
+          ? e.tagid
           : 0;
       }
       function g(e) {

@@ -1874,12 +1874,6 @@ body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn
 		flex-grow: 1;
 	}
 
-	html.responsive .tab_item.focus {
-		padding-left: 0;
-		margin-right: 0;
-        padding-right: 0;
-	}
-
 	html.responsive .home_smallcaps,
 	html.responsive .home_headercaps,
 	html.responsive .apps_recommended_by_curators,
@@ -2217,12 +2211,6 @@ html.responsive .store_main_capsule,
 		width: auto;
 		float: none;
 		flex-grow: 1;
-	}
-
-	html.responsive.tablet .tab_item.focus {
-		padding-left: 0;
-		margin-right: 0;
-        padding-right: 0;
 	}
 
 	html.responsive.tablet .home_smallcaps,

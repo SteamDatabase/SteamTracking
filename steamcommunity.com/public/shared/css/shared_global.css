@@ -680,16 +680,16 @@ span.popup_menu_pulldown_indicator {
 	}
 
 .popup_block_new .popup_body {
-	border: 1px solid #171a21;
+	border: 1px solid #3D4450;
 
 	position: relative;
 
-	background-color: #171a21;
+	background-color: #3D4450;
 
 }
 
 body.v6 .popup_block_new .popup_body.popup_menu {
-	padding: 6px 0px;
+	padding: 0px 0px;
 }
 
 .popup_menu a.popup_menu_item {
@@ -736,8 +736,9 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 }
 
 .popup_menu .popup_menu_item:hover, .popup_menu .popup_menu_item.focus {
-	color: #ffffff;
+	color: #171d25;
 	text-decoration: none;
+	background: #dcdedf;
 }
 
 
@@ -1283,7 +1284,7 @@ div.page_content {
 
 
 div#global_header {
-	background: #171a21;
+	background: #171d25;
 	background-position: center top;
 	min-width: 940px;
 
@@ -1300,7 +1301,7 @@ div#global_header {
 }
 
 div#global_header .content {
-	background: #171a21;
+	background: #171d25;
 	position: relative;
 	width: 940px;
 	height: 104px;
@@ -1380,8 +1381,12 @@ div#global_header .menuitem {
 
 	float: left;
 	font-size: 14px;
-	color: #b8b6b4;
+	color: #dcdedf;
 	text-transform: uppercase;
+	font-size: 16px;
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 div#global_header .menuitem.active, div#global_header .menuitem:hover {
@@ -1408,10 +1413,14 @@ div#global_header .activebg {
 	line-height: normal;
 }
 
-#language_pulldown, #account_pulldown {
+#account_pulldown {
 	display: inline-block;
 	padding-left: 4px;
 	line-height: 25px;
+}
+
+#account_language_pulldown {
+	display: block;
 }
 
 #language_pulldown.focus, #account_pulldown.focus {
@@ -1432,10 +1441,24 @@ div#global_header .activebg {
 
 .header_installsteam_btn_green .header_installsteam_btn_leftcap, .header_installsteam_btn_green .header_installsteam_btn_rightcap, .header_installsteam_btn_green .header_installsteam_btn_content {
 	background-color: #5c7e10;
+
+	&:hover {
+		background-color: #6c9018;
+		transition-property: background;
+		transition-duration: 250ms;
+		cursor: pointer;
+	}
 }
 
 .header_installsteam_btn_gray .header_installsteam_btn_leftcap, .header_installsteam_btn_gray .header_installsteam_btn_rightcap, .header_installsteam_btn_gray .header_installsteam_btn_content {
-	background-color: #616a72;
+	background-color: rgba(103, 112, 123, 0.2);
+
+	&:hover {
+		background-color: #3D4450;
+		transition-property: background;
+		transition-duration: 250ms;
+		cursor: pointer;
+	}
 }
 
 .header_installsteam_btn_content {
@@ -1461,12 +1484,12 @@ div#global_header .activebg {
 	line-height: 24px;
 	margin: 0 3px 0 8px;
 	cursor: pointer;
-	background-color: #262625;
+	/* background-color: #262625; */
 }
 
 .global_header_toggle_button:hover,
 .global_header_toggle_button.focus {
-	background-color: #575451;
+	/* background-color: #575451; */
 }
 
 /* make sure we override any global a styles on the site */
@@ -1532,26 +1555,28 @@ div#global_header .menuitem_new
 div#global_header .submenuitem
 {
 	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 11px;
-	color: #b8b6b4;
-	padding-right: 10px;
+	text-transform: none; 
+	font-size: 12px;
+	color: #dcdedf;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 div#global_header .submenuitem.active, div#global_header .submenuitem:hover
 {
 	text-decoration: none;
-	color: #ffffff;
+	background: #dcdedf;
+	color: #171a21;
 }
 
 div#global_header .submenuitem.moderator
 {
-	color: #b80000;
+	color: #ca5029;
 }
 
 div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.moderator:hover
 {
-	color: #ff0000;
+	color: #ca5029;
 }
 
 .community_sub_nav
@@ -1577,8 +1602,8 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 
 .supernav_content {
 	max-width: 132px;
-	background: #000 url(https://community.cloudflare.steamstatic.com/public/shared/images/dd_web.jpg) top left no-repeat;
-	padding: 5px 15px 10px 15px;
+	background: #3D4450;
+	/* padding: 5px 0px 10px 0px; */
 	box-shadow: 3px 3px 5px -3px #000;
 	text-align: left;
 	z-index: 500;
@@ -1594,6 +1619,41 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 .supernav_content a.submenuitem:hover {
 	color: #4897cf;
 	text-decoration: none;
+}
+
+.supernav {
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2.5px;
+		margin-top: 2px;
+		}
+}
+
+div#global_header .menuitem.supernav_active {
+	color: #1a9fff;
+
+	&::after {
+	content: "";
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background: #1a9fff;
+    border-radius: 3px;
+    animation: slide 0.1s;
+	margin-top: 2px;
+	}
+}
+
+@keyframes slide {
+	from {
+		transform: scaleX(0);
+	}
+
+	to {
+		transform: scaleX(1);
+	}
 }
 
 /* -------------- paging controls -------------*/
@@ -1673,11 +1733,12 @@ a.pagelink:hover {
 
 .header_notification_btn.header_notification_bell {
 	display: block;
-	background-color: #171a21;
 	width: 46px;
 	height: 24px;
 	padding: 0px;
 	margin: 0px;
+	background-position: center;
+	background-size: 14px;
 }
 
 .notification_ctn.hide_when_empty:not(.active_inbox_item) {

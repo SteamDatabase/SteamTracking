@@ -127,6 +127,25 @@
             ]
         },
         {
+            "name": "GetPartnerAppListForWebAPIKey",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "type_filter",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Filter app results by type. Can be comman separated, eg: games,dlc"
+                }
+            ]
+        },
+        {
             "name": "GetPlayersBanned",
             "version": 1,
             "httpmethod": "GET",

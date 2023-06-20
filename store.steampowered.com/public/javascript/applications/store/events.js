@@ -5856,7 +5856,7 @@
             const t = (0, s.ks)(this.props.location, "clientpatchnotes");
             if (!!t && "0" !== t && "false" !== t) {
               (0, s.i9)(this.props.history, "clientpatchnotes", null);
-              const [e, n] = "beta" === t ? [null, I.KC] : [I.dn, null],
+              const [e, n] = "beta" === t ? [null, I.Ct] : [I.dn, null],
                 a = { require_tags: ["patchnotes"] },
                 r = yield Ue.j1.LoadAdjacentPartnerEvents(
                   null,
@@ -7003,7 +7003,7 @@
       function sa(e) {
         if ("steam" === e) {
           if ("beta" !== new URLSearchParams().get("branch"))
-            return { rgHiddenClans: [I.KC] };
+            return { rgHiddenClans: [I.Ct] };
         }
       }
       const ia = (e) => {

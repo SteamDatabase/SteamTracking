@@ -858,6 +858,7 @@ ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneop
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/promotion${}
+${PARTNER_BASE_URL}/promotion/${}
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
@@ -1001,6 +1002,7 @@ ${PARTNER_BASE_URL}promotion/planning/ajaxgetsalerankdashboard
 ${PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxuserwithreceivecommunications
 ${PARTNER_BASE_URL}promotion/planning/dashboard
+${PARTNER_BASE_URL}promotion/planning/edit/${id}
 ${PARTNER_BASE_URL}promotion/planning/salesrank
 ${PARTNER_BASE_URL}promotion/planning/themes
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxcreatenewspotlight
@@ -2237,6 +2239,7 @@ https://img.youtube.com/vi/${}/0.jpg
 https://imgur.com
 https://instagram.com/dota2
 https://itunes.apple.com/app/steam-chat/id1434890245
+https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
 https://medal.tv/clip/${}/?autoplay=0&donate=0${_ ? _ : ""}
 https://partner.steamgames.com//apps/landing/${appid}
 https://partner.steamgames.com/actions/setlanguage/
@@ -2601,8 +2604,8 @@ https://steamcommunity.com/sharedfiles/finalizecontributors
 https://steamcommunity.com/sharedfiles/followitem
 https://steamcommunity.com/sharedfiles/friendswhofavoritedfile?id=${id}&appid=${}
 https://steamcommunity.com/sharedfiles/getreports/?id=${id}&appid=${appid}
-https://steamcommunity.com/sharedfiles/ignoretextcontentcheckresults
 https://steamcommunity.com/sharedfiles/itemsetvisibility
+https://steamcommunity.com/sharedfiles/markassuspicious/
 https://steamcommunity.com/sharedfiles/removecontributor
 https://steamcommunity.com/sharedfiles/removepreview
 https://steamcommunity.com/sharedfiles/removetaggeduser
@@ -2666,6 +2669,7 @@ https://steamcommunity.com/tradingcards/ajaxcreatebooster/
 https://steamcommunity.com/tradingcards/gooexchangedialog?l=english
 https://steamcommunity.com/userreviews/ajaxgetvotes/
 https://steamcommunity.com/userreviews/clearcontentcheckresults/${id}
+https://steamcommunity.com/userreviews/markassuspicious/${id}
 https://steamcommunity.com/workshop/ajaxfindworkshops/?searchText=${}
 https://steamcommunity.com/workshop/ajaxmanagesuggestedserviceproviders
 https://steamdeck.komodo.jp

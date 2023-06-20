@@ -40,6 +40,7 @@ body.v6.rewards .ModalPosition_Content {
   min-height: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -52,11 +53,22 @@ body.v6.rewards .ModalPosition_Content {
   height: 51px;
   user-select: none;
 }
+.bundle_ShellHeader_kOC36 .bundle_ShellHeaderFlex_3Bs_x {
+  max-width: 988px;
+  margin: 0 auto;
+}
 .bundle_ShellHeader_kOC36 .bundle_ShellHeaderBrandLink_O1wfr {
   display: flex;
   align-items: center;
   flex-direction: row;
   min-width: 200px;
+  position: relative;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_ShellHeaderBrandLink_O1wfr
+  .bundle_Sparkles_1HQdP {
+  width: 40px;
+  position: absolute;
 }
 .bundle_ShellHeader_kOC36 .bundle_PointsContainer_3fuIW {
   margin-right: 25px;
@@ -236,9 +248,13 @@ body.v6.rewards .ModalPosition_Content {
   letter-spacing: 0.1em;
 }
 .bundle_ShellHeaderBrandName_2fDre {
-  font-size: 1.6em;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #78a9e2;
+  color: #d9d9d9;
+  padding-left: 20px;
 }
 .bundle_Shell_2Zfec {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -247,9 +263,6 @@ body.v6.rewards .ModalPosition_Content {
 }
 .bundle_Shell_2Zfec a {
   color: #c5cbd8;
-}
-.bundle_Shell_2Zfec a:hover {
-  color: inherit;
 }
 .bundle_Shell_2Zfec .bundle_ShellScrollParent_1Qkju {
   align-items: stretch;

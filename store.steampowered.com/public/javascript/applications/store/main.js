@@ -447,7 +447,7 @@
     },
     24141: (e, t, n) => {
       "use strict";
-      n.d(t, { C2: () => F, N1: () => O, YW: () => A });
+      n.d(t, { C2: () => G, N1: () => V, YW: () => P });
       var r = n(33940),
         i = n(52868),
         o = n.n(i),
@@ -508,35 +508,79 @@
         return n || "";
       }
       function w(e, t, n) {
-        return (e = (e = e.replace("$RepresentationID$", t)).replace(
+        let r = {
+          nTimeScale: D(e, "timescale"),
+          nDuration: D(e, "duration"),
+          nStartNumber: D(e, "startNumber"),
+          strMedia: b(e, "media"),
+          strInitialization: "",
+        };
+        return (
+          t.bContainsGame
+            ? (r.strInitialization = r.strMedia)
+            : (r.strInitialization = b(e, "initialization")),
+          r.nTimeScale &&
+          r.nDuration &&
+          r.nStartNumber &&
+          r.strMedia &&
+          r.strInitialization
+            ? ((r.strMedia = M(r.strMedia, n)),
+              (r.strInitialization = M(r.strInitialization, n)),
+              r)
+            : null
+        );
+      }
+      function y(e, t, n) {
+        return (e = (e = (e = e.replace("$RepresentationID$", t)).replace(
           "$Number$",
           n.toString()
+        )).replace(
+          /\$Number%(\d+)d\$/g,
+          (e, t) => (
+            (t = Number.parseInt(t)),
+            (Array(t).join("0") + n.toString()).slice(-t)
+          )
         ));
       }
-      function y(e) {
+      function I(e) {
+        return e.startsWith("http://") || e.startsWith("https://");
+      }
+      function R(e, t) {
+        let n = e;
+        n.endsWith("/") || (n += "/");
+        let r = t.startsWith("/") ? 1 : 0;
+        return n + t.substring(r);
+      }
+      function M(e, t) {
+        return I(e) || !I(t) ? e : R(t, e);
+      }
+      function T(e) {
         return (
           0 == e.rgRoles.length || e.rgRoles.findIndex((e) => "main" == e) >= 0
         );
       }
-      function I(e) {
-        return e
-          ? 1e3 == e.segmentTemplate.nTimeScale
-            ? e.segmentTemplate.nDuration
-            : (e.segmentTemplate.nDuration / e.segmentTemplate.nTimeScale) * 1e3
-          : 0;
+      function L(e) {
+        if (!e) return 0;
+        let t = e.segmentTemplate;
+        return 1e3 == t.nTimeScale
+          ? t.nDuration
+          : (t.nDuration / t.nTimeScale) * 1e3;
       }
-      function R(e, t) {
-        let n = I(e);
-        return Math.floor(t / n) + 1;
+      function A(e, t) {
+        let n = L(e);
+        return Math.floor(t / n) + e.segmentTemplate.nStartNumber;
       }
-      class M {
+      function B(e) {
+        return y(e.segmentTemplate.strInitialization, e.strID, 0);
+      }
+      class k {
         constructor() {
           (this.m_nMinBufferTime = 0),
             (this.m_dtAvailabilityStartTime = null),
             (this.m_dtPublishTime = null),
             (this.m_nMinimumUpdatePeriod = 0),
             (this.m_nTimeShiftBufferDepth = 0),
-            (this.m_dtMediaPresentationDuration = null),
+            (this.m_nMediaPresentationDuration = 0),
             (this.m_strBaseURL = ""),
             (this.m_strStatsLink = ""),
             (this.m_strStalledLink = ""),
@@ -592,9 +636,13 @@
             : 0;
         }
         GetEndTime() {
-          return !this.IsLiveContent() && this.m_rgPeriods.length > 0
-            ? this.GetStartTime() + this.m_rgPeriods[0].nDuration
-            : Number.MAX_VALUE;
+          if (!this.IsLiveContent()) {
+            if (this.m_rgPeriods.length > 0 && this.m_rgPeriods[0].nDuration)
+              return this.GetStartTime() + this.m_rgPeriods[0].nDuration;
+            if (this.m_nMediaPresentationDuration > 0)
+              return this.m_nMediaPresentationDuration;
+          }
+          return Number.MAX_VALUE;
         }
         GetLowestRepresentation(e) {
           let t = this.GetAdaptationByTrackID(e);
@@ -619,54 +667,64 @@
         GetDurationSinceStarted() {
           return performance.now() - this.m_tsLiveContentStart;
         }
-        ParseRepresentation(e, t) {
-          const n = t;
-          let r = {
-            strID: b(e, "id"),
-            strMimeType: b(e, "mimeType"),
-            strCodecs: b(e, "codecs"),
-            nBandwidth: D(e, "bandwidth"),
-          };
-          if (n.bContainsVideo) {
+        ParseRepresentation(e, t, n, r) {
+          const i = t;
+          let o = {
+              strID: b(e, "id"),
+              strMimeType: b(e, "mimeType"),
+              strCodecs: b(e, "codecs"),
+              nBandwidth: D(e, "bandwidth"),
+              segmentTemplate: null,
+            },
+            a = v(e, "SegmentTemplate");
+          if (a) {
+            let e = w(a, t, r);
+            e && (o.segmentTemplate = e);
+          } else o.segmentTemplate = Object.assign({}, n);
+          if (!o.segmentTemplate)
+            return (
+              (0, _.yv)("MPD - No segment template for representation"), null
+            );
+          if (i.bContainsVideo) {
             if (
-              ((r.nWidth = D(e, "width")),
-              (r.nHeight = D(e, "height")),
-              (r.nFrameRate = D(e, "frameRate")),
-              !(r.strID && r.strMimeType && r.strCodecs && r.nBandwidth))
+              ((o.nWidth = D(e, "width")),
+              (o.nHeight = D(e, "height")),
+              (o.nFrameRate = D(e, "frameRate")),
+              !(o.strID && o.strMimeType && o.strCodecs && o.nBandwidth))
             )
               return (0, _.yv)("MPD - Representation Video Data Missing"), null;
-          } else if (n.bContainsAudio) {
-            r.nAudioSamplingRate = D(e, "audioSamplingRate");
+          } else if (i.bContainsAudio) {
+            o.nAudioSamplingRate = D(e, "audioSamplingRate");
             let t = v(e, "AudioChannelConfiguration");
             if (
-              (t && (r.nAudioChannels = D(t, "value")),
-              r.nAudioChannels || (r.nAudioChannels = 2),
+              (t && (o.nAudioChannels = D(t, "value")),
+              o.nAudioChannels || (o.nAudioChannels = 2),
               !(
-                r.strID &&
-                r.strMimeType &&
-                r.strCodecs &&
-                r.nAudioSamplingRate &&
-                r.nAudioChannels
+                o.strID &&
+                o.strMimeType &&
+                o.strCodecs &&
+                o.nAudioSamplingRate &&
+                o.nAudioChannels
               ))
             )
               return (0, _.yv)("MPD - Representation Audio Data Missing"), null;
           }
-          return r;
+          return o;
         }
-        BParse(e) {
-          let t = new DOMParser().parseFromString(e, "application/xml"),
-            n = f(t);
-          if (!n) return !1;
-          let r = n.getAttribute("type");
+        BParse(e, t) {
+          let n = new DOMParser().parseFromString(e, "application/xml"),
+            r = f(n);
+          if (!r) return !1;
+          let i = r.getAttribute("type");
           if (
-            ((this.m_nMinBufferTime = S(n, "minBufferTime")), "dynamic" == r)
+            ((this.m_nMinBufferTime = S(r, "minBufferTime")), "dynamic" == i)
           ) {
             if (
               ((this.m_strType = "dynamic"),
-              (this.m_dtAvailabilityStartTime = C(n, "availabilityStartTime")),
-              (this.m_dtPublishTime = C(n, "publishTime")),
-              (this.m_nMinimumUpdatePeriod = S(n, "minimumUpdatePeriod")),
-              (this.m_nTimeShiftBufferDepth = S(n, "timeShiftBufferDepth")),
+              (this.m_dtAvailabilityStartTime = C(r, "availabilityStartTime")),
+              (this.m_dtPublishTime = C(r, "publishTime")),
+              (this.m_nMinimumUpdatePeriod = S(r, "minimumUpdatePeriod")),
+              (this.m_nTimeShiftBufferDepth = S(r, "timeShiftBufferDepth")),
               !(
                 this.m_dtAvailabilityStartTime &&
                 this.m_dtPublishTime &&
@@ -677,42 +735,53 @@
             )
               return !1;
           } else {
-            if ("static" != r) return (0, _.yv)("MPD - Unknown type"), !1;
+            if ("static" != i) return (0, _.yv)("MPD - Unknown type"), !1;
             if (
               ((this.m_strType = "static"),
-              (this.m_dtMediaPresentationDuration = C(
-                n,
+              (this.m_nMediaPresentationDuration = S(
+                r,
                 "mediaPresentationDuration"
               )),
-              !this.m_nMinBufferTime || !this.m_dtMediaPresentationDuration)
+              !this.m_nMinBufferTime || !this.m_nMediaPresentationDuration)
             )
               return (
                 (0, _.yv)("MPD - Missing Buffer Time or Presentation Duration"),
                 !1
               );
           }
-          let i = v(n, "BASEURL");
-          i && (this.m_strBaseURL = i.textContent);
-          let o = v(n, "Analytics");
-          o &&
-            ((this.m_strStatsLink = b(o, "statslink")),
-            (this.m_strStalledLink = b(o, "stalledlink")),
-            (this.m_strEventLogLink = b(o, "eventlink")));
-          let a = t.getElementsByTagName("Period");
-          if (0 == a.length) return !1;
-          let s = a[0],
-            l = {
-              strID: b(s, "id"),
-              nStart: S(s, "start"),
-              nDuration: S(s, "duration"),
+          let o = v(r, "BaseURL");
+          this.m_strBaseURL = o
+            ? o.textContent
+            : (function (e) {
+                if (!I(e)) return "";
+                let t = new URL(e),
+                  n = t.pathname;
+                return (
+                  (n.indexOf(".mpd") >= 0 || n.endsWith("/")) &&
+                    (n = n.substring(0, n.lastIndexOf("/"))),
+                  R(t.origin, n) + "/"
+                );
+              })(t);
+          let a = v(r, "Analytics");
+          a &&
+            ((this.m_strStatsLink = b(a, "statslink")),
+            (this.m_strStalledLink = b(a, "stalledlink")),
+            (this.m_strEventLogLink = b(a, "eventlink")));
+          let s = n.getElementsByTagName("Period");
+          if (0 == s.length) return !1;
+          let l = s[0],
+            c = {
+              strID: b(l, "id"),
+              nStart: S(l, "start"),
+              nDuration: S(l, "duration"),
               rgAdaptationSets: [],
             };
-          if (!l.strID || null === l.nStart)
+          if (!c.strID || null === c.nStart)
             return (0, _.yv)("MPD - Missing Period Information."), !1;
-          (this.m_rgPeriods = []), this.m_rgPeriods.push(l);
-          let c = s.getElementsByTagName("AdaptationSet");
-          for (let e = 0; e < c.length; e++) {
-            let t = c[e],
+          (this.m_rgPeriods = []), this.m_rgPeriods.push(c);
+          let d = l.getElementsByTagName("AdaptationSet");
+          for (let e = 0; e < d.length; e++) {
+            let t = d[e],
               n = b(t, "description"),
               r = b(t, "lang"),
               i = {
@@ -728,9 +797,8 @@
                 rgRoles: [],
                 rgRepresentations: [],
                 thumbnails: null,
-                segmentTemplate: null,
               };
-            if ((l.rgAdaptationSets.push(i), i.bIsTimedText)) {
+            if ((c.rgAdaptationSets.push(i), i.bIsTimedText)) {
               i.rgRoles.push("subtitle");
               let e = t.getElementsByTagName("Role");
               for (let t = 0; t < e.length; t++) {
@@ -753,7 +821,7 @@
                   );
                   continue;
                 }
-                r.strClosedCaptionFile = this.m_strBaseURL + w(a, r.strID, 0);
+                r.strClosedCaptionFile = this.m_strBaseURL + y(a, r.strID, 0);
                 ("store" != (0, p.Zv)() && "dev" != p.De.WEB_UNIVERSE) ||
                   (r.strClosedCaptionFile =
                     p.De.STORE_BASE_URL +
@@ -764,13 +832,23 @@
               continue;
             }
             if (!i.bSegmentAlignment)
-              return (0, _.yv)("MPD - Segment Alignment Missing"), !1;
+              return (
+                (0, _.yv)(
+                  "MPD - Only segment aligned dash manifests is supported"
+                ),
+                !1
+              );
             let o = t.getElementsByTagName("ContentComponent");
             for (let e = 0; e < o.length; e++) {
               let t = b(o[e], "contentType");
               "video" == t && (i.bContainsVideo = !0),
                 "audio" == t && (i.bContainsAudio = !0),
                 "game" == t && (i.bContainsGame = !0);
+            }
+            if (0 == o.length) {
+              let e = b(t, "contentType");
+              "video" == e && (i.bContainsVideo = !0),
+                "audio" == e && (i.bContainsAudio = !0);
             }
             if (i.bContainsVideo) {
               let e = v(t, "Thumbnails");
@@ -790,35 +868,21 @@
               let t = b(a[e], "value");
               t && i.rgRoles.push(t);
             }
-            let s = t.getElementsByTagName("SegmentTemplate");
-            if (0 == s.length)
-              return (0, _.yv)("MPD - Segment Template Missing"), !1;
-            let d = s[0];
-            i.segmentTemplate = {
-              nTimeScale: D(d, "timescale"),
-              nDuration: D(d, "duration"),
-              nStartNumber: D(d, "startNumber"),
-              strMedia: b(d, "media"),
-              strInitialization: "",
-            };
-            let u = i.segmentTemplate;
-            if (
-              (i.bContainsGame
-                ? (u.strInitialization = u.strMedia)
-                : (u.strInitialization = b(d, "initialization")),
-              !(
-                u.nTimeScale &&
-                u.nDuration &&
-                u.nStartNumber &&
-                u.strMedia &&
-                u.strInitialization
-              ))
-            )
-              return (0, _.yv)("MPD - Segment Template Data Missing"), !1;
-            let m = t.getElementsByTagName("Representation");
-            for (let e = 0; e < m.length; e++) {
-              let t = m[e],
-                n = this.ParseRepresentation(t, i);
+            let s = null,
+              l = v(t, "SegmentTemplate");
+            if (l) {
+              let e = w(l, i, this.m_strBaseURL);
+              if (!e)
+                return (
+                  (0, _.yv)("MPD - Failed to parse found Adaptation template"),
+                  !1
+                );
+              s = e;
+            }
+            let u = t.getElementsByTagName("Representation");
+            for (let e = 0; e < u.length; e++) {
+              let t = u[e],
+                n = this.ParseRepresentation(t, i, s, this.m_strBaseURL);
               if (!n) return !1;
               i.rgRepresentations.push(n);
             }
@@ -838,23 +902,38 @@
                 r = b(t, "id"),
                 i = this.GetAdaptationByTrackID(r);
               if (i) {
-                const e = t.getElementsByTagName("SegmentTemplate");
-                if (0 == e.length)
-                  return (0, _.yv)("MPD - Segment Template Missing"), !1;
-                const n = e[0];
-                i.segmentTemplate.strMedia = b(n, "media");
+                let e = null,
+                  n = v(t, "SegmentTemplate");
+                if (n) {
+                  let t = w(n, i, this.m_strBaseURL);
+                  if (!t)
+                    return (
+                      (0, _.yv)(
+                        "MPD - Failed to parse found Adaptation template"
+                      ),
+                      !1
+                    );
+                  e = t;
+                }
                 let r = t.getElementsByTagName("Representation");
                 if (r.length > 1)
-                  for (let e = 0; e < r.length; e++) {
-                    let t = r[e],
-                      n = this.ParseRepresentation(t, i),
-                      o = !0;
+                  for (let t = 0; t < r.length; t++) {
+                    let n = r[t],
+                      o = this.ParseRepresentation(n, i, e, this.m_strBaseURL);
+                    if (!o)
+                      return (
+                        (0, _.yv)("MPD - Failed to parse representation"), !1
+                      );
+                    let a = null;
                     for (let e of i.rgRepresentations)
-                      if (n.strID == e.strID) {
-                        o = !1;
+                      if (o.strID == e.strID) {
+                        a = e;
                         break;
                       }
-                    o && i.rgRepresentations.push(n);
+                    a
+                      ? (a.segmentTemplate.strMedia =
+                          o.segmentTemplate.strMedia)
+                      : i.rgRepresentations.push(o);
                   }
                 break;
               }
@@ -870,13 +949,13 @@
           );
         }
       }
-      var T;
+      var O;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Append = 1)] = "Append"),
           (e[(e.Remove = 2)] = "Remove");
-      })(T || (T = {}));
-      class L {
+      })(O || (O = {}));
+      class F {
         constructor(e, t, n, r) {
           (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -885,7 +964,7 @@
             (this.m_sourceBuffer = null),
             (this.m_nTrackBufferMS = 0),
             (this.m_representation = null),
-            (this.m_eBufferUpdate = T.None),
+            (this.m_eBufferUpdate = O.None),
             (this.m_rgBufferedSegments = []),
             (this.m_bNeedInitSegment = !0),
             (this.m_nNextSegment = 0),
@@ -937,6 +1016,12 @@
         GetBandwidthRequired() {
           return this.m_representation.nBandwidth;
         }
+        GetCurrentSegmentDurationMS() {
+          return L(this.m_representation);
+        }
+        GetCurrentSegmentInitializationURL() {
+          return B(this.m_representation);
+        }
         BIsCurrentRepresentation(e) {
           return e && e.strID == this.m_representation.strID;
         }
@@ -963,7 +1048,7 @@
           if (this.m_mpd.IsLiveContent()) return Number.MAX_VALUE;
           {
             let e = this.m_mpd.GetEndTime();
-            return R(this.m_adaptation, 1e3 * e) - 1;
+            return A(this.m_representation, 1e3 * e) - 1;
           }
         }
         GetAmountBufferedInPlayerMS(e) {
@@ -1023,7 +1108,7 @@
           this.m_listeners.Unregister(),
             (this.m_sourceBuffer = null),
             this.ForceStopDownloads(),
-            (this.m_eBufferUpdate = T.None),
+            (this.m_eBufferUpdate = O.None),
             (this.m_bRemoveBufferState = !1),
             (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -1054,10 +1139,10 @@
             `${this.GetDebugName()} OnSourceBufferUpdateEnd: [playback=${t}][buffered=${n}][start=${this.GetBufferedStart()}][end=${this.GetBufferedEnd()}]`
           );
           let r = this.m_eBufferUpdate;
-          (this.m_eBufferUpdate = T.None),
-            r == T.Append && this.m_callbacks.OnSegmentDownloaded(this),
+          (this.m_eBufferUpdate = O.None),
+            r == O.Append && this.m_callbacks.OnSegmentDownloaded(this),
             this.m_bSeekInProgress &&
-              r == T.Remove &&
+              r == O.Remove &&
               !this.m_bRemoveBufferState &&
               this.ContinueSeek(),
             this.UpdateBuffer();
@@ -1086,12 +1171,12 @@
             t = this.m_callbacks.GetPlaybackRate(),
             n = (function (e, t, n) {
               if (!e.IsLiveContent()) return 0;
-              let r = I(t);
+              let r = L(t);
               return (
                 (n - t.segmentTemplate.nStartNumber) * r -
                 e.GetDurationSinceStarted()
               );
-            })(this.m_mpd, this.m_adaptation, this.m_nNextSegment);
+            })(this.m_mpd, this.m_representation, this.m_nNextSegment);
           if (n > 0)
             return (
               (0, _.yv)(
@@ -1107,7 +1192,7 @@
               ),
               void this.DownloadNextSegment()
             );
-          let i = 1.1 * I(this.m_adaptation),
+          let i = 1.1 * L(this.m_representation),
             o = this.GetAmountBufferedInPlayerMS(
               this.m_callbacks.GetCurrentPlayTime()
             );
@@ -1122,10 +1207,7 @@
             t = 0;
           if (this.m_bNeedInitSegment)
             (this.m_bNeedInitSegment = !1),
-              (n = this.m_mpd.GetBaseURL()),
-              (r = this.m_adaptation),
-              (i = this.m_representation),
-              (e = w(n + r.segmentTemplate.strInitialization, i.strID, 0)),
+              (e = B(this.m_representation)),
               (t = 0);
           else {
             if (this.m_nNextSegment < 0)
@@ -1133,18 +1215,13 @@
                 "Attempting to download negative segment:",
                 this.m_nNextSegment
               );
-            (e = (function (e, t, n, r) {
-              return w(e + t.segmentTemplate.strMedia, n.strID, r);
-            })(
-              this.m_mpd.GetBaseURL(),
-              this.m_adaptation,
-              this.m_representation,
-              this.m_nNextSegment
-            )),
-              (t = I(this.m_adaptation)),
+            (n = this.m_representation),
+              (r = this.m_nNextSegment),
+              (e = y(n.segmentTemplate.strMedia, n.strID, r)),
+              (t = L(this.m_representation)),
               this.m_nNextSegment++;
           }
-          var n, r, i;
+          var n, r;
           this.DownloadSegment(this.m_representation.strID, e, t);
         }
         DownloadSegment(e, t, n, i = performance.now()) {
@@ -1262,18 +1339,18 @@
         }
         TrimGameDataIfNecessary() {}
         UpdateBuffer() {
-          if (this.m_eBufferUpdate != T.None) return;
+          if (this.m_eBufferUpdate != O.None) return;
           if (this.m_bRemoveBufferState) return void this.RemoveAllBuffers();
           if (!this.m_sourceBuffer) return void (0, _.yv)("No source buffer?");
           if (this.m_rgBufferedSegments.length > 0) {
             try {
-              this.m_eBufferUpdate = T.Append;
+              this.m_eBufferUpdate = O.Append;
               let e = this.m_rgBufferedSegments[0];
               this.m_sourceBuffer.appendBuffer(e.data),
                 this.m_rgBufferedSegments.splice(0, 1);
             } catch (e) {
               "QuotaExceededError" === e.name
-                ? ((this.m_eBufferUpdate = T.None),
+                ? ((this.m_eBufferUpdate = O.None),
                   (0, _.yv)(
                     `${this.GetDebugName()} Buffer - QuotaExceededError`
                   ))
@@ -1289,7 +1366,7 @@
               let r = Math.min(this.GetBufferedEnd(), n);
               return void (
                 r != t &&
-                ((this.m_eBufferUpdate = T.Remove),
+                ((this.m_eBufferUpdate = O.Remove),
                 this.m_sourceBuffer.remove(t, r),
                 (this.m_tsLastBufferRemove = e))
               );
@@ -1304,7 +1381,7 @@
             for (let n = 0; n < t.length; n++) e < t.end(n) && (e = t.end(n));
           }
           (this.m_bRemoveBufferState = !1),
-            (this.m_eBufferUpdate = T.Remove),
+            (this.m_eBufferUpdate = O.Remove),
             0 != e
               ? this.m_sourceBuffer.remove(0, e + 1)
               : this.OnSourceBufferUpdateEnd(null);
@@ -1346,7 +1423,7 @@
           )
             return void this.ScheduleNextDownload();
           (this.m_bSeekInProgress = !0), this.ForceStopDownloads();
-          let i = R(this.m_adaptation, 1e3 * e);
+          let i = A(this.m_representation, 1e3 * e);
           if (
             ((this.m_nNextSegment = Math.min(i, this.GetMaxSegment())),
             (0, _.yv)(
@@ -1354,7 +1431,9 @@
                 this.m_nNextSegment +
                 " at approx. " +
                 (0, _.zB)(
-                  ((this.m_nNextSegment - 1) * I(this.m_adaptation)) / 1e3
+                  ((this.m_nNextSegment - 1) *
+                    this.GetCurrentSegmentDurationMS()) /
+                    1e3
                 ) +
                 " seconds."
             ),
@@ -1369,7 +1448,7 @@
         }
         ContinueSeek() {
           this.m_bSeekInProgress &&
-            (this.m_eBufferUpdate == T.Remove ||
+            (this.m_eBufferUpdate == O.Remove ||
               this.m_bRemoveBufferState ||
               ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
         }
@@ -1411,28 +1490,28 @@
             : 0;
         }
       }
-      (0, r.gn)([m.a], L.prototype, "OnSourceBufferUpdateEnd", null),
-        (0, r.gn)([m.a], L.prototype, "OnSourceBufferError", null),
-        (0, r.gn)([m.a], L.prototype, "OnSourceBufferAbort", null),
-        (0, r.gn)([m.a], L.prototype, "ScheduleNextDownload", null),
-        (0, r.gn)([m.a], L.prototype, "DownloadNextSegment", null),
-        (0, r.gn)([m.a], L.prototype, "DownloadFailed", null),
-        (0, r.gn)([m.a], L.prototype, "DownloadGone", null);
-      const A = 5,
-        B = "auto";
-      var k, O;
+      (0, r.gn)([m.a], F.prototype, "OnSourceBufferUpdateEnd", null),
+        (0, r.gn)([m.a], F.prototype, "OnSourceBufferError", null),
+        (0, r.gn)([m.a], F.prototype, "OnSourceBufferAbort", null),
+        (0, r.gn)([m.a], F.prototype, "ScheduleNextDownload", null),
+        (0, r.gn)([m.a], F.prototype, "DownloadNextSegment", null),
+        (0, r.gn)([m.a], F.prototype, "DownloadFailed", null),
+        (0, r.gn)([m.a], F.prototype, "DownloadGone", null);
+      const P = 5,
+        x = "auto";
+      var N, V;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
           (e[(e.HAVE_METADATA = 1)] = "HAVE_METADATA"),
           (e[(e.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
           (e[(e.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
           (e[(e.HAVE_ENOUGH_DATA = 4)] = "HAVE_ENOUGH_DATA");
-      })(k || (k = {})),
+      })(N || (N = {})),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.StreamGone = 1)] = "StreamGone");
-        })(O || (O = {}));
-      class F {
+        })(V || (V = {}));
+      class G {
         constructor(e, t = !1) {
           (this.m_elVideo = null),
             (this.m_strMPD = ""),
@@ -1484,7 +1563,7 @@
               (this.m_strCDNAuthURLParameters = t);
             let r = yield this.DownloadMPD();
             if (r)
-              if (((this.m_mpd = new M()), this.m_mpd.BParse(r.data))) {
+              if (((this.m_mpd = new k()), this.m_mpd.BParse(r.data, e))) {
                 if (
                   (this.IsLiveContent() &&
                     (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
@@ -1506,20 +1585,7 @@
                     )
                   );
                 this.BCreateLoaders()
-                  ? (this.m_stats.SetSegmentDurationMS(
-                      I(this.GetCurrentVideoAdaptation())
-                    ),
-                    this.m_stats.SetAnalyticLinks(
-                      this.m_mpd.GetStatsLink(),
-                      this.m_mpd.GetStalledLink(),
-                      this.m_mpd.GetEventLink()
-                    ),
-                    this.m_stats.SetVideoInitializationURL(
-                      this.GetCurrentVideoAdaptation().segmentTemplate
-                        .strInitialization
-                    ),
-                    this.InitVideoControl(),
-                    this.InitTimedText())
+                  ? (this.InitVideoControl(), this.InitTimedText())
                   : this.CloseWithError(
                       "playbackerror",
                       "Failed to create segment loaders"
@@ -1716,18 +1782,18 @@
             if (
               (!this.m_strVideoAdaptationID &&
                 e.bContainsVideo &&
-                y(e) &&
+                T(e) &&
                 ((t = e), (this.m_strVideoAdaptationID = e.strID)),
               !this.m_strAudioAdaptationID &&
                 e.bContainsAudio &&
-                y(e) &&
+                T(e) &&
                 ((t = e), (this.m_strAudioAdaptationID = e.strID)),
               !this.m_strGameAdaptationID &&
                 e.bContainsGame &&
                 ((t = e), (this.m_strGameAdaptationID = e.strID)),
               t)
             ) {
-              let e = new L(this, this.m_mpd, t, this.m_stats);
+              let e = new F(this, this.m_mpd, t, this.m_stats);
               this.m_rgLoaders.push(e);
             }
           }
@@ -2096,13 +2162,13 @@
           this.m_bIsBuffering && e.GetNumConsecutiveDownloadGones() <= 3
             ? this.Seek(
                 this.GetCurrentPlayTime() +
-                  I(this.GetCurrentVideoAdaptation()) / 1e3
+                  e.GetCurrentSegmentDurationMS() / 1e3
               )
             : ((0, _.yv)(
                 "OnSegmentDownloadGone: too many consecutive 'gone', erroring the download: " +
                   e.GetNumConsecutiveDownloadGones()
               ),
-              this.OnSegmentDownloadFailed(e, O.StreamGone));
+              this.OnSegmentDownloadFailed(e, V.StreamGone));
         }
         GetCurrentAudioAdaptationfunction() {
           return this.m_mpd
@@ -2131,9 +2197,27 @@
           for (let t of this.m_rgLoaders) t.SetBufferMS(e);
         }
         BeginPlayback() {
+          if (!this.m_bUseHLSManifest) {
+            let e = this.PickStartingVideoRepresentation();
+            for (let t of this.m_rgLoaders)
+              if (t.ContainsVideo()) {
+                t.ChangeRepresentation(e);
+                let n = t.GetCurrentSegmentDurationMS();
+                this.m_schFirstFrameThrottler.Schedule(
+                  n / 2,
+                  this.VerifyFirstSegementDownloadProgress
+                );
+              } else if (t.ContainsAudio() || t.ContainsGame()) {
+                let e =
+                  t.GetAdaptation().rgRepresentations.length > 0
+                    ? t.GetAdaptation().rgRepresentations[0]
+                    : null;
+                t.ChangeRepresentation(e);
+              }
+          }
           let e = 0;
           if (this.IsLiveContent()) {
-            let t = I(this.GetCurrentVideoAdaptation()),
+            let t = this.GetVideoLoader().GetCurrentSegmentDurationMS(),
               n = 1e3 * this.m_mpd.GetMinBufferTime(),
               r = Math.max(t, n);
             this.SetTrackBufferMS(r),
@@ -2150,27 +2234,19 @@
               (0, _.yv)(
                 `Begin playback of non-live content [this.buffer=${this.m_nTrackBufferMS}][nStartTime=${e}]`
               );
-          if (
-            ((0, _.yv)("Starting playback at " + e), !this.m_bUseHLSManifest)
-          ) {
-            let e = this.PickStartingVideoRepresentation();
-            for (let t of this.m_rgLoaders)
-              if (t.ContainsVideo()) {
-                t.ChangeRepresentation(e);
-                let n = I(t.GetAdaptation());
-                this.m_schFirstFrameThrottler.Schedule(
-                  n / 2,
-                  this.VerifyFirstSegementDownloadProgress
-                );
-              } else if (t.ContainsAudio() || t.ContainsGame()) {
-                let e =
-                  t.GetAdaptation().rgRepresentations.length > 0
-                    ? t.GetAdaptation().rgRepresentations[0]
-                    : null;
-                t.ChangeRepresentation(e);
-              }
-          }
-          this.Seek(e),
+          (0, _.yv)("Starting playback at " + e),
+            this.m_stats.SetSegmentDurationMS(
+              this.GetVideoLoader().GetCurrentSegmentDurationMS()
+            ),
+            this.m_stats.SetAnalyticLinks(
+              this.m_mpd.GetStatsLink(),
+              this.m_mpd.GetStalledLink(),
+              this.m_mpd.GetEventLink()
+            ),
+            this.m_stats.SetVideoInitializationURL(
+              this.GetVideoLoader().GetCurrentSegmentInitializationURL()
+            ),
+            this.Seek(e),
             this.GetGameLoader() &&
               this.m_schGameDataEventTrigger.Schedule(
                 500,
@@ -2255,7 +2331,7 @@
               c = i.nHeight || 0,
               d = this.GetVideoPlayerHeight();
             if (d > 0 && l > 0) {
-              if (c > P(d)) break;
+              if (c > U(d)) break;
             }
             o = i;
           }
@@ -2279,7 +2355,7 @@
           if (!this.m_mpd) return 0;
           let t = this.GetAvailableVideoStartTime(),
             n = this.GetBufferedLiveEdgeTime();
-          (e = u.Lh(e, t, n)), (this.m_bUserLiveEdgeChoice = e >= n - A);
+          (e = u.Lh(e, t, n)), (this.m_bUserLiveEdgeChoice = e >= n - P);
           let r = this.m_elVideo.paused;
           if ((r || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),
@@ -2383,7 +2459,7 @@
           let e = [];
           if (
             (e.push({
-              id: B,
+              id: x,
               displayName: "Auto",
               selected: null === this.m_videoRepSelected,
             }),
@@ -2419,7 +2495,7 @@
         SetVideoRepresentation(e) {
           let t = !0,
             n = this.GetVideoLoader();
-          if (e && e.id != B) {
+          if (e && e.id != x) {
             let r = n.GetRepresentationByID(e.id);
             r &&
               ((t = !1),
@@ -2432,70 +2508,53 @@
           t && (this.m_videoRepSelected = null);
         }
         GetThumbnailForTimestamp(e) {
-          try {
-            const t =
-                this.m_mpd.GetPeriods()[0].rgAdaptationSets[0].segmentTemplate
-                  .nDuration / 1e3,
-              n = e - (e % (t * 10)),
-              r = Math.floor(n / t) + 1;
-            let i =
-              this.m_mpd.GetPeriods()[0].rgAdaptationSets[0].segmentTemplate
-                .strMedia;
-            return (
-              (i = i.replace("/video/", "/scrollthumb/")),
-              (i = i.replace("$RepresentationID$", "1")),
-              (i = i.replace("$Number$", r.toString())),
-              i
-            );
-          } catch (e) {
-            return "";
-          }
+          return "";
         }
       }
-      function P(e) {
+      function U(e) {
         return e < 360 ? 480 : e < 480 ? 720 : 4320;
       }
-      (0, r.gn)([m.a], F.prototype, "OnVisibilityChange", null),
-        (0, r.gn)([m.a], F.prototype, "UpdateMPD", null),
-        (0, r.gn)([m.a], F.prototype, "OnMediaSourceOpen", null),
-        (0, r.gn)([m.a], F.prototype, "HandleMediaSourceError", null),
-        (0, r.gn)([m.a], F.prototype, "OnMediaSourceEnded", null),
-        (0, r.gn)([m.a], F.prototype, "OnMediaSourceClose", null),
-        (0, r.gn)([m.a], F.prototype, "OnVideoWaiting", null),
-        (0, r.gn)([m.a], F.prototype, "OnVideoPause", null),
-        (0, r.gn)([m.a], F.prototype, "OnVideoResize", null),
+      (0, r.gn)([m.a], G.prototype, "OnVisibilityChange", null),
+        (0, r.gn)([m.a], G.prototype, "UpdateMPD", null),
+        (0, r.gn)([m.a], G.prototype, "OnMediaSourceOpen", null),
+        (0, r.gn)([m.a], G.prototype, "HandleMediaSourceError", null),
+        (0, r.gn)([m.a], G.prototype, "OnMediaSourceEnded", null),
+        (0, r.gn)([m.a], G.prototype, "OnMediaSourceClose", null),
+        (0, r.gn)([m.a], G.prototype, "OnVideoWaiting", null),
+        (0, r.gn)([m.a], G.prototype, "OnVideoPause", null),
+        (0, r.gn)([m.a], G.prototype, "OnVideoResize", null),
         (0, r.gn)(
           [m.a],
-          F.prototype,
+          G.prototype,
           "OnDebugPrintEventInfoAndAvailableBuffer",
           null
         ),
-        (0, r.gn)([m.a], F.prototype, "OnVideoError", null),
-        (0, r.gn)([m.a], F.prototype, "OnVideoCanPlay", null),
-        (0, r.gn)([m.a], F.prototype, "GetCurrentPlayTime", null),
-        (0, r.gn)([m.a], F.prototype, "OnVideoTimeUpdate", null),
+        (0, r.gn)([m.a], G.prototype, "OnVideoError", null),
+        (0, r.gn)([m.a], G.prototype, "OnVideoCanPlay", null),
+        (0, r.gn)([m.a], G.prototype, "GetCurrentPlayTime", null),
+        (0, r.gn)([m.a], G.prototype, "OnVideoTimeUpdate", null),
         (0, r.gn)(
           [m.a],
-          F.prototype,
+          G.prototype,
           "SendUpdateToBookmarkServiceIfNeeded",
           null
         ),
-        (0, r.gn)([m.a], F.prototype, "OnPlayAction", null),
-        (0, r.gn)([m.a], F.prototype, "GetPlaybackRate", null),
-        (0, r.gn)([m.a], F.prototype, "GetCDNAuthURLParameter", null),
-        (0, r.gn)([m.a], F.prototype, "OnSegmentDownloaded", null),
-        (0, r.gn)([m.a], F.prototype, "PlayOnElement", null),
-        (0, r.gn)([m.a], F.prototype, "OnSegmentDownloadFailed", null),
-        (0, r.gn)([m.a], F.prototype, "OnSegmentDownloadGone", null),
+        (0, r.gn)([m.a], G.prototype, "OnPlayAction", null),
+        (0, r.gn)([m.a], G.prototype, "GetPlaybackRate", null),
+        (0, r.gn)([m.a], G.prototype, "GetCDNAuthURLParameter", null),
+        (0, r.gn)([m.a], G.prototype, "OnSegmentDownloaded", null),
+        (0, r.gn)([m.a], G.prototype, "PlayOnElement", null),
+        (0, r.gn)([m.a], G.prototype, "OnSegmentDownloadFailed", null),
+        (0, r.gn)([m.a], G.prototype, "OnSegmentDownloadGone", null),
         (0, r.gn)(
           [m.a],
-          F.prototype,
+          G.prototype,
           "VerifyFirstSegementDownloadProgress",
           null
         ),
-        (0, r.gn)([m.a], F.prototype, "GameDataEventTrigger", null),
-        (0, r.gn)([m.a], F.prototype, "ReportPlayerStats", null),
-        (0, r.gn)([a.aD.bound], F.prototype, "CaptureStatsForDisplay", null);
+        (0, r.gn)([m.a], G.prototype, "GameDataEventTrigger", null),
+        (0, r.gn)([m.a], G.prototype, "ReportPlayerStats", null),
+        (0, r.gn)([a.aD.bound], G.prototype, "CaptureStatsForDisplay", null);
     },
     56189: (e, t, n) => {
       "use strict";
@@ -6479,8 +6538,28 @@
               })
             : Promise.resolve(!1);
         }
+        IsMaximized() {
+          return this.m_popup &&
+            !this.m_popup.closed &&
+            this.m_popup.SteamClient &&
+            this.m_popup.SteamClient.Window &&
+            this.m_popup.SteamClient.Window.IsWindowMinimized
+            ? new Promise((e, t) => {
+                this.m_popup.SteamClient.Window.IsWindowMaximized((t) => {
+                  e(t);
+                });
+              })
+            : Promise.resolve(!1);
+        }
         ReleasePopup() {
           this.OnClose(), (this.m_popup = null);
+        }
+        OnResize() {
+          this.IsMaximized().then((e) => {
+            e
+              ? this.m_popup.document.body.classList.add("Maximized")
+              : this.m_popup.document.body.classList.remove("Maximized");
+          });
         }
         OnBeforeUnload() {}
         OnFocus() {}
@@ -6538,7 +6617,7 @@
             });
           }
           OnResize() {
-            this.QueryAndStoreWindowPosition();
+            super.OnResize(), this.QueryAndStoreWindowPosition();
           }
           OnResizeComplete(e) {}
           QueryAndStoreWindowPosition() {
@@ -6547,7 +6626,7 @@
               this.m_popup.setTimeout(() => {
                 this.GetWindowRestoreDetails().then((t) => {
                   let n =
-                    this.m_strInitialRestoreDetails == t &&
+                    this.m_rgParams.strRestoreDetails == t &&
                     e == this.m_strInitialSavedDimensionsKey;
                   this.m_popup &&
                     this.m_strSavedDimensionsKey &&
@@ -8673,7 +8752,7 @@
         DispatchVirtualButtonClick(e, t) {
           var n;
           let r = null;
-          null !== t &&
+          t &&
             (r =
               null !== (n = this.GetActiveContext()) && void 0 !== n
                 ? n
@@ -10794,14 +10873,13 @@
     },
     94952: (e, t, n) => {
       "use strict";
-      n.d(t, { Wz: () => u, k$: () => m });
+      n.d(t, { Wz: () => d, k$: () => u });
       var r = n(33940),
         i = n(89526),
         o = n(58123),
         a = n(16383),
-        s = n(60161),
-        l = n(4306);
-      class c {
+        s = n(4306);
+      class l {
         SetFactory(e) {
           this.m_factory = e;
         }
@@ -10812,10 +10890,10 @@
           return this.m_hookFactory && this.m_hookFactory();
         }
         CreateVirtualKeyboardRef(e, t) {
-          return d(this.m_factory, e, t);
+          return c(this.m_factory, e, t);
         }
       }
-      function d(e, t, n) {
+      function c(e, t, n) {
         return e
           ? e.CreateVirtualKeyboardRef(t, n)
           : {
@@ -10828,200 +10906,118 @@
               BIsElementValidForInput: () => !1,
             };
       }
-      const u = (0, a.Yt)("VirtualKeyboardRefFactory", () => new c());
-      function m(e, t) {
+      const d = (0, a.Yt)("VirtualKeyboardRefFactory", () => new l());
+      function u(e, t) {
         const { onTextEntered: n } = e,
           a = (0, r._T)(e, ["onTextEntered"]),
-          c = i.useRef(),
-          m = i.useRef({ onTextEntered: () => null });
-        var _;
+          l = i.useRef(),
+          u = i.useRef({ onTextEntered: () => null });
         Object.assign(
-          m.current,
+          u.current,
           Object.assign(Object.assign({}, a), {
             onTextEntered:
               n ||
-              ((_ = c),
-              (e, t) => {
-                if (
-                  !(function (e) {
-                    return "Backspace" == e
-                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
-                      : "Enter" == e
-                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
-                      : "Tab" == e
-                      ? (SteamClient.Input.ControllerKeyboardSendText("\t"), !0)
-                      : "ArrowLeft" == e
-                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
-                      : "ArrowRight" == e
-                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
-                      : "ArrowUp" == e
-                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
-                      : "ArrowDown" == e
-                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
-                      : (SteamClient.Input.ControllerKeyboardSendText(e), !0);
-                  })(e)
-                )
-                  if (_.current) {
-                    const n = _.current,
-                      r = n.value;
-                    !(function (e, t, n) {
-                      const r = e,
-                        i = t;
-                      if (null == i) return;
-                      if (
-                        !r ||
-                        null == r.selectionStart ||
-                        null == r.selectionEnd ||
-                        null == r.value ||
-                        null == r.value.length
-                      )
-                        return;
-                      const o = r.selectionStart,
-                        a = r.selectionEnd,
-                        l =
-                          ((d = r.selectionDirection),
-                          "backward" === d ? -1 : "forward" === d ? 1 : 0),
-                        c = s.__(r);
-                      var d;
-                      if (1 === i.length || ("Enter" === i && c)) {
-                        const e = "Enter" === i ? "\n" : i,
-                          t = r.value;
-                        Object.getOwnPropertyDescriptor(
-                          window.HTMLInputElement.prototype,
-                          "value"
-                        ).set.call(r, t.slice(0, o) + e + t.slice(a)),
-                          r.setSelectionRange(o + 1, o + 1, "none");
-                      } else if ("Backspace" === i) {
-                        const e = r.value;
-                        o !== a
-                          ? ((r.value = e.slice(0, o) + e.slice(a)),
-                            r.setSelectionRange(o, o, "none"))
-                          : r.selectionStart > 0 &&
-                            ((r.value = e.slice(0, o - 1) + e.slice(a)),
-                            r.setSelectionRange(o - 1, o - 1, "none"));
-                      } else if ("ArrowLeft" === i)
-                        if (n) {
-                          const e = h(-1, [o, a, l], [0, r.value.length]);
-                          r.setSelectionRange(e[0], e[1], p(e[2]));
-                        } else
-                          o === a && o > 0
-                            ? r.setSelectionRange(o - 1, o - 1, "none")
-                            : r.setSelectionRange(o, o, "none");
-                      else if ("ArrowRight" === i)
-                        if (n) {
-                          const e = h(1, [o, a, l], [0, r.value.length]);
-                          r.setSelectionRange(e[0], e[1], p(e[2]));
-                        } else
-                          o === a && a < r.value.length
-                            ? r.setSelectionRange(a + 1, a + 1, "none")
-                            : r.setSelectionRange(a, a, "none");
-                      else
-                        "ArrowUp" === i || "Home" === i
-                          ? r.setSelectionRange(0, 0, "none")
-                          : ("ArrowDown" !== i && "End" !== i) ||
-                            r.setSelectionRange(
-                              r.value.length,
-                              r.value.length,
-                              "none"
-                            );
-                    })(n, e, t);
-                    const i = n.value;
-                    if (r !== i) {
-                      const e = new Event("input", { bubbles: !0 });
-                      n.dispatchEvent(e);
-                    }
-                  } else;
-              }),
+              ((e) =>
+                (function (e) {
+                  switch (e) {
+                    case "Backspace":
+                      e = "";
+                      break;
+                    case "Enter":
+                      e = "";
+                      break;
+                    case "Tab":
+                      e = "\t";
+                      break;
+                    case "ArrowLeft":
+                      e = "";
+                      break;
+                    case "ArrowRight":
+                      e = "";
+                      break;
+                    case "ArrowUp":
+                      e = "";
+                      break;
+                    case "ArrowDown":
+                      e = "";
+                  }
+                  SteamClient.Input.ControllerKeyboardSendText(e);
+                })(e)),
             BIsElementValidForInput: () =>
-              c.current && document.activeElement == c.current,
+              l.current && document.activeElement == l.current,
           })
         );
-        const g = (function (e, t) {
+        const m = (function (e, t) {
             const n = i.useRef(),
-              r = u.useHookFactory && u.useHookFactory();
+              r = d.useHookFactory && d.useHookFactory();
             n.current ||
-              (n.current = r ? d(r, e, t) : u.CreateVirtualKeyboardRef(e, t));
+              (n.current = r ? c(r, e, t) : d.CreateVirtualKeyboardRef(e, t));
             return n.current;
-          })(m.current, () => {
+          })(u.current, () => {
             var e;
-            return null === (e = c.current) || void 0 === e
+            return null === (e = l.current) || void 0 === e
               ? void 0
               : e.ownerDocument.defaultView;
           }),
-          f = i.useCallback(
+          h = i.useCallback(
             (e) => {
-              (document.hasFocus() || document.activeElement != c.current) &&
-                (e.currentTarget == c.current
-                  ? g.BIsActive() && g.DelayHideVirtualKeyboard()
+              (document.hasFocus() || document.activeElement != l.current) &&
+                (e.currentTarget == l.current
+                  ? m.BIsActive() && m.DelayHideVirtualKeyboard()
                   : console.warn(
                       "keyboard got blur event, but it's not the active element"
                     ));
             },
-            [g]
+            [m]
           ),
-          v = (0, l.xK)(
+          p = (0, s.xK)(
             (e) => {
-              c.current = e;
+              l.current = e;
               const t = [];
               return (
                 e &&
                   (e.addEventListener(
                     "focus",
-                    g.SetAsCurrentVirtualKeyboardTarget
+                    m.SetAsCurrentVirtualKeyboardTarget
                   ),
                   t.push(() =>
                     e.removeEventListener(
                       "focus",
-                      g.SetAsCurrentVirtualKeyboardTarget
+                      m.SetAsCurrentVirtualKeyboardTarget
                     )
                   ),
-                  e.addEventListener("click", g.ShowVirtualKeyboard),
+                  e.addEventListener("click", m.ShowVirtualKeyboard),
                   t.push(() =>
-                    e.removeEventListener("click", g.ShowVirtualKeyboard)
+                    e.removeEventListener("click", m.ShowVirtualKeyboard)
                   ),
-                  t.push((0, o.x)(c.current, g.ShowVirtualKeyboard)),
-                  e.addEventListener("blur", g.HideVirtualKeyboard),
+                  t.push((0, o.x)(l.current, m.ShowVirtualKeyboard)),
+                  e.addEventListener("blur", m.HideVirtualKeyboard),
                   t.push(() =>
-                    e.removeEventListener("blur", g.HideVirtualKeyboard)
+                    e.removeEventListener("blur", m.HideVirtualKeyboard)
                   ),
-                  t.push((0, o.BG)(c.current, f))),
+                  t.push((0, o.BG)(l.current, h))),
                 () => t.forEach((e) => e())
               );
             },
-            [f, g]
+            [h, m]
           );
         return (
           i.useLayoutEffect(
             () => (
-              (0, l.k$)(t, {
+              (0, s.k$)(t, {
                 TakeFocusAndShowKeyboard: () => {
-                  const e = c.current;
+                  const e = l.current;
                   e &&
                     (document.activeElement != e && e.focus(),
-                    g.ShowVirtualKeyboard());
+                    m.ShowVirtualKeyboard());
                 },
               }),
-              () => (0, l.k$)(t, null)
+              () => (0, s.k$)(t, null)
             ),
-            [g, t]
+            [m, t]
           ),
-          v
+          p
         );
-      }
-      function h(e, t, n) {
-        const r = t[2],
-          i = r < 0 ? 0 : 1,
-          o = e < 0 ? 0 : 1,
-          a = [t[0], t[1]];
-        (a[i] += e), (a[i] - n[o]) * e > 0 && (a[i] = n[o]);
-        return a[0] === a[1]
-          ? [a[0], a[1], 0]
-          : a[0] < a[1]
-          ? [a[0], a[1], r]
-          : [a[1], a[0], -r];
-      }
-      function p(e) {
-        return e < 0 ? "backward" : e > 0 ? "forward" : "none";
       }
     },
     19094: (e, t, n) => {
@@ -14092,8 +14088,8 @@
                 e.availTop && (n = e.availTop),
                 (l = t),
                 (c = n),
-                (d = t + e.availWidth),
-                (u = n + e.availHeight);
+                (d = e.availWidth),
+                (u = e.availHeight);
             }
           (t.bOverlapHorizontal || t.bOverlapVertical) && (a = s = void 0);
           let p = n.getBoundingClientRect();
@@ -18794,7 +18790,7 @@
     },
     68493: (e, t, n) => {
       "use strict";
-      n.d(t, { t: () => S, U: () => E });
+      n.d(t, { t: () => C });
       var r = n(33940),
         i = n(89526),
         o = n(73070),
@@ -18891,17 +18887,7 @@
             );
         }, [e]);
       }
-      function C(e, t) {
-        return (0, p.xK)(
-          (n) => {
-            if (!n || !t) return;
-            const r = n.ownerDocument.defaultView;
-            return g.Zp.RegisterModalManager(e, r);
-          },
-          [e]
-        );
-      }
-      function S(e) {
+      function C(e) {
         let {
             ModalManager: t,
             bRegisterModalManager: n = !0,
@@ -18934,20 +18920,29 @@
                 [e, r]
               );
           })(t);
-        const g = C(t, n);
-        let f = null;
+        const f = (function (e, t) {
+          return (0, p.xK)(
+            (n) => {
+              if (!n || !t) return;
+              const r = n.ownerDocument.defaultView;
+              return g.Zp.RegisterModalManager(e, r);
+            },
+            [e]
+          );
+        })(t, n);
+        let C = null;
         return (
           c && c.length
-            ? (f = c.map((e) =>
+            ? (C = c.map((e) =>
                 e instanceof _.kv
-                  ? i.createElement(b, {
+                  ? i.createElement(E, {
                       key: e.key,
                       modal: e,
                       active: e == m,
-                      Component: null != a ? a : w,
+                      Component: null != a ? a : D,
                     })
                   : e instanceof _.QA
-                  ? i.createElement(D, { key: e.key, modal: e, active: e == m })
+                  ? i.createElement(S, { key: e.key, modal: e, active: e == m })
                   : void 0
               ))
             : (s = Object.assign(Object.assign({}, s), { display: "none" })),
@@ -18958,31 +18953,20 @@
               "div",
               Object.assign({}, l, {
                 style: s,
-                ref: g,
+                ref: f,
                 className: (0, h.Z)(l.className, "FullModalOverlay"),
               }),
               i.createElement("div", {
                 className: "ModalOverlayContent ModalOverlayBackground",
               }),
-              f
+              C
             ),
             i.createElement(d, { ModalManager: t }),
-            i.createElement(y, { ModalManager: t })
+            i.createElement(b, { ModalManager: t })
           )
         );
       }
-      function E(e) {
-        const { ModalManager: t, bRegisterModalManager: n = !0 } = e,
-          r = C(t, n);
-        return i.createElement(
-          i.Fragment,
-          null,
-          i.createElement("div", { style: { display: "none" }, ref: r }),
-          i.createElement(d, { ModalManager: t }),
-          i.createElement(y, { ModalManager: t })
-        );
-      }
-      function D(e) {
+      function S(e) {
         const { modal: t, active: n } = e;
         return (
           i.useEffect(
@@ -19002,7 +18986,7 @@
           )
         );
       }
-      function b(e) {
+      function E(e) {
         const { modal: t, active: n, Component: r } = e,
           o = (0, p.NW)();
         return (
@@ -19025,7 +19009,7 @@
           )
         );
       }
-      const w = i.forwardRef(function (e, t) {
+      const D = i.forwardRef(function (e, t) {
         const { className: n, active: r, children: o } = e,
           a = i.useRef();
         i.useEffect(() => {
@@ -19042,7 +19026,7 @@
           o
         );
       });
-      function y(e) {
+      function b(e) {
         const { ModalManager: t } = e,
           n = (0, p.NW)();
         return (
@@ -19772,16 +19756,8 @@
               bRegisterModalManager: v,
             })
           );
-          e.bOnlyPopups
-            ? (E = i.createElement(s.U, {
-                ModalManager: S.current,
-                bRegisterModalManager: v,
-              }))
-            : e.bRenderOverlayAtRoot && (E = o.createPortal(E, document.body)),
-            i.useEffect(
-              () => ((0, a.k$)(c, S.current), () => (0, a.k$)(c, null)),
-              [c]
-            ),
+          e.bRenderOverlayAtRoot && (E = o.createPortal(E, document.body)),
+            (0, a.LY)(c, S.current),
             i.useEffect(() => {
               void 0 !== p && S.current.SetUsePopups(p),
                 void 0 !== g && S.current.SetCenterPopupsOnWindow(g),
@@ -20216,7 +20192,7 @@
               },
               i = { bHideActions: null == n ? void 0 : n.bHideActionIcons },
               o = (null == n ? void 0 : n.browserContext) || t.browserInfo;
-            return u(e, t, r.strTitle, r, o, i);
+            return u(e, t, r.strTitle, r, o, i, l);
           }
         });
       }
@@ -23730,7 +23706,7 @@
             popup: f,
             children: v,
           } = e,
-          C = (0, s.n)(f);
+          C = (0, s.n8)(f);
         return r.createElement(
           "div",
           {
@@ -24591,10 +24567,7 @@
       function h(e) {
         return "INPUT" === e.nodeName;
       }
-      function p(e) {
-        return "TEXTAREA" === e.nodeName;
-      }
-      function _(e, t) {
+      function p(e, t) {
         switch (e) {
           case "TEXTAREA":
             return !0;
@@ -24621,27 +24594,26 @@
             return !1;
         }
       }
-      function g(e) {
+      function _(e) {
         "loading" == document.readyState
           ? document.addEventListener("DOMContentLoaded", e)
           : e();
       }
       n.d(t, {
-        Dj: () => g,
-        Et: () => v,
-        Eu: () => w,
+        Dj: () => _,
+        Et: () => f,
+        Eu: () => b,
         GB: () => r,
         J$: () => c,
-        Jk: () => C,
-        Lh: () => f,
-        Mv: () => E,
+        Jk: () => v,
+        Lh: () => g,
+        Mv: () => S,
         RA: () => s,
         RD: () => u,
-        U0: () => S,
-        V2: () => D,
-        _J: () => _,
-        __: () => p,
-        b$: () => b,
+        U0: () => C,
+        V2: () => E,
+        _J: () => p,
+        b$: () => D,
         dw: () => o,
         h9: () => d,
         kR: () => l,
@@ -24650,7 +24622,7 @@
         sH: () => a,
         uk: () => h,
       });
-      function f(e, t) {
+      function g(e, t) {
         const n = e;
         return (
           (n.lastModifiedDate = new Date()),
@@ -24658,7 +24630,7 @@
           e
         );
       }
-      function v(e, t) {
+      function f(e, t) {
         let n = e.parentElement;
         for (; n; ) {
           if (!t || "x" == t) {
@@ -24683,19 +24655,19 @@
         }
         return n;
       }
-      function C(e, t) {
+      function v(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
         }
       }
-      function S(e, t) {
+      function C(e, t) {
         if (!("ownerDocument" in e)) return !0;
         const n = e.ownerDocument.defaultView.getComputedStyle(e),
           r = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === r || "scroll" === r;
       }
-      function E() {
+      function S() {
         return (function (e) {
           const t = {};
           return (
@@ -24706,10 +24678,10 @@
           );
         })(document);
       }
-      function D(e, t) {
-        b(e.document, t, !0);
+      function E(e, t) {
+        D(e.document, t, !0);
       }
-      function b(e, t, n) {
+      function D(e, t, n) {
         const r = Object.assign({}, t),
           i = e.getElementsByTagName("head")[0],
           o = i.getElementsByTagName("link"),
@@ -24730,7 +24702,7 @@
         }
         return i.prepend(...s), s;
       }
-      function w(e, t, n) {
+      function b(e, t, n) {
         if ("childList" === e.type) {
           for (let n = 0; n < e.addedNodes.length; n++) {
             const r = e.addedNodes[n];
@@ -24914,7 +24886,7 @@
       function _(e, ...t) {
         let n,
           i = [],
-          o = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
+          o = /(.*?)<(\d+)>(.*)<\/(\2)>/gs,
           a = 0;
         for (; (n = o.exec(e)); ) {
           (a += n[0].length), i.push(n[1]);
@@ -25794,6 +25766,7 @@
         NW: () => r.NW,
         JI: () => r.JI,
         kD: () => r.kD,
+        X9: () => r.X9,
         BE: () => i.BE,
         ww: () => i.ww,
         xK: () => i.xK,
@@ -25879,8 +25852,9 @@
         KM: () => a,
         NW: () => o,
         Qg: () => l,
+        X9: () => u,
         e1: () => c,
-        kD: () => u,
+        kD: () => m,
       });
       var r = n(89526);
       function i(e, t, n) {
@@ -25947,7 +25921,15 @@
           })(e, t) || e
         );
       }
-      function u(e) {
+      function u(e = !1) {
+        const [t, n] = r.useState(e);
+        return [
+          t,
+          r.useCallback(() => n(!0), []),
+          r.useCallback(() => n(!1), []),
+        ];
+      }
+      function m(e) {
         const t = r.useRef();
         return r.useCallback(
           () => (
@@ -25963,6 +25945,7 @@
       "use strict";
       n.d(t, {
         BE: () => o,
+        LY: () => c,
         dn: () => a,
         k$: () => i,
         ww: () => l,
@@ -25996,6 +25979,18 @@
       function l(e) {
         const t = r.useRef(null);
         return { refWithValue: t, refForElement: o(e, t) };
+      }
+      function c(e, t) {
+        const n = r.useRef(!1);
+        r.useLayoutEffect(
+          () => () => {
+            n.current && i(e, void 0);
+          },
+          [e]
+        ),
+          r.useLayoutEffect(() => {
+            (t || n.current) && (i(e, t), (n.current = !!t));
+          }, [e, t]);
       }
     },
     45820: (e, t, n) => {
@@ -26184,7 +26179,7 @@
     },
     86352: (e, t, n) => {
       "use strict";
-      n.d(t, { n: () => o });
+      n.d(t, { n8: () => o });
       var r = n(89526),
         i = n(4306);
       function o(e, t = 100) {
@@ -26779,7 +26774,17 @@
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    95755: (e, t, n) => {
+    90415: (e, t, n) => {
+      "use strict";
+      n.d(t, { T: () => i });
+      var r = n(32765);
+      function i(e = !1) {
+        return e
+          ? (0, r.ip)("store_user_config", "application_config")
+          : (0, r.kQ)("store_user_config", "application_config");
+      }
+    },
+    30967: (e, t, n) => {
       "use strict";
       var r = n(33940),
         i = (n(34726), n(76583), n(73961)),
@@ -27247,9 +27252,31 @@
         $ = Z("DemoAndQuickPitch");
       var q = n(19094),
         Y = n(27070),
-        Q = n(65406);
-      var J = n(47742);
-      const ee = o.lazy(() =>
+        Q = n(65406),
+        J = n(90415),
+        ee = n(47742);
+      const te = o.lazy(() => n.e(7311).then(n.bind(n, 85397)));
+      function ne(e) {
+        const [t, n, r] = (0, M.X9)();
+        return (
+          o.useEffect(() => {
+            const e = window;
+            return (
+              (e.ShowShoppingCart = n),
+              (e.HideShoppingCart = r),
+              () => {
+                delete e.ShowShoppingCart, delete e.HideShoppingCart;
+              }
+            );
+          }, [n, r]),
+          o.createElement(
+            o.Suspense,
+            { fallback: null },
+            t && o.createElement(te, { closeCart: r })
+          )
+        );
+      }
+      const re = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27269,7 +27296,7 @@
             n.e(5331),
           ]).then(n.bind(n, 49747))
         ),
-        te = o.lazy(() =>
+        ie = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27281,7 +27308,7 @@
             n.e(9682),
           ]).then(n.bind(n, 42591))
         ),
-        ne = o.lazy(() =>
+        oe = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(7400),
@@ -27299,9 +27326,9 @@
             n.e(7998),
             n.e(6571),
             n.e(8986),
-          ]).then(n.bind(n, 37644))
+          ]).then(n.bind(n, 96322))
         ),
-        re = o.lazy(() =>
+        ae = o.lazy(() =>
           Promise.all([
             n.e(7400),
             n.e(2675),
@@ -27310,7 +27337,7 @@
             n.e(988),
           ]).then(n.bind(n, 30361))
         ),
-        ie = o.lazy(() =>
+        se = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27332,7 +27359,7 @@
             n.e(4601),
           ]).then(n.bind(n, 78802))
         ),
-        oe = o.lazy(() =>
+        le = o.lazy(() =>
           Promise.all([
             n.e(3388),
             n.e(2675),
@@ -27344,7 +27371,7 @@
             n.e(2814),
           ]).then(n.bind(n, 4472))
         ),
-        ae = o.lazy(() =>
+        ce = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(2675),
@@ -27355,11 +27382,11 @@
             n.e(40),
           ]).then(n.bind(n, 4795))
         ),
-        se = o.lazy(() => n.e(5821).then(n.bind(n, 14491))),
-        le = o.lazy(() =>
+        de = o.lazy(() => n.e(5821).then(n.bind(n, 14491))),
+        ue = o.lazy(() =>
           Promise.all([n.e(477), n.e(1918)]).then(n.bind(n, 39070))
         ),
-        ce = o.lazy(() =>
+        me = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27379,10 +27406,10 @@
             n.e(3207),
           ]).then(n.bind(n, 45334))
         ),
-        de = o.lazy(() =>
+        he = o.lazy(() =>
           Promise.all([n.e(2675), n.e(1614), n.e(1825)]).then(n.bind(n, 74839))
         ),
-        ue = o.lazy(() =>
+        pe = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27416,7 +27443,7 @@
             n.e(2136),
           ]).then(n.bind(n, 8132))
         ),
-        me = o.lazy(() =>
+        _e = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27451,7 +27478,7 @@
             n.e(9788),
           ]).then(n.bind(n, 92067))
         ),
-        he = o.lazy(() =>
+        ge = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27486,7 +27513,7 @@
             n.e(9788),
           ]).then(n.bind(n, 85329))
         ),
-        pe = o.lazy(() =>
+        fe = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27520,7 +27547,7 @@
             n.e(680),
           ]).then(n.bind(n, 11513))
         ),
-        _e = o.lazy(() =>
+        ve = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27554,7 +27581,7 @@
             n.e(680),
           ]).then(n.bind(n, 53805))
         ),
-        ge = o.lazy(() =>
+        Ce = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(2675),
@@ -27563,7 +27590,7 @@
             n.e(4535),
           ]).then(n.bind(n, 86401))
         ),
-        fe = o.lazy(() =>
+        Se = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27587,7 +27614,7 @@
             n.e(556),
           ]).then(n.bind(n, 89350))
         ),
-        ve = o.lazy(() =>
+        Ee = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27611,7 +27638,7 @@
             n.e(556),
           ]).then(n.bind(n, 77091))
         ),
-        Ce = o.lazy(() =>
+        De = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27631,7 +27658,7 @@
             n.e(4158),
           ]).then(n.bind(n, 20080))
         ),
-        Se = o.lazy(() =>
+        be = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27659,12 +27686,12 @@
             n.e(8087),
           ]).then(n.bind(n, 92823))
         ),
-        Ee = o.lazy(() =>
+        we = o.lazy(() =>
           Promise.all([n.e(7404), n.e(5394), n.e(9057), n.e(3068)]).then(
             n.bind(n, 25610)
           )
         );
-      class De extends o.Component {
+      class ye extends o.Component {
         componentDidMount() {
           const e = (0, c.CE)();
           e &&
@@ -27679,31 +27706,12 @@
               "div",
               { className: m().App },
               o.createElement(
-                ye,
+                Me,
                 null,
+                o.createElement(Te, null),
                 o.createElement(
                   o.Suspense,
                   { fallback: o.createElement("div", null) },
-                  o.createElement(S.d, {
-                    config: {
-                      "green-envelope": () =>
-                        o.createElement(Ee, {
-                          bResponsiveHeader: !1,
-                          notifications: (0, l.kQ)(
-                            "steam_notifications",
-                            "application_config"
-                          ),
-                        }),
-                      "green-envelope-responsive": () =>
-                        o.createElement(Ee, {
-                          bResponsiveHeader: !0,
-                          notifications: (0, l.kQ)(
-                            "steam_notifications",
-                            "application_config"
-                          ),
-                        }),
-                    },
-                  }),
                   o.createElement(
                     p.rs,
                     null,
@@ -27725,7 +27733,7 @@
                       o.createElement(S.d, {
                         config: {
                           login: (e) =>
-                            o.createElement(ge, Object.assign({}, e)),
+                            o.createElement(Ce, Object.assign({}, e)),
                         },
                       })
                     ),
@@ -27735,7 +27743,7 @@
                       o.createElement(S.d, {
                         config: {
                           login: (e) =>
-                            o.createElement(ge, Object.assign({}, e)),
+                            o.createElement(Ce, Object.assign({}, e)),
                         },
                       })
                     ),
@@ -27756,15 +27764,15 @@
                                 appid: Number.parseInt(t),
                               }),
                             "review-award": () =>
-                              o.createElement(re, { key: `appawardmodal${t}` }),
+                              o.createElement(ae, { key: `appawardmodal${t}` }),
                             "steamawardsvote-embed": () =>
-                              o.createElement(ae, {
+                              o.createElement(ce, {
                                 key: `steamawardsvote_${t}`,
                                 appID: Number.parseInt(t),
                               }),
                             "broadcast-embed": () =>
                               o.createElement(
-                                ie,
+                                se,
                                 Object.assign(
                                   { key: `appbroadcastcast_${t}` },
                                   e,
@@ -27777,7 +27785,7 @@
                                 appID: Number.parseInt(t),
                               }),
                             "deck-verified-results": () =>
-                              o.createElement(de, {
+                              o.createElement(he, {
                                 appID: Number.parseInt(t),
                                 results: (0, l.kQ)(
                                   "deckcompatibility",
@@ -27791,7 +27799,7 @@
                             "gamehighlight-trailer": (e) =>
                               o.createElement(H, Object.assign({}, e)),
                             "discovery-queue-app-widget": () =>
-                              o.createElement(fe, {
+                              o.createElement(Se, {
                                 key: `discoveryqueue${t}`,
                                 appID: Number.parseInt(t),
                               }),
@@ -27811,14 +27819,14 @@
                         return o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key: `sale_${t}`,
                                 promotionName: `sale_${t}`,
                                 language: (0, _.jM)(l.De.LANGUAGE),
                               }),
                             "broadcast-embed": () =>
                               o.createElement(
-                                ie,
+                                se,
                                 Object.assign(
                                   { key: `broadcastsale_${t}` },
                                   e,
@@ -27835,7 +27843,7 @@
                         o.createElement(S.d, {
                           config: {
                             "curator-admin-rss": () =>
-                              o.createElement(me, null),
+                              o.createElement(_e, null),
                           },
                         }),
                     }),
@@ -27846,7 +27854,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key:
                                   "salecreator_" +
                                   e.match.params.creatorPageName +
@@ -27866,7 +27874,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key:
                                   "subscription_plan_" +
                                   e.match.params.salePageName,
@@ -27883,7 +27891,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key: "sale_remoteplaylanding",
                                 promotionName: "remoteplaylanding",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27897,7 +27905,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key: "sale_together",
                                 promotionName: "sale_together",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27911,7 +27919,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key: "sale_vrhardware",
                                 promotionName: "vrhardware",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27925,7 +27933,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key: "sale_steamdeck",
                                 promotionName: "steamdeck",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27939,7 +27947,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key: "sale_steamdeckdock",
                                 promotionName: "steamdeckdock",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27955,7 +27963,7 @@
                           config: {
                             "broadcast-embed": () =>
                               o.createElement(
-                                ie,
+                                se,
                                 Object.assign(
                                   {
                                     key:
@@ -27978,7 +27986,7 @@
                         o.createElement(S.d, {
                           config: {
                             "list-display": () =>
-                              o.createElement(ce, {
+                              o.createElement(me, {
                                 key: "curator_list",
                                 listid: e.match.params.listid,
                               }),
@@ -27992,7 +28000,7 @@
                         o.createElement(S.d, {
                           config: {
                             "broadcast-embed": () =>
-                              o.createElement(ie, {
+                              o.createElement(se, {
                                 key: "packagebroadcast_" + e.match.params.subid,
                                 subid:
                                   Number.parseInt(e.match.params.subid) || 0,
@@ -28007,7 +28015,7 @@
                         o.createElement(S.d, {
                           config: {
                             "broadcast-embed": () =>
-                              o.createElement(ie, {
+                              o.createElement(se, {
                                 key:
                                   "bundlebroadcast_" + e.match.params.bundleid,
                                 bundleid:
@@ -28018,20 +28026,20 @@
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.NewsHub(),
-                      render: (e) => o.createElement(ue, null),
+                      render: (e) => o.createElement(pe, null),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.EventAdmin(),
-                      render: (e) => o.createElement(he, null),
+                      render: (e) => o.createElement(ge, null),
                     }),
                     o.createElement(p.AW, {
                       exact: !0,
                       path: d.Z.InteractiveRecommender(),
-                      render: (e) => o.createElement(te, null),
+                      render: (e) => o.createElement(ie, null),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.LabsSandbox(),
-                      render: (e) => o.createElement(oe, null),
+                      render: (e) => o.createElement(le, null),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.SteamCharts(),
@@ -28039,7 +28047,7 @@
                         o.createElement(S.d, {
                           config: {
                             "react-root": () =>
-                              o.createElement(ee, Object.assign({}, e)),
+                              o.createElement(re, Object.assign({}, e)),
                           },
                         }),
                     }),
@@ -28048,7 +28056,7 @@
                       render: () =>
                         o.createElement(S.d, {
                           config: {
-                            "points-shop": () => o.createElement(ne, null),
+                            "points-shop": () => o.createElement(oe, null),
                           },
                         }),
                     }),
@@ -28063,7 +28071,7 @@
                         return o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(pe, {
+                              o.createElement(fe, {
                                 key: "contenthub_" + t,
                                 promotionName: "contenthub_" + t,
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -28077,13 +28085,13 @@
                       render: () =>
                         o.createElement(S.d, {
                           config: {
-                            categories: () => o.createElement(_e, null),
+                            categories: () => o.createElement(ve, null),
                           },
                         }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.AccountPreferences(),
-                      render: (e) => o.createElement(se, Object.assign({}, e)),
+                      render: (e) => o.createElement(de, Object.assign({}, e)),
                     }),
                     o.createElement(p.AW, {
                       exact: !0,
@@ -28091,7 +28099,7 @@
                       render: (e) =>
                         o.createElement(S.d, {
                           config: {
-                            "forge-your-fate": () => o.createElement(le, null),
+                            "forge-your-fate": () => o.createElement(ue, null),
                           },
                         }),
                     }),
@@ -28102,17 +28110,17 @@
                         o.createElement(S.d, {
                           config: {
                             "discovery-queue-button": () =>
-                              o.createElement(ve, null),
+                              o.createElement(Ee, null),
                           },
                         }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.MarketingMessages(),
-                      render: (e) => o.createElement(Ce, Object.assign({}, e)),
+                      render: (e) => o.createElement(De, Object.assign({}, e)),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.YearInReview(),
-                      render: (e) => o.createElement(Se, Object.assign({}, e)),
+                      render: (e) => o.createElement(be, Object.assign({}, e)),
                     }),
                     o.createElement(p.AW, null, o.createElement(K, null))
                   )
@@ -28122,26 +28130,22 @@
           );
         }
       }
-      function be() {
-        const e = (function (e = !1) {
-          return e
-            ? (0, l.ip)("store_user_config", "application_config")
-            : (0, l.kQ)("store_user_config", "application_config");
-        })(!0);
+      function Ie() {
+        const e = (0, J.T)(!0);
         return new q.J(
           l.De.WEBAPI_BASE_URL,
           null == e ? void 0 : e.webapi_token
         );
       }
-      function we(e) {
-        const t = (0, M.kD)(be),
+      function Re(e) {
+        const t = (0, M.kD)(Ie),
           n = (0, M.kD)(o.useCallback(() => new Q.Z(), [])),
           r = (0, o.useMemo)(
             () => ({ useActiveAccount: () => l.L7.steamid }),
             []
           );
         return o.createElement(
-          J.B,
+          ee.B,
           { value: r },
           o.createElement(
             Y.Ub,
@@ -28150,7 +28154,7 @@
           )
         );
       }
-      function ye(e) {
+      function Me(e) {
         const { children: t } = e;
         return o.createElement(
           v.u.Provider,
@@ -28159,7 +28163,7 @@
             l.fI,
             null,
             o.createElement(
-              we,
+              Re,
               null,
               o.createElement(
                 z.R,
@@ -28174,16 +28178,47 @@
           )
         );
       }
-      var Ie = n(45464),
-        Re = n(60161);
+      const Te = o.memo(function (e) {
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(ne, null),
+          o.createElement(
+            o.Suspense,
+            { fallback: null },
+            o.createElement(S.d, {
+              config: {
+                "green-envelope": () =>
+                  o.createElement(we, {
+                    bResponsiveHeader: !1,
+                    notifications: (0, l.kQ)(
+                      "steam_notifications",
+                      "application_config"
+                    ),
+                  }),
+                "green-envelope-responsive": () =>
+                  o.createElement(we, {
+                    bResponsiveHeader: !0,
+                    notifications: (0, l.kQ)(
+                      "steam_notifications",
+                      "application_config"
+                    ),
+                  }),
+              },
+            })
+          )
+        );
+      });
+      var Le = n(45464),
+        Ae = n(60161);
       n(1721);
-      Re.Dj(function () {
+      Ae.Dj(function () {
         return (0, r.mG)(this, void 0, void 0, function* () {
           (0, l.Ek)("application_config").userConfig ||
             (yield (0, l.x)(s(), l.De.STORE_BASE_URL + "actions/", {
               userConfig: !0,
             })),
-            (0, Ie.Uh)().Init(
+            (0, Le.Uh)().Init(
               "Store",
               CLSTAMP,
               new q.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
@@ -28216,7 +28251,7 @@
             })(l.De.LANGUAGE),
             document.getElementById("application_root")
               ? i.render(
-                  o.createElement(De),
+                  o.createElement(ye),
                   document.getElementById("application_root")
                 )
               : console.error('No "application_root" was found to target');
@@ -28580,7 +28615,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 95755), e((e.s = t));
+      return (t = 30967), e((e.s = t));
       var t;
     });
     e.O();

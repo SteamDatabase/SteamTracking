@@ -656,14 +656,18 @@
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB
   .newlogindialog_Login_ZOBYq
-  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc:not(.IN_CLIENT) {
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc:not(
+    .IN_CLIENT
+  ) {
   background: linear-gradient(321.58deg, #212629 47.91%, #333841 91.08%);
   width: 500px;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB
   .newlogindialog_Login_ZOBYq
-  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc:not(.IN_CLIENT)
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc:not(
+    .IN_CLIENT
+  )
   .newlogindialog_FormContainer_3jLIH {
   background: rgba(33, 35, 40, 0.5019607843);
 }
@@ -968,6 +972,27 @@
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
   font-size: 16px;
+}
+.qrlogin_Overlay_2VJKT .qrlogin_Box_2Lr2C button.DialogButton,
+.qrlogin_Overlay_2VJKT .qrlogin_Box_2Lr2C button.DialogButton:enabled,
+.qrlogin_Overlay_2VJKT .qrlogin_Box_2Lr2C button.DialogButton:disabled {
+  min-width: 10px;
+  padding: 5px 5px 2px 5px;
+  background: none;
+}
+.qrlogin_Overlay_2VJKT .qrlogin_Box_2Lr2C button.DialogButton.gpfocus,
+.qrlogin_Overlay_2VJKT .qrlogin_Box_2Lr2C button.DialogButton:enabled.gpfocus,
+.qrlogin_Overlay_2VJKT .qrlogin_Box_2Lr2C button.DialogButton:disabled.gpfocus {
+  outline: outset #fff 2px;
+}
+.qrlogin_Overlay_2VJKT
+  .qrlogin_Box_2Lr2C
+  button.DialogButton:enabled:active.gpfocus {
+  background-color: #3d4450;
+}
+.qrlogin_Overlay_2VJKT .qrlogin_Box_2Lr2C button.DialogButton:disabled {
+  background-color: none;
+  opacity: 0;
 }
 .qrlogin_Column_2UEUT {
   display: flex;

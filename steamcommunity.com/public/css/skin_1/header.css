@@ -670,24 +670,4 @@ div#headerSearch {
 	white-space: nowrap;
 }
 
-.supernav_content {
-	width: 132px;
-	background: #171a21;
-	padding: 5px 0 15px 15px;
-	box-shadow: 3px 3px 5px -3px #000;
-	text-align: left;
-}
-
-	.supernav_content > a {
-		display: block;
-		padding: 6px 0;
-		text-transform: uppercase;
-		font-size: 12px;
-	}
-
-		.supernav_content > a:hover {
-			color: #4897cf;
-			text-decoration: none;
-		}
-
 /* end temporary */

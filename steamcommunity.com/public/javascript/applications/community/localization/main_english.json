@@ -1374,7 +1374,7 @@
     "Sale_Tabs_Title_ttip": "Select from a list of already translated titles for this tab, or choose a custom title and enter your own name for each language",
     "Sale_Tabs_Visibility_title": "Tab Visibility",
     "Sale_Tabs_Visibility_ttip": "Controls for determining if a user is allow to see the tab on their sale page.",
-    "Sale_Tabs_Visibility_enable": "Enable Tab Visibility Settings",
+    "Sale_Tabs_Visibility_enable": "Enable Country Visibility Settings?",
     "Sale_Tabs_CountryAllowList": "Country Allow List",
     "Sale_Tabs_CountryAllowList_ttip": "This is a list of comma separated, two-letter country codes.  This tab will only surface in the allowed countries.",
     "Sale_Tabs_Current": "Current Tabs",

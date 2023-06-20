@@ -2183,12 +2183,14 @@
                             z().RecommendingCuratorsCtn
                           ),
                         },
-                        K.data.map((e) =>
-                          a.createElement(Q, {
-                            key: "curator_" + e.clanAccountID,
-                            curator: e,
-                          })
-                        )
+                        K.data
+                          .filter(Boolean)
+                          .map((e) =>
+                            a.createElement(Q, {
+                              key: "curator_" + e.clanAccountID,
+                              curator: e,
+                            })
+                          )
                       )
                     ),
                   x &&

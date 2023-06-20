@@ -1020,6 +1020,10 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	margin-bottom: 4px;
 }
 
+.account_setting_not_customer_facing {
+    display: none;
+}
+
 .store_pref_desc {
     grid-area: desc;
 }

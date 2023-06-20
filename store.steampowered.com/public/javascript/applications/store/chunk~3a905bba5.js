@@ -2084,6 +2084,11 @@
             height: 600,
             rgAcceptableTypes: r,
           },
+          marketingmessage_art_2: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: r,
+          },
           takeover_art: { width: 1850, height: 450, rgAcceptableTypes: r },
           takeover_mobile_art: {
             width: 500,
@@ -2245,10 +2250,10 @@
         bN: () => T,
         dn: () => D,
         $Y: () => L,
+        Ct: () => k,
         sq: () => G,
         RQ: () => A,
         _L: () => R,
-        KC: () => k,
         z5: () => x,
         Vv: () => re,
       });

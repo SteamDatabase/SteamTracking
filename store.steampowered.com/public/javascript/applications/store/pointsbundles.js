@@ -9,7 +9,9 @@
         Shell: "bundle_Shell_2Zfec",
         ShellScrollParent: "bundle_ShellScrollParent_1Qkju",
         ShellHeader: "bundle_ShellHeader_kOC36",
+        ShellHeaderFlex: "bundle_ShellHeaderFlex_3Bs_x",
         ShellHeaderBrandLink: "bundle_ShellHeaderBrandLink_O1wfr",
+        Sparkles: "bundle_Sparkles_1HQdP",
         PointsContainer: "bundle_PointsContainer_3fuIW",
         AppFilterContainer: "bundle_AppFilterContainer_2h5QB",
         SearchTermContainer: "bundle_SearchTermContainer_1vqtw",
@@ -42,7 +44,7 @@
     },
     98112: (e, n, r) => {
       "use strict";
-      r.r(n), r.d(n, { default: () => B });
+      r.r(n), r.d(n, { default: () => S });
       var t = r(89526),
         l = r(59934),
         a = r(96927),
@@ -59,7 +61,7 @@
         h = r(76653),
         C = r(19304),
         I = r(7323);
-      const B = (0, o.Pi)((e) => {
+      const S = (0, o.Pi)((e) => {
           const { bundleid: n } = e.match.params,
             r = parseInt(n),
             o = t.createElement(l.l_, { to: a.Z.LoyaltyStore() });
@@ -68,10 +70,10 @@
           return c
             ? 5 !== c.type && 6 !== c.type
               ? o
-              : t.createElement(S, { bundle: c })
+              : t.createElement(B, { bundle: c })
             : null;
         }),
-        S = (0, o.Pi)((e) => {
+        B = (0, o.Pi)((e) => {
           const { bundle: n } = e,
             r = d.Vb.Get().GetBundleOfferForUser(n);
           return t.createElement(
@@ -87,7 +89,7 @@
               },
               t.createElement(f, { bundle: n, offer: r }),
               0 === r.point_cost
-                ? t.createElement(A, { className: h.PrimaryRedeemButton })
+                ? t.createElement(x, { className: h.PrimaryRedeemButton })
                 : t.createElement(i.D9, {
                     cost: r.point_cost,
                     discount: r.discount,
@@ -95,7 +97,7 @@
                     className: h.PrimaryRedeemButton,
                     onClick: (e) => (0, i.s1)(e, n),
                   }),
-              t.createElement(E, { offer: r })
+              t.createElement(A, { offer: r })
             )
           );
         }),
@@ -108,7 +110,7 @@
             t.createElement(c._f, { title: r, subtitle: l })
           );
         }),
-        A = ({ className: e }) =>
+        x = ({ className: e }) =>
           t.createElement(
             "div",
             { className: (0, C.Z)(e, h.AlreadyOwned) },
@@ -119,7 +121,7 @@
               (0, _.Xx)("#Redeem_BundleItemOwned")
             )
           ),
-        E = (0, o.Pi)((e) => {
+        A = (0, o.Pi)((e) => {
           const { offer: n } = e;
           return t.createElement(
             m.iS,

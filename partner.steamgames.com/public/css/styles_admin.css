@@ -3104,8 +3104,12 @@ html, body { height:100%; }
 }
 
 .pending_package_item>td {
+    padding: 0;
 	vertical-align: top;
 	border-top: 1px solid #444;
+}
+.pending_package_item td {
+    padding: 0;
 }
 .pending_package_name {
 	min-width: 200px;
@@ -3123,6 +3127,7 @@ html, body { height:100%; }
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: right;
+    padding: 0;
 }
 @media screen and (max-width: 2400px) {
     body .pending_pricing_admin_table th {

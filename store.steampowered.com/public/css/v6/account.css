@@ -1075,10 +1075,6 @@ td.wht_total {
 	line-height: 16px;
 }
 
-.account_setting_not_customer_facing {
-	display: none;
-}
-
 .account_manage_link {
 	margin: 5px 0;
 	display: inline-block;

@@ -7199,6 +7199,37 @@ html.responsive.touch
 .saleitembrowser_ResetItemsCtn_1XX4L:hover .saleitembrowser_ResetItems_1Yy62 {
   opacity: 100%;
 }
+.saleitembrowser_SaleItemBrowserDebug_13HjZ {
+  padding: 8px;
+  margin-bottom: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.saleitembrowser_SaleItemBrowserDebug_13HjZ
+  .saleitembrowser_ShowHideLink_30XOg {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+}
+.saleitembrowser_SaleItemBrowserDebug_13HjZ .saleitembrowser_QueryTerm_12POA {
+  display: flex;
+  padding-bottom: 4px;
+}
+.saleitembrowser_SaleItemBrowserDebug_13HjZ
+  .saleitembrowser_QueryTerm_12POA
+  .saleitembrowser_Name_1wMuf {
+  padding-right: 16px;
+  width: 128px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.saleitembrowser_SaleItemBrowserDebug_13HjZ
+  .saleitembrowser_WGTesterLink_2UmRv {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
 .saleminigames_Ctn_1SGWR {
   display: flex;
   flex-direction: row;
@@ -7598,19 +7629,33 @@ html.responsive.touch
   a {
   color: #fff;
 }
-.assetportal_AssetSection_2Sa_- .assetportal_AssetUploadPreview_3qbEj {
+.assetportal_AssetSection_2Sa_- .assetportal_AssetUploadPreviewCtn_2kDp_ {
   width: 60%;
+  flex-direction: column;
+  display: flex;
+}
+.assetportal_AssetSection_2Sa_-
+  .assetportal_AssetUploadPreviewCtn_2kDp_
+  .assetportal_AssetUploadPreview_3qbEj {
   display: flex;
   flex-direction: row;
 }
-.assetportal_AssetSection_2Sa_- .assetportal_AssetUploadPreview_3qbEj h2 {
+.assetportal_AssetSection_2Sa_-
+  .assetportal_AssetUploadPreviewCtn_2kDp_
+  .assetportal_AssetUploadPreview_3qbEj
+  h2 {
   color: #fff;
   font-weight: 300;
 }
-.assetportal_AssetSection_2Sa_- .assetportal_AssetUploadPreview_3qbEj h2 span {
+.assetportal_AssetSection_2Sa_-
+  .assetportal_AssetUploadPreviewCtn_2kDp_
+  .assetportal_AssetUploadPreview_3qbEj
+  h2
+  span {
   color: #f36969;
 }
 .assetportal_AssetSection_2Sa_-
+  .assetportal_AssetUploadPreviewCtn_2kDp_
   .assetportal_AssetUploadPreview_3qbEj
   .DragAndDropContainer {
   flex-grow: 1;
@@ -7916,6 +7961,323 @@ html.responsive.touch
 .artworkuploader_PreviewImgInfo_3Iv_t:hover {
   background-color: #000;
   border: 1px solid #fff;
+}
+.userprofile_SmallAvatar_2cCH3 {
+  max-width: 32px;
+  max-height: 32px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+  border-radius: 3px;
+}
+.promotionplaneditor_ButtonRow_3KhKT {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.promotionplaneditor_ButtonRow_3KhKT
+  .promotionplaneditor_ButtonRowSpacer_AWToJ {
+  flex-grow: 1;
+}
+.promotionplaneditor_ButtonRow_3KhKT button.DialogButton {
+  margin-left: 18px;
+  max-width: 50%;
+}
+.promotionplaneditor_ButtonRow_3KhKT button.DialogButton.Primary {
+  margin-left: 0px;
+}
+.promotionplaneditor_EditCtn_1Q3pp {
+  margin-top: 24px;
+}
+.promotionplaneditor_EditCtn_1Q3pp
+  button.DialogButton.promotionplaneditor_StatusBtn_3btXS {
+  width: fit-content;
+  padding: 0px 20px;
+  float: right;
+}
+.promotionplaneditor_InputContainer_Jbwjf {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.DialogInput.DialogTextInputBase.promotionplaneditor_PromoName_2tLRc {
+  font-size: 30px;
+}
+.promotionplaneditor_TypeCtn_Lw9Eh {
+  width: 60%;
+}
+.promotionplaneditor_TypeCtn_Lw9Eh .DateCtn {
+  min-height: unset;
+}
+.promotionplaneditor_EventDetailsCtn_1UwWT
+  .promotionplaneditor_AdminNotesCtn_3ZkUK {
+  width: 40%;
+  margin-left: 24px;
+}
+.promotionplaneditor_EventDetailsCtn_1UwWT
+  .promotionplaneditor_AdminNotesCtn_3ZkUK
+  textarea {
+  width: 100%;
+  height: 123px;
+}
+.promotionplaneditor_BroadcastNotes_3SotC textarea {
+  width: 100%;
+  height: 123px;
+}
+.promotionplaneditor_FeatureSelectBtn_KdmlA {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.promotionplaneditor_FeatureSelectBtn_KdmlA button.DialogButton {
+  padding: 0px 12px;
+}
+.promotionplaneditor_StatusCtn_1DrAw .promotionplaneditor_ReviewState_3mtqD {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 4px 0;
+  color: #fff;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid gray;
+}
+.promotionplaneditor_StatusCtn_1DrAw
+  .promotionplaneditor_ReviewState_3mtqD
+  span {
+  margin-right: 12px;
+  font-size: 21px;
+}
+.promotionplaneditor_StatusCtn_1DrAw
+  .promotionplaneditor_ReviewState_3mtqD
+  svg {
+  width: 20px;
+  height: 20px;
+  color: #8bc53f;
+  margin-right: 8px;
+}
+.promotionplaneditor_StatusCtn_1DrAw.promotionplaneditor_Complete_kpXmM
+  .promotionplaneditor_ReviewState_3mtqD {
+  width: 100%;
+  color: #8bc53f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.promotionplaneditor_StatusCtn_1DrAw.promotionplaneditor_Incomplete_2TKFB {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.promotionplaneditor_LinksCtn_2SJfi {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #4f525f;
+}
+.promotionplaneditor_LinksCtn_2SJfi
+  .promotionplaneditor_ButtonRow_3KhKT
+  button.DialogButton {
+  width: 25%;
+}
+.promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_LinkCtn_2s6vN {
+  margin-bottom: 30px;
+  border: 1px solid #464953;
+  padding: 12px;
+}
+.promotionplaneditor_LinksCtn_2SJfi
+  .promotionplaneditor_LinkCtn_2s6vN
+  .DialogInputLabelGroup {
+  margin-bottom: 0px;
+  flex-grow: 1;
+}
+.promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_InputContainer_Jbwjf {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.promotionplaneditor_LinksCtn_2SJfi
+  .promotionplaneditor_InputContainer_Jbwjf
+  .promotionplaneditor_PreviewLinkCtn_RacQW {
+  margin-top: 23px;
+  margin-left: 12px;
+  margin-right: 8px;
+}
+.promotionplaneditor_LinksCtn_2SJfi
+  .promotionplaneditor_InputContainer_Jbwjf
+  .promotionplaneditor_PreviewLinkCtn_RacQW
+  a {
+  padding: 4px 12px;
+  background: #1a75c2;
+  box-sizing: content-box;
+  border: 0;
+  overflow: visible;
+  margin: 2px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.promotionplaneditor_PreviewLinksCtn_298xI
+  .promotionplaneditor_PreviewLinkCtn_RacQW {
+  flex-grow: 1;
+  position: relative;
+  background: #1a75c2;
+  margin-bottom: 2px;
+  padding: 5px 6px;
+  border-radius: 3px;
+}
+.promotionplaneditor_PreviewLinksCtn_298xI
+  .promotionplaneditor_PreviewLinkCtn_RacQW
+  .DialogCheckbox_Container {
+  width: fit-content;
+  padding: unset;
+  margin-bottom: unset;
+}
+.promotionplaneditor_PreviewLinksCtn_298xI
+  .promotionplaneditor_PreviewLinkCtn_RacQW
+  a {
+  text-decoration: none;
+  color: #fff;
+}
+.promotionplaneditor_FeatureSelectCtn_FRWr1 {
+  width: 100%;
+  min-height: 30px;
+  position: relative;
+}
+.promotionplaneditor_FeatureSelectCtn_FRWr1
+  .promotionplaneditor_FeatureSelectBtn_KdmlA {
+  position: absolute;
+  right: 0px;
+}
+.promotionplaneditor_CreationDialogCtn_2LmdQ {
+  max-width: 600px;
+  width: 100%;
+}
+.promotionplaneditor_CreationDialogCtn_2LmdQ
+  .promotionplaneditor_LargeSelectorCtn_iTSaT {
+  height: 300px;
+}
+.promotionplaneditor_LinkMsgModalCtn_MsxBD {
+  min-height: 300px;
+  margin-top: 12px;
+}
+.promotionplaneditor_SalePageLinkCtn_1L_j6 {
+  margin-top: 12px;
+}
+.promotionplaneditor_SalePageLinkCtn_1L_j6 a {
+  padding: 4px 12px;
+  background: #1a75c2;
+  box-sizing: content-box;
+  border: 0;
+  overflow: visible;
+  margin: 2px 0 2px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.promotionplaneditor_LinkedFeatureRow_1lX6j {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.promotionplaneditor_LinkedFeatureRow_1lX6j
+  .promotionplaneditor_FeatureName_K-HQQ {
+  width: 30%;
+  margin-right: 18px;
+}
+.promotionplaneditor_LinkedFeatureRow_1lX6j
+  .promotionplaneditor_FeatureName_K-HQQ.promotionplaneditor_DiscountEvent_2PEK4 {
+  background-color: blue;
+}
+.promotionplaneditor_OwnerRow_dmR1K {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.promotionplaneditor_OwnerRow_dmR1K .promotionplaneditor_ActionBtnCtn_N28BL {
+  width: 50%;
+}
+.promotionplaneditor_UserCtn_20WlQ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.promotionplaneditor_AssetField_kOPby input {
+  font-size: 12px;
+}
+.promotionplaneditor_OwnerCtn_3kmgL {
+  width: 100%;
+  background: linear-gradient(90deg, #1f2229, transparent);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+.promotionplaneditor_OwnerCtn_3kmgL img {
+  margin-top: 0;
+}
+.promotionplaneditor_TargetGamePlaceholder_QQLfN {
+  background-color: #232730;
+  padding: 46px;
+  margin-bottom: 24px;
+  color: #e7ae0c;
+}
+.promotionplaneditor_StatReportCtn_1NVjT {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.promotionplaneditor_StatReportCtn_1NVjT .promotionplaneditor_Stat_DnyFR {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  background-color: #1a75c2;
+  padding: 10px;
+}
+.promotionplaneditor_StatReportCtn_1NVjT
+  .promotionplaneditor_Stat_DnyFR:not(:first-child) {
+  margin-left: 5px;
+}
+.promotionplaneditor_StatReportCtn_1NVjT
+  .promotionplaneditor_Stat_DnyFR
+  .promotionplaneditor_BigStat_oHnVz {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+.promotionplaneditor_StatReportCtn_1NVjT
+  .promotionplaneditor_Stat_DnyFR
+  .promotionplaneditor_SmallText_ytqMO {
+  text-align: center;
+  color: #86bfee;
 }
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
@@ -9103,315 +9465,6 @@ button.rbc-input::-moz-focus-inner {
 .marketingmessagecreatedialog_DateCtn_1mrqJ {
   min-height: 200px;
 }
-.promotionplaneditor_ButtonRow_3KhKT {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: end;
-  padding: 8px;
-  box-sizing: border-box;
-}
-.promotionplaneditor_ButtonRow_3KhKT
-  .promotionplaneditor_ButtonRowSpacer_AWToJ {
-  flex-grow: 1;
-}
-.promotionplaneditor_ButtonRow_3KhKT button.DialogButton {
-  margin-left: 18px;
-  max-width: 50%;
-}
-.promotionplaneditor_ButtonRow_3KhKT button.DialogButton.Primary {
-  margin-left: 0px;
-}
-.promotionplaneditor_EditCtn_1Q3pp {
-  margin-top: 24px;
-}
-.promotionplaneditor_EditCtn_1Q3pp
-  button.DialogButton.promotionplaneditor_StatusBtn_3btXS {
-  width: fit-content;
-  padding: 0px 20px;
-  float: right;
-}
-.promotionplaneditor_InputContainer_Jbwjf {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-}
-.DialogInput.DialogTextInputBase.promotionplaneditor_PromoName_2tLRc {
-  font-size: 30px;
-}
-.promotionplaneditor_TypeCtn_Lw9Eh {
-  width: 60%;
-}
-.promotionplaneditor_TypeCtn_Lw9Eh .DateCtn {
-  min-height: unset;
-}
-.promotionplaneditor_EventDetailsCtn_1UwWT
-  .promotionplaneditor_AdminNotesCtn_3ZkUK {
-  width: 40%;
-  margin-left: 24px;
-}
-.promotionplaneditor_EventDetailsCtn_1UwWT
-  .promotionplaneditor_AdminNotesCtn_3ZkUK
-  textarea {
-  width: 100%;
-  height: 123px;
-}
-.promotionplaneditor_BroadcastNotes_3SotC textarea {
-  width: 100%;
-  height: 123px;
-}
-.promotionplaneditor_FeatureSelectBtn_KdmlA {
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-}
-.promotionplaneditor_FeatureSelectBtn_KdmlA button.DialogButton {
-  padding: 0px 12px;
-}
-.promotionplaneditor_StatusCtn_1DrAw .promotionplaneditor_ReviewState_3mtqD {
-  position: relative;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  padding: 4px 0;
-  color: #fff;
-  padding-bottom: 2px;
-  margin-bottom: 6px;
-  border-bottom: 1px solid gray;
-}
-.promotionplaneditor_StatusCtn_1DrAw
-  .promotionplaneditor_ReviewState_3mtqD
-  span {
-  margin-right: 12px;
-  font-size: 21px;
-}
-.promotionplaneditor_StatusCtn_1DrAw
-  .promotionplaneditor_ReviewState_3mtqD
-  svg {
-  width: 20px;
-  height: 20px;
-  color: #8bc53f;
-  margin-right: 8px;
-}
-.promotionplaneditor_StatusCtn_1DrAw.promotionplaneditor_Complete_kpXmM
-  .promotionplaneditor_ReviewState_3mtqD {
-  width: 100%;
-  color: #8bc53f;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.promotionplaneditor_StatusCtn_1DrAw.promotionplaneditor_Incomplete_2TKFB {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.promotionplaneditor_LinksCtn_2SJfi {
-  margin-top: 20px;
-  padding-top: 12px;
-  border-top: 1px solid #4f525f;
-}
-.promotionplaneditor_LinksCtn_2SJfi
-  .promotionplaneditor_ButtonRow_3KhKT
-  button.DialogButton {
-  width: 25%;
-}
-.promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_LinkCtn_2s6vN {
-  margin-bottom: 30px;
-  border: 1px solid #464953;
-  padding: 12px;
-}
-.promotionplaneditor_LinksCtn_2SJfi
-  .promotionplaneditor_LinkCtn_2s6vN
-  .DialogInputLabelGroup {
-  margin-bottom: 0px;
-  flex-grow: 1;
-}
-.promotionplaneditor_LinksCtn_2SJfi .promotionplaneditor_InputContainer_Jbwjf {
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.promotionplaneditor_LinksCtn_2SJfi
-  .promotionplaneditor_InputContainer_Jbwjf
-  .promotionplaneditor_PreviewLinkCtn_RacQW {
-  margin-top: 23px;
-  margin-left: 12px;
-  margin-right: 8px;
-}
-.promotionplaneditor_LinksCtn_2SJfi
-  .promotionplaneditor_InputContainer_Jbwjf
-  .promotionplaneditor_PreviewLinkCtn_RacQW
-  a {
-  padding: 4px 12px;
-  background: #1a75c2;
-  box-sizing: content-box;
-  border: 0;
-  overflow: visible;
-  margin: 2px 0;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  display: block;
-  line-height: 32px;
-  color: #dfe3e6;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  border-radius: 2px;
-  text-decoration: none;
-}
-.promotionplaneditor_PreviewLinksCtn_298xI
-  .promotionplaneditor_PreviewLinkCtn_RacQW {
-  flex-grow: 1;
-  position: relative;
-  background: #1a75c2;
-  margin-bottom: 2px;
-  padding: 5px 6px;
-  border-radius: 3px;
-}
-.promotionplaneditor_PreviewLinksCtn_298xI
-  .promotionplaneditor_PreviewLinkCtn_RacQW
-  .DialogCheckbox_Container {
-  width: fit-content;
-  padding: unset;
-  margin-bottom: unset;
-}
-.promotionplaneditor_PreviewLinksCtn_298xI
-  .promotionplaneditor_PreviewLinkCtn_RacQW
-  a {
-  text-decoration: none;
-  color: #fff;
-}
-.promotionplaneditor_FeatureSelectCtn_FRWr1 {
-  width: 100%;
-  min-height: 30px;
-  position: relative;
-}
-.promotionplaneditor_FeatureSelectCtn_FRWr1
-  .promotionplaneditor_FeatureSelectBtn_KdmlA {
-  position: absolute;
-  right: 0px;
-}
-.promotionplaneditor_CreationDialogCtn_2LmdQ {
-  max-width: 600px;
-  width: 100%;
-}
-.promotionplaneditor_CreationDialogCtn_2LmdQ
-  .promotionplaneditor_LargeSelectorCtn_iTSaT {
-  height: 300px;
-}
-.promotionplaneditor_LinkMsgModalCtn_MsxBD {
-  min-height: 300px;
-  margin-top: 12px;
-}
-.promotionplaneditor_SalePageLinkCtn_1L_j6 {
-  margin-top: 12px;
-}
-.promotionplaneditor_SalePageLinkCtn_1L_j6 a {
-  padding: 4px 12px;
-  background: #1a75c2;
-  box-sizing: content-box;
-  border: 0;
-  overflow: visible;
-  margin: 2px 0 2px 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  display: block;
-  line-height: 32px;
-  color: #dfe3e6;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  border-radius: 2px;
-  text-decoration: none;
-}
-.promotionplaneditor_LinkedFeatureRow_1lX6j {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-.promotionplaneditor_LinkedFeatureRow_1lX6j
-  .promotionplaneditor_FeatureName_K-HQQ {
-  width: 30%;
-  margin-right: 18px;
-}
-.promotionplaneditor_LinkedFeatureRow_1lX6j
-  .promotionplaneditor_FeatureName_K-HQQ.promotionplaneditor_DiscountEvent_2PEK4 {
-  background-color: blue;
-}
-.promotionplaneditor_OwnerRow_dmR1K {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.promotionplaneditor_OwnerRow_dmR1K .promotionplaneditor_ActionBtnCtn_N28BL {
-  width: 50%;
-}
-.promotionplaneditor_UserCtn_20WlQ {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.promotionplaneditor_AssetField_kOPby input {
-  font-size: 12px;
-}
-.promotionplaneditor_OwnerCtn_3kmgL {
-  width: 100%;
-  background: linear-gradient(90deg, #1f2229, transparent);
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-}
-.promotionplaneditor_OwnerCtn_3kmgL img {
-  margin-top: 0;
-}
-.promotionplaneditor_TargetGamePlaceholder_QQLfN {
-  background-color: #232730;
-  padding: 46px;
-  margin-bottom: 24px;
-  color: #e7ae0c;
-}
-.promotionplaneditor_StatReportCtn_1NVjT {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-.promotionplaneditor_StatReportCtn_1NVjT .promotionplaneditor_Stat_DnyFR {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-  background-color: #1a75c2;
-  padding: 10px;
-}
-.promotionplaneditor_StatReportCtn_1NVjT
-  .promotionplaneditor_Stat_DnyFR:not(:first-child) {
-  margin-left: 5px;
-}
-.promotionplaneditor_StatReportCtn_1NVjT
-  .promotionplaneditor_Stat_DnyFR
-  .promotionplaneditor_BigStat_oHnVz {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  color: #fff;
-}
-.promotionplaneditor_StatReportCtn_1NVjT
-  .promotionplaneditor_Stat_DnyFR
-  .promotionplaneditor_SmallText_ytqMO {
-  text-align: center;
-  color: #86bfee;
-}
 .planningdashboard_Container_1IVr1 {
   position: relative;
 }
@@ -10032,14 +10085,6 @@ select {
   .marketingmessageassets_previewSection_18ctS {
   padding: 12px;
   background: #000;
-}
-.userprofile_SmallAvatar_2cCH3 {
-  max-width: 32px;
-  max-height: 32px;
-  float: left;
-  margin-right: 10px;
-  margin-top: 2px;
-  border-radius: 3px;
 }
 .eventsearch_SearchResults_1tDRE {
   overflow: scroll;

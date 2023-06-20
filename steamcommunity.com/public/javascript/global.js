@@ -1,30 +1,20 @@
 
 
 
-var g_OnWebPanelShownHandlers = Array();
-function SteamOnWebPanelShown()
-{
-	for ( var i = 0; i < g_OnWebPanelShownHandlers.length; i++ )
-	{
-		g_OnWebPanelShownHandlers[i]();
-	}
-}
 function RegisterSteamOnWebPanelShownHandler( f )
 {
-	g_OnWebPanelShownHandlers.push( f );
+	$J(document).on( 'visibilitychange', function() {
+		if ( document.visibilityState === "visible" )
+			f();
+	});
 }
 
-var g_OnWebPanelHiddenHandlers = Array();
-function SteamOnWebPanelHidden()
-{
-	for( var i = 0; i < g_OnWebPanelHiddenHandlers.length; i++ )
-	{
-		g_OnWebPanelHiddenHandlers[i]();
-	}
-}
 function RegisterSteamOnWebPanelHiddenHandler( f )
 {
-	g_OnWebPanelHiddenHandlers.push( f );
+	$J(document).on( 'visibilitychange', function() {
+		if ( document.visibilityState === "hidden" )
+			f();
+	});
 }
 
 

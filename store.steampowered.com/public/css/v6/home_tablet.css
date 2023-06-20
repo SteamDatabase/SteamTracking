@@ -1228,3 +1228,22 @@
 		bottom: 40px;
 	}
 
+	/* ds options on capsules for hover */
+	html.tablet .tab_item .ds_options {
+		top: 0;
+		right: 0;
+		left: auto;
+		z-index: 10;
+	}
+
+	html.tablet .store_main_capsule .ds_options {
+		top: 0;
+		right: 0;
+		left: auto;
+		z-index: 10;
+	}
+
+	html.tablet #topsellers_controls {
+		display: none;
+	}
+

@@ -732,30 +732,20 @@ function HideRecommendation( type, itemid, divBtn, elemContainer )
 	});
 }
 
-var g_OnWebPanelShownHandlers = Array();
-function SteamOnWebPanelShown()
-{
-	for ( var i = 0; i < g_OnWebPanelShownHandlers.length; i++ )
-	{
-		g_OnWebPanelShownHandlers[i]();
-	}
-}
 function RegisterSteamOnWebPanelShownHandler( f )
 {
-	g_OnWebPanelShownHandlers.push( f );
+	$J(document).on( 'visibilitychange', function() {
+		if ( document.visibilityState === "visible" )
+			f();
+	});
 }
 
-var g_OnWebPanelHiddenHandlers = Array();
-function SteamOnWebPanelHidden()
-{
-	for( var i = 0; i < g_OnWebPanelHiddenHandlers.length; i++ )
-	{
-		g_OnWebPanelHiddenHandlers[i]();
-	}
-}
 function RegisterSteamOnWebPanelHiddenHandler( f )
 {
-	g_OnWebPanelHiddenHandlers.push( f );
+	$J(document).on( 'visibilitychange', function() {
+		if ( document.visibilityState === "hidden" )
+			f();
+	});
 }
 
 
@@ -2222,6 +2212,11 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 
 	this.UpdateItems();
 	PreloadImages( this.$elItems[ this.nIndex ] );
+
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	{
+		PreloadImages( $elContainer );
+	}
 
 	// get ready to preload images when we scroll.  Delay this a bit because these are low priority
 	//	and finding them forces layout via a slow jquery :visible call

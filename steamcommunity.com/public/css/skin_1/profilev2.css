@@ -1000,16 +1000,8 @@ body.profile_page.flat_page #footer_spacer {
 	top: 3px;
 }
 
-.popup_menu a.popup_menu_item:hover {
-	background-color: #373d44;
-}
-
 .popup_menu .profile_actions_support a.popup_menu_item {
 	color: #cc3333;
-}
-
-.popup_menu .profile_actions_support a.popup_menu_item:hover {
-	background-color: #373d44;
 }
 
 .profile_content {

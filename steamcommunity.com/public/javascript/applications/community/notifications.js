@@ -39,7 +39,7 @@
     },
     6914: (t, e, i) => {
       "use strict";
-      i.r(e), i.d(e, { default: () => $ });
+      i.r(e), i.d(e, { default: () => V });
       var n,
         o = i(89526),
         s = i(65756),
@@ -65,7 +65,7 @@
           (t[(t.k_Owned = 1)] = "k_Owned"),
           (t[(t.k_Subscribed = 2)] = "k_Subscribed");
       })(n || (n = {}));
-      class S {
+      class k {
         constructor() {
           (this.rgFilterState = new Map()),
             (this.commentFilter = {
@@ -208,7 +208,7 @@
             );
         }
       }
-      function k() {
+      function S() {
         (0, N.SZ)(() => [...T.rgFilterState]);
         let t = 0;
         return (
@@ -236,8 +236,8 @@
           return e;
         }, []);
       }
-      function b() {
-        const { numActive: t, filters: e } = k(),
+      function I() {
+        const { numActive: t, filters: e } = S(),
           i = v(),
           o = (0, g.M)();
         return (
@@ -263,25 +263,25 @@
             : w.m_rgNotificationRollups
         );
       }
-      (0, _.gn)([h.LO], S.prototype, "rgFilterState", void 0),
-        (0, _.gn)([h.LO], S.prototype, "commentFilter", void 0);
-      const I = 300;
-      const T = new S(),
+      (0, _.gn)([h.LO], k.prototype, "rgFilterState", void 0),
+        (0, _.gn)([h.LO], k.prototype, "commentFilter", void 0);
+      const b = 300;
+      const T = new k(),
         w = new s.tL();
       var R = i(51438),
-        L = i(84343),
-        A = i(4306),
+        A = i(84343),
+        L = i(4306),
         B = i(19304),
         X = i(87458),
-        H = i(86770);
-      function M(t) {
+        M = i(86770);
+      function H(t) {
         const { hash: e } = t;
         (0, o.useEffect)(() => {
           T.ProcessHash(e);
         }, [e]);
         const i = (0, m.bY)();
         (0, o.useEffect)(() => {
-          w.setTransport(i);
+          w.setTransport(i), w.m_nUnviewed > 0 && w.MarkAllItemsViewed();
         }, [i]);
         const n = (0, a.kQ)("notifications", "application_config");
         return (
@@ -316,8 +316,8 @@
               n && !t.includes(o) && t.push(o);
             });
             do {
-              E.y$.LoadProfiles(t.splice(0, I));
-            } while (t.length > I);
+              E.y$.LoadProfiles(t.splice(0, b));
+            } while (t.length > b);
             E.y$.LoadProfiles(t);
           })(),
           w.m_rgNotificationRollups.length
@@ -362,7 +362,7 @@
       }
       function O() {
         const t = (function () {
-            const t = b(),
+            const t = I(),
               e = (0, s.fw)();
             return (
               t.map((t) => {
@@ -384,7 +384,7 @@
         );
       }
       function P() {
-        const t = b();
+        const t = I();
         return o.createElement(
           R.s,
           { className: y().NotificationsList },
@@ -408,7 +408,7 @@
         );
       }
       function Z() {
-        const t = b(),
+        const t = I(),
           e = o.useMemo(() => {
             const t = new Map();
             for (const e of w.m_rgNotificationRollups)
@@ -435,7 +435,7 @@
               )
             ),
             o.createElement(
-              L.HP,
+              A.HP,
               {
                 toolTipContent: i
                   ? void 0
@@ -481,7 +481,7 @@
       }
       function G(t) {
         const { filterOptions: e } = t,
-          { filters: i } = k();
+          { filters: i } = S();
         return 3 == e.type
           ? o.createElement(Y, { filterOptions: e, checked: i.get(e.type) })
           : o.createElement(f.ji, {
@@ -528,7 +528,7 @@
       function D(t) {
         const { expanded: e, children: i } = t,
           [n, s] = (0, o.useState)(void 0),
-          a = (0, A.yU)((t) => {
+          a = (0, L.yU)((t) => {
             const e = t.target;
             s(e.scrollHeight);
           });
@@ -599,7 +599,7 @@
         const { rollup: e } = t,
           i = s.Zm[e.type],
           [n, a] = o.useState(!1),
-          l = (0, A.S1)(
+          l = (0, L.S1)(
             (0, o.useCallback)((t) => {
               t.isIntersecting && a(!0);
             }, []),
@@ -609,7 +609,7 @@
           const t = (0, s.gs)(e.item.body_data);
           if ((0, c.fk)(t.state) || 1 == t.state) return null;
         }
-        const r = i.bBasic ? H.PO : H.k6[e.type];
+        const r = i.bBasic ? M.PO : M.k6[e.type];
         return r
           ? o.createElement(
               K,
@@ -631,11 +631,11 @@
           t.children
         )
       );
-      function $(t) {
+      function V(t) {
         let e = t.location.hash;
         return (
           e && e.startsWith("#") && (e = e.slice(1)),
-          o.createElement(M, { hash: e })
+          o.createElement(H, { hash: e })
         );
       }
     },

@@ -115,7 +115,7 @@ function UGCClearContentCheckFlag( id )
 	var appid = item['consumer_appid'];
 	var options = {
 		method: 'post',
-		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID,
+		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&suspicious=0',
 		onComplete: (function(id){
 			return function(transport)
 			{
@@ -124,7 +124,27 @@ function UGCClearContentCheckFlag( id )
 		}(id))
 	};
 	new Ajax.Request(
-		'https://steamcommunity.com/sharedfiles/ignoretextcontentcheckresults',
+		'https://steamcommunity.com/sharedfiles/markassuspicious/',
+		options
+	);
+}
+
+function UGCMarkAsSuspicious( id )
+{
+	var item = gItems[id];
+	var appid = item['consumer_appid'];
+	var options = {
+		method: 'post',
+		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&suspicious=1',
+		onComplete: (function(id){
+			return function(transport)
+			{
+				$J( "#ModerationControls_" + id ).html( '<span style="color: red">Marked as Suspicious</span>' );
+			}
+		}(id))
+	};
+	new Ajax.Request(
+		'https://steamcommunity.com/sharedfiles/markassuspicious/',
 		options
 	);
 }
@@ -234,6 +254,11 @@ function SelectedItems_ClearContentCheckAndReports()
 	ApplyFuncOnSelectedItems( UGCClearContentCheckFlag );
 }
 
+function SelectedItems_MarkAsSuspicious()
+{
+	ApplyFuncOnSelectedItems( UGCMarkAsSuspicious );
+}
+
 function BanReview( id )
 {
 	UserReview_Moderate_SetBanStatus( id, 1, 'https://steamcommunity.com',
@@ -289,6 +314,14 @@ function ClearContentCheckFlag( id )
 	});
 }
 
+function MarkAsSuspicious( id )
+{
+	$J.post( 'https://steamcommunity.com/userreviews/markassuspicious/' + id, { sessionid: g_sessionID } )
+	.done( function( data ) {
+		$J( "#ban_check_result_" + id ).text( 'Marked as Suspicious' );
+	});
+}
+
 function ViewReviewReports( id )
 {
 	UserReview_ShowReportsDialog( id, 'https://steamcommunity.com' );
@@ -322,6 +355,11 @@ function SelectedReviews_ClearReviewDevFlag()
 function SelectedReviews_ClearContentCheckResult()
 {
 	ApplyFuncOnSelectedItems( ClearContentCheckFlag );
+}
+
+function SelectedReviews_MarkAsSuspicious()
+{
+	ApplyFuncOnSelectedItems( MarkAsSuspicious );
 }
 
 function ResetProfileAndGroupContent( steamID )

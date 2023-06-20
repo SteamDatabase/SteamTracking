@@ -20,69 +20,73 @@
         Grey: "greenenvelope_Grey_2Sj0M",
         Disabled: "greenenvelope_Disabled_3KMlw",
         Green: "greenenvelope_Green_1ad8S",
+        NotificationBellAnimation:
+          "greenenvelope_NotificationBellAnimation_1a4Fd",
+        NotificationBellUvula: "greenenvelope_NotificationBellUvula_21Ilh",
       };
     },
-    58564: (e, n, t) => {
+    58564: (e, t, n) => {
       "use strict";
-      t.r(n),
-        t.d(n, {
-          GreenEnvelope: () => p,
-          default: () => h,
-          useSteamNotifications: () => w,
+      n.r(t),
+        n.d(t, {
+          GreenEnvelope: () => b,
+          default: () => H,
+          useSteamNotifications: () => E,
         });
-      var i = t(89526),
-        o = t(65756),
-        l = t(19304),
-        a = t(14826),
-        c = t(40103),
-        r = t(15937),
-        s = t.n(r),
-        u = t(44973),
-        m = t(77427),
-        d = t(701),
-        f = t(16826),
-        _ = t(25125),
-        v = t(86770),
-        N = t(27070);
-      const E = new o.tL();
-      function p(e) {
-        const { bResponsiveHeader: n, notifications: t } = e;
+      var i = n(89526),
+        o = n(65756),
+        r = n(19304),
+        l = n(14826),
+        s = n(40103),
+        a = n(15937),
+        c = n.n(a),
+        u = n(44973),
+        m = n(77427),
+        d = n(701),
+        f = n(16826),
+        _ = n(25125),
+        v = n(86770),
+        p = n(27070),
+        g = n(41576);
+      const N = new o.tL();
+      function b(e) {
+        const { bResponsiveHeader: t, notifications: n } = e;
         i.useEffect(() => {
-          t && E.ProcessNewNotificationPayload(t);
-        }, [t]);
-        const o = (0, N.bY)();
+          n && N.ProcessNewNotificationPayload(n);
+        }, [n]);
+        const o = (0, p.bY)();
         (0, i.useEffect)(() => {
-          E.setTransport(o);
+          N.setTransport(o);
         }, [o]);
-        const l = w();
-        return n
+        const r = E();
+        return t
           ? i.createElement(
               i.Fragment,
               null,
-              i.createElement(S, null),
+              i.createElement(B, null),
               i.createElement(U, null)
             )
-          : i.createElement(g, { nTotalUnviewed: l.nUnviewed });
+          : i.createElement(w, { nTotalUnviewed: r.nUnviewed });
       }
-      function w() {
+      function E() {
         return (0, _.SZ)(() => ({
-          notifications: E.m_rgNotificationRollups,
-          summary: Object.assign({}, E.m_summary),
-          loaded: E.m_bLoaded,
-          nUnviewed: E.m_nUnviewed,
+          notifications: N.m_rgNotificationRollups,
+          summary: Object.assign({}, N.m_summary),
+          loaded: N.m_bLoaded,
+          nUnviewed: N.m_nUnviewed,
         }));
       }
-      function M() {
-        return w().notifications.filter((e) => !(0, o.sA)(e.item));
+      function h() {
+        return E().notifications.filter((e) => !(0, o.sA)(e.item));
       }
-      function g(e) {
-        const { nTotalUnviewed: n } = e,
-          t = i.useRef(),
-          o = M();
+      function w(e) {
+        const { nTotalUnviewed: t } = e,
+          n = i.useRef(),
+          o = h();
         i.useEffect(() => {
-          t.current ||
-            ((t.current = (0, c.yV)(
-              i.createElement(y, { popupRef: t }),
+          n.current ||
+            ((n.current = (0, s.yV)(
+              i.createElement(y, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -90,132 +94,145 @@
                 strClassName: "GreenEnvelopeMenu",
               }
             )),
-            t.current.Hide());
+            n.current.Hide());
         }, []);
-        return i.createElement(
-          "div",
-          {
-            onClick: () => {
-              if (!t.current.visible) {
-                t.current.Show();
-                -1 != o.findIndex((e) => !e.item.viewed) &&
-                  E.MarkAllItemsViewed();
-              }
-            },
-            id: "green_envelope_menu_root",
-            className: (0, l.Z)(
-              s().Button,
-              s().NotificationsButton,
-              n ? s().Green : s().Grey
-            ),
+        const l = i.useCallback(
+          (e) => {
+            var t;
+            !e &&
+              (null === (t = n.current) || void 0 === t ? void 0 : t.visible) &&
+              n.current.Hide();
           },
-          i.createElement(f.Tx5, { className: s().SVGNotifications })
+          [n]
+        );
+        return i.createElement(
+          g.U,
+          { trigger: "repeated", onVisibilityChange: l },
+          i.createElement(
+            "div",
+            {
+              onClick: () => {
+                if (!n.current.visible) {
+                  n.current.Show();
+                  -1 != o.findIndex((e) => !e.item.viewed) &&
+                    N.MarkAllItemsViewed();
+                }
+              },
+              id: "green_envelope_menu_root",
+              className: (0, r.Z)(
+                c().Button,
+                c().NotificationsButton,
+                t ? c().Green : c().Grey
+              ),
+            },
+            i.createElement(f.Tx5, { className: c().SVGNotifications })
+          )
         );
       }
       const y = (e) => {
-          var n;
-          const { popupRef: t } = e,
+          var t;
+          const { popupRef: n } = e,
             o = i.useRef(),
-            [a, c] = i.useState(!1);
+            [l, s] = i.useState(!1);
           i.useEffect(() => {
-            var e, n;
-            c(
+            var e, t;
+            s(
               (null === (e = o.current) || void 0 === e
                 ? void 0
                 : e.scrollHeight) >
-                (null === (n = o.current) || void 0 === n
+                (null === (t = o.current) || void 0 === t
                   ? void 0
-                  : n.clientHeight)
+                  : t.clientHeight)
             );
           }, [
-            null === (n = o.current) || void 0 === n ? void 0 : n.scrollHeight,
-            a,
+            null === (t = o.current) || void 0 === t ? void 0 : t.scrollHeight,
+            l,
           ]);
-          const r = a ? void 0 : s().MenuScrollbarHidden;
+          const a = l ? void 0 : c().MenuScrollbarHidden;
           return i.createElement(
             "div",
             {
-              className: s().NotificationsMenu,
+              className: c().NotificationsMenu,
               onClick: () => {
                 var e;
-                return null === (e = null == t ? void 0 : t.current) ||
+                return null === (e = null == n ? void 0 : n.current) ||
                   void 0 === e
                   ? void 0
                   : e.Hide();
               },
             },
-            i.createElement(A, null),
+            i.createElement(M, null),
             i.createElement(
               "div",
               {
-                className: (0, l.Z)(s().NotificationsMenuScrollable, r),
+                className: (0, r.Z)(c().NotificationsMenuScrollable, a),
                 ref: o,
               },
-              i.createElement(S, null),
-              i.createElement(L, null)
+              i.createElement(B, null),
+              i.createElement(T, null)
             )
           );
         },
-        A = () =>
+        M = () =>
           i.createElement(
             "div",
-            { className: (0, l.Z)(s().NotificationHeader) },
+            { className: (0, r.Z)(c().NotificationHeader) },
             i.createElement(
               "div",
-              { className: s().AllNotificationsTitle },
-              (0, a.Xx)("#NotificationsMenu_Title")
+              { className: c().AllNotificationsTitle },
+              (0, l.Xx)("#NotificationsMenu_Title")
             ),
             i.createElement(
               "button",
               {
-                className: s().AllNotificationsButton,
+                className: c().AllNotificationsButton,
                 onClick: () =>
                   window.location.assign(
                     `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/notifications`
                   ),
               },
-              (0, a.Xx)("#NotificationsMenu_ViewAll")
+              (0, l.Xx)("#NotificationsMenu_ViewAll")
             )
           ),
         U = () =>
           i.createElement(
             "div",
             {
-              className: (0, l.Z)(
-                s().NotificationHeader,
-                s().ResponsiveViewAll
+              className: (0, r.Z)(
+                c().NotificationHeader,
+                c().ResponsiveViewAll
               ),
             },
             i.createElement(
               "button",
               {
-                className: s().AllNotificationsButton,
+                className: c().AllNotificationsButton,
                 onClick: () =>
                   window.location.assign(
                     `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/notifications`
                   ),
               },
-              (0, a.Xx)("#NotificationsMenu_ViewAll")
+              (0, l.Xx)("#NotificationsMenu_ViewAll")
             )
           );
-      function b(e, n) {
-        n.read
+      function A(e, t) {
+        t.read
           ? console.log("Not marking notification read")
           : (console.log("Marking notification read"),
-            E.MarkItemRead(n.notification_id)),
+            N.MarkItemRead(t.notification_id)),
           e();
       }
-      function L() {
-        const e = M();
+      function T() {
+        const e = h();
         return e.length
           ? i.createElement(
               "div",
-              { className: s().NotificationsMenuEntriesContainer },
-              e.map((e, n) =>
+              { className: c().NotificationsMenuEntriesContainer },
+              e.map((e, t) =>
                 i.createElement(v.RW, {
-                  key: n,
+                  key: t,
                   rollup: e,
-                  onNotificationClick: b,
+                  onNotificationClick: A,
                   uimode: 3,
                   location: m.IS.Tray,
                 })
@@ -223,22 +240,22 @@
             )
           : null;
       }
-      function S() {
+      function B() {
         return i.createElement(
           "div",
           null,
-          i.createElement(B, null),
-          i.createElement($, null),
-          i.createElement(T, null),
+          i.createElement(S, null),
           i.createElement(I, null),
-          i.createElement(R, null),
+          i.createElement(C, null),
           i.createElement(k, null),
-          i.createElement(H, null),
-          i.createElement(C, null)
+          i.createElement(L, null),
+          i.createElement(O, null),
+          i.createElement($, null),
+          i.createElement(R, null)
         );
       }
-      function B() {
-        const e = w();
+      function S() {
+        const e = E();
         return i.createElement(m.a$, {
           icon: i.createElement(d.ncs, null),
           count: e.summary.pending_gifts,
@@ -247,13 +264,13 @@
               `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/inventory/#pending_gifts`
             ),
           strLocToken: "#Notification_NewGiftsPinned_Body",
-          bAlwaysShow: !0,
+          bAlwaysShow: !1,
           eUIMode: 3,
           visible: !0,
         });
       }
-      function T() {
-        const e = w();
+      function C() {
+        const e = E();
         return i.createElement(m.a$, {
           icon: i.createElement(d.svY, null),
           count: e.summary.comments,
@@ -262,13 +279,13 @@
               `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/notifications#comments`
             ),
           strLocToken: "#Notification_NewCommentPinned_Body",
-          bAlwaysShow: !0,
+          bAlwaysShow: !1,
           eUIMode: 3,
           visible: !0,
         });
       }
-      function $() {
-        const e = w();
+      function I() {
+        const e = E();
         return i.createElement(m.a$, {
           icon: i.createElement(f.yBp, null),
           count: e.summary.pending_invites,
@@ -277,13 +294,13 @@
               `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/home/invites`
             ),
           strLocToken: "#Notification_FriendInvitePinned_Body",
-          bAlwaysShow: !0,
+          bAlwaysShow: !1,
           eUIMode: 3,
           visible: !0,
         });
       }
-      function I() {
-        const e = w();
+      function k() {
+        const e = E();
         return i.createElement(m.a$, {
           icon: i.createElement(d.F8F, null),
           count: e.summary.inventory_items,
@@ -297,8 +314,8 @@
           visible: !0,
         });
       }
-      function R() {
-        const e = w();
+      function L() {
+        const e = E();
         return i.createElement(m.a$, {
           count: e.summary.trade_offers,
           icon: i.createElement(d.hoX, null),
@@ -311,8 +328,8 @@
           visible: !0,
         });
       }
-      function k() {
-        const e = w();
+      function O() {
+        const e = E();
         return i.createElement(m.a$, {
           count: e.summary.async_game_updates,
           icon: i.createElement(d.ydL, null),
@@ -325,8 +342,8 @@
           visible: !0,
         });
       }
-      function C() {
-        const e = w();
+      function R() {
+        const e = E();
         return i.createElement(m.a$, {
           count: e.summary.help_request_replies,
           icon: i.createElement(d.t6e, null),
@@ -337,8 +354,8 @@
           visible: !0,
         });
       }
-      function H() {
-        const e = w();
+      function $() {
+        const e = E();
         return i.createElement(m.a$, {
           count: e.summary.moderator_messages,
           icon: i.createElement(f.dqu, null),
@@ -351,7 +368,118 @@
           visible: !0,
         });
       }
-      const h = p;
+      const H = b;
+    },
+    41576: (e, t, n) => {
+      "use strict";
+      n.d(t, { U: () => s });
+      var i = n(33940),
+        o = n(89526),
+        r = n(60161),
+        l = n(4306);
+      class s extends o.Component {
+        constructor() {
+          super(...arguments),
+            (this.m_observer = null),
+            (this.m_refElement = o.createRef()),
+            (this.m_elTracked = null),
+            (this.m_bPreviouslyIntersecting = !1);
+        }
+        static GetScrollableClassname() {
+          return "vt-scrollable";
+        }
+        BTriggerOnce() {
+          return "once" == (this.props.trigger || "once");
+        }
+        GetBoundingClientRect() {
+          return this.m_refElement.current
+            ? this.m_refElement.current.getBoundingClientRect()
+            : null;
+        }
+        DestroyObserver() {
+          this.m_observer &&
+            (this.m_observer.disconnect(),
+            (this.m_observer = null),
+            (this.m_elTracked = null));
+        }
+        componentWillUnmount() {
+          this.DestroyObserver();
+        }
+        componentDidMount() {
+          this.UpdateObserver(null);
+        }
+        componentDidUpdate(e) {
+          this.UpdateObserver(e);
+        }
+        UpdateObserver(e) {
+          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
+          this.m_observer &&
+            e &&
+            e.rootMargin != this.m_observer.rootMargin &&
+            this.DestroyObserver();
+          let t = this.m_refElement.current;
+          if (
+            (this.m_observer &&
+              t != this.m_elTracked &&
+              (this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked = null)),
+            !this.m_observer && t)
+          ) {
+            let e = { root: this.FindScrollableAncestor(t) };
+            this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
+              (this.m_observer = (0, l.Gt)(t, this.OnIntersection, e));
+          }
+          this.m_observer &&
+            t &&
+            t != this.m_elTracked &&
+            (this.m_observer.observe(t), (this.m_elTracked = t));
+        }
+        FindScrollableAncestor(e) {
+          return r.Jk(e, (e) => {
+            const t = this.props.bHorizontal
+              ? window.getComputedStyle(e).overflowX
+              : window.getComputedStyle(e).overflowY;
+            return (
+              "scroll" == t ||
+              "auto" == t ||
+              !!e.classList.contains(s.GetScrollableClassname())
+            );
+          });
+        }
+        OnIntersection(e, t) {
+          let n = !1;
+          for (const t of e)
+            if (t.isIntersecting) {
+              n = !0;
+              break;
+            }
+          this.m_bPreviouslyIntersecting != n &&
+            ((this.m_bPreviouslyIntersecting = n),
+            this.props.onVisibilityChange && this.props.onVisibilityChange(n),
+            n && this.BTriggerOnce() && this.DestroyObserver());
+        }
+        render() {
+          let e = this.props,
+            {
+              onVisibilityChange: t,
+              rootMargin: n,
+              trigger: r,
+              bHorizontal: l,
+            } = e,
+            s = (0, i._T)(e, [
+              "onVisibilityChange",
+              "rootMargin",
+              "trigger",
+              "bHorizontal",
+            ]);
+          return o.createElement(
+            "div",
+            Object.assign({ ref: this.m_refElement }, s),
+            this.props.children
+          );
+        }
+      }
+      (0, i.gn)([l.ak], s.prototype, "OnIntersection", null);
     },
   },
 ]);

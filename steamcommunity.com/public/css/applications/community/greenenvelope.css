@@ -103,8 +103,37 @@
   transition-property: background;
   transition-duration: 250ms;
 }
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:not(
+    .greenenvelope_Disabled_3KMlw
+  ):hover
+  .greenenvelope_SVGNotifications_D68s6
+  g {
+  animation-iteration-count: infinite;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:not(
+    .greenenvelope_Disabled_3KMlw
+  ):hover
+  .greenenvelope_SVGNotifications_D68s6
+  g
+  .SVGIcon_Notification_Uvula {
+  animation-iteration-count: infinite;
+}
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S svg {
   fill: #fff;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S
+  .greenenvelope_SVGNotifications_D68s6
+  g {
+  animation: greenenvelope_NotificationBellAnimation_1a4Fd 5s ease-in;
+  animation-iteration-count: 1;
+  transform-origin: 50% 0%;
+}
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S
+  .greenenvelope_SVGNotifications_D68s6
+  g
+  .SVGIcon_Notification_Uvula {
+  animation: greenenvelope_NotificationBellUvula_21Ilh 5s ease-in;
+  animation-iteration-count: 1;
 }
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Disabled_3KMlw {
   background-color: rgba(0, 0, 0, 0);
@@ -112,4 +141,86 @@
 }
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Disabled_3KMlw svg {
   fill: #d3d3d3;
+}
+@keyframes greenenvelope_NotificationBellAnimation_1a4Fd {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  3% {
+    transform: rotateZ(16deg);
+  }
+  6% {
+    transform: rotateZ(-16deg);
+  }
+  9% {
+    transform: rotateZ(15deg);
+  }
+  12% {
+    transform: rotateZ(-15deg);
+  }
+  15% {
+    transform: rotateZ(14deg);
+  }
+  18% {
+    transform: rotateZ(-14deg);
+  }
+  21% {
+    transform: rotateZ(8deg);
+  }
+  24% {
+    transform: rotateZ(-8deg);
+  }
+  27% {
+    transform: rotateZ(3deg);
+  }
+  30% {
+    transform: rotateZ(-3deg);
+  }
+  33% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes greenenvelope_NotificationBellUvula_21Ilh {
+  0% {
+    transform: translateX(0px);
+  }
+  3% {
+    transform: translateX(6px);
+  }
+  5% {
+    transform: translateX(-6px);
+  }
+  8% {
+    transform: translateX(5px);
+  }
+  11% {
+    transform: translateX(-5px);
+  }
+  14% {
+    transform: translateX(4px);
+  }
+  17% {
+    transform: translateX(-4px);
+  }
+  20% {
+    transform: translateX(4px);
+  }
+  23% {
+    transform: translateX(-2px);
+  }
+  26% {
+    transform: translateX(2px);
+  }
+  29% {
+    transform: translateX(1px);
+  }
+  32% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }

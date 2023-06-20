@@ -6529,12 +6529,15 @@
                 r = jt(e);
               null === localStorage.getItem(r) &&
                 localStorage.setItem(r, t.serializeBase64String());
-              return [
-                t,
-                B.deserializeBinary(
-                  Uint8Array.from(lt.lW.from(localStorage.getItem(r), "base64"))
-                ),
-              ];
+              const a = B.deserializeBinary(
+                Uint8Array.from(lt.lW.from(localStorage.getItem(r), "base64"))
+              );
+              for (const e of t.published_configs())
+                for (const t of a.published_configs())
+                  e.published_version() == t.published_version() &&
+                    (t.set_fetch_infos(e.fetch_infos()),
+                    t.set_train_infos(e.train_infos()));
+              return [t, a];
             }),
           { staleTime: 1 / 0 }
         );
@@ -13783,93 +13786,120 @@
           );
         },
         Ca = () => {
-          var e, t, r;
+          var e, t, r, a;
           const {
-              msgWorkingProject: a,
-              msgWorkingProjectConfig: i,
-              nPublishedVersion: s,
+              msgWorkingProject: i,
+              msgWorkingProjectConfig: s,
+              nPublishedVersion: o,
             } = br(),
-            [o, m] = n.useState(i.scheduled_train_config().scheduled_type()),
-            [d, u] = n.useState(
-              (null === (e = i.scheduled_train_config().scheduled_minute()) ||
-              void 0 === e
+            [m, d] = n.useState(s.scheduled_train_config().scheduled_type()),
+            [u, _] = n.useState(
+              (null ===
+                (e = s
+                  .scheduled_train_config()
+                  .auto_activate_accuracy_threshold()) || void 0 === e
                 ? void 0
-                : e.toString()) || "0"
+                : e.toFixed(2)) || "0.0"
             ),
-            [_, p] = n.useState(!0),
-            [g, S] = n.useState(
-              (null === (t = i.scheduled_train_config().scheduled_hour()) ||
+            [p, g] = n.useState(!0),
+            [S, f] = n.useState(
+              (null === (t = s.scheduled_train_config().scheduled_minute()) ||
               void 0 === t
                 ? void 0
                 : t.toString()) || "0"
             ),
-            [f, B] = n.useState(!0),
-            [b, v] = n.useState(
-              i.scheduled_train_config().scheduled_day_of_week()
-            ),
-            [h, E] = n.useState(
-              (null ===
-                (r = i.scheduled_train_config().scheduled_day_of_month()) ||
+            [B, b] = n.useState(!0),
+            [v, h] = n.useState(
+              (null === (r = s.scheduled_train_config().scheduled_hour()) ||
               void 0 === r
                 ? void 0
                 : r.toString()) || "0"
             ),
-            [y, N] = n.useState(!0),
-            j = n.useCallback(
-              (e) => {
-                i.scheduled_train_config().set_scheduled_type(e), $t(a), m(e);
-              },
-              [a, i]
+            [E, y] = n.useState(!0),
+            [N, j] = n.useState(
+              s.scheduled_train_config().scheduled_day_of_week()
             ),
-            M = n.useCallback(
+            [M, w] = n.useState(
+              (null ===
+                (a = s.scheduled_train_config().scheduled_day_of_month()) ||
+              void 0 === a
+                ? void 0
+                : a.toString()) || "0"
+            ),
+            [C, T] = n.useState(!0),
+            D = n.useCallback(
+              (e) => {
+                s.scheduled_train_config().set_scheduled_type(e), $t(i), d(e);
+              },
+              [i, s]
+            ),
+            L = n.useCallback(
+              (e) => {
+                const t = Qt(e, 0, 1),
+                  r = parseFloat(e);
+                t &&
+                  r !=
+                    s
+                      .scheduled_train_config()
+                      .auto_activate_accuracy_threshold() &&
+                  (s
+                    .scheduled_train_config()
+                    .set_auto_activate_accuracy_threshold(r),
+                  $t(i)),
+                  g(t),
+                  _(e);
+              },
+              [i, s]
+            ),
+            F = n.useCallback(
               (e) => {
                 const t = qt(e, 0, 60),
                   r = parseInt(e);
                 t &&
-                  r != i.scheduled_train_config().scheduled_minute() &&
-                  (i.scheduled_train_config().set_scheduled_minute(r), $t(a)),
-                  p(t),
-                  u(e);
+                  r != s.scheduled_train_config().scheduled_minute() &&
+                  (s.scheduled_train_config().set_scheduled_minute(r), $t(i)),
+                  b(t),
+                  f(e);
               },
-              [a, i]
+              [i, s]
             ),
-            w = n.useCallback(
+            z = n.useCallback(
               (e) => {
                 const t = qt(e, 0, 24),
                   r = parseInt(e);
                 t &&
-                  r != i.scheduled_train_config().scheduled_hour() &&
-                  (i.scheduled_train_config().set_scheduled_hour(r), $t(a)),
-                  B(t),
-                  S(e);
+                  r != s.scheduled_train_config().scheduled_hour() &&
+                  (s.scheduled_train_config().set_scheduled_hour(r), $t(i)),
+                  y(t),
+                  h(e);
               },
-              [a, i]
+              [i, s]
             ),
-            C = n.useCallback(
+            x = n.useCallback(
               (e) => {
-                i.scheduled_train_config().set_scheduled_day_of_week(e),
-                  $t(a),
-                  v(e);
+                s.scheduled_train_config().set_scheduled_day_of_week(e),
+                  $t(i),
+                  j(e);
               },
-              [a, i]
+              [i, s]
             ),
-            T = n.useCallback(
+            O = n.useCallback(
               (e) => {
                 const t = qt(e, 0, 31),
                   r = parseInt(e);
                 t &&
-                  r != i.scheduled_train_config().scheduled_day_of_month() &&
-                  (i.scheduled_train_config().set_scheduled_day_of_month(r),
-                  $t(a)),
-                  N(t),
-                  E(e);
+                  r != s.scheduled_train_config().scheduled_day_of_month() &&
+                  (s.scheduled_train_config().set_scheduled_day_of_month(r),
+                  $t(i)),
+                  T(t),
+                  w(e);
               },
-              [a, i]
+              [i, s]
             ),
-            D = 0 != o,
-            L = 0 != o && 1 != o,
-            F = 3 == o,
-            z = 4 == o;
+            R = 0 != m,
+            W = 0 != m && 1 != m,
+            P = 3 == m,
+            X = 4 == m;
           return n.createElement(
             "div",
             { className: Ma.ProjectTrain },
@@ -13882,8 +13912,8 @@
               "select",
               {
                 className: Ma.TrainDropdown,
-                value: o,
-                onChange: (e) => j(parseInt(e.target.value)),
+                value: m,
+                onChange: (e) => D(parseInt(e.target.value)),
               },
               n.createElement(
                 "option",
@@ -13911,7 +13941,7 @@
                 (0, l.Xx)("#SteamLearn_ScheduledTrain_IntervalMonthly")
               )
             ),
-            z &&
+            X &&
               n.createElement(
                 "div",
                 { className: Ma.OptionBlock },
@@ -13922,12 +13952,12 @@
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: (0, c.Z)(Ma.ValueInput, !y && Ma.Invalid),
-                  value: h,
-                  onChange: (e) => T(e.target.value),
+                  className: (0, c.Z)(Ma.ValueInput, !C && Ma.Invalid),
+                  value: M,
+                  onChange: (e) => O(e.target.value),
                 })
               ),
-            F &&
+            P &&
               n.createElement(
                 "div",
                 { className: Ma.OptionBlock },
@@ -13940,8 +13970,8 @@
                   "select",
                   {
                     className: Ma.TrainDropdown,
-                    value: b,
-                    onChange: (e) => C(parseInt(e.target.value)),
+                    value: N,
+                    onChange: (e) => x(parseInt(e.target.value)),
                   },
                   n.createElement(
                     "option",
@@ -13980,7 +14010,7 @@
                   )
                 )
               ),
-            L &&
+            W &&
               n.createElement(
                 "div",
                 { className: Ma.OptionBlock },
@@ -13991,12 +14021,12 @@
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: (0, c.Z)(Ma.ValueInput, !f && Ma.Invalid),
-                  value: g,
-                  onChange: (e) => w(e.target.value),
+                  className: (0, c.Z)(Ma.ValueInput, !E && Ma.Invalid),
+                  value: v,
+                  onChange: (e) => z(e.target.value),
                 })
               ),
-            D &&
+            R &&
               n.createElement(
                 "div",
                 { className: Ma.OptionBlock },
@@ -14007,11 +14037,26 @@
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: (0, c.Z)(Ma.ValueInput, !_ && Ma.Invalid),
-                  value: d,
-                  onChange: (e) => M(e.target.value),
+                  className: (0, c.Z)(Ma.ValueInput, !B && Ma.Invalid),
+                  value: S,
+                  onChange: (e) => F(e.target.value),
                 })
-              )
+              ),
+            n.createElement(
+              "div",
+              { className: Ma.OptionBlock },
+              n.createElement(
+                "div",
+                { className: Ma.OptionDetails },
+                (0, l.Xx)("#SteamLearn_ScheduledTrain_ActivateThreshold")
+              ),
+              n.createElement("input", {
+                type: "text",
+                className: (0, c.Z)(Ma.ValueInput, !p && Ma.Invalid),
+                value: u,
+                onChange: (e) => L(e.target.value),
+              })
+            )
           );
         };
       var Ta = r(95752),
@@ -14047,25 +14092,19 @@
       const Ra = (e) => {
           const { nPublishedVersion: t, msgWorkingProjectConfig: r } = br(),
             [a, i] = n.useState(!1),
-            [s, o] = n.useState(),
-            d = xt(e.nProjectID, e.nFetchID);
+            s = xt(e.nProjectID, e.nFetchID),
+            [o, d] = n.useState("");
           n.useEffect(() => {
-            o(
-              setInterval(() => {
-                return (
-                  (t = e.nProjectID),
-                  (r = e.nFetchID),
-                  void ct.U.invalidateQueries([vt, t, r])
-                );
-                var t, r;
-              }, 1e4)
-            );
-          }, [e.nProjectID, e.nFetchID]),
-            n.useEffect(() => {
-              !d.isSuccess ||
-                (3 != d.data.status() && 4 != d.data.status()) ||
-                clearInterval(s);
-            }, [d.isSuccess, d.data, s]);
+            const t = setInterval(() => {
+              return (
+                (t = e.nProjectID),
+                (r = e.nFetchID),
+                void ct.U.invalidateQueries([vt, t, r])
+              );
+              var t, r;
+            }, 3e3);
+            return () => clearInterval(t);
+          }, [e.nProjectID, e.nFetchID]);
           if (0 == t)
             return n.createElement(
               "div",
@@ -14078,7 +14117,7 @@
               { className: Ta.StatusMessage },
               (0, l.Xx)("#SteamLearn_Status_Fetch_Status_None")
             );
-          const u = d.data;
+          const u = s.data;
           let _ = (0, l.Xx)("#SteamLearn_Status_Fetch_Status_Unknown"),
             p = Ta.Unknown;
           if (u)
@@ -14128,40 +14167,42 @@
           const g =
               u && (5 == u.status() || 2 == u.status() || 6 == u.status()),
             S = u && 8 == u.status();
-          d.isLoading &&
+          s.isLoading &&
             (_ = (0, l.Xx)("#SteamLearn_Status_Fetch_Status_Loading"));
-          let f = "",
-            B = "";
-          const b = u && u.total_rows() > 0;
+          let f = "";
+          const B = u && u.total_rows() > 0;
           if (u && !S) {
             const e = u.total_rows_processed() / u.total_rows(),
               t = Date.now() / 1e3 - u.start_time(),
               r = t / e;
             if (u.end_time()) {
-              f = (0, l.Xx)(
+              const e = (0, l.Xx)(
                 "#SteamLearn_Status_Train_Fetch_Duration",
                 xa(u.end_time() - u.start_time())
               );
-              const e = new Date(1e3 * u.end_time());
-              B = (0, l.Xx)(
+              e != o && d(e);
+              const t = new Date(1e3 * u.end_time());
+              f = (0, l.Xx)(
                 "#SteamLearn_Status_Train_Fetch_Completed",
-                e.getHours() +
+                t.getHours() +
                   ":" +
-                  e.getMinutes().toString().padStart(2, "0") +
+                  t.getMinutes().toString().padStart(2, "0") +
                   ":" +
-                  e.getSeconds().toString().padStart(2, "0") +
+                  t.getSeconds().toString().padStart(2, "0") +
                   ", " +
-                  e.toDateString()
+                  t.toDateString()
               );
             } else {
               let e = r - t;
-              isNaN(e) ||
-                (f = (0, l.Xx)(
+              if (!isNaN(e) && !s.isFetching) {
+                const t = (0, l.Xx)(
                   "#SteamLearn_Status_Train_Fetch_TimeEstimate",
                   xa(e)
-                ));
+                );
+                t != o && d(t);
+              }
               const a = new Date(1e3 * u.start_time());
-              B = (0, l.Xx)(
+              f = (0, l.Xx)(
                 "#SteamLearn_Status_Train_Fetch_Started",
                 a.getHours() +
                   ":" +
@@ -14278,18 +14319,18 @@
                       },
                     })
                   ),
-                  b &&
+                  B &&
                     n.createElement(
                       "div",
                       { className: Ta.ProgressPct },
                       `${(
-                        (100 * u.total_rows_processed()) /
-                        u.total_rows()
+                        (100 * u.total_rows_processed()) / u.total_rows() -
+                        0.5
                       ).toFixed(0)}%`
                     )
                 ),
+                n.createElement("div", { className: Ta.RowProgress }, o),
                 n.createElement("div", { className: Ta.RowProgress }, f),
-                n.createElement("div", { className: Ta.RowProgress }, B),
                 n.createElement(
                   "div",
                   { className: Ta.ShowWorkers },
@@ -14331,7 +14372,7 @@
                         )
                       )
                   ),
-                  b &&
+                  B &&
                     n.createElement(
                       "div",
                       {
@@ -14437,32 +14478,25 @@
               msgWorkingProjectConfig: a,
               msgWorkingProject: i,
             } = br(),
-            [s, o] = n.useState(void 0),
-            d = Ot(e.nProjectID, e.nTrainID),
-            [u, _] = n.useState(-1);
+            s = Ot(e.nProjectID, e.nTrainID),
+            [o, d] = n.useState(-1),
+            [u, _] = n.useState("");
           n.useEffect(() => {
-            -1 == u &&
-              d.data &&
-              (3 == d.data.status() ? _(0) : _(d.data.epochs().length));
-          }, [d, _, u]),
+            -1 == o &&
+              s.data &&
+              (3 == s.data.status() ? d(0) : d(s.data.epochs().length));
+          }, [s, d, o]),
             n.useEffect(() => {
-              o(
-                setInterval(() => {
-                  return (
-                    (t = e.nProjectID),
-                    (r = e.nTrainID),
-                    void ct.U.invalidateQueries([ht, t, r])
-                  );
-                  var t, r;
-                }, 1e4)
-              );
-            }, [e.nProjectID, e.nTrainID]),
-            n.useEffect(() => {
-              s &&
-                d.isSuccess &&
-                (3 == d.data.status() || 4 == d.data.status()) &&
-                (clearInterval(s), o(void 0));
-            }, [d.isSuccess, d.data, s]);
+              const t = setInterval(() => {
+                return (
+                  (t = e.nProjectID),
+                  (r = e.nTrainID),
+                  void ct.U.invalidateQueries([ht, t, r])
+                );
+                var t, r;
+              }, 3e3);
+              return () => clearInterval(t);
+            }, [e.nProjectID, e.nTrainID]);
           const p = n.useCallback(
             (e) => {
               !(function (e, t, r) {
@@ -14496,7 +14530,7 @@
               { className: Ta.StatusMessage },
               (0, l.Xx)("#SteamLearn_Status_Train_Status_None")
             );
-          const g = d.data;
+          const g = s.data;
           let S,
             f,
             B = (0, l.Xx)("#SteamLearn_Status_Train_Status_Unknown"),
@@ -14527,17 +14561,16 @@
                 (B = (0, l.Xx)("#SteamLearn_Status_Train_Status_StoppedEarly")),
                   (b = Ta.Complete);
             }
-          d.isLoading &&
+          s.isLoading &&
             (B = (0, l.Xx)("#SteamLearn_Status_Train_Status_Loading"));
           let v = 0,
             h = 0,
             E = 0,
-            y = 0,
-            N = "";
-          const j = 500;
+            y = 0;
+          const N = 500;
           if (g)
-            if (0 != u) {
-              const e = u > g.epochs().length ? void 0 : g.epochs()[u - 1];
+            if (0 != o) {
+              const e = o > g.epochs().length ? void 0 : g.epochs()[o - 1];
               if (e) {
                 (v = e.train_batches().length),
                   (h = g.train_batch_count() / 100),
@@ -14548,83 +14581,86 @@
                   a = (v + E) / (h + y),
                   n = Date.now() / 1e3 - e.start_time(),
                   i = n / a;
-                if (e.end_time())
-                  N = (0, l.Xx)(
+                if (e.end_time()) {
+                  const t = (0, l.Xx)(
                     "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
                     xa(e.end_time() - e.start_time())
                   );
-                else {
+                  t != u && _(t);
+                } else if (!s.isFetching) {
                   let e = i - n;
-                  isNaN(e) ||
-                    (N = (0, l.Xx)(
+                  if (!isNaN(e)) {
+                    const t = (0, l.Xx)(
                       "#SteamLearn_Status_Train_BatchCurrent_TimeEstimate",
                       xa(e)
-                    ));
+                    );
+                    t != u && _(t);
+                  }
                 }
-                const s = Oa(
+                const o = Oa(
                     e.train_batches().map((e) => e.loss()),
-                    j
+                    N
                   ).map((e, t) => ({ index: t, Train: e })),
-                  o = Oa(
+                  c = Oa(
                     e.validate_batches().map((e) => e.loss()),
-                    j
+                    N
                   ).map((e, t) => ({ index: t, Validate: e })),
-                  c =
+                  m =
                     e.train_batches().length > 0
                       ? e.train_batches()[e.train_batches().length - 1]
                       : void 0,
-                  m =
+                  d =
                     e.validate_batches().length > 0
                       ? e.validate_batches()[e.validate_batches().length - 1]
                       : void 0;
                 S = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [0, Math.min(j, e.train_batches().length) / t],
-                    data: s,
+                    XAxisDomain: [0, Math.min(N, e.train_batches().length) / t],
+                    data: o,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: null == c ? void 0 : c.loss(),
+                    nFinalValue: null == m ? void 0 : m.loss(),
                   },
                   {
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(j, e.validate_batches().length) / r,
+                      Math.min(N, e.validate_batches().length) / r,
                     ],
-                    data: o,
+                    data: c,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: null == m ? void 0 : m.loss(),
+                    nFinalValue: null == d ? void 0 : d.loss(),
                   },
                 ];
-                const d = Oa(
+                const p = Oa(
                     e.train_batches().map((e) => Pa(e.accuracy())),
-                    j
+                    N
                   ).map((e, t) => ({ index: t, Train: e })),
-                  u = Oa(
+                  B = Oa(
                     e.validate_batches().map((e) => Pa(e.accuracy())),
-                    j
+                    N
                   ).map((e, t) => ({ index: t, Validate: e }));
                 f = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [0, Math.min(j, e.train_batches().length) / t],
-                    data: d,
+                    XAxisDomain: [0, Math.min(N, e.train_batches().length) / t],
+                    data: p,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: Pa(null == c ? void 0 : c.accuracy()),
+                    nFinalValue: Pa(null == m ? void 0 : m.accuracy()),
                   },
                   {
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(j, e.validate_batches().length) / r,
+                      Math.min(N, e.validate_batches().length) / r,
                     ],
-                    data: u,
+                    data: B,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: Pa(null == m ? void 0 : m.accuracy()),
+                    nFinalValue: Pa(null == d ? void 0 : d.accuracy()),
                   },
                 ];
               }
@@ -14683,10 +14719,10 @@
                   },
                 ]));
             }
-          const M = g && 3 == g.status(),
-            w = g && g.live(),
-            C = g && 2 == g.status(),
-            T =
+          const j = g && 3 == g.status(),
+            M = g && g.live(),
+            w = g && 2 == g.status(),
+            C =
               r && i && i.serializeBase64String() != r.serializeBase64String();
           return n.createElement(
             "div",
@@ -14702,9 +14738,9 @@
                   { className: Ta.OverallStatus },
                   (0, l.Xx)("#SteamLearn_Status_Train_Status", e.nTrainID)
                 ),
-                !T &&
-                  M &&
-                  !w &&
+                !C &&
+                  j &&
+                  !M &&
                   n.createElement(
                     "div",
                     {
@@ -14713,15 +14749,15 @@
                     },
                     (0, l.Xx)("#SteamLearn_Status_SetInferenceVersion")
                   ),
-                T &&
-                  M &&
-                  !w &&
+                C &&
+                  j &&
+                  !M &&
                   n.createElement(
                     "div",
                     { className: Ta.WarningMessage },
                     (0, l.Xx)("#SteamLearn_Status_SaveOrDiscardFirst")
                   ),
-                C &&
+                w &&
                   n.createElement(
                     "div",
                     {
@@ -14742,7 +14778,7 @@
                     },
                     (0, l.Xx)("#SteamLearn_Status_Train_EndEarly")
                   ),
-                w &&
+                M &&
                   n.createElement(
                     "div",
                     { onClick: () => p(0), className: Ta.TrainLive },
@@ -14783,9 +14819,9 @@
                     {
                       className: (0, c.Z)(
                         Ta.EpochOption,
-                        0 == u && Ta.Selected
+                        0 == o && Ta.Selected
                       ),
-                      onClick: () => _(0),
+                      onClick: () => d(0),
                     },
                     (0, l.Xx)("#SteamLearn_Status_Train_AllEpochs")
                   ),
@@ -14796,16 +14832,16 @@
                       key: `Epoch_${e}`,
                       className: (0, c.Z)(
                         Ta.EpochOption,
-                        u == e && Ta.Selected
+                        o == e && Ta.Selected
                       ),
-                      onClick: () => _(e),
+                      onClick: () => d(e),
                     },
                     (0, l.Xx)("#SteamLearn_Status_Train_EpochOption", e)
                   )
                 )
               ),
             g &&
-              0 != u &&
+              0 != o &&
               n.createElement(
                 "div",
                 { className: Ta.BatchStatus },
@@ -14879,7 +14915,7 @@
                         )
                       )
                   ),
-                n.createElement("div", { className: Ta.BatchStatusRow }, N)
+                n.createElement("div", { className: Ta.BatchStatusRow }, u)
               ),
             g &&
               S &&
@@ -14932,8 +14968,8 @@
             l = zt(r, a),
             m = c.data,
             d = l.data;
-          return (
-            n.useEffect(() => {
+          if (
+            (n.useEffect(() => {
               const e = parseInt(s.fetch_id);
               let t = e;
               m && (isNaN(e) || 0 == e) && (t = Math.max(0, ...m.versions()));
@@ -14945,45 +14981,46 @@
                     Ga.SteamLearnProjectTrainStatus(s.id, s.version, t, a)
                   );
             }, [s, m, d, o]),
-            c.isLoading || l.isLoading
-              ? n.createElement("div", null, "LOADING")
-              : c.isSuccess && l.isSuccess
-              ? n.createElement(
-                  "div",
-                  { className: Ta.ProjectTrain },
-                  n.createElement(Ra, {
-                    nProjectID: r,
-                    nFetchID: parseInt(s.fetch_id),
-                    arrAllFetchIDs: m.versions(),
-                    fnSetFetchID: (e) => {
-                      o.push(
-                        Ga.SteamLearnProjectTrainStatus(
-                          s.id,
-                          s.version,
-                          e,
-                          s.train_id
-                        )
-                      );
-                    },
-                  }),
-                  n.createElement("div", { className: Ta.Separator }),
-                  n.createElement(Xa, {
-                    nProjectID: r,
-                    nTrainID: parseInt(s.train_id),
-                    arrAllTrainIDs: d.versions(),
-                    fnSetTrainID: (e) => {
-                      o.push(
-                        Ga.SteamLearnProjectTrainStatus(
-                          s.id,
-                          s.version,
-                          s.fetch_id,
-                          e
-                        )
-                      );
-                    },
-                  })
-                )
-              : null
+            c.isLoading || l.isLoading)
+          )
+            return n.createElement("div", null, "LOADING");
+          if (!c.isSuccess || !l.isSuccess) return null;
+          const u = parseInt(s.fetch_id);
+          return n.createElement(
+            "div",
+            { className: Ta.ProjectTrain },
+            u > 0 &&
+              n.createElement(Ra, {
+                nProjectID: r,
+                nFetchID: u,
+                arrAllFetchIDs: m.versions(),
+                fnSetFetchID: (e) => {
+                  o.push(
+                    Ga.SteamLearnProjectTrainStatus(
+                      s.id,
+                      s.version,
+                      e,
+                      s.train_id
+                    )
+                  );
+                },
+              }),
+            n.createElement("div", { className: Ta.Separator }),
+            n.createElement(Xa, {
+              nProjectID: r,
+              nTrainID: parseInt(s.train_id),
+              arrAllTrainIDs: d.versions(),
+              fnSetTrainID: (e) => {
+                o.push(
+                  Ga.SteamLearnProjectTrainStatus(
+                    s.id,
+                    s.version,
+                    s.fetch_id,
+                    e
+                  )
+                );
+              },
+            })
           );
         };
       var Ua = r(20589);
@@ -15059,7 +15096,7 @@
                 value: i,
                 onChange: (r) =>
                   ((r) => {
-                    const a = qt(r, 1, 99);
+                    const a = qt(r, 0, 99);
                     a &&
                       (t
                         .snapshot_filter()

@@ -2506,6 +2506,37 @@ html.responsive.touch
 .saleitembrowser_ResetItemsCtn_1XX4L:hover .saleitembrowser_ResetItems_1Yy62 {
   opacity: 100%;
 }
+.saleitembrowser_SaleItemBrowserDebug_13HjZ {
+  padding: 8px;
+  margin-bottom: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.saleitembrowser_SaleItemBrowserDebug_13HjZ
+  .saleitembrowser_ShowHideLink_30XOg {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+}
+.saleitembrowser_SaleItemBrowserDebug_13HjZ .saleitembrowser_QueryTerm_12POA {
+  display: flex;
+  padding-bottom: 4px;
+}
+.saleitembrowser_SaleItemBrowserDebug_13HjZ
+  .saleitembrowser_QueryTerm_12POA
+  .saleitembrowser_Name_1wMuf {
+  padding-right: 16px;
+  width: 128px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.saleitembrowser_SaleItemBrowserDebug_13HjZ
+  .saleitembrowser_WGTesterLink_2UmRv {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
 .salesectioneventschedule_SaleSchedCtn_3yzeu {
   height: 480px;
   background-image: radial-gradient(
