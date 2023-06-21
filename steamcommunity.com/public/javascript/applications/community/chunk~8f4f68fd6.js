@@ -341,6 +341,7 @@
         x: () => K,
         rc: () => Q,
         Fg: () => $,
+        ft: () => pe,
         Pi: () => ue,
         sA: () => _e,
         tL: () => x,
@@ -2560,6 +2561,9 @@
       }
       function _e(e) {
         return e.viewed && e.viewed + j < (0, X.QU)();
+      }
+      function pe(e) {
+        return ce(e) + e.pending_gifts + e.pending_invites > 0;
       }
     },
     77427: (e, t, i) => {

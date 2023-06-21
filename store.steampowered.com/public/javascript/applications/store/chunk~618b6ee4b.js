@@ -16927,6 +16927,8 @@
         GetDefaultTab() {
           const e = this.GetFlavorsForActiveTab();
           if (!e) return null;
+          const t = (0, It.ks)(this.props.history, "flavor");
+          if (t && e.includes(t)) return t;
           return e.find((e) => de.z5.find((t) => t.flavor === e)) || null;
         }
         RenderTabHeaders() {

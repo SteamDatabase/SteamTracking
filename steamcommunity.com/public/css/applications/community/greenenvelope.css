@@ -103,32 +103,24 @@
   transition-property: background;
   transition-duration: 250ms;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:not(
-    .greenenvelope_Disabled_3KMlw
-  ):hover
-  .greenenvelope_SVGNotifications_D68s6
-  g {
-  animation-iteration-count: infinite;
-}
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:not(
-    .greenenvelope_Disabled_3KMlw
-  ):hover
-  .greenenvelope_SVGNotifications_D68s6
-  g
-  .SVGIcon_Notification_Uvula {
-  animation-iteration-count: infinite;
-}
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S svg {
   fill: #fff;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:hover
+  .greenenvelope_SVGNotifications_D68s6
+  g,
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S.greenenvelope_AnimateBell_2YD8w
   .greenenvelope_SVGNotifications_D68s6
   g {
   animation: greenenvelope_NotificationBellAnimation_1a4Fd 5s ease-in;
   animation-iteration-count: 1;
   transform-origin: 50% 0%;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:hover
+  .greenenvelope_SVGNotifications_D68s6
+  g
+  .SVGIcon_Notification_Uvula,
+.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S.greenenvelope_AnimateBell_2YD8w
   .greenenvelope_SVGNotifications_D68s6
   g
   .SVGIcon_Notification_Uvula {
@@ -141,6 +133,20 @@
 }
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Disabled_3KMlw svg {
   fill: #d3d3d3;
+}
+.greenenvelope_EmptyNotificationsCtn_1-M8K {
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.greenenvelope_EmptyNotificationsCtn_1-M8K
+  .greenenvelope_EmptyNotificationsTitle_m0jm4 {
+  font-weight: 400;
+}
+.greenenvelope_EmptyNotificationsCtn_1-M8K
+  .greenenvelope_EmptyNotificationsBody_3YAs6 {
+  padding-top: 15px;
+  color: #b8bcbf;
 }
 @keyframes greenenvelope_NotificationBellAnimation_1a4Fd {
   0% {
