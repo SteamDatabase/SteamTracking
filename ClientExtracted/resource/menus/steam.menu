@@ -7,8 +7,8 @@
 
 		ChangeUser						{	text="#steam_menu_changeuser"			shellcmd="steam://changeuser" }
 		SignOut							{	text="#steam_menu_signout"				shellcmd="steam://signout" }
-		GoOffline						{	text="#SteamUI_OfflineMode_GoOffline"	shellcmd="steam://gooffline" }
-		GoOnline						{	text="#SteamUI_OfflineMode_GoOnline"	shellcmd="steam://goonline" }
+		GoOffline						{	text="#SteamUI_OfflineMode_GoOffline"	shellcmd="steam://open/gooffline" }
+		GoOnline						{	text="#SteamUI_OfflineMode_GoOnline"	shellcmd="steam://open/goonline" }
 
 		Divider							{}
 

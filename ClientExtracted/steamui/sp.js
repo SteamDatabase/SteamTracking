@@ -8954,7 +8954,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, he.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1687219145),
+          s = parseInt(1687305783),
           c = s && (0, tr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = i.sSteamBuildDate,
           d = "linux" == g.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -11349,30 +11349,37 @@
         );
       }
       function Go(e) {
-        const { friendPersona: t, dialog: n } = e,
-          a = null == t ? void 0 : t.GetCurrentGameRichPresence(),
-          r = (0, E.SZ)(() => n.userGameInfo),
-          i = (0, E.SZ)(() => n.gameServerItem),
-          l =
-            (r && r.gameText) ||
-            (null == t ? void 0 : t.GetCurrentGameName()) ||
-            i.name;
+        const { dialog: t } = e,
+          n = (0, ce.rb)(t.steamid),
+          a = (0, E.SZ)(() =>
+            null == n ? void 0 : n.GetCurrentGameRichPresence()
+          ),
+          r = (0, E.SZ)(() => {
+            var e;
+            return (
+              (null === (e = t.userGameInfo) || void 0 === e
+                ? void 0
+                : e.gameText) ||
+              (null == n ? void 0 : n.GetCurrentGameName()) ||
+              t.gameServerItem.name
+            );
+          });
         return o.createElement(
           de.BodyText,
           { className: Uo.GameInfoDialogContents },
           o.createElement(
             de.Field,
             { label: (0, he.Localize)("#GameInfoDialog_GameName") },
-            l
+            r
           ),
-          t &&
+          n &&
             o.createElement(
               de.Field,
               { label: (0, he.Localize)("#GameInfoDialog_Status") },
               a
             ),
-          o.createElement(Oo, { dialog: n }),
-          o.createElement(Fo, { dialog: n })
+          o.createElement(Oo, { dialog: t }),
+          o.createElement(Fo, { dialog: t })
         );
       }
       function Wo(e) {
@@ -11414,8 +11421,17 @@
         var t;
         const { dialog: n } = e,
           [a, r] = o.useState(),
-          i = (0, ce.k)(n.steamid),
-          l = (0, E.SZ)(() => !i || i.persona.is_in_joinable_game),
+          i = (0, E.SZ)(() => {
+            var e;
+            return (
+              null ===
+                (e = ce.i8.GetFriendState(n.steamid).persona
+                  .is_in_joinable_game) ||
+              void 0 === e ||
+              e
+            );
+          }),
+          l = (0, ce.NP)(n.steamid),
           s = (0, E.SZ)(() => {
             var e;
             return (
@@ -11424,7 +11440,7 @@
                 : e.bPassword) || 0 != n.password.length
             );
           }),
-          c = l && s,
+          c = i && s,
           m = (0, E.SZ)(() => n.userGameInfo),
           d = (0, E.SZ)(() => n.connectAttemptStatus),
           u = (0, E.SZ)(() => n.bPingInProgress),
@@ -11486,8 +11502,8 @@
             }
           });
         let v = "";
-        i
-          ? (v = (0, he.Localize)("#GameInfoDialog_GameInfo", i.displayName))
+        l
+          ? (v = (0, he.Localize)("#GameInfoDialog_GameInfo", l))
           : (null === (t = n.gameServerItem) || void 0 === t ? void 0 : t.ip)
           ? (v = (0, he.Localize)(
               "#GameInfoDialog_GameInfo",
@@ -11526,10 +11542,7 @@
               o.createElement(
                 de.BodyText,
                 null,
-                o.createElement(Go, {
-                  friendPersona: null == i ? void 0 : i.persona,
-                  dialog: n,
-                })
+                o.createElement(Go, { dialog: n })
               ),
               c &&
                 !(null == m ? void 0 : m.bNonSteamServer) &&
@@ -15329,13 +15342,12 @@
               }),
         $s = () => {
           const [e, t] = o.useState(),
-            n = (0, ce.H0)(),
-            a = (0, E.SZ)(() => n.displayName);
-          let r = (0, g.IsSteamChina)();
+            n = (0, ce.sO)();
+          let a = (0, g.IsSteamChina)();
           return (
             o.useEffect(() => {
-              a && t(a);
-            }, [a]),
+              n && t(n);
+            }, [n]),
             o.createElement(Vs, {
               title: "Profile Supernav",
               name: e || "#Menu_Profile",
@@ -15345,29 +15357,29 @@
                 {
                   name: "#Menu_Activity",
                   urlName: "SteamIDFriendsPage",
-                  visible: !r,
+                  visible: !a,
                 },
                 { name: "#Menu_Profile", urlName: "SteamIDMyProfile" },
                 { name: "#Menu_Friends", urlName: "SteamIDFriendsList" },
                 {
                   name: "#Menu_Groups",
                   urlName: "SteamIDGroupsPage",
-                  visible: !r,
+                  visible: !a,
                 },
                 {
                   name: "#Menu_Content",
                   urlName: "CommunityScreenshots",
-                  visible: !r,
+                  visible: !a,
                 },
                 {
                   name: "#Menu_Badges",
                   urlName: "SteamIDBadgePage",
-                  visible: !r,
+                  visible: !a,
                 },
                 {
                   name: "#Menu_Inventory",
                   urlName: "CommunityInventory",
-                  visible: !r,
+                  visible: !a,
                 },
               ],
             })
@@ -15679,12 +15691,11 @@
           );
         },
         gc = (e) => {
-          const t = (0, ce.H0)(),
-            n = (0, E.SZ)(() => t.persona.m_ePersonaState == e.personaState);
+          const t = (0, ce.Wm)("m_ePersonaState") == e.personaState;
           return o.createElement(
             "div",
             { className: ic().Icon },
-            n && o.createElement(or.Checkmark, null)
+            t && o.createElement(or.Checkmark, null)
           );
         },
         hc = (e) =>
@@ -16192,9 +16203,9 @@
             : (t && o.createElement("div", { className: Gc().WalletBalance }),
               null);
         }),
-        qc = (0, X.observer)(() => {
-          const e = (0, ce.H0)(),
-            t = (0, E.SZ)(() => e.persona),
+        qc = (0, X.observer)(function () {
+          const e = (0, ce.HR)(),
+            t = (0, ce.sO)(),
             [n, a] = o.useState(!1);
           return o.createElement(
             se.HP,
@@ -16212,7 +16223,7 @@
                 parentalFeature: c.k_EParentalBlockNever,
                 popupClass: (0, U.default)(
                   Gc().AccountMenuPopup,
-                  (0, yc.GetPersonaClass)(e.persona)
+                  (0, yc.GetPersonaClass)(e)
                 ),
                 onShow: () => a(!0),
                 onHide: () => a(!1),
@@ -16222,19 +16233,15 @@
                 {
                   className: (0, U.default)(
                     Gc().AccountMenu,
-                    (0, yc.GetPersonaClass)(e.persona)
+                    (0, yc.GetPersonaClass)(e)
                   ),
                 },
                 o.createElement(fc.SteamAvatarHolder, {
-                  persona: t,
+                  persona: e,
                   size: "X-Small",
                   statusPosition: "right",
                 }),
-                o.createElement(
-                  "div",
-                  { className: Gc().PersonaName },
-                  e.displayName
-                ),
+                o.createElement("div", { className: Gc().PersonaName }, t),
                 o.createElement(or.Chevron, {
                   className: Gc().Chevron,
                   direction: "down",
@@ -19151,11 +19158,18 @@
         );
       }
       function Kd(e) {
-        const { overview: t, requestingUser: n, onClose: a } = e,
+        const { overview: t, requestingUserSteamID: n, onClose: a } = e,
           [r] = (0, Z.oy)("bParenthesizeNicknames"),
           [i, l] = (0, Z.HQ)("broadcast_permissions"),
           [s, c] = o.useState(i),
-          m = o.useCallback(() => {
+          m = (0, ce.rb)(n),
+          d = (0, E.SZ)(() => {
+            var e;
+            return null === (e = ce.i8.GetFriendState(n)) || void 0 === e
+              ? void 0
+              : e.nickname;
+          }),
+          u = o.useCallback(() => {
             l(s).then((e) => {
               e &&
                 SteamClient.Messaging.PostMessage(
@@ -19178,7 +19192,7 @@
             "div",
             { className: qd.Requestor },
             o.createElement(fc.SteamAvatarHolder, {
-              persona: n.persona,
+              persona: m,
               statusPosition: "right",
             }),
             o.createElement(
@@ -19187,8 +19201,8 @@
               (0, he.LocalizeReact)(
                 "#BroadcastFirstTime_Requestor",
                 o.createElement(Zd.PersonaName, {
-                  persona: n.persona,
-                  strNickname: n.nickname,
+                  persona: m,
+                  strNickname: d,
                   bParenthesizeNicknames: r,
                 }),
                 t.display_name
@@ -19241,7 +19255,7 @@
             ),
             o.createElement(
               de.Button,
-              { className: qd.OKButton, onClick: m },
+              { className: qd.OKButton, onClick: u },
               (0, he.Localize)("#Button_OK")
             )
           )
@@ -21561,7 +21575,7 @@
           r = (0, E.SZ)(() => n.BWindowVisible(a)),
           i = jr(400, 450, 400, 450),
           [l, s] = o.useState(),
-          c = (0, ce.k)(l),
+          c = (0, ce.EM)(l),
           m = (0, gt.kC)(e.appid);
         o.useEffect(() => {
           const e = SteamClient.Messaging.RegisterForMessages(
@@ -21589,7 +21603,7 @@
               },
               o.createElement(Kd, {
                 overview: m,
-                requestingUser: c,
+                requestingUserSteamID: l,
                 onClose: d,
               })
             )
@@ -22424,7 +22438,7 @@
           o = (0, Pd.E)(e, {
             beforeNavigate: () => {
               (r && Es.Config.SILENT_STARTUP) ||
-                s.nm.WindowStore.EnsureMainWindowCreated(!1);
+                s.nm.WindowStore.EnsureMainWindowCreated(!r);
             },
             getAdditionalEntries: (e) => {
               const {
@@ -23738,58 +23752,49 @@
             height: a.nScreenHeight,
             left: 0,
             top: 0,
-          },
-          d = null;
-        0 == a.browserInfo.m_unPID &&
-          ((r = c.EBrowserType.EBrowserType_DirectHWND),
-          (i.left = 10),
-          (i.top = 30),
-          (d = {
-            onClose: () =>
-              s.nm.WindowStore.RemoveTestWindowsOverlayBrowser(a.appid),
-          }));
-        const u = n.params.browserInfo,
-          { popup: p, element: _ } = I_(
+          };
+        const s = n.params.browserInfo,
+          { popup: d, element: u } = I_(
             "overlay",
             n,
             T_.GamepadUI,
             {
               title:
                 "SP Overlay: " +
-                u.m_unPID +
+                s.m_unPID +
                 "/" +
-                +u.m_nBrowserID +
+                +s.m_nBrowserID +
                 "/" +
-                +u.m_eBrowserType,
+                +s.m_eBrowserType,
               dimensions: i,
               replace_existing_popup: !1,
-              target_browser: u,
+              target_browser: s,
               eCreationFlags:
                 m.EPopupCreationFlags.BackgroundTransparent |
                 m.EPopupCreationFlags.ApplyBrowserScaleToDimensions,
               browserType: r,
               strUserAgent: e.instance.params.strUserAgentIdentifier,
             },
-            d
+            null
           );
         return (
           o.useEffect(
             () =>
               (0, v.autorun)(() => {
-                null == p ||
-                  p.SteamClient.Window.ResizeTo(
+                null == d ||
+                  d.SteamClient.Window.ResizeTo(
                     a.nScreenWidth,
                     a.nScreenHeight,
                     !0
                   );
               }),
-            [p, a]
+            [d, a]
           ),
-          _
+          u
             ? l.createPortal(
                 o.createElement(
                   D_,
-                  { ownerWindow: p, instance: n },
+                  { ownerWindow: d, instance: n },
                   o.createElement(
                     V_,
                     null,
@@ -23800,7 +23805,7 @@
                     })
                   )
                 ),
-                _
+                u
               )
             : null
         );

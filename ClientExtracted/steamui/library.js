@@ -1,4 +1,4 @@
-var CLSTAMP = "8139287";
+var CLSTAMP = "8142485";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4495,9 +4495,9 @@ var CLSTAMP = "8139287";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 19 2023 : 16:59:05",
-                BUILD_TIME_UTC: "Jun 19 2023 : 23:59:05",
-                BUILD_RTIME_UTC: 1687219145,
+                BUILD_TIME_LOCAL: "Jun 20 2023 : 17:03:03",
+                BUILD_TIME_UTC: "Jun 21 2023 : 00:03:03",
+                BUILD_RTIME_UTC: 1687305783,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -21493,8 +21493,8 @@ var CLSTAMP = "8139287";
                   e.availTop && (r = e.availTop),
                   (s = t),
                   (c = r),
-                  (u = t + e.availWidth),
-                  (d = r + e.availHeight);
+                  (u = e.availWidth),
+                  (d = e.availHeight);
               }
             (t.bOverlapHorizontal || t.bOverlapVertical) && (a = l = void 0);
             let h = r.getBoundingClientRect();
@@ -54342,9 +54342,9 @@ var CLSTAMP = "8139287";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 19 2023 : 16:59:05",
-                    BUILD_TIME_UTC: "Jun 19 2023 : 23:59:05",
-                    BUILD_RTIME_UTC: 1687219145,
+                    BUILD_TIME_LOCAL: "Jun 20 2023 : 17:03:03",
+                    BUILD_TIME_UTC: "Jun 21 2023 : 00:03:03",
+                    BUILD_RTIME_UTC: 1687305783,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54864,7 +54864,7 @@ var CLSTAMP = "8139287";
       {
         27: "b706157360c0d512694c",
         33: "80be52ce827324b50a40",
-        58: "8a5ec818d57c4aa9a0bc",
+        58: "2620695c7044b12d0d5e",
         131: "a20004cabe570df19a56",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -54937,7 +54937,7 @@ var CLSTAMP = "8139287";
         5513: "ec0071187919eb9c037e",
         5547: "4a099cabe4e49f89668c",
         5590: "29a2fd485d240d20731a",
-        5742: "24d223d719c9387b19f7",
+        5742: "91fdbbf801e84388c2a8",
         5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
@@ -54961,7 +54961,7 @@ var CLSTAMP = "8139287";
         7781: "7e2822a033213ca15cd6",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "66683a0e2b89113be9fe",
+        7962: "cac49dc31853d2aa7384",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "e820a5f472482fc395d7",

@@ -446,6 +446,7 @@
  T SDL_GetClosestFullscreenDisplayMode
  T SDL_GetCurrentAudioDriver
  T SDL_GetCurrentDisplayMode
+ T SDL_GetCurrentDisplayOrientation
  T SDL_GetCurrentRenderOutputSize
  T SDL_GetCurrentVideoDriver
  T SDL_GetCursor
@@ -459,7 +460,6 @@
  T SDL_GetDisplayForRect
  T SDL_GetDisplayForWindow
  T SDL_GetDisplayName
- T SDL_GetDisplayOrientation
  T SDL_GetDisplayUsableBounds
  T SDL_GetDisplays
  T SDL_GetError
@@ -548,6 +548,7 @@
  T SDL_GetModState
  T SDL_GetMouseFocus
  T SDL_GetMouseState
+ T SDL_GetNaturalDisplayOrientation
  T SDL_GetNumAllocations
  T SDL_GetNumAudioDevices
  T SDL_GetNumAudioDrivers
@@ -1240,6 +1241,8 @@
  memset
  memset_pattern4
  mkdir
+ modf
+ modff
  nanosleep
  nanosleep$UNIX2003
  objc_alloc

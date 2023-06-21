@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-@Y
-@Y
+Y
+Y
 __stubs
 __TEXT
 __stub_helper
@@ -2383,13 +2383,11 @@ sc_schinese
 
 @
 @
+z
 
-i
 
 @
 Ic
-W
-@
 
 0
 0

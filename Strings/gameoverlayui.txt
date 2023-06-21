@@ -11,8 +11,8 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
-@1+
-@1+
+P1+
+P1+
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -9898,8 +9898,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jun 19 2023
-15:34:20
+Jun 20 2023
+16:45:14
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13795,10 +13795,10 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-}.)
-t*)
 0
 0
+5C
+.
 .
 .
 .
@@ -13807,12 +13807,14 @@ p
 0
 p
 0
-q!
+#!
 .
-iB
+.&
+?B
+@&
+T-
 &
 &
-&
 j
 j
 j
@@ -13822,9 +13824,12 @@ j
 j
 j
 j
+z&
 ~.
 Ic
 0
+Q%
+n$
 p
 0
 j
@@ -13833,8 +13838,15 @@ j
 j
 j
 j
+a%
+'A
 j
 j
+H%
+,%
+y#
+E#
+D#
 %
 %
 %
@@ -13843,8 +13855,7 @@ j
 %
 %
 %
-%
-$#
+;#
 j
 j
 j
@@ -13893,14 +13904,13 @@ j
 j
 j
 j
-M%
-~@
+=$
 j
 j
 j
 j
++$
 $
-|$
 j
 j
 j
@@ -13920,12 +13930,11 @@ j
 j
 j
 j
-"@
-j$
 0
 A9]
+U
 $
-O
+Z#
 d
 j
 j
@@ -13971,8 +13980,8 @@ p
 p
 [#
 Z#
-x
 @
+/
 a"
 !
 !
@@ -13994,8 +14003,6 @@ Mce
 /
 "
 0
-H)
-G)
 0
 "
 "
@@ -14035,6 +14042,7 @@ Hi
 "
 "
 "
+">
 &!
 !
 j
@@ -14089,6 +14097,7 @@ j
 j
 j
 j
+('
 0
 0
 AT=
@@ -14099,7 +14108,11 @@ AT=
 D
 @
 @
-<
+
+r
+j
+b
+Y
 @
 Hc
 Hc
@@ -14132,14 +14145,17 @@ IcE
 @
 @
 V
-H;5b(%
+%
 =
 =
+$
 !
 -
 @
 &
+,
 5
+I*
 @
 M9e
 @
@@ -14335,36 +14351,33 @@ P
 |
 @
 @
-v
+m
 
 d
-fD9-cp(
-fD9-Oo(
-y
-I
+r(
+fD9%Mu(
+fD9-6o(
 
 
 
-Q
+!
 A+M
 
 
-
-
-
-t7f9'.(
-t7f9&(
-w'
+t7f9j%(
+H
+F
+=
 j
 j
 j
 j
 j
 j
-I'
 =
 0
-f
+b
+M
 j
 j
 j
@@ -14379,6 +14392,7 @@ j
 
 j
 j
+X&
 j
 j
 j
@@ -14395,6 +14409,7 @@ j
 j
 j
 
+I&
 d
 &
 &
@@ -14455,7 +14470,6 @@ j
 
 
 
-(#
 j
 j
 j
@@ -14476,7 +14490,6 @@ j
 j
 j
 j
-o"
 j
 j
 j
@@ -14566,7 +14579,7 @@ j
 j
 j
 j
-E
+;
 
 
 @
@@ -14581,7 +14594,6 @@ E
 @
 @
 @
-|
 @
 @
 @
@@ -14612,7 +14624,6 @@ j
 j
 .
 d
-
 =
 
 =

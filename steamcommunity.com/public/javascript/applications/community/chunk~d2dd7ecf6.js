@@ -22334,7 +22334,7 @@
                   (t = !0);
               }
               t || (o.store_filter = e);
-            }
+            } else Boolean(o.store_filter) && (o.store_filter = void 0);
             "tabs" === o.section_type &&
               o.tabs &&
               o.tabs.forEach((e) => {
@@ -22354,7 +22354,7 @@
                       (a = !0);
                   }
                   a || (e.store_filter = t);
-                }
+                } else Boolean(e.store_filter) && (e.store_filter = void 0);
               }),
               o.enable_faceted_browsing &&
                 (yield U(o, t, o.facets),
