@@ -1505,7 +1505,7 @@
     "AppProperties_EnableOverlay": "Enable the Steam Overlay while in-game",
     "AppProperties_OverlayData": "In-Game Overlay Data",
     "AppProperties_OverlayData_Delete": "Delete",
-    "AppProperties_OverlayData_DeleteConfirm": "Are you sure you want to delete data used by the Steam in-game overlay data for %1$s?",
+    "AppProperties_OverlayData_DeleteConfirm": "Are you sure you want to delete data used by the Steam in-game overlay for %1$s?",
     "AppProperties_OverlayData_Desc": "Data that is used by the in-game overlay for this game, such as what browser tabs are open, windows that have been opened or pinned, and sort order for the game overview.",
     "AppProperties_UseTheatreWhileVR": "Use Desktop Game Theatre while SteamVR is active",
     "AppProperties_SharingNotSupported": "Steam Family Sharing is currently not supported by this title.",

@@ -53134,587 +53134,6 @@ body {
 .login_StatusThrobber_1ijPz {
   background: transparent !important;
 }
-@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-green_TAKgT {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes euladialog_focusAnimation_1zESp {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes euladialog_hoverAnimation_21kJB {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-green_TAKgT {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-.euladialog_EulaIntro_3q_Ir {
-  text-align: center;
-}
-.DesktopUI .euladialog_EulaIntro_3q_Ir {
-  text-align: left;
-}
-.DesktopUI .euladialog_EulaDialogContent_2YXHR {
-  font-size: 14px;
-  color: #b8bcbf;
-}
-.DesktopUI .euladialog_EulaDialogContent_2YXHR .euladialog_EULAScrolling__7lXD {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(14, 20, 27, 0.5);
-}
-.euladialog_EulaModalDialog_3jj_K {
-  flex: 1;
-}
-.euladialog_EulaModalDialog_3jj_K .euladialog_EulaDialogContent_2YXHR {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  height: 0;
-  flex: 1;
-}
-.euladialog_EulaModalDialog_3jj_K.DesktopUI,
-.DesktopUI .euladialog_EulaModalDialog_3jj_K {
-  min-height: 400px;
-  max-height: 700px;
-  height: 76vh;
-}
-.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown,
-.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  padding: 8px 14px;
-  font-size: 13px;
-  line-height: 18px;
-  transition-property: opacity, background, color, box-shadow;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
-}
-.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown:hover,
-.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown:hover {
-  background: #464d58;
-  color: #fff;
-}
-.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown_Arrow,
-.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown_Arrow {
-  position: unset;
-  height: 18px;
-}
-.euladialog_EULAThrobber_1gwU6 {
-  flex: 1;
-}
-.euladialog_EULAScrolling__7lXD {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  flex: 1;
-}
-.BasicUI .euladialog_EULAScrolling__7lXD {
-  margin: 0 -2.8vw;
-  padding: 0 2.8vw;
-}
-.euladialog_EULAContent_1dbgU {
-  padding: 10px;
-  background: #23262e;
-  overflow-wrap: anywhere;
-  border-radius: 2px;
-  flex: 1;
-  transition-property: transform, background-color;
-  transition-duration: 0.32s, 0s;
-  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
-  transform-origin: 12% 50%;
-  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  transform: scale(1) rotateX(0deg);
-}
-.euladialog_EULAContent_1dbgU.gpfocuswithin {
-  animation-name: euladialog_ItemFocusAnim-darkerGrey_JYELp;
-  z-index: 1;
-  animation-name: euladialog_ItemFocusAnim-darkGrey_1ifEm;
-}
-.euladialog_EULAError_1BwVZ {
-  flex: 1;
-  padding: 20px;
-  background: #3d4450;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.euladialog_LanguageFieldContainer_2xwMG {
-  margin-bottom: 10px;
-}
-@keyframes applaunchingdetails_ItemFocusAnim-darkerGrey-nocolor_1FxlL {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnim-darkerGrey_2aeuM {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnim-darkGrey_2IKnK {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnim-grey_4BwNm {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnimBorder-darkGrey_1sMkE {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnim-green_1Gdnr {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes applaunchingdetails_focusAnimation_xE1Fu {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes applaunchingdetails_hoverAnimation_3anto {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.applaunchingdetails_Container_1NEW9 {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: calc(100vh - 40px);
-  justify-content: center;
-  align-items: center;
-}
-.applaunchingdetails_Container_1NEW9,
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterStart_3mGgs:not(
-    .applaunchingdetails_FullscreenEnterActive_3K_3T
-  ),
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitActive_zemdh,
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitDone_3X1sx {
-  transform: translateY(-200px);
-  opacity: 0;
-}
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterActive_3K_3T,
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterDone_1qp33,
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitStart_1mOWz:not(
-    .applaunchingdetails_FullscreenExitActive_zemdh
-  ),
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenAppearDone_136Im {
-  transform: none;
-  opacity: 1;
-}
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterActive_3K_3T {
-  transition: opacity 800ms ease-in, transform 800ms cubic-bezier(0, 0, 0.1, 1);
-  transition-delay: 133.3333333333ms;
-}
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitActive_zemdh {
-  transition: opacity 400ms ease-out, transform 800ms cubic-bezier(0, 0, 0.1, 1);
-}
-.applaunchingdetails_ConfigurationHeader_30C5a {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 16px;
-}
-.applaunchingdetails_ConfigurationName_XPWRZ {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0 auto;
-  margin-top: 6px;
-  color: #b8bcbf;
-  text-align: center;
-}
-.applaunchingdetails_TopSection_16H1c {
-  flex-grow: 1;
-  flex-shrink: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  align-items: center;
-}
-.applaunchingdetails_LogoSpacerTop_1njPa,
-.applaunchingdetails_LogoSpacerBottom_ptAD4 {
-  min-height: 8px;
-  flex-shrink: 1;
-  flex-grow: 0;
-  width: 200px;
-}
-.applaunchingdetails_LogoSpacerTop_1njPa.applaunchingdetails_LogoSpacerTop_1njPa,
-.applaunchingdetails_LogoSpacerBottom_ptAD4.applaunchingdetails_LogoSpacerTop_1njPa {
-  height: 30px;
-  flex-grow: 1;
-}
-.applaunchingdetails_LogoSpacerTop_1njPa.applaunchingdetails_LogoSpacerBottom_ptAD4,
-.applaunchingdetails_LogoSpacerBottom_ptAD4.applaunchingdetails_LogoSpacerBottom_ptAD4 {
-  height: 24px;
-}
-.applaunchingdetails_LogoOrTitleContainer_2uvMX {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 1;
-  height: 87px;
-  min-height: 30px;
-}
-.applaunchingdetails_LogoOrTitleContainer_2uvMX img {
-  margin: auto;
-  height: 100%;
-  max-width: 500px;
-  object-fit: contain;
-}
-.applaunchingdetails_TitleText_2wIEO {
-  font-size: 34px;
-  font-weight: 800;
-  margin: auto;
-  padding: 0 20px;
-  text-align: center;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    to bottom,
-    #fff 0%,
-    #fff 20%,
-    #fff 40%,
-    #eee 60%,
-    #ddd 80%,
-    #ccc 100%
-  );
-  -webkit-background-clip: text;
-}
-.applaunchingdetails_ConfigurationHeaderBold_3E3b6 {
-  font-weight: bold;
-}
-.applaunchingdetails_Divider_1wneT {
-  height: 1px;
-  width: 680px;
-  background: #fff;
-  opacity: 0.2;
-  flex-shrink: 0;
-}
-.applaunchingdetails_TopSection_16H1c .applaunchingdetails_Divider_1wneT {
-  margin-bottom: 0;
-}
-.applaunchingdetails_BottomSection_2HF0k .applaunchingdetails_Divider_1wneT {
-  margin-top: 0;
-}
-@keyframes applaunchingdetails_ShowControlOverviewContainerAnimation_MNeWP {
-  from {
-    opacity: 0;
-    transform: translateX(-80%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-.applaunchingdetails_ControlOverviewContainer_3ixQR {
-  display: flex;
-  flex-shrink: 1;
-  flex-direction: column;
-  padding-bottom: 24px;
-  min-height: 150px;
-  transition: opacity 350ms ease, transform 350ms ease-out;
-  transition-delay: 280ms;
-}
-.applaunchingdetails_ControlOverviewContainer_3ixQR:not(
-    .applaunchingdetails_Visible_2Bi9R
-  ) {
-  transition: none;
-  opacity: 0;
-  transform: scale(0.7);
-}
-.applaunchingdetails_ControlOverviewContainer_3ixQR svg {
-  margin: auto;
-}
-.applaunchingdetails_BottomSection_2HF0k {
-  flex-grow: 4;
-  display: flex;
-  flex-direction: column;
-}
-.applaunchingdetails_BottomSectionChildren_3AOBS {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 10px;
-}
-.applaunchingdetails_LaunchStatus_1ZWPD {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 500;
-  padding-bottom: 20px;
-}
-.applaunchingdetails_SkipProcessingShaderCache_3NZ34.DialogButton {
-  margin-top: 14px;
-  width: auto;
-  min-width: 150px;
-}
-.applaunchingdetails_TemporaryDetails_3Yz5H {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 500;
-  color: #ffc82c;
-  padding-bottom: 12px;
-  padding-top: 6px;
-}
-.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX {
-  min-height: 20px;
-  height: 175px;
-  width: auto;
-  display: flex;
-}
-.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX.applaunchingdetails_SteamDeck_2VNwW {
-  margin: 0 auto -30px auto;
-}
-.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX img {
-  height: 100%;
-  margin: auto;
-}
-.applaunchingdetails_StatusSpinner_hir4W {
-  height: 1.6em;
-  margin-right: 0.5ch;
-  margin-bottom: -0.5em;
-}
-.applaunchingdetails_GyroImage1A_2G_ik {
-  animation-name: applaunchingdetails_gyroAnim2_2_qCH;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-@keyframes applaunchingdetails_gyroAnim2_2_qCH {
-  0% {
-    transform: rotate(2deg);
-  }
-  50% {
-    transform: rotate(-2deg);
-  }
-  100% {
-    transform: rotate(2deg);
-  }
-}
-.applaunchingdetails_TopSection_16H1c,
-.applaunchingdetails_BottomSection_2HF0k {
-  transition: transform 700ms ease;
-}
-.applaunchingdetails_TopSection_16H1c:not(
-    .applaunchingdetails_ShowControlsOverview_2g15H
-  ) {
-  transition: none;
-  transform: translateY(calc(var(--controls-overview-height) / 2));
-}
-.applaunchingdetails_BottomSection_2HF0k:not(
-    .applaunchingdetails_ShowControlsOverview_2g15H
-  ) {
-  transition: none;
-  transform: translateY(calc(var(--controls-overview-height) / -2));
-}
-.applaunchingdetails_BottomSection_2HF0k:not(
-    .applaunchingdetails_ShowControlsOverview_2g15H
-  )
-  .applaunchingdetails_Divider_1wneT {
-  opacity: 0;
-}
 .controllerconfiguratoractionsetselector_ActionSetNameOverIndicators_1Xyoy {
   padding-bottom: 10px;
   padding-left: 32.5px;
@@ -54889,1146 +54308,6 @@ button.controllerconfiguratorvirtualmenus_MainOptionsButton_1OVab svg {
 }
 .controllerconfiguratorvisualizer_deadzones_CompoundSliderContainer_njR46 {
   margin-top: 20px;
-}
-.appdetailshover_AppDetailsHover_38FqI {
-  box-sizing: border-box;
-  padding: 10px;
-  color: #fff;
-  box-shadow: 0 10px 32px 0px #000000ab;
-}
-.appdetailshover_AppDetailsHover_38FqI .appdetailshover_Background_rYBZB {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -3;
-  background: radial-gradient(
-    ellipse farthest-corner at 20% 30%,
-    #4c505b 0%,
-    #34373f 50%,
-    #282c32 100%
-  );
-}
-.appdetailshover_AppDetailsHover_38FqI .appdetailshover_BlurContainer_2HshO {
-  width: 380px;
-  height: 380px;
-  filter: blur(10px) saturate(2);
-  position: absolute;
-  left: -60px;
-  top: -60px;
-  opacity: 0.4;
-  -webkit-mask: radial-gradient(
-    ellipse farthest-corner at 150px 150px,
-    black 0%,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.3) 34%,
-    rgba(0, 0, 0, 0) 64%
-  );
-  mask: radial-gradient(
-    ellipse farthest-corner at 150px 150px,
-    black 0%,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.3) 34%,
-    rgba(0, 0, 0, 0) 64%
-  );
-  mix-blend-mode: screen;
-}
-.appdetailshover_AppDetailsHover_38FqI .appdetailshover_BlurContainer_2HshO * {
-  width: 100%;
-  height: 100%;
-}
-.appdetailsdlcsection_DLCSection_2ycfN {
-  width: 100%;
-  position: relative;
-}
-.appdetailsdlcsection_DLCSection_2ycfN
-  .appdetailsdlcsection_InnerContainer_1dnSK {
-  width: 100%;
-  box-sizing: border-box;
-  min-width: 210px;
-  overflow: hidden;
-  padding: 12px 12px 0 12px;
-  padding-bottom: 10px;
-  border: 1px solid transparent;
-  border-image-source: url("/images/glassborder_01.png");
-  border-image-width: 1px;
-  border-image-repeat: stretch;
-  border-image-slice: 7;
-  background: radial-gradient(
-    100% 80% at 64% 95%,
-    rgba(58, 75, 99, 0.6) 0%,
-    rgba(35, 48, 66, 0.3) 40%,
-    rgba(21, 22, 22, 0.1) 100%
-  );
-}
-.appdetailsdlcsection_DLCSection_2ycfN
-  .appdetailsdlcsection_InnerContainerLower2_3vICQ {
-  padding: 12px 12px 0 12px;
-  padding-bottom: 10px;
-}
-.appdetailsdlcsection_DLCSection_2ycfN .appdetailsdlcsection_Item_Ie7sd {
-  max-width: 220px;
-  font-size: 14px;
-  color: #cacbcd;
-}
-.appdetailsdlcsection_DLCSection_2ycfN .appdetailsdlcsection_DLC_15tTA {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(50%, max-content));
-  grid-template-rows: repeat(2, minmax(0, max-content));
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-}
-div.UltraRightPanel
-  .appdetailsdlcsection_DLCSection_2ycfN
-  .appdetailsdlcsection_DLC_15tTA {
-  grid-template-columns: repeat(3, minmax(33%, max-content));
-}
-.BasicUI
-  .appdetailsdlcsection_DLCSection_2ycfN
-  .appdetailsdlcsection_DLC_15tTA {
-  grid-template-columns: repeat(4, minmax(190px, max-content));
-}
-.appdetailsdlcsection_DLCArt_2bF7X {
-  position: relative;
-  height: 100%;
-}
-.appdetailsdlcsection_DLCArt_2bF7X.appdetailsdlcsection_Fullsize_3Ihc3,
-.appdetailsdlcsection_DLCArt_2bF7X.appdetailsdlcsection_UnlimitedSize_2LK57 {
-  width: 100%;
-  height: auto;
-}
-.appdetailsdlcsection_DLCArt_2bF7X.appdetailsdlcsection_Fullsize_3Ihc3 > img {
-  max-width: 460px;
-  width: 100%;
-  height: auto;
-}
-.appdetailsdlcsection_DLCArt_2bF7X.appdetailsdlcsection_UnlimitedSize_2LK57
-  > img {
-  width: 100%;
-  height: auto;
-}
-.appdetailsdlcsection_DLCArt_2bF7X .appdetailsdlcsection_Banner_ZvLzh {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.appdetailsdlcsection_DLCArt_2bF7X .appdetailsdlcsection_Title_2gv_d {
-  padding: 10px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  background-color: #7d0e12;
-}
-.appdetailsdlcsection_DLCArt_2bF7X .appdetailsdlcsection_Art_3SQn1 {
-  width: 100%;
-  vertical-align: top;
-  box-shadow: 0 0 3px #0005;
-}
-.appdetailsdlcsection_DLCArt_2bF7X .appdetailsdlcsection_Gloss_HAvWs {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(235, 245, 255, 0.25) 0%,
-    rgba(10, 10, 10, 0) 40%,
-    rgba(10, 10, 10, 0) 65%,
-    rgba(10, 10, 10, 0.8) 100%
-  );
-  transition: opacity 0.3s;
-  opacity: 0.5;
-}
-.appdetailsdlcsection_Hover_1V52f {
-  width: 400px;
-  padding: 0;
-}
-.appdetailsdlcsection_Hover_1V52f .appdetailsdlcsection_TopSection_GT9G6 {
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  padding: 15px;
-}
-.appdetailsdlcsection_Hover_1V52f .appdetailsdlcsection_Purchased_22tlo {
-  padding: 10px 15px;
-  box-sizing: border-box;
-  background: linear-gradient(
-    to bottom,
-    rgba(24, 26, 30, 0.7) 5%,
-    rgba(24, 26, 30, 0.4) 95%
-  );
-  color: #717070;
-}
-.appdetailsdlcsection_StoreHover_M1EYV {
-  width: fit-content;
-  height: auto;
-  overflow: hidden;
-  border: none;
-  box-shadow: 0 10px 32px 0px #000000ab;
-}
-.appdetailsdlcsection_Remainder_2Dggp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #67707b;
-  background-color: rgba(103, 112, 123, 0.2);
-}
-.moveappsdialog_MoveAppsDialog_2hDt3 {
-  min-width: 600px;
-}
-.moveappsdialog_MoveAppsIndicator_2IEor {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  width: 100%;
-  min-height: 8px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  background-color: #3d4450;
-  border-radius: 10px;
-}
-.moveappsdialog_MoveAppsBar_1f7qD {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1a9fff;
-}
-.moveappsdialog_DialogBodyText_lwZMn {
-  padding-bottom: 6px;
-  padding-top: 10px;
-  color: #b8bcbf;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 400;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialog_1tQy- {
-  min-width: 600px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  height: 100%;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_DialogHeader_tNxx1 {
-  text-align: center;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_DialogBodyText_Xdr35 {
-  font-size: 14px;
-  padding-bottom: 0px;
-  line-height: 22px;
-  font-weight: 400;
-  color: #b8bcbf;
-  margin-bottom: 20px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn {
-  margin-top: 8px;
-  padding: 10px 0px;
-  display: flex;
-  flex-direction: row;
-  background: #3d4450;
-  border: 1px solid #0e141b;
-  border-bottom: none;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_Checkbox_f3L-g {
-  width: 5%;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_Icon_3LUXL {
-  width: 6%;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_AppName_1kVk1 {
-  width: 32%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_AppName_1kVk1:hover {
-  color: #b8bcbf;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_ExePath_1LM_T {
-  width: 62%;
-  padding-left: 6px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Header_3m0Mn
-  .addnonsteamgamedialog_ExePath_1LM_T:hover {
-  color: #b8bcbf;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameList_1e6tj {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background: #23262e;
-  border: 1px solid #0e141b;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameList_1e6tj
-  .addnonsteamgamedialog_LoadingContainer_2xttH {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 2px 0;
-  cursor: pointer;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM:hover {
-  background-color: rgba(61, 68, 80, 0.5);
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_Checkbox_f3L-g {
-  margin: auto;
-  padding: 4px 8px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_Checkbox_f3L-g.DialogCheckbox {
-  border: 0.5px solid #3d4450;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_IconContainer_1lI4J {
-  margin-right: 2px;
-  width: 6%;
-  display: flex;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_IconContainer_1lI4J
-  img {
-  width: 26px;
-  height: 26px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_AppName_1kVk1 {
-  width: 32%;
-  font-weight: 500;
-  overflow-x: hidden;
-  white-space: nowrap;
-  margin: auto 0;
-  color: #dcdedf;
-  font-size: 13px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_GameRow_1cXzM
-  .addnonsteamgamedialog_ExePath_1LM_T {
-  width: 62%;
-  padding-left: 6px;
-  font-style: italic;
-  overflow-x: hidden;
-  white-space: nowrap;
-  margin: auto 0;
-  font-size: 12px;
-  color: #dcdedf;
-  opacity: 50%;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Footer_kOsdH {
-  flex-direction: row;
-  display: flex;
-  gap: 10px;
-  padding-top: 12px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Footer_kOsdH
-  .addnonsteamgamedialog_Spacer_3bbcw {
-  flex: 1;
-  min-width: 0;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Footer_kOsdH
-  button.DialogButton {
-  padding: 0 12px;
-  width: auto;
-  min-width: 100px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_SortArrowContainer_20na8 {
-  display: flex;
-  padding-left: 6px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_SortArrowContainer_20na8
-  .addnonsteamgamedialog_Arrow_22hYb {
-  width: 14px;
-  height: 14px;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_Filter_2Fheq {
-  flex: 1;
-}
-.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
-  .addnonsteamgamedialog_BrowseButton_3XOLU {
-  flex-shrink: 1;
-  flex-grow: 0;
-}
-.appproperties_ThrobberContainer_9XBe7 {
-  margin: auto;
-  outline: none;
-}
-.appproperties_AppProperties_1FyBL .DialogHeader {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
-    .appproperties_GamepadUI_HkTNM
-  )
-  .DialogContent,
-.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
-  .appproperties_AppProperties_1FyBL
-  .DialogContent {
-  padding: 24px 0px 0px 24px;
-}
-.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
-    .appproperties_GamepadUI_HkTNM
-  )
-  .DialogBody,
-.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
-  .appproperties_AppProperties_1FyBL
-  .DialogBody {
-  padding-right: 12px;
-  padding-bottom: 24px;
-}
-.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
-    .appproperties_GamepadUI_HkTNM
-  )
-  .DialogDropDown,
-.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
-  .appproperties_AppProperties_1FyBL
-  .DialogDropDown {
-  display: flex;
-  gap: 9px;
-  padding: 8px 14px;
-  font-size: 13px;
-  line-height: 18px;
-  transition-property: opacity, background, color, box-shadow;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
-  justify-content: space-between;
-}
-.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
-    .appproperties_GamepadUI_HkTNM
-  )
-  .DialogDropDown:hover,
-.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
-  .appproperties_AppProperties_1FyBL
-  .DialogDropDown:hover {
-  background: #464d58;
-  color: #fff;
-}
-.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
-    .appproperties_GamepadUI_HkTNM
-  )
-  .appproperties_FullWidth_FTUu7
-  .DialogDropDown,
-.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
-  .appproperties_AppProperties_1FyBL
-  .appproperties_FullWidth_FTUu7
-  .DialogDropDown {
-  flex-grow: 1;
-}
-.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
-    .appproperties_GamepadUI_HkTNM
-  )
-  .DialogDropDown_Arrow,
-.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
-  .appproperties_AppProperties_1FyBL
-  .DialogDropDown_Arrow {
-  position: unset;
-}
-.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
-    .appproperties_GamepadUI_HkTNM
-  )
-  .appproperties_SettingsDialogButton_1KAp5,
-.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
-  .appproperties_AppProperties_1FyBL
-  .appproperties_SettingsDialogButton_1KAp5 {
-  color: #dfe3e6;
-  background-color: rgba(59, 63, 72, 0.5);
-  padding: 8px 14px;
-  font-size: 13px;
-  line-height: 18px;
-  width: auto;
-}
-.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
-    .appproperties_GamepadUI_HkTNM
-  )
-  .appproperties_DropDownLabel_WEjcU,
-.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
-  .appproperties_AppProperties_1FyBL
-  .appproperties_DropDownLabel_WEjcU {
-  font-size: 13px;
-}
-.appproperties_AppProperties_1FyBL .DialogBody {
-  font-size: 14px;
-  overflow-y: scroll;
-  margin-top: 10px;
-}
-.appproperties_AppProperties_1FyBL .DialogBody.appproperties_NoScroll_3puO0 {
-  overflow-y: hidden;
-}
-.appproperties_AppProperties_1FyBL .DialogBody::-webkit-scrollbar-thumb {
-  background-color: #3d4450;
-  background-clip: padding-box;
-}
-.appproperties_AppProperties_1FyBL .DialogBody::-webkit-scrollbar-thumb:hover {
-  background-color: #464d58;
-  background-clip: padding-box;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SectionTopLine_r3hOL {
-  margin-top: 20px;
-  border-top: solid rgba(59, 63, 72, 0.5) 1px;
-  padding-top: 20px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SectionTopLine_r3hOL.appproperties_NoPadding_1wvuE {
-  padding-top: 0px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_BlueHighlight_1KmR8 {
-  color: #2d73ff;
-}
-.appproperties_AppProperties_1FyBL .DialogBody .appproperties_Title_3zuIC {
-  text-transform: uppercase;
-}
-.appproperties_AppProperties_1FyBL .DialogBody .appproperties_Detail_Hxqea {
-  font-size: 13px;
-  margin-top: 5px;
-}
-.appproperties_AppProperties_1FyBL .DialogBody .appproperties_TopGap_1Ym7e {
-  margin-top: 10px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_TopGapSmall_2evqi {
-  margin-top: 5px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_TopGapLarge_1FyDt {
-  margin-top: 20px;
-}
-.appproperties_AppProperties_1FyBL .DialogBody .appproperties_BottomGap_2L401 {
-  margin-bottom: 22px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamCloudSection_F0Rww {
-  display: flex;
-  flex-direction: column;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamCloudSection_F0Rww
-  .appproperties_DisabledGlobalCloud_HUfJU {
-  padding: 0 8px;
-  box-sizing: border-box;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamCloudSection_F0Rww
-  .appproperties_SteamCloudUsage_2Dfy8 {
-  align-self: flex-end;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_BrowseDiskRow_vgVsC {
-  display: flex;
-  flex-direction: row;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_BrowseDiskRow_vgVsC
-  .appproperties_BrowseDiskSizeLabel_3sCkh {
-  align-self: center;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_BrowseDiskRow_vgVsC
-  .appproperties_BrowseDiskSize_b5YdR {
-  align-self: center;
-  margin-left: 5px;
-  flex: 1 1 auto;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_LocalFilesVerify_g8GWq {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  margin-top: 20px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_BetaAccessCodeRow_2WZcp {
-  display: flex;
-  flex-direction: row;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_BetaAccessCodeRow_2WZcp
-  .DialogInput_Wrapper {
-  flex: 1 1 auto;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_BetaAccessCodeRow_2WZcp
-  .appproperties_CheckButton_1IwF6 {
-  width: auto;
-  margin-left: 10px;
-  padding: 0 20px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_BetaOptIntoButton_8mlSY {
-  margin-top: 10px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputLink_fy_T9 {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputLink_fy_T9:hover {
-  color: #dfe3e6;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputComboHeader_117yW {
-  display: flex;
-  align-items: flex-end;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputComboHeader_117yW
-  .appproperties_PerGameName_1ZX8p {
-  flex: 1 0 auto;
-  text-transform: uppercase;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputStatus_2H4Ly {
-  margin-left: 20px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputStatusGrid_3lj3- {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-auto-rows: 25px;
-  column-gap: 20px;
-  row-gap: 5px;
-  padding: 5px 15px;
-  background-color: rgba(59, 63, 72, 0.2);
-  margin-left: 20px;
-  border-radius: 3px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputStatusGrid_3lj3-
-  .appproperties_Controller_nsJRd {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputStatusGrid_3lj3-
-  .appproperties_Controller_nsJRd
-  .appproperties_ControllerPip_3QVsc {
-  height: 8px;
-  width: 8px;
-  border-radius: 6px;
-  margin-right: 8px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputStatusGrid_3lj3-
-  .appproperties_Controller_nsJRd
-  .appproperties_ControllerPip_3QVsc.appproperties_ControllerConnected_11Gq_ {
-  background-color: #3a7fd5;
-  filter: drop-shadow(0 0 2px #202020);
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_SteamInputStatusGrid_3lj3-
-  .appproperties_SteamInputStatus_2H4Ly {
-  color: #dfe3e6;
-}
-.appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcTopRow_ZII4C {
-  display: flex;
-  flex-direction: row;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcTopRow_ZII4C
-  .appproperties_ViewMore_3jITh {
-  flex: 1 1 0;
-  margin: 0 10px 0 0;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcTopRow_ZII4C
-  .DialogInput_Wrapper {
-  flex: 1 1 0;
-  margin-left: 10px;
-}
-.appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcGrid_3sXdO {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  margin-top: 20px;
-  overflow-y: auto;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO::-webkit-scrollbar-thumb {
-  background-color: #3d4450;
-  background-clip: padding-box;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO::-webkit-scrollbar-thumb:hover {
-  background-color: #464d58;
-  background-clip: padding-box;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_DlcHeader_1SKB0 {
-  position: sticky;
-  top: 0;
-  background: #3d4450;
-  z-index: 1;
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_DlcHeader_1SKB0:hover {
-  background: #464d58;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_DlcHeader_1SKB0
-  .appproperties_TriangleHide_1A_JF {
-  margin-left: 4px;
-  width: 8px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_DlcHeader_1SKB0
-  .appproperties_TriangleUp_3OdnV {
-  margin-left: 4px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-bottom: 5px solid #969696;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_DlcHeader_1SKB0
-  .appproperties_TriangleDown_2lnv6 {
-  margin-left: 4px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid #969696;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_Install_2nXS1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 8px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_Name_bP2Ip {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 8px;
-  color: #dfe3e6;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy {
-  overflow: hidden;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy
-  .appproperties_NameText_a19Ki {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_Name_bP2Ip
-  .appproperties_DlcArt_3vsfp {
-  flex: 0 0 90px;
-  margin-right: 7px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_Added_dR1gz {
-  display: flex;
-  align-items: center;
-  margin: 8px;
-  white-space: nowrap;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_SizeDisk_2tvvL {
-  display: flex;
-  align-items: center;
-  margin: 8px;
-  white-space: nowrap;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_DlcGrid_3sXdO
-  .appproperties_State_26nRI {
-  display: flex;
-  align-items: center;
-  margin: 8px;
-  white-space: nowrap;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopTopRow_3Oi_X {
-  display: flex;
-  flex-direction: row;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopTopRow_3Oi_X
-  .appproperties_ViewMore_3jITh {
-  flex: 1 1 0;
-  margin: 0 10px 0 0;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopTopRow_3Oi_X
-  .DialogInput_Wrapper {
-  flex: 1 1 0;
-  margin-left: 10px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopBottomRow_Rl0De {
-  display: flex;
-  flex-direction: row;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopBottomRow_Rl0De
-  .appproperties_UnsubscribeSelected_1TUEz {
-  margin: 10px 10px 0 0;
-  padding: 0px 10px 0px 10px;
-  width: fit-content;
-  color: #969696;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopBottomRow_Rl0De
-  .appproperties_UnsubscribeActive_3k-Rj {
-  color: #dfe3e6;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopBottomRow_Rl0De
-  .DialogInput_Wrapper {
-  flex: 1 1 0;
-  margin-left: 10px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  margin-top: 20px;
-  overflow-y: auto;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A::-webkit-scrollbar-thumb {
-  background-color: #3d4450;
-  background-clip: padding-box;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A::-webkit-scrollbar-thumb:hover {
-  background-color: #464d58;
-  background-clip: padding-box;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_WorkshopHeader_2TJyz {
-  position: sticky;
-  top: 0;
-  background: #3d4450;
-  z-index: 1;
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_WorkshopHeader_2TJyz:hover:not(.appproperties_NoHover_3FeFO) {
-  background: #464d58;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_WorkshopHeader_2TJyz
-  .appproperties_TriangleHide_1A_JF {
-  margin-left: 4px;
-  width: 8px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_WorkshopHeader_2TJyz
-  .appproperties_TriangleUp_3OdnV {
-  margin-left: 4px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-bottom: 5px solid #969696;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_WorkshopHeader_2TJyz
-  .appproperties_TriangleDown_2lnv6 {
-  margin-left: 4px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid #969696;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_Install_2nXS1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 8px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_Name_bP2Ip {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 8px;
-  color: #dfe3e6;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy {
-  overflow: hidden;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy
-  .appproperties_NameText_a19Ki {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_Name_bP2Ip
-  .appproperties_PreviewArt_1Apuj {
-  width: 48px;
-  height: 48px;
-  margin-right: 7px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_Added_dR1gz {
-  display: flex;
-  align-items: center;
-  margin: 8px;
-  white-space: nowrap;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_WorkshopGrid_2ZL5A
-  .appproperties_SizeDisk_2tvvL {
-  display: flex;
-  align-items: center;
-  margin: 8px;
-  white-space: nowrap;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_ShortcutRow_3_JQe {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_ShortcutRow_3_JQe
-  .appproperties_Icon_1UxV1 {
-  height: 64px;
-  width: 64px;
-  cursor: pointer;
-  overflow: hidden;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_ShortcutRow_3_JQe
-  .appproperties_Icon_1UxV1
-  .appproperties_AssetImage_3tFB_ {
-  height: 64px;
-  width: 64px;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_ShortcutRow_3_JQe
-  .appproperties_Icon_1UxV1
-  .appproperties_AssetImage_3tFB_:hover {
-  transition-property: transform, filter;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-out;
-  transform: scale(1.1);
-  filter: brightness(1.1);
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_ShortcutRow_3_JQe
-  .appproperties_Name_bP2Ip {
-  margin-left: 10px;
-  flex: 1 0 auto;
-}
-.appproperties_AppProperties_1FyBL
-  .DialogBody
-  .appproperties_ShortcutChange_2MgqW {
-  height: 42px;
-  box-sizing: border-box;
-}
-.appproperties_AppProperties_1FyBL .appproperties_Checkbox_2V2nc {
-  display: flex;
-  flex-direction: row;
-  padding: 9px;
-  margin: 0;
-  color: #dfe3e6;
-  background: rgba(59, 63, 72, 0.5);
-  border-radius: 3px;
-}
-.appproperties_AppProperties_1FyBL .appproperties_Checkbox_2V2nc:hover {
-  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
-}
-.appproperties_AppProperties_1FyBL
-  .appproperties_Checkbox_2V2nc.appproperties_Disabled_3dZxl {
-  cursor: default;
-  color: #969696;
-}
-.appproperties_AppProperties_1FyBL
-  .appproperties_Checkbox_2V2nc.appproperties_Disabled_3dZxl:hover {
-  box-shadow: none;
-}
-.appproperties_AppProperties_1FyBL .DialogCheckbox svg {
-  margin-left: 2px;
-}
-.appproperties_AppProperties_1FyBL .appproperties_FAQLink_ik8KR {
-  margin-top: 0px;
-}
-.appproperties_AppProperties_1FyBL
-  .appproperties_AsyncBackedInputChildren_1y1wm {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.appproperties_AppProperties_1FyBL
-  .appproperties_AsyncBackedInputChildren_1y1wm
-  > *:first-child {
-  flex-grow: 1;
-}
-.appproperties_BetasDropDown_1-tJH > div {
-  max-height: 350px;
-  overflow: hidden scroll;
 }
 @keyframes controllerconfiguratorchoosebinding_listener_ItemFocusAnim-darkerGrey-nocolor_1Yyjb {
   from {
@@ -57452,6 +55731,1727 @@ div.UltraRightPanel
 }
 .settings_OverlayTabSetting_34sgF {
   background-color: #171d25;
+}
+.appdetailshover_AppDetailsHover_38FqI {
+  box-sizing: border-box;
+  padding: 10px;
+  color: #fff;
+  box-shadow: 0 10px 32px 0px #000000ab;
+}
+.appdetailshover_AppDetailsHover_38FqI .appdetailshover_Background_rYBZB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -3;
+  background: radial-gradient(
+    ellipse farthest-corner at 20% 30%,
+    #4c505b 0%,
+    #34373f 50%,
+    #282c32 100%
+  );
+}
+.appdetailshover_AppDetailsHover_38FqI .appdetailshover_BlurContainer_2HshO {
+  width: 380px;
+  height: 380px;
+  filter: blur(10px) saturate(2);
+  position: absolute;
+  left: -60px;
+  top: -60px;
+  opacity: 0.4;
+  -webkit-mask: radial-gradient(
+    ellipse farthest-corner at 150px 150px,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.3) 34%,
+    rgba(0, 0, 0, 0) 64%
+  );
+  mask: radial-gradient(
+    ellipse farthest-corner at 150px 150px,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.3) 34%,
+    rgba(0, 0, 0, 0) 64%
+  );
+  mix-blend-mode: screen;
+}
+.appdetailshover_AppDetailsHover_38FqI .appdetailshover_BlurContainer_2HshO * {
+  width: 100%;
+  height: 100%;
+}
+.appdetailsdlcsection_DLCSection_2ycfN {
+  width: 100%;
+  position: relative;
+}
+.appdetailsdlcsection_DLCSection_2ycfN
+  .appdetailsdlcsection_InnerContainer_1dnSK {
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 210px;
+  overflow: hidden;
+  padding: 12px 12px 0 12px;
+  padding-bottom: 10px;
+  border: 1px solid transparent;
+  border-image-source: url("/images/glassborder_01.png");
+  border-image-width: 1px;
+  border-image-repeat: stretch;
+  border-image-slice: 7;
+  background: radial-gradient(
+    100% 80% at 64% 95%,
+    rgba(58, 75, 99, 0.6) 0%,
+    rgba(35, 48, 66, 0.3) 40%,
+    rgba(21, 22, 22, 0.1) 100%
+  );
+}
+.appdetailsdlcsection_DLCSection_2ycfN
+  .appdetailsdlcsection_InnerContainerLower2_3vICQ {
+  padding: 12px 12px 0 12px;
+  padding-bottom: 10px;
+}
+.appdetailsdlcsection_DLCSection_2ycfN .appdetailsdlcsection_Item_Ie7sd {
+  max-width: 220px;
+  font-size: 14px;
+  color: #cacbcd;
+}
+.appdetailsdlcsection_DLCSection_2ycfN .appdetailsdlcsection_DLC_15tTA {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, max-content));
+  grid-template-rows: repeat(2, minmax(0, max-content));
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+}
+div.UltraRightPanel
+  .appdetailsdlcsection_DLCSection_2ycfN
+  .appdetailsdlcsection_DLC_15tTA {
+  grid-template-columns: repeat(3, minmax(33%, max-content));
+}
+.BasicUI
+  .appdetailsdlcsection_DLCSection_2ycfN
+  .appdetailsdlcsection_DLC_15tTA {
+  grid-template-columns: repeat(4, minmax(190px, max-content));
+}
+.appdetailsdlcsection_DLCArt_2bF7X {
+  position: relative;
+  height: 100%;
+}
+.appdetailsdlcsection_DLCArt_2bF7X.appdetailsdlcsection_Fullsize_3Ihc3,
+.appdetailsdlcsection_DLCArt_2bF7X.appdetailsdlcsection_UnlimitedSize_2LK57 {
+  width: 100%;
+  height: auto;
+}
+.appdetailsdlcsection_DLCArt_2bF7X.appdetailsdlcsection_Fullsize_3Ihc3 > img {
+  max-width: 460px;
+  width: 100%;
+  height: auto;
+}
+.appdetailsdlcsection_DLCArt_2bF7X.appdetailsdlcsection_UnlimitedSize_2LK57
+  > img {
+  width: 100%;
+  height: auto;
+}
+.appdetailsdlcsection_DLCArt_2bF7X .appdetailsdlcsection_Banner_ZvLzh {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.appdetailsdlcsection_DLCArt_2bF7X .appdetailsdlcsection_Title_2gv_d {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: #7d0e12;
+}
+.appdetailsdlcsection_DLCArt_2bF7X .appdetailsdlcsection_Art_3SQn1 {
+  width: 100%;
+  vertical-align: top;
+  box-shadow: 0 0 3px #0005;
+}
+.appdetailsdlcsection_DLCArt_2bF7X .appdetailsdlcsection_Gloss_HAvWs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(235, 245, 255, 0.25) 0%,
+    rgba(10, 10, 10, 0) 40%,
+    rgba(10, 10, 10, 0) 65%,
+    rgba(10, 10, 10, 0.8) 100%
+  );
+  transition: opacity 0.3s;
+  opacity: 0.5;
+}
+.appdetailsdlcsection_Hover_1V52f {
+  width: 400px;
+  padding: 0;
+}
+.appdetailsdlcsection_Hover_1V52f .appdetailsdlcsection_TopSection_GT9G6 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.appdetailsdlcsection_Hover_1V52f .appdetailsdlcsection_Purchased_22tlo {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 26, 30, 0.7) 5%,
+    rgba(24, 26, 30, 0.4) 95%
+  );
+  color: #717070;
+}
+.appdetailsdlcsection_StoreHover_M1EYV {
+  width: fit-content;
+  height: auto;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 10px 32px 0px #000000ab;
+}
+.appdetailsdlcsection_Remainder_2Dggp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #67707b;
+  background-color: rgba(103, 112, 123, 0.2);
+}
+.moveappsdialog_MoveAppsDialog_2hDt3 {
+  min-width: 600px;
+}
+.moveappsdialog_MoveAppsIndicator_2IEor {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  min-height: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: #3d4450;
+  border-radius: 10px;
+}
+.moveappsdialog_MoveAppsBar_1f7qD {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a9fff;
+}
+.moveappsdialog_DialogBodyText_lwZMn {
+  padding-bottom: 6px;
+  padding-top: 10px;
+  color: #b8bcbf;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialog_1tQy- {
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_DialogHeader_tNxx1 {
+  text-align: center;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_DialogBodyText_Xdr35 {
+  font-size: 14px;
+  padding-bottom: 0px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #b8bcbf;
+  margin-bottom: 20px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Header_3m0Mn {
+  margin-top: 8px;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  background: #3d4450;
+  border: 1px solid #0e141b;
+  border-bottom: none;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Header_3m0Mn
+  .addnonsteamgamedialog_Checkbox_f3L-g {
+  width: 5%;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Header_3m0Mn
+  .addnonsteamgamedialog_Icon_3LUXL {
+  width: 6%;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Header_3m0Mn
+  .addnonsteamgamedialog_AppName_1kVk1 {
+  width: 32%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Header_3m0Mn
+  .addnonsteamgamedialog_AppName_1kVk1:hover {
+  color: #b8bcbf;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Header_3m0Mn
+  .addnonsteamgamedialog_ExePath_1LM_T {
+  width: 62%;
+  padding-left: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Header_3m0Mn
+  .addnonsteamgamedialog_ExePath_1LM_T:hover {
+  color: #b8bcbf;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameList_1e6tj {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #23262e;
+  border: 1px solid #0e141b;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameList_1e6tj
+  .addnonsteamgamedialog_LoadingContainer_2xttH {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameRow_1cXzM {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 0;
+  cursor: pointer;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameRow_1cXzM:hover {
+  background-color: rgba(61, 68, 80, 0.5);
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameRow_1cXzM
+  .addnonsteamgamedialog_Checkbox_f3L-g {
+  margin: auto;
+  padding: 4px 8px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameRow_1cXzM
+  .addnonsteamgamedialog_Checkbox_f3L-g.DialogCheckbox {
+  border: 0.5px solid #3d4450;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameRow_1cXzM
+  .addnonsteamgamedialog_IconContainer_1lI4J {
+  margin-right: 2px;
+  width: 6%;
+  display: flex;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameRow_1cXzM
+  .addnonsteamgamedialog_IconContainer_1lI4J
+  img {
+  width: 26px;
+  height: 26px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameRow_1cXzM
+  .addnonsteamgamedialog_AppName_1kVk1 {
+  width: 32%;
+  font-weight: 500;
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin: auto 0;
+  color: #dcdedf;
+  font-size: 13px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_GameRow_1cXzM
+  .addnonsteamgamedialog_ExePath_1LM_T {
+  width: 62%;
+  padding-left: 6px;
+  font-style: italic;
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin: auto 0;
+  font-size: 12px;
+  color: #dcdedf;
+  opacity: 50%;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Footer_kOsdH {
+  flex-direction: row;
+  display: flex;
+  gap: 10px;
+  padding-top: 12px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Footer_kOsdH
+  .addnonsteamgamedialog_Spacer_3bbcw {
+  flex: 1;
+  min-width: 0;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Footer_kOsdH
+  button.DialogButton {
+  padding: 0 12px;
+  width: auto;
+  min-width: 100px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_SortArrowContainer_20na8 {
+  display: flex;
+  padding-left: 6px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_SortArrowContainer_20na8
+  .addnonsteamgamedialog_Arrow_22hYb {
+  width: 14px;
+  height: 14px;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_Filter_2Fheq {
+  flex: 1;
+}
+.addnonsteamgamedialog_AddNonSteamGameDialogContent_zhaKe
+  .addnonsteamgamedialog_BrowseButton_3XOLU {
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+.appproperties_ThrobberContainer_9XBe7 {
+  margin: auto;
+  outline: none;
+}
+.appproperties_AppProperties_1FyBL .DialogHeader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
+    .appproperties_GamepadUI_HkTNM
+  )
+  .DialogContent,
+.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
+  .appproperties_AppProperties_1FyBL
+  .DialogContent {
+  padding: 24px 0px 0px 24px;
+}
+.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
+    .appproperties_GamepadUI_HkTNM
+  )
+  .DialogBody,
+.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
+  .appproperties_AppProperties_1FyBL
+  .DialogBody {
+  padding-right: 12px;
+  padding-bottom: 24px;
+}
+.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
+    .appproperties_GamepadUI_HkTNM
+  )
+  .DialogDropDown,
+.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
+  .appproperties_AppProperties_1FyBL
+  .DialogDropDown {
+  display: flex;
+  gap: 9px;
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 18px;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  justify-content: space-between;
+}
+.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
+    .appproperties_GamepadUI_HkTNM
+  )
+  .DialogDropDown:hover,
+.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
+  .appproperties_AppProperties_1FyBL
+  .DialogDropDown:hover {
+  background: #464d58;
+  color: #fff;
+}
+.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
+    .appproperties_GamepadUI_HkTNM
+  )
+  .appproperties_FullWidth_FTUu7
+  .DialogDropDown,
+.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
+  .appproperties_AppProperties_1FyBL
+  .appproperties_FullWidth_FTUu7
+  .DialogDropDown {
+  flex-grow: 1;
+}
+.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
+    .appproperties_GamepadUI_HkTNM
+  )
+  .DialogDropDown_Arrow,
+.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
+  .appproperties_AppProperties_1FyBL
+  .DialogDropDown_Arrow {
+  position: unset;
+}
+.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
+    .appproperties_GamepadUI_HkTNM
+  )
+  .appproperties_SettingsDialogButton_1KAp5,
+.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
+  .appproperties_AppProperties_1FyBL
+  .appproperties_SettingsDialogButton_1KAp5 {
+  color: #dfe3e6;
+  background-color: rgba(59, 63, 72, 0.5);
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 18px;
+  width: auto;
+}
+.appproperties_AppProperties_1FyBL.appproperties_AppProperties_1FyBL:not(
+    .appproperties_GamepadUI_HkTNM
+  )
+  .appproperties_DropDownLabel_WEjcU,
+.appproperties_AppProperties_1FyBL:not(.appproperties_GamepadUI_HkTNM)
+  .appproperties_AppProperties_1FyBL
+  .appproperties_DropDownLabel_WEjcU {
+  font-size: 13px;
+}
+.appproperties_AppProperties_1FyBL .DialogBody {
+  font-size: 14px;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+.appproperties_AppProperties_1FyBL .DialogBody.appproperties_NoScroll_3puO0 {
+  overflow-y: hidden;
+}
+.appproperties_AppProperties_1FyBL .DialogBody::-webkit-scrollbar-thumb {
+  background-color: #3d4450;
+  background-clip: padding-box;
+}
+.appproperties_AppProperties_1FyBL .DialogBody::-webkit-scrollbar-thumb:hover {
+  background-color: #464d58;
+  background-clip: padding-box;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SectionTopLine_r3hOL {
+  margin-top: 20px;
+  border-top: solid rgba(59, 63, 72, 0.5) 1px;
+  padding-top: 20px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SectionTopLine_r3hOL.appproperties_NoPadding_1wvuE {
+  padding-top: 0px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_BlueHighlight_1KmR8 {
+  color: #2d73ff;
+}
+.appproperties_AppProperties_1FyBL .DialogBody .appproperties_Title_3zuIC {
+  text-transform: uppercase;
+}
+.appproperties_AppProperties_1FyBL .DialogBody .appproperties_Detail_Hxqea {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.appproperties_AppProperties_1FyBL .DialogBody .appproperties_TopGap_1Ym7e {
+  margin-top: 10px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_TopGapSmall_2evqi {
+  margin-top: 5px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_TopGapLarge_1FyDt {
+  margin-top: 20px;
+}
+.appproperties_AppProperties_1FyBL .DialogBody .appproperties_BottomGap_2L401 {
+  margin-bottom: 22px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamCloudSection_F0Rww {
+  display: flex;
+  flex-direction: column;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamCloudSection_F0Rww
+  .appproperties_DisabledGlobalCloud_HUfJU {
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamCloudSection_F0Rww
+  .appproperties_SteamCloudUsage_2Dfy8 {
+  align-self: flex-end;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_BrowseDiskRow_vgVsC {
+  display: flex;
+  flex-direction: row;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_BrowseDiskRow_vgVsC
+  .appproperties_BrowseDiskSizeLabel_3sCkh {
+  align-self: center;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_BrowseDiskRow_vgVsC
+  .appproperties_BrowseDiskSize_b5YdR {
+  align-self: center;
+  margin-left: 5px;
+  flex: 1 1 auto;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_LocalFilesVerify_g8GWq {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 20px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_BetaAccessCodeRow_2WZcp {
+  display: flex;
+  flex-direction: row;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_BetaAccessCodeRow_2WZcp
+  .DialogInput_Wrapper {
+  flex: 1 1 auto;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_BetaAccessCodeRow_2WZcp
+  .appproperties_CheckButton_1IwF6 {
+  width: auto;
+  margin-left: 10px;
+  padding: 0 20px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_BetaOptIntoButton_8mlSY {
+  margin-top: 10px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputLink_fy_T9 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputLink_fy_T9:hover {
+  color: #dfe3e6;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputComboHeader_117yW {
+  display: flex;
+  align-items: flex-end;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputComboHeader_117yW
+  .appproperties_PerGameName_1ZX8p {
+  flex: 1 0 auto;
+  text-transform: uppercase;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputStatus_2H4Ly {
+  margin-left: 20px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputStatusGrid_3lj3- {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-rows: 25px;
+  column-gap: 20px;
+  row-gap: 5px;
+  padding: 5px 15px;
+  background-color: rgba(59, 63, 72, 0.2);
+  margin-left: 20px;
+  border-radius: 3px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputStatusGrid_3lj3-
+  .appproperties_Controller_nsJRd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputStatusGrid_3lj3-
+  .appproperties_Controller_nsJRd
+  .appproperties_ControllerPip_3QVsc {
+  height: 8px;
+  width: 8px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputStatusGrid_3lj3-
+  .appproperties_Controller_nsJRd
+  .appproperties_ControllerPip_3QVsc.appproperties_ControllerConnected_11Gq_ {
+  background-color: #3a7fd5;
+  filter: drop-shadow(0 0 2px #202020);
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_SteamInputStatusGrid_3lj3-
+  .appproperties_SteamInputStatus_2H4Ly {
+  color: #dfe3e6;
+}
+.appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcTopRow_ZII4C {
+  display: flex;
+  flex-direction: row;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcTopRow_ZII4C
+  .appproperties_ViewMore_3jITh {
+  flex: 1 1 0;
+  margin: 0 10px 0 0;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcTopRow_ZII4C
+  .DialogInput_Wrapper {
+  flex: 1 1 0;
+  margin-left: 10px;
+}
+.appproperties_AppProperties_1FyBL .DialogBody .appproperties_DlcGrid_3sXdO {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO::-webkit-scrollbar-thumb {
+  background-color: #3d4450;
+  background-clip: padding-box;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO::-webkit-scrollbar-thumb:hover {
+  background-color: #464d58;
+  background-clip: padding-box;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_DlcHeader_1SKB0 {
+  position: sticky;
+  top: 0;
+  background: #3d4450;
+  z-index: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_DlcHeader_1SKB0:hover {
+  background: #464d58;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_DlcHeader_1SKB0
+  .appproperties_TriangleHide_1A_JF {
+  margin-left: 4px;
+  width: 8px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_DlcHeader_1SKB0
+  .appproperties_TriangleUp_3OdnV {
+  margin-left: 4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid #969696;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_DlcHeader_1SKB0
+  .appproperties_TriangleDown_2lnv6 {
+  margin-left: 4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #969696;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_Install_2nXS1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_Name_bP2Ip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px;
+  color: #dfe3e6;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy {
+  overflow: hidden;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy
+  .appproperties_NameText_a19Ki {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_Name_bP2Ip
+  .appproperties_DlcArt_3vsfp {
+  flex: 0 0 90px;
+  margin-right: 7px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_Added_dR1gz {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  white-space: nowrap;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_SizeDisk_2tvvL {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  white-space: nowrap;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
+  .appproperties_State_26nRI {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  white-space: nowrap;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopTopRow_3Oi_X {
+  display: flex;
+  flex-direction: row;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopTopRow_3Oi_X
+  .appproperties_ViewMore_3jITh {
+  flex: 1 1 0;
+  margin: 0 10px 0 0;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopTopRow_3Oi_X
+  .DialogInput_Wrapper {
+  flex: 1 1 0;
+  margin-left: 10px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopBottomRow_Rl0De {
+  display: flex;
+  flex-direction: row;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopBottomRow_Rl0De
+  .appproperties_UnsubscribeSelected_1TUEz {
+  margin: 10px 10px 0 0;
+  padding: 0px 10px 0px 10px;
+  width: fit-content;
+  color: #969696;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopBottomRow_Rl0De
+  .appproperties_UnsubscribeActive_3k-Rj {
+  color: #dfe3e6;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopBottomRow_Rl0De
+  .DialogInput_Wrapper {
+  flex: 1 1 0;
+  margin-left: 10px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A::-webkit-scrollbar-thumb {
+  background-color: #3d4450;
+  background-clip: padding-box;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A::-webkit-scrollbar-thumb:hover {
+  background-color: #464d58;
+  background-clip: padding-box;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_WorkshopHeader_2TJyz {
+  position: sticky;
+  top: 0;
+  background: #3d4450;
+  z-index: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_WorkshopHeader_2TJyz:hover:not(.appproperties_NoHover_3FeFO) {
+  background: #464d58;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_WorkshopHeader_2TJyz
+  .appproperties_TriangleHide_1A_JF {
+  margin-left: 4px;
+  width: 8px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_WorkshopHeader_2TJyz
+  .appproperties_TriangleUp_3OdnV {
+  margin-left: 4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid #969696;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_WorkshopHeader_2TJyz
+  .appproperties_TriangleDown_2lnv6 {
+  margin-left: 4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #969696;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_Install_2nXS1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_Name_bP2Ip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px;
+  color: #dfe3e6;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy {
+  overflow: hidden;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy
+  .appproperties_NameText_a19Ki {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_Name_bP2Ip
+  .appproperties_PreviewArt_1Apuj {
+  width: 48px;
+  height: 48px;
+  margin-right: 7px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_Added_dR1gz {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  white-space: nowrap;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_WorkshopGrid_2ZL5A
+  .appproperties_SizeDisk_2tvvL {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  white-space: nowrap;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_ShortcutRow_3_JQe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_ShortcutRow_3_JQe
+  .appproperties_Icon_1UxV1 {
+  height: 64px;
+  width: 64px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_ShortcutRow_3_JQe
+  .appproperties_Icon_1UxV1
+  .appproperties_AssetImage_3tFB_ {
+  height: 64px;
+  width: 64px;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_ShortcutRow_3_JQe
+  .appproperties_Icon_1UxV1
+  .appproperties_AssetImage_3tFB_:hover {
+  transition-property: transform, filter;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_ShortcutRow_3_JQe
+  .appproperties_Name_bP2Ip {
+  margin-left: 10px;
+  flex: 1 0 auto;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_ShortcutChange_2MgqW {
+  height: 42px;
+  box-sizing: border-box;
+}
+.appproperties_AppProperties_1FyBL .appproperties_Checkbox_2V2nc {
+  display: flex;
+  flex-direction: row;
+  padding: 9px;
+  margin: 0;
+  color: #dfe3e6;
+  background: rgba(59, 63, 72, 0.5);
+  border-radius: 3px;
+}
+.appproperties_AppProperties_1FyBL .appproperties_Checkbox_2V2nc:hover {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
+}
+.appproperties_AppProperties_1FyBL
+  .appproperties_Checkbox_2V2nc.appproperties_Disabled_3dZxl {
+  cursor: default;
+  color: #969696;
+}
+.appproperties_AppProperties_1FyBL
+  .appproperties_Checkbox_2V2nc.appproperties_Disabled_3dZxl:hover {
+  box-shadow: none;
+}
+.appproperties_AppProperties_1FyBL .DialogCheckbox svg {
+  margin-left: 2px;
+}
+.appproperties_AppProperties_1FyBL .appproperties_FAQLink_ik8KR {
+  margin-top: 0px;
+}
+.appproperties_AppProperties_1FyBL
+  .appproperties_AsyncBackedInputChildren_1y1wm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.appproperties_AppProperties_1FyBL
+  .appproperties_AsyncBackedInputChildren_1y1wm
+  > *:first-child {
+  flex-grow: 1;
+}
+.appproperties_BetasDropDown_1-tJH > div {
+  max-height: 350px;
+  overflow: hidden scroll;
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-green_TAKgT {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes euladialog_focusAnimation_1zESp {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes euladialog_hoverAnimation_21kJB {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-green_TAKgT {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+.euladialog_EulaIntro_3q_Ir {
+  text-align: center;
+}
+.DesktopUI .euladialog_EulaIntro_3q_Ir {
+  text-align: left;
+}
+.DesktopUI .euladialog_EulaDialogContent_2YXHR {
+  font-size: 14px;
+  color: #b8bcbf;
+}
+.DesktopUI .euladialog_EulaDialogContent_2YXHR .euladialog_EULAScrolling__7lXD {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(14, 20, 27, 0.5);
+}
+.euladialog_EulaModalDialog_3jj_K {
+  flex: 1;
+}
+.euladialog_EulaModalDialog_3jj_K .euladialog_EulaDialogContent_2YXHR {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 0;
+  flex: 1;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K {
+  min-height: 400px;
+  max-height: 700px;
+  height: 76vh;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 18px;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown:hover,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown:hover {
+  background: #464d58;
+  color: #fff;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown_Arrow,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown_Arrow {
+  position: unset;
+  height: 18px;
+}
+.euladialog_EULAThrobber_1gwU6 {
+  flex: 1;
+}
+.euladialog_EULAScrolling__7lXD {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+.BasicUI .euladialog_EULAScrolling__7lXD {
+  margin: 0 -2.8vw;
+  padding: 0 2.8vw;
+}
+.euladialog_EULAContent_1dbgU {
+  padding: 10px;
+  background: #23262e;
+  overflow-wrap: anywhere;
+  border-radius: 2px;
+  flex: 1;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+}
+.euladialog_EULAContent_1dbgU.gpfocuswithin {
+  animation-name: euladialog_ItemFocusAnim-darkerGrey_JYELp;
+  z-index: 1;
+  animation-name: euladialog_ItemFocusAnim-darkGrey_1ifEm;
+}
+.euladialog_EULAError_1BwVZ {
+  flex: 1;
+  padding: 20px;
+  background: #3d4450;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.euladialog_LanguageFieldContainer_2xwMG {
+  margin-bottom: 10px;
+}
+@keyframes applaunchingdetails_ItemFocusAnim-darkerGrey-nocolor_1FxlL {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnim-darkerGrey_2aeuM {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnim-darkGrey_2IKnK {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnim-grey_4BwNm {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnimBorder-darkGrey_1sMkE {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnim-green_1Gdnr {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes applaunchingdetails_focusAnimation_xE1Fu {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes applaunchingdetails_hoverAnimation_3anto {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.applaunchingdetails_Container_1NEW9 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: calc(100vh - 40px);
+  justify-content: center;
+  align-items: center;
+}
+.applaunchingdetails_Container_1NEW9,
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterStart_3mGgs:not(
+    .applaunchingdetails_FullscreenEnterActive_3K_3T
+  ),
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitActive_zemdh,
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitDone_3X1sx {
+  transform: translateY(-200px);
+  opacity: 0;
+}
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterActive_3K_3T,
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterDone_1qp33,
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitStart_1mOWz:not(
+    .applaunchingdetails_FullscreenExitActive_zemdh
+  ),
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenAppearDone_136Im {
+  transform: none;
+  opacity: 1;
+}
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterActive_3K_3T {
+  transition: opacity 800ms ease-in, transform 800ms cubic-bezier(0, 0, 0.1, 1);
+  transition-delay: 133.3333333333ms;
+}
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitActive_zemdh {
+  transition: opacity 400ms ease-out, transform 800ms cubic-bezier(0, 0, 0.1, 1);
+}
+.applaunchingdetails_ConfigurationHeader_30C5a {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 16px;
+}
+.applaunchingdetails_ConfigurationName_XPWRZ {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 6px;
+  color: #b8bcbf;
+  text-align: center;
+}
+.applaunchingdetails_TopSection_16H1c {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+}
+.applaunchingdetails_LogoSpacerTop_1njPa,
+.applaunchingdetails_LogoSpacerBottom_ptAD4 {
+  min-height: 8px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  width: 200px;
+}
+.applaunchingdetails_LogoSpacerTop_1njPa.applaunchingdetails_LogoSpacerTop_1njPa,
+.applaunchingdetails_LogoSpacerBottom_ptAD4.applaunchingdetails_LogoSpacerTop_1njPa {
+  height: 30px;
+  flex-grow: 1;
+}
+.applaunchingdetails_LogoSpacerTop_1njPa.applaunchingdetails_LogoSpacerBottom_ptAD4,
+.applaunchingdetails_LogoSpacerBottom_ptAD4.applaunchingdetails_LogoSpacerBottom_ptAD4 {
+  height: 24px;
+}
+.applaunchingdetails_LogoOrTitleContainer_2uvMX {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: 87px;
+  min-height: 30px;
+}
+.applaunchingdetails_LogoOrTitleContainer_2uvMX img {
+  margin: auto;
+  height: 100%;
+  max-width: 500px;
+  object-fit: contain;
+}
+.applaunchingdetails_TitleText_2wIEO {
+  font-size: 34px;
+  font-weight: 800;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    to bottom,
+    #fff 0%,
+    #fff 20%,
+    #fff 40%,
+    #eee 60%,
+    #ddd 80%,
+    #ccc 100%
+  );
+  -webkit-background-clip: text;
+}
+.applaunchingdetails_ConfigurationHeaderBold_3E3b6 {
+  font-weight: bold;
+}
+.applaunchingdetails_Divider_1wneT {
+  height: 1px;
+  width: 680px;
+  background: #fff;
+  opacity: 0.2;
+  flex-shrink: 0;
+}
+.applaunchingdetails_TopSection_16H1c .applaunchingdetails_Divider_1wneT {
+  margin-bottom: 0;
+}
+.applaunchingdetails_BottomSection_2HF0k .applaunchingdetails_Divider_1wneT {
+  margin-top: 0;
+}
+@keyframes applaunchingdetails_ShowControlOverviewContainerAnimation_MNeWP {
+  from {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.applaunchingdetails_ControlOverviewContainer_3ixQR {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  padding-bottom: 24px;
+  min-height: 150px;
+  transition: opacity 350ms ease, transform 350ms ease-out;
+  transition-delay: 280ms;
+}
+.applaunchingdetails_ControlOverviewContainer_3ixQR:not(
+    .applaunchingdetails_Visible_2Bi9R
+  ) {
+  transition: none;
+  opacity: 0;
+  transform: scale(0.7);
+}
+.applaunchingdetails_ControlOverviewContainer_3ixQR svg {
+  margin: auto;
+}
+.applaunchingdetails_BottomSection_2HF0k {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+}
+.applaunchingdetails_BottomSectionChildren_3AOBS {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.applaunchingdetails_LaunchStatus_1ZWPD {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+.applaunchingdetails_SkipProcessingShaderCache_3NZ34.DialogButton {
+  margin-top: 14px;
+  width: auto;
+  min-width: 150px;
+}
+.applaunchingdetails_TemporaryDetails_3Yz5H {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  color: #ffc82c;
+  padding-bottom: 12px;
+  padding-top: 6px;
+}
+.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX {
+  min-height: 20px;
+  height: 175px;
+  width: auto;
+  display: flex;
+}
+.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX.applaunchingdetails_SteamDeck_2VNwW {
+  margin: 0 auto -30px auto;
+}
+.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX img {
+  height: 100%;
+  margin: auto;
+}
+.applaunchingdetails_StatusSpinner_hir4W {
+  height: 1.6em;
+  margin-right: 0.5ch;
+  margin-bottom: -0.5em;
+}
+.applaunchingdetails_GyroImage1A_2G_ik {
+  animation-name: applaunchingdetails_gyroAnim2_2_qCH;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes applaunchingdetails_gyroAnim2_2_qCH {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+.applaunchingdetails_TopSection_16H1c,
+.applaunchingdetails_BottomSection_2HF0k {
+  transition: transform 700ms ease;
+}
+.applaunchingdetails_TopSection_16H1c:not(
+    .applaunchingdetails_ShowControlsOverview_2g15H
+  ) {
+  transition: none;
+  transform: translateY(calc(var(--controls-overview-height) / 2));
+}
+.applaunchingdetails_BottomSection_2HF0k:not(
+    .applaunchingdetails_ShowControlsOverview_2g15H
+  ) {
+  transition: none;
+  transform: translateY(calc(var(--controls-overview-height) / -2));
+}
+.applaunchingdetails_BottomSection_2HF0k:not(
+    .applaunchingdetails_ShowControlsOverview_2g15H
+  )
+  .applaunchingdetails_Divider_1wneT {
+  opacity: 0;
 }
 
 .mustupdateclientdialog_MustUpdateClientModalContent_2o8VQ {
