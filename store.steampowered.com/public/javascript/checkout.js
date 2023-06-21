@@ -102,7 +102,7 @@ function PerformPayPalAuthorization()
 		{
 			var paypal_url = encodeURIComponent( 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s'.replace( "%s", $('paypaltoken').value ) );
 			var transID = $('transaction_id').value;
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_sessionID );
+			OpenUrlInNewBlankWindow( 'https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_sessionID );
 			$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the PayPal web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
 			g_bPayPalAuthInFlight = true;
 		}
@@ -173,7 +173,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 	$J('#purchase_button_bottom').hide();
 	$J('#purchase_button_inprogress_bottom').show();
 
-	var g_winQiwiWindow = window.open( 'https://store.steampowered.com/qiwi/launchauth', 'qiwiWindow' );
+	var g_winQiwiWindow = window.open( 'https://checkout.steampowered.com/qiwi/launchauth', 'qiwiWindow' );
 
 	g_bCreateQiwiInvoiceRunning = true;
 
@@ -190,7 +190,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 		// add the country code back
 		phoneNumber = m + phoneNumber;
 
-		new Ajax.Request('https://store.steampowered.com/checkout/qiwiinvoice/',
+		new Ajax.Request('https://checkout.steampowered.com/checkout/qiwiinvoice/',
 		{
 		    method:'post',
 		    parameters: {
@@ -348,15 +348,15 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 
 			if ( g_bInReactMobileApp )
 			{
-				OpenUrlInNewBlankWindow( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID );
+				OpenUrlInNewBlankWindow( 'https://checkout.steampowered.com/checkout/externallink/?transid=' + transID );
 			}
 			else if ( bOpenURLInSteamExternalWindow )
 			{
-				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=' + transID, '_external_provider', '' );
+				g_winExternal = window.open( 'steam://openurl_external/https://checkout.steampowered.com/checkout/externallinkex/?transid=' + transID, '_external_provider', '' );
 			}
 			else
 			{
-				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', 'width=1280,height=900' );
+				g_winExternal = window.open( 'https://checkout.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', 'width=1280,height=900' );
 			}
 
 						if ( displayPendingReceipt )
@@ -370,7 +370,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		}
 		else
 		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
+			OpenUrlInNewBlankWindow( 'https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
 			if ( method.value != 'paypal' && method.value != 'storedpaypal' && method.value != 'updatepaypal' )
 			{
 				PollForTransactionStatus( $('transaction_id').value, 80, 15 );
@@ -397,7 +397,7 @@ function PopupCVV2Explanation()
 			type = 'amex';
 		}
 
-				window.open( 'https://store.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
+				window.open( 'https://checkout.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
 	}
 	catch( e )
 	{
@@ -592,7 +592,7 @@ function SaveBillingAddress()
 
 	try
 	{
-		BillingAddress_SaveBillingAddress( g_sessionID, 'https://store.steampowered.com/checkout/updatebillingaddress/',
+		BillingAddress_SaveBillingAddress( g_sessionID, 'https://checkout.steampowered.com/checkout/updatebillingaddress/',
 		{
 		    onSuccess: function(result){
 				// Success...
@@ -659,7 +659,7 @@ function InitializeTransaction()
 			$('transaction_id').value = -1;
 			$('paypaltoken').value = '';
 
-									new Ajax.Request('https://store.steampowered.com/checkout/canceltransaction/',
+									new Ajax.Request('https://checkout.steampowered.com/checkout/canceltransaction/',
 			{
 			    method:'post',
 			    parameters: {
@@ -787,7 +787,7 @@ function InitializeTransaction()
 			}
 		}
 
-		new Ajax.Request('https://store.steampowered.com/checkout/inittransaction/',
+		new Ajax.Request('https://checkout.steampowered.com/checkout/inittransaction/',
 		{
 		    method:'post',
 		    parameters: {
@@ -1299,7 +1299,7 @@ function GetFinalPriceAndUpdateReviewTab()
 		var microtxnid = $('microtxn_id') ? $('microtxn_id').value : -1;
 		var cart = $J('#shopping_cart_gid' ).val() || -1;
 		var gidReplayOfTransID = $J('#gid_replay' ).val() || -1;
-		new Ajax.Request('https://store.steampowered.com/checkout/getfinalprice/',
+		new Ajax.Request('https://checkout.steampowered.com/checkout/getfinalprice/',
 		{
 		    method:'get',
 		    parameters: {
@@ -3793,7 +3793,7 @@ function VerifyShippingAddress()
 
 				AnimateSubmitPaymentInfoButton();
 
-		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/checkout/verifyshippingaddress/',
+		Shipping_VerifyShippingAddress( g_sessionID, 'https://checkout.steampowered.com/checkout/verifyshippingaddress/',
 			{
 				onSuccess: function( result ) {
 					g_bVerifyShippingAddressCallRunning = false;
@@ -5736,7 +5736,7 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 	{
 		try
 		{
-			new Ajax.Request('https://store.steampowered.com/checkout/authenticationdetails/',
+			new Ajax.Request('https://checkout.steampowered.com/checkout/authenticationdetails/',
 			{
 			    method:'get',
 			    parameters: {
@@ -5796,13 +5796,13 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 				'You will now be redirected to authenticate this purchase with your issuing bank.',
 				'OK'
 				).done( function() {
-				var auth_url = encodeURIComponent( 'https://store.steampowered.com/checkout/beginauthentication/?transid='+txnid );
+				var auth_url = encodeURIComponent( 'https://checkout.steampowered.com/checkout/beginauthentication/?transid='+txnid );
 				window.location = "steammobile://openurl?url=" + encodeURIComponent( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + txnid + '&authurl='+auth_url + '&s=' + g_sessionID );
 				});
 			}
 			else if ( g_bIsInSteamDeck )
 			{
-				OpenUrlInNewBlankWindow( 'https://store.steampowered.com/checkout/beginauthentication/?transid='+txnid )
+				OpenUrlInNewBlankWindow( 'https://checkout.steampowered.com/checkout/beginauthentication/?transid='+txnid )
 			}
 			else
 			{
@@ -5929,7 +5929,7 @@ function PollForTransactionStatus( txnid, retries, timeout )
 
 	try
 	{
-		new Ajax.Request('https://store.steampowered.com/checkout/transactionstatus/',
+		new Ajax.Request('https://checkout.steampowered.com/checkout/transactionstatus/',
 		{
 		    method:'get',
 		    parameters: {
@@ -6087,7 +6087,7 @@ function FinalizeTransaction()
 			screenWidth: screen.width
 		};
 
-		new Ajax.Request('https://store.steampowered.com/checkout/finalizetransaction/',
+		new Ajax.Request('https://checkout.steampowered.com/checkout/finalizetransaction/',
 		{
 		    method:'post',
 		    parameters: {
@@ -6154,7 +6154,7 @@ function FinalizeTransaction()
 
 function SSAPopup()
 {
-		var win = window.open( 'https://store.steampowered.com/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
+		var win = window.open( 'https://checkout.steampowered.com/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
 	win.focus();
 }
 
@@ -6298,7 +6298,7 @@ function SendGift()
 
 				g_bSendGiftCallRunning = true;
 
-		new Ajax.Request('https://store.steampowered.com/checkout/sendgiftsubmit/',
+		new Ajax.Request('https://checkout.steampowered.com/checkout/sendgiftsubmit/',
 		{
 		    method:'post',
 		    parameters: {
@@ -6390,7 +6390,7 @@ function UnsendGift()
 	{
 				g_bSendGiftCallRunning = true;
 
-		new Ajax.Request('https://store.steampowered.com/checkout/unsendgiftsubmit/',
+		new Ajax.Request('https://checkout.steampowered.com/checkout/unsendgiftsubmit/',
 		{
 		    method:'post',
 		    parameters: {

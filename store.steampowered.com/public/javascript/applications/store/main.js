@@ -28026,16 +28026,31 @@
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.NewsHub(),
-                      render: (e) => o.createElement(pe, null),
+                      render: (e) =>
+                        o.createElement(S.d, {
+                          config: {
+                            "event-calendar": () => o.createElement(pe, null),
+                          },
+                        }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.EventAdmin(),
-                      render: (e) => o.createElement(ge, null),
+                      render: (e) =>
+                        o.createElement(S.d, {
+                          config: {
+                            "event-calendar": () => o.createElement(ge, null),
+                          },
+                        }),
                     }),
                     o.createElement(p.AW, {
                       exact: !0,
                       path: d.Z.InteractiveRecommender(),
-                      render: (e) => o.createElement(ie, null),
+                      render: (e) =>
+                        o.createElement(S.d, {
+                          config: {
+                            recommender: () => o.createElement(ie, null),
+                          },
+                        }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.LabsSandbox(),

@@ -323,7 +323,7 @@ CWishlistController.prototype.BuildElements = function()
 				.replace(/%2\$s/g,g_sessionID)
 				.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
 				.replace(/%4\$s/g,strInCartLabel)
-				.replace(/%5\$s/g, rgAppInfo['free_promo']? 'https://store.steampowered.com/checkout/addfreelicense' : 'https://store.steampowered.com/cart' )
+				.replace(/%5\$s/g, rgAppInfo['free_promo']? 'https://checkout.steampowered.com/checkout/addfreelicense' : 'https://store.steampowered.com/cart' )
 				.replace(/%6\$s/g, subForPurchase.packageid ? 'addToCart' : 'addBundleToCart' );
 			}
 			else if( rgAppInfo['prerelease'] )

@@ -416,7 +416,7 @@ function AddFreeLicense( strSessionID, strPanelID, subid, strDisplayName )
 
 	pPanel.AddClass( 'AddingLicense' );
 
-	$.AsyncWebRequest( 'https://store.steampowered.com/checkout/addfreelicense/' + subid,
+	$.AsyncWebRequest( 'https://checkout.steampowered.com/checkout/addfreelicense/' + subid,
 	{
 		type: 'POST',
 		data: { sessionid: strSessionID, 'ajax': true },
