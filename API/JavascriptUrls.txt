@@ -28,6 +28,7 @@ ${BASE_URL}heroes
 ${BASE_URL}ingest
 ${BASE_URL}items
 ${BASE_URL}matches/match/${}?u=${}&appid=${DOTA_APP_ID}
+${BASE_URL}matches/match/${}?u=${}&appid=${DOTA_APP_ID}&highlight=${}
 ${BASE_URL}newsentry/3398555399418412272
 ${BASE_URL}oauth/logout
 ${BASE_URL}oauth/logout?goto=${}
@@ -520,6 +521,7 @@ ${IMG_URL}heroes/${}.png
 ${IMG_URL}heroes/crops/${}.png
 ${IMG_URL}heroes/icons/${}.png
 ${IMG_URL}heroes/wide/${}.png
+${IMG_URL}heroes/wide/unknown.png
 ${IMG_URL}icons/${}.svg
 ${IMG_URL}icons/hero_${}.png
 ${IMG_URL}icons/hero_agility.png
@@ -696,6 +698,7 @@ ${IMG_URL}international2022/swag_bag.png
 ${IMG_URL}international2022/ti11_collectors_aegis.png
 ${IMG_URL}international2022/truesight_logo.jpg
 ${IMG_URL}international2022/weekly_quests.png
+${IMG_URL}items/${}.png
 ${IMG_URL}locked.png
 ${IMG_URL}logo.png
 ${IMG_URL}logos/Underlords_WordMark_Horiz.svg
