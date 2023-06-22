@@ -2281,7 +2281,6 @@
     "GamesList_PerfectGames_Description": "This is where you'll find your Perfect Games, or games where you've earned all the possible achievements.",
     "GamesList_Achievement_Unlock_Percentage": "%1$s% of players have this achievement",
     "NotificationsList_Header": "Notifications",
-    "NotificationsList_SettingsToolip": "Coming soon",
     "NotificationsList_Unread": "(%1$s unread)",
     "NotificationsList_FilterTo": "Filter To",
     "NotificationsList_MarkAllRead": "Mark All Read",

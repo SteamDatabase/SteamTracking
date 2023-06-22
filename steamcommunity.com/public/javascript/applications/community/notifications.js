@@ -39,13 +39,13 @@
     },
     6914: (t, e, i) => {
       "use strict";
-      i.r(e), i.d(e, { default: () => V });
+      i.r(e), i.d(e, { default: () => W });
       var n,
         o = i(89526),
         s = i(65756),
         a = i(32765),
         l = i(44973),
-        r = i(701),
+        r = i(28106),
         c = i(46132),
         m = i(27070),
         f = i(57605),
@@ -56,8 +56,8 @@
         _ = i(33940),
         h = i(50265),
         N = i(25125),
-        g = i(47742),
-        F = i(47165),
+        F = i(47742),
+        g = i(47165),
         E = i(24448),
         C = i(36041);
       !(function (t) {
@@ -239,7 +239,7 @@
       function I() {
         const { numActive: t, filters: e } = S(),
           i = v(),
-          o = (0, g.M)();
+          o = (0, F.M)();
         return (
           (0, N.SZ)(() => (0, s.RY)(w.m_summary)),
           t
@@ -269,12 +269,10 @@
       const T = new k(),
         w = new s.tL();
       var R = i(51438),
-        A = i(84343),
-        L = i(4306),
-        B = i(19304),
-        X = i(87458),
-        M = i(86770);
-      function H(t) {
+        A = i(4306),
+        L = i(19304),
+        B = i(86770);
+      function X(t) {
         const { hash: e } = t;
         (0, o.useEffect)(() => {
           T.ProcessHash(e);
@@ -304,13 +302,13 @@
                 (0, s.g1)(o) && (n = null == o ? void 0 : o.owner_steam_id);
               } else if (5 == e.type) {
                 const t = (0, s.gs)(e.item.body_data);
-                n = F.K.InitFromAccountID(parseInt(t.requestorID));
+                n = g.K.InitFromAccountID(parseInt(t.requestorID));
               } else if (9 == e.type) {
                 const t = (0, s.VE)(e.item.body_data);
-                n = F.K.InitFromAccountID(parseInt(t));
+                n = g.K.InitFromAccountID(parseInt(t));
               } else if (2 == e.type) {
                 const t = (0, s.sS)(e.item.body_data);
-                n = F.K.InitFromAccountID(parseInt(t));
+                n = g.K.InitFromAccountID(parseInt(t));
               }
               let o = null == n ? void 0 : n.ConvertTo64BitString();
               n && !t.includes(o) && t.push(o);
@@ -335,7 +333,7 @@
                       { className: y().NotificationsHeaderTitle },
                       (0, p.Xx)("#NotificationsList_Header")
                     ),
-                    o.createElement(O, null)
+                    o.createElement(M, null)
                   ),
                   o.createElement(
                     "div",
@@ -343,12 +341,12 @@
                     o.createElement(
                       "div",
                       { className: y().NotificationListCtn },
-                      o.createElement(P, null)
+                      o.createElement(H, null)
                     ),
                     o.createElement(
                       "div",
                       { className: y().NotificationFiltersCtn },
-                      o.createElement(Z, null)
+                      o.createElement(U, null)
                     )
                   )
                 )
@@ -356,11 +354,11 @@
             : o.createElement(
                 "div",
                 { className: y().NotificationPageCtn },
-                o.createElement(U, null)
+                o.createElement(O, null)
               )
         );
       }
-      function O() {
+      function M() {
         const t = (function () {
             const t = I(),
               e = (0, s.fw)();
@@ -383,15 +381,15 @@
           e
         );
       }
-      function P() {
+      function H() {
         const t = I();
         return o.createElement(
           R.s,
           { className: y().NotificationsList },
-          t.map((t, e) => o.createElement(W, { key: e, rollup: t }))
+          t.map((t, e) => o.createElement(Y, { key: e, rollup: t }))
         );
       }
-      function U() {
+      function O() {
         return o.createElement(
           R.s,
           { className: y().EmptyNotifications },
@@ -407,15 +405,14 @@
           )
         );
       }
-      function Z() {
+      function U() {
         const t = I(),
           e = o.useMemo(() => {
             const t = new Map();
             for (const e of w.m_rgNotificationRollups)
               t.set(e.type, 1 + (t.get(e.type) || 0));
             return t;
-          }, []),
-          i = (0, X.k0)();
+          }, []);
         return o.createElement(
           "div",
           { className: y().NotificationsFilterCtn },
@@ -435,26 +432,16 @@
               )
             ),
             o.createElement(
-              A.HP,
+              f.zx,
               {
-                toolTipContent: i
-                  ? void 0
-                  : (0, p.Xx)("#NotificationsList_SettingsToolip"),
-                className: y().SettingsTooltip,
+                className: y().SettingsButton,
+                onClick: () =>
+                  window.location.assign(
+                    `${l.De.STORE_BASE_URL}account/notificationsettings`
+                  ),
               },
-              o.createElement(
-                f.zx,
-                {
-                  className: y().SettingsButton,
-                  disabled: !i,
-                  onClick: () =>
-                    window.location.assign(
-                      `${l.De.STORE_BASE_URL}account/notificationsettings`
-                    ),
-                },
-                o.createElement(r.Zrf, { className: y().SettingsImg }),
-                (0, p.Xx)("#NotificationsList_Settings")
-              )
+              o.createElement(r.Zrf, { className: y().SettingsImg }),
+              (0, p.Xx)("#NotificationsList_Settings")
             )
           ),
           o.createElement(
@@ -467,7 +454,7 @@
             { className: y().SettingsFilters },
             T.k_rgFilterCheckboxes
               .filter((t) => e.has(t.type))
-              .map((t) => o.createElement(G, { key: t.type, filterOptions: t }))
+              .map((t) => o.createElement(P, { key: t.type, filterOptions: t }))
           ),
           o.createElement(
             f.zx,
@@ -479,11 +466,11 @@
           )
         );
       }
-      function G(t) {
+      function P(t) {
         const { filterOptions: e } = t,
           { filters: i } = S();
         return 3 == e.type
-          ? o.createElement(Y, { filterOptions: e, checked: i.get(e.type) })
+          ? o.createElement(z, { filterOptions: e, checked: i.get(e.type) })
           : o.createElement(f.ji, {
               className: y().FilterCheckbox,
               key: e.type,
@@ -492,7 +479,7 @@
               onChange: (t) => T.SetFilter(e.type, t),
             });
       }
-      function j(t) {
+      function Z(t) {
         const { threadType: e } = t,
           i = v();
         return o.createElement(f.ji, {
@@ -514,37 +501,37 @@
           },
         });
       }
-      function z(t) {
+      function G(t) {
         const { className: e } = t,
           i = x();
         return o.createElement(
           "div",
-          { className: (0, B.Z)(y().AdvancedCommentFilters, e) },
+          { className: (0, L.Z)(y().AdvancedCommentFilters, e) },
           Array.from(i.keys()).map((t) =>
-            o.createElement(j, { key: t, threadType: t })
+            o.createElement(Z, { key: t, threadType: t })
           )
         );
       }
-      function D(t) {
+      function j(t) {
         const { expanded: e, children: i } = t,
           [n, s] = (0, o.useState)(void 0),
-          a = (0, L.yU)((t) => {
+          a = (0, A.yU)((t) => {
             const e = t.target;
             s(e.scrollHeight);
           });
         return o.createElement(
           "div",
           {
-            className: (0, B.Z)(y().Expander, y().Expanded),
+            className: (0, L.Z)(y().Expander, y().Expanded),
             style: { height: e ? n : 0 },
           },
           o.createElement("div", { ref: a }, i)
         );
       }
-      function Y(t) {
+      function z(t) {
         const { filterOptions: e, checked: i } = t,
           n = (function () {
-            const t = (0, g.M)();
+            const t = (0, F.M)();
             return o.useMemo(() => {
               var e;
               const i = new Map();
@@ -579,27 +566,27 @@
           c &&
             o.createElement(
               "div",
-              { className: (0, B.Z)(y().CommentFilterCtn, i && y().Expanded) },
+              { className: (0, L.Z)(y().CommentFilterCtn, i && y().Expanded) },
               o.createElement(
-                D,
+                j,
                 { expanded: i },
                 o.createElement(
                   "div",
                   { className: y().CommentFilters },
-                  r && o.createElement(z, { className: y().Expanded })
+                  r && o.createElement(G, { className: y().Expanded })
                 )
               )
             )
         );
       }
-      function q(t, e) {
+      function D(t, e) {
         e.read || w.MarkItemRead(e.notification_id), t();
       }
-      function W(t) {
+      function Y(t) {
         const { rollup: e } = t,
           i = s.Zm[e.type],
           [n, a] = o.useState(!1),
-          l = (0, L.S1)(
+          l = (0, A.S1)(
             (0, o.useCallback)((t) => {
               t.isIntersecting && a(!0);
             }, []),
@@ -609,33 +596,33 @@
           const t = (0, s.gs)(e.item.body_data);
           if ((0, c.fk)(t.state) || 1 == t.state) return null;
         }
-        const r = i.bBasic ? M.PO : M.k6[e.type];
+        const r = i.bBasic ? B.PO : B.k6[e.type];
         return r
           ? o.createElement(
-              K,
+              q,
               { ref: l },
               n &&
                 o.createElement(r, {
                   rollup: e,
-                  onNotificationClick: q,
+                  onNotificationClick: D,
                   location: d.IS.AllNotificationsTray,
                   uimode: 7,
                 })
             )
           : null;
       }
-      const K = o.forwardRef((t, e) =>
+      const q = o.forwardRef((t, e) =>
         o.createElement(
           "div",
           { className: y().AllNotificationsRowCtn, ref: e },
           t.children
         )
       );
-      function V(t) {
+      function W(t) {
         let e = t.location.hash;
         return (
           e && e.startsWith("#") && (e = e.slice(1)),
-          o.createElement(H, { hash: e })
+          o.createElement(X, { hash: e })
         );
       }
     },

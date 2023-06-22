@@ -187,7 +187,7 @@
               className: w().FriendListInsetShadowBottom,
             })
           );
-      var F = r(701),
+      var F = r(28106),
         v = r(19304),
         C = r(14826),
         R = r(4306),
@@ -1170,7 +1170,7 @@
       var F = r(44421),
         v = r(55330),
         C = r(71937),
-        R = r(701),
+        R = r(28106),
         z = r(75962),
         T = r(60161),
         E = r(14826),

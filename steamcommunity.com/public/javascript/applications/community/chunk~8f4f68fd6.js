@@ -2584,7 +2584,7 @@
         l = i(25508),
         m = i(63e3),
         c = i.n(m),
-        d = i(701);
+        d = i(28106);
       const u = !0;
       var _, p;
       function f(e) {
@@ -2874,7 +2874,7 @@
       var S = i(2427),
         h = i.n(S),
         v = i(82079),
-        w = i(701);
+        w = i(28106);
       function N(e) {
         switch (e) {
           case 6:

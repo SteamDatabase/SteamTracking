@@ -382,7 +382,7 @@
         L = n(16221),
         M = n(79233),
         A = n(49234),
-        C = n(701),
+        C = n(28106),
         k = n(41855);
       class P extends r.Component {
         constructor(e) {
