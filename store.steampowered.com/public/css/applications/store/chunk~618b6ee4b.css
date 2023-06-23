@@ -3564,7 +3564,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
     padding-right: 20px;
     margin-right: 16px;
     position: sticky;
-    top: 0;
+    top: 60px;
     height: fit-content;
   }
 }
@@ -4576,9 +4576,10 @@ html.responsive.touch
   max-height: 230px;
   width: auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 940px) {
   .saledisplaylogo_SalePageLogoCtn_2kLRR {
     margin-bottom: 0px;
+    margin-top: -41vw;
   }
 }
 .salequestdisplay_description_22ryq {

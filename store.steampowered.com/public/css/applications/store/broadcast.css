@@ -2525,11 +2525,6 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   max-height: 337px;
   overflow: scroll;
 }
-@media screen and (max-width: 768px) {
-  .broadcast_embeddable_side_panels_52TmM {
-    display: none;
-  }
-}
 .broadcast_embeddable_side_panels_52TmM.broadcast_embeddable_multistream_2ZEx4 {
   max-width: 155px;
 }
@@ -3016,9 +3011,22 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
   grid-template-rows: auto 30px;
   grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar viewbar";
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
-  .broadcast_embeddable_container_2t2rR.broadcast_right_panel_simple {
-  grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar viewbar";
+@media screen and (max-width: 940px) {
+  .broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+    .broadcast_embeddable_container_2t2rR.broadcast_right_panel_simple {
+    grid-template-areas: "left-panel livestream livestream" "left-panel viewbar viewbar";
+  }
+  .broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+    .broadcast_embeddable_container_2t2rR.broadcast_right_panel_simple
+    .broadcast_embeddable_rightPanel_2Xp5Y {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+    .broadcast_embeddable_container_2t2rR.broadcast_right_panel_simple {
+    grid-template-areas: "livestream livestream livestream" "viewbar viewbar viewbar";
+  }
 }
 .broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
   .broadcast_embeddable_container_2t2rR:not(.multistream) {
@@ -3072,6 +3080,11 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
     .broadcast_embeddable_container_2t2rR {
     display: grid;
     grid-template-areas: "livestream livestream right-panel" "viewbar viewbar viewbar";
+  }
+  .broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+    .broadcast_embeddable_container_2t2rR
+    .broadcast_embeddable_side_panels_52TmM {
+    display: none;
   }
 }
 @media screen and (max-width: 620px) {

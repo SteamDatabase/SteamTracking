@@ -2554,7 +2554,13 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   position: relative;
   overflow: hidden;
   padding: 46.7391304348% 0 0 0;
-  min-width: 250px;
+}
+@media only screen and (min-width: 768px) {
+  .salepreviewwidgets_HeaderCapsuleImageContainer_Cqh49,
+  .salepreviewwidgets_MainCapsuleImageContainer_31Zak,
+  .salepreviewwidgets_HeroCapsuleImageContainer_1ail_ {
+    min-width: 250px;
+  }
 }
 .salepreviewwidgets_MainCapsuleImageContainer_31Zak {
   padding: 57.3051948052% 0 0 0;
@@ -5818,6 +5824,9 @@ html.tablet .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3FwA4 {
   display: grid;
   grid-gap: 16px;
   padding-bottom: 14px;
+}
+.compactlist .partnersaledisplay_SaleSectionContainer_2IK75 {
+  padding-bottom: 2px;
 }
 .BasicUI .partnersaledisplay_SaleSectionContainer_2IK75 {
   grid-gap: 12px;
