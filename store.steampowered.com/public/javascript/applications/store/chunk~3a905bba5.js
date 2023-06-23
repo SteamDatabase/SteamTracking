@@ -17080,33 +17080,34 @@
     },
     17325: (e, t, n) => {
       "use strict";
-      n.d(t, { s: () => w });
+      n.d(t, { s: () => B });
       var r = n(33940),
         a = n(25125),
         i = n(89526),
         s = n(98009),
         o = n(54671),
-        l = n(23715),
-        d = n.n(l),
-        c = n(17318),
-        m = n.n(c),
-        u = n(32905),
-        p = n(99307),
-        _ = n(57742),
-        h = n(701),
-        g = n(71161),
-        v = n(69338),
-        y = n(23217),
-        S = n(19304),
-        b = n(14826),
-        f = n(32765);
-      function E(e) {
-        (0, _.AM)(
+        l = n(25871),
+        d = n(23715),
+        c = n.n(d),
+        m = n(17318),
+        u = n.n(m),
+        p = n(32905),
+        _ = n(99307),
+        h = n(57742),
+        g = n(701),
+        v = n(71161),
+        y = n(69338),
+        S = n(23217),
+        b = n(19304),
+        f = n(14826),
+        E = n(32765);
+      function w(e) {
+        (0, h.AM)(
           i.createElement(
-            p.JX,
+            _.JX,
             {
-              strTitle: (0, b.Xx)("#Wishlist_Error"),
-              strDescription: (0, b.Xx)("#Wishlist_Error_Desc"),
+              strTitle: (0, f.Xx)("#Wishlist_Error"),
+              strDescription: (0, f.Xx)("#Wishlist_Error_Desc"),
             },
             i.createElement("br", null),
             i.createElement("br", null),
@@ -17115,67 +17116,100 @@
           window
         );
       }
-      function w(e) {
+      function B(e) {
         const [t, n] = i.useState(!1),
-          [l, c] = i.useState(!o.jg.Get().BIsLoaded()),
-          p = (0, g.bJ)(),
-          { appid: _, bIsFree: w, bIsComingSoon: B, className: I } = e,
-          [C, D] = (0, a.SZ)(() => [
+          [l, d] = i.useState(!o.jg.Get().BIsLoaded()),
+          m = (0, v.bJ)(),
+          { appid: _, bIsFree: h, bIsComingSoon: B, className: C } = e,
+          [D, T] = (0, a.SZ)(() => [
             o.jg.Get().BIsGameWishlisted(_),
             o.jg.Get().BOwnsApp(_),
           ]);
         i.useEffect(() => {
           (() => {
             (0, r.mG)(this, void 0, void 0, function* () {
-              yield o.jg.Get().HintLoad(), c(!1);
+              yield o.jg.Get().HintLoad(), d(!1);
             });
           })();
         }, []);
-        return D || (!B && w)
-          ? null
+        return T || (!B && h)
+          ? h
+            ? i.createElement(I, { possibleDemoAppID: _ })
+            : null
           : i.createElement(
               "div",
               {
-                className: (0, S.Z)(d().WishList, m().FlexRowContainer, I),
+                className: (0, b.Z)(c().WishList, u().FlexRowContainer, C),
                 onClick: () =>
                   (0, r.mG)(this, void 0, void 0, function* () {
-                    if (f.L7.logged_in) {
+                    if (E.L7.logged_in) {
                       if (!t) {
                         n(!0);
-                        const e = !C;
+                        const e = !D;
                         try {
                           const t = yield o.jg
                             .Get()
-                            .UpdateGameWishlist(_, e, (0, s.mY)(p));
-                          n(!1), 1 != t.success && E((0, y.l)(t).strErrorMsg);
+                            .UpdateGameWishlist(_, e, (0, s.mY)(m));
+                          n(!1), 1 != t.success && w((0, S.l)(t).strErrorMsg);
                         } catch (e) {
-                          n(!1), E((0, y.l)(e).strErrorMsg);
+                          n(!1), w((0, S.l)(e).strErrorMsg);
                         }
                       }
-                    } else (0, u.X)();
+                    } else (0, p.X)();
                   }),
-                "data-tooltip-text": (0, b.Xx)("#AddToWishlist_ttip"),
+                "data-tooltip-text": (0, f.Xx)("#AddToWishlist_ttip"),
               },
               i.createElement(
                 "span",
                 null,
-                (l || t) && i.createElement(v.V, { size: "small" })
+                (l || t) && i.createElement(y.V, { size: "small" })
               ),
-              !t && C && i.createElement(h.JrY, null),
+              !t && D && i.createElement(g.JrY, null),
               i.createElement(
                 "span",
                 null,
-                (0, b.Xx)(
+                (0, f.Xx)(
                   t
                     ? "#Updating"
                     : l
                     ? "#Loading"
-                    : C
+                    : D
                     ? "#Wishlisted_short"
                     : "#AddToWishlist_short"
                 )
               )
             );
+      }
+      function I(e) {
+        const { possibleDemoAppID: t, className: n } = e,
+          [r] = (0, l.vs)(t, {});
+        return (
+          console.log(
+            "adil2",
+            null == r ? void 0 : r.GetAppType(),
+            null == r ? void 0 : r.GetParentAppID()
+          ),
+          (1 == (null == r ? void 0 : r.GetAppType()) ||
+            12 == (null == r ? void 0 : r.GetAppType())) &&
+          (null == r ? void 0 : r.GetParentAppID()) > 0
+            ? i.createElement(C, {
+                parentAppID: null == r ? void 0 : r.GetParentAppID(),
+                className: n,
+              })
+            : null
+        );
+      }
+      function C(e) {
+        const { parentAppID: t, className: n } = e,
+          [r] = (0, l.vs)(t, { include_release: !0 });
+        return r
+          ? i.createElement(B, {
+              appid: t,
+              bIsComingSoon: r.BIsComingSoon(),
+              bIsFree: r.BIsFree(),
+              className: n,
+            })
+          : null;
       }
     },
     43946: (e, t, n) => {
