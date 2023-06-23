@@ -8954,7 +8954,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, he.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1687386363),
+          s = parseInt(1687543322),
           c = s && (0, tr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = i.sSteamBuildDate,
           d = "linux" == g.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -15170,7 +15170,6 @@
               "Attempted to show a URL in the main window browser without a browser manager available!"
             ),
           Z.cS.settings.bSmallMode && SteamClient.Settings.SetSmallMode(!1),
-          s.nm.WindowStore.EnsureMainWindowCreated(!0),
           xs.ShowURL(e, t)
         );
       }

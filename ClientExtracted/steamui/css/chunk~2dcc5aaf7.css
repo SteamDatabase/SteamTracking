@@ -8988,6 +8988,9 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   height: 24px;
   margin-top: 6px;
 }
+.compactView .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit {
+  margin-top: 3px;
+}
 .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit path {
   fill: #8592a5;
   stroke-width: 2px;
@@ -58291,9 +58294,20 @@ div.NarrowRightPanel
 }
 .achievementslist_GlobalAchievementListItem_316Uo
   .achievementslist_Content_UWkKt
+  .achievementslist_Right_k02se {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  position: relative;
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
   .achievementslist_Info_Zoy4C {
   padding-left: 10px;
   flex: 1;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 .achievementslist_GlobalAchievementListItem_316Uo
   .achievementslist_Content_UWkKt
@@ -58337,6 +58351,43 @@ div.NarrowRightPanel
   left: 0;
   bottom: 0;
   background-color: rgba(103, 112, 123, 0.2);
+}
+.achievementslist_GlobalAchievementListItem_316Uo
+  .achievementslist_Content_UWkKt
+  .achievementslist_SpoilerWarning_g5fuB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.achievementslist_GlobalAchievementListItem_316Uo:hover
+  .achievementslist_Hidden_3P6m0
+  .achievementslist_SpoilerWarning_g5fuB,
+.achievementslist_GlobalAchievementListItem_316Uo.gpfocus
+  .achievementslist_Hidden_3P6m0
+  .achievementslist_SpoilerWarning_g5fuB {
+  opacity: 1;
+}
+.achievementslist_GlobalAchievementListItem_316Uo:hover
+  .achievementslist_Hidden_3P6m0
+  .achievementslist_Info_Zoy4C,
+.achievementslist_GlobalAchievementListItem_316Uo.gpfocus
+  .achievementslist_Hidden_3P6m0
+  .achievementslist_Info_Zoy4C,
+.achievementslist_GlobalAchievementListItem_316Uo:hover
+  .achievementslist_Hidden_3P6m0
+  .achievementslist_Percent_17WmA,
+.achievementslist_GlobalAchievementListItem_316Uo.gpfocus
+  .achievementslist_Hidden_3P6m0
+  .achievementslist_Percent_17WmA {
+  opacity: 0;
 }
 .achievementslist_ComparisonAchieverColumn_3eXGQ {
   display: flex;
@@ -58546,9 +58597,20 @@ div.NarrowRightPanel
 }
 .achievementspage_GlobalAchievementListItem_3SGC6
   .achievementspage_Content_1HHLc
+  .achievementspage_Right_3DAJR {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  position: relative;
+}
+.achievementspage_GlobalAchievementListItem_3SGC6
+  .achievementspage_Content_1HHLc
   .achievementspage_Info_kWiUE {
   padding-left: 10px;
   flex: 1;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 .achievementspage_GlobalAchievementListItem_3SGC6
   .achievementspage_Content_1HHLc
@@ -58592,6 +58654,43 @@ div.NarrowRightPanel
   left: 0;
   bottom: 0;
   background-color: rgba(103, 112, 123, 0.2);
+}
+.achievementspage_GlobalAchievementListItem_3SGC6
+  .achievementspage_Content_1HHLc
+  .achievementspage_SpoilerWarning_1YyMr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.achievementspage_GlobalAchievementListItem_3SGC6:hover
+  .achievementspage_Hidden_1BmHJ
+  .achievementspage_SpoilerWarning_1YyMr,
+.achievementspage_GlobalAchievementListItem_3SGC6.gpfocus
+  .achievementspage_Hidden_1BmHJ
+  .achievementspage_SpoilerWarning_1YyMr {
+  opacity: 1;
+}
+.achievementspage_GlobalAchievementListItem_3SGC6:hover
+  .achievementspage_Hidden_1BmHJ
+  .achievementspage_Info_kWiUE,
+.achievementspage_GlobalAchievementListItem_3SGC6.gpfocus
+  .achievementspage_Hidden_1BmHJ
+  .achievementspage_Info_kWiUE,
+.achievementspage_GlobalAchievementListItem_3SGC6:hover
+  .achievementspage_Hidden_1BmHJ
+  .achievementspage_Percent_3bliN,
+.achievementspage_GlobalAchievementListItem_3SGC6.gpfocus
+  .achievementspage_Hidden_1BmHJ
+  .achievementspage_Percent_3bliN {
+  opacity: 0;
 }
 .achievementspage_ComparisonAchieverColumn_ArE5G {
   display: flex;

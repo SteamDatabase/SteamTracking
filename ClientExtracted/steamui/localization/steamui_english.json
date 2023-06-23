@@ -1387,6 +1387,8 @@
     "Achievements_Tab_GlobalAchievements": "Global Achievements",
     "Achievements_HiddenAchievementItem_Individual_Title": "Hidden achievement",
     "Achievements_HiddenAchievementItem_Individual_Reveal": "Show spoiler",
+    "Achievements_HiddenAchievementItem_Individual_Reveal_Gamepad": "Select to show spoiler",
+    "Achievements_HiddenAchievementItem_Individual_Reveal_Desktop": "Click to show spoiler",
     "Achievements_GlobalAchievement_PercentUnlockedLabel": "% of all players",
     "Achievements_ComparisonToggle_Label": "Show mine",
     "Achievements_NotOwned": "You do not own this game",
