@@ -5938,11 +5938,24 @@
             (this.m_bUserPreferenceHideBroadcastByDefault = void 0),
             (this.m_bCollapsed = void 0),
             (this.m_setStreamChangedListeners = new Set()),
-            (this.m_bUseFakeData = !1);
+            (this.m_bUseFakeData = !1),
+            (this.m_onLoadContextCall = new Map());
         }
         BHasStreams(e) {
           const t = this.GetStreams(e);
           return Boolean(t && t.length > 0);
+        }
+        AddCallbackOnNewContext(e, t, n) {
+          this.m_onLoadContextCall.set(this.GetStreamsLookupKeyFromDef(e), {
+            name: t,
+            fnCallback: n,
+          });
+        }
+        ClearCallbackOnNewContext(e) {
+          this.m_onLoadContextCall.set(
+            this.GetStreamsLookupKeyFromDef(e),
+            null
+          );
         }
         GetPlayReadyStream(e) {
           let t = this.GetStreamsLookupKeyFromDef(e);
@@ -5979,6 +5992,13 @@
         ToggleChatVisibility() {
           const e = this.GetChatVisibility();
           "remove" !== e && (this.m_bUserChatExpanded = "hide" === e);
+        }
+        DebugDumpContextAndAvailableContext(e) {
+          console.log("Requested context", this.GetStreamsLookupKeyFromDef(e)),
+            console.log("Available context count: ", this.m_lookupStreams.size),
+            this.m_lookupStreams.forEach((e, t) => {
+              console.log(t, e.length);
+            });
         }
         GetStreams(e) {
           const t = this.GetStreamsLookupKeyFromDef(e);
@@ -6200,13 +6220,27 @@
                       e.default_selection_priority),
                   n != d.id && r.push(n);
               });
-            }),
-              this.m_lookupStreams.set(
-                this.GetStreamsLookupKeyFromDef(e),
-                t.filtered
-              );
-            const a = this.GetStreams(e);
-            return yield this.AutoStartVideoStream(e, a), a;
+            });
+            const a = this.GetStreamsLookupKeyFromDef(e);
+            if (
+              (this.m_lookupStreams.set(a, t.filtered),
+              this.m_onLoadContextCall.has(a))
+            ) {
+              const e = this.m_onLoadContextCall.get(a);
+              e
+                ? ("dev" == p.De.WEB_UNIVERSE &&
+                    console.log(
+                      "CBroadcastEmbeddableStore initialized after caller using callback to " +
+                        e.name
+                    ),
+                  e.fnCallback())
+                : "dev" == p.De.WEB_UNIVERSE &&
+                  console.log(
+                    "CBroadcastEmbeddableStore initialized after caller, however callback is since cleared"
+                  );
+            }
+            const i = this.GetStreams(e);
+            return yield this.AutoStartVideoStream(e, i), i;
           });
         }
         ExtractBroadcastPrioritiesFromPartnerEventForPreview(e, t) {

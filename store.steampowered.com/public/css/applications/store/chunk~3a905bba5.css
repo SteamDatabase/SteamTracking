@@ -2555,7 +2555,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   overflow: hidden;
   padding: 46.7391304348% 0 0 0;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .salepreviewwidgets_HeaderCapsuleImageContainer_Cqh49,
   .salepreviewwidgets_MainCapsuleImageContainer_31Zak,
   .salepreviewwidgets_HeroCapsuleImageContainer_1ail_ {
