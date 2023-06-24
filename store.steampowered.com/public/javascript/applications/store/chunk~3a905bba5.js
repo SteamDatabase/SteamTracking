@@ -6291,13 +6291,18 @@
               }
               return this.m_playReadyStream;
             }
+            return this.PlayFromAvailableStreams(e, t);
+          });
+        }
+        PlayFromAvailableStreams(e, t, n = !1) {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             const r = new Set();
             for (;;) {
-              const n = t.filter((e) => !r.has(e)),
-                a = this.GetAutoStartStream(n);
-              if (!a) return null;
-              if (yield this.AttemptToPlayStream(e, a)) return a;
-              r.add(a);
+              const a = t.filter((e) => !(r.has(e) || (n && e.nAppIDVOD))),
+                i = this.GetAutoStartStream(a);
+              if (!i) return null;
+              if (yield this.AttemptToPlayStream(e, i)) return i;
+              r.add(i);
             }
           });
         }

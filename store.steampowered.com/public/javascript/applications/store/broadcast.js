@@ -9095,10 +9095,9 @@
                 ? Er.ai.Get().HintLoadEmbeddablePreviewStreams(this.props)
                 : Er.ai.Get().HintLoadEmbeddableStreams(this.props),
               this.props.nAppIDVOD &&
-                (Er.ai
+                Er.ai
                   .Get()
                   .SetupEmbeddableVOD(this.props, !this.props.bSkipPreRoll),
-                this.props.bSkipPreRoll && this.PlayTopNonVOD()),
               window.setTimeout(() => {
                 this.m_cancelSignal.token.reason ||
                   this.setState({
@@ -9147,7 +9146,7 @@
                 (yield Er.ai.Get().AttemptToPlayStream(this.props, e));
           });
         }
-        PlayTopNonVOD() {
+        PlayNextNonVOD() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             this.setState({ bStartMuted: !1 });
             const e = Er.ai
@@ -9157,12 +9156,7 @@
                 (e) =>
                   !this.props.fnFilterStreams || this.props.fnFilterStreams(e)
               );
-            (0, Er.rg)(e);
-            for (const t of e)
-              if (!t.nAppIDVOD)
-                return void (yield Er.ai
-                  .Get()
-                  .AttemptToPlayStream(this.props, t));
+            yield Er.ai.Get().PlayFromAvailableStreams(this.props, e, !0);
           });
         }
         ConstructSidePanels(e, t) {
@@ -9256,7 +9250,7 @@
               o = Er.ai.Get().GetConcurrentStreams(this.props) > 1;
             const c = () => {
               var t, r;
-              e.nAppIDVOD && this.PlayTopNonVOD(),
+              e.nAppIDVOD && this.PlayNextNonVOD(),
                 null === (r = (t = this.props).fnOnVideoEnd) ||
                   void 0 === r ||
                   r.call(t);
@@ -9373,7 +9367,7 @@
       (0, i.gn)([$t.ak], oi.prototype, "ToggleBroadcastExpandShrink", null),
         (0, i.gn)([$t.ak], oi.prototype, "OnShrinkTransitionEnd", null),
         (0, i.gn)([$t.ak], oi.prototype, "onStreamSelect", null),
-        (0, i.gn)([$t.ak], oi.prototype, "PlayTopNonVOD", null),
+        (0, i.gn)([$t.ak], oi.prototype, "PlayNextNonVOD", null),
         (oi = (0, i.gn)([n.Pi], oi));
       class li extends l.Component {
         constructor(e) {
