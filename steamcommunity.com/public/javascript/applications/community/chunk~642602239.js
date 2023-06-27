@@ -3384,7 +3384,7 @@
           })
         );
       }
-      function N(e) {
+      function F(e) {
         const { className: t } = e,
           r = (0, i._T)(e, ["className"]);
         return o.createElement(
@@ -3392,8 +3392,8 @@
           Object.assign({ className: (0, u.Z)(t, C.AddonPickerMessage) }, r)
         );
       }
-      var F = r(28744),
-        U = r.n(F),
+      var N = r(28744),
+        U = r.n(N),
         L = r(75962);
       class M extends o.PureComponent {
         constructor() {
@@ -3810,7 +3810,7 @@
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   o.createElement(
-                    N,
+                    F,
                     null,
                     n
                       ? (0, h.Xx)("#AddonPicker_NoResults")
@@ -3829,7 +3829,7 @@
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
                   o.createElement(
-                    N,
+                    F,
                     null,
                     n
                       ? (0, h.Xx)("#AddonPicker_NoResults")
@@ -3873,7 +3873,7 @@
             onSubmit: () => r(s[0]),
             renderEmpty: () =>
               n
-                ? o.createElement(N, null, (0, h.Xx)("#AddonPicker_NoResults"))
+                ? o.createElement(F, null, (0, h.Xx)("#AddonPicker_NoResults"))
                 : o.createElement(Z, null),
           });
         }
@@ -3883,7 +3883,7 @@
           o.Fragment,
           null,
           o.createElement(
-            N,
+            F,
             null,
             (0, h.Xx)(
               "#AddonPicker_NoneOwned",
@@ -3891,7 +3891,7 @@
             )
           ),
           o.createElement(
-            N,
+            F,
             null,
             (0, h.kQ)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
@@ -3928,12 +3928,12 @@
             onSubmit: () => t(i[0]),
             renderEmpty: () =>
               r
-                ? o.createElement(N, null, (0, h.Xx)("#AddonPicker_NoResults"))
+                ? o.createElement(F, null, (0, h.Xx)("#AddonPicker_NoResults"))
                 : o.createElement(
                     o.Fragment,
                     null,
                     o.createElement(
-                      N,
+                      F,
                       null,
                       (0, h.Xx)(
                         "#AddonPicker_NoneOwned",
@@ -3941,7 +3941,7 @@
                       )
                     ),
                     o.createElement(
-                      N,
+                      F,
                       null,
                       (0, h.kQ)(
                         "#AddonPicker_AcquireAtPointsShop",
@@ -3978,12 +3978,12 @@
             onSubmit: () => r(n[0]),
             renderEmpty: () =>
               i
-                ? o.createElement(N, null, (0, h.Xx)("#AddonPicker_NoResults"))
+                ? o.createElement(F, null, (0, h.Xx)("#AddonPicker_NoResults"))
                 : o.createElement(
                     o.Fragment,
                     null,
                     o.createElement(
-                      N,
+                      F,
                       null,
                       (0, h.Xx)(
                         "#AddonPicker_NoneOwned",
@@ -3991,7 +3991,7 @@
                       )
                     ),
                     o.createElement(
-                      N,
+                      F,
                       null,
                       (0, h.kQ)(
                         "#AddonPicker_AcquireAtPointsShop",
@@ -4032,7 +4032,7 @@
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   o.createElement(
-                    N,
+                    F,
                     null,
                     n
                       ? (0, h.Xx)("#AddonPicker_NoResults")
@@ -4057,7 +4057,7 @@
                   renderEmpty: () =>
                     n
                       ? o.createElement(
-                          N,
+                          F,
                           null,
                           (0, h.Xx)("#AddonPicker_NoResults")
                         )
@@ -4095,7 +4095,7 @@
                 renderEmpty: () =>
                   n
                     ? o.createElement(
-                        N,
+                        F,
                         null,
                         (0, h.Xx)("#AddonPicker_NoResults")
                       )
@@ -4690,8 +4690,8 @@
         R = r(1063),
         D = r(82079),
         k = r(10412),
-        N = r(43707),
-        F = r(69338),
+        F = r(43707),
+        N = r(69338),
         U = r(87178),
         L = r(84199),
         M = r(20790);
@@ -4729,7 +4729,7 @@
                 const o = k.j1.LoadPartnerEventGeneric(a, e, i, r, 0);
                 let s = yield o;
                 yield Promise.all([
-                  N.Z.Get().QueueAppRequest(s.appid, {
+                  F.Z.Get().QueueAppRequest(s.appid, {
                     include_assets: !0,
                     include_basic_info: !0,
                     include_release: !0,
@@ -4778,7 +4778,7 @@
             fnImageFailureCallback: s,
           } = this.props;
           if (this.state.bFailedLoad) return (0, L.hF)(a);
-          if (this.state.bLoading) return n.createElement(F.V, null);
+          if (this.state.bLoading) return n.createElement(N.V, null);
           let l =
             void 0 !== r
               ? k.j1.GetClanEventFromAnnouncementGID(r)
@@ -4794,7 +4794,7 @@
           let d = l.GetNameWithFallback(c),
             p = l.GetSubTitleWithSummaryFallback(c),
             u =
-              null === (e = N.Z.Get().GetApp(t)) || void 0 === e
+              null === (e = F.Z.Get().GetApp(t)) || void 0 === e
                 ? void 0
                 : e.GetName(),
             _ = (0, g.$1)(l.GetStartTimeAndDateUnixSeconds());
@@ -4928,7 +4928,7 @@
                         )
                       )
                     )
-                  : n.createElement(F.V, { size: "medium" })
+                  : n.createElement(N.V, { size: "medium" })
               )
             : n.createElement(
                 "div",
@@ -5568,9 +5568,9 @@
         Re = r(25871),
         De = r(57605),
         ke = r(24591),
-        Ne = r(94843),
-        Fe = r(43682),
-        Ue = r.n(Fe);
+        Fe = r(94843),
+        Ne = r(43682),
+        Ue = r.n(Ne);
       const Le = (e) => {
         const [t, r] = (0, n.useState)(!0),
           [a, o] = (0, n.useState)(null);
@@ -5579,11 +5579,11 @@
             if (0 == e.appid || 0 == e.trailerBaseID)
               return void o((0, g.Xx)("#TrailerPlayer_ID_NotProvided"));
             (0, i.mG)(void 0, void 0, void 0, function* () {
-              yield N.Z.Get().QueueAppRequest(e.appid, {
+              yield F.Z.Get().QueueAppRequest(e.appid, {
                 include_trailers: !0,
               }),
-                N.Z.Get().BHasApp(e.appid)
-                  ? (N.Z.Get()
+                F.Z.Get().BHasApp(e.appid)
+                  ? (F.Z.Get()
                       .GetApp(e.appid)
                       .GetAllTrailers()
                       .GetTrailerByID(e.trailerBaseID) ||
@@ -5616,11 +5616,11 @@
             ? n.createElement("div", { className: Ue().ErrorDiv }, a)
             : null;
         if (t)
-          return n.createElement(F.V, {
+          return n.createElement(N.V, {
             string: (0, g.Xx)("#Loading"),
             size: "small",
           });
-        const s = N.Z.Get()
+        const s = F.Z.Get()
             .GetApp(e.appid)
             .GetAllTrailers()
             .GetTrailerByID(e.trailerBaseID),
@@ -5632,7 +5632,7 @@
               { sURL: l.strMP4URL, sFormat: "video/mp4" },
             ],
           };
-        return n.createElement(Ne.Y, {
+        return n.createElement(Fe.Y, {
           bControls: !0,
           bAutoPlay: !1,
           bLoop: !1,
@@ -6094,9 +6094,9 @@
             : null;
         let l = !1;
         return (
-          (l = N.Z.Get().BHasStoreItem(t, 1)
+          (l = F.Z.Get().BHasStoreItem(t, 1)
             ? Boolean(a.GetBestPurchaseOption())
-            : !N.Z.Get().BIsPackageUnavailableDueToCountryRestriction(t)),
+            : !F.Z.Get().BIsPackageUnavailableDueToCountryRestriction(t)),
           (!l && !r) || (l && r) ? e.children : null
         );
       }
@@ -6211,7 +6211,7 @@
                 De.Ac,
                 null,
                 c
-                  ? n.createElement(F.V, {
+                  ? n.createElement(N.V, {
                       size: "medium",
                       position: "center",
                       string: (0, g.Xx)("#Loading"),
@@ -6816,38 +6816,38 @@
         s = r(14826),
         l = r(32765);
       function c(e) {
-        const { appid: t, community_item_type: r } = e,
-          i = (0, a.mn)(t, r);
+        const { appid: t, community_item_type: r, bForEdit: i } = e,
+          c = (0, a.mn)(t, r, i);
         if (
-          (null == i ? void 0 : i.item_movie_mp4) &&
-          (null == i ? void 0 : i.item_movie_webm)
+          (null == c ? void 0 : c.item_movie_mp4) &&
+          (null == c ? void 0 : c.item_movie_webm)
         ) {
           const e = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == i ? void 0 : i.item_image_large
+              null == c ? void 0 : c.item_image_large
             }`,
             r = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == i ? void 0 : i.item_movie_webm
+              null == c ? void 0 : c.item_movie_webm
             }`,
-            a = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == i ? void 0 : i.item_movie_mp4
+            i = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+              null == c ? void 0 : c.item_movie_mp4
             }`;
           return n.createElement(
             "video",
             { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
             n.createElement("source", { src: r, type: "video/webm" }),
             Boolean(!l.De.IN_CLIENT) &&
-              n.createElement("source", { src: a, type: "video/mp4" })
+              n.createElement("source", { src: i, type: "video/mp4" })
           );
         }
-        if (i) {
+        if (c) {
           const r = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-            (null == i ? void 0 : i.item_image_small) ||
-            (null == i ? void 0 : i.item_image_large)
+            (null == c ? void 0 : c.item_image_small) ||
+            (null == c ? void 0 : c.item_image_large)
           }`;
           return n.createElement("img", {
             className: e.className,
             src: r,
-            alt: null == i ? void 0 : i.item_name,
+            alt: null == c ? void 0 : c.item_name,
           });
         }
         return n.createElement(o.V, {

@@ -28026,6 +28026,7 @@
                 d.createElement(vt.x, {
                   appid: a.appid,
                   community_item_type: a.community_item_type,
+                  bForEdit: !0,
                 }),
                 d.createElement(
                   "span",

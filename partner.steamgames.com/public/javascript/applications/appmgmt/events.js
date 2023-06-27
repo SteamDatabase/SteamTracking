@@ -17451,38 +17451,38 @@
         );
       }
       function yn(e) {
-        const { appid: t, community_item_type: n } = e,
-          a = Sn(t, n);
+        const { appid: t, community_item_type: n, bForEdit: a } = e,
+          r = Sn(t, n, a);
         if (
-          (null == a ? void 0 : a.item_movie_mp4) &&
-          (null == a ? void 0 : a.item_movie_webm)
+          (null == r ? void 0 : r.item_movie_mp4) &&
+          (null == r ? void 0 : r.item_movie_webm)
         ) {
           const e = `${B.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == a ? void 0 : a.item_image_large
+              null == r ? void 0 : r.item_image_large
             }`,
             n = `${B.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == a ? void 0 : a.item_movie_webm
+              null == r ? void 0 : r.item_movie_webm
             }`,
-            r = `${B.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == a ? void 0 : a.item_movie_mp4
+            a = `${B.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+              null == r ? void 0 : r.item_movie_mp4
             }`;
           return i.createElement(
             "video",
             { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
             i.createElement("source", { src: n, type: "video/webm" }),
             Boolean(!B.De.IN_CLIENT) &&
-              i.createElement("source", { src: r, type: "video/mp4" })
+              i.createElement("source", { src: a, type: "video/mp4" })
           );
         }
-        if (a) {
+        if (r) {
           const n = `${B.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-            (null == a ? void 0 : a.item_image_small) ||
-            (null == a ? void 0 : a.item_image_large)
+            (null == r ? void 0 : r.item_image_small) ||
+            (null == r ? void 0 : r.item_image_large)
           }`;
           return i.createElement("img", {
             className: e.className,
             src: n,
-            alt: null == a ? void 0 : a.item_name,
+            alt: null == r ? void 0 : r.item_name,
           });
         }
         return i.createElement(O.V, {
