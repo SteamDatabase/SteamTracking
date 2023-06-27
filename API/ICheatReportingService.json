@@ -278,6 +278,12 @@
                     "type": "uint64",
                     "optional": false,
                     "description": "session id"
+                },
+                {
+                    "name": "session_flags",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "session flags"
                 }
             ]
         },

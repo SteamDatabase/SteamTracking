@@ -1737,6 +1737,7 @@ a.pagelink:hover {
 	height: 24px;
 	padding: 0px;
 	margin: 0px;
+	background: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/header/notification_bell.png' ) no-repeat #3D4450;
 	background-position: center;
 	background-size: 14px;
 }

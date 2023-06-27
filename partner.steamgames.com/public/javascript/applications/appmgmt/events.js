@@ -18224,9 +18224,13 @@
         }
       }
       const s = (e) => null != e;
-      function l(e, t, n) {
-        const a = new URLSearchParams(e.location.search.substring(1));
-        a.delete(t), s(n) && a.append(t, n), e.push(`?${a.toString()}`);
+      function l(e, t, n, a = !1) {
+        const i = new URLSearchParams(e.location.search.substring(1));
+        i.delete(t),
+          s(n) && i.append(t, n),
+          a
+            ? e.replace(`?${i.toString()}`, Object.assign({}, e.location.state))
+            : e.push(`?${i.toString()}`);
       }
       function o(e, t) {
         const n = (0, i.k6)(),
@@ -18249,14 +18253,16 @@
           );
         return [c, m];
       }
-      function c(e, t) {
-        const n = new URLSearchParams(e.location.search.substring(1));
+      function c(e, t, n = !1) {
+        const a = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
-            const a = t[e];
-            n.delete(e), s(a) && n.append(e, a);
+            const n = t[e];
+            a.delete(e), s(n) && a.append(e, n);
           }
-        e.push(`?${n.toString()}`);
+        n
+          ? e.replace(`?${a.toString()}`, Object.assign({}, e.location.state))
+          : e.push(`?${a.toString()}`);
       }
     },
     5386: (e, t, n) => {
@@ -57877,7 +57883,7 @@
             t.GetArtInputLink(),
             t.BIsDirty(),
           ]),
-          p = ye.II.validateUrl(d),
+          p = (null == d ? void 0 : d.trim().length) > 0,
           _ = p && (!n || r) && (!a || s) && (!i || l);
         return m.createElement(
           "div",
@@ -72980,6 +72986,8 @@
                   nMatchCount: E.match_count,
                   bMoreAvailable: E.possible_has_more,
                   nNextSolrIndex: i + s,
+                  strRequest:
+                    ("dev" === r.De.WEB_UNIVERSE && E.request) || void 0,
                 }),
                 this.m_mapResults.get(a)
               );
@@ -75927,6 +75935,8 @@
         GetDefaultTab() {
           const e = this.GetFlavorsForActiveTab();
           if (!e) return null;
+          const t = (0, Xe.ks)(this.props.history, "flavor");
+          if (t && e.includes(t)) return t;
           return e.find((e) => $.z5.find((t) => t.flavor === e)) || null;
         }
         RenderTabHeaders() {

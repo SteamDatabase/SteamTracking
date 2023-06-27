@@ -84,8 +84,9 @@ function testUTMLink( linktotest )
 		return errorlabel + 'A utm_campaign or utm_source parameter is required';
 	}
 
-	// check if there are other issues with the link
-	let re = new RegExp( '^https?:\/\/store\.steampowered\.com\/app\/[0-9]+(\/?|\/[A-Za-z0-9_]*\/?)\\?(utm_campaign|utm_source|(utm_[A-Za-z0-9_]*=[A-Za-z0-9_]*&utm_campaign)|(utm_[A-Za-z0-9_]*=[A-Za-z0-9_]*&utm_source))=', 'i' );
+	// check if there are other issues with the link.
+	// Allow steam://openurl/ at the start
+	let re = new RegExp( '^(steam:\/\/openurl\/)?https?:\/\/store\.steampowered\.com\/app\/[0-9]+(\/?|\/[A-Za-z0-9_]*\/?)\\?(utm_campaign|utm_source|(utm_[A-Za-z0-9_]*=[A-Za-z0-9_]*&utm_campaign)|(utm_[A-Za-z0-9_]*=[A-Za-z0-9_]*&utm_source))=', 'i' );
 
 	return re.test( linktotest ) ? successlabel : errorlabel + 'The link does not appear valid. If you believe the link is formatted correctly please <a target="_blank" href="https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=905">contact us</a>.';
 

@@ -2409,9 +2409,6 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   align-items: stretch;
   justify-content: space-between;
 }
-.broadcast_embeddable_container_2t2rR .broadcast_embeddable_viewer_bar_2t4Yv {
-  display: none;
-}
 @media screen and (max-width: 620px) {
   .broadcast_embeddable_container_2t2rR {
     display: flex;
@@ -2422,11 +2419,6 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   max-width: 155px;
   max-height: 337px;
   overflow: scroll;
-}
-@media screen and (max-width: 768px) {
-  .broadcast_embeddable_side_panels_52TmM {
-    display: none;
-  }
 }
 .broadcast_embeddable_side_panels_52TmM.broadcast_embeddable_multistream_2ZEx4 {
   max-width: 155px;
@@ -2864,16 +2856,6 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
     height: 280px;
   }
 }
-@media screen and (max-width: 770px) {
-  .broadcast_embeddable_bordered_container_3cQe7
-    .broadcast_embeddable_video_placeholder_3AO8B,
-  .broadcast_embeddable_bordered_container_3cQe7
-    .broadcast_embeddable_embedded_player_2Y3Pd {
-    max-height: 30vh;
-    height: calc((100vw - 30px) * 0.5625);
-    min-height: 270px;
-  }
-}
 @media screen and (max-width: 600px) {
   .broadcast_embeddable_BroadcastAndChat_2PrUG {
     margin: 0px;
@@ -2907,40 +2889,55 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
   .broadcast_embeddable_chat_link_2sm6H {
   display: none;
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+.broadcast_embeddable_bordered_container_3cQe7
   .broadcast_embeddable_container_2t2rR {
   display: grid;
   grid-template-columns: 155px calc(100% - 310px) 155px;
   grid-template-rows: auto 30px;
   grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar viewbar";
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
-  .broadcast_embeddable_container_2t2rR.broadcast_right_panel_simple {
-  grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar viewbar";
+@media screen and (min-width: 768px) {
+  .broadcast_embeddable_bordered_container_3cQe7
+    .broadcast_embeddable_container_2t2rR:not(.multistream) {
+    grid-template-rows: 337px 30px;
+    grid-template-areas: "left-panel livestream right-panel" "viewbar viewbar viewbar";
+  }
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
-  .broadcast_embeddable_container_2t2rR:not(.multistream) {
-  grid-template-rows: 337px 30px;
-  grid-template-areas: "left-panel livestream right-panel" "viewbar viewbar viewbar";
+@media screen and (max-width: 940px) and (min-width: 768px) {
+  .broadcast_embeddable_bordered_container_3cQe7
+    .broadcast_embeddable_container_2t2rR.broadcast_right_panel_simple {
+    grid-template-areas: "left-panel livestream livestream" "left-panel viewbar viewbar";
+  }
+  .broadcast_embeddable_bordered_container_3cQe7
+    .broadcast_embeddable_container_2t2rR.broadcast_right_panel_simple:not(
+      .multistream
+    ) {
+    grid-template-areas: "left-panel livestream livestream" "viewbar viewbar viewbar";
+  }
+  .broadcast_embeddable_bordered_container_3cQe7
+    .broadcast_embeddable_container_2t2rR.broadcast_right_panel_simple
+    .broadcast_embeddable_rightPanel_2Xp5Y {
+    display: none;
+  }
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+.broadcast_embeddable_bordered_container_3cQe7
   .broadcast_embeddable_container_2t2rR.broadcast_chat_expanded {
   grid-template-columns: calc(100% - 312px) 312px;
   grid-template-rows: auto 30px;
   grid-template-areas: "livestream store-chat" "viewbar viewbar";
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+.broadcast_embeddable_bordered_container_3cQe7
   .broadcast_embeddable_container_2t2rR
   .broadcast_embeddable_side_panels_52TmM:not(img) {
   grid-area: left-panel;
   max-height: 367px;
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+.broadcast_embeddable_bordered_container_3cQe7
   .broadcast_embeddable_container_2t2rR
   .broadcast_embeddable_wrapper_1gWJA {
   grid-area: livestream;
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+.broadcast_embeddable_bordered_container_3cQe7
   .broadcast_embeddable_container_2t2rR
   .broadcast_embeddable_viewer_bar_2t4Yv {
   display: flex;
@@ -2948,36 +2945,51 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
   background: linear-gradient(to bottom, #2b2f36, #22252b);
   padding-left: 8px;
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+.broadcast_embeddable_bordered_container_3cQe7
   .broadcast_embeddable_container_2t2rR
   .broadcast_embeddable_rightPanel_2Xp5Y {
   grid-area: right-panel;
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+.broadcast_embeddable_bordered_container_3cQe7
   .broadcast_embeddable_container_2t2rR
   .broadcast_embeddable_store_chat_ctn_2nZVP {
   grid-area: store-chat;
   max-width: 316px;
 }
-.broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+.broadcast_embeddable_bordered_container_3cQe7
   .broadcast_embeddable_container_2t2rR
   .broadcast_embeddable_ChatContainer_2X2rQ
   .ChatEntry {
   padding: 4px;
 }
 @media screen and (max-width: 768px) {
-  .broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+  .broadcast_embeddable_bordered_container_3cQe7
     .broadcast_embeddable_container_2t2rR {
-    display: grid;
-    grid-template-areas: "livestream livestream right-panel" "viewbar viewbar viewbar";
+    grid-template-rows: 337px 30px;
+    grid-template-areas: "livestream livestream livestream" "viewbar viewbar viewbar";
+  }
+  .broadcast_embeddable_Event_1YaET.broadcast_embeddable_bordered_container_3cQe7
+    .broadcast_embeddable_container_2t2rR {
+    grid-template-rows: 337px 30px 84px;
+    grid-template-areas: "livestream livestream livestream" "viewbar viewbar viewbar" "gameinfo gameinfo gameinfo";
+  }
+  .broadcast_embeddable_bordered_container_3cQe7
+    .broadcast_embeddable_container_2t2rR
+    .broadcast_embeddable_side_panels_52TmM {
+    display: none;
+  }
+  .broadcast_embeddable_bordered_container_3cQe7
+    .broadcast_embeddable_container_2t2rR
+    .StoreSaleWidgetContainer_mini {
+    grid-area: gameinfo;
+    display: flex;
+    flex-direction: row;
+    max-width: unset;
   }
 }
 @media screen and (max-width: 620px) {
-  .broadcast_embeddable_bordered_container_3cQe7.broadcast_embeddable_Event_1YaET
+  .broadcast_embeddable_bordered_container_3cQe7
     .broadcast_embeddable_container_2t2rR {
     display: flex;
   }
-}
-.broadcast_embeddable_Event_1YaET .broadcast_embeddable_viewer_bar_2t4Yv {
-  display: none;
 }

@@ -431,6 +431,7 @@
           "salepreviewwidgets_HeroCapsuleImageContainer_1ail_",
         DiscoveryQueueCtn: "salepreviewwidgets_DiscoveryQueueCtn_2U2g_",
         VerticalCapsule: "salepreviewwidgets_VerticalCapsule_2JnpN",
+        ForceLibrarySizing: "salepreviewwidgets_ForceLibrarySizing_2YHKD",
         CapsuleImage: "salepreviewwidgets_CapsuleImage_cODQh",
         LinkCapsuleImage: "salepreviewwidgets_LinkCapsuleImage_1LoJN",
         CapsuleParentInfo: "salepreviewwidgets_CapsuleParentInfo_1OdCe",
@@ -14129,11 +14130,24 @@
             (this.m_bUserPreferenceHideBroadcastByDefault = void 0),
             (this.m_bCollapsed = void 0),
             (this.m_setStreamChangedListeners = new Set()),
-            (this.m_bUseFakeData = !1);
+            (this.m_bUseFakeData = !1),
+            (this.m_onLoadContextCall = new Map());
         }
         BHasStreams(e) {
           const t = this.GetStreams(e);
           return Boolean(t && t.length > 0);
+        }
+        AddCallbackOnNewContext(e, t, r) {
+          this.m_onLoadContextCall.set(this.GetStreamsLookupKeyFromDef(e), {
+            name: t,
+            fnCallback: r,
+          });
+        }
+        ClearCallbackOnNewContext(e) {
+          this.m_onLoadContextCall.set(
+            this.GetStreamsLookupKeyFromDef(e),
+            null
+          );
         }
         GetPlayReadyStream(e) {
           let t = this.GetStreamsLookupKeyFromDef(e);
@@ -14170,6 +14184,13 @@
         ToggleChatVisibility() {
           const e = this.GetChatVisibility();
           "remove" !== e && (this.m_bUserChatExpanded = "hide" === e);
+        }
+        DebugDumpContextAndAvailableContext(e) {
+          console.log("Requested context", this.GetStreamsLookupKeyFromDef(e)),
+            console.log("Available context count: ", this.m_lookupStreams.size),
+            this.m_lookupStreams.forEach((e, t) => {
+              console.log(t, e.length);
+            });
         }
         GetStreams(e) {
           const t = this.GetStreamsLookupKeyFromDef(e);
@@ -14391,13 +14412,27 @@
                       e.default_selection_priority),
                   r != d.id && i.push(r);
               });
-            }),
-              this.m_lookupStreams.set(
-                this.GetStreamsLookupKeyFromDef(e),
-                t.filtered
-              );
-            const n = this.GetStreams(e);
-            return yield this.AutoStartVideoStream(e, n), n;
+            });
+            const n = this.GetStreamsLookupKeyFromDef(e);
+            if (
+              (this.m_lookupStreams.set(n, t.filtered),
+              this.m_onLoadContextCall.has(n))
+            ) {
+              const e = this.m_onLoadContextCall.get(n);
+              e
+                ? ("dev" == p.De.WEB_UNIVERSE &&
+                    console.log(
+                      "CBroadcastEmbeddableStore initialized after caller using callback to " +
+                        e.name
+                    ),
+                  e.fnCallback())
+                : "dev" == p.De.WEB_UNIVERSE &&
+                  console.log(
+                    "CBroadcastEmbeddableStore initialized after caller, however callback is since cleared"
+                  );
+            }
+            const a = this.GetStreams(e);
+            return yield this.AutoStartVideoStream(e, a), a;
           });
         }
         ExtractBroadcastPrioritiesFromPartnerEventForPreview(e, t) {
@@ -14448,13 +14483,18 @@
               }
               return this.m_playReadyStream;
             }
+            return this.PlayFromAvailableStreams(e, t);
+          });
+        }
+        PlayFromAvailableStreams(e, t, r = !1) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
             const i = new Set();
             for (;;) {
-              const r = t.filter((e) => !i.has(e)),
-                n = this.GetAutoStartStream(r);
-              if (!n) return null;
-              if (yield this.AttemptToPlayStream(e, n)) return n;
-              i.add(n);
+              const n = t.filter((e) => !(i.has(e) || (r && e.nAppIDVOD))),
+                a = this.GetAutoStartStream(n);
+              if (!a) return null;
+              if (yield this.AttemptToPlayStream(e, a)) return a;
+              i.add(a);
             }
           });
         }
@@ -16062,7 +16102,7 @@
           if (this.m_mpd.IsLiveContent()) return Number.MAX_VALUE;
           {
             let e = this.m_mpd.GetEndTime();
-            return X(this.m_representation, 1e3 * e) - 1;
+            return X(this.m_representation, 1e3 * e);
           }
         }
         GetAmountBufferedInPlayerMS(e) {
@@ -16467,11 +16507,14 @@
               ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
         }
         BHasEnoughBuffered(e) {
+          if (this.m_bSeekInProgress) return !1;
+          if (this.ContainsGame()) return !0;
+          let t =
+            !this.m_xhrDownload &&
+            !this.m_schNextDownload.IsScheduled() &&
+            this.m_nNextSegment > this.GetMaxSegment();
           return (
-            !this.m_bSeekInProgress &&
-            (!!this.ContainsGame() ||
-              this.GetAmountBufferedInPlayerMS(e) >= this.m_nTrackBufferMS ||
-              this.m_nNextSegment >= this.GetMaxSegment())
+            this.GetAmountBufferedInPlayerMS(e) >= this.m_nTrackBufferMS || t
           );
         }
         LogDownload(e, t) {
@@ -29161,33 +29204,34 @@
     },
     17325: (e, t, r) => {
       "use strict";
-      r.d(t, { s: () => S });
+      r.d(t, { s: () => C });
       var i = r(33940),
         n = r(25125),
         a = r(89526),
         s = r(98009),
         o = r(54671),
-        l = r(23715),
-        d = r.n(l),
-        c = r(17318),
-        m = r.n(c),
-        u = r(32905),
-        p = r(99307),
-        _ = r(57742),
-        h = r(28106),
-        g = r(71161),
-        y = r(69338),
-        f = r(23217),
-        b = r(19304),
-        B = r(14826),
-        v = r(32765);
-      function w(e) {
-        (0, _.AM)(
+        l = r(25871),
+        d = r(23715),
+        c = r.n(d),
+        m = r(17318),
+        u = r.n(m),
+        p = r(32905),
+        _ = r(99307),
+        h = r(57742),
+        g = r(28106),
+        y = r(71161),
+        f = r(69338),
+        b = r(23217),
+        B = r(19304),
+        v = r(14826),
+        w = r(32765);
+      function S(e) {
+        (0, h.AM)(
           a.createElement(
-            p.JX,
+            _.JX,
             {
-              strTitle: (0, B.Xx)("#Wishlist_Error"),
-              strDescription: (0, B.Xx)("#Wishlist_Error_Desc"),
+              strTitle: (0, v.Xx)("#Wishlist_Error"),
+              strDescription: (0, v.Xx)("#Wishlist_Error_Desc"),
             },
             a.createElement("br", null),
             a.createElement("br", null),
@@ -29196,67 +29240,100 @@
           window
         );
       }
-      function S(e) {
+      function C(e) {
         const [t, r] = a.useState(!1),
-          [l, c] = a.useState(!o.jg.Get().BIsLoaded()),
-          p = (0, g.bJ)(),
-          { appid: _, bIsFree: S, bIsComingSoon: C, className: E } = e,
-          [R, I] = (0, n.SZ)(() => [
+          [l, d] = a.useState(!o.jg.Get().BIsLoaded()),
+          m = (0, y.bJ)(),
+          { appid: _, bIsFree: h, bIsComingSoon: C, className: R } = e,
+          [I, D] = (0, n.SZ)(() => [
             o.jg.Get().BIsGameWishlisted(_),
             o.jg.Get().BOwnsApp(_),
           ]);
         a.useEffect(() => {
           (() => {
             (0, i.mG)(this, void 0, void 0, function* () {
-              yield o.jg.Get().HintLoad(), c(!1);
+              yield o.jg.Get().HintLoad(), d(!1);
             });
           })();
         }, []);
-        return I || (!C && S)
-          ? null
+        return D || (!C && h)
+          ? h
+            ? a.createElement(E, { possibleDemoAppID: _ })
+            : null
           : a.createElement(
               "div",
               {
-                className: (0, b.Z)(d().WishList, m().FlexRowContainer, E),
+                className: (0, B.Z)(c().WishList, u().FlexRowContainer, R),
                 onClick: () =>
                   (0, i.mG)(this, void 0, void 0, function* () {
-                    if (v.L7.logged_in) {
+                    if (w.L7.logged_in) {
                       if (!t) {
                         r(!0);
-                        const e = !R;
+                        const e = !I;
                         try {
                           const t = yield o.jg
                             .Get()
-                            .UpdateGameWishlist(_, e, (0, s.mY)(p));
-                          r(!1), 1 != t.success && w((0, f.l)(t).strErrorMsg);
+                            .UpdateGameWishlist(_, e, (0, s.mY)(m));
+                          r(!1), 1 != t.success && S((0, b.l)(t).strErrorMsg);
                         } catch (e) {
-                          r(!1), w((0, f.l)(e).strErrorMsg);
+                          r(!1), S((0, b.l)(e).strErrorMsg);
                         }
                       }
-                    } else (0, u.X)();
+                    } else (0, p.X)();
                   }),
-                "data-tooltip-text": (0, B.Xx)("#AddToWishlist_ttip"),
+                "data-tooltip-text": (0, v.Xx)("#AddToWishlist_ttip"),
               },
               a.createElement(
                 "span",
                 null,
-                (l || t) && a.createElement(y.V, { size: "small" })
+                (l || t) && a.createElement(f.V, { size: "small" })
               ),
-              !t && R && a.createElement(h.JrY, null),
+              !t && I && a.createElement(g.JrY, null),
               a.createElement(
                 "span",
                 null,
-                (0, B.Xx)(
+                (0, v.Xx)(
                   t
                     ? "#Updating"
                     : l
                     ? "#Loading"
-                    : R
+                    : I
                     ? "#Wishlisted_short"
                     : "#AddToWishlist_short"
                 )
               )
             );
+      }
+      function E(e) {
+        const { possibleDemoAppID: t, className: r } = e,
+          [i] = (0, l.vs)(t, {});
+        return (
+          console.log(
+            "adil2",
+            null == i ? void 0 : i.GetAppType(),
+            null == i ? void 0 : i.GetParentAppID()
+          ),
+          (1 == (null == i ? void 0 : i.GetAppType()) ||
+            12 == (null == i ? void 0 : i.GetAppType())) &&
+          (null == i ? void 0 : i.GetParentAppID()) > 0
+            ? a.createElement(R, {
+                parentAppID: null == i ? void 0 : i.GetParentAppID(),
+                className: r,
+              })
+            : null
+        );
+      }
+      function R(e) {
+        const { parentAppID: t, className: r } = e,
+          [i] = (0, l.vs)(t, { include_release: !0 });
+        return i
+          ? a.createElement(C, {
+              appid: t,
+              bIsComingSoon: i.BIsComingSoon(),
+              bIsFree: i.BIsFree(),
+              className: r,
+            })
+          : null;
       }
     },
     43946: (e, t, r) => {
@@ -29392,7 +29469,8 @@
             {
               className: (0, m.Z)(
                 c().LibraryFallbackAssetImageContainer,
-                c().VerticalCapsule
+                c().VerticalCapsule,
+                n ? c().ForceLibrarySizing : ""
               ),
             },
             i.createElement("div", {

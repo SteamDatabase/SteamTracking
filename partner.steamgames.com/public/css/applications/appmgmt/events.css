@@ -688,6 +688,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   height: 24px;
   margin-top: 6px;
 }
+.compactView .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit {
+  margin-top: 3px;
+}
 .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit path {
   fill: #8592a5;
   stroke-width: 2px;
@@ -6668,7 +6671,7 @@ hr.VO {
     padding-right: 20px;
     margin-right: 16px;
     position: sticky;
-    top: 0;
+    top: 60px;
     height: fit-content;
   }
 }

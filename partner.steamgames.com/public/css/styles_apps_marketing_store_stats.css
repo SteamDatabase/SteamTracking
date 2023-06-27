@@ -192,10 +192,13 @@ div.jqplot-table-legend-swatch-outline {
 	font-weight: bold;
 	color: #69bff3;
 }
-.stat_tracked {
+.stat_total {
+	color: #6A7175;
+}
+.stat_trusted {
     color: #91b807;
 }
-.stat_trackedTrusted {
+.stat_tracked {
     color: #69bff3;
 }
 .stat_wishlist {
@@ -249,4 +252,95 @@ div.jqplot-table-legend-swatch-outline {
     box-sizing: border-box;
     margin-right: 4px;
     font-size: 17px;
+}
+
+.breakdowns_row
+{
+	display: flex;
+	padding: 16px 0px;
+}
+
+.geographic_summary
+{
+	flex: 1 1 0px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 36px;
+}
+
+.countries_container {
+	padding: 16px;
+	background: black;
+	margin: 16px 0px;
+	height: 100%;
+}
+
+.countries_disclaimer {
+	background: black;
+	color: orange;
+}
+.countries_graph
+{
+	background: black;
+}
+
+.jqplot-xaxis-tick,
+.jqplot-yaxis-tick,
+.jqplot-point-label{
+	color: #FFFFFF;
+}
+
+.owner_summary
+{
+	flex: 1 1 0px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 36px;
+}
+
+.owners_container
+{
+	background: black;
+	margin: 16px 0px;
+	height: 100%;
+	padding: 16px;
+}
+
+.owners_graph
+{
+	background: black;
+}
+
+.impressions_summary
+{
+	flex: 1 1 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.impressions_content
+{
+	background: black;
+	margin: 16px 0px;
+	padding: 16px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.impressions_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.impressions_stat
+{
+	flex: 1 1 0px;
+}
+
+.impression_num
+{
+	font-size: 24px;
 }

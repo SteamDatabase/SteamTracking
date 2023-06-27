@@ -2963,7 +2963,6 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   padding: 4px 8px;
   text-overflow: wrap;
   height: auto;
-  width: 100%;
   white-space: pre-wrap;
   line-height: normal;
   flex: none;
@@ -3035,6 +3034,19 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
   .salepreviewwidgets_StoreSalePriceActionWidgetContainer_ztiNw {
   flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .salepreviewwidgets_StoreSaleBroadcastWidgetRight_nkwT1
+    .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
+    .salepreviewwidgets_StoreSalePriceActionWidgetContainer_ztiNw {
+    flex-direction: row;
+  }
+  .salepreviewwidgets_StoreSaleBroadcastWidgetRight_nkwT1
+    .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
+    .salepreviewwidgets_StoreSalePriceActionWidgetContainer_ztiNw
+    > div {
+    margin-left: 4px;
+  }
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_StoreActionWidgetContainer_1gO7r {
@@ -3441,7 +3453,13 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   position: relative;
   overflow: hidden;
   padding: 46.7391304348% 0 0 0;
-  min-width: 250px;
+}
+@media only screen and (max-width: 768px) {
+  .salepreviewwidgets_HeaderCapsuleImageContainer_Cqh49,
+  .salepreviewwidgets_MainCapsuleImageContainer_31Zak,
+  .salepreviewwidgets_HeroCapsuleImageContainer_1ail_ {
+    min-width: 250px;
+  }
 }
 .salepreviewwidgets_MainCapsuleImageContainer_31Zak {
   padding: 57.3051948052% 0 0 0;
@@ -3473,6 +3491,9 @@ div.creatorhomeembed_SocialContainer_1MvXz {
 }
 .salepreviewwidgets_LibraryFallbackAssetImageContainer_2emWW img {
   margin: auto 0;
+}
+.salepreviewwidgets_LibraryFallbackAssetImageContainer_2emWW.salepreviewwidgets_VerticalCapsule_2JnpN.salepreviewwidgets_ForceLibrarySizing_2YHKD {
+  padding: 150% 0 0 0;
 }
 .salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA
   .salepreviewwidgets_LibraryFallbackAssetImageContainer_2emWW.salepreviewwidgets_VerticalCapsule_2JnpN {
@@ -6099,6 +6120,9 @@ html.tablet .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3FwA4 {
   display: grid;
   grid-gap: 16px;
   padding-bottom: 14px;
+}
+.compactlist .partnersaledisplay_SaleSectionContainer_2IK75 {
+  padding-bottom: 2px;
 }
 .BasicUI .partnersaledisplay_SaleSectionContainer_2IK75 {
   grid-gap: 12px;

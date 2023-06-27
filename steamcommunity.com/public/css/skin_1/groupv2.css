@@ -359,6 +359,7 @@ a.group_tab:hover {
 	overflow: hidden;
 	word-wrap: break-word;
 	margin: 1em 0;
+    color: #c1cacf;
 }
 
 .formatted_group_summary a {
@@ -727,6 +728,7 @@ a.subtle:hover {
 	line-height: 20px;
 	margin-bottom: 14px;
 	word-wrap: break-word;
+    color: #c1cacf;
 }
 
 .announcement_share {
@@ -750,6 +752,10 @@ a.subtle:hover {
 {
 	vertical-align: middle;
 	padding-right: 0px;
+}
+
+p.group_body_links {
+    color: #c1cacf;
 }
 
 .group_body_links a {

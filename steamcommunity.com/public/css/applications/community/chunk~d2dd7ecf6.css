@@ -1303,7 +1303,7 @@ strong {
     padding-right: 20px;
     margin-right: 16px;
     position: sticky;
-    top: 0;
+    top: 60px;
     height: fit-content;
   }
 }

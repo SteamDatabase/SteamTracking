@@ -2158,6 +2158,7 @@ https://confluence.valve.org/display/STEAM/Marketing+Message+Template%3A+Feature
 https://confluence.valve.org/display/STEAM/Opt-In+Tech+Custom+Event+type
 https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event
 https://confluence.valve.org/display/SteamBiz/New+Sales+Page+Feature+-+How+to+invite+partners
+https://confluence.valve.org/display/SteamBiz/Next+Fest+Launch+Checklist
 https://confluence.valve.org/display/etc...
 https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}

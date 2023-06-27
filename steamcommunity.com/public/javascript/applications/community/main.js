@@ -4175,33 +4175,34 @@
     44026: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Fe: () => c,
-        Hy: () => d,
-        IS: () => p,
-        Ks: () => m,
-        bX: () => _,
-        wl: () => h,
+        Fe: () => u,
+        Hy: () => m,
+        IS: () => _,
+        Ks: () => h,
+        bX: () => g,
+        wl: () => p,
       });
       var r = n(33940),
         i = n(89526),
         o = n(44673),
         a = n(88045),
         s = n(4306),
-        l = n(32053);
-      const c = i.forwardRef(function (e, t) {
+        l = n(32053),
+        c = n(32765);
+      const u = i.forwardRef(function (e, t) {
           const {
               NavigationManager: n,
-              onActivated: c,
-              onDeactivated: d,
-              navTreeRef: m,
-              secondary: h,
-              virtualFocus: p,
-              navID: _,
-              children: g,
-              "flow-children": f,
-              parentEmbeddedNavTree: v,
+              onActivated: u,
+              onDeactivated: m,
+              navTreeRef: h,
+              secondary: p,
+              virtualFocus: _,
+              navID: g,
+              children: f,
+              "flow-children": v,
+              parentEmbeddedNavTree: C,
             } = e,
-            C = (0, r._T)(e, [
+            E = (0, r._T)(e, [
               "NavigationManager",
               "onActivated",
               "onDeactivated",
@@ -4213,55 +4214,56 @@
               "flow-children",
               "parentEmbeddedNavTree",
             ]),
-            { elemProps: E, navOptions: S, gamepadEvents: b } = (0, o.QH)(C),
-            w = i.useContext(u) || n.GetDefaultContext();
-          let I = i.useRef(null);
-          I.current || (I.current = n.NewGamepadNavigationTree(w, _));
-          const D = I.current;
+            { elemProps: S, navOptions: b, gamepadEvents: w } = (0, o.QH)(E),
+            I = i.useContext(d) || n.GetDefaultContext(),
+            D = (0, c.qt)();
+          let y = i.useRef(null);
+          y.current || (y.current = n.NewGamepadNavigationTree(I, g, !D.IN_VR));
+          const R = y.current;
           i.useLayoutEffect(() => {
-            const e = (0, a.t)(f);
-            D.Root.SetProperties(
-              Object.assign(Object.assign({}, S), { layout: e })
+            const e = (0, a.t)(v);
+            R.Root.SetProperties(
+              Object.assign(Object.assign({}, b), { layout: e })
             );
           });
-          let y = i.useRef();
-          D.SetUseVirtualFocus(p),
-            D.SetParentEmbeddedNavTree(v),
-            (0, s.Qg)(D.OnActivateCallbacks, c),
-            (0, s.Qg)(D.OnDeactivateCallbacks, d),
-            (0, l.Jd)(b, y, I.current),
+          let M = i.useRef();
+          R.SetUseVirtualFocus(_),
+            R.SetParentEmbeddedNavTree(C),
+            (0, s.Qg)(R.OnActivateCallbacks, u),
+            (0, s.Qg)(R.OnDeactivateCallbacks, m),
+            (0, l.Jd)(w, M, y.current),
             i.useLayoutEffect(
-              () => D.RegisterNavigationItem(D.Root, y.current),
-              [D, y]
+              () => R.RegisterNavigationItem(R.Root, M.current),
+              [R, M]
             ),
             i.useLayoutEffect(
               () =>
                 n.RegisterGamepadNavigationTree(
-                  D,
-                  y.current.ownerDocument.defaultView,
-                  h
+                  R,
+                  M.current.ownerDocument.defaultView,
+                  p
                 ),
-              [n, h, D]
+              [n, p, R]
             ),
             i.useLayoutEffect(
-              () => ((0, s.k$)(m, D), () => (0, s.k$)(m, null)),
-              [m, D]
+              () => ((0, s.k$)(h, R), () => (0, s.k$)(h, null)),
+              [h, R]
             );
-          const R = (0, s.BE)(y, t);
+          const T = (0, s.BE)(M, t);
           return i.createElement(
             "div",
-            Object.assign({}, E, { id: _, "data-react-nav-root": _, ref: R }),
-            i.createElement(o.ET.Provider, { value: D.Root }, g)
+            Object.assign({}, S, { id: g, "data-react-nav-root": g, ref: T }),
+            i.createElement(o.ET.Provider, { value: R.Root }, f)
           );
         }),
-        u = i.createContext(null);
-      function d() {
+        d = i.createContext(null);
+      function m() {
         return i.createRef();
       }
-      const m = (0, o.lP)("div"),
-        h = (0, o.lP)("button"),
-        p = (0, o.lP)("a"),
-        _ = (0, o.hi)("input");
+      const h = (0, o.lP)("div"),
+        p = (0, o.lP)("button"),
+        _ = (0, o.lP)("a"),
+        g = (0, o.hi)("input");
       (0, o.hi)("textarea"), (0, o.lP)("img");
     },
     44673: (e, t, n) => {
@@ -5940,8 +5942,8 @@
               n.TransferFocus(m.uS.BROWSER, t);
           }
         }
-        NewGamepadNavigationTree(e, t) {
-          return new h.C(this, e, t);
+        NewGamepadNavigationTree(e, t, n) {
+          return new h.C(this, e, t, n);
         }
         RegisterGamepadNavigationTree(e, t, n) {
           const r = e.WindowContext;
@@ -7119,7 +7121,7 @@
             childFocusDisabled: n,
             fnCanTakeFocus: r,
           } = this.m_Properties;
-          return this.m_bMounted
+          return this.m_Tree.BIsFocusEnabled() && this.m_bMounted
             ? r && !r(this)
               ? "none"
               : e || (t && (n || 0 == this.m_rgChildren.length))
@@ -7618,7 +7620,7 @@
       const l = new o.s("FocusNavigation").Debug,
         c = new o.s("GamepadEvents").Debug;
       class u {
-        constructor(e, t, n) {
+        constructor(e, t, n, r) {
           (this.m_onActivateCallbacks = new i.pB()),
             (this.m_onDeactivateCallbacks = new i.pB()),
             (this.m_onActiveFocusStateChangedCallbacks = new i.pB()),
@@ -7628,6 +7630,7 @@
             (this.m_Controller = e),
             (this.m_context = t),
             (this.m_ID = n),
+            (this.m_bFocusEnabled = null == r || r),
             (this.m_Root = new s.Vp(this, null, null)),
             this.m_Root.SetProperties({ layout: s.gj.COLUMN }),
             (window.GamepadNavTree = this);
@@ -7655,6 +7658,9 @@
         }
         BIsContextActive() {
           return this.m_Controller.BIsInActiveContext(this);
+        }
+        BIsFocusEnabled() {
+          return this.m_bFocusEnabled;
         }
         CreateNode(e, t) {
           return new s.Vp(this, e, t);
@@ -23557,6 +23563,7 @@
         id: () => d,
         ip: () => s.ip,
         kQ: () => s.kQ,
+        qt: () => c,
         y9: () => s.y9,
       });
       var r = n(89526),

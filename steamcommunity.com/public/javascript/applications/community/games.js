@@ -228,9 +228,13 @@
         }
       }
       const s = (e) => null != e;
-      function l(e, t, r) {
-        const i = new URLSearchParams(e.location.search.substring(1));
-        i.delete(t), s(r) && i.append(t, r), e.push(`?${i.toString()}`);
+      function l(e, t, r, i = !1) {
+        const n = new URLSearchParams(e.location.search.substring(1));
+        n.delete(t),
+          s(r) && n.append(t, r),
+          i
+            ? e.replace(`?${n.toString()}`, Object.assign({}, e.location.state))
+            : e.push(`?${n.toString()}`);
       }
       function o(e, t) {
         const r = (0, n.k6)(),
@@ -253,14 +257,16 @@
           );
         return [c, u];
       }
-      function c(e, t) {
-        const r = new URLSearchParams(e.location.search.substring(1));
+      function c(e, t, r = !1) {
+        const i = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
-            const i = t[e];
-            r.delete(e), s(i) && r.append(e, i);
+            const r = t[e];
+            i.delete(e), s(r) && i.append(e, r);
           }
-        e.push(`?${r.toString()}`);
+        r
+          ? e.replace(`?${i.toString()}`, Object.assign({}, e.location.state))
+          : e.push(`?${i.toString()}`);
       }
     },
     29551: (e, t, r) => {

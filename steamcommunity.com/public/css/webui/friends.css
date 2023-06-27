@@ -7523,6 +7523,9 @@ body.modals_BodyNoScrollDialog_3jhMI {
   height: 24px;
   margin-top: 6px;
 }
+.compactView .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit {
+  margin-top: 3px;
+}
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
   fill: #8592a5;
   stroke-width: 2px;

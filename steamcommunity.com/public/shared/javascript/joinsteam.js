@@ -22,8 +22,14 @@ function StartCreationSession()
 			'email': $J( '#email' ).val(),
 			'captchagid' : $J('#captchagid').val(),
 			'captcha_text' : CaptchaText(),
-			'elang' : 0		}
+			'elang' : 0,
+			'init_id': $J( '#init_id' ).val()
+		}
 	})
+	.fail( function() {
+		RefreshCaptcha();
+		ShowError( 'An error has occurred. Please try again later.' );
+	} )
 	.done( function( data ) {
 
 		if ( data.success != 1 )
@@ -57,7 +63,6 @@ function StartCreationSession()
 		else
 		{
 			g_creationSessionID = data.sessionid;
-
 			WaitForEmailVerification();
 		}
 	} );
@@ -83,43 +88,49 @@ function StartCreationSessionParentalConsent()
 			'parental_email': $J( '#parental_email' ).val(),
 			'captchagid': $J('#captchagid').val(),
 			'captcha_text' : CaptchaText(),
-			'elang' : 0		}
-	})
-		.done( function( data ) {
+			'elang' : 0,
+			'init_id': $J( '#init_id' ).val()
+		}
+	} )
+	.fail( function() {
+		RefreshCaptcha();
+		ShowError( 'An error has occurred. Please try again later.' );
+	} )
+	.done( function( data ) {
 
-			if ( data.success != 1 )
+		if ( data.success != 1 )
+		{
+			var strError = data.details;
+
+			if ( data.success == 62 )
 			{
-				var strError = data.details;
-
-                if ( data.success == 62 )
-                {
-                    strError = 'This e-mail address must be different from your own.';
-					$J( '#parental_email' ).css( "border", "1px solid #b44040" );
-                }
-                else if ( data.success == 13 )
-                {
-                    strError = 'Please enter a valid email address.';
-                }
-                else if ( data.success == 17 )
-                {
-                    strError = 'It appears you\'ve entered a disposable email address, or are using an email provider that cannot be used on Steam. Please provide a different email address.';
-                }
-                else if ( data.success == 101 )
-				{
-										g_parentalConsentDialog.Dismiss();
-					g_parentalConsentDialog = null;
-				}
-
-				RefreshCaptcha();
-				ShowError( strError );
+				strError = 'This e-mail address must be different from your own.';
+				$J( '#parental_email' ).css( "border", "1px solid #b44040" );
 			}
-			else
+			else if ( data.success == 13 )
 			{
-				g_creationSessionID = data.sessionid;
-
-				ParentalConsentRequested();
+				strError = 'Please enter a valid email address.';
 			}
-		} );
+			else if ( data.success == 17 )
+			{
+				strError = 'It appears you\'ve entered a disposable email address, or are using an email provider that cannot be used on Steam. Please provide a different email address.';
+			}
+			else if ( data.success == 101 )
+			{
+								g_parentalConsentDialog.Dismiss();
+				g_parentalConsentDialog = null;
+			}
+
+			RefreshCaptcha();
+			ShowError( strError );
+		}
+		else
+		{
+			g_creationSessionID = data.sessionid;
+
+			ParentalConsentRequested();
+		}
+	} );
 }
 
 function WaitForEmailVerification()

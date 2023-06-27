@@ -68,9 +68,15 @@
 	vertical-align: middle;
 }
 
+.stats_header {
+	margin: unset;
+}
 .stats_header_section:nth-of-type(4) {
 	margin-left: 5px;
 	margin-right: 5px;
+}
+.stats_header_section:nth-of-type(6) {
+	margin-left: 5px;
 }
 
 /* override sort icon position on the DataTable */
@@ -100,4 +106,163 @@
     display: flex;
     width: fit-content;
     border-radius: 2px;
+}
+
+.traffic_summary_line {
+	margin-right: unset;
+}
+
+.filter_controls_container {
+	background-color: #2F353C;
+	display: flex;
+	align-content: space-between;
+	padding: 10px;
+
+	.utm_filter_wrapper {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.utm_filter_title {
+		display: block;
+		font-size: 13px;
+		color: #929DAA;
+		text-transform: uppercase;
+	}
+
+	.utm_filter_select {
+		background-color: #636F7E;
+		max-width: 160px;
+	}
+
+	.date_range_selector {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.filter_selector_title {
+		color: #929DAA;
+		text-transform: uppercase;
+	}
+
+	.filter_selector_date {
+		display: inline-flex;
+		gap: 10px;
+	}
+
+	.filter_go_button {
+		max-height: 30px;
+	}
+
+    .filterTerm {
+        background: #91b807;
+        padding: 2px 6px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin: 1px;
+    }
+
+    .filterTerm a {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.csv_download_row {
+	margin: 10px 0px;
+	padding: 0px 10px;
+	height: 55px;
+	font-size: 14px;
+	background-color: #101214;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.csv_download_title {
+		display: inline-block;
+	}
+	.btn_download {
+        padding: 7px 40px 0;
+
+		> img {
+			margin: auto;
+			vertical-align: middle;
+		}
+	}
+}
+
+.header_test_link {
+	display: flex;
+	gap: 20px;
+
+	.utm_test_button {
+		max-height: 30px;
+		flex-shrink: 0;
+	}
+}
+
+.graph_ctn,
+.AdminPageContent {
+	margin-bottom: 30px;
+}
+
+.chart_section {
+	display: flex;
+	flex-direction: row;
+	align-content: space-evenly;
+}
+
+.chart_container {
+	display: block;
+	border: 1px black;
+	color: black;
+	flex: 1;
+	max-width: 33%;
+
+	.chart_title {
+		font-size: 15px;
+		color: white;
+        margin-bottom: 8px;
+
+		.title_spacer {
+			padding: 0px 5px;
+		}
+		.trusted_visits {
+			color: #91B807;
+			text-transform: uppercase;
+		}
+		.chart_title {
+			text-transform: uppercase;
+		}
+	}
+
+    #device_chart {
+        background: linear-gradient(126deg, black, #161616);
+    }
+}
+
+#device_chart table.jqplot-table-legend {
+	flex: 1;
+	background-color: black;
+	width: 40%;
+
+	.jqplot-table-legend-label {
+		padding-left: 0px;
+	}
+	.device_legend_title,
+	.device_legend_value {
+		display: inline-block;
+		color: white;
+		width: 50%;
+		font-size: 14px;
+		text-align: left;
+	}
+	.device_legend_value {
+		text-align: right;
+	}
 }
