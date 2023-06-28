@@ -2076,7 +2076,6 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   padding: 4px 8px;
   text-overflow: wrap;
   height: auto;
-  width: 100%;
   white-space: pre-wrap;
   line-height: normal;
   flex: none;
@@ -2148,6 +2147,19 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
   .salepreviewwidgets_StoreSalePriceActionWidgetContainer_ztiNw {
   flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .salepreviewwidgets_StoreSaleBroadcastWidgetRight_nkwT1
+    .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
+    .salepreviewwidgets_StoreSalePriceActionWidgetContainer_ztiNw {
+    flex-direction: row;
+  }
+  .salepreviewwidgets_StoreSaleBroadcastWidgetRight_nkwT1
+    .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
+    .salepreviewwidgets_StoreSalePriceActionWidgetContainer_ztiNw
+    > div {
+    margin-left: 4px;
+  }
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_StoreActionWidgetContainer_1gO7r {
@@ -2592,6 +2604,9 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 }
 .salepreviewwidgets_LibraryFallbackAssetImageContainer_2emWW img {
   margin: auto 0;
+}
+.salepreviewwidgets_LibraryFallbackAssetImageContainer_2emWW.salepreviewwidgets_VerticalCapsule_2JnpN.salepreviewwidgets_ForceLibrarySizing_2YHKD {
+  padding: 150% 0 0 0;
 }
 .salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA
   .salepreviewwidgets_LibraryFallbackAssetImageContainer_2emWW.salepreviewwidgets_VerticalCapsule_2JnpN {

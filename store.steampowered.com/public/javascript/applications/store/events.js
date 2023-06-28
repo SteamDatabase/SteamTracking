@@ -5832,7 +5832,7 @@
           return (0, C.mG)(this, void 0, void 0, function* () {
             const e = (0, s.ks)(this.props.location, "megaphone");
             if (!!e && "0" !== e && "false" !== e) {
-              (0, s.i9)(this.props.history, "megaphone", null);
+              (0, s.nQ)(this.props.history, "megaphone", null);
               const e = { exclude_tags: ["patchnotes", "skip_megaphone"] },
                 t = yield Ue.j1.LoadAdjacentPartnerEvents(
                   null,
@@ -5844,7 +5844,7 @@
                 );
               if (1 == (null == t ? void 0 : t.length)) {
                 const e = t[0];
-                (0, s.Wo)(this.props.history, {
+                (0, s.ni)(this.props.history, {
                   emclan: e.clanSteamID.ConvertTo64BitString(),
                   emgid: e.GID,
                 });
@@ -5855,7 +5855,7 @@
             }
             const t = (0, s.ks)(this.props.location, "clientpatchnotes");
             if (!!t && "0" !== t && "false" !== t) {
-              (0, s.i9)(this.props.history, "clientpatchnotes", null);
+              (0, s.nQ)(this.props.history, "clientpatchnotes", null);
               const [e, n] = "beta" === t ? [null, I.Ct] : [I.dn, null],
                 a = { require_tags: ["patchnotes"] },
                 r = yield Ue.j1.LoadAdjacentPartnerEvents(
@@ -5868,7 +5868,7 @@
                 );
               if (1 == (null == r ? void 0 : r.length)) {
                 const e = r[0];
-                (0, s.Wo)(this.props.history, {
+                (0, s.ni)(this.props.history, {
                   emclan: e.clanSteamID.ConvertTo64BitString(),
                   emgid: e.GID,
                 });

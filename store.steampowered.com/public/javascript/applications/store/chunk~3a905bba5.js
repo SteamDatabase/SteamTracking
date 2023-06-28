@@ -488,6 +488,7 @@
           "salepreviewwidgets_HeroCapsuleImageContainer_1ail_",
         DiscoveryQueueCtn: "salepreviewwidgets_DiscoveryQueueCtn_2U2g_",
         VerticalCapsule: "salepreviewwidgets_VerticalCapsule_2JnpN",
+        ForceLibrarySizing: "salepreviewwidgets_ForceLibrarySizing_2YHKD",
         CapsuleImage: "salepreviewwidgets_CapsuleImage_cODQh",
         LinkCapsuleImage: "salepreviewwidgets_LinkCapsuleImage_1LoJN",
         CapsuleParentInfo: "salepreviewwidgets_CapsuleParentInfo_1OdCe",
@@ -17384,7 +17385,8 @@
             {
               className: (0, m.Z)(
                 c().LibraryFallbackAssetImageContainer,
-                c().VerticalCapsule
+                c().VerticalCapsule,
+                a ? c().ForceLibrarySizing : ""
               ),
             },
             r.createElement("div", {

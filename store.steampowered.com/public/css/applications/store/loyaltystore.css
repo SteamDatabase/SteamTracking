@@ -57,7 +57,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .styles_ShellHeader_yV5Uz .styles_ShellHeaderFlex_kNGqa {
@@ -344,6 +344,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 .styles_PageHomeTopLink_1JlZb {
   margin-top: 10px;
+  width: fit-content;
 }
 .styles_PageHomeTopSubTitle_rSOht {
   font-size: 1rem;
@@ -418,14 +419,6 @@ body.v6.rewards .ModalPosition_Content {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.styles_PageItemsContainerChildren_1vtnS:first-of-type {
-  height: 140px;
-}
-@media screen and (max-width: 620px) {
-  .styles_PageItemsContainerChildren_1vtnS:first-of-type {
-    height: auto;
-  }
 }
 .styles_PageHeaderContainer_GY0kV {
   height: 140px;
@@ -631,15 +624,24 @@ body.v6.rewards .ModalPosition_Content {
   display: flex;
   flex-direction: row;
 }
-.rewarditemcarousel_Container_pvOC3.rewarditemcarousel_Mobile_rzty9 {
-  max-width: 100vw;
-  overflow-x: auto;
-  box-sizing: border-box;
-}
 .rewarditemcarousel_Container_pvOC3 .rewarditemcarousel_Loading_QUQ-j {
   min-width: 150px;
   align-self: center;
   overflow: hidden;
+}
+.rewarditemcarousel_MobileContainer_33ggW {
+  max-width: 100vw;
+  width: 100vw;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+  margin: unset;
+  overflow-y: hidden;
+  display: flex;
+}
+.BasicUI .rewarditemcarousel_MobileContainer_33ggW {
+  padding: 0px var(--gpSpace-Gutter) 8px;
+  scroll-padding: var(--gpSpace-Gutter);
 }
 .rewarditemcarousel_LeftArrow_qQJ_r,
 .rewarditemcarousel_RightArrow_3vKwr {
@@ -767,7 +769,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .rewarditemsection_ShellHeader_1rWvB .rewarditemsection_ShellHeaderFlex_2KmXa {
@@ -1067,6 +1069,9 @@ body.v6.rewards .ModalPosition_Content {
   display: flex;
   flex-wrap: wrap;
 }
+.BasicUI .rewarditemsection_Section_1st6- {
+  max-width: 100%;
+}
 .rewarditemsection_SectionTitle_1U-QF {
   font-size: 1.05rem;
   color: #c5cbd8;
@@ -1149,7 +1154,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .loyaltypoints_ShellHeader_3JsJ9 .loyaltypoints_ShellHeaderFlex_35y-E {
@@ -1459,7 +1464,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .rewarditem_ShellHeader_3Pva4 .rewarditem_ShellHeaderFlex_1S-Q4 {
@@ -1750,7 +1755,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .rewarditem_ShellHeader_3Pva4 .rewarditem_ShellHeaderFlex_1S-Q4 {
@@ -2091,7 +2096,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .rewarditem_ShellHeader_3Pva4 .rewarditem_ShellHeaderFlex_1S-Q4 {
@@ -3366,7 +3371,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .itembox_ShellHeader_1B30P .itembox_ShellHeaderFlex_1_NDb {
@@ -3719,7 +3724,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .bundle_ShellHeader_1axcM .bundle_ShellHeaderFlex_r0Sid {
@@ -4096,7 +4101,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .profilebundle_ShellHeader_3Bsg9 .profilebundle_ShellHeaderFlex_1fd-f {
@@ -4486,7 +4491,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .fadedbackground_ShellHeader_2COAS .fadedbackground_ShellHeaderFlex_3bKks {
@@ -5206,7 +5211,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .herogroup_ShellHeader_1Ke_2 .herogroup_ShellHeaderFlex_24yvK {
@@ -5518,7 +5523,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .redeempointsmodal_ShellHeader_2I8Eu .redeempointsmodal_ShellHeaderFlex_3FEKi {
@@ -5833,12 +5838,17 @@ body.v6.rewards .ModalPosition_Content {
 .redeempointsmodal_ModalContainer_Y6hHM .redeempointsmodal_Header_1btwT {
   font-size: 1.5rem;
   letter-spacing: 0.1em;
-  max-width: 400px;
+  max-width: 600px;
   color: #c5cbd8;
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.BasicUI
+  .redeempointsmodal_ModalContainer_Y6hHM
+  .redeempointsmodal_Header_1btwT {
+  max-width: auto;
 }
 .redeempointsmodal_ModalContainer_Y6hHM .redeempointsmodal_SubHeader_2Jbfa {
   font-size: 1rem;
@@ -6884,7 +6894,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .page_ShellHeader_2zzZm .page_ShellHeaderFlex_3rPuf {
@@ -7156,6 +7166,10 @@ body.v6.rewards .ModalPosition_Content {
   max-width: 1070px;
   width: 100%;
 }
+.BasicUI .page_PageItem_2CTon,
+.BasicUI .page_ItemContainer_1Zwjf {
+  max-width: 100%;
+}
 .page_ParallaxRoot_wy_GU {
   perspective: 1px;
 }
@@ -7326,7 +7340,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .loyaltyprimarynav_ShellHeader_2VMec .loyaltyprimarynav_ShellHeaderFlex_3bUT9 {
@@ -11690,7 +11704,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .globals_ShellHeader_3M7bf .globals_ShellHeaderFlex_4eFAq {
@@ -11981,7 +11995,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .appfilterpopup_ShellHeader_2rgA4 .appfilterpopup_ShellHeaderFlex_3T4wG {
@@ -12471,7 +12485,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .salerewarditemhero_ShellHeader_3yEbX
@@ -12873,7 +12887,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .index_ShellHeader_1iZtn .index_ShellHeaderFlex_1ZIXK {
@@ -13603,7 +13617,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .index_ShellHeader_k366j .index_ShellHeaderFlex_2mQTx {

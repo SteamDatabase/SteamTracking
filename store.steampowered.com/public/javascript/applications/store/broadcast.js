@@ -26,12 +26,12 @@
         broadcast_settings_icon:
           "broadcast_embeddable_broadcast_settings_icon_2fD_x",
         container: "broadcast_embeddable_container_2t2rR",
-        viewer_bar: "broadcast_embeddable_viewer_bar_2t4Yv",
         side_panels: "broadcast_embeddable_side_panels_52TmM",
         multistream: "broadcast_embeddable_multistream_2ZEx4",
         wrapper: "broadcast_embeddable_wrapper_1gWJA",
         NoChat: "broadcast_embeddable_NoChat_12cS_",
         video_container: "broadcast_embeddable_video_container_10bUz",
+        viewer_bar: "broadcast_embeddable_viewer_bar_2t4Yv",
         viewer_links: "broadcast_embeddable_viewer_links_15u7W",
         chat_link: "broadcast_embeddable_chat_link_2sm6H",
         settings_link: "broadcast_embeddable_settings_link_1m1Dz",
@@ -8697,7 +8697,10 @@
           r = (0, vr.bJ)(),
           i = (0, l.useRef)({ include_assets: !0, include_release: !0 }),
           [a, s] = (0, Sr.vs)(t, i.current);
-        let n = Rr().StoreSaleWidgetContainer_mini,
+        let n = (0, qt.Z)(
+            Rr().StoreSaleWidgetContainer_mini,
+            "StoreSaleWidgetContainer_mini"
+          ),
           o = Rr().StoreSaleWidgetImage_mini,
           c = Rr().StoreSaleImage_mini;
         if (!a && 2 != s)
@@ -9351,12 +9354,6 @@
                 Boolean(
                   r && r.jsondata && r.jsondata.broadcast_item_drops_enabled
                 ) && l.createElement(Gr, { event: r }),
-                Boolean(this.state.bExpanded) &&
-                  l.createElement(
-                    "div",
-                    { className: `${r ? Ur().Event : ""}` },
-                    l.createElement(di, { stream: e, bMultistream: o })
-                  ),
                 l.createElement("div", { className: Ur().clear_div })
               )
             );

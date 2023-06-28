@@ -5,6 +5,7 @@
   {
     76653: (e) => {
       e.exports = {
+        "duration-app-launch": "800ms",
         Discount: "bundle_Discount_3f4n8",
         Shell: "bundle_Shell_2Zfec",
         ShellScrollParent: "bundle_ShellScrollParent_1Qkju",

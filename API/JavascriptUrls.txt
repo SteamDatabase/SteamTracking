@@ -1091,6 +1091,7 @@ ${STORE_BASE_URL}about/
 ${STORE_BASE_URL}account
 ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
+${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
@@ -1354,7 +1355,6 @@ ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
-${STORE_CHECKOUT_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_ICON_BASE_URL}${appid}/${}
 ${STORE_ICON_BASE_URL}${appid}/header.jpg
 ${STORE_ICON_BASE_URL}${appid}/portrait.png

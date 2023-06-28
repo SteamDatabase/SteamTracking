@@ -236,7 +236,9 @@
 .chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx:focus {
   background-color: #3d424b;
 }
-.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus.GamepadMode,
+.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus.GamepadMode,
 .GamepadMode
   .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus {
   background: #fff;
@@ -317,17 +319,25 @@
   .chatentry_AudioLines_1Hw30 {
   fill: #f5ffd7;
 }
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus
   .SVGIcon_VoiceRoom,
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):hover
   .SVGIcon_VoiceRoom {
   fill: #fff;
   stroke: #000;
 }
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):focus
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1Hw30,
-.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+.chatentry_Active_2gzj2.chatentry_chatSubmitButton_1IEiK:not(
+    .chatentry_disabled_2GM2k
+  ):hover
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1Hw30 {
   fill: #000;
@@ -336,6 +346,9 @@
   width: 24px;
   height: 24px;
   margin-top: 6px;
+}
+.compactView .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit {
+  margin-top: 3px;
 }
 .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit path {
   fill: #8592a5;
@@ -436,7 +449,9 @@
   color: #fff;
 }
 .chatentry_chatEntryControls_2gP0D
-  .chatentry_chatSubmitButton_1IEiK.GamepadMode:not(.chatentry_disabled_2GM2k).gpfocus,
+  .chatentry_chatSubmitButton_1IEiK.GamepadMode:not(
+    .chatentry_disabled_2GM2k
+  ).gpfocus,
 .GamepadMode
   .chatentry_chatEntryControls_2gP0D
   .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k).gpfocus {

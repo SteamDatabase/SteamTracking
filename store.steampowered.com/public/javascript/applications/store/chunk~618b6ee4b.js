@@ -16515,6 +16515,8 @@
                   nMatchCount: h.match_count,
                   bMoreAvailable: h.possible_has_more,
                   nNextSolrIndex: a + i,
+                  strRequest:
+                    ("dev" === w.De.WEB_UNIVERSE && h.request) || void 0,
                 }),
                 this.m_mapResults.get(v)
               );

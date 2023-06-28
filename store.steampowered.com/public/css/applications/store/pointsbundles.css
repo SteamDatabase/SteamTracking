@@ -50,7 +50,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   z-index: 12;
   box-sizing: border-box;
-  height: 51px;
+  min-height: 51px;
   user-select: none;
 }
 .bundle_ShellHeader_kOC36 .bundle_ShellHeaderFlex_3Bs_x {

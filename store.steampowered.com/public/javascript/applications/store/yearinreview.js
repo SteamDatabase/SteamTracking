@@ -8659,7 +8659,7 @@
           n = (0, i.k6)();
         if (
           (r.useEffect(() => {
-            (0, Qe.i9)(n, "src", null);
+            (0, Qe.nQ)(n, "src", null);
           }, [n]),
           !a || !t || t < 2022 || t > new Date().getFullYear())
         )

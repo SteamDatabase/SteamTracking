@@ -3481,7 +3481,14 @@
     },
     5029: (e, t, n) => {
       "use strict";
-      n.d(t, { Ar: () => l, Wo: () => c, i9: () => s, ks: () => r });
+      n.d(t, {
+        Ar: () => c,
+        Wo: () => m,
+        i9: () => s,
+        ks: () => r,
+        nQ: () => l,
+        ni: () => d,
+      });
       var a = n(89526),
         i = n(59934);
       function r(e, t) {
@@ -3498,11 +3505,18 @@
         }
       }
       const o = (e) => null != e;
-      function s(e, t, n) {
-        const a = new URLSearchParams(e.location.search.substring(1));
-        a.delete(t), o(n) && a.append(t, n), e.push(`?${a.toString()}`);
+      function s(e, t, n, a = !1) {
+        const i = new URLSearchParams(e.location.search.substring(1));
+        i.delete(t),
+          o(n) && i.append(t, n),
+          a
+            ? e.replace(`?${i.toString()}`, Object.assign({}, e.location.state))
+            : e.push(`?${i.toString()}`);
       }
-      function l(e, t) {
+      function l(e, t, n) {
+        s(e, t, n, !0);
+      }
+      function c(e, t) {
         const n = (0, i.k6)(),
           l = (0, i.TH)(),
           c = (0, a.useMemo)(() => {
@@ -3523,14 +3537,19 @@
           );
         return [c, m];
       }
-      function c(e, t) {
-        const n = new URLSearchParams(e.location.search.substring(1));
+      function m(e, t, n = !1) {
+        const a = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
-            const a = t[e];
-            n.delete(e), o(a) && n.append(e, a);
+            const n = t[e];
+            a.delete(e), o(n) && a.append(e, n);
           }
-        e.push(`?${n.toString()}`);
+        n
+          ? e.replace(`?${a.toString()}`, Object.assign({}, e.location.state))
+          : e.push(`?${a.toString()}`);
+      }
+      function d(e, t) {
+        m(e, t, !0);
       }
     },
     5386: (e, t, n) => {
@@ -3988,38 +4007,38 @@
       var h = n(69338),
         g = n(14826);
       function _(e) {
-        const { appid: t, community_item_type: n } = e,
-          a = u(t, n);
+        const { appid: t, community_item_type: n, bForEdit: a } = e,
+          r = u(t, n, a);
         if (
-          (null == a ? void 0 : a.item_movie_mp4) &&
-          (null == a ? void 0 : a.item_movie_webm)
+          (null == r ? void 0 : r.item_movie_mp4) &&
+          (null == r ? void 0 : r.item_movie_webm)
         ) {
           const e = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == a ? void 0 : a.item_image_large
+              null == r ? void 0 : r.item_image_large
             }`,
             n = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == a ? void 0 : a.item_movie_webm
+              null == r ? void 0 : r.item_movie_webm
             }`,
-            r = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == a ? void 0 : a.item_movie_mp4
+            a = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+              null == r ? void 0 : r.item_movie_mp4
             }`;
           return i.createElement(
             "video",
             { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
             i.createElement("source", { src: n, type: "video/webm" }),
             Boolean(!d.De.IN_CLIENT) &&
-              i.createElement("source", { src: r, type: "video/mp4" })
+              i.createElement("source", { src: a, type: "video/mp4" })
           );
         }
-        if (a) {
+        if (r) {
           const n = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-            (null == a ? void 0 : a.item_image_small) ||
-            (null == a ? void 0 : a.item_image_large)
+            (null == r ? void 0 : r.item_image_small) ||
+            (null == r ? void 0 : r.item_image_large)
           }`;
           return i.createElement("img", {
             className: e.className,
             src: n,
-            alt: null == a ? void 0 : a.item_name,
+            alt: null == r ? void 0 : r.item_name,
           });
         }
         return i.createElement(h.V, {

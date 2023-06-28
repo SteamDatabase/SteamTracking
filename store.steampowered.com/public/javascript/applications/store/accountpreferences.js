@@ -389,7 +389,7 @@
               s.createElement(N, { settings: e }),
               s.createElement(C, { settings: e }),
               s.createElement(v, { settings: e }),
-              s.createElement(T, { settings: e })
+              s.createElement(S, { settings: e })
             ),
             s.createElement(
               "div",
@@ -547,7 +547,7 @@
             s.createElement(
               "div",
               { className: "account_settings_container" },
-              s.createElement(S, { settings: e })
+              s.createElement(T, { settings: e })
             ),
             null
           );
@@ -652,7 +652,7 @@
             )
           );
         }),
-        T = (0, f.Pi)((e) => {
+        S = (0, f.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleYouTube();
@@ -724,7 +724,7 @@
             )
           );
         }),
-        S = (0, f.Pi)((e) => {
+        T = (0, f.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleUTMEnabled();
@@ -781,8 +781,7 @@
           var e, t;
           return (0, n.mG)(this, void 0, void 0, function* () {
             const r =
-                a.De.STORE_CHECKOUT_BASE_URL +
-                "account/ajaxsetnotificationsettings",
+                a.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
               s = new FormData();
             s.set("sessionid", a.De.SESSIONID),
               s.append(

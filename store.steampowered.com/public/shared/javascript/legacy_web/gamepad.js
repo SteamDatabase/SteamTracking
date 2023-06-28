@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    323: (e, t, n) => {
+    955: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(329),
-        s = n(73);
+        o = n(810),
+        s = n(606);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    73: (e, t, n) => {
+    606: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -93,14 +93,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    721: (e, t, n) => {
+    592: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ut });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(210);
+        a = n(591);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -160,10 +160,10 @@
           l
         );
       }
-      var g = n(329),
-        _ = n(73),
-        v = n(553),
-        p = n(323);
+      var g = n(810),
+        _ = n(606),
+        v = n(697),
+        p = n(955);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -572,7 +572,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(271);
+      var y = n(203);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -970,11 +970,11 @@
           );
         }
       }
-      var Y = n(7);
+      var Y = n(165);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {
-        constructor(e, t, n) {
+        constructor(e, t, n, i) {
           (this.m_onActivateCallbacks = new y.pB()),
             (this.m_onDeactivateCallbacks = new y.pB()),
             (this.m_onActiveFocusStateChangedCallbacks = new y.pB()),
@@ -984,6 +984,7 @@
             (this.m_Controller = e),
             (this.m_context = t),
             (this.m_ID = n),
+            (this.m_bFocusEnabled = null == i || i),
             (this.m_Root = new ke(this, null, null)),
             this.m_Root.SetProperties({ layout: Me.COLUMN }),
             (window.GamepadNavTree = this);
@@ -1011,6 +1012,9 @@
         }
         BIsContextActive() {
           return this.m_Controller.BIsInActiveContext(this);
+        }
+        BIsFocusEnabled() {
+          return this.m_bFocusEnabled;
         }
         CreateNode(e, t) {
           return new ke(this, e, t);
@@ -1707,8 +1711,8 @@
               n.TransferFocus(i.BROWSER, t);
           }
         }
-        NewGamepadNavigationTree(e, t) {
-          return new Q(this, e, t);
+        NewGamepadNavigationTree(e, t, n) {
+          return new Q(this, e, t, n);
         }
         RegisterGamepadNavigationTree(e, t, n) {
           const i = e.WindowContext;
@@ -2846,7 +2850,7 @@
             childFocusDisabled: n,
             fnCanTakeFocus: i,
           } = this.m_Properties;
-          return this.m_bMounted
+          return this.m_Tree.BIsFocusEnabled() && this.m_bMounted
             ? i && !i(this)
               ? "none"
               : e || (t && (n || 0 == this.m_rgChildren.length))
