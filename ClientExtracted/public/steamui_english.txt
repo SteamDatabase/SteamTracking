@@ -4398,11 +4398,6 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_StreamLaunch_StillDownloading" "Update is in progress on %ClientName%.  %game% will be ready to stream when the download completes."
 "SteamUI_StreamLaunch_TransportUnavailable"	"Streaming outside the home isn't currently available, try again later."
 
-"Steam_InstallAudioCaptureDriver_Title"	"Audio Driver Update"
-"Steam_InstallAudioCaptureDriver_Text"	"Steam needs to update its audio driver, which may require a system reboot.\n\nClick \"Install\" to continue."
-"Steam_InstallGamepadInputDriver_Title"	"Gamepad Driver Update"
-"Steam_InstallGamepadInputDriver_Text"	"Steam needs to update its gamepad driver, which may require a system reboot.\n\nClick \"Install\" to continue."
-
 "Steam_OtherSessionPlaying_Title" "Error - Steam"
 "Steam_OtherSessionPlaying_Text" "You are logged in on another computer already playing \"%existing_app%\".\nLaunching \"%launching_app%\" here will disconnect the other session from Steam."
 

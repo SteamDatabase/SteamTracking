@@ -4505,20 +4505,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   color: #fff;
 }
 .steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_FocusIndicator_25FUF {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  z-index: 10;
-  background: linear-gradient(to right, #00ccff, #3366ff);
-  opacity: 0;
-}
-.DesktopUI.WindowFocus
-  .steamdesktopoverlay_OverlayPopup_C9tvu
-  .steamdesktopoverlay_FocusIndicator_25FUF {
-  opacity: 1;
-}
-.steamdesktopoverlay_OverlayPopup_C9tvu
   .steamdesktopoverlay_ControllerConfiguratorWrapper_2RTmc {
   flex: 1;
   position: relative;

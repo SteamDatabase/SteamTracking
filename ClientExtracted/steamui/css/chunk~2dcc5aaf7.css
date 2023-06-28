@@ -23807,8 +23807,15 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
     background-position: 50% 0%;
   }
 }
-.ModalDialogPopup .ModalDialogBody:not(.DesktopUI) .PopupFullWindow .TitleBar {
+.ModalDialogPopup .ModalDialogBody .PopupFullWindow .TitleBar {
   height: 2px;
+}
+.ModalDialogPopup
+  .ModalDialogBody.friendsui-container
+  .PopupFullWindow
+  .TitleBar,
+.ModalDialogPopup .ModalDialogBody.DesktopUI .PopupFullWindow .TitleBar {
+  height: calc(1rem + 48px);
 }
 .BasicUI ::-webkit-scrollbar {
   display: none;

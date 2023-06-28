@@ -42,6 +42,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_MajorSale = 37;
 	k_EClientNotificationType_TimerExpired = 38;
 	k_EClientNotificationType_ModeratorMsg = 39;
+	k_EClientNotificationType_SteamInputActionSetChanged = 40;
 }
 
 enum ESystemUpdateNotificationType {
@@ -202,4 +203,9 @@ message CClientNotificationLoginRefresh {
 }
 
 message CClientNotificationTimerExpired {
+}
+
+message CClientNotificationSteamInputActionSetChanged {
+	optional int32 controller_index = 1;
+	optional string action_set_name = 2;
 }
