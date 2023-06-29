@@ -64556,19 +64556,19 @@
                 bLegalLineHandled: s,
                 bAdvertisingAppWithoutURL: l,
                 eStoreItemMarketingMessageState: o,
+                bExplicitNoItemAssociation: c,
               } = Re(e),
-              { bMinimumAssetsSetup: c } = we(e);
+              { bMinimumAssetsSetup: m } = we(e);
             return (
               t &&
               n &&
               a &&
-              c &&
+              m &&
               i &&
               r &&
               s &&
               !l &&
-              o != Se.k_StoreInvalidState &&
-              o != Se.k_StoreUnavailable
+              (c || (o != Se.k_StoreInvalidState && o != Se.k_StoreUnavailable))
             );
           })(n);
         if (!i) return m.createElement(jt.V, { string: n, size: "small" });
@@ -66405,19 +66405,19 @@
                 bLegalLineHandled: s,
                 bAdvertisingAppWithoutURL: l,
                 eStoreItemMarketingMessageState: o,
+                bExplicitNoItemAssociation: c,
               } = Ae(e),
-              { bMinimumAssetsSetup: c } = De(e);
+              { bMinimumAssetsSetup: m } = De(e);
             return (
               t &&
               n &&
               a &&
-              c &&
+              m &&
               i &&
               r &&
               s &&
               !l &&
-              o != Se.k_StoreInvalidState &&
-              o != Se.k_StoreUnavailable
+              (c || (o != Se.k_StoreInvalidState && o != Se.k_StoreUnavailable))
             );
           })(t.GetGID());
         return m.createElement(
@@ -66494,11 +66494,18 @@
                 bDone: !1,
                 name: "Associated Adverting App without URL",
               }),
-            (d == Se.k_StoreInvalidState || d == Se.k_StoreUnavailable) &&
-              m.createElement(Yo, {
-                bDone: !1,
-                name: "Associated Item is not store visible",
-              }),
+            Boolean(!l) &&
+              m.createElement(
+                m.Fragment,
+                null,
+                Boolean(
+                  d == Se.k_StoreInvalidState || d == Se.k_StoreUnavailable
+                ) &&
+                  m.createElement(Yo, {
+                    bDone: !1,
+                    name: "Associated Item is not store visible",
+                  })
+              ),
             m.createElement(Qo, {
               oEditableMessage: t,
               eStoreItemMarketingMessageState: d,
