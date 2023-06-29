@@ -18832,42 +18832,54 @@
         R = a(20790),
         M = a(52316);
       function O(e) {
-        const { bIsPreview: t, event: a, section: i, language: r } = e,
-          l = (0, b.id)();
-        return i.social_share
-          ? n.createElement(
-              g.ZP,
-              { feature: "salesocialshare" },
-              n.createElement(
-                p.Y,
-                {
-                  placeholderHeight: "100vh",
-                  rootMargin: o.HG,
-                  className: (0, h.Z)(w.SaleSection, m().SaleSectionCtn),
-                  style: (0, T.V)(i, a, l),
-                },
-                n.createElement(
-                  "div",
-                  {
-                    className: (0, h.Z)(
-                      A().DoorOptionsContainer,
-                      "DoorOptionsCtn"
-                    ),
-                  },
-                  i.social_share.content_options.map((e) =>
-                    n.createElement(P, {
-                      key: e.door,
-                      platforms: i.social_share.platforms,
-                      contentOption: e,
-                      bIsPreview: t,
-                      language: r,
-                      event: a,
-                    })
-                  )
-                )
-              )
+        var t;
+        const { bIsPreview: a, event: i, section: r, language: l } = e,
+          s = (0, b.id)();
+        if (!r.social_share) return null;
+        let c;
+        if (r.social_share.doorsEnabled)
+          c = n.createElement(
+            "div",
+            { className: (0, h.Z)(A().DoorOptionsContainer, "DoorOptionsCtn") },
+            r.social_share.content_options.map((e) =>
+              n.createElement(P, {
+                key: e.door,
+                platforms: r.social_share.platforms,
+                contentOption: e,
+                bIsPreview: a,
+                language: l,
+                event: i,
+              })
             )
-          : null;
+          );
+        else {
+          const e = r.social_share.content_options[0],
+            a = S.LJ.GetELanguageFallback(l),
+            o =
+              (null === (t = e.localized_option_fields.localized_header) ||
+              void 0 === t
+                ? void 0
+                : t.length) > 0
+                ? e.localized_option_fields.localized_header[l] ||
+                  e.localized_option_fields.localized_header[a] ||
+                  ""
+                : void 0;
+          c = n.createElement(V, { eventModel: i, titleOverride: o });
+        }
+        return n.createElement(
+          g.ZP,
+          { feature: "salesocialshare" },
+          n.createElement(
+            p.Y,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: o.HG,
+              className: (0, h.Z)(w.SaleSection, m().SaleSectionCtn),
+              style: (0, T.V)(r, i, s),
+            },
+            c
+          )
+        );
       }
       function P(e) {
         var t;
@@ -18987,17 +18999,17 @@
         }
       }
       function V(e) {
-        const { eventModel: t } = e;
+        const { eventModel: t, titleOverride: a } = e;
         if (t.BHasTag("contenthub")) return null;
-        const a = (0, R.pq)(t),
-          i = (e) => (0, R.jV)(t, e);
+        const i = (0, R.pq)(t),
+          o = (e) => (0, R.jV)(t, e);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
             { className: A().ShareHeader },
-            (0, S.Xx)("#EventDisplay_Share_WithFriendsHeader")
+            null != a ? a : (0, S.Xx)("#EventDisplay_Share_WithFriendsHeader")
           ),
           n.createElement(
             B.s,
@@ -19012,8 +19024,8 @@
               onActivate: (e) => {
                 (0, x.AM)(
                   n.createElement(N.t6, {
-                    eventLink: a,
-                    fnGetSharePageUrl: i,
+                    eventLink: i,
+                    fnGetSharePageUrl: o,
                     appid: t.appid,
                     emoticonStore: M.F,
                     partnerEventStore: l.j1,
