@@ -20213,33 +20213,33 @@
       function u(e, t, n, r, a, s, l) {
         let c, d;
         const u = e.props.closeModal,
-          p = () => {
+          h = () => {
             d && d.Close(),
               u && u(),
               (null == r ? void 0 : r.fnOnClose) && r.fnOnClose();
           },
-          _ = () => {
-            c && c.Close(), p();
+          p = () => {
+            c && c.Close(), h();
           },
-          g = i.cloneElement(e, { closeModal: _ });
+          _ = i.cloneElement(e, { closeModal: p });
         if (m((l = l || (0, o.BL)(t)), t) && r && n) {
-          if (r.bHideMainWindowForPopouts && !h(l)) {
+          if (r.bHideMainWindowForPopouts) {
             const e = i.createElement(
               o.e1,
               {
                 className: "Hidden",
-                onEscKeypress: !g.props.bDisableBackgroundDismiss && _,
+                onEscKeypress: !_.props.bDisableBackgroundDismiss && p,
               },
               i.createElement("div", null)
             );
             d = l.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, r), {
-            fnOnClose: p,
+            fnOnClose: h,
             browserContext: a,
           });
-          c = l.ShowLegacyPopupModal(n, g, e, s);
-        } else c = l.ShowModal(g);
+          c = l.ShowLegacyPopupModal(n, _, e, s);
+        } else c = l.ShowModal(_);
         return c;
       }
       function m(e, t) {
@@ -25775,7 +25775,6 @@
         NW: () => r.NW,
         JI: () => r.JI,
         kD: () => r.kD,
-        X9: () => r.X9,
         BE: () => i.BE,
         ww: () => i.ww,
         xK: () => i.xK,
@@ -25861,9 +25860,8 @@
         KM: () => a,
         NW: () => o,
         Qg: () => l,
-        X9: () => u,
         e1: () => c,
-        kD: () => m,
+        kD: () => u,
       });
       var r = n(89526);
       function i(e, t, n) {
@@ -25930,15 +25928,7 @@
           })(e, t) || e
         );
       }
-      function u(e = !1) {
-        const [t, n] = r.useState(e);
-        return [
-          t,
-          r.useCallback(() => n(!0), []),
-          r.useCallback(() => n(!1), []),
-        ];
-      }
-      function m(e) {
+      function u(e) {
         const t = r.useRef();
         return r.useCallback(
           () => (
@@ -26784,17 +26774,7 @@
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    90415: (e, t, n) => {
-      "use strict";
-      n.d(t, { T: () => i });
-      var r = n(32765);
-      function i(e = !1) {
-        return e
-          ? (0, r.ip)("store_user_config", "application_config")
-          : (0, r.kQ)("store_user_config", "application_config");
-      }
-    },
-    30967: (e, t, n) => {
+    13248: (e, t, n) => {
       "use strict";
       var r = n(33940),
         i = (n(34726), n(76583), n(73961)),
@@ -27262,31 +27242,10 @@
         $ = Z("DemoAndQuickPitch");
       var q = n(19094),
         Y = n(27070),
-        Q = n(65406),
-        J = n(90415),
-        ee = n(47742);
-      const te = o.lazy(() => n.e(7311).then(n.bind(n, 85397)));
-      function ne(e) {
-        const [t, n, r] = (0, M.X9)();
-        return (
-          o.useEffect(() => {
-            const e = window;
-            return (
-              (e.ShowShoppingCart = n),
-              (e.HideShoppingCart = r),
-              () => {
-                delete e.ShowShoppingCart, delete e.HideShoppingCart;
-              }
-            );
-          }, [n, r]),
-          o.createElement(
-            o.Suspense,
-            { fallback: null },
-            t && o.createElement(te, { closeCart: r })
-          )
-        );
-      }
-      const re = o.lazy(() =>
+        Q = n(65406);
+      var J = n(47742);
+      o.Fragment;
+      const ee = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27306,7 +27265,7 @@
             n.e(5331),
           ]).then(n.bind(n, 49747))
         ),
-        ie = o.lazy(() =>
+        te = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27318,7 +27277,7 @@
             n.e(9682),
           ]).then(n.bind(n, 42591))
         ),
-        oe = o.lazy(() =>
+        ne = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(7400),
@@ -27338,7 +27297,7 @@
             n.e(8986),
           ]).then(n.bind(n, 96322))
         ),
-        ae = o.lazy(() =>
+        re = o.lazy(() =>
           Promise.all([
             n.e(7400),
             n.e(2675),
@@ -27347,7 +27306,7 @@
             n.e(988),
           ]).then(n.bind(n, 30361))
         ),
-        se = o.lazy(() =>
+        ie = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27369,7 +27328,7 @@
             n.e(4601),
           ]).then(n.bind(n, 78802))
         ),
-        le = o.lazy(() =>
+        oe = o.lazy(() =>
           Promise.all([
             n.e(3388),
             n.e(2675),
@@ -27381,7 +27340,7 @@
             n.e(2814),
           ]).then(n.bind(n, 4472))
         ),
-        ce = o.lazy(() =>
+        ae = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(2675),
@@ -27392,11 +27351,11 @@
             n.e(40),
           ]).then(n.bind(n, 4795))
         ),
-        de = o.lazy(() => n.e(5821).then(n.bind(n, 14491))),
-        ue = o.lazy(() =>
+        se = o.lazy(() => n.e(5821).then(n.bind(n, 14491))),
+        le = o.lazy(() =>
           Promise.all([n.e(477), n.e(1918)]).then(n.bind(n, 39070))
         ),
-        me = o.lazy(() =>
+        ce = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27416,10 +27375,10 @@
             n.e(3207),
           ]).then(n.bind(n, 45334))
         ),
-        he = o.lazy(() =>
+        de = o.lazy(() =>
           Promise.all([n.e(2675), n.e(1614), n.e(1825)]).then(n.bind(n, 74839))
         ),
-        pe = o.lazy(() =>
+        ue = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27453,7 +27412,7 @@
             n.e(2136),
           ]).then(n.bind(n, 8132))
         ),
-        _e = o.lazy(() =>
+        me = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27488,7 +27447,7 @@
             n.e(9788),
           ]).then(n.bind(n, 92067))
         ),
-        ge = o.lazy(() =>
+        he = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27523,7 +27482,7 @@
             n.e(9788),
           ]).then(n.bind(n, 85329))
         ),
-        fe = o.lazy(() =>
+        pe = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27557,7 +27516,7 @@
             n.e(680),
           ]).then(n.bind(n, 11513))
         ),
-        ve = o.lazy(() =>
+        _e = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27591,7 +27550,7 @@
             n.e(680),
           ]).then(n.bind(n, 53805))
         ),
-        Ce = o.lazy(() =>
+        ge = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(2675),
@@ -27600,7 +27559,7 @@
             n.e(4535),
           ]).then(n.bind(n, 86401))
         ),
-        Se = o.lazy(() =>
+        fe = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27624,7 +27583,7 @@
             n.e(556),
           ]).then(n.bind(n, 89350))
         ),
-        Ee = o.lazy(() =>
+        ve = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27648,7 +27607,7 @@
             n.e(556),
           ]).then(n.bind(n, 77091))
         ),
-        De = o.lazy(() =>
+        Ce = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27668,7 +27627,7 @@
             n.e(4158),
           ]).then(n.bind(n, 20080))
         ),
-        be = o.lazy(() =>
+        Se = o.lazy(() =>
           Promise.all([
             n.e(6499),
             n.e(3388),
@@ -27696,12 +27655,12 @@
             n.e(8087),
           ]).then(n.bind(n, 92823))
         ),
-        we = o.lazy(() =>
+        Ee = o.lazy(() =>
           Promise.all([n.e(7404), n.e(5394), n.e(9057), n.e(3068)]).then(
             n.bind(n, 25610)
           )
         );
-      class ye extends o.Component {
+      class De extends o.Component {
         componentDidMount() {
           const e = (0, c.CE)();
           e &&
@@ -27716,9 +27675,9 @@
               "div",
               { className: m().App },
               o.createElement(
-                Me,
+                ye,
                 null,
-                o.createElement(Te, null),
+                o.createElement(Ie, null),
                 o.createElement(
                   o.Suspense,
                   { fallback: o.createElement("div", null) },
@@ -27743,7 +27702,7 @@
                       o.createElement(S.d, {
                         config: {
                           login: (e) =>
-                            o.createElement(Ce, Object.assign({}, e)),
+                            o.createElement(ge, Object.assign({}, e)),
                         },
                       })
                     ),
@@ -27753,7 +27712,7 @@
                       o.createElement(S.d, {
                         config: {
                           login: (e) =>
-                            o.createElement(Ce, Object.assign({}, e)),
+                            o.createElement(ge, Object.assign({}, e)),
                         },
                       })
                     ),
@@ -27774,15 +27733,15 @@
                                 appid: Number.parseInt(t),
                               }),
                             "review-award": () =>
-                              o.createElement(ae, { key: `appawardmodal${t}` }),
+                              o.createElement(re, { key: `appawardmodal${t}` }),
                             "steamawardsvote-embed": () =>
-                              o.createElement(ce, {
+                              o.createElement(ae, {
                                 key: `steamawardsvote_${t}`,
                                 appID: Number.parseInt(t),
                               }),
                             "broadcast-embed": () =>
                               o.createElement(
-                                se,
+                                ie,
                                 Object.assign(
                                   { key: `appbroadcastcast_${t}` },
                                   e,
@@ -27795,7 +27754,7 @@
                                 appID: Number.parseInt(t),
                               }),
                             "deck-verified-results": () =>
-                              o.createElement(he, {
+                              o.createElement(de, {
                                 appID: Number.parseInt(t),
                                 results: (0, l.kQ)(
                                   "deckcompatibility",
@@ -27809,7 +27768,7 @@
                             "gamehighlight-trailer": (e) =>
                               o.createElement(H, Object.assign({}, e)),
                             "discovery-queue-app-widget": () =>
-                              o.createElement(Se, {
+                              o.createElement(fe, {
                                 key: `discoveryqueue${t}`,
                                 appID: Number.parseInt(t),
                               }),
@@ -27829,14 +27788,14 @@
                         return o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key: `sale_${t}`,
                                 promotionName: `sale_${t}`,
                                 language: (0, _.jM)(l.De.LANGUAGE),
                               }),
                             "broadcast-embed": () =>
                               o.createElement(
-                                se,
+                                ie,
                                 Object.assign(
                                   { key: `broadcastsale_${t}` },
                                   e,
@@ -27853,7 +27812,7 @@
                         o.createElement(S.d, {
                           config: {
                             "curator-admin-rss": () =>
-                              o.createElement(_e, null),
+                              o.createElement(me, null),
                           },
                         }),
                     }),
@@ -27864,7 +27823,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key:
                                   "salecreator_" +
                                   e.match.params.creatorPageName +
@@ -27884,7 +27843,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key:
                                   "subscription_plan_" +
                                   e.match.params.salePageName,
@@ -27901,7 +27860,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key: "sale_remoteplaylanding",
                                 promotionName: "remoteplaylanding",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27915,7 +27874,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key: "sale_together",
                                 promotionName: "sale_together",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27929,7 +27888,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key: "sale_vrhardware",
                                 promotionName: "vrhardware",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27943,7 +27902,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key: "sale_steamdeck",
                                 promotionName: "steamdeck",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27957,7 +27916,7 @@
                         o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key: "sale_steamdeckdock",
                                 promotionName: "steamdeckdock",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -27973,7 +27932,7 @@
                           config: {
                             "broadcast-embed": () =>
                               o.createElement(
-                                se,
+                                ie,
                                 Object.assign(
                                   {
                                     key:
@@ -27996,7 +27955,7 @@
                         o.createElement(S.d, {
                           config: {
                             "list-display": () =>
-                              o.createElement(me, {
+                              o.createElement(ce, {
                                 key: "curator_list",
                                 listid: e.match.params.listid,
                               }),
@@ -28010,7 +27969,7 @@
                         o.createElement(S.d, {
                           config: {
                             "broadcast-embed": () =>
-                              o.createElement(se, {
+                              o.createElement(ie, {
                                 key: "packagebroadcast_" + e.match.params.subid,
                                 subid:
                                   Number.parseInt(e.match.params.subid) || 0,
@@ -28025,7 +27984,7 @@
                         o.createElement(S.d, {
                           config: {
                             "broadcast-embed": () =>
-                              o.createElement(se, {
+                              o.createElement(ie, {
                                 key:
                                   "bundlebroadcast_" + e.match.params.bundleid,
                                 bundleid:
@@ -28039,7 +27998,7 @@
                       render: (e) =>
                         o.createElement(S.d, {
                           config: {
-                            "event-calendar": () => o.createElement(pe, null),
+                            "event-calendar": () => o.createElement(ue, null),
                           },
                         }),
                     }),
@@ -28048,7 +28007,7 @@
                       render: (e) =>
                         o.createElement(S.d, {
                           config: {
-                            "event-calendar": () => o.createElement(ge, null),
+                            "event-calendar": () => o.createElement(he, null),
                           },
                         }),
                     }),
@@ -28058,13 +28017,13 @@
                       render: (e) =>
                         o.createElement(S.d, {
                           config: {
-                            recommender: () => o.createElement(ie, null),
+                            recommender: () => o.createElement(te, null),
                           },
                         }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.LabsSandbox(),
-                      render: (e) => o.createElement(le, null),
+                      render: (e) => o.createElement(oe, null),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.SteamCharts(),
@@ -28072,7 +28031,7 @@
                         o.createElement(S.d, {
                           config: {
                             "react-root": () =>
-                              o.createElement(re, Object.assign({}, e)),
+                              o.createElement(ee, Object.assign({}, e)),
                           },
                         }),
                     }),
@@ -28081,7 +28040,7 @@
                       render: () =>
                         o.createElement(S.d, {
                           config: {
-                            "points-shop": () => o.createElement(oe, null),
+                            "points-shop": () => o.createElement(ne, null),
                           },
                         }),
                     }),
@@ -28096,7 +28055,7 @@
                         return o.createElement(S.d, {
                           config: {
                             "sale-display": () =>
-                              o.createElement(fe, {
+                              o.createElement(pe, {
                                 key: "contenthub_" + t,
                                 promotionName: "contenthub_" + t,
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -28110,13 +28069,13 @@
                       render: () =>
                         o.createElement(S.d, {
                           config: {
-                            categories: () => o.createElement(ve, null),
+                            categories: () => o.createElement(_e, null),
                           },
                         }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.AccountPreferences(),
-                      render: (e) => o.createElement(de, Object.assign({}, e)),
+                      render: (e) => o.createElement(se, Object.assign({}, e)),
                     }),
                     o.createElement(p.AW, {
                       exact: !0,
@@ -28124,7 +28083,7 @@
                       render: (e) =>
                         o.createElement(S.d, {
                           config: {
-                            "forge-your-fate": () => o.createElement(ue, null),
+                            "forge-your-fate": () => o.createElement(le, null),
                           },
                         }),
                     }),
@@ -28135,17 +28094,17 @@
                         o.createElement(S.d, {
                           config: {
                             "discovery-queue-button": () =>
-                              o.createElement(Ee, null),
+                              o.createElement(ve, null),
                           },
                         }),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.MarketingMessages(),
-                      render: (e) => o.createElement(De, Object.assign({}, e)),
+                      render: (e) => o.createElement(Ce, Object.assign({}, e)),
                     }),
                     o.createElement(p.AW, {
                       path: d.Z.YearInReview(),
-                      render: (e) => o.createElement(be, Object.assign({}, e)),
+                      render: (e) => o.createElement(Se, Object.assign({}, e)),
                     }),
                     o.createElement(p.AW, null, o.createElement(K, null))
                   )
@@ -28155,22 +28114,26 @@
           );
         }
       }
-      function Ie() {
-        const e = (0, J.T)(!0);
+      function be() {
+        const e = (function (e = !1) {
+          return e
+            ? (0, l.ip)("store_user_config", "application_config")
+            : (0, l.kQ)("store_user_config", "application_config");
+        })(!0);
         return new q.J(
           l.De.WEBAPI_BASE_URL,
           null == e ? void 0 : e.webapi_token
         );
       }
-      function Re(e) {
-        const t = (0, M.kD)(Ie),
+      function we(e) {
+        const t = (0, M.kD)(be),
           n = (0, M.kD)(o.useCallback(() => new Q.Z(), [])),
           r = (0, o.useMemo)(
             () => ({ useActiveAccount: () => l.L7.steamid }),
             []
           );
         return o.createElement(
-          ee.B,
+          J.B,
           { value: r },
           o.createElement(
             Y.Ub,
@@ -28179,7 +28142,7 @@
           )
         );
       }
-      function Me(e) {
+      function ye(e) {
         const { children: t } = e;
         return o.createElement(
           v.u.Provider,
@@ -28188,7 +28151,7 @@
             l.fI,
             null,
             o.createElement(
-              Re,
+              we,
               null,
               o.createElement(
                 z.R,
@@ -28203,18 +28166,18 @@
           )
         );
       }
-      const Te = o.memo(function (e) {
+      const Ie = o.memo(function (e) {
         return o.createElement(
           o.Fragment,
           null,
-          o.createElement(ne, null),
+          !1,
           o.createElement(
             o.Suspense,
             { fallback: null },
             o.createElement(S.d, {
               config: {
                 "green-envelope": () =>
-                  o.createElement(we, {
+                  o.createElement(Ee, {
                     bResponsiveHeader: !1,
                     notifications: (0, l.kQ)(
                       "steam_notifications",
@@ -28222,7 +28185,7 @@
                     ),
                   }),
                 "green-envelope-responsive": () =>
-                  o.createElement(we, {
+                  o.createElement(Ee, {
                     bResponsiveHeader: !0,
                     notifications: (0, l.kQ)(
                       "steam_notifications",
@@ -28234,16 +28197,16 @@
           )
         );
       });
-      var Le = n(45464),
-        Ae = n(60161);
+      var Re = n(45464),
+        Me = n(60161);
       n(1721);
-      Ae.Dj(function () {
+      Me.Dj(function () {
         return (0, r.mG)(this, void 0, void 0, function* () {
           (0, l.Ek)("application_config").userConfig ||
             (yield (0, l.x)(s(), l.De.STORE_BASE_URL + "actions/", {
               userConfig: !0,
             })),
-            (0, Le.Uh)().Init(
+            (0, Re.Uh)().Init(
               "Store",
               CLSTAMP,
               new q.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
@@ -28276,7 +28239,7 @@
             })(l.De.LANGUAGE),
             document.getElementById("application_root")
               ? i.render(
-                  o.createElement(ye),
+                  o.createElement(De),
                   document.getElementById("application_root")
                 )
               : console.error('No "application_root" was found to target');
@@ -28640,7 +28603,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 30967), e((e.s = t));
+      return (t = 13248), e((e.s = t));
       var t;
     });
     e.O();

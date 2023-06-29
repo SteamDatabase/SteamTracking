@@ -2022,7 +2022,7 @@
           return this.m_config;
         }
         GetCurrentSeasonalAppID() {
-          return 2243810;
+          return 2460510;
         }
         GetLoyaltyRewardsSummary() {
           return (0, n.mG)(this, void 0, void 0, function* () {
@@ -3441,6 +3441,7 @@
                 },
               ]),
             E = [];
+          E.push(r(2459330));
           const M = [],
             b = [E, S];
           for (let e = 0; e < Math.max(b[0].length, b[1].length); e++)

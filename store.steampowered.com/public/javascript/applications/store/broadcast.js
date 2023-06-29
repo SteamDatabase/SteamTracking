@@ -11092,7 +11092,7 @@
                 )
               );
             }
-            n = -352;
+            n = -292;
           }
           let c = this.props.video.GetSubtitles() || !1;
           return l.createElement(
@@ -11158,7 +11158,7 @@
                   ref: this.m_elSubtitlesPanel,
                   className: "STV_BroadcastSettingsPanel SubtitlesMenu",
                   style: {
-                    maxHeight: "320px",
+                    maxHeight: "260px",
                     left: this.m_SubtitlesButtonPos[0],
                     top: this.m_SubtitlesButtonPos[1],
                     marginTop: n,

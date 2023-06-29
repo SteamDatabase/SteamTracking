@@ -625,7 +625,7 @@ function TagBoxTopDecoration()
 
 function SaleTagTexture( suffix )
 {
-	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2023/' + suffix + '_page.webp"); background-repeat: repeat;';
+	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2023/' + suffix + '_page.png?v=2"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )

@@ -1613,6 +1613,7 @@
               return Promise.resolve(1);
             }
             try {
+              yield this.m_transport.MakeReady();
               const r = 3 === this.m_eStatus || 10 === this.m_eStatus,
                 i = u.gA.Init(b.Am);
               i.SetEMsg(9804),

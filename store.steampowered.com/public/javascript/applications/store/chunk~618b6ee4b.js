@@ -2477,7 +2477,7 @@
         u = n(32765),
         m = n(85651),
         p = n(35340);
-      const _ = 5,
+      const _ = 9,
         g = -1;
       class v {
         GetLastDoorOpen() {

@@ -2865,6 +2865,9 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
   position: relative;
   flex-grow: 1;
 }
+.broadcast_embeddable_broadcast_floating_3Sg16 .STV_BroadcastSettings {
+  display: none;
+}
 .broadcast_embeddable_BroadcastPlayerContainer_1pDmt {
   position: relative;
   width: 100%;

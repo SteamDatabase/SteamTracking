@@ -5323,7 +5323,7 @@
               },
               s.createElement(F, {
                 cols: 90,
-                rows: this.props.nOverridesRows || 42,
+                rows: this.props.nOverridesRows || 22,
                 maxLength: 32e3,
                 className: (0, L.Z)(
                   q().DefaultEditor,
