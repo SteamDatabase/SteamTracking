@@ -366,8 +366,8 @@ function SetShowcaseGame( elSlot, eShowcase, purchaseid, level, iSlot, game )
 {
 	SetShowcaseConfig(
 		eShowcase, purchaseid, iSlot, {appid: game.appid }
-	).done( function() {
-			$J(elSlot).find('img').attr( 'src', game.logo );
+	).done( function( data ) {
+			$J(elSlot).find('img').attr( 'src', data.logo );
 			$J(elSlot).find('a').attr( 'href', 'https://steamcommunity.com/app/' + game.appid);
 			$J(elSlot).find('.favorite_game_name').text( game.name );
 			$J(elSlot).removeClass( 'openslot' );
