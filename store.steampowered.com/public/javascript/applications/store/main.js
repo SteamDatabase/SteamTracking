@@ -949,13 +949,13 @@
           );
         }
       }
-      var O;
+      var F;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Append = 1)] = "Append"),
           (e[(e.Remove = 2)] = "Remove");
-      })(O || (O = {}));
-      class F {
+      })(F || (F = {}));
+      class O {
         constructor(e, t, n, r) {
           (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -964,7 +964,7 @@
             (this.m_sourceBuffer = null),
             (this.m_nTrackBufferMS = 0),
             (this.m_representation = null),
-            (this.m_eBufferUpdate = O.None),
+            (this.m_eBufferUpdate = F.None),
             (this.m_rgBufferedSegments = []),
             (this.m_bNeedInitSegment = !0),
             (this.m_nNextSegment = 0),
@@ -1108,7 +1108,7 @@
           this.m_listeners.Unregister(),
             (this.m_sourceBuffer = null),
             this.ForceStopDownloads(),
-            (this.m_eBufferUpdate = O.None),
+            (this.m_eBufferUpdate = F.None),
             (this.m_bRemoveBufferState = !1),
             (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -1139,10 +1139,10 @@
             `${this.GetDebugName()} OnSourceBufferUpdateEnd: [playback=${t}][buffered=${n}][start=${this.GetBufferedStart()}][end=${this.GetBufferedEnd()}]`
           );
           let r = this.m_eBufferUpdate;
-          (this.m_eBufferUpdate = O.None),
-            r == O.Append && this.m_callbacks.OnSegmentDownloaded(this),
+          (this.m_eBufferUpdate = F.None),
+            r == F.Append && this.m_callbacks.OnSegmentDownloaded(this),
             this.m_bSeekInProgress &&
-              r == O.Remove &&
+              r == F.Remove &&
               !this.m_bRemoveBufferState &&
               this.ContinueSeek(),
             this.UpdateBuffer();
@@ -1339,18 +1339,18 @@
         }
         TrimGameDataIfNecessary() {}
         UpdateBuffer() {
-          if (this.m_eBufferUpdate != O.None) return;
+          if (this.m_eBufferUpdate != F.None) return;
           if (this.m_bRemoveBufferState) return void this.RemoveAllBuffers();
           if (!this.m_sourceBuffer) return void (0, _.yv)("No source buffer?");
           if (this.m_rgBufferedSegments.length > 0) {
             try {
-              this.m_eBufferUpdate = O.Append;
+              this.m_eBufferUpdate = F.Append;
               let e = this.m_rgBufferedSegments[0];
               this.m_sourceBuffer.appendBuffer(e.data),
                 this.m_rgBufferedSegments.splice(0, 1);
             } catch (e) {
               "QuotaExceededError" === e.name
-                ? ((this.m_eBufferUpdate = O.None),
+                ? ((this.m_eBufferUpdate = F.None),
                   (0, _.yv)(
                     `${this.GetDebugName()} Buffer - QuotaExceededError`
                   ))
@@ -1366,7 +1366,7 @@
               let r = Math.min(this.GetBufferedEnd(), n);
               return void (
                 r != t &&
-                ((this.m_eBufferUpdate = O.Remove),
+                ((this.m_eBufferUpdate = F.Remove),
                 this.m_sourceBuffer.remove(t, r),
                 (this.m_tsLastBufferRemove = e))
               );
@@ -1381,7 +1381,7 @@
             for (let n = 0; n < t.length; n++) e < t.end(n) && (e = t.end(n));
           }
           (this.m_bRemoveBufferState = !1),
-            (this.m_eBufferUpdate = O.Remove),
+            (this.m_eBufferUpdate = F.Remove),
             0 != e
               ? this.m_sourceBuffer.remove(0, e + 1)
               : this.OnSourceBufferUpdateEnd(null);
@@ -1448,7 +1448,7 @@
         }
         ContinueSeek() {
           this.m_bSeekInProgress &&
-            (this.m_eBufferUpdate == O.Remove ||
+            (this.m_eBufferUpdate == F.Remove ||
               this.m_bRemoveBufferState ||
               ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
         }
@@ -1493,13 +1493,13 @@
             : 0;
         }
       }
-      (0, r.gn)([m.a], F.prototype, "OnSourceBufferUpdateEnd", null),
-        (0, r.gn)([m.a], F.prototype, "OnSourceBufferError", null),
-        (0, r.gn)([m.a], F.prototype, "OnSourceBufferAbort", null),
-        (0, r.gn)([m.a], F.prototype, "ScheduleNextDownload", null),
-        (0, r.gn)([m.a], F.prototype, "DownloadNextSegment", null),
-        (0, r.gn)([m.a], F.prototype, "DownloadFailed", null),
-        (0, r.gn)([m.a], F.prototype, "DownloadGone", null);
+      (0, r.gn)([m.a], O.prototype, "OnSourceBufferUpdateEnd", null),
+        (0, r.gn)([m.a], O.prototype, "OnSourceBufferError", null),
+        (0, r.gn)([m.a], O.prototype, "OnSourceBufferAbort", null),
+        (0, r.gn)([m.a], O.prototype, "ScheduleNextDownload", null),
+        (0, r.gn)([m.a], O.prototype, "DownloadNextSegment", null),
+        (0, r.gn)([m.a], O.prototype, "DownloadFailed", null),
+        (0, r.gn)([m.a], O.prototype, "DownloadGone", null);
       const P = 5,
         x = "auto";
       var N, V;
@@ -1796,7 +1796,7 @@
                 ((t = e), (this.m_strGameAdaptationID = e.strID)),
               t)
             ) {
-              let e = new F(this, this.m_mpd, t, this.m_stats);
+              let e = new O(this, this.m_mpd, t, this.m_stats);
               this.m_rgLoaders.push(e);
             }
           }
@@ -9158,7 +9158,7 @@
       n.d(t, {
         Vp: () => V,
         zE: () => N,
-        gj: () => F,
+        gj: () => O,
         c4: () => P,
         mz: () => x,
       });
@@ -9588,8 +9588,8 @@
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const O = new c.s("FocusNavigationMovement").Debug;
-      var F, P, x, N;
+      const F = new c.s("FocusNavigationMovement").Debug;
+      var O, P, x, N;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -9598,7 +9598,7 @@
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(F || (F = {})),
+      })(O || (O = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.LAST = 1)] = "LAST"),
@@ -9843,7 +9843,7 @@
             (this.m_bMounted = !1);
           const t = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.m_bFocused || t) &&
-            (O(
+            (F(
               `The focused node is unmounting, ${
                 this.m_RetainFocusParent
                   ? "will transfer to retain focus ancestor"
@@ -9866,7 +9866,7 @@
         RegisterDOMEvents() {
           !this.m_rgNavigationHandlers.length &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties.layout != F.NONE ||
+              this.m_Properties.layout != O.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -10028,8 +10028,8 @@
               const e = this.GetLayout();
               l =
                 l >= this.m_rgChildren.length ||
-                e == F.ROW_REVERSE ||
-                e == F.COLUMN_REVERSE ||
+                e == O.ROW_REVERSE ||
+                e == O.COLUMN_REVERSE ||
                 i == P.LAST
                   ? this.m_rgChildren.length - 1
                   : 0;
@@ -10039,11 +10039,11 @@
               i == P.MAINTAIN_X ? (r = "x") : i == P.MAINTAIN_Y && (r = "y"),
                 r == o.TP[n] &&
                   (a = this.m_Tree.GetLastFocusedMovementRect(o.TP[n])),
-                O(
+                F(
                   `Taking focus while preserving ${P[i]} preserved: ${r} movement: ${n}, node:`,
                   a || t
                 );
-              const l = this.ComputeRelativeDirection(e, F.GRID);
+              const l = this.ComputeRelativeDirection(e, O.GRID);
               if (a || t) {
                 const i = l == N.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                 s = this.FindClosestChildInNextAxiallyAlignedSet(
@@ -10106,7 +10106,7 @@
               bottom: o.innerHeight,
             });
           return (
-            O(
+            F(
               `Focusing visible child, best child match is ${
                 null === (i = null == a ? void 0 : a.child) || void 0 === i
                   ? void 0
@@ -10118,7 +10118,7 @@
         }
         GetLayout() {
           if (this.m_Properties.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return F.NONE;
+          if (this.m_rgChildren.length < 2) return O.NONE;
           return (0, u.Ii)(this.m_element);
         }
         OnNavigationEvent(e) {
@@ -10155,16 +10155,16 @@
           let o,
             a = this.ComputeRelativeDirection(e, r);
           if (
-            (O(
-              `Handling navigation event ${i.eV[e]} - ${F[r]} - ${N[a]}`,
+            (F(
+              `Handling navigation event ${i.eV[e]} - ${O[r]} - ${N[a]}`,
               this.m_element
             ),
             a == N.INVALID)
           )
             return !1;
           if (this.m_Properties.focusable && this.m_bFocused)
-            return O("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), r == F.GRID))
+            return F("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), r == O.GRID))
             o = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               a,
@@ -10193,7 +10193,7 @@
                 (a.right < 0 && a.left < -i)
               )
                 return (
-                  O(`Element too far away, scrolling ${i} on ${r} axis `),
+                  F(`Element too far away, scrolling ${i} on ${r} axis `),
                   T(o.Element, o.Element, "smooth", r, i),
                   !0
                 );
@@ -10218,10 +10218,10 @@
           return this.ComputeRelativeDirection(e, this.GetLayout());
         }
         ComputeRelativeDirection(e, t) {
-          let n = t == F.ROW_REVERSE || t == F.COLUMN_REVERSE;
+          let n = t == O.ROW_REVERSE || t == O.COLUMN_REVERSE;
           switch (t) {
-            case F.ROW:
-            case F.ROW_REVERSE:
+            case O.ROW:
+            case O.ROW_REVERSE:
               switch (e) {
                 case i.eV.DIR_LEFT:
                   return n ? N.FORWARD : N.BACKWARD;
@@ -10230,8 +10230,8 @@
                 default:
                   return N.INVALID;
               }
-            case F.COLUMN:
-            case F.COLUMN_REVERSE:
+            case O.COLUMN:
+            case O.COLUMN_REVERSE:
               switch (e) {
                 case i.eV.DIR_UP:
                   return n ? N.FORWARD : N.BACKWARD;
@@ -10240,7 +10240,7 @@
                 default:
                   return N.INVALID;
               }
-            case F.GRID:
+            case O.GRID:
               switch (e) {
                 case i.eV.DIR_LEFT:
                 case i.eV.DIR_UP:
@@ -10396,7 +10396,7 @@
                 ),
                 this.m_element.focus({ preventScroll: !0 }))
               : this.m_Tree.BUseVirtualFocus() ||
-                O(
+                F(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`
                 ),
             (function (e, t) {
@@ -14481,7 +14481,7 @@
         uT: () => y,
         V5: () => I,
         Ac: () => w,
-        zx: () => F,
+        zx: () => O,
         ji: () => U,
         VY: () => T,
         oX: () => B,
@@ -14495,7 +14495,7 @@
         __: () => b,
         o9: () => x,
         $0: () => N,
-        KM: () => O,
+        KM: () => F,
         EU: () => se,
         SY: () => ae,
         BQ: () => H,
@@ -14666,7 +14666,7 @@
             e.children
           );
         }),
-        O = i.forwardRef(function (e, t) {
+        F = i.forwardRef(function (e, t) {
           return i.createElement(
             k,
             Object.assign(
@@ -14684,7 +14684,7 @@
             )
           );
         }),
-        F = i.forwardRef(function (e, t) {
+        O = i.forwardRef(function (e, t) {
           return i.createElement(
             k,
             Object.assign({ type: "button" }, e, {
@@ -14724,7 +14724,7 @@
           R,
           null,
           i.createElement(
-            O,
+            F,
             {
               onClick: e.onOK,
               disabled: e.bOKDisabled,
@@ -14734,7 +14734,7 @@
             " "
           ),
           i.createElement(
-            F,
+            O,
             {
               onClick: e.onCancel,
               disabled: e.bCancelDisabled,
@@ -14749,19 +14749,19 @@
           M,
           null,
           i.createElement(
-            O,
+            F,
             { onClick: e.onOK, disabled: e.bOKDisabled },
             e.strOKText || (0, c.Xx)("#Button_Confirm"),
             " "
           ),
           i.createElement(
-            O,
+            F,
             { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
             e.strUpdateText || (0, c.Xx)("#Button_Update"),
             " "
           ),
           i.createElement(
-            F,
+            O,
             { onClick: e.onCancel, disabled: e.bCancelDisabled },
             e.strCancelText || (0, c.Xx)("#Button_Cancel")
           )
@@ -15287,7 +15287,7 @@
                   "div",
                   { className: "displayRow" },
                   i.createElement(
-                    F,
+                    O,
                     {
                       className: "DialogInput_CopyAction Primary",
                       onClick: this.OnCopyClick,
@@ -16065,7 +16065,7 @@
       const Be = new (n(50454).s)("DragDrop").Debug;
       class ke extends i.Component {
         constructor() {
-          super(...arguments), (this.m_coordinator = new Fe());
+          super(...arguments), (this.m_coordinator = new Oe());
         }
         OnDrop(e, t) {
           t > e && t--, t != e && this.props.onReorder(e, t);
@@ -16104,13 +16104,13 @@
           );
         }
       }
-      function Oe(e, t, n, r) {
+      function Fe(e, t, n, r) {
         return r
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
       (0, r.gn)([z.ak], ke.prototype, "OnDrop", null);
-      class Fe {
+      class Oe {
         constructor() {
           (this.m_embeddedElement = new Te.AN("DragGhosts")),
             (this.m_rgDropRegions = []),
@@ -16248,7 +16248,7 @@
             const t = r + o,
               n = i + a,
               s = e.GetDragDocument().body.getBoundingClientRect();
-            if (Oe(r, i, s) && !Oe(t, n, s, !0)) {
+            if (Fe(r, i, s) && !Fe(t, n, s, !0)) {
               const r = Ae.r4(t, s.left, s.right, s.left - 200, s.right + 200),
                 i = Ae.r4(n, s.top, s.bottom, s.top - 100, s.bottom + 100),
                 o = 50;
@@ -16275,7 +16275,7 @@
               this.m_activeDropRegion.OnDragMove(r, i, this.m_activeDraggable);
         }
       }
-      (0, r.gn)([z.ak], Fe.prototype, "OnDragGhostRef", null);
+      (0, r.gn)([z.ak], Oe.prototype, "OnDragGhostRef", null);
       class Pe extends i.Component {
         constructor() {
           super(...arguments),
@@ -16619,7 +16619,7 @@
           );
         }
         BDraggableInRegion(e, t, n) {
-          return Oe(e, t, this.GetClientRect());
+          return Fe(e, t, this.GetClientRect());
         }
         GetElement() {
           return this.m_divRef.current;
@@ -17048,8 +17048,8 @@
           A = null != h ? h : "standard",
           B = null != p ? p : "standard",
           k = null != g ? g : "standard",
-          O = null == v || v,
-          F = null != C ? C : 0,
+          F = null == v || v,
+          O = null != C ? C : 0,
           P = null != S ? S : "center",
           x = i.useRef(),
           N = (0, z.BE)(x, e.navRef),
@@ -17094,9 +17094,9 @@
                 "standard" == B && rt().StandardPadding,
                 "compact" == B && rt().CompactPadding,
                 M && rt().Clickable,
-                O && rt().HighlightOnFocus
+                F && rt().HighlightOnFocus
               ),
-              style: { "--indent-level": F },
+              style: { "--indent-level": O },
             }
           ),
           T &&
@@ -17159,7 +17159,7 @@
             padding: u,
             inlineWrap: m,
           },
-          i.createElement(F, Object.assign({}, h, { ref: _ }))
+          i.createElement(O, Object.assign({}, h, { ref: _ }))
         );
       });
       const at = i.forwardRef(function (e, t) {
@@ -17221,7 +17221,7 @@
         dt = n(44673);
       i.forwardRef(function (e, t) {
         return i.createElement(
-          F,
+          O,
           {
             className: (0, l.Z)(lt().DropDownControlButton, e.className),
             focusable: e.focusable,
@@ -17265,7 +17265,7 @@
                 autoComplete: "off",
                 ref: l,
                 inlineControls: i.createElement(
-                  F,
+                  O,
                   {
                     className: ut.TogglePasswordVisibilityBtn,
                     onPointerDown: m,
@@ -18200,7 +18200,7 @@
               )
             );
       }
-      function Ot(e, t) {
+      function Ft(e, t) {
         return {
           base: t,
           enterStart: e.Enter,
@@ -18216,8 +18216,8 @@
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
       })(Rt || (Rt = {}));
-      var Ft = n(91429),
-        Pt = n.n(Ft);
+      var Ot = n(91429),
+        Pt = n.n(Ot);
       const xt = i.createContext(null);
       function Nt(e) {
         const t = i.useContext(xt),
@@ -18285,7 +18285,7 @@
           Bt,
           {
             childrenKey: e.activePage.identifier,
-            childrenClasses: Ot(Pt(), Pt().ContentTransition),
+            childrenClasses: Ft(Pt(), Pt().ContentTransition),
             directionClass: n,
             animate: t != Rt.None,
           },
@@ -19055,9 +19055,9 @@
       n.d(t, {
         On: () => S,
         Pv: () => R,
-        uH: () => O,
+        uH: () => F,
         RG: () => k,
-        JX: () => F,
+        JX: () => O,
         BL: () => s.BL,
         e1: () => g,
         D2: () => E,
@@ -19271,7 +19271,7 @@
           )
         );
       });
-      let O = class extends r.Component {
+      let F = class extends r.Component {
         Cancel() {
           this.props.onCancel && this.props.onCancel(),
             this.props.closeModal && this.props.closeModal();
@@ -19342,9 +19342,9 @@
           );
         }
       };
-      (0, M.gn)([v.ak], O.prototype, "Cancel", null),
-        (O = (0, M.gn)([T.Pi], O));
-      let F = class extends r.Component {
+      (0, M.gn)([v.ak], F.prototype, "Cancel", null),
+        (F = (0, M.gn)([T.Pi], F));
+      let O = class extends r.Component {
         render() {
           const e = Object.assign(
             {
@@ -19357,10 +19357,10 @@
             },
             this.props
           );
-          return r.createElement(O, Object.assign({}, e));
+          return r.createElement(F, Object.assign({}, e));
         }
       };
-      F = (0, M.gn)([T.Pi], F);
+      O = (0, M.gn)([T.Pi], O);
     },
     37494: (e, t, n) => {
       "use strict";
@@ -19662,7 +19662,7 @@
               if (t.visible) {
                 a.current && a.current.PositionMenu(),
                   a.current && a.current.PositionPopupWindow();
-                let e = t.options.bRetainOnHide
+                let e = t.options.bNoFocusWhenShown
                   ? m.IF.k_EWindowBringToFrontWithoutForcingOS
                   : m.IF.k_EWindowBringToFrontAndForceOS;
                 t.TakeFocus(e);
@@ -20267,7 +20267,7 @@
         GhU: () => A,
         IF0: () => ve,
         IWH: () => re,
-        JrY: () => F,
+        JrY: () => O,
         KJh: () => Ae,
         KKY: () => Qe,
         Lao: () => $,
@@ -20277,7 +20277,7 @@
         NP6: () => j,
         P7E: () => b,
         P9w: () => ee,
-        Q1v: () => Oe,
+        Q1v: () => Fe,
         SK8: () => Se,
         SUY: () => S,
         SjW: () => Pe,
@@ -20300,7 +20300,7 @@
         dCe: () => nt,
         dLw: () => Ie,
         doA: () => Ge,
-        dzL: () => O,
+        dzL: () => F,
         faS: () => P,
         ffh: () => L,
         g0p: () => Ne,
@@ -20311,7 +20311,7 @@
         k6n: () => k,
         kL2: () => x,
         kqV: () => ke,
-        ktE: () => Fe,
+        ktE: () => Oe,
         lBf: () => p,
         lsH: () => ne,
         mBz: () => Xe,
@@ -21044,7 +21044,7 @@
           })
         );
       }
-      function O() {
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -21066,7 +21066,7 @@
           })
         );
       }
-      function F(e) {
+      function O(e) {
         var t;
         return i.createElement(
           "svg",
@@ -22714,7 +22714,7 @@
           })
         );
       }
-      function Oe(e) {
+      function Fe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -22738,7 +22738,7 @@
           })
         );
       }
-      function Fe(e) {
+      function Oe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -26976,7 +26976,7 @@
         A = n(19304),
         B = n(81349);
       const k = parseInt(y().nTimelineHoverEdgePadding);
-      function O(e) {
+      function F(e) {
         let { manifest: t, forcePause: n } = e,
           [r, i] = (function (e) {
             let t = o.useRef(new T());
@@ -27002,11 +27002,11 @@
           "div",
           { className: y().TrailerPlayer },
           o.createElement("video", { ref: r }),
-          o.createElement(F, { player: i }),
+          o.createElement(O, { player: i }),
           a && o.createElement(U, { player: i })
         );
       }
-      function F(e) {
+      function O(e) {
         let { player: t } = e,
           n = o.useCallback(() => {
             t.TogglePlayPause();
@@ -27167,7 +27167,7 @@
             e || (t.current = !0);
             return t.current;
           })(r);
-        return i ? o.createElement(O, { manifest: n, forcePause: r }) : null;
+        return i ? o.createElement(F, { manifest: n, forcePause: r }) : null;
       }
       class W {
         constructor() {

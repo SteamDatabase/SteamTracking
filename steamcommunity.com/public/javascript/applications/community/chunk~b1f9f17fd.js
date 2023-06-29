@@ -1509,7 +1509,7 @@
         m = a(32765),
         u = a(85651),
         _ = a(35340);
-      const p = 5,
+      const p = 9,
         g = -1;
       class v {
         GetLastDoorOpen() {
@@ -2768,9 +2768,12 @@
                           );
                         })
                         .forEach((e, a) => {
-                          let n = e.answers.findIndex((e) =>
-                            e.category_ids.includes(t.category_id)
-                          );
+                          let n = e.answers.findIndex((e) => {
+                            var a;
+                            return null === (a = e.category_ids) || void 0 === a
+                              ? void 0
+                              : a.includes(t.category_id);
+                          });
                           n < 0 && (n = 0),
                             G.A.Get().SetAnswerCategory(
                               a,

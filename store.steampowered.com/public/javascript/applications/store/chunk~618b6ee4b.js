@@ -5634,9 +5634,12 @@
                           );
                         })
                         .forEach((e, n) => {
-                          let a = e.answers.findIndex((e) =>
-                            e.category_ids.includes(t.category_id)
-                          );
+                          let a = e.answers.findIndex((e) => {
+                            var n;
+                            return null === (n = e.category_ids) || void 0 === n
+                              ? void 0
+                              : n.includes(t.category_id);
+                          });
                           a < 0 && (a = 0),
                             T.A.Get().SetAnswerCategory(
                               n,
@@ -6789,11 +6792,11 @@
         o = n(25871),
         l = n(55290),
         c = n.n(l),
-        d = n(19304),
-        u = n(71161),
-        m = n(51441),
-        p = n(10809),
-        _ = n(701);
+        d = n(701),
+        u = n(19304),
+        m = n(71161),
+        p = n(51441),
+        _ = n(10809);
       !(function (e) {
         (e.k_eBlock = "block"),
           (e.k_eFinal = "final"),
@@ -6812,54 +6815,67 @@
             return Boolean(t) && s.createElement("span", null, t);
         }
         const t = "reservation" == e.display_style,
-          n = e.bHideDiscountPercentForCompliance && !0;
+          n = e.bHideDiscountPercentForCompliance && !0,
+          i = "bbcode_price" == e.className;
         return s.createElement(
           "span",
           {
-            className: (0, d.Z)({
-              [p.StoreSalePriceWidget]: !0,
+            className: (0, u.Z)({
+              [_.StoreSalePriceWidget]: !0,
               [e.className]: Boolean(e.className),
-              [p.StoreSaleReservationPrice]: t,
+              [_.StoreSaleReservationPrice]: t,
             }),
           },
           Boolean(e.discount_percent && !n) &&
             s.createElement(
               "span",
               {
-                className: (0, d.Z)(
-                  p.StoreSaleDiscountBox,
-                  "StoreSaleDiscountBox"
-                ),
+                className: (0, u.Z)({
+                  [_.StoreSaleDiscountBox]: !0,
+                  StoreSaleDiscountBox: !0,
+                }),
               },
               `-${e.discount_percent}%`
             ),
           Boolean(e.discount_percent && n) &&
             s.createElement(
               "div",
-              { className: p.DiscountIconCtn },
-              s.createElement(_.dCe, null)
+              {
+                className: (0, u.Z)({
+                  [_.DiscountIconCtn]: !0,
+                  bbcode_price_discount: i,
+                }),
+              },
+              s.createElement(d.dCe, null)
             ),
           Boolean(e.formatted_final_price) &&
             (Boolean(e.discount_percent && e.formatted_orig_price)
               ? s.createElement(
                   "div",
-                  { className: p.StoreSaleDiscountedPriceCtn },
+                  {
+                    className: (0, u.Z)({
+                      [_.StoreSaleDiscountedPriceCtn]: !0,
+                      bbcode_price_ctn: i,
+                    }),
+                  },
                   s.createElement(
                     "div",
                     {
-                      className: (0, d.Z)(
-                        p.StoreOriginalPrice,
-                        "StoreOriginalPrice"
-                      ),
+                      className: (0, u.Z)({
+                        [_.StoreOriginalPrice]: !0,
+                        StoreOriginalPrice: !0,
+                        bbcode_price_orig: i,
+                      }),
                     },
                     e.formatted_orig_price
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: (0, d.Z)({
-                        [p.StoreSalePriceBox]: !0,
-                        [p.StoreSaleReservationPriceBox]: t,
+                      className: (0, u.Z)({
+                        [_.StoreSalePriceBox]: !0,
+                        [_.StoreSaleReservationPriceBox]: t,
+                        bbcode_price_final: i,
                       }),
                     },
                     e.formatted_final_price
@@ -6868,9 +6884,10 @@
               : s.createElement(
                   "div",
                   {
-                    className: (0, d.Z)({
-                      [p.StoreSalePriceBox]: !0,
-                      [p.StoreSaleReservationPriceBox]: t,
+                    className: (0, u.Z)({
+                      [_.StoreSalePriceBox]: !0,
+                      [_.StoreSaleReservationPriceBox]: t,
+                      bbcode_price_final: i,
                     }),
                   },
                   e.formatted_final_price
@@ -6930,7 +6947,7 @@
         })(t, n);
         return void 0 === a
           ? null
-          : s.createElement("span", { className: p.StorePriceSavings }, a);
+          : s.createElement("span", { className: _.StorePriceSavings }, a);
       });
       function f(e) {
         const t = Number(e.args.packageid),
@@ -6940,12 +6957,12 @@
           : null;
       }
       const E = (e) => {
-        const t = (0, u.bJ)(),
+        const t = (0, m.bJ)(),
           n = (0, r.mY)(t);
-        return s.createElement(m.RJ, {
+        return s.createElement(p.RJ, {
           snr: n,
           appID: e.appid,
-          classOverride: (0, d.Z)(c().WishlistButtonNotTop, "WishlistButton"),
+          classOverride: (0, u.Z)(c().WishlistButtonNotTop, "WishlistButton"),
         });
       };
       function b(e) {

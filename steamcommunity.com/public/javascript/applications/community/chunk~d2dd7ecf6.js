@@ -7815,11 +7815,11 @@
         o = a(25871),
         s = a(55290),
         c = a.n(s),
-        d = a(19304),
-        u = a(71161),
-        m = a(51441),
-        _ = a(10809),
-        p = a(28106);
+        d = a(28106),
+        u = a(19304),
+        m = a(71161),
+        _ = a(51441),
+        p = a(10809);
       !(function (e) {
         (e.k_eBlock = "block"),
           (e.k_eFinal = "final"),
@@ -7838,54 +7838,67 @@
             return Boolean(t) && l.createElement("span", null, t);
         }
         const t = "reservation" == e.display_style,
-          a = e.bHideDiscountPercentForCompliance && !0;
+          a = e.bHideDiscountPercentForCompliance && !0,
+          i = "bbcode_price" == e.className;
         return l.createElement(
           "span",
           {
-            className: (0, d.Z)({
-              [_.StoreSalePriceWidget]: !0,
+            className: (0, u.Z)({
+              [p.StoreSalePriceWidget]: !0,
               [e.className]: Boolean(e.className),
-              [_.StoreSaleReservationPrice]: t,
+              [p.StoreSaleReservationPrice]: t,
             }),
           },
           Boolean(e.discount_percent && !a) &&
             l.createElement(
               "span",
               {
-                className: (0, d.Z)(
-                  _.StoreSaleDiscountBox,
-                  "StoreSaleDiscountBox"
-                ),
+                className: (0, u.Z)({
+                  [p.StoreSaleDiscountBox]: !0,
+                  StoreSaleDiscountBox: !0,
+                }),
               },
               `-${e.discount_percent}%`
             ),
           Boolean(e.discount_percent && a) &&
             l.createElement(
               "div",
-              { className: _.DiscountIconCtn },
-              l.createElement(p.dCe, null)
+              {
+                className: (0, u.Z)({
+                  [p.DiscountIconCtn]: !0,
+                  bbcode_price_discount: i,
+                }),
+              },
+              l.createElement(d.dCe, null)
             ),
           Boolean(e.formatted_final_price) &&
             (Boolean(e.discount_percent && e.formatted_orig_price)
               ? l.createElement(
                   "div",
-                  { className: _.StoreSaleDiscountedPriceCtn },
+                  {
+                    className: (0, u.Z)({
+                      [p.StoreSaleDiscountedPriceCtn]: !0,
+                      bbcode_price_ctn: i,
+                    }),
+                  },
                   l.createElement(
                     "div",
                     {
-                      className: (0, d.Z)(
-                        _.StoreOriginalPrice,
-                        "StoreOriginalPrice"
-                      ),
+                      className: (0, u.Z)({
+                        [p.StoreOriginalPrice]: !0,
+                        StoreOriginalPrice: !0,
+                        bbcode_price_orig: i,
+                      }),
                     },
                     e.formatted_orig_price
                   ),
                   l.createElement(
                     "div",
                     {
-                      className: (0, d.Z)({
-                        [_.StoreSalePriceBox]: !0,
-                        [_.StoreSaleReservationPriceBox]: t,
+                      className: (0, u.Z)({
+                        [p.StoreSalePriceBox]: !0,
+                        [p.StoreSaleReservationPriceBox]: t,
+                        bbcode_price_final: i,
                       }),
                     },
                     e.formatted_final_price
@@ -7894,9 +7907,10 @@
               : l.createElement(
                   "div",
                   {
-                    className: (0, d.Z)({
-                      [_.StoreSalePriceBox]: !0,
-                      [_.StoreSaleReservationPriceBox]: t,
+                    className: (0, u.Z)({
+                      [p.StoreSalePriceBox]: !0,
+                      [p.StoreSaleReservationPriceBox]: t,
+                      bbcode_price_final: i,
                     }),
                   },
                   e.formatted_final_price
@@ -7956,7 +7970,7 @@
         })(t, a);
         return void 0 === n
           ? null
-          : l.createElement("span", { className: _.StorePriceSavings }, n);
+          : l.createElement("span", { className: p.StorePriceSavings }, n);
       });
       function E(e) {
         const t = Number(e.args.packageid),
@@ -7966,12 +7980,12 @@
           : null;
       }
       const f = (e) => {
-        const t = (0, u.bJ)(),
+        const t = (0, m.bJ)(),
           a = (0, r.mY)(t);
-        return l.createElement(m.RJ, {
+        return l.createElement(_.RJ, {
           snr: a,
           appID: e.appid,
-          classOverride: (0, d.Z)(c().WishlistButtonNotTop, "WishlistButton"),
+          classOverride: (0, u.Z)(c().WishlistButtonNotTop, "WishlistButton"),
         });
       };
       function b(e) {
