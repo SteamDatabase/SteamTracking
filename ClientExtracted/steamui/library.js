@@ -1,4 +1,4 @@
-var CLSTAMP = "8156498";
+var CLSTAMP = "8160052";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4495,9 +4495,9 @@ var CLSTAMP = "8156498";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 27 2023 : 16:07:50",
-                BUILD_TIME_UTC: "Jun 27 2023 : 23:07:50",
-                BUILD_RTIME_UTC: 1687907270,
+                BUILD_TIME_LOCAL: "Jun 28 2023 : 18:04:38",
+                BUILD_TIME_UTC: "Jun 29 2023 : 01:04:38",
+                BUILD_RTIME_UTC: 1688000678,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -41856,33 +41856,33 @@ var CLSTAMP = "8156498";
         function d(e, t, r, n, a, l, s) {
           let c, u;
           const d = e.props.closeModal,
-            h = () => {
+            m = () => {
               u && u.Close(),
                 d && d(),
                 (null == n ? void 0 : n.fnOnClose) && n.fnOnClose();
             },
-            p = () => {
-              c && c.Close(), h();
+            h = () => {
+              c && c.Close(), m();
             },
-            g = i.cloneElement(e, { closeModal: p });
+            p = i.cloneElement(e, { closeModal: h });
           if (C((s = s || (0, o.GetModalManager)(t)), t) && n && r) {
-            if (n.bHideMainWindowForPopouts && !m(s)) {
+            if (n.bHideMainWindowForPopouts) {
               const e = i.createElement(
                 o.ModalPosition,
                 {
                   className: "Hidden",
-                  onEscKeypress: !g.props.bDisableBackgroundDismiss && p,
+                  onEscKeypress: !p.props.bDisableBackgroundDismiss && h,
                 },
                 i.createElement("div", null)
               );
               u = s.ShowModal(e);
             }
             const e = Object.assign(Object.assign({}, n), {
-              fnOnClose: h,
+              fnOnClose: m,
               browserContext: a,
             });
-            c = s.ShowLegacyPopupModal(r, g, e, l);
-          } else c = s.ShowModal(g);
+            c = s.ShowLegacyPopupModal(r, p, e, l);
+          } else c = s.ShowModal(p);
           return c;
         }
         function C(e, t) {
@@ -54342,9 +54342,9 @@ var CLSTAMP = "8156498";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 27 2023 : 16:07:50",
-                    BUILD_TIME_UTC: "Jun 27 2023 : 23:07:50",
-                    BUILD_RTIME_UTC: 1687907270,
+                    BUILD_TIME_LOCAL: "Jun 28 2023 : 18:04:38",
+                    BUILD_TIME_UTC: "Jun 29 2023 : 01:04:38",
+                    BUILD_RTIME_UTC: 1688000678,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54864,7 +54864,7 @@ var CLSTAMP = "8156498";
       {
         27: "b706157360c0d512694c",
         33: "80be52ce827324b50a40",
-        58: "63db8166b0a5b6948c75",
+        58: "6eb2c27064ecdb3efcd9",
         131: "a20004cabe570df19a56",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -54937,7 +54937,7 @@ var CLSTAMP = "8156498";
         5513: "ec0071187919eb9c037e",
         5547: "4a099cabe4e49f89668c",
         5590: "29a2fd485d240d20731a",
-        5742: "b3bdbc53c5758960d69e",
+        5742: "4499e39b1aca9429415d",
         5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
@@ -54961,7 +54961,7 @@ var CLSTAMP = "8156498";
         7781: "7e2822a033213ca15cd6",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "fe18af74856576624556",
+        7962: "3014eb508b5f97132bb3",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "e820a5f472482fc395d7",
@@ -54971,7 +54971,7 @@ var CLSTAMP = "8156498";
         8282: "ec2edab8f124dbc2ad95",
         8319: "9fb8f9b16b057f4c7abb",
         8433: "da1f94773540857e0a43",
-        8467: "eac01073ad0bd93ea71f",
+        8467: "8049ada0a6ce7d6fe3ad",
         8490: "a6f9565ec428a556c271",
         8553: "d8e6576615824304daa8",
         8778: "da128522d92a2d424eb7",

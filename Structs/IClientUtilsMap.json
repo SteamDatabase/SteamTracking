@@ -142,6 +142,10 @@
             "argc": "1"
         },
         {
+            "name": "SetDisableOverlayScaling",
+            "argc": "2"
+        },
+        {
             "name": "ShutdownLauncher",
             "argc": "3"
         },

@@ -5669,6 +5669,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   flex: 0 1 60%;
   display: flex;
   min-height: 0;
+  cursor: pointer;
 }
 .screenshotmanagerdialog_FocusedScreenshotContainer_9C3IQ
   .screenshotmanagerdialog_FocusedScreenshotImageContainer_287ZG

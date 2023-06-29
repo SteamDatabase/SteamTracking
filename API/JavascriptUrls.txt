@@ -1719,6 +1719,7 @@ ${thumb_url}${}
 ${url}
 ${url}${g_strActiveURL}
 ${url}${location}
+${url}${m_URL}
 ${url}${question ? "?" : "&"}${uri}
 ${url}${url}
 ${url}${}

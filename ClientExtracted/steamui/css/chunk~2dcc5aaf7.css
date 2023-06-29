@@ -62835,7 +62835,7 @@ button.keyboardsettings_ShowKeyboardButton_3vbFn svg {
   line-height: 18px;
   color: #8b929a;
   font-weight: 300;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 .notificationssettings_ToggleHeader_33Q-M.notificationssettings_ToggleHeader_33Q-M {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -62855,6 +62855,16 @@ button.keyboardsettings_ShowKeyboardButton_3vbFn svg {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   padding-bottom: 0px;
+}
+.notificationssettings_ToggleHeader_33Q-M.notificationssettings_ToggleHeader_33Q-M
+  .notificationssettings_Toggles_27r3C {
+  gap: 0px;
+}
+.notificationssettings_ToggleHeader_33Q-M.notificationssettings_ToggleHeader_33Q-M
+  .notificationssettings_Toggles_27r3C
+  .notificationssettings_Sound_3bHXG {
+  width: 118px;
+  text-align: right;
 }
 .notificationssettings_NotificationGroup_2KFeE {
   border-bottom: 1px solid #23262e;
