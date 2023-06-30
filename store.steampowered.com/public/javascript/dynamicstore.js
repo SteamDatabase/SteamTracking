@@ -83,6 +83,7 @@ GDynamicStore = {
 
 	s_rgDisplayedApps: [],
 	s_rgDisplayedBundles: [],
+	s_rgDisplayedPackages: [],
 
 	s_bUserOnMacOS: false,
 	s_bUserOnLinux: false,
@@ -502,10 +503,13 @@ GDynamicStore = {
 				if ( rgAppData && rgAppData.demo_for_app )
 					GDynamicStore.s_rgDisplayedApps.push( rgAppData.demo_for_app );
 			}
-
-			if ( item.bundleid )
+			else if ( item.bundleid )
 			{
 				GDynamicStore.s_rgDisplayedBundles.push( item.bundleid );
+			}
+			else if ( item.packageid )
+			{
+				GDynamicStore.s_rgDisplayedPackages.push( item.packageid );
 			}
 
 			if ( cItemsToMark !== undefined && --cItemsToMark == 0 )
@@ -2121,6 +2125,9 @@ GStoreItemData = {
 			return false;
 
 		if ( GDynamicStore.BIsPackageIgnored( packageid ) )
+			return false;
+
+		if ( bStrict && ApplicableSettings.displayed_elsewhere && !Settings.displayed_elsewhere && GDynamicStore.s_rgDisplayedPackages.indexOf( packageid ) !== -1 )
 			return false;
 
 		return true;

@@ -1050,8 +1050,9 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 
 .game_purchase_discount_countdown_pricehistorygrid {
 	display: flex;
+    flex-direction: column-reverse;
 	justify-content: start;
-    margin-top: 8px;
+    margin-top: 1px;
 }
 
 .game_purchase_price_history {
@@ -1059,6 +1060,10 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
     margin-right: 6px;
     border-radius: 6px;
     overflow: hidden;
+}
+
+.game_purchase_discount_countdown {
+    margin-bottom: 0px;
 }
 
 .game_purchase_price_history tr span {

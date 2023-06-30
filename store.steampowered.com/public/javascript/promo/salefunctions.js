@@ -177,23 +177,32 @@ function fnRenderHeroCapsule( oItem )
 	let rgItemData = null;
 	let purchaseAction = null;
 	let itemID = null;
+	let url = null
 	if ( oItem.appid )
 	{
 		rgItemData = GStoreItemData.rgAppData[ oItem.appid ];
 		purchaseAction = 'addToCart( %subid% )'.replace( '%subid%', rgItemData.pricing_subid );
 		itemID = oItem.appid;
+		url = GStoreItemData.GetAppURL( itemID, 'sale_hero' );
 	}
 	else if ( oItem.bundleid )
 	{
 		rgItemData = GStoreItemData.rgBundleData[ oItem.bundleid ];
 		purchaseAction = 'addBundleToCart( %bundleid% )'.replace( '%bundleid%', oItem.bundleid );
 		itemID = oItem.bundleid;
+		url = GStoreItemData.GetBundleURL(  itemID, 'sale_hero' );
+	}
+	else if ( oItem.packageid )
+	{
+		rgItemData = GStoreItemData.rgPackageData[ oItem.packageid ];
+		purchaseAction = 'addToCart( %subid% )'.replace( '%subid%', oItem.packageid );
+		itemID = oItem.packageid;
+		url = GStoreItemData.GetPackageURL(  itemID, 'sale_hero' );
 	}
 
 	if ( !rgItemData )
 		return;
 
-	var url = GStoreItemData.GetAppURL( oItem.appid, 'sale_hero' );
 	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
 	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': oItem.appid, 'style': 'max-height: 450px', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
