@@ -5777,17 +5777,6 @@ html.responsive.touch .ContentHubSalePage {
     margin-top: 41vw !important;
     padding: 0px 10px;
   }
-  .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3FwA4 {
-    margin-top: 2vw !important;
-  }
-}
-html.tablet .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3FwA4 {
-  margin-top: 58px !important;
-}
-@media screen and (max-width: 910px) {
-  .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3FwA4 {
-    margin-top: 58px !important;
-  }
 }
 .partnersaledisplay_SaleBackground_dmyDb {
   background-position: center top;

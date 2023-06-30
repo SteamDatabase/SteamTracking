@@ -12567,9 +12567,10 @@
                       Boolean(A) &&
                         a.createElement(
                           "div",
-                          { className: An.noreserve },
-                          A,
-                          " "
+                          {
+                            className: (0, I.Z)(An.noreserve, "NoReserverMsg"),
+                          },
+                          A
                         )
                     ),
                 Boolean(G) &&
@@ -12596,7 +12597,7 @@
           yn.F.k_EPurchaseReservationState_CancelPendingRefund
           ? a.createElement(
               "div",
-              { className: An.noreserve },
+              { className: (0, I.Z)(An.noreserve, "NoReserverMsg") },
               (0, N.Xx)("#Sale_Reservation_CanceledPendingRefund")
             )
           : a.createElement(
@@ -22599,15 +22600,17 @@
         return C(n, i, o)
           ? a.createElement(L, { oReservationInfo: n, disabled: o })
           : (null == n ? void 0 : n.bOutOfStock)
-          ? a.createElement(
-              "div",
-              { className: (0, _.Z)(y.reserverow, "ReservationUnavailable") },
-              a.createElement(
-                c.zx,
-                { className: y.reservebutton, disabled: !0 },
-                (0, v.Xx)("#Sale_ReserveExhausted")
+          ? i.bKomodoReservation
+            ? null
+            : a.createElement(
+                "div",
+                { className: (0, _.Z)(y.reserverow, "ReservationUnavailable") },
+                a.createElement(
+                  c.zx,
+                  { className: y.reservebutton, disabled: !0 },
+                  (0, v.Xx)("#Sale_ReserveExhausted")
+                )
               )
-            )
           : a.createElement(P, {
               reservationDef: t,
               myReserveState: i,
