@@ -2621,7 +2621,7 @@
     "Notification_GiftReceived_Body_Short": "Obdrželi jste dárek od uživatele %1$s",
     "Notification_GiftReceived_Description": "Od uživatele %1$s",
     "NotificationsList_EmptyTitle": "Momentálně nemáte žádná upozornění.",
-    "NotificationsList_EmptyTitle_New": "Momentálně nemáte žádná nová upozornění.",
+    "NotificationsList_EmptyTitle_New": "Nemáte žádná nová upozornění.",
     "NotificationsList_EmptyBody": "Zde uvidíte upozornění služby Steam týkající se Vašeho seznamu přání, přátel, her, inventáře a všeho dalšího.",
     "SDRPOPID_GenericCode": "Datové centrum „%1$s“"
 }

@@ -374,6 +374,10 @@
             "argc": "1"
         },
         {
+            "name": "GetUserContentDescriptorPreferences",
+            "argc": "3"
+        },
+        {
             "name": "GetNumDownloadedItems",
             "argc": "2"
         },

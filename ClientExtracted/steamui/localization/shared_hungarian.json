@@ -2245,7 +2245,7 @@
     "SteamDeckVerified_TestResult_CrossPlatformCloudSavesNotSupported": "E játék nem támogatja a platformok közti játékmentéseket.",
     "SteamDeckVerified_TestResult_ExternalControllersNotSupportedPrimaryPlayer": "E játék nem használ alapértelmezetten külső Bluetoothos, illetve USB-s játékvezérlőket a Decken, és az aktív játékvezérlő manuális átváltását igényelheti a Gyorselérés menüben.",
     "SteamDeckVerified_TestResult_ExternalControllersNotSupportedLocalMultiplayer": "E játék nem támogat külső Bluetoothos, illetve USB-s játékvezérlőket a Decken helyi többjátékos módhoz.",
-    "SteamDeckVerified_TestResult_SimultaneousInputGyroTrackpadFriendly": "E játék támogatja a giro-, illetve a trackpad egér módban való használatát a kamera vezérléséhez, a mozgás gamepades irányításával.",
+    "SteamDeckVerified_TestResult_SimultaneousInputGyroTrackpadFriendly": "E játék támogatja a giro-, illetve a trackpad egér módban való használatát a kamera vezérléséhez, a mozgás játékvezérlős irányításával.",
     "SteamDeckVerified_DescriptionHeader": "A Valve tesztje azt jelzi, hogy ez a játék %1$s a Steam Decken. %2$s",
     "SteamDeckVerified_DescriptionHeader_WithAppName": "A Valve tesztje azt jelzi, hogy a(z) %1$s %2$s a Steam Decken. %3$s",
     "SteamDeckVerified_DescriptionHeader_Verified": "Ez a játék teljesen működőképes a Steam Decken, és remekül működik a beépített kezelőszervekkel és kijelzővel.",

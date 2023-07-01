@@ -4930,6 +4930,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .steamdesktopoverlay_ResizeGrip_3eAwo.steamdesktopoverlay_PinnedView_2OoAj {
   visibility: hidden;
 }
+.steamdesktopoverlay_TimeRow_Snc8n {
+  display: flex;
+  flex-direction: row;
+}
+.steamdesktopoverlay_BatteryIcon_2JXN- {
+  zoom: 1.5;
+  margin-top: -2.5px;
+}
 .shutdowndialog_ShutdownDialog_3StXN .shutdowndialog_Body_2Se5J {
   align-items: center;
 }
@@ -8193,6 +8201,10 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .desktopbrowser_EditBookmarkDialog_ckvJI {
   min-width: 50vw;
   max-width: 90vw;
+}
+.desktopbrowser_ParentalPINDialogWrapper_SECEx {
+  flex: 1;
+  overflow: hidden;
 }
 .browserviewfindinpage_FindBar_1xLWm {
   background-color: #0e141b;

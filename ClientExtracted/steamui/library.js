@@ -1,4 +1,4 @@
-var CLSTAMP = "8160052";
+var CLSTAMP = "8166564";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -33,6 +33,7 @@ var CLSTAMP = "8160052";
           NoSpace: "hoverposition_NoSpace_2NTbb",
           EnablePointerEvents: "hoverposition_EnablePointerEvents_2MP9n",
           HoverAboveModal: "hoverposition_HoverAboveModal_1SHX2",
+          HoverPositionOuter: "hoverposition_HoverPositionOuter_EUN4G",
         };
       },
       16156: (e) => {
@@ -3615,6 +3616,15 @@ var CLSTAMP = "8160052";
           Hide() {
             this.InternalHide();
           }
+          SetPosition(e, t, r) {
+            (this.m_options = Object.assign(
+              Object.assign({}, this.m_options),
+              r
+            )),
+              (this.m_position.clientX = e),
+              (this.m_position.clientY = t),
+              (this.m_position.options = this.m_options);
+          }
           ForceHide() {
             this.InternalHide();
           }
@@ -4495,9 +4505,9 @@ var CLSTAMP = "8160052";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 28 2023 : 18:04:38",
-                BUILD_TIME_UTC: "Jun 29 2023 : 01:04:38",
-                BUILD_RTIME_UTC: 1688000678,
+                BUILD_TIME_LOCAL: "Jun 30 2023 : 16:51:01",
+                BUILD_TIME_UTC: "Jun 30 2023 : 23:51:01",
+                BUILD_RTIME_UTC: 1688169061,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -9976,18 +9986,21 @@ var CLSTAMP = "8160052";
               v = !r || r.visible;
             return i.createElement(
               "div",
-              Object.assign({}, _, {
-                className: (0, s.default)(
-                  o,
-                  u().HoverPosition,
-                  v && this.state.hoverPositionReady && u().Ready,
-                  this.m_bNoSpace && u().NoSpace,
-                  l && u().EnablePointerEvents
-                ),
-                style: w,
-                ref: this.bindHover,
-              }),
-              p
+              { className: (0, s.default)(u().HoverPositionOuter, o) },
+              i.createElement(
+                "div",
+                Object.assign({}, _, {
+                  className: (0, s.default)(
+                    u().HoverPosition,
+                    v && this.state.hoverPositionReady && u().Ready,
+                    this.m_bNoSpace && u().NoSpace,
+                    l && u().EnablePointerEvents
+                  ),
+                  style: w,
+                  ref: this.bindHover,
+                }),
+                p
+              )
             );
           }
           positionHover() {
@@ -21511,8 +21524,8 @@ var CLSTAMP = "8160052";
                 menuHeight: void 0,
                 menuMinWidth: void 0,
               },
-              g = a || m.left,
-              f = a || m.right,
+              g = null != a ? a : m.left,
+              f = null != a ? a : m.right,
               _ = h.width;
             t.bMatchWidth && ((_ = f - g), (p.menuWidth = _)),
               t.bGrowToElementWidth && (p.menuMinWidth = Math.max(_, f - g));
@@ -21528,8 +21541,8 @@ var CLSTAMP = "8160052";
               L
                 ? (p.menuRight = u - (t.bOverlapHorizontal ? f : g))
                 : (p.menuLeft = t.bOverlapHorizontal ? g : f);
-            let y = l || m.top,
-              S = l || m.bottom,
+            let y = null != l ? l : m.top,
+              S = null != l ? l : m.bottom,
               B = r.scrollHeight;
             t.bMatchHeight && ((B = S - y), (p.menuHeight = B));
             let k = (t.bOverlapVertical ? S : y) - c - B,
@@ -22098,7 +22111,7 @@ var CLSTAMP = "8160052";
                 if (t.visible) {
                   d.current && d.current.PositionMenu(),
                     d.current && d.current.PositionPopupWindow();
-                  let e = t.options.bRetainOnHide
+                  let e = t.options.bNoFocusWhenShown
                     ? o.EWindowBringToFront
                         .k_EWindowBringToFrontWithoutForcingOS
                     : o.EWindowBringToFront.k_EWindowBringToFrontAndForceOS;
@@ -54342,9 +54355,9 @@ var CLSTAMP = "8160052";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 28 2023 : 18:04:38",
-                    BUILD_TIME_UTC: "Jun 29 2023 : 01:04:38",
-                    BUILD_RTIME_UTC: 1688000678,
+                    BUILD_TIME_LOCAL: "Jun 30 2023 : 16:51:01",
+                    BUILD_TIME_UTC: "Jun 30 2023 : 23:51:01",
+                    BUILD_RTIME_UTC: 1688169061,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54863,9 +54876,9 @@ var CLSTAMP = "8160052";
       ".js?contenthash=" +
       {
         27: "b706157360c0d512694c",
-        33: "80be52ce827324b50a40",
-        58: "6eb2c27064ecdb3efcd9",
-        131: "a20004cabe570df19a56",
+        33: "b33c4a548a9c2e080e44",
+        58: "c92095ebd89d2da63fe8",
+        131: "8e180b521e6c12d49a3a",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
         224: "9f8948d140fdee081d66",
@@ -54873,46 +54886,46 @@ var CLSTAMP = "8160052";
         503: "e856133fa7839545df40",
         578: "c902d35ea381395e6614",
         662: "5f6dc6c5ecd945872053",
-        740: "c91b8245f961fa464a2f",
+        740: "20f63bd1f32d713aa93a",
         755: "617ce49ed66649a8b33a",
         932: "f282bbf7aafe65529b01",
-        1079: "317fe2b0613caff26cf4",
+        1079: "41d67e9a5d890524f26c",
         1102: "9df49d25731ef645f2f9",
-        1160: "38b349d5309290ffadf4",
+        1160: "c3cf7399af1cec378b8c",
         1261: "363f119f90fdaa0fbc96",
-        1365: "b43bbe6d8a87aac8aeb2",
+        1365: "8e9cd19386c8bc04db66",
         1399: "93ea8269d88395c7feea",
         1493: "7a678c98bc1ce17428b4",
-        1573: "b735e2957f77feb5d5e9",
-        1579: "c0bfb524ed72f6682a3d",
-        1617: "f5371eafb44fd3df7e76",
+        1573: "343544df03d034164e63",
+        1579: "34aa478c6b53b37892dd",
+        1617: "5eb664f65f8c8990182b",
         1686: "e1d3d3c79b693d46e4ef",
-        1926: "9d689d7bc6332255f636",
+        1926: "0e0d5e7d141b7671234e",
         1953: "030e4557d6742a5cfedf",
-        2028: "63f789e4a949832acdc4",
-        2029: "096586ab3747676f25bf",
+        2028: "1146898be0e8562c6885",
+        2029: "8d175ace2047c12e8378",
         2055: "94b343239aa17cd5ac02",
         2138: "4d5e676479f269c55fd8",
-        2307: "4d221eb06c76ce68516c",
+        2307: "4940d50462055e1c2d14",
         2387: "4023428528fa228ebdd2",
-        2450: "0b71c1271e72fe667ea7",
-        2499: "4eaae8585f48c1b78f4f",
+        2450: "719eedabc4b7a4ad72e2",
+        2499: "f34ffc1b13e2ada30e54",
         2543: "0362c2f7aa2d469fffa5",
-        2822: "a003bb370b426451af41",
-        2847: "6002a18569502d7ee5eb",
+        2822: "885d74dc5f3638538b92",
+        2847: "b636e89f95dfbf183322",
         2915: "996a761e80b49ac53aea",
         3015: "510d5c15ead77069f782",
         3061: "28aa9b35545e2427b6da",
         3093: "a4dced6ab76b8ce9db92",
         3225: "af9782eb3010fd0cbc16",
         3298: "9d29674aa9debd34979f",
-        3357: "041ef29b14dc42a8519a",
+        3357: "79d3dd0855e546245680",
         3403: "a87a0fd820563d54ca6b",
         3468: "ed4dab4c8b73331c8fc7",
         3530: "2a187555daab0a3ce8e3",
         3602: "fe15200882f72e995e00",
         3858: "6d2ad781814ce26cb7b8",
-        4061: "8c769b8fcbfff806df05",
+        4061: "e7269527efb26b7d7ced",
         4097: "311b54aed0ba2a82fb2e",
         4183: "8590acea60dfc9ddc0d9",
         4325: "bc1019bbb5890aab2337",
@@ -54922,9 +54935,9 @@ var CLSTAMP = "8160052";
         4386: "a371cf5fef13d02a73f9",
         4401: "dc9bb5c89c46b954c72c",
         4445: "4400dba68cdd4395ce69",
-        4469: "9f35d9b93d4452987816",
+        4469: "b831e8c998ea1598b8b3",
         4487: "e34f7732e493c27b4dff",
-        4513: "2e6af4d688f342afe194",
+        4513: "ef55837550292f54f8e9",
         4535: "9ba89b326b8219a1c936",
         4601: "2a91e0d23548013905c0",
         4725: "37bad80c360e85b47086",
@@ -54932,61 +54945,61 @@ var CLSTAMP = "8160052";
         5065: "276fc60a608acbd73afd",
         5175: "5e74fb4ec227cff583d4",
         5225: "7cc47a53e2d2d096479e",
-        5279: "c377c677fec73aba12f6",
+        5279: "8821b6654d004e8f4214",
         5505: "f694f26290ae266333cc",
         5513: "ec0071187919eb9c037e",
         5547: "4a099cabe4e49f89668c",
-        5590: "29a2fd485d240d20731a",
-        5742: "4499e39b1aca9429415d",
+        5590: "775c3d01215b14fe1878",
+        5742: "c923dcb304203c499430",
         5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
         6006: "daa3ee8e6fac8a06111a",
         6109: "9d6d01a06d58a9c3f35e",
         6112: "e8cd52eaf9ea6333dfd5",
-        6255: "4b048d49bb994a610793",
-        6403: "7b9ecffc883c340d50ce",
+        6255: "17e346f7fbf88ef2ec43",
+        6403: "f367074507f9ca1cae56",
         6678: "3838c20d12de4043cdb1",
         6703: "c1cf96faa61ac7e5a39f",
-        6844: "3c178944f78f436ed4c6",
-        6877: "8362674bb05a11ffade0",
-        6964: "b3fb293f064c977dfdf2",
+        6844: "34c3a3dbd1bd85a47878",
+        6877: "ac850efbbfbb2ef1226b",
+        6964: "fadaa11a81faa3cdb0b8",
         6973: "836a98750bf96902a6d1",
         7036: "195722967ecb005c6299",
         7235: "d15b14e92e06a9f1155f",
         7541: "712934ad3a4723eb8c73",
-        7656: "6726c3d1c7e35af4498a",
-        7660: "a10f47ea6390f90adfaf",
+        7656: "1f785bd0f0c17e008f57",
+        7660: "3deb6013f299572f33c4",
         7725: "0a6429844e89cc14c4c0",
         7781: "7e2822a033213ca15cd6",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "3014eb508b5f97132bb3",
+        7962: "d0904e9769a2c7c4bf19",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
-        8085: "e820a5f472482fc395d7",
-        8232: "a46278ea3e0e4178a60c",
+        8085: "26d97a8502980c49838e",
+        8232: "3473f7299cd38353b37f",
         8238: "171e23d01197780453de",
         8240: "fe99f8233189ad2c1c4d",
         8282: "ec2edab8f124dbc2ad95",
-        8319: "9fb8f9b16b057f4c7abb",
+        8319: "708fb40b322f191d3285",
         8433: "da1f94773540857e0a43",
         8467: "8049ada0a6ce7d6fe3ad",
         8490: "a6f9565ec428a556c271",
         8553: "d8e6576615824304daa8",
-        8778: "da128522d92a2d424eb7",
-        8956: "93c5aabdc2ab8b1229d1",
+        8778: "a288cf862e76d336a904",
+        8956: "851b0ce4637c70d17f31",
         9125: "6dda54697421891ea10b",
         9365: "28d83d50cbc622d62f8f",
         9399: "686e599aa6750d58e976",
         9520: "2eee41872648a9ed7a62",
         9547: "8ef709103e957cffdbe3",
-        9548: "658bb74fe652fff174c1",
-        9722: "6f1c217903c80ff6c340",
-        9746: "2188a05f03f6a4296bb7",
+        9548: "3410b6451009fe48fdb4",
+        9722: "2de907d9ed3e6be1fe1c",
+        9746: "80fe1ae7a3dca8e8fdc2",
         9854: "a3d2e32f84328c1cef0a",
         9925: "c346de4224501a2b6884",
-        9951: "eb091fbccaaeaf6608ba",
+        9951: "866ab132d0f233e0f581",
       }[e])),
     (l.miniCssF = (e) =>
       "css\\" +

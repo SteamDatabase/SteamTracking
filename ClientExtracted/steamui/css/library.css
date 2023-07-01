@@ -2590,7 +2590,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   margin-bottom: 2px;
 }
 .hoverposition_HoverPosition_3XUAN {
-  position: fixed;
+  position: absolute;
   z-index: 100;
   opacity: 0;
   transition: opacity 0.25s;
@@ -2607,6 +2607,15 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .hoverposition_HoverAboveModal_1SHX2 {
   z-index: 2000;
+}
+.hoverposition_HoverPositionOuter_EUN4G {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 100;
 }
 .tooltip_TextToolTip_29b2a {
   box-sizing: border-box;
