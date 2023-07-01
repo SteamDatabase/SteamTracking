@@ -9148,18 +9148,40 @@
               });
         }
         GetMatchCountForFacetValue(e) {
-          var t, n, a, i, s, o, r, l, c, d, u, m, p, _, g, v, h, S, f, E, b, y;
+          var t,
+            n,
+            a,
+            i,
+            s,
+            o,
+            r,
+            l,
+            c,
+            d,
+            u,
+            m,
+            p,
+            _,
+            g,
+            v,
+            h,
+            S,
+            f,
+            E,
+            b,
+            y,
+            C;
           if (this.m_mapMultiFacetCounts) {
-            const y = "402",
-              C = "401",
-              D = "9",
-              I = "28",
-              w = "18",
-              G = "41",
-              k = "42",
-              A = "43",
-              L = "44",
-              B = "37";
+            const C = "402",
+              D = "401",
+              I = "9",
+              w = "28",
+              G = "18",
+              k = "41",
+              A = "42",
+              L = "43",
+              B = "44",
+              T = "37";
             switch (e.facetValue.type) {
               case de.HL.k_ESaleTagFilter:
               case void 0:
@@ -9180,57 +9202,58 @@
                     : a.type) === de.PJ.k_EStoreFilterClauseTypeFeatureTag
                 )
                   switch (e.facetValue.rgStoreTagFilter.value) {
-                    case "linux":
+                    case "windows":
                       return null ===
-                        (i =
-                          this.m_mapMultiFacetCounts.get("platform_linux")) ||
+                        (i = this.m_mapMultiFacetCounts.get("platform_win")) ||
                         void 0 === i
                         ? void 0
                         : i.get("true");
-                    case "mac":
+                    case "linux":
                       return null ===
-                        (s = this.m_mapMultiFacetCounts.get("platform_mac")) ||
+                        (s =
+                          this.m_mapMultiFacetCounts.get("platform_linux")) ||
                         void 0 === s
                         ? void 0
                         : s.get("true");
-                    case "vr":
+                    case "mac":
                       return null ===
-                        (o = this.m_mapMultiFacetCounts.get("vrsupport")) ||
+                        (o = this.m_mapMultiFacetCounts.get("platform_mac")) ||
                         void 0 === o
                         ? void 0
-                        : o.get(y);
-                    case "vr only":
+                        : o.get("true");
+                    case "vr":
                       return null ===
                         (r = this.m_mapMultiFacetCounts.get("vrsupport")) ||
                         void 0 === r
                         ? void 0
                         : r.get(C);
-                    case "full controller":
+                    case "vr only":
                       return null ===
-                        (l = this.m_mapMultiFacetCounts.get("category")) ||
+                        (l = this.m_mapMultiFacetCounts.get("vrsupport")) ||
                         void 0 === l
                         ? void 0
-                        : l.get(I);
+                        : l.get(D);
+                    case "full controller":
+                      return null ===
+                        (c = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === c
+                        ? void 0
+                        : c.get(w);
                     case "any controller":
                       return (
-                        (null ===
-                          (c = this.m_mapMultiFacetCounts.get("category")) ||
-                        void 0 === c
-                          ? void 0
-                          : c.get(I)) ||
                         (null ===
                           (d = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === d
                           ? void 0
-                          : d.get(w))
+                          : d.get(w)) ||
+                        (null ===
+                          (u = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === u
+                          ? void 0
+                          : u.get(G))
                       );
                     case "remote play":
                       return Math.max(
-                        null ===
-                          (u = this.m_mapMultiFacetCounts.get("category")) ||
-                          void 0 === u
-                          ? void 0
-                          : u.get(G),
                         null ===
                           (m = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === m
@@ -9245,57 +9268,62 @@
                           (_ = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === _
                           ? void 0
-                          : _.get(L)
+                          : _.get(L),
+                        null ===
+                          (g = this.m_mapMultiFacetCounts.get("category")) ||
+                          void 0 === g
+                          ? void 0
+                          : g.get(B)
                       );
                     case "remote play together":
                       return null ===
-                        (g = this.m_mapMultiFacetCounts.get("category")) ||
-                        void 0 === g
-                        ? void 0
-                        : g.get(L);
-                    case "free":
-                      return null ===
-                        (v = this.m_mapMultiFacetCounts.get("genre")) ||
+                        (v = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === v
                         ? void 0
                         : v.get(B);
-                    case "discounted":
+                    case "free":
                       return null ===
-                        (h = this.m_mapMultiFacetCounts.get("discounted")) ||
+                        (h = this.m_mapMultiFacetCounts.get("genre")) ||
                         void 0 === h
                         ? void 0
-                        : h.get("true");
-                    case "coop":
+                        : h.get(T);
+                    case "discounted":
                       return null ===
-                        (S = this.m_mapMultiFacetCounts.get("category")) ||
+                        (S = this.m_mapMultiFacetCounts.get("discounted")) ||
                         void 0 === S
                         ? void 0
-                        : S.get(D);
+                        : S.get("true");
+                    case "coop":
+                      return null ===
+                        (f = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === f
+                        ? void 0
+                        : f.get(I);
                   }
                 break;
               case de.HL.k_EAppType:
-                return null === (f = this.m_mapMultiFacetCounts.get("type")) ||
-                  void 0 === f
-                  ? void 0
-                  : f.get(e.facetValue.appType);
-              case de.HL.k_ELanguage:
-                const T = (0, le.j_)(e.facetValue.language);
-                return null ===
-                  (E = this.m_mapMultiFacetCounts.get("supportedlang_" + T)) ||
+                return null === (E = this.m_mapMultiFacetCounts.get("type")) ||
                   void 0 === E
                   ? void 0
-                  : E.get("true");
-              case de.HL.k_EContentDescriptor:
+                  : E.get(e.facetValue.appType);
+              case de.HL.k_ELanguage:
+                const N = (0, le.j_)(e.facetValue.language);
                 return null ===
-                  (b = this.m_mapMultiFacetCounts.get("descids")) ||
+                  (b = this.m_mapMultiFacetCounts.get("supportedlang_" + N)) ||
                   void 0 === b
                   ? void 0
-                  : b.get(e.facetValue.contentDescriptor.toString());
+                  : b.get("true");
+              case de.HL.k_EContentDescriptor:
+                return null ===
+                  (y = this.m_mapMultiFacetCounts.get("descids")) ||
+                  void 0 === y
+                  ? void 0
+                  : y.get(e.facetValue.contentDescriptor.toString());
             }
           } else if (this.m_facetCounts)
-            return null === (y = this.m_facetCounts) || void 0 === y
+            return null === (C = this.m_facetCounts) || void 0 === C
               ? void 0
-              : y.get(e.facetValue.nAtomicStoreTagID);
+              : C.get(e.facetValue.nAtomicStoreTagID);
           return null;
         }
         DeactivateFacetValues() {
