@@ -342,7 +342,24 @@ function InitProfileSummary( strSummary )
 	{
 		var $ModalSummary = $J('<div/>', {'class': 'profile_summary_modal'}).html( strSummary );
 		$SummaryFooter.find( 'span' ).click( function() {
-			var Modal = ShowDialog( 'Info', $ModalSummary );
+			var Modal = null;
+			if ( g_bViewingOwnProfile )
+			{
+				$ModalSummary.addClass( 'viewing_own_profile' );
+
+				var desc = $J( '<div/>', { 'class': 'profile_summary_modal_desc', 'html': 'The text in the box below is information you asked to be displayed on your profile.<br><br>Steam Support will never attempt to communicate with you through this feature. If you did not enter this text, your account may have been compromised. Please visit <a href="https://help.steampowered.com//faqs/view/0A94-F308-34A5-1988">this support FAQ</a> to learn more about how to recover your account.' } );
+				var container = $J( '<div/>' );
+				container.append( desc );
+				container.append( $ModalSummary );
+				Modal = ShowConfirmDialog( 'Your Profile Summary Text', container, 'Edit This Text' );
+				Modal.done( function() {
+					window.location.href = 'https://steamcommunity.com/my/edit/info/';
+				});
+			}
+			else
+			{
+				Modal = ShowDialog( 'Info', $ModalSummary );
+			}
 			window.setTimeout( function() { Modal.AdjustSizing(); }, 1 );
 		} );
 	}

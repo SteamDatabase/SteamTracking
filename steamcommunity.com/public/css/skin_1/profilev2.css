@@ -889,6 +889,15 @@ body.profile_page.flat_page #footer_spacer {
 	line-height: 18px;
 }
 
+.profile_summary_modal_desc {
+	padding-bottom: 20px;
+}
+.profile_summary_modal.viewing_own_profile {
+	padding: 10px;
+	border: 1px solid #ffffff;
+	font-style: italic;
+}
+
 .profile_summary img.emoticon, .profile_summary_modal img.emoticon {
 	vertical-align: text-bottom;
 }
