@@ -2580,6 +2580,7 @@ https://steamcommunity.com/moderation/ajaxresetcontent
 https://steamcommunity.com/moderation/ajaxupdateclanannouncementtextcontentcheckresult/
 https://steamcommunity.com/moderation/ajaxupdateprofileshowcasecontentcheckresult/
 https://steamcommunity.com/moderation/ajaxupdateprofiletextcontentcheckresult/
+https://steamcommunity.com/my/edit/info/
 https://steamcommunity.com/my/inventory
 https://steamcommunity.com/my/inventory/
 https://steamcommunity.com/my/inventory/#${appid}_${contextid}_${assetid}

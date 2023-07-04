@@ -6677,7 +6677,6 @@ iframe.youtubeembed_PreviewYouTubeVideo_2ydks.youtubeembed_floatRight_1VimJ {
   margin-bottom: 4px;
 }
 .localdateandtime_DateToolTip_3zhja {
-  z-index: 2000;
   padding: 3px 8px;
   border-radius: 2px;
   background-color: #5e6068;
@@ -6988,9 +6987,6 @@ a.eventreminder_ReminderOption_RNhWc
   .DialogCheckbox_Container
   .DialogToggle_Label {
   margin-left: 28px;
-}
-.eventreminder_ReminderOptionTooltip_ZL-f2 {
-  z-index: 2000;
 }
 .eventreminder_ReminderCheckBox_2bkmL {
   width: fit-content;
@@ -37635,9 +37631,6 @@ div.NarrowRightPanel
 .writereview_VisibilityMenu_2r_L1 {
   flex: 0 1 30%;
 }
-.writereview_FreeDisclaimerTooltip_1UH9v {
-  z-index: 2000;
-}
 @keyframes appdetails_ItemFocusAnim-darkerGrey-nocolor_3vPeH {
   from {
     background: #3d4450;
@@ -67068,8 +67061,7 @@ img {
   bottom: 0;
   left: 0;
   width: 240px;
-  height: calc(100% - var(--basicui-header-height) - 40px);
-  margin-top: 40px;
+  height: 100%;
   background-color: transparent;
 }
 .mainmenu_ViewPlaceholder_1PGlK.mainmenu_Fullscreen_26eRZ {
@@ -67096,7 +67088,9 @@ img {
   width: 0px;
 }
 .mainmenu_Menu_23IDi {
-  height: 100%;
+  height: calc(100% - var(--basicui-header-height) - 40px);
+  margin-top: 40px;
+  margin-bottom: 40px;
   width: 240px;
   flex-shrink: 0;
   display: flex;
@@ -67762,6 +67756,9 @@ img {
   display: flex;
   flex-direction: row;
   min-width: 0;
+  height: calc(100% - var(--basicui-header-height) - 40px);
+  margin-top: 40px;
+  margin-bottom: 40px;
   background-color: rgba(14, 20, 27, 0.8);
 }
 .mainmenuapprunning_ScrollMask_322FV.mainmenuapprunning_HideMask_1009K {
@@ -70271,6 +70268,23 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   flex-grow: 1;
   text-align: right;
 }
+.notificationcontent_DesktopLowBattery_On3PD {
+  background-color: #ffc82c;
+  color: #000;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 0px 8px;
+}
+.notificationcontent_DesktopLowBattery_On3PD.notificationcontent_ReallyLow_2YXlg {
+  background-color: #de3618;
+  color: #fff;
+}
+.notificationcontent_DesktopLowBattery_On3PD .notificationcontent_Text_93B8s {
+  flex-shrink: 0;
+  margin-left: 10px;
+  font-size: 16px;
+}
 .notificationcontent_BatteryTemperature_5IhQT {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -70417,6 +70431,12 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .notificationcontent_TimestampDesktop_1N5mc {
   color: #8b929a;
+}
+.notificationcontent_LowBatterySteamLogo_3dD6f {
+  width: 36px;
+  height: 36px;
+  padding: 2px;
+  transform: translateX(4px);
 }
 @keyframes standardtemplates_ItemFocusAnim-darkerGrey-nocolor_MYSYJ {
   from {

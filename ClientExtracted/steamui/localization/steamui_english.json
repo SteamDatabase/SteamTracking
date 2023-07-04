@@ -6699,6 +6699,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "The game will close in %1$s minutes",
     "Notification_TimedTrial_Enjoy": "Enjoy your trial",
     "Notification_TimedTrial_Offline": "Game trial lost connection",
+    "Notification_BatteryLow": "Device battery low - %1$s%",
     "SteamDock_UnsupportedFirmwareModal_Title": "Docking Station Update Available",
     "SteamDock_UnsupportedFirmwareModal_Description": "There is an important Docking Station firmware update available, please install before proceeding.",
     "SteamDock_UnsupportedFirmwareModal_OK": "Apply",
