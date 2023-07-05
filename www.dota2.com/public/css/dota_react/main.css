@@ -966,7 +966,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
   margin-bottom: 2px;
 }
 .hoverposition_HoverPosition_1tQrX {
-  position: fixed;
+  position: absolute;
   z-index: 100;
   opacity: 0;
   transition: opacity 0.25s;
@@ -983,6 +983,15 @@ html.contextmenu_ContextMenuPopup_152-v body {
 }
 .hoverposition_HoverAboveModal_2znvo {
   z-index: 2000;
+}
+.hoverposition_HoverPositionOuter_3EjMl {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 100;
 }
 .tooltip_TextToolTip_1y-4v {
   box-sizing: border-box;
@@ -3320,7 +3329,6 @@ body.modals_BodyNoScrollDialog_1z8lz {
   margin-bottom: 4px;
 }
 .localdateandtime_DateToolTip_1nzF8 {
-  z-index: 2000;
   padding: 3px 8px;
   border-radius: 2px;
   background-color: #5e6068;
@@ -3655,9 +3663,6 @@ a.eventreminder_ReminderOption_2RU5s
   .DialogCheckbox_Container
   .DialogToggle_Label {
   margin-left: 28px;
-}
-.eventreminder_ReminderOptionTooltip_ccmSx {
-  z-index: 2000;
 }
 .eventreminder_ReminderCheckBox_1CkWt {
   width: fit-content;
@@ -5643,7 +5648,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   justify-content: center;
   align-items: center;
 }
-.segmentedinputs_SegmentedCharacterInput_-x0mI input {
+.segmentedinputs_SegmentedCharacterInput_-x0mI .segmentedinputs_Input_2s4A8 {
   background: none;
   outline: none;
   border: none;
@@ -5657,7 +5662,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   text-align: center;
 }
 @media screen and (max-width: 700px) {
-  .segmentedinputs_SegmentedCharacterInput_-x0mI input {
+  .segmentedinputs_SegmentedCharacterInput_-x0mI .segmentedinputs_Input_2s4A8 {
     width: 20%;
   }
 }

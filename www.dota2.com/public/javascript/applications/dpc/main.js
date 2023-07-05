@@ -2197,7 +2197,7 @@
             (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
             (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
             (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
-            (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
+            (e[(e.SteamChinaReviewLauncher = 9)] = "SteamChinaReviewLauncher");
         })(V || (V = {}));
       var U, H, W;
       !(function (e) {
