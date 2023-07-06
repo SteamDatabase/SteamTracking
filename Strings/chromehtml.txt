@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-Y
-Y
 __stubs
 __TEXT
 __stub_helper
@@ -1099,6 +1097,8 @@ Disable auto-restart of renderer process for existing browsers
 Disable GPU accelerated compositing in browsers
 -cef-use-shell-exec
 Launch CEF process via sub-shell
+-cef-disable-safe-shutdown-workaround
+Force the usage of the safe browser shutdown workaround for Linux+NV
 -store
 -community
 -clientui
@@ -1160,8 +1160,7 @@ WebContentsOcclusion
 --disable-gpu-compositing
 --disable-gpu
 --disable-accelerated-video-decode
---use-gl=desktop
---use-cmd-decoder=passthrough
+--use-safe-shutdown-workaround
 --enable-gpu-debugging
 --disablehighdpi
 --force-device-scale-factor=1
@@ -2383,12 +2382,16 @@ sc_schinese
 
 @
 @
-z
+
+
 
 
 @
 Ic
-t
+S
+:
+$
+/
 
 0
 0
@@ -2405,6 +2408,7 @@ D
 @
 @
 
+
 @
 Hc
 Hc
@@ -2436,6 +2440,7 @@ IcE
 IcE
 @
 @
+`
 V
 =
 =

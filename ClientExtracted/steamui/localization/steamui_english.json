@@ -1980,6 +1980,7 @@
     "Settings_Interface_ShowMarketingMessages": "Notify me about additions or changes to my games, new releases, and upcoming releases",
     "Settings_Interface_TaskbarPreferences": "Taskbar Preferences",
     "Settings_Interface_SetTaskbarPreferences": "Show Taskbar Preferences",
+    "Settings_Interface_EnableContextMenuBlurDelay": "Enable context menu focus compatibility mode",
     "StartPage_Store": "Store",
     "StartPage_Library": "Library",
     "StartPage_News": "News",

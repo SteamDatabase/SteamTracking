@@ -1,4 +1,4 @@
-var CLSTAMP = "8169670";
+var CLSTAMP = "8173329";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -3565,6 +3565,7 @@ var CLSTAMP = "8169670";
           constructor(e, t) {
             (this.m_nKey = null),
               (this.m_bVisible = !1),
+              (this.m_timerHideMenu = 0),
               (this.m_elSubmenuItem = null),
               (this.m_timerHideSubMenu = 0),
               (this.m_ContextMenuManager = e),
@@ -3608,13 +3609,23 @@ var CLSTAMP = "8169670";
             this.m_fnOnHideCallback = e;
           }
           Show() {
-            this.m_ContextMenuManager.ShowMenu(this), (this.m_bVisible = !0);
+            this.CancelHideMenuTimer(),
+              this.m_ContextMenuManager.ShowMenu(this),
+              (this.m_bVisible = !0);
           }
           OnCancel() {
             this.options.onCancel && this.options.onCancel(), this.Hide();
           }
-          Hide() {
-            this.InternalHide();
+          Hide(e = 0) {
+            e > 0
+              ? (this.m_timerHideMenu = window.setTimeout(() => {
+                  (this.m_timerHideMenu = 0), this.InternalHide();
+                }, e))
+              : this.InternalHide();
+          }
+          CancelHideMenuTimer() {
+            this.m_timerHideMenu > 0 &&
+              (clearTimeout(this.m_timerHideMenu), (this.m_timerHideMenu = 0));
           }
           SetPosition(e, t, r) {
             (this.m_options = Object.assign(
@@ -3632,11 +3643,12 @@ var CLSTAMP = "8169670";
             this.BHasFocus() || this.BIsFocusInChildHierarchy() || this.Hide();
           }
           InternalHide() {
-            this.m_bVisible &&
-              ((this.m_bVisible = !1),
-              this.InternalHideSubMenu(),
-              this.m_fnOnHideCallback && this.m_fnOnHideCallback(),
-              this.m_ContextMenuManager.HideMenu(this));
+            this.CancelHideMenuTimer(),
+              this.m_bVisible &&
+                ((this.m_bVisible = !1),
+                this.InternalHideSubMenu(),
+                this.m_fnOnHideCallback && this.m_fnOnHideCallback(),
+                this.m_ContextMenuManager.HideMenu(this));
           }
           SetTakeFocus(e) {
             this.m_fnTakeFocus = e;
@@ -3761,8 +3773,8 @@ var CLSTAMP = "8169670";
           Show() {
             super.Show();
           }
-          Hide() {
-            super.Hide();
+          Hide(e = 0) {
+            super.Hide(e);
           }
           ForceHide() {
             super.ForceHide();
@@ -4505,9 +4517,9 @@ var CLSTAMP = "8169670";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 3 2023 : 16:53:06",
-                BUILD_TIME_UTC: "Jul 3 2023 : 23:53:06",
-                BUILD_RTIME_UTC: 1688428386,
+                BUILD_TIME_LOCAL: "Jul 6 2023 : 00:06:20",
+                BUILD_TIME_UTC: "Jul 6 2023 : 07:06:20",
+                BUILD_RTIME_UTC: 1688627180,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -20735,26 +20747,27 @@ var CLSTAMP = "8169670";
             (e[(e.ToastMessage = 4)] = "ToastMessage"),
             (e[(e.ToastAchievement = 5)] = "ToastAchievement"),
             (e[(e.ToastMisc = 6)] = "ToastMisc"),
-            (e[(e.FriendOnline = 7)] = "FriendOnline"),
-            (e[(e.FriendInGame = 8)] = "FriendInGame"),
-            (e[(e.VolSound = 9)] = "VolSound"),
-            (e[(e.ShowModal = 10)] = "ShowModal"),
-            (e[(e.HideModal = 11)] = "HideModal"),
-            (e[(e.IntoGameDetail = 12)] = "IntoGameDetail"),
-            (e[(e.OutOfGameDetail = 13)] = "OutOfGameDetail"),
-            (e[(e.PagedNavigation = 14)] = "PagedNavigation"),
-            (e[(e.ToggleOn = 15)] = "ToggleOn"),
-            (e[(e.ToggleOff = 16)] = "ToggleOff"),
-            (e[(e.SliderUp = 17)] = "SliderUp"),
-            (e[(e.SliderDown = 18)] = "SliderDown"),
-            (e[(e.ChangeTabs = 19)] = "ChangeTabs"),
-            (e[(e.DefaultOk = 20)] = "DefaultOk"),
-            (e[(e.OpenSideMenu = 21)] = "OpenSideMenu"),
-            (e[(e.CloseSideMenu = 22)] = "CloseSideMenu"),
-            (e[(e.BasicNav = 23)] = "BasicNav"),
-            (e[(e.FailedNav = 24)] = "FailedNav"),
-            (e[(e.Typing = 25)] = "Typing"),
-            (e[(e.TimerExpired = 26)] = "TimerExpired");
+            (e[(e.ToastMiscShort = 7)] = "ToastMiscShort"),
+            (e[(e.FriendOnline = 8)] = "FriendOnline"),
+            (e[(e.FriendInGame = 9)] = "FriendInGame"),
+            (e[(e.VolSound = 10)] = "VolSound"),
+            (e[(e.ShowModal = 11)] = "ShowModal"),
+            (e[(e.HideModal = 12)] = "HideModal"),
+            (e[(e.IntoGameDetail = 13)] = "IntoGameDetail"),
+            (e[(e.OutOfGameDetail = 14)] = "OutOfGameDetail"),
+            (e[(e.PagedNavigation = 15)] = "PagedNavigation"),
+            (e[(e.ToggleOn = 16)] = "ToggleOn"),
+            (e[(e.ToggleOff = 17)] = "ToggleOff"),
+            (e[(e.SliderUp = 18)] = "SliderUp"),
+            (e[(e.SliderDown = 19)] = "SliderDown"),
+            (e[(e.ChangeTabs = 20)] = "ChangeTabs"),
+            (e[(e.DefaultOk = 21)] = "DefaultOk"),
+            (e[(e.OpenSideMenu = 22)] = "OpenSideMenu"),
+            (e[(e.CloseSideMenu = 23)] = "CloseSideMenu"),
+            (e[(e.BasicNav = 24)] = "BasicNav"),
+            (e[(e.FailedNav = 25)] = "FailedNav"),
+            (e[(e.Typing = 26)] = "Typing"),
+            (e[(e.TimerExpired = 27)] = "TimerExpired");
         })(n || (n = {}));
         const o = new (class {
           constructor() {
@@ -20969,12 +20982,13 @@ var CLSTAMP = "8169670";
             ContextMenuMouseOverlay: () => D,
             ContextMenuPosition: () => F,
             ContextMenuSeparator: () => R,
-            GBForcePopupContextMenus: () => G,
-            GBStickyContextMenus: () => A,
+            GBForcePopupContextMenus: () => z,
+            GBStickyContextMenus: () => G,
             IconContextMenuItem: () => x,
             OnRootContextMenu: () => V,
-            SetForcePopupContextMenus: () => Z,
-            SetStickyContextMenus: () => N,
+            SetForcePopupContextMenus: () => U,
+            SetStickyContextMenus: () => Z,
+            useEnableContextMenuBlurDelay: () => N,
           });
         var n = r(70655),
           i = r(29323),
@@ -21440,16 +21454,20 @@ var CLSTAMP = "8169670";
             this.PositionMenu();
           }
           OnBlur(e) {
-            (e.relatedTarget &&
-              w.BIsParentOrSelf(e.currentTarget, e.relatedTarget)) ||
-              (e.relatedTarget &&
-                this.props.instance.BIsElementInMenuHierarchy(
+            if (
+              (!e.relatedTarget ||
+                !w.BIsParentOrSelf(e.currentTarget, e.relatedTarget)) &&
+              (!e.relatedTarget ||
+                !this.props.instance.BIsElementInMenuHierarchy(
                   e.relatedTarget
-                )) ||
-              this.props.instance.BIsSubMenuVisible() ||
-              (this.state.ready &&
-                this.props.instance.visible &&
-                this.props.instance.Hide());
+                )) &&
+              !this.props.instance.BIsSubMenuVisible() &&
+              this.state.ready &&
+              this.props.instance.visible
+            ) {
+              const e = A() ? 150 : 0;
+              this.props.instance.Hide(e);
+            }
           }
           OnKeyDown(e) {
             27 == e.keyCode &&
@@ -21917,18 +21935,30 @@ var CLSTAMP = "8169670";
               (0, v.Localize)(e.strDisplayNameLocToken)
             );
           },
-          O = "DEBUG_StickyContextMenus";
+          O = "EnableContextMenuBlurDelay3";
         function A() {
           return (
-            window.sessionStorage && "true" == window.sessionStorage.getItem(O)
+            "true" === (window.localStorage && window.localStorage.getItem(O))
           );
         }
-        function N(e) {
-          e
-            ? window.sessionStorage.setItem(O, "true")
-            : window.sessionStorage.removeItem(O);
+        function N() {
+          const e = null != window.localStorage,
+            [t, r] = o.useState(A());
+          return [
+            e,
+            t,
+            o.useCallback((e) => {
+              if (!window.localStorage)
+                return void console.error(
+                  `Attempt to change setting with no localStorage available: ${O}`
+                );
+              r(e);
+              const t = e ? "true" : "false";
+              window.localStorage.setItem(O, t);
+            }, []),
+          ];
         }
-        const P = "DEBUG_ForcePopupContextMenus";
+        const P = "DEBUG_StickyContextMenus";
         function G() {
           return (
             window.sessionStorage && "true" == window.sessionStorage.getItem(P)
@@ -21938,6 +21968,17 @@ var CLSTAMP = "8169670";
           e
             ? window.sessionStorage.setItem(P, "true")
             : window.sessionStorage.removeItem(P);
+        }
+        const W = "DEBUG_ForcePopupContextMenus";
+        function z() {
+          return (
+            window.sessionStorage && "true" == window.sessionStorage.getItem(W)
+          );
+        }
+        function U(e) {
+          e
+            ? window.sessionStorage.setItem(W, "true")
+            : window.sessionStorage.removeItem(W);
         }
       },
       18314: (e, t, r) => {
@@ -50411,29 +50452,30 @@ var CLSTAMP = "8169670";
                 e != l && s(e);
               }
             }, [t, u, l]);
-          return (
-            n.useEffect(
-              () => (
-                d(),
-                t.addEventListener("resize", d),
-                () => t.removeEventListener("resize", d)
-              ),
-              [t, d]
+          n.useEffect(
+            () => (
+              d(),
+              t.addEventListener("resize", d),
+              () => t.removeEventListener("resize", d)
             ),
-            n.createElement(
-              C,
-              {
-                className: (0, a.default)(
-                  l ? "restoreButton" : "maximizeButton",
-                  "windowControlButton"
-                ),
-                onClick: c,
-              },
-              !r &&
-                (l
-                  ? n.createElement(o.Restore, null)
-                  : n.createElement(o.Maximize, null))
-            )
+            [t, d]
+          );
+          const m = n.useCallback(() => {
+            c(), d();
+          }, [c, d]);
+          return n.createElement(
+            C,
+            {
+              className: (0, a.default)(
+                l ? "restoreButton" : "maximizeButton",
+                "windowControlButton"
+              ),
+              onClick: m,
+            },
+            !r &&
+              (l
+                ? n.createElement(o.Restore, null)
+                : n.createElement(o.Maximize, null))
           );
         }
         function u(e) {
@@ -54408,9 +54450,9 @@ var CLSTAMP = "8169670";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 3 2023 : 16:53:06",
-                    BUILD_TIME_UTC: "Jul 3 2023 : 23:53:06",
-                    BUILD_RTIME_UTC: 1688428386,
+                    BUILD_TIME_LOCAL: "Jul 6 2023 : 00:06:20",
+                    BUILD_TIME_UTC: "Jul 6 2023 : 07:06:20",
+                    BUILD_RTIME_UTC: 1688627180,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54930,7 +54972,7 @@ var CLSTAMP = "8169670";
       {
         27: "b706157360c0d512694c",
         33: "b33c4a548a9c2e080e44",
-        58: "575a55f8175ba3e94569",
+        58: "f0f3fef506d9fa1f43aa",
         131: "8e180b521e6c12d49a3a",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -55003,7 +55045,7 @@ var CLSTAMP = "8169670";
         5513: "ec0071187919eb9c037e",
         5547: "4a099cabe4e49f89668c",
         5590: "775c3d01215b14fe1878",
-        5742: "9b2545599492e4f54e2e",
+        5742: "aeb03878d48abf7bace1",
         5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
@@ -55027,7 +55069,7 @@ var CLSTAMP = "8169670";
         7781: "7e2822a033213ca15cd6",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "10220091548fcf5f6611",
+        7962: "b912ff8636f20665e6f3",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "26d97a8502980c49838e",
@@ -55037,7 +55079,7 @@ var CLSTAMP = "8169670";
         8282: "ec2edab8f124dbc2ad95",
         8319: "708fb40b322f191d3285",
         8433: "da1f94773540857e0a43",
-        8467: "5329c89db5e790f6ec2e",
+        8467: "4d24ea028407ff634551",
         8490: "a6f9565ec428a556c271",
         8553: "d8e6576615824304daa8",
         8778: "a288cf862e76d336a904",

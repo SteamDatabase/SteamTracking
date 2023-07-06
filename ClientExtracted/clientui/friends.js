@@ -15979,26 +15979,27 @@ and limitations under the License.
               e != n && o(e);
             }
           }, [t, a, n]);
-        return (
-          $t.useEffect(
-            () => (
-              l(),
-              t.addEventListener("resize", l),
-              () => t.removeEventListener("resize", l)
-            ),
-            [t, l]
+        $t.useEffect(
+          () => (
+            l(),
+            t.addEventListener("resize", l),
+            () => t.removeEventListener("resize", l)
           ),
-          $t.createElement(
-            ko,
-            {
-              className: hn(
-                n ? "restoreButton" : "maximizeButton",
-                "windowControlButton"
-              ),
-              onClick: i,
-            },
-            !r && (n ? $t.createElement(En, null) : $t.createElement(yn, null))
-          )
+          [t, l]
+        );
+        const s = $t.useCallback(() => {
+          i(), l();
+        }, [i, l]);
+        return $t.createElement(
+          ko,
+          {
+            className: hn(
+              n ? "restoreButton" : "maximizeButton",
+              "windowControlButton"
+            ),
+            onClick: s,
+          },
+          !r && (n ? $t.createElement(En, null) : $t.createElement(yn, null))
         );
       }
       function Io(e) {
@@ -17095,4 +17096,4 @@ and limitations under the License.
         document.addEventListener("DOMContentLoaded", () => Ei());
     })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=24850fc2671e5ee5d863
+//# sourceMappingURL=friends.js.map?contenthash=c82396287f1acdb56d45

@@ -8957,7 +8957,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, he.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1688428386),
+          s = parseInt(1688627180),
           c = s && (0, tr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == g.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -20790,13 +20790,17 @@
         }),
         Ep = (0, D.WithErrorBoundary)((e) => {
           const { appid: t } = e,
-            n = (0, E.SZ)(
+            n = _p(),
+            a = (0, E.SZ)(() => n.overlay_active),
+            r = (0, E.SZ)(
               () => -1 == Kd.iB.AppsWithTouchMenusEnabled.indexOf(t)
             ),
-            a = (0, E.SZ)(() =>
+            l = (0, E.SZ)(() =>
               Kd.iB.ActiveTouchMenus.some((e) => e.MenuState.bActive)
             );
-          return n ? null : o.createElement(Hd.i5, { appID: t, bVisible: a });
+          return r || a
+            ? null
+            : o.createElement(Hd.i5, { appID: t, bVisible: l });
         });
       function Cp(e) {
         const { appid: t } = e,
