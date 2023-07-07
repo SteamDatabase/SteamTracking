@@ -2456,13 +2456,25 @@
         12: { fnGet: re, bBasic: !1 },
         6: {
           fnGet: function (e) {
+            const t = (0, C.h4)();
             try {
-              let t = JSON.parse(e);
-              return t.title || t.body
-                ? ((t.display_name = (0, W.Xx)(
+              let i = JSON.parse(e);
+              return i.title || i.body
+                ? ((i.display_name = (0, W.Xx)(
                     "#SteamNotifications_MajorSale"
                   )),
-                  t)
+                  t &&
+                    (null == i
+                      ? void 0
+                      : i.link.includes("https://store.steampowered.com")) &&
+                    ((i.link = i.link.replace(
+                      "https://store.steampowered.com",
+                      C.De.STORE_BASE_URL
+                    )),
+                    (i.body = (0, W.Xx)(
+                      "#SteamNotifications_MajorSale_SteamChina_Title"
+                    ))),
+                  i)
                 : (te(), null);
             } catch (e) {
               te();

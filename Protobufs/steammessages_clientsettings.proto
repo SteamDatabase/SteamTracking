@@ -59,8 +59,6 @@ message CMsgClientSettings {
 	optional float auto_scale_factor = 14 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "UI/Display/Current/AutoScaleFactor"];
 	optional bool enable_test_updaters = 15 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "EnableTestUpdaters"];
 	optional bool small_mode = 16 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Software\\Valve\\Steam\\SmallMode"];
-	optional bool disable_all_toasts = 17 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableAllToasts"];
-	optional bool disable_toasts_in_game = 18 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableToastsInGame"];
 	optional bool skip_steamvr_install_dialog = 19 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\SteamVRHMDVGUIWarning"];
 	optional bool always_show_user_chooser = 20 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "WebStorage\\Auth\\AlwaysShowUserChooser"];
 	optional bool show_family_sharing_notifications = 3000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "HideSharingNotifications"];
@@ -94,6 +92,9 @@ message CMsgClientSettings {
 	optional bool enable_marketing_messages = 5006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "news\\NotifyAvailableGames"];
 	optional bool start_in_big_picture_mode = 5007 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional uint32 jumplist_flags = 5008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\JumplistSettings", (setting_default_uint) = 77680];
+	optional bool disable_all_toasts = 6000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableAllToasts"];
+	optional bool disable_toasts_in_game = 6001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableToastsInGame"];
+	optional bool play_sound_on_toast = 6002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "PlaySoundOnToast", (setting_default_bool) = true];
 	optional int32 library_display_size = 7000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "LibraryDisplaySize"];
 	optional bool library_whats_new_show_only_product_updates = 7001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "LibraryWhatsNewShowOnlyProductUpdates"];
 	optional bool show_store_content_on_home = 7002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "ShowStoreContentOnHome", (setting_default_bool) = true];
