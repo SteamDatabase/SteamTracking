@@ -33823,7 +33823,7 @@
                       },
                       i.createElement("source", {
                         type: "video/webm",
-                        src: `${p.Y.VIDEO_URL}shortfilmcontest2022/clapper_2022.webm`,
+                        src: `${p.Y.VIDEO_URL}shortfilmcontest2023/clapper_2023.webm`,
                       })
                     ),
                     i.createElement(
@@ -33899,7 +33899,7 @@
                   i.createElement(
                     "div",
                     { className: lo().Introduction },
-                    (0, v.Jr)("#filmcontest22_intro")
+                    (0, v.Jr)("#filmcontest23_intro")
                   ),
                   i.createElement(
                     "div",
@@ -33964,7 +33964,7 @@
                   i.createElement(
                     "div",
                     { className: lo().PrizeDesc },
-                    (0, v.Jr)("#filmcontest22_prize_desc")
+                    (0, v.Jr)("#filmcontest23_prize_desc")
                   )
                 )
               ),
@@ -33983,7 +33983,7 @@
                     className: lo().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/FUYAopUzThc",
+                    src: "https://www.youtube.com/embed/_kAubTZUVEo",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -33994,7 +33994,7 @@
                     className: lo().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/X66DnoOo1S8",
+                    src: "https://www.youtube.com/embed/A4vbIbEaeDg",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -34005,7 +34005,7 @@
                     className: lo().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/tIprXeR23U8",
+                    src: "https://www.youtube.com/embed/6PLMAD5efmQ",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -34056,17 +34056,17 @@
                       i.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest22_guidelines_5")
+                        (0, v.Jr)("#filmcontest23_guidelines_5")
                       ),
                       i.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest22_guidelines_6")
+                        (0, v.Jr)("#filmcontest23_guidelines_6")
                       ),
                       i.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest22_guidelines_12")
+                        (0, v.Jr)("#filmcontest23_guidelines_12")
                       ),
                       i.createElement(
                         "li",
@@ -34103,7 +34103,7 @@
                 i.createElement(
                   "div",
                   { className: lo().EndRowText },
-                  (0, v.Jr)("#filmcontest22_intro"),
+                  (0, v.Jr)("#filmcontest23_intro"),
                   0 == p.Y.ACCOUNT_ID &&
                     i.createElement(
                       "a",
@@ -34143,7 +34143,7 @@
                 ),
                 i.createElement("img", {
                   className: lo().EndRowImage,
-                  src: `${p.Y.IMG_URL}shortfilmcontest2022/clapper_2022.png`,
+                  src: `${p.Y.IMG_URL}shortfilmcontest2023/clapper_2023.png`,
                 })
               ),
               i.createElement(T.U, null),

@@ -8957,7 +8957,7 @@
             l.nSteamVersion > 0
               ? l.nSteamVersion.toString()
               : (0, he.Localize)("#Settings_System_SteamLocalBuild"),
-          s = parseInt(1688684392),
+          s = parseInt(1688772367),
           c = s && (0, tr.LocalizeRTimeToDateAndTimeAndTZ)(s, e, r),
           m = l.sSteamBuildDate,
           d = "linux" == g.Config.PLATFORM ? " GMT+0000" : " GMT-0800",
@@ -14583,7 +14583,7 @@
           o.createElement(lr, null),
           o.createElement(lo, null),
           o.createElement(Ji.fJ, null),
-          o.createElement(Zi.q8, null),
+          o.createElement(Zi.q8, { uiMode: 7 }),
           o.createElement(sr.M, null),
           o.createElement(eo.Z, null),
           !(0, ur.hQ)() && o.createElement(hr, null),
@@ -22641,9 +22641,12 @@
                   community: "CommunityHome",
                   news: "NewsHomePage",
                 };
-                t in e
-                  ? n.SteamWeb(Ht.de.ResolveURL(e[t]), { bReplace: !0 })
-                  : n.Home(void 0, { bReplace: !0 });
+                if (t in e) {
+                  const a = Ht.de.ResolveURL(e[t]);
+                  fa.k5.BIsURLBlocked(a)
+                    ? n.Home(void 0, { bReplace: !0 })
+                    : n.SteamWeb(a, { bReplace: !0 });
+                } else n.Home(void 0, { bReplace: !0 });
             }
             n.setNavigatingToInitialRoute(!1), (g.Config.SILENT_STARTUP = !1);
           }

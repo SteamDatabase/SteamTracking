@@ -150,12 +150,20 @@ a:hover {
 .appid_875860 .customBrowseDesc,
 .appid_1090070 .customBrowseDesc,
 .appid_1635560 .customBrowseDesc,
-.appid_2066090 .customBrowseDesc
+.appid_2066090 .customBrowseDesc,
+.appid_2496960 .customBrowseDesc
 {
 	margin-top: 65px;
 }
 
-.appid_373030 .customBrowseTitle, .appid_477220 .customBrowseTitle, .appid_647770 .customBrowseTitle, .appid_875860 .customBrowseTitle, .appid_1090070 .customBrowseTitle, .appid_1635560 .customBrowseTitle, .appid_2066090 .customBrowseTitle
+.appid_373030 .customBrowseTitle,
+.appid_477220 .customBrowseTitle,
+.appid_647770 .customBrowseTitle,
+.appid_875860 .customBrowseTitle,
+.appid_1090070 .customBrowseTitle,
+.appid_1635560 .customBrowseTitle,
+.appid_2066090 .customBrowseTitle,
+.appid_2496960 .customBrowseTitle
 {
 	display: none;
 }

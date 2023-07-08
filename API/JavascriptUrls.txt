@@ -783,8 +783,8 @@ ${IMG_URL}protopass/streaks_and_teleports_a.png
 ${IMG_URL}recruit_and_upgrade.png
 ${IMG_URL}right_arrow.png
 ${IMG_URL}search.png
-${IMG_URL}shortfilmcontest2022/clapper_2022.png
 ${IMG_URL}shortfilmcontest2022/clapper_fallback_2022.png
+${IMG_URL}shortfilmcontest2023/clapper_2023.png
 ${IMG_URL}social/${}_large.png
 ${IMG_URL}steam.png
 ${IMG_URL}synergyicons/${strAllianceName}.png
@@ -1458,7 +1458,7 @@ ${VIDEO_URL}international2022/taunts/${}_taunt.mp4
 ${VIDEO_URL}international2022/taunts/${}_taunt.webm
 ${VIDEO_URL}international2022/truesight_logo.mp4
 ${VIDEO_URL}international2022/truesight_logo.webm
-${VIDEO_URL}shortfilmcontest2022/clapper_2022.webm
+${VIDEO_URL}shortfilmcontest2023/clapper_2023.webm
 ${WEBAPI_BASE_URL}${}/${}/v000${}
 ${WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${m_webApiToken}
@@ -2945,10 +2945,10 @@ https://www.youtube.com/embed/${}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}${bAutoPlay ? "&autoplay=1" : ""}${nStartSeconds ? _ : ""}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}${nStartSeconds ? _ : ""}
+https://www.youtube.com/embed/6PLMAD5efmQ
 https://www.youtube.com/embed/74Gh0lU89Ic?controls=0&autoplay=1&mute=1&hd=1&loop=1&playlist=m9MqIzmWG24
-https://www.youtube.com/embed/FUYAopUzThc
-https://www.youtube.com/embed/X66DnoOo1S8
-https://www.youtube.com/embed/tIprXeR23U8
+https://www.youtube.com/embed/A4vbIbEaeDg
+https://www.youtube.com/embed/_kAubTZUVEo
 https://www.youtube.com/iframe_api
 https://www.youtube.com/user/dota2
 https://www.youtube.com/watch?v=
