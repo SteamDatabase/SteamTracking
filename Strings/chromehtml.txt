@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+X
+X
 __stubs
 __TEXT
 __stub_helper
@@ -1137,6 +1139,8 @@ SteamBootstrapper_GetInstallDir
 clientui
 -clientui=%s
 -steampath=%s
+GetClientActualLauncherType
+-launcher=%d
 --ignore-certificate-errors
 -browser-offline
 -fakeoffline
@@ -2383,16 +2387,23 @@ sc_schinese
 @
 @
 
+J
 
 
 
 @
 Ic
-S
-:
-$
-/
+}
+q
+c
+}
+;
+C
+B
+=
+"
 
+=
 0
 0
 Hi
@@ -2440,9 +2451,9 @@ IcE
 IcE
 @
 @
-`
 V
 =
+>
 =
 !
 @

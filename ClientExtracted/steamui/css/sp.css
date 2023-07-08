@@ -8829,5 +8829,91 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   align-items: center;
   background: #0e141b;
 }
+.steamchinareviewlauncher_AccountMenu_2MD8a {
+  max-height: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  border-radius: 2px;
+  padding-right: 8px;
+  font-size: 12px;
+  background-color: rgba(103, 112, 123, 0.2);
+}
+.steamchinareviewlauncher_AccountMenu_2MD8a
+  .steamchinareviewlauncher_WalletBalance_1yFUq {
+  color: #788a92;
+}
+.steamchinareviewlauncher_AccountMenu_2MD8a:hover {
+  background-color: rgba(76, 180, 255, 0.2);
+  transition: background-color 0.15s ease-out;
+  cursor: pointer;
+}
+.steamchinareviewlauncher_AccountMenu_2MD8a.online {
+  color: #4cb4ff;
+}
+.steamchinareviewlauncher_AccountMenu_2MD8a.ingame {
+  color: #c2ffb3;
+  background-color: rgba(92, 126, 16, 0.5);
+}
+.steamchinareviewlauncher_AccountMenu_2MD8a
+  .steamchinareviewlauncher_Chevron_k-MmL {
+  width: 10px;
+  padding-top: 2px;
+}
+.steamchinareviewlauncher_AccountMenuPopup_3_9U0
+  .steamchinareviewlauncher_AccountName_2ntJ4,
+.steamchinareviewlauncher_AccountMenuPopup_3_9U0
+  .steamchinareviewlauncher_WalletBalance_1yFUq {
+  color: #4cb4ff;
+}
+.steamchinareviewlauncher_AppStatus_Nwp6V {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.steamchinareviewlauncher_AppStatus_Nwp6V
+  .steamchinareviewlauncher_AppName_HzE6x {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.steamchinareviewlauncher_AppStatus_Nwp6V
+  .steamchinareviewlauncher_DisplayStatus_1KMb9 {
+  margin-bottom: 10px;
+}
+.steamchinareviewlauncher_AppStatus_Nwp6V
+  .steamchinareviewlauncher_Error_1O8BI {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
 
 /*# sourceMappingURL=sourcemaps\css\sp.css.map*/

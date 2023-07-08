@@ -12678,7 +12678,7 @@ and limitations under the License.
             (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
             (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
             (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
-            (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
+            (e[(e.SteamChinaReviewLauncher = 9)] = "SteamChinaReviewLauncher");
         })(Cr || (Cr = {}));
       var Ir, wr, kr, Tr, Rr;
       !(function (e) {
@@ -17096,4 +17096,4 @@ and limitations under the License.
         document.addEventListener("DOMContentLoaded", () => Ei());
     })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=c82396287f1acdb56d45
+//# sourceMappingURL=friends.js.map?contenthash=419fd04ffe9c7dc1d7f3

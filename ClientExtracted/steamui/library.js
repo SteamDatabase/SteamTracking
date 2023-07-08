@@ -1,4 +1,4 @@
-var CLSTAMP = "8178714";
+var CLSTAMP = "8179064";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1394,7 +1394,8 @@ var CLSTAMP = "8178714";
               (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
               (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
               (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
-              (e[(e.SmallModeDesktopUI = 9)] = "SmallModeDesktopUI");
+              (e[(e.SteamChinaReviewLauncher = 9)] =
+                "SteamChinaReviewLauncher");
           })(b || (b = {}));
         class y {}
         class S {}
@@ -4517,9 +4518,9 @@ var CLSTAMP = "8178714";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 7 2023 : 17:28:34",
-                BUILD_TIME_UTC: "Jul 8 2023 : 00:28:34",
-                BUILD_RTIME_UTC: 1688776114,
+                BUILD_TIME_LOCAL: "Jul 7 2023 : 21:51:04",
+                BUILD_TIME_UTC: "Jul 8 2023 : 04:51:04",
+                BUILD_RTIME_UTC: 1688791864,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -54450,9 +54451,9 @@ var CLSTAMP = "8178714";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 7 2023 : 17:28:34",
-                    BUILD_TIME_UTC: "Jul 8 2023 : 00:28:34",
-                    BUILD_RTIME_UTC: 1688776114,
+                    BUILD_TIME_LOCAL: "Jul 7 2023 : 21:51:04",
+                    BUILD_TIME_UTC: "Jul 8 2023 : 04:51:04",
+                    BUILD_RTIME_UTC: 1688791864,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -54645,7 +54646,7 @@ var CLSTAMP = "8178714";
           ),
           B = n.lazy(() =>
             Promise.all([r.e(7962), r.e(8553), r.e(58), r.e(5742)]).then(
-              r.bind(r, 38629)
+              r.bind(r, 8388)
             )
           );
         function k() {
@@ -54972,7 +54973,7 @@ var CLSTAMP = "8178714";
       {
         27: "01fae04d660df430f1f9",
         33: "0a56d93b092811287eb9",
-        58: "afb33bc781ab5f95536b",
+        58: "4af499f11c284c8a94c6",
         131: "2e624424daa2efdbffe7",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -55045,7 +55046,7 @@ var CLSTAMP = "8178714";
         5513: "ec0071187919eb9c037e",
         5547: "4a099cabe4e49f89668c",
         5590: "cc09b78c0c38875055a1",
-        5742: "ac8103948e82d08b9281",
+        5742: "1c7cb3013a055aec082e",
         5895: "078dafdec088e03725eb",
         5984: "501e3c58cbc00fb8caba",
         6002: "0427838cb1fc6a9f4451",
@@ -55069,7 +55070,7 @@ var CLSTAMP = "8178714";
         7781: "18505264570b4a6f6a3e",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "532992bf6c5a16845e8d",
+        7962: "6ab7aa5cc19e04fde2f8",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "736ab0a183ae801bc995",
@@ -55090,7 +55091,7 @@ var CLSTAMP = "8178714";
         9520: "2eee41872648a9ed7a62",
         9547: "f75d6f68c0f466f86e12",
         9548: "9e8ac641efbbb56c9c99",
-        9722: "b4738510056d27f61769",
+        9722: "dc43c49d3515fea34231",
         9746: "5ef3bb5a7ff5c44a52bf",
         9854: "541c65af2e1030c6e50e",
         9925: "c346de4224501a2b6884",

@@ -7572,7 +7572,7 @@
     "RemotePlay_InstallGamepadInputDriver_Title": "手柄驱动程序更新",
     "RemotePlay_InstallGamepadInputDriver_Text": "Steam 需要更新其手柄驱动程序。",
     "RemotePlay_InstallGamepadInputDriver_RestartNotice": "在安装手柄驱动程序后您需要重启 Steam。",
-    "GameLauncher_Title": "蒸汽平台",
+    "GameLauncher_Title": "启动器",
     "GameLauncher_AccountDoesNotOwnGame": "您没有这款游戏",
     "GameLauncher_UnknownAppID": "未知游戏：%1$s",
     "steamui_dummy": "DO NOT USE ME"
