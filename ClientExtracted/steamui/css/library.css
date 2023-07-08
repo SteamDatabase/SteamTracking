@@ -2364,6 +2364,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenu_LQkrb {
   box-shadow: 0 10px 32px 0px #000000ab;
   background: #3d4450;
+  -webkit-app-region: no-drag;
 }
 .DesktopUI .contextmenu_contextMenuItem_pFo3k,
 .contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenuItem_pFo3k {

@@ -1921,6 +1921,7 @@
     "Settings_RemotePlay_Framerate_9000": "90 FPS",
     "Settings_RemotePlay_Framerate_12000": "120 FPS",
     "Settings_RemotePlay_Resolution": "Resolution Limit",
+    "Settings_RemotePlay_ResolutionDesktop": "Display resolution",
     "Settings_RemotePlay_ResolutionAutomatic": "Automatic (%1$sx%2$s)",
     "Settings_RemotePlay_Resolution8K": "7680x4320 (8K)",
     "Settings_RemotePlay_Resolution2160p": "3840x2160 (4K)",
