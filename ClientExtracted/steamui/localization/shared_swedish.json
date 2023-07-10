@@ -2554,6 +2554,8 @@
     "SteamNotificationTypeDesc_9": "Jag mottar ett nytt bytesförslag",
     "SteamNotificationTypeDesc_11": "Jag får ett svar från Steam Support",
     "SteamNotificationTypeDesc_12": "Jag får en avisering om en ny runda på Steam",
+    "NotificationSettings_SendToast": "Popupavisering i Steam-klienten",
+    "NotificationSettings_PushNotification": "Pushavisering i mobilappen",
     "NotificationsMenu_Title": "Aviseringar",
     "NotificationsMenu_ViewAll": "Visa alla",
     "Notification_NewGiftsPinned_Body": "%1$s ny gåva",

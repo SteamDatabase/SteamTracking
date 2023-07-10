@@ -831,7 +831,7 @@
   "EventEditor_SteamAccount_addme": "Añadirme",
   "EventEditor_SteamAccount_addfriend": "Añadir a un amigo",
   "EventEditor_SteamAccount_clear": "Eliminar asociación",
-  "BBCode_ChooseImage": "Elegir imagen (%1$s x %2$s)",
+  "BBCode_ChooseImage": "Elegir imagen (%1$s × %2$s)",
   "BBCode_ResizeImage": "Cambiar el tamaño de la imagen",
   "EventEditor_LinkDescription": "Texto que se mostrará",
   "EventEditor_LinkURL": "URL",

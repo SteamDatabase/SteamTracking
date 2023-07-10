@@ -1918,7 +1918,7 @@
     "Settings_RemotePlay_Framerate_9000": "90 FPS",
     "Settings_RemotePlay_Framerate_12000": "120 FPS",
     "Settings_RemotePlay_Resolution": "Felbontáskorlát",
-    "Settings_RemotePlay_ResolutionDesktop": "Megjelenítő felbontása",
+    "Settings_RemotePlay_ResolutionAutomatic": "Automatikus (%1$s x %2$s)",
     "Settings_RemotePlay_Resolution8K": "7680x4320 (8K)",
     "Settings_RemotePlay_Resolution2160p": "3840x2160 (4K)",
     "Settings_RemotePlay_Resolution1440p": "2560x1440 (1440p)",

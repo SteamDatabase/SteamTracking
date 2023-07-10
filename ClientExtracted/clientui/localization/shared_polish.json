@@ -2554,6 +2554,8 @@
   "SteamNotificationTypeDesc_9": "otrzymam nową ofertę wymiany",
   "SteamNotificationTypeDesc_11": "otrzymam odpowiedź od Pomocy technicznej Steam",
   "SteamNotificationTypeDesc_12": "otrzymam od Steam powiadomienie o moim ruchu w grze",
+  "NotificationSettings_SendToast": "Wyskakujące powiadomienie w kliencie Steam",
+  "NotificationSettings_PushNotification": "Powiadomienie push w aplikacji mobilnej",
   "NotificationsMenu_Title": "Powiadomienia",
   "NotificationsMenu_ViewAll": "Zobacz wszystkie",
   "Notification_NewGiftsPinned_Body": "Nowe prezenty (%1$s)",

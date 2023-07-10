@@ -2554,6 +2554,8 @@
     "SteamNotificationTypeDesc_9": "saan uuden vaihtotarjouksen",
     "SteamNotificationTypeDesc_11": "Steamin tuki vastaa tukipyyntööni",
     "SteamNotificationTypeDesc_12": "saan vuoroilmoituksen Steamistä",
+    "NotificationSettings_SendToast": "Ilmoitus Steam-asiakasohjelmassa",
+    "NotificationSettings_PushNotification": "Pikailmoitus mobiilisovelluksessa",
     "NotificationsMenu_Title": "Ilmoitukset",
     "NotificationsMenu_ViewAll": "Näytä kaikki",
     "Notification_NewGiftsPinned_Body": "%1$s uusi lahja",

@@ -2555,6 +2555,8 @@
   "SteamNotificationTypeDesc_9": "我收到了一个新的交易报价",
   "SteamNotificationTypeDesc_11": "我收到了 Steam 客服的回复",
   "SteamNotificationTypeDesc_12": "我收到了 Steam 回合通知",
+  "NotificationSettings_SendToast": "Steam 客户端弹出通知",
+  "NotificationSettings_PushNotification": "手机应用推送通知",
   "NotificationsMenu_Title": "通知",
   "NotificationsMenu_ViewAll": "查看全部",
   "Notification_NewGiftsPinned_Body": "%1$s 份新礼物",

@@ -2554,6 +2554,7 @@
   "SteamNotificationTypeDesc_9": "я отримую нову пропозицію обміну",
   "SteamNotificationTypeDesc_11": "я отримую відповідь від служби підтримки Steam",
   "SteamNotificationTypeDesc_12": "я отримую нагадування про свій хід у Steam",
+  "NotificationSettings_SendToast": "Показувати спливні сповіщення у клієнті Steam",
   "NotificationSettings_PushNotification": "Показувати push-сповіщення у мобільному застосунку",
   "NotificationsMenu_Title": "Сповіщення",
   "NotificationsMenu_ViewAll": "Переглянути всі",

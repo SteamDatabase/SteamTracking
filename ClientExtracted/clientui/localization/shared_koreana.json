@@ -2554,6 +2554,8 @@
   "SteamNotificationTypeDesc_9": "새로운 거래 제안을 받았을 때",
   "SteamNotificationTypeDesc_11": "Steam 고객지원의 답변을 받았을 때",
   "SteamNotificationTypeDesc_12": "Steam 게임 알림을 받았을 때",
+  "NotificationSettings_SendToast": "Steam 클라이언트 토스트 알림",
+  "NotificationSettings_PushNotification": "모바일 앱 푸시 알림",
   "NotificationsMenu_Title": "알림",
   "NotificationsMenu_ViewAll": "모두 보기",
   "Notification_NewGiftsPinned_Body": "새로운 선물 %1$s개",

@@ -2554,6 +2554,8 @@
     "SteamNotificationTypeDesc_9": "ฉันได้รับข้อเสนอแลกเปลี่ยนใหม่",
     "SteamNotificationTypeDesc_11": "ฉันได้รับคำตอบจากฝ่ายสนับสนุน Steam",
     "SteamNotificationTypeDesc_12": "ฉันได้รับการแจ้งเตือนตาเดินบน Steam",
+    "NotificationSettings_SendToast": "การแจ้งเตือนด้วยข้อความในไคลเอนต์ Steam",
+    "NotificationSettings_PushNotification": "การแจ้งเตือนแบบพุชในแอปแบบพกพา",
     "NotificationsMenu_Title": "การแจ้งเตือน",
     "NotificationsMenu_ViewAll": "ดูทั้งหมด",
     "Notification_NewGiftsPinned_Body": "ของขวัญใหม่ %1$s รายการ",

@@ -2554,6 +2554,8 @@
   "SteamNotificationTypeDesc_9": "Am primit o nouă ofertă de schimb",
   "SteamNotificationTypeDesc_11": "Am primit un răspunse de la asistența Steam",
   "SteamNotificationTypeDesc_12": "Am primit o notificare Steam de tură",
+  "NotificationSettings_SendToast": "Notificări pop-up pentru clientul Steam",
+  "NotificationSettings_PushNotification": "Notificări push pentru aplicația mobilă",
   "NotificationsMenu_Title": "Notificări",
   "NotificationsMenu_ViewAll": "Afișează-le pe toate",
   "Notification_NewGiftsPinned_Body": "%1$s cadou nou",

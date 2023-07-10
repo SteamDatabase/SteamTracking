@@ -2554,6 +2554,8 @@
   "SteamNotificationTypeDesc_9": "je reçois une offre d'échange.",
   "SteamNotificationTypeDesc_11": "je reçois une réponse du Support Steam.",
   "SteamNotificationTypeDesc_12": "je reçois une notification de tour Steam.",
+  "NotificationSettings_SendToast": "Bulle de notification dans le client Steam",
+  "NotificationSettings_PushNotification": "Notification push sur l'application mobile",
   "NotificationsMenu_Title": "Notifications",
   "NotificationsMenu_ViewAll": "Tout voir",
   "Notification_NewGiftsPinned_Body": "%1$s nouveau cadeau",

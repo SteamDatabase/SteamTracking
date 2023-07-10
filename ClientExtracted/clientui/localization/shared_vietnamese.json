@@ -2554,6 +2554,8 @@
   "SteamNotificationTypeDesc_9": "Tôi nhận được một đề nghị trao đổi",
   "SteamNotificationTypeDesc_11": "Tôi nhận được hồi âm từ đội hỗ trợ Steam",
   "SteamNotificationTypeDesc_12": "Tôi nhận được thông báo lượt của Steam",
+  "NotificationSettings_SendToast": "Thông báo nhanh trên phần mềm Steam",
+  "NotificationSettings_PushNotification": "Thông báo đẩy trên ứng dụng di động",
   "NotificationsMenu_Title": "Thông báo",
   "NotificationsMenu_ViewAll": "Xem tất cả",
   "Notification_NewGiftsPinned_Body": "%1$s món quà mới",

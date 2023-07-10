@@ -2554,6 +2554,8 @@
   "SteamNotificationTypeDesc_9": "ich ein neues Handelsangebot erhalte.",
   "SteamNotificationTypeDesc_11": "ich eine Antwort des Steam-Supports erhalte.",
   "SteamNotificationTypeDesc_12": "ich eine Spielzugbenachrichtigung von Steam erhalte.",
+  "NotificationSettings_SendToast": "Popup-Benachrichtigung im Steam-Client",
+  "NotificationSettings_PushNotification": "Pushbenachrichtigung in der Mobile-App",
   "NotificationsMenu_Title": "Benachrichtigungen",
   "NotificationsMenu_ViewAll": "Alle anzeigen",
   "Notification_NewGiftsPinned_Body": "%1$s neues Geschenk",

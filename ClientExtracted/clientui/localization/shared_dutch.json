@@ -2554,6 +2554,8 @@
   "SteamNotificationTypeDesc_9": "ik een nieuw ruilaanbod ontvang",
   "SteamNotificationTypeDesc_11": "ik een antwoord van Steam Support ontvang",
   "SteamNotificationTypeDesc_12": "ik een Steam-beurtmelding ontvang",
+  "NotificationSettings_SendToast": "Pop-upmelding in de Steam-client",
+  "NotificationSettings_PushNotification": "Pushmelding in de mobiele app",
   "NotificationsMenu_Title": "Meldingen",
   "NotificationsMenu_ViewAll": "Alles weergeven",
   "Notification_NewGiftsPinned_Body": "%1$s nieuw geschenk",
