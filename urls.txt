@@ -259,6 +259,7 @@ https://www.counter-strike.net/public/css/csgo_react/main.css?__TIME__&_cdn=clou
 //
 // Javascript
 //
+https://checkout.steampowered.com/public/javascript/checkout.js?__TIME__&l=english&_cdn=cloudflare
 https://help.steampowered.com/public/javascript/agents.js?__TIME__&l=english&_cdn=cloudflare
 https://help.steampowered.com/public/javascript/applications/help/localization/main_english-json.js?__TIME__&l=english&_cdn=cloudflare
 https://help.steampowered.com/public/javascript/applications/help/localization/shared_english-json.js?__TIME__&l=english&_cdn=cloudflare
@@ -474,7 +475,6 @@ https://store.steampowered.com/public/javascript/applications/store/shared_engli
 https://store.steampowered.com/public/javascript/bigpicture/home.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/broadcast_carousel.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/cart.js?__TIME__&l=english&_cdn=cloudflare
-https://store.steampowered.com/public/javascript/checkout.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/cluster.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/comicviewer.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/comingsoon.js?__TIME__&l=english&_cdn=cloudflare
