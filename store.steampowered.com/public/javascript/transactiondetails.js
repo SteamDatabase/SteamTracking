@@ -97,7 +97,7 @@ function VerifyShippingAddress()
 	{
 				g_bVerifyShippingAddressCallRunning = true;
 
-		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/checkout/verifyshippingaddress/',
+		Shipping_VerifyShippingAddress( g_sessionID, 'https://checkout.steampowered.com/checkout/verifyshippingaddress/',
 			{
 				onSuccess: function( result ) {
 					g_bVerifyShippingAddressCallRunning = false;
