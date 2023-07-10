@@ -18024,6 +18024,26 @@
                       (0, v.Jr)("#dpc_header_standings")
                     )
                   ),
+                a.event_type == Jt.f5.INTERNATIONAL &&
+                  a.is_event_upcoming &&
+                  i.createElement(
+                    d.rU,
+                    {
+                      to: {
+                        state: { bAutoScroll: !0 },
+                        pathname: l._.dpc_ti_standings(o),
+                      },
+                      className: (0, E.Z)(
+                        Ot().DPCLink,
+                        s == Jt.RU.TISTANDINGS && Ot().Active
+                      ),
+                    },
+                    i.createElement(
+                      "div",
+                      { className: Ot().Label },
+                      (0, v.Jr)("#dpc_header_tistandings")
+                    )
+                  ),
                 i.createElement(
                   d.rU,
                   {
@@ -23185,7 +23205,7 @@
               },
             ],
             n = [
-              e === Jt._A.INTERNATIONAL_2022
+              e === Jt._A.INTERNATIONAL_2022 || e === Jt._A.INTERNATIONAL_2023
                 ? {
                     value: Jt.BY.DPC_POINT_STANDINGS,
                     strLabel: "#dpc_point_standings",
@@ -29870,7 +29890,7 @@
           if (
             ((null == p ? void 0 : p.event_type) == Jt.f5.INTERNATIONAL &&
             (null == p ? void 0 : p.is_event_upcoming)
-              ? (g = l._.dpc_about((0, Yt.B2)(u)))
+              ? (g = l._.dpc_ti_standings((0, Yt.B2)(u)))
               : jt.f.Get().GetSpoilerBlockState(u) == Jt.rE.UNBLOCKED
               ? (g = l._.dpc_watch(
                   u == Jt._A.INVALID ? (0, Yt.PS)() : (0, Yt.B2)(u)
