@@ -5485,11 +5485,17 @@ function NukeCartCookie()
 {
 	try
 	{
-					var date = new Date();
-			date.setTime(date.getTime()+(-10*24*60*60*1000));
-			var expires = "expires="+date.toGMTString();
-			document.cookie = 'shoppingCartGID'+"=-1; "+expires+"; path=/";
-			document.cookie = 'workshopShoppingCartGID'+"=-1; "+expires+"; path=/";
+					var cart = $J('#shopping_cart_gid' ).val() || -1;
+			if ( cart != -1 )
+			{
+								$J.ajax( {
+					type: 'post',
+					url: 'https://store.steampowered.com/cart/forgetcart',
+					data: { 'cart': cart },
+					crossDomain: true,
+					xhrFields: { withCredentials: true }
+				} );
+			}
 			}
 	catch ( e )
 	{
@@ -5797,7 +5803,7 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 				'OK'
 				).done( function() {
 				var auth_url = encodeURIComponent( 'https://checkout.steampowered.com/checkout/beginauthentication/?transid='+txnid );
-				window.location = "steammobile://openurl?url=" + encodeURIComponent( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + txnid + '&authurl='+auth_url + '&s=' + g_sessionID );
+				window.location = "steammobile://openurl?url=" + encodeURIComponent( 'https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + txnid + '&authurl='+auth_url + '&s=' + g_sessionID );
 				});
 			}
 			else if ( g_bIsInSteamDeck )
